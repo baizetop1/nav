@@ -14,7 +14,7 @@ url: https://baizetop1.github.io/nav/
 github: "https://github.com/baizetop1"
 
 # footer message
-footer: © 2021-2021 @baizetop1
+footer: © 2021-2023 @baizetop1
 
 # template(theme) of your site, available:
 # 1. webstack (http://webstack.cc)
@@ -38,11 +38,14 @@ webstack:
 
 content:
   categories:
-    - name: 常用
+    - name: 常用娱乐
       sites:
         - name: Bilibili
           description: 弹幕网站
           url: https://www.bilibili.com/
+        - name: 抖音
+          description: 短视频
+          url: https://www.douyin.com/discover
         - name: Behance
           description: Adobe旗下的设计师交流平台，来自世界各地的设计师在这里分享自己的作品。
           url: https://behance.net/
