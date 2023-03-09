@@ -38,7 +38,7 @@ webstack:
 
 content:
   categories:
-    - name: 常用娱乐
+    - name: 常用网站
       sites:
         - name: Bilibili
           description: 弹幕网站
@@ -46,6 +46,20 @@ content:
         - name: 抖音
           description: 短视频
           url: https://www.douyin.com/
+        - name: 百度翻译
+          description: 百度翻译
+          url: https://fanyi.baidu.com/?aldtype=16047#auto/zh
+        - name: 学习强国
+          description: 学习强国
+          url: https://www.xuexi.cn/
+        - name: 个人博客
+          description: 个人博客
+          url: https://mybaize.top/
+        - name: 中国慕课
+          description: 学习网站
+          url: https://www.icourse163.org/
+    - name: 常用设计
+      sites:
         - name: Behance
           description: Adobe旗下的设计师交流平台，来自世界各地的设计师在这里分享自己的作品。
           url: https://behance.net/
