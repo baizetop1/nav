@@ -43,6 +43,9 @@ content:
         - name: Bilibili
           description: 弹幕网站
           url: https://www.bilibili.com/
+        - name: Youtube
+          description: 全球最大的学习分享平台
+          url: https://www.youtube.com/
         - name: 抖音
           description: 短视频
           url: https://www.douyin.com/
@@ -58,38 +61,15 @@ content:
         - name: 中国慕课
           description: 学习网站
           url: https://www.icourse163.org/
-    - name: 常用设计
+    - name: 编程学习
       sites:
-        - name: Behance
-          description: Adobe旗下的设计师交流平台，来自世界各地的设计师在这里分享自己的作品。
-          url: https://behance.net/
-        - name: UI中国
-          description: 图形交互与界面设计交流、作品展示、学习平台。
-          url: http://www.ui.cn/
-        - name: 站酷
-          description: 中国人气设计师互动平台
-          url: http://www.zcool.com.cn/
-        - name: Pinterest
-          description: 全球美图收藏采集站
-          url: https://www.pinterest.com/
-        - name: 花瓣
-          description: 收集灵感,保存有用的素材
-          url: http://huaban.com/
-        - name: 优设
-          description: 设计师交流学习平台
-          url: http://www.uisdc.com/
-        - name: Producthunt
-          description: 发现新鲜有趣的产品
-          url: https://www.producthunt.com/
-        - name: Youtube
-          description: 全球最大的学习分享平台
-          url: https://www.youtube.com/
-        - name: Google
-          description: 全球最大的UI学习分享平台
-          url: https://www.google.com/
-        - name: Medium
-          description: Read, write and share stories that matter
-          url: https://medium.com/
+        - name: MDN
+          description: Web 开发技术社区。
+          url: https://developer.mozilla.org/zh-CN/
+        - name: 菜鸟教程
+          description: 编程学习语言。
+          url: https://www.runoob.com/
+       
     - name: 界面灵感
       sites:
         - name: Dribbble
