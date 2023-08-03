@@ -46,9 +46,9 @@ content:
         - name: Youtube
           description: 全球最大的学习分享平台
           url: https://www.youtube.com/
-        - name: 百度翻译
-          description: 百度翻译
-          url: https://fanyi.baidu.com/?aldtype=16047#auto/zh
+        - name: deepl
+          description: deepl
+          url: https://www.deepl.com/translator
         - name: 学习强国
           description: 学习强国
           url: https://www.xuexi.cn/
@@ -75,11 +75,23 @@ content:
         - name: w3schoool
           description: 编程学习网站
           url: https://www.w3school.com.cn/
-    - name: AI
+    - name: 实用网站
       sites:
         - name: ChatGPT
           description: 人工智能对话助手
           url: https://laoluoai.com/chat
+        - name: 虫部落
+          description: 高效搜索
+          url: https://search.chongbuluo.com/
+        - name: 抠图
+          description: 抠图
+          url: https://www.yijiankoutu.com/
+        - name: iizhi资源
+          description: 资源搜索
+          url: https://www.iizhi.cn/
+        - name: Doyoudo
+          description: 视频剪辑合集
+          url: https://premium.doyoudo.com/
     - name: 社区资讯
       sites:
         - name: 雷锋网
