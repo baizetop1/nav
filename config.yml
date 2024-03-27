@@ -29,6 +29,7 @@ webstack:
     default: google
     # 可选的搜索引擎
     engines:
+      - Bing
       - google
       - github
       - weibo
