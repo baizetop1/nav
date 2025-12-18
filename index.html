@@ -5,10 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="https://github.com/baizetop1.png?size=40" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>白泽 - 个人导航</title>
-    <script type="module" crossorigin src="./assets/index-Bd7I3sCw.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DvZcnIb4.css">
+    <script type="module" crossorigin src="/nav/assets/index-Bd7I3sCw.js"></script>
+    <link rel="stylesheet" crossorigin href="/nav/assets/index-DvZcnIb4.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        var div = document.createElement('div');
+        div.style.color = 'red';
+        div.style.padding = '20px';
+        div.style.fontFamily = 'monospace';
+        div.innerHTML = '<h1>Something went wrong</h1><p>' + message + '</p><p>' + source + ':' + lineno + '</p>';
+        document.body.appendChild(div);
+      };
+    </script>
   </body>
 </html>
