@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Search, Menu, ExternalLink } from 'lucide-react';
+import { Search, Menu } from 'lucide-react';
 import { Sidebar } from './components/Sidebar';
 import { Card } from './components/Card';
 import { categories, searchEngines } from './data';
