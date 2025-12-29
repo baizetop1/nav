@@ -4,3 +4,8 @@ dist-ssr
 *.local
 .DS_Store
 legacy_backup
+
+# Environment Variables
+.env
+.env.*
+!.env.example

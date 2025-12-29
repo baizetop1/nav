@@ -6,7 +6,7 @@ import { categories as defaultCategories, searchEngines, Site, Category } from '
 import { LoginModal } from './components/LoginModal';
 import { AddSiteModal } from './components/AddSiteModal';
 
-const AUTH_TOKEN = 'SGoyNDA1NzAyNg=='; // Base64 for 'admin'
+const AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN || 'YWRtaW4='; // Default to admin for local dev if not set
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

@@ -27,6 +27,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_AUTH_TOKEN: ${{ secrets.VITE_AUTH_TOKEN }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
