@@ -1,6 +1,6 @@
-import { categories, siteConfig } from '../data';
+import { siteConfig, Category } from '../data';
 import { cn } from '../lib/utils';
-import { X, Github, Moon, Sun } from 'lucide-react';
+import { X, Github, Moon, Sun, Lock, Unlock, Plus, RotateCcw, Download } from 'lucide-react';
 
 interface SidebarProps {
   activeCategory: string;
@@ -8,9 +8,27 @@ interface SidebarProps {
   setIsOpen: (open: boolean) => void;
   isDark: boolean;
   toggleTheme: () => void;
+  categories: Category[];
+  isAuthenticated: boolean;
+  onLoginClick: () => void;
+  onAddClick: () => void;
+  onResetClick: () => void;
+  onExportClick: () => void;
 }
 
-export function Sidebar({ activeCategory, isOpen, setIsOpen, isDark, toggleTheme }: SidebarProps) {
+export function Sidebar({
+    activeCategory,
+    isOpen,
+    setIsOpen,
+    isDark,
+    toggleTheme,
+    categories,
+    isAuthenticated,
+    onLoginClick,
+    onAddClick,
+    onResetClick,
+    onExportClick
+}: SidebarProps) {
     const scrollToCategory = (name: string) => {
         const el = document.getElementById(name);
         if (el) {
@@ -22,7 +40,7 @@ export function Sidebar({ activeCategory, isOpen, setIsOpen, isDark, toggleTheme
     return (
         <>
             {/* Mobile Overlay */}
-            <div 
+            <div
                 className={cn(
                     "fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300",
                     isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -64,6 +82,42 @@ export function Sidebar({ activeCategory, isOpen, setIsOpen, isDark, toggleTheme
                     </nav>
 
                     <div className="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800 space-y-4">
+                        {/* Admin Controls */}
+                        <div className="flex items-center justify-between px-2 pb-2">
+                             <div className="flex items-center gap-1">
+                                <button
+                                    onClick={isAuthenticated ? onAddClick : onLoginClick}
+                                    className={cn(
+                                        "p-2 rounded-lg transition-colors",
+                                        isAuthenticated
+                                            ? "text-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                                            : "text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+                                    )}
+                                    title={isAuthenticated ? "添加网站" : "管理员登录"}
+                                >
+                                    {isAuthenticated ? <Plus size={20} /> : <Lock size={20} />}
+                                </button>
+                                {isAuthenticated && (
+                                    <>
+                                        <button
+                                            onClick={onExportClick}
+                                            className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition-colors"
+                                            title="导出配置"
+                                        >
+                                            <Download size={20} />
+                                        </button>
+                                        <button
+                                            onClick={onResetClick}
+                                            className="p-2 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
+                                            title="重置数据"
+                                        >
+                                            <RotateCcw size={20} />
+                                        </button>
+                                    </>
+                                )}
+                             </div>
+                        </div>
+
                         <div className="flex items-center justify-between px-2">
                              <button
                                 onClick={toggleTheme}

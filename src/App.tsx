@@ -2,20 +2,30 @@ import { useState, useEffect, useMemo } from 'react';
 import { Search, Menu } from 'lucide-react';
 import { Sidebar } from './components/Sidebar';
 import { Card } from './components/Card';
-import { categories, searchEngines } from './data';
+import { categories as defaultCategories, searchEngines, Site, Category } from './data';
+import { LoginModal } from './components/LoginModal';
+import { AddSiteModal } from './components/AddSiteModal';
+
+const AUTH_TOKEN = 'YWRtaW4='; // Base64 for 'admin'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState(categories[0].name);
+  const [categories, setCategories] = useState<Category[]>(defaultCategories);
+  const [activeCategory, setActiveCategory] = useState(defaultCategories[0].name);
   const [search, setSearch] = useState('');
   const [isDark, setIsDark] = useState(false);
+
+  // Auth & Management States
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isAddOpen, setIsAddOpen] = useState(false);
 
   // Detect active search engine
   const activeEngine = useMemo(() => {
     return searchEngines.find(e => search.startsWith(e.prefix + ' '));
   }, [search]);
 
-  // Initialize theme
+  // Initialize theme & data
   useEffect(() => {
     // Check local storage or system preference
     const savedTheme = localStorage.getItem('theme');
@@ -25,6 +35,16 @@ function App() {
     } else {
       setIsDark(false);
       document.documentElement.classList.remove('dark');
+    }
+
+    // Load custom data
+    const savedData = localStorage.getItem('nav_data');
+    if (savedData) {
+        try {
+            setCategories(JSON.parse(savedData));
+        } catch (e) {
+            console.error('Failed to parse saved data');
+        }
     }
   }, []);
 
@@ -38,6 +58,50 @@ function App() {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
+  };
+
+  // Auth Handlers
+  const handleLogin = (password: string) => {
+    try {
+        if (btoa(password) === AUTH_TOKEN) {
+            setIsAuthenticated(true);
+            return true;
+        }
+    } catch (e) {
+        console.error(e);
+    }
+    return false;
+  };
+
+  const handleAddSite = (categoryName: string, site: Site) => {
+    const newData = categories.map(cat => {
+        if (cat.name === categoryName) {
+            return { ...cat, sites: [...cat.sites, site] };
+        }
+        return cat;
+    });
+    setCategories(newData);
+    localStorage.setItem('nav_data', JSON.stringify(newData));
+    alert('添加成功！数据已保存到本地存储。');
+  };
+
+  const handleReset = () => {
+    if (confirm('确定要重置所有数据吗？这将清除所有自定义添加的网站。')) {
+        setCategories(defaultCategories);
+        localStorage.removeItem('nav_data');
+    }
+  };
+
+  const handleExport = () => {
+      const dataStr = JSON.stringify(categories, null, 2);
+      const blob = new Blob([dataStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = "nav-data.json";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
   };
 
   // Scroll spy
@@ -56,7 +120,7 @@ function App() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [categories]); // Added dependency on categories
 
   // Keyboard shortcut for search
   useEffect(() => {
@@ -82,7 +146,7 @@ function App() {
         return nameMatch || descMatch || tagsMatch;
       })
     })).filter(cat => cat.sites.length > 0);
-  }, [search]);
+  }, [search, categories]);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors duration-300 font-sans">
@@ -92,6 +156,12 @@ function App() {
         setIsOpen={setIsOpen}
         isDark={isDark}
         toggleTheme={toggleTheme}
+        categories={categories}
+        isAuthenticated={isAuthenticated}
+        onLoginClick={() => setIsLoginOpen(true)}
+        onAddClick={() => setIsAddOpen(true)}
+        onResetClick={handleReset}
+        onExportClick={handleExport}
       />
 
       <main className="lg:ml-64 min-h-screen p-4 lg:p-8">
@@ -119,7 +189,6 @@ function App() {
                         placeholder={activeEngine ? activeEngine.placeholder : "搜索... (试着输入 'g ' 搜索 Google)"}
                         value={search}
                         onChange={(e) => {
-                          console.log('Search input:', e.target.value);
                           setSearch(e.target.value);
                         }}
                         onKeyDown={(e) => {
@@ -208,6 +277,19 @@ function App() {
             )}
         </div>
       </main>
+
+      <LoginModal
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        onLogin={handleLogin}
+      />
+
+      <AddSiteModal
+        isOpen={isAddOpen}
+        onClose={() => setIsAddOpen(false)}
+        onAdd={handleAddSite}
+        categories={categories}
+      />
     </div>
   );
 }
