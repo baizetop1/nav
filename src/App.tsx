@@ -15,12 +15,14 @@ function App() {
   const [search, setSearch] = useState('');
   const [isDark, setIsDark] = useState(false);
   const [isAutoGradient, setIsAutoGradient] = useState(true);
-  const [gradientClass, setGradientClass] = useState('');
+  const [mainGradient, setMainGradient] = useState('');
+  const [sidebarGradient, setSidebarGradient] = useState('');
 
   // Auto gradient logic
   useEffect(() => {
     if (!isAutoGradient) {
-      setGradientClass('');
+      setMainGradient('');
+      setSidebarGradient('');
       return;
     }
 
@@ -28,10 +30,12 @@ function App() {
       const hour = new Date().getHours();
       // Morning/Day: 6:00 - 18:00
       if (hour >= 6 && hour < 18) {
-        setGradientClass('bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800');
+        setMainGradient('bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800');
+        setSidebarGradient('bg-gradient-to-b from-white/80 to-blue-50/50 dark:from-gray-900/80 dark:to-slate-900/50');
       } else {
         // Evening/Night: 18:00 - 6:00
-        setGradientClass('bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-slate-900');
+        setMainGradient('bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 dark:from-gray-950 dark:via-slate-900 dark:to-black');
+        setSidebarGradient('bg-gradient-to-b from-white/80 to-indigo-50/50 dark:from-gray-900/80 dark:to-indigo-950/50');
       }
     };
 
