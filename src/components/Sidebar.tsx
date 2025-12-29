@@ -126,6 +126,18 @@ export function Sidebar({
                             >
                                 {isDark ? <Sun size={20} /> : <Moon size={20} />}
                             </button>
+                             <button
+                                onClick={toggleAutoGradient}
+                                className={cn(
+                                    "p-2 rounded-lg transition-colors",
+                                    isAutoGradient
+                                        ? "text-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                                        : "text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+                                )}
+                                title={isAutoGradient ? "关闭自动渐变" : "开启自动渐变"}
+                            >
+                                <Palette size={20} />
+                            </button>
                             <a
                                 href={siteConfig.github}
                                 target="_blank"

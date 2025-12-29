@@ -149,7 +149,7 @@ function App() {
   }, [search, categories]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors duration-300 font-sans">
+    <div className={`min-h-screen transition-colors duration-300 font-sans ${gradientClass || 'bg-gray-50 dark:bg-gray-950'}`}>
       <Sidebar
         activeCategory={activeCategory}
         isOpen={isOpen}
@@ -162,6 +162,8 @@ function App() {
         onAddClick={() => setIsAddOpen(true)}
         onResetClick={handleReset}
         onExportClick={handleExport}
+        isAutoGradient={isAutoGradient}
+        toggleAutoGradient={() => setIsAutoGradient(!isAutoGradient)}
       />
 
       <main className="lg:ml-64 min-h-screen p-4 lg:p-8">
