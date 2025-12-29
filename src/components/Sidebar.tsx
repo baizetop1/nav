@@ -16,6 +16,7 @@ interface SidebarProps {
   onExportClick: () => void;
   isAutoGradient: boolean;
   toggleAutoGradient: () => void;
+  customGradient?: string;
 }
 
 export function Sidebar({
@@ -31,7 +32,8 @@ export function Sidebar({
     onResetClick,
     onExportClick,
     isAutoGradient,
-    toggleAutoGradient
+    toggleAutoGradient,
+    customGradient
 }: SidebarProps) {
     const scrollToCategory = (name: string) => {
         const el = document.getElementById(name);
@@ -52,8 +54,9 @@ export function Sidebar({
                 onClick={() => setIsOpen(false)}
             />
 
-            {/* Sidebar */}
-            <aside className={cn(
+            {/* Sidebar */} transition-colors
+            <aside className={cn(",
+                customGradient ? customGradient : "bg-white/60 dark:bg-gray-900/60
                 "fixed top-0 left-0 h-full w-64 bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-800/50 z-50 transform transition-transform duration-300 lg:translate-x-0",
                 isOpen ? "translate-x-0" : "-translate-x-full"
             )}>

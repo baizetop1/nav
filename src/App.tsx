@@ -174,7 +174,9 @@ function App() {
   }, [search, categories]);
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 font-sans ${gradientClass || 'bg-gray-50 dark:bg-gray-950'}`}>
+    <div className={`min-h-screen transition-colors duration-300 font-sans bg-gray-50 dark:bg-gray-950`}>
+      <div className={`fixed inset-0 z-0 transition-opacity duration-1000 ${mainGradient}`} />
+
       <Sidebar
         activeCategory={activeCategory}
         isOpen={isOpen}
@@ -189,9 +191,10 @@ function App() {
         onExportClick={handleExport}
         isAutoGradient={isAutoGradient}
         toggleAutoGradient={() => setIsAutoGradient(!isAutoGradient)}
+        customGradient={sidebarGradient}
       />
 
-      <main className="lg:ml-64 min-h-screen p-4 lg:p-8 bg-transparent">
+      <main className="relative z-10 lg:ml-64 min-h-screen p-4 lg:p-8 bg-transparent">
         {/* Header / Search */}
         <div className="sticky top-0 z-30 -mx-4 px-4 lg:-mx-8 lg:px-8 py-4 bg-gray-50/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 mb-8 transition-colors duration-300">
             <div className="max-w-7xl mx-auto flex items-center gap-4">
