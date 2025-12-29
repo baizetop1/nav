@@ -200,7 +200,7 @@ function App() {
 
       <main className="relative z-10 lg:ml-64 min-h-screen p-4 lg:p-8 bg-transparent">
         {/* Header / Search */}
-        <div className="sticky top-0 z-30 -mx-4 px-4 lg:-mx-8 lg:px-8 py-4 bg-gray-50/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 mb-8 transition-colors duration-300">
+        <div className="sticky top-0 z-30 -mx-4 px-4 lg:-mx-8 lg:px-8 py-4 bg-white/10 dark:bg-black/20 backdrop-blur-xl border-b border-white/20 dark:border-gray-700/30 mb-8 transition-colors duration-300">
             <div className="max-w-7xl mx-auto flex items-center gap-4">
                 <button
                     onClick={() => setIsOpen(true)}
