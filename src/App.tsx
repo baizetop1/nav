@@ -271,10 +271,10 @@ function App() {
             {filteredCategories.length > 0 ? (
                 filteredCategories.map(cat => (
                     <section key={cat.name} id={cat.name} className="scroll-mt-28">
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-800 dark:text-gray-100">
-                            <span className="w-1 h-8 bg-blue-500 rounded-full mr-2"></span>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-900 dark:text-white drop-shadow-sm">
+                            <span className="w-1 h-8 bg-blue-500 rounded-full mr-2 shadow-sm"></span>
                             {cat.name}
-                            <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-2">
+                            <span className="text-sm font-normal text-gray-500 dark:text-gray-400 ml-2">
                                 ({cat.sites.length})
                             </span>
                         </h2>
