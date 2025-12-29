@@ -1,6 +1,6 @@
 import { siteConfig, Category } from '../data';
 import { cn } from '../lib/utils';
-import { X, Github, Moon, Sun, Lock, Unlock, Plus, RotateCcw, Download } from 'lucide-react';
+import { X, Github, Moon, Sun, Lock, Plus, RotateCcw, Download } from 'lucide-react';
 
 interface SidebarProps {
   activeCategory: string;
