@@ -14,6 +14,8 @@ interface SidebarProps {
   onAddClick: () => void;
   onResetClick: () => void;
   onExportClick: () => void;
+  isAutoGradient: boolean;
+  toggleAutoGradient: () => void;
 }
 
 export function Sidebar({
@@ -27,7 +29,9 @@ export function Sidebar({
     onLoginClick,
     onAddClick,
     onResetClick,
-    onExportClick
+    onExportClick,
+    isAutoGradient,
+    toggleAutoGradient
 }: SidebarProps) {
     const scrollToCategory = (name: string) => {
         const el = document.getElementById(name);
