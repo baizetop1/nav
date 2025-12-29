@@ -14,6 +14,31 @@ function App() {
   const [activeCategory, setActiveCategory] = useState(defaultCategories[0].name);
   const [search, setSearch] = useState('');
   const [isDark, setIsDark] = useState(false);
+  const [isAutoGradient, setIsAutoGradient] = useState(true);
+  const [gradientClass, setGradientClass] = useState('');
+
+  // Auto gradient logic
+  useEffect(() => {
+    if (!isAutoGradient) {
+      setGradientClass('');
+      return;
+    }
+
+    const updateGradient = () => {
+      const hour = new Date().getHours();
+      // Morning/Day: 6:00 - 18:00
+      if (hour >= 6 && hour < 18) {
+        setGradientClass('bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800');
+      } else {
+        // Evening/Night: 18:00 - 6:00
+        setGradientClass('bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-slate-900');
+      }
+    };
+
+    updateGradient();
+    const interval = setInterval(updateGradient, 60000); // Check every minute
+    return () => clearInterval(interval);
+  }, [isAutoGradient]);
 
   // Auth & Management States
   const [isAuthenticated, setIsAuthenticated] = useState(false);
