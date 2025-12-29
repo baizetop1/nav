@@ -54,11 +54,11 @@ export function Sidebar({
                 onClick={() => setIsOpen(false)}
             />
 
-            {/* Sidebar */} transition-colors
-            <aside className={cn(",
-                customGradient ? customGradient : "bg-white/60 dark:bg-gray-900/60
-                "fixed top-0 left-0 h-full w-64 bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-800/50 z-50 transform transition-transform duration-300 lg:translate-x-0",
-                isOpen ? "translate-x-0" : "-translate-x-full"
+            {/* Sidebar */}
+            <aside className={cn(
+                "fixed top-0 left-0 h-full w-64 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-800/50 z-50 transform transition-transform duration-300 lg:translate-x-0 transition-colors",
+                isOpen ? "translate-x-0" : "-translate-x-full",
+                customGradient ? customGradient : "bg-white/60 dark:bg-gray-900/60"
             )}>
                 <div className="p-6 h-full flex flex-col">
                     <div className="flex items-center justify-between mb-8">
