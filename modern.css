@@ -1,0 +1,111 @@
+/* Modern Tech Theme: neon gradient background + glassmorphism cards */
+:root {
+  --bg0: #0b1220;
+  --bg1: #0e1626;
+  --glass: rgba(16, 24, 40, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --text: #d8e3f0;
+  --muted: #9fb3c8;
+  --accent: #2ef2ff;
+  --accent-2: #8865ff;
+  --accent-3: #00b3ff;
+}
+
+/* Animated gradient + subtle grid background */
+body.page-body {
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 15% 10%, rgba(46, 242, 255, 0.08), transparent 60%),
+              radial-gradient(900px 600px at 85% 20%, rgba(136, 101, 255, 0.08), transparent 60%),
+              linear-gradient(135deg, #0a0f1a 0%, #0c1322 50%, #0b1424 100%);
+  background-attachment: fixed;
+}
+
+/* Optional animated pan (low key to avoid motion sickness) */
+@keyframes bg-pan {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  50% { background-position: 10px -10px, -10px 10px, 0 0; }
+  100% { background-position: 0 0, 0 0, 0 0; }
+}
+
+.page-container, .main-content {
+  color: var(--text);
+}
+
+/* Sidebar: glassmorphism + neon hover */
+.sidebar-menu {
+  background: rgba(10, 15, 26, 0.55);
+  backdrop-filter: saturate(120%) blur(10px);
+  border-right: 1px solid var(--glass-border);
+}
+.sidebar-menu .main-menu > li > a {
+  color: var(--muted);
+  transition: color .2s ease, background .2s ease;
+}
+.sidebar-menu .main-menu > li > a:hover,
+.sidebar-menu .main-menu > li.active > a {
+  color: var(--accent);
+  background: rgba(46, 242, 255, 0.08);
+}
+
+/* Cards / Panels */
+.panel, .xe-widget, .tile-stats, .panel-default, .panel-body {
+  background: var(--glass) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: saturate(120%) blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255,255,255,0.04) !important;
+}
+
+/* Titles & accents */
+.tile-title, .page-title, .panel-title, h1, h2, h3 {
+  color: var(--text) !important;
+}
+.panel-title:after, .tile-title:after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 1px;
+}
+
+/* Links: neon hover */
+a, .btn-link {
+  color: var(--muted);
+  transition: color .15s ease, text-shadow .15s ease;
+}
+a:hover, .btn-link:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(46, 242, 255, 0.35);
+}
+
+/* Search box override */
+.search-box, #txt {
+  background: rgba(10, 15, 26, 0.65) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+/* Footer / small text */
+footer, .footer, .small, .muted {
+  color: var(--muted) !important;
+}
+
+/* Night toggle already present: make night slightly darker */
+body.night .panel, body.night .xe-widget, body.night .tile-stats {
+  background: rgba(8, 12, 20, 0.60) !important;
+}
+
+/* Uploads grid / items general (if exists) */
+.item, .card, .xe-comment-entry {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+}
+
+/* Scrollbar (modern) */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.06); }
