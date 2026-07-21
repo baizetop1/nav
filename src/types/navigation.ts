@@ -19,6 +19,10 @@ export interface LayoutItem {
   siteId: string;
   order: number;
   size: 'normal' | 'wide';
+  x?: number;
+  y?: number;
+  width?: 1 | 2;
+  height?: 1 | 2;
 }
 
 export interface NavigationData {

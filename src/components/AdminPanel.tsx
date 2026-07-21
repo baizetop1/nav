@@ -1,9 +1,7 @@
-import { useMemo, useState } from 'react';
-import { DndContext, KeyboardSensor, PointerSensor, closestCenter, type DragEndEvent, useSensor, useSensors } from '@dnd-kit/core';
-import { SortableContext, arrayMove, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy } from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
-import { Download, ExternalLink, Github, GripVertical, Plus, RotateCcw, Save, Trash2, X } from 'lucide-react';
-import { getAuthenticatedUser, publishNavigationData } from '../services/github';
+import { useEffect, useState } from 'react';
+import { Activity, Download, ExternalLink, GitMerge, Github, Plus, RefreshCw, RotateCcw, Save, X } from 'lucide-react';
+import { getAuthenticatedUser, getRemoteNavigationData, getWorkflowRun, publishNavigationData, type WorkflowRun } from '../services/github';
+import { NavigationOrganizer } from './NavigationOrganizer';
 import type { NavigationData, Site } from '../types/navigation';
 
 interface AdminPanelProps {
@@ -29,18 +27,6 @@ function slugify(value: string): string {
   return slug || `item-${Date.now().toString(36)}`;
 }
 
-function SortableSiteRow({ site, onEdit, onDelete }: { site: Site; onEdit: (site: Site) => void; onDelete: (siteId: string) => void }) {
-  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: site.id });
-  return (
-    <div ref={setNodeRef} style={{ transform: CSS.Transform.toString(transform), transition }} className={`flex items-center gap-2 rounded-xl border border-[#5f8f84]/15 bg-[#fbfaf5]/58 p-3 backdrop-blur-md dark:border-[#c9a96b]/10 dark:bg-[#07191d]/38 ${isDragging ? 'z-10 shadow-xl ring-1 ring-[#c9a96b]/40' : ''}`}>
-      <button type="button" {...attributes} {...listeners} className="cursor-grab touch-none rounded-lg p-1.5 text-[#78918c] hover:bg-[#5f8f84]/10 active:cursor-grabbing dark:text-[#a7b5b0] dark:hover:bg-[#c9a96b]/10" aria-label={`拖动 ${site.name}`}><GripVertical size={17} /></button>
-      <div className="min-w-0 flex-1"><p className="truncate font-medium text-[#234b4e] dark:text-[#f4f1e8]">{site.name}</p><p className="truncate text-xs text-[#718986] dark:text-[#93a6a1]">{site.url}</p></div>
-      <button onClick={() => onEdit(site)} className="rounded-lg px-3 py-1.5 text-sm font-medium text-[#356b66] hover:bg-[#5f8f84]/10 dark:text-[#d2b775] dark:hover:bg-[#c9a96b]/10">编辑</button>
-      <button onClick={() => onDelete(site.id)} className="baize-danger-button border-0 p-2" aria-label={`删除 ${site.name}`}><Trash2 size={16} /></button>
-    </div>
-  );
-}
-
 export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose }: AdminPanelProps) {
   const firstCategoryId = data.categories[0]?.id || '';
   const [draft, setDraft] = useState<SiteDraft>(() => createSiteDraft(firstCategoryId));
@@ -49,15 +35,30 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
   const [repository, setRepository] = useState(defaultRepository);
   const [commitMessage, setCommitMessage] = useState('Update navigation data from CMS');
   const [publishState, setPublishState] = useState<{ type: 'idle' | 'loading' | 'success' | 'error'; message?: string; url?: string }>({ type: 'idle' });
-  const sensors = useSensors(
-    useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
-    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
-  );
+  const [remoteData, setRemoteData] = useState<NavigationData | null>(null);
+  const [remoteState, setRemoteState] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
+  const [publishedSha, setPublishedSha] = useState('');
+  const [workflowRun, setWorkflowRun] = useState<WorkflowRun | null>(null);
 
-  const sortedSites = useMemo(() => {
-    const order = new Map(data.layout.map(item => [item.siteId, item.order]));
-    return [...data.sites].sort((a, b) => (order.get(a.id) ?? 9999) - (order.get(b.id) ?? 9999));
-  }, [data]);
+  useEffect(() => {
+    if (!publishedSha || !token.trim()) return;
+    let disposed = false;
+    let timer = 0;
+    const poll = async () => {
+      try {
+        const run = await getWorkflowRun(repository, token.trim(), publishedSha);
+        if (!disposed && run) {
+          setWorkflowRun(run);
+          if (run.status === 'completed') return;
+        }
+      } catch {
+        // Publishing already succeeded; polling failures remain non-blocking.
+      }
+      if (!disposed) timer = window.setTimeout(poll, 5000);
+    };
+    void poll();
+    return () => { disposed = true; window.clearTimeout(timer); };
+  }, [publishedSha, repository, token]);
 
   const resetForm = (categoryId = firstCategoryId) => setDraft(createSiteDraft(categoryId));
 
@@ -93,7 +94,7 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
 
     const exists = data.sites.some(item => item.id === site.id);
     const sites = exists ? data.sites.map(item => item.id === site.id ? site : item) : [...data.sites, site];
-    const layout = exists ? data.layout : [...data.layout, { siteId: site.id, order: data.layout.length + 1, size: 'normal' as const }];
+    const layout = exists ? data.layout : [...data.layout, { siteId: site.id, order: data.layout.length + 1, size: 'normal' as const, width: 1 as const, height: 1 as const, x: 0, y: 0 }];
     onChange({ ...data, sites, layout });
     resetForm(site.categoryId);
   };
@@ -106,20 +107,6 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
       layout: data.layout.filter(item => item.siteId !== siteId),
     });
     if (draft.id === siteId) resetForm();
-  };
-
-  const reorderSites = (event: DragEndEvent) => {
-    const { active, over } = event;
-    if (!over || active.id === over.id) return;
-    const oldIndex = sortedSites.findIndex(site => site.id === active.id);
-    const newIndex = sortedSites.findIndex(site => site.id === over.id);
-    if (oldIndex < 0 || newIndex < 0) return;
-    const reordered = arrayMove(sortedSites, oldIndex, newIndex);
-    const existingSizes = new Map(data.layout.map(item => [item.siteId, item.size]));
-    onChange({
-      ...data,
-      layout: reordered.map((site, index) => ({ siteId: site.id, order: index + 1, size: existingSizes.get(site.id) || 'normal' })),
-    });
   };
 
   const addCategory = (event: React.FormEvent) => {
@@ -159,6 +146,35 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
     URL.revokeObjectURL(url);
   };
 
+  const loadRemote = async () => {
+    if (!token.trim()) {
+      setPublishState({ type: 'error', message: '请先输入 GitHub Token。' });
+      return;
+    }
+    setRemoteState('loading');
+    try {
+      setRemoteData(await getRemoteNavigationData(repository, token.trim()));
+      setRemoteState('ready');
+    } catch (error) {
+      setRemoteState('error');
+      setPublishState({ type: 'error', message: error instanceof Error ? error.message : '读取远端数据失败。' });
+    }
+  };
+
+  const mergeRemote = () => {
+    if (!remoteData) return;
+    const mergeById = <T extends { id: string }>(remote: T[], local: T[]) => {
+      const result = new Map(remote.map(item => [item.id, item]));
+      local.forEach(item => result.set(item.id, item));
+      return [...result.values()];
+    };
+    const layout = new Map(remoteData.layout.map(item => [item.siteId, item]));
+    data.layout.forEach(item => layout.set(item.siteId, item));
+    onChange({ sites: mergeById(remoteData.sites, data.sites), categories: mergeById(remoteData.categories, data.categories), layout: [...layout.values()] });
+    setRemoteData(null);
+    setRemoteState('idle');
+  };
+
   const publish = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!token.trim()) {
@@ -170,6 +186,8 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
       const user = await getAuthenticatedUser(token.trim());
       const result = await publishNavigationData(repository, data, token.trim(), commitMessage.trim() || undefined);
       setPublishState({ type: 'success', message: `已由 @${user.login} 提交，GitHub Actions 将开始部署。`, url: result.commitUrl });
+      setPublishedSha(result.sha);
+      setWorkflowRun(null);
       localStorage.removeItem('nav_cms_draft');
     } catch (error) {
       setPublishState({ type: 'error', message: error instanceof Error ? error.message : '发布失败，请检查 Token 和仓库设置。' });
@@ -207,28 +225,12 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
               </form>
             </section>
 
-            <section className={panelClass}>
-              <div className="mb-4 flex items-center justify-between"><h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">网站列表</h2><span className="baize-chip">{data.sites.length} 个网站</span></div>
-              <p className="mb-3 text-xs text-[#718986] dark:text-[#93a6a1]">拖动左侧手柄调整全局展示顺序，也可以用键盘完成排序。</p>
-              <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={reorderSites}>
-                <SortableContext items={sortedSites.map(site => site.id)} strategy={verticalListSortingStrategy}>
-                  <div className="max-h-[560px] space-y-2 overflow-y-auto pr-1">{sortedSites.map(site => <SortableSiteRow key={site.id} site={site} onEdit={editSite} onDelete={deleteSite} />)}</div>
-                </SortableContext>
-              </DndContext>
-            </section>
+            <NavigationOrganizer data={data} onChange={onChange} onEdit={editSite} onDeleteSite={deleteSite} onRenameCategory={renameCategory} onDeleteCategory={deleteCategory} />
           </div>
 
           <div className="space-y-6">
             <section className={panelClass}>
-              <h2 className="mb-4 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">分类管理</h2>
-              <div className="space-y-2">
-                {[...data.categories].sort((a, b) => a.order - b.order).map(category => (
-                  <div key={category.id} className="flex gap-2">
-                    <input className={inputClass} defaultValue={category.name} onBlur={event => renameCategory(category.id, event.target.value)} />
-                    <button onClick={() => deleteCategory(category.id)} className="baize-danger-button border-0 p-2" aria-label={`删除 ${category.name}`}><Trash2 size={16} /></button>
-                  </div>
-                ))}
-              </div>
+              <h2 className="mb-4 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">新建分类</h2>
               <form onSubmit={addCategory} className="mt-3 flex gap-2"><input className={inputClass} value={newCategoryName} onChange={event => setNewCategoryName(event.target.value)} placeholder="新分类名称" /><button className="baize-button-primary px-3" aria-label="添加分类"><Plus size={18} /></button></form>
             </section>
 
@@ -242,7 +244,10 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
                 <label className={`${labelClass} block`}>提交说明<input className={`${inputClass} mt-1`} value={commitMessage} onChange={event => setCommitMessage(event.target.value)} /></label>
                 <button disabled={publishState.type === 'loading'} className="baize-button-primary w-full py-2.5"><Github size={17} />{publishState.type === 'loading' ? '发布中…' : '提交并部署'}</button>
               </form>
+              <button type="button" onClick={loadRemote} disabled={remoteState === 'loading'} className="baize-button-secondary mt-3 w-full"><RefreshCw size={16} className={remoteState === 'loading' ? 'animate-spin' : ''} />读取远端内容并比较</button>
+              {remoteData && <div className="mt-3 rounded-xl border border-[#5f8f84]/20 bg-[#5f8f84]/8 p-3 text-sm text-[#315e5b] dark:text-[#c7d1cd]"><div className="flex items-center gap-2 font-semibold"><GitMerge size={16} />发现远端数据</div><p className="mt-1 text-xs">远端 {remoteData.categories.length} 个分类、{remoteData.sites.length} 个网站；本地 {data.categories.length} 个分类、{data.sites.length} 个网站。</p><div className="mt-3 flex flex-wrap gap-2"><button type="button" onClick={mergeRemote} className="baize-button-primary px-3 py-1.5">合并，本地优先</button><button type="button" onClick={() => { onChange(remoteData); setRemoteData(null); setRemoteState('idle'); }} className="baize-button-secondary px-3 py-1.5">使用远端覆盖</button><button type="button" onClick={() => { setRemoteData(null); setRemoteState('idle'); }} className="baize-button-secondary px-3 py-1.5">取消</button></div></div>}
               {publishState.message && <div className={`mt-3 rounded-xl border p-3 text-sm ${publishState.type === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{publishState.message}{publishState.url && <a className="ml-2 inline-flex items-center gap-1 underline" href={publishState.url} target="_blank" rel="noreferrer">查看 commit <ExternalLink size={13} /></a>}</div>}
+              {publishedSha && <div className="mt-3 rounded-xl border border-[#c9a96b]/20 bg-[#c9a96b]/8 p-3 text-sm"><div className="flex items-center gap-2 font-semibold text-[#5d552f] dark:text-[#dccb9d]"><Activity size={16} className={workflowRun?.status !== 'completed' ? 'animate-pulse' : ''} />部署状态</div><p className="mt-1 text-xs text-[#718986]">{!workflowRun ? '等待 GitHub Actions 创建任务…' : workflowRun.status === 'completed' ? `已完成：${workflowRun.conclusion || 'unknown'}` : workflowRun.status === 'in_progress' ? '正在构建和部署…' : `状态：${workflowRun.status}`}</p>{workflowRun && <a href={workflowRun.html_url} target="_blank" rel="noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs underline">查看 Actions <ExternalLink size={12} /></a>}</div>}
             </section>
 
             <section className={`${panelClass} flex flex-wrap gap-2`}>

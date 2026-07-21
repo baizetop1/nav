@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
 import { Menu, Search } from 'lucide-react';
 import { AdminPanel } from './components/AdminPanel';
@@ -209,7 +209,17 @@ function App() {
                   <h2 className="text-xl font-bold tracking-wide text-[#173b41] dark:text-[#f4f1e8]">{category.name}</h2>
                   <span className="ml-1 text-sm font-medium text-[#64807c] dark:text-[#9fb2ad]">({sites.length})</span>
                 </div>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{sites.map(site => <Card key={site.id} site={site} />)}</div>
+                <div className="free-grid grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{sites.map(site => {
+                  const layout = data.layout.find(item => item.siteId === site.id);
+                  const positioned = layout?.x !== undefined && layout?.y !== undefined;
+                  const style = {
+                    '--grid-x': layout?.x ?? 0,
+                    '--grid-y': layout?.y ?? 0,
+                    '--grid-w': layout?.width || (layout?.size === 'wide' ? 2 : 1),
+                    '--grid-h': layout?.height || 1,
+                  } as CSSProperties;
+                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} /></div>;
+                })}</div>
               </section>
             );
           })}

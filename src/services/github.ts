@@ -16,6 +16,15 @@ interface PublishResult {
   sha: string;
 }
 
+export interface WorkflowRun {
+  id: number;
+  status: 'queued' | 'in_progress' | 'completed' | 'waiting' | 'requested' | 'pending';
+  conclusion: string | null;
+  head_sha: string;
+  html_url: string;
+  updated_at: string;
+}
+
 const API_ROOT = 'https://api.github.com';
 
 async function githubRequest<T>(path: string, token: string, init?: RequestInit): Promise<T> {
@@ -39,6 +48,33 @@ async function githubRequest<T>(path: string, token: string, init?: RequestInit)
 
 export function getAuthenticatedUser(token: string): Promise<GitHubUser> {
   return githubRequest<GitHubUser>('/user', token);
+}
+
+export async function getRemoteNavigationData(target: RepositoryTarget, token: string): Promise<NavigationData> {
+  const query = `?ref=${encodeURIComponent(target.branch)}`;
+  const read = <T,>(path: string) => githubRequest<T>(
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${path}${query}`,
+    token,
+    { headers: { Accept: 'application/vnd.github.raw+json' } },
+  );
+  const [sites, categories, layout] = await Promise.all([
+    read<NavigationData['sites']>('src/data/sites.json'),
+    read<NavigationData['categories']>('src/data/categories.json'),
+    read<NavigationData['layout']>('src/data/layout.json'),
+  ]);
+  return { sites, categories, layout };
+}
+
+export async function getWorkflowRun(
+  target: RepositoryTarget,
+  token: string,
+  sha: string,
+): Promise<WorkflowRun | null> {
+  const response = await githubRequest<{ workflow_runs: WorkflowRun[] }>(
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/actions/runs?branch=${encodeURIComponent(target.branch)}&per_page=20`,
+    token,
+  );
+  return response.workflow_runs.find(run => run.head_sha === sha) || null;
 }
 
 export async function publishNavigationData(
