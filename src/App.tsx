@@ -201,6 +201,21 @@ function App() {
             const sites = data.sites
               .filter(site => site.categoryId === category.id && visibleSiteIds.has(site.id))
               .sort((a, b) => (layoutOrder.get(a.id) ?? 9999) - (layoutOrder.get(b.id) ?? 9999));
+            const occupiedCells = new Set<string>();
+            const safePositionedSites = new Set<string>();
+            for (const site of sites) {
+              const item = data.layout.find(layout => layout.siteId === site.id);
+              if (item?.x === undefined || item?.y === undefined) continue;
+              const width = item.width || (item.size === 'wide' ? 2 : 1);
+              const height = item.height || 1;
+              const cells: string[] = [];
+              for (let x = item.x; x < item.x + width; x += 1) {
+                for (let y = item.y; y < item.y + height; y += 1) cells.push(`${x}:${y}`);
+              }
+              if (cells.some(cell => occupiedCells.has(cell))) continue;
+              cells.forEach(cell => occupiedCells.add(cell));
+              safePositionedSites.add(site.id);
+            }
             if (!sites.length && search.trim()) return null;
             return (
               <section key={category.id} id={category.id} className="scroll-mt-28">
@@ -211,7 +226,7 @@ function App() {
                 </div>
                 <div className="free-grid grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{sites.map(site => {
                   const layout = data.layout.find(item => item.siteId === site.id);
-                  const positioned = layout?.x !== undefined && layout?.y !== undefined;
+                  const positioned = safePositionedSites.has(site.id);
                   const style = {
                     '--grid-x': layout?.x ?? 0,
                     '--grid-y': layout?.y ?? 0,

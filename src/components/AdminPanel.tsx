@@ -95,7 +95,7 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
 
     const exists = data.sites.some(item => item.id === site.id);
     const sites = exists ? data.sites.map(item => item.id === site.id ? site : item) : [...data.sites, site];
-    const layout = exists ? data.layout : [...data.layout, { siteId: site.id, order: data.layout.length + 1, size: 'normal' as const, width: 1 as const, height: 1 as const, x: 0, y: 0 }];
+    const layout = exists ? data.layout : [...data.layout, { siteId: site.id, order: data.layout.length + 1, size: 'normal' as const, width: 1 as const, height: 1 as const }];
     onChange({ ...data, sites, layout });
     resetForm(site.categoryId);
   };

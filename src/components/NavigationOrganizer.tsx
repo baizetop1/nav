@@ -37,8 +37,8 @@ function SortableSiteRow({ site, layout, onEdit, onDelete, onLayoutChange }: {
         <button onClick={() => onDelete(site.id)} className="baize-danger-button border-0 p-1.5" aria-label={`删除 ${site.name}`}><Trash2 size={15} /></button>
       </div>
       <div className="mt-2 grid grid-cols-[repeat(2,3.5rem)_1fr] items-end gap-2 border-t border-[#5f8f84]/10 pt-2 dark:border-[#c9a96b]/10">
-        <label className="text-[10px] text-[#718986]">X<input type="number" min="0" max="3" className={`${fieldClass} mt-0.5 w-full`} value={layout.x ?? 0} onChange={event => onLayoutChange(site.id, { x: Number(event.target.value) })} /></label>
-        <label className="text-[10px] text-[#718986]">Y<input type="number" min="0" className={`${fieldClass} mt-0.5 w-full`} value={layout.y ?? 0} onChange={event => onLayoutChange(site.id, { y: Number(event.target.value) })} /></label>
+        <label className="text-[10px] text-[#718986]">X<input type="number" min="0" max="3" placeholder="自动" className={`${fieldClass} mt-0.5 w-full`} value={layout.x ?? ''} onChange={event => onLayoutChange(site.id, { x: event.target.value === '' ? undefined : Number(event.target.value) })} /></label>
+        <label className="text-[10px] text-[#718986]">Y<input type="number" min="0" placeholder="自动" className={`${fieldClass} mt-0.5 w-full`} value={layout.y ?? ''} onChange={event => onLayoutChange(site.id, { y: event.target.value === '' ? undefined : Number(event.target.value) })} /></label>
         <label className="text-[10px] text-[#718986]">卡片尺寸<select className={`${fieldClass} mt-0.5 w-full`} value={size} onChange={event => { const [width, height] = event.target.value.split('x').map(Number) as [1 | 2, 1 | 2]; onLayoutChange(site.id, { width, height, size: width === 2 ? 'wide' : 'normal' }); }}><option value="1x1">标准 1×1</option><option value="2x1">横向 2×1</option><option value="1x2">纵向 1×2</option><option value="2x2">大型 2×2</option></select></label>
       </div>
     </div>
@@ -103,10 +103,17 @@ export function NavigationOrganizer({ data, onChange, onEdit, onDeleteSite, onRe
     onChange({ ...data, categories: arrayMove(categories, oldIndex, newIndex).map((category, index) => ({ ...category, order: index + 1 })) });
   };
 
+  const resetCoordinates = () => {
+    onChange({
+      ...data,
+      layout: data.layout.map(({ x: _x, y: _y, ...item }) => item),
+    });
+  };
+
   return (
     <div className="space-y-6">
       <section className="baize-panel rounded-2xl p-5">
-        <div className="mb-4"><h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">网站与网格布局</h2><p className="mt-1 text-xs text-[#718986]">跨分类拖动网站；X/Y 使用零起点，尺寸在桌面大屏生效，小屏自动回落为响应式布局。</p></div>
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-3"><div><h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">网站与网格布局</h2><p className="mt-1 text-xs text-[#718986]">跨分类拖动网站；X/Y 留空时自动排列，尺寸在桌面大屏生效。</p></div><button type="button" onClick={resetCoordinates} className="baize-button-secondary px-3 py-1.5 text-xs">清除坐标，自动排列</button></div>
         <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={moveSite}>
           <div className="grid max-h-[760px] gap-3 overflow-y-auto pr-1 lg:grid-cols-2">{categories.map(category => <CategoryDropZone key={category.id} category={category} sites={sitesByCategory(category.id)} data={data} onEdit={onEdit} onDelete={onDeleteSite} onLayoutChange={updateLayout} />)}</div>
         </DndContext>
