@@ -34,6 +34,7 @@ function App() {
   const [search, setSearch] = useState('');
   const [isDark, setIsDark] = useState(false);
   const [isAutoGradient, setIsAutoGradient] = useState(true);
+  const [isWorkMode, setIsWorkMode] = useState(() => localStorage.getItem('work_mode') === 'true');
   const [mainGradient, setMainGradient] = useState('');
   const [sidebarGradient, setSidebarGradient] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(window.location.hash === '#/admin');
@@ -65,11 +66,11 @@ function App() {
     const updateGradient = () => {
       const isDay = new Date().getHours() >= 6 && new Date().getHours() < 18;
       setMainGradient(isDay
-        ? 'bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800'
-        : 'bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 dark:from-gray-950 dark:via-slate-900 dark:to-black');
+        ? 'bg-[#eef3ed]/35 dark:bg-[#07191d]/55'
+        : 'bg-[#0b242a]/55 dark:bg-[#061418]/70');
       setSidebarGradient(isDay
-        ? 'bg-gradient-to-b from-white/80 to-blue-50/50 dark:from-gray-900/80 dark:to-slate-900/50'
-        : 'bg-gradient-to-b from-white/80 to-indigo-50/50 dark:from-gray-900/80 dark:to-indigo-950/50');
+        ? 'bg-[#f4f1e8]/82 dark:bg-[#102c33]/88'
+        : 'bg-[#e8eee9]/78 dark:bg-[#091f25]/92');
     };
     updateGradient();
     const interval = window.setInterval(updateGradient, 60_000);
@@ -131,6 +132,14 @@ function App() {
     localStorage.setItem('theme', next ? 'dark' : 'light');
   };
 
+  const toggleWorkMode = () => {
+    setIsWorkMode(current => {
+      const next = !current;
+      localStorage.setItem('work_mode', String(next));
+      return next;
+    });
+  };
+
   const openAdmin = () => {
     window.location.hash = '/admin';
     setIsAdminOpen(true);
@@ -142,8 +151,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans transition-colors duration-300 dark:bg-gray-950">
-      <div className={`fixed inset-0 z-0 transition-opacity duration-1000 ${mainGradient}`} />
+    <div className={`${isWorkMode ? 'work-mode' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
+      <div className={`site-background fixed inset-0 z-0 transition-opacity duration-300 ${isWorkMode ? 'opacity-0' : 'opacity-100'}`} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}baize-background.webp)` }} aria-hidden="true" />
+      <div className={`fixed inset-0 z-0 transition-colors duration-500 ${isWorkMode ? 'bg-[#f1f3f0] dark:bg-[#0c1618]' : mainGradient}`} aria-hidden="true" />
       <Sidebar
         activeCategory={activeCategory}
         isOpen={isSidebarOpen}
@@ -152,17 +162,19 @@ function App() {
         toggleTheme={toggleTheme}
         categories={categories}
         onAdminClick={openAdmin}
+        isWorkMode={isWorkMode}
+        toggleWorkMode={toggleWorkMode}
         isAutoGradient={isAutoGradient}
         toggleAutoGradient={() => setIsAutoGradient(value => !value)}
-        customGradient={sidebarGradient}
+        customGradient={isWorkMode ? 'bg-[#f8f9f7] dark:bg-[#111c1f]' : sidebarGradient}
       />
 
       <main className="relative z-10 min-h-screen bg-transparent p-4 lg:ml-64 lg:p-8">
-        <div className="sticky top-0 z-30 -mx-4 mb-8 border-b border-white/20 bg-white/10 px-4 py-4 backdrop-blur-xl dark:border-gray-700/30 dark:bg-black/20 lg:-mx-8 lg:px-8">
+        <div className="baize-toolbar sticky top-0 z-30 -mx-4 mb-8 px-4 py-4 lg:-mx-8 lg:px-8">
           <div className="mx-auto flex max-w-7xl items-center gap-4">
-            <button onClick={() => setIsSidebarOpen(true)} className="-ml-2 rounded-lg p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 lg:hidden"><Menu size={24} /></button>
+            <button onClick={() => setIsSidebarOpen(true)} className="baize-icon-button -ml-2 lg:hidden"><Menu size={24} /></button>
             <div className="group relative max-w-2xl flex-1">
-              <div className="absolute left-3 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center text-gray-400 group-focus-within:text-blue-500">{activeEngine ? <span className="text-lg font-bold">{activeEngine.icon}</span> : <Search size={20} />}</div>
+              <div className="absolute left-3 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center text-[#6f8984] group-focus-within:text-[#356b66] dark:group-focus-within:text-[#d2b775]">{activeEngine ? <span className="text-lg font-bold">{activeEngine.icon}</span> : <Search size={20} />}</div>
               <input
                 id="search-input"
                 value={search}
@@ -174,17 +186,17 @@ function App() {
                   }
                 }}
                 placeholder={activeEngine ? activeEngine.placeholder : "搜索网站，或输入 'g ' 使用 Google"}
-                className="w-full rounded-xl border border-gray-200/50 bg-white/50 py-3 pl-10 pr-16 text-gray-900 shadow-sm outline-none backdrop-blur-sm transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-gray-800/50 dark:bg-gray-900/50 dark:text-gray-100"
+                className="baize-input py-3 pl-10 pr-16 shadow-[0_10px_30px_-20px_rgba(16,44,51,0.6)]"
               />
-              <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-gray-400 dark:border-gray-700 dark:bg-gray-800 sm:block">Ctrl K</kbd>
+              <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-[#5f8f84]/20 bg-[#5f8f84]/8 px-2 py-0.5 text-xs text-[#6f8984] dark:border-[#c9a96b]/15 dark:bg-[#c9a96b]/8 dark:text-[#baa978] sm:block">Ctrl K</kbd>
               <div className="pointer-events-none absolute left-0 top-full mt-2 flex w-full flex-wrap gap-2 px-1 opacity-0 transition-opacity group-focus-within:pointer-events-auto group-focus-within:opacity-100">
-                {searchEngines.map(engine => <button key={engine.prefix} onClick={() => { const query = activeEngine ? search.slice(activeEngine.prefix.length + 1) : search; setSearch(`${engine.prefix} ${query}`); document.getElementById('search-input')?.focus(); }} className="rounded-md border border-gray-200 bg-white px-2 py-1 text-xs text-gray-600 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">{engine.icon} {engine.name}</button>)}
+                {searchEngines.map(engine => <button key={engine.prefix} onClick={() => { const query = activeEngine ? search.slice(activeEngine.prefix.length + 1) : search; setSearch(`${engine.prefix} ${query}`); document.getElementById('search-input')?.focus(); }} className="baize-chip">{engine.icon} {engine.name}</button>)}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl space-y-12 pb-12">
+        <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
           {categories.map(category => {
             const sites = data.sites
               .filter(site => site.categoryId === category.id && visibleSiteIds.has(site.id))
@@ -192,17 +204,17 @@ function App() {
             if (!sites.length && search.trim()) return null;
             return (
               <section key={category.id} id={category.id} className="scroll-mt-28">
-                <div className="mb-6 inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/50 px-4 py-2 shadow-sm backdrop-blur-sm dark:border-gray-700/30 dark:bg-gray-800/50">
-                  <span className="h-6 w-1 rounded-full bg-blue-600 dark:bg-blue-500" />
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">{category.name}</h2>
-                  <span className="ml-1 text-sm font-medium text-gray-600 dark:text-gray-400">({sites.length})</span>
+                <div className="category-heading baize-panel mb-6 inline-flex items-center gap-2 rounded-xl px-4 py-2">
+                  <span className="h-6 w-1 rounded-full bg-[#4f8179] dark:bg-[#c9a96b]" />
+                  <h2 className="text-xl font-bold tracking-wide text-[#173b41] dark:text-[#f4f1e8]">{category.name}</h2>
+                  <span className="ml-1 text-sm font-medium text-[#64807c] dark:text-[#9fb2ad]">({sites.length})</span>
                 </div>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{sites.map(site => <Card key={site.id} site={site} />)}</div>
               </section>
             );
           })}
-          {search.trim() && !activeEngine && visibleSiteIds.size === 0 && <div className="py-20 text-center text-gray-500"><p className="text-lg">未找到相关网站</p><button onClick={() => setSearch('')} className="mt-4 text-blue-500 hover:underline">清除搜索</button></div>}
-          {activeEngine && <div className="rounded-2xl border border-blue-100 bg-blue-50/80 p-6 text-center text-blue-700 dark:border-blue-900 dark:bg-blue-950/60 dark:text-blue-300">按 Enter 使用 {activeEngine.name} 搜索</div>}
+          {search.trim() && !activeEngine && visibleSiteIds.size === 0 && <div className="baize-panel rounded-2xl py-20 text-center text-[#64807c]"><p className="text-lg">云海茫茫，未找到相关网站</p><button onClick={() => setSearch('')} className="mt-4 font-medium text-[#356b66] hover:underline dark:text-[#d2b775]">清除搜索</button></div>}
+          {activeEngine && <div className="baize-panel rounded-2xl p-6 text-center font-medium text-[#356b66] dark:text-[#d9c386]">按 Enter 使用 {activeEngine.name} 搜索</div>}
         </div>
       </main>
 
