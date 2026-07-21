@@ -2,12 +2,13 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Tag } from 'lucide-react';
 import type { Site } from '../types/navigation';
 
-export function Card({ site }: { site: Site }) {
+export function Card({ site, onVisit, dailyVisits = 0 }: { site: Site; onVisit?: (siteId: string) => void; dailyVisits?: number }) {
   return (
     <motion.a
       href={site.url}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => onVisit?.(site.id)}
       className="site-card group relative flex h-full flex-col overflow-hidden rounded-xl border border-white/70 bg-[#f7f6f0]/90 p-4 shadow-sm backdrop-blur-md transition-all duration-300 hover:border-[#5f8f84]/60 hover:shadow-md dark:border-[#5f8f84]/20 dark:bg-[#102c33]/88 dark:hover:border-[#c9a96b]/50"
       whileHover={{ y: -2 }}
     >
@@ -25,7 +26,10 @@ export function Card({ site }: { site: Site }) {
                 </p>
             </div>
         </div>
-        <ExternalLink className="h-4 w-4 shrink-0 text-[#91a6a1] opacity-0 transition-colors group-hover:text-[#356b66] group-hover:opacity-100 dark:group-hover:text-[#d2b775]" />
+        <div className="flex shrink-0 items-center gap-2">
+          {dailyVisits > 0 && <span className="rounded-md bg-[#5f8f84]/10 px-1.5 py-0.5 text-[10px] font-medium text-[#52736f] dark:bg-[#c9a96b]/10 dark:text-[#d2b775]">今日 {dailyVisits}</span>}
+          <ExternalLink className="h-4 w-4 text-[#91a6a1] opacity-0 transition-colors group-hover:text-[#356b66] group-hover:opacity-100 dark:group-hover:text-[#d2b775]" />
+        </div>
       </div>
 
       <p className="site-description mb-4 line-clamp-2 flex-1 text-sm leading-6 text-[#526f6c] dark:text-[#bac7c3]">

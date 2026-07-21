@@ -8,6 +8,32 @@ import { defaultNavigationData, searchEngines, siteConfig } from './data';
 import type { NavigationData } from './types/navigation';
 
 const DRAFT_KEY = 'nav_cms_draft';
+const CLICK_STATS_KEY = 'nav_daily_click_stats';
+
+interface DailyClickStats {
+  date: string;
+  clicks: Record<string, { count: number; lastClicked: number }>;
+}
+
+function localDateKey(date = new Date()): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function loadDailyClickStats(): DailyClickStats {
+  const today = localDateKey();
+  try {
+    const saved = localStorage.getItem(CLICK_STATS_KEY);
+    if (!saved) return { date: today, clicks: {} };
+    const parsed = JSON.parse(saved) as Partial<DailyClickStats>;
+    if (parsed.date !== today || !parsed.clicks || typeof parsed.clicks !== 'object') return { date: today, clicks: {} };
+    return { date: today, clicks: parsed.clicks };
+  } catch {
+    return { date: today, clicks: {} };
+  }
+}
 
 function isNavigationData(value: unknown): value is NavigationData {
   if (!value || typeof value !== 'object') return false;
@@ -38,6 +64,7 @@ function App() {
   const [mainGradient, setMainGradient] = useState('');
   const [sidebarGradient, setSidebarGradient] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(window.location.hash === '#/admin');
+  const [clickStats, setClickStats] = useState<DailyClickStats>(loadDailyClickStats);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -50,6 +77,19 @@ function App() {
   useEffect(() => {
     localStorage.setItem(DRAFT_KEY, JSON.stringify(data));
   }, [data]);
+
+  useEffect(() => {
+    localStorage.setItem(CLICK_STATS_KEY, JSON.stringify(clickStats));
+  }, [clickStats]);
+
+  useEffect(() => {
+    const checkDate = () => {
+      const today = localDateKey();
+      setClickStats(current => current.date === today ? current : { date: today, clicks: {} });
+    };
+    const interval = window.setInterval(checkDate, 60_000);
+    return () => window.clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleHash = () => setIsAdminOpen(window.location.hash === '#/admin');
@@ -105,6 +145,20 @@ function App() {
 
   const categories = useMemo(() => [...data.categories].sort((a, b) => a.order - b.order), [data.categories]);
   const layoutOrder = useMemo(() => new Map(data.layout.map(item => [item.siteId, item.order])), [data.layout]);
+  const commonCategoryId = useMemo(() => categories.find(category => category.id === 'common' || category.name === '常用网站')?.id, [categories]);
+  const popularSites = useMemo(() => {
+    const ranked = [...data.sites].sort((a, b) => {
+      const aStats = clickStats.clicks[a.id];
+      const bStats = clickStats.clicks[b.id];
+      return (bStats?.count || 0) - (aStats?.count || 0) || (bStats?.lastClicked || 0) - (aStats?.lastClicked || 0);
+    }).filter(site => (clickStats.clicks[site.id]?.count || 0) > 0);
+    const fallback = data.sites
+      .filter(site => site.favorite || site.categoryId === commonCategoryId)
+      .sort((a, b) => Number(Boolean(b.favorite)) - Number(Boolean(a.favorite)) || (layoutOrder.get(a.id) ?? 9999) - (layoutOrder.get(b.id) ?? 9999));
+    const result = new Map<string, (typeof data.sites)[number]>();
+    [...ranked, ...fallback, ...data.sites].forEach(site => { if (result.size < 8) result.set(site.id, site); });
+    return [...result.values()];
+  }, [clickStats.clicks, commonCategoryId, data.sites, layoutOrder]);
   const activeEngine = useMemo(() => searchEngines.find(engine => search.startsWith(`${engine.prefix} `)), [search]);
   const fuse = useMemo(() => {
     const categoryNames = new Map(data.categories.map(category => [category.id, category.name]));
@@ -130,6 +184,21 @@ function App() {
     setIsDark(next);
     document.documentElement.classList.toggle('dark', next);
     localStorage.setItem('theme', next ? 'dark' : 'light');
+  };
+
+  const recordVisit = (siteId: string) => {
+    const today = localDateKey();
+    setClickStats(current => {
+      const base = current.date === today ? current : { date: today, clicks: {} };
+      const previous = base.clicks[siteId];
+      return {
+        date: today,
+        clicks: {
+          ...base.clicks,
+          [siteId]: { count: (previous?.count || 0) + 1, lastClicked: Date.now() },
+        },
+      };
+    });
   };
 
   const toggleWorkMode = () => {
@@ -198,9 +267,12 @@ function App() {
 
         <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
           {categories.map(category => {
-            const sites = data.sites
+            const categorySites = data.sites
               .filter(site => site.categoryId === category.id && visibleSiteIds.has(site.id))
               .sort((a, b) => (layoutOrder.get(a.id) ?? 9999) - (layoutOrder.get(b.id) ?? 9999));
+            const sites = category.id === commonCategoryId && !search.trim()
+              ? popularSites.filter(site => visibleSiteIds.has(site.id))
+              : categorySites;
             const occupiedCells = new Set<string>();
             const safePositionedSites = new Set<string>();
             for (const site of sites) {
@@ -233,7 +305,7 @@ function App() {
                     '--grid-w': layout?.width || (layout?.size === 'wide' ? 2 : 1),
                     '--grid-h': layout?.height || 1,
                   } as CSSProperties;
-                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} /></div>;
+                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} onVisit={recordVisit} dailyVisits={category.id === commonCategoryId ? clickStats.clicks[site.id]?.count || 0 : 0} /></div>;
                 })}</div>
               </section>
             );
