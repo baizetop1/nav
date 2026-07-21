@@ -27,12 +27,24 @@ export interface WorkflowRun {
 
 const API_ROOT = 'https://api.github.com';
 
+export function normalizeGithubToken(value: string): string {
+  return value
+    .trim()
+    .replace(/^(?:token|bearer)\s+/i, '')
+    .replace(/^['"]|['"]$/g, '')
+    .replace(/\s+/g, '');
+}
+
 async function githubRequest<T>(path: string, token: string, init?: RequestInit): Promise<T> {
+  const normalizedToken = normalizeGithubToken(token);
+  if (!normalizedToken || normalizedToken.includes('•') || normalizedToken.length < 20) {
+    throw new Error('Token 格式无效。请粘贴 GitHub 生成的完整 Token，而不是页面中显示的圆点掩码。');
+  }
   const response = await fetch(`${API_ROOT}${path}`, {
     ...init,
     headers: {
       Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${normalizedToken}`,
       'X-GitHub-Api-Version': '2022-11-28',
       ...(init?.headers || {}),
     },
@@ -40,6 +52,16 @@ async function githubRequest<T>(path: string, token: string, init?: RequestInit)
 
   if (!response.ok) {
     const payload = await response.json().catch(() => null) as { message?: string } | null;
+    const acceptedPermissions = response.headers.get('X-Accepted-GitHub-Permissions');
+    if (response.status === 401) {
+      throw new Error('GitHub 拒绝了这个 Token：Token 不完整、已过期、已撤销，或者粘贴了掩码而不是真实值。请重新生成后完整粘贴。');
+    }
+    if (response.status === 403) {
+      throw new Error(`Token 已识别，但权限不足或尚未获组织批准。${acceptedPermissions ? `接口要求：${acceptedPermissions}` : '请检查 Contents 写入和 Actions 读取权限。'}`);
+    }
+    if (response.status === 404) {
+      throw new Error('未找到目标仓库、分支或文件。请确认 Token 已授权此仓库，并检查 Owner、Repository 和 Branch。');
+    }
     throw new Error(payload?.message || `GitHub API 请求失败 (${response.status})`);
   }
 

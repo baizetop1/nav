@@ -57,6 +57,8 @@ src/data/layout.json
 
 Token 应只授予目标仓库的 Contents 读写权限。Token 仅保存在当前管理页面的内存中，不要把它写入 `.env`、源码、GitHub Actions 前端构建变量或 LocalStorage。
 
+如果提示 `Bad credentials`，说明 Token 本身不完整、已过期或已撤销，并非仓库名称错误。GitHub 只在创建时展示一次完整 Token；请重新生成并直接粘贴真实的 `github_pat_…` 或 `ghp_…` 值，不要粘贴页面上的圆点掩码。管理页提供独立的“先验证 Token”按钮。
+
 纯 GitHub Pages 无法安全保存 OAuth client secret。GitHub OAuth 网页授权的 token 交换还不支持浏览器 CORS 预检，因此当前个人版继续使用运行时 PAT。若增加可信 Serverless OAuth Broker，可再切换为 GitHub OAuth。
 
 ## 部署

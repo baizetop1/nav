@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Activity, Download, ExternalLink, GitMerge, Github, Plus, RefreshCw, RotateCcw, Save, X } from 'lucide-react';
-import { getAuthenticatedUser, getRemoteNavigationData, getWorkflowRun, publishNavigationData, type WorkflowRun } from '../services/github';
+import { getAuthenticatedUser, getRemoteNavigationData, getWorkflowRun, normalizeGithubToken, publishNavigationData, type WorkflowRun } from '../services/github';
 import { NavigationOrganizer } from './NavigationOrganizer';
 import type { NavigationData, Site } from '../types/navigation';
 
@@ -32,6 +32,7 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
   const [draft, setDraft] = useState<SiteDraft>(() => createSiteDraft(firstCategoryId));
   const [newCategoryName, setNewCategoryName] = useState('');
   const [token, setToken] = useState('');
+  const [verifiedUser, setVerifiedUser] = useState('');
   const [repository, setRepository] = useState(defaultRepository);
   const [commitMessage, setCommitMessage] = useState('Update navigation data from CMS');
   const [publishState, setPublishState] = useState<{ type: 'idle' | 'loading' | 'success' | 'error'; message?: string; url?: string }>({ type: 'idle' });
@@ -146,6 +147,19 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
     URL.revokeObjectURL(url);
   };
 
+  const verifyToken = async () => {
+    setPublishState({ type: 'loading', message: '正在验证 Token…' });
+    try {
+      const user = await getAuthenticatedUser(token);
+      setVerifiedUser(user.login);
+      setToken(normalizeGithubToken(token));
+      setPublishState({ type: 'success', message: `Token 有效，当前账号：@${user.login}` });
+    } catch (error) {
+      setVerifiedUser('');
+      setPublishState({ type: 'error', message: error instanceof Error ? error.message : 'Token 验证失败。' });
+    }
+  };
+
   const loadRemote = async () => {
     if (!token.trim()) {
       setPublishState({ type: 'error', message: '请先输入 GitHub Token。' });
@@ -238,7 +252,8 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
               <h2 className="mb-2 flex items-center gap-2 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]"><Github size={20} className="text-[#4f8179] dark:text-[#c9a96b]" />发布到 GitHub</h2>
               <p className="mb-4 rounded-xl border border-[#c9a96b]/25 bg-[#c9a96b]/8 p-3 text-xs leading-5 text-[#735f31] dark:text-[#dac58f]">Token 只保存在当前页面内存中。请使用仅允许此仓库 Contents 读写的 fine-grained Token。</p>
               <form onSubmit={publish} className="space-y-3">
-                <label className={`${labelClass} block`}>Personal Access Token<input type="password" autoComplete="off" className={`${inputClass} mt-1`} value={token} onChange={event => setToken(event.target.value)} /></label>
+                <label className={`${labelClass} block`}>Personal Access Token<input type="password" autoComplete="new-password" spellCheck={false} className={`${inputClass} mt-1 font-mono`} value={token} onChange={event => { setToken(event.target.value); setVerifiedUser(''); }} placeholder="github_pat_… 或 ghp_…" /></label>
+                <button type="button" onClick={verifyToken} disabled={!token.trim() || publishState.type === 'loading'} className="baize-button-secondary w-full"><Github size={16} />{verifiedUser ? `已验证 @${verifiedUser}` : '先验证 Token'}</button>
                 <div className="grid grid-cols-2 gap-2"><label className={labelClass}>Owner<input className={`${inputClass} mt-1`} value={repository.owner} onChange={event => setRepository({ ...repository, owner: event.target.value })} /></label><label className={labelClass}>Repository<input className={`${inputClass} mt-1`} value={repository.repo} onChange={event => setRepository({ ...repository, repo: event.target.value })} /></label></div>
                 <label className={`${labelClass} block`}>Branch<input className={`${inputClass} mt-1`} value={repository.branch} onChange={event => setRepository({ ...repository, branch: event.target.value })} /></label>
                 <label className={`${labelClass} block`}>提交说明<input className={`${inputClass} mt-1`} value={commitMessage} onChange={event => setCommitMessage(event.target.value)} /></label>
