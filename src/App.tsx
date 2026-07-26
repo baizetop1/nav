@@ -1,14 +1,17 @@
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { Menu, Search } from 'lucide-react';
+import { Check, Copy, Download, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { Sidebar } from './components/Sidebar';
 import { defaultNavigationData, searchEngines, siteConfig } from './data';
+import { decryptNote, encryptNote } from './services/encryptedNote';
+import { getEncryptedNote, saveEncryptedNote } from './services/github';
 import type { NavigationData } from './types/navigation';
 
 const DRAFT_KEY = 'nav_cms_draft';
 const CLICK_STATS_KEY = 'nav_daily_click_stats';
+const TEMP_TEXT_KEY = 'nav_temp_text';
 
 interface DailyClickStats {
   date: string;
@@ -64,6 +67,13 @@ function App() {
   const [mainGradient, setMainGradient] = useState('');
   const [sidebarGradient, setSidebarGradient] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(window.location.hash === '#/admin');
+  const [isTempTextOpen, setIsTempTextOpen] = useState(false);
+  const [tempText, setTempText] = useState(() => localStorage.getItem(TEMP_TEXT_KEY) || '');
+  const [isCopied, setIsCopied] = useState(false);
+  const [noteGithubToken, setNoteGithubToken] = useState('');
+  const [notePassword, setNotePassword] = useState('');
+  const [notePasswordConfirm, setNotePasswordConfirm] = useState('');
+  const [noteSyncState, setNoteSyncState] = useState<{ busy: boolean; message: string; error: boolean }>({ busy: false, message: '', error: false });
   const [clickStats, setClickStats] = useState<DailyClickStats>(loadDailyClickStats);
 
   useEffect(() => {
@@ -81,6 +91,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem(CLICK_STATS_KEY, JSON.stringify(clickStats));
   }, [clickStats]);
+
+  useEffect(() => {
+    localStorage.setItem(TEMP_TEXT_KEY, tempText);
+  }, [tempText]);
 
   useEffect(() => {
     const checkDate = () => {
@@ -219,6 +233,39 @@ function App() {
     setIsAdminOpen(false);
   };
 
+  const uploadEncryptedNote = async () => {
+    if (notePassword !== notePasswordConfirm) {
+      setNoteSyncState({ busy: false, message: '两次输入的加密密码不一致。', error: true });
+      return;
+    }
+    setNoteSyncState({ busy: true, message: '正在本地加密并提交…', error: false });
+    try {
+      const payload = await encryptNote(tempText, notePassword);
+      const commitUrl = await saveEncryptedNote(siteConfig.repository, noteGithubToken, payload);
+      setNoteSyncState({ busy: false, message: `加密文本已提交：${commitUrl}`, error: false });
+      setNotePasswordConfirm('');
+    } catch (error) {
+      setNoteSyncState({ busy: false, message: error instanceof Error ? error.message : '加密提交失败。', error: true });
+    }
+  };
+
+  const downloadEncryptedNote = async () => {
+    setNoteSyncState({ busy: true, message: '正在读取并本地解密…', error: false });
+    try {
+      const remote = await getEncryptedNote(siteConfig.repository, noteGithubToken);
+      if (!remote) throw new Error('GitHub 中还没有加密临时文本。');
+      const plaintext = await decryptNote(remote.payload, notePassword);
+      if (tempText && tempText !== plaintext && !confirm('远端文本将覆盖当前临时文本，是否继续？')) {
+        setNoteSyncState({ busy: false, message: '已取消覆盖。', error: false });
+        return;
+      }
+      setTempText(plaintext);
+      setNoteSyncState({ busy: false, message: `已解密远端文本，更新时间：${new Date(remote.payload.updatedAt).toLocaleString()}`, error: false });
+    } catch (error) {
+      setNoteSyncState({ busy: false, message: error instanceof Error ? error.message : '读取解密失败。', error: true });
+    }
+  };
+
   return (
     <div className={`${isWorkMode ? 'work-mode' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
       <div className={`site-background fixed inset-0 z-0 transition-opacity duration-300 ${isWorkMode ? 'opacity-0' : 'opacity-100'}`} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}baize-background.webp)` }} aria-hidden="true" />
@@ -233,6 +280,9 @@ function App() {
         onAdminClick={openAdmin}
         isWorkMode={isWorkMode}
         toggleWorkMode={toggleWorkMode}
+        onTempTextClick={() => setIsTempTextOpen(true)}
+        tempText={tempText}
+        onTempTextChange={value => { setTempText(value); setIsCopied(false); }}
         isAutoGradient={isAutoGradient}
         toggleAutoGradient={() => setIsAutoGradient(value => !value)}
         customGradient={isWorkMode ? 'bg-[#f8f9f7] dark:bg-[#111c1f]' : sidebarGradient}
@@ -316,6 +366,36 @@ function App() {
       </main>
 
       {isAdminOpen && <AdminPanel data={data} defaultRepository={siteConfig.repository} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
+      {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
+        <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
+          <header className="mb-4 flex items-center justify-between">
+            <div><h2 className="text-xl font-bold text-[#173b41] dark:text-[#f4f1e8]">临时文本</h2><p className="mt-1 text-xs text-[#718986]">本机自动保存；同步到 GitHub 时只上传密文。</p></div>
+            <button className="baize-icon-button" onClick={() => setIsTempTextOpen(false)} aria-label="关闭临时文本"><X size={20} /></button>
+          </header>
+          <textarea autoFocus value={tempText} onChange={event => { setTempText(event.target.value); setIsCopied(false); }} placeholder="粘贴或输入临时内容…" className="baize-input min-h-0 flex-1 resize-none font-mono leading-6" />
+          <details className="mt-4 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
+            <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Lock size={16} />GitHub 加密同步</summary>
+            <div className="mt-3 space-y-2">
+              <p className="text-xs text-[#718986]">目标：{siteConfig.repository.owner}/{siteConfig.repository.repo} · {siteConfig.repository.branch}。密码不会保存；本机 LocalStorage 仍保留明文。</p>
+              <input type="password" autoComplete="new-password" spellCheck={false} className="baize-input font-mono" value={noteGithubToken} onChange={event => setNoteGithubToken(event.target.value)} placeholder="GitHub Token" />
+              <input type="password" autoComplete="new-password" className="baize-input" value={notePassword} onChange={event => setNotePassword(event.target.value)} placeholder="加密密码（至少 12 字符）" />
+              <input type="password" autoComplete="new-password" className="baize-input" value={notePasswordConfirm} onChange={event => setNotePasswordConfirm(event.target.value)} placeholder="再次输入密码（仅上传时需要）" />
+              <div className="grid grid-cols-2 gap-2">
+                <button disabled={noteSyncState.busy || !noteGithubToken || !notePassword} className="baize-button-secondary" onClick={downloadEncryptedNote}><Download size={16} />读取并解密</button>
+                <button disabled={noteSyncState.busy || !noteGithubToken || !notePassword || !tempText} className="baize-button-primary" onClick={uploadEncryptedNote}><Upload size={16} />加密并提交</button>
+              </div>
+              {noteSyncState.message && <p className={`break-all rounded-lg p-2 text-xs ${noteSyncState.error ? 'bg-[#a85d50]/10 text-[#985247] dark:text-[#e1a294]' : 'bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{noteSyncState.message}</p>}
+            </div>
+          </details>
+          <footer className="mt-4 flex items-center justify-between gap-3">
+            <span className="text-xs text-[#718986]">{tempText.length} 字符</span>
+            <div className="flex gap-2">
+              <button className="baize-danger-button" disabled={!tempText} onClick={() => { if (confirm('确定清空临时文本吗？')) setTempText(''); }}><Trash2 size={16} />清空</button>
+              <button className="baize-button-primary" disabled={!tempText} onClick={async () => { await navigator.clipboard.writeText(tempText); setIsCopied(true); window.setTimeout(() => setIsCopied(false), 1500); }}>{isCopied ? <Check size={16} /> : <Copy size={16} />}{isCopied ? '已复制' : '复制'}</button>
+            </div>
+          </footer>
+        </aside>
+      </div>}
     </div>
   );
 }

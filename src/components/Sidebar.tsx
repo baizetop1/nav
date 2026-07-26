@@ -1,7 +1,7 @@
 import { siteConfig } from '../data';
 import type { Category } from '../types/navigation';
 import { cn } from '../lib/utils';
-import { X, Github, Moon, Sun, Settings, Palette, Briefcase } from 'lucide-react';
+import { X, Github, Moon, Sun, Settings, Palette, Briefcase, StickyNote } from 'lucide-react';
 
 interface SidebarProps {
   activeCategory: string;
@@ -13,6 +13,9 @@ interface SidebarProps {
   onAdminClick: () => void;
   isWorkMode: boolean;
   toggleWorkMode: () => void;
+  onTempTextClick: () => void;
+  tempText: string;
+  onTempTextChange: (value: string) => void;
   isAutoGradient: boolean;
   toggleAutoGradient: () => void;
   customGradient?: string;
@@ -28,6 +31,9 @@ export function Sidebar({
     onAdminClick,
     isWorkMode,
     toggleWorkMode,
+    onTempTextClick,
+    tempText,
+    onTempTextChange,
     isAutoGradient,
     toggleAutoGradient,
     customGradient
@@ -88,7 +94,15 @@ export function Sidebar({
                         ))}
                     </nav>
 
-                    <div className="mt-auto space-y-4 border-t border-[#5f8f84]/15 pt-6 dark:border-[#c9a96b]/12">
+                    <section className="my-4 rounded-xl border border-[#5f8f84]/15 bg-white/25 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
+                        <div className="mb-2 flex items-center justify-between">
+                            <span className="flex items-center gap-1.5 text-xs font-semibold text-[#456b68] dark:text-[#d9ddd6]"><StickyNote size={14} />临时文本</span>
+                            <button onClick={onTempTextClick} className="text-[10px] text-[#5f8f84] hover:underline dark:text-[#c9a96b]">展开</button>
+                        </div>
+                        <textarea value={tempText} onChange={event => onTempTextChange(event.target.value)} placeholder="临时记录…" className="baize-input h-24 resize-none p-2 text-xs leading-5" />
+                    </section>
+
+                    <div className="mt-auto space-y-3 border-t border-[#5f8f84]/15 pt-4 dark:border-[#c9a96b]/12">
                         <button onClick={onAdminClick} className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#456b68] transition-colors hover:bg-[#5f8f84]/10 dark:text-[#d9ddd6] dark:hover:bg-[#c9a96b]/10">
                             <Settings size={18} />管理导航
                         </button>

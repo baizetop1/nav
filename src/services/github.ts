@@ -1,4 +1,5 @@
 import type { NavigationData } from '../types/navigation';
+import type { EncryptedNote } from './encryptedNote';
 
 export interface RepositoryTarget {
   owner: string;
@@ -26,6 +27,7 @@ export interface WorkflowRun {
 }
 
 const API_ROOT = 'https://api.github.com';
+const ENCRYPTED_NOTE_PATH = 'data/temp-note.enc.json';
 
 export function normalizeGithubToken(value: string): string {
   return value
@@ -70,6 +72,44 @@ async function githubRequest<T>(path: string, token: string, init?: RequestInit)
 
 export function getAuthenticatedUser(token: string): Promise<GitHubUser> {
   return githubRequest<GitHubUser>('/user', token);
+}
+
+function utf8ToBase64(value: string): string {
+  const bytes = new TextEncoder().encode(value);
+  let binary = '';
+  for (let offset = 0; offset < bytes.length; offset += 0x8000) {
+    binary += String.fromCharCode(...bytes.subarray(offset, offset + 0x8000));
+  }
+  return btoa(binary);
+}
+
+export async function getEncryptedNote(target: RepositoryTarget, token: string): Promise<{ payload: EncryptedNote; sha: string } | null> {
+  const normalizedToken = normalizeGithubToken(token);
+  const url = `${API_ROOT}/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${ENCRYPTED_NOTE_PATH}?ref=${encodeURIComponent(target.branch)}`;
+  const response = await fetch(url, { headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${normalizedToken}`, 'X-GitHub-Api-Version': '2022-11-28' } });
+  if (response.status === 404) return null;
+  if (!response.ok) throw new Error(response.status === 401 ? 'GitHub Token 无效或已过期。' : `读取加密文本失败 (${response.status})。`);
+  const file = await response.json() as { content: string; sha: string };
+  const json = new TextDecoder().decode(Uint8Array.from(atob(file.content.replace(/\s/g, '')), character => character.charCodeAt(0)));
+  return { payload: JSON.parse(json) as EncryptedNote, sha: file.sha };
+}
+
+export async function saveEncryptedNote(target: RepositoryTarget, token: string, payload: EncryptedNote): Promise<string> {
+  const existing = await getEncryptedNote(target, token);
+  const result = await githubRequest<{ commit: { html_url: string } }>(
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${ENCRYPTED_NOTE_PATH}`,
+    token,
+    {
+      method: 'PUT',
+      body: JSON.stringify({
+        message: 'Update encrypted temporary note',
+        content: utf8ToBase64(`${JSON.stringify(payload, null, 2)}\n`),
+        branch: target.branch,
+        ...(existing ? { sha: existing.sha } : {}),
+      }),
+    },
+  );
+  return result.commit.html_url;
 }
 
 export async function getRemoteNavigationData(target: RepositoryTarget, token: string): Promise<NavigationData> {
