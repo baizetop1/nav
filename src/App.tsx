@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { Check, Copy, Download, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
+import { Check, Copy, Download, Languages, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { Sidebar } from './components/Sidebar';
@@ -316,6 +316,16 @@ function App() {
         </div>
 
         <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
+          <section className="baize-panel rounded-2xl p-4 sm:p-5">
+            <form action="https://translate.google.com/" method="get" target="_blank" className="grid gap-3 lg:grid-cols-[1fr_11rem_auto] lg:items-end">
+              <input type="hidden" name="sl" value="auto" />
+              <input type="hidden" name="op" value="translate" />
+              <label className="text-sm font-medium text-[#526f6c] dark:text-[#b8c4c0]"><span className="mb-2 flex items-center gap-2"><Languages size={17} />快捷翻译</span><textarea required maxLength={1500} name="text" rows={3} className="baize-input resize-y" placeholder="输入要翻译的文本…" /></label>
+              <label className="text-sm font-medium text-[#526f6c] dark:text-[#b8c4c0]">目标语言<select name="tl" defaultValue="zh-CN" className="baize-input mt-2"><option value="zh-CN">简体中文</option><option value="en">英语</option><option value="ja">日语</option><option value="ko">韩语</option><option value="fr">法语</option><option value="de">德语</option><option value="es">西班牙语</option><option value="ru">俄语</option></select></label>
+              <button className="baize-button-primary h-10" type="submit"><Languages size={17} />打开翻译</button>
+            </form>
+            <p className="mt-2 text-xs text-[#718986]">源语言自动识别；点击后在新标签页打开 Google 翻译，文本不会保存到本站。</p>
+          </section>
           {categories.map(category => {
             const categorySites = data.sites
               .filter(site => site.categoryId === category.id && visibleSiteIds.has(site.id))
