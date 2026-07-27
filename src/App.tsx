@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { Check, Copy, Download, Languages, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, Check, Copy, Download, Languages, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { Sidebar } from './components/Sidebar';
@@ -12,6 +12,10 @@ import type { NavigationData } from './types/navigation';
 const DRAFT_KEY = 'nav_cms_draft';
 const CLICK_STATS_KEY = 'nav_daily_click_stats';
 const TEMP_TEXT_KEY = 'nav_temp_text';
+const TRANSLATION_LANGUAGES = [
+  ['zh-CN', '简体中文'], ['en', '英语'], ['ja', '日语'], ['ko', '韩语'],
+  ['fr', '法语'], ['de', '德语'], ['es', '西班牙语'], ['ru', '俄语'],
+] as const;
 
 interface DailyClickStats {
   date: string;
@@ -74,6 +78,11 @@ function App() {
   const [notePassword, setNotePassword] = useState('');
   const [notePasswordConfirm, setNotePasswordConfirm] = useState('');
   const [noteSyncState, setNoteSyncState] = useState<{ busy: boolean; message: string; error: boolean }>({ busy: false, message: '', error: false });
+  const [translationText, setTranslationText] = useState('');
+  const [translatedText, setTranslatedText] = useState('');
+  const [sourceLanguage, setSourceLanguage] = useState('en');
+  const [targetLanguage, setTargetLanguage] = useState('zh-CN');
+  const [translationState, setTranslationState] = useState<{ loading: boolean; error: string }>({ loading: false, error: '' });
   const [clickStats, setClickStats] = useState<DailyClickStats>(loadDailyClickStats);
 
   useEffect(() => {
@@ -266,6 +275,26 @@ function App() {
     }
   };
 
+  const translateInline = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (new TextEncoder().encode(translationText).length > 500) {
+      setTranslationState({ loading: false, error: '免费接口单次最多支持 500 字节，请缩短文本。' });
+      return;
+    }
+    setTranslationState({ loading: true, error: '' });
+    try {
+      const params = new URLSearchParams({ q: translationText, langpair: `${sourceLanguage}|${targetLanguage}` });
+      const response = await fetch(`https://api.mymemory.translated.net/get?${params}`);
+      const payload = await response.json() as { responseStatus: number; responseData?: { translatedText?: string } };
+      if (!response.ok || payload.responseStatus >= 400 || !payload.responseData?.translatedText) throw new Error('免费翻译接口暂时不可用。');
+      const result = new DOMParser().parseFromString(payload.responseData.translatedText, 'text/html').documentElement.textContent || payload.responseData.translatedText;
+      setTranslatedText(result);
+      setTranslationState({ loading: false, error: '' });
+    } catch (error) {
+      setTranslationState({ loading: false, error: error instanceof Error ? error.message : '翻译失败，请稍后再试。' });
+    }
+  };
+
   return (
     <div className={`${isWorkMode ? 'work-mode' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
       <div className={`site-background fixed inset-0 z-0 transition-opacity duration-300 ${isWorkMode ? 'opacity-0' : 'opacity-100'}`} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}baize-background.webp)` }} aria-hidden="true" />
@@ -317,14 +346,22 @@ function App() {
 
         <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
           <section className="baize-panel rounded-2xl p-4 sm:p-5">
-            <form action="https://translate.google.com/" method="get" target="_blank" className="grid gap-3 lg:grid-cols-[1fr_11rem_auto] lg:items-end">
-              <input type="hidden" name="sl" value="auto" />
-              <input type="hidden" name="op" value="translate" />
-              <label className="text-sm font-medium text-[#526f6c] dark:text-[#b8c4c0]"><span className="mb-2 flex items-center gap-2"><Languages size={17} />快捷翻译</span><textarea required maxLength={1500} name="text" rows={3} className="baize-input resize-y" placeholder="输入要翻译的文本…" /></label>
-              <label className="text-sm font-medium text-[#526f6c] dark:text-[#b8c4c0]">目标语言<select name="tl" defaultValue="zh-CN" className="baize-input mt-2"><option value="zh-CN">简体中文</option><option value="en">英语</option><option value="ja">日语</option><option value="ko">韩语</option><option value="fr">法语</option><option value="de">德语</option><option value="es">西班牙语</option><option value="ru">俄语</option></select></label>
-              <button className="baize-button-primary h-10" type="submit"><Languages size={17} />打开翻译</button>
+            <form onSubmit={translateInline}>
+              <div className="mb-3 flex flex-wrap items-center gap-2">
+                <span className="mr-auto flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Languages size={17} />快捷翻译</span>
+                <select value={sourceLanguage} onChange={event => setSourceLanguage(event.target.value)} className="baize-input w-auto py-1.5">{TRANSLATION_LANGUAGES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
+                <button type="button" className="baize-icon-button" aria-label="互换翻译语言" onClick={() => { setSourceLanguage(targetLanguage); setTargetLanguage(sourceLanguage); if (translatedText) { setTranslationText(translatedText); setTranslatedText(''); } }}><ArrowLeftRight size={17} /></button>
+                <select value={targetLanguage} onChange={event => setTargetLanguage(event.target.value)} className="baize-input w-auto py-1.5">{TRANSLATION_LANGUAGES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
+              </div>
+              <div className="grid gap-3 md:grid-cols-2">
+                <textarea required value={translationText} onChange={event => { setTranslationText(event.target.value); setTranslationState({ loading: false, error: '' }); }} rows={5} className="baize-input resize-y" placeholder="输入要翻译的单句或短段落…" />
+                <div className="baize-input relative min-h-32 whitespace-pre-wrap"><span className={translatedText ? '' : 'text-[#8aa39d]'}>{translatedText || '翻译结果会显示在这里'}</span>{translatedText && <button type="button" className="baize-icon-button absolute right-2 top-2" aria-label="复制翻译结果" onClick={() => navigator.clipboard.writeText(translatedText)}><Copy size={15} /></button>}</div>
+              </div>
+              <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                <p className={`text-xs ${translationState.error ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#718986]'}`}>{translationState.error || '直接调用 MyMemory 免费接口；请勿翻译敏感文本，单次最多 500 字节。'}</p>
+                <div className="flex gap-2"><a className="baize-button-secondary" target="_blank" rel="noreferrer" href={`https://translate.google.com/?sl=${encodeURIComponent(sourceLanguage)}&tl=${encodeURIComponent(targetLanguage)}&text=${encodeURIComponent(translationText)}&op=translate`}>Google 回退</a><button disabled={translationState.loading || !translationText.trim()} className="baize-button-primary" type="submit"><Languages size={17} />{translationState.loading ? '翻译中…' : '立即翻译'}</button></div>
+              </div>
             </form>
-            <p className="mt-2 text-xs text-[#718986]">源语言自动识别；点击后在新标签页打开 Google 翻译，文本不会保存到本站。</p>
           </section>
           {categories.map(category => {
             const categorySites = data.sites
