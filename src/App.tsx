@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
 import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Copy, Download, Languages, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { Sidebar } from './components/Sidebar';
 import { defaultNavigationData, searchEngines, siteConfig } from './data';
+import { loadLinkHealthReport, type LinkHealthEntry } from './lib/linkHealth';
 import { decryptNote, encryptNote } from './services/encryptedNote';
 import { getEncryptedNote, saveEncryptedNote } from './services/github';
 import type { NavigationData } from './types/navigation';
@@ -23,13 +24,9 @@ interface DailyClickStats {
   clicks: Record<string, { count: number; lastClicked: number }>;
 }
 
-interface LinkHealthEntry {
-  siteId: string;
-  url: string;
-  status: number | null;
-  ok: boolean;
-  checkedAt: string;
-  error: string | null;
+interface InstallPromptEvent extends Event {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
 function localDateKey(date = new Date()): string {
@@ -94,8 +91,10 @@ function App() {
   const [targetLanguage, setTargetLanguage] = useState('zh-CN');
   const [translationState, setTranslationState] = useState<{ loading: boolean; error: string }>({ loading: false, error: '' });
   const [isTranslatorOpen, setIsTranslatorOpen] = useState(() => localStorage.getItem(TRANSLATOR_COLLAPSED_KEY) !== 'true');
-  const [linkHealth, setLinkHealth] = useState<Record<string, LinkHealthEntry>>({});
+  const [linkHealthEntries, setLinkHealthEntries] = useState<LinkHealthEntry[]>([]);
+  const [isLinkHealthLoading, setIsLinkHealthLoading] = useState(false);
   const [clickStats, setClickStats] = useState<DailyClickStats>(loadDailyClickStats);
+  const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -117,12 +116,14 @@ function App() {
     localStorage.setItem(TEMP_TEXT_KEY, tempText);
   }, [tempText]);
 
-  useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}link-health.json`)
-      .then(response => response.ok ? response.json() as Promise<LinkHealthEntry[]> : [])
-      .then(entries => setLinkHealth(Object.fromEntries(entries.map(entry => [entry.siteId, entry]))))
-      .catch(() => undefined);
+  const refreshLinkHealth = useCallback(async () => {
+    setIsLinkHealthLoading(true);
+    const entries = await loadLinkHealthReport(`${import.meta.env.BASE_URL}link-health.json`);
+    setLinkHealthEntries(entries);
+    setIsLinkHealthLoading(false);
   }, []);
+
+  useEffect(() => { void refreshLinkHealth(); }, [refreshLinkHealth]);
 
   useEffect(() => {
     const checkDate = () => {
@@ -137,6 +138,20 @@ function App() {
     const handleHash = () => setIsAdminOpen(window.location.hash === '#/admin');
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
+  useEffect(() => {
+    const handleInstallPrompt = (event: Event) => {
+      event.preventDefault();
+      setInstallPrompt(event as InstallPromptEvent);
+    };
+    const handleInstalled = () => setInstallPrompt(null);
+    window.addEventListener('beforeinstallprompt', handleInstallPrompt);
+    window.addEventListener('appinstalled', handleInstalled);
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleInstallPrompt);
+      window.removeEventListener('appinstalled', handleInstalled);
+    };
   }, []);
 
   useEffect(() => {
@@ -186,6 +201,7 @@ function App() {
   }, []);
 
   const categories = useMemo(() => [...data.categories].sort((a, b) => a.order - b.order), [data.categories]);
+  const linkHealth = useMemo(() => Object.fromEntries(linkHealthEntries.map(entry => [entry.siteId, entry])), [linkHealthEntries]);
   const layoutOrder = useMemo(() => new Map(data.layout.map(item => [item.siteId, item.order])), [data.layout]);
   const commonCategoryId = useMemo(() => categories.find(category => category.id === 'common' || category.name === '常用网站')?.id, [categories]);
   const popularSites = useMemo(() => {
@@ -261,6 +277,13 @@ function App() {
     setIsAdminOpen(false);
   };
 
+  const installApp = async () => {
+    if (!installPrompt) return;
+    await installPrompt.prompt();
+    await installPrompt.userChoice;
+    setInstallPrompt(null);
+  };
+
   const uploadEncryptedNote = async () => {
     if (notePassword !== notePasswordConfirm) {
       setNoteSyncState({ busy: false, message: '两次输入的加密密码不一致。', error: true });
@@ -334,6 +357,8 @@ function App() {
         isAutoGradient={isAutoGradient}
         toggleAutoGradient={() => setIsAutoGradient(value => !value)}
         customGradient={isWorkMode ? 'bg-[#f8f9f7] dark:bg-[#111c1f]' : sidebarGradient}
+        canInstall={Boolean(installPrompt)}
+        onInstall={() => { void installApp(); }}
       />
 
       <main className="relative z-10 min-h-screen bg-transparent p-4 lg:ml-64 lg:p-8">
@@ -436,7 +461,7 @@ function App() {
         </div>
       </main>
 
-      {isAdminOpen && <AdminPanel data={data} defaultRepository={siteConfig.repository} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
+      {isAdminOpen && <AdminPanel data={data} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">

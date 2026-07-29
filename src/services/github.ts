@@ -1,4 +1,5 @@
 import type { NavigationData } from '../types/navigation';
+import type { EncryptedNavigationBackup } from './encryptedBackup';
 import type { EncryptedNote } from './encryptedNote';
 
 export interface RepositoryTarget {
@@ -27,6 +28,7 @@ export interface WorkflowRun {
 }
 
 const API_ROOT = 'https://api.github.com';
+const ENCRYPTED_BACKUP_PATH = 'data/navigation-backup.enc.json';
 const ENCRYPTED_NOTE_PATH = 'data/temp-note.enc.json';
 
 export function normalizeGithubToken(value: string): string {
@@ -103,6 +105,43 @@ export async function saveEncryptedNote(target: RepositoryTarget, token: string,
       method: 'PUT',
       body: JSON.stringify({
         message: 'Update encrypted temporary note',
+        content: utf8ToBase64(`${JSON.stringify(payload, null, 2)}\n`),
+        branch: target.branch,
+        ...(existing ? { sha: existing.sha } : {}),
+      }),
+    },
+  );
+  return result.commit.html_url;
+}
+
+export async function getEncryptedBackup(target: RepositoryTarget, token: string): Promise<{ payload: EncryptedNavigationBackup; sha: string } | null> {
+  const normalizedToken = normalizeGithubToken(token);
+  const url = `${API_ROOT}/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${ENCRYPTED_BACKUP_PATH}?ref=${encodeURIComponent(target.branch)}`;
+  const response = await fetch(url, { headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${normalizedToken}`, 'X-GitHub-Api-Version': '2022-11-28' } });
+  if (response.status === 404) return null;
+  if (!response.ok) {
+    if (response.status === 401) throw new Error('GitHub Token 无效或已过期。');
+    if (response.status === 403) throw new Error('Token 没有读取加密备份的权限。');
+    throw new Error(`读取加密云备份失败 (${response.status})。`);
+  }
+  const file = await response.json() as { content: string; sha: string };
+  try {
+    const json = new TextDecoder().decode(Uint8Array.from(atob(file.content.replace(/\s/g, '')), character => character.charCodeAt(0)));
+    return { payload: JSON.parse(json) as EncryptedNavigationBackup, sha: file.sha };
+  } catch {
+    throw new Error('远端加密备份文件格式已损坏。');
+  }
+}
+
+export async function saveEncryptedBackup(target: RepositoryTarget, token: string, payload: EncryptedNavigationBackup): Promise<string> {
+  const existing = await getEncryptedBackup(target, token);
+  const result = await githubRequest<{ commit: { html_url: string } }>(
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${ENCRYPTED_BACKUP_PATH}`,
+    token,
+    {
+      method: 'PUT',
+      body: JSON.stringify({
+        message: 'Update encrypted navigation backup',
         content: utf8ToBase64(`${JSON.stringify(payload, null, 2)}\n`),
         branch: target.branch,
         ...(existing ? { sha: existing.sha } : {}),

@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "test:crypto": "node --experimental-strip-types scripts/encrypted-note-selfcheck.mjs",
     "test:backup": "node --experimental-strip-types scripts/backup-selfcheck.mjs",
+    "test:encrypted-backup": "node --experimental-strip-types scripts/encrypted-backup-selfcheck.mjs",
     "check:links": "node scripts/check-links.mjs"
   },
   "dependencies": {

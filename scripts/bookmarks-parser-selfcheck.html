@@ -1,9 +1,9 @@
 <!doctype html>
 <meta charset="utf-8" />
 <script type="module">
-  import { parseBookmarks } from '../src/lib/bookmarks.ts'
+  import { parseBookmarks, parseHtmlImport } from '../src/lib/bookmarks.ts'
 
-  const html = `<DL><p>
+  const html = `<!DOCTYPE NETSCAPE-Bookmark-file-1><DL><p>
     <DT><H3>Work</H3>
     <DL><p>
       <DT><A HREF="HTTPS://Example.COM:443/path#section">Example</A>
@@ -21,6 +21,19 @@
 
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     throw new Error(`Bookmark parser self-check failed: ${JSON.stringify(actual)}`)
+  }
+
+  const savedPage = parseHtmlImport(`<!doctype html><html><head>
+    <title>Only this page</title>
+    <link rel="canonical" href="https://example.org/article#part">
+    <meta name="description" content="A saved page">
+  </head><body><a href="https://should-not-import.example/">Other link</a></body></html>`)
+  const expectedPage = {
+    mode: 'saved-page',
+    records: [{ name: 'Only this page', url: 'https://example.org/article', category: '导入网页', description: 'A saved page' }],
+  }
+  if (JSON.stringify(savedPage) !== JSON.stringify(expectedPage)) {
+    throw new Error(`Saved-page parser self-check failed: ${JSON.stringify(savedPage)}`)
   }
   document.body.textContent = 'Bookmark parser self-check passed'
 </script>

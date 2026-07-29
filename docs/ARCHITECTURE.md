@@ -40,10 +40,12 @@
 - 通过 `/#/admin` 管理网站和分类，支持网站新增、编辑、删除以及空分类增删改。
 - 使用 dnd-kit 拖拽调整网站顺序，支持指针和键盘操作。
 - 支持分类排序、跨分类拖动网站、四列自由网格坐标和四种卡片尺寸。
-- 未发布修改写入 `localStorage.nav_cms_draft`，支持浏览器书签 HTML 导入和带版本校验的完整备份恢复。
+- 未发布修改写入 `localStorage.nav_cms_draft`；HTML 导入会区分浏览器书签导出与普通保存网页，后者只读取页面自身 canonical/og:url；同时支持带版本校验的完整备份恢复。
+- 完整备份可在浏览器中使用 AES-256-GCM 加密，并以单份密文文件同步到 GitHub；密码不落盘也不上传。
 - 运行时输入 fine-grained PAT，通过 Git Data API 原子提交三个 JSON 数据文件。
 - 推送到 `main` 或 `master` 后，由 GitHub Actions 构建并发布 `dist` 到 `gh-pages`。
 - GitHub Actions 每日检查正式导航链接并生成 `public/link-health.json`，首页为异常链接显示状态提醒。
+- 管理后台提供链接健康汇总和异常明细；站点可安装为 PWA，并提供不缓存外部 API 的离线应用壳。
 
 ### 2.3 尚未实现
 
@@ -61,7 +63,7 @@
 │   ├── components/          # 卡片、侧边栏和 CMS 管理面板
 │   ├── data/                # JSON 数据、站点配置和数据入口
 │   ├── lib/                 # className、书签解析与备份校验工具
-│   ├── services/github.ts   # GitHub 身份验证与原子发布
+│   ├── services/            # GitHub 发布、临时文本与完整备份加密
 │   ├── types/               # 导航数据类型
 │   ├── App.tsx              # 页面状态、搜索、主题和草稿逻辑
 │   ├── index.css            # Tailwind 与全局样式
@@ -263,6 +265,8 @@ gh-pages 发布
 - 默认只保存在内存；如需刷新保留，最多使用 `sessionStorage` 并提供明确的清除按钮。
 - 发布前调用 GitHub 用户接口确认当前账号，并显示目标仓库和分支。
 
+完整云备份沿用运行时 PAT，但在浏览器中完成 AES-256-GCM 加密后才写入 `data/navigation-backup.enc.json`。加密密码只存在于当前页面内存，GitHub Token、密码和明文备份都不会进入仓库。密码遗失后无法恢复密文内容。
+
 标准 GitHub OAuth Web Flow 需要安全保存 client secret 并处理回调，纯 GitHub Pages 无法安全完成。若以后采用 OAuth，需要额外的可信后端或 Serverless Function，此时系统将不再是严格意义上的“仅 GitHub Pages、零后端”架构。
 
 ## 9. 搜索设计
@@ -347,7 +351,7 @@ name > tags > category > description
 
 ### 阶段 5：可选高级能力
 
-- PWA 与只读离线访问。
+- PWA 与只读离线访问（基础版本已完成：可安装、离线壳和同源静态资源缓存）。
 - RSS 聚合、GitHub 动态、浏览历史。
 - 网站健康检测和失效链接报告（基础版本已完成：每日检查并在卡片标记异常）。
 - AI 搜索入口与辅助分类。

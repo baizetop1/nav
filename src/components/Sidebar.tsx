@@ -1,7 +1,7 @@
 import { siteConfig } from '../data';
 import type { Category } from '../types/navigation';
 import { cn } from '../lib/utils';
-import { X, Github, Moon, Sun, Settings, Palette, Briefcase, StickyNote } from 'lucide-react';
+import { X, Github, Moon, Sun, Settings, Palette, Briefcase, StickyNote, Download } from 'lucide-react';
 
 interface SidebarProps {
   activeCategory: string;
@@ -19,6 +19,8 @@ interface SidebarProps {
   isAutoGradient: boolean;
   toggleAutoGradient: () => void;
   customGradient?: string;
+  canInstall: boolean;
+  onInstall: () => void;
 }
 
 export function Sidebar({
@@ -36,7 +38,9 @@ export function Sidebar({
     onTempTextChange,
     isAutoGradient,
     toggleAutoGradient,
-    customGradient
+    customGradient,
+    canInstall,
+    onInstall
 }: SidebarProps) {
     const scrollToCategory = (id: string) => {
         const el = document.getElementById(id);
@@ -103,6 +107,9 @@ export function Sidebar({
                     </section>
 
                     <div className="mt-auto space-y-3 border-t border-[#5f8f84]/15 pt-4 dark:border-[#c9a96b]/12">
+                        {canInstall && <button onClick={onInstall} className="flex w-full items-center gap-2 rounded-lg bg-[#5f8f84]/10 px-3 py-2 text-sm font-medium text-[#356b66] transition-colors hover:bg-[#5f8f84]/15 dark:bg-[#c9a96b]/10 dark:text-[#dfc68e] dark:hover:bg-[#c9a96b]/15">
+                            <Download size={18} />安装到设备
+                        </button>}
                         <button onClick={onAdminClick} className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#456b68] transition-colors hover:bg-[#5f8f84]/10 dark:text-[#d9ddd6] dark:hover:bg-[#c9a96b]/10">
                             <Settings size={18} />管理导航
                         </button>

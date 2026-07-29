@@ -1,14 +1,20 @@
 import { useEffect, useState } from 'react';
-import { Activity, BookmarkPlus, Download, ExternalLink, FileUp, GitMerge, Github, Plus, RefreshCw, RotateCcw, Save, X } from 'lucide-react';
+import { Activity, BookmarkPlus, Download, ExternalLink, FileUp, GitMerge, Github, Lock, Plus, RefreshCw, RotateCcw, Save, Upload, X } from 'lucide-react';
 import { createBackup, restoreBackup } from '../lib/backup';
-import { normalizeBookmarkUrl, parseBookmarks } from '../lib/bookmarks';
-import { getAuthenticatedUser, getRemoteNavigationData, getWorkflowRun, normalizeGithubToken, publishNavigationData, type WorkflowRun } from '../services/github';
+import { normalizeBookmarkUrl, parseHtmlImport } from '../lib/bookmarks';
+import type { LinkHealthEntry } from '../lib/linkHealth';
+import { decryptBackup, encryptBackup } from '../services/encryptedBackup';
+import { getAuthenticatedUser, getEncryptedBackup, getRemoteNavigationData, getWorkflowRun, normalizeGithubToken, publishNavigationData, saveEncryptedBackup, type WorkflowRun } from '../services/github';
 import { NavigationOrganizer } from './NavigationOrganizer';
+import { LinkHealthPanel } from './LinkHealthPanel';
 import type { NavigationData, Site } from '../types/navigation';
 
 interface AdminPanelProps {
   data: NavigationData;
   defaultRepository: { owner: string; repo: string; branch: string };
+  linkHealthEntries: LinkHealthEntry[];
+  isLinkHealthLoading: boolean;
+  onRefreshLinkHealth: () => void | Promise<void>;
   onChange: (data: NavigationData) => void;
   onReset: () => void;
   onClose: () => void;
@@ -29,7 +35,7 @@ function slugify(value: string): string {
   return slug || `item-${Date.now().toString(36)}`;
 }
 
-export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose }: AdminPanelProps) {
+export function AdminPanel({ data, defaultRepository, linkHealthEntries, isLinkHealthLoading, onRefreshLinkHealth, onChange, onReset, onClose }: AdminPanelProps) {
   const firstCategoryId = data.categories[0]?.id || '';
   const [draft, setDraft] = useState<SiteDraft>(() => createSiteDraft(firstCategoryId));
   const [newCategoryName, setNewCategoryName] = useState('');
@@ -43,6 +49,9 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
   const [publishedSha, setPublishedSha] = useState('');
   const [workflowRun, setWorkflowRun] = useState<WorkflowRun | null>(null);
   const [dataToolState, setDataToolState] = useState<{ type: 'idle' | 'success' | 'error'; message?: string }>({ type: 'idle' });
+  const [cloudBackupPassword, setCloudBackupPassword] = useState('');
+  const [cloudBackupPasswordConfirm, setCloudBackupPasswordConfirm] = useState('');
+  const [cloudBackupState, setCloudBackupState] = useState<{ busy: boolean; type: 'idle' | 'success' | 'error'; message?: string; url?: string }>({ busy: false, type: 'idle' });
 
   useEffect(() => {
     if (!publishedSha || !token.trim()) return;
@@ -156,10 +165,14 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
     }
   };
 
-  const importBookmarks = async (file: File) => {
+  const importHtml = async (file: File) => {
     try {
-      const records = parseBookmarks(await file.text());
-      if (!records.length) throw new Error('没有找到可导入的 HTTP/HTTPS 书签。');
+      const result = parseHtmlImport(await file.text());
+      const records = result.records;
+      if (!records.length) {
+        if (result.mode === 'saved-page') throw new Error('这个 HTML 没有保留 canonical、og:url 等原网页地址信息。文件本身无法告诉浏览器它来自哪个网址，请在上方“添加网站”中粘贴该页面 URL。');
+        throw new Error('书签导出文件中没有找到可导入的 HTTP/HTTPS 地址。');
+      }
 
       const sites = [...data.sites];
       const categories = [...data.categories];
@@ -203,7 +216,7 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
           id: siteId,
           name: record.name,
           url: record.url,
-          description: '从浏览器书签导入',
+          description: record.description || (result.mode === 'bookmark-export' ? '从浏览器书签导入' : '从保存的 HTML 页面导入'),
           categoryId,
           tags: ['书签'],
         });
@@ -215,7 +228,7 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
       if (imported) onChange({ sites, categories, layout });
       setDataToolState({
         type: 'success',
-        message: `已导入 ${imported} 个书签${createdCategories ? `，新建 ${createdCategories} 个分类` : ''}${skipped ? `，跳过 ${skipped} 个重复地址` : ''}。`,
+        message: `${result.mode === 'bookmark-export' ? '浏览器书签文件' : 'HTML 页面'}：已导入 ${imported} 个链接${createdCategories ? `，新建 ${createdCategories} 个分类` : ''}${skipped ? `，跳过 ${skipped} 个重复地址` : ''}。`,
       });
     } catch (error) {
       setDataToolState({ type: 'error', message: error instanceof Error ? error.message : '书签导入失败。' });
@@ -232,6 +245,50 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
       window.setTimeout(() => window.location.reload(), 500);
     } catch (error) {
       setDataToolState({ type: 'error', message: error instanceof Error ? error.message : '备份恢复失败。' });
+    }
+  };
+
+  const uploadEncryptedBackup = async () => {
+    if (!token.trim()) {
+      setCloudBackupState({ busy: false, type: 'error', message: '请先在“发布到 GitHub”区域输入 Token。' });
+      return;
+    }
+    if (cloudBackupPassword !== cloudBackupPasswordConfirm) {
+      setCloudBackupState({ busy: false, type: 'error', message: '两次输入的加密密码不一致。' });
+      return;
+    }
+    setCloudBackupState({ busy: true, type: 'idle', message: '正在本地生成完整备份并加密…' });
+    try {
+      const encrypted = await encryptBackup(createBackup(data), cloudBackupPassword);
+      const commitUrl = await saveEncryptedBackup(repository, token.trim(), encrypted);
+      setCloudBackupPasswordConfirm('');
+      setCloudBackupState({ busy: false, type: 'success', message: `加密云备份已更新：${new Date(encrypted.encryptedAt).toLocaleString()}`, url: commitUrl });
+    } catch (error) {
+      setCloudBackupState({ busy: false, type: 'error', message: error instanceof Error ? error.message : '加密云备份上传失败。' });
+    }
+  };
+
+  const restoreEncryptedBackup = async () => {
+    if (!token.trim()) {
+      setCloudBackupState({ busy: false, type: 'error', message: '请先在“发布到 GitHub”区域输入 Token。' });
+      return;
+    }
+    setCloudBackupState({ busy: true, type: 'idle', message: '正在读取远端密文并在本机解密…' });
+    try {
+      const remote = await getEncryptedBackup(repository, token.trim());
+      if (!remote) throw new Error('GitHub 中还没有加密导航备份。');
+      const backup = await decryptBackup(remote.payload, cloudBackupPassword);
+      if (!confirm('已成功解密。继续会覆盖当前导航草稿、点击统计、临时文本和界面偏好，是否恢复？')) {
+        setCloudBackupState({ busy: false, type: 'idle', message: '已取消恢复，当前数据没有变化。' });
+        return;
+      }
+      const restored = restoreBackup(backup);
+      localStorage.setItem('nav_cms_draft', JSON.stringify(restored));
+      onChange(restored);
+      setCloudBackupState({ busy: false, type: 'success', message: '加密云备份恢复成功，正在重新载入…' });
+      window.setTimeout(() => window.location.reload(), 500);
+    } catch (error) {
+      setCloudBackupState({ busy: false, type: 'error', message: error instanceof Error ? error.message : '加密云备份恢复失败。' });
     }
   };
 
@@ -328,6 +385,7 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
             </section>
 
             <NavigationOrganizer data={data} onChange={onChange} onEdit={editSite} onDeleteSite={deleteSite} onRenameCategory={renameCategory} onDeleteCategory={deleteCategory} />
+            <LinkHealthPanel sites={data.sites} entries={linkHealthEntries} loading={isLinkHealthLoading} onRefresh={onRefreshLinkHealth} />
           </div>
 
           <div className="space-y-6">
@@ -355,17 +413,18 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
 
             <section className={panelClass}>
               <h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">导入、备份与恢复</h2>
-              <p className="mb-4 mt-1 text-xs leading-5 text-[#718986]">支持 Chrome、Edge 等浏览器导出的 HTML 书签。完整备份不会包含 GitHub Token 或加密密码；临时文本会按本机明文导出，请妥善保管备份文件。</p>
+              <p className="mb-2 mt-1 text-xs leading-5 text-[#718986]">自动识别 HTML 类型：Chrome、Edge 等浏览器导出的书签文件会批量导入；普通保存网页只读取页面自身保留的原地址，不会导入页面里的其他链接。</p>
+              <p className="mb-4 text-xs leading-5 text-[#718986]">完整备份不会包含 GitHub Token 或加密密码；临时文本会按本机明文导出，请妥善保管备份文件。</p>
               <div className="flex flex-wrap gap-2">
                 <label className="baize-button-secondary cursor-pointer">
-                  <BookmarkPlus size={16} />导入浏览器书签
+                  <BookmarkPlus size={16} />导入 HTML
                   <input
                     type="file"
                     accept=".html,.htm,text/html"
                     className="hidden"
                     onChange={event => {
                       const file = event.target.files?.[0];
-                      if (file) void importBookmarks(file);
+                      if (file) void importHtml(file);
                       event.currentTarget.value = '';
                     }}
                   />
@@ -387,6 +446,19 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
                 <button type="button" onClick={() => { if (confirm('确定丢弃所有本地修改并恢复仓库内置数据吗？')) onReset(); }} className="baize-danger-button"><RotateCcw size={16} />恢复默认</button>
               </div>
               {dataToolState.message && <p className={`mt-3 rounded-xl border p-3 text-sm ${dataToolState.type === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{dataToolState.message}</p>}
+              <div className="mt-4 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
+                <h3 className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Lock size={16} />GitHub 加密云备份</h3>
+                <p className="mb-3 mt-1 text-xs leading-5 text-[#718986]">使用上方仓库和 Token。完整备份只在本机加密，GitHub 中仅保存密文；密码无法找回，也不会保存在浏览器中。</p>
+                <div className="space-y-2">
+                  <input type="password" autoComplete="new-password" className={inputClass} value={cloudBackupPassword} onChange={event => setCloudBackupPassword(event.target.value)} placeholder="加密密码（至少 12 个字符）" />
+                  <input type="password" autoComplete="new-password" className={inputClass} value={cloudBackupPasswordConfirm} onChange={event => setCloudBackupPasswordConfirm(event.target.value)} placeholder="再次输入密码（仅上传时需要）" />
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    <button type="button" disabled={cloudBackupState.busy || !cloudBackupPassword} onClick={() => { void restoreEncryptedBackup(); }} className="baize-button-secondary"><Download size={16} />读取、解密并恢复</button>
+                    <button type="button" disabled={cloudBackupState.busy || !cloudBackupPassword || !cloudBackupPasswordConfirm} onClick={() => { void uploadEncryptedBackup(); }} className="baize-button-primary"><Upload size={16} />加密并上传</button>
+                  </div>
+                </div>
+                {cloudBackupState.message && <p className={`mt-3 break-all rounded-lg p-2 text-xs ${cloudBackupState.type === 'error' ? 'bg-[#a85d50]/10 text-[#985247] dark:text-[#e1a294]' : 'bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{cloudBackupState.message}{cloudBackupState.url && <a href={cloudBackupState.url} target="_blank" rel="noreferrer" className="ml-2 inline-flex items-center gap-1 underline">查看 commit <ExternalLink size={12} /></a>}</p>}
+              </div>
             </section>
           </div>
         </div>
