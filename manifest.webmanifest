@@ -1,0 +1,23 @@
+{
+  "id": "/nav/",
+  "name": "白泽个人导航",
+  "short_name": "白泽导航",
+  "description": "白泽个人导航 CMS——知万物，辨吉凶。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "/nav/",
+  "scope": "/nav/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#102c33",
+  "theme_color": "#102c33",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/nav/baize-logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
