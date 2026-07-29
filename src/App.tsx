@@ -23,6 +23,15 @@ interface DailyClickStats {
   clicks: Record<string, { count: number; lastClicked: number }>;
 }
 
+interface LinkHealthEntry {
+  siteId: string;
+  url: string;
+  status: number | null;
+  ok: boolean;
+  checkedAt: string;
+  error: string | null;
+}
+
 function localDateKey(date = new Date()): string {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -85,6 +94,7 @@ function App() {
   const [targetLanguage, setTargetLanguage] = useState('zh-CN');
   const [translationState, setTranslationState] = useState<{ loading: boolean; error: string }>({ loading: false, error: '' });
   const [isTranslatorOpen, setIsTranslatorOpen] = useState(() => localStorage.getItem(TRANSLATOR_COLLAPSED_KEY) !== 'true');
+  const [linkHealth, setLinkHealth] = useState<Record<string, LinkHealthEntry>>({});
   const [clickStats, setClickStats] = useState<DailyClickStats>(loadDailyClickStats);
 
   useEffect(() => {
@@ -106,6 +116,13 @@ function App() {
   useEffect(() => {
     localStorage.setItem(TEMP_TEXT_KEY, tempText);
   }, [tempText]);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}link-health.json`)
+      .then(response => response.ok ? response.json() as Promise<LinkHealthEntry[]> : [])
+      .then(entries => setLinkHealth(Object.fromEntries(entries.map(entry => [entry.siteId, entry]))))
+      .catch(() => undefined);
+  }, []);
 
   useEffect(() => {
     const checkDate = () => {
@@ -408,7 +425,8 @@ function App() {
                     '--grid-w': layout?.width || (layout?.size === 'wide' ? 2 : 1),
                     '--grid-h': layout?.height || 1,
                   } as CSSProperties;
-                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} onVisit={recordVisit} dailyVisits={category.id === commonCategoryId ? clickStats.clicks[site.id]?.count || 0 : 0} /></div>;
+                  const health = linkHealth[site.id]?.url === site.url ? linkHealth[site.id] : undefined;
+                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} onVisit={recordVisit} dailyVisits={category.id === commonCategoryId ? clickStats.clicks[site.id]?.count || 0 : 0} health={health} /></div>;
                 })}</div>
               </section>
             );

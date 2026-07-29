@@ -1,6 +1,6 @@
 # 白泽个人导航 CMS 系统设计文档
 
-> 本文档依据当前仓库源码整理，用于记录现状、目标架构和后续重构顺序。核心 CMS 改造已于 2026-07-21 落地，尚未完成的能力仍标记为规划。
+> 本文档依据当前仓库源码整理，用于记录现状、目标架构和后续重构顺序。核心 CMS 改造已于 2026-07-21 落地，并于 2026-07-29 补充书签导入、完整备份恢复和每日链接健康检测。
 
 ## 1. 项目定位
 
@@ -39,25 +39,28 @@
 - 支持明暗主题、按时间变化的渐变背景和响应式侧边栏。
 - 通过 `/#/admin` 管理网站和分类，支持网站新增、编辑、删除以及空分类增删改。
 - 使用 dnd-kit 拖拽调整网站顺序，支持指针和键盘操作。
-- 未发布修改写入 `localStorage.nav_cms_draft`，支持导出和恢复默认数据。
+- 支持分类排序、跨分类拖动网站、四列自由网格坐标和四种卡片尺寸。
+- 未发布修改写入 `localStorage.nav_cms_draft`，支持浏览器书签 HTML 导入和带版本校验的完整备份恢复。
 - 运行时输入 fine-grained PAT，通过 Git Data API 原子提交三个 JSON 数据文件。
 - 推送到 `main` 或 `master` 后，由 GitHub Actions 构建并发布 `dist` 到 `gh-pages`。
+- GitHub Actions 每日检查正式导航链接并生成 `public/link-health.json`，首页为异常链接显示状态提醒。
 
 ### 2.3 尚未实现
 
 - GitHub OAuth（纯 Pages 环境无法安全保存 client secret）。
-- PWA、RSS、健康检测等高级能力。
+- PWA、RSS 聚合、AI 辅助分类等高级能力。
 
 ### 2.4 当前目录职责
 
 ```text
 .
-├── .github/workflows/       # GitHub Pages 构建与发布
-├── public/.nojekyll         # 禁止 Pages 使用 Jekyll 处理产物
+├── .github/workflows/       # GitHub Pages 构建、发布与每日链接检查
+├── public/                  # Pages 静态文件与链接健康报告
+├── scripts/                 # 加密、备份、书签解析和链接检查自检脚本
 ├── src/
 │   ├── components/          # 卡片、侧边栏和 CMS 管理面板
 │   ├── data/                # JSON 数据、站点配置和数据入口
-│   ├── lib/utils.ts         # className 合并工具
+│   ├── lib/                 # className、书签解析与备份校验工具
 │   ├── services/github.ts   # GitHub 身份验证与原子发布
 │   ├── types/               # 导航数据类型
 │   ├── App.tsx              # 页面状态、搜索、主题和草稿逻辑
@@ -169,19 +172,23 @@ ID 建议由名称生成 slug，并在冲突时追加短随机串。修改名称
 
 ### 5.3 `layout.json`
 
-第一版只实现排序，暂不引入没有实际渲染用途的坐标：
+当前布局同时保存排序、自由网格坐标和卡片尺寸：
 
 ```json
 [
   {
     "siteId": "github",
     "order": 1,
-    "size": "normal"
+    "size": "wide",
+    "x": 0,
+    "y": 0,
+    "width": 2,
+    "height": 1
   }
 ]
 ```
 
-当产品真正支持自由桌面布局后，再升级为带 `x`、`y`、`width`、`height` 的网格结构，并增加数据版本号和迁移函数。
+`x`、`y`、`width`、`height` 用于桌面四列网格；未设置坐标时按 `order` 自动排列，窄屏继续回落为响应式流式布局。
 
 ## 6. 页面与编辑模式
 
@@ -260,9 +267,7 @@ gh-pages 发布
 
 ## 9. 搜索设计
 
-当前字符串包含匹配足以支撑现有数据量，搜索字段为网站名称、描述和标签。迁移到规范化数据后应补充分类名称。
-
-只有在出现拼写容错、权重排序或数据规模增长需求时再引入 Fuse.js，建议权重为：
+当前已使用 Fuse.js 对网站名称、标签、分类名称和描述进行模糊匹配，权重为：
 
 ```text
 name > tags > category > description
@@ -272,13 +277,13 @@ name > tags > category > description
 
 ## 10. 拖拽设计
 
-使用 `@dnd-kit/core` 和 `@dnd-kit/sortable` 实现分类内排序，第一版流程为：
+使用 `@dnd-kit/core` 和 `@dnd-kit/sortable` 实现分类排序、分类内排序和跨分类移动，流程为：
 
 ```text
 拖动卡片 → 更新草稿顺序 → 标记未发布 → 点击发布 → 写入 GitHub
 ```
 
-需要同时支持键盘拖拽、移动端触摸传感器、拖拽取消和跨分类移动。拖拽后只更新状态，不应每次移动都调用 GitHub API。
+拖拽后只更新本地草稿，不会在每次移动时调用 GitHub API。桌面端还可编辑自由网格坐标和卡片宽高。
 
 ## 11. 构建与部署
 
@@ -316,7 +321,7 @@ name > tags > category > description
 - 增加管理页面或管理面板。
 - 实现网站和分类的增删改、校验、草稿和预览。
 - 将 LocalStorage 从正式数据源降级为未发布草稿与恢复机制。
-- 增加 JSON 导入、导出，作为 GitHub 同步前的回退手段。
+- 增加浏览器书签 HTML 导入、完整备份和恢复，作为 GitHub 同步前的回退手段。
 
 验收标准：不连接 GitHub 也能完成一次完整编辑并导出合法数据。
 
@@ -344,7 +349,7 @@ name > tags > category > description
 
 - PWA 与只读离线访问。
 - RSS 聚合、GitHub 动态、浏览历史。
-- 网站健康检测和失效链接报告。
+- 网站健康检测和失效链接报告（基础版本已完成：每日检查并在卡片标记异常）。
 - AI 搜索入口与辅助分类。
 
 这些功能不应阻塞 CMS 的数据模型、编辑器和 GitHub 同步主链路。

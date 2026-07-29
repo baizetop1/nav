@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Activity, Download, ExternalLink, GitMerge, Github, Plus, RefreshCw, RotateCcw, Save, X } from 'lucide-react';
+import { Activity, BookmarkPlus, Download, ExternalLink, FileUp, GitMerge, Github, Plus, RefreshCw, RotateCcw, Save, X } from 'lucide-react';
+import { createBackup, restoreBackup } from '../lib/backup';
+import { normalizeBookmarkUrl, parseBookmarks } from '../lib/bookmarks';
 import { getAuthenticatedUser, getRemoteNavigationData, getWorkflowRun, normalizeGithubToken, publishNavigationData, type WorkflowRun } from '../services/github';
 import { NavigationOrganizer } from './NavigationOrganizer';
 import type { NavigationData, Site } from '../types/navigation';
@@ -40,6 +42,7 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
   const [remoteState, setRemoteState] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
   const [publishedSha, setPublishedSha] = useState('');
   const [workflowRun, setWorkflowRun] = useState<WorkflowRun | null>(null);
+  const [dataToolState, setDataToolState] = useState<{ type: 'idle' | 'success' | 'error'; message?: string }>({ type: 'idle' });
 
   useEffect(() => {
     if (!publishedSha || !token.trim()) return;
@@ -138,13 +141,98 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
   };
 
   const exportData = () => {
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'baize-navigation.json';
-    link.click();
-    URL.revokeObjectURL(url);
+    try {
+      const backup = createBackup(data);
+      const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `baize-full-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      link.click();
+      URL.revokeObjectURL(url);
+      setDataToolState({ type: 'success', message: '完整备份已导出，包含导航、点击统计、临时文本与界面偏好。' });
+    } catch (error) {
+      setDataToolState({ type: 'error', message: error instanceof Error ? error.message : '备份导出失败。' });
+    }
+  };
+
+  const importBookmarks = async (file: File) => {
+    try {
+      const records = parseBookmarks(await file.text());
+      if (!records.length) throw new Error('没有找到可导入的 HTTP/HTTPS 书签。');
+
+      const sites = [...data.sites];
+      const categories = [...data.categories];
+      const layout = [...data.layout];
+      const knownUrls = new Set(sites.map(site => normalizeBookmarkUrl(site.url)).filter((url): url is string => Boolean(url)));
+      const categoryByName = new Map(categories.map(category => [category.name.trim().toLocaleLowerCase(), category.id]));
+      const usedCategoryIds = new Set(categories.map(category => category.id));
+      const usedSiteIds = new Set(sites.map(site => site.id));
+      let nextCategoryOrder = Math.max(0, ...categories.map(category => category.order));
+      let nextOrder = Math.max(0, ...layout.map(item => item.order));
+      let imported = 0;
+      let skipped = 0;
+      let createdCategories = 0;
+
+      const uniqueId = (base: string, used: Set<string>) => {
+        let id = base;
+        let suffix = 2;
+        while (used.has(id)) id = `${base}-${suffix++}`;
+        used.add(id);
+        return id;
+      };
+
+      for (const record of records) {
+        if (knownUrls.has(record.url)) {
+          skipped += 1;
+          continue;
+        }
+
+        const categoryName = record.category?.trim() || '导入书签';
+        const categoryKey = categoryName.toLocaleLowerCase();
+        let categoryId = categoryByName.get(categoryKey);
+        if (!categoryId) {
+          categoryId = uniqueId(slugify(categoryName), usedCategoryIds);
+          categories.push({ id: categoryId, name: categoryName, order: ++nextCategoryOrder });
+          categoryByName.set(categoryKey, categoryId);
+          createdCategories += 1;
+        }
+
+        const siteId = uniqueId(slugify(record.name), usedSiteIds);
+        sites.push({
+          id: siteId,
+          name: record.name,
+          url: record.url,
+          description: '从浏览器书签导入',
+          categoryId,
+          tags: ['书签'],
+        });
+        layout.push({ siteId, order: ++nextOrder, size: 'normal', width: 1, height: 1 });
+        knownUrls.add(record.url);
+        imported += 1;
+      }
+
+      if (imported) onChange({ sites, categories, layout });
+      setDataToolState({
+        type: 'success',
+        message: `已导入 ${imported} 个书签${createdCategories ? `，新建 ${createdCategories} 个分类` : ''}${skipped ? `，跳过 ${skipped} 个重复地址` : ''}。`,
+      });
+    } catch (error) {
+      setDataToolState({ type: 'error', message: error instanceof Error ? error.message : '书签导入失败。' });
+    }
+  };
+
+  const importBackup = async (file: File) => {
+    if (!confirm('恢复完整备份会覆盖当前导航草稿、点击统计、临时文本和界面偏好，是否继续？')) return;
+    try {
+      const restored = restoreBackup(await file.text());
+      localStorage.setItem('nav_cms_draft', JSON.stringify(restored));
+      onChange(restored);
+      setDataToolState({ type: 'success', message: '备份恢复成功，正在重新载入界面设置…' });
+      window.setTimeout(() => window.location.reload(), 500);
+    } catch (error) {
+      setDataToolState({ type: 'error', message: error instanceof Error ? error.message : '备份恢复失败。' });
+    }
   };
 
   const verifyToken = async () => {
@@ -265,9 +353,40 @@ export function AdminPanel({ data, defaultRepository, onChange, onReset, onClose
               {publishedSha && <div className="mt-3 rounded-xl border border-[#c9a96b]/20 bg-[#c9a96b]/8 p-3 text-sm"><div className="flex items-center gap-2 font-semibold text-[#5d552f] dark:text-[#dccb9d]"><Activity size={16} className={workflowRun?.status !== 'completed' ? 'animate-pulse' : ''} />部署状态</div><p className="mt-1 text-xs text-[#718986]">{!workflowRun ? '等待 GitHub Actions 创建任务…' : workflowRun.status === 'completed' ? `已完成：${workflowRun.conclusion || 'unknown'}` : workflowRun.status === 'in_progress' ? '正在构建和部署…' : `状态：${workflowRun.status}`}</p>{workflowRun && <a href={workflowRun.html_url} target="_blank" rel="noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs underline">查看 Actions <ExternalLink size={12} /></a>}</div>}
             </section>
 
-            <section className={`${panelClass} flex flex-wrap gap-2`}>
-              <button onClick={exportData} className="baize-button-secondary"><Download size={16} />导出备份</button>
-              <button onClick={() => { if (confirm('确定丢弃所有本地修改并恢复仓库内置数据吗？')) onReset(); }} className="baize-danger-button"><RotateCcw size={16} />恢复默认</button>
+            <section className={panelClass}>
+              <h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">导入、备份与恢复</h2>
+              <p className="mb-4 mt-1 text-xs leading-5 text-[#718986]">支持 Chrome、Edge 等浏览器导出的 HTML 书签。完整备份不会包含 GitHub Token 或加密密码；临时文本会按本机明文导出，请妥善保管备份文件。</p>
+              <div className="flex flex-wrap gap-2">
+                <label className="baize-button-secondary cursor-pointer">
+                  <BookmarkPlus size={16} />导入浏览器书签
+                  <input
+                    type="file"
+                    accept=".html,.htm,text/html"
+                    className="hidden"
+                    onChange={event => {
+                      const file = event.target.files?.[0];
+                      if (file) void importBookmarks(file);
+                      event.currentTarget.value = '';
+                    }}
+                  />
+                </label>
+                <button type="button" onClick={exportData} className="baize-button-secondary"><Download size={16} />导出完整备份</button>
+                <label className="baize-button-secondary cursor-pointer">
+                  <FileUp size={16} />恢复完整备份
+                  <input
+                    type="file"
+                    accept=".json,application/json"
+                    className="hidden"
+                    onChange={event => {
+                      const file = event.target.files?.[0];
+                      if (file) void importBackup(file);
+                      event.currentTarget.value = '';
+                    }}
+                  />
+                </label>
+                <button type="button" onClick={() => { if (confirm('确定丢弃所有本地修改并恢复仓库内置数据吗？')) onReset(); }} className="baize-danger-button"><RotateCcw size={16} />恢复默认</button>
+              </div>
+              {dataToolState.message && <p className={`mt-3 rounded-xl border p-3 text-sm ${dataToolState.type === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{dataToolState.message}</p>}
             </section>
           </div>
         </div>

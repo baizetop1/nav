@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Tag } from 'lucide-react';
+import { AlertTriangle, ExternalLink, Tag } from 'lucide-react';
 import type { Site } from '../types/navigation';
 
-export function Card({ site, onVisit, dailyVisits = 0 }: { site: Site; onVisit?: (siteId: string) => void; dailyVisits?: number }) {
+export function Card({ site, onVisit, dailyVisits = 0, health }: { site: Site; onVisit?: (siteId: string) => void; dailyVisits?: number; health?: { ok: boolean; status: number | null; error: string | null } }) {
   return (
     <motion.a
       href={site.url}
@@ -27,6 +27,7 @@ export function Card({ site, onVisit, dailyVisits = 0 }: { site: Site; onVisit?:
             </div>
         </div>
         <div className="flex shrink-0 items-center gap-2">
+          {health && !health.ok && <span title={health.error || `HTTP ${health.status}`} className="inline-flex items-center gap-1 rounded-md bg-[#a85d50]/10 px-1.5 py-0.5 text-[10px] font-medium text-[#985247] dark:text-[#e1a294]"><AlertTriangle size={11} />异常</span>}
           {dailyVisits > 0 && <span className="rounded-md bg-[#5f8f84]/10 px-1.5 py-0.5 text-[10px] font-medium text-[#52736f] dark:bg-[#c9a96b]/10 dark:text-[#d2b775]">今日 {dailyVisits}</span>}
           <ExternalLink className="h-4 w-4 text-[#91a6a1] opacity-0 transition-colors group-hover:text-[#356b66] group-hover:opacity-100 dark:group-hover:text-[#d2b775]" />
         </div>

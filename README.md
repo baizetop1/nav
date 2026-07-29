@@ -18,6 +18,9 @@
 - 修改自动保存到浏览器本地草稿。
 - 使用运行时输入的 GitHub fine-grained PAT 创建数据提交。
 - 支持读取远端 JSON、合并或覆盖本地草稿，并轮询 GitHub Actions 部署状态。
+- 管理后台可导入 Chrome、Edge 等浏览器导出的 HTML 书签，自动保留文件夹分类并跳过重复地址。
+- 支持带版本校验的完整备份与恢复，覆盖导航草稿、常用点击统计、临时文本和界面偏好，不导出 Token 或密码；临时文本在本地备份文件中为明文。
+- GitHub Actions 每日检查正式导航中的链接；检测到异常时，首页卡片显示状态提醒。
 - 推送后由 GitHub Actions 构建并发布到 `gh-pages`。
 
 ## 本地开发
@@ -73,6 +76,14 @@ npm ci → npm run build → 发布 dist 到 gh-pages
 ```
 
 GitHub 仓库需要允许 Actions 写入内容，并将 Pages 发布源配置为 `gh-pages` 分支。
+
+`.github/workflows/link-health.yml` 每天自动执行链接检查，将报告写入 `public/link-health.json`，报告更新后重新构建并部署页面。也可以在 Actions 页面手动运行，或在本地执行：
+
+```bash
+npm run check:links
+```
+
+本地执行会访问所有正式导航地址并更新报告文件。
 
 ## 文档
 
