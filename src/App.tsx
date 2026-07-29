@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, Check, Copy, Download, Languages, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Copy, Download, Languages, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { Sidebar } from './components/Sidebar';
@@ -12,6 +12,7 @@ import type { NavigationData } from './types/navigation';
 const DRAFT_KEY = 'nav_cms_draft';
 const CLICK_STATS_KEY = 'nav_daily_click_stats';
 const TEMP_TEXT_KEY = 'nav_temp_text';
+const TRANSLATOR_COLLAPSED_KEY = 'nav_translator_collapsed';
 const TRANSLATION_LANGUAGES = [
   ['zh-CN', '简体中文'], ['en', '英语'], ['ja', '日语'], ['ko', '韩语'],
   ['fr', '法语'], ['de', '德语'], ['es', '西班牙语'], ['ru', '俄语'],
@@ -83,6 +84,7 @@ function App() {
   const [sourceLanguage, setSourceLanguage] = useState('en');
   const [targetLanguage, setTargetLanguage] = useState('zh-CN');
   const [translationState, setTranslationState] = useState<{ loading: boolean; error: string }>({ loading: false, error: '' });
+  const [isTranslatorOpen, setIsTranslatorOpen] = useState(() => localStorage.getItem(TRANSLATOR_COLLAPSED_KEY) !== 'true');
   const [clickStats, setClickStats] = useState<DailyClickStats>(loadDailyClickStats);
 
   useEffect(() => {
@@ -346,9 +348,13 @@ function App() {
 
         <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
           <section className="baize-panel rounded-2xl p-4 sm:p-5">
-            <form onSubmit={translateInline}>
+            <div className={isTranslatorOpen ? 'mb-3 flex items-center justify-between' : 'flex items-center justify-between'}>
+              <span className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Languages size={17} />快捷翻译</span>
+              <button type="button" className="baize-icon-button flex items-center gap-1 text-xs" aria-expanded={isTranslatorOpen} onClick={() => setIsTranslatorOpen(current => { localStorage.setItem(TRANSLATOR_COLLAPSED_KEY, String(current)); return !current; })}>{isTranslatorOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}{isTranslatorOpen ? '收起' : '展开'}</button>
+            </div>
+            <form onSubmit={translateInline} className={isTranslatorOpen ? '' : 'hidden'}>
               <div className="mb-3 flex flex-wrap items-center gap-2">
-                <span className="mr-auto flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Languages size={17} />快捷翻译</span>
+                <span className="mr-auto text-xs text-[#718986]">选择翻译语言</span>
                 <select value={sourceLanguage} onChange={event => setSourceLanguage(event.target.value)} className="baize-input w-auto py-1.5">{TRANSLATION_LANGUAGES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
                 <button type="button" className="baize-icon-button" aria-label="互换翻译语言" onClick={() => { setSourceLanguage(targetLanguage); setTargetLanguage(sourceLanguage); if (translatedText) { setTranslationText(translatedText); setTranslatedText(''); } }}><ArrowLeftRight size={17} /></button>
                 <select value={targetLanguage} onChange={event => setTargetLanguage(event.target.value)} className="baize-input w-auto py-1.5">{TRANSLATION_LANGUAGES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
