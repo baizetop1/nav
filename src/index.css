@@ -75,6 +75,29 @@
   filter: saturate(0.86);
 }
 
+.scene-study .site-background {
+  filter: saturate(0.68) brightness(1.04);
+}
+
+.scene-study .site-card {
+  border-color: rgb(95 143 132 / 0.28);
+  box-shadow: 0 12px 36px -28px rgb(53 107 102 / 0.55);
+}
+
+.scene-relax .site-background {
+  filter: saturate(0.92) sepia(0.12);
+}
+
+.scene-relax .site-card {
+  border-color: rgb(155 128 96 / 0.24);
+  background-color: rgb(249 243 231 / 0.9);
+}
+
+.dark .scene-relax .site-card {
+  border-color: rgb(211 185 118 / 0.18);
+  background-color: rgb(33 29 25 / 0.9);
+}
+
 .work-mode .sidebar-shell {
   box-shadow: none;
   backdrop-filter: none;

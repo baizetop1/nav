@@ -1,7 +1,8 @@
 import { siteConfig } from '../data';
 import type { Category } from '../types/navigation';
 import { cn } from '../lib/utils';
-import { X, Github, Moon, Sun, Settings, Palette, Briefcase, StickyNote, Download } from 'lucide-react';
+import type { SceneMode } from '../types/scene';
+import { X, Github, Moon, Sun, Settings, Palette, Briefcase, StickyNote, Download, BookOpen, Coffee, Sparkles } from 'lucide-react';
 
 interface SidebarProps {
   activeCategory: string;
@@ -11,8 +12,8 @@ interface SidebarProps {
   toggleTheme: () => void;
   categories: Category[];
   onAdminClick: () => void;
-  isWorkMode: boolean;
-  toggleWorkMode: () => void;
+  sceneMode: SceneMode;
+  onSceneModeChange: (mode: SceneMode) => void;
   onTempTextClick: () => void;
   tempText: string;
   onTempTextChange: (value: string) => void;
@@ -31,8 +32,8 @@ export function Sidebar({
     toggleTheme,
     categories,
     onAdminClick,
-    isWorkMode,
-    toggleWorkMode,
+    sceneMode,
+    onSceneModeChange,
     onTempTextClick,
     tempText,
     onTempTextChange,
@@ -42,6 +43,13 @@ export function Sidebar({
     canInstall,
     onInstall
 }: SidebarProps) {
+    const isWorkMode = sceneMode === 'work';
+    const sceneOptions = [
+        { id: 'default' as const, name: '日常', icon: Sparkles },
+        { id: 'work' as const, name: '工作', icon: Briefcase },
+        { id: 'study' as const, name: '学习', icon: BookOpen },
+        { id: 'relax' as const, name: '休闲', icon: Coffee },
+    ];
     const scrollToCategory = (id: string) => {
         const el = document.getElementById(id);
         if (el) {
@@ -106,6 +114,17 @@ export function Sidebar({
                         <textarea value={tempText} onChange={event => onTempTextChange(event.target.value)} placeholder="临时记录…" className="baize-input h-24 resize-none p-2 text-xs leading-5" />
                     </section>
 
+                    <section className="mb-4 rounded-xl border border-[#5f8f84]/15 bg-white/25 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
+                        <p className="mb-2 text-xs font-semibold text-[#456b68] dark:text-[#d9ddd6]">场景模式</p>
+                        <div className="grid grid-cols-2 gap-1.5">
+                            {sceneOptions.map(option => {
+                                const Icon = option.icon;
+                                const active = sceneMode === option.id;
+                                return <button key={option.id} type="button" onClick={() => onSceneModeChange(option.id)} className={cn('flex items-center gap-1.5 rounded-lg px-2 py-2 text-xs font-medium transition', active ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'text-[#58726f] hover:bg-[#5f8f84]/10 dark:text-[#afbeb9] dark:hover:bg-[#c9a96b]/10')}><Icon size={14} />{option.name}</button>;
+                            })}
+                        </div>
+                    </section>
+
                     <div className="mt-auto space-y-3 border-t border-[#5f8f84]/15 pt-4 dark:border-[#c9a96b]/12">
                         {canInstall && <button onClick={onInstall} className="flex w-full items-center gap-2 rounded-lg bg-[#5f8f84]/10 px-3 py-2 text-sm font-medium text-[#356b66] transition-colors hover:bg-[#5f8f84]/15 dark:bg-[#c9a96b]/10 dark:text-[#dfc68e] dark:hover:bg-[#c9a96b]/15">
                             <Download size={18} />安装到设备
@@ -113,16 +132,6 @@ export function Sidebar({
                         <button onClick={onAdminClick} className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#456b68] transition-colors hover:bg-[#5f8f84]/10 dark:text-[#d9ddd6] dark:hover:bg-[#c9a96b]/10">
                             <Settings size={18} />管理导航
                         </button>
-                        <button onClick={toggleWorkMode} className={cn(
-                            "flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-                            isWorkMode
-                                ? "bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]"
-                                : "text-[#456b68] hover:bg-[#5f8f84]/10 dark:text-[#d9ddd6] dark:hover:bg-[#c9a96b]/10"
-                        )}>
-                            <span className="flex items-center gap-2"><Briefcase size={18} />工作模式</span>
-                            <span className="text-[10px] opacity-75">{isWorkMode ? '开启' : '关闭'}</span>
-                        </button>
-
                         <div className="flex items-center justify-between px-2">
                              <button
                                 onClick={toggleTheme}

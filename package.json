@@ -10,6 +10,8 @@
     "test:crypto": "node --experimental-strip-types scripts/encrypted-note-selfcheck.mjs",
     "test:backup": "node --experimental-strip-types scripts/backup-selfcheck.mjs",
     "test:encrypted-backup": "node --experimental-strip-types scripts/encrypted-backup-selfcheck.mjs",
+    "test:feature-data": "node --experimental-strip-types scripts/feature-data-selfcheck.mjs",
+    "test:text-transfer": "node --experimental-strip-types scripts/text-transfer-selfcheck.mjs",
     "check:links": "node scripts/check-links.mjs"
   },
   "dependencies": {
@@ -20,11 +22,13 @@
     "framer-motion": "^10.16.4",
     "fuse.js": "^7.5.0",
     "lucide-react": "^0.292.0",
+    "qrcode": "^1.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
+    "@types/qrcode": "^1.5.5",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.2.0",

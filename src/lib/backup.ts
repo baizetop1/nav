@@ -4,8 +4,11 @@ export const BACKUP_VERSION = 1 as const;
 export const BACKUP_STORAGE_KEYS = [
   'nav_cms_draft',
   'nav_daily_click_stats',
+  'nav_click_stats_v2',
+  'nav_translation_history',
   'nav_temp_text',
   'work_mode',
+  'scene_mode',
   'theme',
   'nav_translator_collapsed',
 ] as const;
@@ -155,8 +158,7 @@ export function parseBackup(input: string | unknown): NavigationBackup {
   if (Object.keys(savedStorage).some(key => !allowedKeys.has(key))) fail('storage contains an unsupported key');
 
   const storageEntries = BACKUP_STORAGE_KEYS.map(key => {
-    if (!Object.prototype.hasOwnProperty.call(savedStorage, key)) fail(`storage.${key} is missing`);
-    const valueForKey = savedStorage[key];
+    const valueForKey = Object.prototype.hasOwnProperty.call(savedStorage, key) ? savedStorage[key] : null;
     if (valueForKey !== null && typeof valueForKey !== 'string') fail(`storage.${key} must be a string or null`);
     return [key, valueForKey] as const;
   });

@@ -21,6 +21,13 @@ target.setItem('unrelated', 'keep');
 const restored = restoreBackup(JSON.stringify(backup), target);
 if (restored.sites[0]?.id !== 'site' || target.getItem('theme') !== 'dark' || target.getItem('unrelated') !== 'keep') throw new Error('Restore failed');
 
+const legacyBackup = structuredClone(backup);
+delete legacyBackup.storage.nav_click_stats_v2;
+delete legacyBackup.storage.nav_translation_history;
+delete legacyBackup.storage.scene_mode;
+const parsedLegacy = parseBackup(legacyBackup);
+if (parsedLegacy.storage.nav_click_stats_v2 !== null || parsedLegacy.storage.scene_mode !== null) throw new Error('Legacy backup compatibility failed');
+
 const invalid = structuredClone(backup);
 invalid.version = 2;
 try {

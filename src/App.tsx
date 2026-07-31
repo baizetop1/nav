@@ -1,17 +1,23 @@
 import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Copy, Download, Languages, Lock, Menu, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Copy, Download, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel } from './components/AdminPanel';
 import { Card } from './components/Card';
+import { QrCodeModal } from './components/QrCodeModal';
 import { Sidebar } from './components/Sidebar';
+import { TempTextQrModal, TextTransferReceiveModal } from './components/TempTextTransferModals';
+import { TranslationHistoryPanel } from './components/TranslationHistoryPanel';
 import { defaultNavigationData, searchEngines, siteConfig } from './data';
+import { CLICK_STATS_KEY, getTodayClicks, loadClickStats, localDateKey, recordSiteVisit, type ClickStatsStore } from './lib/activityStats';
 import { loadLinkHealthReport, type LinkHealthEntry } from './lib/linkHealth';
+import { addTranslationHistory, loadTranslationHistory, TRANSLATION_HISTORY_KEY, type TranslationHistoryItem } from './lib/translationHistory';
+import { parseTextTransferHash } from './lib/textTransfer';
 import { decryptNote, encryptNote } from './services/encryptedNote';
 import { getEncryptedNote, saveEncryptedNote } from './services/github';
-import type { NavigationData } from './types/navigation';
+import type { NavigationData, Site } from './types/navigation';
+import { loadSceneMode, SCENE_MODE_KEY, type SceneMode } from './types/scene';
 
 const DRAFT_KEY = 'nav_cms_draft';
-const CLICK_STATS_KEY = 'nav_daily_click_stats';
 const TEMP_TEXT_KEY = 'nav_temp_text';
 const TRANSLATOR_COLLAPSED_KEY = 'nav_translator_collapsed';
 const TRANSLATION_LANGUAGES = [
@@ -19,34 +25,13 @@ const TRANSLATION_LANGUAGES = [
   ['fr', '法语'], ['de', '德语'], ['es', '西班牙语'], ['ru', '俄语'],
 ] as const;
 
-interface DailyClickStats {
-  date: string;
-  clicks: Record<string, { count: number; lastClicked: number }>;
+function translationLanguageName(code: string): string {
+  return TRANSLATION_LANGUAGES.find(([value]) => value === code)?.[1] || code;
 }
 
 interface InstallPromptEvent extends Event {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
-
-function localDateKey(date = new Date()): string {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-}
-
-function loadDailyClickStats(): DailyClickStats {
-  const today = localDateKey();
-  try {
-    const saved = localStorage.getItem(CLICK_STATS_KEY);
-    if (!saved) return { date: today, clicks: {} };
-    const parsed = JSON.parse(saved) as Partial<DailyClickStats>;
-    if (parsed.date !== today || !parsed.clicks || typeof parsed.clicks !== 'object') return { date: today, clicks: {} };
-    return { date: today, clicks: parsed.clicks };
-  } catch {
-    return { date: today, clicks: {} };
-  }
 }
 
 function isNavigationData(value: unknown): value is NavigationData {
@@ -74,11 +59,13 @@ function App() {
   const [search, setSearch] = useState('');
   const [isDark, setIsDark] = useState(false);
   const [isAutoGradient, setIsAutoGradient] = useState(true);
-  const [isWorkMode, setIsWorkMode] = useState(() => localStorage.getItem('work_mode') === 'true');
+  const [sceneMode, setSceneMode] = useState<SceneMode>(loadSceneMode);
   const [mainGradient, setMainGradient] = useState('');
   const [sidebarGradient, setSidebarGradient] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(window.location.hash === '#/admin');
   const [isTempTextOpen, setIsTempTextOpen] = useState(false);
+  const [isTempTextQrOpen, setIsTempTextQrOpen] = useState(false);
+  const [incomingTempText, setIncomingTempText] = useState<string | null>(null);
   const [tempText, setTempText] = useState(() => localStorage.getItem(TEMP_TEXT_KEY) || '');
   const [isCopied, setIsCopied] = useState(false);
   const [noteGithubToken, setNoteGithubToken] = useState('');
@@ -90,11 +77,15 @@ function App() {
   const [sourceLanguage, setSourceLanguage] = useState('en');
   const [targetLanguage, setTargetLanguage] = useState('zh-CN');
   const [translationState, setTranslationState] = useState<{ loading: boolean; error: string }>({ loading: false, error: '' });
+  const [translationHistory, setTranslationHistory] = useState<TranslationHistoryItem[]>(loadTranslationHistory);
   const [isTranslatorOpen, setIsTranslatorOpen] = useState(() => localStorage.getItem(TRANSLATOR_COLLAPSED_KEY) !== 'true');
   const [linkHealthEntries, setLinkHealthEntries] = useState<LinkHealthEntry[]>([]);
   const [isLinkHealthLoading, setIsLinkHealthLoading] = useState(false);
-  const [clickStats, setClickStats] = useState<DailyClickStats>(loadDailyClickStats);
+  const [clickStats, setClickStats] = useState<ClickStatsStore>(loadClickStats);
+  const [currentDate, setCurrentDate] = useState(localDateKey);
+  const [qrSite, setQrSite] = useState<Site | null>(null);
   const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
+  const isWorkMode = sceneMode === 'work';
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -113,6 +104,10 @@ function App() {
   }, [clickStats]);
 
   useEffect(() => {
+    localStorage.setItem(TRANSLATION_HISTORY_KEY, JSON.stringify(translationHistory));
+  }, [translationHistory]);
+
+  useEffect(() => {
     localStorage.setItem(TEMP_TEXT_KEY, tempText);
   }, [tempText]);
 
@@ -127,8 +122,10 @@ function App() {
 
   useEffect(() => {
     const checkDate = () => {
-      const today = localDateKey();
-      setClickStats(current => current.date === today ? current : { date: today, clicks: {} });
+      setCurrentDate(current => {
+        const today = localDateKey();
+        return current === today ? current : today;
+      });
     };
     const interval = window.setInterval(checkDate, 60_000);
     return () => window.clearInterval(interval);
@@ -138,6 +135,24 @@ function App() {
     const handleHash = () => setIsAdminOpen(window.location.hash === '#/admin');
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
+  useEffect(() => {
+    const readTransferHash = () => {
+      try {
+        const received = parseTextTransferHash(window.location.hash);
+        setIncomingTempText(received);
+      } catch (error) {
+        if (window.location.hash.startsWith('#/transfer?')) {
+          setIncomingTempText(null);
+          alert(error instanceof Error ? error.message : '无法读取临时文本二维码。');
+          history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+        }
+      }
+    };
+    readTransferHash();
+    window.addEventListener('hashchange', readTransferHash);
+    return () => window.removeEventListener('hashchange', readTransferHash);
   }, []);
 
   useEffect(() => {
@@ -202,21 +217,22 @@ function App() {
 
   const categories = useMemo(() => [...data.categories].sort((a, b) => a.order - b.order), [data.categories]);
   const linkHealth = useMemo(() => Object.fromEntries(linkHealthEntries.map(entry => [entry.siteId, entry])), [linkHealthEntries]);
+  const todayClicks = useMemo(() => clickStats.days[currentDate]?.clicks || getTodayClicks(clickStats), [clickStats, currentDate]);
   const layoutOrder = useMemo(() => new Map(data.layout.map(item => [item.siteId, item.order])), [data.layout]);
   const commonCategoryId = useMemo(() => categories.find(category => category.id === 'common' || category.name === '常用网站')?.id, [categories]);
   const popularSites = useMemo(() => {
     const ranked = [...data.sites].sort((a, b) => {
-      const aStats = clickStats.clicks[a.id];
-      const bStats = clickStats.clicks[b.id];
+      const aStats = todayClicks[a.id];
+      const bStats = todayClicks[b.id];
       return (bStats?.count || 0) - (aStats?.count || 0) || (bStats?.lastClicked || 0) - (aStats?.lastClicked || 0);
-    }).filter(site => (clickStats.clicks[site.id]?.count || 0) > 0);
+    }).filter(site => (todayClicks[site.id]?.count || 0) > 0);
     const fallback = data.sites
       .filter(site => site.favorite || site.categoryId === commonCategoryId)
       .sort((a, b) => Number(Boolean(b.favorite)) - Number(Boolean(a.favorite)) || (layoutOrder.get(a.id) ?? 9999) - (layoutOrder.get(b.id) ?? 9999));
     const result = new Map<string, (typeof data.sites)[number]>();
     [...ranked, ...fallback, ...data.sites].forEach(site => { if (result.size < 8) result.set(site.id, site); });
     return [...result.values()];
-  }, [clickStats.clicks, commonCategoryId, data.sites, layoutOrder]);
+  }, [commonCategoryId, data.sites, layoutOrder, todayClicks]);
   const activeEngine = useMemo(() => searchEngines.find(engine => search.startsWith(`${engine.prefix} `)), [search]);
   const fuse = useMemo(() => {
     const categoryNames = new Map(data.categories.map(category => [category.id, category.name]));
@@ -245,26 +261,15 @@ function App() {
   };
 
   const recordVisit = (siteId: string) => {
-    const today = localDateKey();
-    setClickStats(current => {
-      const base = current.date === today ? current : { date: today, clicks: {} };
-      const previous = base.clicks[siteId];
-      return {
-        date: today,
-        clicks: {
-          ...base.clicks,
-          [siteId]: { count: (previous?.count || 0) + 1, lastClicked: Date.now() },
-        },
-      };
-    });
+    const now = new Date();
+    setCurrentDate(localDateKey(now));
+    setClickStats(current => recordSiteVisit(current, siteId, now));
   };
 
-  const toggleWorkMode = () => {
-    setIsWorkMode(current => {
-      const next = !current;
-      localStorage.setItem('work_mode', String(next));
-      return next;
-    });
+  const changeSceneMode = (mode: SceneMode) => {
+    setSceneMode(mode);
+    localStorage.setItem(SCENE_MODE_KEY, mode);
+    localStorage.setItem('work_mode', String(mode === 'work'));
   };
 
   const openAdmin = () => {
@@ -275,6 +280,11 @@ function App() {
   const closeAdmin = () => {
     history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
     setIsAdminOpen(false);
+  };
+
+  const closeIncomingTransfer = () => {
+    setIncomingTempText(null);
+    history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
   };
 
   const installApp = async () => {
@@ -331,16 +341,38 @@ function App() {
       if (!response.ok || payload.responseStatus >= 400 || !payload.responseData?.translatedText) throw new Error('免费翻译接口暂时不可用。');
       const result = new DOMParser().parseFromString(payload.responseData.translatedText, 'text/html').documentElement.textContent || payload.responseData.translatedText;
       setTranslatedText(result);
+      setTranslationHistory(current => addTranslationHistory(current, {
+        sourceText: translationText.trim(),
+        translatedText: result,
+        sourceLanguage,
+        targetLanguage,
+      }));
       setTranslationState({ loading: false, error: '' });
     } catch (error) {
       setTranslationState({ loading: false, error: error instanceof Error ? error.message : '翻译失败，请稍后再试。' });
     }
   };
 
+  const backgroundOpacity = sceneMode === 'work' ? 'opacity-0' : sceneMode === 'study' ? 'opacity-55' : sceneMode === 'relax' ? 'opacity-80' : 'opacity-100';
+  const sceneOverlay = sceneMode === 'work'
+    ? 'bg-[#f1f3f0] dark:bg-[#0c1618]'
+    : sceneMode === 'study'
+      ? 'bg-[#eef2e6]/55 dark:bg-[#0a1c21]/65'
+      : sceneMode === 'relax'
+        ? 'bg-[#efe2cb]/35 dark:bg-[#1b1714]/55'
+        : mainGradient;
+  const sceneSidebar = sceneMode === 'work'
+    ? 'bg-[#f8f9f7] dark:bg-[#111c1f]'
+    : sceneMode === 'study'
+      ? 'bg-[#f3f3e7]/88 dark:bg-[#102b2c]/92'
+      : sceneMode === 'relax'
+        ? 'bg-[#f3e8d7]/88 dark:bg-[#211d19]/92'
+        : sidebarGradient;
+
   return (
-    <div className={`${isWorkMode ? 'work-mode' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
-      <div className={`site-background fixed inset-0 z-0 transition-opacity duration-300 ${isWorkMode ? 'opacity-0' : 'opacity-100'}`} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}baize-background.webp)` }} aria-hidden="true" />
-      <div className={`fixed inset-0 z-0 transition-colors duration-500 ${isWorkMode ? 'bg-[#f1f3f0] dark:bg-[#0c1618]' : mainGradient}`} aria-hidden="true" />
+    <div className={`scene-${sceneMode} ${isWorkMode ? 'work-mode' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
+      <div className={`site-background fixed inset-0 z-0 transition-opacity duration-300 ${backgroundOpacity}`} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}baize-background.webp)` }} aria-hidden="true" />
+      <div className={`fixed inset-0 z-0 transition-colors duration-500 ${sceneOverlay}`} aria-hidden="true" />
       <Sidebar
         activeCategory={activeCategory}
         isOpen={isSidebarOpen}
@@ -349,14 +381,14 @@ function App() {
         toggleTheme={toggleTheme}
         categories={categories}
         onAdminClick={openAdmin}
-        isWorkMode={isWorkMode}
-        toggleWorkMode={toggleWorkMode}
+        sceneMode={sceneMode}
+        onSceneModeChange={changeSceneMode}
         onTempTextClick={() => setIsTempTextOpen(true)}
         tempText={tempText}
         onTempTextChange={value => { setTempText(value); setIsCopied(false); }}
         isAutoGradient={isAutoGradient}
         toggleAutoGradient={() => setIsAutoGradient(value => !value)}
-        customGradient={isWorkMode ? 'bg-[#f8f9f7] dark:bg-[#111c1f]' : sidebarGradient}
+        customGradient={sceneSidebar}
         canInstall={Boolean(installPrompt)}
         onInstall={() => { void installApp(); }}
       />
@@ -410,6 +442,19 @@ function App() {
                 <div className="flex gap-2"><a className="baize-button-secondary" target="_blank" rel="noreferrer" href={`https://translate.google.com/?sl=${encodeURIComponent(sourceLanguage)}&tl=${encodeURIComponent(targetLanguage)}&text=${encodeURIComponent(translationText)}&op=translate`}>Google 回退</a><button disabled={translationState.loading || !translationText.trim()} className="baize-button-primary" type="submit"><Languages size={17} />{translationState.loading ? '翻译中…' : '立即翻译'}</button></div>
               </div>
             </form>
+            {isTranslatorOpen && <TranslationHistoryPanel
+              history={translationHistory}
+              languageName={translationLanguageName}
+              onUse={item => {
+                setTranslationText(item.sourceText);
+                setTranslatedText(item.translatedText);
+                setSourceLanguage(item.sourceLanguage);
+                setTargetLanguage(item.targetLanguage);
+                setTranslationState({ loading: false, error: '' });
+              }}
+              onDelete={id => setTranslationHistory(current => current.filter(item => item.id !== id))}
+              onClear={() => setTranslationHistory([])}
+            />}
           </section>
           {categories.map(category => {
             const categorySites = data.sites
@@ -451,7 +496,7 @@ function App() {
                     '--grid-h': layout?.height || 1,
                   } as CSSProperties;
                   const health = linkHealth[site.id]?.url === site.url ? linkHealth[site.id] : undefined;
-                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} onVisit={recordVisit} dailyVisits={category.id === commonCategoryId ? clickStats.clicks[site.id]?.count || 0 : 0} health={health} /></div>;
+                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} onVisit={recordVisit} onShowQr={setQrSite} dailyVisits={category.id === commonCategoryId ? todayClicks[site.id]?.count || 0 : 0} health={health} /></div>;
                 })}</div>
               </section>
             );
@@ -461,7 +506,7 @@ function App() {
         </div>
       </main>
 
-      {isAdminOpen && <AdminPanel data={data} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
+      {isAdminOpen && <AdminPanel data={data} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">
@@ -485,13 +530,17 @@ function App() {
           </details>
           <footer className="mt-4 flex items-center justify-between gap-3">
             <span className="text-xs text-[#718986]">{tempText.length} 字符</span>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap justify-end gap-2">
               <button className="baize-danger-button" disabled={!tempText} onClick={() => { if (confirm('确定清空临时文本吗？')) setTempText(''); }}><Trash2 size={16} />清空</button>
+              <button className="baize-button-secondary" disabled={!tempText} onClick={() => setIsTempTextQrOpen(true)}><QrCode size={16} />二维码传输</button>
               <button className="baize-button-primary" disabled={!tempText} onClick={async () => { await navigator.clipboard.writeText(tempText); setIsCopied(true); window.setTimeout(() => setIsCopied(false), 1500); }}>{isCopied ? <Check size={16} /> : <Copy size={16} />}{isCopied ? '已复制' : '复制'}</button>
             </div>
           </footer>
         </aside>
       </div>}
+      <QrCodeModal site={qrSite} onClose={() => setQrSite(null)} />
+      {isTempTextQrOpen && <TempTextQrModal text={tempText} onClose={() => setIsTempTextQrOpen(false)} />}
+      {incomingTempText !== null && <TextTransferReceiveModal text={incomingTempText} currentText={tempText} onClose={closeIncomingTransfer} onAccept={() => { setTempText(incomingTempText); setIsTempTextOpen(true); closeIncomingTransfer(); }} />}
     </div>
   );
 }
