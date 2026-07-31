@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Copy, Download, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Command, Copy, Download, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel } from './components/AdminPanel';
 import { Card } from './components/Card';
+import { CommandPalette, type CommandPaletteAction } from './components/CommandPalette';
 import { QrCodeModal } from './components/QrCodeModal';
 import { Sidebar } from './components/Sidebar';
 import { TempTextQrModal, TextTransferReceiveModal } from './components/TempTextTransferModals';
@@ -54,6 +55,7 @@ function loadInitialData(): NavigationData {
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [data, setData] = useState<NavigationData>(loadInitialData);
   const [activeCategory, setActiveCategory] = useState(defaultNavigationData.categories[0]?.id || '');
   const [search, setSearch] = useState('');
@@ -207,6 +209,13 @@ function App() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        setIsCommandPaletteOpen(current => !current);
+        return;
+      }
+      const target = event.target as HTMLElement | null;
+      const editable = target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target?.isContentEditable;
+      if (event.key === '/' && !editable) {
         event.preventDefault();
         document.getElementById('search-input')?.focus();
       }
@@ -368,6 +377,26 @@ function App() {
       : sceneMode === 'relax'
         ? 'bg-[#f3e8d7]/88 dark:bg-[#211d19]/92'
         : sidebarGradient;
+  const focusAfterRender = (id: string) => window.setTimeout(() => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element?.focus();
+  }, 80);
+  const commandActions: CommandPaletteAction[] = [
+    { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
+    { id: 'translator', title: '打开快捷翻译', description: '输入文本并查看翻译历史', keywords: ['translate', '翻译', 'language'], icon: 'translate', run: () => { setIsTranslatorOpen(true); focusAfterRender('translation-input'); } },
+    { id: 'temp-note', title: '打开临时文本', description: '编辑、复制或加密同步临时内容', keywords: ['note', '文本', '便签'], icon: 'note', run: () => { setIsTempTextOpen(true); focusAfterRender('temp-text-editor'); } },
+    ...(tempText ? [{ id: 'temp-qr', title: '临时文本二维码传输', description: '生成接收链接或纯文本二维码', keywords: ['qr', '二维码', '传输'], icon: 'qr' as const, run: () => setIsTempTextQrOpen(true) }] : []),
+    { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: openAdmin },
+    { id: 'stats', title: '查看访问统计', description: '查看 7/30 天趋势和网站排行', keywords: ['stats', '统计', '数据'], icon: 'stats', run: () => { openAdmin(); focusAfterRender('stats-title'); } },
+    { id: 'theme', title: isDark ? '切换到浅色主题' : '切换到深色主题', description: '立即切换页面明暗外观', keywords: ['theme', '主题', 'dark', 'light'], icon: isDark ? 'sun' : 'moon', run: toggleTheme },
+    { id: 'scene-default', title: '切换到日常场景', description: sceneMode === 'default' ? '当前正在使用' : '恢复完整背景与标准布局', keywords: ['scene', '场景', '日常'], icon: 'default', run: () => changeSceneMode('default') },
+    { id: 'scene-work', title: '切换到工作场景', description: sceneMode === 'work' ? '当前正在使用' : '隐藏装饰并压缩卡片布局', keywords: ['scene', '场景', '工作'], icon: 'work', run: () => changeSceneMode('work') },
+    { id: 'scene-study', title: '切换到学习场景', description: sceneMode === 'study' ? '当前正在使用' : '降低背景干扰并保持阅读感', keywords: ['scene', '场景', '学习'], icon: 'study', run: () => changeSceneMode('study') },
+    { id: 'scene-relax', title: '切换到休闲场景', description: sceneMode === 'relax' ? '当前正在使用' : '使用更温暖柔和的页面氛围', keywords: ['scene', '场景', '休闲'], icon: 'relax', run: () => changeSceneMode('relax') },
+    { id: 'github', title: '打开个人 GitHub', description: siteConfig.github, keywords: ['github', '代码'], icon: 'github', run: () => { window.open(siteConfig.github, '_blank', 'noopener,noreferrer'); } },
+    ...(installPrompt ? [{ id: 'install', title: '安装白泽导航', description: '将当前站点安装到设备', keywords: ['pwa', '安装', 'install'], icon: 'install' as const, run: () => { void installApp(); } }] : []),
+  ];
 
   return (
     <div className={`scene-${sceneMode} ${isWorkMode ? 'work-mode' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
@@ -412,11 +441,12 @@ function App() {
                 placeholder={activeEngine ? activeEngine.placeholder : "搜索网站，或输入 'g ' 使用 Google"}
                 className="baize-input py-3 pl-10 pr-16 shadow-[0_10px_30px_-20px_rgba(16,44,51,0.6)]"
               />
-              <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-[#5f8f84]/20 bg-[#5f8f84]/8 px-2 py-0.5 text-xs text-[#6f8984] dark:border-[#c9a96b]/15 dark:bg-[#c9a96b]/8 dark:text-[#baa978] sm:block">Ctrl K</kbd>
+              <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-[#5f8f84]/20 bg-[#5f8f84]/8 px-2 py-0.5 text-xs text-[#6f8984] dark:border-[#c9a96b]/15 dark:bg-[#c9a96b]/8 dark:text-[#baa978] sm:block">/</kbd>
               <div className="pointer-events-none absolute left-0 top-full mt-2 flex w-full flex-wrap gap-2 px-1 opacity-0 transition-opacity group-focus-within:pointer-events-auto group-focus-within:opacity-100">
                 {searchEngines.map(engine => <button key={engine.prefix} onClick={() => { const query = activeEngine ? search.slice(activeEngine.prefix.length + 1) : search; setSearch(`${engine.prefix} ${query}`); document.getElementById('search-input')?.focus(); }} className="baize-chip">{engine.icon} {engine.name}</button>)}
               </div>
             </div>
+            <button type="button" onClick={() => setIsCommandPaletteOpen(true)} className="baize-button-secondary shrink-0 px-3" aria-label="打开全局命令面板"><Command size={18} /><span className="hidden md:inline">命令</span><kbd className="hidden rounded border border-[#5f8f84]/20 px-1.5 py-0.5 text-[10px] text-[#718986] lg:inline">Ctrl K</kbd></button>
           </div>
         </div>
 
@@ -434,7 +464,7 @@ function App() {
                 <select value={targetLanguage} onChange={event => setTargetLanguage(event.target.value)} className="baize-input w-auto py-1.5">{TRANSLATION_LANGUAGES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
               </div>
               <div className="grid gap-3 md:grid-cols-2">
-                <textarea required value={translationText} onChange={event => { setTranslationText(event.target.value); setTranslationState({ loading: false, error: '' }); }} rows={5} className="baize-input resize-y" placeholder="输入要翻译的单句或短段落…" />
+                <textarea id="translation-input" required value={translationText} onChange={event => { setTranslationText(event.target.value); setTranslationState({ loading: false, error: '' }); }} rows={5} className="baize-input resize-y" placeholder="输入要翻译的单句或短段落…" />
                 <div className="baize-input relative min-h-32 whitespace-pre-wrap"><span className={translatedText ? '' : 'text-[#8aa39d]'}>{translatedText || '翻译结果会显示在这里'}</span>{translatedText && <button type="button" className="baize-icon-button absolute right-2 top-2" aria-label="复制翻译结果" onClick={() => navigator.clipboard.writeText(translatedText)}><Copy size={15} /></button>}</div>
               </div>
               <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
@@ -513,7 +543,7 @@ function App() {
             <div><h2 className="text-xl font-bold text-[#173b41] dark:text-[#f4f1e8]">临时文本</h2><p className="mt-1 text-xs text-[#718986]">本机自动保存；同步到 GitHub 时只上传密文。</p></div>
             <button className="baize-icon-button" onClick={() => setIsTempTextOpen(false)} aria-label="关闭临时文本"><X size={20} /></button>
           </header>
-          <textarea autoFocus value={tempText} onChange={event => { setTempText(event.target.value); setIsCopied(false); }} placeholder="粘贴或输入临时内容…" className="baize-input min-h-0 flex-1 resize-none font-mono leading-6" />
+          <textarea id="temp-text-editor" autoFocus value={tempText} onChange={event => { setTempText(event.target.value); setIsCopied(false); }} placeholder="粘贴或输入临时内容…" className="baize-input min-h-0 flex-1 resize-none font-mono leading-6" />
           <details className="mt-4 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
             <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Lock size={16} />GitHub 加密同步</summary>
             <div className="mt-3 space-y-2">
@@ -541,6 +571,7 @@ function App() {
       <QrCodeModal site={qrSite} onClose={() => setQrSite(null)} />
       {isTempTextQrOpen && <TempTextQrModal text={tempText} onClose={() => setIsTempTextQrOpen(false)} />}
       {incomingTempText !== null && <TextTransferReceiveModal text={incomingTempText} currentText={tempText} onClose={closeIncomingTransfer} onAccept={() => { setTempText(incomingTempText); setIsTempTextOpen(true); closeIncomingTransfer(); }} />}
+      <CommandPalette open={isCommandPaletteOpen} sites={data.sites} categories={categories} actions={commandActions} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} />
     </div>
   );
 }
