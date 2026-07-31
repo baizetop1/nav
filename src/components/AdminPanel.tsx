@@ -13,6 +13,7 @@ import type { NavigationData, Site } from '../types/navigation';
 
 interface AdminPanelProps {
   data: NavigationData;
+  initialSection: AdminSection;
   defaultRepository: { owner: string; repo: string; branch: string };
   linkHealthEntries: LinkHealthEntry[];
   isLinkHealthLoading: boolean;
@@ -25,6 +26,7 @@ interface AdminPanelProps {
 }
 
 type SiteDraft = Omit<Site, 'id' | 'tags'> & { id?: string; tags: string };
+export type AdminSection = 'content' | 'layout' | 'insights';
 
 const inputClass = 'baize-input';
 const panelClass = 'baize-panel rounded-2xl p-5';
@@ -39,7 +41,7 @@ function slugify(value: string): string {
   return slug || `item-${Date.now().toString(36)}`;
 }
 
-export function AdminPanel({ data, defaultRepository, linkHealthEntries, isLinkHealthLoading, onRefreshLinkHealth, clickStats, onClearClickStats, onChange, onReset, onClose }: AdminPanelProps) {
+export function AdminPanel({ data, initialSection, defaultRepository, linkHealthEntries, isLinkHealthLoading, onRefreshLinkHealth, clickStats, onClearClickStats, onChange, onReset, onClose }: AdminPanelProps) {
   const firstCategoryId = data.categories[0]?.id || '';
   const [draft, setDraft] = useState<SiteDraft>(() => createSiteDraft(firstCategoryId));
   const [newCategoryName, setNewCategoryName] = useState('');
@@ -56,6 +58,9 @@ export function AdminPanel({ data, defaultRepository, linkHealthEntries, isLinkH
   const [cloudBackupPassword, setCloudBackupPassword] = useState('');
   const [cloudBackupPasswordConfirm, setCloudBackupPasswordConfirm] = useState('');
   const [cloudBackupState, setCloudBackupState] = useState<{ busy: boolean; type: 'idle' | 'success' | 'error'; message?: string; url?: string }>({ busy: false, type: 'idle' });
+  const [activeSection, setActiveSection] = useState<AdminSection>(initialSection);
+
+  useEffect(() => setActiveSection(initialSection), [initialSection]);
 
   useEffect(() => {
     if (!publishedSha || !token.trim()) return;
@@ -358,7 +363,7 @@ export function AdminPanel({ data, defaultRepository, linkHealthEntries, isLinkH
   };
 
   return (
-    <div className="fixed inset-0 z-[70] overflow-y-auto bg-[#dce6e1]/88 p-4 backdrop-blur-2xl dark:bg-[#07191d]/90 lg:p-8">
+    <div className="admin-shell fixed inset-0 z-[70] overflow-y-auto bg-[#dce6e1]/96 p-4 dark:bg-[#07191d]/97 lg:p-8">
       <div className="mx-auto max-w-7xl">
         <header className="mb-6 flex items-center justify-between">
           <div>
@@ -369,9 +374,17 @@ export function AdminPanel({ data, defaultRepository, linkHealthEntries, isLinkH
           <button onClick={onClose} className="baize-icon-button p-3" aria-label="关闭管理面板"><X /></button>
         </header>
 
+        <nav className="mb-6 flex gap-1 overflow-x-auto rounded-2xl border border-white/70 bg-[#f4f1e8]/90 p-1.5 shadow-sm dark:border-[#c9a96b]/15 dark:bg-[#102c33]/92" aria-label="管理功能分区">
+          {([
+            ['content', '内容编辑', '网站表单和分类'],
+            ['layout', '布局排序', '拖拽与网格尺寸'],
+            ['insights', '统计与健康', '访问趋势和失效链接'],
+          ] as const).map(([id, label, description]) => <button key={id} type="button" aria-current={activeSection === id ? 'page' : undefined} onClick={() => setActiveSection(id)} className={`min-w-fit flex-1 rounded-xl px-4 py-2 text-left transition ${activeSection === id ? 'bg-[#356b66] text-white shadow-sm dark:bg-[#c9a96b] dark:text-[#102c33]' : 'text-[#526f6c] hover:bg-[#5f8f84]/10 dark:text-[#b8c4c0] dark:hover:bg-[#c9a96b]/8'}`}><strong className="block text-sm">{label}</strong><span className="hidden text-[10px] opacity-75 sm:block">{description}</span></button>)}
+        </nav>
+
         <div className="grid gap-6 xl:grid-cols-[minmax(0,1.6fr)_minmax(340px,1fr)]">
           <div className="space-y-6">
-            <section className={panelClass}>
+            {activeSection === 'content' && <section className={panelClass}>
               <h2 className="mb-4 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">{draft.id ? '编辑网站' : '添加网站'}</h2>
               <form onSubmit={saveSite} className="grid gap-4 md:grid-cols-2">
                 <label className={labelClass}>名称<input required className={`${inputClass} mt-1`} value={draft.name} onChange={event => setDraft({ ...draft, name: event.target.value })} /></label>
@@ -386,11 +399,10 @@ export function AdminPanel({ data, defaultRepository, linkHealthEntries, isLinkH
                   {draft.id && <button type="button" onClick={() => resetForm(draft.categoryId)} className="baize-button-secondary">取消编辑</button>}
                 </div>
               </form>
-            </section>
+            </section>}
 
-            <NavigationOrganizer data={data} onChange={onChange} onEdit={editSite} onDeleteSite={deleteSite} onRenameCategory={renameCategory} onDeleteCategory={deleteCategory} />
-            <StatsPanel data={data} stats={clickStats} onClear={onClearClickStats} />
-            <LinkHealthPanel sites={data.sites} entries={linkHealthEntries} loading={isLinkHealthLoading} onRefresh={onRefreshLinkHealth} />
+            {activeSection === 'layout' && <NavigationOrganizer data={data} onChange={onChange} onEdit={editSite} onDeleteSite={deleteSite} onRenameCategory={renameCategory} onDeleteCategory={deleteCategory} />}
+            {activeSection === 'insights' && <><StatsPanel data={data} stats={clickStats} onClear={onClearClickStats} /><LinkHealthPanel sites={data.sites} entries={linkHealthEntries} loading={isLinkHealthLoading} onRefresh={onRefreshLinkHealth} /></>}
           </div>
 
           <div className="space-y-6">

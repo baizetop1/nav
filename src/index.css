@@ -75,6 +75,20 @@
   filter: saturate(0.86);
 }
 
+.admin-open > .site-background,
+.admin-open > .scene-overlay,
+.admin-open > main,
+.admin-open .sidebar-shell {
+  visibility: hidden;
+}
+
+.admin-shell .baize-panel,
+.admin-shell .baize-input,
+.admin-shell .baize-chip {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
 .scene-study .site-background {
   filter: saturate(0.68) brightness(1.04);
 }

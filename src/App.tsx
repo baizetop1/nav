@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
 import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Command, Copy, Download, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
-import { AdminPanel } from './components/AdminPanel';
+import { AdminPanel, type AdminSection } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { CommandPalette, type CommandPaletteAction } from './components/CommandPalette';
 import { QrCodeModal } from './components/QrCodeModal';
@@ -65,6 +65,7 @@ function App() {
   const [mainGradient, setMainGradient] = useState('');
   const [sidebarGradient, setSidebarGradient] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(window.location.hash === '#/admin');
+  const [adminSection, setAdminSection] = useState<AdminSection>('content');
   const [isTempTextOpen, setIsTempTextOpen] = useState(false);
   const [isTempTextQrOpen, setIsTempTextQrOpen] = useState(false);
   const [incomingTempText, setIncomingTempText] = useState<string | null>(null);
@@ -138,6 +139,13 @@ function App() {
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
   }, []);
+
+  useEffect(() => {
+    if (!isAdminOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [isAdminOpen]);
 
   useEffect(() => {
     const readTransferHash = () => {
@@ -281,7 +289,8 @@ function App() {
     localStorage.setItem('work_mode', String(mode === 'work'));
   };
 
-  const openAdmin = () => {
+  const openAdmin = (section: AdminSection = 'content') => {
+    setAdminSection(section);
     window.location.hash = '/admin';
     setIsAdminOpen(true);
   };
@@ -387,8 +396,9 @@ function App() {
     { id: 'translator', title: '打开快捷翻译', description: '输入文本并查看翻译历史', keywords: ['translate', '翻译', 'language'], icon: 'translate', run: () => { setIsTranslatorOpen(true); focusAfterRender('translation-input'); } },
     { id: 'temp-note', title: '打开临时文本', description: '编辑、复制或加密同步临时内容', keywords: ['note', '文本', '便签'], icon: 'note', run: () => { setIsTempTextOpen(true); focusAfterRender('temp-text-editor'); } },
     ...(tempText ? [{ id: 'temp-qr', title: '临时文本二维码传输', description: '生成接收链接或纯文本二维码', keywords: ['qr', '二维码', '传输'], icon: 'qr' as const, run: () => setIsTempTextQrOpen(true) }] : []),
-    { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: openAdmin },
-    { id: 'stats', title: '查看访问统计', description: '查看 7/30 天趋势和网站排行', keywords: ['stats', '统计', '数据'], icon: 'stats', run: () => { openAdmin(); focusAfterRender('stats-title'); } },
+    { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: () => openAdmin('content') },
+    { id: 'layout', title: '打开布局排序', description: '拖拽网站、分类和调整卡片尺寸', keywords: ['layout', '布局', '拖拽', '排序'], icon: 'settings', run: () => openAdmin('layout') },
+    { id: 'stats', title: '查看访问统计', description: '查看 7/30 天趋势和网站排行', keywords: ['stats', '统计', '数据'], icon: 'stats', run: () => { openAdmin('insights'); focusAfterRender('stats-title'); } },
     { id: 'theme', title: isDark ? '切换到浅色主题' : '切换到深色主题', description: '立即切换页面明暗外观', keywords: ['theme', '主题', 'dark', 'light'], icon: isDark ? 'sun' : 'moon', run: toggleTheme },
     { id: 'scene-default', title: '切换到日常场景', description: sceneMode === 'default' ? '当前正在使用' : '恢复完整背景与标准布局', keywords: ['scene', '场景', '日常'], icon: 'default', run: () => changeSceneMode('default') },
     { id: 'scene-work', title: '切换到工作场景', description: sceneMode === 'work' ? '当前正在使用' : '隐藏装饰并压缩卡片布局', keywords: ['scene', '场景', '工作'], icon: 'work', run: () => changeSceneMode('work') },
@@ -399,9 +409,9 @@ function App() {
   ];
 
   return (
-    <div className={`scene-${sceneMode} ${isWorkMode ? 'work-mode' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
+    <div className={`scene-${sceneMode} ${isWorkMode ? 'work-mode' : ''} ${isAdminOpen ? 'admin-open' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
       <div className={`site-background fixed inset-0 z-0 transition-opacity duration-300 ${backgroundOpacity}`} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}baize-background.webp)` }} aria-hidden="true" />
-      <div className={`fixed inset-0 z-0 transition-colors duration-500 ${sceneOverlay}`} aria-hidden="true" />
+      <div className={`scene-overlay fixed inset-0 z-0 transition-colors duration-500 ${sceneOverlay}`} aria-hidden="true" />
       <Sidebar
         activeCategory={activeCategory}
         isOpen={isSidebarOpen}
@@ -409,7 +419,7 @@ function App() {
         isDark={isDark}
         toggleTheme={toggleTheme}
         categories={categories}
-        onAdminClick={openAdmin}
+        onAdminClick={() => openAdmin('content')}
         sceneMode={sceneMode}
         onSceneModeChange={changeSceneMode}
         onTempTextClick={() => setIsTempTextOpen(true)}
@@ -536,7 +546,7 @@ function App() {
         </div>
       </main>
 
-      {isAdminOpen && <AdminPanel data={data} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
+      {isAdminOpen && <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">

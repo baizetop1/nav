@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { DndContext, KeyboardSensor, PointerSensor, closestCenter, type DragEndEvent, useDroppable, useSensor, useSensors } from '@dnd-kit/core';
 import { SortableContext, arrayMove, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { GripVertical, Trash2 } from 'lucide-react';
+import { ChevronDown, ChevronRight, GripVertical, Trash2 } from 'lucide-react';
 import type { Category, LayoutItem, NavigationData, Site } from '../types/navigation';
 
 interface NavigationOrganizerProps {
@@ -49,6 +50,8 @@ function CategoryDropZone({ category, sites, data, ...actions }: {
   category: Category;
   sites: Site[];
   data: NavigationData;
+  expanded: boolean;
+  onToggle: () => void;
   onEdit: (site: Site) => void;
   onDelete: (siteId: string) => void;
   onLayoutChange: (siteId: string, patch: Partial<LayoutItem>) => void;
@@ -56,10 +59,10 @@ function CategoryDropZone({ category, sites, data, ...actions }: {
   const { setNodeRef, isOver } = useDroppable({ id: `category:${category.id}`, data: { type: 'category', categoryId: category.id } });
   return (
     <div ref={setNodeRef} className={`rounded-xl border p-3 transition ${isOver ? 'border-[#c9a96b] bg-[#c9a96b]/10' : 'border-[#5f8f84]/15 bg-white/25 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20'}`}>
-      <div className="mb-2 flex items-center justify-between"><h3 className="font-semibold text-[#315e5b] dark:text-[#d9c386]">{category.name}</h3><span className="text-xs text-[#718986]">{sites.length}</span></div>
-      <SortableContext items={sites.map(site => site.id)} strategy={verticalListSortingStrategy}>
-        <div className="min-h-14 space-y-2">{sites.map(site => <SortableSiteRow key={site.id} site={site} layout={layoutFor(data, site.id)} {...actions} />)}{sites.length === 0 && <div className="rounded-lg border border-dashed border-[#5f8f84]/20 p-4 text-center text-xs text-[#718986]">拖动网站到这里</div>}</div>
-      </SortableContext>
+      <button type="button" onClick={actions.onToggle} className="mb-2 flex w-full items-center justify-between rounded-lg px-1 py-1 text-left hover:bg-[#5f8f84]/8"><span className="flex items-center gap-1.5 font-semibold text-[#315e5b] dark:text-[#d9c386]">{actions.expanded ? <ChevronDown size={15} /> : <ChevronRight size={15} />}{category.name}</span><span className="text-xs text-[#718986]">{sites.length}</span></button>
+      {actions.expanded ? <SortableContext items={sites.map(site => site.id)} strategy={verticalListSortingStrategy}>
+        <div className="min-h-14 space-y-2">{sites.map(site => <SortableSiteRow key={site.id} site={site} layout={layoutFor(data, site.id)} onEdit={actions.onEdit} onDelete={actions.onDelete} onLayoutChange={actions.onLayoutChange} />)}{sites.length === 0 && <div className="rounded-lg border border-dashed border-[#5f8f84]/20 p-4 text-center text-xs text-[#718986]">拖动网站到这里</div>}</div>
+      </SortableContext> : <div className="rounded-lg border border-dashed border-[#5f8f84]/15 px-3 py-2 text-center text-[11px] text-[#829793]">已折叠；仍可拖动网站到此分类</div>}
     </div>
   );
 }
@@ -72,8 +75,16 @@ function SortableCategoryRow({ category, onRename, onDelete }: { category: Categ
 export function NavigationOrganizer({ data, onChange, onEdit, onDeleteSite, onRenameCategory, onDeleteCategory }: NavigationOrganizerProps) {
   const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 6 } }), useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }));
   const categories = [...data.categories].sort((a, b) => a.order - b.order);
+  const [expandedCategoryIds, setExpandedCategoryIds] = useState<Set<string>>(() => new Set(categories.slice(0, 1).map(category => category.id)));
   const order = new Map(data.layout.map(item => [item.siteId, item.order]));
   const sitesByCategory = (categoryId: string) => data.sites.filter(site => site.categoryId === categoryId).sort((a, b) => (order.get(a.id) ?? 9999) - (order.get(b.id) ?? 9999));
+  const allExpanded = categories.length > 0 && categories.every(category => expandedCategoryIds.has(category.id));
+  const toggleCategory = (categoryId: string) => setExpandedCategoryIds(current => {
+    const next = new Set(current);
+    if (next.has(categoryId)) next.delete(categoryId);
+    else next.add(categoryId);
+    return next;
+  });
 
   const updateLayout = (siteId: string, patch: Partial<LayoutItem>) => {
     const current = layoutFor(data, siteId);
@@ -113,9 +124,9 @@ export function NavigationOrganizer({ data, onChange, onEdit, onDeleteSite, onRe
   return (
     <div className="space-y-6">
       <section className="baize-panel rounded-2xl p-5">
-        <div className="mb-4 flex flex-wrap items-start justify-between gap-3"><div><h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">网站与网格布局</h2><p className="mt-1 text-xs text-[#718986]">跨分类拖动网站；X/Y 留空时自动排列，尺寸在桌面大屏生效。</p></div><button type="button" onClick={resetCoordinates} className="baize-button-secondary px-3 py-1.5 text-xs">清除坐标，自动排列</button></div>
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-3"><div><h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">网站与网格布局</h2><p className="mt-1 text-xs text-[#718986]">分类默认折叠以减少渲染；跨分类拖动仍可投放到折叠分类。</p></div><div className="flex flex-wrap gap-2"><button type="button" onClick={() => setExpandedCategoryIds(allExpanded ? new Set() : new Set(categories.map(category => category.id)))} className="baize-button-secondary px-3 py-1.5 text-xs">{allExpanded ? '全部收起' : '全部展开'}</button><button type="button" onClick={resetCoordinates} className="baize-button-secondary px-3 py-1.5 text-xs">清除坐标，自动排列</button></div></div>
         <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={moveSite}>
-          <div className="grid max-h-[760px] gap-3 overflow-y-auto pr-1 lg:grid-cols-2">{categories.map(category => <CategoryDropZone key={category.id} category={category} sites={sitesByCategory(category.id)} data={data} onEdit={onEdit} onDelete={onDeleteSite} onLayoutChange={updateLayout} />)}</div>
+          <div className="grid max-h-[760px] gap-3 overflow-y-auto pr-1 lg:grid-cols-2">{categories.map(category => <CategoryDropZone key={category.id} category={category} sites={sitesByCategory(category.id)} data={data} expanded={expandedCategoryIds.has(category.id)} onToggle={() => toggleCategory(category.id)} onEdit={onEdit} onDelete={onDeleteSite} onLayoutChange={updateLayout} />)}</div>
         </DndContext>
       </section>
       <section className="baize-panel rounded-2xl p-5">
