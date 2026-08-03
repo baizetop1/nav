@@ -1,34 +1,241 @@
 [
-  { "siteId": "baize-blog", "order": 1, "size": "normal" },
-  { "siteId": "xuanji", "order": 2, "size": "normal" },
-  { "siteId": "nssctf", "order": 3, "size": "normal" },
-  { "siteId": "sjtu-src", "order": 4, "size": "normal" },
-  { "siteId": "csdn", "order": 5, "size": "normal" },
-  { "siteId": "cnnvd", "order": 6, "size": "normal" },
-  { "siteId": "lgwenda-oj", "order": 7, "size": "normal" },
-  { "siteId": "lanqiao", "order": 8, "size": "normal" },
-  { "siteId": "mdn", "order": 9, "size": "normal" },
-  { "siteId": "runoob", "order": 10, "size": "normal" },
-  { "siteId": "w3school", "order": 11, "size": "normal" },
-  { "siteId": "bdziyi", "order": 12, "size": "normal" },
-  { "siteId": "mayikt", "order": 13, "size": "normal" },
-  { "siteId": "ashuiai", "order": 14, "size": "normal" },
-  { "siteId": "chongbuluo", "order": 15, "size": "normal" },
-  { "siteId": "yijiankoutu", "order": 16, "size": "normal" },
-  { "siteId": "iizhi", "order": 17, "size": "normal" },
-  { "siteId": "doyoudo", "order": 18, "size": "normal" },
-  { "siteId": "pdf24", "order": 19, "size": "normal" },
-  { "siteId": "52pojie", "order": 20, "size": "normal" },
-  { "siteId": "cnblogs", "order": 21, "size": "normal" },
-  { "siteId": "juejin", "order": 22, "size": "normal" },
-  { "siteId": "ip-sb", "order": 23, "size": "normal" },
-  { "siteId": "json-editor-online", "order": 24, "size": "normal" },
-  { "siteId": "lobsters", "order": 25, "size": "normal" },
-  { "siteId": "ping-sx", "order": 26, "size": "normal" },
-  { "siteId": "lmbdfy", "order": 27, "size": "normal" },
-  { "siteId": "appinn", "order": 28, "size": "normal" },
-  { "siteId": "collect-ui", "order": 29, "size": "normal" },
-  { "siteId": "excalidraw", "order": 30, "size": "normal" },
-  { "siteId": "site-inspire", "order": 31, "size": "normal" },
-  { "siteId": "navnav", "order": 32, "size": "normal" }
+  {
+    "siteId": "baize-blog",
+    "order": 1,
+    "size": "normal"
+  },
+  {
+    "siteId": "xuanji",
+    "order": 2,
+    "size": "normal"
+  },
+  {
+    "siteId": "nssctf",
+    "order": 3,
+    "size": "normal"
+  },
+  {
+    "siteId": "sjtu-src",
+    "order": 4,
+    "size": "normal"
+  },
+  {
+    "siteId": "csdn",
+    "order": 5,
+    "size": "normal"
+  },
+  {
+    "siteId": "cnnvd",
+    "order": 6,
+    "size": "normal"
+  },
+  {
+    "siteId": "lgwenda-oj",
+    "order": 7,
+    "size": "normal"
+  },
+  {
+    "siteId": "lanqiao",
+    "order": 8,
+    "size": "normal"
+  },
+  {
+    "siteId": "mdn",
+    "order": 9,
+    "size": "normal"
+  },
+  {
+    "siteId": "runoob",
+    "order": 10,
+    "size": "normal"
+  },
+  {
+    "siteId": "w3school",
+    "order": 11,
+    "size": "normal"
+  },
+  {
+    "siteId": "bdziyi",
+    "order": 12,
+    "size": "normal"
+  },
+  {
+    "siteId": "mayikt",
+    "order": 13,
+    "size": "normal"
+  },
+  {
+    "siteId": "chongbuluo",
+    "order": 15,
+    "size": "normal"
+  },
+  {
+    "siteId": "yijiankoutu",
+    "order": 16,
+    "size": "normal"
+  },
+  {
+    "siteId": "iizhi",
+    "order": 17,
+    "size": "normal"
+  },
+  {
+    "siteId": "doyoudo",
+    "order": 18,
+    "size": "normal"
+  },
+  {
+    "siteId": "pdf24",
+    "order": 19,
+    "size": "normal"
+  },
+  {
+    "siteId": "52pojie",
+    "order": 20,
+    "size": "normal"
+  },
+  {
+    "siteId": "cnblogs",
+    "order": 21,
+    "size": "normal"
+  },
+  {
+    "siteId": "juejin",
+    "order": 22,
+    "size": "normal"
+  },
+  {
+    "siteId": "ip-sb",
+    "order": 23,
+    "size": "normal"
+  },
+  {
+    "siteId": "json-editor-online",
+    "order": 24,
+    "size": "normal"
+  },
+  {
+    "siteId": "lobsters",
+    "order": 25,
+    "size": "normal"
+  },
+  {
+    "siteId": "ping-sx",
+    "order": 26,
+    "size": "normal"
+  },
+  {
+    "siteId": "lmbdfy",
+    "order": 27,
+    "size": "normal"
+  },
+  {
+    "siteId": "appinn",
+    "order": 28,
+    "size": "normal"
+  },
+  {
+    "siteId": "collect-ui",
+    "order": 29,
+    "size": "normal"
+  },
+  {
+    "siteId": "excalidraw",
+    "order": 30,
+    "size": "normal"
+  },
+  {
+    "siteId": "site-inspire",
+    "order": 31,
+    "size": "normal"
+  },
+  {
+    "siteId": "navnav",
+    "order": 32,
+    "size": "normal"
+  },
+  {
+    "siteId": "千问",
+    "order": 33,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "chatgpt",
+    "order": 34,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "kimi",
+    "order": 35,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "deepseek",
+    "order": 36,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "glm",
+    "order": 37,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "priceaiai-比价雷达",
+    "order": 39,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "卡网订阅",
+    "order": 40,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "官方订阅",
+    "order": 41,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "官方-api",
+    "order": 42,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "中转-api",
+    "order": 43,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "deepseek-platform",
+    "order": 44,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "siteId": "作家专区-番茄小说网-番茄小说旗下原创文学平台",
+    "order": 45,
+    "size": "normal",
+    "width": 1,
+    "height": 1
+  }
 ]

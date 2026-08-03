@@ -1,34 +1,468 @@
 [
-  { "id": "baize-blog", "name": "安全树洞", "description": "个人博客", "url": "https://baizeone.top/", "categoryId": "common", "tags": ["博客", "安全"], "favorite": true },
-  { "id": "xuanji", "name": "玄机", "description": "玄机平台", "url": "https://xj.edisec.net/", "categoryId": "common", "tags": ["平台", "安全"] },
-  { "id": "nssctf", "name": "nss", "description": "nssctf", "url": "https://www.nssctf.cn/index", "categoryId": "common", "tags": ["CTF", "安全"] },
-  { "id": "sjtu-src", "name": "教育漏洞平台", "description": "教育漏洞平台", "url": "https://src.sjtu.edu.cn/", "categoryId": "common", "tags": ["漏洞", "教育"] },
-  { "id": "csdn", "name": "CSDN", "description": "CSDN", "url": "https://www.csdn.net/?spm=1001.2101.3001.4476", "categoryId": "common", "tags": ["博客", "编程"] },
-  { "id": "cnnvd", "name": "国家信息安全漏洞平台", "description": "漏洞", "url": "https://www.cnnvd.org.cn/home/childHome", "categoryId": "common", "tags": ["漏洞", "安全"] },
-  { "id": "lgwenda-oj", "name": "oj网站", "description": "学习网站", "url": "http://oj.lgwenda.com/", "categoryId": "common", "tags": ["算法", "练习"] },
-  { "id": "lanqiao", "name": "蓝桥杯", "description": "学习网站", "url": "https://www.lanqiao.cn/courses/10532", "categoryId": "common", "tags": ["比赛", "练习"] },
-  { "id": "mdn", "name": "MDN", "description": "Web开发技术社区", "url": "https://developer.mozilla.org/zh-CN/", "categoryId": "learning", "tags": ["Web", "文档"] },
-  { "id": "runoob", "name": "菜鸟教程", "description": "编程学习网站", "url": "https://www.runoob.com/", "categoryId": "learning", "tags": ["教程", "入门"] },
-  { "id": "w3school", "name": "w3school", "description": "编程学习网站", "url": "https://www.w3school.com.cn/", "categoryId": "learning", "tags": ["教程", "Web"] },
-  { "id": "bdziyi", "name": "棉花糖web", "description": "棉花糖", "url": "https://vip.bdziyi.com/", "categoryId": "learning", "tags": ["资源", "学习"] },
-  { "id": "mayikt", "name": "编程网站", "description": "余胜军", "url": "http://www.mayikt.com/", "categoryId": "learning", "tags": ["教程", "Java"] },
-  { "id": "ashuiai", "name": "阿水", "description": "人工智能对话助手", "url": "https://ai.ashuiai.com/home", "categoryId": "utilities", "tags": ["AI", "工具"] },
-  { "id": "chongbuluo", "name": "虫部落", "description": "高效搜索", "url": "https://search.chongbuluo.com/", "categoryId": "utilities", "tags": ["搜索", "工具"] },
-  { "id": "yijiankoutu", "name": "抠图", "description": "抠图", "url": "https://www.yijiankoutu.com/", "categoryId": "utilities", "tags": ["图片", "工具"] },
-  { "id": "iizhi", "name": "iizhi资源", "description": "资源搜索", "url": "https://www.iizhi.cn/", "categoryId": "utilities", "tags": ["资源", "搜索"] },
-  { "id": "doyoudo", "name": "Doyoudo", "description": "视频剪辑合集", "url": "https://premium.doyoudo.com/", "categoryId": "utilities", "tags": ["视频", "剪辑"] },
-  { "id": "pdf24", "name": "PDF24 Tools", "description": "PDF线上工具", "url": "https://tools.pdf24.org/zh/", "categoryId": "utilities", "tags": ["PDF", "工具"] },
-  { "id": "52pojie", "name": "吾爱破解", "description": "一个专注破解的网站", "url": "https://www.52pojie.cn/forum.php", "categoryId": "tech-news", "tags": ["论坛", "安全"] },
-  { "id": "cnblogs", "name": "博客园", "description": "开发者的网上家园", "url": "https://www.cnblogs.com/", "categoryId": "tech-news", "tags": ["博客", "技术"] },
-  { "id": "juejin", "name": "稀土掘金", "description": "中文开发者技术内容分享与交流平台", "url": "https://juejin.cn/", "categoryId": "tech-news", "tags": ["社区", "技术"] },
-  { "id": "ip-sb", "name": "ib.sb", "description": "IP 查询", "url": "https://ip.sb/ib.sb", "categoryId": "tech-news", "tags": ["网络", "工具"] },
-  { "id": "json-editor-online", "name": "JSON online", "description": "JSON online对比工具", "url": "https://jsoneditoronline.org/", "categoryId": "tech-news", "tags": ["JSON", "工具"] },
-  { "id": "lobsters", "name": "lobste", "description": "技术论坛", "url": "https://lobste.rs/", "categoryId": "tech-news", "tags": ["论坛", "技术"] },
-  { "id": "ping-sx", "name": "ping", "description": "多地ping", "url": "https://ping.sx/ping", "categoryId": "tech-news", "tags": ["网络", "工具"] },
-  { "id": "lmbdfy", "name": "需要我帮你百度一下", "description": "需要我帮你百度一下", "url": "https://when.run/lmbdfy.html", "categoryId": "curiosities", "tags": ["趣味"] },
-  { "id": "appinn", "name": "小众软件", "description": "发现更多有趣的应用", "url": "https://faxian.appinn.com/", "categoryId": "curiosities", "tags": ["软件", "趣味"] },
-  { "id": "collect-ui", "name": "Collect UI", "description": "界面 UI 灵感", "url": "http://collectui.com/", "categoryId": "curiosities", "tags": ["设计", "UI"] },
-  { "id": "excalidraw", "name": "Excalidraw", "description": "流程图工具", "url": "https://excalidraw.com/", "categoryId": "curiosities", "tags": ["流程图", "工具"] },
-  { "id": "site-inspire", "name": "Site Inspire", "description": "简洁 Web 设计", "url": "https://www.siteinspire.com/", "categoryId": "inspiration", "tags": ["设计", "灵感"] },
-  { "id": "navnav", "name": "navnav", "description": "前端小组件", "url": "http://navnav.co/", "categoryId": "inspiration", "tags": ["前端", "组件"] }
+  {
+    "id": "baize-blog",
+    "name": "安全树洞",
+    "description": "个人博客",
+    "url": "https://baizeone.top/",
+    "categoryId": "common",
+    "tags": [
+      "博客",
+      "安全"
+    ],
+    "favorite": true
+  },
+  {
+    "id": "xuanji",
+    "name": "玄机",
+    "description": "玄机平台",
+    "url": "https://xj.edisec.net/",
+    "categoryId": "common",
+    "tags": [
+      "平台",
+      "安全"
+    ]
+  },
+  {
+    "id": "nssctf",
+    "name": "nss",
+    "description": "nssctf",
+    "url": "https://www.nssctf.cn/index",
+    "categoryId": "common",
+    "tags": [
+      "CTF",
+      "安全"
+    ]
+  },
+  {
+    "id": "sjtu-src",
+    "name": "教育漏洞平台",
+    "description": "教育漏洞平台",
+    "url": "https://src.sjtu.edu.cn/",
+    "categoryId": "common",
+    "tags": [
+      "漏洞",
+      "教育"
+    ]
+  },
+  {
+    "id": "csdn",
+    "name": "CSDN",
+    "description": "CSDN",
+    "url": "https://www.csdn.net/?spm=1001.2101.3001.4476",
+    "categoryId": "common",
+    "tags": [
+      "博客",
+      "编程"
+    ]
+  },
+  {
+    "id": "cnnvd",
+    "name": "国家信息安全漏洞平台",
+    "description": "漏洞",
+    "url": "https://www.cnnvd.org.cn/home/childHome",
+    "categoryId": "common",
+    "tags": [
+      "漏洞",
+      "安全"
+    ]
+  },
+  {
+    "id": "lgwenda-oj",
+    "name": "oj网站",
+    "description": "学习网站",
+    "url": "http://oj.lgwenda.com/",
+    "categoryId": "common",
+    "tags": [
+      "算法",
+      "练习"
+    ]
+  },
+  {
+    "id": "lanqiao",
+    "name": "蓝桥杯",
+    "description": "学习网站",
+    "url": "https://www.lanqiao.cn/courses/10532",
+    "categoryId": "common",
+    "tags": [
+      "比赛",
+      "练习"
+    ]
+  },
+  {
+    "id": "mdn",
+    "name": "MDN",
+    "description": "Web开发技术社区",
+    "url": "https://developer.mozilla.org/zh-CN/",
+    "categoryId": "learning",
+    "tags": [
+      "Web",
+      "文档"
+    ]
+  },
+  {
+    "id": "runoob",
+    "name": "菜鸟教程",
+    "description": "编程学习网站",
+    "url": "https://www.runoob.com/",
+    "categoryId": "learning",
+    "tags": [
+      "教程",
+      "入门"
+    ]
+  },
+  {
+    "id": "w3school",
+    "name": "w3school",
+    "description": "编程学习网站",
+    "url": "https://www.w3school.com.cn/",
+    "categoryId": "learning",
+    "tags": [
+      "教程",
+      "Web"
+    ]
+  },
+  {
+    "id": "bdziyi",
+    "name": "棉花糖web",
+    "description": "棉花糖",
+    "url": "https://vip.bdziyi.com/",
+    "categoryId": "learning",
+    "tags": [
+      "资源",
+      "学习"
+    ]
+  },
+  {
+    "id": "mayikt",
+    "name": "编程网站",
+    "description": "余胜军",
+    "url": "http://www.mayikt.com/",
+    "categoryId": "learning",
+    "tags": [
+      "教程",
+      "Java"
+    ]
+  },
+  {
+    "id": "chongbuluo",
+    "name": "虫部落",
+    "description": "高效搜索",
+    "url": "https://search.chongbuluo.com/",
+    "categoryId": "utilities",
+    "tags": [
+      "搜索",
+      "工具"
+    ]
+  },
+  {
+    "id": "yijiankoutu",
+    "name": "抠图",
+    "description": "抠图",
+    "url": "https://www.yijiankoutu.com/",
+    "categoryId": "utilities",
+    "tags": [
+      "图片",
+      "工具"
+    ]
+  },
+  {
+    "id": "iizhi",
+    "name": "iizhi资源",
+    "description": "资源搜索",
+    "url": "https://www.iizhi.cn/",
+    "categoryId": "utilities",
+    "tags": [
+      "资源",
+      "搜索"
+    ]
+  },
+  {
+    "id": "doyoudo",
+    "name": "Doyoudo",
+    "description": "视频剪辑合集",
+    "url": "https://premium.doyoudo.com/",
+    "categoryId": "utilities",
+    "tags": [
+      "视频",
+      "剪辑"
+    ]
+  },
+  {
+    "id": "pdf24",
+    "name": "PDF24 Tools",
+    "description": "PDF线上工具",
+    "url": "https://tools.pdf24.org/zh/",
+    "categoryId": "utilities",
+    "tags": [
+      "PDF",
+      "工具"
+    ]
+  },
+  {
+    "id": "52pojie",
+    "name": "吾爱破解",
+    "description": "一个专注破解的网站",
+    "url": "https://www.52pojie.cn/forum.php",
+    "categoryId": "tech-news",
+    "tags": [
+      "论坛",
+      "安全"
+    ]
+  },
+  {
+    "id": "cnblogs",
+    "name": "博客园",
+    "description": "开发者的网上家园",
+    "url": "https://www.cnblogs.com/",
+    "categoryId": "tech-news",
+    "tags": [
+      "博客",
+      "技术"
+    ]
+  },
+  {
+    "id": "juejin",
+    "name": "稀土掘金",
+    "description": "中文开发者技术内容分享与交流平台",
+    "url": "https://juejin.cn/",
+    "categoryId": "tech-news",
+    "tags": [
+      "社区",
+      "技术"
+    ]
+  },
+  {
+    "id": "ip-sb",
+    "name": "ib.sb",
+    "description": "IP 查询",
+    "url": "https://ip.sb/ib.sb",
+    "categoryId": "tech-news",
+    "tags": [
+      "网络",
+      "工具"
+    ]
+  },
+  {
+    "id": "json-editor-online",
+    "name": "JSON online",
+    "description": "JSON online对比工具",
+    "url": "https://jsoneditoronline.org/",
+    "categoryId": "tech-news",
+    "tags": [
+      "JSON",
+      "工具"
+    ]
+  },
+  {
+    "id": "lobsters",
+    "name": "lobste",
+    "description": "技术论坛",
+    "url": "https://lobste.rs/",
+    "categoryId": "tech-news",
+    "tags": [
+      "论坛",
+      "技术"
+    ]
+  },
+  {
+    "id": "ping-sx",
+    "name": "ping",
+    "description": "多地ping",
+    "url": "https://ping.sx/ping",
+    "categoryId": "tech-news",
+    "tags": [
+      "网络",
+      "工具"
+    ]
+  },
+  {
+    "id": "lmbdfy",
+    "name": "需要我帮你百度一下",
+    "description": "需要我帮你百度一下",
+    "url": "https://when.run/lmbdfy.html",
+    "categoryId": "curiosities",
+    "tags": [
+      "趣味"
+    ]
+  },
+  {
+    "id": "appinn",
+    "name": "小众软件",
+    "description": "发现更多有趣的应用",
+    "url": "https://faxian.appinn.com/",
+    "categoryId": "curiosities",
+    "tags": [
+      "软件",
+      "趣味"
+    ]
+  },
+  {
+    "id": "collect-ui",
+    "name": "Collect UI",
+    "description": "界面 UI 灵感",
+    "url": "http://collectui.com/",
+    "categoryId": "curiosities",
+    "tags": [
+      "设计",
+      "UI"
+    ]
+  },
+  {
+    "id": "excalidraw",
+    "name": "Excalidraw",
+    "description": "流程图工具",
+    "url": "https://excalidraw.com/",
+    "categoryId": "curiosities",
+    "tags": [
+      "流程图",
+      "工具"
+    ]
+  },
+  {
+    "id": "site-inspire",
+    "name": "Site Inspire",
+    "description": "简洁 Web 设计",
+    "url": "https://www.siteinspire.com/",
+    "categoryId": "inspiration",
+    "tags": [
+      "设计",
+      "灵感"
+    ]
+  },
+  {
+    "id": "navnav",
+    "name": "navnav",
+    "description": "前端小组件",
+    "url": "http://navnav.co/",
+    "categoryId": "inspiration",
+    "tags": [
+      "前端",
+      "组件"
+    ]
+  },
+  {
+    "id": "千问",
+    "name": "千问",
+    "url": "https://www.qianwen.com/",
+    "description": "国产AI",
+    "categoryId": "ai",
+    "tags": [
+      "AI"
+    ],
+    "favorite": false
+  },
+  {
+    "id": "chatgpt",
+    "name": "chatgpt",
+    "url": "https://chatgpt.com/",
+    "description": "国外ai",
+    "categoryId": "ai",
+    "tags": [
+      "AI"
+    ],
+    "favorite": false
+  },
+  {
+    "id": "kimi",
+    "name": "kimi",
+    "url": "https://www.kimi.com/",
+    "description": "国内ai",
+    "categoryId": "ai",
+    "tags": [
+      "AI"
+    ],
+    "favorite": false
+  },
+  {
+    "id": "deepseek",
+    "name": "deepseek",
+    "url": "https://chat.deepseek.com/",
+    "description": "国产ai",
+    "categoryId": "ai",
+    "tags": [
+      "AI"
+    ],
+    "favorite": false
+  },
+  {
+    "id": "glm",
+    "name": "Glm",
+    "url": "https://chat.z.ai/",
+    "description": "国产ai",
+    "categoryId": "ai",
+    "tags": [
+      "AI"
+    ],
+    "favorite": false
+  },
+  {
+    "id": "priceaiai-比价雷达",
+    "name": "PriceAIAI 比价雷达",
+    "url": "https://priceai.cc/?home=1",
+    "description": "从浏览器书签导入",
+    "categoryId": "导入书签",
+    "tags": [
+      "书签"
+    ]
+  },
+  {
+    "id": "卡网订阅",
+    "name": "卡网订阅",
+    "url": "https://priceai.cc/channels",
+    "description": "从浏览器书签导入",
+    "categoryId": "导入书签",
+    "tags": [
+      "书签"
+    ]
+  },
+  {
+    "id": "官方订阅",
+    "name": "官方订阅",
+    "url": "https://priceai.cc/official-prices",
+    "description": "从浏览器书签导入",
+    "categoryId": "导入书签",
+    "tags": [
+      "书签"
+    ]
+  },
+  {
+    "id": "官方-api",
+    "name": "官方 API",
+    "url": "https://priceai.cc/official-api",
+    "description": "从浏览器书签导入",
+    "categoryId": "导入书签",
+    "tags": [
+      "书签"
+    ]
+  },
+  {
+    "id": "中转-api",
+    "name": "中转 API",
+    "url": "https://priceai.cc/api-transit",
+    "description": "从浏览器书签导入",
+    "categoryId": "导入书签",
+    "tags": [
+      "书签"
+    ]
+  },
+  {
+    "id": "deepseek-platform",
+    "name": "DeepSeek Platform",
+    "url": "https://platform.deepseek.com/",
+    "description": "Join DeepSeek API platform to access our AI models, developer resources and API documentation.",
+    "categoryId": "导入网页",
+    "tags": [
+      "书签"
+    ]
+  },
+  {
+    "id": "作家专区-番茄小说网-番茄小说旗下原创文学平台",
+    "name": "作家专区-番茄小说网-番茄小说旗下原创文学平台",
+    "url": "https://fanqienovel.com/main/writer/chapter-manage/7667918304081611800&%E5%85%A8%E6%B0%91%E5%8D%A1%E5%B8%88%EF%BC%9A%E6%88%91%E7%9A%84%E5%BA%9F%E5%8D%A1%E8%83%BD%E5%85%BB%E6%88%90%E7%A5%9E%E8%AF%9D?type=1",
+    "description": "番茄小说网作者专区是原创作家创作平台，包括言情小说，穿越小说，玄幻小说，武侠小说，都市小说，总裁豪门小说，网游小说等，快来写小说赚福利！",
+    "categoryId": "导入网页",
+    "tags": [
+      "书签"
+    ]
+  }
 ]
