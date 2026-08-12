@@ -1,6 +1,11 @@
 name: Check link health
 
 on:
+  push:
+    branches: [main, master]
+    # The checker commits only this file; ignoring it prevents a loop.
+    paths-ignore:
+      - public/link-health.json
   schedule:
     - cron: "17 2 * * *"
   workflow_dispatch:

@@ -45,8 +45,9 @@
 - 完整备份可在浏览器中使用 AES-256-GCM 加密，并以单份密文文件同步到 GitHub；密码不落盘也不上传。
 - 运行时输入 fine-grained PAT，通过 Git Data API 原子提交三个 JSON 数据文件。
 - 推送到 `main` 或 `master` 后，由 GitHub Actions 构建并发布 `dist` 到 `gh-pages`。
-- GitHub Actions 每日检查正式导航链接并生成 `public/link-health.json`，首页为异常链接显示状态提醒。
-- 管理后台提供链接健康汇总和异常明细；站点可安装为 PWA，并提供不缓存外部 API 的离线应用壳。
+- GitHub Actions 按日程、代码提交或管理页手动触发检查正式导航链接，并生成 `public/link-health.json`；首页为异常链接显示状态提醒。
+- 管理后台提供链接健康汇总和明细；有 Token 时使用 Actions 服务器端检查，无 Token 时提供浏览器可达性检查，并明确标注跨域无法读取 HTTP 状态。
+- 站点可安装为 PWA，并提供不缓存外部 API 的离线应用壳。
 - 支持日常、工作、学习和休闲四种场景；翻译历史最多保留 100 条，访问统计保留 90 天并提供本机统计面板。
 - 网站卡片可使用本地二维码库生成和下载 PNG，不依赖第三方二维码接口。
 - 临时文本支持纯文本二维码和 `#/transfer` 接收链接；接收端先预览再确认覆盖，载荷限制为 1200 个 UTF-8 字节，URL 片段不会发送到 Pages 服务器。

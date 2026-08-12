@@ -5,7 +5,7 @@ import type { ClickStatsStore } from '../lib/activityStats';
 import { normalizeBookmarkUrl, parseHtmlImport, type BookmarkImportRecord } from '../lib/bookmarks';
 import type { LinkHealthEntry } from '../lib/linkHealth';
 import { decryptBackup, encryptBackup } from '../services/encryptedBackup';
-import { getAuthenticatedUser, getEncryptedBackup, getRemoteNavigationData, getWorkflowRun, normalizeGithubToken, publishNavigationData, saveEncryptedBackup, type WorkflowRun } from '../services/github';
+import { dispatchLinkHealthCheck, getAuthenticatedUser, getEncryptedBackup, getLatestLinkHealthRun, getRemoteNavigationData, getWorkflowRun, normalizeGithubToken, publishNavigationData, saveEncryptedBackup, type WorkflowRun } from '../services/github';
 import { NavigationOrganizer } from './NavigationOrganizer';
 import { LinkHealthPanel } from './LinkHealthPanel';
 import { StatsPanel } from './StatsPanel';
@@ -18,6 +18,7 @@ interface AdminPanelProps {
   linkHealthEntries: LinkHealthEntry[];
   isLinkHealthLoading: boolean;
   onRefreshLinkHealth: () => void | Promise<void>;
+  onRunBrowserLinkHealthCheck: () => void | Promise<void>;
   clickStats: ClickStatsStore;
   onClearClickStats: () => void;
   onChange: (data: NavigationData) => void;
@@ -80,7 +81,7 @@ function siteFromDraft(draft: SiteDraft, id: string): Site {
   };
 }
 
-export function AdminPanel({ data, initialSection, defaultRepository, linkHealthEntries, isLinkHealthLoading, onRefreshLinkHealth, clickStats, onClearClickStats, onChange, onReset, onClose }: AdminPanelProps) {
+export function AdminPanel({ data, initialSection, defaultRepository, linkHealthEntries, isLinkHealthLoading, onRefreshLinkHealth, onRunBrowserLinkHealthCheck, clickStats, onClearClickStats, onChange, onReset, onClose }: AdminPanelProps) {
   const firstCategoryId = data.categories[0]?.id || '';
   const [draft, setDraft] = useState<SiteDraft>(() => createSiteDraft(firstCategoryId));
   const [newCategoryName, setNewCategoryName] = useState('');
@@ -99,6 +100,8 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
   const [cloudBackupState, setCloudBackupState] = useState<{ busy: boolean; type: 'idle' | 'success' | 'error'; message?: string; url?: string }>({ busy: false, type: 'idle' });
   const [activeSection, setActiveSection] = useState<AdminSection>(initialSection);
   const [htmlImportPreview, setHtmlImportPreview] = useState<HtmlImportPreview | null>(null);
+  const [linkCheckState, setLinkCheckState] = useState<'idle' | 'starting' | 'running' | 'success' | 'error'>('idle');
+  const [linkCheckMessage, setLinkCheckMessage] = useState('');
 
   useEffect(() => setActiveSection(initialSection), [initialSection]);
 
@@ -385,6 +388,72 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
     }
   };
 
+  const runLinkHealthCheck = async () => {
+    if (!token.trim()) {
+      setLinkCheckState('starting');
+      setLinkCheckMessage('未填写 Token，先在当前浏览器逐个尝试访问网站…跨域站点只能确认是否可连接，无法读取 HTTP 状态。');
+      try {
+        await onRunBrowserLinkHealthCheck();
+        setLinkCheckState('success');
+        setLinkCheckMessage('浏览器检测完成。若要获得精确 HTTP 状态，请填写 Token 后再次点击“立即检测”，改由 GitHub Actions 在服务器端检查。');
+      } catch (error) {
+        setLinkCheckState('error');
+        setLinkCheckMessage(error instanceof Error ? error.message : '浏览器链接检测失败。');
+      }
+      return;
+    }
+
+    const startedAt = Date.now();
+    setLinkCheckState('starting');
+    setLinkCheckMessage('正在请求 GitHub Actions 启动服务器端链接检测…');
+    try {
+      await dispatchLinkHealthCheck(repository, token.trim());
+      setLinkCheckState('running');
+      setLinkCheckMessage('检测任务已启动，正在等待 GitHub Actions 逐个访问网站（通常需要几十秒）。');
+
+      let run: WorkflowRun | null = null;
+      for (let attempt = 0; attempt < 40; attempt += 1) {
+        await new Promise<void>(resolve => window.setTimeout(resolve, attempt === 0 ? 2500 : 5000));
+        run = await getLatestLinkHealthRun(repository, token.trim());
+        const createdAt = run?.created_at ? Date.parse(run.created_at) : Number.NaN;
+        if (run && (!Number.isFinite(createdAt) || createdAt >= startedAt - 10_000)) {
+          break;
+        }
+        run = null;
+      }
+
+      if (!run) throw new Error('已启动检测，但暂时没有读到 Actions 任务。请稍后点击“读取报告”查看结果。');
+      let latestRun: WorkflowRun = run;
+      setWorkflowRun(latestRun);
+      if (latestRun.status !== 'completed') {
+        for (let attempt = 0; attempt < 36 && latestRun.status !== 'completed'; attempt += 1) {
+          await new Promise<void>(resolve => window.setTimeout(resolve, 5000));
+          const nextRun = await getLatestLinkHealthRun(repository, token.trim());
+          if (!nextRun) continue;
+          latestRun = nextRun;
+          setWorkflowRun(latestRun);
+        }
+      }
+
+      if (latestRun.status === 'completed') {
+        await onRefreshLinkHealth();
+        if (latestRun.conclusion === 'success') {
+          setLinkCheckState('success');
+          setLinkCheckMessage('检测完成，报告已刷新。请在下方“全部”中查看每个网站的 HTTP 状态。');
+        } else {
+          setLinkCheckState('error');
+          setLinkCheckMessage(`检测任务已结束，但结果为 ${latestRun.conclusion || 'unknown'}。请打开 Actions 查看日志。`);
+        }
+      } else {
+        setLinkCheckState('running');
+        setLinkCheckMessage('检测仍在 GitHub Actions 中运行。稍后点击“读取报告”即可查看已生成结果。');
+      }
+    } catch (error) {
+      setLinkCheckState('error');
+      setLinkCheckMessage(error instanceof Error ? error.message : '启动链接检测失败。');
+    }
+  };
+
   const mergeRemote = () => {
     if (!remoteData) return;
     const mergeById = <T extends { id: string }>(remote: T[], local: T[]) => {
@@ -494,7 +563,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
             </section>}
 
             {activeSection === 'layout' && <NavigationOrganizer data={data} onChange={onChange} onEdit={editSite} onDeleteSite={deleteSite} onRenameCategory={renameCategory} onDeleteCategory={deleteCategory} />}
-            {activeSection === 'insights' && <><StatsPanel data={data} stats={clickStats} onClear={onClearClickStats} /><LinkHealthPanel sites={data.sites} entries={linkHealthEntries} loading={isLinkHealthLoading} onRefresh={onRefreshLinkHealth} /></>}
+            {activeSection === 'insights' && <><StatsPanel data={data} stats={clickStats} onClear={onClearClickStats} /><LinkHealthPanel sites={data.sites} entries={linkHealthEntries} loading={isLinkHealthLoading} onRefresh={onRefreshLinkHealth} onRunCheck={runLinkHealthCheck} checkState={linkCheckState} checkMessage={linkCheckMessage} /></>}
           </div>
 
           <div className="space-y-6">

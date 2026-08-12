@@ -25,6 +25,7 @@ export interface WorkflowRun {
   head_sha: string;
   html_url: string;
   updated_at: string;
+  created_at?: string;
 }
 
 const API_ROOT = 'https://api.github.com';
@@ -39,11 +40,16 @@ export function normalizeGithubToken(value: string): string {
     .replace(/\s+/g, '');
 }
 
-async function githubRequest<T>(path: string, token: string, init?: RequestInit): Promise<T> {
-  const normalizedToken = normalizeGithubToken(token);
+function requireGithubToken(value: string): string {
+  const normalizedToken = normalizeGithubToken(value);
   if (!normalizedToken || normalizedToken.includes('•') || normalizedToken.length < 20) {
     throw new Error('Token 格式无效。请粘贴 GitHub 生成的完整 Token，而不是页面中显示的圆点掩码。');
   }
+  return normalizedToken;
+}
+
+async function githubRequest<T>(path: string, token: string, init?: RequestInit): Promise<T> {
+  const normalizedToken = requireGithubToken(token);
   const response = await fetch(`${API_ROOT}${path}`, {
     ...init,
     headers: {
@@ -176,6 +182,43 @@ export async function getWorkflowRun(
     token,
   );
   return response.workflow_runs.find(run => run.head_sha === sha) || null;
+}
+
+/**
+ * Starts the server-side link checker. A browser cannot reliably inspect
+ * cross-origin HTTP responses, so the actual probes run in GitHub Actions.
+ */
+export async function dispatchLinkHealthCheck(target: RepositoryTarget, token: string): Promise<void> {
+  const normalizedToken = requireGithubToken(token);
+  const response = await fetch(
+    `${API_ROOT}/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/actions/workflows/link-health.yml/dispatches`,
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: `Bearer ${normalizedToken}`,
+        'X-GitHub-Api-Version': '2022-11-28',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ ref: target.branch }),
+    },
+  );
+
+  if (response.ok) return;
+  const payload = await response.json().catch(() => null) as { message?: string } | null;
+  if (response.status === 401) throw new Error('GitHub Token 无效或已过期。');
+  if (response.status === 403) throw new Error('Token 没有触发 GitHub Actions 的权限，请在 fine-grained Token 中开启 Actions 读写权限。');
+  if (response.status === 404) throw new Error('未找到 link-health.yml 工作流，请确认仓库和分支填写正确。');
+  throw new Error(payload?.message || `触发链接检测失败 (${response.status})。`);
+}
+
+/** Returns the newest manually-triggered link-health workflow run. */
+export async function getLatestLinkHealthRun(target: RepositoryTarget, token: string): Promise<WorkflowRun | null> {
+  const response = await githubRequest<{ workflow_runs: WorkflowRun[] }>(
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/actions/workflows/link-health.yml/runs?branch=${encodeURIComponent(target.branch)}&event=workflow_dispatch&per_page=5`,
+    token,
+  );
+  return response.workflow_runs[0] || null;
 }
 
 export async function publishNavigationData(

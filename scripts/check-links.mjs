@@ -44,6 +44,7 @@ async function checkSite(site, checkedAt) {
     ok: result.ok,
     checkedAt,
     error: result.ok ? null : result.error || `HTTP ${result.status}`,
+    source: "github-actions",
   };
 }
 

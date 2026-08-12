@@ -10,7 +10,7 @@ import { TempTextQrModal, TextTransferReceiveModal } from './components/TempText
 import { TranslationHistoryPanel } from './components/TranslationHistoryPanel';
 import { defaultNavigationData, searchEngines, siteConfig } from './data';
 import { CLICK_STATS_KEY, getTodayClicks, loadClickStats, localDateKey, recordSiteVisit, type ClickStatsStore } from './lib/activityStats';
-import { loadLinkHealthReport, type LinkHealthEntry } from './lib/linkHealth';
+import { checkLinksFromBrowser, loadLinkHealthReport, type LinkHealthEntry } from './lib/linkHealth';
 import { addTranslationHistory, loadTranslationHistory, TRANSLATION_HISTORY_KEY, type TranslationHistoryItem } from './lib/translationHistory';
 import { parseTextTransferHash } from './lib/textTransfer';
 import { decryptNote, encryptNote } from './services/encryptedNote';
@@ -116,10 +116,23 @@ function App() {
 
   const refreshLinkHealth = useCallback(async () => {
     setIsLinkHealthLoading(true);
-    const entries = await loadLinkHealthReport(`${import.meta.env.BASE_URL}link-health.json`);
-    setLinkHealthEntries(entries);
-    setIsLinkHealthLoading(false);
+    try {
+      const entries = await loadLinkHealthReport(`${import.meta.env.BASE_URL}link-health.json?t=${Date.now()}`);
+      setLinkHealthEntries(entries);
+    } finally {
+      setIsLinkHealthLoading(false);
+    }
   }, []);
+
+  const runBrowserLinkHealthCheck = useCallback(async () => {
+    setIsLinkHealthLoading(true);
+    try {
+      const entries = await checkLinksFromBrowser(data.sites.map(site => ({ id: site.id, url: site.url })));
+      setLinkHealthEntries(entries);
+    } finally {
+      setIsLinkHealthLoading(false);
+    }
+  }, [data.sites]);
 
   useEffect(() => { void refreshLinkHealth(); }, [refreshLinkHealth]);
 
@@ -546,7 +559,7 @@ function App() {
         </div>
       </main>
 
-      {isAdminOpen && <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
+      {isAdminOpen && <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onRunBrowserLinkHealthCheck={runBrowserLinkHealthCheck} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">

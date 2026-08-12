@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main, master]
+    # link-health.yml deploys the report commit itself.
+    paths-ignore:
+      - public/link-health.json
   workflow_dispatch:
 
 permissions:

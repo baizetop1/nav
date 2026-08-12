@@ -8,6 +8,9 @@ export interface LinkHealthPanelProps {
   entries: LinkHealthEntry[];
   loading: boolean;
   onRefresh: () => void | Promise<void>;
+  onRunCheck?: () => void | Promise<void>;
+  checkState?: 'idle' | 'starting' | 'running' | 'success' | 'error';
+  checkMessage?: string;
 }
 
 type HealthFilter = 'all' | 'unhealthy';
@@ -34,12 +37,13 @@ function formatCheckedAt(value?: string): string {
 
 function statusLabel(entry?: LinkHealthEntry): string {
   if (!entry) return '未检查';
+  if (entry.source === 'browser' && entry.status === null) return entry.ok ? '可连接' : '无法连接';
   if (entry.status !== null) return `HTTP ${entry.status}`;
   return entry.error || '连接失败';
 }
 
-export function LinkHealthPanel({ sites, entries, loading, onRefresh }: LinkHealthPanelProps) {
-  const [filter, setFilter] = useState<HealthFilter>('unhealthy');
+export function LinkHealthPanel({ sites, entries, loading, onRefresh, onRunCheck, checkState = 'idle', checkMessage }: LinkHealthPanelProps) {
+  const [filter, setFilter] = useState<HealthFilter>('all');
   const rows = useMemo<SiteHealthRow[]>(() => {
     const entryBySite = new Map(entries.map(entry => [entry.siteId, entry]));
     return sites.map(site => {
@@ -69,6 +73,7 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh }: LinkHeal
   const visibleRows = filter === 'unhealthy'
     ? rows.filter(row => row.entry && !row.entry.ok)
     : rows;
+  const browserOnly = entries.length > 0 && entries.every(entry => entry.source === 'browser');
 
   const metrics = [
     { label: '网站总数', value: summary.total, icon: Activity, tone: 'text-[#456b68] dark:text-[#d9ddd6]' },
@@ -90,16 +95,34 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh }: LinkHeal
             最后检查：{formatCheckedAt(summary.latestCheckedAt)}
           </p>
         </div>
-        <button
-          type="button"
-          className="baize-button-secondary w-full sm:w-auto"
-          disabled={loading}
-          onClick={() => { void onRefresh(); }}
-        >
-          <RefreshCw size={16} className={loading ? 'animate-spin' : ''} />
-          {loading ? '读取中…' : '刷新报告'}
-        </button>
+        <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row">
+          <button
+            type="button"
+            className="baize-button-primary w-full sm:w-auto"
+            disabled={loading || checkState === 'starting' || checkState === 'running' || !onRunCheck}
+            onClick={() => { void onRunCheck?.(); }}
+            title={onRunCheck ? '让 GitHub Actions 在服务器端检查所有链接' : '请在发布区域配置 GitHub Token 后检测'}
+          >
+            <Activity size={16} className={checkState === 'starting' || checkState === 'running' ? 'animate-pulse' : ''} />
+            {checkState === 'starting' ? '启动检测…' : checkState === 'running' ? '检测中…' : '立即检测'}
+          </button>
+          <button
+            type="button"
+            className="baize-button-secondary w-full sm:w-auto"
+            disabled={loading || checkState === 'starting' || checkState === 'running'}
+            onClick={() => { void onRefresh(); }}
+          >
+            <RefreshCw size={16} className={loading ? 'animate-spin' : ''} />
+            {loading ? '读取中…' : '读取报告'}
+          </button>
+        </div>
       </header>
+
+      {checkMessage && (
+        <div className={`mt-3 rounded-xl border p-3 text-xs leading-5 ${checkState === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/8 text-[#315e5b] dark:text-[#b8cec7]'}`}>
+          {checkMessage}
+        </div>
+      )}
 
       <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
         {metrics.map(metric => {
@@ -132,7 +155,7 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh }: LinkHeal
             全部 {summary.total}
           </button>
         </div>
-        <span className="hidden text-xs text-[#718986] sm:block">报告由 GitHub Actions 生成</span>
+        <span className="hidden text-xs text-[#718986] sm:block">{browserOnly ? '浏览器即时可达性检查' : '服务器检测由 GitHub Actions 执行'}</span>
       </div>
 
       {visibleRows.length ? (
@@ -177,7 +200,7 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh }: LinkHeal
       )}
 
       <p className="mt-3 rounded-lg bg-[#5f8f84]/8 px-3 py-2 text-[11px] leading-5 text-[#718986] dark:bg-[#c9a96b]/5 dark:text-[#9fb2ad]">
-        刷新只会重新读取已生成的报告，不会从浏览器直接检测外部网站。
+        {browserOnly ? '当前是浏览器即时结果：“可连接”不代表 HTTP 200；填写 Token 后点击“立即检测”，可由 GitHub Actions 返回准确 HTTP 状态。' : '“立即检测”会在 GitHub Actions 中访问所有网址，完成后自动更新报告；“读取报告”只读取最近一次结果。'}
       </p>
     </section>
   );

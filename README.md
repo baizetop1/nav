@@ -24,7 +24,7 @@
 - 支持带版本校验的完整备份与恢复，覆盖导航草稿、点击统计、翻译历史、临时文本和场景偏好，不导出 Token 或密码；翻译历史与临时文本在本地备份文件中为明文。
 - 可将完整备份使用 AES-256-GCM 在浏览器中加密后保存到 GitHub，并在其他设备读取、解密和恢复；仓库中只保存密文。
 - GitHub Actions 每日检查正式导航中的链接；检测到异常时，首页卡片显示状态提醒。
-- 管理后台提供链接健康面板，可查看正常、异常、未检查数量、错误原因和最后检查时间。
+- 管理后台提供链接健康面板，可查看正常、异常、未检查数量、错误原因和最后检查时间；点击“立即检测”后会通过 GitHub Actions 在服务器端检查全部链接并自动刷新报告。
 - 每张网站卡片都可在本机生成二维码，支持复制链接、打开网站和下载 PNG，不向第三方二维码服务发送网址。
 - 支持安装为 PWA；访问过一次后可离线打开导航壳和已缓存的本站资源，GitHub 与翻译 API 不会进入离线缓存。
 - 推送后由 GitHub Actions 构建并发布到 `gh-pages`。
@@ -83,7 +83,7 @@ npm ci → npm run build → 发布 dist 到 gh-pages
 
 GitHub 仓库需要允许 Actions 写入内容，并将 Pages 发布源配置为 `gh-pages` 分支。
 
-`.github/workflows/link-health.yml` 每天自动执行链接检查，将报告写入 `public/link-health.json`，报告更新后重新构建并部署页面。也可以在 Actions 页面手动运行，或在本地执行：
+`.github/workflows/link-health.yml` 每天自动执行链接检查，将报告写入 `public/link-health.json`，报告更新后重新构建并部署页面。管理页的“立即检测”也会触发同一个工作流；该按钮需要 fine-grained Token 的 Actions 读写权限。也可以在 Actions 页面手动运行，或在本地执行：
 
 ```bash
 npm run check:links

@@ -5,6 +5,13 @@ export interface LinkHealthEntry {
   ok: boolean;
   checkedAt: string;
   error: string | null;
+  source?: 'github-actions' | 'browser';
+}
+
+export interface BrowserLinkCheckOptions {
+  timeoutMs?: number;
+  concurrency?: number;
+  signal?: AbortSignal;
 }
 
 export interface LoadLinkHealthOptions {
@@ -67,7 +74,70 @@ function parseEntry(value: unknown): LinkHealthEntry | null {
     ? value.error.trim().slice(0, MAX_ERROR_LENGTH) || null
     : null;
 
-  return { siteId, url, status, ok: value.ok, checkedAt, error };
+  const source = value.source === 'browser' || value.source === 'github-actions' ? value.source : undefined;
+  return { siteId, url, status, ok: value.ok, checkedAt, error, ...(source ? { source } : {}) };
+}
+
+/**
+ * Performs a best-effort browser reachability check. Cross-origin responses
+ * are intentionally opaque, so a successful request means "reachable" but
+ * cannot expose an HTTP status. This is a useful fallback when no PAT is set;
+ * the GitHub Actions check remains the authoritative status check.
+ */
+export async function checkLinksFromBrowser(
+  sites: Array<{ id: string; url: string }>,
+  options: BrowserLinkCheckOptions = {},
+): Promise<LinkHealthEntry[]> {
+  const timeoutMs = Math.max(2_000, Math.min(options.timeoutMs ?? 8_000, 30_000));
+  const concurrency = Math.max(1, Math.min(options.concurrency ?? 4, 12));
+  const checkedAt = new Date().toISOString();
+  const report = new Array<LinkHealthEntry>(sites.length);
+  let next = 0;
+
+  const check = async (site: { id: string; url: string }): Promise<LinkHealthEntry> => {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
+    const abortFromCaller = () => controller.abort();
+    options.signal?.addEventListener('abort', abortFromCaller, { once: true });
+    try {
+      const response = await fetch(site.url, {
+        method: 'GET',
+        mode: 'no-cors',
+        cache: 'no-store',
+        redirect: 'follow',
+        signal: controller.signal,
+      });
+      await response.body?.cancel();
+      const opaque = response.type === 'opaque' || response.status === 0;
+      return {
+        siteId: site.id,
+        url: site.url,
+        status: opaque ? null : response.status,
+        ok: opaque ? true : response.ok,
+        checkedAt,
+        error: opaque ? '可连接（跨域，无法读取 HTTP 状态）' : response.ok ? null : `HTTP ${response.status}`,
+        source: 'browser',
+      };
+    } catch (error) {
+      const message = error instanceof Error && error.name === 'AbortError'
+        ? `超时（${Math.round(timeoutMs / 1000)} 秒）`
+        : '浏览器无法连接，可能是网络、混合内容或站点拦截';
+      return { siteId: site.id, url: site.url, status: null, ok: false, checkedAt, error: message, source: 'browser' };
+    } finally {
+      window.clearTimeout(timeout);
+      options.signal?.removeEventListener('abort', abortFromCaller);
+    }
+  };
+
+  async function worker() {
+    while (next < sites.length) {
+      const index = next++;
+      report[index] = await check(sites[index]);
+    }
+  }
+
+  await Promise.all(Array.from({ length: Math.min(concurrency, sites.length) }, worker));
+  return report;
 }
 
 /**
