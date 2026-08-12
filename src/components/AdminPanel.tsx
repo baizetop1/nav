@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Activity, BookmarkPlus, Download, ExternalLink, FileUp, GitMerge, Github, Lock, Plus, RefreshCw, RotateCcw, Save, Upload, X } from 'lucide-react';
 import { createBackup, restoreBackup } from '../lib/backup';
 import type { ClickStatsStore } from '../lib/activityStats';
-import { normalizeBookmarkUrl, parseHtmlImport } from '../lib/bookmarks';
+import { normalizeBookmarkUrl, parseHtmlImport, type BookmarkImportRecord } from '../lib/bookmarks';
 import type { LinkHealthEntry } from '../lib/linkHealth';
 import { decryptBackup, encryptBackup } from '../services/encryptedBackup';
 import { getAuthenticatedUser, getEncryptedBackup, getRemoteNavigationData, getWorkflowRun, normalizeGithubToken, publishNavigationData, saveEncryptedBackup, type WorkflowRun } from '../services/github';
@@ -28,6 +28,20 @@ interface AdminPanelProps {
 type SiteDraft = Omit<Site, 'id' | 'tags'> & { id?: string; tags: string };
 export type AdminSection = 'content' | 'layout' | 'insights';
 
+interface HtmlImportDraft extends BookmarkImportRecord {
+  category: string;
+  description: string;
+  tags: string;
+  duplicate: boolean;
+  include: boolean;
+}
+
+interface HtmlImportPreview {
+  mode: 'bookmark-export' | 'saved-page';
+  records: HtmlImportDraft[];
+  duplicateCount: number;
+}
+
 const inputClass = 'baize-input';
 const panelClass = 'baize-panel rounded-2xl p-5';
 const labelClass = 'text-sm font-medium text-[#526f6c] dark:text-[#b8c4c0]';
@@ -39,6 +53,31 @@ function createSiteDraft(categoryId: string): SiteDraft {
 function slugify(value: string): string {
   const slug = value.trim().toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-').replace(/^-|-$/g, '');
   return slug || `item-${Date.now().toString(36)}`;
+}
+
+function validateSiteDraft(draft: SiteDraft): string | null {
+  if (!draft.name.trim()) return '请填写网站名称。';
+  if (!draft.categoryId.trim()) return '请选择网站分类。';
+  try {
+    const parsedUrl = new URL(draft.url.trim());
+    if (!['http:', 'https:'].includes(parsedUrl.protocol)) throw new Error();
+  } catch {
+    return '请输入有效的 http 或 https 地址。';
+  }
+  return null;
+}
+
+function siteFromDraft(draft: SiteDraft, id: string): Site {
+  return {
+    id,
+    name: draft.name.trim(),
+    url: draft.url.trim(),
+    description: draft.description.trim(),
+    categoryId: draft.categoryId,
+    tags: draft.tags.split(/[,，]/).map(tag => tag.trim()).filter(Boolean),
+    favorite: Boolean(draft.favorite),
+    ...(draft.icon?.trim() ? { icon: draft.icon.trim() } : {}),
+  };
 }
 
 export function AdminPanel({ data, initialSection, defaultRepository, linkHealthEntries, isLinkHealthLoading, onRefreshLinkHealth, clickStats, onClearClickStats, onChange, onReset, onClose }: AdminPanelProps) {
@@ -59,6 +98,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
   const [cloudBackupPasswordConfirm, setCloudBackupPasswordConfirm] = useState('');
   const [cloudBackupState, setCloudBackupState] = useState<{ busy: boolean; type: 'idle' | 'success' | 'error'; message?: string; url?: string }>({ busy: false, type: 'idle' });
   const [activeSection, setActiveSection] = useState<AdminSection>(initialSection);
+  const [htmlImportPreview, setHtmlImportPreview] = useState<HtmlImportPreview | null>(null);
 
   useEffect(() => setActiveSection(initialSection), [initialSection]);
 
@@ -90,11 +130,9 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
 
   const saveSite = (event: React.FormEvent) => {
     event.preventDefault();
-    try {
-      const parsedUrl = new URL(draft.url);
-      if (!['http:', 'https:'].includes(parsedUrl.protocol)) throw new Error();
-    } catch {
-      alert('请输入有效的 http 或 https 地址。');
+    const validationError = validateSiteDraft(draft);
+    if (validationError) {
+      alert(validationError);
       return;
     }
 
@@ -103,16 +141,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
     let suffix = 2;
     while (!draft.id && data.sites.some(site => site.id === id)) id = `${baseId}-${suffix++}`;
 
-    const site: Site = {
-      id,
-      name: draft.name.trim(),
-      url: draft.url.trim(),
-      description: draft.description.trim(),
-      categoryId: draft.categoryId,
-      tags: draft.tags.split(/[,，]/).map(tag => tag.trim()).filter(Boolean),
-      favorite: Boolean(draft.favorite),
-      ...(draft.icon?.trim() ? { icon: draft.icon.trim() } : {}),
-    };
+    const site = siteFromDraft(draft, id);
 
     const exists = data.sites.some(item => item.id === site.id);
     const sites = exists ? data.sites.map(item => item.id === site.id ? site : item) : [...data.sites, site];
@@ -177,71 +206,98 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
   const importHtml = async (file: File) => {
     try {
       const result = parseHtmlImport(await file.text());
-      const records = result.records;
-      if (!records.length) {
+      if (!result.records.length) {
         if (result.mode === 'saved-page') throw new Error('这个 HTML 没有保留 canonical、og:url 等原网页地址信息。文件本身无法告诉浏览器它来自哪个网址，请在上方“添加网站”中粘贴该页面 URL。');
         throw new Error('书签导出文件中没有找到可导入的 HTTP/HTTPS 地址。');
       }
 
-      const sites = [...data.sites];
-      const categories = [...data.categories];
-      const layout = [...data.layout];
-      const knownUrls = new Set(sites.map(site => normalizeBookmarkUrl(site.url)).filter((url): url is string => Boolean(url)));
-      const categoryByName = new Map(categories.map(category => [category.name.trim().toLocaleLowerCase(), category.id]));
-      const usedCategoryIds = new Set(categories.map(category => category.id));
-      const usedSiteIds = new Set(sites.map(site => site.id));
-      let nextCategoryOrder = Math.max(0, ...categories.map(category => category.order));
-      let nextOrder = Math.max(0, ...layout.map(item => item.order));
-      let imported = 0;
-      let skipped = 0;
-      let createdCategories = 0;
-
-      const uniqueId = (base: string, used: Set<string>) => {
-        let id = base;
-        let suffix = 2;
-        while (used.has(id)) id = `${base}-${suffix++}`;
-        used.add(id);
-        return id;
-      };
-
-      for (const record of records) {
-        if (knownUrls.has(record.url)) {
-          skipped += 1;
-          continue;
-        }
-
-        const categoryName = record.category?.trim() || '导入书签';
-        const categoryKey = categoryName.toLocaleLowerCase();
-        let categoryId = categoryByName.get(categoryKey);
-        if (!categoryId) {
-          categoryId = uniqueId(slugify(categoryName), usedCategoryIds);
-          categories.push({ id: categoryId, name: categoryName, order: ++nextCategoryOrder });
-          categoryByName.set(categoryKey, categoryId);
-          createdCategories += 1;
-        }
-
-        const siteId = uniqueId(slugify(record.name), usedSiteIds);
-        sites.push({
-          id: siteId,
-          name: record.name,
-          url: record.url,
-          description: record.description || (result.mode === 'bookmark-export' ? '从浏览器书签导入' : '从保存的 HTML 页面导入'),
-          categoryId,
-          tags: ['书签'],
-        });
-        layout.push({ siteId, order: ++nextOrder, size: 'normal', width: 1, height: 1 });
-        knownUrls.add(record.url);
-        imported += 1;
-      }
-
-      if (imported) onChange({ sites, categories, layout });
-      setDataToolState({
-        type: 'success',
-        message: `${result.mode === 'bookmark-export' ? '浏览器书签文件' : 'HTML 页面'}：已导入 ${imported} 个链接${createdCategories ? `，新建 ${createdCategories} 个分类` : ''}${skipped ? `，跳过 ${skipped} 个重复地址` : ''}。`,
+      const knownUrls = new Set(data.sites.map(site => normalizeBookmarkUrl(site.url)).filter((url): url is string => Boolean(url)));
+      const seenUrls = new Set<string>();
+      let duplicateCount = 0;
+      const records = result.records.map(record => {
+        const duplicate = knownUrls.has(record.url) || seenUrls.has(record.url);
+        if (duplicate) duplicateCount += 1;
+        seenUrls.add(record.url);
+        return {
+          ...record,
+          category: record.category?.trim() || '导入书签',
+          description: record.description?.trim() || (result.mode === 'bookmark-export' ? '从浏览器书签导入' : '从保存的 HTML 页面导入'),
+          tags: '书签',
+          duplicate,
+          include: !duplicate,
+        } satisfies HtmlImportDraft;
       });
+      setHtmlImportPreview({ mode: result.mode, records, duplicateCount });
+      setDataToolState({ type: 'success', message: `已读取 ${records.length} 个链接，请在下方确认名称、介绍和标签后再导入。` });
     } catch (error) {
       setDataToolState({ type: 'error', message: error instanceof Error ? error.message : '书签导入失败。' });
     }
+  };
+
+  const confirmHtmlImport = () => {
+    if (!htmlImportPreview) return;
+    const selected = htmlImportPreview.records.filter(record => record.include && !record.duplicate);
+    if (!selected.length) {
+      setDataToolState({ type: 'error', message: '请至少勾选一个要导入的链接。' });
+      return;
+    }
+
+    const sites = [...data.sites];
+    const categories = [...data.categories];
+    const layout = [...data.layout];
+    const knownUrls = new Set(sites.map(site => normalizeBookmarkUrl(site.url)).filter((url): url is string => Boolean(url)));
+    const categoryByName = new Map(categories.map(category => [category.name.trim().toLocaleLowerCase(), category.id]));
+    const usedCategoryIds = new Set(categories.map(category => category.id));
+    const usedSiteIds = new Set(sites.map(site => site.id));
+    let nextCategoryOrder = Math.max(0, ...categories.map(category => category.order));
+    let nextOrder = Math.max(0, ...layout.map(item => item.order));
+    let imported = 0;
+    let skipped = 0;
+    let createdCategories = 0;
+
+    const uniqueId = (base: string, used: Set<string>) => {
+      let id = base || `item-${Date.now().toString(36)}`;
+      let suffix = 2;
+      while (used.has(id)) id = `${base}-${suffix++}`;
+      used.add(id);
+      return id;
+    };
+
+    for (const record of selected) {
+      const normalizedUrl = normalizeBookmarkUrl(record.url);
+      if (!normalizedUrl || knownUrls.has(normalizedUrl)) {
+        skipped += 1;
+        continue;
+      }
+      const categoryName = record.category.trim() || '导入书签';
+      const categoryKey = categoryName.toLocaleLowerCase();
+      let categoryId = categoryByName.get(categoryKey);
+      if (!categoryId) {
+        categoryId = uniqueId(slugify(categoryName), usedCategoryIds);
+        categories.push({ id: categoryId, name: categoryName, order: ++nextCategoryOrder });
+        categoryByName.set(categoryKey, categoryId);
+        createdCategories += 1;
+      }
+      const siteId = uniqueId(slugify(record.name), usedSiteIds);
+      sites.push({
+        id: siteId,
+        name: record.name.trim() || new URL(normalizedUrl).hostname,
+        url: normalizedUrl,
+        description: record.description.trim(),
+        categoryId,
+        tags: record.tags.split(/[,，]/).map(tag => tag.trim()).filter(Boolean),
+      });
+      layout.push({ siteId, order: ++nextOrder, size: 'normal', width: 1, height: 1 });
+      knownUrls.add(normalizedUrl);
+      imported += 1;
+    }
+
+    onChange({ sites, categories, layout });
+    setHtmlImportPreview(null);
+    setDataToolState({
+      type: 'success',
+      message: `${htmlImportPreview.mode === 'bookmark-export' ? '浏览器书签文件' : 'HTML 页面'}：已导入 ${imported} 个链接${createdCategories ? `，新建 ${createdCategories} 个分类` : ''}${skipped ? `，跳过 ${skipped} 个重复地址` : ''}。`,
+    });
   };
 
   const importBackup = async (file: File) => {
@@ -343,20 +399,56 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
     setRemoteState('idle');
   };
 
+  const dataForPublish = (): NavigationData | null => {
+    // The form is intentionally a separate draft. Flush an existing edit before
+    // publishing so changing the URL and pressing “提交并部署” cannot publish stale data.
+    const hasUnsubmittedInput = [draft.name, draft.url, draft.description, draft.tags, draft.icon || ''].some(value => value.trim());
+    if (!draft.id && !hasUnsubmittedInput) {
+      return data;
+    }
+
+    const validationError = validateSiteDraft(draft);
+    if (validationError) {
+      setPublishState({ type: 'error', message: `当前编辑尚未保存：${validationError}` });
+      setActiveSection('content');
+      return null;
+    }
+
+    const baseId = draft.id || slugify(draft.name);
+    let id = baseId;
+    let suffix = 2;
+    while (!draft.id && data.sites.some(site => site.id === id)) id = `${baseId}-${suffix++}`;
+    const site = siteFromDraft(draft, id);
+    const exists = data.sites.some(item => item.id === site.id);
+    return {
+      ...data,
+      sites: exists ? data.sites.map(item => item.id === site.id ? site : item) : [...data.sites, site],
+      layout: exists ? data.layout : [...data.layout, { siteId: site.id, order: data.layout.length + 1, size: 'normal' as const, width: 1 as const, height: 1 as const }],
+    };
+  };
+
   const publish = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!token.trim()) {
       setPublishState({ type: 'error', message: '请输入 fine-grained Personal Access Token。' });
       return;
     }
+    const publishData = dataForPublish();
+    if (!publishData) return;
+    const hasDraftEdit = Boolean(draft.id) || [draft.name, draft.url, draft.description, draft.tags, draft.icon || ''].some(value => value.trim());
+    // Flush an unsaved form edit before the network request. This keeps the
+    // visible state and local draft aligned even if the request takes a while,
+    // and lets the success path safely clear the draft afterward.
+    if (publishData !== data) onChange(publishData);
     setPublishState({ type: 'loading', message: '正在验证账号并创建提交…' });
     try {
       const user = await getAuthenticatedUser(token.trim());
-      const result = await publishNavigationData(repository, data, token.trim(), commitMessage.trim() || undefined);
+      const result = await publishNavigationData(repository, publishData, token.trim(), commitMessage.trim() || undefined);
       setPublishState({ type: 'success', message: `已由 @${user.login} 提交，GitHub Actions 将开始部署。`, url: result.commitUrl });
       setPublishedSha(result.sha);
       setWorkflowRun(null);
       localStorage.removeItem('nav_cms_draft');
+      if (hasDraftEdit) resetForm();
     } catch (error) {
       setPublishState({ type: 'error', message: error instanceof Error ? error.message : '发布失败，请检查 Token 和仓库设置。' });
     }
@@ -463,6 +555,37 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
                 <button type="button" onClick={() => { if (confirm('确定丢弃所有本地修改并恢复仓库内置数据吗？')) onReset(); }} className="baize-danger-button"><RotateCcw size={16} />恢复默认</button>
               </div>
               {dataToolState.message && <p className={`mt-3 rounded-xl border p-3 text-sm ${dataToolState.type === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{dataToolState.message}</p>}
+              {htmlImportPreview && <div className="mt-4 rounded-2xl border border-[#5f8f84]/20 bg-[#f4f1e8]/55 p-3 dark:border-[#c9a96b]/15 dark:bg-[#07191d]/35">
+                <div className="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <h3 className="text-sm font-semibold text-[#315e5b] dark:text-[#d9ddd6]">导入前确认</h3>
+                    <p className="mt-1 text-xs text-[#718986]">可逐条修改名称、介绍、标签和分类；重复地址默认不会导入。</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <button type="button" className="baize-button-secondary px-2.5 py-1 text-xs" onClick={() => setHtmlImportPreview(current => current ? { ...current, records: current.records.map(record => ({ ...record, include: !record.duplicate })) } : current)}>全选非重复</button>
+                    <button type="button" className="baize-icon-button p-1.5" aria-label="取消 HTML 导入" onClick={() => setHtmlImportPreview(null)}><X size={16} /></button>
+                  </div>
+                </div>
+                <div className="mt-3 max-h-[34rem] space-y-3 overflow-y-auto pr-1">
+                  {htmlImportPreview.records.map((record, index) => <div key={`${record.url}-${index}`} className={`rounded-xl border p-3 ${record.duplicate ? 'border-[#a85d50]/20 bg-[#a85d50]/5' : 'border-[#5f8f84]/15 bg-white/35 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20'}`}>
+                    <div className="mb-2 flex items-center gap-2">
+                      <input type="checkbox" className="accent-[#4f8179]" checked={record.include} disabled={record.duplicate} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, include: event.target.checked } : item) } : current)} aria-label={`选择 ${record.name}`} />
+                      <span className="min-w-0 flex-1 truncate text-xs text-[#718986]" title={record.url}>{record.url}</span>
+                      {record.duplicate && <span className="shrink-0 text-[11px] text-[#985247]">重复地址</span>}
+                    </div>
+                    <div className="grid gap-2 md:grid-cols-2">
+                      <label className={labelClass}>名称<input className={`${inputClass} mt-1`} value={record.name} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, name: event.target.value } : item) } : current)} /></label>
+                      <label className={labelClass}>分类<input className={`${inputClass} mt-1`} value={record.category} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, category: event.target.value } : item) } : current)} /></label>
+                      <label className={`${labelClass} md:col-span-2`}>介绍<input className={`${inputClass} mt-1`} value={record.description} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, description: event.target.value } : item) } : current)} placeholder="例如：前端文档、在线工具" /></label>
+                      <label className={`${labelClass} md:col-span-2`}>标签<input className={`${inputClass} mt-1`} value={record.tags} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, tags: event.target.value } : item) } : current)} placeholder="书签, 常用" /></label>
+                    </div>
+                  </div>)}
+                </div>
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs text-[#718986]">已选择 {htmlImportPreview.records.filter(record => record.include && !record.duplicate).length} / {htmlImportPreview.records.length} 条</span>
+                  <button type="button" className="baize-button-primary" onClick={confirmHtmlImport}><BookmarkPlus size={16} />确认导入</button>
+                </div>
+              </div>}
               <div className="mt-4 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
                 <h3 className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Lock size={16} />GitHub 加密云备份</h3>
                 <p className="mb-3 mt-1 text-xs leading-5 text-[#718986]">使用上方仓库和 Token。完整备份只在本机加密，GitHub 中仅保存密文；密码无法找回，也不会保存在浏览器中。</p>
