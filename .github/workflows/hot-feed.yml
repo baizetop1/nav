@@ -1,32 +1,30 @@
-name: Deploy to GitHub Pages
+name: Refresh hot feed
 
 on:
-  push:
-    branches: [main, master]
-    # link-health.yml deploys the report commit itself.
-    paths-ignore:
-      - public/link-health.json
+  schedule:
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  # Shares the deployment lock used by deploy.yml.
+  group: ci-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }}
+  refresh-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-
-      - name: Install Dependencies
-        run: npm ci
 
       - name: Refresh social hot list and GitHub activity
         run: node scripts/update-hot-feed.mjs
@@ -34,10 +32,13 @@ jobs:
           HOT_FEED_GITHUB_USER: baizetop1
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Build
         run: npm run build
 
-      - name: Deploy
+      - name: Deploy refreshed feed
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist

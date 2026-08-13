@@ -5,6 +5,7 @@ export const BACKUP_STORAGE_KEYS = [
   'nav_cms_draft',
   'nav_daily_click_stats',
   'nav_click_stats_v2',
+  'nav_temporary_url_visits_v1',
   'nav_translation_history',
   'nav_temp_text',
   'work_mode',

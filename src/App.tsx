@@ -1,16 +1,19 @@
 import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Command, Copy, Download, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Command, Copy, Download, ExternalLink, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel, type AdminSection } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { CommandPalette, type CommandPaletteAction } from './components/CommandPalette';
+import { HotFeedPanel } from './components/HotFeedPanel';
 import { QrCodeModal } from './components/QrCodeModal';
 import { Sidebar } from './components/Sidebar';
 import { TempTextQrModal, TextTransferReceiveModal } from './components/TempTextTransferModals';
+import { TemporaryVisitsPanel } from './components/TemporaryVisitsPanel';
 import { TranslationHistoryPanel } from './components/TranslationHistoryPanel';
 import { defaultNavigationData, searchEngines, siteConfig } from './data';
 import { CLICK_STATS_KEY, getTodayClicks, loadClickStats, localDateKey, recordSiteVisit, type ClickStatsStore } from './lib/activityStats';
 import { checkLinksFromBrowser, loadLinkHealthReport, type LinkHealthEntry } from './lib/linkHealth';
+import { getTemporaryVisitSummaries, loadTemporaryVisits, normalizeTemporaryUrl, pruneTemporaryVisits, recordTemporaryVisit, removeTemporaryVisit, TEMPORARY_VISITS_KEY, temporaryUrlKey, type TemporaryVisitsStore } from './lib/temporaryVisits';
 import { addTranslationHistory, loadTranslationHistory, TRANSLATION_HISTORY_KEY, type TranslationHistoryItem } from './lib/translationHistory';
 import { parseTextTransferHash } from './lib/textTransfer';
 import { decryptNote, encryptNote } from './services/encryptedNote';
@@ -85,6 +88,7 @@ function App() {
   const [linkHealthEntries, setLinkHealthEntries] = useState<LinkHealthEntry[]>([]);
   const [isLinkHealthLoading, setIsLinkHealthLoading] = useState(false);
   const [clickStats, setClickStats] = useState<ClickStatsStore>(loadClickStats);
+  const [temporaryVisits, setTemporaryVisits] = useState<TemporaryVisitsStore>(loadTemporaryVisits);
   const [currentDate, setCurrentDate] = useState(localDateKey);
   const [qrSite, setQrSite] = useState<Site | null>(null);
   const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
@@ -105,6 +109,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem(CLICK_STATS_KEY, JSON.stringify(clickStats));
   }, [clickStats]);
+
+  useEffect(() => {
+    localStorage.setItem(TEMPORARY_VISITS_KEY, JSON.stringify(temporaryVisits));
+  }, [temporaryVisits]);
 
   useEffect(() => {
     localStorage.setItem(TRANSLATION_HISTORY_KEY, JSON.stringify(translationHistory));
@@ -146,6 +154,10 @@ function App() {
     const interval = window.setInterval(checkDate, 60_000);
     return () => window.clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    setTemporaryVisits(current => pruneTemporaryVisits(current, new Date(), data.sites.map(site => site.url)));
+  }, [currentDate, data.sites]);
 
   useEffect(() => {
     const handleHash = () => setIsAdminOpen(window.location.hash === '#/admin');
@@ -263,7 +275,12 @@ function App() {
     [...ranked, ...fallback, ...data.sites].forEach(site => { if (result.size < 8) result.set(site.id, site); });
     return [...result.values()];
   }, [commonCategoryId, data.sites, layoutOrder, todayClicks]);
+  const temporaryVisitSummaries = useMemo(
+    () => getTemporaryVisitSummaries(temporaryVisits, data.sites.map(site => site.url), new Date()),
+    [currentDate, data.sites, temporaryVisits],
+  );
   const activeEngine = useMemo(() => searchEngines.find(engine => search.startsWith(`${engine.prefix} `)), [search]);
+  const searchUrl = useMemo(() => activeEngine ? null : normalizeTemporaryUrl(search), [activeEngine, search]);
   const fuse = useMemo(() => {
     const categoryNames = new Map(data.categories.map(category => [category.id, category.name]));
     return new Fuse(data.sites.map(site => ({ ...site, categoryName: categoryNames.get(site.categoryId) || '' })), {
@@ -294,6 +311,18 @@ function App() {
     const now = new Date();
     setCurrentDate(localDateKey(now));
     setClickStats(current => recordSiteVisit(current, siteId, now));
+  };
+
+  const visitTemporaryUrl = (value: string): string | null => {
+    const url = normalizeTemporaryUrl(value);
+    const key = url ? temporaryUrlKey(url) : null;
+    if (!url || !key) return '请输入有效的 HTTP/HTTPS 网址，也可以直接输入 example.com。';
+
+    const navigationSite = data.sites.find(site => temporaryUrlKey(site.url) === key);
+    if (navigationSite) recordVisit(navigationSite.id);
+    else setTemporaryVisits(current => recordTemporaryVisit(current, url));
+    window.open(url, '_blank', 'noopener,noreferrer');
+    return null;
   };
 
   const changeSceneMode = (mode: SceneMode) => {
@@ -409,6 +438,7 @@ function App() {
     { id: 'translator', title: '打开快捷翻译', description: '输入文本并查看翻译历史', keywords: ['translate', '翻译', 'language'], icon: 'translate', run: () => { setIsTranslatorOpen(true); focusAfterRender('translation-input'); } },
     { id: 'temp-note', title: '打开临时文本', description: '编辑、复制或加密同步临时内容', keywords: ['note', '文本', '便签'], icon: 'note', run: () => { setIsTempTextOpen(true); focusAfterRender('temp-text-editor'); } },
     ...(tempText ? [{ id: 'temp-qr', title: '临时文本二维码传输', description: '生成接收链接或纯文本二维码', keywords: ['qr', '二维码', '传输'], icon: 'qr' as const, run: () => setIsTempTextQrOpen(true) }] : []),
+    { id: 'hot-feed', title: '查看热榜与动态', description: '社会热榜和 GitHub 公开动态', keywords: ['hot', '热榜', '新闻', 'github', '动态'], icon: 'stats', run: () => focusAfterRender('hot-feed') },
     { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: () => openAdmin('content') },
     { id: 'layout', title: '打开布局排序', description: '拖拽网站、分类和调整卡片尺寸', keywords: ['layout', '布局', '拖拽', '排序'], icon: 'settings', run: () => openAdmin('layout') },
     { id: 'stats', title: '查看访问统计', description: '查看 7/30 天趋势和网站排行', keywords: ['stats', '统计', '数据'], icon: 'stats', run: () => { openAdmin('insights'); focusAfterRender('stats-title'); } },
@@ -459,9 +489,12 @@ function App() {
                   if (event.key === 'Enter' && activeEngine) {
                     const query = search.slice(activeEngine.prefix.length + 1).trim();
                     if (query) window.open(activeEngine.url + encodeURIComponent(query), '_blank', 'noopener,noreferrer');
+                  } else if (event.key === 'Enter' && searchUrl) {
+                    visitTemporaryUrl(searchUrl);
+                    setSearch('');
                   }
                 }}
-                placeholder={activeEngine ? activeEngine.placeholder : "搜索网站，或输入 'g ' 使用 Google"}
+                placeholder={activeEngine ? activeEngine.placeholder : "搜索网站、输入网址，或输入 'g ' 使用 Google"}
                 className="baize-input py-3 pl-10 pr-16 shadow-[0_10px_30px_-20px_rgba(16,44,51,0.6)]"
               />
               <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-[#5f8f84]/20 bg-[#5f8f84]/8 px-2 py-0.5 text-xs text-[#6f8984] dark:border-[#c9a96b]/15 dark:bg-[#c9a96b]/8 dark:text-[#baa978] sm:block">/</kbd>
@@ -474,6 +507,13 @@ function App() {
         </div>
 
         <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
+          <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />
+          <TemporaryVisitsPanel
+            visits={temporaryVisitSummaries}
+            onVisit={visitTemporaryUrl}
+            onDelete={key => setTemporaryVisits(current => removeTemporaryVisit(current, key))}
+            onClear={() => setTemporaryVisits(current => ({ ...current, records: [] }))}
+          />
           <section className="baize-panel rounded-2xl p-4 sm:p-5">
             <div className={isTranslatorOpen ? 'mb-3 flex items-center justify-between' : 'flex items-center justify-between'}>
               <span className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Languages size={17} />快捷翻译</span>
@@ -554,7 +594,7 @@ function App() {
               </section>
             );
           })}
-          {search.trim() && !activeEngine && visibleSiteIds.size === 0 && <div className="baize-panel rounded-2xl py-20 text-center text-[#64807c]"><p className="text-lg">云海茫茫，未找到相关网站</p><button onClick={() => setSearch('')} className="mt-4 font-medium text-[#356b66] hover:underline dark:text-[#d2b775]">清除搜索</button></div>}
+          {search.trim() && !activeEngine && visibleSiteIds.size === 0 && <div className="baize-panel rounded-2xl py-12 text-center text-[#64807c]"><p className="text-lg">{searchUrl ? '这是一个可访问的网址' : '云海茫茫，未找到相关网站'}</p><div className="mt-4 flex flex-wrap justify-center gap-3">{searchUrl && <button type="button" onClick={() => { visitTemporaryUrl(searchUrl); setSearch(''); }} className="baize-button-primary"><ExternalLink size={16} />访问并记录</button>}<button onClick={() => setSearch('')} className="font-medium text-[#356b66] hover:underline dark:text-[#d2b775]">清除搜索</button></div></div>}
           {activeEngine && <div className="baize-panel rounded-2xl p-6 text-center font-medium text-[#356b66] dark:text-[#d9c386]">按 Enter 使用 {activeEngine.name} 搜索</div>}
         </div>
       </main>

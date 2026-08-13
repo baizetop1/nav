@@ -200,7 +200,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
       link.download = `baize-full-backup-${new Date().toISOString().slice(0, 10)}.json`;
       link.click();
       URL.revokeObjectURL(url);
-      setDataToolState({ type: 'success', message: '完整备份已导出，包含导航、90 天点击统计、翻译历史、临时文本与场景偏好。' });
+      setDataToolState({ type: 'success', message: '完整备份已导出，包含导航、访问统计、30 天临时网址、翻译历史、临时文本与场景偏好。' });
     } catch (error) {
       setDataToolState({ type: 'error', message: error instanceof Error ? error.message : '备份导出失败。' });
     }
@@ -304,7 +304,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
   };
 
   const importBackup = async (file: File) => {
-    if (!confirm('恢复完整备份会覆盖当前导航草稿、点击统计、翻译历史、临时文本和场景偏好，是否继续？')) return;
+    if (!confirm('恢复完整备份会覆盖当前导航草稿、访问统计、临时网址、翻译历史、临时文本和场景偏好，是否继续？')) return;
     try {
       const restored = restoreBackup(await file.text());
       localStorage.setItem('nav_cms_draft', JSON.stringify(restored));
@@ -346,7 +346,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
       const remote = await getEncryptedBackup(repository, token.trim());
       if (!remote) throw new Error('GitHub 中还没有加密导航备份。');
       const backup = await decryptBackup(remote.payload, cloudBackupPassword);
-      if (!confirm('已成功解密。继续会覆盖当前导航草稿、点击统计、翻译历史、临时文本和场景偏好，是否恢复？')) {
+      if (!confirm('已成功解密。继续会覆盖当前导航草稿、访问统计、临时网址、翻译历史、临时文本和场景偏好，是否恢复？')) {
         setCloudBackupState({ busy: false, type: 'idle', message: '已取消恢复，当前数据没有变化。' });
         return;
       }
@@ -592,7 +592,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
             <section className={panelClass}>
               <h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">导入、备份与恢复</h2>
               <p className="mb-2 mt-1 text-xs leading-5 text-[#718986]">自动识别 HTML 类型：Chrome、Edge 等浏览器导出的书签文件会批量导入；普通保存网页只读取页面自身保留的原地址，不会导入页面里的其他链接。</p>
-              <p className="mb-4 text-xs leading-5 text-[#718986]">完整备份不会包含 GitHub Token 或加密密码；临时文本和翻译历史会按本机明文导出，请妥善保管备份文件。</p>
+              <p className="mb-4 text-xs leading-5 text-[#718986]">完整备份不会包含 GitHub Token 或加密密码；临时网址、临时文本和翻译历史会按本机明文导出，请妥善保管备份文件。</p>
               <div className="flex flex-wrap gap-2">
                 <label className="baize-button-secondary cursor-pointer">
                   <BookmarkPlus size={16} />导入 HTML

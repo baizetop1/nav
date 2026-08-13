@@ -12,7 +12,9 @@
     "test:encrypted-backup": "node --experimental-strip-types scripts/encrypted-backup-selfcheck.mjs",
     "test:feature-data": "node --experimental-strip-types scripts/feature-data-selfcheck.mjs",
     "test:text-transfer": "node --experimental-strip-types scripts/text-transfer-selfcheck.mjs",
-    "check:links": "node scripts/check-links.mjs"
+    "check:links": "node scripts/check-links.mjs",
+    "test:hot-feed": "node scripts/update-hot-feed.mjs --self-test",
+    "update:hot-feed": "node scripts/update-hot-feed.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

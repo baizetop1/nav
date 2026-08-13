@@ -141,6 +141,15 @@
   row-gap: 1.75rem;
 }
 
+.work-mode .trending-feed-description {
+  display: none;
+}
+
+.work-mode .trending-feed-panel {
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
 .work-mode .category-heading {
   margin-bottom: 0.75rem;
   border-color: rgb(95 143 132 / 0.18);
