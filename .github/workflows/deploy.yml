@@ -28,11 +28,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Refresh social hot list and GitHub activity
+      - name: Refresh social hot list and GitHub Trending
         run: node scripts/update-hot-feed.mjs
-        env:
-          HOT_FEED_GITHUB_USER: baizetop1
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
         run: npm run build

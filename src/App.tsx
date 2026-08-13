@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, Check, ChevronDown, ChevronUp, Command, Copy, Download, ExternalLink, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, Check, ChevronUp, Command, Copy, Download, ExternalLink, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel, type AdminSection } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { CommandPalette, type CommandPaletteAction } from './components/CommandPalette';
@@ -438,7 +438,7 @@ function App() {
     { id: 'translator', title: '打开快捷翻译', description: '输入文本并查看翻译历史', keywords: ['translate', '翻译', 'language'], icon: 'translate', run: () => { setIsTranslatorOpen(true); focusAfterRender('translation-input'); } },
     { id: 'temp-note', title: '打开临时文本', description: '编辑、复制或加密同步临时内容', keywords: ['note', '文本', '便签'], icon: 'note', run: () => { setIsTempTextOpen(true); focusAfterRender('temp-text-editor'); } },
     ...(tempText ? [{ id: 'temp-qr', title: '临时文本二维码传输', description: '生成接收链接或纯文本二维码', keywords: ['qr', '二维码', '传输'], icon: 'qr' as const, run: () => setIsTempTextQrOpen(true) }] : []),
-    { id: 'hot-feed', title: '查看热榜与动态', description: '社会热榜和 GitHub 公开动态', keywords: ['hot', '热榜', '新闻', 'github', '动态'], icon: 'stats', run: () => focusAfterRender('hot-feed') },
+    { id: 'hot-feed', title: '查看热榜聚合', description: '社会热榜和 GitHub 今日热门仓库', keywords: ['hot', '热榜', '新闻', 'github', 'trending'], icon: 'stats', run: () => focusAfterRender('hot-feed') },
     { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: () => openAdmin('content') },
     { id: 'layout', title: '打开布局排序', description: '拖拽网站、分类和调整卡片尺寸', keywords: ['layout', '布局', '拖拽', '排序'], icon: 'settings', run: () => openAdmin('layout') },
     { id: 'stats', title: '查看访问统计', description: '查看 7/30 天趋势和网站排行', keywords: ['stats', '统计', '数据'], icon: 'stats', run: () => { openAdmin('insights'); focusAfterRender('stats-title'); } },
@@ -507,19 +507,21 @@ function App() {
         </div>
 
         <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
-          <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />
-          <TemporaryVisitsPanel
-            visits={temporaryVisitSummaries}
-            onVisit={visitTemporaryUrl}
-            onDelete={key => setTemporaryVisits(current => removeTemporaryVisit(current, key))}
-            onClear={() => setTemporaryVisits(current => ({ ...current, records: [] }))}
-          />
-          <section className="baize-panel rounded-2xl p-4 sm:p-5">
-            <div className={isTranslatorOpen ? 'mb-3 flex items-center justify-between' : 'flex items-center justify-between'}>
+          <div className="utility-launcher-row flex flex-wrap items-start gap-2 sm:gap-3">
+            <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />
+            <TemporaryVisitsPanel
+              visits={temporaryVisitSummaries}
+              onVisit={visitTemporaryUrl}
+              onDelete={key => setTemporaryVisits(current => removeTemporaryVisit(current, key))}
+              onClear={() => setTemporaryVisits(current => ({ ...current, records: [] }))}
+            />
+            {!isTranslatorOpen && <button type="button" className="baize-button-secondary utility-launcher-button" aria-controls="quick-translator" aria-expanded="false" onClick={() => { localStorage.setItem(TRANSLATOR_COLLAPSED_KEY, 'false'); setIsTranslatorOpen(true); }}><Languages size={17} />翻译{translationHistory.length > 0 && <span className="utility-launcher-badge">{translationHistory.length}</span>}</button>}
+            {isTranslatorOpen && <section id="quick-translator" className="baize-panel basis-full rounded-2xl p-4 sm:p-5">
+            <div className="mb-3 flex items-center justify-between">
               <span className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Languages size={17} />快捷翻译</span>
-              <button type="button" className="baize-icon-button flex items-center gap-1 text-xs" aria-expanded={isTranslatorOpen} onClick={() => setIsTranslatorOpen(current => { localStorage.setItem(TRANSLATOR_COLLAPSED_KEY, String(current)); return !current; })}>{isTranslatorOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}{isTranslatorOpen ? '收起' : '展开'}</button>
+              <button type="button" className="baize-icon-button flex items-center gap-1 text-xs" aria-expanded="true" onClick={() => { localStorage.setItem(TRANSLATOR_COLLAPSED_KEY, 'true'); setIsTranslatorOpen(false); }}><ChevronUp size={16} />收起</button>
             </div>
-            <form onSubmit={translateInline} className={isTranslatorOpen ? '' : 'hidden'}>
+            <form onSubmit={translateInline}>
               <div className="mb-3 flex flex-wrap items-center gap-2">
                 <span className="mr-auto text-xs text-[#718986]">选择翻译语言</span>
                 <select value={sourceLanguage} onChange={event => setSourceLanguage(event.target.value)} className="baize-input w-auto py-1.5">{TRANSLATION_LANGUAGES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
@@ -535,7 +537,7 @@ function App() {
                 <div className="flex gap-2"><a className="baize-button-secondary" target="_blank" rel="noreferrer" href={`https://translate.google.com/?sl=${encodeURIComponent(sourceLanguage)}&tl=${encodeURIComponent(targetLanguage)}&text=${encodeURIComponent(translationText)}&op=translate`}>Google 回退</a><button disabled={translationState.loading || !translationText.trim()} className="baize-button-primary" type="submit"><Languages size={17} />{translationState.loading ? '翻译中…' : '立即翻译'}</button></div>
               </div>
             </form>
-            {isTranslatorOpen && <TranslationHistoryPanel
+            <TranslationHistoryPanel
               history={translationHistory}
               languageName={translationLanguageName}
               onUse={item => {
@@ -547,8 +549,9 @@ function App() {
               }}
               onDelete={id => setTranslationHistory(current => current.filter(item => item.id !== id))}
               onClear={() => setTranslationHistory([])}
-            />}
-          </section>
+            />
+          </section>}
+          </div>
           {categories.map(category => {
             const categorySites = data.sites
               .filter(site => site.categoryId === category.id && visibleSiteIds.has(site.id))

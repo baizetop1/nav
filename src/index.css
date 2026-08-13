@@ -150,6 +150,41 @@
   backdrop-filter: none;
 }
 
+.utility-launcher-button {
+  min-height: 2.75rem;
+  padding-inline: 0.9rem;
+  border-radius: 0.875rem;
+  background-color: rgb(244 241 232 / 0.82);
+  box-shadow: 0 12px 34px -28px rgb(16 44 51 / 0.65);
+  backdrop-filter: blur(16px);
+}
+
+.dark .utility-launcher-button {
+  background-color: rgb(16 44 51 / 0.88);
+}
+
+.utility-launcher-badge {
+  display: inline-flex;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding-inline: 0.35rem;
+  background-color: rgb(95 143 132 / 0.12);
+  font-size: 0.6875rem;
+  line-height: 1;
+}
+
+.dark .utility-launcher-badge {
+  background-color: rgb(201 169 107 / 0.14);
+}
+
+.work-mode .utility-launcher-button {
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
 .work-mode .category-heading {
   margin-bottom: 0.75rem;
   border-color: rgb(95 143 132 / 0.18);

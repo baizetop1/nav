@@ -53,20 +53,20 @@ storage.setItem(TEMPORARY_VISITS_KEY, JSON.stringify(temporaryVisits));
 assert.equal(loadTemporaryVisits(storage, new Date('2026-08-13T12:00:00+08:00')).records.length, 1);
 
 const hotFeed = parseHotFeedReport({
-  version: 1,
+  version: 2,
   generatedAt: '2026-08-13T03:00:00Z',
   social: {
     source: { name: '示例热榜', url: 'https://example.com/hot' },
     items: [{ id: 'hot-1', rank: 1, title: '示例话题', url: 'https://example.com/topic', hot: 12345 }],
   },
   github: {
-    username: 'baizetop1',
-    profileUrl: 'https://github.com/baizetop1',
-    items: [{ id: 'event-1', type: 'push', title: '更新首页', repo: 'baizetop1/nav', url: 'https://github.com/baizetop1/nav', createdAt: '2026-08-13T02:00:00Z' }],
+    source: { name: 'GitHub Trending', url: 'https://github.com/trending?since=daily' },
+    items: [{ id: 'repo-1', rank: 1, name: 'baizetop1/nav', description: '个人导航', language: 'TypeScript', stars: 1234, starsToday: 56, url: 'https://github.com/baizetop1/nav' }],
   },
 });
 assert.equal(hotFeed?.social.items[0].hot, '12345');
-assert.equal(hotFeed?.github.items[0].repository, 'baizetop1/nav');
+assert.equal(hotFeed?.github.items[0].name, 'baizetop1/nav');
+assert.equal(hotFeed?.github.items[0].starsToday, 56);
 assert.equal(parseHotFeedReport({ ...hotFeed, social: { source: { name: 'bad', url: 'javascript:alert(1)' }, items: [] } }), null);
 
 console.log('feature data self-check passed');

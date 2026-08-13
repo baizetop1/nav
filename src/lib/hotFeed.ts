@@ -6,17 +6,19 @@ export interface SocialHotItem {
   hot?: string;
 }
 
-export interface GithubActivityItem {
+export interface GithubTrendingItem {
   id: string;
-  type: string;
-  title: string;
-  repository?: string;
+  rank: number;
+  name: string;
+  description?: string;
+  language?: string;
+  stars?: number;
+  starsToday?: number;
   url: string;
-  createdAt: string;
 }
 
 export interface HotFeedReport {
-  version: 1;
+  version: 2;
   generatedAt: string;
   social: {
     source: {
@@ -26,9 +28,11 @@ export interface HotFeedReport {
     items: SocialHotItem[];
   };
   github: {
-    username: string;
-    profileUrl: string;
-    items: GithubActivityItem[];
+    source: {
+      name: string;
+      url: string;
+    };
+    items: GithubTrendingItem[];
   };
 }
 
@@ -37,7 +41,7 @@ export interface HotFeedLoadOptions {
   fetcher?: typeof fetch;
 }
 
-const CACHE_KEY = 'nav_hot_feed_cache_v1';
+const CACHE_KEY = 'nav_hot_feed_cache_v2';
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -74,53 +78,56 @@ function parseSocialItem(value: unknown, index: number): SocialHotItem | null {
   };
 }
 
-function parseGithubItem(value: unknown): GithubActivityItem | null {
+function optionalCount(value: unknown): number | undefined {
+  const numeric = typeof value === 'number' ? value : Number(value);
+  return Number.isSafeInteger(numeric) && numeric >= 0 ? numeric : undefined;
+}
+
+function parseGithubItem(value: unknown, index: number): GithubTrendingItem | null {
   if (!isObject(value)) return null;
   const url = safeHttpUrl(value.url);
-  const createdAt = safeDate(value.createdAt);
-  const title = typeof value.title === 'string' ? value.title.trim() : '';
-  if (!url || !createdAt || !title) return null;
+  const name = typeof value.name === 'string' ? value.name.trim() : '';
+  const numericRank = typeof value.rank === 'number' ? value.rank : Number(value.rank);
+  const stars = optionalCount(value.stars);
+  const starsToday = optionalCount(value.starsToday);
+  if (!url || !/^[^/\s]+\/[^/\s]+$/.test(name)) return null;
   return {
-    id: typeof value.id === 'string' && value.id ? value.id : `${createdAt}-${title}`,
-    type: typeof value.type === 'string' && value.type ? value.type.slice(0, 48) : 'Activity',
-    title: title.slice(0, 200),
-    ...(typeof value.repository === 'string' && value.repository.trim()
-      ? { repository: value.repository.trim().slice(0, 160) }
-      : typeof value.repo === 'string' && value.repo.trim()
-        ? { repository: value.repo.trim().slice(0, 160) }
-        : {}),
+    id: typeof value.id === 'string' && value.id ? value.id : `github-${name}`,
+    rank: Number.isInteger(numericRank) && numericRank > 0 ? numericRank : index + 1,
+    name: name.slice(0, 160),
+    ...(typeof value.description === 'string' && value.description.trim() ? { description: value.description.trim().slice(0, 360) } : {}),
+    ...(typeof value.language === 'string' && value.language.trim() ? { language: value.language.trim().slice(0, 48) } : {}),
+    ...(stars !== undefined ? { stars } : {}),
+    ...(starsToday !== undefined ? { starsToday } : {}),
     url,
-    createdAt,
   };
 }
 
 export function parseHotFeedReport(value: unknown): HotFeedReport | null {
-  if (!isObject(value) || value.version !== 1 || !isObject(value.social) || !isObject(value.github)) return null;
+  if (!isObject(value) || value.version !== 2 || !isObject(value.social) || !isObject(value.github)) return null;
   const generatedAt = safeDate(value.generatedAt);
   const social = value.social;
   const github = value.github;
-  const rawSource = social.source;
-  const source = isObject(rawSource)
-    ? { name: rawSource.name, url: rawSource.url }
-    : { name: rawSource, url: social.sourceUrl };
-  const sourceUrl = safeHttpUrl(source.url);
-  const profileUrl = safeHttpUrl(github.profileUrl);
-  const sourceName = typeof source.name === 'string' ? source.name.trim() : '';
-  const username = typeof github.username === 'string' ? github.username.trim() : '';
-  if (!generatedAt || !sourceUrl || !profileUrl || !sourceName || !username) return null;
+  const socialSource = isObject(social.source) ? social.source : null;
+  const githubSource = isObject(github.source) ? github.source : null;
+  const socialSourceUrl = safeHttpUrl(socialSource?.url);
+  const githubSourceUrl = safeHttpUrl(githubSource?.url);
+  const socialSourceName = typeof socialSource?.name === 'string' ? socialSource.name.trim() : '';
+  const githubSourceName = typeof githubSource?.name === 'string' ? githubSource.name.trim() : '';
+  if (!generatedAt || !socialSourceUrl || !githubSourceUrl || !socialSourceName || !githubSourceName) return null;
 
   const socialItems = Array.isArray(social.items)
     ? social.items.map(parseSocialItem).filter((item): item is SocialHotItem => Boolean(item)).slice(0, 20)
     : [];
   const githubItems = Array.isArray(github.items)
-    ? github.items.map(parseGithubItem).filter((item): item is GithubActivityItem => Boolean(item)).slice(0, 20)
+    ? github.items.map(parseGithubItem).filter((item): item is GithubTrendingItem => Boolean(item)).slice(0, 20)
     : [];
 
   return {
-    version: 1,
+    version: 2,
     generatedAt,
-    social: { source: { name: sourceName.slice(0, 48), url: sourceUrl }, items: socialItems },
-    github: { username: username.slice(0, 64), profileUrl, items: githubItems },
+    social: { source: { name: socialSourceName.slice(0, 48), url: socialSourceUrl }, items: socialItems },
+    github: { source: { name: githubSourceName.slice(0, 48), url: githubSourceUrl }, items: githubItems },
   };
 }
 

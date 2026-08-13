@@ -51,12 +51,9 @@ jobs:
         if: steps.commit.outputs.changed == 'true'
         run: npm ci
 
-      - name: Refresh social hot list and GitHub activity
+      - name: Refresh social hot list and GitHub Trending
         if: steps.commit.outputs.changed == 'true'
         run: node scripts/update-hot-feed.mjs
-        env:
-          HOT_FEED_GITHUB_USER: baizetop1
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build updated site
         if: steps.commit.outputs.changed == 'true'

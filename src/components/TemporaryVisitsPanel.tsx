@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Clock3, ExternalLink, Globe2, Trash2, X } from 'lucide-react';
+import { ChevronUp, Clock3, ExternalLink, Globe2, Trash2, X } from 'lucide-react';
 import type { TemporaryVisitSummary } from '../lib/temporaryVisits';
 
 const COLLAPSED_KEY = 'nav_temporary_visits_collapsed';
@@ -42,8 +42,17 @@ export function TemporaryVisitsPanel({ visits, onVisit, onDelete, onClear }: Tem
     setError('');
   };
 
+  if (collapsed) {
+    return (
+      <button type="button" className="baize-button-secondary utility-launcher-button" onClick={toggle} aria-controls="temporary-visits" aria-expanded="false">
+        <Clock3 size={17} />临时访问
+        {visits.length > 0 && <span className="utility-launcher-badge">{visits.length}</span>}
+      </button>
+    );
+  }
+
   return (
-    <section id="temporary-visits" className="baize-panel rounded-2xl p-4 sm:p-5" aria-labelledby="temporary-visits-title">
+    <section id="temporary-visits" className="baize-panel basis-full rounded-2xl p-4 sm:p-5" aria-labelledby="temporary-visits-title">
       <header className="flex items-center justify-between gap-3">
         <div className="min-w-0">
           <h2 id="temporary-visits-title" className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]">
@@ -52,12 +61,12 @@ export function TemporaryVisitsPanel({ visits, onVisit, onDelete, onClear }: Tem
           </h2>
           <p className="mt-1 truncate text-xs text-[#718986]">记录未加入正式导航的网址，30 天后自动清理</p>
         </div>
-        <button type="button" className="baize-icon-button flex shrink-0 items-center gap-1 text-xs" aria-expanded={!collapsed} onClick={toggle}>
-          {collapsed ? <ChevronDown size={16} /> : <ChevronUp size={16} />}{collapsed ? '展开' : '收起'}
+        <button type="button" className="baize-icon-button flex shrink-0 items-center gap-1 text-xs" aria-expanded="true" onClick={toggle}>
+          <ChevronUp size={16} />收起
         </button>
       </header>
 
-      {!collapsed && <>
+      <>
         <form onSubmit={submit} className="mt-4 flex flex-col gap-2 sm:flex-row">
           <label className="sr-only" htmlFor="temporary-url-input">输入临时访问网址</label>
           <div className="relative min-w-0 flex-1">
@@ -99,7 +108,7 @@ export function TemporaryVisitsPanel({ visits, onVisit, onDelete, onClear }: Tem
             <button type="button" className="inline-flex items-center gap-1 text-xs text-[#718986] transition hover:text-[#985247] dark:hover:text-[#e1a294]" onClick={() => { if (confirm('确定清空全部临时访问记录吗？')) onClear(); }}><Trash2 size={13} />清空记录</button>
           </div>
         </> : <p className="mt-4 rounded-xl bg-[#5f8f84]/7 px-3 py-4 text-center text-xs text-[#718986]">还没有临时网址。输入网址访问后，会在这里保留 30 天。</p>}
-      </>}
+      </>
     </section>
   );
 }
