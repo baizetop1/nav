@@ -1,0 +1,235 @@
+import { useEffect, useMemo, useState } from 'react';
+import { Archive, Check, Cloud, Copy, ExternalLink, HelpCircle, Inbox as InboxIcon, Lightbulb, Link as LinkIcon, Lock, Pencil, Plus, RefreshCw, RotateCcw, StickyNote, Trash2, X } from 'lucide-react';
+import { inboxItemToMarkdown, parseInboxTags } from '../../services/inbox';
+import { countUnsyncedInboxItems, isInboxItemSynced } from '../../services/inboxSync';
+import { applyTechOsCaptureKind, getTechOsCaptureKind, getVisibleInboxTags, TECH_OS_CAPTURE_LABELS } from '../../services/techOsCapture';
+import type { InboxDraft, InboxItem, InboxItemStatus } from '../../types/inbox';
+import type { InboxSyncMeta, InboxSyncUiState } from '../../types/inbox-sync';
+import type { TechOsCaptureKind } from '../../types/tech-os-capture';
+
+interface InboxPanelProps {
+  open: boolean;
+  captureRequest: number;
+  items: InboxItem[];
+  repositoryLabel: string;
+  syncMeta: InboxSyncMeta | null;
+  syncState: InboxSyncUiState;
+  onCreate: (draft: InboxDraft) => string | null;
+  onUpdate: (id: string, draft: InboxDraft) => string | null;
+  onStatusChange: (id: string, status: InboxItemStatus) => void;
+  onDelete: (id: string) => void;
+  onSync: (token: string, password: string) => Promise<void>;
+  onClose: () => void;
+}
+
+interface InboxEditorProps {
+  initial?: InboxItem;
+  autoFocus?: boolean;
+  submitLabel: string;
+  onSubmit: (draft: InboxDraft) => string | null;
+  onCancel?: () => void;
+}
+
+export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncMeta, syncState, onCreate, onUpdate, onStatusChange, onDelete, onSync, onClose }: InboxPanelProps) {
+  const [view, setView] = useState<InboxItemStatus>('inbox');
+  const [captureOpen, setCaptureOpen] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [githubToken, setGithubToken] = useState('');
+  const [syncPassword, setSyncPassword] = useState('');
+  const [syncPasswordConfirm, setSyncPasswordConfirm] = useState('');
+  const [syncValidationMessage, setSyncValidationMessage] = useState('');
+  const visibleItems = useMemo(() => items
+    .filter(item => !item.deletedAt && item.status === view)
+    .sort((left, right) => right.updatedAt.localeCompare(left.updatedAt)), [items, view]);
+  const groups = useMemo(() => groupInboxItems(visibleItems), [visibleItems]);
+  const inboxCount = items.filter(item => !item.deletedAt && item.status === 'inbox').length;
+  const archivedCount = items.filter(item => !item.deletedAt && item.status === 'archived').length;
+  const unsyncedCount = countUnsyncedInboxItems(items, syncMeta);
+  const syncLabel = syncState.phase === 'syncing'
+    ? '同步中…'
+    : syncState.phase === 'error'
+      ? '! 同步失败'
+      : unsyncedCount > 0
+        ? `○ ${unsyncedCount} 条未同步`
+        : syncMeta
+          ? '● 已同步'
+          : '○ 尚未同步';
+
+  useEffect(() => {
+    if (!open) return;
+    setEditingId(null);
+    if (captureRequest > 0) {
+      setView('inbox');
+      setCaptureOpen(true);
+    }
+  }, [captureRequest, open]);
+
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [open]);
+
+  if (!open) return null;
+
+  const copyItem = async (item: InboxItem) => {
+    await navigator.clipboard.writeText(inboxItemToMarkdown(item));
+    setCopiedId(item.id);
+    window.setTimeout(() => setCopiedId(current => current === item.id ? null : current), 1500);
+  };
+
+  const runSync = async () => {
+    if (syncPassword !== syncPasswordConfirm) {
+      setSyncValidationMessage('两次输入的加密密码不一致。');
+      return;
+    }
+    setSyncValidationMessage('');
+    await onSync(githubToken, syncPassword);
+  };
+
+  return (
+    <div className="fixed inset-0 z-[70] bg-[#07191d]/40 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Inbox" onMouseDown={event => { if (event.target === event.currentTarget) onClose(); }}>
+      <aside className="baize-panel ml-auto flex h-full w-full max-w-2xl flex-col border-y-0 border-r-0">
+        <header className="flex items-center justify-between border-b border-[#5f8f84]/15 px-4 py-4 sm:px-6 dark:border-[#c9a96b]/10">
+          <div><h2 className="flex items-center gap-2 text-xl font-bold text-[#173b41] dark:text-[#f4f1e8]"><InboxIcon size={21} />Inbox <span className="text-sm font-medium text-[#718986]">({inboxCount})</span></h2><p className="mt-1 text-xs text-[#718986]">本地优先保存 · {syncLabel}</p></div>
+          <button type="button" className="baize-icon-button" onClick={onClose} aria-label="关闭 Inbox"><X size={20} /></button>
+        </header>
+
+        <div className="flex items-center gap-2 border-b border-[#5f8f84]/15 px-4 py-3 sm:px-6 dark:border-[#c9a96b]/10">
+          <button type="button" className={view === 'inbox' ? 'baize-button-primary' : 'baize-button-secondary'} onClick={() => { setView('inbox'); setEditingId(null); }}><InboxIcon size={16} />收件箱 {inboxCount}</button>
+          <button type="button" className={view === 'archived' ? 'baize-button-primary' : 'baize-button-secondary'} onClick={() => { setView('archived'); setEditingId(null); }}><Archive size={16} />归档 {archivedCount}</button>
+          <button type="button" className="baize-button-secondary ml-auto" aria-expanded={captureOpen} onClick={() => setCaptureOpen(current => !current)}><Plus size={17} />快速记录</button>
+        </div>
+
+        <details className="border-b border-[#5f8f84]/15 px-4 py-3 sm:px-6 dark:border-[#c9a96b]/10">
+          <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Cloud size={16} />GitHub 加密同步<span className={`ml-auto text-xs ${syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#718986]'}`}>{syncLabel}</span></summary>
+          <div className="mt-3 space-y-3 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
+            <p className="text-xs leading-5 text-[#718986]">目标：{repositoryLabel} · <code>data/inbox.enc.json</code>。同步会先读取远端、按 ID 合并，再只提交密文；密码和 Token 不会保存。</p>
+            <input type="password" autoComplete="new-password" spellCheck={false} className="baize-input font-mono" value={githubToken} onChange={event => setGithubToken(event.target.value)} placeholder="GitHub Token" />
+            <div className="grid gap-2 sm:grid-cols-2">
+              <input type="password" autoComplete="new-password" className="baize-input" value={syncPassword} onChange={event => setSyncPassword(event.target.value)} placeholder="加密密码（至少 12 字符）" />
+              <input type="password" autoComplete="new-password" className="baize-input" value={syncPasswordConfirm} onChange={event => setSyncPasswordConfirm(event.target.value)} placeholder="再次输入加密密码" />
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <p className={`min-w-0 flex-1 break-words text-xs ${syncValidationMessage || syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#315e5b] dark:text-[#b8cec7]'}`}>{syncValidationMessage || syncState.message}</p>
+              {syncState.commitUrl && <a className="text-xs text-[#356b66] hover:underline dark:text-[#d2b775]" href={syncState.commitUrl} target="_blank" rel="noreferrer">查看加密提交</a>}
+              <button type="button" className="baize-button-primary" disabled={syncState.phase === 'syncing' || !githubToken || !syncPassword || !syncPasswordConfirm} onClick={() => { void runSync(); }}><RefreshCw size={16} className={syncState.phase === 'syncing' ? 'animate-spin' : ''} />{syncState.phase === 'syncing' ? '正在合并' : '合并同步'}</button>
+            </div>
+            <p className="flex items-center gap-1 text-[11px] text-[#829793]"><Lock size={12} />任何读取、解密或提交失败都不会清空本机 Inbox。</p>
+          </div>
+        </details>
+
+        <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
+          {captureOpen && <section className="mb-5 rounded-2xl border border-[#5f8f84]/20 bg-white/25 p-4 dark:border-[#c9a96b]/15 dark:bg-[#07191d]/25" aria-label="快速记录">
+            <div className="mb-3 flex items-center justify-between"><div><h3 className="font-semibold text-[#234b4e] dark:text-[#f4f1e8]">快速记录</h3><p className="mt-1 text-xs text-[#718986]">Question / Idea / Note / Link 共用现有加密 Inbox</p></div><span className="text-xs text-[#718986]">保存后立即写入本机</span></div>
+            <InboxEditor autoFocus submitLabel="保存" onSubmit={draft => {
+              const error = onCreate(draft);
+              if (!error) setView('inbox');
+              return error;
+            }} onCancel={() => setCaptureOpen(false)} />
+          </section>}
+
+          {!visibleItems.length && <div className="py-16 text-center text-[#718986]"><InboxIcon size={30} className="mx-auto mb-3 opacity-50" /><p>{view === 'inbox' ? 'Inbox 还是空的，从快速记录开始。' : '还没有归档内容。'}</p></div>}
+
+          {groups.map(group => <section key={group.label} className="mb-6" aria-label={group.label}>
+            <h3 className="mb-2 text-xs font-semibold tracking-[0.15em] text-[#718986]">{group.label}</h3>
+            <div className="space-y-3">{group.items.map(item => <article key={item.id} className="rounded-2xl border border-[#5f8f84]/15 bg-white/20 p-4 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
+              {editingId === item.id ? <InboxEditor initial={item} submitLabel="保存修改" onSubmit={draft => {
+                const error = onUpdate(item.id, draft);
+                if (!error) setEditingId(null);
+                return error;
+              }} onCancel={() => setEditingId(null)} /> : <>
+                <div className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]">{item.type === 'link' ? <LinkIcon size={17} /> : <InboxIcon size={17} />}</span>
+                  <div className="min-w-0 flex-1"><h4 className="break-words font-semibold text-[#234b4e] dark:text-[#f4f1e8]">{itemTitle(item)}</h4>{item.content && <p className="mt-1 whitespace-pre-wrap break-words text-sm leading-6 text-[#55706d] dark:text-[#afc0bb]">{item.content}</p>}{item.type === 'link' && item.url && <a className="mt-2 inline-flex max-w-full items-center gap-1 truncate text-xs text-[#356b66] hover:underline dark:text-[#d2b775]" href={item.url} target="_blank" rel="noreferrer"><ExternalLink size={13} />{item.url}</a>}</div>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center gap-2"><span className="rounded-full bg-[#5f8f84]/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{TECH_OS_CAPTURE_LABELS[getTechOsCaptureKind(item)]}</span>{getVisibleInboxTags(item.tags).map(tag => <span key={tag} className="baize-chip">#{tag}</span>)}<span className="ml-auto text-[11px] text-[#829793]">{isInboxItemSynced(item, syncMeta) ? '● 已同步' : '○ 未同步'} · {formatInboxTime(item.updatedAt)}</span></div>
+                <div className="mt-3 flex flex-wrap justify-end gap-2 border-t border-[#5f8f84]/10 pt-3 dark:border-[#c9a96b]/10">
+                  <button type="button" className="baize-button-secondary" onClick={() => setEditingId(item.id)}><Pencil size={15} />编辑</button>
+                  <button type="button" className="baize-button-secondary" onClick={() => { void copyItem(item); }}>{copiedId === item.id ? <Check size={15} /> : <Copy size={15} />}{copiedId === item.id ? '已复制' : '复制 Markdown'}</button>
+                  <button type="button" className="baize-button-secondary" onClick={() => onStatusChange(item.id, view === 'inbox' ? 'archived' : 'inbox')}>{view === 'inbox' ? <Archive size={15} /> : <RotateCcw size={15} />}{view === 'inbox' ? '归档' : '恢复'}</button>
+                  <button type="button" className="baize-danger-button" onClick={() => { if (confirm('确定删除这条记录吗？内容会保留软删除标记。')) onDelete(item.id); }}><Trash2 size={15} />删除</button>
+                </div>
+              </>}
+            </article>)}</div>
+          </section>)}
+        </div>
+      </aside>
+    </div>
+  );
+}
+
+function InboxEditor({ initial, autoFocus, submitLabel, onSubmit, onCancel }: InboxEditorProps) {
+  const [captureKind, setCaptureKind] = useState<TechOsCaptureKind>(initial ? getTechOsCaptureKind(initial) : 'note');
+  const [title, setTitle] = useState(initial?.title || '');
+  const [content, setContent] = useState(initial?.content || '');
+  const [url, setUrl] = useState(initial?.url || '');
+  const [tags, setTags] = useState(getVisibleInboxTags(initial?.tags || []).join(', '));
+  const [message, setMessage] = useState('');
+  const [saved, setSaved] = useState(false);
+
+  const submit = (event: React.FormEvent) => {
+    event.preventDefault();
+    const error = onSubmit(applyTechOsCaptureKind({ type: captureKind === 'link' ? 'link' : 'text', title, content, url, tags: parseInboxTags(tags) }, captureKind));
+    if (error) {
+      setMessage(error);
+      setSaved(false);
+      return;
+    }
+    setMessage('已保存在本机 · ○ 未同步');
+    setSaved(true);
+    if (!initial) {
+      setTitle('');
+      setContent('');
+      setUrl('');
+      setTags('');
+    }
+  };
+
+  return <form onSubmit={submit} className="space-y-3">
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+      <CaptureKindButton kind="question" active={captureKind === 'question'} icon={<HelpCircle size={15} />} onClick={() => { setCaptureKind('question'); setMessage(''); }} />
+      <CaptureKindButton kind="idea" active={captureKind === 'idea'} icon={<Lightbulb size={15} />} onClick={() => { setCaptureKind('idea'); setMessage(''); }} />
+      <CaptureKindButton kind="note" active={captureKind === 'note'} icon={<StickyNote size={15} />} onClick={() => { setCaptureKind('note'); setMessage(''); }} />
+      <CaptureKindButton kind="link" active={captureKind === 'link'} icon={<LinkIcon size={15} />} onClick={() => { setCaptureKind('link'); setMessage(''); }} />
+    </div>
+    <input className="baize-input" value={title} onChange={event => setTitle(event.target.value)} placeholder="标题（可选）" />
+    {captureKind === 'link' && <input className="baize-input" value={url} onChange={event => setUrl(event.target.value)} placeholder="链接，例如 example.com/article" autoFocus={autoFocus} />}
+    <textarea id={autoFocus ? 'quick-capture-content' : undefined} className="baize-input min-h-28 resize-y" value={content} onChange={event => setContent(event.target.value)} placeholder={captureKind === 'link' ? '备注（可选）' : captureKind === 'question' ? '记录想弄清楚的问题……' : captureKind === 'idea' ? '记录刚出现的想法……' : '记录内容……'} autoFocus={autoFocus && captureKind !== 'link'} />
+    <input className="baize-input" value={tags} onChange={event => setTags(event.target.value)} placeholder="标签（可选，逗号分隔）" />
+    <div className="flex flex-wrap items-center justify-between gap-2"><p className={`text-xs ${saved ? 'text-[#315e5b] dark:text-[#b8cec7]' : 'text-[#985247] dark:text-[#e1a294]'}`}>{message}</p><div className="ml-auto flex gap-2">{onCancel && <button type="button" className="baize-button-secondary" onClick={onCancel}>取消</button>}<button type="submit" className="baize-button-primary"><Plus size={16} />{submitLabel}</button></div></div>
+  </form>;
+}
+
+function CaptureKindButton({ kind, active, icon, onClick }: { kind: TechOsCaptureKind; active: boolean; icon: React.ReactNode; onClick: () => void }) {
+  return <button type="button" className={active ? 'baize-button-primary' : 'baize-button-secondary'} onClick={onClick}>{icon}{TECH_OS_CAPTURE_LABELS[kind]}</button>;
+}
+
+function groupInboxItems(items: InboxItem[]): Array<{ label: string; items: InboxItem[] }> {
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+  const groups = new Map<string, InboxItem[]>();
+  for (const item of items) {
+    const date = new Date(item.updatedAt);
+    const label = sameLocalDay(date, today) ? '今天' : sameLocalDay(date, yesterday) ? '昨天' : date.toLocaleDateString('zh-CN');
+    groups.set(label, [...(groups.get(label) || []), item]);
+  }
+  return [...groups].map(([label, groupItems]) => ({ label, items: groupItems }));
+}
+
+function sameLocalDay(left: Date, right: Date): boolean {
+  return left.getFullYear() === right.getFullYear() && left.getMonth() === right.getMonth() && left.getDate() === right.getDate();
+}
+
+function itemTitle(item: InboxItem): string {
+  if (item.title) return item.title;
+  if (item.type === 'link' && item.url) return new URL(item.url).hostname;
+  return item.content?.split(/\r?\n/)[0].slice(0, 80) || '无标题记录';
+}
+
+function formatInboxTime(value: string): string {
+  return new Date(value).toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+}

@@ -1,5 +1,7 @@
 import type { SearchEngine } from '../types/navigation';
 
+export const TEXT_INDEX_URL = import.meta.env?.VITE_TEXT_INDEX_URL?.trim() || 'https://baizeone.top/text-index.json';
+
 export const searchEngines: SearchEngine[] = [
   { name: 'Google', url: 'https://www.google.com/search?q=', prefix: 'g', icon: 'G', placeholder: 'Google 搜索' },
   { name: 'Baidu', url: 'https://www.baidu.com/s?wd=', prefix: 'bd', icon: '度', placeholder: '百度搜索' },

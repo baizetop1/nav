@@ -4,6 +4,7 @@ dist-ssr
 *.local
 .DS_Store
 legacy_backup
+/src/generated/tech-os-index.json
 
 # Environment Variables
 .env

@@ -1,5 +1,6 @@
 import type { NavigationData } from '../types/navigation';
 import type { EncryptedNavigationBackup } from './encryptedBackup';
+import type { EncryptedInbox } from './inboxSync';
 import type { EncryptedNote } from './encryptedNote';
 
 export interface RepositoryTarget {
@@ -30,6 +31,7 @@ export interface WorkflowRun {
 
 const API_ROOT = 'https://api.github.com';
 const ENCRYPTED_BACKUP_PATH = 'data/navigation-backup.enc.json';
+const ENCRYPTED_INBOX_PATH = 'data/inbox.enc.json';
 const ENCRYPTED_NOTE_PATH = 'data/temp-note.enc.json';
 
 export function normalizeGithubToken(value: string): string {
@@ -71,6 +73,9 @@ async function githubRequest<T>(path: string, token: string, init?: RequestInit)
     }
     if (response.status === 404) {
       throw new Error('未找到目标仓库、分支或文件。请确认 Token 已授权此仓库，并检查 Owner、Repository 和 Branch。');
+    }
+    if (response.status === 409) {
+      throw new Error('远端数据在同步期间发生变化。已保留本机 Inbox，请重新同步。');
     }
     throw new Error(payload?.message || `GitHub API 请求失败 (${response.status})`);
   }
@@ -114,6 +119,47 @@ export async function saveEncryptedNote(target: RepositoryTarget, token: string,
         content: utf8ToBase64(`${JSON.stringify(payload, null, 2)}\n`),
         branch: target.branch,
         ...(existing ? { sha: existing.sha } : {}),
+      }),
+    },
+  );
+  return result.commit.html_url;
+}
+
+export async function getEncryptedInbox(target: RepositoryTarget, token: string): Promise<{ payload: EncryptedInbox; sha: string } | null> {
+  const normalizedToken = normalizeGithubToken(token);
+  const url = `${API_ROOT}/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${ENCRYPTED_INBOX_PATH}?ref=${encodeURIComponent(target.branch)}`;
+  const response = await fetch(url, { headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${normalizedToken}`, 'X-GitHub-Api-Version': '2022-11-28' } });
+  if (response.status === 404) return null;
+  if (!response.ok) {
+    if (response.status === 401) throw new Error('GitHub Token 无效或已过期。');
+    if (response.status === 403) throw new Error('Token 没有读取加密 Inbox 的权限。');
+    throw new Error(`读取加密 Inbox 失败 (${response.status})。`);
+  }
+  const file = await response.json() as { content: string; sha: string };
+  try {
+    const json = new TextDecoder().decode(Uint8Array.from(atob(file.content.replace(/\s/g, '')), character => character.charCodeAt(0)));
+    return { payload: JSON.parse(json) as EncryptedInbox, sha: file.sha };
+  } catch {
+    throw new Error('远端 Inbox 密文文件格式已损坏。');
+  }
+}
+
+export async function saveEncryptedInbox(
+  target: RepositoryTarget,
+  token: string,
+  payload: EncryptedInbox,
+  sha?: string,
+): Promise<string> {
+  const result = await githubRequest<{ commit: { html_url: string } }>(
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${ENCRYPTED_INBOX_PATH}`,
+    token,
+    {
+      method: 'PUT',
+      body: JSON.stringify({
+        message: 'Sync encrypted Inbox',
+        content: utf8ToBase64(`${JSON.stringify(payload, null, 2)}\n`),
+        branch: target.branch,
+        ...(sha ? { sha } : {}),
       }),
     },
   );

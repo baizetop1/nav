@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, Check, ChevronUp, Command, Copy, Download, ExternalLink, Languages, Lock, Menu, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, BrainCircuit, Check, ChevronUp, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Plus, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel, type AdminSection } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { CommandPalette, type CommandPaletteAction } from './components/CommandPalette';
 import { HotFeedPanel } from './components/HotFeedPanel';
+import { InboxPanel } from './components/inbox/InboxPanel';
 import { QrCodeModal } from './components/QrCodeModal';
 import { Sidebar } from './components/Sidebar';
 import { TempTextQrModal, TextTransferReceiveModal } from './components/TempTextTransferModals';
@@ -18,8 +19,14 @@ import { addTranslationHistory, loadTranslationHistory, TRANSLATION_HISTORY_KEY,
 import { parseTextTransferHash } from './lib/textTransfer';
 import { decryptNote, encryptNote } from './services/encryptedNote';
 import { getEncryptedNote, saveEncryptedNote } from './services/github';
+import { createInboxItem, loadInbox, normalizeInboxDraft, saveInbox, setInboxItemStatus, softDeleteInboxItem, updateInboxItem } from './services/inbox';
+import { createInboxSyncMeta, loadInboxSyncMeta, saveInboxSyncMeta, synchronizeInbox } from './services/inboxSync';
+import { loadCachedTextIndex, loadTextIndex } from './services/textNetwork';
+import type { InboxDraft, InboxItem, InboxItemStatus } from './types/inbox';
+import type { InboxSyncUiState } from './types/inbox-sync';
 import type { NavigationData, Site } from './types/navigation';
 import { loadSceneMode, SCENE_MODE_KEY, type SceneMode } from './types/scene';
+import type { TextNode } from './types/text-network';
 
 const DRAFT_KEY = 'nav_cms_draft';
 const TEMP_TEXT_KEY = 'nav_temp_text';
@@ -28,6 +35,8 @@ const TRANSLATION_LANGUAGES = [
   ['zh-CN', '简体中文'], ['en', '英语'], ['ja', '日语'], ['ko', '韩语'],
   ['fr', '法语'], ['de', '德语'], ['es', '西班牙语'], ['ru', '俄语'],
 ] as const;
+
+const TechOsWorkspace = lazy(() => import('./components/tech-os/TechOsWorkspace').then(module => ({ default: module.TechOsWorkspace })));
 
 function translationLanguageName(code: string): string {
   return TRANSLATION_LANGUAGES.find(([value]) => value === code)?.[1] || code;
@@ -60,6 +69,7 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [data, setData] = useState<NavigationData>(loadInitialData);
+  const [textNodes, setTextNodes] = useState<TextNode[]>(() => loadCachedTextIndex()?.nodes || []);
   const [activeCategory, setActiveCategory] = useState(defaultNavigationData.categories[0]?.id || '');
   const [search, setSearch] = useState('');
   const [isDark, setIsDark] = useState(false);
@@ -68,9 +78,15 @@ function App() {
   const [mainGradient, setMainGradient] = useState('');
   const [sidebarGradient, setSidebarGradient] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(window.location.hash === '#/admin');
+  const [isTechOsOpen, setIsTechOsOpen] = useState(window.location.hash === '#/tech-os');
   const [adminSection, setAdminSection] = useState<AdminSection>('content');
   const [isTempTextOpen, setIsTempTextOpen] = useState(false);
   const [isTempTextQrOpen, setIsTempTextQrOpen] = useState(false);
+  const [isInboxOpen, setIsInboxOpen] = useState(false);
+  const [captureRequest, setCaptureRequest] = useState(0);
+  const [inboxItems, setInboxItems] = useState<InboxItem[]>(loadInbox);
+  const [inboxSyncMeta, setInboxSyncMeta] = useState(loadInboxSyncMeta);
+  const [inboxSyncState, setInboxSyncState] = useState<InboxSyncUiState>({ phase: 'idle' });
   const [incomingTempText, setIncomingTempText] = useState<string | null>(null);
   const [tempText, setTempText] = useState(() => localStorage.getItem(TEMP_TEXT_KEY) || '');
   const [isCopied, setIsCopied] = useState(false);
@@ -122,6 +138,14 @@ function App() {
     localStorage.setItem(TEMP_TEXT_KEY, tempText);
   }, [tempText]);
 
+  useEffect(() => {
+    let cancelled = false;
+    void loadTextIndex().then(index => {
+      if (!cancelled && index) setTextNodes(index.nodes);
+    });
+    return () => { cancelled = true; };
+  }, []);
+
   const refreshLinkHealth = useCallback(async () => {
     setIsLinkHealthLoading(true);
     try {
@@ -160,7 +184,10 @@ function App() {
   }, [currentDate, data.sites]);
 
   useEffect(() => {
-    const handleHash = () => setIsAdminOpen(window.location.hash === '#/admin');
+    const handleHash = () => {
+      setIsAdminOpen(window.location.hash === '#/admin');
+      setIsTechOsOpen(window.location.hash === '#/tech-os');
+    };
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
   }, []);
@@ -294,11 +321,25 @@ function App() {
       ],
     });
   }, [data.categories, data.sites]);
+  const textFuse = useMemo(() => new Fuse(textNodes, {
+    threshold: 0.35,
+    ignoreLocation: true,
+    keys: [
+      { name: 'title', weight: 0.5 },
+      { name: 'tags', weight: 0.25 },
+      { name: 'category', weight: 0.15 },
+      { name: 'summary', weight: 0.1 },
+    ],
+  }), [textNodes]);
 
   const visibleSiteIds = useMemo(() => {
     if (!search.trim() || activeEngine) return new Set(data.sites.map(site => site.id));
     return new Set(fuse.search(search.trim()).map(result => result.item.id));
   }, [activeEngine, data.sites, fuse, search]);
+  const visibleTextNodes = useMemo(() => {
+    if (!search.trim() || activeEngine || searchUrl) return [];
+    return textFuse.search(search.trim(), { limit: 8 }).map(result => result.item);
+  }, [activeEngine, search, searchUrl, textFuse]);
 
   const toggleTheme = () => {
     const next = !isDark;
@@ -340,6 +381,16 @@ function App() {
   const closeAdmin = () => {
     history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
     setIsAdminOpen(false);
+  };
+
+  const openTechOs = () => {
+    window.location.hash = '/tech-os';
+    setIsTechOsOpen(true);
+  };
+
+  const closeTechOs = () => {
+    history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    setIsTechOsOpen(false);
   };
 
   const closeIncomingTransfer = () => {
@@ -433,12 +484,93 @@ function App() {
     element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     element?.focus();
   }, 80);
+  const openInbox = () => {
+    setIsTempTextOpen(false);
+    setIsInboxOpen(true);
+  };
+  const openQuickCapture = () => {
+    setIsTempTextOpen(false);
+    setIsInboxOpen(true);
+    setCaptureRequest(current => current + 1);
+  };
+  const replaceInboxItems = (nextItems: InboxItem[]): boolean => {
+    if (!saveInbox(nextItems)) return false;
+    setInboxItems(nextItems);
+    setInboxSyncState({ phase: 'idle', message: '本机内容已更新，等待主动同步。' });
+    return true;
+  };
+  const createLocalInboxItem = (draft: InboxDraft): string | null => {
+    if (inboxSyncState.phase === 'syncing') return '正在同步，请等待完成后再保存。';
+    try {
+      const item = createInboxItem(draft);
+      return replaceInboxItems([item, ...inboxItems]) ? null : '浏览器无法写入本地存储，请检查隐私或空间设置。';
+    } catch (error) {
+      return error instanceof Error ? error.message : '无法保存这条记录。';
+    }
+  };
+  const updateLocalInboxItem = (id: string, draft: InboxDraft): string | null => {
+    if (inboxSyncState.phase === 'syncing') return '正在同步，请等待完成后再编辑。';
+    try {
+      const normalized = normalizeInboxDraft(draft);
+      return replaceInboxItems(updateInboxItem(inboxItems, id, normalized)) ? null : '浏览器无法写入本地存储，请检查隐私或空间设置。';
+    } catch (error) {
+      return error instanceof Error ? error.message : '无法更新这条记录。';
+    }
+  };
+  const changeInboxItemStatus = (id: string, status: InboxItemStatus) => {
+    if (inboxSyncState.phase === 'syncing') {
+      alert('正在同步，请等待完成后再修改状态。');
+      return;
+    }
+    if (!replaceInboxItems(setInboxItemStatus(inboxItems, id, status))) alert('无法保存 Inbox 状态，请检查浏览器本地存储。');
+  };
+  const archiveInboxItems = (ids: string[]) => {
+    if (!ids.length) return;
+    if (inboxSyncState.phase === 'syncing') {
+      alert('Tech OS 已提交，但 Inbox 正在同步；请稍后手动归档来源记录。');
+      return;
+    }
+    const now = new Date();
+    const nextItems = ids.reduce((current, id) => setInboxItemStatus(current, id, 'archived', now), inboxItems);
+    if (!replaceInboxItems(nextItems)) alert('Tech OS 已提交，但无法保存 Inbox 归档状态；请检查浏览器本地存储。');
+  };
+  const deleteInboxItem = (id: string) => {
+    if (inboxSyncState.phase === 'syncing') {
+      alert('正在同步，请等待完成后再删除。');
+      return;
+    }
+    if (!replaceInboxItems(softDeleteInboxItem(inboxItems, id))) alert('无法保存删除标记，请检查浏览器本地存储。');
+  };
+  const syncInboxWithCloud = async (token: string, password: string): Promise<void> => {
+    setInboxSyncState({ phase: 'syncing', message: '正在读取远端密文并合并…' });
+    try {
+      const result = await synchronizeInbox(inboxItems, siteConfig.repository, token, password);
+      setInboxItems(result.items);
+      if (!saveInbox(result.items)) {
+        setInboxSyncState({ phase: 'error', message: '云端已同步，但浏览器无法持久化合并结果；请不要刷新并检查本地存储设置。', commitUrl: result.commitUrl });
+        return;
+      }
+      const meta = createInboxSyncMeta(result.items, result.syncedAt);
+      setInboxSyncMeta(meta);
+      if (!saveInboxSyncMeta(meta)) {
+        setInboxSyncState({ phase: 'error', message: 'Inbox 已同步，但本机无法保存同步标记；内容没有丢失。', commitUrl: result.commitUrl });
+        return;
+      }
+      setInboxSyncState({ phase: 'synced', message: `合并同步完成：${result.items.filter(item => !item.deletedAt).length} 条可见记录。`, commitUrl: result.commitUrl });
+    } catch (error) {
+      setInboxSyncState({ phase: 'error', message: error instanceof Error ? error.message : 'Inbox 同步失败；本机内容已保留。' });
+    }
+  };
+  const inboxCount = inboxItems.filter(item => !item.deletedAt && item.status === 'inbox').length;
   const commandActions: CommandPaletteAction[] = [
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
+    { id: 'quick-capture', title: '快速记录', description: '立即写入本机 Inbox', keywords: ['capture', '记录', '收件箱', '+'], icon: 'add', run: openQuickCapture },
+    { id: 'inbox', title: `打开 Inbox (${inboxCount})`, description: '查看、编辑、复制、归档本地记录', keywords: ['inbox', '收件箱', '稍后处理'], icon: 'inbox', run: openInbox },
     { id: 'translator', title: '打开快捷翻译', description: '输入文本并查看翻译历史', keywords: ['translate', '翻译', 'language'], icon: 'translate', run: () => { setIsTranslatorOpen(true); focusAfterRender('translation-input'); } },
     { id: 'temp-note', title: '打开临时文本', description: '编辑、复制或加密同步临时内容', keywords: ['note', '文本', '便签'], icon: 'note', run: () => { setIsTempTextOpen(true); focusAfterRender('temp-text-editor'); } },
     ...(tempText ? [{ id: 'temp-qr', title: '临时文本二维码传输', description: '生成接收链接或纯文本二维码', keywords: ['qr', '二维码', '传输'], icon: 'qr' as const, run: () => setIsTempTextQrOpen(true) }] : []),
     { id: 'hot-feed', title: '查看热榜聚合', description: '社会热榜和 GitHub 今日热门仓库', keywords: ['hot', '热榜', '新闻', 'github', 'trending'], icon: 'stats', run: () => focusAfterRender('hot-feed') },
+    { id: 'tech-os', title: '打开 Tech OS', description: '查看当前路线、Quest、Knowledge、Labs 与 Tech Map', keywords: ['tech os', '学习', '路线', 'quest', 'knowledge'], icon: 'study', run: openTechOs },
     { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: () => openAdmin('content') },
     { id: 'layout', title: '打开布局排序', description: '拖拽网站、分类和调整卡片尺寸', keywords: ['layout', '布局', '拖拽', '排序'], icon: 'settings', run: () => openAdmin('layout') },
     { id: 'stats', title: '查看访问统计', description: '查看 7/30 天趋势和网站排行', keywords: ['stats', '统计', '数据'], icon: 'stats', run: () => { openAdmin('insights'); focusAfterRender('stats-title'); } },
@@ -450,6 +582,21 @@ function App() {
     { id: 'github', title: '打开个人 GitHub', description: siteConfig.github, keywords: ['github', '代码'], icon: 'github', run: () => { window.open(siteConfig.github, '_blank', 'noopener,noreferrer'); } },
     ...(installPrompt ? [{ id: 'install', title: '安装白泽导航', description: '将当前站点安装到设备', keywords: ['pwa', '安装', 'install'], icon: 'install' as const, run: () => { void installApp(); } }] : []),
   ];
+
+  if (isTechOsOpen) {
+    return <Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-[#dce6e1] text-sm font-medium text-[#456b68] dark:bg-[#07191d] dark:text-[#d9ddd6]">正在载入 Tech OS…</div>}>
+      <TechOsWorkspace
+        isDark={isDark}
+        inboxCount={inboxCount}
+        inboxItems={inboxItems}
+        onToggleTheme={toggleTheme}
+        onOpenInbox={() => { closeTechOs(); openInbox(); }}
+        onArchiveInboxItems={archiveInboxItems}
+        onClose={closeTechOs}
+        repository={siteConfig.repository}
+      />
+    </Suspense>;
+  }
 
   return (
     <div className={`scene-${sceneMode} ${isWorkMode ? 'work-mode' : ''} ${isAdminOpen ? 'admin-open' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
@@ -494,7 +641,7 @@ function App() {
                     setSearch('');
                   }
                 }}
-                placeholder={activeEngine ? activeEngine.placeholder : "搜索网站、输入网址，或输入 'g ' 使用 Google"}
+                placeholder={activeEngine ? activeEngine.placeholder : "搜索网站和文章、输入网址，或输入 'g ' 使用 Google"}
                 className="baize-input py-3 pl-10 pr-16 shadow-[0_10px_30px_-20px_rgba(16,44,51,0.6)]"
               />
               <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-[#5f8f84]/20 bg-[#5f8f84]/8 px-2 py-0.5 text-xs text-[#6f8984] dark:border-[#c9a96b]/15 dark:bg-[#c9a96b]/8 dark:text-[#baa978] sm:block">/</kbd>
@@ -507,7 +654,16 @@ function App() {
         </div>
 
         <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
+          {visibleTextNodes.length > 0 && <section aria-labelledby="text-search-heading" className="scroll-mt-28">
+            <div className="category-heading baize-panel mb-4 inline-flex items-center gap-2 rounded-xl px-4 py-2">
+              <FileText size={17} className="text-[#4f8179] dark:text-[#c9a96b]" />
+              <h2 id="text-search-heading" className="text-lg font-bold tracking-wide text-[#173b41] dark:text-[#f4f1e8]">文章</h2>
+              <span className="ml-1 text-sm font-medium text-[#64807c] dark:text-[#9fb2ad]">({visibleTextNodes.length})</span>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">{visibleTextNodes.map(node => <a key={node.id} href={node.url} className="baize-panel group flex min-w-0 items-center gap-3 rounded-xl p-4 transition hover:-translate-y-0.5 hover:border-[#5f8f84]/40 dark:hover:border-[#c9a96b]/30"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]"><FileText size={18} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="mt-0.5 block truncate text-xs text-[#718986]">{[node.category, node.format, node.summary].filter(Boolean).join(' · ') || '公开文章'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793] transition group-hover:text-[#356b66] dark:group-hover:text-[#d2b775]" /></a>)}</div>
+          </section>}
           <div className="utility-launcher-row flex flex-wrap items-start gap-2 sm:gap-3">
+            <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openTechOs}><BrainCircuit size={17} />Tech OS</button>
             <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />
             <TemporaryVisitsPanel
               visits={temporaryVisitSummaries}
@@ -597,12 +753,18 @@ function App() {
               </section>
             );
           })}
-          {search.trim() && !activeEngine && visibleSiteIds.size === 0 && <div className="baize-panel rounded-2xl py-12 text-center text-[#64807c]"><p className="text-lg">{searchUrl ? '这是一个可访问的网址' : '云海茫茫，未找到相关网站'}</p><div className="mt-4 flex flex-wrap justify-center gap-3">{searchUrl && <button type="button" onClick={() => { visitTemporaryUrl(searchUrl); setSearch(''); }} className="baize-button-primary"><ExternalLink size={16} />访问并记录</button>}<button onClick={() => setSearch('')} className="font-medium text-[#356b66] hover:underline dark:text-[#d2b775]">清除搜索</button></div></div>}
+          {search.trim() && !activeEngine && visibleSiteIds.size === 0 && visibleTextNodes.length === 0 && <div className="baize-panel rounded-2xl py-12 text-center text-[#64807c]"><p className="text-lg">{searchUrl ? '这是一个可访问的网址' : '云海茫茫，未找到相关网站或文章'}</p><div className="mt-4 flex flex-wrap justify-center gap-3">{searchUrl && <button type="button" onClick={() => { visitTemporaryUrl(searchUrl); setSearch(''); }} className="baize-button-primary"><ExternalLink size={16} />访问并记录</button>}<button onClick={() => setSearch('')} className="font-medium text-[#356b66] hover:underline dark:text-[#d2b775]">清除搜索</button></div></div>}
           {activeEngine && <div className="baize-panel rounded-2xl p-6 text-center font-medium text-[#356b66] dark:text-[#d9c386]">按 Enter 使用 {activeEngine.name} 搜索</div>}
         </div>
       </main>
 
+      <nav className="fixed bottom-4 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 rounded-2xl border border-white/70 bg-[#f4f1e8]/90 p-2 shadow-xl backdrop-blur-xl lg:left-auto lg:right-6 lg:translate-x-0 dark:border-[#c9a96b]/15 dark:bg-[#102c33]/92" aria-label="Inbox 快捷入口">
+        <button type="button" className="baize-button-primary h-11 px-4" onClick={openQuickCapture} aria-label="快速记录"><Plus size={20} /><span className="hidden sm:inline">快速记录</span></button>
+        <button type="button" className="baize-button-secondary h-11 px-4" onClick={openInbox} aria-label={`打开 Inbox，${inboxCount} 条`}><InboxIcon size={19} /><span>Inbox</span>{inboxCount > 0 && <span className="rounded-full bg-[#356b66] px-2 py-0.5 text-[11px] text-white dark:bg-[#c9a96b] dark:text-[#102c33]">{inboxCount}</span>}</button>
+      </nav>
+
       {isAdminOpen && <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onRunBrowserLinkHealthCheck={runBrowserLinkHealthCheck} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
+      <InboxPanel open={isInboxOpen} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onSync={syncInboxWithCloud} onClose={() => setIsInboxOpen(false)} />
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">
@@ -637,7 +799,7 @@ function App() {
       <QrCodeModal site={qrSite} onClose={() => setQrSite(null)} />
       {isTempTextQrOpen && <TempTextQrModal text={tempText} onClose={() => setIsTempTextQrOpen(false)} />}
       {incomingTempText !== null && <TextTransferReceiveModal text={incomingTempText} currentText={tempText} onClose={closeIncomingTransfer} onAccept={() => { setTempText(incomingTempText); setIsTempTextOpen(true); closeIncomingTransfer(); }} />}
-      <CommandPalette open={isCommandPaletteOpen} sites={data.sites} categories={categories} actions={commandActions} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} />
+      <CommandPalette open={isCommandPaletteOpen} sites={data.sites} categories={categories} textNodes={textNodes} actions={commandActions} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} />
     </div>
   );
 }

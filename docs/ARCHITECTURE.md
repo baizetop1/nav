@@ -53,6 +53,8 @@
 - 未加入正式导航的临时网址按日记录访问次数，滚动保留 30 天，可从首页再次访问；记录包含在完整备份与加密云备份中。
 - 网站卡片可使用本地二维码库生成和下载 PNG，不依赖第三方二维码接口。
 - 临时文本支持纯文本二维码和 `#/transfer` 接收链接；接收端先预览再确认覆盖，载荷限制为 1200 个 UTF-8 字节，URL 片段不会发送到 Pages 服务器。
+- 多条 Inbox 以 `version: 1` 数据保存在 `localStorage.baize_inbox_v1`，支持文本、链接、归档和软删除；原有单份临时文本会复制迁移一次但继续独立保留。用户主动同步时，浏览器读取 `data/inbox.enc.json`，解密后按 ID/`updatedAt` 合并，并将 tombstone 与正文一起重新加密提交；本机只保存不含秘密的逐条同步版本标记。
+- Tech OS 以仓库根目录 `tech-os/` 为规范来源，使用 Markdown + 扁平 Front Matter 表达 Vision、Route、Quest、Question、Knowledge、Lab、Project 和 Tech Map；T2 已提供 Viewer 与独立 Repository Adapter，T3 复用既有 Inbox 完成移动 Capture 接入。
 
 ### 2.3 尚未实现
 
@@ -65,16 +67,17 @@
 .
 ├── .github/workflows/       # GitHub Pages 构建、发布与每日链接检查
 ├── public/                  # Pages 静态文件、链接健康报告与热榜报告
-├── scripts/                 # 加密、备份、书签解析和链接检查自检脚本
+├── scripts/                 # 加密、备份、内容检查及 Tech OS 校验/自检脚本
 ├── src/
-│   ├── components/          # 卡片、侧边栏和 CMS 管理面板
+│   ├── components/          # 卡片、侧边栏、Inbox 和 CMS 管理面板
 │   ├── data/                # JSON 数据、站点配置和数据入口
 │   ├── lib/                 # className、书签解析与备份校验工具
-│   ├── services/            # GitHub 发布、临时文本与完整备份加密
+│   ├── services/            # GitHub 发布、文本索引、Inbox、合并同步与加密服务
 │   ├── types/               # 导航数据类型
 │   ├── App.tsx              # 页面状态、搜索、主题和草稿逻辑
 │   ├── index.css            # Tailwind 与全局样式
 │   └── main.tsx             # React 入口
+├── tech-os/                 # Tech OS Markdown 规范数据、状态、模板和工作流说明
 ├── config.yml               # 旧版数据源，当前 React 应用不读取
 ├── modern.css               # 旧版样式，当前 React 入口不引用
 ├── tags.js                  # 旧版脚本，当前 React 入口不引用
@@ -83,6 +86,158 @@
 ```
 
 `config.yml`、`modern.css` 和 `tags.js` 属于旧实现遗留文件。删除前应先确认不再用于其他发布流程。
+
+### 2.5 Tech OS T1 边界
+
+T1 是独立的数据层，不改变导航 CMS 的运行时数据源：
+
+- `tech-os/state.yml` 保存 schema 版本和少量当前指针，实体关系一律引用永久 ID，不引用相对路径。
+- `tech-os/templates/` 是所有实体的可复制模板；真实对象按状态和领域放入固定目录。
+- `scripts/check-tech-os.mjs` 检查目录、Front Matter、关系、状态、证据等级和唯一 Main Route；`scripts/tech-os-selfcheck.mjs` 在临时副本中验证关键失败场景。
+- `tech-os/` 不位于 `src/` 或 `public/`，canonical Markdown 不会被整体复制；T2 构建期生成受控前端索引。
+- T2 Dashboard/Viewer 与独立 Repository Adapter 已实现；T3 通过标签映射复用既有 Inbox，并把用户明确选择的记录转换为 Tech OS Inbox Item 草稿。
+
+### 2.6 Tech OS T2 只读工作台
+
+`/#/tech-os` 沿用现有 Hash URL，不增加路由依赖。数据流固定为：
+
+```text
+tech-os/*.md
+    ↓ T1 validator
+scripts/build-tech-os-index.mjs
+    ↓
+src/generated/tech-os-index.json（忽略提交）
+    ↓ 按需加载
+TechOsWorkspace
+```
+
+- `predev` 和 `prebuild` 都会重新生成索引；schema 或关系错误会中止启动/构建。
+- 工作台提供 Dashboard、Main Route、Quest Viewer、Knowledge Viewer、Labs、Projects、Tech Map、Route Backlog 和既有 Inbox 入口。
+- Markdown 使用受控 React 节点渲染，不执行原始 HTML，也不使用 `dangerouslySetInnerHTML`。
+- T2 chunk 与首页分离；访问 `/#/tech-os` 时才加载工作台和索引。
+- Dashboard/Viewer 本身不修改数据；独立 Repository 页面只允许编辑受管源文件的内存草稿，并在完整校验和用户确认后提交。
+- 前端索引会成为 Pages 构建产物的一部分；不适合公开的 Tech OS 内容不得部署到公开站点，Repository Adapter 不改变这一事实。
+
+### 2.7 Tech OS Repository Adapter
+
+Repository Adapter 与导航发布、加密备份和 Inbox 同步完全分离，只管理 `tech-os/state.yml` 与实体 Markdown。templates、README、导航 JSON 和 `data/*.enc.json` 不在写入范围。
+
+```text
+读取 branch head
+    ↓
+读取 commit/tree 和 tech-os blobs
+    ↓
+构建版本 ↔ 内存草稿 ↔ 远端基线逐文件比较
+    ↓
+浏览器端完整草稿校验
+    ↓ 用户确认短语 + confirm
+重新读取 branch head
+    ↓ 未变化
+创建 blobs → tree → commit
+    ↓
+PATCH branch ref（force: false）
+```
+
+- Token 与原始 Markdown 草稿只保存在当前 React state，不进入 LocalStorage、备份或日志。
+- 每个文件限制 256 KiB，总量限制 2 MiB，最多 500 个文件；目录树截断时停止。
+- 单次提交涉及的所有文件进入同一个 Git commit。
+- 写前 head 不同或 ref 更新返回 409/422 时视为冲突，停止并要求重新读取。
+- 不支持删除文件。远端独有文件可以读取、采用为草稿和继续编辑，但不能被静默删除。
+- Repository 页面不自动设置 Main Route、不升级 Knowledge、不声明实验完成；这些不变量由草稿校验继续约束。
+
+### 2.8 Tech OS T3 Capture Adapter
+
+T3 不修改 `InboxStore version: 1`，也不建立新的本地或云端数据文件：
+
+```text
+Mobile Quick Capture
+    ↓ Question / Idea / Note / Link
+baize_inbox_v1 + tech-os/* 类型标签
+    ↓ 既有 AES-256-GCM 合并同步
+PC Tech OS Inbox
+    ↓ 用户选择“加入 Repository 草稿”
+tech-os/inbox/INBOX-….md（React 内存）
+    ↓ 远端读取 + diff + 完整校验 + 人工确认
+Repository 原子 commit
+    ↓ 成功后
+来源 Inbox Item → archived
+```
+
+- Question / Idea / Note 底层仍是 `type: text`，Link 仍是 `type: link`；内部标签不会进入“复制 Markdown”。
+- 旧文本没有类型标签时按 Note 展示，不重写本机数据；旧链接按 Link 展示。
+- Tech OS Inbox Item 使用来源 Inbox UUID 派生稳定数字 ID，并同时保存 `origin_id` 与 `source_inbox_id`，重复处理会命中同一路径。
+- Adapter 只生成待处理 Inbox Item，不自动创建 Question、Knowledge、Project 或 Route Seed，也不改变 Main Route。
+- Repository 提交、远端读取或本机归档任一步失败都不会删除来源记录；删除仍只使用既有 tombstone 语义。
+- Inbox 密文是私有数据，但一旦转入 `tech-os/` 就成为仓库明文，并可能进入公开 Pages 投影；UI 在处理前明确显示该边界。
+
+### 2.9 Tech OS T4.1 Rules-First Learning Engine
+
+Learning Engine 是 `TechOsIndex + InboxItem[] → LearningEngineResult` 的纯函数，不读取网络、不写 LocalStorage、不调用 Repository Adapter：
+
+```text
+state.yml mode + Current Quest
+显式 entity IDs + Markdown 固定章节
+未归档 Inbox Capture
+    ↓ 纯规则、确定性排序
+Next Action + Alternatives
+Open Questions + Quest Suggestions
+Knowledge Connections + Route Seed Signals
+    ↓ 只读 UI
+用户查看来源并自行决定
+```
+
+- Explore 优先 Current Quest 的“下一步”；Lab 优先关联当前路线的 planned/running Lab；Keep Alive 过滤掉 focused 动作，只保留 small 动作。
+- 每条动作包含 `reason`、`sourceIds`、effort 和确定性 priority；相同输入必须得到相同输出，服务不得修改输入对象。
+- Open Questions 只读取 `open` / `deferred` Question。Quest Suggestions 只读取 Main Route 显式关联的 backlog Quest，并按 `order` 排序。
+- Knowledge Connections 只解析 `quest_ids`、`question_ids`、`lab_ids`、`project_ids` 与 `related_knowledge_ids`，不进行标题相似度或 AI 臆测。
+- Route Seed Collector 只收集显式信号，并跳过已经通过 `route_seed_id`、Seed `origin_id` 或 `related_question_ids` 覆盖的 Question。
+- T4.1 不创建文件、不写 Repository、不生成 Candidate、不声明完成、不切换 Main Route。相关信号聚合与 Candidate 草稿属于 T4.2。
+
+### 2.10 Tech OS T4.2 Route Candidate Generator
+
+Candidate Generator 仍是确定性纯函数。它读取构建期 Route Seed 与 T4.1 Signal，只使用显式 tags 建立连接分量：
+
+```text
+Saved Route Seeds + Route Seed Signals
+                ↓ 共享具体标签（至少 2 条输入）
+        RouteCandidateGroup[]
+                ↓ 用户编辑 Name / Why / Outcome / Outline
+        candidate Markdown 内存草稿
+                ↓ 候选专属确认短语
+        Repository Adapter
+                ↓ 完整校验 + 远端比较 + 提交短语 + 二次确认
+        可选原子 commit
+```
+
+- `internet`、`system`、`architecture` 等宽泛领域标签不会单独建立聚合关系，避免把同一大领域的无关问题合并。
+- 连通分量不足两条输入、没有共同具体标签、没有可验证 Tech OS 来源对象时不生成候选。
+- Candidate ID 从已有 `RS-XXX` 最大编号后确定性递增；路径固定为 `tech-os/routes/candidates/RS-XXX.md`，kind 仍为 `route-seed`，status 为 `candidate`。
+- 默认来源、理由、路线节点与预期结果都可编辑；Front Matter 字符串使用安全序列化，生成后立即接受完整 schema、关系、路径与 Main Route 校验。
+- UI 不写 LocalStorage，不直接调用 GitHub。输入 `STAGE RS-XXX` 只把文件加入 React 内存草稿；Repository 仍执行独立的 `COMMIT TECH-OS` 与浏览器确认。
+- 如果聚合输入来自私有 Inbox，编辑器在草稿生成前明确提示：标题进入 Repository 后会成为明文并可能出现在公开 Pages 投影。
+- T4.2 本身不执行 Candidate 决策、生成 Review 或排名 Next Route；这些职责由后续 Route Engine 阶段承担，且任何阶段都不自动修改 `state.yml`。
+
+### 2.11 Tech OS T4.3–T4.6 Route Lifecycle
+
+Route Engine 延续纯函数派生与 Repository 最终写入边界：
+
+```text
+Candidate ──人工决定──> Candidate 更新草稿（保留同一路径）
+Main Route + Quests ──completed 或 ≥80%──> Route Review 草稿
+Review Ready + Candidate Groups/Seeds ──确定性排名──> 2–4 条 Backlog Route 建议
+Manual Topic/Why/Outcome ──规则模板──> Backlog Route 草稿
+                                  ↓
+                         Repository Adapter
+                                  ↓
+                    完整校验 + 远端比较 + 人工提交
+```
+
+- T4.3 的 Save for Later 保持 `candidate`；Archive 与 Not Interested 改为 `archived` 并写入决定、理由和日期。Repository 第一版不支持删除，所以始终保留原 Candidate 文件。
+- T4.4 只在主路线已完成或显式 Quest 完成率达到 80% 时生成 `route-review`；Review 收集的证据只来自显式关系和真实状态，planned Lab/Project 不算完成证据。
+- T4.5 依赖 Review 门槛，输出最多四条带来源解释的建议。当前 Review 未就绪时返回空列表，而不是提前诱导切换路线。
+- T4.6 使用主题规则与已有 Tech Map 生成可编辑骨架；规则只能建议节点，不能声明节点已掌握。
+- 推荐与手工生成的 Route 均固定为 `status: backlog`、`main: false`，不创建 Active Quest，也不修改 `state.yml`。
+- UI 中的 `DECIDE ...` / `STAGE ...` 只把草稿加入 React 内存；Repository 仍独立执行 schema 校验、分支 head 检查、`COMMIT TECH-OS` 与浏览器二次确认。
 
 ## 3. 目标架构
 
@@ -274,6 +429,8 @@ gh-pages 发布
 
 完整云备份沿用运行时 PAT，但在浏览器中完成 AES-256-GCM 加密后才写入 `data/navigation-backup.enc.json`。加密密码只存在于当前页面内存，GitHub Token、密码和明文备份都不会进入仓库。密码遗失后无法恢复密文内容。
 
+Inbox 同步独立使用 `data/inbox.enc.json`，不改变 `NavigationBackup v1`。同步顺序固定为“读取远端 → 解密校验 → 按 ID 合并 → 加密 → 使用已读取 SHA 提交”；任一步失败都不清空本机数据。并发更新返回 409 时停止，不 force 覆盖。软删除项继续保留在密文中，避免另一设备把旧版本恢复出来。
+
 临时文本二维码是短距传输而不是安全存储。其 Base64URL 编码不属于加密，任何获得二维码或传输链接的人都可以读取内容，因此敏感文本仍应使用密码加密同步。
 
 标准 GitHub OAuth Web Flow 需要安全保存 client secret 并处理回调，纯 GitHub Pages 无法安全完成。若以后采用 OAuth，需要额外的可信后端或 Serverless Function，此时系统将不再是严格意义上的“仅 GitHub Pages、零后端”架构。
@@ -371,6 +528,7 @@ name > tags > category > description
 ## 13. 关键决策摘要
 
 - GitHub 仓库中的 JSON 是导航发布数据的唯一事实来源；LocalStorage 保存草稿、场景偏好、翻译历史、90 天正式网站统计和 30 天临时网址统计，这些本机数据可通过加密完整备份跨设备迁移。
+- Inbox 是独立的本地优先数据域：LocalStorage 负责立即保存，`data/inbox.enc.json` 负责用户主动触发的加密合并同步；它不进入公开文本索引或导航覆盖式备份。
 - 前端构建变量不是秘密，不能用于安全认证或保存 GitHub Token。
 - 布局同时支持稳定排序和可选的四列自由桌面坐标，窄屏回落为响应式流式布局。
 - 标签先由网站数据聚合，减少重复维护。
