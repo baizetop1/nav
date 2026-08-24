@@ -54,6 +54,7 @@
 - 网站卡片可使用本地二维码库生成和下载 PNG，不依赖第三方二维码接口。
 - 临时文本支持纯文本二维码和 `#/transfer` 接收链接；接收端先预览再确认覆盖，载荷限制为 1200 个 UTF-8 字节，URL 片段不会发送到 Pages 服务器。
 - 多条 Inbox 以 `version: 1` 数据保存在 `localStorage.baize_inbox_v1`，支持文本、链接、归档和软删除；原有单份临时文本会复制迁移一次但继续独立保留。用户主动同步时，浏览器读取 `data/inbox.enc.json`，解密后按 ID/`updatedAt` 合并，并将 tombstone 与正文一起重新加密提交；本机只保存不含秘密的逐条同步版本标记。
+- 博客公开索引兼容 version 1 和 version 2。version 2 在既有 `nodes` 外增加 `related` 与 `wiki` edges；Nav 校验边的端点、类型、重复和自我关联，但全局搜索继续只读取公开节点 metadata，因此 Phase E/F 不把文章正文下载到 Nav。
 - Tech OS 以仓库根目录 `tech-os/` 为规范来源，使用 Markdown + 扁平 Front Matter 表达 Vision、Route、Quest、Question、Knowledge、Lab、Project 和 Tech Map；T2 已提供 Viewer 与独立 Repository Adapter，T3 复用既有 Inbox 完成移动 Capture 接入。
 
 ### 2.3 尚未实现

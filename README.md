@@ -61,7 +61,7 @@ src/data/layout.json
 
 站点信息和搜索引擎配置位于 `src/data/config.ts`。TypeScript 类型位于 `src/types/navigation.ts`。
 
-博客索引地址集中配置在 `src/data/config.ts` 的 `TEXT_INDEX_URL`，本地联调时可以使用临时的 `VITE_TEXT_INDEX_URL` 覆盖。远端索引通过 `src/services/textNetwork.ts` 做基础 schema 校验，并缓存到 `localStorage.baize_text_index_v1`；缓存只包含博客公开 metadata，不包含文章正文。可以单独验证索引解析与离线回退：
+博客索引地址集中配置在 `src/data/config.ts` 的 `TEXT_INDEX_URL`，本地联调时可以使用临时的 `VITE_TEXT_INDEX_URL` 覆盖。远端索引通过 `src/services/textNetwork.ts` 做基础 schema 校验，并缓存到 `localStorage.baize_text_index_v1`；缓存只包含博客公开 metadata，不包含文章正文。解析器兼容 Phase A 的 version 1 与 Phase E/F 的 version 2，version 2 会额外校验 `related` / `wiki` edges、悬空关系、自我关联和重复关系；搜索仍只消费 nodes，不下载正文。可以单独验证索引解析与离线回退：
 
 ```bash
 npm run test:text-network

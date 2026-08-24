@@ -27,7 +27,21 @@ const index = {
 };
 
 assert.deepEqual(parseTextIndex(index), index);
+const v2Index = {
+  ...index,
+  version: 2,
+  nodes: [...index.nodes, { ...index.nodes[0], id: 'post:digital-garden', slug: 'digital-garden', title: '数字花园', url: 'https://baizeone.top/p/digital-garden/' }],
+  edges: [
+    { from: 'post:text-network', to: 'post:digital-garden', type: 'related' },
+    { from: 'post:digital-garden', to: 'post:text-network', type: 'wiki' },
+  ],
+};
+assert.deepEqual(parseTextIndex(v2Index), v2Index);
 assert.equal(parseTextIndex({ ...index, version: 2 }), null);
+assert.equal(parseTextIndex({ ...v2Index, version: 3 }), null);
+assert.equal(parseTextIndex({ ...v2Index, edges: [{ from: 'post:text-network', to: 'post:missing', type: 'related' }] }), null);
+assert.equal(parseTextIndex({ ...v2Index, edges: [{ from: 'post:text-network', to: 'post:text-network', type: 'related' }] }), null);
+assert.equal(parseTextIndex({ ...v2Index, edges: [{ from: 'post:text-network', to: 'post:digital-garden', type: 'unknown' }] }), null);
 assert.equal(parseTextIndex({ ...index, nodes: [...index.nodes, index.nodes[0]] }), null);
 assert.equal(parseTextIndex({ ...index, nodes: [{ ...index.nodes[0], url: 'javascript:alert(1)' }] }), null);
 
@@ -41,6 +55,14 @@ const remote = await loadTextIndex({
 });
 assert.deepEqual(remote, index);
 assert.deepEqual(loadCachedTextIndex(storage), index);
+
+const v2Storage = new MemoryStorage();
+const remoteV2 = await loadTextIndex({
+  storage: v2Storage,
+  fetcher: async () => new Response(JSON.stringify(v2Index), { status: 200 }),
+});
+assert.deepEqual(remoteV2, v2Index);
+assert.deepEqual(loadCachedTextIndex(v2Storage), v2Index);
 
 const originalWarn = console.warn;
 console.warn = () => undefined;

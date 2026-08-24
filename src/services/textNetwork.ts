@@ -1,5 +1,5 @@
 import { TEXT_INDEX_URL } from '../data/config.ts';
-import type { TextIndex, TextNode, TextNodeType } from '../types/text-network.ts';
+import type { TextEdge, TextIndex, TextNode, TextNodeType } from '../types/text-network.ts';
 
 export const TEXT_INDEX_CACHE_KEY = 'baize_text_index_v1';
 
@@ -20,12 +20,20 @@ const optionalStringFields = ['slug', 'summary', 'category', 'format', 'createdA
 export function parseTextIndex(value: unknown): TextIndex | null {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
   const candidate = value as Partial<TextIndex>;
-  if (candidate.version !== 1 || typeof candidate.generatedAt !== 'string' || Number.isNaN(Date.parse(candidate.generatedAt)) || !Array.isArray(candidate.nodes)) return null;
+  if ((candidate.version !== 1 && candidate.version !== 2) || typeof candidate.generatedAt !== 'string' || Number.isNaN(Date.parse(candidate.generatedAt)) || !Array.isArray(candidate.nodes)) return null;
+  if (candidate.version === 2 && !Array.isArray(candidate.edges)) return null;
 
   const seenIds = new Set<string>();
   for (const node of candidate.nodes) {
     if (!isTextNode(node) || seenIds.has(node.id)) return null;
     seenIds.add(node.id);
+  }
+  const seenEdges = new Set<string>();
+  for (const edge of candidate.edges || []) {
+    if (!isTextEdge(edge) || !seenIds.has(edge.from) || !seenIds.has(edge.to) || edge.from === edge.to) return null;
+    const key = `${edge.type}:${edge.from}:${edge.to}`;
+    if (seenEdges.has(key)) return null;
+    seenEdges.add(key);
   }
   return candidate as TextIndex;
 }
@@ -75,6 +83,12 @@ function isTextNode(value: unknown): value is TextNode {
     !Array.isArray(node.related) || !node.related.every(item => typeof item === 'string')
   ) return false;
   return optionalStringFields.every(field => node[field] === undefined || typeof node[field] === 'string');
+}
+
+function isTextEdge(value: unknown): value is TextEdge {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
+  const edge = value as Partial<TextEdge>;
+  return (edge.type === 'related' || edge.type === 'wiki') && typeof edge.from === 'string' && typeof edge.to === 'string';
 }
 
 function isHttpUrl(value: string): boolean {

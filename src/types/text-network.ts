@@ -15,8 +15,15 @@ export interface TextNode {
   updatedAt?: string;
 }
 
+export interface TextEdge {
+  from: string;
+  to: string;
+  type: 'related' | 'wiki';
+}
+
 export interface TextIndex {
-  version: 1;
+  version: 1 | 2;
   generatedAt: string;
   nodes: TextNode[];
+  edges?: TextEdge[];
 }
