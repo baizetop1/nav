@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import {
-  ArrowLeft, ArrowRight, BookOpen, BrainCircuit, Compass, Database, FlaskConical,
+  ArrowLeft, ArrowRight, BookOpen, BrainCircuit, ChevronDown, Compass, Database, FlaskConical,
   FolderKanban, GitCompareArrows, GitFork, HelpCircle, Inbox, LayoutDashboard, ListTree, Map as MapIcon, Menu, Milestone, Moon, Network, Sparkles, Sun, X,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
@@ -41,35 +41,36 @@ interface TechOsWorkspaceProps {
 }
 
 const NAV_ITEMS: Array<{ id: WorkspaceView; label: string; icon: LucideIcon }> = [
-  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { id: 'learning', label: 'Learning Engine', icon: Sparkles },
-  { id: 'route-engine', label: 'Route Engine', icon: GitFork },
-  { id: 'route', label: 'Main Route', icon: Milestone },
-  { id: 'quest', label: 'Quests', icon: HelpCircle },
-  { id: 'inbox', label: 'Inbox', icon: Inbox },
-  { id: 'knowledge', label: 'Knowledge', icon: BookOpen },
-  { id: 'lab', label: 'Labs', icon: FlaskConical },
-  { id: 'project', label: 'Projects', icon: FolderKanban },
-  { id: 'map', label: 'Tech Map', icon: MapIcon },
-  { id: 'backlog', label: 'Route Backlog', icon: ListTree },
-  { id: 'repository', label: 'Repository', icon: GitCompareArrows },
+  { id: 'dashboard', label: '总览', icon: LayoutDashboard },
+  { id: 'learning', label: '学习引擎', icon: Sparkles },
+  { id: 'route-engine', label: '路线引擎', icon: GitFork },
+  { id: 'route', label: '主路线', icon: Milestone },
+  { id: 'quest', label: '核心问题', icon: HelpCircle },
+  { id: 'inbox', label: '收件箱', icon: Inbox },
+  { id: 'knowledge', label: '知识库', icon: BookOpen },
+  { id: 'lab', label: '实验', icon: FlaskConical },
+  { id: 'project', label: '项目', icon: FolderKanban },
+  { id: 'map', label: '技术地图', icon: MapIcon },
+  { id: 'backlog', label: '路线储备', icon: ListTree },
+  { id: 'repository', label: '仓库', icon: GitCompareArrows },
 ];
 
 const KIND_LABELS: Record<TechOsKind, string> = {
-  vision: 'Vision', route: 'Route', 'route-seed': 'Route Seed', 'route-review': 'Route Review', quest: 'Quest', question: 'Question', knowledge: 'Knowledge',
-  lab: 'Lab', project: 'Project', 'tech-map': 'Tech Map', 'inbox-item': 'Inbox',
+  vision: '愿景', route: '路线', 'route-seed': '路线种子', 'route-review': '路线复盘', quest: '核心问题', question: '问题', knowledge: '知识',
+  lab: '实验', project: '项目', 'tech-map': '技术地图', 'inbox-item': '收件箱',
 };
 
 const MODE_LABELS: Record<TechOsMode, { label: string; detail: string }> = {
-  explore: { label: 'Explore', detail: '解释、连接与产生问题' },
-  lab: { label: 'Lab', detail: '动手验证并保存证据' },
-  'keep-alive': { label: 'Keep Alive', detail: '只推进一个轻量动作' },
+  explore: { label: '探索', detail: '解释、连接与产生问题' },
+  lab: { label: '实验', detail: '动手验证并保存证据' },
+  'keep-alive': { label: '保持活跃', detail: '只推进一个轻量动作' },
 };
 
 export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme, onOpenInbox, onArchiveInboxItems, onClose, repository }: TechOsWorkspaceProps) {
   const [activeView, setActiveView] = useState<WorkspaceView>('dashboard');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [focusedId, setFocusedId] = useState(techOsIndex.state.currentQuestId);
+  const [sessionMode, setSessionMode] = useState<TechOsMode>(techOsIndex.state.mode);
   const [captureDrafts, setCaptureDrafts] = useState<TechOsCaptureDraft[]>([]);
   const [candidateDrafts, setCandidateDrafts] = useState<RouteCandidateDraft[]>([]);
   const [routeEngineDrafts, setRouteEngineDrafts] = useState<RouteEngineStageDraft[]>([]);
@@ -81,11 +82,12 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
   const progress = routeQuests.length ? Math.round(completedQuests / routeQuests.length * 100) : 0;
   const indexedInboxIds = useMemo(() => new Set(getTechOsEntities('inbox-item').flatMap(entity => [getTechOsString(entity, 'source_inbox_id'), getTechOsString(entity, 'origin_id')]).filter(Boolean)), []);
   const captureSourceFiles = useMemo(() => captureDrafts.map(capture => capture.file), [captureDrafts]);
-  const learningEngine = useMemo(() => buildTechOsLearningEngine(techOsIndex, inboxItems), [inboxItems]);
-  const candidateGroups = useMemo(() => buildRouteCandidateGroups(techOsIndex, learningEngine.routeSeedSignals), [learningEngine.routeSeedSignals]);
+  const sessionIndex = useMemo(() => ({ ...techOsIndex, state: { ...techOsIndex.state, mode: sessionMode } }), [sessionMode]);
+  const learningEngine = useMemo(() => buildTechOsLearningEngine(sessionIndex, inboxItems), [inboxItems, sessionIndex]);
+  const candidateGroups = useMemo(() => buildRouteCandidateGroups(sessionIndex, learningEngine.routeSeedSignals), [learningEngine.routeSeedSignals, sessionIndex]);
   const candidateSourceFiles = useMemo(() => candidateDrafts.map(candidate => candidate.file), [candidateDrafts]);
-  const completionReview = useMemo(() => buildRouteCompletionReview(techOsIndex), []);
-  const nextRouteRecommendations = useMemo(() => buildNextRouteRecommendations(techOsIndex, candidateGroups, completionReview), [candidateGroups, completionReview]);
+  const completionReview = useMemo(() => buildRouteCompletionReview(sessionIndex), [sessionIndex]);
+  const nextRouteRecommendations = useMemo(() => buildNextRouteRecommendations(sessionIndex, candidateGroups, completionReview), [candidateGroups, completionReview, sessionIndex]);
   const routeEngineSourceFiles = useMemo(() => routeEngineDrafts.map(draft => draft.file), [routeEngineDrafts]);
   const repositoryDraftFiles = useMemo(() => [...captureSourceFiles, ...candidateSourceFiles, ...routeEngineSourceFiles], [captureSourceFiles, candidateSourceFiles, routeEngineSourceFiles]);
   const stagedCandidatePaths = useMemo(() => new Set(candidateSourceFiles.map(file => file.path)), [candidateSourceFiles]);
@@ -163,7 +165,7 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
       <div className="mb-7 flex items-center justify-between">
         <button type="button" onClick={() => navigate('dashboard')} className="flex items-center gap-3 text-left">
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#356b66] text-white shadow-lg dark:bg-[#c9a96b] dark:text-[#102c33]"><BrainCircuit size={23} /></span>
-          <span><strong className="block text-lg tracking-[0.12em]">TECH OS</strong><span className="text-xs text-[#718986]">Route Workstation · T4.6</span></span>
+          <span><strong className="block text-lg tracking-[0.12em]">TECH OS</strong><span className="text-xs text-[#718986]">路线工作台 · T4.6</span></span>
         </button>
         <button type="button" className="baize-icon-button lg:hidden" onClick={() => setMobileNavOpen(false)} aria-label="关闭导航"><X size={20} /></button>
       </div>
@@ -174,7 +176,7 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
         })}
       </nav>
       <div className="mt-auto space-y-2 border-t border-[#5f8f84]/15 pt-4 dark:border-[#c9a96b]/12">
-        <p className="px-3 text-[11px] leading-5 text-[#718986]">构建投影只读 · 源数据更新于 {techOsIndex.sourceUpdated}<br />Candidate 仅在确认后加入内存草稿。</p>
+        <p className="px-3 text-[11px] leading-5 text-[#718986]">构建投影只读 · 源数据更新于 {techOsIndex.sourceUpdated}<br />候选路线仅在确认后加入内存草稿。</p>
         <button type="button" onClick={onClose} className="baize-button-secondary w-full"><ArrowLeft size={16} />返回导航</button>
       </div>
     </aside>
@@ -186,22 +188,28 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
         <div className="mx-auto flex max-w-7xl items-center gap-3">
           <button type="button" className="baize-icon-button lg:hidden" onClick={() => setMobileNavOpen(true)} aria-label="打开 Tech OS 导航"><Menu size={21} /></button>
           <div className="min-w-0 flex-1"><p className="truncate text-xs font-semibold uppercase tracking-[0.16em] text-[#64807c] dark:text-[#b7a36f]">{NAV_ITEMS.find(item => item.id === activeView)?.label}</p><h1 className="truncate text-lg font-bold">{activeView === 'dashboard' ? vision?.title : getViewTitle(activeView)}</h1></div>
-          <span className="hidden rounded-full border border-[#5f8f84]/15 px-3 py-1 text-xs text-[#64807c] dark:border-[#c9a96b]/15 dark:text-[#b8c6c1] sm:inline">{MODE_LABELS[techOsIndex.state.mode].label}</span>
+          <label className="relative hidden shrink-0 sm:block" title="只切换当前工作台会话；不会修改 state.yml">
+            <span className="sr-only">当前工作模式</span>
+            <select aria-label="当前工作模式" value={sessionMode} onChange={event => setSessionMode(event.target.value as TechOsMode)} className="appearance-none rounded-full border border-[#5f8f84]/20 bg-transparent py-1 pl-3 pr-8 text-xs font-medium text-[#64807c] outline-none transition hover:border-[#5f8f84]/40 focus:border-[#356b66] dark:border-[#c9a96b]/20 dark:text-[#b8c6c1] dark:focus:border-[#c9a96b]">
+              {Object.entries(MODE_LABELS).map(([mode, config]) => <option key={mode} value={mode}>{config.label}</option>)}
+            </select>
+            <ChevronDown size={13} className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2" />
+          </label>
           <button type="button" className="baize-icon-button" onClick={onToggleTheme} aria-label={isDark ? '切换到浅色主题' : '切换到深色主题'}>{isDark ? <Sun size={19} /> : <Moon size={19} />}</button>
           <button type="button" className="baize-icon-button" onClick={onClose} aria-label="返回导航"><X size={20} /></button>
         </div>
       </header>
 
       <div className="mx-auto max-w-7xl p-4 pb-16 sm:p-6 lg:p-8">
-        {activeView === 'dashboard' && <Dashboard vision={vision} mainRoute={mainRoute} currentQuest={currentQuest} routeQuests={routeQuests} progress={progress} inboxCount={inboxCount} nextAction={learningEngine.nextAction} onNavigate={navigate} onOpenLearningAction={openLearningAction} />}
+        {activeView === 'dashboard' && <Dashboard vision={vision} mainRoute={mainRoute} currentQuest={currentQuest} routeQuests={routeQuests} progress={progress} inboxCount={inboxCount} nextAction={learningEngine.nextAction} activeMode={sessionMode} onModeChange={setSessionMode} onNavigate={navigate} onOpenLearningAction={openLearningAction} />}
         {activeView === 'learning' && <div className="space-y-6"><TechOsLearningPanel engine={learningEngine} onOpenAction={openLearningAction} onOpenSource={openLearningSource} /><TechOsCandidatePanel groups={candidateGroups} stagedPaths={stagedCandidatePaths} created={techOsIndex.sourceUpdated} onOpenSource={openLearningSource} onOpenRepository={() => navigate('repository')} onStage={stageCandidate} /></div>}
         {activeView === 'route-engine' && <div className="space-y-6"><TechOsRouteEnginePanel review={completionReview} recommendations={nextRouteRecommendations} stagedPaths={stagedRouteEnginePaths} created={techOsIndex.sourceUpdated} onOpenSource={openLearningSource} onOpenRepository={() => navigate('repository')} onStage={stageRouteEngineDraft} /><TechOsManualRoutePanel reservedRouteIds={nextRouteRecommendations.map(item => item.routeId)} stagedPaths={stagedRouteEnginePaths} created={techOsIndex.sourceUpdated} onOpenRepository={() => navigate('repository')} onStage={stageRouteEngineDraft} /></div>}
         {activeView === 'route' && <RouteView mainRoute={mainRoute} quests={routeQuests} progress={progress} onFocus={focusEntity} />}
-        {activeView === 'quest' && <EntityCollection title="Route Quests" description="Quest 必须是问题；状态来自 Markdown，不在此页面修改。" entities={routeQuests} focusedId={focusedId} onFocus={focusEntity} />}
+        {activeView === 'quest' && <EntityCollection title="路线核心问题" description="核心问题必须采用问句；状态来自 Markdown，不在此页面修改。" entities={routeQuests} focusedId={focusedId} onFocus={focusEntity} />}
         {activeView === 'inbox' && <InboxView items={inboxItems} indexedInboxIds={indexedInboxIds} captureDrafts={captureDrafts} onStage={stageCapture} onOpenInbox={onOpenInbox} onOpenRepository={() => navigate('repository')} />}
-        {activeView === 'knowledge' && <EntityCollection title="Knowledge" description="Tech Map 表达我知道什么；L2/L3 必须有真实证据。" entities={getTechOsEntities('knowledge')} focusedId={focusedId} onFocus={focusEntity} />}
-        {activeView === 'lab' && <EntityCollection title="Labs" description="实验状态完全来自记录；planned 不会被界面展示为完成。" entities={getTechOsEntities('lab')} focusedId={focusedId} onFocus={focusEntity} />}
-        {activeView === 'project' && <EntityCollection title="Projects" description="综合多个知识节点和实验的真实成果。" entities={getTechOsEntities('project')} focusedId={focusedId} onFocus={focusEntity} />}
+        {activeView === 'knowledge' && <EntityCollection title="知识库" description="技术地图表达我知道什么；L2/L3 必须有真实证据。" entities={getTechOsEntities('knowledge')} focusedId={focusedId} onFocus={focusEntity} />}
+        {activeView === 'lab' && <EntityCollection title="实验" description="实验状态完全来自记录；planned 不会被界面展示为完成。" entities={getTechOsEntities('lab')} focusedId={focusedId} onFocus={focusEntity} />}
+        {activeView === 'project' && <EntityCollection title="项目" description="综合多个知识节点和实验的真实成果。" entities={getTechOsEntities('project')} focusedId={focusedId} onFocus={focusEntity} />}
         {activeView === 'map' && <TechMapView focusedId={focusedId} onFocus={focusEntity} />}
         {activeView === 'backlog' && <BacklogView focusedId={focusedId} onFocus={focusEntity} />}
         {activeView === 'repository' && <TechOsRepositoryPanel target={repository} seedDrafts={repositoryDraftFiles} onCommittedPaths={handleCommittedPaths} />}
@@ -218,35 +226,37 @@ interface DashboardProps {
   progress: number;
   inboxCount: number;
   nextAction: LearningAction | null;
+  activeMode: TechOsMode;
+  onModeChange: (mode: TechOsMode) => void;
   onNavigate: (view: WorkspaceView, focusId?: string) => void;
   onOpenLearningAction: (action: LearningAction) => void;
 }
 
-function Dashboard({ vision, mainRoute, currentQuest, routeQuests, progress, inboxCount, nextAction, onNavigate, onOpenLearningAction }: DashboardProps) {
+function Dashboard({ vision, mainRoute, currentQuest, routeQuests, progress, inboxCount, nextAction, activeMode, onModeChange, onNavigate, onOpenLearningAction }: DashboardProps) {
   const stats = [
-    { label: 'Knowledge', value: getTechOsEntities('knowledge').length, icon: Database, view: 'knowledge' as const },
-    { label: 'Labs', value: getTechOsEntities('lab').length, icon: FlaskConical, view: 'lab' as const },
-    { label: 'Projects', value: getTechOsEntities('project').length, icon: FolderKanban, view: 'project' as const },
-    { label: 'Route Seeds', value: getTechOsEntities('route-seed').length, icon: Network, view: 'backlog' as const },
+    { label: '知识', value: getTechOsEntities('knowledge').length, icon: Database, view: 'knowledge' as const },
+    { label: '实验', value: getTechOsEntities('lab').length, icon: FlaskConical, view: 'lab' as const },
+    { label: '项目', value: getTechOsEntities('project').length, icon: FolderKanban, view: 'project' as const },
+    { label: '路线种子', value: getTechOsEntities('route-seed').length, icon: Network, view: 'backlog' as const },
   ];
   return <div className="space-y-6">
     <section className="overflow-hidden rounded-3xl bg-[#173b41] p-6 text-[#f4f1e8] shadow-2xl dark:bg-[#102c33] sm:p-8">
       <div className="relative z-10 grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-        <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#99b7b0]">Vision</p><h2 className="mt-3 max-w-2xl text-3xl font-bold leading-tight sm:text-4xl">{vision?.title || '未设置 Vision'}</h2><p className="mt-4 max-w-2xl text-sm leading-7 text-[#c4d5d0]">长期方向不设置完成百分比。当前工作台只帮助你看清路线、问题、证据与下一步。</p></div>
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-5"><div className="flex items-center justify-between text-xs"><span className="uppercase tracking-[0.15em] text-[#99b7b0]">Main Route</span><span>{progress}% · {routeQuests.filter(item => item.status === 'completed').length}/{routeQuests.length}</span></div><h3 className="mt-3 text-xl font-semibold">{mainRoute?.title || '未设置路线'}</h3><div className="mt-5 h-2 overflow-hidden rounded-full bg-white/10"><div className="h-full rounded-full bg-[#c9a96b] transition-all" style={{ width: `${progress}%` }} /></div><button type="button" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#e1ca91] hover:text-white" onClick={() => onNavigate('route', mainRoute?.id)}>查看完整路线<ArrowRight size={16} /></button></div>
+        <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#99b7b0]">愿景</p><h2 className="mt-3 max-w-2xl text-3xl font-bold leading-tight sm:text-4xl">{vision?.title || '未设置愿景'}</h2><p className="mt-4 max-w-2xl text-sm leading-7 text-[#c4d5d0]">长期方向不设置完成百分比。当前工作台只帮助你看清路线、问题、证据与下一步。</p></div>
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-5"><div className="flex items-center justify-between text-xs"><span className="uppercase tracking-[0.15em] text-[#99b7b0]">主路线</span><span>{progress}% · {routeQuests.filter(item => item.status === 'completed').length}/{routeQuests.length}</span></div><h3 className="mt-3 text-xl font-semibold">{mainRoute?.title || '未设置路线'}</h3><div className="mt-5 h-2 overflow-hidden rounded-full bg-white/10"><div className="h-full rounded-full bg-[#c9a96b] transition-all" style={{ width: `${progress}%` }} /></div><button type="button" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#e1ca91] hover:text-white" onClick={() => onNavigate('route', mainRoute?.id)}>查看完整路线<ArrowRight size={16} /></button></div>
       </div>
     </section>
 
     <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-      <section className="baize-panel rounded-2xl p-5 sm:p-6"><div className="flex items-start justify-between gap-4"><div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64807c]">Current Quest</p><h2 className="mt-2 text-xl font-bold">{currentQuest?.title || '没有 Active Quest'}</h2></div><span className="rounded-full bg-[#5f8f84]/10 px-3 py-1 text-xs font-semibold text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{currentQuest?.id}</span></div>{currentQuest && <><p className="mt-4 line-clamp-3 text-sm leading-7 text-[#64807c] dark:text-[#b8c6c1]">{summaryFromBody(currentQuest.body)}</p><button type="button" className="baize-button-primary mt-5" onClick={() => onNavigate('quest', currentQuest.id)}>Continue Quest<ArrowRight size={16} /></button></>}</section>
-      <section className="baize-panel rounded-2xl p-5 sm:p-6"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64807c]">Today Mode</p><div className="mt-4 space-y-2">{Object.entries(MODE_LABELS).map(([mode, config]) => <div key={mode} className={`rounded-xl border p-3 ${techOsIndex.state.mode === mode ? 'border-[#5f8f84]/40 bg-[#5f8f84]/10 dark:border-[#c9a96b]/35 dark:bg-[#c9a96b]/8' : 'border-[#5f8f84]/10 dark:border-[#c9a96b]/10'}`}><div className="flex items-center gap-2"><span className={`h-2 w-2 rounded-full ${techOsIndex.state.mode === mode ? 'bg-[#356b66] dark:bg-[#c9a96b]' : 'bg-[#9fb2ad]'}`} /><strong className="text-sm">{config.label}</strong>{techOsIndex.state.mode === mode && <span className="ml-auto text-[10px] font-semibold uppercase tracking-wider text-[#64807c]">Current</span>}</div><p className="mt-1 pl-4 text-xs text-[#718986]">{config.detail}</p></div>)}</div></section>
+      <section className="baize-panel rounded-2xl p-5 sm:p-6"><div className="flex items-start justify-between gap-4"><div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64807c]">当前核心问题</p><h2 className="mt-2 text-xl font-bold">{currentQuest?.title || '没有进行中的核心问题'}</h2></div><span className="rounded-full bg-[#5f8f84]/10 px-3 py-1 text-xs font-semibold text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{currentQuest?.id}</span></div>{currentQuest && <><p className="mt-4 line-clamp-3 text-sm leading-7 text-[#64807c] dark:text-[#b8c6c1]">{summaryFromBody(currentQuest.body)}</p><button type="button" className="baize-button-primary mt-5" onClick={() => onNavigate('quest', currentQuest.id)}>继续探索<ArrowRight size={16} /></button></>}</section>
+      <section className="baize-panel rounded-2xl p-5 sm:p-6"><div className="flex items-center justify-between gap-3"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64807c]">今日模式</p><span className="text-[10px] text-[#718986]">仅当前会话</span></div><div className="mt-4 space-y-2">{Object.entries(MODE_LABELS).map(([mode, config]) => <button key={mode} type="button" aria-pressed={activeMode === mode} onClick={() => onModeChange(mode as TechOsMode)} className={`w-full rounded-xl border p-3 text-left transition ${activeMode === mode ? 'border-[#5f8f84]/40 bg-[#5f8f84]/10 dark:border-[#c9a96b]/35 dark:bg-[#c9a96b]/8' : 'border-[#5f8f84]/10 hover:border-[#5f8f84]/30 dark:border-[#c9a96b]/10'}`}><span className="flex items-center gap-2"><span className={`h-2 w-2 rounded-full ${activeMode === mode ? 'bg-[#356b66] dark:bg-[#c9a96b]' : 'bg-[#9fb2ad]'}`} /><strong className="text-sm">{config.label}</strong>{activeMode === mode && <span className="ml-auto text-[10px] font-semibold tracking-wider text-[#64807c]">当前</span>}</span><span className="mt-1 block pl-4 text-xs text-[#718986]">{config.detail}</span></button>)}</div></section>
     </div>
 
-    {nextAction && <section className="baize-panel rounded-2xl p-5 sm:p-6"><div className="flex flex-col gap-4 sm:flex-row sm:items-center"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#c9a96b]/15 text-[#80672e] dark:text-[#e1ca91]"><Sparkles size={21} /></span><div className="min-w-0 flex-1"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#718986]">Rules First · Next Action</p><h2 className="mt-1 font-bold">{nextAction.title}</h2><p className="mt-1 line-clamp-2 text-sm text-[#718986]">{nextAction.detail}</p></div><button type="button" className="baize-button-primary shrink-0" onClick={() => onOpenLearningAction(nextAction)}>查看来源<ArrowRight size={16} /></button></div><p className="mt-4 rounded-xl bg-[#5f8f84]/5 p-3 text-xs leading-5 text-[#64807c] dark:bg-[#c9a96b]/5 dark:text-[#b8c6c1]"><strong>为什么：</strong>{nextAction.reason}</p></section>}
+    {nextAction && <section className="baize-panel rounded-2xl p-5 sm:p-6"><div className="flex flex-col gap-4 sm:flex-row sm:items-center"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#c9a96b]/15 text-[#80672e] dark:text-[#e1ca91]"><Sparkles size={21} /></span><div className="min-w-0 flex-1"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#718986]">规则优先 · 下一步</p><h2 className="mt-1 font-bold">{nextAction.title}</h2><p className="mt-1 line-clamp-2 text-sm text-[#718986]">{nextAction.detail}</p></div><button type="button" className="baize-button-primary shrink-0" onClick={() => onOpenLearningAction(nextAction)}>查看来源<ArrowRight size={16} /></button></div><p className="mt-4 rounded-xl bg-[#5f8f84]/5 p-3 text-xs leading-5 text-[#64807c] dark:bg-[#c9a96b]/5 dark:text-[#b8c6c1]"><strong>为什么：</strong>{nextAction.reason}</p></section>}
 
     <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">{stats.map(stat => { const Icon = stat.icon; return <button key={stat.label} type="button" onClick={() => onNavigate(stat.view)} className="baize-panel rounded-2xl p-4 text-left transition hover:-translate-y-0.5 hover:border-[#5f8f84]/40"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#5f8f84]/10 text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#d8bd7e]"><Icon size={18} /></span><strong className="mt-4 block text-2xl">{stat.value}</strong><span className="text-xs text-[#718986]">{stat.label}</span></button>; })}</section>
 
-    <div className="grid gap-5 lg:grid-cols-2"><section className="baize-panel rounded-2xl p-5"><div className="flex items-center justify-between"><h2 className="font-bold">Tech Map</h2><button type="button" className="text-xs font-semibold text-[#356b66] dark:text-[#d2b775]" onClick={() => onNavigate('map')}>打开地图</button></div><DomainSummary /></section><section className="baize-panel rounded-2xl p-5"><div className="flex items-center justify-between"><h2 className="font-bold">Inbox</h2><span className="text-2xl font-bold">{inboxCount}</span></div><p className="mt-3 text-sm leading-6 text-[#718986]">T3 复用 Phase C/D 本地 Inbox，通过 Adapter 把明确选择的 Capture 加入 Repository 内存草稿。</p><button type="button" className="baize-button-secondary mt-4" onClick={() => onNavigate('inbox')}><Inbox size={16} />处理 Capture</button></section></div>
+    <div className="grid gap-5 lg:grid-cols-2"><section className="baize-panel rounded-2xl p-5"><div className="flex items-center justify-between"><h2 className="font-bold">技术地图</h2><button type="button" className="text-xs font-semibold text-[#356b66] dark:text-[#d2b775]" onClick={() => onNavigate('map')}>打开地图</button></div><DomainSummary /></section><section className="baize-panel rounded-2xl p-5"><div className="flex items-center justify-between"><h2 className="font-bold">收件箱</h2><span className="text-2xl font-bold">{inboxCount}</span></div><p className="mt-3 text-sm leading-6 text-[#718986]">T3 复用 Phase C/D 本地收件箱，通过适配器把明确选择的记录加入仓库内存草稿。</p><button type="button" className="baize-button-secondary mt-4" onClick={() => onNavigate('inbox')}><Inbox size={16} />处理记录</button></section></div>
   </div>;
 }
 
