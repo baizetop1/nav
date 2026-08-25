@@ -1,6 +1,6 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, BrainCircuit, Check, ChevronUp, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Plus, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, BrainCircuit, Check, ChevronUp, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Network, Plus, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel, type AdminSection } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { CommandPalette, type CommandPaletteAction } from './components/CommandPalette';
@@ -340,6 +340,8 @@ function App() {
     if (!search.trim() || activeEngine || searchUrl) return [];
     return textFuse.search(search.trim(), { limit: 8 }).map(result => result.item);
   }, [activeEngine, search, searchUrl, textFuse]);
+  const visibleTopicNodes = visibleTextNodes.filter(node => node.type === 'topic');
+  const visiblePostNodes = visibleTextNodes.filter(node => node.type !== 'topic');
 
   const toggleTheme = () => {
     const next = !isDark;
@@ -641,7 +643,7 @@ function App() {
                     setSearch('');
                   }
                 }}
-                placeholder={activeEngine ? activeEngine.placeholder : "搜索网站和文章、输入网址，或输入 'g ' 使用 Google"}
+                placeholder={activeEngine ? activeEngine.placeholder : "搜索网站、文章和 Topic，或输入 'g ' 使用 Google"}
                 className="baize-input py-3 pl-10 pr-16 shadow-[0_10px_30px_-20px_rgba(16,44,51,0.6)]"
               />
               <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-[#5f8f84]/20 bg-[#5f8f84]/8 px-2 py-0.5 text-xs text-[#6f8984] dark:border-[#c9a96b]/15 dark:bg-[#c9a96b]/8 dark:text-[#baa978] sm:block">/</kbd>
@@ -654,13 +656,21 @@ function App() {
         </div>
 
         <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
-          {visibleTextNodes.length > 0 && <section aria-labelledby="text-search-heading" className="scroll-mt-28">
+          {visibleTopicNodes.length > 0 && <section aria-labelledby="topic-search-heading" className="scroll-mt-28">
+            <div className="category-heading baize-panel mb-4 inline-flex items-center gap-2 rounded-xl px-4 py-2">
+              <Network size={17} className="text-[#4f8179] dark:text-[#c9a96b]" />
+              <h2 id="topic-search-heading" className="text-lg font-bold tracking-wide text-[#173b41] dark:text-[#f4f1e8]">知识节点</h2>
+              <span className="ml-1 text-sm font-medium text-[#64807c] dark:text-[#9fb2ad]">({visibleTopicNodes.length})</span>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">{visibleTopicNodes.map(node => <a key={node.id} href={node.url} className="baize-panel group flex min-w-0 items-center gap-3 rounded-xl p-4 transition hover:-translate-y-0.5 hover:border-[#5f8f84]/40 dark:hover:border-[#c9a96b]/30"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]"><Network size={18} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="mt-0.5 block truncate text-xs text-[#718986]">{node.summary || '正式知识节点'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793] transition group-hover:text-[#356b66] dark:group-hover:text-[#d2b775]" /></a>)}</div>
+          </section>}
+          {visiblePostNodes.length > 0 && <section aria-labelledby="text-search-heading" className="scroll-mt-28">
             <div className="category-heading baize-panel mb-4 inline-flex items-center gap-2 rounded-xl px-4 py-2">
               <FileText size={17} className="text-[#4f8179] dark:text-[#c9a96b]" />
               <h2 id="text-search-heading" className="text-lg font-bold tracking-wide text-[#173b41] dark:text-[#f4f1e8]">文章</h2>
-              <span className="ml-1 text-sm font-medium text-[#64807c] dark:text-[#9fb2ad]">({visibleTextNodes.length})</span>
+              <span className="ml-1 text-sm font-medium text-[#64807c] dark:text-[#9fb2ad]">({visiblePostNodes.length})</span>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2">{visibleTextNodes.map(node => <a key={node.id} href={node.url} className="baize-panel group flex min-w-0 items-center gap-3 rounded-xl p-4 transition hover:-translate-y-0.5 hover:border-[#5f8f84]/40 dark:hover:border-[#c9a96b]/30"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]"><FileText size={18} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="mt-0.5 block truncate text-xs text-[#718986]">{[node.category, node.format, node.summary].filter(Boolean).join(' · ') || '公开文章'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793] transition group-hover:text-[#356b66] dark:group-hover:text-[#d2b775]" /></a>)}</div>
+            <div className="grid gap-3 sm:grid-cols-2">{visiblePostNodes.map(node => <a key={node.id} href={node.url} className="baize-panel group flex min-w-0 items-center gap-3 rounded-xl p-4 transition hover:-translate-y-0.5 hover:border-[#5f8f84]/40 dark:hover:border-[#c9a96b]/30"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]"><FileText size={18} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="mt-0.5 block truncate text-xs text-[#718986]">{[node.category, node.format, node.summary].filter(Boolean).join(' · ') || '公开文章'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793] transition group-hover:text-[#356b66] dark:group-hover:text-[#d2b775]" /></a>)}</div>
           </section>}
           <div className="utility-launcher-row flex flex-wrap items-start gap-2 sm:gap-3">
             <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openTechOs}><BrainCircuit size={17} />Tech OS</button>
@@ -753,7 +763,7 @@ function App() {
               </section>
             );
           })}
-          {search.trim() && !activeEngine && visibleSiteIds.size === 0 && visibleTextNodes.length === 0 && <div className="baize-panel rounded-2xl py-12 text-center text-[#64807c]"><p className="text-lg">{searchUrl ? '这是一个可访问的网址' : '云海茫茫，未找到相关网站或文章'}</p><div className="mt-4 flex flex-wrap justify-center gap-3">{searchUrl && <button type="button" onClick={() => { visitTemporaryUrl(searchUrl); setSearch(''); }} className="baize-button-primary"><ExternalLink size={16} />访问并记录</button>}<button onClick={() => setSearch('')} className="font-medium text-[#356b66] hover:underline dark:text-[#d2b775]">清除搜索</button></div></div>}
+          {search.trim() && !activeEngine && visibleSiteIds.size === 0 && visibleTextNodes.length === 0 && <div className="baize-panel rounded-2xl py-12 text-center text-[#64807c]"><p className="text-lg">{searchUrl ? '这是一个可访问的网址' : '云海茫茫，未找到相关网站、文章或知识节点'}</p><div className="mt-4 flex flex-wrap justify-center gap-3">{searchUrl && <button type="button" onClick={() => { visitTemporaryUrl(searchUrl); setSearch(''); }} className="baize-button-primary"><ExternalLink size={16} />访问并记录</button>}<button onClick={() => setSearch('')} className="font-medium text-[#356b66] hover:underline dark:text-[#d2b775]">清除搜索</button></div></div>}
           {activeEngine && <div className="baize-panel rounded-2xl p-6 text-center font-medium text-[#356b66] dark:text-[#d9c386]">按 Enter 使用 {activeEngine.name} 搜索</div>}
         </div>
       </main>

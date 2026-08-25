@@ -26,6 +26,7 @@ import { TechOsCandidatePanel } from './TechOsCandidatePanel';
 import { TechOsRouteEnginePanel } from './TechOsRouteEnginePanel';
 import type { RouteEngineStageDraft } from './TechOsRouteEnginePanel';
 import { TechOsManualRoutePanel } from './TechOsManualRoutePanel';
+import { QuestStudyChecklist } from './QuestStudyChecklist';
 
 type WorkspaceView = 'dashboard' | 'learning' | 'route-engine' | 'route' | 'quest' | 'inbox' | 'knowledge' | 'lab' | 'project' | 'map' | 'backlog' | 'repository';
 
@@ -273,7 +274,7 @@ function EntityCollection({ title, description, entities, focusedId, onFocus }: 
 
 function EntityViewer({ entity, onFocus }: { entity: TechOsEntity; onFocus: (id: string) => void }) {
   const relations = getTechOsRelations(entity);
-  return <article className="baize-panel min-w-0 rounded-2xl p-5 sm:p-7"><header className="border-b border-[#5f8f84]/15 pb-5 dark:border-[#c9a96b]/12"><div className="flex flex-wrap items-center gap-2 text-xs"><span className="rounded-full bg-[#5f8f84]/10 px-2.5 py-1 font-semibold text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{KIND_LABELS[entity.kind]}</span><span className="text-[#718986]">{entity.id}</span><span className="text-[#718986]">·</span><span className="text-[#718986]">{statusLabel(entity.status)}</span>{entity.kind === 'knowledge' && <span className="rounded-full border border-[#5f8f84]/20 px-2 py-0.5 font-semibold">{getTechOsString(entity, 'level')}</span>}</div><h2 className="mt-3 text-2xl font-bold leading-tight">{entity.title}</h2><div className="mt-4 flex flex-wrap gap-2">{entity.tags.map(tag => <span key={tag} className="rounded-lg bg-[#5f8f84]/8 px-2 py-1 text-[11px] text-[#64807c] dark:bg-[#c9a96b]/8 dark:text-[#b8c6c1]">#{tag}</span>)}</div></header><div className="py-6"><MarkdownView body={entity.body} /></div>{relations.length > 0 && <footer className="border-t border-[#5f8f84]/15 pt-5 dark:border-[#c9a96b]/12"><p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#718986]">Related Objects</p><div className="flex flex-wrap gap-2">{relations.map(relation => <button key={relation.id} type="button" onClick={() => onFocus(relation.id)} className="baize-chip inline-flex items-center gap-1.5"><span>{relation.id}</span><ArrowRight size={12} /></button>)}</div></footer>}<p className="mt-6 break-all text-[10px] text-[#8aa09c]">Source: {entity.sourcePath}</p></article>;
+  return <article className="baize-panel min-w-0 rounded-2xl p-5 sm:p-7"><header className="border-b border-[#5f8f84]/15 pb-5 dark:border-[#c9a96b]/12"><div className="flex flex-wrap items-center gap-2 text-xs"><span className="rounded-full bg-[#5f8f84]/10 px-2.5 py-1 font-semibold text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{KIND_LABELS[entity.kind]}</span><span className="text-[#718986]">{entity.id}</span><span className="text-[#718986]">·</span><span className="text-[#718986]">{statusLabel(entity.status)}</span>{entity.kind === 'knowledge' && <span className="rounded-full border border-[#5f8f84]/20 px-2 py-0.5 font-semibold">{getTechOsString(entity, 'level')}</span>}</div><h2 className="mt-3 text-2xl font-bold leading-tight">{entity.title}</h2><div className="mt-4 flex flex-wrap gap-2">{entity.tags.map(tag => <span key={tag} className="rounded-lg bg-[#5f8f84]/8 px-2 py-1 text-[11px] text-[#64807c] dark:bg-[#c9a96b]/8 dark:text-[#b8c6c1]">#{tag}</span>)}</div></header><div className="py-6">{entity.kind === 'quest' && <QuestStudyChecklist key={entity.id} quest={entity} />}<MarkdownView body={entity.body} /></div>{relations.length > 0 && <footer className="border-t border-[#5f8f84]/15 pt-5 dark:border-[#c9a96b]/12"><p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#718986]">相关对象</p><div className="flex flex-wrap gap-2">{relations.map(relation => <button key={relation.id} type="button" onClick={() => onFocus(relation.id)} className="baize-chip inline-flex items-center gap-1.5"><span>{relation.id}</span><ArrowRight size={12} /></button>)}</div></footer>}<p className="mt-6 break-all text-[10px] text-[#8aa09c]">来源：{entity.sourcePath}</p></article>;
 }
 
 function TechMapView({ focusedId, onFocus }: { focusedId: string; onFocus: (id: string) => void }) {
@@ -336,7 +337,10 @@ function captureItemTitle(item: InboxItem): string {
 }
 
 function statusLabel(status: string): string {
-  return status.replace(/(^|-)([a-z])/g, (_, prefix: string, letter: string) => `${prefix}${letter.toUpperCase()}`).replace(/-/g, ' ');
+  const labels: Record<string, string> = {
+    active: '进行中', backlog: '未开始', completed: '已完成', skipped: '已跳过', archived: '已归档', seed: '种子', candidate: '候选', planned: '计划中', draft: '草稿', open: '待回答', answered: '已回答', unknown: '未知', learning: '学习中', understood: '已理解', building: '构建中', paused: '已暂停', maintained: '维护中', proposed: '待确认', rejected: '不采用', 'not-interested': '不感兴趣', saved: '稍后处理', reviewed: '已复盘', indexed: '已收录', processed: '已处理',
+  };
+  return labels[status] || status;
 }
 
 function getViewTitle(view: WorkspaceView): string {

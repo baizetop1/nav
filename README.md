@@ -13,7 +13,7 @@
 - 提供本地优先的多条 Inbox：支持文本和链接快速记录、编辑、复制 Markdown、归档及软删除；升级时会把原有临时文本复制迁移一次，同时保留旧便笺和二维码功能。用户可主动把本机与 GitHub 密文 Inbox 按 ID 合并同步。
 - 首页通过 MyMemory 免费接口原地显示翻译结果，并保留 Google 翻译作为失败回退；成功结果自动写入可搜索、复用和删除的本机翻译历史。
 - 使用 Fuse.js 按名称、标签、分类和描述进行模糊搜索。
-- 启动后异步读取博客的公开 `text-index.json`，将文章按标题、标签、分类和摘要加入 Fuse.js 搜索；远端失败时使用本机缓存，不阻塞导航首页。
+- 启动后异步读取博客的公开 `text-index.json`，将文章与手工维护的 Topic 按标题、别名、分类和摘要加入 Fuse.js 搜索；结果按“知识节点”和“文章”分组，远端失败时使用本机缓存，不阻塞导航首页。
 - 支持 `Ctrl/Cmd + K` 打开全局命令面板，可搜索网站、切换场景和主题、打开翻译、临时文本、统计及管理功能；按 `/` 聚焦站内搜索。
 - 支持 Google、百度、必应、GitHub、Bilibili 搜索前缀。
 - 通过 `/#/admin` 进入内容管理。
@@ -61,7 +61,7 @@ src/data/layout.json
 
 站点信息和搜索引擎配置位于 `src/data/config.ts`。TypeScript 类型位于 `src/types/navigation.ts`。
 
-博客索引地址集中配置在 `src/data/config.ts` 的 `TEXT_INDEX_URL`，本地联调时可以使用临时的 `VITE_TEXT_INDEX_URL` 覆盖。远端索引通过 `src/services/textNetwork.ts` 做基础 schema 校验，并缓存到 `localStorage.baize_text_index_v1`；缓存只包含博客公开 metadata，不包含文章正文。解析器兼容 Phase A 的 version 1 与 Phase E/F 的 version 2，version 2 会额外校验 `related` / `wiki` edges、悬空关系、自我关联和重复关系；搜索仍只消费 nodes，不下载正文。可以单独验证索引解析与离线回退：
+博客索引地址集中配置在 `src/data/config.ts` 的 `TEXT_INDEX_URL`，本地联调时可以使用临时的 `VITE_TEXT_INDEX_URL` 覆盖。远端索引通过 `src/services/textNetwork.ts` 做基础 schema 校验，并缓存到 `localStorage.baize_text_index_v1`；缓存只包含博客公开 metadata，不包含文章正文。解析器兼容 Phase A 的 version 1 与 Phase E–G 的 version 2，version 2 会校验 `related` / `wiki` / `topic` edges、悬空关系、自我关联和边的节点类型；Topic 只来自博客显式节点，不会由普通 tag 自动生成。可以单独验证索引解析与离线回退：
 
 ```bash
 npm run test:text-network

@@ -11,6 +11,7 @@ export interface TextNode {
   format?: string;
   tags: string[];
   related: string[];
+  topics?: string[];
   createdAt?: string;
   updatedAt?: string;
 }
@@ -18,7 +19,7 @@ export interface TextNode {
 export interface TextEdge {
   from: string;
   to: string;
-  type: 'related' | 'wiki';
+  type: 'related' | 'wiki' | 'topic';
 }
 
 export interface TextIndex {

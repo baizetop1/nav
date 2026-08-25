@@ -30,10 +30,15 @@ assert.deepEqual(parseTextIndex(index), index);
 const v2Index = {
   ...index,
   version: 2,
-  nodes: [...index.nodes, { ...index.nodes[0], id: 'post:digital-garden', slug: 'digital-garden', title: '数字花园', url: 'https://baizeone.top/p/digital-garden/' }],
+  nodes: [
+    { ...index.nodes[0], topics: ['topic:knowledge-management'] },
+    { ...index.nodes[0], id: 'post:digital-garden', slug: 'digital-garden', title: '数字花园', url: 'https://baizeone.top/p/digital-garden/', topics: ['topic:knowledge-management'] },
+    { ...index.nodes[0], id: 'topic:knowledge-management', type: 'topic', slug: 'knowledge-management', title: '知识管理', url: 'https://baizeone.top/topics/knowledge-management/', category: '知识节点', format: 'Topic', tags: ['PKM'], related: [], topics: [] },
+  ],
   edges: [
     { from: 'post:text-network', to: 'post:digital-garden', type: 'related' },
     { from: 'post:digital-garden', to: 'post:text-network', type: 'wiki' },
+    { from: 'post:text-network', to: 'topic:knowledge-management', type: 'topic' },
   ],
 };
 assert.deepEqual(parseTextIndex(v2Index), v2Index);
@@ -42,6 +47,9 @@ assert.equal(parseTextIndex({ ...v2Index, version: 3 }), null);
 assert.equal(parseTextIndex({ ...v2Index, edges: [{ from: 'post:text-network', to: 'post:missing', type: 'related' }] }), null);
 assert.equal(parseTextIndex({ ...v2Index, edges: [{ from: 'post:text-network', to: 'post:text-network', type: 'related' }] }), null);
 assert.equal(parseTextIndex({ ...v2Index, edges: [{ from: 'post:text-network', to: 'post:digital-garden', type: 'unknown' }] }), null);
+assert.equal(parseTextIndex({ ...v2Index, edges: [{ from: 'topic:knowledge-management', to: 'post:text-network', type: 'topic' }] }), null);
+assert.equal(parseTextIndex({ ...v2Index, edges: [{ from: 'post:text-network', to: 'topic:knowledge-management', type: 'wiki' }] }), null);
+assert.equal(parseTextIndex({ ...v2Index, nodes: v2Index.nodes.map(node => node.id === 'post:text-network' ? { ...node, topics: ['post:not-a-topic'] } : node) }), null);
 assert.equal(parseTextIndex({ ...index, nodes: [...index.nodes, index.nodes[0]] }), null);
 assert.equal(parseTextIndex({ ...index, nodes: [{ ...index.nodes[0], url: 'javascript:alert(1)' }] }), null);
 

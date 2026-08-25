@@ -24,13 +24,18 @@ export function parseTextIndex(value: unknown): TextIndex | null {
   if (candidate.version === 2 && !Array.isArray(candidate.edges)) return null;
 
   const seenIds = new Set<string>();
+  const nodesById = new Map<string, TextNode>();
   for (const node of candidate.nodes) {
     if (!isTextNode(node) || seenIds.has(node.id)) return null;
     seenIds.add(node.id);
+    nodesById.set(node.id, node);
   }
   const seenEdges = new Set<string>();
   for (const edge of candidate.edges || []) {
     if (!isTextEdge(edge) || !seenIds.has(edge.from) || !seenIds.has(edge.to) || edge.from === edge.to) return null;
+    const from = nodesById.get(edge.from);
+    const to = nodesById.get(edge.to);
+    if (!from || !to || !isEdgeSemanticallyValid(edge, from, to)) return null;
     const key = `${edge.type}:${edge.from}:${edge.to}`;
     if (seenEdges.has(key)) return null;
     seenEdges.add(key);
@@ -80,7 +85,8 @@ function isTextNode(value: unknown): value is TextNode {
     typeof node.title !== 'string' || !node.title ||
     typeof node.url !== 'string' || !isHttpUrl(node.url) ||
     !Array.isArray(node.tags) || !node.tags.every(item => typeof item === 'string') ||
-    !Array.isArray(node.related) || !node.related.every(item => typeof item === 'string')
+    !Array.isArray(node.related) || !node.related.every(item => typeof item === 'string') ||
+    (node.topics !== undefined && (!Array.isArray(node.topics) || !node.topics.every(item => typeof item === 'string' && item.startsWith('topic:'))))
   ) return false;
   return optionalStringFields.every(field => node[field] === undefined || typeof node[field] === 'string');
 }
@@ -88,7 +94,13 @@ function isTextNode(value: unknown): value is TextNode {
 function isTextEdge(value: unknown): value is TextEdge {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
   const edge = value as Partial<TextEdge>;
-  return (edge.type === 'related' || edge.type === 'wiki') && typeof edge.from === 'string' && typeof edge.to === 'string';
+  return (edge.type === 'related' || edge.type === 'wiki' || edge.type === 'topic') && typeof edge.from === 'string' && typeof edge.to === 'string';
+}
+
+function isEdgeSemanticallyValid(edge: TextEdge, from: TextNode, to: TextNode): boolean {
+  if (edge.type === 'wiki') return from.type === 'post' && to.type === 'post';
+  if (edge.type === 'topic') return from.type === 'post' && to.type === 'topic';
+  return from.type === to.type;
 }
 
 function isHttpUrl(value: string): boolean {

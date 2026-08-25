@@ -60,10 +60,22 @@ PC 在 Tech OS Inbox 中选择“加入 Repository 草稿”后生成 `tech-os/i
 ### 2. 推进 Quest
 
 1. 打开 `state.yml` 指向的 `current_quest_id`。
-2. 在 Quest 中记录当前结论和下一步。
-3. 新问题写入 `questions/`，不要塞进一篇无限增长的笔记。
-4. 形成稳定理解时创建 Knowledge。
-5. 需要验证时创建 Lab；多个节点汇合时创建 Project。
+2. Quest 中以 `### S1 · 步骤名` 形式拆出可验证的小步骤；每一步都写“学什么、动手做、完成标志”。
+3. 工作台会把这些步骤显示为可点击的学习打卡，并保存在当前浏览器的 `baize_tech_os_study_progress_v1`；它只代表个人推进记录，不会修改公开仓库。
+4. 在 Quest 中记录当前结论、证据和下一步。新问题写入 `questions/`，不要塞进一篇无限增长的笔记。
+5. 形成稳定理解时创建 Knowledge；需要验证时创建 Lab；多个节点汇合时创建 Project。
+
+#### Quest 怎样正式标记完成
+
+本地步骤全部打卡只是“达到检查条件”。确认完成证据真实存在后，再执行正式状态迁移：
+
+1. 把 Quest Front Matter 的 `status` 从 `active` 改为 `completed`。
+2. 把文件从 `quests/active/` 移到 `quests/completed/`。
+3. 选择下一条 Quest，把它从 `backlog` 改为 `active` 并移动到 `quests/active/`。
+4. 把 `state.yml` 的 `current_quest_id` 更新为新的 Active Quest。
+5. 运行 `npm run check:tech-os` 和 `npm run build`；提交 Git 后，路线进度才会按 completed Quest 数量正式增加。
+
+系统有意区分“本地打卡”和“仓库完成”：前者方便每天推进，后者必须有结论与证据，不能只靠点击产生。
 
 ### 3. 更新 Knowledge 等级
 

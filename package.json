@@ -26,6 +26,7 @@
     "test:tech-os-learning": "node --experimental-strip-types scripts/tech-os-learning-selfcheck.mjs",
     "test:tech-os-candidate": "node --experimental-strip-types scripts/tech-os-candidate-selfcheck.mjs",
     "test:tech-os-route-engine": "node --experimental-strip-types scripts/tech-os-route-engine-selfcheck.mjs",
+    "test:tech-os-study": "node --experimental-strip-types scripts/tech-os-study-progress-selfcheck.mjs",
     "check:links": "node scripts/check-links.mjs",
     "test:hot-feed": "node scripts/update-hot-feed.mjs --self-test",
     "update:hot-feed": "node scripts/update-hot-feed.mjs"
