@@ -1,3 +1,5 @@
+import { requireWebCrypto } from './webCrypto.ts';
+
 export interface EncryptedNote {
   version: 1;
   algorithm: EncryptedTextFields['algorithm'];
@@ -35,9 +37,9 @@ function fromBase64(value: string): Uint8Array {
   return Uint8Array.from(atob(value), character => character.charCodeAt(0));
 }
 
-async function deriveKey(password: string, salt: Uint8Array, iterations: number): Promise<CryptoKey> {
-  const material = await crypto.subtle.importKey('raw', encoder.encode(password), 'PBKDF2', false, ['deriveKey']);
-  return crypto.subtle.deriveKey(
+async function deriveKey(webCrypto: Crypto, password: string, salt: Uint8Array, iterations: number): Promise<CryptoKey> {
+  const material = await webCrypto.subtle.importKey('raw', encoder.encode(password), 'PBKDF2', false, ['deriveKey']);
+  return webCrypto.subtle.deriveKey(
     { name: 'PBKDF2', salt: salt.buffer as ArrayBuffer, iterations, hash: 'SHA-256' },
     material,
     { name: 'AES-GCM', length: 256 },
@@ -48,11 +50,12 @@ async function deriveKey(password: string, salt: Uint8Array, iterations: number)
 
 export async function encryptTextPayload(text: string, password: string, contextLabel: string): Promise<EncryptedTextFields> {
   if (password.length < 12) throw new Error('加密密码至少需要 12 个字符。');
-  const salt = crypto.getRandomValues(new Uint8Array(16));
-  const iv = crypto.getRandomValues(new Uint8Array(12));
-  const key = await deriveKey(password, salt, ENCRYPTION_ITERATIONS);
+  const webCrypto = requireWebCrypto();
+  const salt = webCrypto.getRandomValues(new Uint8Array(16));
+  const iv = webCrypto.getRandomValues(new Uint8Array(12));
+  const key = await deriveKey(webCrypto, password, salt, ENCRYPTION_ITERATIONS);
   const context = encoder.encode(contextLabel);
-  const ciphertext = await crypto.subtle.encrypt(
+  const ciphertext = await webCrypto.subtle.encrypt(
     { name: 'AES-GCM', iv: iv.buffer as ArrayBuffer, additionalData: context.buffer as ArrayBuffer },
     key,
     encoder.encode(text).buffer as ArrayBuffer,
@@ -72,13 +75,14 @@ export async function decryptTextPayload(payload: EncryptedTextFields, password:
   if (payload.algorithm !== 'AES-256-GCM' || payload.kdf !== 'PBKDF2-SHA-256' || payload.iterations !== ENCRYPTION_ITERATIONS) {
     throw new Error('不支持的加密数据格式。');
   }
+  const webCrypto = requireWebCrypto();
   try {
     const salt = fromBase64(payload.salt);
     const iv = fromBase64(payload.iv);
     if (salt.length !== 16 || iv.length !== 12) throw new Error('invalid encryption parameters');
-    const key = await deriveKey(password, salt, payload.iterations);
+    const key = await deriveKey(webCrypto, password, salt, payload.iterations);
     const context = encoder.encode(contextLabel);
-    const plaintext = await crypto.subtle.decrypt(
+    const plaintext = await webCrypto.subtle.decrypt(
       { name: 'AES-GCM', iv: iv.buffer as ArrayBuffer, additionalData: context.buffer as ArrayBuffer },
       key,
       fromBase64(payload.ciphertext).buffer as ArrayBuffer,

@@ -1,4 +1,5 @@
 import { parseBackup, type NavigationBackup } from '../lib/backup.ts';
+import { requireWebCrypto } from './webCrypto.ts';
 
 export const ENCRYPTED_BACKUP_VERSION = 1 as const;
 export const ENCRYPTED_BACKUP_FORMAT = 'baize-navigation-backup' as const;
@@ -101,15 +102,15 @@ function parseEncryptedBackup(input: string | unknown): EncryptedNavigationBacku
   return payload as unknown as EncryptedNavigationBackup;
 }
 
-async function deriveKey(password: string, salt: Uint8Array): Promise<CryptoKey> {
-  const material = await crypto.subtle.importKey(
+async function deriveKey(webCrypto: Crypto, password: string, salt: Uint8Array): Promise<CryptoKey> {
+  const material = await webCrypto.subtle.importKey(
     'raw',
     encoder.encode(password).buffer as ArrayBuffer,
     'PBKDF2',
     false,
     ['deriveKey'],
   );
-  return crypto.subtle.deriveKey(
+  return webCrypto.subtle.deriveKey(
     {
       name: 'PBKDF2',
       salt: salt.buffer as ArrayBuffer,
@@ -129,11 +130,12 @@ export async function encryptBackup(
 ): Promise<EncryptedNavigationBackup> {
   requirePassword(password);
   const backup = parseBackup(input);
-  const salt = crypto.getRandomValues(new Uint8Array(16));
-  const iv = crypto.getRandomValues(new Uint8Array(12));
-  const key = await deriveKey(password, salt);
+  const webCrypto = requireWebCrypto();
+  const salt = webCrypto.getRandomValues(new Uint8Array(16));
+  const iv = webCrypto.getRandomValues(new Uint8Array(12));
+  const key = await deriveKey(webCrypto, password, salt);
   const plaintext = encoder.encode(JSON.stringify(backup));
-  const ciphertext = await crypto.subtle.encrypt(
+  const ciphertext = await webCrypto.subtle.encrypt(
     {
       name: 'AES-GCM',
       iv: iv.buffer as ArrayBuffer,
@@ -166,11 +168,12 @@ export async function decryptBackup(
   const salt = fromBase64(payload.salt, 'salt', 16);
   const iv = fromBase64(payload.iv, 'iv', 12);
   const ciphertext = fromBase64(payload.ciphertext, 'ciphertext');
-  const key = await deriveKey(password, salt);
+  const webCrypto = requireWebCrypto();
+  const key = await deriveKey(webCrypto, password, salt);
 
   let plaintext: ArrayBuffer;
   try {
-    plaintext = await crypto.subtle.decrypt(
+    plaintext = await webCrypto.subtle.decrypt(
       {
         name: 'AES-GCM',
         iv: iv.buffer as ArrayBuffer,

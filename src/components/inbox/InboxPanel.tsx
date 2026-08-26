@@ -3,6 +3,7 @@ import { Archive, Check, Cloud, Copy, ExternalLink, HelpCircle, Inbox as InboxIc
 import { inboxItemToMarkdown, parseInboxTags } from '../../services/inbox';
 import { countUnsyncedInboxItems, isInboxItemSynced } from '../../services/inboxSync';
 import { applyTechOsCaptureKind, getTechOsCaptureKind, getVisibleInboxTags, TECH_OS_CAPTURE_LABELS } from '../../services/techOsCapture';
+import { getWebCryptoUnavailableReason } from '../../services/webCrypto';
 import type { InboxDraft, InboxItem, InboxItemStatus } from '../../types/inbox';
 import type { InboxSyncMeta, InboxSyncUiState } from '../../types/inbox-sync';
 import type { TechOsCaptureKind } from '../../types/tech-os-capture';
@@ -46,6 +47,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncM
   const inboxCount = items.filter(item => !item.deletedAt && item.status === 'inbox').length;
   const archivedCount = items.filter(item => !item.deletedAt && item.status === 'archived').length;
   const unsyncedCount = countUnsyncedInboxItems(items, syncMeta);
+  const encryptionUnavailableReason = useMemo(() => getWebCryptoUnavailableReason(), []);
   const syncLabel = syncState.phase === 'syncing'
     ? '同步中…'
     : syncState.phase === 'error'
@@ -107,6 +109,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncM
           <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Cloud size={16} />GitHub 加密同步<span className={`ml-auto text-xs ${syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#718986]'}`}>{syncLabel}</span></summary>
           <div className="mt-3 space-y-3 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
             <p className="text-xs leading-5 text-[#718986]">目标：{repositoryLabel} · <code>data/inbox.enc.json</code>。同步会先读取远端、按 ID 合并，再只提交密文；密码和 Token 不会保存。</p>
+            {encryptionUnavailableReason && <p role="alert" className="rounded-lg border border-[#a85d50]/20 bg-[#a85d50]/8 p-2 text-xs leading-5 text-[#985247] dark:text-[#e1a294]">{encryptionUnavailableReason}</p>}
             <input type="password" autoComplete="new-password" spellCheck={false} className="baize-input font-mono" value={githubToken} onChange={event => setGithubToken(event.target.value)} placeholder="GitHub Token" />
             <div className="grid gap-2 sm:grid-cols-2">
               <input type="password" autoComplete="new-password" className="baize-input" value={syncPassword} onChange={event => setSyncPassword(event.target.value)} placeholder="加密密码（至少 12 字符）" />
@@ -115,7 +118,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncM
             <div className="flex flex-wrap items-center gap-2">
               <p className={`min-w-0 flex-1 break-words text-xs ${syncValidationMessage || syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#315e5b] dark:text-[#b8cec7]'}`}>{syncValidationMessage || syncState.message}</p>
               {syncState.commitUrl && <a className="text-xs text-[#356b66] hover:underline dark:text-[#d2b775]" href={syncState.commitUrl} target="_blank" rel="noreferrer">查看加密提交</a>}
-              <button type="button" className="baize-button-primary" disabled={syncState.phase === 'syncing' || !githubToken || !syncPassword || !syncPasswordConfirm} onClick={() => { void runSync(); }}><RefreshCw size={16} className={syncState.phase === 'syncing' ? 'animate-spin' : ''} />{syncState.phase === 'syncing' ? '正在合并' : '合并同步'}</button>
+              <button type="button" className="baize-button-primary" disabled={Boolean(encryptionUnavailableReason) || syncState.phase === 'syncing' || !githubToken || !syncPassword || !syncPasswordConfirm} onClick={() => { void runSync(); }}><RefreshCw size={16} className={syncState.phase === 'syncing' ? 'animate-spin' : ''} />{syncState.phase === 'syncing' ? '正在合并' : '合并同步'}</button>
             </div>
             <p className="flex items-center gap-1 text-[11px] text-[#829793]"><Lock size={12} />任何读取、解密或提交失败都不会清空本机 Inbox。</p>
           </div>
