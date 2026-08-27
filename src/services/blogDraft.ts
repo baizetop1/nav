@@ -117,8 +117,34 @@ export async function createInboxBlogDraft(
 function inboxBody(item: InboxItem): string {
   const sections: string[] = [];
   if (item.type === 'link' && item.url) sections.push(`[${item.title?.trim() || item.url}](${item.url})`);
-  if (item.content?.trim()) sections.push(item.content.trim());
+  if (item.content?.trim()) sections.push(formatInboxBodyForMarkdown(item.content));
   return sections.join('\n\n') || '<!-- 在这里继续完善正文。 -->';
+}
+
+/** Keeps captured plain text readable and prevents HTML-like examples from changing page markup. */
+export function formatInboxBodyForMarkdown(value: string): string {
+  let fence: '`' | '~' | null = null;
+  return value.trim().split(/\r?\n/).map(line => {
+    const fenceMatch = line.match(/^\s*(`{3,}|~{3,})/);
+    if (fenceMatch) {
+      const marker = fenceMatch[1][0] as '`' | '~';
+      if (!fence) fence = marker;
+      else if (fence === marker) fence = null;
+      return line;
+    }
+    if (fence) return line;
+
+    const listSafe = line.replace(/^(\s*\d+[.)])(?=\S)/, '$1 ');
+    return protectHtmlExamples(listSafe);
+  }).join('\n');
+}
+
+function protectHtmlExamples(line: string): string {
+  const segments = line.split(/(`+[^`]*`+)/g);
+  return segments.map((segment, index) => index % 2 === 1 ? segment : segment.replace(
+    /<\/?[A-Za-z][A-Za-z0-9-]*(?:\s[^>\n]*)?\s*\/?>/g,
+    match => `\`${match}\``,
+  )).join('');
 }
 
 function yamlString(value: string): string {
