@@ -14,9 +14,14 @@ interface GitHubUser {
   avatar_url: string;
 }
 
-interface PublishResult {
+export interface PublishResult {
   commitUrl: string;
   sha: string;
+}
+
+interface RepositoryTreeEntry {
+  path: string;
+  type: 'blob' | 'tree' | 'commit';
 }
 
 export interface WorkflowRun {
@@ -75,7 +80,10 @@ async function githubRequest<T>(path: string, token: string, init?: RequestInit)
       throw new Error('未找到目标仓库、分支或文件。请确认 Token 已授权此仓库，并检查 Owner、Repository 和 Branch。');
     }
     if (response.status === 409) {
-      throw new Error('远端数据在同步期间发生变化。已保留本机 Inbox，请重新同步。');
+      throw new Error('远端数据在操作期间发生变化，请重新读取后再试。');
+    }
+    if (response.status === 422) {
+      throw new Error('远端分支在提交期间发生变化，或目标文件已存在。请重新读取后再试。');
     }
     throw new Error(payload?.message || `GitHub API 请求失败 (${response.status})`);
   }
@@ -323,5 +331,70 @@ export async function publishNavigationData(
     },
   );
 
+  return { commitUrl: commit.html_url, sha: commit.sha };
+}
+
+/** Creates one new UTF-8 text file without replacing an existing draft or published slug. */
+export async function createRepositoryTextFile(
+  target: RepositoryTarget,
+  token: string,
+  file: {
+    path: string;
+    content: string;
+    message: string;
+    conflictsWith?: (path: string) => boolean;
+  },
+): Promise<PublishResult> {
+  if (!file.message.trim()) throw new Error('提交信息不能为空。');
+  const normalizedPath = file.path.replace(/\\/g, '/').replace(/^\/+/, '');
+  if (!normalizedPath || normalizedPath.split('/').some(part => !part || part === '.' || part === '..')) {
+    throw new Error('目标文件路径无效。');
+  }
+
+  const { owner, repo, branch } = target;
+  const ref = await githubRequest<{ object: { sha: string } }>(
+    `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/ref/heads/${encodeURIComponent(branch)}`,
+    token,
+  );
+  const parentSha = ref.object.sha;
+  const parent = await githubRequest<{ tree: { sha: string } }>(
+    `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/commits/${parentSha}`,
+    token,
+  );
+  const remoteTree = await githubRequest<{ tree: RepositoryTreeEntry[]; truncated: boolean }>(
+    `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/trees/${parent.tree.sha}?recursive=1`,
+    token,
+  );
+  if (remoteTree.truncated) throw new Error('远端文件列表过大，无法安全确认 slug 是否重复。');
+
+  const conflict = remoteTree.tree.find(entry => entry.type === 'blob' && (
+    entry.path === normalizedPath || file.conflictsWith?.(entry.path)
+  ));
+  if (conflict) throw new Error(`这个 slug 已被博客文件使用：${conflict.path}。请更换 slug 后重试。`);
+
+  const tree = await githubRequest<{ sha: string }>(
+    `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/trees`,
+    token,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        base_tree: parent.tree.sha,
+        tree: [{ path: normalizedPath, mode: '100644', type: 'blob', content: file.content }],
+      }),
+    },
+  );
+  const commit = await githubRequest<{ sha: string; html_url: string }>(
+    `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/commits`,
+    token,
+    {
+      method: 'POST',
+      body: JSON.stringify({ message: file.message, tree: tree.sha, parents: [parentSha] }),
+    },
+  );
+  await githubRequest(
+    `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/refs/heads/${encodeURIComponent(branch)}`,
+    token,
+    { method: 'PATCH', body: JSON.stringify({ sha: commit.sha, force: false }) },
+  );
   return { commitUrl: commit.html_url, sha: commit.sha };
 }

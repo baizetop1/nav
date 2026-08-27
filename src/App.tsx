@@ -17,6 +17,7 @@ import { checkLinksFromBrowser, loadLinkHealthReport, type LinkHealthEntry } fro
 import { getTemporaryVisitSummaries, loadTemporaryVisits, normalizeTemporaryUrl, pruneTemporaryVisits, recordTemporaryVisit, removeTemporaryVisit, TEMPORARY_VISITS_KEY, temporaryUrlKey, type TemporaryVisitsStore } from './lib/temporaryVisits';
 import { addTranslationHistory, loadTranslationHistory, TRANSLATION_HISTORY_KEY, type TranslationHistoryItem } from './lib/translationHistory';
 import { parseTextTransferHash } from './lib/textTransfer';
+import { createInboxBlogDraft, type BlogDraftInput } from './services/blogDraft';
 import { decryptNote, encryptNote } from './services/encryptedNote';
 import { getEncryptedNote, saveEncryptedNote } from './services/github';
 import { createInboxItem, loadInbox, normalizeInboxDraft, saveInbox, setInboxItemStatus, softDeleteInboxItem, updateInboxItem } from './services/inbox';
@@ -563,7 +564,21 @@ function App() {
       setInboxSyncState({ phase: 'error', message: error instanceof Error ? error.message : 'Inbox 同步失败；本机内容已保留。' });
     }
   };
+  const createBlogDraftFromInbox = async (item: InboxItem, input: BlogDraftInput, token: string) => {
+    if (inboxSyncState.phase === 'syncing') throw new Error('正在同步 Inbox，请等待完成后再创建博客草稿。');
+    const result = await createInboxBlogDraft(item, input, token, siteConfig.blogRepository);
+    const sourceArchived = item.status === 'archived'
+      || replaceInboxItems(setInboxItemStatus(inboxItems, item.id, 'archived'));
+    return { ...result, sourceArchived };
+  };
   const inboxCount = inboxItems.filter(item => !item.deletedAt && item.status === 'inbox').length;
+  const showInboxLauncher = !isAdminOpen
+    && !isInboxOpen
+    && !isTempTextOpen
+    && !isTempTextQrOpen
+    && incomingTempText === null
+    && !qrSite
+    && !isCommandPaletteOpen;
   const commandActions: CommandPaletteAction[] = [
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
     { id: 'quick-capture', title: '快速记录', description: '立即写入本机 Inbox', keywords: ['capture', '记录', '收件箱', '+'], icon: 'add', run: openQuickCapture },
@@ -768,13 +783,13 @@ function App() {
         </div>
       </main>
 
-      <nav className="fixed bottom-4 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 rounded-2xl border border-white/70 bg-[#f4f1e8]/90 p-2 shadow-xl backdrop-blur-xl lg:left-auto lg:right-6 lg:translate-x-0 dark:border-[#c9a96b]/15 dark:bg-[#102c33]/92" aria-label="Inbox 快捷入口">
+      {showInboxLauncher && <nav className="fixed bottom-4 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 rounded-2xl border border-white/70 bg-[#f4f1e8]/90 p-2 shadow-xl backdrop-blur-xl lg:left-auto lg:right-6 lg:translate-x-0 dark:border-[#c9a96b]/15 dark:bg-[#102c33]/92" aria-label="Inbox 快捷入口">
         <button type="button" className="baize-button-primary h-11 px-4" onClick={openQuickCapture} aria-label="快速记录"><Plus size={20} /><span className="hidden sm:inline">快速记录</span></button>
         <button type="button" className="baize-button-secondary h-11 px-4" onClick={openInbox} aria-label={`打开 Inbox，${inboxCount} 条`}><InboxIcon size={19} /><span>Inbox</span>{inboxCount > 0 && <span className="rounded-full bg-[#356b66] px-2 py-0.5 text-[11px] text-white dark:bg-[#c9a96b] dark:text-[#102c33]">{inboxCount}</span>}</button>
-      </nav>
+      </nav>}
 
       {isAdminOpen && <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onRunBrowserLinkHealthCheck={runBrowserLinkHealthCheck} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
-      <InboxPanel open={isInboxOpen} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onSync={syncInboxWithCloud} onClose={() => setIsInboxOpen(false)} />
+      <InboxPanel open={isInboxOpen} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} blogRepositoryLabel={`${siteConfig.blogRepository.owner}/${siteConfig.blogRepository.repo} · ${siteConfig.blogRepository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onSync={syncInboxWithCloud} onCreateBlogDraft={createBlogDraftFromInbox} onClose={() => setIsInboxOpen(false)} />
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">

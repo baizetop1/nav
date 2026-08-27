@@ -17,6 +17,7 @@
     "test:text-network": "node --experimental-strip-types scripts/text-network-selfcheck.mjs",
     "test:inbox": "node --experimental-strip-types scripts/inbox-selfcheck.mjs",
     "test:inbox-sync": "node --experimental-strip-types scripts/inbox-sync-selfcheck.mjs",
+    "test:blog-draft": "node --experimental-strip-types scripts/blog-draft-selfcheck.mjs",
     "check:tech-os": "node scripts/check-tech-os.mjs",
     "test:tech-os": "node scripts/tech-os-selfcheck.mjs",
     "build:tech-os-index": "node scripts/build-tech-os-index.mjs",

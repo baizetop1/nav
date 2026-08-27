@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Archive, Check, Cloud, Copy, ExternalLink, HelpCircle, Inbox as InboxIcon, Lightbulb, Link as LinkIcon, Lock, Pencil, Plus, RefreshCw, RotateCcw, StickyNote, Trash2, X } from 'lucide-react';
+import { Archive, Check, Cloud, Copy, ExternalLink, FileText, Github, HelpCircle, Inbox as InboxIcon, Lightbulb, Link as LinkIcon, Lock, Pencil, Plus, RefreshCw, RotateCcw, StickyNote, Trash2, X } from 'lucide-react';
+import { createBlogDraftDefaults, slugifyBlogDraft, type BlogDraftInput, type BlogDraftResult } from '../../services/blogDraft';
 import { inboxItemToMarkdown, parseInboxTags } from '../../services/inbox';
 import { countUnsyncedInboxItems, isInboxItemSynced } from '../../services/inboxSync';
 import { applyTechOsCaptureKind, getTechOsCaptureKind, getVisibleInboxTags, TECH_OS_CAPTURE_LABELS } from '../../services/techOsCapture';
@@ -13,6 +14,7 @@ interface InboxPanelProps {
   captureRequest: number;
   items: InboxItem[];
   repositoryLabel: string;
+  blogRepositoryLabel: string;
   syncMeta: InboxSyncMeta | null;
   syncState: InboxSyncUiState;
   onCreate: (draft: InboxDraft) => string | null;
@@ -20,6 +22,7 @@ interface InboxPanelProps {
   onStatusChange: (id: string, status: InboxItemStatus) => void;
   onDelete: (id: string) => void;
   onSync: (token: string, password: string) => Promise<void>;
+  onCreateBlogDraft: (item: InboxItem, input: BlogDraftInput, token: string) => Promise<BlogDraftResult & { sourceArchived: boolean }>;
   onClose: () => void;
 }
 
@@ -31,11 +34,12 @@ interface InboxEditorProps {
   onCancel?: () => void;
 }
 
-export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncMeta, syncState, onCreate, onUpdate, onStatusChange, onDelete, onSync, onClose }: InboxPanelProps) {
+export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogRepositoryLabel, syncMeta, syncState, onCreate, onUpdate, onStatusChange, onDelete, onSync, onCreateBlogDraft, onClose }: InboxPanelProps) {
   const [view, setView] = useState<InboxItemStatus>('inbox');
   const [captureOpen, setCaptureOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [blogDraftItemId, setBlogDraftItemId] = useState<string | null>(null);
   const [githubToken, setGithubToken] = useState('');
   const [syncPassword, setSyncPassword] = useState('');
   const [syncPasswordConfirm, setSyncPasswordConfirm] = useState('');
@@ -48,6 +52,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncM
   const archivedCount = items.filter(item => !item.deletedAt && item.status === 'archived').length;
   const unsyncedCount = countUnsyncedInboxItems(items, syncMeta);
   const encryptionUnavailableReason = useMemo(() => getWebCryptoUnavailableReason(), []);
+  const blogDraftItem = blogDraftItemId ? items.find(item => item.id === blogDraftItemId && !item.deletedAt) : undefined;
   const syncLabel = syncState.phase === 'syncing'
     ? '同步中…'
     : syncState.phase === 'error'
@@ -61,6 +66,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncM
   useEffect(() => {
     if (!open) return;
     setEditingId(null);
+    setBlogDraftItemId(null);
     if (captureRequest > 0) {
       setView('inbox');
       setCaptureOpen(true);
@@ -125,6 +131,8 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncM
         </details>
 
         <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
+          {blogDraftItem && <BlogDraftEditor key={blogDraftItem.id} item={blogDraftItem} token={githubToken} repositoryLabel={blogRepositoryLabel} onTokenChange={setGithubToken} onSubmit={onCreateBlogDraft} onClose={() => setBlogDraftItemId(null)} />}
+
           {captureOpen && <section className="mb-5 rounded-2xl border border-[#5f8f84]/20 bg-white/25 p-4 dark:border-[#c9a96b]/15 dark:bg-[#07191d]/25" aria-label="快速记录">
             <div className="mb-3 flex items-center justify-between"><div><h3 className="font-semibold text-[#234b4e] dark:text-[#f4f1e8]">快速记录</h3><p className="mt-1 text-xs text-[#718986]">Question / Idea / Note / Link 共用现有加密 Inbox</p></div><span className="text-xs text-[#718986]">保存后立即写入本机</span></div>
             <InboxEditor autoFocus submitLabel="保存" onSubmit={draft => {
@@ -152,6 +160,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncM
                 <div className="mt-3 flex flex-wrap justify-end gap-2 border-t border-[#5f8f84]/10 pt-3 dark:border-[#c9a96b]/10">
                   <button type="button" className="baize-button-secondary" onClick={() => setEditingId(item.id)}><Pencil size={15} />编辑</button>
                   <button type="button" className="baize-button-secondary" onClick={() => { void copyItem(item); }}>{copiedId === item.id ? <Check size={15} /> : <Copy size={15} />}{copiedId === item.id ? '已复制' : '复制 Markdown'}</button>
+                  <button type="button" className="baize-button-primary" onClick={() => { setBlogDraftItemId(item.id); setCaptureOpen(false); setEditingId(null); window.setTimeout(() => document.getElementById('inbox-blog-draft-editor')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0); }}><FileText size={15} />转为博客草稿</button>
                   <button type="button" className="baize-button-secondary" onClick={() => onStatusChange(item.id, view === 'inbox' ? 'archived' : 'inbox')}>{view === 'inbox' ? <Archive size={15} /> : <RotateCcw size={15} />}{view === 'inbox' ? '归档' : '恢复'}</button>
                   <button type="button" className="baize-danger-button" onClick={() => { if (confirm('确定删除这条记录吗？内容会保留软删除标记。')) onDelete(item.id); }}><Trash2 size={15} />删除</button>
                 </div>
@@ -162,6 +171,82 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, syncM
       </aside>
     </div>
   );
+}
+
+function BlogDraftEditor({ item, token, repositoryLabel, onTokenChange, onSubmit, onClose }: {
+  item: InboxItem;
+  token: string;
+  repositoryLabel: string;
+  onTokenChange: (token: string) => void;
+  onSubmit: (item: InboxItem, input: BlogDraftInput, token: string) => Promise<BlogDraftResult & { sourceArchived: boolean }>;
+  onClose: () => void;
+}) {
+  const defaults = useMemo(() => createBlogDraftDefaults(item), [item]);
+  const [title, setTitle] = useState(defaults.title);
+  const [slug, setSlug] = useState(defaults.slug);
+  const [slugEdited, setSlugEdited] = useState(false);
+  const [category, setCategory] = useState(defaults.category);
+  const [format, setFormat] = useState(defaults.format);
+  const [tags, setTags] = useState(defaults.tags.join(', '));
+  const [related, setRelated] = useState('');
+  const [phase, setPhase] = useState<'idle' | 'creating' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+  const [result, setResult] = useState<BlogDraftResult | null>(null);
+
+  const submit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setPhase('creating');
+    setMessage('');
+    setResult(null);
+    try {
+      const created = await onSubmit(item, {
+        title,
+        slug,
+        category,
+        format,
+        tags: splitList(tags),
+        related: splitList(related),
+      }, token);
+      setResult(created);
+      setPhase('success');
+      setMessage(created.sourceArchived
+        ? '博客草稿已创建，来源记录已归档。归档状态需要下次 Inbox 同步才会进入密文备份。'
+        : '博客草稿已创建，但浏览器未能保存来源归档状态。');
+    } catch (error) {
+      setPhase('error');
+      setMessage(error instanceof Error ? error.message : '创建博客草稿失败。');
+    }
+  };
+
+  return <section id="inbox-blog-draft-editor" className="mb-5 border-y border-[#5f8f84]/20 py-5 dark:border-[#c9a96b]/15" aria-label="转为博客草稿">
+    <div className="mb-4 flex items-start justify-between gap-3">
+      <div><h3 className="flex items-center gap-2 font-semibold text-[#234b4e] dark:text-[#f4f1e8]"><FileText size={18} />转为博客草稿</h3><p className="mt-1 text-xs leading-5 text-[#718986]">目标：{repositoryLabel} · <code>_drafts/{slug || 'slug'}.md</code>。草稿不会进入公开文章索引。</p></div>
+      <button type="button" className="baize-icon-button" onClick={onClose} aria-label="关闭博客草稿表单"><X size={18} /></button>
+    </div>
+    <form className="space-y-3" onSubmit={submit}>
+      <label className="block text-xs font-semibold text-[#64807c]">标题<input className="baize-input mt-1" value={title} onChange={event => { const nextTitle = event.target.value; setTitle(nextTitle); if (!slugEdited) setSlug(slugifyBlogDraft(nextTitle)); }} /></label>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <label className="block text-xs font-semibold text-[#64807c]">Slug<input className="baize-input mt-1 font-mono" value={slug} onChange={event => { setSlug(event.target.value); setSlugEdited(true); }} placeholder="browser-navigation" /></label>
+        <label className="block text-xs font-semibold text-[#64807c]">分类<input className="baize-input mt-1" value={category} onChange={event => setCategory(event.target.value)} /></label>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <label className="block text-xs font-semibold text-[#64807c]">形式<select className="baize-input mt-1" value={format} onChange={event => setFormat(event.target.value)}><option>笔记</option><option>教程</option><option>记录</option><option>复盘</option><option>观点</option><option>清单</option><option>排障记录</option><option>实验复盘</option></select></label>
+        <label className="block text-xs font-semibold text-[#64807c]">标签<input className="baize-input mt-1" value={tags} onChange={event => setTags(event.target.value)} placeholder="逗号分隔" /></label>
+      </div>
+      <label className="block text-xs font-semibold text-[#64807c]">相关文章 Slug（可选）<input className="baize-input mt-1 font-mono" value={related} onChange={event => setRelated(event.target.value)} placeholder="dns-basics, http-request" /></label>
+      <label className="block text-xs font-semibold text-[#64807c]">GitHub Token<input type="password" autoComplete="new-password" spellCheck={false} className="baize-input mt-1 font-mono" value={token} onChange={event => onTokenChange(event.target.value)} placeholder="github_pat_… 或 ghp_…" /></label>
+      <p className="flex items-center gap-1 text-[11px] leading-5 text-[#829793]"><Lock size={12} />Token 只保留在当前页面内存；需授权博客仓库 Contents 读写。</p>
+      <div className="flex flex-wrap items-center gap-3">
+        <p role={phase === 'error' ? 'alert' : undefined} className={`min-w-0 flex-1 break-words text-xs leading-5 ${phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#315e5b] dark:text-[#b8cec7]'}`}>{message}</p>
+        {result && <a className="text-xs text-[#356b66] hover:underline dark:text-[#d2b775]" href={result.commitUrl} target="_blank" rel="noreferrer">查看草稿提交</a>}
+        <button type="submit" className="baize-button-primary" disabled={phase === 'creating' || phase === 'success' || !token || !title || !slug}><Github size={16} />{phase === 'creating' ? '创建中…' : phase === 'success' ? '已创建' : '创建博客草稿'}</button>
+      </div>
+    </form>
+  </section>;
+}
+
+function splitList(value: string): string[] {
+  return value.split(/[,，\n]/).map(item => item.trim()).filter(Boolean);
 }
 
 function InboxEditor({ initial, autoFocus, submitLabel, onSubmit, onCancel }: InboxEditorProps) {

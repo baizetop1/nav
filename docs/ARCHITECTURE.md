@@ -432,6 +432,8 @@ gh-pages 发布
 
 Inbox 同步独立使用 `data/inbox.enc.json`，不改变 `NavigationBackup v1`。同步顺序固定为“读取远端 → 解密校验 → 按 ID 合并 → 加密 → 使用已读取 SHA 提交”；任一步失败都不清空本机数据。并发更新返回 409 时停止，不 force 覆盖。软删除项继续保留在密文中，避免另一设备把旧版本恢复出来。
 
+Phase H 在 PC Inbox 增加显式的“转为博客草稿”操作。用户先确认 title、slug、category、format、tags 和 related，然后使用仅存于当前页面内存的 PAT 对 `baizetop1/baizetop1.github.io` 执行非 force 原子提交。系统只新建 `_drafts/<slug>.md`，并在写入前检查草稿和已发布文章的 slug 冲突；不覆盖文件、不写 `_posts`、不直接公开发布。远端草稿创建成功后才归档来源 Inbox，归档状态仍需用户下次主动同步进入加密 Inbox。
+
 临时文本二维码是短距传输而不是安全存储。其 Base64URL 编码不属于加密，任何获得二维码或传输链接的人都可以读取内容，因此敏感文本仍应使用密码加密同步。
 
 标准 GitHub OAuth Web Flow 需要安全保存 client secret 并处理回调，纯 GitHub Pages 无法安全完成。若以后采用 OAuth，需要额外的可信后端或 Serverless Function，此时系统将不再是严格意义上的“仅 GitHub Pages、零后端”架构。

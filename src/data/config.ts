@@ -20,4 +20,9 @@ export const siteConfig = {
     repo: 'nav',
     branch: 'main',
   },
+  blogRepository: {
+    owner: 'baizetop1',
+    repo: 'baizetop1.github.io',
+    branch: 'master',
+  },
 };
