@@ -2,8 +2,8 @@
   {
     "id": "baize-blog",
     "name": "安全树洞",
-    "url": "http://baizeone.top/",
     "description": "个人博客",
+    "url": "https://baizeone.top/",
     "categoryId": "common",
     "tags": [
       "博客",
@@ -141,6 +141,17 @@
     "tags": [
       "教程",
       "Java"
+    ]
+  },
+  {
+    "id": "ashuiai",
+    "name": "阿水",
+    "description": "人工智能对话助手",
+    "url": "https://ai.ashuiai.com/home",
+    "categoryId": "utilities",
+    "tags": [
+      "AI",
+      "工具"
     ]
   },
   {
@@ -396,85 +407,13 @@
     "favorite": false
   },
   {
-    "id": "priceaiai-比价雷达",
-    "name": "PriceAIAI 比价雷达",
-    "url": "https://priceai.cc/?home=1",
-    "description": "从浏览器书签导入",
-    "categoryId": "导入书签",
+    "id": "番茄小说网",
+    "name": "番茄小说网",
+    "url": "https://fanqienovel.com/main/writer/home",
+    "description": "番茄小说网作者专区是原创作家创作平台，包括言情小说，穿越小说，玄幻小说，武侠小说，都市小说，总裁豪门小说，网游小说等，快来写小说赚福利！",
+    "categoryId": "后台",
     "tags": [
       "书签"
     ]
-  },
-  {
-    "id": "卡网订阅",
-    "name": "卡网订阅",
-    "url": "https://priceai.cc/channels",
-    "description": "从浏览器书签导入",
-    "categoryId": "导入书签",
-    "tags": [
-      "书签"
-    ]
-  },
-  {
-    "id": "官方订阅",
-    "name": "官方订阅",
-    "url": "https://priceai.cc/official-prices",
-    "description": "从浏览器书签导入",
-    "categoryId": "导入书签",
-    "tags": [
-      "书签"
-    ]
-  },
-  {
-    "id": "官方-api",
-    "name": "官方 API",
-    "url": "https://priceai.cc/official-api",
-    "description": "从浏览器书签导入",
-    "categoryId": "导入书签",
-    "tags": [
-      "书签"
-    ]
-  },
-  {
-    "id": "中转-api",
-    "name": "中转 API",
-    "url": "https://priceai.cc/api-transit",
-    "description": "从浏览器书签导入",
-    "categoryId": "导入书签",
-    "tags": [
-      "书签"
-    ]
-  },
-  {
-    "id": "deepseek-platform",
-    "name": "DeepSeek Platform",
-    "url": "https://platform.deepseek.com/",
-    "description": "Join DeepSeek API platform to access our AI models, developer resources and API documentation.",
-    "categoryId": "导入网页",
-    "tags": [
-      "书签"
-    ]
-  },
-  {
-    "id": "作家专区-番茄小说网-番茄小说旗下原创文学平台",
-    "name": "作家专区-番茄小说网-番茄小说旗下原创文学平台",
-    "url": "https://fanqienovel.com/main/writer/chapter-manage/7667918304081611800&%E5%85%A8%E6%B0%91%E5%8D%A1%E5%B8%88%EF%BC%9A%E6%88%91%E7%9A%84%E5%BA%9F%E5%8D%A1%E8%83%BD%E5%85%BB%E6%88%90%E7%A5%9E%E8%AF%9D?type=1",
-    "description": "番茄小说网作者专区",
-    "categoryId": "导入网页",
-    "tags": [
-      "小说后台"
-    ],
-    "favorite": false
-  },
-  {
-    "id": "仪表盘-luoxin-中转",
-    "name": "仪表盘 - Luoxin 中转",
-    "url": "https://zz.luoxin.me/dashboard",
-    "description": "从保存的 HTML 页面导入",
-    "categoryId": "导入网页",
-    "tags": [
-      "书签"
-    ],
-    "favorite": false
   }
 ]
