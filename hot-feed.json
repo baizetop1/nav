@@ -1,58 +1,58 @@
 {
   "version": 3,
-  "generatedAt": "2026-08-31T13:53:00.776Z",
+  "generatedAt": "2026-08-31T20:06:18.858Z",
   "intelligence": {
-    "updatedAt": "2026-08-31T13:53:00.776Z",
+    "updatedAt": "2026-08-31T20:06:18.858Z",
     "items": [
       {
-        "id": "cn-item-e0a01e9638237742",
+        "id": "cn-item-52a58cc83da7164b",
         "category": "cn",
-        "title": "江苏省委常委、组织部部长刘建洋被查",
-        "url": "https://www.chinanews.com.cn/gn/2026/08-31/10687466.shtml",
+        "title": "事业单位招聘存在“高分断层”情况？吉林白城通报",
+        "url": "https://www.chinanews.com.cn/sh/2026/08-31/10687517.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-08-31T13:09:48.000Z",
-        "summary": "中新社北京8月31日电 中国官方8月31日晚通报，江苏省委常委、组织部部长刘建洋涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
+        "publishedAt": "2026-08-31T14:35:41.000Z",
+        "summary": "中新网8月31日电 据“白城发布”微信公众号消息，吉林省白城市人民政府发布情况通报称，8月31日，部分媒体报道有考生质疑2026年白城市市直事业单位公开招聘存在“高分断层”情况。白城市高度重视，立即组织纪检、人社、公安、工信等部门成立联合调查组，对此次招聘工作进行全面调查。白城市人民政府将及时向社会发布相关情况，回应公众关切。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2023-49105",
+        "id": "cisa-kev-cve-2026-82078",
         "category": "security",
-        "title": "ownCloud ownCloud：ownCloud Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-49105",
+        "title": "PaperCut NG/MF：PaperCut NG/MF Unsafe Reflection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-82078",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-27T00:00:00.000Z",
-        "summary": "ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.",
-        "badge": "CVE-2023-49105",
-        "signal": "已遭利用 · 整改期限 2026-08-30"
+        "publishedAt": "2026-08-31T00:00:00.000Z",
+        "summary": "PaperCut NG/MF contains an unsafe reflection vulnerability that allows an attacker to manipulate system configuration parameters and execute arbitrary Java bytecode residing on the application classpath under the security context of the Pa…",
+        "badge": "CVE-2026-82078",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-openai-b42ac281ecaf56c0",
+        "id": "ai-openai-8a7cdd78fd483859",
         "category": "ai",
-        "title": "Our decision on Cursor following its acquisition by SpaceX",
-        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+        "title": "A milestone in expanding access to AI",
+        "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
         "source": "OpenAI",
-        "publishedAt": "2026-08-28T06:00:00.000Z",
-        "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+        "publishedAt": "2026-08-31T04:00:00.000Z",
+        "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49507822",
+        "id": "hn-49511856",
         "category": "dev",
-        "title": "OpenShot 4.0: Record, Edit, and Color Like Never Before",
-        "url": "https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before/",
+        "title": "I turned my security cameras into an automatic bird identification system",
+        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T09:59:05.000Z",
+        "publishedAt": "2026-08-31T16:47:11.000Z",
         "badge": "HN",
-        "signal": "249 分 · 66 评论"
+        "signal": "216 分 · 63 评论"
       },
       {
-        "id": "cn-it-bf9bbeba6b6180ac",
+        "id": "cn-it-ff3a6f2092de6858",
         "category": "cn",
-        "title": "华硕新款 Zenbook A14 笔记本发布：骁龙 X 处理器、8GB 内存起步",
-        "url": "https://www.ithome.com/0/996/658.htm",
+        "title": "华为、小米、荣耀手机今日集体调价",
+        "url": "https://www.ithome.com/0/996/694.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T13:50:22.000Z",
-        "summary": "IT之家 8 月 31 日消息，华硕现已在海外市场推出新款 Zenbook A14（UX3480QA）笔记本。新品搭载高通骁龙 X 处理器，配备 OLED 屏幕和 50Wh 电池， 最长续航可达 30 小时 。 据介绍，这款笔记本搭载 14 英寸 OLED 屏幕，分辨率为 1920*1200，刷新率最高 60Hz，覆盖 100% DCI-P3 色域。 规格方面， 这款笔记本配备高通骁龙 X（X1-26-100）处理器 ，拥有 LPDDR5X 内存和 M.2 2280 PCI…",
+        "publishedAt": "2026-08-31T17:54:32.000Z",
+        "summary": "IT之家 9 月 1 日消息，据博主 @旺仔百事通 消息，华为 Mate 80 系列和 华为畅享 90 Pro Max 今日（9 月 1 日）进行调价。 华为 Mate 80： 12GB+256GB 调价前 4,699 元，调价后 5,499 元 12GB+512GB 调价前 5,199 元，调价后 5,999 元 16GB+512GB 调价前 5,499 元，调价后 6,299 元 16GB+1TB 调价前 6,499 元，调价后 7,299 元 华为 Mate 80 P…",
         "badge": "IT之家"
       },
       {
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238486",
+        "id": "v2ex-1238528",
         "category": "dev",
-        "title": "从《Silo》地堡到算力圈养：一个一线开发与摄影爱好者的 AI 时代生存底线",
-        "url": "https://www.v2ex.com/t/1238486",
+        "title": "这两个月，我被一个免费 AI 模型反复震惊",
+        "url": "https://www.v2ex.com/t/1238528",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T11:39:25.000Z",
-        "summary": "背景 ：刚刷完美剧《 Silo 》（末日地堡 / 羊毛战记）第三季前 9 集，结合过去一年从 Copilot 到各种 Agent 的重度使用体验，产生了一种强烈的惊悚感。写下这篇思考，想和 V 友们聊聊在 AI 时代，我们作为开发者该如何守住自己的底层底线？ 一、打破第四面墙的战栗 走出《 Silo 》剧集的那一刻，我感受到了两层惊悚： 表层的惊悚 ：大家都感同身受——那种披着“为了你好、为了人类存续与绝对安全”崇高外衣行凶的善意极权与信息审查； 深层的惊悚 ：作为一个技术…",
+        "publishedAt": "2026-08-31T16:00:12.000Z",
+        "summary": "最近又高强度折腾了一波 AI 辅助编程，结果被一些国内免费模型（如腾讯混元 Hy3 ）震惊到怀疑人生😨。上次做完终端版博客之后，我开始试着完全信任 AI 去实现各种想法，结果它一次一次刷新我的认知。简单列几个这次搞出来的东西： 1. 博客 API + WebMCP 把博客功能做成函数，在浏览器控制台里就能调用；还接入了谷歌和微软支持的 WebMCP 协议，已经被 WebMCP Directory 收录： 👉 https://webmcp.com/sites/mabbs.gi…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-baidu-c24275621266ca30",
@@ -94,18 +94,18 @@
         "source": "百度热搜",
         "summary": "总台记者现场探访吉隆口岸核心区，发现此前泥石流灾害过后，仅半山腰一座距地面二十多米的方形水塔留存原有建筑印记。因水塔一侧紧邻山峰，受灾害冲击影响较小，成为整个口岸区域里唯一完整保留下来的建筑。",
         "badge": "热搜",
-        "signal": "7,807,932 热度"
+        "signal": "7,808,231 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-53362",
+        "id": "cisa-kev-cve-2026-81578",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Unspecified Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53362",
+        "title": "PaperCut NG/MF：PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-81578",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-27T00:00:00.000Z",
-        "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using…",
-        "badge": "CVE-2026-53362",
-        "signal": "已遭利用 · 整改期限 2026-08-30"
+        "publishedAt": "2026-08-31T00:00:00.000Z",
+        "summary": "PaperCut NG/MF contains a missing authentication for critical function vulnerability which allows an unauthenticated remote attacker to modify certain system configurations. This vulnerability can be chained with CVE-2026-82078.",
+        "badge": "CVE-2026-81578",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
         "id": "ai-hugging-face-4d3b17a749f42c95",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49503601",
+        "id": "hn-49512975",
         "category": "dev",
-        "title": "“I just chose words carefully”",
-        "url": "https://unsung.aresluna.org/i-just-chose-words-carefully/",
+        "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
+        "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
         "source": "Hacker News",
-        "publishedAt": "2026-08-30T22:49:48.000Z",
+        "publishedAt": "2026-08-31T18:21:33.000Z",
         "badge": "HN",
-        "signal": "988 分 · 260 评论"
+        "signal": "79 分 · 15 评论"
       },
       {
-        "id": "cn-item-46c35940876d3d42",
+        "id": "cn-item-d5f0ded98e46234b",
         "category": "cn",
-        "title": "两部门针对福建启动防汛防台风四级应急响应",
-        "url": "https://www.chinanews.com.cn/gn/2026/08-31/10687473.shtml",
+        "title": "玩闹致博物馆标本受损是否应承担法律责任？律师解读",
+        "url": "https://www.chinanews.com.cn/cul/2026/08-31/10687526.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-08-31T12:53:51.000Z",
-        "summary": "中新网8月31日电 据应急管理部网站消息，受今年第18号台风“沙德尔”的残余涡旋影响，未来三天福建省部分地区将有暴雨到大暴雨，局地特大暴雨，部分中小河流可能发生超警洪水，防汛防台风形势严峻。",
+        "publishedAt": "2026-08-31T14:01:13.000Z",
+        "summary": "中新网北京8月31日电(记者 上官云)“对这样的行为，国家动物博物馆表示强烈谴责。”日前，国家动物博物馆发文《强烈谴责！》，相关内容和话题迅速登上热搜。",
         "badge": "中新网要闻"
       },
       {
@@ -148,46 +148,46 @@
         "signal": "HIGH · CVSS 6.5"
       },
       {
-        "id": "ai-openai-cb1db0d5c74b6e9e",
+        "id": "ai-openai-b42ac281ecaf56c0",
         "category": "ai",
-        "title": "Supporting Thailand’s next generation of AI startups",
-        "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+        "title": "Our decision on Cursor following its acquisition by SpaceX",
+        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
         "source": "OpenAI",
-        "publishedAt": "2026-08-28T02:00:00.000Z",
-        "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
+        "publishedAt": "2026-08-28T06:00:00.000Z",
+        "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238473",
+        "id": "v2ex-1238486",
         "category": "dev",
-        "title": "赛博后悔药",
-        "url": "https://www.v2ex.com/t/1238473",
+        "title": "从《Silo》地堡到算力圈养：一个一线开发与摄影爱好者的 AI 时代生存底线",
+        "url": "https://www.v2ex.com/t/1238486",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T10:21:51.000Z",
-        "summary": "unalias rm 2>/dev/null function rm { local args=() for arg in \"$@\"; do case \"$arg\" in -*) ;; # 跳过所有 flag ，只保留文件路径 *) args+=(\"$arg\") ;; esac done if [[ ${#args[@]} -eq 0 ]]; then echo \"rm: missing operand\" return 1 fi trash \"${args[@]}\" } 放…",
+        "publishedAt": "2026-08-31T11:39:25.000Z",
+        "summary": "背景 ：刚刷完美剧《 Silo 》（末日地堡 / 羊毛战记）第三季前 9 集，结合过去一年从 Copilot 到各种 Agent 的重度使用体验，产生了一种强烈的惊悚感。写下这篇思考，想和 V 友们聊聊在 AI 时代，我们作为开发者该如何守住自己的底层底线？ 一、打破第四面墙的战栗 走出《 Silo 》剧集的那一刻，我感受到了两层惊悚： 表层的惊悚 ：大家都感同身受——那种披着“为了你好、为了人类存续与绝对安全”崇高外衣行凶的善意极权与信息审查； 深层的惊悚 ：作为一个技术…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-2d5666b909822347",
+        "id": "cn-it-2f81bb6275472271",
         "category": "cn",
-        "title": "微软 XBOX 确认：《神鬼寓言》主线通关需 15-20 小时",
-        "url": "https://www.ithome.com/0/996/657.htm",
+        "title": "苹果 watchOS 27.0 开发者预览版 Beta 8 发布",
+        "url": "https://www.ithome.com/0/996/693.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T13:29:32.000Z",
-        "summary": "IT之家 8 月 31 日消息，据游戏媒体 VGC 今天报道，微软 XBOX 旗下工作室 Playground Games 在 2026 科隆游戏展确认，《神鬼寓言》游戏主线任务通关大约需要 15-20 小时。 本作副总监 Will Kennedy 表示：“ 我们大约有 15 至 20 小时的主线任务内容 ， 以及大约 15 至 20 小时的支线任务和开放世界探索内容 。当然生活系统是没有限制的，所以你想玩多久就玩多久。” 与其他动作 RPG 相比，《神鬼寓言》系列过去并非…",
+        "publishedAt": "2026-08-31T17:30:07.000Z",
+        "summary": "【 点此直达升级教程 】 IT之家 9 月 1 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.0 开发者预览版 Beta 8 更新（内部版本号：24R5360a），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-66384",
+        "id": "cisa-kev-cve-2023-49105",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-66384",
+        "title": "ownCloud ownCloud：ownCloud Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-49105",
         "source": "CISA KEV",
         "publishedAt": "2026-08-27T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
-        "badge": "CVE-2026-66384",
-        "signal": "已遭利用 · 整改期限 2026-09-10"
+        "summary": "ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.",
+        "badge": "CVE-2023-49105",
+        "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
         "id": "ai-google-deepmind-71c43cf780d371ee",
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49506819",
+        "id": "hn-49510514",
         "category": "dev",
-        "title": "Breaking Claude Code Opus 5 Auto Mode",
-        "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+        "title": "Playa Phone",
+        "url": "https://playaphone.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T07:49:18.000Z",
+        "publishedAt": "2026-08-31T14:52:26.000Z",
         "badge": "HN",
-        "signal": "187 分 · 60 评论"
+        "signal": "354 分 · 146 评论"
       },
       {
         "id": "cn-baidu-4f66e6e01fb4fb68",
@@ -216,7 +216,7 @@
         "source": "百度热搜",
         "summary": "89-87！8月31日晚，中国男篮击败黎巴嫩，杨瀚森2.2秒绝杀，中国男篮世预赛5胜3负。",
         "badge": "热搜",
-        "signal": "7,712,029 热度"
+        "signal": "7,711,795 热度"
       },
       {
         "id": "github-advisory-ghsa-5v29-34h8-v68r",
@@ -239,65 +239,65 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238451",
+        "id": "v2ex-1238473",
         "category": "dev",
-        "title": "现在 32 寸 6K 显示器已经下探到 3000+的价格了，跟内存、硬盘涨价形成鲜明对比",
-        "url": "https://www.v2ex.com/t/1238451",
+        "title": "赛博后悔药",
+        "url": "https://www.v2ex.com/t/1238473",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T09:02:52.000Z",
-        "summary": "现在 32 寸 6K 显示器的价格，不过基本都是小厂的产品，不知道能正常使用多久",
+        "publishedAt": "2026-08-31T10:21:51.000Z",
+        "summary": "unalias rm 2>/dev/null function rm { local args=() for arg in \"$@\"; do case \"$arg\" in -*) ;; # 跳过所有 flag ，只保留文件路径 *) args+=(\"$arg\") ;; esac done if [[ ${#args[@]} -eq 0 ]]; then echo \"rm: missing operand\" return 1 fi trash \"${args[@]}\" } 放…",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-item-bb15f734cf52261d",
+        "id": "cn-item-e0a01e9638237742",
         "category": "cn",
-        "title": "多部门依法查处两起涉中医药网络违规营销宣传问题",
-        "url": "https://www.chinanews.com.cn/gn/2026/08-31/10687418.shtml",
+        "title": "江苏省委常委、组织部部长刘建洋被查",
+        "url": "https://www.chinanews.com.cn/gn/2026/08-31/10687466.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-08-31T11:52:03.000Z",
-        "summary": "中新网8月31日电 据国家中医药管理局网站消息，近期，在中医医疗违法违规行为专项治理工作中，国家中医药管理局会同有关部门，依法查处了两起涉中医药网络违规营销宣传问题，现将有关情况通报如下。",
+        "publishedAt": "2026-08-31T13:09:48.000Z",
+        "summary": "中新社北京8月31日电 中国官方8月31日晚通报，江苏省委常委、组织部部长刘建洋涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2021-23758",
+        "id": "cisa-kev-cve-2026-53362",
         "category": "security",
-        "title": "Ajax.NET Professional Ajax.NET Professional：Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-23758",
+        "title": "Linux Kernel：Linux Kernel Unspecified Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53362",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
-        "summary": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS…",
-        "badge": "CVE-2021-23758",
-        "signal": "已遭利用 · 整改期限 2026-09-09"
+        "publishedAt": "2026-08-27T00:00:00.000Z",
+        "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using…",
+        "badge": "CVE-2026-53362",
+        "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
-        "id": "ai-openai-5c8d75ef9c12c059",
+        "id": "ai-openai-cb1db0d5c74b6e9e",
         "category": "ai",
-        "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
-        "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+        "title": "Supporting Thailand’s next generation of AI startups",
+        "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
         "source": "OpenAI",
-        "publishedAt": "2026-08-27T09:00:00.000Z",
-        "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
+        "publishedAt": "2026-08-28T02:00:00.000Z",
+        "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49508317",
+        "id": "hn-49489376",
         "category": "dev",
-        "title": "Agent Memory as a File Format",
-        "url": "https://calpaterson.com/memoryfields.html",
+        "title": "Show HN: Laser Graffiti",
+        "url": "https://laser.consti.de",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T11:17:25.000Z",
+        "publishedAt": "2026-08-29T12:28:11.000Z",
         "badge": "HN",
-        "signal": "45 分 · 37 评论"
+        "signal": "48 分 · 12 评论"
       },
       {
-        "id": "cn-it-9ac728c9769c09dc",
+        "id": "cn-it-a72d958250f7d89a",
         "category": "cn",
-        "title": "vivo OriginOS 7 系统重构渲染管线和编译框架，渲染速度较上代提升 14%",
-        "url": "https://www.ithome.com/0/996/656.htm",
+        "title": "苹果 visionOS 27.0 开发者预览版 Beta 8 发布",
+        "url": "https://www.ithome.com/0/996/692.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T13:24:11.000Z",
-        "summary": "IT之家 8 月 31 日消息，vivo OS 产品总监 @vivo百奇Bucky 今日在微博透露，OriginOS 7 操作系统将带来全新「液态动效」，结合更加自然的全新材质，界面元素犹如“液体般的灵动”。 IT之家注意到，vivo 本次在底层技术上进行全面升级。蓝河流畅引擎的「虚拟显卡 4.0」重构了渲染管线和编译框架， 渲染速度较 OriginOS 6 提升 14% 。 同时，vivo 本次升级了拟真渲染，动效基于状态实时动态计算，并极致优化渲染逻辑。在动效体验大幅提…",
+        "publishedAt": "2026-08-31T17:30:07.000Z",
+        "summary": "IT之家 9 月 1 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.0 开发者预览版 Beta 8 更新（内部版本号：24M5361a），本次更新距离上次发布 Beta/RC 间隔 7 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-08-25：visionOS…",
         "badge": "IT之家"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238447",
+        "id": "v2ex-1238451",
         "category": "dev",
-        "title": "[送码] 关于网站上线 2 小时就被攻击这件事",
-        "url": "https://www.v2ex.com/t/1238447",
+        "title": "现在 32 寸 6K 显示器已经下探到 3000+的价格了，跟内存、硬盘涨价形成鲜明对比",
+        "url": "https://www.v2ex.com/t/1238451",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T09:00:24.000Z",
-        "summary": "起因 我在周六也就是 8 月 29 号下午 2 点左右发布了我的生图网站 https://mindsee.app 然后在下午 4-5 点左右，有大量请求并发调用我的注册接口，并发非常高，万幸没有造成任何损失 时间线 下午 2 点： 上线网站 下午 3 点： 开始陆陆续续开始报警，查看是支付回调接口被请求， 接口签名校验未通过 ，最开始以为是有用户支付了，一查毛都没有，此时没继续关注，继续忙其他的 下午 4 点： 发现注册接口频繁报 400 错误，检查后发现是被 156.24…",
+        "publishedAt": "2026-08-31T09:02:52.000Z",
+        "summary": "现在 32 寸 6K 显示器的价格，不过基本都是小厂的产品，不知道能正常使用多久",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "18 回复"
       },
       {
         "id": "cn-baidu-692b77192f3b8d24",
@@ -340,18 +340,18 @@
         "source": "百度热搜",
         "summary": "眼下高校正陆续迎来开学季，一些高校自主研发的AI智能体成为迎新现场的智慧小助手，让新生从踏入校园的第一刻起，就能感受到人工智能带来的便捷。而在新学期，不少高校还将用AI赋能专业建设和课程升级。",
         "badge": "热搜",
-        "signal": "7,618,718 热度"
+        "signal": "7,619,125 热度"
       },
       {
-        "id": "cisa-kev-cve-2015-3246",
+        "id": "cisa-kev-cve-2026-66384",
         "category": "security",
-        "title": "Red Hat Libuser：Red Hat Libuser Race Condition Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-3246",
+        "title": "JFrog Artifactory：JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-66384",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
-        "summary": "Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation.",
-        "badge": "CVE-2015-3246",
-        "signal": "已遭利用 · 整改期限 2026-09-09"
+        "publishedAt": "2026-08-27T00:00:00.000Z",
+        "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
+        "badge": "CVE-2026-66384",
+        "signal": "已遭利用 · 整改期限 2026-09-10"
       },
       {
         "id": "ai-hugging-face-d21068479952e403",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49508059",
+        "id": "hn-49496292",
         "category": "dev",
-        "title": "Malleable software = solid bases and custom code",
-        "url": "https://www.mdubakov.me/malleable-software-solid-bases-custom-code/",
+        "title": "Smartphone LED detects hidden cameras with AI",
+        "url": "https://www.chosun.com/english/industry-en/2026/08/30/SBFXUIJQYZEARKP5T4FBAY25HQ/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T10:36:43.000Z",
+        "publishedAt": "2026-08-30T06:52:04.000Z",
         "badge": "HN",
-        "signal": "32 分 · 7 评论"
+        "signal": "48 分 · 15 评论"
       },
       {
-        "id": "cn-item-c990051e52def1ed",
+        "id": "cn-item-46c35940876d3d42",
         "category": "cn",
-        "title": "尼泊尔侨界募集善款支援泥石流灾区",
-        "url": "https://www.chinanews.com.cn/hr/2026/08-31/10687408.shtml",
+        "title": "两部门针对福建启动防汛防台风四级应急响应",
+        "url": "https://www.chinanews.com.cn/gn/2026/08-31/10687473.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-08-31T11:27:58.000Z",
-        "summary": "中新网加德满都8月31日电(记者 崔楠)截至31日中午，尼泊尔侨界已为“8·26”泥石流灾害募集善款超过500万尼泊尔卢比(约合22万元人民币)。",
+        "publishedAt": "2026-08-31T12:53:51.000Z",
+        "summary": "中新网8月31日电 据应急管理部网站消息，受今年第18号台风“沙德尔”的残余涡旋影响，未来三天福建省部分地区将有暴雨到大暴雨，局地特大暴雨，部分中小河流可能发生超警洪水，防汛防台风形势严峻。",
         "badge": "中新网要闻"
       },
       {
@@ -394,45 +394,45 @@
         "signal": "HIGH · CVSS 7.7"
       },
       {
-        "id": "ai-openai-fe23f369e01db08d",
+        "id": "ai-openai-5c8d75ef9c12c059",
         "category": "ai",
-        "title": "Expanding OpenAI’s presence in Brazil",
-        "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+        "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
+        "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
         "source": "OpenAI",
-        "publishedAt": "2026-08-27T03:00:00.000Z",
-        "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
+        "publishedAt": "2026-08-27T09:00:00.000Z",
+        "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238440",
+        "id": "v2ex-1238447",
         "category": "dev",
-        "title": "GPT Plus/Pro 20x 纯手工代充（可开票），非 session 卡密模式，登录后绑卡支付",
-        "url": "https://www.v2ex.com/t/1238440",
+        "title": "[送码] 关于网站上线 2 小时就被攻击这件事",
+        "url": "https://www.v2ex.com/t/1238447",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T08:41:06.000Z",
-        "summary": "Pro 20x ，1280/月，中等价格，但是确保 100%走的实体卡支付，不存在后期拒付或者恶意退款 赚点咖啡钱，消费下手里的 USD 如果精力时间足够，可以优先自己研究，实在不行，或者需要开票报销，可以联系：sohofree 如果介意登录账号，勿扰（其实 session 模式下的密钥，也是登录密码） 谢谢~ 祝好~",
+        "publishedAt": "2026-08-31T09:00:24.000Z",
+        "summary": "起因 我在周六也就是 8 月 29 号下午 2 点左右发布了我的生图网站 https://mindsee.app 然后在下午 4-5 点左右，有大量请求并发调用我的注册接口，并发非常高，万幸没有造成任何损失 时间线 下午 2 点： 上线网站 下午 3 点： 开始陆陆续续开始报警，查看是支付回调接口被请求， 接口签名校验未通过 ，最开始以为是有用户支付了，一查毛都没有，此时没继续关注，继续忙其他的 下午 4 点： 发现注册接口频繁报 400 错误，检查后发现是被 156.24…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-7b7f23c2c0293abb",
+        "id": "cn-it-31b2af684dadb348",
         "category": "cn",
-        "title": "微信支付 AI 专属卡支持接入 DeepSeek Harness 和 OpenClaw",
-        "url": "https://www.ithome.com/0/996/655.htm",
+        "title": "苹果 macOS 27.0 开发者预览版 Beta 8 发布",
+        "url": "https://www.ithome.com/0/996/691.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T13:21:43.000Z",
-        "summary": "IT之家 8 月 31 日消息，微信支付官方今日宣布，微信支付 AI 专属卡上新，继 WorkBuddy、QClaw 之后， 支持接入 DeepSeek Harness 和 OpenClaw 。 授权后，用户只需在对话中提出需求，就能体验 从智能对话推荐到下单支付的全新消费流程。 目前，AI 专属卡已支持在 DeepSeek Harness 和 OpenClaw， 付费调用 Skillhub 上的 700 余个 Pay Skill， 未来将覆盖更多场景。 IT之家附开通步骤…",
+        "publishedAt": "2026-08-31T17:30:07.000Z",
+        "summary": "IT之家 9 月 1 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.0 开发者预览版 Beta 8 更新（内部版本号：26A5425a），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 ，之后…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2015-5287",
+        "id": "cisa-kev-cve-2021-23758",
         "category": "security",
-        "title": "Red Hat Automatic Bug Reporting Tool：Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5287",
+        "title": "Ajax.NET Professional Ajax.NET Professional：Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-23758",
         "source": "CISA KEV",
         "publishedAt": "2026-08-26T00:00:00.000Z",
-        "summary": "Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product…",
-        "badge": "CVE-2015-5287",
+        "summary": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS…",
+        "badge": "CVE-2021-23758",
         "signal": "已遭利用 · 整改期限 2026-09-09"
       },
       {
@@ -446,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49506142",
+        "id": "hn-49510000",
         "category": "dev",
-        "title": "uv: Deduplicate all files in the wheel cache",
-        "url": "https://github.com/astral-sh/uv/pull/21327",
+        "title": "ChatGPT Work Tool and Skill Reference",
+        "url": "https://codex-tool-reference.simonw.chatgpt.site/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T06:03:02.000Z",
+        "publishedAt": "2026-08-31T14:07:15.000Z",
         "badge": "HN",
-        "signal": "110 分 · 44 评论"
+        "signal": "138 分 · 46 评论"
       },
       {
-        "id": "cn-baidu-344965bb3e667f6b",
+        "id": "cn-baidu-40e20bdeb2f5f094",
         "category": "cn",
-        "title": "网警公布10起涉吉隆泥石流谣言案",
-        "url": "https://www.baidu.com/s?wd=%E7%BD%91%E8%AD%A6%E5%85%AC%E5%B8%8310%E8%B5%B7%E6%B6%89%E5%90%89%E9%9A%86%E6%B3%A5%E7%9F%B3%E6%B5%81%E8%B0%A3%E8%A8%80%E6%A1%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "山姆9个月卖了100万个会员",
+        "url": "https://www.baidu.com/s?wd=%E5%B1%B1%E5%A7%869%E4%B8%AA%E6%9C%88%E5%8D%96%E4%BA%86100%E4%B8%87%E4%B8%AA%E4%BC%9A%E5%91%98&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "公安机关网安部门持续推进“净网—2026”专项行动，聚焦涉日喀则吉隆口岸泥石流灾害网络谣言乱象，依法打击编造虚假灾情信息误导公众、扰乱网络秩序相关违法犯罪，确保救灾工作顺利开展。现发布10起典型案例。",
+        "summary": "截至7月31日，沃尔玛中国共有67家山姆会员店，第三个100万会员仅用时9个月。沃尔玛2027财年二季度中国业务净销售额70亿美元，同比增长20.7%。业绩高增源于少而精选品及线上服务广泛覆盖。",
         "badge": "热搜",
-        "signal": "7,523,929 热度"
+        "signal": "7,521,506 热度"
       },
       {
         "id": "github-advisory-ghsa-gqr6-r77p-c2pj",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238435",
+        "id": "v2ex-1238440",
         "category": "dev",
-        "title": "reset 太多，今天下午开始 codex 一直 server_is_overloaded",
-        "url": "https://www.v2ex.com/t/1238435",
+        "title": "GPT Plus/Pro 20x 纯手工代充（可开票），非 session 卡密模式，登录后绑卡支付",
+        "url": "https://www.v2ex.com/t/1238440",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T08:33:09.000Z",
-        "summary": "20x 和 5x 账号都遇到了",
+        "publishedAt": "2026-08-31T08:41:06.000Z",
+        "summary": "Pro 20x ，1280/月，中等价格，但是确保 100%走的实体卡支付，不存在后期拒付或者恶意退款 赚点咖啡钱，消费下手里的 USD 如果精力时间足够，可以优先自己研究，实在不行，或者需要开票报销，可以联系：sohofree 如果介意登录账号，勿扰（其实 session 模式下的密钥，也是登录密码） 谢谢~ 祝好~",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 25961,
+        "stars": 26698,
         "starsToday": 2819
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/tt-a1i/archify",
         "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "language": "JavaScript",
-        "stars": 37147,
+        "stars": 38223,
         "starsToday": 3993
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 40410,
+        "stars": 40620,
         "starsToday": 1968
       },
       {
@@ -541,8 +541,8 @@
         "url": "https://github.com/k1tbyte/Wand-Enhancer",
         "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
         "language": "C#",
-        "stars": 23168,
-        "starsToday": 718
+        "stars": 23300,
+        "starsToday": 511
       },
       {
         "id": "github-75d0f08b84873201",
@@ -551,7 +551,7 @@
         "url": "https://github.com/majd/ipatool",
         "description": "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
         "language": "Go",
-        "stars": 10426,
+        "stars": 10487,
         "starsToday": 376
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "language": "Python",
-        "stars": 55808,
+        "stars": 55992,
         "starsToday": 472
       },
       {
@@ -571,8 +571,8 @@
         "url": "https://github.com/Osmantic/ODS",
         "description": "Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
         "language": "Python",
-        "stars": 5257,
-        "starsToday": 331
+        "stars": 5390,
+        "starsToday": 163
       },
       {
         "id": "github-911170b1dd1359d7",
@@ -581,7 +581,7 @@
         "url": "https://github.com/checkstyle/checkstyle",
         "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
         "language": "Java",
-        "stars": 9323,
+        "stars": 9379,
         "starsToday": 199
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/zhaoxuya520/reverse-skill",
         "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "language": "PowerShell",
-        "stars": 32766,
+        "stars": 33021,
         "starsToday": 1439
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 244986,
-        "starsToday": 490
+        "stars": 245143,
+        "starsToday": 548
       }
     ],
-    "updatedAt": "2026-08-31T13:53:00.776Z"
+    "updatedAt": "2026-08-31T20:06:18.858Z"
   }
 }
