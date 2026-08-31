@@ -1,81 +1,380 @@
 {
-  "version": 2,
-  "generatedAt": "2026-08-30T23:30:33.678Z",
-  "social": {
-    "source": {
-      "name": "今日头条热榜",
-      "url": "https://www.toutiao.com/trending/"
-    },
+  "version": 3,
+  "generatedAt": "2026-08-31T01:52:08.084Z",
+  "intelligence": {
+    "updatedAt": "2026-08-31T01:52:08.084Z",
     "items": [
       {
-        "id": "toutiao-7678855925746171923",
-        "title": "泰国女排主帅称中国队100%晋级奥运会",
-        "url": "https://www.toutiao.com/trending/7678855925746171923/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227678855925746171923%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%B3%B0%E5%9B%BD%E5%A5%B3%E6%8E%92%E4%B8%BB%E5%B8%85%E7%A7%B0%E4%B8%AD%E5%9B%BD%E9%98%9F100%25%E6%99%8B%E7%BA%A7%E5%A5%A5%E8%BF%90%E4%BC%9A%22%7D&rank=&style_id=40132&topic_id=7678855925746171923",
-        "rank": 1,
-        "hot": 25712967
+        "id": "cisa-kev-cve-2023-49105",
+        "category": "security",
+        "title": "ownCloud ownCloud：ownCloud Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-49105",
+        "source": "CISA KEV",
+        "publishedAt": "2026-08-27T00:00:00.000Z",
+        "summary": "ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.",
+        "badge": "CVE-2023-49105",
+        "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
-        "id": "toutiao-7679825865895493686",
-        "title": "南航一客机在上海虹桥机场误放滑梯",
-        "url": "https://www.toutiao.com/trending/7679825865895493686/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227679825865895493686%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%8D%97%E8%88%AA%E4%B8%80%E5%AE%A2%E6%9C%BA%E5%9C%A8%E4%B8%8A%E6%B5%B7%E8%99%B9%E6%A1%A5%E6%9C%BA%E5%9C%BA%E8%AF%AF%E6%94%BE%E6%BB%91%E6%A2%AF%22%7D&rank=&style_id=40132&topic_id=7679825865895493686",
-        "rank": 2,
-        "hot": 23266054
+        "id": "ai-openai-b42ac281ecaf56c0",
+        "category": "ai",
+        "title": "Our decision on Cursor following its acquisition by SpaceX",
+        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+        "source": "OpenAI",
+        "publishedAt": "2026-08-28T06:00:00.000Z",
+        "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+        "badge": "OpenAI"
       },
       {
-        "id": "toutiao-7679722433582530601",
-        "title": "抢险救援现场 照明无人机点亮夜空",
-        "url": "https://www.toutiao.com/article/7679741475672687138",
-        "rank": 3,
-        "hot": 21051996
+        "id": "hn-49503601",
+        "category": "dev",
+        "title": "“I just chose words carefully”",
+        "url": "https://unsung.aresluna.org/i-just-chose-words-carefully/",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-30T22:49:48.000Z",
+        "badge": "HN",
+        "signal": "278 分 · 74 评论"
       },
       {
-        "id": "toutiao-7679388457596387379",
-        "title": "西藏吉隆有挖掘机意外坠河",
-        "url": "https://www.toutiao.com/trending/7679388457596387379/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227679388457596387379%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E8%A5%BF%E8%97%8F%E5%90%89%E9%9A%86%E6%9C%89%E6%8C%96%E6%8E%98%E6%9C%BA%E6%84%8F%E5%A4%96%E5%9D%A0%E6%B2%B3%22%7D&rank=&style_id=40132&topic_id=7679388457596387379",
-        "rank": 4,
-        "hot": 19048634
+        "id": "github-advisory-ghsa-ffg3-p8fm-mjx2",
+        "category": "security",
+        "title": "RestrictedPython guard hooks can be shadowed via positional-only arguments",
+        "url": "https://github.com/advisories/GHSA-ffg3-p8fm-mjx2",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:51:35.000Z",
+        "summary": "### Impact RestrictedPython rewrites sensitive operations to go through guard hooks. Attribute access becomes `_getattr_(obj, name)`, item access becomes `_getitem_(obj, key)`, writes go through `_write_`, and print goes through `_print_`.…",
+        "badge": "CVE-2026-55830",
+        "signal": "HIGH · CVSS 8.3"
       },
       {
-        "id": "toutiao-7679857602385396250",
-        "title": "李斌去年曾对话星宇股份董事长",
-        "url": "https://www.toutiao.com/trending/7679857602385396250/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2215%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227679857602385396250%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%9D%8E%E6%96%8C%E5%8E%BB%E5%B9%B4%E6%9B%BE%E5%AF%B9%E8%AF%9D%E6%98%9F%E5%AE%87%E8%82%A1%E4%BB%BD%E8%91%A3%E4%BA%8B%E9%95%BF%22%7D&rank=&style_id=40132&topic_id=7679857602385396250",
-        "rank": 5,
-        "hot": 17235917
+        "id": "ai-google-deepmind-74b1125af8681de1",
+        "category": "ai",
+        "title": "Gemini Omni 1.1 Flash lets you build with more control",
+        "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-08-27T16:11:32.000Z",
+        "badge": "Google DeepMind"
       },
       {
-        "id": "toutiao-7679090762579001386",
-        "title": "官方回应“取消ETC”读懂车主真诉求",
-        "url": "https://www.toutiao.com/trending/7679090762579001386/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227679090762579001386%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%AE%98%E6%96%B9%E5%9B%9E%E5%BA%94%E2%80%9C%E5%8F%96%E6%B6%88ETC%E2%80%9D%E8%AF%BB%E6%87%82%E8%BD%A6%E4%B8%BB%E7%9C%9F%E8%AF%89%E6%B1%82%22%7D&rank=&style_id=40132&topic_id=7679090762579001386",
-        "rank": 6,
-        "hot": 15595702
+        "id": "v2ex-1238284",
+        "category": "dev",
+        "title": "尝试套取友商的系统提示词，被 codex 警告了",
+        "url": "https://www.v2ex.com/t/1238284",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-08-31T01:43:54.000Z",
+        "summary": "友商的产品是一个 openclaw 产品。前两天使用 codex ，通过抓包让 codex 模拟客户端通过 ws gateway 连接了对方 oc ，然后让他尝试套取对方的系统提示词，被警告了。codex 尝试了几次之后就暂停了，说如果我是管理员应该通过正规渠道登陆 openclaw 。 https://imgur.com/a/XRqQxU2",
+        "badge": "程序员",
+        "signal": "4 回复"
       },
       {
-        "id": "toutiao-7678956989552082986",
-        "title": "尼泊尔泥石流联系到的中方人员已转移",
-        "url": "https://www.toutiao.com/trending/7678956989552082986/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227678956989552082986%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%B0%BC%E6%B3%8A%E5%B0%94%E6%B3%A5%E7%9F%B3%E6%B5%81%E8%81%94%E7%B3%BB%E5%88%B0%E7%9A%84%E4%B8%AD%E6%96%B9%E4%BA%BA%E5%91%98%E5%B7%B2%E8%BD%AC%E7%A7%BB%22%7D&rank=&style_id=40132&topic_id=7678956989552082986",
-        "rank": 7,
-        "hot": 14111575
+        "id": "cisa-kev-cve-2026-53362",
+        "category": "security",
+        "title": "Linux Kernel：Linux Kernel Unspecified Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53362",
+        "source": "CISA KEV",
+        "publishedAt": "2026-08-27T00:00:00.000Z",
+        "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using…",
+        "badge": "CVE-2026-53362",
+        "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
-        "id": "toutiao-7679768370954112539",
-        "title": "“开学三件套”齐涨价家长们该咋办",
-        "url": "https://www.toutiao.com/trending/7679768370954112539/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2213%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227679768370954112539%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E2%80%9C%E5%BC%80%E5%AD%A6%E4%B8%89%E4%BB%B6%E5%A5%97%E2%80%9D%E9%BD%90%E6%B6%A8%E4%BB%B7%E5%AE%B6%E9%95%BF%E4%BB%AC%E8%AF%A5%E5%92%8B%E5%8A%9E%22%7D&rank=&style_id=40132&topic_id=7679768370954112539",
-        "rank": 8,
-        "hot": 12768681
+        "id": "ai-hugging-face-4d3b17a749f42c95",
+        "category": "ai",
+        "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+        "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+        "source": "Hugging Face",
+        "publishedAt": "2026-08-28T00:00:00.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "toutiao-7678895808993050666",
-        "title": "大学新生报到带两板车加两箱子行李",
-        "url": "https://www.toutiao.com/trending/7678895808993050666/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227678895808993050666%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A4%A7%E5%AD%A6%E6%96%B0%E7%94%9F%E6%8A%A5%E5%88%B0%E5%B8%A6%E4%B8%A4%E6%9D%BF%E8%BD%A6%E5%8A%A0%E4%B8%A4%E7%AE%B1%E5%AD%90%E8%A1%8C%E6%9D%8E%22%7D&rank=&style_id=40132&topic_id=7678895808993050666",
-        "rank": 9,
-        "hot": 11553580
+        "id": "hn-49491791",
+        "category": "dev",
+        "title": "Creepy Crawlies",
+        "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-29T17:49:01.000Z",
+        "badge": "HN",
+        "signal": "931 分 · 430 评论"
       },
       {
-        "id": "toutiao-7679274432045498374",
-        "title": "2026香港小姐三甲出炉",
-        "url": "https://www.toutiao.com/trending/7679274432045498374/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%228%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227679274432045498374%22%2C%22hot_board_impr_id%22%3A%2220260831073033C9D51C0FDFAEA6B151C2%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%222026%E9%A6%99%E6%B8%AF%E5%B0%8F%E5%A7%90%E4%B8%89%E7%94%B2%E5%87%BA%E7%82%89%22%7D&rank=&style_id=40132&topic_id=7679274432045498374",
-        "rank": 10,
-        "hot": 10454112
+        "id": "github-advisory-ghsa-j5g3-42wp-gqm3",
+        "category": "security",
+        "title": "Snipe-IT has an Improper Privilege Management issue",
+        "url": "https://github.com/advisories/GHSA-j5g3-42wp-gqm3",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:37:24.000Z",
+        "summary": "## Impact The `update()` method in `UsersController` passes the `permission` request field unconditionally to `NormalizePermissionsPayloadAction`, which returns an empty array when the field is absent. The result is passed to `PreserveUnau…",
+        "badge": "CVE-2026-55843",
+        "signal": "HIGH · CVSS 6.5"
+      },
+      {
+        "id": "ai-openai-cb1db0d5c74b6e9e",
+        "category": "ai",
+        "title": "Supporting Thailand’s next generation of AI startups",
+        "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+        "source": "OpenAI",
+        "publishedAt": "2026-08-28T02:00:00.000Z",
+        "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1238282",
+        "category": "dev",
+        "title": "github 开启了 2fa , 但是手机系统升级了，秘钥丢了。。。怎么办",
+        "url": "https://www.v2ex.com/t/1238282",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-08-31T01:42:21.000Z",
+        "summary": "开了 2fa 之前一直用的 github mobile app 解决登录问题的，没太在意。 但是手机系统升级后,登录不上去了。。。。 邮箱密码都在，就是登录不上去，得找个设备确认下。。。。 真蛋疼，找回也不行。 找到 github 邮件支持的网站，一周都没回复了，怎么办。这个账号的内容就丢了。 求助下，万能的 v 友",
+        "badge": "程序员",
+        "signal": "4 回复"
+      },
+      {
+        "id": "cisa-kev-cve-2026-66384",
+        "category": "security",
+        "title": "JFrog Artifactory：JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-66384",
+        "source": "CISA KEV",
+        "publishedAt": "2026-08-27T00:00:00.000Z",
+        "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
+        "badge": "CVE-2026-66384",
+        "signal": "已遭利用 · 整改期限 2026-09-10"
+      },
+      {
+        "id": "ai-google-deepmind-71c43cf780d371ee",
+        "category": "ai",
+        "title": "Piloting the world's first double-blind AI evaluations",
+        "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-08-27T12:59:16.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49499867",
+        "category": "dev",
+        "title": "Haiku R1/beta6 has been released",
+        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-30T16:01:10.000Z",
+        "badge": "HN",
+        "signal": "256 分 · 76 评论"
+      },
+      {
+        "id": "github-advisory-ghsa-5v29-34h8-v68r",
+        "category": "security",
+        "title": "MapFish Print has XXE that allows reading arbitrary files of certain types",
+        "url": "https://github.com/advisories/GHSA-5v29-34h8-v68r",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:33:35.000Z",
+        "summary": "### Summary XXE on MapFish Print allows reading arbitrary files of certain types. Eg /etc/passwd or k8 secrets and certs. https://github.com/mapfish/mapfish-print/commit/13020c0fbc299e5f604e4e66066311c4bf04d507 ### Details To trigger the X…",
+        "badge": "CVE-2026-55848",
+        "signal": "HIGH · CVSS 8.6"
+      },
+      {
+        "id": "ai-hugging-face-17177c100c915029",
+        "category": "ai",
+        "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+        "url": "https://huggingface.co/blog/train-multi-vector-encoder",
+        "source": "Hugging Face",
+        "publishedAt": "2026-08-26T00:00:00.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1238253",
+        "category": "dev",
+        "title": "gpui-component + AI 主写：用和上一个项目完全相反的方式做了个 macOS 菜单栏监控 zstats",
+        "url": "https://www.v2ex.com/t/1238253",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-08-30T22:46:08.000Z",
+        "summary": "之前用 GPUI （ Zed 编辑器那套 GPU 加速 UI 框架）写过一个 Redis 客户端 Zedis 。那时候刚接触 gpui-component ，生态资料少，基本是大部分代码手写、AI 打辅助的模式——AI 负责查资料、补样板代码，主体逻辑还是自己一行行敲。 这次做新项目 zstats.app ，两个变化叠在一起，开发体验完全不一样了： 一是 gpui-component 成熟了很多。 各种常用组件都是开箱即用，不用再自己从头设计和实现 UI 细节，官方提供了完…",
+        "badge": "程序员",
+        "signal": "2 回复"
+      },
+      {
+        "id": "cisa-kev-cve-2021-23758",
+        "category": "security",
+        "title": "Ajax.NET Professional Ajax.NET Professional：Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-23758",
+        "source": "CISA KEV",
+        "publishedAt": "2026-08-26T00:00:00.000Z",
+        "summary": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS…",
+        "badge": "CVE-2021-23758",
+        "signal": "已遭利用 · 整改期限 2026-09-09"
+      },
+      {
+        "id": "ai-openai-5c8d75ef9c12c059",
+        "category": "ai",
+        "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
+        "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+        "source": "OpenAI",
+        "publishedAt": "2026-08-27T09:00:00.000Z",
+        "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-49502214",
+        "category": "dev",
+        "title": "Cores in space: The core memory module from a 1980 Spacelab computer",
+        "url": "https://www.righto.com/2026/08/spacelab-core-memory.html",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-30T20:00:25.000Z",
+        "badge": "HN",
+        "signal": "77 分 · 13 评论"
+      },
+      {
+        "id": "github-advisory-ghsa-334q-h5g3-fpxv",
+        "category": "security",
+        "title": "free5GC AUSF authentication contexts can be overwritten by concurrent requests for the same SUPI",
+        "url": "https://github.com/advisories/GHSA-334q-h5g3-fpxv",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:24:11.000Z",
+        "summary": "### Summary The AUSF component of free5GC stores per-subscriber authentication state in a global `sync.Map` keyed only by SUPI. Every incoming authentication request creates a new `AusfUeContext` and stores it under that SUPI key without c…",
+        "badge": "CVE-2026-55784",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
+        "id": "ai-google-deepmind-ac6eb9276806c2f8",
+        "category": "ai",
+        "title": "Intelligent transcription with Gemini 3.5 Transcribe",
+        "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-08-26T17:01:00.000Z",
+        "summary": "Now you can get more intelligent speech-to-text transcription with Gemini 3.5 Transcribe.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1238247",
+        "category": "dev",
+        "title": "5400 元买了张 7900 XTX（24G 显存，新卡带 2 年质保）- 这是真的可以买到吗?",
+        "url": "https://www.v2ex.com/t/1238247",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-08-30T17:31:34.000Z",
+        "summary": "各位这个价格真的可以买到这个卡吗? https://x.com/wherecall1/status/2094087659149029842",
+        "badge": "程序员",
+        "signal": "4 回复"
+      },
+      {
+        "id": "cisa-kev-cve-2015-3246",
+        "category": "security",
+        "title": "Red Hat Libuser：Red Hat Libuser Race Condition Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-3246",
+        "source": "CISA KEV",
+        "publishedAt": "2026-08-26T00:00:00.000Z",
+        "summary": "Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation.",
+        "badge": "CVE-2015-3246",
+        "signal": "已遭利用 · 整改期限 2026-09-09"
+      },
+      {
+        "id": "ai-hugging-face-d21068479952e403",
+        "category": "ai",
+        "title": "Granite 4.2 LLMs: How They're Built",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+        "source": "Hugging Face",
+        "publishedAt": "2026-08-25T15:14:14.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-49478426",
+        "category": "dev",
+        "title": "Show HN: NFC Energy-Harvesting PCB Business Card with an MCU",
+        "url": "https://wilsonharper.net/projects/businesscard/",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-28T13:48:12.000Z",
+        "badge": "HN",
+        "signal": "102 分 · 9 评论"
+      },
+      {
+        "id": "github-advisory-ghsa-56wq-x3wv-3ff4",
+        "category": "security",
+        "title": "SeaweedFS: Path traversal in the S3 gateway X-Amz-Copy-Source header allows cross-bucket object read",
+        "url": "https://github.com/advisories/GHSA-56wq-x3wv-3ff4",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:17:33.000Z",
+        "summary": "### Summary The SeaweedFS S3 API gateway did not reject `..` path segments in the `X-Amz-Copy-Source` header used by `CopyObject` and `UploadPartCopy`. The request URL path was hardened against traversal in 4.30 (CVE-2026-54917), but the c…",
+        "badge": "CVE-2026-55874",
+        "signal": "HIGH · CVSS 7.7"
+      },
+      {
+        "id": "ai-openai-fe23f369e01db08d",
+        "category": "ai",
+        "title": "Expanding OpenAI’s presence in Brazil",
+        "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+        "source": "OpenAI",
+        "publishedAt": "2026-08-27T03:00:00.000Z",
+        "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1238242",
+        "category": "dev",
+        "title": "想在 aws 上开 claude 账号",
+        "url": "https://www.v2ex.com/t/1238242",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-08-30T16:29:33.000Z",
+        "summary": "哪位大佬有海外实体，或者有从哪能交点外国友人呢，指点下，台湾朋友应该也行，求助 55555",
+        "badge": "程序员",
+        "signal": "2 回复"
+      },
+      {
+        "id": "cisa-kev-cve-2015-5287",
+        "category": "security",
+        "title": "Red Hat Automatic Bug Reporting Tool：Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5287",
+        "source": "CISA KEV",
+        "publishedAt": "2026-08-26T00:00:00.000Z",
+        "summary": "Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product…",
+        "badge": "CVE-2015-5287",
+        "signal": "已遭利用 · 整改期限 2026-09-09"
+      },
+      {
+        "id": "ai-google-deepmind-835a331a5b20ce16",
+        "category": "ai",
+        "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+        "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-08-21T11:59:48.000Z",
+        "summary": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49435285",
+        "category": "dev",
+        "title": "Sort branches by last commit date",
+        "url": "https://ryangreenberg.com/til/git-branches-by-commit-date/",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-25T14:57:00.000Z",
+        "badge": "HN",
+        "signal": "87 分 · 34 评论"
+      },
+      {
+        "id": "github-advisory-ghsa-gqr6-r77p-c2pj",
+        "category": "security",
+        "title": "Fortigate syslog message parser can be exploited to modify or delete fields from the original message",
+        "url": "https://github.com/advisories/GHSA-gqr6-r77p-c2pj",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:13:00.000Z",
+        "summary": "### Impact A security issue has been identified in Graylog affecting the parsing of syslog messages that use a key-value format, such as those generated by Fortigate devices. The vulnerability allows attackers to overwrite individual messa…",
+        "badge": "CVE-2026-55841",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
+        "id": "ai-hugging-face-f1c76f23a788b688",
+        "category": "ai",
+        "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+        "source": "Hugging Face",
+        "publishedAt": "2026-08-25T11:39:24.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1238238",
+        "category": "dev",
+        "title": "XXL-BOOT v2.1.0 发布： React 全新上线 · 全栈 TypeScript · AI+SKILL 驱动开发",
+        "url": "https://www.v2ex.com/t/1238238",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-08-30T15:50:25.000Z",
+        "summary": "一套仓库，三种模式；一行 SQL ，全栈生成； AI 加持，开箱即用。 本版本是一次承前启后的重大升级，围绕「 前端工程全面 TypeScript 化 」「 React 全新前端版本交付 」「 AI + SKILL 驱动开发 」三大核心亮点展开，让中后台业务开发从此进入 AI 辅助时代。 一、Release Notes （ v2.1.0 · 2026-08-30 ） 1 、 [新增] React 前端版本发布 ：React + Vite + AntDesign + Type…",
+        "badge": "程序员",
+        "signal": "1 回复"
       }
     ]
   },
@@ -92,8 +391,8 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 23888,
-        "starsToday": 1625
+        "stars": 24184,
+        "starsToday": 1370
       },
       {
         "id": "github-fb3d306384482b46",
@@ -102,8 +401,8 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 39165,
-        "starsToday": 1113
+        "stars": 39348,
+        "starsToday": 1114
       },
       {
         "id": "github-8ae6dc83497f2e47",
@@ -111,8 +410,8 @@
         "name": "Lakr233/vphone-cli",
         "url": "https://github.com/Lakr233/vphone-cli",
         "language": "Swift",
-        "stars": 9587,
-        "starsToday": 341
+        "stars": 9655,
+        "starsToday": 361
       },
       {
         "id": "github-c29003d458e05ffd",
@@ -121,8 +420,8 @@
         "url": "https://github.com/tt-a1i/archify",
         "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "language": "JavaScript",
-        "stars": 34404,
-        "starsToday": 3730
+        "stars": 34823,
+        "starsToday": 3722
       },
       {
         "id": "github-8ac607930ab896c1",
@@ -131,8 +430,8 @@
         "url": "https://github.com/p-e-w/heretic",
         "description": "Fully automatic censorship removal for language models",
         "language": "Python",
-        "stars": 29147,
-        "starsToday": 485
+        "stars": 29200,
+        "starsToday": 369
       },
       {
         "id": "github-f095569ba3b78522",
@@ -141,8 +440,8 @@
         "url": "https://github.com/unclecode/crawl4ai",
         "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
         "language": "Python",
-        "stars": 80216,
-        "starsToday": 229
+        "stars": 80258,
+        "starsToday": 221
       },
       {
         "id": "github-5524ff15f43adf61",
@@ -151,8 +450,8 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 60489,
-        "starsToday": 271
+        "stars": 60523,
+        "starsToday": 230
       },
       {
         "id": "github-75d0f08b84873201",
@@ -161,8 +460,8 @@
         "url": "https://github.com/majd/ipatool",
         "description": "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
         "language": "Go",
-        "stars": 10190,
-        "starsToday": 182
+        "stars": 10229,
+        "starsToday": 58
       },
       {
         "id": "github-256e853bfd3272e0",
@@ -170,8 +469,8 @@
         "name": "punkpeye/awesome-mcp-servers",
         "url": "https://github.com/punkpeye/awesome-mcp-servers",
         "description": "A collection of MCP servers.",
-        "stars": 93298,
-        "starsToday": 65
+        "stars": 93343,
+        "starsToday": 96
       },
       {
         "id": "github-911170b1dd1359d7",
@@ -180,9 +479,10 @@
         "url": "https://github.com/checkstyle/checkstyle",
         "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
         "language": "Java",
-        "stars": 9189,
-        "starsToday": 124
+        "stars": 9213,
+        "starsToday": 115
       }
-    ]
+    ],
+    "updatedAt": "2026-08-31T01:52:08.084Z"
   }
 }
