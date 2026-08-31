@@ -6,6 +6,8 @@ import { fileURLToPath } from 'node:url';
 const CISA_KEV_URL = 'https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json';
 const CISA_KEV_CATALOG_URL = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog';
 const GITHUB_ADVISORIES_URL = 'https://api.github.com/advisories?per_page=20&sort=published&direction=desc&type=reviewed';
+const TOUTIAO_HOT_URL = 'https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc';
+const BAIDU_HOT_URL = 'https://top.baidu.com/api/board?platform=pc&tab=realtime';
 const GITHUB_TRENDING_URL = 'https://github.com/trending?since=daily';
 const HACKER_NEWS_TOP_URL = 'https://hacker-news.firebaseio.com/v0/topstories.json';
 const V2EX_TECH_URL = 'https://www.v2ex.com/api/topics/show.json?node_name=programmer';
@@ -18,7 +20,12 @@ const AI_FEEDS = Object.freeze([
   { source: 'Hugging Face', url: 'https://huggingface.co/blog/feed.xml' },
 ]);
 
-const CATEGORY_ORDER = Object.freeze(['security', 'ai', 'dev']);
+const DOMESTIC_FEEDS = Object.freeze([
+  { source: '中新网要闻', url: 'https://www.chinanews.com.cn/rss/importnews.xml' },
+  { source: 'IT之家', url: 'https://www.ithome.com/rss/' },
+]);
+
+const CATEGORY_ORDER = Object.freeze(['cn', 'security', 'ai', 'dev']);
 const CATEGORY_LIMIT = 12;
 const SOURCE_ITEM_LIMIT = 18;
 const HACKER_NEWS_LOOKAHEAD = 24;
@@ -70,8 +77,18 @@ function textContent(value) {
     .trim();
 }
 
+function summaryContent(value) {
+  const decoded = decodeHtml(String(value ?? '').replace(/<!\[CDATA\[([\s\S]*?)\]\]>/gi, '$1'));
+  return decodeHtml(decoded
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1'))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function truncateText(value, limit = 240) {
-  const characters = [...textContent(value)];
+  const characters = [...summaryContent(value)];
   return characters.length <= limit ? characters.join('') : `${characters.slice(0, limit - 1).join('')}…`;
 }
 
@@ -283,8 +300,9 @@ function xmlLink(block) {
   return normalizeUrl(attributeMatch?.[1]);
 }
 
-export function parseRssFeed(xml, { source }, limit = SOURCE_ITEM_LIMIT) {
+export function parseRssFeed(xml, { source, category = 'ai' }, limit = SOURCE_ITEM_LIMIT) {
   if (typeof xml !== 'string') throw new TypeError(`${source} feed response must be XML text.`);
+  if (!CATEGORY_ORDER.includes(category)) throw new TypeError(`${source} feed category is not supported.`);
   const rssItems = [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item\s*>/gi)].map((match) => match[1]);
   const atomEntries = [...xml.matchAll(/<entry\b[^>]*>([\s\S]*?)<\/entry\s*>/gi)].map((match) => match[1]);
   const blocks = rssItems.length > 0 ? rssItems : atomEntries;
@@ -300,8 +318,8 @@ export function parseRssFeed(xml, { source }, limit = SOURCE_ITEM_LIMIT) {
     const summary = truncateText(xmlElement(block, ['description', 'summary', 'content:encoded', 'content']));
     seen.add(url);
     items.push(intelligenceItem({
-      id: `ai-${slug(source)}-${stableId(guid || url || title)}`,
-      category: 'ai',
+      id: `${category}-${slug(source)}-${stableId(guid || url || title)}`,
+      category,
       title,
       url,
       source,
@@ -313,6 +331,60 @@ export function parseRssFeed(xml, { source }, limit = SOURCE_ITEM_LIMIT) {
   items.sort((left, right) => (Date.parse(right.publishedAt ?? '') || 0) - (Date.parse(left.publishedAt ?? '') || 0));
   if (items.length === 0) throw new Error(`${source} feed contained no usable posts.`);
   return items.slice(0, limit);
+}
+
+export function parseBaiduHotBoard(payload, limit = SOURCE_ITEM_LIMIT) {
+  const cards = Array.isArray(payload?.data?.cards) ? payload.data.cards : [];
+  const hotCard = cards.find((card) => card?.component === 'hotList' && Array.isArray(card?.content));
+  const seen = new Set();
+  const items = [];
+  for (const entry of hotCard?.content ?? []) {
+    const title = textContent(entry?.word ?? entry?.query);
+    if (!title || seen.has(title)) continue;
+    const hotScore = Number.parseInt(String(entry?.hotScore ?? ''), 10);
+    seen.add(title);
+    items.push(intelligenceItem({
+      id: `cn-baidu-${stableId(title)}`,
+      category: 'cn',
+      title,
+      url: normalizeUrl(entry?.url ?? entry?.rawUrl ?? entry?.appUrl, `https://www.baidu.com/s?wd=${encodeURIComponent(title)}`),
+      source: '百度热搜',
+      summary: entry?.desc,
+      badge: '热搜',
+      signal: Number.isFinite(hotScore) ? `${hotScore.toLocaleString('zh-CN')} 热度` : '',
+    }));
+    if (items.length >= limit) break;
+  }
+  if (items.length === 0) throw new Error('Baidu hot-list data contained no usable topics.');
+  return items;
+}
+
+export function parseToutiaoHotBoard(payload, limit = SOURCE_ITEM_LIMIT) {
+  const content = Array.isArray(payload?.data) ? payload.data : [];
+  const seen = new Set();
+  const items = [];
+  for (const entry of content) {
+    const title = textContent(entry?.Title ?? entry?.QueryWord);
+    if (!title || seen.has(title)) continue;
+    const clusterId = String(entry?.ClusterIdStr ?? entry?.ClusterId ?? '').trim();
+    const fallbackUrl = clusterId
+      ? `https://www.toutiao.com/trending/${encodeURIComponent(clusterId)}/`
+      : `https://so.toutiao.com/search?keyword=${encodeURIComponent(title)}`;
+    const hotScore = Number.parseInt(String(entry?.HotValue ?? ''), 10);
+    seen.add(title);
+    items.push(intelligenceItem({
+      id: `cn-toutiao-${clusterId || stableId(title)}`,
+      category: 'cn',
+      title,
+      url: normalizeUrl(entry?.Url, fallbackUrl),
+      source: '今日头条',
+      badge: '热榜',
+      signal: Number.isFinite(hotScore) ? `${hotScore.toLocaleString('zh-CN')} 热度` : '',
+    }));
+    if (items.length >= limit) break;
+  }
+  if (items.length === 0) throw new Error('Toutiao hot board contained no usable topics.');
+  return items;
 }
 
 export function parseHackerNewsStories(payload, limit = SOURCE_ITEM_LIMIT) {
@@ -419,9 +491,26 @@ async function fetchGithubAdvisories() {
   return parseGithubAdvisories(await fetchJson(GITHUB_ADVISORIES_URL, headers));
 }
 
-async function fetchAiFeed(config) {
+async function fetchRssFeed(config) {
   const xml = await fetchText(config.url, { accept: 'application/rss+xml, application/atom+xml;q=0.9, application/xml;q=0.8, text/xml;q=0.7' });
   return parseRssFeed(xml, config);
+}
+
+async function fetchToutiaoHotTopics() {
+  return parseToutiaoHotBoard(await fetchJson(TOUTIAO_HOT_URL, { referer: 'https://www.toutiao.com/' }));
+}
+
+async function fetchBaiduHotTopics() {
+  return parseBaiduHotBoard(await fetchJson(BAIDU_HOT_URL, { referer: 'https://top.baidu.com/' }));
+}
+
+async function fetchDomesticHotTopics() {
+  try {
+    return await fetchBaiduHotTopics();
+  } catch (error) {
+    console.warn(`Baidu hot list unavailable, trying Toutiao: ${error.message}`);
+    return fetchToutiaoHotTopics();
+  }
 }
 
 async function fetchHackerNews() {
@@ -454,11 +543,15 @@ async function fetchGithubTrending() {
 }
 
 const CATEGORY_LOADERS = Object.freeze({
+  cn: Object.freeze([
+    ...DOMESTIC_FEEDS.map((config) => ({ source: config.source, load: () => fetchRssFeed({ ...config, category: 'cn' }) })),
+    { source: '国内热榜', acceptedSources: ['百度热搜', '今日头条'], load: fetchDomesticHotTopics },
+  ]),
   security: Object.freeze([
     { source: 'CISA KEV', load: fetchCisaKev },
     { source: 'GitHub Advisory', load: fetchGithubAdvisories },
   ]),
-  ai: Object.freeze(AI_FEEDS.map((config) => ({ source: config.source, load: () => fetchAiFeed(config) }))),
+  ai: Object.freeze(AI_FEEDS.map((config) => ({ source: config.source, load: () => fetchRssFeed(config) }))),
   dev: Object.freeze([
     { source: 'Hacker News', load: fetchHackerNews },
     { source: 'V2EX 技术', load: fetchV2exTopics },
@@ -473,11 +566,16 @@ function isV3Feed(value) {
   return Boolean(value?.version === 3 && Array.isArray(value?.intelligence?.items));
 }
 
+function acceptedSourceNames(source) {
+  return Array.isArray(source) ? source : source ? [source] : [];
+}
+
 function fallbackIntelligenceItems(feed, category, source) {
   if (!isV3Feed(feed)) return [];
+  const sources = acceptedSourceNames(source);
   return feed.intelligence.items
     .map(normalizeExistingItem)
-    .filter((item) => item && item.category === category && (!source || item.source === source));
+    .filter((item) => item && item.category === category && (sources.length === 0 || sources.includes(item.source)));
 }
 
 function hasGithubTrendingItems(value) {
@@ -513,9 +611,10 @@ async function readExistingFeed() {
 
 function validLiveItems(items, category, source) {
   if (!Array.isArray(items)) return [];
+  const sources = acceptedSourceNames(source);
   return items
     .map(normalizeExistingItem)
-    .filter((item) => item && item.category === category && item.source === source);
+    .filter((item) => item && item.category === category && sources.includes(item.source));
 }
 
 async function loadCategory(category, existing) {
@@ -527,12 +626,13 @@ async function loadCategory(category, existing) {
   for (let index = 0; index < loaders.length; index += 1) {
     const loader = loaders[index];
     const result = results[index];
-    let items = result.status === 'fulfilled' ? validLiveItems(result.value, category, loader.source) : [];
+    const sources = loader.acceptedSources ?? loader.source;
+    let items = result.status === 'fulfilled' ? validLiveItems(result.value, category, sources) : [];
     if (items.length > 0) refreshed = true;
     if (items.length === 0) {
       const reason = result.status === 'rejected' ? result.reason?.message ?? String(result.reason) : 'source returned no valid items';
       console.warn(`${loader.source} unavailable: ${reason}`);
-      items = fallbackIntelligenceItems(existing, category, loader.source);
+      items = fallbackIntelligenceItems(existing, category, sources);
       if (items.length > 0) {
         console.warn(`Keeping previous ${loader.source} items from the selected existing v3 feed.`);
       }
@@ -634,6 +734,26 @@ async function runSelfTest() {
     ]);
     assert.equal(advisories[0].signal, 'HIGH · CVSS 8.1');
 
+    const domesticRss = parseRssFeed(`<?xml version="1.0"?><rss><channel>
+      <item><title>国内政策动态</title><link>https://www.chinanews.com.cn/gn/example.shtml</link><pubDate>Mon, 31 Aug 2026 09:27:20 +0800</pubDate><description>权威来源摘要 &lt;img src=&quot;https://example.com/image.jpg&quot;&gt;</description></item>
+    </channel></rss>`, { source: '中新网要闻', category: 'cn' });
+    assert.equal(domesticRss[0].category, 'cn');
+    assert.match(domesticRss[0].id, /^cn-/);
+    assert.equal(domesticRss[0].summary, '权威来源摘要');
+
+    const toutiao = parseToutiaoHotBoard({ data: [
+      { ClusterIdStr: '42', Title: '示例国内热榜', Url: 'https://www.toutiao.com/trending/42/', HotValue: '54321' },
+    ] });
+    assert.equal(toutiao[0].category, 'cn');
+    assert.equal(toutiao[0].signal, '54,321 热度');
+
+    const baiduFixture = { data: { cards: [{ component: 'hotList', content: [
+      { word: '示例百度热搜', url: 'https://www.baidu.com/s?wd=example', hotScore: '12345' },
+    ] }] } };
+    const baidu = parseBaiduHotBoard(baiduFixture);
+    assert.equal(baidu[0].category, 'cn');
+    assert.equal(baidu[0].signal, '12,345 热度');
+
     const rss = parseRssFeed(`<?xml version="1.0"?><rss><channel>
       <item><title><![CDATA[New &amp; useful model]]></title><link>https://example.com/model</link><pubDate>Sun, 30 Aug 2026 10:00:00 GMT</pubDate><description><![CDATA[<p>Release details.</p>]]></description></item>
       <item><title>Research update</title><link>https://example.com/research</link><pubDate>Sat, 29 Aug 2026 10:00:00 GMT</pubDate></item>
@@ -677,7 +797,7 @@ async function runSelfTest() {
     const fixtureOutput = {
       version: 3,
       generatedAt: '2026-08-31T08:00:00.000Z',
-      intelligence: { updatedAt: '2026-08-31T08:00:00.000Z', items: roundRobinMerge([cisa, rss, hn], 6) },
+      intelligence: { updatedAt: '2026-08-31T08:00:00.000Z', items: roundRobinMerge([domesticRss, cisa, rss, hn], 8) },
       github: { updatedAt: '2026-08-31T08:00:00.000Z', source: { name: 'GitHub Trending', url: GITHUB_TRENDING_URL }, items: githubItems },
     };
     assertV3Output(fixtureOutput);
@@ -718,7 +838,7 @@ async function main() {
     category,
     intelligence.items.filter((item) => item.category === category).length,
   ]));
-  console.log(`Updated ${OUTPUT_PATH}: ${categoryCounts.security} security, ${categoryCounts.ai} AI, ${categoryCounts.dev} dev items, ${github.items.length} GitHub Trending repositories.`);
+  console.log(`Updated ${OUTPUT_PATH}: ${categoryCounts.cn} domestic, ${categoryCounts.security} security, ${categoryCounts.ai} AI, ${categoryCounts.dev} dev items, ${github.items.length} GitHub Trending repositories.`);
 }
 
 main().catch((error) => {

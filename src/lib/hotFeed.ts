@@ -1,4 +1,4 @@
-export type IntelligenceCategory = 'ai' | 'security' | 'dev';
+export type IntelligenceCategory = 'cn' | 'ai' | 'security' | 'dev';
 
 export type IntelligenceFilter = 'all' | IntelligenceCategory;
 
@@ -66,7 +66,7 @@ export interface HotFeedLoadOptions {
 
 const CACHE_KEY = 'nav_hot_feed_cache_v3';
 const LEGACY_CACHE_KEY = 'nav_hot_feed_cache_v2';
-const MIXED_CATEGORY_ORDER: readonly IntelligenceCategory[] = ['security', 'ai', 'dev'];
+const MIXED_CATEGORY_ORDER: readonly IntelligenceCategory[] = ['cn', 'security', 'ai', 'dev'];
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -105,6 +105,12 @@ function parseSourceName(value: unknown): string {
 function parseCategory(value: unknown): IntelligenceCategory | null {
   if (typeof value !== 'string') return null;
   switch (value.trim().toLowerCase()) {
+    case 'cn':
+    case 'china':
+    case 'domestic':
+    case '国内':
+    case '中国':
+      return 'cn';
     case 'ai':
     case 'artificial-intelligence':
     case '人工智能':
@@ -250,7 +256,7 @@ export function parseHotFeedReport(value: unknown): HotFeedReport | null {
 
 /**
  * Returns a stable category view. The combined view takes one item at a time
- * from security, AI, and development so one busy source cannot dominate it.
+ * from domestic, security, AI, and development so one busy source cannot dominate it.
  */
 export function selectIntelligenceItems(
   items: readonly IntelligenceItem[],

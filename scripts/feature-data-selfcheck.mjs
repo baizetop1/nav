@@ -61,6 +61,8 @@ const hotFeed = parseHotFeedReport({
       { id: 'ai-1', category: 'ai', title: 'AI 模型更新', url: 'https://example.com/ai', source: 'OpenAI' },
       { id: 'security-1', category: 'security', title: '在野利用漏洞', url: 'https://example.com/security', source: 'CISA KEV', badge: 'CVE-2026-10001' },
       { id: 'dev-1', category: 'dev', title: '开发者动态', url: 'https://example.com/dev', source: 'Hacker News', signal: 128 },
+      { id: 'cn-1', category: 'cn', title: '国内要闻动态', url: 'https://example.com/cn/1', source: '中新网要闻' },
+      { id: 'cn-2', category: '国内', title: '国内科技动态', url: 'https://example.com/cn/2', source: 'IT之家' },
     ],
   },
   github: {
@@ -69,12 +71,17 @@ const hotFeed = parseHotFeedReport({
     items: [{ id: 'repo-1', rank: 1, name: 'baizetop1/nav', description: '个人导航', language: 'TypeScript', stars: 1234, starsToday: 56, url: 'https://github.com/baizetop1/nav' }],
   },
 });
-assert.equal(hotFeed?.intelligence.items[0].category, 'ai');
-assert.equal(hotFeed?.intelligence.items[1].badge, 'CVE-2026-10001');
-assert.equal(hotFeed?.intelligence.items[2].signal, '128');
+assert.equal(hotFeed?.intelligence.items.find(item => item.id === 'cn-1')?.category, 'cn');
+assert.equal(hotFeed?.intelligence.items.find(item => item.id === 'cn-2')?.category, 'cn');
+assert.equal(hotFeed?.intelligence.items.find(item => item.id === 'security-1')?.badge, 'CVE-2026-10001');
+assert.equal(hotFeed?.intelligence.items.find(item => item.id === 'dev-1')?.signal, '128');
 assert.deepEqual(
-  selectIntelligenceItems(hotFeed?.intelligence.items ?? [], 'all').map(item => item.category),
-  ['security', 'ai', 'dev'],
+  selectIntelligenceItems(hotFeed?.intelligence.items ?? [], 'all').map(item => item.id),
+  ['cn-1', 'security-1', 'ai-1', 'dev-1', 'cn-2'],
+);
+assert.deepEqual(
+  selectIntelligenceItems(hotFeed?.intelligence.items ?? [], 'cn').map(item => item.id),
+  ['cn-1', 'cn-2'],
 );
 assert.equal(hotFeed?.github.items[0].name, 'baizetop1/nav');
 assert.equal(hotFeed?.github.items[0].starsToday, 56);

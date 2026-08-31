@@ -1,9 +1,19 @@
 {
   "version": 3,
-  "generatedAt": "2026-08-31T01:45:43.600Z",
+  "generatedAt": "2026-08-31T02:10:50.594Z",
   "intelligence": {
-    "updatedAt": "2026-08-31T01:45:43.600Z",
+    "updatedAt": "2026-08-31T02:10:50.594Z",
     "items": [
+      {
+        "id": "cn-item-5fe7f3ba7a7b5ad6",
+        "category": "cn",
+        "title": "海南万宁通报“海滩存在生活垃圾堆积、遗留道具锈蚀等情况”",
+        "url": "https://www.chinanews.com.cn/sh/2026/08-31/10687011.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-08-31T01:34:36.000Z",
+        "summary": "中新网8月31日电 据“万宁发布”微信公众号消息，海南万宁市人民政府30日发布情况通报称，近日，网络平台反映，万宁市神州半岛第四湾海滩存在生活垃圾堆积、遗留道具锈蚀等情况，客观属实。获悉情况后，万宁市立即组织力量对上述区域进行全面清理，目前垃圾已全部处置干净。",
+        "badge": "中新网要闻"
+      },
       {
         "id": "cisa-kev-cve-2023-49105",
         "category": "security",
@@ -33,18 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-08-30T22:49:48.000Z",
         "badge": "HN",
-        "signal": "267 分 · 73 评论"
+        "signal": "295 分 · 81 评论"
       },
       {
-        "id": "cisa-kev-cve-2026-53362",
+        "id": "cn-it-0f0efbffc793b1e0",
+        "category": "cn",
+        "title": "小米米家洗衣机迷你双筒洗烘 5kg 预售，国补到手价 2699 元",
+        "url": "https://www.ithome.com/0/996/324.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-08-31T02:07:57.000Z",
+        "summary": "IT之家 8 月 31 日消息，小米今日宣布米家洗衣机迷你双筒洗烘 5kg 开启预售，建议零售价 3499 元，国补到手价 2699 元。 IT之家从商品页面获悉，这款产品拥有 5kg 大容量 ，全家贴身衣物不分批、不混洗；40 分钟高效洗烘，无惧梅雨天晾晒难题；真丝专属 40°C 柔烘，衣干即停不伤衣；1.87 蛋白奶渍洗净比，1.92 血渍洗净比；母婴级健康认证，除菌、除病毒率达 99.99%。 该产品搭载 DD 直驱电机 ，提供 255mm 超大筒径；双筒独立 150…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-ffg3-p8fm-mjx2",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Unspecified Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53362",
-        "source": "CISA KEV",
-        "publishedAt": "2026-08-27T00:00:00.000Z",
-        "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using…",
-        "badge": "CVE-2026-53362",
-        "signal": "已遭利用 · 整改期限 2026-08-30"
+        "title": "RestrictedPython guard hooks can be shadowed via positional-only arguments",
+        "url": "https://github.com/advisories/GHSA-ffg3-p8fm-mjx2",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:51:35.000Z",
+        "summary": "### Impact RestrictedPython rewrites sensitive operations to go through guard hooks. Attribute access becomes `_getattr_(obj, name)`, item access becomes `_getitem_(obj, key)`, writes go through `_write_`, and print goes through `_print_`.…",
+        "badge": "CVE-2026-55830",
+        "signal": "HIGH · CVSS 8.3"
       },
       {
         "id": "ai-google-deepmind-74b1125af8681de1",
@@ -56,26 +76,36 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238253",
+        "id": "v2ex-1238284",
         "category": "dev",
-        "title": "gpui-component + AI 主写：用和上一个项目完全相反的方式做了个 macOS 菜单栏监控 zstats",
-        "url": "https://www.v2ex.com/t/1238253",
+        "title": "尝试套取友商的系统提示词，被 codex 警告了",
+        "url": "https://www.v2ex.com/t/1238284",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-30T22:46:08.000Z",
-        "summary": "之前用 GPUI （ Zed 编辑器那套 GPU 加速 UI 框架）写过一个 Redis 客户端 Zedis 。那时候刚接触 gpui-component ，生态资料少，基本是大部分代码手写、AI 打辅助的模式——AI 负责查资料、补样板代码，主体逻辑还是自己一行行敲。 这次做新项目 zstats.app ，两个变化叠在一起，开发体验完全不一样了： 一是 gpui-component 成熟了很多。 各种常用组件都是开箱即用，不用再自己从头设计和实现 UI 细节，官方提供了完…",
+        "publishedAt": "2026-08-31T01:43:54.000Z",
+        "summary": "友商的产品是一个 openclaw 产品。前两天使用 codex ，通过抓包让 codex 模拟客户端通过 ws gateway 连接了对方 oc ，然后让他尝试套取对方的系统提示词，被警告了。codex 尝试了几次之后就暂停了，说如果我是管理员应该通过正规渠道登陆 openclaw 。 https://imgur.com/a/XRqQxU2",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cisa-kev-cve-2026-66384",
+        "id": "cn-baidu-77ec9f8225b0009b",
+        "category": "cn",
+        "title": "网友意外拍到泥石流暴发瞬间",
+        "url": "https://www.baidu.com/s?wd=%E7%BD%91%E5%8F%8B%E6%84%8F%E5%A4%96%E6%8B%8D%E5%88%B0%E6%B3%A5%E7%9F%B3%E6%B5%81%E6%9A%B4%E5%8F%91%E7%9E%AC%E9%97%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "8月26日10时53分，一网友在西藏吉隆亚洲一号观景台意外拍到泥石流暴发瞬间，土石翻涌、奔泻而下。当日吉隆口岸遭特大泥石流冲击，造成人员伤亡与失联。",
+        "badge": "热搜",
+        "signal": "7,809,334 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-53362",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-66384",
+        "title": "Linux Kernel：Linux Kernel Unspecified Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53362",
         "source": "CISA KEV",
         "publishedAt": "2026-08-27T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
-        "badge": "CVE-2026-66384",
-        "signal": "已遭利用 · 整改期限 2026-09-10"
+        "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using…",
+        "badge": "CVE-2026-53362",
+        "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
         "id": "ai-hugging-face-4d3b17a749f42c95",
@@ -94,7 +124,140 @@
         "source": "Hacker News",
         "publishedAt": "2026-08-29T17:49:01.000Z",
         "badge": "HN",
-        "signal": "929 分 · 430 评论"
+        "signal": "937 分 · 438 评论"
+      },
+      {
+        "id": "cn-item-ef179e49d4a280fa",
+        "category": "cn",
+        "title": "游客跨越围栏开闪光灯拍古壁画，景区通报",
+        "url": "https://www.chinanews.com.cn/sh/2026/08-31/10687009.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-08-31T01:33:06.000Z",
+        "summary": "中新网8月31日电 据“霍太山广胜风景名胜区”微信公众号消息，山西霍太山广胜风景名胜区30日晚发布情况通报称，2026年8月29日11时20分左右，广胜寺景区下寺水神庙内，一名游客擅自翻越文物防护护栏，近距离开启手机闪光灯拍摄元代珍贵壁画。景区现场工作人员发现后第一时间上前劝阻，及时制止了该违规行为。相关视频网络传播后，引发社会各界及广大网民高度关注。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-j5g3-42wp-gqm3",
+        "category": "security",
+        "title": "Snipe-IT has an Improper Privilege Management issue",
+        "url": "https://github.com/advisories/GHSA-j5g3-42wp-gqm3",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:37:24.000Z",
+        "summary": "## Impact The `update()` method in `UsersController` passes the `permission` request field unconditionally to `NormalizePermissionsPayloadAction`, which returns an empty array when the field is absent. The result is passed to `PreserveUnau…",
+        "badge": "CVE-2026-55843",
+        "signal": "HIGH · CVSS 6.5"
+      },
+      {
+        "id": "ai-openai-cb1db0d5c74b6e9e",
+        "category": "ai",
+        "title": "Supporting Thailand’s next generation of AI startups",
+        "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+        "source": "OpenAI",
+        "publishedAt": "2026-08-28T02:00:00.000Z",
+        "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1238282",
+        "category": "dev",
+        "title": "github 开启了 2fa , 但是手机系统升级了，秘钥丢了。。。怎么办",
+        "url": "https://www.v2ex.com/t/1238282",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-08-31T01:42:21.000Z",
+        "summary": "开了 2fa 之前一直用的 github mobile app 解决登录问题的，没太在意。 但是手机系统升级后,登录不上去了。。。。 邮箱密码都在，就是登录不上去，得找个设备确认下。。。。 真蛋疼，找回也不行。 找到 github 邮件支持的网站，一周都没回复了，怎么办。这个账号的内容就丢了。 求助下，万能的 v 友",
+        "badge": "程序员",
+        "signal": "17 回复"
+      },
+      {
+        "id": "cn-it-b1441dce2e119d8c",
+        "category": "cn",
+        "title": "代码显示 Meta 拟拆分移动平台 Horizon App 内置游戏功能，将推出独立应用",
+        "url": "https://www.ithome.com/0/996/309.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-08-31T02:00:12.000Z",
+        "summary": "IT之家 8 月 31 日消息，消息源 NoridoesVR 在拆解 Meta Horizon 手机 App 时发现，Meta 计划将 Horizon Worlds 游戏功能从相应 App 中拆出。相应项目内部代号为“Eclipse”，命名预计为“Horizon Create”。 参考IT之家先前报道，Meta 旗下 Reality Labs VR 团队在今年 3 月进行大规模裁员重组，官方一度决定停止 Horizon Worlds 对 Quest 系列 VR 设备的支持。…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2026-66384",
+        "category": "security",
+        "title": "JFrog Artifactory：JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-66384",
+        "source": "CISA KEV",
+        "publishedAt": "2026-08-27T00:00:00.000Z",
+        "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
+        "badge": "CVE-2026-66384",
+        "signal": "已遭利用 · 整改期限 2026-09-10"
+      },
+      {
+        "id": "ai-google-deepmind-71c43cf780d371ee",
+        "category": "ai",
+        "title": "Piloting the world's first double-blind AI evaluations",
+        "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-08-27T12:59:16.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49504625",
+        "category": "dev",
+        "title": "Understanding ChatGPT Work",
+        "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-31T01:28:22.000Z",
+        "badge": "HN",
+        "signal": "14 分 · 1 评论"
+      },
+      {
+        "id": "cn-baidu-56c1fecba2ecb1e5",
+        "category": "cn",
+        "title": "女排 朱婷",
+        "url": "https://www.baidu.com/s?wd=%E5%A5%B3%E6%8E%92+%E6%9C%B1%E5%A9%B7&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "8月30日，女排亚锦赛决赛，中国女排2-3不敌泰国，无缘冠军，也无缘直通奥运。赛后，网络上很多网友呼吁女排召回朱婷。",
+        "badge": "热搜",
+        "signal": "7,713,466 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-5v29-34h8-v68r",
+        "category": "security",
+        "title": "MapFish Print has XXE that allows reading arbitrary files of certain types",
+        "url": "https://github.com/advisories/GHSA-5v29-34h8-v68r",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:33:35.000Z",
+        "summary": "### Summary XXE on MapFish Print allows reading arbitrary files of certain types. Eg /etc/passwd or k8 secrets and certs. https://github.com/mapfish/mapfish-print/commit/13020c0fbc299e5f604e4e66066311c4bf04d507 ### Details To trigger the X…",
+        "badge": "CVE-2026-55848",
+        "signal": "HIGH · CVSS 8.6"
+      },
+      {
+        "id": "ai-hugging-face-17177c100c915029",
+        "category": "ai",
+        "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+        "url": "https://huggingface.co/blog/train-multi-vector-encoder",
+        "source": "Hugging Face",
+        "publishedAt": "2026-08-26T00:00:00.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1238253",
+        "category": "dev",
+        "title": "gpui-component + AI 主写：用和上一个项目完全相反的方式做了个 macOS 菜单栏监控 zstats",
+        "url": "https://www.v2ex.com/t/1238253",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-08-30T22:46:08.000Z",
+        "summary": "之前用 GPUI （ Zed 编辑器那套 GPU 加速 UI 框架）写过一个 Redis 客户端 Zedis 。那时候刚接触 gpui-component ，生态资料少，基本是大部分代码手写、AI 打辅助的模式——AI 负责查资料、补样板代码，主体逻辑还是自己一行行敲。 这次做新项目 zstats.app ，两个变化叠在一起，开发体验完全不一样了： 一是 gpui-component 成熟了很多。 各种常用组件都是开箱即用，不用再自己从头设计和实现 UI 细节，官方提供了完…",
+        "badge": "程序员",
+        "signal": "2 回复"
+      },
+      {
+        "id": "cn-item-6252819987a820d6",
+        "category": "cn",
+        "title": "约旦军方：已拦截8枚入侵该国领空的导弹",
+        "url": "https://www.chinanews.com.cn/gj/2026/08-31/10687014.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-08-31T01:32:58.000Z",
+        "summary": "中新网8月31日电 据法新社报道，约旦军方当地时间31日表示，当天凌晨，已拦截了8枚入侵该国领空的导弹。",
+        "badge": "中新网要闻"
       },
       {
         "id": "cisa-kev-cve-2021-23758",
@@ -108,14 +271,55 @@
         "signal": "已遭利用 · 整改期限 2026-09-09"
       },
       {
-        "id": "ai-openai-cb1db0d5c74b6e9e",
+        "id": "ai-openai-5c8d75ef9c12c059",
         "category": "ai",
-        "title": "Supporting Thailand’s next generation of AI startups",
-        "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+        "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
+        "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
         "source": "OpenAI",
-        "publishedAt": "2026-08-28T02:00:00.000Z",
-        "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
+        "publishedAt": "2026-08-27T09:00:00.000Z",
+        "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
         "badge": "OpenAI"
+      },
+      {
+        "id": "hn-49499867",
+        "category": "dev",
+        "title": "Haiku R1/beta6 has been released",
+        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-30T16:01:10.000Z",
+        "badge": "HN",
+        "signal": "259 分 · 76 评论"
+      },
+      {
+        "id": "cn-it-ecd490191c5f742d",
+        "category": "cn",
+        "title": "2026 年 9 月科技事件日历一览表",
+        "url": "https://www.ithome.com/0/996/308.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-08-31T02:00:03.000Z",
+        "summary": "IT之家的观众老爷们好，小泵来给大家做汇报了 [嘿哈]。下面是 2026 年 9 月 科技事件的预告汇总，请查收！ [之家] 小泵友情提示：很多活动可能在开始前几天才能确定具体时间，因此这个日历会随时更新，大家可以前往 IT之家 App 事件栏目 ，查看最新动态，为感兴趣的内容设置“提醒”，或开启“自动同步至系统日历”功能。",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-334q-h5g3-fpxv",
+        "category": "security",
+        "title": "free5GC AUSF authentication contexts can be overwritten by concurrent requests for the same SUPI",
+        "url": "https://github.com/advisories/GHSA-334q-h5g3-fpxv",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:24:11.000Z",
+        "summary": "### Summary The AUSF component of free5GC stores per-subscriber authentication state in a global `sync.Map` keyed only by SUPI. Every incoming authentication request creates a new `AusfUeContext` and stores it under that SUPI key without c…",
+        "badge": "CVE-2026-55784",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
+        "id": "ai-google-deepmind-ac6eb9276806c2f8",
+        "category": "ai",
+        "title": "Intelligent transcription with Gemini 3.5 Transcribe",
+        "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-08-26T17:01:00.000Z",
+        "summary": "Now you can get more intelligent speech-to-text transcription with Gemini 3.5 Transcribe.",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1238247",
@@ -126,7 +330,17 @@
         "publishedAt": "2026-08-30T17:31:34.000Z",
         "summary": "各位这个价格真的可以买到这个卡吗? https://x.com/wherecall1/status/2094087659149029842",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
+      },
+      {
+        "id": "cn-baidu-2a01ce26ac1fe0bb",
+        "category": "cn",
+        "title": "医疗防疫分队前往救援一线",
+        "url": "https://www.baidu.com/s?wd=%E5%8C%BB%E7%96%97%E9%98%B2%E7%96%AB%E5%88%86%E9%98%9F%E5%89%8D%E5%BE%80%E6%95%91%E6%8F%B4%E4%B8%80%E7%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "8月26日，尼泊尔一侧发生泥石流灾害，造成西藏日喀则市吉隆县吉隆口岸重大人员伤亡、失联。8月30日，西藏军区保障部组建的医疗防疫分队出发前往救援一线，提供卫勤保障。",
+        "badge": "热搜",
+        "signal": "7,617,243 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3246",
@@ -140,43 +354,54 @@
         "signal": "已遭利用 · 整改期限 2026-09-09"
       },
       {
-        "id": "ai-google-deepmind-71c43cf780d371ee",
+        "id": "ai-hugging-face-d21068479952e403",
         "category": "ai",
-        "title": "Piloting the world's first double-blind AI evaluations",
-        "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-08-27T12:59:16.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-49499867",
-        "category": "dev",
-        "title": "Haiku R1/beta6 has been released",
-        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
-        "source": "Hacker News",
-        "publishedAt": "2026-08-30T16:01:10.000Z",
-        "badge": "HN",
-        "signal": "256 分 · 76 评论"
-      },
-      {
-        "id": "cisa-kev-cve-2015-5287",
-        "category": "security",
-        "title": "Red Hat Automatic Bug Reporting Tool：Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5287",
-        "source": "CISA KEV",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
-        "summary": "Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product…",
-        "badge": "CVE-2015-5287",
-        "signal": "已遭利用 · 整改期限 2026-09-09"
-      },
-      {
-        "id": "ai-hugging-face-17177c100c915029",
-        "category": "ai",
-        "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
-        "url": "https://huggingface.co/blog/train-multi-vector-encoder",
+        "title": "Granite 4.2 LLMs: How They're Built",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
         "source": "Hugging Face",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
+        "publishedAt": "2026-08-25T15:14:14.000Z",
         "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-49502214",
+        "category": "dev",
+        "title": "Cores in space: The core memory module from a 1980 Spacelab computer",
+        "url": "https://www.righto.com/2026/08/spacelab-core-memory.html",
+        "source": "Hacker News",
+        "publishedAt": "2026-08-30T20:00:25.000Z",
+        "badge": "HN",
+        "signal": "80 分 · 13 评论"
+      },
+      {
+        "id": "cn-item-ddaaba5a9a0ad61c",
+        "category": "cn",
+        "title": "订单排到年底！这一千亿级“冷”市场，“热”起来了",
+        "url": "https://www.chinanews.com.cn/cj/2026/08-31/10686998.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-08-31T00:09:23.000Z",
+        "summary": "大模型越做越大，芯片越跑越快，一个看似朴素的问题突然变得棘手起来——服务器太热了，怎么办？",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-56wq-x3wv-3ff4",
+        "category": "security",
+        "title": "SeaweedFS: Path traversal in the S3 gateway X-Amz-Copy-Source header allows cross-bucket object read",
+        "url": "https://github.com/advisories/GHSA-56wq-x3wv-3ff4",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:17:33.000Z",
+        "summary": "### Summary The SeaweedFS S3 API gateway did not reject `..` path segments in the `X-Amz-Copy-Source` header used by `CopyObject` and `UploadPartCopy`. The request URL path was hardened against traversal in 4.30 (CVE-2026-54917), but the c…",
+        "badge": "CVE-2026-55874",
+        "signal": "HIGH · CVSS 7.7"
+      },
+      {
+        "id": "ai-openai-fe23f369e01db08d",
+        "category": "ai",
+        "title": "Expanding OpenAI’s presence in Brazil",
+        "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+        "source": "OpenAI",
+        "publishedAt": "2026-08-27T03:00:00.000Z",
+        "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
+        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1238242",
@@ -190,140 +415,25 @@
         "signal": "2 回复"
       },
       {
-        "id": "cisa-kev-cve-2022-0995",
+        "id": "cn-it-006d927a66e30a92",
+        "category": "cn",
+        "title": "美国 ITC 对特定移动设备启动 337 调查，苹果公司为列名被告",
+        "url": "https://www.ithome.com/0/996/307.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-08-31T01:58:09.000Z",
+        "summary": "IT之家 8 月 31 日消息，据中国贸易救济信息网今日消息，8 月 28 日，美国国际贸易委员会（ITC）投票决定对 特定带有用于交换电子内容的软硬件的移动设备 启动 337 调查。 2026 年 7 月 28 日，美国 GG Technologies, Inc. d/b/a StayTouch of Santa Monica, California 向美国 ITC 提出 337 立案调查申请，主张对美出口、在美进口和在美销售的该产品违反了美国 337 条款（侵权美国注册…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2015-5287",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Out-of-Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2022-0995",
+        "title": "Red Hat Automatic Bug Reporting Tool：Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5287",
         "source": "CISA KEV",
         "publishedAt": "2026-08-26T00:00:00.000Z",
-        "summary": "Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system.",
-        "badge": "CVE-2022-0995",
+        "summary": "Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product…",
+        "badge": "CVE-2015-5287",
         "signal": "已遭利用 · 整改期限 2026-09-09"
-      },
-      {
-        "id": "ai-openai-5c8d75ef9c12c059",
-        "category": "ai",
-        "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
-        "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
-        "source": "OpenAI",
-        "publishedAt": "2026-08-27T09:00:00.000Z",
-        "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-49502214",
-        "category": "dev",
-        "title": "Cores in space: The core memory module from a 1980 Spacelab computer",
-        "url": "https://www.righto.com/2026/08/spacelab-core-memory.html",
-        "source": "Hacker News",
-        "publishedAt": "2026-08-30T20:00:25.000Z",
-        "badge": "HN",
-        "signal": "75 分 · 13 评论"
-      },
-      {
-        "id": "cisa-kev-cve-2026-8452",
-        "category": "security",
-        "title": "Citrix NetScaler ADC and NetScaler Gateway：Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-8452",
-        "source": "CISA KEV",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability which could lead to denial of service.",
-        "badge": "CVE-2026-8452",
-        "signal": "已遭利用 · 整改期限 2026-08-29"
-      },
-      {
-        "id": "ai-google-deepmind-ac6eb9276806c2f8",
-        "category": "ai",
-        "title": "Intelligent transcription with Gemini 3.5 Transcribe",
-        "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-08-26T17:01:00.000Z",
-        "summary": "Now you can get more intelligent speech-to-text transcription with Gemini 3.5 Transcribe.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "v2ex-1238238",
-        "category": "dev",
-        "title": "XXL-BOOT v2.1.0 发布： React 全新上线 · 全栈 TypeScript · AI+SKILL 驱动开发",
-        "url": "https://www.v2ex.com/t/1238238",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-08-30T15:50:25.000Z",
-        "summary": "一套仓库，三种模式；一行 SQL ，全栈生成； AI 加持，开箱即用。 本版本是一次承前启后的重大升级，围绕「 前端工程全面 TypeScript 化 」「 React 全新前端版本交付 」「 AI + SKILL 驱动开发 」三大核心亮点展开，让中后台业务开发从此进入 AI 辅助时代。 一、Release Notes （ v2.1.0 · 2026-08-30 ） 1 、 [新增] React 前端版本发布 ：React + Vite + AntDesign + Type…",
-        "badge": "程序员",
-        "signal": "1 回复"
-      },
-      {
-        "id": "cisa-kev-cve-2019-1068",
-        "category": "security",
-        "title": "Microsoft SQL Server：Microsoft SQL Server Remote Code Execution Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2019-1068",
-        "source": "CISA KEV",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
-        "summary": "Microsoft SQL Server contains a remote code execution vulnerability that could allow an attacker to execute code in the context of the SQL Server Database Engine service account.",
-        "badge": "CVE-2019-1068",
-        "signal": "已遭利用 · 整改期限 2026-08-29"
-      },
-      {
-        "id": "ai-hugging-face-d21068479952e403",
-        "category": "ai",
-        "title": "Granite 4.2 LLMs: How They're Built",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
-        "source": "Hugging Face",
-        "publishedAt": "2026-08-25T15:14:14.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-49478426",
-        "category": "dev",
-        "title": "Show HN: NFC Energy-Harvesting PCB Business Card with an MCU",
-        "url": "https://wilsonharper.net/projects/businesscard/",
-        "source": "Hacker News",
-        "publishedAt": "2026-08-28T13:48:12.000Z",
-        "badge": "HN",
-        "signal": "100 分 · 9 评论"
-      },
-      {
-        "id": "cisa-kev-cve-2026-60004",
-        "category": "security",
-        "title": "Gitea Gitea：Gitea Code Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-60004",
-        "source": "CISA KEV",
-        "publishedAt": "2026-08-25T00:00:00.000Z",
-        "summary": "Gitea contains a code injection vulnerability that allows an attacker with repository write access to send a malicious patch to the diffpatch API endpoint to plant an executable Git hook and run shell commands as the Gitea service account.",
-        "badge": "CVE-2026-60004",
-        "signal": "已遭利用 · 整改期限 2026-08-28"
-      },
-      {
-        "id": "ai-openai-fe23f369e01db08d",
-        "category": "ai",
-        "title": "Expanding OpenAI’s presence in Brazil",
-        "url": "https://openai.com/index/expanding-our-presence-in-brazil",
-        "source": "OpenAI",
-        "publishedAt": "2026-08-27T03:00:00.000Z",
-        "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1238221",
-        "category": "dev",
-        "title": "写的小工具又上阮一峰的周刊了",
-        "url": "https://www.v2ex.com/t/1238221",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-08-30T14:03:53.000Z",
-        "summary": "之前在 v 站发了一次 /t/1236486 无人问津 以为只有自己有这种特殊的习惯 看到 star 之后 发现还有有不少同好的。 不得不说来自大佬的流量依旧强大",
-        "badge": "程序员",
-        "signal": "19 回复"
-      },
-      {
-        "id": "cisa-kev-cve-2026-21962",
-        "category": "security",
-        "title": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in：Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-21962",
-        "source": "CISA KEV",
-        "publishedAt": "2026-08-24T00:00:00.000Z",
-        "summary": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to criti…",
-        "badge": "CVE-2026-21962",
-        "signal": "已遭利用 · 整改期限 2026-08-27"
       },
       {
         "id": "ai-google-deepmind-835a331a5b20ce16",
@@ -336,25 +446,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49435285",
+        "id": "hn-49478426",
         "category": "dev",
-        "title": "Sort branches by last commit date",
-        "url": "https://ryangreenberg.com/til/git-branches-by-commit-date/",
+        "title": "Show HN: NFC Energy-Harvesting PCB Business Card with an MCU",
+        "url": "https://wilsonharper.net/projects/businesscard/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-25T14:57:00.000Z",
+        "publishedAt": "2026-08-28T13:48:12.000Z",
         "badge": "HN",
-        "signal": "87 分 · 33 评论"
+        "signal": "108 分 · 11 评论"
       },
       {
-        "id": "cisa-kev-cve-2026-73570",
+        "id": "cn-baidu-ad2e128b62872983",
+        "category": "cn",
+        "title": "追觅起诉小红书",
+        "url": "https://www.baidu.com/s?wd=%E8%BF%BD%E8%A7%85%E8%B5%B7%E8%AF%89%E5%B0%8F%E7%BA%A2%E4%B9%A6&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "法院开庭信息显示，追觅科技（苏州）有限公司因名誉权纠纷，起诉行吟信息科技（上海）有限公司（小红书国内核心运营主体公司），该案将于9月8日在上海市黄浦区人民法院开庭。",
+        "badge": "热搜",
+        "signal": "7,521,817 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-gqr6-r77p-c2pj",
         "category": "security",
-        "title": "Synacor Zimbra Collaboration Suite (ZCS)：Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-73570",
-        "source": "CISA KEV",
-        "publishedAt": "2026-08-21T00:00:00.000Z",
-        "summary": "Zimbra Collaboration Suite (ZCS) contains an OS command injection vulnerability which could allow an unauthenticated attacker to send specially crafted SMTP requests that may result in execution of arbitrary operating system commands as th…",
-        "badge": "CVE-2026-73570",
-        "signal": "已遭利用 · 整改期限 2026-08-24"
+        "title": "Fortigate syslog message parser can be exploited to modify or delete fields from the original message",
+        "url": "https://github.com/advisories/GHSA-gqr6-r77p-c2pj",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-08-28T22:13:00.000Z",
+        "summary": "### Impact A security issue has been identified in Graylog affecting the parsing of syslog messages that use a key-value format, such as those generated by Fortigate devices. The vulnerability allows attackers to overwrite individual messa…",
+        "badge": "CVE-2026-55841",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-f1c76f23a788b688",
@@ -366,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238220",
+        "id": "v2ex-1238238",
         "category": "dev",
-        "title": "我是不是太学生思维了",
-        "url": "https://www.v2ex.com/t/1238220",
+        "title": "XXL-BOOT v2.1.0 发布： React 全新上线 · 全栈 TypeScript · AI+SKILL 驱动开发",
+        "url": "https://www.v2ex.com/t/1238238",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-30T13:41:37.000Z",
-        "summary": "我是不是太学生思维了 本人双非准大三，上学期 python 大作业做了个小项目，后面暑假打磨了一下( https://rtomc.com/ ) (基本都是 vibe)。最近瞎搞了一个 typst 导出简历玩具 后面准备找实习但是没有想好方向(虽然可能考研，但是更想去社会润润)，想看后端开发，但是 java 传统路线自己没实践没项目，之前参加过一个数据库管理系统的比赛，后面一直在润 github 。有没有大佬指点迷津。 感谢你的聆听，也可以看看我这个项目/网站有没有啥问题，能…",
+        "publishedAt": "2026-08-30T15:50:25.000Z",
+        "summary": "一套仓库，三种模式；一行 SQL ，全栈生成； AI 加持，开箱即用。 本版本是一次承前启后的重大升级，围绕「 前端工程全面 TypeScript 化 」「 React 全新前端版本交付 」「 AI + SKILL 驱动开发 」三大核心亮点展开，让中后台业务开发从此进入 AI 辅助时代。 一、Release Notes （ v2.1.0 · 2026-08-30 ） 1 、 [新增] React 前端版本发布 ：React + Vite + AntDesign + Type…",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -391,7 +511,7 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 24159,
+        "stars": 24252,
         "starsToday": 1370
       },
       {
@@ -401,7 +521,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 39331,
+        "stars": 39378,
         "starsToday": 1114
       },
       {
@@ -410,7 +530,7 @@
         "name": "Lakr233/vphone-cli",
         "url": "https://github.com/Lakr233/vphone-cli",
         "language": "Swift",
-        "stars": 9650,
+        "stars": 9669,
         "starsToday": 361
       },
       {
@@ -420,7 +540,7 @@
         "url": "https://github.com/tt-a1i/archify",
         "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "language": "JavaScript",
-        "stars": 34791,
+        "stars": 34912,
         "starsToday": 3722
       },
       {
@@ -430,7 +550,7 @@
         "url": "https://github.com/p-e-w/heretic",
         "description": "Fully automatic censorship removal for language models",
         "language": "Python",
-        "stars": 29195,
+        "stars": 29208,
         "starsToday": 369
       },
       {
@@ -440,7 +560,7 @@
         "url": "https://github.com/unclecode/crawl4ai",
         "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
         "language": "Python",
-        "stars": 80254,
+        "stars": 80269,
         "starsToday": 221
       },
       {
@@ -450,7 +570,7 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 60521,
+        "stars": 60529,
         "starsToday": 230
       },
       {
@@ -460,7 +580,7 @@
         "url": "https://github.com/majd/ipatool",
         "description": "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
         "language": "Go",
-        "stars": 10226,
+        "stars": 10237,
         "starsToday": 58
       },
       {
@@ -469,7 +589,7 @@
         "name": "punkpeye/awesome-mcp-servers",
         "url": "https://github.com/punkpeye/awesome-mcp-servers",
         "description": "A collection of MCP servers.",
-        "stars": 93339,
+        "stars": 93355,
         "starsToday": 96
       },
       {
@@ -479,10 +599,10 @@
         "url": "https://github.com/checkstyle/checkstyle",
         "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
         "language": "Java",
-        "stars": 9211,
+        "stars": 9219,
         "starsToday": 115
       }
     ],
-    "updatedAt": "2026-08-31T01:45:43.600Z"
+    "updatedAt": "2026-08-31T02:10:50.594Z"
   }
 }

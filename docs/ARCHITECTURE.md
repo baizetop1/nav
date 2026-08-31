@@ -46,7 +46,7 @@
 - 运行时输入 fine-grained PAT，通过 Git Data API 原子提交三个 JSON 数据文件。
 - 推送到 `main` 或 `master` 后，由 GitHub Actions 构建并发布 `dist` 到 `gh-pages`。
 - GitHub Actions 按日程、代码提交或管理页手动触发检查正式导航链接，并生成 `public/link-health.json`；首页为异常链接显示状态提醒。
-- 首页提供可切换的技术情报（综合、AI、安全、开发）与 GitHub Trending 热门仓库；GitHub Actions 每小时在服务端聚合官方 API/RSS 为 `public/hot-feed.json`，前端只读取同源静态报告，不暴露 Token，并在更新失败时回退已部署的上次有效数据与本机缓存。
+- 首页提供可切换的信息流（综合、国内、安全、AI、开发）与 GitHub Trending 热门仓库；国内分类轮询聚合中国新闻网要闻、IT之家与百度热搜（百度失败时回退今日头条），综合分类按国内、安全、AI、开发轮询混排。GitHub Actions 每小时在服务端聚合公开 API/RSS 为 `public/hot-feed.json`，前端只读取同源静态报告，不暴露 Token，并在更新失败时回退已部署的上次有效数据与本机缓存。
 - 管理后台提供链接健康汇总和明细；有 Token 时使用 Actions 服务器端检查，无 Token 时提供浏览器可达性检查，并明确标注跨域无法读取 HTTP 状态。
 - 站点可安装为 PWA，并提供不缓存外部 API 的离线应用壳。
 - 支持日常、工作、学习和休闲四种场景；翻译历史最多保留 100 条，正式网站访问统计保留 90 天并提供本机统计面板。

@@ -586,7 +586,7 @@ function App() {
     { id: 'translator', title: '打开快捷翻译', description: '输入文本并查看翻译历史', keywords: ['translate', '翻译', 'language'], icon: 'translate', run: () => { setIsTranslatorOpen(true); focusAfterRender('translation-input'); } },
     { id: 'temp-note', title: '打开临时文本', description: '编辑、复制或加密同步临时内容', keywords: ['note', '文本', '便签'], icon: 'note', run: () => { setIsTempTextOpen(true); focusAfterRender('temp-text-editor'); } },
     ...(tempText ? [{ id: 'temp-qr', title: '临时文本二维码传输', description: '生成接收链接或纯文本二维码', keywords: ['qr', '二维码', '传输'], icon: 'qr' as const, run: () => setIsTempTextQrOpen(true) }] : []),
-    { id: 'hot-feed', title: '查看技术情报', description: 'AI、安全、开发动态和 GitHub 今日热门仓库', keywords: ['hot', '热榜', '情报', 'AI', '安全', '开发', 'github', 'trending'], icon: 'stats', run: () => focusAfterRender('hot-feed') },
+    { id: 'hot-feed', title: '查看技术情报', description: '国内、AI、安全、开发动态和 GitHub 今日热门仓库', keywords: ['hot', '热榜', '情报', '国内', '新闻', 'AI', '安全', '开发', 'github', 'trending'], icon: 'stats', run: () => focusAfterRender('hot-feed') },
     { id: 'tech-os', title: '打开 Tech OS', description: '查看当前路线、Quest、Knowledge、Labs 与 Tech Map', keywords: ['tech os', '学习', '路线', 'quest', 'knowledge'], icon: 'study', run: openTechOs },
     { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: () => openAdmin('content') },
     { id: 'layout', title: '打开布局排序', description: '拖拽网站、分类和调整卡片尺寸', keywords: ['layout', '布局', '拖拽', '排序'], icon: 'settings', run: () => openAdmin('layout') },

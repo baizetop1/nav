@@ -17,18 +17,21 @@ const CATEGORY_KEY = 'nav_hot_feed_category_v1';
 
 const FILTERS: ReadonlyArray<{ id: IntelligenceFilter; label: string }> = [
   { id: 'all', label: '综合' },
-  { id: 'ai', label: 'AI' },
+  { id: 'cn', label: '国内' },
   { id: 'security', label: '安全' },
+  { id: 'ai', label: 'AI' },
   { id: 'dev', label: '开发' },
 ];
 
 const CATEGORY_LABELS: Record<IntelligenceCategory, string> = {
+  cn: '国内',
   ai: 'AI',
   security: '安全',
   dev: '开发',
 };
 
 const CATEGORY_TONES: Record<IntelligenceCategory, string> = {
+  cn: 'bg-[#6686a3]/12 text-[#4f6f8b] dark:bg-[#8faec8]/10 dark:text-[#b6cede]',
   ai: 'bg-[#5f8f84]/11 text-[#356b66] dark:bg-[#8fb8ad]/10 dark:text-[#acd0c7]',
   security: 'bg-[#a85d50]/12 text-[#985247] dark:bg-[#d58a78]/12 dark:text-[#e4a696]',
   dev: 'bg-[#c9a96b]/15 text-[#886d32] dark:bg-[#c9a96b]/10 dark:text-[#dfc68e]',
@@ -186,6 +189,7 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
     const items = report?.intelligence.items ?? [];
     return {
       all: items.length,
+      cn: items.filter(item => item.category === 'cn').length,
       ai: items.filter(item => item.category === 'ai').length,
       security: items.filter(item => item.category === 'security').length,
       dev: items.filter(item => item.category === 'dev').length,
@@ -217,7 +221,7 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
         <div className="min-w-0">
           <h2 id="hot-feed-title" className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Flame size={17} />技术情报</h2>
           <p className="trending-feed-description mt-1 truncate text-xs text-[#718986]" aria-live="polite">
-            {report ? `情报 ${formatGeneratedAt(report.intelligence.updatedAt)} · GitHub ${formatGeneratedAt(report.github.updatedAt)}` : 'AI、安全、开发情报与 GitHub 今日热门仓库'}
+            {report ? `情报 ${formatGeneratedAt(report.intelligence.updatedAt)} · GitHub ${formatGeneratedAt(report.github.updatedAt)}` : '国内、AI、安全、开发情报与 GitHub 今日热门仓库'}
             {staleChannels.length > 0 ? ` · ${staleChannels.join('、')}数据可能已过期` : ''}
           </p>
         </div>
