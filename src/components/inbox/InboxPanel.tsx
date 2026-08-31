@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Archive, Check, Cloud, Copy, ExternalLink, FileText, Github, HelpCircle, Inbox as InboxIcon, Lightbulb, Link as LinkIcon, Lock, Pencil, Plus, RefreshCw, RotateCcw, StickyNote, Trash2, X } from 'lucide-react';
+import { Archive, Check, Cloud, Copy, Download, ExternalLink, FileText, Github, HelpCircle, Inbox as InboxIcon, Lightbulb, Link as LinkIcon, Lock, Pencil, Plus, RefreshCw, RotateCcw, StickyNote, Trash2, X } from 'lucide-react';
 import { createBlogDraftDefaults, slugifyBlogDraft, type BlogDraftInput, type BlogDraftResult } from '../../services/blogDraft';
 import { inboxItemToMarkdown, parseInboxTags } from '../../services/inbox';
-import { countUnsyncedInboxItems, isInboxItemSynced } from '../../services/inboxSync';
+import { countUnsyncedInboxItems, countUnsyncedStudyProgress, isInboxItemSynced } from '../../services/inboxSync';
+import { loadStudyProgressStore } from '../../services/techOsStudyProgress';
 import { applyTechOsCaptureKind, getTechOsCaptureKind, getVisibleInboxTags, TECH_OS_CAPTURE_LABELS } from '../../services/techOsCapture';
 import { getWebCryptoUnavailableReason } from '../../services/webCrypto';
 import type { InboxDraft, InboxItem, InboxItemStatus } from '../../types/inbox';
@@ -21,6 +22,7 @@ interface InboxPanelProps {
   onUpdate: (id: string, draft: InboxDraft) => string | null;
   onStatusChange: (id: string, status: InboxItemStatus) => void;
   onDelete: (id: string) => void;
+  onRestore: (token: string, password: string) => Promise<void>;
   onSync: (token: string, password: string) => Promise<void>;
   onCreateBlogDraft: (item: InboxItem, input: BlogDraftInput, token: string) => Promise<BlogDraftResult & { sourceArchived: boolean }>;
   onClose: () => void;
@@ -34,7 +36,7 @@ interface InboxEditorProps {
   onCancel?: () => void;
 }
 
-export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogRepositoryLabel, syncMeta, syncState, onCreate, onUpdate, onStatusChange, onDelete, onSync, onCreateBlogDraft, onClose }: InboxPanelProps) {
+export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogRepositoryLabel, syncMeta, syncState, onCreate, onUpdate, onStatusChange, onDelete, onRestore, onSync, onCreateBlogDraft, onClose }: InboxPanelProps) {
   const [view, setView] = useState<InboxItemStatus>('inbox');
   const [captureOpen, setCaptureOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -44,6 +46,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
   const [syncPassword, setSyncPassword] = useState('');
   const [syncPasswordConfirm, setSyncPasswordConfirm] = useState('');
   const [syncValidationMessage, setSyncValidationMessage] = useState('');
+  const [syncOpen, setSyncOpen] = useState(() => !syncMeta);
   const visibleItems = useMemo(() => items
     .filter(item => !item.deletedAt && item.status === view)
     .sort((left, right) => right.updatedAt.localeCompare(left.updatedAt)), [items, view]);
@@ -51,14 +54,19 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
   const inboxCount = items.filter(item => !item.deletedAt && item.status === 'inbox').length;
   const archivedCount = items.filter(item => !item.deletedAt && item.status === 'archived').length;
   const unsyncedCount = countUnsyncedInboxItems(items, syncMeta);
+  const unsyncedStudyCount = countUnsyncedStudyProgress(loadStudyProgressStore(), syncMeta);
+  const pendingSyncCount = unsyncedCount + unsyncedStudyCount;
+  const syncBusy = syncState.phase === 'syncing' || syncState.phase === 'restoring';
   const encryptionUnavailableReason = useMemo(() => getWebCryptoUnavailableReason(), []);
   const blogDraftItem = blogDraftItemId ? items.find(item => item.id === blogDraftItemId && !item.deletedAt) : undefined;
-  const syncLabel = syncState.phase === 'syncing'
-    ? '同步中…'
+  const syncLabel = syncState.phase === 'restoring'
+    ? '恢复中…'
+    : syncState.phase === 'syncing'
+      ? '同步中…'
     : syncState.phase === 'error'
       ? '! 同步失败'
-      : unsyncedCount > 0
-        ? `○ ${unsyncedCount} 条未同步`
+      : pendingSyncCount > 0
+        ? `○ ${pendingSyncCount} 项未同步`
         : syncMeta
           ? '● 已同步'
           : '○ 尚未同步';
@@ -72,6 +80,18 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
       setCaptureOpen(true);
     }
   }, [captureRequest, open]);
+
+  useEffect(() => {
+    if (open) return;
+    setGithubToken('');
+    setSyncPassword('');
+    setSyncPasswordConfirm('');
+    setSyncValidationMessage('');
+  }, [open]);
+
+  useEffect(() => {
+    if (open && (syncBusy || syncState.phase === 'error')) setSyncOpen(true);
+  }, [open, syncBusy, syncState.phase]);
 
   useEffect(() => {
     if (!open) return;
@@ -97,6 +117,11 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
     await onSync(githubToken, syncPassword);
   };
 
+  const runRestore = async () => {
+    setSyncValidationMessage('');
+    await onRestore(githubToken, syncPassword);
+  };
+
   return (
     <div className="fixed inset-0 z-[70] bg-[#07191d]/40 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Inbox" onMouseDown={event => { if (event.target === event.currentTarget) onClose(); }}>
       <aside className="baize-panel ml-auto flex h-full w-full max-w-2xl flex-col border-y-0 border-r-0">
@@ -111,22 +136,28 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
           <button type="button" className="baize-button-secondary ml-auto" aria-expanded={captureOpen} onClick={() => setCaptureOpen(current => !current)}><Plus size={17} />快速记录</button>
         </div>
 
-        <details className="border-b border-[#5f8f84]/15 px-4 py-3 sm:px-6 dark:border-[#c9a96b]/10">
-          <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Cloud size={16} />GitHub 加密同步<span className={`ml-auto text-xs ${syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#718986]'}`}>{syncLabel}</span></summary>
+        <details open={syncOpen} onToggle={event => setSyncOpen(event.currentTarget.open)} className="border-b border-[#5f8f84]/15 px-4 py-3 sm:px-6 dark:border-[#c9a96b]/10">
+          <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Cloud size={16} />多端加密同步<span className={`ml-auto text-xs ${syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#718986]'}`}>{syncLabel}</span></summary>
           <div className="mt-3 space-y-3 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
-            <p className="text-xs leading-5 text-[#718986]">目标：{repositoryLabel} · <code>data/inbox.enc.json</code>。同步会先读取远端、按 ID 合并，再只提交密文；密码和 Token 不会保存。</p>
+            <p className="text-xs leading-5 text-[#718986]">目标：{repositoryLabel} · <code>data/inbox.enc.json</code>。密文同时携带 Inbox 与 Tech OS 学习打卡；密码和 Token 不会保存。</p>
+            <div className="grid gap-2 text-xs leading-5 sm:grid-cols-2">
+              <p className="rounded-lg bg-[#5f8f84]/8 p-2 text-[#55706d] dark:bg-[#c9a96b]/8 dark:text-[#b8c6c1]"><strong className="block text-[#315e5b] dark:text-[#d9ccb0]">新手机 / 新电脑</strong>输入同一 Token 和加密密码，点“从云端恢复”。它只读取并与本机合并，不产生 GitHub 提交。</p>
+              <p className="rounded-lg bg-[#5f8f84]/8 p-2 text-[#55706d] dark:bg-[#c9a96b]/8 dark:text-[#b8c6c1]"><strong className="block text-[#315e5b] dark:text-[#d9ccb0]">日常双向同步</strong>点“合并并同步”，先读取两端、保留较新版本，再把合并后的密文提交回 GitHub。</p>
+            </div>
             {encryptionUnavailableReason && <p role="alert" className="rounded-lg border border-[#a85d50]/20 bg-[#a85d50]/8 p-2 text-xs leading-5 text-[#985247] dark:text-[#e1a294]">{encryptionUnavailableReason}</p>}
             <input type="password" autoComplete="new-password" spellCheck={false} className="baize-input font-mono" value={githubToken} onChange={event => setGithubToken(event.target.value)} placeholder="GitHub Token" />
             <div className="grid gap-2 sm:grid-cols-2">
               <input type="password" autoComplete="new-password" className="baize-input" value={syncPassword} onChange={event => setSyncPassword(event.target.value)} placeholder="加密密码（至少 12 字符）" />
-              <input type="password" autoComplete="new-password" className="baize-input" value={syncPasswordConfirm} onChange={event => setSyncPasswordConfirm(event.target.value)} placeholder="再次输入加密密码" />
+              <input type="password" autoComplete="new-password" className="baize-input" value={syncPasswordConfirm} onChange={event => setSyncPasswordConfirm(event.target.value)} placeholder="再次输入（仅合并同步需要）" />
             </div>
+            {(unsyncedCount > 0 || unsyncedStudyCount > 0) && <p className="text-[11px] text-[#718986]">待同步：Inbox {unsyncedCount} 项 · 学习打卡 {unsyncedStudyCount} 项</p>}
             <div className="flex flex-wrap items-center gap-2">
               <p className={`min-w-0 flex-1 break-words text-xs ${syncValidationMessage || syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#315e5b] dark:text-[#b8cec7]'}`}>{syncValidationMessage || syncState.message}</p>
               {syncState.commitUrl && <a className="text-xs text-[#356b66] hover:underline dark:text-[#d2b775]" href={syncState.commitUrl} target="_blank" rel="noreferrer">查看加密提交</a>}
-              <button type="button" className="baize-button-primary" disabled={Boolean(encryptionUnavailableReason) || syncState.phase === 'syncing' || !githubToken || !syncPassword || !syncPasswordConfirm} onClick={() => { void runSync(); }}><RefreshCw size={16} className={syncState.phase === 'syncing' ? 'animate-spin' : ''} />{syncState.phase === 'syncing' ? '正在合并' : '合并同步'}</button>
+              <button type="button" className="baize-button-secondary" disabled={Boolean(encryptionUnavailableReason) || syncBusy || !githubToken || !syncPassword} onClick={() => { void runRestore(); }}><Download size={16} className={syncState.phase === 'restoring' ? 'animate-pulse' : ''} />{syncState.phase === 'restoring' ? '正在恢复' : '从云端恢复'}</button>
+              <button type="button" className="baize-button-primary" disabled={Boolean(encryptionUnavailableReason) || syncBusy || !githubToken || !syncPassword || !syncPasswordConfirm} onClick={() => { void runSync(); }}><RefreshCw size={16} className={syncState.phase === 'syncing' ? 'animate-spin' : ''} />{syncState.phase === 'syncing' ? '正在合并' : '合并并同步'}</button>
             </div>
-            <p className="flex items-center gap-1 text-[11px] text-[#829793]"><Lock size={12} />任何读取、解密或提交失败都不会清空本机 Inbox。</p>
+            <p className="flex items-center gap-1 text-[11px] text-[#829793]"><Lock size={12} />任何读取、解密或提交失败都不会清空本机数据。{syncMeta ? `上次同步：${new Date(syncMeta.lastSyncedAt).toLocaleString('zh-CN')}` : ''}</p>
           </div>
         </details>
 

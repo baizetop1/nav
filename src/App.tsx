@@ -21,7 +21,8 @@ import { createInboxBlogDraft, type BlogDraftInput } from './services/blogDraft'
 import { decryptNote, encryptNote } from './services/encryptedNote';
 import { getEncryptedNote, saveEncryptedNote } from './services/github';
 import { createInboxItem, loadInbox, normalizeInboxDraft, saveInbox, setInboxItemStatus, softDeleteInboxItem, updateInboxItem } from './services/inbox';
-import { createInboxSyncMeta, loadInboxSyncMeta, saveInboxSyncMeta, synchronizeInbox } from './services/inboxSync';
+import { createInboxSyncMeta, loadInboxSyncMeta, mergeInboxItems, restoreInboxFromCloud, saveInboxSyncMeta, synchronizeInbox } from './services/inboxSync';
+import { loadStudyProgressStore, mergeStudyProgressStores, saveStudyProgressStore } from './services/techOsStudyProgress';
 import { loadCachedTextIndex, loadTextIndex } from './services/textNetwork';
 import type { InboxDraft, InboxItem, InboxItemStatus } from './types/inbox';
 import type { InboxSyncUiState } from './types/inbox-sync';
@@ -110,6 +111,7 @@ function App() {
   const [qrSite, setQrSite] = useState<Site | null>(null);
   const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
   const isWorkMode = sceneMode === 'work';
+  const inboxSyncBusy = inboxSyncState.phase === 'syncing' || inboxSyncState.phase === 'restoring';
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -503,7 +505,7 @@ function App() {
     return true;
   };
   const createLocalInboxItem = (draft: InboxDraft): string | null => {
-    if (inboxSyncState.phase === 'syncing') return '正在同步，请等待完成后再保存。';
+    if (inboxSyncBusy) return '正在同步或恢复，请等待完成后再保存。';
     try {
       const item = createInboxItem(draft);
       return replaceInboxItems([item, ...inboxItems]) ? null : '浏览器无法写入本地存储，请检查隐私或空间设置。';
@@ -512,7 +514,7 @@ function App() {
     }
   };
   const updateLocalInboxItem = (id: string, draft: InboxDraft): string | null => {
-    if (inboxSyncState.phase === 'syncing') return '正在同步，请等待完成后再编辑。';
+    if (inboxSyncBusy) return '正在同步或恢复，请等待完成后再编辑。';
     try {
       const normalized = normalizeInboxDraft(draft);
       return replaceInboxItems(updateInboxItem(inboxItems, id, normalized)) ? null : '浏览器无法写入本地存储，请检查隐私或空间设置。';
@@ -521,16 +523,16 @@ function App() {
     }
   };
   const changeInboxItemStatus = (id: string, status: InboxItemStatus) => {
-    if (inboxSyncState.phase === 'syncing') {
-      alert('正在同步，请等待完成后再修改状态。');
+    if (inboxSyncBusy) {
+      alert('正在同步或恢复，请等待完成后再修改状态。');
       return;
     }
     if (!replaceInboxItems(setInboxItemStatus(inboxItems, id, status))) alert('无法保存 Inbox 状态，请检查浏览器本地存储。');
   };
   const archiveInboxItems = (ids: string[]) => {
     if (!ids.length) return;
-    if (inboxSyncState.phase === 'syncing') {
-      alert('Tech OS 已提交，但 Inbox 正在同步；请稍后手动归档来源记录。');
+    if (inboxSyncBusy) {
+      alert('Tech OS 已提交，但 Inbox 正在同步或恢复；请稍后手动归档来源记录。');
       return;
     }
     const now = new Date();
@@ -538,34 +540,84 @@ function App() {
     if (!replaceInboxItems(nextItems)) alert('Tech OS 已提交，但无法保存 Inbox 归档状态；请检查浏览器本地存储。');
   };
   const deleteInboxItem = (id: string) => {
-    if (inboxSyncState.phase === 'syncing') {
-      alert('正在同步，请等待完成后再删除。');
+    if (inboxSyncBusy) {
+      alert('正在同步或恢复，请等待完成后再删除。');
       return;
     }
     if (!replaceInboxItems(softDeleteInboxItem(inboxItems, id))) alert('无法保存删除标记，请检查浏览器本地存储。');
   };
-  const syncInboxWithCloud = async (token: string, password: string): Promise<void> => {
-    setInboxSyncState({ phase: 'syncing', message: '正在读取远端密文并合并…' });
+  const restorePrivateSharedData = async (token: string, password: string): Promise<void> => {
+    setInboxSyncState({ phase: 'restoring', message: '正在只读下载、解密并与本机数据合并…' });
     try {
-      const result = await synchronizeInbox(inboxItems, siteConfig.repository, token, password);
-      setInboxItems(result.items);
-      if (!saveInbox(result.items)) {
-        setInboxSyncState({ phase: 'error', message: '云端已同步，但浏览器无法持久化合并结果；请不要刷新并检查本地存储设置。', commitUrl: result.commitUrl });
+      const result = await restoreInboxFromCloud(
+        inboxItems,
+        siteConfig.repository,
+        token,
+        password,
+        loadStudyProgressStore(),
+      );
+      const persistedItems = mergeInboxItems(result.items, loadInbox());
+      const persistedStudyProgress = mergeStudyProgressStores(result.studyProgress, loadStudyProgressStore());
+      const inboxSaved = saveInbox(persistedItems);
+      const studySaved = saveStudyProgressStore(persistedStudyProgress);
+      if (inboxSaved) setInboxItems(persistedItems);
+      if (!inboxSaved || !studySaved) {
+        setInboxSyncState({
+          phase: 'error',
+          message: `远端数据已经成功解密，但本机${!inboxSaved && !studySaved ? ' Inbox 与学习进度' : !inboxSaved ? ' Inbox' : '学习进度'}无法持久化；云端没有被修改。`,
+        });
         return;
       }
-      const meta = createInboxSyncMeta(result.items, result.syncedAt);
-      setInboxSyncMeta(meta);
+      const meta = createInboxSyncMeta(result.remoteItems, result.restoredAt, result.remoteStudyProgress);
       if (!saveInboxSyncMeta(meta)) {
-        setInboxSyncState({ phase: 'error', message: 'Inbox 已同步，但本机无法保存同步标记；内容没有丢失。', commitUrl: result.commitUrl });
+        setInboxSyncState({ phase: 'error', message: '数据已恢复到本机，但无法保存同步标记；内容没有丢失，云端也没有被修改。' });
         return;
       }
-      setInboxSyncState({ phase: 'synced', message: `合并同步完成：${result.items.filter(item => !item.deletedAt).length} 条可见记录。`, commitUrl: result.commitUrl });
+      setInboxSyncMeta(meta);
+      setInboxSyncState({
+        phase: 'synced',
+        message: `从云端恢复完成：${persistedItems.filter(item => !item.deletedAt).length} 条可见记录和 Tech OS 学习打卡已合并；未产生 GitHub 提交。`,
+      });
     } catch (error) {
-      setInboxSyncState({ phase: 'error', message: error instanceof Error ? error.message : 'Inbox 同步失败；本机内容已保留。' });
+      setInboxSyncState({ phase: 'error', message: error instanceof Error ? error.message : '云端恢复失败；本机内容已保留。' });
+    }
+  };
+  const syncInboxWithCloud = async (token: string, password: string): Promise<void> => {
+    setInboxSyncState({ phase: 'syncing', message: '正在读取远端密文，合并 Inbox 与学习进度…' });
+    try {
+      const result = await synchronizeInbox(
+        inboxItems,
+        siteConfig.repository,
+        token,
+        password,
+        loadStudyProgressStore(),
+      );
+      const persistedItems = mergeInboxItems(result.items, loadInbox());
+      const persistedStudyProgress = mergeStudyProgressStores(result.studyProgress, loadStudyProgressStore());
+      const inboxSaved = saveInbox(persistedItems);
+      const studySaved = saveStudyProgressStore(persistedStudyProgress);
+      if (inboxSaved) setInboxItems(persistedItems);
+      if (!inboxSaved || !studySaved) {
+        setInboxSyncState({
+          phase: 'error',
+          message: `云端已同步，但浏览器无法持久化${!inboxSaved && !studySaved ? ' Inbox 与学习进度' : !inboxSaved ? ' Inbox' : '学习进度'}；请不要刷新并检查本地存储设置。`,
+          commitUrl: result.commitUrl,
+        });
+        return;
+      }
+      const meta = createInboxSyncMeta(result.items, result.syncedAt, result.studyProgress);
+      if (!saveInboxSyncMeta(meta)) {
+        setInboxSyncState({ phase: 'error', message: '共享数据已同步，但本机无法保存同步标记；内容没有丢失。', commitUrl: result.commitUrl });
+        return;
+      }
+      setInboxSyncMeta(meta);
+      setInboxSyncState({ phase: 'synced', message: `合并同步完成：云端已写入 ${result.items.filter(item => !item.deletedAt).length} 条可见记录和 Tech OS 学习打卡；如请求期间又有本机改动，会继续显示为未同步。`, commitUrl: result.commitUrl });
+    } catch (error) {
+      setInboxSyncState({ phase: 'error', message: error instanceof Error ? error.message : '共享数据同步失败；本机内容已保留。' });
     }
   };
   const createBlogDraftFromInbox = async (item: InboxItem, input: BlogDraftInput, token: string) => {
-    if (inboxSyncState.phase === 'syncing') throw new Error('正在同步 Inbox，请等待完成后再创建博客草稿。');
+    if (inboxSyncBusy) throw new Error('正在同步或恢复 Inbox，请等待完成后再创建博客草稿。');
     const result = await createInboxBlogDraft(item, input, token, siteConfig.blogRepository);
     const sourceArchived = item.status === 'archived'
       || replaceInboxItems(setInboxItemStatus(inboxItems, item.id, 'archived'));
@@ -789,7 +841,7 @@ function App() {
       </nav>}
 
       {isAdminOpen && <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onRunBrowserLinkHealthCheck={runBrowserLinkHealthCheck} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
-      <InboxPanel open={isInboxOpen} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} blogRepositoryLabel={`${siteConfig.blogRepository.owner}/${siteConfig.blogRepository.repo} · ${siteConfig.blogRepository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onSync={syncInboxWithCloud} onCreateBlogDraft={createBlogDraftFromInbox} onClose={() => setIsInboxOpen(false)} />
+      <InboxPanel open={isInboxOpen} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} blogRepositoryLabel={`${siteConfig.blogRepository.owner}/${siteConfig.blogRepository.repo} · ${siteConfig.blogRepository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onRestore={restorePrivateSharedData} onSync={syncInboxWithCloud} onCreateBlogDraft={createBlogDraftFromInbox} onClose={() => setIsInboxOpen(false)} />
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">

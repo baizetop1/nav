@@ -1,11 +1,12 @@
 export interface InboxSyncMeta {
-  version: 1;
+  version: 2;
   lastSyncedAt: string;
   itemVersions: Record<string, string>;
+  studyVersions: Record<string, string>;
 }
 
 export interface InboxSyncUiState {
-  phase: 'idle' | 'syncing' | 'synced' | 'error';
+  phase: 'idle' | 'restoring' | 'syncing' | 'synced' | 'error';
   message?: string;
   commitUrl?: string;
 }

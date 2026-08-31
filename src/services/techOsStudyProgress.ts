@@ -1,4 +1,6 @@
 export const TECH_OS_STUDY_PROGRESS_KEY = 'baize_tech_os_study_progress_v1';
+export const TECH_OS_STUDY_PROGRESS_UPDATED_EVENT = 'baize-tech-os-study-progress-updated';
+const LEGACY_PROGRESS_TIMESTAMP = '1970-01-01T00:00:00.000Z';
 
 export interface QuestStudyTask {
   id: string;
@@ -10,7 +12,17 @@ export interface StudyProgressStorage {
   setItem(key: string, value: string): void;
 }
 
-interface StudyProgressStore {
+export interface StudyTaskProgress {
+  completed: boolean;
+  updatedAt: string;
+}
+
+export interface StudyProgressStore {
+  version: 2;
+  quests: Record<string, Record<string, StudyTaskProgress>>;
+}
+
+interface LegacyStudyProgressStore {
   version: 1;
   quests: Record<string, string[]>;
 }
@@ -29,56 +41,153 @@ export function extractQuestStudyTasks(body: string): QuestStudyTask[] {
   return tasks;
 }
 
-export function loadQuestStudyProgress(questId: string, storage: StudyProgressStorage = localStorage): string[] {
-  const store = loadStore(storage);
-  return store.quests[questId] ? [...store.quests[questId]] : [];
+export function emptyStudyProgressStore(): StudyProgressStore {
+  return { version: 2, quests: {} };
 }
 
-export function saveQuestStudyProgress(questId: string, completedTaskIds: string[], storage: StudyProgressStorage = localStorage): boolean {
+export function parseStudyProgressStore(value: unknown): StudyProgressStore | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  const candidate = value as { version?: unknown; quests?: unknown };
+  if (!candidate.quests || typeof candidate.quests !== 'object' || Array.isArray(candidate.quests)) return null;
+  if (candidate.version === 1) return migrateLegacyStore(candidate as LegacyStudyProgressStore);
+  if (candidate.version !== 2) return null;
+
+  const quests: StudyProgressStore['quests'] = {};
+  for (const [questId, taskValues] of Object.entries(candidate.quests as Record<string, unknown>)) {
+    if (!isQuestId(questId) || !taskValues || typeof taskValues !== 'object' || Array.isArray(taskValues)) return null;
+    const tasks: Record<string, StudyTaskProgress> = {};
+    for (const [taskId, taskValue] of Object.entries(taskValues as Record<string, unknown>)) {
+      if (!isTaskId(taskId) || !taskValue || typeof taskValue !== 'object' || Array.isArray(taskValue)) return null;
+      const task = taskValue as Record<string, unknown>;
+      if (Object.keys(task).some(key => key !== 'completed' && key !== 'updatedAt')) return null;
+      if (typeof task.completed !== 'boolean' || !isValidTimestamp(task.updatedAt)) return null;
+      tasks[taskId] = { completed: task.completed, updatedAt: task.updatedAt };
+    }
+    quests[questId] = tasks;
+  }
+  return { version: 2, quests };
+}
+
+export function loadStudyProgressStore(storage: StudyProgressStorage = localStorage): StudyProgressStore {
   try {
-    const store = loadStore(storage);
-    store.quests[questId] = [...new Set(completedTaskIds.filter(isTaskId))].sort(compareTaskIds);
-    storage.setItem(TECH_OS_STUDY_PROGRESS_KEY, JSON.stringify(store));
+    const saved = storage.getItem(TECH_OS_STUDY_PROGRESS_KEY);
+    return saved ? parseStudyProgressStore(JSON.parse(saved)) || emptyStudyProgressStore() : emptyStudyProgressStore();
+  } catch {
+    return emptyStudyProgressStore();
+  }
+}
+
+export function saveStudyProgressStore(store: StudyProgressStore, storage: StudyProgressStorage = localStorage): boolean {
+  const parsed = parseStudyProgressStore(store);
+  if (!parsed) return false;
+  try {
+    storage.setItem(TECH_OS_STUDY_PROGRESS_KEY, JSON.stringify(parsed));
+    notifyStudyProgressUpdated();
     return true;
   } catch {
     return false;
   }
 }
 
-export function toggleQuestStudyTask(questId: string, taskId: string, storage: StudyProgressStorage = localStorage): string[] {
-  const normalizedTaskId = taskId.toUpperCase();
-  if (!isTaskId(normalizedTaskId)) return loadQuestStudyProgress(questId, storage);
-  const completed = new Set(loadQuestStudyProgress(questId, storage));
-  if (completed.has(normalizedTaskId)) completed.delete(normalizedTaskId);
-  else completed.add(normalizedTaskId);
-  const result = [...completed].sort(compareTaskIds);
-  saveQuestStudyProgress(questId, result, storage);
-  return result;
-}
-
-function loadStore(storage: StudyProgressStorage): StudyProgressStore {
-  try {
-    const value: unknown = JSON.parse(storage.getItem(TECH_OS_STUDY_PROGRESS_KEY) || 'null');
-    if (!value || typeof value !== 'object') return emptyStore();
-    const candidate = value as { version?: unknown; quests?: unknown };
-    if (candidate.version !== 1 || !candidate.quests || typeof candidate.quests !== 'object' || Array.isArray(candidate.quests)) return emptyStore();
-    const quests: Record<string, string[]> = {};
-    Object.entries(candidate.quests as Record<string, unknown>).forEach(([questId, taskIds]) => {
-      if (!/^QUEST-\d+$/.test(questId) || !Array.isArray(taskIds)) return;
-      quests[questId] = [...new Set(taskIds.filter(isTaskId))].sort(compareTaskIds);
-    });
-    return { version: 1, quests };
-  } catch {
-    return emptyStore();
+export function mergeStudyProgressStores(local: StudyProgressStore, remote: StudyProgressStore): StudyProgressStore {
+  const merged = emptyStudyProgressStore();
+  for (const store of [local, remote]) {
+    for (const [questId, tasks] of Object.entries(store.quests)) {
+      const mergedTasks = merged.quests[questId] || {};
+      for (const [taskId, progress] of Object.entries(tasks)) {
+        const existing = mergedTasks[taskId];
+        mergedTasks[taskId] = existing ? selectNewestTaskProgress(existing, progress) : { ...progress };
+      }
+      merged.quests[questId] = mergedTasks;
+    }
   }
+  return merged;
 }
 
-function emptyStore(): StudyProgressStore {
-  return { version: 1, quests: {} };
+export function loadQuestStudyProgress(questId: string, storage: StudyProgressStorage = localStorage): string[] {
+  const tasks = loadStudyProgressStore(storage).quests[questId] || {};
+  return Object.entries(tasks)
+    .filter(([, progress]) => progress.completed)
+    .map(([taskId]) => taskId)
+    .sort(compareTaskIds);
+}
+
+export function saveQuestStudyProgress(
+  questId: string,
+  completedTaskIds: string[],
+  storage: StudyProgressStorage = localStorage,
+  now = new Date(),
+): boolean {
+  if (!isQuestId(questId)) return false;
+  const store = loadStudyProgressStore(storage);
+  const existing = store.quests[questId] || {};
+  const desired = new Set(completedTaskIds.map(value => value.toUpperCase()).filter(isTaskId));
+  const updatedAt = now.toISOString();
+  const taskIds = new Set([...Object.keys(existing), ...desired]);
+  const nextTasks: Record<string, StudyTaskProgress> = { ...existing };
+  for (const taskId of taskIds) {
+    const completed = desired.has(taskId);
+    if (existing[taskId]?.completed === completed) continue;
+    nextTasks[taskId] = { completed, updatedAt };
+  }
+  store.quests[questId] = nextTasks;
+  return saveStudyProgressStore(store, storage);
+}
+
+export function toggleQuestStudyTask(
+  questId: string,
+  taskId: string,
+  storage: StudyProgressStorage = localStorage,
+  now = new Date(),
+): string[] {
+  const normalizedTaskId = taskId.toUpperCase();
+  if (!isQuestId(questId) || !isTaskId(normalizedTaskId)) return loadQuestStudyProgress(questId, storage);
+  const store = loadStudyProgressStore(storage);
+  const tasks = store.quests[questId] || {};
+  tasks[normalizedTaskId] = {
+    completed: !tasks[normalizedTaskId]?.completed,
+    updatedAt: now.toISOString(),
+  };
+  store.quests[questId] = tasks;
+  if (!saveStudyProgressStore(store, storage)) return loadQuestStudyProgress(questId, storage);
+  return loadQuestStudyProgress(questId, storage);
+}
+
+function migrateLegacyStore(store: LegacyStudyProgressStore): StudyProgressStore {
+  const migrated = emptyStudyProgressStore();
+  for (const [questId, taskIds] of Object.entries(store.quests)) {
+    if (!isQuestId(questId) || !Array.isArray(taskIds)) continue;
+    migrated.quests[questId] = Object.fromEntries(
+      [...new Set(taskIds.filter(isTaskId))]
+        .sort(compareTaskIds)
+        .map(taskId => [taskId, { completed: true, updatedAt: LEGACY_PROGRESS_TIMESTAMP }]),
+    );
+  }
+  return migrated;
+}
+
+function selectNewestTaskProgress(left: StudyTaskProgress, right: StudyTaskProgress): StudyTaskProgress {
+  const leftTime = Date.parse(left.updatedAt);
+  const rightTime = Date.parse(right.updatedAt);
+  if (leftTime !== rightTime) return { ...(leftTime > rightTime ? left : right) };
+  if (left.completed !== right.completed) return { ...(left.completed ? right : left) };
+  return { ...left };
+}
+
+function notifyStudyProgressUpdated(): void {
+  if (typeof window !== 'undefined') window.dispatchEvent(new Event(TECH_OS_STUDY_PROGRESS_UPDATED_EVENT));
+}
+
+function isQuestId(value: unknown): value is string {
+  return typeof value === 'string' && /^QUEST-\d+$/.test(value);
 }
 
 function isTaskId(value: unknown): value is string {
   return typeof value === 'string' && /^S\d+$/.test(value);
+}
+
+function isValidTimestamp(value: unknown): value is string {
+  return typeof value === 'string' && !Number.isNaN(Date.parse(value));
 }
 
 function compareTaskIds(left: string, right: string): number {

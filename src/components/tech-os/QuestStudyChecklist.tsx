@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Check, Circle, ShieldCheck } from 'lucide-react';
 import type { TechOsEntity } from '../../types/tech-os';
-import { extractQuestStudyTasks, loadQuestStudyProgress, toggleQuestStudyTask } from '../../services/techOsStudyProgress';
+import { extractQuestStudyTasks, loadQuestStudyProgress, TECH_OS_STUDY_PROGRESS_UPDATED_EVENT, toggleQuestStudyTask } from '../../services/techOsStudyProgress';
 
 export function QuestStudyChecklist({ quest }: { quest: TechOsEntity }) {
   const tasks = useMemo(() => extractQuestStudyTasks(quest.body), [quest.body]);
@@ -12,6 +12,13 @@ export function QuestStudyChecklist({ quest }: { quest: TechOsEntity }) {
   const allChecked = tasks.length > 0 && completed.length === tasks.length;
   const progress = tasks.length ? Math.round(completed.length / tasks.length * 100) : 0;
 
+  useEffect(() => {
+    const refresh = () => setCompletedTaskIds(loadQuestStudyProgress(quest.id));
+    refresh();
+    window.addEventListener(TECH_OS_STUDY_PROGRESS_UPDATED_EVENT, refresh);
+    return () => window.removeEventListener(TECH_OS_STUDY_PROGRESS_UPDATED_EVENT, refresh);
+  }, [quest.id]);
+
   if (!tasks.length) return null;
 
   const toggle = (taskId: string) => {
@@ -21,7 +28,7 @@ export function QuestStudyChecklist({ quest }: { quest: TechOsEntity }) {
   return <section className="mb-6 rounded-2xl border border-[#5f8f84]/15 bg-[#5f8f84]/5 p-4 dark:border-[#c9a96b]/15 dark:bg-[#c9a96b]/5">
     <div className="flex flex-wrap items-start justify-between gap-3">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#64807c]">学习打卡 · 仅保存本机</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#64807c]">学习打卡 · 本机立即保存 · 可加密同步</p>
         <h3 className="mt-1 font-bold">{completed.length}/{tasks.length} 个步骤已完成</h3>
       </div>
       <span className={`rounded-full px-3 py-1 text-xs font-semibold ${allChecked ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]'}`}>{allChecked ? '已达到打卡条件' : `${progress}%`}</span>

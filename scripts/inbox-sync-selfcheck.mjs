@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import { createInboxItem, softDeleteInboxItem, updateInboxItem } from '../src/services/inbox.ts';
+import { encryptTextPayload } from '../src/services/encryptedNote.ts';
 import {
+  countUnsyncedStudyProgress,
   countUnsyncedInboxItems,
   createInboxSyncMeta,
   decryptInbox,
@@ -11,6 +13,7 @@ import {
   mergeInboxItems,
   saveInboxSyncMeta,
 } from '../src/services/inboxSync.ts';
+import { emptyStudyProgressStore, mergeStudyProgressStores } from '../src/services/techOsStudyProgress.ts';
 
 class MemoryStorage {
   values = new Map();
@@ -49,14 +52,52 @@ const reorderedTags = { ...sameTimeLive, tags: ['二', '一'] };
 const sortedTags = { ...sameTimeLive, tags: ['一', '二'] };
 assert.deepEqual(mergeInboxItems([reorderedTags], [sortedTags]), mergeInboxItems([sortedTags], [reorderedTags]));
 
+const localStudyProgress = {
+  version: 2,
+  quests: {
+    'QUEST-001': {
+      S1: { completed: true, updatedAt: secondTime.toISOString() },
+      S2: { completed: false, updatedAt: thirdTime.toISOString() },
+    },
+  },
+};
+const remoteStudyProgress = {
+  version: 2,
+  quests: {
+    'QUEST-001': {
+      S1: { completed: false, updatedAt: firstTime.toISOString() },
+      S3: { completed: true, updatedAt: thirdTime.toISOString() },
+    },
+  },
+};
+const mergedStudyProgress = mergeStudyProgressStores(localStudyProgress, remoteStudyProgress);
+assert.equal(mergedStudyProgress.quests['QUEST-001'].S1.completed, true);
+assert.equal(mergedStudyProgress.quests['QUEST-001'].S2.completed, false);
+assert.equal(mergedStudyProgress.quests['QUEST-001'].S3.completed, true);
+
 const encryptedItems = [deletedA, itemB];
-const encrypted = await encryptInbox(encryptedItems, password, thirdTime);
+const encrypted = await encryptInbox(encryptedItems, password, thirdTime, mergedStudyProgress);
 const serialized = JSON.stringify(encrypted);
 assert.equal(serialized.includes('手机新版 A'), false);
 assert.equal(serialized.includes('手机添加 B'), false);
+assert.equal(serialized.includes('QUEST-001'), false);
 const decrypted = await decryptInbox(serialized, password);
 assert.deepEqual(decrypted.items, encryptedItems);
+assert.deepEqual(decrypted.studyProgress, mergedStudyProgress);
+assert.equal(decrypted.version, 2);
 await assert.rejects(() => decryptInbox(encrypted, 'a-valid-wrong-password'), /密码错误|已损坏/);
+
+const legacyStore = { version: 1, updatedAt: secondTime.toISOString(), items: [itemA] };
+const legacyEncrypted = {
+  format: 'baize-inbox',
+  version: 1,
+  ...await encryptTextPayload(JSON.stringify(legacyStore), password, 'baize-nav-inbox-v1'),
+  encryptedAt: secondTime.toISOString(),
+};
+const migratedLegacy = await decryptInbox(legacyEncrypted, password);
+assert.deepEqual(migratedLegacy.items, [itemA]);
+assert.deepEqual(migratedLegacy.studyProgress, emptyStudyProgressStore());
+assert.equal(migratedLegacy.version, 2);
 
 const tampered = structuredClone(encrypted);
 const ciphertext = Buffer.from(tampered.ciphertext, 'base64');
@@ -66,12 +107,36 @@ await assert.rejects(() => decryptInbox(tampered, password), /密码错误|已�
 await assert.rejects(() => decryptInbox({ ...encrypted, plaintext: [itemA] }, password), /不支持的字段/);
 
 const storage = new MemoryStorage();
-const meta = createInboxSyncMeta([phoneA, itemB], thirdTime.toISOString());
+const meta = createInboxSyncMeta([phoneA, itemB], thirdTime.toISOString(), mergedStudyProgress);
 assert.equal(saveInboxSyncMeta(meta, storage), true);
 assert.deepEqual(loadInboxSyncMeta(storage), meta);
 assert.ok(storage.getItem(INBOX_SYNC_META_KEY));
 assert.equal(isInboxItemSynced(phoneA, meta), true);
 assert.equal(countUnsyncedInboxItems([phoneA, itemB], meta), 0);
 assert.equal(countUnsyncedInboxItems([deletedA, itemB], meta), 1);
+const sameTimestampDifferentContent = { ...phoneA, content: '同一时间戳但正文不同' };
+assert.equal(isInboxItemSynced(sameTimestampDifferentContent, meta), false);
+assert.equal(countUnsyncedInboxItems([sameTimestampDifferentContent, itemB], meta), 1);
+assert.equal(countUnsyncedStudyProgress(mergedStudyProgress, meta), 0);
+assert.equal(countUnsyncedStudyProgress(localStudyProgress, meta), 0);
+const changedStudyProgress = structuredClone(mergedStudyProgress);
+changedStudyProgress.quests['QUEST-001'].S1.updatedAt = thirdTime.toISOString();
+assert.equal(countUnsyncedStudyProgress(changedStudyProgress, meta), 1);
+const checkedAtSameTime = { version: 2, quests: { 'QUEST-002': { S1: { completed: true, updatedAt: thirdTime.toISOString() } } } };
+const uncheckedAtSameTime = { version: 2, quests: { 'QUEST-002': { S1: { completed: false, updatedAt: thirdTime.toISOString() } } } };
+const checkedMeta = createInboxSyncMeta([], thirdTime.toISOString(), checkedAtSameTime);
+assert.equal(countUnsyncedStudyProgress(uncheckedAtSameTime, checkedMeta), 1);
+
+const legacyMetaStorage = new MemoryStorage();
+legacyMetaStorage.setItem(INBOX_SYNC_META_KEY, JSON.stringify({
+  version: 1,
+  lastSyncedAt: secondTime.toISOString(),
+  itemVersions: { A: itemA.updatedAt },
+}));
+const migratedMeta = loadInboxSyncMeta(legacyMetaStorage);
+assert.equal(migratedMeta.version, 2);
+assert.deepEqual(migratedMeta.studyVersions, {});
+assert.equal(isInboxItemSynced(itemA, migratedMeta), true);
+assert.equal(countUnsyncedStudyProgress(localStudyProgress, migratedMeta), 2);
 
 console.log('inbox sync self-check passed');

@@ -53,7 +53,9 @@ tech-os/
 
 ### 1. Capture
 
-手机继续使用 Phase C/D Inbox。Question、Idea、Note、Link 只通过 `tech-os/question`、`tech-os/idea`、`tech-os/note`、`tech-os/link` 标签表达，因此 `baize_inbox_v1` 和密文同步格式保持不变。
+手机继续使用 Phase C/D Inbox。Question、Idea、Note、Link 只通过 `tech-os/question`、`tech-os/idea`、`tech-os/note`、`tech-os/link` 标签表达，因此本机 `baize_inbox_v1` 与 `InboxStore version: 1` 保持不变。云端仍只使用 `data/inbox.enc.json`，但解密后的共享数据升级为 version 2，同时包含 Inbox items 与 Tech OS 个人学习打卡，并兼容只有 Inbox 的旧 version 1 密文。
+
+新手机或电脑第一次接入时，在 Inbox 的“多端加密同步”中输入运行时 PAT 和同一加密密码，选择“从云端恢复”。该操作只 GET、解密并与本机合并，不提交 GitHub；“合并并同步”才会 GET、合并、加密并 PUT。PAT 和密码均不保存。
 
 PC 在 Tech OS Inbox 中选择“加入 Repository 草稿”后生成 `tech-os/inbox/INBOX-….md`，保留 `source_inbox_id`。草稿先停留在当前工作台内存；完成远端读取、差异检查、schema 校验和人工确认后才提交。提交成功才归档来源记录，失败或冲突时来源仍留在 Inbox。
 
@@ -61,7 +63,7 @@ PC 在 Tech OS Inbox 中选择“加入 Repository 草稿”后生成 `tech-os/i
 
 1. 打开 `state.yml` 指向的 `current_quest_id`。
 2. Quest 中以 `### S1 · 步骤名` 形式拆出可验证的小步骤；每一步都写“学什么、动手做、完成标志”。
-3. 工作台会把这些步骤显示为可点击的学习打卡，并保存在当前浏览器的 `baize_tech_os_study_progress_v1`；它只代表个人推进记录，不会修改公开仓库。
+3. 工作台会把这些步骤显示为可点击的学习打卡，并立即保存在当前浏览器；用户主动执行 Inbox 多端同步时，打卡状态会与 Inbox 一起写入私有共享数据。它只代表个人推进记录，不会修改公开仓库中的 Quest Markdown。
 4. 在 Quest 中记录当前结论、证据和下一步。新问题写入 `questions/`，不要塞进一篇无限增长的笔记。
 5. 形成稳定理解时创建 Knowledge；需要验证时创建 Lab；多个节点汇合时创建 Project。
 
@@ -163,6 +165,8 @@ npm run test:tech-os-route-engine
 - 不修改 Phase A–D 数据格式。
 - 不进入 `text-index.json`。
 - 不进入 `NavigationBackup v1`。
+- 私有共享数据只包含 Inbox 与个人学习打卡；公开 `tech-os/**/*.md` 和导航 CMS 数据不在其中。
+- “从云端恢复”只读并与本机合并；只有“合并并同步”才写 GitHub。PAT 与密码只存在当前页面内存。
 - 不自动发布 Blog。
 - 不自动选择 Main Route。
 - 不自动宣称实验完成或升级 Knowledge。

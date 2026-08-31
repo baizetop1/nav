@@ -53,7 +53,7 @@
 - 未加入正式导航的临时网址按日记录访问次数，滚动保留 30 天，可从首页再次访问；记录包含在完整备份与加密云备份中。
 - 网站卡片可使用本地二维码库生成和下载 PNG，不依赖第三方二维码接口。
 - 临时文本支持纯文本二维码和 `#/transfer` 接收链接；接收端先预览再确认覆盖，载荷限制为 1200 个 UTF-8 字节，URL 片段不会发送到 Pages 服务器。
-- 多条 Inbox 以 `version: 1` 数据保存在 `localStorage.baize_inbox_v1`，支持文本、链接、归档和软删除；原有单份临时文本会复制迁移一次但继续独立保留。用户主动同步时，浏览器读取 `data/inbox.enc.json`，解密后按 ID/`updatedAt` 合并，并将 tombstone 与正文一起重新加密提交；本机只保存不含秘密的逐条同步版本标记。
+- 多条 Inbox 继续以 `version: 1` 数据保存在 `localStorage.baize_inbox_v1`，支持文本、链接、归档和软删除；原有单份临时文本会复制迁移一次但继续独立保留。`data/inbox.enc.json` 解密后的私有共享数据为 version 2，包含 Inbox items 与 Tech OS 个人学习打卡，同时兼容旧 version 1 密文。新设备可只读恢复并与本机合并；主动同步才重新加密提交。本机只保存不含秘密的逐条同步版本标记。
 - 博客公开索引兼容 version 1 和 version 2。version 2 使用 `related`、`wiki` 与 `topic` edges：文章和 Topic 都是公开节点，`topic` 边只能从文章指向正式 Topic，普通 tag 不会自动升级。Nav 校验端点、语义类型、重复和自我关联，并在搜索中分组展示 Topic 与文章；仍不下载文章正文。
 - Tech OS 以仓库根目录 `tech-os/` 为规范来源，使用 Markdown + 扁平 Front Matter 表达 Vision、Route、Quest、Question、Knowledge、Lab、Project 和 Tech Map；T2 已提供 Viewer 与独立 Repository Adapter，T3 复用既有 Inbox 完成移动 Capture 接入。
 
@@ -148,13 +148,13 @@ PATCH branch ref（force: false）
 
 ### 2.8 Tech OS T3 Capture Adapter
 
-T3 不修改 `InboxStore version: 1`，也不建立新的本地或云端数据文件：
+T3 不修改本机 `InboxStore version: 1`，也不建立第二份云端私有数据文件；Tech OS 个人学习打卡与 Inbox 共用解密后 version 2 的共享数据：
 
 ```text
 Mobile Quick Capture
     ↓ Question / Idea / Note / Link
 baize_inbox_v1 + tech-os/* 类型标签
-    ↓ 既有 AES-256-GCM 合并同步
+    ↓ AES-256-GCM 共享数据 v2（Inbox + 个人学习打卡）
 PC Tech OS Inbox
     ↓ 用户选择“加入 Repository 草稿”
 tech-os/inbox/INBOX-….md（React 内存）
@@ -170,6 +170,7 @@ Repository 原子 commit
 - Adapter 只生成待处理 Inbox Item，不自动创建 Question、Knowledge、Project 或 Route Seed，也不改变 Main Route。
 - Repository 提交、远端读取或本机归档任一步失败都不会删除来源记录；删除仍只使用既有 tombstone 语义。
 - Inbox 密文是私有数据，但一旦转入 `tech-os/` 就成为仓库明文，并可能进入公开 Pages 投影；UI 在处理前明确显示该边界。
+- 个人学习打卡只同步任务完成状态及更新时间，不会自动修改 Quest Markdown、正式完成 Quest、升级 Knowledge 或切换 Main Route。
 
 ### 2.9 Tech OS T4.1 Rules-First Learning Engine
 
@@ -430,7 +431,14 @@ gh-pages 发布
 
 完整云备份沿用运行时 PAT，但在浏览器中完成 AES-256-GCM 加密后才写入 `data/navigation-backup.enc.json`。加密密码只存在于当前页面内存，GitHub Token、密码和明文备份都不会进入仓库。密码遗失后无法恢复密文内容。
 
-Inbox 同步独立使用 `data/inbox.enc.json`，不改变 `NavigationBackup v1`。同步顺序固定为“读取远端 → 解密校验 → 按 ID 合并 → 加密 → 使用已读取 SHA 提交”；任一步失败都不清空本机数据。并发更新返回 409 时停止，不 force 覆盖。软删除项继续保留在密文中，避免另一设备把旧版本恢复出来。
+Inbox 与 Tech OS 个人学习打卡共用 `data/inbox.enc.json`，但不改变本机 `InboxStore version: 1` 或 `NavigationBackup v1`。解密后的共享数据为 version 2：`items` 保存 Inbox，`studyProgress` 保存带更新时间的个人学习打卡；解析器同时接受旧 version 1 内容，并把它视为“只有 Inbox、没有学习打卡”的合法旧数据。
+
+界面提供两条明确的数据流：
+
+- “从云端恢复”只执行 GET、解密和本地合并，不 PUT、不创建 commit，适合第一次在新手机或电脑接入；本机独有内容会保留。
+- “合并并同步”固定执行“GET → 解密校验 → 合并 → 加密 → 使用已读取 SHA PUT”，把合并结果提交回远端。Inbox 同 ID 使用较新的 `updatedAt`，时间相同优先删除 tombstone；学习打卡也以任务更新时间合并，取消打卡作为可传播的状态保留。
+
+任一步失败都不清空本机数据。并发更新返回 409 时停止，不 force 覆盖。PAT 与加密密码只存在当前页面内存，不写 LocalStorage；公开 `tech-os/**/*.md` 和导航 CMS `src/data/*.json` 仍走各自的 Repository / 发布流程，不属于这份私有共享数据。
 
 Phase H 在 PC Inbox 增加显式的“转为博客草稿”操作。用户先确认 title、slug、category、format、tags 和 related，然后使用仅存于当前页面内存的 PAT 对 `baizetop1/baizetop1.github.io` 执行非 force 原子提交。系统只新建 `_drafts/<slug>.md`，并在写入前检查草稿和已发布文章的 slug 冲突；不覆盖文件、不写 `_posts`、不直接公开发布。远端草稿创建成功后才归档来源 Inbox，归档状态仍需用户下次主动同步进入加密 Inbox。
 
@@ -531,7 +539,8 @@ name > tags > category > description
 ## 13. 关键决策摘要
 
 - GitHub 仓库中的 JSON 是导航发布数据的唯一事实来源；LocalStorage 保存草稿、场景偏好、翻译历史、90 天正式网站统计和 30 天临时网址统计，这些本机数据可通过加密完整备份跨设备迁移。
-- Inbox 是独立的本地优先数据域：LocalStorage 负责立即保存，`data/inbox.enc.json` 负责用户主动触发的加密合并同步；它不进入公开文本索引或导航覆盖式备份。
+- Inbox 与 Tech OS 个人学习打卡组成同一个本地优先私有共享域：Inbox 本机 schema 保持 version 1，`data/inbox.enc.json` 解密后的共享数据使用 version 2；用户可只读恢复或主动合并同步，旧 version 1 密文继续可读。它们不进入公开文本索引或导航覆盖式备份。
+- 公开 Tech OS Markdown 与导航 CMS 是独立的 GitHub 发布数据域，不会被私有共享同步自动创建、覆盖或发布。
 - 前端构建变量不是秘密，不能用于安全认证或保存 GitHub Token。
 - 布局同时支持稳定排序和可选的四列自由桌面坐标，窄屏回落为响应式流式布局。
 - 标签先由网站数据聚合，减少重复维护。

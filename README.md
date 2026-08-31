@@ -10,7 +10,7 @@
 - 首页支持直接输入临时网址访问；未加入正式导航的地址会按最近 30 天累计访问次数，并可从“临时访问”面板再次打开、删除或清空。
 - 首页提供“技术情报”区域：左侧按“综合 / 国内 / 安全 / AI / 开发”聚合国内消息、官方情报与开发者来源，并记住本机选择；“综合”按国内、安全、AI、开发轮流展示，避免单一类别占满列表。右侧保留 GitHub 今日热门仓库及语言、总 Star、今日新增 Star。支持收起、手动刷新、过期提醒和本机缓存，工作模式会自动压缩为每栏 5 条。
 - 提供单份临时文本便笺；可使用 AES-256-GCM 在浏览器中加密后，将密文提交到 GitHub，并在其他设备读取解密；也可生成“打开白泽接收”或纯文本二维码进行临时传输。
-- 提供本地优先的多条 Inbox：支持文本和链接快速记录、编辑、复制 Markdown、归档及软删除；升级时会把原有临时文本复制迁移一次，同时保留旧便笺和二维码功能。用户可主动把本机与 GitHub 密文 Inbox 按 ID 合并同步，也可在 PC 处理时把单条记录转为博客仓库的 Markdown 草稿。
+- 提供本地优先的多条 Inbox：支持文本和链接快速记录、编辑、复制 Markdown、归档及软删除；升级时会把原有临时文本复制迁移一次，同时保留旧便笺和二维码功能。用户可主动把本机 Inbox 与 Tech OS 个人学习打卡合并进同一份 GitHub 私有密文，也可在 PC 处理时把单条记录转为博客仓库的 Markdown 草稿。
 - 首页通过 MyMemory 免费接口原地显示翻译结果，并保留 Google 翻译作为失败回退；成功结果自动写入可搜索、复用和删除的本机翻译历史。
 - 使用 Fuse.js 按名称、标签、分类和描述进行模糊搜索。
 - 启动后异步读取博客的公开 `text-index.json`，将文章与手工维护的 Topic 按标题、别名、分类和摘要加入 Fuse.js 搜索；结果按“知识节点”和“文章”分组，远端失败时使用本机缓存，不阻塞导航首页。
@@ -67,14 +67,16 @@ src/data/layout.json
 npm run test:text-network
 ```
 
-Inbox 使用带版本号的 `localStorage.baize_inbox_v1`，删除操作写入 `deletedAt` 而不是物理移除。主动同步时先读取并解密 `data/inbox.enc.json`，再按 ID 合并；同 ID 使用较新的 `updatedAt`，时间相同则优先保留删除 tombstone，最后重新加密提交。同步标记保存在 `localStorage.baize_inbox_sync_meta_v1`，不包含 Token、密码或正文。Inbox 不进入现有覆盖式导航完整备份。可以运行：
+Inbox 本机存储继续使用 `localStorage.baize_inbox_v1` 和 `InboxStore version: 1`，删除操作写入 `deletedAt` 而不是物理移除。`data/inbox.enc.json` 解密后的私有共享数据升级为 version 2，包含 Inbox items 和 Tech OS 个人学习打卡；读取时兼容旧 version 1 数据，旧密文不需要手工迁移。同步标记保存在 `localStorage.baize_inbox_sync_meta_v1`，不包含 Token、密码或正文。Inbox 与学习打卡都不进入现有覆盖式导航完整备份。可以运行：
 
 ```bash
 npm run test:inbox
 npm run test:inbox-sync
 ```
 
-GitHub Token 和至少 12 字符的加密密码只在当前页面内存中使用。仓库中只有 AES-256-GCM 密文；读取、解密、合并或提交失败不会清空本机 Inbox。首次同步会创建远端文件，之后每次同步都携带远端 SHA，遇到并发修改时停止并提示重试。
+GitHub Token 和至少 12 字符的加密密码只在当前页面内存中使用，不写入 LocalStorage、仓库或前端构建变量。新设备可以使用“从云端恢复”：只读取、解密并与本机内容合并，不会创建 commit；日常使用“合并并同步”时才执行“GET → 解密 → 合并 → 加密 → PUT”。仓库中只有 AES-256-GCM 密文；读取、解密、合并或提交失败不会清空本机 Inbox 或学习打卡。首次同步会创建远端文件，之后每次同步都携带远端 SHA，遇到并发修改时停止并提示重试。
+
+这份私有共享数据只负责 Inbox 和 Tech OS 个人学习打卡。公开 `tech-os/**/*.md` 仍通过 Repository Adapter / Git 提交，导航 CMS 的 `src/data/*.json` 仍通过管理页发布；两者都不会被“从云端恢复”或 Inbox 同步隐式修改。
 
 Inbox 的“转为博客草稿”会用博客仓库的 GitHub Contents 读写 Token，生成与博客现有脚本兼容的 `_drafts/<slug>.md`。写入前会检查 `_drafts` 和 `_posts` 的 slug 冲突，不会覆盖远端文件；成功后归档来源 Inbox 记录，但不会直接公开发布。Token 仅保留在当前页面内存。可以运行：
 
@@ -90,7 +92,7 @@ Tech OS 的规范数据位于仓库根目录 `tech-os/`，使用 Markdown + 扁�
 
 T2 桌面工作台位于 `/#/tech-os`，包含 Dashboard、Main Route、Quest、Inbox 接入说明、Knowledge、Labs、Projects、Tech Map、Route Backlog 和独立 Repository Adapter。开发与构建前会先验证 Markdown，再生成忽略提交的 `src/generated/tech-os-index.json`；工作台按需加载，不把 T2 代码加入首页首屏 chunk。该索引会进入最终 Pages 产物，因此部署前必须确认 Tech OS 内容的公开范围。
 
-T3 继续复用 Phase C/D 的 `baize_inbox_v1` 与加密合并同步，不增加第二套 Capture Store，也不升级 Inbox schema。快速记录现在提供 Question、Idea、Note、Link 四种入口，内部只使用 `tech-os/*` 标签表达类型。Tech OS Inbox 可以把一条仍在收件箱中的记录转换为带稳定 ID 和 `source_inbox_id` 的 `tech-os/inbox/*.md` 内存草稿；只有通过 Repository 差异、完整校验和人工确认后才提交，成功后归档来源记录而不删除。
+T3 继续复用 Phase C/D 的 `baize_inbox_v1` 与加密合并同步，不增加第二套 Capture Store，也不升级本机 Inbox schema。快速记录现在提供 Question、Idea、Note、Link 四种入口，内部只使用 `tech-os/*` 标签表达类型。Tech OS Inbox 可以把一条仍在收件箱中的记录转换为带稳定 ID 和 `source_inbox_id` 的 `tech-os/inbox/*.md` 内存草稿；只有通过 Repository 差异、完整校验和人工确认后才提交，成功后归档来源记录而不删除。个人学习打卡会与 Inbox 一起进入解密后 version 2 的私有共享数据，但不会修改这些公开 Markdown。
 
 T4.1 新增只读 Learning Engine。它根据 `state.yml` mode、Current Quest 的“下一步”、显式关系、未回答 Question、Knowledge Gap、Lab、Project、已有 Route Seed 和未归档 Inbox 计算 Next Action、最多四条备选动作、Quest Suggestions、Knowledge Connections 与 Route Seed Signals。每条建议必须显示来源和原因；Keep Alive 只选择 small 动作。T4.1 不生成或提交 Markdown，不聚合 Candidate，不自动切换 Main Route。
 
