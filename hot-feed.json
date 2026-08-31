@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-08-31T20:06:18.858Z",
+  "generatedAt": "2026-08-31T23:51:45.689Z",
   "intelligence": {
-    "updatedAt": "2026-08-31T20:06:18.858Z",
+    "updatedAt": "2026-08-31T23:51:45.689Z",
     "items": [
       {
         "id": "cn-item-52a58cc83da7164b",
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-openai-8a7cdd78fd483859",
+        "id": "ai-openai-0b5a688ac44522d6",
         "category": "ai",
-        "title": "A milestone in expanding access to AI",
-        "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+        "title": "Polimill builds Japan's next-generation public AI infrastructure",
+        "url": "https://openai.com/index/polimill",
         "source": "OpenAI",
-        "publishedAt": "2026-08-31T04:00:00.000Z",
-        "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
+        "publishedAt": "2026-08-31T07:00:00.000Z",
+        "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49511856",
+        "id": "hn-49514878",
         "category": "dev",
-        "title": "I turned my security cameras into an automatic bird identification system",
-        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+        "title": "Google Has Removed MV2 Extensions from the Chrome Web Store, Including UBO",
+        "url": "https://webiterate.dev/google-removed-extensions-ublock-origin-108/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T16:47:11.000Z",
+        "publishedAt": "2026-08-31T21:10:58.000Z",
         "badge": "HN",
-        "signal": "216 分 · 63 评论"
+        "signal": "358 分 · 274 评论"
       },
       {
-        "id": "cn-it-ff3a6f2092de6858",
+        "id": "cn-it-11533ccd1362ecf7",
         "category": "cn",
-        "title": "华为、小米、荣耀手机今日集体调价",
-        "url": "https://www.ithome.com/0/996/694.htm",
+        "title": "Mac 成 AI 硬件宠儿：苹果提前发布 2026 款 mini / Studio，全球需求激增促成 8 月上新",
+        "url": "https://www.ithome.com/0/996/710.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T17:54:32.000Z",
-        "summary": "IT之家 9 月 1 日消息，据博主 @旺仔百事通 消息，华为 Mate 80 系列和 华为畅享 90 Pro Max 今日（9 月 1 日）进行调价。 华为 Mate 80： 12GB+256GB 调价前 4,699 元，调价后 5,499 元 12GB+512GB 调价前 5,199 元，调价后 5,999 元 16GB+512GB 调价前 5,499 元，调价后 6,299 元 16GB+1TB 调价前 6,499 元，调价后 7,299 元 华为 Mate 80 P…",
+        "publishedAt": "2026-08-31T23:49:09.000Z",
+        "summary": "IT之家 9 月 1 日消息，科技媒体 The Information 于 8 月 30 日发布博文，报道称伴随着全球越来越多的 AI 实验室和开发者使用 Mac 训练 / 推理 AI 模型、运行 AI 智能体， 推高全球苹果 Mac mini 和 Mac Studio 销量。 该媒体指出苹果通常在秋季（10~11 月）更新 Mac 产品线， 不过 2026 年产品更新提前到 8 月 25 日官宣、9 月 22 日发货，节奏明显提前。 该媒体认为背后原因，是企业与 AI 客…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-ffg3-p8fm-mjx2",
+        "id": "github-advisory-ghsa-67mx-6wf2-92xp",
         "category": "security",
-        "title": "RestrictedPython guard hooks can be shadowed via positional-only arguments",
-        "url": "https://github.com/advisories/GHSA-ffg3-p8fm-mjx2",
+        "title": "Kirby: File upload permissions are not checked during processing of chunk data",
+        "url": "https://github.com/advisories/GHSA-67mx-6wf2-92xp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-28T22:51:35.000Z",
-        "summary": "### Impact RestrictedPython rewrites sensitive operations to go through guard hooks. Attribute access becomes `_getattr_(obj, name)`, item access becomes `_getitem_(obj, key)`, writes go through `_write_`, and print goes through `_print_`.…",
-        "badge": "CVE-2026-55830",
-        "signal": "HIGH · CVSS 8.3"
+        "publishedAt": "2026-08-31T22:14:05.000Z",
+        "summary": "### TL;DR This vulnerability affects all Kirby sites where users of a particular role have access to the REST API (`access.panel` permission is enabled) but no permission to upload any kind of file (`files.create`, `files.replace` and `use…",
+        "badge": "CVE-2026-71415",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-74b1125af8681de1",
@@ -84,7 +84,7 @@
         "publishedAt": "2026-08-31T16:00:12.000Z",
         "summary": "最近又高强度折腾了一波 AI 辅助编程，结果被一些国内免费模型（如腾讯混元 Hy3 ）震惊到怀疑人生😨。上次做完终端版博客之后，我开始试着完全信任 AI 去实现各种想法，结果它一次一次刷新我的认知。简单列几个这次搞出来的东西： 1. 博客 API + WebMCP 把博客功能做成函数，在浏览器控制台里就能调用；还接入了谷歌和微软支持的 WebMCP 协议，已经被 WebMCP Directory 收录： 👉 https://webmcp.com/sites/mabbs.gi…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-c24275621266ca30",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "总台记者现场探访吉隆口岸核心区，发现此前泥石流灾害过后，仅半山腰一座距地面二十多米的方形水塔留存原有建筑印记。因水塔一侧紧邻山峰，受灾害冲击影响较小，成为整个口岸区域里唯一完整保留下来的建筑。",
         "badge": "热搜",
-        "signal": "7,808,231 热度"
+        "signal": "7,809,500 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81578",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49512975",
+        "id": "hn-49511856",
         "category": "dev",
-        "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
-        "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
+        "title": "I turned my security cameras into an automatic bird identification system",
+        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T18:21:33.000Z",
+        "publishedAt": "2026-08-31T16:47:11.000Z",
         "badge": "HN",
-        "signal": "79 分 · 15 评论"
+        "signal": "334 分 · 90 评论"
       },
       {
         "id": "cn-item-d5f0ded98e46234b",
@@ -137,24 +137,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-j5g3-42wp-gqm3",
+        "id": "github-advisory-ghsa-9vx2-j98c-p72w",
         "category": "security",
-        "title": "Snipe-IT has an Improper Privilege Management issue",
-        "url": "https://github.com/advisories/GHSA-j5g3-42wp-gqm3",
+        "title": "Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the media handling",
+        "url": "https://github.com/advisories/GHSA-9vx2-j98c-p72w",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-28T22:37:24.000Z",
-        "summary": "## Impact The `update()` method in `UsersController` passes the `permission` request field unconditionally to `NormalizePermissionsPayloadAction`, which returns an empty array when the field is absent. The result is passed to `PreserveUnau…",
-        "badge": "CVE-2026-55843",
-        "signal": "HIGH · CVSS 6.5"
+        "publishedAt": "2026-08-31T22:12:45.000Z",
+        "summary": "### TL;DR This vulnerability affects all Kirby sites that are deployed to a server that allows requests for URLs with encoded slashes (`%2f`), such as nginx, PHP's built-in server or Apache setups that have the option `AllowEncodedSlashes`…",
+        "badge": "CVE-2026-75594",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-b42ac281ecaf56c0",
+        "id": "ai-openai-8a7cdd78fd483859",
         "category": "ai",
-        "title": "Our decision on Cursor following its acquisition by SpaceX",
-        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+        "title": "A milestone in expanding access to AI",
+        "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
         "source": "OpenAI",
-        "publishedAt": "2026-08-28T06:00:00.000Z",
-        "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+        "publishedAt": "2026-08-31T04:00:00.000Z",
+        "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
         "badge": "OpenAI"
       },
       {
@@ -169,13 +169,13 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-2f81bb6275472271",
+        "id": "cn-it-f2490fc70749d8c0",
         "category": "cn",
-        "title": "苹果 watchOS 27.0 开发者预览版 Beta 8 发布",
-        "url": "https://www.ithome.com/0/996/693.htm",
+        "title": "IT早报 0901：华为、小米、荣耀手机今日集体调价；库克担任苹果 CEO 最后一天给员工发告别信；曝网易全系产品将登陆华为鸿蒙系统；国内首部 AIGC 长剧《后西游记》开播...",
+        "url": "https://www.ithome.com/0/996/709.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T17:30:07.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 9 月 1 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.0 开发者预览版 Beta 8 更新（内部版本号：24R5360a），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预…",
+        "publishedAt": "2026-08-31T23:44:23.000Z",
+        "summary": "“IT早报”时间，大家好，现在是 2026 年 9 月 1 日星期二，今天的重要科技资讯有： 1. 华为、小米、荣耀手机 9 月 1 日集体调价 华为 Mate 80 系列和 华为畅享 90 Pro Max 9 月 1 日进行调价。荣耀 Power2 和 Magic8 两款产品今日进行调价。小米 17 系列、 REDMI K90 系列等进行了调价。>> 查看详情 2. 库克发文告别苹果 CEO 一职：头衔会变，但对 Apple 社区的热爱永远不会改变 蒂姆 · 库克在担任苹…",
         "badge": "IT之家"
       },
       {
@@ -199,35 +199,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49510514",
+        "id": "hn-49476239",
         "category": "dev",
-        "title": "Playa Phone",
-        "url": "https://playaphone.com/",
+        "title": "'Mad honey' that can stop your heart is being sold online",
+        "url": "https://phys.org/news/2026-08-mad-honey-heart-sold-online.html",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T14:52:26.000Z",
+        "publishedAt": "2026-08-28T09:17:27.000Z",
         "badge": "HN",
-        "signal": "354 分 · 146 评论"
+        "signal": "104 分 · 63 评论"
       },
       {
-        "id": "cn-baidu-4f66e6e01fb4fb68",
+        "id": "cn-baidu-70876960dc298c7f",
         "category": "cn",
-        "title": "杨瀚森绝杀",
-        "url": "https://www.baidu.com/s?wd=%E6%9D%A8%E7%80%9A%E6%A3%AE%E7%BB%9D%E6%9D%80&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "百万级产能缺口 订单排到3年后",
+        "url": "https://www.baidu.com/s?wd=%E7%99%BE%E4%B8%87%E7%BA%A7%E4%BA%A7%E8%83%BD%E7%BC%BA%E5%8F%A3+%E8%AE%A2%E5%8D%95%E6%8E%92%E5%88%B03%E5%B9%B4%E5%90%8E&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "89-87！8月31日晚，中国男篮击败黎巴嫩，杨瀚森2.2秒绝杀，中国男篮世预赛5胜3负。",
+        "summary": "央视财经报道，当前高端算力市场火热，国产AI芯片订单已排至三年后。产业调研数据显示，2026年国产AI芯片需求规模约400万颗，实际交付仅约300万颗，存在百万级产能缺口。受此拉动，国产芯片企业业绩集体爆发。",
         "badge": "热搜",
-        "signal": "7,711,795 热度"
+        "signal": "7,712,848 热度"
       },
       {
-        "id": "github-advisory-ghsa-5v29-34h8-v68r",
+        "id": "github-advisory-ghsa-gr94-w7qr-f4j3",
         "category": "security",
-        "title": "MapFish Print has XXE that allows reading arbitrary files of certain types",
-        "url": "https://github.com/advisories/GHSA-5v29-34h8-v68r",
+        "title": "Socket.IO: Engine.IO WebTransport SID DoS",
+        "url": "https://github.com/advisories/GHSA-gr94-w7qr-f4j3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-28T22:33:35.000Z",
-        "summary": "### Summary XXE on MapFish Print allows reading arbitrary files of certain types. Eg /etc/passwd or k8 secrets and certs. https://github.com/mapfish/mapfish-print/commit/13020c0fbc299e5f604e4e66066311c4bf04d507 ### Details To trigger the X…",
-        "badge": "CVE-2026-55848",
-        "signal": "HIGH · CVSS 8.6"
+        "publishedAt": "2026-08-31T21:28:12.000Z",
+        "summary": "### Impact Engine.IO servers with **WebTransport enabled** are vulnerable to a remotely triggerable denial of service. A malicious unauthenticated client can send a crafted WebTransport upgrade request containing a specially chosen session…",
+        "badge": "CVE-2026-59724",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-17177c100c915029",
@@ -271,45 +271,45 @@
         "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
-        "id": "ai-openai-cb1db0d5c74b6e9e",
+        "id": "ai-openai-b42ac281ecaf56c0",
         "category": "ai",
-        "title": "Supporting Thailand’s next generation of AI startups",
-        "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+        "title": "Our decision on Cursor following its acquisition by SpaceX",
+        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
         "source": "OpenAI",
-        "publishedAt": "2026-08-28T02:00:00.000Z",
-        "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
+        "publishedAt": "2026-08-28T06:00:00.000Z",
+        "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49489376",
+        "id": "hn-49515830",
         "category": "dev",
-        "title": "Show HN: Laser Graffiti",
-        "url": "https://laser.consti.de",
+        "title": "Run macOS Software on Linux",
+        "url": "https://www.darlinghq.org/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-29T12:28:11.000Z",
+        "publishedAt": "2026-08-31T22:53:45.000Z",
         "badge": "HN",
-        "signal": "48 分 · 12 评论"
+        "signal": "19 分 · 4 评论"
       },
       {
-        "id": "cn-it-a72d958250f7d89a",
+        "id": "cn-it-c3ab842a5c79f852",
         "category": "cn",
-        "title": "苹果 visionOS 27.0 开发者预览版 Beta 8 发布",
-        "url": "https://www.ithome.com/0/996/692.htm",
+        "title": "2027 款上汽大众帕萨特 Pro 车型正式上市：官方指导价 17.2 万元起，限时优惠价 13.99 万元起",
+        "url": "https://www.ithome.com/0/996/708.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T17:30:07.000Z",
-        "summary": "IT之家 9 月 1 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.0 开发者预览版 Beta 8 更新（内部版本号：24M5361a），本次更新距离上次发布 Beta/RC 间隔 7 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-08-25：visionOS…",
+        "publishedAt": "2026-08-31T23:33:58.000Z",
+        "summary": "IT之家 9 月 1 日消息，上汽大众 2027 款帕萨特 Pro 昨日正式上市。新车共推出 5 款车型，官方指导价 17.2-23.99 万元，限时一口价 13.99-20.99 万元。 此次上市的 2027 款帕萨特 Pro 为年度改款车型，定位纯燃油中型家轿。上市权益包括动力总成终身质保、最高 1.2 万元以旧换新补贴、2 年 0 息金融政策及无忧流量权益等。 外观延续了现款设计，前脸为标志性 IQ.Light 矩阵式 LED 大灯与大嘴熏黑进气格栅。提供比特灰、超感…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-334q-h5g3-fpxv",
+        "id": "github-advisory-ghsa-8x3q-jpjh-qh5c",
         "category": "security",
-        "title": "free5GC AUSF authentication contexts can be overwritten by concurrent requests for the same SUPI",
-        "url": "https://github.com/advisories/GHSA-334q-h5g3-fpxv",
+        "title": "elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback",
+        "url": "https://github.com/advisories/GHSA-8x3q-jpjh-qh5c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-28T22:24:11.000Z",
-        "summary": "### Summary The AUSF component of free5GC stores per-subscriber authentication state in a global `sync.Map` keyed only by SUPI. Every incoming authentication request creates a new `AusfUeContext` and stores it under that SUPI key without c…",
-        "badge": "CVE-2026-55784",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-08-31T20:28:06.000Z",
+        "summary": "poc.zip ## Summary elFinder 2.1.69 is vulnerable to a Server-Side Request Forgery (SSRF) protection bypass when PHP cURL is unavailable and URL uploads use the `fsock_get_contents()` fallback. An attacker who can submit a URL for server-si…",
+        "badge": "CVE-2026-81889",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
         "id": "ai-google-deepmind-ac6eb9276806c2f8",
@@ -330,7 +330,7 @@
         "publishedAt": "2026-08-31T09:02:52.000Z",
         "summary": "现在 32 寸 6K 显示器的价格，不过基本都是小厂的产品，不知道能正常使用多久",
         "badge": "程序员",
-        "signal": "18 回复"
+        "signal": "21 回复"
       },
       {
         "id": "cn-baidu-692b77192f3b8d24",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "眼下高校正陆续迎来开学季，一些高校自主研发的AI智能体成为迎新现场的智慧小助手，让新生从踏入校园的第一刻起，就能感受到人工智能带来的便捷。而在新学期，不少高校还将用AI赋能专业建设和课程升级。",
         "badge": "热搜",
-        "signal": "7,619,125 热度"
+        "signal": "7,619,083 热度"
       },
       {
         "id": "cisa-kev-cve-2026-66384",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49496292",
+        "id": "hn-49510514",
         "category": "dev",
-        "title": "Smartphone LED detects hidden cameras with AI",
-        "url": "https://www.chosun.com/english/industry-en/2026/08/30/SBFXUIJQYZEARKP5T4FBAY25HQ/",
+        "title": "Playa Phone",
+        "url": "https://playaphone.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-30T06:52:04.000Z",
+        "publishedAt": "2026-08-31T14:52:26.000Z",
         "badge": "HN",
-        "signal": "48 分 · 15 评论"
+        "signal": "467 分 · 175 评论"
       },
       {
         "id": "cn-item-46c35940876d3d42",
@@ -383,24 +383,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-56wq-x3wv-3ff4",
+        "id": "github-advisory-ghsa-ffg3-p8fm-mjx2",
         "category": "security",
-        "title": "SeaweedFS: Path traversal in the S3 gateway X-Amz-Copy-Source header allows cross-bucket object read",
-        "url": "https://github.com/advisories/GHSA-56wq-x3wv-3ff4",
+        "title": "RestrictedPython guard hooks can be shadowed via positional-only arguments",
+        "url": "https://github.com/advisories/GHSA-ffg3-p8fm-mjx2",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-28T22:17:33.000Z",
-        "summary": "### Summary The SeaweedFS S3 API gateway did not reject `..` path segments in the `X-Amz-Copy-Source` header used by `CopyObject` and `UploadPartCopy`. The request URL path was hardened against traversal in 4.30 (CVE-2026-54917), but the c…",
-        "badge": "CVE-2026-55874",
-        "signal": "HIGH · CVSS 7.7"
+        "publishedAt": "2026-08-28T22:51:35.000Z",
+        "summary": "### Impact RestrictedPython rewrites sensitive operations to go through guard hooks. Attribute access becomes `_getattr_(obj, name)`, item access becomes `_getitem_(obj, key)`, writes go through `_write_`, and print goes through `_print_`.…",
+        "badge": "CVE-2026-55830",
+        "signal": "HIGH · CVSS 8.3"
       },
       {
-        "id": "ai-openai-5c8d75ef9c12c059",
+        "id": "ai-openai-cb1db0d5c74b6e9e",
         "category": "ai",
-        "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
-        "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+        "title": "Supporting Thailand’s next generation of AI startups",
+        "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
         "source": "OpenAI",
-        "publishedAt": "2026-08-27T09:00:00.000Z",
-        "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
+        "publishedAt": "2026-08-28T02:00:00.000Z",
+        "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
         "badge": "OpenAI"
       },
       {
@@ -415,13 +415,13 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-it-31b2af684dadb348",
+        "id": "cn-it-36d0dd35a4ee740a",
         "category": "cn",
-        "title": "苹果 macOS 27.0 开发者预览版 Beta 8 发布",
-        "url": "https://www.ithome.com/0/996/691.htm",
+        "title": "奕境曾清林：中国新能源车能领跑全球除了“换道”巧劲，更离不开“直道”上攒下的硬实力",
+        "url": "https://www.ithome.com/0/996/707.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T17:30:07.000Z",
-        "summary": "IT之家 9 月 1 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.0 开发者预览版 Beta 8 更新（内部版本号：26A5425a），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 ，之后…",
+        "publishedAt": "2026-08-31T23:30:59.000Z",
+        "summary": "IT之家 9 月 1 日消息，奕境汽车品牌总经理曾清林今日凌晨发文，谈及了“中国新能源车为何能领跑全球”这一话题，并分享了自己的体会。 据曾清林回忆，他从油车时代就从技术员干起，已经工作了 20 年。他的绝大部分经验的积累都来自燃油车时代。在自己的印象中， 2015 年到 2020 年期间，中国燃油车质量、技术水平进步也非常迅速，已经快速逼近合资品牌的水平 。只是差一个临界点和标志性事件来改变用户的心智。 他认为，中国新能源车能领跑全球， 除了“换道”的巧劲，更离不开“直道…",
         "badge": "IT之家"
       },
       {
@@ -446,35 +446,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49510000",
+        "id": "hn-49512975",
         "category": "dev",
-        "title": "ChatGPT Work Tool and Skill Reference",
-        "url": "https://codex-tool-reference.simonw.chatgpt.site/",
+        "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
+        "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T14:07:15.000Z",
+        "publishedAt": "2026-08-31T18:21:33.000Z",
         "badge": "HN",
-        "signal": "138 分 · 46 评论"
+        "signal": "176 分 · 28 评论"
       },
       {
-        "id": "cn-baidu-40e20bdeb2f5f094",
+        "id": "cn-baidu-57fdc1d296a488aa",
         "category": "cn",
-        "title": "山姆9个月卖了100万个会员",
-        "url": "https://www.baidu.com/s?wd=%E5%B1%B1%E5%A7%869%E4%B8%AA%E6%9C%88%E5%8D%96%E4%BA%86100%E4%B8%87%E4%B8%AA%E4%BC%9A%E5%91%98&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "库克任苹果CEO最后一天",
+        "url": "https://www.baidu.com/s?wd=%E5%BA%93%E5%85%8B%E4%BB%BB%E8%8B%B9%E6%9E%9CCEO%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "截至7月31日，沃尔玛中国共有67家山姆会员店，第三个100万会员仅用时9个月。沃尔玛2027财年二季度中国业务净销售额70亿美元，同比增长20.7%。业绩高增源于少而精选品及线上服务广泛覆盖。",
+        "summary": "8月31日晚，库克发文回顾担任Apple CEO的最后一天，并表达感激与期待。此前苹果公司宣布，9月1日由硬件工程高级副总裁约翰·特努斯接替库克出任新CEO，库克转任董事会执行董事长。",
         "badge": "热搜",
-        "signal": "7,521,506 热度"
+        "signal": "7,522,842 热度"
       },
       {
-        "id": "github-advisory-ghsa-gqr6-r77p-c2pj",
+        "id": "github-advisory-ghsa-j5g3-42wp-gqm3",
         "category": "security",
-        "title": "Fortigate syslog message parser can be exploited to modify or delete fields from the original message",
-        "url": "https://github.com/advisories/GHSA-gqr6-r77p-c2pj",
+        "title": "Snipe-IT has an Improper Privilege Management issue",
+        "url": "https://github.com/advisories/GHSA-j5g3-42wp-gqm3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-28T22:13:00.000Z",
-        "summary": "### Impact A security issue has been identified in Graylog affecting the parsing of syslog messages that use a key-value format, such as those generated by Fortigate devices. The vulnerability allows attackers to overwrite individual messa…",
-        "badge": "CVE-2026-55841",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-08-28T22:37:24.000Z",
+        "summary": "## Impact The `update()` method in `UsersController` passes the `permission` request field unconditionally to `NormalizePermissionsPayloadAction`, which returns an empty array when the field is absent. The result is passed to `PreserveUnau…",
+        "badge": "CVE-2026-55843",
+        "signal": "HIGH · CVSS 6.5"
       },
       {
         "id": "ai-hugging-face-f1c76f23a788b688",
@@ -511,7 +511,7 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 26698,
+        "stars": 26928,
         "starsToday": 2819
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/tt-a1i/archify",
         "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "language": "JavaScript",
-        "stars": 38223,
+        "stars": 38586,
         "starsToday": 3993
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 40620,
+        "stars": 40695,
         "starsToday": 1968
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/k1tbyte/Wand-Enhancer",
         "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
         "language": "C#",
-        "stars": 23300,
+        "stars": 23363,
         "starsToday": 511
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/majd/ipatool",
         "description": "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
         "language": "Go",
-        "stars": 10487,
+        "stars": 10517,
         "starsToday": 376
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "language": "Python",
-        "stars": 55992,
+        "stars": 56073,
         "starsToday": 472
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/Osmantic/ODS",
         "description": "Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
         "language": "Python",
-        "stars": 5390,
+        "stars": 5469,
         "starsToday": 163
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/checkstyle/checkstyle",
         "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
         "language": "Java",
-        "stars": 9379,
+        "stars": 9405,
         "starsToday": 199
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/zhaoxuya520/reverse-skill",
         "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "language": "PowerShell",
-        "stars": 33021,
+        "stars": 33092,
         "starsToday": 1439
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 245143,
+        "stars": 245232,
         "starsToday": 548
       }
     ],
-    "updatedAt": "2026-08-31T20:06:18.858Z"
+    "updatedAt": "2026-08-31T23:51:45.689Z"
   }
 }
