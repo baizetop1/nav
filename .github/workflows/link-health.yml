@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: pages-deploy
   cancel-in-progress: false
 
 jobs:
@@ -51,8 +51,10 @@ jobs:
         if: steps.commit.outputs.changed == 'true'
         run: npm ci
 
-      - name: Refresh social hot list and GitHub Trending
+      - name: Refresh technology intelligence and GitHub Trending
         if: steps.commit.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-hot-feed.mjs
 
       - name: Build updated site

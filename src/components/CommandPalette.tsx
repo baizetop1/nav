@@ -70,6 +70,7 @@ export function CommandPalette({ open, sites, categories, textNodes, actions, on
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
   const categoryNames = useMemo(() => new Map(categories.map(category => [category.id, category.name])), [categories]);
   const siteSearch = useMemo(() => new Fuse(sites.map(site => ({ ...site, categoryName: categoryNames.get(site.categoryId) || '' })), {
     threshold: 0.34,
@@ -139,6 +140,15 @@ export function CommandPalette({ open, sites, categories, textNodes, actions, on
 
   useEffect(() => {
     if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.isComposing) return;
       if (event.key === 'Escape') {
@@ -170,6 +180,13 @@ export function CommandPalette({ open, sites, categories, textNodes, actions, on
 
   useEffect(() => { setSelectedIndex(0); }, [query]);
 
+  useEffect(() => {
+    if (!open || !resultCount) return;
+    resultsRef.current
+      ?.querySelector<HTMLElement>(`[data-command-index="${selectedIndex}"]`)
+      ?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }, [open, query, resultCount, selectedIndex]);
+
   if (!open) return null;
 
   return (
@@ -181,29 +198,29 @@ export function CommandPalette({ open, sites, categories, textNodes, actions, on
           <kbd className="rounded-md border border-[#5f8f84]/20 bg-[#5f8f84]/8 px-2 py-1 text-[11px] text-[#718986]">Esc</kbd>
         </label>
 
-        <div className="overflow-y-auto p-2">
+        <div ref={resultsRef} className="overscroll-contain overflow-y-auto p-2">
           {filteredActions.length > 0 && <div><p className="px-2 pb-1 pt-2 text-[11px] font-semibold tracking-[0.16em] text-[#829793]">命令</p>{filteredActions.map((action, index) => {
             const Icon = iconMap[action.icon];
             const selected = selectedIndex === index;
-            return <button key={action.id} type="button" onMouseEnter={() => setSelectedIndex(index)} onClick={() => runAction(action)} className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${selected ? 'bg-[#5f8f84]/12 dark:bg-[#c9a96b]/10' : 'hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8'}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]'}`}><Icon size={17} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{action.title}</strong><span className="block truncate text-xs text-[#718986]">{action.description}</span></span></button>;
+            return <button key={action.id} data-command-index={index} type="button" onMouseEnter={() => setSelectedIndex(index)} onClick={() => runAction(action)} className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${selected ? 'bg-[#5f8f84]/12 dark:bg-[#c9a96b]/10' : 'hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8'}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]'}`}><Icon size={17} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{action.title}</strong><span className="block truncate text-xs text-[#718986]">{action.description}</span></span></button>;
           })}</div>}
 
           {filteredSites.length > 0 && <div><p className="px-2 pb-1 pt-3 text-[11px] font-semibold tracking-[0.16em] text-[#829793]">网站</p>{filteredSites.map((site, siteIndex) => {
             const index = filteredActions.length + siteIndex;
             const selected = selectedIndex === index;
-            return <button key={site.id} type="button" onMouseEnter={() => setSelectedIndex(index)} onClick={() => openSite(site)} className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${selected ? 'bg-[#5f8f84]/12 dark:bg-[#c9a96b]/10' : 'hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8'}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm font-bold ${selected ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]'}`}>{site.name.slice(0, 1).toUpperCase()}</span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{site.name}</strong><span className="block truncate text-xs text-[#718986]">{categoryNames.get(site.categoryId) || '未分类'} · {new URL(site.url).hostname.replace('www.', '')}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793]" /></button>;
+            return <button key={site.id} data-command-index={index} type="button" onMouseEnter={() => setSelectedIndex(index)} onClick={() => openSite(site)} className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${selected ? 'bg-[#5f8f84]/12 dark:bg-[#c9a96b]/10' : 'hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8'}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm font-bold ${selected ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]'}`}>{site.name.slice(0, 1).toUpperCase()}</span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{site.name}</strong><span className="block truncate text-xs text-[#718986]">{categoryNames.get(site.categoryId) || '未分类'} · {new URL(site.url).hostname.replace('www.', '')}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793]" /></button>;
           })}</div>}
 
           {filteredPostNodes.length > 0 && <div><p className="px-2 pb-1 pt-3 text-[11px] font-semibold tracking-[0.16em] text-[#829793]">文章</p>{filteredPostNodes.map((node, nodeIndex) => {
             const index = filteredActions.length + filteredSites.length + nodeIndex;
             const selected = selectedIndex === index;
-            return <button key={node.id} type="button" onMouseEnter={() => setSelectedIndex(index)} onClick={() => openTextNode(node)} className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${selected ? 'bg-[#5f8f84]/12 dark:bg-[#c9a96b]/10' : 'hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8'}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]'}`}><FileText size={17} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="block truncate text-xs text-[#718986]">{[node.category, node.format, node.summary].filter(Boolean).join(' · ') || '公开文章'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793]" /></button>;
+            return <button key={node.id} data-command-index={index} type="button" onMouseEnter={() => setSelectedIndex(index)} onClick={() => openTextNode(node)} className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${selected ? 'bg-[#5f8f84]/12 dark:bg-[#c9a96b]/10' : 'hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8'}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]'}`}><FileText size={17} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="block truncate text-xs text-[#718986]">{[node.category, node.format, node.summary].filter(Boolean).join(' · ') || '公开文章'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793]" /></button>;
           })}</div>}
 
           {filteredTopicNodes.length > 0 && <div><p className="px-2 pb-1 pt-3 text-[11px] font-semibold tracking-[0.16em] text-[#829793]">知识节点</p>{filteredTopicNodes.map((node, nodeIndex) => {
             const index = filteredActions.length + filteredSites.length + filteredPostNodes.length + nodeIndex;
             const selected = selectedIndex === index;
-            return <button key={node.id} type="button" onMouseEnter={() => setSelectedIndex(index)} onClick={() => openTextNode(node)} className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${selected ? 'bg-[#5f8f84]/12 dark:bg-[#c9a96b]/10' : 'hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8'}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]'}`}><Network size={17} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="block truncate text-xs text-[#718986]">{node.summary || '正式知识节点'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793]" /></button>;
+            return <button key={node.id} data-command-index={index} type="button" onMouseEnter={() => setSelectedIndex(index)} onClick={() => openTextNode(node)} className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${selected ? 'bg-[#5f8f84]/12 dark:bg-[#c9a96b]/10' : 'hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8'}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]'}`}><Network size={17} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="block truncate text-xs text-[#718986]">{node.summary || '正式知识节点'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793]" /></button>;
           })}</div>}
 
           {!resultCount && <div className="py-12 text-center text-sm text-[#718986]">没有找到相关网站、文章、Topic 或命令。</div>}

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { CLICK_STATS_KEY, LEGACY_CLICK_STATS_KEY, loadClickStats, recordSiteVisit } from '../src/lib/activityStats.ts';
 import { addTranslationHistory, loadTranslationHistory, TRANSLATION_HISTORY_KEY } from '../src/lib/translationHistory.ts';
-import { parseHotFeedReport } from '../src/lib/hotFeed.ts';
+import { parseHotFeedReport, selectIntelligenceItems } from '../src/lib/hotFeed.ts';
 import { getTemporaryVisitSummaries, loadTemporaryVisits, normalizeTemporaryUrl, recordTemporaryVisit, TEMPORARY_VISITS_KEY } from '../src/lib/temporaryVisits.ts';
 
 class MemoryStorage {
@@ -53,20 +53,43 @@ storage.setItem(TEMPORARY_VISITS_KEY, JSON.stringify(temporaryVisits));
 assert.equal(loadTemporaryVisits(storage, new Date('2026-08-13T12:00:00+08:00')).records.length, 1);
 
 const hotFeed = parseHotFeedReport({
+  version: 3,
+  generatedAt: '2026-08-31T03:00:00Z',
+  intelligence: {
+    updatedAt: '2026-08-31T02:00:00Z',
+    items: [
+      { id: 'ai-1', category: 'ai', title: 'AI 模型更新', url: 'https://example.com/ai', source: 'OpenAI' },
+      { id: 'security-1', category: 'security', title: '在野利用漏洞', url: 'https://example.com/security', source: 'CISA KEV', badge: 'CVE-2026-10001' },
+      { id: 'dev-1', category: 'dev', title: '开发者动态', url: 'https://example.com/dev', source: 'Hacker News', signal: 128 },
+    ],
+  },
+  github: {
+    updatedAt: '2026-08-31T02:30:00Z',
+    source: { name: 'GitHub Trending', url: 'https://github.com/trending?since=daily' },
+    items: [{ id: 'repo-1', rank: 1, name: 'baizetop1/nav', description: '个人导航', language: 'TypeScript', stars: 1234, starsToday: 56, url: 'https://github.com/baizetop1/nav' }],
+  },
+});
+assert.equal(hotFeed?.intelligence.items[0].category, 'ai');
+assert.equal(hotFeed?.intelligence.items[1].badge, 'CVE-2026-10001');
+assert.equal(hotFeed?.intelligence.items[2].signal, '128');
+assert.deepEqual(
+  selectIntelligenceItems(hotFeed?.intelligence.items ?? [], 'all').map(item => item.category),
+  ['security', 'ai', 'dev'],
+);
+assert.equal(hotFeed?.github.items[0].name, 'baizetop1/nav');
+assert.equal(hotFeed?.github.items[0].starsToday, 56);
+assert.equal(parseHotFeedReport({ ...hotFeed, github: { source: { name: 'bad', url: 'javascript:alert(1)' }, items: [] } }), null);
+
+const legacyHotFeed = parseHotFeedReport({
   version: 2,
   generatedAt: '2026-08-13T03:00:00Z',
   social: {
     source: { name: '示例热榜', url: 'https://example.com/hot' },
     items: [{ id: 'hot-1', rank: 1, title: '示例话题', url: 'https://example.com/topic', hot: 12345 }],
   },
-  github: {
-    source: { name: 'GitHub Trending', url: 'https://github.com/trending?since=daily' },
-    items: [{ id: 'repo-1', rank: 1, name: 'baizetop1/nav', description: '个人导航', language: 'TypeScript', stars: 1234, starsToday: 56, url: 'https://github.com/baizetop1/nav' }],
-  },
+  github: hotFeed?.github,
 });
-assert.equal(hotFeed?.social.items[0].hot, '12345');
-assert.equal(hotFeed?.github.items[0].name, 'baizetop1/nav');
-assert.equal(hotFeed?.github.items[0].starsToday, 56);
-assert.equal(parseHotFeedReport({ ...hotFeed, social: { source: { name: 'bad', url: 'javascript:alert(1)' }, items: [] } }), null);
+assert.equal(legacyHotFeed?.social?.items[0].hot, '12345');
+assert.equal(legacyHotFeed?.intelligence.items.length, 0);
 
 console.log('feature data self-check passed');
