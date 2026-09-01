@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-08-31T23:51:45.689Z",
+  "generatedAt": "2026-09-01T05:10:19.810Z",
   "intelligence": {
-    "updatedAt": "2026-08-31T23:51:45.689Z",
+    "updatedAt": "2026-09-01T05:10:19.810Z",
     "items": [
       {
-        "id": "cn-item-52a58cc83da7164b",
+        "id": "cn-item-85b7a3be5ec100b9",
         "category": "cn",
-        "title": "事业单位招聘存在“高分断层”情况？吉林白城通报",
-        "url": "https://www.chinanews.com.cn/sh/2026/08-31/10687517.shtml",
+        "title": "台风“沙德尔”“复活” 南方多地持续强降雨",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-01/10687762.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-08-31T14:35:41.000Z",
-        "summary": "中新网8月31日电 据“白城发布”微信公众号消息，吉林省白城市人民政府发布情况通报称，8月31日，部分媒体报道有考生质疑2026年白城市市直事业单位公开招聘存在“高分断层”情况。白城市高度重视，立即组织纪检、人社、公安、工信等部门成立联合调查组，对此次招聘工作进行全面调查。白城市人民政府将及时向社会发布相关情况，回应公众关切。",
+        "publishedAt": "2026-09-01T03:32:22.000Z",
+        "summary": "中新社北京9月1日电 (记者 陈溯)记者9月1日从中国气象局获悉，“沙德尔”于当天凌晨再度加强为台风。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49514878",
+        "id": "hn-49517448",
         "category": "dev",
-        "title": "Google Has Removed MV2 Extensions from the Chrome Web Store, Including UBO",
-        "url": "https://webiterate.dev/google-removed-extensions-ublock-origin-108/",
+        "title": "Fastpotify",
+        "url": "https://fastpotify.rocks/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T21:10:58.000Z",
+        "publishedAt": "2026-09-01T02:52:14.000Z",
         "badge": "HN",
-        "signal": "358 分 · 274 评论"
+        "signal": "103 分 · 36 评论"
       },
       {
-        "id": "cn-it-11533ccd1362ecf7",
+        "id": "cn-it-933289a107f5b2fd",
         "category": "cn",
-        "title": "Mac 成 AI 硬件宠儿：苹果提前发布 2026 款 mini / Studio，全球需求激增促成 8 月上新",
-        "url": "https://www.ithome.com/0/996/710.htm",
+        "title": "网友称抖音推荐内容“误入中老年频道”，客服回应在加急排查",
+        "url": "https://www.ithome.com/0/996/887.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T23:49:09.000Z",
-        "summary": "IT之家 9 月 1 日消息，科技媒体 The Information 于 8 月 30 日发布博文，报道称伴随着全球越来越多的 AI 实验室和开发者使用 Mac 训练 / 推理 AI 模型、运行 AI 智能体， 推高全球苹果 Mac mini 和 Mac Studio 销量。 该媒体指出苹果通常在秋季（10~11 月）更新 Mac 产品线， 不过 2026 年产品更新提前到 8 月 25 日官宣、9 月 22 日发货，节奏明显提前。 该媒体认为背后原因，是企业与 AI 客…",
+        "publishedAt": "2026-09-01T05:06:23.000Z",
+        "summary": "IT之家 9 月 1 日消息，部分抖音网友日前表示被推送养生、AI 短剧等不喜欢无关内容，仿佛“误入中老年频道”。甚至有用户选择“不感兴趣”还被继续推送，怀疑系统推荐算法异常。 IT之家注意到，今日午间，“ 抖音推荐 难看 ”话题登顶微博热搜。 据老板联播今日报道，抖音客服回应称，已收到用户反馈，平台十分重视。 目前在加急排查，具体原因请耐心等待，用户可重启 App 尝试恢复 。",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238528",
+        "id": "v2ex-1238638",
         "category": "dev",
-        "title": "这两个月，我被一个免费 AI 模型反复震惊",
-        "url": "https://www.v2ex.com/t/1238528",
+        "title": "第一次开发 Obsidian 插件：写了一个 Markdown 表格转置小工具",
+        "url": "https://www.v2ex.com/t/1238638",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T16:00:12.000Z",
-        "summary": "最近又高强度折腾了一波 AI 辅助编程，结果被一些国内免费模型（如腾讯混元 Hy3 ）震惊到怀疑人生😨。上次做完终端版博客之后，我开始试着完全信任 AI 去实现各种想法，结果它一次一次刷新我的认知。简单列几个这次搞出来的东西： 1. 博客 API + WebMCP 把博客功能做成函数，在浏览器控制台里就能调用；还接入了谷歌和微软支持的 WebMCP 协议，已经被 WebMCP Directory 收录： 👉 https://webmcp.com/sites/mabbs.gi…",
+        "publishedAt": "2026-09-01T04:47:57.000Z",
+        "summary": "昨天晚上用 AI 从 0 开始 2 小时就完成了一个插件的开发，用于表格转置的插件，希望对你们有用！ 我不想重复写正文了，正文说明就偷懒从 blog 粘贴了过来，对这个工具有想法的可以直接评论区留言: 最近我第一次尝试开发了一款 Obsidian 插件， 项目叫 OB Toolbox ， 昨天晚上已经上架到官方的插件市场，获取方式: 打开 obsidian → 设置 → 第三方插件 → 社区插件市场 → 搜索 md toolbox 后安装 对应的项目地址: obsidian…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-c24275621266ca30",
+        "id": "cn-baidu-05a446aad354667b",
         "category": "cn",
-        "title": "吉隆口岸核心区现存建筑仅剩水塔",
-        "url": "https://www.baidu.com/s?wd=%E5%90%89%E9%9A%86%E5%8F%A3%E5%B2%B8%E6%A0%B8%E5%BF%83%E5%8C%BA%E7%8E%B0%E5%AD%98%E5%BB%BA%E7%AD%91%E4%BB%85%E5%89%A9%E6%B0%B4%E5%A1%94&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "深圳校服 全市统一商超可买",
+        "url": "https://www.baidu.com/s?wd=%E6%B7%B1%E5%9C%B3%E6%A0%A1%E6%9C%8D+%E5%85%A8%E5%B8%82%E7%BB%9F%E4%B8%80%E5%95%86%E8%B6%85%E5%8F%AF%E4%B9%B0&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "总台记者现场探访吉隆口岸核心区，发现此前泥石流灾害过后，仅半山腰一座距地面二十多米的方形水塔留存原有建筑印记。因水塔一侧紧邻山峰，受灾害冲击影响较小，成为整个口岸区域里唯一完整保留下来的建筑。",
+        "summary": "开学季深圳校服走红，全市统一款式，商超即可自行购买，价格低廉还可循环使用。该模式将购销移出校园，借助充分竞争实现平价，弱化攀比风气。",
         "badge": "热搜",
-        "signal": "7,809,500 热度"
+        "signal": "7,809,122 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81578",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49511856",
+        "id": "hn-49517537",
         "category": "dev",
-        "title": "I turned my security cameras into an automatic bird identification system",
-        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+        "title": "Google Antigravity introduces Boost deep reasoning (/boost)",
+        "url": "https://antigravity.google/docs/boost/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T16:47:11.000Z",
+        "publishedAt": "2026-09-01T03:05:55.000Z",
         "badge": "HN",
-        "signal": "334 分 · 90 评论"
+        "signal": "50 分 · 30 评论"
       },
       {
-        "id": "cn-item-d5f0ded98e46234b",
+        "id": "cn-item-102058754ef1f57d",
         "category": "cn",
-        "title": "玩闹致博物馆标本受损是否应承担法律责任？律师解读",
-        "url": "https://www.chinanews.com.cn/cul/2026/08-31/10687526.shtml",
+        "title": "从“陆锁国”到“陆联国”：侨胞见证吉尔吉斯斯坦发展变化",
+        "url": "https://www.chinanews.com.cn/hr/2026/09-01/10687728.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-08-31T14:01:13.000Z",
-        "summary": "中新网北京8月31日电(记者 上官云)“对这样的行为，国家动物博物馆表示强烈谴责。”日前，国家动物博物馆发文《强烈谴责！》，相关内容和话题迅速登上热搜。",
+        "publishedAt": "2026-09-01T03:00:49.000Z",
+        "summary": "中新网北京9月1日电 题：从“陆锁国”到“陆联国”：侨胞见证吉尔吉斯斯坦发展变化",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238486",
+        "id": "v2ex-1238633",
         "category": "dev",
-        "title": "从《Silo》地堡到算力圈养：一个一线开发与摄影爱好者的 AI 时代生存底线",
-        "url": "https://www.v2ex.com/t/1238486",
+        "title": "如何面向俄罗斯用户收款",
+        "url": "https://www.v2ex.com/t/1238633",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T11:39:25.000Z",
-        "summary": "背景 ：刚刷完美剧《 Silo 》（末日地堡 / 羊毛战记）第三季前 9 集，结合过去一年从 Copilot 到各种 Agent 的重度使用体验，产生了一种强烈的惊悚感。写下这篇思考，想和 V 友们聊聊在 AI 时代，我们作为开发者该如何守住自己的底层底线？ 一、打破第四面墙的战栗 走出《 Silo 》剧集的那一刻，我感受到了两层惊悚： 表层的惊悚 ：大家都感同身受——那种披着“为了你好、为了人类存续与绝对安全”崇高外衣行凶的善意极权与信息审查； 深层的惊悚 ：作为一个技术…",
+        "publishedAt": "2026-09-01T04:21:34.000Z",
+        "summary": "最近在 Google Play 上架了一款带内购的应用，可能是做了俄语国际化的原因，俄罗斯用户居然占了快 2/5 。但问题来了：俄罗斯用户在 GP 里只能下免费应用，内购和付费下载都走不通。这段时间已经陆陆续续有好几个俄罗斯用户来问怎么买，着实有点尴尬 想问下有没有踩过同一个坑的大佬，这种\"俄罗斯用户想付费但 GP 不让付\"的情况，大家都怎么解的？求分享经验，感激不尽🙏",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-f2490fc70749d8c0",
+        "id": "cn-it-324ace4b2d8d3447",
         "category": "cn",
-        "title": "IT早报 0901：华为、小米、荣耀手机今日集体调价；库克担任苹果 CEO 最后一天给员工发告别信；曝网易全系产品将登陆华为鸿蒙系统；国内首部 AIGC 长剧《后西游记》开播...",
-        "url": "https://www.ithome.com/0/996/709.htm",
+        "title": "发行已 27 年：PC 原生版《咚奇刚 64》游戏问世，演示达 4K@200 FPS",
+        "url": "https://www.ithome.com/0/996/886.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T23:44:23.000Z",
-        "summary": "“IT早报”时间，大家好，现在是 2026 年 9 月 1 日星期二，今天的重要科技资讯有： 1. 华为、小米、荣耀手机 9 月 1 日集体调价 华为 Mate 80 系列和 华为畅享 90 Pro Max 9 月 1 日进行调价。荣耀 Power2 和 Magic8 两款产品今日进行调价。小米 17 系列、 REDMI K90 系列等进行了调价。>> 查看详情 2. 库克发文告别苹果 CEO 一职：头衔会变，但对 Apple 社区的热爱永远不会改变 蒂姆 · 库克在担任苹…",
+        "publishedAt": "2026-09-01T05:05:37.000Z",
+        "summary": "IT之家 9 月 1 日消息，科技媒体 Tweaktown 昨日（8 月 31 日）发布博文，报道称经典 N64 3D 平台游戏《咚奇刚 64》（Donkey Kong 64，也称大金刚 64）迎来原生 PC 重编译版 DK64 Rekongpiled。 IT之家援引博文介绍，原作由 Rare 开发，任天堂于 1999 年在 Nintendo 64 平台发行。按 2026 年计算，这款 3D 平台游戏距首次推出已约 27 年。 移植版没有改变游戏的关卡、角色、核心结构、画面…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49476239",
+        "id": "hn-49511856",
         "category": "dev",
-        "title": "'Mad honey' that can stop your heart is being sold online",
-        "url": "https://phys.org/news/2026-08-mad-honey-heart-sold-online.html",
+        "title": "I turned my security cameras into an automatic bird identification system",
+        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-28T09:17:27.000Z",
+        "publishedAt": "2026-08-31T16:47:11.000Z",
         "badge": "HN",
-        "signal": "104 分 · 63 评论"
+        "signal": "425 分 · 102 评论"
       },
       {
-        "id": "cn-baidu-70876960dc298c7f",
+        "id": "cn-baidu-9491292e3d6f86a9",
         "category": "cn",
-        "title": "百万级产能缺口 订单排到3年后",
-        "url": "https://www.baidu.com/s?wd=%E7%99%BE%E4%B8%87%E7%BA%A7%E4%BA%A7%E8%83%BD%E7%BC%BA%E5%8F%A3+%E8%AE%A2%E5%8D%95%E6%8E%92%E5%88%B03%E5%B9%B4%E5%90%8E&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "一年级家长年龄相差近30岁",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E5%B9%B4%E7%BA%A7%E5%AE%B6%E9%95%BF%E5%B9%B4%E9%BE%84%E7%9B%B8%E5%B7%AE%E8%BF%9130%E5%B2%81&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "央视财经报道，当前高端算力市场火热，国产AI芯片订单已排至三年后。产业调研数据显示，2026年国产AI芯片需求规模约400万颗，实际交付仅约300万颗，存在百万级产能缺口。受此拉动，国产芯片企业业绩集体爆发。",
+        "summary": "首批“20后”迈入小学，一年级家长年龄差距接近30岁，不同代际育儿方式各有不同。新生代家长涌现出新的带娃思路，部分95后妈妈借助AI工具，交由其完成孩子开学的文具采购工作。",
         "badge": "热搜",
-        "signal": "7,712,848 热度"
+        "signal": "7,712,870 热度"
       },
       {
         "id": "github-advisory-ghsa-gr94-w7qr-f4j3",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238473",
+        "id": "v2ex-1238621",
         "category": "dev",
-        "title": "赛博后悔药",
-        "url": "https://www.v2ex.com/t/1238473",
+        "title": "求键盘推荐 [68 键左右]",
+        "url": "https://www.v2ex.com/t/1238621",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T10:21:51.000Z",
-        "summary": "unalias rm 2>/dev/null function rm { local args=() for arg in \"$@\"; do case \"$arg\" in -*) ;; # 跳过所有 flag ，只保留文件路径 *) args+=(\"$arg\") ;; esac done if [[ ${#args[@]} -eq 0 ]]; then echo \"rm: missing operand\" return 1 fi trash \"${args[@]}\" } 放…",
+        "publishedAt": "2026-09-01T03:34:28.000Z",
+        "summary": "目前用的是 vgn v87 ，想换一个小一点的键盘，声音闷一些不太脆，支持无线连接（蓝牙/usb 都可）。 各个平台搜了一圈，大多是广，看迷茫了。 预算 500 以内。谢谢。",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-item-e0a01e9638237742",
+        "id": "cn-item-baf4a4f54faa71f7",
         "category": "cn",
-        "title": "江苏省委常委、组织部部长刘建洋被查",
-        "url": "https://www.chinanews.com.cn/gn/2026/08-31/10687466.shtml",
+        "title": "严厉打击以假充真、以次充好 市场监管总局公布一批典型案例",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-01/10687719.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-08-31T13:09:48.000Z",
-        "summary": "中新社北京8月31日电 中国官方8月31日晚通报，江苏省委常委、组织部部长刘建洋涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
+        "publishedAt": "2026-09-01T02:58:08.000Z",
+        "summary": "中新网9月1日电 据“市说新语”微信公众号消息，市场监管总局继续部署开展“守护消费”铁拳行动，持续加强产品质量安全领域执法，严厉打击掺杂掺假、以假充真、以次充好、以不合格冒充合格等违法违规行为，守牢产品质量安全底线。现选取一批典型案例予以公布。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49515830",
+        "id": "hn-49517624",
         "category": "dev",
-        "title": "Run macOS Software on Linux",
-        "url": "https://www.darlinghq.org/",
+        "title": "Restroom Archive",
+        "url": "https://restroomarchive.com",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T22:53:45.000Z",
+        "publishedAt": "2026-09-01T03:23:48.000Z",
         "badge": "HN",
-        "signal": "19 分 · 4 评论"
+        "signal": "31 分 · 2 评论"
       },
       {
-        "id": "cn-it-c3ab842a5c79f852",
+        "id": "cn-it-84db6abf3ad567c4",
         "category": "cn",
-        "title": "2027 款上汽大众帕萨特 Pro 车型正式上市：官方指导价 17.2 万元起，限时优惠价 13.99 万元起",
-        "url": "https://www.ithome.com/0/996/708.htm",
+        "title": "荣耀 WIN 系列第一代手机确认在正式版本风扇区域取消导热凝胶设计",
+        "url": "https://www.ithome.com/0/996/885.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T23:33:58.000Z",
-        "summary": "IT之家 9 月 1 日消息，上汽大众 2027 款帕萨特 Pro 昨日正式上市。新车共推出 5 款车型，官方指导价 17.2-23.99 万元，限时一口价 13.99-20.99 万元。 此次上市的 2027 款帕萨特 Pro 为年度改款车型，定位纯燃油中型家轿。上市权益包括动力总成终身质保、最高 1.2 万元以旧换新补贴、2 年 0 息金融政策及无忧流量权益等。 外观延续了现款设计，前脸为标志性 IQ.Light 矩阵式 LED 大灯与大嘴熏黑进气格栅。提供比特灰、超感…",
+        "publishedAt": "2026-09-01T05:05:23.000Z",
+        "summary": "IT之家 9 月 1 日消息， 荣耀 WIN 手机导热凝胶问题近日引发热议，荣耀 WIN 手机产品经理 @赢王MHGA 今日发布说明，确认 WIN 系列第一代手机在正式版本风扇区域取消了导热凝胶设计。 IT之家附完整说明如下： 这几天大家在讨论的关于我们荣耀 WIN 手机导热凝胶问题，我作为产品经理，从技术原理和用户体验角度做下拆解分析： 产品的性能 & 热系统调优是个持续过程。并非导热凝胶使用越多用户体验就越好， 手机散热设计不仅仅是“导热”，更准确的说是“调控热” ，需…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238451",
+        "id": "v2ex-1238612",
         "category": "dev",
-        "title": "现在 32 寸 6K 显示器已经下探到 3000+的价格了，跟内存、硬盘涨价形成鲜明对比",
-        "url": "https://www.v2ex.com/t/1238451",
+        "title": "Deepseek v4 flash fast 是个什么东西？",
+        "url": "https://www.v2ex.com/t/1238612",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T09:02:52.000Z",
-        "summary": "现在 32 寸 6K 显示器的价格，不过基本都是小厂的产品，不知道能正常使用多久",
+        "publishedAt": "2026-09-01T03:22:20.000Z",
+        "summary": "今天一看 commandcode 上了个新模型，Deepseek v4 flash fast 加了一个 fast 后缀我就测了一下速度 但是 300t/s 是什么意思？？？",
         "badge": "程序员",
-        "signal": "21 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-692b77192f3b8d24",
+        "id": "cn-baidu-990720bcf5a86db7",
         "category": "cn",
-        "title": "高校开学季“科技迎新”",
-        "url": "https://www.baidu.com/s?wd=%E9%AB%98%E6%A0%A1%E5%BC%80%E5%AD%A6%E5%AD%A3%E2%80%9C%E7%A7%91%E6%8A%80%E8%BF%8E%E6%96%B0%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "新生入学如何准备",
+        "url": "https://www.baidu.com/s?wd=%E6%96%B0%E7%94%9F%E5%85%A5%E5%AD%A6%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "眼下高校正陆续迎来开学季，一些高校自主研发的AI智能体成为迎新现场的智慧小助手，让新生从踏入校园的第一刻起，就能感受到人工智能带来的便捷。而在新学期，不少高校还将用AI赋能专业建设和课程升级。",
+        "summary": "开学季，幼小衔接让不少新生家长心生忐忑，有着各种顾虑和担忧。幼小衔接并非知识竞速，应当尊重孩子成长差异，聚焦习惯养成与心理调适。坚持家校协同共育，摒弃攀比心态，守护学习兴趣，助力一年级新生从容适应小学生活。",
         "badge": "热搜",
-        "signal": "7,619,083 热度"
+        "signal": "7,616,918 热度"
       },
       {
         "id": "cisa-kev-cve-2026-66384",
@@ -370,16 +370,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-08-31T14:52:26.000Z",
         "badge": "HN",
-        "signal": "467 分 · 175 评论"
+        "signal": "560 分 · 201 评论"
       },
       {
-        "id": "cn-item-46c35940876d3d42",
+        "id": "cn-item-749acea9e5459a37",
         "category": "cn",
-        "title": "两部门针对福建启动防汛防台风四级应急响应",
-        "url": "https://www.chinanews.com.cn/gn/2026/08-31/10687473.shtml",
+        "title": "中国科协联合34家单位共同部署开展 2026年全国科普月全面启动",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-01/10687723.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-08-31T12:53:51.000Z",
-        "summary": "中新网8月31日电 据应急管理部网站消息，受今年第18号台风“沙德尔”的残余涡旋影响，未来三天福建省部分地区将有暴雨到大暴雨，局地特大暴雨，部分中小河流可能发生超警洪水，防汛防台风形势严峻。",
+        "publishedAt": "2026-09-01T02:48:15.000Z",
+        "summary": "中新网北京9月1日电 (记者 孙自法)中国科协联合34家全民科学素质纲要实施工作办公室成员单位共同部署开展的2026年全国科普月活动，9月1日如约而至、全面启动。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238447",
+        "id": "v2ex-1238592",
         "category": "dev",
-        "title": "[送码] 关于网站上线 2 小时就被攻击这件事",
-        "url": "https://www.v2ex.com/t/1238447",
+        "title": "自从上车过 A/和 OpenAI 的百刀套餐后，现在看一些工具软件的价格都觉得不算事儿了",
+        "url": "https://www.v2ex.com/t/1238592",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T09:00:24.000Z",
-        "summary": "起因 我在周六也就是 8 月 29 号下午 2 点左右发布了我的生图网站 https://mindsee.app 然后在下午 4-5 点左右，有大量请求并发调用我的注册接口，并发非常高，万幸没有造成任何损失 时间线 下午 2 点： 上线网站 下午 3 点： 开始陆陆续续开始报警，查看是支付回调接口被请求， 接口签名校验未通过 ，最开始以为是有用户支付了，一查毛都没有，此时没继续关注，继续忙其他的 下午 4 点： 发现注册接口频繁报 400 错误，检查后发现是被 156.24…",
+        "publishedAt": "2026-09-01T02:49:02.000Z",
+        "summary": "被 llm 把付费的心疼阈值给拉起来了。",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-36d0dd35a4ee740a",
+        "id": "cn-it-36c842b55552f11e",
         "category": "cn",
-        "title": "奕境曾清林：中国新能源车能领跑全球除了“换道”巧劲，更离不开“直道”上攒下的硬实力",
-        "url": "https://www.ithome.com/0/996/707.htm",
+        "title": "东风本田 8 月全系终端销量 16891 辆，环比增长 17.5%",
+        "url": "https://www.ithome.com/0/996/883.htm",
         "source": "IT之家",
-        "publishedAt": "2026-08-31T23:30:59.000Z",
-        "summary": "IT之家 9 月 1 日消息，奕境汽车品牌总经理曾清林今日凌晨发文，谈及了“中国新能源车为何能领跑全球”这一话题，并分享了自己的体会。 据曾清林回忆，他从油车时代就从技术员干起，已经工作了 20 年。他的绝大部分经验的积累都来自燃油车时代。在自己的印象中， 2015 年到 2020 年期间，中国燃油车质量、技术水平进步也非常迅速，已经快速逼近合资品牌的水平 。只是差一个临界点和标志性事件来改变用户的心智。 他认为，中国新能源车能领跑全球， 除了“换道”的巧劲，更离不开“直道…",
+        "publishedAt": "2026-09-01T04:43:07.000Z",
+        "summary": "IT之家 9 月 1 日消息，东风本田今日宣布 8 月全系终端销量 16,891 辆，环比增长 17.5% 。 CR-V 销量 10,924 辆，环比增长 13.8% HR-V 销量 2,063 辆，环比增长 62.3% IT之家注意到， 东风本田今年 6 月发布了新款 HR-V 汽车 ，共计 3 款车型，定价 10.99 万元-12.59 万元。 新款 HR-V 将 240 TURBO Pro 更名为 1.5T Pro 版本，240 TURBO Max 更名为 1.5T …",
         "badge": "IT之家"
       },
       {
@@ -446,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49512975",
+        "id": "hn-49516199",
         "category": "dev",
-        "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
-        "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
+        "title": "Evidence of Fraud in an Influential Study About Procrastination",
+        "url": "https://datacolada.org/138",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T18:21:33.000Z",
+        "publishedAt": "2026-08-31T23:45:56.000Z",
         "badge": "HN",
-        "signal": "176 分 · 28 评论"
+        "signal": "131 分 · 90 评论"
       },
       {
-        "id": "cn-baidu-57fdc1d296a488aa",
+        "id": "cn-baidu-1288d1b36f30a29f",
         "category": "cn",
-        "title": "库克任苹果CEO最后一天",
-        "url": "https://www.baidu.com/s?wd=%E5%BA%93%E5%85%8B%E4%BB%BB%E8%8B%B9%E6%9E%9CCEO%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "年轻人结婚开始用金条代替三金",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%BB%93%E5%A9%9A%E5%BC%80%E5%A7%8B%E7%94%A8%E9%87%91%E6%9D%A1%E4%BB%A3%E6%9B%BF%E4%B8%89%E9%87%91&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "8月31日晚，库克发文回顾担任Apple CEO的最后一天，并表达感激与期待。此前苹果公司宣布，9月1日由硬件工程高级副总裁约翰·特努斯接替库克出任新CEO，库克转任董事会执行董事长。",
+        "summary": "中国黄金协会数据显示，2026年上半年金饰消费量同比暴跌近34%，金条及金币消费量逆势涨超28%。品牌金饰仍维持1348元/克，投资金条约981元/克，价差下越来越多年轻人以金条替代三金五金。",
         "badge": "热搜",
-        "signal": "7,522,842 热度"
+        "signal": "7,523,920 热度"
       },
       {
         "id": "github-advisory-ghsa-j5g3-42wp-gqm3",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238440",
+        "id": "v2ex-1238576",
         "category": "dev",
-        "title": "GPT Plus/Pro 20x 纯手工代充（可开票），非 session 卡密模式，登录后绑卡支付",
-        "url": "https://www.v2ex.com/t/1238440",
+        "title": "造轮子：交互式终端 ls+cd 工具",
+        "url": "https://www.v2ex.com/t/1238576",
         "source": "V2EX 技术",
-        "publishedAt": "2026-08-31T08:41:06.000Z",
-        "summary": "Pro 20x ，1280/月，中等价格，但是确保 100%走的实体卡支付，不存在后期拒付或者恶意退款 赚点咖啡钱，消费下手里的 USD 如果精力时间足够，可以优先自己研究，实在不行，或者需要开票报销，可以联系：sohofree 如果介意登录账号，勿扰（其实 session 模式下的密钥，也是登录密码） 谢谢~ 祝好~",
+        "publishedAt": "2026-09-01T02:07:11.000Z",
+        "summary": "链接： FAST is a Shell Traverser 针对的使用场景是在终端浏览巨大文件夹（目前只测试过~5000 文件）。主要特点： 在超大目录中依然响应迅速：目录会分批扫描并渲染，而不是等待完整扫描结束（所以整个过程中排序会有变动） 避免重复扫描：已访问的目录会连同其指纹信息一起保存，如果目录没有发生变化，就可以直接从缓存中显示，而无需重新完整扫描。 简单过滤：不区分大小写的子字符串匹配。 模糊过滤：在过滤模式下按 ，即可从简单匹配切换到模糊匹配。 Shell 集…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -511,8 +511,8 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 26928,
-        "starsToday": 2819
+        "stars": 27762,
+        "starsToday": 2824
       },
       {
         "id": "github-c29003d458e05ffd",
@@ -521,8 +521,8 @@
         "url": "https://github.com/tt-a1i/archify",
         "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "language": "JavaScript",
-        "stars": 38586,
-        "starsToday": 3993
+        "stars": 39576,
+        "starsToday": 3991
       },
       {
         "id": "github-fb3d306384482b46",
@@ -531,8 +531,8 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 40695,
-        "starsToday": 1968
+        "stars": 40928,
+        "starsToday": 1980
       },
       {
         "id": "github-d12e72a1ba8925e9",
@@ -541,8 +541,8 @@
         "url": "https://github.com/k1tbyte/Wand-Enhancer",
         "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
         "language": "C#",
-        "stars": 23363,
-        "starsToday": 511
+        "stars": 23462,
+        "starsToday": 582
       },
       {
         "id": "github-75d0f08b84873201",
@@ -551,8 +551,8 @@
         "url": "https://github.com/majd/ipatool",
         "description": "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
         "language": "Go",
-        "stars": 10517,
-        "starsToday": 376
+        "stars": 10610,
+        "starsToday": 373
       },
       {
         "id": "github-9bce4ceaabd5b747",
@@ -561,8 +561,8 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "language": "Python",
-        "stars": 56073,
-        "starsToday": 472
+        "stars": 56365,
+        "starsToday": 495
       },
       {
         "id": "github-416e82cedfa21cb4",
@@ -571,8 +571,8 @@
         "url": "https://github.com/Osmantic/ODS",
         "description": "Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
         "language": "Python",
-        "stars": 5469,
-        "starsToday": 163
+        "stars": 5609,
+        "starsToday": 77
       },
       {
         "id": "github-911170b1dd1359d7",
@@ -581,8 +581,8 @@
         "url": "https://github.com/checkstyle/checkstyle",
         "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
         "language": "Java",
-        "stars": 9405,
-        "starsToday": 199
+        "stars": 9448,
+        "starsToday": 198
       },
       {
         "id": "github-f4dc3559b4025365",
@@ -591,8 +591,8 @@
         "url": "https://github.com/zhaoxuya520/reverse-skill",
         "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "language": "PowerShell",
-        "stars": 33092,
-        "starsToday": 1439
+        "stars": 33337,
+        "starsToday": 1401
       },
       {
         "id": "github-0658d7fa2f877963",
@@ -601,10 +601,10 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 245232,
-        "starsToday": 548
+        "stars": 245357,
+        "starsToday": 512
       }
     ],
-    "updatedAt": "2026-08-31T23:51:45.689Z"
+    "updatedAt": "2026-09-01T05:10:19.810Z"
   }
 }
