@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-01T14:54:57.264Z",
+  "generatedAt": "2026-09-01T18:31:54.347Z",
   "intelligence": {
-    "updatedAt": "2026-09-01T14:54:57.264Z",
+    "updatedAt": "2026-09-01T18:31:54.347Z",
     "items": [
       {
         "id": "cn-item-f9ff1ecc23ba45e5",
@@ -26,53 +26,53 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-openai-4862f3d2c68fb1ad",
+        "id": "ai-openai-b0cbef382238cdd5",
         "category": "ai",
-        "title": "OpenAI supports California’s bill to advance youth AI safety",
-        "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
+        "title": "How AI-native companies turn workflows into operating capability",
+        "url": "https://openai.com/index/ai-native-company-workflows",
         "source": "OpenAI",
-        "publishedAt": "2026-08-31T07:00:00.000Z",
-        "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.",
+        "publishedAt": "2026-09-01T17:00:00.000Z",
+        "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49520022",
+        "id": "hn-49525378",
         "category": "dev",
-        "title": "AnkiDroid: Google Play no longer allowing Open Collective donation link",
-        "url": "https://github.com/ankidroid/Anki-Android/issues/21656",
+        "title": "Claude Fable 5.1 and Claude Mythos 5.1",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T10:11:02.000Z",
+        "publishedAt": "2026-09-01T17:53:53.000Z",
         "badge": "HN",
-        "signal": "459 分 · 113 评论"
+        "signal": "178 分 · 127 评论"
       },
       {
-        "id": "cn-it-eae4b9f02caa6a57",
+        "id": "cn-it-bc0c6a42d6945554",
         "category": "cn",
-        "title": "游戏制作人神谷英树吐槽《生化危机：安魂曲》太恐怖，建议加入非恐怖模式",
-        "url": "https://www.ithome.com/0/997/171.htm",
+        "title": "2026 年 8 月汽车销量 / 交付榜出炉：比亚迪超 44 万辆稳居榜首，零跑继续断层领跑新势力",
+        "url": "https://www.ithome.com/0/997/189.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-01T14:34:46.000Z",
-        "summary": "IT之家 9 月 1 日消息，知名游戏制作人神谷英树今日接受外媒 VGC 采访，他认为卡普空应该在未来的《生化危机》游戏中加入降低恐怖程度的选项。 ▲ 神谷英树 IT之家注：神谷英树曾于 20 世纪 90 年代加入卡普空，以企划身份参加开发《生化危机 1》，并以监督一职出现在《生化危机 2》游戏中，之后制作了《鬼泣》《红侠乔依》等游戏。 神谷英树目前在 Clovers 工作室担任首席游戏设计师，他此前多次表达过自己不喜欢恐怖游戏 ，甚至还设想过“治愈系”《生化危机》衍生作品…",
+        "publishedAt": "2026-09-01T16:53:06.000Z",
+        "summary": "IT之家 9 月 2 日消息，2026 年 8 月汽车销量 / 交付数据现已陆续公布，比亚迪凭借 440,293 辆 的成绩继续稳坐头把交椅，上汽集团 357,007 辆 位居第二，奇瑞、吉利、长安也持续跻身“ 20 万辆俱乐部 ”之列。新势力方面，零跑汽车继 7 月后继续维持 10 万辆以上水平，卫冕新势力销冠。 此外，榜单中同比增幅最大的是 智界汽车 ，当月取得 8,561 辆销量，增幅达到 404.2%。 IT之家汇总 2026 年 8 月汽车销量 / 交付榜单如下（…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-67mx-6wf2-92xp",
+        "id": "github-advisory-ghsa-gqvg-gmmx-x4hm",
         "category": "security",
-        "title": "Kirby: File upload permissions are not checked during processing of chunk data",
-        "url": "https://github.com/advisories/GHSA-67mx-6wf2-92xp",
+        "title": "MLFLOW_ALLOW_PICKLE_DESERIALIZATION=False safety control bypassed by mlflow.statsmodels flavor — RCE via crafted model artifact",
+        "url": "https://github.com/advisories/GHSA-gqvg-gmmx-x4hm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-31T22:14:05.000Z",
-        "summary": "### TL;DR This vulnerability affects all Kirby sites where users of a particular role have access to the REST API (`access.panel` permission is enabled) but no permission to upload any kind of file (`files.create`, `files.replace` and `use…",
-        "badge": "CVE-2026-71415",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-01T17:04:30.000Z",
+        "summary": "## Summary MLflow introduced `MLFLOW_ALLOW_PICKLE_DESERIALIZATION` as a security control to prevent unsafe `pickle.load` execution during model loading, in response to CVE-2024-37052 through CVE-2024-37060. When set to `False`, operators e…",
+        "badge": "GHSA-GQVG-GMMX-X4HM",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-google-deepmind-74b1125af8681de1",
+        "id": "ai-google-deepmind-20b040f8e58f31e9",
         "category": "ai",
-        "title": "Gemini Omni 1.1 Flash lets you build with more control",
-        "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+        "title": "Introducing agentic video understanding with Gemini",
+        "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-08-27T16:11:32.000Z",
+        "publishedAt": "2026-09-01T17:08:51.000Z",
         "badge": "Google DeepMind"
       },
       {
@@ -84,7 +84,7 @@
         "publishedAt": "2026-09-01T13:38:38.000Z",
         "summary": "因为手头有 3 条 32G 的 DDR5 内存想出掉, 不想咸鱼慢慢卖,也不想卖给贩子, 看看 V2 有没有人正好需要.",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-baidu-7e0cdf667e5d6b78",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "9月1日，华为、小米、荣耀多款手机集体涨价，部分机型涨幅达200元至1000元。对此，三家客服分别回应称，华为因关键物料价格调整导致成本上涨，小米受核心元器件采购成本上涨影响，荣耀则称根据市场需求调整价格。",
         "badge": "热搜",
-        "signal": "7,809,120 热度"
+        "signal": "7,809,521 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81578",
@@ -108,23 +108,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-hugging-face-4d3b17a749f42c95",
+        "id": "ai-hugging-face-91dad0068ec24e5b",
         "category": "ai",
-        "title": "The Open ASR Leaderboard Adds Its First Global South Language",
-        "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+        "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
+        "url": "https://huggingface.co/blog/webgpu-kernels",
         "source": "Hugging Face",
-        "publishedAt": "2026-08-28T00:00:00.000Z",
+        "publishedAt": "2026-09-01T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49519939",
+        "id": "hn-49523754",
         "category": "dev",
-        "title": "44% on ARC-AGI-1 in 67 cents",
-        "url": "https://mvakde.github.io/blog/44-on-arc-1/",
+        "title": "Play Store blocks AuroraStore, hurting GrapheneOS users",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T09:52:45.000Z",
+        "publishedAt": "2026-09-01T15:55:53.000Z",
         "badge": "HN",
-        "signal": "205 分 · 54 评论"
+        "signal": "274 分 · 105 评论"
       },
       {
         "id": "cn-item-9361b5c4bc7ec12f",
@@ -137,24 +137,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-9vx2-j98c-p72w",
+        "id": "github-advisory-ghsa-c83g-rgw3-j3cx",
         "category": "security",
-        "title": "Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the media handling",
-        "url": "https://github.com/advisories/GHSA-9vx2-j98c-p72w",
+        "title": "Browserslist: Unbounded memory growth (no cache eviction) via distinct query results, leading to eventual OOM",
+        "url": "https://github.com/advisories/GHSA-c83g-rgw3-j3cx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-31T22:12:45.000Z",
-        "summary": "### TL;DR This vulnerability affects all Kirby sites that are deployed to a server that allows requests for URLs with encoded slashes (`%2f`), such as nginx, PHP's built-in server or Apache setups that have the option `AllowEncodedSlashes`…",
-        "badge": "CVE-2026-75594",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-01T16:42:13.000Z",
+        "summary": "## Vulnerability Details **File**: `index.js` **Location**: `cache` (browserslist()'s result cache, line ~402) and `parseCache` (parseQueries()'s AST cache) ### Root Cause ```js var cache = {} var parseCache = {} function browserslist(quer…",
+        "badge": "CVE-2026-73089",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-0b5a688ac44522d6",
+        "id": "ai-openai-c0364833b41073ca",
         "category": "ai",
-        "title": "Polimill builds Japan's next-generation public AI infrastructure",
-        "url": "https://openai.com/index/polimill",
+        "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+        "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
         "source": "OpenAI",
-        "publishedAt": "2026-08-31T07:00:00.000Z",
-        "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
+        "publishedAt": "2026-09-01T12:00:00.000Z",
+        "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
         "badge": "OpenAI"
       },
       {
@@ -169,13 +169,13 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-145f0136a0b183e1",
+        "id": "cn-it-6b623bffadbff5ba",
         "category": "cn",
-        "title": "安全人员 Nightmare Eclipse 公开卡巴斯基及 Avast 防病毒软件提权零日漏洞",
-        "url": "https://www.ithome.com/0/997/169.htm",
+        "title": "长安汽车 8 月交付 21.88 万辆，海外市场 9.24 万辆连续 7 个月同比大涨",
+        "url": "https://www.ithome.com/0/997/188.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-01T14:28:34.000Z",
-        "summary": "IT之家 9 月 1 日消息，屡次与微软交锋的安全研究人员 Nightmare Eclipse（Chaotic Eclipse），在 8 月上旬公开 Microsoft Defender 零日漏洞 ShieldBreak 后，近期又将研究目标转向其他厂商的安全软件。 据安全新闻网站 SecurityWeek 报道，Nightmare Eclipse 上周公布了卡巴斯基企业版终端安全产品 Kaspersky Endpoint Security 中存在的一项提权零日漏洞概念验证…",
+        "publishedAt": "2026-09-01T16:11:03.000Z",
+        "summary": "IT之家 9 月 2 日消息，长安汽车于 1 日深夜公布了 8 月的交付成绩单：总量为 21.88 万辆，其中新能源 10.5 万辆，同比增长 22.7%；海外市场 9.24 万辆同比增长 78.6%，官方更称实现 连续 7 个月海外交付同比大涨 。 IT之家从数据中获悉，具体到各个品牌上，长安启源当月交付 45885 辆 ，A、Q 系列车型同比增长 103.1%；深蓝汽车 8 月销量 28659 辆 ，全球累计销量突破 94.76 万辆，全新深蓝 S05 当月全球销量 1…",
         "badge": "IT之家"
       },
       {
@@ -190,23 +190,23 @@
         "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
-        "id": "ai-google-deepmind-71c43cf780d371ee",
+        "id": "ai-google-deepmind-74b1125af8681de1",
         "category": "ai",
-        "title": "Piloting the world's first double-blind AI evaluations",
-        "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+        "title": "Gemini Omni 1.1 Flash lets you build with more control",
+        "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-08-27T12:59:16.000Z",
+        "publishedAt": "2026-08-27T16:11:32.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49521623",
+        "id": "hn-49525153",
         "category": "dev",
-        "title": "Io_uring Without Readahead",
-        "url": "https://frn.sh/io-uring/",
+        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
+        "url": "https://www.norirobotics.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T13:19:12.000Z",
+        "publishedAt": "2026-09-01T17:35:10.000Z",
         "badge": "HN",
-        "signal": "28 分 · 0 评论"
+        "signal": "35 分 · 5 评论"
       },
       {
         "id": "cn-baidu-8e8b304057ee3084",
@@ -216,26 +216,26 @@
         "source": "百度热搜",
         "summary": "9月1日，华为、小米、荣耀同步上调主力机型售价，华为Mate80系列最高涨幅1000元，小米、荣耀相关机型涨幅在300至600元区间。调价源于存储芯片、元器件及高通芯片涨价，行业预计后续新机型定价将进一步抬升，高端旗舰全面跨入万元时代或成现实。",
         "badge": "热搜",
-        "signal": "7,713,741 热度"
+        "signal": "7,714,060 热度"
       },
       {
-        "id": "github-advisory-ghsa-gr94-w7qr-f4j3",
+        "id": "github-advisory-ghsa-73wf-gq98-2v4g",
         "category": "security",
-        "title": "Socket.IO: Engine.IO WebTransport SID DoS",
-        "url": "https://github.com/advisories/GHSA-gr94-w7qr-f4j3",
+        "title": "Browserslist: Uncaught crash / prototype write via untrusted browserslist-stats.json custom stats (normalizeStats)",
+        "url": "https://github.com/advisories/GHSA-73wf-gq98-2v4g",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-31T21:28:12.000Z",
-        "summary": "### Impact Engine.IO servers with **WebTransport enabled** are vulnerable to a remotely triggerable denial of service. A malicious unauthenticated client can send a crafted WebTransport upgrade request containing a specially chosen session…",
-        "badge": "CVE-2026-59724",
+        "publishedAt": "2026-09-01T16:41:54.000Z",
+        "summary": "## Vulnerability Details **File**: `node.js` **Function**: `normalizeStats()` (line ~214), reached from `getStat()` (called **unconditionally** on every `browserslist()` call) and `loadStat()` ### Root Cause ```js function normalizeStats(d…",
+        "badge": "CVE-2026-73088",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-17177c100c915029",
+        "id": "ai-hugging-face-4d3b17a749f42c95",
         "category": "ai",
-        "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
-        "url": "https://huggingface.co/blog/train-multi-vector-encoder",
+        "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+        "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
         "source": "Hugging Face",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
+        "publishedAt": "2026-08-28T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -247,7 +247,7 @@
         "publishedAt": "2026-09-01T09:22:05.000Z",
         "summary": "powershell 如此难用吗，大模型都绷不住🫪",
         "badge": "程序员",
-        "signal": "25 回复"
+        "signal": "30 回复"
       },
       {
         "id": "cn-item-6eb973c1fae00e68",
@@ -271,54 +271,53 @@
         "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
-        "id": "ai-openai-8a7cdd78fd483859",
+        "id": "ai-openai-4862f3d2c68fb1ad",
         "category": "ai",
-        "title": "A milestone in expanding access to AI",
-        "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+        "title": "OpenAI supports California’s bill to advance youth AI safety",
+        "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
         "source": "OpenAI",
-        "publishedAt": "2026-08-31T04:00:00.000Z",
-        "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
+        "publishedAt": "2026-08-31T07:00:00.000Z",
+        "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49493468",
+        "id": "hn-49520022",
         "category": "dev",
-        "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
-        "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
+        "title": "AnkiDroid: Google Play no longer allowing Open Collective donation link",
+        "url": "https://github.com/ankidroid/Anki-Android/issues/21656",
         "source": "Hacker News",
-        "publishedAt": "2026-08-29T21:25:17.000Z",
+        "publishedAt": "2026-09-01T10:11:02.000Z",
         "badge": "HN",
-        "signal": "202 分 · 81 评论"
+        "signal": "695 分 · 195 评论"
       },
       {
-        "id": "cn-it-97a2eed875df4528",
+        "id": "cn-it-6c35c89b41c27a1c",
         "category": "cn",
-        "title": "Sonos 一口气推出两款全新硬件：Beam Ultra 回音壁、Ace Ultra 头戴式耳机",
-        "url": "https://www.ithome.com/0/997/168.htm",
+        "title": "苹果新任 CEO 特努斯入驻微博、X 平台，首条博文向网友问好",
+        "url": "https://www.ithome.com/0/997/187.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-01T14:23:53.000Z",
-        "summary": "IT之家 9 月 1 日消息，Sonos 今天（1 日）一口气发布了 Sonos Beam Ultra 回音壁、Sonos Ace Ultra 头戴式耳机，以及全新音频操作系统 Sonos 27 三款软硬件新品。 这也是 Sonos 自 2024 年以来规模最大的一次集中发布。2024 年，Sonos 新版应用上线后激怒大量用户，公司随后陷入漫长的补救阶段。 Sonos 27 的重点放在 AI 上。Sonos 自主开发了 Sonos 27voice 语音助手，可以控制音乐播…",
+        "publishedAt": "2026-09-01T15:53:15.000Z",
+        "summary": "IT之家 9 月 1 日消息，今天（1 日）晚间，刚刚正式就任苹果公司 CEO 的约翰 · 特努斯（John Ternus）入驻 X 平台和微博，并分别发布了 首条博文“hello”和“你好 hello” 。 同日傍晚，苹果官网更新了“领导层”页面，约翰 · 特努斯正式出任苹果首席执行官，同时担任苹果董事会成员。与此同时， 蒂姆 · 库克正式卸任苹果 CEO 一职 ， 转任董事会执行主席 ，继续负责与全球政策制定者沟通等事务。 根据苹果官网介绍， 特努斯 2001 年加入苹…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-8x3q-jpjh-qh5c",
+        "id": "github-advisory-ghsa-3f6p-5ww8-9rcr",
         "category": "security",
-        "title": "elFinder: SSRF protection bypass via DNS rebinding in the `fsock_get_contents()` fallback",
-        "url": "https://github.com/advisories/GHSA-8x3q-jpjh-qh5c",
+        "title": "MySQL2: Auth Plugin Downgrade to mysql_clear_password Leaks Plaintext Credentials",
+        "url": "https://github.com/advisories/GHSA-3f6p-5ww8-9rcr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-31T20:28:06.000Z",
-        "summary": "poc.zip ## Summary elFinder 2.1.69 is vulnerable to a Server-Side Request Forgery (SSRF) protection bypass when PHP cURL is unavailable and URL uploads use the `fsock_get_contents()` fallback. An attacker who can submit a URL for server-si…",
-        "badge": "CVE-2026-81889",
-        "signal": "HIGH · CVSS 8.6"
+        "publishedAt": "2026-09-01T16:40:34.000Z",
+        "summary": "## Summary A rogue MySQL server (or MITM) can force mysql2 to send credentials in **plaintext** by requesting an auth switch to `mysql_clear_password`. The driver complies without verifying that TLS is active. ## Details `mysql_clear_passw…",
+        "badge": "GHSA-3F6P-5WW8-9RCR",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-google-deepmind-ac6eb9276806c2f8",
+        "id": "ai-google-deepmind-71c43cf780d371ee",
         "category": "ai",
-        "title": "Intelligent transcription with Gemini 3.5 Transcribe",
-        "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+        "title": "Piloting the world's first double-blind AI evaluations",
+        "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-08-26T17:01:00.000Z",
-        "summary": "Now you can get more intelligent speech-to-text transcription with Gemini 3.5 Transcribe.",
+        "publishedAt": "2026-08-27T12:59:16.000Z",
         "badge": "Google DeepMind"
       },
       {
@@ -340,7 +339,7 @@
         "source": "百度热搜",
         "summary": "目前G216线受冲毁道路已抢通至距吉隆口岸1公里以内，抢通与搜寻工作仍在推进。抢通的道路继续向前推进，搜寻的脚步一刻也不停息，人民至上，生命至上！",
         "badge": "热搜",
-        "signal": "7,617,302 热度"
+        "signal": "7,617,573 热度"
       },
       {
         "id": "cisa-kev-cve-2026-66384",
@@ -354,23 +353,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-10"
       },
       {
-        "id": "ai-hugging-face-d21068479952e403",
+        "id": "ai-hugging-face-17177c100c915029",
         "category": "ai",
-        "title": "Granite 4.2 LLMs: How They're Built",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+        "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+        "url": "https://huggingface.co/blog/train-multi-vector-encoder",
         "source": "Hugging Face",
-        "publishedAt": "2026-08-25T15:14:14.000Z",
+        "publishedAt": "2026-08-26T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49517448",
+        "id": "hn-49525297",
         "category": "dev",
-        "title": "Fastpotify",
-        "url": "https://fastpotify.rocks/",
+        "title": "The creator of Jujutsu has joined ERSC",
+        "url": "https://ersc.io/blog/martin-joins-ersc",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T02:52:14.000Z",
+        "publishedAt": "2026-09-01T17:46:21.000Z",
         "badge": "HN",
-        "signal": "628 分 · 399 评论"
+        "signal": "23 分 · 12 评论"
       },
       {
         "id": "cn-item-31d438de312d8263",
@@ -383,24 +382,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-ffg3-p8fm-mjx2",
+        "id": "github-advisory-ghsa-67mx-6wf2-92xp",
         "category": "security",
-        "title": "RestrictedPython guard hooks can be shadowed via positional-only arguments",
-        "url": "https://github.com/advisories/GHSA-ffg3-p8fm-mjx2",
+        "title": "Kirby: File upload permissions are not checked during processing of chunk data",
+        "url": "https://github.com/advisories/GHSA-67mx-6wf2-92xp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-28T22:51:35.000Z",
-        "summary": "### Impact RestrictedPython rewrites sensitive operations to go through guard hooks. Attribute access becomes `_getattr_(obj, name)`, item access becomes `_getitem_(obj, key)`, writes go through `_write_`, and print goes through `_print_`.…",
-        "badge": "CVE-2026-55830",
-        "signal": "HIGH · CVSS 8.3"
+        "publishedAt": "2026-08-31T22:14:05.000Z",
+        "summary": "### TL;DR This vulnerability affects all Kirby sites where users of a particular role have access to the REST API (`access.panel` permission is enabled) but no permission to upload any kind of file (`files.create`, `files.replace` and `use…",
+        "badge": "CVE-2026-71415",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-b42ac281ecaf56c0",
+        "id": "ai-openai-0b5a688ac44522d6",
         "category": "ai",
-        "title": "Our decision on Cursor following its acquisition by SpaceX",
-        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+        "title": "Polimill builds Japan's next-generation public AI infrastructure",
+        "url": "https://openai.com/index/polimill",
         "source": "OpenAI",
-        "publishedAt": "2026-08-28T06:00:00.000Z",
-        "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+        "publishedAt": "2026-08-31T07:00:00.000Z",
+        "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
         "badge": "OpenAI"
       },
       {
@@ -415,13 +414,13 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-it-3fcd00bb107a0d32",
+        "id": "cn-it-8265f9d65adc0536",
         "category": "cn",
-        "title": "消息称三星已锁定约 70% 存储芯片产能至 2031 年，HBM 长协价仅为现货五分之一",
-        "url": "https://www.ithome.com/0/997/167.htm",
+        "title": "马斯克：预计 AI 将令全球经济规模增加约 20%-30%",
+        "url": "https://www.ithome.com/0/997/186.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-01T14:11:45.000Z",
-        "summary": "IT之家 9 月 1 日消息，随着人工智能基础设施建设持续推动高带宽内存（HBM）需求增长，据韩国媒体最新报道，三星已经通过长期供应协议（LTA）锁定了约 70% 的内存产能。 这些长期协议能够让三星客户获得远低于现货市场的价格。据报道，HBM 现货价格最高可达到长期协议价格的 5 倍。 SEDaily 报道称，HBM 需求持续飙升，已经导致 DRAM 市场供应趋紧。 HBM 可以理解为将多层 DRAM 芯片进行堆叠封装而成的高性能内存。随着内存厂商开始向 HBM4 过渡，…",
+        "publishedAt": "2026-09-01T15:48:15.000Z",
+        "summary": "IT之家 9 月 1 日消息，马斯克今天（1 日）晚间在 G20 会议上发表演讲称，预计 AI 将使全球经济规模 增加约 20%-30% ，即每年增加约 20 万亿至 30 万亿美元 （IT之家注：现汇率约合 134.72 万亿至 202.09 万亿元人民币） 。 此外，马斯克预计到 2027 年底，AI 将能够完成所有数字领域的工作，即不需要人工直接操纵完成的工作。软件方面，AI 编程能力明年可能达到“Stockfish 级”， 人类将无法与 AI 竞争软件开发 ；未来 …",
         "badge": "IT之家"
       },
       {
@@ -436,24 +435,24 @@
         "signal": "已遭利用 · 整改期限 2026-09-09"
       },
       {
-        "id": "ai-google-deepmind-835a331a5b20ce16",
+        "id": "ai-google-deepmind-ac6eb9276806c2f8",
         "category": "ai",
-        "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
-        "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+        "title": "Intelligent transcription with Gemini 3.5 Transcribe",
+        "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-08-21T11:59:48.000Z",
-        "summary": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+        "publishedAt": "2026-08-26T17:01:00.000Z",
+        "summary": "Now you can get more intelligent speech-to-text transcription with Gemini 3.5 Transcribe.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49516059",
+        "id": "hn-49522897",
         "category": "dev",
-        "title": "Tmp.0ut Volume 5",
-        "url": "https://tmpout.sh/5/",
+        "title": "Ask HN: Who is hiring? (September 2026)",
+        "url": "https://news.ycombinator.com/item?id=49522897",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T23:26:08.000Z",
+        "publishedAt": "2026-09-01T15:01:17.000Z",
         "badge": "HN",
-        "signal": "140 分 · 31 评论"
+        "signal": "124 分 · 125 评论"
       },
       {
         "id": "cn-baidu-a0dc928a76216903",
@@ -463,26 +462,26 @@
         "source": "百度热搜",
         "summary": "近日，博主在万宁神州半岛海滩净滩时，挖出两年前综艺《这是我的岛》遗留拍摄道具，铁架锈蚀、泡沫散落。人民日报评论指出，节目组为第一责任人，不应离开制度的约束。应明晰权责、建立闭环，将生态复原作为拍摄许可的刚性前置条件与硬性退场标准，并引入保证金、黑名单等约束手段，让“拍完就走”付出应有代价。",
         "badge": "热搜",
-        "signal": "7,520,481 热度"
+        "signal": "7,520,560 热度"
       },
       {
-        "id": "github-advisory-ghsa-j5g3-42wp-gqm3",
+        "id": "github-advisory-ghsa-9vx2-j98c-p72w",
         "category": "security",
-        "title": "Snipe-IT has an Improper Privilege Management issue",
-        "url": "https://github.com/advisories/GHSA-j5g3-42wp-gqm3",
+        "title": "Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the media handling",
+        "url": "https://github.com/advisories/GHSA-9vx2-j98c-p72w",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-28T22:37:24.000Z",
-        "summary": "## Impact The `update()` method in `UsersController` passes the `permission` request field unconditionally to `NormalizePermissionsPayloadAction`, which returns an empty array when the field is absent. The result is passed to `PreserveUnau…",
-        "badge": "CVE-2026-55843",
-        "signal": "HIGH · CVSS 6.5"
+        "publishedAt": "2026-08-31T22:12:45.000Z",
+        "summary": "### TL;DR This vulnerability affects all Kirby sites that are deployed to a server that allows requests for URLs with encoded slashes (`%2f`), such as nginx, PHP's built-in server or Apache setups that have the option `AllowEncodedSlashes`…",
+        "badge": "CVE-2026-75594",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-f1c76f23a788b688",
+        "id": "ai-hugging-face-d21068479952e403",
         "category": "ai",
-        "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+        "title": "Granite 4.2 LLMs: How They're Built",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
         "source": "Hugging Face",
-        "publishedAt": "2026-08-25T11:39:24.000Z",
+        "publishedAt": "2026-08-25T15:14:14.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -494,7 +493,7 @@
         "publishedAt": "2026-09-01T05:34:21.000Z",
         "summary": "工作中我经常需要处理很多件事情，在不同上下文进行切换时，脑子一恍惚就忘了自己要做什么了 有的事情是要挂后台跑的，但是一下没注意到，等做完其它事情才回来做这个导致处理效率很低；又或者后台任务跑完了，但是没有意识到，导致下一个后台任务没接着继续跑；又或者在几个上下文切换过程中，突然懵了，一段时间忘了自己要干什么，还要回想一下要做什么； 我觉得这些事情不难，而且是大部分可以自动化的，比如修一个 bug ，按照流程无非就是理解 bug ，写代码，编译烧录，自测，提交，评审，修改。其…",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "11 回复"
       }
     ]
   },
@@ -511,7 +510,7 @@
         "url": "https://github.com/Gitlawb/openclaude",
         "description": "runs anywhere. uses anything",
         "language": "TypeScript",
-        "stars": 31083,
+        "stars": 31171,
         "starsToday": 37
       },
       {
@@ -521,7 +520,7 @@
         "url": "https://github.com/Imbad0202/academic-research-skills",
         "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
         "language": "Python",
-        "stars": 44679,
+        "stars": 44766,
         "starsToday": 161
       },
       {
@@ -531,7 +530,7 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 29067,
+        "stars": 29266,
         "starsToday": 3122
       },
       {
@@ -541,7 +540,7 @@
         "url": "https://github.com/iv-org/invidious",
         "description": "Invidious is an alternative front-end to YouTube",
         "language": "Crystal",
-        "stars": 23671,
+        "stars": 23703,
         "starsToday": 583
       },
       {
@@ -551,7 +550,7 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "language": "Python",
-        "stars": 56837,
+        "stars": 56925,
         "starsToday": 1005
       },
       {
@@ -561,7 +560,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 13306,
+        "stars": 13558,
         "starsToday": 745
       },
       {
@@ -571,7 +570,7 @@
         "url": "https://github.com/3b1b/manim",
         "description": "Animation engine for explanatory math videos",
         "language": "Python",
-        "stars": 92435,
+        "stars": 92486,
         "starsToday": 74
       },
       {
@@ -581,7 +580,7 @@
         "url": "https://github.com/firecrawl/pdf-inspector",
         "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "language": "Rust",
-        "stars": 17737,
+        "stars": 17814,
         "starsToday": 545
       },
       {
@@ -591,7 +590,7 @@
         "url": "https://github.com/browser-use/video-use",
         "description": "Edit videos with coding agents",
         "language": "Python",
-        "stars": 22681,
+        "stars": 22770,
         "starsToday": 509
       },
       {
@@ -601,10 +600,10 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 41326,
+        "stars": 41421,
         "starsToday": 914
       }
     ],
-    "updatedAt": "2026-09-01T14:54:57.264Z"
+    "updatedAt": "2026-09-01T18:31:54.347Z"
   }
 }
