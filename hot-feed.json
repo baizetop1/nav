@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-01T18:31:54.347Z",
+  "generatedAt": "2026-09-01T21:47:46.852Z",
   "intelligence": {
-    "updatedAt": "2026-09-01T18:31:54.347Z",
+    "updatedAt": "2026-09-01T21:47:46.852Z",
     "items": [
       {
         "id": "cn-item-f9ff1ecc23ba45e5",
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-01T17:53:53.000Z",
         "badge": "HN",
-        "signal": "178 分 · 127 评论"
+        "signal": "716 分 · 674 评论"
       },
       {
-        "id": "cn-it-bc0c6a42d6945554",
+        "id": "cn-it-4b87d81faed9b1b6",
         "category": "cn",
-        "title": "2026 年 8 月汽车销量 / 交付榜出炉：比亚迪超 44 万辆稳居榜首，零跑继续断层领跑新势力",
-        "url": "https://www.ithome.com/0/997/189.htm",
+        "title": "戴尔 2027 财年半年报归母净利润 75.71 亿美元，同比增长 256%",
+        "url": "https://www.ithome.com/0/997/191.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-01T16:53:06.000Z",
-        "summary": "IT之家 9 月 2 日消息，2026 年 8 月汽车销量 / 交付数据现已陆续公布，比亚迪凭借 440,293 辆 的成绩继续稳坐头把交椅，上汽集团 357,007 辆 位居第二，奇瑞、吉利、长安也持续跻身“ 20 万辆俱乐部 ”之列。新势力方面，零跑汽车继 7 月后继续维持 10 万辆以上水平，卫冕新势力销冠。 此外，榜单中同比增幅最大的是 智界汽车 ，当月取得 8,561 辆销量，增幅达到 404.2%。 IT之家汇总 2026 年 8 月汽车销量 / 交付榜单如下（…",
+        "publishedAt": "2026-09-01T20:15:30.000Z",
+        "summary": "IT之家 9 月 2 日消息，戴尔今日发布 2027 财年（2026年 2月 1日～2027年 1月 29日）半年报（2026年 2月 1日～2026年 7月 31日）及第二财季（2026年 5月 1日～2026年 7月 31日）报告： 2027 财年半年报 营业总收入 ：908.13 亿美元 （IT之家注：现汇率约合 6117.35 亿元人民币） ，同比增长 71% 毛利润 ：176.12 亿美元 （现汇率约合 1186.38 亿元人民币） 毛利率 ：19.4% 归母净利…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-gqvg-gmmx-x4hm",
+        "id": "github-advisory-ghsa-vp52-pcj8-j9qc",
         "category": "security",
-        "title": "MLFLOW_ALLOW_PICKLE_DESERIALIZATION=False safety control bypassed by mlflow.statsmodels flavor — RCE via crafted model artifact",
-        "url": "https://github.com/advisories/GHSA-gqvg-gmmx-x4hm",
+        "title": "gRPC-Go: Heap Memory Exhaustion (OOM) via HTTP/2 DATA Frame Fragmentation",
+        "url": "https://github.com/advisories/GHSA-vp52-pcj8-j9qc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-01T17:04:30.000Z",
-        "summary": "## Summary MLflow introduced `MLFLOW_ALLOW_PICKLE_DESERIALIZATION` as a security control to prevent unsafe `pickle.load` execution during model loading, in response to CVE-2024-37052 through CVE-2024-37060. When set to `False`, operators e…",
-        "badge": "GHSA-GQVG-GMMX-X4HM",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-01T21:32:41.000Z",
+        "summary": "### Impact An unauthenticated remote attacker can initiate a gRPC stream and purposefully fragment their payload into millions of tiny (e.g., 1-byte) HTTP/2 DATA frames. Even if the total payload volume falls within the configured connecti…",
+        "badge": "CVE-2026-84304",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-20b040f8e58f31e9",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "9月1日，华为、小米、荣耀多款手机集体涨价，部分机型涨幅达200元至1000元。对此，三家客服分别回应称，华为因关键物料价格调整导致成本上涨，小米受核心元器件采购成本上涨影响，荣耀则称根据市场需求调整价格。",
         "badge": "热搜",
-        "signal": "7,809,521 热度"
+        "signal": "7,808,648 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81578",
@@ -108,23 +108,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-hugging-face-91dad0068ec24e5b",
+        "id": "ai-hugging-face-ad90e6779ea3045b",
         "category": "ai",
-        "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
-        "url": "https://huggingface.co/blog/webgpu-kernels",
+        "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+        "url": "https://huggingface.co/blog/allenai/benchmirt",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-01T00:00:00.000Z",
+        "publishedAt": "2026-09-01T21:39:07.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49523754",
+        "id": "hn-49527232",
         "category": "dev",
-        "title": "Play Store blocks AuroraStore, hurting GrapheneOS users",
-        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566",
+        "title": "Refurbishing a Tektronix TDS7104 Oscilloscope",
+        "url": "https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T15:55:53.000Z",
+        "publishedAt": "2026-09-01T19:55:47.000Z",
         "badge": "HN",
-        "signal": "274 分 · 105 评论"
+        "signal": "45 分 · 16 评论"
       },
       {
         "id": "cn-item-9361b5c4bc7ec12f",
@@ -137,24 +137,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-c83g-rgw3-j3cx",
+        "id": "github-advisory-ghsa-68jx-f42c-7599",
         "category": "security",
-        "title": "Browserslist: Unbounded memory growth (no cache eviction) via distinct query results, leading to eventual OOM",
-        "url": "https://github.com/advisories/GHSA-c83g-rgw3-j3cx",
+        "title": "TYPO3 CMS - Broken Access Control in Backend and Install Tool",
+        "url": "https://github.com/advisories/GHSA-68jx-f42c-7599",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-01T16:42:13.000Z",
-        "summary": "## Vulnerability Details **File**: `index.js` **Location**: `cache` (browserslist()'s result cache, line ~402) and `parseCache` (parseQueries()'s AST cache) ### Root Cause ```js var cache = {} var parseCache = {} function browserslist(quer…",
-        "badge": "CVE-2026-73089",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-01T21:31:42.000Z",
+        "summary": "### Problem The referrer enforcement introduced with TYPO3-CORE-SA-2020-006 (CVE-2020-11069) became ineffective in TYPO3 v13.0, where TYPO3 CMS started serving the backend and Admin Tool applications from the site's main entry script inste…",
+        "badge": "CVE-2026-19418",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-c0364833b41073ca",
+        "id": "ai-openai-f2694bfa96c49e91",
         "category": "ai",
-        "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
-        "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+        "title": "Path to Astra: critical capabilities and frontier safeguards",
+        "url": "https://openai.com/index/path-to-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-01T12:00:00.000Z",
-        "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+        "publishedAt": "2026-09-01T13:00:00.000Z",
+        "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
         "badge": "OpenAI"
       },
       {
@@ -169,13 +169,13 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-6b623bffadbff5ba",
+        "id": "cn-it-bc0c6a42d6945554",
         "category": "cn",
-        "title": "长安汽车 8 月交付 21.88 万辆，海外市场 9.24 万辆连续 7 个月同比大涨",
-        "url": "https://www.ithome.com/0/997/188.htm",
+        "title": "2026 年 8 月汽车销量 / 交付榜出炉：比亚迪超 44 万辆稳居榜首，零跑继续断层领跑新势力",
+        "url": "https://www.ithome.com/0/997/189.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-01T16:11:03.000Z",
-        "summary": "IT之家 9 月 2 日消息，长安汽车于 1 日深夜公布了 8 月的交付成绩单：总量为 21.88 万辆，其中新能源 10.5 万辆，同比增长 22.7%；海外市场 9.24 万辆同比增长 78.6%，官方更称实现 连续 7 个月海外交付同比大涨 。 IT之家从数据中获悉，具体到各个品牌上，长安启源当月交付 45885 辆 ，A、Q 系列车型同比增长 103.1%；深蓝汽车 8 月销量 28659 辆 ，全球累计销量突破 94.76 万辆，全新深蓝 S05 当月全球销量 1…",
+        "publishedAt": "2026-09-01T16:53:06.000Z",
+        "summary": "IT之家 9 月 2 日消息，2026 年 8 月汽车销量 / 交付数据现已陆续公布，比亚迪凭借 440,293 辆 的成绩继续稳坐头把交椅，上汽集团 357,007 辆 位居第二，奇瑞、吉利、长安也持续跻身“ 20 万辆俱乐部 ”之列。新势力方面，零跑汽车继 7 月后继续维持 10 万辆以上水平，卫冕新势力销冠。 此外，榜单中同比增幅最大的是 智界汽车 ，当月取得 8,561 辆销量，增幅达到 404.2%。 IT之家汇总 2026 年 8 月汽车销量 / 交付榜单如下（…",
         "badge": "IT之家"
       },
       {
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49525153",
+        "id": "hn-49527396",
         "category": "dev",
-        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
-        "url": "https://www.norirobotics.com/",
+        "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
+        "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T17:35:10.000Z",
+        "publishedAt": "2026-09-01T20:07:57.000Z",
         "badge": "HN",
-        "signal": "35 分 · 5 评论"
+        "signal": "121 分 · 69 评论"
       },
       {
         "id": "cn-baidu-8e8b304057ee3084",
@@ -216,26 +216,26 @@
         "source": "百度热搜",
         "summary": "9月1日，华为、小米、荣耀同步上调主力机型售价，华为Mate80系列最高涨幅1000元，小米、荣耀相关机型涨幅在300至600元区间。调价源于存储芯片、元器件及高通芯片涨价，行业预计后续新机型定价将进一步抬升，高端旗舰全面跨入万元时代或成现实。",
         "badge": "热搜",
-        "signal": "7,714,060 热度"
+        "signal": "7,713,252 热度"
       },
       {
-        "id": "github-advisory-ghsa-73wf-gq98-2v4g",
+        "id": "github-advisory-ghsa-52xp-w8hr-xv3c",
         "category": "security",
-        "title": "Browserslist: Uncaught crash / prototype write via untrusted browserslist-stats.json custom stats (normalizeStats)",
-        "url": "https://github.com/advisories/GHSA-73wf-gq98-2v4g",
+        "title": "Filament: Multi-factor authentication (app) can be bypassed when recovery codes are enabled",
+        "url": "https://github.com/advisories/GHSA-52xp-w8hr-xv3c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-01T16:41:54.000Z",
-        "summary": "## Vulnerability Details **File**: `node.js` **Function**: `normalizeStats()` (line ~214), reached from `getStat()` (called **unconditionally** on every `browserslist()` call) and `loadStat()` ### Root Cause ```js function normalizeStats(d…",
-        "badge": "CVE-2026-73088",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-01T21:28:47.000Z",
+        "summary": "A flaw in the challenge handling for app-based multi-factor authentication allows the second factor to be bypassed. This issue does not affect email-based MFA. It also only applies when recovery codes are enabled.",
+        "badge": "CVE-2026-77567",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
-        "id": "ai-hugging-face-4d3b17a749f42c95",
+        "id": "ai-hugging-face-91dad0068ec24e5b",
         "category": "ai",
-        "title": "The Open ASR Leaderboard Adds Its First Global South Language",
-        "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+        "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
+        "url": "https://huggingface.co/blog/webgpu-kernels",
         "source": "Hugging Face",
-        "publishedAt": "2026-08-28T00:00:00.000Z",
+        "publishedAt": "2026-09-01T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -247,7 +247,7 @@
         "publishedAt": "2026-09-01T09:22:05.000Z",
         "summary": "powershell 如此难用吗，大模型都绷不住🫪",
         "badge": "程序员",
-        "signal": "30 回复"
+        "signal": "31 回复"
       },
       {
         "id": "cn-item-6eb973c1fae00e68",
@@ -271,13 +271,13 @@
         "signal": "已遭利用 · 整改期限 2026-08-30"
       },
       {
-        "id": "ai-openai-4862f3d2c68fb1ad",
+        "id": "ai-openai-c0364833b41073ca",
         "category": "ai",
-        "title": "OpenAI supports California’s bill to advance youth AI safety",
-        "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
+        "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+        "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
         "source": "OpenAI",
-        "publishedAt": "2026-08-31T07:00:00.000Z",
-        "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.",
+        "publishedAt": "2026-09-01T12:00:00.000Z",
+        "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
         "badge": "OpenAI"
       },
       {
@@ -288,28 +288,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-01T10:11:02.000Z",
         "badge": "HN",
-        "signal": "695 分 · 195 评论"
+        "signal": "782 分 · 226 评论"
       },
       {
-        "id": "cn-it-6c35c89b41c27a1c",
+        "id": "cn-it-6b623bffadbff5ba",
         "category": "cn",
-        "title": "苹果新任 CEO 特努斯入驻微博、X 平台，首条博文向网友问好",
-        "url": "https://www.ithome.com/0/997/187.htm",
+        "title": "长安汽车 8 月交付 21.88 万辆，海外市场 9.24 万辆连续 7 个月同比大涨",
+        "url": "https://www.ithome.com/0/997/188.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-01T15:53:15.000Z",
-        "summary": "IT之家 9 月 1 日消息，今天（1 日）晚间，刚刚正式就任苹果公司 CEO 的约翰 · 特努斯（John Ternus）入驻 X 平台和微博，并分别发布了 首条博文“hello”和“你好 hello” 。 同日傍晚，苹果官网更新了“领导层”页面，约翰 · 特努斯正式出任苹果首席执行官，同时担任苹果董事会成员。与此同时， 蒂姆 · 库克正式卸任苹果 CEO 一职 ， 转任董事会执行主席 ，继续负责与全球政策制定者沟通等事务。 根据苹果官网介绍， 特努斯 2001 年加入苹…",
+        "publishedAt": "2026-09-01T16:11:03.000Z",
+        "summary": "IT之家 9 月 2 日消息，长安汽车于 1 日深夜公布了 8 月的交付成绩单：总量为 21.88 万辆，其中新能源 10.5 万辆，同比增长 22.7%；海外市场 9.24 万辆同比增长 78.6%，官方更称实现 连续 7 个月海外交付同比大涨 。 IT之家从数据中获悉，具体到各个品牌上，长安启源当月交付 45885 辆 ，A、Q 系列车型同比增长 103.1%；深蓝汽车 8 月销量 28659 辆 ，全球累计销量突破 94.76 万辆，全新深蓝 S05 当月全球销量 1…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-3f6p-5ww8-9rcr",
+        "id": "github-advisory-ghsa-m4rf-3fr8-xwx3",
         "category": "security",
-        "title": "MySQL2: Auth Plugin Downgrade to mysql_clear_password Leaks Plaintext Credentials",
-        "url": "https://github.com/advisories/GHSA-3f6p-5ww8-9rcr",
+        "title": "NLTK: JVM argument injection bypass via per-call options in the NLTK Stanford wrappers (incomplete fix of CVE-2026-12841)",
+        "url": "https://github.com/advisories/GHSA-m4rf-3fr8-xwx3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-01T16:40:34.000Z",
-        "summary": "## Summary A rogue MySQL server (or MITM) can force mysql2 to send credentials in **plaintext** by requesting an auth switch to `mysql_clear_password`. The driver complies without verifying that TLS is active. ## Details `mysql_clear_passw…",
-        "badge": "GHSA-3F6P-5WW8-9RCR",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-01T20:38:22.000Z",
+        "summary": "## Vulnerability The fix for CVE-2026-12841 (CWE-88, JVM argument injection) added `_validate_java_options()` to block dangerous JVM flags such as `-agentlib`, `-agentpath`, `-javaagent`, `-Xrunjdwp`, and `@argfile` references. However, th…",
+        "badge": "CVE-2026-79675",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
         "id": "ai-google-deepmind-71c43cf780d371ee",
@@ -329,7 +329,7 @@
         "publishedAt": "2026-09-01T07:31:06.000Z",
         "summary": "https://forum.proxmox.com/threads/proxmox-ve-7-is-vulnerable-to-some-type-of-0day-rce-non-auth.186078/ 幸亏看到的早,我跑在公网上的 pve7.4.3 还没中招",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-69f7b643b1a448df",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "目前G216线受冲毁道路已抢通至距吉隆口岸1公里以内，抢通与搜寻工作仍在推进。抢通的道路继续向前推进，搜寻的脚步一刻也不停息，人民至上，生命至上！",
         "badge": "热搜",
-        "signal": "7,617,573 热度"
+        "signal": "7,618,151 热度"
       },
       {
         "id": "cisa-kev-cve-2026-66384",
@@ -353,23 +353,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-10"
       },
       {
-        "id": "ai-hugging-face-17177c100c915029",
+        "id": "ai-hugging-face-4d3b17a749f42c95",
         "category": "ai",
-        "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
-        "url": "https://huggingface.co/blog/train-multi-vector-encoder",
+        "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+        "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
         "source": "Hugging Face",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
+        "publishedAt": "2026-08-28T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49525297",
+        "id": "hn-49525153",
         "category": "dev",
-        "title": "The creator of Jujutsu has joined ERSC",
-        "url": "https://ersc.io/blog/martin-joins-ersc",
+        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
+        "url": "https://www.norirobotics.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T17:46:21.000Z",
+        "publishedAt": "2026-09-01T17:35:10.000Z",
         "badge": "HN",
-        "signal": "23 分 · 12 评论"
+        "signal": "92 分 · 33 评论"
       },
       {
         "id": "cn-item-31d438de312d8263",
@@ -382,24 +382,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-67mx-6wf2-92xp",
+        "id": "github-advisory-ghsa-8rr7-cvq3-gmfh",
         "category": "security",
-        "title": "Kirby: File upload permissions are not checked during processing of chunk data",
-        "url": "https://github.com/advisories/GHSA-67mx-6wf2-92xp",
+        "title": "league/commonmark: Denial of service via distinctly-named attributes in the Attributes extension",
+        "url": "https://github.com/advisories/GHSA-8rr7-cvq3-gmfh",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-31T22:14:05.000Z",
-        "summary": "### TL;DR This vulnerability affects all Kirby sites where users of a particular role have access to the REST API (`access.panel` permission is enabled) but no permission to upload any kind of file (`files.create`, `files.replace` and `use…",
-        "badge": "CVE-2026-71415",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-01T20:28:40.000Z",
+        "summary": "### Impact `AttributesExtension` ships with the library but must be explicitly registered on the `Environment`; it is not included in `CommonMarkConverter`, `GithubFlavoredMarkdownConverter`, or `GithubFlavoredMarkdownExtension`. **Applica…",
+        "badge": "GHSA-8RR7-CVQ3-GMFH",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-0b5a688ac44522d6",
+        "id": "ai-openai-4862f3d2c68fb1ad",
         "category": "ai",
-        "title": "Polimill builds Japan's next-generation public AI infrastructure",
-        "url": "https://openai.com/index/polimill",
+        "title": "OpenAI supports California’s bill to advance youth AI safety",
+        "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
         "source": "OpenAI",
         "publishedAt": "2026-08-31T07:00:00.000Z",
-        "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
+        "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.",
         "badge": "OpenAI"
       },
       {
@@ -414,13 +414,13 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-it-8265f9d65adc0536",
+        "id": "cn-it-6c35c89b41c27a1c",
         "category": "cn",
-        "title": "马斯克：预计 AI 将令全球经济规模增加约 20%-30%",
-        "url": "https://www.ithome.com/0/997/186.htm",
+        "title": "苹果新任 CEO 特努斯入驻微博、X 平台，首条博文向网友问好",
+        "url": "https://www.ithome.com/0/997/187.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-01T15:48:15.000Z",
-        "summary": "IT之家 9 月 1 日消息，马斯克今天（1 日）晚间在 G20 会议上发表演讲称，预计 AI 将使全球经济规模 增加约 20%-30% ，即每年增加约 20 万亿至 30 万亿美元 （IT之家注：现汇率约合 134.72 万亿至 202.09 万亿元人民币） 。 此外，马斯克预计到 2027 年底，AI 将能够完成所有数字领域的工作，即不需要人工直接操纵完成的工作。软件方面，AI 编程能力明年可能达到“Stockfish 级”， 人类将无法与 AI 竞争软件开发 ；未来 …",
+        "publishedAt": "2026-09-01T15:53:15.000Z",
+        "summary": "IT之家 9 月 1 日消息，今天（1 日）晚间，刚刚正式就任苹果公司 CEO 的约翰 · 特努斯（John Ternus）入驻 X 平台和微博，并分别发布了 首条博文“hello”和“你好 hello” 。 同日傍晚，苹果官网更新了“领导层”页面，约翰 · 特努斯正式出任苹果首席执行官，同时担任苹果董事会成员。与此同时， 蒂姆 · 库克正式卸任苹果 CEO 一职 ， 转任董事会执行主席 ，继续负责与全球政策制定者沟通等事务。 根据苹果官网介绍， 特努斯 2001 年加入苹…",
         "badge": "IT之家"
       },
       {
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49522897",
+        "id": "hn-49521973",
         "category": "dev",
-        "title": "Ask HN: Who is hiring? (September 2026)",
-        "url": "https://news.ycombinator.com/item?id=49522897",
+        "title": "Introducing Ad Blocker for Firefox on iOS",
+        "url": "https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T15:01:17.000Z",
+        "publishedAt": "2026-09-01T13:46:49.000Z",
         "badge": "HN",
-        "signal": "124 分 · 125 评论"
+        "signal": "221 分 · 86 评论"
       },
       {
         "id": "cn-baidu-a0dc928a76216903",
@@ -462,26 +462,26 @@
         "source": "百度热搜",
         "summary": "近日，博主在万宁神州半岛海滩净滩时，挖出两年前综艺《这是我的岛》遗留拍摄道具，铁架锈蚀、泡沫散落。人民日报评论指出，节目组为第一责任人，不应离开制度的约束。应明晰权责、建立闭环，将生态复原作为拍摄许可的刚性前置条件与硬性退场标准，并引入保证金、黑名单等约束手段，让“拍完就走”付出应有代价。",
         "badge": "热搜",
-        "signal": "7,520,560 热度"
+        "signal": "7,520,357 热度"
       },
       {
-        "id": "github-advisory-ghsa-9vx2-j98c-p72w",
+        "id": "github-advisory-ghsa-6hwm-xvph-95vm",
         "category": "security",
-        "title": "Kirby: Access to image files and limited access to JSON files outside of the site root via path traversal in the media handling",
-        "url": "https://github.com/advisories/GHSA-9vx2-j98c-p72w",
+        "title": "NLTK: Uncontrolled search path when invoking the Graphviz 'dot' binary",
+        "url": "https://github.com/advisories/GHSA-6hwm-xvph-95vm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-08-31T22:12:45.000Z",
-        "summary": "### TL;DR This vulnerability affects all Kirby sites that are deployed to a server that allows requests for URLs with encoded slashes (`%2f`), such as nginx, PHP's built-in server or Apache setups that have the option `AllowEncodedSlashes`…",
-        "badge": "CVE-2026-75594",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-01T20:27:20.000Z",
+        "summary": "Two NLTK sites executed the Graphviz `dot` program by bare name, so process creation resolved it via the search path — and on Windows via the current working directory — rather than a validated absolute location. An attacker who can place …",
+        "badge": "CVE-2026-78680",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
-        "id": "ai-hugging-face-d21068479952e403",
+        "id": "ai-hugging-face-17177c100c915029",
         "category": "ai",
-        "title": "Granite 4.2 LLMs: How They're Built",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+        "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+        "url": "https://huggingface.co/blog/train-multi-vector-encoder",
         "source": "Hugging Face",
-        "publishedAt": "2026-08-25T15:14:14.000Z",
+        "publishedAt": "2026-08-26T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -510,7 +510,7 @@
         "url": "https://github.com/Gitlawb/openclaude",
         "description": "runs anywhere. uses anything",
         "language": "TypeScript",
-        "stars": 31171,
+        "stars": 31218,
         "starsToday": 37
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/Imbad0202/academic-research-skills",
         "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
         "language": "Python",
-        "stars": 44766,
+        "stars": 44830,
         "starsToday": 161
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 29266,
+        "stars": 29367,
         "starsToday": 3122
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/iv-org/invidious",
         "description": "Invidious is an alternative front-end to YouTube",
         "language": "Crystal",
-        "stars": 23703,
+        "stars": 23735,
         "starsToday": 583
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "language": "Python",
-        "stars": 56925,
+        "stars": 56990,
         "starsToday": 1005
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 13558,
+        "stars": 13751,
         "starsToday": 745
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/3b1b/manim",
         "description": "Animation engine for explanatory math videos",
         "language": "Python",
-        "stars": 92486,
+        "stars": 92516,
         "starsToday": 74
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/firecrawl/pdf-inspector",
         "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "language": "Rust",
-        "stars": 17814,
+        "stars": 17870,
         "starsToday": 545
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/browser-use/video-use",
         "description": "Edit videos with coding agents",
         "language": "Python",
-        "stars": 22770,
+        "stars": 22862,
         "starsToday": 509
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 41421,
+        "stars": 41477,
         "starsToday": 914
       }
     ],
-    "updatedAt": "2026-09-01T18:31:54.347Z"
+    "updatedAt": "2026-09-01T21:47:46.852Z"
   }
 }
