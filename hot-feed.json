@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-02T04:42:15.266Z",
+  "generatedAt": "2026-09-02T07:06:01.762Z",
   "intelligence": {
-    "updatedAt": "2026-09-02T04:42:15.266Z",
+    "updatedAt": "2026-09-02T07:06:01.762Z",
     "items": [
       {
-        "id": "cn-item-8110ef9e63eeac3a",
+        "id": "cn-item-d39a456edf3789d2",
         "category": "cn",
-        "title": "中国气象局：预计9月有2至3个台风登陆或明显影响我国",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-02/10688578.shtml",
+        "title": "印度哈里亚纳邦发生交通事故，致6死14伤",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-02/10688662.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-02T03:58:30.000Z",
-        "summary": "中新网9月2日电(记者 邵萌)9月2日，中国气象局举行新闻发布会。国家气候中心副主任高荣介绍，预计9月，西北太平洋和南海海域有5~7个台风生成，接近常年同期(5.1个)到偏多；有2~3个台风登陆或明显影响我国，较常年同期(1.6个)偏多；强度总体偏强，主要影响华东和华南沿海地区，存在较强台风北上影响我国北方地区的风险。",
+        "publishedAt": "2026-09-02T06:07:59.000Z",
+        "summary": "中新网9月2日电 据《印度时报》报道，印度北部哈里亚纳邦1日凌晨发生一起交通事故，一辆载有朝圣者的皮卡车撞上停在高速公路路边的卡车，造成6人死亡、14人重伤。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49525378",
+        "id": "hn-49531651",
         "category": "dev",
-        "title": "Claude Fable 5.1 and Claude Mythos 5.1",
-        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
+        "url": "https://arxiv.org/abs/2608.29530",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T17:53:53.000Z",
+        "publishedAt": "2026-09-02T04:15:56.000Z",
         "badge": "HN",
-        "signal": "1029 分 · 959 评论"
+        "signal": "67 分 · 11 评论"
       },
       {
-        "id": "cn-it-1775f6f33909666b",
+        "id": "cn-it-09d665b8d1439564",
         "category": "cn",
-        "title": "路透社：本田启动 4 年降本 1.5 万亿日元计划，拟从中国供应商采购更多零部件",
-        "url": "https://www.ithome.com/0/997/389.htm",
+        "title": "继谷歌地图后，苹果地图面向美国用户将安大略湖更名为“美国湖”",
+        "url": "https://www.ithome.com/0/997/444.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T04:41:53.000Z",
-        "summary": "IT之家 9 月 2 日消息，路透社今天（9 月 2 日）发布博文，报道称本田汽车（Honda）计划未来 4 年（到 2030 年）节省 1.5 万亿日元 （IT之家注：现汇率约合 630.88 亿元人民币） ， 并计划在冲压与锻造零部件、电子零部件、软件定义汽车相关部件 3 个领域削减 30% 成本。 报道称本田近期在宇都宫市（Utsunomiya）与主要供应商举行会议，并向供应商说明降本计划。知情人士称，会议结束后，各供应商获得了针对自身业务的成本削减目标。 文件显示，…",
+        "publishedAt": "2026-09-02T07:04:28.000Z",
+        "summary": "IT之家 9 月 2 日消息，苹果已在其 Maps 地图应用中将“安大略湖”（Lake Ontario）更名为“美国湖”（Lake America），这一调整源于美国总统唐纳德 · 特朗普此前发布的一项行政命令。 此次更名目前仅面向美国用户。加拿大境内的用户在苹果地图中仍将看到“Lake Ontario（安大略湖）”这一名称。 苹果的这一举动发生在美加两国贸易谈判于上月底破裂之后。当时，美国宣布对价值 200 亿美元 （IT之家注：现汇率约合 1,347.38 亿元人民币）…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238890",
+        "id": "v2ex-1238928",
         "category": "dev",
-        "title": "The 'gpt-5.6-sol' model is not supported when using Codex with a ChatGPT account.",
-        "url": "https://www.v2ex.com/t/1238890",
+        "title": "Cursor/Copilot 的\"高级请求\"额度， Agent 模式几分钟就能刷完",
+        "url": "https://www.v2ex.com/t/1238928",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:59:49.000Z",
-        "summary": "你们遇到这个了吗？刚才出来的，珍离谱",
+        "publishedAt": "2026-09-02T06:45:26.000Z",
+        "summary": "最近发现一个坑：Cursor 、GitHub Copilot 这类工具按\"高级请求数\"计费封顶，单次代码补全消耗很少，但开 Agent 模式（让它自己读文件、跑测试、多轮改代码）时，每一步操作都可能各算一次请求，几分钟就能把平时几天的额度用完，账单上却只显示一个笼统的总数，很难当场意识到消耗速度差这么多。 写了篇拆解，讲清楚为什么 Agent 模式消耗更快、怎么在工具后台核查请求类型细分、怎么根据任务类型选补全模式还是 Agent 模式控制成本： https://ponr.…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-4ed331c624373244",
+        "id": "cn-baidu-48ddb5ec1d2951a7",
         "category": "cn",
-        "title": "温州多地紧急通知：停课一天",
-        "url": "https://www.baidu.com/s?wd=%E6%B8%A9%E5%B7%9E%E5%A4%9A%E5%9C%B0%E7%B4%A7%E6%80%A5%E9%80%9A%E7%9F%A5%EF%BC%9A%E5%81%9C%E8%AF%BE%E4%B8%80%E5%A4%A9&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "重庆立法：学校可禁止学生带手机入校",
+        "url": "https://www.baidu.com/s?wd=%E9%87%8D%E5%BA%86%E7%AB%8B%E6%B3%95%EF%BC%9A%E5%AD%A6%E6%A0%A1%E5%8F%AF%E7%A6%81%E6%AD%A2%E5%AD%A6%E7%94%9F%E5%B8%A6%E6%89%8B%E6%9C%BA%E5%85%A5%E6%A0%A1&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "受强暴雨天气影响，温州启动防汛Ⅱ级应急响应，瑞安、苍南、龙港等多地发布紧急通知，9月2日中小学、幼儿园停课一天。当地还落实停运部分山区公交、管控危险路段等多项防汛避险举措。",
+        "summary": "9月1日，《重庆市预防未成年人犯罪条例》正式施行，立法赋予学校权限，可禁止学生携带手机等智能终端产品进入学校或在校园内使用。校方表示有了法规底气，推行更顺畅，但仍需细化管理以平衡沟通需求。",
         "badge": "热搜",
-        "signal": "7,808,933 热度"
+        "signal": "7,809,206 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81578",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49530989",
+        "id": "hn-49525378",
         "category": "dev",
-        "title": "True Rate of Unemployment",
-        "url": "https://www.lisep.org/tru",
+        "title": "Claude Fable 5.1 and Claude Mythos 5.1",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T02:21:10.000Z",
+        "publishedAt": "2026-09-01T17:53:53.000Z",
         "badge": "HN",
-        "signal": "57 分 · 11 评论"
+        "signal": "1138 分 · 1056 评论"
       },
       {
-        "id": "cn-item-9765f6704327b3ba",
+        "id": "cn-item-370146a58da10b7e",
         "category": "cn",
-        "title": "我国在高端遥感动态成像关键技术领域取得重要突破",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-02/10688565.shtml",
+        "title": "这个“一眼看不懂工作内容”的新职业，能“火”多久？",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-02/10688635.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-02T03:46:58.000Z",
-        "summary": "中新网9月2日电 据国家市场监督管理总局网站消息，近日，我国在高端遥感动态成像关键技术领域取得重要突破。针对无人机、卫星、机器人等领域亟待解决的轻量化、低功耗、高动态成像性能相互制约的矛盾，依托中国计量大学建立的国家市场监督管理总局重点实验室(光传感与图像计量)联合北京航空航天大学等单位组织开展技术攻关，实现了小型低功耗约束下厘米级超高分辨率三维成像，解决了低空经济和智能视觉等产业对场景信息的精准捕捉与解析问题。",
+        "publishedAt": "2026-09-02T05:27:28.000Z",
+        "summary": "懂AI的底层逻辑，理解行业痛点，具备“技术转化”能力",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238878",
+        "id": "v2ex-1238890",
         "category": "dev",
-        "title": "数字人开源模型推荐+魔改方案",
-        "url": "https://www.v2ex.com/t/1238878",
+        "title": "The 'gpt-5.6-sol' model is not supported when using Codex with a ChatGPT account.",
+        "url": "https://www.v2ex.com/t/1238890",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:31:08.000Z",
-        "summary": "ps: 节点有问题，劳烦移动一下。我没找到数字人节点 视频生视频模型 1 、音频到视频 1 分钟视频生成时间 3-10 分钟左右 2 、能跑着，走着说，角度最好能 90 度 3 、可以批量生成 4 、交付源代码.能最后封装到给 api 接口 5 、能支持高清，720P 以上 6 、除了改嘴型，背景文字和画面不改变 7 、嘴巴颜色正常，不过红，牙齿清晰 图生视频 1 、图片生成视频时间 1 分钟视频生成时间 30 分钟以内 2 、能跑着，走着说 3 、可以批量生成 5 、能支…",
+        "publishedAt": "2026-09-02T03:59:49.000Z",
+        "summary": "你们遇到这个了吗？刚才出来的，珍离谱",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-14a6e4518d9568a3",
+        "id": "cn-it-4fa3970b36051930",
         "category": "cn",
-        "title": "小米米家夜灯 4 发布：8 个月长续航，单只 59 元",
-        "url": "https://www.ithome.com/0/997/388.htm",
+        "title": "曝尊界 S800 / 问界 M9 领世加长版车主可优先购买华为 Mate XT 2 非凡大师三折叠手机",
+        "url": "https://www.ithome.com/0/997/442.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T04:32:58.000Z",
-        "summary": "IT之家 9 月 2 日消息，小米米家夜灯 4 单只装上架预约，将于 9 月 9 日下周三开启众筹，厂商建议零售价 79 元，众筹价 59 元（IT之家附小米有品官方购买地址： 点此购买 ）。 小米米家夜灯 4 主要是升级了 24GHz 雷达，拥有 120° 大广角，在正前方 3m、侧方 2.5m 范围内可精准识别人体细微动作。黑暗环境下，可实现人来灯亮，人离开后 10 秒后自动关灯。 小米米家夜灯 4 采用背面出光，经墙面充分反射打散光线，支持 1lm、3lm、5lm、1…",
+        "publishedAt": "2026-09-02T07:00:14.000Z",
+        "summary": "IT之家 9 月 2 日消息，据博主 @一针见车 分享， 尊界 S800 和问界 M9 Ultimate 领世加长版车主有新款三折叠的优先购买权 。 参考IT之家此前报道， 华为 Mate XT 2 非凡大师全新展翼三折叠手机已开启预订 ，至高 16GB+2TB 规格、提供灵盾防窥屏可选。根据规划，华为鸿蒙 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会已经定档 9 月 7 日 14:30。 据博主 @熊猫很禿然 爆料，华为 Mate XT…",
         "badge": "IT之家"
       },
       {
@@ -206,17 +206,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-01T18:35:15.000Z",
         "badge": "HN",
-        "signal": "533 分 · 618 评论"
+        "signal": "621 分 · 687 评论"
       },
       {
-        "id": "cn-baidu-b26a9e0f44eeda16",
+        "id": "cn-baidu-efb2bf72ae8d5498",
         "category": "cn",
-        "title": "这届学生的名字都很个性",
-        "url": "https://www.baidu.com/s?wd=%E8%BF%99%E5%B1%8A%E5%AD%A6%E7%94%9F%E7%9A%84%E5%90%8D%E5%AD%97%E9%83%BD%E5%BE%88%E4%B8%AA%E6%80%A7&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "不满舍友排名2600 排名260学生要退学",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%8D%E6%BB%A1%E8%88%8D%E5%8F%8B%E6%8E%92%E5%90%8D2600+%E6%8E%92%E5%90%8D260%E5%AD%A6%E7%94%9F%E8%A6%81%E9%80%80%E5%AD%A6&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "第一批“20后”入学，007、杜甫、圆周率，名字都很个性，子涵、梓萱已成过去式。",
+        "summary": "9月1日，香港中文大学校长徐扬生在开学典礼上透露，曾有一名湖南籍新生因不满与高考排名相差10倍的同学同住一室而提出退学。徐扬生劝其放下包袱，称高考已过去，半年一年后谁学得好还不一定。",
         "badge": "热搜",
-        "signal": "7,711,910 热度"
+        "signal": "7,713,406 热度"
       },
       {
         "id": "github-advisory-ghsa-52xp-w8hr-xv3c",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238877",
+        "id": "v2ex-1238878",
         "category": "dev",
-        "title": "登录接口防重放攻击怎样设计？",
-        "url": "https://www.v2ex.com/t/1238877",
+        "title": "数字人开源模型推荐+魔改方案",
+        "url": "https://www.v2ex.com/t/1238878",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:30:19.000Z",
-        "summary": "请教各位大神一个登录接口安全问题。 我们大作业 web 系统 账号密码登录的现有设计：客户端先拉取服务端 RSA 公钥，使用公钥加密用户名密码提交登录接口。 我发现这个只能防止密码明文被抓包窃听，无法防御重放攻击，攻击者捕获加密报文就可以反复重放登录。 所以 ai 调研了几个方案 1. 新增 challenge 接口，登录前获取一次性 challenge ，challenge 和账号密码一起加密，消费即作废； 2. 客户端携带 nonce+timestamp 随请求一起加密…",
+        "publishedAt": "2026-09-02T03:31:08.000Z",
+        "summary": "ps: 节点有问题，劳烦移动一下。我没找到数字人节点 视频生视频模型 1 、音频到视频 1 分钟视频生成时间 3-10 分钟左右 2 、能跑着，走着说，角度最好能 90 度 3 、可以批量生成 4 、交付源代码.能最后封装到给 api 接口 5 、能支持高清，720P 以上 6 、除了改嘴型，背景文字和画面不改变 7 、嘴巴颜色正常，不过红，牙齿清晰 图生视频 1 、图片生成视频时间 1 分钟视频生成时间 30 分钟以内 2 、能跑着，走着说 3 、可以批量生成 5 、能支…",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-item-e0bbd755fc60dd68",
+        "id": "cn-item-d681b5fd767e66d8",
         "category": "cn",
-        "title": "防范挤压夹伤风险 家用儿童学习桌椅国家标准发布",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-02/10688515.shtml",
+        "title": "高温湿热下，环卫工人工装成了“贴身蒸笼”？",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-02/10688626.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-02T02:45:48.000Z",
-        "summary": "中新网9月2日电 据国家市场监督总局网站消息，近日，市场监管总局批准发布《家用儿童学习桌、椅》(GB/T 48090—2026)国家标准，针对家用儿童学习桌椅产品建立专项安全与性能指标体系。标准明确适用于3岁至14岁儿童阅读、书写、绘画的家用学习桌椅，充分兼顾当前市场产品在升降、角度调节、带电功能等方面的创新设计，系统规定产品技术要求与对应试验方法，为产品生产制造、质量检测、消费选购提供技术支撑。",
+        "publishedAt": "2026-09-02T05:15:18.000Z",
+        "summary": "长袖、厚面料、不透气，穿身上还没干活就闷出一身汗",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49531525",
+        "id": "hn-49530989",
         "category": "dev",
-        "title": "WebFPGA",
-        "url": "https://webfpga.io/",
+        "title": "True Rate of Unemployment",
+        "url": "https://www.lisep.org/tru",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T03:54:58.000Z",
+        "publishedAt": "2026-09-02T02:21:10.000Z",
         "badge": "HN",
-        "signal": "13 分 · 5 评论"
+        "signal": "164 分 · 107 评论"
       },
       {
-        "id": "cn-it-9d9dc6ce3b8b14fb",
+        "id": "cn-it-693076ed5bfbdc21",
         "category": "cn",
-        "title": "育碧收紧《荣耀战魂》游戏多人模式，9 月 10 日起 Linux 玩家无法开黑",
-        "url": "https://www.ithome.com/0/997/387.htm",
+        "title": "BUFFALO 推出其首款轨迹球鼠标 BSTBB700X，整合高速四向金属滚轮",
+        "url": "https://www.ithome.com/0/997/441.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T04:31:02.000Z",
-        "summary": "IT之家 9 月 2 日消息，育碧昨日（9 月 1 日）发布公告，表示由于反作弊系统无法在 Linux / SteamOS 平台上有效运作， 将于 9 月 10 日开始在其平台上封禁《荣耀战魂》（For Honor）多人模式。 对于 Linux 和 Steam Deck 等玩家而言，意味着在 9 月 10 日之后无法“开黑”了。“开黑”是游戏圈常用语，意思是几个认识的人组队一起打游戏，并且能方便地语音或当面交流战术。 IT之家查询公开资料，《荣耀战魂》游戏于 2017 年 …",
+        "publishedAt": "2026-09-02T07:00:04.000Z",
+        "summary": "IT之家 9 月 2 日消息，日本外设制造商 BUFFALO（巴法络）当地时间今日宣布推出其首款轨迹球鼠标 BSTBB700X。这一产品采用右手人体工学模具与拇指操控设计，拥有适度的倾斜。 BSTBB700X 三维 117×95×51 (mm)，采用标准 5 号电池供电，支持 2.4GHz 与蓝牙 5.0（其中蓝牙可同时连接 2 款设备），整体质量约 150g， 日常使用续航可达 30 个月 。 其采用 34mm 球体，底部则是 3 组人造红宝石支撑球；分辨率可在 500 …",
         "badge": "IT之家"
       },
       {
@@ -321,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238874",
+        "id": "v2ex-1238877",
         "category": "dev",
-        "title": "cursor ultra 能多少人共享用?",
-        "url": "https://www.v2ex.com/t/1238874",
+        "title": "登录接口防重放攻击怎样设计？",
+        "url": "https://www.v2ex.com/t/1238877",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:23:40.000Z",
-        "summary": "有没有人试过, 会封号吗",
+        "publishedAt": "2026-09-02T03:30:19.000Z",
+        "summary": "请教各位大神一个登录接口安全问题。 我们大作业 web 系统 账号密码登录的现有设计：客户端先拉取服务端 RSA 公钥，使用公钥加密用户名密码提交登录接口。 我发现这个只能防止密码明文被抓包窃听，无法防御重放攻击，攻击者捕获加密报文就可以反复重放登录。 所以 ai 调研了几个方案 1. 新增 challenge 接口，登录前获取一次性 challenge ，challenge 和账号密码一起加密，消费即作废； 2. 客户端携带 nonce+timestamp 随请求一起加密…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "24 回复"
       },
       {
         "id": "cn-baidu-947b7057bc9a7c96",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "长征一号运载火箭总体设计员韩厚健与主持人撒贝宁共话航天起点，被问及火箭为何命名“长征”，韩老引用毛主席诗句作答：“红军不怕远征难，万水千山只等闲。”这个名字代表着我们要发扬长征的精神，把面前所有的困难克服掉，一直到赶上超过世界的先进水平，登上顶峰。",
         "badge": "热搜",
-        "signal": "7,618,142 热度"
+        "signal": "7,617,865 热度"
       },
       {
         "id": "cisa-kev-cve-2026-66384",
@@ -362,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49529898",
+        "id": "hn-49505170",
         "category": "dev",
-        "title": "The efficient frontier of LLM inference",
-        "url": "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/",
+        "title": "Salad Theory",
+        "url": "https://saladtheory.github.io/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T23:48:05.000Z",
+        "publishedAt": "2026-08-31T03:11:39.000Z",
         "badge": "HN",
-        "signal": "68 分 · 14 评论"
+        "signal": "27 分 · 12 评论"
       },
       {
-        "id": "cn-item-f17fef0ca212217e",
+        "id": "cn-item-5f3575c8c20bfb56",
         "category": "cn",
-        "title": "普京：日本对俄罗斯的态度让我惊讶",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-02/10688483.shtml",
+        "title": "\"甲醛白菜\"被曝光整个行业都遭殃 后遗症怎么治？",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-02/10688617.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-02T02:43:46.000Z",
-        "summary": "中新网9月2日电 综合报道，俄罗斯总统普京9月1日在回答记者提问时，就俄日关系作出表态。根据克里姆林宫网站发布的消息，当被问及日本对普京近期登上南千岛群岛(日本称北方四岛)的反应时，普京称，他对日本方面对此事的立场并不感到惊讶，但日本对俄罗斯的态度令他感到惊讶。",
+        "publishedAt": "2026-09-02T05:05:17.000Z",
+        "summary": "河北省张家口市康保县的“甲醛白菜”传来最新消息，3名涉案嫌疑人已被刑事拘留。不过，其他连锁反应也跟着来了。据媒体报道，“甲醛白菜”被曝光后，正在谈收菜的商贩转身就走，全县2.7万亩白菜，还有1.1万亩滞留地里。",
         "badge": "中新网要闻"
       },
       {
@@ -403,23 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238867",
+        "id": "v2ex-1238874",
         "category": "dev",
-        "title": "GPT sol 的上下文长度设置成多少比较合适，默认的 200k 太短了，随便几下就开始合并了， 1m 到后面又有点顾头不顾尾的",
-        "url": "https://www.v2ex.com/t/1238867",
+        "title": "cursor ultra 能多少人共享用?",
+        "url": "https://www.v2ex.com/t/1238874",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:09:23.000Z",
+        "publishedAt": "2026-09-02T03:23:40.000Z",
+        "summary": "有没有人试过, 会封号吗",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-3c9795e9f7001ffc",
+        "id": "cn-it-126d6290eb8225a1",
         "category": "cn",
-        "title": "小米智能插座 4 发布：升级 Wi-Fi 6 远程控制无需网关，众筹 49 元",
-        "url": "https://www.ithome.com/0/997/385.htm",
+        "title": "马斯克预测 10 年内全球人形机器人超 10 亿台，每台产出是人类 5 倍",
+        "url": "https://www.ithome.com/0/997/440.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T04:25:09.000Z",
-        "summary": "IT之家 9 月 2 日消息，小米昨日推出了全新一代的小米智能插座 4 新品，厂商建议零售价 59 元，众筹价 49 元，将于 9 月 9 日下周三开启众筹（IT之家附小米有品官方购买地址： 点此购买 ）。 小米智能插座 4 尺寸为 52×41×57.6mm，相比上一代主要是升级了 Wi-Fi 6 远程连接（IT之家注：仅支持 2.4GHz 频段）支持以及新国标插脚，适配各种插排，电量统计图 + 功率统计图，显示年 / 月 / 周 / 日。 这款产品支持小米澎湃智联，可定制…",
+        "publishedAt": "2026-09-02T06:59:24.000Z",
+        "summary": "IT之家 9 月 2 日消息，昨日（9 月 1 日）在美国北卡罗来纳州教堂山举行的二十国集团（G20）创新部长级会议上， 全球首富埃隆 · 马斯克（Elon Musk）发表视频讲话，预估未来 10 年内人形机器人数量将超过 10 亿台。 IT之家援引 barrons 媒体报道，在本次视频讲话中，马斯克表示： 在未来 10 年内，全球人形机器人数量将超过 10 亿台，生产力将高于全球人类生产力总和。 未来 10 年内将至少有 10 亿台机器人，每台机器人的产出将至少是人类工作…",
         "badge": "IT之家"
       },
       {
@@ -444,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49529621",
+        "id": "hn-49531525",
         "category": "dev",
-        "title": "FBI Probes Service Selling 153M+ Drivers Licenses",
-        "url": "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/",
+        "title": "WebFPGA",
+        "url": "https://webfpga.io/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T23:17:43.000Z",
+        "publishedAt": "2026-09-02T03:54:58.000Z",
         "badge": "HN",
-        "signal": "89 分 · 24 评论"
+        "signal": "40 分 · 20 评论"
       },
       {
-        "id": "cn-baidu-3cfd25abb86ba430",
+        "id": "cn-baidu-d2d81d05546f0c3f",
         "category": "cn",
-        "title": "皇马 不删帖不道歉",
-        "url": "https://www.baidu.com/s?wd=%E7%9A%87%E9%A9%AC+%E4%B8%8D%E5%88%A0%E5%B8%96%E4%B8%8D%E9%81%93%E6%AD%89&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "戴森牙刷 不坑穷人",
+        "url": "https://www.baidu.com/s?wd=%E6%88%B4%E6%A3%AE%E7%89%99%E5%88%B7+%E4%B8%8D%E5%9D%91%E7%A9%B7%E4%BA%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "当地时间8月30日，皇马赛前为尼泊尔泥石流遇难者默哀，但其海外社交账号发文出现错误，将西藏与尼泊尔并列，全文只字不提中国。在中国网友表达不满后，皇马既不删帖，也不修改，更不解释，截至9月2日上午，错误帖文仍挂在那里。",
+        "summary": "9月1日，戴森在巴黎发布首款口腔护理产品CameraJet可视成像电动牙刷，国行定价3899元，将于9月7日全平台开售。该牙刷内置摄像头与AI芯片，可实时监控口腔并精准冲洗。因定价远超国产主流价位，网友调侃：“不坑穷人”。",
         "badge": "热搜",
-        "signal": "7,524,164 热度"
+        "signal": "7,522,948 热度"
       },
       {
         "id": "github-advisory-ghsa-6hwm-xvph-95vm",
@@ -484,13 +485,12 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238846",
+        "id": "v2ex-1238867",
         "category": "dev",
-        "title": "之前在站里发帖问了大家有没有合适的测试工作流或者自动化工具，结果……",
-        "url": "https://www.v2ex.com/t/1238846",
+        "title": "GPT sol 的上下文长度设置成多少比较合适，默认的 200k 太短了，随便几下就开始合并了， 1m 到后面又有点顾头不顾尾的",
+        "url": "https://www.v2ex.com/t/1238867",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T02:19:40.000Z",
-        "summary": "好像没有一个大家都认可、称得上众望所归的方向。评论区给了不少思路，我自己试了几个，但还是有几个点有点纠结。 有佬说让 agent 自己加单元测试就行。但我有个疑惑，就是 agent 自己写的测试，会不会跟它写的代码一起错？相当于裁判下场自己判，全绿也不代表真对，而且有些方向它自己可能压根想不到。这怎么保证测试本身是对的？ 或者把所有功能、历史踩过的坑都落盘成测试，听着最靠谱，但对日常随手搓的小工具来说，维护成本会不会有点高？ 还有佬说该花的小钱避免不掉。所以我也去试了之前问…",
+        "publishedAt": "2026-09-02T03:09:23.000Z",
         "badge": "程序员",
         "signal": "6 回复"
       }
@@ -509,7 +509,7 @@
         "url": "https://github.com/Gitlawb/openclaude",
         "description": "runs anywhere. uses anything",
         "language": "TypeScript",
-        "stars": 31464,
+        "stars": 31565,
         "starsToday": 80
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/Imbad0202/academic-research-skills",
         "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
         "language": "Python",
-        "stars": 45064,
+        "stars": 45163,
         "starsToday": 193
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 29746,
+        "stars": 29903,
         "starsToday": 3128
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/iv-org/invidious",
         "description": "Invidious is an alternative front-end to YouTube",
         "language": "Crystal",
-        "stars": 23830,
+        "stars": 23872,
         "starsToday": 577
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "language": "Python",
-        "stars": 57264,
+        "stars": 57378,
         "starsToday": 1005
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/3b1b/manim",
         "description": "Animation engine for explanatory math videos",
         "language": "Python",
-        "stars": 92651,
+        "stars": 92699,
         "starsToday": 86
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/firecrawl/pdf-inspector",
         "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "language": "Rust",
-        "stars": 18050,
+        "stars": 18119,
         "starsToday": 541
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/browser-use/video-use",
         "description": "Edit videos with coding agents",
         "language": "Python",
-        "stars": 23098,
+        "stars": 23180,
         "starsToday": 472
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 41683,
+        "stars": 41781,
         "starsToday": 912
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/handsomestWei/patent-disclosure-skill",
         "description": "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
         "language": "Python",
-        "stars": 6839,
+        "stars": 6902,
         "starsToday": 501
       }
     ],
-    "updatedAt": "2026-09-02T04:42:15.266Z"
+    "updatedAt": "2026-09-02T07:06:01.762Z"
   }
 }
