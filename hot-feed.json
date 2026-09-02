@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-02T07:06:01.762Z",
+  "generatedAt": "2026-09-02T09:38:47.320Z",
   "intelligence": {
-    "updatedAt": "2026-09-02T07:06:01.762Z",
+    "updatedAt": "2026-09-02T09:38:47.320Z",
     "items": [
       {
-        "id": "cn-item-d39a456edf3789d2",
+        "id": "cn-item-b27665ef51229e6d",
         "category": "cn",
-        "title": "印度哈里亚纳邦发生交通事故，致6死14伤",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-02/10688662.shtml",
+        "title": "“女孩办幼升小升学宴 ”？安徽阜阳辟谣：不实信息",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-02/10688888.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-02T06:07:59.000Z",
-        "summary": "中新网9月2日电 据《印度时报》报道，印度北部哈里亚纳邦1日凌晨发生一起交通事故，一辆载有朝圣者的皮卡车撞上停在高速公路路边的卡车，造成6人死亡、14人重伤。",
+        "publishedAt": "2026-09-02T09:28:17.000Z",
+        "summary": "中新网合肥9月2日电 (记者 赵强)近日，有网友称“女孩办幼升小升学宴”。安徽省阜阳市颍东区委宣传部2日发布辟谣称：信息不实。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49531651",
+        "id": "hn-49533497",
         "category": "dev",
-        "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
-        "url": "https://arxiv.org/abs/2608.29530",
+        "title": "Commodore 64 released September 1, 1982",
+        "url": "https://dfarq.homeip.net/commodore-64-released-september-1-1982/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T04:15:56.000Z",
+        "publishedAt": "2026-09-02T08:36:43.000Z",
         "badge": "HN",
-        "signal": "67 分 · 11 评论"
+        "signal": "27 分 · 1 评论"
       },
       {
-        "id": "cn-it-09d665b8d1439564",
+        "id": "cn-it-1708fb19d5a41f40",
         "category": "cn",
-        "title": "继谷歌地图后，苹果地图面向美国用户将安大略湖更名为“美国湖”",
-        "url": "https://www.ithome.com/0/997/444.htm",
+        "title": "“中国具身智能 Tier 1 产业联盟”成立，星源智与灵心巧手共同发起",
+        "url": "https://www.ithome.com/0/997/543.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T07:04:28.000Z",
-        "summary": "IT之家 9 月 2 日消息，苹果已在其 Maps 地图应用中将“安大略湖”（Lake Ontario）更名为“美国湖”（Lake America），这一调整源于美国总统唐纳德 · 特朗普此前发布的一项行政命令。 此次更名目前仅面向美国用户。加拿大境内的用户在苹果地图中仍将看到“Lake Ontario（安大略湖）”这一名称。 苹果的这一举动发生在美加两国贸易谈判于上月底破裂之后。当时，美国宣布对价值 200 亿美元 （IT之家注：现汇率约合 1,347.38 亿元人民币）…",
+        "publishedAt": "2026-09-02T09:31:27.000Z",
+        "summary": "IT之家 9 月 2 日消息，据界面新闻今天报道，由星源智与灵心巧手共同发起的“中国具身智能 Tier 1 产业联盟”今日正式成立。 IT之家从原报道获悉，“中国具身智能 Tier 1 产业联盟”联合奥比中光、法奥机器人、福莱新材、禾赛科技、华威科、讯飞机器人超脑平台、览沃科技、灵猴机器人、珞石机器人等企业。 同时，该联盟的参与企业还有迈尔微视、钕娲创造、泉智博、森云智能、速腾聚创、他山、无问智科、鑫精诚、移远通信、知行具身等，纵贯线 20 余家产业链。成员完整覆盖具身大脑…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238928",
+        "id": "v2ex-1238990",
         "category": "dev",
-        "title": "Cursor/Copilot 的\"高级请求\"额度， Agent 模式几分钟就能刷完",
-        "url": "https://www.v2ex.com/t/1238928",
+        "title": "OAI 这几天还会再重置吗？",
+        "url": "https://www.v2ex.com/t/1238990",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T06:45:26.000Z",
-        "summary": "最近发现一个坑：Cursor 、GitHub Copilot 这类工具按\"高级请求数\"计费封顶，单次代码补全消耗很少，但开 Agent 模式（让它自己读文件、跑测试、多轮改代码）时，每一步操作都可能各算一次请求，几分钟就能把平时几天的额度用完，账单上却只显示一个笼统的总数，很难当场意识到消耗速度差这么多。 写了篇拆解，讲清楚为什么 Agent 模式消耗更快、怎么在工具后台核查请求类型细分、怎么根据任务类型选补全模式还是 Agent 模式控制成本： https://ponr.…",
+        "publishedAt": "2026-09-02T09:21:01.000Z",
+        "summary": "扛不住了，一个任务跑了 5 个小时了还没跑完 已经烧掉了 20x 40% 的周额度了",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-48ddb5ec1d2951a7",
+        "id": "cn-baidu-202b8379be56080b",
         "category": "cn",
-        "title": "重庆立法：学校可禁止学生带手机入校",
-        "url": "https://www.baidu.com/s?wd=%E9%87%8D%E5%BA%86%E7%AB%8B%E6%B3%95%EF%BC%9A%E5%AD%A6%E6%A0%A1%E5%8F%AF%E7%A6%81%E6%AD%A2%E5%AD%A6%E7%94%9F%E5%B8%A6%E6%89%8B%E6%9C%BA%E5%85%A5%E6%A0%A1&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "泥石流救援进入核心区 这一幕泪目",
+        "url": "https://www.baidu.com/s?wd=%E6%B3%A5%E7%9F%B3%E6%B5%81%E6%95%91%E6%8F%B4%E8%BF%9B%E5%85%A5%E6%A0%B8%E5%BF%83%E5%8C%BA+%E8%BF%99%E4%B8%80%E5%B9%95%E6%B3%AA%E7%9B%AE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月1日，《重庆市预防未成年人犯罪条例》正式施行，立法赋予学校权限，可禁止学生携带手机等智能终端产品进入学校或在校园内使用。校方表示有了法规底气，推行更顺畅，但仍需细化管理以平衡沟通需求。",
+        "summary": "9月2日上午，吉隆泥石流救援通道陆路通道已基本打通，救援人员、救援物资和部分装备已进入核心区并开展深入救援工作。吉隆口岸国门一侧半山腰上，“我爱你中国”五个字虽被泥石流冲刷仍然清晰可见。",
         "badge": "热搜",
-        "signal": "7,809,206 热度"
+        "signal": "7,808,205 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81578",
@@ -124,16 +124,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-01T17:53:53.000Z",
         "badge": "HN",
-        "signal": "1138 分 · 1056 评论"
+        "signal": "1239 分 · 1159 评论"
       },
       {
-        "id": "cn-item-370146a58da10b7e",
+        "id": "cn-item-41f6007e720e668f",
         "category": "cn",
-        "title": "这个“一眼看不懂工作内容”的新职业，能“火”多久？",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-02/10688635.shtml",
+        "title": "市场监管总局：上半年全国市场监管系统查办案件64.17万件",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-02/10688840.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-02T05:27:28.000Z",
-        "summary": "懂AI的底层逻辑，理解行业痛点，具备“技术转化”能力",
+        "publishedAt": "2026-09-02T08:47:07.000Z",
+        "summary": "中新网9月2日电 据“市说新语”微信公众号消息，近日，全国市场监管执法稽查工作暨查处“幽灵外卖”违法行为座谈会在内蒙古自治区包头市召开。市场监管总局副局长白清元出席会议并讲话。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238890",
+        "id": "v2ex-1238979",
         "category": "dev",
-        "title": "The 'gpt-5.6-sol' model is not supported when using Codex with a ChatGPT account.",
-        "url": "https://www.v2ex.com/t/1238890",
+        "title": "通过 CLIProxyAPI 代理 ChatGPT 订阅并给其他 Agent 使用，真的不会被封号吗？",
+        "url": "https://www.v2ex.com/t/1238979",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:59:49.000Z",
-        "summary": "你们遇到这个了吗？刚才出来的，珍离谱",
+        "publishedAt": "2026-09-02T08:45:56.000Z",
+        "summary": "Tibo 推特上说这种方式是支持的，但还是有看到被封号的。所以来论坛里咨询一下。 目前在用 CLIProxyAPI 代理 Gemini AI 订阅，一直都可以使用，暂未被封号。",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-4fa3970b36051930",
+        "id": "cn-it-425b7cfeebd31b2b",
         "category": "cn",
-        "title": "曝尊界 S800 / 问界 M9 领世加长版车主可优先购买华为 Mate XT 2 非凡大师三折叠手机",
-        "url": "https://www.ithome.com/0/997/442.htm",
+        "title": "马斯克：如果猎鹰 1 号第四次发射也失败，SpaceX 就没了",
+        "url": "https://www.ithome.com/0/997/542.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T07:00:14.000Z",
-        "summary": "IT之家 9 月 2 日消息，据博主 @一针见车 分享， 尊界 S800 和问界 M9 Ultimate 领世加长版车主有新款三折叠的优先购买权 。 参考IT之家此前报道， 华为 Mate XT 2 非凡大师全新展翼三折叠手机已开启预订 ，至高 16GB+2TB 规格、提供灵盾防窥屏可选。根据规划，华为鸿蒙 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会已经定档 9 月 7 日 14:30。 据博主 @熊猫很禿然 爆料，华为 Mate XT…",
+        "publishedAt": "2026-09-02T09:31:16.000Z",
+        "summary": "IT之家 9 月 2 日消息，埃隆 · 马斯克近日再次提到一个关于 SpaceX 创业历程的事实：如果“猎鹰 1 号”（Falcon 1）第四次发射也失败，SpaceX 就不会存在了。这番话回应了彼得 · 戴曼迪斯的一则推文 —— 在连续三次发射失败后，SpaceX 当时只剩下最后一次尝试的资金。 彼得 · 戴曼迪斯在 X 上表示，如今人们对 SpaceX 成功的认可，并不能抹去这家公司早期经历的艰难。他写道：“几乎没人记得，埃隆的第一枚火箭连续失败了三次，而当时的资金只够…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49526069",
+        "id": "hn-49531651",
         "category": "dev",
-        "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
-        "url": "https://danluu.com/zitron/",
+        "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
+        "url": "https://arxiv.org/abs/2608.29530",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T18:35:15.000Z",
+        "publishedAt": "2026-09-02T04:15:56.000Z",
         "badge": "HN",
-        "signal": "621 分 · 687 评论"
+        "signal": "138 分 · 43 评论"
       },
       {
-        "id": "cn-baidu-efb2bf72ae8d5498",
+        "id": "cn-baidu-57cdd0c8fb66ec71",
         "category": "cn",
-        "title": "不满舍友排名2600 排名260学生要退学",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%8D%E6%BB%A1%E8%88%8D%E5%8F%8B%E6%8E%92%E5%90%8D2600+%E6%8E%92%E5%90%8D260%E5%AD%A6%E7%94%9F%E8%A6%81%E9%80%80%E5%AD%A6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "黄之锋当庭认罪",
+        "url": "https://www.baidu.com/s?wd=%E9%BB%84%E4%B9%8B%E9%94%8B%E5%BD%93%E5%BA%AD%E8%AE%A4%E7%BD%AA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月1日，香港中文大学校长徐扬生在开学典礼上透露，曾有一名湖南籍新生因不满与高考排名相差10倍的同学同住一室而提出退学。徐扬生劝其放下包袱，称高考已过去，半年一年后谁学得好还不一定。",
+        "summary": "9月2日，香港高等法院开庭审理反中乱港分子黄之锋“串谋勾结外国或者境外势力危害国家安全”案，黄之锋在庭上表示认罪。",
         "badge": "热搜",
-        "signal": "7,713,406 热度"
+        "signal": "7,712,507 热度"
       },
       {
         "id": "github-advisory-ghsa-52xp-w8hr-xv3c",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238878",
+        "id": "v2ex-1238974",
         "category": "dev",
-        "title": "数字人开源模型推荐+魔改方案",
-        "url": "https://www.v2ex.com/t/1238878",
+        "title": "各位大佬推荐一下跨模型规范方案啊",
+        "url": "https://www.v2ex.com/t/1238974",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:31:08.000Z",
-        "summary": "ps: 节点有问题，劳烦移动一下。我没找到数字人节点 视频生视频模型 1 、音频到视频 1 分钟视频生成时间 3-10 分钟左右 2 、能跑着，走着说，角度最好能 90 度 3 、可以批量生成 4 、交付源代码.能最后封装到给 api 接口 5 、能支持高清，720P 以上 6 、除了改嘴型，背景文字和画面不改变 7 、嘴巴颜色正常，不过红，牙齿清晰 图生视频 1 、图片生成视频时间 1 分钟视频生成时间 30 分钟以内 2 、能跑着，走着说 3 、可以批量生成 5 、能支…",
+        "publishedAt": "2026-09-02T08:29:24.000Z",
+        "summary": "我现在主要是通过 codex cli 编码 , 有时候可能会因为其他原因换模型, 或者上下文太多了 , 导致每次有些打包方式 ,以及归档等细节需要重新引导 , 有没有什么文件允许 claude codex cursor 等主流都能用的 , 这样我只需要管那个配置就好了, 包括多人协同 , 你们又是怎么解决的啊",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-item-d681b5fd767e66d8",
+        "id": "cn-item-dc2056cf17edf215",
         "category": "cn",
-        "title": "高温湿热下，环卫工人工装成了“贴身蒸笼”？",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-02/10688626.shtml",
+        "title": "国务院任免国家工作人员",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-02/10688829.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-02T05:15:18.000Z",
-        "summary": "长袖、厚面料、不透气，穿身上还没干活就闷出一身汗",
+        "publishedAt": "2026-09-02T08:36:58.000Z",
+        "summary": "中新网9月2日电 据人社部网站消息，国务院任免国家工作人员。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49530989",
+        "id": "hn-49526069",
         "category": "dev",
-        "title": "True Rate of Unemployment",
-        "url": "https://www.lisep.org/tru",
+        "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
+        "url": "https://danluu.com/zitron/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T02:21:10.000Z",
+        "publishedAt": "2026-09-01T18:35:15.000Z",
         "badge": "HN",
-        "signal": "164 分 · 107 评论"
+        "signal": "701 分 · 759 评论"
       },
       {
-        "id": "cn-it-693076ed5bfbdc21",
+        "id": "cn-it-7f6075096777c60f",
         "category": "cn",
-        "title": "BUFFALO 推出其首款轨迹球鼠标 BSTBB700X，整合高速四向金属滚轮",
-        "url": "https://www.ithome.com/0/997/441.htm",
+        "title": "零跑 C 系列汽车全球累计销量突破 90 万台，1 个月增加 5 万台",
+        "url": "https://www.ithome.com/0/997/541.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T07:00:04.000Z",
-        "summary": "IT之家 9 月 2 日消息，日本外设制造商 BUFFALO（巴法络）当地时间今日宣布推出其首款轨迹球鼠标 BSTBB700X。这一产品采用右手人体工学模具与拇指操控设计，拥有适度的倾斜。 BSTBB700X 三维 117×95×51 (mm)，采用标准 5 号电池供电，支持 2.4GHz 与蓝牙 5.0（其中蓝牙可同时连接 2 款设备），整体质量约 150g， 日常使用续航可达 30 个月 。 其采用 34mm 球体，底部则是 3 组人造红宝石支撑球；分辨率可在 500 …",
+        "publishedAt": "2026-09-02T09:29:30.000Z",
+        "summary": "IT之家 9 月 2 日消息，零跑汽车今日宣布， 零跑 C 系列全球累计销量突破 90 万台 。 IT之家注意到，一个月前的 8 月 2 日，零跑汽车曾宣布， 零跑 C 系全球累计销量超 85 万台 。 零跑汽车昨日发布的 2026 年 8 月交付数据显示，8 月， 零跑全球交付量达 103,129 辆 ，同比增长 80.7%， 单月交付再次突破 10 万大关 。 9 月 16 日， 零跑将举办 2026 年度技术发布会 ，发布“达到全行业第一梯队水平的世界模型辅助驾驶以及…",
         "badge": "IT之家"
       },
       {
@@ -321,25 +321,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238877",
+        "id": "v2ex-1238942",
         "category": "dev",
-        "title": "登录接口防重放攻击怎样设计？",
-        "url": "https://www.v2ex.com/t/1238877",
+        "title": "5X 的 Codex 一天半烧完了，晒晒我的智障多 agent 工作流",
+        "url": "https://www.v2ex.com/t/1238942",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:30:19.000Z",
-        "summary": "请教各位大神一个登录接口安全问题。 我们大作业 web 系统 账号密码登录的现有设计：客户端先拉取服务端 RSA 公钥，使用公钥加密用户名密码提交登录接口。 我发现这个只能防止密码明文被抓包窃听，无法防御重放攻击，攻击者捕获加密报文就可以反复重放登录。 所以 ai 调研了几个方案 1. 新增 challenge 接口，登录前获取一次性 challenge ，challenge 和账号密码一起加密，消费即作废； 2. 客户端携带 nonce+timestamp 随请求一起加密…",
+        "publishedAt": "2026-09-02T07:16:15.000Z",
+        "summary": "充了 100 刀 codex 想做点正经东西，结果一天半就没了，项目还卡在半路，越想越亏，来吐槽一下。 我干了个挺蠢的事：一个项目塞了好几个 agent ，产品、测试、运营、后端、桌面端。本来想的是流程正规一点，学大厂那套需求评审测试验收，能少返工。 结果实际流程变成了这样——需求来了先丢给运营 agent 去\"调研\"，调研完产品 agent 出方案，方案出来测试 agent 要先写测试用例，都齐了后端和桌面端才开始写代码。写完你以为完事了？天真，还要挨个过审：测试审一遍，…",
         "badge": "程序员",
-        "signal": "24 回复"
+        "signal": "20 回复"
       },
       {
-        "id": "cn-baidu-947b7057bc9a7c96",
+        "id": "cn-baidu-53f8f4fe92356784",
         "category": "cn",
-        "title": "中国运载火箭为啥叫长征",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E8%BF%90%E8%BD%BD%E7%81%AB%E7%AE%AD%E4%B8%BA%E5%95%A5%E5%8F%AB%E9%95%BF%E5%BE%81&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "光伏装机超煤电 电力供给迎新格局",
+        "url": "https://www.baidu.com/s?wd=%E5%85%89%E4%BC%8F%E8%A3%85%E6%9C%BA%E8%B6%85%E7%85%A4%E7%94%B5+%E7%94%B5%E5%8A%9B%E4%BE%9B%E7%BB%99%E8%BF%8E%E6%96%B0%E6%A0%BC%E5%B1%80&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "长征一号运载火箭总体设计员韩厚健与主持人撒贝宁共话航天起点，被问及火箭为何命名“长征”，韩老引用毛主席诗句作答：“红军不怕远征难，万水千山只等闲。”这个名字代表着我们要发扬长征的精神，把面前所有的困难克服掉，一直到赶上超过世界的先进水平，登上顶峰。",
+        "summary": "国家能源局9月1日发布数据，截至今年7月底，我国光伏发电装机达到12.86亿千瓦，历史性超过煤电装机（12.85亿千瓦），成为我国第一大电源。这一里程碑式的事件，意味着长期以来煤电作为我国第一大电源的格局被打破，新能源从补充能源加快向装机主力转变，以新能源为主体的新型电力系统加速构建。",
         "badge": "热搜",
-        "signal": "7,617,865 热度"
+        "signal": "7,618,756 热度"
       },
       {
         "id": "cisa-kev-cve-2026-66384",
@@ -362,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49505170",
+        "id": "hn-49524863",
         "category": "dev",
-        "title": "Salad Theory",
-        "url": "https://saladtheory.github.io/",
+        "title": "Fine, I'll build my own text editor",
+        "url": "https://dbushell.com/2026/09/01/text-editor/",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T03:11:39.000Z",
+        "publishedAt": "2026-09-01T17:12:15.000Z",
         "badge": "HN",
-        "signal": "27 分 · 12 评论"
+        "signal": "117 分 · 104 评论"
       },
       {
-        "id": "cn-item-5f3575c8c20bfb56",
+        "id": "cn-item-91798ce70f73d040",
         "category": "cn",
-        "title": "\"甲醛白菜\"被曝光整个行业都遭殃 后遗症怎么治？",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-02/10688617.shtml",
+        "title": "河北高阳警方通报“女子被当街殴打撕扯”：2人被刑拘",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-02/10688826.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-02T05:05:17.000Z",
-        "summary": "河北省张家口市康保县的“甲醛白菜”传来最新消息，3名涉案嫌疑人已被刑事拘留。不过，其他连锁反应也跟着来了。据媒体报道，“甲醛白菜”被曝光后，正在谈收菜的商贩转身就走，全县2.7万亩白菜，还有1.1万亩滞留地里。",
+        "publishedAt": "2026-09-02T08:35:58.000Z",
+        "summary": "中新网9月2日电 据“高阳公安”微信公众号消息，9月2日，河北高阳县公安局发布警情通报：",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238874",
+        "id": "v2ex-1238938",
         "category": "dev",
-        "title": "cursor ultra 能多少人共享用?",
-        "url": "https://www.v2ex.com/t/1238874",
+        "title": "为了解决通勤路上无法听网页的痛点，我开发了这个 app",
+        "url": "https://www.v2ex.com/t/1238938",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:23:40.000Z",
-        "summary": "有没有人试过, 会封号吗",
+        "publishedAt": "2026-09-02T07:07:43.000Z",
+        "summary": "内置浏览器：能登录、能记住 Cookie 。就算杀掉进程再开，登录状态还在。 一键朗读：点一下就能抽正文并朗读。它会先预览标题和字数，不喜欢的随时取消。 双语音引擎：自带微软免费音色，也能接你自己的接口。音频会缓存，重新听秒出声。 断点续播：后台锁屏都能放。它记得你听到哪了，下次回来接着读。 这项目用 Flutter 写的，代码全开源在 GitHub 上。不过它也有局限：强反爬的网站可能打不开。而且登录态不会同步系统浏览器。 用了大约 3 小时纯 glm-3.5-flash…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-126d6290eb8225a1",
+        "id": "cn-it-79a772cd0b802367",
         "category": "cn",
-        "title": "马斯克预测 10 年内全球人形机器人超 10 亿台，每台产出是人类 5 倍",
-        "url": "https://www.ithome.com/0/997/440.htm",
+        "title": "小米 18 Fold“中折叠”手机将搭载小爱灵感球：轻松一拖即可完成各类任务",
+        "url": "https://www.ithome.com/0/997/540.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T06:59:24.000Z",
-        "summary": "IT之家 9 月 2 日消息，昨日（9 月 1 日）在美国北卡罗来纳州教堂山举行的二十国集团（G20）创新部长级会议上， 全球首富埃隆 · 马斯克（Elon Musk）发表视频讲话，预估未来 10 年内人形机器人数量将超过 10 亿台。 IT之家援引 barrons 媒体报道，在本次视频讲话中，马斯克表示： 在未来 10 年内，全球人形机器人数量将超过 10 亿台，生产力将高于全球人类生产力总和。 未来 10 年内将至少有 10 亿台机器人，每台机器人的产出将至少是人类工作…",
+        "publishedAt": "2026-09-02T09:28:18.000Z",
+        "summary": "IT之家 9 月 2 日消息，今天（2 日）下午，小米创办人、董事长兼 CEO 雷军发文预热小米 18 Fold“中折叠”手机。新机将搭载“小爱灵感球”，带来全新的交互体验：轻松一拖精准识别图文信息，简单一句高效完成复杂操作。 今年 8 月，小米澎湃 OS 官方透露，“超级小爱 2.0”处于内测阶段，为了集中开发资源快速改善体验，部分新功能将分批开放测试。根据当前计划， “超级小爱灵感球”将在 9 月内上线 Beta 版 ，“取餐码上岛”将不晚于 8 月底上线 Beta 版…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49531525",
+        "id": "hn-49529621",
         "category": "dev",
-        "title": "WebFPGA",
-        "url": "https://webfpga.io/",
+        "title": "FBI Probes Service Selling 153M+ Drivers Licenses",
+        "url": "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T03:54:58.000Z",
+        "publishedAt": "2026-09-01T23:17:43.000Z",
         "badge": "HN",
-        "signal": "40 分 · 20 评论"
+        "signal": "211 分 · 86 评论"
       },
       {
-        "id": "cn-baidu-d2d81d05546f0c3f",
+        "id": "cn-baidu-c6c3175064df829c",
         "category": "cn",
-        "title": "戴森牙刷 不坑穷人",
-        "url": "https://www.baidu.com/s?wd=%E6%88%B4%E6%A3%AE%E7%89%99%E5%88%B7+%E4%B8%8D%E5%9D%91%E7%A9%B7%E4%BA%BA&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "浙江遭遇“隔山打牛式”特大暴雨",
+        "url": "https://www.baidu.com/s?wd=%E6%B5%99%E6%B1%9F%E9%81%AD%E9%81%87%E2%80%9C%E9%9A%94%E5%B1%B1%E6%89%93%E7%89%9B%E5%BC%8F%E2%80%9D%E7%89%B9%E5%A4%A7%E6%9A%B4%E9%9B%A8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月1日，戴森在巴黎发布首款口腔护理产品CameraJet可视成像电动牙刷，国行定价3899元，将于9月7日全平台开售。该牙刷内置摄像头与AI芯片，可实时监控口腔并精准冲洗。因定价远超国产主流价位，网友调侃：“不坑穷人”。",
+        "summary": "近日，受台风沙德尔倒槽与冷空气共同影响，浙江出现隔山打牛式特大暴雨，浙南沿海雨势极端罕见，苍南多地雨量打破纪录。",
         "badge": "热搜",
-        "signal": "7,522,948 热度"
+        "signal": "7,520,069 热度"
       },
       {
         "id": "github-advisory-ghsa-6hwm-xvph-95vm",
@@ -485,14 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238867",
+        "id": "v2ex-1238928",
         "category": "dev",
-        "title": "GPT sol 的上下文长度设置成多少比较合适，默认的 200k 太短了，随便几下就开始合并了， 1m 到后面又有点顾头不顾尾的",
-        "url": "https://www.v2ex.com/t/1238867",
+        "title": "Cursor/Copilot 的\"高级请求\"额度， Agent 模式几分钟就能刷完",
+        "url": "https://www.v2ex.com/t/1238928",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T03:09:23.000Z",
+        "publishedAt": "2026-09-02T06:45:26.000Z",
+        "summary": "最近发现一个坑：Cursor 、GitHub Copilot 这类工具按\"高级请求数\"计费封顶，单次代码补全消耗很少，但开 Agent 模式（让它自己读文件、跑测试、多轮改代码）时，每一步操作都可能各算一次请求，几分钟就能把平时几天的额度用完，账单上却只显示一个笼统的总数，很难当场意识到消耗速度差这么多。 写了篇拆解，讲清楚为什么 Agent 模式消耗更快、怎么在工具后台核查请求类型细分、怎么根据任务类型选补全模式还是 Agent 模式控制成本： https://ponr.…",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -509,7 +510,7 @@
         "url": "https://github.com/Gitlawb/openclaude",
         "description": "runs anywhere. uses anything",
         "language": "TypeScript",
-        "stars": 31565,
+        "stars": 31681,
         "starsToday": 80
       },
       {
@@ -519,7 +520,7 @@
         "url": "https://github.com/Imbad0202/academic-research-skills",
         "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
         "language": "Python",
-        "stars": 45163,
+        "stars": 45282,
         "starsToday": 193
       },
       {
@@ -529,7 +530,7 @@
         "url": "https://github.com/THU-MAIC/OpenMAIC",
         "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "language": "TypeScript",
-        "stars": 29903,
+        "stars": 30089,
         "starsToday": 3128
       },
       {
@@ -539,7 +540,7 @@
         "url": "https://github.com/iv-org/invidious",
         "description": "Invidious is an alternative front-end to YouTube",
         "language": "Crystal",
-        "stars": 23872,
+        "stars": 23905,
         "starsToday": 577
       },
       {
@@ -549,7 +550,7 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "language": "Python",
-        "stars": 57378,
+        "stars": 57519,
         "starsToday": 1005
       },
       {
@@ -559,7 +560,7 @@
         "url": "https://github.com/3b1b/manim",
         "description": "Animation engine for explanatory math videos",
         "language": "Python",
-        "stars": 92699,
+        "stars": 92777,
         "starsToday": 86
       },
       {
@@ -569,7 +570,7 @@
         "url": "https://github.com/firecrawl/pdf-inspector",
         "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "language": "Rust",
-        "stars": 18119,
+        "stars": 18196,
         "starsToday": 541
       },
       {
@@ -579,7 +580,7 @@
         "url": "https://github.com/browser-use/video-use",
         "description": "Edit videos with coding agents",
         "language": "Python",
-        "stars": 23180,
+        "stars": 23294,
         "starsToday": 472
       },
       {
@@ -589,7 +590,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 41781,
+        "stars": 41912,
         "starsToday": 912
       },
       {
@@ -599,10 +600,10 @@
         "url": "https://github.com/handsomestWei/patent-disclosure-skill",
         "description": "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
         "language": "Python",
-        "stars": 6902,
+        "stars": 7002,
         "starsToday": 501
       }
     ],
-    "updatedAt": "2026-09-02T07:06:01.762Z"
+    "updatedAt": "2026-09-02T09:38:47.320Z"
   }
 }
