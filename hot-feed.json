@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-02T14:30:20.891Z",
+  "generatedAt": "2026-09-02T18:43:41.332Z",
   "intelligence": {
-    "updatedAt": "2026-09-02T14:30:20.891Z",
+    "updatedAt": "2026-09-02T18:43:41.332Z",
     "items": [
       {
         "id": "cn-item-a6af3f5c741fda16",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-82078",
+        "id": "cisa-kev-cve-2026-59822",
         "category": "security",
-        "title": "PaperCut NG/MF：PaperCut NG/MF Unsafe Reflection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-82078",
+        "title": "BerriAI LiteLLM：BerriAI LiteLLM Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-59822",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-31T00:00:00.000Z",
-        "summary": "PaperCut NG/MF contains an unsafe reflection vulnerability that allows an attacker to manipulate system configuration parameters and execute arbitrary Java bytecode residing on the application classpath under the security context of the Pa…",
-        "badge": "CVE-2026-82078",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "publishedAt": "2026-09-02T00:00:00.000Z",
+        "summary": "BerriAI LiteLLM contains an improper authentication vulnerability in the MCP Streamable HTTP endpoint that could allow an unauthenticated attacker to establish an authenticated MCP session using an arbitrary Bearer token.",
+        "badge": "CVE-2026-59822",
+        "signal": "已遭利用 · 整改期限 2026-09-16"
       },
       {
         "id": "ai-openai-b0cbef382238cdd5",
@@ -36,55 +36,55 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49535752",
+        "id": "hn-49537553",
         "category": "dev",
-        "title": "A Note from LWN",
-        "url": "https://lwn.net/Articles/1090585/",
+        "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T13:17:12.000Z",
+        "publishedAt": "2026-09-02T15:12:40.000Z",
         "badge": "HN",
-        "signal": "229 分 · 38 评论"
+        "signal": "524 分 · 310 评论"
       },
       {
-        "id": "cn-it-41e3069625ca6a9b",
+        "id": "cn-it-5027ca95ee2fce70",
         "category": "cn",
-        "title": "小米 18 Fold“中折叠”手机拥有 1.2 米抗跌落能力，雷军称媲美直板旗舰",
-        "url": "https://www.ithome.com/0/997/680.htm",
+        "title": "谷歌推出 Gemini 3.8 Flash Cyber 模型，内部已全面部署用于代码安全防护",
+        "url": "https://www.ithome.com/0/997/708.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T14:25:28.000Z",
-        "summary": "IT之家 9 月 2 日消息，小米创办人、董事长兼 CEO 雷军今晚发文，预热小米 18 Fold“中折叠”手机。 IT之家注：小米 18 Fold 手机将于 9 月 7 日（下周一）晚 7 点在小米秋季旗舰新品发布会上正式发布，首发玄戒 O3 旗舰处理器。 据雷军介绍，小米 18 Fold 拥有 1.2 米抗跌落能力，可靠性媲美直板旗舰；相比小米 MIX Fold 4 手机，尖锐物体抗冲击性提升 258%，钢球重物跌落高度提升 214%。 小米 18 Fold 采用新一代…",
+        "publishedAt": "2026-09-02T16:09:52.000Z",
+        "summary": "IT之家 9 月 3 日消息，当地时间 9 月 2 日，谷歌宣布推出 Gemini 3.8 Flash Cyber 模型，通过 Fairwind 计划面向首批受信任的安全防护团队开放。 官方表示，在针对漏洞挖掘的行业权威基准测试 CyberGym 上，Gemini 3.8 Flash Cyber 展现出了顶尖水平的自主漏洞挖掘能力。不仅超越了前代 3.5 Flash Cyber，还将多款体量显著更大的前沿模型甩在身后。 谷歌在更全面的内部基准测试中对 Gemini 3.8 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-qxc2-j82w-r537",
+        "id": "github-advisory-ghsa-5jgf-p345-68v8",
         "category": "security",
-        "title": "Faker: helpers.fake exploitable into arbritary code execution",
-        "url": "https://github.com/advisories/GHSA-qxc2-j82w-r537",
+        "title": "fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references",
+        "url": "https://github.com/advisories/GHSA-5jgf-p345-68v8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T14:20:14.000Z",
-        "summary": "### Summary `faker.helpers.fake` can be tricked into arbritary code execution. ### Details fakeEval.resolveProperty resolves properties on functions itself instead of resolving the nested function first. This can be addressed by recursivel…",
-        "badge": "CVE-2026-73231",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-09-02T15:44:30.000Z",
+        "summary": "### Impact `fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim …",
+        "badge": "CVE-2026-75931",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-google-deepmind-20b040f8e58f31e9",
+        "id": "ai-google-deepmind-d721843382f3485e",
         "category": "ai",
-        "title": "Introducing agentic video understanding with Gemini",
-        "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+        "title": "Proactive cyber defense for governments and enterprises",
+        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-01T17:08:51.000Z",
+        "publishedAt": "2026-09-02T16:24:24.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239029",
+        "id": "v2ex-1239058",
         "category": "dev",
-        "title": "云服务器特惠",
-        "url": "https://www.v2ex.com/t/1239029",
+        "title": "fable 5.1 挺好用的。。。",
+        "url": "https://www.v2ex.com/t/1239058",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T13:26:16.000Z",
-        "summary": "2C4G5M 带宽 三年 2844 4C8G5M 带宽 三年 3430 4C16G5M 带宽 三年 3902 8C16G5M 带宽 三年 4601 8C32G5M 带宽 三年 5545 16C32G5M 带宽 三年 6943 16C64G5M 带宽 三年 8831 下单链接： https://account.huaweicloud.com/obmgr/invitation/invitation.html?id=c1c84107-e8b0-458f-aeba-f871bffe…",
+        "publishedAt": "2026-09-02T16:18:08.000Z",
+        "summary": "最近一个月基本都是大量使用 Opus5 xhigh 和 Grok4.6 xhigh, 就我个人体验来看 Grok4.6 刚开始不错，最近开始有点啰唆，这个是我很烦的，Opus5 整体感觉要比 Grok4.6 略好一点，大多数时候我用 Opus5 做架构 plan ，Grok4.6 开干。 今天用了快十个小时 Fable 5.1 ，我用的 high ，目前体感非常好，速度很快，也不啰唆， 真是人狠话不多。。。棒！",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-baidu-ff2ca2e83f1002b6",
@@ -94,18 +94,18 @@
         "source": "百度热搜",
         "summary": "日前，教育部发文指出学龄人口变化带来新挑战，需优化教育资源配置。当前多地正探索将富余小学老师转岗至初中任教，并建设可弹性转换学位的“潮汐学校”及推行小班化教学。",
         "badge": "热搜",
-        "signal": "7,809,673 热度"
+        "signal": "7,809,338 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-81578",
+        "id": "cisa-kev-cve-2026-48710",
         "category": "security",
-        "title": "PaperCut NG/MF：PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-81578",
+        "title": "Kludex Starlette：Kludex Starlette HTTP Request/Response Smuggling Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-48710",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-31T00:00:00.000Z",
-        "summary": "PaperCut NG/MF contains a missing authentication for critical function vulnerability which allows an unauthenticated remote attacker to modify certain system configurations. This vulnerability can be chained with CVE-2026-82078.",
-        "badge": "CVE-2026-81578",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "publishedAt": "2026-09-02T00:00:00.000Z",
+        "summary": "Kludex Starlette contains a HTTP request/response smuggling vulnerability that could allow attackers to inject paths into the host part, prepending the actual path leading to issues such as authentication bypass when the authentication dep…",
+        "badge": "CVE-2026-48710",
+        "signal": "已遭利用 · 整改期限 2026-09-16"
       },
       {
         "id": "ai-hugging-face-8c10bd00da2e478d",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49536375",
+        "id": "hn-49535752",
         "category": "dev",
-        "title": "Three sites made 215,128 \"best software\" pages for AI. Perplexity cites them",
-        "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
+        "title": "A Note from LWN",
+        "url": "https://lwn.net/Articles/1090585/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T13:59:59.000Z",
+        "publishedAt": "2026-09-02T13:17:12.000Z",
         "badge": "HN",
-        "signal": "32 分 · 15 评论"
+        "signal": "603 分 · 123 评论"
       },
       {
         "id": "cn-item-e802d6b063c0d30b",
@@ -137,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-275h-v5h9-vr82",
+        "id": "github-advisory-ghsa-f65p-4m7j-42xc",
         "category": "security",
-        "title": "Siyuan: Authenticated path traversal in /snippets/ static handler (serveSnippets) leaks conf/conf.json secrets and siyuan.db",
-        "url": "https://github.com/advisories/GHSA-275h-v5h9-vr82",
+        "title": "fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization",
+        "url": "https://github.com/advisories/GHSA-f65p-4m7j-42xc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T14:17:44.000Z",
-        "summary": "Reporter: Cavan Loughran, Celvex Group Inc. Summary ------- The /snippets/*filepath route handler serveSnippets in kernel/server/serve.go performs a bare filepath.Join(util.SnippetsPath, filePath) on the single-decoded c.Request.URL.Path a…",
-        "badge": "CVE-2026-59832",
-        "signal": "HIGH · CVSS 7.7"
+        "publishedAt": "2026-09-02T15:43:30.000Z",
+        "summary": "### Impact `fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For exampl…",
+        "badge": "CVE-2026-75975",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-f2694bfa96c49e91",
@@ -158,55 +158,55 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239027",
+        "id": "v2ex-1239029",
         "category": "dev",
-        "title": "分享的免费截图工具更新：支持 Windows 和录屏了",
-        "url": "https://www.v2ex.com/t/1239027",
+        "title": "云服务器特惠",
+        "url": "https://www.v2ex.com/t/1239029",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T13:18:32.000Z",
-        "summary": "上次分享的截图工具 Clipture 后，按照大家的反馈陆续加了 Windows 版、MP4/GIF 录屏、贴图、截图二次编辑和录制历史预览。 Mac 和 Windows 两个商店也都上架了，还是永久免费、没有广告和水印，所有内容只在本机处理。 有兴趣可以试试： https://clipture.talkape.net > 上次的帖子： https://www.v2ex.com/t/1230821 （之前的帖子貌似不能 append 了） 功能列表： - 窗口、区域、全屏、…",
+        "publishedAt": "2026-09-02T13:26:16.000Z",
+        "summary": "2C4G5M 带宽 三年 2844 4C8G5M 带宽 三年 3430 4C16G5M 带宽 三年 3902 8C16G5M 带宽 三年 4601 8C32G5M 带宽 三年 5545 16C32G5M 带宽 三年 6943 16C64G5M 带宽 三年 8831 下单链接： https://account.huaweicloud.com/obmgr/invitation/invitation.html?id=c1c84107-e8b0-458f-aeba-f871bffe…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-9d0926c623ba55d2",
+        "id": "cn-it-63b798976c860765",
         "category": "cn",
-        "title": "奇瑞：全面落实《汽车行业境外竞争行为与合规建设指引》，践行高质量出海",
-        "url": "https://www.ithome.com/0/997/678.htm",
+        "title": "森海塞尔 MOMENTUM 真无线 5 代蓝牙耳机国行版首销，2399 元",
+        "url": "https://www.ithome.com/0/997/707.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T14:23:10.000Z",
-        "summary": "IT之家 9 月 2 日消息，9 月 1 日，商务部、工业和信息化部、市场监管总局三部门发布《 汽车行业境外竞争行为与合规建设指引 》。 《汽车行业境外竞争行为与合规建设指引》为从事国际化生产经营活动的中国汽车行业企业在境外发生的市场竞争等生产经营行为提供参照，重点围绕汽车行业企业海外营销等竞争行为，以及境外安全生产、质量管理、劳动保障、数据安全等合规建设，提出一般性指引，供企业参考。 今天（2 日）下午，奇瑞发布声明称，将积极践行指引有关内容，持续强化境外合规体系建设，以…",
+        "publishedAt": "2026-09-02T15:58:05.000Z",
+        "summary": "IT之家 9 月 2 日消息，森海塞尔 MOMENTUM 真无线 5 代蓝牙耳机国行版将于 9 月 3 日 0:00 首销， 到手价 2399 元 。 这款耳机有石墨黑 / 奶油白 / 焦糖棕 /冷萃蓝 / 薰衣草紫五色可选，采用人体工学设计，单耳重约 7g；具备 IP54 防尘防泼溅；支持 Qi 无线充电，单次续航可达 12 小时，搭配充电盒综合续航可达 40 小时。 这款耳机配备 7mm TrueResponse 动圈驱动单元，升级蓝牙 6.0，搭载骁龙畅听技术，支持 …",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2023-49105",
+        "id": "cisa-kev-cve-2026-49869",
         "category": "security",
-        "title": "ownCloud ownCloud：ownCloud Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-49105",
+        "title": "Kestra Kestra OSS：Kestra OSS OS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-49869",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-27T00:00:00.000Z",
-        "summary": "ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.",
-        "badge": "CVE-2023-49105",
-        "signal": "已遭利用 · 整改期限 2026-08-30"
+        "publishedAt": "2026-09-02T00:00:00.000Z",
+        "summary": "Kestra OSS contains an OS command injection vulnerability that could allow an unauthenticated remote attacker to create and execute arbitrary workflows without credentials.",
+        "badge": "CVE-2026-49869",
+        "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
-        "id": "ai-google-deepmind-74b1125af8681de1",
+        "id": "ai-google-deepmind-63b19b50b4021cb5",
         "category": "ai",
-        "title": "Gemini Omni 1.1 Flash lets you build with more control",
-        "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+        "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-08-27T16:11:32.000Z",
+        "publishedAt": "2026-09-02T16:18:31.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49536384",
+        "id": "hn-49539389",
         "category": "dev",
-        "title": "GrapheneOS says Pixel 11 has MTE support after all",
-        "url": "https://grapheneos.social/@GrapheneOS/117194007157499435",
+        "title": "Paint.net 5.2 alpha now runs on Linux",
+        "url": "https://forums.paint.net/topic/134562-paintnet-52-alpha-build-9739/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T14:00:28.000Z",
+        "publishedAt": "2026-09-02T17:18:39.000Z",
         "badge": "HN",
-        "signal": "23 分 · 7 评论"
+        "signal": "62 分 · 33 评论"
       },
       {
         "id": "cn-baidu-595313bd046cdc68",
@@ -216,17 +216,17 @@
         "source": "百度热搜",
         "summary": "今夏，凉感喷雾、湿巾等单价十几元的产品成热销单品，线上销售额逼近2.6亿元。消费群体覆盖户外工作者、演唱会观众等。",
         "badge": "热搜",
-        "signal": "7,712,963 热度"
+        "signal": "7,712,875 热度"
       },
       {
-        "id": "github-advisory-ghsa-h89q-4j2h-7h88",
+        "id": "github-advisory-ghsa-fph4-wmhf-6fwf",
         "category": "security",
-        "title": "SiYuan: SQL Query in Block Search Exposes Hidden Published Document Content",
-        "url": "https://github.com/advisories/GHSA-h89q-4j2h-7h88",
+        "title": "fast-uri vulnerable to server-side request forgery via repeated hostname percent-decoding",
+        "url": "https://github.com/advisories/GHSA-fph4-wmhf-6fwf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T14:16:08.000Z",
-        "summary": "## Summary Siyuan's block search endpoint concatenates attacker-controlled `paths[]` values into SQL predicates used by non-SQL search modes. Through Siyuan's publish service, an unauthenticated visitor is forwarded to the kernel with a re…",
-        "badge": "CVE-2026-59834",
+        "publishedAt": "2026-09-02T15:42:39.000Z",
+        "summary": "### Impact `fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode…",
+        "badge": "CVE-2026-75899",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -239,13 +239,13 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239013",
+        "id": "v2ex-1239027",
         "category": "dev",
-        "title": "[开源] Subpool：面向团队的轻量化 Coding 订阅管理",
-        "url": "https://www.v2ex.com/t/1239013",
+        "title": "分享的免费截图工具更新：支持 Windows 和录屏了",
+        "url": "https://www.v2ex.com/t/1239027",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T11:04:05.000Z",
-        "summary": "项目地址 https://github.com/gesta-run/subpool , 兄弟们，求 Star, tar, ar, r... 背景 最近在做团队内部的 AI 订阅管理，遇到几个比较实际的问题： 团队有多份 Codex 或 API 账号，缺少统一管理入口 不清楚成员的被分配到了哪个账号 账号额度、健康状态和使用情况比较分散 部分成员用量较高时，需要人工切换账号 因此做了 Subpool 。 Subpool 是一个面向团队的轻量化 AI 订阅管理工具。管理员可以接…",
+        "publishedAt": "2026-09-02T13:18:32.000Z",
+        "summary": "上次分享的截图工具 Clipture 后，按照大家的反馈陆续加了 Windows 版、MP4/GIF 录屏、贴图、截图二次编辑和录制历史预览。 Mac 和 Windows 两个商店也都上架了，还是永久免费、没有广告和水印，所有内容只在本机处理。 有兴趣可以试试： https://clipture.talkape.net > 上次的帖子： https://www.v2ex.com/t/1230821 （之前的帖子貌似不能 append 了） 功能列表： - 窗口、区域、全屏、…",
         "badge": "程序员",
         "signal": "8 回复"
       },
@@ -260,15 +260,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-53362",
+        "id": "cisa-kev-cve-2026-82329",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Unspecified Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53362",
+        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-82329",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-27T00:00:00.000Z",
-        "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using…",
-        "badge": "CVE-2026-53362",
-        "signal": "已遭利用 · 整改期限 2026-08-30"
+        "publishedAt": "2026-09-02T00:00:00.000Z",
+        "summary": "JFrog Artifactory contains an improper authentication vulnerability that under default configuration can allow an unauthenticated attacker with network access to obtain administrative privileges.",
+        "badge": "CVE-2026-82329",
+        "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
         "id": "ai-openai-c0364833b41073ca",
@@ -281,55 +281,55 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49535284",
+        "id": "hn-49539872",
         "category": "dev",
-        "title": "Mistral now trains on user input by default, except on enterprise tier",
-        "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
+        "title": "I Don't Have a Smartphone",
+        "url": "https://ploum.net/2026-09-02-i_dont_have_a_smartphone.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T12:30:39.000Z",
+        "publishedAt": "2026-09-02T17:51:29.000Z",
         "badge": "HN",
-        "signal": "64 分 · 30 评论"
+        "signal": "64 分 · 48 评论"
       },
       {
-        "id": "cn-it-65b500fbdae48fba",
+        "id": "cn-it-bfdafab3c6f72b07",
         "category": "cn",
-        "title": "全球最大游戏模组网站 Nexus Mods 接手 SteamDB 数据库运营",
-        "url": "https://www.ithome.com/0/997/677.htm",
+        "title": "抛弃红帽生态，欧洲核子研究组织（CERN）转投 Debian 系统",
+        "url": "https://www.ithome.com/0/997/706.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T14:22:11.000Z",
-        "summary": "IT之家 9 月 2 日消息，全球最大游戏模组网站 Nexus Mods 今日宣布接手 SteamDB 数据库运营。 IT之家注：SteamDB 是一个收集 Steam 平台游戏信息的第三方数据库。用户可在此查看各个 Steam 游戏信息，包括玩家数量趋势图、各地区价格对比、版本更新历史等，该网站由 xPaw 和 Marlamin 创立于 2013 年。 SteamDB 现已将平台运营权转交给 Nexus Mods。针对此次变动，双方均发布了声明。 SteamDB 创始人 …",
+        "publishedAt": "2026-09-02T15:53:54.000Z",
+        "summary": "IT之家 9 月 2 日消息，欧洲核子研究组织（CERN）上周在瑞士温特图尔举行 MiniDebConf 大会，宣布将放弃 RHEL（Red Hat Enterprise Linux），转投 Debian 系统。 据IT之家了解，欧洲核子研究组织以大型强子对撞机、万维网（WWW）发源地闻名。 该机构此前长期使用红帽生态、CentOS 系统 ，过去曾与其他科研机构维护 RHEL 衍生发行版 Scientific Linux。 欧洲核子研究组织使用 CentOS 约十年后考虑再…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-vp52-pcj8-j9qc",
+        "id": "github-advisory-ghsa-jqff-g426-hqxp",
         "category": "security",
-        "title": "gRPC-Go: Heap Memory Exhaustion (OOM) via HTTP/2 DATA Frame Fragmentation",
-        "url": "https://github.com/advisories/GHSA-vp52-pcj8-j9qc",
+        "title": "fast-uri vulnerable to host confusion via percent-encoded scheme normalization",
+        "url": "https://github.com/advisories/GHSA-jqff-g426-hqxp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-01T21:32:41.000Z",
-        "summary": "### Impact An unauthenticated remote attacker can initiate a gRPC stream and purposefully fragment their payload into millions of tiny (e.g., 1-byte) HTTP/2 DATA frames. Even if the total payload volume falls within the configured connecti…",
-        "badge": "CVE-2026-84304",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-02T15:41:53.000Z",
+        "summary": "### Impact `fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decod…",
+        "badge": "CVE-2026-76172",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-google-deepmind-71c43cf780d371ee",
+        "id": "ai-google-deepmind-20b040f8e58f31e9",
         "category": "ai",
-        "title": "Piloting the world's first double-blind AI evaluations",
-        "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+        "title": "Introducing agentic video understanding with Gemini",
+        "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-08-27T12:59:16.000Z",
+        "publishedAt": "2026-09-01T17:08:51.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1238990",
+        "id": "v2ex-1239013",
         "category": "dev",
-        "title": "OAI 这几天还会再重置吗？",
-        "url": "https://www.v2ex.com/t/1238990",
+        "title": "[开源] Subpool：面向团队的轻量化 Coding 订阅管理",
+        "url": "https://www.v2ex.com/t/1239013",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T09:21:01.000Z",
-        "summary": "扛不住了，一个任务跑了 5 个小时了还没跑完 已经烧掉了 20x 40% 的周额度了",
+        "publishedAt": "2026-09-02T11:04:05.000Z",
+        "summary": "项目地址 https://github.com/gesta-run/subpool , 兄弟们，求 Star, tar, ar, r... 背景 最近在做团队内部的 AI 订阅管理，遇到几个比较实际的问题： 团队有多份 Codex 或 API 账号，缺少统一管理入口 不清楚成员的被分配到了哪个账号 账号额度、健康状态和使用情况比较分散 部分成员用量较高时，需要人工切换账号 因此做了 Subpool 。 Subpool 是一个面向团队的轻量化 AI 订阅管理工具。管理员可以接…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "10 回复"
       },
       {
         "id": "cn-baidu-b14db5b27de591f7",
@@ -339,18 +339,18 @@
         "source": "百度热搜",
         "summary": "国家统计局发布的7月份国民经济运行数据中，一项指标颇为亮眼：前7个月，新动能对规模以上工业增长的贡献率为50.9%，比上半年提高3个百分点。新动能首次扛起“半壁江山”，充分反映了我国经济向新向优的积极态势。",
         "badge": "热搜",
-        "signal": "7,616,664 热度"
+        "signal": "7,617,398 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-66384",
+        "id": "cisa-kev-cve-2026-9586",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-66384",
+        "title": "Sangoma Switchvox：Sangoma Switchvox SQL Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-9586",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-27T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
-        "badge": "CVE-2026-66384",
-        "signal": "已遭利用 · 整改期限 2026-09-10"
+        "publishedAt": "2026-09-02T00:00:00.000Z",
+        "summary": "Sangoma Switchvox contains a SQL injection vulnerability which allows an unauthenticated remote attacker to execute arbitrary SQL statements against the backend PostgreSQL database using a single crafted request, including database operati…",
+        "badge": "CVE-2026-9586",
+        "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
         "id": "ai-hugging-face-91dad0068ec24e5b",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49536177",
+        "id": "hn-49535284",
         "category": "dev",
-        "title": "Poisson Disk Sampling",
-        "url": "https://stripeacross.com/posts/poisson-disk-sampling/",
+        "title": "Mistral now trains on user input by default, except on enterprise tier",
+        "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T13:47:49.000Z",
+        "publishedAt": "2026-09-02T12:30:39.000Z",
         "badge": "HN",
-        "signal": "16 分 · 0 评论"
+        "signal": "279 分 · 123 评论"
       },
       {
         "id": "cn-item-1ae55dc14252fe1f",
@@ -382,14 +382,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-68jx-f42c-7599",
+        "id": "github-advisory-ghsa-p3m8-78j2-g5p3",
         "category": "security",
-        "title": "TYPO3 CMS - Broken Access Control in Backend and Install Tool",
-        "url": "https://github.com/advisories/GHSA-68jx-f42c-7599",
+        "title": "NLTK: Default ENFORCE=False Disables All pathsec Security Controls",
+        "url": "https://github.com/advisories/GHSA-p3m8-78j2-g5p3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-01T21:31:42.000Z",
-        "summary": "### Problem The referrer enforcement introduced with TYPO3-CORE-SA-2020-006 (CVE-2020-11069) became ineffective in TYPO3 v13.0, where TYPO3 CMS started serving the backend and Admin Tool applications from the site's main entry script inste…",
-        "badge": "CVE-2026-19418",
+        "publishedAt": "2026-09-02T15:40:33.000Z",
+        "summary": "NLTK's pathsec.py security module defaults to ENFORCE=False (line 24), which means all 8 security validation functions only emit RuntimeWarning instead of raising exceptions when violations are detected. The pathsec module was introduced a…",
+        "badge": "CVE-2026-62388",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -403,45 +403,44 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1238979",
+        "id": "v2ex-1238990",
         "category": "dev",
-        "title": "通过 CLIProxyAPI 代理 ChatGPT 订阅并给其他 Agent 使用，真的不会被封号吗？",
-        "url": "https://www.v2ex.com/t/1238979",
+        "title": "OAI 这几天还会再重置吗？",
+        "url": "https://www.v2ex.com/t/1238990",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T08:45:56.000Z",
-        "summary": "Tibo 推特上说这种方式是支持的，但还是有看到被封号的。所以来论坛里咨询一下。 目前在用 CLIProxyAPI 代理 Gemini AI 订阅，一直都可以使用，暂未被封号。",
+        "publishedAt": "2026-09-02T09:21:01.000Z",
+        "summary": "扛不住了，一个任务跑了 5 个小时了还没跑完 已经烧掉了 20x 40% 的周额度了",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-aa281f1a2eb7c3ed",
+        "id": "cn-it-7a01500c40fe40c8",
         "category": "cn",
-        "title": "古尔曼曝光苹果 iPhone Ultra 折叠屏手机更多细节，支持应用并排显示、内容拖拽操作",
-        "url": "https://www.ithome.com/0/997/676.htm",
+        "title": "神谷英树：游戏能否真正保存，比“实体版还是数字版”更重要",
+        "url": "https://www.ithome.com/0/997/705.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T14:19:49.000Z",
-        "summary": "IT之家 9 月 2 日消息，下周，苹果首款折叠屏手机 iPhone Ultra 将在 9 月发布会上正式亮相。如今距离发布仅剩一周，彭博社记者马克 · 古尔曼（Mark Gurman）在接受 Tom's Guide 采访时又透露了不少新信息，涉及硬件规格、软件功能、上市时间以及售价等多个方面，其中还有一些此前从未曝光的细节。 距离 iPhone Ultra 发布还有一周，但相关爆料仍在不断出现。古尔曼在此次采访中分享了多个新消息，其中部分内容此前尚未被报道。 MagSaf…",
+        "publishedAt": "2026-09-02T15:53:50.000Z",
+        "summary": "IT之家 9 月 2 日消息，据外媒 VGC 今天（2 日）晚间报道，《大神》《鬼泣》和《猎天使魔女》创作者神谷英树认为，相比游戏未来究竟发行实体版还是数字版，更值得担忧的是这些作品能否真正保存下来，让后来的玩家继续游玩。 图源：Pexels 神谷英树表示，自己现在购买的游戏“100% 都是数字版”，因此实体光盘消失 并不会直接影响消费习惯 ，但实体游戏彻底退出后，可能有一些 更有意义的东西 也会随之消失。“我现在一款实体游戏都不买，所有游戏 100% 都是数字版。所以看到…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2021-23758",
+        "id": "cisa-kev-cve-2026-83548",
         "category": "security",
-        "title": "Ajax.NET Professional Ajax.NET Professional：Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-23758",
+        "title": "SonicWall SMA1000 Appliances：SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-83548",
         "source": "CISA KEV",
-        "publishedAt": "2026-08-26T00:00:00.000Z",
-        "summary": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS…",
-        "badge": "CVE-2021-23758",
-        "signal": "已遭利用 · 整改期限 2026-09-09"
+        "publishedAt": "2026-09-02T00:00:00.000Z",
+        "summary": "SonicWall SMA1000 Appliances contains a server-side request forgery vulnerability that could allow a remote unauthenticated attacker to gain unauthorized access to sensitive functionality and perform unauthorized operations.",
+        "badge": "CVE-2026-83548",
+        "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
-        "id": "ai-google-deepmind-ac6eb9276806c2f8",
+        "id": "ai-google-deepmind-74b1125af8681de1",
         "category": "ai",
-        "title": "Intelligent transcription with Gemini 3.5 Transcribe",
-        "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+        "title": "Gemini Omni 1.1 Flash lets you build with more control",
+        "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-08-26T17:01:00.000Z",
-        "summary": "Now you can get more intelligent speech-to-text transcription with Gemini 3.5 Transcribe.",
+        "publishedAt": "2026-08-27T16:11:32.000Z",
         "badge": "Google DeepMind"
       },
       {
@@ -452,28 +451,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-02T13:40:29.000Z",
         "badge": "HN",
-        "signal": "15 分 · 0 评论"
+        "signal": "168 分 · 40 评论"
       },
       {
-        "id": "cn-baidu-1f935ba0323384a5",
+        "id": "cn-baidu-e408b92ec74911b0",
         "category": "cn",
-        "title": "房价会上涨吗",
-        "url": "https://www.baidu.com/s?wd=%E6%88%BF%E4%BB%B7%E4%BC%9A%E4%B8%8A%E6%B6%A8%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "告别机顶盒",
+        "url": "https://www.baidu.com/s?wd=%E5%91%8A%E5%88%AB%E6%9C%BA%E9%A1%B6%E7%9B%92&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "8月28日，多部门发布房地产新政，涉及预售制度改革等顶层设计。首都经贸大学赵秀池指出，新政提高预售门槛并保障购房者权益，降低入市资金门槛。她认为当前楼市处于底部区域，政策利好，刚需群体可考虑上车；未来房价不会普遍上涨，而是依据各地供求关系分化，热点城市或率先上涨。",
+        "summary": "8月31日，中国广电发布一体化电视适配器集采公告，首次进行全国性集采，标志该项目进入规模部署阶段，用户无需外接机顶盒即可看直播。",
         "badge": "热搜",
-        "signal": "7,522,411 热度"
+        "signal": "7,520,981 热度"
       },
       {
-        "id": "github-advisory-ghsa-52xp-w8hr-xv3c",
+        "id": "github-advisory-ghsa-6m44-fpc8-c3rq",
         "category": "security",
-        "title": "Filament: Multi-factor authentication (app) can be bypassed when recovery codes are enabled",
-        "url": "https://github.com/advisories/GHSA-52xp-w8hr-xv3c",
+        "title": "Mistune: Denial of Service — RecursionError via Excessive Emphasis Markers in Markdown",
+        "url": "https://github.com/advisories/GHSA-6m44-fpc8-c3rq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-01T21:28:47.000Z",
-        "summary": "A flaw in the challenge handling for app-based multi-factor authentication allows the second factor to be bypassed. This issue does not affect email-based MFA. It also only applies when recovery codes are enabled.",
-        "badge": "CVE-2026-77567",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-02T15:14:55.000Z",
+        "summary": "## Summary Mistune v3.3.2 is vulnerable to a Denial of Service (DoS) attack via uncontrolled recursion in the HTML rendering of deeply-nested emphasis tokens. By submitting Markdown containing approximately 1,000 consecutive asterisk chara…",
+        "badge": "CVE-2026-76098",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-4d3b17a749f42c95",
@@ -485,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1238974",
+        "id": "v2ex-1238979",
         "category": "dev",
-        "title": "各位大佬推荐一下跨模型规范方案啊",
-        "url": "https://www.v2ex.com/t/1238974",
+        "title": "通过 CLIProxyAPI 代理 ChatGPT 订阅并给其他 Agent 使用，真的不会被封号吗？",
+        "url": "https://www.v2ex.com/t/1238979",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-02T08:29:24.000Z",
-        "summary": "我现在主要是通过 codex cli 编码 , 有时候可能会因为其他原因换模型, 或者上下文太多了 , 导致每次有些打包方式 ,以及归档等细节需要重新引导 , 有没有什么文件允许 claude codex cursor 等主流都能用的 , 这样我只需要管那个配置就好了, 包括多人协同 , 你们又是怎么解决的啊",
+        "publishedAt": "2026-09-02T08:45:56.000Z",
+        "summary": "Tibo 推特上说这种方式是支持的，但还是有看到被封号的。所以来论坛里咨询一下。 目前在用 CLIProxyAPI 代理 Gemini AI 订阅，一直都可以使用，暂未被封号。",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "8 回复"
       }
     ]
   },
@@ -510,7 +509,7 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 23906,
+        "stars": 24085,
         "starsToday": 3
       },
       {
@@ -520,7 +519,7 @@
         "url": "https://github.com/google-research/timesfm",
         "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "language": "Python",
-        "stars": 29157,
+        "stars": 29456,
         "starsToday": 326
       },
       {
@@ -530,7 +529,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 120847,
+        "stars": 121148,
         "starsToday": 1364
       },
       {
@@ -540,7 +539,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 14074,
+        "stars": 14367,
         "starsToday": 834
       },
       {
@@ -550,8 +549,8 @@
         "url": "https://github.com/sngyai/Sequoia-X",
         "description": "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
         "language": "Python",
-        "stars": 5955,
-        "starsToday": 195
+        "stars": 6005,
+        "starsToday": 138
       },
       {
         "id": "github-c68b4f26713a0266",
@@ -560,7 +559,7 @@
         "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
         "description": "Chrome DevTools for coding agents",
         "language": "TypeScript",
-        "stars": 50524,
+        "stars": 50573,
         "starsToday": 140
       },
       {
@@ -570,7 +569,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 239866,
+        "stars": 240008,
         "starsToday": 529
       },
       {
@@ -580,7 +579,7 @@
         "url": "https://github.com/superlinked/sie",
         "description": "Open-source inference server and production cluster for all the models your agent needs.",
         "language": "Python",
-        "stars": 2982,
+        "stars": 3009,
         "starsToday": 61
       },
       {
@@ -590,7 +589,7 @@
         "url": "https://github.com/pacifio/atlas",
         "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
         "language": "Rust",
-        "stars": 2685,
+        "stars": 2775,
         "starsToday": 895
       },
       {
@@ -600,10 +599,10 @@
         "url": "https://github.com/zyronon/TypeWords",
         "description": "Practice English, one strike, one step forward; 练习英语，一次敲击，一点进步；",
         "language": "Vue",
-        "stars": 9234,
+        "stars": 9268,
         "starsToday": 68
       }
     ],
-    "updatedAt": "2026-09-02T14:30:20.891Z"
+    "updatedAt": "2026-09-02T18:43:41.332Z"
   }
 }
