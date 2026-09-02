@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-02T18:43:41.332Z",
+  "generatedAt": "2026-09-02T21:50:30.512Z",
   "intelligence": {
-    "updatedAt": "2026-09-02T18:43:41.332Z",
+    "updatedAt": "2026-09-02T21:50:30.512Z",
     "items": [
       {
         "id": "cn-item-a6af3f5c741fda16",
@@ -36,34 +36,34 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49537553",
+        "id": "hn-49541256",
         "category": "dev",
-        "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+        "title": "Muse Spark 1.3",
+        "url": "https://developer.meta.com/ai/models/muse-spark/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T15:12:40.000Z",
+        "publishedAt": "2026-09-02T19:35:04.000Z",
         "badge": "HN",
-        "signal": "524 分 · 310 评论"
+        "signal": "249 分 · 143 评论"
       },
       {
-        "id": "cn-it-5027ca95ee2fce70",
+        "id": "cn-it-4231eb7ab108af52",
         "category": "cn",
-        "title": "谷歌推出 Gemini 3.8 Flash Cyber 模型，内部已全面部署用于代码安全防护",
-        "url": "https://www.ithome.com/0/997/708.htm",
+        "title": "博通 2026 财年第三财季归母净利润 130.88 亿美元，同比增长 216%",
+        "url": "https://www.ithome.com/0/997/713.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T16:09:52.000Z",
-        "summary": "IT之家 9 月 3 日消息，当地时间 9 月 2 日，谷歌宣布推出 Gemini 3.8 Flash Cyber 模型，通过 Fairwind 计划面向首批受信任的安全防护团队开放。 官方表示，在针对漏洞挖掘的行业权威基准测试 CyberGym 上，Gemini 3.8 Flash Cyber 展现出了顶尖水平的自主漏洞挖掘能力。不仅超越了前代 3.5 Flash Cyber，还将多款体量显著更大的前沿模型甩在身后。 谷歌在更全面的内部基准测试中对 Gemini 3.8 …",
+        "publishedAt": "2026-09-02T20:30:01.000Z",
+        "summary": "IT之家 9 月 3 日消息，博通今日发布 2026 财年（2025年11月3日～2026年11月1日）第三财季（2026年5月4日～2026年8月2日）报告： 营业总收入 ：295.91 亿美元 （IT之家注：现汇率约合 1993.52 亿元人民币） ，同比增长 86%，环比增长 33.37% 毛利润 ：204.56 亿美元 （现汇率约合 1378.1 亿元人民币） ，同比增长 91.12% 毛利率 ：69.13%，同比增长 2.03 个百分点 归母净利润 ：130.88…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-5jgf-p345-68v8",
+        "id": "github-advisory-ghsa-cpjf-6666-r8fx",
         "category": "security",
-        "title": "fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references",
-        "url": "https://github.com/advisories/GHSA-5jgf-p345-68v8",
+        "title": "link-preview-js DNS Rebinding SSRF Bypass / Incomplete Fix for CVE-2026-43897",
+        "url": "https://github.com/advisories/GHSA-cpjf-6666-r8fx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:44:30.000Z",
-        "summary": "### Impact `fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim …",
-        "badge": "CVE-2026-75931",
+        "publishedAt": "2026-09-02T21:29:57.000Z",
+        "summary": "The existing advisory GHSA-4gp8-rjrq-ch6q / CVE-2026-43897 states that the SSRF issue was fixed in 4.0.1. However, 4.0.3 remains bypassable when the documented resolveDNSHost mitigation is used. Root cause: The library validates one resolv…",
+        "badge": "CVE-2026-61704",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "日前，教育部发文指出学龄人口变化带来新挑战，需优化教育资源配置。当前多地正探索将富余小学老师转岗至初中任教，并建设可弹性转换学位的“潮汐学校”及推行小班化教学。",
         "badge": "热搜",
-        "signal": "7,809,338 热度"
+        "signal": "7,808,664 热度"
       },
       {
         "id": "cisa-kev-cve-2026-48710",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49535752",
+        "id": "hn-49537553",
         "category": "dev",
-        "title": "A Note from LWN",
-        "url": "https://lwn.net/Articles/1090585/",
+        "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T13:17:12.000Z",
+        "publishedAt": "2026-09-02T15:12:40.000Z",
         "badge": "HN",
-        "signal": "603 分 · 123 评论"
+        "signal": "715 分 · 419 评论"
       },
       {
         "id": "cn-item-e802d6b063c0d30b",
@@ -137,14 +137,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-f65p-4m7j-42xc",
+        "id": "github-advisory-ghsa-5jgf-p345-68v8",
         "category": "security",
-        "title": "fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization",
-        "url": "https://github.com/advisories/GHSA-f65p-4m7j-42xc",
+        "title": "fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references",
+        "url": "https://github.com/advisories/GHSA-5jgf-p345-68v8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:43:30.000Z",
-        "summary": "### Impact `fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For exampl…",
-        "badge": "CVE-2026-75975",
+        "publishedAt": "2026-09-02T15:44:30.000Z",
+        "summary": "### Impact `fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim …",
+        "badge": "CVE-2026-75931",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -169,13 +169,13 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-63b798976c860765",
+        "id": "cn-it-28836f3d0af02313",
         "category": "cn",
-        "title": "森海塞尔 MOMENTUM 真无线 5 代蓝牙耳机国行版首销，2399 元",
-        "url": "https://www.ithome.com/0/997/707.htm",
+        "title": "慧与 2026 财年半年报归母净利润 25.29 亿美元",
+        "url": "https://www.ithome.com/0/997/712.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T15:58:05.000Z",
-        "summary": "IT之家 9 月 2 日消息，森海塞尔 MOMENTUM 真无线 5 代蓝牙耳机国行版将于 9 月 3 日 0:00 首销， 到手价 2399 元 。 这款耳机有石墨黑 / 奶油白 / 焦糖棕 /冷萃蓝 / 薰衣草紫五色可选，采用人体工学设计，单耳重约 7g；具备 IP54 防尘防泼溅；支持 Qi 无线充电，单次续航可达 12 小时，搭配充电盒综合续航可达 40 小时。 这款耳机配备 7mm TrueResponse 动圈驱动单元，升级蓝牙 6.0，搭载骁龙畅听技术，支持 …",
+        "publishedAt": "2026-09-02T20:11:14.000Z",
+        "summary": "IT之家 9 月 3 日消息，慧与今日发布 2026 财年（2025年11月1日～2026年10月31日）半年报（2025年11月1日～2026年7月31日）及第三财季（2026年5月1日～2026年7月31日）报告： 2026 财年半年报 营业总收入 ：321.92 亿美元 （IT之家注：现汇率约合 2168.75 亿元人民币） ，同比增长 30.8% 毛利润 ：121.39 亿美元 （现汇率约合 817.79 亿元人民币） 毛利率 ：37.7% 归母净利润 ：25.29…",
         "badge": "IT之家"
       },
       {
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49539389",
+        "id": "hn-49537131",
         "category": "dev",
-        "title": "Paint.net 5.2 alpha now runs on Linux",
-        "url": "https://forums.paint.net/topic/134562-paintnet-52-alpha-build-9739/",
+        "title": "Google avoids a breakup of its ad tech business",
+        "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T17:18:39.000Z",
+        "publishedAt": "2026-09-02T14:46:16.000Z",
         "badge": "HN",
-        "signal": "62 分 · 33 评论"
+        "signal": "149 分 · 74 评论"
       },
       {
         "id": "cn-baidu-595313bd046cdc68",
@@ -216,17 +216,17 @@
         "source": "百度热搜",
         "summary": "今夏，凉感喷雾、湿巾等单价十几元的产品成热销单品，线上销售额逼近2.6亿元。消费群体覆盖户外工作者、演唱会观众等。",
         "badge": "热搜",
-        "signal": "7,712,875 热度"
+        "signal": "7,713,541 热度"
       },
       {
-        "id": "github-advisory-ghsa-fph4-wmhf-6fwf",
+        "id": "github-advisory-ghsa-f65p-4m7j-42xc",
         "category": "security",
-        "title": "fast-uri vulnerable to server-side request forgery via repeated hostname percent-decoding",
-        "url": "https://github.com/advisories/GHSA-fph4-wmhf-6fwf",
+        "title": "fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization",
+        "url": "https://github.com/advisories/GHSA-f65p-4m7j-42xc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:42:39.000Z",
-        "summary": "### Impact `fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode…",
-        "badge": "CVE-2026-75899",
+        "publishedAt": "2026-09-02T15:43:30.000Z",
+        "summary": "### Impact `fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For exampl…",
+        "badge": "CVE-2026-75975",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -281,34 +281,34 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49539872",
+        "id": "hn-49541519",
         "category": "dev",
-        "title": "I Don't Have a Smartphone",
-        "url": "https://ploum.net/2026-09-02-i_dont_have_a_smartphone.html",
+        "title": "I wanna live an NPC life",
+        "url": "https://signalundefied.bearblog.dev/i-wanna-live-an-npc-life/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T17:51:29.000Z",
+        "publishedAt": "2026-09-02T19:52:53.000Z",
         "badge": "HN",
-        "signal": "64 分 · 48 评论"
+        "signal": "118 分 · 94 评论"
       },
       {
-        "id": "cn-it-bfdafab3c6f72b07",
+        "id": "cn-it-5027ca95ee2fce70",
         "category": "cn",
-        "title": "抛弃红帽生态，欧洲核子研究组织（CERN）转投 Debian 系统",
-        "url": "https://www.ithome.com/0/997/706.htm",
+        "title": "谷歌推出 Gemini 3.8 Flash Cyber 模型，内部已全面部署用于代码安全防护",
+        "url": "https://www.ithome.com/0/997/708.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T15:53:54.000Z",
-        "summary": "IT之家 9 月 2 日消息，欧洲核子研究组织（CERN）上周在瑞士温特图尔举行 MiniDebConf 大会，宣布将放弃 RHEL（Red Hat Enterprise Linux），转投 Debian 系统。 据IT之家了解，欧洲核子研究组织以大型强子对撞机、万维网（WWW）发源地闻名。 该机构此前长期使用红帽生态、CentOS 系统 ，过去曾与其他科研机构维护 RHEL 衍生发行版 Scientific Linux。 欧洲核子研究组织使用 CentOS 约十年后考虑再…",
+        "publishedAt": "2026-09-02T16:09:52.000Z",
+        "summary": "IT之家 9 月 3 日消息，当地时间 9 月 2 日，谷歌宣布推出 Gemini 3.8 Flash Cyber 模型，通过 Fairwind 计划面向首批受信任的安全防护团队开放。 官方表示，在针对漏洞挖掘的行业权威基准测试 CyberGym 上，Gemini 3.8 Flash Cyber 展现出了顶尖水平的自主漏洞挖掘能力。不仅超越了前代 3.5 Flash Cyber，还将多款体量显著更大的前沿模型甩在身后。 谷歌在更全面的内部基准测试中对 Gemini 3.8 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-jqff-g426-hqxp",
+        "id": "github-advisory-ghsa-fph4-wmhf-6fwf",
         "category": "security",
-        "title": "fast-uri vulnerable to host confusion via percent-encoded scheme normalization",
-        "url": "https://github.com/advisories/GHSA-jqff-g426-hqxp",
+        "title": "fast-uri vulnerable to server-side request forgery via repeated hostname percent-decoding",
+        "url": "https://github.com/advisories/GHSA-fph4-wmhf-6fwf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:41:53.000Z",
-        "summary": "### Impact `fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decod…",
-        "badge": "CVE-2026-76172",
+        "publishedAt": "2026-09-02T15:42:39.000Z",
+        "summary": "### Impact `fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode…",
+        "badge": "CVE-2026-75899",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "国家统计局发布的7月份国民经济运行数据中，一项指标颇为亮眼：前7个月，新动能对规模以上工业增长的贡献率为50.9%，比上半年提高3个百分点。新动能首次扛起“半壁江山”，充分反映了我国经济向新向优的积极态势。",
         "badge": "热搜",
-        "signal": "7,617,398 热度"
+        "signal": "7,618,325 热度"
       },
       {
         "id": "cisa-kev-cve-2026-9586",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49535284",
+        "id": "hn-49541458",
         "category": "dev",
-        "title": "Mistral now trains on user input by default, except on enterprise tier",
-        "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
+        "title": "Fable 5.1 World Modeling",
+        "url": "https://github.com/PhiloLabs/fable51-worlds",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T12:30:39.000Z",
+        "publishedAt": "2026-09-02T19:49:01.000Z",
         "badge": "HN",
-        "signal": "279 分 · 123 评论"
+        "signal": "66 分 · 17 评论"
       },
       {
         "id": "cn-item-1ae55dc14252fe1f",
@@ -382,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-p3m8-78j2-g5p3",
+        "id": "github-advisory-ghsa-jqff-g426-hqxp",
         "category": "security",
-        "title": "NLTK: Default ENFORCE=False Disables All pathsec Security Controls",
-        "url": "https://github.com/advisories/GHSA-p3m8-78j2-g5p3",
+        "title": "fast-uri vulnerable to host confusion via percent-encoded scheme normalization",
+        "url": "https://github.com/advisories/GHSA-jqff-g426-hqxp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:40:33.000Z",
-        "summary": "NLTK's pathsec.py security module defaults to ENFORCE=False (line 24), which means all 8 security validation functions only emit RuntimeWarning instead of raising exceptions when violations are detected. The pathsec module was introduced a…",
-        "badge": "CVE-2026-62388",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-02T15:41:53.000Z",
+        "summary": "### Impact `fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decod…",
+        "badge": "CVE-2026-76172",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-330fba64551db8b4",
@@ -414,13 +414,13 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-7a01500c40fe40c8",
+        "id": "cn-it-63b798976c860765",
         "category": "cn",
-        "title": "神谷英树：游戏能否真正保存，比“实体版还是数字版”更重要",
-        "url": "https://www.ithome.com/0/997/705.htm",
+        "title": "森海塞尔 MOMENTUM 真无线 5 代蓝牙耳机国行版首销，2399 元",
+        "url": "https://www.ithome.com/0/997/707.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T15:53:50.000Z",
-        "summary": "IT之家 9 月 2 日消息，据外媒 VGC 今天（2 日）晚间报道，《大神》《鬼泣》和《猎天使魔女》创作者神谷英树认为，相比游戏未来究竟发行实体版还是数字版，更值得担忧的是这些作品能否真正保存下来，让后来的玩家继续游玩。 图源：Pexels 神谷英树表示，自己现在购买的游戏“100% 都是数字版”，因此实体光盘消失 并不会直接影响消费习惯 ，但实体游戏彻底退出后，可能有一些 更有意义的东西 也会随之消失。“我现在一款实体游戏都不买，所有游戏 100% 都是数字版。所以看到…",
+        "publishedAt": "2026-09-02T15:58:05.000Z",
+        "summary": "IT之家 9 月 2 日消息，森海塞尔 MOMENTUM 真无线 5 代蓝牙耳机国行版将于 9 月 3 日 0:00 首销， 到手价 2399 元 。 这款耳机有石墨黑 / 奶油白 / 焦糖棕 /冷萃蓝 / 薰衣草紫五色可选，采用人体工学设计，单耳重约 7g；具备 IP54 防尘防泼溅；支持 Qi 无线充电，单次续航可达 12 小时，搭配充电盒综合续航可达 40 小时。 这款耳机配备 7mm TrueResponse 动圈驱动单元，升级蓝牙 6.0，搭载骁龙畅听技术，支持 …",
         "badge": "IT之家"
       },
       {
@@ -444,14 +444,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49536079",
+        "id": "hn-49508608",
         "category": "dev",
-        "title": "Biggest dark matter detector spots a single weird particle",
-        "url": "https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle",
+        "title": "Reverse Engineering Unknown File Formats with ImHex",
+        "url": "https://werwolv.net/posts/file_format_reverse_engineering/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T13:40:29.000Z",
+        "publishedAt": "2026-08-31T12:01:05.000Z",
         "badge": "HN",
-        "signal": "168 分 · 40 评论"
+        "signal": "24 分 · 2 评论"
       },
       {
         "id": "cn-baidu-e408b92ec74911b0",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "8月31日，中国广电发布一体化电视适配器集采公告，首次进行全国性集采，标志该项目进入规模部署阶段，用户无需外接机顶盒即可看直播。",
         "badge": "热搜",
-        "signal": "7,520,981 热度"
+        "signal": "7,520,006 热度"
       },
       {
-        "id": "github-advisory-ghsa-6m44-fpc8-c3rq",
+        "id": "github-advisory-ghsa-p3m8-78j2-g5p3",
         "category": "security",
-        "title": "Mistune: Denial of Service — RecursionError via Excessive Emphasis Markers in Markdown",
-        "url": "https://github.com/advisories/GHSA-6m44-fpc8-c3rq",
+        "title": "NLTK: Default ENFORCE=False Disables All pathsec Security Controls",
+        "url": "https://github.com/advisories/GHSA-p3m8-78j2-g5p3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:14:55.000Z",
-        "summary": "## Summary Mistune v3.3.2 is vulnerable to a Denial of Service (DoS) attack via uncontrolled recursion in the HTML rendering of deeply-nested emphasis tokens. By submitting Markdown containing approximately 1,000 consecutive asterisk chara…",
-        "badge": "CVE-2026-76098",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-02T15:40:33.000Z",
+        "summary": "NLTK's pathsec.py security module defaults to ENFORCE=False (line 24), which means all 8 security validation functions only emit RuntimeWarning instead of raising exceptions when violations are detected. The pathsec module was introduced a…",
+        "badge": "CVE-2026-62388",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-4d3b17a749f42c95",
@@ -509,7 +509,7 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 24085,
+        "stars": 24188,
         "starsToday": 3
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/google-research/timesfm",
         "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "language": "Python",
-        "stars": 29456,
+        "stars": 29637,
         "starsToday": 326
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 121148,
+        "stars": 121330,
         "starsToday": 1364
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 14367,
+        "stars": 14537,
         "starsToday": 834
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/sngyai/Sequoia-X",
         "description": "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
         "language": "Python",
-        "stars": 6005,
+        "stars": 6014,
         "starsToday": 138
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
         "description": "Chrome DevTools for coding agents",
         "language": "TypeScript",
-        "stars": 50573,
+        "stars": 50607,
         "starsToday": 140
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 240008,
+        "stars": 240067,
         "starsToday": 529
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/superlinked/sie",
         "description": "Open-source inference server and production cluster for all the models your agent needs.",
         "language": "Python",
-        "stars": 3009,
+        "stars": 3032,
         "starsToday": 61
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/pacifio/atlas",
         "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
         "language": "Rust",
-        "stars": 2775,
+        "stars": 2834,
         "starsToday": 895
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/zyronon/TypeWords",
         "description": "Practice English, one strike, one step forward; 练习英语，一次敲击，一点进步；",
         "language": "Vue",
-        "stars": 9268,
+        "stars": 9280,
         "starsToday": 68
       }
     ],
-    "updatedAt": "2026-09-02T18:43:41.332Z"
+    "updatedAt": "2026-09-02T21:50:30.512Z"
   }
 }
