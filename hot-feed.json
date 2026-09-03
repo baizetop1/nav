@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-03T18:40:52.386Z",
+  "generatedAt": "2026-09-03T21:43:24.423Z",
   "intelligence": {
-    "updatedAt": "2026-09-03T18:40:52.386Z",
+    "updatedAt": "2026-09-03T21:43:24.423Z",
     "items": [
       {
         "id": "cn-item-5eff44868b57d5d8",
@@ -26,24 +26,24 @@
         "signal": "已遭利用 · 整改期限 2026-09-16"
       },
       {
-        "id": "ai-openai-3bda12e16fd31e0e",
+        "id": "ai-openai-fc40ddafdd41e0cc",
         "category": "ai",
-        "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
-        "url": "https://openai.com/index/atv-big-air-tour",
+        "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+        "url": "https://openai.com/index/daybreak-for-frontline-defenders",
         "source": "OpenAI",
-        "publishedAt": "2026-09-02T12:00:00.000Z",
-        "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+        "publishedAt": "2026-09-03T13:15:00.000Z",
+        "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49550772",
+        "id": "hn-49554643",
         "category": "dev",
-        "title": ".name Termination",
-        "url": "https://neil.fraser.name/news/2026/09/03/",
+        "title": "GPT-6 Astra",
+        "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T14:54:39.000Z",
+        "publishedAt": "2026-09-03T18:41:05.000Z",
         "badge": "HN",
-        "signal": "767 分 · 196 评论"
+        "signal": "889 分 · 623 评论"
       },
       {
         "id": "cn-it-321e02ad81bd9a2e",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-2h9g-j24r-h63g",
+        "id": "github-advisory-ghsa-7j72-f6wg-cxw6",
         "category": "security",
-        "title": "Orval: Import-time RCE via array-items default -> zod module-level template literal",
-        "url": "https://github.com/advisories/GHSA-2h9g-j24r-h63g",
+        "title": "SiYuan: Anonymous publish-password authentication bypass via getHeadingChildrenDOM / getHeading*Transaction / getBacklinkDoc (publish mode)",
+        "url": "https://github.com/advisories/GHSA-7j72-f6wg-cxw6",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T18:38:20.000Z",
-        "summary": "### Summary Orval's zod schema generation emits the **array-items** `default` value as a module-level template literal (`export const …Default = ` `;`) without escaping `${` or the backtick. A default of the form `v${ }w` injects a live Ja…",
-        "badge": "CVE-2026-71869",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-03T21:22:42.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-68584. ### Summary SiYuan's publish mode defines a \"protected\" access level: a document that is publicly listed but requires a password to read (per the product's own UI help text, protec…",
+        "badge": "GHSA-7J72-F6WG-CXW6",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "2026年秋季学期，广州正式取消中小学校服统一订购，家长可自主线上、线下按需购买。新规落地首个开学季即遇断码缺货、订单延期发货问题，家长反映“买校服难”引关注。",
         "badge": "热搜",
-        "signal": "7,809,021 热度"
+        "signal": "7,809,320 热度"
       },
       {
         "id": "cisa-kev-cve-2026-48710",
@@ -119,12 +119,12 @@
       {
         "id": "hn-49554520",
         "category": "dev",
-        "title": "Qwen 3.8 27B available on Cerebras at 1500 tok/SEC",
+        "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
         "url": "https://inference-docs.cerebras.ai/models/overview",
         "source": "Hacker News",
         "publishedAt": "2026-09-03T18:32:13.000Z",
         "badge": "HN",
-        "signal": "33 分 · 2 评论"
+        "signal": "332 分 · 108 评论"
       },
       {
         "id": "cn-item-510085da60302db3",
@@ -137,24 +137,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-8j6p-r8jg-mxqh",
+        "id": "github-advisory-ghsa-36v8-mpjm-8j5r",
         "category": "security",
-        "title": "Orval: Import-time RCE via header-parameter default -> zod module-level template literal",
-        "url": "https://github.com/advisories/GHSA-8j6p-r8jg-mxqh",
+        "title": "SiYuan: Cross-boundary content disclosure via getBacklinkDoc/getBackmentionDoc (publish mode): reader-reachable rendered DOM of publish-forbidden docs; sibling list endpoints are filtered",
+        "url": "https://github.com/advisories/GHSA-36v8-mpjm-8j5r",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T18:32:03.000Z",
-        "summary": "### Summary Orval's zod schema generation emits the **header-parameter** `default` value as a module-level template literal (`export const Default = ` `;`) without escaping `${` or the backtick. A default of the form `v${ }w` injects a liv…",
-        "badge": "CVE-2026-71871",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-03T21:21:19.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-68586. ### Summary The backlink API splits into list endpoints (which documents reference a block) and content endpoints (the rendered text of those referencing blocks). The list endpoint…",
+        "badge": "CVE-2026-68586",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
-        "id": "ai-openai-b0cbef382238cdd5",
+        "id": "ai-openai-9281d6906e8350b6",
         "category": "ai",
-        "title": "How AI-native companies turn workflows into operating capability",
-        "url": "https://openai.com/index/ai-native-company-workflows",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-01T17:00:00.000Z",
-        "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+        "publishedAt": "2026-09-03T12:00:00.000Z",
+        "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
         "badge": "OpenAI"
       },
       {
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49551760",
+        "id": "hn-49550772",
         "category": "dev",
-        "title": "K2 Horizon: A connected fleet of six open models",
-        "url": "https://ifm.ai/blog/k2/",
+        "title": ".name Termination",
+        "url": "https://neil.fraser.name/news/2026/09/03/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T15:36:43.000Z",
+        "publishedAt": "2026-09-03T14:54:39.000Z",
         "badge": "HN",
-        "signal": "158 分 · 50 评论"
+        "signal": "1110 分 · 329 评论"
       },
       {
         "id": "cn-baidu-c4cb61c1b7809da1",
@@ -216,18 +216,18 @@
         "source": "百度热搜",
         "summary": "目前厄尔尼诺事件已确认出现，预计将在数月内增强为超强厄尔尼诺事件，强度可能在今年年底达顶峰。联合国警告称，此举将对全球降雨和温度模式产生重大影响，世界已进入极端天气危险区。",
         "badge": "热搜",
-        "signal": "7,712,892 热度"
+        "signal": "7,714,437 热度"
       },
       {
-        "id": "github-advisory-ghsa-2w86-xfrc-g85r",
+        "id": "github-advisory-ghsa-69mh-gvh4-8gp7",
         "category": "security",
-        "title": "Orval: RCE via schema property name -> computed-property-key injection in the MSW mock generator",
-        "url": "https://github.com/advisories/GHSA-2w86-xfrc-g85r",
+        "title": "SiYuan: Full-content disclosure of publish-disabled documents via getHeading*Transaction endpoints (publish mode): reader-reachable rendered DOM with no publish-access check",
+        "url": "https://github.com/advisories/GHSA-69mh-gvh4-8gp7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T18:26:12.000Z",
-        "summary": "### Summary orval, when generating MSW mocks (output.mock: true), emits each schema property name as a single-quoted object key in the mock factory WITHOUT escaping the single quote. A ' in a property name closes the key and lands in objec…",
-        "badge": "CVE-2026-71867",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-03T21:19:41.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-68587. ### Summary Three \"heading transaction\" endpoints `/api/block/getHeadingDeleteTransaction`, `/api/block/getHeadingLevelTransaction`, and `/api/block/getHeadingInsertTransaction` re…",
+        "badge": "CVE-2026-68587",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
         "id": "ai-hugging-face-a139f80b159295ad",
@@ -247,7 +247,7 @@
         "publishedAt": "2026-09-03T12:21:34.000Z",
         "summary": "想在文档里配张图，手写 SVG 太费时间，画图工具导出来的东西进不了 git ，Mermaid 又是把排版交给引擎，你说不上话。 svg-diagram 走的是第三条路：你用一句话说要什么图，agent 手写一份 SVG 给你，直接放进 README 或文档站就能用。 下面每张图都是这么来的，附上当时说的那句话。图里全是中文标签，不用额外配字体。 装上 npx skills add bybit-exchange/svg-diagram -g 嫌记不住命令，把这句话丢给你的 …",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       },
       {
         "id": "cn-item-a600e37eef3c6a02",
@@ -271,24 +271,24 @@
         "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
-        "id": "ai-openai-f2694bfa96c49e91",
+        "id": "ai-openai-325e9dcd840a97e9",
         "category": "ai",
-        "title": "Path to Astra: critical capabilities and frontier safeguards",
-        "url": "https://openai.com/index/path-to-astra",
+        "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+        "url": "https://openai.com/index/playco-game-prototyping-with-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-01T13:00:00.000Z",
-        "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+        "publishedAt": "2026-09-03T12:00:00.000Z",
+        "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49550698",
+        "id": "hn-49526453",
         "category": "dev",
-        "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
-        "url": "https://anyhumanever.com/",
+        "title": "The largest electric aircraft just flew [video]",
+        "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T14:51:10.000Z",
+        "publishedAt": "2026-09-01T19:02:34.000Z",
         "badge": "HN",
-        "signal": "226 分 · 105 评论"
+        "signal": "77 分 · 53 评论"
       },
       {
         "id": "cn-it-5c4a3b354665942f",
@@ -301,15 +301,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-3575-w9fc-c2j6",
+        "id": "github-advisory-ghsa-fph3-ghq9-vw66",
         "category": "security",
-        "title": "Orval: Import-time RCE via enum-typed default -> zod module-level template literal",
-        "url": "https://github.com/advisories/GHSA-3575-w9fc-c2j6",
+        "title": "SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reachable raw SQL (method 2) and unescaped REGEXP (method 3) on read-write asset-content DB",
+        "url": "https://github.com/advisories/GHSA-fph3-ghq9-vw66",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T18:20:55.000Z",
-        "summary": "### Summary Orval's zod schema generation emits the **enum-typed** `default` value as a module-level template literal (`export const …Default = ` `;`) without escaping `${` or the backtick. A default of the form `v${ }w` injects a live Jav…",
-        "badge": "CVE-2026-71868",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-03T21:01:05.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-69083. ### Summary The `/api/search/fullTextSearchAssetContent` endpoint exposes two SQL flaws on the asset-content database, both reachable by the publish `RoleReader` token and by the a…",
+        "badge": "CVE-2026-69083",
+        "signal": "CRITICAL · CVSS 10.0"
       },
       {
         "id": "ai-google-deepmind-63b19b50b4021cb5",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "国家疾控局9月3日举行新闻发布会，主题是“科学防病开学季 健康护航新学期”。 中国疾控中心学校卫生中心主任医师郭欣介绍，关于孩子的健康管理，很多家长不是不重视，而是确实不知道从哪儿下手。给家长一份按“每天、每周、每学期”记的清单。建议每天抓好以下这三件小事，一起来看。",
         "badge": "热搜",
-        "signal": "7,618,778 热度"
+        "signal": "7,617,229 热度"
       },
       {
         "id": "cisa-kev-cve-2026-9586",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49550375",
+        "id": "hn-49551760",
         "category": "dev",
-        "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
-        "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+        "title": "K2 Horizon: A connected fleet of six open models",
+        "url": "https://ifm.ai/blog/k2/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T14:28:18.000Z",
+        "publishedAt": "2026-09-03T15:36:43.000Z",
         "badge": "HN",
-        "signal": "44 分 · 9 评论"
+        "signal": "216 分 · 72 评论"
       },
       {
         "id": "cn-item-18a69cb842bc119b",
@@ -382,24 +382,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-653q-5476-x79g",
+        "id": "github-advisory-ghsa-82x6-q7mm-w9cf",
         "category": "security",
-        "title": "Orval: Import-time RCE via query parameter name -> computed-property-key injection in the zod cli",
-        "url": "https://github.com/advisories/GHSA-653q-5476-x79g",
+        "title": "toml-node: Uncontrolled Recursion",
+        "url": "https://github.com/advisories/GHSA-82x6-q7mm-w9cf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T18:18:09.000Z",
-        "summary": "### Summary orval's zod client emits each query parameter name as a double-quoted key in the generated zod.object({...}) request-validation schema WITHOUT escaping the double quote. A \" in the query parameter name closes the key and lands …",
-        "badge": "CVE-2026-71865",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-03T20:56:13.000Z",
+        "summary": "### Summary `toml.parse()` crashes with an uncaught `RangeError: Maximum call stack size exceeded` when parsing deeply nested arrays or inline tables. The parser is generated by **Peggy 5.1.0** (a PEG parser generator) as a recursive-desce…",
+        "badge": "CVE-2026-77465",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-c0364833b41073ca",
+        "id": "ai-openai-39210f987919e80e",
         "category": "ai",
-        "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
-        "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+        "title": "Safety overview: GPT-6 Astra",
+        "url": "https://openai.com/index/safety-overview-gpt-6-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-01T12:00:00.000Z",
-        "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+        "publishedAt": "2026-09-03T00:00:00.000Z",
+        "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
         "badge": "OpenAI"
       },
       {
@@ -444,14 +444,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49554273",
+        "id": "hn-49550698",
         "category": "dev",
-        "title": "OpenAI begins rolling out GPT-6 Astra",
-        "url": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html",
+        "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
+        "url": "https://anyhumanever.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T18:18:22.000Z",
+        "publishedAt": "2026-09-03T14:51:10.000Z",
         "badge": "HN",
-        "signal": "13 分 · 2 评论"
+        "signal": "381 分 · 176 评论"
       },
       {
         "id": "cn-baidu-20899bc0d5a04962",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "9月3日，手机集体涨价话题引发关注，线下门店冷清。此前9月1日，华为、小米、荣耀等品牌因存储及芯片成本上涨集体上调售价。此次涨价导致部分原价6000元以下机型失去补贴资格。",
         "badge": "热搜",
-        "signal": "7,520,779 热度"
+        "signal": "7,520,096 热度"
       },
       {
-        "id": "github-advisory-ghsa-6437-gxhq-pqv8",
+        "id": "github-advisory-ghsa-v5mp-jgw5-2x6j",
         "category": "security",
-        "title": "Orval: Import-time RCE via header parameter name -> computed-property-key injection in the zod client",
-        "url": "https://github.com/advisories/GHSA-6437-gxhq-pqv8",
+        "title": "toml-node: Prototype Pollution Leads to `Object.prototype` Corruption via `__proto__` Key-Path Desynchronization",
+        "url": "https://github.com/advisories/GHSA-v5mp-jgw5-2x6j",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T18:08:31.000Z",
-        "summary": "### Summary orval's zod client emits each header parameter name as a double-quoted key in the generated zod.object({...}) request-validation schema WITHOUT escaping the double quote. A \" in the header parameter name closes the key and land…",
-        "badge": "CVE-2026-71864",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-03T20:55:32.000Z",
+        "summary": "### Summary `toml.parse()` writes attacker-controlled keys onto `Object.prototype`. The compiler protects the tables it builds by creating them with `Object.create(null)`, which neutralizes a direct `[__proto__]` table. An attacker bypasse…",
+        "badge": "CVE-2026-63376",
+        "signal": "HIGH · CVSS 8.2"
       },
       {
         "id": "ai-hugging-face-b5500bc6503561c6",
@@ -509,7 +509,7 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 24946,
+        "stars": 25020,
         "starsToday": 955
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 246940,
+        "stars": 247188,
         "starsToday": 1576
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 240710,
+        "stars": 240778,
         "starsToday": 778
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 123174,
+        "stars": 123284,
         "starsToday": 2138
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 173551,
+        "stars": 173601,
         "starsToday": 277
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 246957,
+        "stars": 247075,
         "starsToday": 749
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "language": "Go",
-        "stars": 103005,
+        "stars": 103052,
         "starsToday": 545
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/blader/humanizer",
         "description": "Agent skill that removes signs of AI-generated writing from text",
         "language": "Python",
-        "stars": 41301,
+        "stars": 41385,
         "starsToday": 1214
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/google-research/timesfm",
         "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "language": "Python",
-        "stars": 30634,
+        "stars": 30671,
         "starsToday": 1626
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/averygan/reclip",
         "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
         "language": "HTML",
-        "stars": 8281,
+        "stars": 8321,
         "starsToday": 123
       }
     ],
-    "updatedAt": "2026-09-03T18:40:52.386Z"
+    "updatedAt": "2026-09-03T21:43:24.423Z"
   }
 }
