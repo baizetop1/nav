@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-02T21:50:30.512Z",
+  "generatedAt": "2026-09-03T00:17:36.055Z",
   "intelligence": {
-    "updatedAt": "2026-09-02T21:50:30.512Z",
+    "updatedAt": "2026-09-03T00:17:36.055Z",
     "items": [
       {
         "id": "cn-item-a6af3f5c741fda16",
@@ -26,13 +26,13 @@
         "signal": "已遭利用 · 整改期限 2026-09-16"
       },
       {
-        "id": "ai-openai-b0cbef382238cdd5",
+        "id": "ai-openai-3bda12e16fd31e0e",
         "category": "ai",
-        "title": "How AI-native companies turn workflows into operating capability",
-        "url": "https://openai.com/index/ai-native-company-workflows",
+        "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+        "url": "https://openai.com/index/atv-big-air-tour",
         "source": "OpenAI",
-        "publishedAt": "2026-09-01T17:00:00.000Z",
-        "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+        "publishedAt": "2026-09-02T12:00:00.000Z",
+        "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
         "badge": "OpenAI"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-02T19:35:04.000Z",
         "badge": "HN",
-        "signal": "249 分 · 143 评论"
+        "signal": "342 分 · 239 评论"
       },
       {
-        "id": "cn-it-4231eb7ab108af52",
+        "id": "cn-it-b1ddeed74fb3955b",
         "category": "cn",
-        "title": "博通 2026 财年第三财季归母净利润 130.88 亿美元，同比增长 216%",
-        "url": "https://www.ithome.com/0/997/713.htm",
+        "title": "全部基于量产原厂状态：全新一汽红旗 H7 插电混动轿车开启最长续航吉尼斯世界纪录挑战",
+        "url": "https://www.ithome.com/0/997/738.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T20:30:01.000Z",
-        "summary": "IT之家 9 月 3 日消息，博通今日发布 2026 财年（2025年11月3日～2026年11月1日）第三财季（2026年5月4日～2026年8月2日）报告： 营业总收入 ：295.91 亿美元 （IT之家注：现汇率约合 1993.52 亿元人民币） ，同比增长 86%，环比增长 33.37% 毛利润 ：204.56 亿美元 （现汇率约合 1378.1 亿元人民币） ，同比增长 91.12% 毛利率 ：69.13%，同比增长 2.03 个百分点 归母净利润 ：130.88…",
+        "publishedAt": "2026-09-03T00:09:53.000Z",
+        "summary": "IT之家 9 月 3 日消息，一汽红旗官方昨晚宣布， 全新红旗 H7 正式向「驾驶插电混动量产轿车满油满电零补能行驶最远距离」吉尼斯世界纪录称号发起挑战 。 据介绍，本次挑战， 全新红旗 H7 将横跨滇、桂、粤三省，一路穿越多样地貌 ，面对高温炙烤、降雨湿滑、连续爬坡、城市拥堵等多重极端环境和路况，把日常长途出行会遇到的各类难题全部拉满。 一汽红旗官方表示，从高原山地到滨海平原，温差起伏、路况多变，每一公里都是对混动发动机、电池热管理、整车能量策略的严苛考验。 没有封闭场地…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-cpjf-6666-r8fx",
+        "id": "github-advisory-ghsa-2mw5-23gm-pccq",
         "category": "security",
-        "title": "link-preview-js DNS Rebinding SSRF Bypass / Incomplete Fix for CVE-2026-43897",
-        "url": "https://github.com/advisories/GHSA-cpjf-6666-r8fx",
+        "title": "OpenChoreo: Authenticated OS command injection via OpenChoreo Workflow Plane templates enables code execution in privileged pods",
+        "url": "https://github.com/advisories/GHSA-2mw5-23gm-pccq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T21:29:57.000Z",
-        "summary": "The existing advisory GHSA-4gp8-rjrq-ch6q / CVE-2026-43897 states that the SSRF issue was fixed in 4.0.1. However, 4.0.3 remains bypassable when the documented resolveDNSHost mitigation is used. Root cause: The library validates one resolv…",
-        "badge": "CVE-2026-61704",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-02T23:45:26.000Z",
+        "summary": "### Summary OpenChoreo Workflow Plane templates were vulnerable to OS command injection because some developer-controlled workflow parameters were interpolated directly into shell program text executed through sh -c. An authenticated user …",
+        "badge": "CVE-2026-73667",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-d721843382f3485e",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "日前，教育部发文指出学龄人口变化带来新挑战，需优化教育资源配置。当前多地正探索将富余小学老师转岗至初中任教，并建设可弹性转换学位的“潮汐学校”及推行小班化教学。",
         "badge": "热搜",
-        "signal": "7,808,664 热度"
+        "signal": "7,809,764 热度"
       },
       {
         "id": "cisa-kev-cve-2026-48710",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49537553",
+        "id": "hn-49543841",
         "category": "dev",
-        "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+        "title": "METR Report on OpenAI / Hugging Face Hacking Incident",
+        "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/#core-takeaways-about-this-incident",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T15:12:40.000Z",
+        "publishedAt": "2026-09-02T23:08:47.000Z",
         "badge": "HN",
-        "signal": "715 分 · 419 评论"
+        "signal": "57 分 · 33 评论"
       },
       {
         "id": "cn-item-e802d6b063c0d30b",
@@ -137,24 +137,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-5jgf-p345-68v8",
+        "id": "github-advisory-ghsa-52gf-6rpq-fgmx",
         "category": "security",
-        "title": "fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references",
-        "url": "https://github.com/advisories/GHSA-5jgf-p345-68v8",
+        "title": "OpenChoreo: Cross-project command execution and wirelog view access via OpenChoreo openchoreo-api exec and wirelogs endpoints",
+        "url": "https://github.com/advisories/GHSA-52gf-6rpq-fgmx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:44:30.000Z",
-        "summary": "### Impact `fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim …",
-        "badge": "CVE-2026-75931",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-02T23:44:51.000Z",
+        "summary": "### Summary The OpenChoreo API server (`openchoreo-api`) authorized requests to its exec and wirelogs endpoints against the project supplied by the caller in the request, rather than against the project that actually owns the target compon…",
+        "badge": "CVE-2026-73841",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-openai-f2694bfa96c49e91",
+        "id": "ai-openai-b0cbef382238cdd5",
         "category": "ai",
-        "title": "Path to Astra: critical capabilities and frontier safeguards",
-        "url": "https://openai.com/index/path-to-astra",
+        "title": "How AI-native companies turn workflows into operating capability",
+        "url": "https://openai.com/index/ai-native-company-workflows",
         "source": "OpenAI",
-        "publishedAt": "2026-09-01T13:00:00.000Z",
-        "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+        "publishedAt": "2026-09-01T17:00:00.000Z",
+        "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
         "badge": "OpenAI"
       },
       {
@@ -169,13 +169,13 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-28836f3d0af02313",
+        "id": "cn-it-b31ee109b6f2a56a",
         "category": "cn",
-        "title": "慧与 2026 财年半年报归母净利润 25.29 亿美元",
-        "url": "https://www.ithome.com/0/997/712.htm",
+        "title": "探索太阳风暴早期预警：AI 提前 9.24 小时捕捉太阳活动区信号",
+        "url": "https://www.ithome.com/0/997/737.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T20:11:14.000Z",
-        "summary": "IT之家 9 月 3 日消息，慧与今日发布 2026 财年（2025年11月1日～2026年10月31日）半年报（2025年11月1日～2026年7月31日）及第三财季（2026年5月1日～2026年7月31日）报告： 2026 财年半年报 营业总收入 ：321.92 亿美元 （IT之家注：现汇率约合 2168.75 亿元人民币） ，同比增长 30.8% 毛利润 ：121.39 亿美元 （现汇率约合 817.79 亿元人民币） 毛利率 ：37.7% 归母净利润 ：25.29…",
+        "publishedAt": "2026-09-03T00:08:09.000Z",
+        "summary": "IT之家 9 月 3 日消息，科技媒体 SciTech 昨日（9 月 2 日）发布博文，报道称由美国新泽西理工学院（NJIT）牵头的科研团队发布最新研究， 成功打造出机器学习模型 EarlyDetect，可从太阳声学活动和磁场变化中识别活动区形成前兆。 IT之家援引博文介绍，太阳活动区是太阳表面磁场强烈的区域，太阳黑子通常在其中形成。活动区开始浮现可能只需数小时，但完整发展过程通常需要 1 到数天。研究人员希望利用更早的信号，为空间天气预报提供补充信息。 EarlyDete…",
         "badge": "IT之家"
       },
       {
@@ -199,35 +199,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49537131",
+        "id": "hn-49537553",
         "category": "dev",
-        "title": "Google avoids a breakup of its ad tech business",
-        "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
+        "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T14:46:16.000Z",
+        "publishedAt": "2026-09-02T15:12:40.000Z",
         "badge": "HN",
-        "signal": "149 分 · 74 评论"
+        "signal": "796 分 · 474 评论"
       },
       {
-        "id": "cn-baidu-595313bd046cdc68",
+        "id": "cn-baidu-6e49507bbf0bdb2a",
         "category": "cn",
-        "title": "“口袋空调”卖爆了",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%8F%A3%E8%A2%8B%E7%A9%BA%E8%B0%83%E2%80%9D%E5%8D%96%E7%88%86%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "今天 致敬伟大胜利",
+        "url": "https://www.baidu.com/s?wd=%E4%BB%8A%E5%A4%A9+%E8%87%B4%E6%95%AC%E4%BC%9F%E5%A4%A7%E8%83%9C%E5%88%A9&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "今夏，凉感喷雾、湿巾等单价十几元的产品成热销单品，线上销售额逼近2.6亿元。消费群体覆盖户外工作者、演唱会观众等。",
+        "summary": "9月3日是抗战胜利纪念日。14年浴血奋战，3500多万同胞伤亡。硝烟远去，但这段历史不能忘、不敢忘，缅怀先烈，奋勇向前。",
         "badge": "热搜",
-        "signal": "7,713,541 热度"
+        "signal": "7,713,963 热度"
       },
       {
-        "id": "github-advisory-ghsa-f65p-4m7j-42xc",
+        "id": "github-advisory-ghsa-qh9r-j7rp-4x2m",
         "category": "security",
-        "title": "fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization",
-        "url": "https://github.com/advisories/GHSA-f65p-4m7j-42xc",
+        "title": "OpenChoreo: Unauthenticated access to data-plane operations via OpenChoreo cluster-gateway management APIs",
+        "url": "https://github.com/advisories/GHSA-qh9r-j7rp-4x2m",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:43:30.000Z",
-        "summary": "### Impact `fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For exampl…",
-        "badge": "CVE-2026-75975",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-02T23:43:55.000Z",
+        "summary": "### Summary The OpenChoreo control-plane **cluster-gateway** served its caller-facing management APIs on the same network listener that accepts data-plane agent connections. In the multi-cluster topology that listener is published outside …",
+        "badge": "CVE-2026-73843",
+        "signal": "CRITICAL · CVSS 9.6"
       },
       {
         "id": "ai-hugging-face-ad90e6779ea3045b",
@@ -271,44 +271,44 @@
         "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
-        "id": "ai-openai-c0364833b41073ca",
+        "id": "ai-openai-f2694bfa96c49e91",
         "category": "ai",
-        "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
-        "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+        "title": "Path to Astra: critical capabilities and frontier safeguards",
+        "url": "https://openai.com/index/path-to-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-01T12:00:00.000Z",
-        "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+        "publishedAt": "2026-09-01T13:00:00.000Z",
+        "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49541519",
+        "id": "hn-49537131",
         "category": "dev",
-        "title": "I wanna live an NPC life",
-        "url": "https://signalundefied.bearblog.dev/i-wanna-live-an-npc-life/",
+        "title": "Google avoids a breakup of its ad tech business",
+        "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T19:52:53.000Z",
+        "publishedAt": "2026-09-02T14:46:16.000Z",
         "badge": "HN",
-        "signal": "118 分 · 94 评论"
+        "signal": "238 分 · 146 评论"
       },
       {
-        "id": "cn-it-5027ca95ee2fce70",
+        "id": "cn-it-6bde913454e241cd",
         "category": "cn",
-        "title": "谷歌推出 Gemini 3.8 Flash Cyber 模型，内部已全面部署用于代码安全防护",
-        "url": "https://www.ithome.com/0/997/708.htm",
+        "title": "任天堂 Switch 2 独占：双人合作游戏《轨道双子星》今日发售，致敬 80 年代经典动画",
+        "url": "https://www.ithome.com/0/997/736.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T16:09:52.000Z",
-        "summary": "IT之家 9 月 3 日消息，当地时间 9 月 2 日，谷歌宣布推出 Gemini 3.8 Flash Cyber 模型，通过 Fairwind 计划面向首批受信任的安全防护团队开放。 官方表示，在针对漏洞挖掘的行业权威基准测试 CyberGym 上，Gemini 3.8 Flash Cyber 展现出了顶尖水平的自主漏洞挖掘能力。不仅超越了前代 3.5 Flash Cyber，还将多款体量显著更大的前沿模型甩在身后。 谷歌在更全面的内部基准测试中对 Gemini 3.8 …",
+        "publishedAt": "2026-09-03T00:02:44.000Z",
+        "summary": "IT之家 9 月 3 日消息，由独立游戏团队 Shapefarm 打造、Kepler Interactive 发行的复古动漫风双人合作冒险游戏《轨道双子星》（Orbitals）今日正式发售，独占登陆 Nintendo Switch 2 平台。 该作采用虚幻引擎 5 开发，支持简体中文、繁体中文、英文及日文等语言，并配有中文配音。游戏标准版售价 299 港币 （IT之家注：现汇率约合 256.9 元人民币） ，豪华版 349 港币 （现汇率约合 299.9 元人民币） 。 在…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-fph4-wmhf-6fwf",
+        "id": "github-advisory-ghsa-w878-pj84-3j5v",
         "category": "security",
-        "title": "fast-uri vulnerable to server-side request forgery via repeated hostname percent-decoding",
-        "url": "https://github.com/advisories/GHSA-fph4-wmhf-6fwf",
+        "title": "Mailpit: SMTP command parser buffers unbounded command lines before syntax rejection",
+        "url": "https://github.com/advisories/GHSA-w878-pj84-3j5v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:42:39.000Z",
-        "summary": "### Impact `fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode…",
-        "badge": "CVE-2026-75899",
+        "publishedAt": "2026-09-02T23:42:25.000Z",
+        "summary": "## Summary Mailpit's SMTP server reads each command line with an unbounded `bufio.Reader.ReadString('\\n')` before parsing the command or enforcing any protocol length limit. A remote SMTP client can send an oversized single command line an…",
+        "badge": "CVE-2026-67445",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "国家统计局发布的7月份国民经济运行数据中，一项指标颇为亮眼：前7个月，新动能对规模以上工业增长的贡献率为50.9%，比上半年提高3个百分点。新动能首次扛起“半壁江山”，充分反映了我国经济向新向优的积极态势。",
         "badge": "热搜",
-        "signal": "7,618,325 热度"
+        "signal": "7,618,565 热度"
       },
       {
         "id": "cisa-kev-cve-2026-9586",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49541458",
+        "id": "hn-49543007",
         "category": "dev",
-        "title": "Fable 5.1 World Modeling",
-        "url": "https://github.com/PhiloLabs/fable51-worlds",
+        "title": "Uber shuts operations in Nigeria and Uganda with immediate effect",
+        "url": "https://www.bbc.com/news/articles/c86xpv8l9y9o",
         "source": "Hacker News",
-        "publishedAt": "2026-09-02T19:49:01.000Z",
+        "publishedAt": "2026-09-02T21:46:33.000Z",
         "badge": "HN",
-        "signal": "66 分 · 17 评论"
+        "signal": "63 分 · 28 评论"
       },
       {
         "id": "cn-item-1ae55dc14252fe1f",
@@ -382,24 +382,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-jqff-g426-hqxp",
+        "id": "github-advisory-ghsa-gv5w-hfx8-8cwq",
         "category": "security",
-        "title": "fast-uri vulnerable to host confusion via percent-encoded scheme normalization",
-        "url": "https://github.com/advisories/GHSA-jqff-g426-hqxp",
+        "title": "SeaweedFS: Filer JWT allowed_prefixes literal prefix match allows cross-tenant access to sibling paths",
+        "url": "https://github.com/advisories/GHSA-gv5w-hfx8-8cwq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:41:53.000Z",
-        "summary": "### Impact `fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decod…",
-        "badge": "CVE-2026-76172",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-02T23:42:05.000Z",
+        "summary": "### Impact When a filer JWT restricts a token to a set of path prefixes via `allowed_prefixes`, the authorization check used a literal byte-prefix match (`strings.HasPrefix`). A token scoped to `/tenant1` therefore also authorized requests…",
+        "badge": "CVE-2026-72921",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
-        "id": "ai-openai-330fba64551db8b4",
+        "id": "ai-openai-c0364833b41073ca",
         "category": "ai",
-        "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
-        "url": "https://openai.com/index/gilbert-tobin",
+        "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+        "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
         "source": "OpenAI",
-        "publishedAt": "2026-09-01T01:00:00.000Z",
-        "summary": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
+        "publishedAt": "2026-09-01T12:00:00.000Z",
+        "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
         "badge": "OpenAI"
       },
       {
@@ -414,13 +414,13 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-63b798976c860765",
+        "id": "cn-it-da3dae6e37053bc5",
         "category": "cn",
-        "title": "森海塞尔 MOMENTUM 真无线 5 代蓝牙耳机国行版首销，2399 元",
-        "url": "https://www.ithome.com/0/997/707.htm",
+        "title": "IT早报 0903：上市两周宇树科技股价腰斩；星宇股份董事长就劝退应届生事件致歉；小米 18 Fold 中折叠手机官宣；豆包手机二代计划 9 月开售...",
+        "url": "https://www.ithome.com/0/997/735.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-02T15:58:05.000Z",
-        "summary": "IT之家 9 月 2 日消息，森海塞尔 MOMENTUM 真无线 5 代蓝牙耳机国行版将于 9 月 3 日 0:00 首销， 到手价 2399 元 。 这款耳机有石墨黑 / 奶油白 / 焦糖棕 /冷萃蓝 / 薰衣草紫五色可选，采用人体工学设计，单耳重约 7g；具备 IP54 防尘防泼溅；支持 Qi 无线充电，单次续航可达 12 小时，搭配充电盒综合续航可达 40 小时。 这款耳机配备 7mm TrueResponse 动圈驱动单元，升级蓝牙 6.0，搭载骁龙畅听技术，支持 …",
+        "publishedAt": "2026-09-02T23:57:20.000Z",
+        "summary": "“IT早报”时间，大家好，现在是 2026 年 9 月 3 日星期四，今天的重要科技资讯有： 1. A 股“人形机器人第一股”宇树科技股价腰斩 A 股“人形机器人第一股”宇树科技 9 月 2 日股价跌超 4%，截至IT之家发文，宇树科技每股已跌至 550 元以下，相比首日开盘最高 1100 元 / 股已经股价腰斩。>> 查看详情 2. 星宇股份董事长周晓萍回应劝退应届生事件：公司深刻反省并真诚道歉，将以制度和流程切实保障劳动者合法权益 周晓萍表示，公司高度关注近期舆情，已就…",
         "badge": "IT之家"
       },
       {
@@ -444,35 +444,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49508608",
+        "id": "hn-49541458",
         "category": "dev",
-        "title": "Reverse Engineering Unknown File Formats with ImHex",
-        "url": "https://werwolv.net/posts/file_format_reverse_engineering/",
+        "title": "Fable 5.1 World Modeling",
+        "url": "https://github.com/PhiloLabs/fable51-worlds",
         "source": "Hacker News",
-        "publishedAt": "2026-08-31T12:01:05.000Z",
+        "publishedAt": "2026-09-02T19:49:01.000Z",
         "badge": "HN",
-        "signal": "24 分 · 2 评论"
+        "signal": "125 分 · 43 评论"
       },
       {
-        "id": "cn-baidu-e408b92ec74911b0",
+        "id": "cn-baidu-595313bd046cdc68",
         "category": "cn",
-        "title": "告别机顶盒",
-        "url": "https://www.baidu.com/s?wd=%E5%91%8A%E5%88%AB%E6%9C%BA%E9%A1%B6%E7%9B%92&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“口袋空调”卖爆了",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%8F%A3%E8%A2%8B%E7%A9%BA%E8%B0%83%E2%80%9D%E5%8D%96%E7%88%86%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "8月31日，中国广电发布一体化电视适配器集采公告，首次进行全国性集采，标志该项目进入规模部署阶段，用户无需外接机顶盒即可看直播。",
+        "summary": "今夏，凉感喷雾、湿巾等单价十几元的产品成热销单品，线上销售额逼近2.6亿元。消费群体覆盖户外工作者、演唱会观众等。",
         "badge": "热搜",
-        "signal": "7,520,006 热度"
+        "signal": "7,520,438 热度"
       },
       {
-        "id": "github-advisory-ghsa-p3m8-78j2-g5p3",
+        "id": "github-advisory-ghsa-75mr-qw9x-3r39",
         "category": "security",
-        "title": "NLTK: Default ENFORCE=False Disables All pathsec Security Controls",
-        "url": "https://github.com/advisories/GHSA-p3m8-78j2-g5p3",
+        "title": "Mailpit: Thumbnail generation decodes unbounded image dimensions before scaling",
+        "url": "https://github.com/advisories/GHSA-75mr-qw9x-3r39",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T15:40:33.000Z",
-        "summary": "NLTK's pathsec.py security module defaults to ENFORCE=False (line 24), which means all 8 security validation functions only emit RuntimeWarning instead of raising exceptions when violations are detected. The pathsec module was introduced a…",
-        "badge": "CVE-2026-62388",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-02T23:39:08.000Z",
+        "summary": "## Summary Mailpit's thumbnail endpoint decodes attacker-supplied image attachments into a full raster before checking any decoded-pixel, dimension, or memory budget. A remote client that can store an email and reach the default web API ca…",
+        "badge": "CVE-2026-67446",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-4d3b17a749f42c95",
@@ -509,8 +509,8 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 24188,
-        "starsToday": 3
+        "stars": 24230,
+        "starsToday": 14
       },
       {
         "id": "github-d6b3ceb69fb5b433",
@@ -519,8 +519,8 @@
         "url": "https://github.com/google-research/timesfm",
         "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "language": "Python",
-        "stars": 29637,
-        "starsToday": 326
+        "stars": 29753,
+        "starsToday": 343
       },
       {
         "id": "github-61b98383e7d93589",
@@ -529,8 +529,8 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 121330,
-        "starsToday": 1364
+        "stars": 121494,
+        "starsToday": 1354
       },
       {
         "id": "github-90d09492a98e7644",
@@ -539,8 +539,8 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 14537,
-        "starsToday": 834
+        "stars": 14683,
+        "starsToday": 832
       },
       {
         "id": "github-0973c79c394d442b",
@@ -549,8 +549,8 @@
         "url": "https://github.com/sngyai/Sequoia-X",
         "description": "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
         "language": "Python",
-        "stars": 6014,
-        "starsToday": 138
+        "stars": 6034,
+        "starsToday": 63
       },
       {
         "id": "github-c68b4f26713a0266",
@@ -559,8 +559,8 @@
         "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
         "description": "Chrome DevTools for coding agents",
         "language": "TypeScript",
-        "stars": 50607,
-        "starsToday": 140
+        "stars": 50627,
+        "starsToday": 148
       },
       {
         "id": "github-bfef0c14f46af5da",
@@ -569,8 +569,8 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 240067,
-        "starsToday": 529
+        "stars": 240115,
+        "starsToday": 533
       },
       {
         "id": "github-0cff16459805db4d",
@@ -579,8 +579,8 @@
         "url": "https://github.com/superlinked/sie",
         "description": "Open-source inference server and production cluster for all the models your agent needs.",
         "language": "Python",
-        "stars": 3032,
-        "starsToday": 61
+        "stars": 3050,
+        "starsToday": 60
       },
       {
         "id": "github-70b433eb5304b395",
@@ -589,8 +589,8 @@
         "url": "https://github.com/pacifio/atlas",
         "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
         "language": "Rust",
-        "stars": 2834,
-        "starsToday": 895
+        "stars": 2862,
+        "starsToday": 888
       },
       {
         "id": "github-369a12d509c913a8",
@@ -599,10 +599,10 @@
         "url": "https://github.com/zyronon/TypeWords",
         "description": "Practice English, one strike, one step forward; 练习英语，一次敲击，一点进步；",
         "language": "Vue",
-        "stars": 9280,
-        "starsToday": 68
+        "stars": 9295,
+        "starsToday": 21
       }
     ],
-    "updatedAt": "2026-09-02T21:50:30.512Z"
+    "updatedAt": "2026-09-03T00:17:36.055Z"
   }
 }
