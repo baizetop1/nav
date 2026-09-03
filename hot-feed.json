@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-03T14:35:29.087Z",
+  "generatedAt": "2026-09-03T18:40:52.386Z",
   "intelligence": {
-    "updatedAt": "2026-09-03T14:35:29.087Z",
+    "updatedAt": "2026-09-03T18:40:52.386Z",
     "items": [
       {
         "id": "cn-item-5eff44868b57d5d8",
@@ -36,65 +36,65 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49548395",
+        "id": "hn-49550772",
         "category": "dev",
-        "title": "Audacity 4.0",
-        "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+        "title": ".name Termination",
+        "url": "https://neil.fraser.name/news/2026/09/03/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T10:53:08.000Z",
+        "publishedAt": "2026-09-03T14:54:39.000Z",
         "badge": "HN",
-        "signal": "486 分 · 122 评论"
+        "signal": "767 分 · 196 评论"
       },
       {
-        "id": "cn-it-63585e0dff4f42f8",
+        "id": "cn-it-321e02ad81bd9a2e",
         "category": "cn",
-        "title": "微信鸿蒙版 App 获 8.0.21.38 尝鲜升级，灰度“折叠发图”等功能",
-        "url": "https://www.ithome.com/0/998/185.htm",
+        "title": "英伟达 RTX Spark 紧凑型 Win PC 主机下月上市，含宏碁、联想等 6 家 OEM 厂商产品",
+        "url": "https://www.ithome.com/0/998/202.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-03T14:34:58.000Z",
-        "summary": "IT之家 9 月 3 日消息，微信鸿蒙版 App 今日在华为应用市场（App Gallery）开启了 8.0.21.38 (8394022) 版本尝鲜升级（可能量少，如果未抢到尝鲜版本，须等待官方“补货”），测试时间为 2026/9/3-2026/10/3。 和往常一样，本次更新的说明依旧为“修复了一些已知问题”。据用户反馈，8.0.21 版本的微信新增了如下特性： 私聊设置打开免打扰之后支持折叠聊天； 设置-通用-辅助功能新增微信支付商家助手； 通讯录-公众号 / 服务号…",
+        "publishedAt": "2026-09-03T16:00:06.000Z",
+        "summary": "IT之家 9 月 4 日消息，英伟达今天宣布， 全新 RTX Spark Windows PC 将于 10 月上市 ，为 AI 发烧友、开发者提供更多创作方式。 据介绍，英伟达合作伙伴已在 IFA 2026 大会上展示相关硬件。 全新发布的产品设计将与现有 6 家 OEM 厂商的产品一同于 10 月出货 。例如宏碁本次展示了 RTX Spark 高能效桌面主机的概念设计，联想则发布了 Yoga Pro 9n 和 Yoga 9n 二合一设备。 据官方介绍，RTX Spark …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-2mw5-23gm-pccq",
+        "id": "github-advisory-ghsa-2h9g-j24r-h63g",
         "category": "security",
-        "title": "OpenChoreo: Authenticated OS command injection via OpenChoreo Workflow Plane templates enables code execution in privileged pods",
-        "url": "https://github.com/advisories/GHSA-2mw5-23gm-pccq",
+        "title": "Orval: Import-time RCE via array-items default -> zod module-level template literal",
+        "url": "https://github.com/advisories/GHSA-2h9g-j24r-h63g",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T23:45:26.000Z",
-        "summary": "### Summary OpenChoreo Workflow Plane templates were vulnerable to OS command injection because some developer-controlled workflow parameters were interpolated directly into shell program text executed through sh -c. An authenticated user …",
-        "badge": "CVE-2026-73667",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-03T18:38:20.000Z",
+        "summary": "### Summary Orval's zod schema generation emits the **array-items** `default` value as a module-level template literal (`export const …Default = ` `;`) without escaping `${` or the backtick. A default of the form `v${ }w` injects a live Ja…",
+        "badge": "CVE-2026-71869",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
-        "id": "ai-google-deepmind-d721843382f3485e",
+        "id": "ai-google-deepmind-2b0379511ea05114",
         "category": "ai",
-        "title": "Proactive cyber defense for governments and enterprises",
-        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+        "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
+        "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-02T16:24:24.000Z",
+        "publishedAt": "2026-09-03T15:02:08.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239324",
+        "id": "v2ex-1239330",
         "category": "dev",
-        "title": "Claude 服务是挂了吗？ 20 分钟前还在用的",
-        "url": "https://www.v2ex.com/t/1239324",
+        "title": "做了大半年 Agent 架构，越做越觉得是在「人研究人」",
+        "url": "https://www.v2ex.com/t/1239330",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-03T13:48:04.000Z",
-        "summary": "API Error: 529 Overloaded. This is a server-side issue, usually temporary — try again in a moment. If it persists, check https://status.claude.com .",
+        "publishedAt": "2026-09-03T14:30:44.000Z",
+        "summary": "做 Agent 平台大半年了，最大的感受是：架构本身不难，难的是你要研究的那套东西——人。 我们想做的事情，说穿了就是把人的认知、决策、记忆、协作这些机制抽象出来，做成一套可运行、可控制、可工程化的系统。听着像句漂亮话，落到地上全是硬骨头： 记忆。上下文窗口永远是稀缺资源，我们目前的思路是承认「完整历史不可能常驻」，转而做一个持续提取的过程——把长期交互里的关键事实、偏好、踩过的坑不断蒸馏到有限的 context 界面里。难点不在存，在\"什么值得留\"和\"怎么让它在该出现的时…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-20899bc0d5a04962",
+        "id": "cn-baidu-d9f80e6d69946f4b",
         "category": "cn",
-        "title": "手机集体涨价 吓跑了买手机的人",
-        "url": "https://www.baidu.com/s?wd=%E6%89%8B%E6%9C%BA%E9%9B%86%E4%BD%93%E6%B6%A8%E4%BB%B7+%E5%90%93%E8%B7%91%E4%BA%86%E4%B9%B0%E6%89%8B%E6%9C%BA%E7%9A%84%E4%BA%BA&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "广州取消校服统一订购",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%BF%E5%B7%9E%E5%8F%96%E6%B6%88%E6%A0%A1%E6%9C%8D%E7%BB%9F%E4%B8%80%E8%AE%A2%E8%B4%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月3日，手机集体涨价话题引发关注，线下门店冷清。此前9月1日，华为、小米、荣耀等品牌因存储及芯片成本上涨集体上调售价。此次涨价导致部分原价6000元以下机型失去补贴资格。",
+        "summary": "2026年秋季学期，广州正式取消中小学校服统一订购，家长可自主线上、线下按需购买。新规落地首个开学季即遇断码缺货、订单延期发货问题，家长反映“买校服难”引关注。",
         "badge": "热搜",
-        "signal": "7,809,784 热度"
+        "signal": "7,809,021 热度"
       },
       {
         "id": "cisa-kev-cve-2026-48710",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49549676",
+        "id": "hn-49554520",
         "category": "dev",
-        "title": "Elevated Errors for Multiple Models",
-        "url": "https://status.claude.com/incidents/461yvfrzpwtt",
+        "title": "Qwen 3.8 27B available on Cerebras at 1500 tok/SEC",
+        "url": "https://inference-docs.cerebras.ai/models/overview",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T13:29:12.000Z",
+        "publishedAt": "2026-09-03T18:32:13.000Z",
         "badge": "HN",
-        "signal": "89 分 · 60 评论"
+        "signal": "33 分 · 2 评论"
       },
       {
         "id": "cn-item-510085da60302db3",
@@ -137,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-52gf-6rpq-fgmx",
+        "id": "github-advisory-ghsa-8j6p-r8jg-mxqh",
         "category": "security",
-        "title": "OpenChoreo: Cross-project command execution and wirelog view access via OpenChoreo openchoreo-api exec and wirelogs endpoints",
-        "url": "https://github.com/advisories/GHSA-52gf-6rpq-fgmx",
+        "title": "Orval: Import-time RCE via header-parameter default -> zod module-level template literal",
+        "url": "https://github.com/advisories/GHSA-8j6p-r8jg-mxqh",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T23:44:51.000Z",
-        "summary": "### Summary The OpenChoreo API server (`openchoreo-api`) authorized requests to its exec and wirelogs endpoints against the project supplied by the caller in the request, rather than against the project that actually owns the target compon…",
-        "badge": "CVE-2026-73841",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-03T18:32:03.000Z",
+        "summary": "### Summary Orval's zod schema generation emits the **header-parameter** `default` value as a module-level template literal (`export const Default = ` `;`) without escaping `${` or the backtick. A default of the form `v${ }w` injects a liv…",
+        "badge": "CVE-2026-71871",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-openai-b0cbef382238cdd5",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239322",
+        "id": "v2ex-1239324",
         "category": "dev",
-        "title": "Claude 多个模型不可用",
-        "url": "https://www.v2ex.com/t/1239322",
+        "title": "Claude 服务是挂了吗？ 20 分钟前还在用的",
+        "url": "https://www.v2ex.com/t/1239324",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-03T13:40:52.000Z",
-        "summary": "Investigating - We are investigating elevated errors on requests to Claude Mythos 5.1, Claude Fable 5.1, and Claude Opus 5. We will provide an update as soon as possible. Sep 03, 2026 - 13:26 UTC Claude 挂了都没人讨论，看来能封的都封了？",
+        "publishedAt": "2026-09-03T13:48:04.000Z",
+        "summary": "API Error: 529 Overloaded. This is a server-side issue, usually temporary — try again in a moment. If it persists, check https://status.claude.com .",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-97b50a6ac91a8d07",
+        "id": "cn-it-9971f54d18bada89",
         "category": "cn",
-        "title": "卢伟冰确认小米 18 Fold 折叠屏手机起售价过万",
-        "url": "https://www.ithome.com/0/998/181.htm",
+        "title": "徕卡发布 Summicron-M 66mm f/2 镜头：1.09 万美元，全球限量 660 枚",
+        "url": "https://www.ithome.com/0/998/201.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-03T14:23:27.000Z",
-        "summary": "IT之家 9 月 3 日消息，小米集团合伙人、总裁卢伟冰今晚在 IFA 直播中透露，小米 18 Fold 折叠屏手机要一万多元起步。另据博主 @数码闲聊站 透露，这款新机的配色有特别版， 16GB+1TB 版本采用长鑫 LPDDR6 。 小米 18 Fold 将于 9 月 7 日 19:00 发布， 首发搭载玄戒 O3 AI 旗舰 SoC ，配备徕卡 2 亿超清主摄（1/1.56″大底传感器）+ 徕卡 5000 万潜望长焦（3.5 倍光学变焦）+ 徕卡 5000 万超广角，…",
+        "publishedAt": "2026-09-03T15:53:01.000Z",
+        "summary": "IT之家 9 月 3 日消息，徕卡今天宣布推出 Summicron-M 66mm f/2 镜头。这款产品是 20 世纪 60 年代经典名镜 Elcan 66mm f/2 的复刻版， 全球限量 660 枚 ， 售价 10,900 美元 （IT之家注：现汇率约合 73,428 元人民币） 。 据介绍，Elcan 66mm 这款镜头最初为美国海军设计，一般与徕卡 KE-7A（M4 的军事版本）相机搭配使用，专为需要极致细节的隐蔽拍摄场合设计，当时只生产了 200 枚，是 M 卡口…",
         "badge": "IT之家"
       },
       {
@@ -190,44 +190,44 @@
         "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
-        "id": "ai-google-deepmind-63b19b50b4021cb5",
+        "id": "ai-google-deepmind-d721843382f3485e",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
-        "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+        "title": "Proactive cyber defense for governments and enterprises",
+        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-02T16:18:31.000Z",
+        "publishedAt": "2026-09-02T16:24:24.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49550174",
+        "id": "hn-49551760",
         "category": "dev",
-        "title": "Mom Gets 6-Mo Suspended Sentence for Letting 5-Year-Old Walk to the Pond",
-        "url": "https://reason.com/2026/09/02/virginia-mom-gets-6-month-suspended-jail-sentence-for-letting-5-year-old-walk-to-the-pond/",
+        "title": "K2 Horizon: A connected fleet of six open models",
+        "url": "https://ifm.ai/blog/k2/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T14:12:19.000Z",
+        "publishedAt": "2026-09-03T15:36:43.000Z",
         "badge": "HN",
-        "signal": "72 分 · 24 评论"
+        "signal": "158 分 · 50 评论"
       },
       {
-        "id": "cn-baidu-096b35e75f13c7be",
+        "id": "cn-baidu-c4cb61c1b7809da1",
         "category": "cn",
-        "title": "鸡蛋快跟猪肉一个价了",
-        "url": "https://www.baidu.com/s?wd=%E9%B8%A1%E8%9B%8B%E5%BF%AB%E8%B7%9F%E7%8C%AA%E8%82%89%E4%B8%80%E4%B8%AA%E4%BB%B7%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "世界已进入极端天气危险区",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%96%E7%95%8C%E5%B7%B2%E8%BF%9B%E5%85%A5%E6%9E%81%E7%AB%AF%E5%A4%A9%E6%B0%94%E5%8D%B1%E9%99%A9%E5%8C%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近期北京鸡蛋价格快速上涨，8月新发地鸡蛋月均价达10.14元/公斤，环比涨9%、同比涨50%，创近3年同期最高。业内称中秋节备货开启，食品企业采购增加推升蛋价。网友：鸡蛋快跟猪肉一个价了。",
+        "summary": "目前厄尔尼诺事件已确认出现，预计将在数月内增强为超强厄尔尼诺事件，强度可能在今年年底达顶峰。联合国警告称，此举将对全球降雨和温度模式产生重大影响，世界已进入极端天气危险区。",
         "badge": "热搜",
-        "signal": "7,713,225 热度"
+        "signal": "7,712,892 热度"
       },
       {
-        "id": "github-advisory-ghsa-qh9r-j7rp-4x2m",
+        "id": "github-advisory-ghsa-2w86-xfrc-g85r",
         "category": "security",
-        "title": "OpenChoreo: Unauthenticated access to data-plane operations via OpenChoreo cluster-gateway management APIs",
-        "url": "https://github.com/advisories/GHSA-qh9r-j7rp-4x2m",
+        "title": "Orval: RCE via schema property name -> computed-property-key injection in the MSW mock generator",
+        "url": "https://github.com/advisories/GHSA-2w86-xfrc-g85r",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T23:43:55.000Z",
-        "summary": "### Summary The OpenChoreo control-plane **cluster-gateway** served its caller-facing management APIs on the same network listener that accepts data-plane agent connections. In the multi-cluster topology that listener is published outside …",
-        "badge": "CVE-2026-73843",
-        "signal": "CRITICAL · CVSS 9.6"
+        "publishedAt": "2026-09-03T18:26:12.000Z",
+        "summary": "### Summary orval, when generating MSW mocks (output.mock: true), emits each schema property name as a single-quoted object key in the mock factory WITHOUT escaping the single quote. A ' in a property name closes the key and lands in objec…",
+        "badge": "CVE-2026-71867",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-a139f80b159295ad",
@@ -281,43 +281,43 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49546753",
+        "id": "hn-49550698",
         "category": "dev",
-        "title": "Pre-Release of Polars 2.0",
-        "url": "https://pola.rs/posts/announcing-polars-2/",
+        "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
+        "url": "https://anyhumanever.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T06:59:08.000Z",
+        "publishedAt": "2026-09-03T14:51:10.000Z",
         "badge": "HN",
-        "signal": "284 分 · 91 评论"
+        "signal": "226 分 · 105 评论"
       },
       {
-        "id": "cn-it-6ef688248907c909",
+        "id": "cn-it-5c4a3b354665942f",
         "category": "cn",
-        "title": "浩瀚展示新形态手持云台相机 Eyepic：相机本体能拆下来独立使用",
-        "url": "https://www.ithome.com/0/998/180.htm",
+        "title": "准系统 2399 元：铭凡推出 UM750 Neo 迷你主机，锐龙 Z1 处理器、16GB 板载内存",
+        "url": "https://www.ithome.com/0/998/200.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-03T14:22:18.000Z",
-        "summary": "IT之家 9 月 3 日消息，浩瀚（Hohem）在 IFA 2026 期间展示了 Eyepic 手持云台相机，与大疆、影石 Insta360 等品牌的现有产品拉开差异。该机基本形态与大疆 Osmo Pocket 4、影石 Insta360 Luna Ultra 等设备相似，采用可旋转预览屏，并通过三轴云台稳定小型相机模块。 其特殊之处，在于相机模块采用 磁吸可拆卸设计 ，取下后可以独立作为一台微型相机使用，也可以固定在其他位置或直接佩戴。 Eyepic 最高支持 4K 60…",
+        "publishedAt": "2026-09-03T15:27:11.000Z",
+        "summary": "IT之家 9 月 3 日消息，铭凡现已推出 UM750 Neo 迷你主机，新品采用 AMD 锐龙 Z1 处理器，主打日常生产力体验， 准系统（不含硬盘）售价 2399 元 。 据介绍，这款迷你主机搭载锐龙 Z1 处理器，采用 6 核心 12 线程，带有 16MB L3 缓存，最高频率可达 4.9GHz，满足日常办公、多任务处理、视频会议、轻度娱乐等需求。 同时，这款迷你主机集成 AMD Radeon Graphics 集成显卡，可游玩 1080P 主流网游。配备 LPDDR…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-w878-pj84-3j5v",
+        "id": "github-advisory-ghsa-3575-w9fc-c2j6",
         "category": "security",
-        "title": "Mailpit: SMTP command parser buffers unbounded command lines before syntax rejection",
-        "url": "https://github.com/advisories/GHSA-w878-pj84-3j5v",
+        "title": "Orval: Import-time RCE via enum-typed default -> zod module-level template literal",
+        "url": "https://github.com/advisories/GHSA-3575-w9fc-c2j6",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T23:42:25.000Z",
-        "summary": "## Summary Mailpit's SMTP server reads each command line with an unbounded `bufio.Reader.ReadString('\\n')` before parsing the command or enforcing any protocol length limit. A remote SMTP client can send an oversized single command line an…",
-        "badge": "CVE-2026-67445",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-03T18:20:55.000Z",
+        "summary": "### Summary Orval's zod schema generation emits the **enum-typed** `default` value as a module-level template literal (`export const …Default = ` `;`) without escaping `${` or the backtick. A default of the form `v${ }w` injects a live Jav…",
+        "badge": "CVE-2026-71868",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
-        "id": "ai-google-deepmind-20b040f8e58f31e9",
+        "id": "ai-google-deepmind-63b19b50b4021cb5",
         "category": "ai",
-        "title": "Introducing agentic video understanding with Gemini",
-        "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+        "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-01T17:08:51.000Z",
+        "publishedAt": "2026-09-02T16:18:31.000Z",
         "badge": "Google DeepMind"
       },
       {
@@ -329,7 +329,7 @@
         "publishedAt": "2026-09-03T12:14:08.000Z",
         "summary": "背景 现在我们的团队里，运营、售后等角色也都在用 AI 辅助解决问题和开发网站，网站用于解决自己的工作中遇到的问题或者团队的问题，或者给外部用户做的功能。 一开始都很好，解放了研发的很多精力，但是紧接着就是： 研发需要帮助团队进行部署， 研发需要授权各种 ak sk 给团队， 非技术人员和 AI 沟通开发网站时，有些技术决策只能求助研发 团队里的每个成员需要给其他人补充自己角色上的业务上下文以帮助他人的 AI 完成工作。 为了解决这些公司里实际存在的问题，我做了一个产品： …",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "6 回复"
       },
       {
         "id": "cn-baidu-b3a06e16ae34abfd",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "国家疾控局9月3日举行新闻发布会，主题是“科学防病开学季 健康护航新学期”。 中国疾控中心学校卫生中心主任医师郭欣介绍，关于孩子的健康管理，很多家长不是不重视，而是确实不知道从哪儿下手。给家长一份按“每天、每周、每学期”记的清单。建议每天抓好以下这三件小事，一起来看。",
         "badge": "热搜",
-        "signal": "7,616,159 热度"
+        "signal": "7,618,778 热度"
       },
       {
         "id": "cisa-kev-cve-2026-9586",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49522137",
+        "id": "hn-49550375",
         "category": "dev",
-        "title": "The Browser's Main Thread Is Expensive",
-        "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
+        "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+        "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T14:00:15.000Z",
+        "publishedAt": "2026-09-03T14:28:18.000Z",
         "badge": "HN",
-        "signal": "244 分 · 80 评论"
+        "signal": "44 分 · 9 评论"
       },
       {
         "id": "cn-item-18a69cb842bc119b",
@@ -382,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-gv5w-hfx8-8cwq",
+        "id": "github-advisory-ghsa-653q-5476-x79g",
         "category": "security",
-        "title": "SeaweedFS: Filer JWT allowed_prefixes literal prefix match allows cross-tenant access to sibling paths",
-        "url": "https://github.com/advisories/GHSA-gv5w-hfx8-8cwq",
+        "title": "Orval: Import-time RCE via query parameter name -> computed-property-key injection in the zod cli",
+        "url": "https://github.com/advisories/GHSA-653q-5476-x79g",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T23:42:05.000Z",
-        "summary": "### Impact When a filer JWT restricts a token to a set of path prefixes via `allowed_prefixes`, the authorization check used a literal byte-prefix match (`strings.HasPrefix`). A token scoped to `/tenant1` therefore also authorized requests…",
-        "badge": "CVE-2026-72921",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-03T18:18:09.000Z",
+        "summary": "### Summary orval's zod client emits each query parameter name as a double-quoted key in the generated zod.object({...}) request-validation schema WITHOUT escaping the double quote. A \" in the query parameter name closes the key and lands …",
+        "badge": "CVE-2026-71865",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-openai-c0364833b41073ca",
@@ -414,13 +414,13 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-bea6a3bda9b499fb",
+        "id": "cn-it-82cae1a4624aabb1",
         "category": "cn",
-        "title": "《地铁 2039》游戏 2027 年 2 月 4 日发售，PS5/PS5 Pro 版支持光追",
-        "url": "https://www.ithome.com/0/998/178.htm",
+        "title": "AMD 推送肾上腺素驱动 26.9.1 可选更新：支持两款新游戏，修复部分游戏崩溃",
+        "url": "https://www.ithome.com/0/998/199.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-03T14:15:49.000Z",
-        "summary": "IT之家 9 月 3 日消息，索尼今天在新一期 State of Play 发布会确认，《地铁 2039》游戏将于 2027 年 2 月 4 日发售，本作的主机版实机演示也一同公布， 画面均采集自 PS5 Pro 游戏机 。 IT之家了解到，《地铁 2039》游戏由 4A Games 开发、Deep Silver 发行。 本作采用自有引擎 4A Engine 打造 ，可在 PS5、PS5 Pro 平台启用光线追踪，启用性能模式后可带来 60 FPS 丝滑体验。 《地铁：20…",
+        "publishedAt": "2026-09-03T15:16:07.000Z",
+        "summary": "IT之家 9 月 3 日消息，AMD Software: Adrenalin Edition 26.9.1 可选版显卡驱动今日发布，带来新游戏支持与问题修复，同时公布了目前存在的已知问题。 新游戏支持与性能优化 新增支持《鬼武者：剑之道》 新增支持《黎明行者之血》 问题修复 修复了 AMD Radeon RX 9000 系列显卡运行《星空》和《Apex 英雄》时可能出现的间歇性游戏崩溃问题 已知问题 部分无法正常访问 HuggingFace 和 GitHub 的地区，可能出…",
         "badge": "IT之家"
       },
       {
@@ -435,44 +435,44 @@
         "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
-        "id": "ai-google-deepmind-74b1125af8681de1",
+        "id": "ai-google-deepmind-20b040f8e58f31e9",
         "category": "ai",
-        "title": "Gemini Omni 1.1 Flash lets you build with more control",
-        "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+        "title": "Introducing agentic video understanding with Gemini",
+        "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-08-27T16:11:32.000Z",
+        "publishedAt": "2026-09-01T17:08:51.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49549873",
+        "id": "hn-49554273",
         "category": "dev",
-        "title": "Fuck Off as a Service (Foaas)",
-        "url": "https://foaas.io/",
+        "title": "OpenAI begins rolling out GPT-6 Astra",
+        "url": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T13:47:22.000Z",
+        "publishedAt": "2026-09-03T18:18:22.000Z",
         "badge": "HN",
-        "signal": "24 分 · 3 评论"
+        "signal": "13 分 · 2 评论"
       },
       {
-        "id": "cn-baidu-e9b09c964043cfaa",
+        "id": "cn-baidu-20899bc0d5a04962",
         "category": "cn",
-        "title": "一年级学生不知出生年份",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E5%B9%B4%E7%BA%A7%E5%AD%A6%E7%94%9F%E4%B8%8D%E7%9F%A5%E5%87%BA%E7%94%9F%E5%B9%B4%E4%BB%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "手机集体涨价 吓跑了买手机的人",
+        "url": "https://www.baidu.com/s?wd=%E6%89%8B%E6%9C%BA%E9%9B%86%E4%BD%93%E6%B6%A8%E4%BB%B7+%E5%90%93%E8%B7%91%E4%BA%86%E4%B9%B0%E6%89%8B%E6%9C%BA%E7%9A%84%E4%BA%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月3日，有视频显示在开学季询问一年级新生“几几年出生”时，部分“20后”小学生一脸懵，表示“不知道”。",
+        "summary": "9月3日，手机集体涨价话题引发关注，线下门店冷清。此前9月1日，华为、小米、荣耀等品牌因存储及芯片成本上涨集体上调售价。此次涨价导致部分原价6000元以下机型失去补贴资格。",
         "badge": "热搜",
-        "signal": "7,520,611 热度"
+        "signal": "7,520,779 热度"
       },
       {
-        "id": "github-advisory-ghsa-75mr-qw9x-3r39",
+        "id": "github-advisory-ghsa-6437-gxhq-pqv8",
         "category": "security",
-        "title": "Mailpit: Thumbnail generation decodes unbounded image dimensions before scaling",
-        "url": "https://github.com/advisories/GHSA-75mr-qw9x-3r39",
+        "title": "Orval: Import-time RCE via header parameter name -> computed-property-key injection in the zod client",
+        "url": "https://github.com/advisories/GHSA-6437-gxhq-pqv8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-02T23:39:08.000Z",
-        "summary": "## Summary Mailpit's thumbnail endpoint decodes attacker-supplied image attachments into a full raster before checking any decoded-pixel, dimension, or memory budget. A remote client that can store an email and reach the default web API ca…",
-        "badge": "CVE-2026-67446",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-03T18:08:31.000Z",
+        "summary": "### Summary orval's zod client emits each header parameter name as a double-quoted key in the generated zod.object({...}) request-validation schema WITHOUT escaping the double quote. A \" in the header parameter name closes the key and land…",
+        "badge": "CVE-2026-71864",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-b5500bc6503561c6",
@@ -509,7 +509,7 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 24810,
+        "stars": 24946,
         "starsToday": 955
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 246469,
+        "stars": 246940,
         "starsToday": 1576
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 240596,
+        "stars": 240710,
         "starsToday": 778
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 122929,
+        "stars": 123174,
         "starsToday": 2138
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 173470,
+        "stars": 173551,
         "starsToday": 277
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 246787,
+        "stars": 246957,
         "starsToday": 749
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "language": "Go",
-        "stars": 102934,
+        "stars": 103005,
         "starsToday": 545
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/blader/humanizer",
         "description": "Agent skill that removes signs of AI-generated writing from text",
         "language": "Python",
-        "stars": 41151,
+        "stars": 41301,
         "starsToday": 1214
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/google-research/timesfm",
         "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "language": "Python",
-        "stars": 30584,
+        "stars": 30634,
         "starsToday": 1626
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/averygan/reclip",
         "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
         "language": "HTML",
-        "stars": 8215,
+        "stars": 8281,
         "starsToday": 123
       }
     ],
-    "updatedAt": "2026-09-03T14:35:29.087Z"
+    "updatedAt": "2026-09-03T18:40:52.386Z"
   }
 }
