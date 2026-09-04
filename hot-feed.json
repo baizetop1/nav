@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-03T21:43:24.423Z",
+  "generatedAt": "2026-09-04T00:07:06.357Z",
   "intelligence": {
-    "updatedAt": "2026-09-03T21:43:24.423Z",
+    "updatedAt": "2026-09-04T00:07:06.357Z",
     "items": [
       {
         "id": "cn-item-5eff44868b57d5d8",
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-03T18:41:05.000Z",
         "badge": "HN",
-        "signal": "889 分 · 623 评论"
+        "signal": "1186 分 · 928 评论"
       },
       {
-        "id": "cn-it-321e02ad81bd9a2e",
+        "id": "cn-it-08074c1613a31498",
         "category": "cn",
-        "title": "英伟达 RTX Spark 紧凑型 Win PC 主机下月上市，含宏碁、联想等 6 家 OEM 厂商产品",
-        "url": "https://www.ithome.com/0/998/202.htm",
+        "title": "英伟达 RTX Spark N1X 超级芯片在移动端提供 5120 核 GPU + 18 核 CPU 低配",
+        "url": "https://www.ithome.com/0/998/240.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-03T16:00:06.000Z",
-        "summary": "IT之家 9 月 4 日消息，英伟达今天宣布， 全新 RTX Spark Windows PC 将于 10 月上市 ，为 AI 发烧友、开发者提供更多创作方式。 据介绍，英伟达合作伙伴已在 IFA 2026 大会上展示相关硬件。 全新发布的产品设计将与现有 6 家 OEM 厂商的产品一同于 10 月出货 。例如宏碁本次展示了 RTX Spark 高能效桌面主机的概念设计，联想则发布了 Yoga Pro 9n 和 Yoga 9n 二合一设备。 据官方介绍，RTX Spark …",
+        "publishedAt": "2026-09-04T00:06:22.000Z",
+        "summary": "IT之家 9 月 4 日消息，根据 NVIDIA（英伟达）官网更新，其面向 Windows on Arm PC 的 RTX Spark N1X 超级芯片处理器在笔记本电脑端提供 2 档配置，而 桌面主机上则仅有“满血”高配 。 可以看到，RTX Spark N1X 面向移动端提供了 5120 核 GPU + 18 核 CPU 的低配， GPU 规模较 6144 核高配缩减 1/6、CPU 则较 20 核高配减少 2 个核心 （IT之家注：NVIDIA 尚未公布 CPU 具体…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-7j72-f6wg-cxw6",
+        "id": "github-advisory-ghsa-8x84-r2ff-h8pq",
         "category": "security",
-        "title": "SiYuan: Anonymous publish-password authentication bypass via getHeadingChildrenDOM / getHeading*Transaction / getBacklinkDoc (publish mode)",
-        "url": "https://github.com/advisories/GHSA-7j72-f6wg-cxw6",
+        "title": "SiYuan: Encrypted-notebook key-derivation material and wrapped notebook keys disclosed to anonymous readers, enabling offline master-password cracking",
+        "url": "https://github.com/advisories/GHSA-8x84-r2ff-h8pq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T21:22:42.000Z",
-        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-68584. ### Summary SiYuan's publish mode defines a \"protected\" access level: a document that is publicly listed but requires a password to read (per the product's own UI help text, protec…",
-        "badge": "GHSA-7J72-F6WG-CXW6",
-        "signal": "HIGH · CVSS 8.6"
+        "publishedAt": "2026-09-03T23:02:12.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72801. ### Summary Two `CheckAuth`-only endpoints disclose the complete offline attack material for the encrypted-notebook master password, plus the wrapped per-notebook key needed to use…",
+        "badge": "CVE-2026-72801",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -87,14 +87,14 @@
         "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-d9f80e6d69946f4b",
+        "id": "cn-baidu-3ac853f1b465c148",
         "category": "cn",
-        "title": "广州取消校服统一订购",
-        "url": "https://www.baidu.com/s?wd=%E5%B9%BF%E5%B7%9E%E5%8F%96%E6%B6%88%E6%A0%A1%E6%9C%8D%E7%BB%9F%E4%B8%80%E8%AE%A2%E8%B4%AD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“Token贷”火出圈",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9CToken%E8%B4%B7%E2%80%9D%E7%81%AB%E5%87%BA%E5%9C%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "2026年秋季学期，广州正式取消中小学校服统一订购，家长可自主线上、线下按需购买。新规落地首个开学季即遇断码缺货、订单延期发货问题，家长反映“买校服难”引关注。",
+        "summary": "近段时间，多家银行的“Token贷”产品接续落地，为缺乏传统抵押物的科创企业打开了融资新空间。“Token贷”怎么贷？主要面向哪些企业？银行授信出现哪些新趋势？一文解读！",
         "badge": "热搜",
-        "signal": "7,809,320 热度"
+        "signal": "7,808,104 热度"
       },
       {
         "id": "cisa-kev-cve-2026-48710",
@@ -124,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-03T18:32:13.000Z",
         "badge": "HN",
-        "signal": "332 分 · 108 评论"
+        "signal": "412 分 · 125 评论"
       },
       {
         "id": "cn-item-510085da60302db3",
@@ -137,14 +137,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-36v8-mpjm-8j5r",
+        "id": "github-advisory-ghsa-vpjw-wf5h-cgpq",
         "category": "security",
-        "title": "SiYuan: Cross-boundary content disclosure via getBacklinkDoc/getBackmentionDoc (publish mode): reader-reachable rendered DOM of publish-forbidden docs; sibling list endpoints are filtered",
-        "url": "https://github.com/advisories/GHSA-36v8-mpjm-8j5r",
+        "title": "SiYuan: Graph endpoints omit the publish-password tier: anonymous readers receive block-level content of password-protected documents",
+        "url": "https://github.com/advisories/GHSA-vpjw-wf5h-cgpq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T21:21:19.000Z",
-        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-68586. ### Summary The backlink API splits into list endpoints (which documents reference a block) and content endpoints (the rendered text of those referencing blocks). The list endpoint…",
-        "badge": "CVE-2026-68586",
+        "publishedAt": "2026-09-03T22:52:58.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72804. ### Summary `getGraph` and `getLocalGraph` filter reader sessions against the *visibility* tier only and never check the publish password. Password-protected documents are `Visible…",
+        "badge": "CVE-2026-72804",
         "signal": "HIGH · CVSS 8.6"
       },
       {
@@ -169,13 +169,13 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-9971f54d18bada89",
+        "id": "cn-it-1de7377c54ef870c",
         "category": "cn",
-        "title": "徕卡发布 Summicron-M 66mm f/2 镜头：1.09 万美元，全球限量 660 枚",
-        "url": "https://www.ithome.com/0/998/201.htm",
+        "title": "掌舵近 20 年后 Adobe 首席执行官纳拉延宣布 12 月 1 日交棒，查克拉瓦蒂接任 CEO",
+        "url": "https://www.ithome.com/0/998/239.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-03T15:53:01.000Z",
-        "summary": "IT之家 9 月 3 日消息，徕卡今天宣布推出 Summicron-M 66mm f/2 镜头。这款产品是 20 世纪 60 年代经典名镜 Elcan 66mm f/2 的复刻版， 全球限量 660 枚 ， 售价 10,900 美元 （IT之家注：现汇率约合 73,428 元人民币） 。 据介绍，Elcan 66mm 这款镜头最初为美国海军设计，一般与徕卡 KE-7A（M4 的军事版本）相机搭配使用，专为需要极致细节的隐蔽拍摄场合设计，当时只生产了 200 枚，是 M 卡口…",
+        "publishedAt": "2026-09-04T00:05:27.000Z",
+        "summary": "IT之家 9 月 4 日消息，当地时间 9 月 3 日，Adobe 董事会宣布首席执行官继任计划。现任总裁兼 CEO 山塔努 · 纳拉延（Shantanu Narayen）将于 2026 年 12 月 1 日转任执行董事长。 与此同时，现任 Adobe 数字体验业务及全球现场运营总裁阿尼尔 · 查克拉瓦蒂（Anil Chakravarthy）将接任总裁兼 CEO，并加入董事会。 ▲ 阿尼尔 · 查克拉瓦蒂（Anil Chakravarthy），图源：Adobe 纳拉延自 2…",
         "badge": "IT之家"
       },
       {
@@ -206,28 +206,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-03T14:54:39.000Z",
         "badge": "HN",
-        "signal": "1110 分 · 329 评论"
+        "signal": "1264 分 · 362 评论"
       },
       {
-        "id": "cn-baidu-c4cb61c1b7809da1",
+        "id": "cn-baidu-db2295fcb1b4e13f",
         "category": "cn",
-        "title": "世界已进入极端天气危险区",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%96%E7%95%8C%E5%B7%B2%E8%BF%9B%E5%85%A5%E6%9E%81%E7%AB%AF%E5%A4%A9%E6%B0%94%E5%8D%B1%E9%99%A9%E5%8C%BA&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "1名中国公民在菲被羁押期间离世",
+        "url": "https://www.baidu.com/s?wd=1%E5%90%8D%E4%B8%AD%E5%9B%BD%E5%85%AC%E6%B0%91%E5%9C%A8%E8%8F%B2%E8%A2%AB%E7%BE%81%E6%8A%BC%E6%9C%9F%E9%97%B4%E7%A6%BB%E4%B8%96&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "目前厄尔尼诺事件已确认出现，预计将在数月内增强为超强厄尔尼诺事件，强度可能在今年年底达顶峰。联合国警告称，此举将对全球降雨和温度模式产生重大影响，世界已进入极端天气危险区。",
+        "summary": "9月1日，一名中国公民在菲律宾移民局拘留所被羁押等待遣返期间不幸离世。中国驻菲律宾大使馆对此深感震惊和痛惜，已第一时间向菲方提出严正交涉。",
         "badge": "热搜",
-        "signal": "7,714,437 热度"
+        "signal": "7,713,479 热度"
       },
       {
-        "id": "github-advisory-ghsa-69mh-gvh4-8gp7",
+        "id": "github-advisory-ghsa-x67c-8pwr-m8g3",
         "category": "security",
-        "title": "SiYuan: Full-content disclosure of publish-disabled documents via getHeading*Transaction endpoints (publish mode): reader-reachable rendered DOM with no publish-access check",
-        "url": "https://github.com/advisories/GHSA-69mh-gvh4-8gp7",
+        "title": "SiYuan: Second-order SSTI to arbitrary SQL via attribute-view template column (queryBlocks): malicious imported package executes SQL on victim kernel",
+        "url": "https://github.com/advisories/GHSA-x67c-8pwr-m8g3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T21:19:41.000Z",
-        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-68587. ### Summary Three \"heading transaction\" endpoints `/api/block/getHeadingDeleteTransaction`, `/api/block/getHeadingLevelTransaction`, and `/api/block/getHeadingInsertTransaction` re…",
-        "badge": "CVE-2026-68587",
-        "signal": "HIGH · CVSS 8.6"
+        "publishedAt": "2026-09-03T22:49:30.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72807. ### Summary Attribute-view (AV) template columns are live-evaluated on every render and expose the `queryBlocks` template function, which runs raw SQL on the read-write database ha…",
+        "badge": "CVE-2026-72807",
+        "signal": "HIGH · CVSS 8.0"
       },
       {
         "id": "ai-hugging-face-a139f80b159295ad",
@@ -281,35 +281,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49526453",
+        "id": "hn-49558086",
         "category": "dev",
-        "title": "The largest electric aircraft just flew [video]",
-        "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
+        "title": "GLP-1s Are Being Linked to Fewer Serious Infections, Including TB",
+        "url": "https://gizmodo.com/ozempic-and-other-glp-1s-are-being-linked-to-fewer-serious-infections-including-tb-2000806796",
         "source": "Hacker News",
-        "publishedAt": "2026-09-01T19:02:34.000Z",
+        "publishedAt": "2026-09-03T22:37:31.000Z",
         "badge": "HN",
-        "signal": "77 分 · 53 评论"
+        "signal": "28 分 · 16 评论"
       },
       {
-        "id": "cn-it-5c4a3b354665942f",
+        "id": "cn-it-9094da1ef4f98b24",
         "category": "cn",
-        "title": "准系统 2399 元：铭凡推出 UM750 Neo 迷你主机，锐龙 Z1 处理器、16GB 板载内存",
-        "url": "https://www.ithome.com/0/998/200.htm",
+        "title": "微软 XGPU 会员今年 11 月起每月最多可免费玩 15 小时云游戏，超过时长需看广告或额外付费",
+        "url": "https://www.ithome.com/0/998/238.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-03T15:27:11.000Z",
-        "summary": "IT之家 9 月 3 日消息，铭凡现已推出 UM750 Neo 迷你主机，新品采用 AMD 锐龙 Z1 处理器，主打日常生产力体验， 准系统（不含硬盘）售价 2399 元 。 据介绍，这款迷你主机搭载锐龙 Z1 处理器，采用 6 核心 12 线程，带有 16MB L3 缓存，最高频率可达 4.9GHz，满足日常办公、多任务处理、视频会议、轻度娱乐等需求。 同时，这款迷你主机集成 AMD Radeon Graphics 集成显卡，可游玩 1080P 主流网游。配备 LPDDR…",
+        "publishedAt": "2026-09-04T00:03:53.000Z",
+        "summary": "IT之家 9 月 4 日消息，微软宣布将于今年 11 月起对 Xbox Game Pass 会员云游戏服务完全实施时长限制，同时计划直接在 XBOX 商店向玩家出售云游戏时间。 根据微软公布的新政策，从 11 月开始，XBOX Game Pass 订阅用户每月可用于云游戏的时长将受到限制。其中，Game Pass Ultimate 用户每月最多可进行 15 小时云游戏（此前该套餐并未设置云游戏时长上限），Game Pass Premium 为 10 小时，Game Pass…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-fph3-ghq9-vw66",
+        "id": "github-advisory-ghsa-3mp7-4rh5-jrv9",
         "category": "security",
-        "title": "SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reachable raw SQL (method 2) and unescaped REGEXP (method 3) on read-write asset-content DB",
-        "url": "https://github.com/advisories/GHSA-fph3-ghq9-vw66",
+        "title": "SiYuan: Localhost-trust admin bypass on auth-code-gated endpoints, with potential remote reachability via the fixed-port proxy",
+        "url": "https://github.com/advisories/GHSA-3mp7-4rh5-jrv9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T21:01:05.000Z",
-        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-69083. ### Summary The `/api/search/fullTextSearchAssetContent` endpoint exposes two SQL flaws on the asset-content database, both reachable by the publish `RoleReader` token and by the a…",
-        "badge": "CVE-2026-69083",
-        "signal": "CRITICAL · CVSS 10.0"
+        "publishedAt": "2026-09-03T22:34:06.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72809. ### Summary The kernel's `CheckAuth` grants `RoleAdministrator` to any request whose `RemoteAddr` is loopback (`127.0.0.1`), for a specific set of endpoints, and these localhost by…",
+        "badge": "CVE-2026-72809",
+        "signal": "HIGH · CVSS 8.0"
       },
       {
         "id": "ai-google-deepmind-63b19b50b4021cb5",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "国家疾控局9月3日举行新闻发布会，主题是“科学防病开学季 健康护航新学期”。 中国疾控中心学校卫生中心主任医师郭欣介绍，关于孩子的健康管理，很多家长不是不重视，而是确实不知道从哪儿下手。给家长一份按“每天、每周、每学期”记的清单。建议每天抓好以下这三件小事，一起来看。",
         "badge": "热搜",
-        "signal": "7,617,229 热度"
+        "signal": "7,617,671 热度"
       },
       {
         "id": "cisa-kev-cve-2026-9586",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49551760",
+        "id": "hn-49558302",
         "category": "dev",
-        "title": "K2 Horizon: A connected fleet of six open models",
-        "url": "https://ifm.ai/blog/k2/",
+        "title": "Protecting Engineers' Skills in the AI Era",
+        "url": "https://spectrum.ieee.org/ai-engineer-skills",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T15:36:43.000Z",
+        "publishedAt": "2026-09-03T23:00:04.000Z",
         "badge": "HN",
-        "signal": "216 分 · 72 评论"
+        "signal": "22 分 · 12 评论"
       },
       {
         "id": "cn-item-18a69cb842bc119b",
@@ -382,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-82x6-q7mm-w9cf",
+        "id": "github-advisory-ghsa-mw8r-mw84-88v2",
         "category": "security",
-        "title": "toml-node: Uncontrolled Recursion",
-        "url": "https://github.com/advisories/GHSA-82x6-q7mm-w9cf",
+        "title": "SiYuan: Publish-boundary bypass via WebSocket broadcast: anonymous readers receive a live unfiltered feed of all edits including protected/forbidden documents (publish mode)",
+        "url": "https://github.com/advisories/GHSA-mw8r-mw84-88v2",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T20:56:13.000Z",
-        "summary": "### Summary `toml.parse()` crashes with an uncaught `RangeError: Maximum call stack size exceeded` when parsing deeply nested arrays or inline tables. The parser is generated by **Peggy 5.1.0** (a PEG parser generator) as a recursive-desce…",
-        "badge": "CVE-2026-77465",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-03T22:30:52.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72810. ### Summary WebSocket sessions established through the publish surface (port 6808, `RoleReader` anonymous when `Publish.Auth.Enable` is `false`) are added to the same broadcast ses…",
+        "badge": "CVE-2026-72810",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
         "id": "ai-openai-39210f987919e80e",
@@ -414,13 +414,13 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-82cae1a4624aabb1",
+        "id": "cn-it-b3ba69442cdd59e2",
         "category": "cn",
-        "title": "AMD 推送肾上腺素驱动 26.9.1 可选更新：支持两款新游戏，修复部分游戏崩溃",
-        "url": "https://www.ithome.com/0/998/199.htm",
+        "title": "古墓丽影 IP 游戏《劳拉克劳馥：奥西里斯神庙》将于 9 月 8 日登陆移动平台，定价 9.99 美元",
+        "url": "https://www.ithome.com/0/998/237.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-03T15:16:07.000Z",
-        "summary": "IT之家 9 月 3 日消息，AMD Software: Adrenalin Edition 26.9.1 可选版显卡驱动今日发布，带来新游戏支持与问题修复，同时公布了目前存在的已知问题。 新游戏支持与性能优化 新增支持《鬼武者：剑之道》 新增支持《黎明行者之血》 问题修复 修复了 AMD Radeon RX 9000 系列显卡运行《星空》和《Apex 英雄》时可能出现的间歇性游戏崩溃问题 已知问题 部分无法正常访问 HuggingFace 和 GitHub 的地区，可能出…",
+        "publishedAt": "2026-09-03T23:55:29.000Z",
+        "summary": "IT之家 9 月 4 日消息，开发商 Crystal Dynamics 宣布旗下古墓丽影 IP 游戏《劳拉克劳馥：奥西里斯神庙（Lara Croft and the Temple of Osiris，又被译为“劳拉和奥西里斯神庙”）》将于北京时间 9 月 8 日登陆 iOS 和安卓平台。 公开信息显示，本作于 2014 年 12 月 9 日登陆 PC、Xbox One 及 PS4 平台，2023 年 6 月 29 日登陆任天堂 Switch。该作继承《劳拉和光之守护者》设定…",
         "badge": "IT之家"
       },
       {
@@ -444,14 +444,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49550698",
+        "id": "hn-49526453",
         "category": "dev",
-        "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
-        "url": "https://anyhumanever.com/",
+        "title": "The largest electric aircraft just flew [video]",
+        "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T14:51:10.000Z",
+        "publishedAt": "2026-09-01T19:02:34.000Z",
         "badge": "HN",
-        "signal": "381 分 · 176 评论"
+        "signal": "152 分 · 99 评论"
       },
       {
         "id": "cn-baidu-20899bc0d5a04962",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "9月3日，手机集体涨价话题引发关注，线下门店冷清。此前9月1日，华为、小米、荣耀等品牌因存储及芯片成本上涨集体上调售价。此次涨价导致部分原价6000元以下机型失去补贴资格。",
         "badge": "热搜",
-        "signal": "7,520,096 热度"
+        "signal": "7,519,736 热度"
       },
       {
-        "id": "github-advisory-ghsa-v5mp-jgw5-2x6j",
+        "id": "github-advisory-ghsa-q2vg-7qgx-x5fc",
         "category": "security",
-        "title": "toml-node: Prototype Pollution Leads to `Object.prototype` Corruption via `__proto__` Key-Path Desynchronization",
-        "url": "https://github.com/advisories/GHSA-v5mp-jgw5-2x6j",
+        "title": "SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (client keyword) and second-order (stored document title) breakout on read-write handle",
+        "url": "https://github.com/advisories/GHSA-q2vg-7qgx-x5fc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-03T20:55:32.000Z",
-        "summary": "### Summary `toml.parse()` writes attacker-controlled keys onto `Object.prototype`. The compiler protects the tables it builds by creating them with `Object.create(null)`, which neutralizes a direct `[__proto__]` table. An attacker bypasse…",
-        "badge": "CVE-2026-63376",
-        "signal": "HIGH · CVSS 8.2"
+        "publishedAt": "2026-09-03T22:27:50.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72811. ### Summary The backlink/mention search query (`kernel/model/backlink.go`) concatenates stored block metadata (title, name, alias, anchor text) and the client-supplied keyword into…",
+        "badge": "CVE-2026-72811",
+        "signal": "CRITICAL · CVSS 10.0"
       },
       {
         "id": "ai-hugging-face-b5500bc6503561c6",
@@ -509,8 +509,8 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 25020,
-        "starsToday": 955
+        "stars": 25062,
+        "starsToday": 963
       },
       {
         "id": "github-89e612f6ea973712",
@@ -519,8 +519,8 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 247188,
-        "starsToday": 1576
+        "stars": 247342,
+        "starsToday": 1601
       },
       {
         "id": "github-bfef0c14f46af5da",
@@ -529,8 +529,8 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 240778,
-        "starsToday": 778
+        "stars": 240825,
+        "starsToday": 774
       },
       {
         "id": "github-61b98383e7d93589",
@@ -539,8 +539,8 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 123284,
-        "starsToday": 2138
+        "stars": 123382,
+        "starsToday": 2128
       },
       {
         "id": "github-f2db8404c222e36c",
@@ -549,8 +549,8 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 173601,
-        "starsToday": 277
+        "stars": 173640,
+        "starsToday": 281
       },
       {
         "id": "github-0658d7fa2f877963",
@@ -559,8 +559,8 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 247075,
-        "starsToday": 749
+        "stars": 247165,
+        "starsToday": 751
       },
       {
         "id": "github-72f8b46c06f13945",
@@ -569,8 +569,8 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "language": "Go",
-        "stars": 103052,
-        "starsToday": 545
+        "stars": 103085,
+        "starsToday": 543
       },
       {
         "id": "github-6f6399248ff9bd19",
@@ -579,8 +579,8 @@
         "url": "https://github.com/blader/humanizer",
         "description": "Agent skill that removes signs of AI-generated writing from text",
         "language": "Python",
-        "stars": 41385,
-        "starsToday": 1214
+        "stars": 41453,
+        "starsToday": 1208
       },
       {
         "id": "github-d6b3ceb69fb5b433",
@@ -589,8 +589,8 @@
         "url": "https://github.com/google-research/timesfm",
         "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "language": "Python",
-        "stars": 30671,
-        "starsToday": 1626
+        "stars": 30695,
+        "starsToday": 1618
       },
       {
         "id": "github-4bd768c7cdfc6c20",
@@ -599,10 +599,10 @@
         "url": "https://github.com/averygan/reclip",
         "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
         "language": "HTML",
-        "stars": 8321,
-        "starsToday": 123
+        "stars": 8352,
+        "starsToday": 88
       }
     ],
-    "updatedAt": "2026-09-03T21:43:24.423Z"
+    "updatedAt": "2026-09-04T00:07:06.357Z"
   }
 }
