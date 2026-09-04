@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-04T18:24:58.715Z",
+  "generatedAt": "2026-09-04T21:29:58.769Z",
   "intelligence": {
-    "updatedAt": "2026-09-04T18:24:58.715Z",
+    "updatedAt": "2026-09-04T21:29:58.769Z",
     "items": [
       {
         "id": "cn-item-fb96d61a177fa4a5",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49563355",
+        "id": "hn-49568506",
         "category": "dev",
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
+        "title": "Formalizing Fermat's Last Theorem",
+        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T11:54:53.000Z",
+        "publishedAt": "2026-09-04T18:42:56.000Z",
         "badge": "HN",
-        "signal": "1044 分 · 808 评论"
+        "signal": "293 分 · 176 评论"
       },
       {
         "id": "cn-it-a2a3d599c5a64776",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-gx45-xrj5-g6c4",
+        "id": "github-advisory-ghsa-h4v5-crx2-3cv4",
         "category": "security",
-        "title": "CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository",
-        "url": "https://github.com/advisories/GHSA-gx45-xrj5-g6c4",
+        "title": "SiYuan: Non-administrator responses from /api/system/getConf omit three secrets that the configuration-export path explicitly strips, disclosing the session-cookie signing key and the OS username to anonymous readers",
+        "url": "https://github.com/advisories/GHSA-h4v5-crx2-3cv4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-04T18:14:09.000Z",
-        "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b993085554da82e77370160a31c. Users should …",
-        "badge": "CVE-2026-75911",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-09-04T21:16:48.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72793. ### Summary `/api/system/getConf` is registered with `CheckAuth` only and is reachable by the publish `RoleReader` token, and anonymously when `Publish.Auth.Enable` is `false`. Its…",
+        "badge": "CVE-2026-72793",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -76,13 +76,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239602",
+        "id": "v2ex-1239608",
         "category": "dev",
-        "title": "40 了被毕业，为了养家糊口决定弄了个浏览器端图片压缩站，求 V 友挑刺",
-        "url": "https://www.v2ex.com/t/1239602",
+        "title": "deepseek-v4-flash 大家有感觉出问题吗？",
+        "url": "https://www.v2ex.com/t/1239608",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T16:23:34.000Z",
-        "summary": "今年 40+，上半年被毕业了。 在家待了阵子，投出去的简历大多石沉大海——这个年纪，厂里不怎么缺写业务代码的。想明白一件事：与其继续挤那扇快关上的门，不如自己弄点东西，哪怕小。 决定做 出海 SaaS 。理由很朴素：国内流量太贵、太卷，而我英语还行，产品在海外自己能说清。选「图片压缩」这个切入点，是因为它刚需、高频、而且我能做出差异化—— 全程在浏览器里跑，图片不上传服务器 。隐私这个点，海外用户比国内在意得多。 开发过程（踩坑比功能多） 框架定的是 Rust 编译成 WA…",
+        "publishedAt": "2026-09-04T20:13:29.000Z",
+        "summary": "我线上产品调的是 deepseek ，平时做开发用 codex ，gpt 额度用完后会拿 deepseek 来顶 所以体感比较明显，大概是从昨天开始，线上突然开始出低级问题，开发用 codex 也是如此甚至一度达到不可用的程度",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "当地时间9月4日，2026世界超级摩托车锦标赛（WSBK）法国站在讷韦尔-马尼库尔赛道展开争夺。在当天举行的WorldSSP超级杆位排位赛中，中国摩托车制造商“张雪机车”的法国车手瓦伦丁·德比斯位列第1名。",
         "badge": "热搜",
-        "signal": "7,808,327 热度"
+        "signal": "7,809,499 热度"
       },
       {
         "id": "cisa-kev-cve-2026-59822",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49567437",
+        "id": "hn-49563355",
         "category": "dev",
-        "title": "Show HN: Open-Source eInk Bike Computer",
-        "url": "https://opentrailpaper.com",
+        "title": "Discovery of a new OpenAI agent message board",
+        "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T17:18:08.000Z",
+        "publishedAt": "2026-09-04T11:54:53.000Z",
         "badge": "HN",
-        "signal": "64 分 · 14 评论"
+        "signal": "1322 分 · 1073 评论"
       },
       {
         "id": "cn-item-25177301e11e6a4a",
@@ -137,36 +137,36 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-wrj3-vj8c-784f",
+        "id": "github-advisory-ghsa-h6w7-xxcf-w2mq",
         "category": "security",
-        "title": "CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)",
-        "url": "https://github.com/advisories/GHSA-wrj3-vj8c-784f",
+        "title": "SiYuan: Embedded (transclusion) block content is returned without publish-access filtering, leaking private and password-protected document content to anonymous readers",
+        "url": "https://github.com/advisories/GHSA-h6w7-xxcf-w2mq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-04T18:12:15.000Z",
-        "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9791f6885e5d4408c381. Users should …",
-        "badge": "CVE-2026-75858",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-09-04T21:13:13.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72795. ### Summary `/api/block/getBlockDOMWithEmbed` and `/api/block/getBlockDOMsWithEmbed` gate only the *requested* block against publish access. The blocks pulled in by that block's em…",
+        "badge": "CVE-2026-72795",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
-        "id": "ai-openai-9281d6906e8350b6",
+        "id": "ai-openai-325e9dcd840a97e9",
         "category": "ai",
-        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
-        "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+        "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+        "url": "https://openai.com/index/playco-game-prototyping-with-astra",
         "source": "OpenAI",
         "publishedAt": "2026-09-03T12:00:00.000Z",
-        "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+        "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239593",
+        "id": "v2ex-1239602",
         "category": "dev",
-        "title": "《财经》8 月刊自己买了国内外主流 Token 套餐，用 OpenCode 把一周额度跑干，发现国内模型比国外还要贵得多（对于个人来说）",
-        "url": "https://www.v2ex.com/t/1239593",
+        "title": "40 了被毕业，为了养家糊口决定弄了个浏览器端图片压缩站，求 V 友挑刺",
+        "url": "https://www.v2ex.com/t/1239602",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T14:29:41.000Z",
-        "summary": "帖子 https://x.com/mylifcc/status/2095723527282291021 报道原文 https://www.163.com/dy/article/L4ILFQL60519DDOA.html 《财经》今年 7 月-8 月订阅了国内外主流 Token 套餐，通过开源智能体框架 OpenCode 重复运行同一项任务（统计谷歌 24 个季度财报中的 10 项财务指标）直至耗尽一周 Token 额度。最终根据周额度估算套餐中实际可用的月额度，并计算 1 …",
+        "publishedAt": "2026-09-04T16:23:34.000Z",
+        "summary": "今年 40+，上半年被毕业了。 在家待了阵子，投出去的简历大多石沉大海——这个年纪，厂里不怎么缺写业务代码的。想明白一件事：与其继续挤那扇快关上的门，不如自己弄点东西，哪怕小。 决定做 出海 SaaS 。理由很朴素：国内流量太贵、太卷，而我英语还行，产品在海外自己能说清。选「图片压缩」这个切入点，是因为它刚需、高频、而且我能做出差异化—— 全程在浏览器里跑，图片不上传服务器 。隐私这个点，海外用户比国内在意得多。 开发过程（踩坑比功能多） 框架定的是 Rust 编译成 WA…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-it-25f03ae21ad138c5",
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49566788",
+        "id": "hn-49570133",
         "category": "dev",
-        "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
-        "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
+        "title": "Fermat's Last Theorem: Anthropic has beaten me to it",
+        "url": "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T16:24:50.000Z",
+        "publishedAt": "2026-09-04T21:00:02.000Z",
         "badge": "HN",
-        "signal": "30 分 · 11 评论"
+        "signal": "22 分 · 2 评论"
       },
       {
         "id": "cn-baidu-3135d14c73671795",
@@ -216,18 +216,18 @@
         "source": "百度热搜",
         "summary": "9月4日，上海和平饭店“一杯椰汁50元”引发网友热议。店方回应称消费者若自带酒水则按每瓶300元收服务费。黄浦区市场监督管理局表示，该饮品价格属市场调节价，明码标价且消费前履行告知义务即合规。",
         "badge": "热搜",
-        "signal": "7,712,153 热度"
+        "signal": "7,712,368 热度"
       },
       {
-        "id": "github-advisory-ghsa-c6mw-8xh8-gpq6",
+        "id": "github-advisory-ghsa-34fj-mwm6-fjfg",
         "category": "security",
-        "title": "CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval",
-        "url": "https://github.com/advisories/GHSA-c6mw-8xh8-gpq6",
+        "title": "SiYuan: The session-cookie signing key (Conf.CookieKey) is returned to anonymous readers by /api/system/getConf",
+        "url": "https://github.com/advisories/GHSA-34fj-mwm6-fjfg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-04T18:11:45.000Z",
-        "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28fa61b04719ca6a741020. Users should …",
-        "badge": "CVE-2026-75912",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-09-04T21:12:26.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72794. ### Summary `/api/system/getConf` returns `Conf.CookieKey`, the key used to sign the server's session cookies in its response body. The endpoint is registered with `CheckAuth` only…",
+        "badge": "CVE-2026-72794",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
         "id": "ai-hugging-face-a139f80b159295ad",
@@ -239,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239579",
+        "id": "v2ex-1239593",
         "category": "dev",
-        "title": "AI 做的 TV 应用，目前算是头 1 个了吧。",
-        "url": "https://www.v2ex.com/t/1239579",
+        "title": "《财经》8 月刊自己买了国内外主流 Token 套餐，用 OpenCode 把一周额度跑干，发现国内模型比国外还要贵得多（对于个人来说）",
+        "url": "https://www.v2ex.com/t/1239593",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T12:31:58.000Z",
-        "summary": "上个月发了个帖子，《没想到小学毕业，也能靠 AI 做出来安卓的 APP 。》 ， 今天在那个基础上，再次利用 AI ，做了个 TV 版， 花了差不多 2 万积分应该有了， 终于做好了了， 没有广告的，可以放心下载尝试的。 tv 下载： https://www.tucao.fun/app/tucao-tv.apk TV 界面 欢迎给意见",
+        "publishedAt": "2026-09-04T14:29:41.000Z",
+        "summary": "帖子 https://x.com/mylifcc/status/2095723527282291021 报道原文 https://www.163.com/dy/article/L4ILFQL60519DDOA.html 《财经》今年 7 月-8 月订阅了国内外主流 Token 套餐，通过开源智能体框架 OpenCode 重复运行同一项任务（统计谷歌 24 个季度财报中的 10 项财务指标）直至耗尽一周 Token 额度。最终根据周额度估算套餐中实际可用的月额度，并计算 1 …",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "9 回复"
       },
       {
         "id": "cn-item-6d12ee3786fe57bf",
@@ -271,24 +271,24 @@
         "signal": "已遭利用 · 整改期限 2026-09-05"
       },
       {
-        "id": "ai-openai-325e9dcd840a97e9",
+        "id": "ai-openai-9281d6906e8350b6",
         "category": "ai",
-        "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-        "url": "https://openai.com/index/playco-game-prototyping-with-astra",
+        "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+        "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
         "source": "OpenAI",
         "publishedAt": "2026-09-03T12:00:00.000Z",
-        "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+        "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49563851",
+        "id": "hn-49568579",
         "category": "dev",
-        "title": "IBM Bob",
-        "url": "https://bob.ibm.com/",
+        "title": "Shutting down our public encrypted DNS",
+        "url": "https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T12:50:29.000Z",
+        "publishedAt": "2026-09-04T18:50:28.000Z",
         "badge": "HN",
-        "signal": "138 分 · 152 评论"
+        "signal": "152 分 · 51 评论"
       },
       {
         "id": "cn-it-c9c4df4da69847fd",
@@ -301,15 +301,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-6v2g-fpxh-pmmh",
+        "id": "github-advisory-ghsa-mfrj-v65r-979c",
         "category": "security",
-        "title": "CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning",
-        "url": "https://github.com/advisories/GHSA-6v2g-fpxh-pmmh",
+        "title": "SiYuan: Publish-access filter on renderAttributeView leaves related-database content unfiltered and fails open on non-block first columns",
+        "url": "https://github.com/advisories/GHSA-mfrj-v65r-979c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-04T18:05:12.000Z",
-        "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944ea60b2c37ae1d2b7d25e. Users should …",
-        "badge": "CVE-2026-75856",
-        "signal": "CRITICAL · CVSS 8.6"
+        "publishedAt": "2026-09-04T20:58:04.000Z",
+        "summary": "**CVE:** This vulnerability corresponds to CVE-2026-72798. ### Summary `renderAttributeView` correctly applies the reader publish-access filter, but the filter's row-accessibility decision is keyed solely to the row's **first cell**, and i…",
+        "badge": "CVE-2026-72798",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
         "id": "ai-google-deepmind-63b19b50b4021cb5",
@@ -321,12 +321,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239578",
+        "id": "v2ex-1239579",
         "category": "dev",
-        "title": "我怎么感觉今天的 luna 格外快呢",
-        "url": "https://www.v2ex.com/t/1239578",
+        "title": "AI 做的 TV 应用，目前算是头 1 个了吧。",
+        "url": "https://www.v2ex.com/t/1239579",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T12:29:55.000Z",
+        "publishedAt": "2026-09-04T12:31:58.000Z",
+        "summary": "上个月发了个帖子，《没想到小学毕业，也能靠 AI 做出来安卓的 APP 。》 ， 今天在那个基础上，再次利用 AI ，做了个 TV 版， 花了差不多 2 万积分应该有了， 终于做好了了， 没有广告的，可以放心下载尝试的。 tv 下载： https://www.tucao.fun/app/tucao-tv.apk TV 界面 欢迎给意见",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -338,7 +339,7 @@
         "source": "百度热搜",
         "summary": "第23届中国—东盟博览会、中国东盟商务与投资峰会将于近期在广西南宁举行。国新办近日举行新闻发布会，介绍中国同东盟经贸合作以及展会筹备有关情况。商务部副部长鄢东介绍，第23届中国—东盟博览会主题是“共享3.0机遇，共创美好生活”，将聚焦自贸区建设促进区域经济高质量增长，展示中国—东盟经贸合作的新成果、新亮点。",
         "badge": "热搜",
-        "signal": "7,618,897 热度"
+        "signal": "7,618,684 热度"
       },
       {
         "id": "cisa-kev-cve-2026-82329",
@@ -361,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49554643",
+        "id": "hn-49569896",
         "category": "dev",
-        "title": "GPT-6 Astra",
-        "url": "https://openai.com/index/gpt-6-astra/",
+        "title": "Statichost.eu – 100% European static site hosting",
+        "url": "https://www.statichost.eu/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T18:41:05.000Z",
+        "publishedAt": "2026-09-04T20:34:49.000Z",
         "badge": "HN",
-        "signal": "2090 分 · 1904 评论"
+        "signal": "30 分 · 6 评论"
       },
       {
         "id": "cn-item-d74ce3e0f9471df6",
@@ -381,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-h539-c7r8-3xq4",
+        "id": "github-advisory-ghsa-848m-r628-vrxw",
         "category": "security",
-        "title": "CodeWhale: js_execution leaks parent environment to model context via missing env scrub",
-        "url": "https://github.com/advisories/GHSA-h539-c7r8-3xq4",
+        "title": "SurrealDB: Custom API route lets authenticated callers override namespace/database scope via URL path",
+        "url": "https://github.com/advisories/GHSA-848m-r628-vrxw",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-04T18:03:08.000Z",
-        "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944ea60b2c37ae1d2b7d25e. Users should …",
-        "badge": "CVE-2026-75915",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-04T20:07:07.000Z",
+        "summary": "An authenticated user scoped to one namespace/database could invoke a custom API (`DEFINE API`) belonging to a different namespace/database, reaching another tenant's endpoint. The route `/api/{namespace}/{database}/{endpoint}` took the na…",
+        "badge": "CVE-2026-63735",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-openai-39210f987919e80e",
@@ -402,15 +403,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239576",
+        "id": "v2ex-1239578",
         "category": "dev",
-        "title": "更新了一下自己给 ChatGPT 使用的 MCP Server",
-        "url": "https://www.v2ex.com/t/1239576",
+        "title": "我怎么感觉今天的 luna 格外快呢",
+        "url": "https://www.v2ex.com/t/1239578",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T12:11:23.000Z",
-        "summary": "之前发过自己的 MCP Server ，主要的目的是白嫖 Chat 模式的 Token 。 最近给继续完善了一下，更新了 Computer Use 和 Skill 的兼容，今天用它控制 Blender 建了个模型，然后它自己将模型导入 Bambu Studio 切片打印。等会儿看看模型打印的怎么样，希望别翻车。 用的是 ChatGPT Free 账户，Luna 模型，这真不花一分钱白嫖了（看错了，还是用的 Plus 账户，Sol 模型，登录错账号了）。当然模型是一个简单的海…",
+        "publishedAt": "2026-09-04T12:29:55.000Z",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-it-e988bc568a45243b",
@@ -443,14 +443,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49562657",
+        "id": "hn-49569366",
         "category": "dev",
-        "title": "Solving the Jane Street reverse engineering challenge",
-        "url": "https://jestoph.com/2026/09/04/jane-street-challenge.html",
+        "title": "Can AI design circuit boards yet?",
+        "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T10:17:01.000Z",
+        "publishedAt": "2026-09-04T19:48:29.000Z",
         "badge": "HN",
-        "signal": "313 分 · 74 评论"
+        "signal": "64 分 · 49 评论"
       },
       {
         "id": "cn-baidu-fecce391286b28fe",
@@ -460,18 +460,18 @@
         "source": "百度热搜",
         "summary": "9月1日上午，第十三届“中华慈善奖”表彰大会在北京举行，宁波市宁海县98岁老党员王春文荣获该奖。自2001年以来，他仅向宁海县慈善总会捐款就近6000万元。王春文奉行“活着就要做慈善”信条，对自己极度苛刻常年穿补丁旧衣，却对他人慷慨解囊，持续资助困难群体。",
         "badge": "热搜",
-        "signal": "7,522,039 热度"
+        "signal": "7,524,422 热度"
       },
       {
-        "id": "github-advisory-ghsa-7j5w-7r7x-9v27",
+        "id": "github-advisory-ghsa-gx45-xrj5-g6c4",
         "category": "security",
-        "title": "CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval",
-        "url": "https://github.com/advisories/GHSA-7j5w-7r7x-9v27",
+        "title": "CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository",
+        "url": "https://github.com/advisories/GHSA-gx45-xrj5-g6c4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-04T18:02:37.000Z",
-        "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28fa61b04719ca6a741020. Users should …",
-        "badge": "CVE-2026-75913",
-        "signal": "HIGH · CVSS 9.3"
+        "publishedAt": "2026-09-04T18:14:09.000Z",
+        "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b993085554da82e77370160a31c. Users should …",
+        "badge": "CVE-2026-75911",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
         "id": "ai-hugging-face-b5500bc6503561c6",
@@ -483,15 +483,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239571",
+        "id": "v2ex-1239576",
         "category": "dev",
-        "title": "Scout 是不是一个常用语",
-        "url": "https://www.v2ex.com/t/1239571",
+        "title": "更新了一下自己给 ChatGPT 使用的 MCP Server",
+        "url": "https://www.v2ex.com/t/1239576",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T11:03:50.000Z",
-        "summary": "一直用 gpt ，被迫灌输了 scout 的意义：原意侦察，指扫描仓库找出相关代码。 今天 gpt 卡得要死就换成了 deepseek flash 0731 ， 就说了一句“实现 xxx 会有哪些修改点，scout 一下”，结果它在那转了十分钟…… 展开 thinking 一看，一直在找 scout 是什么意思，翻了仓库没有，翻了文档没有，翻了 git log 没有……😂😂 😂大模型也有语言障碍吗，还是说 scout 是 gpt 独特用语",
+        "publishedAt": "2026-09-04T12:11:23.000Z",
+        "summary": "之前发过自己的 MCP Server ，主要的目的是白嫖 Chat 模式的 Token 。 最近给继续完善了一下，更新了 Computer Use 和 Skill 的兼容，今天用它控制 Blender 建了个模型，然后它自己将模型导入 Bambu Studio 切片打印。等会儿看看模型打印的怎么样，希望别翻车。 用的是 ChatGPT Free 账户，Luna 模型，这真不花一分钱白嫖了（看错了，还是用的 Plus 账户，Sol 模型，登录错账号了）。当然模型是一个简单的海…",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "4 回复"
       }
     ]
   },
@@ -508,7 +508,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 249836,
+        "stars": 250160,
         "starsToday": 2757
       },
       {
@@ -518,7 +518,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 125169,
+        "stars": 125673,
         "starsToday": 1683
       },
       {
@@ -528,7 +528,7 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 25437,
+        "stars": 25451,
         "starsToday": 681
       },
       {
@@ -538,7 +538,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 248202,
+        "stars": 248385,
         "starsToday": 1139
       },
       {
@@ -548,7 +548,7 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 174029,
+        "stars": 174082,
         "starsToday": 512
       },
       {
@@ -558,7 +558,7 @@
         "url": "https://github.com/blader/humanizer",
         "description": "Agent skill that removes signs of AI-generated writing from text",
         "language": "Python",
-        "stars": 42499,
+        "stars": 42608,
         "starsToday": 1132
       },
       {
@@ -568,7 +568,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 241370,
+        "stars": 241422,
         "starsToday": 721
       },
       {
@@ -578,7 +578,7 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "language": "Go",
-        "stars": 103485,
+        "stars": 103533,
         "starsToday": 503
       },
       {
@@ -588,7 +588,7 @@
         "url": "https://github.com/magnitudedev/magnitude",
         "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
         "language": "TypeScript",
-        "stars": 2290,
+        "stars": 2395,
         "starsToday": 395
       },
       {
@@ -598,10 +598,10 @@
         "url": "https://github.com/bikini/exploitarium",
         "description": "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
         "language": "Python",
-        "stars": 4461,
+        "stars": 4485,
         "starsToday": 68
       }
     ],
-    "updatedAt": "2026-09-04T18:24:58.715Z"
+    "updatedAt": "2026-09-04T21:29:58.769Z"
   }
 }
