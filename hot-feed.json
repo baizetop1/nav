@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-04T04:35:14.803Z",
+  "generatedAt": "2026-09-04T07:18:48.326Z",
   "intelligence": {
-    "updatedAt": "2026-09-04T04:35:14.803Z",
+    "updatedAt": "2026-09-04T07:18:48.326Z",
     "items": [
       {
-        "id": "cn-item-14a857aa4ebc0818",
+        "id": "cn-item-6be6c6e26685542e",
         "category": "cn",
-        "title": "热搜第一！热播剧遭到吐槽冤不冤？",
-        "url": "https://www.chinanews.com.cn/cul/2026/09-04/10690174.shtml",
+        "title": "飞得快、爬得高、打得准，俄乌无人机攻防再升级",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-04/10690309.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-04T03:57:27.000Z",
-        "summary": "中新网北京9月4日电(记者 上官云)日前，剧集《重案六组：消失的警号》上线播出，热度相当不错，引来众多网友追剧。",
+        "publishedAt": "2026-09-04T07:10:58.000Z",
+        "summary": "中新网9月4日电(记者 刁炜)据《华盛顿邮报》近日报道，俄乌无人机攻防战持续升级：一边是俄制喷气式无人机大批投入战场，发射架次倍增。另一边则是乌方加快研发反无人机技术，推出多款新型拦截系统。",
         "badge": "中新网要闻"
       },
       {
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-03T18:41:05.000Z",
         "badge": "HN",
-        "signal": "1482 分 · 1252 评论"
+        "signal": "1664 分 · 1443 评论"
       },
       {
-        "id": "cn-it-c5443401ebf96319",
+        "id": "cn-it-c1fa831a62ab1d86",
         "category": "cn",
-        "title": "蔚来李斌：高质量增长不能简单看销量，7 月平均成交价已全面超越 BBA，乐道有战略性新车型",
-        "url": "https://www.ithome.com/0/998/368.htm",
+        "title": "宏碁发布 Iconia X16 / X14 / A16 / A14 平板电脑，统一采用 G80 SoC",
+        "url": "https://www.ithome.com/0/998/417.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-04T04:33:30.000Z",
-        "summary": "9 月 4 日下午消息，在蔚来二季度业绩沟通会上，蔚来创始人、董事长、CEO 李斌表示，“去年我们进入高质量发展的第三阶段，但在越来越竞争激烈的市场， 只追求表面增长不重要，追求有质量的增长越来越重要 。” 什么是真正高质量的增长？在李斌看来， 单纯追逐销量的排名意义有限 。“大家现在都在讨论销量排名，但为什么没人关注销售额排名？为什么不做毛利润排名？这本身是否就存在某种误导？”他指出，高质量的增长，不能只看卖了多少台车，尽管蔚来自身的销量增长也并不差，更关键的是要看收入增…",
+        "publishedAt": "2026-09-04T07:14:51.000Z",
+        "summary": "IT之家 9 月 4 日消息，宏碁 (Acer) 当地时间本月 2 日一口气发布了 Iconia X16 / X14 / A16 / A14 平板电脑。 ▲ Iconia X16 其统一采用联发科技 Helios（曦力）G80 SoC，存储器组合为 6GB LPDDR4X + 128GB eMMC，支持 2TB microSD 存储扩展，运行 Android 16 操作系统。 Iconia X 产品采用 OLED 屏幕 、 Iconia A 则是 IPS LCD 屏幕 。 …",
         "badge": "IT之家"
       },
       {
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239448",
+        "id": "v2ex-1239495",
         "category": "dev",
-        "title": "远程 vibe 有啥方案啊。安卓平板好使吗？",
-        "url": "https://www.v2ex.com/t/1239448",
+        "title": "发现 codex 达到 5H 限额会硬截断当前会话了",
+        "url": "https://www.v2ex.com/t/1239495",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T03:56:41.000Z",
-        "summary": "自己有台游戏本，来回背太重了。换笔记本又太贵了。毕竟现在连代码看都不看了。想着买个平板算了 安卓平板便宜大碗。就是应用离 IOS 差几个档。。不知道现有应用能满足远程 vibe 的需求吗？ 自己有台美西的高配服务器。想着是在服务器上搭建个啥服务，安卓远程连过去就好。 ssh 的话感觉对话不是太方便（自己菜鸡），3389 远程桌面的话稍显卡。最好能是浏览器连过去那种，有这种方案吗？",
+        "publishedAt": "2026-09-04T06:53:35.000Z",
+        "summary": "我记得以前达到 5H 限额，但是当前会话未完成的话，会继续跑完本次会话的，这很合理也人性化。 后来 5H 取消掉了一段时间，现在加回来以后，我发现达到限额会硬截断当前会话了！ 这太难受了，这样硬生生截断，是不是只能后续再输入“继续”来补全工作，会不会造成混乱，或者降低运行质量呀。",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-be4204215186c54a",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "9月3日，尼泊尔外长在加德满都会见中国驻尼大使，感谢中方在泥石流灾害中的紧急援助，表示无意单独向中国等具体国家寻求“气候正义赔偿”，将依《联合国气候变化框架公约》寻求国际补偿。",
         "badge": "热搜",
-        "signal": "7,809,682 热度"
+        "signal": "7,809,328 热度"
       },
       {
         "id": "cisa-kev-cve-2026-48710",
@@ -124,16 +124,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-03T14:54:39.000Z",
         "badge": "HN",
-        "signal": "1511 分 · 405 评论"
+        "signal": "1673 分 · 417 评论"
       },
       {
-        "id": "cn-item-a627c992ec62bf4a",
+        "id": "cn-item-89d77900cc15d219",
         "category": "cn",
-        "title": "当12345变成饭圈“战场”：四万多条诉求，究竟是谁的“勋章”？",
-        "url": "https://www.chinanews.com.cn/cul/2026/09-04/10690173.shtml",
+        "title": "中国最高检、国家医保局联合发布案例 涉惩治“回流药”骗保等",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-04/10690286.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-04T03:52:13.000Z",
-        "summary": "中新网北京9月4日电(中新文娱)几场普通的明星演唱会，竟在短短十天接到了四万多条投诉！这样的场景听起来多少有些荒诞，却真实发生了。",
+        "publishedAt": "2026-09-04T06:30:39.000Z",
+        "summary": "中新社北京9月4日电 (记者 张素 李纯)中国最高人民检察院、国家医疗保障局4日联合发布6件依法从严惩治医保骗保犯罪典型案例，其中一起案例中涉案41人因“回流药”骗保犯罪获刑。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239436",
+        "id": "v2ex-1239490",
         "category": "dev",
-        "title": "各位老哥都在用哪个中转站",
-        "url": "https://www.v2ex.com/t/1239436",
+        "title": "微软 2FA 应用经常弹窗，提示有人登录我的微软账号。这是账号被灰尘黑了？",
+        "url": "https://www.v2ex.com/t/1239490",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T03:25:34.000Z",
-        "summary": "之前一直用的 opencode go ， 主要用 deepseek 管饱，但是涨价之后发现不够用了， 各位老哥有没有啥推荐的， 有 GPT 、deepseek 、k3 的几个模型就行， claude 用的不多，倒没啥依赖",
+        "publishedAt": "2026-09-04T06:43:34.000Z",
+        "summary": "最近手机上的微软 2FA 应用不断弹窗，提示有人尝试登录我的微软账号。白天弹，晚上也弹。改了密码也依旧这样。 有 V 友有类似的情况么？ 1.jpg 2.jpg",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-5197f57b74dfd692",
+        "id": "cn-it-a7077de2d73b7ee2",
         "category": "cn",
-        "title": "人人影视负责人李渊敏回应 App 上线：力争激活 3000 万存量用户，优先面向东南亚输出国产影视内容",
-        "url": "https://www.ithome.com/0/998/367.htm",
+        "title": "CPU/DRAM/SSD 成本齐涨：集邦预估 900 美元笔记本 2026Q3 核心部件 BOM 占比 68%",
+        "url": "https://www.ithome.com/0/998/415.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-04T04:28:02.000Z",
-        "summary": "IT之家 9 月 4 日消息，有网友近日晒出“人人影视”向老用户发出的“欢迎老用户回归”邮件，邮件中称“我们终于可以在 App 见面了”，并限时免费赠送老用户一个月会员。 目前“人人影视”更名为“人人影视分享精彩” ，已经可以在 iOS 应用商店、安卓商店等渠道下载，下载界面显示“正版译制”。App 相关信息显示， 运营方为分享精彩网络科技（嘉兴）有限公司 ，法定代表人为李渊敏。 据浙江省嘉兴市南湖区官方“南湖发布”报道，分享精彩网络科技（嘉兴）有限公司（人人影视）的办公现…",
+        "publishedAt": "2026-09-04T07:12:53.000Z",
+        "summary": "IT之家 9 月 4 日消息，市场调查机构集邦咨询（TrendForce）今天（9 月 4 日）发布博文， 报告预估 2026 年全球笔记本电脑出货量降幅收窄至 9.4%，上下半年出货比例约为 53∶47。 该机构指出由于 CPU 短缺逐步缓解、消费者提前换机以及商务需求稳定等综合因素推动，该机构预估出货量降幅收窄到 9.4%。 此外该机构还预估 2026 年笔记本市场将偏离过去“下半年为主要出货旺季”的结构，上半年和下半年出货比例约为 53∶47，意味着从第三季度开始出货…",
         "badge": "IT之家"
       },
       {
@@ -206,17 +206,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-03T18:32:13.000Z",
         "badge": "HN",
-        "signal": "494 分 · 148 评论"
+        "signal": "523 分 · 167 评论"
       },
       {
-        "id": "cn-baidu-7b68c1df1a6ff993",
+        "id": "cn-baidu-f66771faf2cecb5b",
         "category": "cn",
-        "title": "安徽大学回应副校长涉武大举报事件",
-        "url": "https://www.baidu.com/s?wd=%E5%AE%89%E5%BE%BD%E5%A4%A7%E5%AD%A6%E5%9B%9E%E5%BA%94%E5%89%AF%E6%A0%A1%E9%95%BF%E6%B6%89%E6%AD%A6%E5%A4%A7%E4%B8%BE%E6%8A%A5%E4%BA%8B%E4%BB%B6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "人贩子将出狱 孙海洋担心被报复",
+        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E8%B4%A9%E5%AD%90%E5%B0%86%E5%87%BA%E7%8B%B1+%E5%AD%99%E6%B5%B7%E6%B4%8B%E6%8B%85%E5%BF%83%E8%A2%AB%E6%8A%A5%E5%A4%8D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月4日，安徽大学针对现任副校长付某涉武汉大学女教授被举报事件，回应称：学校已关注此事，正在调查，具体待官方通报。此前，9月3日武汉大学通报称，针对一女教授被举报介入他人家庭、涉嫌学术不端等，学校纪委已正式受理并启动调查，一经查实将严肃处理。",
+        "summary": "目前，人贩子吴某龙即将出狱，孙海洋直言担忧其出狱后报复社会及家庭。此前，吴某龙仅被关押5年且无悔改之心。孙海洋称至今未拿到42万赔偿款，表示其出狱后将持续追缴，追回后用于帮助寻子家长。",
         "badge": "热搜",
-        "signal": "7,713,801 热度"
+        "signal": "7,714,430 热度"
       },
       {
         "id": "github-advisory-ghsa-x67c-8pwr-m8g3",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239424",
+        "id": "v2ex-1239487",
         "category": "dev",
-        "title": "codex 主动重置过期时间获取失败",
-        "url": "https://www.v2ex.com/t/1239424",
+        "title": "opencode 出新模型了，叫 Omen Alpha，输入输出价格接近 deepseek，速度飞快",
+        "url": "https://www.v2ex.com/t/1239487",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T02:57:45.000Z",
-        "summary": "我以为是 CPA 的问题，结果使用 chatgpt 登录也无法主动重置，额度马上见底了 -。- 难道我要摸鱼等修复。。。",
+        "publishedAt": "2026-09-04T06:35:52.000Z",
+        "summary": "是否多模态和 1m 上下文暂时未知",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "14 回复"
       },
       {
-        "id": "cn-item-b04e4d379232f344",
+        "id": "cn-item-0c417c68b31eb9c3",
         "category": "cn",
-        "title": "A股午评：超4100只个股飘红，三大指数集体收涨",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-04/10690170.shtml",
+        "title": "尼泊尔泥石流灾后第10天 两名被困隧道的工人获救",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-04/10690285.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-04T03:38:00.000Z",
-        "summary": "A股午评：超4100只个股飘红，三大指数集体收涨；科创50收跌；文化传媒、农业、房地产上涨；半导体、贵金属高开低走，煤炭、海运下跌",
+        "publishedAt": "2026-09-04T06:21:29.000Z",
+        "summary": "中新网加德满都9月4日电 (记者 崔楠 肖玉笛)尼泊尔一名参与前方救援的议员4日在社交媒体上说，两名被困在上崔树里3A水电站隧道内的工人当天被成功救出，他们已在洞内坚持9天有余。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49559522",
+        "id": "hn-49526453",
         "category": "dev",
-        "title": "Project Xanadu: Even More Hindsight",
-        "url": "https://gwern.net/xanadu",
+        "title": "The largest electric aircraft just flew [video]",
+        "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T01:45:23.000Z",
+        "publishedAt": "2026-09-01T19:02:34.000Z",
         "badge": "HN",
-        "signal": "33 分 · 5 评论"
+        "signal": "280 分 · 198 评论"
       },
       {
-        "id": "cn-it-093f3b1c7fd8d4e7",
+        "id": "cn-it-19e478fd25318c7e",
         "category": "cn",
-        "title": "微软全量推送 Win11 新版 Photos：精简工具栏、移除 Ask Copilot 按钮",
-        "url": "https://www.ithome.com/0/998/366.htm",
+        "title": "为大屏“让路”：现代新伊兰特、IONIQ 3 等车型把仪表做成选配",
+        "url": "https://www.ithome.com/0/998/412.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-04T04:22:23.000Z",
-        "summary": "IT之家 9 月 4 日消息，科技媒体 Windows Latest 今天（9 月 4 日）发布博文，报道称微软面向所有 Windows 11 用户， 全量推送 2026.11080.24002.0 版本照片查看器 Microsoft Photos。 微软于 2026 年 7 月开始邀请 Windows Insider 项目成员测试，主要精简界面、提升响应速度，移除 Ask Copilot 按钮等，目前已全量面向 Windows 11 用户推送。 体验方面，本次更新减少与图…",
+        "publishedAt": "2026-09-04T07:12:20.000Z",
+        "summary": "IT之家 9 月 4 日消息，据外媒 Carscoops 今天（4 日）报道，现代汽车正逐渐普及全新一代内饰设计，最先应用于韩国市场的雅尊，随后扩展至 IONIQ 3、新一代伊兰特和途胜。 新一批车型的座舱均以 Pleos Connect 系统为核心，中央配备大屏，界面布局和操作逻辑借鉴了特斯拉。但在较低配版本上，现代汽车省掉了一项硬件配置 —— 仪表。 刚刚在韩国上市的 2027 款伊兰特，以及面向全球市场的 IONIQ 3，入门版本 均没有配备驾驶员前方的数字仪表盘 。…",
         "badge": "IT之家"
       },
       {
@@ -321,25 +321,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239420",
+        "id": "v2ex-1239475",
         "category": "dev",
-        "title": "我为什么开始认真计算 Token 的价格了",
-        "url": "https://www.v2ex.com/t/1239420",
+        "title": "多年经验总结，经常发送消息有错字的人工作能力都不佳，这是为啥？",
+        "url": "https://www.v2ex.com/t/1239475",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T02:48:29.000Z",
-        "summary": "我为什么开始认真计算 Token 的价格了 以前其实不太关心 Token 多少钱，API 能用就用，反正偶尔调几次也花不了几个钱 但最近用 Agent 和 Coding 类工具多了以后，开始发现这东西和服务器账单有点像了 单次看着没多少钱，天天跑起来就不是那么回事了 尤其是让 Agent 自己读项目、改代码、跑测试，再回来继续分析的时候，Token 跑得比我想象中快很多 于是最近开始重新看 API 的价格 然后发现一个挺有意思的现象：同样的模型，不同地方的价格差距还真不小 …",
+        "publishedAt": "2026-09-04T06:07:53.000Z",
+        "summary": "这么多年在不同公司接触了各类同事，发现一个很奇妙的事情。 如果某人经常在消息/代码注释里面有错别字/typo ，接触久了我发现他的工作能力都多多少少有些问题。太奇怪了，这到底是什么原因？ V 友们会有发消息前检查一遍的习惯吗？",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "35 回复"
       },
       {
-        "id": "cn-baidu-d149d70b4bd879b0",
+        "id": "cn-baidu-b528e1aedfa5c5c2",
         "category": "cn",
-        "title": "在吉隆 这些坚定的身影令人动容",
-        "url": "https://www.baidu.com/s?wd=%E5%9C%A8%E5%90%89%E9%9A%86+%E8%BF%99%E4%BA%9B%E5%9D%9A%E5%AE%9A%E7%9A%84%E8%BA%AB%E5%BD%B1%E4%BB%A4%E4%BA%BA%E5%8A%A8%E5%AE%B9&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“中国游”带火这门“新生意”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%AD%E5%9B%BD%E6%B8%B8%E2%80%9D%E5%B8%A6%E7%81%AB%E8%BF%99%E9%97%A8%E2%80%9C%E6%96%B0%E7%94%9F%E6%84%8F%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "在吉隆受灾区现场，各路救援人员分成不同队伍，在划定的片区内认真搜索。对讲机里不时冒出几声短促的呼叫，混在铁锹与石头的碰撞声里。这些坚定的身影令人动容！",
+        "summary": "今年1-7月，境外人员在华消费2636亿元，同比增长27.8%；办理离境退税的境外旅客数量同比增长3倍以上。入境消费这门“新生意”正在为中国消费市场注入新活力。",
         "badge": "热搜",
-        "signal": "7,617,423 热度"
+        "signal": "7,619,550 热度"
       },
       {
         "id": "cisa-kev-cve-2026-9586",
@@ -362,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49559992",
+        "id": "hn-49559522",
         "category": "dev",
-        "title": "A Mysterious Kidney Disease Has Arrived in Texas",
-        "url": "https://www.texasmonthly.com/news-politics/ckdu-kidney-disease-immigration/",
+        "title": "Project Xanadu: Even More Hindsight (2025)",
+        "url": "https://gwern.net/xanadu",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T02:54:16.000Z",
+        "publishedAt": "2026-09-04T01:45:23.000Z",
         "badge": "HN",
-        "signal": "27 分 · 25 评论"
+        "signal": "69 分 · 9 评论"
       },
       {
-        "id": "cn-item-6bd363b672a512c7",
+        "id": "cn-item-2c1cd9845712dc89",
         "category": "cn",
-        "title": "韩国总统府否认“已决定向霍尔木兹海峡派兵”",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-04/10690162.shtml",
+        "title": "（长征胜利90周年）泸定桥六旬守桥人：40余年护13根铁索，接力一场“长征”",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-04/10690258.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-04T03:26:22.000Z",
-        "summary": "中新网9月4日电 据韩联社报道，韩国总统府青瓦台9月3日就有关“韩国政府基本决定向霍尔木兹海峡派兵”的媒体报道表示，这与事实不符。",
+        "publishedAt": "2026-09-04T06:11:56.000Z",
+        "summary": "中新网泸定9月4日电 题：泸定桥六旬守桥人：40余年护13根铁索，接力一场“长征”",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239415",
+        "id": "v2ex-1239467",
         "category": "dev",
-        "title": "codex 的重置次数加载出问题了？因为送太多吗",
-        "url": "https://www.v2ex.com/t/1239415",
+        "title": "快了我晕，慢了我恼，我爱 40 头啃每秒",
+        "url": "https://www.v2ex.com/t/1239467",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T02:44:00.000Z",
-        "summary": "貌似是部分账号的问题。我们两个同事加载不出来，没法主动重置，也有一些能加载出来。痛苦中",
+        "publishedAt": "2026-09-04T05:41:00.000Z",
+        "summary": "你怎么知道有人刚送我两台 DGX SPARK ？",
         "badge": "程序员",
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-9fce9f367db45725",
+        "id": "cn-it-7f02c8cf2d7f6943",
         "category": "cn",
-        "title": "小米卢伟冰谈内存涨价：不能简单把成本转移，一定要把产品做得更好",
-        "url": "https://www.ithome.com/0/998/365.htm",
+        "title": "米哈游《崩坏：因缘精灵》《星布谷地》启动器预约开启，游戏上线后自动下载",
+        "url": "https://www.ithome.com/0/998/411.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-04T04:18:19.000Z",
-        "summary": "9 月 4 日中午消息，在 IFA 2026 小米全球发布会后，小米集团合伙人、总裁、手机部总裁卢伟冰与媒体对话。 谈及存储持续涨价话题，他表示，涨也好、跌也好，总要往前走。但小米在预测之后，至少有一个很简单的结论： 不能简单地把成本转移，一定要把产品做得更好 。 “产品要卖贵了，怎么让用户感受到物超所值才是关键。这次 K100 Pro 系列超出我的预期，也超了很多人的预期，就是因为这款产品在成本上涨的同时，我们在不断做加法，把产品做得更好。” 他还预告，除了 9 月 7 …",
+        "publishedAt": "2026-09-04T07:11:28.000Z",
+        "summary": "IT之家 9 月 4 日消息，米哈游官方今日宣布《崩坏：因缘精灵》与《星布谷地》已于米哈游启动器同步开启游戏预约。 根据官方公告，玩家可通过米哈游启动器进行预约。具体操作方式为：打开米哈游启动器并更新至最新版本，进入【全部游戏】界面选择相应游戏，点击【立即预约】并登录米哈游通行证即可完成。成功预约后，玩家可选择是否开启【游戏上线后自动下载】功能。 《崩坏：因缘精灵》是由米哈游制作发行的精灵养成冒险策略游戏，融合了精灵养成、自动战棋与开放世界探索等玩法。 玩家将在游戏中扮演一…",
         "badge": "IT之家"
       },
       {
@@ -451,17 +451,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-08-31T08:26:09.000Z",
         "badge": "HN",
-        "signal": "41 分 · 7 评论"
+        "signal": "75 分 · 19 评论"
       },
       {
-        "id": "cn-baidu-c96843fd7f5eca1d",
+        "id": "cn-baidu-58b70fb6616fef00",
         "category": "cn",
-        "title": "多国从美国运回黄金",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%9B%BD%E4%BB%8E%E7%BE%8E%E5%9B%BD%E8%BF%90%E5%9B%9E%E9%BB%84%E9%87%91&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "女高音歌唱家龚爽因病离世 年仅37岁",
+        "url": "https://www.baidu.com/s?wd=%E5%A5%B3%E9%AB%98%E9%9F%B3%E6%AD%8C%E5%94%B1%E5%AE%B6%E9%BE%9A%E7%88%BD%E5%9B%A0%E7%97%85%E7%A6%BB%E4%B8%96+%E5%B9%B4%E4%BB%8537%E5%B2%81&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，多国从美国运回黄金。起因是美国频繁动用金融制裁且债务膨胀，致美元长期信用受质疑。此举旨在对冲美债贬值风险并降低单一托管地风险。分析指出，这折射出美元体系信任出现裂痕，长期将加速全球储备多元化，成为全球去美元化的重要信号。",
+        "summary": "据多位业内人士消息，女高音歌唱家龚爽因病离世，年仅37岁。",
         "badge": "热搜",
-        "signal": "7,520,647 热度"
+        "signal": "7,521,398 热度"
       },
       {
         "id": "github-advisory-ghsa-q2vg-7qgx-x5fc",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239413",
+        "id": "v2ex-1239461",
         "category": "dev",
-        "title": "为什么一般政府网站就会比较 low，把你看到的烂站贴在这里",
-        "url": "https://www.v2ex.com/t/1239413",
+        "title": "codex 的重置卡能多张重叠吗？",
+        "url": "https://www.v2ex.com/t/1239461",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T02:36:18.000Z",
-        "summary": "是他们缺钱吗？",
+        "publishedAt": "2026-09-04T05:01:13.000Z",
+        "summary": "我之前有一张没用，今天 tibo 发推说已经发了新的，但我没有收到",
         "badge": "程序员",
-        "signal": "29 回复"
+        "signal": "4 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 25185,
+        "stars": 25276,
         "starsToday": 963
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 247830,
+        "stars": 248155,
         "starsToday": 1601
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 240962,
+        "stars": 241055,
         "starsToday": 774
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 123714,
+        "stars": 123937,
         "starsToday": 2128
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 173742,
+        "stars": 173810,
         "starsToday": 281
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 247350,
+        "stars": 247501,
         "starsToday": 751
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "language": "Go",
-        "stars": 103178,
+        "stars": 103239,
         "starsToday": 543
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/blader/humanizer",
         "description": "Agent skill that removes signs of AI-generated writing from text",
         "language": "Python",
-        "stars": 41686,
+        "stars": 41848,
         "starsToday": 1208
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/google-research/timesfm",
         "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "language": "Python",
-        "stars": 30761,
+        "stars": 30815,
         "starsToday": 1618
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/averygan/reclip",
         "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
         "language": "HTML",
-        "stars": 8472,
+        "stars": 8576,
         "starsToday": 88
       }
     ],
-    "updatedAt": "2026-09-04T04:35:14.803Z"
+    "updatedAt": "2026-09-04T07:18:48.326Z"
   }
 }
