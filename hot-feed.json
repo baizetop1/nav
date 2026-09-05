@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-05T16:05:17.510Z",
+  "generatedAt": "2026-09-05T18:19:17.220Z",
   "intelligence": {
-    "updatedAt": "2026-09-05T16:05:17.510Z",
+    "updatedAt": "2026-09-05T18:19:17.220Z",
     "items": [
       {
         "id": "cn-item-bceb2598f91fe977",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-05T13:36:38.000Z",
         "badge": "HN",
-        "signal": "106 分 · 30 评论"
+        "signal": "161 分 · 52 评论"
       },
       {
         "id": "cn-it-ba5e02ae92dc24c1",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239743",
+        "id": "v2ex-1239751",
         "category": "dev",
-        "title": "google pro 在 antigravitycli 请求 gemini model 400",
-        "url": "https://www.v2ex.com/t/1239743",
+        "title": "难绷，太相信 ai 了😭",
+        "url": "https://www.v2ex.com/t/1239751",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T15:35:56.000Z",
-        "summary": "账号是(Google AI Pro) 关联地区是新加坡。 请求 gemini 模型都是 报错 FAILED_PRECONDITION (code 400): User location is not supported for the API use. 使用 claude 模型可以，有知道为什么的吗？",
+        "publishedAt": "2026-09-05T16:59:48.000Z",
+        "summary": "workbuddy 的混元 3 模型，之前免费期用的还不错，感觉不比其他模型弱，一度让我重拾对混元模型的信任，结果今天调了一上午的 UI ，结果午睡前跑了个命令，一觉起来发现 UI 给我改的面目全非(ﾉ｀⊿´)ﾉ。 让回退，说某个文件删了，他没办法还原，让我自己从备份还原，这就是不看 ai 思考的后果吗🥲",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-baidu-c9f18edd0363eea4",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "最近，多名曾途经西藏吉隆的游客接到属地派出所摸排电话，核实是否平安。起因是吉隆遭遇泥石流灾害，工作人员根据边境申请记录等海量名单，逐一拨打排查电话，确认人员安全。",
         "badge": "热搜",
-        "signal": "7,809,424 热度"
+        "signal": "7,809,595 热度"
       },
       {
         "id": "cisa-kev-cve-2026-59822",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49570669",
+        "id": "hn-49563355",
         "category": "dev",
-        "title": "Actively exploited sandbox RCE in all Chromium versions",
-        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
+        "title": "Discovery of a new OpenAI agent message board",
+        "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T21:52:01.000Z",
+        "publishedAt": "2026-09-04T11:54:53.000Z",
         "badge": "HN",
-        "signal": "644 分 · 362 评论"
+        "signal": "1963 分 · 1462 评论"
       },
       {
         "id": "cn-item-3ad45d3382ab3902",
@@ -158,15 +158,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239731",
+        "id": "v2ex-1239743",
         "category": "dev",
-        "title": "便宜模型哪家强？ Gemini 3.8 Flash GPT-5.6 Luna DeepSeek V4",
-        "url": "https://www.v2ex.com/t/1239731",
+        "title": "google pro 在 antigravitycli 请求 gemini model 400",
+        "url": "https://www.v2ex.com/t/1239743",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T13:46:16.000Z",
-        "summary": "DeepSWE 排名：Gemini 3.8 > Luna > DeepSeek V4 Pro 各位整体的体验是咋样的 ？ 有没有说下的",
+        "publishedAt": "2026-09-05T15:35:56.000Z",
+        "summary": "账号是(Google AI Pro) 关联地区是新加坡。 请求 gemini 模型都是 报错 FAILED_PRECONDITION (code 400): User location is not supported for the API use. 使用 claude 模型可以，有知道为什么的吗？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-it-17b92c4c4f571a1a",
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49563355",
+        "id": "hn-49570669",
         "category": "dev",
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
+        "title": "Actively exploited sandbox RCE in all Chromium versions",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T11:54:53.000Z",
+        "publishedAt": "2026-09-04T21:52:01.000Z",
         "badge": "HN",
-        "signal": "1883 分 · 1433 评论"
+        "signal": "690 分 · 393 评论"
       },
       {
         "id": "cn-baidu-f195b0abab6c1885",
@@ -216,7 +216,7 @@
         "source": "百度热搜",
         "summary": "近日，我国新能源汽车动力电池将迎“退役潮”，预计到2030年当年废旧动力电池产生量将超过100万吨。",
         "badge": "热搜",
-        "signal": "7,712,719 热度"
+        "signal": "7,712,001 热度"
       },
       {
         "id": "github-advisory-ghsa-h4v5-crx2-3cv4",
@@ -239,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239730",
+        "id": "v2ex-1239731",
         "category": "dev",
-        "title": "一个 MonoRepo 复杂系统的部署问题",
-        "url": "https://www.v2ex.com/t/1239730",
+        "title": "便宜模型哪家强？ Gemini 3.8 Flash GPT-5.6 Luna DeepSeek V4",
+        "url": "https://www.v2ex.com/t/1239731",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T13:29:30.000Z",
-        "summary": "我搞了一套财税系统，采用的是 MonoRepo 的构建方式。也就是说，在 APPs 目录下有几十个应用。前端全部用的是 Next.js ，后端用的是 FastAPI 。现在的问题是，代码托管在 GitHub ，镜像则通过阿里云的 ACR 来构建。 核心问题是构建速度非常慢。目前有 11 个应用，其中 4-5 个是前端，6-7 个是后端服务, 后续还在增长。问题在于，有时候我可能只修改了其中一个应用，但很难控制每次只自动构建被修改的那一个。 目前我在 GitHub 上构建时，…",
+        "publishedAt": "2026-09-05T13:46:16.000Z",
+        "summary": "DeepSWE 排名：Gemini 3.8 > Luna > DeepSeek V4 Pro 各位整体的体验是咋样的 ？ 有没有说下的",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-item-81a1f21e40c5712f",
@@ -281,14 +281,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49576986",
+        "id": "hn-49571634",
         "category": "dev",
-        "title": "How the Planet-Altering Disaster of \"Forever Chemicals\" Was Kept Secret",
-        "url": "https://www.propublica.org/podcast/forever-chemicals-pfas-pfos-3m-secret-kris-hansen",
+        "title": "Nitter has more working instances than before the takedowns",
+        "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
         "source": "Hacker News",
-        "publishedAt": "2026-09-05T14:40:52.000Z",
+        "publishedAt": "2026-09-05T00:04:16.000Z",
         "badge": "HN",
-        "signal": "68 分 · 8 评论"
+        "signal": "494 分 · 202 评论"
       },
       {
         "id": "cn-it-3b530f21bd111abb",
@@ -321,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239712",
+        "id": "v2ex-1239730",
         "category": "dev",
-        "title": "本地 Coding Agent 工作台： CoDock",
-        "url": "https://www.v2ex.com/t/1239712",
+        "title": "一个 MonoRepo 复杂系统的部署问题",
+        "url": "https://www.v2ex.com/t/1239730",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T10:47:54.000Z",
-        "summary": "每天在十几个终端窗口里切来切去？我做了一个本地 Coding Agent 工作台：CoDock 做日常开发时，大家应该也慢慢习惯了让各种 AI Agent 帮着写代码： A 项目用 Claude Code 跑架构重构； B 项目用 Codex 改改小 bug ； 偶尔还想切到 DeepSeek Harness 或 Gemini CLI 跑跑对比测试…… 不知不觉，电脑任务栏里就堆了七八个黑乎乎的终端窗口。 每次切窗口都在找「刚刚那个任务跑在哪个终端里？」「跑完了没有？」「上…",
+        "publishedAt": "2026-09-05T13:29:30.000Z",
+        "summary": "我搞了一套财税系统，采用的是 MonoRepo 的构建方式。也就是说，在 APPs 目录下有几十个应用。前端全部用的是 Next.js ，后端用的是 FastAPI 。现在的问题是，代码托管在 GitHub ，镜像则通过阿里云的 ACR 来构建。 核心问题是构建速度非常慢。目前有 11 个应用，其中 4-5 个是前端，6-7 个是后端服务, 后续还在增长。问题在于，有时候我可能只修改了其中一个应用，但很难控制每次只自动构建被修改的那一个。 目前我在 GitHub 上构建时，…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "20 回复"
       },
       {
         "id": "cn-baidu-a8535495f012792c",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "“十五五”时期，将持续完善生育保险制度，更好支持生育友好型社会建设。大力推动参加职工医保的灵活就业人员、农民工、新就业形态人员同步参加生育保险；合理提高产前检查保障水平，推动基本实现政策范围内住院分娩个人“无自付”。",
         "badge": "热搜",
-        "signal": "7,617,153 热度"
+        "signal": "7,618,385 热度"
       },
       {
         "id": "cisa-kev-cve-2026-82329",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49571634",
+        "id": "hn-49577975",
         "category": "dev",
-        "title": "Nitter has more working instances than before the takedowns",
-        "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
+        "title": "Wikimedia Foundation Workers Overwhelmingly Vote to Form Union with CWA",
+        "url": "https://wikiworkersunited.org/announcements/2026-09-04-us-wikimedia-foundation-workers-overwhelmingly-vote-to-form-union-with-cwa/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-05T00:04:16.000Z",
+        "publishedAt": "2026-09-05T16:13:57.000Z",
         "badge": "HN",
-        "signal": "425 分 · 173 评论"
+        "signal": "122 分 · 22 评论"
       },
       {
         "id": "cn-item-68d08c8e189750f1",
@@ -403,15 +403,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239693",
+        "id": "v2ex-1239712",
         "category": "dev",
-        "title": "留学生代订 Claude 成品，没被封过",
-        "url": "https://www.v2ex.com/t/1239693",
+        "title": "本地 Coding Agent 工作台： CoDock",
+        "url": "https://www.v2ex.com/t/1239712",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T08:18:41.000Z",
-        "summary": "https://shipbox.cloud/",
+        "publishedAt": "2026-09-05T10:47:54.000Z",
+        "summary": "每天在十几个终端窗口里切来切去？我做了一个本地 Coding Agent 工作台：CoDock 做日常开发时，大家应该也慢慢习惯了让各种 AI Agent 帮着写代码： A 项目用 Claude Code 跑架构重构； B 项目用 Codex 改改小 bug ； 偶尔还想切到 DeepSeek Harness 或 Gemini CLI 跑跑对比测试…… 不知不觉，电脑任务栏里就堆了七八个黑乎乎的终端窗口。 每次切窗口都在找「刚刚那个任务跑在哪个终端里？」「跑完了没有？」「上…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-it-2e0e6cf503e0140b",
@@ -451,7 +451,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-05T10:33:01.000Z",
         "badge": "HN",
-        "signal": "53 分 · 21 评论"
+        "signal": "74 分 · 33 评论"
       },
       {
         "id": "cn-baidu-cba649505e97f603",
@@ -461,7 +461,7 @@
         "source": "百度热搜",
         "summary": "近日，山东青岛张先生在食用母亲花15元买来的蛤蜊时，牙齿被异物割了一下，吐出发现竟是3颗珍珠。张先生称常吃蛤蜊从未遇到此事。",
         "badge": "热搜",
-        "signal": "7,521,904 热度"
+        "signal": "7,522,275 热度"
       },
       {
         "id": "github-advisory-ghsa-mfrj-v65r-979c",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239688",
+        "id": "v2ex-1239693",
         "category": "dev",
-        "title": "Windows 11 彻底关闭 Hyper-V 的办法",
-        "url": "https://www.v2ex.com/t/1239688",
+        "title": "留学生代订 Claude 成品，没被封过",
+        "url": "https://www.v2ex.com/t/1239693",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T07:42:49.000Z",
-        "summary": "Windows 11 Build 26200 上，Smart App Control 处于 Evaluation （评估）模式时，即使 Hyper-V/WHP/VMP/HVCI/Credential Guard 都已关闭、BCD hypervisorlaunchtype=Off ，Microsoft Windows Virtualization Based Security Policy 仍处于 Enforced 状态，并导致 Microsoft Hypervisor 实际…",
+        "publishedAt": "2026-09-05T08:18:41.000Z",
+        "summary": "https://shipbox.cloud/",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 251892,
+        "stars": 252110,
         "starsToday": 2666
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 249377,
+        "stars": 249542,
         "starsToday": 1325
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 127470,
+        "stars": 127625,
         "starsToday": 2813
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 241842,
+        "stars": 241891,
         "starsToday": 573
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 25550,
+        "stars": 25556,
         "starsToday": 133
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 174436,
+        "stars": 174474,
         "starsToday": 472
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 31500,
+        "stars": 31558,
         "starsToday": 852
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/anomalyco/opencode",
         "description": "The open source coding agent.",
         "language": "TypeScript",
-        "stars": 204510,
+        "stars": 204563,
         "starsToday": 725
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 70601,
+        "stars": 70630,
         "starsToday": 127
       },
       {
@@ -598,10 +598,10 @@
         "name": "humanlayer/skills",
         "url": "https://github.com/humanlayer/skills",
         "language": "TypeScript",
-        "stars": 2579,
+        "stars": 2616,
         "starsToday": 408
       }
     ],
-    "updatedAt": "2026-09-05T16:05:17.510Z"
+    "updatedAt": "2026-09-05T18:19:17.220Z"
   }
 }
