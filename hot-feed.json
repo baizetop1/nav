@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-05T06:56:23.369Z",
+  "generatedAt": "2026-09-05T09:06:03.103Z",
   "intelligence": {
-    "updatedAt": "2026-09-05T06:56:23.369Z",
+    "updatedAt": "2026-09-05T09:06:03.103Z",
     "items": [
       {
-        "id": "cn-item-f1ad1f8780dfa9dc",
+        "id": "cn-item-5888bf053ed6665f",
         "category": "cn",
-        "title": "中国民政部：西藏吉隆泥石流灾害慈善捐赠超6.6亿元人民币",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-05/10690874.shtml",
+        "title": "尼泊尔泥石流灾害中一名受困中国工人获救",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-05/10690986.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-05T05:41:35.000Z",
-        "summary": "中新社北京9月5日电 (记者 李京泽)记者5日从中国民政部获悉，据不完全统计，目前，西藏吉隆泥石流灾害慈善捐赠已超过6.6亿元人民币；其中，超147万人次通过互联网公开募捐服务平台，向有关公开募捐慈善项目捐赠5016万元。",
+        "publishedAt": "2026-09-05T08:50:57.000Z",
+        "summary": "中新网加德满都9月5日电(记者 崔楠)记者向中国驻尼泊尔大使馆确认，一名中国工人5日在尼泊尔热索瓦县一工程隧洞内获救，现正搭乘直升机转往加德满都。(完)",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49570669",
+        "id": "hn-49574167",
         "category": "dev",
-        "title": "Actively exploited sandbox RCE in all Chromium versions",
-        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
+        "title": "AI handles incidents, engineers lose touch with their systems",
+        "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T21:52:01.000Z",
+        "publishedAt": "2026-09-05T07:52:50.000Z",
         "badge": "HN",
-        "signal": "423 分 · 235 评论"
+        "signal": "41 分 · 19 评论"
       },
       {
-        "id": "cn-it-5f2582af3366b4c3",
+        "id": "cn-it-5b9c96d138ebaa9d",
         "category": "cn",
-        "title": "英伟达发布 616.86 热修复驱动：修复浏览器闪屏与远程桌面黑屏问题",
-        "url": "https://www.ithome.com/0/998/745.htm",
+        "title": "上海浦东新区首创“视频电子封签”，扫码即看制作全过程",
+        "url": "https://www.ithome.com/0/998/783.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-05T06:54:47.000Z",
-        "summary": "IT之家 9 月 5 日消息，英伟达今日发布了 616.86 版本 GeForce Hotfix 热修复驱动程序。该补丁基于最新的 Game Ready 616.64 版驱动，旨在解决部分用户升级驱动后遇到的三大问题： 浏览特定网站时，浏览器可能出现间歇性画面闪烁。 升级至 616.56 版驱动后，系统无法创建虚拟显示器。 升级至 616.56 版驱动后，远程桌面协议（RDP）会话可能显示黑屏。 英伟达表示，这些修复内容将会整合进未来的官方驱动版本中。本次发布的 616.8…",
+        "publishedAt": "2026-09-05T09:03:53.000Z",
+        "summary": "IT之家 9 月 5 日消息，据中央广电总台中国之声今日报道，上海浦东新区在全国首创的外卖 “视频电子封签” 试点满两个月。这枚小小的一次性封签，能够提供商家制作餐食的完整视频。一旦出现纠纷，到底是哪一方的责任，一目了然。 报道称，外卖“视频电子封签”首个试点位于上海浦东新区陆家嘴胜康廖氏大厦的星选闪电厨房。这是一个典型的无堂食外卖集聚区，近 20 个档口，一天出餐上千单。商户接到订单后按下启动键， 后厨摄像头就开始录制：切菜、下锅、翻炒、出锅、打包 ，每个步骤都被一一记录…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239659",
+        "id": "v2ex-1239693",
         "category": "dev",
-        "title": "认真请教一个问题，关于菲区 GPT PRO",
-        "url": "https://www.v2ex.com/t/1239659",
+        "title": "留学生代订 Claude 成品，没被封过",
+        "url": "https://www.v2ex.com/t/1239693",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T04:10:14.000Z",
-        "summary": "我一直来都是开的美区 GPT ，想换成更划算的菲区或者其他地区的 GPT PRO 会员，额度是否一样呢？ 1 、如果不适用 sub2api ，正常登录使用 codex ，额度正常吗 使用体验有没有区别 2 、如果使用 sub2api ，让 Agent 调用，是否风控严格 有没有大佬知道呢～",
+        "publishedAt": "2026-09-05T08:18:41.000Z",
+        "summary": "https://shipbox.cloud/",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-e3faa1ee3cc2ccaa",
+        "id": "cn-baidu-b78c16f60123b034",
         "category": "cn",
-        "title": "小学回应家长自费买349元一套桌椅",
-        "url": "https://www.baidu.com/s?wd=%E5%B0%8F%E5%AD%A6%E5%9B%9E%E5%BA%94%E5%AE%B6%E9%95%BF%E8%87%AA%E8%B4%B9%E4%B9%B0349%E5%85%83%E4%B8%80%E5%A5%97%E6%A1%8C%E6%A4%85&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "葫芦娃真的“救”了爷爷",
+        "url": "https://www.baidu.com/s?wd=%E8%91%AB%E8%8A%A6%E5%A8%83%E7%9C%9F%E7%9A%84%E2%80%9C%E6%95%91%E2%80%9D%E4%BA%86%E7%88%B7%E7%88%B7&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，针对“家长自费349元买桌椅”质疑，东海县海陵路小学回应：提供桌椅是学校义务，更换系部分家长自发，全凭自愿，不强制，所购桌椅属个人财产。",
+        "summary": "9月3日，话题“葫芦娃爷爷失独家庭”登上热搜。绍兴75岁陈金敖和老伴因阳台上的七个大葫芦走红，25年前失去唯一女儿的夫妻俩曾长期闭门不出，如今游客隔河喊“爷爷”，葫芦娃真的“救”了爷爷。",
         "badge": "热搜",
-        "signal": "7,809,104 热度"
+        "signal": "7,808,780 热度"
       },
       {
         "id": "cisa-kev-cve-2026-59822",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49563355",
+        "id": "hn-49570669",
         "category": "dev",
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
+        "title": "Actively exploited sandbox RCE in all Chromium versions",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T11:54:53.000Z",
+        "publishedAt": "2026-09-04T21:52:01.000Z",
         "badge": "HN",
-        "signal": "1626 分 · 1278 评论"
+        "signal": "484 分 · 269 评论"
       },
       {
-        "id": "cn-item-0dff810275b9bebb",
+        "id": "cn-item-e39a39010ea75b0c",
         "category": "cn",
-        "title": "江西吉安遂川县发生山体滑坡 造成1人身亡11人失联",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-05/10690880.shtml",
+        "title": "8月中国物流业景气指数为50.9% 市场预期回升",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-05/10690932.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-05T04:59:14.000Z",
-        "summary": "中新网南昌9月5日电 (朱莹)据江西省吉安市遂川县防汛抗旱指挥部5日通报，该县高坪镇明坑村石下组发生泥石流灾害，目前，已救出3人(其中2人身体状况良好、1人死亡)，尚有11人失联。",
+        "publishedAt": "2026-09-05T08:15:47.000Z",
+        "summary": "中新社北京9月5日电 (记者 阮煜琳)中国物流与采购联合会5日发布数据显示，8月份，中国物流业景气指数为50.9%，环比回升0.5个百分点，显示中国物流业需求保持扩张，市场预期回升。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239655",
+        "id": "v2ex-1239688",
         "category": "dev",
-        "title": "我又又又重构了我的站点",
-        "url": "https://www.v2ex.com/t/1239655",
+        "title": "Windows 11 彻底关闭 Hyper-V 的办法",
+        "url": "https://www.v2ex.com/t/1239688",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T03:42:43.000Z",
-        "summary": "接上次帖子，站点重构 /t/1227951 地址： https://www.oolaf.top 1. 我又重构了我的页面 UI ，增加了黑夜白天模式，增加了 agent （虽然很弱） 2. 一点点扣细节，自我感觉相对比之前提升了很多，下面会贴图 之前的： https://s2.oolaf.top/oolaf/oolaf/2026/08/13/15/15/e8c93979e42970c8b59eadf5ccc5319e.webp 现在的: https://pub-d2a6dc…",
+        "publishedAt": "2026-09-05T07:42:49.000Z",
+        "summary": "Windows 11 Build 26200 上，Smart App Control 处于 Evaluation （评估）模式时，即使 Hyper-V/WHP/VMP/HVCI/Credential Guard 都已关闭、BCD hypervisorlaunchtype=Off ，Microsoft Windows Virtualization Based Security Policy 仍处于 Enforced 状态，并导致 Microsoft Hypervisor 实际…",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-d16a475618837388",
+        "id": "cn-it-c28189696fe72678",
         "category": "cn",
-        "title": "中国联通回应“在青岛大学校园冲突伤人”：纯属谣言，新生都没开学，已报警",
-        "url": "https://www.ithome.com/0/998/744.htm",
+        "title": "得克萨斯州大举兴建数据中心，当地毕业生失业率反而走高",
+        "url": "https://www.ithome.com/0/998/782.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-05T06:44:06.000Z",
-        "summary": "IT之家 9 月 5 日消息，青岛互联网联合辟谣平台昨日发布声明，对近日网络流传的“联通工作人员在青岛大学新生报到现场摆摊营销，与校方人员发生冲突并致人受伤”一事进行辟谣。经核实，该信息纯属谣言。 据青岛大学 2026—2027 学年校历及相关安排，2026 级新生报到时间为 9 月 12 日、13 日（IT之家注：截至 9 月 4 日，青岛大学新生尚未报到入校）。另据青岛大学安全管理处核实，学校近期未发生上述伤人事件，不存在联通工作人员入校营销并与校方发生冲突、致人受伤的…",
+        "publishedAt": "2026-09-05T08:53:34.000Z",
+        "summary": "IT之家 9 月 5 日消息，当地时间 2 日，英国《金融时报》报道称，最新研究发现，AI 快速发展期间，得克萨斯州大学毕业生的失业率升至“异常高”的水平。与此同时，该州也是全美在建数据中心最多的州。 达拉斯联邦储备银行研究人员发现，自 ChatGPT 发布以来，该州受 AI 影响程度较高行业的招聘职位大幅减少，大学毕业生受到的冲击尤其明显。仅在 2025 年第一季度，被 AI 影响较大的职位招聘职位减少了约 8%，相比之下，受影响较小的职位变化不大。 不久前，得克萨斯州方…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49568506",
+        "id": "hn-49563355",
         "category": "dev",
-        "title": "Formalizing Fermat's Last Theorem",
-        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+        "title": "Discovery of a new OpenAI agent message board",
+        "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T18:42:56.000Z",
+        "publishedAt": "2026-09-04T11:54:53.000Z",
         "badge": "HN",
-        "signal": "577 分 · 357 评论"
+        "signal": "1697 分 · 1310 评论"
       },
       {
-        "id": "cn-baidu-40c8c6a9bd84d309",
+        "id": "cn-baidu-f58dea23042a6370",
         "category": "cn",
-        "title": "汤家凤呼吁取消英语主科地位",
-        "url": "https://www.baidu.com/s?wd=%E6%B1%A4%E5%AE%B6%E5%87%A4%E5%91%BC%E5%90%81%E5%8F%96%E6%B6%88%E8%8B%B1%E8%AF%AD%E4%B8%BB%E7%A7%91%E5%9C%B0%E4%BD%8D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "男子撞上羊群 赔了钱为什么不能带走",
+        "url": "https://www.baidu.com/s?wd=%E7%94%B7%E5%AD%90%E6%92%9E%E4%B8%8A%E7%BE%8A%E7%BE%A4+%E8%B5%94%E4%BA%86%E9%92%B1%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E5%B8%A6%E8%B5%B0&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月4日，汤家凤发文呼吁取消英语主科地位：现在越来越多国家在学中文，我们要看外文有很多工具可以借助，对于绝大多数人来说，其实用英语的地方真的不多了，是时候降一降英语的主科地位了。",
+        "summary": "近期，甘肃武威与青海海南藏族自治州两起“车撞羊”事件接连发生，引发社会广泛关注。其中一起事故造成53只羊死伤，事故方赔付后死伤的羊归羊主人所有。赔付后的羊为什么不能带走？律师解读：这种想法其实是把“赔偿”和“买卖”搞混了。",
         "badge": "热搜",
-        "signal": "7,713,828 热度"
+        "signal": "7,714,356 热度"
       },
       {
         "id": "github-advisory-ghsa-h4v5-crx2-3cv4",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239640",
+        "id": "v2ex-1239687",
         "category": "dev",
-        "title": "claude 用量重置了",
-        "url": "https://www.v2ex.com/t/1239640",
+        "title": "给我整乐呵了，商汤上了 deepseek v4 flash 和 pro",
+        "url": "https://www.v2ex.com/t/1239687",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T02:09:18.000Z",
-        "summary": "不知道是不是因为 gpt6 ，在上发现 Claude 用量重置了",
+        "publishedAt": "2026-09-05T07:42:27.000Z",
+        "summary": "大概率是自己部署的，不清楚量化程度，有 1M 上下文 我测试了 deepseek v4 flash ，输出比较忙，只有 40t/s 的水平（牛来水平） 目前公测，仅用免费挡位，5 小时窗口 60000 积分，周额度 600000 积分（ 10 倍 5 小时） 但是有意思的是，在我测试 deepseekv4flash 的时候，1M 的 token ，80%的缓存，大约用了 2000 积分 也就是说它 5 小时窗口有 30M 的 deepseek v4 flash ，一周有 3…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-item-73560381df8d5b22",
+        "id": "cn-item-74495e61c685f44b",
         "category": "cn",
-        "title": "江西省遂川县高坪镇发生泥石流灾害 已造成1死11失联",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-05/10690860.shtml",
+        "title": "尼泊尔泥石流灾害中1名受困中国公民获救",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-05/10690952.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-05T04:13:55.000Z",
-        "summary": "受台风“沙德尔”带来的连日强降雨影响，9月5日凌晨4时许，遂川县高坪镇明坑村石下组发生泥石流灾害，造成12栋房屋受损，其中8栋房屋完全损毁、4栋房屋一般受损。目前，已救出3人(其中2人身体状况良好、1人死亡)，尚有11人失联。",
+        "publishedAt": "2026-09-05T08:14:21.000Z",
+        "summary": "△获救中国公民(图中) 当地时间9月5日，1名受困中国公民在尼泊尔北部热索瓦泥石流受灾地区获救。(总台记者 张玥)",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49573455",
+        "id": "hn-49568506",
         "category": "dev",
-        "title": "Why are European countries moving their gold out of North America?",
-        "url": "https://www.bbc.com/news/articles/cvgyn8q8gqxo",
+        "title": "Formalizing Fermat's Last Theorem",
+        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
         "source": "Hacker News",
-        "publishedAt": "2026-09-05T05:52:09.000Z",
+        "publishedAt": "2026-09-04T18:42:56.000Z",
         "badge": "HN",
-        "signal": "81 分 · 74 评论"
+        "signal": "608 分 · 383 评论"
       },
       {
-        "id": "cn-it-166ccebe0be26d9c",
+        "id": "cn-it-5c33b49a5a173f56",
         "category": "cn",
-        "title": "启境 GX7 预售 18 小时小订突破 2 万台，24.99-31.19 万元",
-        "url": "https://www.ithome.com/0/998/743.htm",
+        "title": "狼蛛 G9 头戴式耳机开售：53mm 动圈、换电设计，269 元",
+        "url": "https://www.ithome.com/0/998/781.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-05T06:39:44.000Z",
-        "summary": "IT之家 9 月 5 日消息，由广汽与华为联合打造的启境品牌官方今日宣布， 启境 GX7 预售 18 小时，小订突破 20,000 台 。 据IT之家此前报道， 启境 GX7 昨晚正式预售 ，新车定位中大型阔五座 SUV， 预售价 24.99-31.19 万元 。 增程 Ultra 版：预售价 24.99 万元 增程 Ultra 双电机版：预售价 26.99 万元 增程 Ultra 三电机版：预售价 31.19 万元 启境 GX7 车身尺寸为长 5099 mm、宽 2006…",
+        "publishedAt": "2026-09-05T08:51:37.000Z",
+        "summary": "IT之家 9 月 5 日消息，狼蛛 G9 头戴式耳机现已开售， 到手价 269 元 。这款耳机采用换弹式换电设计，支持单手盲操，实现“一秒满电”。 这款耳机采用职业级 C-Media 声卡芯片 + Xear 特调 FPS 智能算法，可动态增益枪声方位辨识度，精准分离脚步声、技能音； 配备 53mm 镀钛振膜动圈单元 ，支持 Xear 特调 7.1 虚拟环绕音；配备可插拔设计的 360° 全指向 AI 降噪麦克风。 这款耳机支持蓝牙 6.0、 2.4G USB-A、 2.4G…",
         "badge": "IT之家"
       },
       {
@@ -321,25 +321,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239632",
+        "id": "v2ex-1239659",
         "category": "dev",
-        "title": "推荐一个节省 codex 用量的插件,可以调用 ChatGPT chat 思考",
-        "url": "https://www.v2ex.com/t/1239632",
+        "title": "认真请教一个问题，关于菲区 GPT PRO",
+        "url": "https://www.v2ex.com/t/1239659",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-05T01:22:28.000Z",
-        "summary": "codex 最近又恢复了 5 小时限制,这是真难受. 而且大家应该也发现了,网页版的 chatgpt 也是非常猛的. 所以找到了这个插件 https://github.com/Zhenyu98/codex-chatgpt-bridge/blob/main/README_zh.md 可以调用 ChatGPT chat 思考,节省 codex 用量. 感觉还不错",
+        "publishedAt": "2026-09-05T04:10:14.000Z",
+        "summary": "我一直来都是开的美区 GPT ，想换成更划算的菲区或者其他地区的 GPT PRO 会员，额度是否一样呢？ 1 、如果不适用 sub2api ，正常登录使用 codex ，额度正常吗 使用体验有没有区别 2 、如果使用 sub2api ，让 Agent 调用，是否风控严格 有没有大佬知道呢～",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-baidu-95636f6942222974",
+        "id": "cn-baidu-056ed6d0dacd6e5c",
         "category": "cn",
-        "title": "未来五年医保改革划了哪些重点",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%B9%B4%E5%8C%BB%E4%BF%9D%E6%94%B9%E9%9D%A9%E5%88%92%E4%BA%86%E5%93%AA%E4%BA%9B%E9%87%8D%E7%82%B9&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国电动卡车走向世界",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E7%94%B5%E5%8A%A8%E5%8D%A1%E8%BD%A6%E8%B5%B0%E5%90%91%E4%B8%96%E7%95%8C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月4日，国新办举行了一场与我们每个人息息相关的新闻发布会，主题为“推进医保高质量发展”。全面建立长护险制度、持续完善生育保险制度，国家医保局在新闻发布会上公布了未来五年和老百姓密切相关的医保政策改革的一些方向和目标，那么我们的医保会发生什么样的变化？改革的重点是什么？一起来看中国社会科学院经济研究所研究员王震的分析。",
+        "summary": "此前海关数据显示，今年1至7月我国出口电动牵引车超2500台，同比增长超870%。在全球绿色低碳转型背景下，中国企业通过技术创新与产品定制，将业务从单纯卖车延伸至提供全套电网解决方案，加速驶向全球市场。",
         "badge": "热搜",
-        "signal": "7,615,861 热度"
+        "signal": "7,616,665 热度"
       },
       {
         "id": "cisa-kev-cve-2026-82329",
@@ -362,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49569896",
+        "id": "hn-49571634",
         "category": "dev",
-        "title": "Statichost.eu – European static site hosting",
-        "url": "https://www.statichost.eu/",
+        "title": "Nitter has more working instances than before the takedowns",
+        "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T20:34:49.000Z",
+        "publishedAt": "2026-09-05T00:04:16.000Z",
         "badge": "HN",
-        "signal": "234 分 · 73 评论"
+        "signal": "200 分 · 69 评论"
       },
       {
-        "id": "cn-item-fff2b7cbf753456e",
+        "id": "cn-item-dd775a659162ac41",
         "category": "cn",
-        "title": "9至10月接种流感疫苗到冬季流感高峰期还有用吗？专家解读",
-        "url": "https://www.chinanews.com.cn/jk/2026/09-05/10690840.shtml",
+        "title": "中吉乌铁路吉尔吉斯斯坦境内段首座隧道贯通",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-05/10690931.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-05T03:22:20.000Z",
-        "summary": "从这个月起，我国各地将陆续启动本流行季流感疫苗接种。中国疾病预防控制中心也发布了《中国流感疫苗预防接种技术指南(2026-2027)》。指南指出，2026—2027年度，我国上市的三价流感疫苗包括三价灭活疫苗和三价减毒活疫苗；综合我国南、北方的流感流行特点，通常在11月份左右进入冬春季流感流行季，建议在9到10月完成接种。",
+        "publishedAt": "2026-09-05T08:12:38.000Z",
+        "summary": "中新社北京9月5日电 据中吉乌铁路有限公司5日消息，中吉乌铁路吉尔吉斯斯坦境内段科什特伯北2号隧道日前顺利贯通，纳伦1号隧道等控制性工程取得阶段性成果，标志着中吉乌铁路项目建设取得重要进展。",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239611",
+        "id": "v2ex-1239655",
         "category": "dev",
-        "title": "公司要报销 pro 20X 了，发票的问题如何解决呢",
-        "url": "https://www.v2ex.com/t/1239611",
+        "title": "我又又又重构了我的站点",
+        "url": "https://www.v2ex.com/t/1239655",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T22:27:56.000Z",
-        "summary": "你们是直充还是其它渠道呢。",
+        "publishedAt": "2026-09-05T03:42:43.000Z",
+        "summary": "接上次帖子，站点重构 /t/1227951 地址： https://www.oolaf.top 1. 我又重构了我的页面 UI ，增加了黑夜白天模式，增加了 agent （虽然很弱） 2. 一点点扣细节，自我感觉相对比之前提升了很多，下面会贴图 之前的： https://s2.oolaf.top/oolaf/oolaf/2026/08/13/15/15/e8c93979e42970c8b59eadf5ccc5319e.webp 现在的: https://pub-d2a6dc…",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "19 回复"
       },
       {
-        "id": "cn-it-a4192b7e486bcb5c",
+        "id": "cn-it-d4ac28e4cfca76a3",
         "category": "cn",
-        "title": "摩托罗拉宽折叠手机设计草图曝光：横条后摄方案，无折痕屏幕",
-        "url": "https://www.ithome.com/0/998/742.htm",
+        "title": "中国工程院院士、现代海洋药物学科开拓者与奠基人管华诗逝世，享年 87 岁",
+        "url": "https://www.ithome.com/0/998/779.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-05T06:38:12.000Z",
-        "summary": "IT之家 9 月 5 日消息，科技媒体 Android Headline 昨日（9 月 4 日）发布博文，分享了 3 张设计草图， 展示了摩托罗拉宽折叠手机，并透露该公司内部正在推进该手机项目。 在本次曝光的设计草图中，展示了摩托罗拉的大折叠（书本式折叠）、小折叠（翻盖式折叠屏）以及宽折叠三种折叠方案。IT之家附上相关图片如下： 外观方面，从曝光的设计草图来看，这款宽折叠手机背面相机采用横条方案，声称这种布局在手机平放桌面时，可以减少因相机模组凸起造成的晃动。 横条相机区域…",
+        "publishedAt": "2026-09-05T08:40:43.000Z",
+        "summary": "IT之家 9 月 5 日消息，中国海洋大学今日发布讣告，中国工程院院士，著名教育家、中国现代海洋药物学科的开拓者与奠基人，山东省政协原副主席，中国海洋大学原校长管华诗同志，因病医治无效，于 2026 年 9 月 4 日 11 时 18 分在青岛逝世，享年 87 岁。 管华诗同志于 1939 年 8 月出生于山东夏津，1959 年 9 月考入山东海洋学院，1964 年 8 月毕业留校任教。历任水产系教员、副主任，水产学院副院长，副校长。 1993 年 7 月至 2005 年 …",
         "badge": "IT之家"
       },
       {
@@ -444,24 +444,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49571634",
+        "id": "hn-49513822",
         "category": "dev",
-        "title": "Nitter has more working instances than before the takedowns",
-        "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
+        "title": "Things I Won't Work With: Straight Dimethyl Zinc",
+        "url": "https://www.science.org/content/blog-post/things-i-won-t-work-straight-dimethyl-zinc",
         "source": "Hacker News",
-        "publishedAt": "2026-09-05T00:04:16.000Z",
+        "publishedAt": "2026-08-31T19:23:31.000Z",
         "badge": "HN",
-        "signal": "124 分 · 39 评论"
+        "signal": "13 分 · 0 评论"
       },
       {
-        "id": "cn-baidu-b212c47f2db3327a",
+        "id": "cn-baidu-e11468c2291710c3",
         "category": "cn",
-        "title": "江西遂川泥石流致1人死亡11人失联",
-        "url": "https://www.baidu.com/s?wd=%E6%B1%9F%E8%A5%BF%E9%81%82%E5%B7%9D%E6%B3%A5%E7%9F%B3%E6%B5%81%E8%87%B41%E4%BA%BA%E6%AD%BB%E4%BA%A111%E4%BA%BA%E5%A4%B1%E8%81%94&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "尼泊尔泥石流灾害1名中国公民获救",
+        "url": "https://www.baidu.com/s?wd=%E5%B0%BC%E6%B3%8A%E5%B0%94%E6%B3%A5%E7%9F%B3%E6%B5%81%E7%81%BE%E5%AE%B31%E5%90%8D%E4%B8%AD%E5%9B%BD%E5%85%AC%E6%B0%91%E8%8E%B7%E6%95%91&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月5日凌晨4时许，受台风“沙德尔”影响，江西遂川县高坪镇明坑村发生泥石流，造成12栋房屋受损（8栋完全损毁）。目前，已救出3人，其中1人死亡，尚有11人失联。多部门正全力搜救失联人员并安置受灾群众。",
+        "summary": "当地时间9月5日，1名受困中国公民在尼泊尔北部热索瓦泥石流受灾地区获救。随后，尼泊尔总理办公室发帖确认该中国公民获救消息。",
         "badge": "热搜",
-        "signal": "7,522,702 热度"
+        "signal": "7,519,815 热度"
       },
       {
         "id": "github-advisory-ghsa-mfrj-v65r-979c",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239609",
+        "id": "v2ex-1239640",
         "category": "dev",
-        "title": "PowerShell 转义太折腾，让我们改用脚本文件",
-        "url": "https://www.v2ex.com/t/1239609",
+        "title": "claude 用量重置了",
+        "url": "https://www.v2ex.com/t/1239640",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-04T21:57:58.000Z",
-        "summary": "😅，看哭十亿 vibe coding 大师",
+        "publishedAt": "2026-09-05T02:09:18.000Z",
+        "summary": "不知道是不是因为 gpt6 ，在上发现 Claude 用量重置了",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 250871,
+        "stars": 251143,
         "starsToday": 2758
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 126638,
+        "stars": 126882,
         "starsToday": 1679
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/fmtlib/fmt",
         "description": "A modern formatting library",
         "language": "C++",
-        "stars": 25501,
+        "stars": 25516,
         "starsToday": 688
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 248768,
+        "stars": 248874,
         "starsToday": 1135
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 174247,
+        "stars": 174297,
         "starsToday": 511
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/blader/humanizer",
         "description": "Agent skill that removes signs of AI-generated writing from text",
         "language": "Python",
-        "stars": 42924,
+        "stars": 43005,
         "starsToday": 1130
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 241633,
+        "stars": 241684,
         "starsToday": 720
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "language": "Go",
-        "stars": 103667,
+        "stars": 103700,
         "starsToday": 501
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/magnitudedev/magnitude",
         "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
         "language": "TypeScript",
-        "stars": 2667,
+        "stars": 2733,
         "starsToday": 391
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/bikini/exploitarium",
         "description": "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
         "language": "Python",
-        "stars": 4564,
+        "stars": 4583,
         "starsToday": 74
       }
     ],
-    "updatedAt": "2026-09-05T06:56:23.369Z"
+    "updatedAt": "2026-09-05T09:06:03.103Z"
   }
 }
