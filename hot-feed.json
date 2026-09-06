@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-06T19:12:10.530Z",
+  "generatedAt": "2026-09-06T21:21:48.702Z",
   "intelligence": {
-    "updatedAt": "2026-09-06T19:12:10.530Z",
+    "updatedAt": "2026-09-06T21:21:48.702Z",
     "items": [
       {
         "id": "cn-item-37f9a05fb4e368e7",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49586171",
+        "id": "hn-49590738",
         "category": "dev",
-        "title": "QBittorrent breaks out of sandbox to commit crimes",
-        "url": "https://beige.party/@intransitivelie/117057396732763183",
+        "title": "Show HN: Mador – Make any DOM reactive with a tiny 80-line Proxy state tuple",
+        "url": "https://github.com/marsbos/mador",
         "source": "Hacker News",
-        "publishedAt": "2026-09-06T13:02:41.000Z",
+        "publishedAt": "2026-09-06T20:45:13.000Z",
         "badge": "HN",
-        "signal": "1069 分 · 214 评论"
+        "signal": "21 分 · 6 评论"
       },
       {
         "id": "cn-it-5cb7f8fa1041bde8",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239871",
+        "id": "v2ex-1239885",
         "category": "dev",
-        "title": "失业进入第 3 个月了， 6 月底走的同学上岸了吗",
-        "url": "https://www.v2ex.com/t/1239871",
+        "title": "$1000 的 Google Cloud Credit，还有一个月过期，做点什么好呢？",
+        "url": "https://www.v2ex.com/t/1239885",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-06T15:03:16.000Z",
-        "summary": "进入 9 月貌似招聘的岗也不多，而且现在招聘要么 AI 全栈、要么 AI Agent ，还要有经验。看来得润色润色简历了",
+        "publishedAt": "2026-09-06T19:07:17.000Z",
+        "summary": "不知道什么时候送的 Trial credit for GenAI App Builder ，$1000 大家有什么想试的点子，我可以试着 vibe coding 一个给大家玩玩 或者现成的 github 也可以，争取一个月把 credit 用完",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-0f35411cff2c8af6",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "9月6日，福建南平一业主反映，小区业委会表决通过禁止新能源车驶入地下车库的决定，要求已停车辆10日内移出。物业称怕爆炸而出台该规定。律师指出，此“一刀切”规定侵犯业主停车使用权，业主可起诉确认决定无效。",
         "badge": "热搜",
-        "signal": "7,808,947 热度"
+        "signal": "7,809,269 热度"
       },
       {
         "id": "cisa-kev-cve-2026-59822",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49588988",
+        "id": "hn-49590611",
         "category": "dev",
-        "title": "Nitter is unarchived and will continue",
-        "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
+        "title": "It took a year to ship WebAssembly in Anubis",
+        "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-06T17:49:47.000Z",
+        "publishedAt": "2026-09-06T20:32:38.000Z",
         "badge": "HN",
-        "signal": "60 分 · 4 评论"
+        "signal": "28 分 · 11 评论"
       },
       {
         "id": "cn-item-a730108101a11a76",
@@ -158,15 +158,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239869",
+        "id": "v2ex-1239871",
         "category": "dev",
-        "title": "大佬们，有没有什么工具能操作游戏",
-        "url": "https://www.v2ex.com/t/1239869",
+        "title": "失业进入第 3 个月了， 6 月底走的同学上岸了吗",
+        "url": "https://www.v2ex.com/t/1239871",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-06T14:55:53.000Z",
-        "summary": "RT 小弟是安卓游戏优化开发，有部分工作是需要自己操作游戏跑图采集数据看表现，挺麻烦的 想问下大佬们有没有什么工具或者 AI 类的能实现这部分需求 游戏跑图大概就是原神星铁洛克王国那种跑图",
+        "publishedAt": "2026-09-06T15:03:16.000Z",
+        "summary": "进入 9 月貌似招聘的岗也不多，而且现在招聘要么 AI 全栈、要么 AI Agent ，还要有经验。看来得润色润色简历了",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-it-e33b2339b07e1ebc",
@@ -199,15 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239857",
+        "id": "hn-49590512",
         "category": "dev",
-        "title": "Codex 出 BUG 了，沙盒无法访问，会发重置卡吗",
-        "url": "https://www.v2ex.com/t/1239857",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-06T13:25:51.000Z",
-        "summary": "今天（ 2026 年 9 月 6 日），Codex Windows 端更新到最新版本后，所有对话都报类似 「访问被拒绝」和 「 spawn EPERM 」且无法向用户申请权限授权。沙盒无法正常访问了，任何设置都无效。Mac 端情况未知。 该 BUG 导致 Codex 无法对项目进行编译、部署、验收和调试。 GPT6 Astra 才发布一天，Codex 就掉链子。 Tibo 会发重置卡，安慰我们受伤的心灵吗？ 附 GitHub issues 现场链接： https://git…",
-        "badge": "程序员",
-        "signal": "1 回复"
+        "title": "GrapheneOS Overhauled Default Apps and Secure Clipboard",
+        "url": "https://grapheneos.social/@GrapheneOS/117225539756835649",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-06T20:24:00.000Z",
+        "badge": "HN",
+        "signal": "26 分 · 7 评论"
       },
       {
         "id": "cn-baidu-a6522051c6de2ed8",
@@ -217,7 +216,7 @@
         "source": "百度热搜",
         "summary": "近年来，安徽历史性迈入全国工业大省行列，培育出新“五子登科”产业地标：汽车产业四项指标均居全国第一；量子产业稳居全球第二；集成电路动态存储器产能全国第一；工业机器人出口量全国第二；人工智能产业发展评价挺进全国第五。",
         "badge": "热搜",
-        "signal": "7,714,058 热度"
+        "signal": "7,712,462 热度"
       },
       {
         "id": "github-advisory-ghsa-h4v5-crx2-3cv4",
@@ -240,14 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49587636",
+        "id": "v2ex-1239869",
         "category": "dev",
-        "title": "NetBSD 9.5 released and EOL for NetBSD-9",
-        "url": "https://blog.netbsd.org/tnf/entry/netbsd_9_5_released_and",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-06T15:44:24.000Z",
-        "badge": "HN",
-        "signal": "73 分 · 2 评论"
+        "title": "大佬们，有没有什么工具能操作游戏",
+        "url": "https://www.v2ex.com/t/1239869",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-06T14:55:53.000Z",
+        "summary": "RT 小弟是安卓游戏优化开发，有部分工作是需要自己操作游戏跑图采集数据看表现，挺麻烦的 想问下大佬们有没有什么工具或者 AI 类的能实现这部分需求 游戏跑图大概就是原神星铁洛克王国那种跑图",
+        "badge": "程序员",
+        "signal": "1 回复"
       },
       {
         "id": "cn-item-7d8bef18238a1c8d",
@@ -281,15 +281,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1239837",
+        "id": "hn-49585644",
         "category": "dev",
-        "title": "失业后做的第一个出海网站，大家帮我看看行吗？",
-        "url": "https://www.v2ex.com/t/1239837",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-06T10:36:06.000Z",
-        "summary": "excle 表格脏数据清洗： www.sheetwash.com",
-        "badge": "程序员",
-        "signal": "13 回复"
+        "title": "Your intellectual fly is open (2025)",
+        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-06T11:56:43.000Z",
+        "badge": "HN",
+        "signal": "421 分 · 279 评论"
       },
       {
         "id": "cn-it-b39b4807c329b0cc",
@@ -322,14 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49585644",
+        "id": "v2ex-1239857",
         "category": "dev",
-        "title": "Your intellectual fly is open (2025)",
-        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-06T11:56:43.000Z",
-        "badge": "HN",
-        "signal": "343 分 · 238 评论"
+        "title": "Codex 出 BUG 了，沙盒无法访问，会发重置卡吗",
+        "url": "https://www.v2ex.com/t/1239857",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-06T13:25:51.000Z",
+        "summary": "今天（ 2026 年 9 月 6 日），Codex Windows 端更新到最新版本后，所有对话都报类似 「访问被拒绝」和 「 spawn EPERM 」且无法向用户申请权限授权。沙盒无法正常访问了，任何设置都无效。Mac 端情况未知。 该 BUG 导致 Codex 无法对项目进行编译、部署、验收和调试。 GPT6 Astra 才发布一天，Codex 就掉链子。 Tibo 会发重置卡，安慰我们受伤的心灵吗？ 附 GitHub issues 现场链接： https://git…",
+        "badge": "程序员",
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-450ca62aed2c157c",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "9月6日晚，2026“把青春华章写在祖国大地上”大思政课网络主题宣传和互动引导活动在中国科学技术大学举行。青春就是这young，让我们一起期待！",
         "badge": "热搜",
-        "signal": "7,617,259 热度"
+        "signal": "7,617,542 热度"
       },
       {
         "id": "cisa-kev-cve-2026-82329",
@@ -362,15 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239828",
+        "id": "hn-49540637",
         "category": "dev",
-        "title": "折腾了大半年的 Go 版编码 Agent 桌面端，来分享下 (Ally)",
-        "url": "https://www.v2ex.com/t/1239828",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-06T09:26:52.000Z",
-        "summary": "之前一直是 kimicode/opencode 重度用户(比较反感 claude 所以 cc 用的不是特别多)，后来 DeepSeek 火了想换个便宜的模型接着用，结果发现各种 harness 要么是命令行套壳不好用，要么协议支持不全（很多只认 OpenAI chat ，Anthropic Messages 和 Responses 格式的中转直接歇菜），要么在那折腾 powershell 给自己找麻烦。 后来自己写了一个，写着写着就成了个完整桌面应用，如今已经迭代了几十个版…",
-        "badge": "程序员",
-        "signal": "3 回复"
+        "title": "Black Hole of Los Alamos Seller of surplus nuclear research materials",
+        "url": "https://www.atlasobscura.com/places/black-hole-of-los-alamos",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-02T18:47:55.000Z",
+        "badge": "HN",
+        "signal": "11 分 · 0 评论"
       },
       {
         "id": "cn-item-aa290c8bb5b17652",
@@ -404,14 +403,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49584083",
+        "id": "v2ex-1239837",
         "category": "dev",
-        "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
-        "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-06T07:21:06.000Z",
-        "badge": "HN",
-        "signal": "467 分 · 143 评论"
+        "title": "失业后做的第一个出海网站，大家帮我看看行吗？",
+        "url": "https://www.v2ex.com/t/1239837",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-06T10:36:06.000Z",
+        "summary": "excle 表格脏数据清洗： www.sheetwash.com",
+        "badge": "程序员",
+        "signal": "13 回复"
       },
       {
         "id": "cn-it-c2aac5570a12bb2b",
@@ -444,15 +444,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1239827",
+        "id": "hn-49584083",
         "category": "dev",
-        "title": "Palantir 资深 FDE 深度采访 OpenAI FDE 负责人：真正的 FDE 如何推进企业落地 AI",
-        "url": "https://www.v2ex.com/t/1239827",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-06T09:10:45.000Z",
-        "summary": "绝对干货，我把 Palantir 干了十年的 FDE 与 OpenAI FDE 负责人 Colin Jarvis 深度采访做了中英文视频翻译，聊聊真正的 FDE 实际企业 AI 落地的工作，分享了三个企业成功案例：摩根斯坦利、半导体。国内大部分自称 “FDE” 出来糊弄的 AI 真正进入企业，难的往往不是把 Demo 做出来 真正困难的是：进入客户真实业务，解决真实问题，让员工敢用、愿意用，最后还能变成可复制的产品 这也是 FDE （ Forward Deployed En…",
-        "badge": "程序员",
-        "signal": "3 回复"
+        "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
+        "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-06T07:21:06.000Z",
+        "badge": "HN",
+        "signal": "505 分 · 160 评论"
       },
       {
         "id": "cn-baidu-d84e3df8a941079b",
@@ -462,7 +461,7 @@
         "source": "百度热搜",
         "summary": "近日，一位小男孩刷身份证进滕王阁，工作人员听到终身免费票后竖起大拇指。网友：要背三篇关于滕王阁的文章，太厉害了。",
         "badge": "热搜",
-        "signal": "7,521,569 热度"
+        "signal": "7,522,007 热度"
       },
       {
         "id": "github-advisory-ghsa-mfrj-v65r-979c",
@@ -483,6 +482,17 @@
         "source": "Hugging Face",
         "publishedAt": "2026-09-03T00:00:00.000Z",
         "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1239828",
+        "category": "dev",
+        "title": "折腾了大半年的 Go 版编码 Agent 桌面端，来分享下 (Ally)",
+        "url": "https://www.v2ex.com/t/1239828",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-06T09:26:52.000Z",
+        "summary": "之前一直是 kimicode/opencode 重度用户(比较反感 claude 所以 cc 用的不是特别多)，后来 DeepSeek 火了想换个便宜的模型接着用，结果发现各种 harness 要么是命令行套壳不好用，要么协议支持不全（很多只认 OpenAI chat ，Anthropic Messages 和 Responses 格式的中转直接歇菜），要么在那折腾 powershell 给自己找麻烦。 后来自己写了一个，写着写着就成了个完整桌面应用，如今已经迭代了几十个版…",
+        "badge": "程序员",
+        "signal": "3 回复"
       }
     ]
   },
@@ -499,7 +509,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 250991,
+        "stars": 251130,
         "starsToday": 1486
       },
       {
@@ -509,7 +519,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 254247,
+        "stars": 254367,
         "starsToday": 2206
       },
       {
@@ -519,7 +529,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 32198,
+        "stars": 32258,
         "starsToday": 621
       },
       {
@@ -529,7 +539,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 242435,
+        "stars": 242494,
         "starsToday": 520
       },
       {
@@ -539,7 +549,7 @@
         "url": "https://github.com/openai/skills",
         "description": "Skills Catalog for Codex",
         "language": "Python",
-        "stars": 25551,
+        "stars": 25587,
         "starsToday": 44
       },
       {
@@ -549,7 +559,7 @@
         "url": "https://github.com/anomalyco/opencode",
         "description": "The open source coding agent.",
         "language": "TypeScript",
-        "stars": 205123,
+        "stars": 205184,
         "starsToday": 552
       },
       {
@@ -559,7 +569,7 @@
         "url": "https://github.com/blader/humanizer",
         "description": "Agent skill that removes signs of AI-generated writing from text",
         "language": "Python",
-        "stars": 44082,
+        "stars": 44149,
         "starsToday": 748
       },
       {
@@ -569,7 +579,7 @@
         "url": "https://github.com/llvm/llvm-project",
         "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
         "language": "LLVM",
-        "stars": 40176,
+        "stars": 40195,
         "starsToday": 35
       },
       {
@@ -579,7 +589,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 129074,
+        "stars": 129197,
         "starsToday": 1539
       },
       {
@@ -589,10 +599,10 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 70919,
+        "stars": 70952,
         "starsToday": 276
       }
     ],
-    "updatedAt": "2026-09-06T19:12:10.530Z"
+    "updatedAt": "2026-09-06T21:21:48.702Z"
   }
 }
