@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-07T04:43:41.183Z",
+  "generatedAt": "2026-09-07T07:19:48.526Z",
   "intelligence": {
-    "updatedAt": "2026-09-07T04:43:41.183Z",
+    "updatedAt": "2026-09-07T07:19:48.526Z",
     "items": [
       {
-        "id": "cn-item-beb8372fff331296",
+        "id": "cn-item-3abd2c6926735e0e",
         "category": "cn",
-        "title": "星宇股份发布通报，总经理等4名管理人员被处理",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-07/10691827.shtml",
+        "title": "最高法发文明确“AI换脸拟声”等案件裁判规则",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-07/10691907.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-07T04:31:56.000Z",
-        "summary": "7日，常州星宇车灯股份有限公司发布《关于我司近期调岗减员错误行为的相关情况及整改措施》，介绍了事情经过、公司的认识和态度、后续改进措施，包括总经理在内的4名管理人员被处理。",
+        "publishedAt": "2026-09-07T07:04:32.000Z",
+        "summary": "原标题：新华社权威快报｜最高法发文明确“AI换脸拟声”等案件裁判规则",
         "badge": "中新网要闻"
       },
       {
@@ -38,21 +38,21 @@
       {
         "id": "hn-49593563",
         "category": "dev",
-        "title": "Keep Our Servers Running: Your Recurring Donation Goes 3X This September",
+        "title": "Keep Our Servers Running",
         "url": "https://blog.archive.org/2026/09/01/keep-our-servers-running-your-recurring-donation-goes-3x-this-september/",
         "source": "Hacker News",
         "publishedAt": "2026-09-07T03:29:51.000Z",
         "badge": "HN",
-        "signal": "89 分 · 21 评论"
+        "signal": "283 分 · 64 评论"
       },
       {
-        "id": "cn-it-21925d19d4156c7f",
+        "id": "cn-it-033e57b609308ee4",
         "category": "cn",
-        "title": "小米澎程 N90 Max 升顶帐篷款官宣亮相，有望今晚发布会上登场",
-        "url": "https://www.ithome.com/0/999/213.htm",
+        "title": "NASA 深空通信网络扩容，新增直径 34 米天线以缓解通信压力",
+        "url": "https://www.ithome.com/0/999/297.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-07T04:32:30.000Z",
-        "summary": "IT之家 9 月 7 日消息，小米汽车官方刚刚发文预热今晚的发布会， 宣布澎程新车 19 点见 。 IT之家注意到，在官方预热海报的右下角出现了澎程 N90 Max 升顶帐篷款的剪影。 这也是小米官方首次公开升顶版的存在 ，此前在技术发布会上也未曾提及。 值得一提的是，小米创办人、董事长兼 CEO 雷军的微博也更换了新头像，展示了澎程升顶帐篷的实际体验效果。画面显示，雷军使用顶帐时，车外正下着小雨，暗示该配置具备防雨属性。 根据规划， 小米秋季旗舰新品发布会已官宣定档 9 …",
+        "publishedAt": "2026-09-07T07:17:45.000Z",
+        "summary": "IT之家 9 月 7 日消息，美国国家航空航天局（NASA）用于与遥远航天器保持联系的通信网络刚刚获得扩容。 深空网络（DSN）因负责与旅行者 1 号、旅行者 2 号和新视野号等遥远航天器通信而闻名。如今，该网络在美国加利福尼亚州新增了一面直径 114 英尺（约 34 米）的射频天线，以提升这个日益拥挤的通信网络的服务能力。 目前，有超过 40 艘正在探索太阳系和星际空间的航天器依赖深空网络进行通信，而随着深空探索任务不断增加，DSN 一直难以跟上需求增长的速度。2022 …",
         "badge": "IT之家"
       },
       {
@@ -76,13 +76,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240025",
+        "id": "v2ex-1240068",
         "category": "dev",
-        "title": "重构了简约博客设计语言，二次元浓度爆表",
-        "url": "https://www.v2ex.com/t/1240025",
+        "title": "青柠图片时隔一年更新啦，改为 flutter 重写，图片切换更丝滑",
+        "url": "https://www.v2ex.com/t/1240068",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-07T04:19:21.000Z",
-        "summary": "很早之前写过一个开源博客项目，不过采用的是极简风格。 功能写完整了就没管了，最近破天荒的想到去重构它的设计风格，全面参考碧蓝档案的元素，深得吾心。 还请各位客观评价一下： 开源地址 GitHub 演示地址 执笔为剑",
+        "publishedAt": "2026-09-07T07:06:43.000Z",
+        "summary": "青柠图片时隔一年更新啦，改为 flutter 重写，图片切换更丝滑，功能更加完善 项目地址 https://github.com/rango886/lime-image 下载地址 https://github.com/rango886/lime-image/releases 请使用 v1.0.6 之后的版本，flutter 渲染后端改为了 skia, 冷启动变得超快 这次打包了 windows,mac,linux 的包，主要测试了 windows 的包没问题 我没 mac,…",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "8月28日，多部门出台重磅楼市“组合拳”，推进现房销售，优化房贷规则，放宽商业用房贷款。新政落地10天，深圳、北京、上海、武汉多地市场已出现变化。",
         "badge": "热搜",
-        "signal": "7,809,688 热度"
+        "signal": "7,808,952 热度"
       },
       {
         "id": "cisa-kev-cve-2026-59822",
@@ -124,16 +124,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-06T23:14:08.000Z",
         "badge": "HN",
-        "signal": "146 分 · 56 评论"
+        "signal": "194 分 · 70 评论"
       },
       {
-        "id": "cn-item-47d7924297cd7b25",
+        "id": "cn-item-7cf1a49d23c6894d",
         "category": "cn",
-        "title": "韩国民调：李在明施政好评率37.4% 创任内新低",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-07/10691825.shtml",
+        "title": "星宇股份就“批量解约应届生”事件发布整改通告 总经理周晓萍被扣薪1年",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-07/10691847.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-07T04:26:06.000Z",
-        "summary": "中新网9月7日电 据韩联社报道，韩国民调机构Realmeter7日发布的民调结果显示，总统李在明的施政好评率降至37.4%，创就职以来的新低。",
+        "publishedAt": "2026-09-07T05:32:26.000Z",
+        "summary": "中新网常州9月7日电 (记者 唐娟)常州星宇车灯股份有限公司(星宇股份，601799)今日通过官网发布《关于我司近期调岗减员错误行为的相关情况及整改措施》，就“批量解约107名应届大学毕业生”事件公布详细经过及问责处理结果。公司在通告中承认“管理层研判失误，决策草率”，“诚恳道歉”并“照单全收，承担全责”。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240022",
+        "id": "v2ex-1240062",
         "category": "dev",
-        "title": "研发也不自己看日志了",
-        "url": "https://www.v2ex.com/t/1240022",
+        "title": "整理了一个 GPT-6 Astra 游戏与交互作品合集，欢迎分享自己的作品",
+        "url": "https://www.v2ex.com/t/1240062",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-07T03:58:04.000Z",
-        "summary": "一有什么问题，自己也不在看现场日志，一股脑让测试/运维把日志发他，他直接丢给 AI 。",
+        "publishedAt": "2026-09-07T06:52:00.000Z",
+        "summary": "项目地址： https://github.com/MartinDelophy/awesome-gpt-6-astra 最近在收集大家用 GPT-6 Astra 做出来的游戏，建了一个 awesome 仓库，想把试玩入口、作者和开发资料整理到一起。 目前收录了 4 个作品： 瓜体实验室：带水果形变和碰撞效果的西瓜合成游戏。 Mosswing：面向移动浏览器的 3D 单键飞行游戏。 Magic Carpet Wizard：在球形世界里驾驶魔毯，穿环、施法和战斗。 轨道花园：交互…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-8997f14a1837b891",
+        "id": "cn-it-41a6a11305b319a3",
         "category": "cn",
-        "title": "任天堂回应 Switch 2 游戏机大规模 Ban 机事件：系统临时故障",
-        "url": "https://www.ithome.com/0/999/210.htm",
+        "title": "台电推出极光 8TB SATA 固态硬盘，4899 元",
+        "url": "https://www.ithome.com/0/999/296.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-07T04:22:13.000Z",
-        "summary": "IT之家 9 月 7 日消息，从 9 月 5 日晚间开始，全球各地玩家在贴吧、小红书、小黑盒、X 和 Reddit 等社交媒体发文称，他们的任天堂 Switch 2 游戏机遭遇 Ban 机（禁止使用大多数互联网功能）情况。 事件最初发生时，部分网友猜测这些机器可能插入过来路不正的卡带，或涉及破解、黑卡等，也有人认为是商家货源有问题，导致任天堂出手大规模封禁机器。但多名被 Ban 机的玩家表示，自己的机器从来没有使用烧录卡、修改存档或充值第三方礼品卡，后续各种观点众说纷纭。 …",
+        "publishedAt": "2026-09-07T07:16:44.000Z",
+        "summary": "IT之家 9 月 7 日消息，台电今天宣布推出极光 8TB SATA 固态硬盘，新品主打广泛兼容性，速率可达 550MB/s， 售价 4899 元 。 据介绍，这款硬盘的外壳采用极光刻制，带有喷砂工艺。采用标准 2.5 英寸大小，厚度为 7mm，适配大多数轻薄笔记本、PC、一体机和迷你主机等设备，可为老设备带来使用速度的提升。 规格方面，这款硬盘读取速度可达 550MB/s，写入速度为 520MB/s。采用“业界一线”主控方案，配备“精选 3D 闪存”，配备固态电子结构，防…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49564609",
+        "id": "hn-49550276",
         "category": "dev",
-        "title": "The NX bit is not just about security",
-        "url": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/",
+        "title": "I'm a seeing-eye dog for a computer",
+        "url": "https://claytonwramsey.com/blog/seeing-eye/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-04T13:47:25.000Z",
+        "publishedAt": "2026-09-03T14:20:06.000Z",
         "badge": "HN",
-        "signal": "42 分 · 30 评论"
+        "signal": "58 分 · 42 评论"
       },
       {
-        "id": "cn-baidu-36a372c3b15b4135",
+        "id": "cn-baidu-39120efb2b40052a",
         "category": "cn",
-        "title": "特斯拉降价",
-        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E6%96%AF%E6%8B%89%E9%99%8D%E4%BB%B7&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "这泼天的流量 葫芦爷爷真的接不住",
+        "url": "https://www.baidu.com/s?wd=%E8%BF%99%E6%B3%BC%E5%A4%A9%E7%9A%84%E6%B5%81%E9%87%8F+%E8%91%AB%E8%8A%A6%E7%88%B7%E7%88%B7%E7%9C%9F%E7%9A%84%E6%8E%A5%E4%B8%8D%E4%BD%8F&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "7日，特斯拉中国宣布，9月30日前下单并提走现车，Model 3全系现金激励5000元，Model Y全系现金激励10000元。",
+        "summary": "9月5日晚，浙江绍兴75岁的“葫芦娃爷爷”陈金敖，因走红后游客持续打卡呼喊、老伴突发头晕，亲手剪掉阳台7个葫芦。游客不是哄客，打卡不是打扰，这泼天的流量，“葫芦娃爷爷”真的接不住。",
         "badge": "热搜",
-        "signal": "7,712,509 热度"
+        "signal": "7,713,309 热度"
       },
       {
         "id": "github-advisory-ghsa-h4v5-crx2-3cv4",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240021",
+        "id": "v2ex-1240045",
         "category": "dev",
-        "title": "鹈鹕大战： Astra VS 5.6 Sol",
-        "url": "https://www.v2ex.com/t/1240021",
+        "title": "现在 Claude 封号情况严重吗？",
+        "url": "https://www.v2ex.com/t/1240045",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-07T03:55:30.000Z",
-        "summary": "最近的降智测试：创建一个 HTML ，内容是 SVG 绘制一个鹈鹕骑自行车的 2D 动画 截图中的配置分别是 GPT-6 Astra Ultra 和 GPT-5.6 Sol Ultra 。感觉如何？ 图 1：Astra https://imgur.com/a/gFxyhFz 图 2：5.6 Sol https://imgur.com/a/jmAJKHa",
+        "publishedAt": "2026-09-07T05:59:31.000Z",
+        "summary": "我开了 Codex plus 会员，和 ollama plus 会员（使用 GLM5.3 模型） 但是最近都有的不够用了，使用 100 美元的 Codex pro 又有点太奢侈了，像试试 Claude 模型，但是 Claude 以前不是老是封号吗？想问问现在封号还严重吗？或者有没有其他比较优惠的套餐？",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "14 回复"
       },
       {
-        "id": "cn-item-5db11e5ffc66da69",
+        "id": "cn-item-47d7924297cd7b25",
         "category": "cn",
-        "title": "南京对环境采样造假涉事企业和相关人员立案调查",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-07/10691822.shtml",
+        "title": "韩国民调：李在明施政好评率37.4% 创任内新低",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-07/10691825.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-07T04:15:13.000Z",
-        "summary": "总台报道有反馈丨南京对环境采样造假涉事企业和相关人员立案调查",
+        "publishedAt": "2026-09-07T04:26:06.000Z",
+        "summary": "中新网9月7日电 据韩联社报道，韩国民调机构Realmeter7日发布的民调结果显示，总统李在明的施政好评率降至37.4%，创就职以来的新低。",
         "badge": "中新网要闻"
       },
       {
@@ -288,16 +288,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-06T20:32:38.000Z",
         "badge": "HN",
-        "signal": "187 分 · 103 评论"
+        "signal": "239 分 · 119 评论"
       },
       {
-        "id": "cn-it-e9c17baee853244b",
+        "id": "cn-it-198927ac8caf45d8",
         "category": "cn",
-        "title": "Omdia：预计 2026 下半年中国面板厂商将占全球汽车显示屏出货量的 65%",
-        "url": "https://www.ithome.com/0/999/209.htm",
+        "title": "华为 Mate XT 2 非凡大师依旧是业界最薄折叠屏手机，3.5mm 机身首次容纳内外两块屏",
+        "url": "https://www.ithome.com/0/999/295.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-07T04:12:53.000Z",
-        "summary": "IT之家 9 月 7 日消息，Omdia 今日发布的最新研究报告显示，预计 2026 年下半年， 中国面板厂商将占全球车载显示出货量的 65.2% ，高于 2026 年上半年的 59%。 这一增长延续了车载显示生产格局长期以来显著的结构性转变：中国面板厂商的市场份额已从 2019 年的 28.1%，提升至 2025 年的 56.6%。 这一变化反映了显示行业更广泛的产业结构重组。成熟 LCD 产线的低回报率正在加速中国以外面板厂商采取轻资产策略，包括关闭、出售及改造产线，同…",
+        "publishedAt": "2026-09-07T07:11:42.000Z",
+        "summary": "IT之家 9 月 7 日消息，华为 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会正在进行中，华为 Mate XT 2 非凡大师正式亮相。 IT之家从发布会获悉，华为 Mate XT 2 非凡大师采用超可靠三折叠玄武架构，重构铰链与屏幕工艺，由内而外层层防护，并首次在三折叠手机上 支持 IP58/59 级防尘抗水 。玄武昆仑玻璃外屏抗跌性能提升 30 倍、耐刮性能提升 16 倍。内屏采用超韧多重复合叠层，抗冲击能力提升 200%。 华为 M…",
         "badge": "IT之家"
       },
       {
@@ -321,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240015",
+        "id": "v2ex-1240044",
         "category": "dev",
-        "title": "[接上篇] 与人发生纠纷后，疑似被“三网定位”获取位置，有什么办法防范？",
-        "url": "https://www.v2ex.com/t/1240015",
+        "title": "国内的云电脑，对 vpn 代理去海外是完全禁止吗",
+        "url": "https://www.v2ex.com/t/1240044",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-07T03:45:16.000Z",
-        "summary": "我现在正好在外地，对方掌握的并不是我的常住地址，楼层、同居人、房东姓名一并拿到 ，所以单纯用以前的住址信息泄露，很难解释这次的情况。这也让我非常担心：之后换个地方，对方是不是仍然能查到 我怀疑这些位置数据可能来自警方内部系统，甚至涉及内部人员违规查询、向外提供信息。不过，这目前是我的判断。相关证据我会整理好，然后报警、 发这个帖子想提醒大家：一定要重视自己的手机号。以前我觉得号码泄露，无非就是接到骚扰电话。这次经历让我意识到，背后的风险可能涉及更多个人信息，甚至自己的行踪。…",
+        "publishedAt": "2026-09-07T05:53:10.000Z",
+        "summary": "国内的云电脑，对 vpn 代理去海外是完全禁止吗， 到底是仅警告， 还是彻底阻止你这么做？",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "6 回复"
       },
       {
         "id": "cn-baidu-7441c36e4a60a44d",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "9月6日晚，2026“把青春华章写在祖国大地上”大思政课网络主题宣传和互动引导活动在中国科学技术大学举行。2025年度国家最高科学技术奖获得者、中国工程院院士陈立泉说，科学家的一项重要使命，就是要为国家十年、二十年乃至五十年后，布局未来。国家需要什么，我们就做什么。",
         "badge": "热搜",
-        "signal": "7,616,898 热度"
+        "signal": "7,619,593 热度"
       },
       {
         "id": "cisa-kev-cve-2026-82329",
@@ -362,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49550276",
+        "id": "hn-49577129",
         "category": "dev",
-        "title": "I'm a seeing-eye dog for a computer",
-        "url": "https://claytonwramsey.com/blog/seeing-eye/",
+        "title": "Ask HN: Fable hacked my piano, can I release the results?",
+        "url": "https://news.ycombinator.com/item?id=49577129",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T14:20:06.000Z",
+        "publishedAt": "2026-09-05T14:54:44.000Z",
         "badge": "HN",
-        "signal": "12 分 · 0 评论"
+        "signal": "107 分 · 57 评论"
       },
       {
-        "id": "cn-item-a277b9d774f7389e",
+        "id": "cn-item-5db11e5ffc66da69",
         "category": "cn",
-        "title": "墨西哥中部烟花爆炸死伤人数上升至74人",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-07/10691796.shtml",
+        "title": "南京对环境采样造假涉事企业和相关人员立案调查",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-07/10691822.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-07T04:08:43.000Z",
-        "summary": "中新网北京9月7日电 据墨西哥《进程》周刊报道，墨西哥中部墨西哥州政府当地时间6日公布，截至当天9时30分，该州特马斯卡尔辛戈市圣玛丽亚·坎切斯达镇5日晚发生的烟花爆炸事故已造成至少10人死亡、64人受伤。",
+        "publishedAt": "2026-09-07T04:15:13.000Z",
+        "summary": "总台报道有反馈丨南京对环境采样造假涉事企业和相关人员立案调查",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240007",
+        "id": "v2ex-1240029",
         "category": "dev",
-        "title": "目前我们团队已经是全员 AI Coding&Analysis 了，包括售后运营等非技术岗",
-        "url": "https://www.v2ex.com/t/1240007",
+        "title": "分享一个 给 homelab 用的 codex webui",
+        "url": "https://www.v2ex.com/t/1240029",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-07T03:35:40.000Z",
-        "summary": "过去的传统模式是大家需要什么数据提需求，研发开发。 - 运营需要拉一个数据看板 - 产品需要分析用户的各类埋点数据 - 运营想做一个活动需要给用户做一个活动网站 - 还有来自各个角色的一些内部常用的数据生产与查询平台 - 售后排查用户的产品使用问题，需要查询用户数据 过去这些都需要研发投入人力配合。但其实底层数据无非就是 db 与 log 。 db 和 log 都可以在权限收敛的情况下开放只读数据。db 可以通过做数据同步独立维护一个只读库。 所以研发同学只要把 db 里的…",
+        "publishedAt": "2026-09-07T04:29:17.000Z",
+        "summary": "项目介绍 https://gh.bhee.online/codex-bridge/ 起初做这个小工具是 remote control 稍微有点慢, 后来慢慢就变成跑在 homelab 上的 web 入口. 原理是劫持了 codex 的 appserver 通讯(默认走 stdio, 通过选项开启 ws 模式), 让 gui/web/cli 全部通过这个项目提供的 ws bridge 通讯, 再转给 codex 内部的 appserver. codexctl / Web UI…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-66648298d81a91d3",
+        "id": "cn-it-ed143364cea586d5",
         "category": "cn",
-        "title": "曝 iQOO 16 手机本月登场：综合堆料规格 Pro Max 级，首进 9 月旗舰大乱斗",
-        "url": "https://www.ithome.com/0/999/208.htm",
+        "title": "华为目前最强处理器！麒麟 9050 Pro 官宣，Mate XT 2 非凡大师全新展翼三折叠手机首发搭载",
+        "url": "https://www.ithome.com/0/999/294.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-07T04:07:57.000Z",
-        "summary": "IT之家 9 月 7 日消息，博主 @数码闲聊站 今日爆料， iQOO 16 已确定 9 月内登场 ，这代虽没有改名 Pro Max，但综合堆料规格也 Pro Max 级了： 满血骁龙 8EE6 / 三星 2K+165Hz M16 定制屏 / 自研电竞芯片 Q4 / 超大底全焦段影像 / 满配外围等等 该博主 9 月 5 日曾爆料， 骁龙 8EE6 旗舰机电池确定 8400mAh 。结合该博主此前的爆料习惯，预计该机为 iQOO 16。 IT之家注意到，目前，高通两款骁龙 …",
+        "publishedAt": "2026-09-07T07:10:43.000Z",
+        "summary": "IT之家 9 月 7 日闪讯速报，在今天的 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会上， 华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东正式发布麒麟 9050 Pro 处理器 。 据介绍，这枚处理器是华为目前最强处理器，由 Mate XT 2 非凡大师全新展翼三折叠手机首发搭载。通过软硬芯云协同， 新款三折叠手机整机性能对比 Mate XTs 提升 42% 。 通过灵犀 CPU 超线程技术，麒麟 9050 Pro 单核…",
         "badge": "IT之家"
       },
       {
@@ -444,24 +444,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49585644",
+        "id": "hn-49589914",
         "category": "dev",
-        "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
-        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+        "title": "Ask HN: How do you manage skills files?",
+        "url": "https://news.ycombinator.com/item?id=49589914",
         "source": "Hacker News",
-        "publishedAt": "2026-09-06T11:56:43.000Z",
+        "publishedAt": "2026-09-06T19:27:10.000Z",
         "badge": "HN",
-        "signal": "600 分 · 392 评论"
+        "signal": "84 分 · 66 评论"
       },
       {
-        "id": "cn-baidu-bb11bb3874d5a8b0",
+        "id": "cn-baidu-595b36e5c5ac6feb",
         "category": "cn",
-        "title": "看演唱会全家被取消低保原帖已删除",
-        "url": "https://www.baidu.com/s?wd=%E7%9C%8B%E6%BC%94%E5%94%B1%E4%BC%9A%E5%85%A8%E5%AE%B6%E8%A2%AB%E5%8F%96%E6%B6%88%E4%BD%8E%E4%BF%9D%E5%8E%9F%E5%B8%96%E5%B7%B2%E5%88%A0%E9%99%A4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "零食店1天涌入6万人堪比演唱会",
+        "url": "https://www.baidu.com/s?wd=%E9%9B%B6%E9%A3%9F%E5%BA%971%E5%A4%A9%E6%B6%8C%E5%85%A56%E4%B8%87%E4%BA%BA%E5%A0%AA%E6%AF%94%E6%BC%94%E5%94%B1%E4%BC%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "日前，有网友发帖称赣州一低保家庭在读中专女生不顾劝说，用打零工积蓄去香港看演唱会，触发低保动态复核，致家人低保被全部取消。目前原帖已删除，江西赣州市民政局回应称正核查此事。",
+        "summary": "目前，湖南长沙“零食王国”门店火爆，最高一天涌入6万人次，人员密度堪比大型演唱会。该门店占地1.3万平方米，拥有3.5万款全球零食，排队1.5小时成常态。",
         "badge": "热搜",
-        "signal": "7,522,302 热度"
+        "signal": "7,522,938 热度"
       },
       {
         "id": "github-advisory-ghsa-mfrj-v65r-979c",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1239988",
+        "id": "v2ex-1240025",
         "category": "dev",
-        "title": "学无止境 || 给卑微的前端同学一份 Java 全栈开发和 PythonAgent 学习教程。你绝对满意！",
-        "url": "https://www.v2ex.com/t/1239988",
+        "title": "重构了简约博客设计语言，二次元浓度爆表",
+        "url": "https://www.v2ex.com/t/1240025",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-07T03:06:40.000Z",
-        "summary": "已打磨完善，大家一起学习进步！可以顺手给个 star ⭐ 特色 从基础到快速入门 + 深入 名词和术语解释，拒绝懵逼 Demo 和场景结合，便于理解 覆盖常规面试场景，拒绝枯燥学习，提审职业技能 加深为什么可以，为什么不可以，多一些为什么，反思式学习 进阶大成 Java 企业级全栈学习路线 https://github.com/umlink/java-full-stack 你最好的 pythone agent 学习指南 https://github.com/umlink/p…",
+        "publishedAt": "2026-09-07T04:19:21.000Z",
+        "summary": "很早之前写过一个开源博客项目，不过采用的是极简风格。 功能写完整了就没管了，最近破天荒的想到去重构它的设计风格，全面参考碧蓝档案的元素，深得吾心。 还请各位客观评价一下： 开源地址 GitHub 演示地址 执笔为剑",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 251668,
+        "stars": 251902,
         "starsToday": 1485
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 254970,
+        "stars": 255226,
         "starsToday": 2207
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 32611,
+        "stars": 32782,
         "starsToday": 620
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 242651,
+        "stars": 242717,
         "starsToday": 520
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/openai/skills",
         "description": "Skills Catalog for Codex",
         "language": "Python",
-        "stars": 25678,
+        "stars": 25721,
         "starsToday": 46
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/anomalyco/opencode",
         "description": "The open source coding agent.",
         "language": "TypeScript",
-        "stars": 205362,
+        "stars": 205434,
         "starsToday": 551
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/blader/humanizer",
         "description": "Agent skill that removes signs of AI-generated writing from text",
         "language": "Python",
-        "stars": 44461,
+        "stars": 44576,
         "starsToday": 748
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/llvm/llvm-project",
         "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
         "language": "LLVM",
-        "stars": 40254,
+        "stars": 40270,
         "starsToday": 23
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 129707,
+        "stars": 129953,
         "starsToday": 1539
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 71076,
+        "stars": 71113,
         "starsToday": 276
       }
     ],
-    "updatedAt": "2026-09-07T04:43:41.183Z"
+    "updatedAt": "2026-09-07T07:19:48.526Z"
   }
 }
