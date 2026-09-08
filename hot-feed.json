@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-08T02:44:18.678Z",
+  "generatedAt": "2026-09-08T04:38:07.396Z",
   "intelligence": {
-    "updatedAt": "2026-09-08T02:44:18.678Z",
+    "updatedAt": "2026-09-08T04:38:07.396Z",
     "items": [
       {
-        "id": "cn-item-a443f767f7b4da2a",
+        "id": "cn-item-b5359225eaf61096",
         "category": "cn",
-        "title": "汕头潮阳区通报“化妆品制假售假问题”：已查封涉嫌造假场所",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-08/10692395.shtml",
+        "title": "A股午评：超3400只个股飘红，沪指、深指收涨，创业板指收跌",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-08/10692493.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-08T02:17:04.000Z",
-        "summary": "中新网9月8日电 据“潮州发布”微信公众号，广东省汕头市潮阳区市场监督管理局日前发布情况通报称，9月7日上午，媒体曝光潮阳区和平镇存在化妆品制假售假问题。区委、区政府高度重视，立即成立由区政府牵头，区市场监管、公安等部门及和平镇政府参与的联合执法工作组，依法从严从快查处。目前，已查封涉嫌造假场所、查扣涉嫌造假物品，并对涉事相关人员进行停职调查，后续查办情况将及时向社会公布。",
+        "publishedAt": "2026-09-08T04:02:13.000Z",
+        "summary": "A股午评：超3400只个股飘红，沪指、深指收涨，创业板指收跌；房地产、贵金属、通信设备上涨，半导体冲高回落，电工电网、电脑硬件下跌",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49604861",
+        "id": "hn-49604637",
         "category": "dev",
-        "title": "Jellyfin 12.0",
-        "url": "https://jellyfin.org/posts/jellyfin-release-12.0/",
+        "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
+        "url": "https://mcpherrin.ca/2026/09/07/rsa.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T01:56:35.000Z",
+        "publishedAt": "2026-09-08T01:16:59.000Z",
         "badge": "HN",
-        "signal": "78 分 · 26 评论"
+        "signal": "176 分 · 33 评论"
       },
       {
-        "id": "cn-it-b3d414ce548b7421",
+        "id": "cn-it-54251680fac40abb",
         "category": "cn",
-        "title": "ENERMAX 推出 Enclave A31 机箱：全视海景房，提供 45W PD 快充 USB-C",
-        "url": "https://www.ithome.com/0/999/602.htm",
+        "title": "微信 iOS 版 8.0.78 最新官方正式版下载发布",
+        "url": "https://www.ithome.com/0/999/643.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-08T02:41:23.000Z",
-        "summary": "IT之家 9 月 8 日消息，ENERMAX（保锐 / 安耐美）现已宣布推出 Enclave A31 机箱。这一产品采用较为传统的上下分舱设计， 主舱前方和左侧配备钢化玻璃 ，形成流畅无柱视野。 Enclave A31 三维 445×238×450 (mm)，采用 0.7mm 厚度 SPCC 钢板。其拥有 7 条扩展槽（ 挡板可旋转 90° ），至少支持到 ATX 主板（ 兼容背插 ），扩展卡限长 425mm、ATX 电源限长 200mm、处理器散热器限高 180mm，提供…",
+        "publishedAt": "2026-09-08T04:37:12.000Z",
+        "summary": "IT之家 9 月 8 日消息，微信 iOS 平台迎来了 8.0.78 正式版更新。 官方更新日志为： 本次更新： - 解决了一些已知问题。 大家在 IT之家微信号 回复“ 微信 ”两字，即可获取当前最新官方内部版微信下载。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。如果你发现了日志中未提及的更新点，欢迎发在评论区供大家参考~[微笑]",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240266",
+        "id": "v2ex-1240362",
         "category": "dev",
-        "title": "今天周二，人多，有没架构大佬帮忙看看，讨论讨论，有兴趣的也可以一起参与",
-        "url": "https://www.v2ex.com/t/1240266",
+        "title": "Appsotre 可能取消人工审核， AI 正在悄悄改变底层生态，这是一场自下而上的变革",
+        "url": "https://www.v2ex.com/t/1240362",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T01:30:02.000Z",
-        "summary": "前提： 公司是全球性的硬件公司，类似影石，做户外运动相机，硬件方面做了很多年一直都是卖硬件(我们 toB ，不 toC)，然后用合作厂商开发的 APP 给用户用，现在今年自己开发软件，我们在国内已经有一套架构(Go+k8s 集群)了，所以此次我想请教的是全球化的架构应该怎么搭。 目前考虑部的点：北美，东南亚(新加坡)，欧洲(法国)，迪拜，非洲(这个地方客户比较多) 问题： 1 、简单的做法，就是一个点位一套，但这样就没法数据同步，在北美注册的用户，在非洲得重新注册。这个体验…",
+        "publishedAt": "2026-09-08T04:29:24.000Z",
+        "summary": "IT 之家 9 月 6 日消息，据彭博社记者马克 · 古尔曼最新一期《 Power On 》时事通讯透露，苹果据称正在考虑对 App Store 进行一些调整，目标是进一步提高这一平台带来的收入。 苹果可以通过多种方式提高 App Store 的利润率。例如，苹果可以取消目前的人工应用审核流程。 苹果还可以提高开发者会员计划的收费。 此外，苹果还可以针对大型开发者推出基于流量的订阅收费模式，从而让这些开发者分担部分基础设施成本。 以上是新闻摘要，不管最后是否成真，但有一点越…",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-1f63e372481404dc",
+        "id": "cn-baidu-e48c7f52bc67602d",
         "category": "cn",
-        "title": "郑钦文实现千万分之一概率事件",
-        "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87%E5%AE%9E%E7%8E%B0%E5%8D%83%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E6%A6%82%E7%8E%87%E4%BA%8B%E4%BB%B6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "铜价“爆了”",
+        "url": "https://www.baidu.com/s?wd=%E9%93%9C%E4%BB%B7%E2%80%9C%E7%88%86%E4%BA%86%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，郑钦文在美网比赛中连续两场上演从0比5到7比5的逆转好戏，最终以2比0轻取斯瓦泰克，晋级美网8强。连续两场让5追7的理论概率约为1678万分之一，郑钦文成功实现了这一千万分之一概率事件。",
+        "summary": "9月7日晚间，伦敦金属交易所（LME）铜期货价格涨至历史新高，突破每吨14530美元关口，超过今年1月创下的历史纪录。",
         "badge": "热搜",
-        "signal": "7,807,981 热度"
+        "signal": "7,808,269 热度"
       },
       {
         "id": "cisa-kev-cve-2026-59822",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49604637",
+        "id": "hn-49605356",
         "category": "dev",
-        "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
-        "url": "https://mcpherrin.ca/2026/09/07/rsa.html",
+        "title": "A Screensaver for LG's Spying Smart TVs",
+        "url": "https://weowntheglass.com",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T01:16:59.000Z",
+        "publishedAt": "2026-09-08T03:20:44.000Z",
         "badge": "HN",
-        "signal": "101 分 · 20 评论"
+        "signal": "28 分 · 1 评论"
       },
       {
-        "id": "cn-item-28d0601e5c834125",
+        "id": "cn-item-a443f767f7b4da2a",
         "category": "cn",
-        "title": "“卖全球”也“买全球” 中国为全球经济发展注入新动能",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-08/10692377.shtml",
+        "title": "汕头潮阳区通报“化妆品制假售假问题”：已查封涉嫌造假场所",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-08/10692395.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-08T01:51:22.000Z",
-        "summary": "2026年前7个月，我国进出口总额达30.13万亿元，同比增长17.3%。其中，出口同比增长14%，进口同比增长22%，进口增速较出口高出8个百分点，对外贸增长的贡献显著提升。一直以来中国都是全球商品输出大国，中国制造源源不断销往世界各地，近年来，中国大市场优势越来越明显，我们大规模进口海外货品，进口表现格外亮眼。这样的变化因何而来？不断扩容的中国大市场，又将给全球贸易带来哪些新的改变？",
+        "publishedAt": "2026-09-08T02:17:04.000Z",
+        "summary": "中新网9月8日电 据“潮州发布”微信公众号，广东省汕头市潮阳区市场监督管理局日前发布情况通报称，9月7日上午，媒体曝光潮阳区和平镇存在化妆品制假售假问题。区委、区政府高度重视，立即成立由区政府牵头，区市场监管、公安等部门及和平镇政府参与的联合执法工作组，依法从严从快查处。目前，已查封涉嫌造假场所、查扣涉嫌造假物品，并对涉事相关人员进行停职调查，后续查办情况将及时向社会公布。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240265",
+        "id": "v2ex-1240360",
         "category": "dev",
-        "title": "当 TIBO 宣布 Codex 即将重置的时候，你一般会进行哪些积极且富有建设性 Token 消耗活动？",
-        "url": "https://www.v2ex.com/t/1240265",
+        "title": "Surge 重大更新",
+        "url": "https://www.v2ex.com/t/1240360",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T01:29:43.000Z",
-        "summary": "1.优化现有业务？ 2.写个提效的小工具？ 3.修复陈年老 BUG ？ 4.随缘爱重置不重置",
+        "publishedAt": "2026-09-08T04:24:16.000Z",
+        "summary": "新增 HTTP/3 、MASQUE 等新代理协议支持 策略组支持链式代理，比如 日本代理组 -> 中转节点 -> 目标网站 Tailscale 加强，新增 Peer Relay 。可以加自己的 Peer 节点 CLI 大幅升级，可以直接排查规则匹配、DNS 、代理路径和性能问题。这个好评，之前的命令行排查 DNS 泄露时信息支持度不太够 Gateway Mode 的 IPv6 稳定性进一步优化，个人无感 Profile 支持更灵活的拆分和加载方式，重新加载配置时也尽量不会断…",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-50ae03db740be150",
+        "id": "cn-it-9f70e1c193e48ca4",
         "category": "cn",
-        "title": "用时不到两年半：英特尔 High-NA EUV 晶圆处理量突破百万片，超越其他厂商总和",
-        "url": "https://www.ithome.com/0/999/601.htm",
+        "title": "欧洲运营商联手对抗马斯克星链 Starlink，发力卫星直连手机服务",
+        "url": "https://www.ithome.com/0/999/642.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-08T02:41:02.000Z",
-        "summary": "IT之家 9 月 8 日消息，英特尔于当地时间周一宣布，其采用高数值孔径极紫外（High-NA EUV）光刻设备处理的 300mm 晶圆数量累计已突破一百万大关。这一里程碑距离其首台 High-NA EUV 设备完成组装还不到两年半时间。 英特尔目前拥有两台 ASML Twinscan EXE:5000 原型机及至少一台 EXE:5200B 量产机型。 2025 年 2 月，英特尔使用 High-NA EUV 设备累计处理了约 3 万片晶圆；至 2026 年 9 月，这一数…",
+        "publishedAt": "2026-09-08T04:35:26.000Z",
+        "summary": "IT之家 9 月 8 日消息，据彭博社今日报道，德国电信（Deutsche Telekom）、法国 Orange、英国沃达丰集团（Vodafone）和西班牙电信（Telefonica）正就组建联盟进行初步洽谈，计划共同竞标欧盟卫星频谱，并提供卫星直连手机服务。 知情人士表示，此举旨在与埃隆 · 马斯克旗下 SpaceX 的星链（Starlink）服务在欧洲展开竞争。目前相关公司尚未就组建联盟或参与竞标作出最终决定。 上述潜在合作与欧盟正在酝酿的频谱新规直接相关。欧盟正考虑为…",
         "badge": "IT之家"
       },
       {
@@ -206,17 +206,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-07T23:37:42.000Z",
         "badge": "HN",
-        "signal": "92 分 · 8 评论"
+        "signal": "135 分 · 10 评论"
       },
       {
-        "id": "cn-baidu-af59fe26f2a1a3ca",
+        "id": "cn-baidu-6c28e4f4124dfd3d",
         "category": "cn",
-        "title": "网红宣称捐款百万实际只捐1元",
-        "url": "https://www.baidu.com/s?wd=%E7%BD%91%E7%BA%A2%E5%AE%A3%E7%A7%B0%E6%8D%90%E6%AC%BE%E7%99%BE%E4%B8%87%E5%AE%9E%E9%99%85%E5%8F%AA%E6%8D%901%E5%85%83&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "今年下半年最强冷空气来袭",
+        "url": "https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%9C%80%E5%BC%BA%E5%86%B7%E7%A9%BA%E6%B0%94%E6%9D%A5%E8%A2%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "受台风影响广西遭遇洪涝，万粉网红“安澜”宣称捐款百万博取流量涨粉，晒出捐款截图。经红会核查，并无该笔百万捐款，仅查到一笔1元捐款，账号已被平台禁言处置。",
+        "summary": "今年下半年最强冷空气来袭，北方降温剧烈多地气温创新低。多地气温将创下秋后新低，最高气温累积降幅达8至10℃，局地超12℃。",
         "badge": "热搜",
-        "signal": "7,713,000 热度"
+        "signal": "7,714,621 热度"
       },
       {
         "id": "github-advisory-ghsa-h4v5-crx2-3cv4",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240258",
+        "id": "v2ex-1240354",
         "category": "dev",
-        "title": "我最了一个导航站，欢迎大家使用",
-        "url": "https://www.v2ex.com/t/1240258",
+        "title": "codex 额度杀手！ codex computer history（计算机历史记录）两个小时消耗了 pro5x 1%的额度",
+        "url": "https://www.v2ex.com/t/1240354",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T01:14:26.000Z",
-        "summary": "导航网站，之前都是使用别人的很不方便，于是，我自己做了一个，以后在也不用在书签找导航站了 https://www.wenjingxiezuo.com/",
+        "publishedAt": "2026-09-08T04:09:25.000Z",
+        "summary": "我是 pro5x ，今天早上 10 点重置的，到 12 点这俩小时期间我只开了 computer history （计算机历史记录），一句问题都没问，到 12 点的时候一看额度只有 99%了，也就是这俩小时期间 computer history （计算机历史记录）消耗了 1%的额度，果断关闭了，大家可以检查一下这个开关，非必要可以关掉，我原来以为这个不咋消耗额度就一直开着每天记录自己做了什么事情，实际来看消耗额度还是挺可观的。",
         "badge": "程序员",
-        "signal": "18 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-item-7cd4d2097b75b047",
+        "id": "cn-item-28d0601e5c834125",
         "category": "cn",
-        "title": "贵州交通建设集团原董事长汪金育接受审查调查",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-08/10692370.shtml",
+        "title": "“卖全球”也“买全球” 中国为全球经济发展注入新动能",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-08/10692377.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-08T01:44:48.000Z",
-        "summary": "中新网9月8日电 据贵州省纪委监委消息：贵州交通建设集团有限公司原党委书记、董事长汪金育涉嫌严重违纪违法，目前正接受贵州省纪委监委纪律审查和监察调查。",
+        "publishedAt": "2026-09-08T01:51:22.000Z",
+        "summary": "2026年前7个月，我国进出口总额达30.13万亿元，同比增长17.3%。其中，出口同比增长14%，进口同比增长22%，进口增速较出口高出8个百分点，对外贸增长的贡献显著提升。一直以来中国都是全球商品输出大国，中国制造源源不断销往世界各地，近年来，中国大市场优势越来越明显，我们大规模进口海外货品，进口表现格外亮眼。这样的变化因何而来？不断扩容的中国大市场，又将给全球贸易带来哪些新的改变？",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49601655",
+        "id": "hn-49605511",
         "category": "dev",
-        "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
-        "url": "https://lax-skyline.parcelscope.net/",
+        "title": "Arm Mali G2-Ultra NX GPU: desktop-class mobile gameplay with AI-native graphics",
+        "url": "https://newsroom.arm.com/blog/arm-mali-g2-ultra-nx-ai-native-mobile-graphics",
         "source": "Hacker News",
-        "publishedAt": "2026-09-07T18:52:06.000Z",
+        "publishedAt": "2026-09-08T04:06:20.000Z",
         "badge": "HN",
-        "signal": "227 分 · 114 评论"
+        "signal": "5 分 · 0 评论"
       },
       {
-        "id": "cn-it-b630c7780a71b0b0",
+        "id": "cn-it-1ab7c3dd9c3869a1",
         "category": "cn",
-        "title": "我国国内有效发明专利拥有量达到 539.4 万件，PCT 国际专利申请量连续 7 年位居全球第一",
-        "url": "https://www.ithome.com/0/999/600.htm",
+        "title": "小米车载公网对讲机发售：提供一年免费流量，首发 499 元",
+        "url": "https://www.ithome.com/0/999/641.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-08T02:35:59.000Z",
-        "summary": "IT之家 9 月 8 日消息，据央视新闻报道，第十五届中国知识产权年会 9 月 8 日至 9 月 9 日在北京举行，主题为“奋力推动‘十五五’知识产权事业高质量发展”。 国家知识产权局在会上介绍， 我国国内有效发明专利拥有量达到 539.4 万件 、国内有效商标注册量达到 5081.6 万件， PCT 国际专利申请量连续 7 年位居全球第一 ，海牙体系外观设计申请量、马德里国际商标申请量均居世界前列。 据IT之家此前报道， 截至 2025 年底，我国国内发明专利有效量达 5…",
+        "publishedAt": "2026-09-08T04:25:45.000Z",
+        "summary": "IT之家 9 月 8 日消息，小米新推出了一款车载对讲机，属于小米澎程 N70 生态产品，定价为 599 元，首发 499 元现已开售。 京东 小米米家车载对讲机 户外自驾游车队手台【赠小米澎程 / 小米全系支架】 499 元 直达链接 2026 年数码家电政府补贴持续进行中，IT 之家为大家汇总国补领券地址，买数码家电之前记得领取。 数码补贴： 点此领券 手机 / 平板 / 3C 数码支持 8.5 折政府补贴，不超过 6000 元的产品至高立减 500 元。 家电补贴： …",
         "badge": "IT之家"
       },
       {
@@ -321,25 +321,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240256",
+        "id": "v2ex-1240353",
         "category": "dev",
-        "title": "感觉小米 N90 MAX 探索版简直就是数字游民的痛车啊",
-        "url": "https://www.v2ex.com/t/1240256",
+        "title": "codex 中转站放哪好呢? 大家新加坡还是硅谷",
+        "url": "https://www.v2ex.com/t/1240353",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T01:10:29.000Z",
-        "summary": "以前还考虑当数字游民是去云南还是去黑龙江，现在好像买一辆 N90 MAX 想去哪就去哪，也完全不用考虑租房的问题了，再加上国内的这个治安水平，每天都能在大自然中醒来？ V 友们怎么看",
+        "publishedAt": "2026-09-08T04:09:14.000Z",
+        "summary": "中国 - 新加坡 - 美国吗, 是不是 中转站服务器放新加坡, gpt 只有美国有部署",
         "badge": "程序员",
-        "signal": "46 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-c9bee8594958b06e",
+        "id": "cn-baidu-d859bae26fab39e7",
         "category": "cn",
-        "title": "“学成了 希望你们能够回来”",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%AD%A6%E6%88%90%E4%BA%86+%E5%B8%8C%E6%9C%9B%E4%BD%A0%E4%BB%AC%E8%83%BD%E5%A4%9F%E5%9B%9E%E6%9D%A5%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "数贸会一大批新技术新产品即将解锁",
+        "url": "https://www.baidu.com/s?wd=%E6%95%B0%E8%B4%B8%E4%BC%9A%E4%B8%80%E5%A4%A7%E6%89%B9%E6%96%B0%E6%8A%80%E6%9C%AF%E6%96%B0%E4%BA%A7%E5%93%81%E5%8D%B3%E5%B0%86%E8%A7%A3%E9%94%81&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月6日，在“把青春华章写在祖国大地上”大思政课活动现场，潘建伟院士表示，多年来送了一批又一批年轻人出国深造，对他们永远只有一个愿望：学成了，希望你们能回来。",
+        "summary": "第五届全球数字贸易博览会将于9月23日至27日在浙江杭州举办，本届博览会将设置八大展区，首设词元主题展区。在国务院新闻办公室7日举行的新闻发布会上，浙江省相关负责人介绍，届时将有一大批新技术、新产品、新场景集体亮相。",
         "badge": "热搜",
-        "signal": "7,616,148 热度"
+        "signal": "7,618,924 热度"
       },
       {
         "id": "cisa-kev-cve-2026-82329",
@@ -362,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49604537",
+        "id": "hn-49604861",
         "category": "dev",
-        "title": "Disconnect your LG television from the internet, now",
-        "url": "https://appleinsider.com/articles/26/09/07/disconnect-your-lg-television-from-the-internet-now",
+        "title": "Jellyfin 12.0",
+        "url": "https://jellyfin.org/posts/jellyfin-release-12.0/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T01:00:48.000Z",
+        "publishedAt": "2026-09-08T01:56:35.000Z",
         "badge": "HN",
-        "signal": "90 分 · 57 评论"
+        "signal": "175 分 · 70 评论"
       },
       {
-        "id": "cn-item-07fc9075dc96ae43",
+        "id": "cn-item-7cd4d2097b75b047",
         "category": "cn",
-        "title": "灵巧手量产前夜，高自由度产品为何“叫好不叫座”？",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-08/10692365.shtml",
+        "title": "贵州交通建设集团原董事长汪金育接受审查调查",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-08/10692370.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-08T01:40:18.000Z",
-        "summary": "灵巧手量产前夜，高自由度产品为何“叫好不叫座”？业内：行业仍在寻找最优解",
+        "publishedAt": "2026-09-08T01:44:48.000Z",
+        "summary": "中新网9月8日电 据贵州省纪委监委消息：贵州交通建设集团有限公司原党委书记、董事长汪金育涉嫌严重违纪违法，目前正接受贵州省纪委监委纪律审查和监察调查。",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240242",
+        "id": "v2ex-1240341",
         "category": "dev",
-        "title": "Codex 今天又双叒叕要重置了，快开启 Ultra +Fast 使劲蹬！",
-        "url": "https://www.v2ex.com/t/1240242",
+        "title": "腾讯 9.4 日最新开源的 WeMM-Embedding-9B 多模态嵌入模型应该是当世最强嵌入模型了把？众多微信用户数据一起养出来的",
+        "url": "https://www.v2ex.com/t/1240341",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T00:00:57.000Z",
-        "summary": "根据 CodexRunway 的重置监测，预计北京时间上午 10 点钟左右重置： https://www.codexrunway.com/zh/history/1788809097000.html",
+        "publishedAt": "2026-09-08T03:36:55.000Z",
+        "summary": "代码仓库： https://github.com/Tencent/WeMM-Embedding 是否再次证明只要有好的数据，训练出来的模型就特别强？",
         "badge": "程序员",
-        "signal": "28 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-9cdc4ae243f499fa",
+        "id": "cn-it-098dc86174d113f1",
         "category": "cn",
-        "title": "火狐 Firefox 浏览器 157 将默认启用 Nova 新界面，恢复启用紧凑模式",
-        "url": "https://www.ithome.com/0/999/591.htm",
+        "title": "小米推出米家杀菌足浴器：专利管路杀菌，首发最低 294 元",
+        "url": "https://www.ithome.com/0/999/640.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-08T02:31:11.000Z",
-        "summary": "IT之家 9 月 8 日消息，科技媒体 WinAero 昨日（9 月 7 日）发布博文，报道称火狐 Firefox 浏览器 157 稳定版（预估 9 月 29 日发布）将默认启用 Nova 全新用户界面。 Mozilla 目前已邀请 Beta 频道 Firefox 浏览器用户测试 Nova 界面，新版为区分浏览器的主要操作区，把标签栏、导航栏和侧边栏置于单独的高亮区域内。 标签按钮和地址栏字段采用圆角外观。活动标签周围加入发光效果，帮助用户识别当前正在浏览的页面。新界面还调…",
+        "publishedAt": "2026-09-08T04:18:00.000Z",
+        "summary": "IT之家 9 月 8 日消息，小米新推出了一款“米家杀菌足浴器”，建议零售价 429 元，首发价 329 元，但京东还提供 25 元优惠券，再加上晒单返 10 元京豆，所以最低是 294 元。 京东 米家杀菌足浴器 小米【教师节礼物】泡脚桶全自动智能按摩加热足浴泡脚盆过小腿高深桶杀菌洗脚桶 生日礼物 券后 304 元 领 25 元券 2026 年数码家电政府补贴持续进行中，IT 之家为大家汇总国补领券地址，买数码家电之前记得领取。 数码补贴： 点此领券 手机 / 平板 / …",
         "badge": "IT之家"
       },
       {
@@ -444,24 +444,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49603546",
+        "id": "hn-49601655",
         "category": "dev",
-        "title": "Show HN: Stuxnet – A reconstructed source code of the infamous cyber-weapon",
-        "url": "https://github.com/Sadpainy/Stuxnet",
+        "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
+        "url": "https://lax-skyline.parcelscope.net/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-07T22:12:38.000Z",
+        "publishedAt": "2026-09-07T18:52:06.000Z",
         "badge": "HN",
-        "signal": "108 分 · 34 评论"
+        "signal": "251 分 · 130 评论"
       },
       {
-        "id": "cn-baidu-de830c43e66ba8c0",
+        "id": "cn-baidu-b6a8229d589d4368",
         "category": "cn",
-        "title": "人民日报谈“葫芦娃爷爷”摘下葫芦",
-        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E8%B0%88%E2%80%9C%E8%91%AB%E8%8A%A6%E5%A8%83%E7%88%B7%E7%88%B7%E2%80%9D%E6%91%98%E4%B8%8B%E8%91%AB%E8%8A%A6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "考研圈大地震！顶尖名校陆续停招学硕",
+        "url": "https://www.baidu.com/s?wd=%E8%80%83%E7%A0%94%E5%9C%88%E5%A4%A7%E5%9C%B0%E9%9C%87%EF%BC%81%E9%A1%B6%E5%B0%96%E5%90%8D%E6%A0%A1%E9%99%86%E7%BB%AD%E5%81%9C%E6%8B%9B%E5%AD%A6%E7%A1%95&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近期，“葫芦娃爷爷”意外走红。老人因院内葫芦受到网友关注后，大批游客慕名前来打卡，扰乱了老人的正常生活。人民日报对此评论，善意应当守住边界，切莫让热情演变为对普通人的过度打扰与消费。",
+        "summary": "近日，北大、复旦、上交、浙大等多所顶尖名校陆续官宣停招学硕。二战考生发现目标专业取消。以北大法学为例，专硕两年学费4.2万元，加上租房开销成本高昂；而原学硕每年仅8000元还提供宿舍，巨大差距让不少考生压力陡增。",
         "badge": "热搜",
-        "signal": "7,522,036 热度"
+        "signal": "7,521,503 热度"
       },
       {
         "id": "github-advisory-ghsa-mfrj-v65r-979c",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240237",
+        "id": "v2ex-1240336",
         "category": "dev",
-        "title": "目前写作（中英文）最好的模型是哪个",
-        "url": "https://www.v2ex.com/t/1240237",
+        "title": "吐槽一下现在的键盘设计....",
+        "url": "https://www.v2ex.com/t/1240336",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-07T23:02:32.000Z",
-        "summary": "感觉 gpt/claude 都是越来越不说人话，gpt 喜欢说一堆废话没重点，Claude 原创奇怪词汇很烦人。 但是有一些需要写报告，写文章的需求，大家都用什么 AI 呢？ 走 API 也可以，主要目的就是能产出可读性好，AI 味低，同时保留逻辑和智慧的内容（重点是有智慧的情况下，把话用自然语言更好的描述出来）",
+        "publishedAt": "2026-09-08T03:28:39.000Z",
+        "summary": "首先,我承认我的指法可能不算精准, 但是肯定算普通人里 top 级别的了. 以前主要用的 Flico 的机械键盘,87 的,也买过一些 75,64 之类的, 最近买了几个不同样式的键盘, nyphy, keychron, iqunix, 怒喵, lofree 等, 我感觉都不好用. 几个严重影响我手感的问题: 最大的问题是 Backspace, 我写代码经常要 backspace 取消, 现在基本上很难找到一个 Backspace 是在这个区域最右上的, 大部分会在右边和上…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "17 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 46179,
+        "stars": 46425,
         "starsToday": 474
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/microsoft/markitdown",
         "description": "Python tool for converting files and office documents to Markdown.",
         "language": "Python",
-        "stars": 180417,
+        "stars": 180617,
         "starsToday": 886
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 20911,
+        "stars": 20979,
         "starsToday": 96
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/jo-inc/camofox-browser",
         "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
         "language": "JavaScript",
-        "stars": 9800,
+        "stars": 9887,
         "starsToday": 135
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/MoonTechLab/LunaTV",
         "description": "本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
         "language": "TypeScript",
-        "stars": 9803,
+        "stars": 9865,
         "starsToday": 197
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 252940,
+        "stars": 253054,
         "starsToday": 1897
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/coreyhaines31/marketingskills",
         "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "language": "JavaScript",
-        "stars": 48200,
+        "stars": 48263,
         "starsToday": 580
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
         "description": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
         "language": "Python",
-        "stars": 5299,
+        "stars": 5341,
         "starsToday": 517
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/BraveOPotato/FckSignups",
         "description": "A list of tools that are open-source, in-browser, and require no-signups!",
         "language": "TypeScript",
-        "stars": 3866,
+        "stars": 3901,
         "starsToday": 501
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/bytedance/deer-flow",
         "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
         "language": "Python",
-        "stars": 81881,
+        "stars": 81911,
         "starsToday": 195
       }
     ],
-    "updatedAt": "2026-09-08T02:44:18.678Z"
+    "updatedAt": "2026-09-08T04:38:07.396Z"
   }
 }
