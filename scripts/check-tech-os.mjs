@@ -218,9 +218,11 @@ function validateState(root, entities, byId, errors) {
   const vision = byId.get(state.vision_id);
   if (!vision || vision.data.kind !== 'vision') errors.push('state.yml 的 vision_id 必须指向 Vision。');
   const currentQuest = byId.get(state.current_quest_id);
-  if (!currentQuest || currentQuest.data.kind !== 'quest' || currentQuest.data.status !== 'active') {
+  const routeQuests = entities.filter(entity => entity.data.kind === 'quest' && entity.data.route_id === state.main_route_id);
+  const awaitingReview = state.current_quest_id === '' && routeQuests.length > 0 && routeQuests.every(entity => ['completed', 'skipped'].includes(entity.data.status));
+  if (!awaitingReview && (!currentQuest || currentQuest.data.kind !== 'quest' || currentQuest.data.status !== 'active')) {
     errors.push('state.yml 的 current_quest_id 必须指向 Active Quest。');
-  } else if (currentQuest.data.route_id !== state.main_route_id) {
+  } else if (currentQuest && currentQuest.data.route_id !== state.main_route_id) {
     errors.push('Current Quest 必须属于 Main Route。');
   }
 }

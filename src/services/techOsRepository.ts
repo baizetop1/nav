@@ -61,9 +61,16 @@ export async function commitTechOsFiles(
   updates: TechOsSourceFile[],
   message: string,
   request: typeof fetch = fetch,
+  movedPaths: string[] = [],
 ): Promise<TechOsCommitResult> {
   const normalizedTarget = normalizeTarget(target);
   const normalizedUpdates = normalizeUpdates(updates);
+  for (const oldPath of movedPaths) {
+    const match = oldPath.match(/^tech-os\/(quests|routes)\/(?:active|backlog|completed|archived)\/((?:QUEST|ROUTE)-\d{3,})\.md$/);
+    if (!match || !normalizedUpdates.some(file => file.path !== oldPath && file.path.endsWith(`/${match[2]}.md`)) || normalizedUpdates.some(file => file.path === oldPath)) {
+      throw new Error('只允许生命周期操作移动同一 ID 的任务或路线，禁止任意删除文件。');
+    }
+  }
   const commitMessage = message.trim();
   if (!/^[0-9a-f]{40}$/i.test(expectedHeadSha)) throw new Error('缺少有效的远端基线 SHA，请重新读取远端。');
   if (!commitMessage || commitMessage.length > 120) throw new Error('Commit message 必须为 1–120 个字符。');
@@ -85,7 +92,7 @@ export async function commitTechOsFiles(
     method: 'POST',
     body: JSON.stringify({
       base_tree: parent.tree.sha,
-      tree: blobs.map(file => ({ path: file.path, mode: '100644', type: 'blob', sha: file.sha })),
+      tree: [...blobs.map(file => ({ path: file.path, mode: '100644', type: 'blob', sha: file.sha })), ...movedPaths.map(path => ({ path, mode: '100644', type: 'blob', sha: null }))],
     }),
   });
   const commit = await githubRequest<GitCommitResponse>(normalizedTarget, token, request, '/git/commits', {
@@ -99,7 +106,7 @@ export async function commitTechOsFiles(
   return {
     sha: commit.sha,
     commitUrl: commit.html_url || `https://github.com/${encodeURIComponent(normalizedTarget.owner)}/${encodeURIComponent(normalizedTarget.repo)}/commit/${commit.sha}`,
-    changedPaths: normalizedUpdates.map(file => file.path),
+    changedPaths: [...normalizedUpdates.map(file => file.path), ...movedPaths],
   };
 }
 

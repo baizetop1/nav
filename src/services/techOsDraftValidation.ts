@@ -148,11 +148,13 @@ function validateState(state: FrontMatter, byId: Map<string, ParsedDraftEntity>,
   const route = byId.get(asString(state.main_route_id));
   if (route?.data.kind !== 'route' || route.data.status !== 'active' || route.data.main !== true) errors.push('state.yml 的 main_route_id 必须指向 Active Main Route。');
   const quest = byId.get(asString(state.current_quest_id));
-  if (quest?.data.kind !== 'quest' || quest.data.status !== 'active') errors.push('state.yml 的 current_quest_id 必须指向 Active Quest。');
-  else if (quest.data.route_id !== state.main_route_id) errors.push('Current Quest 必须属于 Main Route。');
+  const routeQuests = entities.filter(entity => entity.data.kind === 'quest' && entity.data.route_id === state.main_route_id);
+  const awaitingReview = state.current_quest_id === '' && routeQuests.length > 0 && routeQuests.every(entity => entity.data.status === 'completed' || entity.data.status === 'skipped');
+  if (!awaitingReview && (quest?.data.kind !== 'quest' || quest.data.status !== 'active')) errors.push('state.yml 的 current_quest_id 必须指向 Active Quest（任务全部结束后可留空等待复盘）。');
+  else if (quest && quest.data.route_id !== state.main_route_id) errors.push('Current Quest 必须属于 Main Route。');
 }
 
-function parseFrontMatter(source: string, label: string): { data: FrontMatter; body: string } {
+export function parseFrontMatter(source: string, label: string): { data: FrontMatter; body: string } {
   const normalized = source.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n');
   if (!normalized.startsWith('---\n')) throw new Error(`${label} 缺少开头 Front Matter。`);
   const end = normalized.indexOf('\n---\n', 4);
@@ -160,7 +162,7 @@ function parseFrontMatter(source: string, label: string): { data: FrontMatter; b
   return { data: parseFlatYaml(normalized.slice(4, end), label), body: normalized.slice(end + 5) };
 }
 
-function parseFlatYaml(source: string, label: string): FrontMatter {
+export function parseFlatYaml(source: string, label: string): FrontMatter {
   const data: FrontMatter = {};
   let listKey: string | null = null;
   for (const line of source.replace(/\r\n/g, '\n').split('\n')) {

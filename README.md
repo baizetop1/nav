@@ -1,5 +1,7 @@
 # 白泽个人导航 CMS
 
+> 2026-09-08：已增加网页确认完成 Quest / 启用路线、草稿自动保存、正式发博、统一加密同步、跨端续读与公开图谱。新版操作与边界见 [使用及验收说明](docs/completion-and-sync-guide.md)；其中说明优先于下文旧阶段的限制。验证：Node 24，`npm run verify`。
+
 一个基于 React、Vite 和 GitHub Pages 的个人导航站。网站内容可以在浏览器中编辑为本地草稿，并通过 GitHub API 提交回仓库，由 GitHub Actions 自动重新部署。
 
 ## 功能

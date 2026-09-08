@@ -150,6 +150,11 @@
   backdrop-filter: none;
 }
 
+.utility-launcher-row > section {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .utility-launcher-button {
   min-height: 2.75rem;
   padding-inline: 0.9rem;

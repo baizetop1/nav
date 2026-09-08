@@ -1,10 +1,14 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, BrainCircuit, Check, ChevronUp, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Network, Plus, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
+import { ArrowLeftRight, BrainCircuit, Check, ChevronUp, Coffee, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Network, Plus, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
 import { AdminPanel, type AdminSection } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { CommandPalette, type CommandPaletteAction } from './components/CommandPalette';
 import { HotFeedPanel } from './components/HotFeedPanel';
+import { ReadingPanel } from './components/ReadingPanel';
+import { RestOverlay } from './components/rest/RestOverlay';
+import type { TextIndex } from './types/text-network';
+const TextGraphPanel = lazy(() => import('./components/TextGraphPanel').then(module => ({ default: module.TextGraphPanel })));
 import { InboxPanel } from './components/inbox/InboxPanel';
 import { QrCodeModal } from './components/QrCodeModal';
 import { Sidebar } from './components/Sidebar';
@@ -29,10 +33,12 @@ import type { InboxSyncUiState } from './types/inbox-sync';
 import type { NavigationData, Site } from './types/navigation';
 import { loadSceneMode, SCENE_MODE_KEY, type SceneMode } from './types/scene';
 import type { TextNode } from './types/text-network';
+import { applySharedWorkspace, captureSharedWorkspace, configureSharedDefaults, mergeSharedWorkspace, WORKSPACE_EVENT } from './services/workspaceSync';
 
 const DRAFT_KEY = 'nav_cms_draft';
 const TEMP_TEXT_KEY = 'nav_temp_text';
 const TRANSLATOR_COLLAPSED_KEY = 'nav_translator_collapsed';
+configureSharedDefaults({ nav_cms_draft: JSON.stringify(defaultNavigationData), scene_mode: 'default', work_mode: 'false', theme: 'light', nav_temp_text: '', nav_translator_collapsed: 'false', nav_translation_history: '[]', nav_click_stats_v2: JSON.stringify({ version: 2, days: {} }), nav_temporary_url_visits_v1: JSON.stringify({ version: 1, records: [] }) });
 const TRANSLATION_LANGUAGES = [
   ['zh-CN', '简体中文'], ['en', '英语'], ['ja', '日语'], ['ko', '韩语'],
   ['fr', '法语'], ['de', '德语'], ['es', '西班牙语'], ['ru', '俄语'],
@@ -70,6 +76,12 @@ function loadInitialData(): NavigationData {
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
+  const [restOpen, setRestOpen] = useState(false);
+  const openRest = useCallback(() => { setIsSidebarOpen(false); setIsCommandPaletteOpen(false); setRestOpen(true); }, []);
+  const closeRest = useCallback(() => setRestOpen(false), []);
+  const [readingOpen, setReadingOpen] = useState(() => new URLSearchParams(window.location.search).get('reading') === '1');
+  const [graphOpen, setGraphOpen] = useState(false);
+  const [graphIndex, setGraphIndex] = useState<TextIndex>(() => loadCachedTextIndex() || { version: 2, generatedAt: new Date().toISOString(), nodes: [], edges: [] });
   const [data, setData] = useState<NavigationData>(loadInitialData);
   const [textNodes, setTextNodes] = useState<TextNode[]>(() => loadCachedTextIndex()?.nodes || []);
   const [activeCategory, setActiveCategory] = useState(defaultNavigationData.categories[0]?.id || '');
@@ -114,6 +126,19 @@ function App() {
   const inboxSyncBusy = inboxSyncState.phase === 'syncing' || inboxSyncState.phase === 'restoring';
 
   useEffect(() => {
+    const collect = () => { try { captureSharedWorkspace(); } catch { /* Sync reports storage failures explicitly. */ } };
+    const refresh = () => {
+      setData(loadInitialData()); setTempText(localStorage.getItem(TEMP_TEXT_KEY) || '');
+      setClickStats(loadClickStats()); setTemporaryVisits(loadTemporaryVisits()); setTranslationHistory(loadTranslationHistory()); setSceneMode(loadSceneMode());
+      const dark = localStorage.getItem('theme') === 'dark'; setIsDark(dark); document.documentElement.classList.toggle('dark', dark);
+      setIsTranslatorOpen(localStorage.getItem(TRANSLATOR_COLLAPSED_KEY) !== 'true');
+    };
+    collect(); const initialCapture = window.setTimeout(collect, 0); const timer = window.setInterval(collect, 2000);
+    window.addEventListener(WORKSPACE_EVENT, refresh);
+    return () => { clearTimeout(initialCapture); clearInterval(timer); window.removeEventListener(WORKSPACE_EVENT, refresh); };
+  }, []);
+
+  useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     const dark = savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
     setIsDark(dark);
@@ -144,7 +169,7 @@ function App() {
   useEffect(() => {
     let cancelled = false;
     void loadTextIndex().then(index => {
-      if (!cancelled && index) setTextNodes(index.nodes);
+      if (!cancelled && index) { setTextNodes(index.nodes); setGraphIndex(index); }
     });
     return () => { cancelled = true; };
   }, []);
@@ -271,6 +296,7 @@ function App() {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (document.querySelector('dialog[data-rest-state][open]')) return;
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault();
         setIsCommandPaletteOpen(current => !current);
@@ -375,6 +401,7 @@ function App() {
     setSceneMode(mode);
     localStorage.setItem(SCENE_MODE_KEY, mode);
     localStorage.setItem('work_mode', String(mode === 'work'));
+    if (mode === 'relax') openRest();
   };
 
   const openAdmin = (section: AdminSection = 'content') => {
@@ -555,11 +582,13 @@ function App() {
         token,
         password,
         loadStudyProgressStore(),
+        captureSharedWorkspace(),
       );
       const persistedItems = mergeInboxItems(result.items, loadInbox());
       const persistedStudyProgress = mergeStudyProgressStores(result.studyProgress, loadStudyProgressStore());
       const inboxSaved = saveInbox(persistedItems);
       const studySaved = saveStudyProgressStore(persistedStudyProgress);
+      applySharedWorkspace(mergeSharedWorkspace(result.workspace, captureSharedWorkspace()));
       if (inboxSaved) setInboxItems(persistedItems);
       if (!inboxSaved || !studySaved) {
         setInboxSyncState({
@@ -568,7 +597,7 @@ function App() {
         });
         return;
       }
-      const meta = createInboxSyncMeta(result.remoteItems, result.restoredAt, result.remoteStudyProgress);
+      const meta = createInboxSyncMeta(result.remoteItems, result.restoredAt, result.remoteStudyProgress, result.remoteWorkspace);
       if (!saveInboxSyncMeta(meta)) {
         setInboxSyncState({ phase: 'error', message: '数据已恢复到本机，但无法保存同步标记；内容没有丢失，云端也没有被修改。' });
         return;
@@ -576,7 +605,7 @@ function App() {
       setInboxSyncMeta(meta);
       setInboxSyncState({
         phase: 'synced',
-        message: `从云端恢复完成：${persistedItems.filter(item => !item.deletedAt).length} 条可见记录和 Tech OS 学习打卡已合并；未产生 GitHub 提交。`,
+        message: `从云端恢复完成：${persistedItems.filter(item => !item.deletedAt).length} 条可见记录、学习打卡、设置与阅读数据已合并；未产生 GitHub 提交。`,
       });
     } catch (error) {
       setInboxSyncState({ phase: 'error', message: error instanceof Error ? error.message : '云端恢复失败；本机内容已保留。' });
@@ -591,11 +620,13 @@ function App() {
         token,
         password,
         loadStudyProgressStore(),
+        captureSharedWorkspace(),
       );
       const persistedItems = mergeInboxItems(result.items, loadInbox());
       const persistedStudyProgress = mergeStudyProgressStores(result.studyProgress, loadStudyProgressStore());
       const inboxSaved = saveInbox(persistedItems);
       const studySaved = saveStudyProgressStore(persistedStudyProgress);
+      applySharedWorkspace(mergeSharedWorkspace(result.workspace, captureSharedWorkspace()));
       if (inboxSaved) setInboxItems(persistedItems);
       if (!inboxSaved || !studySaved) {
         setInboxSyncState({
@@ -605,13 +636,13 @@ function App() {
         });
         return;
       }
-      const meta = createInboxSyncMeta(result.items, result.syncedAt, result.studyProgress);
+      const meta = createInboxSyncMeta(result.items, result.syncedAt, result.studyProgress, result.workspace);
       if (!saveInboxSyncMeta(meta)) {
         setInboxSyncState({ phase: 'error', message: '共享数据已同步，但本机无法保存同步标记；内容没有丢失。', commitUrl: result.commitUrl });
         return;
       }
       setInboxSyncMeta(meta);
-      setInboxSyncState({ phase: 'synced', message: `合并同步完成：云端已写入 ${result.items.filter(item => !item.deletedAt).length} 条可见记录和 Tech OS 学习打卡；如请求期间又有本机改动，会继续显示为未同步。`, commitUrl: result.commitUrl });
+      setInboxSyncState({ phase: 'synced', message: `合并同步完成：云端已写入 ${result.items.filter(item => !item.deletedAt).length} 条可见记录，以及学习打卡、设置和阅读数据；如请求期间又有本机改动，会继续显示为未同步。`, commitUrl: result.commitUrl });
     } catch (error) {
       setInboxSyncState({ phase: 'error', message: error instanceof Error ? error.message : '共享数据同步失败；本机内容已保留。' });
     }
@@ -630,8 +661,10 @@ function App() {
     && !isTempTextQrOpen
     && incomingTempText === null
     && !qrSite
-    && !isCommandPaletteOpen;
+    && !isCommandPaletteOpen
+    && !restOpen;
   const commandActions: CommandPaletteAction[] = [
+    { id: 'rest', title: '休息一下', description: '看看小狐狸的月光泛舟，回来继续学习', keywords: ['rest', 'break', '休息', '放松', '动画', '泛舟'], icon: 'relax', run: openRest },
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
     { id: 'quick-capture', title: '快速记录', description: '立即写入本机 Inbox', keywords: ['capture', '记录', '收件箱', '+'], icon: 'add', run: openQuickCapture },
     { id: 'inbox', title: `打开 Inbox (${inboxCount})`, description: '查看、编辑、复制、归档本地记录', keywords: ['inbox', '收件箱', '稍后处理'], icon: 'inbox', run: openInbox },
@@ -647,13 +680,13 @@ function App() {
     { id: 'scene-default', title: '切换到日常场景', description: sceneMode === 'default' ? '当前正在使用' : '恢复完整背景与标准布局', keywords: ['scene', '场景', '日常'], icon: 'default', run: () => changeSceneMode('default') },
     { id: 'scene-work', title: '切换到工作场景', description: sceneMode === 'work' ? '当前正在使用' : '隐藏装饰并压缩卡片布局', keywords: ['scene', '场景', '工作'], icon: 'work', run: () => changeSceneMode('work') },
     { id: 'scene-study', title: '切换到学习场景', description: sceneMode === 'study' ? '当前正在使用' : '降低背景干扰并保持阅读感', keywords: ['scene', '场景', '学习'], icon: 'study', run: () => changeSceneMode('study') },
-    { id: 'scene-relax', title: '切换到休闲场景', description: sceneMode === 'relax' ? '当前正在使用' : '使用更温暖柔和的页面氛围', keywords: ['scene', '场景', '休闲'], icon: 'relax', run: () => changeSceneMode('relax') },
+    { id: 'scene-relax', title: '切换到休闲场景', description: '打开月光泛舟休息动画', keywords: ['scene', '场景', '休闲'], icon: 'relax', run: () => changeSceneMode('relax') },
     { id: 'github', title: '打开个人 GitHub', description: siteConfig.github, keywords: ['github', '代码'], icon: 'github', run: () => { window.open(siteConfig.github, '_blank', 'noopener,noreferrer'); } },
     ...(installPrompt ? [{ id: 'install', title: '安装白泽导航', description: '将当前站点安装到设备', keywords: ['pwa', '安装', 'install'], icon: 'install' as const, run: () => { void installApp(); } }] : []),
   ];
 
   if (isTechOsOpen) {
-    return <Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-[#dce6e1] text-sm font-medium text-[#456b68] dark:bg-[#07191d] dark:text-[#d9ddd6]">正在载入 Tech OS…</div>}>
+    return <><Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-[#dce6e1] text-sm font-medium text-[#456b68] dark:bg-[#07191d] dark:text-[#d9ddd6]">正在载入 Tech OS…</div>}>
       <TechOsWorkspace
         isDark={isDark}
         inboxCount={inboxCount}
@@ -662,9 +695,10 @@ function App() {
         onOpenInbox={() => { closeTechOs(); openInbox(); }}
         onArchiveInboxItems={archiveInboxItems}
         onClose={closeTechOs}
+        onRest={openRest}
         repository={siteConfig.repository}
       />
-    </Suspense>;
+    </Suspense><RestOverlay open={restOpen} onClose={closeRest} /></>;
   }
 
   return (
@@ -722,7 +756,7 @@ function App() {
           </div>
         </div>
 
-        <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-12">
+        <div className="navigation-content mx-auto max-w-7xl space-y-12 pb-24 lg:pb-12">
           {visibleTopicNodes.length > 0 && <section aria-labelledby="topic-search-heading" className="scroll-mt-28">
             <div className="category-heading baize-panel mb-4 inline-flex items-center gap-2 rounded-xl px-4 py-2">
               <Network size={17} className="text-[#4f8179] dark:text-[#c9a96b]" />
@@ -741,6 +775,11 @@ function App() {
           </section>}
           <div className="utility-launcher-row flex flex-wrap items-start gap-2 sm:gap-3">
             <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openTechOs}><BrainCircuit size={17} />Tech OS</button>
+            <button type="button" className="baize-button-secondary utility-launcher-button" data-rest-launcher onClick={openRest}><Coffee size={17} />休息一下</button>
+            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={readingOpen} onClick={() => setReadingOpen(value => !value)}><FileText size={17} />阅读中心</button>
+            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={graphOpen} onClick={() => setGraphOpen(value => !value)}><Network size={17} />知识图谱</button>
+            {readingOpen && <ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} />}
+            {graphOpen && <Suspense fallback={<p>正在加载图谱…</p>}><TextGraphPanel index={graphIndex} onClose={() => setGraphOpen(false)} /></Suspense>}
             <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />
             <TemporaryVisitsPanel
               visits={temporaryVisitSummaries}
@@ -877,6 +916,7 @@ function App() {
       {isTempTextQrOpen && <TempTextQrModal text={tempText} onClose={() => setIsTempTextQrOpen(false)} />}
       {incomingTempText !== null && <TextTransferReceiveModal text={incomingTempText} currentText={tempText} onClose={closeIncomingTransfer} onAccept={() => { setTempText(incomingTempText); setIsTempTextOpen(true); closeIncomingTransfer(); }} />}
       <CommandPalette open={isCommandPaletteOpen} sites={data.sites} categories={categories} textNodes={textNodes} actions={commandActions} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} />
+      <RestOverlay open={restOpen} onClose={closeRest} />
     </div>
   );
 }

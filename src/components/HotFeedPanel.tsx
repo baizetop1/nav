@@ -216,7 +216,7 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
   }
 
   return (
-    <section id="hot-feed" className="trending-feed-panel baize-panel basis-full rounded-2xl p-4 sm:p-5" aria-labelledby="hot-feed-title">
+    <section id="hot-feed" className="trending-feed-panel baize-panel min-w-0 max-w-full basis-full rounded-2xl p-4 sm:p-5" aria-labelledby="hot-feed-title">
       <header className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <h2 id="hot-feed-title" className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Flame size={17} />技术情报</h2>

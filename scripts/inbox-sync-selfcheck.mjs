@@ -84,7 +84,7 @@ assert.equal(serialized.includes('QUEST-001'), false);
 const decrypted = await decryptInbox(serialized, password);
 assert.deepEqual(decrypted.items, encryptedItems);
 assert.deepEqual(decrypted.studyProgress, mergedStudyProgress);
-assert.equal(decrypted.version, 2);
+assert.equal(decrypted.version, 3);
 await assert.rejects(() => decryptInbox(encrypted, 'a-valid-wrong-password'), /密码错误|已损坏/);
 
 const legacyStore = { version: 1, updatedAt: secondTime.toISOString(), items: [itemA] };
@@ -97,7 +97,7 @@ const legacyEncrypted = {
 const migratedLegacy = await decryptInbox(legacyEncrypted, password);
 assert.deepEqual(migratedLegacy.items, [itemA]);
 assert.deepEqual(migratedLegacy.studyProgress, emptyStudyProgressStore());
-assert.equal(migratedLegacy.version, 2);
+assert.equal(migratedLegacy.version, 3);
 
 const tampered = structuredClone(encrypted);
 const ciphertext = Buffer.from(tampered.ciphertext, 'base64');

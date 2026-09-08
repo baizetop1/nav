@@ -1,9 +1,15 @@
 import rawTechOsIndex from '../generated/tech-os-index.json';
 import type { TechOsEntity, TechOsFieldValue, TechOsIndex, TechOsKind } from '../types/tech-os';
 
-export const techOsIndex = rawTechOsIndex as TechOsIndex;
+export let techOsIndex = rawTechOsIndex as TechOsIndex;
 
 const entitiesById = new Map(techOsIndex.entities.map(entity => [entity.id, entity]));
+
+export function replaceTechOsIndex(index: TechOsIndex): void {
+  techOsIndex = index;
+  entitiesById.clear();
+  index.entities.forEach(entity => entitiesById.set(entity.id, entity));
+}
 
 export function getTechOsEntity(id: string | undefined): TechOsEntity | undefined {
   return id ? entitiesById.get(id) : undefined;

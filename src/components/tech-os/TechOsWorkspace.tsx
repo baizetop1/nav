@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
 import {
-  ArrowLeft, ArrowRight, BookOpen, BrainCircuit, ChevronDown, Compass, Database, FlaskConical,
+  ArrowLeft, ArrowRight, BookOpen, BrainCircuit, ChevronDown, Coffee, Compass, Database, FlaskConical,
   FolderKanban, GitCompareArrows, GitFork, HelpCircle, Inbox, LayoutDashboard, ListTree, Map as MapIcon, Menu, Milestone, Moon, Network, Sparkles, Sun, X,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import {
   getTechOsEntities, getTechOsEntity, getTechOsIds, getTechOsNumber, getTechOsRelations,
-  getTechOsString, resolveTechOsIds, techOsIndex,
+  getTechOsString, resolveTechOsIds, techOsIndex, replaceTechOsIndex,
 } from '../../services/techOs';
 import { createTechOsCaptureDraft, getTechOsCaptureKind, getVisibleInboxTags, TECH_OS_CAPTURE_LABELS } from '../../services/techOsCapture';
 import { buildTechOsLearningEngine } from '../../services/techOsLearningEngine';
@@ -27,6 +27,9 @@ import { TechOsRouteEnginePanel } from './TechOsRouteEnginePanel';
 import type { RouteEngineStageDraft } from './TechOsRouteEnginePanel';
 import { TechOsManualRoutePanel } from './TechOsManualRoutePanel';
 import { QuestStudyChecklist } from './QuestStudyChecklist';
+import { TechOsLifecyclePanel } from './TechOsLifecyclePanel';
+import { indexFromTechOsFiles } from '../../services/techOsLifecycle';
+import type { TechOsSourceFile } from '../../types/tech-os';
 
 type WorkspaceView = 'dashboard' | 'learning' | 'route-engine' | 'route' | 'quest' | 'inbox' | 'knowledge' | 'lab' | 'project' | 'map' | 'backlog' | 'repository';
 
@@ -38,6 +41,7 @@ interface TechOsWorkspaceProps {
   onOpenInbox: () => void;
   onArchiveInboxItems: (ids: string[]) => void;
   onClose: () => void;
+  onRest: () => void;
   repository: RepositoryTarget;
 }
 
@@ -67,7 +71,9 @@ const MODE_LABELS: Record<TechOsMode, { label: string; detail: string }> = {
   'keep-alive': { label: '保持活跃', detail: '只推进一个轻量动作' },
 };
 
-export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme, onOpenInbox, onArchiveInboxItems, onClose, repository }: TechOsWorkspaceProps) {
+export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme, onOpenInbox, onArchiveInboxItems, onClose, onRest, repository }: TechOsWorkspaceProps) {
+  const [revision, setRevision] = useState(0);
+  const updateIndex = (files: TechOsSourceFile[]) => { replaceTechOsIndex(indexFromTechOsFiles(files)); setRevision(value => value + 1); };
   const [activeView, setActiveView] = useState<WorkspaceView>('dashboard');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [focusedId, setFocusedId] = useState(techOsIndex.state.currentQuestId);
@@ -81,9 +87,9 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
   const routeQuests = mainRoute ? resolveTechOsIds(getTechOsIds(mainRoute, 'quest_ids')).sort((a, b) => (getTechOsNumber(a, 'order') || 0) - (getTechOsNumber(b, 'order') || 0)) : [];
   const completedQuests = routeQuests.filter(quest => quest.status === 'completed').length;
   const progress = routeQuests.length ? Math.round(completedQuests / routeQuests.length * 100) : 0;
-  const indexedInboxIds = useMemo(() => new Set(getTechOsEntities('inbox-item').flatMap(entity => [getTechOsString(entity, 'source_inbox_id'), getTechOsString(entity, 'origin_id')]).filter(Boolean)), []);
+  const indexedInboxIds = useMemo(() => new Set(getTechOsEntities('inbox-item').flatMap(entity => [getTechOsString(entity, 'source_inbox_id'), getTechOsString(entity, 'origin_id')]).filter(Boolean)), [revision]);
   const captureSourceFiles = useMemo(() => captureDrafts.map(capture => capture.file), [captureDrafts]);
-  const sessionIndex = useMemo(() => ({ ...techOsIndex, state: { ...techOsIndex.state, mode: sessionMode } }), [sessionMode]);
+  const sessionIndex = useMemo(() => ({ ...techOsIndex, state: { ...techOsIndex.state, mode: sessionMode } }), [sessionMode, revision]);
   const learningEngine = useMemo(() => buildTechOsLearningEngine(sessionIndex, inboxItems), [inboxItems, sessionIndex]);
   const candidateGroups = useMemo(() => buildRouteCandidateGroups(sessionIndex, learningEngine.routeSeedSignals), [learningEngine.routeSeedSignals, sessionIndex]);
   const candidateSourceFiles = useMemo(() => candidateDrafts.map(candidate => candidate.file), [candidateDrafts]);
@@ -121,10 +127,17 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
     navigate('repository');
   };
 
-  const handleCommittedPaths = (paths: string[]) => {
+  const handleCommittedPaths = (paths: string[], files: TechOsSourceFile[]) => {
     const committed = new Set(paths);
     const completed = captureDrafts.filter(capture => committed.has(capture.file.path));
-    if (completed.length) onArchiveInboxItems(completed.map(capture => capture.inboxItemId));
+    // Recover the source IDs from committed Markdown as well as this session's staging list.
+    // This keeps the archive action working when a saved draft was reopened after a refresh.
+    const restoredSourceIds = indexFromTechOsFiles(files).entities
+      .filter(entity => entity.kind === 'inbox-item' && committed.has(entity.sourcePath))
+      .map(entity => getTechOsString(entity, 'source_inbox_id') || getTechOsString(entity, 'origin_id'));
+    const archiveIds = [...new Set([...completed.map(capture => capture.inboxItemId), ...restoredSourceIds])]
+      .filter(id => inboxItems.some(item => item.id === id && !item.deletedAt && item.status === 'inbox'));
+    if (archiveIds.length) onArchiveInboxItems(archiveIds);
     setCaptureDrafts(current => current.filter(capture => !committed.has(capture.file.path)));
     setCandidateDrafts(current => current.filter(candidate => !committed.has(candidate.file.path)));
     setRouteEngineDrafts(current => current.filter(draft => !committed.has(draft.file.path)));
@@ -177,7 +190,7 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
         })}
       </nav>
       <div className="mt-auto space-y-2 border-t border-[#5f8f84]/15 pt-4 dark:border-[#c9a96b]/12">
-        <p className="px-3 text-[11px] leading-5 text-[#718986]">构建投影只读 · 源数据更新于 {techOsIndex.sourceUpdated}<br />候选路线仅在确认后加入内存草稿。</p>
+        <p className="px-3 text-[11px] leading-5 text-[#718986]">当前加载的数据 · 更新于 {techOsIndex.sourceUpdated}<br />候选路线仅在确认后加入本机草稿。</p>
         <button type="button" onClick={onClose} className="baize-button-secondary w-full"><ArrowLeft size={16} />返回导航</button>
       </div>
     </aside>
@@ -197,6 +210,7 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
             <ChevronDown size={13} className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2" />
           </label>
           <button type="button" className="baize-icon-button" onClick={onToggleTheme} aria-label={isDark ? '切换到浅色主题' : '切换到深色主题'}>{isDark ? <Sun size={19} /> : <Moon size={19} />}</button>
+          <button type="button" className="baize-button-secondary shrink-0 px-3" data-rest-launcher onClick={onRest} aria-label="休息一下"><Coffee size={19} /><span className="hidden sm:inline">休息一下</span></button>
           <button type="button" className="baize-icon-button" onClick={onClose} aria-label="返回导航"><X size={20} /></button>
         </div>
       </header>
@@ -206,14 +220,14 @@ export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme,
         {activeView === 'learning' && <div className="space-y-6"><TechOsLearningPanel engine={learningEngine} onOpenAction={openLearningAction} onOpenSource={openLearningSource} /><TechOsCandidatePanel groups={candidateGroups} stagedPaths={stagedCandidatePaths} created={techOsIndex.sourceUpdated} onOpenSource={openLearningSource} onOpenRepository={() => navigate('repository')} onStage={stageCandidate} /></div>}
         {activeView === 'route-engine' && <div className="space-y-6"><TechOsRouteEnginePanel review={completionReview} recommendations={nextRouteRecommendations} stagedPaths={stagedRouteEnginePaths} created={techOsIndex.sourceUpdated} onOpenSource={openLearningSource} onOpenRepository={() => navigate('repository')} onStage={stageRouteEngineDraft} /><TechOsManualRoutePanel reservedRouteIds={nextRouteRecommendations.map(item => item.routeId)} stagedPaths={stagedRouteEnginePaths} created={techOsIndex.sourceUpdated} onOpenRepository={() => navigate('repository')} onStage={stageRouteEngineDraft} /></div>}
         {activeView === 'route' && <RouteView mainRoute={mainRoute} quests={routeQuests} progress={progress} onFocus={focusEntity} />}
-        {activeView === 'quest' && <EntityCollection title="路线核心问题" description="核心问题必须采用问句；状态来自 Markdown，不在此页面修改。" entities={routeQuests} focusedId={focusedId} onFocus={focusEntity} />}
+        {activeView === 'quest' && <div className="space-y-6"><EntityCollection title="路线核心问题" description="先学习和打卡，再在下方填写结论与证据，确认正式完成。" entities={routeQuests} focusedId={focusedId} onFocus={focusEntity} /><TechOsLifecyclePanel target={repository} onUpdated={updateIndex} /></div>}
         {activeView === 'inbox' && <InboxView items={inboxItems} indexedInboxIds={indexedInboxIds} captureDrafts={captureDrafts} onStage={stageCapture} onOpenInbox={onOpenInbox} onOpenRepository={() => navigate('repository')} />}
         {activeView === 'knowledge' && <EntityCollection title="知识库" description="技术地图表达我知道什么；L2/L3 必须有真实证据。" entities={getTechOsEntities('knowledge')} focusedId={focusedId} onFocus={focusEntity} />}
         {activeView === 'lab' && <EntityCollection title="实验" description="实验状态完全来自记录；planned 不会被界面展示为完成。" entities={getTechOsEntities('lab')} focusedId={focusedId} onFocus={focusEntity} />}
         {activeView === 'project' && <EntityCollection title="项目" description="综合多个知识节点和实验的真实成果。" entities={getTechOsEntities('project')} focusedId={focusedId} onFocus={focusEntity} />}
         {activeView === 'map' && <TechMapView focusedId={focusedId} onFocus={focusEntity} />}
-        {activeView === 'backlog' && <BacklogView focusedId={focusedId} onFocus={focusEntity} />}
-        {activeView === 'repository' && <TechOsRepositoryPanel target={repository} seedDrafts={repositoryDraftFiles} onCommittedPaths={handleCommittedPaths} />}
+        {activeView === 'backlog' && <div className="space-y-6"><BacklogView focusedId={focusedId} onFocus={focusEntity} /><TechOsLifecyclePanel target={repository} onUpdated={updateIndex} /></div>}
+        {activeView === 'repository' && <TechOsRepositoryPanel target={repository} seedDrafts={repositoryDraftFiles} onCommittedPaths={handleCommittedPaths} onUpdated={updateIndex} />}
       </div>
     </main>
   </div>;
@@ -257,7 +271,7 @@ function Dashboard({ vision, mainRoute, currentQuest, routeQuests, progress, inb
 
     <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">{stats.map(stat => { const Icon = stat.icon; return <button key={stat.label} type="button" onClick={() => onNavigate(stat.view)} className="baize-panel rounded-2xl p-4 text-left transition hover:-translate-y-0.5 hover:border-[#5f8f84]/40"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#5f8f84]/10 text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#d8bd7e]"><Icon size={18} /></span><strong className="mt-4 block text-2xl">{stat.value}</strong><span className="text-xs text-[#718986]">{stat.label}</span></button>; })}</section>
 
-    <div className="grid gap-5 lg:grid-cols-2"><section className="baize-panel rounded-2xl p-5"><div className="flex items-center justify-between"><h2 className="font-bold">技术地图</h2><button type="button" className="text-xs font-semibold text-[#356b66] dark:text-[#d2b775]" onClick={() => onNavigate('map')}>打开地图</button></div><DomainSummary /></section><section className="baize-panel rounded-2xl p-5"><div className="flex items-center justify-between"><h2 className="font-bold">收件箱</h2><span className="text-2xl font-bold">{inboxCount}</span></div><p className="mt-3 text-sm leading-6 text-[#718986]">T3 复用 Phase C/D 本地收件箱，通过适配器把明确选择的记录加入仓库内存草稿。</p><button type="button" className="baize-button-secondary mt-4" onClick={() => onNavigate('inbox')}><Inbox size={16} />处理记录</button></section></div>
+    <div className="grid gap-5 lg:grid-cols-2"><section className="baize-panel rounded-2xl p-5"><div className="flex items-center justify-between"><h2 className="font-bold">技术地图</h2><button type="button" className="text-xs font-semibold text-[#356b66] dark:text-[#d2b775]" onClick={() => onNavigate('map')}>打开地图</button></div><DomainSummary /></section><section className="baize-panel rounded-2xl p-5"><div className="flex items-center justify-between"><h2 className="font-bold">收件箱</h2><span className="text-2xl font-bold">{inboxCount}</span></div><p className="mt-3 text-sm leading-6 text-[#718986]">T3 复用 Phase C/D 本地收件箱，通过适配器把明确选择的记录加入仓库本机草稿。</p><button type="button" className="baize-button-secondary mt-4" onClick={() => onNavigate('inbox')}><Inbox size={16} />处理记录</button></section></div>
   </div>;
 }
 
@@ -297,13 +311,13 @@ function InboxView({ items, indexedInboxIds, captureDrafts, onStage, onOpenInbox
   const visibleItems = items.filter(item => !item.deletedAt && item.status === 'inbox').sort((left, right) => right.updatedAt.localeCompare(left.updatedAt));
   const pendingIds = new Set(captureDrafts.map(capture => capture.inboxItemId));
   return <div className="mx-auto max-w-4xl space-y-5">
-    <section className="baize-panel rounded-3xl p-6 sm:p-8"><div className="flex flex-col gap-5 sm:flex-row sm:items-start"><span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#5f8f84]/10 text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#d8bd7e]"><Inbox size={26} /></span><div className="flex-1"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#718986]">T3 Capture Adapter</p><h2 className="mt-2 text-3xl font-bold">{visibleItems.length} 条待处理记录</h2><p className="mt-3 leading-7 text-[#64807c] dark:text-[#b8c6c1]">Question、Idea、Note、Link 继续保存在 Phase C/D 的同一个本地优先、加密同步 Inbox。处理操作只生成 Tech OS 内存草稿；提交成功后归档来源记录，不删除、不自动生成 Route Seed。</p><div className="mt-4 rounded-2xl border border-[#a85d50]/20 bg-[#a85d50]/7 p-4 text-sm leading-6 text-[#7d4b43] dark:text-[#e1a294]"><strong>公开边界：</strong>加入 Repository 的草稿会成为仓库中的明文 Markdown，并可能进入公开 Pages 前端投影。提交前请先确认内容适合公开。</div><div className="mt-5 flex flex-wrap gap-2"><button type="button" className="baize-button-primary" onClick={onOpenInbox}><Inbox size={17} />新建或编辑 Capture</button>{captureDrafts.length > 0 && <button type="button" className="baize-button-secondary" onClick={onOpenRepository}><GitCompareArrows size={16} />查看 {captureDrafts.length} 个待提交草稿</button>}</div></div></div></section>
+    <section className="baize-panel rounded-3xl p-6 sm:p-8"><div className="flex flex-col gap-5 sm:flex-row sm:items-start"><span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#5f8f84]/10 text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#d8bd7e]"><Inbox size={26} /></span><div className="flex-1"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#718986]">T3 Capture Adapter</p><h2 className="mt-2 text-3xl font-bold">{visibleItems.length} 条待处理记录</h2><p className="mt-3 leading-7 text-[#64807c] dark:text-[#b8c6c1]">Question、Idea、Note、Link 继续保存在 Phase C/D 的同一个本地优先、加密同步 Inbox。处理操作只生成 Tech OS 本机草稿；提交成功后归档来源记录，不删除、不自动生成 Route Seed。</p><div className="mt-4 rounded-2xl border border-[#a85d50]/20 bg-[#a85d50]/7 p-4 text-sm leading-6 text-[#7d4b43] dark:text-[#e1a294]"><strong>公开边界：</strong>加入 Repository 的草稿会成为仓库中的明文 Markdown，并可能进入公开 Pages 前端投影。提交前请先确认内容适合公开。</div><div className="mt-5 flex flex-wrap gap-2"><button type="button" className="baize-button-primary" onClick={onOpenInbox}><Inbox size={17} />新建或编辑 Capture</button>{captureDrafts.length > 0 && <button type="button" className="baize-button-secondary" onClick={onOpenRepository}><GitCompareArrows size={16} />查看 {captureDrafts.length} 个待提交草稿</button>}</div></div></div></section>
 
     {!visibleItems.length ? <EmptyState title="Inbox 已处理完" detail="在手机或导航底部使用快速记录，内容会先立即保存在本机。" /> : <section className="space-y-3">{visibleItems.map(item => {
       const captureKind = getTechOsCaptureKind(item);
       const pending = pendingIds.has(item.id);
       const indexed = indexedInboxIds.has(item.id);
-      return <article key={item.id} className="baize-panel rounded-2xl p-5"><div className="flex flex-wrap items-start gap-3"><span className="rounded-full bg-[#5f8f84]/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{TECH_OS_CAPTURE_LABELS[captureKind]}</span><div className="min-w-0 flex-1"><h3 className="break-words font-bold">{captureItemTitle(item)}</h3>{item.content && <p className="mt-2 whitespace-pre-wrap break-words text-sm leading-6 text-[#64807c] dark:text-[#b8c6c1]">{item.content}</p>}{item.url && <a href={item.url} target="_blank" rel="noreferrer" className="mt-2 block truncate text-xs text-[#356b66] hover:underline dark:text-[#d2b775]">{item.url}</a>}<div className="mt-3 flex flex-wrap gap-2">{getVisibleInboxTags(item.tags).map(tag => <span key={tag} className="baize-chip">#{tag}</span>)}</div></div></div><div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-[#5f8f84]/10 pt-4 dark:border-[#c9a96b]/10"><span className="break-all font-mono text-[10px] text-[#829793]">source_inbox_id: {item.id}</span>{indexed ? <span className="text-xs font-semibold text-[#315e5b] dark:text-[#c9d8d3]">已进入构建版本</span> : pending ? <button type="button" className="baize-button-secondary" onClick={onOpenRepository}><GitCompareArrows size={15} />已加入内存草稿</button> : <button type="button" className="baize-button-primary" onClick={() => onStage(item)}><ArrowRight size={15} />加入 Repository 草稿</button>}</div></article>;
+      return <article key={item.id} className="baize-panel rounded-2xl p-5"><div className="flex flex-wrap items-start gap-3"><span className="rounded-full bg-[#5f8f84]/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{TECH_OS_CAPTURE_LABELS[captureKind]}</span><div className="min-w-0 flex-1"><h3 className="break-words font-bold">{captureItemTitle(item)}</h3>{item.content && <p className="mt-2 whitespace-pre-wrap break-words text-sm leading-6 text-[#64807c] dark:text-[#b8c6c1]">{item.content}</p>}{item.url && <a href={item.url} target="_blank" rel="noreferrer" className="mt-2 block truncate text-xs text-[#356b66] hover:underline dark:text-[#d2b775]">{item.url}</a>}<div className="mt-3 flex flex-wrap gap-2">{getVisibleInboxTags(item.tags).map(tag => <span key={tag} className="baize-chip">#{tag}</span>)}</div></div></div><div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-[#5f8f84]/10 pt-4 dark:border-[#c9a96b]/10"><span className="break-all font-mono text-[10px] text-[#829793]">source_inbox_id: {item.id}</span>{indexed ? <span className="text-xs font-semibold text-[#315e5b] dark:text-[#c9d8d3]">已进入构建版本</span> : pending ? <button type="button" className="baize-button-secondary" onClick={onOpenRepository}><GitCompareArrows size={15} />已加入本机草稿</button> : <button type="button" className="baize-button-primary" onClick={() => onStage(item)}><ArrowRight size={15} />加入 Repository 草稿</button>}</div></article>;
     })}</section>}
   </div>;
 }

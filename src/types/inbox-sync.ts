@@ -3,6 +3,7 @@ export interface InboxSyncMeta {
   lastSyncedAt: string;
   itemVersions: Record<string, string>;
   studyVersions: Record<string, string>;
+  workspaceFingerprint?: string;
 }
 
 export interface InboxSyncUiState {

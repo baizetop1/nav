@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { completeQuest, activateRoute, indexFromTechOsFiles } from '../src/services/techOsLifecycle.ts';
+import { mergeTechOsWorkingCopy, loadTechOsWorkingCopy, saveTechOsWorkingCopy } from '../src/services/techOsDraftStore.ts';
+
+const source = JSON.parse(fs.readFileSync(new URL('../src/generated/tech-os-index.json', import.meta.url), 'utf8')).files;
+let files = source;
+assert.throws(() => completeQuest(files, 'QUEST-001', '', ''), /证据/);
+const first = completeQuest(files, 'QUEST-001', '通过抓包确认浏览器区分文档导航和资源请求。', '实验记录：Network.har，环境与结果已保存');
+assert.equal(indexFromTechOsFiles(first.files).state.currentQuestId, 'QUEST-002');
+assert.ok(first.movedPaths.includes('tech-os/quests/active/QUEST-001.md'));
+assert.equal(first.files.filter(file => file.path.endsWith('/QUEST-001.md')).length, 1);
+assert.throws(() => completeQuest(first.files, 'QUEST-001', '再次确认完成的这条核心问题。', '真实实验记录'), /仅能完成/);
+files = first.files;
+for (let i = 2; i <= 8; i++) files = completeQuest(files, `QUEST-${String(i).padStart(3, '0')}`, '真实学习后形成的机制解释与结论。', '实验产物路径与复现步骤').files;
+assert.equal(indexFromTechOsFiles(files).state.currentQuestId, '');
+assert.equal(indexFromTechOsFiles(files).entities.filter(entity => entity.kind === 'quest' && entity.status === 'completed').length, 8);
+const newRoute = source.find(file => file.path.includes('/ROUTE-001.md'));
+const backlog = { path: 'tech-os/routes/backlog/ROUTE-002.md', content: newRoute.content.replace('id: ROUTE-001', 'id: ROUTE-002').replace('status: active', 'status: backlog').replace('main: true', 'main: false').replace(/quest_ids:[\s\S]*?(?=route_seed_ids:)/, 'quest_ids: []\n') };
+for (const initial of [source, files]) {
+  const plan = activateRoute([...initial, backlog], 'ROUTE-002', ['CPU 如何执行一条指令？', '如何验证寄存器状态？']);
+  const index = indexFromTechOsFiles(plan.files);
+  assert.equal(index.state.mainRouteId, 'ROUTE-002');
+  assert.equal(index.state.currentQuestId, 'QUEST-009');
+  assert.equal(index.entities.filter(entity => entity.kind === 'route' && entity.fields.main === true).length, 1);
+  assert.equal(index.entities.find(entity => entity.id === 'ROUTE-001').status, initial === source ? 'paused' : 'completed');
+}
+const base = [{ path: 'tech-os/state.yml', content: 'original' }];
+assert.deepEqual(mergeTechOsWorkingCopy(base, base, [{ ...base[0], content: 'remote' }]).files[0].content, 'remote');
+assert.equal(mergeTechOsWorkingCopy(base, [{ ...base[0], content: 'local' }], [{ ...base[0], content: 'remote' }]).conflicts.length, 1);
+assert.equal(mergeTechOsWorkingCopy(base, base, []).files.length, 0, 'remote move must not resurrect the old file');
+const data = new Map(), storage = { getItem: key => data.get(key) || null, setItem: (key, value) => data.set(key, value) };
+const target = { owner: 'a', repo: 'b', branch: 'main' };
+assert.equal(saveTechOsWorkingCopy(target, { version: 1, base, files: [{ ...base[0], content: 'unsaved edit' }] }, storage), true);
+assert.equal(loadTechOsWorkingCopy(target, base, storage).files[0].content, 'unsaved edit');
+assert.equal(loadTechOsWorkingCopy({ ...target, repo: 'other' }, base, storage).files[0].content, 'original');
+const storageKey = [...data.keys()][0];
+storage.setItem(storageKey, '{broken draft bytes');
+assert.equal(loadTechOsWorkingCopy(target, base, storage).files[0].content, 'original');
+assert.equal(storage.getItem(storageKey), '{broken draft bytes');
+assert.equal(saveTechOsWorkingCopy(target, { version: 1, base, files: base }, storage), true);
+assert.equal(storage.getItem(`${storageKey}:recovery`), '{broken draft bytes');
+storage.setItem(storageKey, '{another broken draft');
+assert.equal(saveTechOsWorkingCopy(target, { version: 1, base, files: base }, storage), false, 'never overwrite a second unreadable copy or its previous recovery');
+assert.equal(storage.getItem(storageKey), '{another broken draft');
+console.log('Lifecycle, final quest, route activation, three-way merge and persistent drafts passed.');

@@ -11,10 +11,12 @@ import {
 } from './techOsStudyProgress.ts';
 import type { InboxItem, InboxStore } from '../types/inbox.ts';
 import type { InboxSyncMeta } from '../types/inbox-sync.ts';
+import { mergeSharedWorkspace, parseSharedWorkspace, workspaceFingerprint, type SharedWorkspace } from './workspaceSync.ts';
+const emptyWorkspace = (): SharedWorkspace => ({ version: 1, entries: {}, history: {} });
 
 export const ENCRYPTED_INBOX_FORMAT = 'baize-inbox' as const;
 export const ENCRYPTED_INBOX_VERSION = 1 as const;
-export const PRIVATE_SHARED_DATA_VERSION = 2 as const;
+export const PRIVATE_SHARED_DATA_VERSION = 3 as const;
 export const INBOX_SYNC_META_KEY = 'baize_inbox_sync_meta_v1';
 const INBOX_ENCRYPTION_CONTEXT = 'baize-nav-inbox-v1';
 
@@ -29,11 +31,13 @@ export interface PrivateSharedDataStore {
   updatedAt: string;
   items: InboxItem[];
   studyProgress: StudyProgressStore;
+  workspace: SharedWorkspace;
 }
 
 export interface InboxSyncResult {
   items: InboxItem[];
   studyProgress: StudyProgressStore;
+  workspace: SharedWorkspace;
   syncedAt: string;
   commitUrl: string;
 }
@@ -43,6 +47,8 @@ export interface InboxRestoreResult {
   studyProgress: StudyProgressStore;
   remoteItems: InboxItem[];
   remoteStudyProgress: StudyProgressStore;
+  workspace: SharedWorkspace;
+  remoteWorkspace: SharedWorkspace;
   restoredAt: string;
 }
 
@@ -66,16 +72,19 @@ export async function encryptInbox(
   password: string,
   now = new Date(),
   studyProgress: StudyProgressStore = emptyStudyProgressStore(),
+  workspace: SharedWorkspace = emptyWorkspace(),
 ): Promise<EncryptedInbox> {
   const updatedAt = now.toISOString();
   if (!parseInboxStore({ version: 1, updatedAt, items })) throw new Error('本机 Inbox 数据无效，已停止加密同步。');
   const parsedStudyProgress = parseStudyProgressStore(studyProgress);
   if (!parsedStudyProgress) throw new Error('本机学习进度数据无效，已停止加密同步。');
+  if (!parseSharedWorkspace(workspace)) throw new Error('本机共享设置无效，已停止加密同步。');
   const store: PrivateSharedDataStore = {
     version: PRIVATE_SHARED_DATA_VERSION,
     updatedAt,
     items,
     studyProgress: parsedStudyProgress,
+    workspace,
   };
   return {
     format: ENCRYPTED_INBOX_FORMAT,
@@ -108,6 +117,7 @@ export async function restoreInboxFromCloud(
   token: string,
   password: string,
   localStudyProgress: StudyProgressStore = emptyStudyProgressStore(),
+  localWorkspace: SharedWorkspace = emptyWorkspace(),
 ): Promise<InboxRestoreResult> {
   const remote = await getEncryptedInbox(target, token);
   if (!remote) throw new Error('远端还没有加密共享数据。请先在已有设备执行“合并并同步”。');
@@ -117,6 +127,8 @@ export async function restoreInboxFromCloud(
     studyProgress: mergeStudyProgressStores(localStudyProgress, remoteStore.studyProgress),
     remoteItems: remoteStore.items,
     remoteStudyProgress: remoteStore.studyProgress,
+    workspace: mergeSharedWorkspace(localWorkspace, remoteStore.workspace),
+    remoteWorkspace: remoteStore.workspace,
     restoredAt: remoteStore.updatedAt,
   };
 }
@@ -127,26 +139,30 @@ export async function synchronizeInbox(
   token: string,
   password: string,
   localStudyProgress: StudyProgressStore = emptyStudyProgressStore(),
+  localWorkspace: SharedWorkspace = emptyWorkspace(),
 ): Promise<InboxSyncResult> {
   const remote = await getEncryptedInbox(target, token);
   const remoteStore = remote ? await decryptInbox(remote.payload, password) : null;
   const items = mergeInboxItems(localItems, remoteStore?.items || []);
   const studyProgress = mergeStudyProgressStores(localStudyProgress, remoteStore?.studyProgress || emptyStudyProgressStore());
-  const payload = await encryptInbox(items, password, new Date(), studyProgress);
+  const workspace = mergeSharedWorkspace(localWorkspace, remoteStore?.workspace || emptyWorkspace());
+  const payload = await encryptInbox(items, password, new Date(), studyProgress, workspace);
   const commitUrl = await saveEncryptedInbox(target, token, payload, remote?.sha);
-  return { items, studyProgress, syncedAt: payload.encryptedAt, commitUrl };
+  return { items, studyProgress, workspace, syncedAt: payload.encryptedAt, commitUrl };
 }
 
 export function createInboxSyncMeta(
   items: InboxItem[],
   syncedAt = new Date().toISOString(),
   studyProgress: StudyProgressStore = emptyStudyProgressStore(),
+  workspace: SharedWorkspace = emptyWorkspace(),
 ): InboxSyncMeta {
   return {
     version: 2,
     lastSyncedAt: syncedAt,
     itemVersions: Object.fromEntries(items.map(item => [item.id, inboxItemSyncVersion(item)])),
     studyVersions: Object.fromEntries(flattenStudyProgress(studyProgress).map(([key, progress]) => [key, studyProgressSyncVersion(progress)])),
+    workspaceFingerprint: workspaceFingerprint(workspace),
   };
 }
 
@@ -169,6 +185,7 @@ export function parseInboxSyncMeta(value: unknown): InboxSyncMeta | null {
     lastSyncedAt: meta.lastSyncedAt,
     itemVersions: { ...meta.itemVersions },
     studyVersions: { ...meta.studyVersions },
+    ...(typeof meta.workspaceFingerprint === 'string' ? { workspaceFingerprint: meta.workspaceFingerprint } : {}),
   };
 }
 
@@ -216,23 +233,27 @@ function normalizeLegacyInboxStore(store: InboxStore): PrivateSharedDataStore {
     updatedAt: store.updatedAt,
     items: store.items,
     studyProgress: emptyStudyProgressStore(),
+    workspace: emptyWorkspace(),
   };
 }
 
 function parsePrivateSharedDataStore(value: unknown): PrivateSharedDataStore | null {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
   const candidate = value as Record<string, unknown>;
-  const expectedKeys = ['version', 'updatedAt', 'items', 'studyProgress'];
+  const expectedKeys = ['version', 'updatedAt', 'items', 'studyProgress', ...(candidate.version === 3 ? ['workspace'] : [])];
   if (Object.keys(candidate).some(key => !expectedKeys.includes(key)) || expectedKeys.some(key => !(key in candidate))) return null;
-  if (candidate.version !== PRIVATE_SHARED_DATA_VERSION || !isValidTimestamp(candidate.updatedAt)) return null;
+  if ((candidate.version !== 2 && candidate.version !== PRIVATE_SHARED_DATA_VERSION) || !isValidTimestamp(candidate.updatedAt)) return null;
   const inboxStore = parseInboxStore({ version: 1, updatedAt: candidate.updatedAt, items: candidate.items });
   const studyProgress = parseStudyProgressStore(candidate.studyProgress);
   if (!inboxStore || !studyProgress) return null;
+  const workspace = candidate.version === 2 ? emptyWorkspace() : parseSharedWorkspace(candidate.workspace);
+  if (!workspace) return null;
   return {
     version: PRIVATE_SHARED_DATA_VERSION,
     updatedAt: candidate.updatedAt,
     items: inboxStore.items,
     studyProgress,
+    workspace,
   };
 }
 

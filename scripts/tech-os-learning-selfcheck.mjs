@@ -23,7 +23,7 @@ const explore = buildTechOsLearningEngine(index, inbox);
 assert.equal(explore.mode, 'explore');
 assert.equal(explore.nextAction?.kind, 'continue-quest');
 assert.equal(explore.nextAction?.targetEntityId, 'QUEST-001');
-assert.match(explore.nextAction?.detail || '', /浏览器开发者工具/);
+assert.match(explore.nextAction?.detail || '', /DevTools Network|浏览器开发者工具/);
 assert.match(explore.nextAction?.reason || '', /Active Quest/);
 assert.ok(explore.alternatives.some(action => action.kind === 'run-lab'));
 assert.ok(explore.alternatives.some(action => action.kind === 'answer-question'));

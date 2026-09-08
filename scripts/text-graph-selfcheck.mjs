@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import { selectTextGraph } from '../src/services/textGraph.ts';
+const node = (id, type, date) => ({ id, title: id, type, url: `https://example.com/${id}`, tags: [], related: [], updatedAt: date });
+const index = { version: 2, nodes: [node('topic', 'topic', '2026-09-08'), node('a', 'post', '2026-09-07'), node('b', 'post', '2020-01-01'), node('p', 'project', '2026-09-06')], edges: [{ from: 'a', to: 'topic', type: 'topic' }, { from: 'a', to: 'b', type: 'wiki' }, { from: 'p', to: 'a', type: 'related' }, { from: 'missing', to: 'a', type: 'related' }] };
+assert.equal(selectTextGraph(index).edges.length, 3);
+assert.equal(selectTextGraph(index, { topicId: 'topic' }).nodes.length, 2);
+assert.equal(selectTextGraph(index, { type: 'post' }).nodes.length, 2);
+assert.equal(selectTextGraph(index, { oneHop: true, focusId: 'b' }).nodes.length, 2);
+assert.equal(selectTextGraph(index, { recentDays: 7 }, new Date('2026-09-08')).nodes.length, 3);
+assert.equal(selectTextGraph({ ...index, edges: [] }).nodes.length, 4);
+assert.equal(selectTextGraph({ ...index, nodes: [] }).nodes.length, 0);
+console.log('Graph: topic, one-hop, types, recent updates, dangling edges and empty data passed.');

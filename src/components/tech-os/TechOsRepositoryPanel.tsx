@@ -6,21 +6,27 @@ import { techOsIndex } from '../../services/techOs';
 import type { RepositoryTarget } from '../../services/github';
 import type { TechOsSourceFile } from '../../types/tech-os';
 import type { TechOsFileDiff, TechOsRepositorySnapshot } from '../../types/tech-os-repository';
+import { loadTechOsWorkingCopy, mergeTechOsWorkingCopy, saveTechOsWorkingCopy } from '../../services/techOsDraftStore';
 
 interface TechOsRepositoryPanelProps {
   target: RepositoryTarget;
   seedDrafts?: TechOsSourceFile[];
-  onCommittedPaths?: (paths: string[]) => void;
+  onCommittedPaths?: (paths: string[], files: TechOsSourceFile[]) => void;
+  onUpdated?: (files: TechOsSourceFile[]) => void;
 }
 
 type PanelPhase = 'idle' | 'loading' | 'ready' | 'committing' | 'success' | 'error';
 
 const CONFIRMATION = 'COMMIT TECH-OS';
 
-export function TechOsRepositoryPanel({ target, seedDrafts = [], onCommittedPaths }: TechOsRepositoryPanelProps) {
+export function TechOsRepositoryPanel({ target, seedDrafts = [], onCommittedPaths, onUpdated }: TechOsRepositoryPanelProps) {
   const bundledFiles = useMemo(() => getBundledTechOsFiles(techOsIndex), []);
   const bundledByPath = useMemo(() => new Map(bundledFiles.map(file => [file.path, file.content])), [bundledFiles]);
-  const [drafts, setDrafts] = useState<Record<string, string>>(() => Object.fromEntries(bundledFiles.map(file => [file.path, file.content])));
+  const [savedCopy] = useState(() => loadTechOsWorkingCopy(target, bundledFiles));
+  const [base, setBase] = useState(savedCopy.base);
+  const [drafts, setDrafts] = useState<Record<string, string>>(() => Object.fromEntries(savedCopy.files.map(file => [file.path, file.content])));
+  const [conflicts, setConflicts] = useState<string[]>(savedCopy.conflicts || []);
+  const [saved, setSaved] = useState(true);
   const [token, setToken] = useState('');
   const [snapshot, setSnapshot] = useState<TechOsRepositorySnapshot | null>(null);
   const [selectedPath, setSelectedPath] = useState('tech-os/state.yml');
@@ -35,6 +41,13 @@ export function TechOsRepositoryPanel({ target, seedDrafts = [], onCommittedPath
   const changedFiles = diffs.filter(diff => diff.localContent !== null && (diff.status === 'modified' || diff.status === 'local-only'));
   const selected = diffs.find(diff => diff.path === selectedPath) || diffs[0];
   const counts = countStatuses(diffs);
+
+  useEffect(() => { setSaved(saveTechOsWorkingCopy(target, { version: 1, base, files: draftFiles, conflicts })); }, [base, draftFiles, conflicts, target]);
+  useEffect(() => {
+    const protect = (event: BeforeUnloadEvent) => { if (!saved) { event.preventDefault(); event.returnValue = ''; } };
+    window.addEventListener('beforeunload', protect);
+    return () => window.removeEventListener('beforeunload', protect);
+  }, [saved]);
 
   useEffect(() => {
     if (!seedDrafts.length) return;
@@ -57,8 +70,12 @@ export function TechOsRepositoryPanel({ target, seedDrafts = [], onCommittedPath
     setMessage('正在读取 branch head、Git tree 与 Tech OS blobs…');
     try {
       const remote = await readTechOsRepository(target, token);
+      const merged = mergeTechOsWorkingCopy(base, draftFiles, remote.files);
+      setDrafts(Object.fromEntries(merged.files.map(file => [file.path, file.content])));
+      setConflicts(current => [...new Set([...current, ...merged.conflicts])].filter(path => merged.files.find(file => file.path === path)?.content !== remote.files.find(file => file.path === path)?.content));
+      setBase(remote.files);
       setSnapshot(remote);
-      const nextDiffs = diffTechOsFiles(draftFiles, remote.files);
+      const nextDiffs = diffTechOsFiles(merged.files, remote.files);
       setSelectedPath(nextDiffs.find(diff => diff.status !== 'same')?.path || nextDiffs[0]?.path || 'tech-os/state.yml');
       setPhase('ready');
       setMessage(`远端读取完成：${remote.files.length} 个受管文件，基线 ${remote.headSha.slice(0, 8)}。`);
@@ -69,7 +86,7 @@ export function TechOsRepositoryPanel({ target, seedDrafts = [], onCommittedPath
   };
 
   const publishChanges = async () => {
-    if (!snapshot || !validation.valid || !changedFiles.length || confirmation !== CONFIRMATION) return;
+    if (!snapshot || phase === 'loading' || phase === 'committing' || !validation.valid || !changedFiles.length || conflicts.length || confirmation !== CONFIRMATION) return;
     if (!window.confirm(`将向 ${target.owner}/${target.repo}:${target.branch} 原子提交 ${changedFiles.length} 个 Tech OS 文件。确定继续吗？`)) return;
     setPhase('committing');
     setMessage('正在重新检查 branch head 并创建原子 commit…');
@@ -81,12 +98,13 @@ export function TechOsRepositoryPanel({ target, seedDrafts = [], onCommittedPath
         changedFiles.map(diff => ({ path: diff.path, content: diff.localContent || '' })),
         commitMessage,
       );
-      const remote = await readTechOsRepository(target, token);
-      setSnapshot(remote);
+      setSnapshot(null);
+      setBase(draftFiles);
       setConfirmation('');
       setPhase('success');
       setMessage(`提交成功：${result.sha.slice(0, 8)} · ${result.changedPaths.length} 个文件。${result.commitUrl}`);
-      onCommittedPaths?.(result.changedPaths);
+      onCommittedPaths?.(result.changedPaths, draftFiles);
+      onUpdated?.(draftFiles);
     } catch (error) {
       setPhase('error');
       setMessage(errorMessage(error));
@@ -101,6 +119,8 @@ export function TechOsRepositoryPanel({ target, seedDrafts = [], onCommittedPath
   });
 
   return <div className="min-w-0 max-w-full space-y-6 overflow-x-hidden">
+    <p role="status" className={`rounded-xl p-3 text-sm ${saved ? 'bg-[#5f8f84]/10' : 'bg-red-100 text-red-800'}`}>{saved ? '编辑草稿已自动保存在本机，刷新或切换页面不会丢失；Token 不保存。' : '本机保存失败（可能空间不足）。请保持页面打开并复制备份，避免丢失。'}</p>
+    {conflicts.length > 0 && <section className="baize-panel rounded-xl p-4"><h3 className="font-bold text-[#985247]">检测到双方同时修改，提交已锁定</h3>{!snapshot && <p className="mt-2 text-sm">请重新读取远端，检查双方内容后再解决冲突。</p>}{conflicts.map(path => <div key={path} className="mt-3 space-y-2"><p className="break-all text-xs">{path}</p><button className="baize-button-secondary" type="button" disabled={!snapshot || phase === 'loading' || phase === 'committing'} onClick={() => { const remote = snapshot?.files.find(file => file.path === path); setDrafts(current => { const copy = { ...current }; if (remote) copy[path] = remote.content; else delete copy[path]; return copy; }); setConflicts(current => current.filter(item => item !== path)); }}>采用远端（包括移动后的状态）</button><button className="baize-button-secondary ml-2" type="button" disabled={!snapshot || phase === 'loading' || phase === 'committing'} onClick={() => { if (window.confirm('已在下方检查差异，确认保留此文件的本机内容？')) setConflicts(current => current.filter(item => item !== path)); }}>确认保留本机</button></div>)}</section>}
     <section className="baize-panel rounded-2xl p-5 sm:p-6">
       <div className="flex flex-col gap-5 lg:flex-row lg:items-end">
         <div className="flex-1"><div className="flex items-center gap-3"><span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#5f8f84]/10 text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#d8bd7e]"><ShieldCheck size={22} /></span><div><h2 className="text-xl font-bold">Repository Adapter</h2><p className="text-xs text-[#718986]">{target.owner}/{target.repo} · {target.branch} · 仅管理 tech-os/</p></div></div><p className="mt-4 max-w-3xl text-sm leading-6 text-[#64807c] dark:text-[#b8c6c1]">Token 只保存在当前 React 内存。读取不会修改远端；提交前会验证完整草稿、显示差异、重新检查 branch head，并使用单个非 force commit 更新分支。</p></div>
@@ -120,10 +140,10 @@ export function TechOsRepositoryPanel({ target, seedDrafts = [], onCommittedPath
       <section className="baize-panel self-start rounded-2xl p-4 xl:sticky xl:top-24"><div className="flex items-center justify-between px-2"><h3 className="font-bold">逐文件差异</h3><span className="text-xs text-[#718986]">{diffs.length}</span></div><div className="mt-4 max-h-[68vh] space-y-2 overflow-y-auto pr-1">{diffs.map(diff => <button key={diff.path} type="button" onClick={() => setSelectedPath(diff.path)} className={`w-full rounded-xl border p-3 text-left transition ${selected?.path === diff.path ? 'border-[#5f8f84]/40 bg-[#5f8f84]/10 dark:border-[#c9a96b]/35 dark:bg-[#c9a96b]/8' : 'border-[#5f8f84]/10 hover:border-[#5f8f84]/30 dark:border-[#c9a96b]/10'}`}><span className="block truncate font-mono text-[11px]">{diff.path}</span><StatusBadge status={diff.status} /></button>)}</div></section>
 
       <section className="min-w-0 space-y-5">
-        {selected ? <div className="baize-panel rounded-2xl p-5"><div className="flex flex-wrap items-center justify-between gap-3"><div><p className="break-all font-mono text-xs text-[#718986]">{selected.path}</p><div className="mt-2"><StatusBadge status={selected.status} /></div></div><div className="flex flex-wrap gap-2">{bundledByPath.has(selected.path) && <button type="button" className="baize-button-secondary" onClick={() => setDraft(selected.path, bundledByPath.get(selected.path) || '')}><RotateCcw size={15} />恢复构建版本</button>}{selected.remoteContent !== null && <button type="button" className="baize-button-secondary" onClick={() => setDraft(selected.path, selected.remoteContent || '')}>采用远端</button>}{selected.status === 'remote-only' && drafts[selected.path] !== undefined && <button type="button" className="baize-danger-button" onClick={() => removeDraft(selected.path)}>移出草稿</button>}</div></div><div className="mt-5 grid gap-4 lg:grid-cols-2"><label className="min-w-0"><span className="mb-2 block text-xs font-semibold text-[#64807c]">内存草稿</span><textarea className="baize-input min-h-[30rem] resize-y font-mono text-xs leading-5" value={drafts[selected.path] ?? ''} readOnly={drafts[selected.path] === undefined} onChange={event => setDraft(selected.path, event.target.value)} placeholder="先采用远端，才会加入可编辑草稿。" /></label><label className="min-w-0"><span className="mb-2 block text-xs font-semibold text-[#64807c]">远端基线 {snapshot ? snapshot.headSha.slice(0, 8) : '未读取'}</span><textarea className="baize-input min-h-[30rem] resize-y font-mono text-xs leading-5 opacity-80" value={selected.remoteContent ?? ''} readOnly placeholder="读取远端后显示。" /></label></div></div> : <EmptyRepository />}
+        {selected ? <div className="baize-panel rounded-2xl p-5"><div className="flex flex-wrap items-center justify-between gap-3"><div><p className="break-all font-mono text-xs text-[#718986]">{selected.path}</p><div className="mt-2"><StatusBadge status={selected.status} /></div></div><div className="flex flex-wrap gap-2">{bundledByPath.has(selected.path) && <button type="button" className="baize-button-secondary" onClick={() => setDraft(selected.path, bundledByPath.get(selected.path) || '')}><RotateCcw size={15} />恢复构建版本</button>}{selected.remoteContent !== null && <button type="button" className="baize-button-secondary" onClick={() => setDraft(selected.path, selected.remoteContent || '')}>采用远端</button>}{selected.status === 'remote-only' && drafts[selected.path] !== undefined && <button type="button" className="baize-danger-button" onClick={() => removeDraft(selected.path)}>移出草稿</button>}</div></div><div className="mt-5 grid gap-4 lg:grid-cols-2"><label className="min-w-0"><span className="mb-2 block text-xs font-semibold text-[#64807c]">本机草稿</span><textarea aria-label="本机草稿" className="baize-input min-h-[30rem] resize-y font-mono text-xs leading-5" value={drafts[selected.path] ?? ''} readOnly={drafts[selected.path] === undefined} onChange={event => setDraft(selected.path, event.target.value)} placeholder="先采用远端，才会加入可编辑草稿。" /></label><label className="min-w-0"><span className="mb-2 block text-xs font-semibold text-[#64807c]">远端基线 {snapshot ? snapshot.headSha.slice(0, 8) : '未读取'}</span><textarea aria-label="远端基线" className="baize-input min-h-[30rem] resize-y font-mono text-xs leading-5 opacity-80" value={selected.remoteContent ?? ''} readOnly placeholder="读取远端后显示。" /></label></div></div> : <EmptyRepository />}
 
         <div className="baize-panel rounded-2xl p-5"><div className="flex items-center gap-2"><FileDiff size={18} className={validation.valid ? 'text-[#356b66] dark:text-[#d8bd7e]' : 'text-[#a85d50]'} /><h3 className="font-bold">提交前校验</h3><span className="ml-auto text-xs text-[#718986]">{validation.entityCount} entities</span></div>{validation.valid ? <p className="mt-3 flex items-center gap-2 text-sm text-[#315e5b] dark:text-[#c9d8d3]"><CheckCircle2 size={16} />完整草稿通过浏览器端 schema、关系和 Main Route 校验。</p> : <div className="mt-3"><p className="flex items-center gap-2 text-sm text-[#985247] dark:text-[#e1a294]"><AlertTriangle size={16} />草稿无效，禁止提交。</p><ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-[#985247] dark:text-[#e1a294]">{validation.errors.slice(0, 8).map(error => <li key={error}>{error}</li>)}</ul>{validation.errors.length > 8 && <p className="mt-2 text-xs text-[#718986]">另有 {validation.errors.length - 8} 个错误。</p>}</div>}
-          <div className="mt-5 grid gap-3 md:grid-cols-[1fr_auto]"><input className="baize-input" value={commitMessage} maxLength={120} onChange={event => setCommitMessage(event.target.value)} placeholder="Commit message" /><span className="self-center text-xs text-[#718986]">{commitMessage.length}/120</span></div><div className="mt-3 grid gap-3 md:grid-cols-[1fr_auto]"><input className="baize-input font-mono" value={confirmation} onChange={event => setConfirmation(event.target.value)} placeholder={`输入 ${CONFIRMATION} 确认`} /><button type="button" className="baize-button-primary" disabled={!snapshot || !validation.valid || !changedFiles.length || confirmation !== CONFIRMATION || phase === 'committing'} onClick={() => void publishChanges()}><GitCommitHorizontal size={17} />{phase === 'committing' ? '提交中…' : `原子提交 ${changedFiles.length} 个文件`}</button></div><p className="mt-3 text-[11px] leading-5 text-[#718986]">不支持删除文件、force push 或管理 `tech-os/templates/`。远端冲突时必须重新读取；本机草稿保留在当前页面内存中。</p></div>
+          <div className="mt-5 grid gap-3 md:grid-cols-[1fr_auto]"><input className="baize-input" value={commitMessage} maxLength={120} onChange={event => setCommitMessage(event.target.value)} placeholder="Commit message" /><span className="self-center text-xs text-[#718986]">{commitMessage.length}/120</span></div><div className="mt-3 grid gap-3 md:grid-cols-[1fr_auto]"><input className="baize-input font-mono" value={confirmation} onChange={event => setConfirmation(event.target.value)} placeholder={`输入 ${CONFIRMATION} 确认`} /><button type="button" className="baize-button-primary" disabled={!snapshot || !validation.valid || !changedFiles.length || conflicts.length > 0 || confirmation !== CONFIRMATION || phase === 'loading' || phase === 'committing'} onClick={() => void publishChanges()}><GitCommitHorizontal size={17} />{phase === 'committing' ? '提交中…' : `原子提交 ${changedFiles.length} 个文件`}</button></div><p className="mt-3 text-[11px] leading-5 text-[#718986]">不支持删除文件、force push 或管理 `tech-os/templates/`。远端冲突时必须重新读取；本机草稿自动保存；双方修改同一文件时必须先解决冲突。</p></div>
       </section>
     </div>
   </div>;

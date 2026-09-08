@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import { prepareBlogPublication, publishBlogPlan } from '../src/services/blogPublish.ts';
+import { buildBlogDraftMarkdown } from '../src/services/blogDraft.ts';
+const target = { owner: 'test', repo: 'blog', branch: 'master' }, token = 'fake-token';
+const item = { id: 'note-1', type: 'text', title: '浏览器导航', content: '1.地址栏输入 URL\n2.点击 <a> 链接', tags: ['学习'], createdAt: '2026-09-08T00:00:00Z', updatedAt: '2026-09-08T00:00:00Z', status: 'inbox' };
+const input = { title: '浏览器导航', slug: 'browser-navigation', category: '技术', format: '笔记', tags: ['学习'], related: [] };
+const response = value => new Response(JSON.stringify(value), { status: 200 });
+let writes = [], draft = false, existingPost = false, conflicted = false;
+const request = async (url, init = {}) => {
+  const path = new URL(url).pathname;
+  if (init.method && init.method !== 'GET') { writes.push({ path, ...init, body: JSON.parse(init.body) }); return response({ sha: 'c'.repeat(40) }); }
+  if (path.includes('/git/ref/')) return response({ object: { sha: (conflicted ? 'f' : 'a').repeat(40) } });
+  if (path.includes('/git/commits/')) return response({ tree: { sha: 'b'.repeat(40) } });
+  if (path.includes('/git/trees/')) return response({ truncated: false, tree: existingPost ? [{ path: '_posts/2026-09-01-browser-navigation.md' }] : draft ? [{ path: '_drafts/browser-navigation.md', mode: '100644', type: 'blob', sha: 'd'.repeat(40) }] : [] });
+  if (path.includes('/git/blobs/')) return response({ size: 1000, encoding: 'base64', content: Buffer.from(buildBlogDraftMarkdown({ ...item, content: '远端修改过的草稿，不能被旧 Inbox 覆盖。' }, input)).toString('base64') });
+  throw new Error(url);
+};
+let plan = await prepareBlogPublication(item, input, token, target, new Date('2026-09-08T08:00:00Z'), request);
+assert.equal(writes.length, 0);
+assert.match(plan.markdown, /status: published/);
+assert.match(plan.markdown, /1\. 地址栏/);
+assert.equal(plan.draftPath, null);
+await publishBlogPlan(plan, token, target, request);
+assert.equal(writes.find(call => call.path.endsWith('/git/trees')).body.tree.length, 1);
+assert.equal(writes.at(-1).body.force, false);
+draft = true; writes = [];
+plan = await prepareBlogPublication(item, input, token, target, new Date(), request);
+assert.match(plan.markdown, /远端修改过/);
+await publishBlogPlan(plan, token, target, request);
+assert.equal(writes.find(call => call.path.endsWith('/git/trees')).body.tree[1].sha, null);
+conflicted = true; writes = [];
+await assert.rejects(() => publishBlogPlan(plan, token, target, request), /远端已变化/);
+assert.equal(writes.length, 0);
+conflicted = false; existingPost = true;
+await assert.rejects(() => prepareBlogPublication(item, input, token, target, new Date(), request), /已经发布/);
+console.log('Blog publication: preview, new post, draft promotion, format, conflicts and duplicate prevention passed.');

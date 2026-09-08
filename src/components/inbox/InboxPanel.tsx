@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Archive, Check, Cloud, Copy, Download, ExternalLink, FileText, Github, HelpCircle, Inbox as InboxIcon, Lightbulb, Link as LinkIcon, Lock, Pencil, Plus, RefreshCw, RotateCcw, StickyNote, Trash2, X } from 'lucide-react';
 import { createBlogDraftDefaults, slugifyBlogDraft, type BlogDraftInput, type BlogDraftResult } from '../../services/blogDraft';
+import { BlogPublishPanel } from './BlogPublishPanel';
+import { SharedVersions } from './SharedVersions';
+import { captureSharedWorkspace, workspaceFingerprint } from '../../services/workspaceSync';
 import { inboxItemToMarkdown, parseInboxTags } from '../../services/inbox';
 import { countUnsyncedInboxItems, countUnsyncedStudyProgress, isInboxItemSynced } from '../../services/inboxSync';
 import { loadStudyProgressStore } from '../../services/techOsStudyProgress';
@@ -47,6 +50,8 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
   const [syncPasswordConfirm, setSyncPasswordConfirm] = useState('');
   const [syncValidationMessage, setSyncValidationMessage] = useState('');
   const [syncOpen, setSyncOpen] = useState(() => !syncMeta);
+  const [, refreshSyncView] = useState(0);
+  useEffect(() => { if (!open) return; const timer = setInterval(() => refreshSyncView(value => value + 1), 2000); return () => clearInterval(timer); }, [open]);
   const visibleItems = useMemo(() => items
     .filter(item => !item.deletedAt && item.status === view)
     .sort((left, right) => right.updatedAt.localeCompare(left.updatedAt)), [items, view]);
@@ -55,7 +60,9 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
   const archivedCount = items.filter(item => !item.deletedAt && item.status === 'archived').length;
   const unsyncedCount = countUnsyncedInboxItems(items, syncMeta);
   const unsyncedStudyCount = countUnsyncedStudyProgress(loadStudyProgressStore(), syncMeta);
-  const pendingSyncCount = unsyncedCount + unsyncedStudyCount;
+  let workspacePending = 0;
+  try { workspacePending = workspaceFingerprint(captureSharedWorkspace()) !== syncMeta?.workspaceFingerprint ? 1 : 0; } catch { workspacePending = 1; }
+  const pendingSyncCount = unsyncedCount + unsyncedStudyCount + workspacePending;
   const syncBusy = syncState.phase === 'syncing' || syncState.phase === 'restoring';
   const encryptionUnavailableReason = useMemo(() => getWebCryptoUnavailableReason(), []);
   const blogDraftItem = blogDraftItemId ? items.find(item => item.id === blogDraftItemId && !item.deletedAt) : undefined;
@@ -139,7 +146,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
         <details open={syncOpen} onToggle={event => setSyncOpen(event.currentTarget.open)} className="border-b border-[#5f8f84]/15 px-4 py-3 sm:px-6 dark:border-[#c9a96b]/10">
           <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Cloud size={16} />多端加密同步<span className={`ml-auto text-xs ${syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#718986]'}`}>{syncLabel}</span></summary>
           <div className="mt-3 space-y-3 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
-            <p className="text-xs leading-5 text-[#718986]">目标：{repositoryLabel} · <code>data/inbox.enc.json</code>。密文同时携带 Inbox 与 Tech OS 学习打卡；密码和 Token 不会保存。</p>
+            <p className="text-xs leading-5 text-[#718986]">目标：{repositoryLabel} · <code>data/inbox.enc.json</code>。统一同步 Inbox、学习打卡、导航设置、临时文本、访问/翻译历史、稍后阅读与阅读位置。密码和 Token 不会保存；其他设备请先更新新版页面。</p>
             <div className="grid gap-2 text-xs leading-5 sm:grid-cols-2">
               <p className="rounded-lg bg-[#5f8f84]/8 p-2 text-[#55706d] dark:bg-[#c9a96b]/8 dark:text-[#b8c6c1]"><strong className="block text-[#315e5b] dark:text-[#d9ccb0]">新手机 / 新电脑</strong>输入同一 Token 和加密密码，点“从云端恢复”。它只读取并与本机合并，不产生 GitHub 提交。</p>
               <p className="rounded-lg bg-[#5f8f84]/8 p-2 text-[#55706d] dark:bg-[#c9a96b]/8 dark:text-[#b8c6c1]"><strong className="block text-[#315e5b] dark:text-[#d9ccb0]">日常双向同步</strong>点“合并并同步”，先读取两端、保留较新版本，再把合并后的密文提交回 GitHub。</p>
@@ -150,7 +157,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
               <input type="password" autoComplete="new-password" className="baize-input" value={syncPassword} onChange={event => setSyncPassword(event.target.value)} placeholder="加密密码（至少 12 字符）" />
               <input type="password" autoComplete="new-password" className="baize-input" value={syncPasswordConfirm} onChange={event => setSyncPasswordConfirm(event.target.value)} placeholder="再次输入（仅合并同步需要）" />
             </div>
-            {(unsyncedCount > 0 || unsyncedStudyCount > 0) && <p className="text-[11px] text-[#718986]">待同步：Inbox {unsyncedCount} 项 · 学习打卡 {unsyncedStudyCount} 项</p>}
+            {pendingSyncCount > 0 && <p className="text-[11px] text-[#718986]">待同步：Inbox {unsyncedCount} 项 · 学习打卡 {unsyncedStudyCount} 项 · 设置/阅读 {workspacePending ? '有改动' : '无改动'}</p>}
             <div className="flex flex-wrap items-center gap-2">
               <p className={`min-w-0 flex-1 break-words text-xs ${syncValidationMessage || syncState.phase === 'error' ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#315e5b] dark:text-[#b8cec7]'}`}>{syncValidationMessage || syncState.message}</p>
               {syncState.commitUrl && <a className="text-xs text-[#356b66] hover:underline dark:text-[#d2b775]" href={syncState.commitUrl} target="_blank" rel="noreferrer">查看加密提交</a>}
@@ -162,6 +169,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
         </details>
 
         <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
+          <SharedVersions />
           {blogDraftItem && <BlogDraftEditor key={blogDraftItem.id} item={blogDraftItem} token={githubToken} repositoryLabel={blogRepositoryLabel} onTokenChange={setGithubToken} onSubmit={onCreateBlogDraft} onClose={() => setBlogDraftItemId(null)} />}
 
           {captureOpen && <section className="mb-5 rounded-2xl border border-[#5f8f84]/20 bg-white/25 p-4 dark:border-[#c9a96b]/15 dark:bg-[#07191d]/25" aria-label="快速记录">
@@ -191,7 +199,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
                 <div className="mt-3 flex flex-wrap justify-end gap-2 border-t border-[#5f8f84]/10 pt-3 dark:border-[#c9a96b]/10">
                   <button type="button" className="baize-button-secondary" onClick={() => setEditingId(item.id)}><Pencil size={15} />编辑</button>
                   <button type="button" className="baize-button-secondary" onClick={() => { void copyItem(item); }}>{copiedId === item.id ? <Check size={15} /> : <Copy size={15} />}{copiedId === item.id ? '已复制' : '复制 Markdown'}</button>
-                  <button type="button" className="baize-button-primary" onClick={() => { setBlogDraftItemId(item.id); setCaptureOpen(false); setEditingId(null); window.setTimeout(() => document.getElementById('inbox-blog-draft-editor')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0); }}><FileText size={15} />转为博客草稿</button>
+                  <button type="button" className="baize-button-primary" onClick={() => { setBlogDraftItemId(item.id); setCaptureOpen(false); setEditingId(null); window.setTimeout(() => document.getElementById('inbox-blog-draft-editor')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0); }}><FileText size={15} />博客草稿 / 正式发表</button>
                   <button type="button" className="baize-button-secondary" onClick={() => onStatusChange(item.id, view === 'inbox' ? 'archived' : 'inbox')}>{view === 'inbox' ? <Archive size={15} /> : <RotateCcw size={15} />}{view === 'inbox' ? '归档' : '恢复'}</button>
                   <button type="button" className="baize-danger-button" onClick={() => { if (confirm('确定删除这条记录吗？内容会保留软删除标记。')) onDelete(item.id); }}><Trash2 size={15} />删除</button>
                 </div>
@@ -273,6 +281,7 @@ function BlogDraftEditor({ item, token, repositoryLabel, onTokenChange, onSubmit
         <button type="submit" className="baize-button-primary" disabled={phase === 'creating' || phase === 'success' || !token || !title || !slug}><Github size={16} />{phase === 'creating' ? '创建中…' : phase === 'success' ? '已创建' : '创建博客草稿'}</button>
       </div>
     </form>
+    <BlogPublishPanel item={item} input={{ title, slug, category, format, tags: splitList(tags), related: splitList(related) }} token={token} />
   </section>;
 }
 
