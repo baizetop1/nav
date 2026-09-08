@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-08T18:41:41.128Z",
+  "generatedAt": "2026-09-08T21:52:07.614Z",
   "intelligence": {
-    "updatedAt": "2026-09-08T18:41:41.128Z",
+    "updatedAt": "2026-09-08T21:52:07.614Z",
     "items": [
       {
         "id": "cn-item-672d475752136ef2",
@@ -26,24 +26,24 @@
         "signal": "已遭利用 · 整改期限 2026-09-11"
       },
       {
-        "id": "ai-openai-a00fc889a2dd293b",
+        "id": "ai-openai-503e9c2326e78f3e",
         "category": "ai",
-        "title": "The Work Now Within Reach",
-        "url": "https://openai.com/index/the-work-now-within-reach",
+        "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+        "url": "https://openai.com/index/codex-quantum-computing-experiments",
         "source": "OpenAI",
-        "publishedAt": "2026-09-08T13:00:00.000Z",
-        "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
+        "publishedAt": "2026-09-08T17:00:00.000Z",
+        "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49611251",
+        "id": "hn-49616257",
         "category": "dev",
-        "title": "Google DeepMind Releases AlphaGenome Atlas",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "title": "Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs",
+        "url": "https://github.com/argonautlabsai/deltafin",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T14:55:45.000Z",
+        "publishedAt": "2026-09-08T20:07:55.000Z",
         "badge": "HN",
-        "signal": "306 分 · 75 评论"
+        "signal": "141 分 · 54 评论"
       },
       {
         "id": "cn-it-e503aec12f438b5a",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-284h-m62q-gf8w",
+        "id": "github-advisory-ghsa-2x7j-588g-ccc2",
         "category": "security",
-        "title": "GitPython: Dormant multi-line git-config values are corrupted into live injected directives (e.g. core.hooksPath) on any unrelated GitConfigParser write, enabling RCE",
-        "url": "https://github.com/advisories/GHSA-284h-m62q-gf8w",
+        "title": "Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list",
+        "url": "https://github.com/advisories/GHSA-2x7j-588g-ccc2",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T18:39:40.000Z",
-        "summary": "- **CWE:** CWE-88 (Argument Injection) / CWE-94 (Code Injection) — via a read-then-corrupt-on-rewrite config round trip, not a direct setter argument - **Affected component:** `git/config.py` — `GitConfigParser._read()` (multi-line value d…",
-        "badge": "CVE-2026-78676",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-09-08T21:33:17.000Z",
+        "summary": "### Summary Nodemailer's address parser (`lib/addressparser/index.js`) parses a list of comma‑separated addresses in **quadratic time — O(n²)** in the number of addresses. A single crafted address string (e.g. a `To`, `Cc`, `Bcc`, `From`, …",
+        "badge": "GHSA-2X7J-588G-CCC2",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -77,15 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240528",
+        "id": "v2ex-1240540",
         "category": "dev",
-        "title": "有那种 skill 或者什么 ai 工具对代码仓进行建立索引",
-        "url": "https://www.v2ex.com/t/1240528",
+        "title": "请教下, 用 claude/codex 写代码太贵了, 打算尝试下国产模型, 如何处理?",
+        "url": "https://www.v2ex.com/t/1240540",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T15:40:35.000Z",
-        "summary": "今天本来想让根据代码仓，代码可以建立那个索引或者知识库什么，但是想看看开源社区有已经有这类产品了吗？ 简单搜索了下有 ai-ready, reposummary 这种，想问下大家都用什么？ 多人一起开发 可以试试更新新的代码，建立新的索引 询问/新增功能又可以直接用索引/知识库，能够快速生成按照仓代码结构的的代码",
+        "publishedAt": "2026-09-08T19:31:46.000Z",
+        "summary": "大概类似 sol/opus5 左右的智力的国产大模型, 各位有实际测试过的能推荐下吗?",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-fdd510e88132be6f",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "2026年10月1日起，上海将施行生育医疗费用保障新政，实现合规生育医疗费用个人“无自付”。产前检查享4500元定额补贴，超额由生育保险全额兜底，住院分娩政策内费用全额报销。",
         "badge": "热搜",
-        "signal": "7,809,300 热度"
+        "signal": "7,808,904 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81963",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49610181",
+        "id": "hn-49616354",
         "category": "dev",
-        "title": "DaVinci Resolve 21.1",
-        "url": "https://www.blackmagicdesign.com/media/release/20260908-03",
+        "title": "Mercury 2.5",
+        "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T13:36:53.000Z",
+        "publishedAt": "2026-09-08T20:14:52.000Z",
         "badge": "HN",
-        "signal": "265 分 · 109 评论"
+        "signal": "70 分 · 8 评论"
       },
       {
         "id": "cn-item-66b767994462486e",
@@ -138,36 +138,36 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-7833-fr7j-v32q",
+        "id": "github-advisory-ghsa-2q42-4q24-7rgv",
         "category": "security",
-        "title": "GitPython: Arbitrary local file content disclosure via [include] directive in untrusted .gitmodules (SubmoduleConfigParser never disables merge_includes)",
-        "url": "https://github.com/advisories/GHSA-7833-fr7j-v32q",
+        "title": "OpenAPI3 version value escapes `emitterOutputDir` and overwrites YAML/JSON outside the output tree",
+        "url": "https://github.com/advisories/GHSA-2q42-4q24-7rgv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T18:38:51.000Z",
-        "summary": "# [HIGH] Arbitrary local file content disclosure via `[include]` directive in untrusted `.gitmodules` (`SubmoduleConfigParser` never disables `merge_includes`) - **CWE:** CWE-200 (Exposure of Sensitive Information) / CWE-73 (External Contr…",
-        "badge": "CVE-2026-78675",
-        "signal": "HIGH · CVSS 8.4"
+        "publishedAt": "2026-09-08T21:31:09.000Z",
+        "summary": "### Summary The `@typespec/openapi3` emitter retains the value of a `@versioned` enum member and interpolates it into the output filename as `{version}` without sanitizing path separators or traversal components. The completed path reaches…",
+        "badge": "GHSA-2Q42-4Q24-7RGV",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
-        "id": "ai-openai-1dcea8b0f8acab14",
+        "id": "ai-openai-a00fc889a2dd293b",
         "category": "ai",
-        "title": "Introducing ChatGPT Images 2.5",
-        "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+        "title": "The Work Now Within Reach",
+        "url": "https://openai.com/index/the-work-now-within-reach",
         "source": "OpenAI",
-        "publishedAt": "2026-09-08T11:30:00.000Z",
-        "summary": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
+        "publishedAt": "2026-09-08T13:00:00.000Z",
+        "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240495",
+        "id": "v2ex-1240528",
         "category": "dev",
-        "title": "Claude 200 订阅怎么才能用的完？",
-        "url": "https://www.v2ex.com/t/1240495",
+        "title": "有那种 skill 或者什么 ai 工具对代码仓进行建立索引",
+        "url": "https://www.v2ex.com/t/1240528",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T12:38:27.000Z",
-        "summary": "公司开了 claude 200 的订阅，现在好焦虑，每周六重置的时候都还有 40%用不完， 平时都是日常开发工作，现在基本上都是全栈开发了，但是日常需求也用不完 然后平时维护一下自己的知识库和开发辅助工具 但是还是会有每周用不完的情况 没到周五就开始空想需求来消耗额度 大家都是怎么做的呢？ 有什么好的方法",
+        "publishedAt": "2026-09-08T15:40:35.000Z",
+        "summary": "今天本来想让根据代码仓，代码可以建立那个索引或者知识库什么，但是想看看开源社区有已经有这类产品了吗？ 简单搜索了下有 ai-ready, reposummary 这种，想问下大家都用什么？ 多人一起开发 可以试试更新新的代码，建立新的索引 询问/新增功能又可以直接用索引/知识库，能够快速生成按照仓代码结构的的代码",
         "badge": "程序员",
-        "signal": "25 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-it-b15b683c602b9477",
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49613262",
+        "id": "hn-49611251",
         "category": "dev",
-        "title": "On the Navier–Stokes Millennium Prize Problem",
-        "url": "https://openai.com/index/navier-stokes-solution/",
+        "title": "Google DeepMind Releases AlphaGenome Atlas",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T17:13:21.000Z",
+        "publishedAt": "2026-09-08T14:55:45.000Z",
         "badge": "HN",
-        "signal": "472 分 · 328 评论"
+        "signal": "429 分 · 105 评论"
       },
       {
         "id": "cn-baidu-15af5cb2a41a48dd",
@@ -217,18 +217,18 @@
         "source": "百度热搜",
         "summary": "近日，24岁吃播网红“干饭莹莹”离世，生前自述长期催吐引发严重低钾血症。事件曝光了畸形吃播赛道中，博主靠极端手段博流量、逃避监管的乱象，相关评论呼吁全面叫停这类以生命为代价的表演，从算法源头斩断其流量与商业链条。",
         "badge": "热搜",
-        "signal": "7,712,166 热度"
+        "signal": "7,712,789 热度"
       },
       {
-        "id": "github-advisory-ghsa-c4c3-7fpv-j4q5",
+        "id": "github-advisory-ghsa-wc9g-mqfw-jrwm",
         "category": "security",
-        "title": "Netty: SNI Routing Bypass via Fragmented TLS ClientHello Causing Fallback to Default SslContext",
-        "url": "https://github.com/advisories/GHSA-c4c3-7fpv-j4q5",
+        "title": "multer vulnerable to Denial of Service via crafted multipart field names",
+        "url": "https://github.com/advisories/GHSA-wc9g-mqfw-jrwm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T18:16:14.000Z",
-        "summary": "### Summary A fragmented TLS ClientHello whose handshake header spans multiple records makes Netty silently fall back to the default SslContext; where per-SNI selection is the sole mTLS gate, an unauthenticated attacker can bypass the rout…",
-        "badge": "CVE-2026-75595",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-08T21:30:20.000Z",
+        "summary": "### Impact A vulnerability in multer allows a remote, unauthenticated attacker to crash the Node.js process with a single `multipart/form-data` request. Two specially crafted text field names cause an uncaught `RangeError: Invalid array le…",
+        "badge": "CVE-2026-77078",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-fffbcba03b0b217e",
@@ -240,15 +240,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240493",
+        "id": "v2ex-1240495",
         "category": "dev",
-        "title": "移除视频动态水印 哪个模型比较好用？求推荐一款本地部署",
-        "url": "https://www.v2ex.com/t/1240493",
+        "title": "Claude 200 订阅怎么才能用的完？",
+        "url": "https://www.v2ex.com/t/1240495",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T12:34:12.000Z",
-        "summary": "网页在线的效果最好的开拍，美团旗下的，但是无法做到 api 自动操作，而且费用贵。 本地让 ai 写的纯 cv + ffmepg 识别的效果不好，没法很通用。 求 V 有推荐有没好用的 AI 模型，或者开源框架，可以一用的？",
+        "publishedAt": "2026-09-08T12:38:27.000Z",
+        "summary": "公司开了 claude 200 的订阅，现在好焦虑，每周六重置的时候都还有 40%用不完， 平时都是日常开发工作，现在基本上都是全栈开发了，但是日常需求也用不完 然后平时维护一下自己的知识库和开发辅助工具 但是还是会有每周用不完的情况 没到周五就开始空想需求来消耗额度 大家都是怎么做的呢？ 有什么好的方法",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "25 回复"
       },
       {
         "id": "cn-item-2e1ed5aaf06121eb",
@@ -272,23 +272,24 @@
         "signal": "已遭利用 · 整改期限 2026-09-22"
       },
       {
-        "id": "ai-google-deepmind-d721843382f3485e",
+        "id": "ai-openai-1dcea8b0f8acab14",
         "category": "ai",
-        "title": "Proactive cyber defense for governments and enterprises",
-        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-02T16:24:24.000Z",
-        "badge": "Google DeepMind"
+        "title": "Introducing ChatGPT Images 2.5",
+        "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-08T11:30:00.000Z",
+        "summary": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
+        "badge": "OpenAI"
       },
       {
-        "id": "hn-49611128",
+        "id": "hn-49613262",
         "category": "dev",
-        "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
-        "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
+        "title": "On the Navier–Stokes Millennium Prize Problem",
+        "url": "https://openai.com/index/navier-stokes-solution/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T14:49:19.000Z",
+        "publishedAt": "2026-09-08T17:13:21.000Z",
         "badge": "HN",
-        "signal": "113 分 · 71 评论"
+        "signal": "926 分 · 742 评论"
       },
       {
         "id": "cn-it-572dddf040d6ac04",
@@ -301,35 +302,35 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-4r6h-5v86-94p3",
+        "id": "github-advisory-ghsa-qfvm-cv95-jqjf",
         "category": "security",
-        "title": "LiquidJS: Uncontrolled Resource Consumption in `join` filter allows template authors to bypass `memoryLimit` and crash the process",
-        "url": "https://github.com/advisories/GHSA-4r6h-5v86-94p3",
+        "title": "multer vulnerable to Denial of Service via file descriptor leak on aborted uploads",
+        "url": "https://github.com/advisories/GHSA-qfvm-cv95-jqjf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T18:10:35.000Z",
-        "summary": "### Summary The `join` filter (`src/filters/array.ts:8-13`) charges `memoryLimit` by array element **count**, not by the string length it produces, letting a template bypass a configured `memoryLimit` and allocate strings far past budget —…",
-        "badge": "CVE-2026-69222",
+        "publishedAt": "2026-09-08T21:29:51.000Z",
+        "summary": "### Impact A vulnerability in multer `2.2.0` allows an attacker to trigger a Denial of Service (DoS) by aborting or truncating multipart uploads. When using `diskStorage`, the destination write stream is not closed if the upload is aborted…",
+        "badge": "CVE-2026-77037",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-a139f80b159295ad",
+        "id": "ai-google-deepmind-d721843382f3485e",
         "category": "ai",
-        "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
-        "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-03T00:00:00.000Z",
-        "badge": "Hugging Face"
+        "title": "Proactive cyber defense for governments and enterprises",
+        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-02T16:24:24.000Z",
+        "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240484",
+        "id": "v2ex-1240493",
         "category": "dev",
-        "title": "记不住各个平台的 Shell 命令，我搓了个不到 30KB 的小工具： ash",
-        "url": "https://www.v2ex.com/t/1240484",
+        "title": "移除视频动态水印 哪个模型比较好用？求推荐一款本地部署",
+        "url": "https://www.v2ex.com/t/1240493",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T11:57:20.000Z",
-        "summary": "平时在终端里干活，有两个事情我经常觉得头大： 一是 记不住复杂参数 。比如查个占用端口的进程、按修改时间搜一批文件、或者解压某个不常见的压缩包，隔三差五就得切到浏览器搜一下。 二是 跨系统命令转换 。查资料时网上往往只贴了 Linux (Bash) 命令，但我手头如果在 Windows (PowerShell) 下，有些管道符和参数根本跑不起来，还得手动翻译一遍。 市面上其实有不少终端 AI 工具，但我试了一圈发现不太适合我： 太重 ：动辄装几百兆的环境或依赖。 喜欢自作主…",
+        "publishedAt": "2026-09-08T12:34:12.000Z",
+        "summary": "网页在线的效果最好的开拍，美团旗下的，但是无法做到 api 自动操作，而且费用贵。 本地让 ai 写的纯 cv + ffmepg 识别的效果不好，没法很通用。 求 V 有推荐有没好用的 AI 模型，或者开源框架，可以一用的？",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-62b70ad0666c331a",
@@ -339,7 +340,7 @@
         "source": "百度热搜",
         "summary": "记者8号了解到，市场监管总局正式发布《关于全面开展放心消费单元和集聚区培育的通知》，全面启动放心消费主体培育工作。要让经营者从“要我变好”变成“我要变好”，激励措施是关键。市场监管总局将构建涵盖信用、金融、市场等多个维度的正向激励体系，让守信经营者真正得到实惠。",
         "badge": "热搜",
-        "signal": "7,619,541 热度"
+        "signal": "7,616,677 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85046",
@@ -353,24 +354,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-18"
       },
       {
-        "id": "ai-openai-7948c39493cbd65e",
+        "id": "ai-hugging-face-a139f80b159295ad",
         "category": "ai",
-        "title": "Funding grants for new research into AI and teen development",
-        "url": "https://openai.com/index/teen-development-research-grants",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-08T09:00:00.000Z",
-        "summary": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
-        "badge": "OpenAI"
+        "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+        "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-03T00:00:00.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-49600901",
+        "id": "hn-49605915",
         "category": "dev",
-        "title": "The Helicopter with Radioactive Blades",
-        "url": "https://hackaday.com/2026/09/07/the-helicopter-with-radioactive-blades/",
+        "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
+        "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-09-07T17:44:33.000Z",
+        "publishedAt": "2026-09-08T05:42:28.000Z",
         "badge": "HN",
-        "signal": "86 分 · 18 评论"
+        "signal": "907 分 · 405 评论"
       },
       {
         "id": "cn-item-e73b416f03b69571",
@@ -383,15 +383,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xp7j-h7jc-4w8p",
+        "id": "github-advisory-ghsa-535w-7cp7-47q4",
         "category": "security",
-        "title": "Semaphore U: OS Command Injection",
-        "url": "https://github.com/advisories/GHSA-xp7j-h7jc-4w8p",
+        "title": "multer vulnerable to Denial of Service via oversized array index in field names",
+        "url": "https://github.com/advisories/GHSA-535w-7cp7-47q4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T17:57:44.000Z",
-        "summary": "# Summary An OS command injection in repository git_url handling lets any user holding the Manager or Owner role on any project (the normal project-collaborator roles) achieve remote code execution on the Semaphore server host. Using git's…",
-        "badge": "CVE-2026-73294",
-        "signal": "CRITICAL · CVSS 9.9"
+        "publishedAt": "2026-09-08T21:28:43.000Z",
+        "summary": "### Impact multer is vulnerable to a Denial of Service (DoS) via a crafted array index in multipart field names. The `append-field` dependency parses bracket notation in field names, and a large numeric index such as `items[4294967294]` fo…",
+        "badge": "CVE-2026-82333",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-63b19b50b4021cb5",
@@ -403,15 +403,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240473",
+        "id": "v2ex-1240484",
         "category": "dev",
-        "title": "我的 pro 周额度缩水到 1500 刀了，是不是下个订阅周期要换好了",
-        "url": "https://www.v2ex.com/t/1240473",
+        "title": "记不住各个平台的 Shell 命令，我搓了个不到 30KB 的小工具： ash",
+        "url": "https://www.v2ex.com/t/1240484",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T10:31:21.000Z",
-        "summary": "和小伙伴拼车使用，之前大概有 2400 多刀，前几天刷新额度后，降到 1800 ，今天刷新后直接给哥们干到 1500 了 难受啊，27 号订阅期，不行得换号了",
+        "publishedAt": "2026-09-08T11:57:20.000Z",
+        "summary": "平时在终端里干活，有两个事情我经常觉得头大： 一是 记不住复杂参数 。比如查个占用端口的进程、按修改时间搜一批文件、或者解压某个不常见的压缩包，隔三差五就得切到浏览器搜一下。 二是 跨系统命令转换 。查资料时网上往往只贴了 Linux (Bash) 命令，但我手头如果在 Windows (PowerShell) 下，有些管道符和参数根本跑不起来，还得手动翻译一遍。 市面上其实有不少终端 AI 工具，但我试了一圈发现不太适合我： 太重 ：动辄装几百兆的环境或依赖。 喜欢自作主…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "7 回复"
       },
       {
         "id": "cn-it-6ccb21c1e9032a50",
@@ -444,14 +444,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49613068",
+        "id": "hn-49610181",
         "category": "dev",
-        "title": "Show HN: LLM Attention Visualization",
-        "url": "https://ishamf.dev/p/llm-attention-visualizer/",
+        "title": "DaVinci Resolve 21.1",
+        "url": "https://www.blackmagicdesign.com/media/release/20260908-03",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T16:59:41.000Z",
+        "publishedAt": "2026-09-08T13:36:53.000Z",
         "badge": "HN",
-        "signal": "31 分 · 5 评论"
+        "signal": "316 分 · 138 评论"
       },
       {
         "id": "cn-baidu-55a8c15673e37906",
@@ -461,29 +461,29 @@
         "source": "百度热搜",
         "summary": "9月8日，上汽集团旗下高端智能电动品牌智己汽车，发布主题为“没有方向盘的车”的视频动图，并配文“这台车，不在大洋彼岸，而是在中国，上海”。动图中，车辆座舱内没有方向盘，车辆却能够自主完成启动、转向、避让行人等一系列操作。",
         "badge": "热搜",
-        "signal": "7,524,402 热度"
+        "signal": "7,521,959 热度"
       },
       {
-        "id": "github-advisory-ghsa-rcr6-4jqh-j84m",
+        "id": "github-advisory-ghsa-96p9-rh4f-92cf",
         "category": "security",
-        "title": "Gitea: Remote Code Execution via diffpatch Git Hook Installation",
-        "url": "https://github.com/advisories/GHSA-rcr6-4jqh-j84m",
+        "title": "Windows ML CLI: CORS misconfig enables localhost RCE",
+        "url": "https://github.com/advisories/GHSA-96p9-rh4f-92cf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T17:56:30.000Z",
-        "summary": "### Summary Gitea's `diffpatch` endpoint can be abused to install and execute a Git hook from repository-controlled content. An attacker with ordinary write access to a repository can execute arbitrary shell commands as the Gitea OS user. …",
-        "badge": "CVE-2026-60004",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-09-08T21:27:59.000Z",
+        "summary": "Case Description: MSRC Notes: Attachments: 1 file(s) attached (1 mp4) Summary: The vulnerability lies in the 'serve/cli_api.py' component of the 'winml-cli' project, which exposes all winml CLI commands over HTTP without authentication. Al…",
+        "badge": "CVE-2026-84452",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "v2ex-1240459",
+        "id": "v2ex-1240473",
         "category": "dev",
-        "title": "如何避免 codex 风控? 现在首字 20s 还降智, 新买的号首字 2s",
-        "url": "https://www.v2ex.com/t/1240459",
+        "title": "我的 pro 周额度缩水到 1500 刀了，是不是下个订阅周期要换好了",
+        "url": "https://www.v2ex.com/t/1240473",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T09:26:31.000Z",
-        "summary": "我们团队用 sub2api 做号池 最近 2 天用的非常慢, 首字 20s 且降智严重 新买的号放到号池里面就非常快 有类似的情况吗, 如何避免 codex 风控?",
+        "publishedAt": "2026-09-08T10:31:21.000Z",
+        "summary": "和小伙伴拼车使用，之前大概有 2400 多刀，前几天刷新额度后，降到 1800 ，今天刷新后直接给哥们干到 1500 了 难受啊，27 号订阅期，不行得换号了",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "8 回复"
       }
     ]
   },
@@ -500,7 +500,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 29472,
+        "stars": 30054,
         "starsToday": 422
       },
       {
@@ -510,7 +510,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 34397,
+        "stars": 34619,
         "starsToday": 1020
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/openai/skills",
         "description": "Skills Catalog for Codex",
         "language": "Python",
-        "stars": 26427,
+        "stars": 26468,
         "starsToday": 490
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 254052,
+        "stars": 254201,
         "starsToday": 1426
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 47579,
+        "stars": 47681,
         "starsToday": 2628
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/coreyhaines31/marketingskills",
         "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "language": "JavaScript",
-        "stars": 48678,
+        "stars": 48746,
         "starsToday": 666
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 283233,
+        "stars": 283312,
         "starsToday": 446
       },
       {
@@ -569,7 +569,7 @@
         "name": "multica-ai/andrej-karpathy-skills",
         "url": "https://github.com/multica-ai/andrej-karpathy-skills",
         "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
-        "stars": 211316,
+        "stars": 211395,
         "starsToday": 325
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/microsoft/markitdown",
         "description": "Python tool for converting files and office documents to Markdown.",
         "language": "Python",
-        "stars": 181517,
+        "stars": 181603,
         "starsToday": 2045
       },
       {
@@ -589,10 +589,10 @@
         "url": "https://github.com/jo-inc/camofox-browser",
         "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
         "language": "JavaScript",
-        "stars": 10363,
+        "stars": 10429,
         "starsToday": 872
       }
     ],
-    "updatedAt": "2026-09-08T18:41:41.128Z"
+    "updatedAt": "2026-09-08T21:52:07.614Z"
   }
 }
