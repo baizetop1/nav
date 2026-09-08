@@ -664,7 +664,7 @@ function App() {
     && !isCommandPaletteOpen
     && !restOpen;
   const commandActions: CommandPaletteAction[] = [
-    { id: 'rest', title: '休息一下', description: '看看小狐狸的月光泛舟，回来继续学习', keywords: ['rest', 'break', '休息', '放松', '动画', '泛舟'], icon: 'relax', run: openRest },
+    { id: 'rest', title: '休息一下', description: '在多幅动态风景间轮播，回来继续学习', keywords: ['rest', 'break', '休息', '放松', '动画', '泛舟', '轮播', '鹈鹕', '骑行'], icon: 'relax', run: openRest },
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
     { id: 'quick-capture', title: '快速记录', description: '立即写入本机 Inbox', keywords: ['capture', '记录', '收件箱', '+'], icon: 'add', run: openQuickCapture },
     { id: 'inbox', title: `打开 Inbox (${inboxCount})`, description: '查看、编辑、复制、归档本地记录', keywords: ['inbox', '收件箱', '稍后处理'], icon: 'inbox', run: openInbox },
@@ -680,7 +680,7 @@ function App() {
     { id: 'scene-default', title: '切换到日常场景', description: sceneMode === 'default' ? '当前正在使用' : '恢复完整背景与标准布局', keywords: ['scene', '场景', '日常'], icon: 'default', run: () => changeSceneMode('default') },
     { id: 'scene-work', title: '切换到工作场景', description: sceneMode === 'work' ? '当前正在使用' : '隐藏装饰并压缩卡片布局', keywords: ['scene', '场景', '工作'], icon: 'work', run: () => changeSceneMode('work') },
     { id: 'scene-study', title: '切换到学习场景', description: sceneMode === 'study' ? '当前正在使用' : '降低背景干扰并保持阅读感', keywords: ['scene', '场景', '学习'], icon: 'study', run: () => changeSceneMode('study') },
-    { id: 'scene-relax', title: '切换到休闲场景', description: '打开月光泛舟休息动画', keywords: ['scene', '场景', '休闲'], icon: 'relax', run: () => changeSceneMode('relax') },
+    { id: 'scene-relax', title: '切换到休闲场景', description: '打开休息动画与定时轮播', keywords: ['scene', '场景', '休闲'], icon: 'relax', run: () => changeSceneMode('relax') },
     { id: 'github', title: '打开个人 GitHub', description: siteConfig.github, keywords: ['github', '代码'], icon: 'github', run: () => { window.open(siteConfig.github, '_blank', 'noopener,noreferrer'); } },
     ...(installPrompt ? [{ id: 'install', title: '安装白泽导航', description: '将当前站点安装到设备', keywords: ['pwa', '安装', 'install'], icon: 'install' as const, run: () => { void installApp(); } }] : []),
   ];

@@ -49,7 +49,7 @@ export default function RestScene({ playing, speed, compact }: RestSceneProps) {
     return () => cancelAnimationFrame(frame);
   }, [playing, speed]);
 
-  return <svg ref={svgRef} className="rest-art" viewBox={compact ? '390 0 660 900' : '0 0 1440 820'} preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby={id('title') + ' ' + id('description')}>
+  return <svg ref={svgRef} className="rest-art" viewBox={compact ? '0 0 1440 900' : '0 0 1440 820'} preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby={id('title') + ' ' + id('description')}>
     <title id={id('title')}>小狐狸的月光泛舟</title>
     <desc id={id('description')}>围着绿色围巾的小狐狸，提着一盏暖灯，在远山环绕的湖面慢慢划船。月光落在水上，芦苇轻摇，萤火虫浮在晚风中。</desc>
     <defs>
