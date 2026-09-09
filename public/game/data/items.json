@@ -1,0 +1,448 @@
+[
+  {
+    "id": "jinchuangyao",
+    "name": "金创药",
+    "type": "consume",
+    "price": 35,
+    "effect": {
+      "hp": 300
+    },
+    "description": "常用疗伤药，战斗中救急。"
+  },
+  {
+    "id": "huiqisan",
+    "name": "回气散",
+    "type": "consume",
+    "price": 45,
+    "effect": {
+      "rage": 35
+    },
+    "description": "战斗中为同伴回复怒气。"
+  },
+  {
+    "id": "jiedudan",
+    "name": "解毒丹",
+    "type": "consume",
+    "price": 30,
+    "effect": {
+      "cleanse": true
+    },
+    "description": "解除一名同伴的中毒、流血与眩晕。"
+  },
+  {
+    "id": "wine",
+    "name": "村酒",
+    "type": "consume",
+    "price": 25,
+    "effect": {
+      "stamina": 10
+    },
+    "description": "每日最多饮两次，恢复十点体力。"
+  },
+  {
+    "id": "exp_pill",
+    "name": "经验丹",
+    "type": "consume",
+    "price": 100,
+    "effect": {
+      "exp": 300
+    },
+    "description": "选择一名入寨好汉，赠予三百历练经验。"
+  },
+  {
+    "id": "tiger_bone",
+    "name": "虎骨",
+    "type": "material",
+    "price": 12,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "tiger_skin",
+    "name": "虎皮",
+    "type": "material",
+    "price": 18,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "iron",
+    "name": "精铁",
+    "type": "material",
+    "price": 35,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "scrap_iron",
+    "name": "碎铁",
+    "type": "material",
+    "price": 8,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "dark_iron",
+    "name": "玄铁",
+    "type": "material",
+    "price": 80,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "wood",
+    "name": "木材",
+    "type": "material",
+    "price": 10,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "cloth",
+    "name": "粗布",
+    "type": "material",
+    "price": 10,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "leather",
+    "name": "熟皮",
+    "type": "material",
+    "price": 20,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "grain",
+    "name": "粮草",
+    "type": "material",
+    "price": 10,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "herb",
+    "name": "药草",
+    "type": "material",
+    "price": 12,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "horse_feed",
+    "name": "凡品马料",
+    "type": "material",
+    "price": 15,
+    "effect": {},
+    "description": "暂存马料，坐骑养成在后续版本开放。"
+  },
+  {
+    "id": "skill_page",
+    "name": "基础技能残页",
+    "type": "material",
+    "price": 40,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "strength_shard",
+    "name": "强化符碎片",
+    "type": "material",
+    "price": 20,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "strength_charm",
+    "name": "强化符",
+    "type": "material",
+    "price": 70,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "recruit_shard",
+    "name": "招贤令碎片",
+    "type": "material",
+    "price": 30,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "lost_ledger",
+    "name": "生辰纲残册",
+    "type": "material",
+    "price": 20,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "blueprint",
+    "name": "兵器图纸",
+    "type": "material",
+    "price": 100,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "zhujia_pass",
+    "name": "祝家令",
+    "type": "quest",
+    "price": 100,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "mount_clue",
+    "name": "黄骠马线索",
+    "type": "quest",
+    "price": 0,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "night_clothes",
+    "name": "夜行衣",
+    "type": "quest",
+    "price": 80,
+    "effect": {},
+    "description": "江湖所得，可用于打造、交换或线索探索。"
+  },
+  {
+    "id": "recruit_order",
+    "name": "招贤令",
+    "type": "special",
+    "price": 300,
+    "effect": {},
+    "description": "拜访一位江湖人物。未相识的核心人物只留下线索与信物。"
+  },
+  {
+    "id": "songjiang_token",
+    "name": "宋江信物",
+    "type": "token",
+    "hero": "songjiang",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成宋江专属招贤令。"
+  },
+  {
+    "id": "wuyong_token",
+    "name": "吴用信物",
+    "type": "token",
+    "hero": "wuyong",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成吴用专属招贤令。"
+  },
+  {
+    "id": "wusong_token",
+    "name": "打虎信物",
+    "type": "token",
+    "hero": "wusong",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成武松专属招贤令。"
+  },
+  {
+    "id": "linchong_token",
+    "name": "林冲信物",
+    "type": "token",
+    "hero": "linchong",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成林冲专属招贤令。"
+  },
+  {
+    "id": "luzhishen_token",
+    "name": "鲁智深信物",
+    "type": "token",
+    "hero": "luzhishen",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成鲁智深专属招贤令。"
+  },
+  {
+    "id": "gongsunsheng_token",
+    "name": "公孙胜信物",
+    "type": "token",
+    "hero": "gongsunsheng",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成公孙胜专属招贤令。"
+  },
+  {
+    "id": "yanqing_token",
+    "name": "燕青信物",
+    "type": "token",
+    "hero": "yanqing",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成燕青专属招贤令。"
+  },
+  {
+    "id": "huarong_token",
+    "name": "花荣信物",
+    "type": "token",
+    "hero": "huarong",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成花荣专属招贤令。"
+  },
+  {
+    "id": "liutang_token",
+    "name": "刘唐信物",
+    "type": "token",
+    "hero": "liutang",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成刘唐专属招贤令。"
+  },
+  {
+    "id": "shiqian_token",
+    "name": "时迁信物",
+    "type": "token",
+    "hero": "shiqian",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成时迁专属招贤令。"
+  },
+  {
+    "id": "baisheng_token",
+    "name": "白胜信物",
+    "type": "token",
+    "hero": "baisheng",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成白胜专属招贤令。"
+  },
+  {
+    "id": "ruanxiaoqi_token",
+    "name": "阮小七信物",
+    "type": "token",
+    "hero": "ruanxiaoqi",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "集齐十枚，可合成阮小七专属招贤令。"
+  },
+  {
+    "id": "songjiang_order",
+    "name": "宋江专属招贤令",
+    "type": "special",
+    "hero": "songjiang",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "wuyong_order",
+    "name": "吴用专属招贤令",
+    "type": "special",
+    "hero": "wuyong",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "wusong_order",
+    "name": "武松专属招贤令",
+    "type": "special",
+    "hero": "wusong",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "linchong_order",
+    "name": "林冲专属招贤令",
+    "type": "special",
+    "hero": "linchong",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "luzhishen_order",
+    "name": "鲁智深专属招贤令",
+    "type": "special",
+    "hero": "luzhishen",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "gongsunsheng_order",
+    "name": "公孙胜专属招贤令",
+    "type": "special",
+    "hero": "gongsunsheng",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "yanqing_order",
+    "name": "燕青专属招贤令",
+    "type": "special",
+    "hero": "yanqing",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "huarong_order",
+    "name": "花荣专属招贤令",
+    "type": "special",
+    "hero": "huarong",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "liutang_order",
+    "name": "刘唐专属招贤令",
+    "type": "special",
+    "hero": "liutang",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "shiqian_order",
+    "name": "时迁专属招贤令",
+    "type": "special",
+    "hero": "shiqian",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "baisheng_order",
+    "name": "白胜专属招贤令",
+    "type": "special",
+    "hero": "baisheng",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "ruanxiaoqi_order",
+    "name": "阮小七专属招贤令",
+    "type": "special",
+    "hero": "ruanxiaoqi",
+    "price": 0,
+    "effect": {},
+    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  }
+]

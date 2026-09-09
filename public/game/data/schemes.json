@@ -1,0 +1,63 @@
+[
+  {
+    "id": "huangni_scheme",
+    "name": "智取生辰纲",
+    "initial": {
+      "alert": 25,
+      "fatigue": 10,
+      "heat": 20,
+      "trust": 10,
+      "exposure": 0
+    },
+    "maxTurns": 6,
+    "success": {
+      "fatigue": 60,
+      "trust": 60,
+      "maxAlert": 70,
+      "maxExposure": 60
+    },
+    "choices": [
+      {
+        "id": "original",
+        "label": "按吴用原计行事",
+        "text": "吴用示意众人扮作枣客，从容说笑。杨志的目光渐渐移开。",
+        "change": {
+          "trust": 22,
+          "fatigue": 12,
+          "alert": -5
+        }
+      },
+      {
+        "id": "early",
+        "label": "提前让白胜现身",
+        "text": "酒担来得太巧，杨志立刻喝住军汉，紧紧盯住白胜。",
+        "change": {
+          "trust": 10,
+          "fatigue": 5,
+          "alert": 25,
+          "exposure": 20
+        }
+      },
+      {
+        "id": "probe",
+        "label": "让刘唐试探",
+        "text": "刘唐故作口渴，与枣客争饮一瓢。白胜抱怨几句，反显得自然。",
+        "change": {
+          "trust": 18,
+          "fatigue": 5,
+          "alert": -8
+        }
+      },
+      {
+        "id": "wait",
+        "label": "继续等待暑热",
+        "text": "日头又偏了一些，军汉汗透衣衫，不住望向松荫。",
+        "change": {
+          "fatigue": 22,
+          "heat": 12,
+          "alert": 5
+        }
+      }
+    ]
+  }
+]

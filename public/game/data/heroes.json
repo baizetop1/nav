@@ -1,0 +1,452 @@
+[
+  {
+    "id": "songjiang",
+    "name": "宋江",
+    "title": "呼保义",
+    "star": 5,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 900,
+      "attack": 95,
+      "defense": 70,
+      "speed": 75,
+      "strategy": 105
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "songjiang_active",
+      "songjiang_passive"
+    ],
+    "story": "仗义疏财，言语温厚。",
+    "core": true,
+    "meetMap": "office",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "songjiang_token",
+      "count": 10
+    },
+    "dialogue": "仗义疏财，言语温厚。"
+  },
+  {
+    "id": "wuyong",
+    "name": "吴用",
+    "title": "智多星",
+    "star": 5,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 750,
+      "attack": 65,
+      "defense": 60,
+      "speed": 100,
+      "strategy": 160
+    },
+    "growth": {
+      "hp": 25,
+      "attack": 2,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 10
+    },
+    "skills": [
+      "wuyong_active",
+      "wuyong_passive"
+    ],
+    "story": "先看局势，再落一子。",
+    "core": true,
+    "meetMap": "zhuang",
+    "meetCondition": {
+      "flag": "seven_stars"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "wuyong_token",
+      "count": 10
+    },
+    "dialogue": "先看局势，再落一子。"
+  },
+  {
+    "id": "wusong",
+    "name": "武松",
+    "title": "行者",
+    "star": 5,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1200,
+      "attack": 150,
+      "defense": 90,
+      "speed": 110,
+      "strategy": 60
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "wusong_active",
+      "wusong_passive"
+    ],
+    "story": "话不多，行事刚烈果断。",
+    "core": true,
+    "meetMap": "inn",
+    "meetCondition": {
+      "flag": "wusong_met"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "wusong_token",
+      "count": 10
+    },
+    "dialogue": "话不多，行事刚烈果断。"
+  },
+  {
+    "id": "linchong",
+    "name": "林冲",
+    "title": "豹子头",
+    "star": 5,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1100,
+      "attack": 140,
+      "defense": 100,
+      "speed": 105,
+      "strategy": 80
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "linchong_active",
+      "linchong_passive"
+    ],
+    "story": "待人克制，枪法沉稳。",
+    "core": true,
+    "meetMap": "expeditions",
+    "meetCondition": {
+      "flag": "huangni_complete"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "linchong_token",
+      "count": 10
+    },
+    "dialogue": "待人克制，枪法沉稳。"
+  },
+  {
+    "id": "luzhishen",
+    "name": "鲁智深",
+    "title": "花和尚",
+    "star": 5,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1400,
+      "attack": 130,
+      "defense": 115,
+      "speed": 70,
+      "strategy": 65
+    },
+    "growth": {
+      "hp": 55,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "luzhishen_active",
+      "luzhishen_passive"
+    ],
+    "story": "粗豪而细心，见不平便要管。",
+    "core": true,
+    "meetMap": "ferry",
+    "meetCondition": {
+      "flag": "huangni_complete"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "luzhishen_token",
+      "count": 10
+    },
+    "dialogue": "粗豪而细心，见不平便要管。"
+  },
+  {
+    "id": "gongsunsheng",
+    "name": "公孙胜",
+    "title": "入云龙",
+    "star": 5,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 800,
+      "attack": 75,
+      "defense": 60,
+      "speed": 95,
+      "strategy": 150
+    },
+    "growth": {
+      "hp": 25,
+      "attack": 2,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 10
+    },
+    "skills": [
+      "gongsunsheng_active",
+      "gongsunsheng_passive"
+    ],
+    "story": "云游四方，见识不凡。",
+    "core": true,
+    "meetMap": "guesthouse",
+    "meetCondition": {
+      "flag": "seven_stars"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "gongsunsheng_token",
+      "count": 10
+    },
+    "dialogue": "云游四方，见识不凡。"
+  },
+  {
+    "id": "yanqing",
+    "name": "燕青",
+    "title": "浪子",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 820,
+      "attack": 110,
+      "defense": 60,
+      "speed": 135,
+      "strategy": 100
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "yanqing_active",
+      "yanqing_passive"
+    ],
+    "story": "身手轻巧，善察人情。",
+    "core": true,
+    "meetMap": "liangshan",
+    "meetCondition": {
+      "flag": "huangni_complete"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "yanqing_token",
+      "count": 10
+    },
+    "dialogue": "身手轻巧，善察人情。"
+  },
+  {
+    "id": "huarong",
+    "name": "花荣",
+    "title": "小李广",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 900,
+      "attack": 135,
+      "defense": 65,
+      "speed": 120,
+      "strategy": 80
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "huarong_active",
+      "huarong_passive"
+    ],
+    "story": "引弓不语，眼中自有准星。",
+    "core": true,
+    "meetMap": "training",
+    "meetCondition": {
+      "flag": "huangni_complete"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "huarong_token",
+      "count": 10
+    },
+    "dialogue": "引弓不语，眼中自有准星。"
+  },
+  {
+    "id": "liutang",
+    "name": "刘唐",
+    "title": "赤发鬼",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 980,
+      "attack": 118,
+      "defense": 70,
+      "speed": 85,
+      "strategy": 50
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "liutang_active",
+      "liutang_passive"
+    ],
+    "story": "性情急切，对朋友却极真。",
+    "core": false,
+    "meetMap": "zhuang",
+    "meetCondition": {
+      "flag": "seven_stars"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "liutang_token",
+      "count": 10
+    },
+    "dialogue": "性情急切，对朋友却极真。"
+  },
+  {
+    "id": "shiqian",
+    "name": "时迁",
+    "title": "鼓上蚤",
+    "star": 2,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 680,
+      "attack": 85,
+      "defense": 40,
+      "speed": 145,
+      "strategy": 85
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "shiqian_active",
+      "shiqian_passive"
+    ],
+    "story": "脚步轻，眼睛亮，善探道路。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "shiqian_token",
+      "count": 10
+    },
+    "dialogue": "脚步轻，眼睛亮，善探道路。"
+  },
+  {
+    "id": "baisheng",
+    "name": "白胜",
+    "title": "白日鼠",
+    "star": 1,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 780,
+      "attack": 90,
+      "defense": 45,
+      "speed": 85,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "baisheng_active",
+      "baisheng_passive"
+    ],
+    "story": "会唱山歌，熟悉乡道和酒担。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "baisheng_token",
+      "count": 10
+    },
+    "dialogue": "会唱山歌，熟悉乡道和酒担。"
+  },
+  {
+    "id": "ruanxiaoqi",
+    "name": "阮小七",
+    "title": "活阎罗",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1050,
+      "attack": 120,
+      "defense": 80,
+      "speed": 90,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "ruanxiaoqi_active",
+      "ruanxiaoqi_passive"
+    ],
+    "story": "在水上讨生活，胸中有一股不平。",
+    "core": false,
+    "meetMap": "creek",
+    "meetCondition": {
+      "flag": "seven_stars"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "ruanxiaoqi_token",
+      "count": 10
+    },
+    "dialogue": "在水上讨生活，胸中有一股不平。"
+  }
+]

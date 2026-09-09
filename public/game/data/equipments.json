@@ -1,0 +1,383 @@
+[
+  {
+    "id": "oak_staff",
+    "name": "枣木棍",
+    "type": "weapon",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 60,
+    "attribute": {
+      "attack": 18
+    },
+    "recipe": {
+      "silver": 60,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "iron_saber",
+    "name": "朴刀",
+    "type": "weapon",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 100,
+    "attribute": {
+      "attack": 25
+    },
+    "recipe": {
+      "silver": 100,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "long_spear",
+    "name": "长枪",
+    "type": "weapon",
+    "quality": "良品",
+    "tier": 2,
+    "price": 180,
+    "attribute": {
+      "attack": 38
+    },
+    "recipe": {
+      "silver": 180,
+      "items": {
+        "iron": 4,
+        "cloth": 2
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "short_bow",
+    "name": "短弓",
+    "type": "weapon",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 90,
+    "attribute": {
+      "attack": 22
+    },
+    "recipe": {
+      "silver": 90,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "monk_staff",
+    "name": "镔铁杖",
+    "type": "weapon",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 350,
+    "attribute": {
+      "attack": 55
+    },
+    "recipe": {
+      "silver": 350,
+      "items": {
+        "iron": 6,
+        "cloth": 3
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "cloth_armor",
+    "name": "布袍",
+    "type": "armor",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 60,
+    "attribute": {
+      "defense": 12
+    },
+    "recipe": {
+      "silver": 60,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "leather_armor",
+    "name": "皮甲",
+    "type": "armor",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 100,
+    "attribute": {
+      "defense": 18
+    },
+    "recipe": {
+      "silver": 100,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "tiger_armor",
+    "name": "虎皮袄",
+    "type": "armor",
+    "quality": "良品",
+    "tier": 2,
+    "price": 180,
+    "attribute": {
+      "defense": 30
+    },
+    "recipe": {
+      "silver": 180,
+      "items": {
+        "iron": 4,
+        "cloth": 2,
+        "tiger_skin": 3
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "chain_armor",
+    "name": "锁子甲",
+    "type": "armor",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 350,
+    "attribute": {
+      "defense": 45
+    },
+    "recipe": {
+      "silver": 350,
+      "items": {
+        "iron": 6,
+        "cloth": 3
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "felt_cap",
+    "name": "毡帽",
+    "type": "helmet",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 45,
+    "attribute": {
+      "defense": 8
+    },
+    "recipe": {
+      "silver": 45,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "iron_helmet",
+    "name": "铁盔",
+    "type": "helmet",
+    "quality": "良品",
+    "tier": 2,
+    "price": 160,
+    "attribute": {
+      "defense": 20
+    },
+    "recipe": {
+      "silver": 160,
+      "items": {
+        "iron": 4,
+        "cloth": 2
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "cloth_belt",
+    "name": "布腰带",
+    "type": "belt",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 45,
+    "attribute": {
+      "hp": 80
+    },
+    "recipe": {
+      "silver": 45,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "leather_belt",
+    "name": "革带",
+    "type": "belt",
+    "quality": "良品",
+    "tier": 2,
+    "price": 130,
+    "attribute": {
+      "hp": 160
+    },
+    "recipe": {
+      "silver": 130,
+      "items": {
+        "iron": 4,
+        "cloth": 2
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "straw_shoes",
+    "name": "草鞋",
+    "type": "shoes",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 35,
+    "attribute": {
+      "speed": 6
+    },
+    "recipe": {
+      "silver": 35,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "cloth_shoes",
+    "name": "布履",
+    "type": "shoes",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 70,
+    "attribute": {
+      "speed": 10
+    },
+    "recipe": {
+      "silver": 70,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "swift_boots",
+    "name": "轻靴",
+    "type": "shoes",
+    "quality": "良品",
+    "tier": 2,
+    "price": 160,
+    "attribute": {
+      "speed": 18
+    },
+    "recipe": {
+      "silver": 160,
+      "items": {
+        "iron": 4,
+        "cloth": 2
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "jade",
+    "name": "平安玉",
+    "type": "accessory",
+    "quality": "凡品",
+    "tier": 1,
+    "price": 70,
+    "attribute": {
+      "strategy": 12
+    },
+    "recipe": {
+      "silver": 70,
+      "items": {
+        "iron": 2,
+        "cloth": 1
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "mirror",
+    "name": "护心镜",
+    "type": "accessory",
+    "quality": "良品",
+    "tier": 2,
+    "price": 160,
+    "attribute": {
+      "strategy": 20
+    },
+    "recipe": {
+      "silver": 160,
+      "items": {
+        "iron": 4,
+        "cloth": 2
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "tactics_book",
+    "name": "兵略手抄",
+    "type": "accessory",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 350,
+    "attribute": {
+      "strategy": 35
+    },
+    "recipe": {
+      "silver": 350,
+      "items": {
+        "iron": 6,
+        "cloth": 3
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "river_charm",
+    "name": "水纹佩",
+    "type": "accessory",
+    "quality": "良品",
+    "tier": 2,
+    "price": 180,
+    "attribute": {
+      "strategy": 24
+    },
+    "recipe": {
+      "silver": 180,
+      "items": {
+        "iron": 4,
+        "cloth": 2
+      }
+    },
+    "description": "常行江湖所用，可强化至 +5。"
+  }
+]

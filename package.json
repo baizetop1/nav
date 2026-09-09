@@ -23,6 +23,7 @@
     "test:text-graph": "node --experimental-strip-types scripts/text-graph-selfcheck.mjs",
     "test:all": "node scripts/test-all.mjs",
     "test:rest-animation": "node --experimental-strip-types scripts/rest-animation-selfcheck.mjs",
+    "test:shuihu": "node scripts/shuihu-selfcheck.mjs",
     "verify": "npm run build && npm run test:all",
     "test:blog-draft": "node --experimental-strip-types scripts/blog-draft-selfcheck.mjs",
     "check:tech-os": "node scripts/check-tech-os.mjs",

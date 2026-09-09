@@ -664,6 +664,7 @@ function App() {
     && !isCommandPaletteOpen
     && !restOpen;
   const commandActions: CommandPaletteAction[] = [
+    { id: 'shuihu', title: '打开白泽水浒', description: '郓城风起 · 独立本机存档的文字江湖', keywords: ['game', '游戏', '水浒', '梁山', '寨主'], icon: 'study', run: () => { window.open(`${import.meta.env.BASE_URL}game/`, '_blank', 'noopener,noreferrer'); } },
     { id: 'rest', title: '休息一下', description: '在多幅动态风景间轮播，回来继续学习', keywords: ['rest', 'break', '休息', '放松', '动画', '泛舟', '轮播', '鹈鹕', '骑行'], icon: 'relax', run: openRest },
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
     { id: 'quick-capture', title: '快速记录', description: '立即写入本机 Inbox', keywords: ['capture', '记录', '收件箱', '+'], icon: 'add', run: openQuickCapture },
@@ -776,6 +777,7 @@ function App() {
           <div className="utility-launcher-row flex flex-wrap items-start gap-2 sm:gap-3">
             <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openTechOs}><BrainCircuit size={17} />Tech OS</button>
             <button type="button" className="baize-button-secondary utility-launcher-button" data-rest-launcher onClick={openRest}><Coffee size={17} />休息一下</button>
+            <a className="baize-button-secondary utility-launcher-button" href={`${import.meta.env.BASE_URL}game/`} target="_blank" rel="noopener noreferrer">白泽水浒</a>
             <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={readingOpen} onClick={() => setReadingOpen(value => !value)}><FileText size={17} />阅读中心</button>
             <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={graphOpen} onClick={() => setGraphOpen(value => !value)}><Network size={17} />知识图谱</button>
             {readingOpen && <ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} />}

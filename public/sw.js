@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v6-pelican-ride'
+const CACHE_VERSION = 'v7-shuihu-mvp'
 const CACHE_PREFIX = 'baize-nav-'
 const SHELL_CACHE = `${CACHE_PREFIX}shell-${CACHE_VERSION}`
 const RUNTIME_CACHE = `${CACHE_PREFIX}runtime-${CACHE_VERSION}`
@@ -171,6 +171,8 @@ self.addEventListener('fetch', (event) => {
     request.method !== 'GET' ||
     NEVER_CACHE_HOSTS.has(url.hostname) ||
     url.origin !== self.location.origin ||
+    // The standalone game must never replace the navigation's cached index.html.
+    url.pathname.startsWith(`${APP_SCOPE}game/`) ||
     !url.pathname.startsWith(APP_SCOPE)
   ) {
     return

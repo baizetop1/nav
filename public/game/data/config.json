@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "title": "白泽水浒",
+  "volume": "第一卷 · 郓城风起",
+  "initial": {
+    "silver": 500,
+    "prestige": 0,
+    "merit": 0,
+    "stamina": 100,
+    "items": {
+      "jinchuangyao": 5,
+      "huiqisan": 2,
+      "jiedudan": 2,
+      "exp_pill": 3,
+      "recruit_order": 3,
+      "iron": 4,
+      "cloth": 3
+    },
+    "equipment": [
+      "oak_staff",
+      "cloth_armor"
+    ]
+  },
+  "balance": {
+    "heroLevelCap": 40,
+    "teamSize": 3,
+    "maxStamina": 100,
+    "regenMs": 600000,
+    "ordinaryRates": [
+      {
+        "star": 5,
+        "weight": 1
+      },
+      {
+        "star": 4,
+        "weight": 6
+      },
+      {
+        "star": 3,
+        "weight": 23
+      },
+      {
+        "star": 2,
+        "weight": 45
+      },
+      {
+        "star": 1,
+        "weight": 25
+      }
+    ],
+    "pity": [
+      20,
+      50,
+      100
+    ],
+    "tokenNeed": 10,
+    "exclusiveTarget": 0.25,
+    "exclusiveHigh": 0.05,
+    "exclusiveMisses": 4,
+    "volumePrestige": 150,
+    "volumeClears": 10
+  },
+  "npcs": [
+    {
+      "id": "chaogai",
+      "name": "晁盖",
+      "title": "托塔天王",
+      "note": "七星聚义之首，特殊剧情人物，不计入正式好汉收集。"
+    },
+    {
+      "id": "ruanxiaoer",
+      "name": "阮小二",
+      "title": "立地太岁",
+      "note": "与兄弟共赴聚义，本卷作为剧情人物登场。"
+    },
+    {
+      "id": "ruanxiaowu",
+      "name": "阮小五",
+      "title": "短命二郎",
+      "note": "与兄弟共赴聚义，本卷作为剧情人物登场。"
+    }
+  ],
+  "opening": [
+    "宣和年间，天下纷乱。",
+    "山东郓城一带，商旅往来，豪杰潜藏。有人说东溪村来了异士；有人说景阳冈出了猛虎；也有人说一批生辰纲正要经过。",
+    "你没有盖世武艺，却识人、用人，也懂得聚众成事。",
+    "江湖路远，且从郓城开始。"
+  ]
+}
