@@ -1,0 +1,190 @@
+[
+  {
+    "id": "wusong_story",
+    "title": "景阳冈打虎",
+    "start": "meeting",
+    "map": "inn",
+    "condition": null,
+    "steps": {
+      "meeting": {
+        "map": "inn",
+        "text": "那汉子将空碗一放：“我姓武，名松。上冈的路，我自会走。”你说明虎患，提议替他留意林中动静。",
+        "choices": [
+          {
+            "id": "introduce",
+            "label": "报上姓名，一同察看",
+            "next": "trail",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "wusong",
+                "status": "known"
+              },
+              {
+                "type": "flag",
+                "id": "wusong_met"
+              }
+            ],
+            "goMap": "path"
+          }
+        ]
+      },
+      "trail": {
+        "map": "deepforest",
+        "condition": {
+          "flag": "trail_followed"
+        },
+        "text": "吊睛白额大虫跃出深林！武松站在前方，你退至安全处，替他判断攻势。此战武松临时助阵，不代表正式入寨。",
+        "choices": [
+          {
+            "id": "battle",
+            "label": "留意虎势，指挥应对",
+            "battle": {
+              "enemies": [
+                "tiger"
+              ],
+              "guest": {
+                "id": "wusong",
+                "level": 8
+              }
+            },
+            "next": "after"
+          }
+        ]
+      },
+      "after": {
+        "map": "deepforest",
+        "text": "武松按住大虫，一阵拳落，冈上终于安静。山下百姓纷纷道谢，他与你饮了一碗酒，留下打虎信物。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "记下这段相识",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "tiger_complete"
+              },
+              {
+                "type": "item",
+                "id": "wusong_token",
+                "amount": 1
+              },
+              {
+                "type": "currency",
+                "id": "prestige",
+                "amount": 40
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 3
+              },
+              {
+                "type": "item",
+                "id": "recruit_order",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "seven_stars_story",
+    "title": "七星聚义",
+    "map": "zhuang",
+    "start": "listen",
+    "condition": {
+      "flag": "dongxi_rumor"
+    },
+    "steps": {
+      "listen": {
+        "map": "zhuang",
+        "text": "晁盖请你落座。吴用问：“阁下可知生辰纲？”刘唐按捺不住，先说了官府如何搜括乡里。你不替众人作主，只答应察看道路。",
+        "choices": [
+          {
+            "id": "join",
+            "label": "听清原委，再访溪边",
+            "next": "brothers",
+            "goMap": "creek",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "wuyong",
+                "status": "known"
+              },
+              {
+                "type": "hero",
+                "id": "liutang",
+                "status": "known"
+              }
+            ]
+          }
+        ]
+      },
+      "brothers": {
+        "map": "creek",
+        "text": "阮小二、阮小五、阮小七在溪边相候。三人说起鱼税与官差，直言愿与晁盖共担风险。你把话带回庄中。",
+        "choices": [
+          {
+            "id": "return",
+            "label": "与三阮同返客舍",
+            "next": "pledge",
+            "goMap": "guesthouse",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "ruanxiaoqi",
+                "status": "known"
+              }
+            ]
+          }
+        ]
+      },
+      "pledge": {
+        "map": "guesthouse",
+        "text": "晁盖、吴用、公孙胜、刘唐与三阮，七星聚义。白胜另候卖酒之事。吴用道：“计策有了，还须看准时机。”",
+        "choices": [
+          {
+            "id": "pledge",
+            "label": "应下察看时机之责",
+            "finish": true,
+            "effects": [
+              {
+                "type": "hero",
+                "id": "gongsunsheng",
+                "status": "known"
+              },
+              {
+                "type": "hero",
+                "id": "baisheng",
+                "status": "known"
+              },
+              {
+                "type": "flag",
+                "id": "seven_stars"
+              },
+              {
+                "type": "currency",
+                "id": "prestige",
+                "amount": 30
+              },
+              {
+                "type": "item",
+                "id": "liutang_token",
+                "amount": 3
+              },
+              {
+                "type": "item",
+                "id": "recruit_order",
+                "amount": 2
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

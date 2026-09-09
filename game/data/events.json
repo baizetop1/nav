@@ -1,0 +1,762 @@
+[
+  {
+    "id": "wine_dispute",
+    "name": "酒客争执",
+    "maps": [
+      "tavern"
+    ],
+    "text": "两个酒客为江湖传闻争得面红。",
+    "options": [
+      {
+        "id": "listen",
+        "label": "听清来由",
+        "text": "一人提起时迁善探道路。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "shiqian",
+            "status": "heard"
+          }
+        ]
+      },
+      {
+        "id": "calm",
+        "label": "劝他们各退一步",
+        "text": "掌柜谢你解围。",
+        "effects": [
+          {
+            "type": "currency",
+            "id": "prestige",
+            "amount": 5
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "hurt_traveler",
+    "name": "商旅受伤",
+    "maps": [
+      "road"
+    ],
+    "text": "一名商旅倚在路旁，脚上裹着染血的布。",
+    "options": [
+      {
+        "id": "help",
+        "label": "赠药相助",
+        "text": "商旅谢过，指明了上冈的路。",
+        "effects": [
+          {
+            "type": "currency",
+            "id": "merit",
+            "amount": 10
+          },
+          {
+            "type": "item",
+            "id": "exp_pill",
+            "amount": 1
+          }
+        ],
+        "cost": {
+          "items": {
+            "jinchuangyao": 1
+          }
+        }
+      },
+      {
+        "id": "ask",
+        "label": "询问来由",
+        "text": "那人提醒你山中有虎。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "tiger_rumor"
+          },
+          {
+            "type": "hero",
+            "id": "wusong",
+            "status": "heard"
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "road_bandits",
+    "name": "山贼拦路",
+    "maps": [
+      "road"
+    ],
+    "text": "山贼横刀拦路，盯着行旅的钱袋。",
+    "options": [
+      {
+        "id": "fight",
+        "label": "命好汉护住行旅",
+        "text": "众人上前接应。",
+        "battle": [
+          "bandit",
+          "bandit"
+        ],
+        "effects": []
+      },
+      {
+        "id": "leave",
+        "label": "绕开此处",
+        "text": "你记下了这段险路。",
+        "effects": []
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "night_temple",
+    "name": "夜宿破庙",
+    "maps": [
+      "ruined_temple"
+    ],
+    "text": "残灯摇动，有人在墙角放下一个小包。",
+    "options": [
+      {
+        "id": "search",
+        "label": "查看小包",
+        "text": "原是路人遗下的药草。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "herb",
+            "amount": 2
+          }
+        ]
+      },
+      {
+        "id": "rest",
+        "label": "守着灯火歇脚",
+        "text": "你听到一位壮士的传闻。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "luzhishen",
+            "status": "heard"
+          }
+        ]
+      }
+    ],
+    "condition": {
+      "time": "night"
+    },
+    "limit": 1
+  },
+  {
+    "id": "horse_clue",
+    "name": "无名马匹",
+    "maps": [
+      "stable",
+      "road"
+    ],
+    "text": "一匹无主的黄马在远处吃草。",
+    "options": [
+      {
+        "id": "note",
+        "label": "记下毛色与方向",
+        "text": "这条线索可留到日后寻访坐骑。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "mount_clue",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "leave",
+        "label": "不惊动它",
+        "text": "黄马抬头望了一眼，又低下头。",
+        "effects": []
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "doctor",
+    "name": "老郎中",
+    "maps": [
+      "herbs"
+    ],
+    "text": "老郎中正在辨认药草，背篓已经半满。",
+    "options": [
+      {
+        "id": "help",
+        "label": "帮忙背回药草",
+        "text": "郎中送你两包成药。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "jinchuangyao",
+            "amount": 2
+          }
+        ]
+      },
+      {
+        "id": "ask",
+        "label": "请教解毒之法",
+        "text": "郎中给你一丸解毒丹。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "jiedudan",
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "storyteller",
+    "name": "说书人",
+    "maps": [
+      "tavern"
+    ],
+    "text": "醒木一响，满堂都静了下来。",
+    "options": [
+      {
+        "id": "listen",
+        "label": "听一段英雄往事",
+        "text": "小李广的箭术，已传得很远。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "huarong",
+            "status": "heard"
+          }
+        ]
+      },
+      {
+        "id": "tip",
+        "label": "赏一碗茶钱",
+        "text": "说书人又说起浪子燕青。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "yanqing",
+            "status": "heard"
+          },
+          {
+            "type": "currency",
+            "id": "prestige",
+            "amount": 5
+          }
+        ],
+        "cost": {
+          "silver": 20
+        }
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "official_query",
+    "name": "官差盘问",
+    "maps": [
+      "gate"
+    ],
+    "text": "守门官差要查路引，眼神很是警惕。",
+    "options": [
+      {
+        "id": "calm",
+        "label": "如实说明行程",
+        "text": "你答得从容，对方放行。",
+        "effects": [
+          {
+            "type": "currency",
+            "id": "prestige",
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": "rush",
+        "label": "急着挤出城门",
+        "text": "官差喝住你，盘问了许久。",
+        "effects": [
+          {
+            "type": "currency",
+            "id": "merit",
+            "amount": -3
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "grass_sound",
+    "name": "草丛异响",
+    "maps": [
+      "drywood",
+      "path"
+    ],
+    "text": "草叶摇动，有什么东西从脚边蹿过。",
+    "options": [
+      {
+        "id": "look",
+        "label": "拨开草丛",
+        "text": "草中留着一截虎骨。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "tiger_bone",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "fight",
+        "label": "命好汉向前查看",
+        "text": "一条毒蛇窜了出来。",
+        "battle": [
+          "snake"
+        ],
+        "effects": []
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "purse",
+    "name": "落下的钱袋",
+    "maps": [
+      "yuncheng",
+      "road"
+    ],
+    "text": "地上落着一只钱袋，前方行旅还未察觉。",
+    "options": [
+      {
+        "id": "return",
+        "label": "交还失主",
+        "text": "那人连连道谢。",
+        "effects": [
+          {
+            "type": "currency",
+            "id": "prestige",
+            "amount": 10
+          }
+        ]
+      },
+      {
+        "id": "keep",
+        "label": "暂且收下",
+        "text": "钱袋里有一些碎银，失主还在四处寻找。",
+        "effects": [
+          {
+            "type": "currency",
+            "id": "silver",
+            "amount": 80
+          },
+          {
+            "type": "currency",
+            "id": "prestige",
+            "amount": -3
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "merchant",
+    "name": "行脚商人",
+    "maps": [
+      "gate",
+      "huangni"
+    ],
+    "text": "商人展开包袱，里面多是实用小物。",
+    "options": [
+      {
+        "id": "buy",
+        "label": "以碎银换精铁",
+        "text": "成交。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "iron",
+            "amount": 3
+          }
+        ],
+        "cost": {
+          "silver": 60
+        }
+      },
+      {
+        "id": "leave",
+        "label": "谢过离开",
+        "text": "商人收好包袱，继续赶路。",
+        "effects": []
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "sparring",
+    "name": "江湖切磋",
+    "maps": [
+      "training",
+      "road"
+    ],
+    "text": "一名过路拳师拱手，想与好汉们试几招。",
+    "options": [
+      {
+        "id": "fight",
+        "label": "点到为止，试试身手",
+        "text": "拳师摆开架势。",
+        "battle": [
+          "guard"
+        ],
+        "effects": []
+      },
+      {
+        "id": "talk",
+        "label": "只谈几句心得",
+        "text": "交谈也长了些见识。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "exp_pill",
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "secret_tracks",
+    "name": "神秘脚印",
+    "maps": [
+      "ruined_temple",
+      "reedbank"
+    ],
+    "text": "脚印在芦苇前消失，似乎有人由此往来。",
+    "options": [
+      {
+        "id": "follow",
+        "label": "记下隐蔽的水路",
+        "text": "夜行衣可用来避开沿途耳目。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "night_clothes",
+            "amount": 1
+          },
+          {
+            "type": "flag",
+            "id": "secret_path"
+          }
+        ]
+      },
+      {
+        "id": "leave",
+        "label": "不贸然深入",
+        "text": "你在岸边留下记号。",
+        "effects": []
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "wine_peddler",
+    "name": "白胜酒担",
+    "maps": [
+      "winepath"
+    ],
+    "text": "白胜哼着山歌，问你是否带一壶酒上路。",
+    "options": [
+      {
+        "id": "buy",
+        "label": "买一壶村酒",
+        "text": "酒香扑鼻。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "wine",
+            "amount": 1
+          }
+        ],
+        "cost": {
+          "silver": 20
+        }
+      },
+      {
+        "id": "chat",
+        "label": "谈谈那日的安排",
+        "text": "白胜说起吴用如何算准人心。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "wuyong",
+            "status": "heard"
+          },
+          {
+            "type": "item",
+            "id": "lost_ledger",
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "condition": {
+      "flag": "huangni_complete"
+    },
+    "limit": 1
+  },
+  {
+    "id": "fisherman",
+    "name": "溪边渔夫",
+    "maps": [
+      "creek"
+    ],
+    "text": "渔夫收起空网，谈起三阮的豪气。",
+    "options": [
+      {
+        "id": "listen",
+        "label": "听三阮的消息",
+        "text": "他指向阮小七常泊船的地方。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "ruanxiaoqi",
+            "status": "heard"
+          }
+        ]
+      },
+      {
+        "id": "help",
+        "label": "帮忙理网",
+        "text": "渔夫分出一点干粮。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "grain",
+            "amount": 3
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "red_hair",
+    "name": "赤发汉子",
+    "maps": [
+      "dongxi"
+    ],
+    "text": "赤发汉子行色匆匆，向庄子方向去了。",
+    "options": [
+      {
+        "id": "ask",
+        "label": "向庄客问其姓名",
+        "text": "原是赤发鬼刘唐。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "liutang",
+            "status": "heard"
+          }
+        ]
+      },
+      {
+        "id": "leave",
+        "label": "不打扰他",
+        "text": "你让开了路。",
+        "effects": []
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "taoist",
+    "name": "道人问路",
+    "maps": [
+      "dongxi",
+      "guesthouse"
+    ],
+    "text": "一位道人问去晁盖庄怎么走。",
+    "options": [
+      {
+        "id": "guide",
+        "label": "指明庄子的路",
+        "text": "他自称公孙胜，拱手而去。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "gongsunsheng",
+            "status": "heard"
+          },
+          {
+            "type": "currency",
+            "id": "prestige",
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "id": "talk",
+        "label": "请教云游见闻",
+        "text": "道人赠了一页抄文。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "skill_page",
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "hide_trader",
+    "name": "虎皮商人",
+    "maps": [
+      "jingyang"
+    ],
+    "text": "商人想收几张虎皮，说可制结实的冬袄。",
+    "options": [
+      {
+        "id": "trade",
+        "label": "用两张虎皮换银",
+        "text": "商人验过货，付了碎银。",
+        "effects": [
+          {
+            "type": "currency",
+            "id": "silver",
+            "amount": 100
+          }
+        ],
+        "cost": {
+          "items": {
+            "tiger_skin": 2
+          }
+        }
+      },
+      {
+        "id": "leave",
+        "label": "留作打造之用",
+        "text": "你收好了虎皮。",
+        "effects": []
+      }
+    ],
+    "condition": {
+      "flag": "tiger_complete"
+    },
+    "limit": 1
+  },
+  {
+    "id": "smith_shortage",
+    "name": "铁匠缺料",
+    "maps": [
+      "forge"
+    ],
+    "text": "炉火正旺，铁匠却缺一炉好铁。",
+    "options": [
+      {
+        "id": "give",
+        "label": "分出两份精铁",
+        "text": "铁匠给你一张兵器图纸。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "blueprint",
+            "amount": 1
+          },
+          {
+            "type": "currency",
+            "id": "merit",
+            "amount": 10
+          }
+        ],
+        "cost": {
+          "items": {
+            "iron": 2
+          }
+        }
+      },
+      {
+        "id": "ask",
+        "label": "问问哪里产铁",
+        "text": "黄泥冈一带，商旅常带这种材料。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "dongxi_rumor"
+          }
+        ]
+      }
+    ],
+    "condition": null,
+    "limit": 1
+  },
+  {
+    "id": "night_roar",
+    "name": "夜半虎啸",
+    "maps": [
+      "stone",
+      "deepforest"
+    ],
+    "text": "远处虎啸打破夜色，旧日痕迹又引来探访的人。",
+    "options": [
+      {
+        "id": "inspect",
+        "label": "循声查看旧迹",
+        "text": "一名猎户送来打虎英雄留下的线索。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "wusong_token",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "retreat",
+        "label": "先回安全之处",
+        "text": "你记下了虎啸的方向。",
+        "effects": [
+          {
+            "type": "currency",
+            "id": "prestige",
+            "amount": 3
+          }
+        ]
+      }
+    ],
+    "condition": {
+      "all": [
+        {
+          "time": "night"
+        },
+        {
+          "flag": "tiger_complete"
+        }
+      ]
+    },
+    "limit": 1
+  }
+]

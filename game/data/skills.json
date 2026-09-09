@@ -1,0 +1,409 @@
+[
+  {
+    "id": "songjiang_active",
+    "name": "广施恩义",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.32
+    }
+  },
+  {
+    "id": "songjiang_passive",
+    "name": "仗义",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "wuyong_active",
+    "name": "运筹帷幄",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2.6,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    }
+  },
+  {
+    "id": "wuyong_passive",
+    "name": "审势",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "wusong_active",
+    "name": "景阳冈",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    }
+  },
+  {
+    "id": "wusong_passive",
+    "name": "打虎英雄",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "linchong_active",
+    "name": "寒星点将",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    }
+  },
+  {
+    "id": "linchong_passive",
+    "name": "稳枪",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "luzhishen_active",
+    "name": "禅杖横江",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    }
+  },
+  {
+    "id": "luzhishen_passive",
+    "name": "铁骨",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "gongsunsheng_active",
+    "name": "云起阵乱",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2.4,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    }
+  },
+  {
+    "id": "gongsunsheng_passive",
+    "name": "观阵",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "yanqing_active",
+    "name": "燕穿柳",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    }
+  },
+  {
+    "id": "yanqing_passive",
+    "name": "轻身",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "huarong_active",
+    "name": "百步穿杨",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    }
+  },
+  {
+    "id": "huarong_passive",
+    "name": "善射",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "liutang_active",
+    "name": "赤发奋击",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    }
+  },
+  {
+    "id": "liutang_passive",
+    "name": "勇决",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "shiqian_active",
+    "name": "掠影取隙",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    }
+  },
+  {
+    "id": "shiqian_passive",
+    "name": "捷足",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "baisheng_active",
+    "name": "乡路照应",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    }
+  },
+  {
+    "id": "baisheng_passive",
+    "name": "乡道",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "ruanxiaoqi_active",
+    "name": "踏浪破阵",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    }
+  },
+  {
+    "id": "ruanxiaoqi_passive",
+    "name": "水勇",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "tiger_pounce",
+    "name": "猛扑",
+    "type": "active",
+    "cost": 40,
+    "description": "猛扑，留意下回合预兆。",
+    "effect": {
+      "kind": "damage",
+      "rate": 1.4,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    }
+  },
+  {
+    "id": "tiger_tail",
+    "name": "尾剪",
+    "type": "active",
+    "cost": 40,
+    "description": "尾剪，留意下回合预兆。",
+    "effect": {
+      "kind": "damage",
+      "rate": 1.3,
+      "status": {
+        "id": "stun",
+        "turns": 1,
+        "value": 0.3
+      }
+    }
+  },
+  {
+    "id": "venom",
+    "name": "毒牙",
+    "type": "active",
+    "cost": 40,
+    "description": "毒牙，留意下回合预兆。",
+    "effect": {
+      "kind": "damage",
+      "rate": 0.8,
+      "status": {
+        "id": "poison",
+        "turns": 2,
+        "value": 35
+      }
+    }
+  },
+  {
+    "id": "bandit_cut",
+    "name": "劈斩",
+    "type": "active",
+    "cost": 40,
+    "description": "劈斩，留意下回合预兆。",
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    }
+  },
+  {
+    "id": "guard_wall",
+    "name": "结阵",
+    "type": "active",
+    "cost": 40,
+    "description": "结阵，留意下回合预兆。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.18
+    }
+  },
+  {
+    "id": "wolf_bite",
+    "name": "啮咬",
+    "type": "active",
+    "cost": 40,
+    "description": "啮咬，留意下回合预兆。",
+    "effect": {
+      "kind": "damage",
+      "rate": 1.2,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    }
+  }
+]

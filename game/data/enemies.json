@@ -1,0 +1,145 @@
+[
+  {
+    "id": "bandit",
+    "name": "山贼",
+    "attribute": {
+      "hp": 420,
+      "attack": 75,
+      "defense": 25,
+      "speed": 60,
+      "strategy": 20
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "对手整了整兵刃，正寻找阵中的破绽。"
+    ]
+  },
+  {
+    "id": "guard",
+    "name": "官差",
+    "attribute": {
+      "hp": 600,
+      "attack": 90,
+      "defense": 65,
+      "speed": 65,
+      "strategy": 30
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "对手整了整兵刃，正寻找阵中的破绽。"
+    ]
+  },
+  {
+    "id": "wolf",
+    "name": "野狼",
+    "attribute": {
+      "hp": 380,
+      "attack": 80,
+      "defense": 20,
+      "speed": 130,
+      "strategy": 10
+    },
+    "skills": [
+      "wolf_bite"
+    ],
+    "telegraphs": [
+      "对手整了整兵刃，正寻找阵中的破绽。"
+    ]
+  },
+  {
+    "id": "snake",
+    "name": "毒蛇",
+    "attribute": {
+      "hp": 280,
+      "attack": 65,
+      "defense": 15,
+      "speed": 100,
+      "strategy": 10
+    },
+    "skills": [
+      "venom"
+    ],
+    "telegraphs": [
+      "对手整了整兵刃，正寻找阵中的破绽。"
+    ]
+  },
+  {
+    "id": "bandit_chief",
+    "name": "盗匪头目",
+    "attribute": {
+      "hp": 1600,
+      "attack": 135,
+      "defense": 60,
+      "speed": 80,
+      "strategy": 45
+    },
+    "skills": [
+      "bandit_cut",
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "对手整了整兵刃，正寻找阵中的破绽。"
+    ]
+  },
+  {
+    "id": "soldier",
+    "name": "押运军士",
+    "attribute": {
+      "hp": 850,
+      "attack": 105,
+      "defense": 75,
+      "speed": 75,
+      "strategy": 45
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "对手整了整兵刃，正寻找阵中的破绽。"
+    ]
+  },
+  {
+    "id": "tiger",
+    "name": "吊睛白额虎",
+    "attribute": {
+      "hp": 3000,
+      "attack": 200,
+      "defense": 80,
+      "speed": 95,
+      "strategy": 20
+    },
+    "skills": [
+      "tiger_pounce",
+      "tiger_tail"
+    ],
+    "telegraphs": [
+      "大虫压低前爪，似要扑来。宜暂避锋芒。",
+      "大虫腰胯一掀，露出了侧身。可乘隙进击。",
+      "大虫竖起长尾，目光紧盯前方。宜蓄势观察。"
+    ]
+  },
+  {
+    "id": "tiger_king",
+    "name": "虎王",
+    "attribute": {
+      "hp": 2300,
+      "attack": 155,
+      "defense": 70,
+      "speed": 100,
+      "strategy": 25
+    },
+    "skills": [
+      "tiger_pounce",
+      "tiger_tail"
+    ],
+    "telegraphs": [
+      "大虫压低前爪，似要扑来。宜暂避锋芒。",
+      "大虫腰胯一掀，露出了侧身。可乘隙进击。",
+      "大虫竖起长尾，目光紧盯前方。宜蓄势观察。"
+    ]
+  }
+]

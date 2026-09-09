@@ -1,0 +1,701 @@
+[
+  {
+    "id": "yuncheng",
+    "name": "郓城县",
+    "region": "郓城",
+    "type": "area",
+    "description": "青石街道上行人往来。县衙告示新贴，酒肆中正有人高谈阔论。",
+    "links": [
+      {
+        "target": "office"
+      },
+      {
+        "target": "tavern"
+      },
+      {
+        "target": "forge"
+      },
+      {
+        "target": "stable"
+      },
+      {
+        "target": "recruit"
+      },
+      {
+        "target": "gate"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "office",
+    "name": "郓城县衙",
+    "region": "郓城",
+    "type": "area",
+    "description": "堂前几名差役正议论虎患。告示墙上的新旧榜文层层叠叠。",
+    "links": [
+      {
+        "target": "yuncheng"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "tavern",
+    "name": "郓城酒肆",
+    "region": "郓城",
+    "type": "area",
+    "description": "酒气混着肉香，几个行脚客围坐一桌。白胜放下酒担，时迁靠着窗沿听人说话。",
+    "links": [
+      {
+        "target": "yuncheng"
+      }
+    ],
+    "actions": [
+      {
+        "id": "rumor_dongxi",
+        "label": "打听东溪村",
+        "text": "掌柜指向城门外的溪水：晁天王庄上，近日来了几位异客。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "dongxi_rumor"
+          },
+          {
+            "type": "hero",
+            "id": "wuyong",
+            "status": "heard"
+          }
+        ],
+        "once": true
+      },
+      {
+        "id": "rumor_tiger",
+        "label": "打听景阳冈",
+        "text": "店家说山中又有行旅失踪，武二郎正好也在那边。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "wusong",
+            "status": "heard"
+          },
+          {
+            "type": "flag",
+            "id": "tiger_rumor"
+          }
+        ],
+        "once": true
+      },
+      {
+        "id": "news",
+        "label": "听江湖闲话",
+        "text": "说书人提起一位识人仗义的郓城押司：宋江。",
+        "effects": [
+          {
+            "type": "hero",
+            "id": "songjiang",
+            "status": "heard"
+          }
+        ],
+        "once": true
+      }
+    ],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "forge",
+    "name": "城西铁匠铺",
+    "region": "郓城",
+    "type": "area",
+    "description": "炉火通红，锤声不歇。铁匠说：兵刃不利，到了江湖上可要吃亏。",
+    "links": [
+      {
+        "target": "yuncheng"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "stable",
+    "name": "郓城马厩",
+    "region": "郓城",
+    "type": "area",
+    "description": "槽边马匹正在低头吃草。马夫说：先安顿人手，有缘再寻一匹脚力。",
+    "links": [
+      {
+        "target": "yuncheng"
+      }
+    ],
+    "actions": [
+      {
+        "id": "horse_rumor",
+        "label": "询问脚力消息",
+        "text": "马夫递来一张寻马的字条：先留着，待梁山安定后再访。坐骑养成不在本卷开放。",
+        "effects": [
+          {
+            "type": "item",
+            "id": "mount_clue",
+            "amount": 1
+          }
+        ],
+        "once": true
+      }
+    ],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "recruit",
+    "name": "招贤馆",
+    "region": "郓城",
+    "type": "area",
+    "description": "堂中悬着英雄帖，来往消息都在此汇拢。相识只是一面之缘，入寨还需诚意。",
+    "links": [
+      {
+        "target": "yuncheng"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "gate",
+    "name": "郓城城门",
+    "region": "郓城",
+    "type": "area",
+    "description": "守门人望着远方官道。往东可去景阳冈，溪水那头却少有人提起。",
+    "links": [
+      {
+        "target": "yuncheng"
+      },
+      {
+        "target": "road"
+      },
+      {
+        "target": "dongxi",
+        "condition": {
+          "flag": "dongxi_rumor"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "road",
+    "name": "城外官道",
+    "region": "郓城",
+    "type": "area",
+    "description": "车辙伸向远山，行旅有些匆忙。路边旧庙与草药坡各有小径。",
+    "links": [
+      {
+        "target": "gate"
+      },
+      {
+        "target": "jingyang"
+      },
+      {
+        "target": "herbs"
+      },
+      {
+        "target": "ruined_temple"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "herbs",
+    "name": "药草坡",
+    "region": "郓城",
+    "type": "area",
+    "description": "露水留在草叶上，药香很淡。老郎中常来这里分辨药性。",
+    "links": [
+      {
+        "target": "road"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "ruined_temple",
+    "name": "城外破庙",
+    "region": "郓城",
+    "type": "area",
+    "description": "庙门失修，供桌上还有一盏残灯。入夜后，墙角似乎另有脚印。",
+    "links": [
+      {
+        "target": "road"
+      },
+      {
+        "target": "reedbank",
+        "condition": {
+          "all": [
+            {
+              "time": "night"
+            },
+            {
+              "item": "night_clothes",
+              "count": 1
+            }
+          ]
+        },
+        "hidden": true
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "jingyang",
+    "name": "景阳冈下",
+    "region": "景阳冈",
+    "type": "area",
+    "description": "旧木牌上写着“山中有虎，行人慎入”。前方酒旗招展，山道渐高。",
+    "links": [
+      {
+        "target": "road"
+      },
+      {
+        "target": "inn"
+      },
+      {
+        "target": "path"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [
+      "jingyanggang"
+    ]
+  },
+  {
+    "id": "inn",
+    "name": "三碗不过冈",
+    "region": "景阳冈",
+    "type": "area",
+    "description": "店家正劝一个高大的汉子不要上冈。那汉子放下空碗，神色并无醉意。",
+    "links": [
+      {
+        "target": "jingyang"
+      },
+      {
+        "target": "path"
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "wusong_story"
+    ],
+    "dungeons": []
+  },
+  {
+    "id": "path",
+    "name": "景阳冈山道",
+    "region": "景阳冈",
+    "type": "area",
+    "description": "树木渐密，日光从叶隙落下。地上的落叶掩不住深浅不一的脚印。",
+    "links": [
+      {
+        "target": "jingyang"
+      },
+      {
+        "target": "drywood"
+      },
+      {
+        "target": "stone"
+      },
+      {
+        "target": "tracks",
+        "condition": {
+          "flag": "tracks_found"
+        },
+        "hidden": true
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "drywood",
+    "name": "枯树林",
+    "region": "景阳冈",
+    "type": "area",
+    "description": "枯枝横在小径上，附近散着碎布。几处巨大的爪印一直延伸到草丛中。",
+    "links": [
+      {
+        "target": "path"
+      }
+    ],
+    "actions": [
+      {
+        "id": "tracks",
+        "label": "查看巨大的脚印",
+        "text": "爪印深入草丛。你在树上留下一处记号，返回山道便能沿虎踪追查。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "tracks_found"
+          }
+        ],
+        "once": true
+      }
+    ],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "stone",
+    "name": "大青石",
+    "region": "景阳冈",
+    "type": "area",
+    "description": "青石还留着白日的暖意。四下忽然安静，林中没有鸟声。",
+    "links": [
+      {
+        "target": "path"
+      },
+      {
+        "target": "deepforest",
+        "condition": {
+          "flag": "trail_followed"
+        },
+        "hidden": true
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "tracks",
+    "name": "虎踪",
+    "region": "景阳冈",
+    "type": "area",
+    "description": "草丛被压倒，树皮上有几道新痕。循着痕迹向前，深林里传出沉重鼻息。",
+    "links": [
+      {
+        "target": "path"
+      },
+      {
+        "target": "deepforest",
+        "condition": {
+          "flag": "trail_followed"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "id": "follow",
+        "label": "继续追踪",
+        "text": "深林的方向已经辨明。武松点了点头，提着哨棒往前走。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "trail_followed"
+          }
+        ],
+        "once": true
+      }
+    ],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "deepforest",
+    "name": "密林深处",
+    "region": "景阳冈",
+    "type": "area",
+    "description": "风停了，林叶不再作响。武松立住脚步，看向暗处的一双眼睛。",
+    "links": [
+      {
+        "target": "stone"
+      },
+      {
+        "target": "tracks"
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "wusong_story"
+    ],
+    "dungeons": []
+  },
+  {
+    "id": "dongxi",
+    "name": "东溪村",
+    "region": "东溪村",
+    "type": "area",
+    "description": "溪水绕村，炊烟低垂。晁盖庄门前近日多了几个陌生面孔。",
+    "links": [
+      {
+        "target": "gate"
+      },
+      {
+        "target": "zhuang"
+      },
+      {
+        "target": "creek"
+      },
+      {
+        "target": "guesthouse"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "zhuang",
+    "name": "晁盖庄",
+    "region": "东溪村",
+    "type": "area",
+    "description": "一位书生与赤发汉子低声交谈。庄主人晁盖抬手，示意众人稍安。",
+    "links": [
+      {
+        "target": "dongxi"
+      },
+      {
+        "target": "guesthouse"
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "seven_stars_story"
+    ],
+    "dungeons": []
+  },
+  {
+    "id": "creek",
+    "name": "溪边渡口",
+    "region": "东溪村",
+    "type": "area",
+    "description": "打鱼的小船系在岸旁。三阮说起水上的日子，言语间颇有不平。",
+    "links": [
+      {
+        "target": "dongxi"
+      },
+      {
+        "target": "reedbank"
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "seven_stars_story"
+    ],
+    "dungeons": []
+  },
+  {
+    "id": "guesthouse",
+    "name": "庄后客舍",
+    "region": "东溪村",
+    "type": "area",
+    "description": "七人围坐，不为功名，只问义气。吴用铺开一幅简陋路图。",
+    "links": [
+      {
+        "target": "zhuang"
+      },
+      {
+        "target": "dongxi"
+      },
+      {
+        "target": "huangni",
+        "condition": {
+          "flag": "seven_stars"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "seven_stars_story"
+    ],
+    "dungeons": []
+  },
+  {
+    "id": "reedbank",
+    "name": "芦苇浅湾",
+    "region": "东溪村",
+    "type": "area",
+    "description": "芦苇遮住了水面，脚步要放得轻些。有人留下的绳结还很新。",
+    "links": [
+      {
+        "target": "creek"
+      },
+      {
+        "target": "ruined_temple"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "huangni",
+    "name": "黄泥冈口",
+    "region": "黄泥冈",
+    "type": "area",
+    "description": "官道上尘土未落，日头渐毒。远处军汉挑着重担，杨志不断催促。",
+    "links": [
+      {
+        "target": "guesthouse"
+      },
+      {
+        "target": "ridge"
+      },
+      {
+        "target": "pines"
+      },
+      {
+        "target": "winepath"
+      },
+      {
+        "target": "liangshan",
+        "condition": {
+          "flag": "huangni_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [
+      "huangnigang"
+    ]
+  },
+  {
+    "id": "ridge",
+    "name": "冈上松岗",
+    "region": "黄泥冈",
+    "type": "area",
+    "description": "松荫只能遮住几个人。疲惫的军汉想歇脚，押运的人仍不放心。",
+    "links": [
+      {
+        "target": "huangni"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "pines",
+    "name": "松林阴处",
+    "region": "黄泥冈",
+    "type": "area",
+    "description": "吴用借树影察看来路。此处能听清军汉抱怨，却不容易被看见。",
+    "links": [
+      {
+        "target": "huangni"
+      },
+      {
+        "target": "winepath"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "winepath",
+    "name": "卖酒小径",
+    "region": "黄泥冈",
+    "type": "area",
+    "description": "白胜挑着酒担在远处候着。来早一步或迟一步，都可能坏了安排。",
+    "links": [
+      {
+        "target": "huangni"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "liangshan",
+    "name": "梁山脚下",
+    "region": "梁山",
+    "type": "area",
+    "description": "远水尽头一片苍茫，已有流落的乡人搭起草棚。要在此安身，还得有人、有粮，也有一份担当。",
+    "links": [
+      {
+        "target": "huangni",
+        "condition": {
+          "flag": "huangni_complete"
+        }
+      },
+      {
+        "target": "ferry"
+      },
+      {
+        "target": "training"
+      },
+      {
+        "target": "expeditions"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "ferry",
+    "name": "金沙渡",
+    "region": "梁山",
+    "type": "area",
+    "description": "小舟在浅水里轻轻打转。远来的行脚僧谈起了野猪林中的不平事。",
+    "links": [
+      {
+        "target": "liangshan"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "training",
+    "name": "临时校场",
+    "region": "梁山",
+    "type": "area",
+    "description": "空地上竖了几根木桩。花荣看着弓弦，示意众人先站稳阵脚。",
+    "links": [
+      {
+        "target": "liangshan"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": []
+  },
+  {
+    "id": "expeditions",
+    "name": "江湖历练处",
+    "region": "梁山",
+    "type": "area",
+    "description": "过路人带来了野猪林、沧州与祝家庄的见闻。可先据传闻演练，完整往事待下一卷展开。",
+    "links": [
+      {
+        "target": "liangshan"
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [
+      "yezhulin",
+      "shanshenmiao",
+      "zhujiazhuang"
+    ]
+  }
+]

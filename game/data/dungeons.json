@@ -1,0 +1,97 @@
+[
+  {
+    "id": "jingyanggang",
+    "name": "景阳冈历练",
+    "level": 1,
+    "map": "jingyang",
+    "condition": {
+      "flag": "tiger_complete"
+    },
+    "enemy": [
+      "wolf",
+      "tiger_king"
+    ],
+    "scale": 1,
+    "cost": 10,
+    "limit": 3,
+    "reward": "jing_reward",
+    "description": "虎患虽平，山中仍有野兽伤人。带自己的好汉巡视冈上。",
+    "kind": "battle"
+  },
+  {
+    "id": "huangnigang",
+    "name": "黄泥冈历练",
+    "level": 10,
+    "map": "huangni",
+    "condition": {
+      "flag": "huangni_complete"
+    },
+    "enemy": [
+      "soldier"
+    ],
+    "scale": 1,
+    "cost": 10,
+    "limit": 3,
+    "reward": "huang_reward",
+    "description": "重演吴用的安排，察看疲劳、疑心与卖酒的时机。",
+    "kind": "scheme"
+  },
+  {
+    "id": "yezhulin",
+    "name": "野猪林传闻历练",
+    "level": 20,
+    "map": "expeditions",
+    "condition": {
+      "flag": "huangni_complete"
+    },
+    "enemy": [
+      "guard",
+      "bandit_chief"
+    ],
+    "scale": 2.2,
+    "cost": 15,
+    "limit": 3,
+    "reward": "forest_reward",
+    "description": "据鲁智深所述，演练林中救援。此处并非第二卷完整剧情。",
+    "kind": "battle"
+  },
+  {
+    "id": "shanshenmiao",
+    "name": "风雪山神庙历练",
+    "level": 30,
+    "map": "expeditions",
+    "condition": {
+      "flag": "huangni_complete"
+    },
+    "enemy": [
+      "soldier",
+      "bandit_chief"
+    ],
+    "scale": 3.2,
+    "cost": 15,
+    "limit": 3,
+    "reward": "temple_reward",
+    "description": "雪夜需稳住阵脚，再破围攻。林冲的完整往事将在后续卷展开。",
+    "kind": "battle"
+  },
+  {
+    "id": "zhujiazhuang",
+    "name": "祝家庄传闻历练",
+    "level": 40,
+    "map": "expeditions",
+    "condition": {
+      "flag": "huangni_complete"
+    },
+    "enemy": [
+      "guard",
+      "soldier",
+      "bandit_chief"
+    ],
+    "scale": 3,
+    "cost": 20,
+    "limit": 3,
+    "reward": "zhu_reward",
+    "description": "先演练庄前交战，留心敌人的结阵。庄内迷径不在本卷开放。",
+    "kind": "battle"
+  }
+]

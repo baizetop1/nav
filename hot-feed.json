@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-09T14:37:07.002Z",
+  "generatedAt": "2026-09-09T16:19:17.363Z",
   "intelligence": {
-    "updatedAt": "2026-09-09T14:37:07.002Z",
+    "updatedAt": "2026-09-09T16:19:17.363Z",
     "items": [
       {
         "id": "cn-item-40e1b2f5b9ca9b57",
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-09T13:27:11.000Z",
         "badge": "HN",
-        "signal": "221 分 · 83 评论"
+        "signal": "436 分 · 167 评论"
       },
       {
-        "id": "cn-it-cf2e640a9e37ec03",
+        "id": "cn-it-2335ed8b3d05eada",
         "category": "cn",
-        "title": "《怪物猎人：荒野》将于 12 月 4 日登陆任天堂 Switch 2，支持本地合作游玩",
-        "url": "https://www.ithome.com/1/000/471.htm",
+        "title": "经典弹幕游戏重制《东方红魔乡：新典》发售，Steam 国区 69 元起",
+        "url": "https://www.ithome.com/1/000/487.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T14:36:34.000Z",
-        "summary": "IT之家 9 月 9 日消息，今天（9 日）晚间的任天堂直面会上，卡普空宣布《怪物猎人：荒野》 将登陆 Switch 2 。Switch 2 版将 完整收录此前推出的所有免费 DLC 更新内容 ，也会包含后续加入的新怪物，将于 12 月 4 日正式发售。 新版本还将恢复系列早期作品曾经提供的本地合作功能，玩家可以直接去朋友家组建狩猎小队，一同出发狩猎。 据IT之家了解，《怪物猎人：荒野》的首个大型扩展包“Ascension（凌越）”也在开发中，将带来全新的狩猎区域、剧情任务…",
+        "publishedAt": "2026-09-09T15:52:04.000Z",
+        "summary": "IT之家 9 月 9 日消息，弹幕射击游戏《东方红魔乡：新典 ～ the Embodiment of Scarlet Devil.》现已正式发售，登陆 PS5、Switch 2、PC 平台，支持中文。 IT之家获悉，《东方红魔乡：新典》是 2002 年推出的《东方红魔乡》时隔 24 年首次推出的重制版本，玩家将操控博丽灵梦与雾雨魔理沙，在漫天飞舞的弹幕之间穿梭，调查笼罩幻想乡的神秘红雾异变。 价格方面，以 Steam 国区为例，本作标准版定价为 69 元（收录原版《东方红魔…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-2x7j-588g-ccc2",
+        "id": "github-advisory-ghsa-2j8r-3c22-8565",
         "category": "security",
-        "title": "Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list",
-        "url": "https://github.com/advisories/GHSA-2x7j-588g-ccc2",
+        "title": "Microsoft Security Advisory CVE-2026-69522 – .NET and Visual Studio Remote Code Execution Vulnerability",
+        "url": "https://github.com/advisories/GHSA-2j8r-3c22-8565",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T21:33:17.000Z",
-        "summary": "### Summary Nodemailer's address parser (`lib/addressparser/index.js`) parses a list of comma‑separated addresses in **quadratic time — O(n²)** in the number of addresses. A single crafted address string (e.g. a `To`, `Cc`, `Bcc`, `From`, …",
-        "badge": "GHSA-2X7J-588G-CCC2",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-09T16:04:04.000Z",
+        "summary": "# Microsoft Security Advisory CVE-2026-69522 – .NET and Visual Studio Remote Code Execution Vulnerability ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.DiaSymRe…",
+        "badge": "CVE-2026-69522",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -77,24 +77,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240805",
+        "id": "v2ex-1240836",
         "category": "dev",
-        "title": "随便分享几个大单，显摆一下",
-        "url": "https://www.v2ex.com/t/1240805",
+        "title": "欢迎大家用顶级模型贡献 pcc",
+        "url": "https://www.v2ex.com/t/1240836",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T12:48:55.000Z",
+        "publishedAt": "2026-09-09T15:50:13.000Z",
+        "summary": "有了 AI 开始实现了我多年的设想 \"write python run native\"。 编译器本身用 python 写。同时也支持 c 语言。但一个人顶级模型额度有限, 20x codex 非常容易 2 天就消耗完了(也许是 agents 使用方式与问题)，欢迎感兴趣的贡献 issue + PR https://github.com/allstoalls/pcc 。 目前还有几百个 issue 待解决。 我不确定这项目最后会不会实际有人用，我个人觉得可以在里面实现很多想法…",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-2b22210d4c357fc1",
+        "id": "cn-baidu-c59497b4b9e43df1",
         "category": "cn",
-        "title": "高考数学132入学考试0分 大学回应",
-        "url": "https://www.baidu.com/s?wd=%E9%AB%98%E8%80%83%E6%95%B0%E5%AD%A6132%E5%85%A5%E5%AD%A6%E8%80%83%E8%AF%950%E5%88%86+%E5%A4%A7%E5%AD%A6%E5%9B%9E%E5%BA%94&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "郑钦文vs莱巴金娜",
+        "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87vs%E8%8E%B1%E5%B7%B4%E9%87%91%E5%A8%9C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月9日，西安电子科技大学一场被网友称作“地狱级”的新生入学考试在网络引发热议，有高考数学132分的学生考出0分。学校宣传部回应称此次考试真实有效，核心用途为拔尖人才选拔。",
         "badge": "热搜",
-        "signal": "7,808,392 热度"
+        "signal": "7,809,210 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81963",
@@ -108,23 +108,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-22"
       },
       {
-        "id": "ai-hugging-face-5cbcf08e288841ac",
+        "id": "ai-hugging-face-46660cb2ea4362f6",
         "category": "ai",
-        "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+        "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+        "url": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-08T14:23:07.000Z",
+        "publishedAt": "2026-09-09T15:36:24.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49624394",
+        "id": "hn-49628493",
         "category": "dev",
-        "title": "Flock Wants a Closely Surveilled World with No Exit",
-        "url": "https://www.newyorker.com/culture/infinite-scroll/flock-wants-a-closely-surveilled-world-with-no-exit",
+        "title": "No Man's Sky Cosmos",
+        "url": "https://www.nomanssky.com/cosmos-update/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T10:54:18.000Z",
+        "publishedAt": "2026-09-09T15:47:42.000Z",
         "badge": "HN",
-        "signal": "452 分 · 358 评论"
+        "signal": "40 分 · 19 评论"
       },
       {
         "id": "cn-item-0310459a27ca60f1",
@@ -137,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-2q42-4q24-7rgv",
+        "id": "github-advisory-ghsa-527h-q9f6-p7qx",
         "category": "security",
-        "title": "OpenAPI3 version value escapes `emitterOutputDir` and overwrites YAML/JSON outside the output tree",
-        "url": "https://github.com/advisories/GHSA-2q42-4q24-7rgv",
+        "title": "Microsoft Security Advisory CVE-2026-69439 – .NET and Visual Studio Elevation of Privilege Vulnerability",
+        "url": "https://github.com/advisories/GHSA-527h-q9f6-p7qx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T21:31:09.000Z",
-        "summary": "### Summary The `@typespec/openapi3` emitter retains the value of a `@versioned` enum member and interpolates it into the output filename as `{version}` without sanitizing path separators or traversal components. The completed path reaches…",
-        "badge": "GHSA-2Q42-4Q24-7RGV",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-09-09T16:03:46.000Z",
+        "summary": "# Microsoft Security Advisory CVE-2026-69439 – .NET and Visual Studio Elevation of Privilege Vulnerability ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.DiaSymR…",
+        "badge": "CVE-2026-69439",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-openai-a00fc889a2dd293b",
@@ -158,24 +158,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240787",
+        "id": "v2ex-1240805",
         "category": "dev",
-        "title": "没有人聊聊掘金签到的最近调整吗？",
-        "url": "https://www.v2ex.com/t/1240787",
+        "title": "随便分享几个大单，显摆一下",
+        "url": "https://www.v2ex.com/t/1240805",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T11:05:33.000Z",
-        "summary": "《 [社区公告] 签到与矿石奖励解耦说明》 https://juejin.cn/post/7681511201546076194 碎碎念 掘金被字节从阴明手里收了后，产品设计就像一坨*。 此前对掘金有任何建议都能通过邮件与阴明沟通甚至是微信。现在不管啥问题反馈都是没有回应。 回到主题 搞了个矿石抽奖，天天抽出来 bug 你敢信？这产品和程序员是有仇吗？ 现在又来大改了规则： 原先签到赠送矿石，现在不送了，页面也没有明显提示。我上个月断签了十天，买了好多补签卡，签上去发现没有…",
+        "publishedAt": "2026-09-09T12:48:55.000Z",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-it-c69233da74dcabbc",
+        "id": "cn-it-f0f9488550ec0154",
         "category": "cn",
-        "title": "R 星高管：《GTA 6》首支预告片发布时游戏尚未成型",
-        "url": "https://www.ithome.com/1/000/470.htm",
+        "title": "Claude Max 订阅条款出现“文字游戏”，用户将 Anthropic 告上法庭",
+        "url": "https://www.ithome.com/1/000/486.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T14:34:35.000Z",
-        "summary": "IT之家 9 月 9 日消息，距离我们看到 《GTA 6》 的首支预告片已经过去快三年了，而 Rockstar North 的联合工作室负责人如今透露，这款游戏在当时还未“成型”。不过尽管如此，预告片中使用的那首歌，已然为后续的内容定下了“使命宣言”般的基调。 等待《GTA 6》的过程显得无比漫长，而 Rockstar 寥寥无几的营销宣传无疑更是雪上加霜。很长一段时间里，外界只能依靠首支预告片获取相关信息，该预告片向我们介绍了露西亚，以及后来被确认身份的杰森，还有罪恶都市的…",
+        "publishedAt": "2026-09-09T15:29:40.000Z",
+        "summary": "IT之家 9 月 9 日消息，据外媒 The Verge 今天（9 日）报道，一批 Claude 用户将 Anthropic 告上法庭，指控其对最高档 Max 订阅套餐进行 误导性宣传 。 这项集体诉讼指控，Anthropic 没有清楚说明 2025 年 4 月推出的 Claude Max 套餐 究竟有哪些使用限制 。 按照 Anthropic 的宣传，每月支付 100 美元或 200 美元 （IT之家注：现汇率约合 672.8 元或 1,346 元人民币） 订阅 Max，…",
         "badge": "IT之家"
       },
       {
@@ -206,48 +205,48 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-09T11:39:46.000Z",
         "badge": "HN",
-        "signal": "158 分 · 40 评论"
+        "signal": "249 分 · 65 评论"
       },
       {
-        "id": "cn-baidu-5e98933e1cdfa172",
+        "id": "cn-baidu-bb315f7875b7d789",
         "category": "cn",
-        "title": "“梅姨”微信朋友圈曝光",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E6%A2%85%E5%A7%A8%E2%80%9D%E5%BE%AE%E4%BF%A1%E6%9C%8B%E5%8F%8B%E5%9C%88%E6%9B%9D%E5%85%89&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "资助者回应被资助女孩质问没打生活费",
+        "url": "https://www.baidu.com/s?wd=%E8%B5%84%E5%8A%A9%E8%80%85%E5%9B%9E%E5%BA%94%E8%A2%AB%E8%B5%84%E5%8A%A9%E5%A5%B3%E5%AD%A9%E8%B4%A8%E9%97%AE%E6%B2%A1%E6%89%93%E7%94%9F%E6%B4%BB%E8%B4%B9&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月9日，人贩子“梅姨”落网前微信曝光：昵称“瑜珍2”、无照片头像、朋友圈两三年未更新，曾以“谢某珍”登记，社区环卫工称其身高1.5米左右。",
+        "summary": "近日，资助者姚先生回应“大二女生因用名牌手机被取消资助后质问”一事。姚先生称，得知女生因突然失去生活来源焦虑失言，女生愿更换手机并打工挣钱，他已安排同事前往兰州送去1500元生活费。",
         "badge": "热搜",
-        "signal": "7,713,102 热度"
+        "signal": "7,713,671 热度"
       },
       {
-        "id": "github-advisory-ghsa-wc9g-mqfw-jrwm",
+        "id": "github-advisory-ghsa-63gh-g2x5-x69v",
         "category": "security",
-        "title": "multer vulnerable to Denial of Service via crafted multipart field names",
-        "url": "https://github.com/advisories/GHSA-wc9g-mqfw-jrwm",
+        "title": "Microsoft Security Advisory CVE-2026-71328 – .NET and Visual Studio Remote Code Execution Vulnerability",
+        "url": "https://github.com/advisories/GHSA-63gh-g2x5-x69v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T21:30:20.000Z",
-        "summary": "### Impact A vulnerability in multer allows a remote, unauthenticated attacker to crash the Node.js process with a single `multipart/form-data` request. Two specially crafted text field names cause an uncaught `RangeError: Invalid array le…",
-        "badge": "CVE-2026-77078",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-09T16:01:52.000Z",
+        "summary": "# Microsoft Security Advisory CVE-2026-71328 – .NET and Visual Studio Remote Code Execution Vulnerability ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.DiaSymRe…",
+        "badge": "CVE-2026-71328",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-hugging-face-fffbcba03b0b217e",
+        "id": "ai-hugging-face-5cbcf08e288841ac",
         "category": "ai",
-        "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
-        "url": "https://huggingface.co/blog/Hcompany/neomme",
+        "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-03T13:13:48.000Z",
+        "publishedAt": "2026-09-08T14:23:07.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240763",
+        "id": "v2ex-1240787",
         "category": "dev",
-        "title": "独立开发者一般都是怎么找到真实需求的？",
-        "url": "https://www.v2ex.com/t/1240763",
+        "title": "没有人聊聊掘金签到的最近调整吗？",
+        "url": "https://www.v2ex.com/t/1240787",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T09:23:10.000Z",
-        "summary": "最近在认真考虑做一些独立开发项目，但发现最大的难点其实不是开发，而是「怎么发现真正有人愿意付费的需求」。 我目前想到的几个渠道： GitHub Issues：从热门项目的 Issue / Discussion 里找反复出现的痛点 V2EX：看程序员、职场、外包、分享创造等节点里的真实需求 Reddit / Hacker News：观察海外开发者在吐槽什么 小红书 / 闲鱼：看非技术用户有什么实际需求 外包平台：从别人愿意直接付钱解决的问题反推需求 最近我还有一个想法： 做一…",
+        "publishedAt": "2026-09-09T11:05:33.000Z",
+        "summary": "《 [社区公告] 签到与矿石奖励解耦说明》 https://juejin.cn/post/7681511201546076194 碎碎念 掘金被字节从阴明手里收了后，产品设计就像一坨*。 此前对掘金有任何建议都能通过邮件与阴明沟通甚至是微信。现在不管啥问题反馈都是没有回应。 回到主题 搞了个矿石抽奖，天天抽出来 bug 你敢信？这产品和程序员是有仇吗？ 现在又来大改了规则： 原先签到赠送矿石，现在不送了，页面也没有明显提示。我上个月断签了十天，买了好多补签卡，签上去发现没有…",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-item-4d3302121044543a",
@@ -281,34 +280,34 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49626373",
+        "id": "hn-49623754",
         "category": "dev",
-        "title": "What will our economic future look like?",
-        "url": "https://www.anthropic.com/institute/econ-scenarios",
+        "title": "Claude, change the \"Add to Cart\" button to blue",
+        "url": "https://opusfived.dev/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T13:38:23.000Z",
+        "publishedAt": "2026-09-09T09:39:46.000Z",
         "badge": "HN",
-        "signal": "28 分 · 17 评论"
+        "signal": "577 分 · 223 评论"
       },
       {
-        "id": "cn-it-e722ce65e70a8d82",
+        "id": "cn-it-2bd4969db4706ad9",
         "category": "cn",
-        "title": "累计销量超 2000 万份，捉迷藏游戏《超级变色龙》官宣登陆任天堂 Switch 2",
-        "url": "https://www.ithome.com/1/000/469.htm",
+        "title": "《天国：拯救 2 皇家版》游戏官宣登陆任天堂 Switch 2，预计 2027 年发售",
+        "url": "https://www.ithome.com/1/000/485.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T14:33:26.000Z",
-        "summary": "IT之家 9 月 9 日消息，在今晚举行的新一期任天堂直面会上，捉迷藏游戏《MECCHA CHAMELEON》（超级变色龙）官宣将于今天晚些时候登陆任天堂 Switch 2 平台，官方暂未公布游戏价格。 《超级变色龙》是一款将“捉迷藏”与“涂鸦伪装”完美结合的爆款多人休闲游戏。玩家需化身纯白小人，利用画笔和创意将自己伪装成场景中的物品，躲避追捕者的搜查。 《超级变色龙》于 2026 年 6 月 10 日正式上线， 国区 Steam 售价 26 元 ，该作发售 2 天就突破 …",
+        "publishedAt": "2026-09-09T15:23:17.000Z",
+        "summary": "IT之家 9 月 9 日消息，发行商 Deep Silver 今天在任天堂新一期直面会宣布，《天国：拯救 2 皇家版》将登陆 Switch 2 平台， 预计 2027 年发售 。 据介绍，本作将包含所有 DLC， 包含高级剧情扩展包 、 专属装备和额外任务线 。玩家可在游戏中体验第一人称中世纪冒险，感受广阔开放世界、宏大的电影级剧情以及爽快战斗。 IT之家了解到，《天国：拯救 2》发售于去年 2 月 4 日，主打历史题材第一人称开放世界动作角色扮演，过去一年里官方陆续推出了…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-qfvm-cv95-jqjf",
+        "id": "github-advisory-ghsa-2x7j-588g-ccc2",
         "category": "security",
-        "title": "multer vulnerable to Denial of Service via file descriptor leak on aborted uploads",
-        "url": "https://github.com/advisories/GHSA-qfvm-cv95-jqjf",
+        "title": "Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list",
+        "url": "https://github.com/advisories/GHSA-2x7j-588g-ccc2",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T21:29:51.000Z",
-        "summary": "### Impact A vulnerability in multer `2.2.0` allows an attacker to trigger a Denial of Service (DoS) by aborting or truncating multipart uploads. When using `diskStorage`, the destination write stream is not closed if the upload is aborted…",
-        "badge": "CVE-2026-77037",
+        "publishedAt": "2026-09-08T21:33:17.000Z",
+        "summary": "### Summary Nodemailer's address parser (`lib/addressparser/index.js`) parses a list of comma‑separated addresses in **quadratic time — O(n²)** in the number of addresses. A single crafted address string (e.g. a `To`, `Cc`, `Bcc`, `From`, …",
+        "badge": "GHSA-2X7J-588G-CCC2",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -321,15 +320,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240756",
+        "id": "v2ex-1240763",
         "category": "dev",
-        "title": "怎么实现让 AI 对百万数据进行本地分析？",
-        "url": "https://www.v2ex.com/t/1240756",
+        "title": "独立开发者一般都是怎么找到真实需求的？",
+        "url": "https://www.v2ex.com/t/1240763",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T09:09:33.000Z",
-        "summary": "目前的需求是，获取服务端数据交给 workbuddy ，让 AI 根据我提供的列名自行编写脚本，过滤、汇总出用户想要的数据。 由于没有参考对象，不知道应该怎么开发，我想的是： 写一个 MCP 获取数据，然后把数据集保存到 jsonl/xslx 等临时文件中，以 resource link 的形式返回给 AI ，并返回列名、字段类型、数据条数等元信息。 AI 得到路径后，自己写脚本开始处理数据，然后返回给用户。 但是我文件写到哪里？如果直接往 userdata 写的话，那垃圾…",
+        "publishedAt": "2026-09-09T09:23:10.000Z",
+        "summary": "最近在认真考虑做一些独立开发项目，但发现最大的难点其实不是开发，而是「怎么发现真正有人愿意付费的需求」。 我目前想到的几个渠道： GitHub Issues：从热门项目的 Issue / Discussion 里找反复出现的痛点 V2EX：看程序员、职场、外包、分享创造等节点里的真实需求 Reddit / Hacker News：观察海外开发者在吐槽什么 小红书 / 闲鱼：看非技术用户有什么实际需求 外包平台：从别人愿意直接付钱解决的问题反推需求 最近我还有一个想法： 做一…",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "14 回复"
       },
       {
         "id": "cn-baidu-a8d01d1c146f6177",
@@ -339,7 +338,7 @@
         "source": "百度热搜",
         "summary": "9月8日，第二十六届中国国际投资贸易洽谈会在福建厦门开幕，全面宣介中国对外开放政策、超大规模市场优势和产业创新发展机遇，为中国链接世界、世界共享中国式现代化发展机遇架设桥梁纽带。",
         "badge": "热搜",
-        "signal": "7,617,843 热度"
+        "signal": "7,619,239 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85046",
@@ -353,23 +352,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-18"
       },
       {
-        "id": "ai-hugging-face-a139f80b159295ad",
+        "id": "ai-hugging-face-fffbcba03b0b217e",
         "category": "ai",
-        "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
-        "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+        "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+        "url": "https://huggingface.co/blog/Hcompany/neomme",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-03T00:00:00.000Z",
+        "publishedAt": "2026-09-03T13:13:48.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49624856",
+        "id": "hn-49627370",
         "category": "dev",
-        "title": "I advertise malicious software on Google Ads",
-        "url": "https://xlii.space/eng/malicious-software-on-google-ads/",
+        "title": "GPT-6 Astra, Looped Transformers, and Hidden Reasoning",
+        "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T11:43:21.000Z",
+        "publishedAt": "2026-09-09T14:37:47.000Z",
         "badge": "HN",
-        "signal": "179 分 · 82 评论"
+        "signal": "33 分 · 1 评论"
       },
       {
         "id": "cn-item-8f2af6a8fbbc3103",
@@ -382,15 +381,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-535w-7cp7-47q4",
+        "id": "github-advisory-ghsa-2q42-4q24-7rgv",
         "category": "security",
-        "title": "multer vulnerable to Denial of Service via oversized array index in field names",
-        "url": "https://github.com/advisories/GHSA-535w-7cp7-47q4",
+        "title": "OpenAPI3 version value escapes `emitterOutputDir` and overwrites YAML/JSON outside the output tree",
+        "url": "https://github.com/advisories/GHSA-2q42-4q24-7rgv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T21:28:43.000Z",
-        "summary": "### Impact multer is vulnerable to a Denial of Service (DoS) via a crafted array index in multipart field names. The `append-field` dependency parses bracket notation in field names, and a large numeric index such as `items[4294967294]` fo…",
-        "badge": "CVE-2026-82333",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-08T21:31:09.000Z",
+        "summary": "### Summary The `@typespec/openapi3` emitter retains the value of a `@versioned` enum member and interpolates it into the output filename as `{version}` without sanitizing path separators or traversal components. The completed path reaches…",
+        "badge": "GHSA-2Q42-4Q24-7RGV",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
         "id": "ai-openai-2c827cba158d2f26",
@@ -403,24 +402,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240746",
+        "id": "v2ex-1240756",
         "category": "dev",
-        "title": "继上贴， agent 记忆框架记忆条数超过 10000 后出现老年痴呆问题，我想我解决了",
-        "url": "https://www.v2ex.com/t/1240746",
+        "title": "怎么实现让 AI 对百万数据进行本地分析？",
+        "url": "https://www.v2ex.com/t/1240756",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T08:51:48.000Z",
-        "summary": "继上贴： https://v2ex.com/t/1235793 目前我的解决方案是： 同时部署以下记忆框架： 1.MemOS 2.metamem 3.openviking 4.hindsight 5.Second Me 6.Text2Mem 7.Letta 8.ReMe 9.memU 10.TencentDB-Agent-Memory 11.mem0 12.cognee 13.Graphiti 14.Supermemory 15.Memori 16.LangMem 17.A…",
+        "publishedAt": "2026-09-09T09:09:33.000Z",
+        "summary": "目前的需求是，获取服务端数据交给 workbuddy ，让 AI 根据我提供的列名自行编写脚本，过滤、汇总出用户想要的数据。 由于没有参考对象，不知道应该怎么开发，我想的是： 写一个 MCP 获取数据，然后把数据集保存到 jsonl/xslx 等临时文件中，以 resource link 的形式返回给 AI ，并返回列名、字段类型、数据条数等元信息。 AI 得到路径后，自己写脚本开始处理数据，然后返回给用户。 但是我文件写到哪里？如果直接往 userdata 写的话，那垃圾…",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "15 回复"
       },
       {
-        "id": "cn-it-4c03c6a51db0a78f",
+        "id": "cn-it-cd0dacda4e59a895",
         "category": "cn",
-        "title": "荣旗科技：公司参与了苹果折叠屏手机 VC 散热的检测环节",
-        "url": "https://www.ithome.com/1/000/468.htm",
+        "title": "任天堂新作《星之卡比跃然世界》公开，明年春季登陆 Switch 2",
+        "url": "https://www.ithome.com/1/000/484.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T14:29:55.000Z",
-        "summary": "IT之家 9 月 9 日消息，荣旗科技今日在深交所互动易平台透露，公司参与了苹果折叠屏手机中 VC 散热的检测环节。 结合IT之家此前援引古尔曼消息 ，苹果首款折叠屏手机预计将命名为 iPhone Duo，起售价约为 2,000 美元 （IT之家注：现汇率约合 13,457 元人民币） 。 该机或搭载 5.5 英寸外屏、7.8 英寸内屏 ，机身设计据称较短且较宽，类似护照的阔折叠比例。 芯片方面， 该机可能搭载 A20 Pro 芯片 ，并采用苹果最新自研蜂窝网络调制解调器，…",
+        "publishedAt": "2026-09-09T15:17:03.000Z",
+        "summary": "IT之家 9 月 9 日消息，任天堂今天在新一期直面会中公布新作《星之卡比跃然世界》，本作将于 2027 年春季登陆 Switch 2 平台。 据介绍，《星之卡比跃然世界》将采用 3D 画面形式，玩家可以在立体场景中自由走动。卡比依旧和以前一样具备吞下敌人、复制其特性的能力，不过不同的复制能力似乎都加入了全新动作。 同时，卡比将在本作中加入全新能力，它可以迅速切开钢铁大门开辟道路，也能砍倒巨树，将其变成桥梁。卡比的脸部还出现了特殊花纹，预计这代表着全新游戏机制。 IT之家了…",
         "badge": "IT之家"
       },
       {
@@ -444,14 +443,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49623754",
+        "id": "hn-49628576",
         "category": "dev",
-        "title": "Claude, change the \"Add to Cart\" button to blue",
-        "url": "https://opusfived.dev/",
+        "title": "GNU Radio in the Browser",
+        "url": "https://gnuradioworld.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T09:39:46.000Z",
+        "publishedAt": "2026-09-09T15:53:06.000Z",
         "badge": "HN",
-        "signal": "284 分 · 106 评论"
+        "signal": "14 分 · 1 评论"
       },
       {
         "id": "cn-baidu-302a6df8d6eb5e04",
@@ -461,38 +460,38 @@
         "source": "百度热搜",
         "summary": "北京时间9月9日消息，苹果将于10日凌晨1点举行发布会，iPhone 18 Pro及Pro Max将登场。其灵动岛宽度收窄，支持切换三项实时活动。此前自iPhone 14 Pro上线灵动岛以来，设备最多显示两项任务。",
         "badge": "热搜",
-        "signal": "7,523,257 热度"
+        "signal": "7,524,441 热度"
       },
       {
-        "id": "github-advisory-ghsa-96p9-rh4f-92cf",
+        "id": "github-advisory-ghsa-wc9g-mqfw-jrwm",
         "category": "security",
-        "title": "Windows ML CLI: CORS misconfig enables localhost RCE",
-        "url": "https://github.com/advisories/GHSA-96p9-rh4f-92cf",
+        "title": "multer vulnerable to Denial of Service via crafted multipart field names",
+        "url": "https://github.com/advisories/GHSA-wc9g-mqfw-jrwm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T21:27:59.000Z",
-        "summary": "Case Description: MSRC Notes: Attachments: 1 file(s) attached (1 mp4) Summary: The vulnerability lies in the 'serve/cli_api.py' component of the 'winml-cli' project, which exposes all winml CLI commands over HTTP without authentication. Al…",
-        "badge": "CVE-2026-84452",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-08T21:30:20.000Z",
+        "summary": "### Impact A vulnerability in multer allows a remote, unauthenticated attacker to crash the Node.js process with a single `multipart/form-data` request. Two specially crafted text field names cause an uncaught `RangeError: Invalid array le…",
+        "badge": "CVE-2026-77078",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-cdd1118267ee925c",
+        "id": "ai-hugging-face-a139f80b159295ad",
         "category": "ai",
-        "title": "Give Your Coding Agents a Memory You Own",
-        "url": "https://huggingface.co/blog/funes",
+        "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+        "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
         "source": "Hugging Face",
         "publishedAt": "2026-09-03T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240736",
+        "id": "v2ex-1240746",
         "category": "dev",
-        "title": "[开源] Cloudflare WhoAmI Snippet：几十行 JS 快速查询本机 IP / Geo / ASN / TLS",
-        "url": "https://www.v2ex.com/t/1240736",
+        "title": "继上贴， agent 记忆框架记忆条数超过 10000 后出现老年痴呆问题，我想我解决了",
+        "url": "https://www.v2ex.com/t/1240746",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T08:28:24.000Z",
-        "summary": "之前随手写了个 Cloudflare Snippet ，方便看当前请求的 IP 、地理位置、ASN 、Cloudflare 节点、TLS 等信息。本来就是几十行 JS 的小东西，没想着单独开源。 结果陆续有人问源码，估计有人会有类似的需求吧，故开源分享出来，欢迎 star https://github.com/xyTom/cf-whoami-snippet Demo: https://ip.gurl.eu.org/",
+        "publishedAt": "2026-09-09T08:51:48.000Z",
+        "summary": "继上贴： https://v2ex.com/t/1235793 目前我的解决方案是： 同时部署以下记忆框架： 1.MemOS 2.metamem 3.openviking 4.hindsight 5.Second Me 6.Text2Mem 7.Letta 8.ReMe 9.memU 10.TencentDB-Agent-Memory 11.mem0 12.cognee 13.Graphiti 14.Supermemory 15.Memori 16.LangMem 17.A…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "7 回复"
       }
     ]
   },
@@ -509,7 +508,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 33253,
+        "stars": 33592,
         "starsToday": 4624
       },
       {
@@ -519,8 +518,8 @@
         "url": "https://github.com/Tencent/teamai-cli",
         "description": "Make Every Team AI Native",
         "language": "TypeScript",
-        "stars": 2753,
-        "starsToday": 1083
+        "stars": 2809,
+        "starsToday": 563
       },
       {
         "id": "github-4251a228ae407247",
@@ -529,7 +528,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 283799,
+        "stars": 283857,
         "starsToday": 690
       },
       {
@@ -539,8 +538,8 @@
         "url": "https://github.com/pascalorg/editor",
         "description": "Create and share 3D architectural projects.",
         "language": "TypeScript",
-        "stars": 22736,
-        "starsToday": 442
+        "stars": 22776,
+        "starsToday": 171
       },
       {
         "id": "github-97fd47923097e03f",
@@ -549,7 +548,7 @@
         "url": "https://github.com/earthtojake/text-to-cad",
         "description": "A library of agent skills for CAD, CAE and CAM",
         "language": "Python",
-        "stars": 14889,
+        "stars": 14923,
         "starsToday": 97
       },
       {
@@ -559,7 +558,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 36151,
+        "stars": 36266,
         "starsToday": 2286
       },
       {
@@ -569,8 +568,8 @@
         "url": "https://github.com/TauricResearch/TradingAgents",
         "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "language": "Python",
-        "stars": 103658,
-        "starsToday": 506
+        "stars": 103719,
+        "starsToday": 367
       },
       {
         "id": "github-640e4e0271c4d4b0",
@@ -578,7 +577,7 @@
         "name": "liquidslr/system-design-notes",
         "url": "https://github.com/liquidslr/system-design-notes",
         "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-        "stars": 17658,
+        "stars": 17749,
         "starsToday": 910
       },
       {
@@ -588,7 +587,7 @@
         "url": "https://github.com/openai/plugins",
         "description": "OpenAI Plugins",
         "language": "JavaScript",
-        "stars": 6083,
+        "stars": 6109,
         "starsToday": 505
       },
       {
@@ -598,10 +597,10 @@
         "url": "https://github.com/freestylefly/awesome-gpt-image-2",
         "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
         "language": "JavaScript",
-        "stars": 29759,
+        "stars": 29872,
         "starsToday": 612
       }
     ],
-    "updatedAt": "2026-09-09T14:37:07.002Z"
+    "updatedAt": "2026-09-09T16:19:17.363Z"
   }
 }

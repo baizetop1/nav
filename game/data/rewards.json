@@ -1,0 +1,126 @@
+[
+  {
+    "id": "jing_reward",
+    "silver": 420,
+    "prestige": 8,
+    "merit": 10,
+    "exp": 240,
+    "guaranteed": {
+      "tiger_bone": 2,
+      "tiger_skin": 1,
+      "exp_pill": 1
+    },
+    "items": [
+      {
+        "id": "wusong_token",
+        "rate": 0.15,
+        "count": 1
+      },
+      {
+        "id": "jinchuangyao",
+        "rate": 0.5,
+        "count": 1
+      },
+      {
+        "id": "horse_feed",
+        "rate": 0.4,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "huang_reward",
+    "silver": 520,
+    "prestige": 10,
+    "merit": 15,
+    "exp": 300,
+    "guaranteed": {
+      "iron": 2,
+      "recruit_shard": 2,
+      "lost_ledger": 2
+    },
+    "items": [
+      {
+        "id": "wuyong_token",
+        "rate": 0.15,
+        "count": 1
+      },
+      {
+        "id": "gongsunsheng_token",
+        "rate": 0.15,
+        "count": 1
+      },
+      {
+        "id": "huiqisan",
+        "rate": 0.5,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "forest_reward",
+    "silver": 700,
+    "prestige": 12,
+    "merit": 20,
+    "exp": 500,
+    "guaranteed": {
+      "iron": 3,
+      "exp_pill": 2
+    },
+    "items": [
+      {
+        "id": "luzhishen_token",
+        "rate": 0.15,
+        "count": 1
+      },
+      {
+        "id": "strength_charm",
+        "rate": 0.3,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "temple_reward",
+    "silver": 900,
+    "prestige": 15,
+    "merit": 30,
+    "exp": 700,
+    "guaranteed": {
+      "dark_iron": 2,
+      "exp_pill": 2,
+      "blueprint": 1
+    },
+    "items": [
+      {
+        "id": "linchong_token",
+        "rate": 0.15,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "zhu_reward",
+    "silver": 1200,
+    "prestige": 20,
+    "merit": 40,
+    "exp": 1000,
+    "guaranteed": {
+      "zhujia_pass": 1,
+      "skill_page": 2,
+      "exp_pill": 3
+    },
+    "items": [
+      {
+        "id": "huarong_token",
+        "rate": 0.15,
+        "count": 1
+      },
+      {
+        "id": "yanqing_token",
+        "rate": 0.15,
+        "count": 1
+      }
+    ]
+  }
+]

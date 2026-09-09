@@ -1,0 +1,311 @@
+[
+  {
+    "id": "main_arrival",
+    "name": "初入郓城",
+    "type": "main",
+    "condition": {
+      "all": [
+        {
+          "visited": "office"
+        },
+        {
+          "visited": "tavern"
+        }
+      ]
+    },
+    "reward": {
+      "silver": 100,
+      "items": {
+        "jinchuangyao": 2
+      }
+    },
+    "description": "去县衙看榜文，再到酒肆听听消息。"
+  },
+  {
+    "id": "main_hill",
+    "name": "冈上虎患",
+    "type": "main",
+    "condition": {
+      "visited": "jingyang"
+    },
+    "reward": {
+      "prestige": 5
+    },
+    "description": "沿城门、官道，前往景阳冈下。"
+  },
+  {
+    "id": "main_tracks",
+    "name": "山中虎踪",
+    "type": "main",
+    "condition": {
+      "visited": "tracks"
+    },
+    "reward": {
+      "items": {
+        "tiger_bone": 1
+      }
+    },
+    "description": "察看枯树林脚印，再循虎踪探路。"
+  },
+  {
+    "id": "main_tiger",
+    "name": "打虎英雄",
+    "type": "main",
+    "condition": {
+      "flag": "tiger_complete"
+    },
+    "reward": {
+      "silver": 150
+    },
+    "description": "协助武松判断虎势；打虎信物随剧情只发一次。"
+  },
+  {
+    "id": "main_guests",
+    "name": "东溪异客",
+    "type": "main",
+    "condition": {
+      "visited": "zhuang"
+    },
+    "reward": {
+      "prestige": 5
+    },
+    "description": "酒肆打听东溪村后，拜访晁盖庄。"
+  },
+  {
+    "id": "main_stars",
+    "name": "七星聚义",
+    "type": "main",
+    "condition": {
+      "flag": "seven_stars"
+    },
+    "reward": {
+      "items": {
+        "exp_pill": 2
+      }
+    },
+    "description": "听庄中商议，访三阮，再回客舍聚义。"
+  },
+  {
+    "id": "main_convoy",
+    "name": "智取生辰纲",
+    "type": "main",
+    "condition": {
+      "flag": "huangni_complete"
+    },
+    "reward": {
+      "silver": 300
+    },
+    "description": "掌握暑热、疑心和卖酒的时机；两人的首次信物随剧情只发一次。"
+  },
+  {
+    "id": "daily_hill",
+    "name": "冈上虎患",
+    "type": "daily",
+    "goal": {
+      "stat": "clear_jingyanggang",
+      "amount": 1
+    },
+    "condition": {
+      "flag": "tiger_complete"
+    },
+    "reward": {
+      "silver": 150,
+      "items": {
+        "tiger_bone": 1
+      }
+    },
+    "description": "巡视景阳冈一次。"
+  },
+  {
+    "id": "daily_medicine",
+    "name": "采办药材",
+    "type": "daily",
+    "goal": {
+      "stat": "gain_jinchuangyao",
+      "amount": 2
+    },
+    "condition": null,
+    "reward": {
+      "merit": 10
+    },
+    "description": "今日备得两份金创药，可购买或探访郎中。"
+  },
+  {
+    "id": "daily_battle",
+    "name": "整军备战",
+    "type": "daily",
+    "goal": {
+      "stat": "battleWin",
+      "amount": 2
+    },
+    "condition": {
+      "ownedCount": 1
+    },
+    "reward": {
+      "silver": 200
+    },
+    "description": "让好汉们在两场交战中得胜。"
+  },
+  {
+    "id": "daily_recruit",
+    "name": "访贤",
+    "type": "daily",
+    "goal": {
+      "stat": "recruit",
+      "amount": 1
+    },
+    "condition": null,
+    "reward": {
+      "items": {
+        "recruit_shard": 2
+      }
+    },
+    "description": "在招贤馆拜访一次江湖人物。"
+  },
+  {
+    "id": "daily_forge",
+    "name": "磨刀",
+    "type": "daily",
+    "goal": {
+      "stat": "strengthen",
+      "amount": 1
+    },
+    "condition": {
+      "equipmentCount": 1
+    },
+    "reward": {
+      "items": {
+        "scrap_iron": 3
+      }
+    },
+    "description": "为一件兵刃或衣甲强化一次。"
+  },
+  {
+    "id": "daily_explore",
+    "name": "江湖探路",
+    "type": "daily",
+    "goal": {
+      "stat": "discover",
+      "amount": 1
+    },
+    "condition": {
+      "unvisited": true
+    },
+    "reward": {
+      "merit": 15
+    },
+    "description": "踏上一处尚未到过的地方。"
+  },
+  {
+    "id": "daily_event",
+    "name": "寻访异人",
+    "type": "daily",
+    "goal": {
+      "stat": "event",
+      "amount": 1
+    },
+    "condition": null,
+    "reward": {
+      "items": {
+        "jinchuangyao": 1
+      }
+    },
+    "description": "在江湖寻访中处理一桩际遇。"
+  },
+  {
+    "id": "daily_bandit",
+    "name": "清剿山贼",
+    "type": "daily",
+    "goal": {
+      "stat": "bandits",
+      "amount": 2
+    },
+    "condition": {
+      "all": [
+        {
+          "ownedCount": 1
+        },
+        {
+          "heroLevel": 20
+        },
+        {
+          "flag": "huangni_complete"
+        }
+      ]
+    },
+    "reward": {
+      "items": {
+        "skill_page": 1
+      }
+    },
+    "description": "带队解两次山贼拦路之急。"
+  },
+  {
+    "id": "daily_bone",
+    "name": "搜集虎骨",
+    "type": "daily",
+    "goal": {
+      "stat": "gain_tiger_bone",
+      "amount": 3
+    },
+    "condition": {
+      "flag": "tiger_complete"
+    },
+    "reward": {
+      "items": {
+        "strength_shard": 1
+      }
+    },
+    "description": "今日为铁匠搜集三份虎骨。"
+  },
+  {
+    "id": "daily_team",
+    "name": "整顿队伍",
+    "type": "daily",
+    "goal": {
+      "stat": "formationBattle",
+      "amount": 1
+    },
+    "condition": {
+      "ownedCount": 1
+    },
+    "reward": {
+      "items": {
+        "exp_pill": 1
+      }
+    },
+    "description": "调整出阵人手，再赢下一场交战。"
+  },
+  {
+    "id": "daily_news",
+    "name": "江湖消息",
+    "type": "daily",
+    "goal": {
+      "stat": "news",
+      "amount": 1
+    },
+    "condition": null,
+    "reward": {
+      "silver": 180
+    },
+    "description": "在酒肆听一条消息或处理一桩酒客际遇。"
+  },
+  {
+    "id": "daily_horse",
+    "name": "驯马",
+    "type": "daily",
+    "goal": {
+      "stat": "feed",
+      "amount": 1
+    },
+    "condition": {
+      "feature": "mounts"
+    },
+    "reward": {
+      "items": {
+        "horse_feed": 2
+      }
+    },
+    "description": "给坐骑添一份草料。坐骑系统开放后才会派发。"
+  }
+]

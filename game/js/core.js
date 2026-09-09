@@ -1,0 +1,145 @@
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js';
+import { exits, meets, heroRank } from './map.js';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js';
+import { startBattle, takeTurn } from './battle.js';
+import { effects, storyAction, visit } from './story.js';
+
+export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
+  const initial=data.config.initial;
+  const state={version:1,revision:0,clock:now,lastRegen:now,rng:seed,worldMinute:600,location:'yuncheng',startedAt:now,
+    player:{name:'白泽寨主',title:'初入江湖',silver:initial.silver,merit:0,prestige:0,stamina:100,liangshanLevel:0},
+    heroes:Object.fromEntries(data.heroes.map(h=>[h.id,{status:'unknown',level:1,exp:0}])),team:[],inventory:{...initial.items},equipment:[],nextEquipment:1,
+    progress:{flags:{},stories:{},visited:['yuncheng'],actions:{},claims:[],clears:{}},stats:{},
+    daily:{date:'',ids:[],claimed:[],bonus:false,counters:{},dungeons:{},events:[]},recruit:{total:0,pity:{three:0,four:0,five:0},fate:{}},
+    battle:null,scheme:null,event:null,journal:[],message:'江湖路远，且从郓城开始。',formationPending:false};
+  for(const id of initial.equipment)newEquipment(state,id);
+  refresh(state,data,now);journal(state,'初入郓城。建寨之事，要从识人、用人开始。');return state;
+}
+export function refresh(state,data,now) {
+  now=Math.max(state.clock,now);state.clock=now;
+  const intervals=Math.floor((now-state.lastRegen)/data.config.balance.regenMs);
+  if(state.player.stamina>=100)state.lastRegen=now;
+  else if(intervals>0){state.player.stamina=Math.min(100,state.player.stamina+intervals);state.lastRegen=state.player.stamina===100?now:state.lastRegen+intervals*data.config.balance.regenMs;}
+  const day=dayKey(now);
+  if(day>state.daily.date) {
+    state.daily={date:day,ids:[],claimed:[],bonus:false,counters:{},dungeons:{},events:[]};
+    const pool=data.quests.filter(q=>q.type==='daily'&&meets(state,q.condition));
+    while(state.daily.ids.length<3&&pool.length){const q=pick(state,pool);state.daily.ids.push(q.id);pool.splice(pool.indexOf(q),1);}
+  }
+}
+function stamina(state,n) {requireRule(state.player.stamina>=n,`体力不足，需要 ${n} 点。每十分钟恢复一点，也可饮村酒。`);state.player.stamina-=n;}
+export function questReady(state,q) {return q.type==='daily'?(state.daily.counters[q.goal.stat]||0)>=q.goal.amount:meets(state,q.condition);}
+export function isBusy(state) {return !!(state.battle||state.scheme||state.event);}
+function beginDungeon(state,data,id) {
+  const d=data.by.dungeons[id];requireRule(d&&d.map===state.location&&meets(state,d.condition),'此处尚不能开启这次历练。');
+  requireRule(state.team.length>0,'先在好汉页面安排出阵人手。');
+  requireRule(Math.max(...state.team.map(id=>state.heroes[id].level))>=d.level,`队伍中至少一名好汉须达到 ${d.level} 级。`);
+  requireRule((state.daily.dungeons[id]||0)<d.limit,'今日此处的历练次数已用完。');
+  stamina(state,d.cost);state.daily.dungeons[id]=(state.daily.dungeons[id]||0)+1;
+  if(d.kind==='scheme')beginScheme(state,data,{type:'dungeon',id});
+  else startBattle(state,data,{enemies:d.enemy,scale:d.scale,context:{type:'dungeon',id}});
+}
+function rewardDungeon(state,data,id) {
+  const reward=data.by.rewards[data.by.dungeons[id].reward];grant(state,{...reward,items:{}},data);
+  for(const [id,n] of Object.entries(reward.guaranteed))gainItem(state,id,n,data);
+  const drops=[];for(const drop of reward.items)if(random(state)<drop.rate){gainItem(state,drop.id,drop.count,data);drops.push(data.by.items[drop.id].name);}
+  count(state,'clears');count(state,'clear_'+id);state.progress.clears[id]=(state.progress.clears[id]||0)+1;
+  journal(state,`【${data.by.dungeons[id].name}】历练完成。碎银 +${reward.silver}、威望 +${reward.prestige}、功勋 +${reward.merit}；带回${Object.keys(reward.guaranteed).map(i=>data.by.items[i].name).join('、')}${drops.length?'，另得'+drops.join('、'):''}。`);
+}
+function finishBattle(state,data) {
+  const b=state.battle;requireRule(b&&b.outcome,'还未分出胜负。');
+  if(b.outcome==='victory') {
+    count(state,'battleWin');
+    if(b.enemy.some(e=>e.model==='bandit'||e.model==='bandit_chief'))count(state,'bandits');
+    if(state.formationPending&&!b.guest){count(state,'formationBattle');state.formationPending=false;}
+    if(b.context.type==='story'){state.progress.stories[b.context.id].step=b.context.next;journal(state,'虎势已息，请在密林中续记这段往事。');}
+    else if(b.context.type==='dungeon')rewardDungeon(state,data,b.context.id);
+    else {grant(state,{silver:90,prestige:3,exp:100,items:{scrap_iron:1}},data);journal(state,'交战得胜，行旅得以安行。获得碎银与历练经验。');}
+  } else {count(state,'battleLoss');journal(state,'此战收兵。好汉不会永久失去；再战前可调整队伍、药物与装备。');}
+  state.battle=null;
+}
+function beginScheme(state,data,context) {
+  state.scheme={id:'huangni_scheme',turn:0,values:{...data.schemes[0].initial},context,log:['日头渐毒，军汉肩上的担子越发沉重。杨志还在察看四周。'],outcome:null};
+}
+function schemeChoice(state,data,id) {
+  const scene=state.scheme;requireRule(scene&&!scene.outcome,'当前没有进行中的计策。');
+  const model=data.by.schemes[scene.id];
+  if(id==='retreat'){scene.outcome='failure';scene.log.push('你示意众人散开，此次安排暂且作罢。');return;}
+  if(id!=='finish') {
+    const choice=model.choices.find(c=>c.id===id);requireRule(choice,'无效的计策选择。');
+    for(const [key,n] of Object.entries(choice.change))scene.values[key]=bounded(scene.values[key]+n,0,100);
+    scene.turn++;scene.log.push(choice.text);
+  }
+  const v=scene.values,s=model.success;
+  if(v.alert>=s.maxAlert||v.exposure>=s.maxExposure){scene.outcome='failure';scene.log.push('杨志察觉异样，喝令军汉护住财货。吴用示意先退，此计尚需重新斟酌。');}
+  else if(id==='finish'||scene.turn>=model.maxTurns){scene.outcome=v.fatigue>=s.fatigue&&v.trust>=s.trust?'success':'failure';scene.log.push(scene.outcome==='success'?'军汉们终于卸下戒心。白胜的酒已饮下，智取生辰纲之计成了。':'军汉仍不肯饮酒，时机尚未成熟，众人只得暂退。');}
+}
+function finishScheme(state,data) {
+  const scene=state.scheme;requireRule(scene&&scene.outcome,'计策尚未收尾。');
+  if(scene.outcome==='success') {
+    if(scene.context.type==='dungeon')rewardDungeon(state,data,scene.context.id);
+    else {requireRule(!state.progress.flags.huangni_complete,'这份首次奖励已领取。');state.progress.flags.huangni_complete=true;
+      grant(state,{merit:50,prestige:40,items:{wuyong_token:1,gongsunsheng_token:1,recruit_order:2,exp_pill:4}},data);
+      journal(state,'【智取生辰纲】计策已成。吴用与公孙胜各留下一枚信物，功勋 +50。通往梁山脚下的路已打开。');}
+  } else {count(state,'schemeLoss');journal(state,'这次计策未成。暑热与疲劳可以等，疑心一生却难消。可重新安排，不会失去人物相识。');}
+  state.scheme=null;
+}
+function completeVolume(state,data) {
+  if(state.progress.flags.volume_complete)return;
+  if(state.progress.flags.tiger_complete&&state.progress.flags.huangni_complete&&Object.values(state.heroes).filter(h=>h.status==='owned').length>=3&&(state.stats.clears||0)>=10&&state.player.prestige>=data.config.balance.volumePrestige){
+    state.progress.flags.volume_complete=true;state.player.liangshanLevel=1;state.player.title='梁山寨主';
+    journal(state,'【江湖风起】郓城风声渐紧，你与众好汉在梁山脚下安顿初级据点。第一卷《郓城风起》完。渡口传来东京与沧州的消息：林冲、鲁智深，还有柴进与杨志。下一程的江湖已有回声。');
+  } else state.player.title=state.player.prestige>=100?'一方豪杰':state.player.prestige>=40?'小有名气':'初入江湖';
+}
+// All commands are transactional: rejection discards the clone, including RNG/costs.
+export function dispatch(data,current,action,now=Date.now()) {
+  const state=clone(current);refresh(state,data,now);
+  requireRule(action&&typeof action.type==='string','无效操作。');
+  if(isBusy(state))requireRule(['turn','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
+  const {type,id}=action;
+  if(type==='refresh')return state;
+  if(type==='move'){requireRule(exits(state,data).some(link=>link.target===id),'此路尚未开放。');visit(state,id,data);}
+  else if(type==='wait'){state.worldMinute=(state.worldMinute+360)%1440;journal(state,'你等了半日，天色已变。等候不额外恢复体力，体力按真实时间恢复。');}
+  else if(type==='mapAction'){
+    const a=data.by.maps[state.location].actions.find(a=>a.id===id);requireRule(a&&meets(state,a.condition),'此处没有这件事。');
+    requireRule(!a.once||!state.progress.actions[id],'这件事已经办过。');effects(state,a.effects,data);state.progress.actions[id]=true;
+    if(state.location==='tavern')count(state,'news');journal(state,a.text);
+  }
+  else if(type==='meet'){
+    const h=data.by.heroes[id];requireRule(h&&h.meetMap===state.location&&meets(state,h.meetCondition),'尚未在此与这位人物相逢。');
+    knowHero(state,id,'heard',data);knowHero(state,id,'known',data);journal(state,`${h.name}与你叙过姓名。${h.dialogue}`);
+  }
+  else if(type==='guide'){requireRule(state.location==='tavern'&&state.heroes.baisheng.status==='known'&&!state.progress.flags.guide,'先在酒肆与白胜相识。');state.progress.flags.guide=true;ownHero(state,'baisheng',data);journal(state,'白胜应下为你引路，正式加入队伍。这是乡人相助；武松等核心好汉仍需相识与招贤。');}
+  else if(type==='story')storyAction(state,data,id,action.choice);
+  else if(type==='startScheme'){requireRule(state.location==='ridge'&&state.progress.flags.seven_stars&&!state.progress.flags.huangni_complete,'先完成七星聚义，再到冈上安排；首次剧情不会重复发奖。');beginScheme(state,data,{type:'story',id:'huangni'});}
+  else if(type==='scheme')schemeChoice(state,data,id);
+  else if(type==='finishScheme')finishScheme(state,data);
+  else if(type==='dungeon')beginDungeon(state,data,id);
+  else if(type==='turn')takeTurn(state,data,id,action.item);
+  else if(type==='finishBattle')finishBattle(state,data);
+  else if(type==='recruit'){requireRule(state.location==='recruit','请到招贤馆拜访。');recruit(state,data,id);}
+  else if(type==='team'){
+    requireRule(Array.isArray(action.ids)&&action.ids.length<=3&&new Set(action.ids).size===action.ids.length&&action.ids.every(id=>state.heroes[id]?.status==='owned'),'只可安排最多三名不重复的入寨好汉。');
+    requireRule(action.ids.length>0||!Object.values(state.heroes).some(h=>h.status==='owned'),'至少留一名好汉出阵。');
+    if(JSON.stringify(state.team)!==JSON.stringify(action.ids))state.formationPending=true;state.team=[...action.ids];journal(state,'阵容已定：前两位迎敌，第三位居后照应。');
+  }
+  else if(type==='quest'){
+    const q=data.by.quests[id];requireRule(q,'没有这份差事。');const claims=q.type==='daily'?state.daily.claimed:state.progress.claims;
+    requireRule(q.type!=='daily'||state.daily.ids.includes(id),'今天未派发这份差事。');requireRule(!claims.includes(id)&&questReady(state,q),'尚未办妥，或已经领取酬劳。');claims.push(id);grant(state,q.reward,data);journal(state,`【${q.name}】已办妥，酬劳收进行囊。`);
+  }
+  else if(type==='dailyBonus'){requireRule(!state.daily.bonus&&state.daily.ids.length===3&&state.daily.claimed.length===3,'先领齐今日三份差事的酬劳。');state.daily.bonus=true;grant(state,{silver:300,merit:20,items:{recruit_shard:1}},data);journal(state,'【今日差事已毕】碎银 +300、功勋 +20、招贤令碎片 +1。');}
+  else if(type==='search'){
+    requireRule((state.daily.counters.search||0)<12,'今日已寻访十二回，歇一歇，明日再访。');
+    const pool=data.events.filter(e=>e.maps.includes(state.location)&&meets(state,e.condition)&&!state.daily.events.includes(e.id));requireRule(pool.length,'此处今日暂无新的际遇，可换一处走走。');
+    stamina(state,2);count(state,'search');const event=pick(state,pool);state.event={id:event.id};journal(state,event.text);
+  }
+  else if(type==='eventChoice'){
+    requireRule(state.event,'当前没有待处理的际遇。');const event=data.by.events[state.event.id],choice=event.options.find(c=>c.id===id);requireRule(choice,'无效选择。');
+    pay(state,choice.cost);effects(state,choice.effects,data);if(choice.battle)startBattle(state,data,{enemies:choice.battle,context:{type:'event',id:event.id}});
+    state.daily.events.push(event.id);count(state,'event');if(state.location==='tavern')count(state,'news');state.event=null;journal(state,choice.text);
+  }
+  else if(['buy','use','craftOrder','exchange','craftEquip','buyEquip','equip','strengthen','dismantle'].includes(type))itemAction(state,data,action);
+  else throw new Error('尚未支持这个操作。');
+  syncAvailability(state,data);completeVolume(state,data);state.revision++;return state;
+}
