@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-09T00:16:04.521Z",
+  "generatedAt": "2026-09-09T04:50:32.334Z",
   "intelligence": {
-    "updatedAt": "2026-09-09T00:16:04.521Z",
+    "updatedAt": "2026-09-09T04:50:32.334Z",
     "items": [
       {
-        "id": "cn-item-e7752a355fc00441",
+        "id": "cn-item-996c319e0e0c79e1",
         "category": "cn",
-        "title": "第81届联合国大会开幕",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-09/10692995.shtml",
+        "title": "中新网评：“鬼秤”闹的不是鬼，是信任危机",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-09/10693151.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-08T23:52:19.000Z",
-        "summary": "中新社联合国9月8日电 (记者 王帆)当地时间8日，在第80届联合国大会闭幕后，第81届联合国大会在纽约联合国总部开幕。",
+        "publishedAt": "2026-09-09T03:54:52.000Z",
+        "summary": "中新网北京9月9日电(钟兴真)最近“鬼秤”有点多。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49615537",
+        "id": "hn-49546964",
         "category": "dev",
-        "title": "Muse – Meta’s personal AI agent",
-        "url": "https://ai.meta.com/muse/",
+        "title": "Tension wood: A 'muscle' that can both bend and straighten plants",
+        "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T19:25:00.000Z",
+        "publishedAt": "2026-09-03T07:29:40.000Z",
         "badge": "HN",
-        "signal": "230 分 · 219 评论"
+        "signal": "66 分 · 8 评论"
       },
       {
-        "id": "cn-it-c9bb6af30c3063cd",
+        "id": "cn-it-3efb050ec4cd409f",
         "category": "cn",
-        "title": "苹果 iPhone 18 系列新品名单再添悬念，第 7 个标识符现身",
-        "url": "https://www.ithome.com/0/999/973.htm",
+        "title": "安卓手机跨品牌碰一碰分享正式落地：荣耀 MagicOS 11 将支持，Magic9 手机首发搭载",
+        "url": "https://www.ithome.com/1/000/160.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T00:12:49.000Z",
-        "summary": "IT之家 9 月 9 日消息，消息源亚伦 · 佩里斯（Aaron Perris）今天（9 月 9 日）在 X 平台发布推文，爆料称在 iPhone 18 Pro 发布会前夕，苹果向后台新增 37 个硬件标识符，覆盖 iPhone、Mac、iPad、Apple Watch、Apple TV 和 HomeAccessory（家庭配件）品类。 根据曝光的 37 个硬件标识符中，其中 7 个标识符关联新款 iPhone，分别为 iPhone19,1 至 iPhone19,7。 根据…",
+        "publishedAt": "2026-09-09T04:47:44.000Z",
+        "summary": "IT之家 9 月 9 日消息，荣耀今日宣布其主导制定《碰一碰互传技术标准》正式落地， 联合国内主流安卓阵营，实现跨品牌“一碰即传，轻松分享” 。 荣耀 MagicOS 11 全面落地跨品牌碰一碰分享功能， 荣耀 Magic9 全系首发搭载 。 IT之家注意到， 金标联盟今年 7 月宣布升级一镜到底无缝动画体验 ，跨端分享实现一碰直达，主流安卓厂商统一接入标准。 一镜到底无缝动画方面，应用负责调用 SDK 负责适配，系统负责执行动画，后续 Google 能力可由 SDK 承接…",
         "badge": "IT之家"
       },
       {
@@ -77,24 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240540",
+        "id": "v2ex-1240649",
         "category": "dev",
-        "title": "请教下, 用 claude/codex 写代码太贵了, 打算尝试下国产模型, 如何处理?",
-        "url": "https://www.v2ex.com/t/1240540",
+        "title": "这里为什么感觉没人讨论国产模型。我发现 qwen 和豆包系列模型问题好多，生产直接没法用",
+        "url": "https://www.v2ex.com/t/1240649",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T19:31:46.000Z",
-        "summary": "大概类似 sol/opus5 左右的智力的国产大模型, 各位有实际测试过的能推荐下吗?",
+        "publishedAt": "2026-09-09T04:33:01.000Z",
+        "summary": "对话类产品。 生产环境过去一直在用豆包，但是豆包 ttft 越来越大已经没法用了，所以想换 qwen 。 而且豆包还有概率出现脱靶问题和工具调用幻觉问题 结果 qwen3.7 plus 输出总是半截就中断，概率非常大没法用。 换成 3.8 max ，先是专属 endpoint 输出内容缺少 role ，这事我就排查了很久。 然后换成 dashscope 域继续用想着没事了，结果发现模型带图时输出质量严重下滑，区分不出注释内容和对话内容的角色概念。 搞得我现在一个没得用。做角…",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-8e58f3583c3dfbbf",
+        "id": "cn-baidu-e55203d92fc68ac2",
         "category": "cn",
-        "title": "香港首任特首董建华逝世",
-        "url": "https://www.baidu.com/s?wd=%E9%A6%99%E6%B8%AF%E9%A6%96%E4%BB%BB%E7%89%B9%E9%A6%96%E8%91%A3%E5%BB%BA%E5%8D%8E%E9%80%9D%E4%B8%96&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "燃油车真卖不动了吗",
+        "url": "https://www.baidu.com/s?wd=%E7%87%83%E6%B2%B9%E8%BD%A6%E7%9C%9F%E5%8D%96%E4%B8%8D%E5%8A%A8%E4%BA%86%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "8月全国乘用车市场中，燃油车零售仅54万辆，同比下降40%，新能源渗透率达65.2%创历史新高，销量前十车型已无燃油车上榜。",
         "badge": "热搜",
-        "signal": "7,808,218 热度"
+        "signal": "7,809,040 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81963",
@@ -117,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49617581",
+        "id": "hn-49615537",
         "category": "dev",
-        "title": "Large language models develop novel social biases through adaptive exploration",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH",
+        "title": "Muse – Meta’s personal AI agent",
+        "url": "https://ai.meta.com/muse/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T21:47:38.000Z",
+        "publishedAt": "2026-09-08T19:25:00.000Z",
         "badge": "HN",
-        "signal": "67 分 · 33 评论"
+        "signal": "391 分 · 413 评论"
       },
       {
-        "id": "cn-item-755b4d4222712be0",
+        "id": "cn-item-180f98d2f5fc2425",
         "category": "cn",
-        "title": "美国对伊朗实施新一轮制裁 重点针对伊朗航空业",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-09/10692992.shtml",
+        "title": "2026年服贸会开幕 90个国家、地区和国际组织设展办会",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-09/10693126.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-08T23:42:39.000Z",
-        "summary": "中新网9月9日电 据路透社报道，当地时间9月8日，美国财政部宣布对伊朗实施新一轮制裁，共涉及36个制裁对象，重点针对伊朗航空业及相关企业。",
+        "publishedAt": "2026-09-09T03:30:35.000Z",
+        "summary": "中新社北京9月9日电 (记者 吕少威)2026年中国国际服务贸易交易会(“服贸会”)9日在北京首钢园开幕，90个国家(地区)和国际组织以国家(地区)或总部名义设展办会，1830余家企业线下参展，其中473家为世界500强或行业龙头企业。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240528",
+        "id": "v2ex-1240644",
         "category": "dev",
-        "title": "有那种 skill 或者什么 ai 工具对代码仓进行建立索引",
-        "url": "https://www.v2ex.com/t/1240528",
+        "title": "避雷一个 AI 中转站，世一稳（https://sub.bulita.net）",
+        "url": "https://www.v2ex.com/t/1240644",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T15:40:35.000Z",
-        "summary": "今天本来想让根据代码仓，代码可以建立那个索引或者知识库什么，但是想看看开源社区有已经有这类产品了吗？ 简单搜索了下有 ai-ready, reposummary 这种，想问下大家都用什么？ 多人一起开发 可以试试更新新的代码，建立新的索引 询问/新增功能又可以直接用索引/知识库，能够快速生成按照仓代码结构的的代码",
+        "publishedAt": "2026-09-09T03:53:31.000Z",
+        "summary": "自己跑来 V2EX 宣传、我进去看看支持用下。 先充了 10 元试水，使用过程用不了，咨询客服来一句我的问题，直接把我拉黑。 避雷！！！ 避雷！！！ 避雷！！！",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "34 回复"
       },
       {
-        "id": "cn-it-c844cf899dd30f72",
+        "id": "cn-it-49965fd5d96155b4",
         "category": "cn",
-        "title": "怀孕住院次日即遭解雇？亚马逊被指系统性歧视数千名怀孕员工，面临全国性集体诉讼",
-        "url": "https://www.ithome.com/0/999/972.htm",
+        "title": "任天堂《塞尔达传说：时之笛 重制版》开放预购，港区售价 449 港币",
+        "url": "https://www.ithome.com/1/000/159.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T00:11:23.000Z",
-        "summary": "IT之家 9 月 9 日消息，据路透社今日报道，亚马逊于当地时间 9 月 8 日被提起一项拟议的全国性集体诉讼，指控其系统性地歧视数千名怀孕员工，包括以请假过多为由解雇部分员工。 根据 4 名前仓库员工向纽约布鲁克林联邦法院提交的诉状，亚马逊经常违反美国联邦《怀孕工人公平法》（Pregnant Workers Fairness Act）和纽约州劳动法，拒绝为怀孕员工提供基本的便利措施，例如提供椅子、允许上厕所和喝水，以及允许请假参加产前检查。 诉状称，亚马逊对缺勤过多的怀孕…",
+        "publishedAt": "2026-09-09T04:42:25.000Z",
+        "summary": "IT之家 9 月 9 日消息，任天堂昨晚正式公布了《塞尔达传说：时之笛 重制版》的发售日期。这款 Switch 2 独占的经典重制作品将于 2026 年 11 月 5 日正式发售。 今日，任天堂美区、日区、港区等服务器已全面开启游戏预购。此外，官方还推出了包含实体陶笛的典藏版可供收藏。 其中，数字版在美区售价 59.99 美元 （现汇率约合 403.6 元人民币） ，日区售价 7,980 日元 （现汇率约合 348.7 元人民币） ，港区售价 449 港币 （IT之家注：现…",
         "badge": "IT之家"
       },
       {
@@ -199,23 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49617255",
+        "id": "hn-49605915",
         "category": "dev",
-        "title": "How to build a printer",
-        "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
+        "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
+        "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T21:22:11.000Z",
+        "publishedAt": "2026-09-08T05:42:28.000Z",
         "badge": "HN",
-        "signal": "89 分 · 11 评论"
+        "signal": "1424 分 · 607 评论"
       },
       {
-        "id": "cn-baidu-61ddd0dc6b23fad9",
+        "id": "cn-baidu-c3e85b7cd0de74e5",
         "category": "cn",
-        "title": "央视曝光后 安徽山东河南连夜核查",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%AE%E8%A7%86%E6%9B%9D%E5%85%89%E5%90%8E+%E5%AE%89%E5%BE%BD%E5%B1%B1%E4%B8%9C%E6%B2%B3%E5%8D%97%E8%BF%9E%E5%A4%9C%E6%A0%B8%E6%9F%A5&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "海底捞暴跌",
+        "url": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%BA%95%E6%8D%9E%E6%9A%B4%E8%B7%8C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "9月9日，海底捞港股股价暴跌超8%，创下四年半以来盘中新低。此前该公司出现巨额折价大宗交易，同时有消息称董事长张勇妻子舒萍拟大幅折价抛售2.59亿股股份，引发市场密切关注。",
         "badge": "热搜",
-        "signal": "7,713,724 热度"
+        "signal": "7,713,372 热度"
       },
       {
         "id": "github-advisory-ghsa-wc9g-mqfw-jrwm",
@@ -238,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240495",
+        "id": "v2ex-1240635",
         "category": "dev",
-        "title": "Claude 200 订阅怎么才能用的完？",
-        "url": "https://www.v2ex.com/t/1240495",
+        "title": "今天网不好， workbuddy 我点了 6 次，给了 600 分",
+        "url": "https://www.v2ex.com/t/1240635",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T12:38:27.000Z",
-        "summary": "公司开了 claude 200 的订阅，现在好焦虑，每周六重置的时候都还有 40%用不完， 平时都是日常开发工作，现在基本上都是全栈开发了，但是日常需求也用不完 然后平时维护一下自己的知识库和开发辅助工具 但是还是会有每周用不完的情况 没到周五就开始空想需求来消耗额度 大家都是怎么做的呢？ 有什么好的方法",
+        "publishedAt": "2026-09-09T03:34:10.000Z",
+        "summary": "如图 是不是可以搞点 workbuddy 积分了",
         "badge": "程序员",
-        "signal": "25 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-item-4ad83d9823fe2a6e",
+        "id": "cn-item-6177ce2e2dd86008",
         "category": "cn",
-        "title": "贸易争端加剧 特朗普称加产品将被排除出美政府采购计划",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-09/10692986.shtml",
+        "title": "农业农村部：第九个中国农民丰收节将举办47项重点活动",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-09/10693140.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-08T23:18:55.000Z",
-        "summary": "中新网9月9日电 据路透社报道，当地时间9月8日，美国总统特朗普在社交媒体上发文称，他已指示美国总务管理局与美国贸易代表办公室合作，采取一切必要措施把加拿大产品排除出美政府采购计划，直至加方对美农民和企业恢复“公平的互惠”。",
+        "publishedAt": "2026-09-09T03:28:27.000Z",
+        "summary": "中新网9月9日电 9日上午，农业农村部就2026年中国农民丰收节总体安排和筹备情况举行新闻发布会。中国农民丰收节组织指导委员会办公室主任、农业农村部市场与信息化司司长雷刘功介绍，今年丰收节总体安排分为两个层面。",
         "badge": "中新网要闻"
       },
       {
@@ -280,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49611251",
+        "id": "hn-49617255",
         "category": "dev",
-        "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "title": "How to build a printer",
+        "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T14:55:45.000Z",
+        "publishedAt": "2026-09-08T21:22:11.000Z",
         "badge": "HN",
-        "signal": "476 分 · 115 评论"
+        "signal": "213 分 · 40 评论"
       },
       {
-        "id": "cn-it-70ca6c4c0d29ebd1",
+        "id": "cn-it-945cc3a1e48d9318",
         "category": "cn",
-        "title": "中国商飞 C909 完成 RNP AR 审定试飞，验证高精度导航与复杂地形运行能力",
-        "url": "https://www.ithome.com/0/999/971.htm",
+        "title": "微软 9 月 Win11 累积更新已修复光标样式失效 / 桌面壁纸黑屏故障",
+        "url": "https://www.ithome.com/1/000/157.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T00:05:10.000Z",
-        "summary": "IT之家 9 月 9 日消息，民航上海审定中心昨日宣布，民航上海航空器适航审定中心试飞团队近期在多地顺利完成多架次 C909 飞机 RNP AR 审定试飞工作。 本次审定试飞由上海审定中心试飞团队在平原、高原及高高原分阶段组织实施，试验验证了该机型在高精度导航、复杂地形运行等方面的关键性能。 RNP AR 全称“要求特殊授权的所需导航性能”（Required Navigation Performance Authorization Required），是当前民航领域先进的精…",
+        "publishedAt": "2026-09-09T04:39:08.000Z",
+        "summary": "IT之家 9 月 9 日消息，在本月（2026 年 9 月）补丁星期二活动日（9 月 8 日）中， 微软确认已修复影响 Windows 11 系统的光标样式失效、桌面壁纸黑屏故障。 IT之家此前报道，微软在此前官方更新的支持文档中，已经确定问题根源： 经过我们的调查，这个问题主要出现在非英语 Windows 11 版本更新中，是由于代码组件冲突导致的。 在受影响的语言环境中，无法加载这些 [指光标] 设置，从而导致使用默认值。由于该问题会阻止加载相关设置，因此用户无论如何设…",
         "badge": "IT之家"
       },
       {
@@ -320,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240493",
+        "id": "v2ex-1240633",
         "category": "dev",
-        "title": "移除视频动态水印 哪个模型比较好用？求推荐一款本地部署",
-        "url": "https://www.v2ex.com/t/1240493",
+        "title": "洗衣机坏了, gpt 指挥我排查/解决了问题, 感觉人形机器人有前途啊",
+        "url": "https://www.v2ex.com/t/1240633",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T12:34:12.000Z",
-        "summary": "网页在线的效果最好的开拍，美团旗下的，但是无法做到 api 自动操作，而且费用贵。 本地让 ai 写的纯 cv + ffmepg 识别的效果不好，没法很通用。 求 V 有推荐有没好用的 AI 模型，或者开源框架，可以一用的？",
+        "publishedAt": "2026-09-09T03:31:55.000Z",
+        "summary": "多年前买的滚筒洗衣机，启动就报错误码。 gpt 指挥我去检查，我给他反馈，来回不到 10 轮。 精确的在滚筒内筒的孔上找到了一个卡住的螺丝。。 （是我前几天给万用表换电池拆下来的，放在衣服兜里了） 真 nb 啊。 他指挥一个人行机器人肯定也能搞定。 人形机器人的大脑绝对够用了。 现在不够的是小脑和身体。",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-baidu-62b70ad0666c331a",
+        "id": "cn-baidu-4eeeaaad3751f96a",
         "category": "cn",
-        "title": "让守信经营者得实惠",
-        "url": "https://www.baidu.com/s?wd=%E8%AE%A9%E5%AE%88%E4%BF%A1%E7%BB%8F%E8%90%A5%E8%80%85%E5%BE%97%E5%AE%9E%E6%83%A0&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "2026服贸会今日开幕",
+        "url": "https://www.baidu.com/s?wd=2026%E6%9C%8D%E8%B4%B8%E4%BC%9A%E4%BB%8A%E6%97%A5%E5%BC%80%E5%B9%95&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "记者8号了解到，市场监管总局正式发布《关于全面开展放心消费单元和集聚区培育的通知》，全面启动放心消费主体培育工作。要让经营者从“要我变好”变成“我要变好”，激励措施是关键。市场监管总局将构建涵盖信用、金融、市场等多个维度的正向激励体系，让守信经营者真正得到实惠。",
+        "summary": "2026年中国国际服务贸易交易会9月9日至13日在北京石景山区首钢园举办。",
         "badge": "热搜",
-        "signal": "7,618,615 热度"
+        "signal": "7,618,816 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85046",
@@ -361,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49605915",
+        "id": "hn-49611251",
         "category": "dev",
-        "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
-        "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+        "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T05:42:28.000Z",
+        "publishedAt": "2026-09-08T14:55:45.000Z",
         "badge": "HN",
-        "signal": "1173 分 · 517 评论"
+        "signal": "515 分 · 118 评论"
       },
       {
-        "id": "cn-item-2782b8991047d629",
+        "id": "cn-item-85a7d1210724619f",
         "category": "cn",
-        "title": "美国中央司令部：摧毁5艘伊朗原油运输船",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-09/10692984.shtml",
+        "title": "董建华先生逝世",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-09/10693123.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-08T23:01:06.000Z",
-        "summary": "中新网9月9日电 当地时间9月8日，美国中央司令部在社交媒体平台发文称，美军部队当天摧毁了5艘伊朗原油运输船。",
+        "publishedAt": "2026-09-09T02:55:45.000Z",
+        "summary": "董建华先生遗像 新华社发 新华社北京9月9日电 “一国两制”杰出贡献者，著名的爱国人士，杰出的社会活动家，中国共产党的亲密朋友，中国人民政治协商会议第十届、十一届、十二届、十三届全国委员会副主席，香港特别行政区第一任、第二任行政长官董建华先生，因病于2026年9月8日21时57分在香港逝世，享年89岁。",
         "badge": "中新网要闻"
       },
       {
@@ -402,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240484",
+        "id": "v2ex-1240598",
         "category": "dev",
-        "title": "记不住各个平台的 Shell 命令，我搓了个不到 30KB 的小工具： ash",
-        "url": "https://www.v2ex.com/t/1240484",
+        "title": "用 AI，如何搞到第一桶金？",
+        "url": "https://www.v2ex.com/t/1240598",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T11:57:20.000Z",
-        "summary": "平时在终端里干活，有两个事情我经常觉得头大： 一是 记不住复杂参数 。比如查个占用端口的进程、按修改时间搜一批文件、或者解压某个不常见的压缩包，隔三差五就得切到浏览器搜一下。 二是 跨系统命令转换 。查资料时网上往往只贴了 Linux (Bash) 命令，但我手头如果在 Windows (PowerShell) 下，有些管道符和参数根本跑不起来，还得手动翻译一遍。 市面上其实有不少终端 AI 工具，但我试了一圈发现不太适合我： 太重 ：动辄装几百兆的环境或依赖。 喜欢自作主…",
+        "publishedAt": "2026-09-09T02:38:09.000Z",
+        "summary": "用 AI 做视频，做自媒体 做 APP 上架 Appstore 除了贡献各种 AI 会员费用，自媒体投流费用，Appstore 的 699 账号年费， 净收入都是负的 囧囧囧囧囧囧囧囧囧囧囧囧囧囧囧囧囧囧 求各位大神分享好的路子",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-it-db00861a7bafcf3d",
+        "id": "cn-it-ac84d8f8244fb9e4",
         "category": "cn",
-        "title": "华为靳玉志谈麒麟 9050 Pro 回归：六年时间，麒麟完成涅槃，国产芯片迎来新的里程碑",
-        "url": "https://www.ithome.com/0/999/970.htm",
+        "title": "IDC：2026 年二季度全球腕戴设备市场同比下滑 4.3%，华为、小米、苹果份额前三",
+        "url": "https://www.ithome.com/1/000/153.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-08T23:58:52.000Z",
-        "summary": "IT之家 9 月 9 日消息，在 9 月 7 日的 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会上， 华为 Mate XT 2 非凡大师全新展翼三折叠手机正式发布 ，定价 19,999 元起。 这款新机最大亮点之一就是搭载了 首款逻辑折叠 τ 芯片 —— 全新麒麟 9050 Pro 。 华为智能汽车解决方案 BU CEO 靳玉志昨晚发文，谈及了这颗全新麒麟处理器： 麒麟芯片回归！ 麒麟 9050 Pro 是首款采用逻辑折叠技术的高性能芯片…",
+        "publishedAt": "2026-09-09T04:36:49.000Z",
+        "summary": "IT之家 9 月 9 日消息，国际数据公司（ IDC ）今日发布《全球可穿戴设备市场季度跟踪报告》， 2026 年第二季度全球腕戴设备市场出货量为 4801 万台，同比下滑 4.3% 。 腕戴设备市场包含智能手表和手环产品。其中，全球智能手表市场出货量 3708 万台，同比下滑 4.2% 。手环市场出货量 1092 万台，同比下滑 4.7% 。 IT之家附 2026 年第二季度全球可穿戴设备市场排名如下： 1、华为 2026 年二季度华为腕戴产品全球出货量持续领跑。华为持续…",
         "badge": "IT之家"
       },
       {
@@ -443,24 +445,23 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49618050",
+        "id": "hn-49617581",
         "category": "dev",
-        "title": "A Topological Picture Book, Rendered",
-        "url": "https://e-infinity.space/picture-book/",
+        "title": "Large language models develop novel social biases through adaptive exploration",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T22:28:14.000Z",
+        "publishedAt": "2026-09-08T21:47:38.000Z",
         "badge": "HN",
-        "signal": "28 分 · 1 评论"
+        "signal": "123 分 · 60 评论"
       },
       {
-        "id": "cn-baidu-75982c8c1f8214d7",
+        "id": "cn-baidu-ed3b8fd8b9e938ba",
         "category": "cn",
-        "title": "高中生球员赵松源直接叩开国足大门",
-        "url": "https://www.baidu.com/s?wd=%E9%AB%98%E4%B8%AD%E7%94%9F%E7%90%83%E5%91%98%E8%B5%B5%E6%9D%BE%E6%BA%90%E7%9B%B4%E6%8E%A5%E5%8F%A9%E5%BC%80%E5%9B%BD%E8%B6%B3%E5%A4%A7%E9%97%A8&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "华为小米抢先苹果把折叠屏卖到2万元",
+        "url": "https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E5%B0%8F%E7%B1%B3%E6%8A%A2%E5%85%88%E8%8B%B9%E6%9E%9C%E6%8A%8A%E6%8A%98%E5%8F%A0%E5%B1%8F%E5%8D%96%E5%88%B02%E4%B8%87%E5%85%83&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月8日晚，中国足协公布男足新一期30人集训大名单，来自北京的17岁高中生前锋赵松源入选。他成为职业化以来首位以在读高中生身份入选成年国足的球员。",
         "badge": "热搜",
-        "signal": "7,522,061 热度"
+        "signal": "7,522,425 热度"
       },
       {
         "id": "github-advisory-ghsa-96p9-rh4f-92cf",
@@ -483,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240473",
+        "id": "v2ex-1240593",
         "category": "dev",
-        "title": "我的 pro 周额度缩水到 1500 刀了，是不是下个订阅周期要换好了",
-        "url": "https://www.v2ex.com/t/1240473",
+        "title": "菲区/日区 GPT 20x 4 人新车 人满开 肉身墙外 日本个人签约原生万兆上下对等家宽+日币日本实体信用卡",
+        "url": "https://www.v2ex.com/t/1240593",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-08T10:31:21.000Z",
-        "summary": "和小伙伴拼车使用，之前大概有 2400 多刀，前几天刷新额度后，降到 1800 ，今天刷新后直接给哥们干到 1500 了 难受啊，27 号订阅期，不行得换号了",
+        "publishedAt": "2026-09-09T02:30:50.000Z",
+        "summary": "具体内容参考原帖： https://www.v2ex.com/t/1240411 目前菲区日区比 1:1 任意一区先满三人则选定方案 TG：QW5lbW9uZTAwMQ== 联系后请先说明来历，否则一律当 spam block。",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "3 回复"
       }
     ]
   },
@@ -508,7 +509,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 30371,
+        "stars": 31197,
         "starsToday": 656
       },
       {
@@ -518,7 +519,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 34762,
+        "stars": 35237,
         "starsToday": 710
       },
       {
@@ -528,7 +529,7 @@
         "url": "https://github.com/openai/skills",
         "description": "Skills Catalog for Codex",
         "language": "Python",
-        "stars": 26503,
+        "stars": 26602,
         "starsToday": 490
       },
       {
@@ -538,7 +539,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 254285,
+        "stars": 254469,
         "starsToday": 1427
       },
       {
@@ -548,7 +549,7 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 47741,
+        "stars": 47926,
         "starsToday": 2627
       },
       {
@@ -558,7 +559,7 @@
         "url": "https://github.com/coreyhaines31/marketingskills",
         "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "language": "JavaScript",
-        "stars": 48797,
+        "stars": 48943,
         "starsToday": 666
       },
       {
@@ -568,7 +569,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 283350,
+        "stars": 283468,
         "starsToday": 452
       },
       {
@@ -577,7 +578,7 @@
         "name": "multica-ai/andrej-karpathy-skills",
         "url": "https://github.com/multica-ai/andrej-karpathy-skills",
         "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
-        "stars": 211439,
+        "stars": 211577,
         "starsToday": 333
       },
       {
@@ -587,7 +588,7 @@
         "url": "https://github.com/microsoft/markitdown",
         "description": "Python tool for converting files and office documents to Markdown.",
         "language": "Python",
-        "stars": 181664,
+        "stars": 181842,
         "starsToday": 2047
       },
       {
@@ -597,10 +598,10 @@
         "url": "https://github.com/jo-inc/camofox-browser",
         "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
         "language": "JavaScript",
-        "stars": 10477,
+        "stars": 10630,
         "starsToday": 871
       }
     ],
-    "updatedAt": "2026-09-09T00:16:04.521Z"
+    "updatedAt": "2026-09-09T04:50:32.334Z"
   }
 }
