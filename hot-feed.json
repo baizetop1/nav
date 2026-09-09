@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-09T04:50:32.334Z",
+  "generatedAt": "2026-09-09T07:22:51.519Z",
   "intelligence": {
-    "updatedAt": "2026-09-09T04:50:32.334Z",
+    "updatedAt": "2026-09-09T07:22:51.519Z",
     "items": [
       {
-        "id": "cn-item-996c319e0e0c79e1",
+        "id": "cn-item-c5ae1dd173e7dcf7",
         "category": "cn",
-        "title": "中新网评：“鬼秤”闹的不是鬼，是信任危机",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-09/10693151.shtml",
+        "title": "中国官方发布11个新职业23个新工种",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-09/10693222.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-09T03:54:52.000Z",
-        "summary": "中新网北京9月9日电(钟兴真)最近“鬼秤”有点多。",
+        "publishedAt": "2026-09-09T07:03:05.000Z",
+        "summary": "中新社北京9月9日电 (记者 谢雁冰)中国人力资源和社会保障部等部门9日向社会发布具身智能机器人应用技术员等11个新职业，低空物流员等23个新工种。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49546964",
+        "id": "hn-49622042",
         "category": "dev",
-        "title": "Tension wood: A 'muscle' that can both bend and straighten plants",
-        "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
+        "title": "Copyright does more harm than good and should be abolished",
+        "url": "https://grapheneos.social/@GrapheneOS/117231186011306184",
         "source": "Hacker News",
-        "publishedAt": "2026-09-03T07:29:40.000Z",
+        "publishedAt": "2026-09-09T06:31:28.000Z",
         "badge": "HN",
-        "signal": "66 分 · 8 评论"
+        "signal": "80 分 · 29 评论"
       },
       {
-        "id": "cn-it-3efb050ec4cd409f",
+        "id": "cn-it-7ea8a2e9c612730f",
         "category": "cn",
-        "title": "安卓手机跨品牌碰一碰分享正式落地：荣耀 MagicOS 11 将支持，Magic9 手机首发搭载",
-        "url": "https://www.ithome.com/1/000/160.htm",
+        "title": "欧盟维修标签实施满 1 年：2334 款新手机 82％未提供合规维修信息",
+        "url": "https://www.ithome.com/1/000/231.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T04:47:44.000Z",
-        "summary": "IT之家 9 月 9 日消息，荣耀今日宣布其主导制定《碰一碰互传技术标准》正式落地， 联合国内主流安卓阵营，实现跨品牌“一碰即传，轻松分享” 。 荣耀 MagicOS 11 全面落地跨品牌碰一碰分享功能， 荣耀 Magic9 全系首发搭载 。 IT之家注意到， 金标联盟今年 7 月宣布升级一镜到底无缝动画体验 ，跨端分享实现一碰直达，主流安卓厂商统一接入标准。 一镜到底无缝动画方面，应用负责调用 SDK 负责适配，系统负责执行动画，后续 Google 能力可由 SDK 承接…",
+        "publishedAt": "2026-09-09T07:20:03.000Z",
+        "summary": "IT之家 9 月 9 日消息，欧洲维修权组织（Right to Repair Europe）于 9 月 7 日发布审查报告，称 2025 年 6 月 20 日欧盟对智能手机和平板电脑实施可维修性要求以来，市场透明度仍存在明显缺口。 该组织核查过去 1 年上市的 2,334 条智能手机型号记录， 只有约 18% 提供可直接找到备件价格或维修说明的网址，82％产品未满足相关信息披露要求。 近半记录未填写网址，19% 链接指向没有维修资料和备件价格的产品或支持页面。 该组织还发现…",
         "badge": "IT之家"
       },
       {
@@ -77,15 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240649",
+        "id": "v2ex-1240692",
         "category": "dev",
-        "title": "这里为什么感觉没人讨论国产模型。我发现 qwen 和豆包系列模型问题好多，生产直接没法用",
-        "url": "https://www.v2ex.com/t/1240649",
+        "title": "喜欢用个人中转站，那就得受着",
+        "url": "https://www.v2ex.com/t/1240692",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T04:33:01.000Z",
-        "summary": "对话类产品。 生产环境过去一直在用豆包，但是豆包 ttft 越来越大已经没法用了，所以想换 qwen 。 而且豆包还有概率出现脱靶问题和工具调用幻觉问题 结果 qwen3.7 plus 输出总是半截就中断，概率非常大没法用。 换成 3.8 max ，先是专属 endpoint 输出内容缺少 role ，这事我就排查了很久。 然后换成 dashscope 域继续用想着没事了，结果发现模型带图时输出质量严重下滑，区分不出注释内容和对话内容的角色概念。 搞得我现在一个没得用。做角…",
+        "publishedAt": "2026-09-09T06:46:34.000Z",
+        "summary": "不要只依赖中转站，正规渠道也预先配好准备随时切换。 一分钱一分货。中转站虽便宜，不稳定也是常态，遇到了就受着，换正规渠道。 个人中转站就是不安全的，黑客黑掉中转站，然后给你投个毒，你大概率发现不了，因为你人都不在电脑前。就算你在电脑前，每秒上百 token 刷过去，你也来不及阻止。 就算没有被黑，万一个人中转站运营不下去的话，你猜最后一步会做什么？",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-e55203d92fc68ac2",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "8月全国乘用车市场中，燃油车零售仅54万辆，同比下降40%，新能源渗透率达65.2%创历史新高，销量前十车型已无燃油车上榜。",
         "badge": "热搜",
-        "signal": "7,809,040 热度"
+        "signal": "7,808,103 热度"
       },
       {
         "id": "cisa-kev-cve-2026-81963",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49615537",
+        "id": "hn-49621697",
         "category": "dev",
-        "title": "Muse – Meta’s personal AI agent",
-        "url": "https://ai.meta.com/muse/",
+        "title": "The Navier–Stokes Millennium Prize Problem",
+        "url": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T19:25:00.000Z",
+        "publishedAt": "2026-09-09T05:55:39.000Z",
         "badge": "HN",
-        "signal": "391 分 · 413 评论"
+        "signal": "126 分 · 105 评论"
       },
       {
-        "id": "cn-item-180f98d2f5fc2425",
+        "id": "cn-item-cdd8fd2de6206a07",
         "category": "cn",
-        "title": "2026年服贸会开幕 90个国家、地区和国际组织设展办会",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-09/10693126.shtml",
+        "title": "中国法院惩治抢单“物理外挂”等不正当竞争行为",
+        "url": "https://www.chinanews.com.cn/fz/2026/09-09/10693173.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-09T03:30:35.000Z",
-        "summary": "中新社北京9月9日电 (记者 吕少威)2026年中国国际服务贸易交易会(“服贸会”)9日在北京首钢园开幕，90个国家(地区)和国际组织以国家(地区)或总部名义设展办会，1830余家企业线下参展，其中473家为世界500强或行业龙头企业。",
+        "publishedAt": "2026-09-09T06:59:12.000Z",
+        "summary": "中新社北京9月9日电 (记者 张素)中国最高人民法院9日发布的一起案例明确，提供抢单“物理外挂”破坏平台竞争秩序，构成不正当竞争。",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +159,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240644",
+        "id": "v2ex-1240680",
         "category": "dev",
-        "title": "避雷一个 AI 中转站，世一稳（https://sub.bulita.net）",
-        "url": "https://www.v2ex.com/t/1240644",
+        "title": "V 友们，谁有 ChatGPT-Pro 5X 代充稳定可靠的渠道，谢谢分享~",
+        "url": "https://www.v2ex.com/t/1240680",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T03:53:31.000Z",
-        "summary": "自己跑来 V2EX 宣传、我进去看看支持用下。 先充了 10 元试水，使用过程用不了，咨询客服来一句我的问题，直接把我拉黑。 避雷！！！ 避雷！！！ 避雷！！！",
+        "publishedAt": "2026-09-09T06:11:24.000Z",
         "badge": "程序员",
-        "signal": "34 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-49965fd5d96155b4",
+        "id": "cn-it-f296bbb9c8210ced",
         "category": "cn",
-        "title": "任天堂《塞尔达传说：时之笛 重制版》开放预购，港区售价 449 港币",
-        "url": "https://www.ithome.com/1/000/159.htm",
+        "title": "DeepSeek 计划 9 月 10 日前后发布 V4.1 Flash 模型，各项指标全面超越 V4 Pro",
+        "url": "https://www.ithome.com/1/000/222.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T04:42:25.000Z",
-        "summary": "IT之家 9 月 9 日消息，任天堂昨晚正式公布了《塞尔达传说：时之笛 重制版》的发售日期。这款 Switch 2 独占的经典重制作品将于 2026 年 11 月 5 日正式发售。 今日，任天堂美区、日区、港区等服务器已全面开启游戏预购。此外，官方还推出了包含实体陶笛的典藏版可供收藏。 其中，数字版在美区售价 59.99 美元 （现汇率约合 403.6 元人民币） ，日区售价 7,980 日元 （现汇率约合 348.7 元人民币） ，港区售价 449 港币 （IT之家注：现…",
+        "publishedAt": "2026-09-09T07:16:39.000Z",
+        "summary": "IT之家 9 月 9 日消息，DeepSeek 开放平台今日发布通知，DeepSeek 计划于北京时间 2026 年 9 月 10 日前后正式发布 V4.1 Flash 模型 。 DeepSeek 官方表示，经内部、外部多方测试，V4.1 Flash 在性能、费用、速度、总用时等 各项指标上已全面超越 V4 Pro 。 “秉持着对用户负责的态度，在 V4.1 Flash 正式上线之后、V4.1 Pro 上线之前，我们会将对 V4 Pro 的请求全部路由到 V4.1 Flas…",
         "badge": "IT之家"
       },
       {
@@ -200,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49605915",
+        "id": "hn-49615537",
         "category": "dev",
-        "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
-        "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+        "title": "Muse – Meta’s personal AI agent",
+        "url": "https://ai.meta.com/muse/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T05:42:28.000Z",
+        "publishedAt": "2026-09-08T19:25:00.000Z",
         "badge": "HN",
-        "signal": "1424 分 · 607 评论"
+        "signal": "470 分 · 499 评论"
       },
       {
         "id": "cn-baidu-c3e85b7cd0de74e5",
@@ -217,7 +216,7 @@
         "source": "百度热搜",
         "summary": "9月9日，海底捞港股股价暴跌超8%，创下四年半以来盘中新低。此前该公司出现巨额折价大宗交易，同时有消息称董事长张勇妻子舒萍拟大幅折价抛售2.59亿股股份，引发市场密切关注。",
         "badge": "热搜",
-        "signal": "7,713,372 热度"
+        "signal": "7,713,172 热度"
       },
       {
         "id": "github-advisory-ghsa-wc9g-mqfw-jrwm",
@@ -240,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240635",
+        "id": "v2ex-1240677",
         "category": "dev",
-        "title": "今天网不好， workbuddy 我点了 6 次，给了 600 分",
-        "url": "https://www.v2ex.com/t/1240635",
+        "title": "想用 deepseek 系 LLM 给单词转出一大批各种语言(英，法，德....)的解释，有可能会出现错误的解释吗？ why?",
+        "url": "https://www.v2ex.com/t/1240677",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T03:34:10.000Z",
-        "summary": "如图 是不是可以搞点 workbuddy 积分了",
+        "publishedAt": "2026-09-09T06:00:59.000Z",
+        "summary": "如有，怎么解决，再用另外一个 LLM 来 check ？",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-item-6177ce2e2dd86008",
+        "id": "cn-item-d8764200acad16a0",
         "category": "cn",
-        "title": "农业农村部：第九个中国农民丰收节将举办47项重点活动",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-09/10693140.shtml",
+        "title": "尼泊尔泥石流灾害遇难人数升至1367人 约5132人失联",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-09/10693225.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-09T03:28:27.000Z",
-        "summary": "中新网9月9日电 9日上午，农业农村部就2026年中国农民丰收节总体安排和筹备情况举行新闻发布会。中国农民丰收节组织指导委员会办公室主任、农业农村部市场与信息化司司长雷刘功介绍，今年丰收节总体安排分为两个层面。",
+        "publishedAt": "2026-09-09T06:47:41.000Z",
+        "summary": "中新网9月9日电 综合报道，据尼泊尔国家减少灾害风险管理局公布的最新数据，截至当地时间9月9日11时，尼泊尔泥石流灾害造成的遇难人数升至1367人，失联人数约为5132人。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49617255",
+        "id": "hn-49622305",
         "category": "dev",
-        "title": "How to build a printer",
-        "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
+        "title": "Trying",
+        "url": "https://gwern.net/on-really-trying",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T21:22:11.000Z",
+        "publishedAt": "2026-09-09T06:58:44.000Z",
         "badge": "HN",
-        "signal": "213 分 · 40 评论"
+        "signal": "8 分 · 0 评论"
       },
       {
-        "id": "cn-it-945cc3a1e48d9318",
+        "id": "cn-it-45016d8170939f27",
         "category": "cn",
-        "title": "微软 9 月 Win11 累积更新已修复光标样式失效 / 桌面壁纸黑屏故障",
-        "url": "https://www.ithome.com/1/000/157.htm",
+        "title": "三星电子开设日本横滨先进封装实验室，项目投资 3500 亿韩元",
+        "url": "https://www.ithome.com/1/000/216.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T04:39:08.000Z",
-        "summary": "IT之家 9 月 9 日消息，在本月（2026 年 9 月）补丁星期二活动日（9 月 8 日）中， 微软确认已修复影响 Windows 11 系统的光标样式失效、桌面壁纸黑屏故障。 IT之家此前报道，微软在此前官方更新的支持文档中，已经确定问题根源： 经过我们的调查，这个问题主要出现在非英语 Windows 11 版本更新中，是由于代码组件冲突导致的。 在受影响的语言环境中，无法加载这些 [指光标] 设置，从而导致使用默认值。由于该问题会阻止加载相关设置，因此用户无论如何设…",
+        "publishedAt": "2026-09-09T07:13:21.000Z",
+        "summary": "IT之家 9 月 9 日消息，综合韩媒《每日经济》《首尔经济日报》报道，三星电子 (Samsung Electronics) 当地时间本月 8 日在日本横滨举行了先进封装实验室 (APL) 的开业仪式，企业与政府代表均有出席。 日本汇聚了多家半导体封装产业链重点企业。横滨位于日本 东京都市圈，也是 Resonac（力森诺科）、DISCO（迪思科）总部所在地。三星的 APL 设施总建筑面积约为 6600m²， 设有半导体级无尘室 。 三星电子计划在五年内向横滨实验室投资约 3…",
         "badge": "IT之家"
       },
       {
@@ -322,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1240633",
+        "id": "v2ex-1240675",
         "category": "dev",
-        "title": "洗衣机坏了, gpt 指挥我排查/解决了问题, 感觉人形机器人有前途啊",
-        "url": "https://www.v2ex.com/t/1240633",
+        "title": "iTerm2 3.7.0 可通过 App(iTerm2 Buddy)直接操作会话啦",
+        "url": "https://www.v2ex.com/t/1240675",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T03:31:55.000Z",
-        "summary": "多年前买的滚筒洗衣机，启动就报错误码。 gpt 指挥我去检查，我给他反馈，来回不到 10 轮。 精确的在滚筒内筒的孔上找到了一个卡住的螺丝。。 （是我前几天给万用表换电池拆下来的，放在衣服兜里了） 真 nb 啊。 他指挥一个人行机器人肯定也能搞定。 人形机器人的大脑绝对够用了。 现在不够的是小脑和身体。",
+        "publishedAt": "2026-09-09T05:46:22.000Z",
+        "summary": "试了一下，还挺好玩的，之前 ChatGPT 只能操作 Codex 的工作任务，现在相当于是一个 Mac iTerm2 session 远程管理。 但是目前终端连接的直接操作体验比较差，比较卡顿，相比于通过 Termius 直接远程连接而言。 电脑上装 iTerm2 的同学可以试试。",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-4eeeaaad3751f96a",
@@ -340,7 +339,7 @@
         "source": "百度热搜",
         "summary": "2026年中国国际服务贸易交易会9月9日至13日在北京石景山区首钢园举办。",
         "badge": "热搜",
-        "signal": "7,618,816 热度"
+        "signal": "7,619,443 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85046",
@@ -363,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49611251",
+        "id": "hn-49546964",
         "category": "dev",
-        "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "title": "Tension wood: A 'muscle' that can both bend and straighten plants",
+        "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T14:55:45.000Z",
+        "publishedAt": "2026-09-03T07:29:40.000Z",
         "badge": "HN",
-        "signal": "515 分 · 118 评论"
+        "signal": "99 分 · 16 评论"
       },
       {
-        "id": "cn-item-85a7d1210724619f",
+        "id": "cn-item-ef1f44a5e322260c",
         "category": "cn",
-        "title": "董建华先生逝世",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-09/10693123.shtml",
+        "title": "谈判竞价协商收官 2026年国家基本医保药品目录预计于11月发布",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-09/10693211.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-09T02:55:45.000Z",
-        "summary": "董建华先生遗像 新华社发 新华社北京9月9日电 “一国两制”杰出贡献者，著名的爱国人士，杰出的社会活动家，中国共产党的亲密朋友，中国人民政治协商会议第十届、十一届、十二届、十三届全国委员会副主席，香港特别行政区第一任、第二任行政长官董建华先生，因病于2026年9月8日21时57分在香港逝世，享年89岁。",
+        "publishedAt": "2026-09-09T06:11:17.000Z",
+        "summary": "9月5日—8日，国家医保局组织开展2026年国家基本医保药品目录现场谈判竞价，上百家内外资企业现场参与，124个目录外药品入围谈判竞价环节，一些社会关注的肿瘤、罕见病、慢性病，以及儿童用药等重点领域创新药参与谈判，并有望纳入医保目录。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1240598",
+        "id": "v2ex-1240663",
         "category": "dev",
-        "title": "用 AI，如何搞到第一桶金？",
-        "url": "https://www.v2ex.com/t/1240598",
+        "title": "我给 Pi Coding Agent 做了一个桌面控制台： Pi-Harness",
+        "url": "https://www.v2ex.com/t/1240663",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T02:38:09.000Z",
-        "summary": "用 AI 做视频，做自媒体 做 APP 上架 Appstore 除了贡献各种 AI 会员费用，自媒体投流费用，Appstore 的 699 账号年费， 净收入都是负的 囧囧囧囧囧囧囧囧囧囧囧囧囧囧囧囧囧囧 求各位大神分享好的路子",
+        "publishedAt": "2026-09-09T05:05:04.000Z",
+        "summary": "当 AI Coding Agent 真正进入项目开发后，一个聊天窗口很快就不够用了。 你需要选择模型，配置 Provider ，查看上下文占用，知道 Agent 调用了哪些工具；你还要在多个 Session 之间切换，浏览文件、检查 Git Diff 、管理 Skills ，必要时处理 Compaction 、Steering 和 Follow-up 。 这些能力并不缺，但它们往往散落在命令行、配置文件和不同工具里。 所以我做了 Pi-Harness ：一个面向 Pi Co…",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-ac84d8f8244fb9e4",
+        "id": "cn-it-df40ab1a7d4038a5",
         "category": "cn",
-        "title": "IDC：2026 年二季度全球腕戴设备市场同比下滑 4.3%，华为、小米、苹果份额前三",
-        "url": "https://www.ithome.com/1/000/153.htm",
+        "title": "Steam 成就暗示：《王国之心 4》有望加入《星球大战》等多个新世界",
+        "url": "https://www.ithome.com/1/000/211.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T04:36:49.000Z",
-        "summary": "IT之家 9 月 9 日消息，国际数据公司（ IDC ）今日发布《全球可穿戴设备市场季度跟踪报告》， 2026 年第二季度全球腕戴设备市场出货量为 4801 万台，同比下滑 4.3% 。 腕戴设备市场包含智能手表和手环产品。其中，全球智能手表市场出货量 3708 万台，同比下滑 4.2% 。手环市场出货量 1092 万台，同比下滑 4.7% 。 IT之家附 2026 年第二季度全球可穿戴设备市场排名如下： 1、华为 2026 年二季度华为腕戴产品全球出货量持续领跑。华为持续…",
+        "publishedAt": "2026-09-09T07:09:12.000Z",
+        "summary": "IT之家 9 月 9 日消息，一次大规模 Steam 数据泄露曝光了大量即将推出游戏的成就信息，其中还透露了《王国之心 4》的部分关键细节。从泄露内容来看，这款 Square Enix 新作将融入《星球大战》元素。 据IT之家了解，《王国之心 4》预计将于明年发售，距离前作推出已经过去 8 年。这次泄露也让外界提前了解到这款游戏的一些新内容。 截至目前，Square Enix 官方唯一明确公布的内容，是游戏中将加入一个以《寻梦环游记》为灵感的世界。不过，泄露信息显示，玩家似…",
         "badge": "IT之家"
       },
       {
@@ -445,23 +444,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49617581",
+        "id": "hn-49605915",
         "category": "dev",
-        "title": "Large language models develop novel social biases through adaptive exploration",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH",
+        "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
+        "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T21:47:38.000Z",
+        "publishedAt": "2026-09-08T05:42:28.000Z",
         "badge": "HN",
-        "signal": "123 分 · 60 评论"
+        "signal": "1562 分 · 667 评论"
       },
       {
-        "id": "cn-baidu-ed3b8fd8b9e938ba",
+        "id": "cn-baidu-cdd89d6e286f8804",
         "category": "cn",
-        "title": "华为小米抢先苹果把折叠屏卖到2万元",
-        "url": "https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E5%B0%8F%E7%B1%B3%E6%8A%A2%E5%85%88%E8%8B%B9%E6%9E%9C%E6%8A%8A%E6%8A%98%E5%8F%A0%E5%B1%8F%E5%8D%96%E5%88%B02%E4%B8%87%E5%85%83&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "一家三口吃单人锅只点一份大闹餐厅",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AE%B6%E4%B8%89%E5%8F%A3%E5%90%83%E5%8D%95%E4%BA%BA%E9%94%85%E5%8F%AA%E7%82%B9%E4%B8%80%E4%BB%BD%E5%A4%A7%E9%97%B9%E9%A4%90%E5%8E%85&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "近日，重庆渝中区一家三口在自助火锅店用餐只点一份小火锅，男子加筷子被拒后，夫妻大闹门店并辱骂服务员。警方介入后，女子辱骂民警，最终夫妻二人分别被行政拘留与行政处罚。",
         "badge": "热搜",
-        "signal": "7,522,425 热度"
+        "signal": "7,523,917 热度"
       },
       {
         "id": "github-advisory-ghsa-96p9-rh4f-92cf",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1240593",
+        "id": "v2ex-1240660",
         "category": "dev",
-        "title": "菲区/日区 GPT 20x 4 人新车 人满开 肉身墙外 日本个人签约原生万兆上下对等家宽+日币日本实体信用卡",
-        "url": "https://www.v2ex.com/t/1240593",
+        "title": "感觉 gpt6 的回答速度变快了,反倒是 opus 和 fable 处理的越来越慢",
+        "url": "https://www.v2ex.com/t/1240660",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-09T02:30:50.000Z",
-        "summary": "具体内容参考原帖： https://www.v2ex.com/t/1240411 目前菲区日区比 1:1 任意一区先满三人则选定方案 TG：QW5lbW9uZTAwMQ== 联系后请先说明来历，否则一律当 spam block。",
+        "publishedAt": "2026-09-09T04:59:45.000Z",
+        "summary": "没有系统的测试,不知道是不是错觉",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 31197,
+        "stars": 31722,
         "starsToday": 656
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 35237,
+        "stars": 35540,
         "starsToday": 710
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/openai/skills",
         "description": "Skills Catalog for Codex",
         "language": "Python",
-        "stars": 26602,
+        "stars": 26667,
         "starsToday": 490
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 254469,
+        "stars": 254585,
         "starsToday": 1427
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 47926,
+        "stars": 48042,
         "starsToday": 2627
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/coreyhaines31/marketingskills",
         "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "language": "JavaScript",
-        "stars": 48943,
+        "stars": 49015,
         "starsToday": 666
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 283468,
+        "stars": 283551,
         "starsToday": 452
       },
       {
@@ -578,7 +578,7 @@
         "name": "multica-ai/andrej-karpathy-skills",
         "url": "https://github.com/multica-ai/andrej-karpathy-skills",
         "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
-        "stars": 211577,
+        "stars": 211649,
         "starsToday": 333
       },
       {
@@ -588,7 +588,7 @@
         "url": "https://github.com/microsoft/markitdown",
         "description": "Python tool for converting files and office documents to Markdown.",
         "language": "Python",
-        "stars": 181842,
+        "stars": 181946,
         "starsToday": 2047
       },
       {
@@ -598,10 +598,10 @@
         "url": "https://github.com/jo-inc/camofox-browser",
         "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
         "language": "JavaScript",
-        "stars": 10630,
+        "stars": 10702,
         "starsToday": 871
       }
     ],
-    "updatedAt": "2026-09-09T04:50:32.334Z"
+    "updatedAt": "2026-09-09T07:22:51.519Z"
   }
 }
