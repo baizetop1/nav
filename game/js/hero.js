@@ -1,5 +1,6 @@
-import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.3.0';
-import { heroRank } from './map.js?v=0.3.0';
+import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.4.1';
+import { heroRank } from './map.js?v=0.4.1';
+import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.4.1';
 export function knowHero(state, id, status, data) {
   const hero = state.heroes[id];
   if (heroRank[status] > heroRank[hero.status]) { hero.status = status; journal(state, `${data.by.heroes[id].name}：${({heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'})[status]}。`); }
@@ -18,9 +19,14 @@ export function attributes(state, id, data, level = state.heroes[id].level, with
     for (const [key, amount] of Object.entries(data.by.equipments[equip.item].attribute)) result[key] += Math.round(amount * (1 + equip.plus * .1));
   }
   for (const skillId of model.skills) {
-    const effect = data.by.skills[skillId].effect;
+    const skill=data.by.skills[skillId];
+    // A temporary story guest never borrows the player's permanent training.
+    if(skill.training?.tier!=='base'&&unlockReason(state,skill,!withEquipment))continue;
+    const effect = trainedSkill(skill,withEquipment?skillLevel(state,skillId):1).effect;
     if (effect.kind === 'attribute') result[effect.attribute] = Math.round(result[effect.attribute] * (1 + effect.rate));
   }
+  const mount=withEquipment&&state.growth?.mounts[id];
+  if(mount?.riding){for(const key of ['hp','attack'])result[key]=Math.round(result[key]*(1+.02*mount.rank));result.speed+=mount.rank*2;}
   return result;
 }
 export function gainExp(state, id, amount, data) {

@@ -8,6 +8,14 @@
     "effect": {
       "kind": "heal",
       "rate": 0.32
+    },
+    "training": {
+      "hero": "songjiang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -20,6 +28,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "songjiang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -36,6 +52,14 @@
         "turns": 2,
         "value": 0.3
       }
+    },
+    "training": {
+      "hero": "wuyong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -48,6 +72,14 @@
       "kind": "attribute",
       "attribute": "strategy",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "wuyong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -64,6 +96,14 @@
         "turns": 2,
         "value": 0.02
       }
+    },
+    "training": {
+      "hero": "wusong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -76,6 +116,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "wusong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -87,6 +135,14 @@
     "effect": {
       "kind": "damage",
       "rate": 2.8
+    },
+    "training": {
+      "hero": "linchong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -99,6 +155,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "linchong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -115,6 +179,14 @@
         "turns": 2,
         "value": 0.3
       }
+    },
+    "training": {
+      "hero": "luzhishen",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -127,6 +199,14 @@
       "kind": "attribute",
       "attribute": "hp",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "luzhishen",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -143,6 +223,14 @@
         "turns": 2,
         "value": 0.02
       }
+    },
+    "training": {
+      "hero": "gongsunsheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -155,6 +243,14 @@
       "kind": "attribute",
       "attribute": "strategy",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "gongsunsheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -166,6 +262,14 @@
     "effect": {
       "kind": "damage",
       "rate": 2.8
+    },
+    "training": {
+      "hero": "yanqing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -178,6 +282,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "yanqing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -194,6 +306,14 @@
         "turns": 2,
         "value": 0.3
       }
+    },
+    "training": {
+      "hero": "huarong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -206,6 +326,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "huarong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -222,6 +350,14 @@
         "turns": 2,
         "value": 0.02
       }
+    },
+    "training": {
+      "hero": "liutang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -234,6 +370,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "liutang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -245,6 +389,14 @@
     "effect": {
       "kind": "damage",
       "rate": 2.2
+    },
+    "training": {
+      "hero": "shiqian",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -257,6 +409,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "shiqian",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -273,6 +433,14 @@
         "turns": 2,
         "value": 0.3
       }
+    },
+    "training": {
+      "hero": "baisheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -285,6 +453,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "baisheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -301,6 +477,14 @@
         "turns": 2,
         "value": 0.02
       }
+    },
+    "training": {
+      "hero": "ruanxiaoqi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -313,6 +497,14 @@
       "kind": "attribute",
       "attribute": "attack",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "ruanxiaoqi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -415,6 +607,14 @@
     "effect": {
       "kind": "heal",
       "rate": 0.3
+    },
+    "training": {
+      "hero": "chaijin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -427,6 +627,14 @@
       "kind": "attribute",
       "attribute": "defense",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "chaijin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -443,6 +651,14 @@
         "turns": 2,
         "value": 0.3
       }
+    },
+    "training": {
+      "hero": "yangzhi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
     }
   },
   {
@@ -455,6 +671,560 @@
       "kind": "attribute",
       "attribute": "hp",
       "rate": 0.08
+    },
+    "training": {
+      "hero": "yangzhi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "songjiang_advanced",
+    "name": "义聚群英",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.2
+    },
+    "description": "全队回复 20% 最大气血，并各得 6 怒气。",
+    "training": {
+      "hero": "songjiang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "guide",
+      "label": "邀白胜作向导",
+      "profile": "rally"
+    }
+  },
+  {
+    "id": "songjiang_bond",
+    "name": "义旗相应",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，全队各得 3 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "songjiang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "rally"
+    }
+  },
+  {
+    "id": "wuyong_advanced",
+    "name": "智取纲阵",
+    "type": "strategy",
+    "cost": 45,
+    "effect": {
+      "kind": "strategy",
+      "rate": 1
+    },
+    "description": "谋略攻击一人；敌方全体攻击/谋略降低 20%，持续 6 秒；同伴各得 10 怒气。",
+    "training": {
+      "hero": "wuyong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲",
+      "profile": "weaken"
+    }
+  },
+  {
+    "id": "wuyong_bond",
+    "name": "帷幄驭风",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，令当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "wuyong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "weaken"
+    }
+  },
+  {
+    "id": "wusong_advanced",
+    "name": "醉步伏虎",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "wusong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "tiger_complete",
+      "label": "完成景阳冈打虎剧情",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "wusong_bond",
+    "name": "步骑如一",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "wusong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "linchong_advanced",
+    "name": "风雪回马枪",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.35
+    },
+    "description": "枪扫前两名敌人并眩晕 1.5 秒。首领受控后会短暂抗控。",
+    "training": {
+      "hero": "linchong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "lin_temple",
+      "label": "完成山神庙往事",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "linchong_bond",
+    "name": "雪夜奔骑",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标眩晕 1 秒；遵守首领抗控。触发强度随招式等级提高。",
+    "training": {
+      "hero": "linchong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "luzhishen_advanced",
+    "name": "禅杖护众",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "luzhishen",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "lu_complete",
+      "label": "完成野猪林救人",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "luzhishen_bond",
+    "name": "护法同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "luzhishen",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "gongsunsheng_advanced",
+    "name": "云开见月",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.14
+    },
+    "description": "清除全队流血、中毒、破甲、眩晕和削弱，再各回复 14% 最大气血。",
+    "training": {
+      "hero": "gongsunsheng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "gongsunsheng_bond",
+    "name": "云游相济",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，清除一位受困同伴的一种负面状态。触发强度随招式等级提高。",
+    "training": {
+      "hero": "gongsunsheng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "yanqing_advanced",
+    "name": "巧燕截脉",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "yanqing",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "yanqing_bond",
+    "name": "燕影随行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对气血最低的敌人追加一次 40% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "yanqing",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "huarong_advanced",
+    "name": "一箭定军",
+    "type": "active",
+    "cost": 55,
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "description": "瞄准气血比例最低的敌人，忽略其 50% 防御；克制厚甲与残敌。",
+    "training": {
+      "hero": "huarong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "huarong_bond",
+    "name": "雕翎追风",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒破甲。触发强度随招式等级提高。",
+    "training": {
+      "hero": "huarong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "liutang_advanced",
+    "name": "赤发开阵",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "liutang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "seven_stars",
+      "label": "完成七星聚义",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "liutang_bond",
+    "name": "赤心共进",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "liutang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "shiqian_advanced",
+    "name": "鼓上取势",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "shiqian",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "guide",
+      "label": "邀白胜作向导",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "shiqian_bond",
+    "name": "夜路无声",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "shiqian",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "baisheng_advanced",
+    "name": "担酒救急",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.38
+    },
+    "description": "照应气血比例最低的同伴，回复 38% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "baisheng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "guide",
+      "label": "邀白胜作向导",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "baisheng_bond",
+    "name": "乡道相扶",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "baisheng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "ruanxiaoqi_advanced",
+    "name": "踏浪截舟",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "ruanxiaoqi",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "seven_stars",
+      "label": "完成七星聚义",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "ruanxiaoqi_bond",
+    "name": "水陆相应",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "ruanxiaoqi",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "chaijin_advanced",
+    "name": "庄门庇客",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.18
+    },
+    "description": "全队回复 18% 最大气血并减伤 20%，持续 4 秒；适合应对群攻。",
+    "training": {
+      "hero": "chaijin",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "chai_refuge",
+      "label": "完成柴庄收留往事",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "chaijin_bond",
+    "name": "贵客同袍",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，为前位同伴减伤 25%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "chaijin",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "yangzhi_advanced",
+    "name": "青面押阵",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "挥刀前两名敌人，并令全队减伤 15%，持续 4 秒。",
+    "training": {
+      "hero": "yangzhi",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "yang_complete",
+      "label": "完成杨志人物往事",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "yangzhi_bond",
+    "name": "押阵同途",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为全队回复 2 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "yangzhi",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "discipline"
     }
   }
 ]

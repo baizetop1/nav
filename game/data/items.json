@@ -490,5 +490,253 @@
     "price": 0,
     "effect": {},
     "description": "请柴进照应林冲的书信。交到柴庄客舍可续上这段相识。"
+  },
+  {
+    "id": "songjiang_manual",
+    "name": "宋江专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "wuyong_manual",
+    "name": "吴用专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "wusong_manual",
+    "name": "武松专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "linchong_manual",
+    "name": "林冲专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "luzhishen_manual",
+    "name": "鲁智深专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "gongsunsheng_manual",
+    "name": "公孙胜专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "yanqing_manual",
+    "name": "燕青专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "huarong_manual",
+    "name": "花荣专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "liutang_manual",
+    "name": "刘唐专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "shiqian_manual",
+    "name": "时迁专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "baisheng_manual",
+    "name": "白胜专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "ruanxiaoqi_manual",
+    "name": "阮小七专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "chaijin_manual",
+    "name": "柴进专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "yangzhi_manual",
+    "name": "杨志专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用 2 张武学残页抄录一册，用于本人物所有招式升级；不与招贤信物混用。"
+  },
+  {
+    "id": "martial_pages",
+    "name": "武学残页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "每次切磋得 2 张；历练必得 3 张；每日差事各得 1 张。2 张可抄录一册指定人物招式书。"
+  },
+  {
+    "id": "mount_feed",
+    "name": "精制草料",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "切磋得 1 份，历练必得 2 份；喂养一次消耗 1 份，亲密 +10（上限 100）。"
+  },
+  {
+    "id": "mount_token",
+    "name": "驯骑凭记",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "坐骑升阶材料，不是坐骑契，不能用来领骑。历练必得 1 枚；每日第三次切磋与三项差事总酬劳各得 1 枚。"
+  },
+  {
+    "id": "songjiang_mount_contract",
+    "name": "黄骠义骑坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「柴庄护送」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求宋江在队。宋江正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "wuyong_mount_contract",
+    "name": "青鬃策骑坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「黄泥冈历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求吴用在队。吴用正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "wusong_mount_contract",
+    "name": "赤鬃行者坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求武松在队。武松正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "linchong_mount_contract",
+    "name": "踏雪青骢坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「风雪山神庙历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求林冲在队。林冲正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "luzhishen_mount_contract",
+    "name": "乌鬃护法坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「野猪林传闻历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求鲁智深在队。鲁智深正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "gongsunsheng_mount_contract",
+    "name": "云踪白马坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「黄泥冈历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求公孙胜在队。公孙胜正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "yanqing_mount_contract",
+    "name": "柳影轻骑坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「祝家庄传闻历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求燕青在队。燕青正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "huarong_mount_contract",
+    "name": "追风银骢坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「祝家庄传闻历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求花荣在队。花荣正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "liutang_mount_contract",
+    "name": "赤蹄骁骑坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「黄泥冈历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求刘唐在队。刘唐正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "shiqian_mount_contract",
+    "name": "夜行灰驹坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求时迁在队。时迁正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "baisheng_mount_contract",
+    "name": "乡路青驴坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求白胜在队。白胜正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "ruanxiaoqi_mount_contract",
+    "name": "踏浪乌驹坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「黄泥冈历练」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求阮小七在队。阮小七正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "chaijin_mount_contract",
+    "name": "庄园紫骝坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「柴庄护送」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求柴进在队。柴进正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "yangzhi_mount_contract",
+    "name": "押纲黄骠坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「青州护道」历练胜利后结算时获得；尚未持契且未领此骑时必得，不要求杨志在队。杨志正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
   }
 ]

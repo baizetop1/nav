@@ -449,6 +449,30 @@
           },
           "introducedIn": {
             "type": "integer"
+          },
+          "mount": {
+            "type": "object",
+            "required": [
+              "name",
+              "description",
+              "dungeon",
+              "contract"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "dungeon": {
+                "type": "string"
+              },
+              "contract": {
+                "type": "string"
+              }
+            }
           }
         }
       }
@@ -534,6 +558,38 @@
                     ]
                   }
                 }
+              }
+            }
+          },
+          "training": {
+            "type": "object",
+            "required": [
+              "hero",
+              "tier",
+              "level",
+              "flag",
+              "label",
+              "profile"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "hero": {
+                "type": "string"
+              },
+              "tier": {
+                "type": "string"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "flag": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "profile": {
+                "type": "string"
               }
             }
           }
@@ -2851,6 +2907,15 @@
               },
               "strength_shard": {
                 "type": "integer"
+              },
+              "martial_pages": {
+                "type": "integer"
+              },
+              "mount_feed": {
+                "type": "integer"
+              },
+              "mount_token": {
+                "type": "integer"
               }
             }
           },
@@ -3186,6 +3251,9 @@
                     "type": "integer"
                   },
                   "iron": {
+                    "type": "integer"
+                  },
+                  "martial_pages": {
                     "type": "integer"
                   }
                 }

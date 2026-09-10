@@ -118,7 +118,8 @@
     "reward": {
       "silver": 150,
       "items": {
-        "tiger_bone": 1
+        "tiger_bone": 1,
+        "martial_pages": 1
       }
     },
     "description": "巡视景阳冈一次。"
@@ -133,7 +134,10 @@
     },
     "condition": null,
     "reward": {
-      "merit": 10
+      "merit": 10,
+      "items": {
+        "martial_pages": 1
+      }
     },
     "description": "今日备得两份金创药，可购买或探访郎中。"
   },
@@ -149,7 +153,10 @@
       "ownedCount": 1
     },
     "reward": {
-      "silver": 200
+      "silver": 200,
+      "items": {
+        "martial_pages": 1
+      }
     },
     "description": "让好汉们在两场交战中得胜。"
   },
@@ -164,7 +171,8 @@
     "condition": null,
     "reward": {
       "items": {
-        "recruit_shard": 2
+        "recruit_shard": 2,
+        "martial_pages": 1
       }
     },
     "description": "在招贤馆拜访一次江湖人物。"
@@ -182,7 +190,8 @@
     },
     "reward": {
       "items": {
-        "scrap_iron": 3
+        "scrap_iron": 3,
+        "martial_pages": 1
       }
     },
     "description": "为一件兵刃或衣甲强化一次。"
@@ -220,7 +229,10 @@
       ]
     },
     "reward": {
-      "merit": 15
+      "merit": 15,
+      "items": {
+        "martial_pages": 1
+      }
     },
     "description": "踏上一处尚未到过的地方。"
   },
@@ -235,7 +247,8 @@
     "condition": null,
     "reward": {
       "items": {
-        "jinchuangyao": 1
+        "jinchuangyao": 1,
+        "martial_pages": 1
       }
     },
     "description": "在江湖寻访中处理一桩际遇。"
@@ -263,7 +276,8 @@
     },
     "reward": {
       "items": {
-        "skill_page": 1
+        "skill_page": 1,
+        "martial_pages": 1
       }
     },
     "description": "带队解两次山贼拦路之急。"
@@ -281,7 +295,8 @@
     },
     "reward": {
       "items": {
-        "strength_shard": 1
+        "strength_shard": 1,
+        "martial_pages": 1
       }
     },
     "description": "今日为铁匠搜集三份虎骨。"
@@ -299,7 +314,8 @@
     },
     "reward": {
       "items": {
-        "exp_pill": 1
+        "exp_pill": 1,
+        "martial_pages": 1
       }
     },
     "description": "调整出阵人手，再赢下一场交战。"
@@ -314,7 +330,10 @@
     },
     "condition": null,
     "reward": {
-      "silver": 180
+      "silver": 180,
+      "items": {
+        "martial_pages": 1
+      }
     },
     "description": "在酒肆听一条消息或处理一桩酒客际遇。"
   },
@@ -331,7 +350,8 @@
     },
     "reward": {
       "items": {
-        "horse_feed": 2
+        "horse_feed": 2,
+        "martial_pages": 1
       }
     },
     "description": "给坐骑添一份草料。坐骑系统开放后才会派发。"

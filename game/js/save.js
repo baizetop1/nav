@@ -1,6 +1,8 @@
-import { newGame } from './core.js?v=0.3.0';
-import { idPattern, requireRule } from './utils.js?v=0.3.0';
-import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.3.0';
+import { newGame } from './core.js?v=0.4.1';
+import { idPattern, requireRule } from './utils.js?v=0.4.1';
+import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.4.1';
+import { validateGrowth } from './growth.js?v=0.4.1';
+import { validateGrowthBattle } from './growth-save.js?v=0.4.1';
 export const SAVE_KEY='baize_shuihu_save', BACKUP_KEY=SAVE_KEY+'_backup';
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 function object(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}
@@ -11,6 +13,7 @@ function safeTree(value,depth=0) {
 export function validateSave(s,data) {
   requireRule(object(s)&&s.version===2,'不支持这个存档版本。');safeTree(s);
   const check=(ok,msg)=>requireRule(ok,'存档校验失败：'+msg);
+  check(s.battleSkillMode===undefined||['manual','auto'].includes(s.battleSkillMode),'技能释放方式');
   check(integer(s.revision,0,Number.MAX_SAFE_INTEGER)&&integer(s.rng,1,4294967295),'版本游标');
   for(const key of ['clock','lastRegen','startedAt'])check(integer(s[key],0,8640000000000000),'时间');
   check(s.clock>=s.lastRegen&&s.clock>=s.startedAt,'时间顺序');check(integer(s.worldMinute,0,1439),'昼夜');
@@ -29,6 +32,7 @@ export function validateSave(s,data) {
   for(const [id,p] of Object.entries(s.progress.stories))check(data.by.stories[id]&&['active','completed'].includes(p.status)&&Object.hasOwn(data.by.stories[id].steps,p.step),'剧情步骤');
   check(Array.isArray(s.progress.claims)&&new Set(s.progress.claims).size===s.progress.claims.length&&s.progress.claims.every(id=>data.by.quests[id]?.type==='main'),'主线酬劳');
   for(const [id,n] of Object.entries(s.progress.clears))check(data.by.dungeons[id]&&integer(n),'通关记录');
+  validateGrowth(s,data,check);
   check(object(s.stats)&&object(s.daily)&&object(s.daily.counters)&&object(s.daily.dungeons),'差事数据');
   for(const stats of [s.stats,s.daily.counters])for(const [key,n] of Object.entries(stats))check(/^[a-z][a-zA-Z0-9_]*$/.test(key)&&integer(n),'计数');
   check(/^\d{4}-\d{2}-\d{2}$/.test(s.daily.date)&&Array.isArray(s.daily.ids)&&s.daily.ids.length===3&&new Set(s.daily.ids).size===3&&s.daily.ids.every(id=>data.by.quests[id]?.type==='daily'),'今日差事');
@@ -46,6 +50,7 @@ export function validateSave(s,data) {
   const logs=a=>check(Array.isArray(a)&&a.length<=150&&a.every(t=>typeof t==='string'&&t.length<2000),'战报');
   check(!(s.battle&&s.scheme)&&!(s.event&&(s.battle||s.scheme)),'互斥事件');
   if(s.battle){const b=s.battle,live=b.mode==='realtime';
+    validateGrowthBattle(b,data,check);
     check(live?(b.round===undefined&&integer(b.elapsed,0,BATTLE_LIMIT_MS)&&integer(b.itemReadyAt,0,BATTLE_LIMIT_MS+10000)):(b.mode===undefined&&integer(b.round,1,100)&&b.elapsed===undefined),'战斗时钟');
     check(Array.isArray(b.team)&&b.team.length>0&&b.team.length<=3&&Array.isArray(b.enemy)&&b.enemy.length>0&&b.enemy.length<=5&&[null,'victory','defeat','retreat'].includes(b.outcome)&&typeof b.guest==='boolean','战局');context(b.context);logs(b.log);
     for(const [side,units] of [['team',b.team],['enemy',b.enemy]]){
@@ -55,7 +60,7 @@ export function validateSave(s,data) {
         for(const key of ['hp','maxHp','attack','defense','speed','strategy','rage'])check(integer(u[key],0,key==='rage'?100:1000000),'战斗属性');check(u.maxHp>0&&u.hp<=u.maxHp,'战斗气血');
         check(Array.isArray(u.skills)&&u.skills.length<=5&&u.skills.every(id=>data.by.skills[id]),'战斗技能');
         if(live)check(integer(u.nextAttackAt,u.hp>0&&!b.outcome?b.elapsed:0,BATTLE_LIMIT_MS+10000)&&integer(u.skillReadyAt,0,BATTLE_LIMIT_MS+10000)&&integer(u.attacks,0,10000),'单位出手与技能时钟');
-        check(Array.isArray(u.statuses)&&u.statuses.length<=100&&u.statuses.every(e=>['poison','bleeding','stun','armor_break','rage'].includes(e.id)&&typeof e.value==='number'&&Number.isFinite(e.value)&&e.value>=0&&e.value<=1000&&(live?(integer(e.expiresAt,b.outcome?0:b.elapsed,BATTLE_LIMIT_MS+10000)&&(['poison','bleeding'].includes(e.id)?integer(e.nextTickAt,b.outcome?0:b.elapsed,BATTLE_LIMIT_MS+10000):e.nextTickAt===undefined)):integer(e.turns,1,5))),'战斗状态');
+        check(Array.isArray(u.statuses)&&u.statuses.length<=100&&u.statuses.every(e=>(b.rules===2?['poison','bleeding','stun','armor_break','rage','guard','taunt','weaken']:['poison','bleeding','stun','armor_break','rage']).includes(e.id)&&typeof e.value==='number'&&Number.isFinite(e.value)&&e.value>=0&&e.value<=(['guard','weaken'].includes(e.id)?.6:1000)&&(live?(integer(e.expiresAt,b.outcome?0:b.elapsed,BATTLE_LIMIT_MS+10000)&&(['poison','bleeding'].includes(e.id)?integer(e.nextTickAt,b.outcome?0:b.elapsed,BATTLE_LIMIT_MS+10000):e.nextTickAt===undefined)):integer(e.turns,1,5))),'战斗状态');
       }
     }
     if(b.context.type==='story')check(s.progress.stories[b.context.id]?.status==='active'&&!!data.by.stories[b.context.id].steps[b.context.next],'战后剧情');

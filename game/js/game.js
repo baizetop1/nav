@@ -1,14 +1,18 @@
-import { loadData } from './data.js?v=0.3.0';
-import { dispatch, newGame } from './core.js?v=0.3.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.3.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.3.0';
-import { patchElement } from './dom.js?v=0.3.0';
+import { ActivityLog } from './activity.js?v=0.4.1';
+import { loadData } from './data.js?v=0.4.1';
+import { dispatch, newGame } from './core.js?v=0.4.1';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.4.1';
+import { esc, recruitDialog, render } from './ui.js?v=0.4.1';
+import { patchElement } from './dom.js?v=0.4.1';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.3.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.3.0';
-import { CloudClient } from './cloud.js?v=0.3.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.3.0';
-const root=document.getElementById('app');
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.4.1';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.4.1';
+import { CloudClient } from './cloud.js?v=0.4.1';
+import { boxImportDialog } from './savebox-ui.js?v=0.4.1';
+const root=document.getElementById('app'),activity=new ActivityLog();
+let logFollowing=true;
+function fitViewport(){if(!window.visualViewport||Math.abs(window.visualViewport.scale-1)<0.01){const height=Math.min(window.innerHeight,window.visualViewport?.height||window.innerHeight);document.documentElement.style.setProperty('--game-height',height+'px');document.documentElement.toggleAttribute('data-short-viewport',height<480);}}
+fitViewport();window.addEventListener('resize',fitViewport);window.visualViewport?.addEventListener('resize',fitViewport);
 let database, channel, operation=false, savePending=null, slots=[], previewSlots=[], cloud;
 const cloudView={baseUrl:'',selected:1,slots:[],message:'',conflict:false,history:null};
 const makeStore=id=>new SlotStore(database,data,id,change=>channel?.postMessage(change));
@@ -22,20 +26,32 @@ function paint(focus=false){
   const formValues=Object.fromEntries(Array.from(root.querySelectorAll('input:not([type=file]):not([type=password]),select,textarea')).filter(el=>el.id).map(el=>[el.id,el.value]));
   const active=document.activeElement?.dataset?.command,importText=document.getElementById('import-text')?.value;
   const folds=root.dataset.view===view?new Set(Array.from(root.querySelectorAll('details[data-fold][open]')).map(el=>el.dataset.fold)):new Set();
-  const oldLog=root.querySelector('.combat-log'),followLog=!oldLog||oldLog.scrollHeight-oldLog.scrollTop-oldLog.clientHeight<24;
-  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox()});
-  if(view==='map'&&state.battle&&root.querySelector('#main[data-screen="battle"]')){const next=document.createElement('template');next.innerHTML=html;patchElement(root.firstElementChild,next.content.firstElementChild);}
+  const oldMain=document.getElementById('main'),mainScroll=oldMain?.scrollTop||0,oldScreen=oldMain?.dataset.screen;
+  const oldLog=document.getElementById('activity-log'),logScroll=oldLog?.scrollTop||0;
+  const anchor=oldLog&&Array.from(oldLog.querySelectorAll('[data-log-entry]')).find(el=>el.getBoundingClientRect().bottom>oldLog.getBoundingClientRect().top);
+  const anchorId=anchor?.dataset.logEntry,anchorOffset=anchor&&anchor.getBoundingClientRect().top-oldLog.getBoundingClientRect().top;
+  const entries=activity.observe(state,{available:entered&&!invalid,feedback:notice});
+  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:entries});
+  if(root.querySelector('.viewport-shell')){const next=document.createElement('template');next.innerHTML=html;patchElement(root.firstElementChild,next.content.firstElementChild);}
   else root.innerHTML=html;
   root.dataset.view=view;
   if(!focus)for(const [id,value] of Object.entries(formValues)){const el=document.getElementById(id);if(el)el.value=value;}
   if(document.getElementById('recruit-target'))recruitTarget=document.getElementById('recruit-target').value;
   for(const el of root.querySelectorAll('details[data-fold]'))el.open=folds.has(el.dataset.fold);
   if(importText&&document.getElementById('import-text'))document.getElementById('import-text').value=importText;
-  if(focus){document.getElementById('main')?.focus({preventScroll:true});window.scrollTo({top:0,left:0,behavior:'instant'});}
+  const main=document.getElementById('main');if(main)main.scrollTop=focus||oldScreen!==main.dataset.screen?0:mainScroll;
+  if(focus){main?.focus({preventScroll:true});const tabs=document.querySelector('.tabs'),selected=tabs?.querySelector('[aria-current=page]');if(tabs&&selected){if(tabs.scrollWidth>tabs.clientWidth)tabs.scrollLeft=selected.offsetLeft-tabs.offsetLeft-(tabs.clientWidth-selected.clientWidth)/2;}}
   else if(active)Array.from(document.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===active&&!b.disabled)?.focus({preventScroll:true});
-  const log=document.querySelector('.combat-log');if(log&&(focus||followLog))log.scrollTop=log.scrollHeight;
+  const log=document.getElementById('activity-log');if(log){
+    if(logFollowing)log.scrollTop=log.scrollHeight;
+    else{const kept=Array.from(log.querySelectorAll('[data-log-entry]')).find(el=>el.dataset.logEntry===anchorId);log.scrollTop=kept?log.scrollTop+kept.getBoundingClientRect().top-log.getBoundingClientRect().top-anchorOffset:logScroll;}
+  }
+  updateLogCaption();
+  if(!pendingImport){document.getElementById('import-confirm')?.close();document.getElementById('import-confirm')?.remove();}
   updateRecruitNotice();
 }
+function updateLogCaption(){const caption=document.getElementById('activity-caption');if(caption)caption.textContent=logFollowing?'独立滚动 · 最新在底部':'正在阅读历史 · 新日志不打断';}
+root.addEventListener('scroll',event=>{if(event.target.id!=='activity-log')return;const el=event.target;logFollowing=el.scrollHeight-el.scrollTop-el.clientHeight<24;updateLogCaption();},true);
 function updateRecruitNotice(){const notice=document.getElementById('recruit-result-save');if(notice){notice.textContent=locked?status:dirty?'此结果尚未写入本机：请保持本页打开，到存档页导出进度。':'本次结果已保存到本机。';notice.className=locked||dirty?'warning':'note';}}
 function showRecruitResult(result,returnCommand){
   document.getElementById('recruit-result')?.remove();
@@ -78,7 +94,7 @@ async function battleFrame(){
     paint();
   }catch(e){battlePaused=true;battlePauseReason='交战已暂停，请先处理提示。';error=e.message;paint();}finally{operation=false;}
 }
-async function load(){const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
+async function load(){activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
   if(result.status==='ok'){state=result.state;view='map';status='已保存到本机 · 已接续原有进度';try{await persist(dispatch(data,state,{type:'refresh'}));}catch(e){status=e.message;}}
   else{state=newGame(data);view=result.status==='invalid'?'save':'welcome';invalid=result.status==='invalid';locked=invalid;status=invalid?'存档无法读取，原文与已有备份均保留。请恢复备份或导入；导出按钮可取回坏档原文。':result.status==='unavailable'?'本机存储不可用，可临时游玩，但务必导出进度。':'尚未入卷，点击进入后开始保存。';}
   resumeSavedBattle();paint(true);
@@ -184,13 +200,13 @@ async function handle(command){
     const next=dispatch(data,pendingImport.state,{type:'refresh'});
     const cloudLink=pendingImport.cloud?{...pendingImport.cloud,clean:JSON.stringify(next)===JSON.stringify(pendingImport.state)}:null;
     await destination.write(next,true,{name:pendingImport.name||destination.record.name,cloud:cloudLink});
-    store=destination;state=next;pendingImport=null;locked=false;invalid=false;dirty=false;entered=true;
+    activity.reset();logFollowing=true;store=destination;state=next;pendingImport=null;locked=false;invalid=false;dirty=false;entered=true;
     status='已保存到本机 · 导入成功';view='map';await refreshSlots();rememberSlot();resumeSavedBattle();paint(true);return;
   }
   if(type==='ui_reset'){
     if(document.getElementById('reset-phrase').value!=='白泽新卷')throw new Error('请输入“白泽新卷”确认。');
     if(!window.confirm('确认替换当前游戏进度？此操作不影响导航和学习记录。'))return;
-    const next=newGame(data);await store.write(next,true,{cloud:null});state=next;locked=false;invalid=false;dirty=false;entered=false;status='已保存到本机 · 新卷已开';view='welcome';paint(true);return;
+    const next=newGame(data);await store.write(next,true,{cloud:null});activity.reset();logFollowing=true;state=next;locked=false;invalid=false;dirty=false;entered=false;status='已保存到本机 · 新卷已开';view='welcome';paint(true);return;
   }
   if(locked)throw new Error(status);
   if(type==='ui_battlePause'){
@@ -211,11 +227,13 @@ async function handle(command){
   if(type==='recruit')showRecruitResult(next.recruit.lastResult,JSON.stringify(command));
 }
 root.addEventListener('click',async event=>{
-  const button=event.target.closest('button');if(!button||button.disabled||operation)return;
+  const button=event.target.closest('button');if(!button||button.disabled)return;
+  if(button.hasAttribute('data-log-latest')){logFollowing=true;const log=document.getElementById('activity-log');if(log)log.scrollTop=log.scrollHeight;updateLogCaption();return;}
+  if(operation)return;
   if(button.dataset.view){if(!entered&&button.dataset.view!=='save'&&(locked||button.dataset.view!=='welcome'))return;operation=true;try{if(button.dataset.view!==view)await pauseBattle('离开战斗页面时已暂停。返回后点击继续交战。');view=button.dataset.view;error='';notice='';if(view==='save')await refreshSlots();paint(true);}finally{operation=false;}return;}
   if(!button.dataset.command)return;const painted=paintRevision;button.disabled=true;operation=true;root.setAttribute('aria-busy','true');
   try{await handle(JSON.parse(button.dataset.command));}
-  catch(e){error=e.message||'操作未完成，原进度保留。';paint();}
+  catch(e){pendingImport=null;error=e.message||'操作未完成，原进度保留。';paint();}
   finally{operation=false;root.removeAttribute('aria-busy');if(button.isConnected&&painted===paintRevision)button.disabled=false;}
 });
 root.addEventListener('change',event=>{
