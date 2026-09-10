@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-10T18:29:52.601Z",
+  "generatedAt": "2026-09-10T21:38:53.119Z",
   "intelligence": {
-    "updatedAt": "2026-09-10T18:29:52.601Z",
+    "updatedAt": "2026-09-10T21:38:53.119Z",
     "items": [
       {
         "id": "cn-item-73d33607689282b9",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-19490",
+        "id": "cisa-kev-cve-2026-86060",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19490",
+        "title": "MikroTik RouterOS：MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86060",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-09T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an authentication-bypass vulnerability involving an alternate path or channel. When the NetScaler appliance is configured as an AAA virtual server or as a Gateway (SSL VPN, ICA Proxy, CVPN…",
-        "badge": "CVE-2026-19490",
-        "signal": "已遭利用 · 整改期限 2026-09-12"
+        "publishedAt": "2026-09-10T00:00:00.000Z",
+        "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
+        "badge": "CVE-2026-86060",
+        "signal": "已遭利用 · 整改期限 2026-09-13"
       },
       {
         "id": "ai-openai-39842fa0b34b37cb",
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49643546",
+        "id": "hn-49645443",
         "category": "dev",
-        "title": "Rust is tier-1 language at Microsoft",
-        "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
+        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+        "url": "https://cognition.com/blog/swe-2",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T13:39:16.000Z",
+        "publishedAt": "2026-09-10T15:29:47.000Z",
         "badge": "HN",
-        "signal": "383 分 · 195 评论"
+        "signal": "295 分 · 125 评论"
       },
       {
-        "id": "cn-it-dace0ff1001e0e4d",
+        "id": "cn-it-17cea1cbecb328da",
         "category": "cn",
-        "title": "法国总统马克龙呼吁欧洲大力发展自主载人航天，力争 10 年内送宇航员上太空",
-        "url": "https://www.ithome.com/1/001/043.htm",
+        "title": "甲骨文 2027 财年第一财季归母净利润 46.79 亿美元，同比增长 60%",
+        "url": "https://www.ithome.com/1/001/052.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-10T15:38:03.000Z",
-        "summary": "IT之家 9 月 10 日消息，据法新社报道，当地时间 10 日，法国总统埃马纽埃尔 · 马克龙呼吁欧洲在 10 年内 具备自主载人航天能力 ，推动欧洲航天业发展。 欧洲航天局（ESA）局长约瑟夫 · 阿施巴赫尔也提出了类似呼吁。当地时间 9 日，他在闭门会议上敦促各国部长和政要增加投入，建设 独立自主的欧洲航天业 。他在演讲稿中问道：“我们要做乘客，还是驾驶员？” 阿施巴赫尔指出，各国航天技术突飞猛进，进展遍及卫星研发、月球和火星探索等领域。“面对这一新形势，欧洲 必须拥…",
+        "publishedAt": "2026-09-10T20:20:44.000Z",
+        "summary": "IT之家 9 月 11 日消息，甲骨文今日发布 2027 财年（2026 年 6 月 1 日～2027 年 5 月 31 日）第一财季（2026 年 6 月 1 日～2026 年 8 月 31 日）报告： 营业总收入 ：193.45 亿美元 （IT之家注：现汇率约合 1301.05 亿元人民币） ，同比增长 30% 归母净利润 ：46.79 亿美元 （现汇率约合 314.69 亿元人民币） ，同比增长 60% 经营现金流 ：231.03 亿美元 （现汇率约合 1553.8 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-34ff-336r-5q23",
+        "id": "github-advisory-ghsa-wpmr-8h3q-fwj7",
         "category": "security",
-        "title": "n8n: Domain-Restriction Bypass via Unguarded Model-Search Endpoint in OpenAI Chat Model Node",
-        "url": "https://github.com/advisories/GHSA-34ff-336r-5q23",
+        "title": "Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite",
+        "url": "https://github.com/advisories/GHSA-wpmr-8h3q-fwj7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T15:12:14.000Z",
-        "summary": "## Impact The OpenAI Chat Model node checked a custom base URL against the credential's allowed-domains configuration before sending a request, but the model-search dropdown did not. A request setting `options.baseURL` on that path reached…",
-        "badge": "CVE-2026-86082",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-10T21:23:25.000Z",
+        "summary": "## Summary On SQLite deployments, the lookup that maps an external identity to a local account does a substring match instead of an exact match. A subject value containing SQL wildcard characters therefore matches accounts the value was ne…",
+        "badge": "CVE-2026-87016",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -94,18 +94,18 @@
         "url": "https://www.baidu.com/s?wd=%E9%9D%92%E5%B2%9B%E8%B4%A7%E8%BD%AE%E7%81%AB%E7%81%BE%E4%BA%8B%E6%95%85%E8%87%B425%E4%BA%BA%E9%81%87%E9%9A%BE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,808,512 热度"
+        "signal": "7,807,915 热度"
       },
       {
-        "id": "cisa-kev-cve-2025-25249",
+        "id": "cisa-kev-cve-2026-67277",
         "category": "security",
-        "title": "Fortinet Multiple Products：Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-25249",
+        "title": "MikroTik RouterOS：MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67277",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-09T00:00:00.000Z",
-        "summary": "Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.",
-        "badge": "CVE-2025-25249",
-        "signal": "已遭利用 · 整改期限 2026-09-12"
+        "publishedAt": "2026-09-10T00:00:00.000Z",
+        "summary": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
+        "badge": "CVE-2026-67277",
+        "signal": "已遭利用 · 整改期限 2026-09-13"
       },
       {
         "id": "ai-hugging-face-075fed980e67c694",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49645443",
+        "id": "hn-49639408",
         "category": "dev",
-        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-        "url": "https://cognition.com/blog/swe-2",
+        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T15:29:47.000Z",
+        "publishedAt": "2026-09-10T06:49:43.000Z",
         "badge": "HN",
-        "signal": "153 分 · 78 评论"
+        "signal": "462 分 · 507 评论"
       },
       {
         "id": "cn-item-7d36b2fcffa8cf74",
@@ -137,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-j535-v25q-vx3q",
+        "id": "github-advisory-ghsa-hf57-cqmx-p4gr",
         "category": "security",
-        "title": "n8n: Regular Expression Denial of Service in the Default Blocked-File-Pattern Match via a Git Node Clone Path",
-        "url": "https://github.com/advisories/GHSA-j535-v25q-vx3q",
+        "title": "OmniRoute ACP Custom-Agent Remote Code Execution (RCE)",
+        "url": "https://github.com/advisories/GHSA-hf57-cqmx-p4gr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T15:12:00.000Z",
-        "summary": "## Impact The Git node's clone operation matched the destination path against the default `N8N_BLOCK_FILE_PATTERNS` expression, which was written so that a crafted path caused catastrophic backtracking. Evaluation runs synchronously in the…",
-        "badge": "CVE-2026-86081",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-10T21:22:12.000Z",
+        "summary": "## 2. Summary `POST /api/acp/agents` registers a custom ACP agent. The endpoint accepts user-controlled `binary` and `versionCommand` values. After saving the custom agent, the same request calls `refreshAgentCache()`, which triggers agent…",
+        "badge": "CVE-2026-88062",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-openai-6a886414536a09e3",
@@ -169,25 +169,25 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-1b19887beed88fd2",
+        "id": "cn-it-dace0ff1001e0e4d",
         "category": "cn",
-        "title": "智谱启动杭州全城 Coding 计划，个人用户购季卡减免 44%、年卡减免 51%",
-        "url": "https://www.ithome.com/1/001/042.htm",
+        "title": "法国总统马克龙呼吁欧洲大力发展自主载人航天，力争 10 年内送宇航员上太空",
+        "url": "https://www.ithome.com/1/001/043.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-10T15:29:03.000Z",
-        "summary": "IT之家 9 月 10 日消息，智谱今天（10 日）通过 Bigmodel 开放平台宣布启动“智谱 · 杭州全城 Coding 计划”，该计划是智谱联合杭州市、上城区推出的城市级 AI 编程普惠行动，全国首创城区级 AI 模型调用支持。 该计划旨在 降低人工智能编程工具使用门槛 ，支持创业者、开发者、企业研发团队和青年人才更便捷、更稳定、更低成本地使用高质量国产大模型能力，活动时间为 9 月 10 日至 12 月 9 日 。 IT之家附官方公布的活动规则如下： 个人用户 谁…",
+        "publishedAt": "2026-09-10T15:38:03.000Z",
+        "summary": "IT之家 9 月 10 日消息，据法新社报道，当地时间 10 日，法国总统埃马纽埃尔 · 马克龙呼吁欧洲在 10 年内 具备自主载人航天能力 ，推动欧洲航天业发展。 欧洲航天局（ESA）局长约瑟夫 · 阿施巴赫尔也提出了类似呼吁。当地时间 9 日，他在闭门会议上敦促各国部长和政要增加投入，建设 独立自主的欧洲航天业 。他在演讲稿中问道：“我们要做乘客，还是驾驶员？” 阿施巴赫尔指出，各国航天技术突飞猛进，进展遍及卫星研发、月球和火星探索等领域。“面对这一新形势，欧洲 必须拥…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-87491",
+        "id": "cisa-kev-cve-2026-19490",
         "category": "security",
-        "title": "Google Chromium V8：Google Chromium V8 Out of Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87491",
+        "title": "Citrix NetScaler：Citrix NetScaler Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19490",
         "source": "CISA KEV",
         "publishedAt": "2026-09-09T00:00:00.000Z",
-        "summary": "Google Chromium V8 contains an out of bounds write vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromiu…",
-        "badge": "CVE-2026-87491",
-        "signal": "已遭利用 · 整改期限 2026-09-23"
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an authentication-bypass vulnerability involving an alternate path or channel. When the NetScaler appliance is configured as an AAA virtual server or as a Gateway (SSL VPN, ICA Proxy, CVPN…",
+        "badge": "CVE-2026-19490",
+        "signal": "已遭利用 · 整改期限 2026-09-12"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49639408",
+        "id": "hn-49645437",
         "category": "dev",
-        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
-        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+        "title": "NASA Color Trick Was Meant for Mars. Now It's Unveiling Rock Art on Earth",
+        "url": "https://gizmodo.com/this-nasa-color-trick-was-meant-for-mars-now-its-unveiling-rock-art-on-earth-2000809844",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T06:49:43.000Z",
+        "publishedAt": "2026-09-10T15:29:30.000Z",
         "badge": "HN",
-        "signal": "244 分 · 379 评论"
+        "signal": "212 分 · 34 评论"
       },
       {
         "id": "cn-baidu-5462edd5803eb6b9",
@@ -215,17 +215,17 @@
         "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%A5%B3%E7%AF%AE%E4%B8%8D%E6%95%8C%E6%B3%95%E5%9B%BD+%E6%97%A0%E7%BC%98%E4%B8%96%E7%95%8C%E6%9D%AF%E5%9B%9B%E5%BC%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,713,214 热度"
+        "signal": "7,712,068 热度"
       },
       {
-        "id": "github-advisory-ghsa-hh89-3r9w-qj3j",
+        "id": "github-advisory-ghsa-6xcw-7xm6-48c6",
         "category": "security",
-        "title": "n8n: Unauthenticated Persistent Storage Exhaustion via OAuth Dynamic Client Registration Endpoint",
-        "url": "https://github.com/advisories/GHSA-hh89-3r9w-qj3j",
+        "title": "n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution",
+        "url": "https://github.com/advisories/GHSA-6xcw-7xm6-48c6",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T15:11:31.000Z",
-        "summary": "## Impact The OAuth Dynamic Client Registration endpoints validated field sizes only for `redirect_uris`, leaving `client_name` and `grant_types` bounded by presence checks alone. An unauthenticated remote caller could submit arbitrarily l…",
-        "badge": "CVE-2026-86075",
+        "publishedAt": "2026-09-10T20:37:21.000Z",
+        "summary": "## Impact Two stages of expression code generation built source text by calling the global `JSON.stringify` at generation time: the compiler when printing synthetic string literals, and the isolate bridge when interpolating a timezone valu…",
+        "badge": "CVE-2026-86083",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -259,55 +259,55 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-20079",
+        "id": "cisa-kev-cve-2025-25249",
         "category": "security",
-        "title": "Cisco Secure Firewall Management Center (FMC) and Security Cloud Control (SCC) Firewall Management：Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20079",
+        "title": "Fortinet Multiple Products：Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-25249",
         "source": "CISA KEV",
         "publishedAt": "2026-09-09T00:00:00.000Z",
-        "summary": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain an authentication Bypass using an alternate path or channel vulnerability that could allow an unauthenticated, remote…",
-        "badge": "CVE-2026-20079",
+        "summary": "Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.",
+        "badge": "CVE-2025-25249",
         "signal": "已遭利用 · 整改期限 2026-09-12"
       },
       {
-        "id": "ai-openai-3802aa15c4b6ae22",
+        "id": "ai-openai-0bb946f0c4215389",
         "category": "ai",
-        "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
-        "url": "https://openai.com/index/expanding-ai-access-us-government",
+        "title": "Introducing ChatGPT for Financial Services",
+        "url": "https://openai.com/index/introducing-chatgpt-financial-services",
         "source": "OpenAI",
         "publishedAt": "2026-09-10T07:00:00.000Z",
-        "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
+        "summary": "Introducing ChatGPT for Financial Services, combining built-in financial data and GPT-6 Astra for research, modeling, and client-ready materials.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49646181",
+        "id": "hn-49645393",
         "category": "dev",
-        "title": "I have a theory that software drives people insane",
-        "url": "https://graybeard.ing/software-drives-people-insane/",
+        "title": "Don't let anyone take away your big box of cables",
+        "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T16:13:42.000Z",
+        "publishedAt": "2026-09-10T15:27:22.000Z",
         "badge": "HN",
-        "signal": "111 分 · 54 评论"
+        "signal": "176 分 · 142 评论"
       },
       {
-        "id": "cn-it-bd3384a40fa6b101",
+        "id": "cn-it-1b19887beed88fd2",
         "category": "cn",
-        "title": "苹果推出全新腕带配件：iPhone 18 Pro 系列同款配色，229 元",
-        "url": "https://www.ithome.com/1/001/041.htm",
+        "title": "智谱启动杭州全城 Coding 计划，个人用户购季卡减免 44%、年卡减免 51%",
+        "url": "https://www.ithome.com/1/001/042.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-10T15:28:59.000Z",
-        "summary": "IT之家 9 月 10 日消息，苹果现已在官网上架新款腕带配件。这款产品采用 iPhone 18 Pro 系列同款配色， 定价 229 元 。 IT之家从苹果官网了解到，这款腕带长度 391 毫米， 拥有勃艮第酒红色 、 清透蓝色 、 黑色 、橄榄色、浅褐色、洋红色六种配色可选，专为搭配特定 Apple iPhone 保护壳和 AirPods Pro 而设计，方便用户解放双手，轻松携带这些电子设备。 该腕带采用 100% 再生 PET 纱线编织而成，可舒适系于腕间，适合全天…",
+        "publishedAt": "2026-09-10T15:29:03.000Z",
+        "summary": "IT之家 9 月 10 日消息，智谱今天（10 日）通过 Bigmodel 开放平台宣布启动“智谱 · 杭州全城 Coding 计划”，该计划是智谱联合杭州市、上城区推出的城市级 AI 编程普惠行动，全国首创城区级 AI 模型调用支持。 该计划旨在 降低人工智能编程工具使用门槛 ，支持创业者、开发者、企业研发团队和青年人才更便捷、更稳定、更低成本地使用高质量国产大模型能力，活动时间为 9 月 10 日至 12 月 9 日 。 IT之家附官方公布的活动规则如下： 个人用户 谁…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-hw8v-xxg5-vvvx",
+        "id": "github-advisory-ghsa-v3p8-whq6-r5jg",
         "category": "security",
-        "title": "n8n: Expression Sandbox Escape via Class-Field Sanitizer Rebinding Can Lead to Code Execution",
-        "url": "https://github.com/advisories/GHSA-hw8v-xxg5-vvvx",
+        "title": "Angular: SSR XSS via Unescaped Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements",
+        "url": "https://github.com/advisories/GHSA-v3p8-whq6-r5jg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T15:11:07.000Z",
-        "summary": "## Impact The expression compiler's sanitizer resolved through a dynamically-scoped `this`, so a class field named `__sanitize` rebound it and reached the `Function` constructor. On the backend, any expression author could run code in the …",
-        "badge": "CVE-2026-86076",
+        "publishedAt": "2026-09-10T20:25:25.000Z",
+        "summary": "### Summary An XSS vulnerability exists in `@angular/platform-server` during server-side rendering (SSR) HTML serialization when traversing ancestor tags across ` ` element boundaries. When an application renders untrusted user input withi…",
+        "badge": "CVE-2026-88060",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -338,18 +338,18 @@
         "source": "百度热搜",
         "summary": "一次远程问诊、一项工程设计、一场跨境旅行，都可以成为服务贸易。世界贸易组织预测，在基准情景下，2026年全球服务贸易量预计增长4.8%，明显快于货物贸易1.9%的增速。为什么服务贸易正在成为全球增长的新空间？AI又将怎样改变服务的生产和交付？一起来看，记者在2026服贸会现场的观察。",
         "badge": "热搜",
-        "signal": "7,616,746 热度"
+        "signal": "7,617,926 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-75650",
+        "id": "cisa-kev-cve-2026-87491",
         "category": "security",
-        "title": "Adobe Commerce and Magento：Adobe Commerce and Magento Improper Neutralization of Special Elements Used in a Template Engine Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-75650",
+        "title": "Google Chromium V8：Google Chromium V8 Out of Bounds Write Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87491",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-08T00:00:00.000Z",
-        "summary": "Adobe Commerce and Magento Open Source contain an improper neutralization of special elements used in a template engine vulnerability that could allow an attacker to execute arbitrary code.",
-        "badge": "CVE-2026-75650",
-        "signal": "已遭利用 · 整改期限 2026-09-11"
+        "publishedAt": "2026-09-09T00:00:00.000Z",
+        "summary": "Google Chromium V8 contains an out of bounds write vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromiu…",
+        "badge": "CVE-2026-87491",
+        "signal": "已遭利用 · 整改期限 2026-09-23"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -361,14 +361,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49645437",
+        "id": "hn-49650326",
         "category": "dev",
-        "title": "NASA Color Trick Was Meant for Mars. Now It's Unveiling Rock Art on Earth",
-        "url": "https://gizmodo.com/this-nasa-color-trick-was-meant-for-mars-now-its-unveiling-rock-art-on-earth-2000809844",
+        "title": "The part of Navier-Stokes no one is talking about",
+        "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T15:29:30.000Z",
+        "publishedAt": "2026-09-10T21:22:59.000Z",
         "badge": "HN",
-        "signal": "98 分 · 16 评论"
+        "signal": "9 分 · 1 评论"
       },
       {
         "id": "cn-item-703888f6afbf6db1",
@@ -381,24 +381,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-jmc6-2wr8-h3wj",
+        "id": "github-advisory-ghsa-f6mr-pjwc-34m4",
         "category": "security",
-        "title": "Open WebUI: Same-origin XSS to account takeover via terminal port-preview iframe hardcoding allow-same-origin",
-        "url": "https://github.com/advisories/GHSA-jmc6-2wr8-h3wj",
+        "title": "Angular: SSRF and Cross-Origin Credential Disclosure via URL Resolution Discrepancy in SSR",
+        "url": "https://github.com/advisories/GHSA-f6mr-pjwc-34m4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T15:10:20.000Z",
-        "summary": "## Summary Any authenticated user with access to a shared terminal server could get script of their choosing to run in the Open WebUI origin itself. The in-app port preview rendered the content of a previewed port in an iframe whose sandbo…",
-        "badge": "CVE-2026-87995",
-        "signal": "HIGH · CVSS 8.7"
+        "publishedAt": "2026-09-10T20:19:43.000Z",
+        "summary": "### Summary A discrepancy between WHATWG URL parsing and Angular SSR's URL resolution allows attackers to bypass same-origin checks and cause Server-Side Request Forgery (SSRF), potentially leaking sensitive server-side credentials. ### Te…",
+        "badge": "CVE-2026-88056",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-b8a75fb67d817922",
+        "id": "ai-openai-3802aa15c4b6ae22",
         "category": "ai",
-        "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
-        "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+        "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+        "url": "https://openai.com/index/expanding-ai-access-us-government",
         "source": "OpenAI",
-        "publishedAt": "2026-09-10T00:00:00.000Z",
-        "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
+        "publishedAt": "2026-09-10T07:00:00.000Z",
+        "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
         "badge": "OpenAI"
       },
       {
@@ -413,25 +413,25 @@
         "signal": "11 回复"
       },
       {
-        "id": "cn-it-bc398a8df574bd67",
+        "id": "cn-it-bd3384a40fa6b101",
         "category": "cn",
-        "title": "高通全球副总裁夏权：个人 AI 时代，每个人都拥有自己的智能体",
-        "url": "https://www.ithome.com/1/001/040.htm",
+        "title": "苹果推出全新腕带配件：iPhone 18 Pro 系列同款配色，229 元",
+        "url": "https://www.ithome.com/1/001/041.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-10T15:22:16.000Z",
-        "summary": "IT之家 9 月 10 日消息，据新浪科技今日消息，高通公司全球副总裁夏权在 2026 服贸会表示，随着 AI 能力不断提升，人机交互正在发生新的变化。 过去人类需要依靠应用完成工作 ， 未来人们将越来越多地与智能体协同工作 。 夏权指出，真正有用的个人 AI，不仅要理解用户需求，还要能够实时响应，并在不同设备和场景之间保持连续协同，意味着未来的 AI 能力需要在不同层级之间协同运行。 在这种趋势下，个人 AI 终将诞生。IT之家从原报道获悉，个人 AI 不局限于单一设备，…",
+        "publishedAt": "2026-09-10T15:28:59.000Z",
+        "summary": "IT之家 9 月 10 日消息，苹果现已在官网上架新款腕带配件。这款产品采用 iPhone 18 Pro 系列同款配色， 定价 229 元 。 IT之家从苹果官网了解到，这款腕带长度 391 毫米， 拥有勃艮第酒红色 、 清透蓝色 、 黑色 、橄榄色、浅褐色、洋红色六种配色可选，专为搭配特定 Apple iPhone 保护壳和 AirPods Pro 而设计，方便用户解放双手，轻松携带这些电子设备。 该腕带采用 100% 再生 PET 纱线编织而成，可舒适系于腕间，适合全天…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-81963",
+        "id": "cisa-kev-cve-2026-20079",
         "category": "security",
-        "title": "Microsoft Windows：Microsoft Windows Link Following Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-81963",
+        "title": "Cisco Secure Firewall Management Center (FMC) and Security Cloud Control (SCC) Firewall Management：Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20079",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-08T00:00:00.000Z",
-        "summary": "Microsoft Windows Update Stack contains a link following vulnerability that allows a local attacker to escalate privileges locally up to SYSTEM.",
-        "badge": "CVE-2026-81963",
-        "signal": "已遭利用 · 整改期限 2026-09-22"
+        "publishedAt": "2026-09-09T00:00:00.000Z",
+        "summary": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain an authentication Bypass using an alternate path or channel vulnerability that could allow an unauthenticated, remote…",
+        "badge": "CVE-2026-20079",
+        "signal": "已遭利用 · 整改期限 2026-09-12"
       },
       {
         "id": "ai-google-deepmind-63b19b50b4021cb5",
@@ -443,14 +443,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49643982",
+        "id": "hn-49645907",
         "category": "dev",
-        "title": "Shopify moves back to Native from React Native",
-        "url": "https://shopify.engineering/back-to-native",
+        "title": "Forgejo <=16.0.3 Critical RCE",
+        "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T14:09:31.000Z",
+        "publishedAt": "2026-09-10T15:57:40.000Z",
         "badge": "HN",
-        "signal": "503 分 · 354 评论"
+        "signal": "118 分 · 42 评论"
       },
       {
         "id": "cn-baidu-956312a2bbf38680",
@@ -460,18 +460,18 @@
         "source": "百度热搜",
         "summary": "9月，多款旗舰手机定价突破万元，苹果多款机型售价大幅上调，引发手机步入奢侈品时代的市场讨论。受供应链成本上涨影响，2026上半年手机存储芯片均价涨幅超200%，上游元器件涨价传导终端，拉高旗舰机入门门槛。",
         "badge": "热搜",
-        "signal": "7,521,227 热度"
+        "signal": "7,522,480 热度"
       },
       {
-        "id": "github-advisory-ghsa-4v28-j6q3-5m4r",
+        "id": "cisa-kev-cve-2026-75650",
         "category": "security",
-        "title": "Open WebUI: SSRF into internal services via DNS rebinding in the Playwright web loader",
-        "url": "https://github.com/advisories/GHSA-4v28-j6q3-5m4r",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T15:10:12.000Z",
-        "summary": "## Summary With the Playwright web loader enabled, Open WebUI checks the address behind a user-submitted URL before allowing the request, then handed the request to the browser to perform. The browser resolved the hostname a second time, o…",
-        "badge": "CVE-2026-87996",
-        "signal": "HIGH · CVSS 7.7"
+        "title": "Adobe Commerce and Magento：Adobe Commerce and Magento Improper Neutralization of Special Elements Used in a Template Engine Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-75650",
+        "source": "CISA KEV",
+        "publishedAt": "2026-09-08T00:00:00.000Z",
+        "summary": "Adobe Commerce and Magento Open Source contain an improper neutralization of special elements used in a template engine vulnerability that could allow an attacker to execute arbitrary code.",
+        "badge": "CVE-2026-75650",
+        "signal": "已遭利用 · 整改期限 2026-09-11"
       },
       {
         "id": "ai-hugging-face-fffbcba03b0b217e",
@@ -508,7 +508,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 37645,
+        "stars": 38008,
         "starsToday": 3854
       },
       {
@@ -518,7 +518,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 23435,
+        "stars": 23938,
         "starsToday": 1588
       },
       {
@@ -528,7 +528,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 284587,
+        "stars": 284660,
         "starsToday": 731
       },
       {
@@ -538,7 +538,7 @@
         "url": "https://github.com/alsk1992/CloddsBot",
         "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
         "language": "TypeScript",
-        "stars": 1502,
+        "stars": 1581,
         "starsToday": 299
       },
       {
@@ -548,7 +548,7 @@
         "url": "https://github.com/Tencent/teamai-cli",
         "description": "Make Every Team AI Native",
         "language": "TypeScript",
-        "stars": 3675,
+        "stars": 3726,
         "starsToday": 837
       },
       {
@@ -558,7 +558,7 @@
         "url": "https://github.com/AlexsJones/llmfit",
         "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
         "language": "Rust",
-        "stars": 35639,
+        "stars": 35690,
         "starsToday": 247
       },
       {
@@ -567,7 +567,7 @@
         "name": "liquidslr/system-design-notes",
         "url": "https://github.com/liquidslr/system-design-notes",
         "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-        "stars": 18624,
+        "stars": 18708,
         "starsToday": 891
       },
       {
@@ -577,7 +577,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 37545,
+        "stars": 37658,
         "starsToday": 1287
       },
       {
@@ -587,7 +587,7 @@
         "url": "https://github.com/freestylefly/awesome-gpt-image-2",
         "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
         "language": "JavaScript",
-        "stars": 30761,
+        "stars": 30795,
         "starsToday": 957
       },
       {
@@ -597,10 +597,10 @@
         "url": "https://github.com/armory3d/armorpaint",
         "description": "Graphics Creation Tools",
         "language": "C",
-        "stars": 4339,
+        "stars": 4385,
         "starsToday": 87
       }
     ],
-    "updatedAt": "2026-09-10T18:29:52.601Z"
+    "updatedAt": "2026-09-10T21:38:53.119Z"
   }
 }
