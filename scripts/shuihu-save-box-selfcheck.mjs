@@ -6,7 +6,7 @@ import {startBattle} from '../public/game/js/battle.js';
 import {gameSnapshot,exportSave,importSave,exportName,slotId} from '../public/game/js/portable.js';
 import {SlotStore,emptySlot} from '../public/game/js/slots.js';
 import {CloudClient} from '../public/game/js/cloud.js';
-import {SaveConflict} from '../public/game/js/save.js?v=0.3.0';
+import {SaveConflict} from '../public/game/js/save.js?v=0.4.1';
 const dir=new URL('../public/game/data/',import.meta.url);
 export const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',dir),'utf8'))])));
 const state=newGame(data,Date.now(),12345);

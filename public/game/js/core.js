@@ -1,9 +1,10 @@
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.3.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.3.0';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.3.0';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.3.0';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle } from './battle.js?v=0.3.0';
-import { effects, storyAction, visit } from './story.js?v=0.3.0';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.4.1';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.4.1';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.4.1';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.4.1';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.4.1';
+import { effects, storyAction, visit } from './story.js?v=0.4.1';
+import { growthAction, awardMountContracts } from './growth.js?v=0.4.1';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -12,7 +13,7 @@ export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
     heroes:Object.fromEntries(data.heroes.map(h=>[h.id,{status:'unknown',level:1,exp:0}])),team:[],inventory:{...initial.items},equipment:[],nextEquipment:1,
     progress:{flags:{},stories:{},visited:['yuncheng'],actions:{},claims:[],clears:{}},stats:{},
     daily:{date:'',ids:[],claimed:[],bonus:false,counters:{},dungeons:{},events:[]},recruit:{total:0,pity:{three:0,four:0,five:0},fate:{}},
-    battle:null,scheme:null,event:null,journal:[],message:'江湖路远，且从郓城开始。',formationPending:false};
+    battle:null,battleSkillMode:'manual',scheme:null,event:null,journal:[],message:'江湖路远，且从郓城开始。',formationPending:false};
   for(const id of initial.equipment)newEquipment(state,id);
   refresh(state,data,now);journal(state,'初入郓城。建寨之事，要从识人、用人开始。');return state;
 }
@@ -43,9 +44,11 @@ function beginDungeon(state,data,id) {
 function rewardDungeon(state,data,id) {
   const reward=data.by.rewards[data.by.dungeons[id].reward];grant(state,{...reward,items:{}},data);
   for(const [id,n] of Object.entries(reward.guaranteed))gainItem(state,id,n,data);
+  const mounts=awardMountContracts(state,data,id);
   const drops=[];for(const drop of reward.items)if(random(state)<drop.rate){gainItem(state,drop.id,drop.count,data);drops.push(data.by.items[drop.id].name);}
   count(state,'clears');count(state,'clear_'+id);state.progress.clears[id]=(state.progress.clears[id]||0)+1;
   journal(state,`【${data.by.dungeons[id].name}】历练完成。碎银 +${reward.silver}、威望 +${reward.prestige}、功勋 +${reward.merit}；带回${Object.keys(reward.guaranteed).map(i=>data.by.items[i].name).join('、')}${drops.length?'，另得'+drops.join('、'):''}。`);
+  if(mounts.length)journal(state,`【副本寻骑】获得 ${mounts.join('、')}。对应人物入寨后，到郓城马厩凭契领骑；不另收碎银。`);
 }
 function finishBattle(state,data) {
   const b=state.battle;requireRule(b&&b.outcome,'还未分出胜负。');
@@ -97,7 +100,7 @@ function completeVolume(state,data) {
 export function dispatch(data,current,action,now=Date.now()) {
   const state=clone(current);refresh(state,data,now);
   requireRule(action&&typeof action.type==='string','无效操作。');
-  if(isBusy(state))requireRule(['battleTick','battleSkill','battleItem','battleRetreat','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
+  if(isBusy(state))requireRule(['battleTick','battleSkill','battleSkillMode','battleItem','battleRetreat','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
   const {type,id}=action;
   if(type==='refresh')return state;
   if(type==='move'){requireRule(exits(state,data).some(link=>link.target===id),'此路尚未开放。');visit(state,id,data);}
@@ -119,6 +122,7 @@ export function dispatch(data,current,action,now=Date.now()) {
   else if(type==='dungeon')beginDungeon(state,data,id);
   else if(type==='battleTick')advanceBattle(state,data,action.delta);
   else if(type==='battleSkill')castSkill(state,data,action.hero,id);
+  else if(type==='battleSkillMode')setBattleSkillMode(state,action.mode);
   else if(type==='battleItem')useBattleItem(state,data,id);
   else if(type==='battleRetreat')retreatBattle(state);
   else if(type==='finishBattle')finishBattle(state,data);
@@ -132,7 +136,7 @@ export function dispatch(data,current,action,now=Date.now()) {
     const q=data.by.quests[id];requireRule(q,'没有这份差事。');const claims=q.type==='daily'?state.daily.claimed:state.progress.claims;
     requireRule(q.type!=='daily'||state.daily.ids.includes(id),'今天未派发这份差事。');requireRule(!claims.includes(id)&&questReady(state,q),'尚未办妥，或已经领取酬劳。');claims.push(id);grant(state,q.reward,data);journal(state,`【${q.name}】已办妥，酬劳收进行囊。`);
   }
-  else if(type==='dailyBonus'){requireRule(!state.daily.bonus&&state.daily.ids.length===3&&state.daily.claimed.length===3,'先领齐今日三份差事的酬劳。');state.daily.bonus=true;grant(state,{silver:300,merit:20,items:{recruit_shard:1}},data);journal(state,'【今日差事已毕】碎银 +300、功勋 +20、招贤令碎片 +1。');}
+  else if(type==='dailyBonus'){requireRule(!state.daily.bonus&&state.daily.ids.length===3&&state.daily.claimed.length===3,'先领齐今日三份差事的酬劳。');state.daily.bonus=true;grant(state,{silver:300,merit:20,items:{recruit_shard:1,mount_token:1}},data);journal(state,'【今日差事已毕】碎银 +300、功勋 +20、招贤令碎片 +1、驯骑凭记 +1。');}
   else if(type==='search'){
     requireRule((state.daily.counters.search||0)<12,'今日已寻访十二回，歇一歇，明日再访。');
     const pool=data.events.filter(e=>e.maps.includes(state.location)&&meets(state,e.condition)&&!state.daily.events.includes(e.id));requireRule(pool.length,'此处今日暂无新的际遇，可换一处走走。');
@@ -143,6 +147,7 @@ export function dispatch(data,current,action,now=Date.now()) {
     pay(state,choice.cost);effects(state,choice.effects,data);if(choice.battle)startBattle(state,data,{enemies:choice.battle,context:{type:'event',id:event.id}});
     state.daily.events.push(event.id);count(state,'event');if(state.location==='tavern')count(state,'news');state.event=null;journal(state,choice.text);
   }
+  else if(['skillUpgrade','skillBook','martialDrill','mountAdopt','mountFeed','mountRank','mountRide'].includes(type))growthAction(state,data,action);
   else if(['buy','use','craftOrder','exchange','craftEquip','buyEquip','equip','strengthen','dismantle'].includes(type))itemAction(state,data,action);
   else throw new Error('尚未支持这个操作。');
   syncAvailability(state,data);completeVolume(state,data);state.revision++;return state;

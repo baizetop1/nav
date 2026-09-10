@@ -1,18 +1,19 @@
-import { parseSave } from './save.js?v=0.3.0';
+import { parseSave } from './save.js?v=0.4.1';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
 const context = fields('type id next');
-const unit = {...fields('id name hp attack defense speed strategy maxHp rage skills side attacks skillReadyAt nextAttackAt model'), statuses: [{...fields('id value expiresAt nextTickAt')}]};
+const unit = {...fields('id name hp attack defense speed strategy maxHp rage skills side attacks skillReadyAt nextAttackAt model resistUntil'), statuses: [{...fields('id value expiresAt nextTickAt')}], training:{levels:{'*':true},bond:true},boss:fields('kind readyAt pendingAt phase')};
 const shape = {
-  ...fields('version revision clock lastRegen rng worldMinute location startedAt team nextEquipment message formationPending'),
+  ...fields('version revision clock lastRegen rng worldMinute location startedAt team nextEquipment message formationPending battleSkillMode'),
   player: fields('name title silver merit prestige stamina liangshanLevel'),
   heroes: {'*': fields('status level exp')}, inventory: {'*': true},
+  growth:{version:true,skills:{'*':true},mounts:{'*':fields('rank intimacy riding')}},
   equipment: [fields('uid item plus hero')],
   progress: {flags: {'*': true}, stories: {'*': fields('status step')}, visited: true, actions: {'*': true}, claims: true, clears: {'*': true}},
   stats: {'*': true}, daily: {...fields('date ids claimed bonus events'), counters: {'*': true}, dungeons: {'*': true}},
   recruit: {total: true, pity: fields('three four five'), fate: {'*': true}, lastResult: fields('hero target kind number inTeam tokens merit')},
-  battle: {...fields('mode elapsed itemReadyAt guest outcome log'), team: [unit], enemy: [unit], context},
+  battle: {...fields('mode elapsed itemReadyAt guest outcome log rules'), team: [unit], enemy: [unit], context},
   scheme: {...fields('id turn outcome log'), values: fields('alert fatigue heat trust exposure'), context},
   event: fields('id'), journal: [fields('at text')]
 };

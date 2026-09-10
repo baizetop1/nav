@@ -22,7 +22,9 @@
     },
     "skills": [
       "songjiang_active",
-      "songjiang_passive"
+      "songjiang_passive",
+      "songjiang_advanced",
+      "songjiang_bond"
     ],
     "story": "仗义疏财，言语温厚。",
     "core": true,
@@ -33,7 +35,13 @@
       "token": "songjiang_token",
       "count": 10
     },
-    "dialogue": "宋江拱手让座：“出门在外，谁还没有难处？你既到郓城，便不算生客。若有用得着宋某之处，只管开口。”"
+    "dialogue": "宋江拱手让座：“出门在外，谁还没有难处？你既到郓城，便不算生客。若有用得着宋某之处，只管开口。”",
+    "mount": {
+      "name": "黄骠义骑",
+      "description": "专属脚力；与宋江同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "songjiang_mount_contract"
+    }
   },
   {
     "id": "wuyong",
@@ -58,7 +66,9 @@
     },
     "skills": [
       "wuyong_active",
-      "wuyong_passive"
+      "wuyong_passive",
+      "wuyong_advanced",
+      "wuyong_bond"
     ],
     "story": "先看局势，再落一子。",
     "core": true,
@@ -71,7 +81,13 @@
       "token": "wuyong_token",
       "count": 10
     },
-    "dialogue": "先看局势，再落一子。"
+    "dialogue": "先看局势，再落一子。",
+    "mount": {
+      "name": "青鬃策骑",
+      "description": "专属脚力；与吴用同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "wuyong_mount_contract"
+    }
   },
   {
     "id": "wusong",
@@ -96,7 +112,9 @@
     },
     "skills": [
       "wusong_active",
-      "wusong_passive"
+      "wusong_passive",
+      "wusong_advanced",
+      "wusong_bond"
     ],
     "story": "话不多，行事刚烈果断。",
     "core": true,
@@ -109,7 +127,13 @@
       "token": "wusong_token",
       "count": 10
     },
-    "dialogue": "话不多，行事刚烈果断。"
+    "dialogue": "话不多，行事刚烈果断。",
+    "mount": {
+      "name": "赤鬃行者",
+      "description": "专属脚力；与武松同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "wusong_mount_contract"
+    }
   },
   {
     "id": "linchong",
@@ -134,7 +158,9 @@
     },
     "skills": [
       "linchong_active",
-      "linchong_passive"
+      "linchong_passive",
+      "linchong_advanced",
+      "linchong_bond"
     ],
     "story": "待人克制，枪法沉稳。",
     "core": true,
@@ -147,7 +173,13 @@
       "token": "linchong_token",
       "count": 10
     },
-    "dialogue": "待人克制，枪法沉稳。"
+    "dialogue": "待人克制，枪法沉稳。",
+    "mount": {
+      "name": "踏雪青骢",
+      "description": "专属脚力；与林冲同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "linchong_mount_contract"
+    }
   },
   {
     "id": "luzhishen",
@@ -172,7 +204,9 @@
     },
     "skills": [
       "luzhishen_active",
-      "luzhishen_passive"
+      "luzhishen_passive",
+      "luzhishen_advanced",
+      "luzhishen_bond"
     ],
     "story": "粗豪而细心，见不平便要管。",
     "core": true,
@@ -185,7 +219,13 @@
       "token": "luzhishen_token",
       "count": 10
     },
-    "dialogue": "粗豪而细心，见不平便要管。"
+    "dialogue": "粗豪而细心，见不平便要管。",
+    "mount": {
+      "name": "乌鬃护法",
+      "description": "专属脚力；与鲁智深同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "luzhishen_mount_contract"
+    }
   },
   {
     "id": "gongsunsheng",
@@ -210,7 +250,9 @@
     },
     "skills": [
       "gongsunsheng_active",
-      "gongsunsheng_passive"
+      "gongsunsheng_passive",
+      "gongsunsheng_advanced",
+      "gongsunsheng_bond"
     ],
     "story": "云游四方，见识不凡。",
     "core": true,
@@ -223,7 +265,13 @@
       "token": "gongsunsheng_token",
       "count": 10
     },
-    "dialogue": "云游四方，见识不凡。"
+    "dialogue": "云游四方，见识不凡。",
+    "mount": {
+      "name": "云踪白马",
+      "description": "专属脚力；与公孙胜同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "gongsunsheng_mount_contract"
+    }
   },
   {
     "id": "yanqing",
@@ -248,7 +296,9 @@
     },
     "skills": [
       "yanqing_active",
-      "yanqing_passive"
+      "yanqing_passive",
+      "yanqing_advanced",
+      "yanqing_bond"
     ],
     "story": "身手轻巧，善察人情。",
     "core": true,
@@ -261,7 +311,13 @@
       "token": "yanqing_token",
       "count": 10
     },
-    "dialogue": "身手轻巧，善察人情。"
+    "dialogue": "身手轻巧，善察人情。",
+    "mount": {
+      "name": "柳影轻骑",
+      "description": "专属脚力；与燕青同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "yanqing_mount_contract"
+    }
   },
   {
     "id": "huarong",
@@ -286,7 +342,9 @@
     },
     "skills": [
       "huarong_active",
-      "huarong_passive"
+      "huarong_passive",
+      "huarong_advanced",
+      "huarong_bond"
     ],
     "story": "引弓不语，眼中自有准星。",
     "core": true,
@@ -299,7 +357,13 @@
       "token": "huarong_token",
       "count": 10
     },
-    "dialogue": "引弓不语，眼中自有准星。"
+    "dialogue": "引弓不语，眼中自有准星。",
+    "mount": {
+      "name": "追风银骢",
+      "description": "专属脚力；与花荣同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "huarong_mount_contract"
+    }
   },
   {
     "id": "liutang",
@@ -324,7 +388,9 @@
     },
     "skills": [
       "liutang_active",
-      "liutang_passive"
+      "liutang_passive",
+      "liutang_advanced",
+      "liutang_bond"
     ],
     "story": "性情急切，对朋友却极真。",
     "core": false,
@@ -337,7 +403,13 @@
       "token": "liutang_token",
       "count": 10
     },
-    "dialogue": "性情急切，对朋友却极真。"
+    "dialogue": "性情急切，对朋友却极真。",
+    "mount": {
+      "name": "赤蹄骁骑",
+      "description": "专属脚力；与刘唐同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "liutang_mount_contract"
+    }
   },
   {
     "id": "shiqian",
@@ -362,7 +434,9 @@
     },
     "skills": [
       "shiqian_active",
-      "shiqian_passive"
+      "shiqian_passive",
+      "shiqian_advanced",
+      "shiqian_bond"
     ],
     "story": "脚步轻，眼睛亮，善探道路。",
     "core": false,
@@ -373,7 +447,13 @@
       "token": "shiqian_token",
       "count": 10
     },
-    "dialogue": "瘦汉把酒盏往里一挪：“时迁。别的本事不敢夸，哪条路有人，哪扇门开着，我倒看得分明。”他笑了笑，又朝窗外瞥了一眼。"
+    "dialogue": "瘦汉把酒盏往里一挪：“时迁。别的本事不敢夸，哪条路有人，哪扇门开着，我倒看得分明。”他笑了笑，又朝窗外瞥了一眼。",
+    "mount": {
+      "name": "夜行灰驹",
+      "description": "专属脚力；与时迁同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "shiqian_mount_contract"
+    }
   },
   {
     "id": "baisheng",
@@ -398,7 +478,9 @@
     },
     "skills": [
       "baisheng_active",
-      "baisheng_passive"
+      "baisheng_passive",
+      "baisheng_advanced",
+      "baisheng_bond"
     ],
     "story": "会唱山歌，熟悉乡道和酒担。",
     "core": false,
@@ -409,7 +491,13 @@
       "token": "baisheng_token",
       "count": 10
     },
-    "dialogue": "汉子扶住酒担，咧嘴一笑：“小人白胜，附近乡道走得熟。客官初到郓城？若不嫌弃，这一路的风土人情，我倒能说上几句。”"
+    "dialogue": "汉子扶住酒担，咧嘴一笑：“小人白胜，附近乡道走得熟。客官初到郓城？若不嫌弃，这一路的风土人情，我倒能说上几句。”",
+    "mount": {
+      "name": "乡路青驴",
+      "description": "专属脚力；与白胜同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "baisheng_mount_contract"
+    }
   },
   {
     "id": "ruanxiaoqi",
@@ -434,7 +522,9 @@
     },
     "skills": [
       "ruanxiaoqi_active",
-      "ruanxiaoqi_passive"
+      "ruanxiaoqi_passive",
+      "ruanxiaoqi_advanced",
+      "ruanxiaoqi_bond"
     ],
     "story": "在水上讨生活，胸中有一股不平。",
     "core": false,
@@ -447,7 +537,13 @@
       "token": "ruanxiaoqi_token",
       "count": 10
     },
-    "dialogue": "在水上讨生活，胸中有一股不平。"
+    "dialogue": "在水上讨生活，胸中有一股不平。",
+    "mount": {
+      "name": "踏浪乌驹",
+      "description": "专属脚力；与阮小七同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "ruanxiaoqi_mount_contract"
+    }
   },
   {
     "id": "chaijin",
@@ -472,7 +568,9 @@
     },
     "skills": [
       "hospitality",
-      "noble_friend"
+      "noble_friend",
+      "chaijin_advanced",
+      "chaijin_bond"
     ],
     "story": "仗义疏财，广纳落难好汉；好客不是索取回报。",
     "core": true,
@@ -486,7 +584,13 @@
       "count": 10
     },
     "dialogue": "“只管宽心住下。江湖人落难，岂有袖手之理。”",
-    "introducedIn": 2
+    "introducedIn": 2,
+    "mount": {
+      "name": "庄园紫骝",
+      "description": "专属脚力；与柴进同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "chaijin_mount_contract"
+    }
   },
   {
     "id": "yangzhi",
@@ -511,7 +615,9 @@
     },
     "skills": [
       "blue_blade",
-      "march_discipline"
+      "march_discipline",
+      "yangzhi_advanced",
+      "yangzhi_bond"
     ],
     "story": "武艺精熟，一心求立身之地；几番失意仍不愿弃了本领。",
     "core": true,
@@ -525,6 +631,12 @@
       "count": 10
     },
     "dialogue": "“失去的差事且不说，眼前这些行旅，总得护过去。”",
-    "introducedIn": 2
+    "introducedIn": 2,
+    "mount": {
+      "name": "押纲黄骠",
+      "description": "专属脚力；与杨志同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "yangzhi_mount_contract"
+    }
   }
 ]

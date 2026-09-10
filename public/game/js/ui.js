@@ -1,10 +1,11 @@
-import { saveBoxPage } from './savebox-ui.js?v=0.3.0';
-import { attributes } from './hero.js?v=0.3.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.3.0';
-import { isBusy, questReady } from './core.js?v=0.3.0';
-import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS } from './battle.js?v=0.3.0';
-import { strengthenQuote } from './item.js?v=0.3.0';
-import { icon, actionIcon } from './icons.js?v=0.3.0';
+import { saveBoxPage } from './savebox-ui.js?v=0.4.1';
+import { attributes } from './hero.js?v=0.4.1';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.4.1';
+import { isBusy, questReady } from './core.js?v=0.4.1';
+import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.4.1';
+import { strengthenQuote } from './item.js?v=0.4.1';
+import { icon, actionIcon } from './icons.js?v=0.4.1';
+import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.4.1';
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const btn=(label,command,kind='text-action',disabled=false)=>{const symbol=icon(actionIcon(command));return `<button type="button" class="${kind}${symbol?' with-icon':''}" data-command="${esc(JSON.stringify(command))}" ${disabled?'disabled':''}>${symbol}<span>${esc(label)}</span></button>`;};
 const nav=(label,view)=>`<button type="button" class="text-action with-icon" data-view="${view}" aria-label="${esc(label)}">${icon(view)}<span>${esc(label)}</span></button>`;
@@ -41,12 +42,13 @@ function localVoices(s){
 function searchCard(s){return `<article class="card"><h2>江湖寻访</h2><p class="note">寻访耗体力 2；每处际遇每日一次。今日已访 ${s.daily.counters.search||0}/12 回。等候可改变游戏昼夜，不加速真实体力恢复。</p><div class="actions">${btn('四下寻访',{type:'search'},'secondary',s.player.stamina<2||(s.daily.counters.search||0)>=12)}${btn('等候半日',{type:'wait'})}</div></article>`;}
 function mapPage(s,d){const m=d.by.maps[s.location];return title(m.name,m.region+' · '+(s.worldMinute>=1080||s.worldMinute<360?'夜色渐深':'白日行路'),d.by.chapters[m.chapter]?.number===2?'卷二':'卷一')+
   locationScene(s,d)+localVoices(s)+
+  (s.location==='stable'?stableMounts(s,d,esc,btn):'')+
   storyCards(s,d)+m.actions.filter(a=>meets(s,a.condition)&&(!a.once||!s.progress.actions[a.id])).map(a=>btn(a.label,{type:'mapAction',id:a.id})).join(' ')+
   d.heroes.filter(h=>h.meetMap===s.location&&meets(s,h.meetCondition)&&heroRank[s.heroes[h.id].status]<2).map(h=>btn(h.id==='baisheng'?'与卖酒汉子交谈':h.id==='shiqian'?'与窗边瘦汉交谈':'与'+h.title+'交谈',{type:'meet',id:h.id})).join(' ')+
   (s.location==='tavern'&&s.heroes.baisheng.status==='known'&&!s.progress.flags.guide?`<article class="card"><h2>乡人相助</h2><p>白胜拍了拍酒担：“乡道我熟，可先替你照应行路。”</p>${btn('邀白胜作向导',{type:'guide'},'primary')}</article>`:'')+
   (s.location==='ridge'&&s.progress.flags.seven_stars&&!s.progress.flags.huangni_complete?`<article class="card"><h2>智取生辰纲</h2><p>你负责察看时机，吴用、晁盖等人依计行事。这里不靠强攻。</p>${btn('商议冈上的安排',{type:'startScheme'},'primary')}</article>`:'')+
-  (s.location==='forge'?nav('进入打造与强化','forge'):s.location==='recruit'?nav('进入招贤','recruit'):s.location==='office'?nav('查看主线与今日差事','quests'):'')+
-  m.dungeons.map(id=>{const x=d.by.dungeons[id],open=dungeonEntry(s,x);return `<article class="card"><h2>${esc(x.name)}<span class="badge">历练</span></h2><p class="note">${esc(x.description)}</p><p class="meta">队中一人达到 ${x.level}级 · 体力 ${x.cost} · 今日 ${s.daily.dungeons[id]||0}/${x.limit} 次</p>${btn(open?'开始历练':'需先完成此地剧情',{type:'dungeon',id},'secondary',!open||s.team.length===0||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||(s.daily.dungeons[id]||0)>=x.limit||s.player.stamina<x.cost)}</article>`;}).join('')+
+  (s.location==='forge'?nav('进入打造与强化','forge'):s.location==='recruit'?nav('进入招贤','recruit'):s.location==='office'?nav('查看主线与今日差事','quests'):s.location==='stable'?nav('为好汉领骑与养成','heroes'):'')+
+  m.dungeons.map(id=>{const x=d.by.dungeons[id],open=dungeonEntry(s,x);return `<article class="card"><h2>${esc(x.name)}<span class="badge">历练</span></h2><p class="note">${esc(x.description)}</p>${dungeonMountLoot(s,d,id,esc)}<p class="meta">队中一人达到 ${x.level}级 · 体力 ${x.cost} · 今日 ${s.daily.dungeons[id]||0}/${x.limit} 次</p>${btn(open?'开始历练':'需先完成此地剧情',{type:'dungeon',id},'secondary',!open||s.team.length===0||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||(s.daily.dungeons[id]||0)>=x.limit||s.player.stamina<x.cost)}</article>`;}).join('')+
   (isFirstArrival(s)?`<details class="fold-section" data-fold="arrival-search"><summary>驻足与寻访</summary>${searchCard(s)}</details>`:searchCard(s));
 }
 function heroCard(s,d,h){
@@ -56,12 +58,13 @@ function heroCard(s,d,h){
     ${owned?stats(attributes(s,h.id,d))+btn('赠经验丹（现有 '+(s.inventory.exp_pill||0)+'）',{type:'use',id:'exp_pill',hero:h.id},'secondary',!s.inventory.exp_pill||v.level>=d.config.balance.heroLevelCap):`<p class="note">可在${esc(d.by.maps[h.meetMap].name)}寻访${h.meetCondition?'，还须推进相关主线':''}。</p>`}
     <details data-fold="hero-${h.id}"><summary>人物往事与招式</summary><p class="note">${esc(h.story)}</p>${heroArc(s,d,h.id)}
       <p class="meta">信物 ${s.inventory[h.id+'_token']||0}/10 · 专属令 ${s.inventory[h.id+'_order']||0}</p>
-      ${h.skills.map(id=>`<p>【${esc(d.by.skills[id].name)}】${esc(d.by.skills[id].description)}${d.by.skills[id].cost?' · 怒气 '+d.by.skills[id].cost:''}</p>`).join('')}
+      ${heroGrowth(s,d,h,esc,btn)}
     </details></article>`;
 }
 function heroesPage(s,d){
   const owned=d.heroes.filter(h=>s.heroes[h.id].status==='owned'),known=d.heroes.filter(h=>['heard','known','available'].includes(s.heroes[h.id].status)),unknown=d.heroes.length-owned.length-known.length;
   return title('我的好汉','阵容与养成','','heroes')+
+    growthSources(s,d,esc,btn)+
     (owned.length?`<section class="location"><h2 class="subhead">出阵次序 · 最多三人</h2><p class="note">前两位迎敌，第三位居后照应。</p><div class="team-fields">${[0,1,2].map(i=>`<label>第 ${i+1} 位<select id="team-${i}" aria-label="第${i+1}位出阵好汉">${heroOptions(s,d,s.team[i])}</select></label>`).join('')}</div>${btn('保存阵容',{type:'ui_team'},'primary')}</section>
       <h2 class="subhead">已入寨 · ${owned.length} 位</h2>${owned.map(h=>heroCard(s,d,h)).join('')}`:`<section class="location"><h2 class="subhead">还没有正式入寨的好汉</h2><p>先在江湖结识人物，再到招贤馆相邀。可先在郓城酒肆请白胜作向导。</p>${nav('去江湖结识好汉','map')}${nav('查看招贤','recruit')}</section>`)+
     `<details class="fold-section" data-fold="known-heroes"><summary>江湖相识与线索 · ${known.length} 位</summary>${known.length?known.map(h=>heroCard(s,d,h)).join(''):'<p class="note">尚无人物线索，先去江湖走走。</p>'}<p class="note">另有 ${unknown} 位尚未听闻，随探索逐渐结识。</p>${nav('前往招贤页','recruit')}</details>`;
@@ -121,27 +124,28 @@ function chroniclePage(s,d){
   const chapter=c=>`<section class="complete"><h2>第${c.number}卷 · ${esc(c.title)} · ${s.progress.flags[c.completeFlag]?'卷终':meets(s,c.condition)?'已开启':'待前卷完成'}</h2><p>${s.progress.flags[c.completeFlag]?esc(c.ending):c.number===2?'第一卷卷终后，从梁山渡口可前往东京。四段人物往事均完成后结卷，不要求已招募这四人。':'从郓城起步，相识、历练、聚义。'}</p><ol>${c.requirements.map(r=>`<li class="${meets(s,r.condition)?'progress-label':''}">${meets(s,r.condition)?'已成':'尚待'} · ${esc(r.label)}</li>`).join('')}</ol></section>`;
   return title('白泽梁山志','进度、目标与往事','','chronicle')+chapter(current)+
     `<details class="fold-section" data-fold="overview"><summary>山寨概况与眼下线索</summary>${overview(s,d)}</details>`+journeyClues(s,d)+
-    `<details class="fold-section" data-fold="other-chapters"><summary>其他篇章</summary>${d.chapters.filter(c=>c.id!==current.id).map(chapter).join('')}<p class="note">0.3 梁山建筑与后续坐骑尚未开放。</p></details><h2 class="subhead">最近记事</h2>${entries(journal.slice(0,15))}
+    `<details class="fold-section" data-fold="other-chapters"><summary>其他篇章</summary>${d.chapters.filter(c=>c.id!==current.id).map(chapter).join('')}<p class="note">坐骑与专属招式已开放，可在好汉详情养成；梁山建筑尚未开放。</p></details><h2 class="subhead">最近记事</h2>${entries(journal.slice(0,15))}
     ${journal.length>15?`<details class="fold-section" data-fold="older-journal"><summary>更早的记事 · ${journal.length-15} 条</summary>${entries(journal.slice(15))}</details>`:''}
     <p class="note">保留最近三百条详细记事；人物、主线与通关累计不会截断。建寨记事始于 ${esc(new Date(s.startedAt).toLocaleString('zh-CN'))}。</p>`;
 }
 
 function battlePage(s,d,paused,pauseReason,locked){
-  const b=s.battle,seconds=at=>(Math.max(0,at-b.elapsed)/1000).toFixed(1),time=Math.floor(b.elapsed/1000),stopped=paused||locked;
+  const b=s.battle,seconds=at=>(Math.max(0,at-b.elapsed)/1000).toFixed(1),time=Math.floor(b.elapsed/1000),stopped=paused||locked,auto=battleSkillMode(s)==='auto';
   const skillButtons=u=>u.skills.map(id=>d.by.skills[id]).filter(k=>k.type!=='passive').map(k=>{
-    const reason=skillReason(b,u,k);return `<div class="battle-skill">${btn(k.name,{type:'battleSkill',hero:u.id,id:k.id},'secondary',stopped||!!reason)}<p class="meta">${esc(reason||'可施展 · 怒气 '+k.cost)}</p></div>`;
+    const reason=skillReason(b,u,k);return `<div class="battle-skill">${btn(k.name+(u.training?' · '+u.training.levels[k.id]+'级':''),{type:'battleSkill',hero:u.id,id:k.id},'secondary',stopped||!!reason)}<p class="meta">${esc(reason||'可施展 · 怒气 '+k.cost)}</p></div>`;
   }).join('');
   return `<section class="live-battle">${title(b.context.type==='story'?d.by.stories[b.context.id].title+' · 剧情战':'阵前交战',b.guest?b.team.map(u=>u.name).join('、')+'临时助阵，战后不自动入寨':'普攻自动进行 · 技能与药物由你调度','','battle')}
     <div class="battle-transport"><p class="battle-state" role="status">${b.outcome?({victory:'此战得胜',defeat:'暂且收兵',retreat:'已撤出战斗'})[b.outcome]:stopped?'交战已暂停':'正在自动交战'}</p><span class="battle-time" aria-label="交战时长">${String(Math.floor(time/60)).padStart(2,'0')}:${String(time%60).padStart(2,'0')}</span><div class="battle-running" ${b.outcome?'hidden':''}>${btn(paused?'继续交战':'暂停交战',{type:'ui_battlePause'},'secondary',locked)}${btn('撤退',{type:'battleRetreat'},'text-action',locked)}</div></div>
-    <p class="battle-hint note">${stopped&&!b.outcome?esc(pauseReason||'点击继续交战后，双方才会继续出手。'):'双方按各自速度持续普攻；我方技能不会自动释放，也不会自动消耗药物。'}</p>
-    <p class="battle-latest" aria-live="off">${esc(b.log[b.log.length-1]||'')}</p>
-    <div class="battle-grid">${[['我方',b.team],['敌方',b.enemy]].map(([label,units])=>`<section><h2 class="subhead">${label}</h2>${units.map(u=>`<div class="battle-unit${u.hp<=0?' unit-down':''}" data-unit="${esc(u.id)}"><div class="ledger-line"><strong>${esc(u.name)}</strong><span>${u.hp}/${u.maxHp}</span></div><progress value="${u.hp}" max="${u.maxHp}" aria-label="${esc(u.name)}气血"></progress><p class="meta">怒气 ${u.rage}/100 · ${u.hp<=0?'已退阵':b.outcome?'已收势':'出手 '+seconds(u.nextAttackAt)+'秒'}</p><p class="unit-status">${u.statuses.map(v=>`【${statusName(v.id)} ${seconds(v.expiresAt)}秒】`).join('')||'—'}</p>${u.side==='team'?skillButtons(u):`<p class="enemy-intent">${u.hp<=0||b.outcome?'':hasStun(u)?'眩晕中，暂不能出手':esc(enemySkill(b,u,d)?.name||'普通进击')}</p>`}</div>`).join('')}</section>`).join('')}</div>
-    <section class="battle-medicines battle-running" ${b.outcome?'hidden':''}><h2 class="subhead">阵中用药</h2><div class="medicine-grid">${BATTLE_ITEMS.map(id=>{const q=battleItemQuote(s,d,id);return `<div>${btn(d.by.items[id].name+' ×'+(s.inventory[id]||0),{type:'battleItem',id},'secondary',stopped||!!q.reason)}<p class="meta">${esc(q.reason||'交给'+q.target.name)}</p></div>`;}).join('')}</div><p class="note">药效立即生效，不占用普攻；药物共用 3 秒间隔，我方技能释放后调息 5 秒。暂停时冷却也停止。</p></section>
+    <div class="skill-mode" role="group" aria-label="技能释放方式"><span>技能释放</span>${[['manual','手动技能'],['auto','自动技能']].map(([mode,label])=>`<button type="button" class="secondary" data-command="${esc(JSON.stringify({type:'battleSkillMode',mode}))}" aria-pressed="${battleSkillMode(s)===mode}" ${locked||b.outcome?'disabled':''}><span>${label}</span></button>`).join('')}</div>
+    <p class="skill-mode-hint note">${auto?'自动技能：条件满足时优先已解锁进阶招，否则使用基础招；仍可手动抢先释放。':'手动技能：只自动普攻，招式由你点击释放。'}药品始终手动。本档记住选择。${b.rules!==2?'旧战局沿用原有招式规则，收兵后的新战斗启用养成。':''}</p>
+    <p class="battle-hint note">${stopped&&!b.outcome?esc(pauseReason||'点击继续交战后，双方才会继续出手。'):'双方按各自速度持续普攻；技能共用人物调息，不会自动消耗药物。'}</p>
+    <div class="battle-grid">${[['我方',b.team],['敌方',b.enemy]].map(([label,units])=>`<section><h2 class="subhead">${label}</h2>${units.map(u=>`<div class="battle-unit${u.hp<=0?' unit-down':''}" data-unit="${esc(u.id)}"><div class="ledger-line"><strong>${esc(u.name)}</strong><span>${u.hp}/${u.maxHp}</span></div><progress value="${u.hp}" max="${u.maxHp}" aria-label="${esc(u.name)}气血"></progress><p class="meta">怒气 ${u.rage}/100 · ${u.hp<=0?'已退阵':b.outcome?'已收势':'出手 '+seconds(u.nextAttackAt)+'秒'}</p><p class="unit-status">${u.statuses.map(v=>`【${statusName(v.id)} ${seconds(v.expiresAt)}秒】`).join('')||'—'}</p>${u.side==='team'?skillButtons(u):`<p class="enemy-intent">${u.hp<=0||b.outcome?'':u.boss?.pendingAt?'首领蓄势 · '+seconds(u.boss.pendingAt)+'秒（可打断）':hasStun(u)?'眩晕中，暂不能出手':esc(enemySkill(b,u,d)?.name||'普通进击')}</p>`}</div>`).join('')}</section>`).join('')}</div>
+    <section class="battle-medicines battle-running" ${b.outcome?'hidden':''}><h2 class="subhead">阵中用药</h2><div class="medicine-grid">${BATTLE_ITEMS.map(id=>{const q=battleItemQuote(s,d,id);return `<div>${btn(d.by.items[id].name+' ×'+(s.inventory[id]||0),{type:'battleItem',id},'secondary',stopped||!!q.reason)}<p class="meta">${esc(q.reason||'交给'+q.target.name)}</p></div>`;}).join('')}</div><p class="note">药效立即生效，不占用普攻；药物共用 3 秒间隔，基础招调息 5 秒，进阶招调息 7 秒（共用人物调息）。暂停时冷却也停止。</p></section>
     <div class="battle-end actions" ${b.outcome?'':'hidden'}>${btn(b.outcome==='victory'?'收获战果，继续前行':'收兵，再作安排',{type:'finishBattle'},'primary',!b.outcome||locked)}</div>
-    <details class="fold-section" data-fold="battle-log"><summary>交战记录 · 最近 ${b.log.length} 条</summary><div class="combat-log" role="log" aria-live="off" aria-label="战斗日志">${b.log.map(t=>`<p>${esc(t)}</p>`).join('')}</div></details></section>`;
+    </section>`;
 }
 function hasStun(u){return u.statuses.some(s=>s.id==='stun');}
-function schemePage(s,d){const q=s.scheme,m=d.by.schemes[q.id];return title(m.name,'察看暑热与人心 · 第 '+q.turn+' / '+m.maxTurns+' 次安排','','scheme')+`<section class="location"><p class="prose">${q.values.alert>=50?'杨志握紧了刀柄，目光一直追着酒担。':q.values.fatigue>=60?'军汉汗流浃背，几乎抬不起担子。':q.values.trust>=50?'军汉看着枣客饮酒，神色渐缓。':'军汉虽想歇脚，杨志却仍紧盯四周。'}</p><p class="note">你看不到人心的刻度，只能从言行作判断。先等暑热与疲劳，再以自然的举动消去疑心。</p></section><div class="combat-log" role="log" aria-label="计策记录">${q.log.map(t=>`<p>${esc(t)}</p>`).join('')}</div><div class="actions">${q.outcome?btn(q.outcome==='success'?'收下信物，记入梁山志':'退出重整计策',{type:'finishScheme'},'primary'):m.choices.map(c=>btn(c.label,{type:'scheme',id:c.id},'secondary')).join('')+btn('判断时机已到，收网',{type:'scheme',id:'finish'},'primary')+btn('暂退',{type:'scheme',id:'retreat'})}</div>`;}
+function schemePage(s,d){const q=s.scheme,m=d.by.schemes[q.id];return title(m.name,'察看暑热与人心 · 第 '+q.turn+' / '+m.maxTurns+' 次安排','','scheme')+`<section class="location"><p class="prose">${q.values.alert>=50?'杨志握紧了刀柄，目光一直追着酒担。':q.values.fatigue>=60?'军汉汗流浃背，几乎抬不起担子。':q.values.trust>=50?'军汉看着枣客饮酒，神色渐缓。':'军汉虽想歇脚，杨志却仍紧盯四周。'}</p><p class="note">你看不到人心的刻度，只能从言行作判断。先等暑热与疲劳，再以自然的举动消去疑心。</p></section><div class="actions">${q.outcome?btn(q.outcome==='success'?'收下信物，记入梁山志':'退出重整计策',{type:'finishScheme'},'primary'):m.choices.map(c=>btn(c.label,{type:'scheme',id:c.id},'secondary')).join('')+btn('判断时机已到，收网',{type:'scheme',id:'finish'},'primary')+btn('暂退',{type:'scheme',id:'retreat'})}</div>`;}
 function eventPage(s,d){const e=d.by.events[s.event.id];return title(e.name,'路上际遇','','event')+`<section class="location"><p class="prose">${esc(e.text)}</p><div class="actions">${e.options.map(c=>btn(c.label,{type:'eventChoice',id:c.id},'secondary')).join('')}</div></section>`;}
 
 function overview(s,d){
@@ -154,7 +158,7 @@ function pageResources(s,screen){
   const rows={map:[['体力',s.player.stamina+'/100'],['出阵',s.team.length+'/3']],heroes:[['已入寨',Object.values(s.heroes).filter(h=>h.status==='owned').length+' 位'],['经验丹',s.inventory.exp_pill||0]],bag:[['碎银',s.player.silver],['体力',s.player.stamina+'/100']],forge:[['碎银',s.player.silver],['精铁',s.inventory.iron||0],['强化符',s.inventory.strength_charm||0]],quests:[['威望',s.player.prestige],['功勋',s.player.merit]]}[screen]||[];
   return rows.length?`<div class="resources" aria-label="当前功能相关资源">${rows.map(([name,value])=>`<span>${icon(({体力:'energy',出阵:'heroes',已入寨:'heroes',经验丹:'medicine',碎银:'coins',精铁:'forge',强化符:'ticket',威望:'medal',功勋:'medal'})[name])}<span>${name}</span><b>${value}</b></span>`).join('')}</div>`:'';
 }
-export function render({state:s,data:d,view,status='',error='',locked=false,notice='',recruitTarget='',entered=true,battlePaused=false,battlePauseReason='',saveBox={}}){
+export function render({state:s,data:d,view,status='',error='',locked=false,notice='',recruitTarget='',entered=true,battlePaused=false,battlePauseReason='',saveBox={},activity=null}){
   const busy=isBusy(s),tabs=[['map','江湖'],['heroes','好汉'],['bag','行囊'],['recruit','招贤'],['quests','差事'],['chronicle','梁山志'],['save','存档']];
   const screen=['welcome','save','chronicle'].includes(view)?view:s.battle?'battle':s.scheme?'scheme':s.event?'event':view;
   let content=screen==='save'?saveBoxPage(s,status,locked,saveBox):screen==='chronicle'?chroniclePage(s,d):screen==='battle'?battlePage(s,d,battlePaused,battlePauseReason,locked):screen==='scheme'?schemePage(s,d):screen==='event'?eventPage(s,d):screen==='heroes'?heroesPage(s,d):screen==='bag'?bagPage(s,d):screen==='forge'?forgePage(s,d):screen==='recruit'?recruitPage(s,d,recruitTarget):screen==='quests'?questsPage(s,d):mapPage(s,d);
@@ -162,15 +166,32 @@ export function render({state:s,data:d,view,status='',error='',locked=false,noti
   const active=['battle','scheme','event'].includes(screen)?'map':screen==='forge'?'bag':screen;
   const prologue=screen==='welcome'||(!entered&&screen==='save'),arrival=screen==='map'&&isFirstArrival(s);
   const navigation=`<nav class="tabs" aria-label="游戏页面">${tabs.map(([id,label])=>`<button type="button" data-view="${id}" aria-current="${active===id?'page':'false'}" ${busy&&!['map','save','chronicle'].includes(id)?'disabled':''}>${icon(id)}<span>${label}</span></button>`).join('')}</nav>`;
-  return `<div class="shell focus-layout${screen==='battle'?' in-battle':''}${prologue?' prologue-layout':arrival?' arrival-layout':''}"><header class="masthead"><div class="brand"><span class="seal" aria-hidden="true">白泽</span><strong>白泽水浒</strong></div><div class="mast-links"><span class="edition">v${esc(d.config.release)}</span><a href="../">返回导航</a></div></header>
-    <div class="layout">${prologue||arrival?'':`<aside class="rail">${navigation}</aside>`}
-    <main class="main" id="main" tabindex="-1" data-screen="${esc(screen)}">
-      ${error?`<div class="notice error" role="alert">${esc(error)}</div>`:notice&&screen!=='welcome'?`<div class="notice" role="status">${esc(notice)}</div>`:''}
-      ${screen!=='save'&&(locked||(status&&!status.startsWith('已保存')&&screen!=='welcome'))?`<p class="warning" role="status">${esc(status)}</p>`:''}
-      ${arrival?'':pageResources(s,screen)}${content}
-      ${arrival?`<details class="fold-section arrival-kit" data-fold="arrival-kit"><summary>行箧与其他安排</summary><p class="note">查看好汉、整理行囊与存档，随时可以从这里进入。先循传闻行路也不迟。</p>${navigation}</details>`:''}
-      ${!entered&&screen==='save'&&!locked?nav('返回卷首','welcome'):''}
-    </main></div><footer class="footer"><span>${locked?'存档冲突 · 请到存档页处理':status.startsWith('已保存')?'已保存到本机':prologue?'独立本机存档':'尚未保存 · 请先导出进度'}</span>${prologue?'<span>纯文字 · 无付费 · 无账户</span>':nav('存档管理','save')}</footer></div>`;
+  const entries=activity||[...s.journal.slice(-200).map((e,id)=>({...e,id,kind:'journey'})),...(notice?[{id:'notice',text:notice,at:s.clock,kind:'journey'}]:[])];
+  return `<div class="shell focus-layout viewport-shell${screen==='battle'?' in-battle':''}${prologue?' prologue-layout':arrival?' arrival-layout':''}">
+    <header class="masthead"><div class="brand"><span class="seal" aria-hidden="true">白泽</span><strong>白泽水浒</strong></div><div class="mast-links"><span class="edition">v${esc(d.config.release)}</span><a href="../">返回导航</a></div></header>
+    <div class="resource-strip">${prologue?'<span class="strip-note">一页文字 · 两卷江湖</span>':pageResources(s,screen)||'<span class="strip-note">只看眼前事 · 江湖留痕于日志</span>'}</div>
+    <div class="layout viewport-layout">
+      <aside class="rail" id="game-navigation">${prologue?'<p class="prelude-navigation">尚未入卷<br>可先接续旧卷</p>':navigation}</aside>
+      <main class="main" id="main" tabindex="-1" data-screen="${esc(screen)}">
+        ${error?`<div class="notice error" role="alert">${esc(error)}</div>`:''}
+        ${screen!=='save'&&(locked||(status&&!status.startsWith('已保存')&&screen!=='welcome'))?`<p class="warning" role="status">${esc(status)}</p>`:''}
+        ${content}
+        ${!entered&&screen==='save'&&!locked?nav('返回卷首','welcome'):''}
+      </main>
+      ${activityPanel(entries,!prologue)}
+    </div>
+    <footer class="footer"><span>${locked?'存档冲突 · 请到存档页处理':status.startsWith('已保存')?'已保存到本机':prologue?'独立本机存档':'尚未保存 · 请先导出进度'}</span>${prologue?'<span>纯文字 · 无付费 · 无账户</span>':nav('存档管理','save')}</footer>
+  </div>`;
+}
+function activityPanel(entries,available){
+  const labels={journey:'江湖',battle:'交战',scheme:'计策'};
+  return `<aside class="activity-panel" id="activity-panel" aria-labelledby="activity-title">
+    <header class="activity-heading"><h2 id="activity-title">${icon('chronicle')}<span>江湖日志</span></h2><button type="button" class="log-latest" data-log-latest aria-label="日志回到最新">${icon('download')}<span>回到最新</span></button></header>
+    <div class="activity-list" id="activity-log" role="log" aria-live="off" aria-label="江湖与交战日志，独立滚动" tabindex="0">
+      ${available&&entries.length?entries.map(e=>`<article class="activity-entry" data-log-entry="${esc(e.id)}"><p class="activity-meta"><span>${labels[e.kind]||'江湖'}</span><time>${esc(new Date(e.at).toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'}))}</time></p><p class="activity-text">${esc(e.text)}</p></article>`).join(''):'<p class="activity-empty">江湖尚静，等你落笔。<br>入卷后的经历会记在这里。</p>'}
+    </div>
+    <p class="activity-caption" id="activity-caption">独立滚动 · 最新在底部</p>
+  </aside>`;
 }
 export function importDialog(state){return `<dialog id="import-confirm" aria-labelledby="import-title"><h2 id="import-title">确认接续这份梁山志？</h2><p>此存档记录到 ${esc(new Date(state.clock).toLocaleString('zh-CN'))}。</p><p>威望 ${state.player.prestige}，正式好汉 ${Object.values(state.heroes).filter(h=>h.status==='owned').length} 名。</p><p class="note">确认后替换当前游戏进度，并备份原来的有效存档。不影响学习系统。建议先导出当前进度。</p><div class="actions">${btn('确认导入并替换',{type:'ui_confirmImport'},'primary')}${btn('取消',{type:'ui_cancelImport'},'secondary')}</div></dialog>`;}
 export function recruitDialog(result,data){

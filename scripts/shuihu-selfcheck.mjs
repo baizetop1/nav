@@ -35,7 +35,7 @@ checkSchema(raw,schema);
 const badSchemaData=structuredClone(raw);badSchemaData.heroes[0].star='five';assert.throws(()=>checkSchema(badSchemaData,schema));
 console.log('Shuihu: JSON Schema structural contract passed.');
 const data=prepareData(raw), now=new Date(2026,8,9,10).getTime();
-for(const [kind,count] of Object.entries({heroes:14,maps:46,items:55,equipments:20,skills:34,events:24,dungeons:7}))assert.equal(data[kind].length,count);
+for(const [kind,count] of Object.entries({heroes:14,maps:46,items:86,equipments:20,skills:62,events:24,dungeons:7}))assert.equal(data[kind].length,count);
 assert.equal(data.quests.filter(q=>q.type==='daily').length,12);
 assert.equal(data.heroes.some(h=>h.id==='chaogai'),false);
 const bad=structuredClone(raw);bad.maps[0].links[0].target='missing';assert.throws(()=>prepareData(bad),/引用不存在/);

@@ -32,6 +32,8 @@
     "test:shuihu-auto-battle": "node scripts/shuihu-auto-battle-selfcheck.mjs",
     "test:shuihu-save-box": "node scripts/shuihu-save-box-selfcheck.mjs",
     "test:shuihu-cloud": "node scripts/shuihu-cloud-selfcheck.mjs",
+    "test:shuihu-viewport": "node scripts/shuihu-viewport-selfcheck.mjs",
+    "test:shuihu-skill-mode": "node scripts/shuihu-skill-mode-selfcheck.mjs",
     "verify": "npm run build && npm run test:all",
     "test:blog-draft": "node --experimental-strip-types scripts/blog-draft-selfcheck.mjs",
     "check:tech-os": "node scripts/check-tech-os.mjs",
@@ -46,7 +48,10 @@
     "test:tech-os-study": "node --experimental-strip-types scripts/tech-os-study-progress-selfcheck.mjs",
     "check:links": "node scripts/check-links.mjs",
     "test:hot-feed": "node scripts/update-hot-feed.mjs --self-test",
-    "update:hot-feed": "node scripts/update-hot-feed.mjs"
+    "update:hot-feed": "node scripts/update-hot-feed.mjs",
+    "test:shuihu-growth": "node scripts/shuihu-growth-selfcheck.mjs",
+    "test:shuihu-growth-balance": "node scripts/shuihu-growth-balance-selfcheck.mjs",
+    "test:shuihu-mount-loot": "node scripts/shuihu-mount-loot-selfcheck.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

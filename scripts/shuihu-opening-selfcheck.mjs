@@ -16,8 +16,8 @@ assert.ok(welcome.includes('踏入郓城县'));assert.ok(welcome.includes('接�
 assert.ok(welcome.includes(command('ui_start')));assert.ok(welcome.includes('data-view="save"'));
 const importPage=frame(initial,'save',{entered:false});assert.ok(!importPage.includes('class="tabs"'));assert.ok(importPage.includes('返回卷首'));assert.ok(importPage.includes('id="import-text"'));
 const badSave=frame(initial,'save',{entered:false,locked:true,status:'原文保留'});assert.ok(!badSave.includes('返回卷首'));assert.ok(!badSave.includes(command('ui_start')));assert.ok(badSave.includes('原文保留'));
-assert.ok(isFirstArrival(initial));const arrival=frame();assert.ok(arrival.includes('arrival-layout'));assert.ok(!arrival.includes('class="resources"'));assert.ok(!arrival.includes('class="rail"'));
-for(const id of ['arrival-kit','arrival-search','city-paths'])assert.ok(arrival.includes(`data-fold="${id}"`));
+assert.ok(isFirstArrival(initial));const arrival=frame();assert.ok(arrival.includes('arrival-layout'));assert.ok(arrival.includes('class="resource-strip"'));assert.ok(arrival.includes('class="rail"'),'Fixed navigation remains in its own region on first arrival');
+for(const id of ['arrival-search','city-paths'])assert.ok(arrival.includes(`data-fold="${id}"`));
 assert.ok(!/<details[^>]+open/.test(arrival),'Secondary controls start collapsed');
 for(const label of ['酒肆传闻','县衙告示','江湖消息'])assert.ok(arrival.includes(`aria-label="${label}"`));
 for(const id of ['office','tavern','gate','forge','stable','recruit'])assert.equal(arrival.split(command('move',id)).length-1,1,`One real exit to ${id}`);

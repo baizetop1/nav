@@ -1,4 +1,5 @@
-import { idPattern, requireRule } from './utils.js?v=0.3.0';
+import { idPattern, requireRule } from './utils.js?v=0.4.1';
+import { GROWTH_PROFILES } from './growth.js?v=0.4.1';
 export const collections=['heroes','skills','items','equipments','enemies','maps','stories','schemes','dungeons','rewards','events','quests','chapters'];
 const numeric=(n,min=0)=>typeof n==='number'&&Number.isFinite(n)&&n>=min;
 export function prepareData(raw) {
@@ -21,6 +22,14 @@ export function prepareData(raw) {
   const cost=c=>{for(const key of ['silver','merit'])if(c?.[key]!==undefined)requireRule(Number.isInteger(c[key])&&c[key]>=0,'无效消耗。');reward(c);};
   for(const h of data.heroes){requireRule(h.name&&h.title&&Number.isInteger(h.star)&&h.star>=1&&h.star<=5,'好汉字段无效。');ref('maps',h.meetMap);condition(h.meetCondition);h.skills.forEach(id=>ref('skills',id));ref('items',h.obtain.token);for(const key of ['hp','attack','defense','speed','strategy'])requireRule(numeric(h.attribute[key],1)&&numeric(h.growth[key]),'好汉属性无效。');}
   for(const s of data.skills){requireRule(s.name&&numeric(s.cost)&&s.cost<=100&&['active','passive','strategy'].includes(s.type),'技能字段无效。');requireRule(['damage','strategy','heal','attribute'].includes(s.effect.kind)&&numeric(s.effect.rate),'技能效果无效。');if(s.effect.status)requireRule(['bleeding','poison','armor_break','stun','rage'].includes(s.effect.status.id)&&Number.isInteger(s.effect.status.turns)&&s.effect.status.turns>0,'战斗状态无效。');}
+  for(const h of data.heroes){
+    requireRule(h.skills.length===4&&new Set(h.skills).size===4&&h.mount?.name&&h.mount.description,'人物专属招式或坐骑缺失。');
+    ref('dungeons',h.mount.dungeon);ref('items',h.mount.contract);
+    requireRule(h.mount.contract===h.id+'_mount_contract'&&data.by.items[h.mount.contract].price===0&&data.by.items[h.mount.contract].type==='special','坐骑必须来自专属副本契，不能在商店购买。');
+    const tiers=[];
+    for(const id of h.skills){const t=data.by.skills[id].training;requireRule(t&&t.hero===h.id&&['base','advanced','bond'].includes(t.tier)&&Number.isInteger(t.level)&&t.level>=1&&t.level<=40&&typeof t.flag==='string'&&(!t.flag||idPattern.test(t.flag))&&t.label&&GROWTH_PROFILES.includes(t.profile),'人物招式养成配置无效。');tiers.push(t.tier);}
+    requireRule(tiers.filter(t=>t==='base').length===2&&tiers.includes('advanced')&&tiers.includes('bond'),'每位人物需基础两招、进阶一招与羁绊一招。');ref('items',h.id+'_manual');
+  }
   for(const item of data.items){requireRule(item.name&&item.description&&['consume','material','token','quest','special'].includes(item.type)&&numeric(item.price),'道具字段无效。');if(item.hero)ref('heroes',item.hero);}
   for(const equip of data.equipments){requireRule(['weapon','helmet','armor','belt','shoes','accessory'].includes(equip.type)&&equip.name&&numeric(equip.price),'装备字段无效。');for(const id of Object.keys(equip.recipe.items))ref('items',id);}
   for(const enemy of data.enemies){enemy.skills.forEach(id=>ref('skills',id));for(const key of ['hp','attack','defense','speed','strategy'])requireRule(numeric(enemy.attribute[key],1),'敌人属性无效。');requireRule(enemy.telegraphs.length>0,'敌人缺少预兆。');}

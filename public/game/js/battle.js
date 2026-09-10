@@ -1,23 +1,25 @@
-import { attributes } from './hero.js?v=0.3.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.3.0';
+import { attributes } from './hero.js?v=0.4.1';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.4.1';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.4.1';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
+export const battleSkillMode=state=>state.battleSkillMode||'manual';
 const alive=u=>u.hp>0;
-const harmful=id=>['bleeding','poison','armor_break','stun'].includes(id);
+const harmful=negativeStatus;
 const log=(b,text)=>{b.log.push(`【${(b.elapsed/1000).toFixed(1)}秒】${text}`);if(b.log.length>120)b.log.shift();};
 const has=(u,id)=>u.statuses.some(s=>s.id===id);
 export function damage(attack,defense,rate,variance=1,critical=false){return Math.max(1,Math.round(Math.max(1,attack*rate-defense*.5)*variance*(critical?1.5:1)));}
 export function attackInterval(u){return Math.round(bounded(3000*100/(100+u.speed),900,3000));}
-export function statusName(id){return ({bleeding:'流血',poison:'中毒',armor_break:'破甲',stun:'眩晕',rage:'狂怒'})[id]||id;}
+export function statusName(id){return ({bleeding:'流血',poison:'中毒',armor_break:'破甲',stun:'眩晕',rage:'狂怒',guard:'护阵',taunt:'嘲讽',weaken:'削弱'})[id]||id;}
 export function addStatus(u,status,elapsed=0){
   const next={id:status.id,value:status.value,expiresAt:elapsed+status.turns*STATUS_MS};
   if(['poison','bleeding'].includes(status.id))next.nextTickAt=elapsed+STATUS_MS;
   const old=status.id!=='poison'&&u.statuses.find(s=>s.id===status.id);
-  if(old){old.expiresAt=Math.max(old.expiresAt,next.expiresAt);return;}
+  if(old){old.expiresAt=Math.max(old.expiresAt,next.expiresAt);if(['guard','weaken'].includes(status.id))old.value=Math.max(old.value,next.value);return;}
   if(u.statuses.length<100)u.statuses.push(next);
 }
-function unit(id,name,attribute,skills,side){const u={id,name,...attribute,maxHp:attribute.hp,rage:0,skills,side,statuses:[],attacks:0,skillReadyAt:0};u.nextAttackAt=attackInterval(u);return u;}
+function unit(id,name,attribute,skills,side){const u={id,name,...attribute,maxHp:attribute.hp,rage:0,skills:[...skills],side,statuses:[],attacks:0,skillReadyAt:0};u.nextAttackAt=attackInterval(u);return u;}
 export function startBattle(state,data,{enemies,guest,scale=1,context}){
   requireRule(!state.battle&&!state.scheme,'先结束当前战局。');
   const team=guest?[unit(guest.id,data.by.heroes[guest.id].name,attributes(state,guest.id,data,guest.level,false),data.by.heroes[guest.id].skills,'team')]:state.team.map(id=>unit(id,data.by.heroes[id].name,attributes(state,id,data),data.by.heroes[id].skills,'team'));
@@ -26,6 +28,7 @@ export function startBattle(state,data,{enemies,guest,scale=1,context}){
     const e=data.by.enemies[id],stats=Object.fromEntries(Object.entries(e.attribute).map(([key,value])=>[key,Math.round(value*(key==='speed'?1:scale))]));
     return {...unit(id+'_'+i,e.name,stats,e.skills,'enemy'),model:id};
   }),context,guest:!!guest,outcome:null,log:['【交战开始】双方自行迎敌。你可随时调度技能、用药或撤退。']};
+  initializeGrowthBattle(state,state.battle,data);
 }
 // Only convert validated legacy battles. Never replay time spent away from the page.
 export function migrateBattle(b){
@@ -45,6 +48,7 @@ function settle(b){
   return !!b.outcome;
 }
 function hit(state,u,skill,data){
+  if(state.battle.rules===2)return growthHit(state,u,skill,data,growthApi);
   const b=state.battle,friends=u.side==='team'?b.team:b.enemy,opponents=u.side==='team'?b.enemy:b.team,effect=skill?.effect||{kind:'damage',rate:1};
   if(skill)u.rage-=skill.cost;else u.rage=bounded(u.rage+10,0,100);
   if(effect.kind==='heal'){
@@ -63,6 +67,27 @@ export function enemySkill(b,u,data){
   const available=u.skills.map(id=>data.by.skills[id]).filter(s=>s.type!=='passive'&&s.cost<=u.rage&&(s.effect.kind!=='heal'||b.enemy.some(f=>alive(f)&&f.hp<f.maxHp)));
   return available.length?available[u.attacks%available.length]:undefined;
 }
+export function setBattleSkillMode(state,mode){
+  const b=state.battle;requireRule(b&&!b.outcome,'当前没有进行中的交战。');
+  requireRule(['manual','auto'].includes(mode),'无效的技能释放方式。');
+  if(battleSkillMode(state)===mode)return;
+  state.battleSkillMode=mode;
+  log(b,mode==='auto'?'【技能模式】已启用自动技能：条件满足时按出阵顺序施招，药物仍由你手动使用。':'【技能模式】已切换手动技能：普攻继续自动进行，招式由你决定。');
+}
+function castAutomaticSkills(state,data){
+  const b=state.battle;if(battleSkillMode(state)!=='auto'||settle(b))return;
+  // Same-time decisions follow saved team order, then each hero's skill order.
+  // Use the exact manual validation/cost/cooldown path; never automate medicines.
+  for(const u of b.team){
+    const options=u.skills.map(id=>data.by.skills[id]);
+    if(b.rules===2)options.sort((a,c)=>(c.training?.tier==='advanced')-(a.training?.tier==='advanced'));
+    const skill=options.find(s=>!skillReason(b,u,s));
+    if(!skill)continue;
+    log(b,`【自动技能】${u.name}自行施展【${skill.name}】。`);
+    castSkill(state,data,u.id,skill.id);
+    if(b.outcome)break;
+  }
+}
 // Independent timestamps: a fast unit may strike twice before a slower unit acts.
 // Exact event resolution keeps results independent of UI timer slice sizes.
 export function advanceBattle(state,data,delta){
@@ -70,8 +95,11 @@ export function advanceBattle(state,data,delta){
   requireRule(Number.isInteger(delta)&&delta>0&&delta<=1000,'战斗时间步长无效。');
   if(b.outcome)return;
   const end=Math.min(b.elapsed+delta,BATTLE_LIMIT_MS),units=[...b.team,...b.enemy];
+  castAutomaticSkills(state,data);
   while(!b.outcome){
     const times=units.filter(alive).map(u=>u.nextAttackAt);
+    if(b.rules===2)times.push(...growthTimes(b));
+    if(battleSkillMode(state)==='auto')for(const u of b.team)if(alive(u)&&u.skillReadyAt>b.elapsed)times.push(u.skillReadyAt);
     for(const u of units)for(const s of u.statuses){times.push(s.expiresAt);if(s.nextTickAt)times.push(s.nextTickAt);}
     const next=Math.min(...times);if(next>end)break;b.elapsed=next;
     for(const u of units){
@@ -83,6 +111,7 @@ export function advanceBattle(state,data,delta){
       u.statuses=u.statuses.filter(s=>s.expiresAt>next);
     }
     if(settle(b))break;
+    if(b.rules===2){advanceBosses(state,growthApi);if(settle(b))break;}
     const due=units.filter(u=>alive(u)&&u.nextAttackAt===next).sort((a,b)=>b.speed-a.speed);
     for(const u of due){
       if(!alive(u))continue;u.nextAttackAt=next+attackInterval(u);
@@ -90,6 +119,7 @@ export function advanceBattle(state,data,delta){
       else{hit(state,u,u.side==='enemy'?enemySkill(b,u,data):undefined,data);u.attacks++;}
       if(settle(b))break;
     }
+    if(!b.outcome)castAutomaticSkills(state,data);
   }
   if(!b.outcome){b.elapsed=end;settle(b);}
 }
@@ -100,12 +130,13 @@ export function skillReason(b,u,skill){
   if(has(u,'stun'))return '眩晕中';
   if(u.skillReadyAt>b.elapsed)return `调息 ${Math.ceil((u.skillReadyAt-b.elapsed)/1000)}秒`;
   if(u.rage<skill.cost)return `怒气 ${u.rage}/${skill.cost}`;
+  if(b.rules===2){const reason=growthSkillReason(b,u,skill);if(reason!==null)return reason;}
   if(skill.effect.kind==='heal'&&!b.team.some(f=>alive(f)&&f.hp<f.maxHp))return '同伴无需恢复';
   return '';
 }
 export function castSkill(state,data,heroId,skillId){
   const b=state.battle,u=b?.team.find(u=>u.id===heroId),skill=data.by.skills[skillId],reason=skillReason(b,u,skill);
-  requireRule(!reason,reason);hit(state,u,skill,data);u.skillReadyAt=b.elapsed+SKILL_COOLDOWN_MS;settle(b);
+  requireRule(!reason,reason);hit(state,u,skill,data);u.skillReadyAt=b.elapsed+(b.rules===2&&skill.training?.tier==='advanced'?7000:SKILL_COOLDOWN_MS);settle(b);
 }
 export function battleItemQuote(state,data,id){
   const b=state.battle,item=data.by.items[id];
@@ -125,3 +156,4 @@ export function useBattleItem(state,data,id){
   b.itemReadyAt=b.elapsed+ITEM_COOLDOWN_MS;log(b,`你将【${item.name}】交给${target.name}，药效即刻生效，双方仍在交战。`);
 }
 export function retreatBattle(state){const b=state.battle;requireRule(b&&!b.outcome,'当前没有可撤出的战斗。');b.outcome='retreat';log(b,'你下令退回安全处。此战未取胜，已消耗的药物与历练次数不会返还。');}
+const growthApi={log,damage,addStatus,statusName};
