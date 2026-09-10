@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-09T21:42:40.092Z",
+  "generatedAt": "2026-09-10T00:15:50.648Z",
   "intelligence": {
-    "updatedAt": "2026-09-09T21:42:40.092Z",
+    "updatedAt": "2026-09-10T00:15:50.648Z",
     "items": [
       {
-        "id": "cn-item-40e1b2f5b9ca9b57",
+        "id": "cn-item-6a69b4c5fb0b22e1",
         "category": "cn",
-        "title": "中国海警结束45天赴北太平洋公海渔业执法巡航",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-09/10693552.shtml",
+        "title": "美媒：特朗普专机突发状况 应急滑梯因误操作意外弹出",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-10/10693679.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-09T13:23:02.000Z",
-        "summary": "中新社北京9月9日电 (记者 阮煜琳)据中国海警局9日消息，由中国海警长山舰和五虎舰组成的舰艇编队当日圆满完成2026年北太平洋公海渔业执法巡航任务，顺利返港。",
+        "publishedAt": "2026-09-09T23:29:38.000Z",
+        "summary": "中新网9月10日电 据美国广播公司(ABC)报道，当地时间9月9日下午，美国总统特朗普准备搭乘“空军一号”专机前往达拉斯出席共和党中期选举集会之际，该专机的应急滑梯却处于弹出状态。",
         "badge": "中新网要闻"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-09T18:15:43.000Z",
         "badge": "HN",
-        "signal": "629 分 · 1310 评论"
+        "signal": "812 分 · 1597 评论"
       },
       {
-        "id": "cn-it-79a75eec8a9dfbb3",
+        "id": "cn-it-39f8ad93941d8231",
         "category": "cn",
-        "title": "苹果 iPhone 18 Pro / Max 升级摄影风格，带来全新质感和颗粒感控制选项",
-        "url": "https://www.ithome.com/1/000/548.htm",
+        "title": "小米 18 Fold 中折叠手机今日首销：首发玄戒 O3 芯片，10999 元起",
+        "url": "https://www.ithome.com/1/000/570.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T21:35:00.000Z",
-        "summary": "IT之家 9 月 10 日消息，根据苹果官方博文，iPhone 18 Pro 和 iPhone 18 Pro Max 升级摄影风格功能， 带来全新质感和颗粒感的控制选项 ，供用户进一步调整理想画面效果、提升对照片的创意掌控。 IT之家注：摄影风格（Photographic Styles）是苹果 iPhone 的智能色调预设，用来在按下快门前就决定照片的整体氛围，最早随 iPhone 13 系列推出，提供高对比、鲜艳、暖色、冷色等风格。 苹果公司在 iPhone 16 系列、…",
+        "publishedAt": "2026-09-10T00:14:44.000Z",
+        "summary": "IT之家 9 月 10 日消息，小米 18 Fold 中折叠手机发布于 9 月 7 日，将于今日 10:00 正式开售， 售价 10999 元起 ： 12GB+256GB：10999 元 12GB+512GB：11999 元 16GB+512GB：12999 元 16GB+1TB（LPDDR6）：14999 元 16GB+1TB 陶瓷特别版（LPDDR6）：15999 元 京东 小米 Xiaomi 18 Fold 暖金白 12GB+256GB 10999 元 直达链接 小米…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-7w5x-hrqm-74c2",
+        "id": "github-advisory-ghsa-cp3j-m783-3ph5",
         "category": "security",
-        "title": "smol-toml: Denial of Service via malformed TOML documents",
-        "url": "https://github.com/advisories/GHSA-7w5x-hrqm-74c2",
+        "title": "Identrail Cross-tenant IDOR: Client-supplied GitHub App installation_id is bound to the caller's workspace without ownership verification",
+        "url": "https://github.com/advisories/GHSA-cp3j-m783-3ph5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-09T18:07:11.000Z",
-        "summary": "### Summary `parse()` can be forced into an infinite loop when a value inside an array or inline table is followed by a comment that has no trailing newline (i.e. the comment \"ends\" the document). The library fails to exit an internal loop…",
-        "badge": "CVE-2026-85730",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-09T23:52:14.000Z",
+        "summary": "## Summary identrail's GitHub App connection-completion endpoint binds a fully client-supplied `installation_id` to the caller's workspace without verifying that the installation belongs to, or was installed by, the workspace that initiate…",
+        "badge": "CVE-2026-59185",
+        "signal": "HIGH · CVSS 8.5"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -88,14 +88,14 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-dd60b514c8738d40",
+        "id": "cn-baidu-323ab8c626f4b247",
         "category": "cn",
-        "title": "苹果秋季发布会",
-        "url": "https://www.baidu.com/s?wd=%E8%8B%B9%E6%9E%9C%E7%A7%8B%E5%AD%A3%E5%8F%91%E5%B8%83%E4%BC%9A&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "苹果 牙膏挤“爆”",
+        "url": "https://www.baidu.com/s?wd=%E8%8B%B9%E6%9E%9C+%E7%89%99%E8%86%8F%E6%8C%A4%E2%80%9C%E7%88%86%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月10日，直击苹果秋季发布会，见证iPhone折叠屏到底是夯是拉，全程陪看直播2026苹果秋季发布会。",
+        "summary": "9月10日凌晨，苹果举行2026秋季发布会，发布首款折叠屏iPhone Duo及iPhone18 Pro系列等新品。iPhone Duo为史上最薄iPhone，起售价15999元。iPhone18 Pro系列搭载2纳米A20 Pro芯片，起售价9999元。有媒体称苹果这次牙膏要挤“爆”了。",
         "badge": "热搜",
-        "signal": "7,807,987 热度"
+        "signal": "7,809,355 热度"
       },
       {
         "id": "cisa-kev-cve-2025-25249",
@@ -118,44 +118,44 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49630253",
+        "id": "hn-49626190",
         "category": "dev",
-        "title": "AirPods 5",
-        "url": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/",
+        "title": "Shopify acquires Tailwind",
+        "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T17:39:24.000Z",
+        "publishedAt": "2026-09-09T13:27:11.000Z",
         "badge": "HN",
-        "signal": "287 分 · 231 评论"
+        "signal": "857 分 · 342 评论"
       },
       {
-        "id": "cn-item-0310459a27ca60f1",
+        "id": "cn-item-e91b3888cfee8d50",
         "category": "cn",
-        "title": "孙绍骋被“双开” 曾任内蒙古自治区党委书记等职",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-09/10693549.shtml",
+        "title": "外媒：伊朗多地传出爆炸声",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-10/10693671.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-09T13:09:40.000Z",
-        "summary": "中新社北京9月9日电 中央纪委国家监委9日通报，第二十届中央委员、十四届全国人大社会建设委员会原副主任委员孙绍骋严重违纪违法被开除党籍和公职。",
+        "publishedAt": "2026-09-09T22:52:56.000Z",
+        "summary": "中新网9月10日电 据卡塔尔半岛电视台援引伊朗媒体报道，当地时间9月10日凌晨，伊朗格什姆岛传出巨大爆炸声。此外，锡里克和米纳卜的沿海地区也传出了爆炸声。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-2j8r-3c22-8565",
+        "id": "github-advisory-ghsa-g72f-jw3w-mgh7",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-69522 – .NET and Visual Studio Remote Code Execution Vulnerability",
-        "url": "https://github.com/advisories/GHSA-2j8r-3c22-8565",
+        "title": "@openhop/server: Path Traversal in Flow ID File Operations",
+        "url": "https://github.com/advisories/GHSA-g72f-jw3w-mgh7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-09T16:04:04.000Z",
-        "summary": "# Microsoft Security Advisory CVE-2026-69522 – .NET and Visual Studio Remote Code Execution Vulnerability ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.DiaSymRe…",
-        "badge": "CVE-2026-69522",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-09T23:51:59.000Z",
+        "summary": "## Path Traversal in Flow ID File Operations ### Summary `@openhop/server` passes unsanitized HTTP route parameters directly to `path.join()` when constructing filesystem paths for flow YAML files. An unauthenticated attacker who can reach…",
+        "badge": "CVE-2026-59179",
+        "signal": "HIGH · CVSS 8.3"
       },
       {
-        "id": "ai-openai-503e9c2326e78f3e",
+        "id": "ai-openai-a7c183de5112de47",
         "category": "ai",
-        "title": "How GPT-5.6 Sol helps run quantum computing experiments",
-        "url": "https://openai.com/index/codex-quantum-computing-experiments",
+        "title": "The AI policy window is open. We need to act.",
+        "url": "https://openai.com/index/ai-policy-window",
         "source": "OpenAI",
-        "publishedAt": "2026-09-08T17:00:00.000Z",
-        "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
+        "publishedAt": "2026-09-09T13:00:00.000Z",
+        "summary": "Chris Lehane argues that stronger AI capabilities require stronger safety evidence, shared standards, and durable policy action while the policy window remains open.",
         "badge": "OpenAI"
       },
       {
@@ -170,13 +170,13 @@
         "signal": "8 回复"
       },
       {
-        "id": "cn-it-57f57a008204440b",
+        "id": "cn-it-517e3c3fee350756",
         "category": "cn",
-        "title": "苹果 iPhone 18 Pro / Max 首用 6 叶片可变光圈结构，相机 App 引入 Pro 级控制",
-        "url": "https://www.ithome.com/1/000/547.htm",
+        "title": "OpenAI 悄然收紧 ChatGPT 广告政策，禁止 Adobe 等竞品投放 AI 生图与音频广告",
+        "url": "https://www.ithome.com/1/000/568.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T21:22:18.000Z",
-        "summary": "IT之家 9 月 10 日消息，苹果今天（9 月 10 日）更新官方文档，宣布在 iPhone 18 Pro 和 iPhone 18 Pro Max 两款旗舰中，引入 Pro 级相机控制体验， 让用户在原生相机应用中直接控制更多拍摄参数。 用户可手动设定光圈、快门速度和白平衡，也可借助实时直方图判断画面曝光。相机应用还能根据景深和环境光线自动调整光圈。 IT之家附上官方介绍如下： iPhone 18 Pro 和 iPhone 18 Pro Max 的相机 app 提供了 P…",
+        "publishedAt": "2026-09-10T00:09:39.000Z",
+        "summary": "IT之家 9 月 10 日消息，OpenAI 最近刚刚推出了 ChatGPT Images 2.5 图像生成模型以及 ChatGPT Live 语音功能。 据 The Information 今日报道，OpenAI 近期悄然更新了其广告政策，禁止竞争对手在 ChatGPT 平台内投放特定生成式 AI 产品类别的广告，尤其是针对图像和音频生成工具的商业广告。 OpenAI 已通知部分商业合作伙伴，将不再接受仅图像生成和语音生成类产品的广告活动审批。这项新规此前并未对外披露，也…",
         "badge": "IT之家"
       },
       {
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49626190",
+        "id": "hn-49614280",
         "category": "dev",
-        "title": "Shopify acquires Tailwind",
-        "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
+        "title": "What do Visa and Mastercard do? An intro to card networks",
+        "url": "https://tautology.town/2026/06/01/card-networks.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T13:27:11.000Z",
+        "publishedAt": "2026-09-08T18:11:05.000Z",
         "badge": "HN",
-        "signal": "783 分 · 317 评论"
+        "signal": "330 分 · 206 评论"
       },
       {
         "id": "cn-baidu-0c2a973c73411c2a",
@@ -216,17 +216,17 @@
         "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87%E6%AD%A2%E6%AD%A5%E7%BE%8E%E7%BD%91%E5%85%AB%E5%BC%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,713,891 热度"
+        "signal": "7,714,219 热度"
       },
       {
-        "id": "github-advisory-ghsa-527h-q9f6-p7qx",
+        "id": "github-advisory-ghsa-vv4j-m4vr-f3g6",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-69439 – .NET and Visual Studio Elevation of Privilege Vulnerability",
-        "url": "https://github.com/advisories/GHSA-527h-q9f6-p7qx",
+        "title": "ESPHome Device Builder Dashboard: Unauthenticated dashboard access via the HA add-on ingress site bound to all interfaces",
+        "url": "https://github.com/advisories/GHSA-vv4j-m4vr-f3g6",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-09T16:03:46.000Z",
-        "summary": "# Microsoft Security Advisory CVE-2026-69439 – .NET and Visual Studio Elevation of Privilege Vulnerability ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.DiaSymR…",
-        "badge": "CVE-2026-69439",
+        "publishedAt": "2026-09-09T23:51:25.000Z",
+        "summary": "## Summary On the Home Assistant add-on, the dashboard serves a trusted ingress site that skips authentication because the supervisor authenticates the request upstream. That site was binding `0.0.0.0`. The add-on runs in host network mode…",
+        "badge": "CVE-2026-59177",
         "signal": "HIGH · CVSS 8.8"
       },
       {
@@ -249,13 +249,13 @@
         "signal": "11 回复"
       },
       {
-        "id": "cn-item-4d3302121044543a",
+        "id": "cn-item-d6cfe6a2ca9e9413",
         "category": "cn",
-        "title": "“梅姨”真人照首次曝光，系2010年登记照",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-09/10693526.shtml",
+        "title": "美伊战事何时结束？特朗普给出时间表",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-10/10693658.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-09T12:23:33.000Z",
-        "summary": "澎湃新闻记者 彭苣",
+        "publishedAt": "2026-09-09T22:29:59.000Z",
+        "summary": "中新网9月10日电 据美国有线电视新闻网(CNN)报道，当地时间9日，美国总统特朗普表示，他认为美国同伊朗的战事将在11月美国国会中期选举完成后“立即结束”。",
         "badge": "中新网要闻"
       },
       {
@@ -270,45 +270,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-12"
       },
       {
-        "id": "ai-openai-a00fc889a2dd293b",
+        "id": "ai-openai-333ccaae81484d3a",
         "category": "ai",
-        "title": "The Work Now Within Reach",
-        "url": "https://openai.com/index/the-work-now-within-reach",
+        "title": "GPT-6 Astra: The next generation in intelligence for work",
+        "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
         "source": "OpenAI",
-        "publishedAt": "2026-09-08T13:00:00.000Z",
-        "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
+        "publishedAt": "2026-09-09T11:00:00.000Z",
+        "summary": "Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49614280",
+        "id": "hn-49630253",
         "category": "dev",
-        "title": "What do Visa and Mastercard do? An intro to card networks",
-        "url": "https://tautology.town/2026/06/01/card-networks.html",
+        "title": "AirPods 5",
+        "url": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T18:11:05.000Z",
+        "publishedAt": "2026-09-09T17:39:24.000Z",
         "badge": "HN",
-        "signal": "243 分 · 144 评论"
+        "signal": "353 分 · 293 评论"
       },
       {
-        "id": "cn-it-f3222bbe4853ea7f",
+        "id": "cn-it-20ffa20b8b0d7580",
         "category": "cn",
-        "title": "未适配应用也能运行：苹果首款折叠手机 iPhone Duo 提供 3 种兼容模式",
-        "url": "https://www.ithome.com/1/000/546.htm",
+        "title": "IT早报 0910：苹果发首款折叠屏 iPhone Duo、iPhone 18 Pro 系列；老款 iPhone 集体涨价；曝 DeepSeek 备战科创板 IPO；唐家三少批 AI 洗稿...",
+        "url": "https://www.ithome.com/1/000/567.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T21:10:58.000Z",
-        "summary": "IT之家 9 月 10 日消息，科技媒体 9to5Mac 今天（9 月 10 日）发布博文，报道称在面向开发者的技术讲解中， 苹果公司披露了其首款折叠手机 iPhone Duo 的应用兼容机制。 IT之家援引博文介绍，该兼容机制分别面向 iOS 26、iOS 27.0 和 iOS 27.1 三个版本提供 3 种模式，其中 iOS 27.1 预估 10 月发布，随着 iPhone Duo 上市推出。 面向 iOS 26 系统的应用采用默认兼容模式，系统将单一应用视图放入黑色背…",
+        "publishedAt": "2026-09-10T00:02:05.000Z",
+        "summary": "“IT早报”时间，大家好，现在是 2026 年 9 月 10 日星期四，今天的重要科技资讯有： 1. 苹果 iPhone 18 Pro 系列发布：新增可变光圈技术、首发 2 纳米制程工艺 A20 Pro 芯片，9999 元起 全新 iPhone 18 Pro 系列提供深、银、冰川蓝和勃艮第酒红色 4 种配色，外观与 iPhone 17 Pro 接近、首发 A20 Pro 芯片，在智能能力、性能、电池和摄像头方面迎来升级，定位为围绕用户个人需求提供帮助的 AI 手机，起售价分…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-63gh-g2x5-x69v",
+        "id": "github-advisory-ghsa-wcjj-9m6g-2fr2",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-71328 – .NET and Visual Studio Remote Code Execution Vulnerability",
-        "url": "https://github.com/advisories/GHSA-63gh-g2x5-x69v",
+        "title": "functype-mcp-server: MCP `set_functype_version` Package Alias RCE via Unsanitized pnpm install + Dynamic Import",
+        "url": "https://github.com/advisories/GHSA-wcjj-9m6g-2fr2",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-09T16:01:52.000Z",
-        "summary": "# Microsoft Security Advisory CVE-2026-71328 – .NET and Visual Studio Remote Code Execution Vulnerability ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.DiaSymRe…",
-        "badge": "CVE-2026-71328",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-09T23:49:20.000Z",
+        "summary": "## MCP `set_functype_version` Package Alias RCE via Unsanitized pnpm install + Dynamic Import ### Summary The `set_functype_version` MCP tool in `functype-mcp-server` accepts an unconstrained `version` string, interpolates it directly into…",
+        "badge": "CVE-2026-59176",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
         "id": "ai-google-deepmind-d721843382f3485e",
@@ -338,7 +338,7 @@
         "source": "百度热搜",
         "summary": "9月8日，第二十六届中国国际投资贸易洽谈会在福建厦门开幕，全面宣介中国对外开放政策、超大规模市场优势和产业创新发展机遇，为中国链接世界、世界共享中国式现代化发展机遇架设桥梁纽带。",
         "badge": "热搜",
-        "signal": "7,619,472 热度"
+        "signal": "7,617,314 热度"
       },
       {
         "id": "cisa-kev-cve-2026-75650",
@@ -368,37 +368,37 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-09T17:33:20.000Z",
         "badge": "HN",
-        "signal": "196 分 · 175 评论"
+        "signal": "253 分 · 262 评论"
       },
       {
-        "id": "cn-item-8f2af6a8fbbc3103",
+        "id": "cn-item-3a254766e9f3fa69",
         "category": "cn",
-        "title": "女子指控被4岁男童摸屁股：别用所谓的维权透支孩子！",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-09/10693505.shtml",
+        "title": "24岁吃播博主离世：流量的尽头不是爆款，是身体的极限",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-09/10693641.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-09T12:01:45.000Z",
-        "summary": "比起成年人所谓的情绪内耗，幼童的心理健康、童年安全感，才是这场风波最不该被透支的。",
+        "publishedAt": "2026-09-09T14:32:23.000Z",
+        "summary": "中新网北京9月9日电(记者 王诗尧)24岁，百万粉丝，低钾住院，不幸离世——当这些关键词汇集在“干饭莹莹”身上时，我们看到的不仅是一位年轻生命的猝然凋零，更是一个畸形行业积弊已久的又一次血腥爆发。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-2x7j-588g-ccc2",
+        "id": "github-advisory-ghsa-m835-3cm9-rggg",
         "category": "security",
-        "title": "Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list",
-        "url": "https://github.com/advisories/GHSA-2x7j-588g-ccc2",
+        "title": "Joker linter executed project-local .jokerd/linter.* files during linting",
+        "url": "https://github.com/advisories/GHSA-m835-3cm9-rggg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T21:33:17.000Z",
-        "summary": "### Summary Nodemailer's address parser (`lib/addressparser/index.js`) parses a list of comma‑separated addresses in **quadratic time — O(n²)** in the number of addresses. A single crafted address string (e.g. a `To`, `Cc`, `Bcc`, `From`, …",
-        "badge": "GHSA-2X7J-588G-CCC2",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-09T23:48:46.000Z",
+        "summary": "## Impact In Joker versions before 1.8.2, `joker --lint ` located a `.jokerd/` directory by walking up from the linted file and executed matching `linter.*` files from that directory before linting. Because these files are executable Joker…",
+        "badge": "CVE-2026-59172",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
-        "id": "ai-openai-1dcea8b0f8acab14",
+        "id": "ai-openai-503e9c2326e78f3e",
         "category": "ai",
-        "title": "Introducing ChatGPT Images 2.5",
-        "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+        "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+        "url": "https://openai.com/index/codex-quantum-computing-experiments",
         "source": "OpenAI",
-        "publishedAt": "2026-09-08T11:30:00.000Z",
-        "summary": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
+        "publishedAt": "2026-09-08T17:00:00.000Z",
+        "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
         "badge": "OpenAI"
       },
       {
@@ -413,13 +413,13 @@
         "signal": "14 回复"
       },
       {
-        "id": "cn-it-fcdf0c5aa3d47e90",
+        "id": "cn-it-56162024292e2e70",
         "category": "cn",
-        "title": "证明照片不是 AI：苹果 iPhone 18 Pro 支持像素级标注真实图像数据，但又和国内无关",
-        "url": "https://www.ithome.com/1/000/544.htm",
+        "title": "苹果 iPhone 18 Pro / Max 仅限 eSIM 地区共 12 个，与上代保持一致",
+        "url": "https://www.ithome.com/1/000/566.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-09T21:03:15.000Z",
-        "summary": "IT之家 9 月 10 日消息，在 AI 照片近乎以假乱真的年代，苹果为最新发布的 iPhone 18 Pro 系列手机带来一项标注真实照片功能。 苹果在今日的发布会上宣布推出“ Apple 参考图像 ”，iPhone 18 Pro 用户可通过该技术证明所拍照片的原真性。 苹果官方介绍称，Apple 参考图像尽可能从最安全的地方入手， 全新主摄会在像素层面安全地标注照片数据 ，专用云计算则会将这些已标注的数据转换为不可更改的图像，保存在照片 App 中供用户查看。 参考照片…",
+        "publishedAt": "2026-09-09T23:55:40.000Z",
+        "summary": "IT之家 9 月 10 日消息，苹果官网信息显示，iPhone 18 Pro 和 iPhone 18 Pro Max 在特定国家和地区延续了仅支持 eSIM、无物理 SIM 卡槽的设计。 根据苹果官方列表，这些市场地区包括： 巴林 加拿大 关岛 日本 科威特 墨西哥 阿曼 卡塔尔 沙特阿拉伯 阿联酋 美国 美属维尔京群岛 这一名单与去年的 iPhone 17 Pro 系列完全一致。IT之家注意到，苹果自 2022 年 iPhone 14 系列起开始在美国推行仅 eSIM 的…",
         "badge": "IT之家"
       },
       {
@@ -443,34 +443,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49630566",
+        "id": "hn-49629886",
         "category": "dev",
-        "title": "Apple Watch Series 12",
-        "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+        "title": "Growing proof that autonomous cars save lives",
+        "url": "https://spectrum.ieee.org/are-self-driving-cars-safe",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T17:56:17.000Z",
+        "publishedAt": "2026-09-09T17:14:59.000Z",
         "badge": "HN",
-        "signal": "160 分 · 172 评论"
+        "signal": "180 分 · 298 评论"
       },
       {
-        "id": "cn-baidu-8517fc3b9545d6fb",
+        "id": "cn-baidu-9c493bf90837ca3b",
         "category": "cn",
-        "title": "中国女篮3分险胜 晋级世界杯八强",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%A5%B3%E7%AF%AE3%E5%88%86%E9%99%A9%E8%83%9C+%E6%99%8B%E7%BA%A7%E4%B8%96%E7%95%8C%E6%9D%AF%E5%85%AB%E5%BC%BA&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "iPhone 18 Pro涨价",
+        "url": "https://www.baidu.com/s?wd=iPhone+18+Pro%E6%B6%A8%E4%BB%B7&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "9月10日消息，苹果2026秋季发布会后正式公布iPhone 18 Pro系列国行售价。iPhone 18 Pro起售价9999元，Pro Max起售价10999元。对比上代iPhone 17 Pro系列，各存储档位均涨价，入门存储直接上涨1000元。",
         "badge": "热搜",
-        "signal": "7,521,141 热度"
+        "signal": "7,523,962 热度"
       },
       {
-        "id": "github-advisory-ghsa-2q42-4q24-7rgv",
+        "id": "github-advisory-ghsa-hxjg-93wc-h8p8",
         "category": "security",
-        "title": "OpenAPI3 version value escapes `emitterOutputDir` and overwrites YAML/JSON outside the output tree",
-        "url": "https://github.com/advisories/GHSA-2q42-4q24-7rgv",
+        "title": "Komari: Management Interface CSRF",
+        "url": "https://github.com/advisories/GHSA-hxjg-93wc-h8p8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-08T21:31:09.000Z",
-        "summary": "### Summary The `@typespec/openapi3` emitter retains the value of a `@versioned` enum member and interpolates it into the output filename as `{version}` without sanitizing path separators or traversal components. The completed path reaches…",
-        "badge": "GHSA-2Q42-4Q24-7RGV",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-09-09T23:48:31.000Z",
+        "summary": "# Vulnerability Overview The `session_token` cookie is set **without** the `SameSite` or `Secure` attributes (`login.go:68`). All `/api/admin/` management endpoints rely solely on this cookie for authentication, with **no CSRF token or Ori…",
+        "badge": "GHSA-HXJG-93WC-H8P8",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-hugging-face-a139f80b159295ad",
@@ -507,8 +508,8 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 34309,
-        "starsToday": 4624
+        "stars": 34551,
+        "starsToday": 4650
       },
       {
         "id": "github-f4d97b4a966da91f",
@@ -517,8 +518,8 @@
         "url": "https://github.com/Tencent/teamai-cli",
         "description": "Make Every Team AI Native",
         "language": "TypeScript",
-        "stars": 2908,
-        "starsToday": 563
+        "stars": 2962,
+        "starsToday": 556
       },
       {
         "id": "github-4251a228ae407247",
@@ -527,8 +528,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 283976,
-        "starsToday": 690
+        "stars": 284015,
+        "starsToday": 688
       },
       {
         "id": "github-da5e5ef81aa4e531",
@@ -537,8 +538,8 @@
         "url": "https://github.com/pascalorg/editor",
         "description": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
         "language": "TypeScript",
-        "stars": 22855,
-        "starsToday": 171
+        "stars": 22904,
+        "starsToday": 107
       },
       {
         "id": "github-97fd47923097e03f",
@@ -547,8 +548,8 @@
         "url": "https://github.com/earthtojake/text-to-cad",
         "description": "A library of agent skills for CAD, CAE and CAM",
         "language": "Python",
-        "stars": 15000,
-        "starsToday": 97
+        "stars": 15024,
+        "starsToday": 124
       },
       {
         "id": "github-231c4b191ae0f4ae",
@@ -557,8 +558,8 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 36477,
-        "starsToday": 2286
+        "stars": 36564,
+        "starsToday": 2249
       },
       {
         "id": "github-317caa29ffa8b401",
@@ -567,7 +568,7 @@
         "url": "https://github.com/TauricResearch/TradingAgents",
         "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "language": "Python",
-        "stars": 103876,
+        "stars": 103935,
         "starsToday": 367
       },
       {
@@ -576,8 +577,8 @@
         "name": "liquidslr/system-design-notes",
         "url": "https://github.com/liquidslr/system-design-notes",
         "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-        "stars": 17933,
-        "starsToday": 910
+        "stars": 17981,
+        "starsToday": 1397
       },
       {
         "id": "github-2592f1e12fb863f8",
@@ -586,8 +587,8 @@
         "url": "https://github.com/openai/plugins",
         "description": "OpenAI Plugins",
         "language": "JavaScript",
-        "stars": 6158,
-        "starsToday": 505
+        "stars": 6191,
+        "starsToday": 498
       },
       {
         "id": "github-018f3800293e8d29",
@@ -596,10 +597,10 @@
         "url": "https://github.com/freestylefly/awesome-gpt-image-2",
         "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
         "language": "JavaScript",
-        "stars": 29978,
-        "starsToday": 612
+        "stars": 30017,
+        "starsToday": 705
       }
     ],
-    "updatedAt": "2026-09-09T21:42:40.092Z"
+    "updatedAt": "2026-09-10T00:15:50.648Z"
   }
 }
