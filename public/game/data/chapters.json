@@ -1,0 +1,101 @@
+[
+  {
+    "id": "volume_one",
+    "title": "郓城风起",
+    "number": 1,
+    "entry": "yuncheng",
+    "condition": null,
+    "completeFlag": "volume_complete",
+    "requirements": [
+      {
+        "label": "景阳冈虎患已平",
+        "condition": {
+          "flag": "tiger_complete"
+        }
+      },
+      {
+        "label": "智取生辰纲",
+        "condition": {
+          "flag": "huangni_complete"
+        }
+      },
+      {
+        "label": "至少三名正式好汉",
+        "condition": {
+          "ownedCount": 3
+        }
+      },
+      {
+        "label": "完成十次历练",
+        "condition": {
+          "stat": "clears",
+          "count": 10
+        }
+      },
+      {
+        "label": "威望达到一百五十",
+        "condition": {
+          "prestige": 150
+        }
+      }
+    ],
+    "ending": "【江湖风起】第一卷《郓城风起》完。你与好汉在梁山脚下立起初级据点。渡口来了一封东京书信，第二卷《逼上梁山》的路已打开。",
+    "effects": [],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_two",
+    "title": "逼上梁山",
+    "number": 2,
+    "entry": "dongjing",
+    "condition": {
+      "flag": "volume_complete"
+    },
+    "completeFlag": "volume_two_complete",
+    "requirements": [
+      {
+        "label": "林冲走过风雪，来到梁山渡口",
+        "condition": {
+          "flag": "lin_departure"
+        }
+      },
+      {
+        "label": "鲁智深护友脱险",
+        "condition": {
+          "flag": "lu_complete"
+        }
+      },
+      {
+        "label": "柴进庄托书相识",
+        "condition": {
+          "flag": "chai_refuge"
+        }
+      },
+      {
+        "label": "杨志护送行旅",
+        "condition": {
+          "flag": "yang_complete"
+        }
+      }
+    ],
+    "ending": "【逼上梁山】忍让未换来生路，风雪却让人看清了归处。林冲望向水泊，鲁智深的禅杖声渐远，柴进与杨志各有一番叮嘱。第二卷完。下一卷《梁山初聚》将把这处落脚地建成真正的山寨。",
+    "effects": [
+      {
+        "type": "currency",
+        "id": "prestige",
+        "amount": 50
+      },
+      {
+        "type": "currency",
+        "id": "merit",
+        "amount": 60
+      },
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 2
+      }
+    ],
+    "baseLevel": 1
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "name": "baize-shuihu-save-box",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "observability": {"enabled": false},
+  "vars": {"ALLOWED_ORIGINS": "https://baizeone.top"},
+  "d1_databases": [{"binding": "DB", "database_name": "baize-shuihu-saves", "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"}]
+}

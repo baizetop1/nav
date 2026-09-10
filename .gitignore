@@ -10,3 +10,8 @@ legacy_backup
 .env
 .env.*
 !.env.example
+
+# Local Cloudflare state and secrets must never be published.
+.wrangler/
+.dev.vars
+.dev.vars.*

@@ -664,7 +664,7 @@ function App() {
     && !isCommandPaletteOpen
     && !restOpen;
   const commandActions: CommandPaletteAction[] = [
-    { id: 'shuihu', title: '打开白泽水浒', description: '郓城风起 · 独立本机存档的文字江湖', keywords: ['game', '游戏', '水浒', '梁山', '寨主'], icon: 'study', run: () => { window.open(`${import.meta.env.BASE_URL}game/`, '_blank', 'noopener,noreferrer'); } },
+    { id: 'shuihu', title: '打开白泽水浒', description: '两卷江湖 · 梁山存档匣 0.3 · 20个本机位置', keywords: ['game', '游戏', '水浒', '梁山', '寨主', '林冲', '鲁智深'], icon: 'study', run: () => { window.open(`${import.meta.env.BASE_URL}game/`, '_blank', 'noopener,noreferrer'); } },
     { id: 'rest', title: '休息一下', description: '在多幅动态风景间轮播，回来继续学习', keywords: ['rest', 'break', '休息', '放松', '动画', '泛舟', '轮播', '鹈鹕', '骑行'], icon: 'relax', run: openRest },
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
     { id: 'quick-capture', title: '快速记录', description: '立即写入本机 Inbox', keywords: ['capture', '记录', '收件箱', '+'], icon: 'add', run: openQuickCapture },

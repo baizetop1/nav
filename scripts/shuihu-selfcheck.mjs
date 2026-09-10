@@ -3,7 +3,8 @@ import { readFileSync } from 'node:fs';
 import { prepareData, collections } from '../public/game/js/data.js';
 import { dispatch, newGame, refresh } from '../public/game/js/core.js';
 import { attributes, recruit, rollOrdinary } from '../public/game/js/hero.js';
-import { damage, addStatus, startBattle, takeTurn } from '../public/game/js/battle.js';
+import { damage, addStatus, startBattle, advanceBattle, useBattleItem, retreatBattle } from '../public/game/js/battle.js';
+import { battleStep } from './shuihu-battle-test-helpers.mjs';
 import { meets, exits } from '../public/game/js/map.js';
 import { SaveStore, SaveConflict, SAVE_KEY, BACKUP_KEY, parseSave, validateSave } from '../public/game/js/save.js';
 import { random } from '../public/game/js/utils.js';
@@ -34,7 +35,7 @@ checkSchema(raw,schema);
 const badSchemaData=structuredClone(raw);badSchemaData.heroes[0].star='five';assert.throws(()=>checkSchema(badSchemaData,schema));
 console.log('Shuihu: JSON Schema structural contract passed.');
 const data=prepareData(raw), now=new Date(2026,8,9,10).getTime();
-for(const [kind,count] of Object.entries({heroes:12,maps:30,items:50,equipments:20,skills:30,events:20,dungeons:5}))assert.equal(data[kind].length,count);
+for(const [kind,count] of Object.entries({heroes:14,maps:46,items:55,equipments:20,skills:34,events:24,dungeons:7}))assert.equal(data[kind].length,count);
 assert.equal(data.quests.filter(q=>q.type==='daily').length,12);
 assert.equal(data.heroes.some(h=>h.id==='chaogai'),false);
 const bad=structuredClone(raw);bad.maps[0].links[0].target='missing';assert.throws(()=>prepareData(bad),/引用不存在/);
@@ -50,17 +51,15 @@ go('yuncheng');go('gate');assert.ok(exits(state,data).some(l=>l.target==='dongxi
 act('story',{id:'wusong_story'});act('story',{id:'wusong_story',choice:'introduce'});assert.equal(state.location,'path');assert.equal(state.heroes.wusong.status,'known');assert.equal(state.team.includes('wusong'),false);
 go('drywood');act('mapAction',{id:'tracks'});go('path');go('tracks');act('mapAction',{id:'follow'});go('deepforest');act('story',{id:'wusong_story',choice:'battle'});
 assert.equal(state.battle.guest,true);assert.equal(state.battle.team[0].id,'wusong');
-// Exercise real tactical commands, serialize at every turn, and never auto-recruit the guest.
-for(let i=0;i<100&&state.battle&&!state.battle.outcome;i++){
-  const b=state.battle,unit=b.team[0];
-  const command=unit.hp<unit.maxHp*.35&&state.inventory.jinchuangyao?'item':(b.round-1)%3===0?'guard':(b.round-1)%3===1?'attack':'scheme';
-  act('turn',{id:command,item:'jinchuangyao'});state=parseSave(JSON.stringify(state),data,now);
+// Exercise automatic attacks plus manually selected skills/items, serializing each time slice.
+for(let i=0;i<400&&state.battle&&!state.battle.outcome;i++){
+  state=battleStep(data,state);state=parseSave(JSON.stringify(state),data,now);
 }
 assert.equal(state.battle.outcome,'victory',state.battle.log.join('\n'));
 act('finishBattle');act('story',{id:'wusong_story',choice:'finish'});assert.equal(state.inventory.wusong_token,1);assert.equal(state.heroes.wusong.status,'known');assert.equal(state.progress.flags.tiger_complete,true);
 assert.throws(()=>act('story',{id:'wusong_story',choice:'finish'}));assert.equal(state.inventory.wusong_token,1);
 go('tracks');go('path');go('jingyang');go('road');go('gate');go('dongxi');go('zhuang');act('story',{id:'seven_stars_story'});act('story',{id:'seven_stars_story',choice:'join'});act('story',{id:'seven_stars_story',choice:'return'});act('story',{id:'seven_stars_story',choice:'pledge'});
-assert.equal(state.progress.flags.seven_stars,true);assert.equal(state.heroes.wuyong.status,'known');assert.equal(Object.keys(state.heroes).length,12);
+assert.equal(state.progress.flags.seven_stars,true);assert.equal(state.heroes.wuyong.status,'known');assert.equal(Object.keys(state.heroes).length,14);
 go('huangni');go('ridge');act('startScheme');for(let i=0;i<3&&!state.scheme.outcome;i++)act('scheme',{id:'early'});assert.equal(state.scheme.outcome,'failure');act('finishScheme');assert.equal(state.inventory.wuyong_token||0,0);
 act('startScheme');for(const id of ['wait','original','probe','original','wait','finish'])if(!state.scheme.outcome)act('scheme',{id});assert.equal(state.scheme.outcome,'success');act('finishScheme');assert.equal(state.inventory.wuyong_token,1);assert.equal(state.inventory.gongsunsheng_token,1);assert.throws(()=>act('startScheme'));
 const storyline=structuredClone(state);
@@ -80,14 +79,14 @@ console.log('Shuihu: 100000 ordinary invitations',stars,'and all pity/duplicate/
 assert.equal(damage(100,60,1,1,false),70);assert.equal(damage(100,60,1,1,true),105);assert.equal(damage(1,500,1),1);
 const combat=newGame(data,now,505);combat.heroes.wusong.status='owned';combat.heroes.wusong.level=20;combat.team=['wusong'];
 startBattle(combat,data,{enemies:['bandit_chief'],context:{type:'event',id:'road_bandits'}});
-const hp=combat.battle.team[0].hp;takeTurn(combat,data,'guard');assert.ok(combat.battle.team[0].hp<hp,'Enemies must still attack when player guards');assert.ok(combat.battle.team[0].rage>=20);
-addStatus(combat.battle.team[0],{id:'poison',turns:2,value:35});addStatus(combat.battle.team[0],{id:'poison',turns:2,value:35});assert.equal(combat.battle.team[0].statuses.length,2);
-takeTurn(combat,data,'item','jiedudan');assert.equal(combat.battle.team[0].statuses.some(s=>s.id==='poison'),false);
-addStatus(combat.battle.team[0],{id:'stun',turns:1,value:0});takeTurn(combat,data,'attack');assert.ok(combat.battle.log.some(t=>t.includes('无法行动')));assert.equal(combat.battle.team[0].statuses.some(s=>s.id==='stun'),false);
-takeTurn(combat,data,'retreat');assert.equal(combat.battle.outcome,'retreat');assert.throws(()=>takeTurn(combat,data,'attack'));
+const hp=combat.battle.team[0].hp;advanceBattle(combat,data,1000);advanceBattle(combat,data,1000);assert.ok(combat.battle.team[0].hp<hp,'Enemies attack without a player command');assert.ok(combat.battle.team[0].rage>=20);
+addStatus(combat.battle.team[0],{id:'poison',turns:2,value:35},combat.battle.elapsed);addStatus(combat.battle.team[0],{id:'poison',turns:2,value:35},combat.battle.elapsed);assert.equal(combat.battle.team[0].statuses.length,2);
+useBattleItem(combat,data,'jiedudan');assert.equal(combat.battle.team[0].statuses.some(s=>s.id==='poison'),false);
+addStatus(combat.battle.team[0],{id:'stun',turns:1,value:0},combat.battle.elapsed);advanceBattle(combat,data,1000);advanceBattle(combat,data,1000);assert.ok(combat.battle.log.some(t=>t.includes('无法行动')));assert.equal(combat.battle.team[0].statuses.some(s=>s.id==='stun'),false);
+retreatBattle(combat);assert.equal(combat.battle.outcome,'retreat');assert.throws(()=>useBattleItem(combat,data,'jinchuangyao'));
 state=structuredClone(storyline);state.location='forge';act('equip',{id:state.equipment[0].uid,hero:'baisheng'});const beforeAtk=attributes(state,'baisheng',data).attack;act('strengthen',{id:state.equipment[0].uid});assert.ok(attributes(state,'baisheng',data).attack>beforeAtk);assert.throws(()=>act('dismantle',{id:state.equipment[0].uid}));act('equip',{id:state.equipment[0].uid,hero:null});act('dismantle',{id:state.equipment[0].uid});
 state.inventory.wusong_token=10;act('craftOrder',{id:'wusong'});assert.equal(state.inventory.wusong_token,0);assert.equal(state.inventory.wusong_order,1);assert.throws(()=>act('craftOrder',{id:'wusong'}));
-console.log('Shuihu: damage, defend, poison stacking, stun, medicine, retreat, equipment and token costs passed.');
+console.log('Shuihu: damage, automatic attacks, poison stacking, timed stun, medicine, retreat, equipment and token costs passed.');
 
 const daily=newGame(data,now,31415), ids=[...daily.daily.ids];refresh(daily,data,now+60000);assert.deepEqual(daily.daily.ids,ids);
 daily.player.stamina=50;daily.lastRegen=now;refresh(daily,data,now+600000);assert.equal(daily.player.stamina,51);refresh(daily,data,now+600000*200);assert.equal(daily.player.stamina,100);
@@ -97,7 +96,7 @@ const store=new SaveStore(storage,data);assert.equal(store.load().status,'empty'
 assert.deepEqual(parseSave(JSON.stringify(storyline),data),storyline);
 for(const mutate of [s=>s.version=99,s=>s.heroes.wusong.level=-1,s=>s.inventory.not_real=1,s=>s.team=['wusong'],s=>s.player.silver=-1,s=>s.progress.stories.wusong_story.step='missing',s=>s.daily.claimed=['main_tiger']]){const broken=structuredClone(storyline);mutate(broken);assert.throws(()=>parseSave(JSON.stringify(broken),data));}
 assert.throws(()=>parseSave('{"version":1,"__proto__":{}}',data));assert.throws(()=>parseSave('{',data));
-const legacy=structuredClone(fresh);legacy.version=0;assert.equal(parseSave(JSON.stringify(legacy),data).version,1);
+const legacy=structuredClone(fresh);legacy.version=0;assert.equal(parseSave(JSON.stringify(legacy),data).version,2);
 const goodBackup=memory.get(BACKUP_KEY);memory.set(SAVE_KEY,'bad json');const corrupt=new SaveStore(storage,data);assert.equal(corrupt.load().status,'invalid');assert.equal(memory.get(SAVE_KEY),'bad json');corrupt.write(fresh,true);assert.equal(memory.get(BACKUP_KEY),goodBackup,'Recovery must not overwrite good backup with corrupt bytes');
 const quota=new SaveStore({getItem:()=>null,setItem(){throw new Error('quota');}},data);quota.load();assert.throws(()=>quota.write(fresh),/quota/);
 console.log('Shuihu: regeneration, daily rollover, atomic reward guards, save roundtrip/migration/validation, corruption preservation and tab conflicts passed.');
@@ -120,10 +119,7 @@ for(let day=0;day<14&&!state.progress.flags.volume_complete;day++){
   for(let run=0;run<3;run++){
     if(state.player.stamina<10)break;
     act('dungeon',{id:'jingyanggang'});
-    for(let turn=0;turn<100&&!state.battle.outcome;turn++){
-      const hurt=state.battle.team.some(u=>u.hp>0&&u.hp<u.maxHp*.35);
-      act('turn',{id:hurt&&state.inventory.jinchuangyao?'item':'attack',item:'jinchuangyao'});
-    }
+    for(let tick=0;tick<400&&!state.battle.outcome;tick++)state=battleStep(data,state);
     if(state.battle.outcome==='victory')clearCount++;
     act('finishBattle');
     while(state.inventory.exp_pill>0&&state.heroes[state.team[0]].level<20)act('use',{id:'exp_pill',hero:state.team[0]});
@@ -134,27 +130,25 @@ console.log('Shuihu: seeded whole-volume progression passed:',{clears:state.stat
 
 for(const dungeon of data.dungeons){
   let run=structuredClone(storyline);run.location=dungeon.map;run.team=['wusong','linchong','wuyong'];
+  run.progress.flags.chai_refuge=true;run.progress.flags.yang_complete=true;
   for(const id of run.team){run.heroes[id].status='owned';run.heroes[id].level=dungeon.level;}
   run.inventory.jinchuangyao=20;run.player.stamina=100;
   run=dispatch(data,run,{type:'dungeon',id:dungeon.id},now);
   if(run.scheme){for(const id of ['wait','original','probe','original','wait','finish'])if(!run.scheme.outcome)run=dispatch(data,run,{type:'scheme',id},now);assert.equal(run.scheme.outcome,'success');run=dispatch(data,run,{type:'finishScheme'},now);}
   else {
-    for(let round=0;round<100&&!run.battle.outcome;round++){
-      const hurt=run.battle.team.some(u=>u.hp>0&&u.hp<u.maxHp*.25);
-      run=dispatch(data,run,{type:'turn',id:hurt&&run.inventory.jinchuangyao?'item':round%4===2?'scheme':'attack',item:'jinchuangyao'},now);
-    }
+    for(let tick=0;tick<400&&!run.battle.outcome;tick++)run=battleStep(data,run);
     assert.equal(run.battle.outcome,'victory',dungeon.id+' recommended-level team: '+run.battle.log.slice(-10).join('\n'));
     run=dispatch(data,run,{type:'finishBattle'},now);
   }
   assert.equal(run.progress.clears[dungeon.id],1);assert.equal(run.daily.dungeons[dungeon.id],1);validateSave(run,data);
   for(let retry=0;retry<2;retry++){
     run=dispatch(data,run,{type:'dungeon',id:dungeon.id},now);
-    run=dispatch(data,run,run.scheme?{type:'scheme',id:'retreat'}:{type:'turn',id:'retreat'},now);
+    run=dispatch(data,run,run.scheme?{type:'scheme',id:'retreat'}:{type:'battleRetreat'},now);
     run=dispatch(data,run,run.scheme?{type:'finishScheme'}:{type:'finishBattle'},now);
   }
   assert.throws(()=>dispatch(data,run,{type:'dungeon',id:dungeon.id},now),/次数已用完/);assert.equal(run.progress.clears[dungeon.id],1);
 }
 const handlers={};vm.runInNewContext(readFileSync(new URL('../public/sw.js',import.meta.url),'utf8'),{URL,self:{location:{origin:'https://baizeone.top'},addEventListener:(id,fn)=>handlers[id]=fn}});
 let handled=false;handlers.fetch({request:{method:'GET',mode:'navigate',url:'https://baizeone.top/nav/game/'},respondWith(){handled=true;}});assert.equal(handled,false,'Game must not poison navigation shell cache');
-console.log('Shuihu: all five dungeons, entry/retreat daily limits, loot and navigation-cache isolation passed.');
+console.log('Shuihu: all seven dungeons, entry/retreat daily limits, loot and navigation-cache isolation passed.');
 console.log('All Shuihu MVP checks passed.');

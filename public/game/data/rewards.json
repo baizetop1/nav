@@ -122,5 +122,61 @@
         "count": 1
       }
     ]
+  },
+  {
+    "id": "chai_escort_reward",
+    "silver": 550,
+    "merit": 15,
+    "prestige": 10,
+    "exp": 300,
+    "guaranteed": {
+      "iron": 3,
+      "strength_shard": 1
+    },
+    "items": [
+      {
+        "id": "chaijin_token",
+        "rate": 0.2,
+        "count": 1
+      },
+      {
+        "id": "strength_charm",
+        "rate": 0.3,
+        "count": 1
+      },
+      {
+        "id": "exp_pill",
+        "rate": 0.5,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "qingzhou_patrol_reward",
+    "silver": 550,
+    "merit": 15,
+    "prestige": 10,
+    "exp": 300,
+    "guaranteed": {
+      "iron": 3,
+      "strength_shard": 1
+    },
+    "items": [
+      {
+        "id": "yangzhi_token",
+        "rate": 0.2,
+        "count": 1
+      },
+      {
+        "id": "strength_charm",
+        "rate": 0.3,
+        "count": 1
+      },
+      {
+        "id": "exp_pill",
+        "rate": 0.5,
+        "count": 1
+      }
+    ]
   }
 ]

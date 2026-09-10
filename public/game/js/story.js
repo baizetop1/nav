@@ -1,8 +1,8 @@
-import { count, journal, requireRule } from './utils.js';
-import { meets } from './map.js';
-import { knowHero } from './hero.js';
-import { gainItem } from './item.js';
-import { startBattle } from './battle.js';
+import { count, journal, requireRule } from './utils.js?v=0.3.0';
+import { meets } from './map.js?v=0.3.0';
+import { knowHero } from './hero.js?v=0.3.0';
+import { gainItem, pay } from './item.js?v=0.3.0';
+import { startBattle } from './battle.js?v=0.3.0';
 export function effects(state, values=[], data) {
   for(const e of values) {
     if(e.type==='flag')state.progress.flags[e.id]=true;
@@ -24,6 +24,8 @@ export function storyAction(state, data, id, choiceId) {
   const step=model.steps[progress.step];requireRule(step.map===state.location&&meets(state,step.condition),'请先探路，抵达故事中的地点。');
   if(!choiceId){journal(state,step.text);return;}
   const choice=step.choices.find(c=>c.id===choiceId);requireRule(choice,'此处没有这个选择。');
+  requireRule(meets(state,choice.condition),'尚不具备这个选择的条件。');
+  pay(state,choice.cost);
   if(choice.battle){startBattle(state,data,{...choice.battle,context:{type:'story',id,next:choice.next}});return;}
   effects(state,choice.effects,data);
   if(choice.finish){progress.status='completed';journal(state,'【'+model.title+'】已记入梁山志。');}

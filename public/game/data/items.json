@@ -444,5 +444,51 @@
     "price": 0,
     "effect": {},
     "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+  },
+  {
+    "id": "chaijin_token",
+    "name": "柴进信物",
+    "type": "token",
+    "price": 0,
+    "hero": "chaijin",
+    "need": 10,
+    "effect": {},
+    "description": "与柴进相识的凭记，十枚可合成专属招贤令。"
+  },
+  {
+    "id": "chaijin_order",
+    "name": "柴进专属招贤令",
+    "type": "special",
+    "price": 0,
+    "hero": "chaijin",
+    "effect": {},
+    "description": "已相识后在招贤馆使用，专属缘分与保底单独记录。"
+  },
+  {
+    "id": "yangzhi_token",
+    "name": "杨志信物",
+    "type": "token",
+    "price": 0,
+    "hero": "yangzhi",
+    "need": 10,
+    "effect": {},
+    "description": "与杨志相识的凭记，十枚可合成专属招贤令。"
+  },
+  {
+    "id": "yangzhi_order",
+    "name": "杨志专属招贤令",
+    "type": "special",
+    "price": 0,
+    "hero": "yangzhi",
+    "effect": {},
+    "description": "已相识后在招贤馆使用，专属缘分与保底单独记录。"
+  },
+  {
+    "id": "refuge_letter",
+    "name": "投庄书信",
+    "type": "quest",
+    "price": 0,
+    "effect": {},
+    "description": "请柴进照应林冲的书信。交到柴庄客舍可续上这段相识。"
   }
 ]

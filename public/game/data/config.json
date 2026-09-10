@@ -1,7 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "title": "白泽水浒",
-  "volume": "第一卷 · 郓城风起",
+  "volume": "第二卷 · 逼上梁山",
   "initial": {
     "silver": 500,
     "prestige": 0,
@@ -58,7 +58,14 @@
     "exclusiveHigh": 0.05,
     "exclusiveMisses": 4,
     "volumePrestige": 150,
-    "volumeClears": 10
+    "volumeClears": 10,
+    "strengthen": {
+      "cap": 10,
+      "advancedFlag": "advanced_forge",
+      "silverPerLevel": 50,
+      "advancedRate": 0.8,
+      "advancedMaterial": "strength_charm"
+    }
   },
   "npcs": [
     {
@@ -81,9 +88,49 @@
     }
   ],
   "opening": [
-    "宣和年间，天下纷乱。",
-    "山东郓城一带，商旅往来，豪杰潜藏。有人说东溪村来了异士；有人说景阳冈出了猛虎；也有人说一批生辰纲正要经过。",
-    "你没有盖世武艺，却识人、用人，也懂得聚众成事。",
-    "江湖路远，且从郓城开始。"
+    "宣和年间。",
+    "山东郓城。",
+    "江湖风云初起。",
+    "你没有武艺。",
+    "但你有识人之能。",
+    "今日起：",
+    "你便是白泽寨主。"
+  ],
+  "release": "0.3.0",
+  "heroArcs": [
+    {
+      "hero": "linchong",
+      "stages": [
+        {
+          "flag": "lin_departure",
+          "label": "风雪之后，望向水泊"
+        },
+        {
+          "flag": "lin_temple",
+          "label": "山神庙前，隐忍已尽"
+        },
+        {
+          "flag": "lin_escort",
+          "label": "刺配沧州，仍存忍让"
+        },
+        {
+          "flag": "lin_tolerant",
+          "label": "禁军教头，谨慎忍辱"
+        }
+      ]
+    },
+    {
+      "hero": "luzhishen",
+      "stages": [
+        {
+          "flag": "lu_complete",
+          "label": "禅杖护友，江湖远行"
+        },
+        {
+          "flag": "lu_kindness",
+          "label": "粗豪之中，自有慈悲"
+        }
+      ]
+    }
   ]
 }

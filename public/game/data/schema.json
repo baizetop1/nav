@@ -1,1 +1,3351 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"白泽水浒内容数据集 v1","description":"将 config 与十二个集合以文件名合为对象。结构由本 Schema 描述，跨文件引用另由 js/data.js 验证。","type":"object","required":["heroes","skills","items","equipments","enemies","config","maps","stories","schemes","dungeons","rewards","events","quests"],"additionalProperties":false,"properties":{"heroes":{"type":"array","items":{"type":"object","required":["id","name","title","star","type","status","attribute","growth","skills","story","core","meetMap","meetCondition","obtain","dialogue"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"title":{"type":"string"},"star":{"type":"integer"},"type":{"type":"string"},"status":{"type":"string"},"attribute":{"type":"object","required":["hp","attack","defense","speed","strategy"],"properties":{"hp":{"type":"integer"},"attack":{"type":"integer"},"defense":{"type":"integer"},"speed":{"type":"integer"},"strategy":{"type":"integer"}}},"growth":{"type":"object","required":["hp","attack","defense","speed","strategy"],"properties":{"hp":{"type":"integer"},"attack":{"type":"integer"},"defense":{"type":"integer"},"speed":{"type":"integer"},"strategy":{"type":"integer"}}},"skills":{"type":"array","items":{"type":"string"}},"story":{"type":"string"},"core":{"type":"boolean"},"meetMap":{"type":"string"},"meetCondition":{"anyOf":[{"type":"null"},{"type":"object","required":["flag"],"properties":{"flag":{"type":"string"}}}]},"obtain":{"type":"object","required":["type","token","count"],"properties":{"type":{"type":"string"},"token":{"type":"string"},"count":{"type":"integer"}}},"dialogue":{"type":"string"}}}},"skills":{"type":"array","items":{"type":"object","required":["id","name","type","cost","description","effect"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"type":{"type":"string"},"cost":{"type":"integer"},"description":{"type":"string"},"effect":{"type":"object","required":["kind","rate"],"properties":{"kind":{"type":"string"},"rate":{"type":"number"},"attribute":{"type":"string"},"status":{"type":"object","required":["id","turns","value"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"turns":{"type":"integer"},"value":{"type":"number"}}}}}}}},"items":{"type":"array","items":{"type":"object","required":["id","name","type","price","effect","description"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"type":{"type":"string"},"price":{"type":"integer"},"effect":{"type":"object","required":[],"properties":{"hp":{"type":"integer"},"rage":{"type":"integer"},"cleanse":{"type":"boolean"},"stamina":{"type":"integer"},"exp":{"type":"integer"}}},"description":{"type":"string"},"hero":{"type":"string"},"need":{"type":"integer"}}}},"equipments":{"type":"array","items":{"type":"object","required":["id","name","type","quality","tier","price","attribute","recipe","description"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"type":{"type":"string"},"quality":{"type":"string"},"tier":{"type":"integer"},"price":{"type":"integer"},"attribute":{"type":"object","required":[],"properties":{"attack":{"type":"integer"},"defense":{"type":"integer"},"hp":{"type":"integer"},"speed":{"type":"integer"},"strategy":{"type":"integer"}}},"recipe":{"type":"object","required":["silver","items"],"properties":{"silver":{"type":"integer"},"items":{"type":"object","required":["iron","cloth"],"properties":{"iron":{"type":"integer"},"cloth":{"type":"integer"},"tiger_skin":{"type":"integer"}}}}},"description":{"type":"string"}}}},"enemies":{"type":"array","items":{"type":"object","required":["id","name","attribute","skills","telegraphs"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"attribute":{"type":"object","required":["hp","attack","defense","speed","strategy"],"properties":{"hp":{"type":"integer"},"attack":{"type":"integer"},"defense":{"type":"integer"},"speed":{"type":"integer"},"strategy":{"type":"integer"}}},"skills":{"type":"array","items":{"type":"string"}},"telegraphs":{"type":"array","items":{"type":"string"}}}}},"config":{"type":"object","required":["version","title","volume","initial","balance","npcs","opening"],"properties":{"version":{"const":1},"title":{"type":"string"},"volume":{"type":"string"},"initial":{"type":"object","required":["silver","prestige","merit","stamina","items","equipment"],"properties":{"silver":{"type":"integer"},"prestige":{"type":"integer"},"merit":{"type":"integer"},"stamina":{"type":"integer"},"items":{"type":"object","required":["jinchuangyao","huiqisan","jiedudan","exp_pill","recruit_order","iron","cloth"],"properties":{"jinchuangyao":{"type":"integer"},"huiqisan":{"type":"integer"},"jiedudan":{"type":"integer"},"exp_pill":{"type":"integer"},"recruit_order":{"type":"integer"},"iron":{"type":"integer"},"cloth":{"type":"integer"}}},"equipment":{"type":"array","items":{"type":"string"}}}},"balance":{"type":"object","required":["heroLevelCap","teamSize","maxStamina","regenMs","ordinaryRates","pity","tokenNeed","exclusiveTarget","exclusiveHigh","exclusiveMisses","volumePrestige","volumeClears"],"properties":{"heroLevelCap":{"type":"integer"},"teamSize":{"type":"integer"},"maxStamina":{"type":"integer"},"regenMs":{"type":"integer"},"ordinaryRates":{"type":"array","items":{"type":"object","required":["star","weight"],"properties":{"star":{"type":"integer"},"weight":{"type":"integer"}}}},"pity":{"type":"array","items":{"type":"integer"}},"tokenNeed":{"type":"integer"},"exclusiveTarget":{"type":"number"},"exclusiveHigh":{"type":"number"},"exclusiveMisses":{"type":"integer"},"volumePrestige":{"type":"integer"},"volumeClears":{"type":"integer"}}},"npcs":{"type":"array","items":{"type":"object","required":["id","name","title","note"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"title":{"type":"string"},"note":{"type":"string"}}}},"opening":{"type":"array","items":{"type":"string"}}}},"maps":{"type":"array","items":{"type":"object","required":["id","name","region","type","description","links","actions","stories","dungeons"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"region":{"type":"string"},"type":{"type":"string"},"description":{"type":"string"},"links":{"type":"array","items":{"type":"object","required":["target"],"properties":{"target":{"type":"string"},"condition":{"type":"object","required":[],"properties":{"flag":{"type":"string"},"all":{"type":"array","items":{"type":"object","required":[],"properties":{"time":{"type":"string"},"item":{"type":"string"},"count":{"type":"integer"}}}}}},"hidden":{"type":"boolean"}}}},"actions":{"type":"array","items":{"type":"object","required":["id","label","text","effects","once"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"text":{"type":"string"},"effects":{"type":"array","items":{"type":"object","required":["type","id"],"properties":{"type":{"type":"string"},"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"status":{"type":"string"},"amount":{"type":"integer"}}}},"once":{"type":"boolean"}}}},"stories":{"type":"array","items":{"type":"string"}},"dungeons":{"type":"array","items":{"type":"string"}}}}},"stories":{"type":"array","items":{"type":"object","required":["id","title","start","map","condition","steps"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"title":{"type":"string"},"start":{"type":"string"},"map":{"type":"string"},"condition":{"anyOf":[{"type":"null"},{"type":"object","required":["flag"],"properties":{"flag":{"type":"string"}}}]},"steps":{"type":"object","required":[],"properties":{"meeting":{"type":"object","required":["map","text","choices"],"properties":{"map":{"type":"string"},"text":{"type":"string"},"choices":{"type":"array","items":{"type":"object","required":["id","label","next","effects","goMap"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"next":{"type":"string"},"effects":{"type":"array","items":{"type":"object","required":["type","id"],"properties":{"type":{"type":"string"},"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"status":{"type":"string"}}}},"goMap":{"type":"string"}}}}}},"trail":{"type":"object","required":["map","condition","text","choices"],"properties":{"map":{"type":"string"},"condition":{"type":"object","required":["flag"],"properties":{"flag":{"type":"string"}}},"text":{"type":"string"},"choices":{"type":"array","items":{"type":"object","required":["id","label","battle","next"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"battle":{"type":"object","required":["enemies","guest"],"properties":{"enemies":{"type":"array","items":{"type":"string"}},"guest":{"type":"object","required":["id","level"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"level":{"type":"integer"}}}}},"next":{"type":"string"}}}}}},"after":{"type":"object","required":["map","text","choices"],"properties":{"map":{"type":"string"},"text":{"type":"string"},"choices":{"type":"array","items":{"type":"object","required":["id","label","finish","effects"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"finish":{"type":"boolean"},"effects":{"type":"array","items":{"type":"object","required":["type","id"],"properties":{"type":{"type":"string"},"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"amount":{"type":"integer"}}}}}}}}},"listen":{"type":"object","required":["map","text","choices"],"properties":{"map":{"type":"string"},"text":{"type":"string"},"choices":{"type":"array","items":{"type":"object","required":["id","label","next","goMap","effects"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"next":{"type":"string"},"goMap":{"type":"string"},"effects":{"type":"array","items":{"type":"object","required":["type","id","status"],"properties":{"type":{"type":"string"},"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"status":{"type":"string"}}}}}}}}},"brothers":{"type":"object","required":["map","text","choices"],"properties":{"map":{"type":"string"},"text":{"type":"string"},"choices":{"type":"array","items":{"type":"object","required":["id","label","next","goMap","effects"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"next":{"type":"string"},"goMap":{"type":"string"},"effects":{"type":"array","items":{"type":"object","required":["type","id","status"],"properties":{"type":{"type":"string"},"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"status":{"type":"string"}}}}}}}}},"pledge":{"type":"object","required":["map","text","choices"],"properties":{"map":{"type":"string"},"text":{"type":"string"},"choices":{"type":"array","items":{"type":"object","required":["id","label","finish","effects"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"finish":{"type":"boolean"},"effects":{"type":"array","items":{"type":"object","required":["type","id"],"properties":{"type":{"type":"string"},"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"status":{"type":"string"},"amount":{"type":"integer"}}}}}}}}}}}}}},"schemes":{"type":"array","items":{"type":"object","required":["id","name","initial","maxTurns","success","choices"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"initial":{"type":"object","required":["alert","fatigue","heat","trust","exposure"],"properties":{"alert":{"type":"integer"},"fatigue":{"type":"integer"},"heat":{"type":"integer"},"trust":{"type":"integer"},"exposure":{"type":"integer"}}},"maxTurns":{"type":"integer"},"success":{"type":"object","required":["fatigue","trust","maxAlert","maxExposure"],"properties":{"fatigue":{"type":"integer"},"trust":{"type":"integer"},"maxAlert":{"type":"integer"},"maxExposure":{"type":"integer"}}},"choices":{"type":"array","items":{"type":"object","required":["id","label","text","change"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"text":{"type":"string"},"change":{"type":"object","required":["fatigue","alert"],"properties":{"trust":{"type":"integer"},"fatigue":{"type":"integer"},"alert":{"type":"integer"},"exposure":{"type":"integer"},"heat":{"type":"integer"}}}}}}}}},"dungeons":{"type":"array","items":{"type":"object","required":["id","name","level","map","condition","enemy","scale","cost","limit","reward","description","kind"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"level":{"type":"integer"},"map":{"type":"string"},"condition":{"type":"object","required":["flag"],"properties":{"flag":{"type":"string"}}},"enemy":{"type":"array","items":{"type":"string"}},"scale":{"type":"number"},"cost":{"type":"integer"},"limit":{"type":"integer"},"reward":{"type":"string"},"description":{"type":"string"},"kind":{"type":"string"}}}},"rewards":{"type":"array","items":{"type":"object","required":["id","silver","prestige","merit","exp","guaranteed","items"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"silver":{"type":"integer"},"prestige":{"type":"integer"},"merit":{"type":"integer"},"exp":{"type":"integer"},"guaranteed":{"type":"object","required":[],"properties":{"tiger_bone":{"type":"integer"},"tiger_skin":{"type":"integer"},"exp_pill":{"type":"integer"},"iron":{"type":"integer"},"recruit_shard":{"type":"integer"},"lost_ledger":{"type":"integer"},"dark_iron":{"type":"integer"},"blueprint":{"type":"integer"},"zhujia_pass":{"type":"integer"},"skill_page":{"type":"integer"}}},"items":{"type":"array","items":{"type":"object","required":["id","rate","count"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"rate":{"type":"number"},"count":{"type":"integer"}}}}}}},"events":{"type":"array","items":{"type":"object","required":["id","name","maps","text","options","condition","limit"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"maps":{"type":"array","items":{"type":"string"}},"text":{"type":"string"},"options":{"type":"array","items":{"type":"object","required":["id","label","text","effects"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"label":{"type":"string"},"text":{"type":"string"},"effects":{"type":"array","items":{"type":"object","required":["type","id"],"properties":{"type":{"type":"string"},"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"status":{"type":"string"},"amount":{"type":"integer"}}}},"cost":{"type":"object","required":[],"properties":{"items":{"type":"object","required":[],"properties":{"jinchuangyao":{"type":"integer"},"tiger_skin":{"type":"integer"},"iron":{"type":"integer"}}},"silver":{"type":"integer"}}},"battle":{"type":"array","items":{"type":"string"}}}}},"condition":{"anyOf":[{"type":"null"},{"type":"object","required":[],"properties":{"time":{"type":"string"},"flag":{"type":"string"},"all":{"type":"array","items":{"type":"object","required":[],"properties":{"time":{"type":"string"},"flag":{"type":"string"}}}}}}]},"limit":{"type":"integer"}}}},"quests":{"type":"array","items":{"type":"object","required":["id","name","type","condition","reward","description"],"properties":{"id":{"type":"string","pattern":"^[a-z][a-z0-9_]*$"},"name":{"type":"string"},"type":{"type":"string"},"condition":{"anyOf":[{"type":"object","required":[],"properties":{"all":{"type":"array","items":{"type":"object","required":[],"properties":{"visited":{"type":"string"},"ownedCount":{"type":"integer"},"heroLevel":{"type":"integer"},"flag":{"type":"string"}}}},"visited":{"type":"string"},"flag":{"type":"string"},"ownedCount":{"type":"integer"},"equipmentCount":{"type":"integer"},"unvisited":{"type":"boolean"},"feature":{"type":"string"}}},{"type":"null"}]},"reward":{"type":"object","required":[],"properties":{"silver":{"type":"integer"},"items":{"type":"object","required":[],"properties":{"jinchuangyao":{"type":"integer"},"tiger_bone":{"type":"integer"},"exp_pill":{"type":"integer"},"recruit_shard":{"type":"integer"},"scrap_iron":{"type":"integer"},"skill_page":{"type":"integer"},"strength_shard":{"type":"integer"},"horse_feed":{"type":"integer"}}},"prestige":{"type":"integer"},"merit":{"type":"integer"}}},"description":{"type":"string"},"goal":{"type":"object","required":["stat","amount"],"properties":{"stat":{"type":"string"},"amount":{"type":"integer"}}}}}}}}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "白泽水浒内容数据集 v2",
+  "description": "以文件名为键合并 config 和各数据集合；引用由 data.js 验证。",
+  "type": "object",
+  "required": [
+    "config",
+    "heroes",
+    "skills",
+    "items",
+    "equipments",
+    "enemies",
+    "maps",
+    "stories",
+    "schemes",
+    "dungeons",
+    "rewards",
+    "events",
+    "quests",
+    "chapters"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "config": {
+      "type": "object",
+      "required": [
+        "version",
+        "title",
+        "volume",
+        "initial",
+        "balance",
+        "npcs",
+        "opening",
+        "release",
+        "heroArcs"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "integer",
+          "const": 2
+        },
+        "title": {
+          "type": "string"
+        },
+        "volume": {
+          "type": "string"
+        },
+        "initial": {
+          "type": "object",
+          "required": [
+            "silver",
+            "prestige",
+            "merit",
+            "stamina",
+            "items",
+            "equipment"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "silver": {
+              "type": "integer"
+            },
+            "prestige": {
+              "type": "integer"
+            },
+            "merit": {
+              "type": "integer"
+            },
+            "stamina": {
+              "type": "integer"
+            },
+            "items": {
+              "type": "object",
+              "required": [
+                "jinchuangyao",
+                "huiqisan",
+                "jiedudan",
+                "exp_pill",
+                "recruit_order",
+                "iron",
+                "cloth"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "jinchuangyao": {
+                  "type": "integer"
+                },
+                "huiqisan": {
+                  "type": "integer"
+                },
+                "jiedudan": {
+                  "type": "integer"
+                },
+                "exp_pill": {
+                  "type": "integer"
+                },
+                "recruit_order": {
+                  "type": "integer"
+                },
+                "iron": {
+                  "type": "integer"
+                },
+                "cloth": {
+                  "type": "integer"
+                }
+              }
+            },
+            "equipment": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "balance": {
+          "type": "object",
+          "required": [
+            "heroLevelCap",
+            "teamSize",
+            "maxStamina",
+            "regenMs",
+            "ordinaryRates",
+            "pity",
+            "tokenNeed",
+            "exclusiveTarget",
+            "exclusiveHigh",
+            "exclusiveMisses",
+            "volumePrestige",
+            "volumeClears",
+            "strengthen"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "heroLevelCap": {
+              "type": "integer"
+            },
+            "teamSize": {
+              "type": "integer"
+            },
+            "maxStamina": {
+              "type": "integer"
+            },
+            "regenMs": {
+              "type": "integer"
+            },
+            "ordinaryRates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "star",
+                  "weight"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "star": {
+                    "type": "integer"
+                  },
+                  "weight": {
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "pity": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "tokenNeed": {
+              "type": "integer"
+            },
+            "exclusiveTarget": {
+              "type": "number"
+            },
+            "exclusiveHigh": {
+              "type": "number"
+            },
+            "exclusiveMisses": {
+              "type": "integer"
+            },
+            "volumePrestige": {
+              "type": "integer"
+            },
+            "volumeClears": {
+              "type": "integer"
+            },
+            "strengthen": {
+              "type": "object",
+              "required": [
+                "cap",
+                "advancedFlag",
+                "silverPerLevel",
+                "advancedRate",
+                "advancedMaterial"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "cap": {
+                  "type": "integer"
+                },
+                "advancedFlag": {
+                  "type": "string"
+                },
+                "silverPerLevel": {
+                  "type": "integer"
+                },
+                "advancedRate": {
+                  "type": "number"
+                },
+                "advancedMaterial": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "npcs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "title",
+              "note"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "name": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "opening": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "release": {
+          "type": "string"
+        },
+        "heroArcs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "hero",
+              "stages"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "hero": {
+                "type": "string"
+              },
+              "stages": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "flag",
+                    "label"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "flag": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "heroes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "title",
+          "star",
+          "type",
+          "status",
+          "attribute",
+          "growth",
+          "skills",
+          "story",
+          "core",
+          "meetMap",
+          "meetCondition",
+          "obtain",
+          "dialogue"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "star": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "attribute": {
+            "type": "object",
+            "required": [
+              "hp",
+              "attack",
+              "defense",
+              "speed",
+              "strategy"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "hp": {
+                "type": "integer"
+              },
+              "attack": {
+                "type": "integer"
+              },
+              "defense": {
+                "type": "integer"
+              },
+              "speed": {
+                "type": "integer"
+              },
+              "strategy": {
+                "type": "integer"
+              }
+            }
+          },
+          "growth": {
+            "type": "object",
+            "required": [
+              "hp",
+              "attack",
+              "defense",
+              "speed",
+              "strategy"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "hp": {
+                "type": "integer"
+              },
+              "attack": {
+                "type": "integer"
+              },
+              "defense": {
+                "type": "integer"
+              },
+              "speed": {
+                "type": "integer"
+              },
+              "strategy": {
+                "type": "integer"
+              }
+            }
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "story": {
+            "type": "string"
+          },
+          "core": {
+            "type": "boolean"
+          },
+          "meetMap": {
+            "type": "string"
+          },
+          "meetCondition": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "flag"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "flag": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "obtain": {
+            "type": "object",
+            "required": [
+              "type",
+              "token",
+              "count"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "token": {
+                "type": "string"
+              },
+              "count": {
+                "type": "integer"
+              }
+            }
+          },
+          "dialogue": {
+            "type": "string"
+          },
+          "introducedIn": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "cost",
+          "description",
+          "effect"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "object",
+            "required": [
+              "kind",
+              "rate"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string"
+              },
+              "rate": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ]
+              },
+              "attribute": {
+                "type": "string"
+              },
+              "status": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "turns",
+                  "value"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]*$"
+                  },
+                  "turns": {
+                    "type": "integer"
+                  },
+                  "value": {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "price",
+          "effect",
+          "description"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer"
+          },
+          "effect": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "properties": {
+              "hp": {
+                "type": "integer"
+              },
+              "rage": {
+                "type": "integer"
+              },
+              "cleanse": {
+                "type": "boolean"
+              },
+              "stamina": {
+                "type": "integer"
+              },
+              "exp": {
+                "type": "integer"
+              }
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "hero": {
+            "type": "string"
+          },
+          "need": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "equipments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "quality",
+          "tier",
+          "price",
+          "attribute",
+          "recipe",
+          "description"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "quality": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "integer"
+          },
+          "attribute": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "properties": {
+              "attack": {
+                "type": "integer"
+              },
+              "defense": {
+                "type": "integer"
+              },
+              "hp": {
+                "type": "integer"
+              },
+              "speed": {
+                "type": "integer"
+              },
+              "strategy": {
+                "type": "integer"
+              }
+            }
+          },
+          "recipe": {
+            "type": "object",
+            "required": [
+              "silver",
+              "items"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "silver": {
+                "type": "integer"
+              },
+              "items": {
+                "type": "object",
+                "required": [
+                  "iron",
+                  "cloth"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "iron": {
+                    "type": "integer"
+                  },
+                  "cloth": {
+                    "type": "integer"
+                  },
+                  "tiger_skin": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "enemies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "attribute",
+          "skills",
+          "telegraphs"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "attribute": {
+            "type": "object",
+            "required": [
+              "hp",
+              "attack",
+              "defense",
+              "speed",
+              "strategy"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "hp": {
+                "type": "integer"
+              },
+              "attack": {
+                "type": "integer"
+              },
+              "defense": {
+                "type": "integer"
+              },
+              "speed": {
+                "type": "integer"
+              },
+              "strategy": {
+                "type": "integer"
+              }
+            }
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "telegraphs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "maps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "region",
+          "description",
+          "links",
+          "actions",
+          "stories",
+          "dungeons",
+          "chapter"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "target"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "target": {
+                  "type": "string"
+                },
+                "condition": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "required": [],
+                      "additionalProperties": false,
+                      "properties": {
+                        "flag": {
+                          "type": "string"
+                        },
+                        "all": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                              "time": {
+                                "type": "string"
+                              },
+                              "item": {
+                                "type": "string"
+                              },
+                              "count": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "hidden": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "label",
+                "text",
+                "effects",
+                "once"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]*$"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "effects": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "type",
+                      "id"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]*$"
+                      },
+                      "status": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "once": {
+                  "type": "boolean"
+                },
+                "condition": {
+                  "type": "object",
+                  "required": [
+                    "flag"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "flag": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "stories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dungeons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "chapter": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "stories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "start",
+          "map",
+          "condition",
+          "steps"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string"
+          },
+          "map": {
+            "type": "string"
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "flag"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "flag": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "steps": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "properties": {
+              "meeting": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "goMap"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "status": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "goMap": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "trail": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "condition",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "condition": {
+                    "type": "object",
+                    "required": [
+                      "flag"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "flag": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "battle",
+                        "next"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "battle": {
+                          "type": "object",
+                          "required": [
+                            "enemies",
+                            "guest"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "enemies": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "guest": {
+                              "type": "object",
+                              "required": [
+                                "id",
+                                "level"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "pattern": "^[a-z][a-z0-9_]*$"
+                                },
+                                "level": {
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "after": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "finish",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "listen": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "goMap": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "status": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "brothers": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "goMap",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "goMap": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id",
+                              "status"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "status": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "pledge": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "finish",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "status": {
+                                "type": "string"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "tolerance": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "status": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "escort": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "roadout": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices",
+                  "condition",
+                  "hint"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "goMap"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              }
+                            }
+                          }
+                        },
+                        "goMap": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "condition": {
+                    "type": "object",
+                    "required": [
+                      "flag"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "flag": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "hint": {
+                    "type": "string"
+                  }
+                }
+              },
+              "cangzhou": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "depot": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "goMap"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "goMap": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "confront": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "battle"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "battle": {
+                          "type": "object",
+                          "required": [
+                            "enemies",
+                            "guest"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "enemies": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "guest": {
+                              "type": "object",
+                              "required": [
+                                "id",
+                                "level"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "pattern": "^[a-z][a-z0-9_]*$"
+                                },
+                                "level": {
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "aftermath": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "departure": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices",
+                  "condition",
+                  "hint"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "finish",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "condition": {
+                    "type": "object",
+                    "required": [
+                      "flag"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "flag": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "hint": {
+                    "type": "string"
+                  }
+                }
+              },
+              "garden": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "goMap"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "goMap": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "kindness": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "status": {
+                                "type": "string"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "rescue": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices",
+                  "condition",
+                  "hint"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "battle"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "battle": {
+                          "type": "object",
+                          "required": [
+                            "enemies",
+                            "guest"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "enemies": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "guest": {
+                              "type": "object",
+                              "required": [
+                                "id",
+                                "level"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "pattern": "^[a-z][a-z0-9_]*$"
+                                },
+                                "level": {
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "condition": {
+                    "type": "object",
+                    "required": [
+                      "flag"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "flag": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "hint": {
+                    "type": "string"
+                  }
+                }
+              },
+              "welcome": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "goMap"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "status": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "goMap": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "letter": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "condition",
+                        "cost",
+                        "goMap"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "condition": {
+                          "type": "object",
+                          "required": [
+                            "item"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "item": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "cost": {
+                          "type": "object",
+                          "required": [
+                            "items"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "refuge_letter"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "refuge_letter": {
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "goMap": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "shelter": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "finish",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "meet": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "status": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "guard": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "effects",
+                        "battle"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "battle": {
+                          "type": "object",
+                          "required": [
+                            "enemies",
+                            "guest"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "enemies": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "guest": {
+                              "type": "object",
+                              "required": [
+                                "id",
+                                "level"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "pattern": "^[a-z][a-z0-9_]*$"
+                                },
+                                "level": {
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "schemes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "initial",
+          "maxTurns",
+          "success",
+          "choices"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "initial": {
+            "type": "object",
+            "required": [
+              "alert",
+              "fatigue",
+              "heat",
+              "trust",
+              "exposure"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "alert": {
+                "type": "integer"
+              },
+              "fatigue": {
+                "type": "integer"
+              },
+              "heat": {
+                "type": "integer"
+              },
+              "trust": {
+                "type": "integer"
+              },
+              "exposure": {
+                "type": "integer"
+              }
+            }
+          },
+          "maxTurns": {
+            "type": "integer"
+          },
+          "success": {
+            "type": "object",
+            "required": [
+              "fatigue",
+              "trust",
+              "maxAlert",
+              "maxExposure"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "fatigue": {
+                "type": "integer"
+              },
+              "trust": {
+                "type": "integer"
+              },
+              "maxAlert": {
+                "type": "integer"
+              },
+              "maxExposure": {
+                "type": "integer"
+              }
+            }
+          },
+          "choices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "label",
+                "text",
+                "change"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]*$"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "change": {
+                  "type": "object",
+                  "required": [
+                    "fatigue",
+                    "alert"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "trust": {
+                      "type": "integer"
+                    },
+                    "fatigue": {
+                      "type": "integer"
+                    },
+                    "alert": {
+                      "type": "integer"
+                    },
+                    "exposure": {
+                      "type": "integer"
+                    },
+                    "heat": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "dungeons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "level",
+          "map",
+          "condition",
+          "enemy",
+          "scale",
+          "cost",
+          "limit",
+          "reward",
+          "description",
+          "kind"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer"
+          },
+          "map": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "object",
+            "required": [
+              "flag"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "flag": {
+                "type": "string"
+              }
+            }
+          },
+          "enemy": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scale": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "cost": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "reward": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "entrances": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "map",
+                "condition"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "map": {
+                  "type": "string"
+                },
+                "condition": {
+                  "type": "object",
+                  "required": [
+                    "flag"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "flag": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "silver",
+          "prestige",
+          "merit",
+          "exp",
+          "guaranteed",
+          "items"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "silver": {
+            "type": "integer"
+          },
+          "prestige": {
+            "type": "integer"
+          },
+          "merit": {
+            "type": "integer"
+          },
+          "exp": {
+            "type": "integer"
+          },
+          "guaranteed": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "properties": {
+              "tiger_bone": {
+                "type": "integer"
+              },
+              "tiger_skin": {
+                "type": "integer"
+              },
+              "exp_pill": {
+                "type": "integer"
+              },
+              "iron": {
+                "type": "integer"
+              },
+              "recruit_shard": {
+                "type": "integer"
+              },
+              "lost_ledger": {
+                "type": "integer"
+              },
+              "dark_iron": {
+                "type": "integer"
+              },
+              "blueprint": {
+                "type": "integer"
+              },
+              "zhujia_pass": {
+                "type": "integer"
+              },
+              "skill_page": {
+                "type": "integer"
+              },
+              "strength_shard": {
+                "type": "integer"
+              }
+            }
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "rate",
+                "count"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]*$"
+                },
+                "rate": {
+                  "type": "number"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "maps",
+          "text",
+          "options",
+          "condition"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "maps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "text": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "label",
+                "text",
+                "effects"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]*$"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "effects": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "type",
+                      "id"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]*$"
+                      },
+                      "status": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "cost": {
+                  "type": "object",
+                  "required": [],
+                  "additionalProperties": false,
+                  "properties": {
+                    "items": {
+                      "type": "object",
+                      "required": [],
+                      "additionalProperties": false,
+                      "properties": {
+                        "jinchuangyao": {
+                          "type": "integer"
+                        },
+                        "tiger_skin": {
+                          "type": "integer"
+                        },
+                        "iron": {
+                          "type": "integer"
+                        },
+                        "cloth": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "silver": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "battle": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [],
+                "additionalProperties": false,
+                "properties": {
+                  "time": {
+                    "type": "string"
+                  },
+                  "flag": {
+                    "type": "string"
+                  },
+                  "all": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [],
+                      "additionalProperties": false,
+                      "properties": {
+                        "time": {
+                          "type": "string"
+                        },
+                        "flag": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "limit": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "quests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "condition",
+          "reward",
+          "description"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "type": "object",
+                "required": [],
+                "additionalProperties": false,
+                "properties": {
+                  "all": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [],
+                      "additionalProperties": false,
+                      "properties": {
+                        "visited": {
+                          "type": "string"
+                        },
+                        "ownedCount": {
+                          "type": "integer"
+                        },
+                        "heroLevel": {
+                          "type": "integer"
+                        },
+                        "flag": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "visited": {
+                    "type": "string"
+                  },
+                  "flag": {
+                    "type": "string"
+                  },
+                  "ownedCount": {
+                    "type": "integer"
+                  },
+                  "equipmentCount": {
+                    "type": "integer"
+                  },
+                  "any": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "all"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "all": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [],
+                            "additionalProperties": false,
+                            "properties": {
+                              "notFlag": {
+                                "type": "string"
+                              },
+                              "unvisited": {
+                                "type": "integer"
+                              },
+                              "flag": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "feature": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reward": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "properties": {
+              "silver": {
+                "type": "integer"
+              },
+              "items": {
+                "type": "object",
+                "required": [],
+                "additionalProperties": false,
+                "properties": {
+                  "jinchuangyao": {
+                    "type": "integer"
+                  },
+                  "tiger_bone": {
+                    "type": "integer"
+                  },
+                  "exp_pill": {
+                    "type": "integer"
+                  },
+                  "recruit_shard": {
+                    "type": "integer"
+                  },
+                  "scrap_iron": {
+                    "type": "integer"
+                  },
+                  "skill_page": {
+                    "type": "integer"
+                  },
+                  "strength_shard": {
+                    "type": "integer"
+                  },
+                  "horse_feed": {
+                    "type": "integer"
+                  },
+                  "strength_charm": {
+                    "type": "integer"
+                  },
+                  "iron": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "prestige": {
+                "type": "integer"
+              },
+              "merit": {
+                "type": "integer"
+              }
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "chapter": {
+            "type": "string"
+          },
+          "goal": {
+            "type": "object",
+            "required": [
+              "stat",
+              "amount"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "stat": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "number",
+          "entry",
+          "condition",
+          "completeFlag",
+          "requirements",
+          "ending",
+          "effects",
+          "baseLevel"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "entry": {
+            "type": "string"
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "flag"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "flag": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "completeFlag": {
+            "type": "string"
+          },
+          "requirements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "label",
+                "condition"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "condition": {
+                  "type": "object",
+                  "required": [],
+                  "additionalProperties": false,
+                  "properties": {
+                    "flag": {
+                      "type": "string"
+                    },
+                    "ownedCount": {
+                      "type": "integer"
+                    },
+                    "stat": {
+                      "type": "string"
+                    },
+                    "count": {
+                      "type": "integer"
+                    },
+                    "prestige": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ending": {
+            "type": "string"
+          },
+          "effects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "type",
+                "id",
+                "amount"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]*$"
+                },
+                "amount": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "baseLevel": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

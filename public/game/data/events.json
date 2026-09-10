@@ -758,5 +758,143 @@
       ]
     },
     "limit": 1
+  },
+  {
+    "id": "cold_traveler",
+    "name": "雪路寒客",
+    "maps": [
+      "snow_road",
+      "cangzhou"
+    ],
+    "condition": {
+      "flag": "lin_cangzhou"
+    },
+    "text": "行旅蹲在背风处，旧衣已被雪水浸透。",
+    "options": [
+      {
+        "id": "help",
+        "label": "上前照应",
+        "cost": {
+          "items": {
+            "cloth": 1
+          }
+        },
+        "effects": [
+          {
+            "type": "currency",
+            "id": "prestige",
+            "amount": 4
+          },
+          {
+            "type": "currency",
+            "id": "merit",
+            "amount": 8
+          }
+        ],
+        "text": "你送出一匹粗布，他围紧衣襟，指明了下山的路。"
+      },
+      {
+        "id": "leave",
+        "label": "继续行路",
+        "effects": [],
+        "text": "你记下此处情形，继续赶路。"
+      }
+    ]
+  },
+  {
+    "id": "temple_letter",
+    "name": "寺中旧书",
+    "maps": [
+      "xiangguosi"
+    ],
+    "condition": {
+      "flag": "volume_complete"
+    },
+    "text": "知客僧整理旧书，问你是否认识那位爱打抱不平的师兄。",
+    "options": [
+      {
+        "id": "help",
+        "label": "上前照应",
+        "cost": {},
+        "effects": [
+          {
+            "type": "item",
+            "id": "huiqisan",
+            "amount": 1
+          }
+        ],
+        "text": "说起菜园里的旧事，知客僧笑着请你把问候捎去。"
+      },
+      {
+        "id": "leave",
+        "label": "继续行路",
+        "effects": [],
+        "text": "你记下此处情形，继续赶路。"
+      }
+    ]
+  },
+  {
+    "id": "chai_supplies",
+    "name": "庄客备粮",
+    "maps": [
+      "chaijin_guesthouse"
+    ],
+    "condition": {
+      "flag": "chai_refuge"
+    },
+    "text": "庄客正在分装路粮，请熟悉山路的人搭把手。",
+    "options": [
+      {
+        "id": "help",
+        "label": "上前照应",
+        "cost": {},
+        "effects": [
+          {
+            "type": "item",
+            "id": "jinchuangyao",
+            "amount": 2
+          }
+        ],
+        "text": "你帮他标清去向，庄客回赠一包药物。"
+      },
+      {
+        "id": "leave",
+        "label": "继续行路",
+        "effects": [],
+        "text": "你记下此处情形，继续赶路。"
+      }
+    ]
+  },
+  {
+    "id": "qingzhou_wagon",
+    "name": "车辙与刀痕",
+    "maps": [
+      "qingzhou_road"
+    ],
+    "condition": {
+      "flag": "yang_complete"
+    },
+    "text": "一辆旧车陷进泥坑，车辕上留着截道者砍过的痕迹。",
+    "options": [
+      {
+        "id": "help",
+        "label": "上前照应",
+        "cost": {},
+        "effects": [
+          {
+            "type": "item",
+            "id": "iron",
+            "amount": 2
+          }
+        ],
+        "text": "众人合力推车，车主托你带几片锻铁给护路的好汉。"
+      },
+      {
+        "id": "leave",
+        "label": "继续行路",
+        "effects": [],
+        "text": "你记下此处情形，继续赶路。"
+      }
+    ]
   }
 ]

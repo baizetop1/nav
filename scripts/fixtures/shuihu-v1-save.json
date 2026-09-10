@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "revision": 0,
+  "clock": 1789000000000,
+  "lastRegen": 1789000000000,
+  "rng": 2816511904,
+  "worldMinute": 600,
+  "location": "yuncheng",
+  "startedAt": 1789000000000,
+  "player": {
+    "name": "白泽寨主",
+    "title": "梁山寨主",
+    "silver": 500,
+    "merit": 0,
+    "prestige": 200,
+    "stamina": 100,
+    "liangshanLevel": 1
+  },
+  "heroes": {
+    "songjiang": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    },
+    "wuyong": {
+      "status": "owned",
+      "level": 20,
+      "exp": 42
+    },
+    "wusong": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    },
+    "linchong": {
+      "status": "owned",
+      "level": 31,
+      "exp": 42
+    },
+    "luzhishen": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    },
+    "gongsunsheng": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    },
+    "yanqing": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    },
+    "huarong": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    },
+    "liutang": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    },
+    "shiqian": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    },
+    "baisheng": {
+      "status": "owned",
+      "level": 20,
+      "exp": 42
+    },
+    "ruanxiaoqi": {
+      "status": "unknown",
+      "level": 1,
+      "exp": 0
+    }
+  },
+  "team": [
+    "linchong",
+    "baisheng",
+    "wuyong"
+  ],
+  "inventory": {
+    "jinchuangyao": 5,
+    "huiqisan": 2,
+    "jiedudan": 2,
+    "exp_pill": 3,
+    "recruit_order": 3,
+    "iron": 4,
+    "cloth": 3,
+    "linchong_token": 7
+  },
+  "equipment": [
+    {
+      "uid": "eq_1",
+      "item": "oak_staff",
+      "plus": 5,
+      "hero": "linchong"
+    },
+    {
+      "uid": "eq_2",
+      "item": "cloth_armor",
+      "plus": 0,
+      "hero": null
+    }
+  ],
+  "nextEquipment": 3,
+  "progress": {
+    "flags": {
+      "guide": true,
+      "tiger_complete": true,
+      "huangni_complete": true,
+      "dongxi_rumor": true,
+      "seven_stars": true,
+      "volume_complete": true
+    },
+    "stories": {},
+    "visited": [
+      "yuncheng"
+    ],
+    "actions": {},
+    "claims": [],
+    "clears": {
+      "jingyanggang": 10
+    }
+  },
+  "stats": {
+    "clears": 10
+  },
+  "daily": {
+    "date": "2026-09-10",
+    "ids": [
+      "daily_event",
+      "daily_recruit",
+      "daily_explore"
+    ],
+    "claimed": [],
+    "bonus": false,
+    "counters": {},
+    "dungeons": {},
+    "events": []
+  },
+  "recruit": {
+    "total": 0,
+    "pity": {
+      "three": 11,
+      "four": 0,
+      "five": 0
+    },
+    "fate": {
+      "linchong": 3
+    }
+  },
+  "battle": null,
+  "scheme": null,
+  "event": null,
+  "journal": [
+    {
+      "at": 1789000000000,
+      "text": "初入郓城。建寨之事，要从识人、用人开始。"
+    }
+  ],
+  "message": "初入郓城。建寨之事，要从识人、用人开始。",
+  "formationPending": false
+}

@@ -1,5 +1,5 @@
-import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js';
-import { heroRank } from './map.js';
+import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.3.0';
+import { heroRank } from './map.js?v=0.3.0';
 export function knowHero(state, id, status, data) {
   const hero = state.heroes[id];
   if (heroRank[status] > heroRank[hero.status]) { hero.status = status; journal(state, `${data.by.heroes[id].name}：${({heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'})[status]}。`); }
@@ -59,12 +59,16 @@ export function recruit(state, data, target) {
     const star = rollOrdinary(state, data);
     chosen = pick(state, data.heroes.filter(h => h.star === star));
   }
+  const previousStatus=state.heroes[chosen.id].status;
+  const previousTokens=state.inventory[chosen.id+'_token']||0,previousMerit=state.player.merit;
   state.recruit.total++; count(state, 'recruit');
   if (heroRank[state.heroes[chosen.id].status] < 2) {
     knowHero(state, chosen.id, 'heard', data);
     state.inventory[chosen.id+'_token'] = (state.inventory[chosen.id+'_token'] || 0) + 2;
     journal(state, `${chosen.title}·${chosen.name}尚未与你相识。来人带回两枚信物，仍需亲自寻访。`);
   } else ownHero(state, chosen.id, data);
+  // A factual receipt of this draw, separate from flavour text and later chapter rewards.
+  state.recruit.lastResult={hero:chosen.id,target:target||null,kind:heroRank[previousStatus]<2?'clue':previousStatus==='owned'?'duplicate':'joined',tokens:(state.inventory[chosen.id+'_token']||0)-previousTokens,merit:state.player.merit-previousMerit,inTeam:previousStatus!=='owned'&&state.heroes[chosen.id].status==='owned'&&state.team.includes(chosen.id),number:state.recruit.total};
   return chosen.id;
 }
 export function syncAvailability(state, data) {
