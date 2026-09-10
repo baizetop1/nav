@@ -19,7 +19,8 @@
         "jinchuangyao": 2
       }
     },
-    "description": "去县衙看榜文，再到酒肆听听消息。"
+    "description": "去县衙看榜文，再到酒肆听听消息。",
+    "chapter": "volume_one"
   },
   {
     "id": "main_hill",
@@ -31,7 +32,8 @@
     "reward": {
       "prestige": 5
     },
-    "description": "沿城门、官道，前往景阳冈下。"
+    "description": "沿城门、官道，前往景阳冈下。",
+    "chapter": "volume_one"
   },
   {
     "id": "main_tracks",
@@ -45,7 +47,8 @@
         "tiger_bone": 1
       }
     },
-    "description": "察看枯树林脚印，再循虎踪探路。"
+    "description": "察看枯树林脚印，再循虎踪探路。",
+    "chapter": "volume_one"
   },
   {
     "id": "main_tiger",
@@ -57,7 +60,8 @@
     "reward": {
       "silver": 150
     },
-    "description": "协助武松判断虎势；打虎信物随剧情只发一次。"
+    "description": "协助武松判断虎势；打虎信物随剧情只发一次。",
+    "chapter": "volume_one"
   },
   {
     "id": "main_guests",
@@ -69,7 +73,8 @@
     "reward": {
       "prestige": 5
     },
-    "description": "酒肆打听东溪村后，拜访晁盖庄。"
+    "description": "酒肆打听东溪村后，拜访晁盖庄。",
+    "chapter": "volume_one"
   },
   {
     "id": "main_stars",
@@ -83,7 +88,8 @@
         "exp_pill": 2
       }
     },
-    "description": "听庄中商议，访三阮，再回客舍聚义。"
+    "description": "听庄中商议，访三阮，再回客舍聚义。",
+    "chapter": "volume_one"
   },
   {
     "id": "main_convoy",
@@ -95,7 +101,8 @@
     "reward": {
       "silver": 300
     },
-    "description": "掌握暑热、疑心和卖酒的时机；两人的首次信物随剧情只发一次。"
+    "description": "掌握暑热、疑心和卖酒的时机；两人的首次信物随剧情只发一次。",
+    "chapter": "volume_one"
   },
   {
     "id": "daily_hill",
@@ -189,7 +196,28 @@
       "amount": 1
     },
     "condition": {
-      "unvisited": true
+      "any": [
+        {
+          "all": [
+            {
+              "notFlag": "volume_complete"
+            },
+            {
+              "unvisited": 30
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "flag": "volume_complete"
+            },
+            {
+              "unvisited": 46
+            }
+          ]
+        }
+      ]
     },
     "reward": {
       "merit": 15
@@ -307,5 +335,101 @@
       }
     },
     "description": "给坐骑添一份草料。坐骑系统开放后才会派发。"
+  },
+  {
+    "id": "main_tokyo",
+    "name": "东京来信",
+    "type": "main",
+    "chapter": "volume_two",
+    "condition": {
+      "flag": "lin_tolerant"
+    },
+    "description": "第一卷卷终后，从梁山渡口到东京旧居，与林教头叙过姓名。",
+    "reward": {
+      "silver": 200,
+      "items": {
+        "jinchuangyao": 2
+      }
+    }
+  },
+  {
+    "id": "main_lu_rescue",
+    "name": "林中护友",
+    "type": "main",
+    "chapter": "volume_two",
+    "condition": {
+      "flag": "lu_complete"
+    },
+    "description": "先在大相国寺与鲁智深相识，再到野猪林护住林冲。",
+    "reward": {
+      "silver": 300,
+      "items": {
+        "strength_charm": 1
+      }
+    }
+  },
+  {
+    "id": "main_snow",
+    "name": "风雪见心",
+    "type": "main",
+    "chapter": "volume_two",
+    "condition": {
+      "flag": "lin_temple"
+    },
+    "description": "从沧州酒铺到草料场，察看雪路脚印，听清山神庙外的真相。",
+    "reward": {
+      "silver": 300,
+      "items": {
+        "iron": 5
+      }
+    }
+  },
+  {
+    "id": "main_chai",
+    "name": "柴庄留客",
+    "type": "main",
+    "chapter": "volume_two",
+    "condition": {
+      "flag": "chai_refuge"
+    },
+    "description": "带着投庄书信拜访柴进，得一处安身之所。",
+    "reward": {
+      "silver": 200,
+      "items": {
+        "recruit_shard": 3
+      }
+    }
+  },
+  {
+    "id": "main_yang",
+    "name": "失意护道",
+    "type": "main",
+    "chapter": "volume_two",
+    "condition": {
+      "flag": "yang_complete"
+    },
+    "description": "在青州行旅道与杨志相识，协助他护送过路行旅。",
+    "reward": {
+      "silver": 200,
+      "items": {
+        "exp_pill": 2
+      }
+    }
+  },
+  {
+    "id": "main_volume_two",
+    "name": "风雪归途",
+    "type": "main",
+    "chapter": "volume_two",
+    "condition": {
+      "flag": "volume_two_complete"
+    },
+    "description": "林冲归向水泊、鲁智深护友、柴进留客、杨志护道，四段往事都已记下。",
+    "reward": {
+      "silver": 500,
+      "items": {
+        "strength_charm": 2
+      }
+    }
   }
 ]

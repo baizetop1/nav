@@ -33,7 +33,7 @@
       "token": "songjiang_token",
       "count": 10
     },
-    "dialogue": "仗义疏财，言语温厚。"
+    "dialogue": "宋江拱手让座：“出门在外，谁还没有难处？你既到郓城，便不算生客。若有用得着宋某之处，只管开口。”"
   },
   {
     "id": "wuyong",
@@ -138,9 +138,9 @@
     ],
     "story": "待人克制，枪法沉稳。",
     "core": true,
-    "meetMap": "expeditions",
+    "meetMap": "dongjing_lane",
     "meetCondition": {
-      "flag": "huangni_complete"
+      "flag": "lin_tolerant"
     },
     "obtain": {
       "type": "token",
@@ -176,9 +176,9 @@
     ],
     "story": "粗豪而细心，见不平便要管。",
     "core": true,
-    "meetMap": "ferry",
+    "meetMap": "vegetable_garden",
     "meetCondition": {
-      "flag": "huangni_complete"
+      "flag": "lu_kindness"
     },
     "obtain": {
       "type": "token",
@@ -373,7 +373,7 @@
       "token": "shiqian_token",
       "count": 10
     },
-    "dialogue": "脚步轻，眼睛亮，善探道路。"
+    "dialogue": "瘦汉把酒盏往里一挪：“时迁。别的本事不敢夸，哪条路有人，哪扇门开着，我倒看得分明。”他笑了笑，又朝窗外瞥了一眼。"
   },
   {
     "id": "baisheng",
@@ -409,7 +409,7 @@
       "token": "baisheng_token",
       "count": 10
     },
-    "dialogue": "会唱山歌，熟悉乡道和酒担。"
+    "dialogue": "汉子扶住酒担，咧嘴一笑：“小人白胜，附近乡道走得熟。客官初到郓城？若不嫌弃，这一路的风土人情，我倒能说上几句。”"
   },
   {
     "id": "ruanxiaoqi",
@@ -448,5 +448,83 @@
       "count": 10
     },
     "dialogue": "在水上讨生活，胸中有一股不平。"
+  },
+  {
+    "id": "chaijin",
+    "name": "柴进",
+    "title": "小旋风",
+    "star": 5,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1000,
+      "attack": 80,
+      "defense": 100,
+      "speed": 90,
+      "strategy": 130
+    },
+    "growth": {
+      "hp": 35,
+      "attack": 3,
+      "defense": 4,
+      "speed": 3,
+      "strategy": 7
+    },
+    "skills": [
+      "hospitality",
+      "noble_friend"
+    ],
+    "story": "仗义疏财，广纳落难好汉；好客不是索取回报。",
+    "core": true,
+    "meetMap": "chaijin_manor",
+    "meetCondition": {
+      "flag": "chai_met"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "chaijin_token",
+      "count": 10
+    },
+    "dialogue": "“只管宽心住下。江湖人落难，岂有袖手之理。”",
+    "introducedIn": 2
+  },
+  {
+    "id": "yangzhi",
+    "name": "杨志",
+    "title": "青面兽",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1150,
+      "attack": 145,
+      "defense": 95,
+      "speed": 100,
+      "strategy": 65
+    },
+    "growth": {
+      "hp": 42,
+      "attack": 7,
+      "defense": 4,
+      "speed": 4,
+      "strategy": 2
+    },
+    "skills": [
+      "blue_blade",
+      "march_discipline"
+    ],
+    "story": "武艺精熟，一心求立身之地；几番失意仍不愿弃了本领。",
+    "core": true,
+    "meetMap": "qingzhou_road",
+    "meetCondition": {
+      "flag": "yang_met"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "yangzhi_token",
+      "count": 10
+    },
+    "dialogue": "“失去的差事且不说，眼前这些行旅，总得护过去。”",
+    "introducedIn": 2
   }
 ]

@@ -4,7 +4,7 @@
     "name": "郓城县",
     "region": "郓城",
     "type": "area",
-    "description": "青石街道上行人往来。县衙告示新贴，酒肆中正有人高谈阔论。",
+    "description": "青石街上，挑担的脚夫与赶路的客商擦肩而过。\n酒旗在檐下轻摆，县衙门前围着看榜的人。你拢好行囊，走进这座山东小城。",
     "links": [
       {
         "target": "office"
@@ -27,14 +27,15 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "office",
     "name": "郓城县衙",
     "region": "郓城",
     "type": "area",
-    "description": "堂前几名差役正议论虎患。告示墙上的新旧榜文层层叠叠。",
+    "description": "堂前衙役按着刀柄，催围观的人莫堵了路。\n你挤到榜墙边，新糨糊还未干，纸角却已被风掀起。人群里有人低声问：“这冈上的虎，究竟谁敢去除？”",
     "links": [
       {
         "target": "yuncheng"
@@ -42,14 +43,15 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "tavern",
     "name": "郓城酒肆",
     "region": "郓城",
     "type": "area",
-    "description": "酒气混着肉香，几个行脚客围坐一桌。白胜放下酒担，时迁靠着窗沿听人说话。",
+    "description": "门帘一掀，酒香裹着热气扑面而来。掌柜抹了抹桌沿：“客官，且坐。”\n卖酒汉子歇下挑担，哼着半阕山歌；窗边一条瘦汉不甚言语，一双眼却把来往的人都看在心里。",
     "links": [
       {
         "target": "yuncheng"
@@ -59,7 +61,7 @@
       {
         "id": "rumor_dongxi",
         "label": "打听东溪村",
-        "text": "掌柜指向城门外的溪水：晁天王庄上，近日来了几位异客。",
+        "text": "掌柜压低声音：“沿城门外那条溪走，便是东溪村。晁保正庄上这几日常有客来，有个教书先生，唤作吴用，最是个有计较的人。”你记下了这条乡路，也记下了吴用的名字。",
         "effects": [
           {
             "type": "flag",
@@ -76,7 +78,7 @@
       {
         "id": "rumor_tiger",
         "label": "打听景阳冈",
-        "text": "店家说山中又有行旅失踪，武二郎正好也在那边。",
+        "text": "邻桌的客商放下酒盏：“景阳冈上又少了行人。听说近日来了个武二郎，几碗酒下肚，还要独自过冈。”掌柜直摇头，你却留心记住了武松这个名字。",
         "effects": [
           {
             "type": "hero",
@@ -93,7 +95,7 @@
       {
         "id": "news",
         "label": "听江湖闲话",
-        "text": "说书人提起一位识人仗义的郓城押司：宋江。",
+        "text": "说书人醒木轻落：“郓城有位宋押司，姓宋名江。人若落难，他肯周济；朋友登门，他肯相待。”一桌人纷纷点头。你想，这样的人，日后总要见上一面。",
         "effects": [
           {
             "type": "hero",
@@ -105,7 +107,8 @@
       }
     ],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "forge",
@@ -118,9 +121,26 @@
         "target": "yuncheng"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "id": "forge_new_method",
+        "label": "请教风雪淬炼法",
+        "once": true,
+        "condition": {
+          "flag": "lin_temple"
+        },
+        "text": "铁匠听完草料场的风雪，说起冷热相济的锻法。强化上限开放至 +10；+6 起需强化符，八成可成，失败只耗材料，不降级、不毁装备。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "advanced_forge"
+          }
+        ]
+      }
+    ],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "stable",
@@ -149,7 +169,8 @@
       }
     ],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "recruit",
@@ -164,7 +185,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "gate",
@@ -188,7 +210,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "road",
@@ -212,7 +235,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "herbs",
@@ -227,7 +251,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "ruined_temple",
@@ -257,7 +282,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "jingyang",
@@ -280,7 +306,8 @@
     "stories": [],
     "dungeons": [
       "jingyanggang"
-    ]
+    ],
+    "chapter": "volume_one"
   },
   {
     "id": "inn",
@@ -300,7 +327,8 @@
     "stories": [
       "wusong_story"
     ],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "path",
@@ -328,7 +356,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "drywood",
@@ -356,7 +385,8 @@
       }
     ],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "stone",
@@ -378,7 +408,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "tracks",
@@ -412,7 +443,8 @@
       }
     ],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "deepforest",
@@ -432,7 +464,8 @@
     "stories": [
       "wusong_story"
     ],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "dongxi",
@@ -456,7 +489,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "zhuang",
@@ -476,7 +510,8 @@
     "stories": [
       "seven_stars_story"
     ],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "creek",
@@ -496,7 +531,8 @@
     "stories": [
       "seven_stars_story"
     ],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "guesthouse",
@@ -522,7 +558,8 @@
     "stories": [
       "seven_stars_story"
     ],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "reedbank",
@@ -540,7 +577,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "huangni",
@@ -572,7 +610,8 @@
     "stories": [],
     "dungeons": [
       "huangnigang"
-    ]
+    ],
+    "chapter": "volume_one"
   },
   {
     "id": "ridge",
@@ -587,7 +626,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "pines",
@@ -605,7 +645,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "winepath",
@@ -620,7 +661,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "liangshan",
@@ -647,7 +689,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "ferry",
@@ -658,11 +701,26 @@
     "links": [
       {
         "target": "liangshan"
+      },
+      {
+        "target": "dongjing",
+        "condition": {
+          "flag": "volume_complete"
+        }
+      },
+      {
+        "target": "south_route",
+        "condition": {
+          "flag": "chai_refuge"
+        }
       }
     ],
     "actions": [],
-    "stories": [],
-    "dungeons": []
+    "stories": [
+      "linchong_story"
+    ],
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "training",
@@ -677,7 +735,8 @@
     ],
     "actions": [],
     "stories": [],
-    "dungeons": []
+    "dungeons": [],
+    "chapter": "volume_one"
   },
   {
     "id": "expeditions",
@@ -696,6 +755,386 @@
       "yezhulin",
       "shanshenmiao",
       "zhujiazhuang"
-    ]
+    ],
+    "chapter": "volume_one"
+  },
+  {
+    "id": "dongjing",
+    "name": "东京城门",
+    "region": "东京",
+    "description": "城门内车马如织，禁军校尉穿行其间。渡口带来的书信提到一位林教头，大相国寺的钟声正从城中传来。",
+    "links": [
+      {
+        "target": "ferry",
+        "condition": null
+      },
+      {
+        "target": "dongjing_lane",
+        "condition": null
+      },
+      {
+        "target": "temple_gate",
+        "condition": null
+      },
+      {
+        "target": "boar_road",
+        "condition": {
+          "flag": "lin_tolerant"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "dongjing_lane",
+    "name": "教头旧居",
+    "region": "东京",
+    "description": "屋檐下挂着一杆旧枪。林冲衣冠齐整，说话仍留三分余地，门外却总有陌生人的脚步停留。",
+    "links": [
+      {
+        "target": "dongjing",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "linchong_story"
+    ],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "temple_gate",
+    "name": "大相国寺山门",
+    "region": "东京",
+    "description": "香客沿石阶进出，钟声越过高墙。寺后的菜园传来吵嚷，一名僧人正大步赶去。",
+    "links": [
+      {
+        "target": "dongjing",
+        "condition": null
+      },
+      {
+        "target": "xiangguosi",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "xiangguosi",
+    "name": "大相国寺",
+    "region": "东京",
+    "description": "廊下僧人忙着洒扫。一柄沉重禅杖靠在柱旁，来客说它的主人脾气粗直，却从不欺压穷苦人。",
+    "links": [
+      {
+        "target": "temple_gate",
+        "condition": null
+      },
+      {
+        "target": "vegetable_garden",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "luzhishen_story"
+    ],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "vegetable_garden",
+    "name": "相国寺菜园",
+    "region": "东京",
+    "description": "柳荫盖着菜畦，几个泼皮在篱边赔笑。鲁智深提起他们弄翻的木桶，要他们把糟蹋的菜地收拾干净。",
+    "links": [
+      {
+        "target": "xiangguosi",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "luzhishen_story"
+    ],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "boar_road",
+    "name": "东京北官道",
+    "region": "北行路",
+    "description": "押解的行列刚走过驿亭，泥地还留着拖曳的脚印。前方林木渐深，行旅说那里少有村落。",
+    "links": [
+      {
+        "target": "dongjing",
+        "condition": null
+      },
+      {
+        "target": "boar_forest",
+        "condition": null
+      },
+      {
+        "target": "qingzhou_road",
+        "condition": {
+          "flag": "lin_temple"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "boar_forest",
+    "name": "野猪林深处",
+    "region": "野猪林",
+    "description": "古木蔽日，风声从高枝间漏下。董超、薛霸把林冲领到树下，说是歇脚，却将水火棍握紧了。",
+    "links": [
+      {
+        "target": "boar_road",
+        "condition": null
+      },
+      {
+        "target": "cangzhou",
+        "condition": {
+          "flag": "lu_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "linchong_story",
+      "luzhishen_story"
+    ],
+    "dungeons": [
+      "yezhulin"
+    ],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "cangzhou",
+    "name": "沧州城",
+    "region": "沧州",
+    "description": "北地风硬，城墙脚下积着残雪。林冲暂在此安身，一家小酒铺的店主认出了旧日恩人。",
+    "links": [
+      {
+        "target": "boar_forest",
+        "condition": null
+      },
+      {
+        "target": "cangzhou_inn",
+        "condition": null
+      },
+      {
+        "target": "feed_depot",
+        "condition": {
+          "flag": "lin_cangzhou"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "cangzhou_inn",
+    "name": "李小二酒铺",
+    "region": "沧州",
+    "description": "炉上温着薄酒，李小二隔着门缝察看街面。他记得林冲曾经周济自己，见有陌生客人问话便留了心。",
+    "links": [
+      {
+        "target": "cangzhou",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "linchong_story"
+    ],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "feed_depot",
+    "name": "草料场",
+    "region": "沧州",
+    "description": "草堆高过屋檐，风吹得破门发响。差拨把看守之事交给林冲，远处雪云一层层压来。",
+    "links": [
+      {
+        "target": "cangzhou",
+        "condition": null
+      },
+      {
+        "target": "snow_road",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "linchong_story"
+    ],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "snow_road",
+    "name": "风雪山道",
+    "region": "沧州",
+    "description": "大雪压低了树枝，草屋已难遮风。林冲挑着酒葫芦走来，山神庙露出一线屋檐，雪地上还有几行新脚印。",
+    "links": [
+      {
+        "target": "feed_depot",
+        "condition": null
+      },
+      {
+        "target": "mountain_temple",
+        "condition": {
+          "flag": "snow_evidence"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "id": "snow_tracks",
+        "label": "察看雪中脚印",
+        "once": true,
+        "condition": {
+          "flag": "lin_cangzhou"
+        },
+        "text": "脚印绕向山神庙，远处传来酒气与低语。林冲收紧衣襟，决定先到庙中避雪。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "snow_evidence"
+          }
+        ]
+      }
+    ],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "mountain_temple",
+    "name": "风雪山神庙",
+    "region": "沧州",
+    "description": "庙门被石头掩住，供桌旁只容一人避雪。门外忽然响起说话声，远处草料场的火光映红了半边天。",
+    "links": [
+      {
+        "target": "snow_road",
+        "condition": null
+      },
+      {
+        "target": "chaijin_manor",
+        "condition": {
+          "flag": "lin_temple"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "linchong_story"
+    ],
+    "dungeons": [
+      "shanshenmiao"
+    ],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "chaijin_manor",
+    "name": "柴进庄",
+    "region": "横海郡",
+    "description": "庄门前拴着远客的马，庄客见持书之人便请入内。柴进素来接济落难好汉，堂中并无催问来历的声音。",
+    "links": [
+      {
+        "target": "mountain_temple",
+        "condition": null
+      },
+      {
+        "target": "chaijin_guesthouse",
+        "condition": null
+      },
+      {
+        "target": "south_route",
+        "condition": {
+          "flag": "chai_refuge"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "chaijin_story"
+    ],
+    "dungeons": [
+      "chai_escort"
+    ],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "chaijin_guesthouse",
+    "name": "柴庄客舍",
+    "region": "横海郡",
+    "description": "灶边备着干衣热饭，墙上挂了几件兵器。林冲终于坐定，柴进的庄客正在安排送往水泊的书信。",
+    "links": [
+      {
+        "target": "chaijin_manor",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "chaijin_story"
+    ],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "south_route",
+    "name": "南下水泊路",
+    "region": "梁山外",
+    "description": "北地的积雪渐渐化成泥水，远处芦苇迎风起伏。庄客在岔路口停下，指向一条可抵梁山渡口的小径。",
+    "links": [
+      {
+        "target": "chaijin_manor",
+        "condition": null
+      },
+      {
+        "target": "ferry",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_two"
+  },
+  {
+    "id": "qingzhou_road",
+    "name": "青州行旅道",
+    "region": "青州",
+    "description": "一队商旅被倒木拦在路边。一个面有青记的汉子默默整理行装，他提起失陷的差事时仍有不甘，却不肯看眼前弱者受欺。",
+    "links": [
+      {
+        "target": "boar_road",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "yangzhi_story"
+    ],
+    "dungeons": [
+      "qingzhou_patrol"
+    ],
+    "chapter": "volume_two"
   }
 ]

@@ -1,5 +1,5 @@
-import { count, journal, requireRule } from './utils.js';
-import { gainExp } from './hero.js';
+import { count, journal, random, requireRule } from './utils.js?v=0.3.0';
+import { gainExp } from './hero.js?v=0.3.0';
 export function gainItem(state, id, amount, data) {
   requireRule(data.by.items[id] && Number.isInteger(amount) && amount > 0,'无效的道具奖励。');
   state.inventory[id]=(state.inventory[id]||0)+amount;count(state,'gain_'+id,amount);
@@ -17,6 +17,10 @@ export function grant(state, reward, data) {
   if(reward.exp)for(const id of state.team)gainExp(state,id,reward.exp,data);
 }
 export function newEquipment(state, id) { const instance={uid:'eq_'+state.nextEquipment++,item:id,plus:0,hero:null};state.equipment.push(instance);return instance; }
+export function strengthenQuote(state,data,equip) {
+  const rule=data.config.balance.strengthen, next=equip.plus+1, advanced=next>5;
+  return {cap:state.progress.flags[rule.advancedFlag]?rule.cap:5,rate:advanced?rule.advancedRate:1,cost:{silver:rule.silverPerLevel*next,items:{iron:next,...(advanced?{[rule.advancedMaterial]:1}:{})}}};
+}
 export function itemAction(state, data, action) {
   const {type,id,hero}=action, item=data.by.items[id];
   if(type==='buy') {
@@ -45,7 +49,13 @@ export function itemAction(state, data, action) {
     requireRule(hero===null||state.heroes[hero]?.status==='owned','只有入寨好汉能够穿戴。');
     if(hero)for(const e of state.equipment)if(e.hero===hero&&data.by.equipments[e.item].type===model.type)e.hero=null;
     equip.hero=hero;journal(state,`${model.name}${hero?'交给'+data.by.heroes[hero].name:'已卸下'}。`);
-  } else if(type==='strengthen') {requireRule(state.location==='forge','请到城西铁匠铺。');requireRule(equip.plus<5,'本卷基础强化上限为 +5。');pay(state,{silver:50*(equip.plus+1),items:{iron:equip.plus+1}});equip.plus++;count(state,'strengthen');journal(state,`${model.name}强化至 +${equip.plus}。基础强化必成。`);}
+  } else if(type==='strengthen') {
+    requireRule(state.location==='forge','请到城西铁匠铺。');const quote=strengthenQuote(state,data,equip);
+    requireRule(equip.plus<quote.cap,quote.cap===5?'当前强化上限为 +5；完成山神庙往事后，可向铁匠请教。':'本版强化上限为 +10。');
+    pay(state,quote.cost);const success=quote.rate===1||random(state)<quote.rate;
+    if(success){equip.plus++;count(state,'strengthen');journal(state,`${model.name}强化至 +${equip.plus}。`);}
+    else journal(state,`${model.name}此次淬炼未成，碎银、精铁与强化符已消耗；装备仍为 +${equip.plus}，没有降级或损毁。`);
+  }
   else if(type==='dismantle') {requireRule(state.location==='forge','请到城西铁匠铺。');requireRule(!equip.hero,'请先卸下装备，再分解。');state.equipment=state.equipment.filter(e=>e.uid!==id);gainItem(state,'scrap_iron',model.tier*2+equip.plus,data);journal(state,`${model.name}已分解为碎铁。`);}
   else throw new Error('未知道具操作。');
 }

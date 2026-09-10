@@ -1,13 +1,13 @@
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js';
-import { exits, meets, heroRank } from './map.js';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js';
-import { startBattle, takeTurn } from './battle.js';
-import { effects, storyAction, visit } from './story.js';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.3.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.3.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.3.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.3.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle } from './battle.js?v=0.3.0';
+import { effects, storyAction, visit } from './story.js?v=0.3.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
-  const state={version:1,revision:0,clock:now,lastRegen:now,rng:seed,worldMinute:600,location:'yuncheng',startedAt:now,
+  const state={version:data.config.version,revision:0,clock:now,lastRegen:now,rng:seed,worldMinute:600,location:'yuncheng',startedAt:now,
     player:{name:'白泽寨主',title:'初入江湖',silver:initial.silver,merit:0,prestige:0,stamina:100,liangshanLevel:0},
     heroes:Object.fromEntries(data.heroes.map(h=>[h.id,{status:'unknown',level:1,exp:0}])),team:[],inventory:{...initial.items},equipment:[],nextEquipment:1,
     progress:{flags:{},stories:{},visited:['yuncheng'],actions:{},claims:[],clears:{}},stats:{},
@@ -32,7 +32,7 @@ function stamina(state,n) {requireRule(state.player.stamina>=n,`体力不足，�
 export function questReady(state,q) {return q.type==='daily'?(state.daily.counters[q.goal.stat]||0)>=q.goal.amount:meets(state,q.condition);}
 export function isBusy(state) {return !!(state.battle||state.scheme||state.event);}
 function beginDungeon(state,data,id) {
-  const d=data.by.dungeons[id];requireRule(d&&d.map===state.location&&meets(state,d.condition),'此处尚不能开启这次历练。');
+  const d=data.by.dungeons[id];requireRule(dungeonEntry(state,d),'此处尚不能开启这次历练。');
   requireRule(state.team.length>0,'先在好汉页面安排出阵人手。');
   requireRule(Math.max(...state.team.map(id=>state.heroes[id].level))>=d.level,`队伍中至少一名好汉须达到 ${d.level} 级。`);
   requireRule((state.daily.dungeons[id]||0)<d.limit,'今日此处的历练次数已用完。');
@@ -53,7 +53,7 @@ function finishBattle(state,data) {
     count(state,'battleWin');
     if(b.enemy.some(e=>e.model==='bandit'||e.model==='bandit_chief'))count(state,'bandits');
     if(state.formationPending&&!b.guest){count(state,'formationBattle');state.formationPending=false;}
-    if(b.context.type==='story'){state.progress.stories[b.context.id].step=b.context.next;journal(state,'虎势已息，请在密林中续记这段往事。');}
+    if(b.context.type==='story'){state.progress.stories[b.context.id].step=b.context.next;const story=data.by.stories[b.context.id];journal(state,'此战得胜，请在'+data.by.maps[story.steps[b.context.next].map].name+'续记【'+story.title+'】。');}
     else if(b.context.type==='dungeon')rewardDungeon(state,data,b.context.id);
     else {grant(state,{silver:90,prestige:3,exp:100,items:{scrap_iron:1}},data);journal(state,'交战得胜，行旅得以安行。获得碎银与历练经验。');}
   } else {count(state,'battleLoss');journal(state,'此战收兵。好汉不会永久失去；再战前可调整队伍、药物与装备。');}
@@ -86,17 +86,18 @@ function finishScheme(state,data) {
   state.scheme=null;
 }
 function completeVolume(state,data) {
-  if(state.progress.flags.volume_complete)return;
-  if(state.progress.flags.tiger_complete&&state.progress.flags.huangni_complete&&Object.values(state.heroes).filter(h=>h.status==='owned').length>=3&&(state.stats.clears||0)>=10&&state.player.prestige>=data.config.balance.volumePrestige){
-    state.progress.flags.volume_complete=true;state.player.liangshanLevel=1;state.player.title='梁山寨主';
-    journal(state,'【江湖风起】郓城风声渐紧，你与众好汉在梁山脚下安顿初级据点。第一卷《郓城风起》完。渡口传来东京与沧州的消息：林冲、鲁智深，还有柴进与杨志。下一程的江湖已有回声。');
-  } else state.player.title=state.player.prestige>=100?'一方豪杰':state.player.prestige>=40?'小有名气':'初入江湖';
+  for(const chapter of data.chapters){
+    if(state.progress.flags[chapter.completeFlag]||!meets(state,chapter.condition)||!chapter.requirements.every(r=>meets(state,r.condition)))continue;
+    state.progress.flags[chapter.completeFlag]=true;state.player.liangshanLevel=Math.max(state.player.liangshanLevel,chapter.baseLevel);
+    effects(state,chapter.effects,data);journal(state,chapter.ending);
+  }
+  state.player.title=state.progress.flags.volume_complete?'梁山寨主':state.player.prestige>=100?'一方豪杰':state.player.prestige>=40?'小有名气':'初入江湖';
 }
 // All commands are transactional: rejection discards the clone, including RNG/costs.
 export function dispatch(data,current,action,now=Date.now()) {
   const state=clone(current);refresh(state,data,now);
   requireRule(action&&typeof action.type==='string','无效操作。');
-  if(isBusy(state))requireRule(['turn','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
+  if(isBusy(state))requireRule(['battleTick','battleSkill','battleItem','battleRetreat','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
   const {type,id}=action;
   if(type==='refresh')return state;
   if(type==='move'){requireRule(exits(state,data).some(link=>link.target===id),'此路尚未开放。');visit(state,id,data);}
@@ -116,7 +117,10 @@ export function dispatch(data,current,action,now=Date.now()) {
   else if(type==='scheme')schemeChoice(state,data,id);
   else if(type==='finishScheme')finishScheme(state,data);
   else if(type==='dungeon')beginDungeon(state,data,id);
-  else if(type==='turn')takeTurn(state,data,id,action.item);
+  else if(type==='battleTick')advanceBattle(state,data,action.delta);
+  else if(type==='battleSkill')castSkill(state,data,action.hero,id);
+  else if(type==='battleItem')useBattleItem(state,data,id);
+  else if(type==='battleRetreat')retreatBattle(state);
   else if(type==='finishBattle')finishBattle(state,data);
   else if(type==='recruit'){requireRule(state.location==='recruit','请到招贤馆拜访。');recruit(state,data,id);}
   else if(type==='team'){

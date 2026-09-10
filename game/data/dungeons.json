@@ -53,7 +53,15 @@
     "limit": 3,
     "reward": "forest_reward",
     "description": "据鲁智深所述，演练林中救援。此处并非第二卷完整剧情。",
-    "kind": "battle"
+    "kind": "battle",
+    "entrances": [
+      {
+        "map": "boar_forest",
+        "condition": {
+          "flag": "lu_complete"
+        }
+      }
+    ]
   },
   {
     "id": "shanshenmiao",
@@ -72,7 +80,15 @@
     "limit": 3,
     "reward": "temple_reward",
     "description": "雪夜需稳住阵脚，再破围攻。林冲的完整往事将在后续卷展开。",
-    "kind": "battle"
+    "kind": "battle",
+    "entrances": [
+      {
+        "map": "mountain_temple",
+        "condition": {
+          "flag": "lin_temple"
+        }
+      }
+    ]
   },
   {
     "id": "zhujiazhuang",
@@ -93,5 +109,43 @@
     "reward": "zhu_reward",
     "description": "先演练庄前交战，留心敌人的结阵。庄内迷径不在本卷开放。",
     "kind": "battle"
+  },
+  {
+    "id": "chai_escort",
+    "name": "柴庄护送",
+    "map": "chaijin_manor",
+    "condition": {
+      "flag": "chai_refuge"
+    },
+    "level": 20,
+    "cost": 15,
+    "limit": 3,
+    "kind": "battle",
+    "enemy": [
+      "bandit",
+      "road_raider"
+    ],
+    "scale": 1.5,
+    "reward": "chai_escort_reward",
+    "description": "带自己的队伍护送行旅。取胜带回锻造材料，并有机会得到柴进的信物；每日最多三次。"
+  },
+  {
+    "id": "qingzhou_patrol",
+    "name": "青州护道",
+    "map": "qingzhou_road",
+    "condition": {
+      "flag": "yang_complete"
+    },
+    "level": 20,
+    "cost": 15,
+    "limit": 3,
+    "kind": "battle",
+    "enemy": [
+      "guard",
+      "road_raider"
+    ],
+    "scale": 1.5,
+    "reward": "qingzhou_patrol_reward",
+    "description": "带自己的队伍护送行旅。取胜带回锻造材料，并有机会得到杨志的信物；每日最多三次。"
   }
 ]

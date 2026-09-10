@@ -141,5 +141,100 @@
       "大虫腰胯一掀，露出了侧身。可乘隙进击。",
       "大虫竖起长尾，目光紧盯前方。宜蓄势观察。"
     ]
+  },
+  {
+    "id": "dongchao",
+    "name": "董超",
+    "attribute": {
+      "hp": 1000,
+      "attack": 110,
+      "defense": 65,
+      "speed": 80,
+      "strategy": 60
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "董超将水火棍举到肩头。",
+      "董超一击落空，脚下露了空门。",
+      "董超绕向树后，试图夹击。"
+    ]
+  },
+  {
+    "id": "xueba",
+    "name": "薛霸",
+    "attribute": {
+      "hp": 1050,
+      "attack": 105,
+      "defense": 70,
+      "speed": 75,
+      "strategy": 60
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "薛霸探身向前，棍影罩住来路。",
+      "薛霸收棍迟了一拍。",
+      "薛霸紧盯林冲，忽略了背后的脚步。"
+    ]
+  },
+  {
+    "id": "luqian",
+    "name": "陆谦",
+    "attribute": {
+      "hp": 1600,
+      "attack": 160,
+      "defense": 105,
+      "speed": 100,
+      "strategy": 60
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "陆谦听到庙内响动，手忙脚乱地拔刀。",
+      "陆谦步步后退，刃口仍朝着来人。",
+      "陆谦强撑着守势，试图与同伴靠拢。"
+    ]
+  },
+  {
+    "id": "fuan",
+    "name": "富安",
+    "attribute": {
+      "hp": 1300,
+      "attack": 145,
+      "defense": 90,
+      "speed": 95,
+      "strategy": 60
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "富安绕向石阶另一边。",
+      "富安在积雪中踉跄了一步。",
+      "富安压低兵刃，想借庙门避开锋芒。"
+    ]
+  },
+  {
+    "id": "road_raider",
+    "name": "截道头领",
+    "attribute": {
+      "hp": 1400,
+      "attack": 140,
+      "defense": 85,
+      "speed": 105,
+      "strategy": 60
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "截道者把兵刃横在车辙上。",
+      "截道者追击太急，侧翼空了。",
+      "截道者高声招呼同伙。"
+    ]
   }
 ]

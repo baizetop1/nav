@@ -320,7 +320,7 @@
     "name": "猛扑",
     "type": "active",
     "cost": 40,
-    "description": "猛扑，留意下回合预兆。",
+    "description": "猛扑，留意出手倒计时。",
     "effect": {
       "kind": "damage",
       "rate": 1.4,
@@ -336,7 +336,7 @@
     "name": "尾剪",
     "type": "active",
     "cost": 40,
-    "description": "尾剪，留意下回合预兆。",
+    "description": "尾剪，留意出手倒计时。",
     "effect": {
       "kind": "damage",
       "rate": 1.3,
@@ -352,7 +352,7 @@
     "name": "毒牙",
     "type": "active",
     "cost": 40,
-    "description": "毒牙，留意下回合预兆。",
+    "description": "毒牙，留意出手倒计时。",
     "effect": {
       "kind": "damage",
       "rate": 0.8,
@@ -368,7 +368,7 @@
     "name": "劈斩",
     "type": "active",
     "cost": 40,
-    "description": "劈斩，留意下回合预兆。",
+    "description": "劈斩，留意出手倒计时。",
     "effect": {
       "kind": "damage",
       "rate": 1.5,
@@ -384,7 +384,7 @@
     "name": "结阵",
     "type": "active",
     "cost": 40,
-    "description": "结阵，留意下回合预兆。",
+    "description": "结阵，留意出手倒计时。",
     "effect": {
       "kind": "heal",
       "rate": 0.18
@@ -395,7 +395,7 @@
     "name": "啮咬",
     "type": "active",
     "cost": 40,
-    "description": "啮咬，留意下回合预兆。",
+    "description": "啮咬，留意出手倒计时。",
     "effect": {
       "kind": "damage",
       "rate": 1.2,
@@ -404,6 +404,57 @@
         "turns": 2,
         "value": 0.02
       }
+    }
+  },
+  {
+    "id": "hospitality",
+    "name": "仗义疏财",
+    "type": "strategy",
+    "cost": 50,
+    "description": "从容照应同伴，恢复伤势最重者三成气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3
+    }
+  },
+  {
+    "id": "noble_friend",
+    "name": "广结豪杰",
+    "type": "passive",
+    "cost": 0,
+    "description": "处变不惊，自身防御提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.08
+    }
+  },
+  {
+    "id": "blue_blade",
+    "name": "青锋断路",
+    "type": "active",
+    "cost": 50,
+    "description": "刀势沉稳，破开敌手守势。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    }
+  },
+  {
+    "id": "march_discipline",
+    "name": "押阵有方",
+    "type": "passive",
+    "cost": 0,
+    "description": "行军不乱，自身气血提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
     }
   }
 ]

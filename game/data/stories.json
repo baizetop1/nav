@@ -186,5 +186,518 @@
         ]
       }
     }
+  },
+  {
+    "id": "linchong_story",
+    "title": "林冲 · 风雪归途",
+    "map": "dongjing_lane",
+    "start": "tolerance",
+    "condition": {
+      "flag": "volume_complete"
+    },
+    "steps": {
+      "tolerance": {
+        "map": "dongjing_lane",
+        "text": "林冲听你说起江湖风声，仍只低声道：“林某只是个教头，守好本分便罢。”门外有人提起高衙内，他握住枪杆，又缓缓放开。",
+        "choices": [
+          {
+            "id": "greet",
+            "label": "与教头叙过姓名",
+            "next": "escort",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "linchong",
+                "status": "known"
+              },
+              {
+                "type": "flag",
+                "id": "lin_tolerant"
+              }
+            ]
+          }
+        ]
+      },
+      "escort": {
+        "map": "boar_forest",
+        "text": "再见时林冲已戴上枷锁。他不愿连累旁人，任由董超、薛霸把他领入林中。你不能替他挣脱，只能留意树后的动静；鲁智深曾答应沿路照看。",
+        "choices": [
+          {
+            "id": "watch",
+            "label": "留意林中动静，等候接应",
+            "next": "roadout",
+            "effects": [
+              {
+                "type": "flag",
+                "id": "lin_escort"
+              }
+            ]
+          }
+        ]
+      },
+      "roadout": {
+        "map": "boar_forest",
+        "text": "禅杖挡开水火棍。林冲劝住鲁智深：“且留他们性命，还须押我到沧州。”他仍想在律法之内寻一条活路。",
+        "choices": [
+          {
+            "id": "escort",
+            "label": "陪行至沧州",
+            "next": "cangzhou",
+            "effects": [
+              {
+                "type": "flag",
+                "id": "lin_cangzhou"
+              }
+            ],
+            "goMap": "cangzhou"
+          }
+        ],
+        "condition": {
+          "flag": "lu_complete"
+        },
+        "hint": "先在大相国寺、菜园结识鲁智深，再回野猪林完成护友之战。"
+      },
+      "cangzhou": {
+        "map": "cangzhou_inn",
+        "text": "李小二认出恩人，忙请进门。他说近日有外乡客打听草料场。林冲道：“到了此处，还是安分做事。”你可提醒他留心，但去留仍由他自己决定。",
+        "choices": [
+          {
+            "id": "warn",
+            "label": "请李小二留意异客",
+            "next": "depot",
+            "effects": [
+              {
+                "type": "flag",
+                "id": "lin_warned"
+              },
+              {
+                "type": "item",
+                "id": "jinchuangyao",
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "id": "duty",
+            "label": "提醒教头守值时也要留心",
+            "next": "depot",
+            "effects": [
+              {
+                "type": "item",
+                "id": "iron",
+                "amount": 2
+              }
+            ]
+          }
+        ]
+      },
+      "depot": {
+        "map": "feed_depot",
+        "text": "草屋经不起大雪，屋顶渐渐塌落。林冲盖好火盆，挑着葫芦往山道避雪。你沿途察看，雪地上的新脚印并不像往来挑夫留下的。",
+        "choices": [
+          {
+            "id": "shelter",
+            "label": "循山道寻找避雪之处",
+            "next": "listen",
+            "effects": [],
+            "goMap": "snow_road"
+          }
+        ]
+      },
+      "listen": {
+        "map": "mountain_temple",
+        "text": "门外的人说起草料场大火，竟以为林冲已经烧死。林冲听清陆谦的声音，脸色由惊疑转成冷硬：“一忍再忍，原来终不肯放我。”",
+        "choices": [
+          {
+            "id": "hear",
+            "label": "听清门外的话，提醒他看准方位",
+            "next": "confront",
+            "effects": [
+              {
+                "type": "flag",
+                "id": "lin_resolved"
+              }
+            ]
+          }
+        ]
+      },
+      "confront": {
+        "map": "mountain_temple",
+        "text": "林冲推开庙门，挺枪直面陆谦、富安。你退到石阶外观察夹击之势；持枪而立、作出决断的人始终是林冲。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "留意敌势，协助林冲应对",
+            "next": "aftermath",
+            "effects": [],
+            "battle": {
+              "enemies": [
+                "luqian",
+                "fuan"
+              ],
+              "guest": {
+                "id": "linchong",
+                "level": 30
+              }
+            }
+          }
+        ]
+      },
+      "aftermath": {
+        "map": "mountain_temple",
+        "text": "林冲亲手了断陆谦等人的追害，收枪立在风雪里。他没有再提安分求生，只问：“前方可还有容身之地？”你想起柴进好客，托人写下一封投庄书。",
+        "choices": [
+          {
+            "id": "letter",
+            "label": "收好书信，指向柴进庄",
+            "next": "departure",
+            "effects": [
+              {
+                "type": "flag",
+                "id": "lin_temple"
+              },
+              {
+                "type": "item",
+                "id": "linchong_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "refuge_letter",
+                "amount": 1
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 5
+              },
+              {
+                "type": "currency",
+                "id": "prestige",
+                "amount": 30
+              }
+            ]
+          }
+        ]
+      },
+      "departure": {
+        "map": "ferry",
+        "text": "柴庄的热饭与书信让人缓过气来，却不能替林冲决定归处。渡口芦苇摇动，他望着梁山道：“世路既不容我，且向水泊去。”你记下这段由隐忍至决绝的往事。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "记下风雪归途",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "lin_departure"
+              },
+              {
+                "type": "item",
+                "id": "linchong_token",
+                "amount": 1
+              },
+              {
+                "type": "currency",
+                "id": "prestige",
+                "amount": 20
+              }
+            ]
+          }
+        ],
+        "condition": {
+          "flag": "chai_refuge"
+        },
+        "hint": "持投庄书拜访柴进，交书并领受护送之约后，再回梁山渡口。"
+      }
+    }
+  },
+  {
+    "id": "luzhishen_story",
+    "title": "鲁智深 · 禅杖护友",
+    "map": "xiangguosi",
+    "start": "garden",
+    "condition": {
+      "flag": "volume_complete"
+    },
+    "steps": {
+      "garden": {
+        "map": "xiangguosi",
+        "text": "鲁智深听到菜园吵嚷，提杖便去。他骂泼皮时声如洪钟，见老园丁摔伤，却先弯腰扶人。粗豪之外，自有细心。",
+        "choices": [
+          {
+            "id": "follow",
+            "label": "随他到菜园看看",
+            "next": "kindness",
+            "effects": [],
+            "goMap": "vegetable_garden"
+          }
+        ]
+      },
+      "kindness": {
+        "map": "vegetable_garden",
+        "text": "泼皮们不敢再闹，纷纷赔罪。鲁智深却只让他们扶起篱笆：“力气该用在正经处！”说起林冲，他抬头看了看北行的路。",
+        "choices": [
+          {
+            "id": "promise",
+            "label": "说起林教头的处境",
+            "next": "rescue",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "luzhishen",
+                "status": "known"
+              },
+              {
+                "type": "flag",
+                "id": "lu_kindness"
+              },
+              {
+                "type": "item",
+                "id": "jinchuangyao",
+                "amount": 2
+              }
+            ]
+          }
+        ]
+      },
+      "rescue": {
+        "map": "boar_forest",
+        "text": "董超、薛霸举棍将下，鲁智深一声喝斥，禅杖已横在林冲身前。你只需提醒侧翼的棍势，救友的人自会出手。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "察看两边棍势，助他护住林冲",
+            "next": "after",
+            "effects": [],
+            "battle": {
+              "enemies": [
+                "dongchao",
+                "xueba"
+              ],
+              "guest": {
+                "id": "luzhishen",
+                "level": 20
+              }
+            }
+          }
+        ],
+        "condition": {
+          "flag": "lin_escort"
+        },
+        "hint": "先推进林冲在野猪林的往事，留意林中动静后才能接应。"
+      },
+      "after": {
+        "map": "boar_forest",
+        "text": "鲁智深还要追问两人，林冲却劝他住手。他压下怒气，答应再护送一程：“你只管走，洒家自有分寸。”",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "谢过护送之情",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "lu_complete"
+              },
+              {
+                "type": "item",
+                "id": "luzhishen_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 4
+              },
+              {
+                "type": "currency",
+                "id": "prestige",
+                "amount": 25
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "chaijin_story",
+    "title": "柴进 · 雪中留客",
+    "map": "chaijin_manor",
+    "start": "welcome",
+    "condition": {
+      "flag": "lin_temple"
+    },
+    "steps": {
+      "welcome": {
+        "map": "chaijin_manor",
+        "text": "柴进没有追问官府的是非，先让庄客端来热饭：“英雄落难，何必把话都堵在门口？”你报上姓名，提起同行的林教头。",
+        "choices": [
+          {
+            "id": "introduce",
+            "label": "叙过姓名，前往客舍",
+            "next": "letter",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "chaijin",
+                "status": "known"
+              },
+              {
+                "type": "flag",
+                "id": "chai_met"
+              }
+            ],
+            "goMap": "chaijin_guesthouse"
+          }
+        ]
+      },
+      "letter": {
+        "map": "chaijin_guesthouse",
+        "text": "投庄书放在桌上，林冲换下湿透的衣裳。庄客等你确认把书交给主人，以便安排南下的路。",
+        "choices": [
+          {
+            "id": "deliver",
+            "label": "交出投庄书信",
+            "next": "shelter",
+            "effects": [],
+            "condition": {
+              "item": "refuge_letter"
+            },
+            "cost": {
+              "items": {
+                "refuge_letter": 1
+              }
+            },
+            "goMap": "chaijin_manor"
+          }
+        ]
+      },
+      "shelter": {
+        "map": "chaijin_manor",
+        "text": "柴进看罢书信，吩咐备好干粮，又给出护送庄中行旅的约定：“日后路上有人需要照看，可来庄中问讯。”这是相识与托付，并不是立即入寨。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "应下护送之约",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "chai_refuge"
+              },
+              {
+                "type": "item",
+                "id": "chaijin_token",
+                "amount": 1
+              },
+              {
+                "type": "item",
+                "id": "recruit_order",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 4
+              },
+              {
+                "type": "currency",
+                "id": "prestige",
+                "amount": 20
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "yangzhi_story",
+    "title": "杨志 · 失意不失义",
+    "map": "qingzhou_road",
+    "start": "meet",
+    "condition": {
+      "flag": "lin_temple"
+    },
+    "steps": {
+      "meet": {
+        "map": "qingzhou_road",
+        "text": "面有青记的汉子自称杨志。提起失陷的财货，他沉默良久：“本领还在，却不知往何处用。”商旅的求救声打断了话头，他已经握住刀柄。",
+        "choices": [
+          {
+            "id": "introduce",
+            "label": "叙过姓名，说明前方险情",
+            "next": "guard",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "yangzhi",
+                "status": "known"
+              },
+              {
+                "type": "flag",
+                "id": "yang_met"
+              }
+            ]
+          }
+        ]
+      },
+      "guard": {
+        "map": "qingzhou_road",
+        "text": "截道头领挡在车队前。杨志让行旅退到坡后，自己踏入车辙之间。你替他察看侧面来路，他凭刀法守住眼前的路。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "留意侧翼，协助护道",
+            "next": "after",
+            "effects": [],
+            "battle": {
+              "enemies": [
+                "road_raider"
+              ],
+              "guest": {
+                "id": "yangzhi",
+                "level": 20
+              }
+            }
+          }
+        ]
+      },
+      "after": {
+        "map": "qingzhou_road",
+        "text": "车队重新上路。杨志擦净刀锋，不肯多收谢礼：“丢过的差事，不能拿这些人的性命补。”他留下一件信物，约你日后共同照看这条商路。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "记下青面兽的承诺",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "yang_complete"
+              },
+              {
+                "type": "item",
+                "id": "yangzhi_token",
+                "amount": 1
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 4
+              },
+              {
+                "type": "currency",
+                "id": "prestige",
+                "amount": 20
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 ]
