@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-11T18:34:21.729Z",
+  "generatedAt": "2026-09-11T21:43:43.181Z",
   "intelligence": {
-    "updatedAt": "2026-09-11T18:34:21.729Z",
+    "updatedAt": "2026-09-11T21:43:43.181Z",
     "items": [
       {
         "id": "cn-item-3a5d358bc060a533",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-86060",
+        "id": "cisa-kev-cve-2026-84869",
         "category": "security",
-        "title": "MikroTik RouterOS：MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86060",
+        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-10T00:00:00.000Z",
-        "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
-        "badge": "CVE-2026-86060",
-        "signal": "已遭利用 · 整改期限 2026-09-13"
+        "publishedAt": "2026-09-11T00:00:00.000Z",
+        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host conf…",
+        "badge": "CVE-2026-84869",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
         "id": "ai-openai-46fcf5bb7b99520f",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49662496",
+        "id": "hn-49662371",
         "category": "dev",
-        "title": "Show HN: Toast, a beautiful by default in terminal IDE",
-        "url": "https://github.com/paradise-runner/toast",
+        "title": "A misalignment of AI in mathematics",
+        "url": "https://mathandai.org/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T17:54:53.000Z",
+        "publishedAt": "2026-09-11T17:45:12.000Z",
         "badge": "HN",
-        "signal": "24 分 · 12 评论"
+        "signal": "385 分 · 453 评论"
       },
       {
         "id": "cn-it-5605cff2c51b5b15",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-w4v4-9rw7-5326",
+        "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
         "category": "security",
-        "title": "Traefik: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') and Incorrect Authorization",
-        "url": "https://github.com/advisories/GHSA-w4v4-9rw7-5326",
+        "title": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
+        "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T23:04:37.000Z",
-        "summary": "## Summary There is a high-severity request-smuggling vulnerability in Traefik's handling of the HTTP/1.1 `Upgrade` mechanism. Since Traefik moved to unencrypted HTTP/2 with prior knowledge (Go 1.24), a client-initiated `Upgrade: h2c` requ…",
-        "badge": "CVE-2026-88008",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-11T21:38:24.000Z",
+        "summary": "## SAML Tenant Binding Enables Cross-Tenant Account Takeover ### Summary Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant w…",
+        "badge": "CVE-2026-59151",
+        "signal": "CRITICAL · CVSS 9.6"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -95,18 +95,18 @@
         "source": "百度热搜",
         "summary": "从2020年年中以来，地球自转速率呈加快趋势，一天已不足24小时。中国科学院国家授时中心、英国国家物理实验室等机构研究人员表示，目前地球自转速度已达过去50年来最快，时光流逝比过去半个世纪任何时候都快。",
         "badge": "热搜",
-        "signal": "7,809,118 热度"
+        "signal": "7,808,439 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-67277",
+        "id": "cisa-kev-cve-2026-42016",
         "category": "security",
-        "title": "MikroTik RouterOS：MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67277",
+        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-10T00:00:00.000Z",
-        "summary": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
-        "badge": "CVE-2026-67277",
-        "signal": "已遭利用 · 整改期限 2026-09-13"
+        "publishedAt": "2026-09-11T00:00:00.000Z",
+        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+        "badge": "CVE-2026-42016",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
         "id": "ai-hugging-face-075fed980e67c694",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49662214",
+        "id": "hn-49665210",
         "category": "dev",
-        "title": "Λ Snap – An inviting programming language for kids and adults for CS study",
-        "url": "https://snap.berkeley.edu/",
+        "title": "ElevenLabs Music v2.5",
+        "url": "https://elevenmusic.io/blog/introducing-music-v2-5",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T17:36:11.000Z",
+        "publishedAt": "2026-09-11T20:53:16.000Z",
         "badge": "HN",
-        "signal": "28 分 · 11 评论"
+        "signal": "45 分 · 38 评论"
       },
       {
         "id": "cn-item-469419551521052e",
@@ -138,15 +138,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-v67p-phpq-fc8x",
+        "id": "github-advisory-ghsa-2cg9-97gq-9mqp",
         "category": "security",
-        "title": "Traefik entrypoint header-name sanitization bypassed via request trailers",
-        "url": "https://github.com/advisories/GHSA-v67p-phpq-fc8x",
+        "title": "Shopper: Missing authorization on product removal actions in CollectionProducts component",
+        "url": "https://github.com/advisories/GHSA-2cg9-97gq-9mqp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T23:04:21.000Z",
-        "summary": "## Summary Traefik's entrypoint defenses against spoofed trusted header names — `aliasHeadersStrategy` / `underscoreHeadersStrategy` in `delete` or `reject` mode, and the default `forwardedHeaders` stripping of client-supplied `X-Forwarded…",
-        "badge": "CVE-2026-88004",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-11T21:31:26.000Z",
+        "summary": "## Title Missing authorization on product removal actions in CollectionProducts component ## Description A lack of authorization control was discovered on both the per-record delete action and the bulk delete action inside `packages/admin/…",
+        "badge": "CVE-2026-56825",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-openai-39842fa0b34b37cb",
@@ -180,15 +180,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-19490",
+        "id": "cisa-kev-cve-2026-42018",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19490",
+        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42018",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-09T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an authentication-bypass vulnerability involving an alternate path or channel. When the NetScaler appliance is configured as an AAA virtual server or as a Gateway (SSL VPN, ICA Proxy, CVPN…",
-        "badge": "CVE-2026-19490",
-        "signal": "已遭利用 · 整改期限 2026-09-12"
+        "publishedAt": "2026-09-11T00:00:00.000Z",
+        "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+        "badge": "CVE-2026-42018",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49662767",
+        "id": "hn-49663373",
         "category": "dev",
-        "title": "Litelm: LiteLLM Without the Bloat",
-        "url": "https://github.com/kennethwolters/litelm",
+        "title": "GrapheneOS' rewritten Messages app is released",
+        "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T18:10:20.000Z",
+        "publishedAt": "2026-09-11T18:50:36.000Z",
         "badge": "HN",
-        "signal": "11 分 · 1 评论"
+        "signal": "119 分 · 65 评论"
       },
       {
         "id": "cn-baidu-95dd5bc00235b46b",
@@ -217,18 +217,18 @@
         "source": "百度热搜",
         "summary": "2026年9月，国内折叠屏渗透率突破8%、同比增长65%，但实体门店销售仍冷热不均，有店员坦言“10台手机卖不到1台折叠屏”。苹果入局被视为行业拐点，预计首款折叠屏今年出货量最高600万台。",
         "badge": "热搜",
-        "signal": "7,714,088 热度"
+        "signal": "7,713,555 热度"
       },
       {
-        "id": "github-advisory-ghsa-qqjf-53cj-pwvv",
+        "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
         "category": "security",
-        "title": "Traefik HTTP/3 Backend NTLM Connection Reuse",
-        "url": "https://github.com/advisories/GHSA-qqjf-53cj-pwvv",
+        "title": "Shopper: Unauthorized inventory stock manipulation via unlocked variant property in VariantStock component",
+        "url": "https://github.com/advisories/GHSA-g3f9-g5vj-p62f",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T23:04:06.000Z",
-        "summary": "## Summary Traefik's HTTP/3 request path did not initialize the connection-scoped backend transport holder that isolates connection-bound NTLM and Negotiate (Kerberos) authentication on the HTTP/1.1 and HTTP/2 paths. The HTTP/3 entrypoint …",
-        "badge": "CVE-2026-88007",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-11T21:29:20.000Z",
+        "summary": "## Title Unauthorized inventory stock manipulation via unlocked variant property in VariantStock component ## Description A lack of authorization control was discovered in the `stockAction()` method in `packages/admin/src/Livewire/Componen…",
+        "badge": "CVE-2026-56829",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-hugging-face-46660cb2ea4362f6",
@@ -261,15 +261,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2025-25249",
+        "id": "cisa-kev-cve-2026-85706",
         "category": "security",
-        "title": "Fortinet Multiple Products：Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-25249",
+        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-85706",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-09T00:00:00.000Z",
-        "summary": "Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.",
-        "badge": "CVE-2025-25249",
-        "signal": "已遭利用 · 整改期限 2026-09-12"
+        "publishedAt": "2026-09-11T00:00:00.000Z",
+        "summary": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repositor…",
+        "badge": "CVE-2026-85706",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
         "id": "ai-openai-6a886414536a09e3",
@@ -282,14 +282,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49662116",
+        "id": "hn-49662990",
         "category": "dev",
-        "title": "A Misalignment of AI in Mathematics",
-        "url": "https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/",
+        "title": "I spent $220 on Google app ads. 60% of the installs were robots",
+        "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T17:30:26.000Z",
+        "publishedAt": "2026-09-11T18:24:55.000Z",
         "badge": "HN",
-        "signal": "26 分 · 1 评论"
+        "signal": "88 分 · 42 评论"
       },
       {
         "id": "cn-it-d726d89fa2cb6657",
@@ -302,15 +302,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-f52w-8j3h-j724",
+        "id": "github-advisory-ghsa-j328-xmgp-j4q3",
         "category": "security",
-        "title": "Traefik: Rootless HTTP/1 request-target routes as \"/\" but is forwarded verbatim, bypassing path-scoped routing, middleware guards and access logging",
-        "url": "https://github.com/advisories/GHSA-f52w-8j3h-j724",
+        "title": "Shopper: privilege escalation via improper Livewire admin component authorization",
+        "url": "https://github.com/advisories/GHSA-j328-xmgp-j4q3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T23:03:53.000Z",
-        "summary": "## Summary Traefik accepts an HTTP/1.x request whose request-target is in rootless / opaque form (for example `GET http:http://internal-vhost/admin HTTP/1.1`). Go parses this into `URL.Opaque` with an empty `URL.Path`, so Traefik evaluates…",
-        "badge": "CVE-2026-88009",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-11T21:28:54.000Z",
+        "summary": "## Summary Three Livewire admin components in `shopper/framework` (latest master at commit `fcd0c59`, released as v2.8.0) gate state-mutating actions on the read-only `view_users` permission. This is the same class as the issue Shopper fix…",
+        "badge": "CVE-2026-56828",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-d721843382f3485e",
@@ -330,7 +330,7 @@
         "publishedAt": "2026-09-11T12:36:09.000Z",
         "summary": "http://openai.com/index/introducing-the-agents-api/ 意味着以后 Harness 也不需要自己写了，官方自动把上下文压缩、tools_call 、subAgents 等等一切都封装好了",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-baidu-883b786fa7ae998a",
@@ -340,18 +340,18 @@
         "source": "百度热搜",
         "summary": "工业和信息化部等九部门11日公布《智能网联新能源汽车产业发展“十五五”规划》，提出到2030年，我国智能网联新能源汽车全产业链优势进一步巩固，进入世界汽车强国行列，国内市场新能源乘用车、商用车在各自领域新车总销量的占比分别达到70%、40%，具备自动驾驶功能的汽车实现规模应用。",
         "badge": "热搜",
-        "signal": "7,617,652 热度"
+        "signal": "7,618,645 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-87491",
+        "id": "cisa-kev-cve-2026-86060",
         "category": "security",
-        "title": "Google Chromium V8：Google Chromium V8 Out of Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87491",
+        "title": "MikroTik RouterOS：MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86060",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-09T00:00:00.000Z",
-        "summary": "Google Chromium V8 contains an out of bounds write vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromiu…",
-        "badge": "CVE-2026-87491",
-        "signal": "已遭利用 · 整改期限 2026-09-23"
+        "publishedAt": "2026-09-10T00:00:00.000Z",
+        "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
+        "badge": "CVE-2026-86060",
+        "signal": "已遭利用 · 整改期限 2026-09-13"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49660555",
+        "id": "hn-49626718",
         "category": "dev",
-        "title": "118M Queries per Second on Neki",
-        "url": "https://planetscale.com/blog/118-million-queries-per-second-on-neki",
+        "title": "A Design Space Exploration of Async/Await",
+        "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T15:56:37.000Z",
+        "publishedAt": "2026-09-09T13:59:50.000Z",
         "badge": "HN",
-        "signal": "47 分 · 25 评论"
+        "signal": "36 分 · 3 评论"
       },
       {
         "id": "cn-item-b6ae16171e38f30c",
@@ -383,15 +383,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xwwr-4h3p-r22c",
+        "id": "github-advisory-ghsa-243p-f3cv-c5wh",
         "category": "security",
-        "title": "rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass",
-        "url": "https://github.com/advisories/GHSA-xwwr-4h3p-r22c",
+        "title": "Shopper: Authorization bypass in Filament bulk actions allows browse-only staff to mass-delete attributes/tags and mass-toggle visibility of brands/categories/suppliers",
+        "url": "https://github.com/advisories/GHSA-243p-f3cv-c5wh",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T22:49:07.000Z",
-        "summary": "### Summary `rclone serve s3`'s handler chain, when `--auth-proxy` is configured, is (outermost first): `authPairMiddleware` -> `proxyAuthMiddleware` -> gofakes3's own SigV4-verifying handler. `authPairMiddleware` parses the accessKeyID st…",
-        "badge": "CVE-2026-88018",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-09-11T20:47:17.000Z",
+        "summary": "## Summary Five Filament `groupedBulkActions` blocks across the Shopper admin Livewire pages omit the `->authorize(...)` permission gate, while their per-record sibling actions (and other Shopper Index pages such as `Pages/Settings/Currenc…",
+        "badge": "CVE-2026-56827",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-openai-0bb946f0c4215389",
@@ -425,15 +425,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-20079",
+        "id": "cisa-kev-cve-2026-67277",
         "category": "security",
-        "title": "Cisco Secure Firewall Management Center (FMC) and Security Cloud Control (SCC) Firewall Management：Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20079",
+        "title": "MikroTik RouterOS：MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67277",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-09T00:00:00.000Z",
-        "summary": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain an authentication Bypass using an alternate path or channel vulnerability that could allow an unauthenticated, remote…",
-        "badge": "CVE-2026-20079",
-        "signal": "已遭利用 · 整改期限 2026-09-12"
+        "publishedAt": "2026-09-10T00:00:00.000Z",
+        "summary": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
+        "badge": "CVE-2026-67277",
+        "signal": "已遭利用 · 整改期限 2026-09-13"
       },
       {
         "id": "ai-google-deepmind-63b19b50b4021cb5",
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49622406",
+        "id": "hn-49662767",
         "category": "dev",
-        "title": "Logo Programming Language",
-        "url": "https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html",
+        "title": "Litelm: LiteLLM Without the Bloat",
+        "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T07:07:26.000Z",
+        "publishedAt": "2026-09-11T18:10:20.000Z",
         "badge": "HN",
-        "signal": "151 分 · 74 评论"
+        "signal": "65 分 · 22 评论"
       },
       {
         "id": "cn-baidu-2034a785fe55c580",
@@ -462,18 +462,18 @@
         "source": "百度热搜",
         "summary": "近日，厦门一公司宣布中秋国庆连放13.5天假，发放最高2000元旅游基金，并提前告知供应商假期勿扰员工。负责人表示，放假是为公平起见，主要原因是自己也想放。",
         "badge": "热搜",
-        "signal": "7,522,534 热度"
+        "signal": "7,520,432 热度"
       },
       {
-        "id": "github-advisory-ghsa-p569-5gjg-9cmj",
+        "id": "github-advisory-ghsa-vjfw-cpmh-xwv3",
         "category": "security",
-        "title": "rclone: RC per-server auth-proxy bypass",
-        "url": "https://github.com/advisories/GHSA-p569-5gjg-9cmj",
+        "title": "Central Dogma: SSH host-key verification permanently disabled in Git mirror (SshGitMirror)",
+        "url": "https://github.com/advisories/GHSA-vjfw-cpmh-xwv3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T22:47:10.000Z",
-        "summary": "## Summary `serve/start` accepts protocol options in a per-server `proxyOpt` object. The FTP and S3 RC adapters parse that object and pass it to their server constructors, but the constructors decide whether proxy authentication is enabled…",
-        "badge": "CVE-2026-88044",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-11T20:45:50.000Z",
+        "summary": "# Vulnerability Central Dogma's Git mirror SSH client installs an Apache MINA SSHD `ServerKeyVerifier` lambda that returns `true` unconditionally for every outbound SSH connection used by `git+ssh://` mirrors. The accompanying lines disabl…",
+        "badge": "CVE-2026-11745",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-fffbcba03b0b217e",
@@ -510,7 +510,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 41088,
+        "stars": 41505,
         "starsToday": 3440
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 26575,
+        "stars": 26868,
         "starsToday": 3642
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/nab138/iloader",
         "description": "User friendly sideloader",
         "language": "TypeScript",
-        "stars": 2860,
+        "stars": 2882,
         "starsToday": 36
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/melgarafael/DeskcommCRM",
         "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "language": "TypeScript",
-        "stars": 1236,
+        "stars": 1287,
         "starsToday": 126
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/vastsa/PI-Desktop",
         "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
         "language": "TypeScript",
-        "stars": 2721,
+        "stars": 2750,
         "starsToday": 545
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/armory3d/armorpaint",
         "description": "Graphics Creation Tools",
         "language": "C",
-        "stars": 4672,
+        "stars": 4697,
         "starsToday": 354
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/alsk1992/CloddsBot",
         "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
         "language": "TypeScript",
-        "stars": 2064,
+        "stars": 2103,
         "starsToday": 627
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/nashsu/llm_wiki",
         "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
         "language": "TypeScript",
-        "stars": 18626,
+        "stars": 18684,
         "starsToday": 640
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 285253,
+        "stars": 285331,
         "starsToday": 731
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/Sonarr/Sonarr",
         "description": "Smart PVR for newsgroup and bittorrent users.",
         "language": "C#",
-        "stars": 15690,
+        "stars": 15715,
         "starsToday": 174
       }
     ],
-    "updatedAt": "2026-09-11T18:34:21.729Z"
+    "updatedAt": "2026-09-11T21:43:43.181Z"
   }
 }
