@@ -5,5 +5,5 @@
   "workers_dev": true,
   "observability": {"enabled": false},
   "vars": {"ALLOWED_ORIGINS": "https://baizeone.top"},
-  "d1_databases": [{"binding": "DB", "database_name": "baize-shuihu-saves", "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"}]
+  "d1_databases": [{"binding": "DB", "database_name": "baize-shuihu-saves", "database_id": "7d26f1e8-5c47-4630-81e1-8918aba4fd13"}]
 }
