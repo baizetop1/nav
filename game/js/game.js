@@ -1,16 +1,18 @@
-import { ActivityLog } from './activity.js?v=0.4.1';
-import { loadData } from './data.js?v=0.4.1';
-import { dispatch, newGame } from './core.js?v=0.4.1';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.4.1';
-import { esc, recruitDialog, render } from './ui.js?v=0.4.1';
-import { patchElement } from './dom.js?v=0.4.1';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.5.0';
+import { ActivityLog } from './activity.js?v=0.5.0';
+import { loadData } from './data.js?v=0.5.0';
+import { dispatch, newGame } from './core.js?v=0.5.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.5.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.5.0';
+import { patchElement } from './dom.js?v=0.5.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.4.1';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.4.1';
-import { CloudClient } from './cloud.js?v=0.4.1';
-import { boxImportDialog } from './savebox-ui.js?v=0.4.1';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.5.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.5.0';
+import { CloudClient } from './cloud.js?v=0.5.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.5.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
-let logFollowing=true;
+let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
+try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
 function fitViewport(){if(!window.visualViewport||Math.abs(window.visualViewport.scale-1)<0.01){const height=Math.min(window.innerHeight,window.visualViewport?.height||window.innerHeight);document.documentElement.style.setProperty('--game-height',height+'px');document.documentElement.toggleAttribute('data-short-viewport',height<480);}}
 fitViewport();window.addEventListener('resize',fitViewport);window.visualViewport?.addEventListener('resize',fitViewport);
 let database, channel, operation=false, savePending=null, slots=[], previewSlots=[], cloud;
@@ -31,7 +33,8 @@ function paint(focus=false){
   const anchor=oldLog&&Array.from(oldLog.querySelectorAll('[data-log-entry]')).find(el=>el.getBoundingClientRect().bottom>oldLog.getBoundingClientRect().top);
   const anchorId=anchor?.dataset.logEntry,anchorOffset=anchor&&anchor.getBoundingClientRect().top-oldLog.getBoundingClientRect().top;
   const entries=activity.observe(state,{available:entered&&!invalid,feedback:notice});
-  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:entries});
+  if(!logPaused&&(focus||!state.battle||performance.now()-lastLogPaint>=2000)){visibleEntries=entries.filter(e=>logMode==='all'||e.kind!=='battle'||!/进击|普攻|受到持续|损失.*气血/.test(e.text)||/施展|首领|蓄势|得胜|退阵|无力再战|军令/.test(e.text)).map(e=>({...e}));lastLogPaint=performance.now();}
+  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed});
   if(root.querySelector('.viewport-shell')){const next=document.createElement('template');next.innerHTML=html;patchElement(root.firstElementChild,next.content.firstElementChild);}
   else root.innerHTML=html;
   root.dataset.view=view;
@@ -50,7 +53,7 @@ function paint(focus=false){
   if(!pendingImport){document.getElementById('import-confirm')?.close();document.getElementById('import-confirm')?.remove();}
   updateRecruitNotice();
 }
-function updateLogCaption(){const caption=document.getElementById('activity-caption');if(caption)caption.textContent=logFollowing?'独立滚动 · 最新在底部':'正在阅读历史 · 新日志不打断';}
+function updateLogCaption(){const caption=document.getElementById('activity-caption');if(caption)caption.textContent=logPaused?'日志已冻结 · 战斗仍在进行':!logFollowing?'正在阅读历史 · 新日志不打断':'每 2 秒更新 · '+(logMode==='important'?'仅看重点':'完整战报');const pause=root.querySelector('[data-log-pause]'),filter=root.querySelector('[data-log-filter]');if(pause){pause.textContent=logPaused?'继续刷新':'冻结阅读';pause.setAttribute('aria-pressed',String(logPaused));}if(filter){filter.textContent=logMode==='important'?'查看完整战报':'只看重点';filter.setAttribute('aria-pressed',String(logMode==='all'));}}
 root.addEventListener('scroll',event=>{if(event.target.id!=='activity-log')return;const el=event.target;logFollowing=el.scrollHeight-el.scrollTop-el.clientHeight<24;updateLogCaption();},true);
 function updateRecruitNotice(){const notice=document.getElementById('recruit-result-save');if(notice){notice.textContent=locked?status:dirty?'此结果尚未写入本机：请保持本页打开，到存档页导出进度。':'本次结果已保存到本机。';notice.className=locked||dirty?'warning':'note';}}
 function showRecruitResult(result,returnCommand){
@@ -71,6 +74,12 @@ function showRecruitResult(result,returnCommand){
   },{once:true});
   updateRecruitNotice();dialog.showModal();document.body.classList.add('recruit-modal-open');dialog.querySelector('h2').focus({preventScroll:true});
 }
+function showRewards(before,after,returnCommand){
+  const rows=gains(before,after,data),victory=before.battle?.outcome==='victory'&&!after.battle;if(!rows.length&&!victory)return;
+  const dungeonVictory=(victory&&before.battle?.context.type==='dungeon')||(before.scheme?.outcome==='success'&&before.scheme.context.type==='dungeon'&&!after.scheme);
+  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory}));
+  const dialog=document.getElementById('reward-result');dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
+}
 function download(text,name){const blob=new Blob([text],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 async function persist(next,force=false){
   try{savePending=store.write(next,force);await savePending;dirty=false;status='已保存到本机 · '+new Date().toLocaleTimeString('zh-CN');}
@@ -89,13 +98,13 @@ async function battleFrame(){
   lastBattlePulse=now;
   operation=true;
   try{
-    state=dispatch(data,state,{type:'battleTick',delta:Math.min(delta,1000)});dirty=true;
+    state=dispatch(data,state,{type:'battleTick',delta:Math.min(Math.floor(delta*battleSpeed),1000)});dirty=true;
     if(state.battle.outcome||now-lastBattleSaved>=1000)await flushBattle();
     paint();
   }catch(e){battlePaused=true;battlePauseReason='交战已暂停，请先处理提示。';error=e.message;paint();}finally{operation=false;}
 }
-async function load(){activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
-  if(result.status==='ok'){state=result.state;view='map';status='已保存到本机 · 已接续原有进度';try{await persist(dispatch(data,state,{type:'refresh'}));}catch(e){status=e.message;}}
+async function load(){visibleEntries=[];logPaused=false;activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
+  if(result.status==='ok'){state=result.state;view=state.battle||state.scheme||state.event?'map':'camp';status='已保存到本机 · 已接续原有进度';try{await persist(dispatch(data,state,{type:'refresh'}));}catch(e){status=e.message;}}
   else{state=newGame(data);view=result.status==='invalid'?'save':'welcome';invalid=result.status==='invalid';locked=invalid;status=invalid?'存档无法读取，原文与已有备份均保留。请恢复备份或导入；导出按钮可取回坏档原文。':result.status==='unavailable'?'本机存储不可用，可临时游玩，但务必导出进度。':'尚未入卷，点击进入后开始保存。';}
   resumeSavedBattle();paint(true);
 }
@@ -130,13 +139,13 @@ async function handleBox(command){
       if(!remote.state){cloudView.message=slotNumber(id)+'号尚无云端进度，可持密钥上传本机档。';}
       else{await previewImport({state:remote.state,name:remote.name,cloud:{origin:cloud.baseUrl,id,revision:remote.cloudRevision,clean:true}});return true;}
     }
-    if(type==='ui_cloudUpload'){
+    if(type==='ui_cloudUpload'||type==='ui_cloudReplace'){
       if(locked||invalid||!entered)throw new Error('请先接续一个有效本机存档，处理冲突后再上传。');
       if(dirty){await persist(state);if(dirty)throw new Error('本机仍未保存，请先导出进度再处理存储问题。');}
       let revision;
       const link=store.record.cloud;
-      if(link?.origin===cloud.baseUrl&&link.id===id)revision=link.revision;
-      else{const remote=await cloud.download(id);if(remote.state)throw new Error('此本机档不是从该云端位置接续的。为避免覆盖错档，请先导出本机，再“查看云端进度 / 下载副本”接续；或上传到由你持有密钥的空位。');revision=remote.cloudRevision;}
+      if(type!=='ui_cloudReplace'&&link?.origin===cloud.baseUrl&&link.id===id)revision=link.revision;
+      else{const remote=await cloud.download(id);if(remote.state&&!window.confirm('此云端位置已有「'+remote.name+'」第 '+remote.cloudRevision+' 版。确认用本机「'+store.record.name+'」替换？云端旧版会保留在历史中。'))return true;revision=remote.cloudRevision;}
       if(!window.confirm('把本机 '+slotNumber(store.id)+'号「'+store.record.name+'」上传到云端 '+slotNumber(id)+'号？本次基于第 '+revision+' 版，云端若已更新将拒绝覆盖。'))return true;
       const result=await cloud.upload(id,revision,state,store.record.name);
       cloudView.message='云端已保存 '+slotNumber(id)+'号第 '+result.cloudRevision+' 版。手机端请查看并确认接续。';
@@ -200,13 +209,13 @@ async function handle(command){
     const next=dispatch(data,pendingImport.state,{type:'refresh'});
     const cloudLink=pendingImport.cloud?{...pendingImport.cloud,clean:JSON.stringify(next)===JSON.stringify(pendingImport.state)}:null;
     await destination.write(next,true,{name:pendingImport.name||destination.record.name,cloud:cloudLink});
-    activity.reset();logFollowing=true;store=destination;state=next;pendingImport=null;locked=false;invalid=false;dirty=false;entered=true;
-    status='已保存到本机 · 导入成功';view='map';await refreshSlots();rememberSlot();resumeSavedBattle();paint(true);return;
+    activity.reset();visibleEntries=[];logPaused=false;logFollowing=true;store=destination;state=next;pendingImport=null;locked=false;invalid=false;dirty=false;entered=true;
+    status='已保存到本机 · 导入成功';view=state.battle||state.scheme||state.event?'map':'camp';await refreshSlots();rememberSlot();resumeSavedBattle();paint(true);return;
   }
   if(type==='ui_reset'){
     if(document.getElementById('reset-phrase').value!=='白泽新卷')throw new Error('请输入“白泽新卷”确认。');
     if(!window.confirm('确认替换当前游戏进度？此操作不影响导航和学习记录。'))return;
-    const next=newGame(data);await store.write(next,true,{cloud:null});activity.reset();logFollowing=true;state=next;locked=false;invalid=false;dirty=false;entered=false;status='已保存到本机 · 新卷已开';view='welcome';paint(true);return;
+    const next=newGame(data);await store.write(next,true,{cloud:null});activity.reset();visibleEntries=[];logPaused=false;logFollowing=true;state=next;locked=false;invalid=false;dirty=false;entered=false;status='已保存到本机 · 新卷已开';view='welcome';paint(true);return;
   }
   if(locked)throw new Error(status);
   if(type==='ui_battlePause'){
@@ -215,20 +224,26 @@ async function handle(command){
     else await pauseBattle('你已暂停交战。点击继续交战后，普攻与冷却一起恢复。');paint();return;
   }
   if(['battleSkill','battleItem'].includes(type)&&battlePaused)throw new Error('请先继续交战，再释放技能或用药。');
-  if(type==='ui_start'){await persist(state);entered=true;view='map';paint(true);return;}
+  if(type==='ui_start'){const before=state;await persist(state.camp?state:dispatch(data,state,{type:'campFound'}));entered=true;view='camp';paint(true);showRewards(before,state);return;}
+  if(type==='ui_battleSpeed'){if(![.5,1,2].includes(command.speed))throw new Error('无效速度');battleSpeed=command.speed;try{localStorage.setItem('baize_shuihu_battle_speed',String(battleSpeed));}catch{}paint();return;}
+  if(type==='ui_campFormation')command={type:'campFormation',mode:document.getElementById('camp-mode').value,tactic:document.getElementById('camp-tactic').value,deployment:Number(document.getElementById('camp-deployment').value)};
   if(type==='ui_team')command={type:'team',ids:[0,1,2].map(i=>document.getElementById('team-'+i).value).filter(Boolean)};
   if(type==='ui_equip')command={type:'equip',id,hero:document.getElementById('holder-'+id).value||null};
   if(type==='ui_dismantle'){if(!window.confirm('确认分解此装备？装备将变为碎铁，不能原样取回。'))return;command={type:'dismantle',id};}
-  const hadBattle=!!state.battle,next=dispatch(data,state,command);await persist(next);
+  const before=state,hadBattle=!!state.battle,next=dispatch(data,state,command);await persist(next);
   if(!hadBattle&&next.battle&&!next.battle.outcome){battlePaused=false;battlePauseReason='';lastBattlePulse=performance.now();}
   notice=type==='recruit'||type.startsWith('battle')||next.battle?'':next.message;
   if(next.battle||next.scheme||next.event||['move','story','startScheme'].includes(type))view='map';
+  if(type==='finishBattle'&&before.battle?.context.type==='camp')view='camp';
   paint(['move','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
   if(type==='recruit')showRecruitResult(next.recruit.lastResult,JSON.stringify(command));
+  else {if(gains(before,next,data).length&&next.battle&&!next.battle.outcome)await pauseBattle('查看收获时已暂停，关闭后可继续交战。');showRewards(before,next,JSON.stringify(command));}
 }
 root.addEventListener('click',async event=>{
   const button=event.target.closest('button');if(!button||button.disabled)return;
   if(button.hasAttribute('data-log-latest')){logFollowing=true;const log=document.getElementById('activity-log');if(log)log.scrollTop=log.scrollHeight;updateLogCaption();return;}
+  if(button.hasAttribute('data-log-pause')){logPaused=!logPaused;lastLogPaint=0;paint();return;}
+  if(button.hasAttribute('data-log-filter')){logMode=logMode==='all'?'important':'all';logPaused=false;lastLogPaint=0;paint();return;}
   if(operation)return;
   if(button.dataset.view){if(!entered&&button.dataset.view!=='save'&&(locked||button.dataset.view!=='welcome'))return;operation=true;try{if(button.dataset.view!==view)await pauseBattle('离开战斗页面时已暂停。返回后点击继续交战。');view=button.dataset.view;error='';notice='';if(view==='save')await refreshSlots();paint(true);}finally{operation=false;}return;}
   if(!button.dataset.command)return;const painted=paintRevision;button.disabled=true;operation=true;root.setAttribute('aria-busy','true');
@@ -246,7 +261,7 @@ async function checkSlotConflict(){
 }
 window.addEventListener('beforeunload',event=>{if(!operation)flushBattle();if(dirty||operation){event.preventDefault();event.returnValue='';}});
 window.addEventListener('pagehide',()=>pauseBattle('离开页面，交战已暂停。'));
-async function refreshClock(){if(operation||!state||!entered||locked||invalid||view==='welcome'||view==='save'||document.getElementById('recruit-result')?.open||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;operation=true;try{await persist(dispatch(data,state,{type:'refresh'}));paint();}catch(e){error=e.message;paint();}finally{operation=false;}}
+async function refreshClock(){if(operation||!state||!entered||locked||invalid||view==='welcome'||view==='save'||document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;operation=true;try{await persist(dispatch(data,state,{type:'refresh'}));paint();}catch(e){error=e.message;paint();}finally{operation=false;}}
 document.addEventListener('visibilitychange',()=>{if(document.hidden){pauseBattle('切到后台时已暂停。回来后点击继续交战。');if(state)paint();}else{lastBattlePulse=null;checkSlotConflict();refreshClock();}});
 try{
   data=await loadData();let storage;try{storage=window.localStorage;}catch{storage={getItem(){throw new Error('浏览器禁止访问本机存储。');},setItem(){throw new Error('浏览器禁止访问本机存储。');}};}

@@ -1,5 +1,6 @@
-import { count, journal, requireRule } from './utils.js?v=0.4.1';
+import { count, journal, requireRule, random } from './utils.js?v=0.5.0';
 
+export const MOUNT_DROP_RATE=.2;
 export const SKILL_CAP=5, MOUNT_CAP=5;
 export const GROWTH_PROFILES=['legacy','rally','weaken','combo','control','protect','purify','interrupt','pierce','bloodline','steal','triage','wave','shelter','discipline'];
 export function skillLevel(state,id){return state.growth?.skills[id]||1;}
@@ -9,7 +10,7 @@ export function unlockReason(state,skill,guest=false){
   const hero=state.heroes[t.hero];
   if(hero?.status!=='owned')return '人物须正式入寨';
   if(hero.level<t.level)return `人物须达 ${t.level} 级`;
-  if(t.flag&&!state.progress.flags[t.flag])return t.label;
+  if(t.flag&&!state.progress.flags[t.flag]&&!(state.camp?.buildings.hall>=3))return t.label;
   if(t.tier==='bond'){
     const m=state.growth?.mounts[t.hero];
     if(!m)return '先通关对应副本取得坐骑契，再到郓城马厩领骑';
@@ -49,7 +50,7 @@ export function mountQuote(state,id,type,data){
     else{
       cost={silver:0,items:{[model.contract]:1}};
       if(m)reason='已有专属坐骑';
-      else if(!(state.inventory[model.contract]>0))reason=`先通关「${dungeon.name}」，结算后获得「${data.by.items[model.contract].name}」`;
+      else if(!(state.inventory[model.contract]>0))reason=`先通关「${dungeon.name}」，结算有 20% 概率获得「${data.by.items[model.contract].name}」`;
       else if(state.location!=='stable')reason='已持坐骑契，请到江湖 → 城中去处 → 郓城马厩领骑';
     }
   }else if(!m)reason='请先领骑';
@@ -67,6 +68,7 @@ export function awardMountContracts(state,data,dungeonId){
   const found=[];
   for(const h of data.heroes){const m=h.mount;
     if(m.dungeon!==dungeonId||state.growth?.mounts[h.id]||(state.inventory[m.contract]||0)>0)continue;
+    if(random(state)>=MOUNT_DROP_RATE)continue;
     state.inventory[m.contract]=1;found.push(data.by.items[m.contract].name);
   }
   return found;

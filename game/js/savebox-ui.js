@@ -1,6 +1,6 @@
-import { emptySlot } from './slots.js?v=0.4.1';
-import { slotNumber } from './portable.js?v=0.4.1';
-import { icon } from './icons.js?v=0.4.1';
+import { emptySlot } from './slots.js?v=0.5.0';
+import { slotNumber } from './portable.js?v=0.5.0';
+import { icon } from './icons.js?v=0.5.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const button=(label,type,extra={},symbol='save',disabled=false)=>`<button type="button" class="secondary with-icon" data-command="${esc(JSON.stringify({type,...extra}))}" ${disabled?'disabled':''}>${icon(symbol)}<span>${esc(label)}</span></button>`;
 export const localOptions=(slots,selected)=>Array.from({length:20},(_,i)=>slots.find(s=>s.id===i+1)||emptySlot(i+1)).map(s=>`<option value="${s.id}" ${s.id===selected?'selected':''}>${slotNumber(s.id)}号 · ${esc(s.name)} · ${s.raw?'已有进度':'空位'}</option>`).join('');
@@ -19,10 +19,10 @@ export function saveBoxPage(state,status,locked,box={}){
       <p class="note">空位会打开新卷；不同编号互不覆盖。同编号被其他标签页修改时，会暂停本页写入。</p>
     </details>
   </section>
-  <details class="fold-section savebox-files" data-fold="files"><summary>${icon('upload')} 文件导入 / 离线接续</summary>
+  <section class="fold-section savebox-files"><h2>${icon('upload')} 从其他设备导入存档</h2><p class="note">旧设备点击“导出当前进度”，将 JSON 文件发到此设备，在下方选择文件即可。无需云端服务或上传密钥。</p>
     <label>选择存档 JSON 文件<input id="import-file" type="file" accept=".json,application/json"></label><label for="import-text">或粘贴存档文本</label><textarea id="import-text" spellcheck="false" placeholder="在这里粘贴导出的 JSON"></textarea>
     ${button('检查导入内容','ui_import',{},'upload')}<p class="note">先校验和预览，再选择目标本机编号，最后确认替换。文件只包含游戏进度，不包含导航、Inbox 或密钥。文件里的云端版本仅供识别，不授予上传权限。</p>
-  </details>
+  </section>
   <details class="fold-section savebox-cloud" data-fold="cloud"><summary>${icon('upload')} 云端接续与朋友分享</summary>
     <p class="note">全站共享 01—20 号，由站长分配密钥，不是每个访客各占 20 号。本机位置与云端位置可以不同；上传始终需要对应密钥。</p>
     ${cloud.baseUrl?`<p class="meta">服务：${esc(cloud.baseUrl)}</p><div class="actions">${button('刷新云端列表','ui_cloudList',{},'restore')}${button('清除本页授权','ui_cloudForget',{},'close')}</div>
@@ -31,7 +31,7 @@ export function saveBoxPage(state,status,locked,box={}){
       <p class="note">公开档可留空下载副本；持有上传密钥的人能更新此编号，请仅交给信任的人。</p>
       <div class="actions">${button('查看云端进度 / 下载副本','ui_cloudDownload',{},'download')}${button('手动上传本机进度','ui_cloudUpload',{},'upload')}</div>
       <p id="cloud-message" role="status" class="${cloud.conflict?'warning':'note'}">${esc(cloud.message||'尚未提交云端。点击查看会先预览，不会自动覆盖本机。')}</p>
-      ${cloud.conflict?`<div class="actions">${button('先备份本机进度','ui_export',{},'download')}${button('查看云端进度并选择接续','ui_cloudDownload',{},'restore')}</div>`:''}
+      ${cloud.conflict?`<div class="actions">${button('先备份本机进度','ui_export',{},'download')}${button('查看云端进度并选择接续','ui_cloudDownload',{},'restore')}${button('重新比较并上传本机进度','ui_cloudReplace',{},'upload')}</div>`:''}
       <details class="fold-section" data-fold="sharing"><summary>公开设置与历史回滚（需要此档密钥）</summary><p class="note">默认私有。关闭公开仅阻止后续免密下载，不能收回朋友已保存的副本。回滚会创建一个新的云端版本，不自动替换本机。</p>
         <div class="actions">${button('开启公开副本','ui_cloudShare',{value:true},'heroes')}${button('关闭公开副本','ui_cloudShare',{value:false},'shield')}${button('读取最近十份历史','ui_cloudHistory',{},'restore')}</div>
         ${cloud.history?.id===selected?`<ul class="savebox-history">${cloud.history.history.map(h=>`<li>第 ${h.cloudRevision} 版 · ${esc(h.name)} · ${esc(h.updatedAt||'—')}${button('回滚至此版','ui_cloudRollback',{revision:h.cloudRevision},'restore')}</li>`).join('')||'<li>尚无历史。</li>'}</ul>`:''}

@@ -1,4 +1,4 @@
-import { gameSnapshot, slotId, slotName } from './portable.js?v=0.4.1';
+import { gameSnapshot, slotId, slotName } from './portable.js?v=0.5.0';
 const revision=n=>{if(!Number.isSafeInteger(n)||n<0)throw new Error('云端版本格式无效。');return n;};
 const listing=s=>({id:slotId(s.id),name:slotName(s.name),public:s.public===true});
 export class CloudError extends Error { constructor(message,status,details={}){super(message);this.status=status;Object.assign(this,details);} }

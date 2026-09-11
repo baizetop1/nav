@@ -1,8 +1,9 @@
-import { newGame } from './core.js?v=0.4.1';
-import { idPattern, requireRule } from './utils.js?v=0.4.1';
-import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.4.1';
-import { validateGrowth } from './growth.js?v=0.4.1';
-import { validateGrowthBattle } from './growth-save.js?v=0.4.1';
+import { newGame } from './core.js?v=0.5.0';
+import { idPattern, requireRule } from './utils.js?v=0.5.0';
+import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.5.0';
+import { validateGrowth } from './growth.js?v=0.5.0';
+import { validateGrowthBattle } from './growth-save.js?v=0.5.0';
+import { validateCamp, RAIDS } from './camp.js?v=0.5.0';
 export const SAVE_KEY='baize_shuihu_save', BACKUP_KEY=SAVE_KEY+'_backup';
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 function object(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}
@@ -32,7 +33,8 @@ export function validateSave(s,data) {
   for(const [id,p] of Object.entries(s.progress.stories))check(data.by.stories[id]&&['active','completed'].includes(p.status)&&Object.hasOwn(data.by.stories[id].steps,p.step),'剧情步骤');
   check(Array.isArray(s.progress.claims)&&new Set(s.progress.claims).size===s.progress.claims.length&&s.progress.claims.every(id=>data.by.quests[id]?.type==='main'),'主线酬劳');
   for(const [id,n] of Object.entries(s.progress.clears))check(data.by.dungeons[id]&&integer(n),'通关记录');
-  validateGrowth(s,data,check);
+  validateGrowth(s,data,check);validateCamp(s,check);
+  check(!s.battle?.expedition||!!s.camp,'出征需要寨子');
   check(object(s.stats)&&object(s.daily)&&object(s.daily.counters)&&object(s.daily.dungeons),'差事数据');
   for(const stats of [s.stats,s.daily.counters])for(const [key,n] of Object.entries(stats))check(/^[a-z][a-zA-Z0-9_]*$/.test(key)&&integer(n),'计数');
   check(/^\d{4}-\d{2}-\d{2}$/.test(s.daily.date)&&Array.isArray(s.daily.ids)&&s.daily.ids.length===3&&new Set(s.daily.ids).size===3&&s.daily.ids.every(id=>data.by.quests[id]?.type==='daily'),'今日差事');
@@ -46,7 +48,7 @@ export function validateSave(s,data) {
     const r=s.recruit.lastResult;check(object(r)&&Object.hasOwn(data.by.heroes,r.hero)&&(r.target===null||Object.hasOwn(data.by.heroes,r.target))&&['joined','duplicate','clue'].includes(r.kind)&&integer(r.number,1,s.recruit.total)&&typeof r.inTeam==='boolean','招贤结果');
     check(r.tokens===(r.kind==='clue'?2:r.kind==='duplicate'?3:0)&&r.merit===(r.kind==='duplicate'?15:0)&&(!r.inTeam||r.kind==='joined'),'招贤所得');
   }
-  const context=c=>check(c&&(c.type==='dungeon'?!!data.by.dungeons[c.id]:c.type==='event'?!!data.by.events[c.id]:c.type==='story'&&(c.id==='huangni'||!!data.by.stories[c.id])),'交战来源');
+  const context=c=>check(c&&(c.type==='dungeon'?!!data.by.dungeons[c.id]:c.type==='camp'?!!s.camp&&Object.hasOwn(RAIDS,c.id):c.type==='event'?!!data.by.events[c.id]:c.type==='story'&&(c.id==='huangni'||!!data.by.stories[c.id])),'交战来源');
   const logs=a=>check(Array.isArray(a)&&a.length<=150&&a.every(t=>typeof t==='string'&&t.length<2000),'战报');
   check(!(s.battle&&s.scheme)&&!(s.event&&(s.battle||s.scheme)),'互斥事件');
   if(s.battle){const b=s.battle,live=b.mode==='realtime';
