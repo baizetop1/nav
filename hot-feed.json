@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-11T04:33:38.168Z",
+  "generatedAt": "2026-09-11T04:42:07.036Z",
   "intelligence": {
-    "updatedAt": "2026-09-11T04:33:38.168Z",
+    "updatedAt": "2026-09-11T04:42:07.036Z",
     "items": [
       {
         "id": "cn-item-5a4214097ba71746",
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-10T14:09:31.000Z",
         "badge": "HN",
-        "signal": "884 分 · 603 评论"
+        "signal": "893 分 · 608 评论"
       },
       {
-        "id": "cn-it-2ed7cd362c34d621",
+        "id": "cn-it-d954ea18de6b244e",
         "category": "cn",
-        "title": "奥尔特曼称 OpenAI 考虑放缓前沿 AI 开发，希望其他公司也能跟进",
-        "url": "https://www.ithome.com/1/001/219.htm",
+        "title": "中国软件协会吕卫锋回应“AI 替代程序员”：高度重视，支持从业人员向高附加值岗位转型",
+        "url": "https://www.ithome.com/1/001/220.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T04:23:21.000Z",
-        "summary": "北京时间 9 月 11 日，据彭博社报道，OpenAI 正在考虑放缓尖端 AI 的开发速度，该公司 CEO 萨姆 · 奥尔特曼 (Sam Altman) 希望其他 AI 公司也能采取同样的做法。 据多名知情人士透露，奥尔特曼本周在一次全体员工会议上告诉员工，OpenAI 可能会放慢 AI 开发节奏，或许会与其他几家 AI 实验室协同行动，但也有一些公司可能不会同意这么做。 近几周，头部 AI 公司的员工纷纷公开表达对先进 AI 系统风险上升的担忧，加剧了这些公司内部的焦虑。…",
+        "publishedAt": "2026-09-11T04:37:58.000Z",
+        "summary": "IT之家 9 月 11 日消息，工信部今日召开《“人工智能 + 软件”专项行动实施方案》新闻发布会，有记者提到智能编程普及让一些软件从业人员感到压力，社会上也有“人工智能会替代程序员”的讨论。 中国软件行业协会副理事长兼秘书长吕卫锋表示， 当前这个问题社会关注度很高，我们也高度重视 。需要看到，人工智能推动软件生产方式变革，软件人才能力结构与岗位需求随之调整。 吕卫锋表示，从人才能力结构看： 一是单纯的编码执行能力权重下降 ，而需求理解、架构设计、系统集成、质量和安全控制等…",
         "badge": "IT之家"
       },
       {
@@ -77,14 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241297",
+        "id": "v2ex-1241298",
         "category": "dev",
-        "title": "真难啊，做个网站 3 个月 600 曝光， 40 次点击。",
-        "url": "https://www.v2ex.com/t/1241297",
+        "title": "Anthropic 点名多家中国公司蒸馏 Claude，包括 Qwen, kimi, deepseek, glm, xiaomi, Minimax",
+        "url": "https://www.v2ex.com/t/1241298",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T04:17:49.000Z",
+        "publishedAt": "2026-09-11T04:25:53.000Z",
+        "summary": "还公布了很多细节：“这些公司通过代理服务、大量账号、转发用户请求、提取 Claude 的 reasoning / CoT 等方式获取训练数据，再用于 SFT 、RL 或训练自己的模型” 坦白讲，我并不意外，但这些数据全部被公开，感觉有点难看。 https://www.anthropic.com/threat-intelligence-report-september-2026",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "8 回复"
       },
       {
         "id": "cn-baidu-9d5c3314b0620073",
@@ -94,7 +95,7 @@
         "source": "百度热搜",
         "summary": "香港特区政府卫生署控烟酒办公室10日公布“统一传统吸烟产品包装设计”最新进展，包括外包装不得有纹理，需统一采用暗啡色，删除焦油、尼古丁标志，以及更新12款健康忠告图像等。",
         "badge": "热搜",
-        "signal": "7,808,104 热度"
+        "signal": "7,809,243 热度"
       },
       {
         "id": "cisa-kev-cve-2026-67277",
@@ -117,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49639408",
+        "id": "hn-49607944",
         "category": "dev",
-        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
-        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+        "title": "Finite time blowup with smooth forcing term for the incompressible porous medium",
+        "url": "https://terrytao.wordpress.com/2026/09/07/finite-time-blowup-with-smooth-forcing-term-for-the-incompressible-porous-medium-boussinesq-and-incompressible-euler-equations/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T06:49:43.000Z",
+        "publishedAt": "2026-09-08T09:38:25.000Z",
         "badge": "HN",
-        "signal": "748 分 · 689 评论"
+        "signal": "20 分 · 0 评论"
       },
       {
         "id": "cn-item-6cde777096690307",
@@ -158,24 +159,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241288",
+        "id": "v2ex-1241297",
         "category": "dev",
-        "title": "大 token 用户一般除了砸钱，还能咋办，存粹个人用",
-        "url": "https://www.v2ex.com/t/1241288",
+        "title": "真难啊，做个网站 3 个月 600 曝光， 40 次点击。",
+        "url": "https://www.v2ex.com/t/1241297",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T03:42:04.000Z",
-        "summary": "我也算是从去年底就开始使用 AI 编程，Cursor 这类，再到 CLI 类 Codex 、claudecode 、gemini ，再到 CodeX 页面类型的，基本都玩边了，最终发现还是 ClaudeCode 适合我，因为可以使用各种不同厂商的 token ， 早期 火山引擎 codingplan 200/月 就可以解决所有问题，甚至用都用不完。 到后面，一家根本不够用，自己用服务器搭了 new-api ， 接上 朋友那买的，咸鱼买的，淘宝买的各类中转站 阿里 token…",
+        "publishedAt": "2026-09-11T04:17:49.000Z",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-835a42e2a42c02b8",
+        "id": "cn-it-2ed7cd362c34d621",
         "category": "cn",
-        "title": "Windows Server 2025 等用户反馈微软 9 月更新导致远程桌面服务故障",
-        "url": "https://www.ithome.com/1/001/217.htm",
+        "title": "奥尔特曼称 OpenAI 考虑放缓前沿 AI 开发，希望其他公司也能跟进",
+        "url": "https://www.ithome.com/1/001/219.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T04:02:51.000Z",
-        "summary": "IT之家 9 月 11 日消息，科技媒体 bleepingcomputer 昨日（9 月 10 日）发布博文，报道称部分 Windows Server 用户反馈， 安装微软 9 月累积更新后远程桌面服务出现故障。 受影响范围方面，IT之家援引博文介绍，基于社区用户反馈，主要影响以下 3 个版本： Windows Server 2019，安装 KB5122876 更新后出现 Windows Server 2022，安装 KB5122882 更新后出现 Windows Serv…",
+        "publishedAt": "2026-09-11T04:23:21.000Z",
+        "summary": "北京时间 9 月 11 日，据彭博社报道，OpenAI 正在考虑放缓尖端 AI 的开发速度，该公司 CEO 萨姆 · 奥尔特曼 (Sam Altman) 希望其他 AI 公司也能采取同样的做法。 据多名知情人士透露，奥尔特曼本周在一次全体员工会议上告诉员工，OpenAI 可能会放慢 AI 开发节奏，或许会与其他几家 AI 实验室协同行动，但也有一些公司可能不会同意这么做。 近几周，头部 AI 公司的员工纷纷公开表达对先进 AI 系统风险上升的担忧，加剧了这些公司内部的焦虑。…",
         "badge": "IT之家"
       },
       {
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49607944",
+        "id": "hn-49639408",
         "category": "dev",
-        "title": "Finite time blowup with smooth forcing term for the incompressible porous medium",
-        "url": "https://terrytao.wordpress.com/2026/09/07/finite-time-blowup-with-smooth-forcing-term-for-the-incompressible-porous-medium-boussinesq-and-incompressible-euler-equations/",
+        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T09:38:25.000Z",
+        "publishedAt": "2026-09-10T06:49:43.000Z",
         "badge": "HN",
-        "signal": "17 分 · 0 评论"
+        "signal": "754 分 · 690 评论"
       },
       {
         "id": "cn-baidu-83c8a49a9e206d49",
@@ -216,7 +216,7 @@
         "source": "百度热搜",
         "summary": "9月10日11时15分许，山东青岛市北海造船有限公司一艘外籍货轮靠港维修期间起火，造成25人遇难、5人受伤。事故发生后，记者于11日凌晨进入失火货轮船舱，探访火灾核心现场，消防员描述救火时温度达85℃。",
         "badge": "热搜",
-        "signal": "7,714,096 热度"
+        "signal": "7,713,146 热度"
       },
       {
         "id": "github-advisory-ghsa-qqjf-53cj-pwvv",
@@ -239,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241283",
+        "id": "v2ex-1241288",
         "category": "dev",
-        "title": "现在 AI 大模型这么强，跨端跨框架解决方案还有意义吗",
-        "url": "https://www.v2ex.com/t/1241283",
+        "title": "大 token 用户一般除了砸钱，还能咋办，存粹个人用",
+        "url": "https://www.v2ex.com/t/1241288",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T03:32:17.000Z",
-        "summary": "shopify 五年之前 all in react native 的，现在都开始转纯原生了。即使跨端方案重构为原生也花不了多少时间和成本，带来的性能提升则是真实可靠的。 所以现在跨端跨框架解决方案还有意义吗（不止 react native ，还有 electron 、taro 之类的各种） Native is now the future of mobile at Shopify Migrating Shop app from React Native to native",
+        "publishedAt": "2026-09-11T03:42:04.000Z",
+        "summary": "我也算是从去年底就开始使用 AI 编程，Cursor 这类，再到 CLI 类 Codex 、claudecode 、gemini ，再到 CodeX 页面类型的，基本都玩边了，最终发现还是 ClaudeCode 适合我，因为可以使用各种不同厂商的 token ， 早期 火山引擎 codingplan 200/月 就可以解决所有问题，甚至用都用不完。 到后面，一家根本不够用，自己用服务器搭了 new-api ， 接上 朋友那买的，咸鱼买的，淘宝买的各类中转站 阿里 token…",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "11 回复"
       },
       {
         "id": "cn-item-85f9e4c5bcbab127",
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49645393",
+        "id": "hn-49653328",
         "category": "dev",
-        "title": "Don't let anyone take away your big box of cables",
-        "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
+        "title": "Exercise intensity is associated with cardiometabolic health",
+        "url": "https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(26)00405-2",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T15:27:22.000Z",
+        "publishedAt": "2026-09-11T03:48:10.000Z",
         "badge": "HN",
-        "signal": "384 分 · 280 评论"
+        "signal": "10 分 · 1 评论"
       },
       {
-        "id": "cn-it-c39d7bec8e8378bb",
+        "id": "cn-it-835a42e2a42c02b8",
         "category": "cn",
-        "title": "微信鸿蒙版 App 获 8.0.21.42 正式版升级，修复了一些已知问题",
-        "url": "https://www.ithome.com/1/001/216.htm",
+        "title": "Windows Server 2025 等用户反馈微软 9 月更新导致远程桌面服务故障",
+        "url": "https://www.ithome.com/1/001/217.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T04:02:14.000Z",
-        "summary": "IT之家 9 月 11 日消息，微信鸿蒙版 App 正式版今日更新到 8.0.21.42（8394026）。 和往常一样，本次更新的说明依旧为“修复了一些已知问题”。 IT之家附网友 @伤心萨摩耶 和 @MeoW 整理的 8.0.21 版本和 8.0.20 已发现的灰度测试内容（不绑定版本号，灰度测试与账号有关）： 1.私聊设置打开免打扰之后支持折叠聊天； 2.通讯录-公众号 / 服务号列表左滑新增“不再关注”； 3.视频号等界面点击分享后按钮 UI 优化，视频号分享新增“…",
+        "publishedAt": "2026-09-11T04:02:51.000Z",
+        "summary": "IT之家 9 月 11 日消息，科技媒体 bleepingcomputer 昨日（9 月 10 日）发布博文，报道称部分 Windows Server 用户反馈， 安装微软 9 月累积更新后远程桌面服务出现故障。 受影响范围方面，IT之家援引博文介绍，基于社区用户反馈，主要影响以下 3 个版本： Windows Server 2019，安装 KB5122876 更新后出现 Windows Server 2022，安装 KB5122882 更新后出现 Windows Serv…",
         "badge": "IT之家"
       },
       {
@@ -321,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241263",
+        "id": "v2ex-1241283",
         "category": "dev",
-        "title": "[RSIAI.NET] $100 Challenge - 100 美元挑战赛",
-        "url": "https://www.v2ex.com/t/1241263",
+        "title": "现在 AI 大模型这么强，跨端跨框架解决方案还有意义吗",
+        "url": "https://www.v2ex.com/t/1241283",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T02:52:29.000Z",
-        "summary": "RSI AI $100 Challenge We give 20 developers $100 of token. Build anything. GPT / Claude / Fable. Show us what you built.We'll publish the best projects. RSI AI 100 美元挑战赛 我们给 20 位开发者每人 100 美元的代币。 构建任何东西。GPT / Claude / Fable 。 向我们展示你构建的作品。我们…",
+        "publishedAt": "2026-09-11T03:32:17.000Z",
+        "summary": "shopify 五年之前 all in react native 的，现在都开始转纯原生了。即使跨端方案重构为原生也花不了多少时间和成本，带来的性能提升则是真实可靠的。 所以现在跨端跨框架解决方案还有意义吗（不止 react native ，还有 electron 、taro 之类的各种） Native is now the future of mobile at Shopify Migrating Shop app from React Native to native",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "8 回复"
       },
       {
         "id": "cn-baidu-01ad83ba3c38b5ae",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "最近，厦门成了全球商界的“热门打卡地”——第二十六届中国国际投资贸易洽谈会正在这里举行。129个国家和地区的客商前来寻找商机，其中就包括数十家美国企业。记者现场对话多位美企负责人，听他们讲述投资中国为何是“坚定的选择”。",
         "badge": "热搜",
-        "signal": "7,619,209 热度"
+        "signal": "7,618,585 热度"
       },
       {
         "id": "cisa-kev-cve-2026-87491",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49649213",
+        "id": "hn-49645393",
         "category": "dev",
-        "title": "OpenAI Agents API",
-        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+        "title": "Don't let anyone take away your big box of cables",
+        "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T19:43:22.000Z",
+        "publishedAt": "2026-09-10T15:27:22.000Z",
         "badge": "HN",
-        "signal": "184 分 · 115 评论"
+        "signal": "389 分 · 283 评论"
       },
       {
         "id": "cn-item-ac865e0d2b5e97ab",
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241262",
+        "id": "v2ex-1241263",
         "category": "dev",
-        "title": "用中转站的兄弟们有福了",
-        "url": "https://www.v2ex.com/t/1241262",
+        "title": "[RSIAI.NET] $100 Challenge - 100 美元挑战赛",
+        "url": "https://www.v2ex.com/t/1241263",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T02:50:59.000Z",
-        "summary": "https://x.com/shoucccc/status/2042423713019412941 I bought a Fable dataset from one of the top Chinese LLM routers yesterday. With just 6TB data, I can take over 7 Chinese/CIS gov entities & 19 top Chinese firms like Xiaomi, Huawei, NIO, M…",
+        "publishedAt": "2026-09-11T02:52:29.000Z",
+        "summary": "RSI AI $100 Challenge We give 20 developers $100 of token. Build anything. GPT / Claude / Fable. Show us what you built.We'll publish the best projects. RSI AI 100 美元挑战赛 我们给 20 位开发者每人 100 美元的代币。 构建任何东西。GPT / Claude / Fable 。 向我们展示你构建的作品。我们…",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-4522e8ba5a5cda47",
+        "id": "cn-it-c39d7bec8e8378bb",
         "category": "cn",
-        "title": "机械革命 2026 款翼龙 15 Air 笔记本 R7 H 449 版本发售：搭 24G + 1T + RTX5060 售 13999 元（国补后 9999 元）",
-        "url": "https://www.ithome.com/1/001/215.htm",
+        "title": "微信鸿蒙版 App 获 8.0.21.42 正式版升级，修复了一些已知问题",
+        "url": "https://www.ithome.com/1/001/216.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T03:59:02.000Z",
-        "summary": "IT之家 9 月 11 日消息，机械革命旗下 2026 款翼龙 15 Air 笔记本新增的 AMD 锐龙 7 H 449 处理器版本目前已在京东发售，该机搭载 24GB RAM 和 1TB SSD，匹配 RTX5060 Laptop 显卡，定价为 13999 元，首销期间限时优惠 2500 元，到手价 11499 元，部分地区国补后低至 9999 元。 京东 机械革命翼龙 15Air AMD 锐龙 7 H 449 版本 国补后低至 9999 元 领 2500 元券 翼龙 1…",
+        "publishedAt": "2026-09-11T04:02:14.000Z",
+        "summary": "IT之家 9 月 11 日消息，微信鸿蒙版 App 正式版今日更新到 8.0.21.42（8394026）。 和往常一样，本次更新的说明依旧为“修复了一些已知问题”。 IT之家附网友 @伤心萨摩耶 和 @MeoW 整理的 8.0.21 版本和 8.0.20 已发现的灰度测试内容（不绑定版本号，灰度测试与账号有关）： 1.私聊设置打开免打扰之后支持折叠聊天； 2.通讯录-公众号 / 服务号列表左滑新增“不再关注”； 3.视频号等界面点击分享后按钮 UI 优化，视频号分享新增“…",
         "badge": "IT之家"
       },
       {
@@ -444,14 +444,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49652028",
+        "id": "hn-49649213",
         "category": "dev",
-        "title": "YuE2 · Frontier Music with Symbolic Planning",
-        "url": "https://map-yue2.github.io/",
+        "title": "OpenAI Agents API",
+        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T00:33:26.000Z",
+        "publishedAt": "2026-09-10T19:43:22.000Z",
         "badge": "HN",
-        "signal": "68 分 · 55 评论"
+        "signal": "184 分 · 116 评论"
       },
       {
         "id": "cn-baidu-20d03f1ff5254742",
@@ -461,7 +461,7 @@
         "source": "百度热搜",
         "summary": "9月10日，有网友发布了去年10月偶然拍摄的“梅姨”视频，画面中赫然出现“梅姨”正脸。据该网友透露，“梅姨”常推着20多岁儿子出摊，“她儿子不推车，都是在旁边打游戏。”",
         "badge": "热搜",
-        "signal": "7,521,534 热度"
+        "signal": "7,521,762 热度"
       },
       {
         "id": "github-advisory-ghsa-p569-5gjg-9cmj",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241256",
+        "id": "v2ex-1241262",
         "category": "dev",
-        "title": "micro-one-api 协议转换： Chat ↔ Responses ↔ Messages",
-        "url": "https://www.v2ex.com/t/1241256",
+        "title": "用中转站的兄弟们有福了",
+        "url": "https://www.v2ex.com/t/1241262",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T02:45:48.000Z",
-        "summary": "本文以 internal/apicompat + internal/adaptor + internal/server 的实际代码为例， 讲清楚三个主流 LLM 协议在网关中是如何双向转换的、什么时候触发哪条转换链、 以及流式场景下的状态机设计。 0. 三个协议一句话对比 协议 端点 会话模型 工具调用载体 思考能力 ChatCompletions （ OpenAI 经典） POST /v1/chat/completions messages[] 平面数组，role 驱动 …",
+        "publishedAt": "2026-09-11T02:50:59.000Z",
+        "summary": "https://x.com/shoucccc/status/2042423713019412941 I bought a Fable dataset from one of the top Chinese LLM routers yesterday. With just 6TB data, I can take over 7 Chinese/CIS gov entities & 19 top Chinese firms like Xiaomi, Huawei, NIO, M…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "19 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 38849,
+        "stars": 38865,
         "starsToday": 3882
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 24795,
+        "stars": 24806,
         "starsToday": 1762
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 284816,
+        "stars": 284818,
         "starsToday": 732
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/alsk1992/CloddsBot",
         "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
         "language": "TypeScript",
-        "stars": 1766,
+        "stars": 1768,
         "starsToday": 277
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/Tencent/teamai-cli",
         "description": "Make Every Team AI Native",
         "language": "TypeScript",
-        "stars": 3914,
+        "stars": 3915,
         "starsToday": 841
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/AlexsJones/llmfit",
         "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
         "language": "Rust",
-        "stars": 35817,
+        "stars": 35820,
         "starsToday": 258
       },
       {
@@ -568,7 +568,7 @@
         "name": "liquidslr/system-design-notes",
         "url": "https://github.com/liquidslr/system-design-notes",
         "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-        "stars": 18938,
+        "stars": 18943,
         "starsToday": 900
       },
       {
@@ -578,7 +578,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 37941,
+        "stars": 37946,
         "starsToday": 1294
       },
       {
@@ -588,7 +588,7 @@
         "url": "https://github.com/freestylefly/awesome-gpt-image-2",
         "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
         "language": "JavaScript",
-        "stars": 31009,
+        "stars": 31013,
         "starsToday": 962
       },
       {
@@ -598,10 +598,10 @@
         "url": "https://github.com/armory3d/armorpaint",
         "description": "Graphics Creation Tools",
         "language": "C",
-        "stars": 4486,
+        "stars": 4487,
         "starsToday": 72
       }
     ],
-    "updatedAt": "2026-09-11T04:33:38.168Z"
+    "updatedAt": "2026-09-11T04:42:07.036Z"
   }
 }
