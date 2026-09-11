@@ -1,5 +1,5 @@
-import { bounded, pick, random } from './utils.js?v=0.4.1';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.4.1';
+import { bounded, pick, random } from './utils.js?v=0.5.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.5.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);

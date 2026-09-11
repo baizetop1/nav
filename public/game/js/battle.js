@@ -1,6 +1,6 @@
-import { attributes } from './hero.js?v=0.4.1';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.4.1';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.4.1';
+import { attributes } from './hero.js?v=0.5.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.5.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.5.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];

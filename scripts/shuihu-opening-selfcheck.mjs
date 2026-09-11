@@ -10,9 +10,9 @@ const frame=(s=initial,view='map',extra={})=>render({state:s,data,view,...extra}
 const command=(type,id)=>`data-command="${esc(JSON.stringify(id?{type,id}:{type}))}"`;
 assert.deepEqual(data.config.opening,['宣和年间。','山东郓城。','江湖风云初起。','你没有武艺。','但你有识人之能。','今日起：','你便是白泽寨主。']);
 const before=JSON.stringify(initial),welcome=frame(initial,'welcome',{entered:false});
-for(const line of data.config.opening)assert.ok(welcome.includes(`<p>${line}</p>`));
+for(const line of ['从一座寨子开始','农田','兵营','英雄','portrait-wusong'])assert.ok(welcome.includes(line));
 for(const absent of ['class="tabs"','class="resources"','招贤','战斗'])assert.ok(!welcome.includes(absent));
-assert.ok(welcome.includes('踏入郓城县'));assert.ok(welcome.includes('接续旧卷'));
+assert.ok(welcome.includes('立寨，开一番事业'));assert.ok(welcome.includes('接续旧卷'));
 assert.ok(welcome.includes(command('ui_start')));assert.ok(welcome.includes('data-view="save"'));
 const importPage=frame(initial,'save',{entered:false});assert.ok(!importPage.includes('class="tabs"'));assert.ok(importPage.includes('返回卷首'));assert.ok(importPage.includes('id="import-text"'));
 const badSave=frame(initial,'save',{entered:false,locked:true,status:'原文保留'});assert.ok(!badSave.includes('返回卷首'));assert.ok(!badSave.includes(command('ui_start')));assert.ok(badSave.includes('原文保留'));
@@ -38,7 +38,7 @@ assert.ok(guided.journal.some(e=>e.text.includes('附近乡道走得熟')));
 for(const changed of [s=>s.recruit.total=1,s=>s.heroes.baisheng.status='known',s=>s.progress.flags.guide=true,s=>s.progress.actions.news=true]){
   const s=structuredClone(initial);changed(s);assert.ok(!isFirstArrival(s),'Progressed saves keep their normal navigation');
 }
-const unsafe=structuredClone(data);unsafe.config.opening=['<img onerror=alert(1)>'];assert.ok(render({state:initial,data:unsafe,view:'welcome'}).includes('&lt;img onerror=alert(1)&gt;'));
+const unsafe=structuredClone(data);unsafe.config.opening=['<img onerror=alert(1)>'];assert.ok(!render({state:initial,data:unsafe,view:'welcome'}).includes('<img onerror=alert(1)>'),'Legacy prologue data cannot inject HTML into the new camp opening');
 const css=readFileSync(new URL('../public/game/css/game.css',import.meta.url),'utf8');assert.match(css,/@media\(prefers-reduced-motion:reduce\)\{\.opening-lines p\{animation:none\}\}/);
 assert.equal(data.config.version,2,'No save format migration for presentation-only release');
 console.log('Shuihu opening: exact prologue, isolated first entry/import, safe save rendering, real story exits, normal returning navigation, once-only rumors, guide recruitment and reduced motion passed.');

@@ -5,6 +5,7 @@ import {DatabaseSync} from 'node:sqlite';
 import {build} from 'esbuild';
 import {newGame} from '../public/game/js/core.js';
 import {startBattle} from '../public/game/js/battle.js';
+import {freshCamp,attachTroops} from '../public/game/js/camp.js';
 import {prepareData,collections} from '../public/game/js/data.js';
 const dir=new URL('../public/game/data/',import.meta.url);
 const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',dir),'utf8'))])));
@@ -29,7 +30,8 @@ state.heroes.baisheng={status:'owned',level:20,exp:0};state.team=['baisheng'];st
 state.inventory.martial_pages=4;state.inventory.baisheng_manual=2;
 state.inventory.wusong_mount_contract=1;
 state.growth={version:1,skills:{baisheng_advanced:2,baisheng_bond:2},mounts:{baisheng:{rank:3,intimacy:80,riding:true}}};
-startBattle(state,data,{enemies:['tiger_king'],context:{type:'dungeon',id:'jingyanggang'}});
+state.camp=freshCamp();state.camp.buildings.barracks=1;state.camp.troops=10;
+startBattle(state,data,{enemies:['tiger_king'],context:{type:'dungeon',id:'jingyanggang'}});attachTroops(state,10);
 const payload={state,name:'郓城主档'};
 assert.equal((await request('/v1/slots/7','PUT',key,payload)).status,428);
 assert.equal((await request('/v1/slots/7','PUT',key,{state:{},name:'bad'},1)).status,400);

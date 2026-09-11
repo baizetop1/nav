@@ -27,5 +27,6 @@ export function meets(state, condition) {
 export function exits(state, data) { return data.by.maps[state.location].links.filter(link => meets(state, link.condition)); }
 export const heroRank = rank;
 export function dungeonEntry(state, dungeon) {
+  if(state.camp&&dungeon&&state.camp.buildings.hall>=Math.min(5,1+Math.floor(dungeon.level/10)))return true;
   return !!dungeon && meets(state,dungeon.condition) && (dungeon.map===state.location || (dungeon.entrances||[]).some(e=>e.map===state.location&&meets(state,e.condition)));
 }

@@ -1,4 +1,4 @@
-import { parseSave } from './save.js?v=0.4.1';
+import { parseSave } from './save.js?v=0.5.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -8,12 +8,13 @@ const shape = {
   ...fields('version revision clock lastRegen rng worldMinute location startedAt team nextEquipment message formationPending battleSkillMode'),
   player: fields('name title silver merit prestige stamina liangshanLevel'),
   heroes: {'*': fields('status level exp')}, inventory: {'*': true},
+  camp:{...fields('version day wood food troops wounded mode tactic deployment work sorties'),buildings:fields('hall farm lumber barracks clinic market')},
   growth:{version:true,skills:{'*':true},mounts:{'*':fields('rank intimacy riding')}},
   equipment: [fields('uid item plus hero')],
   progress: {flags: {'*': true}, stories: {'*': fields('status step')}, visited: true, actions: {'*': true}, claims: true, clears: {'*': true}},
   stats: {'*': true}, daily: {...fields('date ids claimed bonus events'), counters: {'*': true}, dungeons: {'*': true}},
   recruit: {total: true, pity: fields('three four five'), fate: {'*': true}, lastResult: fields('hero target kind number inTeam tokens merit')},
-  battle: {...fields('mode elapsed itemReadyAt guest outcome log rules'), team: [unit], enemy: [unit], context},
+  battle: {expedition:fields('troops tactic'),...fields('mode elapsed itemReadyAt guest outcome log rules'), team: [unit], enemy: [unit], context},
   scheme: {...fields('id turn outcome log'), values: fields('alert fatigue heat trust exposure'), context},
   event: fields('id'), journal: [fields('at text')]
 };

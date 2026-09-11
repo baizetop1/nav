@@ -1,13 +1,13 @@
-import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.4.1';
+import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.5.0';
 const attr={hp:'气血',attack:'攻击',defense:'防御',speed:'速度',strategy:'谋略'};
 export function dungeonMountLoot(s,d,id,esc){
   const heroes=d.heroes.filter(h=>h.mount.dungeon===id);
-  return heroes.length?`<p class="note mount-loot">坐骑契掉落：${heroes.map(h=>`${esc(h.name)} · ${esc(h.mount.name)}${s.growth?.mounts[h.id]?'（已领骑）':s.inventory[h.mount.contract]>0?'（已持契）':'（未获得时必得）'}`).join('；')}。胜利后领取战果获得；重复通关不重复掉契，养成材料照常给。</p>`:'';
+  return heroes.length?`<p class="note mount-loot">坐骑契掉落：${heroes.map(h=>`${esc(h.name)} · ${esc(h.mount.name)}${s.growth?.mounts[h.id]?'（已领骑）':s.inventory[h.mount.contract]>0?'（已持契）':'（独立掉率 20%）'}`).join('；')}。胜利后领取战果获得；重复通关不重复掉契，养成材料照常给。</p>`:'';
 }
 function mountOrigin(s,d,h,esc){
   const dungeon=d.by.dungeons[h.mount.dungeon],places=[dungeon.map,...(dungeon.entrances||[]).map(e=>e.map)].map(id=>d.by.maps[id].name);
-  return `<p class="note">来源：${esc(dungeon.name)} · 队中一人 ${dungeon.level} 级 · 体力 ${dungeon.cost} · 每日 ${dungeon.limit} 次。入口：${esc(places.join(' / '))}；需先完成该副本的前置剧情。${dungeon.kind==='scheme'?'此处是计策副本，计策成功后领取战果同样掉契。':''}</p>
-    <p class="note">${esc(d.by.items[h.mount.contract].name)}：现有 ${s.inventory[h.mount.contract]||0} 张。未持契且未领骑时，通关结算必得；人物可不出阵、也可尚未入寨。领骑仅消耗坐骑契 1 张，不收碎银或驯骑凭记。</p>`;
+  return `<p class="note">来源：${esc(dungeon.name)} · 队中一人 ${dungeon.level} 级 · 体力 ${dungeon.cost} · 每日 ${dungeon.limit} 次。入口：${esc(places.join(' / '))}；完成前置剧情，或提高聚义厅等级后从寨子出征。${dungeon.kind==='scheme'?'此处是计策副本，计策成功后领取战果同样掉契。':''}</p>
+    <p class="note">${esc(d.by.items[h.mount.contract].name)}：现有 ${s.inventory[h.mount.contract]||0} 张。未持契且未领骑时，每次胜利结算独立 20% 概率掉落，无保底；人物可不出阵、也可尚未入寨。领骑仅消耗坐骑契 1 张，不收碎银或驯骑凭记。</p>`;
 }
 export function stableMounts(s,d,esc,btn){
   const owned=d.heroes.filter(h=>s.heroes[h.id].status==='owned');
@@ -36,7 +36,7 @@ export function heroGrowth(s,d,h,esc,btn){
     const power=skill.effect.kind==='attribute'?`${attr[skill.effect.attribute]} +${(effective.effect.rate*100).toFixed(1)}%`:t.profile==='protect'?`自身减伤 ${(40*(1+.08*(level-1))).toFixed(1)}%`:`主效果 ${(effective.effect.rate*100).toFixed(0)}%`;
     return `<section class="growth-skill"><h3>${esc(skill.name)} <span class="badge">${({base:skill.type==='passive'?'本领':'基础招',advanced:'进阶招',bond:'人骑羁绊'})[t.tier]} · ${level}/5 级</span></h3>
       <p>${esc(skill.description)}</p><p class="meta">${esc(power)}${skill.cost?` · 怒气 ${skill.cost} · 调息 ${t.tier==='advanced'?7:5}秒`:''} · ${reason?'未生效：'+esc(reason):'已习得 · 生效中'}</p>
-      <p class="note">解锁：${t.level}级 · ${esc(t.label)}。升级后数值效果每级增加基础值的 8%；主动招式的持续时间、怒气消耗不变。羁绊的流血、破甲、眩晕持续时间随等级增加，清除负面状态仍为一种。</p>
+      <p class="note">解锁：${t.level}级 · ${esc(t.label)}${t.flag?'（也可建成三级聚义厅）':''}。升级后数值效果每级增加基础值的 8%；主动招式的持续时间、怒气消耗不变。羁绊的流血、破甲、眩晕持续时间随等级增加，清除负面状态仍为一种。</p>
       ${owned&&level<5?`<p class="note">下一级消耗：${esc(price(q.cost))}。${q.reason?esc(q.reason)+'。':''}</p>${btn('升级「'+skill.name+'」',{type:'skillUpgrade',id},'secondary',!!q.reason)}`:''}
     </section>`;
   }).join('');

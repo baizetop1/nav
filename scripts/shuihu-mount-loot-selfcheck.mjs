@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
 import {newGame,dispatch} from '../public/game/js/core.js';
 import {startBattle} from '../public/game/js/battle.js';
+import {random} from '../public/game/js/utils.js';
 import {mountQuote} from '../public/game/js/growth.js';
 import {parseSave,validateSave} from '../public/game/js/save.js';
 import {gameSnapshot,exportSave,importSave} from '../public/game/js/portable.js';
@@ -27,10 +28,11 @@ function defeatFoes(s){
  for(let n=0;n<30&&!s.battle.outcome;n++)s=act(s,'battleTick',{delta:1000});
  assert.equal(s.battle.outcome,'victory');return s;
 }
+function forceDrops(s,id){const count=data.heroes.filter(h=>h.mount.dungeon===id&&!s.growth?.mounts[h.id]&&!s.inventory[h.mount.contract]).length;for(let seed=1;seed<1000000;seed++){const r={rng:seed};if(Array.from({length:count},()=>random(r)).every(n=>n<.2)){s.rng=seed;return s;}}throw Error('No fixture seed');}
 function win(s,id){
  s=enter(s,id);
- if(s.scheme){for(let n=0;n<5;n++)s=act(s,'scheme',{id:'original'});s=act(s,'scheme',{id:'finish'});assert.equal(s.scheme.outcome,'success');s=act(s,'finishScheme');}
- else{s=defeatFoes(s);s=act(s,'finishBattle');}
+ if(s.scheme){for(let n=0;n<5;n++)s=act(s,'scheme',{id:'original'});s=act(s,'scheme',{id:'finish'});assert.equal(s.scheme.outcome,'success');s=act(forceDrops(s,id),'finishScheme');}
+ else{s=defeatFoes(s);s=act(forceDrops(s,id),'finishBattle');}
  return s;
 }
 assert.equal(data.heroes.length,14);assert.equal(new Set(data.heroes.map(h=>h.mount.contract)).size,14);

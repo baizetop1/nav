@@ -1,10 +1,12 @@
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.4.1';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.4.1';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.4.1';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.4.1';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.4.1';
-import { effects, storyAction, visit } from './story.js?v=0.4.1';
-import { growthAction, awardMountContracts } from './growth.js?v=0.4.1';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.5.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.5.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.5.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.5.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.5.0';
+import { effects, storyAction, visit } from './story.js?v=0.5.0';
+import { growthAction, awardMountContracts } from './growth.js?v=0.5.0';
+
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.5.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -39,7 +41,11 @@ function beginDungeon(state,data,id) {
   requireRule((state.daily.dungeons[id]||0)<d.limit,'今日此处的历练次数已用完。');
   stamina(state,d.cost);state.daily.dungeons[id]=(state.daily.dungeons[id]||0)+1;
   if(d.kind==='scheme')beginScheme(state,data,{type:'dungeon',id});
-  else startBattle(state,data,{enemies:d.enemy,scale:d.scale,context:{type:'dungeon',id}});
+  else {
+    const c=state.camp,n=c?.mode==='army'?Math.min(c.troops,c.deployment):0;
+    if(c?.mode==='army'){requireRule(n>0,'请先募兵，或在寨子改为英雄独行。');requireRule(c.food>=Math.ceil(n/2),'带兵粮草不足。');c.food-=Math.ceil(n/2);}
+    startBattle(state,data,{enemies:d.enemy,scale:d.scale,context:{type:'dungeon',id}});if(c)attachTroops(state,n);
+  }
 }
 function rewardDungeon(state,data,id) {
   const reward=data.by.rewards[data.by.dungeons[id].reward];grant(state,{...reward,items:{}},data);
@@ -52,13 +58,14 @@ function rewardDungeon(state,data,id) {
 }
 function finishBattle(state,data) {
   const b=state.battle;requireRule(b&&b.outcome,'还未分出胜负。');
+  settleCampBattle(state,data,b);
   if(b.outcome==='victory') {
     count(state,'battleWin');
     if(b.enemy.some(e=>e.model==='bandit'||e.model==='bandit_chief'))count(state,'bandits');
     if(state.formationPending&&!b.guest){count(state,'formationBattle');state.formationPending=false;}
     if(b.context.type==='story'){state.progress.stories[b.context.id].step=b.context.next;const story=data.by.stories[b.context.id];journal(state,'此战得胜，请在'+data.by.maps[story.steps[b.context.next].map].name+'续记【'+story.title+'】。');}
     else if(b.context.type==='dungeon')rewardDungeon(state,data,b.context.id);
-    else {grant(state,{silver:90,prestige:3,exp:100,items:{scrap_iron:1}},data);journal(state,'交战得胜，行旅得以安行。获得碎银与历练经验。');}
+    else if(b.context.type!=='camp'){grant(state,{silver:90,prestige:3,exp:100,items:{scrap_iron:1}},data);journal(state,'交战得胜，行旅得以安行。获得碎银与历练经验。');}
   } else {count(state,'battleLoss');journal(state,'此战收兵。好汉不会永久失去；再战前可调整队伍、药物与装备。');}
   state.battle=null;
 }
@@ -103,7 +110,8 @@ export function dispatch(data,current,action,now=Date.now()) {
   if(isBusy(state))requireRule(['battleTick','battleSkill','battleSkillMode','battleItem','battleRetreat','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
   const {type,id}=action;
   if(type==='refresh')return state;
-  if(type==='move'){requireRule(exits(state,data).some(link=>link.target===id),'此路尚未开放。');visit(state,id,data);}
+  if(type.startsWith('camp'))campAction(state,data,action);
+  else if(type==='move'){requireRule(exits(state,data).some(link=>link.target===id),'此路尚未开放。');visit(state,id,data);}
   else if(type==='wait'){state.worldMinute=(state.worldMinute+360)%1440;journal(state,'你等了半日，天色已变。等候不额外恢复体力，体力按真实时间恢复。');}
   else if(type==='mapAction'){
     const a=data.by.maps[state.location].actions.find(a=>a.id===id);requireRule(a&&meets(state,a.condition),'此处没有这件事。');
