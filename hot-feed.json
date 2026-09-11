@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-11T09:42:38.208Z",
+  "generatedAt": "2026-09-11T14:26:48.340Z",
   "intelligence": {
-    "updatedAt": "2026-09-11T09:42:38.208Z",
+    "updatedAt": "2026-09-11T14:26:48.340Z",
     "items": [
       {
-        "id": "cn-item-43f085ae75e4b8d3",
+        "id": "cn-item-3a5d358bc060a533",
         "category": "cn",
-        "title": "中国石化原党组成员、总会计师刘运被开除党籍",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-11/10694770.shtml",
+        "title": "男子虚构伪造“停止资助某学生后遭对方威胁” 警方通报",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-11/10694968.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-11T09:07:08.000Z",
-        "summary": "中新网9月11日电 据中央纪委国家监委驻国务院国资委纪检监察组、江西省纪委监委消息：日前，经中央纪委国家监委批准，中央纪委国家监委驻国务院国资委纪检监察组和江西省萍乡市纪委监委对中国石油化工集团有限公司原党组成员、总会计师刘运严重违纪违法问题进行了立案审查调查。",
+        "publishedAt": "2026-09-11T12:57:50.000Z",
+        "summary": "中新网9月11日电 据“嘉峪关公安”微信公众号消息，甘肃省#8204;嘉峪关市公安局发布警情通报称，近日，网传“男子停止资助某学生后遭对方威胁”相关信息及聊天截图、视频，引发网络关注。嘉峪关市公安局迅速联合相关部门开展核查。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49655286",
+        "id": "hn-49658311",
         "category": "dev",
-        "title": "Cherenkov Radiation - traveling faster than light",
-        "url": "http://www.iaea.org/newscenter/news/what-is-cherenkov-radiation",
+        "title": "If coding is solved, what now?: Measuring the sloppiness of code",
+        "url": "https://earendil.com/posts/measuring-code-sloppiness/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T08:42:04.000Z",
+        "publishedAt": "2026-09-11T13:42:28.000Z",
         "badge": "HN",
-        "signal": "28 分 · 17 评论"
+        "signal": "36 分 · 20 评论"
       },
       {
-        "id": "cn-it-37c1ccbb29cbfa53",
+        "id": "cn-it-8b625fd8ffd0db03",
         "category": "cn",
-        "title": "消息称阿维塔酝酿高层调整：董事长王辉已开始负责长安海外业务",
-        "url": "https://www.ithome.com/1/001/389.htm",
+        "title": "全新理想 i9 外观内饰配色公布，全车配备四把零重力座椅",
+        "url": "https://www.ithome.com/1/001/462.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T09:39:18.000Z",
-        "summary": "IT之家 9 月 11 日消息，据雷峰网今日报道，阿维塔科技正在酝酿新一轮高层调整，现任阿维塔科技董事长王辉已被调去负责长安汽车集团海外业务。 据报道，在内部系统中，王辉目前仍是阿维塔科技董事长，但他的精力已转向长安的海外，目前已开始负责长安的东南亚和中南美业务。与此同时，现任长安汽车副总裁、阿维塔科技总裁陈卓， 预计将进一步掌管阿维塔相关业务的管理范畴 。 报道称，王辉一年前上任阿维塔董事长的核心任务是推动阿维塔完成 IPO，但目前阿维塔 IPO 进展并不顺利。与此同时，…",
+        "publishedAt": "2026-09-11T14:21:13.000Z",
+        "summary": "IT之家 9 月 11 日消息，理想 i9 旗舰 SUV 将于 9 月 16 日发布，理想汽车今日公布新车的车漆、内饰配色、轮毂等信息。 在全新理想 i9 上，官方提供 8 款外观颜色可选， 是理想车系中单色车身颜色最多的车型 ，包含： 3 个基础色：分别是钻石黑金属漆、珍珠白金属漆、流光银金属漆； 5 个选装色：包含紫晶灰金属漆、量子钛金金属漆、乌木金金属漆、新大象灰冷光漆和雾海蓝冷光漆。 全新理想 i9 提供 2 款内饰颜色可选： 白灰双色内饰：明亮、通透，让车内空间更…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241382",
+        "id": "v2ex-1241439",
         "category": "dev",
-        "title": "Tick 数据和 K 线数据到底差在哪里？",
-        "url": "https://www.v2ex.com/t/1241382",
+        "title": "Google Search Impact 效果终于起来了",
+        "url": "https://www.v2ex.com/t/1241439",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T09:10:48.000Z",
-        "summary": "最近在做行情数据相关的东西，发现一个挺容易搞混的地方： Tick 数据和 K 线数据到底有什么区别？ 一开始我的理解也比较简单，觉得 K 线无非就是把很多条 Tick 数据按照 1 分钟、5 分钟之类的时间周期聚合一下。 后来自己实际处理数据之后，发现两者虽然有关系，但用途其实完全不一样。 如果只是看盘，K 线已经够用了。但如果要做量化策略、盘口分析或者研究某一段时间内价格到底是怎么走出来的，Tick 数据的重要性就会明显很多。 我先用一个比较直观的方式理解 比如某只股票在…",
+        "publishedAt": "2026-09-11T13:05:36.000Z",
+        "summary": "经过几个月的优化，现在整个站点的 SEO 情况比之前好了很多。 每日点击量基本能达到 800+了。 核心做法就是：永远以用户体验为核心去不断优化，不要为了 SEO 而 SEO",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-664ae5295f6a8bb8",
+        "id": "cn-baidu-3e87b7c1006a6550",
         "category": "cn",
-        "title": "打假网红铁头获刑8年",
-        "url": "https://www.baidu.com/s?wd=%E6%89%93%E5%81%87%E7%BD%91%E7%BA%A2%E9%93%81%E5%A4%B4%E8%8E%B7%E5%88%918%E5%B9%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "不能用零钱通余额宝付款了？多方回应",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%8D%E8%83%BD%E7%94%A8%E9%9B%B6%E9%92%B1%E9%80%9A%E4%BD%99%E9%A2%9D%E5%AE%9D%E4%BB%98%E6%AC%BE%E4%BA%86%EF%BC%9F%E5%A4%9A%E6%96%B9%E5%9B%9E%E5%BA%94&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，打假网红“铁头”敲诈勒索案在杭州市滨江区人民法院一审宣判，数罪并罚决定执行有期徒刑八年。此前，2024年5月，其伙同他人以曝黑料相威胁，向某带货主播索要数百克黄金。铁头曾因曝光三亚海鲜市场五两秤走红。",
+        "summary": "9月11日，腾讯及余额宝相关人士辟谣网传“9月30日起零钱通、余额宝不能用于付款”，称功能不受影响。专家指出，新规核心是支付工具与金融产品区隔展示，非禁止使用，系自媒体曲解。",
         "badge": "热搜",
-        "signal": "7,808,893 热度"
+        "signal": "7,809,080 热度"
       },
       {
         "id": "cisa-kev-cve-2026-67277",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49643982",
+        "id": "hn-49656496",
         "category": "dev",
-        "title": "Shopify is moving from React Native back to Swift and Kotlin",
-        "url": "https://shopify.engineering/back-to-native",
+        "title": "The Waymo effect: how AI is quietly making research less collaborative",
+        "url": "https://www.researchagenda.news/articles/the-waymo-effect.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T14:09:31.000Z",
+        "publishedAt": "2026-09-11T11:17:50.000Z",
         "badge": "HN",
-        "signal": "1063 分 · 737 评论"
+        "signal": "222 分 · 165 评论"
       },
       {
-        "id": "cn-item-ba37f2edc8af347d",
+        "id": "cn-item-469419551521052e",
         "category": "cn",
-        "title": "中国驻日本大使馆：9月14日起调整日本公民赴华签证规费",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-11/10694582.shtml",
+        "title": "黑龙江鸡西丰源矿业水害事故调查报告公布 30人被追责",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-11/10694912.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-11T07:27:21.000Z",
-        "summary": "中新网9月11日电 据中国驻日本大使馆网站消息，中国驻日本大使馆9月11日发布通知称，根据签证费对等安排，自2026年9月14日起，对日本公民赴华签证规费进行调整。",
+        "publishedAt": "2026-09-11T12:50:21.000Z",
+        "summary": "中新网9月11日电 据国家矿山安全监察局黑龙江局网站消息，黑龙江鸡西丰源矿业大通沟煤矿“12·21”较大水害事故调查报告发布。",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241380",
+        "id": "v2ex-1241437",
         "category": "dev",
-        "title": "anthropic 人工智能滥用报告的中文翻译、gpt 的总结，有需要的自取",
-        "url": "https://www.v2ex.com/t/1241380",
+        "title": "给几百 G 的本地截图做一个能搜内容的引擎，我踩过的坑",
+        "url": "https://www.v2ex.com/t/1241437",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T09:08:45.000Z",
-        "summary": "PDF 翻译",
+        "publishedAt": "2026-09-11T13:02:56.000Z",
+        "summary": "最近做了个小工具：把我攒了几年、按字节算快 1T 的电脑截图（微信聊天截图、网页截图、报错截图、PPT 截图……）做成一个能直接搜内容的引擎。比如搜「上次那个 nginx 502 的报错」，直接把当时那张截图翻出来。 功能听起来不新鲜，但自己动手做一遍，坑比想象的多。这里把踩过的坑记录一下，给同样有这个需求的朋友参考。 坑一：OCR 不是「接个库」那么简单 一开始想当然：截图 → OCR → 存文本 → 搜，完事。实际： 中文截图里夹杂的英文报错、路径、代码，混排识别率惨不…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-6462b95cecbca3cb",
+        "id": "cn-it-027b7d5650c3327f",
         "category": "cn",
-        "title": "Y Combinator CEO 陈嘉兴：别过度关注 AI 末日，应该警惕现实 AI 安全风险",
-        "url": "https://www.ithome.com/1/001/387.htm",
+        "title": "荣耀“魔法画报耽误心梗急救致死”事件当事人澄清：经沟通发现与荣耀无关",
+        "url": "https://www.ithome.com/1/001/461.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T09:36:44.000Z",
-        "summary": "IT之家 9 月 11 日消息，Y Combinator CEO 陈嘉兴认为，人们把太多注意力放在好莱坞式的 AI 末日情景上，反而忽视了已经摆在眼前的真正风险。 当地时间 10 日，陈嘉兴在接受 CNBC 采访时表示：“我们应该关注科学事实，而不是科幻小说。我也看过《终结者 2》，那确实是一部很棒的电影。” IT之家注：1991 年上映的科幻电影《终结者 2：审判日》讲述了半机械人 T-800 从反乌托邦未来穿越回过去，与另一名更先进的半机械人交战，以保护一名孩子。这个孩…",
+        "publishedAt": "2026-09-11T14:12:10.000Z",
+        "summary": "9 月 11 日晚间消息，近日，济南张先生在社交媒体发文反映，母亲突发心梗，因荣耀手机“魔法画报”错过最佳抢救时间，此事引发大量网友关注。 9 月 11 日下午，在第三方人员的见证下，当事人张先生与荣耀品牌方进行了面对面沟通，现场还原当时使用场景等，当事人张先生现场澄清，“事发凌晨，我身患脑梗的年迈父亲使用荣耀 X70 正常对外拨打了求救电话，我因为家庭突发变故，情绪激动，误解是手机问题导致没有拨通电话。我发帖的本意是希望手机公司能够重视这个问题，避免发生悲剧。经过沟通事件…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49645393",
+        "id": "hn-49658299",
         "category": "dev",
-        "title": "Don't let anyone take away your big box of cables",
-        "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
+        "title": "Houthis 'take control' of key island in global shipping route",
+        "url": "https://www.bbc.com/news/live/cmd683p01eljt",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T15:27:22.000Z",
+        "publishedAt": "2026-09-11T13:41:38.000Z",
         "badge": "HN",
-        "signal": "522 分 · 338 评论"
+        "signal": "81 分 · 45 评论"
       },
       {
-        "id": "cn-baidu-fd62d6aa9f236411",
+        "id": "cn-baidu-db6ed1e31876fc93",
         "category": "cn",
-        "title": "香港演员雷宇扬去世 被称“鬼王”",
-        "url": "https://www.baidu.com/s?wd=%E9%A6%99%E6%B8%AF%E6%BC%94%E5%91%98%E9%9B%B7%E5%AE%87%E6%89%AC%E5%8E%BB%E4%B8%96+%E8%A2%AB%E7%A7%B0%E2%80%9C%E9%AC%BC%E7%8E%8B%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国糖尿病患者人数突破两亿",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E7%B3%96%E5%B0%BF%E7%97%85%E6%82%A3%E8%80%85%E4%BA%BA%E6%95%B0%E7%AA%81%E7%A0%B4%E4%B8%A4%E4%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "据港媒9月11日报道，有“鬼王”之称的香港资深艺人雷宇扬，9月7日因胃癌病逝，终年62岁。报道称，其妻子已对外证实死讯。据悉，雷宇扬早年曾罹患癌症，至年前不幸旧病复发，最终不敌病魔离世。",
+        "summary": "我国20岁以上人群糖尿病患病人数已达2.33亿，年龄标准化患病率升至13.67%，较2005年增长163%。20至40岁新确诊患者占比从2019年的18.7%上升至2024年的24.5%，年轻化趋势令人警惕。",
         "badge": "热搜",
-        "signal": "7,714,225 热度"
+        "signal": "7,713,836 热度"
       },
       {
         "id": "github-advisory-ghsa-qqjf-53cj-pwvv",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241379",
+        "id": "v2ex-1241432",
         "category": "dev",
-        "title": "Anthropic 发布威胁情报报告中的“生物误用”感觉才是最可怕的",
-        "url": "https://www.v2ex.com/t/1241379",
+        "title": "OpenAI 今天发布了 Agents API",
+        "url": "https://www.v2ex.com/t/1241432",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T09:08:05.000Z",
-        "summary": "Anthropic 称这是前沿模型“最严重风险之一”。 基孔肯雅病毒增益功能相关申请，军事院所背景，经美国基础设施隧道。 禽流感哺乳动物适应/气溶胶传播实验规划（早期阶段，因分类器只能用较弱模型）。 正痘病毒（含天花/Mpox 相关）高防护实验室申请，转售商一天可中继数万条消息。 毒液肽图谱与生成管线，治疗叙事下含麻痹靶点（澳大利亚集团管制物）。 细菌毒素亚基、出血热病毒蛋白的计算改造，挂在国家级项目上。 大模型分类器能挡住最露骨的高危提问，但挡不住“治疗/减毒/疫苗”包装…",
+        "publishedAt": "2026-09-11T12:36:09.000Z",
+        "summary": "http://openai.com/index/introducing-the-agents-api/ 意味着以后 Harness 也不需要自己写了，官方自动把上下文压缩、tools_call 、subAgents 等等一切都封装好了",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-item-7c674acfde0e9828",
+        "id": "cn-item-e67d1a2c8213cc34",
         "category": "cn",
-        "title": "山西浑源县一饭店现“阴阳菜单”，被罚款20万元",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-11/10694497.shtml",
+        "title": "三部门联合印发《数字乡村高质量发展行动计划（2026—2030年）》",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-11/10694832.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-11T07:05:46.000Z",
-        "summary": "中新网9月11日电 据浑源县融媒体中心微信公众号消息，9月11日，山西省大同市浑源县维护市场秩序专项工作组发布情况通报：",
+        "publishedAt": "2026-09-11T10:04:47.000Z",
+        "summary": "中新网9月11日电 据“网信中国”微信公众号消息，近日，中央网信办、农业农村部、工业和信息化部联合印发《数字乡村高质量发展行动计划(2026—2030年)》(以下简称《行动计划》)，明确了“十五五”时期推进数字乡村高质量发展的思路目标、重点任务和政策举措。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49606281",
+        "id": "hn-49622406",
         "category": "dev",
-        "title": "Working with Git Worktrees in Magit",
-        "url": "https://emacsredux.com/blog/2026/09/02/working-with-git-worktrees-in-magit/",
+        "title": "Logo Programming Language",
+        "url": "https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T06:31:59.000Z",
+        "publishedAt": "2026-09-09T07:07:26.000Z",
         "badge": "HN",
-        "signal": "45 分 · 12 评论"
+        "signal": "25 分 · 3 评论"
       },
       {
-        "id": "cn-it-e1b007860abc5a72",
+        "id": "cn-it-cd2920e9275752d0",
         "category": "cn",
-        "title": "试用期被劝退员工冒充字节业务负责人引流付费咨询，抖音声明将起诉",
-        "url": "https://www.ithome.com/1/001/386.htm",
+        "title": "大眼橙推出 C5 Pro 投影仪：1080P 600CVIA，首发价 1099 元",
+        "url": "https://www.ithome.com/1/001/460.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T09:34:28.000Z",
-        "summary": "IT之家 9 月 11 日消息，抖音黑板报官方账号今日在小红书发文，就账号“广屿 Ocean”发布涉抖音不实信息进行澄清。 据悉，社交媒体账号“广屿 Ocean”曾自称“前字节跳动广东生服 CKA 负责人”，被投诉后在社交媒体平台仍夸大身份，自称变为自称“字节跳动 CKA 管理团队”，并以此身份持续自我包装，为其付费职场咨询业务引流，欺骗用户。 抖音黑板报表示，该账号运营者系公司前员工陈某，陈某于 2023 年底入职，在职时间不足 5 个月， 试用期内业绩未达标被劝退 。该…",
+        "publishedAt": "2026-09-11T13:56:51.000Z",
+        "summary": "IT之家 9 月 11 日消息，大眼橙今日发布 C5 Pro 投影仪，定价为 1499 元， 新品首发价 1099 元 ，将于 9 月 24 日 10:00 开售。 这款投影仪采用 原生 1080P 分辨率，亮度 600CVIA ；采用沙姆全屏清晰技术，宣称侧投时也能保证画面全屏清晰；搭载 TOF + 全彩摄像头双模组，画面校正速度提升 120% ，准确度提升 35%。 大眼橙 C5 Pro 内存 1GB、机身存储 32GB，支持双频 WiFi 6 与蓝牙 5.3；搭载一体…",
         "badge": "IT之家"
       },
       {
@@ -322,24 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241376",
+        "id": "v2ex-1241426",
         "category": "dev",
-        "title": "最近 codex 哀嚎遍野，大家是不是都切 gemini 去了呀？感觉 gemini 今天限流严重了",
-        "url": "https://www.v2ex.com/t/1241376",
+        "title": "随手试了下腾讯最近开源的自托管 Agent Octop",
+        "url": "https://www.v2ex.com/t/1241426",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T09:04:32.000Z",
+        "publishedAt": "2026-09-11T11:57:22.000Z",
+        "summary": "最近手痒，拉了个腾讯新开源的 Agent 项目 Octop （ https://github.com/TencentCloud/Octop ）跑了一下。 这玩意儿主打自托管，支持多用户多专家，个人用或者扔服务器上挂着都行。部署挺省事，一键起服务，还能直接接 IM 通道。 不过有个小问题：它最核心的几个底层依赖还没开源。现在拉代码跑是能跑，但想魔改源码的兄弟还是得先蹲一手。 整体架构看着还行，活跃度挺高的，需要的兄弟们可以试一下。",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-188fad107a10c8d9",
+        "id": "cn-baidu-883b786fa7ae998a",
         "category": "cn",
-        "title": "越来越多的农民走出村庄去旅游",
-        "url": "https://www.baidu.com/s?wd=%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E7%9A%84%E5%86%9C%E6%B0%91%E8%B5%B0%E5%87%BA%E6%9D%91%E5%BA%84%E5%8E%BB%E6%97%85%E6%B8%B8&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "2030年进入世界汽车强国行列",
+        "url": "https://www.baidu.com/s?wd=2030%E5%B9%B4%E8%BF%9B%E5%85%A5%E4%B8%96%E7%95%8C%E6%B1%BD%E8%BD%A6%E5%BC%BA%E5%9B%BD%E8%A1%8C%E5%88%97&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "文化和旅游部发布数据显示，2025年，我国农村居民国内出游15.26亿人次，同比增长22.6%；出游花费突破1万亿元大关，同比增长21.4%。从“攒钱盖房子”到“花钱看风景”，从“背着背篓赶集”到“拉着行李箱出游”，农民旅游催生万亿级市场，见证农村居民消费观念的转变，以及乡村全面振兴的深入推进。",
+        "summary": "工业和信息化部等九部门11日公布《智能网联新能源汽车产业发展“十五五”规划》，提出到2030年，我国智能网联新能源汽车全产业链优势进一步巩固，进入世界汽车强国行列，国内市场新能源乘用车、商用车在各自领域新车总销量的占比分别达到70%、40%，具备自动驾驶功能的汽车实现规模应用。",
         "badge": "热搜",
-        "signal": "7,615,845 热度"
+        "signal": "7,619,111 热度"
       },
       {
         "id": "cisa-kev-cve-2026-87491",
@@ -362,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49649213",
+        "id": "hn-49621546",
         "category": "dev",
-        "title": "OpenAI Agents API",
-        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+        "title": "So you want to use OpenRouter?",
+        "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T19:43:22.000Z",
+        "publishedAt": "2026-09-09T05:37:21.000Z",
         "badge": "HN",
-        "signal": "262 分 · 145 评论"
+        "signal": "353 分 · 88 评论"
       },
       {
-        "id": "cn-item-84d1050cda04d462",
+        "id": "cn-item-b6ae16171e38f30c",
         "category": "cn",
-        "title": "东西问丨易波：中拉合作如何助力发展中国家实现和平与发展权益？",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-11/10694600.shtml",
+        "title": "新疆生产建设兵团原党委常委、副司令员李旭被“双开”",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-11/10694828.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-11T06:46:37.000Z",
-        "summary": "中新社北京9月11日电 题：中拉合作如何助力发展中国家实现和平与发展权益？",
+        "publishedAt": "2026-09-11T10:02:09.000Z",
+        "summary": "中新网9月11日电 据中央纪委国家监委网站消息，经中共中央批准，中央纪委国家监委对新疆生产建设兵团原党委常委、副司令员李旭严重违纪违法问题进行了立案审查调查。",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241371",
+        "id": "v2ex-1241425",
         "category": "dev",
-        "title": "Kimi K2.8 Preview 模型全量上线 Kimi Code，综合性能接近 K3",
-        "url": "https://www.v2ex.com/t/1241371",
+        "title": "独立开发者怎么做竞品调研",
+        "url": "https://www.v2ex.com/t/1241425",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T08:48:33.000Z",
-        "summary": "这个起名有点意思。 版本号还降了呢。 不如 叫 3.1-flash 啊。",
+        "publishedAt": "2026-09-11T11:38:50.000Z",
+        "summary": "怎么证明，不是伪需求，或者自认为的核心竞争力是不是没用。",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-ef519a0bcd2e60f4",
+        "id": "cn-it-54c1fabdaf8dd1cb",
         "category": "cn",
-        "title": "严查虚假宣传、网络“互黑”，市场监管总局破除妨碍统一市场和公平竞争卡点堵点专项行动取得成效",
-        "url": "https://www.ithome.com/1/001/385.htm",
+        "title": "全球首款 AI 智能体手机，努比亚 NaviX Ultra 将搭载 2 亿像素主摄",
+        "url": "https://www.ithome.com/1/001/459.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T09:27:28.000Z",
-        "summary": "IT之家 9 月 11 日消息，9 月 11 日上午，市场监管总局召开“破除妨碍统一市场和公平竞争卡点堵点专项行动”专题新闻发布会。 今年 5 月，市场监管总局部署开展破除妨碍统一市场和公平竞争卡点堵点专项行动，紧盯人民群众和经营主体关心关切，立足市场监管职能，依法破除顽固性强、涉及面广、危害性大，企业反映最为强烈的四类卡点堵点问题：一是妨碍企业公平准入自主经营问题；二是限制商品要素自由流动问题；三是资质认定内外有别问题；四是不当实施信用评价设置招标投标区域壁垒问题。 IT…",
+        "publishedAt": "2026-09-11T13:55:19.000Z",
+        "summary": "IT之家 9 月 11 日消息，全球首款 AI 智能体手机努比亚 NaviX Ultra 将于 9 月 16 日发布，现已在各大电商平台开启预约。 据官方预热，这款新品搭载 2 亿像素主摄，旗舰三摄系统；星河冷控散热系统，7100m㎡立体均热 VC；机身厚度仅 7.62mm，7100mAh 第 5 代南海电池；星穹全域通信系统，全链路网络通讯增强引擎。 据IT之家此前报道，努比亚 NaviX Ultra 由中兴通讯与字节跳动联合研发，搭载豆包手机助手，被称为“豆包手机二代”…",
         "badge": "IT之家"
       },
       {
@@ -444,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49618087",
+        "id": "hn-49655286",
         "category": "dev",
-        "title": "Stop making swap partitions–use swap files instead",
-        "url": "https://gist.github.com/joshenders/c4960cec9c63a7b7d68ffa9543356c43",
+        "title": "Cherenkov Radiation - traveling faster than light",
+        "url": "http://www.iaea.org/newscenter/news/what-is-cherenkov-radiation",
         "source": "Hacker News",
-        "publishedAt": "2026-09-08T22:33:21.000Z",
+        "publishedAt": "2026-09-11T08:42:04.000Z",
         "badge": "HN",
-        "signal": "39 分 · 39 评论"
+        "signal": "147 分 · 75 评论"
       },
       {
-        "id": "cn-baidu-3affd095621e3d57",
+        "id": "cn-baidu-8a794db8b3f679eb",
         "category": "cn",
-        "title": "日本的梅毒到底严重到什么地步",
-        "url": "https://www.baidu.com/s?wd=%E6%97%A5%E6%9C%AC%E7%9A%84%E6%A2%85%E6%AF%92%E5%88%B0%E5%BA%95%E4%B8%A5%E9%87%8D%E5%88%B0%E4%BB%80%E4%B9%88%E5%9C%B0%E6%AD%A5&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "韦世豪遭重罚",
+        "url": "https://www.baidu.com/s?wd=%E9%9F%A6%E4%B8%96%E8%B1%AA%E9%81%AD%E9%87%8D%E7%BD%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月9日报道，因设备故障，辉瑞梅毒特效药最早明年下半年出货。日本性感染症学会通知医院将有限药物优先留给孕妇。此前日本梅毒感染者大幅增加，2023年约1.5万例，2025年仍有1.3万例（时间存疑）。",
+        "summary": "11日，中足联宣布对成都蓉城球员韦世豪禁赛3场、罚款3万元。起因是此前客战河南队赛后，韦世豪与球迷口角并做出争议手势，被认定挑衅公众。",
         "badge": "热搜",
-        "signal": "7,521,848 热度"
+        "signal": "7,519,737 热度"
       },
       {
         "id": "github-advisory-ghsa-p569-5gjg-9cmj",
@@ -484,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241359",
+        "id": "v2ex-1241424",
         "category": "dev",
-        "title": "ddns-wz 简单的域名 ip 同步任务工具 支持多域名多客户端统一管理, 储存占用仅 1MB",
-        "url": "https://www.v2ex.com/t/1241359",
+        "title": "[不要久坐] StandUp - 原生 + 免费且开源的久坐提醒 macos APP！",
+        "url": "https://www.v2ex.com/t/1241424",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-11T08:13:04.000Z",
-        "summary": "ddns-wz：轻量本地公网 IP 域名同步工具 ddns-wz 是一款简单易用的本地公网 IP 域名同步工具，使用 C 语言 编写， 二进制体积仅约 1MB 。界面采用 多任务卡片 样式，支持多种解析服务商与丰富的同步方式，适合在家庭宽带、软路由、NAS 、小主机等场景中实现 DDNS 自动更新。 支持架构： arm64 / armv7 / amd64 ，已测试 N1 盒子 兼容。 功能特性 多任务卡片式 Web 管理界面 支持 @ 根域名 解析 支持服务商： 阿里云 /…",
+        "publishedAt": "2026-09-11T11:37:38.000Z",
+        "summary": "StandUp - 避免久坐 一款简洁、原生的 macOS 菜单栏休息提醒工具，帮你有效避免久坐。原本想直接找款免费的用，无奈翻遍 App Store 和 GitHub 都没找到合适的，自己动手写了。 StandUp 通过周期性工作计时和全屏休息遮罩，提醒你暂时离开屏幕、起身活动、放松眼睛。除了常规的工作/休息循环，它还提供一次性闹钟模式，适合会议、喝水、服药或其他定时提醒场景。 功能介绍 工作与休息计时 自定义工作间隔，支持 1 ～ 240 分钟。 自定义休息时长，支持 …",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       }
     ]
   },
@@ -509,8 +510,8 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 39629,
-        "starsToday": 3882
+        "stars": 40333,
+        "starsToday": 3440
       },
       {
         "id": "github-27ca93a049d8d826",
@@ -519,89 +520,90 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 25581,
-        "starsToday": 1762
+        "stars": 26131,
+        "starsToday": 3642
       },
       {
-        "id": "github-4251a228ae407247",
+        "id": "github-afd2af666cf9f262",
         "rank": 3,
-        "name": "obra/superpowers",
-        "url": "https://github.com/obra/superpowers",
-        "description": "An agentic skills framework & software development methodology that works.",
-        "language": "Shell",
-        "stars": 285003,
-        "starsToday": 732
+        "name": "nab138/iloader",
+        "url": "https://github.com/nab138/iloader",
+        "description": "User friendly sideloader",
+        "language": "TypeScript",
+        "stars": 2813,
+        "starsToday": 36
       },
       {
-        "id": "github-93f269c8b455a00b",
+        "id": "github-f6adaf1dfd8ddc19",
         "rank": 4,
-        "name": "alsk1992/CloddsBot",
-        "url": "https://github.com/alsk1992/CloddsBot",
-        "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+        "name": "melgarafael/DeskcommCRM",
+        "url": "https://github.com/melgarafael/DeskcommCRM",
+        "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "language": "TypeScript",
-        "stars": 1896,
-        "starsToday": 277
+        "stars": 1140,
+        "starsToday": 126
       },
       {
-        "id": "github-f4d97b4a966da91f",
+        "id": "github-75480bcd049b9586",
         "rank": 5,
-        "name": "Tencent/teamai-cli",
-        "url": "https://github.com/Tencent/teamai-cli",
-        "description": "Make Every Team AI Native",
+        "name": "vastsa/PI-Desktop",
+        "url": "https://github.com/vastsa/PI-Desktop",
+        "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
         "language": "TypeScript",
-        "stars": 4078,
-        "starsToday": 841
-      },
-      {
-        "id": "github-761823802491adf3",
-        "rank": 6,
-        "name": "AlexsJones/llmfit",
-        "url": "https://github.com/AlexsJones/llmfit",
-        "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
-        "language": "Rust",
-        "stars": 35949,
-        "starsToday": 258
-      },
-      {
-        "id": "github-640e4e0271c4d4b0",
-        "rank": 7,
-        "name": "liquidslr/system-design-notes",
-        "url": "https://github.com/liquidslr/system-design-notes",
-        "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-        "stars": 19144,
-        "starsToday": 900
-      },
-      {
-        "id": "github-231c4b191ae0f4ae",
-        "rank": 8,
-        "name": "cathrynlavery/diagram-design",
-        "url": "https://github.com/cathrynlavery/diagram-design",
-        "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-        "language": "HTML",
-        "stars": 38189,
-        "starsToday": 1294
-      },
-      {
-        "id": "github-018f3800293e8d29",
-        "rank": 9,
-        "name": "freestylefly/awesome-gpt-image-2",
-        "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-        "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
-        "language": "JavaScript",
-        "stars": 31202,
-        "starsToday": 962
+        "stars": 2640,
+        "starsToday": 545
       },
       {
         "id": "github-1f396a14dc2810a5",
-        "rank": 10,
+        "rank": 6,
         "name": "armory3d/armorpaint",
         "url": "https://github.com/armory3d/armorpaint",
         "description": "Graphics Creation Tools",
         "language": "C",
-        "stars": 4561,
-        "starsToday": 72
+        "stars": 4630,
+        "starsToday": 354
+      },
+      {
+        "id": "github-93f269c8b455a00b",
+        "rank": 7,
+        "name": "alsk1992/CloddsBot",
+        "url": "https://github.com/alsk1992/CloddsBot",
+        "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+        "language": "TypeScript",
+        "stars": 1986,
+        "starsToday": 627
+      },
+      {
+        "id": "github-aac368cb53d3b116",
+        "rank": 8,
+        "name": "nashsu/llm_wiki",
+        "url": "https://github.com/nashsu/llm_wiki",
+        "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
+        "language": "TypeScript",
+        "stars": 18509,
+        "starsToday": 640
+      },
+      {
+        "id": "github-4251a228ae407247",
+        "rank": 9,
+        "name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework & software development methodology that works.",
+        "language": "Shell",
+        "stars": 285145,
+        "starsToday": 731
+      },
+      {
+        "id": "github-262e5ebce88e1835",
+        "rank": 10,
+        "name": "Sonarr/Sonarr",
+        "url": "https://github.com/Sonarr/Sonarr",
+        "description": "Smart PVR for newsgroup and bittorrent users.",
+        "language": "C#",
+        "stars": 15633,
+        "starsToday": 174
       }
     ],
-    "updatedAt": "2026-09-11T09:42:38.208Z"
+    "updatedAt": "2026-09-11T14:26:48.340Z"
   }
 }
