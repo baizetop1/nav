@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-10T21:38:53.119Z",
+  "generatedAt": "2026-09-11T00:11:26.830Z",
   "intelligence": {
-    "updatedAt": "2026-09-10T21:38:53.119Z",
+    "updatedAt": "2026-09-11T00:11:26.830Z",
     "items": [
       {
-        "id": "cn-item-73d33607689282b9",
+        "id": "cn-item-8f36c9f86f50a375",
         "category": "cn",
-        "title": "山东青岛北海造船厂一货船发生火情 已造成25人遇难",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-10/10694296.shtml",
+        "title": "以军：使用1100吨炸药 摧毁黎南部真主党地下设施",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-11/10694375.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-10T13:20:07.000Z",
-        "summary": "中新网山东青岛9月10日电(胡耀杰 张孝鹏 王禹) 2026年9月10日11时15分许，一外籍货船在中国船舶集团青岛北海造船有限公司检修过程中发生火情。船上共有42人，其中，12人安全撤出；5人受伤送医(目前生命体征平稳)；25人失联。截至9月10日19时24分，25名失联人员全部找到，均无生命体征。(完)",
+        "publishedAt": "2026-09-10T23:28:27.000Z",
+        "summary": "中新网9月11日电 据《以色列时报》报道，当地时间10日，以色列军方称，以军使用1100吨炸药，摧毁了黎巴嫩南部阿里塔希尔高地之下的黎真主党地下设施。",
         "badge": "中新网要闻"
       },
       {
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49645443",
+        "id": "hn-49643982",
         "category": "dev",
-        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-        "url": "https://cognition.com/blog/swe-2",
+        "title": "Shopify is moving from React Native back to Swift and Kotlin",
+        "url": "https://shopify.engineering/back-to-native",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T15:29:47.000Z",
+        "publishedAt": "2026-09-10T14:09:31.000Z",
         "badge": "HN",
-        "signal": "295 分 · 125 评论"
+        "signal": "718 分 · 475 评论"
       },
       {
-        "id": "cn-it-17cea1cbecb328da",
+        "id": "cn-it-95e36988c06403dc",
         "category": "cn",
-        "title": "甲骨文 2027 财年第一财季归母净利润 46.79 亿美元，同比增长 60%",
-        "url": "https://www.ithome.com/1/001/052.htm",
+        "title": "苹果 watchOS 27 RC 更新日志：新增 Siri Modular 表盘、优化智能叠放",
+        "url": "https://www.ithome.com/1/001/086.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-10T20:20:44.000Z",
-        "summary": "IT之家 9 月 11 日消息，甲骨文今日发布 2027 财年（2026 年 6 月 1 日～2027 年 5 月 31 日）第一财季（2026 年 6 月 1 日～2026 年 8 月 31 日）报告： 营业总收入 ：193.45 亿美元 （IT之家注：现汇率约合 1301.05 亿元人民币） ，同比增长 30% 归母净利润 ：46.79 亿美元 （现汇率约合 314.69 亿元人民币） ，同比增长 60% 经营现金流 ：231.03 亿美元 （现汇率约合 1553.8 …",
+        "publishedAt": "2026-09-11T00:09:12.000Z",
+        "summary": "IT之家 9 月 11 日消息，科技媒体 9to5Mac 昨日（9 月 10 日）发布博文，分享了苹果 watchOS 27 RC 候选版本的完整更新日志， 正式版将于下周二 9 月 15 日推送 ，为 Apple Watch 带来 Siri、Apple Intelligence、智能叠放和系统体验等多项更新。 IT之家附上 watchOS 27 RC 更新日志内容如下： Siri AI 更强大、更具对话能力的 Siri 将陆续向用户开放，可结合个人情境理解、App 操作、…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-wpmr-8h3q-fwj7",
+        "id": "github-advisory-ghsa-w4v4-9rw7-5326",
         "category": "security",
-        "title": "Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite",
-        "url": "https://github.com/advisories/GHSA-wpmr-8h3q-fwj7",
+        "title": "Traefik: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') and Incorrect Authorization",
+        "url": "https://github.com/advisories/GHSA-w4v4-9rw7-5326",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T21:23:25.000Z",
-        "summary": "## Summary On SQLite deployments, the lookup that maps an external identity to a local account does a substring match instead of an exact match. A subject value containing SQL wildcard characters therefore matches accounts the value was ne…",
-        "badge": "CVE-2026-87016",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-10T23:04:37.000Z",
+        "summary": "## Summary There is a high-severity request-smuggling vulnerability in Traefik's handling of the HTTP/1.1 `Upgrade` mechanism. Since Traefik moved to unencrypted HTTP/2 with prior knowledge (Go 1.24), a client-initiated `Upgrade: h2c` requ…",
+        "badge": "CVE-2026-88008",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -85,16 +85,17 @@
         "publishedAt": "2026-09-10T15:07:00.000Z",
         "summary": "我是最早一批买国产 coding plan 的人，最开始好像是送一个月还是很便宜体验来着 ，后来智谱出套餐的时候我就直接买了年包，一开始想找人一起拼车买 pro 或 max ，不过问了身边的人大多没有兴趣，只有一个小弟在我的影响下也经常用，并愿意一起拼，不过当时 pro 感觉至少得 3 个人一起，人不够于是干脆自己一个人买 lite ，太便宜了，当时还有邀请折扣啥的，我记得实付 170 多，我就让小弟也直接买了个 lite 年包。 那个时候模型能力还不是很强，好像还是 4.…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-e2a2220b08a4bfd9",
+        "id": "cn-baidu-d7d63da130973651",
         "category": "cn",
-        "title": "青岛货轮火灾事故致25人遇难",
-        "url": "https://www.baidu.com/s?wd=%E9%9D%92%E5%B2%9B%E8%B4%A7%E8%BD%AE%E7%81%AB%E7%81%BE%E4%BA%8B%E6%95%85%E8%87%B425%E4%BA%BA%E9%81%87%E9%9A%BE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "车主留意！油价要调了",
+        "url": "https://www.baidu.com/s?wd=%E8%BD%A6%E4%B8%BB%E7%95%99%E6%84%8F%EF%BC%81%E6%B2%B9%E4%BB%B7%E8%A6%81%E8%B0%83%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "国内成品油新一轮调价窗口将在9月11日24时开启。综合机构观点，本轮油价预计上调。据测算，截至9月9日收盘，国内第9个工作日，参考原油变化率8.16%，预计汽柴油上调360元/吨。但最终调价幅度还需以官方公布为准。",
         "badge": "热搜",
-        "signal": "7,807,915 热度"
+        "signal": "7,809,759 热度"
       },
       {
         "id": "cisa-kev-cve-2026-67277",
@@ -124,28 +125,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-10T06:49:43.000Z",
         "badge": "HN",
-        "signal": "462 分 · 507 评论"
+        "signal": "599 分 · 600 评论"
       },
       {
-        "id": "cn-item-7d36b2fcffa8cf74",
+        "id": "cn-item-a1366ee595877cc5",
         "category": "cn",
-        "title": "中国海警舰艇编队9月10日在我钓鱼岛及其附属岛屿领海内维权巡航",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-10/10694263.shtml",
+        "title": "外媒：也门胡塞武装占领红海战略要地哈尼什群岛",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-11/10694372.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-10T12:47:55.000Z",
-        "summary": "中新网9月10日电 据“中国海警”微信公众号消息，9月10日，中国海警登步舰编队在我钓鱼岛及其附属岛屿领海内维权巡航。这是中国海警依法开展的维权巡航活动。",
+        "publishedAt": "2026-09-10T22:58:39.000Z",
+        "summary": "中新网9月11日电 据路透社及《耶路撒冷邮报》援引也门政府消息人士报道，当地时间10日，在也门政府海军部队撤出红海战略要地哈尼什群岛后，也门胡塞武装已在岛上部署兵力。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-hf57-cqmx-p4gr",
+        "id": "github-advisory-ghsa-v67p-phpq-fc8x",
         "category": "security",
-        "title": "OmniRoute ACP Custom-Agent Remote Code Execution (RCE)",
-        "url": "https://github.com/advisories/GHSA-hf57-cqmx-p4gr",
+        "title": "Traefik entrypoint header-name sanitization bypassed via request trailers",
+        "url": "https://github.com/advisories/GHSA-v67p-phpq-fc8x",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T21:22:12.000Z",
-        "summary": "## 2. Summary `POST /api/acp/agents` registers a custom ACP agent. The endpoint accepts user-controlled `binary` and `versionCommand` values. After saving the custom agent, the same request calls `refreshAgentCache()`, which triggers agent…",
-        "badge": "CVE-2026-88062",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-10T23:04:21.000Z",
+        "summary": "## Summary Traefik's entrypoint defenses against spoofed trusted header names — `aliasHeadersStrategy` / `underscoreHeadersStrategy` in `delete` or `reject` mode, and the default `forwardedHeaders` stripping of client-supplied `X-Forwarded…",
+        "badge": "CVE-2026-88004",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-6a886414536a09e3",
@@ -169,13 +170,13 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-dace0ff1001e0e4d",
+        "id": "cn-it-5ec0942246e149b9",
         "category": "cn",
-        "title": "法国总统马克龙呼吁欧洲大力发展自主载人航天，力争 10 年内送宇航员上太空",
-        "url": "https://www.ithome.com/1/001/043.htm",
+        "title": "T-Mobile 将对 iOS 27“双机共号”功能 iPhone Handoff 收费：每月 5 美元",
+        "url": "https://www.ithome.com/1/001/085.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-10T15:38:03.000Z",
-        "summary": "IT之家 9 月 10 日消息，据法新社报道，当地时间 10 日，法国总统埃马纽埃尔 · 马克龙呼吁欧洲在 10 年内 具备自主载人航天能力 ，推动欧洲航天业发展。 欧洲航天局（ESA）局长约瑟夫 · 阿施巴赫尔也提出了类似呼吁。当地时间 9 日，他在闭门会议上敦促各国部长和政要增加投入，建设 独立自主的欧洲航天业 。他在演讲稿中问道：“我们要做乘客，还是驾驶员？” 阿施巴赫尔指出，各国航天技术突飞猛进，进展遍及卫星研发、月球和火星探索等领域。“面对这一新形势，欧洲 必须拥…",
+        "publishedAt": "2026-09-11T00:08:58.000Z",
+        "summary": "IT之家 9 月 11 日消息，苹果昨日在发布会上正式宣布了 iOS 27 新功能 ——iPhone Handoff。该功能允许用户在 2 部 iPhone 上共用 1 个手机号码，首批仅支持美国 T-Mobile 与德国电信。 MacRumors 今日发现，T-Mobile 将针对这一功能收取每月 5 美元 （现汇率约合 33.6 元人民币） 的费用。 T-Mobile 表示，用户可以在两部兼容 iPhone 之间共享号码，并选择当前处于激活状态的设备。符合条件的套餐还支…",
         "badge": "IT之家"
       },
       {
@@ -199,34 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49645437",
+        "id": "hn-49649124",
         "category": "dev",
-        "title": "NASA Color Trick Was Meant for Mars. Now It's Unveiling Rock Art on Earth",
-        "url": "https://gizmodo.com/this-nasa-color-trick-was-meant-for-mars-now-its-unveiling-rock-art-on-earth-2000809844",
+        "title": "The Deathray: A simple way for an untrusted site to freeze a Mac",
+        "url": "https://auberon.xyz/blog/posts/deathray/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T15:29:30.000Z",
+        "publishedAt": "2026-09-10T19:34:20.000Z",
         "badge": "HN",
-        "signal": "212 分 · 34 评论"
+        "signal": "56 分 · 31 评论"
       },
       {
-        "id": "cn-baidu-5462edd5803eb6b9",
+        "id": "cn-baidu-fd1aabcce99c6085",
         "category": "cn",
-        "title": "中国女篮不敌法国 无缘世界杯四强",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%A5%B3%E7%AF%AE%E4%B8%8D%E6%95%8C%E6%B3%95%E5%9B%BD+%E6%97%A0%E7%BC%98%E4%B8%96%E7%95%8C%E6%9D%AF%E5%9B%9B%E5%BC%BA&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "iPhone17官方涨价线下降价",
+        "url": "https://www.baidu.com/s?wd=iPhone17%E5%AE%98%E6%96%B9%E6%B6%A8%E4%BB%B7%E7%BA%BF%E4%B8%8B%E9%99%8D%E4%BB%B7&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "9月10日，苹果官方对在售iPhone17价格上调，256GB版本涨800元。然而，北京40多家苹果授权专营店目前全部降价，iPhone17 256GB版本叠加优惠最低便宜1300元，17Pro系列便宜500元。",
         "badge": "热搜",
-        "signal": "7,712,068 热度"
+        "signal": "7,712,197 热度"
       },
       {
-        "id": "github-advisory-ghsa-6xcw-7xm6-48c6",
+        "id": "github-advisory-ghsa-qqjf-53cj-pwvv",
         "category": "security",
-        "title": "n8n: Expression Sandbox Escape via Shared Builtin Tampering and Code-Printer Injection Leads to Code Execution",
-        "url": "https://github.com/advisories/GHSA-6xcw-7xm6-48c6",
+        "title": "Traefik HTTP/3 Backend NTLM Connection Reuse",
+        "url": "https://github.com/advisories/GHSA-qqjf-53cj-pwvv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T20:37:21.000Z",
-        "summary": "## Impact Two stages of expression code generation built source text by calling the global `JSON.stringify` at generation time: the compiler when printing synthetic string literals, and the isolate bridge when interpolating a timezone valu…",
-        "badge": "CVE-2026-86083",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-10T23:04:06.000Z",
+        "summary": "## Summary Traefik's HTTP/3 request path did not initialize the connection-scoped backend transport holder that isolates connection-bound NTLM and Negotiate (Kerberos) authentication on the HTTP/1.1 and HTTP/2 paths. The HTTP/3 entrypoint …",
+        "badge": "CVE-2026-88007",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-46660cb2ea4362f6",
@@ -249,13 +251,13 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-item-07d5d3458d869ca8",
+        "id": "cn-item-99ead11ac0694221",
         "category": "cn",
-        "title": "一箭六星 长四乙火箭成功发射",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-10/10694250.shtml",
+        "title": "俄媒：普京抵达印度 开启为期三天的访问",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-11/10694368.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-10T12:28:21.000Z",
-        "summary": "中新社北京9月10日电 (记者 马帅莎)据中国航天科技集团消息，北京时间9月10日17时，中国在酒泉卫星发射中心使用长征四号乙运载火箭，以“一箭六星”的方式，成功将遥感五十三号01-03星、遥感五十六号01-03星发射升空，卫星顺利进入预定轨道，发射任务取得圆满成功。",
+        "publishedAt": "2026-09-10T22:44:56.000Z",
+        "summary": "中新网9月11日电 据俄新社报道，当地时间11日，俄罗斯总统普京抵达印度，开启为期3天的访问，并出席金砖国家领导人第十八次会晤。",
         "badge": "中新网要闻"
       },
       {
@@ -280,34 +282,34 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49645393",
+        "id": "hn-49649213",
         "category": "dev",
-        "title": "Don't let anyone take away your big box of cables",
-        "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
+        "title": "OpenAI Agents API",
+        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T15:27:22.000Z",
+        "publishedAt": "2026-09-10T19:43:22.000Z",
         "badge": "HN",
-        "signal": "176 分 · 142 评论"
+        "signal": "93 分 · 64 评论"
       },
       {
-        "id": "cn-it-1b19887beed88fd2",
+        "id": "cn-it-6c2a453927268ed9",
         "category": "cn",
-        "title": "智谱启动杭州全城 Coding 计划，个人用户购季卡减免 44%、年卡减免 51%",
-        "url": "https://www.ithome.com/1/001/042.htm",
+        "title": "Steam 喜加一：复古弹幕射击游戏《Witchcraft：Candy Hunt》下架前免费领",
+        "url": "https://www.ithome.com/1/001/084.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-10T15:29:03.000Z",
-        "summary": "IT之家 9 月 10 日消息，智谱今天（10 日）通过 Bigmodel 开放平台宣布启动“智谱 · 杭州全城 Coding 计划”，该计划是智谱联合杭州市、上城区推出的城市级 AI 编程普惠行动，全国首创城区级 AI 模型调用支持。 该计划旨在 降低人工智能编程工具使用门槛 ，支持创业者、开发者、企业研发团队和青年人才更便捷、更稳定、更低成本地使用高质量国产大模型能力，活动时间为 9 月 10 日至 12 月 9 日 。 IT之家附官方公布的活动规则如下： 个人用户 谁…",
+        "publishedAt": "2026-09-11T00:07:50.000Z",
+        "summary": "IT之家 9 月 11 日消息，由独立开发者 PixelCrown Games 制作的复古弹幕射击游戏《Witchcraft：Candy Hunt》将于近期从 Steam 商店下架，玩家可以在游戏下架前限时将其加入 Steam 游戏库，IT之家附游戏商品页（ https://store.steampowered.com/app/2373360/Witchcraft_Candy_Hunt/ ）。 IT之家注意到，《Witchcraft: Candy Hunt》于 2023 年…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-v3p8-whq6-r5jg",
+        "id": "github-advisory-ghsa-f52w-8j3h-j724",
         "category": "security",
-        "title": "Angular: SSR XSS via Unescaped Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements",
-        "url": "https://github.com/advisories/GHSA-v3p8-whq6-r5jg",
+        "title": "Traefik: Rootless HTTP/1 request-target routes as \"/\" but is forwarded verbatim, bypassing path-scoped routing, middleware guards and access logging",
+        "url": "https://github.com/advisories/GHSA-f52w-8j3h-j724",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T20:25:25.000Z",
-        "summary": "### Summary An XSS vulnerability exists in `@angular/platform-server` during server-side rendering (SSR) HTML serialization when traversing ancestor tags across ` ` element boundaries. When an application renders untrusted user input withi…",
-        "badge": "CVE-2026-88060",
+        "publishedAt": "2026-09-10T23:03:53.000Z",
+        "summary": "## Summary Traefik accepts an HTTP/1.x request whose request-target is in rootless / opaque form (for example `GET http:http://internal-vhost/admin HTTP/1.1`). Go parses this into `URL.Opaque` with an empty `URL.Path`, so Traefik evaluates…",
+        "badge": "CVE-2026-88009",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -338,7 +340,7 @@
         "source": "百度热搜",
         "summary": "一次远程问诊、一项工程设计、一场跨境旅行，都可以成为服务贸易。世界贸易组织预测，在基准情景下，2026年全球服务贸易量预计增长4.8%，明显快于货物贸易1.9%的增速。为什么服务贸易正在成为全球增长的新空间？AI又将怎样改变服务的生产和交付？一起来看，记者在2026服贸会现场的观察。",
         "badge": "热搜",
-        "signal": "7,617,926 热度"
+        "signal": "7,617,465 热度"
       },
       {
         "id": "cisa-kev-cve-2026-87491",
@@ -361,35 +363,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49650326",
+        "id": "hn-49645443",
         "category": "dev",
-        "title": "The part of Navier-Stokes no one is talking about",
-        "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+        "url": "https://cognition.com/blog/swe-2",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T21:22:59.000Z",
+        "publishedAt": "2026-09-10T15:29:47.000Z",
         "badge": "HN",
-        "signal": "9 分 · 1 评论"
+        "signal": "341 分 · 140 评论"
       },
       {
-        "id": "cn-item-703888f6afbf6db1",
+        "id": "cn-item-73d33607689282b9",
         "category": "cn",
-        "title": "第七批医用耗材集采开标 消化介入类耗材临床主流产品普遍中选",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-10/10694213.shtml",
+        "title": "山东青岛北海造船厂一货船发生火情 已造成25人遇难",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-10/10694296.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-10T12:01:34.000Z",
-        "summary": "中新网9月10日电 据国家医保局微信公众号消息，9月10日，第七批国家组织医用耗材集中带量采购(以下简称“集采”)在天津开标产生中选结果。本次集采纳入23种消化介入类医用耗材，共有156家企业的558个产品投标，148家企业的517个产品中选，临床在用的主流产品普遍中选。",
+        "publishedAt": "2026-09-10T13:20:07.000Z",
+        "summary": "中新网山东青岛9月10日电(胡耀杰 张孝鹏 王禹) 2026年9月10日11时15分许，一外籍货船在中国船舶集团青岛北海造船有限公司检修过程中发生火情。船上共有42人，其中，12人安全撤出；5人受伤送医(目前生命体征平稳)；25人失联。截至9月10日19时24分，25名失联人员全部找到，均无生命体征。(完)",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-f6mr-pjwc-34m4",
+        "id": "github-advisory-ghsa-xwwr-4h3p-r22c",
         "category": "security",
-        "title": "Angular: SSRF and Cross-Origin Credential Disclosure via URL Resolution Discrepancy in SSR",
-        "url": "https://github.com/advisories/GHSA-f6mr-pjwc-34m4",
+        "title": "rclone serve s3: --auth-proxy without --auth-key authenticates nobody - full SigV4 signature bypass",
+        "url": "https://github.com/advisories/GHSA-xwwr-4h3p-r22c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-10T20:19:43.000Z",
-        "summary": "### Summary A discrepancy between WHATWG URL parsing and Angular SSR's URL resolution allows attackers to bypass same-origin checks and cause Server-Side Request Forgery (SSRF), potentially leaking sensitive server-side credentials. ### Te…",
-        "badge": "CVE-2026-88056",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-10T22:49:07.000Z",
+        "summary": "### Summary `rclone serve s3`'s handler chain, when `--auth-proxy` is configured, is (outermost first): `authPairMiddleware` -> `proxyAuthMiddleware` -> gofakes3's own SigV4-verifying handler. `authPairMiddleware` parses the accessKeyID st…",
+        "badge": "CVE-2026-88018",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
         "id": "ai-openai-3802aa15c4b6ae22",
@@ -413,13 +415,13 @@
         "signal": "11 回复"
       },
       {
-        "id": "cn-it-bd3384a40fa6b101",
+        "id": "cn-it-fe73d9c480216691",
         "category": "cn",
-        "title": "苹果推出全新腕带配件：iPhone 18 Pro 系列同款配色，229 元",
-        "url": "https://www.ithome.com/1/001/041.htm",
+        "title": "消息称索尼 PlayStation 实时服务型游戏《Fairgames$》更换马甲，以全新代号“Project Espresso”亮相",
+        "url": "https://www.ithome.com/1/001/083.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-10T15:28:59.000Z",
-        "summary": "IT之家 9 月 10 日消息，苹果现已在官网上架新款腕带配件。这款产品采用 iPhone 18 Pro 系列同款配色， 定价 229 元 。 IT之家从苹果官网了解到，这款腕带长度 391 毫米， 拥有勃艮第酒红色 、 清透蓝色 、 黑色 、橄榄色、浅褐色、洋红色六种配色可选，专为搭配特定 Apple iPhone 保护壳和 AirPods Pro 而设计，方便用户解放双手，轻松携带这些电子设备。 该腕带采用 100% 再生 PET 纱线编织而成，可舒适系于腕间，适合全天…",
+        "publishedAt": "2026-09-11T00:03:11.000Z",
+        "summary": "IT之家 9 月 11 日消息，据 IGN 报道，索尼 PlayStation 实时服务型游戏《Fairgames$》似乎更换了马甲，以全新代号“Project Espresso”重新亮相，官方同步公开了首段实机内容，同时开启玩家测试招募。 参考IT之家此前报道，PlayStation 于 3 年前公布了《Fairgames$》，这是一款以竞技抢劫为核心玩法的在线游戏，不过项目的开发过程并不顺利，此前先后传出开发商 Haven Studios 创始人 Jade Raymon…",
         "badge": "IT之家"
       },
       {
@@ -443,35 +445,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49645907",
+        "id": "hn-49645393",
         "category": "dev",
-        "title": "Forgejo <=16.0.3 Critical RCE",
-        "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+        "title": "Don't let anyone take away your big box of cables",
+        "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T15:57:40.000Z",
+        "publishedAt": "2026-09-10T15:27:22.000Z",
         "badge": "HN",
-        "signal": "118 分 · 42 评论"
+        "signal": "286 分 · 223 评论"
       },
       {
-        "id": "cn-baidu-956312a2bbf38680",
+        "id": "cn-baidu-2b8a75b79e5b34ad",
         "category": "cn",
-        "title": "手机进入奢侈品时代",
-        "url": "https://www.baidu.com/s?wd=%E6%89%8B%E6%9C%BA%E8%BF%9B%E5%85%A5%E5%A5%A2%E4%BE%88%E5%93%81%E6%97%B6%E4%BB%A3&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "罗杰斯：将中国股票留给女儿们",
+        "url": "https://www.baidu.com/s?wd=%E7%BD%97%E6%9D%B0%E6%96%AF%EF%BC%9A%E5%B0%86%E4%B8%AD%E5%9B%BD%E8%82%A1%E7%A5%A8%E7%95%99%E7%BB%99%E5%A5%B3%E5%84%BF%E4%BB%AC&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月，多款旗舰手机定价突破万元，苹果多款机型售价大幅上调，引发手机步入奢侈品时代的市场讨论。受供应链成本上涨影响，2026上半年手机存储芯片均价涨幅超200%，上游元器件涨价传导终端，拉高旗舰机入门门槛。",
+        "summary": "9月7日，投资大师吉姆·罗杰斯接受采访时表示，他已卖掉包括美股在内世界上大多数国家的股票，仅保留中国和乌兹别克斯坦股票。其中，他计划将中国股票留给女儿们继承。",
         "badge": "热搜",
-        "signal": "7,522,480 热度"
+        "signal": "7,522,924 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-75650",
+        "id": "github-advisory-ghsa-p569-5gjg-9cmj",
         "category": "security",
-        "title": "Adobe Commerce and Magento：Adobe Commerce and Magento Improper Neutralization of Special Elements Used in a Template Engine Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-75650",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-08T00:00:00.000Z",
-        "summary": "Adobe Commerce and Magento Open Source contain an improper neutralization of special elements used in a template engine vulnerability that could allow an attacker to execute arbitrary code.",
-        "badge": "CVE-2026-75650",
-        "signal": "已遭利用 · 整改期限 2026-09-11"
+        "title": "rclone: RC per-server auth-proxy bypass",
+        "url": "https://github.com/advisories/GHSA-p569-5gjg-9cmj",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-10T22:47:10.000Z",
+        "summary": "## Summary `serve/start` accepts protocol options in a per-server `proxyOpt` object. The FTP and S3 RC adapters parse that object and pass it to their server constructors, but the constructors decide whether proxy authentication is enabled…",
+        "badge": "CVE-2026-88044",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-hugging-face-fffbcba03b0b217e",
@@ -491,7 +493,7 @@
         "publishedAt": "2026-09-10T10:44:52.000Z",
         "summary": "身边人大多都是 codex ，少量 ClaudeCode ，cursor 除了我自己以外我就只知道 1 个人在用，论 v2 上讨论热度，cursor 也是几乎查无此人，好像只有我一个人用的非常爽。 我自己是 60 美刀订阅，公司报销正好覆盖（公司内部主要是 codebuddy ，不爱用的人有 500 块钱报销额度），我给我老婆也搞了个 cursor20 美刀的订阅日常办公用（非程序员）。 我现在用量大概是这样的，opus5 做 plan ，grok4.6 extrahigh…",
         "badge": "程序员",
-        "signal": "18 回复"
+        "signal": "21 回复"
       }
     ]
   },
@@ -508,8 +510,8 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 38008,
-        "starsToday": 3854
+        "stars": 38234,
+        "starsToday": 3882
       },
       {
         "id": "github-27ca93a049d8d826",
@@ -518,8 +520,8 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 23938,
-        "starsToday": 1588
+        "stars": 24216,
+        "starsToday": 1762
       },
       {
         "id": "github-4251a228ae407247",
@@ -528,8 +530,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 284660,
-        "starsToday": 731
+        "stars": 284693,
+        "starsToday": 732
       },
       {
         "id": "github-93f269c8b455a00b",
@@ -538,8 +540,8 @@
         "url": "https://github.com/alsk1992/CloddsBot",
         "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
         "language": "TypeScript",
-        "stars": 1581,
-        "starsToday": 299
+        "stars": 1629,
+        "starsToday": 277
       },
       {
         "id": "github-f4d97b4a966da91f",
@@ -548,8 +550,8 @@
         "url": "https://github.com/Tencent/teamai-cli",
         "description": "Make Every Team AI Native",
         "language": "TypeScript",
-        "stars": 3726,
-        "starsToday": 837
+        "stars": 3768,
+        "starsToday": 841
       },
       {
         "id": "github-761823802491adf3",
@@ -558,8 +560,8 @@
         "url": "https://github.com/AlexsJones/llmfit",
         "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
         "language": "Rust",
-        "stars": 35690,
-        "starsToday": 247
+        "stars": 35722,
+        "starsToday": 258
       },
       {
         "id": "github-640e4e0271c4d4b0",
@@ -567,8 +569,8 @@
         "name": "liquidslr/system-design-notes",
         "url": "https://github.com/liquidslr/system-design-notes",
         "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-        "stars": 18708,
-        "starsToday": 891
+        "stars": 18759,
+        "starsToday": 900
       },
       {
         "id": "github-231c4b191ae0f4ae",
@@ -577,8 +579,8 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 37658,
-        "starsToday": 1287
+        "stars": 37720,
+        "starsToday": 1294
       },
       {
         "id": "github-018f3800293e8d29",
@@ -587,8 +589,8 @@
         "url": "https://github.com/freestylefly/awesome-gpt-image-2",
         "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
         "language": "JavaScript",
-        "stars": 30795,
-        "starsToday": 957
+        "stars": 30819,
+        "starsToday": 962
       },
       {
         "id": "github-1f396a14dc2810a5",
@@ -597,10 +599,10 @@
         "url": "https://github.com/armory3d/armorpaint",
         "description": "Graphics Creation Tools",
         "language": "C",
-        "stars": 4385,
-        "starsToday": 87
+        "stars": 4406,
+        "starsToday": 72
       }
     ],
-    "updatedAt": "2026-09-10T21:38:53.119Z"
+    "updatedAt": "2026-09-11T00:11:26.830Z"
   }
 }
