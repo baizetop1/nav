@@ -1,5 +1,5 @@
-import { count, journal, random, requireRule } from './utils.js?v=0.5.0';
-import { gainExp } from './hero.js?v=0.5.0';
+import { count, journal, random, requireRule } from './utils.js?v=0.9.0';
+import { gainExp } from './hero.js?v=0.9.0';
 export function gainItem(state, id, amount, data) {
   requireRule(data.by.items[id] && Number.isInteger(amount) && amount > 0,'无效的道具奖励。');
   state.inventory[id]=(state.inventory[id]||0)+amount;count(state,'gain_'+id,amount);
@@ -24,7 +24,7 @@ export function strengthenQuote(state,data,equip) {
 export function itemAction(state, data, action) {
   const {type,id,hero}=action, item=data.by.items[id];
   if(type==='buy') {
-    requireRule(['yuncheng','forge','herbs','tavern','recruit'].includes(state.location),'到城里集市或店铺购买。');
+    // Camp merchants deliver purchases regardless of exploration location.
     requireRule(item && ['consume','material','quest','special'].includes(item.type) && item.price>0 && !item.hero,'这里没有出售这件物品。');
     if(id==='recruit_order')requireRule((state.daily.counters.buyOrder||0)<3,'今日集市的三张招贤令已售罄。');
     pay(state,{silver:item.price});gainItem(state,id,1,data);if(id==='recruit_order')count(state,'buyOrder');journal(state,`购得${item.name}一份。`);return;
@@ -41,7 +41,7 @@ export function itemAction(state, data, action) {
     const recipe=recipes[id];requireRule(recipe,'没有这种合成方式。');pay(state,{items:recipe.cost});grant(state,{items:recipe.reward,silver:id==='ledger'?1000:0},data);journal(state,'材料已换成行路所需之物。');return;
   }
   if(type==='craftEquip'||type==='buyEquip') {
-    requireRule(state.location==='forge','请到城西铁匠铺。');const model=data.by.equipments[id];requireRule(model,'未知装备。');requireRule(state.equipment.length<200,'装备已达 200 件，请先分解旧物。');
+    const model=data.by.equipments[id];requireRule(model,'未知装备。');requireRule(state.equipment.length<200,'装备已达 200 件，请先分解旧物。');
     pay(state,type==='craftEquip'?model.recipe:{silver:model.price*2});newEquipment(state,id);journal(state,`取得${model.quality}·${model.name}。`);return;
   }
   const equip=state.equipment.find(e=>e.uid===id);requireRule(equip,'未找到这件装备。');const model=data.by.equipments[equip.item];
@@ -50,12 +50,12 @@ export function itemAction(state, data, action) {
     if(hero)for(const e of state.equipment)if(e.hero===hero&&data.by.equipments[e.item].type===model.type)e.hero=null;
     equip.hero=hero;journal(state,`${model.name}${hero?'交给'+data.by.heroes[hero].name:'已卸下'}。`);
   } else if(type==='strengthen') {
-    requireRule(state.location==='forge','请到城西铁匠铺。');const quote=strengthenQuote(state,data,equip);
+    const quote=strengthenQuote(state,data,equip);
     requireRule(equip.plus<quote.cap,quote.cap===5?'当前强化上限为 +5；完成山神庙往事后，可向铁匠请教。':'本版强化上限为 +10。');
     pay(state,quote.cost);const success=quote.rate===1||random(state)<quote.rate;
     if(success){equip.plus++;count(state,'strengthen');journal(state,`${model.name}强化至 +${equip.plus}。`);}
     else journal(state,`${model.name}此次淬炼未成，碎银、精铁与强化符已消耗；装备仍为 +${equip.plus}，没有降级或损毁。`);
   }
-  else if(type==='dismantle') {requireRule(state.location==='forge','请到城西铁匠铺。');requireRule(!equip.hero,'请先卸下装备，再分解。');state.equipment=state.equipment.filter(e=>e.uid!==id);gainItem(state,'scrap_iron',model.tier*2+equip.plus,data);journal(state,`${model.name}已分解为碎铁。`);}
+  else if(type==='dismantle') {requireRule(!equip.hero,'请先卸下装备，再分解。');state.equipment=state.equipment.filter(e=>e.uid!==id);gainItem(state,'scrap_iron',model.tier*2+equip.plus,data);journal(state,`${model.name}已分解为碎铁。`);}
   else throw new Error('未知道具操作。');
 }

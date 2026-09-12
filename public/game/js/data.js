@@ -1,5 +1,5 @@
-import { idPattern, requireRule } from './utils.js?v=0.5.0';
-import { GROWTH_PROFILES } from './growth.js?v=0.5.0';
+import { idPattern, requireRule } from './utils.js?v=0.9.0';
+import { GROWTH_PROFILES } from './growth.js?v=0.9.0';
 export const collections=['heroes','skills','items','equipments','enemies','maps','stories','schemes','dungeons','rewards','events','quests','chapters'];
 const numeric=(n,min=0)=>typeof n==='number'&&Number.isFinite(n)&&n>=min;
 export function prepareData(raw) {
@@ -21,6 +21,8 @@ export function prepareData(raw) {
   const reward=r=>{for(const [id,n] of Object.entries(r?.items||{})){ref('items',id);requireRule(Number.isInteger(n)&&n>0,'无效道具奖励。');}};
   const cost=c=>{for(const key of ['silver','merit'])if(c?.[key]!==undefined)requireRule(Number.isInteger(c[key])&&c[key]>=0,'无效消耗。');reward(c);};
   for(const h of data.heroes){requireRule(h.name&&h.title&&Number.isInteger(h.star)&&h.star>=1&&h.star<=5,'好汉字段无效。');ref('maps',h.meetMap);condition(h.meetCondition);h.skills.forEach(id=>ref('skills',id));ref('items',h.obtain.token);for(const key of ['hp','attack','defense','speed','strategy'])requireRule(numeric(h.attribute[key],1)&&numeric(h.growth[key]),'好汉属性无效。');}
+  requireRule(data.heroes.length===108&&new Set(data.heroes.map(h=>h.seat)).size===108,'名册必须包含完整 108 将座次。');
+  for(const h of data.heroes)requireRule(Number.isInteger(h.seat)&&h.seat>=1&&h.seat<=108&&h.group===(h.seat<=36?'tiangang':'disha')&&h.starSign,'星位配置无效。');
   for(const s of data.skills){requireRule(s.name&&numeric(s.cost)&&s.cost<=100&&['active','passive','strategy'].includes(s.type),'技能字段无效。');requireRule(['damage','strategy','heal','attribute'].includes(s.effect.kind)&&numeric(s.effect.rate),'技能效果无效。');if(s.effect.status)requireRule(['bleeding','poison','armor_break','stun','rage'].includes(s.effect.status.id)&&Number.isInteger(s.effect.status.turns)&&s.effect.status.turns>0,'战斗状态无效。');}
   for(const h of data.heroes){
     requireRule(h.skills.length===4&&new Set(h.skills).size===4&&h.mount?.name&&h.mount.description,'人物专属招式或坐骑缺失。');

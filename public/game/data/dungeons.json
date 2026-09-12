@@ -147,5 +147,44 @@
     "scale": 1.5,
     "reward": "qingzhou_patrol_reward",
     "description": "带自己的队伍护送行旅。取胜带回锻造材料，并有机会得到杨志的信物；每日最多三次。"
+  },
+  {
+    "id": "spirit_trial",
+    "name": "聚灵试炼",
+    "level": 15,
+    "map": "training",
+    "condition": {
+      "flag": "quality_trials_unlocked"
+    },
+    "enemy": [
+      "guard",
+      "bandit_chief"
+    ],
+    "scale": 1.7,
+    "cost": 12,
+    "limit": 3,
+    "reward": "spirit_trial_reward",
+    "description": "练兵场设下护阵试炼。破开守军，收集灵蕴。",
+    "kind": "battle"
+  },
+  {
+    "id": "immortal_trial",
+    "name": "登仙试炼",
+    "level": 30,
+    "map": "training",
+    "condition": {
+      "flag": "quality_trials_unlocked"
+    },
+    "enemy": [
+      "soldier",
+      "guard",
+      "bandit_chief"
+    ],
+    "scale": 3.3,
+    "cost": 18,
+    "limit": 3,
+    "reward": "immortal_trial_reward",
+    "description": "三阵合围的进阶试炼，建议灵品队伍配合保护、打断与恢复。胜利后获得登仙印。",
+    "kind": "battle"
   }
 ]

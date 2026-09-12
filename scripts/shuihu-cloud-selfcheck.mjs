@@ -6,6 +6,7 @@ import {build} from 'esbuild';
 import {newGame} from '../public/game/js/core.js';
 import {startBattle} from '../public/game/js/battle.js';
 import {freshCamp,attachTroops} from '../public/game/js/camp.js';
+import {rotationCalendar,weeklyScore} from '../public/game/js/rotations.js';
 import {prepareData,collections} from '../public/game/js/data.js';
 const dir=new URL('../public/game/data/',import.meta.url);
 const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',dir),'utf8'))])));
@@ -23,6 +24,16 @@ const list=await request('/v1/slots');assert.equal(list.status,200);assert.equal
 assert.equal((await request('/v1/slots/7')).status,401);assert.equal((await request('/v1/admin/slots/7/key','POST')).status,401);
 const made=await request('/v1/admin/slots/7/key','POST',admin),key=made.body.key;assert.match(key,/^(?:[A-F0-9]{4}-){7}[A-F0-9]{4}$/);
 const key8=(await request('/v1/admin/slots/8/key','POST',admin)).body.key;
+const version=await request('/v1/game-version');assert.equal(version.body.heroes,108);assert.equal(version.body.rosterVersion,3);
+assert.equal(version.body.rotations,1);assert.deepEqual((await request('/v1/leaderboard')).body.entries,[]);
+// A real old 14-hero upload migrates once; old clients cannot overwrite that new roster.
+const legacy=newGame(data,Date.now(),143);delete legacy.rosterVersion;
+for(const h of data.heroes.filter(h=>h.introducedIn===3))delete legacy.heroes[h.id];
+assert.equal((await request('/v1/slots/8','PUT',key8,{state:legacy,name:'旧名册'},1)).status,200);
+const expanded=(await request('/v1/slots/8','GET',key8)).body;
+assert.equal(Object.keys(expanded.state.heroes).length,108);assert.equal(expanded.state.rosterVersion,3);
+assert.equal((await request('/v1/slots/8','PUT',key8,{state:legacy,name:'旧页面'},2)).status,409);
+assert.equal((await request('/v1/slots/8','GET',key8)).body.cloudRevision,2);
 assert.equal((await request('/v1/slots/7','GET',key8)).status,401);
 let remote=(await request('/v1/slots/7','GET',key)).body;assert.equal(remote.state,null);assert.equal(remote.cloudRevision,1);
 const state={...newGame(data,Date.now(),12345),battleSkillMode:'auto'};
@@ -30,7 +41,12 @@ state.heroes.baisheng={status:'owned',level:20,exp:0};state.team=['baisheng'];st
 state.inventory.martial_pages=4;state.inventory.baisheng_manual=2;
 state.inventory.wusong_mount_contract=1;
 state.growth={version:1,skills:{baisheng_advanced:2,baisheng_bond:2},mounts:{baisheng:{rank:3,intimacy:80,riding:true}}};
+state.daily.counters.visit_bonus_forge=1;state.stats.visit_bonus_forge=1;
+state.progress.flags.camp_steward_baisheng=true;state.progress.flags.camp_goal_foundation=true;state.stats.camp_win_convoy=1;
 state.camp=freshCamp();state.camp.buildings.barracks=1;state.camp.troops=10;
+state.progress.flags.camp_helper_zhou_aqiao=true;
+state.camp.buildings.hall=2;state.heroes.guansheng={status:'owned',level:20,exp:3,quality:1};state.inventory.spirit_essence=3;
+const calendar=rotationCalendar(Date.now());state.campaign={version:1,daily:{date:calendar.date,uses:{}},weekly:{[calendar.period]:{tier:2,elapsed:50000,hp:500,score:weeklyScore(2,50000,500)}}};
 startBattle(state,data,{enemies:['tiger_king'],context:{type:'dungeon',id:'jingyanggang'}});attachTroops(state,10);
 const payload={state,name:'郓城主档'};
 assert.equal((await request('/v1/slots/7','PUT',key,payload)).status,428);
@@ -39,6 +55,8 @@ assert.equal((await request('/v1/slots/7','PUT',key,{state:{...state,battleSkill
 assert.equal((await request('/v1/slots/7','PUT',key,payload,1)).status,200);
 assert.equal((await request('/v1/slots/7','GET')).status,401);
 remote=(await request('/v1/slots/7','GET',key)).body;assert.deepEqual(remote.state,state);
+const board=(await request('/v1/leaderboard')).body;assert.equal(board.period,calendar.period);assert.deepEqual(board.entries,[{id:7,tier:2,score:weeklyScore(2,50000,500),rank:1}]);assert.ok(!JSON.stringify(board).includes(key));assert.ok(!JSON.stringify(board).includes('郓城主档'));
+const older=structuredClone(state);delete older.campaign;assert.equal((await request('/v1/slots/7','PUT',key,{state:older,name:'旧页面'},2)).status,409);
 // Two clients read revision 2. Exactly one conditional update may commit.
 const pair=await Promise.all([request('/v1/slots/7','PUT',key,{state:{...state,revision:8},name:'电脑'},2),request('/v1/slots/7','PUT',key,{state:{...state,revision:9},name:'手机'},2)]);
 assert.deepEqual(pair.map(p=>p.status).sort(),[200,412]);assert.equal((await request('/v1/slots/7','GET',key)).body.cloudRevision,3);

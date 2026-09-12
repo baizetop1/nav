@@ -738,5 +738,3405 @@
     "price": 0,
     "effect": {},
     "description": "在「青州护道」历练胜利后结算时获得；尚未持契且未领此骑时，每次独立 20% 概率掉落，无保底，不要求杨志在队。杨志正式入寨后，可到郓城马厩凭此契领骑，不另收碎银或驯骑凭记。"
+  },
+  {
+    "id": "lujunyi_token",
+    "name": "卢俊义信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "lujunyi"
+  },
+  {
+    "id": "lujunyi_order",
+    "name": "卢俊义专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "lujunyi"
+  },
+  {
+    "id": "lujunyi_manual",
+    "name": "卢俊义招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "lujunyi"
+  },
+  {
+    "id": "lujunyi_mount_contract",
+    "name": "玉麒麟义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "lujunyi"
+  },
+  {
+    "id": "guansheng_token",
+    "name": "关胜信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "guansheng"
+  },
+  {
+    "id": "guansheng_order",
+    "name": "关胜专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "guansheng"
+  },
+  {
+    "id": "guansheng_manual",
+    "name": "关胜招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "guansheng"
+  },
+  {
+    "id": "guansheng_mount_contract",
+    "name": "大刀义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "guansheng"
+  },
+  {
+    "id": "qinming_token",
+    "name": "秦明信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "qinming"
+  },
+  {
+    "id": "qinming_order",
+    "name": "秦明专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "qinming"
+  },
+  {
+    "id": "qinming_manual",
+    "name": "秦明招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "qinming"
+  },
+  {
+    "id": "qinming_mount_contract",
+    "name": "霹雳火义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "qinming"
+  },
+  {
+    "id": "huyanzhuo_token",
+    "name": "呼延灼信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "huyanzhuo"
+  },
+  {
+    "id": "huyanzhuo_order",
+    "name": "呼延灼专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "huyanzhuo"
+  },
+  {
+    "id": "huyanzhuo_manual",
+    "name": "呼延灼招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "huyanzhuo"
+  },
+  {
+    "id": "huyanzhuo_mount_contract",
+    "name": "双鞭义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "huyanzhuo"
+  },
+  {
+    "id": "liying_token",
+    "name": "李应信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "liying"
+  },
+  {
+    "id": "liying_order",
+    "name": "李应专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "liying"
+  },
+  {
+    "id": "liying_manual",
+    "name": "李应招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "liying"
+  },
+  {
+    "id": "liying_mount_contract",
+    "name": "扑天雕义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "liying"
+  },
+  {
+    "id": "zhutong_token",
+    "name": "朱仝信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhutong"
+  },
+  {
+    "id": "zhutong_order",
+    "name": "朱仝专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhutong"
+  },
+  {
+    "id": "zhutong_manual",
+    "name": "朱仝招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhutong"
+  },
+  {
+    "id": "zhutong_mount_contract",
+    "name": "美髯公义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhutong"
+  },
+  {
+    "id": "dongping_token",
+    "name": "董平信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "dongping"
+  },
+  {
+    "id": "dongping_order",
+    "name": "董平专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "dongping"
+  },
+  {
+    "id": "dongping_manual",
+    "name": "董平招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "dongping"
+  },
+  {
+    "id": "dongping_mount_contract",
+    "name": "双枪将义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "dongping"
+  },
+  {
+    "id": "zhangqing_token",
+    "name": "张清信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing"
+  },
+  {
+    "id": "zhangqing_order",
+    "name": "张清专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing"
+  },
+  {
+    "id": "zhangqing_manual",
+    "name": "张清招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing"
+  },
+  {
+    "id": "zhangqing_mount_contract",
+    "name": "没羽箭义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing"
+  },
+  {
+    "id": "xuning_token",
+    "name": "徐宁信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "xuning"
+  },
+  {
+    "id": "xuning_order",
+    "name": "徐宁专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "xuning"
+  },
+  {
+    "id": "xuning_manual",
+    "name": "徐宁招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "xuning"
+  },
+  {
+    "id": "xuning_mount_contract",
+    "name": "金枪手义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "xuning"
+  },
+  {
+    "id": "suochao_token",
+    "name": "索超信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "suochao"
+  },
+  {
+    "id": "suochao_order",
+    "name": "索超专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "suochao"
+  },
+  {
+    "id": "suochao_manual",
+    "name": "索超招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "suochao"
+  },
+  {
+    "id": "suochao_mount_contract",
+    "name": "急先锋义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "suochao"
+  },
+  {
+    "id": "daizong_token",
+    "name": "戴宗信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "daizong"
+  },
+  {
+    "id": "daizong_order",
+    "name": "戴宗专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "daizong"
+  },
+  {
+    "id": "daizong_manual",
+    "name": "戴宗招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "daizong"
+  },
+  {
+    "id": "daizong_mount_contract",
+    "name": "神行太保义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "daizong"
+  },
+  {
+    "id": "likui_token",
+    "name": "李逵信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "likui"
+  },
+  {
+    "id": "likui_order",
+    "name": "李逵专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "likui"
+  },
+  {
+    "id": "likui_manual",
+    "name": "李逵招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "likui"
+  },
+  {
+    "id": "likui_mount_contract",
+    "name": "黑旋风义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "likui"
+  },
+  {
+    "id": "shijin_token",
+    "name": "史进信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "shijin"
+  },
+  {
+    "id": "shijin_order",
+    "name": "史进专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "shijin"
+  },
+  {
+    "id": "shijin_manual",
+    "name": "史进招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "shijin"
+  },
+  {
+    "id": "shijin_mount_contract",
+    "name": "九纹龙义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "shijin"
+  },
+  {
+    "id": "muhong_token",
+    "name": "穆弘信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "muhong"
+  },
+  {
+    "id": "muhong_order",
+    "name": "穆弘专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "muhong"
+  },
+  {
+    "id": "muhong_manual",
+    "name": "穆弘招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "muhong"
+  },
+  {
+    "id": "muhong_mount_contract",
+    "name": "没遮拦义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "muhong"
+  },
+  {
+    "id": "leiheng_token",
+    "name": "雷横信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "leiheng"
+  },
+  {
+    "id": "leiheng_order",
+    "name": "雷横专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "leiheng"
+  },
+  {
+    "id": "leiheng_manual",
+    "name": "雷横招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "leiheng"
+  },
+  {
+    "id": "leiheng_mount_contract",
+    "name": "插翅虎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "leiheng"
+  },
+  {
+    "id": "lijun_token",
+    "name": "李俊信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "lijun"
+  },
+  {
+    "id": "lijun_order",
+    "name": "李俊专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "lijun"
+  },
+  {
+    "id": "lijun_manual",
+    "name": "李俊招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "lijun"
+  },
+  {
+    "id": "lijun_mount_contract",
+    "name": "混江龙义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "lijun"
+  },
+  {
+    "id": "ruanxiaoer_token",
+    "name": "阮小二信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaoer"
+  },
+  {
+    "id": "ruanxiaoer_order",
+    "name": "阮小二专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaoer"
+  },
+  {
+    "id": "ruanxiaoer_manual",
+    "name": "阮小二招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaoer"
+  },
+  {
+    "id": "ruanxiaoer_mount_contract",
+    "name": "立地太岁义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaoer"
+  },
+  {
+    "id": "zhangheng_token",
+    "name": "张横信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangheng"
+  },
+  {
+    "id": "zhangheng_order",
+    "name": "张横专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangheng"
+  },
+  {
+    "id": "zhangheng_manual",
+    "name": "张横招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangheng"
+  },
+  {
+    "id": "zhangheng_mount_contract",
+    "name": "船火儿义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangheng"
+  },
+  {
+    "id": "ruanxiaowu_token",
+    "name": "阮小五信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaowu"
+  },
+  {
+    "id": "ruanxiaowu_order",
+    "name": "阮小五专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaowu"
+  },
+  {
+    "id": "ruanxiaowu_manual",
+    "name": "阮小五招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaowu"
+  },
+  {
+    "id": "ruanxiaowu_mount_contract",
+    "name": "短命二郎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaowu"
+  },
+  {
+    "id": "zhangshun_token",
+    "name": "张顺信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangshun"
+  },
+  {
+    "id": "zhangshun_order",
+    "name": "张顺专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangshun"
+  },
+  {
+    "id": "zhangshun_manual",
+    "name": "张顺招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangshun"
+  },
+  {
+    "id": "zhangshun_mount_contract",
+    "name": "浪里白条义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangshun"
+  },
+  {
+    "id": "yangxiong_token",
+    "name": "杨雄信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "yangxiong"
+  },
+  {
+    "id": "yangxiong_order",
+    "name": "杨雄专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "yangxiong"
+  },
+  {
+    "id": "yangxiong_manual",
+    "name": "杨雄招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "yangxiong"
+  },
+  {
+    "id": "yangxiong_mount_contract",
+    "name": "病关索义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "yangxiong"
+  },
+  {
+    "id": "shixiu_token",
+    "name": "石秀信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "shixiu"
+  },
+  {
+    "id": "shixiu_order",
+    "name": "石秀专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "shixiu"
+  },
+  {
+    "id": "shixiu_manual",
+    "name": "石秀招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "shixiu"
+  },
+  {
+    "id": "shixiu_mount_contract",
+    "name": "拼命三郎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "shixiu"
+  },
+  {
+    "id": "jiezhen_token",
+    "name": "解珍信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiezhen"
+  },
+  {
+    "id": "jiezhen_order",
+    "name": "解珍专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiezhen"
+  },
+  {
+    "id": "jiezhen_manual",
+    "name": "解珍招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiezhen"
+  },
+  {
+    "id": "jiezhen_mount_contract",
+    "name": "两头蛇义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiezhen"
+  },
+  {
+    "id": "jiebao_token",
+    "name": "解宝信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiebao"
+  },
+  {
+    "id": "jiebao_order",
+    "name": "解宝专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiebao"
+  },
+  {
+    "id": "jiebao_manual",
+    "name": "解宝招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiebao"
+  },
+  {
+    "id": "jiebao_mount_contract",
+    "name": "双尾蝎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiebao"
+  },
+  {
+    "id": "zhuwu_token",
+    "name": "朱武信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhuwu"
+  },
+  {
+    "id": "zhuwu_order",
+    "name": "朱武专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhuwu"
+  },
+  {
+    "id": "zhuwu_manual",
+    "name": "朱武招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhuwu"
+  },
+  {
+    "id": "zhuwu_mount_contract",
+    "name": "神机军师义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhuwu"
+  },
+  {
+    "id": "huangxin_token",
+    "name": "黄信信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "huangxin"
+  },
+  {
+    "id": "huangxin_order",
+    "name": "黄信专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "huangxin"
+  },
+  {
+    "id": "huangxin_manual",
+    "name": "黄信招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "huangxin"
+  },
+  {
+    "id": "huangxin_mount_contract",
+    "name": "镇三山义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "huangxin"
+  },
+  {
+    "id": "sunli_token",
+    "name": "孙立信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunli"
+  },
+  {
+    "id": "sunli_order",
+    "name": "孙立专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunli"
+  },
+  {
+    "id": "sunli_manual",
+    "name": "孙立招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunli"
+  },
+  {
+    "id": "sunli_mount_contract",
+    "name": "病尉迟义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunli"
+  },
+  {
+    "id": "xuanzan_token",
+    "name": "宣赞信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "xuanzan"
+  },
+  {
+    "id": "xuanzan_order",
+    "name": "宣赞专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "xuanzan"
+  },
+  {
+    "id": "xuanzan_manual",
+    "name": "宣赞招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "xuanzan"
+  },
+  {
+    "id": "xuanzan_mount_contract",
+    "name": "丑郡马义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "xuanzan"
+  },
+  {
+    "id": "haosiwen_token",
+    "name": "郝思文信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "haosiwen"
+  },
+  {
+    "id": "haosiwen_order",
+    "name": "郝思文专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "haosiwen"
+  },
+  {
+    "id": "haosiwen_manual",
+    "name": "郝思文招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "haosiwen"
+  },
+  {
+    "id": "haosiwen_mount_contract",
+    "name": "井木犴义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "haosiwen"
+  },
+  {
+    "id": "hantao_token",
+    "name": "韩滔信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "hantao"
+  },
+  {
+    "id": "hantao_order",
+    "name": "韩滔专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "hantao"
+  },
+  {
+    "id": "hantao_manual",
+    "name": "韩滔招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "hantao"
+  },
+  {
+    "id": "hantao_mount_contract",
+    "name": "百胜将义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "hantao"
+  },
+  {
+    "id": "pengqi_token",
+    "name": "彭玘信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "pengqi"
+  },
+  {
+    "id": "pengqi_order",
+    "name": "彭玘专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "pengqi"
+  },
+  {
+    "id": "pengqi_manual",
+    "name": "彭玘招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "pengqi"
+  },
+  {
+    "id": "pengqi_mount_contract",
+    "name": "天目将义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "pengqi"
+  },
+  {
+    "id": "shantinggui_token",
+    "name": "单廷珪信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "shantinggui"
+  },
+  {
+    "id": "shantinggui_order",
+    "name": "单廷珪专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "shantinggui"
+  },
+  {
+    "id": "shantinggui_manual",
+    "name": "单廷珪招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "shantinggui"
+  },
+  {
+    "id": "shantinggui_mount_contract",
+    "name": "圣水将义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "shantinggui"
+  },
+  {
+    "id": "weidingguo_token",
+    "name": "魏定国信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "weidingguo"
+  },
+  {
+    "id": "weidingguo_order",
+    "name": "魏定国专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "weidingguo"
+  },
+  {
+    "id": "weidingguo_manual",
+    "name": "魏定国招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "weidingguo"
+  },
+  {
+    "id": "weidingguo_mount_contract",
+    "name": "神火将义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "weidingguo"
+  },
+  {
+    "id": "xiaorang_token",
+    "name": "萧让信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "xiaorang"
+  },
+  {
+    "id": "xiaorang_order",
+    "name": "萧让专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "xiaorang"
+  },
+  {
+    "id": "xiaorang_manual",
+    "name": "萧让招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "xiaorang"
+  },
+  {
+    "id": "xiaorang_mount_contract",
+    "name": "圣手书生义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "xiaorang"
+  },
+  {
+    "id": "peixuan_token",
+    "name": "裴宣信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "peixuan"
+  },
+  {
+    "id": "peixuan_order",
+    "name": "裴宣专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "peixuan"
+  },
+  {
+    "id": "peixuan_manual",
+    "name": "裴宣招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "peixuan"
+  },
+  {
+    "id": "peixuan_mount_contract",
+    "name": "铁面孔目义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "peixuan"
+  },
+  {
+    "id": "oupeng_token",
+    "name": "欧鹏信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "oupeng"
+  },
+  {
+    "id": "oupeng_order",
+    "name": "欧鹏专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "oupeng"
+  },
+  {
+    "id": "oupeng_manual",
+    "name": "欧鹏招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "oupeng"
+  },
+  {
+    "id": "oupeng_mount_contract",
+    "name": "摩云金翅义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "oupeng"
+  },
+  {
+    "id": "dengfei_token",
+    "name": "邓飞信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "dengfei"
+  },
+  {
+    "id": "dengfei_order",
+    "name": "邓飞专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "dengfei"
+  },
+  {
+    "id": "dengfei_manual",
+    "name": "邓飞招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "dengfei"
+  },
+  {
+    "id": "dengfei_mount_contract",
+    "name": "火眼狻猊义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "dengfei"
+  },
+  {
+    "id": "yanshun_token",
+    "name": "燕顺信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "yanshun"
+  },
+  {
+    "id": "yanshun_order",
+    "name": "燕顺专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "yanshun"
+  },
+  {
+    "id": "yanshun_manual",
+    "name": "燕顺招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "yanshun"
+  },
+  {
+    "id": "yanshun_mount_contract",
+    "name": "锦毛虎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "yanshun"
+  },
+  {
+    "id": "yanglin_token",
+    "name": "杨林信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "yanglin"
+  },
+  {
+    "id": "yanglin_order",
+    "name": "杨林专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "yanglin"
+  },
+  {
+    "id": "yanglin_manual",
+    "name": "杨林招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "yanglin"
+  },
+  {
+    "id": "yanglin_mount_contract",
+    "name": "锦豹子义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "yanglin"
+  },
+  {
+    "id": "lingzhen_token",
+    "name": "凌振信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "lingzhen"
+  },
+  {
+    "id": "lingzhen_order",
+    "name": "凌振专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "lingzhen"
+  },
+  {
+    "id": "lingzhen_manual",
+    "name": "凌振招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "lingzhen"
+  },
+  {
+    "id": "lingzhen_mount_contract",
+    "name": "轰天雷义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "lingzhen"
+  },
+  {
+    "id": "jiangjing_token",
+    "name": "蒋敬信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiangjing"
+  },
+  {
+    "id": "jiangjing_order",
+    "name": "蒋敬专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiangjing"
+  },
+  {
+    "id": "jiangjing_manual",
+    "name": "蒋敬招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiangjing"
+  },
+  {
+    "id": "jiangjing_mount_contract",
+    "name": "神算子义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiangjing"
+  },
+  {
+    "id": "lvfang_token",
+    "name": "吕方信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "lvfang"
+  },
+  {
+    "id": "lvfang_order",
+    "name": "吕方专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "lvfang"
+  },
+  {
+    "id": "lvfang_manual",
+    "name": "吕方招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "lvfang"
+  },
+  {
+    "id": "lvfang_mount_contract",
+    "name": "小温侯义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "lvfang"
+  },
+  {
+    "id": "guosheng_token",
+    "name": "郭盛信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "guosheng"
+  },
+  {
+    "id": "guosheng_order",
+    "name": "郭盛专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "guosheng"
+  },
+  {
+    "id": "guosheng_manual",
+    "name": "郭盛招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "guosheng"
+  },
+  {
+    "id": "guosheng_mount_contract",
+    "name": "赛仁贵义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "guosheng"
+  },
+  {
+    "id": "andaoquan_token",
+    "name": "安道全信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "andaoquan"
+  },
+  {
+    "id": "andaoquan_order",
+    "name": "安道全专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "andaoquan"
+  },
+  {
+    "id": "andaoquan_manual",
+    "name": "安道全招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "andaoquan"
+  },
+  {
+    "id": "andaoquan_mount_contract",
+    "name": "神医义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "andaoquan"
+  },
+  {
+    "id": "huangfuduan_token",
+    "name": "皇甫端信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "huangfuduan"
+  },
+  {
+    "id": "huangfuduan_order",
+    "name": "皇甫端专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "huangfuduan"
+  },
+  {
+    "id": "huangfuduan_manual",
+    "name": "皇甫端招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "huangfuduan"
+  },
+  {
+    "id": "huangfuduan_mount_contract",
+    "name": "紫髯伯义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "huangfuduan"
+  },
+  {
+    "id": "wangying_token",
+    "name": "王英信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "wangying"
+  },
+  {
+    "id": "wangying_order",
+    "name": "王英专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "wangying"
+  },
+  {
+    "id": "wangying_manual",
+    "name": "王英招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "wangying"
+  },
+  {
+    "id": "wangying_mount_contract",
+    "name": "矮脚虎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "wangying"
+  },
+  {
+    "id": "husanniang_token",
+    "name": "扈三娘信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "husanniang"
+  },
+  {
+    "id": "husanniang_order",
+    "name": "扈三娘专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "husanniang"
+  },
+  {
+    "id": "husanniang_manual",
+    "name": "扈三娘招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "husanniang"
+  },
+  {
+    "id": "husanniang_mount_contract",
+    "name": "一丈青义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "husanniang"
+  },
+  {
+    "id": "baoxu_token",
+    "name": "鲍旭信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "baoxu"
+  },
+  {
+    "id": "baoxu_order",
+    "name": "鲍旭专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "baoxu"
+  },
+  {
+    "id": "baoxu_manual",
+    "name": "鲍旭招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "baoxu"
+  },
+  {
+    "id": "baoxu_mount_contract",
+    "name": "丧门神义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "baoxu"
+  },
+  {
+    "id": "fanrui_token",
+    "name": "樊瑞信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "fanrui"
+  },
+  {
+    "id": "fanrui_order",
+    "name": "樊瑞专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "fanrui"
+  },
+  {
+    "id": "fanrui_manual",
+    "name": "樊瑞招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "fanrui"
+  },
+  {
+    "id": "fanrui_mount_contract",
+    "name": "混世魔王义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "fanrui"
+  },
+  {
+    "id": "kongming_token",
+    "name": "孔明信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "kongming"
+  },
+  {
+    "id": "kongming_order",
+    "name": "孔明专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "kongming"
+  },
+  {
+    "id": "kongming_manual",
+    "name": "孔明招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "kongming"
+  },
+  {
+    "id": "kongming_mount_contract",
+    "name": "毛头星义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "kongming"
+  },
+  {
+    "id": "kongliang_token",
+    "name": "孔亮信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "kongliang"
+  },
+  {
+    "id": "kongliang_order",
+    "name": "孔亮专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "kongliang"
+  },
+  {
+    "id": "kongliang_manual",
+    "name": "孔亮招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "kongliang"
+  },
+  {
+    "id": "kongliang_mount_contract",
+    "name": "独火星义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "kongliang"
+  },
+  {
+    "id": "xiangchong_token",
+    "name": "项充信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "xiangchong"
+  },
+  {
+    "id": "xiangchong_order",
+    "name": "项充专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "xiangchong"
+  },
+  {
+    "id": "xiangchong_manual",
+    "name": "项充招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "xiangchong"
+  },
+  {
+    "id": "xiangchong_mount_contract",
+    "name": "八臂哪吒义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "xiangchong"
+  },
+  {
+    "id": "ligun_token",
+    "name": "李衮信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "ligun"
+  },
+  {
+    "id": "ligun_order",
+    "name": "李衮专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "ligun"
+  },
+  {
+    "id": "ligun_manual",
+    "name": "李衮招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "ligun"
+  },
+  {
+    "id": "ligun_mount_contract",
+    "name": "飞天大圣义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "ligun"
+  },
+  {
+    "id": "jindajian_token",
+    "name": "金大坚信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "jindajian"
+  },
+  {
+    "id": "jindajian_order",
+    "name": "金大坚专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "jindajian"
+  },
+  {
+    "id": "jindajian_manual",
+    "name": "金大坚招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "jindajian"
+  },
+  {
+    "id": "jindajian_mount_contract",
+    "name": "玉臂匠义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "jindajian"
+  },
+  {
+    "id": "malin_token",
+    "name": "马麟信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "malin"
+  },
+  {
+    "id": "malin_order",
+    "name": "马麟专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "malin"
+  },
+  {
+    "id": "malin_manual",
+    "name": "马麟招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "malin"
+  },
+  {
+    "id": "malin_mount_contract",
+    "name": "铁笛仙义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "malin"
+  },
+  {
+    "id": "tongwei_token",
+    "name": "童威信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "tongwei"
+  },
+  {
+    "id": "tongwei_order",
+    "name": "童威专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "tongwei"
+  },
+  {
+    "id": "tongwei_manual",
+    "name": "童威招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "tongwei"
+  },
+  {
+    "id": "tongwei_mount_contract",
+    "name": "出洞蛟义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "tongwei"
+  },
+  {
+    "id": "tongmeng_token",
+    "name": "童猛信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "tongmeng"
+  },
+  {
+    "id": "tongmeng_order",
+    "name": "童猛专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "tongmeng"
+  },
+  {
+    "id": "tongmeng_manual",
+    "name": "童猛招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "tongmeng"
+  },
+  {
+    "id": "tongmeng_mount_contract",
+    "name": "翻江蜃义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "tongmeng"
+  },
+  {
+    "id": "mengkang_token",
+    "name": "孟康信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "mengkang"
+  },
+  {
+    "id": "mengkang_order",
+    "name": "孟康专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "mengkang"
+  },
+  {
+    "id": "mengkang_manual",
+    "name": "孟康招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "mengkang"
+  },
+  {
+    "id": "mengkang_mount_contract",
+    "name": "玉幡竿义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "mengkang"
+  },
+  {
+    "id": "houjian_token",
+    "name": "侯健信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "houjian"
+  },
+  {
+    "id": "houjian_order",
+    "name": "侯健专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "houjian"
+  },
+  {
+    "id": "houjian_manual",
+    "name": "侯健招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "houjian"
+  },
+  {
+    "id": "houjian_mount_contract",
+    "name": "通臂猿义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "houjian"
+  },
+  {
+    "id": "chenda_token",
+    "name": "陈达信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "chenda"
+  },
+  {
+    "id": "chenda_order",
+    "name": "陈达专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "chenda"
+  },
+  {
+    "id": "chenda_manual",
+    "name": "陈达招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "chenda"
+  },
+  {
+    "id": "chenda_mount_contract",
+    "name": "跳涧虎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "chenda"
+  },
+  {
+    "id": "yangchun_token",
+    "name": "杨春信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "yangchun"
+  },
+  {
+    "id": "yangchun_order",
+    "name": "杨春专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "yangchun"
+  },
+  {
+    "id": "yangchun_manual",
+    "name": "杨春招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "yangchun"
+  },
+  {
+    "id": "yangchun_mount_contract",
+    "name": "白花蛇义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "yangchun"
+  },
+  {
+    "id": "zhengtianshou_token",
+    "name": "郑天寿信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhengtianshou"
+  },
+  {
+    "id": "zhengtianshou_order",
+    "name": "郑天寿专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhengtianshou"
+  },
+  {
+    "id": "zhengtianshou_manual",
+    "name": "郑天寿招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhengtianshou"
+  },
+  {
+    "id": "zhengtianshou_mount_contract",
+    "name": "白面郎君义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhengtianshou"
+  },
+  {
+    "id": "taozongwang_token",
+    "name": "陶宗旺信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "taozongwang"
+  },
+  {
+    "id": "taozongwang_order",
+    "name": "陶宗旺专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "taozongwang"
+  },
+  {
+    "id": "taozongwang_manual",
+    "name": "陶宗旺招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "taozongwang"
+  },
+  {
+    "id": "taozongwang_mount_contract",
+    "name": "九尾龟义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "taozongwang"
+  },
+  {
+    "id": "songqing_token",
+    "name": "宋清信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "songqing"
+  },
+  {
+    "id": "songqing_order",
+    "name": "宋清专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "songqing"
+  },
+  {
+    "id": "songqing_manual",
+    "name": "宋清招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "songqing"
+  },
+  {
+    "id": "songqing_mount_contract",
+    "name": "铁扇子义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "songqing"
+  },
+  {
+    "id": "yuehe_token",
+    "name": "乐和信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "yuehe"
+  },
+  {
+    "id": "yuehe_order",
+    "name": "乐和专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "yuehe"
+  },
+  {
+    "id": "yuehe_manual",
+    "name": "乐和招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "yuehe"
+  },
+  {
+    "id": "yuehe_mount_contract",
+    "name": "铁叫子义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "yuehe"
+  },
+  {
+    "id": "gongwang_token",
+    "name": "龚旺信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "gongwang"
+  },
+  {
+    "id": "gongwang_order",
+    "name": "龚旺专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "gongwang"
+  },
+  {
+    "id": "gongwang_manual",
+    "name": "龚旺招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "gongwang"
+  },
+  {
+    "id": "gongwang_mount_contract",
+    "name": "花项虎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "gongwang"
+  },
+  {
+    "id": "dingdesun_token",
+    "name": "丁得孙信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "dingdesun"
+  },
+  {
+    "id": "dingdesun_order",
+    "name": "丁得孙专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "dingdesun"
+  },
+  {
+    "id": "dingdesun_manual",
+    "name": "丁得孙招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "dingdesun"
+  },
+  {
+    "id": "dingdesun_mount_contract",
+    "name": "中箭虎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "dingdesun"
+  },
+  {
+    "id": "muchun_token",
+    "name": "穆春信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "muchun"
+  },
+  {
+    "id": "muchun_order",
+    "name": "穆春专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "muchun"
+  },
+  {
+    "id": "muchun_manual",
+    "name": "穆春招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "muchun"
+  },
+  {
+    "id": "muchun_mount_contract",
+    "name": "小遮拦义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "muchun"
+  },
+  {
+    "id": "caozheng_token",
+    "name": "曹正信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "caozheng"
+  },
+  {
+    "id": "caozheng_order",
+    "name": "曹正专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "caozheng"
+  },
+  {
+    "id": "caozheng_manual",
+    "name": "曹正招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "caozheng"
+  },
+  {
+    "id": "caozheng_mount_contract",
+    "name": "操刀鬼义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "caozheng"
+  },
+  {
+    "id": "songwan_token",
+    "name": "宋万信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "songwan"
+  },
+  {
+    "id": "songwan_order",
+    "name": "宋万专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "songwan"
+  },
+  {
+    "id": "songwan_manual",
+    "name": "宋万招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "songwan"
+  },
+  {
+    "id": "songwan_mount_contract",
+    "name": "云里金刚义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "songwan"
+  },
+  {
+    "id": "duqian_token",
+    "name": "杜迁信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "duqian"
+  },
+  {
+    "id": "duqian_order",
+    "name": "杜迁专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "duqian"
+  },
+  {
+    "id": "duqian_manual",
+    "name": "杜迁招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "duqian"
+  },
+  {
+    "id": "duqian_mount_contract",
+    "name": "摸着天义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "duqian"
+  },
+  {
+    "id": "xueyong_token",
+    "name": "薛永信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "xueyong"
+  },
+  {
+    "id": "xueyong_order",
+    "name": "薛永专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "xueyong"
+  },
+  {
+    "id": "xueyong_manual",
+    "name": "薛永招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "xueyong"
+  },
+  {
+    "id": "xueyong_mount_contract",
+    "name": "病大虫义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "xueyong"
+  },
+  {
+    "id": "shien_token",
+    "name": "施恩信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "shien"
+  },
+  {
+    "id": "shien_order",
+    "name": "施恩专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "shien"
+  },
+  {
+    "id": "shien_manual",
+    "name": "施恩招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "shien"
+  },
+  {
+    "id": "shien_mount_contract",
+    "name": "金眼彪义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "shien"
+  },
+  {
+    "id": "lizhong_token",
+    "name": "李忠信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "lizhong"
+  },
+  {
+    "id": "lizhong_order",
+    "name": "李忠专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "lizhong"
+  },
+  {
+    "id": "lizhong_manual",
+    "name": "李忠招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "lizhong"
+  },
+  {
+    "id": "lizhong_mount_contract",
+    "name": "打虎将义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "lizhong"
+  },
+  {
+    "id": "zhoutong_token",
+    "name": "周通信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhoutong"
+  },
+  {
+    "id": "zhoutong_order",
+    "name": "周通专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhoutong"
+  },
+  {
+    "id": "zhoutong_manual",
+    "name": "周通招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhoutong"
+  },
+  {
+    "id": "zhoutong_mount_contract",
+    "name": "小霸王义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhoutong"
+  },
+  {
+    "id": "tanglong_token",
+    "name": "汤隆信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "tanglong"
+  },
+  {
+    "id": "tanglong_order",
+    "name": "汤隆专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "tanglong"
+  },
+  {
+    "id": "tanglong_manual",
+    "name": "汤隆招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "tanglong"
+  },
+  {
+    "id": "tanglong_mount_contract",
+    "name": "金钱豹子义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "tanglong"
+  },
+  {
+    "id": "duxing_token",
+    "name": "杜兴信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "duxing"
+  },
+  {
+    "id": "duxing_order",
+    "name": "杜兴专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "duxing"
+  },
+  {
+    "id": "duxing_manual",
+    "name": "杜兴招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "duxing"
+  },
+  {
+    "id": "duxing_mount_contract",
+    "name": "鬼脸儿义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "duxing"
+  },
+  {
+    "id": "zouyuan_token",
+    "name": "邹渊信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zouyuan"
+  },
+  {
+    "id": "zouyuan_order",
+    "name": "邹渊专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zouyuan"
+  },
+  {
+    "id": "zouyuan_manual",
+    "name": "邹渊招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zouyuan"
+  },
+  {
+    "id": "zouyuan_mount_contract",
+    "name": "出林龙义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zouyuan"
+  },
+  {
+    "id": "zourun_token",
+    "name": "邹润信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zourun"
+  },
+  {
+    "id": "zourun_order",
+    "name": "邹润专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zourun"
+  },
+  {
+    "id": "zourun_manual",
+    "name": "邹润招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zourun"
+  },
+  {
+    "id": "zourun_mount_contract",
+    "name": "独角龙义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zourun"
+  },
+  {
+    "id": "zhugui_token",
+    "name": "朱贵信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhugui"
+  },
+  {
+    "id": "zhugui_order",
+    "name": "朱贵专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhugui"
+  },
+  {
+    "id": "zhugui_manual",
+    "name": "朱贵招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhugui"
+  },
+  {
+    "id": "zhugui_mount_contract",
+    "name": "旱地忽律义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhugui"
+  },
+  {
+    "id": "zhufu_token",
+    "name": "朱富信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhufu"
+  },
+  {
+    "id": "zhufu_order",
+    "name": "朱富专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhufu"
+  },
+  {
+    "id": "zhufu_manual",
+    "name": "朱富招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhufu"
+  },
+  {
+    "id": "zhufu_mount_contract",
+    "name": "笑面虎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhufu"
+  },
+  {
+    "id": "caifu_token",
+    "name": "蔡福信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "caifu"
+  },
+  {
+    "id": "caifu_order",
+    "name": "蔡福专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "caifu"
+  },
+  {
+    "id": "caifu_manual",
+    "name": "蔡福招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "caifu"
+  },
+  {
+    "id": "caifu_mount_contract",
+    "name": "铁臂膊义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "caifu"
+  },
+  {
+    "id": "caiqing_token",
+    "name": "蔡庆信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "caiqing"
+  },
+  {
+    "id": "caiqing_order",
+    "name": "蔡庆专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "caiqing"
+  },
+  {
+    "id": "caiqing_manual",
+    "name": "蔡庆招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "caiqing"
+  },
+  {
+    "id": "caiqing_mount_contract",
+    "name": "一枝花义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "caiqing"
+  },
+  {
+    "id": "lili_token",
+    "name": "李立信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "lili"
+  },
+  {
+    "id": "lili_order",
+    "name": "李立专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "lili"
+  },
+  {
+    "id": "lili_manual",
+    "name": "李立招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "lili"
+  },
+  {
+    "id": "lili_mount_contract",
+    "name": "催命判官义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "lili"
+  },
+  {
+    "id": "liyun_token",
+    "name": "李云信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "liyun"
+  },
+  {
+    "id": "liyun_order",
+    "name": "李云专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "liyun"
+  },
+  {
+    "id": "liyun_manual",
+    "name": "李云招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "liyun"
+  },
+  {
+    "id": "liyun_mount_contract",
+    "name": "青眼虎义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "liyun"
+  },
+  {
+    "id": "jiaoting_token",
+    "name": "焦挺信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiaoting"
+  },
+  {
+    "id": "jiaoting_order",
+    "name": "焦挺专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiaoting"
+  },
+  {
+    "id": "jiaoting_manual",
+    "name": "焦挺招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiaoting"
+  },
+  {
+    "id": "jiaoting_mount_contract",
+    "name": "没面目义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "jiaoting"
+  },
+  {
+    "id": "shiyong_token",
+    "name": "石勇信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "shiyong"
+  },
+  {
+    "id": "shiyong_order",
+    "name": "石勇专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "shiyong"
+  },
+  {
+    "id": "shiyong_manual",
+    "name": "石勇招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "shiyong"
+  },
+  {
+    "id": "shiyong_mount_contract",
+    "name": "石将军义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "shiyong"
+  },
+  {
+    "id": "sunxin_token",
+    "name": "孙新信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunxin"
+  },
+  {
+    "id": "sunxin_order",
+    "name": "孙新专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunxin"
+  },
+  {
+    "id": "sunxin_manual",
+    "name": "孙新招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunxin"
+  },
+  {
+    "id": "sunxin_mount_contract",
+    "name": "小尉迟义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunxin"
+  },
+  {
+    "id": "gudasao_token",
+    "name": "顾大嫂信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "gudasao"
+  },
+  {
+    "id": "gudasao_order",
+    "name": "顾大嫂专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "gudasao"
+  },
+  {
+    "id": "gudasao_manual",
+    "name": "顾大嫂招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "gudasao"
+  },
+  {
+    "id": "gudasao_mount_contract",
+    "name": "母大虫义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "gudasao"
+  },
+  {
+    "id": "zhangqing_gardener_token",
+    "name": "张青信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing_gardener"
+  },
+  {
+    "id": "zhangqing_gardener_order",
+    "name": "张青专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing_gardener"
+  },
+  {
+    "id": "zhangqing_gardener_manual",
+    "name": "张青招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing_gardener"
+  },
+  {
+    "id": "zhangqing_gardener_mount_contract",
+    "name": "菜园子义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing_gardener"
+  },
+  {
+    "id": "sunerniang_token",
+    "name": "孙二娘信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunerniang"
+  },
+  {
+    "id": "sunerniang_order",
+    "name": "孙二娘专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunerniang"
+  },
+  {
+    "id": "sunerniang_manual",
+    "name": "孙二娘招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunerniang"
+  },
+  {
+    "id": "sunerniang_mount_contract",
+    "name": "母夜叉义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "sunerniang"
+  },
+  {
+    "id": "wangdingliu_token",
+    "name": "王定六信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "wangdingliu"
+  },
+  {
+    "id": "wangdingliu_order",
+    "name": "王定六专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "wangdingliu"
+  },
+  {
+    "id": "wangdingliu_manual",
+    "name": "王定六招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "wangdingliu"
+  },
+  {
+    "id": "wangdingliu_mount_contract",
+    "name": "活闪婆义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "wangdingliu"
+  },
+  {
+    "id": "yubaosi_token",
+    "name": "郁保四信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "yubaosi"
+  },
+  {
+    "id": "yubaosi_order",
+    "name": "郁保四专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "yubaosi"
+  },
+  {
+    "id": "yubaosi_manual",
+    "name": "郁保四招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "yubaosi"
+  },
+  {
+    "id": "yubaosi_mount_contract",
+    "name": "险道神义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "yubaosi"
+  },
+  {
+    "id": "duanjingzhu_token",
+    "name": "段景住信物",
+    "type": "token",
+    "description": "集齐十枚可合成专属招贤令。",
+    "price": 0,
+    "effect": {},
+    "hero": "duanjingzhu"
+  },
+  {
+    "id": "duanjingzhu_order",
+    "name": "段景住专属招贤令",
+    "type": "special",
+    "description": "相识后可用于专属招贤。",
+    "price": 0,
+    "effect": {},
+    "hero": "duanjingzhu"
+  },
+  {
+    "id": "duanjingzhu_manual",
+    "name": "段景住招式书",
+    "type": "material",
+    "description": "用于这位好汉的招式升级，可用两张武学残页抄录。",
+    "price": 0,
+    "effect": {},
+    "hero": "duanjingzhu"
+  },
+  {
+    "id": "duanjingzhu_mount_contract",
+    "name": "金毛犬义骑契",
+    "type": "special",
+    "description": "对应副本胜利结算时独立 20% 概率获得，无保底；人物入寨后凭契领骑。",
+    "price": 0,
+    "effect": {},
+    "hero": "duanjingzhu"
+  },
+  {
+    "id": "spirit_essence",
+    "name": "灵蕴",
+    "description": "升至灵品和仙品所需。聚灵试炼每次胜利得 2，登仙试炼每次胜利得 2。",
+    "type": "material",
+    "price": 0,
+    "effect": {}
+  },
+  {
+    "id": "immortal_seal",
+    "name": "登仙印",
+    "description": "升至仙品所需。登仙试炼每次胜利得 1。",
+    "type": "material",
+    "price": 0,
+    "effect": {}
   }
 ]

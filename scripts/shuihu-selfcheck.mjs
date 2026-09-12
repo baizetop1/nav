@@ -35,7 +35,7 @@ checkSchema(raw,schema);
 const badSchemaData=structuredClone(raw);badSchemaData.heroes[0].star='five';assert.throws(()=>checkSchema(badSchemaData,schema));
 console.log('Shuihu: JSON Schema structural contract passed.');
 const data=prepareData(raw), now=new Date(2026,8,9,10).getTime();
-for(const [kind,count] of Object.entries({heroes:14,maps:46,items:86,equipments:20,skills:62,events:24,dungeons:7}))assert.equal(data[kind].length,count);
+for(const [kind,count] of Object.entries({heroes:108,maps:46,items:464,equipments:20,skills:438,events:24,dungeons:9}))assert.equal(data[kind].length,count);
 assert.equal(data.quests.filter(q=>q.type==='daily').length,12);
 assert.equal(data.heroes.some(h=>h.id==='chaogai'),false);
 const bad=structuredClone(raw);bad.maps[0].links[0].target='missing';assert.throws(()=>prepareData(bad),/引用不存在/);
@@ -59,7 +59,7 @@ assert.equal(state.battle.outcome,'victory',state.battle.log.join('\n'));
 act('finishBattle');act('story',{id:'wusong_story',choice:'finish'});assert.equal(state.inventory.wusong_token,1);assert.equal(state.heroes.wusong.status,'known');assert.equal(state.progress.flags.tiger_complete,true);
 assert.throws(()=>act('story',{id:'wusong_story',choice:'finish'}));assert.equal(state.inventory.wusong_token,1);
 go('tracks');go('path');go('jingyang');go('road');go('gate');go('dongxi');go('zhuang');act('story',{id:'seven_stars_story'});act('story',{id:'seven_stars_story',choice:'join'});act('story',{id:'seven_stars_story',choice:'return'});act('story',{id:'seven_stars_story',choice:'pledge'});
-assert.equal(state.progress.flags.seven_stars,true);assert.equal(state.heroes.wuyong.status,'known');assert.equal(Object.keys(state.heroes).length,14);
+assert.equal(state.progress.flags.seven_stars,true);assert.equal(state.heroes.wuyong.status,'known');assert.equal(Object.keys(state.heroes).length,108);
 go('huangni');go('ridge');act('startScheme');for(let i=0;i<3&&!state.scheme.outcome;i++)act('scheme',{id:'early'});assert.equal(state.scheme.outcome,'failure');act('finishScheme');assert.equal(state.inventory.wuyong_token||0,0);
 act('startScheme');for(const id of ['wait','original','probe','original','wait','finish'])if(!state.scheme.outcome)act('scheme',{id});assert.equal(state.scheme.outcome,'success');act('finishScheme');assert.equal(state.inventory.wuyong_token,1);assert.equal(state.inventory.gongsunsheng_token,1);assert.throws(()=>act('startScheme'));
 const storyline=structuredClone(state);
@@ -102,13 +102,15 @@ const quota=new SaveStore({getItem:()=>null,setItem(){throw new Error('quota');}
 console.log('Shuihu: regeneration, daily rollover, atomic reward guards, save roundtrip/migration/validation, corruption preservation and tab conflicts passed.');
 
 // A seeded multi-day playthrough uses the actual command reducer, including loss/retry.
-state=structuredClone(storyline);state.location='recruit';
+state=structuredClone(storyline);state.location='recruit';act('campFound');act('campFormation',{mode:'solo',deployment:1,tactic:'balanced'});
 for(const h of ['shiqian','liutang','ruanxiaoqi'])assert.ok(heroRankCheck(state.heroes[h].status));
 function heroRankCheck(status){return ['known','available','owned'].includes(status);}
 let clearCount=0;
 for(let day=0;day<14&&!state.progress.flags.volume_complete;day++){
   state=dispatch(data,state,{type:'refresh'},now+86400000*(day+1));
   state.location='recruit';
+  while(state.camp.work<3)act('campWork');
+  for(const id of ['shiqian','ruanxiaoqi'])if(state.heroes[id].status!=='owned'&&state.player.silver>=data.by.heroes[id].star*120)act('campInvite',{id});
   for(let i=0;i<3;i++){if(state.player.silver>=300)act('buy',{id:'recruit_order'});}
   while(state.inventory.recruit_order>0)act('recruit');
   const owned=data.heroes.filter(h=>state.heroes[h.id].status==='owned').sort((a,b)=>b.star-a.star);
@@ -130,7 +132,7 @@ console.log('Shuihu: seeded whole-volume progression passed:',{clears:state.stat
 
 for(const dungeon of data.dungeons){
   let run=structuredClone(storyline);run.location=dungeon.map;run.team=['wusong','linchong','wuyong'];
-  run.progress.flags.chai_refuge=true;run.progress.flags.yang_complete=true;
+  run.progress.flags.quality_trials_unlocked=true;run.progress.flags.chai_refuge=true;run.progress.flags.yang_complete=true;
   for(const id of run.team){run.heroes[id].status='owned';run.heroes[id].level=dungeon.level;}
   run.inventory.jinchuangyao=20;run.player.stamina=100;
   run=dispatch(data,run,{type:'dungeon',id:dungeon.id},now);

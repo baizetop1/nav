@@ -1,4 +1,4 @@
-import { count, journal, requireRule, random } from './utils.js?v=0.5.0';
+import { count, journal, requireRule, random } from './utils.js?v=0.9.0';
 
 export const MOUNT_DROP_RATE=.2;
 export const SKILL_CAP=5, MOUNT_CAP=5;
@@ -51,7 +51,7 @@ export function mountQuote(state,id,type,data){
       cost={silver:0,items:{[model.contract]:1}};
       if(m)reason='已有专属坐骑';
       else if(!(state.inventory[model.contract]>0))reason=`先通关「${dungeon.name}」，结算有 20% 概率获得「${data.by.items[model.contract].name}」`;
-      else if(state.location!=='stable')reason='已持坐骑契，请到江湖 → 城中去处 → 郓城马厩领骑';
+      // A held contract can be redeemed directly from the hero page.
     }
   }else if(!m)reason='请先领骑';
   else if(type==='mountFeed'){cost.items.mount_feed=1;if(m.intimacy>=100)reason='亲密已满';}
@@ -86,7 +86,7 @@ export function growthAction(state,data,action){
     journal(state,`【抄录招式】武学残页 -2，${data.by.heroes[id].name}专属招式书 +1。`);
   }else if(type==='martialDrill'){
     requireRule(Object.values(state.heroes).some(h=>h.status==='owned'),'先邀请一位好汉入寨。');
-    requireRule(['yuncheng','stable','training'].includes(state.location),'切磋请到郓城、马厩或演武场。');
+    // Hero training is available from the hero page in any location.
     requireRule((state.daily.counters.martialDrill||0)<3,'今日已切磋三次，明日再来。');
     requireRule(state.player.stamina>=10,'切磋需要 10 点体力。');state.player.stamina-=10;count(state,'martialDrill');
     for(const [item,n] of Object.entries({martial_pages:2,mount_feed:1,...(state.daily.counters.martialDrill===3?{mount_token:1}:{})}))state.inventory[item]=(state.inventory[item]||0)+n;
@@ -110,7 +110,7 @@ export function validateGrowth(state,data,check){
   check(Object.keys(g.skills).length<=data.heroes.length*4&&Object.keys(g.mounts).length<=data.heroes.length,'养成字典大小');
   for(const [id,n] of Object.entries(g.skills)){
     const t=data.by.skills[id]?.training;check(t&&integer(n,2,5)&&state.heroes[t.hero]?.status==='owned','招式等级或归属');
-    check(state.heroes[t.hero].level>=Math.max(t.level,(n-1)*5)&&(!t.flag||state.progress.flags[t.flag]),'招式升级前置');
+    check(state.heroes[t.hero].level>=Math.max(t.level,(n-1)*5)&&(!t.flag||state.progress.flags[t.flag]||state.camp?.buildings.hall>=3),'招式升级前置');
   }
   for(const [id,m] of Object.entries(g.mounts))check(data.by.heroes[id]&&state.heroes[id]?.status==='owned'&&object(m)&&integer(m.rank,1,5)&&integer(m.intimacy,0,100)&&typeof m.riding==='boolean'&&m.intimacy>=(m.rank-1)*20,'坐骑养成');
   for(const id of Object.keys(g.skills))if(data.by.skills[id].training.tier==='bond'){const m=g.mounts[data.by.skills[id].training.hero];check(m&&m.rank>=3&&m.intimacy>=80,'羁绊升级须保留坐骑养成条件');}

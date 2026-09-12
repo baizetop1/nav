@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {collections,prepareData} from '../public/game/js/data.js';
+import {newGame,dispatch} from '../public/game/js/core.js';
+import {routeTo,routeBarriers,LOCAL_BENEFITS} from '../public/game/js/world-map.js';
+import {render} from '../public/game/js/ui.js';
+import {gameSnapshot} from '../public/game/js/portable.js';
+const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL('../public/game/data/'+n+'.json',import.meta.url)))])));
+const act=(s,type,extra={},now=s.clock)=>{const next=dispatch(data,s,{type,...extra},now);assert.deepEqual(gameSnapshot(next,data),next);return next;};
+const initial=newGame(data,Date.now(),53123),before=JSON.stringify(initial),html=render({state:initial,data,view:'map'});
+for(const map of data.maps){assert.ok(html.includes(map.name),map.name+' visible before travel');for(const l of map.links)assert.ok(html.includes('→ '+data.by.maps[l.target].name));}
+assert.equal(JSON.stringify(initial),before,'Map inspection never awards or mutates');
+assert.deepEqual(routeTo(initial,data,'forge'),['forge']);assert.equal(routeTo(initial,data,'dongjing'),null);
+const path=routeTo(initial,data,'stone');assert.ok(path.length>2);
+let walked=initial;for(const id of path)walked=act(walked,'move',{id});const travelled=act(initial,'travel',{id:'stone'});
+for(const field of ['location','worldMinute','inventory','heroes','progress','stats'])assert.deepEqual(travelled[field],walked[field]);
+assert.throws(()=>act(initial,'travel',{id:'dongjing'}));assert.throws(()=>act(initial,'travel',{id:'missing'}));assert.equal(JSON.stringify(initial),before);
+const lockedPath=routeTo(initial,data,'dongjing',true);assert.ok(routeBarriers(initial,data,lockedPath).some(s=>s.includes('第一卷')));
+let night={...structuredClone(initial),location:'road',worldMinute:330};night.inventory.night_clothes=1;
+assert.equal(routeTo(night,data,'reedbank'),null,'Cannot reach the night path after sunrise');night.worldMinute=300;assert.ok(routeTo(night,data,'reedbank'));
+let s=act(travelled,'campFound');s.player.silver=10000;s.inventory.iron=50;s.inventory.cloth=20;s.inventory.recruit_order=5;
+const location=s.location;s=act(s,'buy',{id:'exp_pill'});s=act(s,'craftEquip',{id:'iron_saber'});const uid=s.equipment.at(-1).uid;
+s=act(s,'strengthen',{id:uid});assert.equal(s.equipment.at(-1).plus,1);s=act(s,'dismantle',{id:uid});
+s=act(s,'recruit');assert.equal(s.recruit.total,1);s=act(s,'martialDrill');s.inventory.baisheng_mount_contract=1;s=act(s,'mountAdopt',{id:'baisheng'});
+assert.equal(s.location,location,'Common services do not teleport the player');
+for(const id of Object.keys(LOCAL_BENEFITS)){let visitor=structuredClone(s);visitor.location=id;const received=act(visitor,'localBenefit');assert.equal(received.daily.counters['visit_bonus_'+id],1);assert.throws(()=>act(received,'localBenefit'));const tomorrow=act(received,'refresh',{},received.clock+86400000);act(tomorrow,'localBenefit');}
+assert.throws(()=>act(s,'localBenefit'),'No remote claim of a different location benefit');
+const battle=act(act(s,'campFormation',{mode:'solo',deployment:1,tactic:'balanced'}),'campRaid',{id:'woods'});for(const type of ['travel','localBenefit','recruit','craftEquip'])assert.throws(()=>act(battle,type,{id:'forge'}));
+assert.ok(render({state:s,data,view:'forge'}).includes('craftEquip'));assert.ok(render({state:s,data,view:'recruit'}).includes('任何地点邀贤'));
+console.log('World map: all locations/roads visible, locked-path explanations, transactional multi-road travel, night gates, location-independent services, daily visit rewards, busy guards and save projection passed.');

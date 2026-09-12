@@ -1,6 +1,7 @@
-import { attributes } from './hero.js?v=0.5.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.5.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.5.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.9.0';
+import { attributes } from './hero.js?v=0.9.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.9.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.9.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
@@ -28,7 +29,7 @@ export function startBattle(state,data,{enemies,guest,scale=1,context}){
     const e=data.by.enemies[id],stats=Object.fromEntries(Object.entries(e.attribute).map(([key,value])=>[key,Math.round(value*(key==='speed'?1:scale))]));
     return {...unit(id+'_'+i,e.name,stats,e.skills,'enemy'),model:id};
   }),context,guest:!!guest,outcome:null,log:['【交战开始】双方自行迎敌。你可随时调度技能、用药或撤退。']};
-  initializeGrowthBattle(state,state.battle,data);
+  initializeGrowthBattle(state,state.battle,data);initializeMartial(state,state.battle,data);
 }
 // Only convert validated legacy battles. Never replay time spent away from the page.
 export function migrateBattle(b){
@@ -48,7 +49,7 @@ function settle(b){
   return !!b.outcome;
 }
 function hit(state,u,skill,data){
-  if(state.battle.rules===2)return growthHit(state,u,skill,data,growthApi);
+  if(state.battle.rules===2)return growthHit(state,u,skill,data,{...growthApi,data});
   const b=state.battle,friends=u.side==='team'?b.team:b.enemy,opponents=u.side==='team'?b.enemy:b.team,effect=skill?.effect||{kind:'damage',rate:1};
   if(skill)u.rage-=skill.cost;else u.rage=bounded(u.rage+10,0,100);
   if(effect.kind==='heal'){
@@ -57,7 +58,7 @@ function hit(state,u,skill,data){
   }
   const targets=opponents.filter(alive),target=random(state)<.8?targets[0]:pick(state,targets),critical=random(state)<.05;
   const defense=target.defense*(has(target,'armor_break')?.7:1),attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1);
-  const loss=damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
+  const loss=Math.max(1,Math.round(damage(attack,defense,effect.rate,.9+random(state)*.2,critical)*martialFactor(b,u,target,data,{normal:!skill,strategy:effect.kind==='strategy'})));
   target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   log(b,`${u.name}${skill?'施展【'+skill.name+'】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血。`);
   if(effect.status&&alive(target)){addStatus(target,effect.status,b.elapsed);log(b,`${target.name}受到【${statusName(effect.status.id)} · ${effect.status.turns*STATUS_MS/1000}秒】。`);}
@@ -111,7 +112,7 @@ export function advanceBattle(state,data,delta){
       u.statuses=u.statuses.filter(s=>s.expiresAt>next);
     }
     if(settle(b))break;
-    if(b.rules===2){advanceBosses(state,growthApi);if(settle(b))break;}
+    if(b.rules===2){advanceBosses(state,{...growthApi,data});if(settle(b))break;}
     const due=units.filter(u=>alive(u)&&u.nextAttackAt===next).sort((a,b)=>b.speed-a.speed);
     for(const u of due){
       if(!alive(u))continue;u.nextAttackAt=next+attackInterval(u);

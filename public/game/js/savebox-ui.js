@@ -1,6 +1,6 @@
-import { emptySlot } from './slots.js?v=0.5.0';
-import { slotNumber } from './portable.js?v=0.5.0';
-import { icon } from './icons.js?v=0.5.0';
+import { emptySlot } from './slots.js?v=0.9.0';
+import { slotNumber } from './portable.js?v=0.9.0';
+import { icon } from './icons.js?v=0.9.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const button=(label,type,extra={},symbol='save',disabled=false)=>`<button type="button" class="secondary with-icon" data-command="${esc(JSON.stringify({type,...extra}))}" ${disabled?'disabled':''}>${icon(symbol)}<span>${esc(label)}</span></button>`;
 export const localOptions=(slots,selected)=>Array.from({length:20},(_,i)=>slots.find(s=>s.id===i+1)||emptySlot(i+1)).map(s=>`<option value="${s.id}" ${s.id===selected?'selected':''}>${slotNumber(s.id)}号 · ${esc(s.name)} · ${s.raw?'已有进度':'空位'}</option>`).join('');

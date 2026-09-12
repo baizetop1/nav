@@ -13,10 +13,10 @@ const raw=Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(read
 export const data=prepareData(raw);
 export function growthFixture(ids=['wusong','luzhishen','wuyong'],seed=20260910){
   const s=newGame(data,new Date('2026-09-10T10:00:00+08:00').getTime(),seed);
-  s.player.silver=100000;s.location='stable';s.progress.visited.push('stable');s.team=ids;
+  s.player.silver=1000000;s.location='stable';s.progress.visited.push('stable');s.team=ids;
   for(const h of data.heroes){s.heroes[h.id].status='owned';s.heroes[h.id].level=25;}
   for(const skill of data.skills)if(skill.training?.flag)s.progress.flags[skill.training.flag]=true;
-  for(const id of ['martial_pages','mount_feed','mount_token','iron','exp_pill'])s.inventory[id]=500;
+  for(const id of ['martial_pages','mount_feed','mount_token','iron','exp_pill'])s.inventory[id]=5000;
   // Existing growth tests start with earned contracts; dungeon acquisition has its own integration suite.
   for(const h of data.heroes)s.inventory[h.mount.contract]=1;
   return s;
@@ -26,7 +26,7 @@ export function advance(s,ms,step=1000){while(ms>0&&!s.battle.outcome){const dt=
 function fight(ids,enemy='bandit_chief',dungeon=false){const s=growthFixture(ids);startBattle(s,data,{enemies:[enemy],context:dungeon?{type:'dungeon',id:'yezhulin'}:{type:'event',id:'road_bandits'}});return s;}
 function tank(s){for(const u of [...s.battle.team,...s.battle.enemy]){u.hp=u.maxHp=100000;u.attack=100;u.defense=80;u.strategy=100;u.nextAttackAt=10000;}for(const u of s.battle.team)u.rage=100;return s;}
 
-assert.equal(data.heroes.length,14);assert.equal(data.skills.filter(s=>s.training).length,56);
+assert.equal(data.heroes.length,108);assert.equal(data.skills.filter(s=>s.training).length,432);
 for(const h of data.heroes){
   assert.equal(h.skills.length,4);assert.equal(new Set(h.skills).size,4);assert.ok(h.mount.name);
   assert.equal(h.skills.filter(id=>data.by.skills[id].type!=='passive').length,2);
@@ -60,7 +60,7 @@ const poor=growthFixture();poor.player.silver=0;const beforePoor=JSON.stringify(
 const notOwned=growthFixture();notOwned.heroes.wusong.status='known';assert.throws(()=>act(notOwned,'skillBook',{id:'wusong'}));
 let book=growthFixture(),pages=book.inventory.martial_pages;book=act(book,'skillBook',{id:'baisheng'});assert.equal(book.inventory.martial_pages,pages-2);assert.equal(book.inventory.baisheng_manual,1);
 const beforeAttrs=attributes(trained,'wusong',data);let walking=act(trained,'mountRide',{id:'wusong'});assert.match(unlockReason(walking,data.by.skills.wusong_bond),/骑乘/);assert.ok(attributes(walking,'wusong',data).attack<beforeAttrs.attack);assert.equal(skillLevel(walking,'wusong_bond'),2);walking=act(walking,'mountRide',{id:'wusong'});assert.deepEqual(attributes(walking,'wusong',data),beforeAttrs);
-assert.ok(mountQuote(growthFixture(),'wusong','mountFeed').reason);const away=growthFixture();away.location='tavern';assert.ok(mountQuote(away,'wusong','mountAdopt',data).reason);
+assert.ok(mountQuote(growthFixture(),'wusong','mountFeed').reason);const away=growthFixture();away.location='tavern';assert.equal(mountQuote(away,'wusong','mountAdopt',data).reason,'','Held contracts can be redeemed away from the stable');
 let maximum=structuredClone(trained);maximum=act(maximum,'mountRank',{id:'wusong'});maximum=act(maximum,'mountRank',{id:'wusong'});assert.throws(()=>act(maximum,'mountRank',{id:'wusong'}),/5 阶/);for(let i=0;i<2;i++)maximum=act(maximum,'mountFeed',{id:'wusong'});assert.throws(()=>act(maximum,'mountFeed',{id:'wusong'}),/已满/);
 
 let drill=growthFixture();const stamina=drill.player.stamina,initialPages=drill.inventory.martial_pages,tokens=drill.inventory.mount_token;
@@ -70,7 +70,7 @@ const tomorrow=dispatch(data,drill,{type:'refresh'},drill.clock+86400000);assert
 for(const dungeon of data.dungeons){const reward=data.by.rewards[dungeon.reward];assert.equal(reward.guaranteed.martial_pages,3);assert.equal(reward.guaranteed.mount_feed,2);assert.equal(reward.guaranteed.mount_token,1);}
 const winner=fight(['wusong'],'bandit_chief',true);winner.battle.enemy[0].hp=1;winner.battle.team[0].rage=100;castSkill(winner,data,'wusong','wusong_active');const won=act(winner,'finishBattle');assert.equal(won.inventory.martial_pages,winner.inventory.martial_pages+3);assert.throws(()=>act(won,'finishBattle'));
 
-// All 14 advanced moves and all 14 riding triggers execute and survive round trips.
+// All 108 advanced moves and all 108 riding triggers execute and survive round trips.
 for(const h of data.heroes){
   const s=structuredClone(trained);s.team=[h.id];startBattle(s,data,{enemies:['bandit_chief'],context:{type:'event',id:'road_bandits'}});tank(s);s.battle.team[0].hp-=30000;
   const u=s.battle.team[0];assert.equal(u.skills.length,4);assert.equal(u.training.bond,h.id+'_bond');
@@ -105,5 +105,5 @@ assert.deepEqual(importSave(exportSave(trained,{id:1,name:'养成回归'},data),
 const secret=structuredClone(trained);secret.growth.token='do-not-export';secret.growth.mounts.wusong.password='do-not-export';assert.ok(!JSON.stringify(gameSnapshot(secret,data)).includes('do-not-export'));
 for(const mutate of [s=>s.growth.version=9,s=>s.growth.skills.wusong_active=99,s=>s.growth.mounts.wusong.rank=6,s=>s.growth.mounts.wusong.intimacy=-1,s=>s.growth.mounts.wusong.riding='yes',s=>s.growth.skills.bandit_cut=2,s=>s.growth.mounts.bandit={rank:1,intimacy:0,riding:true}]){const bad=structuredClone(trained);mutate(bad);assert.throws(()=>parseSave(JSON.stringify(bad),data));}
 for(const mutate of [s=>s.battle.rules=99,s=>s.battle.team[0].training.levels.wusong_active=6,s=>s.battle.team[0].training.bond='linchong_bond',s=>s.battle.enemy[0].boss.pendingAt=-1]){const bad=structuredClone(boss);mutate(bad);assert.throws(()=>parseSave(JSON.stringify(bad),data));}
-const ui=render({state:trained,data,view:'heroes'});for(const h of data.heroes)for(const id of h.skills)assert.ok(ui.includes(data.by.skills[id].name));for(const text of ['skillUpgrade','mountFeed','mountRank','martialDrill','材料去哪里找','亲密'])assert.ok(ui.includes(text));
-console.log('Shuihu growth: all 14 heroes/56 moves, paid capped upgrades, unlocks, 14 mounts/bonds, material sources/limits, live effects, boss telegraphs/counters, snapshot/legacy/cloud projection, atomic guards and UI passed.');
+const ui=render({state:trained,data,view:'heroes'});for(const h of data.heroes){const detail=render({state:trained,data,view:'heroes',roster:{selected:h.id}});for(const id of h.skills)assert.ok(detail.includes(data.by.skills[id].name));}for(const text of ['skillUpgrade','mountFeed','mountRank','martialDrill','材料去哪里找','亲密'])assert.ok(ui.includes(text));
+console.log('Shuihu growth: all 108 heroes/432 moves, paid capped upgrades, unlocks, 108 mounts/bonds, material sources/limits, live effects, boss telegraphs/counters, snapshot/legacy/cloud projection, atomic guards and UI passed.');

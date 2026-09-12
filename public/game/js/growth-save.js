@@ -19,7 +19,7 @@ export function validateGrowthBattle(b,data,check){
   for(const u of b.enemy){
     check(u.training===undefined,'敌方不可带人物养成');
     if(u.boss!==undefined){const boss=u.boss,kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider'})[u.model];
-      check(b.context?.type==='dungeon'&&object(boss)&&kind&&boss.kind===kind&&integer(boss.phase,0,1)&&integer(boss.readyAt,0,190000)&&integer(boss.pendingAt,0,190000),'首领快照');
+      check(['dungeon','rotation'].includes(b.context?.type)&&object(boss)&&kind&&boss.kind===kind&&integer(boss.phase,0,1)&&integer(boss.readyAt,0,190000)&&integer(boss.pendingAt,0,190000),'首领快照');
       if(u.hp>0&&!b.outcome)check((boss.pendingAt||boss.readyAt)>=b.elapsed,'首领行动时钟');
     }
     if(u.resistUntil!==undefined)check(u.boss&&integer(u.resistUntil,0,190000),'首领抗控时钟');

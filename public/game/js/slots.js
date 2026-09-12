@@ -1,5 +1,5 @@
-import { parseSave, validateSave, SAVE_KEY, BACKUP_KEY, SaveConflict } from './save.js?v=0.5.0';
-import { slotId, slotName, slotNumber } from './portable.js?v=0.5.0';
+import { parseSave, validateSave, SAVE_KEY, BACKUP_KEY, SaveConflict } from './save.js?v=0.9.0';
+import { slotId, slotName, slotNumber } from './portable.js?v=0.9.0';
 
 export const DB_NAME = 'baize-shuihu-box', CHANNEL = 'baize-shuihu-slots';
 export const emptySlot = id => ({id: slotId(id), name: `${slotNumber(id)}号江湖`, raw: null, backup: null, serial: 0, cloud: null});
