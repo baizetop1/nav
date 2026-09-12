@@ -1,4 +1,4 @@
-import { requireRule, journal, count } from './utils.js?v=0.12.0';
+import { hasOwn, requireRule, journal, count } from './utils.js?v=0.15.0';
 
 export const QUALITIES=[
   {name:'凡',power:1,speed:1,level:1,hall:1},
@@ -15,7 +15,7 @@ export function promotionQuote(s,id){
   return {current,next,cost:next?.cost,reason};
 }
 export function promoteHero(s,d,id){
-  requireRule(Object.hasOwn(d.by.heroes,id),'没有这位好汉。');
+  requireRule(hasOwn(d.by.heroes,id),'没有这位好汉。');
   const q=promotionQuote(s,id);requireRule(!q.reason,q.reason);
   s.player.silver-=q.cost.silver;
   for(const [k,n] of Object.entries(q.cost.items))s.inventory[k]-=n;

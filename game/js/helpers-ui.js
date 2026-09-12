@@ -1,4 +1,4 @@
-import { HELPERS, hiredHelpers, hasHelper, helperActive, helperQuote, helperBonus } from './helpers.js?v=0.12.0';
+import { HELPERS, hiredHelpers, hasHelper, helperActive, helperQuote, helperBonus } from './helpers.js?v=0.15.0';
 
 export function helpersBoard(s,btn){
   return `<section class="helpers-board location"><div class="helpers-heading"><h2>乡里招募</h2><span>${hiredHelpers(s).length} / ${HELPERS.length} 位入寨</span></div><p class="note">一些有手艺的小人物，也能把寨子过好。花碎银一次招入，自动操持本职，无需招贤令。乡里帮手单独收录，不占 108 将席位，不进入英雄编队或升品。</p><div class="helpers-grid">${HELPERS.map(h=>{

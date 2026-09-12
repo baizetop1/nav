@@ -1,29 +1,32 @@
-import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.12.0';
-import { equipmentMatches } from './commands.js?v=0.12.0';
-import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.12.0';
-import { rotationsPage } from './rotations-ui.js?v=0.12.0';
-import { traitCard } from './martial-ui.js?v=0.12.0';
-import { helpersBoard } from './helpers-ui.js?v=0.12.0';
-import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.12.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.12.0';
-import { worldMap, localBenefit } from './world-map-ui.js?v=0.12.0';
-import { saveBoxPage } from './savebox-ui.js?v=0.12.0';
-import { attributes } from './hero.js?v=0.12.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.12.0';
-import { isBusy, questReady } from './core.js?v=0.12.0';
-import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.12.0';
-import { strengthenQuote } from './item.js?v=0.12.0';
-import { icon, actionIcon } from './icons.js?v=0.12.0';
-import { heroStewardCard } from './camp-development-ui.js?v=0.12.0';
-import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.12.0';
-import { campPage, portrait } from './camp-ui.js?v=0.12.0';
+import { batchButtons } from './batch-ui.js?v=0.15.0';
+import { equipmentComparison } from './management-ui.js?v=0.15.0';
+import { objectivePanel } from './strategy-ui.js?v=0.15.0';
+import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.15.0';
+import { equipmentMatches } from './commands.js?v=0.15.0';
+import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.15.0';
+import { rotationsPage } from './rotations-ui.js?v=0.15.0';
+import { traitCard } from './martial-ui.js?v=0.15.0';
+import { helpersBoard } from './helpers-ui.js?v=0.15.0';
+import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.15.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.15.0';
+import { worldMap, localBenefit } from './world-map-ui.js?v=0.15.0';
+import { saveBoxPage } from './savebox-ui.js?v=0.15.0';
+import { attributes } from './hero.js?v=0.15.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.15.0';
+import { isBusy, questReady } from './core.js?v=0.15.0';
+import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.15.0';
+import { strengthenQuote } from './item.js?v=0.15.0';
+import { icon, actionIcon } from './icons.js?v=0.15.0';
+import { heroStewardCard } from './camp-development-ui.js?v=0.15.0';
+import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.15.0';
+import { campPage, portrait } from './camp-ui.js?v=0.15.0';
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const btn=(label,command,kind='text-action',disabled=false)=>{const symbol=icon(actionIcon(command));return `<button type="button" class="${kind}${symbol?' with-icon':''}" data-command="${esc(JSON.stringify(command))}" ${disabled?'disabled':''}>${symbol}<span>${esc(label)}</span></button>`;};
 const nav=(label,view)=>`<button type="button" class="text-action with-icon" data-view="${view}" aria-label="${esc(label)}">${icon(view)}<span>${esc(label)}</span></button>`;
 const stats=a=>`<div class="statline">${Object.entries({气血:a.hp,攻击:a.attack,防御:a.defense,速度:a.speed,谋略:a.strategy}).map(([k,v])=>`<span>${k} ${v}</span>`).join('')}</div>`;
 const title=(name,sub='',chapter='',symbol='map')=>`<div class="section-top"><div><p class="kicker">${esc(sub)}</p><h1 class="page-title">${icon(symbol)}<span>${esc(name)}</span></h1></div><span class="chapter-no">${esc(chapter)}</span></div>`;
 const statusLabels={unknown:'未闻',heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'};
-function heroOptions(s,d,selected='',empty='选择好汉'){return `<option value="">${empty}</option>`+d.heroes.filter(h=>s.heroes[h.id].status==='owned').map(h=>`<option value="${h.id}" ${selected===h.id?'selected':''}>${h.name} · ${s.heroes[h.id].level}级</option>`).join('');}
+function heroOptions(s,d,selected='',empty='选择好汉',forTeam=false){return `<option value="">${empty}</option>`+d.heroes.filter(h=>s.heroes[h.id].status==='owned').map(h=>`<option value="${h.id}" ${selected===h.id?'selected':''} ${forTeam&&s.affairs?.mission?.hero===h.id?'disabled':''}>${h.name} · ${s.heroes[h.id].level}级${s.affairs?.mission?.hero===h.id?' · 外派中':''}</option>`).join('');}
 function storyCards(s,d) {
   return d.by.maps[s.location].stories.map(id=>{
     const model=d.by.stories[id],p=s.progress.stories[id];
@@ -66,8 +69,8 @@ function heroCard(s,d,h){
   const v=s.heroes[h.id],owned=v.status==='owned';
   return `<article class="card hero-card">${portrait(h)}<h2>${esc(h.title)} · ${esc(h.name)}<span class="badge">${statusLabels[v.status]}</span></h2>
     <p class="meta">${h.starSign} · 第 ${h.seat} 席 · ${QUALITIES[qualityOf(v)].name}品 · 资质 ${'★'.repeat(h.star)} · ${owned?v.level+'级 · 经验 '+v.exp+' / '+(20+v.level*15):'先相识，再以信物邀贤'}</p>
-    ${owned?stats(attributes(s,h.id,d))+btn('赠经验丹（现有 '+(s.inventory.exp_pill||0)+'）',{type:'use',id:'exp_pill',hero:h.id},'secondary',!s.inventory.exp_pill||v.level>=d.config.balance.heroLevelCap):`<p class="note">可在${esc(d.by.maps[h.meetMap].name)}寻访${h.meetCondition?'，还须推进相关主线':''}。</p>`}
-    ${traitCard(h)}${corpsPanel(s,d,h,btn)}${owned?setPanel(s,d,h.id):''}${invitation(s,h,btn)}${owned?qualityPanel(s,d,h,esc,btn):stats(attributes(s,h.id,d,1,false))}${heroStewardCard(s,d,h,btn)}<details data-fold="hero-${h.id}"><summary>人物往事与招式</summary><p class="note">${esc(h.story)}</p>${heroArc(s,d,h.id)}
+    ${owned?stats(attributes(s,h.id,d))+btn('赠经验丹（现有 '+(s.inventory.exp_pill||0)+'）',{type:'use',id:'exp_pill',hero:h.id},'secondary',!s.inventory.exp_pill||v.level>=d.config.balance.heroLevelCap)+batchButtons(h.id,'experience',btn):`<p class="note">可在${esc(d.by.maps[h.meetMap].name)}寻访${h.meetCondition?'，还须推进相关主线':''}。</p>`}
+    ${s.affairs?.mission?.hero===h.id?'<p class="notice">此人正在外派，请到寨子接回后再安排出阵或任职。</p>':''}${traitCard(h)}${corpsPanel(s,d,h,btn)}${owned?setPanel(s,d,h.id):''}${invitation(s,h,btn)}${owned?qualityPanel(s,d,h,esc,btn):stats(attributes(s,h.id,d,1,false))}${heroStewardCard(s,d,h,btn)}<details data-fold="hero-${h.id}"><summary>人物往事与招式</summary><p class="note">${esc(h.story)}</p>${heroArc(s,d,h.id)}
       <p class="meta">信物 ${s.inventory[h.id+'_token']||0}/10 · 专属令 ${s.inventory[h.id+'_order']||0}</p>
       ${heroGrowth(s,d,h,esc,btn)}
     </details></article>`;
@@ -75,17 +78,17 @@ function heroCard(s,d,h){
 function heroesPage(s,d,roster={}){
   const owned=d.heroes.filter(h=>s.heroes[h.id].status==='owned');
   return title('我的好汉','108 将 · 凡灵仙养成','','heroes')+
-    (owned.length?`<section class="location"><h2 class="subhead">出阵次序 · 最多三人</h2><p class="note">前两位迎敌，第三位居后照应。</p><div class="team-fields">${[0,1,2].map(i=>`<label>第 ${i+1} 位<select id="team-${i}" aria-label="第${i+1}位出阵好汉">${heroOptions(s,d,s.team[i])}</select></label>`).join('')}</div>${btn('保存阵容',{type:'ui_team'},'primary')}</section>`:'<p class="note">在下方点将录选择好汉，可查看直接迎贤条件。</p>')+
+    (owned.length?`<section class="location"><h2 class="subhead">出阵次序 · 最多三人</h2><p class="note">前两位迎敌，第三位居后照应。</p><div class="team-fields">${[0,1,2].map(i=>`<label>第 ${i+1} 位<select id="team-${i}" aria-label="第${i+1}位出阵好汉">${heroOptions(s,d,s.team[i],'选择好汉',true)}</select></label>`).join('')}</div>${btn('保存阵容',{type:'ui_team'},'primary')}</section>`:'<p class="note">在下方点将录选择好汉，可查看直接迎贤条件。</p>')+
     presetsPanel(s,d,btn)+targetPanel(s,d,btn)+qualityTrials(s,d,btn)+growthSources(s,d,esc,btn)+rosterBoard(s,d,roster,esc,btn,heroCard);
 }
-function equipmentList(s,d,forge=false,filter={}){return equipmentFilters(s,d,filter,btn,esc)+'<div class="equipment-inventory">'+s.equipment.filter(e=>equipmentMatches(e,d,filter)).map(e=>{const m=d.by.equipments[e.item],quote=strengthenQuote(s,d,e);return `<article class="card" data-gear="${e.uid}" data-locked="${!!e.locked}"><h3>${e.locked?'【已锁定】':''}${esc(m.quality)} · ${esc(m.name)} +${e.plus}</h3><p class="meta">${e.hero?'由'+d.by.heroes[e.hero].name+'穿戴':'行囊中'} · ${Object.entries(m.attribute).map(([key,n])=>({attack:'攻击',hp:'气血',defense:'防御',speed:'速度',strategy:'谋略'})[key]+' +'+Math.round(n*(1+e.plus*.1))).join(' / ')}</p><label>交给<select id="holder-${e.uid}" aria-label="${m.name}穿戴者">${heroOptions(s,d,e.hero,'卸下收回')}</select></label>${btn('确认穿戴',{type:'ui_equip',id:e.uid},'secondary')}${btn(e.locked?'解除锁定':'锁定装备',{type:'equipLock',id:e.uid,locked:!e.locked},'secondary')}${forge?`<div class="actions">${btn('强化：碎银 '+quote.cost.silver+'、精铁 '+quote.cost.items.iron+(e.plus>=5?'、强化符 1（八成可成）':'（必成）'),{type:'strengthen',id:e.uid},'secondary',e.plus>=quote.cap)}${btn('分解成碎铁',{type:'ui_dismantle',id:e.uid},'text-action',!!e.hero||!!e.locked)}</div>`:''}</article>`;}).join('')+'</div>';}
+function equipmentList(s,d,forge=false,filter={}){return equipmentComparison(s,d,filter.comparison,btn,esc)+equipmentFilters(s,d,filter,btn,esc)+'<div class="equipment-inventory">'+s.equipment.filter(e=>equipmentMatches(e,d,filter)).map(e=>{const m=d.by.equipments[e.item],quote=strengthenQuote(s,d,e);return `<article class="card" data-gear="${e.uid}" data-locked="${!!e.locked}"><h3>${e.locked?'【已锁定】':''}${esc(m.quality)} · ${esc(m.name)} +${e.plus}</h3><p class="meta">${e.hero?'由'+d.by.heroes[e.hero].name+'穿戴':'行囊中'} · ${Object.entries(m.attribute).map(([key,n])=>({attack:'攻击',hp:'气血',defense:'防御',speed:'速度',strategy:'谋略'})[key]+' +'+Math.round(n*(1+e.plus*.1))).join(' / ')}</p><label>交给<select id="holder-${e.uid}" aria-label="${m.name}穿戴者">${heroOptions(s,d,e.hero,'卸下收回')}</select></label>${btn('对比后穿戴',{type:'ui_equip',id:e.uid},'secondary')}${btn(e.locked?'解除锁定':'锁定装备',{type:'equipLock',id:e.uid,locked:!e.locked},'secondary')}${forge?`<div class="actions">${btn('强化：碎银 '+quote.cost.silver+'、精铁 '+quote.cost.items.iron+(e.plus>=5?'、强化符 1（八成可成）':'（必成）'),{type:'strengthen',id:e.uid},'secondary',e.plus>=quote.cap)}${btn('分解成碎铁',{type:'ui_dismantle',id:e.uid},'text-action',!!e.hero||!!e.locked)}</div>`:''}</article>`;}).join('')+'</div>';}
 function bagPage(s,d,gear={}){
   const shop=true;
   return title('行囊','使用物品与整理装备','','bag')+
     `<div class="grid-two">${d.items.filter(i=>(s.inventory[i.id]||0)>0).map(i=>`<article class="card"><h3>${esc(i.name)} ×${s.inventory[i.id]}</h3><p class="note">${esc(i.description)}</p>${i.effect.stamina?btn('小饮一碗',{type:'use',id:i.id},'secondary'):i.effect.exp?nav('选择好汉赠经验丹','heroes'):''}</article>`).join('')}</div>
     <details class="fold-section" data-fold="equipment"><summary>随身装备 · ${s.equipment.length} 件</summary>${equipmentList(s,d,false,gear)}${nav('查看铁匠铺','forge')}</details>
     <details class="fold-section" data-fold="materials"><summary>材料合成</summary><div class="actions">${btn('10 招贤碎片 → 招贤令',{type:'exchange',id:'order'},'secondary')}${btn('3 药草 → 2 金创药',{type:'exchange',id:'medicine'},'secondary')}${btn('20 生辰纲残册 → 失落财货',{type:'exchange',id:'ledger'},'secondary')}${btn('5 强化符碎片 → 强化符',{type:'exchange',id:'charm'},'secondary')}</div></details>
-    <details class="fold-section" data-fold="shop"><summary>随时采买</summary>${shop?`<p class="note">招贤令每日限购三张。</p><div class="actions">${['jinchuangyao','huiqisan','jiedudan','exp_pill','wine','iron','cloth','night_clothes','recruit_order'].map(id=>btn(`${d.by.items[id].name} · ${d.by.items[id].price}银`,{type:'buy',id},'secondary')).join('')}</div>`:'<p class="note">到郓城集市、铁匠铺、酒肆、招贤馆或药草坡才可交易。</p>'+nav('返回江湖','map')}</details>`;
+    <details class="fold-section" data-fold="shop"><summary>随时采买</summary><div class="batch-shop"><label>批量采买物品<select id="batch-shop-item">${['jinchuangyao','huiqisan','jiedudan','exp_pill','wine','iron','cloth','night_clothes','recruit_order'].map(id=>`<option value="${id}">${d.by.items[id].name} · ${d.by.items[id].price}银 / 份</option>`).join('')}</select></label>${btn('预览采买 5 份',{type:'ui_batchShop',count:5},'secondary')}${btn('预览采买 10 份',{type:'ui_batchShop',count:10},'secondary')}</div>${shop?`<p class="note">招贤令每日限购三张。</p><div class="actions">${['jinchuangyao','huiqisan','jiedudan','exp_pill','wine','iron','cloth','night_clothes','recruit_order'].map(id=>btn(`${d.by.items[id].name} · ${d.by.items[id].price}银`,{type:'buy',id},'secondary')).join('')}</div>`:'<p class="note">到郓城集市、铁匠铺、酒肆、招贤馆或药草坡才可交易。</p>'+nav('返回江湖','map')}</details>`;
 }
 function forgePage(s,d,gear={}){
   return title('铁匠铺',s.progress.flags.advanced_forge?'风雪淬炼 · 强化至 +10':'基础打造 · 强化至 +5','','forge')+
@@ -149,7 +152,7 @@ function battlePage(s,d,paused,pauseReason,locked,battleSpeed=.5){
     <div class="skill-mode" role="group" aria-label="技能释放方式"><span>技能释放</span>${[['manual','手动技能'],['auto','自动技能']].map(([mode,label])=>`<button type="button" class="secondary" data-command="${esc(JSON.stringify({type:'battleSkillMode',mode}))}" aria-pressed="${battleSkillMode(s)===mode}" ${locked||b.outcome?'disabled':''}><span>${label}</span></button>`).join('')}</div>
     <p class="skill-mode-hint note">${auto?'自动技能：条件满足时优先已解锁进阶招，否则使用基础招；仍可手动抢先释放。':'手动技能：只自动普攻，招式由你点击释放。'}药品始终手动。本档记住选择。${b.rules!==2?'旧战局沿用原有招式规则，收兵后的新战斗启用养成。':''}</p>
     <p class="battle-hint note">${stopped&&!b.outcome?esc(pauseReason||'点击继续交战后，双方才会继续出手。'):'双方按各自速度持续普攻；技能共用人物调息，不会自动消耗药物。'}</p>
-    ${ordersPanel(s,d,btn,esc,locked)}<div class="battle-grid">${[['我方',b.team],['敌方',b.enemy]].map(([label,units])=>`<section><h2 class="subhead">${label}</h2>${units.map(u=>`<div class="battle-unit${u.hp<=0?' unit-down':''}" data-unit="${esc(u.id)}"><div class="ledger-line">${u.side==='team'?portrait(d.by.heroes[u.id],true):''}<strong>${esc(u.name)}</strong><span>${u.hp}/${u.maxHp}</span></div><progress value="${u.hp}" max="${u.maxHp}" aria-label="${esc(u.name)}气血"></progress><p class="meta">怒气 ${u.rage}/100 · ${u.hp<=0?'已退阵':b.outcome?'已收势':'出手 '+seconds(u.nextAttackAt)+'秒'}</p><p class="unit-status">${u.statuses.map(v=>`【${statusName(v.id)} ${seconds(v.expiresAt)}秒】`).join('')||'—'}</p>${u.side==='team'?skillButtons(u):`<p class="enemy-intent">${u.hp<=0||b.outcome?'':u.boss?.pendingAt?'首领蓄势 · '+seconds(u.boss.pendingAt)+'秒（可打断）':hasStun(u)?'眩晕中，暂不能出手':esc(enemySkill(b,u,d)?.name||'普通进击')}</p>`}</div>`).join('')}</section>`).join('')}</div>
+    ${objectivePanel(b)}${ordersPanel(s,d,btn,esc,locked)}<div class="battle-grid">${[['我方',b.team],['敌方',b.enemy]].map(([label,units])=>`<section><h2 class="subhead">${label}</h2>${units.map(u=>`<div class="battle-unit${u.hp<=0?' unit-down':''}" data-unit="${esc(u.id)}"><div class="ledger-line">${u.side==='team'?portrait(d.by.heroes[u.id],true):''}<strong>${esc(u.name)}</strong><span>${u.hp}/${u.maxHp}</span></div><progress value="${u.hp}" max="${u.maxHp}" aria-label="${esc(u.name)}气血"></progress><p class="meta">怒气 ${u.rage}/100 · ${u.hp<=0?'已退阵':b.outcome?'已收势':'出手 '+seconds(u.nextAttackAt)+'秒'}</p><p class="unit-status">${u.statuses.map(v=>`【${statusName(v.id)} ${seconds(v.expiresAt)}秒】`).join('')||'—'}</p>${u.side==='team'?skillButtons(u):`<p class="enemy-intent">${u.hp<=0||b.outcome?'':u.boss?.pendingAt?'首领蓄势 · '+seconds(u.boss.pendingAt)+'秒（可打断）':hasStun(u)?'眩晕中，暂不能出手':esc(enemySkill(b,u,d)?.name||'普通进击')}</p>`}</div>`).join('')}</section>`).join('')}</div>
     <section class="battle-medicines battle-running" ${b.outcome?'hidden':''}><h2 class="subhead">阵中用药</h2><div class="medicine-grid">${BATTLE_ITEMS.map(id=>{const q=battleItemQuote(s,d,id);return `<div>${btn(d.by.items[id].name+' ×'+(s.inventory[id]||0),{type:'battleItem',id},'secondary',stopped||!!q.reason)}<p class="meta">${esc(q.reason||'交给'+q.target.name)}</p></div>`;}).join('')}</div><p class="note">药效立即生效，不占用普攻；药物共用 3 秒间隔，基础招调息 5 秒，进阶招调息 7 秒（共用人物调息）。暂停时冷却也停止。</p></section>
     <div class="battle-end actions" ${b.outcome?'':'hidden'}>${btn(b.outcome==='victory'?'收获战果，继续前行':'收兵，再作安排',{type:'finishBattle'},'primary',!b.outcome||locked)}</div>
     </section>`;

@@ -1,6 +1,6 @@
-import { requireRule, journal } from './utils.js?v=0.12.0';
-import { CORPS } from './corps-data.js?v=0.12.0';
-import { promotionQuote } from './quality.js?v=0.12.0';
+import { requireRule, journal } from './utils.js?v=0.15.0';
+import { CORPS } from './corps-data.js?v=0.15.0';
+import { promotionQuote } from './quality.js?v=0.15.0';
 
 export { CORPS };
 export const CORPS_PROFILES={
@@ -19,6 +19,13 @@ export function corpsQuote(s,id){
   return {rank,cost,reason};
 }
 export function ensureDevelopment(s){return s.development??={version:1,corps:{},presets:{},goal:null,ledger:[]};}
+export function presetReason(s,slot){
+  const p=s.development?.presets[slot];
+  if(![1,2,3].includes(slot)||!p||!s.camp)return '此阵容尚未保存。';
+  if(!p.team.every(id=>s.heroes[id]?.status==='owned'))return '阵容中有尚未入寨的好汉。';
+  if(s.affairs?.mission&&p.team.includes(s.affairs.mission.hero))return '阵容中有外派好汉，请先回寨接回，再启用此阵容。';
+  return active(s)?'先结束当前战局或际遇。':'';
+}
 export function targetQuote(s,d,goal=s.development?.goal){
   if(!goal)return null;
   if(goal.kind==='promotion'){const q=promotionQuote(s,goal.id);return {name:d.by.heroes[goal.id].name+'升品',cost:q.cost,reason:q.reason,view:'heroes'};}
@@ -34,7 +41,7 @@ export function developmentAction(s,d,a){
     requireRule([1,2,3].includes(a.slot)&&s.camp&&s.team.length,'先建寨并安排出阵好汉。');
     const {mode,tactic,deployment}=s.camp;dev.presets[a.slot]={team:[...s.team],mode,tactic,deployment};journal(s,`【阵容】已将当前英雄与军令存为阵容 ${a.slot}。`);
   }else if(a.type==='presetLoad'){
-    const p=dev.presets[a.slot];requireRule([1,2,3].includes(a.slot)&&p&&s.camp,'此阵容尚未保存。');requireRule(p.team.every(id=>s.heroes[id]?.status==='owned'),'阵容中有尚未入寨的好汉。');
+    const p=dev.presets[a.slot],reason=presetReason(s,a.slot);requireRule(!reason,reason);
     s.formationPending=JSON.stringify(s.team)!==JSON.stringify(p.team)||s.formationPending;s.team=[...p.team];Object.assign(s.camp,{mode:p.mode,tactic:p.tactic,deployment:p.deployment});journal(s,`【阵容】已启用阵容 ${a.slot}。兵力不足时仅派实际在营乡勇。`);
   }else if(a.type==='goalSet'){
     requireRule(['promotion','corps','craft'].includes(a.kind)&&(a.kind==='craft'?d.by.equipments[a.id]:s.heroes[a.id]?.status==='owned'),'无法追踪这个目标。');dev.goal={kind:a.kind,id:a.id};journal(s,'【养成目标】已在寨子与历练页置顶材料清单。');

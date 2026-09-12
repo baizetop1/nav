@@ -1,9 +1,10 @@
-import { orderDamageFactor } from './commands.js?v=0.12.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.12.0';
-import { unitArm } from './martial.js?v=0.12.0';
-import { martialFactor } from './martial.js?v=0.12.0';
-import { bounded, pick, random } from './utils.js?v=0.12.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.12.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.15.0';
+import { orderDamageFactor } from './commands.js?v=0.15.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.15.0';
+import { unitArm } from './martial.js?v=0.15.0';
+import { martialFactor } from './martial.js?v=0.15.0';
+import { bounded, pick, random } from './utils.js?v=0.15.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.15.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -45,7 +46,7 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const weakened=has(u,'weaken')?.value||0;
   const attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1)*(1-weakened)*(u.boss?.phase===1&&u.boss.kind==='tiger'?1.2:1);
   const raw=api.damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
-  const loss=Math.max(1,Math.round(raw*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
+  const loss=Math.max(1,Math.round(raw*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
   target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
@@ -142,7 +143,7 @@ export function growthHit(state,u,rawSkill,data,api){
     if(u.id==='lingzhen'){api.log(b,'【火炮齐发】三次装填已毕，凌振炮击敌方全阵。');for(const enemy of foes(b,u))strike(state,u,enemy,{kind:'damage',rate:.55},'轰天火炮',api);}
     if(NAVAL.has(u.id)&&waterBattle(b))heal(b,u,u,.03,'水营互援',api);
   }
-  if(!skill&&u.side==='team')bondTrigger(state,u,target,data,api);
+  if(!skill&&u.side==='team'){strategyFollowup(b,u,target,api);bondTrigger(state,u,target,data,api);}
 }
 export function growthTimes(b){return b.enemy.filter(u=>alive(u)&&u.boss).map(u=>u.boss.pendingAt||u.boss.readyAt);}
 export function advanceBosses(state,api){

@@ -1,11 +1,11 @@
-import { meets } from './map.js?v=0.12.0';
-import { requireRule, count, journal } from './utils.js?v=0.12.0';
-import { grant } from './item.js?v=0.12.0';
+import { meets } from './map.js?v=0.15.0';
+import { hasOwn, requireRule, count, journal } from './utils.js?v=0.15.0';
+import { grant } from './item.js?v=0.15.0';
 
 // Route search includes the half-hour spent on each road, so a night-only path
 // cannot be traversed in daylight by selecting a distant destination.
 export function routeTo(s,d,target,ignoreConditions=false){
-  if(!Object.hasOwn(d.by.maps,target))return null;
+  if(!hasOwn(d.by.maps,target))return null;
   const queue=[{id:s.location,minute:s.worldMinute,path:[]}],seen=new Set();
   for(let i=0;i<queue.length;i++){
     const node=queue[i],key=node.id+':'+(ignoreConditions?0:node.minute);

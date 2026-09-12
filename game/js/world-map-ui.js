@@ -1,6 +1,6 @@
-import { frontierMap } from './frontier-ui.js?v=0.12.0';
-import { enemyIntel } from './martial-ui.js?v=0.12.0';
-import { routeTo, routeBarriers, conditionText, LOCAL_BENEFITS } from './world-map.js?v=0.12.0';
+import { frontierMap } from './frontier-ui.js?v=0.15.0';
+import { enemyIntel } from './martial-ui.js?v=0.15.0';
+import { routeTo, routeBarriers, conditionText, LOCAL_BENEFITS } from './world-map.js?v=0.15.0';
 export function worldMap(s,d,target,esc,btn){
   const selected=d.by.maps[target]||d.by.maps[s.location],path=routeTo(s,d,selected.id),preview=path||routeTo(s,d,selected.id,true),barriers=path?[]:routeBarriers(s,d,preview),regions=[...new Set(d.maps.map(m=>m.region))];
   const feature=m=>[...(LOCAL_BENEFITS[m.id]?[LOCAL_BENEFITS[m.id].name+' · 每日一次']:[]),...m.dungeons.map(id=>'副本：'+d.by.dungeons[id].name),...d.heroes.filter(h=>h.meetMap===m.id).map(h=>'可遇：'+h.name)].join(' · ')||'人物往事与江湖寻访';
