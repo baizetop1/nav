@@ -1,6 +1,9 @@
-import { martialFactor } from './martial.js?v=0.9.0';
-import { bounded, pick, random } from './utils.js?v=0.9.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.9.0';
+import { orderDamageFactor } from './commands.js?v=0.12.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.12.0';
+import { unitArm } from './martial.js?v=0.12.0';
+import { martialFactor } from './martial.js?v=0.12.0';
+import { bounded, pick, random } from './utils.js?v=0.12.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.12.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -15,7 +18,7 @@ export function initializeGrowthBattle(state,b,data){
     u.skills=u.skills.filter(id=>!unlockReason(state,data.by.skills[id],b.guest));
     u.training={levels:Object.fromEntries(u.skills.map(id=>[id,b.guest?1:skillLevel(state,id)])),bond:u.skills.find(id=>data.by.skills[id].training?.tier==='bond')||null};
   }
-  if(['dungeon','rotation'].includes(b.context.type))for(const u of b.enemy){
+  if(['dungeon','rotation','frontier'].includes(b.context.type))for(const u of b.enemy){
     const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider'})[u.model];
     if(kind)u.boss={kind,readyAt:6000,pendingAt:0,phase:0};
   }
@@ -42,7 +45,7 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const weakened=has(u,'weaken')?.value||0;
   const attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1)*(1-weakened)*(u.boss?.phase===1&&u.boss.kind==='tiger'?1.2:1);
   const raw=api.damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
-  const loss=Math.max(1,Math.round(raw*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
+  const loss=Math.max(1,Math.round(raw*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
   target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
@@ -50,6 +53,7 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
 }
 function targetOf(state,u,targets){
   const forced=targets.find(t=>has(t,'taunt'));if(forced)return forced;
+  if(u.side==='team'){const focus=targets.find(t=>t.id===state.battle.orders?.focus);if(focus)return focus;}
   // Formation gives the first two positions the majority of ordinary attacks.
   return random(state)<.8?targets[0]:pick(state,targets.slice(0,2));
 }
@@ -124,6 +128,20 @@ export function growthHit(state,u,rawSkill,data,api){
     if(profile==='steal'){const n=Math.min(enemy.rage,Math.round(20*boost));enemy.rage-=n;rage(b,[u],n,'夺势',api);api.log(b,`${enemy.name}【夺势】怒气 -${n}。`);}
     else status(b,enemy,'stun',1,1000,api);
   }else strike(state,u,target,effect,skill?.name,api);
+  if(b.martial===2&&u.side==='team'&&skill?.training?.tier==='advanced'&&u.training.quality){
+    const q=u.training.quality,role=data.by.heroes[u.id].type,label=q===2?'仙品变招':'灵品变招';
+    if(role==='fighter'){const enemy=foes(b,u)[0];if(enemy)status(b,enemy,'bleeding',1,q===2?6000:4000,api);}
+    if(role==='defender')for(const ally of (q===2?party:[lowest(party)]))status(b,ally,'guard',q===2?.25:.15,4000,api);
+    if(role==='ranger'){const enemy=lowest(foes(b,u));if(enemy)strike(state,u,enemy,{kind:'damage',rate:q===2?.7:.35},label+' · 追射',api);}
+    if(role==='strategist')for(const enemy of foes(b,u).slice(0,q)){const n=Math.min(enemy.rage,q===2?15:10);enemy.rage-=n;api.log(b,`${label} · ${enemy.name}怒气 -${n}。`);}
+    if(role==='support'){const ally=lowest(friends(b,u));if(ally){const i=ally.statuses.findIndex(s=>negativeStatus(s.id));if(i>=0)ally.statuses.splice(i,1);heal(b,u,ally,q===2?.10:.05,label+' · 照应',api);}}
+    api.log(b,`【${label}】${u.name}的进阶招式附加效果生效。`);
+  }
+  if(!skill&&u.side==='team'&&b.frontierRules===1&&u.corps?.troops&&(u.attacks+1)%3===0){
+    if(u.id==='xuning'&&alive(target)&&unitArm(b,target,data)==='cavalry'){status(b,target,'armor_break',1,4000,api);status(b,target,'stun',1,1000,api);api.log(b,'【钩镰破骑】徐宁钩倒敌骑，破甲并截住冲势。');}
+    if(u.id==='lingzhen'){api.log(b,'【火炮齐发】三次装填已毕，凌振炮击敌方全阵。');for(const enemy of foes(b,u))strike(state,u,enemy,{kind:'damage',rate:.55},'轰天火炮',api);}
+    if(NAVAL.has(u.id)&&waterBattle(b))heal(b,u,u,.03,'水营互援',api);
+  }
   if(!skill&&u.side==='team')bondTrigger(state,u,target,data,api);
 }
 export function growthTimes(b){return b.enemy.filter(u=>alive(u)&&u.boss).map(u=>u.boss.pendingAt||u.boss.readyAt);}

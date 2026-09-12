@@ -1,7 +1,8 @@
-import { initializeMartial, martialFactor } from './martial.js?v=0.9.0';
-import { attributes } from './hero.js?v=0.9.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.9.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.9.0';
+import { autoOrderAllows } from './commands.js?v=0.12.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.12.0';
+import { attributes } from './hero.js?v=0.12.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.12.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.12.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
@@ -82,7 +83,7 @@ function castAutomaticSkills(state,data){
   for(const u of b.team){
     const options=u.skills.map(id=>data.by.skills[id]);
     if(b.rules===2)options.sort((a,c)=>(c.training?.tier==='advanced')-(a.training?.tier==='advanced'));
-    const skill=options.find(s=>!skillReason(b,u,s));
+    const skill=options.find(s=>autoOrderAllows(b,u,s,data)&&!skillReason(b,u,s));
     if(!skill)continue;
     log(b,`【自动技能】${u.name}自行施展【${skill.name}】。`);
     castSkill(state,data,u.id,skill.id);

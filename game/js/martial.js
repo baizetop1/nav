@@ -1,3 +1,5 @@
+import { doctrineFactor, waterBattle } from './doctrines.js?v=0.12.0';
+import { CORPS } from './development.js?v=0.12.0';
 export const ARMS={infantry:{name:'步军',hall:1,beats:'ranged'},ranged:{name:'弓军',hall:2,beats:'cavalry'},cavalry:{name:'骑军',hall:3,beats:'infantry'},neutral:{name:'无兵种克制',hall:1}};
 const cavalry=new Set(['guansheng','qinming','huyanzhuo','dongping','xuning','suochao','hantao','pengqi','xuanzan','haosiwen','huangxin','sunli']);
 const ranged=new Set(['huarong','zhangqing','yanqing','gongwang','dingdesun','lingzhen']);
@@ -16,8 +18,8 @@ const traits={
 };
 export function heroTrait(h){return traits[h.id]||({fighter:['奋勇','普攻伤害 +8%。'],defender:['坚守','开战时自身防御 +12%。'],ranger:['追猎','攻击气血不足一半的敌人时伤害 +15%。'],strategist:['识隙','谋攻伤害 +10%。'],support:['济困','开战时自身气血 +12%。'],healer:['济困','开战时自身气血 +12%。']})[h.type]||['奋勇','普攻伤害 +8%。'];}
 export function initializeMartial(s,b,d){
-  if(b.guest||!s.camp||b.context.type==='story')return;b.martial=1;
-  for(const u of b.team){const h=d.by.heroes[u.id],name=heroTrait(h)[0];
+  if(b.guest||!s.camp||b.context.type==='story')return;b.martial=2;b.frontierRules=1;
+  for(const u of b.team){u.training.quality=s.heroes[u.id].quality||0;const h=d.by.heroes[u.id],name=heroTrait(h)[0];
     if(name==='坚守')u.defense=Math.round(u.defense*1.12);
     if(name==='济困')u.hp=u.maxHp=Math.round(u.maxHp*1.12);
     if(u.id==='wuyong')for(const a of b.team)a.rage=Math.min(100,a.rage+10);
@@ -27,10 +29,11 @@ export function initializeMartial(s,b,d){
   }
   b.log.push('【兵种】步军克弓军，弓军克骑军，骑军克步军；优势伤害 +20%，劣势 -15%。');
 }
-export function unitArm(b,u,d){return u.side==='enemy'?enemyArm(u.model):b.expedition?.troops?b.expedition.arm||'infantry':heroArm(d.by.heroes[u.id]);}
+export function unitArm(b,u,d){if(b.martial===2&&u.side==='team')return u.corps?.troops?u.corps.arm:heroArm(d.by.heroes[u.id]);return u.side==='enemy'?enemyArm(u.model):b.expedition?.troops?b.expedition.arm||'infantry':heroArm(d.by.heroes[u.id]);}
 export function martialFactor(b,u,target,d,{normal=false,strategy=false}={}){
-  if(b.martial!==1)return 1;let factor=armFactor(unitArm(b,u,d),unitArm(b,target,d));
+  if(![1,2].includes(b.martial))return 1;let factor=armFactor(unitArm(b,u,d),unitArm(b,target,d))*doctrineFactor(b,target,normal);
   if(u.side!=='team')return factor;
+  if(b.martial===2&&u.corps?.troops){const p=CORPS[u.id].profile,r=u.corps.rank;if(p==='assault')factor*=1+.04*r;if(p==='archer'&&target.hp>=target.maxHp/2)factor*=1+.05*r;if(p==='naval'&&(b.frontierRules===1?waterBattle(b):b.context.type==='rotation'&&b.context.id==='tide'))factor*=1+.08*r;}
   const name=heroTrait(d.by.heroes[u.id])[0];
   if(name==='孤胆'&&b.team.length===1&&!b.expedition?.troops)factor*=1.2;
   if(name==='神射'&&unitArm(b,target,d)==='cavalry')factor*=1.15;
