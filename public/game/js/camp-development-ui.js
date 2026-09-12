@@ -1,11 +1,11 @@
-import { helperSummary } from './helpers-ui.js?v=0.12.0';
-import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.12.0';
+import { helperSummary } from './helpers-ui.js?v=0.15.0';
+import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.15.0';
 const resource={wood:'木材',food:'粮草',silver:'碎银'};
 const quality={1:'凡品',2:'良品',3:'珍品'};
 export function goalBoard(s,d,btn){
   const pending=CAMP_GOALS.filter(g=>!goalClaimed(s,g)),current=pending.find(g=>goalReady(s,g))||pending[0];
   const card=g=>`<article class="camp-goal ${goalClaimed(s,g)?'goal-done':''}"><div class="goal-heading"><h3>${g.name}</h3><span class="badge">${goalClaimed(s,g)?'已领酬劳':goalReady(s,g)?'可领取':'进行中'}</span></div><ul>${g.requirements.map(([label,test])=>`<li class="${test(s)?'requirement-done':''}">${test(s)?'已成':'尚待'} · ${label}</li>`).join('')}</ul><p class="note">奖励：${[...Object.entries(resource).filter(([key])=>g.reward[key]).map(([key,name])=>name+' '+g.reward[key]),...Object.entries(g.reward.items||{}).map(([id,n])=>d.by.items[id].name+' '+n)].join(' · ')}</p>${btn(goalClaimed(s,g)?'酬劳已领':'领取建寨酬劳',{type:'campClaim',id:g.id},'secondary',goalClaimed(s,g)||!goalReady(s,g))}</article>`;
-  return `<section class="camp-goals"><div class="goal-heading"><h2>建寨志</h2><span>${CAMP_GOALS.length-pending.length} / ${CAMP_GOALS.length} 已完成</span></div>${current?card(current):'<p>寨中已有根基。继续培养好汉，挑战江湖副本、搜寻装备与坐骑。</p>'}<details data-fold="camp-goals"><summary>查看全部建寨目标</summary>${CAMP_GOALS.filter(g=>g!==current).map(card).join('')}</details></section>`;
+  return `<section class="camp-goals" id="camp-goals"><div class="goal-heading"><h2>建寨志</h2><span>${CAMP_GOALS.length-pending.length} / ${CAMP_GOALS.length} 已完成</span></div>${current?card(current):'<p>寨中已有根基。继续培养好汉，挑战江湖副本、搜寻装备与坐骑。</p>'}<details data-fold="camp-goals"><summary>查看全部建寨目标</summary>${CAMP_GOALS.filter(g=>g!==current).map(card).join('')}</details></section>`;
 }
 export function dutyBoard(s,d,btn,portrait){
   const id=steward(s),h=id&&d.by.heroes[id];
@@ -14,7 +14,7 @@ export function dutyBoard(s,d,btn,portrait){
 export function heroStewardCard(s,d,h,btn){
   if(!s.camp||s.heroes[h.id].status!=='owned')return '';
   const assigned=steward(s)===h.id,v=s.heroes[h.id],cap=v.level>=d.config.balance.heroLevelCap,need=20+v.level*15;
-  return `<section class="hero-duty"><p><b>${assigned?'寨务主事':'内务所长'}</b> · ${resource[stewardship(h.id)]}增产 20%</p><div class="hero-exp"><label for="hero-exp-${h.id}">${cap?'已达本卷等级上限':'距下一级还需 '+Math.max(0,need-v.exp)+' 历练'}</label><progress id="hero-exp-${h.id}" max="${need}" value="${cap?need:v.exp}"></progress></div>${btn(assigned?'卸任寨务主事':'委派为寨务主事',{type:'campSteward',id:assigned?null:h.id},'secondary')}<p class="note">主持经营每次获得 25 历练。委派新主事会替换现任。</p></section>`;
+  return `<section class="hero-duty"><p><b>${assigned?'寨务主事':'内务所长'}</b> · ${resource[stewardship(h.id)]}增产 20%</p><div class="hero-exp"><label for="hero-exp-${h.id}">${cap?'已达本卷等级上限':'距下一级还需 '+Math.max(0,need-v.exp)+' 历练'}</label><progress id="hero-exp-${h.id}" max="${need}" value="${cap?need:v.exp}"></progress></div>${btn(assigned?'卸任寨务主事':'委派为寨务主事',{type:'campSteward',id:assigned?null:h.id},'secondary',s.affairs?.mission?.hero===h.id)}<p class="note">主持经营每次获得 25 历练。委派新主事会替换现任。</p></section>`;
 }
 export function raidIntel(s,d,id){
   const i=RAID_INTEL[id],active=s.camp.tactic===i.tactic;

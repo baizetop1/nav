@@ -1,6 +1,6 @@
-import { emptySlot } from './slots.js?v=0.12.0';
-import { slotNumber } from './portable.js?v=0.12.0';
-import { icon } from './icons.js?v=0.12.0';
+import { emptySlot } from './slots.js?v=0.15.0';
+import { slotNumber } from './portable.js?v=0.15.0';
+import { icon } from './icons.js?v=0.15.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const button=(label,type,extra={},symbol='save',disabled=false)=>`<button type="button" class="secondary with-icon" data-command="${esc(JSON.stringify({type,...extra}))}" ${disabled?'disabled':''}>${icon(symbol)}<span>${esc(label)}</span></button>`;
 export const localOptions=(slots,selected)=>Array.from({length:20},(_,i)=>slots.find(s=>s.id===i+1)||emptySlot(i+1)).map(s=>`<option value="${s.id}" ${s.id===selected?'selected':''}>${slotNumber(s.id)}号 · ${esc(s.name)} · ${s.raw?'已有进度':'空位'}</option>`).join('');
@@ -32,6 +32,7 @@ export function saveBoxPage(state,status,locked,box={}){
       <div class="actions">${button('查看云端进度 / 下载副本','ui_cloudDownload',{},'download')}${button('手动上传本机进度','ui_cloudUpload',{},'upload')}</div>
       <p id="cloud-message" role="status" class="${cloud.conflict?'warning':'note'}">${esc(cloud.message||'尚未提交云端。点击查看会先预览，不会自动覆盖本机。')}</p>
       ${cloud.conflict?`<div class="actions">${button('先备份本机进度','ui_export',{},'download')}${button('查看云端进度并选择接续','ui_cloudDownload',{},'restore')}${button('重新比较并上传本机进度','ui_cloudReplace',{},'upload')}</div>`:''}
+      <details class="fold-section" data-fold="verified-exhibition"><summary>参加服务器演武（使用上方所选云档与密钥）</summary><p>先上传已收兵的阵容，再选择层数。服务器按自动技能、寨中军令和当期机制独立演算，药品不自动使用；不改变本机或云端资源。新一期从第一层开始。</p><label>演武层数<select id="verified-tier"><option value="1">第 1 层</option><option value="2">第 2 层</option><option value="3">第 3 层</option><option value="4">第 4 层</option><option value="5">第 5 层</option></select></label>${button('以所选云档参加演武','ui_cloudVerify',{},'check')}<p class="note">已有云端战斗须先收兵并上传。培养进度来自云档；本功能校验战斗结果，不代表已验证全部养成来源。</p></details>
       <details class="fold-section" data-fold="sharing"><summary>公开设置与历史回滚（需要此档密钥）</summary><p class="note">默认私有。关闭公开仅阻止后续免密下载，不能收回朋友已保存的副本。回滚会创建一个新的云端版本，不自动替换本机。</p>
         <div class="actions">${button('开启公开副本','ui_cloudShare',{value:true},'heroes')}${button('关闭公开副本','ui_cloudShare',{value:false},'shield')}${button('读取最近十份历史','ui_cloudHistory',{},'restore')}</div>
         ${cloud.history?.id===selected?`<ul class="savebox-history">${cloud.history.history.map(h=>`<li>第 ${h.cloudRevision} 版 · ${esc(h.name)} · ${esc(h.updatedAt||'—')}${button('回滚至此版','ui_cloudRollback',{revision:h.cloudRevision},'restore')}</li>`).join('')||'<li>尚无历史。</li>'}</ul>`:''}

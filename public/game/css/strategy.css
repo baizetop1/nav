@@ -1,0 +1,5 @@
+.hero-specialty,.mechanic-preview,.objective-panel{border:1px solid #a6a27750;padding:12px;margin:12px 0;background:#b7ab7110}
+.hero-specialty h3,.objective-panel h2{color:#e1cf91}.hero-specialty p{line-height:1.8}
+.bond-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:8px}
+.objective-panel progress{width:100%;accent-color:#d8bd70}.objective-panel strong{color:#e1cf91}
+.mechanic-preview{border-left:3px solid #d8bd70}.objective-panel p{margin:6px 0}

@@ -26,7 +26,7 @@ assert.equal((await request('/v1/slots/7')).status,401);assert.equal((await requ
 const made=await request('/v1/admin/slots/7/key','POST',admin),key=made.body.key;assert.match(key,/^(?:[A-F0-9]{4}-){7}[A-F0-9]{4}$/);
 const key8=(await request('/v1/admin/slots/8/key','POST',admin)).body.key;
 const version=await request('/v1/game-version');assert.equal(version.body.heroes,108);assert.equal(version.body.rosterVersion,3);
-assert.equal(version.body.rotations,1);assert.equal(version.body.development,1);assert.equal(version.body.frontier,1);assert.equal(version.body.commands,1);assert.deepEqual((await request('/v1/leaderboard')).body.entries,[]);
+assert.equal(version.body.rotations,1);assert.equal(version.body.development,1);assert.equal(version.body.frontier,1);assert.equal(version.body.commands,1);assert.equal(version.body.strategy,1);assert.deepEqual((await request('/v1/leaderboard')).body.entries,[]);
 // A real old 14-hero upload migrates once; old clients cannot overwrite that new roster.
 const legacy=newGame(data,Date.now(),143);delete legacy.rosterVersion;
 for(const h of data.heroes.filter(h=>h.introducedIn===3))delete legacy.heroes[h.id];
@@ -60,6 +60,8 @@ assert.equal((await request('/v1/slots/7','PUT',key,payload,1)).status,200);
 assert.equal((await request('/v1/slots/7','GET')).status,401);
 remote=(await request('/v1/slots/7','GET',key)).body;assert.deepEqual(remote.state,state);
 const board=(await request('/v1/leaderboard')).body;assert.equal(board.period,calendar.period);assert.deepEqual(board.entries,[{id:7,tier:2,score:weeklyScore(2,50000,500),rank:1}]);assert.ok(!JSON.stringify(board).includes(key));assert.ok(!JSON.stringify(board).includes('郓城主档'));
+const oldStrategy=structuredClone(state);delete oldStrategy.strategy;delete oldStrategy.battle.depth;
+assert.equal((await request('/v1/slots/7','PUT',key,{state:oldStrategy,name:'旧策略页面'},2)).status,409);
 const oldCommands=structuredClone(state);delete oldCommands.commandVersion;delete oldCommands.battle.orders;delete oldCommands.equipment[0].locked;
 assert.equal((await request('/v1/slots/7','PUT',key,{state:oldCommands,name:'旧调度页面'},2)).status,409);
 assert.deepEqual((await request('/v1/slots/7','GET',key)).body.state,state);

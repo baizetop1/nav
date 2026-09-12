@@ -1,14 +1,16 @@
-import { validateCommands } from './commands.js?v=0.12.0';
-import { validateFrontier, POSTS } from './frontier.js?v=0.12.0';
-import { validateDevelopment } from './development.js?v=0.12.0';
-import { validateCampaign, validRotationContext } from './rotations.js?v=0.12.0';
-import { validateQualities } from './quality.js?v=0.12.0';
-import { newGame } from './core.js?v=0.12.0';
-import { idPattern, requireRule } from './utils.js?v=0.12.0';
-import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.12.0';
-import { validateGrowth } from './growth.js?v=0.12.0';
-import { validateGrowthBattle } from './growth-save.js?v=0.12.0';
-import { validateCamp, RAIDS } from './camp.js?v=0.12.0';
+import { validateAffairs } from './affairs.js?v=0.15.0';
+import { validateStrategy } from './strategy.js?v=0.15.0';
+import { validateCommands } from './commands.js?v=0.15.0';
+import { validateFrontier, POSTS } from './frontier.js?v=0.15.0';
+import { validateDevelopment } from './development.js?v=0.15.0';
+import { validateCampaign, validRotationContext } from './rotations.js?v=0.15.0';
+import { validateQualities } from './quality.js?v=0.15.0';
+import { newGame } from './core.js?v=0.15.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.15.0';
+import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.15.0';
+import { validateGrowth } from './growth.js?v=0.15.0';
+import { validateGrowthBattle } from './growth-save.js?v=0.15.0';
+import { validateCamp, RAIDS } from './camp.js?v=0.15.0';
 export const SAVE_KEY='baize_shuihu_save', BACKUP_KEY=SAVE_KEY+'_backup';
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 function object(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}
@@ -24,19 +26,19 @@ export function validateSave(s,data) {
   check(integer(s.revision,0,Number.MAX_SAFE_INTEGER)&&integer(s.rng,1,4294967295),'版本游标');
   for(const key of ['clock','lastRegen','startedAt'])check(integer(s[key],0,8640000000000000),'时间');
   check(s.clock>=s.lastRegen&&s.clock>=s.startedAt,'时间顺序');check(integer(s.worldMinute,0,1439),'昼夜');
-  check(Object.hasOwn(data.by.maps,s.location),'当前位置');check(object(s.player)&&s.player.name==='白泽寨主'&&typeof s.player.title==='string'&&s.player.title.length<60,'寨主');
+  check(hasOwn(data.by.maps,s.location),'当前位置');check(object(s.player)&&s.player.name==='白泽寨主'&&typeof s.player.title==='string'&&s.player.title.length<60,'寨主');
   for(const key of ['silver','merit','prestige'])check(integer(s.player[key]),'货币');check(integer(s.player.stamina,0,100)&&integer(s.player.liangshanLevel,0,1),'体力或梁山等级');
   check(object(s.heroes)&&Object.keys(s.heroes).length===data.heroes.length,'好汉字典');
   for(const h of data.heroes){const v=s.heroes[h.id];check(v&&['unknown','heard','known','available','owned'].includes(v.status)&&integer(v.level,1,data.config.balance.heroLevelCap)&&integer(v.exp),'好汉状态');}
   check(Array.isArray(s.team)&&s.team.length<=3&&new Set(s.team).size===s.team.length&&s.team.every(id=>s.heroes[id]?.status==='owned'),'出阵队伍');
-  check(object(s.inventory),'行囊');for(const [id,n] of Object.entries(s.inventory))check(Object.hasOwn(data.by.items,id)&&integer(n),'道具或数量');
+  check(object(s.inventory),'行囊');for(const [id,n] of Object.entries(s.inventory))check(hasOwn(data.by.items,id)&&integer(n),'道具或数量');
   check(Array.isArray(s.equipment)&&s.equipment.length<=200&&integer(s.nextEquipment,1),'装备');
   check(new Set(s.equipment.map(e=>e.uid)).size===s.equipment.length,'装备实例重复');const slots=new Set();
-  for(const e of s.equipment){check(/^eq_\d+$/.test(e.uid)&&Number(e.uid.slice(3))<s.nextEquipment&&Object.hasOwn(data.by.equipments,e.item)&&integer(e.plus,0,data.config.balance.strengthen.cap)&&(e.hero===null||s.heroes[e.hero]?.status==='owned'),'装备实例');if(e.hero){const slot=e.hero+':'+data.by.equipments[e.item].type;check(!slots.has(slot),'同一位置穿戴多件装备');slots.add(slot);}}
+  for(const e of s.equipment){check(/^eq_\d+$/.test(e.uid)&&Number(e.uid.slice(3))<s.nextEquipment&&hasOwn(data.by.equipments,e.item)&&integer(e.plus,0,data.config.balance.strengthen.cap)&&(e.hero===null||s.heroes[e.hero]?.status==='owned'),'装备实例');if(e.hero){const slot=e.hero+':'+data.by.equipments[e.item].type;check(!slots.has(slot),'同一位置穿戴多件装备');slots.add(slot);}}
   check(object(s.progress)&&object(s.progress.flags)&&object(s.progress.stories)&&object(s.progress.actions)&&object(s.progress.clears),'剧情进度');
   for(const bag of [s.progress.flags,s.progress.actions])for(const [key,value] of Object.entries(bag))check(idPattern.test(key)&&typeof value==='boolean','剧情标记');
-  check(Array.isArray(s.progress.visited)&&s.progress.visited.length<=data.maps.length&&new Set(s.progress.visited).size===s.progress.visited.length&&s.progress.visited.every(id=>Object.hasOwn(data.by.maps,id)),'地图访问');
-  for(const [id,p] of Object.entries(s.progress.stories))check(data.by.stories[id]&&['active','completed'].includes(p.status)&&Object.hasOwn(data.by.stories[id].steps,p.step),'剧情步骤');
+  check(Array.isArray(s.progress.visited)&&s.progress.visited.length<=data.maps.length&&new Set(s.progress.visited).size===s.progress.visited.length&&s.progress.visited.every(id=>hasOwn(data.by.maps,id)),'地图访问');
+  for(const [id,p] of Object.entries(s.progress.stories))check(data.by.stories[id]&&['active','completed'].includes(p.status)&&hasOwn(data.by.stories[id].steps,p.step),'剧情步骤');
   check(Array.isArray(s.progress.claims)&&new Set(s.progress.claims).size===s.progress.claims.length&&s.progress.claims.every(id=>data.by.quests[id]?.type==='main'),'主线酬劳');
   for(const [id,n] of Object.entries(s.progress.clears))check(data.by.dungeons[id]&&integer(n),'通关记录');
   validateGrowth(s,data,check);validateCamp(s,check);validateCampaign(s,check);validateQualities(s,check);validateDevelopment(s,data,check);validateFrontier(s,data,check);
@@ -50,11 +52,11 @@ export function validateSave(s,data) {
   check(object(s.recruit)&&integer(s.recruit.total)&&object(s.recruit.pity)&&object(s.recruit.fate),'招贤');
   for(const [key,max] of [['three',19],['four',49],['five',99]])check(integer(s.recruit.pity[key],0,max),'普通招贤保底');
   for(const [id,n] of Object.entries(s.recruit.fate))check(data.by.heroes[id]&&integer(n,0,4),'专属缘分');
-  for(const r of [...(s.recruit.lastResult===undefined?[]:[s.recruit.lastResult]),...(Array.isArray(s.recruit.lastBatch)?s.recruit.lastBatch:[])]){check(object(r)&&Object.hasOwn(data.by.heroes,r.hero)&&(r.target===null||Object.hasOwn(data.by.heroes,r.target))&&['joined','duplicate','clue'].includes(r.kind)&&integer(r.number,1,s.recruit.total)&&typeof r.inTeam==='boolean','招贤结果');
+  for(const r of [...(s.recruit.lastResult===undefined?[]:[s.recruit.lastResult]),...(Array.isArray(s.recruit.lastBatch)?s.recruit.lastBatch:[])]){check(object(r)&&hasOwn(data.by.heroes,r.hero)&&(r.target===null||hasOwn(data.by.heroes,r.target))&&['joined','duplicate','clue'].includes(r.kind)&&integer(r.number,1,s.recruit.total)&&typeof r.inTeam==='boolean','招贤结果');
     check(r.tokens===(r.kind==='clue'?2:r.kind==='duplicate'?3:0)&&r.merit===(r.kind==='duplicate'?15:0)&&(!r.inTeam||r.kind==='joined'),'招贤所得');
   }
-  validateCommands(s,check);
-  const context=c=>check(c&&(c.type==='frontier'?!!POSTS[c.id]:c.type==='rotation'?validRotationContext(c):c.type==='dungeon'?!!data.by.dungeons[c.id]:c.type==='camp'?!!s.camp&&Object.hasOwn(RAIDS,c.id):c.type==='event'?!!data.by.events[c.id]:c.type==='story'&&(c.id==='huangni'||!!data.by.stories[c.id])),'交战来源');
+  validateCommands(s,check);validateStrategy(s,check);validateAffairs(s,check);
+  const context=c=>check(c&&(c.type==='frontier'?!!POSTS[c.id]:c.type==='rotation'?validRotationContext(c):c.type==='dungeon'?!!data.by.dungeons[c.id]:c.type==='camp'?!!s.camp&&hasOwn(RAIDS,c.id):c.type==='event'?!!data.by.events[c.id]:c.type==='story'&&(c.id==='huangni'||!!data.by.stories[c.id])),'交战来源');
   const logs=a=>check(Array.isArray(a)&&a.length<=150&&a.every(t=>typeof t==='string'&&t.length<2000),'战报');
   check(!(s.battle&&s.scheme)&&!(s.event&&(s.battle||s.scheme)),'互斥事件');
   if(s.battle){const b=s.battle;check(b.martial===undefined||[1,2].includes(b.martial),'兵种战斗规则');const live=b.mode==='realtime';
@@ -87,13 +89,13 @@ export function parseSave(raw,data,now=Date.now()) {
     if(Array.isArray(s.inventory))s.inventory=Object.fromEntries(s.inventory.map(i=>[i.id,i.count]));}
   if(s.version===1){
     const legacy=data.heroes.filter(h=>(h.introducedIn||1)===1);
-    requireRule(object(s.heroes)&&Object.keys(s.heroes).length===legacy.length&&legacy.every(h=>Object.hasOwn(s.heroes,h.id)),'旧存档好汉字典不完整，不能自动修补原有进度。');
+    requireRule(object(s.heroes)&&Object.keys(s.heroes).length===legacy.length&&legacy.every(h=>hasOwn(s.heroes,h.id)),'旧存档好汉字典不完整，不能自动修补原有进度。');
     for(const h of data.heroes.filter(h=>h.introducedIn===2))s.heroes[h.id]={status:'unknown',level:1,exp:0};
     s.version=2;
   }
   if(s.version===2&&s.rosterVersion===undefined&&object(s.heroes)){
     const legacy=data.heroes.filter(h=>(h.introducedIn||1)<3);
-    if(Object.keys(s.heroes).length===legacy.length&&legacy.every(h=>Object.hasOwn(s.heroes,h.id))){
+    if(Object.keys(s.heroes).length===legacy.length&&legacy.every(h=>hasOwn(s.heroes,h.id))){
       for(const h of data.heroes.filter(h=>h.introducedIn===3))s.heroes[h.id]={status:'unknown',level:1,exp:0};
       s.rosterVersion=3;
     }

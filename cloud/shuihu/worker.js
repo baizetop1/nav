@@ -1,3 +1,5 @@
+import {verifyAutoBattle,verifiedBoard} from './verified-battle.js';
+import {rotationCalendar} from '../../public/game/js/rotations.js';
 import { rankSnapshots } from '../../public/game/js/rotations.js';
 import { prepareData } from '../../public/game/js/data.js';
 import { gameSnapshot, slotName } from '../../public/game/js/portable.js';
@@ -71,8 +73,12 @@ async function route(request,env){
   const url=new URL(request.url);
   if(url.protocol!=='https:'&&!(env.LOCAL_DEV==='true'&&['localhost','127.0.0.1'].includes(url.hostname)))fail(400,'存档服务只接受 HTTPS。');
   const ip=request.headers.get('CF-Connecting-IP')||'local';await limit(env,`request:${ip}`,120);
-  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:3,rotations:1,development:1,frontier:1,commands:1});
+  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1});
   if(url.pathname==='/v1/leaderboard'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,raw FROM slots WHERE raw IS NOT NULL ORDER BY id').all();return json(rankSnapshots(rows.results,Date.now()));}
+  if(url.pathname==='/v1/verified-leaderboard'&&request.method==='GET'){
+    const period=rotationCalendar(Date.now()).period;
+    const rows=await env.DB.prepare('SELECT slot,tier,score FROM verified_scores WHERE period=?').bind(period).all();return json(verifiedBoard(rows.results,period));
+  }
   if(url.pathname==='/v1/slots'&&request.method==='GET'){
     const rows=await env.DB.prepare('SELECT id,name,public FROM slots ORDER BY id').all();return json({slots:rows.results.map(summary)});
   }
@@ -90,7 +96,7 @@ async function route(request,env){
     const removed=await env.DB.prepare('UPDATE slots SET raw=NULL,public=0,revision=revision+1,updated_at=? WHERE id=? AND revision=? RETURNING revision').bind(new Date().toISOString(),row.id,expected).first();
     if(!removed)fail(412,'存档已有更新，请重新查看后再删除。');return json({cloudRevision:removed.revision,message:'当前云端进度已移至受保护历史，未撤销密钥。'});
   }
-  const match=/^\/v1\/slots\/(\d{1,2})(?:\/(sharing|history|rollback))?$/.exec(url.pathname);
+  const match=/^\/v1\/slots\/(\d{1,2})(?:\/(sharing|history|rollback|verify))?$/.exec(url.pathname);
   if(!match)fail(404,'接口不存在。');
   const row=await getSlot(env,Number(match[1])),action=match[2];
   if(!action&&request.method==='GET'){
@@ -98,9 +104,27 @@ async function route(request,env){
     return json(snapshot(row),200,{ETag:`"${row.revision}"`});
   }
   const hash=await authorize(request,env,row,ip);
+  if(action==='verify'&&request.method==='POST'){
+    const expected=expectedRevision(request);if(expected!==row.revision)fail(412,'云端已更新，请重新读取后演武。');
+    if(!row.raw)fail(400,'先上传有效云端存档。');await limit(env,'verify:'+row.id,6);
+    const input=await body(request),now=Date.now(),period=rotationCalendar(now).period;
+    const old=await env.DB.prepare('SELECT * FROM verified_scores WHERE slot=? AND period=?').bind(row.id,period).first();
+    const seed=parseInt((await digest(env.KEY_PEPPER,'exhibition-v1:'+row.id+':'+period)).slice(0,8),16)||1;
+    let result;try{result=verifyAutoBattle(data,row.raw,input.tier,old,now,seed);}catch(e){fail(400,e.message);}
+    if(rotationCalendar(Date.now()).period!==period)fail(409,'周本已换期，请重新演武。');
+    if(result.outcome==='victory')await env.DB.prepare(
+      'INSERT INTO verified_scores(slot,period,tier,score,elapsed,hp,source_revision,engine,updated_at) SELECT ?,?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM slots WHERE id=? AND revision=? AND key_hash=?) ON CONFLICT(slot,period) DO UPDATE SET tier=excluded.tier,score=excluded.score,elapsed=excluded.elapsed,hp=excluded.hp,source_revision=excluded.source_revision,engine=excluded.engine,updated_at=excluded.updated_at WHERE excluded.score>verified_scores.score'
+    ).bind(row.id,period,result.tier,result.score,result.elapsed,result.hp,row.revision,data.config.release,new Date(now).toISOString(),row.id,expected,hash).run();
+    const current=await getSlot(env,row.id);if(current.revision!==expected||current.key_hash!==hash)fail(412,'演武期间云端进度或密钥已变化，请重新读取后演武。');
+    const best=await env.DB.prepare('SELECT tier,score FROM verified_scores WHERE slot=? AND period=?').bind(row.id,period).first();
+    await env.DB.prepare('DELETE FROM verified_scores WHERE period < ?').bind(String(new Date(now).getUTCFullYear()-1)+'-01-1').run();
+    return json({...result,id:row.id,verified:true,sourceRevision:row.revision,best:best||null});
+  }
   if(!action&&request.method==='PUT'){
     const input=await body(request);
     if(row.raw&&JSON.parse(row.raw).rosterVersion===3&&input.state?.rosterVersion!==3)fail(409,'此云端进度已升级为 108 将名册，请刷新游戏后再上传，避免旧页面覆盖新好汉。');
+    if(row.raw&&JSON.parse(row.raw).affairs&&!input.state?.affairs)fail(409,'此存档已有寨事和外派进度，请刷新新版后上传。');
+    if(row.raw&&JSON.parse(row.raw).strategy&&!input.state?.strategy)fail(409,'此存档已有部队专精或副本机制，请刷新至新版后上传。');
     if(row.raw&&JSON.parse(row.raw).commandVersion===1&&input.state?.commandVersion!==1)fail(409,'此存档已有军令、十连或装备锁定记录，请刷新至新版后上传。');
     if(row.raw&&JSON.parse(row.raw).frontier&&!input.state?.frontier)fail(409,'此存档已有据点与生产进度，请刷新至新版后上传。');
     if(row.raw&&JSON.parse(row.raw).development&&!input.state?.development)fail(409,'此存档已有专属兵种与阵容进度，请刷新至新版后上传。');

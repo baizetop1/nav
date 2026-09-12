@@ -1,0 +1,6 @@
+.affairs-panel,.equipment-comparison{border:1px solid #b9a96b70;background:#b9a96b10;margin:14px 0;padding:14px}
+.equipment-comparison table,.verified-ranking table{width:100%;font-size:14px;border-collapse:collapse}.equipment-comparison th,.equipment-comparison td,.verified-ranking td,.verified-ranking th{text-align:left;padding:7px 3px;border-bottom:1px solid #b9a96b30}
+.stat-up{color:#9dc69b}.stat-down{color:#ecad98}.equipment-comparison p,.verified-ranking p{overflow-wrap:anywhere}
+.verified-ranking{border-top:2px solid #b9a96b}.affairs-panel select{max-width:100%}
+.camp-overview{border:1px solid #b9a96b70;background:#b9a96b10;padding:14px;margin:14px 0}.camp-notices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:8px}.camp-notices button{min-width:0;text-align:left;white-space:normal;overflow-wrap:anywhere}
+.batch-changes p{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid #b9a96b30;padding:8px 0}.batch-changes b{text-align:right;overflow-wrap:anywhere}.batch-shop{display:grid;gap:8px;margin-bottom:18px}.batch-shop select{max-width:100%}#batch-preview{max-width:min(520px,calc(100vw - 32px));max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px);overflow:auto}.batch-actions{margin:10px 0}

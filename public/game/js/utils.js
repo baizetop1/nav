@@ -1,4 +1,24 @@
-export const clone = value => structuredClone(value);
+// Game states contain plain data. Keep undefined fields, array holes and shared
+// references when older browsers lack structuredClone; never mutate the input.
+export function clone(value) {
+  if (typeof globalThis.structuredClone === 'function') return globalThis.structuredClone(value);
+  const seen = new WeakMap();
+  function copy(v) {
+    if (v === null || typeof v !== 'object') {
+      if (typeof v === 'function' || typeof v === 'symbol') throw new Error('不能复制非数据内容。');
+      return v;
+    }
+    if (seen.has(v)) return seen.get(v);
+    const proto = Object.getPrototypeOf(v);
+    if (!Array.isArray(v) && proto !== Object.prototype && proto !== null) throw new Error('不能复制非游戏数据对象。');
+    const result = Array.isArray(v) ? new Array(v.length) : {};
+    seen.set(v, result);
+    for (const key of Object.keys(v)) Object.defineProperty(result, key, {value:copy(v[key]),enumerable:true,writable:true,configurable:true});
+    return result;
+  }
+  return copy(value);
+}
+export const hasOwn = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
 export function requireRule(ok, message) { if (!ok) throw new Error(message); }
 export const bounded = (n, min, max) => Math.max(min, Math.min(max, n));
 export const dayKey = now => { const d = new Date(now); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
@@ -10,7 +30,7 @@ export function random(state) {
 export const pick = (state, values) => values[Math.floor(random(state) * values.length)];
 export function weighted(state, entries) {
   let n = random(state) * entries.reduce((sum, e) => sum + e.weight, 0);
-  return entries.find(e => (n -= e.weight) < 0) || entries.at(-1);
+  return entries.find(e => (n -= e.weight) < 0) || entries[entries.length - 1];
 }
 export function count(state, key, amount = 1) {
   state.stats[key] = (state.stats[key] || 0) + amount;

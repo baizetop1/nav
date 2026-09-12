@@ -1,8 +1,9 @@
-import { autoOrderAllows } from './commands.js?v=0.12.0';
-import { initializeMartial, martialFactor } from './martial.js?v=0.12.0';
-import { attributes } from './hero.js?v=0.12.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.12.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.12.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.15.0';
+import { autoOrderAllows } from './commands.js?v=0.15.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.15.0';
+import { attributes } from './hero.js?v=0.15.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.15.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.15.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
@@ -25,6 +26,7 @@ function unit(id,name,attribute,skills,side){const u={id,name,...attribute,maxHp
 export function startBattle(state,data,{enemies,guest,scale=1,context}){
   requireRule(!state.battle&&!state.scheme,'先结束当前战局。');
   const team=guest?[unit(guest.id,data.by.heroes[guest.id].name,attributes(state,guest.id,data,guest.level,false),data.by.heroes[guest.id].skills,'team')]:state.team.map(id=>unit(id,data.by.heroes[id].name,attributes(state,id,data),data.by.heroes[id].skills,'team'));
+  requireRule(!state.affairs?.mission||!team.some(u=>u.id===state.affairs.mission.hero),'好汉仍在外派，请先接回。');
   requireRule(team.length>0,'先与白胜相识、邀他作向导，或在招贤馆招募好汉并编队。');
   state.battle={mode:'realtime',elapsed:0,itemReadyAt:0,team,enemy:enemies.map((id,i)=>{
     const e=data.by.enemies[id],stats=Object.fromEntries(Object.entries(e.attribute).map(([key,value])=>[key,Math.round(value*(key==='speed'?1:scale))]));
@@ -46,6 +48,7 @@ function settle(b){
   if(b.outcome)return true;
   if(!b.team.some(alive)){b.outcome='defeat';log(b,'众好汉已无力再战。收拢人手，整备后可再来。');}
   else if(!b.enemy.some(alive)){b.outcome='victory';log(b,'敌阵已散，此战得胜。');}
+  else if(objectiveFailed(b)){b.outcome='defeat';log(b,'【目标失败】护运耐久耗尽或限时已到，此战未完成副本目标。');}
   else if(b.elapsed>=BATTLE_LIMIT_MS){b.outcome='retreat';log(b,'交战已久，双方难分胜负，你下令撤出。');}
   return !!b.outcome;
 }
@@ -100,7 +103,7 @@ export function advanceBattle(state,data,delta){
   castAutomaticSkills(state,data);
   while(!b.outcome){
     const times=units.filter(alive).map(u=>u.nextAttackAt);
-    if(b.rules===2)times.push(...growthTimes(b));
+    if(b.rules===2)times.push(...growthTimes(b));times.push(...objectiveTimes(b));
     if(battleSkillMode(state)==='auto')for(const u of b.team)if(alive(u)&&u.skillReadyAt>b.elapsed)times.push(u.skillReadyAt);
     for(const u of units)for(const s of u.statuses){times.push(s.expiresAt);if(s.nextTickAt)times.push(s.nextTickAt);}
     const next=Math.min(...times);if(next>end)break;b.elapsed=next;
@@ -113,6 +116,7 @@ export function advanceBattle(state,data,delta){
       u.statuses=u.statuses.filter(s=>s.expiresAt>next);
     }
     if(settle(b))break;
+    advanceObjective(b,log);if(settle(b))break;
     if(b.rules===2){advanceBosses(state,{...growthApi,data});if(settle(b))break;}
     const due=units.filter(u=>alive(u)&&u.nextAttackAt===next).sort((a,b)=>b.speed-a.speed);
     for(const u of due){

@@ -1,12 +1,12 @@
-import { idPattern, requireRule } from './utils.js?v=0.12.0';
-import { GROWTH_PROFILES } from './growth.js?v=0.12.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.15.0';
+import { GROWTH_PROFILES } from './growth.js?v=0.15.0';
 export const collections=['heroes','skills','items','equipments','enemies','maps','stories','schemes','dungeons','rewards','events','quests','chapters'];
 const numeric=(n,min=0)=>typeof n==='number'&&Number.isFinite(n)&&n>=min;
 export function prepareData(raw) {
   const data={...raw,by:{}};
   for(const kind of collections){requireRule(Array.isArray(data[kind]),`缺少 ${kind} 数据。`);data.by[kind]={};
-    for(const entry of data[kind]){requireRule(idPattern.test(entry.id)&&!Object.hasOwn(data.by[kind],entry.id),`${kind} 有重复或无效 ID。`);data.by[kind][entry.id]=entry;}}
-  const ref=(kind,id)=>requireRule(typeof id==='string'&&Object.hasOwn(data.by[kind],id),`${kind} 引用不存在：${id}`);
+    for(const entry of data[kind]){requireRule(idPattern.test(entry.id)&&!hasOwn(data.by[kind],entry.id),`${kind} 有重复或无效 ID。`);data.by[kind][entry.id]=entry;}}
+  const ref=(kind,id)=>requireRule(typeof id==='string'&&hasOwn(data.by[kind],id),`${kind} 引用不存在：${id}`);
   const condition=c=>{if(!c)return;for(const [key,value] of Object.entries(c)){
     if(key==='all'||key==='any'){requireRule(Array.isArray(value),'条件组合必须为数组。');value.forEach(condition);}
     else if(key==='item')ref('items',value);else if(key==='hero')ref('heroes',value);else if(key==='visited')ref('maps',value);

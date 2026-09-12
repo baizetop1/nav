@@ -1,5 +1,6 @@
-import { equipmentLoot } from './camp-development-ui.js?v=0.12.0';
-import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.12.0';
+import { batchButtons } from './batch-ui.js?v=0.15.0';
+import { equipmentLoot } from './camp-development-ui.js?v=0.15.0';
+import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.15.0';
 const attr={hp:'气血',attack:'攻击',defense:'防御',speed:'速度',strategy:'谋略'};
 export function dungeonMountLoot(s,d,id,esc){
   const heroes=d.heroes.filter(h=>h.mount.dungeon===id);
@@ -46,11 +47,11 @@ export function heroGrowth(s,d,h,esc,btn){
     const q=mountQuote(s,h.id,type,d),label=({mountAdopt:'凭契领骑',mountFeed:'喂养 · 亲密 +10',mountRank:'坐骑升阶',mountRide:m?.riding?'下马步行':'骑乘同行'})[type];
     return `<div><p class="note">${type==='mountRide'?'切换无消耗':esc(price(q.cost))}${q.reason?' · '+esc(q.reason):''}</p>${btn(label,{type,id:h.id},'secondary',!!q.reason)}</div>`;
   }).join(''):'';
-  return `${owned?`<p class="note">${h.name}专属招式书 ${s.inventory[h.id+'_manual']||0} 册 · 武学残页 ${s.inventory.martial_pages||0} 张</p>${btn('抄录专属招式书 · 残页 2',{type:'skillBook',id:h.id},'secondary',(s.inventory.martial_pages||0)<2)}`:''}
+  return `${owned?`<p class="note">${h.name}专属招式书 ${s.inventory[h.id+'_manual']||0} 册 · 武学残页 ${s.inventory.martial_pages||0} 张</p>${btn('抄录专属招式书 · 残页 2',{type:'skillBook',id:h.id},'secondary',(s.inventory.martial_pages||0)<2)}${batchButtons(h.id,'manual',btn)}`:''}
     <div class="growth-skills">${skills}</div>
     <details class="fold-section" data-fold="mount-${h.id}"><summary>专属坐骑 · ${esc(h.mount.name)} · ${m?m.rank+' 阶 / 亲密 '+m.intimacy:'尚未结缘'}</summary>
       ${mountOrigin(s,d,h,esc)}
       <p>${esc(h.mount.description)}</p><p class="note">${m?(m.riding?'骑乘中':'步行中')+'；':''}骑乘时每阶气血、攻击 +2%，速度 +2（最多 5 阶）。本人物 15 级、坐骑 3 阶、亲密 80 并骑乘，解锁第四招羁绊；每三次普攻触发一次。下马保留养成进度。</p>
-      <p class="note">领骑：持契后在好汉详情直接办理。喂养、升阶与骑乘切换可在平时的人物页进行。升阶需当前阶数 ×20 的亲密；每阶消耗依次提高，无失败降阶。</p>${mountActions}
+      <p class="note">领骑：持契后在好汉详情直接办理。喂养、升阶与骑乘切换可在平时的人物页进行。升阶需当前阶数 ×20 的亲密；每阶消耗依次提高，无失败降阶。</p>${mountActions}${owned&&m?batchButtons(h.id,'feed',btn):''}
     </details>`;
 }

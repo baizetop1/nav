@@ -1,3 +1,4 @@
+import { hasOwn } from './utils.js?v=0.15.0';
 // Local, monochrome SVGs: no icon font, image request or runtime dependency.
 const shapes=Object.freeze({
   trials:'<path d="M7 3h10v5a5 5 0 0 1-10 0V3ZM7 5H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4M12 13v6m-4 2h8"/>',
@@ -32,12 +33,12 @@ const shapes=Object.freeze({
   trash:'<path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/>'
 });
 export function icon(name){
-  if(typeof name!=='string'||!Object.hasOwn(shapes,name))return '';
+  if(typeof name!=='string'||!hasOwn(shapes,name))return '';
   return `<svg class="game-icon" data-icon="${name}" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${shapes[name]}</svg>`;
 }
 const actions=Object.freeze({skillUpgrade:'scheme',skillBook:'chronicle',martialDrill:'battle',mountAdopt:'heroes',mountFeed:'gift',mountRank:'medal',mountRide:'move',ui_start:'map',ui_battlePause:'clock',battleSkill:'scheme',battleItem:'medicine',battleRetreat:'back',move:'move',search:'search',wait:'clock',meet:'event',guide:'heroes',recruit:'recruit',craftOrder:'ticket',quest:'quests',dailyBonus:'gift',exchange:'craft',buy:'coins',buyEquip:'coins',craftEquip:'forge',strengthen:'forge',ui_equip:'shield',equip:'shield',ui_dismantle:'trash',ui_team:'heroes',team:'heroes',ui_export:'download',ui_import:'upload',ui_backup:'restore',ui_reload:'restore',ui_confirmImport:'check',ui_cancelImport:'close',ui_reset:'restore',story:'chronicle',startScheme:'scheme',dungeon:'battle',finishBattle:'check',finishScheme:'check',eventChoice:'check',use:'medicine'});
 export function actionIcon(command){
-  if(command.type==='turn'){const turns={attack:'battle',guard:'shield',scheme:'scheme',retreat:'back',item:'medicine'};return Object.hasOwn(turns,command.id)?turns[command.id]:'';}
+  if(command.type==='turn'){const turns={attack:'battle',guard:'shield',scheme:'scheme',retreat:'back',item:'medicine'};return hasOwn(turns,command.id)?turns[command.id]:'';}
   if(command.type==='scheme')return command.id==='retreat'?'back':'scheme';
-  return Object.hasOwn(actions,command.type)?actions[command.type]:'';
+  return hasOwn(actions,command.type)?actions[command.type]:'';
 }

@@ -1,7 +1,7 @@
-import { helperBonus } from './helpers.js?v=0.12.0';
-import { requireRule, journal, random, pick } from './utils.js?v=0.12.0';
-import { gainExp } from './hero.js?v=0.12.0';
-import { grant, newEquipment } from './item.js?v=0.12.0';
+import { helperBonus } from './helpers.js?v=0.15.0';
+import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.15.0';
+import { gainExp } from './hero.js?v=0.15.0';
+import { grant, newEquipment } from './item.js?v=0.15.0';
 
 export const DUTIES={
   balanced:{name:'各司其职',description:'木粮银均衡生产。'},
@@ -14,7 +14,7 @@ const rosterTalents={"songjiang":"silver","lujunyi":"wood","wuyong":"silver","go
 export const stewardship=id=>Object.keys(talents).find(k=>talents[k].includes(id))||rosterTalents[id]||'food';
 export const steward=s=>Object.keys(s.heroes).find(id=>s.heroes[id].status==='owned'&&s.progress.flags['camp_steward_'+id]);
 export function dutyQuote(s,mode='balanced'){
-  requireRule(Object.hasOwn(DUTIES,mode),'没有这项寨务。');
+  requireRule(hasOwn(DUTIES,mode),'没有这项寨务。');
   const c=s.camp,id=steward(s),specialty=id&&stewardship(id),bonus=helperBonus(s);
   const base={wood:10+c.buildings.lumber*18,food:8+c.buildings.farm*20,silver:15+c.buildings.market*35};
   return Object.fromEntries(Object.entries(base).map(([key,value])=>[key,Math.floor(value*(mode==='balanced'?1:mode===key?1.75:.5)*(specialty===key?1.2:1))+bonus[key]]));

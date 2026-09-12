@@ -1,22 +1,24 @@
-import { gains, rewardDialog } from './rewards-ui.js?v=0.12.0';
-import { ActivityLog } from './activity.js?v=0.12.0';
-import { loadData } from './data.js?v=0.12.0';
-import { dispatch, newGame } from './core.js?v=0.12.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.12.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.12.0';
-import { patchElement } from './dom.js?v=0.12.0';
+import { batchQuote } from './batch.js?v=0.15.0';
+import { batchDialog } from './batch-ui.js?v=0.15.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.15.0';
+import { ActivityLog } from './activity.js?v=0.15.0';
+import { loadData } from './data.js?v=0.15.0';
+import { dispatch, newGame } from './core.js?v=0.15.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.15.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.15.0';
+import { patchElement } from './dom.js?v=0.15.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.12.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.12.0';
-import { CloudClient } from './cloud.js?v=0.12.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.12.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.15.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.15.0';
+import { CloudClient } from './cloud.js?v=0.15.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.15.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
 function fitViewport(){if(!window.visualViewport||Math.abs(window.visualViewport.scale-1)<0.01){const height=Math.min(window.innerHeight,window.visualViewport?.height||window.innerHeight);document.documentElement.style.setProperty('--game-height',height+'px');document.documentElement.toggleAttribute('data-short-viewport',height<480);}}
 fitViewport();window.addEventListener('resize',fitViewport);window.visualViewport?.addEventListener('resize',fitViewport);
 let database, channel, operation=false, savePending=null, slots=[], previewSlots=[], cloud;
-const leaderboard={loading:false,error:'',data:null};
+const leaderboard={loading:false,error:'',data:null,verifiedLoading:false,verifiedError:'',verified:null};
 const cloudView={baseUrl:'',selected:1,slots:[],message:'',conflict:false,history:null};
 const makeStore=id=>new SlotStore(database,data,id,change=>channel?.postMessage(change));
 async function refreshSlots(){try{slots=await database.all();}catch{slots=[store.record];}}
@@ -135,6 +137,10 @@ async function handleBox(command){
   const input=document.getElementById('cloud-key');if(input)input.value='';
   cloudView.conflict=false;
   try{
+    if(type==='ui_cloudVerify'){
+      const remote=await cloud.download(id),result=await cloud.verify(id,remote.cloudRevision,Number(document.getElementById('verified-tier').value));
+      cloudView.message='服务器演武：'+(result.outcome==='victory'?'第 '+result.tier+' 层得胜，'+result.score+' 分。':'本次未过关。')+' '+(result.best?'本期最好：第 '+result.best.tier+' 层，'+result.best.score+' 分。':'本期暂无通关成绩。')+' 本机与云端资源均未扣除。';
+    }
     if(type==='ui_cloudForget'){cloud.forget();cloudView.message='本页全部存档密钥已清除。';}
     if(type==='ui_cloudList'){const result=await cloud.list();cloudView.slots=result.slots;cloudView.message='云端列表已刷新；私有档只展示编号、名称与公开状态。';}
     if(type==='ui_cloudDownload'){
@@ -194,6 +200,9 @@ async function handleBox(command){
 async function handle(command){
   const {type,id}=command;error='';
   if(await handleBox(command))return;
+  if(type==='ui_batchCancel'){document.getElementById('batch-preview')?.close();return;}
+  if(type==='ui_batchPreview'||type==='ui_batchShop'){const a=type==='ui_batchShop'?{kind:'buy',id:document.getElementById('batch-shop-item').value,count:command.count}:command,q=batchQuote(state,data,a);document.getElementById('batch-preview')?.remove();const btn=(label,a,kind,disabled)=>`<button type="button" class="${kind}" data-command="${esc(JSON.stringify(a))}" ${disabled?'disabled':''}>${esc(label)}</button>`;root.insertAdjacentHTML('beforeend',batchDialog(q,a,esc,btn));const dialog=document.getElementById('batch-preview');dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;}
+  if(type==='batchApply')document.getElementById('batch-preview')?.close();
   if(type==='ui_export'){download(invalid&&store.raw?store.raw:exportSave(state,store.record,data),invalid?'白泽水浒_坏档原文.json':exportName(store.record));return;}
   if(type==='ui_reload'){if(dirty&&!window.confirm('本页还有未保存进度。请先导出。仍要重新载入本机存档吗？'))return;await load();return;}
   if(type==='ui_import'){
@@ -229,7 +238,12 @@ async function handle(command){
   if(['battleSkill','battleItem'].includes(type)&&battlePaused)throw new Error('请先继续交战，再释放技能或用药。');
   if(type==='ui_start'){const before=state;await persist(state.camp?state:dispatch(data,state,{type:'campFound'}));entered=true;view='camp';paint(true);showRewards(before,state);return;}
   if(type==='ui_battleSpeed'){if(![.5,1,2].includes(command.speed))throw new Error('无效速度');battleSpeed=command.speed;try{localStorage.setItem('baize_shuihu_battle_speed',String(battleSpeed));}catch{}paint();return;}
+  if(type==='ui_verifiedRefresh'){if(leaderboard.verifiedLoading)return;leaderboard.verifiedLoading=true;leaderboard.verifiedError='';leaderboard.verified=null;paint();try{leaderboard.verified=await cloud.verifiedLeaderboard();}catch(e){leaderboard.verifiedError=e.status===404?'服务器演武服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.verifiedLoading=false;paint();}return;}
   if(type==='ui_rankRefresh'){if(leaderboard.loading)return;leaderboard.loading=true;leaderboard.error='';leaderboard.data=null;paint();try{leaderboard.data=await cloud.leaderboard();}catch(e){leaderboard.error=e.status===404?'排行榜服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.loading=false;paint();}return;}
+  if(type==='ui_compareClose'){gear={...gear,comparison:null};paint();return;}
+  if(type==='ui_campJump'){if(!['camp-affairs','camp-goals','camp-production','frontier-map','camp-resources'].includes(id))return;view='camp';paint();const el=document.getElementById(id);for(let p=el?.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;el?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_affairDispatch')command={type:'affairChoice',choice:'dispatch',hero:document.getElementById('affair-hero').value};
+  if(type==='ui_materialSource'){view='trials';paint(true);const target=document.querySelector('[data-fold^="rotation-'+command.kind+'-'+command.id+'-"]');if(target){target.open=true;target.scrollIntoView({block:'start'});}return;}
   if(type==='ui_gearFilter'){gear=Object.fromEntries(['query','type','quality','state'].map(k=>[k,document.getElementById('gear-'+k).value]));paint();return;}
   if(type==='ui_gearReset'){gear={};paint();for(const k of ['query','type','quality','state'])document.getElementById('gear-'+k).value=k==='query'?'':'all';return;}
   if(type==='ui_rosterFilter'){
@@ -244,10 +258,11 @@ async function handle(command){
   if(type==='ui_mapInspect'){if(!data.by.maps[id])throw new Error('没有这个地点。');mapTarget=id;view='map';paint();document.getElementById('atlas-target')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_campFormation')command={type:'campFormation',mode:document.getElementById('camp-mode').value,tactic:document.getElementById('camp-tactic').value,deployment:Number(document.getElementById('camp-deployment').value)};
   if(type==='ui_team')command={type:'team',ids:[0,1,2].map(i=>document.getElementById('team-'+i).value).filter(Boolean)};
-  if(type==='ui_equip')command={type:'equip',id,hero:document.getElementById('holder-'+id).value||null};
+  if(type==='ui_equip'){gear={...gear,comparison:{id,hero:document.getElementById('holder-'+id).value||null}};paint();document.querySelector('.equipment-comparison')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_dismantle'){if(!window.confirm('确认分解此装备？装备将变为碎铁，不能原样取回。'))return;command={type:'dismantle',id};}
   const before=state,hadBattle=!!state.battle,next=dispatch(data,state,command);await persist(next);
   if(!hadBattle&&next.battle&&!next.battle.outcome){battlePaused=false;battlePauseReason='';lastBattlePulse=performance.now();}
+  if(type==='equip')gear={...gear,comparison:null};
   notice=['recruit','recruitTen'].includes(type)||type.startsWith('battle')||next.battle?'':next.message;
   if(type==='travel'||type==='move')mapTarget=next.location;
   if(next.battle||next.scheme||next.event||['move','travel','story','startScheme'].includes(type))view='map';
