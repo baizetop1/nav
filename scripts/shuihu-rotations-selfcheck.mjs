@@ -38,10 +38,10 @@ const rows=rankSnapshots([{id:3,raw:JSON.stringify(rankState),name:'SECRET',key_
 assert.deepEqual(rows.entries.map(x=>[x.id,x.rank]),[[1,1],[3,1]]);assert.deepEqual(Object.keys(rows.entries[0]).sort(),['id','rank','score','tier']);assert.ok(!JSON.stringify(rows).includes('SECRET'));
 // All 108 have a visible trait; counter cycles affect actual attacks.
 for(const h of d.heroes)assert.equal(heroTrait(h).length,2);assert.equal(armFactor('infantry','ranged'),1.2);assert.equal(armFactor('ranged','infantry'),.85);assert.equal(armFactor('neutral','infantry'),1);
-function firstHit(arm){const s=fixture('2026-09-08');s.team=['linchong'];s.camp.arm=arm;startBattle(s,d,{enemies:['guard'],scale:5,context:{type:'camp',id:'woods'}});attachTroops(s,10);while(s.battle.team[0].attacks===0)advanceBattle(s,d,1000);return s.battle.enemy[0].maxHp-s.battle.enemy[0].hp;}
+function firstHit(arm){const s=fixture('2026-09-08');s.team=['linchong'];s.camp.arm=arm;startBattle(s,d,{enemies:['guard'],scale:5,context:{type:'camp',id:'woods'}});s.battle.martial=1;delete s.battle.frontierRules;for(const u of s.battle.team)delete u.training.quality;attachTroops(s,10);while(s.battle.team[0].attacks===0)advanceBattle(s,d,1000);return s.battle.enemy[0].maxHp-s.battle.enemy[0].hp;}
 assert.ok(firstHit('cavalry')>firstHit('infantry'));assert.ok(firstHit('infantry')>firstHit('ranged'));
 const lone=fixture('2026-09-08');lone.team=['wusong'];startBattle(lone,d,{enemies:['guard'],context:{type:'camp',id:'woods'}});assert.equal(martialFactor(lone.battle,lone.battle.team[0],lone.battle.enemy[0],d),1.2);
 assert.throws(()=>act(base,'campFormation',{mode:'solo',tactic:'balanced',deployment:1,arm:'neutral'}));
 // Refuse a new-format upload to an old backend before issuing any PUT.
-const calls=[],client=new CloudClient('https://save.example.com',d,async(url,opts)=>{calls.push(opts.method);return Response.json({release:'0.8.1'});});await assert.rejects(()=>client.upload(1,1,cross,'周本'),/0.9.0/);assert.deepEqual(calls,['GET']);
+const calls=[],client=new CloudClient('https://save.example.com',d,async(url,opts)=>{calls.push(opts.method);return Response.json({release:'0.8.1'});});await assert.rejects(()=>client.upload(1,1,cross,'周本'),/0.10.0/);assert.deepEqual(calls,['GET']);
 console.log('Rotations: UTC+8 daily/monthly boundaries, 9 daily tiers, all 20 weekly layers, paid attempts, repeat/retreat guards, cross-period settlement, save roundtrip, anonymous tied ranks, actual counters, traits and old-backend guard passed.');

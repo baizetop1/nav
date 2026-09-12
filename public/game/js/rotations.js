@@ -1,7 +1,7 @@
-import { requireRule, journal } from './utils.js?v=0.9.0';
+import { requireRule, journal } from './utils.js?v=0.12.0';
 
 export const DAILY_ROUTES=[
-  {id:'ore',name:'铁石山道',days:[1,4,0],enemies:['soldier','guard'],reward:{iron:4,cloth:3,scrap_iron:3},use:'铁与布用于打造装备，碎铁用于装备强化。'},
+  {id:'ore',name:'铁石山道',days:[1,4,0],enemies:['soldier','guard'],reward:{iron:4,cloth:3,scrap_iron:3},use:'铁与布用于打造装备，碎铁用于练兵、工坊加工与重熔精铁。'},
   {id:'manual',name:'演武旧场',days:[2,5,0],enemies:['bandit','bandit_chief'],reward:{martial_pages:4,exp_pill:2},use:'武学残页用于招式升级与升品，经验丹用于提升好汉等级。'},
   {id:'stable',name:'牧野护运',days:[3,6,0],enemies:['road_raider','bandit'],reward:{mount_feed:4,mount_token:2},use:'草料用于培养坐骑亲密度，驯骑凭记用于坐骑升阶。'},
 ];

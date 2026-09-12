@@ -57,7 +57,10 @@
     "test:shuihu-map": "node scripts/shuihu-map-selfcheck.mjs",
     "test:shuihu-roster": "node scripts/shuihu-roster-selfcheck.mjs",
     "test:shuihu-helpers": "node scripts/shuihu-helpers-selfcheck.mjs",
-    "test:shuihu-rotations": "node scripts/shuihu-rotations-selfcheck.mjs"
+    "test:shuihu-rotations": "node scripts/shuihu-rotations-selfcheck.mjs",
+    "test:shuihu-corps": "node scripts/shuihu-corps-selfcheck.mjs",
+    "test:shuihu-frontier": "node scripts/shuihu-frontier-selfcheck.mjs",
+    "test:shuihu-commands": "node scripts/shuihu-commands-selfcheck.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

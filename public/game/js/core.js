@@ -1,16 +1,19 @@
-import { enterRotation, finishRotation } from './rotations.js?v=0.9.0';
-import { promoteHero } from './quality.js?v=0.9.0';
-import { routeTo, claimLocalBenefit } from './world-map.js?v=0.9.0';
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.9.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.9.0';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.9.0';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.9.0';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.9.0';
-import { effects, storyAction, visit } from './story.js?v=0.9.0';
-import { growthAction, awardMountContracts } from './growth.js?v=0.9.0';
+import { battleOrder } from './commands.js?v=0.12.0';
+import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.12.0';
+import { developmentAction, recordLedger } from './development.js?v=0.12.0';
+import { enterRotation, finishRotation } from './rotations.js?v=0.12.0';
+import { promoteHero } from './quality.js?v=0.12.0';
+import { routeTo, claimLocalBenefit } from './world-map.js?v=0.12.0';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.12.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.12.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.12.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.12.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.12.0';
+import { effects, storyAction, visit } from './story.js?v=0.12.0';
+import { growthAction, awardMountContracts } from './growth.js?v=0.12.0';
 
-import { searchEquipment } from './camp-development.js?v=0.9.0';
-import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.9.0';
+import { searchEquipment } from './camp-development.js?v=0.12.0';
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.12.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -24,7 +27,7 @@ export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   refresh(state,data,now);journal(state,'初入郓城。建寨之事，要从识人、用人开始。');return state;
 }
 export function refresh(state,data,now) {
-  now=Math.max(state.clock,now);state.clock=now;
+  now=Math.max(state.clock,now);state.clock=now;accrueFrontier(state,data);
   const intervals=Math.floor((now-state.lastRegen)/data.config.balance.regenMs);
   if(state.player.stamina>=100)state.lastRegen=now;
   else if(intervals>0){state.player.stamina=Math.min(100,state.player.stamina+intervals);state.lastRegen=state.player.stamina===100?now:state.lastRegen+intervals*data.config.balance.regenMs;}
@@ -70,6 +73,7 @@ function finishBattle(state,data) {
     if(state.formationPending&&!b.guest){count(state,'formationBattle');state.formationPending=false;}
     if(b.context.type==='story'){state.progress.stories[b.context.id].step=b.context.next;const story=data.by.stories[b.context.id];journal(state,'此战得胜，请在'+data.by.maps[story.steps[b.context.next].map].name+'续记【'+story.title+'】。');}
     else if(b.context.type==='dungeon')rewardDungeon(state,data,b.context.id);
+    else if(b.context.type==='frontier')finishPost(state,b);
     else if(b.context.type==='rotation'){const reward=finishRotation(state,b);if(reward)grant(state,reward,data);}
     else if(b.context.type!=='camp'){grant(state,{silver:90,prestige:3,exp:100,items:{scrap_iron:1}},data);journal(state,'交战得胜，行旅得以安行。获得碎银与历练经验。');}
   } else {count(state,'battleLoss');journal(state,'此战收兵。好汉不会永久失去；再战前可调整队伍、药物与装备。');}
@@ -113,10 +117,13 @@ function completeVolume(state,data) {
 export function dispatch(data,current,action,now=Date.now()) {
   const state=clone(current);refresh(state,data,now);
   requireRule(action&&typeof action.type==='string','无效操作。');
-  if(isBusy(state))requireRule(['battleTick','battleSkill','battleSkillMode','battleItem','battleRetreat','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
+  if(isBusy(state))requireRule(['battleOrder','battleTick','battleSkill','battleSkillMode','battleItem','battleRetreat','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
   const {type,id}=action;
   if(type==='refresh')return state;
-  if(type==='rotationStart'){const p=enterRotation(state,action.kind,id,action.tier);startBattle(state,data,{enemies:p.route.enemies,scale:p.scale,context:{type:'rotation',kind:action.kind,id,tier:p.tier,period:p.period}});attachTroops(state,p.troops);}
+  if(type==='frontierAttack'){const p=enterPost(state,id);startBattle(state,data,{enemies:p.model.enemy,scale:p.model.scale,context:{type:'frontier',id,kind:p.kind,terrain:p.model.terrain}});attachTroops(state,p.troops);}
+  else if(type.startsWith('frontier'))frontierAction(state,data,action);
+  else if(['corpsTrain','presetSave','presetLoad','goalSet','goalClear','scrapSmelt'].includes(type))developmentAction(state,data,action);
+  else if(type==='rotationStart'){const p=enterRotation(state,action.kind,id,action.tier);startBattle(state,data,{enemies:p.route.enemies,scale:p.scale,context:{type:'rotation',kind:action.kind,id,tier:p.tier,period:p.period}});attachTroops(state,p.troops);}
   else if(type==='heroPromote')promoteHero(state,data,action.id);
   else if(type.startsWith('camp'))campAction(state,data,action);
   else if(type==='travel'){const path=routeTo(state,data,id);requireRule(path&&path.length,'此路尚未开放，或已经身在此处。');for(const target of path){requireRule(exits(state,data).some(l=>l.target===target),'途中道路条件发生变化，请重新查看路线。');visit(state,target,data);}journal(state,'【行路】抵达'+data.by.maps[id].name+'。');}
@@ -139,12 +146,20 @@ export function dispatch(data,current,action,now=Date.now()) {
   else if(type==='finishScheme')finishScheme(state,data);
   else if(type==='dungeon')beginDungeon(state,data,id);
   else if(type==='battleTick')advanceBattle(state,data,action.delta);
+  else if(type==='battleOrder')battleOrder(state,action);
   else if(type==='battleSkill')castSkill(state,data,action.hero,id);
   else if(type==='battleSkillMode')setBattleSkillMode(state,action.mode);
   else if(type==='battleItem')useBattleItem(state,data,id);
   else if(type==='battleRetreat')retreatBattle(state);
   else if(type==='finishBattle')finishBattle(state,data);
-  else if(type==='recruit')recruit(state,data,id);
+  else if(type==='recruit'){delete state.recruit.lastBatch;recruit(state,data,id);}
+  else if(type==='recruitTen'){
+    requireRule(!id,'十连仅限普通招贤。');
+    requireRule((state.inventory.recruit_order||0)>=10,'十连需要 10 张普通招贤令。');
+    const results=[];
+    for(let i=0;i<10;i++){recruit(state,data);results.push({...state.recruit.lastResult});syncAvailability(state,data);completeVolume(state,data);}
+    state.commandVersion=1;state.recruit.lastBatch=results;
+  }
   else if(type==='team'){
     requireRule(Array.isArray(action.ids)&&action.ids.length<=3&&new Set(action.ids).size===action.ids.length&&action.ids.every(id=>state.heroes[id]?.status==='owned'),'只可安排最多三名不重复的入寨好汉。');
     requireRule(action.ids.length>0||!Object.values(state.heroes).some(h=>h.status==='owned'),'至少留一名好汉出阵。');
@@ -166,7 +181,7 @@ export function dispatch(data,current,action,now=Date.now()) {
     state.daily.events.push(event.id);count(state,'event');if(state.location==='tavern')count(state,'news');state.event=null;journal(state,choice.text);
   }
   else if(['skillUpgrade','skillBook','martialDrill','mountAdopt','mountFeed','mountRank','mountRide'].includes(type))growthAction(state,data,action);
-  else if(['buy','use','craftOrder','exchange','craftEquip','buyEquip','equip','strengthen','dismantle'].includes(type))itemAction(state,data,action);
+  else if(['buy','use','craftOrder','exchange','craftEquip','buyEquip','equip','equipLock','strengthen','dismantle'].includes(type))itemAction(state,data,action);
   else throw new Error('尚未支持这个操作。');
-  syncAvailability(state,data);completeVolume(state,data);state.revision++;return state;
+  syncAvailability(state,data);completeVolume(state,data);recordLedger(current,state);state.revision++;return state;
 }

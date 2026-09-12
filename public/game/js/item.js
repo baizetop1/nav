@@ -1,5 +1,5 @@
-import { count, journal, random, requireRule } from './utils.js?v=0.9.0';
-import { gainExp } from './hero.js?v=0.9.0';
+import { count, journal, random, requireRule } from './utils.js?v=0.12.0';
+import { gainExp } from './hero.js?v=0.12.0';
 export function gainItem(state, id, amount, data) {
   requireRule(data.by.items[id] && Number.isInteger(amount) && amount > 0,'无效的道具奖励。');
   state.inventory[id]=(state.inventory[id]||0)+amount;count(state,'gain_'+id,amount);
@@ -45,7 +45,8 @@ export function itemAction(state, data, action) {
     pay(state,type==='craftEquip'?model.recipe:{silver:model.price*2});newEquipment(state,id);journal(state,`取得${model.quality}·${model.name}。`);return;
   }
   const equip=state.equipment.find(e=>e.uid===id);requireRule(equip,'未找到这件装备。');const model=data.by.equipments[equip.item];
-  if(type==='equip') {
+  if(type==='equipLock') {requireRule(typeof action.locked==='boolean','无效的锁定状态。');equip.locked=action.locked;state.commandVersion=1;journal(state,model.name+(equip.locked?'已锁定，不能分解。':'已解除锁定。'));}
+  else if(type==='equip') {
     requireRule(hero===null||state.heroes[hero]?.status==='owned','只有入寨好汉能够穿戴。');
     if(hero)for(const e of state.equipment)if(e.hero===hero&&data.by.equipments[e.item].type===model.type)e.hero=null;
     equip.hero=hero;journal(state,`${model.name}${hero?'交给'+data.by.heroes[hero].name:'已卸下'}。`);
@@ -56,6 +57,6 @@ export function itemAction(state, data, action) {
     if(success){equip.plus++;count(state,'strengthen');journal(state,`${model.name}强化至 +${equip.plus}。`);}
     else journal(state,`${model.name}此次淬炼未成，碎银、精铁与强化符已消耗；装备仍为 +${equip.plus}，没有降级或损毁。`);
   }
-  else if(type==='dismantle') {requireRule(!equip.hero,'请先卸下装备，再分解。');state.equipment=state.equipment.filter(e=>e.uid!==id);gainItem(state,'scrap_iron',model.tier*2+equip.plus,data);journal(state,`${model.name}已分解为碎铁。`);}
+  else if(type==='dismantle') {requireRule(!equip.locked,'此装备已锁定，请先解锁再分解。');requireRule(!equip.hero,'请先卸下装备，再分解。');state.equipment=state.equipment.filter(e=>e.uid!==id);gainItem(state,'scrap_iron',model.tier*2+equip.plus,data);journal(state,`${model.name}已分解为碎铁。`);}
   else throw new Error('未知道具操作。');
 }

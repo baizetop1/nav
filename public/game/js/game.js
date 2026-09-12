@@ -1,15 +1,15 @@
-import { gains, rewardDialog } from './rewards-ui.js?v=0.9.0';
-import { ActivityLog } from './activity.js?v=0.9.0';
-import { loadData } from './data.js?v=0.9.0';
-import { dispatch, newGame } from './core.js?v=0.9.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.9.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.9.0';
-import { patchElement } from './dom.js?v=0.9.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.12.0';
+import { ActivityLog } from './activity.js?v=0.12.0';
+import { loadData } from './data.js?v=0.12.0';
+import { dispatch, newGame } from './core.js?v=0.12.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.12.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.12.0';
+import { patchElement } from './dom.js?v=0.12.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.9.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.9.0';
-import { CloudClient } from './cloud.js?v=0.9.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.9.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.12.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.12.0';
+import { CloudClient } from './cloud.js?v=0.12.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.12.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
@@ -22,7 +22,7 @@ const makeStore=id=>new SlotStore(database,data,id,change=>channel?.postMessage(
 async function refreshSlots(){try{slots=await database.all();}catch{slots=[store.record];}}
 function rememberSlot(){try{sessionStorage.setItem('baize_shuihu_active_slot',String(store.id));}catch{}}
 function saveBox(){return {record:store.record,slots,cloud:cloudView,dirty};}
-let mapTarget=null,roster={};
+let mapTarget=null,roster={},gear={};
 let data,state,store,view='map',status='',error='',notice='',recruitTarget='',locked=false,invalid=false,dirty=false,pendingImport=null,entered=false;
 let battlePaused=true,battlePauseReason='',lastBattlePulse=null,lastBattleSaved=0,paintRevision=0;
 function paint(focus=false){
@@ -36,7 +36,7 @@ function paint(focus=false){
   const anchorId=anchor?.dataset.logEntry,anchorOffset=anchor&&anchor.getBoundingClientRect().top-oldLog.getBoundingClientRect().top;
   const entries=activity.observe(state,{available:entered&&!invalid,feedback:notice});
   if(!logPaused&&(focus||!state.battle||performance.now()-lastLogPaint>=2000)){visibleEntries=entries.filter(e=>logMode==='all'||e.kind!=='battle'||!/进击|普攻|受到持续|损失.*气血/.test(e.text)||/施展|首领|蓄势|得胜|退阵|无力再战|军令/.test(e.text)).map(e=>({...e}));lastLogPaint=performance.now();}
-  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed,mapTarget,roster,leaderboard});
+  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed,mapTarget,roster,leaderboard,gear});
   if(root.querySelector('.viewport-shell')){const next=document.createElement('template');next.innerHTML=html;patchElement(root.firstElementChild,next.content.firstElementChild);}
   else root.innerHTML=html;
   root.dataset.view=view;
@@ -230,26 +230,36 @@ async function handle(command){
   if(type==='ui_start'){const before=state;await persist(state.camp?state:dispatch(data,state,{type:'campFound'}));entered=true;view='camp';paint(true);showRewards(before,state);return;}
   if(type==='ui_battleSpeed'){if(![.5,1,2].includes(command.speed))throw new Error('无效速度');battleSpeed=command.speed;try{localStorage.setItem('baize_shuihu_battle_speed',String(battleSpeed));}catch{}paint();return;}
   if(type==='ui_rankRefresh'){if(leaderboard.loading)return;leaderboard.loading=true;leaderboard.error='';leaderboard.data=null;paint();try{leaderboard.data=await cloud.leaderboard();}catch(e){leaderboard.error=e.status===404?'排行榜服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.loading=false;paint();}return;}
+  if(type==='ui_gearFilter'){gear=Object.fromEntries(['query','type','quality','state'].map(k=>[k,document.getElementById('gear-'+k).value]));paint();return;}
+  if(type==='ui_gearReset'){gear={};paint();for(const k of ['query','type','quality','state'])document.getElementById('gear-'+k).value=k==='query'?'':'all';return;}
   if(type==='ui_rosterFilter'){
     roster={...roster,...Object.fromEntries(['query','status','group','quality','role'].map(k=>[k,document.getElementById('roster-'+k).value])),page:0,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;
   }
   if(type==='ui_rosterReset'){roster={};paint();for(const k of ['query','status','group','quality','role'])document.getElementById('roster-'+k).value=k==='query'?'':'all';return;}
   if(type==='ui_rosterPage'){roster={...roster,page:command.page,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_goalOpen'){const g=state.development?.goal;if(g?.kind==='craft')view='forge';else if(g){view='heroes';roster={selected:g.id,query:data.by.heroes[g.id].name};}paint(true);document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}
+    if(type==='ui_frontierAssign')command={type:'frontierAssign',id,worker:document.getElementById('frontier-worker-'+id).value||null};
+  if(type==='ui_frontierGuard')command={type:'frontierGuard',id,hero:document.getElementById('frontier-guard-'+id).value.replace(/^hero:/,'')||null};
   if(type==='ui_rosterSelect'){roster={...roster,selected:id};paint();document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_mapInspect'){if(!data.by.maps[id])throw new Error('没有这个地点。');mapTarget=id;view='map';paint();document.getElementById('atlas-target')?.scrollIntoView({block:'start'});return;}
-  if(type==='ui_campFormation')command={type:'campFormation',mode:document.getElementById('camp-mode').value,arm:document.getElementById('camp-arm').value,tactic:document.getElementById('camp-tactic').value,deployment:Number(document.getElementById('camp-deployment').value)};
+  if(type==='ui_campFormation')command={type:'campFormation',mode:document.getElementById('camp-mode').value,tactic:document.getElementById('camp-tactic').value,deployment:Number(document.getElementById('camp-deployment').value)};
   if(type==='ui_team')command={type:'team',ids:[0,1,2].map(i=>document.getElementById('team-'+i).value).filter(Boolean)};
   if(type==='ui_equip')command={type:'equip',id,hero:document.getElementById('holder-'+id).value||null};
   if(type==='ui_dismantle'){if(!window.confirm('确认分解此装备？装备将变为碎铁，不能原样取回。'))return;command={type:'dismantle',id};}
   const before=state,hadBattle=!!state.battle,next=dispatch(data,state,command);await persist(next);
   if(!hadBattle&&next.battle&&!next.battle.outcome){battlePaused=false;battlePauseReason='';lastBattlePulse=performance.now();}
-  notice=type==='recruit'||type.startsWith('battle')||next.battle?'':next.message;
+  notice=['recruit','recruitTen'].includes(type)||type.startsWith('battle')||next.battle?'':next.message;
   if(type==='travel'||type==='move')mapTarget=next.location;
   if(next.battle||next.scheme||next.event||['move','travel','story','startScheme'].includes(type))view='map';
-  if(type==='finishBattle'&&before.battle?.context.type==='camp')view='camp';
+  if(type==='finishBattle'&&['camp','frontier'].includes(before.battle?.context.type))view='camp';
   if(type==='finishBattle'&&before.battle?.context.type==='rotation')view='trials';
-  paint(['move','travel','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
-  if(type==='recruit')showRecruitResult(next.recruit.lastResult,JSON.stringify(command));
+  paint(['presetLoad','move','travel','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
+  if(type==='presetLoad'){
+    // A user-edited select retains its DOM value even when selected attributes match.
+    // Loading a preset is an explicit request to replace those pending form edits.
+    for(const [id,value] of Object.entries({'camp-mode':next.camp.mode,'camp-tactic':next.camp.tactic,'camp-deployment':next.camp.deployment,...Object.fromEntries([0,1,2].map(i=>['team-'+i,next.team[i]||'']))})){const el=document.getElementById(id);if(el)el.value=String(value);}
+  }
+  if(['recruit','recruitTen'].includes(type))showRecruitResult(type==='recruitTen'?next.recruit.lastBatch:next.recruit.lastResult,JSON.stringify(command));
   else {if(gains(before,next,data).length&&next.battle&&!next.battle.outcome)await pauseBattle('查看收获时已暂停，关闭后可继续交战。');showRewards(before,next,JSON.stringify(command));}
 }
 root.addEventListener('click',async event=>{
@@ -258,7 +268,8 @@ root.addEventListener('click',async event=>{
   if(button.hasAttribute('data-log-pause')){logPaused=!logPaused;lastLogPaint=0;paint();return;}
   if(button.hasAttribute('data-log-filter')){logMode=logMode==='all'?'important':'all';logPaused=false;lastLogPaint=0;paint();return;}
   if(operation)return;
-  if(button.hasAttribute('data-map-region')){document.getElementById('map-region-'+button.dataset.mapRegion)?.scrollIntoView({block:'start'});return;}
+  if(button.hasAttribute('data-frontier-jump')){document.getElementById('frontier-'+button.dataset.frontierJump)?.scrollIntoView({block:'start'});return;}
+    if(button.hasAttribute('data-map-region')){document.getElementById('map-region-'+button.dataset.mapRegion)?.scrollIntoView({block:'start'});return;}
   if(button.hasAttribute('data-map-local')){document.getElementById('map-local')?.scrollIntoView({block:'start'});return;}
   if(button.dataset.view){if(!entered&&button.dataset.view!=='save'&&(locked||button.dataset.view!=='welcome'))return;operation=true;try{if(button.dataset.view!==view)await pauseBattle('离开战斗页面时已暂停。返回后点击继续交战。');view=button.dataset.view;error='';notice='';if(view==='save')await refreshSlots();paint(true);}finally{operation=false;}return;}
   if(!button.dataset.command)return;const painted=paintRevision;button.disabled=true;operation=true;root.setAttribute('aria-busy','true');

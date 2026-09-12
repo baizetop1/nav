@@ -1,5 +1,5 @@
-import { helperSummary } from './helpers-ui.js?v=0.9.0';
-import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.9.0';
+import { helperSummary } from './helpers-ui.js?v=0.12.0';
+import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.12.0';
 const resource={wood:'木材',food:'粮草',silver:'碎银'};
 const quality={1:'凡品',2:'良品',3:'珍品'};
 export function goalBoard(s,d,btn){

@@ -1,0 +1,11 @@
+.battle-orders,.equipment-tools{border:1px solid var(--line,#58604c);padding:14px;margin:12px 0;background:#c4ac6210}
+.battle-orders .actions,.gear-filters{display:flex;flex-wrap:wrap;gap:8px}
+.battle-orders [aria-pressed=true]{border-color:#d8bf70;background:#d8bf7026;color:#f1dd9b}
+.gear-filters label{flex:1 1 130px;min-width:0}
+.gear-filters input,.gear-filters select{box-sizing:border-box;width:100%;min-width:0}
+.equipment-inventory .card[data-locked=true]{border-left:3px solid #d8bf70}
+.recruit-batch{width:min(820px,94vw);max-height:88dvh;overflow-y:auto;box-sizing:border-box}
+.recruit-batch-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.batch-draw{min-width:0;padding:10px!important;text-align:center}
+.batch-draw h3{font-size:1rem}.batch-draw p{overflow-wrap:anywhere}.batch-draw .hero-portrait{margin:auto}
+@media(max-width:600px){.recruit-batch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.battle-orders{padding:10px}.battle-orders .actions button{flex:1 1 120px}.gear-filters label{flex-basis:42%}}

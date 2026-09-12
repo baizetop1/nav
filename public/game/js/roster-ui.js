@@ -1,6 +1,7 @@
-import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.9.0';
-import { portrait } from './camp-ui.js?v=0.9.0';
-import { dungeonEntry } from './map.js?v=0.9.0';
+import { qualityTechnique } from './development-ui.js?v=0.12.0';
+import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.12.0';
+import { portrait } from './camp-ui.js?v=0.12.0';
+import { dungeonEntry } from './map.js?v=0.12.0';
 
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 const statuses={unknown:'未闻',heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'};
@@ -12,7 +13,7 @@ export function rosterSelection(s,d,filter={}){
 }
 export function qualityPanel(s,d,h,esc,btn){
   const current=qualityOf(s.heroes[h.id]),q=promotionQuote(s,h.id),next=q.next;
-  return `<section class="quality-panel quality-${current}"><div class="quality-steps">${QUALITIES.map((v,i)=>`<span class="${i<=current?'quality-reached':''}">${v.name}</span>`).join('<i>→</i>')}</div><p>当前${QUALITIES[current].name}品 · ${current?`气血、攻击、防御、谋略较凡品 +${Math.round((QUALITIES[current].power-1)*100)}%，速度 +${Math.round((QUALITIES[current].speed-1)*100)}%。`:'保留这位好汉原有的战斗本领。'}</p>${next?`<p class="note">升至${next.name}品：人物 ${next.level}级 · 聚义厅 ${next.hall}级 · 碎银 ${q.cost.silver} · ${Object.entries(q.cost.items).map(([id,n])=>`${d.by.items[id].name} ${s.inventory[id]||0}/${n}`).join(' · ')}</p><p class="note">${esc(q.reason||'条件已满足，升品必成。')} 等级、经验、招式、装备与坐骑继承。</p>${btn('升至'+next.name+'品',{type:'heroPromote',id:h.id},'primary',!!q.reason)}`:'<p class="note">已达仙品，可继续精进招式、装备与坐骑。</p>'}</section>`;
+  return `<section class="quality-panel quality-${current}"><div class="quality-steps">${QUALITIES.map((v,i)=>`<span class="${i<=current?'quality-reached':''}">${v.name}</span>`).join('<i>→</i>')}</div><p>当前${QUALITIES[current].name}品 · ${current?`气血、攻击、防御、谋略较凡品 +${Math.round((QUALITIES[current].power-1)*100)}%，速度 +${Math.round((QUALITIES[current].speed-1)*100)}%。`:'保留这位好汉原有的战斗本领。'}</p>${qualityTechnique(h)}${next?`<p class="note">升至${next.name}品：人物 ${next.level}级 · 聚义厅 ${next.hall}级 · 碎银 ${q.cost.silver} · ${Object.entries(q.cost.items).map(([id,n])=>`${d.by.items[id].name} ${s.inventory[id]||0}/${n}`).join(' · ')}</p><p class="note">${esc(q.reason||'条件已满足，升品必成。')} 等级、经验、招式、装备与坐骑继承。</p>${btn('升至'+next.name+'品',{type:'heroPromote',id:h.id},'primary',!!q.reason)}${btn('追踪升品材料',{type:'goalSet',kind:'promotion',id:h.id},'secondary',!!(s.battle||s.scheme||s.event))}`:'<p class="note">已达仙品，可继续精进招式、装备与坐骑。</p>'}</section>`;
 }
 export function invitation(s,h,btn){
   if(s.heroes[h.id].status==='owned')return '';

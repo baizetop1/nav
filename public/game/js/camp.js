@@ -1,10 +1,12 @@
-import { ARMS } from './martial.js?v=0.9.0';
-import { hireHelper, helperBonus, validateHelpers } from './helpers.js?v=0.9.0';
-import { finishDuty, developmentAction, raidBonus, RAID_INTEL, searchEquipment } from './camp-development.js?v=0.9.0';
-import { requireRule, journal, count } from './utils.js?v=0.9.0';
-import { ownHero } from './hero.js?v=0.9.0';
-import { startBattle } from './battle.js?v=0.9.0';
-import { grant } from './item.js?v=0.9.0';
+import { initializeDoctrine } from './doctrines.js?v=0.12.0';
+import { CORPS, corpsRank } from './development.js?v=0.12.0';
+import { ARMS } from './martial.js?v=0.12.0';
+import { hireHelper, helperBonus, validateHelpers } from './helpers.js?v=0.12.0';
+import { finishDuty, developmentAction, raidBonus, RAID_INTEL, searchEquipment } from './camp-development.js?v=0.12.0';
+import { requireRule, journal, count } from './utils.js?v=0.12.0';
+import { ownHero } from './hero.js?v=0.12.0';
+import { startBattle } from './battle.js?v=0.12.0';
+import { grant } from './item.js?v=0.12.0';
 
 export const BUILDINGS={hall:{name:'聚义厅',wood:40,silver:100,description:'提高寨子规模，吸引更多好汉。'},farm:{name:'农田',wood:25,silver:60,description:'每次经营产出粮草，用于募兵与出征。'},lumber:{name:'伐木场',wood:20,silver:50,description:'每次经营产出木材，用于修建与扩建。'},barracks:{name:'兵营',wood:35,silver:80,description:'每级提供 20 名兵额，可随英雄出征。'},clinic:{name:'医馆',wood:30,silver:80,description:'治疗伤兵，降低补员的粮草支出。'},market:{name:'集市',wood:30,silver:80,description:'每次经营增加碎银收入。'}};
 export const TACTICS={balanced:{name:'稳扎稳打',attack:1,defense:1,loss:.12},assault:{name:'强攻破阵',attack:1.2,defense:.85,loss:.24},guard:{name:'结阵固守',attack:.9,defense:1.25,loss:.06}};
@@ -27,7 +29,7 @@ export function campAction(s,d,a){
   }else if(a.type==='campHeal'){
     requireRule(c.buildings.clinic>0&&c.wounded>0,'需要医馆和待治伤兵。');const n=Math.min(c.wounded,5*c.buildings.clinic+helperBonus(s).heal);requireRule(c.food>=n,'治疗需要每人粮草 1。');c.food-=n;c.wounded-=n;c.troops+=n;journal(s,`【医馆】${n} 名伤兵归队。`);
   }else if(a.type==='campFormation'){
-    requireRule(['solo','army'].includes(a.mode)&&Object.hasOwn(TACTICS,a.tactic)&&Number.isInteger(a.deployment)&&a.deployment>=1&&a.deployment<=100,'出征配置无效。');const arm=a.arm??c.arm??'infantry';requireRule(Object.hasOwn(ARMS,arm)&&arm!=='neutral'&&c.buildings.hall>=ARMS[arm].hall,'该兵种尚未开放。');c.arm=arm;c.mode=a.mode;c.tactic=a.tactic;c.deployment=a.deployment;journal(s,'出征配置已保存：'+(c.mode==='solo'?'英雄独行':'英雄带兵')+' · '+TACTICS[c.tactic].name+'。');
+    requireRule(['solo','army'].includes(a.mode)&&Object.hasOwn(TACTICS,a.tactic)&&Number.isInteger(a.deployment)&&a.deployment>=1&&a.deployment<=100,'出征配置无效。');const arm=a.arm??'infantry';requireRule(Object.hasOwn(ARMS,arm)&&arm!=='neutral'&&c.buildings.hall>=ARMS[arm].hall,'该兵种尚未开放。');c.arm=arm;c.mode=a.mode;c.tactic=a.tactic;c.deployment=a.deployment;journal(s,'出征配置已保存：'+(c.mode==='solo'?'英雄独行':'英雄带兵')+' · '+TACTICS[c.tactic].name+'。');
   }else if(a.type==='campInvite'){
     const h=d.by.heroes[a.id];requireRule(h&&s.heroes[a.id].status!=='owned','这位好汉已入寨。');requireRule(c.buildings.hall>=Math.max(1,h.star-2)&&c.work+c.sorties>=h.star,'寨子规模或经营历练不足。');const price=h.star*120;requireRule(s.player.silver>=price,'迎贤碎银不足。');s.player.silver-=price;ownHero(s,a.id,d);journal(s,`【迎贤】${h.name}听闻寨中气象，前来共举义事。`);
   }else if(a.type==='campRaid'){
@@ -37,7 +39,8 @@ export function campAction(s,d,a){
 }
 export function attachTroops(s,n){
   const c=s.camp,b=s.battle;if(!c||!b||b.guest)return;const t=TACTICS[c.tactic];b.expedition={troops:n,tactic:c.tactic,arm:c.arm||'infantry'};const bonus=raidBonus(b);
-  for(const u of b.team){const share=n/b.team.length;u.attack=Math.round((u.attack+share*3)*t.attack*bonus.attack);u.defense=Math.round((u.defense+share)*t.defense*bonus.defense);u.hp=u.maxHp=Math.round(u.maxHp+share*18);}
+  for(const [i,u] of b.team.entries()){const share=Math.floor(n/b.team.length)+(i<n%b.team.length?1:0);if(b.martial===2)u.corps={id:u.id,arm:CORPS[u.id].arm,rank:corpsRank(s,u.id),troops:share};u.attack=Math.round((u.attack+share*3)*t.attack*bonus.attack);u.defense=Math.round((u.defense+share)*t.defense*bonus.defense);u.hp=u.maxHp=Math.round(u.maxHp+share*18);if(share&&b.martial===2){const p=CORPS[u.id].profile,r=u.corps.rank;if(p==='shield')u.defense=Math.round(u.defense*(1+.06*r));if(p==='scout')u.speed=Math.round(u.speed*(1+.05*r));if(p==='medic')u.hp=u.maxHp=Math.round(u.maxHp*(1+.06*r));b.log.push(`【专属部队】${u.name} · ${CORPS[u.id].name} ${r}阶 · ${share} 人。`);}}
+  initializeDoctrine(b);
   b.log.push(`【军令】${n?'乡勇 '+n+' 人随行':'英雄独行'} · ${t.name}。`);
   if(b.context.type==='camp'){const intel=RAID_INTEL[b.context.id];b.log.push('【敌情】'+intel.text+(intel.tactic===c.tactic?' 军令得当。'+intel.bonus:' 本次未获得地形军令加成。'));}
 }

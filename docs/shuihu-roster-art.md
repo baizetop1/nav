@@ -1,8 +1,8 @@
 # 108 将新增立绘
 
-计划六张 4×4 图集，本次内置 imagegen 实际完成 2 张，接入 32 位新增人物。原 14 位人物继续使用原图集，合计 46 位有立绘。使用 CSS 百分比定位，无二次绘画或替换原素材。
+计划六张 4×4 图集，本次内置 imagegen 实际完成 6 张，接入 94 位新增人物。原 14 位人物继续使用原图集，合计 108 位有立绘。使用 CSS 百分比定位，无二次绘画或替换原素材。
 
-图片服务返回网络错误，尚缺 62 位立绘；这些人物显示标有“立绘待补”的姓名卡，不借用其他好汉的头像。名册、战斗、养成不依赖图片完成。
+0.10.0 已补齐全部 108 位立绘。四张补齐图集经逐格查看后接入；最后一张使用简化提示词重新生成，前十四格对应人物，末两格是山景。
 
 素材目录：`public/game/art/`；定位样式：`public/game/css/roster-art.css`。
 
@@ -10,6 +10,22 @@
 
 | 人物 | 图集 | 行 | 列 |
 | --- | --- | --- | --- |
+| 卢俊义 | hero-atlas-roster-1.png | 1 | 1 |
+| 关胜 | hero-atlas-roster-1.png | 1 | 2 |
+| 秦明 | hero-atlas-roster-1.png | 1 | 3 |
+| 呼延灼 | hero-atlas-roster-1.png | 1 | 4 |
+| 李应 | hero-atlas-roster-1.png | 2 | 1 |
+| 朱仝 | hero-atlas-roster-1.png | 2 | 2 |
+| 董平 | hero-atlas-roster-1.png | 2 | 3 |
+| 张清 | hero-atlas-roster-1.png | 2 | 4 |
+| 徐宁 | hero-atlas-roster-1.png | 3 | 1 |
+| 索超 | hero-atlas-roster-1.png | 3 | 2 |
+| 戴宗 | hero-atlas-roster-1.png | 3 | 3 |
+| 李逵 | hero-atlas-roster-1.png | 3 | 4 |
+| 史进 | hero-atlas-roster-1.png | 4 | 1 |
+| 穆弘 | hero-atlas-roster-1.png | 4 | 2 |
+| 雷横 | hero-atlas-roster-1.png | 4 | 3 |
+| 李俊 | hero-atlas-roster-1.png | 4 | 4 |
 | 阮小二 | hero-atlas-roster-2.png | 1 | 1 |
 | 张横 | hero-atlas-roster-2.png | 1 | 2 |
 | 阮小五 | hero-atlas-roster-2.png | 1 | 3 |
@@ -26,6 +42,22 @@
 | 韩滔 | hero-atlas-roster-2.png | 4 | 2 |
 | 彭玘 | hero-atlas-roster-2.png | 4 | 3 |
 | 单廷珪 | hero-atlas-roster-2.png | 4 | 4 |
+| 魏定国 | hero-atlas-roster-3.png | 1 | 1 |
+| 萧让 | hero-atlas-roster-3.png | 1 | 2 |
+| 裴宣 | hero-atlas-roster-3.png | 1 | 3 |
+| 欧鹏 | hero-atlas-roster-3.png | 1 | 4 |
+| 邓飞 | hero-atlas-roster-3.png | 2 | 1 |
+| 燕顺 | hero-atlas-roster-3.png | 2 | 2 |
+| 杨林 | hero-atlas-roster-3.png | 2 | 3 |
+| 凌振 | hero-atlas-roster-3.png | 2 | 4 |
+| 蒋敬 | hero-atlas-roster-3.png | 3 | 1 |
+| 吕方 | hero-atlas-roster-3.png | 3 | 2 |
+| 郭盛 | hero-atlas-roster-3.png | 3 | 3 |
+| 安道全 | hero-atlas-roster-3.png | 3 | 4 |
+| 皇甫端 | hero-atlas-roster-3.png | 4 | 1 |
+| 王英 | hero-atlas-roster-3.png | 4 | 2 |
+| 扈三娘 | hero-atlas-roster-3.png | 4 | 3 |
+| 鲍旭 | hero-atlas-roster-3.png | 4 | 4 |
 | 樊瑞 | hero-atlas-roster-4.png | 1 | 1 |
 | 孔明 | hero-atlas-roster-4.png | 1 | 2 |
 | 孔亮 | hero-atlas-roster-4.png | 1 | 3 |
@@ -42,12 +74,42 @@
 | 郑天寿 | hero-atlas-roster-4.png | 4 | 2 |
 | 陶宗旺 | hero-atlas-roster-4.png | 4 | 3 |
 | 宋清 | hero-atlas-roster-4.png | 4 | 4 |
+| 乐和 | hero-atlas-roster-5.png | 1 | 1 |
+| 龚旺 | hero-atlas-roster-5.png | 1 | 2 |
+| 丁得孙 | hero-atlas-roster-5.png | 1 | 3 |
+| 穆春 | hero-atlas-roster-5.png | 1 | 4 |
+| 曹正 | hero-atlas-roster-5.png | 2 | 1 |
+| 宋万 | hero-atlas-roster-5.png | 2 | 2 |
+| 杜迁 | hero-atlas-roster-5.png | 2 | 3 |
+| 薛永 | hero-atlas-roster-5.png | 2 | 4 |
+| 施恩 | hero-atlas-roster-5.png | 3 | 1 |
+| 李忠 | hero-atlas-roster-5.png | 3 | 2 |
+| 周通 | hero-atlas-roster-5.png | 3 | 3 |
+| 汤隆 | hero-atlas-roster-5.png | 3 | 4 |
+| 杜兴 | hero-atlas-roster-5.png | 4 | 1 |
+| 邹渊 | hero-atlas-roster-5.png | 4 | 2 |
+| 邹润 | hero-atlas-roster-5.png | 4 | 3 |
+| 朱贵 | hero-atlas-roster-5.png | 4 | 4 |
+| 朱富 | hero-atlas-roster-6.png | 1 | 1 |
+| 蔡福 | hero-atlas-roster-6.png | 1 | 2 |
+| 蔡庆 | hero-atlas-roster-6.png | 1 | 3 |
+| 李立 | hero-atlas-roster-6.png | 1 | 4 |
+| 李云 | hero-atlas-roster-6.png | 2 | 1 |
+| 焦挺 | hero-atlas-roster-6.png | 2 | 2 |
+| 石勇 | hero-atlas-roster-6.png | 2 | 3 |
+| 孙新 | hero-atlas-roster-6.png | 2 | 4 |
+| 顾大嫂 | hero-atlas-roster-6.png | 3 | 1 |
+| 张青 | hero-atlas-roster-6.png | 3 | 2 |
+| 孙二娘 | hero-atlas-roster-6.png | 3 | 3 |
+| 王定六 | hero-atlas-roster-6.png | 3 | 4 |
+| 郁保四 | hero-atlas-roster-6.png | 4 | 1 |
+| 段景住 | hero-atlas-roster-6.png | 4 | 2 |
 
 ## 待补人物
 
-卢俊义、关胜、秦明、呼延灼、李应、朱仝、董平、张清、徐宁、索超、戴宗、李逵、史进、穆弘、雷横、李俊、魏定国、萧让、裴宣、欧鹏、邓飞、燕顺、杨林、凌振、蒋敬、吕方、郭盛、安道全、皇甫端、王英、扈三娘、鲍旭、乐和、龚旺、丁得孙、穆春、曹正、宋万、杜迁、薛永、施恩、李忠、周通、汤隆、杜兴、邹渊、邹润、朱贵、朱富、蔡福、蔡庆、李立、李云、焦挺、石勇、孙新、顾大嫂、张青、孙二娘、王定六、郁保四、段景住。
+无。
 
-## 原定完整图集提示词（不代表均已生成）
+## 图集原定提示词（第六张最终采用简化提示词重试）
 
 ```json
 [
