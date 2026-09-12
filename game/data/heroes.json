@@ -41,7 +41,58 @@
       "description": "专属脚力；与宋江同行养成。名称与羁绊为本作原创设定。",
       "dungeon": "chai_escort",
       "contract": "songjiang_mount_contract"
-    }
+    },
+    "seat": 1,
+    "group": "tiangang",
+    "starSign": "天魁星"
+  },
+  {
+    "id": "lujunyi",
+    "name": "卢俊义",
+    "title": "玉麒麟",
+    "star": 5,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 980,
+      "attack": 118,
+      "defense": 70,
+      "speed": 85,
+      "strategy": 50
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "lujunyi_active",
+      "lujunyi_passive",
+      "lujunyi_advanced",
+      "lujunyi_bond"
+    ],
+    "story": "天罡星 · 梁山第 2 席。玉麒麟卢俊义，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "lujunyi_token",
+      "count": 10
+    },
+    "dialogue": "卢俊义道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "玉麒麟义骑",
+      "description": "与卢俊义同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "lujunyi_mount_contract"
+    },
+    "seat": 2,
+    "group": "tiangang",
+    "starSign": "天罡星",
+    "introducedIn": 3
   },
   {
     "id": "wuyong",
@@ -87,145 +138,10 @@
       "description": "专属脚力；与吴用同行养成。名称与羁绊为本作原创设定。",
       "dungeon": "huangnigang",
       "contract": "wuyong_mount_contract"
-    }
-  },
-  {
-    "id": "wusong",
-    "name": "武松",
-    "title": "行者",
-    "star": 5,
-    "type": "fighter",
-    "status": "unknown",
-    "attribute": {
-      "hp": 1200,
-      "attack": 150,
-      "defense": 90,
-      "speed": 110,
-      "strategy": 60
     },
-    "growth": {
-      "hp": 45,
-      "attack": 8,
-      "defense": 3,
-      "speed": 5,
-      "strategy": 1
-    },
-    "skills": [
-      "wusong_active",
-      "wusong_passive",
-      "wusong_advanced",
-      "wusong_bond"
-    ],
-    "story": "话不多，行事刚烈果断。",
-    "core": true,
-    "meetMap": "inn",
-    "meetCondition": {
-      "flag": "wusong_met"
-    },
-    "obtain": {
-      "type": "token",
-      "token": "wusong_token",
-      "count": 10
-    },
-    "dialogue": "话不多，行事刚烈果断。",
-    "mount": {
-      "name": "赤鬃行者",
-      "description": "专属脚力；与武松同行养成。名称与羁绊为本作原创设定。",
-      "dungeon": "jingyanggang",
-      "contract": "wusong_mount_contract"
-    }
-  },
-  {
-    "id": "linchong",
-    "name": "林冲",
-    "title": "豹子头",
-    "star": 5,
-    "type": "fighter",
-    "status": "unknown",
-    "attribute": {
-      "hp": 1100,
-      "attack": 140,
-      "defense": 100,
-      "speed": 105,
-      "strategy": 80
-    },
-    "growth": {
-      "hp": 45,
-      "attack": 8,
-      "defense": 3,
-      "speed": 5,
-      "strategy": 1
-    },
-    "skills": [
-      "linchong_active",
-      "linchong_passive",
-      "linchong_advanced",
-      "linchong_bond"
-    ],
-    "story": "待人克制，枪法沉稳。",
-    "core": true,
-    "meetMap": "dongjing_lane",
-    "meetCondition": {
-      "flag": "lin_tolerant"
-    },
-    "obtain": {
-      "type": "token",
-      "token": "linchong_token",
-      "count": 10
-    },
-    "dialogue": "待人克制，枪法沉稳。",
-    "mount": {
-      "name": "踏雪青骢",
-      "description": "专属脚力；与林冲同行养成。名称与羁绊为本作原创设定。",
-      "dungeon": "shanshenmiao",
-      "contract": "linchong_mount_contract"
-    }
-  },
-  {
-    "id": "luzhishen",
-    "name": "鲁智深",
-    "title": "花和尚",
-    "star": 5,
-    "type": "defender",
-    "status": "unknown",
-    "attribute": {
-      "hp": 1400,
-      "attack": 130,
-      "defense": 115,
-      "speed": 70,
-      "strategy": 65
-    },
-    "growth": {
-      "hp": 55,
-      "attack": 5,
-      "defense": 6,
-      "speed": 2,
-      "strategy": 1
-    },
-    "skills": [
-      "luzhishen_active",
-      "luzhishen_passive",
-      "luzhishen_advanced",
-      "luzhishen_bond"
-    ],
-    "story": "粗豪而细心，见不平便要管。",
-    "core": true,
-    "meetMap": "vegetable_garden",
-    "meetCondition": {
-      "flag": "lu_kindness"
-    },
-    "obtain": {
-      "type": "token",
-      "token": "luzhishen_token",
-      "count": 10
-    },
-    "dialogue": "粗豪而细心，见不平便要管。",
-    "mount": {
-      "name": "乌鬃护法",
-      "description": "专属脚力；与鲁智深同行养成。名称与羁绊为本作原创设定。",
-      "dungeon": "yezhulin",
-      "contract": "luzhishen_mount_contract"
-    }
+    "seat": 3,
+    "group": "tiangang",
+    "starSign": "天机星"
   },
   {
     "id": "gongsunsheng",
@@ -271,21 +187,24 @@
       "description": "专属脚力；与公孙胜同行养成。名称与羁绊为本作原创设定。",
       "dungeon": "huangnigang",
       "contract": "gongsunsheng_mount_contract"
-    }
+    },
+    "seat": 4,
+    "group": "tiangang",
+    "starSign": "天闲星"
   },
   {
-    "id": "yanqing",
-    "name": "燕青",
-    "title": "浪子",
-    "star": 4,
-    "type": "ranger",
+    "id": "guansheng",
+    "name": "关胜",
+    "title": "大刀",
+    "star": 5,
+    "type": "fighter",
     "status": "unknown",
     "attribute": {
-      "hp": 820,
-      "attack": 110,
-      "defense": 60,
-      "speed": 135,
-      "strategy": 100
+      "hp": 1200,
+      "attack": 150,
+      "defense": 90,
+      "speed": 110,
+      "strategy": 60
     },
     "growth": {
       "hp": 45,
@@ -295,29 +214,176 @@
       "strategy": 1
     },
     "skills": [
-      "yanqing_active",
-      "yanqing_passive",
-      "yanqing_advanced",
-      "yanqing_bond"
+      "guansheng_active",
+      "guansheng_passive",
+      "guansheng_advanced",
+      "guansheng_bond"
     ],
-    "story": "身手轻巧，善察人情。",
+    "story": "天勇星 · 梁山第 5 席。大刀关胜，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "guansheng_token",
+      "count": 10
+    },
+    "dialogue": "关胜道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "大刀义骑",
+      "description": "与关胜同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "guansheng_mount_contract"
+    },
+    "seat": 5,
+    "group": "tiangang",
+    "starSign": "天勇星",
+    "introducedIn": 3
+  },
+  {
+    "id": "linchong",
+    "name": "林冲",
+    "title": "豹子头",
+    "star": 5,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1100,
+      "attack": 140,
+      "defense": 100,
+      "speed": 105,
+      "strategy": 80
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "linchong_active",
+      "linchong_passive",
+      "linchong_advanced",
+      "linchong_bond"
+    ],
+    "story": "待人克制，枪法沉稳。",
     "core": true,
-    "meetMap": "liangshan",
+    "meetMap": "dongjing_lane",
     "meetCondition": {
-      "flag": "huangni_complete"
+      "flag": "lin_tolerant"
     },
     "obtain": {
       "type": "token",
-      "token": "yanqing_token",
+      "token": "linchong_token",
       "count": 10
     },
-    "dialogue": "身手轻巧，善察人情。",
+    "dialogue": "待人克制，枪法沉稳。",
     "mount": {
-      "name": "柳影轻骑",
-      "description": "专属脚力；与燕青同行养成。名称与羁绊为本作原创设定。",
-      "dungeon": "zhujiazhuang",
-      "contract": "yanqing_mount_contract"
-    }
+      "name": "踏雪青骢",
+      "description": "专属脚力；与林冲同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "linchong_mount_contract"
+    },
+    "seat": 6,
+    "group": "tiangang",
+    "starSign": "天雄星"
+  },
+  {
+    "id": "qinming",
+    "name": "秦明",
+    "title": "霹雳火",
+    "star": 5,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 980,
+      "attack": 118,
+      "defense": 70,
+      "speed": 85,
+      "strategy": 50
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "qinming_active",
+      "qinming_passive",
+      "qinming_advanced",
+      "qinming_bond"
+    ],
+    "story": "天猛星 · 梁山第 7 席。霹雳火秦明，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "qinming_token",
+      "count": 10
+    },
+    "dialogue": "秦明道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "霹雳火义骑",
+      "description": "与秦明同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "qinming_mount_contract"
+    },
+    "seat": 7,
+    "group": "tiangang",
+    "starSign": "天猛星",
+    "introducedIn": 3
+  },
+  {
+    "id": "huyanzhuo",
+    "name": "呼延灼",
+    "title": "双鞭",
+    "star": 5,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1400,
+      "attack": 130,
+      "defense": 115,
+      "speed": 70,
+      "strategy": 65
+    },
+    "growth": {
+      "hp": 55,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "huyanzhuo_active",
+      "huyanzhuo_passive",
+      "huyanzhuo_advanced",
+      "huyanzhuo_bond"
+    ],
+    "story": "天威星 · 梁山第 8 席。双鞭呼延灼，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "huyanzhuo_token",
+      "count": 10
+    },
+    "dialogue": "呼延灼道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "双鞭义骑",
+      "description": "与呼延灼同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "huyanzhuo_mount_contract"
+    },
+    "seat": 8,
+    "group": "tiangang",
+    "starSign": "天威星",
+    "introducedIn": 3
   },
   {
     "id": "huarong",
@@ -363,187 +429,10 @@
       "description": "专属脚力；与花荣同行养成。名称与羁绊为本作原创设定。",
       "dungeon": "zhujiazhuang",
       "contract": "huarong_mount_contract"
-    }
-  },
-  {
-    "id": "liutang",
-    "name": "刘唐",
-    "title": "赤发鬼",
-    "star": 3,
-    "type": "fighter",
-    "status": "unknown",
-    "attribute": {
-      "hp": 980,
-      "attack": 118,
-      "defense": 70,
-      "speed": 85,
-      "strategy": 50
     },
-    "growth": {
-      "hp": 45,
-      "attack": 8,
-      "defense": 3,
-      "speed": 5,
-      "strategy": 1
-    },
-    "skills": [
-      "liutang_active",
-      "liutang_passive",
-      "liutang_advanced",
-      "liutang_bond"
-    ],
-    "story": "性情急切，对朋友却极真。",
-    "core": false,
-    "meetMap": "zhuang",
-    "meetCondition": {
-      "flag": "seven_stars"
-    },
-    "obtain": {
-      "type": "token",
-      "token": "liutang_token",
-      "count": 10
-    },
-    "dialogue": "性情急切，对朋友却极真。",
-    "mount": {
-      "name": "赤蹄骁骑",
-      "description": "专属脚力；与刘唐同行养成。名称与羁绊为本作原创设定。",
-      "dungeon": "huangnigang",
-      "contract": "liutang_mount_contract"
-    }
-  },
-  {
-    "id": "shiqian",
-    "name": "时迁",
-    "title": "鼓上蚤",
-    "star": 2,
-    "type": "ranger",
-    "status": "unknown",
-    "attribute": {
-      "hp": 680,
-      "attack": 85,
-      "defense": 40,
-      "speed": 145,
-      "strategy": 85
-    },
-    "growth": {
-      "hp": 45,
-      "attack": 8,
-      "defense": 3,
-      "speed": 5,
-      "strategy": 1
-    },
-    "skills": [
-      "shiqian_active",
-      "shiqian_passive",
-      "shiqian_advanced",
-      "shiqian_bond"
-    ],
-    "story": "脚步轻，眼睛亮，善探道路。",
-    "core": false,
-    "meetMap": "tavern",
-    "meetCondition": null,
-    "obtain": {
-      "type": "token",
-      "token": "shiqian_token",
-      "count": 10
-    },
-    "dialogue": "瘦汉把酒盏往里一挪：“时迁。别的本事不敢夸，哪条路有人，哪扇门开着，我倒看得分明。”他笑了笑，又朝窗外瞥了一眼。",
-    "mount": {
-      "name": "夜行灰驹",
-      "description": "专属脚力；与时迁同行养成。名称与羁绊为本作原创设定。",
-      "dungeon": "jingyanggang",
-      "contract": "shiqian_mount_contract"
-    }
-  },
-  {
-    "id": "baisheng",
-    "name": "白胜",
-    "title": "白日鼠",
-    "star": 1,
-    "type": "support",
-    "status": "unknown",
-    "attribute": {
-      "hp": 780,
-      "attack": 90,
-      "defense": 45,
-      "speed": 85,
-      "strategy": 55
-    },
-    "growth": {
-      "hp": 45,
-      "attack": 8,
-      "defense": 3,
-      "speed": 5,
-      "strategy": 1
-    },
-    "skills": [
-      "baisheng_active",
-      "baisheng_passive",
-      "baisheng_advanced",
-      "baisheng_bond"
-    ],
-    "story": "会唱山歌，熟悉乡道和酒担。",
-    "core": false,
-    "meetMap": "tavern",
-    "meetCondition": null,
-    "obtain": {
-      "type": "token",
-      "token": "baisheng_token",
-      "count": 10
-    },
-    "dialogue": "汉子扶住酒担，咧嘴一笑：“小人白胜，附近乡道走得熟。客官初到郓城？若不嫌弃，这一路的风土人情，我倒能说上几句。”",
-    "mount": {
-      "name": "乡路青驴",
-      "description": "专属脚力；与白胜同行养成。名称与羁绊为本作原创设定。",
-      "dungeon": "jingyanggang",
-      "contract": "baisheng_mount_contract"
-    }
-  },
-  {
-    "id": "ruanxiaoqi",
-    "name": "阮小七",
-    "title": "活阎罗",
-    "star": 3,
-    "type": "fighter",
-    "status": "unknown",
-    "attribute": {
-      "hp": 1050,
-      "attack": 120,
-      "defense": 80,
-      "speed": 90,
-      "strategy": 55
-    },
-    "growth": {
-      "hp": 45,
-      "attack": 8,
-      "defense": 3,
-      "speed": 5,
-      "strategy": 1
-    },
-    "skills": [
-      "ruanxiaoqi_active",
-      "ruanxiaoqi_passive",
-      "ruanxiaoqi_advanced",
-      "ruanxiaoqi_bond"
-    ],
-    "story": "在水上讨生活，胸中有一股不平。",
-    "core": false,
-    "meetMap": "creek",
-    "meetCondition": {
-      "flag": "seven_stars"
-    },
-    "obtain": {
-      "type": "token",
-      "token": "ruanxiaoqi_token",
-      "count": 10
-    },
-    "dialogue": "在水上讨生活，胸中有一股不平。",
-    "mount": {
-      "name": "踏浪乌驹",
-      "description": "专属脚力；与阮小七同行养成。名称与羁绊为本作原创设定。",
-      "dungeon": "huangnigang",
-      "contract": "ruanxiaoqi_mount_contract"
-    }
+    "seat": 9,
+    "group": "tiangang",
+    "starSign": "天英星"
   },
   {
     "id": "chaijin",
@@ -590,7 +479,300 @@
       "description": "专属脚力；与柴进同行养成。名称与羁绊为本作原创设定。",
       "dungeon": "chai_escort",
       "contract": "chaijin_mount_contract"
-    }
+    },
+    "seat": 10,
+    "group": "tiangang",
+    "starSign": "天贵星"
+  },
+  {
+    "id": "liying",
+    "name": "李应",
+    "title": "扑天雕",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 645,
+      "attack": 81,
+      "defense": 38,
+      "speed": 137,
+      "strategy": 81
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "liying_active",
+      "liying_passive",
+      "liying_advanced",
+      "liying_bond"
+    ],
+    "story": "天富星 · 梁山第 11 席。扑天雕李应，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "liying_token",
+      "count": 10
+    },
+    "dialogue": "李应道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "扑天雕义骑",
+      "description": "与李应同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "liying_mount_contract"
+    },
+    "seat": 11,
+    "group": "tiangang",
+    "starSign": "天富星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zhutong",
+    "name": "朱仝",
+    "title": "美髯公",
+    "star": 4,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1327,
+      "attack": 123,
+      "defense": 109,
+      "speed": 66,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 52,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "zhutong_active",
+      "zhutong_passive",
+      "zhutong_advanced",
+      "zhutong_bond"
+    ],
+    "story": "天满星 · 梁山第 12 席。美髯公朱仝，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhutong_token",
+      "count": 10
+    },
+    "dialogue": "朱仝道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "美髯公义骑",
+      "description": "与朱仝同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "zhutong_mount_contract"
+    },
+    "seat": 12,
+    "group": "tiangang",
+    "starSign": "天满星",
+    "introducedIn": 3
+  },
+  {
+    "id": "luzhishen",
+    "name": "鲁智深",
+    "title": "花和尚",
+    "star": 5,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1400,
+      "attack": 130,
+      "defense": 115,
+      "speed": 70,
+      "strategy": 65
+    },
+    "growth": {
+      "hp": 55,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "luzhishen_active",
+      "luzhishen_passive",
+      "luzhishen_advanced",
+      "luzhishen_bond"
+    ],
+    "story": "粗豪而细心，见不平便要管。",
+    "core": true,
+    "meetMap": "vegetable_garden",
+    "meetCondition": {
+      "flag": "lu_kindness"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "luzhishen_token",
+      "count": 10
+    },
+    "dialogue": "粗豪而细心，见不平便要管。",
+    "mount": {
+      "name": "乌鬃护法",
+      "description": "专属脚力；与鲁智深同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "luzhishen_mount_contract"
+    },
+    "seat": 13,
+    "group": "tiangang",
+    "starSign": "天孤星"
+  },
+  {
+    "id": "wusong",
+    "name": "武松",
+    "title": "行者",
+    "star": 5,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1200,
+      "attack": 150,
+      "defense": 90,
+      "speed": 110,
+      "strategy": 60
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "wusong_active",
+      "wusong_passive",
+      "wusong_advanced",
+      "wusong_bond"
+    ],
+    "story": "话不多，行事刚烈果断。",
+    "core": true,
+    "meetMap": "inn",
+    "meetCondition": {
+      "flag": "wusong_met"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "wusong_token",
+      "count": 10
+    },
+    "dialogue": "话不多，行事刚烈果断。",
+    "mount": {
+      "name": "赤鬃行者",
+      "description": "专属脚力；与武松同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "wusong_mount_contract"
+    },
+    "seat": 14,
+    "group": "tiangang",
+    "starSign": "天伤星"
+  },
+  {
+    "id": "dongping",
+    "name": "董平",
+    "title": "双枪将",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1138,
+      "attack": 142,
+      "defense": 85,
+      "speed": 104,
+      "strategy": 57
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "dongping_active",
+      "dongping_passive",
+      "dongping_advanced",
+      "dongping_bond"
+    ],
+    "story": "天立星 · 梁山第 15 席。双枪将董平，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "dongping_token",
+      "count": 10
+    },
+    "dialogue": "董平道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "双枪将义骑",
+      "description": "与董平同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "dongping_mount_contract"
+    },
+    "seat": 15,
+    "group": "tiangang",
+    "starSign": "天立星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zhangqing",
+    "name": "张清",
+    "title": "没羽箭",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 853,
+      "attack": 128,
+      "defense": 62,
+      "speed": 114,
+      "strategy": 76
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "zhangqing_active",
+      "zhangqing_passive",
+      "zhangqing_advanced",
+      "zhangqing_bond"
+    ],
+    "story": "天捷星 · 梁山第 16 席。没羽箭张清，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "stable",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhangqing_token",
+      "count": 10
+    },
+    "dialogue": "张清道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "没羽箭义骑",
+      "description": "与张清同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "zhangqing_mount_contract"
+    },
+    "seat": 16,
+    "group": "tiangang",
+    "starSign": "天捷星",
+    "introducedIn": 3
   },
   {
     "id": "yangzhi",
@@ -637,6 +819,4378 @@
       "description": "专属脚力；与杨志同行养成。名称与羁绊为本作原创设定。",
       "dungeon": "qingzhou_patrol",
       "contract": "yangzhi_mount_contract"
-    }
+    },
+    "seat": 17,
+    "group": "tiangang",
+    "starSign": "天暗星"
+  },
+  {
+    "id": "xuning",
+    "name": "徐宁",
+    "title": "金枪手",
+    "star": 4,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1327,
+      "attack": 123,
+      "defense": 109,
+      "speed": 66,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 52,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "xuning_active",
+      "xuning_passive",
+      "xuning_advanced",
+      "xuning_bond"
+    ],
+    "story": "天祐星 · 梁山第 18 席。金枪手徐宁，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "xuning_token",
+      "count": 10
+    },
+    "dialogue": "徐宁道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "金枪手义骑",
+      "description": "与徐宁同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "xuning_mount_contract"
+    },
+    "seat": 18,
+    "group": "tiangang",
+    "starSign": "天祐星",
+    "introducedIn": 3
+  },
+  {
+    "id": "suochao",
+    "name": "索超",
+    "title": "急先锋",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1090,
+      "attack": 137,
+      "defense": 90,
+      "speed": 95,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 4,
+      "speed": 4,
+      "strategy": 2
+    },
+    "skills": [
+      "suochao_active",
+      "suochao_passive",
+      "suochao_advanced",
+      "suochao_bond"
+    ],
+    "story": "天空星 · 梁山第 19 席。急先锋索超，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "suochao_token",
+      "count": 10
+    },
+    "dialogue": "索超道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "急先锋义骑",
+      "description": "与索超同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "suochao_mount_contract"
+    },
+    "seat": 19,
+    "group": "tiangang",
+    "starSign": "天空星"
+  },
+  {
+    "id": "daizong",
+    "name": "戴宗",
+    "title": "神行太保",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 645,
+      "attack": 81,
+      "defense": 38,
+      "speed": 137,
+      "strategy": 81
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "daizong_active",
+      "daizong_passive",
+      "daizong_advanced",
+      "daizong_bond"
+    ],
+    "story": "天速星 · 梁山第 20 席。神行太保戴宗，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "daizong_token",
+      "count": 10
+    },
+    "dialogue": "戴宗道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "神行太保义骑",
+      "description": "与戴宗同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "daizong_mount_contract"
+    },
+    "seat": 20,
+    "group": "tiangang",
+    "starSign": "天速星",
+    "introducedIn": 3
+  },
+  {
+    "id": "liutang",
+    "name": "刘唐",
+    "title": "赤发鬼",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 980,
+      "attack": 118,
+      "defense": 70,
+      "speed": 85,
+      "strategy": 50
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "liutang_active",
+      "liutang_passive",
+      "liutang_advanced",
+      "liutang_bond"
+    ],
+    "story": "性情急切，对朋友却极真。",
+    "core": false,
+    "meetMap": "zhuang",
+    "meetCondition": {
+      "flag": "seven_stars"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "liutang_token",
+      "count": 10
+    },
+    "dialogue": "性情急切，对朋友却极真。",
+    "mount": {
+      "name": "赤蹄骁骑",
+      "description": "专属脚力；与刘唐同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "liutang_mount_contract"
+    },
+    "seat": 21,
+    "group": "tiangang",
+    "starSign": "天异星"
+  },
+  {
+    "id": "likui",
+    "name": "李逵",
+    "title": "黑旋风",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 929,
+      "attack": 112,
+      "defense": 66,
+      "speed": 81,
+      "strategy": 47
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "likui_active",
+      "likui_passive",
+      "likui_advanced",
+      "likui_bond"
+    ],
+    "story": "天杀星 · 梁山第 22 席。黑旋风李逵，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "likui_token",
+      "count": 10
+    },
+    "dialogue": "李逵道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "黑旋风义骑",
+      "description": "与李逵同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "likui_mount_contract"
+    },
+    "seat": 22,
+    "group": "tiangang",
+    "starSign": "天杀星",
+    "introducedIn": 3
+  },
+  {
+    "id": "shijin",
+    "name": "史进",
+    "title": "九纹龙",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 995,
+      "attack": 114,
+      "defense": 76,
+      "speed": 85,
+      "strategy": 52
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "shijin_active",
+      "shijin_passive",
+      "shijin_advanced",
+      "shijin_bond"
+    ],
+    "story": "天微星 · 梁山第 23 席。九纹龙史进，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "shijin_token",
+      "count": 10
+    },
+    "dialogue": "史进道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "九纹龙义骑",
+      "description": "与史进同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "shijin_mount_contract"
+    },
+    "seat": 23,
+    "group": "tiangang",
+    "starSign": "天微星",
+    "introducedIn": 3
+  },
+  {
+    "id": "muhong",
+    "name": "穆弘",
+    "title": "没遮拦",
+    "star": 4,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1327,
+      "attack": 123,
+      "defense": 109,
+      "speed": 66,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 52,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "muhong_active",
+      "muhong_passive",
+      "muhong_advanced",
+      "muhong_bond"
+    ],
+    "story": "天究星 · 梁山第 24 席。没遮拦穆弘，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "muhong_token",
+      "count": 10
+    },
+    "dialogue": "穆弘道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "没遮拦义骑",
+      "description": "与穆弘同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "muhong_mount_contract"
+    },
+    "seat": 24,
+    "group": "tiangang",
+    "starSign": "天究星",
+    "introducedIn": 3
+  },
+  {
+    "id": "leiheng",
+    "name": "雷横",
+    "title": "插翅虎",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1138,
+      "attack": 142,
+      "defense": 85,
+      "speed": 104,
+      "strategy": 57
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "leiheng_active",
+      "leiheng_passive",
+      "leiheng_advanced",
+      "leiheng_bond"
+    ],
+    "story": "天退星 · 梁山第 25 席。插翅虎雷横，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "leiheng_token",
+      "count": 10
+    },
+    "dialogue": "雷横道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "插翅虎义骑",
+      "description": "与雷横同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "leiheng_mount_contract"
+    },
+    "seat": 25,
+    "group": "tiangang",
+    "starSign": "天退星",
+    "introducedIn": 3
+  },
+  {
+    "id": "lijun",
+    "name": "李俊",
+    "title": "混江龙",
+    "star": 4,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1327,
+      "attack": 123,
+      "defense": 109,
+      "speed": 66,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 52,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "lijun_active",
+      "lijun_passive",
+      "lijun_advanced",
+      "lijun_bond"
+    ],
+    "story": "天寿星 · 梁山第 26 席。混江龙李俊，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "lijun_token",
+      "count": 10
+    },
+    "dialogue": "李俊道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "混江龙义骑",
+      "description": "与李俊同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "lijun_mount_contract"
+    },
+    "seat": 26,
+    "group": "tiangang",
+    "starSign": "天寿星",
+    "introducedIn": 3
+  },
+  {
+    "id": "ruanxiaoer",
+    "name": "阮小二",
+    "title": "立地太岁",
+    "star": 4,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1327,
+      "attack": 123,
+      "defense": 109,
+      "speed": 66,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 52,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "ruanxiaoer_active",
+      "ruanxiaoer_passive",
+      "ruanxiaoer_advanced",
+      "ruanxiaoer_bond"
+    ],
+    "story": "天剑星 · 梁山第 27 席。立地太岁阮小二，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "ruanxiaoer_token",
+      "count": 10
+    },
+    "dialogue": "阮小二道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "立地太岁义骑",
+      "description": "与阮小二同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "ruanxiaoer_mount_contract"
+    },
+    "seat": 27,
+    "group": "tiangang",
+    "starSign": "天剑星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zhangheng",
+    "name": "张横",
+    "title": "船火儿",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 995,
+      "attack": 114,
+      "defense": 76,
+      "speed": 85,
+      "strategy": 52
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "zhangheng_active",
+      "zhangheng_passive",
+      "zhangheng_advanced",
+      "zhangheng_bond"
+    ],
+    "story": "天平星 · 梁山第 28 席。船火儿张横，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhangheng_token",
+      "count": 10
+    },
+    "dialogue": "张横道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "船火儿义骑",
+      "description": "与张横同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "zhangheng_mount_contract"
+    },
+    "seat": 28,
+    "group": "tiangang",
+    "starSign": "天平星",
+    "introducedIn": 3
+  },
+  {
+    "id": "ruanxiaowu",
+    "name": "阮小五",
+    "title": "短命二郎",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1090,
+      "attack": 137,
+      "defense": 90,
+      "speed": 95,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 4,
+      "speed": 4,
+      "strategy": 2
+    },
+    "skills": [
+      "ruanxiaowu_active",
+      "ruanxiaowu_passive",
+      "ruanxiaowu_advanced",
+      "ruanxiaowu_bond"
+    ],
+    "story": "天罪星 · 梁山第 29 席。短命二郎阮小五，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "ruanxiaowu_token",
+      "count": 10
+    },
+    "dialogue": "阮小五道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "短命二郎义骑",
+      "description": "与阮小五同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "ruanxiaowu_mount_contract"
+    },
+    "seat": 29,
+    "group": "tiangang",
+    "starSign": "天罪星"
+  },
+  {
+    "id": "zhangshun",
+    "name": "张顺",
+    "title": "浪里白条",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 777,
+      "attack": 104,
+      "defense": 57,
+      "speed": 128,
+      "strategy": 95
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "zhangshun_active",
+      "zhangshun_passive",
+      "zhangshun_advanced",
+      "zhangshun_bond"
+    ],
+    "story": "天损星 · 梁山第 30 席。浪里白条张顺，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhangshun_token",
+      "count": 10
+    },
+    "dialogue": "张顺道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "浪里白条义骑",
+      "description": "与张顺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "zhangshun_mount_contract"
+    },
+    "seat": 30,
+    "group": "tiangang",
+    "starSign": "天损星",
+    "introducedIn": 3
+  },
+  {
+    "id": "ruanxiaoqi",
+    "name": "阮小七",
+    "title": "活阎罗",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1050,
+      "attack": 120,
+      "defense": 80,
+      "speed": 90,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "ruanxiaoqi_active",
+      "ruanxiaoqi_passive",
+      "ruanxiaoqi_advanced",
+      "ruanxiaoqi_bond"
+    ],
+    "story": "在水上讨生活，胸中有一股不平。",
+    "core": false,
+    "meetMap": "creek",
+    "meetCondition": {
+      "flag": "seven_stars"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "ruanxiaoqi_token",
+      "count": 10
+    },
+    "dialogue": "在水上讨生活，胸中有一股不平。",
+    "mount": {
+      "name": "踏浪乌驹",
+      "description": "专属脚力；与阮小七同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "ruanxiaoqi_mount_contract"
+    },
+    "seat": 31,
+    "group": "tiangang",
+    "starSign": "天败星"
+  },
+  {
+    "id": "yangxiong",
+    "name": "杨雄",
+    "title": "病关索",
+    "star": 4,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1327,
+      "attack": 123,
+      "defense": 109,
+      "speed": 66,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 52,
+      "attack": 5,
+      "defense": 6,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "yangxiong_active",
+      "yangxiong_passive",
+      "yangxiong_advanced",
+      "yangxiong_bond"
+    ],
+    "story": "天牢星 · 梁山第 32 席。病关索杨雄，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "yangxiong_token",
+      "count": 10
+    },
+    "dialogue": "杨雄道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "病关索义骑",
+      "description": "与杨雄同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "yangxiong_mount_contract"
+    },
+    "seat": 32,
+    "group": "tiangang",
+    "starSign": "天牢星",
+    "introducedIn": 3
+  },
+  {
+    "id": "shixiu",
+    "name": "石秀",
+    "title": "拼命三郎",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 995,
+      "attack": 114,
+      "defense": 76,
+      "speed": 85,
+      "strategy": 52
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "shixiu_active",
+      "shixiu_passive",
+      "shixiu_advanced",
+      "shixiu_bond"
+    ],
+    "story": "天慧星 · 梁山第 33 席。拼命三郎石秀，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "shixiu_token",
+      "count": 10
+    },
+    "dialogue": "石秀道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "拼命三郎义骑",
+      "description": "与石秀同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "shixiu_mount_contract"
+    },
+    "seat": 33,
+    "group": "tiangang",
+    "starSign": "天慧星",
+    "introducedIn": 3
+  },
+  {
+    "id": "jiezhen",
+    "name": "解珍",
+    "title": "两头蛇",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 853,
+      "attack": 128,
+      "defense": 62,
+      "speed": 114,
+      "strategy": 76
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "jiezhen_active",
+      "jiezhen_passive",
+      "jiezhen_advanced",
+      "jiezhen_bond"
+    ],
+    "story": "天暴星 · 梁山第 34 席。两头蛇解珍，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "stable",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "jiezhen_token",
+      "count": 10
+    },
+    "dialogue": "解珍道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "两头蛇义骑",
+      "description": "与解珍同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "jiezhen_mount_contract"
+    },
+    "seat": 34,
+    "group": "tiangang",
+    "starSign": "天暴星",
+    "introducedIn": 3
+  },
+  {
+    "id": "jiebao",
+    "name": "解宝",
+    "title": "双尾蝎",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 645,
+      "attack": 81,
+      "defense": 38,
+      "speed": 137,
+      "strategy": 81
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "jiebao_active",
+      "jiebao_passive",
+      "jiebao_advanced",
+      "jiebao_bond"
+    ],
+    "story": "天哭星 · 梁山第 35 席。双尾蝎解宝，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "jiebao_token",
+      "count": 10
+    },
+    "dialogue": "解宝道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "双尾蝎义骑",
+      "description": "与解宝同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "jiebao_mount_contract"
+    },
+    "seat": 35,
+    "group": "tiangang",
+    "starSign": "天哭星",
+    "introducedIn": 3
+  },
+  {
+    "id": "yanqing",
+    "name": "燕青",
+    "title": "浪子",
+    "star": 4,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 820,
+      "attack": 110,
+      "defense": 60,
+      "speed": 135,
+      "strategy": 100
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "yanqing_active",
+      "yanqing_passive",
+      "yanqing_advanced",
+      "yanqing_bond"
+    ],
+    "story": "身手轻巧，善察人情。",
+    "core": true,
+    "meetMap": "liangshan",
+    "meetCondition": {
+      "flag": "huangni_complete"
+    },
+    "obtain": {
+      "type": "token",
+      "token": "yanqing_token",
+      "count": 10
+    },
+    "dialogue": "身手轻巧，善察人情。",
+    "mount": {
+      "name": "柳影轻骑",
+      "description": "专属脚力；与燕青同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "yanqing_mount_contract"
+    },
+    "seat": 36,
+    "group": "tiangang",
+    "starSign": "天巧星"
+  },
+  {
+    "id": "zhuwu",
+    "name": "朱武",
+    "title": "神机军师",
+    "star": 3,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 717,
+      "attack": 67,
+      "defense": 54,
+      "speed": 85,
+      "strategy": 134
+    },
+    "growth": {
+      "hp": 22,
+      "attack": 2,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 9
+    },
+    "skills": [
+      "zhuwu_active",
+      "zhuwu_passive",
+      "zhuwu_advanced",
+      "zhuwu_bond"
+    ],
+    "story": "地魁星 · 梁山第 37 席。神机军师朱武，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhuwu_token",
+      "count": 10
+    },
+    "dialogue": "朱武道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "神机军师义骑",
+      "description": "与朱武同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "zhuwu_mount_contract"
+    },
+    "seat": 37,
+    "group": "disha",
+    "starSign": "地魁星",
+    "introducedIn": 3
+  },
+  {
+    "id": "huangxin",
+    "name": "黄信",
+    "title": "镇三山",
+    "star": 3,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1254,
+      "attack": 116,
+      "defense": 103,
+      "speed": 63,
+      "strategy": 58
+    },
+    "growth": {
+      "hp": 49,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "huangxin_active",
+      "huangxin_passive",
+      "huangxin_advanced",
+      "huangxin_bond"
+    ],
+    "story": "地煞星 · 梁山第 38 席。镇三山黄信，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "huangxin_token",
+      "count": 10
+    },
+    "dialogue": "黄信道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "镇三山义骑",
+      "description": "与黄信同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "huangxin_mount_contract"
+    },
+    "seat": 38,
+    "group": "disha",
+    "starSign": "地煞星",
+    "introducedIn": 3
+  },
+  {
+    "id": "sunli",
+    "name": "孙立",
+    "title": "病尉迟",
+    "star": 3,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1254,
+      "attack": 116,
+      "defense": 103,
+      "speed": 63,
+      "strategy": 58
+    },
+    "growth": {
+      "hp": 49,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "sunli_active",
+      "sunli_passive",
+      "sunli_advanced",
+      "sunli_bond"
+    ],
+    "story": "地勇星 · 梁山第 39 席。病尉迟孙立，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "sunli_token",
+      "count": 10
+    },
+    "dialogue": "孙立道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "病尉迟义骑",
+      "description": "与孙立同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "sunli_mount_contract"
+    },
+    "seat": 39,
+    "group": "disha",
+    "starSign": "地勇星",
+    "introducedIn": 3
+  },
+  {
+    "id": "xuanzan",
+    "name": "宣赞",
+    "title": "丑郡马",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1075,
+      "attack": 134,
+      "defense": 81,
+      "speed": 99,
+      "strategy": 54
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "xuanzan_active",
+      "xuanzan_passive",
+      "xuanzan_advanced",
+      "xuanzan_bond"
+    ],
+    "story": "地杰星 · 梁山第 40 席。丑郡马宣赞，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "xuanzan_token",
+      "count": 10
+    },
+    "dialogue": "宣赞道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "丑郡马义骑",
+      "description": "与宣赞同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "xuanzan_mount_contract"
+    },
+    "seat": 40,
+    "group": "disha",
+    "starSign": "地杰星",
+    "introducedIn": 3
+  },
+  {
+    "id": "haosiwen",
+    "name": "郝思文",
+    "title": "井木犴",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 986,
+      "attack": 125,
+      "defense": 90,
+      "speed": 94,
+      "strategy": 72
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "haosiwen_active",
+      "haosiwen_passive",
+      "haosiwen_advanced",
+      "haosiwen_bond"
+    ],
+    "story": "地雄星 · 梁山第 41 席。井木犴郝思文，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "haosiwen_token",
+      "count": 10
+    },
+    "dialogue": "郝思文道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "井木犴义骑",
+      "description": "与郝思文同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "haosiwen_mount_contract"
+    },
+    "seat": 41,
+    "group": "disha",
+    "starSign": "地雄星",
+    "introducedIn": 3
+  },
+  {
+    "id": "hantao",
+    "name": "韩滔",
+    "title": "百胜将",
+    "star": 3,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1254,
+      "attack": 116,
+      "defense": 103,
+      "speed": 63,
+      "strategy": 58
+    },
+    "growth": {
+      "hp": 49,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "hantao_active",
+      "hantao_passive",
+      "hantao_advanced",
+      "hantao_bond"
+    ],
+    "story": "地威星 · 梁山第 42 席。百胜将韩滔，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "hantao_token",
+      "count": 10
+    },
+    "dialogue": "韩滔道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "百胜将义骑",
+      "description": "与韩滔同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "hantao_mount_contract"
+    },
+    "seat": 42,
+    "group": "disha",
+    "starSign": "地威星",
+    "introducedIn": 3
+  },
+  {
+    "id": "pengqi",
+    "name": "彭玘",
+    "title": "天目将",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 941,
+      "attack": 108,
+      "defense": 72,
+      "speed": 81,
+      "strategy": 49
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "pengqi_active",
+      "pengqi_passive",
+      "pengqi_advanced",
+      "pengqi_bond"
+    ],
+    "story": "地英星 · 梁山第 43 席。天目将彭玘，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "pengqi_token",
+      "count": 10
+    },
+    "dialogue": "彭玘道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "天目将义骑",
+      "description": "与彭玘同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "pengqi_mount_contract"
+    },
+    "seat": 43,
+    "group": "disha",
+    "starSign": "地英星",
+    "introducedIn": 3
+  },
+  {
+    "id": "shantinggui",
+    "name": "单廷珪",
+    "title": "圣水将",
+    "star": 3,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 672,
+      "attack": 58,
+      "defense": 54,
+      "speed": 90,
+      "strategy": 143
+    },
+    "growth": {
+      "hp": 22,
+      "attack": 2,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 9
+    },
+    "skills": [
+      "shantinggui_active",
+      "shantinggui_passive",
+      "shantinggui_advanced",
+      "shantinggui_bond"
+    ],
+    "story": "地奇星 · 梁山第 44 席。圣水将单廷珪，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "recruit",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "shantinggui_token",
+      "count": 10
+    },
+    "dialogue": "单廷珪道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "圣水将义骑",
+      "description": "与单廷珪同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "shantinggui_mount_contract"
+    },
+    "seat": 44,
+    "group": "disha",
+    "starSign": "地奇星",
+    "introducedIn": 3
+  },
+  {
+    "id": "weidingguo",
+    "name": "魏定国",
+    "title": "神火将",
+    "star": 3,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 717,
+      "attack": 67,
+      "defense": 54,
+      "speed": 85,
+      "strategy": 134
+    },
+    "growth": {
+      "hp": 22,
+      "attack": 2,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 9
+    },
+    "skills": [
+      "weidingguo_active",
+      "weidingguo_passive",
+      "weidingguo_advanced",
+      "weidingguo_bond"
+    ],
+    "story": "地猛星 · 梁山第 45 席。神火将魏定国，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "weidingguo_token",
+      "count": 10
+    },
+    "dialogue": "魏定国道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "神火将义骑",
+      "description": "与魏定国同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "weidingguo_mount_contract"
+    },
+    "seat": 45,
+    "group": "disha",
+    "starSign": "地猛星",
+    "introducedIn": 3
+  },
+  {
+    "id": "xiaorang",
+    "name": "萧让",
+    "title": "圣手书生",
+    "star": 3,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 896,
+      "attack": 72,
+      "defense": 90,
+      "speed": 81,
+      "strategy": 116
+    },
+    "growth": {
+      "hp": 31,
+      "attack": 3,
+      "defense": 4,
+      "speed": 3,
+      "strategy": 6
+    },
+    "skills": [
+      "xiaorang_active",
+      "xiaorang_passive",
+      "xiaorang_advanced",
+      "xiaorang_bond"
+    ],
+    "story": "地文星 · 梁山第 46 席。圣手书生萧让，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "forge",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "xiaorang_token",
+      "count": 10
+    },
+    "dialogue": "萧让道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "圣手书生义骑",
+      "description": "与萧让同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "xiaorang_mount_contract"
+    },
+    "seat": 46,
+    "group": "disha",
+    "starSign": "地文星"
+  },
+  {
+    "id": "peixuan",
+    "name": "裴宣",
+    "title": "铁面孔目",
+    "star": 3,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 699,
+      "attack": 81,
+      "defense": 40,
+      "speed": 76,
+      "strategy": 49
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "peixuan_active",
+      "peixuan_passive",
+      "peixuan_advanced",
+      "peixuan_bond"
+    ],
+    "story": "地正星 · 梁山第 47 席。铁面孔目裴宣，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "stable",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "peixuan_token",
+      "count": 10
+    },
+    "dialogue": "裴宣道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "铁面孔目义骑",
+      "description": "与裴宣同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "peixuan_mount_contract"
+    },
+    "seat": 47,
+    "group": "disha",
+    "starSign": "地正星",
+    "introducedIn": 3
+  },
+  {
+    "id": "oupeng",
+    "name": "欧鹏",
+    "title": "摩云金翅",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 941,
+      "attack": 108,
+      "defense": 72,
+      "speed": 81,
+      "strategy": 49
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "oupeng_active",
+      "oupeng_passive",
+      "oupeng_advanced",
+      "oupeng_bond"
+    ],
+    "story": "地阔星 · 梁山第 48 席。摩云金翅欧鹏，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "oupeng_token",
+      "count": 10
+    },
+    "dialogue": "欧鹏道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "摩云金翅义骑",
+      "description": "与欧鹏同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "oupeng_mount_contract"
+    },
+    "seat": 48,
+    "group": "disha",
+    "starSign": "地阔星",
+    "introducedIn": 3
+  },
+  {
+    "id": "dengfei",
+    "name": "邓飞",
+    "title": "火眼狻猊",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1030,
+      "attack": 130,
+      "defense": 85,
+      "speed": 90,
+      "strategy": 58
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 6,
+      "defense": 4,
+      "speed": 4,
+      "strategy": 2
+    },
+    "skills": [
+      "dengfei_active",
+      "dengfei_passive",
+      "dengfei_advanced",
+      "dengfei_bond"
+    ],
+    "story": "地阖星 · 梁山第 49 席。火眼狻猊邓飞，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "dengfei_token",
+      "count": 10
+    },
+    "dialogue": "邓飞道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "火眼狻猊义骑",
+      "description": "与邓飞同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "dengfei_mount_contract"
+    },
+    "seat": 49,
+    "group": "disha",
+    "starSign": "地阖星"
+  },
+  {
+    "id": "yanshun",
+    "name": "燕顺",
+    "title": "锦毛虎",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1075,
+      "attack": 134,
+      "defense": 81,
+      "speed": 99,
+      "strategy": 54
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "yanshun_active",
+      "yanshun_passive",
+      "yanshun_advanced",
+      "yanshun_bond"
+    ],
+    "story": "地强星 · 梁山第 50 席。锦毛虎燕顺，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "yanshun_token",
+      "count": 10
+    },
+    "dialogue": "燕顺道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "锦毛虎义骑",
+      "description": "与燕顺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "yanshun_mount_contract"
+    },
+    "seat": 50,
+    "group": "disha",
+    "starSign": "地强星",
+    "introducedIn": 3
+  },
+  {
+    "id": "yanglin",
+    "name": "杨林",
+    "title": "锦豹子",
+    "star": 3,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 735,
+      "attack": 99,
+      "defense": 54,
+      "speed": 121,
+      "strategy": 90
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "yanglin_active",
+      "yanglin_passive",
+      "yanglin_advanced",
+      "yanglin_bond"
+    ],
+    "story": "地暗星 · 梁山第 51 席。锦豹子杨林，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "yanglin_token",
+      "count": 10
+    },
+    "dialogue": "杨林道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "锦豹子义骑",
+      "description": "与杨林同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "yanglin_mount_contract"
+    },
+    "seat": 51,
+    "group": "disha",
+    "starSign": "地暗星",
+    "introducedIn": 3
+  },
+  {
+    "id": "lingzhen",
+    "name": "凌振",
+    "title": "轰天雷",
+    "star": 3,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 672,
+      "attack": 58,
+      "defense": 54,
+      "speed": 90,
+      "strategy": 143
+    },
+    "growth": {
+      "hp": 22,
+      "attack": 2,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 9
+    },
+    "skills": [
+      "lingzhen_active",
+      "lingzhen_passive",
+      "lingzhen_advanced",
+      "lingzhen_bond"
+    ],
+    "story": "地轴星 · 梁山第 52 席。轰天雷凌振，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "recruit",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "lingzhen_token",
+      "count": 10
+    },
+    "dialogue": "凌振道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "轰天雷义骑",
+      "description": "与凌振同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "lingzhen_mount_contract"
+    },
+    "seat": 52,
+    "group": "disha",
+    "starSign": "地轴星",
+    "introducedIn": 3
+  },
+  {
+    "id": "jiangjing",
+    "name": "蒋敬",
+    "title": "神算子",
+    "star": 3,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 699,
+      "attack": 81,
+      "defense": 40,
+      "speed": 76,
+      "strategy": 49
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "jiangjing_active",
+      "jiangjing_passive",
+      "jiangjing_advanced",
+      "jiangjing_bond"
+    ],
+    "story": "地会星 · 梁山第 53 席。神算子蒋敬，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "office",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "jiangjing_token",
+      "count": 10
+    },
+    "dialogue": "蒋敬道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "神算子义骑",
+      "description": "与蒋敬同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "jiangjing_mount_contract"
+    },
+    "seat": 53,
+    "group": "disha",
+    "starSign": "地会星",
+    "introducedIn": 3
+  },
+  {
+    "id": "lvfang",
+    "name": "吕方",
+    "title": "小温侯",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1030,
+      "attack": 130,
+      "defense": 85,
+      "speed": 90,
+      "strategy": 58
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 6,
+      "defense": 4,
+      "speed": 4,
+      "strategy": 2
+    },
+    "skills": [
+      "lvfang_active",
+      "lvfang_passive",
+      "lvfang_advanced",
+      "lvfang_bond"
+    ],
+    "story": "地佐星 · 梁山第 54 席。小温侯吕方，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "lvfang_token",
+      "count": 10
+    },
+    "dialogue": "吕方道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "小温侯义骑",
+      "description": "与吕方同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "lvfang_mount_contract"
+    },
+    "seat": 54,
+    "group": "disha",
+    "starSign": "地佐星"
+  },
+  {
+    "id": "guosheng",
+    "name": "郭盛",
+    "title": "赛仁贵",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1075,
+      "attack": 134,
+      "defense": 81,
+      "speed": 99,
+      "strategy": 54
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "guosheng_active",
+      "guosheng_passive",
+      "guosheng_advanced",
+      "guosheng_bond"
+    ],
+    "story": "地祐星 · 梁山第 55 席。赛仁贵郭盛，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "guosheng_token",
+      "count": 10
+    },
+    "dialogue": "郭盛道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "赛仁贵义骑",
+      "description": "与郭盛同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "guosheng_mount_contract"
+    },
+    "seat": 55,
+    "group": "disha",
+    "starSign": "地祐星",
+    "introducedIn": 3
+  },
+  {
+    "id": "andaoquan",
+    "name": "安道全",
+    "title": "神医",
+    "star": 3,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 699,
+      "attack": 81,
+      "defense": 40,
+      "speed": 76,
+      "strategy": 49
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "andaoquan_active",
+      "andaoquan_passive",
+      "andaoquan_advanced",
+      "andaoquan_bond"
+    ],
+    "story": "地灵星 · 梁山第 56 席。神医安道全，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "recruit",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "andaoquan_token",
+      "count": 10
+    },
+    "dialogue": "安道全道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "神医义骑",
+      "description": "与安道全同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "andaoquan_mount_contract"
+    },
+    "seat": 56,
+    "group": "disha",
+    "starSign": "地灵星",
+    "introducedIn": 3
+  },
+  {
+    "id": "huangfuduan",
+    "name": "皇甫端",
+    "title": "紫髯伯",
+    "star": 3,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 806,
+      "attack": 85,
+      "defense": 63,
+      "speed": 67,
+      "strategy": 94
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "huangfuduan_active",
+      "huangfuduan_passive",
+      "huangfuduan_advanced",
+      "huangfuduan_bond"
+    ],
+    "story": "地兽星 · 梁山第 57 席。紫髯伯皇甫端，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "office",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "huangfuduan_token",
+      "count": 10
+    },
+    "dialogue": "皇甫端道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "紫髯伯义骑",
+      "description": "与皇甫端同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "huangfuduan_mount_contract"
+    },
+    "seat": 57,
+    "group": "disha",
+    "starSign": "地兽星",
+    "introducedIn": 3
+  },
+  {
+    "id": "wangying",
+    "name": "王英",
+    "title": "矮脚虎",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 941,
+      "attack": 108,
+      "defense": 72,
+      "speed": 81,
+      "strategy": 49
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "wangying_active",
+      "wangying_passive",
+      "wangying_advanced",
+      "wangying_bond"
+    ],
+    "story": "地微星 · 梁山第 58 席。矮脚虎王英，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "wangying_token",
+      "count": 10
+    },
+    "dialogue": "王英道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "矮脚虎义骑",
+      "description": "与王英同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "wangying_mount_contract"
+    },
+    "seat": 58,
+    "group": "disha",
+    "starSign": "地微星",
+    "introducedIn": 3
+  },
+  {
+    "id": "husanniang",
+    "name": "扈三娘",
+    "title": "一丈青",
+    "star": 3,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 609,
+      "attack": 76,
+      "defense": 36,
+      "speed": 130,
+      "strategy": 76
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "husanniang_active",
+      "husanniang_passive",
+      "husanniang_advanced",
+      "husanniang_bond"
+    ],
+    "story": "地慧星 · 梁山第 59 席。一丈青扈三娘，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "husanniang_token",
+      "count": 10
+    },
+    "dialogue": "扈三娘道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "一丈青义骑",
+      "description": "与扈三娘同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "husanniang_mount_contract"
+    },
+    "seat": 59,
+    "group": "disha",
+    "starSign": "地慧星",
+    "introducedIn": 3
+  },
+  {
+    "id": "baoxu",
+    "name": "鲍旭",
+    "title": "丧门神",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1075,
+      "attack": 134,
+      "defense": 81,
+      "speed": 99,
+      "strategy": 54
+    },
+    "growth": {
+      "hp": 40,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "baoxu_active",
+      "baoxu_passive",
+      "baoxu_advanced",
+      "baoxu_bond"
+    ],
+    "story": "地暴星 · 梁山第 60 席。丧门神鲍旭，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "baoxu_token",
+      "count": 10
+    },
+    "dialogue": "鲍旭道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "丧门神义骑",
+      "description": "与鲍旭同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "baoxu_mount_contract"
+    },
+    "seat": 60,
+    "group": "disha",
+    "starSign": "地暴星",
+    "introducedIn": 3
+  },
+  {
+    "id": "fanrui",
+    "name": "樊瑞",
+    "title": "混世魔王",
+    "star": 2,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 675,
+      "attack": 63,
+      "defense": 51,
+      "speed": 80,
+      "strategy": 127
+    },
+    "growth": {
+      "hp": 21,
+      "attack": 2,
+      "defense": 2,
+      "speed": 3,
+      "strategy": 8
+    },
+    "skills": [
+      "fanrui_active",
+      "fanrui_passive",
+      "fanrui_advanced",
+      "fanrui_bond"
+    ],
+    "story": "地然星 · 梁山第 61 席。混世魔王樊瑞，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "fanrui_token",
+      "count": 10
+    },
+    "dialogue": "樊瑞道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "混世魔王义骑",
+      "description": "与樊瑞同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "fanrui_mount_contract"
+    },
+    "seat": 61,
+    "group": "disha",
+    "starSign": "地然星",
+    "introducedIn": 3
+  },
+  {
+    "id": "kongming",
+    "name": "孔明",
+    "title": "毛头星",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 827,
+      "attack": 100,
+      "defense": 59,
+      "speed": 72,
+      "strategy": 42
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "kongming_active",
+      "kongming_passive",
+      "kongming_advanced",
+      "kongming_bond"
+    ],
+    "story": "地猖星 · 梁山第 62 席。毛头星孔明，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "kongming_token",
+      "count": 10
+    },
+    "dialogue": "孔明道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "毛头星义骑",
+      "description": "与孔明同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "kongming_mount_contract"
+    },
+    "seat": 62,
+    "group": "disha",
+    "starSign": "地猖星",
+    "introducedIn": 3
+  },
+  {
+    "id": "kongliang",
+    "name": "孔亮",
+    "title": "独火星",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 886,
+      "attack": 101,
+      "defense": 68,
+      "speed": 76,
+      "strategy": 46
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "kongliang_active",
+      "kongliang_passive",
+      "kongliang_advanced",
+      "kongliang_bond"
+    ],
+    "story": "地狂星 · 梁山第 63 席。独火星孔亮，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "kongliang_token",
+      "count": 10
+    },
+    "dialogue": "孔亮道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "独火星义骑",
+      "description": "与孔亮同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "kongliang_mount_contract"
+    },
+    "seat": 63,
+    "group": "disha",
+    "starSign": "地狂星",
+    "introducedIn": 3
+  },
+  {
+    "id": "xiangchong",
+    "name": "项充",
+    "title": "八臂哪吒",
+    "star": 2,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1182,
+      "attack": 110,
+      "defense": 97,
+      "speed": 59,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 46,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "xiangchong_active",
+      "xiangchong_passive",
+      "xiangchong_advanced",
+      "xiangchong_bond"
+    ],
+    "story": "地飞星 · 梁山第 64 席。八臂哪吒项充，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "xiangchong_token",
+      "count": 10
+    },
+    "dialogue": "项充道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "八臂哪吒义骑",
+      "description": "与项充同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "xiangchong_mount_contract"
+    },
+    "seat": 64,
+    "group": "disha",
+    "starSign": "地飞星",
+    "introducedIn": 3
+  },
+  {
+    "id": "ligun",
+    "name": "李衮",
+    "title": "飞天大圣",
+    "star": 2,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1182,
+      "attack": 110,
+      "defense": 97,
+      "speed": 59,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 46,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "ligun_active",
+      "ligun_passive",
+      "ligun_advanced",
+      "ligun_bond"
+    ],
+    "story": "地走星 · 梁山第 65 席。飞天大圣李衮，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "ligun_token",
+      "count": 10
+    },
+    "dialogue": "李衮道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "飞天大圣义骑",
+      "description": "与李衮同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "ligun_mount_contract"
+    },
+    "seat": 65,
+    "group": "disha",
+    "starSign": "地走星",
+    "introducedIn": 3
+  },
+  {
+    "id": "jindajian",
+    "name": "金大坚",
+    "title": "玉臂匠",
+    "star": 2,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 760,
+      "attack": 80,
+      "defense": 59,
+      "speed": 63,
+      "strategy": 89
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "jindajian_active",
+      "jindajian_passive",
+      "jindajian_advanced",
+      "jindajian_bond"
+    ],
+    "story": "地巧星 · 梁山第 66 席。玉臂匠金大坚，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "forge",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "jindajian_token",
+      "count": 10
+    },
+    "dialogue": "金大坚道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "玉臂匠义骑",
+      "description": "与金大坚同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "jindajian_mount_contract"
+    },
+    "seat": 66,
+    "group": "disha",
+    "starSign": "地巧星",
+    "introducedIn": 3
+  },
+  {
+    "id": "malin",
+    "name": "马麟",
+    "title": "铁笛仙",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 827,
+      "attack": 100,
+      "defense": 59,
+      "speed": 72,
+      "strategy": 42
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "malin_active",
+      "malin_passive",
+      "malin_advanced",
+      "malin_bond"
+    ],
+    "story": "地明星 · 梁山第 67 席。铁笛仙马麟，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "malin_token",
+      "count": 10
+    },
+    "dialogue": "马麟道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "铁笛仙义骑",
+      "description": "与马麟同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "malin_mount_contract"
+    },
+    "seat": 67,
+    "group": "disha",
+    "starSign": "地明星",
+    "introducedIn": 3
+  },
+  {
+    "id": "tongwei",
+    "name": "童威",
+    "title": "出洞蛟",
+    "star": 2,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 574,
+      "attack": 72,
+      "defense": 34,
+      "speed": 122,
+      "strategy": 72
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "tongwei_active",
+      "tongwei_passive",
+      "tongwei_advanced",
+      "tongwei_bond"
+    ],
+    "story": "地进星 · 梁山第 68 席。出洞蛟童威，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "tongwei_token",
+      "count": 10
+    },
+    "dialogue": "童威道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "出洞蛟义骑",
+      "description": "与童威同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "tongwei_mount_contract"
+    },
+    "seat": 68,
+    "group": "disha",
+    "starSign": "地进星",
+    "introducedIn": 3
+  },
+  {
+    "id": "tongmeng",
+    "name": "童猛",
+    "title": "翻江蜃",
+    "star": 2,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1182,
+      "attack": 110,
+      "defense": 97,
+      "speed": 59,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 46,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "tongmeng_active",
+      "tongmeng_passive",
+      "tongmeng_advanced",
+      "tongmeng_bond"
+    ],
+    "story": "地退星 · 梁山第 69 席。翻江蜃童猛，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "tongmeng_token",
+      "count": 10
+    },
+    "dialogue": "童猛道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "翻江蜃义骑",
+      "description": "与童猛同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "tongmeng_mount_contract"
+    },
+    "seat": 69,
+    "group": "disha",
+    "starSign": "地退星",
+    "introducedIn": 3
+  },
+  {
+    "id": "mengkang",
+    "name": "孟康",
+    "title": "玉幡竿",
+    "star": 2,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 844,
+      "attack": 68,
+      "defense": 84,
+      "speed": 76,
+      "strategy": 110
+    },
+    "growth": {
+      "hp": 30,
+      "attack": 3,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 6
+    },
+    "skills": [
+      "mengkang_active",
+      "mengkang_passive",
+      "mengkang_advanced",
+      "mengkang_bond"
+    ],
+    "story": "地满星 · 梁山第 70 席。玉幡竿孟康，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "forge",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "mengkang_token",
+      "count": 10
+    },
+    "dialogue": "孟康道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "玉幡竿义骑",
+      "description": "与孟康同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "mengkang_mount_contract"
+    },
+    "seat": 70,
+    "group": "disha",
+    "starSign": "地满星"
+  },
+  {
+    "id": "houjian",
+    "name": "侯健",
+    "title": "通臂猿",
+    "star": 2,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 658,
+      "attack": 76,
+      "defense": 38,
+      "speed": 72,
+      "strategy": 46
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "houjian_active",
+      "houjian_passive",
+      "houjian_advanced",
+      "houjian_bond"
+    ],
+    "story": "地遂星 · 梁山第 71 席。通臂猿侯健，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "stable",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "houjian_token",
+      "count": 10
+    },
+    "dialogue": "侯健道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "通臂猿义骑",
+      "description": "与侯健同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "houjian_mount_contract"
+    },
+    "seat": 71,
+    "group": "disha",
+    "starSign": "地遂星",
+    "introducedIn": 3
+  },
+  {
+    "id": "chenda",
+    "name": "陈达",
+    "title": "跳涧虎",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 827,
+      "attack": 100,
+      "defense": 59,
+      "speed": 72,
+      "strategy": 42
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "chenda_active",
+      "chenda_passive",
+      "chenda_advanced",
+      "chenda_bond"
+    ],
+    "story": "地周星 · 梁山第 72 席。跳涧虎陈达，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "chenda_token",
+      "count": 10
+    },
+    "dialogue": "陈达道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "跳涧虎义骑",
+      "description": "与陈达同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "chenda_mount_contract"
+    },
+    "seat": 72,
+    "group": "disha",
+    "starSign": "地周星",
+    "introducedIn": 3
+  },
+  {
+    "id": "yangchun",
+    "name": "杨春",
+    "title": "白花蛇",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 886,
+      "attack": 101,
+      "defense": 68,
+      "speed": 76,
+      "strategy": 46
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "yangchun_active",
+      "yangchun_passive",
+      "yangchun_advanced",
+      "yangchun_bond"
+    ],
+    "story": "地隐星 · 梁山第 73 席。白花蛇杨春，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "yangchun_token",
+      "count": 10
+    },
+    "dialogue": "杨春道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "白花蛇义骑",
+      "description": "与杨春同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "yangchun_mount_contract"
+    },
+    "seat": 73,
+    "group": "disha",
+    "starSign": "地隐星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zhengtianshou",
+    "name": "郑天寿",
+    "title": "白面郎君",
+    "star": 2,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 574,
+      "attack": 72,
+      "defense": 34,
+      "speed": 122,
+      "strategy": 72
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "zhengtianshou_active",
+      "zhengtianshou_passive",
+      "zhengtianshou_advanced",
+      "zhengtianshou_bond"
+    ],
+    "story": "地异星 · 梁山第 74 席。白面郎君郑天寿，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhengtianshou_token",
+      "count": 10
+    },
+    "dialogue": "郑天寿道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "白面郎君义骑",
+      "description": "与郑天寿同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "zhengtianshou_mount_contract"
+    },
+    "seat": 74,
+    "group": "disha",
+    "starSign": "地异星",
+    "introducedIn": 3
+  },
+  {
+    "id": "taozongwang",
+    "name": "陶宗旺",
+    "title": "九尾龟",
+    "star": 2,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1182,
+      "attack": 110,
+      "defense": 97,
+      "speed": 59,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 46,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "taozongwang_active",
+      "taozongwang_passive",
+      "taozongwang_advanced",
+      "taozongwang_bond"
+    ],
+    "story": "地理星 · 梁山第 75 席。九尾龟陶宗旺，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "taozongwang_token",
+      "count": 10
+    },
+    "dialogue": "陶宗旺道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "九尾龟义骑",
+      "description": "与陶宗旺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "taozongwang_mount_contract"
+    },
+    "seat": 75,
+    "group": "disha",
+    "starSign": "地理星",
+    "introducedIn": 3
+  },
+  {
+    "id": "songqing",
+    "name": "宋清",
+    "title": "铁扇子",
+    "star": 2,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 844,
+      "attack": 68,
+      "defense": 84,
+      "speed": 76,
+      "strategy": 110
+    },
+    "growth": {
+      "hp": 30,
+      "attack": 3,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 6
+    },
+    "skills": [
+      "songqing_active",
+      "songqing_passive",
+      "songqing_advanced",
+      "songqing_bond"
+    ],
+    "story": "地俊星 · 梁山第 76 席。铁扇子宋清，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "recruit",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "songqing_token",
+      "count": 10
+    },
+    "dialogue": "宋清道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "铁扇子义骑",
+      "description": "与宋清同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "songqing_mount_contract"
+    },
+    "seat": 76,
+    "group": "disha",
+    "starSign": "地俊星"
+  },
+  {
+    "id": "yuehe",
+    "name": "乐和",
+    "title": "铁叫子",
+    "star": 2,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 658,
+      "attack": 76,
+      "defense": 38,
+      "speed": 72,
+      "strategy": 46
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "yuehe_active",
+      "yuehe_passive",
+      "yuehe_advanced",
+      "yuehe_bond"
+    ],
+    "story": "地乐星 · 梁山第 77 席。铁叫子乐和，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "office",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "yuehe_token",
+      "count": 10
+    },
+    "dialogue": "乐和道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "铁叫子义骑",
+      "description": "与乐和同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "yuehe_mount_contract"
+    },
+    "seat": 77,
+    "group": "disha",
+    "starSign": "地乐星",
+    "introducedIn": 3
+  },
+  {
+    "id": "gongwang",
+    "name": "龚旺",
+    "title": "花项虎",
+    "star": 2,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 692,
+      "attack": 93,
+      "defense": 51,
+      "speed": 114,
+      "strategy": 84
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "gongwang_active",
+      "gongwang_passive",
+      "gongwang_advanced",
+      "gongwang_bond"
+    ],
+    "story": "地捷星 · 梁山第 78 席。花项虎龚旺，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "gongwang_token",
+      "count": 10
+    },
+    "dialogue": "龚旺道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "花项虎义骑",
+      "description": "与龚旺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "gongwang_mount_contract"
+    },
+    "seat": 78,
+    "group": "disha",
+    "starSign": "地捷星",
+    "introducedIn": 3
+  },
+  {
+    "id": "dingdesun",
+    "name": "丁得孙",
+    "title": "中箭虎",
+    "star": 2,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 760,
+      "attack": 114,
+      "defense": 55,
+      "speed": 101,
+      "strategy": 68
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "dingdesun_active",
+      "dingdesun_passive",
+      "dingdesun_advanced",
+      "dingdesun_bond"
+    ],
+    "story": "地速星 · 梁山第 79 席。中箭虎丁得孙，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "stable",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "dingdesun_token",
+      "count": 10
+    },
+    "dialogue": "丁得孙道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "中箭虎义骑",
+      "description": "与丁得孙同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "dingdesun_mount_contract"
+    },
+    "seat": 79,
+    "group": "disha",
+    "starSign": "地速星",
+    "introducedIn": 3
+  },
+  {
+    "id": "muchun",
+    "name": "穆春",
+    "title": "小遮拦",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1013,
+      "attack": 127,
+      "defense": 76,
+      "speed": 93,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "muchun_active",
+      "muchun_passive",
+      "muchun_advanced",
+      "muchun_bond"
+    ],
+    "story": "地镇星 · 梁山第 80 席。小遮拦穆春，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "muchun_token",
+      "count": 10
+    },
+    "dialogue": "穆春道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "小遮拦义骑",
+      "description": "与穆春同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "muchun_mount_contract"
+    },
+    "seat": 80,
+    "group": "disha",
+    "starSign": "地镇星",
+    "introducedIn": 3
+  },
+  {
+    "id": "caozheng",
+    "name": "曹正",
+    "title": "操刀鬼",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 928,
+      "attack": 118,
+      "defense": 84,
+      "speed": 89,
+      "strategy": 68
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "caozheng_active",
+      "caozheng_passive",
+      "caozheng_advanced",
+      "caozheng_bond"
+    ],
+    "story": "地嵇星 · 梁山第 81 席。操刀鬼曹正，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "caozheng_token",
+      "count": 10
+    },
+    "dialogue": "曹正道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "操刀鬼义骑",
+      "description": "与曹正同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "caozheng_mount_contract"
+    },
+    "seat": 81,
+    "group": "disha",
+    "starSign": "地嵇星",
+    "introducedIn": 3
+  },
+  {
+    "id": "songwan",
+    "name": "宋万",
+    "title": "云里金刚",
+    "star": 2,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1182,
+      "attack": 110,
+      "defense": 97,
+      "speed": 59,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 46,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "songwan_active",
+      "songwan_passive",
+      "songwan_advanced",
+      "songwan_bond"
+    ],
+    "story": "地魔星 · 梁山第 82 席。云里金刚宋万，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "songwan_token",
+      "count": 10
+    },
+    "dialogue": "宋万道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "云里金刚义骑",
+      "description": "与宋万同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "songwan_mount_contract"
+    },
+    "seat": 82,
+    "group": "disha",
+    "starSign": "地魔星",
+    "introducedIn": 3
+  },
+  {
+    "id": "duqian",
+    "name": "杜迁",
+    "title": "摸着天",
+    "star": 2,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1182,
+      "attack": 110,
+      "defense": 97,
+      "speed": 59,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 46,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "duqian_active",
+      "duqian_passive",
+      "duqian_advanced",
+      "duqian_bond"
+    ],
+    "story": "地妖星 · 梁山第 83 席。摸着天杜迁，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "duqian_token",
+      "count": 10
+    },
+    "dialogue": "杜迁道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "摸着天义骑",
+      "description": "与杜迁同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "duqian_mount_contract"
+    },
+    "seat": 83,
+    "group": "disha",
+    "starSign": "地妖星",
+    "introducedIn": 3
+  },
+  {
+    "id": "xueyong",
+    "name": "薛永",
+    "title": "病大虫",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 971,
+      "attack": 122,
+      "defense": 80,
+      "speed": 84,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 35,
+      "attack": 6,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 2
+    },
+    "skills": [
+      "xueyong_active",
+      "xueyong_passive",
+      "xueyong_advanced",
+      "xueyong_bond"
+    ],
+    "story": "地幽星 · 梁山第 84 席。病大虫薛永，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "xueyong_token",
+      "count": 10
+    },
+    "dialogue": "薛永道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "病大虫义骑",
+      "description": "与薛永同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "xueyong_mount_contract"
+    },
+    "seat": 84,
+    "group": "disha",
+    "starSign": "地幽星"
+  },
+  {
+    "id": "shien",
+    "name": "施恩",
+    "title": "金眼彪",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1013,
+      "attack": 127,
+      "defense": 76,
+      "speed": 93,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "shien_active",
+      "shien_passive",
+      "shien_advanced",
+      "shien_bond"
+    ],
+    "story": "地伏星 · 梁山第 85 席。金眼彪施恩，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "shien_token",
+      "count": 10
+    },
+    "dialogue": "施恩道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "金眼彪义骑",
+      "description": "与施恩同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "shien_mount_contract"
+    },
+    "seat": 85,
+    "group": "disha",
+    "starSign": "地伏星",
+    "introducedIn": 3
+  },
+  {
+    "id": "lizhong",
+    "name": "李忠",
+    "title": "打虎将",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 928,
+      "attack": 118,
+      "defense": 84,
+      "speed": 89,
+      "strategy": 68
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "lizhong_active",
+      "lizhong_passive",
+      "lizhong_advanced",
+      "lizhong_bond"
+    ],
+    "story": "地僻星 · 梁山第 86 席。打虎将李忠，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "lizhong_token",
+      "count": 10
+    },
+    "dialogue": "李忠道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "打虎将义骑",
+      "description": "与李忠同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "lizhong_mount_contract"
+    },
+    "seat": 86,
+    "group": "disha",
+    "starSign": "地僻星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zhoutong",
+    "name": "周通",
+    "title": "小霸王",
+    "star": 2,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 827,
+      "attack": 100,
+      "defense": 59,
+      "speed": 72,
+      "strategy": 42
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "zhoutong_active",
+      "zhoutong_passive",
+      "zhoutong_advanced",
+      "zhoutong_bond"
+    ],
+    "story": "地空星 · 梁山第 87 席。小霸王周通，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhoutong_token",
+      "count": 10
+    },
+    "dialogue": "周通道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "小霸王义骑",
+      "description": "与周通同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "zhoutong_mount_contract"
+    },
+    "seat": 87,
+    "group": "disha",
+    "starSign": "地空星",
+    "introducedIn": 3
+  },
+  {
+    "id": "tanglong",
+    "name": "汤隆",
+    "title": "金钱豹子",
+    "star": 2,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 844,
+      "attack": 68,
+      "defense": 84,
+      "speed": 76,
+      "strategy": 110
+    },
+    "growth": {
+      "hp": 30,
+      "attack": 3,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 6
+    },
+    "skills": [
+      "tanglong_active",
+      "tanglong_passive",
+      "tanglong_advanced",
+      "tanglong_bond"
+    ],
+    "story": "地孤星 · 梁山第 88 席。金钱豹子汤隆，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "recruit",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "tanglong_token",
+      "count": 10
+    },
+    "dialogue": "汤隆道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "金钱豹子义骑",
+      "description": "与汤隆同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "tanglong_mount_contract"
+    },
+    "seat": 88,
+    "group": "disha",
+    "starSign": "地孤星"
+  },
+  {
+    "id": "duxing",
+    "name": "杜兴",
+    "title": "鬼脸儿",
+    "star": 2,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 658,
+      "attack": 76,
+      "defense": 38,
+      "speed": 72,
+      "strategy": 46
+    },
+    "growth": {
+      "hp": 38,
+      "attack": 7,
+      "defense": 3,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "duxing_active",
+      "duxing_passive",
+      "duxing_advanced",
+      "duxing_bond"
+    ],
+    "story": "地全星 · 梁山第 89 席。鬼脸儿杜兴，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "office",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "duxing_token",
+      "count": 10
+    },
+    "dialogue": "杜兴道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "鬼脸儿义骑",
+      "description": "与杜兴同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "duxing_mount_contract"
+    },
+    "seat": 89,
+    "group": "disha",
+    "starSign": "地全星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zouyuan",
+    "name": "邹渊",
+    "title": "出林龙",
+    "star": 1,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 950,
+      "attack": 119,
+      "defense": 71,
+      "speed": 87,
+      "strategy": 48
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "zouyuan_active",
+      "zouyuan_passive",
+      "zouyuan_advanced",
+      "zouyuan_bond"
+    ],
+    "story": "地短星 · 梁山第 90 席。出林龙邹渊，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zouyuan_token",
+      "count": 10
+    },
+    "dialogue": "邹渊道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "出林龙义骑",
+      "description": "与邹渊同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "zouyuan_mount_contract"
+    },
+    "seat": 90,
+    "group": "disha",
+    "starSign": "地短星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zourun",
+    "name": "邹润",
+    "title": "独角龙",
+    "star": 1,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1109,
+      "attack": 103,
+      "defense": 91,
+      "speed": 55,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 44,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "zourun_active",
+      "zourun_passive",
+      "zourun_advanced",
+      "zourun_bond"
+    ],
+    "story": "地角星 · 梁山第 91 席。独角龙邹润，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zourun_token",
+      "count": 10
+    },
+    "dialogue": "邹润道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "独角龙义骑",
+      "description": "与邹润同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "zourun_mount_contract"
+    },
+    "seat": 91,
+    "group": "disha",
+    "starSign": "地角星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zhugui",
+    "name": "朱贵",
+    "title": "旱地忽律",
+    "star": 1,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 539,
+      "attack": 67,
+      "defense": 32,
+      "speed": 115,
+      "strategy": 67
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "zhugui_active",
+      "zhugui_passive",
+      "zhugui_advanced",
+      "zhugui_bond"
+    ],
+    "story": "地囚星 · 梁山第 92 席。旱地忽律朱贵，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhugui_token",
+      "count": 10
+    },
+    "dialogue": "朱贵道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "旱地忽律义骑",
+      "description": "与朱贵同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "zhugui_mount_contract"
+    },
+    "seat": 92,
+    "group": "disha",
+    "starSign": "地囚星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zhufu",
+    "name": "朱富",
+    "title": "笑面虎",
+    "star": 1,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 713,
+      "attack": 75,
+      "defense": 55,
+      "speed": 59,
+      "strategy": 83
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "zhufu_active",
+      "zhufu_passive",
+      "zhufu_advanced",
+      "zhufu_bond"
+    ],
+    "story": "地藏星 · 梁山第 93 席。笑面虎朱富，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "office",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhufu_token",
+      "count": 10
+    },
+    "dialogue": "朱富道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "笑面虎义骑",
+      "description": "与朱富同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "zhufu_mount_contract"
+    },
+    "seat": 93,
+    "group": "disha",
+    "starSign": "地藏星",
+    "introducedIn": 3
+  },
+  {
+    "id": "caifu",
+    "name": "蔡福",
+    "title": "铁臂膊",
+    "star": 1,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 911,
+      "attack": 115,
+      "defense": 75,
+      "speed": 79,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 33,
+      "attack": 6,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 2
+    },
+    "skills": [
+      "caifu_active",
+      "caifu_passive",
+      "caifu_advanced",
+      "caifu_bond"
+    ],
+    "story": "地平星 · 梁山第 94 席。铁臂膊蔡福，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "caifu_token",
+      "count": 10
+    },
+    "dialogue": "蔡福道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "铁臂膊义骑",
+      "description": "与蔡福同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "caifu_mount_contract"
+    },
+    "seat": 94,
+    "group": "disha",
+    "starSign": "地平星"
+  },
+  {
+    "id": "caiqing",
+    "name": "蔡庆",
+    "title": "一枝花",
+    "star": 1,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 539,
+      "attack": 67,
+      "defense": 32,
+      "speed": 115,
+      "strategy": 67
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "caiqing_active",
+      "caiqing_passive",
+      "caiqing_advanced",
+      "caiqing_bond"
+    ],
+    "story": "地损星 · 梁山第 95 席。一枝花蔡庆，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "caiqing_token",
+      "count": 10
+    },
+    "dialogue": "蔡庆道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "一枝花义骑",
+      "description": "与蔡庆同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "caiqing_mount_contract"
+    },
+    "seat": 95,
+    "group": "disha",
+    "starSign": "地损星",
+    "introducedIn": 3
+  },
+  {
+    "id": "lili",
+    "name": "李立",
+    "title": "催命判官",
+    "star": 1,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 649,
+      "attack": 87,
+      "defense": 48,
+      "speed": 107,
+      "strategy": 79
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "lili_active",
+      "lili_passive",
+      "lili_advanced",
+      "lili_bond"
+    ],
+    "story": "地奴星 · 梁山第 96 席。催命判官李立，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "lili_token",
+      "count": 10
+    },
+    "dialogue": "李立道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "催命判官义骑",
+      "description": "与李立同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "lili_mount_contract"
+    },
+    "seat": 96,
+    "group": "disha",
+    "starSign": "地奴星",
+    "introducedIn": 3
+  },
+  {
+    "id": "liyun",
+    "name": "李云",
+    "title": "青眼虎",
+    "star": 1,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1109,
+      "attack": 103,
+      "defense": 91,
+      "speed": 55,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 44,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "liyun_active",
+      "liyun_passive",
+      "liyun_advanced",
+      "liyun_bond"
+    ],
+    "story": "地察星 · 梁山第 97 席。青眼虎李云，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "liyun_token",
+      "count": 10
+    },
+    "dialogue": "李云道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "青眼虎义骑",
+      "description": "与李云同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "liyun_mount_contract"
+    },
+    "seat": 97,
+    "group": "disha",
+    "starSign": "地察星",
+    "introducedIn": 3
+  },
+  {
+    "id": "jiaoting",
+    "name": "焦挺",
+    "title": "没面目",
+    "star": 1,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1109,
+      "attack": 103,
+      "defense": 91,
+      "speed": 55,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 44,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "jiaoting_active",
+      "jiaoting_passive",
+      "jiaoting_advanced",
+      "jiaoting_bond"
+    ],
+    "story": "地恶星 · 梁山第 98 席。没面目焦挺，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "jiaoting_token",
+      "count": 10
+    },
+    "dialogue": "焦挺道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "没面目义骑",
+      "description": "与焦挺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "jiaoting_mount_contract"
+    },
+    "seat": 98,
+    "group": "disha",
+    "starSign": "地恶星",
+    "introducedIn": 3
+  },
+  {
+    "id": "shiyong",
+    "name": "石勇",
+    "title": "石将军",
+    "star": 1,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 911,
+      "attack": 115,
+      "defense": 75,
+      "speed": 79,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 33,
+      "attack": 6,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 2
+    },
+    "skills": [
+      "shiyong_active",
+      "shiyong_passive",
+      "shiyong_advanced",
+      "shiyong_bond"
+    ],
+    "story": "地丑星 · 梁山第 99 席。石将军石勇，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "shiyong_token",
+      "count": 10
+    },
+    "dialogue": "石勇道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "introducedIn": 3,
+    "mount": {
+      "name": "石将军义骑",
+      "description": "与石勇同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "shiyong_mount_contract"
+    },
+    "seat": 99,
+    "group": "disha",
+    "starSign": "地丑星"
+  },
+  {
+    "id": "sunxin",
+    "name": "孙新",
+    "title": "小尉迟",
+    "star": 1,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1109,
+      "attack": 103,
+      "defense": 91,
+      "speed": 55,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 44,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "sunxin_active",
+      "sunxin_passive",
+      "sunxin_advanced",
+      "sunxin_bond"
+    ],
+    "story": "地数星 · 梁山第 100 席。小尉迟孙新，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "sunxin_token",
+      "count": 10
+    },
+    "dialogue": "孙新道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "小尉迟义骑",
+      "description": "与孙新同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "huangnigang",
+      "contract": "sunxin_mount_contract"
+    },
+    "seat": 100,
+    "group": "disha",
+    "starSign": "地数星",
+    "introducedIn": 3
+  },
+  {
+    "id": "gudasao",
+    "name": "顾大嫂",
+    "title": "母大虫",
+    "star": 1,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 871,
+      "attack": 111,
+      "defense": 79,
+      "speed": 83,
+      "strategy": 63
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "gudasao_active",
+      "gudasao_passive",
+      "gudasao_advanced",
+      "gudasao_bond"
+    ],
+    "story": "地阴星 · 梁山第 101 席。母大虫顾大嫂，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "gudasao_token",
+      "count": 10
+    },
+    "dialogue": "顾大嫂道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "母大虫义骑",
+      "description": "与顾大嫂同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "gudasao_mount_contract"
+    },
+    "seat": 101,
+    "group": "disha",
+    "starSign": "地阴星",
+    "introducedIn": 3
+  },
+  {
+    "id": "zhangqing_gardener",
+    "name": "张青",
+    "title": "菜园子",
+    "star": 1,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 776,
+      "attack": 93,
+      "defense": 55,
+      "speed": 67,
+      "strategy": 40
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "zhangqing_gardener_active",
+      "zhangqing_gardener_passive",
+      "zhangqing_gardener_advanced",
+      "zhangqing_gardener_bond"
+    ],
+    "story": "地刑星 · 梁山第 102 席。菜园子张青，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "zhangqing_gardener_token",
+      "count": 10
+    },
+    "dialogue": "张青道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "菜园子义骑",
+      "description": "与张青同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "shanshenmiao",
+      "contract": "zhangqing_gardener_mount_contract"
+    },
+    "seat": 102,
+    "group": "disha",
+    "starSign": "地刑星",
+    "introducedIn": 3
+  },
+  {
+    "id": "sunerniang",
+    "name": "孙二娘",
+    "title": "母夜叉",
+    "star": 1,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 713,
+      "attack": 107,
+      "defense": 51,
+      "speed": 95,
+      "strategy": 63
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "sunerniang_active",
+      "sunerniang_passive",
+      "sunerniang_advanced",
+      "sunerniang_bond"
+    ],
+    "story": "地壮星 · 梁山第 103 席。母夜叉孙二娘，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "stable",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "sunerniang_token",
+      "count": 10
+    },
+    "dialogue": "孙二娘道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "母夜叉义骑",
+      "description": "与孙二娘同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "zhujiazhuang",
+      "contract": "sunerniang_mount_contract"
+    },
+    "seat": 103,
+    "group": "disha",
+    "starSign": "地壮星",
+    "introducedIn": 3
+  },
+  {
+    "id": "wangdingliu",
+    "name": "王定六",
+    "title": "活闪婆",
+    "star": 1,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 539,
+      "attack": 67,
+      "defense": 32,
+      "speed": 115,
+      "strategy": 67
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "wangdingliu_active",
+      "wangdingliu_passive",
+      "wangdingliu_advanced",
+      "wangdingliu_bond"
+    ],
+    "story": "地劣星 · 梁山第 104 席。活闪婆王定六，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "wangdingliu_token",
+      "count": 10
+    },
+    "dialogue": "王定六道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "活闪婆义骑",
+      "description": "与王定六同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "chai_escort",
+      "contract": "wangdingliu_mount_contract"
+    },
+    "seat": 104,
+    "group": "disha",
+    "starSign": "地劣星",
+    "introducedIn": 3
+  },
+  {
+    "id": "yubaosi",
+    "name": "郁保四",
+    "title": "险道神",
+    "star": 1,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1109,
+      "attack": 103,
+      "defense": 91,
+      "speed": 55,
+      "strategy": 51
+    },
+    "growth": {
+      "hp": 44,
+      "attack": 4,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 1
+    },
+    "skills": [
+      "yubaosi_active",
+      "yubaosi_passive",
+      "yubaosi_advanced",
+      "yubaosi_bond"
+    ],
+    "story": "地健星 · 梁山第 105 席。险道神郁保四，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "gate",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "yubaosi_token",
+      "count": 10
+    },
+    "dialogue": "郁保四道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "险道神义骑",
+      "description": "与郁保四同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "qingzhou_patrol",
+      "contract": "yubaosi_mount_contract"
+    },
+    "seat": 105,
+    "group": "disha",
+    "starSign": "地健星",
+    "introducedIn": 3
+  },
+  {
+    "id": "baisheng",
+    "name": "白胜",
+    "title": "白日鼠",
+    "star": 1,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 780,
+      "attack": 90,
+      "defense": 45,
+      "speed": 85,
+      "strategy": 55
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "baisheng_active",
+      "baisheng_passive",
+      "baisheng_advanced",
+      "baisheng_bond"
+    ],
+    "story": "会唱山歌，熟悉乡道和酒担。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "baisheng_token",
+      "count": 10
+    },
+    "dialogue": "汉子扶住酒担，咧嘴一笑：“小人白胜，附近乡道走得熟。客官初到郓城？若不嫌弃，这一路的风土人情，我倒能说上几句。”",
+    "mount": {
+      "name": "乡路青驴",
+      "description": "专属脚力；与白胜同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "baisheng_mount_contract"
+    },
+    "seat": 106,
+    "group": "disha",
+    "starSign": "地耗星"
+  },
+  {
+    "id": "shiqian",
+    "name": "时迁",
+    "title": "鼓上蚤",
+    "star": 2,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 680,
+      "attack": 85,
+      "defense": 40,
+      "speed": 145,
+      "strategy": 85
+    },
+    "growth": {
+      "hp": 45,
+      "attack": 8,
+      "defense": 3,
+      "speed": 5,
+      "strategy": 1
+    },
+    "skills": [
+      "shiqian_active",
+      "shiqian_passive",
+      "shiqian_advanced",
+      "shiqian_bond"
+    ],
+    "story": "脚步轻，眼睛亮，善探道路。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "shiqian_token",
+      "count": 10
+    },
+    "dialogue": "瘦汉把酒盏往里一挪：“时迁。别的本事不敢夸，哪条路有人，哪扇门开着，我倒看得分明。”他笑了笑，又朝窗外瞥了一眼。",
+    "mount": {
+      "name": "夜行灰驹",
+      "description": "专属脚力；与时迁同行养成。名称与羁绊为本作原创设定。",
+      "dungeon": "jingyanggang",
+      "contract": "shiqian_mount_contract"
+    },
+    "seat": 107,
+    "group": "disha",
+    "starSign": "地贼星"
+  },
+  {
+    "id": "duanjingzhu",
+    "name": "段景住",
+    "title": "金毛犬",
+    "star": 1,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 649,
+      "attack": 87,
+      "defense": 48,
+      "speed": 107,
+      "strategy": 79
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 1
+    },
+    "skills": [
+      "duanjingzhu_active",
+      "duanjingzhu_passive",
+      "duanjingzhu_advanced",
+      "duanjingzhu_bond"
+    ],
+    "story": "地狗星 · 梁山第 108 席。金毛犬段景住，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "token",
+      "token": "duanjingzhu_token",
+      "count": 10
+    },
+    "dialogue": "段景住道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "mount": {
+      "name": "金毛犬义骑",
+      "description": "与段景住同行的专属脚力；名称与羁绊为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "duanjingzhu_mount_contract"
+    },
+    "seat": 108,
+    "group": "disha",
+    "starSign": "地狗星",
+    "introducedIn": 3
   }
 ]

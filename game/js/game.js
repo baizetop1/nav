@@ -1,26 +1,28 @@
-import { gains, rewardDialog } from './rewards-ui.js?v=0.5.0';
-import { ActivityLog } from './activity.js?v=0.5.0';
-import { loadData } from './data.js?v=0.5.0';
-import { dispatch, newGame } from './core.js?v=0.5.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.5.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.5.0';
-import { patchElement } from './dom.js?v=0.5.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.9.0';
+import { ActivityLog } from './activity.js?v=0.9.0';
+import { loadData } from './data.js?v=0.9.0';
+import { dispatch, newGame } from './core.js?v=0.9.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.9.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.9.0';
+import { patchElement } from './dom.js?v=0.9.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.5.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.5.0';
-import { CloudClient } from './cloud.js?v=0.5.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.5.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.9.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.9.0';
+import { CloudClient } from './cloud.js?v=0.9.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.9.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
 function fitViewport(){if(!window.visualViewport||Math.abs(window.visualViewport.scale-1)<0.01){const height=Math.min(window.innerHeight,window.visualViewport?.height||window.innerHeight);document.documentElement.style.setProperty('--game-height',height+'px');document.documentElement.toggleAttribute('data-short-viewport',height<480);}}
 fitViewport();window.addEventListener('resize',fitViewport);window.visualViewport?.addEventListener('resize',fitViewport);
 let database, channel, operation=false, savePending=null, slots=[], previewSlots=[], cloud;
+const leaderboard={loading:false,error:'',data:null};
 const cloudView={baseUrl:'',selected:1,slots:[],message:'',conflict:false,history:null};
 const makeStore=id=>new SlotStore(database,data,id,change=>channel?.postMessage(change));
 async function refreshSlots(){try{slots=await database.all();}catch{slots=[store.record];}}
 function rememberSlot(){try{sessionStorage.setItem('baize_shuihu_active_slot',String(store.id));}catch{}}
 function saveBox(){return {record:store.record,slots,cloud:cloudView,dirty};}
+let mapTarget=null,roster={};
 let data,state,store,view='map',status='',error='',notice='',recruitTarget='',locked=false,invalid=false,dirty=false,pendingImport=null,entered=false;
 let battlePaused=true,battlePauseReason='',lastBattlePulse=null,lastBattleSaved=0,paintRevision=0;
 function paint(focus=false){
@@ -34,7 +36,7 @@ function paint(focus=false){
   const anchorId=anchor?.dataset.logEntry,anchorOffset=anchor&&anchor.getBoundingClientRect().top-oldLog.getBoundingClientRect().top;
   const entries=activity.observe(state,{available:entered&&!invalid,feedback:notice});
   if(!logPaused&&(focus||!state.battle||performance.now()-lastLogPaint>=2000)){visibleEntries=entries.filter(e=>logMode==='all'||e.kind!=='battle'||!/进击|普攻|受到持续|损失.*气血/.test(e.text)||/施展|首领|蓄势|得胜|退阵|无力再战|军令/.test(e.text)).map(e=>({...e}));lastLogPaint=performance.now();}
-  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed});
+  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed,mapTarget,roster,leaderboard});
   if(root.querySelector('.viewport-shell')){const next=document.createElement('template');next.innerHTML=html;patchElement(root.firstElementChild,next.content.firstElementChild);}
   else root.innerHTML=html;
   root.dataset.view=view;
@@ -75,9 +77,10 @@ function showRecruitResult(result,returnCommand){
   updateRecruitNotice();dialog.showModal();document.body.classList.add('recruit-modal-open');dialog.querySelector('h2').focus({preventScroll:true});
 }
 function showRewards(before,after,returnCommand){
-  const rows=gains(before,after,data),victory=before.battle?.outcome==='victory'&&!after.battle;if(!rows.length&&!victory)return;
+  const rows=gains(before,after,data),finished=!!before.battle?.outcome&&!after.battle,victory=finished&&before.battle.outcome==='victory';if(!rows.length&&!finished)return;
+  const battleSummary=finished?{outcome:before.battle.outcome,troops:before.battle.expedition?.troops||0,wounded:Math.max(0,(after.camp?.wounded||0)-(before.camp?.wounded||0))}:null;
   const dungeonVictory=(victory&&before.battle?.context.type==='dungeon')||(before.scheme?.outcome==='success'&&before.scheme.context.type==='dungeon'&&!after.scheme);
-  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory}));
+  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary}));
   const dialog=document.getElementById('reward-result');dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
 }
 function download(text,name){const blob=new Blob([text],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
@@ -226,16 +229,26 @@ async function handle(command){
   if(['battleSkill','battleItem'].includes(type)&&battlePaused)throw new Error('请先继续交战，再释放技能或用药。');
   if(type==='ui_start'){const before=state;await persist(state.camp?state:dispatch(data,state,{type:'campFound'}));entered=true;view='camp';paint(true);showRewards(before,state);return;}
   if(type==='ui_battleSpeed'){if(![.5,1,2].includes(command.speed))throw new Error('无效速度');battleSpeed=command.speed;try{localStorage.setItem('baize_shuihu_battle_speed',String(battleSpeed));}catch{}paint();return;}
-  if(type==='ui_campFormation')command={type:'campFormation',mode:document.getElementById('camp-mode').value,tactic:document.getElementById('camp-tactic').value,deployment:Number(document.getElementById('camp-deployment').value)};
+  if(type==='ui_rankRefresh'){if(leaderboard.loading)return;leaderboard.loading=true;leaderboard.error='';leaderboard.data=null;paint();try{leaderboard.data=await cloud.leaderboard();}catch(e){leaderboard.error=e.status===404?'排行榜服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.loading=false;paint();}return;}
+  if(type==='ui_rosterFilter'){
+    roster={...roster,...Object.fromEntries(['query','status','group','quality','role'].map(k=>[k,document.getElementById('roster-'+k).value])),page:0,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;
+  }
+  if(type==='ui_rosterReset'){roster={};paint();for(const k of ['query','status','group','quality','role'])document.getElementById('roster-'+k).value=k==='query'?'':'all';return;}
+  if(type==='ui_rosterPage'){roster={...roster,page:command.page,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_rosterSelect'){roster={...roster,selected:id};paint();document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_mapInspect'){if(!data.by.maps[id])throw new Error('没有这个地点。');mapTarget=id;view='map';paint();document.getElementById('atlas-target')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_campFormation')command={type:'campFormation',mode:document.getElementById('camp-mode').value,arm:document.getElementById('camp-arm').value,tactic:document.getElementById('camp-tactic').value,deployment:Number(document.getElementById('camp-deployment').value)};
   if(type==='ui_team')command={type:'team',ids:[0,1,2].map(i=>document.getElementById('team-'+i).value).filter(Boolean)};
   if(type==='ui_equip')command={type:'equip',id,hero:document.getElementById('holder-'+id).value||null};
   if(type==='ui_dismantle'){if(!window.confirm('确认分解此装备？装备将变为碎铁，不能原样取回。'))return;command={type:'dismantle',id};}
   const before=state,hadBattle=!!state.battle,next=dispatch(data,state,command);await persist(next);
   if(!hadBattle&&next.battle&&!next.battle.outcome){battlePaused=false;battlePauseReason='';lastBattlePulse=performance.now();}
   notice=type==='recruit'||type.startsWith('battle')||next.battle?'':next.message;
-  if(next.battle||next.scheme||next.event||['move','story','startScheme'].includes(type))view='map';
+  if(type==='travel'||type==='move')mapTarget=next.location;
+  if(next.battle||next.scheme||next.event||['move','travel','story','startScheme'].includes(type))view='map';
   if(type==='finishBattle'&&before.battle?.context.type==='camp')view='camp';
-  paint(['move','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
+  if(type==='finishBattle'&&before.battle?.context.type==='rotation')view='trials';
+  paint(['move','travel','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
   if(type==='recruit')showRecruitResult(next.recruit.lastResult,JSON.stringify(command));
   else {if(gains(before,next,data).length&&next.battle&&!next.battle.outcome)await pauseBattle('查看收获时已暂停，关闭后可继续交战。');showRewards(before,next,JSON.stringify(command));}
 }
@@ -245,12 +258,15 @@ root.addEventListener('click',async event=>{
   if(button.hasAttribute('data-log-pause')){logPaused=!logPaused;lastLogPaint=0;paint();return;}
   if(button.hasAttribute('data-log-filter')){logMode=logMode==='all'?'important':'all';logPaused=false;lastLogPaint=0;paint();return;}
   if(operation)return;
+  if(button.hasAttribute('data-map-region')){document.getElementById('map-region-'+button.dataset.mapRegion)?.scrollIntoView({block:'start'});return;}
+  if(button.hasAttribute('data-map-local')){document.getElementById('map-local')?.scrollIntoView({block:'start'});return;}
   if(button.dataset.view){if(!entered&&button.dataset.view!=='save'&&(locked||button.dataset.view!=='welcome'))return;operation=true;try{if(button.dataset.view!==view)await pauseBattle('离开战斗页面时已暂停。返回后点击继续交战。');view=button.dataset.view;error='';notice='';if(view==='save')await refreshSlots();paint(true);}finally{operation=false;}return;}
   if(!button.dataset.command)return;const painted=paintRevision;button.disabled=true;operation=true;root.setAttribute('aria-busy','true');
   try{await handle(JSON.parse(button.dataset.command));}
   catch(e){pendingImport=null;error=e.message||'操作未完成，原进度保留。';paint();}
   finally{operation=false;root.removeAttribute('aria-busy');if(button.isConnected&&painted===paintRevision)button.disabled=false;}
 });
+root.addEventListener('keydown',event=>{if(event.target.id==='roster-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('button[data-command*="ui_rosterFilter"]')?.click();}});
 root.addEventListener('change',event=>{
   if(event.target.id==='cloud-slot'){cloudView.selected=slotId(event.target.value);cloudView.history=null;cloudView.message='已切换云端编号，请确认密钥对应此编号。';document.getElementById('cloud-key').value='';paint();}
   if(event.target.id==='recruit-target'){recruitTarget=event.target.value;notice='';error='';paint();document.getElementById('recruit-target')?.focus({preventScroll:true});}

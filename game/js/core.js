@@ -1,16 +1,20 @@
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.5.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.5.0';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.5.0';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.5.0';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.5.0';
-import { effects, storyAction, visit } from './story.js?v=0.5.0';
-import { growthAction, awardMountContracts } from './growth.js?v=0.5.0';
+import { enterRotation, finishRotation } from './rotations.js?v=0.9.0';
+import { promoteHero } from './quality.js?v=0.9.0';
+import { routeTo, claimLocalBenefit } from './world-map.js?v=0.9.0';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.9.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.9.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.9.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.9.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.9.0';
+import { effects, storyAction, visit } from './story.js?v=0.9.0';
+import { growthAction, awardMountContracts } from './growth.js?v=0.9.0';
 
-import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.5.0';
+import { searchEquipment } from './camp-development.js?v=0.9.0';
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.9.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
-  const state={version:data.config.version,revision:0,clock:now,lastRegen:now,rng:seed,worldMinute:600,location:'yuncheng',startedAt:now,
+  const state={version:data.config.version,rosterVersion:3,revision:0,clock:now,lastRegen:now,rng:seed,worldMinute:600,location:'yuncheng',startedAt:now,
     player:{name:'白泽寨主',title:'初入江湖',silver:initial.silver,merit:0,prestige:0,stamina:100,liangshanLevel:0},
     heroes:Object.fromEntries(data.heroes.map(h=>[h.id,{status:'unknown',level:1,exp:0}])),team:[],inventory:{...initial.items},equipment:[],nextEquipment:1,
     progress:{flags:{},stories:{},visited:['yuncheng'],actions:{},claims:[],clears:{}},stats:{},
@@ -52,6 +56,7 @@ function rewardDungeon(state,data,id) {
   for(const [id,n] of Object.entries(reward.guaranteed))gainItem(state,id,n,data);
   const mounts=awardMountContracts(state,data,id);
   const drops=[];for(const drop of reward.items)if(random(state)<drop.rate){gainItem(state,drop.id,drop.count,data);drops.push(data.by.items[drop.id].name);}
+  searchEquipment(state,data,Math.min(3,1+Math.floor(data.by.dungeons[id].level/15)));
   count(state,'clears');count(state,'clear_'+id);state.progress.clears[id]=(state.progress.clears[id]||0)+1;
   journal(state,`【${data.by.dungeons[id].name}】历练完成。碎银 +${reward.silver}、威望 +${reward.prestige}、功勋 +${reward.merit}；带回${Object.keys(reward.guaranteed).map(i=>data.by.items[i].name).join('、')}${drops.length?'，另得'+drops.join('、'):''}。`);
   if(mounts.length)journal(state,`【副本寻骑】获得 ${mounts.join('、')}。对应人物入寨后，到郓城马厩凭契领骑；不另收碎银。`);
@@ -65,6 +70,7 @@ function finishBattle(state,data) {
     if(state.formationPending&&!b.guest){count(state,'formationBattle');state.formationPending=false;}
     if(b.context.type==='story'){state.progress.stories[b.context.id].step=b.context.next;const story=data.by.stories[b.context.id];journal(state,'此战得胜，请在'+data.by.maps[story.steps[b.context.next].map].name+'续记【'+story.title+'】。');}
     else if(b.context.type==='dungeon')rewardDungeon(state,data,b.context.id);
+    else if(b.context.type==='rotation'){const reward=finishRotation(state,b);if(reward)grant(state,reward,data);}
     else if(b.context.type!=='camp'){grant(state,{silver:90,prestige:3,exp:100,items:{scrap_iron:1}},data);journal(state,'交战得胜，行旅得以安行。获得碎银与历练经验。');}
   } else {count(state,'battleLoss');journal(state,'此战收兵。好汉不会永久失去；再战前可调整队伍、药物与装备。');}
   state.battle=null;
@@ -110,7 +116,11 @@ export function dispatch(data,current,action,now=Date.now()) {
   if(isBusy(state))requireRule(['battleTick','battleSkill','battleSkillMode','battleItem','battleRetreat','finishBattle','scheme','finishScheme','eventChoice','refresh'].includes(action.type),'先结束当前交战、计策或际遇，再作其他安排。');
   const {type,id}=action;
   if(type==='refresh')return state;
-  if(type.startsWith('camp'))campAction(state,data,action);
+  if(type==='rotationStart'){const p=enterRotation(state,action.kind,id,action.tier);startBattle(state,data,{enemies:p.route.enemies,scale:p.scale,context:{type:'rotation',kind:action.kind,id,tier:p.tier,period:p.period}});attachTroops(state,p.troops);}
+  else if(type==='heroPromote')promoteHero(state,data,action.id);
+  else if(type.startsWith('camp'))campAction(state,data,action);
+  else if(type==='travel'){const path=routeTo(state,data,id);requireRule(path&&path.length,'此路尚未开放，或已经身在此处。');for(const target of path){requireRule(exits(state,data).some(l=>l.target===target),'途中道路条件发生变化，请重新查看路线。');visit(state,target,data);}journal(state,'【行路】抵达'+data.by.maps[id].name+'。');}
+  else if(type==='localBenefit')claimLocalBenefit(state,data);
   else if(type==='move'){requireRule(exits(state,data).some(link=>link.target===id),'此路尚未开放。');visit(state,id,data);}
   else if(type==='wait'){state.worldMinute=(state.worldMinute+360)%1440;journal(state,'你等了半日，天色已变。等候不额外恢复体力，体力按真实时间恢复。');}
   else if(type==='mapAction'){
@@ -134,7 +144,7 @@ export function dispatch(data,current,action,now=Date.now()) {
   else if(type==='battleItem')useBattleItem(state,data,id);
   else if(type==='battleRetreat')retreatBattle(state);
   else if(type==='finishBattle')finishBattle(state,data);
-  else if(type==='recruit'){requireRule(state.location==='recruit','请到招贤馆拜访。');recruit(state,data,id);}
+  else if(type==='recruit')recruit(state,data,id);
   else if(type==='team'){
     requireRule(Array.isArray(action.ids)&&action.ids.length<=3&&new Set(action.ids).size===action.ids.length&&action.ids.every(id=>state.heroes[id]?.status==='owned'),'只可安排最多三名不重复的入寨好汉。');
     requireRule(action.ids.length>0||!Object.values(state.heroes).some(h=>h.status==='owned'),'至少留一名好汉出阵。');

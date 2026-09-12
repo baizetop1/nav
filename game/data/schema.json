@@ -311,7 +311,11 @@
           "meetMap",
           "meetCondition",
           "obtain",
-          "dialogue"
+          "dialogue",
+          "mount",
+          "seat",
+          "group",
+          "starSign"
         ],
         "additionalProperties": false,
         "properties": {
@@ -447,9 +451,6 @@
           "dialogue": {
             "type": "string"
           },
-          "introducedIn": {
-            "type": "integer"
-          },
           "mount": {
             "type": "object",
             "required": [
@@ -473,6 +474,18 @@
                 "type": "string"
               }
             }
+          },
+          "seat": {
+            "type": "integer"
+          },
+          "group": {
+            "type": "string"
+          },
+          "starSign": {
+            "type": "string"
+          },
+          "introducedIn": {
+            "type": "integer"
           }
         }
       }
@@ -2872,7 +2885,11 @@
           },
           "guaranteed": {
             "type": "object",
-            "required": [],
+            "required": [
+              "martial_pages",
+              "mount_feed",
+              "mount_token"
+            ],
             "additionalProperties": false,
             "properties": {
               "tiger_bone": {
@@ -2882,6 +2899,15 @@
                 "type": "integer"
               },
               "exp_pill": {
+                "type": "integer"
+              },
+              "martial_pages": {
+                "type": "integer"
+              },
+              "mount_feed": {
+                "type": "integer"
+              },
+              "mount_token": {
                 "type": "integer"
               },
               "iron": {
@@ -2908,13 +2934,10 @@
               "strength_shard": {
                 "type": "integer"
               },
-              "martial_pages": {
+              "spirit_essence": {
                 "type": "integer"
               },
-              "mount_feed": {
-                "type": "integer"
-              },
-              "mount_token": {
+              "immortal_seal": {
                 "type": "integer"
               }
             }
@@ -3232,6 +3255,9 @@
                   "exp_pill": {
                     "type": "integer"
                   },
+                  "martial_pages": {
+                    "type": "integer"
+                  },
                   "recruit_shard": {
                     "type": "integer"
                   },
@@ -3251,9 +3277,6 @@
                     "type": "integer"
                   },
                   "iron": {
-                    "type": "integer"
-                  },
-                  "martial_pages": {
                     "type": "integer"
                   }
                 }

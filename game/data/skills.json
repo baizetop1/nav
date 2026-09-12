@@ -1226,5 +1226,7682 @@
       "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
       "profile": "discipline"
     }
+  },
+  {
+    "id": "lujunyi_active",
+    "name": "麒麟长枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "lujunyi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lujunyi_passive",
+    "name": "玉麒麟本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "lujunyi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lujunyi_advanced",
+    "name": "玉麒麟·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "lujunyi",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "lujunyi_bond",
+    "name": "天罡星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "lujunyi",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "guansheng_active",
+    "name": "青龙偃月刀·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "guansheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "guansheng_passive",
+    "name": "大刀本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "guansheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "guansheng_advanced",
+    "name": "大刀·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "guansheng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "guansheng_bond",
+    "name": "天勇星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "guansheng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "qinming_active",
+    "name": "狼牙棒·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "qinming",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "qinming_passive",
+    "name": "霹雳火本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "qinming",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "qinming_advanced",
+    "name": "霹雳火·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "qinming",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "qinming_bond",
+    "name": "天猛星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "qinming",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "huyanzhuo_active",
+    "name": "双铁鞭·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "huyanzhuo",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "huyanzhuo_passive",
+    "name": "双鞭本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "huyanzhuo",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "huyanzhuo_advanced",
+    "name": "双鞭·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "huyanzhuo",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "huyanzhuo_bond",
+    "name": "天威星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "huyanzhuo",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "liying_active",
+    "name": "飞刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "liying",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "liying_passive",
+    "name": "扑天雕本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "liying",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "liying_advanced",
+    "name": "扑天雕·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "liying",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "liying_bond",
+    "name": "天富星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "liying",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "zhutong_active",
+    "name": "长髯朴刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "zhutong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhutong_passive",
+    "name": "美髯公本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhutong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhutong_advanced",
+    "name": "美髯公·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "zhutong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "zhutong_bond",
+    "name": "天满星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhutong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "dongping_active",
+    "name": "双枪·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "dongping",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "dongping_passive",
+    "name": "双枪将本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "dongping",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "dongping_advanced",
+    "name": "双枪将·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "dongping",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "dongping_bond",
+    "name": "天立星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "dongping",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "zhangqing_active",
+    "name": "飞石·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "zhangqing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhangqing_passive",
+    "name": "没羽箭本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhangqing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhangqing_advanced",
+    "name": "没羽箭·绝技",
+    "type": "active",
+    "cost": 55,
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "description": "瞄准气血比例最低的敌人，忽略其 50% 防御；克制厚甲与残敌。",
+    "training": {
+      "hero": "zhangqing",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "zhangqing_bond",
+    "name": "天捷星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒破甲。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhangqing",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "xuning_active",
+    "name": "钩镰枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "xuning",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xuning_passive",
+    "name": "金枪手本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "xuning",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xuning_advanced",
+    "name": "金枪手·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "xuning",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "xuning_bond",
+    "name": "天祐星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "xuning",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "suochao_active",
+    "name": "金蘸斧·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "刀势沉稳，破开敌手守势。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "suochao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "suochao_passive",
+    "name": "急先锋本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "行军不乱，自身气血提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "suochao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "suochao_advanced",
+    "name": "急先锋·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "挥刀前两名敌人，并令全队减伤 15%，持续 4 秒。",
+    "training": {
+      "hero": "suochao",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "suochao_bond",
+    "name": "天空星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为全队回复 2 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "suochao",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "daizong_active",
+    "name": "神行甲马·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "daizong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "daizong_passive",
+    "name": "神行太保本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "daizong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "daizong_advanced",
+    "name": "神行太保·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "daizong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "daizong_bond",
+    "name": "天速星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "daizong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "likui_active",
+    "name": "双板斧·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "likui",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "likui_passive",
+    "name": "黑旋风本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "likui",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "likui_advanced",
+    "name": "黑旋风·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "likui",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "likui_bond",
+    "name": "天杀星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "likui",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "shijin_active",
+    "name": "龙纹长棍·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "shijin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shijin_passive",
+    "name": "九纹龙本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "shijin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shijin_advanced",
+    "name": "九纹龙·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "shijin",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "shijin_bond",
+    "name": "天微星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "shijin",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "muhong_active",
+    "name": "长刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "muhong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "muhong_passive",
+    "name": "没遮拦本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "muhong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "muhong_advanced",
+    "name": "没遮拦·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "muhong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "muhong_bond",
+    "name": "天究星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "muhong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "leiheng_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "leiheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "leiheng_passive",
+    "name": "插翅虎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "leiheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "leiheng_advanced",
+    "name": "插翅虎·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "leiheng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "leiheng_bond",
+    "name": "天退星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "leiheng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "lijun_active",
+    "name": "水战长刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "lijun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lijun_passive",
+    "name": "混江龙本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "lijun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lijun_advanced",
+    "name": "混江龙·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "lijun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "lijun_bond",
+    "name": "天寿星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "lijun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "ruanxiaoer_active",
+    "name": "渔叉·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "ruanxiaoer",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "ruanxiaoer_passive",
+    "name": "立地太岁本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "ruanxiaoer",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "ruanxiaoer_advanced",
+    "name": "立地太岁·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "ruanxiaoer",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "ruanxiaoer_bond",
+    "name": "天剑星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "ruanxiaoer",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "zhangheng_active",
+    "name": "船桨短刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "zhangheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhangheng_passive",
+    "name": "船火儿本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhangheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhangheng_advanced",
+    "name": "船火儿·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "zhangheng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "zhangheng_bond",
+    "name": "天平星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhangheng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "ruanxiaowu_active",
+    "name": "鱼鳞刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "刀势沉稳，破开敌手守势。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "ruanxiaowu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "ruanxiaowu_passive",
+    "name": "短命二郎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "行军不乱，自身气血提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "ruanxiaowu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "ruanxiaowu_advanced",
+    "name": "短命二郎·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "挥刀前两名敌人，并令全队减伤 15%，持续 4 秒。",
+    "training": {
+      "hero": "ruanxiaowu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "ruanxiaowu_bond",
+    "name": "天罪星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为全队回复 2 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "ruanxiaowu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "zhangshun_active",
+    "name": "浪纹短刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "zhangshun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhangshun_passive",
+    "name": "浪里白条本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhangshun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhangshun_advanced",
+    "name": "浪里白条·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "zhangshun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "zhangshun_bond",
+    "name": "天损星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对气血最低的敌人追加一次 40% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhangshun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "yangxiong_active",
+    "name": "腰刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "yangxiong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yangxiong_passive",
+    "name": "病关索本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "yangxiong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yangxiong_advanced",
+    "name": "病关索·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "yangxiong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "yangxiong_bond",
+    "name": "天牢星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "yangxiong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "shixiu_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "shixiu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shixiu_passive",
+    "name": "拼命三郎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "shixiu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shixiu_advanced",
+    "name": "拼命三郎·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "shixiu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "shixiu_bond",
+    "name": "天慧星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "shixiu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "jiezhen_active",
+    "name": "猎叉·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "jiezhen",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jiezhen_passive",
+    "name": "两头蛇本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "jiezhen",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jiezhen_advanced",
+    "name": "两头蛇·绝技",
+    "type": "active",
+    "cost": 55,
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "description": "瞄准气血比例最低的敌人，忽略其 50% 防御；克制厚甲与残敌。",
+    "training": {
+      "hero": "jiezhen",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "jiezhen_bond",
+    "name": "天暴星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒破甲。触发强度随招式等级提高。",
+    "training": {
+      "hero": "jiezhen",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "jiebao_active",
+    "name": "猎弓·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "jiebao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jiebao_passive",
+    "name": "双尾蝎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "jiebao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jiebao_advanced",
+    "name": "双尾蝎·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "jiebao",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "jiebao_bond",
+    "name": "天哭星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "jiebao",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "zhuwu_active",
+    "name": "阵图·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2.4,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "zhuwu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhuwu_passive",
+    "name": "神机军师本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhuwu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhuwu_advanced",
+    "name": "神机军师·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.14
+    },
+    "description": "清除全队流血、中毒、破甲、眩晕和削弱，再各回复 14% 最大气血。",
+    "training": {
+      "hero": "zhuwu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "zhuwu_bond",
+    "name": "地魁星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，清除一位受困同伴的一种负面状态。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhuwu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "huangxin_active",
+    "name": "丧门剑·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "huangxin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "huangxin_passive",
+    "name": "镇三山本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "huangxin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "huangxin_advanced",
+    "name": "镇三山·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "huangxin",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "huangxin_bond",
+    "name": "地煞星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "huangxin",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "sunli_active",
+    "name": "铁鞭·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "sunli",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "sunli_passive",
+    "name": "病尉迟本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "sunli",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "sunli_advanced",
+    "name": "病尉迟·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "sunli",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "sunli_bond",
+    "name": "地勇星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "sunli",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "xuanzan_active",
+    "name": "钢刀·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "xuanzan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xuanzan_passive",
+    "name": "丑郡马本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "xuanzan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xuanzan_advanced",
+    "name": "丑郡马·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "xuanzan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "xuanzan_bond",
+    "name": "地杰星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "xuanzan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "haosiwen_active",
+    "name": "长枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "haosiwen",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "haosiwen_passive",
+    "name": "井木犴本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "haosiwen",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "haosiwen_advanced",
+    "name": "井木犴·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.35
+    },
+    "description": "枪扫前两名敌人并眩晕 1.5 秒。首领受控后会短暂抗控。",
+    "training": {
+      "hero": "haosiwen",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "haosiwen_bond",
+    "name": "地雄星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标眩晕 1 秒；遵守首领抗控。触发强度随招式等级提高。",
+    "training": {
+      "hero": "haosiwen",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "hantao_active",
+    "name": "枣木槊·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "hantao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "hantao_passive",
+    "name": "百胜将本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "hantao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "hantao_advanced",
+    "name": "百胜将·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "hantao",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "hantao_bond",
+    "name": "地威星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "hantao",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "pengqi_active",
+    "name": "三尖两刃刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "pengqi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "pengqi_passive",
+    "name": "天目将本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "pengqi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "pengqi_advanced",
+    "name": "天目将·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "pengqi",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "pengqi_bond",
+    "name": "地英星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "pengqi",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "shantinggui_active",
+    "name": "水纹长枪·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2.6,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "shantinggui",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shantinggui_passive",
+    "name": "圣水将本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "shantinggui",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shantinggui_advanced",
+    "name": "圣水将·绝技",
+    "type": "strategy",
+    "cost": 45,
+    "effect": {
+      "kind": "strategy",
+      "rate": 1
+    },
+    "description": "谋略攻击一人；敌方全体攻击/谋略降低 20%，持续 6 秒；同伴各得 10 怒气。",
+    "training": {
+      "hero": "shantinggui",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "weaken"
+    }
+  },
+  {
+    "id": "shantinggui_bond",
+    "name": "地奇星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，令当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "shantinggui",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "weaken"
+    }
+  },
+  {
+    "id": "weidingguo_active",
+    "name": "火旗·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2.4,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "weidingguo",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "weidingguo_passive",
+    "name": "神火将本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "weidingguo",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "weidingguo_advanced",
+    "name": "神火将·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.14
+    },
+    "description": "清除全队流血、中毒、破甲、眩晕和削弱，再各回复 14% 最大气血。",
+    "training": {
+      "hero": "weidingguo",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "weidingguo_bond",
+    "name": "地猛星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，清除一位受困同伴的一种负面状态。触发强度随招式等级提高。",
+    "training": {
+      "hero": "weidingguo",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "xiaorang_active",
+    "name": "书卷毛笔·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "从容照应同伴，恢复伤势最重者三成气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3
+    },
+    "training": {
+      "hero": "xiaorang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xiaorang_passive",
+    "name": "圣手书生本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "处变不惊，自身防御提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "xiaorang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xiaorang_advanced",
+    "name": "圣手书生·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.18
+    },
+    "description": "全队回复 18% 最大气血并减伤 20%，持续 4 秒；适合应对群攻。",
+    "training": {
+      "hero": "xiaorang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "xiaorang_bond",
+    "name": "地文星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，为前位同伴减伤 25%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "xiaorang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "peixuan_active",
+    "name": "文书双剑·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "peixuan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "peixuan_passive",
+    "name": "铁面孔目本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "peixuan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "peixuan_advanced",
+    "name": "铁面孔目·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.38
+    },
+    "description": "照应气血比例最低的同伴，回复 38% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "peixuan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "peixuan_bond",
+    "name": "地正星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "peixuan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "oupeng_active",
+    "name": "铁枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "oupeng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "oupeng_passive",
+    "name": "摩云金翅本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "oupeng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "oupeng_advanced",
+    "name": "摩云金翅·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "oupeng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "oupeng_bond",
+    "name": "地阔星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "oupeng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "dengfei_active",
+    "name": "铁链·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "刀势沉稳，破开敌手守势。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "dengfei",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "dengfei_passive",
+    "name": "火眼狻猊本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "行军不乱，自身气血提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "dengfei",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "dengfei_advanced",
+    "name": "火眼狻猊·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "挥刀前两名敌人，并令全队减伤 15%，持续 4 秒。",
+    "training": {
+      "hero": "dengfei",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "dengfei_bond",
+    "name": "地阖星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为全队回复 2 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "dengfei",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "yanshun_active",
+    "name": "赤须腰刀·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "yanshun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yanshun_passive",
+    "name": "锦毛虎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "yanshun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yanshun_advanced",
+    "name": "锦毛虎·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "yanshun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "yanshun_bond",
+    "name": "地强星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "yanshun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "yanglin_active",
+    "name": "铁枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "yanglin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yanglin_passive",
+    "name": "锦豹子本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "yanglin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yanglin_advanced",
+    "name": "锦豹子·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "yanglin",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "yanglin_bond",
+    "name": "地暗星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对气血最低的敌人追加一次 40% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "yanglin",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "lingzhen_active",
+    "name": "火炮引线·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2.6,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "lingzhen",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lingzhen_passive",
+    "name": "轰天雷本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "lingzhen",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lingzhen_advanced",
+    "name": "轰天雷·绝技",
+    "type": "strategy",
+    "cost": 45,
+    "effect": {
+      "kind": "strategy",
+      "rate": 1
+    },
+    "description": "谋略攻击一人；敌方全体攻击/谋略降低 20%，持续 6 秒；同伴各得 10 怒气。",
+    "training": {
+      "hero": "lingzhen",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "weaken"
+    }
+  },
+  {
+    "id": "lingzhen_bond",
+    "name": "地轴星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，令当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "lingzhen",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "weaken"
+    }
+  },
+  {
+    "id": "jiangjing_active",
+    "name": "算盘·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "jiangjing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jiangjing_passive",
+    "name": "神算子本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "jiangjing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jiangjing_advanced",
+    "name": "神算子·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.38
+    },
+    "description": "照应气血比例最低的同伴，回复 38% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "jiangjing",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "jiangjing_bond",
+    "name": "地会星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "jiangjing",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "lvfang_active",
+    "name": "方天画戟·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "刀势沉稳，破开敌手守势。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "lvfang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lvfang_passive",
+    "name": "小温侯本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "行军不乱，自身气血提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "lvfang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lvfang_advanced",
+    "name": "小温侯·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "挥刀前两名敌人，并令全队减伤 15%，持续 4 秒。",
+    "training": {
+      "hero": "lvfang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "lvfang_bond",
+    "name": "地佐星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为全队回复 2 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "lvfang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "guosheng_active",
+    "name": "银戟·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "guosheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "guosheng_passive",
+    "name": "赛仁贵本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "guosheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "guosheng_advanced",
+    "name": "赛仁贵·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "guosheng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "guosheng_bond",
+    "name": "地祐星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "guosheng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "andaoquan_active",
+    "name": "药箱银针·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "andaoquan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "andaoquan_passive",
+    "name": "神医本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "andaoquan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "andaoquan_advanced",
+    "name": "神医·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.38
+    },
+    "description": "照应气血比例最低的同伴，回复 38% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "andaoquan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "andaoquan_bond",
+    "name": "地灵星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "andaoquan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "huangfuduan_active",
+    "name": "兽医药囊·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.32
+    },
+    "training": {
+      "hero": "huangfuduan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "huangfuduan_passive",
+    "name": "紫髯伯本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "huangfuduan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "huangfuduan_advanced",
+    "name": "紫髯伯·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.2
+    },
+    "description": "全队回复 20% 最大气血，并各得 6 怒气。",
+    "training": {
+      "hero": "huangfuduan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "rally"
+    }
+  },
+  {
+    "id": "huangfuduan_bond",
+    "name": "地兽星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，全队各得 3 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "huangfuduan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "rally"
+    }
+  },
+  {
+    "id": "wangying_active",
+    "name": "短枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "wangying",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "wangying_passive",
+    "name": "矮脚虎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "wangying",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "wangying_advanced",
+    "name": "矮脚虎·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "wangying",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "wangying_bond",
+    "name": "地微星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "wangying",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "husanniang_active",
+    "name": "双刀红缨·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "husanniang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "husanniang_passive",
+    "name": "一丈青本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "husanniang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "husanniang_advanced",
+    "name": "一丈青·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "husanniang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "husanniang_bond",
+    "name": "地慧星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "husanniang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "baoxu_active",
+    "name": "阔剑·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "baoxu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "baoxu_passive",
+    "name": "丧门神本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "baoxu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "baoxu_advanced",
+    "name": "丧门神·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "baoxu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "baoxu_bond",
+    "name": "地暴星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "baoxu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "fanrui_active",
+    "name": "道剑·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2.4,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "fanrui",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "fanrui_passive",
+    "name": "混世魔王本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "fanrui",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "fanrui_advanced",
+    "name": "混世魔王·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.14
+    },
+    "description": "清除全队流血、中毒、破甲、眩晕和削弱，再各回复 14% 最大气血。",
+    "training": {
+      "hero": "fanrui",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "fanrui_bond",
+    "name": "地然星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，清除一位受困同伴的一种负面状态。触发强度随招式等级提高。",
+    "training": {
+      "hero": "fanrui",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "kongming_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "kongming",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "kongming_passive",
+    "name": "毛头星本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "kongming",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "kongming_advanced",
+    "name": "毛头星·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "kongming",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "kongming_bond",
+    "name": "地猖星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "kongming",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "kongliang_active",
+    "name": "朴刀火纹·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "kongliang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "kongliang_passive",
+    "name": "独火星本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "kongliang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "kongliang_advanced",
+    "name": "独火星·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "kongliang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "kongliang_bond",
+    "name": "地狂星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "kongliang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "xiangchong_active",
+    "name": "团牌标枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "xiangchong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xiangchong_passive",
+    "name": "八臂哪吒本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "xiangchong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xiangchong_advanced",
+    "name": "八臂哪吒·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "xiangchong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "xiangchong_bond",
+    "name": "地飞星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "xiangchong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "ligun_active",
+    "name": "团牌飞刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "ligun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "ligun_passive",
+    "name": "飞天大圣本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "ligun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "ligun_advanced",
+    "name": "飞天大圣·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "ligun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "ligun_bond",
+    "name": "地走星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "ligun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "jindajian_active",
+    "name": "刻刀印石·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.32
+    },
+    "training": {
+      "hero": "jindajian",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jindajian_passive",
+    "name": "玉臂匠本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "jindajian",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jindajian_advanced",
+    "name": "玉臂匠·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.2
+    },
+    "description": "全队回复 20% 最大气血，并各得 6 怒气。",
+    "training": {
+      "hero": "jindajian",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "rally"
+    }
+  },
+  {
+    "id": "jindajian_bond",
+    "name": "地巧星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，全队各得 3 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "jindajian",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "rally"
+    }
+  },
+  {
+    "id": "malin_active",
+    "name": "铁笛双刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "malin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "malin_passive",
+    "name": "铁笛仙本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "malin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "malin_advanced",
+    "name": "铁笛仙·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "malin",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "malin_bond",
+    "name": "地明星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "malin",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "tongwei_active",
+    "name": "水军短枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "tongwei",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "tongwei_passive",
+    "name": "出洞蛟本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "tongwei",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "tongwei_advanced",
+    "name": "出洞蛟·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "tongwei",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "tongwei_bond",
+    "name": "地进星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "tongwei",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "tongmeng_active",
+    "name": "水军短叉·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "tongmeng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "tongmeng_passive",
+    "name": "翻江蜃本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "tongmeng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "tongmeng_advanced",
+    "name": "翻江蜃·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "tongmeng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "tongmeng_bond",
+    "name": "地退星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "tongmeng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "mengkang_active",
+    "name": "造船木尺·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "从容照应同伴，恢复伤势最重者三成气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3
+    },
+    "training": {
+      "hero": "mengkang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "mengkang_passive",
+    "name": "玉幡竿本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "处变不惊，自身防御提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "mengkang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "mengkang_advanced",
+    "name": "玉幡竿·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.18
+    },
+    "description": "全队回复 18% 最大气血并减伤 20%，持续 4 秒；适合应对群攻。",
+    "training": {
+      "hero": "mengkang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "mengkang_bond",
+    "name": "地满星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，为前位同伴减伤 25%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "mengkang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "houjian_active",
+    "name": "针线锦旗·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "houjian",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "houjian_passive",
+    "name": "通臂猿本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "houjian",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "houjian_advanced",
+    "name": "通臂猿·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.38
+    },
+    "description": "照应气血比例最低的同伴，回复 38% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "houjian",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "houjian_bond",
+    "name": "地遂星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "houjian",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "chenda_active",
+    "name": "长枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "chenda",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "chenda_passive",
+    "name": "跳涧虎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "chenda",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "chenda_advanced",
+    "name": "跳涧虎·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "chenda",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "chenda_bond",
+    "name": "地周星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "chenda",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "yangchun_active",
+    "name": "大杆刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.6,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "yangchun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yangchun_passive",
+    "name": "白花蛇本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "yangchun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yangchun_advanced",
+    "name": "白花蛇·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 2
+    },
+    "description": "攻击后位敌人并眩晕 1 秒；以突进牵制敌方照应者。",
+    "training": {
+      "hero": "yangchun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "yangchun_bond",
+    "name": "地隐星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标削弱 15%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "yangchun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "wave"
+    }
+  },
+  {
+    "id": "zhengtianshou_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "zhengtianshou",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhengtianshou_passive",
+    "name": "白面郎君本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhengtianshou",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhengtianshou_advanced",
+    "name": "白面郎君·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "zhengtianshou",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "zhengtianshou_bond",
+    "name": "地异星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhengtianshou",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "taozongwang_active",
+    "name": "铁锹·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "taozongwang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "taozongwang_passive",
+    "name": "九尾龟本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "taozongwang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "taozongwang_advanced",
+    "name": "九尾龟·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "taozongwang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "taozongwang_bond",
+    "name": "地理星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "taozongwang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "songqing_active",
+    "name": "酒壶折扇·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "从容照应同伴，恢复伤势最重者三成气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3
+    },
+    "training": {
+      "hero": "songqing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "songqing_passive",
+    "name": "铁扇子本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "处变不惊，自身防御提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "songqing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "songqing_advanced",
+    "name": "铁扇子·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.18
+    },
+    "description": "全队回复 18% 最大气血并减伤 20%，持续 4 秒；适合应对群攻。",
+    "training": {
+      "hero": "songqing",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "songqing_bond",
+    "name": "地俊星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，为前位同伴减伤 25%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "songqing",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "yuehe_active",
+    "name": "竹笛·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "yuehe",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yuehe_passive",
+    "name": "铁叫子本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "yuehe",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yuehe_advanced",
+    "name": "铁叫子·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.38
+    },
+    "description": "照应气血比例最低的同伴，回复 38% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "yuehe",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "yuehe_bond",
+    "name": "地乐星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "yuehe",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "gongwang_active",
+    "name": "飞枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "gongwang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "gongwang_passive",
+    "name": "花项虎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "gongwang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "gongwang_advanced",
+    "name": "花项虎·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "gongwang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "gongwang_bond",
+    "name": "地捷星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对气血最低的敌人追加一次 40% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "gongwang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "dingdesun_active",
+    "name": "飞叉·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "dingdesun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "dingdesun_passive",
+    "name": "中箭虎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "dingdesun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "dingdesun_advanced",
+    "name": "中箭虎·绝技",
+    "type": "active",
+    "cost": 55,
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "description": "瞄准气血比例最低的敌人，忽略其 50% 防御；克制厚甲与残敌。",
+    "training": {
+      "hero": "dingdesun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "dingdesun_bond",
+    "name": "地速星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒破甲。触发强度随招式等级提高。",
+    "training": {
+      "hero": "dingdesun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "muchun_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "muchun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "muchun_passive",
+    "name": "小遮拦本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "muchun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "muchun_advanced",
+    "name": "小遮拦·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "muchun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "muchun_bond",
+    "name": "地镇星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "muchun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "caozheng_active",
+    "name": "屠刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "caozheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "caozheng_passive",
+    "name": "操刀鬼本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "caozheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "caozheng_advanced",
+    "name": "操刀鬼·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.35
+    },
+    "description": "枪扫前两名敌人并眩晕 1.5 秒。首领受控后会短暂抗控。",
+    "training": {
+      "hero": "caozheng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "caozheng_bond",
+    "name": "地嵇星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标眩晕 1 秒；遵守首领抗控。触发强度随招式等级提高。",
+    "training": {
+      "hero": "caozheng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "songwan_active",
+    "name": "阔刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "songwan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "songwan_passive",
+    "name": "云里金刚本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "songwan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "songwan_advanced",
+    "name": "云里金刚·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "songwan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "songwan_bond",
+    "name": "地魔星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "songwan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "duqian_active",
+    "name": "长枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "duqian",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "duqian_passive",
+    "name": "摸着天本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "duqian",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "duqian_advanced",
+    "name": "摸着天·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "duqian",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "duqian_bond",
+    "name": "地妖星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "duqian",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "xueyong_active",
+    "name": "棍棒·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "刀势沉稳，破开敌手守势。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "xueyong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xueyong_passive",
+    "name": "病大虫本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "行军不乱，自身气血提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "xueyong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "xueyong_advanced",
+    "name": "病大虫·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "挥刀前两名敌人，并令全队减伤 15%，持续 4 秒。",
+    "training": {
+      "hero": "xueyong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "xueyong_bond",
+    "name": "地幽星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为全队回复 2 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "xueyong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "shien_active",
+    "name": "短刀·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "shien",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shien_passive",
+    "name": "金眼彪本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "shien",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shien_advanced",
+    "name": "金眼彪·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "shien",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "shien_bond",
+    "name": "地伏星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "shien",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "lizhong_active",
+    "name": "膏药长枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "lizhong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lizhong_passive",
+    "name": "打虎将本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "lizhong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lizhong_advanced",
+    "name": "打虎将·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.35
+    },
+    "description": "枪扫前两名敌人并眩晕 1.5 秒。首领受控后会短暂抗控。",
+    "training": {
+      "hero": "lizhong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "lizhong_bond",
+    "name": "地僻星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标眩晕 1 秒；遵守首领抗控。触发强度随招式等级提高。",
+    "training": {
+      "hero": "lizhong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "zhoutong_active",
+    "name": "红缨枪·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "zhoutong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhoutong_passive",
+    "name": "小霸王本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhoutong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhoutong_advanced",
+    "name": "小霸王·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "zhoutong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "zhoutong_bond",
+    "name": "地空星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhoutong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "tanglong_active",
+    "name": "铁锤·出手",
+    "type": "strategy",
+    "cost": 50,
+    "description": "从容照应同伴，恢复伤势最重者三成气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3
+    },
+    "training": {
+      "hero": "tanglong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "tanglong_passive",
+    "name": "金钱豹子本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "处变不惊，自身防御提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "tanglong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "tanglong_advanced",
+    "name": "金钱豹子·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.18
+    },
+    "description": "全队回复 18% 最大气血并减伤 20%，持续 4 秒；适合应对群攻。",
+    "training": {
+      "hero": "tanglong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "tanglong_bond",
+    "name": "地孤星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，为前位同伴减伤 25%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "tanglong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    }
+  },
+  {
+    "id": "duxing_active",
+    "name": "账簿·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "duxing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "duxing_passive",
+    "name": "鬼脸儿本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "duxing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "duxing_advanced",
+    "name": "鬼脸儿·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.38
+    },
+    "description": "照应气血比例最低的同伴，回复 38% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "duxing",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "duxing_bond",
+    "name": "地全星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "duxing",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "zouyuan_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 60,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "zouyuan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zouyuan_passive",
+    "name": "出林龙本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zouyuan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zouyuan_advanced",
+    "name": "出林龙·绝技",
+    "type": "active",
+    "cost": 60,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "先击 180%；目标已有流血时再追击 120%。先铺流血，再行收割。",
+    "training": {
+      "hero": "zouyuan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "zouyuan_bond",
+    "name": "地短星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒流血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zouyuan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "combo"
+    }
+  },
+  {
+    "id": "zourun_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "zourun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zourun_passive",
+    "name": "独角龙本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zourun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zourun_advanced",
+    "name": "独角龙·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "zourun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "zourun_bond",
+    "name": "地角星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zourun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "zhugui_active",
+    "name": "响箭·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "zhugui",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhugui_passive",
+    "name": "旱地忽律本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhugui",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhugui_advanced",
+    "name": "旱地忽律·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "zhugui",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "zhugui_bond",
+    "name": "地囚星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhugui",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "zhufu_active",
+    "name": "酒坛·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.32
+    },
+    "training": {
+      "hero": "zhufu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhufu_passive",
+    "name": "笑面虎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhufu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhufu_advanced",
+    "name": "笑面虎·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.2
+    },
+    "description": "全队回复 20% 最大气血，并各得 6 怒气。",
+    "training": {
+      "hero": "zhufu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "rally"
+    }
+  },
+  {
+    "id": "zhufu_bond",
+    "name": "地藏星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，全队各得 3 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhufu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "rally"
+    }
+  },
+  {
+    "id": "caifu_active",
+    "name": "大刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "刀势沉稳，破开敌手守势。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "caifu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "caifu_passive",
+    "name": "铁臂膊本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "行军不乱，自身气血提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "caifu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "caifu_advanced",
+    "name": "铁臂膊·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "挥刀前两名敌人，并令全队减伤 15%，持续 4 秒。",
+    "training": {
+      "hero": "caifu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "caifu_bond",
+    "name": "地平星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为全队回复 2 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "caifu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "caiqing_active",
+    "name": "簪花腰刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "caiqing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "caiqing_passive",
+    "name": "一枝花本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "caiqing",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "caiqing_advanced",
+    "name": "一枝花·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "caiqing",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "caiqing_bond",
+    "name": "地损星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "caiqing",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "lili_active",
+    "name": "药酒短刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "lili",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lili_passive",
+    "name": "催命判官本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "lili",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "lili_advanced",
+    "name": "催命判官·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "lili",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "lili_bond",
+    "name": "地奴星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对气血最低的敌人追加一次 40% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "lili",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "liyun_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "liyun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "liyun_passive",
+    "name": "青眼虎本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "liyun",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "liyun_advanced",
+    "name": "青眼虎·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "liyun",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "liyun_bond",
+    "name": "地察星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "liyun",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "jiaoting_active",
+    "name": "摔跤护腕·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "jiaoting",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jiaoting_passive",
+    "name": "没面目本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "jiaoting",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "jiaoting_advanced",
+    "name": "没面目·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "jiaoting",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "jiaoting_bond",
+    "name": "地恶星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "jiaoting",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "shiyong_active",
+    "name": "朴刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "刀势沉稳，破开敌手守势。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "shiyong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shiyong_passive",
+    "name": "石将军本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "行军不乱，自身气血提升八分。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "shiyong",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shiyong_advanced",
+    "name": "石将军·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "挥刀前两名敌人，并令全队减伤 15%，持续 4 秒。",
+    "training": {
+      "hero": "shiyong",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "shiyong_bond",
+    "name": "地丑星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为全队回复 2 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "shiyong",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "sunxin_active",
+    "name": "钢鞭·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "sunxin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "sunxin_passive",
+    "name": "小尉迟本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "sunxin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "sunxin_advanced",
+    "name": "小尉迟·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "sunxin",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "sunxin_bond",
+    "name": "地数星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "sunxin",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "gudasao_active",
+    "name": "双刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "gudasao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "gudasao_passive",
+    "name": "母大虫本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "gudasao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "gudasao_advanced",
+    "name": "母大虫·绝技",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.35
+    },
+    "description": "枪扫前两名敌人并眩晕 1.5 秒。首领受控后会短暂抗控。",
+    "training": {
+      "hero": "gudasao",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "gudasao_bond",
+    "name": "地阴星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时防御 +5%。每三次普攻，使当前目标眩晕 1 秒；遵守首领抗控。触发强度随招式等级提高。",
+    "training": {
+      "hero": "gudasao",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "control"
+    }
+  },
+  {
+    "id": "zhangqing_gardener_active",
+    "name": "菜锄·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.5,
+      "status": {
+        "id": "bleeding",
+        "turns": 2,
+        "value": 0.02
+      }
+    },
+    "training": {
+      "hero": "zhangqing_gardener",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhangqing_gardener_passive",
+    "name": "菜园子本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhangqing_gardener",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhangqing_gardener_advanced",
+    "name": "菜园子·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.25
+    },
+    "description": "劈斩前两名敌人，各附加 4 秒流血；与擅长追击的同伴衔接。",
+    "training": {
+      "hero": "zhangqing_gardener",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "zhangqing_gardener_bond",
+    "name": "地刑星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，额外回复自身 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhangqing_gardener",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "bloodline"
+    }
+  },
+  {
+    "id": "sunerniang_active",
+    "name": "双短刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "sunerniang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "sunerniang_passive",
+    "name": "母夜叉本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "sunerniang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "sunerniang_advanced",
+    "name": "母夜叉·绝技",
+    "type": "active",
+    "cost": 55,
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "description": "瞄准气血比例最低的敌人，忽略其 50% 防御；克制厚甲与残敌。",
+    "training": {
+      "hero": "sunerniang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "sunerniang_bond",
+    "name": "地壮星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时攻击 +5%。每三次普攻，为当前目标挂 4 秒破甲。触发强度随招式等级提高。",
+    "training": {
+      "hero": "sunerniang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "wangdingliu_active",
+    "name": "轻靴短刀·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "wangdingliu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "wangdingliu_passive",
+    "name": "活闪婆本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "wangdingliu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "wangdingliu_advanced",
+    "name": "活闪婆·绝技",
+    "type": "active",
+    "cost": 35,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.5
+    },
+    "description": "袭击后位敌人，夺取最多 20 怒气归己，拖慢敌人招式。",
+    "training": {
+      "hero": "wangdingliu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "wangdingliu_bond",
+    "name": "地劣星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，夺取当前目标最多 8 怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "wangdingliu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "steal"
+    }
+  },
+  {
+    "id": "yubaosi_active",
+    "name": "帅旗·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.3,
+      "status": {
+        "id": "armor_break",
+        "turns": 2,
+        "value": 0.3
+      }
+    },
+    "training": {
+      "hero": "yubaosi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yubaosi_passive",
+    "name": "险道神本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "yubaosi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "yubaosi_advanced",
+    "name": "险道神·绝技",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "yubaosi",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "yubaosi_bond",
+    "name": "地健星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 20%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "yubaosi",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "duanjingzhu_active",
+    "name": "马鞭套索·出手",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.8
+    },
+    "training": {
+      "hero": "duanjingzhu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "duanjingzhu_passive",
+    "name": "金毛犬本领",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "duanjingzhu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨即可习得",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "duanjingzhu_advanced",
+    "name": "金毛犬·绝技",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "duanjingzhu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "huangni_complete",
+      "label": "完成智取生辰纲，或聚义厅达到三级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "duanjingzhu_bond",
+    "name": "地狗星·同行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对气血最低的敌人追加一次 40% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "duanjingzhu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    }
   }
 ]

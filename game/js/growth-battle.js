@@ -1,5 +1,6 @@
-import { bounded, pick, random } from './utils.js?v=0.5.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.5.0';
+import { martialFactor } from './martial.js?v=0.9.0';
+import { bounded, pick, random } from './utils.js?v=0.9.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.9.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -14,7 +15,7 @@ export function initializeGrowthBattle(state,b,data){
     u.skills=u.skills.filter(id=>!unlockReason(state,data.by.skills[id],b.guest));
     u.training={levels:Object.fromEntries(u.skills.map(id=>[id,b.guest?1:skillLevel(state,id)])),bond:u.skills.find(id=>data.by.skills[id].training?.tier==='bond')||null};
   }
-  if(b.context.type==='dungeon')for(const u of b.enemy){
+  if(['dungeon','rotation'].includes(b.context.type))for(const u of b.enemy){
     const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider'})[u.model];
     if(kind)u.boss={kind,readyAt:6000,pendingAt:0,phase:0};
   }
@@ -41,7 +42,7 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const weakened=has(u,'weaken')?.value||0;
   const attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1)*(1-weakened)*(u.boss?.phase===1&&u.boss.kind==='tiger'?1.2:1);
   const raw=api.damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
-  const loss=Math.max(1,Math.round(raw*(1-(has(target,'guard')?.value||0))));
+  const loss=Math.max(1,Math.round(raw*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
   target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);

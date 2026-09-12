@@ -199,5 +199,34 @@
         "count": 1
       }
     ]
+  },
+  {
+    "id": "spirit_trial_reward",
+    "silver": 300,
+    "prestige": 8,
+    "merit": 15,
+    "exp": 300,
+    "guaranteed": {
+      "martial_pages": 3,
+      "mount_feed": 2,
+      "mount_token": 1,
+      "spirit_essence": 2
+    },
+    "items": []
+  },
+  {
+    "id": "immortal_trial_reward",
+    "silver": 600,
+    "prestige": 8,
+    "merit": 15,
+    "exp": 600,
+    "guaranteed": {
+      "martial_pages": 3,
+      "mount_feed": 2,
+      "mount_token": 1,
+      "spirit_essence": 2,
+      "immortal_seal": 1
+    },
+    "items": []
   }
 ]
