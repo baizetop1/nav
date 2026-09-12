@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-11T21:43:43.181Z",
+  "generatedAt": "2026-09-12T00:19:16.618Z",
   "intelligence": {
-    "updatedAt": "2026-09-11T21:43:43.181Z",
+    "updatedAt": "2026-09-12T00:19:16.618Z",
     "items": [
       {
         "id": "cn-item-3a5d358bc060a533",
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-openai-46fcf5bb7b99520f",
+        "id": "ai-openai-968c32634dc2a1cb",
         "category": "ai",
-        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+        "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+        "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-11T10:00:00.000Z",
-        "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
+        "publishedAt": "2026-09-14T00:00:00.000Z",
+        "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49662371",
+        "id": "hn-49666735",
         "category": "dev",
-        "title": "A misalignment of AI in mathematics",
-        "url": "https://mathandai.org/",
+        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+        "url": "https://www.rubyhack.ai/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T17:45:12.000Z",
+        "publishedAt": "2026-09-11T23:17:42.000Z",
         "badge": "HN",
-        "signal": "385 分 · 453 评论"
+        "signal": "131 分 · 58 评论"
       },
       {
-        "id": "cn-it-5605cff2c51b5b15",
+        "id": "cn-it-a242c96147d5e040",
         "category": "cn",
-        "title": "高盛：总是盯着“AI 泡沫会不会破”不放，反而可能会低估 AI 创造的价值",
-        "url": "https://www.ithome.com/1/001/474.htm",
+        "title": "DeepSeek 开口说话了：灰度测试 AI 语音对话，支持四种音色",
+        "url": "https://www.ithome.com/1/001/498.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T15:48:59.000Z",
-        "summary": "IT之家 9 月 11 日消息，今年以来，华尔街一直在就 AI 热潮是否已经变成泡沫争论不休。高盛投资银行业务联席主管金 · 波斯内特却认为，真正值得问的问题并不是这个。“大家都在问，我们是不是已经进入 AI 泡沫。但更应该问的是，AI 会不会 从根本上改变企业的运营、竞争和价值创造方式 。这个问题的答案显然是肯定的。” 长期身处美国企业押注 AI 转型最前线的波斯内特，亲眼见证了企业界为这场变化投入多少资源。今年，高盛参与了多笔市场规模最大的交易，还拿下 SpaceX 创…",
+        "publishedAt": "2026-09-12T00:17:46.000Z",
+        "summary": "IT之家 9 月 12 日消息，据IT之家小伙伴反馈， DeepSeek 灰度测试语音对话 ，测试到的用户在 App 右上角会有一个小喇叭按钮。 此外，DeepSeek 的设置页面会出现一个“ 朗读音色 ”选项，用户可以选择四种音色： 贝壳：百变活泼 白浪：明朗坚定 海星：俏皮甜美 暗潮：低沉浑厚",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
+        "id": "github-advisory-ghsa-325j-mg25-8q58",
         "category": "security",
-        "title": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
-        "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
+        "title": "yayson: Prototype pollution in Store/LegacyStore deserialization",
+        "url": "https://github.com/advisories/GHSA-325j-mg25-8q58",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:38:24.000Z",
-        "summary": "## SAML Tenant Binding Enables Cross-Tenant Account Takeover ### Summary Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant w…",
-        "badge": "CVE-2026-59151",
-        "signal": "CRITICAL · CVSS 9.6"
+        "publishedAt": "2026-09-11T22:11:38.000Z",
+        "summary": "# Summary `Store`/`LegacyStore` key internal lookup tables by the `type`, `id`, and relationship names from a JSON:API document. Because these were plain objects, a document with `type: \"__proto__\"` writes onto `Object.prototype`, pollutin…",
+        "badge": "CVE-2026-61534",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -88,14 +88,14 @@
         "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-81d7670e2049c378",
+        "id": "cn-baidu-6fcb7d4abf5f88d7",
         "category": "cn",
-        "title": "一天已经不足24小时了",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E5%A4%A9%E5%B7%B2%E7%BB%8F%E4%B8%8D%E8%B6%B324%E5%B0%8F%E6%97%B6%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "网友最关心的不是车 是雷总去哪开门",
+        "url": "https://www.baidu.com/s?wd=%E7%BD%91%E5%8F%8B%E6%9C%80%E5%85%B3%E5%BF%83%E7%9A%84%E4%B8%8D%E6%98%AF%E8%BD%A6+%E6%98%AF%E9%9B%B7%E6%80%BB%E5%8E%BB%E5%93%AA%E5%BC%80%E9%97%A8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "从2020年年中以来，地球自转速率呈加快趋势，一天已不足24小时。中国科学院国家授时中心、英国国家物理实验室等机构研究人员表示，目前地球自转速度已达过去50年来最快，时光流逝比过去半个世纪任何时候都快。",
+        "summary": "9月11日，小米创办人、董事长兼CEO雷军在社交平台发文：“小米澎程，全国交付明天开启，覆盖全国75座城市。周末见！”消息一出，评论区迅速被一个问题刷屏——“雷总去哪儿开门？ ”",
         "badge": "热搜",
-        "signal": "7,808,439 热度"
+        "signal": "7,808,572 热度"
       },
       {
         "id": "cisa-kev-cve-2026-42016",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49665210",
+        "id": "hn-49662371",
         "category": "dev",
-        "title": "ElevenLabs Music v2.5",
-        "url": "https://elevenmusic.io/blog/introducing-music-v2-5",
+        "title": "A misalignment of AI in mathematics",
+        "url": "https://mathandai.org/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T20:53:16.000Z",
+        "publishedAt": "2026-09-11T17:45:12.000Z",
         "badge": "HN",
-        "signal": "45 分 · 38 评论"
+        "signal": "571 分 · 635 评论"
       },
       {
         "id": "cn-item-469419551521052e",
@@ -138,24 +138,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-2cg9-97gq-9mqp",
+        "id": "github-advisory-ghsa-rqx4-3f6q-3x2v",
         "category": "security",
-        "title": "Shopper: Missing authorization on product removal actions in CollectionProducts component",
-        "url": "https://github.com/advisories/GHSA-2cg9-97gq-9mqp",
+        "title": "@Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
+        "url": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:31:26.000Z",
-        "summary": "## Title Missing authorization on product removal actions in CollectionProducts component ## Description A lack of authorization control was discovered on both the per-record delete action and the bulk delete action inside `packages/admin/…",
-        "badge": "CVE-2026-56825",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-11T22:04:42.000Z",
+        "summary": "## Summary Mockoon's admin API (`commons-server/src/libs/server/admin-api.ts`) is mounted on the same Express listener as the user-defined mock routes, **enabled by default** in every shipped runtime (commons-server, CLI, serverless), serv…",
+        "badge": "CVE-2026-59148",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-openai-39842fa0b34b37cb",
+        "id": "ai-openai-4aeb82da9975e2f5",
         "category": "ai",
-        "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
-        "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+        "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+        "url": "https://openai.com/index/cognition-devin-testing-with-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-10T16:00:00.000Z",
-        "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
+        "publishedAt": "2026-09-11T16:00:00.000Z",
+        "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
         "badge": "OpenAI"
       },
       {
@@ -167,16 +167,16 @@
         "publishedAt": "2026-09-11T13:05:36.000Z",
         "summary": "经过几个月的优化，现在整个站点的 SEO 情况比之前好了很多。 每日点击量基本能达到 800+了。 核心做法就是：永远以用户体验为核心去不断优化，不要为了 SEO 而 SEO",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-78cdc70069089a7a",
+        "id": "cn-it-caa971611e21d894",
         "category": "cn",
-        "title": "2027 款雷克萨斯 LS 登陆日本老家：全系 3.5L V6 混动，1414 万日元起",
-        "url": "https://www.ithome.com/1/001/471.htm",
+        "title": "OpenAI 将 Habitat 从 Python 迁移至 Rust：CPU 效率提升 6 倍，服务 10 亿 ChatGPT 用户",
+        "url": "https://www.ithome.com/1/001/497.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T15:38:23.000Z",
-        "summary": "IT之家 9 月 11 日消息，9 月 10 日，雷克萨斯在日本正式推出 2027 款 LS 旗舰轿车。此次升级继续围绕“Lexus Driving Signature”展开，从基础性能到整车调校都进行了进一步优化。 为了改善行驶质感，新款 LS 重点从强化车身刚性和降低振动入手。在原有车头和车尾加强结构的基础上，新车进一步强化中央通道，从而提升整车刚性。后悬架加强件和后备箱加强件则加入 REDS 响应增强型阻尼结构，通过涂覆并烘烤热固性树脂抑制高频振动，在提高操控稳定性的…",
+        "publishedAt": "2026-09-12T00:07:04.000Z",
+        "summary": "IT之家 9 月 12 日消息，OpenAI 今日发文，主要介绍了其在线存储平台 Habitat 如何应对产品规模的快速增长，以及从 Python 迁移至 Rust 的工程实践。 OpenAI 称该平台目前每秒处理超过 7000 万次请求，每周服务超 10 亿用户，管理的数据规模超过 500PB。据介绍，Habitat 已从 2024 年的 Python 客户端库，发展为支撑旗下产品的分布式存储系统。 据介绍，Habitat 最初是一个与 ChatGPT 主服务器交互的 P…",
         "badge": "IT之家"
       },
       {
@@ -200,35 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49663373",
+        "id": "hn-49662990",
         "category": "dev",
-        "title": "GrapheneOS' rewritten Messages app is released",
-        "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
+        "title": "I spent $220 on Google app ads and 60% of the installs were robots",
+        "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T18:50:36.000Z",
+        "publishedAt": "2026-09-11T18:24:55.000Z",
         "badge": "HN",
-        "signal": "119 分 · 65 评论"
+        "signal": "242 分 · 132 评论"
       },
       {
-        "id": "cn-baidu-95dd5bc00235b46b",
+        "id": "cn-baidu-cc7888e66bca7dc6",
         "category": "cn",
-        "title": "“10台手机卖不出1台折叠屏”",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C10%E5%8F%B0%E6%89%8B%E6%9C%BA%E5%8D%96%E4%B8%8D%E5%87%BA1%E5%8F%B0%E6%8A%98%E5%8F%A0%E5%B1%8F%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国天眼有新发现",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%A4%A9%E7%9C%BC%E6%9C%89%E6%96%B0%E5%8F%91%E7%8E%B0&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "2026年9月，国内折叠屏渗透率突破8%、同比增长65%，但实体门店销售仍冷热不均，有店员坦言“10台手机卖不到1台折叠屏”。苹果入局被视为行业拐点，预计首款折叠屏今年出货量最高600万台。",
+        "summary": "近日，由中国科学院国家天文台研究团队牵头的“中国天眼FAST中性氢巡天项目”发布第二期数据集，构建起当今世界规模最大的中性氢星系样本库。",
         "badge": "热搜",
-        "signal": "7,713,555 热度"
+        "signal": "7,714,294 热度"
       },
       {
-        "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
+        "id": "github-advisory-ghsa-65h7-9wrw-629c",
         "category": "security",
-        "title": "Shopper: Unauthorized inventory stock manipulation via unlocked variant property in VariantStock component",
-        "url": "https://github.com/advisories/GHSA-g3f9-g5vj-p62f",
+        "title": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+        "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:29:20.000Z",
-        "summary": "## Title Unauthorized inventory stock manipulation via unlocked variant property in VariantStock component ## Description A lack of authorization control was discovered in the `stockAction()` method in `packages/admin/src/Livewire/Componen…",
-        "badge": "CVE-2026-56829",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-11T22:02:04.000Z",
+        "summary": "## Summary The published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external `$ref` dereferencing, but the latest patched dependency `mcp-from-openapi` 2.3.0 still makes backend-origin request…",
+        "badge": "CVE-2026-59973",
+        "signal": "HIGH · CVSS 8.5"
       },
       {
         "id": "ai-hugging-face-46660cb2ea4362f6",
@@ -272,45 +272,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-openai-6a886414536a09e3",
+        "id": "ai-openai-46fcf5bb7b99520f",
         "category": "ai",
-        "title": "Now everyone can put data to work",
-        "url": "https://openai.com/index/put-data-to-work",
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
         "source": "OpenAI",
-        "publishedAt": "2026-09-10T15:00:00.000Z",
-        "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
+        "publishedAt": "2026-09-11T10:00:00.000Z",
+        "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49662990",
+        "id": "hn-49626718",
         "category": "dev",
-        "title": "I spent $220 on Google app ads. 60% of the installs were robots",
-        "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
+        "title": "A Design Space Exploration of Async/Await",
+        "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T18:24:55.000Z",
+        "publishedAt": "2026-09-09T13:59:50.000Z",
         "badge": "HN",
-        "signal": "88 分 · 42 评论"
+        "signal": "107 分 · 22 评论"
       },
       {
-        "id": "cn-it-d726d89fa2cb6657",
+        "id": "cn-it-0a646828c2791281",
         "category": "cn",
-        "title": "小岛秀夫《Physint》为何同索尼“分手”？消息称与预算、盈利前景、独占安排有关",
-        "url": "https://www.ithome.com/1/001/470.htm",
+        "title": "我国燃料电池电动汽车安全新国标公开征求意见，要求氢气排放率不超 8%",
+        "url": "https://www.ithome.com/1/001/496.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T15:20:17.000Z",
-        "summary": "IT之家 9 月 11 日消息，彭博社今天（11 日）援引知情人士消息称，索尼 PlayStation 之所以退出知名游戏制作人小岛秀夫的新作项目，主要原因包括 预算失控风险、盈利前景以及独占安排等问题 。 知情人士表示，小岛秀夫此前推出的《死亡搁浅》及其续作商业表现 没有达到 PlayStation 的收入预期 ，是促使 PlayStation 退出的重要因素之一。 新作本身的开发状况同样令 PlayStation 担忧。知情人士称，《Physint》已经 多次错过开发节…",
+        "publishedAt": "2026-09-12T00:04:07.000Z",
+        "summary": "IT之家 9 月 12 日消息，工信部 9 月 9 日发布公告，公开征求《 燃料电池电动汽车 安全要求 》强制性国家标准的意见。 征求意见稿编制说明称，在示范城市群带动下，燃料电池商用车、中重型货运车辆批量投入运营，车辆应用场景拓展至高速公路、城市道路、隧道、停车场等各类公共交通环境，车辆运行工况日趋复杂。氢气分子渗透性强、爆炸极限范围宽，车载高压储氢系统存在泄漏、泄压、聚集等特有安全风险，一旦发生失效将直接威胁驾乘人员与公众生命财产安全。 为适配大规模商业化的安全管控需要…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-j328-xmgp-j4q3",
+        "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
         "category": "security",
-        "title": "Shopper: privilege escalation via improper Livewire admin component authorization",
-        "url": "https://github.com/advisories/GHSA-j328-xmgp-j4q3",
+        "title": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
+        "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:28:54.000Z",
-        "summary": "## Summary Three Livewire admin components in `shopper/framework` (latest master at commit `fcd0c59`, released as v2.8.0) gate state-mutating actions on the read-only `view_users` permission. This is the same class as the issue Shopper fix…",
-        "badge": "CVE-2026-56828",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-11T21:38:24.000Z",
+        "summary": "## SAML Tenant Binding Enables Cross-Tenant Account Takeover ### Summary Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant w…",
+        "badge": "CVE-2026-59151",
+        "signal": "CRITICAL · CVSS 9.6"
       },
       {
         "id": "ai-google-deepmind-d721843382f3485e",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "工业和信息化部等九部门11日公布《智能网联新能源汽车产业发展“十五五”规划》，提出到2030年，我国智能网联新能源汽车全产业链优势进一步巩固，进入世界汽车强国行列，国内市场新能源乘用车、商用车在各自领域新车总销量的占比分别达到70%、40%，具备自动驾驶功能的汽车实现规模应用。",
         "badge": "热搜",
-        "signal": "7,618,645 热度"
+        "signal": "7,617,390 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86060",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49626718",
+        "id": "hn-49663373",
         "category": "dev",
-        "title": "A Design Space Exploration of Async/Await",
-        "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
+        "title": "GrapheneOS' rewritten Messages app is released",
+        "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
         "source": "Hacker News",
-        "publishedAt": "2026-09-09T13:59:50.000Z",
+        "publishedAt": "2026-09-11T18:50:36.000Z",
         "badge": "HN",
-        "signal": "36 分 · 3 评论"
+        "signal": "179 分 · 104 评论"
       },
       {
         "id": "cn-item-b6ae16171e38f30c",
@@ -383,24 +383,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-243p-f3cv-c5wh",
+        "id": "github-advisory-ghsa-2cg9-97gq-9mqp",
         "category": "security",
-        "title": "Shopper: Authorization bypass in Filament bulk actions allows browse-only staff to mass-delete attributes/tags and mass-toggle visibility of brands/categories/suppliers",
-        "url": "https://github.com/advisories/GHSA-243p-f3cv-c5wh",
+        "title": "Shopper: Missing authorization on product removal actions in CollectionProducts component",
+        "url": "https://github.com/advisories/GHSA-2cg9-97gq-9mqp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T20:47:17.000Z",
-        "summary": "## Summary Five Filament `groupedBulkActions` blocks across the Shopper admin Livewire pages omit the `->authorize(...)` permission gate, while their per-record sibling actions (and other Shopper Index pages such as `Pages/Settings/Currenc…",
-        "badge": "CVE-2026-56827",
+        "publishedAt": "2026-09-11T21:31:26.000Z",
+        "summary": "## Title Missing authorization on product removal actions in CollectionProducts component ## Description A lack of authorization control was discovered on both the per-record delete action and the bulk delete action inside `packages/admin/…",
+        "badge": "CVE-2026-56825",
         "signal": "HIGH · CVSS 8.1"
       },
       {
-        "id": "ai-openai-0bb946f0c4215389",
+        "id": "ai-openai-39842fa0b34b37cb",
         "category": "ai",
-        "title": "Introducing ChatGPT for Financial Services",
-        "url": "https://openai.com/index/introducing-chatgpt-financial-services",
+        "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+        "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
         "source": "OpenAI",
-        "publishedAt": "2026-09-10T07:00:00.000Z",
-        "summary": "Introducing ChatGPT for Financial Services, combining built-in financial data and GPT-6 Astra for research, modeling, and client-ready materials.",
+        "publishedAt": "2026-09-10T16:00:00.000Z",
+        "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
         "badge": "OpenAI"
       },
       {
@@ -412,16 +412,16 @@
         "publishedAt": "2026-09-11T11:57:22.000Z",
         "summary": "最近手痒，拉了个腾讯新开源的 Agent 项目 Octop （ https://github.com/TencentCloud/Octop ）跑了一下。 这玩意儿主打自托管，支持多用户多专家，个人用或者扔服务器上挂着都行。部署挺省事，一键起服务，还能直接接 IM 通道。 不过有个小问题：它最核心的几个底层依赖还没开源。现在拉代码跑是能跑，但想魔改源码的兄弟还是得先蹲一手。 整体架构看着还行，活跃度挺高的，需要的兄弟们可以试一下。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-175d95259f139abf",
+        "id": "cn-it-8a5a48bcdd4227cd",
         "category": "cn",
-        "title": "Counterpoint：预计 2026 年折叠屏智能手机面板出货量同比增长 23%，最大增量来自苹果",
-        "url": "https://www.ithome.com/1/001/469.htm",
+        "title": "IT早报 0912：央视曝光 AI 中转站低价灰产；新版充电宝 3C 认证标准落地；36.9 万起特斯拉 Model Y 高性能版上市；哪吒汽车拟获 30 亿元偿债重整...",
+        "url": "https://www.ithome.com/1/001/495.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-11T15:12:04.000Z",
-        "summary": "IT之家 9 月 11 日消息，根据 Counterpoint Research 今日发布的季度折叠屏显示面板出货量与技术报告，2026 年上半年全球折叠屏智能手机面板出货量同比下降 13%。降幅主要集中在翻盖式面板，而 大折叠面板 出货量继续增长。 IT之家从报告获悉，上半年市场下滑主要源于翻盖式面板，而非大折叠面板需求。 大折叠面板出货量同比增长 35% ，份额由 50% 升至 78%，提升约 28 个百分点。翻盖式面板出货量同比下降 62%，份额降至 21%，减少约 …",
+        "publishedAt": "2026-09-11T23:50:16.000Z",
+        "summary": "“IT早报”时间，大家好，现在是 2026 年 9 月 12 日星期六，今天的重要科技资讯有： 1. 8.8 元买 5000 积分？央视曝光 AI 中转站低价灰产，小心你的代码被截留倒卖 央视曝光二手平台大量低价 AI 工具积分实为第三方 API 中转站篡改本地配置，用户办公文档、代码等敏感信息存在被截留、倒卖风险，官方表示会严打这类违规行为。>> 查看详情 2. 新版充电宝 3C 认证实施规则落地，已发出首批 32 张 3C 认证证书 新版规则新增安全指标测试要求，细化质…",
         "badge": "IT之家"
       },
       {
@@ -445,35 +445,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49662767",
+        "id": "hn-49666146",
         "category": "dev",
-        "title": "Litelm: LiteLLM Without the Bloat",
-        "url": "https://github.com/kennethwolters/litelm",
+        "title": "Project Blinkenlights",
+        "url": "https://blinkenlights.de/en/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-11T18:10:20.000Z",
+        "publishedAt": "2026-09-11T22:15:00.000Z",
         "badge": "HN",
-        "signal": "65 分 · 22 评论"
+        "signal": "32 分 · 13 评论"
       },
       {
-        "id": "cn-baidu-2034a785fe55c580",
+        "id": "cn-baidu-5e4815c9ba1e06a8",
         "category": "cn",
-        "title": "公司中秋国庆连放13.5天发2000元",
-        "url": "https://www.baidu.com/s?wd=%E5%85%AC%E5%8F%B8%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E8%BF%9E%E6%94%BE13.5%E5%A4%A9%E5%8F%912000%E5%85%83&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "房东上门收租反给租客转了2万",
+        "url": "https://www.baidu.com/s?wd=%E6%88%BF%E4%B8%9C%E4%B8%8A%E9%97%A8%E6%94%B6%E7%A7%9F%E5%8F%8D%E7%BB%99%E7%A7%9F%E5%AE%A2%E8%BD%AC%E4%BA%862%E4%B8%87&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，厦门一公司宣布中秋国庆连放13.5天假，发放最高2000元旅游基金，并提前告知供应商假期勿扰员工。负责人表示，放假是为公平起见，主要原因是自己也想放。",
+        "summary": "近日，房东上门收租，得知租客生意难做，3个孩子的开学学费没有着落。房东不仅同意暂缓收租，还向租客转账2万元救急。",
         "badge": "热搜",
-        "signal": "7,520,432 热度"
+        "signal": "7,523,426 热度"
       },
       {
-        "id": "github-advisory-ghsa-vjfw-cpmh-xwv3",
+        "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
         "category": "security",
-        "title": "Central Dogma: SSH host-key verification permanently disabled in Git mirror (SshGitMirror)",
-        "url": "https://github.com/advisories/GHSA-vjfw-cpmh-xwv3",
+        "title": "Shopper: Unauthorized inventory stock manipulation via unlocked variant property in VariantStock component",
+        "url": "https://github.com/advisories/GHSA-g3f9-g5vj-p62f",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T20:45:50.000Z",
-        "summary": "# Vulnerability Central Dogma's Git mirror SSH client installs an Apache MINA SSHD `ServerKeyVerifier` lambda that returns `true` unconditionally for every outbound SSH connection used by `git+ssh://` mirrors. The accompanying lines disabl…",
-        "badge": "CVE-2026-11745",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-11T21:29:20.000Z",
+        "summary": "## Title Unauthorized inventory stock manipulation via unlocked variant property in VariantStock component ## Description A lack of authorization control was discovered in the `stockAction()` method in `packages/admin/src/Livewire/Componen…",
+        "badge": "CVE-2026-56829",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-hugging-face-fffbcba03b0b217e",
@@ -510,8 +510,8 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 41505,
-        "starsToday": 3440
+        "stars": 41771,
+        "starsToday": 3463
       },
       {
         "id": "github-27ca93a049d8d826",
@@ -520,8 +520,8 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 26868,
-        "starsToday": 3642
+        "stars": 27078,
+        "starsToday": 3680
       },
       {
         "id": "github-afd2af666cf9f262",
@@ -530,8 +530,8 @@
         "url": "https://github.com/nab138/iloader",
         "description": "User friendly sideloader",
         "language": "TypeScript",
-        "stars": 2882,
-        "starsToday": 36
+        "stars": 2902,
+        "starsToday": 50
       },
       {
         "id": "github-f6adaf1dfd8ddc19",
@@ -540,8 +540,8 @@
         "url": "https://github.com/melgarafael/DeskcommCRM",
         "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "language": "TypeScript",
-        "stars": 1287,
-        "starsToday": 126
+        "stars": 1335,
+        "starsToday": 152
       },
       {
         "id": "github-75480bcd049b9586",
@@ -550,8 +550,8 @@
         "url": "https://github.com/vastsa/PI-Desktop",
         "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
         "language": "TypeScript",
-        "stars": 2750,
-        "starsToday": 545
+        "stars": 2770,
+        "starsToday": 552
       },
       {
         "id": "github-1f396a14dc2810a5",
@@ -560,8 +560,8 @@
         "url": "https://github.com/armory3d/armorpaint",
         "description": "Graphics Creation Tools",
         "language": "C",
-        "stars": 4697,
-        "starsToday": 354
+        "stars": 4717,
+        "starsToday": 350
       },
       {
         "id": "github-93f269c8b455a00b",
@@ -570,8 +570,8 @@
         "url": "https://github.com/alsk1992/CloddsBot",
         "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
         "language": "TypeScript",
-        "stars": 2103,
-        "starsToday": 627
+        "stars": 2143,
+        "starsToday": 626
       },
       {
         "id": "github-aac368cb53d3b116",
@@ -580,8 +580,8 @@
         "url": "https://github.com/nashsu/llm_wiki",
         "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
         "language": "TypeScript",
-        "stars": 18684,
-        "starsToday": 640
+        "stars": 18723,
+        "starsToday": 647
       },
       {
         "id": "github-4251a228ae407247",
@@ -590,8 +590,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 285331,
-        "starsToday": 731
+        "stars": 285362,
+        "starsToday": 729
       },
       {
         "id": "github-262e5ebce88e1835",
@@ -600,10 +600,10 @@
         "url": "https://github.com/Sonarr/Sonarr",
         "description": "Smart PVR for newsgroup and bittorrent users.",
         "language": "C#",
-        "stars": 15715,
-        "starsToday": 174
+        "stars": 15731,
+        "starsToday": 191
       }
     ],
-    "updatedAt": "2026-09-11T21:43:43.181Z"
+    "updatedAt": "2026-09-12T00:19:16.618Z"
   }
 }
