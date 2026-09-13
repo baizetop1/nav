@@ -73,7 +73,7 @@ async function route(request,env){
   const url=new URL(request.url);
   if(url.protocol!=='https:'&&!(env.LOCAL_DEV==='true'&&['localhost','127.0.0.1'].includes(url.hostname)))fail(400,'存档服务只接受 HTTPS。');
   const ip=request.headers.get('CF-Connecting-IP')||'local';await limit(env,`request:${ip}`,120);
-  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1});
+  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1});
   if(url.pathname==='/v1/leaderboard'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,raw FROM slots WHERE raw IS NOT NULL ORDER BY id').all();return json(rankSnapshots(rows.results,Date.now()));}
   if(url.pathname==='/v1/verified-leaderboard'&&request.method==='GET'){
     const period=rotationCalendar(Date.now()).period;

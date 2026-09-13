@@ -65,7 +65,8 @@
     "test:shuihu-management": "node scripts/shuihu-management-selfcheck.mjs",
     "test:shuihu-verified": "node scripts/shuihu-verified-selfcheck.mjs",
     "test:shuihu-polish": "node scripts/shuihu-polish-selfcheck.mjs",
-    "test:shuihu-batch": "node scripts/shuihu-batch-selfcheck.mjs"
+    "test:shuihu-batch": "node scripts/shuihu-batch-selfcheck.mjs",
+    "test:shuihu-sortie": "node scripts/shuihu-sortie-selfcheck.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

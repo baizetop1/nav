@@ -1,10 +1,11 @@
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.15.0';
-import { orderDamageFactor } from './commands.js?v=0.15.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.15.0';
-import { unitArm } from './martial.js?v=0.15.0';
-import { martialFactor } from './martial.js?v=0.15.0';
-import { bounded, pick, random } from './utils.js?v=0.15.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.15.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.16.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.16.0';
+import { orderDamageFactor } from './commands.js?v=0.16.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.16.0';
+import { unitArm } from './martial.js?v=0.16.0';
+import { martialFactor } from './martial.js?v=0.16.0';
+import { bounded, pick, random } from './utils.js?v=0.16.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.16.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -35,7 +36,7 @@ function status(b,target,id,value,ms,api){
 }
 function heal(b,u,target,rate,name,api){
   if(!target)return;const n=Math.min(target.maxHp-target.hp,Math.round(target.maxHp*rate));
-  target.hp+=n;api.log(b,`${u.name}施展【${name}】，照应${target.name}，回复 ${n} 点气血。`);
+  reportHealing(b,u,n);target.hp+=n;api.log(b,`${u.name}施展【${name}】，照应${target.name}，回复 ${n} 点气血。`);
 }
 function rage(b,units,n,name,api){
   for(const u of units){const gain=Math.min(100-u.rage,n);u.rage+=gain;if(gain)api.log(b,`${u.name}【${name}】怒气 +${gain}。`);}
@@ -47,7 +48,7 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1)*(1-weakened)*(u.boss?.phase===1&&u.boss.kind==='tiger'?1.2:1);
   const raw=api.damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
   const loss=Math.max(1,Math.round(raw*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
-  target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
+  reportDamage(b,u,target,loss);target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
   if(!alive(target))api.log(b,`${target.name}已无力再战。`);
@@ -121,7 +122,7 @@ export function growthHit(state,u,rawSkill,data,api){
     rage(b,party.filter(v=>v!==u),Math.round(10*boost),skill.name,api);
   }else if(profile==='interrupt'){
     const enemy=enemies.find(v=>v.boss?.pendingAt)||enemies[enemies.length-1];
-    if(enemy.boss?.pendingAt){enemy.boss.pendingAt=0;enemy.boss.readyAt=b.elapsed+10000;api.log(b,`${u.name}【截脉打断】${enemy.name}本次蓄势被截住。`);}
+    if(enemy.boss?.pendingAt){contribution(b,u,'interrupts');enemy.boss.pendingAt=0;enemy.boss.readyAt=b.elapsed+10000;api.log(b,`${u.name}【截脉打断】${enemy.name}本次蓄势被截住。`);}
     strike(state,u,enemy,effect,skill.name,api);
   }else if(profile==='pierce')strike(state,u,lowest(enemies),effect,skill.name,api,{pierce:true});
   else if(profile==='steal'||profile==='wave'){

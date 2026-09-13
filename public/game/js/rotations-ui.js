@@ -1,9 +1,9 @@
-import { verifiedPanel } from './verified-ui.js?v=0.15.0';
-import { mechanicPreview } from './strategy-ui.js?v=0.15.0';
-import { targetPanel, corpsLine } from './development-ui.js?v=0.15.0';
-import { DAILY_ROUTES, WEEKLY_ROUTES, rotationCalendar, rotationProgress, rotationPlan, dailyUses } from './rotations.js?v=0.15.0';
-import { enemyIntel } from './martial-ui.js?v=0.15.0';
-import { icon } from './icons.js?v=0.15.0';
+import { verifiedPanel } from './verified-ui.js?v=0.16.0';
+import { mechanicPreview } from './strategy-ui.js?v=0.16.0';
+import { targetPanel, corpsLine } from './development-ui.js?v=0.16.0';
+import { DAILY_ROUTES, WEEKLY_ROUTES, rotationCalendar, rotationProgress, rotationPlan, dailyUses } from './rotations.js?v=0.16.0';
+import { enemyIntel } from './martial-ui.js?v=0.16.0';
+import { icon } from './icons.js?v=0.16.0';
 const weekdays=['周日','周一','周二','周三','周四','周五','周六'];
 export function rotationsPage(s,d,esc,btn,board={}){
   const ordered=[...DAILY_ROUTES].sort((a,b)=>Number(b.days.includes(rotationCalendar(s.clock).weekday))-Number(a.days.includes(rotationCalendar(s.clock).weekday)));
