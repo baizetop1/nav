@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-13T16:18:31.380Z",
+  "generatedAt": "2026-09-13T19:28:00.338Z",
   "intelligence": {
-    "updatedAt": "2026-09-13T16:18:31.380Z",
+    "updatedAt": "2026-09-13T19:28:00.338Z",
     "items": [
       {
         "id": "cn-item-86e0f8f2de6cf3bd",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49684393",
+        "id": "hn-49686445",
         "category": "dev",
-        "title": "Astra and Fable still hack on simple variants of alignment evals from 2025",
-        "url": "https://www.lesswrong.com/posts/munJKF7iWMsWJLAH2/astra-and-fable-still-hack-on-simple-variants-of-alignment",
+        "title": "Why is Google still serving dodgy ads?",
+        "url": "https://www.atomic14.com/2026/09/13/why-is-google-still-serving-dodgy-ads",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T14:28:36.000Z",
+        "publishedAt": "2026-09-13T17:37:44.000Z",
         "badge": "HN",
-        "signal": "94 分 · 28 评论"
+        "signal": "179 分 · 80 评论"
       },
       {
         "id": "cn-it-61d55cf71d0836e0",
@@ -77,15 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241728",
+        "id": "v2ex-1241732",
         "category": "dev",
-        "title": "gpt-6-astra max 100 刀 干不出来一个 docker 迁徙 nix",
-        "url": "https://www.v2ex.com/t/1241728",
+        "title": "我就喜欢听人夸 PostgreSQL",
+        "url": "https://www.v2ex.com/t/1241732",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T15:45:51.000Z",
-        "summary": "↑1.5M ↓556k R54M CH98.7% $95.424 (sub)",
+        "publishedAt": "2026-09-13T17:18:30.000Z",
+        "summary": "好文分享 https://www.raphaelbauer.com/posts/postgresql-everything 万物借口 PostgreSQL 包括你的 PS5 再多夸点，爱听",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-baidu-b7c6db61e87829fa",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "9月7日，安徽文旅厅一次性取消6家4A级景区资质、1家4A降为3A，为当地近年力度最大的A级景区集中清退。部分景区早已停业荒废，怀宁孔雀东南飞景区因数据造假被摘牌，专家指出A级景区动态退出机制仍存在滞后问题。",
         "badge": "热搜",
-        "signal": "7,809,698 热度"
+        "signal": "7,809,500 热度"
       },
       {
         "id": "cisa-kev-cve-2026-42016",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49681152",
+        "id": "hn-49684393",
         "category": "dev",
-        "title": "JetKVM Mini",
-        "url": "https://jetkvm.com/blog/introducing-jetkvm-mini",
+        "title": "Astra and Fable still hack on simple variants of alignment evals from 2025",
+        "url": "https://www.lesswrong.com/posts/munJKF7iWMsWJLAH2/astra-and-fable-still-hack-on-simple-variants-of-alignment",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T07:49:46.000Z",
+        "publishedAt": "2026-09-13T14:28:36.000Z",
         "badge": "HN",
-        "signal": "356 分 · 138 评论"
+        "signal": "262 分 · 109 评论"
       },
       {
         "id": "cn-item-870b4a8448239e67",
@@ -159,15 +159,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241695",
+        "id": "v2ex-1241728",
         "category": "dev",
-        "title": "这大概是 claude 封号的真正原因",
-        "url": "https://www.v2ex.com/t/1241695",
+        "title": "gpt-6-astra max 100 刀 干不出来一个 docker 迁徙 nix",
+        "url": "https://www.v2ex.com/t/1241728",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T11:46:32.000Z",
-        "summary": "如果你看了上周报道, 就明白 authropic 周五抱怨/投诉部分中国厂家把算力 redirect 到 claude, 所以这几天你可以明显感觉到 Claude 经常性智障, 速度慢, 这就是直接原因, 我猜测 Claude 为了保障基本算力, 直接采取封号, 特别是那些 5x / 20x 的订阅, 这个时候 IP 纯净度并不重要. 其实 Openai 也是一样, 它甚至直接下线了 200 美元套餐, 就是顶不住这些厂家把算力 redirect 到他们那边的直接原因, 过…",
+        "publishedAt": "2026-09-13T15:45:51.000Z",
+        "summary": "↑1.5M ↓556k R54M CH98.7% $95.424 (sub)",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "7 回复"
       },
       {
         "id": "cn-it-29ff52286f22550a",
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49683033",
+        "id": "hn-49683953",
         "category": "dev",
-        "title": "'Fingerprints' inside the Sun could reveal if it once swallowed a planet",
-        "url": "https://ras.ac.uk/news-and-press/research-highlights/fingerprints-inside-sun-could-reveal-if-it-once-swallowed-planet",
+        "title": "Data collected by cars and sold to third parties",
+        "url": "https://www.theverge.com/column/994172/your-car-is-selling-your-data",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T12:01:52.000Z",
+        "publishedAt": "2026-09-13T13:45:08.000Z",
         "badge": "HN",
-        "signal": "69 分 · 18 评论"
+        "signal": "135 分 · 82 评论"
       },
       {
         "id": "cn-baidu-91f85628e85707bf",
@@ -217,7 +217,7 @@
         "source": "百度热搜",
         "summary": "9月3日，舟山螺门一名60岁的渔民老张在拖虾船上不慎落水后失踪。在寻找了11天后，家属本来对找到老张已经失去了信心，都已经为他办了后事。没想到11天后，9月13日，这位张姓渔民奇迹般生还，又回到了家里。",
         "badge": "热搜",
-        "signal": "7,712,865 热度"
+        "signal": "7,712,009 热度"
       },
       {
         "id": "github-advisory-ghsa-65h7-9wrw-629c",
@@ -240,15 +240,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241662",
+        "id": "v2ex-1241695",
         "category": "dev",
-        "title": "求当前 pi agent 开发 iOS & Android 应用的技术栈最佳实践",
-        "url": "https://www.v2ex.com/t/1241662",
+        "title": "这大概是 claude 封号的真正原因",
+        "url": "https://www.v2ex.com/t/1241695",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T06:45:56.000Z",
-        "summary": "app 开发小白想用 pi agent 搞个工具类应用，尽量接近 ios android 原生体验，mac 平台，主要内容是调用摄像头扫码和设备功能设置。 非 cli 类桌面 agent computerUse 太烧 token 。cc cli 和 codex cli 比较啰唆，gpt6 之后 pi 更好用了。 大佬们建议当前使用什么技术栈 最顺畅 最方便？ 关键是 pi 在一边写代码时，一边如何调试 ui 和功能。",
+        "publishedAt": "2026-09-13T11:46:32.000Z",
+        "summary": "如果你看了上周报道, 就明白 authropic 周五抱怨/投诉部分中国厂家把算力 redirect 到 claude, 所以这几天你可以明显感觉到 Claude 经常性智障, 速度慢, 这就是直接原因, 我猜测 Claude 为了保障基本算力, 直接采取封号, 特别是那些 5x / 20x 的订阅, 这个时候 IP 纯净度并不重要. 其实 Openai 也是一样, 它甚至直接下线了 200 美元套餐, 就是顶不住这些厂家把算力 redirect 到他们那边的直接原因, 过…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "22 回复"
       },
       {
         "id": "cn-item-1a54591bbea21292",
@@ -282,14 +282,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49685037",
+        "id": "hn-49681152",
         "category": "dev",
-        "title": "Libraries Run Rust Inside Python (With PyO3)",
-        "url": "https://belderbos.dev/blog/how-libraries-run-rust-inside-python/",
+        "title": "JetKVM Mini",
+        "url": "https://jetkvm.com/blog/introducing-jetkvm-mini",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T15:24:05.000Z",
+        "publishedAt": "2026-09-13T07:49:46.000Z",
         "badge": "HN",
-        "signal": "12 分 · 9 评论"
+        "signal": "441 分 · 171 评论"
       },
       {
         "id": "cn-it-2105a1d6a4730bfd",
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241648",
+        "id": "v2ex-1241662",
         "category": "dev",
-        "title": "试试这个提示词，让大模型重写文档，让人看得懂",
-        "url": "https://www.v2ex.com/t/1241648",
+        "title": "求当前 pi agent 开发 iOS & Android 应用的技术栈最佳实践",
+        "url": "https://www.v2ex.com/t/1241662",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T04:47:25.000Z",
-        "summary": "重写设计文档，遵守下面的风格： 1. 禁止使用比喻性质的或肢体动作词，例如“接”、“跑”、“打”、“落”、“补”、“收”等等，除非是专业用语； 2. 主动使用逻辑衔接，用“但是”、“因此”、“那么”等连词来承接存在逻辑关系的上下句。 3. 逐句阅读文档内容并修改，不使用搜索和替换。 4. 按文件分配 sub agent ，避免多个 sub agent 写同一个文件。 对比效果如下（修改之前 vs 修改之后）： - 步骤应落在已登记的动作库上，由规划器组合 - 步骤应来自已登…",
+        "publishedAt": "2026-09-13T06:45:56.000Z",
+        "summary": "app 开发小白想用 pi agent 搞个工具类应用，尽量接近 ios android 原生体验，mac 平台，主要内容是调用摄像头扫码和设备功能设置。 非 cli 类桌面 agent computerUse 太烧 token 。cc cli 和 codex cli 比较啰唆，gpt6 之后 pi 更好用了。 大佬们建议当前使用什么技术栈 最顺畅 最方便？ 关键是 pi 在一边写代码时，一边如何调试 ui 和功能。",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-be85bc029a8fa326",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "什么是金砖的温度？回顾金砖20年发展历程，“金砖国家积极探索符合自身国情的发展道路，成为新兴市场和发展中国家联合自强的典范”。展望第三个“金色十年”，“要做促进创新发展的先锋”。发展，始终是金砖合作的核心诉求。从一套书，走近一段故事，感知金砖合作让各国人民都过上好日子的温度。",
         "badge": "热搜",
-        "signal": "7,616,140 热度"
+        "signal": "7,615,847 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86060",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49684356",
+        "id": "hn-49686766",
         "category": "dev",
-        "title": "CUDA for AMD on Windows",
-        "url": "https://github.com/Speedstu/CUDA-for-AMD-Windows",
+        "title": "I'm being cyberattacked by Tesla, Inc",
+        "url": "https://dreamstation.systems/personal/tesla.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T14:25:13.000Z",
+        "publishedAt": "2026-09-13T18:03:09.000Z",
         "badge": "HN",
-        "signal": "22 分 · 2 评论"
+        "signal": "251 分 · 65 评论"
       },
       {
         "id": "cn-item-f0c434aafd182eda",
@@ -404,15 +404,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241632",
+        "id": "v2ex-1241648",
         "category": "dev",
-        "title": "有一事不解，是绝大多数都是许愿 AI？",
-        "url": "https://www.v2ex.com/t/1241632",
+        "title": "试试这个提示词，让大模型重写文档，让人看得懂",
+        "url": "https://www.v2ex.com/t/1241648",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T02:54:19.000Z",
-        "summary": "v2 好像还好，隔壁 linux.do 的帖子 80%都是在测试模型有没降智 我用了一年除了 sonnet3.x-4.x 突然开始我说 a ，他做 b 以外这种明显的。其他基本没有感觉到啊…忘记做漏做都是自己没说清楚的。给我的感觉就是我要没提他做了是惊喜，没做是我没说清楚。只要把我说了的都稳定快速做完就是好模型。 或许这种所为的脑子不好使就是模型幻觉在 coding 里面的表现？ 然后我就想到会不会是都在许愿编程？用的人自己并不清楚正确的是什么结果，或者就是一句话帮我做个登…",
+        "publishedAt": "2026-09-13T04:47:25.000Z",
+        "summary": "重写设计文档，遵守下面的风格： 1. 禁止使用比喻性质的或肢体动作词，例如“接”、“跑”、“打”、“落”、“补”、“收”等等，除非是专业用语； 2. 主动使用逻辑衔接，用“但是”、“因此”、“那么”等连词来承接存在逻辑关系的上下句。 3. 逐句阅读文档内容并修改，不使用搜索和替换。 4. 按文件分配 sub agent ，避免多个 sub agent 写同一个文件。 对比效果如下（修改之前 vs 修改之后）： - 步骤应落在已登记的动作库上，由规划器组合 - 步骤应来自已登…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "13 回复"
       },
       {
         "id": "cn-it-7a24c0c49bf9f3fa",
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49683262",
+        "id": "hn-49684356",
         "category": "dev",
-        "title": "Why is the x86 undefined instruction called ud2? Why 2?",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260910-00/?p=112689",
+        "title": "CUDA for AMD on Windows",
+        "url": "https://github.com/Speedstu/CUDA-for-AMD-Windows",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T12:30:15.000Z",
+        "publishedAt": "2026-09-13T14:25:13.000Z",
         "badge": "HN",
-        "signal": "37 分 · 11 评论"
+        "signal": "98 分 · 51 评论"
       },
       {
         "id": "cn-baidu-9fbb7bbf1f57cc44",
@@ -462,7 +462,7 @@
         "source": "百度热搜",
         "summary": "9月，工农中建四大国有银行发布2027年度秋招公告，共放出约6.4万个岗位，较去年缩减7000余人。数据显示，截至今年6月末，42家上市银行员工总数超258万人，相比年初减少了约3.55万人。",
         "badge": "热搜",
-        "signal": "7,520,430 热度"
+        "signal": "7,520,281 热度"
       },
       {
         "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241612",
+        "id": "v2ex-1241632",
         "category": "dev",
-        "title": "记录一下最近 2 个月做 Ozon 工具和一次未开始就散掉的合作",
-        "url": "https://www.v2ex.com/t/1241612",
+        "title": "有一事不解，是绝大多数都是许愿 AI？",
+        "url": "https://www.v2ex.com/t/1241632",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-12T16:11:38.000Z",
-        "summary": "2026 年 7 月初，萍萍给我打了个微信语音。 她是我发小方斌以前的同事，前几年我们去杭州时认识的。电话里她向我打听中转站和 AI 图片生成的事，说她和江苏的一个“表哥”合作，搞了个 Ozon 精铺的上架工具，跑得不错。我当时没太深聊，俄罗斯跨境电商这块我确实没碰过。 方斌前些年一直做房产销售，这几年行情低迷，我们常聚在一起琢磨新出路。那天我顺嘴把萍萍做的事跟他提了一句。 他们都在襄阳，离得近。方斌很感兴趣，隔两天就跑去见了萍萍。又过了两天，方斌打来电话，声音透着兴奋：这…",
+        "publishedAt": "2026-09-13T02:54:19.000Z",
+        "summary": "v2 好像还好，隔壁 linux.do 的帖子 80%都是在测试模型有没降智 我用了一年除了 sonnet3.x-4.x 突然开始我说 a ，他做 b 以外这种明显的。其他基本没有感觉到啊…忘记做漏做都是自己没说清楚的。给我的感觉就是我要没提他做了是惊喜，没做是我没说清楚。只要把我说了的都稳定快速做完就是好模型。 或许这种所为的脑子不好使就是模型幻觉在 coding 里面的表现？ 然后我就想到会不会是都在许愿编程？用的人自己并不清楚正确的是什么结果，或者就是一句话帮我做个登…",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "8 回复"
       }
     ]
   },
@@ -510,8 +510,8 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 29233,
-        "starsToday": 652
+        "stars": 29457,
+        "starsToday": 960
       },
       {
         "id": "github-167687c65646f683",
@@ -520,7 +520,7 @@
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 4773,
+        "stars": 4882,
         "starsToday": 58
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 31289,
+        "stars": 31541,
         "starsToday": 2898
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/tech-leads-club/agent-skills",
         "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
         "language": "TypeScript",
-        "stars": 5487,
+        "stars": 5557,
         "starsToday": 215
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/melgarafael/DeskcommCRM",
         "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "language": "TypeScript",
-        "stars": 2073,
+        "stars": 2114,
         "starsToday": 444
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/calesthio/OpenMontage",
         "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "language": "Python",
-        "stars": 58211,
+        "stars": 58299,
         "starsToday": 383
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "language": "JavaScript",
-        "stars": 65830,
+        "stars": 65913,
         "starsToday": 727
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/vxcontrol/pentagi",
         "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
         "language": "Go",
-        "stars": 23782,
+        "stars": 23859,
         "starsToday": 613
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/multimodal-art-projection/YuE",
         "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "language": "Python",
-        "stars": 7604,
+        "stars": 7654,
         "starsToday": 500
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/yuliskov/SmartTube",
         "description": "Browse media content with your own rules on Android TV",
         "language": "Java",
-        "stars": 33360,
+        "stars": 33398,
         "starsToday": 238
       }
     ],
-    "updatedAt": "2026-09-13T16:18:31.380Z"
+    "updatedAt": "2026-09-13T19:28:00.338Z"
   }
 }
