@@ -1,16 +1,17 @@
-import { validateAffairs } from './affairs.js?v=0.15.0';
-import { validateStrategy } from './strategy.js?v=0.15.0';
-import { validateCommands } from './commands.js?v=0.15.0';
-import { validateFrontier, POSTS } from './frontier.js?v=0.15.0';
-import { validateDevelopment } from './development.js?v=0.15.0';
-import { validateCampaign, validRotationContext } from './rotations.js?v=0.15.0';
-import { validateQualities } from './quality.js?v=0.15.0';
-import { newGame } from './core.js?v=0.15.0';
-import { hasOwn, idPattern, requireRule } from './utils.js?v=0.15.0';
-import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.15.0';
-import { validateGrowth } from './growth.js?v=0.15.0';
-import { validateGrowthBattle } from './growth-save.js?v=0.15.0';
-import { validateCamp, RAIDS } from './camp.js?v=0.15.0';
+import { validateDebrief } from './debrief.js?v=0.16.0';
+import { validateAffairs } from './affairs.js?v=0.16.0';
+import { validateStrategy } from './strategy.js?v=0.16.0';
+import { validateCommands } from './commands.js?v=0.16.0';
+import { validateFrontier, POSTS } from './frontier.js?v=0.16.0';
+import { validateDevelopment } from './development.js?v=0.16.0';
+import { validateCampaign, validRotationContext } from './rotations.js?v=0.16.0';
+import { validateQualities } from './quality.js?v=0.16.0';
+import { newGame } from './core.js?v=0.16.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.16.0';
+import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.16.0';
+import { validateGrowth } from './growth.js?v=0.16.0';
+import { validateGrowthBattle } from './growth-save.js?v=0.16.0';
+import { validateCamp, RAIDS } from './camp.js?v=0.16.0';
 export const SAVE_KEY='baize_shuihu_save', BACKUP_KEY=SAVE_KEY+'_backup';
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 function object(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}
@@ -79,7 +80,7 @@ export function validateSave(s,data) {
   if(s.event)check(object(s.event)&&data.by.events[s.event.id],'待办际遇');
   check(typeof s.formationPending==='boolean'&&typeof s.message==='string'&&s.message.length<3000,'页面信息');
   check(Array.isArray(s.journal)&&s.journal.length<=300&&s.journal.every(e=>integer(e.at,0,8640000000000000)&&typeof e.text==='string'&&e.text.length<3000),'梁山志');
-  return s;
+  validateDebrief(s,data,check);return s;
 }
 export function parseSave(raw,data,now=Date.now()) {
   requireRule(typeof raw==='string'&&raw.length<=2000000,'存档应为不超过 2 MB 的 JSON 文本。');

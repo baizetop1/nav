@@ -1,17 +1,20 @@
-import { batchQuote } from './batch.js?v=0.15.0';
-import { batchDialog } from './batch-ui.js?v=0.15.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.15.0';
-import { ActivityLog } from './activity.js?v=0.15.0';
-import { loadData } from './data.js?v=0.15.0';
-import { dispatch, newGame } from './core.js?v=0.15.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.15.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.15.0';
-import { patchElement } from './dom.js?v=0.15.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.16.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.16.0';
+import { presetReason } from './development.js?v=0.16.0';
+import { batchQuote } from './batch.js?v=0.16.0';
+import { batchDialog } from './batch-ui.js?v=0.16.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.16.0';
+import { ActivityLog } from './activity.js?v=0.16.0';
+import { loadData } from './data.js?v=0.16.0';
+import { dispatch, newGame } from './core.js?v=0.16.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.16.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.16.0';
+import { patchElement } from './dom.js?v=0.16.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.15.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.15.0';
-import { CloudClient } from './cloud.js?v=0.15.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.15.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.16.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.16.0';
+import { CloudClient } from './cloud.js?v=0.16.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.16.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
@@ -24,7 +27,10 @@ const makeStore=id=>new SlotStore(database,data,id,change=>channel?.postMessage(
 async function refreshSlots(){try{slots=await database.all();}catch{slots=[store.record];}}
 function rememberSlot(){try{sessionStorage.setItem('baize_shuihu_active_slot',String(store.id));}catch{}}
 function saveBox(){return {record:store.record,slots,cloud:cloudView,dirty};}
-let mapTarget=null,roster={},gear={};
+let mapTarget=null,roster={},gear={},pendingSortie=null;
+const sortieSetup=()=>({team:[0,1,2].map(i=>document.getElementById('sortie-hero-'+i).value).filter(Boolean),...(state.camp?{mode:document.getElementById('sortie-mode').value,tactic:document.getElementById('sortie-tactic').value,deployment:Number(document.getElementById('sortie-troops').value)}:{})});
+function showSortie(action,setup){const q=prepareSortie(state,data,action,setup,Date.now());pendingSortie={action,setup,signature:q.signature};document.getElementById('sortie-preview')?.remove();const btn=(label,a,kind,disabled)=>`<button type="button" class="${kind}" data-command="${esc(JSON.stringify(a))}" ${disabled?'disabled':''}>${esc(label)}</button>`;root.insertAdjacentHTML('beforeend',sortieDialog(state,data,action,setup,q,esc,btn));const dialog=document.getElementById('sortie-preview');dialog.addEventListener('close',()=>{pendingSortie=null;dialog.remove();},{once:true});dialog.showModal();dialog.querySelector('h2').focus();}
+
 let data,state,store,view='map',status='',error='',notice='',recruitTarget='',locked=false,invalid=false,dirty=false,pendingImport=null,entered=false;
 let battlePaused=true,battlePauseReason='',lastBattlePulse=null,lastBattleSaved=0,paintRevision=0;
 function paint(focus=false){
@@ -83,7 +89,7 @@ function showRewards(before,after,returnCommand){
   const battleSummary=finished?{outcome:before.battle.outcome,troops:before.battle.expedition?.troops||0,wounded:Math.max(0,(after.camp?.wounded||0)-(before.camp?.wounded||0))}:null;
   const dungeonVictory=(victory&&before.battle?.context.type==='dungeon')||(before.scheme?.outcome==='success'&&before.scheme.context.type==='dungeon'&&!after.scheme);
   document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary}));
-  const dialog=document.getElementById('reward-result');dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
+  const dialog=document.getElementById('reward-result');if(finished&&after.lastBattle)dialog.querySelector('.reward-grid').insertAdjacentHTML('beforebegin','<details class="receipt-debrief"><summary>查看本战复盘 · 贡献与调整建议</summary>'+debriefPanel(after.lastBattle,data,esc)+'</details>');dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
 }
 function download(text,name){const blob=new Blob([text],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 async function persist(next,force=false){
@@ -198,7 +204,11 @@ async function handleBox(command){
   }catch(e){cloudView.conflict=e.status===412;cloudView.message=e.message;paint();return true;}
 }
 async function handle(command){
-  const {type,id}=command;error='';
+  const {type,id}=command;error='';let prepared=null;
+  if(type==='ui_sortieCancel'){document.getElementById('sortie-preview')?.close();return;}
+  if(SORTIES.includes(type)){showSortie(command);return;}
+  if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
+
   if(await handleBox(command))return;
   if(type==='ui_batchCancel'){document.getElementById('batch-preview')?.close();return;}
   if(type==='ui_batchPreview'||type==='ui_batchShop'){const a=type==='ui_batchShop'?{kind:'buy',id:document.getElementById('batch-shop-item').value,count:command.count}:command,q=batchQuote(state,data,a);document.getElementById('batch-preview')?.remove();const btn=(label,a,kind,disabled)=>`<button type="button" class="${kind}" data-command="${esc(JSON.stringify(a))}" ${disabled?'disabled':''}>${esc(label)}</button>`;root.insertAdjacentHTML('beforeend',batchDialog(q,a,esc,btn));const dialog=document.getElementById('batch-preview');dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;}
@@ -260,7 +270,7 @@ async function handle(command){
   if(type==='ui_team')command={type:'team',ids:[0,1,2].map(i=>document.getElementById('team-'+i).value).filter(Boolean)};
   if(type==='ui_equip'){gear={...gear,comparison:{id,hero:document.getElementById('holder-'+id).value||null}};paint();document.querySelector('.equipment-comparison')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_dismantle'){if(!window.confirm('确认分解此装备？装备将变为碎铁，不能原样取回。'))return;command={type:'dismantle',id};}
-  const before=state,hadBattle=!!state.battle,next=dispatch(data,state,command);await persist(next);
+  const before=state,hadBattle=!!state.battle,next=prepared||dispatch(data,state,command);await persist(next);
   if(!hadBattle&&next.battle&&!next.battle.outcome){battlePaused=false;battlePauseReason='';lastBattlePulse=performance.now();}
   if(type==='equip')gear={...gear,comparison:null};
   notice=['recruit','recruitTen'].includes(type)||type.startsWith('battle')||next.battle?'':next.message;
@@ -268,7 +278,7 @@ async function handle(command){
   if(next.battle||next.scheme||next.event||['move','travel','story','startScheme'].includes(type))view='map';
   if(type==='finishBattle'&&['camp','frontier'].includes(before.battle?.context.type))view='camp';
   if(type==='finishBattle'&&before.battle?.context.type==='rotation')view='trials';
-  paint(['presetLoad','move','travel','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
+  paint(!!prepared||['presetLoad','move','travel','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
   if(type==='presetLoad'){
     // A user-edited select retains its DOM value even when selected attributes match.
     // Loading a preset is an explicit request to replace those pending form edits.

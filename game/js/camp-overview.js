@@ -1,5 +1,5 @@
-import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.15.0';
-import { questReady } from './core.js?v=0.15.0';
+import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.16.0';
+import { questReady } from './core.js?v=0.16.0';
 
 // Read-only overview: visiting the camp never spends resources or claims rewards.
 export function campNotices(s,d){

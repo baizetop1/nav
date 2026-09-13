@@ -1,25 +1,26 @@
-import { batchButtons } from './batch-ui.js?v=0.15.0';
-import { equipmentComparison } from './management-ui.js?v=0.15.0';
-import { objectivePanel } from './strategy-ui.js?v=0.15.0';
-import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.15.0';
-import { equipmentMatches } from './commands.js?v=0.15.0';
-import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.15.0';
-import { rotationsPage } from './rotations-ui.js?v=0.15.0';
-import { traitCard } from './martial-ui.js?v=0.15.0';
-import { helpersBoard } from './helpers-ui.js?v=0.15.0';
-import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.15.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.15.0';
-import { worldMap, localBenefit } from './world-map-ui.js?v=0.15.0';
-import { saveBoxPage } from './savebox-ui.js?v=0.15.0';
-import { attributes } from './hero.js?v=0.15.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.15.0';
-import { isBusy, questReady } from './core.js?v=0.15.0';
-import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.15.0';
-import { strengthenQuote } from './item.js?v=0.15.0';
-import { icon, actionIcon } from './icons.js?v=0.15.0';
-import { heroStewardCard } from './camp-development-ui.js?v=0.15.0';
-import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.15.0';
-import { campPage, portrait } from './camp-ui.js?v=0.15.0';
+import { debriefPanel } from './sortie-ui.js?v=0.16.0';
+import { batchButtons } from './batch-ui.js?v=0.16.0';
+import { equipmentComparison } from './management-ui.js?v=0.16.0';
+import { objectivePanel } from './strategy-ui.js?v=0.16.0';
+import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.16.0';
+import { equipmentMatches } from './commands.js?v=0.16.0';
+import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.16.0';
+import { rotationsPage } from './rotations-ui.js?v=0.16.0';
+import { traitCard } from './martial-ui.js?v=0.16.0';
+import { helpersBoard } from './helpers-ui.js?v=0.16.0';
+import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.16.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.16.0';
+import { worldMap, localBenefit } from './world-map-ui.js?v=0.16.0';
+import { saveBoxPage } from './savebox-ui.js?v=0.16.0';
+import { attributes } from './hero.js?v=0.16.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.16.0';
+import { isBusy, questReady } from './core.js?v=0.16.0';
+import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.16.0';
+import { strengthenQuote } from './item.js?v=0.16.0';
+import { icon, actionIcon } from './icons.js?v=0.16.0';
+import { heroStewardCard } from './camp-development-ui.js?v=0.16.0';
+import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.16.0';
+import { campPage, portrait } from './camp-ui.js?v=0.16.0';
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const btn=(label,command,kind='text-action',disabled=false)=>{const symbol=icon(actionIcon(command));return `<button type="button" class="${kind}${symbol?' with-icon':''}" data-command="${esc(JSON.stringify(command))}" ${disabled?'disabled':''}>${symbol}<span>${esc(label)}</span></button>`;};
 const nav=(label,view)=>`<button type="button" class="text-action with-icon" data-view="${view}" aria-label="${esc(label)}">${icon(view)}<span>${esc(label)}</span></button>`;
@@ -133,7 +134,7 @@ function chroniclePage(s,d){
   const current=activeChapter(s,d),journal=[...s.journal].reverse();
   const entries=list=>`<ul class="plain-list">${list.map(e=>`<li><time>${esc(new Date(e.at).toLocaleString('zh-CN'))}</time>${esc(e.text)}</li>`).join('')}</ul>`;
   const chapter=c=>`<section class="complete"><h2>第${c.number}卷 · ${esc(c.title)} · ${s.progress.flags[c.completeFlag]?'卷终':meets(s,c.condition)?'已开启':'待前卷完成'}</h2><p>${s.progress.flags[c.completeFlag]?esc(c.ending):c.number===2?'第一卷卷终后，从梁山渡口可前往东京。四段人物往事均完成后结卷，不要求已招募这四人。':'从郓城起步，相识、历练、聚义。'}</p><ol>${c.requirements.map(r=>`<li class="${meets(s,r.condition)?'progress-label':''}">${meets(s,r.condition)?'已成':'尚待'} · ${esc(r.label)}</li>`).join('')}</ol></section>`;
-  return title('白泽梁山志','进度、目标与往事','','chronicle')+chapter(current)+
+  return title('白泽梁山志','进度、目标与往事','','chronicle')+debriefPanel(s.lastBattle,d,esc)+chapter(current)+
     `<details class="fold-section" data-fold="overview"><summary>山寨概况与眼下线索</summary>${overview(s,d)}</details>`+journeyClues(s,d)+
     `<details class="fold-section" data-fold="other-chapters"><summary>其他篇章</summary>${d.chapters.filter(c=>c.id!==current.id).map(chapter).join('')}<p class="note">坐骑与专属招式已开放，可在好汉详情养成；寨子页已开放营建、募兵与远征。</p></details><h2 class="subhead">最近记事</h2>${entries(journal.slice(0,15))}
     ${journal.length>15?`<details class="fold-section" data-fold="older-journal"><summary>更早的记事 · ${journal.length-15} 条</summary>${entries(journal.slice(15))}</details>`:''}

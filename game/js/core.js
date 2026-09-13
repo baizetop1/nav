@@ -1,22 +1,23 @@
-import { batchApply } from './batch.js?v=0.15.0';
-import { affairAction, finishAffairBattle } from './affairs.js?v=0.15.0';
-import { trainDrill } from './strategy.js?v=0.15.0';
-import { battleOrder } from './commands.js?v=0.15.0';
-import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.15.0';
-import { developmentAction, recordLedger } from './development.js?v=0.15.0';
-import { enterRotation, finishRotation } from './rotations.js?v=0.15.0';
-import { promoteHero } from './quality.js?v=0.15.0';
-import { routeTo, claimLocalBenefit } from './world-map.js?v=0.15.0';
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.15.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.15.0';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.15.0';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.15.0';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.15.0';
-import { effects, storyAction, visit } from './story.js?v=0.15.0';
-import { growthAction, awardMountContracts } from './growth.js?v=0.15.0';
+import { saveDebrief } from './debrief.js?v=0.16.0';
+import { batchApply } from './batch.js?v=0.16.0';
+import { affairAction, finishAffairBattle } from './affairs.js?v=0.16.0';
+import { trainDrill } from './strategy.js?v=0.16.0';
+import { battleOrder } from './commands.js?v=0.16.0';
+import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.16.0';
+import { developmentAction, recordLedger } from './development.js?v=0.16.0';
+import { enterRotation, finishRotation } from './rotations.js?v=0.16.0';
+import { promoteHero } from './quality.js?v=0.16.0';
+import { routeTo, claimLocalBenefit } from './world-map.js?v=0.16.0';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.16.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.16.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.16.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.16.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.16.0';
+import { effects, storyAction, visit } from './story.js?v=0.16.0';
+import { growthAction, awardMountContracts } from './growth.js?v=0.16.0';
 
-import { searchEquipment } from './camp-development.js?v=0.15.0';
-import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.15.0';
+import { searchEquipment } from './camp-development.js?v=0.16.0';
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.16.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -69,7 +70,7 @@ function rewardDungeon(state,data,id) {
 }
 function finishBattle(state,data) {
   const b=state.battle;requireRule(b&&b.outcome,'还未分出胜负。');
-  settleCampBattle(state,data,b);finishAffairBattle(state,b,data);
+  const previousWounded=state.camp?.wounded||0;settleCampBattle(state,data,b);saveDebrief(state,b,previousWounded);finishAffairBattle(state,b,data);
   if(b.outcome==='victory') {
     count(state,'battleWin');
     if(b.enemy.some(e=>e.model==='bandit'||e.model==='bandit_chief'))count(state,'bandits');

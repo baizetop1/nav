@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-13T11:54:14.533Z",
+  "generatedAt": "2026-09-13T15:40:29.033Z",
   "intelligence": {
-    "updatedAt": "2026-09-13T11:54:14.533Z",
+    "updatedAt": "2026-09-13T15:40:29.033Z",
     "items": [
       {
-        "id": "cn-item-870b4a8448239e67",
+        "id": "cn-item-86e0f8f2de6cf3bd",
         "category": "cn",
-        "title": "官方通报菏泽古沉船考古疑似文物遗失：已组建联合调查组",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-13/10695721.shtml",
+        "title": "北京立法促进民族团结进步 以首善标准建设示范城市",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-13/10695800.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-13T10:23:31.000Z",
-        "summary": "中新网9月13日电 据“文旅山东”微信公众号消息，山东省文化和旅游厅(山东省文物局)9月13日发布情况通报称，近期，山东省文化和旅游厅接到群众反映菏泽元代古沉船考古发掘中疑似存在文物遗失问题的举报，立即开展核查督办。",
+        "publishedAt": "2026-09-13T12:39:02.000Z",
+        "summary": "中新网北京9月13日电 (记者 陈杭)北京市第十六届人民代表大会常务委员会第二十六次会议近日通过《北京市人民代表大会常务委员会关于进一步促进民族团结进步的决定》(下称决定)。决定自公布之日起施行。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49682319",
+        "id": "hn-49683853",
         "category": "dev",
-        "title": "Nvidia dismisses \"circular financing\", says every $1 it invests brings back $100",
-        "url": "https://invezz.com/news/2026/09/11/nvidia-says-every-1-it-invests-brings-back-100-so-why-does-the-stock-keep-falling/",
+        "title": "Flock worker calls police on reporter filming public camera installation",
+        "url": "https://www.investigatetv.com/2026/09/08/flock-worker-calls-police-investigatetv-reporter-filming-public-camera-installation/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T10:29:18.000Z",
+        "publishedAt": "2026-09-13T13:35:31.000Z",
         "badge": "HN",
-        "signal": "50 分 · 38 评论"
+        "signal": "283 分 · 172 评论"
       },
       {
-        "id": "cn-it-a7b1e574e542ce1f",
+        "id": "cn-it-29ff52286f22550a",
         "category": "cn",
-        "title": "因制造与成本问题，模块化电脑厂商 Framework 宣布终止“单键模块”个性化键盘项目",
-        "url": "https://www.ithome.com/1/001/837.htm",
+        "title": "创全球最低传输损耗新纪录，长飞反谐振空芯光纤衰减突破至 0.032dB / km",
+        "url": "https://www.ithome.com/1/001/867.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-13T11:52:20.000Z",
-        "summary": "IT之家 9 月 13 日消息，当地时间 9 月 10 日，模块化电脑厂商 Framework 宣布，由于无法将材料成本、组装成本以及制造良率控制在具备商业可行性的水平，最终决定终止单键模块（One Key Module）个性化键盘项目。 IT之家获悉，Framework 于去年正式对外公布了单键模块，该项目允许独立开发者和硬件爱好者利用单个按键模块在载板 PCB 上随意排列，从而 打破笔记本键盘的固化布局 ，为笔记本打造专属于自己的超薄人体工学键盘或输入控制模块。 官方表…",
+        "publishedAt": "2026-09-13T14:48:45.000Z",
+        "summary": "IT之家 9 月 13 日消息，2026 中国算力大会于 9 月 11 日至 13 日在河北省廊坊市举行，在大会“2026 算力首创首发”环节，长飞公司正式发布， 反谐振空芯光纤衰减突破至 0.032dB/ km，创下全球最低传输损耗新纪录 。 据介绍，长飞空芯光纤算力互联技术已在国内外完成超过 13 个商用及试点项目，公司联合国内三大运营商完成城域网、智算互联及海洋传输等多场景应用。 截至目前，长飞空芯光纤累计交付超 10000 芯公里，创下最长商用线路 100 公里等多…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241662",
+        "id": "v2ex-1241695",
         "category": "dev",
-        "title": "求当前 pi agent 开发 iOS & Android 应用的技术栈最佳实践",
-        "url": "https://www.v2ex.com/t/1241662",
+        "title": "这大概是 claude 封号的真正原因",
+        "url": "https://www.v2ex.com/t/1241695",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T06:45:56.000Z",
-        "summary": "app 开发小白想用 pi agent 搞个工具类应用，尽量接近 ios android 原生体验，mac 平台，主要内容是调用摄像头扫码和设备功能设置。 非 cli 类桌面 agent computerUse 太烧 token 。cc cli 和 codex cli 比较啰唆，gpt6 之后 pi 更好用了。 大佬们建议当前使用什么技术栈 最顺畅 最方便？ 关键是 pi 在一边写代码时，一边如何调试 ui 和功能。",
+        "publishedAt": "2026-09-13T11:46:32.000Z",
+        "summary": "如果你看了上周报道, 就明白 authropic 周五抱怨/投诉部分中国厂家把算力 redirect 到 claude, 所以这几天你可以明显感觉到 Claude 经常性智障, 速度慢, 这就是直接原因, 我猜测 Claude 为了保障基本算力, 直接采取封号, 特别是那些 5x / 20x 的订阅, 这个时候 IP 纯净度并不重要. 其实 Openai 也是一样, 它甚至直接下线了 200 美元套餐, 就是顶不住这些厂家把算力 redirect 到他们那边的直接原因, 过…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "18 回复"
       },
       {
-        "id": "cn-baidu-7daef5647dda917e",
+        "id": "cn-baidu-b7c6db61e87829fa",
         "category": "cn",
-        "title": "电视都不好卖了",
-        "url": "https://www.baidu.com/s?wd=%E7%94%B5%E8%A7%86%E9%83%BD%E4%B8%8D%E5%A5%BD%E5%8D%96%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "造假景区“早就没人了”",
+        "url": "https://www.baidu.com/s?wd=%E9%80%A0%E5%81%87%E6%99%AF%E5%8C%BA%E2%80%9C%E6%97%A9%E5%B0%B1%E6%B2%A1%E4%BA%BA%E4%BA%86%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "今年上半年，中国彩电销量只有1249万台，同比下降9.2%，创下近四年同期低点。存量家庭的电视保有量已经很高，换机周期却越来越长。奥维运网给出的解释是，多数家庭只要电视没有故障，就缺少更换动力。可卖场里的电视正在朝另一个方向变化。电视越来越难卖，卖出去的电视却越来越大。",
+        "summary": "9月7日，安徽文旅厅一次性取消6家4A级景区资质、1家4A降为3A，为当地近年力度最大的A级景区集中清退。部分景区早已停业荒废，怀宁孔雀东南飞景区因数据造假被摘牌，专家指出A级景区动态退出机制仍存在滞后问题。",
         "badge": "热搜",
-        "signal": "7,809,119 热度"
+        "signal": "7,807,952 热度"
       },
       {
         "id": "cisa-kev-cve-2026-42016",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49681152",
+        "id": "hn-49684393",
         "category": "dev",
-        "title": "JetKVM Mini",
-        "url": "https://jetkvm.com/blog/introducing-jetkvm-mini",
+        "title": "Astra and Fable still hack on simple variants of alignment evals from 2025",
+        "url": "https://www.lesswrong.com/posts/munJKF7iWMsWJLAH2/astra-and-fable-still-hack-on-simple-variants-of-alignment",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T07:49:46.000Z",
+        "publishedAt": "2026-09-13T14:28:36.000Z",
         "badge": "HN",
-        "signal": "174 分 · 79 评论"
+        "signal": "48 分 · 7 评论"
       },
       {
-        "id": "cn-item-f0c434aafd182eda",
+        "id": "cn-item-870b4a8448239e67",
         "category": "cn",
-        "title": "伊朗一商船在南部格什姆岛遭袭致1死3伤",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-13/10695678.shtml",
+        "title": "官方通报菏泽古沉船考古疑似文物遗失：已组建联合调查组",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-13/10695721.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-13T09:12:23.000Z",
-        "summary": "中新社北京9月13日电 德黑兰消息：当地时间9月13日，伊朗一艘商船在南部格什姆岛附近遭袭，造成1人死亡、3人受伤。",
+        "publishedAt": "2026-09-13T10:23:31.000Z",
+        "summary": "中新网9月13日电 据“文旅山东”微信公众号消息，山东省文化和旅游厅(山东省文物局)9月13日发布情况通报称，近期，山东省文化和旅游厅接到群众反映菏泽元代古沉船考古发掘中疑似存在文物遗失问题的举报，立即开展核查督办。",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241650",
+        "id": "v2ex-1241662",
         "category": "dev",
-        "title": "API 中转站能看到你全部 prompt 和回复，为什么没有一个「厂商端到端加密」的标准？",
-        "url": "https://www.v2ex.com/t/1241650",
+        "title": "求当前 pi agent 开发 iOS & Android 应用的技术栈最佳实践",
+        "url": "https://www.v2ex.com/t/1241662",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T05:08:19.000Z",
-        "summary": "最近 X 上几家比较知名的中转站被曝出售 / 泄露用户的 key 和对话记录，正好把我憋了一阵子的一个想法说出来，请大家看看这个方案在密码学上有没有硬伤。 ## 现状：中转站是个能拆信的邮递员 用第三方中转的都知道，你的请求体——prompt 、系统提示词、附件内容、模型回复——对中转站是完全的明文。它技术上可以做缓存、做审计日志、做「模型质量分析」，当然也可以直接拿走你的代码和商业数据。TLS 只保护你和它之间、它和厂商之间这两段传输，中转服务器内存里躺着的永远是明文。 …",
+        "publishedAt": "2026-09-13T06:45:56.000Z",
+        "summary": "app 开发小白想用 pi agent 搞个工具类应用，尽量接近 ios android 原生体验，mac 平台，主要内容是调用摄像头扫码和设备功能设置。 非 cli 类桌面 agent computerUse 太烧 token 。cc cli 和 codex cli 比较啰唆，gpt6 之后 pi 更好用了。 大佬们建议当前使用什么技术栈 最顺畅 最方便？ 关键是 pi 在一边写代码时，一边如何调试 ui 和功能。",
         "badge": "程序员",
-        "signal": "57 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-16a861e3a67d5d33",
+        "id": "cn-it-2105a1d6a4730bfd",
         "category": "cn",
-        "title": "我国力争到 2030 年关键软件全面实现智能化升级",
-        "url": "https://www.ithome.com/1/001/836.htm",
+        "title": "消息称富士通最早 2027 年开始向海外销售 FUJITSU-MONAKA 处理器",
+        "url": "https://www.ithome.com/1/001/866.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-13T11:45:49.000Z",
-        "summary": "IT之家 9 月 13 日消息，据新华社报道，工业和信息化部 11 日对外发布《“人工智能 + 软件”专项行动实施方案》，提出到 2030 年，人工智能与软件和信息技术服务业融合发展实现新跃升， 关键软件全面实现智能化升级 ，智能编程、智能体软件及智能服务等新业态成为产业新增长极。 实施方案明确，到 2028 年，软件和信息技术服务业智能化水平显著提升，推广应用覆盖 2 万家规模以上软件企业，累计组织实施 100 项软件企业智能化技改项目，在重点行业打造 100 个智能体软…",
+        "publishedAt": "2026-09-13T14:47:37.000Z",
+        "summary": "IT之家 9 月 13 日消息，《日经亚洲》当地时间今日报道称，富士通 (Fujitsu) 将最早从 2027 年开始向日本以外的亚洲、美洲市场出口其 2nm 工艺 Arm 指令集处理器 FUJITSU-MONAKA。 IT之家注意到，富士通早在 2024 年就为 FUJITSU-MONAKA 平台的开发与推广同 Supermicro（超微）达成合作。这意味着 富士通将 FUJITSU-MONAKA 视为一种可对外销售的商业化产品 ，而不是“富岳”超算上的 A64FX 那样…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49678969",
+        "id": "hn-49681152",
         "category": "dev",
-        "title": "Why are AI agents lying, cheating and coordinating?",
-        "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
+        "title": "JetKVM Mini",
+        "url": "https://jetkvm.com/blog/introducing-jetkvm-mini",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T01:22:31.000Z",
+        "publishedAt": "2026-09-13T07:49:46.000Z",
         "badge": "HN",
-        "signal": "285 分 · 344 评论"
+        "signal": "334 分 · 128 评论"
       },
       {
-        "id": "cn-baidu-150e38e4c601f618",
+        "id": "cn-baidu-91f85628e85707bf",
         "category": "cn",
-        "title": "海南万宁全市“五停一关”",
-        "url": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%8D%97%E4%B8%87%E5%AE%81%E5%85%A8%E5%B8%82%E2%80%9C%E4%BA%94%E5%81%9C%E4%B8%80%E5%85%B3%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "渔民落水11天后事都办了 人回来了",
+        "url": "https://www.baidu.com/s?wd=%E6%B8%94%E6%B0%91%E8%90%BD%E6%B0%B411%E5%A4%A9%E5%90%8E%E4%BA%8B%E9%83%BD%E5%8A%9E%E4%BA%86+%E4%BA%BA%E5%9B%9E%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月13日，万宁市将防汛防风Ⅲ级应急响应提升至Ⅰ级，全市实施“五停一关”，即停课、停工、停业、停运、停航并关停旅游景区。",
+        "summary": "9月3日，舟山螺门一名60岁的渔民老张在拖虾船上不慎落水后失踪。在寻找了11天后，家属本来对找到老张已经失去了信心，都已经为他办了后事。没想到11天后，9月13日，这位张姓渔民奇迹般生还，又回到了家里。",
         "badge": "热搜",
-        "signal": "7,713,772 热度"
+        "signal": "7,712,607 热度"
       },
       {
         "id": "github-advisory-ghsa-65h7-9wrw-629c",
@@ -248,16 +248,16 @@
         "publishedAt": "2026-09-13T04:47:25.000Z",
         "summary": "重写设计文档，遵守下面的风格： 1. 禁止使用比喻性质的或肢体动作词，例如“接”、“跑”、“打”、“落”、“补”、“收”等等，除非是专业用语； 2. 主动使用逻辑衔接，用“但是”、“因此”、“那么”等连词来承接存在逻辑关系的上下句。 3. 逐句阅读文档内容并修改，不使用搜索和替换。 4. 按文件分配 sub agent ，避免多个 sub agent 写同一个文件。 对比效果如下（修改之前 vs 修改之后）： - 步骤应落在已登记的动作库上，由规划器组合 - 步骤应来自已登…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "12 回复"
       },
       {
-        "id": "cn-item-1e9f9048b22c9f00",
+        "id": "cn-item-1a54591bbea21292",
         "category": "cn",
-        "title": "（活力中国）联结与互鉴：河南殷墟博物馆探索国际交流新空间",
-        "url": "https://www.chinanews.com.cn/cul/2026/09-13/10695692.shtml",
+        "title": "“不搬一户人”的少数民族老街区引来八方客",
+        "url": "https://www.chinanews.com.cn/mz/2026/09-13/10695715.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-13T08:58:30.000Z",
-        "summary": "中新社河南安阳9月13日电 (记者 官逸伦 范晓恒)“单是当时制造那些马车所采用的技术，就令人惊叹。”来自加拿大的游客吉姆12日在参观完殷墟博物馆新馆内的殷墟车马遗迹展厅后如是评价。",
+        "publishedAt": "2026-09-13T09:51:05.000Z",
+        "summary": "中新网甘肃临夏9月13日电 题：“不搬一户人”的少数民族老街区引来八方客",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49674050",
+        "id": "hn-49683033",
         "category": "dev",
-        "title": "Make your first edit to OpenStreetMap",
-        "url": "https://high5apps.github.io/josm-plugin-website-wizard/",
+        "title": "'Fingerprints' inside the Sun could reveal if it once swallowed a planet",
+        "url": "https://ras.ac.uk/news-and-press/research-highlights/fingerprints-inside-sun-could-reveal-if-it-once-swallowed-planet",
         "source": "Hacker News",
-        "publishedAt": "2026-09-12T16:25:08.000Z",
+        "publishedAt": "2026-09-13T12:01:52.000Z",
         "badge": "HN",
-        "signal": "488 分 · 126 评论"
+        "signal": "48 分 · 16 评论"
       },
       {
-        "id": "cn-it-89eb27d32bce3c6d",
+        "id": "cn-it-7a24c0c49bf9f3fa",
         "category": "cn",
-        "title": "Waymo 自动驾驶出租车监测到乘客携带枪支，协助警方逮捕两名未成年人",
-        "url": "https://www.ithome.com/1/001/834.htm",
+        "title": "古尔曼：苹果正为 iPhone 自研游戏手柄，有望以 Beats 品牌推出",
+        "url": "https://www.ithome.com/1/001/865.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-13T11:32:25.000Z",
-        "summary": "IT之家 9 月 13 日消息，在自动驾驶出租车企业 Waymo 提供线索后，旧金山警方上周实施了一次“高风险车辆拦截行动”，逮捕了两名未成年人。事件起因是 Waymo 车辆监测到车上两名乘客持有一支上膛的 AR 样式突击步枪。据 SFGate 报道，警方拦停该车后，还在车内查获“疑似大麻与防狼喷雾”。 Waymo 全自动无人驾驶出租车没有人类司机，搭载大量传感器、摄像头等设备，全部接入一套名为 Waymo Driver 的自动驾驶系统。为保障最高安全水平，传感器会持续监测…",
+        "publishedAt": "2026-09-13T14:40:21.000Z",
+        "summary": "IT之家 9 月 13 日消息，彭博社记者马克 · 古尔曼证实，macOS 测试版代码中发现的线索属实：苹果正在为 iPhone 自研游戏手柄。 IT之家注意到，苹果商店目前已经在售多款手柄，例如 Backbone One（上图）与赛睿 Nimbus+，而现在苹果打算亲自入局，分一杯 iPhone 游戏手柄市场的蛋糕。 代码线索显示苹果正在开发两款手柄，型号标识符分别为 T6502 和 T1057。代码中能找到十字方向键、摇杆、震动马达的相关信息，还可能内置加速度计与陀螺仪…",
         "badge": "IT之家"
       },
       {
@@ -333,14 +333,14 @@
         "signal": "8 回复"
       },
       {
-        "id": "cn-baidu-405bdc0948c4150a",
+        "id": "cn-baidu-be85bc029a8fa326",
         "category": "cn",
-        "title": "首个、首次、首台 中国硬核成果上新",
-        "url": "https://www.baidu.com/s?wd=%E9%A6%96%E4%B8%AA%E3%80%81%E9%A6%96%E6%AC%A1%E3%80%81%E9%A6%96%E5%8F%B0+%E4%B8%AD%E5%9B%BD%E7%A1%AC%E6%A0%B8%E6%88%90%E6%9E%9C%E4%B8%8A%E6%96%B0&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "寻找“金砖温度”的答案",
+        "url": "https://www.baidu.com/s?wd=%E5%AF%BB%E6%89%BE%E2%80%9C%E9%87%91%E7%A0%96%E6%B8%A9%E5%BA%A6%E2%80%9D%E7%9A%84%E7%AD%94%E6%A1%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "本周，我国在能源基建、交通工程等领域捷报频传，从长征系列火箭成功发射一箭六星，到深海科考新发现，硬核成果持续“上新”。",
+        "summary": "什么是金砖的温度？回顾金砖20年发展历程，“金砖国家积极探索符合自身国情的发展道路，成为新兴市场和发展中国家联合自强的典范”。展望第三个“金色十年”，“要做促进创新发展的先锋”。发展，始终是金砖合作的核心诉求。从一套书，走近一段故事，感知金砖合作让各国人民都过上好日子的温度。",
         "badge": "热搜",
-        "signal": "7,619,283 热度"
+        "signal": "7,616,580 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86060",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49679459",
+        "id": "hn-49678969",
         "category": "dev",
-        "title": "The Interim Computer Museum",
-        "url": "https://icm.museum/",
+        "title": "Why are AI agents lying, cheating and coordinating?",
+        "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T02:43:57.000Z",
+        "publishedAt": "2026-09-13T01:22:31.000Z",
         "badge": "HN",
-        "signal": "124 分 · 13 评论"
+        "signal": "431 分 · 502 评论"
       },
       {
-        "id": "cn-item-fe778ef6d18432b6",
+        "id": "cn-item-f0c434aafd182eda",
         "category": "cn",
-        "title": "在服贸会看AI点亮“教与学”新场景",
-        "url": "https://www.chinanews.com.cn/edu/2026/09-13/10695674.shtml",
+        "title": "伊朗一商船在南部格什姆岛遭袭致1死3伤",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-13/10695678.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-13T08:45:47.000Z",
-        "summary": "中新社北京9月13日电 (记者 陈杭)9日至13日，2026年中国国际服务贸易交易会(下称“服贸会”)在北京举行。本届服贸会教育服务专题展上，多家企业带来智能化教育产品，展示AI在托幼服务、家庭伴学、校园教学等方面的落地成果。",
+        "publishedAt": "2026-09-13T09:12:23.000Z",
+        "summary": "中新社北京9月13日电 德黑兰消息：当地时间9月13日，伊朗一艘商船在南部格什姆岛附近遭袭，造成1人死亡、3人受伤。",
         "badge": "中新网要闻"
       },
       {
@@ -412,16 +412,16 @@
         "publishedAt": "2026-09-12T16:11:38.000Z",
         "summary": "2026 年 7 月初，萍萍给我打了个微信语音。 她是我发小方斌以前的同事，前几年我们去杭州时认识的。电话里她向我打听中转站和 AI 图片生成的事，说她和江苏的一个“表哥”合作，搞了个 Ozon 精铺的上架工具，跑得不错。我当时没太深聊，俄罗斯跨境电商这块我确实没碰过。 方斌前些年一直做房产销售，这几年行情低迷，我们常聚在一起琢磨新出路。那天我顺嘴把萍萍做的事跟他提了一句。 他们都在襄阳，离得近。方斌很感兴趣，隔两天就跑去见了萍萍。又过了两天，方斌打来电话，声音透着兴奋：这…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-fab27694293e7a3f",
+        "id": "cn-it-90840a28c78e1721",
         "category": "cn",
-        "title": "智谱宣布完成约 50 亿美元融资，用于下一代 GLM 基础模型研发等",
-        "url": "https://www.ithome.com/1/001/833.htm",
+        "title": "小米手表 5 推送 OS 3.0.196.0 固件更新，优化微信消息接收",
+        "url": "https://www.ithome.com/1/001/864.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-13T10:50:49.000Z",
-        "summary": "IT之家 9 月 13 日消息，智谱今日宣布完成 约 50 亿美元 （IT之家注：现汇率约合 336.54 亿元人民币） 融资，包括约 20 亿美元 （约 156.8 亿港币） 股份配售及约 30 亿美元 （约 201.4 亿人民币） 可转债发行。 此次融资主要将用于 下一代 GLM 基础模型 及完全自训练 （Fully Self Training） 体系的研发 ，以及大规模训练、生产推理、算力资源及相关技术基础设施的部署及升级。 在公告中，智谱将完全自训练描述为下一代 G…",
+        "publishedAt": "2026-09-13T14:36:32.000Z",
+        "summary": "IT之家 9 月 13 日消息，今日，小米手表 5 推送新版系统更新，固件版本号为 OS 3.0.196.0，主要针对微信消息提醒、系统稳定性以及已知问题进行优化。 IT之家整理更新日志如下： 优化微信消息接收，消息提醒更稳定； 提升系统运行稳定性，修复卡包卡片显示异常等问题，日常使用更流畅安心； 修复其他已知问题，提升用户体验。 小米手表 5 于去年 12 月正式发布，标准版定价 1999 元，eSIM 版定价 2299 元。该产品采用双面人工蓝宝石玻璃，不锈钢表壳一体锻…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49640913",
+        "id": "hn-49678423",
         "category": "dev",
-        "title": "I Added a Non-Wi-Fi Mitsubishi AC to Home Assistant",
-        "url": "https://medium.com/@ivangomezarnedo/how-i-added-a-non-wi-fi-mitsubishi-ac-to-home-assistant-22770661dd77",
+        "title": "TailTalk: A modern async user space AppleTalk stack with Rust and Tokio",
+        "url": "https://github.com/FeralFirmware/TailTalk/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T09:32:17.000Z",
+        "publishedAt": "2026-09-12T23:43:31.000Z",
         "badge": "HN",
-        "signal": "104 分 · 49 评论"
+        "signal": "37 分 · 11 评论"
       },
       {
-        "id": "cn-baidu-eb5c100add298f5f",
+        "id": "cn-baidu-0ba59c2a61c4b038",
         "category": "cn",
-        "title": "45岁后体检别省这项 能保命",
-        "url": "https://www.baidu.com/s?wd=45%E5%B2%81%E5%90%8E%E4%BD%93%E6%A3%80%E5%88%AB%E7%9C%81%E8%BF%99%E9%A1%B9+%E8%83%BD%E4%BF%9D%E5%91%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "举报元青花杯失踪烧烤店主改卖红薯",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%BE%E6%8A%A5%E5%85%83%E9%9D%92%E8%8A%B1%E6%9D%AF%E5%A4%B1%E8%B8%AA%E7%83%A7%E7%83%A4%E5%BA%97%E4%B8%BB%E6%94%B9%E5%8D%96%E7%BA%A2%E8%96%AF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "专家建议45岁以上、有高血压等三高人群，体检增加头颅MRA无创筛查，可提前检出脑血管隐患。脑出血常突发炸裂样头痛，部分动脉瘤破裂前无症状，该检查若结果正常，三五年内一般风险较低。",
+        "summary": "近日，山东菏泽一烧烤店老板因实名举报入藏菏泽市博物馆的元青花杯失踪后，遭5个部门约15次检查一事，引发关注。9月13日，涉事烧烤店店主告诉记者，烧烤店关闭后，为减少损失，他选择在曾经的烧烤店门口卖红薯。",
         "badge": "热搜",
-        "signal": "7,524,125 热度"
+        "signal": "7,523,348 热度"
       },
       {
         "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
@@ -510,7 +510,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 28882,
+        "stars": 29197,
         "starsToday": 652
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 4543,
+        "stars": 4748,
         "starsToday": 58
       },
       {
@@ -530,8 +530,8 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 30940,
-        "starsToday": 2265
+        "stars": 31241,
+        "starsToday": 2898
       },
       {
         "id": "github-3ec415efd8a08d06",
@@ -540,7 +540,7 @@
         "url": "https://github.com/tech-leads-club/agent-skills",
         "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
         "language": "TypeScript",
-        "stars": 5391,
+        "stars": 5480,
         "starsToday": 215
       },
       {
@@ -550,8 +550,8 @@
         "url": "https://github.com/melgarafael/DeskcommCRM",
         "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "language": "TypeScript",
-        "stars": 2001,
-        "starsToday": 504
+        "stars": 2063,
+        "starsToday": 444
       },
       {
         "id": "github-31424b832fa82c27",
@@ -560,7 +560,7 @@
         "url": "https://github.com/calesthio/OpenMontage",
         "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "language": "Python",
-        "stars": 58067,
+        "stars": 58196,
         "starsToday": 383
       },
       {
@@ -570,8 +570,8 @@
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "language": "JavaScript",
-        "stars": 65708,
-        "starsToday": 217
+        "stars": 65812,
+        "starsToday": 727
       },
       {
         "id": "github-ab3d9ce3fe326ef7",
@@ -580,8 +580,8 @@
         "url": "https://github.com/vxcontrol/pentagi",
         "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
         "language": "Go",
-        "stars": 23673,
-        "starsToday": 189
+        "stars": 23765,
+        "starsToday": 613
       },
       {
         "id": "github-7462aa6666311858",
@@ -590,8 +590,8 @@
         "url": "https://github.com/multimodal-art-projection/YuE",
         "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "language": "Python",
-        "stars": 7514,
-        "starsToday": 210
+        "stars": 7586,
+        "starsToday": 500
       },
       {
         "id": "github-0095f5eb76ef374d",
@@ -600,10 +600,10 @@
         "url": "https://github.com/yuliskov/SmartTube",
         "description": "Browse media content with your own rules on Android TV",
         "language": "Java",
-        "stars": 33308,
-        "starsToday": 136
+        "stars": 33351,
+        "starsToday": 238
       }
     ],
-    "updatedAt": "2026-09-13T11:54:14.533Z"
+    "updatedAt": "2026-09-13T15:40:29.033Z"
   }
 }
