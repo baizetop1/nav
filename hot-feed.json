@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-13T06:11:26.677Z",
+  "generatedAt": "2026-09-13T07:28:14.092Z",
   "intelligence": {
-    "updatedAt": "2026-09-13T06:11:26.677Z",
+    "updatedAt": "2026-09-13T07:28:14.092Z",
     "items": [
       {
         "id": "cn-item-b1919ce636d5f490",
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-13T02:43:57.000Z",
         "badge": "HN",
-        "signal": "68 分 · 7 评论"
+        "signal": "92 分 · 8 评论"
       },
       {
-        "id": "cn-it-01827e9f3961288f",
+        "id": "cn-it-4b35153e274ad856",
         "category": "cn",
-        "title": "磐镭 WO5 迷你主机新增 R5-3500U + 8G + 256G 规格，1549 元",
-        "url": "https://www.ithome.com/1/001/749.htm",
+        "title": "荣耀方飞详解 Magic9 系列前置方形画幅摄像头：横拍、竖拍，不再被手机的握持姿势限制",
+        "url": "https://www.ithome.com/1/001/790.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-13T05:37:51.000Z",
-        "summary": "IT之家 9 月 13 日消息，磐镭现已为旗下 WO5 迷你主机新增 R5-3500U + 8GB RAM + 256GB SSD 规格， 定价为 1549 元 。 京东 磐镭 WO5 迷你主机 1549 元 直达链接 该机采用黑色外观设计，造型方正，机身正面有 2 个 USB-A 3.2 Gen2 接口，背面有 2 个 HDMI 2.0 接口、1 个千兆 RJ45 网口、2 个 USB-A 2.0 接口、1 个全功能 USB-C 接口。 该机搭载 4 核 8 线程 AMD…",
+        "publishedAt": "2026-09-13T07:19:54.000Z",
+        "summary": "IT之家 9 月 13 日消息，荣耀官方今日宣布，Magic9 系列手机将搭载 5500 万像素“灵动之眼”镜头， 安卓首发前置方形视野 ，可带来更舒展的取景空间。 荣耀终端股份有限公司产品线总裁方飞今日发文，详细介绍了 Magic9 系列手机上的这枚前置方形画幅摄像头。其采用安卓首发的前置方形画幅摄像头， 拥有专属 1:1 取景画幅，同时支持 5500 万超高像素和 92° FOV 。 方飞表示，这套规格带来的核心变化很直接： 横拍、竖拍，不再被手机的握持姿势限制 。平时…",
         "badge": "IT之家"
       },
       {
@@ -77,15 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241650",
+        "id": "v2ex-1241662",
         "category": "dev",
-        "title": "API 中转站能看到你全部 prompt 和回复，为什么没有一个「厂商端到端加密」的标准？",
-        "url": "https://www.v2ex.com/t/1241650",
+        "title": "求当前 pi agent 开发 iOS & Android 应用的技术栈最佳实践",
+        "url": "https://www.v2ex.com/t/1241662",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T05:08:19.000Z",
-        "summary": "最近 X 上几家比较知名的中转站被曝出售 / 泄露用户的 key 和对话记录，正好把我憋了一阵子的一个想法说出来，请大家看看这个方案在密码学上有没有硬伤。 ## 现状：中转站是个能拆信的邮递员 用第三方中转的都知道，你的请求体——prompt 、系统提示词、附件内容、模型回复——对中转站是完全的明文。它技术上可以做缓存、做审计日志、做「模型质量分析」，当然也可以直接拿走你的代码和商业数据。TLS 只保护你和它之间、它和厂商之间这两段传输，中转服务器内存里躺着的永远是明文。 …",
+        "publishedAt": "2026-09-13T06:45:56.000Z",
+        "summary": "app 开发小白想用 pi agent 搞个工具类应用，尽量接近 ios android 原生体验，mac 平台，主要内容是调用摄像头扫码和设备功能设置。 非 cli 类桌面 agent computerUse 太烧 token 。cc cli 和 codex cli 比较啰唆，gpt6 之后 pi 更好用了。 大佬们建议当前使用什么技术栈 最顺畅 最方便？ 关键是 pi 在一边写代码时，一边如何调试 ui 和功能。",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-41f9b7caad58b4b4",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "近日，云南昆明街头一名白发老人不慎摔跤倒地，鼻子流血肿胀，情况紧急。路过的外卖小哥勇敢救人，将老人及时送医。护士问老人，“是他撞的你吗？”老人鼻子流着血拼命摆手，“不是，他是好心，是我自己摔的”。",
         "badge": "热搜",
-        "signal": "7,808,486 热度"
+        "signal": "7,809,247 热度"
       },
       {
         "id": "cisa-kev-cve-2026-42016",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49674050",
+        "id": "hn-49678969",
         "category": "dev",
-        "title": "Make your first edit to OpenStreetMap",
-        "url": "https://high5apps.github.io/josm-plugin-website-wizard/",
+        "title": "Why are AI agents lying, cheating and coordinating?",
+        "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
         "source": "Hacker News",
-        "publishedAt": "2026-09-12T16:25:08.000Z",
+        "publishedAt": "2026-09-13T01:22:31.000Z",
         "badge": "HN",
-        "signal": "404 分 · 93 评论"
+        "signal": "116 分 · 119 评论"
       },
       {
         "id": "cn-item-99eb8d1175a9ecc2",
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241648",
+        "id": "v2ex-1241650",
         "category": "dev",
-        "title": "试试这个提示词，让大模型重写文档，让人看得懂",
-        "url": "https://www.v2ex.com/t/1241648",
+        "title": "API 中转站能看到你全部 prompt 和回复，为什么没有一个「厂商端到端加密」的标准？",
+        "url": "https://www.v2ex.com/t/1241650",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T04:47:25.000Z",
-        "summary": "重写设计文档，遵守下面的风格： 1. 禁止使用比喻性质的或肢体动作词，例如“接”、“跑”、“打”、“落”、“补”、“收”等等，除非是专业用语； 2. 主动使用逻辑衔接，用“但是”、“因此”、“那么”等连词来承接存在逻辑关系的上下句。 3. 逐句阅读文档内容并修改，不使用搜索和替换。 4. 按文件分配 sub agent ，避免多个 sub agent 写同一个文件。 对比效果如下（修改之前 vs 修改之后）： - 步骤应落在已登记的动作库上，由规划器组合 - 步骤应来自已登…",
+        "publishedAt": "2026-09-13T05:08:19.000Z",
+        "summary": "最近 X 上几家比较知名的中转站被曝出售 / 泄露用户的 key 和对话记录，正好把我憋了一阵子的一个想法说出来，请大家看看这个方案在密码学上有没有硬伤。 ## 现状：中转站是个能拆信的邮递员 用第三方中转的都知道，你的请求体——prompt 、系统提示词、附件内容、模型回复——对中转站是完全的明文。它技术上可以做缓存、做审计日志、做「模型质量分析」，当然也可以直接拿走你的代码和商业数据。TLS 只保护你和它之间、它和厂商之间这两段传输，中转服务器内存里躺着的永远是明文。 …",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "30 回复"
       },
       {
-        "id": "cn-it-753dc2c448b6816f",
+        "id": "cn-it-6e38747574a94246",
         "category": "cn",
-        "title": "雷神科技升级售后服务体系：笔记本、显示器、迷你主机全型号免费上门取送机，全流程可视化",
-        "url": "https://www.ithome.com/1/001/748.htm",
+        "title": "我国实现一体化算力统筹监测，有序推动全国 31 个省区市对接入网",
+        "url": "https://www.ithome.com/1/001/786.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-13T05:27:24.000Z",
-        "summary": "IT之家 9 月 13 日消息，雷神科技宣布升级售后服务体系，为旗下笔记本、显示器、迷你主机三大品类实现“全型号免费上门取送机、全流程可视化、全年无休在线”服务。 雷神表示，符合保修期内的雷神用户，在中国大陆地区（港澳台暂不支持）可申请免费上门取送机服务。用户通过“雷神科技”官方服务号或雷神商城小程序统一报修入口报修后，快递约 1 小时内联系取机；物流由顺丰或京东承运，运费与保价由售后承担。 官方同步在“雷神科技”官方服务号与雷神商城小程序上线“雷神 AI 帮您解答”服务，…",
+        "publishedAt": "2026-09-13T07:17:56.000Z",
+        "summary": "IT之家 9 月 13 日消息，据央视新闻今日报道，记者从工业和信息化部了解到，中国算力平台已实现全国一体化算力统筹监测，我国算力“一张网、一盘棋、一体化”发展格局基本形成。 IT之家从报道获悉，中国算力平台是国家级综合性算力服务平台，目前已经汇聚了超万家注册企业用户，上架 2000 多项优质算力产品，接入各类大模型超 300 个，为广大开发者提供算力调用服务，累计沉淀数十亿条算力监测大数据。 中国信息通信研究院总工程师何宝宏介绍， 平台有序推动了全国 31 个省区市对接入…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49676820",
+        "id": "hn-49680485",
         "category": "dev",
-        "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
-        "url": "https://withspecific.com/benchmarks/real-swe",
+        "title": "When Anyone Can Build Software, Who Decides What Not to Build?",
+        "url": "https://architectureintel.com/when-anyone-can-build-software-who-decides-what-not-to-build-ae07fdb370e4",
         "source": "Hacker News",
-        "publishedAt": "2026-09-12T20:25:48.000Z",
+        "publishedAt": "2026-09-13T05:59:26.000Z",
         "badge": "HN",
-        "signal": "197 分 · 105 评论"
+        "signal": "14 分 · 7 评论"
       },
       {
-        "id": "cn-baidu-5a0fe21cd95bf49c",
+        "id": "cn-baidu-f920d9af96e5ebda",
         "category": "cn",
-        "title": "从商品房宿舍去学校只需5分钟",
-        "url": "https://www.baidu.com/s?wd=%E4%BB%8E%E5%95%86%E5%93%81%E6%88%BF%E5%AE%BF%E8%88%8D%E5%8E%BB%E5%AD%A6%E6%A0%A1%E5%8F%AA%E9%9C%805%E5%88%86%E9%92%9F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "胖东来新招工准则：合同四年、不续签",
+        "url": "https://www.baidu.com/s?wd=%E8%83%96%E4%B8%9C%E6%9D%A5%E6%96%B0%E6%8B%9B%E5%B7%A5%E5%87%86%E5%88%99%EF%BC%9A%E5%90%88%E5%90%8C%E5%9B%9B%E5%B9%B4%E3%80%81%E4%B8%8D%E7%BB%AD%E7%AD%BE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "据报道，湖北大学将周边存量房改为学生公寓，步行约5分钟可达教学区，房间内卫生间、淋浴间、大阳台、洗衣机齐全，双人间年费1320元。",
+        "summary": "9月13日，胖东来创始人于东来发文透露新招工准则：再招员工均为学员性质，合同四年且不续签。公司将培养员工学习生活理念与独立人格，未达标不发合格证书，合格名单将在官网公开查询。",
         "badge": "热搜",
-        "signal": "7,712,230 热度"
+        "signal": "7,714,537 热度"
       },
       {
         "id": "github-advisory-ghsa-65h7-9wrw-629c",
@@ -240,15 +240,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241632",
+        "id": "v2ex-1241648",
         "category": "dev",
-        "title": "有一事不解，是绝大多数都是许愿 AI？",
-        "url": "https://www.v2ex.com/t/1241632",
+        "title": "试试这个提示词，让大模型重写文档，让人看得懂",
+        "url": "https://www.v2ex.com/t/1241648",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-13T02:54:19.000Z",
-        "summary": "v2 好像还好，隔壁 linux.do 的帖子 80%都是在测试模型有没降智 我用了一年除了 sonnet3.x-4.x 突然开始我说 a ，他做 b 以外这种明显的。其他基本没有感觉到啊…忘记做漏做都是自己没说清楚的。给我的感觉就是我要没提他做了是惊喜，没做是我没说清楚。只要把我说了的都稳定快速做完就是好模型。 或许这种所为的脑子不好使就是模型幻觉在 coding 里面的表现？ 然后我就想到会不会是都在许愿编程？用的人自己并不清楚正确的是什么结果，或者就是一句话帮我做个登…",
+        "publishedAt": "2026-09-13T04:47:25.000Z",
+        "summary": "重写设计文档，遵守下面的风格： 1. 禁止使用比喻性质的或肢体动作词，例如“接”、“跑”、“打”、“落”、“补”、“收”等等，除非是专业用语； 2. 主动使用逻辑衔接，用“但是”、“因此”、“那么”等连词来承接存在逻辑关系的上下句。 3. 逐句阅读文档内容并修改，不使用搜索和替换。 4. 按文件分配 sub agent ，避免多个 sub agent 写同一个文件。 对比效果如下（修改之前 vs 修改之后）： - 步骤应落在已登记的动作库上，由规划器组合 - 步骤应来自已登…",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-item-162bf88dfe7b72b7",
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49678969",
+        "id": "hn-49674050",
         "category": "dev",
-        "title": "Why are AI agents lying, cheating and coordinating?",
-        "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
+        "title": "Make your first edit to OpenStreetMap",
+        "url": "https://high5apps.github.io/josm-plugin-website-wizard/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T01:22:31.000Z",
+        "publishedAt": "2026-09-12T16:25:08.000Z",
         "badge": "HN",
-        "signal": "63 分 · 59 评论"
+        "signal": "426 分 · 100 评论"
       },
       {
-        "id": "cn-it-732a9318bf87ae69",
+        "id": "cn-it-cf85ddcf097c07b3",
         "category": "cn",
-        "title": "2026 国庆中秋假期临近，10 月 1 日至 7 日七座及以下小客车出行可享高速免费通行政策",
-        "url": "https://www.ithome.com/1/001/746.htm",
+        "title": "SpaceX 纳斯达克 100 指数权重将上调，预计催生数十亿美元被动买盘",
+        "url": "https://www.ithome.com/1/001/783.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-13T05:21:04.000Z",
-        "summary": "IT之家 9 月 13 日消息，据央视新闻，2026 年中秋、国庆假期即将到来，本次中秋、国庆具体放假日期如下： 中秋节：9 月 25 日（周五）至 27 日（周日）放假，共 3 天。 国庆节：10 月 1 日（周四）至 7 日（周三）放假调休，共 7 天。9 月 20 日（周日）、10 月 10 日（周六）上班。 IT之家获悉， 今年中秋假期高速不免费 ，根据《国务院关于批转交通运输部等部门重大节假日免收小型客车通行费实施方案的通知》，免费通行的时间范围为春节、清明节、劳…",
+        "publishedAt": "2026-09-13T07:16:28.000Z",
+        "summary": "IT之家 9 月 13 日消息，纳斯达克 100 指数将于本月下旬上调 SpaceX 的指数权重，这一调整或将促使跟踪该指数的被动型基金开展数十亿美元的买入操作。 根据上周五晚间流传的纳斯达克全球指数观测预估数据，SpaceX 的权重预计将从约 1.28% 提升至 2.82%，最终权重将在本月晚些时候正式确定。华尔街机构预计，跟踪该指数的指数基金与交易所交易基金，会因此新增数十亿美元的买入。 SpaceX 此前权重偏低，源于它 7 月才被纳入该指数。当时公司大部分股份仍处于…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241612",
+        "id": "v2ex-1241632",
         "category": "dev",
-        "title": "记录一下最近 2 个月做 Ozon 工具和一次未开始就散掉的合作",
-        "url": "https://www.v2ex.com/t/1241612",
+        "title": "有一事不解，是绝大多数都是许愿 AI？",
+        "url": "https://www.v2ex.com/t/1241632",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-12T16:11:38.000Z",
-        "summary": "2026 年 7 月初，萍萍给我打了个微信语音。 她是我发小方斌以前的同事，前几年我们去杭州时认识的。电话里她向我打听中转站和 AI 图片生成的事，说她和江苏的一个“表哥”合作，搞了个 Ozon 精铺的上架工具，跑得不错。我当时没太深聊，俄罗斯跨境电商这块我确实没碰过。 方斌前些年一直做房产销售，这几年行情低迷，我们常聚在一起琢磨新出路。那天我顺嘴把萍萍做的事跟他提了一句。 他们都在襄阳，离得近。方斌很感兴趣，隔两天就跑去见了萍萍。又过了两天，方斌打来电话，声音透着兴奋：这…",
+        "publishedAt": "2026-09-13T02:54:19.000Z",
+        "summary": "v2 好像还好，隔壁 linux.do 的帖子 80%都是在测试模型有没降智 我用了一年除了 sonnet3.x-4.x 突然开始我说 a ，他做 b 以外这种明显的。其他基本没有感觉到啊…忘记做漏做都是自己没说清楚的。给我的感觉就是我要没提他做了是惊喜，没做是我没说清楚。只要把我说了的都稳定快速做完就是好模型。 或许这种所为的脑子不好使就是模型幻觉在 coding 里面的表现？ 然后我就想到会不会是都在许愿编程？用的人自己并不清楚正确的是什么结果，或者就是一句话帮我做个登…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-baidu-b24033e1705d9f25",
+        "id": "cn-baidu-405bdc0948c4150a",
         "category": "cn",
-        "title": "服贸会见证中国服务贸易焕新升级",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%8D%E8%B4%B8%E4%BC%9A%E8%A7%81%E8%AF%81%E4%B8%AD%E5%9B%BD%E6%9C%8D%E5%8A%A1%E8%B4%B8%E6%98%93%E7%84%95%E6%96%B0%E5%8D%87%E7%BA%A7&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "首个、首次、首台 中国硬核成果上新",
+        "url": "https://www.baidu.com/s?wd=%E9%A6%96%E4%B8%AA%E3%80%81%E9%A6%96%E6%AC%A1%E3%80%81%E9%A6%96%E5%8F%B0+%E4%B8%AD%E5%9B%BD%E7%A1%AC%E6%A0%B8%E6%88%90%E6%9E%9C%E4%B8%8A%E6%96%B0&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "从2012年服贸会的前身——首届京交会至今，服贸会已经走过14个年头。通过一组数字，看服贸会如何见证中国服务贸易焕新升级。",
+        "summary": "本周，我国在能源基建、交通工程等领域捷报频传，从长征系列火箭成功发射一箭六星，到深海科考新发现，硬核成果持续“上新”。",
         "badge": "热搜",
-        "signal": "7,615,824 热度"
+        "signal": "7,616,677 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86060",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49640913",
+        "id": "hn-49676820",
         "category": "dev",
-        "title": "I Made a Non-Wi-Fi Mitsubishi AC Smart with an ESP32",
-        "url": "https://medium.com/@ivangomezarnedo/how-i-added-a-non-wi-fi-mitsubishi-ac-to-home-assistant-22770661dd77",
+        "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+        "url": "https://withspecific.com/benchmarks/real-swe",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T09:32:17.000Z",
+        "publishedAt": "2026-09-12T20:25:48.000Z",
         "badge": "HN",
-        "signal": "36 分 · 4 评论"
+        "signal": "222 分 · 129 评论"
       },
       {
         "id": "cn-item-445f620afba0aa58",
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241602",
+        "id": "v2ex-1241612",
         "category": "dev",
-        "title": "做了一个 dsh 的 TUI：手机 SSH 远程控制 + Session 费用统计, 欢迎体验加星",
-        "url": "https://www.v2ex.com/t/1241602",
+        "title": "记录一下最近 2 个月做 Ozon 工具和一次未开始就散掉的合作",
+        "url": "https://www.v2ex.com/t/1241612",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-12T14:39:32.000Z",
-        "summary": "地址: https://github.com/mushuanli/dsht/tree/main deepseek flash 4.1 变强了，也变快了 同时烧钱速度也变快了， 经常一不小心会话越来越长同时费用也越来越高, 几次日费用超过 80 块。 同时有时在外部手机 ssh 能控制 codex, 但是难控制 dsh, 开放网站又不放心，（上个月被盗刷 200 多，不知道 key 什么泄露的） 痛定思痛，决定做一个一个 tui 客户端。 现在已经做好，手机上能用，命令行也能…",
+        "publishedAt": "2026-09-12T16:11:38.000Z",
+        "summary": "2026 年 7 月初，萍萍给我打了个微信语音。 她是我发小方斌以前的同事，前几年我们去杭州时认识的。电话里她向我打听中转站和 AI 图片生成的事，说她和江苏的一个“表哥”合作，搞了个 Ozon 精铺的上架工具，跑得不错。我当时没太深聊，俄罗斯跨境电商这块我确实没碰过。 方斌前些年一直做房产销售，这几年行情低迷，我们常聚在一起琢磨新出路。那天我顺嘴把萍萍做的事跟他提了一句。 他们都在襄阳，离得近。方斌很感兴趣，隔两天就跑去见了萍萍。又过了两天，方斌打来电话，声音透着兴奋：这…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-3dc88a37d60bc090",
+        "id": "cn-it-36758e7993a81ccb",
         "category": "cn",
-        "title": "北京 6G 空天地一体实验室落地，中国联通研究院、中国星网牵头建设",
-        "url": "https://www.ithome.com/1/001/745.htm",
+        "title": "现代汽车将于 2029 年推出自研辅助驾驶系统，较原定计划推迟两年",
+        "url": "https://www.ithome.com/1/001/780.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-13T04:42:20.000Z",
-        "summary": "IT之家 9 月 13 日消息，据“北京亦庄”公众号今日消息，中国联通研究院、银河航天、中兴数字星云、蓝箭鸿擎等企业共同发布“北京 6G 空天地一体实验室”，标志着北京经济技术开发区 6G 产业、空天产业再添强引擎。 IT之家注意到，北京 6G 空天地一体实验室在北京市的统筹指导下， 由中国联通研究院与中国星网牵头建设 。该实验室成立一年来，已汇聚涵盖运营商、设备制造商、高校及科研院所在内的 20 余家产业链核心单位，覆盖基础研究、星地融合组网、核心芯片与终端设备、应用场景…",
+        "publishedAt": "2026-09-13T07:14:37.000Z",
+        "summary": "IT之家 9 月 13 日消息，据路透社报道， 现代汽车集团计划于 2029 年年底推出搭载其自研辅助驾驶的车型，较原定计划推迟了两年 ；在此过渡期间，该集团将转而求助于英伟达以加快技术落地进程。 现代汽车一位高管透露，这家韩国车企将于 2028 年与英伟达展开合作，率先推出涵盖 L2+ 级与 L2++ 级的高级辅助驾驶系统。 这一战略转向凸显了现代汽车在自研自动驾驶软件方面面临的严峻挑战。该自研项目原定于 2027 年年底首发，而此番推迟也引发了外界对其愈发依赖英伟达的担…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49673098",
+        "id": "hn-49640913",
         "category": "dev",
-        "title": "Nvidia is the central bank of AI",
-        "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+        "title": "I Made a Non-Wi-Fi Mitsubishi AC Smart with an ESP32",
+        "url": "https://medium.com/@ivangomezarnedo/how-i-added-a-non-wi-fi-mitsubishi-ac-to-home-assistant-22770661dd77",
         "source": "Hacker News",
-        "publishedAt": "2026-09-12T15:08:27.000Z",
+        "publishedAt": "2026-09-10T09:32:17.000Z",
         "badge": "HN",
-        "signal": "444 分 · 312 评论"
+        "signal": "50 分 · 27 评论"
       },
       {
-        "id": "cn-baidu-7d9c066cc6827df0",
+        "id": "cn-baidu-de150bf1cd966206",
         "category": "cn",
-        "title": "2次考上北大男生解释复读原因",
-        "url": "https://www.baidu.com/s?wd=2%E6%AC%A1%E8%80%83%E4%B8%8A%E5%8C%97%E5%A4%A7%E7%94%B7%E7%94%9F%E8%A7%A3%E9%87%8A%E5%A4%8D%E8%AF%BB%E5%8E%9F%E5%9B%A0&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "广州绿化带惊现拳头大蜗牛",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%BF%E5%B7%9E%E7%BB%BF%E5%8C%96%E5%B8%A6%E6%83%8A%E7%8E%B0%E6%8B%B3%E5%A4%B4%E5%A4%A7%E8%9C%97%E7%89%9B&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月13日，浙江男生陆远迪以714分（全省第二）被北京大学图灵班录取。他去年高考获693分被北大医学部录取，因未发挥应有水平且执着于喜欢的专业提出复读，遭到全家反对。",
+        "summary": "近日，广东广州一女子在绿化带中发现一只体型硕大、外壳超过成年男性拳头的蜗牛。网友指出该蜗牛为非洲大蜗牛。医生介绍，非洲大蜗牛是广州管圆线虫的中间宿主之一，或携带多种致病病原体。",
         "badge": "热搜",
-        "signal": "7,521,419 热度"
+        "signal": "7,524,067 热度"
       },
       {
         "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241597",
+        "id": "v2ex-1241602",
         "category": "dev",
-        "title": "维护了一年多的开源免费 Todo 软件，最近想让 AI 真正帮我完成任务",
-        "url": "https://www.v2ex.com/t/1241597",
+        "title": "做了一个 dsh 的 TUI：手机 SSH 远程控制 + Session 费用统计, 欢迎体验加星",
+        "url": "https://www.v2ex.com/t/1241602",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-12T14:14:26.000Z",
-        "summary": "HamsterBase Tasks 是我维护了一年多的开源 Todo 软件，除了官方云，其他所有功能开业免费，支持桌面、手机和网页端。 也支持自部署 最近做了一个 AI Skill：让 AI 自动读取任务清单，或者把某个项目、分组、任务直接交给它。它完成工作后，会带着说明和截图提交完成请求，验收通过后，任务才会被勾掉。 我自己主要拿它写开发需求，让 AI 去做，再回来验收。希望任务清单能成为人和 AI 一起工作的地方。 教程在 https://tasks.hamsterba…",
+        "publishedAt": "2026-09-12T14:39:32.000Z",
+        "summary": "地址: https://github.com/mushuanli/dsht/tree/main deepseek flash 4.1 变强了，也变快了 同时烧钱速度也变快了， 经常一不小心会话越来越长同时费用也越来越高, 几次日费用超过 80 块。 同时有时在外部手机 ssh 能控制 codex, 但是难控制 dsh, 开放网站又不放心，（上个月被盗刷 200 多，不知道 key 什么泄露的） 痛定思痛，决定做一个一个 tui 客户端。 现在已经做好，手机上能用，命令行也能…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 30405,
+        "stars": 30548,
         "starsToday": 2265
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/melgarafael/DeskcommCRM",
         "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "language": "TypeScript",
-        "stars": 1898,
+        "stars": 1923,
         "starsToday": 504
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "language": "JavaScript",
-        "stars": 65564,
+        "stars": 65608,
         "starsToday": 217
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/nab138/iloader",
         "description": "User friendly sideloader",
         "language": "TypeScript",
-        "stars": 3140,
+        "stars": 3163,
         "starsToday": 209
       },
       {
@@ -549,7 +549,7 @@
         "name": "Flowseal/zapret-discord-youtube",
         "url": "https://github.com/Flowseal/zapret-discord-youtube",
         "language": "Batchfile",
-        "stars": 33221,
+        "stars": 33224,
         "starsToday": 65
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/jihe520/MathModelAgent",
         "description": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
         "language": "Python",
-        "stars": 5191,
+        "stars": 5205,
         "starsToday": 262
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/Sonarr/Sonarr",
         "description": "Smart PVR for newsgroup and bittorrent users.",
         "language": "C#",
-        "stars": 15967,
+        "stars": 15979,
         "starsToday": 227
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/alsk1992/CloddsBot",
         "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
         "language": "TypeScript",
-        "stars": 2570,
+        "stars": 2586,
         "starsToday": 376
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/yuliskov/SmartTube",
         "description": "Browse media content with your own rules on Android TV",
         "language": "Java",
-        "stars": 33256,
+        "stars": 33268,
         "starsToday": 136
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
         "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
         "language": "Python",
-        "stars": 137719,
+        "stars": 137751,
         "starsToday": 230
       }
     ],
-    "updatedAt": "2026-09-13T06:11:26.677Z"
+    "updatedAt": "2026-09-13T07:28:14.092Z"
   }
 }
