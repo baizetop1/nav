@@ -1,10 +1,10 @@
-import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.17.0';
-import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.17.0';
-import { autoOrderAllows } from './commands.js?v=0.17.0';
-import { initializeMartial, martialFactor } from './martial.js?v=0.17.0';
-import { attributes } from './hero.js?v=0.17.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.17.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.17.0';
+import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.20.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.20.0';
+import { autoOrderAllows } from './commands.js?v=0.20.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.20.0';
+import { attributes } from './hero.js?v=0.20.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.20.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.20.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
@@ -148,6 +148,7 @@ export function castSkill(state,data,heroId,skillId){
 export function battleItemQuote(state,data,id){
   const b=state.battle,item=data.by.items[id];
   if(!b||b.outcome)return {reason:'战局已结束'};
+    if(b.context.type==='elite'&&b.context.kind==='hard')return {reason:'禁药挑战不能使用战斗药品，治疗技能仍可用'};
   if(!BATTLE_ITEMS.includes(id)||!item)return {reason:'这件物品不能在战斗中使用'};
   if(!(state.inventory[id]>0))return {reason:'行囊中没有此药'};
   if(b.itemReadyAt>b.elapsed)return {reason:`用药间隔 ${Math.ceil((b.itemReadyAt-b.elapsed)/1000)}秒`};

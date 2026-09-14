@@ -1,7 +1,8 @@
-import { helperBonus } from './helpers.js?v=0.17.0';
-import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.17.0';
-import { gainExp } from './hero.js?v=0.17.0';
-import { grant, newEquipment } from './item.js?v=0.17.0';
+import { stewardshipBonus } from './stewardship.js?v=0.20.0';
+import { helperBonus } from './helpers.js?v=0.20.0';
+import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.20.0';
+import { gainExp } from './hero.js?v=0.20.0';
+import { grant, newEquipment } from './item.js?v=0.20.0';
 
 export const DUTIES={
   balanced:{name:'各司其职',description:'木粮银均衡生产。'},
@@ -17,7 +18,7 @@ export function dutyQuote(s,mode='balanced'){
   requireRule(hasOwn(DUTIES,mode),'没有这项寨务。');
   const c=s.camp,id=steward(s),specialty=id&&stewardship(id),bonus=helperBonus(s);
   const base={wood:10+c.buildings.lumber*18,food:8+c.buildings.farm*20,silver:15+c.buildings.market*35};
-  return Object.fromEntries(Object.entries(base).map(([key,value])=>[key,Math.floor(value*(mode==='balanced'?1:mode===key?1.75:.5)*(specialty===key?1.2:1))+bonus[key]]));
+  return Object.fromEntries(Object.entries(base).map(([key,value])=>[key,Math.floor(value*(mode==='balanced'?1:mode===key?1.75:.5)*(specialty===key?1+stewardshipBonus(s,id)/100:1))+bonus[key]]));
 }
 export function finishDuty(s,d,mode){
   const q=dutyQuote(s,mode),id=steward(s);s.camp.wood+=q.wood;s.camp.food+=q.food;s.player.silver+=q.silver;
@@ -38,7 +39,7 @@ export function developmentAction(s,d,a){
     requireRule(a.id===null||s.heroes[a.id]?.status==='owned','只能委派已入寨的好汉。');
     for(const id of Object.keys(s.heroes))delete s.progress.flags['camp_steward_'+id];
     if(a.id)s.progress.flags['camp_steward_'+a.id]=true;
-    journal(s,a.id?`【寨务主事】${d.by.heroes[a.id].name}领命。经营时擅长物资增产 20%，本人获得 25 历练；仍可随队出征。`:'寨务改由乡人主持。');
+    journal(s,a.id?`【寨务主事】${d.by.heroes[a.id].name}领命。经营时擅长物资增产 ${stewardshipBonus(s,a.id)}%，本人获得 25 历练；仍可随队出征。`:'寨务改由乡人主持。');
   }else{
     const g=CAMP_GOALS.find(g=>g.id===a.id);requireRule(g&&!goalClaimed(s,g)&&goalReady(s,g),'阶段目标尚未达成，或奖励已领取。');
     s.progress.flags['camp_goal_'+g.id]=true;s.camp.wood+=g.reward.wood||0;s.camp.food+=g.reward.food||0;grant(s,g.reward,d);

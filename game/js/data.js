@@ -1,5 +1,5 @@
-import { hasOwn, idPattern, requireRule } from './utils.js?v=0.17.0';
-import { GROWTH_PROFILES } from './growth.js?v=0.17.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.20.0';
+import { GROWTH_PROFILES } from './growth.js?v=0.20.0';
 export const collections=['heroes','skills','items','equipments','enemies','maps','stories','schemes','dungeons','rewards','events','quests','chapters'];
 const numeric=(n,min=0)=>typeof n==='number'&&Number.isFinite(n)&&n>=min;
 export function prepareData(raw) {

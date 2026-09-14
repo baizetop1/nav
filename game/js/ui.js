@@ -1,27 +1,28 @@
-import { progressionPanel, experienceLabel } from './progression-ui.js?v=0.17.0';
-import { debriefPanel } from './sortie-ui.js?v=0.17.0';
-import { batchButtons } from './batch-ui.js?v=0.17.0';
-import { equipmentComparison } from './management-ui.js?v=0.17.0';
-import { objectivePanel } from './strategy-ui.js?v=0.17.0';
-import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.17.0';
-import { equipmentMatches } from './commands.js?v=0.17.0';
-import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.17.0';
-import { rotationsPage } from './rotations-ui.js?v=0.17.0';
-import { traitCard } from './martial-ui.js?v=0.17.0';
-import { helpersBoard } from './helpers-ui.js?v=0.17.0';
-import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.17.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.17.0';
-import { worldMap, localBenefit } from './world-map-ui.js?v=0.17.0';
-import { saveBoxPage } from './savebox-ui.js?v=0.17.0';
-import { attributes } from './hero.js?v=0.17.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.17.0';
-import { isBusy, questReady } from './core.js?v=0.17.0';
-import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.17.0';
-import { strengthenQuote } from './item.js?v=0.17.0';
-import { icon, actionIcon } from './icons.js?v=0.17.0';
-import { heroStewardCard } from './camp-development-ui.js?v=0.17.0';
-import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.17.0';
-import { campPage, portrait } from './camp-ui.js?v=0.17.0';
+import { chroniclePanel } from './hero-chronicles.js?v=0.20.0';
+import { progressionPanel, experienceLabel } from './progression-ui.js?v=0.20.0';
+import { debriefPanel } from './sortie-ui.js?v=0.20.0';
+import { batchButtons } from './batch-ui.js?v=0.20.0';
+import { equipmentComparison } from './management-ui.js?v=0.20.0';
+import { objectivePanel } from './strategy-ui.js?v=0.20.0';
+import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.20.0';
+import { equipmentMatches } from './commands.js?v=0.20.0';
+import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.20.0';
+import { rotationsPage } from './rotations-ui.js?v=0.20.0';
+import { traitCard } from './martial-ui.js?v=0.20.0';
+import { helpersBoard } from './helpers-ui.js?v=0.20.0';
+import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.20.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.20.0';
+import { worldMap, localBenefit } from './world-map-ui.js?v=0.20.0';
+import { saveBoxPage } from './savebox-ui.js?v=0.20.0';
+import { attributes } from './hero.js?v=0.20.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.20.0';
+import { isBusy, questReady } from './core.js?v=0.20.0';
+import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.20.0';
+import { strengthenQuote } from './item.js?v=0.20.0';
+import { icon, actionIcon } from './icons.js?v=0.20.0';
+import { heroStewardCard } from './camp-development-ui.js?v=0.20.0';
+import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.20.0';
+import { campPage, portrait } from './camp-ui.js?v=0.20.0';
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const btn=(label,command,kind='text-action',disabled=false)=>{const symbol=icon(actionIcon(command));return `<button type="button" class="${kind}${symbol?' with-icon':''}" data-command="${esc(JSON.stringify(command))}" ${disabled?'disabled':''}>${symbol}<span>${esc(label)}</span></button>`;};
 const nav=(label,view)=>`<button type="button" class="text-action with-icon" data-view="${view}" aria-label="${esc(label)}">${icon(view)}<span>${esc(label)}</span></button>`;
@@ -71,8 +72,8 @@ function heroCard(s,d,h){
   const v=s.heroes[h.id],owned=v.status==='owned';
   return `<article class="card hero-card">${portrait(h)}<h2>${esc(h.title)} · ${esc(h.name)}<span class="badge">${statusLabels[v.status]}</span></h2>
     <p class="meta">${h.starSign} · 第 ${h.seat} 席 · ${QUALITIES[qualityOf(v)].name}品 · 资质 ${'★'.repeat(h.star)} · ${owned?experienceLabel(v,d.config.balance.heroLevelCap):'先相识，再以信物邀贤'}</p>
-    ${owned?stats(attributes(s,h.id,d))+progressionPanel(s,d,h.id)+btn('赠 1 颗经验丹 · 先预览（现有 '+(s.inventory.exp_pill||0)+'）',{type:'ui_batchPreview',kind:'experience',id:h.id,count:1},'secondary',!s.inventory.exp_pill||v.level>=d.config.balance.heroLevelCap)+batchButtons(h.id,'experience',btn):`<p class="note">可在${esc(d.by.maps[h.meetMap].name)}寻访${h.meetCondition?'，还须推进相关主线':''}。</p>`}
-    ${s.affairs?.mission?.hero===h.id?'<p class="notice">此人正在外派，请到寨子接回后再安排出阵或任职。</p>':''}${traitCard(h)}${corpsPanel(s,d,h,btn)}${owned?setPanel(s,d,h.id):''}${invitation(s,h,btn)}${owned?qualityPanel(s,d,h,esc,btn):stats(attributes(s,h.id,d,1,false))}${heroStewardCard(s,d,h,btn)}<details data-fold="hero-${h.id}"><summary>人物往事与招式</summary><p class="note">${esc(h.story)}</p>${heroArc(s,d,h.id)}
+    ${owned?stats(attributes(s,h.id,d))+progressionPanel(s,d,h.id)+btn('赠 1 颗经验丹 · 先预览（现有 '+(s.inventory.exp_pill||0)+'）',{type:'ui_batchPreview',kind:'experience',id:h.id,count:1},'secondary',!s.inventory.exp_pill||v.level>=d.config.balance.heroLevelCap)+batchButtons(h.id,'experience',btn)+btn('去寨中演武传习',{type:'ui_campJump',id:'camp-mentorship'},'text-action'):`<p class="note">可在${esc(d.by.maps[h.meetMap].name)}寻访${h.meetCondition?'，还须推进相关主线':''}。</p>`}
+    ${s.affairs?.mission?.hero===h.id?'<p class="notice">此人正在外派，请到寨子接回后再安排出阵或任职。</p>':''}${traitCard(h)}${corpsPanel(s,d,h,btn)}${owned?setPanel(s,d,h.id):''}${invitation(s,h,btn)}${owned?qualityPanel(s,d,h,esc,btn):stats(attributes(s,h.id,d,1,false))}${heroStewardCard(s,d,h,btn)}${owned?chroniclePanel(s,d,h,btn):''}<details data-fold="hero-${h.id}"><summary>人物往事与招式</summary><p class="note">${esc(h.story)}</p>${heroArc(s,d,h.id)}
       <p class="meta">信物 ${s.inventory[h.id+'_token']||0}/10 · 专属令 ${s.inventory[h.id+'_order']||0}</p>
       ${heroGrowth(s,d,h,esc,btn)}
     </details></article>`;

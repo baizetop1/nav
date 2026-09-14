@@ -1,4 +1,4 @@
-import { CORPS } from './corps-data.js?v=0.17.0';
+import { CORPS } from './corps-data.js?v=0.20.0';
 // Game design, not a claim about historical or novel military organization.
 export const TERRAIN_NAMES={land:'平原',forest:'林地',mountain:'山地',water:'水域'};
 const group=text=>new Set(text.split(' '));
@@ -21,6 +21,10 @@ export const HERO_SPECIALTIES=Object.fromEntries(Object.entries(CORPS).map(([id,
  job:smiths.has(id)?'workshop':farmers.has(id)||naval.has(id)||c.profile==='medic'?'farm':'lumber',style:c.profile
 }]));
 export const BONDS=[
+ {id:'forge_pair',name:'炉火惊雷',heroes:['tanglong','lingzhen'],stat:'strategy',rate:.12},
+ {id:'healing_pair',name:'医者同心',heroes:['andaoquan','huangfuduan'],stat:'hp',rate:.12},
+ {id:'armored_pair',name:'长刀铁骑',heroes:['guansheng','huyanzhuo'],stat:'defense',rate:.12},
+ {id:'swift_pair',name:'神行探路',heroes:['daizong','shiqian'],stat:'speed',rate:.12},
  {id:'ruan',name:'阮氏三雄',heroes:['ruanxiaoer','ruanxiaowu','ruanxiaoqi'],terrain:'water',stat:'attack',rate:.18},
  {id:'erlong',name:'二龙山聚义',heroes:['wusong','luzhishen','yangzhi'],terrain:'mountain',stat:'hp',rate:.18},
  {id:'spear',name:'禅杖枪林',heroes:['linchong','luzhishen'],stat:'defense',rate:.12},

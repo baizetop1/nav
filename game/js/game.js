@@ -1,20 +1,24 @@
-import { SORTIES, prepareSortie } from './sortie.js?v=0.17.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.17.0';
-import { presetReason } from './development.js?v=0.17.0';
-import { batchQuote } from './batch.js?v=0.17.0';
-import { batchDialog } from './batch-ui.js?v=0.17.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.17.0';
-import { ActivityLog } from './activity.js?v=0.17.0';
-import { loadData } from './data.js?v=0.17.0';
-import { dispatch, newGame } from './core.js?v=0.17.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.17.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.17.0';
-import { patchElement } from './dom.js?v=0.17.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.20.0';
+import { productionDialog } from './production-ui.js?v=0.20.0';
+import { mentorshipQuote } from './mentorship.js?v=0.20.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.20.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.20.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.20.0';
+import { presetReason } from './development.js?v=0.20.0';
+import { batchQuote } from './batch.js?v=0.20.0';
+import { batchDialog } from './batch-ui.js?v=0.20.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.20.0';
+import { ActivityLog } from './activity.js?v=0.20.0';
+import { loadData } from './data.js?v=0.20.0';
+import { dispatch, newGame } from './core.js?v=0.20.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.20.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.20.0';
+import { patchElement } from './dom.js?v=0.20.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.17.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.17.0';
-import { CloudClient } from './cloud.js?v=0.17.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.17.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.20.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.20.0';
+import { CloudClient } from './cloud.js?v=0.20.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.20.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
@@ -210,6 +214,21 @@ async function handle(command){
   if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
 
   if(await handleBox(command))return;
+  if(type==='ui_productionCancel'){document.getElementById('production-preview')?.close();return;}
+  if(type==='ui_productionPreview'){
+    const preview=dispatch(data,state,{type:'refresh'}),q=command.kind==='collect'?collectionQuote(preview):workshopQuote(preview,command.count);
+    document.getElementById('production-preview')?.remove();const btn=(label,a,kind,disabled)=>'<button type="button" class="'+kind+'" data-command="'+esc(JSON.stringify(a))+'" '+(disabled?'disabled':'')+'>'+esc(label)+'</button>';
+    root.insertAdjacentHTML('beforeend',productionDialog(q,esc,btn));const dialog=document.getElementById('production-preview');dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;
+  }
+  if(['frontierCollect','frontierProcess'].includes(type))document.getElementById('production-preview')?.close();
+  if(type==='ui_mentorCancel'){document.getElementById('mentorship-preview')?.close();return;}
+  if(type==='ui_mentorPreview'){
+    const mentor=document.getElementById('mentor-hero').value,student=document.getElementById('mentor-student').value,q=mentorshipQuote(dispatch(data,state,{type:'refresh'}),data,mentor,student);
+    document.getElementById('mentorship-preview')?.remove();
+    const btn=(label,a,kind,disabled)=>'<button type="button" class="'+kind+'" data-command="'+esc(JSON.stringify(a))+'" '+(disabled?'disabled':'')+'>'+esc(label)+'</button>';
+    root.insertAdjacentHTML('beforeend',mentorshipDialog(q,data,esc,btn));const dialog=document.getElementById('mentorship-preview');dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;
+  }
+  if(type==='heroMentor')document.getElementById('mentorship-preview')?.close();
   if(type==='ui_batchCancel'){document.getElementById('batch-preview')?.close();return;}
   if(type==='ui_batchPreview'||type==='ui_batchShop'){const a=type==='ui_batchShop'?{kind:'buy',id:document.getElementById('batch-shop-item').value,count:command.count}:command,q=batchQuote(state,data,a);document.getElementById('batch-preview')?.remove();const btn=(label,a,kind,disabled)=>`<button type="button" class="${kind}" data-command="${esc(JSON.stringify(a))}" ${disabled?'disabled':''}>${esc(label)}</button>`;root.insertAdjacentHTML('beforeend',batchDialog(q,a,esc,btn));const dialog=document.getElementById('batch-preview');dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;}
   if(type==='batchApply')document.getElementById('batch-preview')?.close();
@@ -251,7 +270,7 @@ async function handle(command){
   if(type==='ui_verifiedRefresh'){if(leaderboard.verifiedLoading)return;leaderboard.verifiedLoading=true;leaderboard.verifiedError='';leaderboard.verified=null;paint();try{leaderboard.verified=await cloud.verifiedLeaderboard();}catch(e){leaderboard.verifiedError=e.status===404?'服务器演武服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.verifiedLoading=false;paint();}return;}
   if(type==='ui_rankRefresh'){if(leaderboard.loading)return;leaderboard.loading=true;leaderboard.error='';leaderboard.data=null;paint();try{leaderboard.data=await cloud.leaderboard();}catch(e){leaderboard.error=e.status===404?'排行榜服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.loading=false;paint();}return;}
   if(type==='ui_compareClose'){gear={...gear,comparison:null};paint();return;}
-  if(type==='ui_campJump'){if(!['camp-affairs','camp-goals','camp-production','frontier-map','camp-resources'].includes(id))return;view='camp';paint();const el=document.getElementById(id);for(let p=el?.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;el?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_campJump'){if(!['camp-affairs','camp-goals','camp-production','frontier-map','camp-resources','camp-mentorship'].includes(id))return;view='camp';paint();const el=document.getElementById(id);for(let p=el?.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;if(id==='camp-mentorship')el?.querySelector('details')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_affairDispatch')command={type:'affairChoice',choice:'dispatch',hero:document.getElementById('affair-hero').value};
   if(type==='ui_materialSource'){view='trials';paint(true);const target=document.querySelector('[data-fold^="rotation-'+command.kind+'-'+command.id+'-"]');if(target){target.open=true;target.scrollIntoView({block:'start'});}return;}
   if(type==='ui_gearFilter'){gear=Object.fromEntries(['query','type','quality','state'].map(k=>[k,document.getElementById('gear-'+k).value]));paint();return;}
@@ -261,6 +280,8 @@ async function handle(command){
   }
   if(type==='ui_rosterReset'){roster={};paint();for(const k of ['query','status','group','quality','role'])document.getElementById('roster-'+k).value=k==='query'?'':'all';return;}
   if(type==='ui_rosterPage'){roster={...roster,page:command.page,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_readyHero'){if(!data.by.heroes[id])return;view='heroes';roster={selected:id,query:data.by.heroes[id].name};paint(true);const el=document.getElementById('roster-detail');if(command.kind==='story')el?.querySelector('[data-fold="chronicle-'+id+'"]')?.setAttribute('open','');if(command.kind==='skill')el?.querySelector('[data-fold="hero-'+id+'"]')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_eliteOpen'){view='trials';paint(true);const el=document.querySelector('[data-fold="elite-'+id+'"]');el?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_goalOpen'){const g=state.development?.goal;if(g?.kind==='craft')view='forge';else if(g){view='heroes';roster={selected:g.id,query:data.by.heroes[g.id].name};}paint(true);document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}
     if(type==='ui_frontierAssign')command={type:'frontierAssign',id,worker:document.getElementById('frontier-worker-'+id).value||null};
   if(type==='ui_frontierGuard')command={type:'frontierGuard',id,hero:document.getElementById('frontier-guard-'+id).value.replace(/^hero:/,'')||null};

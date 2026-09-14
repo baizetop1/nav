@@ -1,5 +1,6 @@
-import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.17.0';
-import { questReady } from './core.js?v=0.17.0';
+import { readinessPanel, productionReady } from './readiness.js?v=0.20.0';
+import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.20.0';
+import { questReady } from './core.js?v=0.20.0';
 
 // Read-only overview: visiting the camp never spends resources or claims rewards.
 export function campNotices(s,d){
@@ -13,9 +14,7 @@ export function campNotices(s,d){
   if(quests)list.push({label:quests+' 项差事酬劳可领取',view:'quests'});
   const f=s.frontier;
   if(f){
-    const materials=Object.entries(f.stations).some(([id,row])=>id!=='workshop'&&row.bank>0)||Object.values(f.posts).some(p=>!p.threat&&p.bank>0);
-    const workshop=f.stations.workshop.bank>0&&(s.inventory.scrap_iron||0)>=2&&s.camp.wood>=2;
-    if(materials||workshop)list.push({label:'生产已备妥，可收取或加工',target:'camp-production'});
+    if(productionReady(s))list.push({label:'生产已备妥，可收取或加工',target:'camp-production'});
     const threats=Object.values(f.posts).filter(p=>p.threat).length;
     if(threats)list.push({label:threats+' 处据点告急，等待解围',target:'frontier-map'});
   }
@@ -24,5 +23,5 @@ export function campNotices(s,d){
 }
 export function campOverview(s,d,btn){
   const list=campNotices(s,d);
-  return `<section class="camp-overview"><h2>回寨待办</h2><p class="note">只列当前可处理事项；酬劳和物资由你确认领取。</p>${list.length?`<div class="camp-notices">${list.map(n=>n.view?`<button type="button" class="secondary" data-view="${n.view}">${n.label}</button>`:btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')}</div>`:'<p class="note">暂无待领酬劳或来报，可安排寨务、培养好汉或查看历练日历。</p>'}</section>`;
+  return `<section class="camp-overview"><h2>回寨待办</h2><p class="note">只列当前可处理事项；酬劳和物资由你确认领取。</p>${list.length?`<div class="camp-notices">${list.map(n=>n.view?`<button type="button" class="secondary" data-view="${n.view}">${n.label}</button>`:btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')}</div>`:'<p class="note">暂无待领酬劳或来报，可安排寨务、培养好汉或查看历练日历。</p>'}</section>${readinessPanel(s,d,btn)}`;
 }

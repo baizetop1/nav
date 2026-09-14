@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-14T07:54:08.897Z",
+  "generatedAt": "2026-09-14T08:59:51.414Z",
   "intelligence": {
-    "updatedAt": "2026-09-14T07:54:08.897Z",
+    "updatedAt": "2026-09-14T08:59:51.414Z",
     "items": [
       {
         "id": "cn-item-5f66477664020844",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-13T21:06:13.000Z",
         "badge": "HN",
-        "signal": "822 分 · 344 评论"
+        "signal": "896 分 · 375 评论"
       },
       {
         "id": "cn-it-04818983a3473cb9",
@@ -77,15 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241901",
+        "id": "v2ex-1241918",
         "category": "dev",
-        "title": "论 AI 恐惧症——对莱顿宣言的驳斥",
-        "url": "https://www.v2ex.com/t/1241901",
+        "title": "Fable 5.1 和 Astra 都画不出一个 SVG？",
+        "url": "https://www.v2ex.com/t/1241918",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T07:46:30.000Z",
-        "summary": "AI 越来越强，这是好事。原因我稍后讲。 当前却有一堆人杞人忧天，说什么 AI 会毁灭人类。甚至连有模有样的数学家，都着急调教，说什么 AI 在毁灭数学。 有几分滑稽。 我称之为火车恐惧症，这病二百年前就有人得过。 中华民族的优秀女性慈禧太后，是最知名的病友。为了缓解病痛，不得不引入了马拉火车的济世良方。 得了这种病呢，就会咿呀咿呀乱叫，慈禧当年对着唐胥铁路，叫的是「先王不安」「有伤禾稼」「龙脉」云云。 可能是时过境迁、音韵流变的缘故，或者是常年的学术涵养，使得叫声婉约了些…",
+        "publishedAt": "2026-09-14T08:32:42.000Z",
+        "summary": "两家模型换着来，烧了两周的额度了。 一个云纹，用 SVG 画，且能随机组合排列成图案。给模型两个参考图（如下图）。 结果两个模型出来的效果（如下图）… 看了两个模型的思考链，都是在穷举： 云纹从中间切成两个部分，然后用 svg 画很多图案，对照原图，找最接近的 程序化实现排列方式 人工用 svg 画出来，再排列也能做到。就不能都用模型搞定，有点意外。 也有模型能做这个事情，视觉效果不错，但随机性又太高。 其他规律纹样或者简单纹样（牡丹纹回纹什么的） Gemini 3.6 f…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-baidu-25427f6793e1b963",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "近日，罗永浩发文吐槽野人先生“难吃”。这次品牌该学西贝，还是“装死”？",
         "badge": "热搜",
-        "signal": "7,807,978 热度"
+        "signal": "7,809,787 热度"
       },
       {
         "id": "cisa-kev-cve-2026-42016",
@@ -109,10 +109,10 @@
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-hugging-face-075fed980e67c694",
+        "id": "ai-hugging-face-85052f9befba2c4e",
         "category": "ai",
-        "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
-        "url": "https://huggingface.co/blog/gradio-workflow-1111",
+        "title": "Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL",
+        "url": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs",
         "source": "Hugging Face",
         "publishedAt": "2026-09-10T00:00:00.000Z",
         "badge": "Hugging Face"
@@ -125,7 +125,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-10T04:44:32.000Z",
         "badge": "HN",
-        "signal": "190 分 · 34 评论"
+        "signal": "227 分 · 40 评论"
       },
       {
         "id": "cn-item-a01c1c0205eabbb1",
@@ -159,15 +159,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241873",
+        "id": "v2ex-1241905",
         "category": "dev",
-        "title": "最近让 AI 写一个大一点点的项目，才隔一个星期天，居然把之前实现的方法给忘光了。",
-        "url": "https://www.v2ex.com/t/1241873",
+        "title": "jetbrains 全家桶续费没有折扣码了吗",
+        "url": "https://www.v2ex.com/t/1241905",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T06:35:55.000Z",
-        "summary": "关于 AI 的接受程序，我是属于让 AI 写单个模块或单个类，不会直接让整个 AI 从头到尾全部写到结束的，我对每个模块与类的程序，都用眼睛看过，确认过。 但是，当项目比较大，功能比较多的时候，会发现和以前 ctrl+C+V 这种方式不同，会对不久前才让 AI 写过的模块忘得很彻底。（彻底！） 比如今天刚遇到的事，工具箱这个模块里面有 10 个小工具，其只 1 个是计算某个部门的利息的功能，是上个星期写的。 当财务部的人问我“出库”这里有没有去加 XX 然后并进去计算的时候…",
+        "publishedAt": "2026-09-14T08:04:39.000Z",
+        "summary": "试了好多个折扣码都不行，纠结要不要继续上供了，一般也只用 idea,datagrip,pycharm",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "7 回复"
       },
       {
         "id": "cn-it-5aca90ec75d435e2",
@@ -207,17 +207,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-13T21:47:04.000Z",
         "badge": "HN",
-        "signal": "222 分 · 105 评论"
+        "signal": "245 分 · 118 评论"
       },
       {
-        "id": "cn-baidu-fd725a46b73619a1",
+        "id": "cn-baidu-2b1c1e0866d1eed2",
         "category": "cn",
-        "title": "五指山停课停工停业停产停运",
-        "url": "https://www.baidu.com/s?wd=%E4%BA%94%E6%8C%87%E5%B1%B1%E5%81%9C%E8%AF%BE%E5%81%9C%E5%B7%A5%E5%81%9C%E4%B8%9A%E5%81%9C%E4%BA%A7%E5%81%9C%E8%BF%90&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "烧烤店店主回应被同一人举报116次",
+        "url": "https://www.baidu.com/s?wd=%E7%83%A7%E7%83%A4%E5%BA%97%E5%BA%97%E4%B8%BB%E5%9B%9E%E5%BA%94%E8%A2%AB%E5%90%8C%E4%B8%80%E4%BA%BA%E4%B8%BE%E6%8A%A5116%E6%AC%A1&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "受持续暴雨影响，海南五指山河水暴涨，全市实施 “五停一关”，即停课、停工、停业、停产、停运并关停旅游景区。截至9月14日7时，近72小时当地平均降雨量达486.5毫米，部分乡镇超500毫米，预报后续仍有强降雨。",
+        "summary": "日前，山东菏泽一烧烤店主举报“考古文物失踪”之后，店铺遭一人投诉116次，两个月内遭5个部门查了15次，店主怀疑遭打击报复。9月14日，烧烤店店主回应：狗肉菜品被举报后下架，暂无恢复营业打算。",
         "badge": "热搜",
-        "signal": "7,713,235 热度"
+        "signal": "7,713,537 热度"
       },
       {
         "id": "github-advisory-ghsa-65h7-9wrw-629c",
@@ -231,24 +231,24 @@
         "signal": "HIGH · CVSS 8.5"
       },
       {
-        "id": "ai-hugging-face-46660cb2ea4362f6",
+        "id": "ai-hugging-face-075fed980e67c694",
         "category": "ai",
-        "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
-        "url": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
+        "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
+        "url": "https://huggingface.co/blog/gradio-workflow-1111",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-09T15:36:24.000Z",
+        "publishedAt": "2026-09-10T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241853",
+        "id": "v2ex-1241901",
         "category": "dev",
-        "title": "第一次做出海产品，上线 3 个多月几乎没流量，有点迷茫了。",
-        "url": "https://www.v2ex.com/t/1241853",
+        "title": "论 AI 恐惧症——对莱顿宣言的驳斥",
+        "url": "https://www.v2ex.com/t/1241901",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T05:56:45.000Z",
-        "summary": "第一次尝试做出海产品，自己折腾了一个 AI 股票研究工具，已经上线 3 个多月了。 产品本身一直在迭代，功能也加了不少，但最大的问题是：几乎没什么流量。 刚开始的时候想得比较简单，觉得把产品做好、做点 SEO 、发发 X 、提交一些 AI 导航站，慢慢应该就会有人进来。 结果做了几个月以后发现，事情完全不是这么回事。 SEO 收录很慢，X 基本没什么自然流量，Reddit / Quora 也试过一些，但目前都没有找到特别有效的获客方式。 现在有点卡在一个很尴尬的阶段： 产品…",
+        "publishedAt": "2026-09-14T07:46:30.000Z",
+        "summary": "AI 越来越强，这是好事。原因我稍后讲。 当前却有一堆人杞人忧天，说什么 AI 会毁灭人类。甚至连有模有样的数学家，都着急跳脚，说什么 AI 在毁灭数学。 有几分滑稽。 我称之为火车恐惧症，这病二百年前就有人得过。 中华民族的优秀女性慈禧太后，是最知名的病友。为了缓解病痛，不得不引入了马拉火车的济世良方。 得了这种病呢，就会咿呀咿呀乱叫，慈禧当年对着唐胥铁路，叫的是「先王不安」「有伤禾稼」「龙脉」云云。 可能是时过境迁、音韵流变的缘故，或者是常年的学术涵养，使得叫声婉约了些…",
         "badge": "程序员",
-        "signal": "34 回复"
+        "signal": "21 回复"
       },
       {
         "id": "cn-item-8132614b50dcb6c0",
@@ -282,14 +282,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49692765",
+        "id": "hn-49690554",
         "category": "dev",
-        "title": "Of Gods and Languages: On \"When God Spoke Greek\" (2013)",
-        "url": "https://lareviewofbooks.org/article/of-gods-and-languages-on-when-god-spoke-greek/",
+        "title": "The case against JPEG XL",
+        "url": "https://giannirosato.com/blog/post/case-against-jxl/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T06:34:06.000Z",
+        "publishedAt": "2026-09-14T01:02:37.000Z",
         "badge": "HN",
-        "signal": "17 分 · 5 评论"
+        "signal": "150 分 · 201 评论"
       },
       {
         "id": "cn-it-6fff0ec6e07b2064",
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241839",
+        "id": "v2ex-1241873",
         "category": "dev",
-        "title": "《Codex App Launcher： IDEA 和 Codex App 无缝联动》",
-        "url": "https://www.v2ex.com/t/1241839",
+        "title": "最近让 AI 写一个大一点点的项目，才隔一个星期天，居然把之前实现的方法给忘光了。",
+        "url": "https://www.v2ex.com/t/1241873",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T04:58:19.000Z",
-        "summary": "在 IDEA 写代码想问 Codex ，还得手动复制路径、数行号？这个插件一键搞定： 核心功能 点一下工具栏 Codex 图标，直接在 Codex App 打开当前项目 选中代码发送，自动带上 文件路径#L10-12 精准引用 引用只追加到输入框，不自动发送，随时补充描述 支持：Windows / macOS （引用发送目前仅 Windows ） 安装：IDEA 插件市场搜 \"Codex App Launcher\" 即可，无需重启 IDE 插件市场： https://plu…",
+        "publishedAt": "2026-09-14T06:35:55.000Z",
+        "summary": "关于 AI 的接受程序，我是属于让 AI 写单个模块或单个类，不会直接让整个 AI 从头到尾全部写到结束的，我对每个模块与类的程序，都用眼睛看过，确认过。 但是，当项目比较大，功能比较多的时候，会发现和以前 ctrl+C+V 这种方式不同，会对不久前才让 AI 写过的模块忘得很彻底。（彻底！） 比如今天刚遇到的事，工具箱这个模块里面有 10 个小工具，其只 1 个是计算某个部门的利息的功能，是上个星期写的。 当财务部的人问我“出库”这里有没有去加 XX 然后并进去计算的时候…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-baidu-b86cd8024420f647",
+        "id": "cn-baidu-e62763b480a04fdb",
         "category": "cn",
-        "title": "词元出海怎么实现？服贸会上有答案",
-        "url": "https://www.baidu.com/s?wd=%E8%AF%8D%E5%85%83%E5%87%BA%E6%B5%B7%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%EF%BC%9F%E6%9C%8D%E8%B4%B8%E4%BC%9A%E4%B8%8A%E6%9C%89%E7%AD%94%E6%A1%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“中国服务”给世界带来什么",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%AD%E5%9B%BD%E6%9C%8D%E5%8A%A1%E2%80%9D%E7%BB%99%E4%B8%96%E7%95%8C%E5%B8%A6%E6%9D%A5%E4%BB%80%E4%B9%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "在2026年服贸会上，“词元出海”出海新模式受关注。全产业链协同，为行业带来了大模型技术、算力成本、应用场景、数据传输保障等多方面优势，让词元出海这门生意“水到渠成”。",
+        "summary": "根据中国政府发布的《关于推进服务业扩能提质的意见》，到2030年中国服务业总规模将迈上100万亿元台阶，培育更多“中国服务”品牌。这将激发全球贸易新活力，让世界共享更多红利。正如联合国贸发会议国际贸易和商品司司长德拉·莫拉所说，中国正在为其他国家、为其他企业创造商业机遇。",
         "badge": "热搜",
-        "signal": "7,617,891 热度"
+        "signal": "7,616,773 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86060",
@@ -354,23 +354,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-13"
       },
       {
-        "id": "ai-hugging-face-5cbcf08e288841ac",
+        "id": "ai-hugging-face-46660cb2ea4362f6",
         "category": "ai",
-        "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+        "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+        "url": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-08T14:23:07.000Z",
+        "publishedAt": "2026-09-09T15:36:24.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49690554",
+        "id": "hn-49690174",
         "category": "dev",
-        "title": "The case against JPEG XL",
-        "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+        "title": "Apple's Dimensional Drawings",
+        "url": "https://developer.apple.com/accessories/dimensional-drawings/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T01:02:37.000Z",
+        "publishedAt": "2026-09-14T00:11:21.000Z",
         "badge": "HN",
-        "signal": "124 分 · 169 评论"
+        "signal": "171 分 · 66 评论"
       },
       {
         "id": "cn-item-e46fcd71cb54de64",
@@ -404,15 +404,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241796",
+        "id": "v2ex-1241853",
         "category": "dev",
-        "title": "大家每日的 token 用量大概在多少",
-        "url": "https://www.v2ex.com/t/1241796",
+        "title": "第一次做出海产品，上线 3 个多月几乎没流量，有点迷茫了。",
+        "url": "https://www.v2ex.com/t/1241853",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T02:49:53.000Z",
-        "summary": "看了下 GPT 官网设置页的统计，主力是 gpt 的 codex cli ，大约就是闲时单日 1 亿多，最高单日 14 亿。 所以想起之前有个给学校捐赠几亿 token 的新闻，还是有点冷幽默的。",
+        "publishedAt": "2026-09-14T05:56:45.000Z",
+        "summary": "第一次尝试做出海产品，自己折腾了一个 AI 股票研究工具，已经上线 3 个多月了。 产品本身一直在迭代，功能也加了不少，但最大的问题是：几乎没什么流量。 刚开始的时候想得比较简单，觉得把产品做好、做点 SEO 、发发 X 、提交一些 AI 导航站，慢慢应该就会有人进来。 结果做了几个月以后发现，事情完全不是这么回事。 SEO 收录很慢，X 基本没什么自然流量，Reddit / Quora 也试过一些，但目前都没有找到特别有效的获客方式。 现在有点卡在一个很尴尬的阶段： 产品…",
         "badge": "程序员",
-        "signal": "35 回复"
+        "signal": "44 回复"
       },
       {
         "id": "cn-it-710a0e02d3aeeaea",
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49690174",
+        "id": "hn-49693226",
         "category": "dev",
-        "title": "Apple's Dimensional Drawings",
-        "url": "https://developer.apple.com/accessories/dimensional-drawings/",
+        "title": "Show HN: 1080p is 920px tall – 1k real browser viewports",
+        "url": "https://screensize.net/reports/viewport-stats",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T00:11:21.000Z",
+        "publishedAt": "2026-09-14T07:35:00.000Z",
         "badge": "HN",
-        "signal": "153 分 · 53 评论"
+        "signal": "8 分 · 4 评论"
       },
       {
-        "id": "cn-baidu-914485dc26a1247d",
+        "id": "cn-baidu-6382f948ce498290",
         "category": "cn",
-        "title": "南昌地铁 逃票",
-        "url": "https://www.baidu.com/s?wd=%E5%8D%97%E6%98%8C%E5%9C%B0%E9%93%81+%E9%80%83%E7%A5%A8&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "终于不再是“我在xx很想你”",
+        "url": "https://www.baidu.com/s?wd=%E7%BB%88%E4%BA%8E%E4%B8%8D%E5%86%8D%E6%98%AF%E2%80%9C%E6%88%91%E5%9C%A8xx%E5%BE%88%E6%83%B3%E4%BD%A0%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月14日上午，南昌地铁执法支队就网传“多男女趴地钻闸机逃票”视频回应，已将线索转交运营方核查，将调取监控精准锁定违规人员依法处置。此前，南昌地铁站内多名乘客钻闸逃票的视频引发关注。按规定，违规逃票者一经查实最高面临42元罚款。",
+        "summary": "近日，盘龙古道尽头标语“今日走过了人生所有的弯路，从此人生尽是坦途”在社交平台爆火。该标语因契合古道超600个弯道的实际体验而抚慰人心。反观各地泛滥的 “我在xx很想你” 路牌与复刻景观，浪漫已经变成流于形式的套路。",
         "badge": "热搜",
-        "signal": "7,520,594 热度"
+        "signal": "7,523,886 热度"
       },
       {
         "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
@@ -476,24 +476,24 @@
         "signal": "HIGH · CVSS 8.1"
       },
       {
-        "id": "ai-hugging-face-fffbcba03b0b217e",
+        "id": "ai-hugging-face-5cbcf08e288841ac",
         "category": "ai",
-        "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
-        "url": "https://huggingface.co/blog/Hcompany/neomme",
+        "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-03T13:13:48.000Z",
+        "publishedAt": "2026-09-08T14:23:07.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241790",
+        "id": "v2ex-1241839",
         "category": "dev",
-        "title": "从互联网+，物联网+，区块链+到 AI+",
-        "url": "https://www.v2ex.com/t/1241790",
+        "title": "《Codex App Launcher： IDEA 和 Codex App 无缝联动》",
+        "url": "https://www.v2ex.com/t/1241839",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T02:42:17.000Z",
-        "summary": "免责声明 从业这么些年，经过了多轮技术变革浪潮，稍微聊两句 这些年一直在做某垂类软件，一路经历了互联网+、物联网+区块链+到 AI+ 每个浪头都去追逐了，有些一地鸡毛，有些留下点成果 注意，接下来的一些讨论仅从商业价值本身出发，不以技术能力为体现。 首先，商业公司为什么要追逐这些热点词？ 从商业层面讲，无论是拉融资、抬股价，还是为了提高流量，本质上都是想借这些热点，拿到原本拿不到的资源，或者让原来的生意更好做一点。 这个事情不难理解。商业公司不是技术研究机构，没有义务等一项…",
+        "publishedAt": "2026-09-14T04:58:19.000Z",
+        "summary": "在 IDEA 写代码想问 Codex ，还得手动复制路径、数行号？这个插件一键搞定： 核心功能 点一下工具栏 Codex 图标，直接在 Codex App 打开当前项目 选中代码发送，自动带上 文件路径#L10-12 精准引用 引用只追加到输入框，不自动发送，随时补充描述 支持：Windows / macOS （引用发送目前仅 Windows ） 安装：IDEA 插件市场搜 \"Codex App Launcher\" 即可，无需重启 IDE 插件市场： https://plu…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 30562,
+        "stars": 30702,
         "starsToday": 868
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 5469,
+        "stars": 5544,
         "starsToday": 191
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 32548,
+        "stars": 32658,
         "starsToday": 2680
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/tech-leads-club/agent-skills",
         "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
         "language": "TypeScript",
-        "stars": 5826,
+        "stars": 5848,
         "starsToday": 265
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/melgarafael/DeskcommCRM",
         "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "language": "TypeScript",
-        "stars": 2363,
+        "stars": 2383,
         "starsToday": 432
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/calesthio/OpenMontage",
         "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "language": "Python",
-        "stars": 58790,
+        "stars": 58847,
         "starsToday": 380
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "language": "JavaScript",
-        "stars": 66327,
+        "stars": 66368,
         "starsToday": 706
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/vxcontrol/pentagi",
         "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
         "language": "Go",
-        "stars": 24220,
+        "stars": 24263,
         "starsToday": 590
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/multimodal-art-projection/YuE",
         "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "language": "Python",
-        "stars": 7966,
+        "stars": 7989,
         "starsToday": 487
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/yuliskov/SmartTube",
         "description": "Browse media content with your own rules on Android TV",
         "language": "Java",
-        "stars": 33546,
+        "stars": 33564,
         "starsToday": 233
       }
     ],
-    "updatedAt": "2026-09-14T07:54:08.897Z"
+    "updatedAt": "2026-09-14T08:59:51.414Z"
   }
 }

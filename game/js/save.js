@@ -1,17 +1,18 @@
-import { validateDebrief } from './debrief.js?v=0.17.0';
-import { validateAffairs } from './affairs.js?v=0.17.0';
-import { validateStrategy } from './strategy.js?v=0.17.0';
-import { validateCommands } from './commands.js?v=0.17.0';
-import { validateFrontier, POSTS } from './frontier.js?v=0.17.0';
-import { validateDevelopment } from './development.js?v=0.17.0';
-import { validateCampaign, validRotationContext } from './rotations.js?v=0.17.0';
-import { validateQualities } from './quality.js?v=0.17.0';
-import { newGame } from './core.js?v=0.17.0';
-import { hasOwn, idPattern, requireRule } from './utils.js?v=0.17.0';
-import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.17.0';
-import { validateGrowth } from './growth.js?v=0.17.0';
-import { validateGrowthBattle } from './growth-save.js?v=0.17.0';
-import { validateCamp, RAIDS } from './camp.js?v=0.17.0';
+import { validEliteContext } from './elites.js?v=0.20.0';
+import { validateDebrief } from './debrief.js?v=0.20.0';
+import { validateAffairs } from './affairs.js?v=0.20.0';
+import { validateStrategy } from './strategy.js?v=0.20.0';
+import { validateCommands } from './commands.js?v=0.20.0';
+import { validateFrontier, POSTS } from './frontier.js?v=0.20.0';
+import { validateDevelopment } from './development.js?v=0.20.0';
+import { validateCampaign, validRotationContext } from './rotations.js?v=0.20.0';
+import { validateQualities } from './quality.js?v=0.20.0';
+import { newGame } from './core.js?v=0.20.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.20.0';
+import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.20.0';
+import { validateGrowth } from './growth.js?v=0.20.0';
+import { validateGrowthBattle } from './growth-save.js?v=0.20.0';
+import { validateCamp, RAIDS } from './camp.js?v=0.20.0';
 export const SAVE_KEY='baize_shuihu_save', BACKUP_KEY=SAVE_KEY+'_backup';
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 function object(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}
@@ -57,10 +58,10 @@ export function validateSave(s,data) {
     check(r.tokens===(r.kind==='clue'?2:r.kind==='duplicate'?3:0)&&r.merit===(r.kind==='duplicate'?15:0)&&(!r.inTeam||r.kind==='joined'),'招贤所得');
   }
   validateCommands(s,check);validateStrategy(s,check);validateAffairs(s,check);
-  const context=c=>check(c&&(c.type==='frontier'?!!POSTS[c.id]:c.type==='rotation'?validRotationContext(c):c.type==='dungeon'?!!data.by.dungeons[c.id]:c.type==='camp'?!!s.camp&&hasOwn(RAIDS,c.id):c.type==='event'?!!data.by.events[c.id]:c.type==='story'&&(c.id==='huangni'||!!data.by.stories[c.id])),'交战来源');
+  const context=c=>check(c&&(c.type==='elite'?validEliteContext(c):c.type==='frontier'?!!POSTS[c.id]:c.type==='rotation'?validRotationContext(c):c.type==='dungeon'?!!data.by.dungeons[c.id]:c.type==='camp'?!!s.camp&&hasOwn(RAIDS,c.id):c.type==='event'?!!data.by.events[c.id]:c.type==='story'&&(c.id==='huangni'||!!data.by.stories[c.id])),'交战来源');
   const logs=a=>check(Array.isArray(a)&&a.length<=150&&a.every(t=>typeof t==='string'&&t.length<2000),'战报');
   check(!(s.battle&&s.scheme)&&!(s.event&&(s.battle||s.scheme)),'互斥事件');
-  if(s.battle){const b=s.battle;check(b.martial===undefined||[1,2].includes(b.martial),'兵种战斗规则');const live=b.mode==='realtime';
+  if(s.battle){const b=s.battle;if(b.context.type==='elite')check(!!s.camp&&!b.guest&&b.martial===2&&(s.stats['elite_'+b.context.id]||0)>0,'精英战局');check(b.martial===undefined||[1,2].includes(b.martial),'兵种战斗规则');const live=b.mode==='realtime';
     validateGrowthBattle(b,data,check);
     check(live?(b.round===undefined&&integer(b.elapsed,0,BATTLE_LIMIT_MS)&&integer(b.itemReadyAt,0,BATTLE_LIMIT_MS+10000)):(b.mode===undefined&&integer(b.round,1,100)&&b.elapsed===undefined),'战斗时钟');
     check(Array.isArray(b.team)&&b.team.length>0&&b.team.length<=3&&Array.isArray(b.enemy)&&b.enemy.length>0&&b.enemy.length<=5&&[null,'victory','defeat','retreat'].includes(b.outcome)&&typeof b.guest==='boolean','战局');context(b.context);logs(b.log);
