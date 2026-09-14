@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-14T16:34:17.696Z",
+  "generatedAt": "2026-09-14T19:22:44.083Z",
   "intelligence": {
-    "updatedAt": "2026-09-14T16:34:17.696Z",
+    "updatedAt": "2026-09-14T19:22:44.083Z",
     "items": [
       {
         "id": "cn-item-346fb72f2039a4eb",
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-openai-968c32634dc2a1cb",
+        "id": "ai-openai-7f82d995c515e5ba",
         "category": "ai",
-        "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-        "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+        "title": "How Fyxer built an AI executive assistant people trust",
+        "url": "https://openai.com/index/fyxer",
         "source": "OpenAI",
-        "publishedAt": "2026-09-14T00:00:00.000Z",
-        "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+        "publishedAt": "2026-09-14T12:00:00.000Z",
+        "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49699384",
+        "id": "hn-49700477",
         "category": "dev",
-        "title": "For AI leaders Doom is a form of hype",
-        "url": "https://erkansaka.net/2026/09/10/ai-doom-rhetoric-safety-hype/",
+        "title": "Pion, an agent designed to run any company autonomously",
+        "url": "https://andonlabs.com/blog/why-we-built-pion",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T16:15:05.000Z",
+        "publishedAt": "2026-09-14T17:16:06.000Z",
         "badge": "HN",
-        "signal": "48 分 · 12 评论"
+        "signal": "132 分 · 127 评论"
       },
       {
-        "id": "cn-it-c3afa3043547cf3b",
+        "id": "cn-it-cbd0f8c78fea93b3",
         "category": "cn",
-        "title": "vivo WATCH 6 智能手表亮相：蓝宝石玻璃表镜、钛合金表体，9 月 21 日发布",
-        "url": "https://www.ithome.com/1/002/320.htm",
+        "title": "苹果 watchOS 27.0 正式版发布",
+        "url": "https://www.ithome.com/1/002/332.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T15:35:16.000Z",
-        "summary": "IT之家 9 月 14 日消息，vivo X500 系列及智能终端新品发布会将于 9 月 21 日 19:00 举行，vivo WATCH 6 智能手表今日亮相。据介绍，这款新品采用高亮精工雕刻， 配备蓝宝石玻璃表镜、TC4 航天级钛合金表体 。 根据规划，vivo X500 系列手机将于 9 月 21 日 19:00 正式发布，vivo WATCH 6 智能手表和 Buds Clip 耳夹耳机首发。 IT之家注意到，vivo WATCH 6 智能手表预装 BlueOS 系…",
+        "publishedAt": "2026-09-14T18:26:12.000Z",
+        "summary": "IT之家 9 月 15 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.0 更新（内部版本号：24R364）。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 watchOS 27 发布历史： 2026-09-10：watchOS 27.0 RC (24R363) 2026-09-01：watchOS 27.0 B…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-325j-mg25-8q58",
+        "id": "github-advisory-ghsa-rrxg-g2pf-6hh4",
         "category": "security",
-        "title": "yayson: Prototype pollution in Store/LegacyStore deserialization",
-        "url": "https://github.com/advisories/GHSA-325j-mg25-8q58",
+        "title": "ESPHome Device Builder: Renamed auth env vars silently disable dashboard authentication on upgrade",
+        "url": "https://github.com/advisories/GHSA-rrxg-g2pf-6hh4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:11:38.000Z",
-        "summary": "# Summary `Store`/`LegacyStore` key internal lookup tables by the `type`, `id`, and relationship names from a JSON:API document. Because these were plain objects, a document with `type: \"__proto__\"` writes onto `Object.prototype`, pollutin…",
-        "badge": "CVE-2026-61534",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-14T18:08:57.000Z",
+        "summary": "## Summary The dashboard reads its authentication credentials from `$ESPHOME_USERNAME` and `$ESPHOME_PASSWORD`. Earlier versions, and the legacy `esphome` dashboard, read the bare `$USERNAME` and `$PASSWORD` instead. When the env vars were…",
+        "badge": "CVE-2026-59178",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -77,15 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241980",
+        "id": "v2ex-1241998",
         "category": "dev",
-        "title": "2026 年，小小团队做了一款 mac 的场景化动态壁纸软件——码镜，欢迎大家使用。",
-        "url": "https://www.v2ex.com/t/1241980",
+        "title": "open minis",
+        "url": "https://www.v2ex.com/t/1241998",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T14:46:37.000Z",
-        "summary": "当前已上架 appstore ，请搜索“码镜”。 appstore 搜索：“码镜”“码镜”“码镜”“码镜”“码镜”“码镜”😄 近期一直在根据各位用户提出的意见再进行更新。 码镜与其他壁纸软件不同，主打场景化壁纸。同时还附带编辑器。功能丰富，支持播放多种类型壁纸，用户可以上传分享壁纸。 当前送出 5 个激活码。跳转链接即可激活。 当前版本 3.1.1 H6X7T7FE7JAM, https://apps.apple.com/redeem?code=H6X7T7FE7JAM H…",
+        "publishedAt": "2026-09-14T16:39:47.000Z",
+        "summary": "这个东西在苹果手机上有什么用法和玩法请教",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-9ef90b5168390939",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "9月14日晚，广汽集团发布关于筹划重大资产重组事项的停牌公告。公司当日与一汽股份签署意向协议，拟以发行股份的方式收购一汽股份所持某整车合资公司部分股权，同时募集配套资金。据初步测算，本次交易完成后，一汽股份将成为广汽集团第二大股东，具备战略影响力。",
         "badge": "热搜",
-        "signal": "7,809,064 热度"
+        "signal": "7,809,419 热度"
       },
       {
         "id": "cisa-kev-cve-2026-42016",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49697014",
+        "id": "hn-49699158",
         "category": "dev",
-        "title": "Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama",
-        "url": "https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/",
+        "title": "Distributed Systems Classics (2017)",
+        "url": "https://nvartolomei.com/dist-sys-classics/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T13:59:09.000Z",
+        "publishedAt": "2026-09-14T16:02:01.000Z",
         "badge": "HN",
-        "signal": "63 分 · 27 评论"
+        "signal": "126 分 · 26 评论"
       },
       {
         "id": "cn-item-b104cbe3bcc27fdc",
@@ -138,45 +138,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-rqx4-3f6q-3x2v",
+        "id": "github-advisory-ghsa-325j-mg25-8q58",
         "category": "security",
-        "title": "@Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
-        "url": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
+        "title": "yayson: Prototype pollution in Store/LegacyStore deserialization",
+        "url": "https://github.com/advisories/GHSA-325j-mg25-8q58",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:04:42.000Z",
-        "summary": "## Summary Mockoon's admin API (`commons-server/src/libs/server/admin-api.ts`) is mounted on the same Express listener as the user-defined mock routes, **enabled by default** in every shipped runtime (commons-server, CLI, serverless), serv…",
-        "badge": "CVE-2026-59148",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-11T22:11:38.000Z",
+        "summary": "# Summary `Store`/`LegacyStore` key internal lookup tables by the `type`, `id`, and relationship names from a JSON:API document. Because these were plain objects, a document with `type: \"__proto__\"` writes onto `Object.prototype`, pollutin…",
+        "badge": "CVE-2026-61534",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
-        "id": "ai-openai-4aeb82da9975e2f5",
+        "id": "ai-openai-968c32634dc2a1cb",
         "category": "ai",
-        "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
-        "url": "https://openai.com/index/cognition-devin-testing-with-astra",
+        "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+        "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-11T16:00:00.000Z",
-        "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
+        "publishedAt": "2026-09-14T00:00:00.000Z",
+        "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241973",
+        "id": "v2ex-1241980",
         "category": "dev",
-        "title": "GPT-6 是不是最近又降智了",
-        "url": "https://www.v2ex.com/t/1241973",
+        "title": "2026 年，小小团队做了一款 mac 的场景化动态壁纸软件——码镜，欢迎大家使用。",
+        "url": "https://www.v2ex.com/t/1241980",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T13:59:51.000Z",
-        "summary": "第一天用，体验还挺惊艳的，这两天上到生产环境，又开始发狂了。 官方 20x Pro 账号，ChatGPT Desktop 客户端，GPT-6 Astra High 。 我让他给一份番茄炒蛋的食谱，他给得很好， 然后我说「你就按照这个做」，他直接拿起地沟油往里面倒。 我说「你别用地沟油啊」，他说不好意思，然后直接把地沟油连着番茄和鸡蛋全扔了，搜了一份土豆炒肉丝的食谱，然后停下来不做了，要我「确认后再继续」。 我说「你倒是继续做啊」，他又说不好意思，最后给我端出来一盘用地沟油的…",
+        "publishedAt": "2026-09-14T14:46:37.000Z",
+        "summary": "当前已上架 appstore ，请搜索“码镜”。 appstore 搜索：“码镜”“码镜”“码镜”“码镜”“码镜”“码镜”😄 近期一直在根据各位用户提出的意见再进行更新。 码镜与其他壁纸软件不同，主打场景化壁纸。同时还附带编辑器。功能丰富，支持播放多种类型壁纸，用户可以上传分享壁纸。 当前送出 5 个激活码。跳转链接即可激活。 当前版本 3.1.1 H6X7T7FE7JAM, https://apps.apple.com/redeem?code=H6X7T7FE7JAM H…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "11 回复"
       },
       {
-        "id": "cn-it-268e06d919d9bf91",
+        "id": "cn-it-82edefaf548a0b68",
         "category": "cn",
-        "title": "英伟达：Perplexity 本地智能体 Portable Computer 已向 Windows RTX PC 开放",
-        "url": "https://www.ithome.com/1/002/315.htm",
+        "title": "苹果 visionOS 27.0 正式版发布",
+        "url": "https://www.ithome.com/1/002/331.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T15:06:42.000Z",
-        "summary": "IT之家 9 月 14 日消息，英伟达宣布，Perplexity 的本地智能体平台“Portable Computer”现已面向 Windows RTX PC 用户开放。 随着本地大模型能力持续增强，AI 智能体可以直接在个人电脑上处理更多任务，同时把敏感信息保留在本机设备内。 据介绍，Portable Computer 是智能体产品 Perplexity Computer 的本地版本，能够规划并执行多步骤任务。该产品依托英伟达 GPU 加速，借助本地模型分析数据、整合多份…",
+        "publishedAt": "2026-09-14T18:26:11.000Z",
+        "summary": "IT之家 9 月 15 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.0 更新（内部版本号：24M362）。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-09-10：visionOS 27.0 RC (24M362) 2026-09-01：visionOS 27.…",
         "badge": "IT之家"
       },
       {
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49699434",
+        "id": "hn-49699648",
         "category": "dev",
-        "title": "MIT creates method to force AI to comply with safety rules",
-        "url": "https://theframenews.org/en/hardflow-safety-critical-ai/",
+        "title": "Why don't machine learning research agents overfit?",
+        "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T16:18:17.000Z",
+        "publishedAt": "2026-09-14T16:32:23.000Z",
         "badge": "HN",
-        "signal": "10 分 · 6 评论"
+        "signal": "62 分 · 31 评论"
       },
       {
         "id": "cn-baidu-0c760c8a7174c283",
@@ -216,18 +216,18 @@
         "url": "https://www.baidu.com/s?wd=%E4%B8%80%E8%BD%A6%E4%BA%BA%E4%B9%B0%E9%94%99%E7%A5%A8+%E6%B8%B8%E5%AE%A2%E5%BB%BA%E8%AE%AE%E8%BD%A6%E7%AB%99%E6%94%B9%E5%90%8D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,712,521 热度"
+        "signal": "7,712,475 热度"
       },
       {
-        "id": "github-advisory-ghsa-65h7-9wrw-629c",
+        "id": "github-advisory-ghsa-rqx4-3f6q-3x2v",
         "category": "security",
-        "title": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
-        "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+        "title": "@Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
+        "url": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:02:04.000Z",
-        "summary": "## Summary The published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external `$ref` dereferencing, but the latest patched dependency `mcp-from-openapi` 2.3.0 still makes backend-origin request…",
-        "badge": "CVE-2026-59973",
-        "signal": "HIGH · CVSS 8.5"
+        "publishedAt": "2026-09-11T22:04:42.000Z",
+        "summary": "## Summary Mockoon's admin API (`commons-server/src/libs/server/admin-api.ts`) is mounted on the same Express listener as the user-defined mock routes, **enabled by default** in every shipped runtime (commons-server, CLI, serverless), serv…",
+        "badge": "CVE-2026-59148",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-hugging-face-075fed980e67c694",
@@ -239,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241963",
+        "id": "v2ex-1241973",
         "category": "dev",
-        "title": "GLM Coding Plan 新老 Pro 的额度差有多少？",
-        "url": "https://www.v2ex.com/t/1241963",
+        "title": "GPT-6 是不是最近又降智了",
+        "url": "https://www.v2ex.com/t/1241973",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T12:50:21.000Z",
-        "summary": "老的用 Prompt 额度计算，新的用积分计算。实际使用分别大概多少 token ？",
+        "publishedAt": "2026-09-14T13:59:51.000Z",
+        "summary": "第一天用，体验还挺惊艳的，这两天上到生产环境，又开始发狂了。 官方 20x Pro 账号，ChatGPT Desktop 客户端，GPT-6 Astra High 。 我让他给一份番茄炒蛋的食谱，他给得很好， 然后我说「你就按照这个做」，他直接拿起地沟油往里面倒。 我说「你别用地沟油啊」，他说不好意思，然后直接把地沟油连着番茄和鸡蛋全扔了，搜了一份土豆炒肉丝的食谱，然后停下来不做了，要我「确认后再继续」。 我说「你倒是继续做啊」，他又说不好意思，最后给我端出来一盘用地沟油的…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "9 回复"
       },
       {
         "id": "cn-item-e5c2bb961f5a0ab4",
@@ -271,45 +271,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-openai-46fcf5bb7b99520f",
+        "id": "ai-openai-4aeb82da9975e2f5",
         "category": "ai",
-        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+        "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+        "url": "https://openai.com/index/cognition-devin-testing-with-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-11T10:00:00.000Z",
-        "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
+        "publishedAt": "2026-09-11T16:00:00.000Z",
+        "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49698603",
+        "id": "hn-49700661",
         "category": "dev",
-        "title": "Foundation Model Engineering: From Theory to Production",
-        "url": "https://sungeuns.github.io/foundation-model-engineering/",
+        "title": "Steam Frame starts at $1059",
+        "url": "https://store.steampowered.com/hardware/steamframe",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T15:27:48.000Z",
+        "publishedAt": "2026-09-14T17:27:55.000Z",
         "badge": "HN",
-        "signal": "20 分 · 2 评论"
+        "signal": "209 分 · 107 评论"
       },
       {
-        "id": "cn-it-60145e25cbaf0572",
+        "id": "cn-it-974e27bc8a23c5f4",
         "category": "cn",
-        "title": "马斯克旗下 X 公司与 SpaceXAI 撤回对苹果的反垄断诉讼，针对 OpenAI 继续追责",
-        "url": "https://www.ithome.com/1/002/314.htm",
+        "title": "苹果 macOS 27.0 正式版发布",
+        "url": "https://www.ithome.com/1/002/330.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T15:05:59.000Z",
-        "summary": "IT之家 9 月 14 日消息，据路透社报道，埃隆 · 马斯克（Elon Musk）旗下的 X 公司与 SpaceXAI 于周一宣布，已在得克萨斯州联邦法院撤回针对苹果公司的诉讼。该诉讼此前指控苹果合谋非法垄断智能手机以及生成式 AI 聊天机器人市场。 在一份法庭文件中，X 公司与 SpaceXAI 申请撤回去年对苹果提起的这起诉讼。文件并未说明撤诉原因，也没有提及双方是否达成和解。 据IT之家了解，这起诉讼主张，苹果将 ChatGPT 独家集成到 iPhone 及其他苹果…",
+        "publishedAt": "2026-09-14T18:26:11.000Z",
+        "summary": "IT之家 9 月 15 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.0 更新（内部版本号：26A428）。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 macOS 27 发布历史： 2026-09-10：macOS 27.0 RC (26A428) 2026-09-01：macOS 27.0 Beta 8 (26A5425…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
+        "id": "github-advisory-ghsa-65h7-9wrw-629c",
         "category": "security",
-        "title": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
-        "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
+        "title": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+        "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:38:24.000Z",
-        "summary": "## SAML Tenant Binding Enables Cross-Tenant Account Takeover ### Summary Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant w…",
-        "badge": "CVE-2026-59151",
-        "signal": "CRITICAL · CVSS 9.6"
+        "publishedAt": "2026-09-11T22:02:04.000Z",
+        "summary": "## Summary The published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external `$ref` dereferencing, but the latest patched dependency `mcp-from-openapi` 2.3.0 still makes backend-origin request…",
+        "badge": "CVE-2026-59973",
+        "signal": "HIGH · CVSS 8.5"
       },
       {
         "id": "ai-google-deepmind-d721843382f3485e",
@@ -321,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241959",
+        "id": "v2ex-1241963",
         "category": "dev",
-        "title": "ADE 赛道感觉很拥挤，有没有什么好的建议，收集实际运用中的一些需求",
-        "url": "https://www.v2ex.com/t/1241959",
+        "title": "GLM Coding Plan 新老 Pro 的额度差有多少？",
+        "url": "https://www.v2ex.com/t/1241963",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T11:43:26.000Z",
-        "summary": "最近在逐步优化自己的本地 Agent 工具 Runner: https://github.com/yicheng47/runner 在做的过程中逐步了解到了 ADE 这个赛道，以及一些类似的产品。 e.g. tui: herdr, claude-squad desktop: cmux(native), orca(electron) 这里仅列举了几个比较 popular 的项目，感觉这个赛道目前非常拥挤，很难做出有差异化的产品，目前 runner 的方向想 focus 在多 …",
+        "publishedAt": "2026-09-14T12:50:21.000Z",
+        "summary": "老的用 Prompt 额度计算，新的用积分计算。实际使用分别大概多少 token ？",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-49baac07a6ea6089",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "9月14日上午，国务院新闻办公室举行“开局起步‘十五五’”系列主题新闻发布会，国家卫生健康委、国家中医药局、国家疾控局等部门负责人介绍推动健康中国建设取得决定性进展有关情况。未来5年，要从“有”向“优”转变，我国将加快完善优质高效整合型医疗卫生服务体系，让更多群众在家门口看得上病、看得好病。",
         "badge": "热搜",
-        "signal": "7,616,404 热度"
+        "signal": "7,615,875 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86060",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49699158",
+        "id": "hn-49698607",
         "category": "dev",
-        "title": "Distributed Systems Classics",
-        "url": "https://nvartolomei.com/dist-sys-classics/",
+        "title": "Principles for Fast Tokio Applications",
+        "url": "https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T16:02:01.000Z",
+        "publishedAt": "2026-09-14T15:27:56.000Z",
         "badge": "HN",
-        "signal": "10 分 · 0 评论"
+        "signal": "93 分 · 15 评论"
       },
       {
         "id": "cn-item-55ca2d9916aebcf0",
@@ -382,45 +382,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-2cg9-97gq-9mqp",
+        "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
         "category": "security",
-        "title": "Shopper: Missing authorization on product removal actions in CollectionProducts component",
-        "url": "https://github.com/advisories/GHSA-2cg9-97gq-9mqp",
+        "title": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
+        "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:31:26.000Z",
-        "summary": "## Title Missing authorization on product removal actions in CollectionProducts component ## Description A lack of authorization control was discovered on both the per-record delete action and the bulk delete action inside `packages/admin/…",
-        "badge": "CVE-2026-56825",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-11T21:38:24.000Z",
+        "summary": "## SAML Tenant Binding Enables Cross-Tenant Account Takeover ### Summary Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant w…",
+        "badge": "CVE-2026-59151",
+        "signal": "CRITICAL · CVSS 9.6"
       },
       {
-        "id": "ai-openai-39842fa0b34b37cb",
+        "id": "ai-openai-46fcf5bb7b99520f",
         "category": "ai",
-        "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
-        "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
         "source": "OpenAI",
-        "publishedAt": "2026-09-10T16:00:00.000Z",
-        "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
+        "publishedAt": "2026-09-11T10:00:00.000Z",
+        "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241952",
+        "id": "v2ex-1241959",
         "category": "dev",
-        "title": "连续肝了好几周， tauri 开发的轻量级数据库管理软件 DataZen v0.2.0 版本终于发布了",
-        "url": "https://www.v2ex.com/t/1241952",
+        "title": "ADE 赛道感觉很拥挤，有没有什么好的建议，收集实际运用中的一些需求",
+        "url": "https://www.v2ex.com/t/1241959",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T10:49:22.000Z",
-        "summary": "前言 之前在 V2EX 上发了两篇关于 DataZen 的帖子，尤其是上一篇发完之后有很多朋友到 github 上给了 star ，特别感谢大家的支持，同时也有很多朋友提出了宝贵的意见，让我意识到这个赛道的竞争到底有多激烈。重量级传统选手有 Navicat/DataGrip/DBeaver/TablePlus 等等，最近的 DBX 也很火功能也很强大。既然这个赛道竞争这么激烈，我为啥还要继续做 v0.2.0 版本呢，实事求是的说，一个是 vibe coding 极大的降低了…",
+        "publishedAt": "2026-09-14T11:43:26.000Z",
+        "summary": "最近在逐步优化自己的本地 Agent 工具 Runner: https://github.com/yicheng47/runner 在做的过程中逐步了解到了 ADE 这个赛道，以及一些类似的产品。 e.g. tui: herdr, claude-squad desktop: cmux(native), orca(electron) 这里仅列举了几个比较 popular 的项目，感觉这个赛道目前非常拥挤，很难做出有差异化的产品，目前 runner 的方向想 focus 在多 …",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-e1bd5ef78bef9357",
+        "id": "cn-it-7c7a656dfb008abc",
         "category": "cn",
-        "title": "当贝 X9 Max 投影仪亮相：支持 4800 CVIA 亮度、米家互联，9 月 16 日开售",
-        "url": "https://www.ithome.com/1/002/313.htm",
+        "title": "苹果 iOS/iPadOS 27.0 正式版发布",
+        "url": "https://www.ithome.com/1/002/329.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T15:05:26.000Z",
-        "summary": "IT之家 9 月 14 日消息，当贝 X9 Max 投影仪今日亮相，全平台预约已开启，9 月 16 日 10:00 正式开售。 据介绍，这款新品搭载新一代 QuaLas42 激光器，全新升级超维热管理架构 2.0， 支持 4800 CVIA｜5000 ISO 亮度 、杜比视界｜80000:1 动态对比度，垂直 ±135%、水平 ±50% 镜头位移，实现四向无损光学镜头位移。 该产品搭载 MT9681 旗舰芯平台，支持 VRR 可变刷新率、1ms 游戏低延迟、专属游戏定制功能…",
+        "publishedAt": "2026-09-14T18:26:10.000Z",
+        "summary": "IT之家 9 月 15 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.0 更新（内部版本号：24A437）。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 iOS/iPadOS 27 发布历史： 2026-09-01：iOS 27.0 Beta 8 (24A5430a) 2026-08-25：iOS …",
         "badge": "IT之家"
       },
       {
@@ -446,12 +446,12 @@
       {
         "id": "hn-49695876",
         "category": "dev",
-        "title": "What a time to be alive",
+        "title": "OpenAI bots knew about the RubyGems caching vulnerability",
         "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
         "source": "Hacker News",
         "publishedAt": "2026-09-14T12:40:57.000Z",
         "badge": "HN",
-        "signal": "111 分 · 142 评论"
+        "signal": "236 分 · 214 评论"
       },
       {
         "id": "cn-baidu-51a8f6b19e4410b7",
@@ -461,17 +461,17 @@
         "source": "百度热搜",
         "summary": "9月12日，赵雷北京鸟巢演唱会上，前排一名男观众突然向女友求婚，女方激动站起，导致后排齐声高喊“坐下”。这段现场视频被发到社交媒体后，此事冲上热搜。更有人表态：“喊坐下都算礼貌，要我就喊离婚。”",
         "badge": "热搜",
-        "signal": "7,520,449 热度"
+        "signal": "7,522,373 热度"
       },
       {
-        "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
+        "id": "github-advisory-ghsa-2cg9-97gq-9mqp",
         "category": "security",
-        "title": "Shopper: Unauthorized inventory stock manipulation via unlocked variant property in VariantStock component",
-        "url": "https://github.com/advisories/GHSA-g3f9-g5vj-p62f",
+        "title": "Shopper: Missing authorization on product removal actions in CollectionProducts component",
+        "url": "https://github.com/advisories/GHSA-2cg9-97gq-9mqp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:29:20.000Z",
-        "summary": "## Title Unauthorized inventory stock manipulation via unlocked variant property in VariantStock component ## Description A lack of authorization control was discovered in the `stockAction()` method in `packages/admin/src/Livewire/Componen…",
-        "badge": "CVE-2026-56829",
+        "publishedAt": "2026-09-11T21:31:26.000Z",
+        "summary": "## Title Missing authorization on product removal actions in CollectionProducts component ## Description A lack of authorization control was discovered on both the per-record delete action and the bulk delete action inside `packages/admin/…",
+        "badge": "CVE-2026-56825",
         "signal": "HIGH · CVSS 8.1"
       },
       {
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241943",
+        "id": "v2ex-1241952",
         "category": "dev",
-        "title": "ChatGPT Atlas 下线了， AI 浏览器这个方向不被看好吗？",
-        "url": "https://www.v2ex.com/t/1241943",
+        "title": "连续肝了好几周， tauri 开发的轻量级数据库管理软件 DataZen v0.2.0 版本终于发布了",
+        "url": "https://www.v2ex.com/t/1241952",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T09:58:17.000Z",
-        "summary": "OpenAI 的 ChatGPT Atlas 浏览器下线了。AI 浏览器这个方向是不是不被看好？",
+        "publishedAt": "2026-09-14T10:49:22.000Z",
+        "summary": "前言 之前在 V2EX 上发了两篇关于 DataZen 的帖子，尤其是上一篇发完之后有很多朋友到 github 上给了 star ，特别感谢大家的支持，同时也有很多朋友提出了宝贵的意见，让我意识到这个赛道的竞争到底有多激烈。重量级传统选手有 Navicat/DataGrip/DBeaver/TablePlus 等等，最近的 DBX 也很火功能也很强大。既然这个赛道竞争这么激烈，我为啥还要继续做 v0.2.0 版本呢，实事求是的说，一个是 vibe coding 极大的降低了…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "11 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 31506,
+        "stars": 31735,
         "starsToday": 2233
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 25043,
+        "stars": 25344,
         "starsToday": 1796
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/multimodal-art-projection/YuE",
         "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "language": "Python",
-        "stars": 8185,
+        "stars": 8251,
         "starsToday": 578
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 28675,
+        "stars": 28865,
         "starsToday": 2774
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/666ghj/MiroFish",
         "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
         "language": "Python",
-        "stars": 72973,
+        "stars": 73042,
         "starsToday": 524
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 81000,
+        "stars": 81088,
         "starsToday": 640
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "language": "JavaScript",
-        "stars": 66597,
+        "stars": 66670,
         "starsToday": 770
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/rlaope/oh-my-hermes",
         "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
         "language": "Python",
-        "stars": 1897,
+        "stars": 1939,
         "starsToday": 52
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/localsend/localsend",
         "description": "An open-source cross-platform alternative to AirDrop",
         "language": "Dart",
-        "stars": 91126,
+        "stars": 91205,
         "starsToday": 311
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/dani-garcia/vaultwarden",
         "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
         "language": "Rust",
-        "stars": 67456,
+        "stars": 67489,
         "starsToday": 110
       }
     ],
-    "updatedAt": "2026-09-14T16:34:17.696Z"
+    "updatedAt": "2026-09-14T19:22:44.083Z"
   }
 }
