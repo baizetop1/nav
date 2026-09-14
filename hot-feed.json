@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-14T19:22:44.083Z",
+  "generatedAt": "2026-09-14T23:08:32.273Z",
   "intelligence": {
-    "updatedAt": "2026-09-14T19:22:44.083Z",
+    "updatedAt": "2026-09-14T23:08:32.273Z",
     "items": [
       {
         "id": "cn-item-346fb72f2039a4eb",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-84869",
+        "id": "cisa-kev-cve-2026-76461",
         "category": "security",
-        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
+        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway SQL Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host conf…",
-        "badge": "CVE-2026-84869",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "publishedAt": "2026-09-14T00:00:00.000Z",
+        "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
+        "badge": "CVE-2026-76461",
+        "signal": "已遭利用 · 整改期限 2026-09-17"
       },
       {
         "id": "ai-openai-7f82d995c515e5ba",
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-14T17:16:06.000Z",
         "badge": "HN",
-        "signal": "132 分 · 127 评论"
+        "signal": "237 分 · 248 评论"
       },
       {
-        "id": "cn-it-cbd0f8c78fea93b3",
+        "id": "cn-it-79bd249455dd8010",
         "category": "cn",
-        "title": "苹果 watchOS 27.0 正式版发布",
-        "url": "https://www.ithome.com/1/002/332.htm",
+        "title": "苹果 iOS 27 家庭 AI 功能强制捆绑 2TB 及以上 iCloud+ 套餐：单摄像头月费 9.99 美元、五摄像头 59.99 美元，引 iPhone 用户不满",
+        "url": "https://www.ithome.com/1/002/348.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T18:26:12.000Z",
-        "summary": "IT之家 9 月 15 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.0 更新（内部版本号：24R364）。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 watchOS 27 发布历史： 2026-09-10：watchOS 27.0 RC (24R363) 2026-09-01：watchOS 27.0 B…",
+        "publishedAt": "2026-09-14T23:06:29.000Z",
+        "summary": "IT之家 9 月 15 日消息，据 MacRumors 今日报道，苹果要求用户至少订阅每月 9.99 美元 （现汇率约合 67.1 元人民币） 的 2TB iCloud+ 套餐，才能将 iOS 27 中“Apple Intelligence Home”功能与 HomeKit 摄像头搭配使用，这使得 iPhone 用户颇为不满。 该功能基于 Apple Intelligence，可识别画面中的人物、动物、车辆、包裹及其他运动，并生成文字描述摘要。 对于苹果套餐，6TB iCl…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-rrxg-g2pf-6hh4",
+        "id": "github-advisory-ghsa-vrh8-c9cm-wh8v",
         "category": "security",
-        "title": "ESPHome Device Builder: Renamed auth env vars silently disable dashboard authentication on upgrade",
-        "url": "https://github.com/advisories/GHSA-rrxg-g2pf-6hh4",
+        "title": "ZITADEL: Unauthorized Token Privilege Escalation in OAuth2 Token Exchange",
+        "url": "https://github.com/advisories/GHSA-vrh8-c9cm-wh8v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-14T18:08:57.000Z",
-        "summary": "## Summary The dashboard reads its authentication credentials from `$ESPHOME_USERNAME` and `$ESPHOME_PASSWORD`. Earlier versions, and the legacy `esphome` dashboard, read the bare `$USERNAME` and `$PASSWORD` instead. When the env vars were…",
-        "badge": "CVE-2026-59178",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-09-14T21:28:23.000Z",
+        "summary": "### Summary A vulnerability in ZITADEL’s OAuth2 Token Exchange endpoint allows an authenticated user or client to exchange a low-privilege access token for a token with elevated permissions at a completely different application. This bypas…",
+        "badge": "CVE-2026-56668",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -95,18 +95,18 @@
         "source": "百度热搜",
         "summary": "9月14日晚，广汽集团发布关于筹划重大资产重组事项的停牌公告。公司当日与一汽股份签署意向协议，拟以发行股份的方式收购一汽股份所持某整车合资公司部分股权，同时募集配套资金。据初步测算，本次交易完成后，一汽股份将成为广汽集团第二大股东，具备战略影响力。",
         "badge": "热搜",
-        "signal": "7,809,419 热度"
+        "signal": "7,808,273 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-42016",
+        "id": "cisa-kev-cve-2026-84869",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
+        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
-        "badge": "CVE-2026-42016",
-        "signal": "已遭利用 · 整改期限 2026-09-25"
+        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host conf…",
+        "badge": "CVE-2026-84869",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
         "id": "ai-hugging-face-85052f9befba2c4e",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49699158",
+        "id": "hn-49704008",
         "category": "dev",
-        "title": "Distributed Systems Classics (2017)",
-        "url": "https://nvartolomei.com/dist-sys-classics/",
+        "title": "Amazon vs. Perplexity – U.S. Court of Appeals for the Ninth Circuit",
+        "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/26-1444/26-1444-2026-08-04.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T16:02:01.000Z",
+        "publishedAt": "2026-09-14T21:05:22.000Z",
         "badge": "HN",
-        "signal": "126 分 · 26 评论"
+        "signal": "137 分 · 142 评论"
       },
       {
         "id": "cn-item-b104cbe3bcc27fdc",
@@ -138,15 +138,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-325j-mg25-8q58",
+        "id": "github-advisory-ghsa-rrxg-g2pf-6hh4",
         "category": "security",
-        "title": "yayson: Prototype pollution in Store/LegacyStore deserialization",
-        "url": "https://github.com/advisories/GHSA-325j-mg25-8q58",
+        "title": "ESPHome Device Builder: Renamed auth env vars silently disable dashboard authentication on upgrade",
+        "url": "https://github.com/advisories/GHSA-rrxg-g2pf-6hh4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:11:38.000Z",
-        "summary": "# Summary `Store`/`LegacyStore` key internal lookup tables by the `type`, `id`, and relationship names from a JSON:API document. Because these were plain objects, a document with `type: \"__proto__\"` writes onto `Object.prototype`, pollutin…",
-        "badge": "CVE-2026-61534",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-14T18:08:57.000Z",
+        "summary": "## Summary The dashboard reads its authentication credentials from `$ESPHOME_USERNAME` and `$ESPHOME_PASSWORD`. Earlier versions, and the legacy `esphome` dashboard, read the bare `$USERNAME` and `$PASSWORD` instead. When the env vars were…",
+        "badge": "CVE-2026-59178",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
         "id": "ai-openai-968c32634dc2a1cb",
@@ -170,24 +170,24 @@
         "signal": "11 回复"
       },
       {
-        "id": "cn-it-82edefaf548a0b68",
+        "id": "cn-it-e148f7821cf70bad",
         "category": "cn",
-        "title": "苹果 visionOS 27.0 正式版发布",
-        "url": "https://www.ithome.com/1/002/331.htm",
+        "title": "分析师称玩家针对索尼 SIE 停产游戏光盘发起的抵制活动“PlayStation Blackout”收效甚微",
+        "url": "https://www.ithome.com/1/002/347.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T18:26:11.000Z",
-        "summary": "IT之家 9 月 15 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.0 更新（内部版本号：24M362）。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-09-10：visionOS 27.0 RC (24M362) 2026-09-01：visionOS 27.…",
+        "publishedAt": "2026-09-14T23:05:33.000Z",
+        "summary": "IT之家 9 月 15 日消息，索尼在 2 个月前宣布将于 2028 年停止生产 PlayStation 实体游戏光盘，并暗示下一代主机将全面转向数字化。对此，部分玩家 发起“PlayStation Blackout”抵制活动 ，希望通过集体停止使用 PlayStation 向索尼表达不满。不过从目前来看，这场抵制活动似乎并未取得明显效果。 市场研究机构 Circana 高级总监兼电子游戏行业顾问 Mat Piscatella 在 Bluesky 上表示：“根据我们的追踪数…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-42018",
+        "id": "cisa-kev-cve-2026-42016",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42018",
+        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
-        "badge": "CVE-2026-42018",
+        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+        "badge": "CVE-2026-42016",
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49699648",
+        "id": "hn-49699158",
         "category": "dev",
-        "title": "Why don't machine learning research agents overfit?",
-        "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
+        "title": "Distributed Systems Classics (2017)",
+        "url": "https://nvartolomei.com/dist-sys-classics/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T16:32:23.000Z",
+        "publishedAt": "2026-09-14T16:02:01.000Z",
         "badge": "HN",
-        "signal": "62 分 · 31 评论"
+        "signal": "212 分 · 42 评论"
       },
       {
         "id": "cn-baidu-0c760c8a7174c283",
@@ -216,18 +216,18 @@
         "url": "https://www.baidu.com/s?wd=%E4%B8%80%E8%BD%A6%E4%BA%BA%E4%B9%B0%E9%94%99%E7%A5%A8+%E6%B8%B8%E5%AE%A2%E5%BB%BA%E8%AE%AE%E8%BD%A6%E7%AB%99%E6%94%B9%E5%90%8D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,712,475 热度"
+        "signal": "7,713,104 热度"
       },
       {
-        "id": "github-advisory-ghsa-rqx4-3f6q-3x2v",
+        "id": "github-advisory-ghsa-325j-mg25-8q58",
         "category": "security",
-        "title": "@Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
-        "url": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
+        "title": "yayson: Prototype pollution in Store/LegacyStore deserialization",
+        "url": "https://github.com/advisories/GHSA-325j-mg25-8q58",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:04:42.000Z",
-        "summary": "## Summary Mockoon's admin API (`commons-server/src/libs/server/admin-api.ts`) is mounted on the same Express listener as the user-defined mock routes, **enabled by default** in every shipped runtime (commons-server, CLI, serverless), serv…",
-        "badge": "CVE-2026-59148",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-11T22:11:38.000Z",
+        "summary": "# Summary `Store`/`LegacyStore` key internal lookup tables by the `type`, `id`, and relationship names from a JSON:API document. Because these were plain objects, a document with `type: \"__proto__\"` writes onto `Object.prototype`, pollutin…",
+        "badge": "CVE-2026-61534",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-hugging-face-075fed980e67c694",
@@ -260,15 +260,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-85706",
+        "id": "cisa-kev-cve-2026-42018",
         "category": "security",
-        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-85706",
+        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42018",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repositor…",
-        "badge": "CVE-2026-85706",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+        "badge": "CVE-2026-42018",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
         "id": "ai-openai-4aeb82da9975e2f5",
@@ -281,35 +281,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49700661",
+        "id": "hn-49673689",
         "category": "dev",
-        "title": "Steam Frame starts at $1059",
-        "url": "https://store.steampowered.com/hardware/steamframe",
+        "title": "Compressing a Flag to 11 Bits",
+        "url": "https://read.vantezzen.io/miniflags",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T17:27:55.000Z",
+        "publishedAt": "2026-09-12T15:57:43.000Z",
         "badge": "HN",
-        "signal": "209 分 · 107 评论"
+        "signal": "23 分 · 8 评论"
       },
       {
-        "id": "cn-it-974e27bc8a23c5f4",
+        "id": "cn-it-334739e92fe7c11d",
         "category": "cn",
-        "title": "苹果 macOS 27.0 正式版发布",
-        "url": "https://www.ithome.com/1/002/330.htm",
+        "title": "谷歌通知 9 月 21 日开放 GoogleBook 预购，融合安卓 / ChromeOS 特性",
+        "url": "https://www.ithome.com/1/002/346.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T18:26:11.000Z",
-        "summary": "IT之家 9 月 15 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.0 更新（内部版本号：26A428）。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 macOS 27 发布历史： 2026-09-10：macOS 27.0 RC (26A428) 2026-09-01：macOS 27.0 Beta 8 (26A5425…",
+        "publishedAt": "2026-09-14T23:05:03.000Z",
+        "summary": "IT之家 9 月 15 日消息，科技媒体 videocardz 昨日（9 月 14 日）发布博文，报道称基于其收到的邮件， 谷歌计划美国东部时间 9 月 21 日上午 9 点（北京时间 21 日 21 点）开放 Googlebook 预购。 这封邮件附有直接预购链接，但未披露产品价格，也未说明首批可购买的具体设备型号。在合作厂商方面，谷歌正与宏碁、华硕、戴尔、惠普及联想开发首批 Googlebook 系统。 在软件定位方面，Googlebook 融合 Android 和 C…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-65h7-9wrw-629c",
+        "id": "github-advisory-ghsa-rqx4-3f6q-3x2v",
         "category": "security",
-        "title": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
-        "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+        "title": "@Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
+        "url": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:02:04.000Z",
-        "summary": "## Summary The published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external `$ref` dereferencing, but the latest patched dependency `mcp-from-openapi` 2.3.0 still makes backend-origin request…",
-        "badge": "CVE-2026-59973",
-        "signal": "HIGH · CVSS 8.5"
+        "publishedAt": "2026-09-11T22:04:42.000Z",
+        "summary": "## Summary Mockoon's admin API (`commons-server/src/libs/server/admin-api.ts`) is mounted on the same Express listener as the user-defined mock routes, **enabled by default** in every shipped runtime (commons-server, CLI, serverless), serv…",
+        "badge": "CVE-2026-59148",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-d721843382f3485e",
@@ -339,18 +339,18 @@
         "source": "百度热搜",
         "summary": "9月14日上午，国务院新闻办公室举行“开局起步‘十五五’”系列主题新闻发布会，国家卫生健康委、国家中医药局、国家疾控局等部门负责人介绍推动健康中国建设取得决定性进展有关情况。未来5年，要从“有”向“优”转变，我国将加快完善优质高效整合型医疗卫生服务体系，让更多群众在家门口看得上病、看得好病。",
         "badge": "热搜",
-        "signal": "7,615,875 热度"
+        "signal": "7,618,486 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-86060",
+        "id": "cisa-kev-cve-2026-85706",
         "category": "security",
-        "title": "MikroTik RouterOS：MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86060",
+        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-85706",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-10T00:00:00.000Z",
-        "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
-        "badge": "CVE-2026-86060",
-        "signal": "已遭利用 · 整改期限 2026-09-13"
+        "publishedAt": "2026-09-11T00:00:00.000Z",
+        "summary": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repositor…",
+        "badge": "CVE-2026-85706",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
         "id": "ai-hugging-face-46660cb2ea4362f6",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49698607",
+        "id": "hn-49695876",
         "category": "dev",
-        "title": "Principles for Fast Tokio Applications",
-        "url": "https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/",
+        "title": "OpenAI bots knew about the RubyGems caching vulnerability",
+        "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T15:27:56.000Z",
+        "publishedAt": "2026-09-14T12:40:57.000Z",
         "badge": "HN",
-        "signal": "93 分 · 15 评论"
+        "signal": "338 分 · 289 评论"
       },
       {
         "id": "cn-item-55ca2d9916aebcf0",
@@ -382,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
+        "id": "github-advisory-ghsa-65h7-9wrw-629c",
         "category": "security",
-        "title": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
-        "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
+        "title": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+        "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:38:24.000Z",
-        "summary": "## SAML Tenant Binding Enables Cross-Tenant Account Takeover ### Summary Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant w…",
-        "badge": "CVE-2026-59151",
-        "signal": "CRITICAL · CVSS 9.6"
+        "publishedAt": "2026-09-11T22:02:04.000Z",
+        "summary": "## Summary The published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external `$ref` dereferencing, but the latest patched dependency `mcp-from-openapi` 2.3.0 still makes backend-origin request…",
+        "badge": "CVE-2026-59973",
+        "signal": "HIGH · CVSS 8.5"
       },
       {
         "id": "ai-openai-46fcf5bb7b99520f",
@@ -414,24 +414,24 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-7c7a656dfb008abc",
+        "id": "cn-it-0bcaa6f68b511631",
         "category": "cn",
-        "title": "苹果 iOS/iPadOS 27.0 正式版发布",
-        "url": "https://www.ithome.com/1/002/329.htm",
+        "title": "id Software《毁灭战士：黑暗时代》游戏价格永降，Steam 国区现售 259 元起",
+        "url": "https://www.ithome.com/1/002/345.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T18:26:10.000Z",
-        "summary": "IT之家 9 月 15 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.0 更新（内部版本号：24A437）。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 iOS/iPadOS 27 发布历史： 2026-09-01：iOS 27.0 Beta 8 (24A5430a) 2026-08-25：iOS …",
+        "publishedAt": "2026-09-14T22:57:58.000Z",
+        "summary": "IT之家 9 月 15 日消息，id Software 旗下《毁灭战士：黑暗时代（DOOM：The Dark Ages）》于 2025 年 5 月 15 日发售，目前官方对这款游戏价格进行调整，IT之家汇总如下： 降价前 降价后 标准版 349 元 259 元 豪华版 499 元 359 元 IT之家附游戏商品页如下：（ https://store.steampowered.com/agecheck/app/3017860/ ） 根据官方介绍，《毁灭战士：黑暗时代》是大受好…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-67277",
+        "id": "cisa-kev-cve-2026-86060",
         "category": "security",
-        "title": "MikroTik RouterOS：MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67277",
+        "title": "MikroTik RouterOS：MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86060",
         "source": "CISA KEV",
         "publishedAt": "2026-09-10T00:00:00.000Z",
-        "summary": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
-        "badge": "CVE-2026-67277",
+        "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
+        "badge": "CVE-2026-86060",
         "signal": "已遭利用 · 整改期限 2026-09-13"
       },
       {
@@ -444,14 +444,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49695876",
+        "id": "hn-49698699",
         "category": "dev",
-        "title": "OpenAI bots knew about the RubyGems caching vulnerability",
-        "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
+        "title": "A Beginning for Mathematics",
+        "url": "https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T12:40:57.000Z",
+        "publishedAt": "2026-09-14T15:33:07.000Z",
         "badge": "HN",
-        "signal": "236 分 · 214 评论"
+        "signal": "151 分 · 86 评论"
       },
       {
         "id": "cn-baidu-51a8f6b19e4410b7",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "9月12日，赵雷北京鸟巢演唱会上，前排一名男观众突然向女友求婚，女方激动站起，导致后排齐声高喊“坐下”。这段现场视频被发到社交媒体后，此事冲上热搜。更有人表态：“喊坐下都算礼貌，要我就喊离婚。”",
         "badge": "热搜",
-        "signal": "7,522,373 热度"
+        "signal": "7,524,444 热度"
       },
       {
-        "id": "github-advisory-ghsa-2cg9-97gq-9mqp",
+        "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
         "category": "security",
-        "title": "Shopper: Missing authorization on product removal actions in CollectionProducts component",
-        "url": "https://github.com/advisories/GHSA-2cg9-97gq-9mqp",
+        "title": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
+        "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:31:26.000Z",
-        "summary": "## Title Missing authorization on product removal actions in CollectionProducts component ## Description A lack of authorization control was discovered on both the per-record delete action and the bulk delete action inside `packages/admin/…",
-        "badge": "CVE-2026-56825",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-11T21:38:24.000Z",
+        "summary": "## SAML Tenant Binding Enables Cross-Tenant Account Takeover ### Summary Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant w…",
+        "badge": "CVE-2026-59151",
+        "signal": "CRITICAL · CVSS 9.6"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -509,7 +509,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 31735,
+        "stars": 31979,
         "starsToday": 2233
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 25344,
+        "stars": 25579,
         "starsToday": 1796
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/multimodal-art-projection/YuE",
         "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "language": "Python",
-        "stars": 8251,
+        "stars": 8297,
         "starsToday": 578
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 28865,
+        "stars": 29074,
         "starsToday": 2774
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/666ghj/MiroFish",
         "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
         "language": "Python",
-        "stars": 73042,
+        "stars": 73104,
         "starsToday": 524
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 81088,
+        "stars": 81197,
         "starsToday": 640
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "language": "JavaScript",
-        "stars": 66670,
+        "stars": 66730,
         "starsToday": 770
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/rlaope/oh-my-hermes",
         "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
         "language": "Python",
-        "stars": 1939,
+        "stars": 2009,
         "starsToday": 52
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/localsend/localsend",
         "description": "An open-source cross-platform alternative to AirDrop",
         "language": "Dart",
-        "stars": 91205,
+        "stars": 91284,
         "starsToday": 311
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/dani-garcia/vaultwarden",
         "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
         "language": "Rust",
-        "stars": 67489,
+        "stars": 67519,
         "starsToday": 110
       }
     ],
-    "updatedAt": "2026-09-14T19:22:44.083Z"
+    "updatedAt": "2026-09-14T23:08:32.273Z"
   }
 }
