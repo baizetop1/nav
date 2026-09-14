@@ -20,7 +20,10 @@ const q=dutyQuote(s,'food'),base=dutyQuote(s);assert.ok(q.food>base.food&&q.wood
 const workBefore=structuredClone(s);s=act(s,'campWork',{id:'food'});assert.equal(s.camp.food-workBefore.camp.food,q.food);assert.equal(s.heroes.baisheng.exp,25);assert.equal(s.player.stamina,95);
 assert.ok(gains(workBefore,s,data).some(r=>r.name==='白胜 · 历练'&&r.amount===25));
 const snap=JSON.stringify(s);assert.throws(()=>act(s,'campWork',{id:'unknown'}));assert.equal(JSON.stringify(s),snap);
-s=act(s,'campWork',{id:'wood'});assert.equal(s.heroes.baisheng.level,2);assert.equal(s.heroes.baisheng.exp,15);
+s=act(s,'campWork',{id:'wood'});assert.equal(s.heroes.baisheng.level,1);assert.equal(s.heroes.baisheng.exp,50);
+// Steward work awards 25 XP; five duties now cross the 116-XP first level.
+for(let i=0;i<3;i++)s=act(s,'campWork',{id:'wood'});
+assert.equal(s.heroes.baisheng.level,2);assert.equal(s.heroes.baisheng.exp,9);
 s=act(s,'campSteward',{id:null});assert.equal(s.progress.flags.camp_steward_baisheng,undefined);
 const noSteward=structuredClone(s);s=act(s,'campWork');assert.deepEqual(s.heroes,noSteward.heroes);
 // Choices affect the real battle, not just the enemy-intel copy.

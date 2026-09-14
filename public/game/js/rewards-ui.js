@@ -1,6 +1,6 @@
-import { CORPS, corpsRank } from './development.js?v=0.16.0';
-import { HELPERS, hasHelper } from './helpers.js?v=0.16.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.16.0';
+import { CORPS, corpsRank } from './development.js?v=0.17.0';
+import { HELPERS, hasHelper } from './helpers.js?v=0.17.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.17.0';
 // Derive the visible receipt from a completed transaction, never from a second roll.
 export function gains(before,after,data){
   const rows=[];const add=(name,n)=>{if(n>0)rows.push({name,amount:n});};

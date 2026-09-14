@@ -1,6 +1,8 @@
-import { clone, journal, requireRule } from './utils.js?v=0.16.0';
-import { itemAction } from './item.js?v=0.16.0';
-import { growthAction } from './growth.js?v=0.16.0';
+import { attributes } from './hero.js?v=0.17.0';
+import { experienceToNext, experienceResult, ATTRIBUTE_NAMES } from './progression.js?v=0.17.0';
+import { clone, journal, requireRule } from './utils.js?v=0.17.0';
+import { itemAction } from './item.js?v=0.17.0';
+import { growthAction } from './growth.js?v=0.17.0';
 
 const kinds={experience:'赠经验丹',manual:'抄录招式书',feed:'喂养坐骑',buy:'采买物资'};
 export const SHOP_ITEMS=['jinchuangyao','huiqisan','jiedudan','exp_pill','wine','iron','cloth','night_clothes','recruit_order'];
@@ -22,7 +24,13 @@ export function batchChanges(before,after,d,a){
   if(a.kind==='experience'){
     const x=before.heroes[a.id],y=after.heroes[a.id];
     rows.push({name:d.by.heroes[a.id].name+'等级',value:x.level+' → '+y.level});
-    rows.push({name:'当前等级历练',value:x.exp+' → '+y.exp+(y.level>=d.config.balance.heroLevelCap?'（已满级）':'')});
+    const cap=d.config.balance.heroLevelCap,amount=((before.inventory.exp_pill||0)-(after.inventory.exp_pill||0))*d.by.items.exp_pill.effect.exp;
+    rows.push({name:'本次丹药经验',value:'+'+amount});
+    rows.push({name:'升级后经验',value:y.level>=cap?'已满级':y.exp+' / '+experienceToNext(y.level)});
+    const overflow=experienceResult(x,amount,cap).overflow;
+    if(overflow)rows.push({name:'满级溢出（不保留）',value:overflow+' 经验'});
+    const oldStats=attributes(before,a.id,d),newStats=attributes(after,a.id,d);
+    for(const [key,name] of Object.entries(ATTRIBUTE_NAMES))rows.push({name,value:oldStats[key]+' → '+newStats[key]});
   }
   if(a.kind==='feed')rows.push({name:d.by.heroes[a.id].mount.name+'亲密',value:before.growth.mounts[a.id].intimacy+' → '+after.growth.mounts[a.id].intimacy});
   return rows;

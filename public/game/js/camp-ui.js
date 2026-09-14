@@ -1,13 +1,13 @@
-import { campOverview } from './camp-overview.js?v=0.16.0';
-import { affairsPanel } from './management-ui.js?v=0.16.0';
-import { productionPanel, frontierMap } from './frontier-ui.js?v=0.16.0';
-import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.16.0';
-import { ARMS } from './martial.js?v=0.16.0';
-import { enemyIntel } from './martial-ui.js?v=0.16.0';
-import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.16.0';
-import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.16.0';
-import { dungeonMountLoot } from './growth-ui.js?v=0.16.0';
-import { icon } from './icons.js?v=0.16.0';
+import { campOverview } from './camp-overview.js?v=0.17.0';
+import { affairsPanel } from './management-ui.js?v=0.17.0';
+import { productionPanel, frontierMap } from './frontier-ui.js?v=0.17.0';
+import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.17.0';
+import { ARMS } from './martial.js?v=0.17.0';
+import { enemyIntel } from './martial-ui.js?v=0.17.0';
+import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.17.0';
+import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.17.0';
+import { dungeonMountLoot } from './growth-ui.js?v=0.17.0';
+import { icon } from './icons.js?v=0.17.0';
 
 export const portrait=(h,small=false)=>`<span class="hero-portrait portrait-${h.id}${h.introducedIn===3?' portrait-new':''}${small?' portrait-small':''}" role="img" aria-label="${h.name}人物卡">${h.introducedIn===3?`<span class="portrait-monogram"><b>${h.name.slice(0,1)}</b><small>立绘待补</small></span>`:''}</span>`;
 export function campPage(s,d,esc,btn){

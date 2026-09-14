@@ -1,20 +1,20 @@
-import { SORTIES, prepareSortie } from './sortie.js?v=0.16.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.16.0';
-import { presetReason } from './development.js?v=0.16.0';
-import { batchQuote } from './batch.js?v=0.16.0';
-import { batchDialog } from './batch-ui.js?v=0.16.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.16.0';
-import { ActivityLog } from './activity.js?v=0.16.0';
-import { loadData } from './data.js?v=0.16.0';
-import { dispatch, newGame } from './core.js?v=0.16.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.16.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.16.0';
-import { patchElement } from './dom.js?v=0.16.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.17.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.17.0';
+import { presetReason } from './development.js?v=0.17.0';
+import { batchQuote } from './batch.js?v=0.17.0';
+import { batchDialog } from './batch-ui.js?v=0.17.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.17.0';
+import { ActivityLog } from './activity.js?v=0.17.0';
+import { loadData } from './data.js?v=0.17.0';
+import { dispatch, newGame } from './core.js?v=0.17.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.17.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.17.0';
+import { patchElement } from './dom.js?v=0.17.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.16.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.16.0';
-import { CloudClient } from './cloud.js?v=0.16.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.16.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.17.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.17.0';
+import { CloudClient } from './cloud.js?v=0.17.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.17.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}

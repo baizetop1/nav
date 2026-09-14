@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
 import {newGame,dispatch} from '../public/game/js/core.js';
 import {freshCamp} from '../public/game/js/camp.js';
+import {experienceToNext} from '../public/game/js/progression.js';
 import {batchQuote} from '../public/game/js/batch.js';
 import {gains} from '../public/game/js/rewards-ui.js';
 import {gameSnapshot,exportSave,importSave} from '../public/game/js/portable.js';
@@ -16,7 +17,7 @@ for(const [kind,id,single] of [['experience','linchong',{type:'use',id:'exp_pill
   assert.equal(batch.journal.filter(r=>r.text.startsWith('【批量办理】')).length,1);assert.equal(batch.journal.length,s.journal.length+1,'One batch adds one log entry');
   assert.deepEqual(importSave(exportSave(batch,{id:1,name:'批量养成'},d),d).state,batch);
 }
-let s=fixture();s.heroes.linchong.level=d.config.balance.heroLevelCap-1;s.heroes.linchong.exp=20+s.heroes.linchong.level*15-1;
+let s=fixture();s.heroes.linchong.level=d.config.balance.heroLevelCap-1;s.heroes.linchong.exp=experienceToNext(s.heroes.linchong.level)-1;
 let a={kind:'experience',id:'linchong',count:10},q=batchQuote(s,d,a);assert.equal(q.count,1);let n=run(s,command(s,a));assert.equal(n.heroes.linchong.level,d.config.balance.heroLevelCap);assert.equal(n.inventory.exp_pill,s.inventory.exp_pill-1);assert.equal(batchQuote(n,d,a).count,0);
 s=fixture();s.growth.mounts.linchong.intimacy=95;a={kind:'feed',id:'linchong',count:10};q=batchQuote(s,d,a);assert.equal(q.count,1);n=run(s,command(s,a));assert.equal(n.growth.mounts.linchong.intimacy,100);assert.equal(n.inventory.mount_feed,19);assert.ok(gains(s,n,d).some(r=>r.name.includes('亲密')&&r.amount===5));
 s=fixture();s.daily.counters.buyOrder=2;a={kind:'buy',id:'recruit_order',count:10};assert.equal(batchQuote(s,d,a).count,1);n=run(s,command(s,a));assert.equal(n.daily.counters.buyOrder,3);assert.equal(batchQuote(n,d,a).count,0);

@@ -1,8 +1,9 @@
-import { applySets } from './equipment-sets.js?v=0.16.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.16.0';
-import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.16.0';
-import { heroRank } from './map.js?v=0.16.0';
-import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.16.0';
+import { experienceResult } from './progression.js?v=0.17.0';
+import { applySets } from './equipment-sets.js?v=0.17.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.17.0';
+import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.17.0';
+import { heroRank } from './map.js?v=0.17.0';
+import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.17.0';
 export function knowHero(state, id, status, data) {
   const hero = state.heroes[id];
   if (heroRank[status] > heroRank[hero.status]) { hero.status = status; journal(state, `${data.by.heroes[id].name}：${({heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'})[status]}。`); }
@@ -35,10 +36,9 @@ export function attributes(state, id, data, level = state.heroes[id].level, with
 }
 export function gainExp(state, id, amount, data) {
   const h = state.heroes[id]; if (h.status !== 'owned') return;
-  h.exp += amount;
   const before = h.level;
-  while (h.level < data.config.balance.heroLevelCap && h.exp >= 20 + h.level * 15) { h.exp -= 20 + h.level * 15; h.level++; }
-  if (h.level === data.config.balance.heroLevelCap) h.exp = 0;
+  const next=experienceResult(h,amount,data.config.balance.heroLevelCap);
+  h.level=next.level;h.exp=next.exp;
   if (before !== h.level) journal(state, `${data.by.heroes[id].name}的历练更进一层：${before} → ${h.level}级。`);
 }
 export function rollOrdinary(state, data) {

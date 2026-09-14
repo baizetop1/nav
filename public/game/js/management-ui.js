@@ -1,8 +1,8 @@
-import { clone } from './utils.js?v=0.16.0';
-import { AFFAIRS } from './affairs.js?v=0.16.0';
-import { attributes } from './hero.js?v=0.16.0';
-import { itemAction } from './item.js?v=0.16.0';
-import { equippedSets } from './equipment-sets.js?v=0.16.0';
+import { clone } from './utils.js?v=0.17.0';
+import { AFFAIRS } from './affairs.js?v=0.17.0';
+import { attributes } from './hero.js?v=0.17.0';
+import { itemAction } from './item.js?v=0.17.0';
+import { equippedSets } from './equipment-sets.js?v=0.17.0';
 export function affairsPanel(s,d,btn){const f=s.affairs;if(!f?.pending&&!f?.mission)return '<p class="note">每完成三次寨务，可能有商队、乡人或匪患来报；未处理的来报会保留。</p>';
  const names={silver:'碎银',food:'粮草',wood:'木材',prestige:'威望'},show=r=>Object.entries(r).flatMap(([k,n])=>k==='items'?Object.entries(n).map(([id,v])=>d.by.items[id].name+' '+v):(names[k]||k)+' '+n).join(' · ');
  if(f.mission){const m=f.mission;return `<section class="affairs-panel" id="camp-affairs"><h2>外派待归 · ${d.by.heroes[m.hero].name}</h2><p>${AFFAIRS[m.kind].name} · ${s.clock>=m.readyAt?'已办妥':'约 '+Math.ceil((m.readyAt-s.clock)/60000)+' 分钟后归来'}</p><p>酬谢：${show(AFFAIRS[m.kind].dispatch)}</p>${btn('接回好汉，收取酬谢',{type:'affairCollect'},'primary',s.clock<m.readyAt)}<p class="note">领取后可重新编队；不会自动替换现有阵容。</p></section>`;}
