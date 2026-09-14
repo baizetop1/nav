@@ -1,6 +1,6 @@
-import { requireRule, journal } from './utils.js?v=0.20.0';
-import { CORPS } from './corps-data.js?v=0.20.0';
-import { promotionQuote } from './quality.js?v=0.20.0';
+import { requireRule, journal } from './utils.js?v=0.24.0';
+import { CORPS } from './corps-data.js?v=0.24.0';
+import { promotionQuote } from './quality.js?v=0.24.0';
 
 export { CORPS };
 export const CORPS_PROFILES={

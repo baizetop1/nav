@@ -1,5 +1,5 @@
-import { count, journal, random, requireRule } from './utils.js?v=0.20.0';
-import { gainExp } from './hero.js?v=0.20.0';
+import { count, journal, random, requireRule } from './utils.js?v=0.24.0';
+import { gainExp } from './hero.js?v=0.24.0';
 export function gainItem(state, id, amount, data) {
   requireRule(data.by.items[id] && Number.isInteger(amount) && amount > 0,'无效的道具奖励。');
   state.inventory[id]=(state.inventory[id]||0)+amount;count(state,'gain_'+id,amount);
@@ -35,7 +35,7 @@ export function itemAction(state, data, action) {
     else if(item.effect.stamina){requireRule((state.daily.counters.wine||0)<2,'今日已饮两次村酒，莫再贪杯。');requireRule(state.player.stamina<100,'体力充足，不必饮酒。');state.inventory[id]--;state.player.stamina=Math.min(100,state.player.stamina+item.effect.stamina);count(state,'wine');journal(state,'小饮一碗，精神略振。');}
     else throw new Error('这件物品用于战斗、打造、招贤或后续线索，不能直接使用。');return;
   }
-  if(type==='craftOrder') {requireRule(data.by.heroes[id],'未知好汉。');pay(state,{items:{[id+'_token']:10}});gainItem(state,id+'_order',1,data);journal(state,`十枚信物合为${data.by.heroes[id].name}专属招贤令。`);return;}
+  if(type==='craftOrder') {requireRule(data.by.heroes[id],'未知好汉。');requireRule(data.by.heroes[id].group!=='external','外传信物直接用于邀请，无需合成专属令。');pay(state,{items:{[id+'_token']:10}});gainItem(state,id+'_order',1,data);journal(state,`十枚信物合为${data.by.heroes[id].name}专属招贤令。`);return;}
   if(type==='exchange') {
     const recipes={order:{cost:{recruit_shard:10},reward:{recruit_order:1}},medicine:{cost:{herb:3},reward:{jinchuangyao:2}},ledger:{cost:{lost_ledger:20},reward:{iron:6,exp_pill:3}},charm:{cost:{strength_shard:5},reward:{strength_charm:1}}};
     const recipe=recipes[id];requireRule(recipe,'没有这种合成方式。');pay(state,{items:recipe.cost});grant(state,{items:recipe.reward,silver:id==='ledger'?1000:0},data);journal(state,'材料已换成行路所需之物。');return;

@@ -1,0 +1,269 @@
+{
+  "description": "0.24.0 晁盖完整配置示例，须按维护说明拆分到现有数据文件；不是可直接上传的插件。新增另一角色须替换 ID 和剧情标记，并递增 rosterVersion。",
+  "rosterVersion": 4,
+  "hero": {
+    "id": "chaogai",
+    "name": "晁盖",
+    "title": "托塔天王",
+    "star": 5,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1280,
+      "attack": 115,
+      "defense": 106,
+      "speed": 68,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 52,
+      "attack": 5,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 2
+    },
+    "skills": [
+      "chaogai_active",
+      "chaogai_passive",
+      "chaogai_advanced",
+      "chaogai_bond"
+    ],
+    "story": "东溪村保正，仗义疏财。外传收录，不占一百零八星位；在本作中可与寨中好汉共同出征。",
+    "core": false,
+    "meetMap": "dongxi",
+    "meetCondition": {
+      "flag": "external_chaogai_helped"
+    },
+    "obtain": {
+      "type": "external",
+      "token": "chaogai_token",
+      "count": 10,
+      "silver": 600,
+      "hall": 3,
+      "condition": {
+        "flag": "external_chaogai_helped"
+      }
+    },
+    "dialogue": "晁盖道：“先安顿乡人，再说同往。寨中若肯担事，晁某也愿出一分力。”",
+    "introducedIn": 4,
+    "mount": {
+      "name": "青骢护寨",
+      "description": "晁盖专属脚力；名称与羁绊为本作改编设定。",
+      "dungeon": "yezhulin",
+      "contract": "chaogai_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "外传人物",
+    "portrait": "art/chaogai-v1.png"
+  },
+  "skills": [
+    {
+      "id": "chaogai_active",
+      "name": "托塔震阵",
+      "type": "active",
+      "cost": 45,
+      "effect": {
+        "kind": "damage",
+        "rate": 1.4
+      },
+      "description": "攻击前两位敌人，并为同伴提供 15% 减伤，持续 4 秒。",
+      "training": {
+        "hero": "chaogai",
+        "tier": "base",
+        "level": 1,
+        "flag": "",
+        "label": "正式入寨并达到所需等级",
+        "profile": "discipline"
+      }
+    },
+    {
+      "id": "chaogai_passive",
+      "name": "乡勇之望",
+      "type": "passive",
+      "cost": 0,
+      "effect": {
+        "kind": "attribute",
+        "attribute": "hp",
+        "rate": 0.08
+      },
+      "description": "自身最大气血提高 8%。",
+      "training": {
+        "hero": "chaogai",
+        "tier": "base",
+        "level": 1,
+        "flag": "",
+        "label": "正式入寨并达到所需等级",
+        "profile": "legacy"
+      }
+    },
+    {
+      "id": "chaogai_advanced",
+      "name": "义守东溪",
+      "type": "active",
+      "cost": 45,
+      "effect": {
+        "kind": "heal",
+        "rate": 0
+      },
+      "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+      "training": {
+        "hero": "chaogai",
+        "tier": "advanced",
+        "level": 10,
+        "flag": "",
+        "label": "正式入寨并达到所需等级",
+        "profile": "protect"
+      }
+    },
+    {
+      "id": "chaogai_bond",
+      "name": "青骢护众",
+      "type": "passive",
+      "cost": 0,
+      "effect": {
+        "kind": "attribute",
+        "attribute": "defense",
+        "rate": 0.05
+      },
+      "description": "骑乘羁绊生效时防御 +5%；每第三次普攻，为气血比例最低的同伴提供 15% 减伤，持续 4 秒。触发强度随招式等级提高。",
+      "training": {
+        "hero": "chaogai",
+        "tier": "bond",
+        "level": 15,
+        "flag": "",
+        "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+        "profile": "shelter"
+      },
+      "bondEffect": {
+        "kind": "guard",
+        "rate": 0.15,
+        "duration": 4000
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "chaogai_token",
+      "name": "晁盖信物",
+      "type": "token",
+      "hero": "chaogai",
+      "need": 10,
+      "price": 0,
+      "effect": {},
+      "description": "完成东溪旧约取得，外传名册中交付十枚及碎银600直接邀请晁盖；不合成普通专属招贤令。"
+    },
+    {
+      "id": "chaogai_manual",
+      "name": "晁盖专属招式书",
+      "type": "material",
+      "price": 0,
+      "effect": {},
+      "description": "在好汉详情用武学残页抄录，用于晁盖的招式升级。"
+    },
+    {
+      "id": "chaogai_mount_contract",
+      "name": "青骢护寨坐骑契",
+      "type": "special",
+      "price": 0,
+      "effect": {},
+      "description": "在「野猪林传闻历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落，无必得保底。晁盖入寨后可凭契领骑，不另收碎银。"
+    }
+  ],
+  "corps": {
+    "name": "东溪护义营",
+    "arm": "infantry",
+    "profile": "shield"
+  },
+  "story": {
+    "id": "external_chaogai",
+    "title": "外传 · 东溪旧约",
+    "map": "dongxi",
+    "condition": {
+      "any": [
+        {
+          "flag": "seven_stars"
+        },
+        {
+          "flag": "volume_complete"
+        }
+      ]
+    },
+    "start": "talk",
+    "steps": {
+      "talk": {
+        "map": "dongxi",
+        "text": "晁盖请你在庄前坐下：“聚义不是只论豪气，乡人的吃住与伤病，也须有人照管。”完成七星聚义或第一卷后，可来续这段旧约。相识不自动入队，也不占一百零八星位。",
+        "choices": [
+          {
+            "id": "promise",
+            "label": "相识晁盖，答应安顿乡人",
+            "next": "settle",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "chaogai",
+                "status": "known"
+              },
+              {
+                "type": "flag",
+                "id": "external_chaogai_met"
+              },
+              {
+                "type": "item",
+                "id": "chaogai_token",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      },
+      "settle": {
+        "map": "dongxi",
+        "text": "寨中聚义厅二级，农田、伐木场、医馆各一级，便可接应乡人。已有建设直接计入，不重复扣料。确认后获得剩余六枚信物；聚义厅三级时，在外传名册交十枚信物与六百碎银，可正式邀请晁盖。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认乡人安置 · 领取余下信物",
+            "condition": {
+              "all": [
+                {
+                  "campBuilding": "hall",
+                  "count": 2
+                },
+                {
+                  "campBuilding": "farm",
+                  "count": 1
+                },
+                {
+                  "campBuilding": "lumber",
+                  "count": 1
+                },
+                {
+                  "campBuilding": "clinic",
+                  "count": 1
+                }
+              ]
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "external_chaogai_helped"
+              },
+              {
+                "type": "item",
+                "id": "chaogai_token",
+                "amount": 6
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "mapRegistration": {
+    "map": "dongxi",
+    "appendStory": "external_chaogai"
+  }
+}

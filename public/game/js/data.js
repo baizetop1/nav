@@ -1,5 +1,6 @@
-import { hasOwn, idPattern, requireRule } from './utils.js?v=0.20.0';
-import { GROWTH_PROFILES } from './growth.js?v=0.20.0';
+import { CORPS } from './corps-data.js?v=0.24.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.24.0';
+import { GROWTH_PROFILES } from './growth.js?v=0.24.0';
 export const collections=['heroes','skills','items','equipments','enemies','maps','stories','schemes','dungeons','rewards','events','quests','chapters'];
 const numeric=(n,min=0)=>typeof n==='number'&&Number.isFinite(n)&&n>=min;
 export function prepareData(raw) {
@@ -9,8 +10,10 @@ export function prepareData(raw) {
   const ref=(kind,id)=>requireRule(typeof id==='string'&&hasOwn(data.by[kind],id),`${kind} 引用不存在：${id}`);
   const condition=c=>{if(!c)return;for(const [key,value] of Object.entries(c)){
     if(key==='all'||key==='any'){requireRule(Array.isArray(value),'条件组合必须为数组。');value.forEach(condition);}
+    else if(key==='campBuilding')requireRule(['hall','farm','lumber','barracks','clinic','market'].includes(value)&&Number.isInteger(c.count)&&c.count>=1&&c.count<=5,'无效建筑条件');
+    else if(key==='campMode')requireRule(['solo','army'].includes(value),'无效出征方式条件');
     else if(key==='item')ref('items',value);else if(key==='hero')ref('heroes',value);else if(key==='visited')ref('maps',value);
-    else requireRule(['flag','notFlag','count','status','time','liangshanLevel','ownedCount','heroLevel','equipmentCount','unvisited','feature','stat','prestige'].includes(key),'未知条件：'+key);
+    else requireRule(['campBuilding','campMode','flag','notFlag','count','status','time','liangshanLevel','ownedCount','heroLevel','equipmentCount','unvisited','feature','stat','prestige'].includes(key),'未知条件：'+key);
   }};
   const effects=values=>{for(const e of values||[]){
     requireRule(['flag','hero','item','currency'].includes(e.type),'未知效果类型。');
@@ -21,15 +24,15 @@ export function prepareData(raw) {
   const reward=r=>{for(const [id,n] of Object.entries(r?.items||{})){ref('items',id);requireRule(Number.isInteger(n)&&n>0,'无效道具奖励。');}};
   const cost=c=>{for(const key of ['silver','merit'])if(c?.[key]!==undefined)requireRule(Number.isInteger(c[key])&&c[key]>=0,'无效消耗。');reward(c);};
   for(const h of data.heroes){requireRule(h.name&&h.title&&Number.isInteger(h.star)&&h.star>=1&&h.star<=5,'好汉字段无效。');ref('maps',h.meetMap);condition(h.meetCondition);h.skills.forEach(id=>ref('skills',id));ref('items',h.obtain.token);for(const key of ['hp','attack','defense','speed','strategy'])requireRule(numeric(h.attribute[key],1)&&numeric(h.growth[key]),'好汉属性无效。');}
-  requireRule(data.heroes.length===108&&new Set(data.heroes.map(h=>h.seat)).size===108,'名册必须包含完整 108 将座次。');
-  for(const h of data.heroes)requireRule(Number.isInteger(h.seat)&&h.seat>=1&&h.seat<=108&&h.group===(h.seat<=36?'tiangang':'disha')&&h.starSign,'星位配置无效。');
+  const rosterVersion=data.config.rosterVersion||3,canonical=data.heroes.filter(h=>h.group!=='external');requireRule(Number.isInteger(rosterVersion)&&rosterVersion>=3,'名册配置版本无效。');requireRule(canonical.length===108&&new Set(canonical.map(h=>h.seat)).size===108,'正册必须包含完整 108 将座次。');
+  for(const h of data.heroes){const introduced=h.introducedIn||1;requireRule(Number.isInteger(introduced)&&introduced>=1&&introduced<=rosterVersion,'人物引入版本无效。');if(h.group==='external'){requireRule(h.seat===null&&h.starSign==='外传人物'&&introduced>=4&&h.obtain.type==='external'&&Number.isInteger(h.obtain.count)&&h.obtain.count>0&&Number.isInteger(h.obtain.silver)&&h.obtain.silver>=0&&Number.isInteger(h.obtain.hall)&&h.obtain.hall>=1&&h.obtain.hall<=5&&h.obtain.condition,'外传人物或邀请配置无效。');condition(h.obtain.condition);}else requireRule(Number.isInteger(h.seat)&&h.seat>=1&&h.seat<=108&&h.group===(h.seat<=36?'tiangang':'disha')&&h.starSign,'星位配置无效。');requireRule(CORPS[h.id]&&['infantry','ranged','cavalry'].includes(CORPS[h.id].arm)&&['assault','shield','archer','scout','naval','medic'].includes(CORPS[h.id].profile),'人物专属部队缺失。');if(h.portrait)requireRule(/^art\/[a-z0-9_-]+\.(png|webp|jpg)$/.test(h.portrait),'人物图路径无效。');}
   for(const s of data.skills){requireRule(s.name&&numeric(s.cost)&&s.cost<=100&&['active','passive','strategy'].includes(s.type),'技能字段无效。');requireRule(['damage','strategy','heal','attribute'].includes(s.effect.kind)&&numeric(s.effect.rate),'技能效果无效。');if(s.effect.status)requireRule(['bleeding','poison','armor_break','stun','rage'].includes(s.effect.status.id)&&Number.isInteger(s.effect.status.turns)&&s.effect.status.turns>0,'战斗状态无效。');}
   for(const h of data.heroes){
     requireRule(h.skills.length===4&&new Set(h.skills).size===4&&h.mount?.name&&h.mount.description,'人物专属招式或坐骑缺失。');
     ref('dungeons',h.mount.dungeon);ref('items',h.mount.contract);
     requireRule(h.mount.contract===h.id+'_mount_contract'&&data.by.items[h.mount.contract].price===0&&data.by.items[h.mount.contract].type==='special','坐骑必须来自专属副本契，不能在商店购买。');
     const tiers=[];
-    for(const id of h.skills){const t=data.by.skills[id].training;requireRule(t&&t.hero===h.id&&['base','advanced','bond'].includes(t.tier)&&Number.isInteger(t.level)&&t.level>=1&&t.level<=40&&typeof t.flag==='string'&&(!t.flag||idPattern.test(t.flag))&&t.label&&GROWTH_PROFILES.includes(t.profile),'人物招式养成配置无效。');tiers.push(t.tier);}
+    for(const id of h.skills){const t=data.by.skills[id].training;requireRule(t&&t.hero===h.id&&['base','advanced','bond'].includes(t.tier)&&Number.isInteger(t.level)&&t.level>=1&&t.level<=40&&typeof t.flag==='string'&&(!t.flag||idPattern.test(t.flag))&&t.label&&GROWTH_PROFILES.includes(t.profile),'人物招式养成配置无效。');if(t.tier==='bond'&&h.group==='external'){const e=data.by.skills[id].bondEffect;requireRule(e&&['guard','heal','rage','strike'].includes(e.kind)&&numeric(e.rate,.01)&&e.rate<=(e.kind==='rage'?20:e.kind==='strike'?1:.3)&&(e.kind!=='guard'||Number.isInteger(e.duration)&&e.duration>=1000&&e.duration<=6000),'外传羁绊效果无效。');}tiers.push(t.tier);}
     requireRule(tiers.filter(t=>t==='base').length===2&&tiers.includes('advanced')&&tiers.includes('bond'),'每位人物需基础两招、进阶一招与羁绊一招。');ref('items',h.id+'_manual');
   }
   for(const item of data.items){requireRule(item.name&&item.description&&['consume','material','token','quest','special'].includes(item.type)&&numeric(item.price),'道具字段无效。');if(item.hero)ref('heroes',item.hero);}

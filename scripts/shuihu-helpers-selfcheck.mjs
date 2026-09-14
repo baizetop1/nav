@@ -23,7 +23,7 @@ const hired=JSON.stringify(s);assert.throws(()=>act(s,'campHireHelper',{id:'zhou
 s=act(s,'campBuild',{id:'lumber'});assert.equal(helperBonus(s).wood,6);
 s=act(s,'campBuild',{id:'hall'});
 for(const h of HELPERS.filter(h=>h.id!=='zhou_aqiao'))s=act(s,'campHireHelper',{id:h.id});
-assert.deepEqual(s.recruit,base.recruit,'No good-hero pity or result changes');assert.deepEqual(s.inventory,base.inventory,'No recruitment orders spent');assert.deepEqual(s.heroes,base.heroes);assert.deepEqual(s.team,base.team);assert.equal(heroCount,108);
+assert.deepEqual(s.recruit,base.recruit,'No good-hero pity or result changes');assert.deepEqual(s.inventory,base.inventory,'No recruitment orders spent');assert.deepEqual(s.heroes,base.heroes);assert.deepEqual(s.team,base.team);assert.equal(heroCount,data.heroes.length);
 assert.equal(helperBonus(s).food,4,'Fishing works immediately; farming awaits fields');
 for(const id of ['farm','market','clinic','barracks'])s=act(s,'campBuild',{id});
 assert.deepEqual(helperBonus(s),{wood:10,food:10,silver:10,heal:3});

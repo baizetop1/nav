@@ -1,18 +1,20 @@
-import { validEliteContext } from './elites.js?v=0.20.0';
-import { validateDebrief } from './debrief.js?v=0.20.0';
-import { validateAffairs } from './affairs.js?v=0.20.0';
-import { validateStrategy } from './strategy.js?v=0.20.0';
-import { validateCommands } from './commands.js?v=0.20.0';
-import { validateFrontier, POSTS } from './frontier.js?v=0.20.0';
-import { validateDevelopment } from './development.js?v=0.20.0';
-import { validateCampaign, validRotationContext } from './rotations.js?v=0.20.0';
-import { validateQualities } from './quality.js?v=0.20.0';
-import { newGame } from './core.js?v=0.20.0';
-import { hasOwn, idPattern, requireRule } from './utils.js?v=0.20.0';
-import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.20.0';
-import { validateGrowth } from './growth.js?v=0.20.0';
-import { validateGrowthBattle } from './growth-save.js?v=0.20.0';
-import { validateCamp, RAIDS } from './camp.js?v=0.20.0';
+import { migrateRoster, rosterVersion } from './roster.js?v=0.24.0';
+import { validateAlliances } from './volume-four-data.js?v=0.24.0';
+import { validEliteContext } from './elites.js?v=0.24.0';
+import { validateDebrief } from './debrief.js?v=0.24.0';
+import { validateAffairs } from './affairs.js?v=0.24.0';
+import { validateStrategy } from './strategy.js?v=0.24.0';
+import { validateCommands } from './commands.js?v=0.24.0';
+import { validateFrontier, POSTS } from './frontier.js?v=0.24.0';
+import { validateDevelopment } from './development.js?v=0.24.0';
+import { validateCampaign, validRotationContext } from './rotations.js?v=0.24.0';
+import { validateQualities } from './quality.js?v=0.24.0';
+import { newGame } from './core.js?v=0.24.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.24.0';
+import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.24.0';
+import { validateGrowth } from './growth.js?v=0.24.0';
+import { validateGrowthBattle } from './growth-save.js?v=0.24.0';
+import { validateCamp, RAIDS } from './camp.js?v=0.24.0';
 export const SAVE_KEY='baize_shuihu_save', BACKUP_KEY=SAVE_KEY+'_backup';
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 function object(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}
@@ -23,7 +25,7 @@ function safeTree(value,depth=0) {
 export function validateSave(s,data) {
   requireRule(object(s)&&s.version===2,'不支持这个存档版本。');safeTree(s);
   const check=(ok,msg)=>requireRule(ok,'存档校验失败：'+msg);
-  check(s.rosterVersion===undefined||s.rosterVersion===3,'名册版本');
+  check(s.rosterVersion===undefined||s.rosterVersion===rosterVersion(data),'名册版本');
   check(s.battleSkillMode===undefined||['manual','auto'].includes(s.battleSkillMode),'技能释放方式');
   check(integer(s.revision,0,Number.MAX_SAFE_INTEGER)&&integer(s.rng,1,4294967295),'版本游标');
   for(const key of ['clock','lastRegen','startedAt'])check(integer(s[key],0,8640000000000000),'时间');
@@ -81,7 +83,7 @@ export function validateSave(s,data) {
   if(s.event)check(object(s.event)&&data.by.events[s.event.id],'待办际遇');
   check(typeof s.formationPending==='boolean'&&typeof s.message==='string'&&s.message.length<3000,'页面信息');
   check(Array.isArray(s.journal)&&s.journal.length<=300&&s.journal.every(e=>integer(e.at,0,8640000000000000)&&typeof e.text==='string'&&e.text.length<3000),'梁山志');
-  validateDebrief(s,data,check);return s;
+  validateAlliances(s,check);validateDebrief(s,data,check);return s;
 }
 export function parseSave(raw,data,now=Date.now()) {
   requireRule(typeof raw==='string'&&raw.length<=2000000,'存档应为不超过 2 MB 的 JSON 文本。');
@@ -95,17 +97,8 @@ export function parseSave(raw,data,now=Date.now()) {
     for(const h of data.heroes.filter(h=>h.introducedIn===2))s.heroes[h.id]={status:'unknown',level:1,exp:0};
     s.version=2;
   }
-  if(s.version===2&&s.rosterVersion===undefined&&object(s.heroes)){
-    const legacy=data.heroes.filter(h=>(h.introducedIn||1)<3);
-    if(Object.keys(s.heroes).length===legacy.length&&legacy.every(h=>hasOwn(s.heroes,h.id))){
-      for(const h of data.heroes.filter(h=>h.introducedIn===3))s.heroes[h.id]={status:'unknown',level:1,exp:0};
-      s.rosterVersion=3;
-    }
-  }
+  if(s.version===2&&object(s.heroes))migrateRoster(s,data);
   validateSave(s,data);
-  // A cached older runtime can already have loaded the expanded JSON roster.
-  // Normalize its complete dictionary too, so subsequent cloud writes carry the guard.
-  s.rosterVersion=3;
   migrateBattle(s.battle);return validateSave(s,data);
 }
 export class SaveConflict extends Error {}

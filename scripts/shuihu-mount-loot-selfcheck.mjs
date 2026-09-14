@@ -40,9 +40,9 @@ function win(s,id){
  else{s=defeatFoes(s);s=act(forceDrops(s,id),'finishBattle');}
  return s;
 }
-assert.equal(data.heroes.length,108);assert.equal(new Set(data.heroes.map(h=>h.mount.contract)).size,108);
+assert.equal(data.heroes.filter(h=>h.group!=='external').length,108);assert.equal(new Set(data.heroes.map(h=>h.mount.contract)).size,data.heroes.length);
 assert.equal(new Set(data.heroes.map(h=>h.mount.dungeon)).size,7);
-assert.equal(data.items.filter(i=>i.id.endsWith('_mount_contract')).length,108);
+assert.equal(data.items.filter(i=>i.id.endsWith('_mount_contract')).length,data.heroes.length);
 for(const h of data.heroes){
  assert.ok(data.by.dungeons[h.mount.dungeon]);assert.equal(data.by.items[h.mount.contract].price,0);
  const s=fixture(),before=JSON.stringify(s),q=mountQuote(s,h.id,'mountAdopt',data);

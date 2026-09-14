@@ -4138,5 +4138,31 @@
     "type": "material",
     "price": 0,
     "effect": {}
+  },
+  {
+    "id": "chaogai_token",
+    "name": "晁盖信物",
+    "type": "token",
+    "hero": "chaogai",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "完成东溪旧约取得，外传名册中交付十枚及碎银600直接邀请晁盖；不合成普通专属招贤令。"
+  },
+  {
+    "id": "chaogai_manual",
+    "name": "晁盖专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "在好汉详情用武学残页抄录，用于晁盖的招式升级。"
+  },
+  {
+    "id": "chaogai_mount_contract",
+    "name": "青骢护寨坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「野猪林传闻历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落，无必得保底。晁盖入寨后可凭契领骑，不另收碎银。"
   }
 ]

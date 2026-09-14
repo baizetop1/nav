@@ -23,7 +23,7 @@ const location=s.location;s=act(s,'buy',{id:'exp_pill'});s=act(s,'craftEquip',{i
 s=act(s,'strengthen',{id:uid});assert.equal(s.equipment.at(-1).plus,1);s=act(s,'dismantle',{id:uid});
 s=act(s,'recruit');assert.equal(s.recruit.total,1);s=act(s,'martialDrill');s.inventory.baisheng_mount_contract=1;s=act(s,'mountAdopt',{id:'baisheng'});
 assert.equal(s.location,location,'Common services do not teleport the player');
-for(const id of Object.keys(LOCAL_BENEFITS)){let visitor=structuredClone(s);visitor.location=id;const received=act(visitor,'localBenefit');assert.equal(received.daily.counters['visit_bonus_'+id],1);assert.throws(()=>act(received,'localBenefit'));const tomorrow=act(received,'refresh',{},received.clock+86400000);act(tomorrow,'localBenefit');}
+for(const id of Object.keys(LOCAL_BENEFITS)){let visitor=structuredClone(s);visitor.location=id;if(LOCAL_BENEFITS[id].flag){assert.throws(()=>act(visitor,'localBenefit'));visitor.progress.flags[LOCAL_BENEFITS[id].flag]=true;}const received=act(visitor,'localBenefit');assert.equal(received.daily.counters['visit_bonus_'+id],1);assert.throws(()=>act(received,'localBenefit'));const tomorrow=act(received,'refresh',{},received.clock+86400000);act(tomorrow,'localBenefit');}
 assert.throws(()=>act(s,'localBenefit'),'No remote claim of a different location benefit');
 const battle=act(act(s,'campFormation',{mode:'solo',deployment:1,tactic:'balanced'}),'campRaid',{id:'woods'});for(const type of ['travel','localBenefit','recruit','craftEquip'])assert.throws(()=>act(battle,type,{id:'forge'}));
 assert.ok(render({state:s,data,view:'forge'}).includes('craftEquip'));assert.ok(render({state:s,data,view:'recruit'}).includes('任何地点邀贤'));

@@ -7,7 +7,7 @@ import {validateSave} from '../public/game/js/save.js';
 const root=new URL('../public/game/data/',import.meta.url);
 const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',root),'utf8'))])));
 const teams={护阵:['luzhishen','wusong','baisheng'],枪弓:['linchong','huarong','songjiang'],谋略:['wuyong','gongsunsheng','ruanxiaoqi'],奇袭:['yanqing','shiqian','liutang'],护送:['yangzhi','chaijin','songjiang']};
-const newcomers=data.heroes.filter(h=>h.introducedIn===3);for(let i=0;i<newcomers.length;i+=3)teams['新将'+(i/3+1)]=newcomers.slice(i,i+3).map(h=>h.id);
+const newcomers=data.heroes.filter(h=>h.introducedIn>=3);for(let i=0;i<newcomers.length;i+=3)teams['新将'+(i/3+1)]=newcomers.slice(i,i+3).map(h=>h.id);
 assert.equal(new Set(Object.values(teams).flat()).size,data.heroes.length);
 const results=[];
 for(const d of data.dungeons.filter(d=>d.kind!=='scheme'))for(const [name,ids] of Object.entries(teams)){

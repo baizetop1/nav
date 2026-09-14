@@ -16,7 +16,7 @@ const at=Date.parse('2026-09-12T12:00:00+08:00');
 function fixture(){const s=newGame(d,at,93472);s.camp=freshCamp();s.camp.buildings={hall:4,farm:3,lumber:3,barracks:4,clinic:2,market:2};s.camp.food=10000;s.camp.troops=40;s.camp.deployment=10;s.player.silver=100000;s.team=['guansheng','huarong','linchong'];for(const h of d.heroes){s.heroes[h.id]={status:'owned',level:30,exp:0,quality:0};for(const id of h.skills){const flag=d.by.skills[id].training?.flag;if(flag)s.progress.flags[flag]=true;}}for(const id of ['iron','cloth','scrap_iron','martial_pages','spirit_essence','immortal_seal'])s.inventory[id]=500;return s;}
 const act=(s,type,a={})=>{const n=dispatch(d,s,{type,...a},s.clock);validateSave(n,d);assert.deepEqual(gameSnapshot(n,d),n);return n;};
 const begin=s=>act(s,'campRaid',{id:'woods'});
-assert.equal(Object.keys(CORPS).length,108);assert.equal(new Set(Object.values(CORPS).map(c=>c.name)).size,108);
+assert.equal(Object.keys(CORPS).length,d.heroes.length);assert.equal(new Set(Object.values(CORPS).map(c=>c.name)).size,d.heroes.length);
 for(const h of d.heroes){const c=CORPS[h.id];assert.ok(CORPS_PROFILES[c.profile]);let s=fixture();s.team=[h.id];s=begin(s);assert.equal(s.battle.team[0].corps.id,h.id);assert.equal(s.battle.team[0].corps.troops,10);assert.equal(unitArm(s.battle,s.battle.team[0],d),c.arm);}
 let s=begin(fixture());assert.deepEqual(s.battle.team.map(u=>u.corps.troops),[4,3,3]);assert.deepEqual(s.battle.team.map(u=>unitArm(s.battle,u,d)),['cavalry','ranged','infantry']);
 assert.ok(martialFactor(s.battle,s.battle.team[0],s.battle.enemy[0],d)>1);assert.ok(martialFactor(s.battle,s.battle.team[1],s.battle.enemy[0],d)<1);

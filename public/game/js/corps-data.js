@@ -1,5 +1,5 @@
 // 本作设定：108 位好汉各有自己的统领部队；名称并非原著编制考据。
-export const CORPS={
+export const CORPS={chaogai:{name:'东溪护义营',arm:'infantry',profile:'shield'},
   "songjiang": {
     "name": "忠义护旗军",
     "arm": "infantry",

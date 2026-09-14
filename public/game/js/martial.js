@@ -1,10 +1,11 @@
-import { doctrineFactor, waterBattle } from './doctrines.js?v=0.20.0';
-import { CORPS } from './development.js?v=0.20.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.24.0';
+import { doctrineFactor, waterBattle } from './doctrines.js?v=0.24.0';
+import { CORPS } from './development.js?v=0.24.0';
 export const ARMS={infantry:{name:'步军',hall:1,beats:'ranged'},ranged:{name:'弓军',hall:2,beats:'cavalry'},cavalry:{name:'骑军',hall:3,beats:'infantry'},neutral:{name:'无兵种克制',hall:1}};
 const cavalry=new Set(['guansheng','qinming','huyanzhuo','dongping','xuning','suochao','hantao','pengqi','xuanzan','haosiwen','huangxin','sunli']);
 const ranged=new Set(['huarong','zhangqing','yanqing','gongwang','dingdesun','lingzhen']);
 export const heroArm=h=>cavalry.has(h.id)?'cavalry':ranged.has(h.id)||h.type==='ranger'?'ranged':['strategist','support','healer'].includes(h.type)?'neutral':'infantry';
-export const enemyArm=id=>({soldier:'ranged',guard:'infantry',bandit:'infantry',bandit_chief:'infantry',road_raider:'cavalry'})[id]||'neutral';
+export const enemyArm=id=>({soldier:'ranged',guard:'infantry',bandit:'infantry',bandit_chief:'infantry',road_raider:'cavalry',v5_manor_guard:'infantry',v5_relief_rider:'cavalry',v5_luan_tingyu:'infantry',v5_zhu_biao:'cavalry'})[id]||'neutral';
 export const armFactor=(from,to)=>ARMS[from]?.beats===to?1.2:ARMS[to]?.beats===from ? .85 : 1;
 const traits={
   wusong:['孤胆','单英雄出阵且不带兵时，伤害 +20%。'],
@@ -18,7 +19,7 @@ const traits={
 };
 export function heroTrait(h){return traits[h.id]||({fighter:['奋勇','普攻伤害 +8%。'],defender:['坚守','开战时自身防御 +12%。'],ranger:['追猎','攻击气血不足一半的敌人时伤害 +15%。'],strategist:['识隙','谋攻伤害 +10%。'],support:['济困','开战时自身气血 +12%。'],healer:['济困','开战时自身气血 +12%。']})[h.type]||['奋勇','普攻伤害 +8%。'];}
 export function initializeMartial(s,b,d){
-  if(b.guest||!s.camp||b.context.type==='story')return;b.martial=2;b.frontierRules=1;
+  if(b.guest||!s.camp||b.context.type==='story'&&!isChapterBattle(b))return;b.martial=2;b.frontierRules=1;
   for(const u of b.team){u.training.quality=s.heroes[u.id].quality||0;const h=d.by.heroes[u.id],name=heroTrait(h)[0];
     if(name==='坚守')u.defense=Math.round(u.defense*1.12);
     if(name==='济困')u.hp=u.maxHp=Math.round(u.maxHp*1.12);

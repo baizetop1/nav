@@ -26,14 +26,14 @@ export function advance(s,ms,step=1000){while(ms>0&&!s.battle.outcome){const dt=
 function fight(ids,enemy='bandit_chief',dungeon=false){const s=growthFixture(ids);startBattle(s,data,{enemies:[enemy],context:dungeon?{type:'dungeon',id:'yezhulin'}:{type:'event',id:'road_bandits'}});return s;}
 function tank(s){for(const u of [...s.battle.team,...s.battle.enemy]){u.hp=u.maxHp=100000;u.attack=100;u.defense=80;u.strategy=100;u.nextAttackAt=10000;}for(const u of s.battle.team)u.rage=100;return s;}
 
-assert.equal(data.heroes.length,108);assert.equal(data.skills.filter(s=>s.training).length,432);
+assert.equal(data.heroes.filter(h=>h.group!=='external').length,108);assert.equal(data.skills.filter(s=>s.training).length,data.heroes.length*4);
 for(const h of data.heroes){
   assert.equal(h.skills.length,4);assert.equal(new Set(h.skills).size,4);assert.ok(h.mount.name);
   assert.equal(h.skills.filter(id=>data.by.skills[id].type!=='passive').length,2);
   assert.ok(data.by.items[h.id+'_manual']);
   const s=newGame(data);assert.match(unlockReason(s,data.by.skills[h.id+'_advanced']),/入寨/);
-  s.heroes[h.id].status='owned';assert.match(unlockReason(s,data.by.skills[h.id+'_advanced']),/8/);
-  s.heroes[h.id].level=8;assert.ok(unlockReason(s,data.by.skills[h.id+'_advanced']));
+  s.heroes[h.id].status='owned';const t=data.by.skills[h.id+'_advanced'].training;assert.match(unlockReason(s,data.by.skills[h.id+'_advanced']),new RegExp(String(t.level)));
+  s.heroes[h.id].level=t.level;if(t.flag)assert.ok(unlockReason(s,data.by.skills[h.id+'_advanced']));
   s.progress.flags[data.by.skills[h.id+'_advanced'].training.flag]=true;
   assert.equal(unlockReason(s,data.by.skills[h.id+'_advanced']),'');
 }

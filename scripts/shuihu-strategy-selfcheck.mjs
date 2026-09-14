@@ -15,7 +15,7 @@ const d=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.
 function fixture(date='2026-09-13'){const s=newGame(d,Date.parse(date+'T12:00:00+08:00'),93472);s.camp=freshCamp();s.camp.buildings={hall:5,farm:3,lumber:3,barracks:5,clinic:3,market:3};s.camp.food=10000;s.camp.wood=10000;s.camp.troops=30;s.camp.mode='solo';s.player.silver=10000;s.inventory.iron=100;s.inventory.martial_pages=100;s.team=['linchong'];for(const h of d.heroes)s.heroes[h.id]={status:'owned',level:30,exp:0};return s;}
 const act=(s,type,a={},now=s.clock)=>{const n=dispatch(d,s,{type,...a},now);validateSave(n,d);assert.deepEqual(gameSnapshot(n,d),n);return n;};
 function battle(s,terrain='land',troops=0){startBattle(s,d,{enemies:['guard','road_raider'],scale:5,context:{type:'frontier',id:terrain==='water'?'ferry':terrain==='mountain'?'quarry':terrain==='forest'?'woods':'farm',kind:'capture',terrain}});attachTroops(s,troops);return s;}
-assert.equal(Object.keys(HERO_SPECIALTIES).length,108);
+assert.equal(Object.keys(HERO_SPECIALTIES).length,d.heroes.length);
 for(const h of d.heroes){const p=HERO_SPECIALTIES[h.id];assert.ok(STYLES[p.style]);assert.ok(['land','forest','water','mountain'].includes(p.terrain));assert.ok(['farm','lumber','workshop'].includes(p.job));}
 // Every pair/trio is reachable within the 3-hero formation, with no phantom activation.
 for(const g of BONDS){assert.ok(g.heroes.length<=3);assert.ok(g.heroes.every(id=>d.by.heroes[id]));assert.ok(activeBonds(g.heroes,g.terrain||'land').includes(g));assert.ok(!activeBonds(g.heroes.slice(1),g.terrain||'land').includes(g));if(g.terrain)assert.ok(!activeBonds(g.heroes,'land').includes(g));}

@@ -25,14 +25,14 @@ const list=await request('/v1/slots');assert.equal(list.status,200);assert.equal
 assert.equal((await request('/v1/slots/7')).status,401);assert.equal((await request('/v1/admin/slots/7/key','POST')).status,401);
 const made=await request('/v1/admin/slots/7/key','POST',admin),key=made.body.key;assert.match(key,/^(?:[A-F0-9]{4}-){7}[A-F0-9]{4}$/);
 const key8=(await request('/v1/admin/slots/8/key','POST',admin)).body.key;
-const version=await request('/v1/game-version');assert.equal(version.body.heroes,108);assert.equal(version.body.rosterVersion,3);
+const version=await request('/v1/game-version');assert.equal(version.body.heroes,data.heroes.length);assert.equal(version.body.rosterVersion,data.config.rosterVersion);
 assert.equal(version.body.rotations,1);assert.equal(version.body.development,1);assert.equal(version.body.frontier,1);assert.equal(version.body.commands,1);assert.equal(version.body.strategy,1);assert.deepEqual((await request('/v1/leaderboard')).body.entries,[]);
 // A real old 14-hero upload migrates once; old clients cannot overwrite that new roster.
 const legacy=newGame(data,Date.now(),143);delete legacy.rosterVersion;
-for(const h of data.heroes.filter(h=>h.introducedIn===3))delete legacy.heroes[h.id];
+for(const h of data.heroes.filter(h=>h.introducedIn>=3))delete legacy.heroes[h.id];
 assert.equal((await request('/v1/slots/8','PUT',key8,{state:legacy,name:'旧名册'},1)).status,200);
 const expanded=(await request('/v1/slots/8','GET',key8)).body;
-assert.equal(Object.keys(expanded.state.heroes).length,108);assert.equal(expanded.state.rosterVersion,3);
+assert.equal(Object.keys(expanded.state.heroes).length,data.heroes.length);assert.equal(expanded.state.rosterVersion,data.config.rosterVersion);
 assert.equal((await request('/v1/slots/8','PUT',key8,{state:legacy,name:'旧页面'},2)).status,409);
 assert.equal((await request('/v1/slots/8','GET',key8)).body.cloudRevision,2);
 assert.equal((await request('/v1/slots/7','GET',key8)).status,401);

@@ -1,5 +1,5 @@
-import { dispatch } from './core.js?v=0.20.0';
-export const SORTIES=['campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart'];
+import { dispatch } from './core.js?v=0.24.0';
+export const SORTIES=['campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle'];
 export function prepareSortie(s,d,action,setup,now=s.clock){
  let next=s;
  try{

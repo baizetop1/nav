@@ -97,5 +97,202 @@
       }
     ],
     "baseLevel": 1
+  },
+  {
+    "id": "volume_three",
+    "title": "梁山初聚",
+    "number": 3,
+    "entry": "v3_council",
+    "condition": {
+      "flag": "volume_two_complete"
+    },
+    "completeFlag": "volume_three_complete",
+    "requirements": [
+      {
+        "label": "寨民安居",
+        "condition": {
+          "flag": "v3_settled"
+        }
+      },
+      {
+        "label": "粮道畅通",
+        "condition": {
+          "flag": "v3_grain_done"
+        }
+      },
+      {
+        "label": "木道畅通",
+        "condition": {
+          "flag": "v3_timber_done"
+        }
+      },
+      {
+        "label": "渡船接驳",
+        "condition": {
+          "flag": "v3_ferry_done"
+        }
+      },
+      {
+        "label": "守住寨门",
+        "condition": {
+          "flag": "v3_defended"
+        }
+      },
+      {
+        "label": "水泊立约",
+        "condition": {
+          "flag": "v3_oath_done"
+        }
+      }
+    ],
+    "ending": "【梁山初聚】第三卷完。寨民安居，粮木水路畅通。水泊盟亭已开通三山驿路，可继续第四卷《三山聚义》；原有经营、人物行记、精英远征与进阶守寨演武仍可办理。",
+    "effects": [
+      {
+        "type": "currency",
+        "id": "silver",
+        "amount": 600
+      },
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 3
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 4
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_four",
+    "title": "三山聚义",
+    "number": 4,
+    "entry": "v4_crossroads",
+    "condition": {
+      "flag": "volume_three_complete"
+    },
+    "completeFlag": "volume_four_complete",
+    "requirements": [
+      {
+        "label": "二龙山结盟",
+        "condition": {
+          "flag": "v4_erlong_allied"
+        }
+      },
+      {
+        "label": "桃花山结盟",
+        "condition": {
+          "flag": "v4_taohua_allied"
+        }
+      },
+      {
+        "label": "白虎山结盟",
+        "condition": {
+          "flag": "v4_baihu_allied"
+        }
+      },
+      {
+        "label": "三山同守并立约",
+        "condition": {
+          "flag": "v4_union_done"
+        }
+      }
+    ],
+    "ending": "【三山聚义】第四卷完。各寨的合作记录已留下。三山联合营已开通独龙冈行营，可继续第五卷《三打祝家庄》，探明迷径、断援截粮，再合围庄院。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 3
+      },
+      {
+        "type": "item",
+        "id": "immortal_seal",
+        "amount": 2
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_five",
+    "title": "三打祝家庄",
+    "number": 5,
+    "entry": "v5_camp",
+    "condition": {
+      "flag": "volume_four_complete"
+    },
+    "completeFlag": "volume_five_complete",
+    "requirements": [
+      {
+        "label": "行营整备",
+        "condition": {
+          "flag": "v5_prepared"
+        }
+      },
+      {
+        "label": "查清迷径",
+        "condition": {
+          "flag": "v5_route_known"
+        }
+      },
+      {
+        "label": "一打试阵",
+        "condition": {
+          "flag": "v5_first_done"
+        }
+      },
+      {
+        "label": "断援或断粮",
+        "condition": {
+          "any": [
+            {
+              "flag": "v5_east_cut"
+            },
+            {
+              "flag": "v5_west_cut"
+            }
+          ]
+        }
+      },
+      {
+        "label": "二打破门",
+        "condition": {
+          "flag": "v5_second_done"
+        }
+      },
+      {
+        "label": "三打内院",
+        "condition": {
+          "flag": "v5_third_done"
+        }
+      },
+      {
+        "label": "清点粮仓并安置归人",
+        "condition": {
+          "flag": "v5_settled"
+        }
+      }
+    ],
+    "ending": "【三打祝家庄】第五卷完。道路、援军与粮草的准备，都已化作这一战的结果。百姓归居，队伍收整。第六卷《高唐救援》目前仅为后续预告，尚未开放。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 4
+      },
+      {
+        "type": "item",
+        "id": "immortal_seal",
+        "amount": 3
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 8
+      }
+    ],
+    "baseLevel": 1
   }
 ]

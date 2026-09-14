@@ -34,8 +34,8 @@ await a.write(refreshed);assert.equal(a.record.cloud.clean,false,'Time refresh w
 await a.markCloud({...a.record.cloud,clean:true});await a.rename('新的名称');assert.equal(a.record.cloud.clean,false);
 const oldRecord=structuredClone(a.record);db.commit=async()=>{throw new Error('QuotaExceededError');};
 await assert.rejects(()=>a.write(state),/Quota/);assert.deepEqual(a.record,oldRecord,'Quota failure does not adopt an uncommitted record');
-const requests=[],client=new CloudClient('https://saves.example.com',data,async(url,options)=>{requests.push({url,options});return Response.json({id:7,cloudRevision:19});});
-client.setKey(7,'TEST-KEY');await client.upload(7,18,state,'主档');assert.equal(requests[0].options.headers['If-Match'],'"18"');assert.equal(requests[0].options.credentials,'omit');assert.ok(!requests[0].options.body.includes('TEST-KEY'));client.forget();assert.equal(client.keys.size,0);
+const requests=[],client=new CloudClient('https://saves.example.com',data,async(url,options)=>{requests.push({url,options});return Response.json(url.endsWith('/v1/game-version')?{rosterVersion:data.config.rosterVersion,heroes:data.heroes.length}:{id:7,cloudRevision:19});});
+client.setKey(7,'TEST-KEY');await client.upload(7,18,state,'主档');assert.equal(requests[1].options.headers['If-Match'],'"18"');assert.equal(requests[1].options.credentials,'omit');assert.ok(!requests[1].options.body.includes('TEST-KEY'));client.forget();assert.equal(client.keys.size,0);
 await assert.rejects(()=>new CloudClient('',data).list(),/尚未部署/);
 for(const url of ['http://example.com','https://user:pass@example.com','https://example.com/path'])assert.throws(()=>new CloudClient(url,data));
 console.log('Save box: 20 slots, slot-local CAS/backups, quota preservation, game-only exports, legacy imports, battle snapshot parity and cloud request contract passed.');
