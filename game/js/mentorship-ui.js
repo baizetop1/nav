@@ -1,4 +1,4 @@
-import { MENTOR_LIMIT } from './mentorship.js?v=0.20.0';
+import { MENTOR_LIMIT } from './mentorship.js?v=0.24.0';
 export function mentorshipPanel(s,d,esc,btn){
   const owned=d.heroes.filter(h=>s.heroes[h.id].status==='owned'),mentors=owned.filter(h=>s.heroes[h.id].level>=10).sort((a,b)=>s.heroes[b.id].level-s.heroes[a.id].level),students=[...owned].sort((a,b)=>s.heroes[a.id].level-s.heroes[b.id].level),mentor=mentors[0]?.id,student=students.find(h=>h.id!==mentor)?.id;
   const options=(list,selected)=>'<option value="">请选择</option>'+list.map(h=>'<option value="'+h.id+'" '+(h.id===selected?'selected':'')+'>'+esc(h.name)+' · '+s.heroes[h.id].level+' 级'+(s.affairs?.mission?.hero===h.id?'（外派中）':'')+'</option>').join('');

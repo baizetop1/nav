@@ -1,9 +1,10 @@
-import { experienceResult } from './progression.js?v=0.20.0';
-import { applySets } from './equipment-sets.js?v=0.20.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.20.0';
-import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.20.0';
-import { heroRank } from './map.js?v=0.20.0';
-import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.20.0';
+import { isExternal } from './roster.js?v=0.24.0';
+import { experienceResult } from './progression.js?v=0.24.0';
+import { applySets } from './equipment-sets.js?v=0.24.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.24.0';
+import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.24.0';
+import { heroRank } from './map.js?v=0.24.0';
+import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.24.0';
 export function knowHero(state, id, status, data) {
   const hero = state.heroes[id];
   if (heroRank[status] > heroRank[hero.status]) { hero.status = status; journal(state, `${data.by.heroes[id].name}：${({heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'})[status]}。`); }
@@ -55,19 +56,20 @@ export function rollOrdinary(state, data) {
 export function recruit(state, data, target) {
   let chosen;
   if (target) {
+    requireRule(data.by.heroes[target]&&!isExternal(data.by.heroes[target]),'外传人物请在名册中交付信物邀请。');
     requireRule(data.by.heroes[target] && heroRank[state.heroes[target].status] >= 2, '先在江湖与此人相识，再行专属招贤。');
     requireRule(state.inventory[target+'_order'] > 0, '尚无这位好汉的专属招贤令。');
     state.inventory[target+'_order']--;
     const n = random(state), misses = state.recruit.fate[target] || 0;
     if (misses >= 4 || n < .25) chosen = data.by.heroes[target];
-    else if (n < .30) chosen = pick(state, data.heroes.filter(h => h.star === 5 && h.id !== target));
-    else chosen = pick(state, data.heroes.filter(h => h.star < 5 && h.id !== target));
+    else if (n < .30) chosen = pick(state, data.heroes.filter(h => !isExternal(h) && h.star === 5 && h.id !== target));
+    else chosen = pick(state, data.heroes.filter(h => !isExternal(h) && h.star < 5 && h.id !== target));
     state.recruit.fate[target] = chosen.id === target ? 0 : misses + 1;
   } else {
     requireRule(state.inventory.recruit_order > 0, '尚无招贤令，可从差事、剧情或集市取得。');
     state.inventory.recruit_order--;
     const star = rollOrdinary(state, data);
-    chosen = pick(state, data.heroes.filter(h => h.star === star));
+    chosen = pick(state, data.heroes.filter(h => !isExternal(h) && h.star === star));
   }
   const previousStatus=state.heroes[chosen.id].status;
   const previousTokens=state.inventory[chosen.id+'_token']||0,previousMerit=state.player.merit;

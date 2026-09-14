@@ -1,6 +1,6 @@
-import { frontierMap } from './frontier-ui.js?v=0.20.0';
-import { enemyIntel } from './martial-ui.js?v=0.20.0';
-import { routeTo, routeBarriers, conditionText, LOCAL_BENEFITS } from './world-map.js?v=0.20.0';
+import { frontierMap } from './frontier-ui.js?v=0.24.0';
+import { enemyIntel } from './martial-ui.js?v=0.24.0';
+import { routeTo, routeBarriers, conditionText, LOCAL_BENEFITS } from './world-map.js?v=0.24.0';
 export function worldMap(s,d,target,esc,btn){
   const selected=d.by.maps[target]||d.by.maps[s.location],path=routeTo(s,d,selected.id),preview=path||routeTo(s,d,selected.id,true),barriers=path?[]:routeBarriers(s,d,preview),regions=[...new Set(d.maps.map(m=>m.region))];
   const feature=m=>[...(LOCAL_BENEFITS[m.id]?[LOCAL_BENEFITS[m.id].name+' · 每日一次']:[]),...m.dungeons.map(id=>'副本：'+d.by.dungeons[id].name),...d.heroes.filter(h=>h.meetMap===m.id).map(h=>'可遇：'+h.name)].join(' · ')||'人物往事与江湖寻访';
@@ -9,4 +9,4 @@ export function worldMap(s,d,target,esc,btn){
     <nav class="atlas-regions" aria-label="地图区域">${regions.map((r,i)=>`<button type="button" data-map-region="${i}">${esc(r)}</button>`).join('')}</nav>
     <div class="atlas-chart">${regions.map((r,i)=>`<section class="atlas-region" id="map-region-${i}"><h2>${esc(r)}</h2><div class="atlas-nodes">${d.maps.filter(m=>m.region===r).map(m=>`<article class="atlas-node ${m.id===s.location?'node-current':''} ${m.id===selected.id?'node-selected':''}"><button type="button" class="atlas-place" data-command="${esc(JSON.stringify({type:'ui_mapInspect',id:m.id}))}" aria-pressed="${m.id===selected.id}"><b>${esc(m.name)}</b><span>${m.id===s.location?'当前所在':s.progress.visited.includes(m.id)?'曾经到访':'尚未到访'}</span></button><p class="atlas-exits">${m.links.map(l=>`<span>→ ${esc(d.by.maps[l.target].name)}${l.condition?` <small>〔${esc(conditionText(l.condition,d))}〕</small>`:''}</span>`).join('')}</p><p class="atlas-feature">${esc(feature(m))}</p></article>`).join('')}</div></section>`).join('')}</div></section>`;
 }
-export function localBenefit(s,btn){const b=LOCAL_BENEFITS[s.location];if(!b)return '';const claimed=!!s.daily.counters['visit_bonus_'+s.location];return `<section class="local-benefit"><h2>此地额外好处 · ${b.name}</h2><p>${b.description}</p><p class="note">每日可领取一次；招募、打造、采买和领骑可直接使用各自功能入口。</p>${btn(claimed?'今日酬谢已领':'领取探访酬谢',{type:'localBenefit'},'secondary',claimed)}</section>`;}
+export function localBenefit(s,btn){const b=LOCAL_BENEFITS[s.location];if(!b)return '';const claimed=!!s.daily.counters['visit_bonus_'+s.location];return `<section class="local-benefit"><h2>此地额外好处 · ${b.name}</h2><p>${b.description}</p><p class="note">每日可领取一次；招募、打造、采买和领骑可直接使用各自功能入口。</p>${b.flag&&!s.progress.flags[b.flag]?'<p class="note">先完成此地事务，探访酬谢随后开放。</p>':''}${btn(claimed?'今日酬谢已领':'领取探访酬谢',{type:'localBenefit'},'secondary',claimed||!!b.flag&&!s.progress.flags[b.flag])}</section>`;}

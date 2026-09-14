@@ -451,5 +451,188 @@
         "strength_charm": 2
       }
     }
+  },
+  {
+    "id": "main_v3_foundation",
+    "name": "安居之后",
+    "description": "完善安寨设施并在寨民新居确认。已有建筑直接满足条件。",
+    "type": "main",
+    "chapter": "volume_three",
+    "condition": {
+      "flag": "v3_settled"
+    },
+    "reward": {
+      "silver": 150,
+      "items": {
+        "cloth": 4
+      }
+    }
+  },
+  {
+    "id": "main_v3_supply",
+    "name": "水陆连通",
+    "description": "在两条物资路任一打通后，夺回水陆接驳口。",
+    "type": "main",
+    "chapter": "volume_three",
+    "condition": {
+      "flag": "v3_ferry_done"
+    },
+    "reward": {
+      "silver": 150,
+      "items": {
+        "exp_pill": 2
+      }
+    }
+  },
+  {
+    "id": "main_v3_complete",
+    "name": "梁山初聚",
+    "description": "安寨、通路、守寨之后，在水泊盟亭立约，完成第三卷。",
+    "type": "main",
+    "chapter": "volume_three",
+    "condition": {
+      "flag": "volume_three_complete"
+    },
+    "reward": {
+      "silver": 200,
+      "items": {
+        "martial_pages": 5
+      }
+    }
+  },
+  {
+    "id": "main_v4_erlong",
+    "name": "二龙同行",
+    "description": "通过该寨任一种合作方式结盟，酬谢只领取一次。",
+    "type": "main",
+    "chapter": "volume_four",
+    "condition": {
+      "flag": "v4_erlong_allied"
+    },
+    "reward": {
+      "silver": 200,
+      "items": {
+        "herb": 3
+      }
+    }
+  },
+  {
+    "id": "main_v4_taohua",
+    "name": "桃花相约",
+    "description": "通过该寨任一种合作方式结盟，酬谢只领取一次。",
+    "type": "main",
+    "chapter": "volume_four",
+    "condition": {
+      "flag": "v4_taohua_allied"
+    },
+    "reward": {
+      "silver": 200,
+      "items": {
+        "scrap_iron": 4
+      }
+    }
+  },
+  {
+    "id": "main_v4_baihu",
+    "name": "白虎来援",
+    "description": "通过该寨任一种合作方式结盟，酬谢只领取一次。",
+    "type": "main",
+    "chapter": "volume_four",
+    "condition": {
+      "flag": "v4_baihu_allied"
+    },
+    "reward": {
+      "silver": 200,
+      "items": {
+        "mount_feed": 3
+      }
+    }
+  },
+  {
+    "id": "main_v4_union",
+    "name": "三山聚义",
+    "description": "三寨结盟后，完成联合守寨并在联合营确认立约。",
+    "type": "main",
+    "chapter": "volume_four",
+    "condition": {
+      "flag": "volume_four_complete"
+    },
+    "reward": {
+      "silver": 300,
+      "items": {
+        "exp_pill": 3
+      }
+    }
+  },
+  {
+    "id": "main_v5_probe",
+    "name": "试明虚实",
+    "description": "完成第五卷对应事务并在当地确认战果，酬劳只领取一次。",
+    "type": "main",
+    "chapter": "volume_five",
+    "condition": {
+      "flag": "v5_first_done"
+    },
+    "reward": {
+      "silver": 200,
+      "items": {
+        "exp_pill": 2
+      }
+    }
+  },
+  {
+    "id": "main_v5_cut",
+    "name": "断援截粮",
+    "description": "完成第五卷对应事务并在当地确认战果，酬劳只领取一次。",
+    "type": "main",
+    "chapter": "volume_five",
+    "condition": {
+      "any": [
+        {
+          "flag": "v5_east_cut"
+        },
+        {
+          "flag": "v5_west_cut"
+        }
+      ]
+    },
+    "reward": {
+      "silver": 250,
+      "items": {
+        "martial_pages": 4
+      }
+    }
+  },
+  {
+    "id": "main_v5_second",
+    "name": "破开庄门",
+    "description": "完成第五卷对应事务并在当地确认战果，酬劳只领取一次。",
+    "type": "main",
+    "chapter": "volume_five",
+    "condition": {
+      "flag": "v5_second_done"
+    },
+    "reward": {
+      "silver": 300,
+      "items": {
+        "iron": 4
+      }
+    }
+  },
+  {
+    "id": "main_v5_settle",
+    "name": "祝庄事毕",
+    "description": "完成第五卷对应事务并在当地确认战果，酬劳只领取一次。",
+    "type": "main",
+    "chapter": "volume_five",
+    "condition": {
+      "flag": "volume_five_complete"
+    },
+    "reward": {
+      "silver": 400,
+      "items": {
+        "mount_feed": 4
+      }
+    }
   }
 ]

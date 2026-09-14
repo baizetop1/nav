@@ -1,11 +1,12 @@
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.20.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.20.0';
-import { orderDamageFactor } from './commands.js?v=0.20.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.20.0';
-import { unitArm } from './martial.js?v=0.20.0';
-import { martialFactor } from './martial.js?v=0.20.0';
-import { bounded, pick, random } from './utils.js?v=0.20.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.20.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.24.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.24.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.24.0';
+import { orderDamageFactor } from './commands.js?v=0.24.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.24.0';
+import { unitArm } from './martial.js?v=0.24.0';
+import { martialFactor } from './martial.js?v=0.24.0';
+import { bounded, pick, random } from './utils.js?v=0.24.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.24.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -20,8 +21,8 @@ export function initializeGrowthBattle(state,b,data){
     u.skills=u.skills.filter(id=>!unlockReason(state,data.by.skills[id],b.guest));
     u.training={levels:Object.fromEntries(u.skills.map(id=>[id,b.guest?1:skillLevel(state,id)])),bond:u.skills.find(id=>data.by.skills[id].training?.tier==='bond')||null};
   }
-  if(['dungeon','rotation','frontier'].includes(b.context.type))for(const u of b.enemy){
-    const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider'})[u.model];
+  if(['dungeon','rotation','frontier'].includes(b.context.type)||isChapterBattle(b))for(const u of b.enemy){
+    const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider',v5_luan_tingyu:'chief',v5_zhu_biao:'raider'})[u.model];
     if(kind)u.boss={kind,readyAt:6000,pendingAt:0,phase:0};
   }
 }
@@ -82,6 +83,8 @@ function bondTrigger(state,u,target,data,api){
     case 'baisheng':heal(b,u,lowest(party),.04*boost,skill.name,api);break;
     case 'chaijin':status(b,party[0],'guard',.25*boost,4000,api);break;
     case 'yangzhi':give(2);break;
+    default:{const e=skill.bondEffect;if(e?.kind==='guard')status(b,lowest(party),'guard',e.rate*boost,e.duration,api);else if(e?.kind==='heal')heal(b,u,lowest(party),e.rate*boost,skill.name,api);else if(e?.kind==='rage')give(e.rate);else if(e?.kind==='strike')strike(state,u,target,{kind:'damage',rate:e.rate*boost},skill.name,api);}
+
   }
 }
 export function growthSkillReason(b,u,skill){

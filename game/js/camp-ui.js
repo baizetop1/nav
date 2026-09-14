@@ -1,16 +1,16 @@
-import { mentorshipPanel } from './mentorship-ui.js?v=0.20.0';
-import { campOverview } from './camp-overview.js?v=0.20.0';
-import { affairsPanel } from './management-ui.js?v=0.20.0';
-import { productionPanel, frontierMap } from './frontier-ui.js?v=0.20.0';
-import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.20.0';
-import { ARMS } from './martial.js?v=0.20.0';
-import { enemyIntel } from './martial-ui.js?v=0.20.0';
-import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.20.0';
-import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.20.0';
-import { dungeonMountLoot } from './growth-ui.js?v=0.20.0';
-import { icon } from './icons.js?v=0.20.0';
+import { mentorshipPanel } from './mentorship-ui.js?v=0.24.0';
+import { campOverview } from './camp-overview.js?v=0.24.0';
+import { affairsPanel } from './management-ui.js?v=0.24.0';
+import { productionPanel, frontierMap } from './frontier-ui.js?v=0.24.0';
+import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.24.0';
+import { ARMS } from './martial.js?v=0.24.0';
+import { enemyIntel } from './martial-ui.js?v=0.24.0';
+import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.24.0';
+import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.24.0';
+import { dungeonMountLoot } from './growth-ui.js?v=0.24.0';
+import { icon } from './icons.js?v=0.24.0';
 
-export const portrait=(h,small=false)=>`<span class="hero-portrait portrait-${h.id}${h.introducedIn===3?' portrait-new':''}${small?' portrait-small':''}" role="img" aria-label="${h.name}人物卡">${h.introducedIn===3?`<span class="portrait-monogram"><b>${h.name.slice(0,1)}</b><small>立绘待补</small></span>`:''}</span>`;
+export const portrait=(h,small=false)=>h.portrait?`<span class="hero-portrait portrait-${h.id}${small?' portrait-small':''}"><img src="${h.portrait}" alt="${h.name}人物像" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></span>`:`<span class="hero-portrait portrait-${h.id}${h.introducedIn===3?' portrait-new':''}${small?' portrait-small':''}" role="img" aria-label="${h.name}人物卡">${h.introducedIn===3?`<span class="portrait-monogram"><b>${h.name.slice(0,1)}</b><small>立绘待补</small></span>`:''}</span>`;
 export function campPage(s,d,esc,btn){
   const c=s.camp;
   if(!c)return `<section class="camp-arrival"><p class="kicker">水泊初起 · 自立门户</p><h1>先有一座寨，再聚天下义。</h1><p class="prose">聚义厅已经选好地基。请白胜带乡人落脚，修起农田与伐木场，再让英雄带兵出征。</p><div class="camp-faces">${['baisheng','wusong','linchong','wuyong'].map(id=>portrait(d.by.heroes[id])).join('')}</div>${btn('建立自己的寨子',{type:'campFound'},'primary')}<p class="note">已有英雄、坐骑和剧情进度保留。寨务与江湖历练可自由选择。</p></section>`;
@@ -26,5 +26,5 @@ export function campPage(s,d,esc,btn){
       <div class="raid-grid">${Object.entries(RAIDS).map(([id,r])=>`<article class="card"><h3>${r.name}</h3><p>${r.description}</p><p class="meta">敌军：${r.enemy.map(e=>d.by.enemies[e].name).join('、')}</p>${raidIntel(s,d,id)}${enemyIntel(s,d,r.enemy,r.scale)}<p class="meta">聚义厅 ${r.level}级 · 体力 8 · 粮草 ${r.food+Math.ceil(n/2)}</p><p class="note">胜利：木材 ${r.wood}、粮草 ${id==='convoy'?55:15}、碎银 ${r.silver}、功勋 8、每位出阵英雄历练 ${r.exp}、经验丹 1、武学残页 1</p>${equipmentLoot(d,r.level)}${btn('出征',{type:'campRaid',id},'primary',c.buildings.hall<r.level||!s.team.length||s.player.stamina<8||c.food<r.food+Math.ceil(n/2)||(c.mode==='army'&&!n))}</article>`).join('')}</div>
     </section>
     <details class="fold-section" data-fold="camp-dungeons"><summary>副本远征 · 坐骑契独立掉率 20%</summary><p class="note">聚义厅等级逐步开放远征。战斗副本沿用上方出征配置；计策副本靠安排取胜，不派兵。失败或撤退不掉契。</p>${d.dungeons.map(x=>{const level=Math.min(5,1+Math.floor(x.level/10)),open=c.buildings.hall>=level;return `<article class="card"><h3>${esc(x.name)}</h3>${dungeonMountLoot(s,d,x.id,esc)}<p class="meta">聚义厅 ${level}级 · 英雄 ${x.level}级 · 体力 ${x.cost} · 今日 ${s.daily.dungeons[x.id]||0}/${x.limit} 次</p>${btn('开始远征',{type:'dungeon',id:x.id},'secondary',!open||!s.team.length||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||s.player.stamina<x.cost||(s.daily.dungeons[x.id]||0)>=x.limit)}</article>`;}).join('')}</details>
-    <section class="location"><h2>聚义迎贤 · ${Object.values(s.heroes).filter(h=>h.status==='owned').length} / 108</h2><p class="note">经营与出征积累声望，即可从点将录直接迎入好汉。凡品好汉均可逐步培养至灵、仙。</p><button type="button" class="primary" data-view="recruit">打开 108 将点将录</button></section>`;
+    <section class="location"><h2>聚义迎贤 · ${d.heroes.filter(h=>h.group!=='external'&&s.heroes[h.id].status==='owned').length} / 108 · 外传 ${d.heroes.filter(h=>h.group==='external'&&s.heroes[h.id].status==='owned').length} / ${d.heroes.filter(h=>h.group==='external').length}</h2><p class="note">经营与出征积累声望，即可从点将录直接迎入好汉。凡品好汉均可逐步培养至灵、仙。</p><button type="button" class="primary" data-view="recruit">打开正册与外传名册</button></section>`;
 }

@@ -236,5 +236,74 @@
       "截道者追击太急，侧翼空了。",
       "截道者高声招呼同伙。"
     ]
+  },
+  {
+    "id": "v5_manor_guard",
+    "name": "祝庄守卫",
+    "attribute": {
+      "hp": 600,
+      "attack": 90,
+      "defense": 65,
+      "speed": 65,
+      "strategy": 30
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "庄兵正在收拢阵形，注意前排承伤与首领蓄势。"
+    ]
+  },
+  {
+    "id": "v5_relief_rider",
+    "name": "祝庄援骑",
+    "attribute": {
+      "hp": 850,
+      "attack": 105,
+      "defense": 50,
+      "speed": 85,
+      "strategy": 20
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "庄兵正在收拢阵形，注意前排承伤与首领蓄势。"
+    ]
+  },
+  {
+    "id": "v5_luan_tingyu",
+    "name": "栾廷玉",
+    "attribute": {
+      "hp": 1600,
+      "attack": 135,
+      "defense": 60,
+      "speed": 80,
+      "strategy": 45
+    },
+    "skills": [
+      "bandit_cut",
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "庄兵正在收拢阵形，注意前排承伤与首领蓄势。"
+    ]
+  },
+  {
+    "id": "v5_zhu_biao",
+    "name": "祝彪",
+    "attribute": {
+      "hp": 1800,
+      "attack": 145,
+      "defense": 70,
+      "speed": 85,
+      "strategy": 60
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "庄兵正在收拢阵形，注意前排承伤与首领蓄势。"
+    ]
   }
 ]

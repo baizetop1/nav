@@ -1,8 +1,8 @@
-import { attributes } from './hero.js?v=0.20.0';
-import { experienceToNext, experienceResult, ATTRIBUTE_NAMES } from './progression.js?v=0.20.0';
-import { clone, journal, requireRule } from './utils.js?v=0.20.0';
-import { itemAction } from './item.js?v=0.20.0';
-import { growthAction } from './growth.js?v=0.20.0';
+import { attributes } from './hero.js?v=0.24.0';
+import { experienceToNext, experienceResult, ATTRIBUTE_NAMES } from './progression.js?v=0.24.0';
+import { clone, journal, requireRule } from './utils.js?v=0.24.0';
+import { itemAction } from './item.js?v=0.24.0';
+import { growthAction } from './growth.js?v=0.24.0';
 
 const kinds={experience:'赠经验丹',manual:'抄录招式书',feed:'喂养坐骑',buy:'采买物资'};
 export const SHOP_ITEMS=['jinchuangyao','huiqisan','jiedudan','exp_pill','wine','iron','cloth','night_clothes','recruit_order'];

@@ -1,24 +1,24 @@
-import { collectionQuote, workshopQuote } from './production.js?v=0.20.0';
-import { productionDialog } from './production-ui.js?v=0.20.0';
-import { mentorshipQuote } from './mentorship.js?v=0.20.0';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.20.0';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.20.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.20.0';
-import { presetReason } from './development.js?v=0.20.0';
-import { batchQuote } from './batch.js?v=0.20.0';
-import { batchDialog } from './batch-ui.js?v=0.20.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.20.0';
-import { ActivityLog } from './activity.js?v=0.20.0';
-import { loadData } from './data.js?v=0.20.0';
-import { dispatch, newGame } from './core.js?v=0.20.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.20.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.20.0';
-import { patchElement } from './dom.js?v=0.20.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.24.0';
+import { productionDialog } from './production-ui.js?v=0.24.0';
+import { mentorshipQuote } from './mentorship.js?v=0.24.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.24.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.24.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.24.0';
+import { presetReason } from './development.js?v=0.24.0';
+import { batchQuote } from './batch.js?v=0.24.0';
+import { batchDialog } from './batch-ui.js?v=0.24.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.24.0';
+import { ActivityLog } from './activity.js?v=0.24.0';
+import { loadData } from './data.js?v=0.24.0';
+import { dispatch, newGame } from './core.js?v=0.24.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.24.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.24.0';
+import { patchElement } from './dom.js?v=0.24.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.20.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.20.0';
-import { CloudClient } from './cloud.js?v=0.20.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.20.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.24.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.24.0';
+import { CloudClient } from './cloud.js?v=0.24.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.24.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
@@ -280,6 +280,7 @@ async function handle(command){
   }
   if(type==='ui_rosterReset'){roster={};paint();for(const k of ['query','status','group','quality','role'])document.getElementById('roster-'+k).value=k==='query'?'':'all';return;}
   if(type==='ui_rosterPage'){roster={...roster,page:command.page,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_v3Map'||type==='ui_v4Map'||type==='ui_v5Map'){view='map';mapTarget=id;paint(true);document.getElementById('atlas-target')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_readyHero'){if(!data.by.heroes[id])return;view='heroes';roster={selected:id,query:data.by.heroes[id].name};paint(true);const el=document.getElementById('roster-detail');if(command.kind==='story')el?.querySelector('[data-fold="chronicle-'+id+'"]')?.setAttribute('open','');if(command.kind==='skill')el?.querySelector('[data-fold="hero-'+id+'"]')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_eliteOpen'){view='trials';paint(true);const el=document.querySelector('[data-fold="elite-'+id+'"]');el?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_goalOpen'){const g=state.development?.goal;if(g?.kind==='craft')view='forge';else if(g){view='heroes';roster={selected:g.id,query:data.by.heroes[g.id].name};}paint(true);document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}

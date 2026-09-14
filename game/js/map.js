@@ -8,6 +8,8 @@ export function meets(state, condition) {
       case 'flag': return !!state.progress.flags[value];
       case 'notFlag': return !state.progress.flags[value];
       case 'item': return (state.inventory[value] || 0) >= (condition.count || 1);
+      case 'campBuilding': return (state.camp?.buildings[value]||0)>=(condition.count||1);
+      case 'campMode': return state.camp?.mode===value;
       case 'count': case 'status': return true;
       case 'stat': return (state.stats[value] || 0) >= (condition.count || 1);
       case 'prestige': return state.player.prestige >= value;

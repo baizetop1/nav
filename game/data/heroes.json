@@ -5192,5 +5192,61 @@
     "group": "disha",
     "starSign": "地狗星",
     "introducedIn": 3
+  },
+  {
+    "id": "chaogai",
+    "name": "晁盖",
+    "title": "托塔天王",
+    "star": 5,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1280,
+      "attack": 115,
+      "defense": 106,
+      "speed": 68,
+      "strategy": 62
+    },
+    "growth": {
+      "hp": 52,
+      "attack": 5,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 2
+    },
+    "skills": [
+      "chaogai_active",
+      "chaogai_passive",
+      "chaogai_advanced",
+      "chaogai_bond"
+    ],
+    "story": "东溪村保正，仗义疏财。外传收录，不占一百零八星位；在本作中可与寨中好汉共同出征。",
+    "core": false,
+    "meetMap": "dongxi",
+    "meetCondition": {
+      "flag": "external_chaogai_helped"
+    },
+    "obtain": {
+      "type": "external",
+      "token": "chaogai_token",
+      "count": 10,
+      "silver": 600,
+      "hall": 3,
+      "condition": {
+        "flag": "external_chaogai_helped"
+      }
+    },
+    "dialogue": "晁盖道：“先安顿乡人，再说同往。寨中若肯担事，晁某也愿出一分力。”",
+    "introducedIn": 4,
+    "mount": {
+      "name": "青骢护寨",
+      "description": "晁盖专属脚力；名称与羁绊为本作改编设定。",
+      "dungeon": "yezhulin",
+      "contract": "chaogai_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "外传人物",
+    "portrait": "art/chaogai-v1.png"
   }
 ]

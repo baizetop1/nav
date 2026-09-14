@@ -1,6 +1,6 @@
-import { grant } from './item.js?v=0.20.0';
-import { count, requireRule, journal } from './utils.js?v=0.20.0';
-import { battleTerrain } from './strategy-data.js?v=0.20.0';
+import { grant } from './item.js?v=0.24.0';
+import { count, requireRule, journal } from './utils.js?v=0.24.0';
+import { battleTerrain } from './strategy-data.js?v=0.24.0';
 const wins=(s,id)=>s.stats['hero_wins_'+id]||0;
 export const HERO_CHRONICLES={
  linchong:{title:'枪棒教头',opening:'林冲看过寨中枪架，愿先从站桩、护队教起。',middle:'夜练之后，他请你带新兵走一趟险路，检验阵脚是否稳当。',ending:'枪阵已成，林冲把练兵心得留在寨中。',task:'林冲参与胜利 3 次，并穿戴一件强化 +3 的装备',test:s=>wins(s,'linchong')>=3&&s.equipment.some(e=>e.hero==='linchong'&&e.plus>=3),materials:{iron:6,martial_pages:4}},

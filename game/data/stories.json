@@ -699,5 +699,1595 @@
         ]
       }
     }
+  },
+  {
+    "id": "v3_foundation",
+    "title": "安寨有家",
+    "start": "settle",
+    "map": "v3_houses",
+    "condition": {
+      "flag": "volume_two_complete"
+    },
+    "steps": {
+      "settle": {
+        "map": "v3_houses",
+        "text": "乡人把安置名册递来。寨子的大小固然不同，能住人、能产粮、能取材、能照看伤病，才算有了根。旧日建成的设施都已记在册上。",
+        "choices": [
+          {
+            "id": "settle",
+            "label": "确认安寨 · 聚义厅2、农田1、伐木场1、医馆1、好汉3位",
+            "condition": {
+              "all": [
+                {
+                  "campBuilding": "hall",
+                  "count": 2
+                },
+                {
+                  "campBuilding": "farm",
+                  "count": 1
+                },
+                {
+                  "campBuilding": "lumber",
+                  "count": 1
+                },
+                {
+                  "campBuilding": "clinic",
+                  "count": 1
+                },
+                {
+                  "ownedCount": 3
+                }
+              ]
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v3_settled"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 200
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 2
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v3_grain",
+    "title": "粮道先行",
+    "start": "prepare",
+    "map": "v3_granary",
+    "condition": {
+      "flag": "volume_two_complete"
+    },
+    "steps": {
+      "prepare": {
+        "map": "v3_granary",
+        "text": "粮车停在东岸，几伙匪徒轮番拦路。可以派好汉独行清路，也能带乡勇护送；先在出征准备中选好阵容。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看敌情与消耗",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "road_raider",
+                "bandit"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v3_granary",
+        "text": "粮车终于抵达，乡人把村酒与养成物资送来。此后可每日探访粮仓，领取一份村酒。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v3_grain_done"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 250
+              },
+              {
+                "type": "item",
+                "id": "wine",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v3_timber",
+    "title": "林路取材",
+    "start": "prepare",
+    "map": "v3_forest",
+    "condition": {
+      "flag": "volume_two_complete"
+    },
+    "steps": {
+      "prepare": {
+        "map": "v3_forest",
+        "text": "林间的匪首把持材场。木道与粮道没有先后之分，选适合当前阵容的一路先行即可。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看敌情与消耗",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "bandit",
+                "bandit_chief"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v3_forest",
+        "text": "木道已通，寨栅有了修补的材料。乡人送来精铁与碎铁，此后每日可来材场取一份碎铁。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v3_timber_done"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 200
+              },
+              {
+                "type": "item",
+                "id": "iron",
+                "amount": 6
+              },
+              {
+                "type": "item",
+                "id": "scrap_iron",
+                "amount": 8
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v3_ferry",
+    "title": "渡船连营",
+    "start": "prepare",
+    "map": "v3_water",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_two_complete"
+        },
+        {
+          "any": [
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            }
+          ]
+        }
+      ]
+    },
+    "steps": {
+      "prepare": {
+        "map": "v3_water",
+        "text": "渡口控制着物资接驳，浅滩利于熟悉水性的好汉。望哨的情报若已取得，本战敌军气血、攻击、防御、谋略降低 15%。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看敌情与消耗",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "road_raider",
+                "guard"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v3_water",
+        "text": "船只稳稳靠岸，水陆呼应有了着落。渡口每日可送来少量草料，两条物资路也能互相照应。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v3_ferry_done"
+              },
+              {
+                "type": "item",
+                "id": "mount_feed",
+                "amount": 6
+              },
+              {
+                "type": "item",
+                "id": "mount_token",
+                "amount": 3
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v3_defense",
+    "title": "守住归处",
+    "start": "prepare",
+    "map": "v3_gate",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_two_complete"
+        },
+        {
+          "all": [
+            {
+              "flag": "v3_settled"
+            },
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            },
+            {
+              "flag": "v3_ferry_done"
+            }
+          ]
+        }
+      ]
+    },
+    "steps": {
+      "prepare": {
+        "map": "v3_gate",
+        "text": "匪众沿两条道路逼近寨门。安置、补给、渡口缺一不可。可以带兵守栅，也可由英雄独行迎敌；带兵会有伤兵，需要回医馆治疗。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看敌情与消耗",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "bandit_chief",
+                "guard",
+                "road_raider"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v3_gate",
+        "text": "寨门仍在，众人各守其位。你可以先治疗伤兵，再去水泊盟亭立约。已损失的战斗机会不会返还，胜利酬谢只结算一次。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v3_defended"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 500
+              },
+              {
+                "type": "item",
+                "id": "spirit_essence",
+                "amount": 4
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 6
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v3_veteran",
+    "title": "进阶守寨演武",
+    "start": "prepare",
+    "map": "v3_gate",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_three_complete"
+        },
+        {
+          "heroLevel": 30
+        }
+      ]
+    },
+    "steps": {
+      "prepare": {
+        "map": "v3_gate",
+        "text": "聚义之后，各部愿再作一场进阶守寨演练。适合已有三十级主力的老寨；不提高主线门槛，不强制完成。望哨情报仍有效，建议带兵并搭配治疗。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看敌情与消耗",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "bandit_chief",
+                "guard",
+                "road_raider"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v3_gate",
+        "text": "演武收兵，各部把检验过的心得整理成册。首胜酬劳只收这一回，日常材料仍可通过轮换和精英远征取得。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v3_veteran_done"
+              },
+              {
+                "type": "item",
+                "id": "immortal_seal",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "spirit_essence",
+                "amount": 6
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 10
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v3_oath",
+    "title": "水泊立约",
+    "start": "oath",
+    "map": "v3_post",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_two_complete"
+        },
+        {
+          "flag": "v3_defended"
+        }
+      ]
+    },
+    "steps": {
+      "oath": {
+        "map": "v3_post",
+        "text": "安居者不再无屋，运粮者不再独行，出征者知道有人守着归处。众人约定各司其职，也给后来人留一张座位。三山的来信已到，立约后即可循三山驿路前去拜访。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "立下互助之约 · 完成第三卷",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v3_oath_done"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v4_erlong_pact",
+    "title": "二龙解困",
+    "start": "discuss",
+    "map": "v4_erlong",
+    "condition": {
+      "flag": "volume_three_complete"
+    },
+    "steps": {
+      "discuss": {
+        "map": "v4_erlong",
+        "text": "鲁智深把药钵放在桌上：“救人也好，替乡人打通归路也好，都算帮了大忙。”杨志指向险道，说明两种相助的去处。 医援：联合守寨时，我方最大气血 +12%。 护阵：联合守寨时，我方防御 +12%。 结盟前可以返回商议；结盟后本档的合作方式固定，每寨只领取一次酬谢。",
+        "choices": [
+          {
+            "id": "assist",
+            "label": "交付药草6、金创药2 · 结盟取得医援",
+            "cost": {
+              "items": {
+                "herb": 6,
+                "jinchuangyao": 2
+              }
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v4_erlong_allied"
+              },
+              {
+                "type": "flag",
+                "id": "v4_erlong_medics"
+              },
+              {
+                "type": "hero",
+                "id": "luzhishen",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "luzhishen_token",
+                "amount": 2
+              },
+              {
+                "type": "hero",
+                "id": "yangzhi",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "yangzhi_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 4
+              }
+            ]
+          },
+          {
+            "id": "expedition",
+            "label": "前往解围 · 胜后取得护阵支援",
+            "next": "battle",
+            "goMap": "v4_erlong_pass"
+          }
+        ]
+      },
+      "battle": {
+        "map": "v4_erlong_pass",
+        "text": "匪众堵住险道，伤者留在客舍等消息。战胜后回客舍确认结盟；也可先返回重新商议交药。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看实际消耗",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "guard",
+                "bandit_chief"
+              ]
+            }
+          },
+          {
+            "id": "reconsider",
+            "label": "返回商议其他合作方式",
+            "next": "discuss",
+            "goMap": "v4_erlong"
+          }
+        ]
+      },
+      "return": {
+        "map": "v4_erlong",
+        "text": "众人已听说这场得胜。护阵：联合守寨时，我方防御 +12%。 确认后记下合作方式，收好信物与物资。已入寨好汉只补充信物，不重复招募，也不改变等级或品质。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认结盟，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v4_erlong_allied"
+              },
+              {
+                "type": "flag",
+                "id": "v4_erlong_guard"
+              },
+              {
+                "type": "hero",
+                "id": "luzhishen",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "luzhishen_token",
+                "amount": 2
+              },
+              {
+                "type": "hero",
+                "id": "yangzhi",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "yangzhi_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v4_taohua_pact",
+    "title": "桃花论阵",
+    "start": "discuss",
+    "map": "v4_taohua",
+    "condition": {
+      "flag": "volume_three_complete"
+    },
+    "steps": {
+      "discuss": {
+        "map": "v4_taohua",
+        "text": "李忠正试着修补器械，周通则邀众人去校场看看阵法。以物资相助，或以一场切磋约定奇袭，都可以结成同路人。 器械：联合守寨时，我方攻击 +10%。 奇袭：联合守寨时，敌方防御降低 12%。 结盟前可以返回商议；结盟后本档的合作方式固定，每寨只领取一次酬谢。",
+        "choices": [
+          {
+            "id": "assist",
+            "label": "交付精铁6、粗布4 · 结盟备齐器械",
+            "cost": {
+              "items": {
+                "iron": 6,
+                "cloth": 4
+              }
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v4_taohua_allied"
+              },
+              {
+                "type": "flag",
+                "id": "v4_taohua_engines"
+              },
+              {
+                "type": "hero",
+                "id": "lizhong",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "lizhong_token",
+                "amount": 2
+              },
+              {
+                "type": "hero",
+                "id": "zhoutong",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "zhoutong_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "iron",
+                "amount": 3
+              }
+            ]
+          },
+          {
+            "id": "expedition",
+            "label": "前往校场 · 胜后约定奇袭",
+            "next": "battle",
+            "goMap": "v4_taohua_field"
+          }
+        ]
+      },
+      "battle": {
+        "map": "v4_taohua_field",
+        "text": "校场上的队伍已站稳阵脚。此战仍使用实际出阵配置和兵损，胜后回修械棚议定奇袭；不想交战也可返回商议交料。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看实际消耗",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "soldier",
+                "guard"
+              ]
+            }
+          },
+          {
+            "id": "reconsider",
+            "label": "返回商议其他合作方式",
+            "next": "discuss",
+            "goMap": "v4_taohua"
+          }
+        ]
+      },
+      "return": {
+        "map": "v4_taohua",
+        "text": "众人已听说这场得胜。奇袭：联合守寨时，敌方防御降低 12%。 确认后记下合作方式，收好信物与物资。已入寨好汉只补充信物，不重复招募，也不改变等级或品质。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认结盟，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v4_taohua_allied"
+              },
+              {
+                "type": "flag",
+                "id": "v4_taohua_ambush"
+              },
+              {
+                "type": "hero",
+                "id": "lizhong",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "lizhong_token",
+                "amount": 2
+              },
+              {
+                "type": "hero",
+                "id": "zhoutong",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "zhoutong_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "iron",
+                "amount": 3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v4_baihu_pact",
+    "title": "白虎通途",
+    "start": "discuss",
+    "map": "v4_baihu",
+    "condition": {
+      "flag": "volume_three_complete"
+    },
+    "steps": {
+      "discuss": {
+        "map": "v4_baihu",
+        "text": "孔明、孔亮摊开山路图。若已从递信亭查明军情，可交二百碎银安置传书人，争取先手；也可护送粮队进山，准备充足辎重。 先手：联合守寨时，我方初始怒气 +20，最高 100。 辎重：联合守寨时，我方最大气血 +8%。 结盟前可以返回商议；结盟后本档的合作方式固定，每寨只领取一次酬谢。",
+        "choices": [
+          {
+            "id": "assist",
+            "label": "交付传书与碎银200 · 结盟取得先手",
+            "cost": {
+              "silver": 200
+            },
+            "condition": {
+              "flag": "v4_intel"
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v4_baihu_allied"
+              },
+              {
+                "type": "flag",
+                "id": "v4_baihu_initiative"
+              },
+              {
+                "type": "hero",
+                "id": "kongming",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "kongming_token",
+                "amount": 2
+              },
+              {
+                "type": "hero",
+                "id": "kongliang",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "kongliang_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 3
+              }
+            ]
+          },
+          {
+            "id": "expedition",
+            "label": "前往解围 · 胜后取得辎重支援",
+            "next": "battle",
+            "goMap": "v4_baihu_road"
+          }
+        ]
+      },
+      "battle": {
+        "map": "v4_baihu_road",
+        "text": "粮队被拦在山道。此战无需递信情报；胜后回白虎山议棚确认结盟。若想改为递信，仍可先返回商议。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看实际消耗",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "road_raider",
+                "bandit"
+              ]
+            }
+          },
+          {
+            "id": "reconsider",
+            "label": "返回商议其他合作方式",
+            "next": "discuss",
+            "goMap": "v4_baihu"
+          }
+        ]
+      },
+      "return": {
+        "map": "v4_baihu",
+        "text": "众人已听说这场得胜。辎重：联合守寨时，我方最大气血 +8%。 确认后记下合作方式，收好信物与物资。已入寨好汉只补充信物，不重复招募，也不改变等级或品质。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认结盟，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v4_baihu_allied"
+              },
+              {
+                "type": "flag",
+                "id": "v4_baihu_supply"
+              },
+              {
+                "type": "hero",
+                "id": "kongming",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "kongming_token",
+                "amount": 2
+              },
+              {
+                "type": "hero",
+                "id": "kongliang",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "kongliang_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v4_union",
+    "title": "三山同守",
+    "start": "prepare",
+    "map": "v4_union",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_three_complete"
+        },
+        {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v4_erlong_allied"
+                },
+                {
+                  "flag": "v4_taohua_allied"
+                },
+                {
+                  "flag": "v4_baihu_allied"
+                }
+              ]
+            },
+            {
+              "campBuilding": "hall",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    "steps": {
+      "prepare": {
+        "map": "v4_union",
+        "text": "三路使者同时到来，山盟约定的援手也各自归位。敌军正在营外合围，你可以先核对三项支援、英雄、兵力和药物，再决定出征。此战只要求自己的主力，不强求任何指定好汉。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "联合守寨 · 查看三山支援与敌情",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "bandit_chief",
+                "guard",
+                "road_raider"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v4_union",
+        "text": "三山各有来路，如今已能彼此呼应。众人把一路相助写入盟约，下一处需要查明的，是祝家庄周围的迷径与援路。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认三山聚义 · 完成第四卷",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v4_union_done"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 800
+              },
+              {
+                "type": "item",
+                "id": "spirit_essence",
+                "amount": 6
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 8
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_brief",
+    "title": "行营整备",
+    "map": "v5_camp",
+    "condition": {
+      "flag": "volume_four_complete"
+    },
+    "start": "discuss",
+    "steps": {
+      "discuss": {
+        "map": "v5_camp",
+        "text": "先让出征的人有粮可用、伤者有处可治。聚义厅三级，农田、伐木场、医馆各二级即可确认；已有建设直接计入，不重建、不补交材料。",
+        "choices": [
+          {
+            "id": "ready",
+            "label": "确认行营整备 · 查看现有建设",
+            "condition": {
+              "all": [
+                {
+                  "campBuilding": "hall",
+                  "count": 3
+                },
+                {
+                  "campBuilding": "farm",
+                  "count": 2
+                },
+                {
+                  "campBuilding": "lumber",
+                  "count": 2
+                },
+                {
+                  "campBuilding": "clinic",
+                  "count": 2
+                }
+              ]
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_prepared"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_survey",
+    "title": "辨清盘陀路",
+    "map": "v5_path",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_four_complete"
+        },
+        {
+          "flag": "v5_prepared"
+        }
+      ]
+    },
+    "start": "discuss",
+    "steps": {
+      "discuss": {
+        "map": "v5_path",
+        "text": "石秀和乡人把易混淆的岔口一一指出。可以独行踏查，也可以花三百碎银请向导。二者都获得完整路线图；不会自动招募石秀，已入寨英雄保留培养。",
+        "choices": [
+          {
+            "id": "scout",
+            "label": "英雄独行辨路 · 不消耗物资",
+            "condition": {
+              "campMode": "solo"
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_route_known"
+              },
+              {
+                "type": "hero",
+                "id": "shixiu",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "shixiu_token",
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "id": "guide",
+            "label": "请乡人引路 · 碎银300",
+            "cost": {
+              "silver": 300
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_route_known"
+              },
+              {
+                "type": "hero",
+                "id": "shixiu",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "shixiu_token",
+                "amount": 2
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_probe",
+    "title": "一打 · 试探外哨",
+    "map": "v5_outer",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_four_complete"
+        },
+        {
+          "flag": "v5_route_known"
+        }
+      ]
+    },
+    "start": "prepare",
+    "steps": {
+      "prepare": {
+        "map": "v5_outer",
+        "text": "外哨的守军遮住了入庄的道路。先用真实阵容试阵，胜利后确认所得情报，再决定断援或断粮。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看消耗与敌情",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "v5_manor_guard",
+                "v5_relief_rider"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v5_outer",
+        "text": "此战得胜。请确认战果，领取这一段酬劳；可以回寨治疗补兵后再走下一程。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_first_done"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 250
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_cut_east",
+    "title": "截断东援",
+    "map": "v5_east",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_four_complete"
+        },
+        {
+          "flag": "v5_first_done"
+        }
+      ]
+    },
+    "start": "prepare",
+    "steps": {
+      "prepare": {
+        "map": "v5_east",
+        "text": "援骑正沿东路集合。此战得胜并确认后，三打内院会少一支援骑；西粮道仍可另行完成。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看消耗与敌情",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "v5_relief_rider",
+                "v5_manor_guard"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v5_east",
+        "text": "此战得胜。请确认战果，领取这一段酬劳；可以回寨治疗补兵后再走下一程。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_east_cut"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 300
+              },
+              {
+                "type": "item",
+                "id": "mount_feed",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_cut_west",
+    "title": "截住西粮",
+    "map": "v5_west",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_four_complete"
+        },
+        {
+          "flag": "v5_first_done"
+        }
+      ]
+    },
+    "start": "prepare",
+    "steps": {
+      "prepare": {
+        "map": "v5_west",
+        "text": "西路粮车尚未入庄。截住军粮后妥善安置押车乡人，三打时守军气血与攻击各降低一成；东援路仍可另行完成。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看消耗与敌情",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "v5_manor_guard",
+                "v5_relief_rider"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v5_west",
+        "text": "此战得胜。请确认战果，领取这一段酬劳；可以回寨治疗补兵后再走下一程。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_west_cut"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 300
+              },
+              {
+                "type": "item",
+                "id": "iron",
+                "amount": 5
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_second",
+    "title": "二打 · 破开庄门",
+    "map": "v5_gate",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_four_complete"
+        },
+        {
+          "all": [
+            {
+              "flag": "v5_first_done"
+            },
+            {
+              "any": [
+                {
+                  "flag": "v5_east_cut"
+                },
+                {
+                  "flag": "v5_west_cut"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "start": "prepare",
+    "steps": {
+      "prepare": {
+        "map": "v5_gate",
+        "text": "栾廷玉在门前列阵。至少一路援粮已断，此战可向庄门推进；未做完的准备可以留到三打前再补。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看消耗与敌情",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "v5_luan_tingyu",
+                "v5_manor_guard"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v5_gate",
+        "text": "此战得胜。请确认战果，领取这一段酬劳；可以回寨治疗补兵后再走下一程。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_second_done"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 500
+              },
+              {
+                "type": "item",
+                "id": "spirit_essence",
+                "amount": 4
+              },
+              {
+                "type": "hero",
+                "id": "sunli",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "sunli_token",
+                "amount": 2
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_third",
+    "title": "三打 · 合围内院",
+    "map": "v5_court",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_four_complete"
+        },
+        {
+          "all": [
+            {
+              "flag": "v5_second_done"
+            },
+            {
+              "campBuilding": "hall",
+              "count": 4
+            }
+          ]
+        }
+      ]
+    },
+    "start": "prepare",
+    "steps": {
+      "prepare": {
+        "map": "v5_court",
+        "text": "祝彪领守军退入内院。援路、粮道、百姓提供的情报会实际影响这场战斗。查看准备后再出征；此前三山支援只用于第四卷，此战不会再叠加。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "点将整备 · 查看消耗与敌情",
+            "next": "return",
+            "battle": {
+              "enemies": [
+                "v5_zhu_biao",
+                "v5_manor_guard",
+                "v5_relief_rider"
+              ]
+            }
+          }
+        ]
+      },
+      "return": {
+        "map": "v5_court",
+        "text": "此战得胜。请确认战果，领取这一段酬劳；可以回寨治疗补兵后再走下一程。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果，收下酬谢",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_third_done"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 700
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 8
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_aid",
+    "title": "庄外济困",
+    "map": "v5_refuge",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_four_complete"
+        },
+        {
+          "flag": "v5_first_done"
+        }
+      ]
+    },
+    "start": "discuss",
+    "steps": {
+      "discuss": {
+        "map": "v5_refuge",
+        "text": "孙立帮着安顿离庄百姓。交药草四份与粗布四份，乡人会标出守庄薄弱处：仅在三打内院时降低敌方防御百分之十五。相助只办理一次，不会自动招募孙立。",
+        "choices": [
+          {
+            "id": "aid",
+            "label": "安置百姓 · 药草4、粗布4",
+            "cost": {
+              "items": {
+                "herb": 4,
+                "cloth": 4
+              }
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_inside_support"
+              },
+              {
+                "type": "hero",
+                "id": "sunli",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "sunli_token",
+                "amount": 2
+              },
+              {
+                "type": "item",
+                "id": "exp_pill",
+                "amount": 2
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v5_settle",
+    "title": "清点粮仓，安置归人",
+    "map": "v5_store",
+    "condition": {
+      "all": [
+        {
+          "flag": "volume_four_complete"
+        },
+        {
+          "flag": "v5_third_done"
+        }
+      ]
+    },
+    "start": "discuss",
+    "steps": {
+      "discuss": {
+        "map": "v5_store",
+        "text": "战后先开仓点检，护送避战的乡人归居。出征所得不止是一场胜利，也留下了粮道、援路与百姓之间的往来。确认后完成第五卷，旧英雄、建筑与山盟记录都继续保存。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "清点安置 · 完成第五卷",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v5_settled"
+              },
+              {
+                "type": "currency",
+                "id": "silver",
+                "amount": 800
+              },
+              {
+                "type": "item",
+                "id": "herb",
+                "amount": 8
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "external_chaogai",
+    "title": "外传 · 东溪旧约",
+    "map": "dongxi",
+    "condition": {
+      "any": [
+        {
+          "flag": "seven_stars"
+        },
+        {
+          "flag": "volume_complete"
+        }
+      ]
+    },
+    "start": "talk",
+    "steps": {
+      "talk": {
+        "map": "dongxi",
+        "text": "晁盖请你在庄前坐下：“聚义不是只论豪气，乡人的吃住与伤病，也须有人照管。”完成七星聚义或第一卷后，可来续这段旧约。相识不自动入队，也不占一百零八星位。",
+        "choices": [
+          {
+            "id": "promise",
+            "label": "相识晁盖，答应安顿乡人",
+            "next": "settle",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "chaogai",
+                "status": "known"
+              },
+              {
+                "type": "flag",
+                "id": "external_chaogai_met"
+              },
+              {
+                "type": "item",
+                "id": "chaogai_token",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      },
+      "settle": {
+        "map": "dongxi",
+        "text": "寨中聚义厅二级，农田、伐木场、医馆各一级，便可接应乡人。已有建设直接计入，不重复扣料。确认后获得剩余六枚信物；聚义厅三级时，在外传名册交十枚信物与六百碎银，可正式邀请晁盖。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认乡人安置 · 领取余下信物",
+            "condition": {
+              "all": [
+                {
+                  "campBuilding": "hall",
+                  "count": 2
+                },
+                {
+                  "campBuilding": "farm",
+                  "count": 1
+                },
+                {
+                  "campBuilding": "lumber",
+                  "count": 1
+                },
+                {
+                  "campBuilding": "clinic",
+                  "count": 1
+                }
+              ]
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "external_chaogai_helped"
+              },
+              {
+                "type": "item",
+                "id": "chaogai_token",
+                "amount": 6
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 ]

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "title": "白泽水浒",
-  "volume": "第二卷 · 逼上梁山",
+  "volume": "第五卷 · 三打祝家庄",
   "initial": {
     "silver": 500,
     "prestige": 0,
@@ -96,7 +96,7 @@
     "今日起：",
     "你便是白泽寨主。"
   ],
-  "release": "0.20.0",
+  "release": "0.24.0",
   "heroArcs": [
     {
       "hero": "linchong",
@@ -132,5 +132,6 @@
         }
       ]
     }
-  ]
+  ],
+  "rosterVersion": 4
 }

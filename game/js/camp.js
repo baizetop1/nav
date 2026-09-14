@@ -1,14 +1,15 @@
-import { openAffair } from './affairs.js?v=0.20.0';
-import { initializeStrategy } from './strategy.js?v=0.20.0';
-import { initializeDoctrine } from './doctrines.js?v=0.20.0';
-import { CORPS, corpsRank } from './development.js?v=0.20.0';
-import { ARMS } from './martial.js?v=0.20.0';
-import { hireHelper, helperBonus, validateHelpers } from './helpers.js?v=0.20.0';
-import { finishDuty, developmentAction, raidBonus, RAID_INTEL, searchEquipment } from './camp-development.js?v=0.20.0';
-import { hasOwn, requireRule, journal, count } from './utils.js?v=0.20.0';
-import { ownHero } from './hero.js?v=0.20.0';
-import { startBattle } from './battle.js?v=0.20.0';
-import { grant } from './item.js?v=0.20.0';
+import { isExternal, externalInvitation } from './roster.js?v=0.24.0';
+import { openAffair } from './affairs.js?v=0.24.0';
+import { initializeStrategy } from './strategy.js?v=0.24.0';
+import { initializeDoctrine } from './doctrines.js?v=0.24.0';
+import { CORPS, corpsRank } from './development.js?v=0.24.0';
+import { ARMS } from './martial.js?v=0.24.0';
+import { hireHelper, helperBonus, validateHelpers } from './helpers.js?v=0.24.0';
+import { finishDuty, developmentAction, raidBonus, RAID_INTEL, searchEquipment } from './camp-development.js?v=0.24.0';
+import { hasOwn, requireRule, journal, count } from './utils.js?v=0.24.0';
+import { ownHero } from './hero.js?v=0.24.0';
+import { startBattle } from './battle.js?v=0.24.0';
+import { grant } from './item.js?v=0.24.0';
 
 export const BUILDINGS={hall:{name:'聚义厅',wood:40,silver:100,description:'提高寨子规模，吸引更多好汉。'},farm:{name:'农田',wood:25,silver:60,description:'每次经营产出粮草，用于募兵与出征。'},lumber:{name:'伐木场',wood:20,silver:50,description:'每次经营产出木材，用于修建与扩建。'},barracks:{name:'兵营',wood:35,silver:80,description:'每级提供 20 名兵额，可随英雄出征。'},clinic:{name:'医馆',wood:30,silver:80,description:'治疗伤兵，降低补员的粮草支出。'},market:{name:'集市',wood:30,silver:80,description:'每次经营增加碎银收入。'}};
 export const TACTICS={balanced:{name:'稳扎稳打',attack:1,defense:1,loss:.12},assault:{name:'强攻破阵',attack:1.2,defense:.85,loss:.24},guard:{name:'结阵固守',attack:.9,defense:1.25,loss:.06}};
@@ -33,7 +34,7 @@ export function campAction(s,d,a){
   }else if(a.type==='campFormation'){
     requireRule(['solo','army'].includes(a.mode)&&hasOwn(TACTICS,a.tactic)&&Number.isInteger(a.deployment)&&a.deployment>=1&&a.deployment<=100,'出征配置无效。');const arm=a.arm??'infantry';requireRule(hasOwn(ARMS,arm)&&arm!=='neutral'&&c.buildings.hall>=ARMS[arm].hall,'该兵种尚未开放。');c.arm=arm;c.mode=a.mode;c.tactic=a.tactic;c.deployment=a.deployment;journal(s,'出征配置已保存：'+(c.mode==='solo'?'英雄独行':'英雄带兵')+' · '+TACTICS[c.tactic].name+'。');
   }else if(a.type==='campInvite'){
-    const h=d.by.heroes[a.id];requireRule(h&&s.heroes[a.id].status!=='owned','这位好汉已入寨。');requireRule(c.buildings.hall>=Math.max(1,h.star-2)&&c.work+c.sorties>=h.star,'寨子规模或经营历练不足。');const price=h.star*120;requireRule(s.player.silver>=price,'迎贤碎银不足。');s.player.silver-=price;ownHero(s,a.id,d);journal(s,`【迎贤】${h.name}听闻寨中气象，前来共举义事。`);
+    const h=d.by.heroes[a.id];requireRule(h&&s.heroes[a.id].status!=='owned','这位好汉已入寨。');if(isExternal(h)){const q=externalInvitation(s,h);requireRule(!q.reason,q.reason);s.player.silver-=q.cost.silver;for(const [id,n]of Object.entries(q.cost.items))s.inventory[id]-=n;ownHero(s,a.id,d);journal(s,'【外传相邀】'+h.name+'应约入寨。');return;}requireRule(c.buildings.hall>=Math.max(1,h.star-2)&&c.work+c.sorties>=h.star,'寨子规模或经营历练不足。');const price=h.star*120;requireRule(s.player.silver>=price,'迎贤碎银不足。');s.player.silver-=price;ownHero(s,a.id,d);journal(s,`【迎贤】${h.name}听闻寨中气象，前来共举义事。`);
   }else if(a.type==='campRaid'){
     const r=RAIDS[a.id];requireRule(r&&c.buildings.hall>=r.level,'先提高聚义厅等级。');requireRule(s.team.length>0,'先安排出阵英雄。');requireRule(s.player.stamina>=8,'出征需要 8 点体力。');const n=c.mode==='army'?Math.min(c.troops,c.deployment):0;requireRule(c.mode==='solo'||n>0,'没有可出征乡勇，可先募兵或选择英雄独行。');const food=r.food+Math.ceil(n/2);requireRule(c.food>=food,'出征粮草不足。');c.food-=food;s.player.stamina-=8;
     startBattle(s,d,{enemies:r.enemy,scale:r.scale,context:{type:'camp',id:a.id}});attachTroops(s,n);

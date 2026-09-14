@@ -1,6 +1,6 @@
-import { meets } from './map.js?v=0.20.0';
-import { hasOwn, requireRule, count, journal } from './utils.js?v=0.20.0';
-import { grant } from './item.js?v=0.20.0';
+import { meets } from './map.js?v=0.24.0';
+import { hasOwn, requireRule, count, journal } from './utils.js?v=0.24.0';
+import { grant } from './item.js?v=0.24.0';
 
 // Route search includes the half-hour spent on each road, so a night-only path
 // cannot be traversed in daylight by selecting a distant destination.
@@ -20,7 +20,7 @@ export function routeTo(s,d,target,ignoreConditions=false){
   }
   return null;
 }
-const flags={dongxi_rumor:'在郓城酒肆打听东溪村',tracks_found:'在枯树林查看脚印',trail_followed:'在虎踪继续追踪',seven_stars:'完成七星聚义',huangni_complete:'完成智取生辰纲',volume_complete:'完成第一卷聚义目标',lin_tolerant:'推进林冲东京往事',lu_complete:'完成鲁智深野猪林往事',lin_cangzhou:'推进林冲沧州往事',snow_evidence:'在风雪山道察看脚印',lin_temple:'完成风雪山神庙往事',chai_refuge:'完成柴进收留相助的往事'};
+const flags={volume_four_complete:'完成第四卷《三山聚义》',v5_prepared:'完成行营整备',v5_route_known:'查清盘陀迷径',v5_first_done:'一打外哨得胜并确认',v5_east_cut:'截断东援并确认',v5_west_cut:'截住西粮并确认',v5_second_done:'二打破门得胜并确认',v5_third_done:'三打内院得胜并确认',volume_three_complete:'完成第三卷《梁山初聚》',v4_erlong_allied:'与二龙山结盟',v4_taohua_allied:'与桃花山结盟',v4_baihu_allied:'与白虎山结盟',volume_two_complete:'完成第二卷《逼上梁山》',v3_settled:'在寨民新居确认安寨',v3_grain_done:'打通粮道并确认战果',v3_timber_done:'打通木道并确认战果',v3_ferry_done:'夺回接驳口并确认战果',v3_defended:'守住寨门并确认战果',dongxi_rumor:'在郓城酒肆打听东溪村',tracks_found:'在枯树林查看脚印',trail_followed:'在虎踪继续追踪',seven_stars:'完成七星聚义',huangni_complete:'完成智取生辰纲',volume_complete:'完成第一卷聚义目标',lin_tolerant:'推进林冲东京往事',lu_complete:'完成鲁智深野猪林往事',lin_cangzhou:'推进林冲沧州往事',snow_evidence:'在风雪山道察看脚印',lin_temple:'完成风雪山神庙往事',chai_refuge:'完成柴进收留相助的往事'};
 export function conditionText(condition,d){
   if(!condition)return '道路通畅';
   return Object.entries(condition).filter(([k])=>!['count','status'].includes(k)).map(([key,v])=>{
@@ -28,6 +28,8 @@ export function conditionText(condition,d){
     if(key==='flag')return flags[v]||'推进相关人物往事';
     if(key==='time')return v==='night'?'夜间通行':'白日通行';
     if(key==='item')return '携带'+d.by.items[v].name+' ×'+(condition.count||1);
+    if(key==='campBuilding')return ({hall:'聚义厅',farm:'农田',lumber:'伐木场',clinic:'医馆',barracks:'兵营',market:'集市'}[v]||v)+'达到 '+condition.count+' 级';
+    if(key==='campMode')return v==='solo'?'英雄独行':'英雄带兵';
     if(key==='prestige')return '威望达到 '+v;
     if(key==='hero')return '结识'+d.by.heroes[v].name;
     return '满足相关探索条件';
@@ -38,7 +40,10 @@ export function routeBarriers(s,d,path){
   for(const to of path||[]){const link=d.by.maps[from].links.find(l=>l.target===to);if(!meets({...s,location:from,worldMinute:minute},link.condition))result.push(d.by.maps[from].name+' → '+d.by.maps[to].name+'：'+conditionText(link.condition,d));from=to;minute=(minute+30)%1440;}
   return result;
 }
-export const LOCAL_BENEFITS={
+export const LOCAL_BENEFITS={v5_store:{name:'归居药圃',description:'归人照料药圃，每日分来药草。',flag:'volume_five_complete',reward:{items:{herb:2}}},
+  v3_granary:{name:'粮仓慰劳',description:'粮道畅通后，乡人每日赠村酒 1。',flag:'v3_grain_done',reward:{items:{wine:1}}},
+  v3_forest:{name:'材场余料',description:'木道畅通后，每日收取碎铁 2。',flag:'v3_timber_done',reward:{items:{scrap_iron:2}}},
+  v3_water:{name:'渡口草料',description:'渡船接驳后，每日收取精制草料 2。',flag:'v3_ferry_done',reward:{items:{mount_feed:2}}},
   forge:{name:'铁匠赠料',description:'与老师傅切磋手艺，获精铁 2。',reward:{items:{iron:2}}},
   recruit:{name:'馆中荐书',description:'拜访招贤馆，获招贤令碎片 2。',reward:{items:{recruit_shard:2}}},
   stable:{name:'马夫赠草',description:'帮马夫照看脚力，获精制草料 2。',reward:{items:{mount_feed:2}}},
@@ -48,6 +53,6 @@ export const LOCAL_BENEFITS={
   office:{name:'协理告示',description:'帮忙整理告示，获碎银 60。',reward:{silver:60}},
 };
 export function claimLocalBenefit(s,d){
-  const b=LOCAL_BENEFITS[s.location],key='visit_bonus_'+s.location;requireRule(b,'这里没有每日探访酬谢。');requireRule(!s.daily.counters[key],'今日已领过此地酬谢，明日再来。');
+  const b=LOCAL_BENEFITS[s.location],key='visit_bonus_'+s.location;requireRule(b,'这里没有每日探访酬谢。');requireRule(!b.flag||s.progress.flags[b.flag],'先完成此地事务，再领取每日酬谢。');requireRule(!s.daily.counters[key],'今日已领过此地酬谢，明日再来。');
   count(s,key);grant(s,b.reward,d);journal(s,`【地方探访】${d.by.maps[s.location].name} · ${b.description}`);
 }

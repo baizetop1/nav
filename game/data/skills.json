@@ -8903,5 +8903,88 @@
       "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
       "profile": "interrupt"
     }
+  },
+  {
+    "id": "chaogai_active",
+    "name": "托塔震阵",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.4
+    },
+    "description": "攻击前两位敌人，并为同伴提供 15% 减伤，持续 4 秒。",
+    "training": {
+      "hero": "chaogai",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "chaogai_passive",
+    "name": "乡勇之望",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "description": "自身最大气血提高 8%。",
+    "training": {
+      "hero": "chaogai",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "chaogai_advanced",
+    "name": "义守东溪",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "chaogai",
+      "tier": "advanced",
+      "level": 10,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "chaogai_bond",
+    "name": "青骢护众",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "骑乘羁绊生效时防御 +5%；每第三次普攻，为气血比例最低的同伴提供 15% 减伤，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "chaogai",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    },
+    "bondEffect": {
+      "kind": "guard",
+      "rate": 0.15,
+      "duration": 4000
+    }
   }
 ]

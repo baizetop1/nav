@@ -488,7 +488,9 @@
       }
     ],
     "actions": [],
-    "stories": [],
+    "stories": [
+      "external_chaogai"
+    ],
     "dungeons": [],
     "chapter": "volume_one"
   },
@@ -712,6 +714,12 @@
         "target": "south_route",
         "condition": {
           "flag": "chai_refuge"
+        }
+      },
+      {
+        "target": "v3_council",
+        "condition": {
+          "flag": "volume_two_complete"
         }
       }
     ],
@@ -1139,5 +1147,879 @@
       "qingzhou_patrol"
     ],
     "chapter": "volume_two"
+  },
+  {
+    "id": "v3_council",
+    "name": "聚义议事坪",
+    "region": "梁山初聚",
+    "type": "area",
+    "description": "安寨、稳粮、通路、守寨四项事务已写在木牌上。建成的设施直接计入，不必重新营建。招贤、打造与训练仍从各自入口办理。",
+    "links": [
+      {
+        "target": "ferry",
+        "condition": null
+      },
+      {
+        "target": "v3_houses",
+        "condition": null
+      },
+      {
+        "target": "v3_granary",
+        "condition": null
+      },
+      {
+        "target": "v3_forest",
+        "condition": null
+      },
+      {
+        "target": "v3_watch",
+        "condition": null
+      },
+      {
+        "target": "v3_water",
+        "condition": {
+          "any": [
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v3_gate",
+        "condition": {
+          "all": [
+            {
+              "flag": "v3_settled"
+            },
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            },
+            {
+              "flag": "v3_ferry_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v3_post",
+        "condition": {
+          "flag": "v3_defended"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_three"
+  },
+  {
+    "id": "v3_houses",
+    "name": "寨民新居",
+    "region": "梁山初聚",
+    "type": "area",
+    "description": "先让寨民安居：聚义厅二级，农田、伐木场、医馆各一级，三名好汉共同照应。已建成的设施和已入寨好汉直接计入。",
+    "links": [
+      {
+        "target": "v3_council",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v3_foundation"
+    ],
+    "dungeons": [],
+    "chapter": "volume_three"
+  },
+  {
+    "id": "v3_granary",
+    "name": "东岸粮仓",
+    "region": "梁山初聚",
+    "type": "area",
+    "description": "粮仓有粮，沿路却有拦截。清出粮道后，乡人愿每日送来一份村酒；先走粮道或木道由你决定。",
+    "links": [
+      {
+        "target": "v3_council",
+        "condition": null
+      },
+      {
+        "target": "v3_water",
+        "condition": {
+          "any": [
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v3_grain"
+    ],
+    "dungeons": [],
+    "chapter": "volume_three"
+  },
+  {
+    "id": "v3_forest",
+    "name": "青石材场",
+    "region": "梁山初聚",
+    "type": "area",
+    "description": "散落的木料可以修补寨栅。击退林间匪徒，便能打通木道；巡过路后，材场每日可提供碎铁。",
+    "links": [
+      {
+        "target": "v3_council",
+        "condition": null
+      },
+      {
+        "target": "v3_water",
+        "condition": {
+          "any": [
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v3_timber"
+    ],
+    "dungeons": [],
+    "chapter": "volume_three"
+  },
+  {
+    "id": "v3_watch",
+    "name": "芦苇望哨",
+    "region": "梁山初聚",
+    "type": "area",
+    "description": "芦苇间藏着观察水陆动静的小径。改为英雄独行可探清敌营，后续本卷水战与守寨战的敌军气血、攻击、防御、谋略降低 15%，只侦察一次即可。",
+    "links": [
+      {
+        "target": "v3_council",
+        "condition": null
+      },
+      {
+        "target": "v3_gate",
+        "condition": {
+          "all": [
+            {
+              "flag": "v3_settled"
+            },
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            },
+            {
+              "flag": "v3_ferry_done"
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "id": "v3_scout",
+        "label": "独行察看敌营 · 后续敌军气血、攻击、防御、谋略降低 15%",
+        "once": true,
+        "condition": {
+          "all": [
+            {
+              "flag": "volume_two_complete"
+            },
+            {
+              "campMode": "solo"
+            }
+          ]
+        },
+        "text": "你们借芦苇遮身，记下敌营的换哨与进军路线。第三卷水域交战及守寨战可提前应对，敌军气血、攻击、防御、谋略降低 15%；情报长期有效，不消耗物资。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "v3_scouted"
+          }
+        ]
+      }
+    ],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_three"
+  },
+  {
+    "id": "v3_water",
+    "name": "水陆接驳口",
+    "region": "梁山初聚",
+    "type": "area",
+    "description": "粮道或木道任一打通即可到达。掌住渡船便能连通另一条补给线，也能发挥水战好汉的地形专长。",
+    "links": [
+      {
+        "target": "v3_council",
+        "condition": null
+      },
+      {
+        "target": "v3_gate",
+        "condition": {
+          "all": [
+            {
+              "flag": "v3_settled"
+            },
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            },
+            {
+              "flag": "v3_ferry_done"
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v3_ferry"
+    ],
+    "dungeons": [],
+    "chapter": "volume_three"
+  },
+  {
+    "id": "v3_gate",
+    "name": "外寨栅门",
+    "region": "梁山初聚",
+    "type": "area",
+    "description": "寨民已安、两条物资路已通、渡船已稳，方可迎战来袭匪众。敌情预览会计入望哨情报；不要求指定英雄。",
+    "links": [
+      {
+        "target": "v3_council",
+        "condition": null
+      },
+      {
+        "target": "v3_post",
+        "condition": {
+          "flag": "v3_defended"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v3_defense",
+      "v3_veteran"
+    ],
+    "dungeons": [],
+    "chapter": "volume_three"
+  },
+  {
+    "id": "v3_post",
+    "name": "水泊盟亭",
+    "region": "梁山初聚",
+    "type": "area",
+    "description": "守住寨门后，众人在此立下互助之约。第三卷完成后，可沿新开的三山驿路进入第四卷；旧设施和已入寨好汉继续沿用。",
+    "links": [
+      {
+        "target": "v3_council",
+        "condition": null
+      },
+      {
+        "target": "v3_gate",
+        "condition": {
+          "all": [
+            {
+              "flag": "v3_settled"
+            },
+            {
+              "flag": "v3_grain_done"
+            },
+            {
+              "flag": "v3_timber_done"
+            },
+            {
+              "flag": "v3_ferry_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v4_crossroads",
+        "condition": {
+          "flag": "volume_three_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v3_oath"
+    ],
+    "dungeons": [],
+    "chapter": "volume_three"
+  },
+  {
+    "id": "v4_crossroads",
+    "name": "三山驿路",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "三山的来信都已展开。二龙、桃花、白虎三条路线可任选先后；每寨有两种合作方式，结盟后带来不同支援。招贤与打造仍可随时直接访问。",
+    "links": [
+      {
+        "target": "v3_post",
+        "condition": null
+      },
+      {
+        "target": "v4_erlong",
+        "condition": null
+      },
+      {
+        "target": "v4_taohua",
+        "condition": null
+      },
+      {
+        "target": "v4_baihu",
+        "condition": null
+      },
+      {
+        "target": "v4_watch",
+        "condition": null
+      },
+      {
+        "target": "v4_union",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v4_erlong_allied"
+                },
+                {
+                  "flag": "v4_taohua_allied"
+                },
+                {
+                  "flag": "v4_baihu_allied"
+                }
+              ]
+            },
+            {
+              "campBuilding": "hall",
+              "count": 3
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v4_erlong",
+    "name": "二龙山客舍",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "鲁智深与杨志正安顿受伤乡人。可交付药草六份与金创药两份，换来医援；也可上山解围，换来护阵援手。选择与具体消耗在交谈时列明。",
+    "links": [
+      {
+        "target": "v4_crossroads",
+        "condition": null
+      },
+      {
+        "target": "v4_erlong_pass",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v4_erlong_pact"
+    ],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v4_erlong_pass",
+    "name": "二龙山险道",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "匪众截住了山间归路。解围需要主力十八级，可以带兵或独行；结盟前仍可返回客舍重新商议，已花的出征消耗不返还。",
+    "links": [
+      {
+        "target": "v4_erlong",
+        "condition": null
+      },
+      {
+        "target": "v4_crossroads",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v4_erlong_pact"
+    ],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v4_taohua",
+    "name": "桃花山修械棚",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "李忠与周通请你看看寨中器械。交付精铁六份与粗布四份，可准备联合进攻所用的器械；也可在校场切磋，以奇袭相约。",
+    "links": [
+      {
+        "target": "v4_crossroads",
+        "condition": null
+      },
+      {
+        "target": "v4_taohua_field",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v4_taohua_pact"
+    ],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v4_taohua_field",
+    "name": "桃花山校场",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "校场只论阵法，不强求某一位好汉上场。十八级主力可来切磋；独行与带兵都能参加，军令和真实兵损沿用既有规则。",
+    "links": [
+      {
+        "target": "v4_taohua",
+        "condition": null
+      },
+      {
+        "target": "v4_crossroads",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v4_taohua_pact"
+    ],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v4_baihu",
+    "name": "白虎山议棚",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "孔明、孔亮提到两件急事：传递斥候情报，或把粮队接进山。前者为联合守寨争取先手，后者补足各部辎重。",
+    "links": [
+      {
+        "target": "v4_crossroads",
+        "condition": null
+      },
+      {
+        "target": "v4_baihu_road",
+        "condition": null
+      },
+      {
+        "target": "v4_watch",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v4_baihu_pact"
+    ],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v4_baihu_road",
+    "name": "白虎山粮径",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "沿路的拦截者盯住了粮队。十八级主力可以护送；这一条路不要求先送情报。",
+    "links": [
+      {
+        "target": "v4_baihu",
+        "condition": null
+      },
+      {
+        "target": "v4_crossroads",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v4_baihu_pact"
+    ],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v4_watch",
+    "name": "山外递信亭",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "改为英雄独行后，可以沿小路查明围寨动向，再把情报带回白虎山。递信不自动结盟，也不代替招贤或打造。",
+    "links": [
+      {
+        "target": "v4_crossroads",
+        "condition": null
+      },
+      {
+        "target": "v4_baihu",
+        "condition": null
+      }
+    ],
+    "actions": [
+      {
+        "id": "v4_dispatch_intel",
+        "label": "独行查明军情，带回传书",
+        "once": true,
+        "condition": {
+          "all": [
+            {
+              "flag": "volume_three_complete"
+            },
+            {
+              "campMode": "solo"
+            }
+          ]
+        },
+        "text": "你们借山路避开大队，确认敌军集结的方向。传书已经带回，可去白虎山选择递信结盟；本次不消耗材料，也不自动结盟。",
+        "effects": [
+          {
+            "type": "flag",
+            "id": "v4_intel"
+          }
+        ]
+      }
+    ],
+    "stories": [],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v4_union",
+    "name": "三山联合营",
+    "region": "三山聚义",
+    "type": "area",
+    "description": "三寨都已结盟、聚义厅达到三级后，在此合议守寨。二十二级主力可出征，已经选择的三项支援会在战前列明并实际生效。",
+    "links": [
+      {
+        "target": "v4_crossroads",
+        "condition": null
+      },
+      {
+        "target": "v5_camp",
+        "condition": {
+          "flag": "volume_four_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v4_union"
+    ],
+    "dungeons": [],
+    "chapter": "volume_four"
+  },
+  {
+    "id": "v5_camp",
+    "name": "独龙冈行营",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "三山聚义之后，众人把祝家庄周围的道路摊开。先检点粮木与医馆，再探明迷径。断援和断粮至少完成一条便可继续，另一条与救助百姓都是可选准备。",
+    "links": [
+      {
+        "target": "v4_union",
+        "condition": null
+      },
+      {
+        "target": "v5_path",
+        "condition": {
+          "flag": "v5_prepared"
+        }
+      },
+      {
+        "target": "v5_outer",
+        "condition": {
+          "flag": "v5_route_known"
+        }
+      },
+      {
+        "target": "v5_east",
+        "condition": {
+          "flag": "v5_first_done"
+        }
+      },
+      {
+        "target": "v5_west",
+        "condition": {
+          "flag": "v5_first_done"
+        }
+      },
+      {
+        "target": "v5_refuge",
+        "condition": {
+          "flag": "v5_first_done"
+        }
+      },
+      {
+        "target": "v5_gate",
+        "condition": {
+          "all": [
+            {
+              "flag": "v5_first_done"
+            },
+            {
+              "any": [
+                {
+                  "flag": "v5_east_cut"
+                },
+                {
+                  "flag": "v5_west_cut"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "target": "v5_court",
+        "condition": {
+          "all": [
+            {
+              "flag": "v5_second_done"
+            },
+            {
+              "campBuilding": "hall",
+              "count": 4
+            }
+          ]
+        }
+      },
+      {
+        "target": "v5_store",
+        "condition": {
+          "flag": "v5_third_done"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_brief"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
+  },
+  {
+    "id": "v5_path",
+    "name": "盘陀迷径",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "岔道已标在全图。可改为英雄独行辨路，或付三百碎银请向导带路；两种方式都能安全查清路径，不安排必败战，也不要求招到某位好汉。",
+    "links": [
+      {
+        "target": "v5_camp",
+        "condition": null
+      },
+      {
+        "target": "v5_outer",
+        "condition": {
+          "flag": "v5_route_known"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_survey"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
+  },
+  {
+    "id": "v5_outer",
+    "name": "祝庄外哨",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "一打先探虚实。使用自己的英雄与部队击退外哨，确认战果后，援路、粮道和安置所开放。",
+    "links": [
+      {
+        "target": "v5_camp",
+        "condition": null
+      },
+      {
+        "target": "v5_path",
+        "condition": {
+          "flag": "v5_prepared"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_probe"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
+  },
+  {
+    "id": "v5_east",
+    "name": "东援路",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "切断援路，三打时援骑不会加入祝家庄内院守军。与西粮道可任选先后；即使二打已完成，也可以回来补做。",
+    "links": [
+      {
+        "target": "v5_camp",
+        "condition": null
+      },
+      {
+        "target": "v5_west",
+        "condition": {
+          "flag": "v5_first_done"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_cut_east"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
+  },
+  {
+    "id": "v5_west",
+    "name": "西粮道",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "截住输送守军的粮道，三打时敌方最大气血与攻击降低一成。与东援路至少完成一处便能二打。",
+    "links": [
+      {
+        "target": "v5_camp",
+        "condition": null
+      },
+      {
+        "target": "v5_east",
+        "condition": {
+          "flag": "v5_first_done"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_cut_west"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
+  },
+  {
+    "id": "v5_refuge",
+    "name": "庄外安置所",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "百姓离庄避战。交药草四份与粗布四份帮助安置，可获知守庄薄弱处，三打时敌方防御降低百分之十五。这是可选相助，不影响直接招贤与打造。",
+    "links": [
+      {
+        "target": "v5_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_aid"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
+  },
+  {
+    "id": "v5_gate",
+    "name": "祝庄前门",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "二打破门，栾廷玉正在门前布阵。先完成一打，再截断援路或粮道之一；战前可以继续补足两路准备。",
+    "links": [
+      {
+        "target": "v5_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_second"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
+  },
+  {
+    "id": "v5_court",
+    "name": "祝庄内院",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "三打收束，祝彪率守军守住内院。聚义厅四级、二打完成后开放，战前可核对援军、粮道和内应带来的实际变化。",
+    "links": [
+      {
+        "target": "v5_camp",
+        "condition": null
+      },
+      {
+        "target": "v5_store",
+        "condition": {
+          "flag": "v5_third_done"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_third"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
+  },
+  {
+    "id": "v5_store",
+    "name": "庄后粮仓",
+    "region": "三打祝家庄",
+    "type": "area",
+    "description": "战事结束后，在此清点粮仓，安排百姓归居并完成第五卷。清点前不会自动结卷；卷终后可每日领取一份药草。",
+    "links": [
+      {
+        "target": "v5_camp",
+        "condition": null
+      },
+      {
+        "target": "v5_court",
+        "condition": {
+          "all": [
+            {
+              "flag": "v5_second_done"
+            },
+            {
+              "campBuilding": "hall",
+              "count": 4
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v5_settle"
+    ],
+    "dungeons": [],
+    "chapter": "volume_five"
   }
 ]
