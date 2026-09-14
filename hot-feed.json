@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-14T09:00:25.129Z",
+  "generatedAt": "2026-09-14T14:04:34.886Z",
   "intelligence": {
-    "updatedAt": "2026-09-14T09:00:25.129Z",
+    "updatedAt": "2026-09-14T14:04:34.886Z",
     "items": [
       {
-        "id": "cn-item-5f66477664020844",
+        "id": "cn-item-b104cbe3bcc27fdc",
         "category": "cn",
-        "title": "法国就15岁以下未成年人社媒禁令向欧盟提交新版法案",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-14/10696166.shtml",
+        "title": "6017万公款买名表！香港上市公司前高层被判10年8个月",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-14/10696364.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-14T07:34:46.000Z",
-        "summary": "当地时间9月14日，法国总统马克龙在社交媒体发文宣布，法国政府当天已向欧盟委员会通报禁止15岁以下未成年人使用社交媒体的新版本法案。此前，法国宪法委员会以相关规定对青少年言论和通信自由构成“过度侵犯”为由，于8月否决了原法案。",
+        "publishedAt": "2026-09-14T12:38:15.000Z",
+        "summary": "香港上市公司万隆控股集团前行政总裁周泓，涉嫌利用职务便利虚构交易、套取公司巨额资金购置名表私用，欺诈罪名成立，14日在香港高等法院获刑十年零八个月。法庭同时下令其赔偿公司5157万港元，并禁止其担任公司董事等职务十五年。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49688695",
+        "id": "hn-49693610",
         "category": "dev",
-        "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-        "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
+        "title": "EuroBirdPortal – Live bird movements across Europe",
+        "url": "https://www.eurobirdportal.org/ebp/en/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T21:06:13.000Z",
+        "publishedAt": "2026-09-14T08:25:47.000Z",
         "badge": "HN",
-        "signal": "897 分 · 375 评论"
+        "signal": "152 分 · 51 评论"
       },
       {
-        "id": "cn-it-475c8e07633e2c27",
+        "id": "cn-it-39ad0b300b703f34",
         "category": "cn",
-        "title": "万丽智能电脑控制终端 + 智能 ARGB 集线器套装发售，599 元",
-        "url": "https://www.ithome.com/1/002/171.htm",
+        "title": "小米澎程 N90 Max 探索版展车已进入全国 108 个城市的门店",
+        "url": "https://www.ithome.com/1/002/303.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T08:55:09.000Z",
-        "summary": "IT之家 9 月 14 日消息，万丽 (Manli) 现已在电商平台销售智能电脑控制终端 + 智能 ARGB 集线器套装，定价 599 元。 智能电脑控制终端是万丽 MIE 全域智能生态的输入接口 。这款趣味桌搭摆件集成 1.8\" LCD 屏幕，可显示硬件信息、实时时间以及其它自定义内容，还支持语音快速开机、ARGB 灯效控制、系统音量控制等用法。 智能 ARGB 集线器则能让第三方设备接入 MIE 生态 。其采用独立 SATA 供电，提供 10 个 5V 3Pin ARG…",
+        "publishedAt": "2026-09-14T13:54:44.000Z",
+        "summary": "IT之家 9 月 14 日消息，小米官方今日透露，截至目前，小米澎程 N90 Max 探索版展车已进入全国 108 个城市的 291 个门店，并公布具体门店（附文末）。 IT之家注意到，小米澎程系列于 9 月 7 日晚发布，4 分钟锁单突破 10,000 台。新车包含小米澎程 N70 Pro、N70 Max、N90 Max、N90 Max 探索版四款车型，小米澎程 N70 Pro 售价 20.99 万元；小米澎程 N70 Max 售价 23.99 万元；小米澎程 N90 M…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241918",
+        "id": "v2ex-1241973",
         "category": "dev",
-        "title": "Fable 5.1 和 Astra 都画不出一个 SVG？",
-        "url": "https://www.v2ex.com/t/1241918",
+        "title": "GPT-6 是不是最近又降智了",
+        "url": "https://www.v2ex.com/t/1241973",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T08:32:42.000Z",
-        "summary": "两家模型换着来，烧了两周的额度了。 一个云纹，用 SVG 画，且能随机组合排列成图案。给模型两个参考图（如下图）。 结果两个模型出来的效果（如下图）… 看了两个模型的思考链，都是在穷举： 云纹从中间切成两个部分，然后用 svg 画很多图案，对照原图，找最接近的 程序化实现排列方式 人工用 svg 画出来，再排列也能做到。就不能都用模型搞定，有点意外。 也有模型能做这个事情，视觉效果不错，但随机性又太高。 其他规律纹样或者简单纹样（牡丹纹回纹什么的） Gemini 3.6 f…",
+        "publishedAt": "2026-09-14T13:59:51.000Z",
+        "summary": "第一天用，体验还挺惊艳的，这两天上到生产环境，又开始发狂了。 官方 20x Pro 账号，ChatGPT Desktop 客户端，GPT-6 Astra High 。 我让他给一份番茄炒蛋的食谱，他给得很好， 然后我说「你就按照这个做」，他直接拿起地沟油往里面倒。 我说「你别用地沟油啊」，他说不好意思，然后直接把地沟油连着番茄和鸡蛋全扔了，搜了一份土豆炒肉丝的食谱，然后停下来不做了，要我「确认后再继续」。 我说「你倒是继续做啊」，他又说不好意思，最后给我端出来一盘用地沟油的…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-25427f6793e1b963",
+        "id": "cn-baidu-0c760c8a7174c283",
         "category": "cn",
-        "title": "野人先生 西贝",
-        "url": "https://www.baidu.com/s?wd=%E9%87%8E%E4%BA%BA%E5%85%88%E7%94%9F+%E8%A5%BF%E8%B4%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "一车人买错票 游客建议车站改名",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E8%BD%A6%E4%BA%BA%E4%B9%B0%E9%94%99%E7%A5%A8+%E6%B8%B8%E5%AE%A2%E5%BB%BA%E8%AE%AE%E8%BD%A6%E7%AB%99%E6%94%B9%E5%90%8D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，罗永浩发文吐槽野人先生“难吃”。这次品牌该学西贝，还是“装死”？",
         "badge": "热搜",
-        "signal": "7,809,787 热度"
+        "signal": "7,809,530 热度"
       },
       {
         "id": "cisa-kev-cve-2026-42016",
@@ -118,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49638510",
+        "id": "hn-49693613",
         "category": "dev",
-        "title": "Spaceships (Reverse Asteroid)",
-        "url": "https://spaceships.treybastian.com/",
+        "title": "A 386 PC for Your RP2350",
+        "url": "https://github.com/rh1tech/frank-386",
         "source": "Hacker News",
-        "publishedAt": "2026-09-10T04:44:32.000Z",
+        "publishedAt": "2026-09-14T08:25:57.000Z",
         "badge": "HN",
-        "signal": "227 分 · 40 评论"
+        "signal": "119 分 · 29 评论"
       },
       {
-        "id": "cn-item-a01c1c0205eabbb1",
+        "id": "cn-item-e5c2bb961f5a0ab4",
         "category": "cn",
-        "title": "核电站数据造假 日本中部电力公司两名高层辞职",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-14/10696141.shtml",
+        "title": "广州某火锅店门口一男子持刀伤人，警方通报",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-14/10696344.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-14T07:13:22.000Z",
-        "summary": "中新网9月14日电 据日本共同社报道，当地时间9月14日，日本中部电力公司宣布，社长林欣吾和会长胜野哲将于30日正式辞职，为滨冈核电站抗震设计相关的数据造假问题承担责任。",
+        "publishedAt": "2026-09-14T12:08:31.000Z",
+        "summary": "中新网9月14日电 广州市公安局番禺分局14日在官方微博发布通报：2026年9月14日17时20分许，广州110接群众报警称，番禺区小谷围街某火锅店门口有一男子持刀伤人。接报后，民警迅速到场处置，第一时间将伤者送医救治，抓获犯罪嫌疑人李某(男，35岁)。伤者经救治均无生命危险。",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241905",
+        "id": "v2ex-1241963",
         "category": "dev",
-        "title": "jetbrains 全家桶续费没有折扣码了吗",
-        "url": "https://www.v2ex.com/t/1241905",
+        "title": "GLM Coding Plan 新老 Pro 的额度差有多少？",
+        "url": "https://www.v2ex.com/t/1241963",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T08:04:39.000Z",
-        "summary": "试了好多个折扣码都不行，纠结要不要继续上供了，一般也只用 idea,datagrip,pycharm",
+        "publishedAt": "2026-09-14T12:50:21.000Z",
+        "summary": "老的用 Prompt 额度计算，新的用积分计算。实际使用分别大概多少 token ？",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-18d284906874a96e",
+        "id": "cn-it-1a115258dad201b7",
         "category": "cn",
-        "title": "外交部：散播各种威胁叙事，只会干扰人工智能全球治理进程",
-        "url": "https://www.ithome.com/1/002/170.htm",
+        "title": "吴赟履新满月，消息称上汽大众启动 20 人中层大轮岗",
+        "url": "https://www.ithome.com/1/002/302.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T08:50:15.000Z",
-        "summary": "IT之家 9 月 14 日消息，近日，多家美国 AI 公司负责人呼吁减缓 AI 发展速度，并认为“中国在人工智能领域的优势可能构成国家安全风险”。 据央视新闻报道，今日外交部发言人郭嘉昆主持例行记者会。有记者就有美国 AI 企业称中国 AI 发展对美构成威胁相关内容提问。 郭嘉昆表示，人工智能的发展关乎全人类共同福祉，各方应该共同推动人工智能开放、包容、普惠、向善，散播各种威胁叙事，搞对抗和恶意竞争，只会干扰人工智能全球治理进程，不符合任何一方利益。 延伸阅读 该事件的背景…",
+        "publishedAt": "2026-09-14T13:49:12.000Z",
+        "summary": "IT之家 9 月 14 日消息，据 21 汽车 · 一见 Auto 从多方独立信源处获悉，上汽大众新任总经理吴赟（IT之家注读音：yūn）近日签发了一轮经理层任命，涉及市场营销、产品、生产计划、财务控制和供应链五个板块， 共有 20 人岗位发生变化 ：16 人获代理任命，3 人卸任现职后另有安排，1 人不再兼任原职务。 任命自 2026 年 9 月 2 日起生效，这是吴赟接掌上汽大众总经理 30 天后，启动首次覆盖新车产品定义、市场推广、生产交付的集中调整。值得一提的是，本…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +199,23 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49689048",
+        "id": "hn-49670852",
         "category": "dev",
-        "title": "Registration without a phone number on Signal will use zero-knowledge proofs",
-        "url": "https://community.signalusers.org/t/registration-without-a-phone-number/2222?page=10",
+        "title": "An atlas of periodic solutions to the three-body problem",
+        "url": "https://www.threebodyorbits.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T21:47:04.000Z",
+        "publishedAt": "2026-09-12T10:13:24.000Z",
         "badge": "HN",
-        "signal": "247 分 · 118 评论"
+        "signal": "137 分 · 31 评论"
       },
       {
-        "id": "cn-baidu-2b1c1e0866d1eed2",
+        "id": "cn-baidu-68349087301e84a6",
         "category": "cn",
-        "title": "烧烤店店主回应被同一人举报116次",
-        "url": "https://www.baidu.com/s?wd=%E7%83%A7%E7%83%A4%E5%BA%97%E5%BA%97%E4%B8%BB%E5%9B%9E%E5%BA%94%E8%A2%AB%E5%90%8C%E4%B8%80%E4%BA%BA%E4%B8%BE%E6%8A%A5116%E6%AC%A1&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "海南全省已转移4.2万余人",
+        "url": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%8D%97%E5%85%A8%E7%9C%81%E5%B7%B2%E8%BD%AC%E7%A7%BB4.2%E4%B8%87%E4%BD%99%E4%BA%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "日前，山东菏泽一烧烤店主举报“考古文物失踪”之后，店铺遭一人投诉116次，两个月内遭5个部门查了15次，店主怀疑遭打击报复。9月14日，烧烤店店主回应：狗肉菜品被举报后下架，暂无恢复营业打算。",
         "badge": "热搜",
-        "signal": "7,713,537 热度"
+        "signal": "7,714,262 热度"
       },
       {
         "id": "github-advisory-ghsa-65h7-9wrw-629c",
@@ -240,24 +238,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241901",
+        "id": "v2ex-1241959",
         "category": "dev",
-        "title": "论 AI 恐惧症——对莱顿宣言的驳斥",
-        "url": "https://www.v2ex.com/t/1241901",
+        "title": "ADE 赛道感觉很拥挤，有没有什么好的建议，收集实际运用中的一些需求",
+        "url": "https://www.v2ex.com/t/1241959",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T07:46:30.000Z",
-        "summary": "AI 越来越强，这是好事。原因我稍后讲。 当前却有一堆人杞人忧天，说什么 AI 会毁灭人类。甚至连有模有样的数学家，都着急跳脚，说什么 AI 在毁灭数学。 有几分滑稽。 我称之为火车恐惧症，这病二百年前就有人得过。 中华民族的优秀女性慈禧太后，是最知名的病友。为了缓解病痛，不得不引入了马拉火车的济世良方。 得了这种病呢，就会咿呀咿呀乱叫，慈禧当年对着唐胥铁路，叫的是「先王不安」「有伤禾稼」「龙脉」云云。 可能是时过境迁、音韵流变的缘故，或者是常年的学术涵养，使得叫声婉约了些…",
+        "publishedAt": "2026-09-14T11:43:26.000Z",
+        "summary": "最近在逐步优化自己的本地 Agent 工具 Runner: https://github.com/yicheng47/runner 在做的过程中逐步了解到了 ADE 这个赛道，以及一些类似的产品。 e.g. tui: herdr, claude-squad desktop: cmux(native), orca(electron) 这里仅列举了几个比较 popular 的项目，感觉这个赛道目前非常拥挤，很难做出有差异化的产品，目前 runner 的方向想 focus 在多 …",
         "badge": "程序员",
-        "signal": "21 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-item-8132614b50dcb6c0",
+        "id": "cn-item-55ca2d9916aebcf0",
         "category": "cn",
-        "title": "伊朗和阿曼推迟举行地区会议",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-14/10696105.shtml",
+        "title": "市场监管总局通报47批次食品抽检不合格情况",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-14/10696326.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-14T07:03:02.000Z",
-        "summary": "中新社北京9月14日电 综合消息：当地时间13日，伊朗和阿曼分别宣布，双方原计划14日在阿曼举行的地区会议将推迟举行。",
+        "publishedAt": "2026-09-14T11:42:49.000Z",
+        "summary": "中新网9月14日电 据市场监管总局网站消息，近期，市场监管总局组织食品安全监督抽检2313批次样品，检出47批次样品不合格。对抽检发现的不合格食品，有关省级市场监管部门已组织开展核查处置。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +280,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49690554",
+        "id": "hn-49630353",
         "category": "dev",
-        "title": "The case against JPEG XL",
-        "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+        "title": "Drawably: Hand-Drawn UI Controls",
+        "url": "https://github.com/Danilaa1/drawably",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T01:02:37.000Z",
+        "publishedAt": "2026-09-09T17:45:32.000Z",
         "badge": "HN",
-        "signal": "150 分 · 201 评论"
+        "signal": "26 分 · 14 评论"
       },
       {
-        "id": "cn-it-a37ddfa8fa58d0f3",
+        "id": "cn-it-5ac9bdc3400c3f8a",
         "category": "cn",
-        "title": "长城坦克 300 虎克之路 9 月 15 日开启盲订，采用前后双硬桥",
-        "url": "https://www.ithome.com/1/002/169.htm",
+        "title": "德国称暂停 AI 开发对欧洲而言不可行，呼吁中美参与 AI 治理",
+        "url": "https://www.ithome.com/1/002/301.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T08:47:55.000Z",
-        "summary": "IT之家 9 月 14 日消息，长城汽车旗下长城坦克 300 虎克之路将于 9 月 15 日 20:00 开启盲订，中国量产硬派越野首次登顶全球三大越野圣地之一虎克之路・红峰。 该车最大升级亮点，是把普通版车型的前双叉臂独立悬架，换装整体桥式非独立悬架， 打造前后双硬桥底盘布局 ，可兼容 40 英寸大尺寸越野轮胎。 坦克品牌 CEO 谷玉坤在短视频中介绍，坦克 300 虎克之路为原厂车型。上市前，品牌将车辆交付专业越野玩家开展攀爬实测，充分挖掘车辆的越野极限与改装潜力。他表…",
+        "publishedAt": "2026-09-14T13:46:45.000Z",
+        "summary": "IT之家 9 月 14 日消息，据路透社报道，德国数字事务部于当地时间周一回应顶尖 AI 开发者提出的、为能力持续增强的 AI 系统设置安全防护的呼吁，称欧洲不应选择停止 AI 研发这条路。 该部门一名发言人表示：“我们认为，停止研发对欧洲而言并非可行方案。”他补充说，要巩固欧洲的数字主权，就必须持续推进 AI 领域的研发与创新。 此番表态的背景是，Anthropic 首席执行官达里奥 · 阿莫代伊（Dario Amodei）上周末发布长文，呼吁 AI 企业放缓模型能力迭代…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +320,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241873",
+        "id": "v2ex-1241952",
         "category": "dev",
-        "title": "最近让 AI 写一个大一点点的项目，才隔一个星期天，居然把之前实现的方法给忘光了。",
-        "url": "https://www.v2ex.com/t/1241873",
+        "title": "连续肝了好几周， tauri 开发的轻量级数据库管理软件 DataZen v0.2.0 版本终于发布了",
+        "url": "https://www.v2ex.com/t/1241952",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T06:35:55.000Z",
-        "summary": "关于 AI 的接受程序，我是属于让 AI 写单个模块或单个类，不会直接让整个 AI 从头到尾全部写到结束的，我对每个模块与类的程序，都用眼睛看过，确认过。 但是，当项目比较大，功能比较多的时候，会发现和以前 ctrl+C+V 这种方式不同，会对不久前才让 AI 写过的模块忘得很彻底。（彻底！） 比如今天刚遇到的事，工具箱这个模块里面有 10 个小工具，其只 1 个是计算某个部门的利息的功能，是上个星期写的。 当财务部的人问我“出库”这里有没有去加 XX 然后并进去计算的时候…",
+        "publishedAt": "2026-09-14T10:49:22.000Z",
+        "summary": "前言 之前在 V2EX 上发了两篇关于 DataZen 的帖子，尤其是上一篇发完之后有很多朋友到 github 上给了 star ，特别感谢大家的支持，同时也有很多朋友提出了宝贵的意见，让我意识到这个赛道的竞争到底有多激烈。重量级传统选手有 Navicat/DataGrip/DBeaver/TablePlus 等等，最近的 DBX 也很火功能也很强大。既然这个赛道竞争这么激烈，我为啥还要继续做 v0.2.0 版本呢，实事求是的说，一个是 vibe coding 极大的降低了…",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "8 回复"
       },
       {
-        "id": "cn-baidu-e62763b480a04fdb",
+        "id": "cn-baidu-49baac07a6ea6089",
         "category": "cn",
-        "title": "“中国服务”给世界带来什么",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%AD%E5%9B%BD%E6%9C%8D%E5%8A%A1%E2%80%9D%E7%BB%99%E4%B8%96%E7%95%8C%E5%B8%A6%E6%9D%A5%E4%BB%80%E4%B9%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "未来五年民生健康重磅规划",
+        "url": "https://www.baidu.com/s?wd=%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%B9%B4%E6%B0%91%E7%94%9F%E5%81%A5%E5%BA%B7%E9%87%8D%E7%A3%85%E8%A7%84%E5%88%92&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "根据中国政府发布的《关于推进服务业扩能提质的意见》，到2030年中国服务业总规模将迈上100万亿元台阶，培育更多“中国服务”品牌。这将激发全球贸易新活力，让世界共享更多红利。正如联合国贸发会议国际贸易和商品司司长德拉·莫拉所说，中国正在为其他国家、为其他企业创造商业机遇。",
+        "summary": "9月14日上午，国务院新闻办公室举行“开局起步‘十五五’”系列主题新闻发布会，国家卫生健康委、国家中医药局、国家疾控局等部门负责人介绍推动健康中国建设取得决定性进展有关情况。未来5年，要从“有”向“优”转变，我国将加快完善优质高效整合型医疗卫生服务体系，让更多群众在家门口看得上病、看得好病。",
         "badge": "热搜",
-        "signal": "7,616,773 热度"
+        "signal": "7,617,033 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86060",
@@ -363,23 +361,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49690174",
+        "id": "hn-49695409",
         "category": "dev",
-        "title": "Apple's Dimensional Drawings",
-        "url": "https://developer.apple.com/accessories/dimensional-drawings/",
+        "title": "Apple's Siri AI Can Be Swapped Out for Claude, ChatGPT, Code Shows",
+        "url": "https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T00:11:21.000Z",
+        "publishedAt": "2026-09-14T12:01:32.000Z",
         "badge": "HN",
-        "signal": "171 分 · 66 评论"
+        "signal": "98 分 · 37 评论"
       },
       {
-        "id": "cn-item-e46fcd71cb54de64",
+        "id": "cn-item-cc87062717802d65",
         "category": "cn",
-        "title": "整这么臭？！绍兴，你的胆子真是肥嘟嘟的",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-14/10696113.shtml",
+        "title": "国务院对中国船舶集团青岛北海造船有限公司“9·10”重大火灾事故提级调查",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-14/10696269.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-14T06:14:03.000Z",
-        "summary": "最近，凭借爆火的“葫芦娃爷爷”一事，浙江绍兴这座江南古城被不少网友列入年度旅行清单。大批游客涌进绍兴，坐乌篷船，看青砖黛瓦，逛街巷烟火。",
+        "publishedAt": "2026-09-14T09:49:22.000Z",
+        "summary": "9月10日11时15分许，中国船舶集团青岛北海造船有限公司一艘外籍货轮靠港维修期间发生火灾，造成25人死亡、5人受伤。为认真贯彻落实习近平总书记重要指示精神，按照李强总理等中央领导同志批示要求，根据国家有关法律法规规定，国务院成立山东青岛中国船舶集团青岛北海造船有限公司“9·10”重大火灾事故调查组，由应急管理部牵头，外交部、工业和信息化部、公安部、交通运输部、国务院国资委、全国总工会、国家消防救援局和山东省人民政府等相关方面参加，对该起事故提级调查。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +402,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241853",
+        "id": "v2ex-1241943",
         "category": "dev",
-        "title": "第一次做出海产品，上线 3 个多月几乎没流量，有点迷茫了。",
-        "url": "https://www.v2ex.com/t/1241853",
+        "title": "ChatGPT Atlas 下线了， AI 浏览器这个方向不被看好吗？",
+        "url": "https://www.v2ex.com/t/1241943",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T05:56:45.000Z",
-        "summary": "第一次尝试做出海产品，自己折腾了一个 AI 股票研究工具，已经上线 3 个多月了。 产品本身一直在迭代，功能也加了不少，但最大的问题是：几乎没什么流量。 刚开始的时候想得比较简单，觉得把产品做好、做点 SEO 、发发 X 、提交一些 AI 导航站，慢慢应该就会有人进来。 结果做了几个月以后发现，事情完全不是这么回事。 SEO 收录很慢，X 基本没什么自然流量，Reddit / Quora 也试过一些，但目前都没有找到特别有效的获客方式。 现在有点卡在一个很尴尬的阶段： 产品…",
+        "publishedAt": "2026-09-14T09:58:17.000Z",
+        "summary": "OpenAI 的 ChatGPT Atlas 浏览器下线了。AI 浏览器这个方向是不是不被看好？",
         "badge": "程序员",
-        "signal": "44 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-53f0686f1cca66bc",
+        "id": "cn-it-2baa9b2f8e34d7f7",
         "category": "cn",
-        "title": "蓝虫具身发布模块化人形机器人 Mantis Standard“小白”，0.98 万元起",
-        "url": "https://www.ithome.com/1/002/166.htm",
+        "title": "消息称甲骨文启动新一轮裁员，部分团队裁员比例达两位数",
+        "url": "https://www.ithome.com/1/002/300.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-14T08:45:16.000Z",
-        "summary": "IT之家 9 月 14 日消息，西安交通大学科技成果转化企业蓝虫具身今日发布新一代模块化人形机器人 Mantis Standard “小白”， 售价 0.98 万起 。 官方表示，Mantis Standard “小白”不只是“人形机器人”， 更是一个可以化身各种形态的具身智能平台 。IT之家获悉，机器人底盘、手臂、腰部、头部都是标准模块，模块之间通过快装接口完成机械与电气连接。 参数方面，这款机器人具有 22 个全身自由度，单臂负载 7kg，臂展 663mm，遥操延迟低于…",
+        "publishedAt": "2026-09-14T13:40:58.000Z",
+        "summary": "IT之家 9 月 14 日消息，据三名被裁员员工以及一封发给 Business Insider 的邮件显示，甲骨文公司已经开启新一轮裁员。 一名知情人士透露，本轮裁员定于当地时间周一开始。 Business Insider 上月曾报道，甲骨文为筹措资金建设 AI 基础设施，背负了巨额债务，为此制定了新一轮裁员计划以缩减人力开支。 一份内部文件显示，部分团队的裁员比例达到两位数。 当地时间周一，领英、Reddit 以及职场匿名社区 Blind 上陆续出现帖子，发帖人称自己在本…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +443,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49693226",
+        "id": "hn-49695408",
         "category": "dev",
-        "title": "Show HN: 1080p is 920px tall – 1k real browser viewports",
-        "url": "https://screensize.net/reports/viewport-stats",
+        "title": "Show HN: Kinesis – Control your Mac with the Meta Neural Band",
+        "url": "https://github.com/callbacked/kinesis",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T07:35:00.000Z",
+        "publishedAt": "2026-09-14T12:01:31.000Z",
         "badge": "HN",
-        "signal": "8 分 · 4 评论"
+        "signal": "67 分 · 22 评论"
       },
       {
-        "id": "cn-baidu-6382f948ce498290",
+        "id": "cn-baidu-c1286d51c2fa0466",
         "category": "cn",
-        "title": "终于不再是“我在xx很想你”",
-        "url": "https://www.baidu.com/s?wd=%E7%BB%88%E4%BA%8E%E4%B8%8D%E5%86%8D%E6%98%AF%E2%80%9C%E6%88%91%E5%9C%A8xx%E5%BE%88%E6%83%B3%E4%BD%A0%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "卫健委：提倡大家多喝白开水淡茶水",
+        "url": "https://www.baidu.com/s?wd=%E5%8D%AB%E5%81%A5%E5%A7%94%EF%BC%9A%E6%8F%90%E5%80%A1%E5%A4%A7%E5%AE%B6%E5%A4%9A%E5%96%9D%E7%99%BD%E5%BC%80%E6%B0%B4%E6%B7%A1%E8%8C%B6%E6%B0%B4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，盘龙古道尽头标语“今日走过了人生所有的弯路，从此人生尽是坦途”在社交平台爆火。该标语因契合古道超600个弯道的实际体验而抚慰人心。反观各地泛滥的 “我在xx很想你” 路牌与复刻景观，浪漫已经变成流于形式的套路。",
+        "summary": "9月14日，国家卫健委主任雷海潮在国新办发布会上介绍健康中国建设情况。他提到，国内居民高盐高糖高油饮食普遍，每日添加糖摄入建议控制在25克以内，单瓶500毫升含糖饮料含糖量就可能达到这一上限，建议大家多喝白开水、淡茶水。",
         "badge": "热搜",
-        "signal": "7,523,886 热度"
+        "signal": "7,524,252 热度"
       },
       {
         "id": "github-advisory-ghsa-g3f9-g5vj-p62f",
@@ -485,13 +483,13 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241839",
+        "id": "v2ex-1241938",
         "category": "dev",
-        "title": "《Codex App Launcher： IDEA 和 Codex App 无缝联动》",
-        "url": "https://www.v2ex.com/t/1241839",
+        "title": "codex 体验也太垃圾了，你们都咋用下去的",
+        "url": "https://www.v2ex.com/t/1241938",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T04:58:19.000Z",
-        "summary": "在 IDEA 写代码想问 Codex ，还得手动复制路径、数行号？这个插件一键搞定： 核心功能 点一下工具栏 Codex 图标，直接在 Codex App 打开当前项目 选中代码发送，自动带上 文件路径#L10-12 精准引用 引用只追加到输入框，不自动发送，随时补充描述 支持：Windows / macOS （引用发送目前仅 Windows ） 安装：IDEA 插件市场搜 \"Codex App Launcher\" 即可，无需重启 IDE 插件市场： https://plu…",
+        "publishedAt": "2026-09-14T09:32:35.000Z",
+        "summary": "之前一直用的 cursor ，干活相当丝滑，今天供货商没货了，看 v 上 codex 使用的人比较多就开了个 plus ，两个五小时用量都用完了一个活都没干完，体验甚至远远不如 deepseek ，ds 这才用了 50 万 token 就把 codex 半天没解决的问题搞定了，真是太离谱了",
         "badge": "程序员",
         "signal": "0 回复"
       }
@@ -510,58 +508,58 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 30704,
-        "starsToday": 868
+        "stars": 31248,
+        "starsToday": 2233
       },
       {
-        "id": "github-167687c65646f683",
+        "id": "github-c8f5678810f1cfbe",
         "rank": 2,
-        "name": "ever-co/ever-gauzy",
-        "url": "https://github.com/ever-co/ever-gauzy",
-        "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
-        "language": "TypeScript",
-        "stars": 5544,
-        "starsToday": 191
+        "name": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "language": "Go",
+        "stars": 24724,
+        "starsToday": 1796
       },
       {
-        "id": "github-27ca93a049d8d826",
+        "id": "github-7462aa6666311858",
         "rank": 3,
-        "name": "bilawalsidhu/gods-eye-view",
-        "url": "https://github.com/bilawalsidhu/gods-eye-view",
-        "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-        "language": "JavaScript",
-        "stars": 32658,
-        "starsToday": 2680
-      },
-      {
-        "id": "github-3ec415efd8a08d06",
-        "rank": 4,
-        "name": "tech-leads-club/agent-skills",
-        "url": "https://github.com/tech-leads-club/agent-skills",
-        "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
-        "language": "TypeScript",
-        "stars": 5848,
-        "starsToday": 265
-      },
-      {
-        "id": "github-f6adaf1dfd8ddc19",
-        "rank": 5,
-        "name": "melgarafael/DeskcommCRM",
-        "url": "https://github.com/melgarafael/DeskcommCRM",
-        "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
-        "language": "TypeScript",
-        "stars": 2383,
-        "starsToday": 432
-      },
-      {
-        "id": "github-31424b832fa82c27",
-        "rank": 6,
-        "name": "calesthio/OpenMontage",
-        "url": "https://github.com/calesthio/OpenMontage",
-        "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "name": "multimodal-art-projection/YuE",
+        "url": "https://github.com/multimodal-art-projection/YuE",
+        "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "language": "Python",
-        "stars": 58847,
-        "starsToday": 380
+        "stars": 8129,
+        "starsToday": 578
+      },
+      {
+        "id": "github-90d09492a98e7644",
+        "rank": 4,
+        "name": "debpalash/VoiceStudio",
+        "url": "https://github.com/debpalash/VoiceStudio",
+        "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "language": "Python",
+        "stars": 28398,
+        "starsToday": 2774
+      },
+      {
+        "id": "github-1a12697fc72045d5",
+        "rank": 5,
+        "name": "666ghj/MiroFish",
+        "url": "https://github.com/666ghj/MiroFish",
+        "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+        "language": "Python",
+        "stars": 72900,
+        "starsToday": 524
+      },
+      {
+        "id": "github-7694a26ca72c822a",
+        "rank": 6,
+        "name": "Panniantong/Agent-Reach",
+        "url": "https://github.com/Panniantong/Agent-Reach",
+        "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "language": "Python",
+        "stars": 80877,
+        "starsToday": 640
       },
       {
         "id": "github-a7e33a98d3d7a83e",
@@ -570,40 +568,40 @@
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "language": "JavaScript",
-        "stars": 66368,
-        "starsToday": 706
+        "stars": 66511,
+        "starsToday": 770
       },
       {
-        "id": "github-ab3d9ce3fe326ef7",
+        "id": "github-06def2a3a8acb128",
         "rank": 8,
-        "name": "vxcontrol/pentagi",
-        "url": "https://github.com/vxcontrol/pentagi",
-        "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
-        "language": "Go",
-        "stars": 24264,
-        "starsToday": 590
-      },
-      {
-        "id": "github-7462aa6666311858",
-        "rank": 9,
-        "name": "multimodal-art-projection/YuE",
-        "url": "https://github.com/multimodal-art-projection/YuE",
-        "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+        "name": "rlaope/oh-my-hermes",
+        "url": "https://github.com/rlaope/oh-my-hermes",
+        "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
         "language": "Python",
-        "stars": 7989,
-        "starsToday": 487
+        "stars": 1858,
+        "starsToday": 52
       },
       {
-        "id": "github-0095f5eb76ef374d",
+        "id": "github-f277de9a2cd3a372",
+        "rank": 9,
+        "name": "localsend/localsend",
+        "url": "https://github.com/localsend/localsend",
+        "description": "An open-source cross-platform alternative to AirDrop",
+        "language": "Dart",
+        "stars": 91042,
+        "starsToday": 213
+      },
+      {
+        "id": "github-3851ef628895bd33",
         "rank": 10,
-        "name": "yuliskov/SmartTube",
-        "url": "https://github.com/yuliskov/SmartTube",
-        "description": "Browse media content with your own rules on Android TV",
-        "language": "Java",
-        "stars": 33564,
-        "starsToday": 233
+        "name": "dani-garcia/vaultwarden",
+        "url": "https://github.com/dani-garcia/vaultwarden",
+        "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+        "language": "Rust",
+        "stars": 67435,
+        "starsToday": 110
       }
     ],
-    "updatedAt": "2026-09-14T09:00:25.129Z"
+    "updatedAt": "2026-09-14T14:04:34.886Z"
   }
 }
