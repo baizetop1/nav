@@ -1,6 +1,6 @@
-import { reportHealing, reportOtherDamage } from './debrief.js?v=0.16.0';
-import { HERO_SPECIALTIES, DRILLS, STYLES, TERRAIN_NAMES, MECHANICS, activeBonds, battleTerrain } from './strategy-data.js?v=0.16.0';
-import { hasOwn, requireRule, journal } from './utils.js?v=0.16.0';
+import { reportHealing, reportOtherDamage } from './debrief.js?v=0.17.0';
+import { HERO_SPECIALTIES, DRILLS, STYLES, TERRAIN_NAMES, MECHANICS, activeBonds, battleTerrain } from './strategy-data.js?v=0.17.0';
+import { hasOwn, requireRule, journal } from './utils.js?v=0.17.0';
 
 export function drillQuote(s,id){return {cost:{silver:200,items:{martial_pages:3,iron:3}},reason:!s.camp?'先建立寨子':s.heroes[id]?.status!=='owned'?'先迎入这位好汉':s.camp.buildings.barracks<2?'兵营需要 2 级':s.heroes[id].level<10?'英雄需要 10 级':s.player.silver<200?'碎银不足':(s.inventory.martial_pages||0)<3?'武学残页不足':(s.inventory.iron||0)<3?'精铁不足':''};}
 export function trainDrill(s,a){

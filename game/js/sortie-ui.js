@@ -1,10 +1,10 @@
-import { unitArm, armFactor, ARMS } from './martial.js?v=0.16.0';
-import { POSTS } from './frontier.js?v=0.16.0';
-import { DAILY_ROUTES, WEEKLY_ROUTES } from './rotations.js?v=0.16.0';
-import { METRICS } from './debrief.js?v=0.16.0';
-import { TACTICS, RAIDS } from './camp.js?v=0.16.0';
-import { CORPS } from './corps-data.js?v=0.16.0';
-import { mechanicPreview } from './strategy-ui.js?v=0.16.0';
+import { unitArm, armFactor, ARMS } from './martial.js?v=0.17.0';
+import { POSTS } from './frontier.js?v=0.17.0';
+import { DAILY_ROUTES, WEEKLY_ROUTES } from './rotations.js?v=0.17.0';
+import { METRICS } from './debrief.js?v=0.17.0';
+import { TACTICS, RAIDS } from './camp.js?v=0.17.0';
+import { CORPS } from './corps-data.js?v=0.17.0';
+import { mechanicPreview } from './strategy-ui.js?v=0.17.0';
 const labels={damage:'直接伤害',healing:'有效治疗',taken:'实际承伤',controls:'眩晕施加',interrupts:'截招打断',skills:'主动施招'};
 export function debriefPanel(r,d,esc){
  if(!r)return '';
