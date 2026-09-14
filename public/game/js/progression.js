@@ -12,3 +12,5 @@ export function experienceResult(hero,amount,cap) {
   return {level,exp:level>=cap?0:exp,overflow};
 }
 export const ATTRIBUTE_NAMES={hp:'气血',attack:'攻击',defense:'防御',speed:'速度',strategy:'谋略'};
+
+export function totalExperience(hero){const n=hero.level-1;return 100*n+15*n*(n+1)/2+n*(n+1)*(2*n+1)/6+hero.exp;}

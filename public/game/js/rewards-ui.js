@@ -1,6 +1,7 @@
-import { CORPS, corpsRank } from './development.js?v=0.17.0';
-import { HELPERS, hasHelper } from './helpers.js?v=0.17.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.17.0';
+import { totalExperience } from './progression.js?v=0.20.0';
+import { CORPS, corpsRank } from './development.js?v=0.20.0';
+import { HELPERS, hasHelper } from './helpers.js?v=0.20.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.20.0';
 // Derive the visible receipt from a completed transaction, never from a second roll.
 export function gains(before,after,data){
   const rows=[];const add=(name,n)=>{if(n>0)rows.push({name,amount:n});};
@@ -8,7 +9,7 @@ export function gains(before,after,data){
   for(const [id,n] of Object.entries(after.inventory))add(data.by.items[id]?.name||id,n-(before.inventory[id]||0));
   for(const [id,name] of Object.entries({wood:'木材',food:'粮草',troops:'乡勇归队'}))add(name,(after.camp?.[id]||0)-(before.camp?.[id]||0));
   for(const h of data.heroes){const a=after.heroes[h.id],b=before.heroes[h.id];if(a.status==='owned'&&b.status!=='owned')rows.push({name:h.name+' · 正式入寨',amount:1});else if(a.level>b.level)rows.push({name:h.name+' · 升至 '+a.level+'级',amount:a.level-b.level});}
-  for(const h of data.heroes){const a=after.heroes[h.id],b=before.heroes[h.id];if(a.status==='owned'&&b.status==='owned'){const total=v=>(v.level-1)*20+15*(v.level-1)*v.level/2+v.exp;add(h.name+' · 历练',total(a)-total(b));}}
+  for(const h of data.heroes){const a=after.heroes[h.id],b=before.heroes[h.id];if(a.status==='owned'&&b.status==='owned'){add(h.name+' · 历练',totalExperience(a)-totalExperience(b));}}
   for(const e of after.equipment)if(!before.equipment.some(old=>old.uid===e.uid))rows.push({name:data.by.equipments[e.item].quality+' · '+data.by.equipments[e.item].name,amount:1});
   for(const [id,m] of Object.entries(after.growth?.mounts||{}))if(!before.growth?.mounts[id])rows.push({name:data.by.heroes[id].mount.name+' · 坐骑入厩',amount:1});
   for(const [id,m] of Object.entries(after.growth?.mounts||{})){const old=before.growth?.mounts[id];if(old){add(data.by.heroes[id].mount.name+' · 亲密',m.intimacy-old.intimacy);if(m.rank>old.rank)rows.push({name:data.by.heroes[id].mount.name+' · 升至 '+m.rank+' 阶',amount:m.rank-old.rank});}}

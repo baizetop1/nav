@@ -1,7 +1,9 @@
-import { HERO_SPECIALTIES } from './strategy-data.js?v=0.17.0';
-import { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME } from './frontier-data.js?v=0.17.0';
-import { hasOwn, requireRule, journal } from './utils.js?v=0.17.0';
-import { hasHelper, HELPERS } from './helpers.js?v=0.17.0';
+import { workerGrowth } from './stewardship.js?v=0.20.0';
+import { productionAction } from './production.js?v=0.20.0';
+import { HERO_SPECIALTIES } from './strategy-data.js?v=0.20.0';
+import { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME } from './frontier-data.js?v=0.20.0';
+import { hasOwn, requireRule, journal } from './utils.js?v=0.20.0';
+import { hasHelper, HELPERS } from './helpers.js?v=0.20.0';
 export { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME };
 export function beginFrontier(s){requireRule(s.camp,'先建立寨子。');requireRule(!s.frontier,'寨务生产已经开办。');s.frontier={version:1,lastAt:s.clock,stations:Object.fromEntries(Object.keys(STATIONS).map(id=>[id,{worker:null,carry:0,bank:0}])),posts:{}};journal(s,'【经营拓土】开办农田、伐木与冶铁生产。半小时为一批，最多累计八小时；据点图已标出各路敌情。');}
 export const personOwned=(s,token)=>typeof token==='string'&&(token.startsWith('hero:')?s.heroes[token.slice(5)]?.status==='owned':token.startsWith('helper:')&&HELPERS.some(h=>'helper:'+h.id===token)&&hasHelper(s,token.slice(7)));
@@ -11,9 +13,10 @@ export function stationedAt(s,token){if(!s.frontier)return null;for(const [id,v]
 export function guardReady(s,id){const p=s.frontier?.posts[id],h=s.heroes[p?.guard];return !!p?.guard&&h?.status==='owned'&&!away(s,p.guard)&&h.level>=POSTS[id].level;}
 export function stationYield(s,d,id){const station=STATIONS[id],row=s.frontier?.stations[id],lv=s.camp?.buildings[station.building]||0;if(!lv)return 0;const token=row?.worker;
   const specialty=workerActive(s,token)&&token?.startsWith('hero:')&&HERO_SPECIALTIES[token.slice(5)]?.job===id?1:0;
-  if(id==='workshop')return 1+(workerActive(s,token)?1:0)+specialty;
+  const growth=workerActive(s,token)&&token?.startsWith('hero:')?workerGrowth(s,token.slice(5)):0;
+  if(id==='workshop')return 1+(workerActive(s,token)?1:0)+specialty+growth;
   let bonus=0;if(workerActive(s,token)){if(token.startsWith('hero:'))bonus=d.by.heroes[token.slice(5)].type==='support'?3:2;else{const h=HELPERS.find(h=>'helper:'+h.id===token);bonus=h.bonus[station.resource]?3:1;}}
-  return 1+lv+bonus+specialty;
+  return 1+lv+bonus+specialty+growth;
 }
 export function accrueFrontier(s,d){const f=s.frontier;if(!f)return;const elapsed=Math.max(0,s.clock-f.lastAt),dt=Math.min(OFFLINE_CAP,elapsed),from=f.lastAt;f.lastAt=s.clock;
   for(const [id,row] of Object.entries(f.stations)){const rate=stationYield(s,d,id);if(!rate)continue;const n=Math.floor((row.carry+dt)/CYCLE);row.carry=(row.carry+dt)%CYCLE;row.bank=Math.min(Math.max(row.bank,16*rate),row.bank+n*rate);}
@@ -33,11 +36,8 @@ export function frontierAction(s,d,a){if(a.type==='frontierStart'){beginFrontier
     requireRule(hasOwn(STATIONS,a.id)&&s.camp.buildings[STATIONS[a.id].building]>0,'先建成对应设施。');requireRule(a.worker===null||personOwned(s,a.worker),'此人尚未入寨。');requireRule(a.worker===null||!stationedAt(s,a.worker)||f.stations[a.id].worker===a.worker,'此人已有驻守或任职，请先撤下原职。');f.stations[a.id].worker=a.worker;journal(s,`【生产任职】${STATIONS[a.id].name}已${a.worker?'安排人手':'改为乡人自理'}。`);
   }else if(a.type==='frontierGuard'){
     const p=f.posts[a.id];requireRule(p,'先占领据点。');requireRule(a.hero===null||s.heroes[a.hero]?.status==='owned','守将需要已入寨好汉。');requireRule(a.hero===null||!stationedAt(s,'hero:'+a.hero)||p.guard===a.hero,'此人已有任职或驻守，请先撤下原职。');p.guard=a.hero;journal(s,`【留守】${POSTS[a.id].name}已${a.hero?'调整守将':'撤下守将'}。敌袭已发生时仍需出征解围。`);
-  }else if(a.type==='frontierCollect'){
-    let gathered=0;for(const [id,row] of Object.entries(f.stations)){if(id==='workshop')continue;const n=add(s,STATIONS[id].resource,row.bank);row.bank-=n;gathered+=n;}
-    for(const [id,p] of Object.entries(f.posts))if(!p.threat){const n=add(s,POSTS[id].resource,p.bank);p.bank-=n;gathered+=n;}
-    const workshop=f.stations.workshop,batches=Math.min(workshop.bank,Math.floor((s.inventory.scrap_iron||0)/2),Math.floor(s.camp.wood/2),10000000-(s.inventory.iron||0));if(batches){s.inventory.scrap_iron-=2*batches;s.camp.wood-=2*batches;add(s,'iron',batches);workshop.bank-=batches;gathered+=batches;}
-    requireRule(gathered>0,'暂时没有可收取产出；工坊还需每批碎铁 2、木材 2。');journal(s,'【生产入库】收取已完成物资；工坊按现有原料加工，不足部分保留待加工。');
+  }else if(['frontierCollect','frontierProcess'].includes(a.type)){
+    productionAction(s,a);
   }else throw new Error('未知经营指令。');
 }
 export function validateFrontier(s,d,check){const f=s.frontier,obj=v=>v&&typeof v==='object'&&!Array.isArray(v),num=(n,max)=>Number.isSafeInteger(n)&&n>=0&&n<=max;

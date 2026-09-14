@@ -1,6 +1,6 @@
-import { reportHealing, reportOtherDamage } from './debrief.js?v=0.17.0';
-import { HERO_SPECIALTIES, DRILLS, STYLES, TERRAIN_NAMES, MECHANICS, activeBonds, battleTerrain } from './strategy-data.js?v=0.17.0';
-import { hasOwn, requireRule, journal } from './utils.js?v=0.17.0';
+import { reportHealing, reportOtherDamage } from './debrief.js?v=0.20.0';
+import { HERO_SPECIALTIES, DRILLS, STYLES, TERRAIN_NAMES, MECHANICS, activeBonds, battleTerrain } from './strategy-data.js?v=0.20.0';
+import { hasOwn, requireRule, journal } from './utils.js?v=0.20.0';
 
 export function drillQuote(s,id){return {cost:{silver:200,items:{martial_pages:3,iron:3}},reason:!s.camp?'先建立寨子':s.heroes[id]?.status!=='owned'?'先迎入这位好汉':s.camp.buildings.barracks<2?'兵营需要 2 级':s.heroes[id].level<10?'英雄需要 10 级':s.player.silver<200?'碎银不足':(s.inventory.martial_pages||0)<3?'武学残页不足':(s.inventory.iron||0)<3?'精铁不足':''};}
 export function trainDrill(s,a){
@@ -13,7 +13,7 @@ export function trainDrill(s,a){
 export function initializeStrategy(s,b){
  if(b.martial!==2||b.depth)return;
  s.strategy??={version:1,drills:{}};
- const terrain=battleTerrain(b),m=b.context.type==='rotation'?MECHANICS[b.context.id]:null;
+ const terrain=battleTerrain(b),m=['rotation','elite'].includes(b.context.type)?MECHANICS[b.context.id]:null;
  b.depth={version:1,terrain,drills:Object.fromEntries(b.team.filter(u=>s.strategy.drills[u.id]).map(u=>[u.id,s.strategy.drills[u.id]])),objective:{kind:m?b.context.id:'none',nextAt:m?.interval||0,integrity:100,waves:0}};
  for(const u of b.team){const p=HERO_SPECIALTIES[u.id],drill=DRILLS[b.depth.drills[u.id]];
   if(drill&&u.corps?.troops){u.attack=Math.round(u.attack*drill.attack);u.defense=Math.round(u.defense*drill.defense);b.log.push(`【部队专精】${u.name} · ${drill.name}。`);}
@@ -64,8 +64,8 @@ export function validateStrategy(s,check){
  if(p!==undefined){check(obj(p)&&p.version===1&&obj(p.drills),'策略进度');for(const [id,v] of Object.entries(p.drills))check(s.heroes[id]?.status==='owned'&&hasOwn(DRILLS,v),'专精方向');}
  if(b?.depth!==undefined){const z=b.depth,o=z?.objective;check(p&&obj(z)&&z.version===1&&b.martial===2&&!b.guest&&z.terrain===battleTerrain(b)&&obj(z.drills),'战场策略');
   for(const [id,v] of Object.entries(z.drills))check(b.team.some(u=>u.id===id)&&hasOwn(DRILLS,v),'专精快照');
-  check(obj(o)&&o.kind===(b.context.type==='rotation'?b.context.id:'none')&&int(o.integrity,0,100)&&int(o.waves,0,30)&&int(o.nextAt,0,192000),'副本目标');
-  const m=MECHANICS[o.kind];check(m?.interval?(o.nextAt===0?o.kind==='fortress'&&o.waves===3:o.nextAt===(o.waves+1)*m.interval&&o.nextAt>b.elapsed):o.nextAt===0&&o.waves===0,'副本事件时钟');
+  check(obj(o)&&o.kind===(['rotation','elite'].includes(b.context.type)?b.context.id:'none')&&int(o.integrity,0,100)&&int(o.waves,0,30)&&int(o.nextAt,0,192000),'副本目标');
+  const m=MECHANICS[o.kind];check(m?.interval?(o.nextAt===0?o.kind==='fortress'&&o.waves===3:o.nextAt===(o.waves+1)*m.interval&&(o.nextAt>b.elapsed||!!b.outcome&&o.nextAt===b.elapsed)):o.nextAt===0&&o.waves===0,'副本事件时钟');
   check(['convoy','stable'].includes(o.kind)||o.integrity===100,'护运耐久');
  }
 }

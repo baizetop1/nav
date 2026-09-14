@@ -67,7 +67,12 @@
     "test:shuihu-polish": "node scripts/shuihu-polish-selfcheck.mjs",
     "test:shuihu-batch": "node scripts/shuihu-batch-selfcheck.mjs",
     "test:shuihu-sortie": "node scripts/shuihu-sortie-selfcheck.mjs",
-    "test:shuihu-progression": "node scripts/shuihu-progression-selfcheck.mjs"
+    "test:shuihu-progression": "node scripts/shuihu-progression-selfcheck.mjs",
+    "test:shuihu-mentorship": "node scripts/shuihu-mentorship-selfcheck.mjs",
+    "test:shuihu-production": "node scripts/shuihu-production-selfcheck.mjs",
+    "test:shuihu-roadmap": "node scripts/shuihu-roadmap-selfcheck.mjs",
+    "test:shuihu-elite-balance": "node scripts/shuihu-elite-balance-selfcheck.mjs",
+    "test:shuihu-roadmap-cloud": "node scripts/shuihu-roadmap-cloud-selfcheck.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

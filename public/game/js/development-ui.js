@@ -1,9 +1,9 @@
-import { rotationCalendar } from './rotations.js?v=0.17.0';
-import { specialtyPanel, bondsPanel } from './strategy-ui.js?v=0.17.0';
-import { doctrinePanel } from './frontier-ui.js?v=0.17.0';
-import { CORPS, CORPS_PROFILES, corpsRank, corpsQuote, targetQuote, presetReason } from './development.js?v=0.17.0';
-import { ARMS } from './martial.js?v=0.17.0';
-import { EQUIPMENT_SETS, equippedSets } from './equipment-sets.js?v=0.17.0';
+import { rotationCalendar } from './rotations.js?v=0.20.0';
+import { specialtyPanel, bondsPanel } from './strategy-ui.js?v=0.20.0';
+import { doctrinePanel } from './frontier-ui.js?v=0.20.0';
+import { CORPS, CORPS_PROFILES, corpsRank, corpsQuote, targetQuote, presetReason } from './development.js?v=0.20.0';
+import { ARMS } from './martial.js?v=0.20.0';
+import { EQUIPMENT_SETS, equippedSets } from './equipment-sets.js?v=0.20.0';
 const names={silver:'碎银',wood:'木材',food:'粮草'};
 const busy=s=>!!(s.battle||s.scheme||s.event);
 export function corpsPanel(s,d,h,btn){
