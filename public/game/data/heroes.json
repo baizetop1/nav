@@ -5248,5 +5248,173 @@
     "group": "external",
     "starSign": "外传人物",
     "portrait": "art/chaogai-v1.png"
+  },
+  {
+    "id": "wangjin",
+    "name": "王进",
+    "title": "禁军教头",
+    "star": 4,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1050,
+      "attack": 146,
+      "defense": 78,
+      "speed": 86,
+      "strategy": 65
+    },
+    "growth": {
+      "hp": 42,
+      "attack": 7,
+      "defense": 4,
+      "speed": 3,
+      "strategy": 2
+    },
+    "skills": [
+      "wangjin_active",
+      "wangjin_passive",
+      "wangjin_advanced",
+      "wangjin_bond"
+    ],
+    "story": "教授乡勇枪棒，与寨主约定：兵营三级、医馆一级，先练兵也先护兵。",
+    "core": false,
+    "meetMap": "training",
+    "meetCondition": {
+      "flag": "external_wangjin_helped"
+    },
+    "obtain": {
+      "type": "external",
+      "token": "wangjin_token",
+      "count": 10,
+      "silver": 700,
+      "hall": 3,
+      "condition": {
+        "flag": "external_wangjin_helped"
+      }
+    },
+    "dialogue": "教授乡勇枪棒，与寨主约定：兵营三级、医馆一级，先练兵也先护兵。",
+    "introducedIn": 5,
+    "mount": {
+      "name": "白蹄义骑",
+      "description": "王进的专属脚力，为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "wangjin_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "外传人物",
+    "portrait": "art/wangjin-v1.png"
+  },
+  {
+    "id": "hucheng",
+    "name": "扈成",
+    "title": "飞天虎",
+    "star": 4,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1100,
+      "attack": 85,
+      "defense": 85,
+      "speed": 82,
+      "strategy": 118
+    },
+    "growth": {
+      "hp": 43,
+      "attack": 4,
+      "defense": 4,
+      "speed": 3,
+      "strategy": 6
+    },
+    "skills": [
+      "hucheng_active",
+      "hucheng_passive",
+      "hucheng_advanced",
+      "hucheng_bond"
+    ],
+    "story": "祝庄战后，扈成带乡人参与医护接应。医馆二级、农田二级后，可确认安民之约。",
+    "core": false,
+    "meetMap": "v5_refuge",
+    "meetCondition": {
+      "flag": "external_hucheng_helped"
+    },
+    "obtain": {
+      "type": "external",
+      "token": "hucheng_token",
+      "count": 10,
+      "silver": 600,
+      "hall": 3,
+      "condition": {
+        "flag": "external_hucheng_helped"
+      }
+    },
+    "dialogue": "祝庄战后，扈成带乡人参与医护接应。医馆二级、农田二级后，可确认安民之约。",
+    "introducedIn": 5,
+    "mount": {
+      "name": "青骢义骑",
+      "description": "扈成的专属脚力，为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "hucheng_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "外传人物",
+    "portrait": "art/hucheng-v1.png"
+  },
+  {
+    "id": "luantingyu",
+    "name": "栾廷玉",
+    "title": "铁棒",
+    "star": 5,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 1180,
+      "attack": 135,
+      "defense": 112,
+      "speed": 72,
+      "strategy": 60
+    },
+    "growth": {
+      "hp": 48,
+      "attack": 6,
+      "defense": 5,
+      "speed": 2,
+      "strategy": 2
+    },
+    "skills": [
+      "luantingyu_active",
+      "luantingyu_passive",
+      "luantingyu_advanced",
+      "luantingyu_bond"
+    ],
+    "story": "本作外传改编：栾廷玉战后留在庄外护送散兵。兵营四级、医馆二级，再以一百功勋担保，可邀他授艺。",
+    "core": false,
+    "meetMap": "v5_store",
+    "meetCondition": {
+      "flag": "external_luantingyu_helped"
+    },
+    "obtain": {
+      "type": "external",
+      "token": "luantingyu_token",
+      "count": 10,
+      "silver": 900,
+      "hall": 4,
+      "condition": {
+        "flag": "external_luantingyu_helped"
+      }
+    },
+    "dialogue": "本作外传改编：栾廷玉战后留在庄外护送散兵。兵营四级、医馆二级，再以一百功勋担保，可邀他授艺。",
+    "introducedIn": 5,
+    "mount": {
+      "name": "骅骝义骑",
+      "description": "栾廷玉的专属脚力，为本作原创设定。",
+      "dungeon": "yezhulin",
+      "contract": "luantingyu_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "外传人物",
+    "portrait": "art/luantingyu-v1.png"
   }
 ]

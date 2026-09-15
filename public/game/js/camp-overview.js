@@ -1,9 +1,10 @@
-import { volumeFiveBoard } from './volume-five-ui.js?v=0.24.0';
-import { volumeFourBoard } from './volume-four-ui.js?v=0.24.0';
-import { volumeThreeBoard } from './volume-three-ui.js?v=0.24.0';
-import { readinessPanel, productionReady } from './readiness.js?v=0.24.0';
-import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.24.0';
-import { questReady } from './core.js?v=0.24.0';
+import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.26.0';
+import { volumeFiveBoard } from './volume-five-ui.js?v=0.26.0';
+import { volumeFourBoard } from './volume-four-ui.js?v=0.26.0';
+import { volumeThreeBoard } from './volume-three-ui.js?v=0.26.0';
+import { readinessPanel, productionReady } from './readiness.js?v=0.26.0';
+import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.26.0';
+import { questReady } from './core.js?v=0.26.0';
 
 // Read-only overview: visiting the camp never spends resources or claims rewards.
 export function campNotices(s,d){
@@ -26,5 +27,5 @@ export function campNotices(s,d){
 }
 export function campOverview(s,d,btn){
   const list=campNotices(s,d);
-  return `<section class="camp-overview"><h2>回寨待办</h2><p class="note">只列当前可处理事项；酬劳和物资由你确认领取。</p>${list.length?`<div class="camp-notices">${list.map(n=>n.view?`<button type="button" class="secondary" data-view="${n.view}">${n.label}</button>`:btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')}</div>`:'<p class="note">暂无待领酬劳或来报，可安排寨务、培养好汉或查看历练日历。</p>'}</section>${s.progress.flags.volume_four_complete?volumeFiveBoard(s,d,btn):s.progress.flags.volume_three_complete?volumeFourBoard(s,d,btn):volumeThreeBoard(s,d,btn)}${readinessPanel(s,d,btn)}`;
+  return `<section class="camp-overview"><h2>回寨待办</h2><p class="note">只列当前可处理事项；酬劳和物资由你确认领取。</p>${list.length?`<div class="camp-notices">${list.map(n=>n.view?`<button type="button" class="secondary" data-view="${n.view}">${n.label}</button>`:btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')}</div>`:'<p class="note">暂无待领酬劳或来报，可安排寨务、培养好汉或查看历练日历。</p>'}</section>${s.progress.flags.volume_five_complete?volumeSixBoard(s,d,btn):s.progress.flags.volume_four_complete?volumeFiveBoard(s,d,btn):s.progress.flags.volume_three_complete?volumeFourBoard(s,d,btn):volumeThreeBoard(s,d,btn)}${readinessPanel(s,d,btn)}`;
 }

@@ -1,12 +1,13 @@
-import { isChapterBattle } from './volume-three-data.js?v=0.24.0';
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.24.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.24.0';
-import { orderDamageFactor } from './commands.js?v=0.24.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.24.0';
-import { unitArm } from './martial.js?v=0.24.0';
-import { martialFactor } from './martial.js?v=0.24.0';
-import { bounded, pick, random } from './utils.js?v=0.24.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.24.0';
+import { healingSupply } from './fieldcraft.js?v=0.26.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.26.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.26.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.26.0';
+import { orderDamageFactor } from './commands.js?v=0.26.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.26.0';
+import { unitArm } from './martial.js?v=0.26.0';
+import { martialFactor } from './martial.js?v=0.26.0';
+import { bounded, pick, random } from './utils.js?v=0.26.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.26.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -22,7 +23,7 @@ export function initializeGrowthBattle(state,b,data){
     u.training={levels:Object.fromEntries(u.skills.map(id=>[id,b.guest?1:skillLevel(state,id)])),bond:u.skills.find(id=>data.by.skills[id].training?.tier==='bond')||null};
   }
   if(['dungeon','rotation','frontier'].includes(b.context.type)||isChapterBattle(b))for(const u of b.enemy){
-    const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider',v5_luan_tingyu:'chief',v5_zhu_biao:'raider'})[u.model];
+    const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider',v5_luan_tingyu:'chief',v5_zhu_biao:'raider',v6_gaolian:'chief',v6_rider:'raider'})[u.model];
     if(kind)u.boss={kind,readyAt:6000,pendingAt:0,phase:0};
   }
 }
@@ -36,8 +37,8 @@ function status(b,target,id,value,ms,api){
   api.log(b,`${target.name}获得【${api.statusName(id)} · ${ms/1000}秒】${['guard','weaken'].includes(id)?` · ${Math.round(value*100)}%`:''}。`);
 }
 function heal(b,u,target,rate,name,api){
-  if(!target)return;const n=Math.min(target.maxHp-target.hp,Math.round(target.maxHp*rate));
-  reportHealing(b,u,n);target.hp+=n;api.log(b,`${u.name}施展【${name}】，照应${target.name}，回复 ${n} 点气血。`);
+  if(!target)return;const n=Math.min(target.maxHp-target.hp,Math.round(target.maxHp*rate*healingSupply(b,u)));
+  reportHealing(b,u,n);target.hp+=n;api.log(b,`${u.name}施展【${name}】，照应${target.name}，回复 ${n} 点气血${healingSupply(b,u)<1?'（敌军久战，治疗补给衰减）':''}。`);
 }
 function rage(b,units,n,name,api){
   for(const u of units){const gain=Math.min(100-u.rage,n);u.rage+=gain;if(gain)api.log(b,`${u.name}【${name}】怒气 +${gain}。`);}

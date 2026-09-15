@@ -1,5 +1,6 @@
-import { count, journal, random, requireRule } from './utils.js?v=0.24.0';
-import { gainExp } from './hero.js?v=0.24.0';
+import { staminaCap } from './logistics.js?v=0.26.0';
+import { count, journal, random, requireRule } from './utils.js?v=0.26.0';
+import { gainExp } from './hero.js?v=0.26.0';
 export function gainItem(state, id, amount, data) {
   requireRule(data.by.items[id] && Number.isInteger(amount) && amount > 0,'无效的道具奖励。');
   state.inventory[id]=(state.inventory[id]||0)+amount;count(state,'gain_'+id,amount);
@@ -32,7 +33,7 @@ export function itemAction(state, data, action) {
   if(type==='use') {
     requireRule(item && state.inventory[id]>0,'行囊里没有这件道具。');
     if(item.effect.exp) {requireRule(state.heroes[hero]?.status==='owned','请选择已入寨的好汉。');requireRule(state.heroes[hero].level<data.config.balance.heroLevelCap,'已达本卷等级上限，不消耗经验丹。');state.inventory[id]--;gainExp(state,hero,item.effect.exp,data);journal(state,`${data.by.heroes[hero].name}收下${item.name}，潜心研习。`);}
-    else if(item.effect.stamina){requireRule((state.daily.counters.wine||0)<2,'今日已饮两次村酒，莫再贪杯。');requireRule(state.player.stamina<100,'体力充足，不必饮酒。');state.inventory[id]--;state.player.stamina=Math.min(100,state.player.stamina+item.effect.stamina);count(state,'wine');journal(state,'小饮一碗，精神略振。');}
+    else if(item.effect.stamina){requireRule((state.daily.counters.wine||0)<2,'今日已饮两次村酒，莫再贪杯。');requireRule(state.player.stamina<staminaCap(state),'体力充足，不必饮酒。');state.inventory[id]--;state.player.stamina=Math.min(staminaCap(state),state.player.stamina+item.effect.stamina);count(state,'wine');journal(state,'小饮一碗，精神略振。');}
     else throw new Error('这件物品用于战斗、打造、招贤或后续线索，不能直接使用。');return;
   }
   if(type==='craftOrder') {requireRule(data.by.heroes[id],'未知好汉。');requireRule(data.by.heroes[id].group!=='external','外传信物直接用于邀请，无需合成专属令。');pay(state,{items:{[id+'_token']:10}});gainItem(state,id+'_order',1,data);journal(state,`十枚信物合为${data.by.heroes[id].name}专属招贤令。`);return;}

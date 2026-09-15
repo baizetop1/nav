@@ -1,24 +1,24 @@
-import { collectionQuote, workshopQuote } from './production.js?v=0.24.0';
-import { productionDialog } from './production-ui.js?v=0.24.0';
-import { mentorshipQuote } from './mentorship.js?v=0.24.0';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.24.0';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.24.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.24.0';
-import { presetReason } from './development.js?v=0.24.0';
-import { batchQuote } from './batch.js?v=0.24.0';
-import { batchDialog } from './batch-ui.js?v=0.24.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.24.0';
-import { ActivityLog } from './activity.js?v=0.24.0';
-import { loadData } from './data.js?v=0.24.0';
-import { dispatch, newGame } from './core.js?v=0.24.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.24.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.24.0';
-import { patchElement } from './dom.js?v=0.24.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.26.0';
+import { productionDialog } from './production-ui.js?v=0.26.0';
+import { mentorshipQuote } from './mentorship.js?v=0.26.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.26.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.26.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.26.0';
+import { presetReason } from './development.js?v=0.26.0';
+import { batchQuote } from './batch.js?v=0.26.0';
+import { batchDialog } from './batch-ui.js?v=0.26.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.26.0';
+import { ActivityLog } from './activity.js?v=0.26.0';
+import { loadData } from './data.js?v=0.26.0';
+import { dispatch, newGame } from './core.js?v=0.26.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.26.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.26.0';
+import { patchElement } from './dom.js?v=0.26.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.24.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.24.0';
-import { CloudClient } from './cloud.js?v=0.24.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.24.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.26.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.26.0';
+import { CloudClient } from './cloud.js?v=0.26.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.26.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
@@ -90,7 +90,7 @@ function showRecruitResult(result,returnCommand){
 }
 function showRewards(before,after,returnCommand){
   const rows=gains(before,after,data),finished=!!before.battle?.outcome&&!after.battle,victory=finished&&before.battle.outcome==='victory';if(!rows.length&&!finished)return;
-  const battleSummary=finished?{outcome:before.battle.outcome,troops:before.battle.expedition?.troops||0,wounded:Math.max(0,(after.camp?.wounded||0)-(before.camp?.wounded||0))}:null;
+  const battleSummary=finished?{fallen:after.lastBattle?.fallen||0,outcome:before.battle.outcome,troops:before.battle.expedition?.troops||0,wounded:Math.max(0,(after.camp?.wounded||0)-(before.camp?.wounded||0))}:null;
   const dungeonVictory=(victory&&before.battle?.context.type==='dungeon')||(before.scheme?.outcome==='success'&&before.scheme.context.type==='dungeon'&&!after.scheme);
   document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary}));
   const dialog=document.getElementById('reward-result');if(finished&&after.lastBattle)dialog.querySelector('.reward-grid').insertAdjacentHTML('beforebegin','<details class="receipt-debrief"><summary>查看本战复盘 · 贡献与调整建议</summary>'+debriefPanel(after.lastBattle,data,esc)+'</details>');dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
@@ -275,12 +275,13 @@ async function handle(command){
   if(type==='ui_materialSource'){view='trials';paint(true);const target=document.querySelector('[data-fold^="rotation-'+command.kind+'-'+command.id+'-"]');if(target){target.open=true;target.scrollIntoView({block:'start'});}return;}
   if(type==='ui_gearFilter'){gear=Object.fromEntries(['query','type','quality','state'].map(k=>[k,document.getElementById('gear-'+k).value]));paint();return;}
   if(type==='ui_gearReset'){gear={};paint();for(const k of ['query','type','quality','state'])document.getElementById('gear-'+k).value=k==='query'?'':'all';return;}
+  if(type==='ui_campRaidFocus'){view='camp';paint();const button=[...root.querySelectorAll('button[data-command]')].find(el=>{const a=JSON.parse(el.dataset.command);return a.type==='campRaid'&&a.id===id;});button?.scrollIntoView({block:'center'});button?.focus();return;}
   if(type==='ui_rosterFilter'){
     roster={...roster,...Object.fromEntries(['query','status','group','quality','role'].map(k=>[k,document.getElementById('roster-'+k).value])),page:0,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;
   }
   if(type==='ui_rosterReset'){roster={};paint();for(const k of ['query','status','group','quality','role'])document.getElementById('roster-'+k).value=k==='query'?'':'all';return;}
   if(type==='ui_rosterPage'){roster={...roster,page:command.page,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;}
-  if(type==='ui_v3Map'||type==='ui_v4Map'||type==='ui_v5Map'){view='map';mapTarget=id;paint(true);document.getElementById('atlas-target')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_v3Map'||type==='ui_v4Map'||type==='ui_v5Map'||type==='ui_v6Map'){view='map';mapTarget=id;paint(true);document.getElementById('atlas-target')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_readyHero'){if(!data.by.heroes[id])return;view='heroes';roster={selected:id,query:data.by.heroes[id].name};paint(true);const el=document.getElementById('roster-detail');if(command.kind==='story')el?.querySelector('[data-fold="chronicle-'+id+'"]')?.setAttribute('open','');if(command.kind==='skill')el?.querySelector('[data-fold="hero-'+id+'"]')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_eliteOpen'){view='trials';paint(true);const el=document.querySelector('[data-fold="elite-'+id+'"]');el?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_goalOpen'){const g=state.development?.goal;if(g?.kind==='craft')view='forge';else if(g){view='heroes';roster={selected:g.id,query:data.by.heroes[g.id].name};}paint(true);document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}

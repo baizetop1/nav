@@ -1,20 +1,21 @@
-import { migrateRoster, rosterVersion } from './roster.js?v=0.24.0';
-import { validateAlliances } from './volume-four-data.js?v=0.24.0';
-import { validEliteContext } from './elites.js?v=0.24.0';
-import { validateDebrief } from './debrief.js?v=0.24.0';
-import { validateAffairs } from './affairs.js?v=0.24.0';
-import { validateStrategy } from './strategy.js?v=0.24.0';
-import { validateCommands } from './commands.js?v=0.24.0';
-import { validateFrontier, POSTS } from './frontier.js?v=0.24.0';
-import { validateDevelopment } from './development.js?v=0.24.0';
-import { validateCampaign, validRotationContext } from './rotations.js?v=0.24.0';
-import { validateQualities } from './quality.js?v=0.24.0';
-import { newGame } from './core.js?v=0.24.0';
-import { hasOwn, idPattern, requireRule } from './utils.js?v=0.24.0';
-import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.24.0';
-import { validateGrowth } from './growth.js?v=0.24.0';
-import { validateGrowthBattle } from './growth-save.js?v=0.24.0';
-import { validateCamp, RAIDS } from './camp.js?v=0.24.0';
+import { staminaCap } from './logistics.js?v=0.26.0';
+import { migrateRoster, rosterVersion } from './roster.js?v=0.26.0';
+import { validateAlliances } from './volume-four-data.js?v=0.26.0';
+import { validEliteContext } from './elites.js?v=0.26.0';
+import { validateDebrief } from './debrief.js?v=0.26.0';
+import { validateAffairs } from './affairs.js?v=0.26.0';
+import { validateStrategy } from './strategy.js?v=0.26.0';
+import { validateCommands } from './commands.js?v=0.26.0';
+import { validateFrontier, POSTS } from './frontier.js?v=0.26.0';
+import { validateDevelopment } from './development.js?v=0.26.0';
+import { validateCampaign, validRotationContext } from './rotations.js?v=0.26.0';
+import { validateQualities } from './quality.js?v=0.26.0';
+import { newGame } from './core.js?v=0.26.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.26.0';
+import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.26.0';
+import { validateGrowth } from './growth.js?v=0.26.0';
+import { validateGrowthBattle } from './growth-save.js?v=0.26.0';
+import { validateCamp, RAIDS } from './camp.js?v=0.26.0';
 export const SAVE_KEY='baize_shuihu_save', BACKUP_KEY=SAVE_KEY+'_backup';
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 function object(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}
@@ -31,7 +32,7 @@ export function validateSave(s,data) {
   for(const key of ['clock','lastRegen','startedAt'])check(integer(s[key],0,8640000000000000),'时间');
   check(s.clock>=s.lastRegen&&s.clock>=s.startedAt,'时间顺序');check(integer(s.worldMinute,0,1439),'昼夜');
   check(hasOwn(data.by.maps,s.location),'当前位置');check(object(s.player)&&s.player.name==='白泽寨主'&&typeof s.player.title==='string'&&s.player.title.length<60,'寨主');
-  for(const key of ['silver','merit','prestige'])check(integer(s.player[key]),'货币');check(integer(s.player.stamina,0,100)&&integer(s.player.liangshanLevel,0,1),'体力或梁山等级');
+  for(const key of ['silver','merit','prestige'])check(integer(s.player[key]),'货币');check(integer(s.player.stamina,0,staminaCap(s))&&integer(s.player.liangshanLevel,0,1),'体力或梁山等级');
   check(object(s.heroes)&&Object.keys(s.heroes).length===data.heroes.length,'好汉字典');
   for(const h of data.heroes){const v=s.heroes[h.id];check(v&&['unknown','heard','known','available','owned'].includes(v.status)&&integer(v.level,1,data.config.balance.heroLevelCap)&&integer(v.exp),'好汉状态');}
   check(Array.isArray(s.team)&&s.team.length<=3&&new Set(s.team).size===s.team.length&&s.team.every(id=>s.heroes[id]?.status==='owned'),'出阵队伍');

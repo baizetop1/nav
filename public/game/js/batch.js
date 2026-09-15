@@ -1,8 +1,8 @@
-import { attributes } from './hero.js?v=0.24.0';
-import { experienceToNext, experienceResult, ATTRIBUTE_NAMES } from './progression.js?v=0.24.0';
-import { clone, journal, requireRule } from './utils.js?v=0.24.0';
-import { itemAction } from './item.js?v=0.24.0';
-import { growthAction } from './growth.js?v=0.24.0';
+import { growthDelta, gainedSkills } from './growth-preview.js?v=0.26.0';
+import { experienceToNext, experienceResult } from './progression.js?v=0.26.0';
+import { clone, journal, requireRule } from './utils.js?v=0.26.0';
+import { itemAction } from './item.js?v=0.26.0';
+import { growthAction } from './growth.js?v=0.26.0';
 
 const kinds={experience:'赠经验丹',manual:'抄录招式书',feed:'喂养坐骑',buy:'采买物资'};
 export const SHOP_ITEMS=['jinchuangyao','huiqisan','jiedudan','exp_pill','wine','iron','cloth','night_clothes','recruit_order'];
@@ -29,8 +29,7 @@ export function batchChanges(before,after,d,a){
     rows.push({name:'升级后经验',value:y.level>=cap?'已满级':y.exp+' / '+experienceToNext(y.level)});
     const overflow=experienceResult(x,amount,cap).overflow;
     if(overflow)rows.push({name:'满级溢出（不保留）',value:overflow+' 经验'});
-    const oldStats=attributes(before,a.id,d),newStats=attributes(after,a.id,d);
-    for(const [key,name] of Object.entries(ATTRIBUTE_NAMES))rows.push({name,value:oldStats[key]+' → '+newStats[key]});
+    rows.push(...growthDelta(before,after,d,a.id));const unlocked=gainedSkills(before,after,d,a.id);if(unlocked.length)rows.push({name:'本次解锁招式',value:unlocked.join('、')});
   }
   if(a.kind==='feed')rows.push({name:d.by.heroes[a.id].mount.name+'亲密',value:before.growth.mounts[a.id].intimacy+' → '+after.growth.mounts[a.id].intimacy});
   return rows;

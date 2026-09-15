@@ -1,12 +1,13 @@
-import { workshopOrders } from './production-ui.js?v=0.24.0';
-import { HERO_SPECIALTIES, JOB_NAMES } from './strategy-data.js?v=0.24.0';
-import { POSTS, STATIONS, CYCLE, SAFE_TIME, postPlan, stationYield, stationedAt, guardReady, away } from './frontier.js?v=0.24.0';
-import { HELPERS, hasHelper } from './helpers.js?v=0.24.0';
-import { enemyIntel } from './martial-ui.js?v=0.24.0';
-import { doctrineText } from './doctrines.js?v=0.24.0';
+import { SIGNATURES } from './fieldcraft.js?v=0.26.0';
+import { workshopOrders } from './production-ui.js?v=0.26.0';
+import { HERO_SPECIALTIES, JOB_NAMES } from './strategy-data.js?v=0.26.0';
+import { POSTS, STATIONS, CYCLE, SAFE_TIME, postPlan, stationYield, stationedAt, guardReady, away } from './frontier.js?v=0.26.0';
+import { HELPERS, hasHelper } from './helpers.js?v=0.26.0';
+import { enemyIntel } from './martial-ui.js?v=0.26.0';
+import { doctrineText } from './doctrines.js?v=0.26.0';
 const resource={food:'粮草',wood:'木材',silver:'碎银',scrap_iron:'碎铁',iron:'精铁'};
 const terrain={land:'陆地',forest:'林地',water:'水域',mountain:'山地'};
-export const doctrinePanel=h=>doctrineText(h.id)?`<p class="doctrine"><b>本部战法：</b>${doctrineText(h.id)}须实际带兵；旧的进行中战局沿用原规则。</p>`:'';
+export const doctrinePanel=h=>(SIGNATURES[h.id]?'<p class="doctrine"><b>人物本领 · '+SIGNATURES[h.id].name+'：</b>'+SIGNATURES[h.id].text+'建寨后的新出征生效，不要求升品。</p>':'')+(doctrineText(h.id)?`<p class="doctrine"><b>本部战法：</b>${doctrineText(h.id)}须实际带兵；旧的进行中战局沿用原规则。</p>`:'');
 const intro=btn=>`<section class="frontier-intro"><p class="kicker">安居生产 · 步步拓土</p><h2>让寨中有人做事，山外有路可走。</h2><p>开办生产后每半小时积累一批，最多存八小时。占据林场、粮庄和矿山，派出将领守住补给线。</p>${btn('开办经营拓土',{type:'frontierStart'},'primary')}<p class="note">保留现有资源和英雄；从开办时开始计时，不追溯旧进度。</p></section>`;
 function choices(s,d,current,heroesOnly=false){const people=d.heroes.filter(h=>s.heroes[h.id].status==='owned').map(h=>({value:'hero:'+h.id,name:h.name+' · '+s.heroes[h.id].level+'级 · 擅长'+JOB_NAMES[HERO_SPECIALTIES[h.id].job]}));if(!heroesOnly)people.push(...HELPERS.filter(h=>hasHelper(s,h.id)).map(h=>({value:'helper:'+h.id,name:h.name+' · '+h.role})));return '<option value="">'+(heroesOnly?'暂不安排守将':'乡人自理')+'</option>'+people.map(p=>{const job=stationedAt(s,p.value),other=job&&p.value!==current,mission=p.value==='hero:'+s.affairs?.mission?.hero;return `<option value="${p.value}" ${p.value===current?'selected':''} ${other||mission?'disabled':''}>${p.name}${mission?'（外派中）':other?'（任职：'+job+'）':''}</option>`;}).join('');}
 export function productionPanel(s,d,btn){if(!s.camp)return '';if(!s.frontier)return intro(btn);const f=s.frontier;return `<section class="production-panel" id="camp-production"><div class="section-top"><div><p class="kicker">半小时一批 · 最多八小时</p><h2>山寨生产</h2></div>${btn('预览收取产出',{type:'ui_productionPreview',kind:'collect'},'primary')}</div><p class="note">任职英雄每满 10 级成长增加一份批次产出（11 / 21 / 31 级）；灵 / 仙额外增加 1 / 2 份。出征期间个人加成暂停；回来后恢复。乡里帮手可以任职，不占 108 将名额。收取产出不加工、不扣原料；冶铁请在下方工坊订单单独办理。</p><div class="production-grid">${Object.entries(STATIONS).map(([id,m])=>{const row=f.stations[id],rate=stationYield(s,d,id),active=!!s.camp.buildings[m.building],token=row.worker;return `<article class="card"><h3>${m.name}</h3><p class="production-count">${row.bank}<small>${id==='workshop'?' 批待加工':' '+resource[m.resource]+'待入库'}</small></p><p class="note">${active?`每批 ${rate}${id==='workshop'?' 份加工额度':' '+resource[m.resource]} · 下一批约 ${Math.ceil((CYCLE-row.carry)/60000)} 分钟`:'先建'+({farm:'农田',lumber:'伐木场',market:'集市（设冶铁工坊）'})[m.building]}</p><label>任职人手<select id="frontier-worker-${id}" ${active?'':'disabled'}>${choices(s,d,token)}</select></label>${btn('保存任职',{type:'ui_frontierAssign',id},'secondary',!active)}${token?.startsWith('hero:')&&away(s,token.slice(5))?'<p class="note">任职英雄正在出征，当前按乡人自理计算。</p>':''}</article>`;}).join('')}</div>${workshopOrders(s,btn)}<p class="note">库存放不下的产出保留在原处；告急据点的暂存物资须解围后收取。更换人手不重算已产物资。</p></section>`;}

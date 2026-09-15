@@ -8986,5 +8986,251 @@
       "rate": 0.15,
       "duration": 4000
     }
+  },
+  {
+    "id": "wangjin_active",
+    "name": "教头点枪",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.4
+    },
+    "description": "攻击并打断蓄势中的首领。",
+    "training": {
+      "hero": "wangjin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "wangjin_passive",
+    "name": "身法沉稳",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "description": "自身最大气血提高 8%。",
+    "training": {
+      "hero": "wangjin",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "wangjin_advanced",
+    "name": "枪棒破甲",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.65
+    },
+    "description": "穿透打击气血比例最低的敌人。",
+    "training": {
+      "hero": "wangjin",
+      "tier": "advanced",
+      "level": 10,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "pierce"
+    }
+  },
+  {
+    "id": "wangjin_bond",
+    "name": "白蹄追击",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "骑乘羁绊生效时防御 +5%；每第三次普攻追加一次 35% 攻击追击，强度随招式等级提高。",
+    "training": {
+      "hero": "wangjin",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    },
+    "bondEffect": {
+      "kind": "strike",
+      "rate": 0.35
+    }
+  },
+  {
+    "id": "hucheng_active",
+    "name": "乡里照应",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.18
+    },
+    "description": "为气血比例最低的同伴恢复 18% 气血，并提供 20% 护阵，持续 4 秒。",
+    "training": {
+      "hero": "hucheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "hucheng_passive",
+    "name": "护民仁心",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "description": "自身最大气血提高 8%。",
+    "training": {
+      "hero": "hucheng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "hucheng_advanced",
+    "name": "安民解困",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.14
+    },
+    "description": "为全体存活同伴恢复 14% 气血，并清除负面状态。",
+    "training": {
+      "hero": "hucheng",
+      "tier": "advanced",
+      "level": 10,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "hucheng_bond",
+    "name": "青骢济困",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "骑乘羁绊生效时防御 +5%；每第三次普攻为气血比例最低的同伴恢复 5% 气血，强度随招式等级提高。",
+    "training": {
+      "hero": "hucheng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    },
+    "bondEffect": {
+      "kind": "heal",
+      "rate": 0.05
+    }
+  },
+  {
+    "id": "luantingyu_active",
+    "name": "铁棒压阵",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.4
+    },
+    "description": "攻击前两位敌人，并为同伴提供 15% 护阵。",
+    "training": {
+      "hero": "luantingyu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "discipline"
+    }
+  },
+  {
+    "id": "luantingyu_passive",
+    "name": "沉肩守势",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "description": "自身最大气血提高 8%。",
+    "training": {
+      "hero": "luantingyu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "luantingyu_advanced",
+    "name": "坚阵护众",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "吸引敌军进击，并为自己与同伴减伤。",
+    "training": {
+      "hero": "luantingyu",
+      "tier": "advanced",
+      "level": 10,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "luantingyu_bond",
+    "name": "骅骝振军",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "defense",
+      "rate": 0.05
+    },
+    "description": "骑乘羁绊生效时防御 +5%；每第三次普攻为全体同伴恢复 5 点怒气，强度随招式等级提高。",
+    "training": {
+      "hero": "luantingyu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "shelter"
+    },
+    "bondEffect": {
+      "kind": "rage",
+      "rate": 5
+    }
   }
 ]

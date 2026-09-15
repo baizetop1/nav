@@ -1,6 +1,6 @@
-import { requireRule, journal } from './utils.js?v=0.24.0';
-import { CORPS } from './corps-data.js?v=0.24.0';
-import { promotionQuote } from './quality.js?v=0.24.0';
+import { requireRule, journal } from './utils.js?v=0.26.0';
+import { CORPS } from './corps-data.js?v=0.26.0';
+import { promotionQuote } from './quality.js?v=0.26.0';
 
 export { CORPS };
 export const CORPS_PROFILES={
@@ -64,7 +64,7 @@ export function validateDevelopment(s,d,check){
   if(dev!==undefined){
     check(obj(dev)&&dev.version===1&&obj(dev.corps)&&obj(dev.presets)&&Array.isArray(dev.ledger)&&dev.ledger.length<=2,'寨中养成');
     for(const [id,n] of Object.entries(dev.corps))check(CORPS[id]&&s.heroes[id]?.status==='owned'&&num(n,2,3)&&s.camp?.buildings.hall>=n&&s.camp?.buildings.barracks>=n-1,'专属兵阶');
-    for(const [id,p] of Object.entries(dev.presets))check(['1','2','3'].includes(id)&&s.camp&&obj(p)&&Array.isArray(p.team)&&p.team.length>0&&p.team.length<=3&&new Set(p.team).size===p.team.length&&p.team.every(id=>s.heroes[id]?.status==='owned')&&['army','solo'].includes(p.mode)&&['balanced','assault','guard'].includes(p.tactic)&&num(p.deployment,1,100),'阵容预设');
+    for(const [id,p] of Object.entries(dev.presets))check(['1','2','3'].includes(id)&&s.camp&&obj(p)&&Array.isArray(p.team)&&p.team.length>0&&p.team.length<=3&&new Set(p.team).size===p.team.length&&p.team.every(id=>s.heroes[id]?.status==='owned')&&['army','solo'].includes(p.mode)&&['balanced','assault','guard'].includes(p.tactic)&&num(p.deployment,1,1000),'阵容预设');
     const g=dev.goal;check(g===null||(obj(g)&&['promotion','corps','craft'].includes(g.kind)&&(g.kind==='craft'?!!d.by.equipments[g.id]:s.heroes[g.id]?.status==='owned')),'材料目标');
     let last='';for(const r of dev.ledger){check(obj(r)&&/^\d{4}-\d{2}-\d{2}$/.test(r.date)&&r.date>last&&r.date<=dateKey(s.clock),'小结日期');last=r.date;for(const k of ['gained','spent']){check(obj(r[k]),'小结材料');for(const [id,n] of Object.entries(r[k]))check((['silver','wood','food'].includes(id)||d.by.items[id])&&num(n,1,10000000),'小结数量');}for(const k of ['wins','losses','recruits'])check(num(r[k],0,10000000),'小结次数');}
   }
@@ -72,7 +72,7 @@ export function validateDevelopment(s,d,check){
   for(const u of [...(b.team||[]),...(b.enemy||[])]){
     if(b.martial!==2||u.side!=='team'){check(u.corps===undefined&&u.training?.quality===undefined,'旧战局或敌人不可混入专属兵快照');continue;}
     check(!b.guest&&!!s.camp&&num(u.training?.quality,0,2),'品阶战斗快照');
-    if(b.expedition){const c=u.corps,m=CORPS[u.id];check(obj(c)&&c.id===u.id&&c.arm===m.arm&&num(c.rank,1,3)&&num(c.troops,0,100),'专属部队快照');}
+    if(b.expedition){const c=u.corps,m=CORPS[u.id];check(obj(c)&&c.id===u.id&&c.arm===m.arm&&num(c.rank,1,3)&&num(c.troops,0,1000),'专属部队快照');}
     else check(u.corps===undefined,'未随军的兵种快照');
   }
   if(b.martial===2&&b.expedition)check(b.team.reduce((n,u)=>n+u.corps.troops,0)===b.expedition.troops,'各部兵力合计');

@@ -23,7 +23,7 @@ for(let i=0;i<180&&!s.battle.outcome;i++)s=act(s,'battleTick',{delta:1000});asse
 const won=structuredClone(s);s=act(s,'finishBattle');assert.ok(s.camp.wounded>0);assert.equal(s.camp.wounded+s.camp.troops,10);assert.equal(s.camp.sorties,1);assert.ok(gains(won,s,data).some(r=>r.name==='木材'));assert.throws(()=>act(s,'finishBattle'),'Settlement cannot be repeated');
 assert.ok(s.camp.wood>=30);s=act(s,'campBuild',{id:'clinic'});const wounded=s.camp.wounded;s=act(s,'campHeal');assert.ok(s.camp.wounded<wounded);assert.equal(s.camp.troops+s.camp.wounded,10);
 s=act(s,'campFormation',{mode:'solo',deployment:10,tactic:'balanced'});const troops=s.camp.troops;s=act(s,'campRaid',{id:'woods'});assert.equal(s.battle.expedition.troops,0);s=act(s,'battleRetreat');const lost=structuredClone(s);s=act(s,'finishBattle');assert.equal(s.camp.troops,troops);assert.equal(s.camp.sorties,1);assert.deepEqual(gains(lost,s,data),[],'Retreat gives no reward');
-for(const mutate of [x=>x.camp.troops=-1,x=>x.camp.buildings.hall=6,x=>x.camp.tactic='bogus',x=>x.camp.deployment=101]){const bad=structuredClone(s);mutate(bad);assert.throws(()=>validateSave(bad,data));}
+for(const mutate of [x=>x.camp.troops=-1,x=>x.camp.buildings.hall=6,x=>x.camp.tactic='bogus',x=>x.camp.deployment=1001]){const bad=structuredClone(s);mutate(bad);assert.throws(()=>validateSave(bad,data));}
 const snapshot=JSON.stringify(s);assert.throws(()=>act(s,'campFormation',{mode:'army',deployment:-4,tactic:'balanced'}));assert.equal(JSON.stringify(s),snapshot,'Rejected actions preserve live state');
 // Statistically test a continuous seeded stream, not correlated consecutive seeds.
 const h=data.by.heroes.wusong,stream={rng:91823812};let hits=0,misses=0,both=0,one=0;

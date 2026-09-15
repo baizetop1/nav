@@ -1,26 +1,27 @@
-import { enterElite, finishElite } from './elites.js?v=0.24.0';
-import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.24.0';
-import { mentorHero } from './mentorship.js?v=0.24.0';
-import { saveDebrief } from './debrief.js?v=0.24.0';
-import { batchApply } from './batch.js?v=0.24.0';
-import { affairAction, finishAffairBattle } from './affairs.js?v=0.24.0';
-import { trainDrill } from './strategy.js?v=0.24.0';
-import { battleOrder } from './commands.js?v=0.24.0';
-import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.24.0';
-import { developmentAction, recordLedger } from './development.js?v=0.24.0';
-import { enterRotation, finishRotation } from './rotations.js?v=0.24.0';
-import { promoteHero } from './quality.js?v=0.24.0';
-import { routeTo, claimLocalBenefit } from './world-map.js?v=0.24.0';
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.24.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.24.0';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.24.0';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.24.0';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.24.0';
-import { effects, storyAction, visit } from './story.js?v=0.24.0';
-import { growthAction, awardMountContracts } from './growth.js?v=0.24.0';
+import { staminaCap, deployedTroops } from './logistics.js?v=0.26.0';
+import { enterElite, finishElite } from './elites.js?v=0.26.0';
+import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.26.0';
+import { mentorHero } from './mentorship.js?v=0.26.0';
+import { saveDebrief } from './debrief.js?v=0.26.0';
+import { batchApply } from './batch.js?v=0.26.0';
+import { affairAction, finishAffairBattle } from './affairs.js?v=0.26.0';
+import { trainDrill } from './strategy.js?v=0.26.0';
+import { battleOrder } from './commands.js?v=0.26.0';
+import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.26.0';
+import { developmentAction, recordLedger } from './development.js?v=0.26.0';
+import { enterRotation, finishRotation } from './rotations.js?v=0.26.0';
+import { promoteHero } from './quality.js?v=0.26.0';
+import { routeTo, claimLocalBenefit } from './world-map.js?v=0.26.0';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.26.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.26.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.26.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.26.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.26.0';
+import { effects, storyAction, visit } from './story.js?v=0.26.0';
+import { growthAction, awardMountContracts } from './growth.js?v=0.26.0';
 
-import { searchEquipment } from './camp-development.js?v=0.24.0';
-import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.24.0';
+import { searchEquipment } from './camp-development.js?v=0.26.0';
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.26.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -36,8 +37,8 @@ export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
 export function refresh(state,data,now) {
   now=Math.max(state.clock,now);state.clock=now;accrueFrontier(state,data);
   const intervals=Math.floor((now-state.lastRegen)/data.config.balance.regenMs);
-  if(state.player.stamina>=100)state.lastRegen=now;
-  else if(intervals>0){state.player.stamina=Math.min(100,state.player.stamina+intervals);state.lastRegen=state.player.stamina===100?now:state.lastRegen+intervals*data.config.balance.regenMs;}
+  if(state.player.stamina>=staminaCap(state))state.lastRegen=now;
+  else if(intervals>0){state.player.stamina=Math.min(staminaCap(state),state.player.stamina+intervals);state.lastRegen=state.player.stamina===staminaCap(state)?now:state.lastRegen+intervals*data.config.balance.regenMs;}
   const day=dayKey(now);
   if(day>state.daily.date) {
     state.daily={date:day,ids:[],claimed:[],bonus:false,counters:{},dungeons:{},events:[]};
@@ -56,7 +57,7 @@ function beginDungeon(state,data,id) {
   stamina(state,d.cost);state.daily.dungeons[id]=(state.daily.dungeons[id]||0)+1;
   if(d.kind==='scheme')beginScheme(state,data,{type:'dungeon',id});
   else {
-    const c=state.camp,n=c?.mode==='army'?Math.min(c.troops,c.deployment):0;
+    const c=state.camp,n=deployedTroops(state);
     if(c?.mode==='army'){requireRule(n>0,'请先募兵，或在寨子改为英雄独行。');requireRule(c.food>=Math.ceil(n/2),'带兵粮草不足。');c.food-=Math.ceil(n/2);}
     startBattle(state,data,{enemies:d.enemy,scale:d.scale,context:{type:'dungeon',id}});if(c)attachTroops(state,n);
   }
@@ -156,7 +157,7 @@ export function dispatch(data,current,action,now=Date.now()) {
     knowHero(state,id,'heard',data);knowHero(state,id,'known',data);journal(state,`${h.name}与你叙过姓名。${h.dialogue}`);
   }
   else if(type==='guide'){requireRule(state.location==='tavern'&&state.heroes.baisheng.status==='known'&&!state.progress.flags.guide,'先在酒肆与白胜相识。');state.progress.flags.guide=true;ownHero(state,'baisheng',data);journal(state,'白胜应下为你引路，正式加入队伍。这是乡人相助；武松等核心好汉仍需相识与招贤。');}
-  else if(type==='chapterBattle'){requireRule(Object.prototype.hasOwnProperty.call(data.by.stories,id)&&/^v[345]_/.test(id)&&data.by.stories[id].steps[state.progress.stories[id]?.step||data.by.stories[id].start].choices.some(c=>c.id===action.choice&&c.battle),'请选择本卷可出征的战役。');storyAction(state,data,id,action.choice);}
+  else if(type==='chapterBattle'){requireRule(Object.prototype.hasOwnProperty.call(data.by.stories,id)&&/^v[3456]_/.test(id)&&data.by.stories[id].steps[state.progress.stories[id]?.step||data.by.stories[id].start].choices.some(c=>c.id===action.choice&&c.battle),'请选择本卷可出征的战役。');storyAction(state,data,id,action.choice);}
   else if(type==='story')storyAction(state,data,id,action.choice);
   else if(type==='startScheme'){requireRule(state.location==='ridge'&&state.progress.flags.seven_stars&&!state.progress.flags.huangni_complete,'先完成七星聚义，再到冈上安排；首次剧情不会重复发奖。');beginScheme(state,data,{type:'story',id:'huangni'});}
   else if(type==='scheme')schemeChoice(state,data,id);
