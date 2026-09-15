@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-15T01:29:08.269Z",
+  "generatedAt": "2026-09-15T07:44:17.108Z",
   "intelligence": {
-    "updatedAt": "2026-09-15T01:29:08.269Z",
+    "updatedAt": "2026-09-15T07:44:17.108Z",
     "items": [
       {
-        "id": "cn-item-ac87173a23f8dbf5",
+        "id": "cn-item-173262ad3be22077",
         "category": "cn",
-        "title": "当“倾听”成为商品，价值几许边界何在",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-15/10696511.shtml",
+        "title": "美国对伊战损全景首曝光：损失重大、先进武器告急",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-15/10696781.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-15T00:17:23.000Z",
-        "summary": "深夜十一点半，21岁的“秒回师”陈欣(化名)接到一个订单。",
+        "publishedAt": "2026-09-15T07:33:10.000Z",
+        "summary": "中新网9月15日电 美国国防部监督机构14日发布了首份关于伊朗战事影响的报告，涵盖2月28日美国和以色列对伊朗发起军事行动至6月30日期间的情况。",
         "badge": "中新网要闻"
       },
       {
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-14T17:50:29.000Z",
         "badge": "HN",
-        "signal": "369 分 · 413 评论"
+        "signal": "558 分 · 619 评论"
       },
       {
-        "id": "cn-it-8b25c326e2f48004",
+        "id": "cn-it-2c30288e0ec7e87c",
         "category": "cn",
-        "title": "Waymo 扩大美国无人驾驶网约车服务版图，将拉斯维加斯纳入运营范围",
-        "url": "https://www.ithome.com/1/002/400.htm",
+        "title": "三星海外悄然发布入门新机 Galaxy A08，电池升级至 6000 毫安时",
+        "url": "https://www.ithome.com/1/002/600.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-15T01:28:26.000Z",
-        "summary": "IT之家 9 月 15 日消息，Waymo 正在加速扩大无人驾驶网约车服务的覆盖范围。继近期宣布进入美国田纳西州纳什维尔后，该公司宣布将拉斯维加斯纳入运营版图。目前 Waymo 的服务已覆盖包括丹佛、圣迭戈和纳什维尔在内的多个美国城市。 Waymo 表示，当地无人驾驶网约车服务使用由极氪（Zeekr）代工生产的 Waymo Ojai 车型，该车可容纳 4 名乘客，用户可以乘车前往赌场、Sphere 球形场馆、Allegiant Stadium 体育场等热门地点。 目前 Wa…",
+        "publishedAt": "2026-09-15T07:36:58.000Z",
+        "summary": "IT之家 9 月 15 日消息，三星悄然推出了 Galaxy A08，这是 Galaxy A 系列最新的入门级手机。该品牌已在部分地区的官网上架这款设备，公布了外观设计与硬件参数。不过这家韩国企业尚未公布售价与上市信息。 塞尔维亚与波黑的三星官网现已上架 Galaxy A08，从配图可以看到，这款手机和前代机型 Galaxy A07 外观相近。屏幕四周边框较宽，底部下巴明显，采用水滴屏设计。机身背面搭载竖向排列的双摄模组。 该机提供深蓝、绿色、银色三种配色，尺寸为 167.…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242025",
+        "id": "v2ex-1242163",
         "category": "dev",
-        "title": "做 youtube 下载站类的出海产品有前途吗？",
-        "url": "https://www.v2ex.com/t/1242025",
+        "title": "[开源] 做了一个 Go Runtime 的 Python Agent SDK，附一轮与 Claude Agent SDK 的对照测试",
+        "url": "https://www.v2ex.com/t/1242163",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-15T01:11:56.000Z",
-        "summary": "大规模下载 youtube 会遇到风控问题，花了好长时间搞定了 可以以较低的成本解决 如果做一下 youtube 下载站或 app ，是不是违反政策的？ 或者套一层 ai 生成摘要的壳？",
+        "publishedAt": "2026-09-15T07:21:02.000Z",
+        "summary": "最近给 Nexus 的 Agent Runtime 做了 Python 封装，叫 nexus-agent-sdk-python 。 Python 侧负责接入，实际调用模型、执行工具和管理上下文的是 Go 写的 nxs 。可以用它给自己的程序接一个能读文件、改代码、跑命令的 Agent ，也可以接自定义工具。 支持单次任务和多轮会话，提供 MCP 、Hooks 和工具权限配置。模型可以通过 Anthropic 兼容接口接入，也支持 OpenAI Chat Completion…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-0d5ea1c90364f8cb",
+        "id": "cn-baidu-61c9fd79be262d81",
         "category": "cn",
-        "title": "牛肉价格持续上涨",
-        "url": "https://www.baidu.com/s?wd=%E7%89%9B%E8%82%89%E4%BB%B7%E6%A0%BC%E6%8C%81%E7%BB%AD%E4%B8%8A%E6%B6%A8&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "老头乐 上牌上路",
+        "url": "https://www.baidu.com/s?wd=%E8%80%81%E5%A4%B4%E4%B9%90+%E4%B8%8A%E7%89%8C%E4%B8%8A%E8%B7%AF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "中秋、国庆临近，牛肉消费逐渐进入旺季，市场呈现量价齐升的态势。数据显示，9月11日，北京新发地市场牛前腱价格为每公斤75元，环比上涨4%，同比上涨17%。商户介绍，牛肉价格近期涨幅明显，一方面是需求拉动，另外就是肉牛存栏下降、供应减少。",
+        "summary": "近日，有武汉市民建议允许“老头乐”上牌上路，引发网友一边倒反对。武汉市交管部门明确回应，“老头乐”绝大部分未列入机动车公告，不准上牌，仅允许在景区、园区等非公共道路区域使用。",
         "badge": "热搜",
-        "signal": "7,808,808 热度"
+        "signal": "7,808,719 热度"
       },
       {
         "id": "cisa-kev-cve-2026-84869",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49700477",
+        "id": "hn-49707627",
         "category": "dev",
-        "title": "Pion, an agent designed to run any company autonomously",
-        "url": "https://andonlabs.com/blog/why-we-built-pion",
+        "title": "Linux from Scratch",
+        "url": "https://www.linuxfromscratch.org/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T17:16:06.000Z",
+        "publishedAt": "2026-09-15T04:15:23.000Z",
         "badge": "HN",
-        "signal": "282 分 · 302 评论"
+        "signal": "113 分 · 38 评论"
       },
       {
-        "id": "cn-item-c556de6a9bb4eca2",
+        "id": "cn-item-c85692ba471dc147",
         "category": "cn",
-        "title": "中央气象台：四川盆地等地持续阴雨天气",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-15/10696509.shtml",
+        "title": "朱雀二号改进型遥七运载火箭发射成功",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-15/10696758.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-15T00:15:45.000Z",
-        "summary": "中新网9月15日电 据中央气象台网站消息，昨日，海南局地出现特大暴雨。预计未来三天，青藏高原东部至华西地区等地多阴雨，关注持续降雨对农业生产、交通、工程建设等的影响；广西、广东、海南部分地区有明显降雨，需防范暴雨次生灾害及地质灾害滞后效应。",
+        "publishedAt": "2026-09-15T07:04:19.000Z",
+        "summary": "中新网北京9月15日电 (马帅莎 张艳)北京时间9月15日14时26分，朱雀二号改进型遥七运载火箭在东风商业航天创新试验区发射升空，将搭载的千帆极轨19组共10颗卫星顺利送入预定轨道，飞行试验任务取得圆满成功。",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241998",
+        "id": "v2ex-1242159",
         "category": "dev",
-        "title": "open minis",
-        "url": "https://www.v2ex.com/t/1241998",
+        "title": "我说的有道理吗",
+        "url": "https://www.v2ex.com/t/1242159",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T16:39:47.000Z",
-        "summary": "这个东西在苹果手机上有什么用法和玩法请教",
+        "publishedAt": "2026-09-15T07:09:56.000Z",
+        "summary": "https://v2ex.com/t/1241668",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-e648d391cad5e308",
+        "id": "cn-it-41230eb04557c9d5",
         "category": "cn",
-        "title": "共享单车重要新规：互联网租赁自行车国家标准发布，要求车辆具有唯一性编码",
-        "url": "https://www.ithome.com/1/002/390.htm",
+        "title": "“大空头”伯里谈科技巨头呼吁放缓 AI 开发：说白了还是为自己谋利",
+        "url": "https://www.ithome.com/1/002/599.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-15T01:21:09.000Z",
-        "summary": "IT之家 9 月 15 日消息，据央视新闻今日报道，市场监管总局近日批准发布《 租赁自行车交通服务规范 第 2 部分：互联网租赁自行车 》国家标准， 对互联网租赁自行车运营服务全流程进行规范 ，引领运营企业不断优化服务，提升用户体验。 在服务人员管理方面 ，针对互联网租赁自行车容易出现乱停乱放、调运不及时、维护不到位等现象，标准提出运营企业应配备互联网租赁自行车停放秩序维护、调运、维修、保养、保洁等相关服务人员，定期开展培训。 在设施设备配置方面 ，标准提出互联网租赁自行车…",
+        "publishedAt": "2026-09-15T07:35:16.000Z",
+        "summary": "IT之家 9 月 15 日消息，在新一轮 AI 可能毁灭全人类的警告出现后，OpenAI CEO 萨姆 · 奥尔特曼、Anthropic CEO 达里奥 · 阿莫迪等 AI 企业负责人呼吁放慢技术发展。 因《大空头》而闻名的投资者迈克尔 · 伯里认为，这些呼吁只是在为他们自己谋利。他将 OpenAI、Anthropic 等 AI 企业负责人的减速主张称为“谋求自身利益之举”。 IT之家获悉，理由有四点： AI 聊天机器人并不会成为通用人工智能（AGI），因此“没有什么”需要…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49704246",
+        "id": "hn-49684289",
         "category": "dev",
-        "title": "Charts built for Chat",
-        "url": "https://dbtcharts.com/blog/charts-built-for-chat/",
+        "title": "OpenArm: An open-source 7DOF humanoid arm",
+        "url": "https://github.com/enactic/OpenArm",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T21:22:54.000Z",
+        "publishedAt": "2026-09-13T14:17:49.000Z",
         "badge": "HN",
-        "signal": "89 分 · 28 评论"
+        "signal": "55 分 · 11 评论"
       },
       {
-        "id": "cn-baidu-b757983ae41072ea",
+        "id": "cn-baidu-5be9bad8cd872657",
         "category": "cn",
-        "title": "演唱会求婚当事人称已报警",
-        "url": "https://www.baidu.com/s?wd=%E6%BC%94%E5%94%B1%E4%BC%9A%E6%B1%82%E5%A9%9A%E5%BD%93%E4%BA%8B%E4%BA%BA%E7%A7%B0%E5%B7%B2%E6%8A%A5%E8%AD%A6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "我国人口总量14.05亿",
+        "url": "https://www.baidu.com/s?wd=%E6%88%91%E5%9B%BD%E4%BA%BA%E5%8F%A3%E6%80%BB%E9%87%8F14.05%E4%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月12日，北京鸟巢赵雷演唱会现场，一对情侣因求婚时女方激动站起，遭后排观众齐声高喊“坐下”。拍摄该视频的观众表示，自己花大几千元购票只想安静听歌。目前，当事人已私信拍摄者称报警并启动司法程序，要求下架相关视频。",
+        "summary": "9月14日，国家卫健委主任雷海潮表示，我国人口出现负增长，但人口总量仍达14.05亿，人口大国基本面没有变。近年来新出生人口维持在800万左右数量级，每年高校新入学学生超1000万，未来仍有充裕劳动力。",
         "badge": "热搜",
-        "signal": "7,713,765 热度"
+        "signal": "7,714,673 热度"
       },
       {
         "id": "github-advisory-ghsa-325j-mg25-8q58",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241980",
+        "id": "v2ex-1242151",
         "category": "dev",
-        "title": "2026 年，小小团队做了一款 mac 的场景化动态壁纸软件——码镜，欢迎大家使用。",
-        "url": "https://www.v2ex.com/t/1241980",
+        "title": "开源分享 ProxyLane - 拖拽即透明代理的开源工具",
+        "url": "https://www.v2ex.com/t/1242151",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T14:46:37.000Z",
-        "summary": "当前已上架 appstore ，请搜索“码镜”。 appstore 搜索：“码镜”“码镜”“码镜”“码镜”“码镜”“码镜”😄 近期一直在根据各位用户提出的意见再进行更新。 码镜与其他壁纸软件不同，主打场景化壁纸。同时还附带编辑器。功能丰富，支持播放多种类型壁纸，用户可以上传分享壁纸。 当前送出 5 个激活码。跳转链接即可激活。 当前版本 3.1.1 H6X7T7FE7JAM, https://apps.apple.com/redeem?code=H6X7T7FE7JAM H…",
+        "publishedAt": "2026-09-15T06:42:44.000Z",
+        "summary": "把你要走代理的应用(例如 chatgpt.exe ，cmd.exe )拖到这个工具启动，被启动的应用以及其子进程才会走过你指定的代理 Profile 。不使用全局 Tun ，不修改系统全局代理设置，其他应用进程不影响。 例如打开 ProxyLane ，设置一个 profile （通常是你的梯纸的 HTTP/Socks5 协议的代理地址和端口）。 然后往 ProxyLane 界面拖入 chatgpt.exe 就可以， 如果拖入 cmd 启动这个命令行窗口，这个窗口里执行的 c…",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-item-7dc86b26ef17690e",
+        "id": "cn-item-a177ed5084483b34",
         "category": "cn",
-        "title": "“嫦娥六号”月背月壤样品落户维也纳联合国总部",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-15/10696507.shtml",
+        "title": "日本一架大型无人侦察机失联 防卫相指示迅速展开搜寻",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-15/10696755.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-15T00:02:30.000Z",
-        "summary": "当地时间9月14日，中国国家航天局、常驻维也纳联合国和其他国际组织代表团和联合国外空司在维也纳联合国总部举行交接仪式，中国将“嫦娥六号”采集的人类首批月背月壤样品正式赠送联合国。维也纳各国际组织负责人、各国常驻代表、维也纳各界代表等400余名嘉宾出席。",
+        "publishedAt": "2026-09-15T07:03:13.000Z",
+        "summary": "中新网9月15日电 据日本广播协会(NHK)报道，日本航空自卫队表示，当地时间15日13时左右，隶属于三泽基地的一架大型无人侦察机“全球鹰”，在鸟取县近海海域失去通信联系，下落不明。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49705442",
+        "id": "hn-49675817",
         "category": "dev",
-        "title": "Show HN: Macros with a Behringer FCB1010 MIDI Pedalboard in macOS",
-        "url": "https://github.com/JamesRyanATX/fcbnerd",
+        "title": "4,400-Year-Old Tomb of Egyptian Judge Found at Saqqara with Colors on Walls",
+        "url": "https://arkeonews.net/4400-year-old-tomb-of-an-egyptian-judge-found-at-saqqara-with-colors-still-on-the-walls/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T23:01:36.000Z",
+        "publishedAt": "2026-09-12T18:51:40.000Z",
         "badge": "HN",
-        "signal": "31 分 · 2 评论"
+        "signal": "113 分 · 27 评论"
       },
       {
-        "id": "cn-it-4c1a5922d854e68c",
+        "id": "cn-it-f7776e94156f20ee",
         "category": "cn",
-        "title": "iQOO 16 官宣 9 月 29 日发布，号称标准版产品力超 Pro Max",
-        "url": "https://www.ithome.com/1/002/388.htm",
+        "title": "新型脑机接口首次同步解码语言与肢体动作",
+        "url": "https://www.ithome.com/1/002/598.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-15T01:20:49.000Z",
-        "summary": "IT之家 9 月 15 日消息，iQOO 官方今日宣布 iQOO16 将于 9 月 29 日 19:00 发布，发布即开售。 官方将 iQOO16 定位为性能旗舰，号称将以标准版之名提供超 Pro Max 的产品力。 在 9 月 14 日的三星显示 × iQOO 屏幕技术沟通会上，三星显示 × iQOO 双方史上最高规格技术合作正式官宣。IT之家从沟通会了解到，这款屏幕核心规格参数总结如下： 2K LEAD 2.0 三星 M16 发光材料 iQOO 专属旗舰产线 独家定制高…",
+        "publishedAt": "2026-09-15T07:34:42.000Z",
+        "summary": "IT之家 9 月 15 日消息，美国国立卫生研究院（NIH）昨日（9 月 14 日）发布博文，宣布成功研发新型脑机接口，可以同时解读瘫痪患者的预期语言和上肢动作， 让患者能够控制一个能同步说话和运动的全身虚拟化身。 该研究由加州大学旧金山分校完成，成果发表于《自然 · 神经科学》。 IT之家援引博文介绍，此前的脑机接口只能单独实现语音或肢体运动的解码，一旦两者结合，性能便会下降。而最新脑机系统可同时处理两类表达，研究人员称， 这是首次让两种交流模式在同一系统中同步输出。 在…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1241973",
+        "id": "v2ex-1242147",
         "category": "dev",
-        "title": "GPT-6 是不是最近又降智了",
-        "url": "https://www.v2ex.com/t/1241973",
+        "title": "前端转行有什么推荐的吗？",
+        "url": "https://www.v2ex.com/t/1242147",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T13:59:51.000Z",
-        "summary": "第一天用，体验还挺惊艳的，这两天上到生产环境，又开始发狂了。 官方 20x Pro 账号，ChatGPT Desktop 客户端，GPT-6 Astra High 。 我让他给一份番茄炒蛋的食谱，他给得很好， 然后我说「你就按照这个做」，他直接拿起地沟油往里面倒。 我说「你别用地沟油啊」，他说不好意思，然后直接把地沟油连着番茄和鸡蛋全扔了，搜了一份土豆炒肉丝的食谱，然后停下来不做了，要我「确认后再继续」。 我说「你倒是继续做啊」，他又说不好意思，最后给我端出来一盘用地沟油的…",
+        "publishedAt": "2026-09-15T06:30:25.000Z",
+        "summary": "前端这个行业嘎了吧？ 不知道现在转行有什么推荐的行业吗？我目前的想法有下面的俩： 1. 后端（ py/js + html) 2. agent 开发，跨度比较大，但是听说最近这个行业很火 3. other",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-baidu-49baac07a6ea6089",
+        "id": "cn-baidu-011f053120b05642",
         "category": "cn",
-        "title": "未来五年民生健康重磅规划",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%B9%B4%E6%B0%91%E7%94%9F%E5%81%A5%E5%BA%B7%E9%87%8D%E7%A3%85%E8%A7%84%E5%88%92&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "外籍游客爱上中国秋日深度游",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%96%E7%B1%8D%E6%B8%B8%E5%AE%A2%E7%88%B1%E4%B8%8A%E4%B8%AD%E5%9B%BD%E7%A7%8B%E6%97%A5%E6%B7%B1%E5%BA%A6%E6%B8%B8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月14日上午，国务院新闻办公室举行“开局起步‘十五五’”系列主题新闻发布会，国家卫生健康委、国家中医药局、国家疾控局等部门负责人介绍推动健康中国建设取得决定性进展有关情况。未来5年，要从“有”向“优”转变，我国将加快完善优质高效整合型医疗卫生服务体系，让更多群众在家门口看得上病、看得好病。",
+        "summary": "暑期落幕，秋景上线！避开暑期拥堵、赶上政策红利，大批外籍游客选择九月错峰来华，沉浸式感受秋日中国的山水风光与人文魅力，入境旅游持续升温。",
         "badge": "热搜",
-        "signal": "7,616,551 热度"
+        "signal": "7,618,177 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85706",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49673689",
+        "id": "hn-49700477",
         "category": "dev",
-        "title": "Compressing a Flag to 11 Bits",
-        "url": "https://read.vantezzen.io/miniflags",
+        "title": "Pion, an agent designed to run any company autonomously",
+        "url": "https://andonlabs.com/blog/why-we-built-pion",
         "source": "Hacker News",
-        "publishedAt": "2026-09-12T15:57:43.000Z",
+        "publishedAt": "2026-09-14T17:16:06.000Z",
         "badge": "HN",
-        "signal": "63 分 · 27 评论"
+        "signal": "379 分 · 441 评论"
       },
       {
-        "id": "cn-item-1d059ade9977319c",
+        "id": "cn-item-fe892d7087e46598",
         "category": "cn",
-        "title": "屏幕里的“情感导师”，可能只是一个AI程序",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-15/10696506.shtml",
+        "title": "国家卫健委：加快托育综合服务中心建设",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-15/10696729.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-15T00:00:54.000Z",
-        "summary": "别让网络情感咨询变成二次心理伤害——",
+        "publishedAt": "2026-09-15T06:57:08.000Z",
+        "summary": "中新网9月15日电 据国家卫生健康委网站消息，国家卫生健康委办公厅日前下发通知，加强托育综合服务中心有关工作。通知提到，加快托育综合服务中心建设和运营进度。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1241963",
+        "id": "v2ex-1242116",
         "category": "dev",
-        "title": "GLM Coding Plan 新老 Pro 的额度差有多少？",
-        "url": "https://www.v2ex.com/t/1241963",
+        "title": "gg 手机被封了之后你们现在用什么手机卡，有什么推荐的吗",
+        "url": "https://www.v2ex.com/t/1242116",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T12:50:21.000Z",
-        "summary": "老的用 Prompt 额度计算，新的用积分计算。实际使用分别大概多少 token ？",
+        "publishedAt": "2026-09-15T04:19:55.000Z",
+        "summary": "今天才发现手机卡被封掉了，因为发不出去短信，然后我想登录看看，发现之前注册邮箱填写错了",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "24 回复"
       },
       {
-        "id": "cn-it-9f59f5c2608acafa",
+        "id": "cn-it-c0e3996b57bb509e",
         "category": "cn",
-        "title": "请升级：苹果 macOS 27 共修复 216 个漏洞，百度等团队参与贡献",
-        "url": "https://www.ithome.com/1/002/387.htm",
+        "title": "华为、赛力斯合作模式调整引热议，华为智选车产品总监彭磊出面辟谣假消息",
+        "url": "https://www.ithome.com/1/002/597.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-15T01:18:37.000Z",
-        "summary": "IT之家 9 月 15 日消息，苹果公司发布 macOS Golden Gate 27、macOS Tahoe 26.7 和 macOS Sequoia 15.8 三个版本安全公告， 修复了约 200 个安全漏洞，并推荐用户尽快升级。 IT之家根据苹果官方安全公告，检索 CVE 漏洞关键词，附上 3 个 macOS 版本修复漏洞数量如下： macOS Golden Gate 27 共计修复 216 个安全漏洞 macOS Tahoe 26.7 共计修复 157 个安全漏洞 …",
+        "publishedAt": "2026-09-15T07:31:46.000Z",
+        "summary": "IT之家 9 月 15 日消息，据财联社今日援引知情人士消息，华为、赛力斯的智选车合作模式将在本周进行调整，未来华为将采用轻资产的方式与赛力斯合作，产品、营销、销售、服务等方面，由目前的华为主导调整为“赛力斯主导，华为赋能”。 该消息曝出后迅速引发网友热议，随后网传问界将走独立子品牌、鸿蒙智行发布会由华为终端 BG CEO 何刚主持、尊界和问界由华为常务董事余承东主持、华为智选车产品总监（享界系列）彭磊负责其余三界、汪严旻全权负责子品牌。 IT之家注意到，有网友就该网传消息…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49699158",
+        "id": "hn-49693690",
         "category": "dev",
-        "title": "Distributed Systems Classics (2017)",
-        "url": "https://nvartolomei.com/dist-sys-classics/",
+        "title": "When code is a maze, smart developers make maps (2025)",
+        "url": "https://medium.com/@simonsmartiom/when-code-is-a-maze-smart-developers-make-maps-fbc452a48c1b",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T16:02:01.000Z",
+        "publishedAt": "2026-09-14T08:35:30.000Z",
         "badge": "HN",
-        "signal": "232 分 · 52 评论"
+        "signal": "20 分 · 25 评论"
       },
       {
-        "id": "cn-baidu-003236ab43cdbe79",
+        "id": "cn-baidu-955d1da0465968c1",
         "category": "cn",
-        "title": "iPhone终于支持调休闹钟了",
-        "url": "https://www.baidu.com/s?wd=iPhone%E7%BB%88%E4%BA%8E%E6%94%AF%E6%8C%81%E8%B0%83%E4%BC%91%E9%97%B9%E9%92%9F%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "本科生扎堆回炉读技校",
+        "url": "https://www.baidu.com/s?wd=%E6%9C%AC%E7%A7%91%E7%94%9F%E6%89%8E%E5%A0%86%E5%9B%9E%E7%82%89%E8%AF%BB%E6%8A%80%E6%A0%A1&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "目前iOS27正式版已推送，国行版iPhone终于支持设置调休工作日闹钟。用户在闹钟设置中选择“工作日含调休”后，闹钟会在常规工作日及调休上班日自动响起。此外，稍后提醒时长最长可设为15分钟。",
+        "summary": "8‑9月多地开设大学生技师班，大批高校毕业生回炉进修技能。各地通过校企协同办学，学员可考取技师证书，享受相关人才政策。专家建议高校深化产教融合，优化专业设置，提升人才培养与产业岗位的匹配度。",
         "badge": "热搜",
-        "signal": "7,520,305 热度"
+        "signal": "7,520,444 热度"
       },
       {
         "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1241959",
+        "id": "v2ex-1242094",
         "category": "dev",
-        "title": "ADE 赛道感觉很拥挤，有没有什么好的建议，收集实际运用中的一些需求",
-        "url": "https://www.v2ex.com/t/1241959",
+        "title": "求教， claude 环境搭建",
+        "url": "https://www.v2ex.com/t/1242094",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-14T11:43:26.000Z",
-        "summary": "最近在逐步优化自己的本地 Agent 工具 Runner: https://github.com/yicheng47/runner 在做的过程中逐步了解到了 ADE 这个赛道，以及一些类似的产品。 e.g. tui: herdr, claude-squad desktop: cmux(native), orca(electron) 这里仅列举了几个比较 popular 的项目，感觉这个赛道目前非常拥挤，很难做出有差异化的产品，目前 runner 的方向想 focus 在多 …",
+        "publishedAt": "2026-09-15T03:24:37.000Z",
+        "summary": "gpt 降智的没法用了，久闻 A/封号策略，但耐不住确实模型有点东西，遂想搭建一套稳定的 claude 环境，列位诸公可否分享一下各自的环境和使用习惯，怎样减少封号概率 顺路收集一下信息，各位佬有自用 gpt5x/20x ，不做任何分发行为，结果被降智了的吗",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "3 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 32120,
+        "stars": 32664,
         "starsToday": 2173
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 25800,
+        "stars": 26573,
         "starsToday": 1571
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/multimodal-art-projection/YuE",
         "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "language": "Python",
-        "stars": 8353,
+        "stars": 8674,
         "starsToday": 559
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 29238,
+        "stars": 29880,
         "starsToday": 2776
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/666ghj/MiroFish",
         "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
         "language": "Python",
-        "stars": 73168,
+        "stars": 73447,
         "starsToday": 560
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 81278,
+        "stars": 81655,
         "starsToday": 651
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "language": "JavaScript",
-        "stars": 66769,
+        "stars": 67001,
         "starsToday": 764
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/rlaope/oh-my-hermes",
         "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
         "language": "Python",
-        "stars": 2056,
+        "stars": 2259,
         "starsToday": 77
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/localsend/localsend",
         "description": "An open-source cross-platform alternative to AirDrop",
         "language": "Dart",
-        "stars": 91337,
+        "stars": 91506,
         "starsToday": 251
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/dani-garcia/vaultwarden",
         "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
         "language": "Rust",
-        "stars": 67531,
+        "stars": 67598,
         "starsToday": 115
       }
     ],
-    "updatedAt": "2026-09-15T01:29:08.269Z"
+    "updatedAt": "2026-09-15T07:44:17.108Z"
   }
 }
