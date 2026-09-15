@@ -1,6 +1,6 @@
-import { batchButtons } from './batch-ui.js?v=0.26.0';
-import { equipmentLoot } from './camp-development-ui.js?v=0.26.0';
-import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.26.0';
+import { batchButtons } from './batch-ui.js?v=0.28.0';
+import { equipmentLoot } from './camp-development-ui.js?v=0.28.0';
+import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.28.0';
 const attr={hp:'气血',attack:'攻击',defense:'防御',speed:'速度',strategy:'谋略'};
 export function dungeonMountLoot(s,d,id,esc){
   const heroes=d.heroes.filter(h=>h.mount.dungeon===id);

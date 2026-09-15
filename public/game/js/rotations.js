@@ -1,5 +1,5 @@
-import { deployedTroops } from './logistics.js?v=0.26.0';
-import { requireRule, journal } from './utils.js?v=0.26.0';
+import { deployedTroops } from './logistics.js?v=0.28.0';
+import { requireRule, journal } from './utils.js?v=0.28.0';
 
 export const DAILY_ROUTES=[
   {id:'ore',name:'铁石山道',days:[1,4,0],enemies:['soldier','guard'],reward:{iron:4,cloth:3,scrap_iron:3},use:'铁与布用于打造装备，碎铁用于练兵、工坊加工与重熔精铁。'},
@@ -48,7 +48,7 @@ export function enterRotation(s,kind,id,tier){
 export function finishRotation(s,b){
   if(b.outcome!=='victory')return null;
   const {kind,id,tier,period}=b.context;
-  if(kind==='daily'){const r=DAILY_ROUTES.find(r=>r.id===id);journal(s,`【材料历练】${r.name} ${tier} 阶完成。`);return {items:Object.fromEntries(Object.entries(r.reward).map(([k,n])=>[k,n*tier]))};}
+  if(kind==='daily'){if(b.team.every(u=>u.hp>0)&&b.elapsed<=60000&&!b.itemReadyAt){s.campaign.mastery??={};const key=id+'_'+tier;s.campaign.mastery[key]=Math.min(2,(s.campaign.mastery[key]||0)+1);}const r=DAILY_ROUTES.find(r=>r.id===id);journal(s,`【材料历练】${r.name} ${tier} 阶完成。`);return {items:Object.fromEntries(Object.entries(r.reward).map(([k,n])=>[k,n*tier]))};}
   const p=s.campaign,old=p.weekly[period],hp=Math.floor(b.team.reduce((n,u)=>n+u.hp/u.maxHp,0)/b.team.length*1000),score=weeklyScore(tier,b.elapsed,hp),first=tier>(old?.tier||0);
   if(!old||score>old.score)p.weekly[period]={tier,score,elapsed:b.elapsed,hp};
   const keys=Object.keys(p.weekly).sort();while(keys.length>48)delete p.weekly[keys.shift()];
@@ -64,6 +64,7 @@ export function validateCampaign(s,check){
   if(s.campaign===undefined){check(s.battle?.context.type!=='rotation','轮换战局进度');return;}
   const p=s.campaign;check(s.camp&&p&&p.version===1&&p.daily&&validDate(p.daily.date)&&p.daily.uses&&typeof p.daily.uses==='object'&&!Array.isArray(p.daily.uses)&&p.weekly&&typeof p.weekly==='object'&&!Array.isArray(p.weekly),'轮换进度');
   for(const [id,n] of Object.entries(p.daily.uses))check(DAILY_ROUTES.some(r=>r.id===id)&&Number.isInteger(n)&&n>=0&&n<=3,'材料本次数');
+  if(p.mastery!==undefined){check(p.mastery&&typeof p.mastery==='object'&&!Array.isArray(p.mastery),'材料本熟练记录');for(const [key,n] of Object.entries(p.mastery))check(/^(ore|manual|stable)_[123]$/.test(key)&&Number.isInteger(n)&&n>=1&&n<=2,'材料本稳定通关');}
   check(Object.keys(p.weekly).length<=48,'周本历史长度');
   for(const [period,r] of Object.entries(p.weekly))check(periodPattern.test(period)&&r&&Number.isInteger(r.tier)&&r.tier>=1&&r.tier<=5&&Number.isInteger(r.elapsed)&&r.elapsed>=0&&r.elapsed<=180000&&Number.isInteger(r.hp)&&r.hp>=0&&r.hp<=1000&&r.score===weeklyScore(r.tier,r.elapsed,r.hp),'周本成绩');
   check(s.scheme?.context.type!=='rotation','轮换战局类型');

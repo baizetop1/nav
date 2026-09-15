@@ -1,6 +1,6 @@
-import { staminaCap } from './logistics.js?v=0.26.0';
-import { count, journal, random, requireRule } from './utils.js?v=0.26.0';
-import { gainExp } from './hero.js?v=0.26.0';
+import { staminaCap } from './logistics.js?v=0.28.0';
+import { count, journal, random, requireRule } from './utils.js?v=0.28.0';
+import { gainExp } from './hero.js?v=0.28.0';
 export function gainItem(state, id, amount, data) {
   requireRule(data.by.items[id] && Number.isInteger(amount) && amount > 0,'无效的道具奖励。');
   state.inventory[id]=(state.inventory[id]||0)+amount;count(state,'gain_'+id,amount);

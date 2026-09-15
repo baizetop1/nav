@@ -1,4 +1,4 @@
-import { workshopQuote, RESOURCE_NAMES } from './production.js?v=0.26.0';
+import { workshopQuote, RESOURCE_NAMES } from './production.js?v=0.28.0';
 export function workshopOrders(s,btn){const q=workshopQuote(s);return '<section class="workshop-orders"><h3>工坊订单 · 按需加工</h3><p class="note">每批消耗木材 2、碎铁 2，获得精铁 1；不消耗碎银、体力。未下单的额度会保留。</p><p>当前额度 '+q.bank+' 批 · 原料和库存允许加工 '+q.available+' 批</p><p class="note">现有木材 '+(s.camp?.wood||0)+' · 碎铁 '+(s.inventory.scrap_iron||0)+' · 精铁 '+(s.inventory.iron||0)+'</p>'+(q.reason?'<p class="note">'+q.reason+'</p>':'')+'<div class="actions">'+[1,5,10,'all'].map(count=>btn(count==='all'?'预览全部可加工':'预览加工 '+count+' 批',{type:'ui_productionPreview',kind:'workshop',count},'secondary',!!q.reason)).join('')+'</div><p class="note">数量超过当前条件时会先缩减预览，不会直接扣料。碎铁可从矿山、每日铁石山道或装备分解获得；先收取原料再下单。</p></section>';}
 export function productionDialog(q,esc,btn){
  const collect=q.kind==='collect';

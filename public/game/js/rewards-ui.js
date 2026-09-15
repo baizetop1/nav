@@ -1,7 +1,8 @@
-import { totalExperience } from './progression.js?v=0.26.0';
-import { CORPS, corpsRank } from './development.js?v=0.26.0';
-import { HELPERS, hasHelper } from './helpers.js?v=0.26.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.26.0';
+import {RELICS,CHALLENGES} from './realm-data.js?v=0.28.0';
+import { totalExperience } from './progression.js?v=0.28.0';
+import { CORPS, corpsRank } from './development.js?v=0.28.0';
+import { HELPERS, hasHelper } from './helpers.js?v=0.28.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.28.0';
 // Derive the visible receipt from a completed transaction, never from a second roll.
 export function gains(before,after,data){
   const rows=[];const add=(name,n)=>{if(n>0)rows.push({name,amount:n});};
@@ -17,6 +18,7 @@ export function gains(before,after,data){
   for(const h of data.heroes)if(qualityOf(after.heroes[h.id])>qualityOf(before.heroes[h.id]))rows.push({name:h.name+' · 升至'+QUALITIES[qualityOf(after.heroes[h.id])].name+'品',amount:1});
   for(const h of HELPERS)if(hasHelper(after,h.id)&&!hasHelper(before,h.id))rows.push({name:h.role+" · "+h.name+"入寨",amount:1});
   for(const h of data.heroes)if(corpsRank(after,h.id)>corpsRank(before,h.id))rows.push({name:CORPS[h.id].name+' · 升至 '+corpsRank(after,h.id)+' 阶',amount:1});
+  for(const id of after.realm?.relics||[])if(!before.realm?.relics.includes(id))add(RELICS[id].name+' · 军中藏品',1);for(const [id,m]of Object.entries(CHALLENGES))if(after.progress.flags['realm_badge_'+id]&&!before.progress.flags['realm_badge_'+id])add(m.name+' · 勋章',1);
   return rows;
 }
 export function rewardDialog(rows,esc,{saved=true,emptyVictory=false,dungeonVictory=false,battleSummary=null}={}){return `<dialog id="reward-result" aria-labelledby="reward-title"><p class="kicker">本次所得</p><h2 id="reward-title" tabindex="-1">${battleSummary||emptyVictory?'战斗结算':'此番收获'}</h2>${battleSummary?`<section class="battle-receipt"><p>${esc(battleSummary.outcome==='victory'?'得胜回寨':'此次收兵，下次再战')}</p>${battleSummary.troops?`<p>乡勇 ${battleSummary.troops} 人随行 · ${battleSummary.troops-battleSummary.wounded-(battleSummary.fallen||0)} 人安然归营 · 伤兵 ${battleSummary.wounded} 人 · 阵亡 ${battleSummary.fallen||0} 人</p><p class="note">伤兵可回寨到医馆治疗；阵亡须付费重新募兵，不能治疗复活。</p>`:'<p class="note">英雄作战，无随行乡勇。</p>'}</section>`:''}<div class="reward-grid">${rows.map(r=>`<article><span>${esc(r.name)}</span><b>+${r.amount}</b></article>`).join('')||'<p>本次没有新增物品。</p>'}</div><p class="note">${saved?'结果已保存到本机。':'本机暂未保存，请到存档页导出进度。'}</p>${dungeonVictory?'<p class="note">副本坐骑契每张独立 20% 概率，无保底；本次未出现即未掉落。</p>':''}<button type="button" class="primary" data-reward-close>收好，继续</button></dialog>`;}

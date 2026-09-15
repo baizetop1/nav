@@ -1,4 +1,4 @@
-import { CORPS } from './corps-data.js?v=0.26.0';
+import { CORPS } from './corps-data.js?v=0.28.0';
 // Game design, not a claim about historical or novel military organization.
 export const TERRAIN_NAMES={land:'平原',forest:'林地',mountain:'山地',water:'水域'};
 const group=text=>new Set(text.split(' '));

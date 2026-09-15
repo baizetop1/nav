@@ -1,24 +1,27 @@
-import { collectionQuote, workshopQuote } from './production.js?v=0.26.0';
-import { productionDialog } from './production-ui.js?v=0.26.0';
-import { mentorshipQuote } from './mentorship.js?v=0.26.0';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.26.0';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.26.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.26.0';
-import { presetReason } from './development.js?v=0.26.0';
-import { batchQuote } from './batch.js?v=0.26.0';
-import { batchDialog } from './batch-ui.js?v=0.26.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.26.0';
-import { ActivityLog } from './activity.js?v=0.26.0';
-import { loadData } from './data.js?v=0.26.0';
-import { dispatch, newGame } from './core.js?v=0.26.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.26.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.26.0';
-import { patchElement } from './dom.js?v=0.26.0';
+import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.28.0';
+import { sweepQuote } from './sweep.js?v=0.28.0';
+import { sweepDialog } from './sweep-ui.js?v=0.28.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.28.0';
+import { productionDialog } from './production-ui.js?v=0.28.0';
+import { mentorshipQuote } from './mentorship.js?v=0.28.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.28.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.28.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.28.0';
+import { presetReason } from './development.js?v=0.28.0';
+import { batchQuote } from './batch.js?v=0.28.0';
+import { batchDialog } from './batch-ui.js?v=0.28.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.28.0';
+import { ActivityLog } from './activity.js?v=0.28.0';
+import { loadData } from './data.js?v=0.28.0';
+import { dispatch, newGame } from './core.js?v=0.28.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.28.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.28.0';
+import { patchElement } from './dom.js?v=0.28.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.26.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.26.0';
-import { CloudClient } from './cloud.js?v=0.26.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.26.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.28.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.28.0';
+import { CloudClient } from './cloud.js?v=0.28.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.28.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
@@ -125,8 +128,11 @@ async function load(){visibleEntries=[];logPaused=false;activity.reset();logFoll
 }
 async function previewImport(next){
   pendingImport=next;await refreshSlots();previewSlots=slots.map(s=>({id:s.id,serial:s.serial}));
-  document.getElementById('import-confirm')?.remove();root.insertAdjacentHTML('beforeend',boxImportDialog(next,slots,store.id));
+  document.getElementById('import-confirm')?.remove();root.insertAdjacentHTML('beforeend',boxImportDialog(next,slots,store.id,data));
   const dialog=document.getElementById('import-confirm');dialog.addEventListener('cancel',()=>{pendingImport=null;dialog.remove();});dialog.showModal();dialog.querySelector('select')?.focus();
+}
+function confirmCloudUpload(remote,id){
+ return new Promise(resolve=>{root.insertAdjacentHTML('beforeend',cloudCompareDialog(state,store.record,remote,id,data));const dialog=document.getElementById('cloud-compare');let accepted=false;dialog.addEventListener('click',event=>{const choice=event.target.closest('[data-cloud-choice]')?.dataset.cloudChoice;if(!choice)return;event.stopPropagation();accepted=choice==='confirm';dialog.close();});dialog.addEventListener('close',()=>{dialog.remove();resolve(accepted);},{once:true});dialog.showModal();dialog.querySelector('h2').focus();});
 }
 async function handleBox(command){
   const {type}=command;
@@ -148,27 +154,27 @@ async function handleBox(command){
   cloudView.conflict=false;
   try{
     if(type==='ui_cloudVerify'){
-      const remote=await cloud.download(id),result=await cloud.verify(id,remote.cloudRevision,Number(document.getElementById('verified-tier').value));
+      const remote=await cloud.download(id),result=await cloud.verify(id,remote.cloudRevision,Number(document.getElementById('verified-tier').value),document.getElementById('verified-group').value);
       cloudView.message='服务器演武：'+(result.outcome==='victory'?'第 '+result.tier+' 层得胜，'+result.score+' 分。':'本次未过关。')+' '+(result.best?'本期最好：第 '+result.best.tier+' 层，'+result.best.score+' 分。':'本期暂无通关成绩。')+' 本机与云端资源均未扣除。';
     }
     if(type==='ui_cloudForget'){cloud.forget();cloudView.message='本页全部存档密钥已清除。';}
     if(type==='ui_cloudList'){const result=await cloud.list();cloudView.slots=result.slots;cloudView.message='云端列表已刷新；私有档只展示编号、名称与公开状态。';}
     if(type==='ui_cloudDownload'){
       const remote=await cloud.download(id);
+      cloudView.remote={id,revision:remote.cloudRevision,updatedAt:remote.updatedAt};
       if(!remote.state){cloudView.message=slotNumber(id)+'号尚无云端进度，可持密钥上传本机档。';}
-      else{await previewImport({state:remote.state,name:remote.name,cloud:{origin:cloud.baseUrl,id,revision:remote.cloudRevision,clean:true}});return true;}
+      else{await previewImport({state:remote.state,name:remote.name,cloud:{origin:cloud.baseUrl,id,revision:remote.cloudRevision,clean:true,updatedAt:remote.updatedAt}});return true;}
     }
     if(type==='ui_cloudUpload'||type==='ui_cloudReplace'){
       if(locked||invalid||!entered)throw new Error('请先接续一个有效本机存档，处理冲突后再上传。');
       if(dirty){await persist(state);if(dirty)throw new Error('本机仍未保存，请先导出进度再处理存储问题。');}
-      let revision;
-      const link=store.record.cloud;
-      if(type!=='ui_cloudReplace'&&link?.origin===cloud.baseUrl&&link.id===id)revision=link.revision;
-      else{const remote=await cloud.download(id);if(remote.state&&!window.confirm('此云端位置已有「'+remote.name+'」第 '+remote.cloudRevision+' 版。确认用本机「'+store.record.name+'」替换？云端旧版会保留在历史中。'))return true;revision=remote.cloudRevision;}
-      if(!window.confirm('把本机 '+slotNumber(store.id)+'号「'+store.record.name+'」上传到云端 '+slotNumber(id)+'号？本次基于第 '+revision+' 版，云端若已更新将拒绝覆盖。'))return true;
+      const serial=store.record.serial,remote=await cloud.download(id);cloudView.remote={id,revision:remote.cloudRevision,updatedAt:remote.updatedAt};
+      if(!await confirmCloudUpload(remote,id)){cloudView.message='已取消上传，云端进度未改动。';paint();return true;}
+      const current=await database.read(store.id);if(locked||current?.serial!==serial)throw new Error('比较期间本机档已被另一标签页更新，请先重新载入并比较。');
+      const revision=remote.cloudRevision;
       const result=await cloud.upload(id,revision,state,store.record.name);
       cloudView.message='云端已保存 '+slotNumber(id)+'号第 '+result.cloudRevision+' 版。手机端请查看并确认接续。';
-      try{await store.markCloud({origin:cloud.baseUrl,id,revision:result.cloudRevision,clean:true});}
+      try{await store.markCloud({origin:cloud.baseUrl,id,revision:result.cloudRevision,clean:true,updatedAt:result.updatedAt,uploadedAt:Date.now()});cloudView.remote={id,revision:result.cloudRevision,updatedAt:result.updatedAt};}
       catch{locked=true;cloudView.message+=' 但本机关联信息未能保存，请先导出本页，然后重新接续云端；不要重复提交。';}
     }
     if(type==='ui_cloudShare'){
@@ -214,6 +220,13 @@ async function handle(command){
   if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
 
   if(await handleBox(command))return;
+  if(type==='ui_sweepCancel'){document.getElementById('sweep-preview')?.close();return;}
+  if(type==='ui_sweepPreview'){
+    const snapshot=dispatch(data,state,{type:'refresh'}),q=sweepQuote(snapshot,data,command),btn=(label,a,kind,disabled)=>'<button type="button" class="'+kind+'" data-command="'+esc(JSON.stringify(a))+'" '+(disabled?'disabled':'')+'>'+esc(label)+'</button>';
+    document.getElementById('sweep-preview')?.remove();root.insertAdjacentHTML('beforeend',sweepDialog(q,command,data,esc,btn));const dialog=document.getElementById('sweep-preview');dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;
+  }
+  if(type==='rotationSweep')document.getElementById('sweep-preview')?.close();
+  if(type==='ui_squadSend'){const team=[0,1,2].map(i=>document.getElementById('squad-hero-'+i).value).filter(Boolean),troops=Number(document.getElementById('squad-troops').value);if(!window.confirm('派遣所选分队？消耗体力 10、粮草 '+(10+Math.ceil(troops/2))+'；人员和兵力将在外派期间占用，按实际战斗结算伤亡。'))return;command={type:'squadSend',id,team,troops};}
   if(type==='ui_productionCancel'){document.getElementById('production-preview')?.close();return;}
   if(type==='ui_productionPreview'){
     const preview=dispatch(data,state,{type:'refresh'}),q=command.kind==='collect'?collectionQuote(preview):workshopQuote(preview,command.count);
@@ -267,7 +280,7 @@ async function handle(command){
   if(['battleSkill','battleItem'].includes(type)&&battlePaused)throw new Error('请先继续交战，再释放技能或用药。');
   if(type==='ui_start'){const before=state;await persist(state.camp?state:dispatch(data,state,{type:'campFound'}));entered=true;view='camp';paint(true);showRewards(before,state);return;}
   if(type==='ui_battleSpeed'){if(![.5,1,2].includes(command.speed))throw new Error('无效速度');battleSpeed=command.speed;try{localStorage.setItem('baize_shuihu_battle_speed',String(battleSpeed));}catch{}paint();return;}
-  if(type==='ui_verifiedRefresh'){if(leaderboard.verifiedLoading)return;leaderboard.verifiedLoading=true;leaderboard.verifiedError='';leaderboard.verified=null;paint();try{leaderboard.verified=await cloud.verifiedLeaderboard();}catch(e){leaderboard.verifiedError=e.status===404?'服务器演武服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.verifiedLoading=false;paint();}return;}
+  if(type==='ui_verifiedRefresh'){if(leaderboard.verifiedLoading)return;const group=document.getElementById('verified-group-board')?.value||'open';leaderboard.verifiedGroup=group;leaderboard.verifiedLoading=true;leaderboard.verifiedError='';leaderboard.verified=null;paint();try{leaderboard.verified=await cloud.verifiedLeaderboard(group);}catch(e){leaderboard.verifiedError=e.status===404?'服务器演武服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.verifiedLoading=false;paint();}return;}
   if(type==='ui_rankRefresh'){if(leaderboard.loading)return;leaderboard.loading=true;leaderboard.error='';leaderboard.data=null;paint();try{leaderboard.data=await cloud.leaderboard();}catch(e){leaderboard.error=e.status===404?'排行榜服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.loading=false;paint();}return;}
   if(type==='ui_compareClose'){gear={...gear,comparison:null};paint();return;}
   if(type==='ui_campJump'){if(!['camp-affairs','camp-goals','camp-production','frontier-map','camp-resources','camp-mentorship'].includes(id))return;view='camp';paint();const el=document.getElementById(id);for(let p=el?.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;if(id==='camp-mentorship')el?.querySelector('details')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
@@ -327,6 +340,7 @@ root.addEventListener('click',async event=>{
 });
 root.addEventListener('keydown',event=>{if(event.target.id==='roster-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('button[data-command*="ui_rosterFilter"]')?.click();}});
 root.addEventListener('change',event=>{
+  if(event.target.id==='import-slot'&&pendingImport){document.getElementById('import-comparison').innerHTML=importComparison(pendingImport,slots,Number(event.target.value),data);return;}
   if(event.target.id==='cloud-slot'){cloudView.selected=slotId(event.target.value);cloudView.history=null;cloudView.message='已切换云端编号，请确认密钥对应此编号。';document.getElementById('cloud-key').value='';paint();}
   if(event.target.id==='recruit-target'){recruitTarget=event.target.value;notice='';error='';paint();document.getElementById('recruit-target')?.focus({preventScroll:true});}
 });

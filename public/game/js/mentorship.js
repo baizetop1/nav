@@ -1,6 +1,6 @@
-import { attributes, gainExp } from './hero.js?v=0.26.0';
-import { experienceToNext, experienceResult, ATTRIBUTE_NAMES } from './progression.js?v=0.26.0';
-import { count, journal, requireRule } from './utils.js?v=0.26.0';
+import { attributes, gainExp } from './hero.js?v=0.28.0';
+import { experienceToNext, experienceResult, ATTRIBUTE_NAMES } from './progression.js?v=0.28.0';
+import { count, journal, requireRule } from './utils.js?v=0.28.0';
 export const MENTOR_LIMIT=3;
 export function mentorshipQuote(s,d,mentor,student){
   const m=s.heroes[mentor],h=s.heroes[student],used=s.daily.counters.heroMentor||0;

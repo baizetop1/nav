@@ -1,3 +1,4 @@
+import {CHALLENGES} from '../../public/game/js/realm-data.js';
 import {verifyAutoBattle,verifiedBoard} from './verified-battle.js';
 import {rotationCalendar} from '../../public/game/js/rotations.js';
 import { rankSnapshots } from '../../public/game/js/rotations.js';
@@ -73,11 +74,11 @@ async function route(request,env){
   const url=new URL(request.url);
   if(url.protocol!=='https:'&&!(env.LOCAL_DEV==='true'&&['localhost','127.0.0.1'].includes(url.hostname)))fail(400,'存档服务只接受 HTTPS。');
   const ip=request.headers.get('CF-Connecting-IP')||'local';await limit(env,`request:${ip}`,120);
-  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,supplies:1,elite:1,chapters:data.chapters.length});
+  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,realm:1,challengeGroups:1,supplies:1,elite:1,chapters:data.chapters.length});
   if(url.pathname==='/v1/leaderboard'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,raw FROM slots WHERE raw IS NOT NULL ORDER BY id').all();return json(rankSnapshots(rows.results,Date.now()));}
   if(url.pathname==='/v1/verified-leaderboard'&&request.method==='GET'){
-    const period=rotationCalendar(Date.now()).period;
-    const rows=await env.DB.prepare('SELECT slot,tier,score FROM verified_scores WHERE period=?').bind(period).all();return json(verifiedBoard(rows.results,period));
+    const period=rotationCalendar(Date.now()).period,group=url.searchParams.get('group')||'open';if(group!=='open'&&!Object.hasOwn(CHALLENGES,group))fail(400,'无效演武组别。');const keyPeriod=period+(group==='open'?'':':'+group);
+    const rows=await env.DB.prepare('SELECT v.slot,v.tier,v.score,v.source_revision,s.public,s.revision,s.raw FROM verified_scores v LEFT JOIN slots s ON s.id=v.slot WHERE v.period=?').bind(keyPeriod).all();const board=verifiedBoard(rows.results,period);if(group!=='open')board.group=group;for(const e of board.entries){const row=rows.results.find(r=>r.slot===e.id);if(row.public&&row.revision===row.source_revision&&row.raw){try{const s=gameSnapshot(JSON.parse(row.raw),data);e.team=s.team.map(id=>({id,name:data.by.heroes[id].name,level:s.heroes[id].level,quality:s.heroes[id].quality||0}));}catch{}}}return json(board);
   }
   if(url.pathname==='/v1/slots'&&request.method==='GET'){
     const rows=await env.DB.prepare('SELECT id,name,public FROM slots ORDER BY id').all();return json({slots:rows.results.map(summary)});
@@ -107,18 +108,18 @@ async function route(request,env){
   if(action==='verify'&&request.method==='POST'){
     const expected=expectedRevision(request);if(expected!==row.revision)fail(412,'云端已更新，请重新读取后演武。');
     if(!row.raw)fail(400,'先上传有效云端存档。');await limit(env,'verify:'+row.id,6);
-    const input=await body(request),now=Date.now(),period=rotationCalendar(now).period;
-    const old=await env.DB.prepare('SELECT * FROM verified_scores WHERE slot=? AND period=?').bind(row.id,period).first();
-    const seed=parseInt((await digest(env.KEY_PEPPER,'exhibition-v1:'+row.id+':'+period)).slice(0,8),16)||1;
-    let result;try{result=verifyAutoBattle(data,row.raw,input.tier,old,now,seed);}catch(e){fail(400,e.message);}
+    const input=await body(request),now=Date.now(),period=rotationCalendar(now).period,group=input.group||'open';if(group!=='open'&&!Object.hasOwn(CHALLENGES,group))fail(400,'无效演武组别。');const keyPeriod=period+(group==='open'?'':':'+group);
+    const old=await env.DB.prepare('SELECT * FROM verified_scores WHERE slot=? AND period=?').bind(row.id,keyPeriod).first();
+    const seed=parseInt((await digest(env.KEY_PEPPER,'exhibition-v1:'+row.id+':'+keyPeriod)).slice(0,8),16)||1;
+    let result;try{result=verifyAutoBattle(data,row.raw,input.tier,old,now,seed,group);}catch(e){fail(400,e.message);}
     if(rotationCalendar(Date.now()).period!==period)fail(409,'周本已换期，请重新演武。');
     if(result.outcome==='victory')await env.DB.prepare(
       'INSERT INTO verified_scores(slot,period,tier,score,elapsed,hp,source_revision,engine,updated_at) SELECT ?,?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM slots WHERE id=? AND revision=? AND key_hash=?) ON CONFLICT(slot,period) DO UPDATE SET tier=excluded.tier,score=excluded.score,elapsed=excluded.elapsed,hp=excluded.hp,source_revision=excluded.source_revision,engine=excluded.engine,updated_at=excluded.updated_at WHERE excluded.score>verified_scores.score'
-    ).bind(row.id,period,result.tier,result.score,result.elapsed,result.hp,row.revision,data.config.release,new Date(now).toISOString(),row.id,expected,hash).run();
+    ).bind(row.id,keyPeriod,result.tier,result.score,result.elapsed,result.hp,row.revision,data.config.release,new Date(now).toISOString(),row.id,expected,hash).run();
     const current=await getSlot(env,row.id);if(current.revision!==expected||current.key_hash!==hash)fail(412,'演武期间云端进度或密钥已变化，请重新读取后演武。');
-    const best=await env.DB.prepare('SELECT tier,score FROM verified_scores WHERE slot=? AND period=?').bind(row.id,period).first();
+    const best=await env.DB.prepare('SELECT tier,score FROM verified_scores WHERE slot=? AND period=?').bind(row.id,keyPeriod).first();
     await env.DB.prepare('DELETE FROM verified_scores WHERE period < ?').bind(String(new Date(now).getUTCFullYear()-1)+'-01-1').run();
-    return json({...result,id:row.id,verified:true,sourceRevision:row.revision,best:best||null});
+    return json({...result,...(group==='open'?{}:{group}),id:row.id,verified:true,sourceRevision:row.revision,best:best||null});
   }
   if(!action&&request.method==='PUT'){
     const input=await body(request);
@@ -129,6 +130,9 @@ async function route(request,env){
     if(row.raw&&JSON.parse(row.raw).frontier&&!input.state?.frontier)fail(409,'此存档已有据点与生产进度，请刷新至新版后上传。');
     if(row.raw&&JSON.parse(row.raw).development&&!input.state?.development)fail(409,'此存档已有专属兵种与阵容进度，请刷新至新版后上传。');
     if(row.raw&&JSON.parse(row.raw).campaign&&!input.state?.campaign)fail(409,'此存档已有轮换历练进度，请刷新至新版后上传。');
+    if(row.raw&&JSON.parse(row.raw).frontier?.focus!==undefined&&input.state?.frontier?.focus===undefined)fail(409,'此存档已有经营侧重，请刷新新版后上传。');
+    if(row.raw&&JSON.parse(row.raw).campaign?.mastery!==undefined&&input.state?.campaign?.mastery===undefined)fail(409,'此存档已有材料本熟练记录，请刷新新版后上传。');
+    if(row.raw&&JSON.parse(row.raw).realm&&!input.state?.realm)fail(409,'此存档已有山河经营、远征与军队记录，请刷新新版后上传。');
     let state,name;try{state=gameSnapshot(input.state,data);name=slotName(input.name);}catch(e){fail(400,e.message);}
     return change(request,env,row,hash,{...row,name,raw:JSON.stringify(state)});
   }
