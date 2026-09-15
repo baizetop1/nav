@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-15T15:24:43.941Z",
+  "generatedAt": "2026-09-15T15:25:22.565Z",
   "intelligence": {
-    "updatedAt": "2026-09-15T15:24:43.941Z",
+    "updatedAt": "2026-09-15T15:25:22.565Z",
     "items": [
       {
         "id": "cn-item-0188b0cad9fe3137",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-15T12:31:10.000Z",
         "badge": "HN",
-        "signal": "410 分 · 72 评论"
+        "signal": "411 分 · 72 评论"
       },
       {
         "id": "cn-it-b7fd0dadf9e6a8f1",
@@ -452,7 +452,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-15T13:58:37.000Z",
         "badge": "HN",
-        "signal": "16 分 · 2 评论"
+        "signal": "16 分 · 3 评论"
       },
       {
         "id": "cn-baidu-b8621501e17ced47",
@@ -510,7 +510,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 27641,
+        "stars": 27642,
         "starsToday": 2751
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/Homebrew/BrewUI",
         "description": "📺 Homebrew's official macOS GUI",
         "language": "Swift",
-        "stars": 1145,
+        "stars": 1146,
         "starsToday": 388
       },
       {
@@ -604,6 +604,6 @@
         "starsToday": 102
       }
     ],
-    "updatedAt": "2026-09-15T15:24:43.941Z"
+    "updatedAt": "2026-09-15T15:25:22.565Z"
   }
 }
