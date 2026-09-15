@@ -1,5 +1,5 @@
-import { parseSave, validateSave, SAVE_KEY, BACKUP_KEY, SaveConflict } from './save.js?v=0.26.0';
-import { slotId, slotName, slotNumber } from './portable.js?v=0.26.0';
+import { parseSave, validateSave, SAVE_KEY, BACKUP_KEY, SaveConflict } from './save.js?v=0.28.0';
+import { slotId, slotName, slotNumber } from './portable.js?v=0.28.0';
 
 export const DB_NAME = 'baize-shuihu-box', CHANNEL = 'baize-shuihu-slots';
 export const emptySlot = id => ({id: slotId(id), name: `${slotNumber(id)}号江湖`, raw: null, backup: null, serial: 0, cloud: null});
@@ -70,7 +70,7 @@ export class SlotStore {
       let valid=false; if(old.raw)try{parseSave(old.raw,this.data);valid=true;}catch{if(!force)throw new Error('当前存档损坏，须确认后才能替换。');}
       // Even explicit replacement uses serial CAS: a changed preview cannot overwrite new work.
       const cloud=old.cloud?{...old.cloud,clean:!!old.cloud.clean&&old.raw===next}:null;
-      return {...old,cloud,...metadata,raw:next,backup:valid&&old.raw!==next?old.raw:old.backup};
+      return {...old,cloud,...metadata,updatedAt:Date.now(),raw:next,backup:valid&&old.raw!==next?old.raw:old.backup};
     });
   }
   rename(name) { name=slotName(name);return this.change(old=>({...old,name,cloud:old.cloud?{...old.cloud,clean:!!old.cloud.clean&&old.name===name}:null})); }

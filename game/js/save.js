@@ -1,21 +1,22 @@
-import { staminaCap } from './logistics.js?v=0.26.0';
-import { migrateRoster, rosterVersion } from './roster.js?v=0.26.0';
-import { validateAlliances } from './volume-four-data.js?v=0.26.0';
-import { validEliteContext } from './elites.js?v=0.26.0';
-import { validateDebrief } from './debrief.js?v=0.26.0';
-import { validateAffairs } from './affairs.js?v=0.26.0';
-import { validateStrategy } from './strategy.js?v=0.26.0';
-import { validateCommands } from './commands.js?v=0.26.0';
-import { validateFrontier, POSTS } from './frontier.js?v=0.26.0';
-import { validateDevelopment } from './development.js?v=0.26.0';
-import { validateCampaign, validRotationContext } from './rotations.js?v=0.26.0';
-import { validateQualities } from './quality.js?v=0.26.0';
-import { newGame } from './core.js?v=0.26.0';
-import { hasOwn, idPattern, requireRule } from './utils.js?v=0.26.0';
-import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.26.0';
-import { validateGrowth } from './growth.js?v=0.26.0';
-import { validateGrowthBattle } from './growth-save.js?v=0.26.0';
-import { validateCamp, RAIDS } from './camp.js?v=0.26.0';
+import { validateRealm, validRealmContext } from './realm.js?v=0.28.0';
+import { staminaCap } from './logistics.js?v=0.28.0';
+import { migrateRoster, rosterVersion } from './roster.js?v=0.28.0';
+import { validateAlliances } from './volume-four-data.js?v=0.28.0';
+import { validEliteContext } from './elites.js?v=0.28.0';
+import { validateDebrief } from './debrief.js?v=0.28.0';
+import { validateAffairs } from './affairs.js?v=0.28.0';
+import { validateStrategy } from './strategy.js?v=0.28.0';
+import { validateCommands } from './commands.js?v=0.28.0';
+import { validateFrontier, POSTS } from './frontier.js?v=0.28.0';
+import { validateDevelopment } from './development.js?v=0.28.0';
+import { validateCampaign, validRotationContext } from './rotations.js?v=0.28.0';
+import { validateQualities } from './quality.js?v=0.28.0';
+import { newGame } from './core.js?v=0.28.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.28.0';
+import { migrateBattle, BATTLE_LIMIT_MS } from './battle.js?v=0.28.0';
+import { validateGrowth } from './growth.js?v=0.28.0';
+import { validateGrowthBattle } from './growth-save.js?v=0.28.0';
+import { validateCamp, RAIDS } from './camp.js?v=0.28.0';
 export const SAVE_KEY='baize_shuihu_save', BACKUP_KEY=SAVE_KEY+'_backup';
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 function object(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}
@@ -46,7 +47,7 @@ export function validateSave(s,data) {
   for(const [id,p] of Object.entries(s.progress.stories))check(data.by.stories[id]&&['active','completed'].includes(p.status)&&hasOwn(data.by.stories[id].steps,p.step),'剧情步骤');
   check(Array.isArray(s.progress.claims)&&new Set(s.progress.claims).size===s.progress.claims.length&&s.progress.claims.every(id=>data.by.quests[id]?.type==='main'),'主线酬劳');
   for(const [id,n] of Object.entries(s.progress.clears))check(data.by.dungeons[id]&&integer(n),'通关记录');
-  validateGrowth(s,data,check);validateCamp(s,check);validateCampaign(s,check);validateQualities(s,check);validateDevelopment(s,data,check);validateFrontier(s,data,check);
+  validateRealm(s,data,check);validateGrowth(s,data,check);validateCamp(s,check);validateCampaign(s,check);validateQualities(s,check);validateDevelopment(s,data,check);validateFrontier(s,data,check);
   check(!s.battle?.expedition||!!s.camp,'出征需要寨子');
   check(object(s.stats)&&object(s.daily)&&object(s.daily.counters)&&object(s.daily.dungeons),'差事数据');
   for(const stats of [s.stats,s.daily.counters])for(const [key,n] of Object.entries(stats))check(/^[a-z][a-zA-Z0-9_]*$/.test(key)&&integer(n),'计数');
@@ -61,7 +62,7 @@ export function validateSave(s,data) {
     check(r.tokens===(r.kind==='clue'?2:r.kind==='duplicate'?3:0)&&r.merit===(r.kind==='duplicate'?15:0)&&(!r.inTeam||r.kind==='joined'),'招贤所得');
   }
   validateCommands(s,check);validateStrategy(s,check);validateAffairs(s,check);
-  const context=c=>check(c&&(c.type==='elite'?validEliteContext(c):c.type==='frontier'?!!POSTS[c.id]:c.type==='rotation'?validRotationContext(c):c.type==='dungeon'?!!data.by.dungeons[c.id]:c.type==='camp'?!!s.camp&&hasOwn(RAIDS,c.id):c.type==='event'?!!data.by.events[c.id]:c.type==='story'&&(c.id==='huangni'||!!data.by.stories[c.id])),'交战来源');
+  const context=c=>check(c&&(c.type==='realm'?validRealmContext(c):c.type==='elite'?validEliteContext(c):c.type==='frontier'?!!POSTS[c.id]:c.type==='rotation'?validRotationContext(c):c.type==='dungeon'?!!data.by.dungeons[c.id]:c.type==='camp'?!!s.camp&&hasOwn(RAIDS,c.id):c.type==='event'?!!data.by.events[c.id]:c.type==='story'&&(c.id==='huangni'||!!data.by.stories[c.id])),'交战来源');
   const logs=a=>check(Array.isArray(a)&&a.length<=150&&a.every(t=>typeof t==='string'&&t.length<2000),'战报');
   check(!(s.battle&&s.scheme)&&!(s.event&&(s.battle||s.scheme)),'互斥事件');
   if(s.battle){const b=s.battle;if(b.context.type==='elite')check(!!s.camp&&!b.guest&&b.martial===2&&(s.stats['elite_'+b.context.id]||0)>0,'精英战局');check(b.martial===undefined||[1,2].includes(b.martial),'兵种战斗规则');const live=b.mode==='realtime';

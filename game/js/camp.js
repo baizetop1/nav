@@ -1,18 +1,22 @@
-import { FIELD_RULES, casualtyQuote, initializeSignatures } from './fieldcraft.js?v=0.26.0';
-import { claimSupply } from './supplies.js?v=0.26.0';
-import { barracksCapacity, deployedTroops, troopShares, troopPower } from './logistics.js?v=0.26.0';
-import { isExternal, externalInvitation } from './roster.js?v=0.26.0';
-import { openAffair } from './affairs.js?v=0.26.0';
-import { initializeStrategy } from './strategy.js?v=0.26.0';
-import { initializeDoctrine } from './doctrines.js?v=0.26.0';
-import { CORPS, corpsRank } from './development.js?v=0.26.0';
-import { ARMS } from './martial.js?v=0.26.0';
-import { hireHelper, helperBonus, validateHelpers } from './helpers.js?v=0.26.0';
-import { finishDuty, developmentAction, raidBonus, RAID_INTEL, searchEquipment } from './camp-development.js?v=0.26.0';
-import { hasOwn, requireRule, journal, count } from './utils.js?v=0.26.0';
-import { ownHero } from './hero.js?v=0.26.0';
-import { startBattle } from './battle.js?v=0.26.0';
-import { grant } from './item.js?v=0.26.0';
+import {settleVeterans} from './veterans.js?v=0.28.0';
+import {recruitPrice} from './realm-buildings.js?v=0.28.0';
+import {initializeRealmBattle} from './realm-combat.js?v=0.28.0';
+import { reservedTroops } from './squads.js?v=0.28.0';
+import { FIELD_RULES, casualtyQuote, initializeSignatures } from './fieldcraft.js?v=0.28.0';
+import { claimSupply } from './supplies.js?v=0.28.0';
+import { barracksCapacity, deployedTroops, troopShares, troopPower } from './logistics.js?v=0.28.0';
+import { isExternal, externalInvitation } from './roster.js?v=0.28.0';
+import { openAffair } from './affairs.js?v=0.28.0';
+import { initializeStrategy } from './strategy.js?v=0.28.0';
+import { initializeDoctrine } from './doctrines.js?v=0.28.0';
+import { CORPS, corpsRank } from './development.js?v=0.28.0';
+import { ARMS } from './martial.js?v=0.28.0';
+import { hireHelper, helperBonus, validateHelpers } from './helpers.js?v=0.28.0';
+import { finishDuty, developmentAction, raidBonus, RAID_INTEL, searchEquipment } from './camp-development.js?v=0.28.0';
+import { hasOwn, requireRule, journal, count } from './utils.js?v=0.28.0';
+import { ownHero } from './hero.js?v=0.28.0';
+import { startBattle } from './battle.js?v=0.28.0';
+import { grant } from './item.js?v=0.28.0';
 
 export const BUILDINGS={hall:{name:'聚义厅',wood:40,silver:100,description:'提高寨子规模，吸引更多好汉。'},farm:{name:'农田',wood:25,silver:60,description:'每次经营产出粮草，用于募兵与出征。'},lumber:{name:'伐木场',wood:20,silver:50,description:'每次经营产出木材，用于修建与扩建。'},barracks:{name:'兵营',wood:35,silver:80,description:'每级提供 200 名兵额，可随英雄出征。'},clinic:{name:'医馆',wood:30,silver:80,description:'治疗伤兵，降低补员的粮草支出。'},market:{name:'集市',wood:30,silver:80,description:'每次经营增加碎银收入。'}};
 export const TACTICS={balanced:{name:'稳扎稳打',attack:1,defense:1,loss:.12},assault:{name:'强攻破阵',attack:1.2,defense:.85,loss:.24},guard:{name:'结阵固守',attack:.9,defense:1.25,loss:.06}};
@@ -32,9 +36,9 @@ export function campAction(s,d,a){
     requireRule(s.player.stamina>=5,'经营需要 5 点体力。');s.player.stamina-=5;c.day++;c.work++;count(s,'campWork');
     finishDuty(s,d,a.id??'balanced');openAffair(s);
   }else if(a.type==='campRecruit'){
-    requireRule(c.buildings.barracks>0,'先建造兵营。');const amount=a.amount??10;requireRule([10,50,100].includes(amount),'募兵批次无效。');const n=Math.min(amount,barracksCapacity(c)-c.troops-c.wounded);requireRule(n>0,'兵额已满，可扩建兵营或治疗伤兵。');requireRule(c.food>=n*2&&s.player.silver>=n*3,'募兵需要每人粮草 2、碎银 3。');c.food-=n*2;s.player.silver-=n*3;c.troops+=n;journal(s,`【募兵】${n} 名乡勇入营。`);
+    requireRule(c.buildings.barracks>0,'先建造兵营。');const amount=a.amount??10;requireRule([10,50,100].includes(amount),'募兵批次无效。');const n=Math.min(amount,barracksCapacity(c)-c.troops-c.wounded-reservedTroops(s));requireRule(n>0,'兵额已满，可扩建兵营或治疗伤兵。');requireRule(c.food>=n*2&&s.player.silver>=n*recruitPrice(s),'募兵需要每人粮草 2、碎银 '+recruitPrice(s)+'。');c.food-=n*2;s.player.silver-=n*recruitPrice(s);c.troops+=n;journal(s,`【募兵】${n} 名乡勇入营。`);
   }else if(a.type==='campHeal'){
-    requireRule(c.buildings.clinic>0&&c.wounded>0,'需要医馆和待治伤兵。');const n=Math.min(c.wounded,5*c.buildings.clinic+helperBonus(s).heal);requireRule(c.food>=n,'治疗需要每人粮草 1。');c.food-=n;c.wounded-=n;c.troops+=n;journal(s,`【医馆】${n} 名伤兵归队。`);
+    requireRule(c.buildings.clinic>0&&c.wounded>0,'需要医馆和待治伤兵。');const n=Math.min(c.wounded,(5*c.buildings.clinic+helperBonus(s).heal)*(s.realm?.branches.clinic==='recovery'?2:1));requireRule(c.food>=n,'治疗需要每人粮草 1。');c.food-=n;c.wounded-=n;c.troops+=n;journal(s,`【医馆】${n} 名伤兵归队。`);
   }else if(a.type==='campFormation'){
     requireRule(['solo','army'].includes(a.mode)&&hasOwn(TACTICS,a.tactic)&&Number.isInteger(a.deployment)&&a.deployment>=1&&a.deployment<=1000,'出征配置无效。');const arm=a.arm??'infantry';requireRule(hasOwn(ARMS,arm)&&arm!=='neutral'&&c.buildings.hall>=ARMS[arm].hall,'该兵种尚未开放。');c.arm=arm;c.mode=a.mode;c.tactic=a.tactic;c.deployment=a.deployment;journal(s,'出征配置已保存：'+(c.mode==='solo'?'英雄独行':'英雄带兵')+' · '+TACTICS[c.tactic].name+'。');
   }else if(a.type==='campInvite'){
@@ -45,21 +49,21 @@ export function campAction(s,d,a){
   }else throw new Error('未知寨务。');
 }
 export function attachTroops(s,n){
-  const c=s.camp,b=s.battle;if(!c||!b||b.guest)return;const t=TACTICS[c.tactic],shares=troopShares(s,b.team.map(u=>u.id),n);b.expedition={troops:n,tactic:c.tactic,arm:c.arm||'infantry',fieldRules:FIELD_RULES};const bonus=raidBonus(b);
+  const c=s.camp,b=s.battle;if(!c||!b||b.guest)return;const t=TACTICS[c.tactic],shares=troopShares(s,b.team.map(u=>b.context.type==='realm'&&b.context.kind==='trek'&&s.realm?.trek?.hp[u.id]===0?null:u.id),n);b.expedition={troops:n,tactic:c.tactic,arm:c.arm||'infantry',fieldRules:FIELD_RULES};const bonus=raidBonus(b);
   for(const [i,u] of b.team.entries()){const share=shares[i],power=troopPower(share);if(b.martial===2)u.corps={id:u.id,arm:CORPS[u.id].arm,rank:corpsRank(s,u.id),troops:share};u.attack=Math.round((u.attack+power*3)*t.attack*bonus.attack);u.defense=Math.round((u.defense+power)*t.defense*bonus.defense);u.hp=u.maxHp=Math.round(u.maxHp+power*18);if(share&&b.martial===2){const p=CORPS[u.id].profile,r=u.corps.rank;if(p==='shield')u.defense=Math.round(u.defense*(1+.06*r));if(p==='scout')u.speed=Math.round(u.speed*(1+.05*r));if(p==='medic')u.hp=u.maxHp=Math.round(u.maxHp*(1+.06*r));b.log.push(`【专属部队】${u.name} · ${CORPS[u.id].name} ${r}阶 · ${share} 人。`);}}
-  initializeDoctrine(b);initializeStrategy(s,b);initializeSignatures(b);
+  initializeDoctrine(b);initializeStrategy(s,b);initializeSignatures(b);initializeRealmBattle(s,b);
   b.log.push(`【军令】${n?'乡勇 '+n+' 人随行':'英雄独行'} · ${t.name}。`);
   if(b.context.type==='camp'){const intel=RAID_INTEL[b.context.id];b.log.push('【敌情】'+intel.text+(intel.tactic===c.tactic?' 军令得当。'+intel.bonus:' 本次未获得地形军令加成。'));}
 }
 export function settleCampBattle(s,d,b){
   const c=s.camp;if(!c)return;
-  if(b.expedition){const n=b.expedition.troops,{loss,fallen}=casualtyQuote(b,TACTICS[b.expedition.tactic].loss,raidBonus(b).loss);c.troops-=loss;c.wounded+=loss-fallen;c.fallen=(c.fallen||0)+fallen;b.expedition.fallen=fallen;journal(s,`【收兵】${n-loss} 人安然归营，伤兵 ${loss-fallen} 人，阵亡 ${fallen} 人。伤兵可治，阵亡须重新募兵补员。`);}
+  if(b.expedition){const n=b.expedition.troops,{loss,fallen}=casualtyQuote(b,TACTICS[b.expedition.tactic].loss,raidBonus(b).loss);settleVeterans(s,b,fallen);c.troops-=loss;c.wounded+=loss-fallen;c.fallen=(c.fallen||0)+fallen;b.expedition.fallen=fallen;journal(s,`【收兵】${n-loss} 人安然归营，伤兵 ${loss-fallen} 人，阵亡 ${fallen} 人。伤兵可治，阵亡须重新募兵补员。`);}
   if(b.context.type==='camp'&&b.outcome==='victory'){const r=RAIDS[b.context.id];c.sorties++;c.wood+=r.wood;c.food+=b.context.id==='convoy'?55:15;grant(s,{silver:r.silver,merit:8,exp:r.exp,items:{exp_pill:1,martial_pages:1}},d);count(s,'campWins');count(s,'camp_win_'+b.context.id);searchEquipment(s,d,r.level);journal(s,`【回寨战果】木材 +${r.wood}、粮草 +${b.context.id==='convoy'?55:15}、碎银 +${r.silver}、经验丹 +1、武学残页 +1。`);}
 }
 export function validateCamp(s,check){
   validateHelpers(s,check);if(s.camp===undefined)return;const c=s.camp,num=(v,max=10000000)=>Number.isSafeInteger(v)&&v>=0&&v<=max;
   check(c&&c.version===1&&c.buildings&&Object.keys(c.buildings).length===6,'寨子');for(const id of Object.keys(BUILDINGS))check(num(c.buildings[id],5)&&(id!=='hall'||c.buildings[id]>=1),'设施等级');
-  for(const k of ['day','wood','food','troops','wounded','work','sorties'])check(num(c[k]),'寨务资源');check(c.troops+c.wounded<=barracksCapacity(c),'兵额');check(['solo','army'].includes(c.mode)&&hasOwn(TACTICS,c.tactic)&&num(c.deployment,1000)&&c.deployment>=1,'军令');
+  for(const k of ['day','wood','food','troops','wounded','work','sorties'])check(num(c[k]),'寨务资源');check(c.troops+c.wounded+reservedTroops(s)<=barracksCapacity(c),'兵额');check(['solo','army'].includes(c.mode)&&hasOwn(TACTICS,c.tactic)&&num(c.deployment,1000)&&c.deployment>=1,'军令');
   if(c.fallen!==undefined)check(num(c.fallen),'累计阵亡');if(c.supply!==undefined){check(c.supply&&typeof c.supply==='object'&&!Array.isArray(c.supply)&&Object.keys(c.supply).every(k=>['week','month'].includes(k)),'悬赏记录');for(const [k,v]of Object.entries(c.supply))check(typeof v==='string'&&(k==='week'?/^\d{4}-(0[1-9]|1[0-2])-[1-4]$/:/^\d{4}-(0[1-9]|1[0-2])$/).test(v),'悬赏周期');}
   if(c.arm!==undefined)check(hasOwn(ARMS,c.arm)&&c.arm!=='neutral'&&c.buildings.hall>=ARMS[c.arm].hall,'兵种');
   const stewards=Object.keys(s.progress.flags).filter(k=>k.startsWith('camp_steward_')&&s.progress.flags[k]);check(stewards.length<=1&&stewards.every(k=>s.heroes[k.slice(13)]?.status==='owned'),'寨务主事');

@@ -1,10 +1,10 @@
-import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.26.0';
-import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.26.0';
-import { autoOrderAllows } from './commands.js?v=0.26.0';
-import { initializeMartial, martialFactor } from './martial.js?v=0.26.0';
-import { attributes } from './hero.js?v=0.26.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.26.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.26.0';
+import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.28.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.28.0';
+import { autoOrderAllows } from './commands.js?v=0.28.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.28.0';
+import { attributes } from './hero.js?v=0.28.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.28.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.28.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
@@ -28,6 +28,7 @@ export function startBattle(state,data,{enemies,guest,scale=1,context}){
   requireRule(!state.battle&&!state.scheme,'先结束当前战局。');
   const team=guest?[unit(guest.id,data.by.heroes[guest.id].name,attributes(state,guest.id,data,guest.level,false),data.by.heroes[guest.id].skills,'team')]:state.team.map(id=>unit(id,data.by.heroes[id].name,attributes(state,id,data),data.by.heroes[id].skills,'team'));
   requireRule(!state.affairs?.mission||!team.some(u=>u.id===state.affairs.mission.hero),'好汉仍在外派，请先接回。');
+  requireRule(!state.realm?.squad||!team.some(u=>state.realm.squad.team.includes(u.id)),'好汉仍在分队外派，请先接回。');
   requireRule(team.length>0,'先与白胜相识、邀他作向导，或在招贤馆招募好汉并编队。');
   state.battle={mode:'realtime',elapsed:0,itemReadyAt:0,team,enemy:enemies.map((id,i)=>{
     const e=data.by.enemies[id],stats=Object.fromEntries(Object.entries(e.attribute).map(([key,value])=>[key,Math.round(value*(key==='speed'?1:scale))]));

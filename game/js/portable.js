@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.26.0';
-import { parseSave } from './save.js?v=0.26.0';
+import { hasOwn } from './utils.js?v=0.28.0';
+import { parseSave } from './save.js?v=0.28.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -9,20 +9,21 @@ const metrics={version:true,reason:true,heroes:{'*':fields('damage healing taken
 const shape = {
   lastBattle:{...fields('at outcome elapsed troops wounded fallen'),context,team:[fields('id hp maxHp')],metrics},
   ...fields('version commandVersion rosterVersion revision clock lastRegen rng worldMinute location startedAt team nextEquipment message formationPending battleSkillMode'),
+  realm:{version:true,regions:{'*':fields('security supply pact')},relations:{'*':true},branches:{'*':true},paths:{'*':true},armyXp:true,relics:true,relicClaims:{'*':true},equipped:true,squad:fields('id team troops readyAt training xp outcome fallen wounded elapsed'),trek:{team:true,node:true,route:true,hp:{'*':true},loot:{'*':true}},records:{'*':fields('tier hp elapsed score at team')}},
   affairs:{version:true,lastDay:true,resolved:true,pending:fields('kind day'),mission:fields('kind hero readyAt')},
   strategy:{version:true,drills:{'*':true}},
   player: fields('name title silver merit prestige stamina liangshanLevel'),
   heroes: {'*': fields('status level exp quality')}, inventory: {'*': true},
   camp:{...fields('version day wood food troops wounded mode tactic deployment work sorties arm fallen'),supply:fields('week month'),buildings:fields('hall farm lumber barracks clinic market')},
-  frontier:{version:true,lastAt:true,stations:{'*':fields('worker carry bank')},posts:{'*':fields('guard safeAt threat carry bank')}},
+  frontier:{version:true,lastAt:true,focus:true,stations:{'*':fields('worker carry bank workRemainder')},posts:{'*':fields('guard safeAt threat carry bank')}},
   development:{version:true,corps:{'*':true},presets:{'*':fields('team mode tactic deployment')},goal:fields('kind id'),ledger:[{...fields('date wins losses recruits'),gained:{'*':true},spent:{'*':true}}]},
-  campaign:{version:true,daily:{date:true,uses:{'*':true}},weekly:{'*':fields('tier score elapsed hp')}},
+  campaign:{version:true,mastery:{'*':true},daily:{date:true,uses:{'*':true}},weekly:{'*':fields('tier score elapsed hp')}},
   growth:{version:true,skills:{'*':true},mounts:{'*':fields('rank intimacy riding')}},
   equipment: [fields('uid item plus hero locked')],
   progress: {flags: {'*': true}, stories: {'*': fields('status step')}, visited: true, actions: {'*': true}, claims: true, clears: {'*': true}},
   stats: {'*': true}, daily: {...fields('date ids claimed bonus events'), counters: {'*': true}, dungeons: {'*': true}},
   recruit: {total: true, pity: fields('three four five'), fate: {'*': true}, lastResult: fields('hero target kind number inTeam tokens merit'), lastBatch:[fields('hero target kind number inTeam tokens merit')]},
-  battle: {metrics,depth:{version:true,terrain:true,drills:{'*':true},objective:fields('kind nextAt integrity waves')},orders:fields('version focus stance reserve readyAt'),expedition:fields('troops tactic arm fallen fieldRules'),...fields('mode elapsed itemReadyAt guest outcome log rules martial frontierRules'), team: [unit], enemy: [unit], context},
+  battle: {realm:{version:true,medical:true,relic:true,veteran:true,paths:{'*':true},qualities:{'*':true}},metrics,depth:{version:true,terrain:true,drills:{'*':true},objective:fields('kind nextAt integrity waves')},orders:fields('version focus stance reserve readyAt'),expedition:fields('troops tactic arm fallen fieldRules'),...fields('mode elapsed itemReadyAt guest outcome log rules martial frontierRules'), team: [unit], enemy: [unit], context},
   scheme: {...fields('id turn outcome log'), values: fields('alert fatigue heat trust exposure'), context},
   event: fields('id'), journal: [fields('at text')]
 };

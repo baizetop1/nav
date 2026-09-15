@@ -1,6 +1,7 @@
-import { emptySlot } from './slots.js?v=0.26.0';
-import { slotNumber } from './portable.js?v=0.26.0';
-import { icon } from './icons.js?v=0.26.0';
+import { savedTime, importComparison } from './save-comparison.js?v=0.28.0';
+import { emptySlot } from './slots.js?v=0.28.0';
+import { slotNumber } from './portable.js?v=0.28.0';
+import { icon } from './icons.js?v=0.28.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const button=(label,type,extra={},symbol='save',disabled=false)=>`<button type="button" class="secondary with-icon" data-command="${esc(JSON.stringify({type,...extra}))}" ${disabled?'disabled':''}>${icon(symbol)}<span>${esc(label)}</span></button>`;
 export const localOptions=(slots,selected)=>Array.from({length:20},(_,i)=>slots.find(s=>s.id===i+1)||emptySlot(i+1)).map(s=>`<option value="${s.id}" ${s.id===selected?'selected':''}>${slotNumber(s.id)}号 · ${esc(s.name)} · ${s.raw?'已有进度':'空位'}</option>`).join('');
@@ -10,7 +11,7 @@ export function saveBoxPage(state,status,locked,box={}){
   const syncText=!cloud.baseUrl?'未连接（本机保存不等于云端上传）':!linked?'当前本机档尚未关联云端':link.clean&&!box.dirty?`已提交 / 接续 ${slotNumber(link.id)}号第 ${link.revision} 版`:`尚有本机变化未上传（含时间刷新） · 基于 ${slotNumber(link.id)}号第 ${link.revision} 版`;
   return `<div class="section-top"><div><p class="kicker">20 个编号 · 每份江湖，各自珍重</p><h1 class="page-title">${icon('save')}<span>梁山存档匣</span></h1></div></div>
   <section class="savebox-current card"><h2>本机 ${slotNumber(record.id)}号 · ${esc(record.name)}</h2>
-    <p class="notice ${locked?'error':''}">本机：${esc(status)}</p><p class="note">云端：${esc(syncText)}</p>
+    <p class="notice ${locked?'error':''}">本机：${esc(status)}</p><p class="note">云端：${esc(syncText)}</p><p class="note">本机保存：${esc(savedTime(record.updatedAt))}<br>最近上传：${esc(savedTime(link?.uploadedAt))}${linked?' · 云端第 '+link.revision+' 版':''}</p>
     <div class="actions">${button('导出当前进度','ui_export',{},'download')}${button('重新载入本机存档','ui_reload',{},'restore')}${button('恢复上次有效备份','ui_backup',{},'restore')}</div>
     <p class="note">本机自动保存使用 IndexedDB；每档最多一份有效备份。无痕窗口、清理网站数据或浏览器回收空间都可能丢失本机档，请定期导出。</p>
     <details class="fold-section" data-fold="slots"><summary>切换 / 命名本机存档（01—20）</summary>
@@ -30,9 +31,9 @@ export function saveBoxPage(state,status,locked,box={}){
       <label>此编号的上传 / 私有访问密钥<input id="cloud-key" type="password" autocomplete="off" placeholder="由站长分配，仅在本页内存中使用"></label>
       <p class="note">公开档可留空下载副本；持有上传密钥的人能更新此编号，请仅交给信任的人。</p>
       <div class="actions">${button('查看云端进度 / 下载副本','ui_cloudDownload',{},'download')}${button('手动上传本机进度','ui_cloudUpload',{},'upload')}</div>
-      <p id="cloud-message" role="status" class="${cloud.conflict?'warning':'note'}">${esc(cloud.message||'尚未提交云端。点击查看会先预览，不会自动覆盖本机。')}</p>
+      ${cloud.remote?.id===selected?`<p class="note">最近查看云端：第 ${cloud.remote.revision} 版 · ${esc(savedTime(cloud.remote.updatedAt))}</p>`:''}<p id="cloud-message" role="status" class="${cloud.conflict?'warning':'note'}">${esc(cloud.message||'尚未提交云端。点击查看会先预览，不会自动覆盖本机。')}</p>
       ${cloud.conflict?`<div class="actions">${button('先备份本机进度','ui_export',{},'download')}${button('查看云端进度并选择接续','ui_cloudDownload',{},'restore')}${button('重新比较并上传本机进度','ui_cloudReplace',{},'upload')}</div>`:''}
-      <details class="fold-section" data-fold="verified-exhibition"><summary>参加服务器演武（使用上方所选云档与密钥）</summary><p>先上传已收兵的阵容，再选择层数。服务器按自动技能、寨中军令和当期机制独立演算，药品不自动使用；不改变本机或云端资源。新一期从第一层开始。</p><label>演武层数<select id="verified-tier"><option value="1">第 1 层</option><option value="2">第 2 层</option><option value="3">第 3 层</option><option value="4">第 4 层</option><option value="5">第 5 层</option></select></label>${button('以所选云档参加演武','ui_cloudVerify',{},'check')}<p class="note">已有云端战斗须先收兵并上传。培养进度来自云档；本功能校验战斗结果，不代表已验证全部养成来源。</p></details>
+      <details class="fold-section" data-fold="verified-exhibition"><summary>参加服务器演武（使用上方所选云档与密钥）</summary><p>先上传已收兵的阵容，再选择层数。服务器按自动技能、寨中军令和当期机制独立演算，药品不自动使用；不改变本机或云端资源。新一期从第一层开始。</p><label>演武分组<select id="verified-group"><option value="open">常规组</option><option value="solo">独行组</option><option value="small">百人组（1—100 人）</option><option value="mortal">凡品组</option></select></label><p class="note">按云端已上传的阵容判定条件，不会自动替你改兵力或品质；各组各自从第一层开始。</p><label>演武层数<select id="verified-tier"><option value="1">第 1 层</option><option value="2">第 2 层</option><option value="3">第 3 层</option><option value="4">第 4 层</option><option value="5">第 5 层</option></select></label>${button('以所选云档参加演武','ui_cloudVerify',{},'check')}<p class="note">已有云端战斗须先收兵并上传。培养进度来自云档；本功能校验战斗结果，不代表已验证全部养成来源。</p></details>
       <details class="fold-section" data-fold="sharing"><summary>公开设置与历史回滚（需要此档密钥）</summary><p class="note">默认私有。关闭公开仅阻止后续免密下载，不能收回朋友已保存的副本。回滚会创建一个新的云端版本，不自动替换本机。</p>
         <div class="actions">${button('开启公开副本','ui_cloudShare',{value:true},'heroes')}${button('关闭公开副本','ui_cloudShare',{value:false},'shield')}${button('读取最近十份历史','ui_cloudHistory',{},'restore')}</div>
         ${cloud.history?.id===selected?`<ul class="savebox-history">${cloud.history.history.map(h=>`<li>第 ${h.cloudRevision} 版 · ${esc(h.name)} · ${esc(h.updatedAt||'—')}${button('回滚至此版','ui_cloudRollback',{revision:h.cloudRevision},'restore')}</li>`).join('')||'<li>尚无历史。</li>'}</ul>`:''}
@@ -42,12 +43,12 @@ export function saveBoxPage(state,status,locked,box={}){
   </details>
   <details class="danger-zone" data-fold="reset"><summary>另开新卷（只替换本机当前 ${slotNumber(record.id)}号）</summary><p class="note">建议先导出。不删除云端档，不影响其他编号、导航、博客、Inbox 或学习记录。</p><label>输入“白泽新卷”确认<input id="reset-phrase" autocomplete="off"></label>${button('确认另开新卷','ui_reset',{},'restore')}</details>`;
 }
-export function boxImportDialog(pending,slots,current){
+export function boxImportDialog(pending,slots,current,data){
   const s=pending.state;
-  return `<dialog id="import-confirm" aria-labelledby="import-title"><h2 id="import-title">确认接续这份梁山志？</h2>
+  return `<dialog id="import-confirm" aria-labelledby="import-title"><div class="comparison-body"><h2 id="import-title">确认接续这份梁山志？</h2>
     <p>${esc(pending.name||'游戏存档')} · ${esc(new Date(s.clock).toLocaleString('zh-CN'))}</p><p>威望 ${s.player.prestige}，正式好汉 ${Object.values(s.heroes).filter(h=>h.status==='owned').length} 名。${s.battle?'含未结束 / 待结算战局，接续后先暂停。':''}</p>
     ${pending.cloud?`<p class="note">云端 ${slotNumber(pending.cloud.id)}号第 ${pending.cloud.revision} 版。下载的是副本，不包含上传密钥。</p>`:''}
-    <label>保存到本机位置<select id="import-slot">${localOptions(slots,current)}</select></label>
+    <label>保存到本机位置<select id="import-slot">${localOptions(slots,current)}</select></label><div id="import-comparison">${data?importComparison(pending,slots,current,data):''}</div>
     <p class="warning">确认后接续所选编号，替换它的原有进度，并保留一份有效备份；不影响其他编号。若预览后另一标签页更新了目标，将拒绝覆盖。建议先导出当前进度。</p>
-    <div class="actions">${button('确认导入并替换','ui_confirmImport',{},'check')}${button('取消','ui_cancelImport',{},'close')}</div></dialog>`;
+    </div><div class="actions">${button('确认导入并替换','ui_confirmImport',{},'check')}${button('取消','ui_cancelImport',{},'close')}</div></dialog>`;
 }

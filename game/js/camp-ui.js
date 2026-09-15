@@ -1,16 +1,18 @@
-import { supplyBoard } from './supplies.js?v=0.26.0';
-import { staminaCap, barracksCapacity, commandCapacity, deployedTroops } from './logistics.js?v=0.26.0';
-import { mentorshipPanel } from './mentorship-ui.js?v=0.26.0';
-import { campOverview } from './camp-overview.js?v=0.26.0';
-import { affairsPanel } from './management-ui.js?v=0.26.0';
-import { productionPanel, frontierMap } from './frontier-ui.js?v=0.26.0';
-import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.26.0';
-import { ARMS } from './martial.js?v=0.26.0';
-import { enemyIntel } from './martial-ui.js?v=0.26.0';
-import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.26.0';
-import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.26.0';
-import { dungeonMountLoot } from './growth-ui.js?v=0.26.0';
-import { icon } from './icons.js?v=0.26.0';
+import {recruitPrice} from './realm-buildings.js?v=0.28.0';
+import {reservedTroops} from './squads.js?v=0.28.0';
+import { supplyBoard } from './supplies.js?v=0.28.0';
+import { staminaCap, barracksCapacity, commandCapacity, deployedTroops } from './logistics.js?v=0.28.0';
+import { mentorshipPanel } from './mentorship-ui.js?v=0.28.0';
+import { campOverview } from './camp-overview.js?v=0.28.0';
+import { affairsPanel } from './management-ui.js?v=0.28.0';
+import { productionPanel, frontierMap } from './frontier-ui.js?v=0.28.0';
+import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.28.0';
+import { ARMS } from './martial.js?v=0.28.0';
+import { enemyIntel } from './martial-ui.js?v=0.28.0';
+import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.28.0';
+import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.28.0';
+import { dungeonMountLoot } from './growth-ui.js?v=0.28.0';
+import { icon } from './icons.js?v=0.28.0';
 
 export const portrait=(h,small=false)=>h.portrait?`<span class="hero-portrait portrait-${h.id}${small?' portrait-small':''}"><img src="${h.portrait}" alt="${h.name}人物像" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></span>`:`<span class="hero-portrait portrait-${h.id}${h.introducedIn===3?' portrait-new':''}${small?' portrait-small':''}" role="img" aria-label="${h.name}人物卡">${h.introducedIn===3?`<span class="portrait-monogram"><b>${h.name.slice(0,1)}</b><small>立绘待补</small></span>`:''}</span>`;
 export function campPage(s,d,esc,btn){
@@ -20,7 +22,7 @@ export function campPage(s,d,esc,btn){
   const next=!c.buildings.lumber?'先修伐木场，后续扩建就有稳定木料。':!c.buildings.farm?'再修农田，为募兵和出征储粮。':!c.buildings.barracks?'建起兵营，让乡勇跟随好汉出征。':!c.troops?'募一队乡勇，或选择英雄独行去山林清剿。':'经营寨务补给，出征带回木粮，再扩建聚义厅迎贤。';
   return `<div class="section-top"><div><p class="kicker">水泊梁山 · 寨务第 ${c.day} 日</p><h1 class="page-title">${icon('chronicle')}白泽寨</h1></div><span class="camp-rank">${c.buildings.hall} 级寨子</span></div>
     <section class="camp-status" id="camp-resources"><p>${next}</p><div class="camp-stock">${[['木材',c.wood],['粮草',c.food],['碎银',s.player.silver],['乡勇',c.troops],['伤兵',c.wounded]].map(([k,v])=>`<span>${k}<b>${v}</b></span>`).join('')}</div>
-      <div class="actions">${btn('募兵 · 最多 10 人',{type:'campRecruit'},'secondary',!c.buildings.barracks||c.troops+c.wounded>=barracksCapacity(c))}${btn('募兵 50 人',{type:'campRecruit',amount:50},'secondary',!c.buildings.barracks||c.troops+c.wounded>=barracksCapacity(c))}${btn('募兵 100 人',{type:'campRecruit',amount:100},'secondary',!c.buildings.barracks||c.troops+c.wounded>=barracksCapacity(c))}${btn('治疗伤兵',{type:'campHeal'},'secondary',!c.buildings.clinic||!c.wounded)}</div><p class="note">兵额 ${c.troops+c.wounded} / ${barracksCapacity(c)} · 募兵每人粮 2、银 3；治疗每人粮 1。累计阵亡 ${c.fallen||0} 人，不能治疗复活。</p><p class="note">当前阵容统兵上限 ${commandCapacity(s)} 人（全军最多 1000）；每位好汉基础 150，每升 1 级 +10，灵／仙各累计 +50／100。兵力的战斗增益递减，粮耗和伤亡按实际人数计算。</p><p class="note">体力上限 ${staminaCap(s)}：基础 100，聚义厅每升一级 +10，最高等级好汉每跨过 5 级门槛 +5（6、11、16…级）。扩容不立即补满体力。</p></section>${campOverview(s,d,btn)}${targetPanel(s,d,btn)}${ledgerPanel(s,d)}${affairsPanel(s,d,btn)}${productionPanel(s,d,btn)}${s.frontier?`<details class="fold-section" data-fold="frontier-camp"><summary>领地据点 · 占领、驻守与解围</summary>${frontierMap(s,d,esc,btn)}</details>`:''}${goalBoard(s,d,btn)}${supplyBoard(s,d,btn)}${dutyBoard(s,d,btn,portrait)}${mentorshipPanel(s,d,esc,btn)}
+      <div class="actions">${btn('募兵 · 最多 10 人',{type:'campRecruit'},'secondary',!c.buildings.barracks||c.troops+c.wounded+reservedTroops(s)>=barracksCapacity(c))}${btn('募兵 50 人',{type:'campRecruit',amount:50},'secondary',!c.buildings.barracks||c.troops+c.wounded+reservedTroops(s)>=barracksCapacity(c))}${btn('募兵 100 人',{type:'campRecruit',amount:100},'secondary',!c.buildings.barracks||c.troops+c.wounded+reservedTroops(s)>=barracksCapacity(c))}${btn('治疗伤兵',{type:'campHeal'},'secondary',!c.buildings.clinic||!c.wounded)}</div><p class="note">兵额 ${c.troops+c.wounded+reservedTroops(s)} / ${barracksCapacity(c)}（分队在外 ${reservedTroops(s)}） · 募兵每人粮 2、银 ${recruitPrice(s)}；治疗每人粮 1。累计阵亡 ${c.fallen||0} 人，不能治疗复活。</p><p class="note">当前阵容统兵上限 ${commandCapacity(s)} 人（全军最多 1000）；每位好汉基础 150，每升 1 级 +10，灵／仙各累计 +50／100。兵力的战斗增益递减，粮耗和伤亡按实际人数计算。</p><p class="note">体力上限 ${staminaCap(s)}：基础 100，聚义厅每升一级 +10，最高等级好汉每跨过 5 级门槛 +5（6、11、16…级）。扩容不立即补满体力。</p></section>${campOverview(s,d,btn)}${targetPanel(s,d,btn)}${ledgerPanel(s,d)}${affairsPanel(s,d,btn)}${productionPanel(s,d,btn)}${s.frontier?`<details class="fold-section" data-fold="frontier-camp"><summary>领地据点 · 占领、驻守与解围</summary>${frontierMap(s,d,esc,btn)}</details>`:''}${goalBoard(s,d,btn)}${supplyBoard(s,d,btn)}${dutyBoard(s,d,btn,portrait)}${mentorshipPanel(s,d,esc,btn)}
     <h2 class="subhead">营建 · 先安居，再聚义</h2><div class="building-grid">${Object.entries(BUILDINGS).map(([id,b],i)=>{const lv=c.buildings[id],q=buildingQuote(c,id),locked=lv>=5||(id!=='hall'&&lv>=c.buildings.hall);return `<article class="building-card ${lv?'built':''}"><div class="building-heading">${icon(['chronicle','energy','forge','heroes','medicine','coins'][i])}<span>${b.name}</span><b>${lv?'Lv.'+lv:'待建'}</b></div><p>${b.description}</p><p class="meta">${lv>=5?'已建至满级':`木材 ${q.wood} · 碎银 ${q.silver}`}</p>${btn(lv>=5?'已满级':locked?'先扩建聚义厅':lv?'扩建':'建造',{type:'campBuild',id},'secondary',locked||c.wood<q.wood||s.player.silver<q.silver)}</article>`;}).join('')}</div>
     <section class="camp-orders"><h2>点将出征</h2><button type="button" class="secondary" data-view="trials">每日材料本与本期周本</button><div class="camp-team">${s.team.map(id=>`<div>${portrait(d.by.heroes[id],true)}<span>${d.by.heroes[id].name} · ${s.heroes[id].level}级</span></div>`).join('')}<button class="text-action" data-view="heroes">调整英雄阵容</button></div>
       <div class="team-fields"><label>作战方式<select id="camp-mode"><option value="army" ${c.mode==='army'?'selected':''}>英雄带兵</option><option value="solo" ${c.mode==='solo'?'selected':''}>英雄独行（不带兵）</option></select></label><label>出征乡勇<input id="camp-deployment" type="number" min="1" max="1000" value="${c.deployment}"></label><label>军令<select id="camp-tactic">${Object.entries(TACTICS).map(([id,t])=>`<option value="${id}" ${c.tactic===id?'selected':''}>${t.name}</option>`).join('')}</select></label></div>${btn('保存出征配置',{type:'ui_campFormation'},'secondary')}${corpsLine(s,d)}${presetsPanel(s,d,btn)}

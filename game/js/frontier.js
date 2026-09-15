@@ -1,18 +1,21 @@
-import { deployedTroops } from './logistics.js?v=0.26.0';
-import { workerGrowth } from './stewardship.js?v=0.26.0';
-import { productionAction } from './production.js?v=0.26.0';
-import { HERO_SPECIALTIES } from './strategy-data.js?v=0.26.0';
-import { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME } from './frontier-data.js?v=0.26.0';
-import { hasOwn, requireRule, journal } from './utils.js?v=0.26.0';
-import { hasHelper, HELPERS } from './helpers.js?v=0.26.0';
+import {productionBonus} from './realm-buildings.js?v=0.28.0';
+import { FOCUSES, workFactor } from './operating.js?v=0.28.0';
+import { deployedTroops } from './logistics.js?v=0.28.0';
+import { workerGrowth } from './stewardship.js?v=0.28.0';
+import { productionAction } from './production.js?v=0.28.0';
+import { HERO_SPECIALTIES } from './strategy-data.js?v=0.28.0';
+import { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME } from './frontier-data.js?v=0.28.0';
+import { hasOwn, requireRule, journal } from './utils.js?v=0.28.0';
+import { hasHelper, HELPERS } from './helpers.js?v=0.28.0';
 export { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME };
 export function beginFrontier(s){requireRule(s.camp,'先建立寨子。');requireRule(!s.frontier,'寨务生产已经开办。');s.frontier={version:1,lastAt:s.clock,stations:Object.fromEntries(Object.keys(STATIONS).map(id=>[id,{worker:null,carry:0,bank:0}])),posts:{}};journal(s,'【经营拓土】开办农田、伐木与冶铁生产。半小时为一批，最多累计八小时；据点图已标出各路敌情。');}
 export const personOwned=(s,token)=>typeof token==='string'&&(token.startsWith('hero:')?s.heroes[token.slice(5)]?.status==='owned':token.startsWith('helper:')&&HELPERS.some(h=>'helper:'+h.id===token)&&hasHelper(s,token.slice(7)));
-export const away=(s,id)=>!!s.battle&&!s.battle.guest&&s.battle.team.some(u=>u.id===id);
+export const away=(s,id)=>s.realm?.squad?.team.includes(id)||!!s.battle&&!s.battle.guest&&s.battle.team.some(u=>u.id===id);
 export const workerActive=(s,token)=>personOwned(s,token)&&(!token.startsWith('hero:')||!away(s,token.slice(5)));
 export function stationedAt(s,token){if(!s.frontier)return null;for(const [id,v] of Object.entries(s.frontier.stations))if(v.worker===token)return STATIONS[id].name;for(const [id,v] of Object.entries(s.frontier.posts))if(v.guard&&'hero:'+v.guard===token)return POSTS[id].name;return null;}
 export function guardReady(s,id){const p=s.frontier?.posts[id],h=s.heroes[p?.guard];return !!p?.guard&&h?.status==='owned'&&!away(s,p.guard)&&h.level>=POSTS[id].level;}
-export function stationYield(s,d,id){const station=STATIONS[id],row=s.frontier?.stations[id],lv=s.camp?.buildings[station.building]||0;if(!lv)return 0;const token=row?.worker;
+export function stationYield(s,d,id){const base=baseStationYield(s,d,id);return base?Math.max(1,base+productionBonus(s,id)):0;}
+function baseStationYield(s,d,id){const station=STATIONS[id],row=s.frontier?.stations[id],lv=s.camp?.buildings[station.building]||0;if(!lv)return 0;const token=row?.worker;
   const specialty=workerActive(s,token)&&token?.startsWith('hero:')&&HERO_SPECIALTIES[token.slice(5)]?.job===id?1:0;
   const growth=workerActive(s,token)&&token?.startsWith('hero:')?workerGrowth(s,token.slice(5)):0;
   if(id==='workshop')return 1+(workerActive(s,token)?1:0)+specialty+growth;
@@ -20,7 +23,7 @@ export function stationYield(s,d,id){const station=STATIONS[id],row=s.frontier?.
   return 1+lv+bonus+specialty+growth;
 }
 export function accrueFrontier(s,d){const f=s.frontier;if(!f)return;const elapsed=Math.max(0,s.clock-f.lastAt),dt=Math.min(OFFLINE_CAP,elapsed),from=f.lastAt;f.lastAt=s.clock;
-  for(const [id,row] of Object.entries(f.stations)){const rate=stationYield(s,d,id);if(!rate)continue;const n=Math.floor((row.carry+dt)/CYCLE);row.carry=(row.carry+dt)%CYCLE;row.bank=Math.min(Math.max(row.bank,16*rate),row.bank+n*rate);}
+  for(const [id,row] of Object.entries(f.stations)){const rate=stationYield(s,d,id);if(!rate)continue;const units=row.carry*4+(row.workRemainder||0)+dt*workFactor(s,id),n=Math.floor(units/(CYCLE*4));row.carry=Math.floor((units%(CYCLE*4))/4);if(units%4||row.workRemainder!==undefined)row.workRemainder=units%4;row.bank=Math.min(Math.max(row.bank,16*rate),row.bank+n*rate);}
   for(const [id,p] of Object.entries(f.posts)){
     if(p.threat)continue;const guarded=guardReady(s,id),until=guarded?from+dt:Math.min(from+dt,p.safeAt+SAFE_TIME),time=Math.max(0,until-from);
     const n=Math.floor((p.carry+time)/CYCLE);p.carry=(p.carry+time)%CYCLE;p.bank=Math.min(16*POSTS[id].yield,p.bank+n*POSTS[id].yield);
@@ -33,7 +36,8 @@ const amount=(s,id)=>id==='silver'?s.player.silver:['wood','food'].includes(id)?
 function add(s,id,n){n=Math.max(0,Math.min(n,10000000-amount(s,id)));if(id==='silver')s.player.silver+=n;else if(['wood','food'].includes(id))s.camp[id]+=n;else s.inventory[id]=(s.inventory[id]||0)+n;return n;}
 export function finishPost(s,b){if(b.outcome!=='victory')return;const {id,kind}=b.context,m=POSTS[id];if(kind==='capture'){requireRule(!s.frontier.posts[id],'该据点已占领。');s.frontier.posts[id]={guard:null,safeAt:s.clock,threat:false,carry:0,bank:0};for(const [k,n] of Object.entries(m.first))add(s,k,n);journal(s,`【占领】${m.name}归我寨控制。首占物资已收好，六小时内安排守将可维持运输。`);}else{const p=s.frontier.posts[id];requireRule(p?.threat,'此据点不需要解围。');p.threat=false;p.safeAt=s.clock;journal(s,`【解围】${m.name}恢复生产与通行。此次不重复发放首占物资。`);}}
 export function frontierAction(s,d,a){if(a.type==='frontierStart'){beginFrontier(s);return;}requireRule(s.frontier,'先开办经营拓土。');const f=s.frontier;
-  if(a.type==='frontierAssign'){
+  if(a.type==='frontierFocus'){requireRule(hasOwn(FOCUSES,a.id),'请选择有效的经营侧重。');f.focus=a.id;journal(s,'【经营侧重】'+FOCUSES[a.id]+'，从现在起按新速度生产。');
+  }else if(a.type==='frontierAssign'){
     requireRule(hasOwn(STATIONS,a.id)&&s.camp.buildings[STATIONS[a.id].building]>0,'先建成对应设施。');requireRule(a.worker===null||personOwned(s,a.worker),'此人尚未入寨。');requireRule(a.worker===null||!stationedAt(s,a.worker)||f.stations[a.id].worker===a.worker,'此人已有驻守或任职，请先撤下原职。');f.stations[a.id].worker=a.worker;journal(s,`【生产任职】${STATIONS[a.id].name}已${a.worker?'安排人手':'改为乡人自理'}。`);
   }else if(a.type==='frontierGuard'){
     const p=f.posts[a.id];requireRule(p,'先占领据点。');requireRule(a.hero===null||s.heroes[a.hero]?.status==='owned','守将需要已入寨好汉。');requireRule(a.hero===null||!stationedAt(s,'hero:'+a.hero)||p.guard===a.hero,'此人已有任职或驻守，请先撤下原职。');p.guard=a.hero;journal(s,`【留守】${POSTS[a.id].name}已${a.hero?'调整守将':'撤下守将'}。敌袭已发生时仍需出征解围。`);
@@ -42,8 +46,8 @@ export function frontierAction(s,d,a){if(a.type==='frontierStart'){beginFrontier
   }else throw new Error('未知经营指令。');
 }
 export function validateFrontier(s,d,check){const f=s.frontier,obj=v=>v&&typeof v==='object'&&!Array.isArray(v),num=(n,max)=>Number.isSafeInteger(n)&&n>=0&&n<=max;
-  if(f!==undefined){check(!!s.camp&&obj(f)&&f.version===1&&num(f.lastAt,s.clock)&&obj(f.stations)&&Object.keys(f.stations).length===3&&obj(f.posts),'领地经营');const assigned=new Set();
-    for(const id of Object.keys(STATIONS)){const r=f.stations[id];check(obj(r)&&num(r.carry,CYCLE-1)&&num(r.bank,256)&&(r.worker===null||personOwned(s,r.worker)),'生产队列');if(r.worker){check(!assigned.has(r.worker)&&s.camp.buildings[STATIONS[id].building]>0,'生产任职');assigned.add(r.worker);}}
+  if(f!==undefined){check(!!s.camp&&obj(f)&&f.version===1&&num(f.lastAt,s.clock)&&obj(f.stations)&&Object.keys(f.stations).length===3&&obj(f.posts),'领地经营');check(f.focus===undefined||hasOwn(FOCUSES,f.focus),'经营侧重');const assigned=new Set();
+    for(const id of Object.keys(STATIONS)){const r=f.stations[id];check(obj(r)&&(r.workRemainder===undefined||num(r.workRemainder,3))&&num(r.carry,CYCLE-1)&&num(r.bank,s.realm?320:256)&&(r.worker===null||personOwned(s,r.worker)),'生产队列');if(r.worker){check(!assigned.has(r.worker)&&s.camp.buildings[STATIONS[id].building]>0,'生产任职');assigned.add(r.worker);}}
     for(const [id,p] of Object.entries(f.posts)){check(POSTS[id]&&obj(p)&&typeof p.threat==='boolean'&&num(p.safeAt,s.clock)&&num(p.carry,CYCLE-1)&&num(p.bank,16*POSTS[id].yield)&&(p.guard===null||s.heroes[p.guard]?.status==='owned'),'据点驻守');if(p.guard){check(!assigned.has('hero:'+p.guard),'重复驻守');assigned.add('hero:'+p.guard);}}
   }
   const b=s.battle;if(!b)return;check(b.frontierRules===undefined||b.frontierRules===1,'部队战法版本');if(b.frontierRules===1)check(b.martial===2&&!b.guest,'新部队战法');

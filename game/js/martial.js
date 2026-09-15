@@ -1,7 +1,7 @@
-import { terrainRate, signatureFactor } from './fieldcraft.js?v=0.26.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.26.0';
-import { doctrineFactor, waterBattle } from './doctrines.js?v=0.26.0';
-import { CORPS } from './development.js?v=0.26.0';
+import { terrainRate, signatureFactor } from './fieldcraft.js?v=0.28.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.28.0';
+import { doctrineFactor, waterBattle } from './doctrines.js?v=0.28.0';
+import { CORPS } from './development.js?v=0.28.0';
 export const ARMS={infantry:{name:'步军',hall:1,beats:'ranged'},ranged:{name:'弓军',hall:2,beats:'cavalry'},cavalry:{name:'骑军',hall:3,beats:'infantry'},neutral:{name:'无兵种克制',hall:1}};
 const cavalry=new Set(['guansheng','qinming','huyanzhuo','dongping','xuning','suochao','hantao','pengqi','xuanzan','haosiwen','huangxin','sunli']);
 const ranged=new Set(['huarong','zhangqing','yanqing','gongwang','dingdesun','lingzhen']);

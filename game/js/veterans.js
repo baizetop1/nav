@@ -1,0 +1,5 @@
+export const armyAverage=s=>Math.floor((s.realm?.armyXp||0)/Math.max(1,(s.camp?.troops||0)+(s.camp?.wounded||0)));
+export const armyRank=s=>armyAverage(s)>=120?2:armyAverage(s)>=40?1:0;
+export const veteranBonus=s=>(armyRank(s)===2?.10:armyRank(s)===1?.05:0)*(s.realm?.branches.barracks==='recruits'?.5:1);
+export function settleVeterans(s,b,fallen){if(!s.realm||!b.realm)return;const alive=s.camp.troops+s.camp.wounded,average=(s.realm.armyXp||0)/Math.max(1,alive),survivors=Math.max(0,(b.expedition?.troops||0)-fallen),gain=(b.outcome==='victory'?20:5)*(s.realm.branches.barracks==='veterans'?1.25:1);s.realm.armyXp=Math.min(Math.max(0,alive-fallen)*200,Math.max(0,Math.floor(s.realm.armyXp-average*fallen+survivors*gain)));}
+export function veteransPanel(s){return '<section class="realm-section" id="realm-army"><h2>军队编制 · '+['新兵','熟练兵','精锐'][armyRank(s)]+'</h2><p>在营 '+s.camp.troops+'、伤兵 '+s.camp.wounded+' · 平均经验 '+armyAverage(s)+' / 200</p><p>40 经验为熟练兵，120 为精锐；实际带兵的英雄在新战局获得攻击、防御 +'+Math.round(veteranBonus(s)*100)+'%。</p><p class="note">采用全营平均经验：胜利时每位存活随军士兵 +20，败退 +5；老兵整训再加 25%。募来的新兵经验为零，会稀释平均值；阵亡按全营平均值扣除经验，伤兵保留经验。分队携走对应经验，归来结回，不能重复计算。不会因离线扣军饷或饿死士兵。</p></section>';}
