@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-15T18:12:45.182Z",
+  "generatedAt": "2026-09-15T21:22:49.428Z",
   "intelligence": {
-    "updatedAt": "2026-09-15T18:12:45.182Z",
+    "updatedAt": "2026-09-15T21:22:49.428Z",
     "items": [
       {
         "id": "cn-item-20ec04f6b730f932",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49711544",
+        "id": "hn-49717558",
         "category": "dev",
-        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-        "url": "https://github.com/arnegiacomo/fugleramme",
+        "title": "Introducing System One Models and Jev",
+        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T12:31:10.000Z",
+        "publishedAt": "2026-09-15T19:25:03.000Z",
         "badge": "HN",
-        "signal": "796 分 · 114 评论"
+        "signal": "343 分 · 133 评论"
       },
       {
         "id": "cn-it-d43fcc8becba2195",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-vrh8-c9cm-wh8v",
+        "id": "github-advisory-ghsa-2h44-8472-frjj",
         "category": "security",
-        "title": "ZITADEL: Unauthorized Token Privilege Escalation in OAuth2 Token Exchange",
-        "url": "https://github.com/advisories/GHSA-vrh8-c9cm-wh8v",
+        "title": "@zereight/mcp-gitlab Vulnerable to Server-Side Request Forgery",
+        "url": "https://github.com/advisories/GHSA-2h44-8472-frjj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-14T21:28:23.000Z",
-        "summary": "### Summary A vulnerability in ZITADEL’s OAuth2 Token Exchange endpoint allows an authenticated user or client to exchange a low-privilege access token for a token with elevated permissions at a completely different application. This bypas…",
-        "badge": "CVE-2026-56668",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-15T20:57:28.000Z",
+        "summary": "# Server-Side Request Forgery via X-GitLab-API-URL Header Allows Credential Theft ## Affected - **Repository:** `zereight/gitlab-mcp` - **Affected versions:** All versions through commit `74a8c83` - **Patched versions:** None at time of re…",
+        "badge": "CVE-2026-61559",
+        "signal": "CRITICAL · CVSS 9.6"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "近日，专家分析指出：“目前楼市的情况逻辑很清晰，房价虽有小幅下跌，但下跌空间进一步收窄，说明房地产市场基本触底。”",
         "badge": "热搜",
-        "signal": "7,809,044 热度"
+        "signal": "7,808,193 热度"
       },
       {
         "id": "cisa-kev-cve-2026-84869",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49712278",
+        "id": "hn-49711544",
         "category": "dev",
-        "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
-        "url": "https://withcapsule.app/",
+        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+        "url": "https://github.com/arnegiacomo/fugleramme",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T13:31:40.000Z",
+        "publishedAt": "2026-09-15T12:31:10.000Z",
         "badge": "HN",
-        "signal": "188 分 · 92 评论"
+        "signal": "1106 分 · 152 评论"
       },
       {
         "id": "cn-item-0188b0cad9fe3137",
@@ -137,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-rrxg-g2pf-6hh4",
+        "id": "github-advisory-ghsa-vmp7-252j-cwp7",
         "category": "security",
-        "title": "ESPHome Device Builder: Renamed auth env vars silently disable dashboard authentication on upgrade",
-        "url": "https://github.com/advisories/GHSA-rrxg-g2pf-6hh4",
+        "title": "@zereight/mcp-gitlab: DNS rebinding reaches local Streamable HTTP MCP transport",
+        "url": "https://github.com/advisories/GHSA-vmp7-252j-cwp7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-14T18:08:57.000Z",
-        "summary": "## Summary The dashboard reads its authentication credentials from `$ESPHOME_USERNAME` and `$ESPHOME_PASSWORD`. Earlier versions, and the legacy `esphome` dashboard, read the bare `$USERNAME` and `$PASSWORD` instead. When the env vars were…",
-        "badge": "CVE-2026-59178",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-09-15T20:54:55.000Z",
+        "summary": "`@zereight/mcp-gitlab` exposes its Streamable HTTP MCP endpoint without an effective Host or Origin allowlist. A malicious web page can use DNS rebinding to route browser requests to a victim's local MCP listener while preserving an attack…",
+        "badge": "CVE-2026-61568",
+        "signal": "CRITICAL · CVSS 9.6"
       },
       {
         "id": "ai-openai-968c32634dc2a1cb",
@@ -166,7 +166,7 @@
         "publishedAt": "2026-09-15T14:46:24.000Z",
         "summary": "这不是 V 友天天在讨论的，怎么没人讨论 https://mp.weixin.qq.com/s/zk0KxuLzhmMJ4LPYW_OHMA 前几天，DeepSeek v4.1 发布了，将小模型能力的高度又向上推进了一个档次。 AI 发展的速度远远超过了所有人的预期。从那个只会咿呀学语地聊天、上下文长度只有几千 token 的初版 ChatGPT ，到具有推理能力的 OpenAI o1 、DeepSeek R1 与 Kimi K1.5 Thinking ，只不过短短两年；从…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-it-15866e7354a9730b",
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49715590",
+        "id": "hn-49716176",
         "category": "dev",
-        "title": "GEFS on OpenBSD: A Early Preview",
-        "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2",
+        "title": "An Update on Wayback Machine Access",
+        "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T17:12:19.000Z",
+        "publishedAt": "2026-09-15T17:52:18.000Z",
         "badge": "HN",
-        "signal": "29 分 · 10 评论"
+        "signal": "250 分 · 126 评论"
       },
       {
         "id": "cn-baidu-50fb1eb982cc08e4",
@@ -217,18 +217,18 @@
         "source": "百度热搜",
         "summary": "据悉，李先生找到遗忘30年的1万元定期存单后起诉银行，要求按存单利率付本息。对此，法院判决银行返还1万元本金并支付利息。",
         "badge": "热搜",
-        "signal": "7,713,968 热度"
+        "signal": "7,712,710 热度"
       },
       {
-        "id": "github-advisory-ghsa-325j-mg25-8q58",
+        "id": "github-advisory-ghsa-5648-rgj9-v224",
         "category": "security",
-        "title": "yayson: Prototype pollution in Store/LegacyStore deserialization",
-        "url": "https://github.com/advisories/GHSA-325j-mg25-8q58",
+        "title": "@zereight/mcp-gitlab has multiple safety-control bypasses: execute_graphql read-only + allow-list bypass, unauthenticated transports, session-exhaustion DoS",
+        "url": "https://github.com/advisories/GHSA-5648-rgj9-v224",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:11:38.000Z",
-        "summary": "# Summary `Store`/`LegacyStore` key internal lookup tables by the `type`, `id`, and relationship names from a JSON:API document. Because these were plain objects, a document with `type: \"__proto__\"` writes onto `Object.prototype`, pollutin…",
-        "badge": "CVE-2026-61534",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-15T20:48:22.000Z",
+        "summary": "### Summary @zereight/mcp-gitlab exposes GitLab to an LLM agent while relying on read-only mode, a project allow-list, and transport auth as its safety controls. Five defects defeat those controls. Under the MCP threat model, tool-call arg…",
+        "badge": "GHSA-5648-RGJ9-V224",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-hugging-face-85052f9befba2c4e",
@@ -248,7 +248,7 @@
         "publishedAt": "2026-09-15T12:03:44.000Z",
         "summary": "rt ，这两天把几个订阅全部挂到 cpa 上了，但只用了 gpt 。之前了解过 gpt 自己用不会翻车（ tibo 也干了🤣），claude 和 antigravity 对于反代则好像查的比较严，但 A/经常莫名其妙封号，也不知道是反代还是神秘代码发力。 有几个问题请教下： 1.有长期反代这两个的吗？想了解下仅自用安不安全，毕竟 claude 和 gamil 都是老号了，gamil 更是我的主账号，十几年感情了。 2.gpt 是新号用 codex 都需要绑定手机号吗？ 我的…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-item-4ff932597a93ff1d",
@@ -282,14 +282,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49708431",
+        "id": "hn-49715947",
         "category": "dev",
-        "title": "I can't stop thinking about Papua New Guinea",
-        "url": "https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua",
+        "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T06:16:24.000Z",
+        "publishedAt": "2026-09-15T17:38:18.000Z",
         "badge": "HN",
-        "signal": "791 分 · 337 评论"
+        "signal": "178 分 · 116 评论"
       },
       {
         "id": "cn-it-02e62163691edeb2",
@@ -302,15 +302,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-rqx4-3f6q-3x2v",
+        "id": "github-advisory-ghsa-4595-rvpx-4q34",
         "category": "security",
-        "title": "@Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
-        "url": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
+        "title": "emp3r0r has an unauthenticated HTTP Polling DoS",
+        "url": "https://github.com/advisories/GHSA-4595-rvpx-4q34",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:04:42.000Z",
-        "summary": "## Summary Mockoon's admin API (`commons-server/src/libs/server/admin-api.ts`) is mounted on the same Express listener as the user-defined mock routes, **enabled by default** in every shipped runtime (commons-server, CLI, serverless), serv…",
-        "badge": "CVE-2026-59148",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-15T20:47:17.000Z",
+        "summary": "### Summary The `http_poll` C2 transport accepts attacker-controlled HTTP polling sessions before CBOR `MsgAuth` authentication is completed. A remote unauthenticated attacker can create arbitrary polling sessions and send request bodies t…",
+        "badge": "CVE-2026-61554",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "9月16日，全长134.2公里的西部陆海新通道骨干工程平陆运河正式建成通航。这条新中国成立以来首条国家层面统筹建设的通江达海运河，通航后将为西南地区缩短内河出海航程560公里以上，进一步畅通中国与东盟及全球的经贸往来。",
         "badge": "热搜",
-        "signal": "7,615,886 热度"
+        "signal": "7,616,984 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85706",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49712102",
+        "id": "hn-49718822",
         "category": "dev",
-        "title": "Show HN: Hacking a $20 4G wireless hotspot into a texting device",
-        "url": "https://bkovac.github.io/modem-thing/",
+        "title": "Jean-Pierre Serre is 100 years old today",
+        "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Serre/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T13:20:24.000Z",
+        "publishedAt": "2026-09-15T20:57:18.000Z",
         "badge": "HN",
-        "signal": "127 分 · 18 评论"
+        "signal": "18 分 · 0 评论"
       },
       {
         "id": "cn-item-f93583979d906dbe",
@@ -383,15 +383,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-65h7-9wrw-629c",
+        "id": "github-advisory-ghsa-gq9p-f254-h286",
         "category": "security",
-        "title": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
-        "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+        "title": "Http4s: Ember HTTP/2 buffers a frame's declared payload before checking SETTINGS_MAX_FRAME_SIZE",
+        "url": "https://github.com/advisories/GHSA-gq9p-f254-h286",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T22:02:04.000Z",
-        "summary": "## Summary The published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external `$ref` dereferencing, but the latest patched dependency `mcp-from-openapi` 2.3.0 still makes backend-origin request…",
-        "badge": "CVE-2026-59973",
-        "signal": "HIGH · CVSS 8.5"
+        "publishedAt": "2026-09-15T20:01:22.000Z",
+        "summary": "### Summary An unauthenticated peer can make Ember's HTTP/2 read loop hold 16 MiB of a single frame in memory on a connection where Ember advertised a 16 KiB limit. The declared length is readable from the frame's first 9 bytes, but it is …",
+        "badge": "CVE-2026-88975",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-46fcf5bb7b99520f",
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49713262",
+        "id": "hn-49716476",
         "category": "dev",
-        "title": "The CSS Zen Garden dream, finally shipped",
-        "url": "https://josprague.com/blog/the-css-zen-garden-dream-finally-shipped/",
+        "title": "We got admin access to Baseten's production GitHub in 25 minutes",
+        "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T14:40:08.000Z",
+        "publishedAt": "2026-09-15T18:11:24.000Z",
         "badge": "HN",
-        "signal": "55 分 · 21 评论"
+        "signal": "150 分 · 60 评论"
       },
       {
         "id": "cn-baidu-b8621501e17ced47",
@@ -462,18 +462,18 @@
         "source": "百度热搜",
         "summary": "近年来，日本梅毒感染人数持续飙升，病例数屡创新高。疫情失控不仅因风俗产业发达及年轻人防护意识缺失，更暴露出药物供应链脆弱：关键特效药苄星青霉素曾退出日本市场30多年，2022年虽重新获批，但又因生产问题断供，预计2027年才有望恢复供应。",
         "badge": "热搜",
-        "signal": "7,522,969 热度"
+        "signal": "7,524,268 热度"
       },
       {
-        "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
+        "id": "github-advisory-ghsa-5hq8-qhww-jm7q",
         "category": "security",
-        "title": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
-        "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
+        "title": "libp2p-quic: Remote panic via certificate expiry race during QUIC handshake",
+        "url": "https://github.com/advisories/GHSA-5hq8-qhww-jm7q",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-11T21:38:24.000Z",
-        "summary": "## SAML Tenant Binding Enables Cross-Tenant Account Takeover ### Summary Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant w…",
-        "badge": "CVE-2026-59151",
-        "signal": "CRITICAL · CVSS 9.6"
+        "publishedAt": "2026-09-15T20:01:17.000Z",
+        "summary": "### Summary `libp2p-quic` can panic on an inbound QUIC handshake if a malicious peer presents a valid, short lived libp2p TLS certificate and delays the final TLS 1.3 handshake fragment until the certificate expires. This is remotely reach…",
+        "badge": "CVE-2026-61544",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -510,7 +510,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 27989,
+        "stars": 28292,
         "starsToday": 2751
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 33453,
+        "stars": 33653,
         "starsToday": 2035
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 6465,
+        "stars": 6542,
         "starsToday": 632
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 30629,
+        "stars": 30791,
         "starsToday": 2081
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/Homebrew/BrewUI",
         "description": "📺 Homebrew's official macOS GUI",
         "language": "Swift",
-        "stars": 1229,
+        "stars": 1286,
         "starsToday": 356
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/melgarafael/DeskcommCRM",
         "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "language": "TypeScript",
-        "stars": 2711,
+        "stars": 2761,
         "starsToday": 205
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/alphaXiv/OpenResearch",
         "description": "Turn your coding agents into research agents",
         "language": "Rust",
-        "stars": 3165,
+        "stars": 3249,
         "starsToday": 593
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 76542,
+        "stars": 76625,
         "starsToday": 755
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/danny-avila/LibreChat",
         "description": "Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active",
         "language": "TypeScript",
-        "stars": 43721,
+        "stars": 43759,
         "starsToday": 261
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/pacifio/atlas",
         "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
         "language": "Rust",
-        "stars": 4544,
+        "stars": 4564,
         "starsToday": 102
       }
     ],
-    "updatedAt": "2026-09-15T18:12:45.182Z"
+    "updatedAt": "2026-09-15T21:22:49.428Z"
   }
 }
