@@ -1,4 +1,5 @@
-import { requireRule, journal } from './utils.js?v=0.24.0';
+import { deployedTroops } from './logistics.js?v=0.26.0';
+import { requireRule, journal } from './utils.js?v=0.26.0';
 
 export const DAILY_ROUTES=[
   {id:'ore',name:'铁石山道',days:[1,4,0],enemies:['soldier','guard'],reward:{iron:4,cloth:3,scrap_iron:3},use:'铁与布用于打造装备，碎铁用于练兵、工坊加工与重熔精铁。'},
@@ -26,7 +27,7 @@ export function rotationPlan(s,kind,id,tier=1){
   requireRule(['daily','weekly'].includes(kind)&&route&&route.id===id,'这处轮换历练尚未开放。');
   requireRule(Number.isInteger(tier)&&tier>=1&&tier<=(weekly?5:3),'历练难度无效。');
   const level=weekly?5+tier*5:(tier-1)*10+1,hall=weekly?Math.ceil(tier/2)+1:tier,stamina=weekly?15:10;
-  const n=s.camp?.mode==='army'?Math.min(s.camp.troops,s.camp.deployment):0,food=weekly?5+Math.ceil(n/2):Math.ceil(n/2);
+  const n=deployedTroops(s),food=weekly?5+Math.ceil(n/2):Math.ceil(n/2);
   let reason=!s.camp?'先建立寨子':!s.team.length?'先安排出阵好汉':s.camp.buildings.hall<hall?`需要聚义厅 ${hall} 级`:Math.max(...s.team.map(id=>s.heroes[id].level))<level?`队中一人需要 ${level} 级`:'';
   if(!reason&&!weekly&&!route.days.includes(cal.weekday))reason='今日未开放，可查看七日轮换表';
   if(!reason&&!weekly&&dailyUses(s,id)>=3)reason='今日此处已挑战 3 次';

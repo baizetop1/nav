@@ -2289,5 +2289,560 @@
         ]
       }
     }
+  },
+  {
+    "id": "v6_prepare",
+    "title": "行营整备",
+    "map": "v6_camp",
+    "condition": {
+      "flag": "volume_five_complete"
+    },
+    "start": "start",
+    "steps": {
+      "start": {
+        "map": "v6_camp",
+        "text": "高唐来报，柴进受困。聚义厅四级、兵营三级、医馆二级后确认整备；已有建筑计入，之后可选择带兵或独行。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认并领取酬劳",
+            "condition": {
+              "all": [
+                {
+                  "campBuilding": "hall",
+                  "count": 4
+                },
+                {
+                  "campBuilding": "barracks",
+                  "count": 3
+                },
+                {
+                  "campBuilding": "clinic",
+                  "count": 2
+                }
+              ]
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v6_prepared"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v6_scout",
+    "title": "静庐辨阵",
+    "map": "v6_hermit",
+    "condition": {
+      "flag": "v6_prepared"
+    },
+    "start": "start",
+    "steps": {
+      "start": {
+        "map": "v6_hermit",
+        "text": "可选支援：以四份药草帮助困民，听取他们对烟阵的见闻。终战敌军攻击降低 15%。英雄是谁不作限制。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认并领取酬劳",
+            "condition": null,
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v6_smoke_known"
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 3
+              }
+            ],
+            "cost": {
+              "items": {
+                "herb": 4
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v6_outer",
+    "title": "夺取外哨",
+    "map": "v6_gate",
+    "condition": {
+      "flag": "v6_prepared"
+    },
+    "start": "fight",
+    "steps": {
+      "fight": {
+        "map": "v6_gate",
+        "text": "夺取外哨：可返回寨子补给，也可先做可选支援；胜后需要在此确认战果。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "整备出征",
+            "next": "settle",
+            "battle": {
+              "enemies": [
+                "v6_guard",
+                "soldier"
+              ],
+              "scale": 1
+            }
+          }
+        ]
+      },
+      "settle": {
+        "map": "v6_gate",
+        "text": "守军已退，确认战果后开放后续道路。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v6_outer_done"
+              },
+              {
+                "type": "item",
+                "id": "recruit_shard",
+                "amount": 3
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v6_cut",
+    "title": "截断援骑",
+    "map": "v6_road",
+    "condition": {
+      "flag": "v6_outer_done"
+    },
+    "start": "fight",
+    "steps": {
+      "fight": {
+        "map": "v6_road",
+        "text": "截断援骑：可返回寨子补给，也可先做可选支援；胜后需要在此确认战果。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "整备出征",
+            "next": "settle",
+            "battle": {
+              "enemies": [
+                "v6_rider",
+                "v6_guard"
+              ],
+              "scale": 1
+            }
+          }
+        ]
+      },
+      "settle": {
+        "map": "v6_road",
+        "text": "守军已退，确认战果后开放后续道路。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v6_aid_cut"
+              },
+              {
+                "type": "item",
+                "id": "recruit_shard",
+                "amount": 3
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v6_rescue",
+    "title": "打通牢城",
+    "map": "v6_prison",
+    "condition": {
+      "flag": "v6_outer_done"
+    },
+    "start": "fight",
+    "steps": {
+      "fight": {
+        "map": "v6_prison",
+        "text": "打通牢城：可返回寨子补给，也可先做可选支援；胜后需要在此确认战果。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "整备出征",
+            "next": "settle",
+            "battle": {
+              "enemies": [
+                "v6_guard",
+                "v6_guard",
+                "v6_rider"
+              ],
+              "scale": 1
+            }
+          }
+        ]
+      },
+      "settle": {
+        "map": "v6_prison",
+        "text": "守军已退，确认战果后开放后续道路。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v6_prison_done"
+              },
+              {
+                "type": "item",
+                "id": "recruit_shard",
+                "amount": 3
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v6_final",
+    "title": "合围高唐",
+    "map": "v6_court",
+    "condition": {
+      "flag": "v6_prison_done"
+    },
+    "start": "fight",
+    "steps": {
+      "fight": {
+        "map": "v6_court",
+        "text": "合围高唐：可返回寨子补给，也可先做可选支援；胜后需要在此确认战果。",
+        "choices": [
+          {
+            "id": "fight",
+            "label": "整备出征",
+            "next": "settle",
+            "battle": {
+              "enemies": [
+                "v6_gaolian",
+                "v6_guard",
+                "v6_rider"
+              ],
+              "scale": 1
+            }
+          }
+        ]
+      },
+      "settle": {
+        "map": "v6_court",
+        "text": "守军已退，确认战果后开放后续道路。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认战果",
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v6_final_done"
+              },
+              {
+                "type": "item",
+                "id": "recruit_shard",
+                "amount": 3
+              },
+              {
+                "type": "item",
+                "id": "martial_pages",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "v6_settle",
+    "title": "接回归人",
+    "map": "v6_refuge",
+    "condition": {
+      "flag": "v6_final_done"
+    },
+    "start": "start",
+    "steps": {
+      "start": {
+        "map": "v6_refuge",
+        "text": "柴进与乡人已获救。确认医护与粮道安排，结束高唐救援；若柴进早已入寨，他的等级、装备与培养全部保留。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "确认并领取酬劳",
+            "condition": null,
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "v6_settled"
+              },
+              {
+                "type": "hero",
+                "id": "chaijin",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "chaijin_token",
+                "amount": 3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "external_wangjin",
+    "title": "外传 · 禁军教头旧约",
+    "map": "training",
+    "condition": {
+      "flag": "volume_two_complete"
+    },
+    "start": "talk",
+    "steps": {
+      "talk": {
+        "map": "training",
+        "text": "教授乡勇枪棒，与寨主约定：兵营三级、医馆一级，先练兵也先护兵。",
+        "choices": [
+          {
+            "id": "promise",
+            "label": "结识并答应委托",
+            "next": "settle",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "wangjin",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "wangjin_token",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      },
+      "settle": {
+        "map": "training",
+        "text": "教授乡勇枪棒，与寨主约定：兵营三级、医馆一级，先练兵也先护兵。 完成后取得另外六枚信物；聚义厅 3 级、碎银 700 时在好汉页邀请。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "完成委托，领取信物",
+            "condition": {
+              "all": [
+                {
+                  "campBuilding": "barracks",
+                  "count": 3
+                },
+                {
+                  "campBuilding": "clinic",
+                  "count": 1
+                }
+              ]
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "external_wangjin_helped"
+              },
+              {
+                "type": "item",
+                "id": "wangjin_token",
+                "amount": 6
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "external_hucheng",
+    "title": "外传 · 飞天虎旧约",
+    "map": "v5_refuge",
+    "condition": {
+      "flag": "volume_five_complete"
+    },
+    "start": "talk",
+    "steps": {
+      "talk": {
+        "map": "v5_refuge",
+        "text": "祝庄战后，扈成带乡人参与医护接应。医馆二级、农田二级后，可确认安民之约。",
+        "choices": [
+          {
+            "id": "promise",
+            "label": "结识并答应委托",
+            "next": "settle",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "hucheng",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "hucheng_token",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      },
+      "settle": {
+        "map": "v5_refuge",
+        "text": "祝庄战后，扈成带乡人参与医护接应。医馆二级、农田二级后，可确认安民之约。 完成后取得另外六枚信物；聚义厅 3 级、碎银 600 时在好汉页邀请。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "完成委托，领取信物",
+            "condition": {
+              "all": [
+                {
+                  "campBuilding": "clinic",
+                  "count": 2
+                },
+                {
+                  "campBuilding": "farm",
+                  "count": 2
+                }
+              ]
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "external_hucheng_helped"
+              },
+              {
+                "type": "item",
+                "id": "hucheng_token",
+                "amount": 6
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "external_luantingyu",
+    "title": "外传 · 铁棒旧约",
+    "map": "v5_store",
+    "condition": {
+      "flag": "volume_five_complete"
+    },
+    "start": "talk",
+    "steps": {
+      "talk": {
+        "map": "v5_store",
+        "text": "本作外传改编：栾廷玉战后留在庄外护送散兵。兵营四级、医馆二级，再以一百功勋担保，可邀他授艺。",
+        "choices": [
+          {
+            "id": "promise",
+            "label": "结识并答应委托",
+            "next": "settle",
+            "effects": [
+              {
+                "type": "hero",
+                "id": "luantingyu",
+                "status": "known"
+              },
+              {
+                "type": "item",
+                "id": "luantingyu_token",
+                "amount": 4
+              }
+            ]
+          }
+        ]
+      },
+      "settle": {
+        "map": "v5_store",
+        "text": "本作外传改编：栾廷玉战后留在庄外护送散兵。兵营四级、医馆二级，再以一百功勋担保，可邀他授艺。 完成后取得另外六枚信物；聚义厅 4 级、碎银 900 时在好汉页邀请。",
+        "choices": [
+          {
+            "id": "finish",
+            "label": "完成委托，领取信物",
+            "condition": {
+              "all": [
+                {
+                  "campBuilding": "barracks",
+                  "count": 4
+                },
+                {
+                  "campBuilding": "clinic",
+                  "count": 2
+                }
+              ]
+            },
+            "finish": true,
+            "effects": [
+              {
+                "type": "flag",
+                "id": "external_luantingyu_helped"
+              },
+              {
+                "type": "item",
+                "id": "luantingyu_token",
+                "amount": 6
+              }
+            ],
+            "cost": {
+              "merit": 100
+            }
+          }
+        ]
+      }
+    }
   }
 ]

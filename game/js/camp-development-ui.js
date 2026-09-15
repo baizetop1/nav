@@ -1,13 +1,13 @@
-import { stewardshipBonus } from './stewardship.js?v=0.24.0';
-import { experienceToNext } from './progression.js?v=0.24.0';
-import { helperSummary } from './helpers-ui.js?v=0.24.0';
-import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.24.0';
+import { stewardshipBonus } from './stewardship.js?v=0.26.0';
+import { experienceToNext } from './progression.js?v=0.26.0';
+import { helperSummary } from './helpers-ui.js?v=0.26.0';
+import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.26.0';
 const resource={wood:'木材',food:'粮草',silver:'碎银'};
 const quality={1:'凡品',2:'良品',3:'珍品'};
 export function goalBoard(s,d,btn){
   const pending=CAMP_GOALS.filter(g=>!goalClaimed(s,g)),current=pending.find(g=>goalReady(s,g))||pending[0];
-  const card=g=>`<article class="camp-goal ${goalClaimed(s,g)?'goal-done':''}"><div class="goal-heading"><h3>${g.name}</h3><span class="badge">${goalClaimed(s,g)?'已领酬劳':goalReady(s,g)?'可领取':'进行中'}</span></div><ul>${g.requirements.map(([label,test])=>`<li class="${test(s)?'requirement-done':''}">${test(s)?'已成':'尚待'} · ${label}</li>`).join('')}</ul><p class="note">奖励：${[...Object.entries(resource).filter(([key])=>g.reward[key]).map(([key,name])=>name+' '+g.reward[key]),...Object.entries(g.reward.items||{}).map(([id,n])=>d.by.items[id].name+' '+n)].join(' · ')}</p>${btn(goalClaimed(s,g)?'酬劳已领':'领取建寨酬劳',{type:'campClaim',id:g.id},'secondary',goalClaimed(s,g)||!goalReady(s,g))}</article>`;
-  return `<section class="camp-goals" id="camp-goals"><div class="goal-heading"><h2>建寨志</h2><span>${CAMP_GOALS.length-pending.length} / ${CAMP_GOALS.length} 已完成</span></div>${current?card(current):'<p>寨中已有根基。继续培养好汉，挑战江湖副本、搜寻装备与坐骑。</p>'}<details data-fold="camp-goals"><summary>查看全部建寨目标</summary>${CAMP_GOALS.filter(g=>g!==current).map(card).join('')}</details></section>`;
+  const card=g=>`<article class="camp-goal ${goalClaimed(s,g)?'goal-done':''}"><div class="goal-heading"><h3>${g.name}</h3><span class="badge">${goalClaimed(s,g)?'已领酬劳':goalReady(s,g)?'可领取':'进行中'}</span></div><ul>${g.requirements.map(([label,test])=>`<li class="${test(s)?'requirement-done':''}">${test(s)?'已成':'尚待'} · ${label}</li>`).join('')}</ul><p class="note">奖励：${[...Object.entries(resource).filter(([key])=>g.reward[key]).map(([key,name])=>name+' '+g.reward[key]),...Object.entries(g.reward.items||{}).map(([id,n])=>d.by.items[id].name+' '+n)].join(' · ')}</p>${!goalClaimed(s,g)&&!goalReady(s,g)&&['first_win','convoy','fort'].includes(g.id)?btn('去完成 · '+({first_win:'山林清剿',convoy:'护送粮队',fort:'攻打匪寨'}[g.id]),{type:'ui_campRaidFocus',id:g.id==='first_win'?'woods':g.id},'primary'):''}${btn(goalClaimed(s,g)?'酬劳已领':'领取建寨酬劳',{type:'campClaim',id:g.id},'secondary',goalClaimed(s,g)||!goalReady(s,g))}</article>`;
+  return `<section class="camp-goals" id="camp-goals"><div class="goal-heading"><h2>建寨志</h2><span>${CAMP_GOALS.filter(g=>goalClaimed(s,g)||goalReady(s,g)).length} / ${CAMP_GOALS.length} 已达成 · ${CAMP_GOALS.length-pending.length} 已领奖</span></div>${current?card(current):'<p>寨中已有根基。继续培养好汉，挑战江湖副本、搜寻装备与坐骑。</p>'}<details data-fold="camp-goals"><summary>查看全部建寨目标</summary>${CAMP_GOALS.map(card).join('')}</details></section>`;
 }
 export function dutyBoard(s,d,btn,portrait){
   const id=steward(s),h=id&&d.by.heroes[id];

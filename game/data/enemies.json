@@ -305,5 +305,62 @@
     "telegraphs": [
       "庄兵正在收拢阵形，注意前排承伤与首领蓄势。"
     ]
+  },
+  {
+    "id": "v6_guard",
+    "name": "高唐守卒",
+    "attribute": {
+      "hp": 600,
+      "attack": 90,
+      "defense": 65,
+      "speed": 65,
+      "strategy": 30
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "对手整了整兵刃，正寻找阵中的破绽。"
+    ],
+    "description": "高唐救援战役敌军"
+  },
+  {
+    "id": "v6_rider",
+    "name": "高唐援骑",
+    "attribute": {
+      "hp": 1400,
+      "attack": 140,
+      "defense": 85,
+      "speed": 105,
+      "strategy": 60
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "截道者把兵刃横在车辙上。",
+      "截道者追击太急，侧翼空了。",
+      "截道者高声招呼同伙。"
+    ],
+    "description": "高唐救援战役敌军"
+  },
+  {
+    "id": "v6_gaolian",
+    "name": "高廉",
+    "attribute": {
+      "hp": 1600,
+      "attack": 135,
+      "defense": 60,
+      "speed": 80,
+      "strategy": 45
+    },
+    "skills": [
+      "bandit_cut",
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "庄兵正在收拢阵形，注意前排承伤与首领蓄势。"
+    ],
+    "description": "高唐救援战役敌军"
   }
 ]

@@ -1,6 +1,6 @@
-import { meets } from './map.js?v=0.24.0';
-import { hasOwn, requireRule, count, journal } from './utils.js?v=0.24.0';
-import { grant } from './item.js?v=0.24.0';
+import { meets } from './map.js?v=0.26.0';
+import { hasOwn, requireRule, count, journal } from './utils.js?v=0.26.0';
+import { grant } from './item.js?v=0.26.0';
 
 // Route search includes the half-hour spent on each road, so a night-only path
 // cannot be traversed in daylight by selecting a distant destination.
@@ -20,7 +20,7 @@ export function routeTo(s,d,target,ignoreConditions=false){
   }
   return null;
 }
-const flags={volume_four_complete:'完成第四卷《三山聚义》',v5_prepared:'完成行营整备',v5_route_known:'查清盘陀迷径',v5_first_done:'一打外哨得胜并确认',v5_east_cut:'截断东援并确认',v5_west_cut:'截住西粮并确认',v5_second_done:'二打破门得胜并确认',v5_third_done:'三打内院得胜并确认',volume_three_complete:'完成第三卷《梁山初聚》',v4_erlong_allied:'与二龙山结盟',v4_taohua_allied:'与桃花山结盟',v4_baihu_allied:'与白虎山结盟',volume_two_complete:'完成第二卷《逼上梁山》',v3_settled:'在寨民新居确认安寨',v3_grain_done:'打通粮道并确认战果',v3_timber_done:'打通木道并确认战果',v3_ferry_done:'夺回接驳口并确认战果',v3_defended:'守住寨门并确认战果',dongxi_rumor:'在郓城酒肆打听东溪村',tracks_found:'在枯树林查看脚印',trail_followed:'在虎踪继续追踪',seven_stars:'完成七星聚义',huangni_complete:'完成智取生辰纲',volume_complete:'完成第一卷聚义目标',lin_tolerant:'推进林冲东京往事',lu_complete:'完成鲁智深野猪林往事',lin_cangzhou:'推进林冲沧州往事',snow_evidence:'在风雪山道察看脚印',lin_temple:'完成风雪山神庙往事',chai_refuge:'完成柴进收留相助的往事'};
+const flags={volume_five_complete:'完成第五卷《三打祝家庄》',v6_prepared:'完成高唐行营整备',v6_outer_done:'夺取外哨并确认',v6_prison_done:'打通牢城并确认',v6_final_done:'击败高廉并确认',volume_four_complete:'完成第四卷《三山聚义》',v5_prepared:'完成行营整备',v5_route_known:'查清盘陀迷径',v5_first_done:'一打外哨得胜并确认',v5_east_cut:'截断东援并确认',v5_west_cut:'截住西粮并确认',v5_second_done:'二打破门得胜并确认',v5_third_done:'三打内院得胜并确认',volume_three_complete:'完成第三卷《梁山初聚》',v4_erlong_allied:'与二龙山结盟',v4_taohua_allied:'与桃花山结盟',v4_baihu_allied:'与白虎山结盟',volume_two_complete:'完成第二卷《逼上梁山》',v3_settled:'在寨民新居确认安寨',v3_grain_done:'打通粮道并确认战果',v3_timber_done:'打通木道并确认战果',v3_ferry_done:'夺回接驳口并确认战果',v3_defended:'守住寨门并确认战果',dongxi_rumor:'在郓城酒肆打听东溪村',tracks_found:'在枯树林查看脚印',trail_followed:'在虎踪继续追踪',seven_stars:'完成七星聚义',huangni_complete:'完成智取生辰纲',volume_complete:'完成第一卷聚义目标',lin_tolerant:'推进林冲东京往事',lu_complete:'完成鲁智深野猪林往事',lin_cangzhou:'推进林冲沧州往事',snow_evidence:'在风雪山道察看脚印',lin_temple:'完成风雪山神庙往事',chai_refuge:'完成柴进收留相助的往事'};
 export function conditionText(condition,d){
   if(!condition)return '道路通畅';
   return Object.entries(condition).filter(([k])=>!['count','status'].includes(k)).map(([key,v])=>{

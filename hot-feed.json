@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-15T07:45:55.434Z",
+  "generatedAt": "2026-09-15T12:49:18.735Z",
   "intelligence": {
-    "updatedAt": "2026-09-15T07:45:55.434Z",
+    "updatedAt": "2026-09-15T12:49:18.735Z",
     "items": [
       {
-        "id": "cn-item-173262ad3be22077",
+        "id": "cn-item-4ff932597a93ff1d",
         "category": "cn",
-        "title": "美国对伊战损全景首曝光：损失重大、先进武器告急",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-15/10696781.shtml",
+        "title": "韩国总统李在明将召开记者会 韩媒：或与支持率下滑有关",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-15/10697077.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-15T07:33:10.000Z",
-        "summary": "中新网9月15日电 美国国防部监督机构14日发布了首份关于伊朗战事影响的报告，涵盖2月28日美国和以色列对伊朗发起军事行动至6月30日期间的情况。",
+        "publishedAt": "2026-09-15T12:26:29.000Z",
+        "summary": "中新网9月15日电 据韩联社等韩媒报道，韩国总统李在明将于当地时间18日上午10时在总统府青瓦台迎宾馆举行记者会，就各种热点问题阐明立场。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49701004",
+        "id": "hn-49708431",
         "category": "dev",
-        "title": "iOS 27, iPadOS 27, and macOS 27",
-        "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
+        "title": "I can't stop thinking about Papua New Guinea",
+        "url": "https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T17:50:29.000Z",
+        "publishedAt": "2026-09-15T06:16:24.000Z",
         "badge": "HN",
-        "signal": "559 分 · 620 评论"
+        "signal": "418 分 · 158 评论"
       },
       {
-        "id": "cn-it-d078f01abf96c3c3",
+        "id": "cn-it-662b5c8aba4ae0a8",
         "category": "cn",
-        "title": "阶跃发布 StepAudio 3 系列语音大模型，拿下多个全球第一",
-        "url": "https://www.ithome.com/1/002/602.htm",
+        "title": "上市权益价 10.36 万元起，2027 款埃安 i60 上市",
+        "url": "https://www.ithome.com/1/002/769.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-15T07:45:40.000Z",
-        "summary": "IT之家 9 月 15 日消息，今日阶跃正式发布 StepAudio3 系列模型，包括 StepAudio3Realtime、StepAudio3ASR、StepAudio3TTS、StepAudio3Gen 和 StepAudio3Music，其中多款模型在 Artificial Analysis 榜单中位列全球第一。以上五款模型，目前均已上线阶跃星辰开放平台。 官方称，StepAudio 3 系列分别面向几类核心场景：真人级语音生成、完整音频内容生成、实时语音交互、复杂…",
+        "publishedAt": "2026-09-15T12:48:52.000Z",
+        "summary": "IT之家 9 月 15 日消息，广汽埃安旗下 2027 款埃安 i60 已上市，新车共推出 7 款车型，上市权益价 10.36 万元起。作为年度改款车型，新车在智能化配置与实用功能方面进行多项升级，并全系标配广汽自研非晶合金电驱，提供纯电与增程两种动力形式。 IT之家注意到，2027 款埃安 i60 整体造型与在售车型基本保持一致。前脸采用新能源车型常见的封闭式设计，搭配贯穿式灯带；侧面为悬浮车顶造型，配备半隐藏式门把手；尾部则走简约化路线，双横条贯通式尾灯中央镶嵌埃安发光…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242163",
+        "id": "v2ex-1242240",
         "category": "dev",
-        "title": "[开源] 做了一个 Go Runtime 的 Python Agent SDK，附一轮与 Claude Agent SDK 的对照测试",
-        "url": "https://www.v2ex.com/t/1242163",
+        "title": "各位有把 claude、gpt、antigravity 全挂到 cpa 上吗？",
+        "url": "https://www.v2ex.com/t/1242240",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-15T07:21:02.000Z",
-        "summary": "最近给 Nexus 的 Agent Runtime 做了 Python 封装，叫 nexus-agent-sdk-python 。 Python 侧负责接入，实际调用模型、执行工具和管理上下文的是 Go 写的 nxs 。可以用它给自己的程序接一个能读文件、改代码、跑命令的 Agent ，也可以接自定义工具。 支持单次任务和多轮会话，提供 MCP 、Hooks 和工具权限配置。模型可以通过 Anthropic 兼容接口接入，也支持 OpenAI Chat Completion…",
+        "publishedAt": "2026-09-15T12:03:44.000Z",
+        "summary": "rt ，这两天把几个订阅全部挂到 cpa 上了，但只用了 gpt 。之前了解过 gpt 自己用不会翻车（ tibo 也干了🤣），claude 和 antigravity 对于反代则好像查的比较严，但 A/经常莫名其妙封号，也不知道是反代还是神秘代码发力。 有几个问题请教下： 1.有长期反代这两个的吗？想了解下仅自用安不安全，毕竟 claude 和 gamil 都是老号了，gamil 更是我的主账号，十几年感情了。 2.gpt 是新号用 codex 都需要绑定手机号吗？ 我的…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-61c9fd79be262d81",
+        "id": "cn-baidu-4633a63493131307",
         "category": "cn",
-        "title": "老头乐 上牌上路",
-        "url": "https://www.baidu.com/s?wd=%E8%80%81%E5%A4%B4%E4%B9%90+%E4%B8%8A%E7%89%8C%E4%B8%8A%E8%B7%AF&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "最低工资标准上调 这些待遇跟着涨",
+        "url": "https://www.baidu.com/s?wd=%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B5%84%E6%A0%87%E5%87%86%E4%B8%8A%E8%B0%83+%E8%BF%99%E4%BA%9B%E5%BE%85%E9%81%87%E8%B7%9F%E7%9D%80%E6%B6%A8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，有武汉市民建议允许“老头乐”上牌上路，引发网友一边倒反对。武汉市交管部门明确回应，“老头乐”绝大部分未列入机动车公告，不准上牌，仅允许在景区、园区等非公共道路区域使用。",
+        "summary": "近期，全国多地迎来新一轮最低工资标准调整，目前31省份第一档月最低工资均超2000元。最低工资上调带动加班费、病假工资等多项待遇提升。",
         "badge": "热搜",
-        "signal": "7,809,372 热度"
+        "signal": "7,808,719 热度"
       },
       {
         "id": "cisa-kev-cve-2026-84869",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49707627",
+        "id": "hn-49710253",
         "category": "dev",
-        "title": "Linux from Scratch",
-        "url": "https://www.linuxfromscratch.org/",
+        "title": "Suspected sabotage causes major Netherlands rail disruption",
+        "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T04:15:23.000Z",
+        "publishedAt": "2026-09-15T10:22:46.000Z",
         "badge": "HN",
-        "signal": "113 分 · 38 评论"
+        "signal": "214 分 · 187 评论"
       },
       {
-        "id": "cn-item-c85692ba471dc147",
+        "id": "cn-item-f93583979d906dbe",
         "category": "cn",
-        "title": "朱雀二号改进型遥七运载火箭发射成功",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-15/10696758.shtml",
+        "title": "日本自卫队推定：大型无人侦察机“全球鹰”已坠毁",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-15/10697054.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-15T07:04:19.000Z",
-        "summary": "中新网北京9月15日电 (马帅莎 张艳)北京时间9月15日14时26分，朱雀二号改进型遥七运载火箭在东风商业航天创新试验区发射升空，将搭载的千帆极轨19组共10颗卫星顺利送入预定轨道，飞行试验任务取得圆满成功。",
+        "publishedAt": "2026-09-15T11:58:27.000Z",
+        "summary": "中新网9月15日电 据日本广播协会(NHK)报道，当地时间15日，日本航空自卫队方面推定，当天失联的“全球鹰”无人侦察机已坠毁。",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1242159",
+        "id": "v2ex-1242208",
         "category": "dev",
-        "title": "我说的有道理吗",
-        "url": "https://www.v2ex.com/t/1242159",
+        "title": "command go， opencode go 和各种 token plan，到底买哪个合适？",
+        "url": "https://www.v2ex.com/t/1242208",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-15T07:09:56.000Z",
-        "summary": "https://v2ex.com/t/1241668",
+        "publishedAt": "2026-09-15T09:47:23.000Z",
+        "summary": "买过火山方舟和阿里的 token plan 火山方舟的体验是最差的，不仅慢而且还有各种奇怪的计费逻辑，可以看我另一篇帖子 阿里的使用上还可以，但是计费方式不清晰，只有 credits,无法查看明细，最后一次买了企业版本的一千多，结果 3 天就干完了，但是查不到明细，不知道怎么用的 所以现在我就迷茫了，各位佬，买什么好啊",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-it-2c30288e0ec7e87c",
+        "id": "cn-it-4abd542e71807462",
         "category": "cn",
-        "title": "三星海外悄然发布入门新机 Galaxy A08，电池升级至 6000 毫安时",
-        "url": "https://www.ithome.com/1/002/600.htm",
+        "title": "启境汽车回应 GX7 是否会推纯电版：请留意官方信息，敬请期待",
+        "url": "https://www.ithome.com/1/002/768.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-15T07:36:58.000Z",
-        "summary": "IT之家 9 月 15 日消息，三星悄然推出了 Galaxy A08，这是 Galaxy A 系列最新的入门级手机。该品牌已在部分地区的官网上架这款设备，公布了外观设计与硬件参数。不过这家韩国企业尚未公布售价与上市信息。 塞尔维亚与波黑的三星官网现已上架 Galaxy A08，从配图可以看到，这款手机和前代机型 Galaxy A07 外观相近。屏幕四周边框较宽，底部下巴明显，采用水滴屏设计。机身背面搭载竖向排列的双摄模组。 该机提供深蓝、绿色、银色三种配色，尺寸为 167.…",
+        "publishedAt": "2026-09-15T12:46:02.000Z",
+        "summary": "IT之家 9 月 15 日消息，启境汽车今天（15 日）晚间发布第 12 期答网友问，回应“启境 GX7 是否会推出纯电版”称，启境 GX7 目前推出增程动力版本， 后续如有产品新动态，将通过启境汽车官方渠道第一时间发布，请留意官方信息，敬请期待 。 产品规划上，新车预计 2026 年 9 月底正式上市 ，届时将同步开启交付。 终身质保权益方面，启境 GX7 的整车和核心零部件终身质保权益，除雨刮片、轮胎、空调滤芯、制动片等易损耗零部件外，三电系统（IT之家注：动力电池总成…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49684289",
+        "id": "hn-49709381",
         "category": "dev",
-        "title": "OpenArm: An open-source 7DOF humanoid arm",
-        "url": "https://github.com/enactic/OpenArm",
+        "title": "Alternatives to MinIO for single-node local S3",
+        "url": "https://rmoff.net/2026/01/14/alternatives-to-minio-for-single-node-local-s3/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-13T14:17:49.000Z",
+        "publishedAt": "2026-09-15T08:21:27.000Z",
         "badge": "HN",
-        "signal": "55 分 · 11 评论"
+        "signal": "84 分 · 44 评论"
       },
       {
-        "id": "cn-baidu-5be9bad8cd872657",
+        "id": "cn-baidu-7eed1b62d4c7975b",
         "category": "cn",
-        "title": "我国人口总量14.05亿",
-        "url": "https://www.baidu.com/s?wd=%E6%88%91%E5%9B%BD%E4%BA%BA%E5%8F%A3%E6%80%BB%E9%87%8F14.05%E4%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "一颗免费鸡蛋 “钓”走数万养老钱",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E9%A2%97%E5%85%8D%E8%B4%B9%E9%B8%A1%E8%9B%8B+%E2%80%9C%E9%92%93%E2%80%9D%E8%B5%B0%E6%95%B0%E4%B8%87%E5%85%BB%E8%80%81%E9%92%B1&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月14日，国家卫健委主任雷海潮表示，我国人口出现负增长，但人口总量仍达14.05亿，人口大国基本面没有变。近年来新出生人口维持在800万左右数量级，每年高校新入学学生超1000万，未来仍有充裕劳动力。",
+        "summary": "近日，媒体调查发现，东莞部分医疗器械门店以免费鸡蛋为诱饵，借讲座夸大理疗仪功效，宣称可替代心脏支架手术，同款仪器线下售价两万余元、为线上十余倍，涉嫌虚假宣传。",
         "badge": "热搜",
-        "signal": "7,714,412 热度"
+        "signal": "7,713,154 热度"
       },
       {
         "id": "github-advisory-ghsa-325j-mg25-8q58",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242151",
+        "id": "v2ex-1242205",
         "category": "dev",
-        "title": "开源分享 ProxyLane - 拖拽即透明代理的开源工具",
-        "url": "https://www.v2ex.com/t/1242151",
+        "title": "Deepseek V4.1 Flash 与 Gemini 3.8 Flash 难分伯仲 ？",
+        "url": "https://www.v2ex.com/t/1242205",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-15T06:42:44.000Z",
-        "summary": "把你要走代理的应用(例如 chatgpt.exe ，cmd.exe )拖到这个工具启动，被启动的应用以及其子进程才会走过你指定的代理 Profile 。不使用全局 Tun ，不修改系统全局代理设置，其他应用进程不影响。 例如打开 ProxyLane ，设置一个 profile （通常是你的梯纸的 HTTP/Socks5 协议的代理地址和端口）。 然后往 ProxyLane 界面拖入 chatgpt.exe 就可以， 如果拖入 cmd 启动这个命令行窗口，这个窗口里执行的 c…",
+        "publishedAt": "2026-09-15T09:36:01.000Z",
+        "summary": "很难说谁更好，各位和我一样的感觉吗 ？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "8 回复"
       },
       {
-        "id": "cn-item-a177ed5084483b34",
+        "id": "cn-item-a3c2dd0f83b712be",
         "category": "cn",
-        "title": "日本一架大型无人侦察机失联 防卫相指示迅速展开搜寻",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-15/10696755.shtml",
+        "title": "俄外长：俄罗斯希望结束俄乌冲突",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-15/10697038.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-15T07:03:13.000Z",
-        "summary": "中新网9月15日电 据日本广播协会(NHK)报道，日本航空自卫队表示，当地时间15日13时左右，隶属于三泽基地的一架大型无人侦察机“全球鹰”，在鸟取县近海海域失去通信联系，下落不明。",
+        "publishedAt": "2026-09-15T11:23:25.000Z",
+        "summary": "中新网9月15日电 据俄罗斯卫星通讯社报道，当地时间15日，俄罗斯外长拉夫罗夫表示，俄罗斯希望结束俄乌冲突，俄方始终愿意就乌克兰问题进行谈判。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49675817",
+        "id": "hn-49708993",
         "category": "dev",
-        "title": "4,400-Year-Old Tomb of Egyptian Judge Found at Saqqara with Colors on Walls",
-        "url": "https://arkeonews.net/4400-year-old-tomb-of-an-egyptian-judge-found-at-saqqara-with-colors-still-on-the-walls/",
+        "title": "CSS-Tricks in Limbo",
+        "url": "https://vale.rocks/micros/20260915-0135",
         "source": "Hacker News",
-        "publishedAt": "2026-09-12T18:51:40.000Z",
+        "publishedAt": "2026-09-15T07:27:46.000Z",
         "badge": "HN",
-        "signal": "113 分 · 28 评论"
+        "signal": "86 分 · 15 评论"
       },
       {
-        "id": "cn-it-41230eb04557c9d5",
+        "id": "cn-it-5ddd3c8418bdf872",
         "category": "cn",
-        "title": "“大空头”伯里谈科技巨头呼吁放缓 AI 开发：说白了还是为自己谋利",
-        "url": "https://www.ithome.com/1/002/599.htm",
+        "title": "博通 CEO 陈福阳回应 AI 放缓担忧：算力需求仍强劲，长期收入目标不变",
+        "url": "https://www.ithome.com/1/002/767.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-15T07:35:16.000Z",
-        "summary": "IT之家 9 月 15 日消息，在新一轮 AI 可能毁灭全人类的警告出现后，OpenAI CEO 萨姆 · 奥尔特曼、Anthropic CEO 达里奥 · 阿莫迪等 AI 企业负责人呼吁放慢技术发展。 因《大空头》而闻名的投资者迈克尔 · 伯里认为，这些呼吁只是在为他们自己谋利。他将 OpenAI、Anthropic 等 AI 企业负责人的减速主张称为“谋求自身利益之举”。 IT之家获悉，理由有四点： AI 聊天机器人并不会成为通用人工智能（AGI），因此“没有什么”需要…",
+        "publishedAt": "2026-09-15T12:43:20.000Z",
+        "summary": "IT之家 9 月 15 日消息，博通（Broadcom）首席执行官陈福阳（Hock Tan）于当地时间周一回应了市场担忧。针对前沿 AI 模型开发节奏有可能放缓会对这家芯片厂商业务造成冲击的疑问，他在接受 CNBC 采访时表态，公司仍维持长期收入目标不变。 就在此前的周末，Anthropic 首席执行官达里奥 · 阿莫代伊（Dario Amodei）发表了一篇文章，主张适度放缓大模型的研发速度，这件事令投资者人心惶惶。阿莫代伊的观点得到了 OpenAI 首席执行官萨姆 · …",
         "badge": "IT之家"
       },
       {
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242147",
+        "id": "v2ex-1242177",
         "category": "dev",
-        "title": "前端转行有什么推荐的吗？",
-        "url": "https://www.v2ex.com/t/1242147",
+        "title": "有点迷茫，还是太天真了，上线自研指纹浏览器快一个月多，一点流量都没有",
+        "url": "https://www.v2ex.com/t/1242177",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-15T06:30:25.000Z",
-        "summary": "前端这个行业嘎了吧？ 不知道现在转行有什么推荐的行业吗？我目前的想法有下面的俩： 1. 后端（ py/js + html) 2. agent 开发，跨度比较大，但是听说最近这个行业很火 3. other",
+        "publishedAt": "2026-09-15T07:49:20.000Z",
+        "summary": "目前自己开发了一款自研的指纹浏览器，但是，由于自己对于什么 SEO 以及推广不太懂，搞了一个域名上线一个月以后，一点流量都没有。 向问问大家有没有什么邪修的办法可以快速推广出去，这款浏览器目前我是将谷歌内核直接修改了，多环境指纹都隔离了，pixelscan 检测都通过了，大家下载试试看就知道了，而且实现的同步器和市面上主流的 MoreLogin 、AdsPower 等指纹浏览器是一模一样的快。 可以说，这两款的能力已经堪比企业级的指纹浏览器，定价也比较便宜，后面我还打算实现…",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "16 回复"
       },
       {
-        "id": "cn-baidu-011f053120b05642",
+        "id": "cn-baidu-e8d9b86ded1a9f7f",
         "category": "cn",
-        "title": "外籍游客爱上中国秋日深度游",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%96%E7%B1%8D%E6%B8%B8%E5%AE%A2%E7%88%B1%E4%B8%8A%E4%B8%AD%E5%9B%BD%E7%A7%8B%E6%97%A5%E6%B7%B1%E5%BA%A6%E6%B8%B8&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "平陆运河将带来哪些新变化",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%B3%E9%99%86%E8%BF%90%E6%B2%B3%E5%B0%86%E5%B8%A6%E6%9D%A5%E5%93%AA%E4%BA%9B%E6%96%B0%E5%8F%98%E5%8C%96&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "暑期落幕，秋景上线！避开暑期拥堵、赶上政策红利，大批外籍游客选择九月错峰来华，沉浸式感受秋日中国的山水风光与人文魅力，入境旅游持续升温。",
+        "summary": "9月16日，全长134.2公里的西部陆海新通道骨干工程平陆运河正式建成通航。这条新中国成立以来首条国家层面统筹建设的通江达海运河，通航后将为西南地区缩短内河出海航程560公里以上，进一步畅通中国与东盟及全球的经贸往来。",
         "badge": "热搜",
-        "signal": "7,619,092 热度"
+        "signal": "7,618,237 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85706",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49700477",
+        "id": "hn-49701004",
         "category": "dev",
-        "title": "Pion, an agent designed to run any company autonomously",
-        "url": "https://andonlabs.com/blog/why-we-built-pion",
+        "title": "iOS 27, iPadOS 27, and macOS 27",
+        "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T17:16:06.000Z",
+        "publishedAt": "2026-09-14T17:50:29.000Z",
         "badge": "HN",
-        "signal": "379 分 · 443 评论"
+        "signal": "652 分 · 744 评论"
       },
       {
-        "id": "cn-item-fe892d7087e46598",
+        "id": "cn-item-eba3ea8547cb7ad3",
         "category": "cn",
-        "title": "国家卫健委：加快托育综合服务中心建设",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-15/10696729.shtml",
+        "title": "江苏泰兴通报“百胜超市员工将地面冻品倒回冰柜”",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-15/10697005.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-15T06:57:08.000Z",
-        "summary": "中新网9月15日电 据国家卫生健康委网站消息，国家卫生健康委办公厅日前下发通知，加强托育综合服务中心有关工作。通知提到，加快托育综合服务中心建设和运营进度。",
+        "publishedAt": "2026-09-15T10:33:28.000Z",
+        "summary": "中新网9月15日电 据“泰兴市场监管”微信公众号消息，9月15日，江苏泰兴市市场监督管理局城南分局发布情况通报：2026年9月15日上午，针对网传“百胜超市员工将地面冻品倒回冰柜”的相关视频，该局执法人员立即赶赴现场，对视频反映的情况开展调查核实。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1242116",
+        "id": "v2ex-1242172",
         "category": "dev",
-        "title": "gg 手机被封了之后你们现在用什么手机卡，有什么推荐的吗",
-        "url": "https://www.v2ex.com/t/1242116",
+        "title": "icloud 土耳其区家庭套餐又又又涨价了吗",
+        "url": "https://www.v2ex.com/t/1242172",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-15T04:19:55.000Z",
-        "summary": "今天才发现手机卡被封掉了，因为发不出去短信，然后我想登录看看，发现之前注册邮箱填写错了",
+        "publishedAt": "2026-09-15T07:35:09.000Z",
+        "summary": "苹果土耳其区 iCloud+ 2TB 家庭套餐是不是又涨价了？刚收到的邮件通知。 Thank you for subscribing to iCloud+. We wanted to let you know about an upcoming change to this subscription. Apple is raising the price of this subscription from ₺399,99 per month to ₺549,99 per m…",
         "badge": "程序员",
-        "signal": "24 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-f7776e94156f20ee",
+        "id": "cn-it-b5dec470f7223287",
         "category": "cn",
-        "title": "新型脑机接口首次同步解码语言与肢体动作",
-        "url": "https://www.ithome.com/1/002/598.htm",
+        "title": "因 iOS 18 导致部分 iPhone 15 屏幕绿线，苹果遭印度消费者保护机构调查",
+        "url": "https://www.ithome.com/1/002/765.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-15T07:34:42.000Z",
-        "summary": "IT之家 9 月 15 日消息，美国国立卫生研究院（NIH）昨日（9 月 14 日）发布博文，宣布成功研发新型脑机接口，可以同时解读瘫痪患者的预期语言和上肢动作， 让患者能够控制一个能同步说话和运动的全身虚拟化身。 该研究由加州大学旧金山分校完成，成果发表于《自然 · 神经科学》。 IT之家援引博文介绍，此前的脑机接口只能单独实现语音或肢体运动的解码，一旦两者结合，性能便会下降。而最新脑机系统可同时处理两类表达，研究人员称， 这是首次让两种交流模式在同一系统中同步输出。 在…",
+        "publishedAt": "2026-09-15T12:41:14.000Z",
+        "summary": "IT之家 9 月 15 日消息，据外媒 Appleinsider 今天报道，印度中央消费者保护局（CCPA）已对苹果公司发起调查，重点审查其软件保修政策，并指控苹果对消费者收取过高维修费用。 据报道，本次调查起因源自 2024 年的 iOS 18 系统。 当时部分 iPhone 15 用户升级系统后 ， 屏幕出现绿色 / 粉色或白色线条 。这些消费者找到苹果售后时，却被要求支付 27,900 卢比 （IT之家注：现汇率约合 1,959 元人民币） 维修显示屏。 印度消费者保…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49693690",
+        "id": "hn-49710883",
         "category": "dev",
-        "title": "When code is a maze, smart developers make maps (2025)",
-        "url": "https://medium.com/@simonsmartiom/when-code-is-a-maze-smart-developers-make-maps-fbc452a48c1b",
+        "title": "25 Years of Mass Surveillance Is Enough",
+        "url": "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T08:35:30.000Z",
+        "publishedAt": "2026-09-15T11:26:48.000Z",
         "badge": "HN",
-        "signal": "20 分 · 25 评论"
+        "signal": "51 分 · 3 评论"
       },
       {
-        "id": "cn-baidu-955d1da0465968c1",
+        "id": "cn-baidu-8641bec026d0f424",
         "category": "cn",
-        "title": "本科生扎堆回炉读技校",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%AC%E7%A7%91%E7%94%9F%E6%89%8E%E5%A0%86%E5%9B%9E%E7%82%89%E8%AF%BB%E6%8A%80%E6%A0%A1&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "景区称30岁以上老人免费领登山杖",
+        "url": "https://www.baidu.com/s?wd=%E6%99%AF%E5%8C%BA%E7%A7%B030%E5%B2%81%E4%BB%A5%E4%B8%8A%E8%80%81%E4%BA%BA%E5%85%8D%E8%B4%B9%E9%A2%86%E7%99%BB%E5%B1%B1%E6%9D%96&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "8‑9月多地开设大学生技师班，大批高校毕业生回炉进修技能。各地通过校企协同办学，学员可考取技师证书，享受相关人才政策。专家建议高校深化产教融合，优化专业设置，提升人才培养与产业岗位的匹配度。",
+        "summary": "9月15日，江西龙虎山景区回应“30岁以上老人免费领登山杖”活动引争议，称活动属实且登山杖已发完，定义30岁为老人无恶意。此前，该活动因将30岁定义为老人引发网友质疑炒作。",
         "badge": "热搜",
-        "signal": "7,523,193 热度"
+        "signal": "7,524,378 热度"
       },
       {
         "id": "github-advisory-ghsa-h8m9-jgf8-vwvp",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242094",
+        "id": "v2ex-1242163",
         "category": "dev",
-        "title": "求教， claude 环境搭建",
-        "url": "https://www.v2ex.com/t/1242094",
+        "title": "[开源] 做了一个 Go Runtime 的 Python Agent SDK，附一轮与 Claude Agent SDK 的对照测试",
+        "url": "https://www.v2ex.com/t/1242163",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-15T03:24:37.000Z",
-        "summary": "gpt 降智的没法用了，久闻 A/封号策略，但耐不住确实模型有点东西，遂想搭建一套稳定的 claude 环境，列位诸公可否分享一下各自的环境和使用习惯，怎样减少封号概率 顺路收集一下信息，各位佬有自用 gpt5x/20x ，不做任何分发行为，结果被降智了的吗",
+        "publishedAt": "2026-09-15T07:21:02.000Z",
+        "summary": "最近给 Nexus 的 Agent Runtime 做了 Python 封装，叫 nexus-agent-sdk-python 。 Python 侧负责接入，实际调用模型、执行工具和管理上下文的是 Go 写的 nxs 。可以用它给自己的程序接一个能读文件、改代码、跑命令的 Agent ，也可以接自定义工具。 支持单次任务和多轮会话，提供 MCP 、Hooks 和工具权限配置。模型可以通过 Anthropic 兼容接口接入，也支持 OpenAI Chat Completion…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -504,34 +504,34 @@
     },
     "items": [
       {
-        "id": "github-c4394ed11770f8b3",
-        "rank": 1,
-        "name": "JustVugg/colibri",
-        "url": "https://github.com/JustVugg/colibri",
-        "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
-        "language": "C",
-        "stars": 32669,
-        "starsToday": 2173
-      },
-      {
         "id": "github-c8f5678810f1cfbe",
-        "rank": 2,
+        "rank": 1,
         "name": "alibaba/open-code-review",
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 26575,
-        "starsToday": 1571
+        "stars": 27266,
+        "starsToday": 2751
       },
       {
-        "id": "github-7462aa6666311858",
+        "id": "github-c4394ed11770f8b3",
+        "rank": 2,
+        "name": "JustVugg/colibri",
+        "url": "https://github.com/JustVugg/colibri",
+        "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "language": "C",
+        "stars": 33090,
+        "starsToday": 2035
+      },
+      {
+        "id": "github-167687c65646f683",
         "rank": 3,
-        "name": "multimodal-art-projection/YuE",
-        "url": "https://github.com/multimodal-art-projection/YuE",
-        "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
-        "language": "Python",
-        "stars": 8674,
-        "starsToday": 559
+        "name": "ever-co/ever-gauzy",
+        "url": "https://github.com/ever-co/ever-gauzy",
+        "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+        "language": "TypeScript",
+        "stars": 6323,
+        "starsToday": 632
       },
       {
         "id": "github-90d09492a98e7644",
@@ -540,70 +540,70 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 29881,
-        "starsToday": 2776
+        "stars": 30257,
+        "starsToday": 2081
       },
       {
-        "id": "github-1a12697fc72045d5",
+        "id": "github-836a3dc076ac1b5d",
         "rank": 5,
-        "name": "666ghj/MiroFish",
-        "url": "https://github.com/666ghj/MiroFish",
-        "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
-        "language": "Python",
-        "stars": 73447,
-        "starsToday": 560
+        "name": "Homebrew/BrewUI",
+        "url": "https://github.com/Homebrew/BrewUI",
+        "description": "📺 Homebrew's official macOS GUI",
+        "language": "Swift",
+        "stars": 1062,
+        "starsToday": 388
       },
       {
-        "id": "github-7694a26ca72c822a",
+        "id": "github-f6adaf1dfd8ddc19",
         "rank": 6,
-        "name": "Panniantong/Agent-Reach",
-        "url": "https://github.com/Panniantong/Agent-Reach",
-        "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
-        "language": "Python",
-        "stars": 81656,
-        "starsToday": 651
+        "name": "melgarafael/DeskcommCRM",
+        "url": "https://github.com/melgarafael/DeskcommCRM",
+        "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "language": "TypeScript",
+        "stars": 2610,
+        "starsToday": 408
       },
       {
-        "id": "github-a7e33a98d3d7a83e",
+        "id": "github-04f60e304eb1335d",
         "rank": 7,
-        "name": "asgeirtj/system_prompts_leaks",
-        "url": "https://github.com/asgeirtj/system_prompts_leaks",
-        "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
-        "language": "JavaScript",
-        "stars": 67003,
-        "starsToday": 764
-      },
-      {
-        "id": "github-06def2a3a8acb128",
-        "rank": 8,
-        "name": "rlaope/oh-my-hermes",
-        "url": "https://github.com/rlaope/oh-my-hermes",
-        "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
-        "language": "Python",
-        "stars": 2259,
-        "starsToday": 77
-      },
-      {
-        "id": "github-f277de9a2cd3a372",
-        "rank": 9,
-        "name": "localsend/localsend",
-        "url": "https://github.com/localsend/localsend",
-        "description": "An open-source cross-platform alternative to AirDrop",
-        "language": "Dart",
-        "stars": 91506,
-        "starsToday": 251
-      },
-      {
-        "id": "github-3851ef628895bd33",
-        "rank": 10,
-        "name": "dani-garcia/vaultwarden",
-        "url": "https://github.com/dani-garcia/vaultwarden",
-        "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+        "name": "alphaXiv/OpenResearch",
+        "url": "https://github.com/alphaXiv/OpenResearch",
+        "description": "Turn your coding agents into research agents",
         "language": "Rust",
-        "stars": 67598,
-        "starsToday": 115
+        "stars": 2924,
+        "starsToday": 568
+      },
+      {
+        "id": "github-6ef4c515500f18cb",
+        "rank": 8,
+        "name": "NationalSecurityAgency/ghidra",
+        "url": "https://github.com/NationalSecurityAgency/ghidra",
+        "description": "Ghidra is a software reverse engineering (SRE) framework",
+        "language": "Java",
+        "stars": 76296,
+        "starsToday": 700
+      },
+      {
+        "id": "github-7c9b0304bc64c2fd",
+        "rank": 9,
+        "name": "danny-avila/LibreChat",
+        "url": "https://github.com/danny-avila/LibreChat",
+        "description": "Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active",
+        "language": "TypeScript",
+        "stars": 43641,
+        "starsToday": 286
+      },
+      {
+        "id": "github-70b433eb5304b395",
+        "rank": 10,
+        "name": "pacifio/atlas",
+        "url": "https://github.com/pacifio/atlas",
+        "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+        "language": "Rust",
+        "stars": 4472,
+        "starsToday": 1091
       }
     ],
-    "updatedAt": "2026-09-15T07:45:55.434Z"
+    "updatedAt": "2026-09-15T12:49:18.735Z"
   }
 }

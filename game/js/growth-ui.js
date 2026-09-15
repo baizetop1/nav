@@ -1,6 +1,6 @@
-import { batchButtons } from './batch-ui.js?v=0.24.0';
-import { equipmentLoot } from './camp-development-ui.js?v=0.24.0';
-import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.24.0';
+import { batchButtons } from './batch-ui.js?v=0.26.0';
+import { equipmentLoot } from './camp-development-ui.js?v=0.26.0';
+import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.26.0';
 const attr={hp:'气血',attack:'攻击',defense:'防御',speed:'速度',strategy:'谋略'};
 export function dungeonMountLoot(s,d,id,esc){
   const heroes=d.heroes.filter(h=>h.mount.dungeon===id);
@@ -40,7 +40,7 @@ export function heroGrowth(s,d,h,esc,btn){
     return `<section class="growth-skill"><h3>${esc(skill.name)} <span class="badge">${({base:skill.type==='passive'?'本领':'基础招',advanced:'进阶招',bond:'人骑羁绊'})[t.tier]} · ${level}/5 级</span></h3>
       <p>${esc(skill.description)}</p><p class="meta">${esc(power)}${skill.cost?` · 怒气 ${skill.cost} · 调息 ${t.tier==='advanced'?7:5}秒`:''} · ${reason?'未生效：'+esc(reason):'已习得 · 生效中'}</p>
       <p class="note">解锁：${t.level}级 · ${esc(t.label)}${t.flag?'（也可建成三级聚义厅）':''}。升级后数值效果每级增加基础值的 8%；主动招式的持续时间、怒气消耗不变。羁绊的流血、破甲、眩晕持续时间随等级增加，清除负面状态仍为一种。</p>
-      ${owned&&level<5?`<p class="note">下一级消耗：${esc(price(q.cost))}。${q.reason?esc(q.reason)+'。':''}</p>${btn('升级「'+skill.name+'」',{type:'skillUpgrade',id},'secondary',!!q.reason)}`:''}
+      ${owned&&level<5?`<p class="note">下一级主效果：${power} → ${t.profile==='protect'?(40*(1+.08*level)).toFixed(1)+'%':(trainedSkill(skill,level+1).effect.rate*100).toFixed(1)+'%'}。升级保持原技能机制。</p><p class="note">下一级消耗：${esc(price(q.cost))}。${q.reason?esc(q.reason)+'。':''}</p>${btn('升级「'+skill.name+'」',{type:'skillUpgrade',id},'secondary',!!q.reason)}`:''}
     </section>`;
   }).join('');
   const mountActions=owned?(m?['mountFeed','mountRank','mountRide']:['mountAdopt']).map(type=>{

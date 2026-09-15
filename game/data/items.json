@@ -4164,5 +4164,83 @@
     "price": 0,
     "effect": {},
     "description": "在「野猪林传闻历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落，无必得保底。晁盖入寨后可凭契领骑，不另收碎银。"
+  },
+  {
+    "id": "wangjin_token",
+    "name": "王进信物",
+    "type": "token",
+    "hero": "wangjin",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "王进外传委托的信物，集齐十枚后在好汉页邀请。"
+  },
+  {
+    "id": "wangjin_manual",
+    "name": "王进专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "王进的专属武学书，可在养成界面合成。"
+  },
+  {
+    "id": "wangjin_mount_contract",
+    "name": "青骢护寨坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "王进专属坐骑契，野猪林传闻历练独立 20% 概率掉落，非必得。"
+  },
+  {
+    "id": "hucheng_token",
+    "name": "扈成信物",
+    "type": "token",
+    "hero": "hucheng",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "扈成外传委托的信物，集齐十枚后在好汉页邀请。"
+  },
+  {
+    "id": "hucheng_manual",
+    "name": "扈成专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "扈成的专属武学书，可在养成界面合成。"
+  },
+  {
+    "id": "hucheng_mount_contract",
+    "name": "青骢护寨坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "扈成专属坐骑契，野猪林传闻历练独立 20% 概率掉落，非必得。"
+  },
+  {
+    "id": "luantingyu_token",
+    "name": "栾廷玉信物",
+    "type": "token",
+    "hero": "luantingyu",
+    "need": 10,
+    "price": 0,
+    "effect": {},
+    "description": "栾廷玉外传委托的信物，集齐十枚后在好汉页邀请。"
+  },
+  {
+    "id": "luantingyu_manual",
+    "name": "栾廷玉专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "栾廷玉的专属武学书，可在养成界面合成。"
+  },
+  {
+    "id": "luantingyu_mount_contract",
+    "name": "青骢护寨坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "栾廷玉专属坐骑契，野猪林传闻历练独立 20% 概率掉落，非必得。"
   }
 ]

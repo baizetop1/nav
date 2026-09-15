@@ -742,7 +742,9 @@
       }
     ],
     "actions": [],
-    "stories": [],
+    "stories": [
+      "external_wangjin"
+    ],
     "dungeons": [
       "spirit_trial",
       "immortal_trial"
@@ -1940,7 +1942,8 @@
     ],
     "actions": [],
     "stories": [
-      "v5_aid"
+      "v5_aid",
+      "external_hucheng"
     ],
     "dungeons": [],
     "chapter": "volume_five"
@@ -2013,13 +2016,189 @@
             }
           ]
         }
+      },
+      {
+        "target": "v6_camp",
+        "condition": {
+          "flag": "volume_five_complete"
+        }
       }
     ],
     "actions": [],
     "stories": [
-      "v5_settle"
+      "v5_settle",
+      "external_luantingyu"
     ],
     "dungeons": [],
     "chapter": "volume_five"
+  },
+  {
+    "id": "v6_camp",
+    "name": "高唐行营",
+    "region": "高唐救援",
+    "type": "area",
+    "description": "第五卷结束后可来整备。救人须备好军粮、医护，再逐步打通城外与牢城。",
+    "links": [
+      {
+        "target": "v5_store",
+        "condition": null
+      },
+      {
+        "target": "v6_gate",
+        "condition": {
+          "flag": "v6_prepared"
+        }
+      },
+      {
+        "target": "v6_hermit",
+        "condition": {
+          "flag": "v6_prepared"
+        }
+      },
+      {
+        "target": "v6_road",
+        "condition": {
+          "flag": "v6_outer_done"
+        }
+      },
+      {
+        "target": "v6_prison",
+        "condition": {
+          "flag": "v6_outer_done"
+        }
+      },
+      {
+        "target": "v6_court",
+        "condition": {
+          "flag": "v6_prison_done"
+        }
+      },
+      {
+        "target": "v6_refuge",
+        "condition": {
+          "flag": "v6_final_done"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v6_prepare"
+    ],
+    "dungeons": [],
+    "chapter": "volume_six"
+  },
+  {
+    "id": "v6_gate",
+    "name": "高唐城外",
+    "region": "高唐救援",
+    "type": "area",
+    "description": "守军封锁入城道路，先夺外哨。",
+    "links": [
+      {
+        "target": "v6_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v6_outer"
+    ],
+    "dungeons": [],
+    "chapter": "volume_six"
+  },
+  {
+    "id": "v6_hermit",
+    "name": "郊外静庐",
+    "region": "高唐救援",
+    "type": "area",
+    "description": "可选：辨明烟阵、救治受困乡人，终战敌军攻击降低 15%。",
+    "links": [
+      {
+        "target": "v6_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v6_scout"
+    ],
+    "dungeons": [],
+    "chapter": "volume_six"
+  },
+  {
+    "id": "v6_road",
+    "name": "东路援道",
+    "region": "高唐救援",
+    "type": "area",
+    "description": "可选：拦截援骑，终战不再出现高唐援骑。",
+    "links": [
+      {
+        "target": "v6_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v6_cut"
+    ],
+    "dungeons": [],
+    "chapter": "volume_six"
+  },
+  {
+    "id": "v6_prison",
+    "name": "牢城外院",
+    "region": "高唐救援",
+    "type": "area",
+    "description": "外哨得胜后可攻入，打通接应柴进的道路。",
+    "links": [
+      {
+        "target": "v6_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v6_rescue"
+    ],
+    "dungeons": [],
+    "chapter": "volume_six"
+  },
+  {
+    "id": "v6_court",
+    "name": "高唐内城",
+    "region": "高唐救援",
+    "type": "area",
+    "description": "高廉率亲兵固守，可打断蓄势。先准备、再合围。",
+    "links": [
+      {
+        "target": "v6_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v6_final"
+    ],
+    "dungeons": [],
+    "chapter": "volume_six"
+  },
+  {
+    "id": "v6_refuge",
+    "name": "城南接应点",
+    "region": "高唐救援",
+    "type": "area",
+    "description": "确认救援与伤员安置后结束第六卷，后续仍可在地图自由行动。",
+    "links": [
+      {
+        "target": "v6_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v6_settle"
+    ],
+    "dungeons": [],
+    "chapter": "volume_six"
   }
 ]

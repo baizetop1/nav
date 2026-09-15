@@ -275,7 +275,7 @@
         }
       }
     ],
-    "ending": "【三打祝家庄】第五卷完。道路、援军与粮草的准备，都已化作这一战的结果。百姓归居，队伍收整。第六卷《高唐救援》目前仅为后续预告，尚未开放。",
+    "ending": "【三打祝家庄】第五卷完。百姓归居，队伍收整。可从庄后粮仓进入第六卷《高唐救援》。",
     "effects": [
       {
         "type": "item",
@@ -291,6 +291,67 @@
         "type": "item",
         "id": "spirit_essence",
         "amount": 8
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_six",
+    "title": "高唐救援",
+    "number": 6,
+    "entry": "v6_camp",
+    "condition": {
+      "flag": "volume_five_complete"
+    },
+    "completeFlag": "volume_six_complete",
+    "requirements": [
+      {
+        "label": "行营整备",
+        "condition": {
+          "flag": "v6_prepared"
+        }
+      },
+      {
+        "label": "夺取外哨",
+        "condition": {
+          "flag": "v6_outer_done"
+        }
+      },
+      {
+        "label": "打通牢城",
+        "condition": {
+          "flag": "v6_prison_done"
+        }
+      },
+      {
+        "label": "合围高唐",
+        "condition": {
+          "flag": "v6_final_done"
+        }
+      },
+      {
+        "label": "接应归人",
+        "condition": {
+          "flag": "v6_settled"
+        }
+      }
+    ],
+    "ending": "【高唐救援】第六卷完。城南归人已安顿，军中核清伤亡，功勋与卷终酬劳一并记入。可继续培养好汉、完成未做的外传与轮换历练。第七卷尚未开放。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 4
+      },
+      {
+        "type": "item",
+        "id": "immortal_seal",
+        "amount": 2
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 6
       }
     ],
     "baseLevel": 1

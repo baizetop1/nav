@@ -1,5 +1,5 @@
-import { siegePreparation } from './volume-five-data.js?v=0.24.0';
-import { chapterBattlePlan } from './volume-three.js?v=0.24.0';
+import { siegePreparation } from './volume-five-data.js?v=0.26.0';
+import { chapterBattlePlan } from './volume-three.js?v=0.26.0';
 const steps=[['整备行营','v5_prepared','v5_camp'],['辨清迷径','v5_route_known','v5_path'],['一打试阵','v5_first_done','v5_outer'],['断援或断粮','cut','v5_east'],['二打破门','v5_second_done','v5_gate'],['三打内院','v5_third_done','v5_court'],['安置归人','v5_settled','v5_store']];
 const done=(s,f)=>f==='cut'?s.progress.flags.v5_east_cut||s.progress.flags.v5_west_cut:s.progress.flags[f];
 export function siegeSummary(s){return '<section class="siege-summary"><h3>三打内院 · 攻庄准备</h3><p class="note">以下准备只改变三打内院。断援、断粮至少完成一条即可推进；两路和济困均可在终战前补做。祝彪属骑军，可考虑弓军克制、治疗续航，并在首领蓄势时打断。</p>'+siegePreparation(s).map(p=>'<p class="note"><b>'+p.name+'</b> · '+(p.done?'已完成：':'未完成：')+p.effect+'</p>').join('')+'</section>';}

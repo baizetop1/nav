@@ -1,10 +1,10 @@
-import { isExternal } from './roster.js?v=0.24.0';
-import { experienceResult } from './progression.js?v=0.24.0';
-import { applySets } from './equipment-sets.js?v=0.24.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.24.0';
-import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.24.0';
-import { heroRank } from './map.js?v=0.24.0';
-import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.24.0';
+import { isExternal } from './roster.js?v=0.26.0';
+import { experienceResult } from './progression.js?v=0.26.0';
+import { applySets } from './equipment-sets.js?v=0.26.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.26.0';
+import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.26.0';
+import { heroRank } from './map.js?v=0.26.0';
+import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.26.0';
 export function knowHero(state, id, status, data) {
   const hero = state.heroes[id];
   if (heroRank[status] > heroRank[hero.status]) { hero.status = status; journal(state, `${data.by.heroes[id].name}：${({heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'})[status]}。`); }

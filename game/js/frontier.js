@@ -1,9 +1,10 @@
-import { workerGrowth } from './stewardship.js?v=0.24.0';
-import { productionAction } from './production.js?v=0.24.0';
-import { HERO_SPECIALTIES } from './strategy-data.js?v=0.24.0';
-import { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME } from './frontier-data.js?v=0.24.0';
-import { hasOwn, requireRule, journal } from './utils.js?v=0.24.0';
-import { hasHelper, HELPERS } from './helpers.js?v=0.24.0';
+import { deployedTroops } from './logistics.js?v=0.26.0';
+import { workerGrowth } from './stewardship.js?v=0.26.0';
+import { productionAction } from './production.js?v=0.26.0';
+import { HERO_SPECIALTIES } from './strategy-data.js?v=0.26.0';
+import { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME } from './frontier-data.js?v=0.26.0';
+import { hasOwn, requireRule, journal } from './utils.js?v=0.26.0';
+import { hasHelper, HELPERS } from './helpers.js?v=0.26.0';
 export { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME };
 export function beginFrontier(s){requireRule(s.camp,'先建立寨子。');requireRule(!s.frontier,'寨务生产已经开办。');s.frontier={version:1,lastAt:s.clock,stations:Object.fromEntries(Object.keys(STATIONS).map(id=>[id,{worker:null,carry:0,bank:0}])),posts:{}};journal(s,'【经营拓土】开办农田、伐木与冶铁生产。半小时为一批，最多累计八小时；据点图已标出各路敌情。');}
 export const personOwned=(s,token)=>typeof token==='string'&&(token.startsWith('hero:')?s.heroes[token.slice(5)]?.status==='owned':token.startsWith('helper:')&&HELPERS.some(h=>'helper:'+h.id===token)&&hasHelper(s,token.slice(7)));
@@ -26,7 +27,7 @@ export function accrueFrontier(s,d){const f=s.frontier;if(!f)return;const elapse
     if(guarded)p.safeAt=s.clock;else if(s.clock>=p.safeAt+SAFE_TIME){p.threat=true;journal(s,`【据点告急】${POSTS[id].name}补给线遭袭，暂缓生产与通行。派出队伍解围后恢复，已积累物资保留。`);}
   }
 }
-export function postPlan(s,id){const m=POSTS[id],p=s.frontier?.posts[id],n=s.camp?.mode==='army'?Math.min(s.camp.troops,s.camp.deployment):0,food=6+Math.ceil(n/2);let reason=!m?'没有此据点':!s.frontier?'先在寨子开办经营拓土':p&&!p.threat?'已经控制，暂时无需出征':s.camp.buildings.hall<m.hall?`聚义厅需要 ${m.hall} 级`:!s.team.length?'请安排出阵好汉':Math.max(...s.team.map(id=>s.heroes[id].level))<m.level?`队中一人需要 ${m.level} 级`:!p&&m.parents.length&&!m.parents.some(id=>s.frontier.posts[id]&&!s.frontier.posts[id].threat)?'须先打通任一前置据点的补给路线':s.player.stamina<10?'体力不足':s.camp.mode==='army'&&!n?'请先募兵或改为独行':s.camp.food<food?'粮草不足':'';return {reason,troops:n,food,kind:p?'defend':'capture',model:m};}
+export function postPlan(s,id){const m=POSTS[id],p=s.frontier?.posts[id],n=deployedTroops(s),food=6+Math.ceil(n/2);let reason=!m?'没有此据点':!s.frontier?'先在寨子开办经营拓土':p&&!p.threat?'已经控制，暂时无需出征':s.camp.buildings.hall<m.hall?`聚义厅需要 ${m.hall} 级`:!s.team.length?'请安排出阵好汉':Math.max(...s.team.map(id=>s.heroes[id].level))<m.level?`队中一人需要 ${m.level} 级`:!p&&m.parents.length&&!m.parents.some(id=>s.frontier.posts[id]&&!s.frontier.posts[id].threat)?'须先打通任一前置据点的补给路线':s.player.stamina<10?'体力不足':s.camp.mode==='army'&&!n?'请先募兵或改为独行':s.camp.food<food?'粮草不足':'';return {reason,troops:n,food,kind:p?'defend':'capture',model:m};}
 export function enterPost(s,id){const q=postPlan(s,id);requireRule(!q.reason,q.reason);s.player.stamina-=10;s.camp.food-=q.food;return q;}
 const amount=(s,id)=>id==='silver'?s.player.silver:['wood','food'].includes(id)?s.camp[id]:s.inventory[id]||0;
 function add(s,id,n){n=Math.max(0,Math.min(n,10000000-amount(s,id)));if(id==='silver')s.player.silver+=n;else if(['wood','food'].includes(id))s.camp[id]+=n;else s.inventory[id]=(s.inventory[id]||0)+n;return n;}

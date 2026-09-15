@@ -642,8 +642,7 @@
             "type": "object",
             "required": [
               "kind",
-              "rate",
-              "duration"
+              "rate"
             ],
             "additionalProperties": false,
             "properties": {
@@ -651,7 +650,14 @@
                 "type": "string"
               },
               "rate": {
-                "type": "number"
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ]
               },
               "duration": {
                 "type": "integer"
@@ -877,6 +883,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "description": {
+            "type": "string"
           }
         }
       }
@@ -2843,7 +2852,6 @@
                       "required": [
                         "id",
                         "label",
-                        "condition",
                         "finish",
                         "effects"
                       ],
@@ -2907,6 +2915,18 @@
                               "amount": {
                                 "type": "integer"
                               }
+                            }
+                          }
+                        },
+                        "cost": {
+                          "type": "object",
+                          "required": [
+                            "merit"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "merit": {
+                              "type": "integer"
                             }
                           }
                         }
@@ -3354,6 +3374,192 @@
                               "amount": {
                                 "type": "integer"
                               }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "start": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "condition",
+                        "finish",
+                        "effects"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "condition": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "required": [
+                                "all"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "all": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "required": [
+                                      "campBuilding",
+                                      "count"
+                                    ],
+                                    "additionalProperties": false,
+                                    "properties": {
+                                      "campBuilding": {
+                                        "type": "string"
+                                      },
+                                      "count": {
+                                        "type": "integer"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "status": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "cost": {
+                          "type": "object",
+                          "required": [
+                            "items"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "herb"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "herb": {
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "fight": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "next",
+                        "battle"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "battle": {
+                          "type": "object",
+                          "required": [
+                            "enemies",
+                            "scale"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "enemies": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "scale": {
+                              "type": "integer"
                             }
                           }
                         }
