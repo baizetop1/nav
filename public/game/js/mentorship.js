@@ -5,7 +5,7 @@ export const MENTOR_LIMIT=3;
 export function mentorshipQuote(s,d,mentor,student){
   const m=s.heroes[mentor],h=s.heroes[student],used=s.daily.counters.heroMentor||0;
   const cost={stamina:5,food:20,silver:100},target=m?Math.min(d.config.balance.heroLevelCap,m.level-3):0;
-  let reason=!s.camp?'先建立寨子。':s.camp.buildings.hall<2||s.camp.buildings.barracks<1?'需要聚义厅 2 级、兵营 1 级。':!d.by.heroes[mentor]||m?.status!=='owned'?'请选择已入寨的教习。':!d.by.heroes[student]||h?.status!=='owned'?'请选择已入寨的学员。':mentor===student?'教习与学员须为不同好汉。':m.level<10?'教习须达到 10 级。':h.level>=target?'学员须低于教习至少 4 级；传习最多追至教习等级减 3。':s.battle||s.scheme||s.event?'先结束当前交战、计策或际遇。':s.affairs?.mission&&[mentor,student].includes(s.affairs.mission.hero)?'外派好汉须先接回，再参加传习。':used>=MENTOR_LIMIT?'今日三次传习已用完。':s.player.stamina<cost.stamina?'体力不足，需要 5 点。':s.camp.food<cost.food?'粮草不足，需要 20。':s.player.silver<cost.silver?'碎银不足，需要 100。':'';
+  let reason=!s.camp?'先建立寨子。':s.camp.buildings.hall<2||s.camp.buildings.barracks<1?'需要聚义厅 2 级、兵营 1 级。':!d.by.heroes[mentor]||m?.status!=='owned'?'请选择已入寨的教习。':!d.by.heroes[student]||h?.status!=='owned'?'请选择已入寨的学员。':mentor===student?'教习与学员须为不同好汉。':m.level<10?'教习须达到 10 级。':h.level>=target?'学员须低于教习至少 4 级；传习最多追至教习等级减 3。':s.battle||s.scheme||s.event?'先结束当前交战、计策或际遇。':(s.affairs?.mission&&[mentor,student].includes(s.affairs.mission.hero))||s.realm?.squad?.team.some(id=>[mentor,student].includes(id))?'外派好汉须先接回，再参加传习。':used>=MENTOR_LIMIT?'今日三次传习已用完。':s.player.stamina<cost.stamina?'体力不足，需要 5 点。':s.camp.food<cost.food?'粮草不足，需要 20。':s.player.silver<cost.silver?'碎银不足，需要 100。':'';
   const matched=!!(d.by.heroes[mentor]&&d.by.heroes[student]&&d.by.heroes[mentor].type===d.by.heroes[student].type);
   let amount=0,next=null,rows=[];
   if(!reason){

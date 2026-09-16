@@ -1,6 +1,6 @@
-import { savedTime, importComparison } from './save-comparison.js?v=0.29.0';
-import { emptySlot } from './slots.js?v=0.29.0';
-import { slotNumber } from './portable.js?v=0.29.0';
+import { savedTime, importComparison } from './save-comparison.js?v=0.29.3';
+import { emptySlot } from './slots.js?v=0.29.3';
+import { slotNumber } from './portable.js?v=0.29.3';
 import { icon } from './icons.js?v=0.29.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const button=(label,type,extra={},symbol='save',disabled=false)=>`<button type="button" class="secondary with-icon" data-command="${esc(JSON.stringify({type,...extra}))}" ${disabled?'disabled':''}>${icon(symbol)}<span>${esc(label)}</span></button>`;

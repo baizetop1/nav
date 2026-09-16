@@ -1,7 +1,7 @@
 import { clone } from './utils.js?v=0.29.0';
-import { AFFAIRS } from './affairs.js?v=0.29.0';
+import { AFFAIRS } from './affairs.js?v=0.29.3';
 import { attributes } from './hero.js?v=0.29.0';
-import { itemAction } from './item.js?v=0.29.0';
+import { itemAction } from './item.js?v=0.29.3';
 import { equippedSets } from './equipment-sets.js?v=0.29.0';
 export function affairsPanel(s,d,btn){const f=s.affairs;if(!f?.pending&&!f?.mission)return '<p class="note">每完成三次寨务，可能有商队、乡人或匪患来报；未处理的来报会保留。</p>';
  const names={silver:'碎银',food:'粮草',wood:'木材',prestige:'威望'},show=r=>Object.entries(r).flatMap(([k,n])=>k==='items'?Object.entries(n).map(([id,v])=>d.by.items[id].name+' '+v):(names[k]||k)+' '+n).join(' · ');

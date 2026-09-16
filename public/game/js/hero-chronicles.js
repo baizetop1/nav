@@ -1,5 +1,5 @@
 import {EXTRA_CHRONICLES} from './talents.js?v=0.29.0';
-import { grant } from './item.js?v=0.29.0';
+import { grant } from './item.js?v=0.29.3';
 import { count, requireRule, journal } from './utils.js?v=0.29.0';
 import { battleTerrain } from './strategy-data.js?v=0.29.0';
 const wins=(s,id)=>s.stats['hero_wins_'+id]||0;

@@ -14,7 +14,7 @@ for(const view of ['map','heroes','bag','recruit','quests','chronicle','save','f
   assert.ok(html.includes('data-view="save"'),'Save access is always available');
 }
 const chronicle=frame('chronicle');for(const label of ['山寨概况与眼下线索','历练得胜','威望达到一百五十','最近记事'])assert.ok(chronicle.includes(label));
-assert.ok(frame('heroes').includes('点将录选择好汉'));assert.ok(frame('heroes').includes('0<small> / 108 入寨'));
+assert.ok(frame('heroes').includes('梁山点将录'));assert.ok(frame('heroes').includes('0<small> / 108 入寨'));
 for(const location of ['recruit','forge']){
   const s={...state,location};assert.ok(!frame('map',s).includes('type&quot;:&quot;recruit'));
   assert.ok(!frame('map',s).includes('type&quot;:&quot;strengthen'));assert.ok(frame('map',s).includes(location==='recruit'?'进入招贤':'进入打造与强化'));
@@ -24,7 +24,9 @@ const known=structuredClone(state);known.location='recruit';for(const h of Objec
 const selected=frame('recruit',known);assert.ok(selected.includes('id="recruit-target"'));assert.equal((selected.match(/type&quot;:&quot;recruit&quot;/g)||[]).length,2,'Only ordinary plus one selected exclusive action');
 assert.ok(selected.includes('id&quot;:&quot;wusong'));assert.ok(frame('recruit',known,{recruitTarget:'linchong'}).includes('id&quot;:&quot;linchong'));
 assert.ok(frame('recruit',known,{recruitTarget:'missing'}).includes('id&quot;:&quot;wusong'),'Invalid UI target safely falls back');
-for(const id of ['equipment','materials','shop'])assert.ok(frame('bag').includes('data-fold="'+id+'"'));
+assert.ok(frame('bag',state,{pageSections:{bag:'equipment'}}).includes('class="equipment-inventory"'));
+for(const [id,section]of [['materials','craft'],['shop','shop']])assert.ok(frame('bag',state,{pageSections:{bag:section}}).includes('data-fold="'+id+'"'));
+assert.ok(!frame('bag').includes('class="equipment-inventory"'));
 assert.ok(frame('save').includes('data-fold="reset"'));assert.ok(frame('quests').includes('data-fold="other-quests"'));
 const notice=frame('heroes',state,{notice:'保存阵容 <已完成>'});assert.ok(notice.includes('保存阵容 &lt;已完成&gt;'));
 for(const view of ['map','recruit','chronicle','save']){

@@ -1,7 +1,8 @@
-import { MENTOR_LIMIT } from './mentorship.js?v=0.29.0';
+import { MENTOR_LIMIT } from './mentorship.js?v=0.29.3';
 export function mentorshipPanel(s,d,esc,btn){
-  const owned=d.heroes.filter(h=>s.heroes[h.id].status==='owned'),mentors=owned.filter(h=>s.heroes[h.id].level>=10).sort((a,b)=>s.heroes[b.id].level-s.heroes[a.id].level),students=[...owned].sort((a,b)=>s.heroes[a.id].level-s.heroes[b.id].level),mentor=mentors[0]?.id,student=students.find(h=>h.id!==mentor)?.id;
-  const options=(list,selected)=>'<option value="">请选择</option>'+list.map(h=>'<option value="'+h.id+'" '+(h.id===selected?'selected':'')+'>'+esc(h.name)+' · '+s.heroes[h.id].level+' 级'+(s.affairs?.mission?.hero===h.id?'（外派中）':'')+'</option>').join('');
+  const away=id=>s.affairs?.mission?.hero===id||s.realm?.squad?.team.includes(id);
+  const owned=d.heroes.filter(h=>s.heroes[h.id].status==='owned'),mentors=owned.filter(h=>s.heroes[h.id].level>=10).sort((a,b)=>s.heroes[b.id].level-s.heroes[a.id].level),students=[...owned].sort((a,b)=>s.heroes[a.id].level-s.heroes[b.id].level),mentor=mentors.find(h=>!away(h.id))?.id,student=students.find(h=>h.id!==mentor&&!away(h.id))?.id;
+  const options=(list,selected)=>'<option value="">请选择</option>'+list.map(h=>'<option value="'+h.id+'" '+(h.id===selected?'selected':'')+(away(h.id)?' disabled':'')+'>'+esc(h.name)+' · '+s.heroes[h.id].level+' 级'+(away(h.id)?'（外派中）':'')+'</option>').join('');
   return '<section id="camp-mentorship"><details class="fold-section" data-fold="mentorship"><summary>演武传习 · 老将带新人 · 今日 '+(s.daily.counters.heroMentor||0)+' / '+MENTOR_LIMIT+'</summary><p>选一位高等级好汉作教习，让新入寨的同伴尽快跟上阵容。</p><p class="note">聚义厅 2 级、兵营 1 级开放。教习至少 10 级，学员最多追至教习等级减 3。同类所长额外增加 20% 经验，扩建兵营也会增加收益。教习不损失等级与经验。</p><div class="team-fields"><label>教习<select id="mentor-hero">'+options(mentors,mentor)+'</select></label><label>学员<select id="mentor-student">'+options(students,student)+'</select></label></div><p class="note">每次体力 5、粮草 20、碎银 100；全寨共用每日三次，随每日差事换日刷新。外派中或当前交战时不可传习。</p>'+(!mentors.length?'<p class="note">暂时没有达到 10 级的教习，可先带一位主力出征或用经验丹培养。</p>':'')+btn('预览传习收益',{type:'ui_mentorPreview'},'primary')+'</details></section>';
 }
 export function mentorshipDialog(q,d,esc,btn){

@@ -1,5 +1,5 @@
 import { upcomingSkills } from './growth-preview.js?v=0.29.0';
-import { budgetPanel } from './economy.js?v=0.29.0';
+import { budgetPanel } from './economy.js?v=0.29.3';
 import { experienceToNext, ATTRIBUTE_NAMES } from './progression.js?v=0.29.0';
 import { attributes } from './hero.js?v=0.29.0';
 export function experienceLabel(h,cap){return h.level>=cap?'已满级 · '+cap+' 级':h.level+'级 · 经验 '+h.exp+' / '+experienceToNext(h.level);}

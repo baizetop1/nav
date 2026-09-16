@@ -1,8 +1,8 @@
 import { promotionQuote } from './quality.js?v=0.29.0';
 import { corpsQuote, targetQuote } from './development.js?v=0.29.0';
 import { skillUpgradeQuote } from './growth.js?v=0.29.0';
-import { chronicleQuote } from './hero-chronicles.js?v=0.29.0';
-import { ELITES, elitePlan } from './elites.js?v=0.29.0';
+import { chronicleQuote } from './hero-chronicles.js?v=0.29.3';
+import { ELITES, elitePlan } from './elites.js?v=0.29.3';
 import { collectionQuote, workshopQuote } from './production.js?v=0.29.0';
 export function readyActions(s,d){if(!s.camp||s.battle||s.scheme||s.event)return [];const rows=[];for(const h of d.heroes.filter(h=>s.heroes[h.id].status==='owned')){
  const add=(kind,label)=>rows.push({kind,label,hero:h.id});

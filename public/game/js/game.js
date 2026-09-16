@@ -1,27 +1,28 @@
-import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.29.0';
-import { sweepQuote } from './sweep.js?v=0.29.0';
-import { sweepDialog } from './sweep-ui.js?v=0.29.0';
+import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.29.2';
+import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.29.3';
+import { sweepQuote } from './sweep.js?v=0.29.3';
+import { sweepDialog } from './sweep-ui.js?v=0.29.3';
 import { collectionQuote, workshopQuote } from './production.js?v=0.29.0';
 import { productionDialog } from './production-ui.js?v=0.29.0';
-import { mentorshipQuote } from './mentorship.js?v=0.29.0';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.29.0';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.29.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.29.0';
+import { mentorshipQuote } from './mentorship.js?v=0.29.3';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.29.3';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.29.3';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.29.3';
 import { presetReason } from './development.js?v=0.29.0';
-import { batchQuote } from './batch.js?v=0.29.0';
+import { batchQuote } from './batch.js?v=0.29.3';
 import { batchDialog } from './batch-ui.js?v=0.29.0';
 import { gains, rewardDialog } from './rewards-ui.js?v=0.29.0';
 import { ActivityLog } from './activity.js?v=0.29.0';
 import { loadData } from './data.js?v=0.29.0';
-import { dispatch, newGame } from './core.js?v=0.29.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.29.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.29.1';
+import { dispatch, newGame } from './core.js?v=0.29.3';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.29.3';
+import { esc, recruitDialog, render } from './ui.js?v=0.29.3';
 import { patchElement } from './dom.js?v=0.29.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.29.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.29.0';
-import { CloudClient } from './cloud.js?v=0.29.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.29.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.29.3';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.29.3';
+import { CloudClient } from './cloud.js?v=0.29.3';
+import { boxImportDialog } from './savebox-ui.js?v=0.29.3';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
@@ -34,7 +35,7 @@ const makeStore=id=>new SlotStore(database,data,id,change=>channel?.postMessage(
 async function refreshSlots(){try{slots=await database.all();}catch{slots=[store.record];}}
 function rememberSlot(){try{sessionStorage.setItem('baize_shuihu_active_slot',String(store.id));}catch{}}
 function saveBox(){return {record:store.record,slots,cloud:cloudView,dirty};}
-let mapTarget=null,mapSection='story',roster={},gear={},pendingSortie=null;
+let mapTarget=null,mapSection='story',pageSections={},roster={},gear={},pendingSortie=null;
 const sortieSetup=()=>({team:[0,1,2].map(i=>document.getElementById('sortie-hero-'+i).value).filter(Boolean),...(state.camp?{mode:document.getElementById('sortie-mode').value,tactic:document.getElementById('sortie-tactic').value,deployment:Number(document.getElementById('sortie-troops').value)}:{})});
 function showSortie(action,setup){const q=prepareSortie(state,data,action,setup,Date.now());pendingSortie={action,setup,signature:q.signature};document.getElementById('sortie-preview')?.remove();const btn=(label,a,kind,disabled)=>`<button type="button" class="${kind}" data-command="${esc(JSON.stringify(a))}" ${disabled?'disabled':''}>${esc(label)}</button>`;root.insertAdjacentHTML('beforeend',sortieDialog(state,data,action,setup,q,esc,btn));const dialog=document.getElementById('sortie-preview');dialog.addEventListener('close',()=>{pendingSortie=null;dialog.remove();},{once:true});dialog.showModal();dialog.querySelector('h2').focus();}
 
@@ -44,20 +45,20 @@ function paint(focus=false){
   paintRevision++;
   const formValues=Object.fromEntries(Array.from(root.querySelectorAll('input:not([type=file]):not([type=password]),select,textarea')).filter(el=>el.id).map(el=>[el.id,el.value]));
   const active=document.activeElement?.dataset?.command,importText=document.getElementById('import-text')?.value;
-  const folds=root.dataset.view===view?new Set(Array.from(root.querySelectorAll('details[data-fold][open]')).map(el=>el.dataset.fold)):new Set();
+  const folds=root.dataset.view===view?new Map(Array.from(root.querySelectorAll('details[data-fold]')).map(el=>[el.dataset.fold,el.open])):new Map();
   const oldMain=document.getElementById('main'),mainScroll=oldMain?.scrollTop||0,oldScreen=oldMain?.dataset.screen;
   const oldLog=document.getElementById('activity-log'),logScroll=oldLog?.scrollTop||0;
   const anchor=oldLog&&Array.from(oldLog.querySelectorAll('[data-log-entry]')).find(el=>el.getBoundingClientRect().bottom>oldLog.getBoundingClientRect().top);
   const anchorId=anchor?.dataset.logEntry,anchorOffset=anchor&&anchor.getBoundingClientRect().top-oldLog.getBoundingClientRect().top;
   const entries=activity.observe(state,{available:entered&&!invalid,feedback:notice});
   if(!logPaused&&(focus||!state.battle||performance.now()-lastLogPaint>=2000)){visibleEntries=entries.filter(e=>logMode==='all'||e.kind!=='battle'||!/进击|普攻|受到持续|损失.*气血/.test(e.text)||/施展|首领|蓄势|得胜|退阵|无力再战|军令/.test(e.text)).map(e=>({...e}));lastLogPaint=performance.now();}
-  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed,mapTarget,mapSection,roster,leaderboard,gear});
+  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed,mapTarget,mapSection,pageSections,roster,leaderboard,gear});
   if(root.querySelector('.viewport-shell')){const next=document.createElement('template');next.innerHTML=html;patchElement(root.firstElementChild,next.content.firstElementChild);}
   else root.innerHTML=html;
   root.dataset.view=view;
   if(!focus)for(const [id,value] of Object.entries(formValues)){const el=document.getElementById(id);if(el)el.value=value;}
   if(document.getElementById('recruit-target'))recruitTarget=document.getElementById('recruit-target').value;
-  for(const el of root.querySelectorAll('details[data-fold]'))el.open=folds.has(el.dataset.fold);
+  for(const el of root.querySelectorAll('details[data-fold]'))el.open=folds.has(el.dataset.fold)?folds.get(el.dataset.fold):el.hasAttribute('data-default-open');
   if(importText&&document.getElementById('import-text'))document.getElementById('import-text').value=importText;
   const main=document.getElementById('main');if(main)main.scrollTop=focus||oldScreen!==main.dataset.screen?0:mainScroll;
   if(focus){main?.focus({preventScroll:true});const tabs=document.querySelector('.tabs'),selected=tabs?.querySelector('[aria-current=page]');if(tabs&&selected){if(tabs.scrollWidth>tabs.clientWidth)tabs.scrollLeft=selected.offsetLeft-tabs.offsetLeft-(tabs.clientWidth-selected.clientWidth)/2;}}
@@ -121,7 +122,7 @@ async function battleFrame(){
     paint();
   }catch(e){battlePaused=true;battlePauseReason='交战已暂停，请先处理提示。';error=e.message;paint();}finally{operation=false;}
 }
-async function load(){mapSection='story';mapTarget=null;visibleEntries=[];logPaused=false;activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
+async function load(){pageSections={};mapSection='story';mapTarget=null;visibleEntries=[];logPaused=false;activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
   if(result.status==='ok'){state=result.state;view=state.battle||state.scheme||state.event?'map':'camp';status='已保存到本机 · 已接续原有进度';try{await persist(dispatch(data,state,{type:'refresh'}));}catch(e){status=e.message;}}
   else{state=newGame(data);view=result.status==='invalid'?'save':'welcome';invalid=result.status==='invalid';locked=invalid;status=invalid?'存档无法读取，原文与已有备份均保留。请恢复备份或导入；导出按钮可取回坏档原文。':result.status==='unavailable'?'本机存储不可用，可临时游玩，但务必导出进度。':'尚未入卷，点击进入后开始保存。';}
   resumeSavedBattle();paint(true);
@@ -218,7 +219,8 @@ async function handleBox(command){
 }
 async function handle(command){
   const {type,id}=command;error='';let prepared=null;
-  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.29.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
+  if(type==='ui_section'){if(!PAGE_SECTIONS[command.view]||!Object.prototype.hasOwnProperty.call(PAGE_SECTIONS[command.view],id)||!entered||state.battle||state.scheme||state.event)return;if(command.hero&&data.by.heroes[command.hero])roster={...roster,selected:command.hero};view=command.view;pageSections[view]=id;notice='';paint(true);const selected=root.querySelector('.page-sections [aria-current="page"]');selected?.focus({preventScroll:true});selected?.scrollIntoView({block:'nearest',inline:'nearest'});return;}
+  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.29.3'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
   if(type==='ui_sortieCancel'){document.getElementById('sortie-preview')?.close();return;}
   if(SORTIES.includes(type)){showSortie(command);return;}
   if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
@@ -299,9 +301,9 @@ async function handle(command){
   if(type==='ui_rosterReset'){roster={};paint();for(const k of ['query','status','group','quality','role'])document.getElementById('roster-'+k).value=k==='query'?'':'all';return;}
   if(type==='ui_rosterPage'){roster={...roster,page:command.page,selected:null};paint();document.querySelector('.roster-grid')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_v3Map'||type==='ui_v4Map'||type==='ui_v5Map'||type==='ui_v6Map'){view='map';mapSection='atlas';mapTarget=id;paint(true);document.getElementById('atlas-target')?.scrollIntoView({block:'start'});return;}
-  if(type==='ui_readyHero'){if(!data.by.heroes[id])return;view='heroes';roster={selected:id,query:data.by.heroes[id].name};paint(true);const el=document.getElementById('roster-detail');if(command.kind==='story')el?.querySelector('[data-fold="chronicle-'+id+'"]')?.setAttribute('open','');if(command.kind==='skill')el?.querySelector('[data-fold="hero-'+id+'"]')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_readyHero'){if(!data.by.heroes[id])return;view='heroes';pageSections.heroes=command.kind==='story'?'tasks':'training';roster={selected:id,query:data.by.heroes[id].name};paint(true);const el=document.getElementById('roster-detail');if(command.kind==='story')el?.querySelector('[data-fold="chronicle-'+id+'"]')?.setAttribute('open','');if(command.kind==='skill')el?.querySelector('[data-fold="hero-'+id+'"]')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_eliteOpen'){view='trials';paint(true);const el=document.querySelector('[data-fold="elite-'+id+'"]');el?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
-  if(type==='ui_goalOpen'){const g=state.development?.goal;if(g?.kind==='craft')view='forge';else if(g){view='heroes';roster={selected:g.id,query:data.by.heroes[g.id].name};}paint(true);document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_goalOpen'){const g=state.development?.goal;if(g?.kind==='craft')view='forge';else if(g){view='heroes';pageSections.heroes='training';roster={selected:g.id,query:data.by.heroes[g.id].name};}paint(true);document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}
     if(type==='ui_frontierAssign')command={type:'frontierAssign',id,worker:document.getElementById('frontier-worker-'+id).value||null};
   if(type==='ui_frontierGuard')command={type:'frontierGuard',id,hero:document.getElementById('frontier-guard-'+id).value.replace(/^hero:/,'')||null};
   if(type==='ui_rosterSelect'){roster={...roster,selected:id};paint();document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}
@@ -317,7 +319,7 @@ async function handle(command){
   if(['travel','move','story','startScheme'].includes(type)){mapTarget=next.location;mapSection='story';}
   if(next.battle||next.scheme||next.event||['move','travel','story','startScheme'].includes(type))view='map';
   if(type==='finishBattle'&&['camp','frontier'].includes(before.battle?.context.type))view='camp';
-  if(type==='finishBattle'&&before.battle?.context.type==='rotation')view='trials';if(type==='finishBattle'&&before.battle?.context.type==='realm')view='realm';
+  if(type==='finishBattle'&&before.battle?.context.type==='rotation')view='trials';if(type==='finishBattle'&&before.battle?.context.type==='realm'){view='realm';const kind=before.battle.context.kind;pageSections.realm=['trek'].includes(kind)?'expeditions':['personal','defense','relay'].includes(kind)?'battles':kind==='challenge'?'challenges':'trade';if(kind==='personal'){view='heroes';pageSections.heroes='tasks';roster={...roster,selected:before.battle.context.id};}}
   paint(!!prepared||['presetLoad','move','travel','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
   if(type==='presetLoad'){
     // A user-edited select retains its DOM value even when selected attributes match.
@@ -344,6 +346,7 @@ root.addEventListener('click',async event=>{
 });
 root.addEventListener('keydown',event=>{if(event.target.id==='roster-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('button[data-command*="ui_rosterFilter"]')?.click();}});
 root.addEventListener('change',event=>{
+  if(event.target.id==='section-hero'){if(operation||!data.by.heroes[event.target.value])return;roster={...roster,selected:event.target.value};paint(true);document.getElementById('section-hero')?.focus({preventScroll:true});return;}
   if(event.target.id==='import-slot'&&pendingImport){document.getElementById('import-comparison').innerHTML=importComparison(pendingImport,slots,Number(event.target.value),data);return;}
   if(event.target.id==='cloud-slot'){cloudView.selected=slotId(event.target.value);cloudView.history=null;cloudView.message='已切换云端编号，请确认密钥对应此编号。';document.getElementById('cloud-key').value='';paint();}
   if(event.target.id==='recruit-target'){recruitTarget=event.target.value;notice='';error='';paint();document.getElementById('recruit-target')?.focus({preventScroll:true});}

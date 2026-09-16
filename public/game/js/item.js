@@ -1,4 +1,4 @@
-import {useStamina} from './provisions.js?v=0.29.0';
+import {useStamina} from './provisions.js?v=0.29.3';
 import { staminaCap } from './logistics.js?v=0.29.0';
 import { count, journal, random, requireRule } from './utils.js?v=0.29.0';
 import { gainExp } from './hero.js?v=0.29.0';

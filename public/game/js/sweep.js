@@ -1,6 +1,7 @@
-import { dispatch } from './core.js?v=0.29.0';
-import { advanceBattle } from './battle.js?v=0.29.0';
-import { dailyUses, rotationPlan, rotationCalendar } from './rotations.js?v=0.29.0';
+import { totalExperience } from './progression.js?v=0.29.3';
+import { dispatch } from './core.js?v=0.29.3';
+import { advanceBattle } from './battle.js?v=0.29.3';
+import { dailyUses, rotationPlan, rotationCalendar } from './rotations.js?v=0.29.3';
 import { requireRule, journal } from './utils.js?v=0.29.0';
 export const mastery=(s,id,tier)=>s.campaign?.mastery?.[id+'_'+tier]||0;
 export function sweepReason(s,id,tier,count=1){
@@ -21,7 +22,8 @@ export function sweepQuote(s,d,a){
   }
   next.battleSkillMode=mode;
   const items=Object.fromEntries(Object.entries(next.inventory).map(([id,n])=>[id,n-(s.inventory[id]||0)]).filter(([,n])=>n));
-  const summary={count:a.count,food,stamina:a.count*10,fallen,wounded,items};
+  const experience=Object.fromEntries(s.team.map(id=>[id,totalExperience(next.heroes[id])-totalExperience(s.heroes[id])]));
+  const summary={count:a.count,food,stamina:a.count*10,fallen,wounded,items,experience};
   const signature=JSON.stringify({id:a.id,tier:a.tier,date:rotationCalendar(s.clock).date,revision:s.revision,rng:s.rng,team:s.team,summary,uses:dailyUses(s,a.id),remaining:[next.player.stamina,next.camp.food,next.camp.troops,next.camp.wounded],finalRng:next.rng});
   return {next,summary,signature,reason:''};
  }catch(e){return {reason:e.message};}

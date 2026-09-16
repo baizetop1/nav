@@ -1,5 +1,5 @@
 import { hasOwn, requireRule, journal } from './utils.js?v=0.29.0';
-import { grant } from './item.js?v=0.29.0';
+import { grant } from './item.js?v=0.29.3';
 export const AFFAIRS={
  caravan:{name:'商队来访',text:'行商带来一批铁料布匹，可以采购，也可派人护送换取酬谢。',cost:{silver:150},reward:{items:{iron:4,cloth:4}},dispatch:{items:{iron:3,cloth:3}}},
  refugees:{name:'流民投奔',text:'山下乡人请求安顿。开仓接济，或请一位好汉护送他们进寨。',cost:{food:30},reward:{prestige:15,items:{exp_pill:2}},dispatch:{prestige:10,items:{exp_pill:2}}},
