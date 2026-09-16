@@ -7,7 +7,7 @@ import {render} from '../public/game/js/ui.js';
 import {gameSnapshot} from '../public/game/js/portable.js';
 const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL('../public/game/data/'+n+'.json',import.meta.url)))])));
 const act=(s,type,extra={},now=s.clock)=>{const next=dispatch(data,s,{type,...extra},now);assert.deepEqual(gameSnapshot(next,data),next);return next;};
-const initial=newGame(data,Date.now(),53123),before=JSON.stringify(initial),html=render({state:initial,data,view:'map'});
+const initial=newGame(data,Date.now(),53123),before=JSON.stringify(initial),html=render({state:initial,data,view:'map',mapSection:'atlas'});
 for(const map of data.maps){assert.ok(html.includes(map.name),map.name+' visible before travel');for(const l of map.links)assert.ok(html.includes('→ '+data.by.maps[l.target].name));}
 assert.equal(JSON.stringify(initial),before,'Map inspection never awards or mutates');
 assert.deepEqual(routeTo(initial,data,'forge'),['forge']);assert.equal(routeTo(initial,data,'dongjing'),null);

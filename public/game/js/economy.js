@@ -1,4 +1,4 @@
-import { totalExperience } from './progression.js?v=0.28.0';
+import { totalExperience } from './progression.js?v=0.29.0';
 export const GROWTH_MILESTONES=[10,15,20,30,40];
 export function growthBudget(s,d,id,target){const h=s.heroes[id],cap=d.config.balance.heroLevelCap;target=Math.max(h.level,Math.min(cap,target));const exp=Math.max(0,totalExperience({level:target,exp:0})-totalExperience(h)),pills=Math.ceil(exp/d.by.items.exp_pill.effect.exp);return {target,exp,pills,silver:pills*d.by.items.exp_pill.price};}
 export function budgetPanel(s,d,id){const h=s.heroes[id];return '<details class="fold-section" data-fold="growth-budget-'+id+'"><summary>培养预算 · 到下一阶段还需多少</summary>'+GROWTH_MILESTONES.filter(level=>level>h.level).map(level=>{const q=growthBudget(s,d,id,level);return '<p class="note">到 '+level+' 级：还需 '+q.exp+' 经验，纯用丹约 '+q.pills+' 颗；全部采买需 '+q.silver+' 碎银。</p>';}).join('')+'<p class="note">预算已扣当前剩余经验；未扣背包丹药，不含升品、招式或练兵材料。出征、差事、寨务和传习可减少实际用丹。</p><p class="note">演武旧场每次胜利获得 2 / 4 / 6 颗丹，每次消耗 10 体力；只在周二、五、日开放，每个开放日最多三次。</p></details>';}

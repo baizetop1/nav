@@ -1,10 +1,11 @@
-import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.28.0';
-import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.28.0';
-import { autoOrderAllows } from './commands.js?v=0.28.0';
-import { initializeMartial, martialFactor } from './martial.js?v=0.28.0';
-import { attributes } from './hero.js?v=0.28.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.28.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.28.0';
+import {advanceCombos} from './expansion-combat.js?v=0.29.0';
+import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.29.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.29.0';
+import { autoOrderAllows } from './commands.js?v=0.29.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.29.0';
+import { attributes } from './hero.js?v=0.29.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.29.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.29.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
@@ -127,7 +128,7 @@ export function advanceBattle(state,data,delta){
       else{hit(state,u,u.side==='enemy'?enemySkill(b,u,data):undefined,data);u.attacks++;}
       if(settle(b))break;
     }
-    if(!b.outcome)castAutomaticSkills(state,data);
+    if(!b.outcome){castAutomaticSkills(state,data);advanceCombos(b);settle(b);}
   }
   if(!b.outcome){b.elapsed=end;settle(b);}
 }

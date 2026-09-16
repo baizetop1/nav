@@ -1,9 +1,9 @@
-import { casualtyQuote, terrainRate, fieldRules, SIGNATURES } from './fieldcraft.js?v=0.28.0';
-import { battleTerrain, TERRAIN_NAMES } from './strategy-data.js?v=0.28.0';
-import { TACTICS } from './camp.js?v=0.28.0';
-import { raidBonus } from './camp-development.js?v=0.28.0';
+import { casualtyQuote, terrainRate, fieldRules, SIGNATURES } from './fieldcraft.js?v=0.29.0';
+import { battleTerrain, TERRAIN_NAMES } from './strategy-data.js?v=0.29.0';
+import { TACTICS } from './camp.js?v=0.29.0';
+import { raidBonus } from './camp-development.js?v=0.29.0';
 export function losses(b,options){return casualtyQuote(b,TACTICS[b.expedition?.tactic||'balanced'].loss,raidBonus(b).loss,options);}
-export function retreatForecast(b){if(!b.expedition?.troops||b.outcome)return '';const q=losses(b,{outcome:'retreat'});return '<p class="note retreat-forecast">现在撤退预计：归营 '+q.returned+'、伤兵 '+q.wounded+'、阵亡 '+q.fallen+'。恢复本次兵额需粮草 '+q.recoverFood+'、碎银 '+q.replaceSilver+'；以点击时战况结算。撤退不返还入场消耗。</p>';}
+export function retreatForecast(b){if(!b.expedition?.troops||b.outcome)return '';const q=losses({...b,metrics:{...b.metrics,reason:'manual'}},{outcome:'retreat'});return '<p class="note retreat-forecast">现在撤退预计：归营 '+q.returned+'、伤兵 '+q.wounded+'、阵亡 '+q.fallen+'。恢复本次兵额需粮草 '+q.recoverFood+'、碎银 '+q.replaceSilver+'；以点击时战况结算。撤退不返还入场消耗。</p>';}
 export function fieldPreview(b){if(!b)return '';const terrain=b.depth?.terrain||battleTerrain(b),n=b.expedition?.troops||0;
  const rows=[['快速胜利（15 秒、全队满血）',{outcome:'victory',health:1,elapsed:15000}],['苦战获胜（60 秒、平均半血）',{outcome:'victory',health:.5,elapsed:60000}],['败退（全队失去战力）',{outcome:'defeat',health:0,elapsed:60000}]];
  return '<section class="field-preview"><h3>地形与兵损预算 · '+TERRAIN_NAMES[terrain]+'</h3>'+b.team.map(u=>'<p class="note">'+u.name+'：'+(u.corps?.troops?'部队地形伤害 '+Math.round((terrainRate(b,u)-1)*100)+'%':'独行，无部队地形修正')+'</p>').join('')+'<p class="note">部队地形修正与原有人物地形专长分别计算。平原利骑军，山林利步弓，水域利水军；带更多兵仍按实际人数消耗粮草，战斗增益递减。敌军主动治疗在 60 秒后降至 50%，120 秒后降至 25%；我方治疗、药品与副本固定补给不受影响。</p>'+(n?'<details data-fold="casualty-budget"><summary>查看三种战况的兵损预算</summary><p class="note">以下是固定战况示例，不是胜率或本战结果预测。实际损失由交战时长、剩余气血和军令决定；救护部队可将部分阵亡转为伤兵。</p>'+rows.map(([name,args])=>{const q=losses(b,args);return '<p><b>'+name+'</b><br>归营 '+q.returned+' · 伤兵 '+q.wounded+' · 阵亡 '+q.fallen+'<br><small>恢复兵额：粮草 '+q.recoverFood+'、碎银 '+q.replaceSilver+'（治疗全部伤兵并补齐阵亡，可能需分批）</small></p>';}).join('')+'</details>':'<p class="note">本次无随行士兵，不产生兵员伤亡。</p>')+(fieldRules(b)?b.team.filter(u=>SIGNATURES[u.id]).map(u=>'<p class="note"><b>'+u.name+' · '+SIGNATURES[u.id].name+'</b>：'+SIGNATURES[u.id].text+'</p>').join(''):'')+'</section>';

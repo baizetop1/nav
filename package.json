@@ -80,7 +80,8 @@
     "test:shuihu-v025": "node scripts/shuihu-v025-selfcheck.mjs",
     "test:shuihu-v026": "node scripts/shuihu-v026-selfcheck.mjs",
     "test:shuihu-v027": "node scripts/shuihu-v027-selfcheck.mjs",
-    "test:shuihu-v028": "node scripts/shuihu-v028-selfcheck.mjs"
+    "test:shuihu-v028": "node scripts/shuihu-v028-selfcheck.mjs",
+    "test:shuihu-v029": "node scripts/shuihu-v029-selfcheck.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

@@ -1,3 +1,4 @@
+import {cooperativeReady,cooperativeBoard,cooperativeAction} from './cooperative.js';
 import {CHALLENGES} from '../../public/game/js/realm-data.js';
 import {verifyAutoBattle,verifiedBoard} from './verified-battle.js';
 import {rotationCalendar} from '../../public/game/js/rotations.js';
@@ -74,7 +75,8 @@ async function route(request,env){
   const url=new URL(request.url);
   if(url.protocol!=='https:'&&!(env.LOCAL_DEV==='true'&&['localhost','127.0.0.1'].includes(url.hostname)))fail(400,'存档服务只接受 HTTPS。');
   const ip=request.headers.get('CF-Connecting-IP')||'local';await limit(env,`request:${ip}`,120);
-  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,realm:1,challengeGroups:1,supplies:1,elite:1,chapters:data.chapters.length});
+  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,realm:1,challengeGroups:1,expansion:1,cooperative:1,supplies:1,elite:1,chapters:data.chapters.length});
+  if(url.pathname==='/v1/cooperative'&&request.method==='GET'){await cooperativeReady(env,fail);return json(await cooperativeBoard(env,Date.now()));}
   if(url.pathname==='/v1/leaderboard'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,raw FROM slots WHERE raw IS NOT NULL ORDER BY id').all();return json(rankSnapshots(rows.results,Date.now()));}
   if(url.pathname==='/v1/verified-leaderboard'&&request.method==='GET'){
     const period=rotationCalendar(Date.now()).period,group=url.searchParams.get('group')||'open';if(group!=='open'&&!Object.hasOwn(CHALLENGES,group))fail(400,'无效演武组别。');const keyPeriod=period+(group==='open'?'':':'+group);
@@ -97,7 +99,7 @@ async function route(request,env){
     const removed=await env.DB.prepare('UPDATE slots SET raw=NULL,public=0,revision=revision+1,updated_at=? WHERE id=? AND revision=? RETURNING revision').bind(new Date().toISOString(),row.id,expected).first();
     if(!removed)fail(412,'存档已有更新，请重新查看后再删除。');return json({cloudRevision:removed.revision,message:'当前云端进度已移至受保护历史，未撤销密钥。'});
   }
-  const match=/^\/v1\/slots\/(\d{1,2})(?:\/(sharing|history|rollback|verify))?$/.exec(url.pathname);
+  const match=/^\/v1\/slots\/(\d{1,2})(?:\/(sharing|history|rollback|verify|cooperative|cooperate|coop-claim))?$/.exec(url.pathname);
   if(!match)fail(404,'接口不存在。');
   const row=await getSlot(env,Number(match[1])),action=match[2];
   if(!action&&request.method==='GET'){
@@ -105,6 +107,8 @@ async function route(request,env){
     return json(snapshot(row),200,{ETag:`"${row.revision}"`});
   }
   const hash=await authorize(request,env,row,ip);
+  if(action==='cooperative'&&request.method==='GET'){await cooperativeReady(env,fail);return json(await cooperativeBoard(env,Date.now(),row.id));}
+  if(['cooperate','coop-claim'].includes(action)&&request.method==='POST'){const input=await body(request),now=Date.now(),seed=parseInt((await digest(env.KEY_PEPPER,'cooperative:'+row.id+':'+rotationCalendar(now).date)).slice(0,8),16)||1;return json(await cooperativeAction({request,env,row,hash,input,action,expected:expectedRevision(request),data,now,seed,fail}));}
   if(action==='verify'&&request.method==='POST'){
     const expected=expectedRevision(request);if(expected!==row.revision)fail(412,'云端已更新，请重新读取后演武。');
     if(!row.raw)fail(400,'先上传有效云端存档。');await limit(env,'verify:'+row.id,6);
@@ -132,7 +136,9 @@ async function route(request,env){
     if(row.raw&&JSON.parse(row.raw).campaign&&!input.state?.campaign)fail(409,'此存档已有轮换历练进度，请刷新至新版后上传。');
     if(row.raw&&JSON.parse(row.raw).frontier?.focus!==undefined&&input.state?.frontier?.focus===undefined)fail(409,'此存档已有经营侧重，请刷新新版后上传。');
     if(row.raw&&JSON.parse(row.raw).campaign?.mastery!==undefined&&input.state?.campaign?.mastery===undefined)fail(409,'此存档已有材料本熟练记录，请刷新新版后上传。');
+    if(row.raw&&JSON.parse(row.raw).expansion&&!input.state?.expansion)fail(409,'此存档已有补给和新战役进度，请刷新新版后上传。');
     if(row.raw&&JSON.parse(row.raw).realm&&!input.state?.realm)fail(409,'此存档已有山河经营、远征与军队记录，请刷新新版后上传。');
+    if(row.raw){const claims=JSON.parse(row.raw).expansion?.coopClaims||{};if(Object.keys(claims).some(k=>input.state?.expansion?.coopClaims?.[k]!==true))fail(409,'云端已领取协作奖励，请先下载接续这份云档，避免旧本机进度覆盖奖励。');}
     let state,name;try{state=gameSnapshot(input.state,data);name=slotName(input.name);}catch(e){fail(400,e.message);}
     return change(request,env,row,hash,{...row,name,raw:JSON.stringify(state)});
   }

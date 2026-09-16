@@ -1,22 +1,23 @@
-import {settleVeterans} from './veterans.js?v=0.28.0';
-import {recruitPrice} from './realm-buildings.js?v=0.28.0';
-import {initializeRealmBattle} from './realm-combat.js?v=0.28.0';
-import { reservedTroops } from './squads.js?v=0.28.0';
-import { FIELD_RULES, casualtyQuote, initializeSignatures } from './fieldcraft.js?v=0.28.0';
-import { claimSupply } from './supplies.js?v=0.28.0';
-import { barracksCapacity, deployedTroops, troopShares, troopPower } from './logistics.js?v=0.28.0';
-import { isExternal, externalInvitation } from './roster.js?v=0.28.0';
-import { openAffair } from './affairs.js?v=0.28.0';
-import { initializeStrategy } from './strategy.js?v=0.28.0';
-import { initializeDoctrine } from './doctrines.js?v=0.28.0';
-import { CORPS, corpsRank } from './development.js?v=0.28.0';
-import { ARMS } from './martial.js?v=0.28.0';
-import { hireHelper, helperBonus, validateHelpers } from './helpers.js?v=0.28.0';
-import { finishDuty, developmentAction, raidBonus, RAID_INTEL, searchEquipment } from './camp-development.js?v=0.28.0';
-import { hasOwn, requireRule, journal, count } from './utils.js?v=0.28.0';
-import { ownHero } from './hero.js?v=0.28.0';
-import { startBattle } from './battle.js?v=0.28.0';
-import { grant } from './item.js?v=0.28.0';
+import {initializeExpansion} from './expansion-combat.js?v=0.29.0';
+import {settleVeterans} from './veterans.js?v=0.29.0';
+import {recruitPrice} from './realm-buildings.js?v=0.29.0';
+import {initializeRealmBattle} from './realm-combat.js?v=0.29.0';
+import { reservedTroops } from './squads.js?v=0.29.0';
+import { FIELD_RULES, casualtyQuote, initializeSignatures } from './fieldcraft.js?v=0.29.0';
+import { claimSupply } from './supplies.js?v=0.29.0';
+import { barracksCapacity, deployedTroops, troopShares, troopPower } from './logistics.js?v=0.29.0';
+import { isExternal, externalInvitation } from './roster.js?v=0.29.0';
+import { openAffair } from './affairs.js?v=0.29.0';
+import { initializeStrategy } from './strategy.js?v=0.29.0';
+import { initializeDoctrine } from './doctrines.js?v=0.29.0';
+import { CORPS, corpsRank } from './development.js?v=0.29.0';
+import { ARMS } from './martial.js?v=0.29.0';
+import { hireHelper, helperBonus, validateHelpers } from './helpers.js?v=0.29.0';
+import { finishDuty, developmentAction, raidBonus, RAID_INTEL, searchEquipment } from './camp-development.js?v=0.29.0';
+import { hasOwn, requireRule, journal, count } from './utils.js?v=0.29.0';
+import { ownHero } from './hero.js?v=0.29.0';
+import { startBattle } from './battle.js?v=0.29.0';
+import { grant } from './item.js?v=0.29.0';
 
 export const BUILDINGS={hall:{name:'聚义厅',wood:40,silver:100,description:'提高寨子规模，吸引更多好汉。'},farm:{name:'农田',wood:25,silver:60,description:'每次经营产出粮草，用于募兵与出征。'},lumber:{name:'伐木场',wood:20,silver:50,description:'每次经营产出木材，用于修建与扩建。'},barracks:{name:'兵营',wood:35,silver:80,description:'每级提供 200 名兵额，可随英雄出征。'},clinic:{name:'医馆',wood:30,silver:80,description:'治疗伤兵，降低补员的粮草支出。'},market:{name:'集市',wood:30,silver:80,description:'每次经营增加碎银收入。'}};
 export const TACTICS={balanced:{name:'稳扎稳打',attack:1,defense:1,loss:.12},assault:{name:'强攻破阵',attack:1.2,defense:.85,loss:.24},guard:{name:'结阵固守',attack:.9,defense:1.25,loss:.06}};
@@ -49,9 +50,9 @@ export function campAction(s,d,a){
   }else throw new Error('未知寨务。');
 }
 export function attachTroops(s,n){
-  const c=s.camp,b=s.battle;if(!c||!b||b.guest)return;const t=TACTICS[c.tactic],shares=troopShares(s,b.team.map(u=>b.context.type==='realm'&&b.context.kind==='trek'&&s.realm?.trek?.hp[u.id]===0?null:u.id),n);b.expedition={troops:n,tactic:c.tactic,arm:c.arm||'infantry',fieldRules:FIELD_RULES};const bonus=raidBonus(b);
+  const c=s.camp,b=s.battle;if(!c||!b||b.guest)return;const t=TACTICS[c.tactic],shares=troopShares(s,b.team.map(u=>b.context.type==='realm'&&b.context.kind==='trek'&&s.realm?.trek?.hp[u.id]===0||b.context.kind==='defense'&&s.expansion?.run?.hp[u.id]===0?null:u.id),n);b.expedition={troops:n,tactic:c.tactic,arm:c.arm||'infantry',fieldRules:FIELD_RULES};const bonus=raidBonus(b);
   for(const [i,u] of b.team.entries()){const share=shares[i],power=troopPower(share);if(b.martial===2)u.corps={id:u.id,arm:CORPS[u.id].arm,rank:corpsRank(s,u.id),troops:share};u.attack=Math.round((u.attack+power*3)*t.attack*bonus.attack);u.defense=Math.round((u.defense+power)*t.defense*bonus.defense);u.hp=u.maxHp=Math.round(u.maxHp+power*18);if(share&&b.martial===2){const p=CORPS[u.id].profile,r=u.corps.rank;if(p==='shield')u.defense=Math.round(u.defense*(1+.06*r));if(p==='scout')u.speed=Math.round(u.speed*(1+.05*r));if(p==='medic')u.hp=u.maxHp=Math.round(u.maxHp*(1+.06*r));b.log.push(`【专属部队】${u.name} · ${CORPS[u.id].name} ${r}阶 · ${share} 人。`);}}
-  initializeDoctrine(b);initializeStrategy(s,b);initializeSignatures(b);initializeRealmBattle(s,b);
+  initializeDoctrine(b);initializeStrategy(s,b);initializeSignatures(b);initializeRealmBattle(s,b);initializeExpansion(s,b);
   b.log.push(`【军令】${n?'乡勇 '+n+' 人随行':'英雄独行'} · ${t.name}。`);
   if(b.context.type==='camp'){const intel=RAID_INTEL[b.context.id];b.log.push('【敌情】'+intel.text+(intel.tactic===c.tactic?' 军令得当。'+intel.bonus:' 本次未获得地形军令加成。'));}
 }

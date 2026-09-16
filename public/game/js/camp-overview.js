@@ -1,10 +1,10 @@
-import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.28.0';
-import { volumeFiveBoard } from './volume-five-ui.js?v=0.28.0';
-import { volumeFourBoard } from './volume-four-ui.js?v=0.28.0';
-import { volumeThreeBoard } from './volume-three-ui.js?v=0.28.0';
-import { readinessPanel, productionReady } from './readiness.js?v=0.28.0';
-import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.28.0';
-import { questReady } from './core.js?v=0.28.0';
+import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.29.0';
+import { volumeFiveBoard } from './volume-five-ui.js?v=0.29.0';
+import { volumeFourBoard } from './volume-four-ui.js?v=0.29.0';
+import { volumeThreeBoard } from './volume-three-ui.js?v=0.29.0';
+import { readinessPanel, productionReady } from './readiness.js?v=0.29.0';
+import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.29.0';
+import { questReady } from './core.js?v=0.29.0';
 
 // Read-only overview: visiting the camp never spends resources or claims rewards.
 export function campNotices(s,d){

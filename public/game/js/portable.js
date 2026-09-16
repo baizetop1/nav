@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.28.0';
-import { parseSave } from './save.js?v=0.28.0';
+import { hasOwn } from './utils.js?v=0.29.0';
+import { parseSave } from './save.js?v=0.29.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -7,9 +7,10 @@ const context = fields('type id next kind tier period terrain affair');
 const unit = {...fields('id name hp attack defense speed strategy maxHp rage skills side attacks skillReadyAt nextAttackAt model resistUntil'), statuses: [{...fields('id value expiresAt nextTickAt')}], corps:fields('id arm rank troops'), training:{quality:true,levels:{'*':true},bond:true},boss:fields('kind readyAt pendingAt phase')};
 const metrics={version:true,reason:true,heroes:{'*':fields('damage healing taken controls interrupts skills')},dot:true,environment:true,medicine:true};
 const shape = {
+  expansion:{version:true,smoke:true,recipes:true,combos:{'*':true},personal:{'*':true},run:{kind:true,stage:true,used:true,team:true,hp:{'*':true},layout:true,loot:{'*':true}},diplomacy:{'*':true},coopClaims:{'*':true}},
   lastBattle:{...fields('at outcome elapsed troops wounded fallen'),context,team:[fields('id hp maxHp')],metrics},
   ...fields('version commandVersion rosterVersion revision clock lastRegen rng worldMinute location startedAt team nextEquipment message formationPending battleSkillMode'),
-  realm:{version:true,regions:{'*':fields('security supply pact')},relations:{'*':true},branches:{'*':true},paths:{'*':true},armyXp:true,relics:true,relicClaims:{'*':true},equipped:true,squad:fields('id team troops readyAt training xp outcome fallen wounded elapsed'),trek:{team:true,node:true,route:true,hp:{'*':true},loot:{'*':true}},records:{'*':fields('tier hp elapsed score at team')}},
+  realm:{version:true,regions:{'*':fields('security supply pact')},relations:{'*':true},branches:{'*':true},paths:{'*':true},armyXp:true,relics:true,relicClaims:{'*':true},equipped:true,squad:fields('id team troops readyAt training xp outcome fallen wounded elapsed'),trek:{packs:true,team:true,node:true,route:true,hp:{'*':true},loot:{'*':true}},records:{'*':fields('tier hp elapsed score at team')}},
   affairs:{version:true,lastDay:true,resolved:true,pending:fields('kind day'),mission:fields('kind hero readyAt')},
   strategy:{version:true,drills:{'*':true}},
   player: fields('name title silver merit prestige stamina liangshanLevel'),
@@ -23,7 +24,7 @@ const shape = {
   progress: {flags: {'*': true}, stories: {'*': fields('status step')}, visited: true, actions: {'*': true}, claims: true, clears: {'*': true}},
   stats: {'*': true}, daily: {...fields('date ids claimed bonus events'), counters: {'*': true}, dungeons: {'*': true}},
   recruit: {total: true, pity: fields('three four five'), fate: {'*': true}, lastResult: fields('hero target kind number inTeam tokens merit'), lastBatch:[fields('hero target kind number inTeam tokens merit')]},
-  battle: {realm:{version:true,medical:true,relic:true,veteran:true,paths:{'*':true},qualities:{'*':true}},metrics,depth:{version:true,terrain:true,drills:{'*':true},objective:fields('kind nextAt integrity waves')},orders:fields('version focus stance reserve readyAt'),expedition:fields('troops tactic arm fallen fieldRules'),...fields('mode elapsed itemReadyAt guest outcome log rules martial frontierRules'), team: [unit], enemy: [unit], context},
+  battle: {expansion:{version:true,smoke:true,personal:true,combos:{'*':fields('count readyAt')}},realm:{version:true,medical:true,relic:true,veteran:true,paths:{'*':true},qualities:{'*':true}},metrics,depth:{version:true,terrain:true,drills:{'*':true},objective:fields('kind nextAt integrity waves')},orders:fields('version focus stance reserve readyAt'),expedition:fields('troops tactic arm fallen fieldRules'),...fields('mode elapsed itemReadyAt guest outcome log rules martial frontierRules'), team: [unit], enemy: [unit], context},
   scheme: {...fields('id turn outcome log'), values: fields('alert fatigue heat trust exposure'), context},
   event: fields('id'), journal: [fields('at text')]
 };

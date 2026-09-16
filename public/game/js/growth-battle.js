@@ -1,14 +1,15 @@
-import {talentFactor} from './talents.js?v=0.28.0';
-import { healingSupply } from './fieldcraft.js?v=0.28.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.28.0';
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.28.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.28.0';
-import { orderDamageFactor } from './commands.js?v=0.28.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.28.0';
-import { unitArm } from './martial.js?v=0.28.0';
-import { martialFactor } from './martial.js?v=0.28.0';
-import { bounded, pick, random } from './utils.js?v=0.28.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.28.0';
+import {personalFactor} from './expansion-combat.js?v=0.29.0';
+import {talentFactor} from './talents.js?v=0.29.0';
+import { healingSupply } from './fieldcraft.js?v=0.29.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.29.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.29.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.29.0';
+import { orderDamageFactor } from './commands.js?v=0.29.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.29.0';
+import { unitArm } from './martial.js?v=0.29.0';
+import { martialFactor } from './martial.js?v=0.29.0';
+import { bounded, pick, random } from './utils.js?v=0.29.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.29.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -50,7 +51,7 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const weakened=has(u,'weaken')?.value||0;
   const attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1)*(1-weakened)*(u.boss?.phase===1&&u.boss.kind==='tiger'?1.2:1);
   const raw=api.damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
-  const loss=Math.max(1,Math.round(raw*talentFactor(b,u,target,{normal:!name,strategy:effect.kind==='strategy'})*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
+  const loss=Math.max(1,Math.round(raw*personalFactor(b,u,!name)*talentFactor(b,u,target,{normal:!name,strategy:effect.kind==='strategy'})*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
   reportDamage(b,u,target,loss);target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);

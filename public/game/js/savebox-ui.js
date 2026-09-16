@@ -1,7 +1,7 @@
-import { savedTime, importComparison } from './save-comparison.js?v=0.28.0';
-import { emptySlot } from './slots.js?v=0.28.0';
-import { slotNumber } from './portable.js?v=0.28.0';
-import { icon } from './icons.js?v=0.28.0';
+import { savedTime, importComparison } from './save-comparison.js?v=0.29.0';
+import { emptySlot } from './slots.js?v=0.29.0';
+import { slotNumber } from './portable.js?v=0.29.0';
+import { icon } from './icons.js?v=0.29.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const button=(label,type,extra={},symbol='save',disabled=false)=>`<button type="button" class="secondary with-icon" data-command="${esc(JSON.stringify({type,...extra}))}" ${disabled?'disabled':''}>${icon(symbol)}<span>${esc(label)}</span></button>`;
 export const localOptions=(slots,selected)=>Array.from({length:20},(_,i)=>slots.find(s=>s.id===i+1)||emptySlot(i+1)).map(s=>`<option value="${s.id}" ${s.id===selected?'selected':''}>${slotNumber(s.id)}号 · ${esc(s.name)} · ${s.raw?'已有进度':'空位'}</option>`).join('');
@@ -34,6 +34,7 @@ export function saveBoxPage(state,status,locked,box={}){
       ${cloud.remote?.id===selected?`<p class="note">最近查看云端：第 ${cloud.remote.revision} 版 · ${esc(savedTime(cloud.remote.updatedAt))}</p>`:''}<p id="cloud-message" role="status" class="${cloud.conflict?'warning':'note'}">${esc(cloud.message||'尚未提交云端。点击查看会先预览，不会自动覆盖本机。')}</p>
       ${cloud.conflict?`<div class="actions">${button('先备份本机进度','ui_export',{},'download')}${button('查看云端进度并选择接续','ui_cloudDownload',{},'restore')}${button('重新比较并上传本机进度','ui_cloudReplace',{},'upload')}</div>`:''}
       <details class="fold-section" data-fold="verified-exhibition"><summary>参加服务器演武（使用上方所选云档与密钥）</summary><p>先上传已收兵的阵容，再选择层数。服务器按自动技能、寨中军令和当期机制独立演算，药品不自动使用；不改变本机或云端资源。新一期从第一层开始。</p><label>演武分组<select id="verified-group"><option value="open">常规组</option><option value="solo">独行组</option><option value="small">百人组（1—100 人）</option><option value="mortal">凡品组</option></select></label><p class="note">按云端已上传的阵容判定条件，不会自动替你改兵力或品质；各组各自从第一层开始。</p><label>演武层数<select id="verified-tier"><option value="1">第 1 层</option><option value="2">第 2 层</option><option value="3">第 3 层</option><option value="4">第 4 层</option><option value="5">第 5 层</option></select></label>${button('以所选云档参加演武','ui_cloudVerify',{},'check')}<p class="note">已有云端战斗须先收兵并上传。培养进度来自云档；本功能校验战斗结果，不代表已验证全部养成来源。</p></details>
+      ${cooperativePanel(cloud,selected)}
       <details class="fold-section" data-fold="sharing"><summary>公开设置与历史回滚（需要此档密钥）</summary><p class="note">默认私有。关闭公开仅阻止后续免密下载，不能收回朋友已保存的副本。回滚会创建一个新的云端版本，不自动替换本机。</p>
         <div class="actions">${button('开启公开副本','ui_cloudShare',{value:true},'heroes')}${button('关闭公开副本','ui_cloudShare',{value:false},'shield')}${button('读取最近十份历史','ui_cloudHistory',{},'restore')}</div>
         ${cloud.history?.id===selected?`<ul class="savebox-history">${cloud.history.history.map(h=>`<li>第 ${h.cloudRevision} 版 · ${esc(h.name)} · ${esc(h.updatedAt||'—')}${button('回滚至此版','ui_cloudRollback',{revision:h.cloudRevision},'restore')}</li>`).join('')||'<li>尚无历史。</li>'}</ul>`:''}
@@ -52,3 +53,5 @@ export function boxImportDialog(pending,slots,current,data){
     <p class="warning">确认后接续所选编号，替换它的原有进度，并保留一份有效备份；不影响其他编号。若预览后另一标签页更新了目标，将拒绝覆盖。建议先导出当前进度。</p>
     </div><div class="actions">${button('确认导入并替换','ui_confirmImport',{},'check')}${button('取消','ui_cancelImport',{},'close')}</div></dialog>`;
 }
+
+function cooperativePanel(cloud,id){const b=cloud.coop?.id===id?cloud.coop:null,names={material_choice:'军需自选箱',vital_pill:'养元丹',recruit_order:'招贤令'};return '<details class="fold-section" data-fold="cooperative"><summary>云端协作讨伐 · 全服共同推进</summary><p>聚义厅 3 级、上传已收队阵容。服务器按当期敌军独立演算，每云档每日两次；不扣本机与云端物资。贡献按实际削减敌方气血折算，每次最多 2000 点。培养来源仍来自可导入的云档。</p>'+button('刷新协作进度','ui_cloudCoopRefresh')+button('使用所选云档讨伐一次','ui_cloudCooperate')+(b?'<p>'+esc(b.name)+' · '+esc(b.period)+'；全服 '+b.total+' 点，本档 '+b.mine+' 点，今日 '+b.used+' / 2 次。</p>'+b.stages.map(p=>'<p>阶段 '+p.stage+' · '+p.goal+' 点：'+Object.entries(p.items).map(([id,n])=>names[id]+' '+n).join('、')+'</p>'+button(b.claimed.includes(p.stage)?'已经领取':'领取到云端存档','ui_cloudCoopClaim',{stage:p.stage},'save',!b.mine||b.total<p.goal||b.claimed.includes(p.stage))).join(''):'<p>先刷新查看本期进度和可领取奖励。</p>')+'<p class="note">奖励直接写入所选云档，并增加云端版本。领取后请先下载比较并接续，再继续上传本机；本机不会被自动覆盖。次数与领奖以服务器记录为准，回滚旧存档不能重领。</p>'+button('下载并比较云档','ui_cloudDownload')+'</details>';}

@@ -1,5 +1,5 @@
-import { dispatch } from './core.js?v=0.28.0';
-export const SORTIES=['campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle','realmBattle','challengeStart'];
+import { dispatch } from './core.js?v=0.29.0';
+export const SORTIES=['campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle','realmBattle','challengeStart','personalStart','ventureNext'];
 export function prepareSortie(s,d,action,setup,now=s.clock){
  let next=s;
  try{
@@ -8,7 +8,7 @@ export function prepareSortie(s,d,action,setup,now=s.clock){
   next=dispatch(d,next,action,now);
   const b=next.battle,scheme=!!next.scheme,cost={stamina:s.player.stamina-next.player.stamina,food:(s.camp?.food||0)-(next.camp?.food||0)};
   // Preview uses the real entry rules but never writes or advances the battle.
-  const signature=JSON.stringify({context:b?.context||next.scheme?.context,team:b?.team||next.team.map(id=>[id,next.heroes[id].level]),enemy:b?.enemy,cost,stamina:next.player.stamina,food:next.camp?.food,expedition:b?.expedition});
+  const signature=JSON.stringify({context:b?.context||next.scheme?.context,team:b?.team||next.team.map(id=>[id,next.heroes[id].level]),enemy:b?.enemy,cost,stamina:next.player.stamina,food:next.camp?.food,expedition:b?.expedition,expansion:b?.expansion});
   return {next,battle:b,scheme,cost,signature,reason:''};
  }catch(e){return {reason:e.message,next:null};}
 }

@@ -7,7 +7,7 @@ export function verifyAutoBattle(data,raw,tier,record,now,seed,group='open'){
  if(!Number.isInteger(tier)||tier<1||tier>5||tier>(record?.tier||0)+1)throw Error('服务器演武须从第一层依次通关。');
  const s=gameSnapshot(JSON.parse(raw),data),cal=rotationCalendar(now);
  if(!s.camp||s.battle||s.scheme||s.event)throw Error('请上传已建寨且已经收兵的进度，再参加演武。');
- if(s.realm?.trek)throw Error('主队仍在短程远征，请回寨后上传再演武。');const groupError=groupReason(s,group);if(groupError)throw Error(groupError);
+ if(s.expansion?.run)throw Error('请先结束新战役再上传演武。');if(s.realm?.trek)throw Error('主队仍在短程远征，请回寨后上传再演武。');const groupError=groupReason(s,group);if(groupError)throw Error(groupError);
  // Ignore client scores, battle units, RNG and wall clock. Rebuild combat from the saved roster.
  s.clock=now;s.lastRegen=now;s.startedAt=Math.min(s.startedAt,now);s.daily.date=cal.date;s.rng=seed||1;s.battleSkillMode='auto';
  if(s.frontier){s.frontier.lastAt=now;for(const p of Object.values(s.frontier.posts))p.safeAt=Math.min(p.safeAt,now);}
