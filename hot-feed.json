@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-16T16:57:30.463Z",
+  "generatedAt": "2026-09-16T20:08:40.924Z",
   "intelligence": {
-    "updatedAt": "2026-09-16T16:57:30.463Z",
+    "updatedAt": "2026-09-16T20:08:40.924Z",
     "items": [
       {
         "id": "cn-item-fd457e3d2c223341",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49729000",
+        "id": "hn-49731054",
         "category": "dev",
-        "title": "Small Programming Tricks",
-        "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
+        "title": "Vectorized and performance-portable Quicksort",
+        "url": "https://opensource.googleblog.com/2022/06/Vectorized%20and%20performance%20portable%20Quicksort.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T15:56:47.000Z",
+        "publishedAt": "2026-09-16T18:31:35.000Z",
         "badge": "HN",
-        "signal": "58 分 · 37 评论"
+        "signal": "129 分 · 19 评论"
       },
       {
-        "id": "cn-it-677a1f16d935a6e7",
+        "id": "cn-it-4b4dcea293bde0fa",
         "category": "cn",
-        "title": "联合国秘书长古特雷斯：世界承受不起 AI 安全领域的恶性竞争",
-        "url": "https://www.ithome.com/1/003/338.htm",
+        "title": "苹果 watchOS 27.2 开发者预览版 Beta 发布",
+        "url": "https://www.ithome.com/1/003/345.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T15:47:40.000Z",
-        "summary": "IT之家 9 月 16 日消息，据彭博社今天（16 日）晚间报道，联合国秘书长安东尼奥 · 古特雷斯呼吁各国共同推进 AI 监管，并加强对技术的监督。“我们不能忽视已经出现的担忧，尤其不能忽视那些 亲自参与 AI 开发的人提出的警告 。地缘政治分歧确实存在，也可能诱使各方采取冒险做法。然而， 世界承受不起在 AI 安全领域不断的恶性竞争 。” 古特雷斯表示，AI 治理需要“真正的国际合作”和“协调一致的全球行动”。几天后，世界各国领导人就将前往纽约，参加联合国大会年度高级别…",
+        "publishedAt": "2026-09-16T19:00:11.000Z",
+        "summary": "【 点此直达升级教程 】 IT之家 9 月 17 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.2 开发者预览版 Beta 更新（内部版本号：24S5086l），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览…",
         "badge": "IT之家"
       },
       {
@@ -76,13 +76,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242549",
+        "id": "v2ex-1242555",
         "category": "dev",
-        "title": "[开源自荐] tool-bridge: Agent 的触手, 连接 设备/Context/MCP. 支持反向注册, SDK...",
-        "url": "https://www.v2ex.com/t/1242549",
+        "title": "我自己跑的选股和量化, 成功的提前几个小时预测到今晚加息 25bp",
+        "url": "https://www.v2ex.com/t/1242555",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T15:46:50.000Z",
-        "summary": "先上链接: https://github.com/TokenRollAI/tool-bridge 官方文档: https://tool-bridge.tokenroll.ai/ 过去一年在一些 AI Starup 工作, 在这些强调 AI Native 的公司中做 Agent Infra 的过程中, 经常会遇到一些问题: 大量的不同业务的 Agent 希望能够共享工具, 但是也希望有足够的限制(某些工具禁止访问) 希望 Agent 和 Agent 之间能够共享 Contex…",
+        "publishedAt": "2026-09-16T18:45:48.000Z",
+        "summary": "提前发在抖音, 可是不给流量, 好家伙.",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -94,18 +94,18 @@
         "source": "百度热搜",
         "summary": "“我要举报我的资助人！”国安机关接待室，某航发研究所助理工程师最终选择举报。他从小在福利院长大，高中时王老师突然出现，每年资助5000元直到他大学毕业。他毕业入职后，王老师开始索要内部敏感信息……经查，王老师是境外间谍，专门物色学子妄图“放长线、钓大鱼”。",
         "badge": "热搜",
-        "signal": "7,808,204 热度"
+        "signal": "7,809,342 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-76461",
+        "id": "cisa-kev-cve-2026-76460",
         "category": "security",
-        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway SQL Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461",
+        "title": "Cisco Identity Services Engine：Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76460",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-14T00:00:00.000Z",
-        "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
-        "badge": "CVE-2026-76461",
-        "signal": "已遭利用 · 整改期限 2026-09-17"
+        "publishedAt": "2026-09-16T00:00:00.000Z",
+        "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affec…",
+        "badge": "CVE-2026-76460",
+        "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
         "id": "ai-hugging-face-a1d018f16fad79f9",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49729228",
+        "id": "hn-49731285",
         "category": "dev",
-        "title": "Code Is Crap",
-        "url": "https://testing.googleblog.com/2011/02/this-code-is-crap.html",
+        "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+        "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T16:13:55.000Z",
+        "publishedAt": "2026-09-16T18:50:00.000Z",
         "badge": "HN",
-        "signal": "36 分 · 28 评论"
+        "signal": "69 分 · 12 评论"
       },
       {
         "id": "cn-item-62e530be2f8535c1",
@@ -158,36 +158,36 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1242538",
+        "id": "v2ex-1242549",
         "category": "dev",
-        "title": "杀死那个“自嗨”的工匠",
-        "url": "https://www.v2ex.com/t/1242538",
+        "title": "[开源自荐] tool-bridge: Agent 的触手, 连接 设备/Context/MCP. 支持反向注册, SDK...",
+        "url": "https://www.v2ex.com/t/1242549",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T14:14:24.000Z",
-        "summary": "昨天，表弟给我发消息，说他最近折腾闲鱼业务跑通了。 但有个麻烦。 他每天得不停地刷闲鱼，盯着那几类商品，有合适的就赶紧下单。时间久了，人有点扛不住。 他问我：“哥哥，能不能用 AI 快速搞个软件，帮我把这件事自动化？” 我第一反应是，可以。 现在 AI 写代码很快。如果事情不复杂，花不了多少时间，顺手帮他弄一下也没什么。 晚上，我开始研究。 抓取商品，分析，监控。 弄着弄着，验证码弹出来了。 要处理反爬，接着还有下单。 再一看时间，凌晨两点。 我合上电脑，去睡了。 躺下以后…",
+        "publishedAt": "2026-09-16T15:46:50.000Z",
+        "summary": "先上链接: https://github.com/TokenRollAI/tool-bridge 官方文档: https://tool-bridge.tokenroll.ai/ 过去一年在一些 AI Starup 工作, 在这些强调 AI Native 的公司中做 Agent Infra 的过程中, 经常会遇到一些问题: 大量的不同业务的 Agent 希望能够共享工具, 但是也希望有足够的限制(某些工具禁止访问) 希望 Agent 和 Agent 之间能够共享 Contex…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-fe7be2291b97ef3f",
+        "id": "cn-it-e7885005d02fa950",
         "category": "cn",
-        "title": "多名欧美艺人集体发帖，暗示自己将入选《GTA 6》电台音乐或出任 DJ",
-        "url": "https://www.ithome.com/1/003/336.htm",
+        "title": "苹果 visionOS 27.2 开发者预览版 Beta 发布",
+        "url": "https://www.ithome.com/1/003/344.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T15:32:36.000Z",
-        "summary": "IT之家 9 月 16 日消息，据外媒 VGC 今天（16 日）晚间报道，多位艺人开始暗示自己将参与《GTA 6》，陆续在 Instagram 上发布《GTA 6》美术图。 说唱歌手特拉维斯 · 斯科特发布了一张舞者双脚缠着钢管的图片并写道：“第一阶段 —— 现在轮到我了。我重返游戏，必须带着怒火和大量舞蹈而来。出发吧。 J.O.H .未完待续，Rockstar Games，很快再见。” 滚石乐队成员基思 · 理查兹随后发布了一张鬣蜥图片，没有配文。美国乡村歌手摩根 · 沃…",
+        "publishedAt": "2026-09-16T19:00:11.000Z",
+        "summary": "IT之家 9 月 17 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.2 开发者预览版 Beta 更新（内部版本号：24N5088l），本次更新距离上次发布 Beta/RC 间隔 7 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-09-15：visionOS …",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-84869",
+        "id": "cisa-kev-cve-2026-76461",
         "category": "security",
-        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
+        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway SQL Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confir…",
-        "badge": "CVE-2026-84869",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "publishedAt": "2026-09-14T00:00:00.000Z",
+        "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
+        "badge": "CVE-2026-76461",
+        "signal": "已遭利用 · 整改期限 2026-09-17"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49726955",
+        "id": "hn-49729000",
         "category": "dev",
-        "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
-        "url": "https://arxiv.org/abs/2609.14858",
+        "title": "Small programming tricks",
+        "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T13:44:40.000Z",
+        "publishedAt": "2026-09-16T15:56:47.000Z",
         "badge": "HN",
-        "signal": "93 分 · 24 评论"
+        "signal": "229 分 · 128 评论"
       },
       {
         "id": "cn-baidu-42da4e701ce7fe14",
@@ -217,7 +217,7 @@
         "source": "百度热搜",
         "summary": "据数据统计，2025年全国4个县域社零总额超千亿元，义乌以2153.8亿元居首，昆山、晋江、常熟紧随其后。此前，县域已成扩消费重要潜力来源，各大品牌纷纷抢滩布局。",
         "badge": "热搜",
-        "signal": "7,714,513 热度"
+        "signal": "7,712,654 热度"
       },
       {
         "id": "github-advisory-ghsa-5h8j-6crg-7rmw",
@@ -240,15 +240,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242529",
+        "id": "v2ex-1242538",
         "category": "dev",
-        "title": "求助： mpv 在 GPLv3 下的分发",
-        "url": "https://www.v2ex.com/t/1242529",
+        "title": "杀死那个“自嗨”的工匠",
+        "url": "https://www.v2ex.com/t/1242538",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T13:15:48.000Z",
-        "summary": "项目的客户端需要使用 mpv ，如果各客户端直接从 github 上下载，倒好，问题是 国内访问 github 不稳定；那如果把 mpv 放在 cloudflare 等 OSS 上分发给客户端，是否又需要附带对应的源码？ 但是现在根据 mpv-winbuild-cmake 构建 mpv 一直失败。",
+        "publishedAt": "2026-09-16T14:14:24.000Z",
+        "summary": "昨天，表弟给我发消息，说他最近折腾闲鱼业务跑通了。 但有个麻烦。 他每天得不停地刷闲鱼，盯着那几类商品，有合适的就赶紧下单。时间久了，人有点扛不住。 他问我：“哥哥，能不能用 AI 快速搞个软件，帮我把这件事自动化？” 我第一反应是，可以。 现在 AI 写代码很快。如果事情不复杂，花不了多少时间，顺手帮他弄一下也没什么。 晚上，我开始研究。 抓取商品，分析，监控。 弄着弄着，验证码弹出来了。 要处理反爬，接着还有下单。 再一看时间，凌晨两点。 我合上电脑，去睡了。 躺下以后…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-item-edd08f5f0df638a7",
@@ -261,44 +261,44 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-42016",
+        "id": "cisa-kev-cve-2026-84869",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
+        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
-        "badge": "CVE-2026-42016",
-        "signal": "已遭利用 · 整改期限 2026-09-25"
+        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confir…",
+        "badge": "CVE-2026-84869",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-openai-7d2872733a614740",
+        "id": "ai-openai-4410122683c56925",
         "category": "ai",
-        "title": "How workers are unlocking new ways of working",
-        "url": "https://openai.com/index/unlocking-new-ways-of-working",
+        "title": "How to connect AI usage to business value",
+        "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
         "source": "OpenAI",
-        "publishedAt": "2026-09-16T09:00:00.000Z",
-        "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+        "publishedAt": "2026-09-16T12:00:00.000Z",
+        "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49723408",
+        "id": "hn-49731360",
         "category": "dev",
-        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-        "url": "https://mistral.ai/news/mistral-x-mozilla/",
+        "title": "Accurate Models of AMD Matrix Cores",
+        "url": "https://arxiv.org/abs/2609.14845",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T08:08:57.000Z",
+        "publishedAt": "2026-09-16T18:56:05.000Z",
         "badge": "HN",
-        "signal": "359 分 · 118 评论"
+        "signal": "19 分 · 1 评论"
       },
       {
-        "id": "cn-it-23c0452c7c479b95",
+        "id": "cn-it-d9266fffc5d05239",
         "category": "cn",
-        "title": "任天堂推出《朋友收集：梦想生活》同捆版 Switch Lite 游戏机，10 月 29 日发售",
-        "url": "https://www.ithome.com/1/003/330.htm",
+        "title": "苹果 macOS 27.2 开发者预览版 Beta 发布",
+        "url": "https://www.ithome.com/1/003/343.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T15:27:10.000Z",
-        "summary": "IT之家 9 月 16 日消息，任天堂现已在欧洲市场推出《朋友收集：梦想生活》同捆版 Switch Lite 游戏机，10 月 29 日正式发售，价格暂未公布。 据介绍，该套装内包含一台蓝绿色 Switch Lite 游戏机、 《朋友收集：梦想生活》数字版游戏 ，并额外附赠 30 天 Nintendo Switch Online 会员兑换码。 据IT之家了解，任天堂 Switch Lite 游戏机最初发售于 2019 年 7 月，该机主打小巧设计， 相比普通版 Switch…",
+        "publishedAt": "2026-09-16T19:00:11.000Z",
+        "summary": "IT之家 9 月 17 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.2 开发者预览版 Beta 更新（内部版本号：26B5086k），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 ，之后通…",
         "badge": "IT之家"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242518",
+        "id": "v2ex-1242529",
         "category": "dev",
-        "title": "开源我常用的一些 AI 约束对话的 SKILL 工具",
-        "url": "https://www.v2ex.com/t/1242518",
+        "title": "求助： mpv 在 GPLv3 下的分发",
+        "url": "https://www.v2ex.com/t/1242529",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T12:08:43.000Z",
-        "summary": "有喜欢的朋友可以看看： https://github.com/lulufoo/lulu-dialogue-skills",
+        "publishedAt": "2026-09-16T13:15:48.000Z",
+        "summary": "项目的客户端需要使用 mpv ，如果各客户端直接从 github 上下载，倒好，问题是 国内访问 github 不稳定；那如果把 mpv 放在 cloudflare 等 OSS 上分发给客户端，是否又需要附带对应的源码？ 但是现在根据 mpv-winbuild-cmake 构建 mpv 一直失败。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "5 回复"
       },
       {
         "id": "cn-baidu-01fac1f8e43e1e1f",
@@ -340,17 +340,17 @@
         "source": "百度热搜",
         "summary": "9月16日，平陆运河正式通航，这项世纪工程的顺畅运转，离不开“全能管家”青年调度中心。青年调度中心作为国内首个全生命周期智慧运河数字孪生平台，可以实现一屏观全线、一脑统江海，对全流程业务进行一体化智能闭环管控。",
         "badge": "热搜",
-        "signal": "7,618,330 热度"
+        "signal": "7,618,780 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-42018",
+        "id": "cisa-kev-cve-2026-42016",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42018",
+        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
-        "badge": "CVE-2026-42018",
+        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+        "badge": "CVE-2026-42016",
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49729412",
+        "id": "hn-49731356",
         "category": "dev",
-        "title": "Claude Cowork and chat are now one Claude",
-        "url": "https://claude.com/blog/cowork-is-now-claude",
+        "title": "Fed hikes rates as inflation worries push up bond yields",
+        "url": "https://www.reuters.com/live/live-fed-rate-hike-expected-inflation-worries-push-up-bond-yields-2026-09-16/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T16:26:25.000Z",
+        "publishedAt": "2026-09-16T18:55:21.000Z",
         "badge": "HN",
-        "signal": "7 分 · 0 评论"
+        "signal": "89 分 · 49 评论"
       },
       {
         "id": "cn-item-24201fe0f79bae7c",
@@ -394,46 +394,46 @@
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-7f82d995c515e5ba",
+        "id": "ai-openai-7d2872733a614740",
         "category": "ai",
-        "title": "How Fyxer built an AI executive assistant people trust",
-        "url": "https://openai.com/index/fyxer",
+        "title": "How workers are unlocking new ways of working",
+        "url": "https://openai.com/index/unlocking-new-ways-of-working",
         "source": "OpenAI",
-        "publishedAt": "2026-09-14T12:00:00.000Z",
-        "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+        "publishedAt": "2026-09-16T09:00:00.000Z",
+        "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1242515",
+        "id": "v2ex-1242518",
         "category": "dev",
-        "title": "全能的独立开发者",
-        "url": "https://www.v2ex.com/t/1242515",
+        "title": "开源我常用的一些 AI 约束对话的 SKILL 工具",
+        "url": "https://www.v2ex.com/t/1242518",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T11:55:06.000Z",
-        "summary": "做一名独立开发者其实很简单。 我只需要什么都会。 我需要懂产品管理。 用户体验设计。 用户界面设计。 软件架构。 前端。 后端。 数据库。 基础设施。 DevOps 。 网络安全。 人工智能。 市场营销。 销售。 当然，还有市场本身。 如果我还懂一点量子力学、相对论和弦理论，那就更好了…… 哦，还有市场营销。 经过多年的学习，我终于掌握了这一切，并做出了自己的项目。 我很自豪。 我决定把它分享给社区。 于是，我在 Reddit 上发布了一个帖子。 然后…… 帖子被当成垃圾广…",
+        "publishedAt": "2026-09-16T12:08:43.000Z",
+        "summary": "有喜欢的朋友可以看看： https://github.com/lulufoo/lulu-dialogue-skills",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-a245e756465b2222",
+        "id": "cn-it-04e581bcf37a9f2b",
         "category": "cn",
-        "title": "《饥饿游戏》前传电影《饥饿游戏：收获日出》曝全新中字预告，北美 2026 年 11 月 20 日上映",
-        "url": "https://www.ithome.com/1/003/329.htm",
+        "title": "苹果 iOS/iPadOS 27.2 开发者预览版 Beta 发布",
+        "url": "https://www.ithome.com/1/003/342.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T15:17:09.000Z",
-        "summary": "IT之家 9 月 16 日消息，《饥饿游戏》前传电影《饥饿游戏：收获日出》曝出全新中字预告。 本片已定档 2026 年 11 月 20 日在北美上映 。 本片还发布了全新“对峙”系列海报。 IT之家查询获悉，新片《饥饿游戏：收获日出》由弗朗西斯・劳伦斯回归执导，编剧为系列电影联合编剧比利・雷，詹妮弗 · 劳伦斯、乔什 · 哈切森将客串出演。电影设定在第一部前传《饥饿游戏：鸣鸟与蛇之歌》的 40 年后，将围绕着 16 岁的黑密斯展开。 影片改编自苏珊・柯林斯同名小说，是继《饥…",
+        "publishedAt": "2026-09-16T19:00:10.000Z",
+        "summary": "【 点此直达升级教程 】 IT之家 9 月 17 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.2 开发者预览版 Beta 更新（内部版本号：24B5084k），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； •…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-85706",
+        "id": "cisa-kev-cve-2026-42018",
         "category": "security",
-        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-85706",
+        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42018",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repositor…",
-        "badge": "CVE-2026-85706",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+        "badge": "CVE-2026-42018",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
         "id": "ai-google-deepmind-d721843382f3485e",
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49717558",
+        "id": "hn-49726955",
         "category": "dev",
-        "title": "Introducing System One Models and Jev",
-        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+        "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+        "url": "https://arxiv.org/abs/2609.14858",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T19:25:03.000Z",
+        "publishedAt": "2026-09-16T13:44:40.000Z",
         "badge": "HN",
-        "signal": "1696 分 · 459 评论"
+        "signal": "143 分 · 44 评论"
       },
       {
         "id": "cn-baidu-cbbd19b3f177925e",
@@ -462,7 +462,7 @@
         "source": "百度热搜",
         "summary": "16日，多国代表团抵达日本名古屋备战亚运会，因系统故障被困机场近6小时无车可乘、无饭可吃。中国体操队等至下午6点才离开，羽毛球队求助领事馆自行租车。此前，名古屋亚运会因预算不足改用集装箱房等拼合住宿，已遭韩国等多国代表团吐槽条件恶劣。",
         "badge": "热搜",
-        "signal": "7,523,403 热度"
+        "signal": "7,523,970 热度"
       },
       {
         "id": "github-advisory-ghsa-v8pv-4842-x354",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242483",
+        "id": "v2ex-1242515",
         "category": "dev",
-        "title": "我的 v 站余额是什么水平？",
-        "url": "https://www.v2ex.com/t/1242483",
+        "title": "全能的独立开发者",
+        "url": "https://www.v2ex.com/t/1242515",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T09:10:45.000Z",
-        "summary": "我是 V2EX 第 272263 号会员，加入于 2017-12-04 17:20:32 +08:00 目前账号 1 金 35 银 1 铜，余额来源基本都是签到来的，中间有几年 gap 没坐班没怎么上 v 站 想知道我是属于垫底还是中间？大家会有余额焦虑吗，会因为余额不足不轻易发帖/回复吗？",
+        "publishedAt": "2026-09-16T11:55:06.000Z",
+        "summary": "做一名独立开发者其实很简单。 我只需要什么都会。 我需要懂产品管理。 用户体验设计。 用户界面设计。 软件架构。 前端。 后端。 数据库。 基础设施。 DevOps 。 网络安全。 人工智能。 市场营销。 销售。 当然，还有市场本身。 如果我还懂一点量子力学、相对论和弦理论，那就更好了…… 哦，还有市场营销。 经过多年的学习，我终于掌握了这一切，并做出了自己的项目。 我很自豪。 我决定把它分享给社区。 于是，我在 Reddit 上发布了一个帖子。 然后…… 帖子被当成垃圾广…",
         "badge": "程序员",
-        "signal": "67 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 31108,
+        "stars": 31445,
         "starsToday": 3215
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 6313,
+        "stars": 6728,
         "starsToday": 1249
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 34784,
+        "stars": 34881,
         "starsToday": 1532
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/abue-ammar/tinycast",
         "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
         "language": "Swift",
-        "stars": 5417,
+        "stars": 5495,
         "starsToday": 1136
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/jamiepine/voicebox",
         "description": "The open-source AI voice studio. Clone, dictate, create.",
         "language": "TypeScript",
-        "stars": 54195,
+        "stars": 54265,
         "starsToday": 409
       },
       {
@@ -559,7 +559,7 @@
         "name": "Lakr233/vphone-cli",
         "url": "https://github.com/Lakr233/vphone-cli",
         "language": "Swift",
-        "stars": 13251,
+        "stars": 13290,
         "starsToday": 444
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 24206,
+        "stars": 24238,
         "starsToday": 96
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 7151,
+        "stars": 7213,
         "starsToday": 771
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/ankitects/anki",
         "description": "Anki is a smart spaced repetition flashcard program",
         "language": "Rust",
-        "stars": 30706,
+        "stars": 30751,
         "starsToday": 50
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 77546,
+        "stars": 77648,
         "starsToday": 1059
       }
     ],
-    "updatedAt": "2026-09-16T16:57:30.463Z"
+    "updatedAt": "2026-09-16T20:08:40.924Z"
   }
 }
