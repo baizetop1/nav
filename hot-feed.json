@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-16T07:41:21.855Z",
+  "generatedAt": "2026-09-16T11:36:04.121Z",
   "intelligence": {
-    "updatedAt": "2026-09-16T07:41:21.855Z",
+    "updatedAt": "2026-09-16T11:36:04.121Z",
     "items": [
       {
-        "id": "cn-item-075144284231c967",
+        "id": "cn-item-62e530be2f8535c1",
         "category": "cn",
-        "title": "扎哈罗娃谈中国谚语“百闻不如一见”：亲身观察才能了解实情",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-16/10697410.shtml",
+        "title": "中国夏粮收购接近尾声 累计收购小麦1亿吨",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697674.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-16T06:15:54.000Z",
-        "summary": "中新网9月16日电 据俄媒报道，俄罗斯外交部发言人扎哈罗娃于9月14日接受采访时表示，她最近才知道“百闻不如一见”这句谚语来自中国。",
+        "publishedAt": "2026-09-16T10:34:02.000Z",
+        "summary": "中新社北京9月16日电 (记者 陈溯)中国国家粮食和物资储备局16日发布数据显示，目前，夏粮旺季收购接近尾声，全国累计收购小麦1亿吨、早籼稻1200万吨，进度略快于上年，秋粮收购各项准备工作已基本就绪。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49717558",
+        "id": "hn-49724141",
         "category": "dev",
-        "title": "Introducing System One Models and Jev",
-        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+        "title": "EU chief opens door for Canada to become 'associate member'",
+        "url": "https://www.bbc.com/news/articles/cjwyzrr9d3dko",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T19:25:03.000Z",
+        "publishedAt": "2026-09-16T09:54:05.000Z",
         "badge": "HN",
-        "signal": "1235 分 · 364 评论"
+        "signal": "191 分 · 142 评论"
       },
       {
-        "id": "cn-it-7318206b385cc8a2",
+        "id": "cn-it-d58f3cbdec695f7e",
         "category": "cn",
-        "title": "领克 08 EM-P 汽车全球累计交付突破 20 万台，覆盖全球超 30 个国家和地区",
-        "url": "https://www.ithome.com/1/003/106.htm",
+        "title": "M154FF 跑分曝光：第六代骁龙 8 超级至尊版 +16GB 内存，预估为小米 18 Pro 手机",
+        "url": "https://www.ithome.com/1/003/270.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T07:39:39.000Z",
-        "summary": "IT之家 9 月 16 日消息，领克汽车官方今日宣布， 领克 08 EM-P 全球累计交付突破 20 万台 ，足迹覆盖欧洲、亚太、拉美、北非等全球超 30 个国家和地区。 据IT之家此前报道， 今年 6 月，领克汽车今日宣布领克 EM-P 家族三款版型上新 。全新领克 08 EM-P 新增 230 超长续航 Max 版， 限时价 16.98 万元起 。 相关阅读： 《 全新领克 07 EM-P、08 EM-P、10 EM-P 上新，13.98 万元起 》 延伸阅读 领克 0…",
+        "publishedAt": "2026-09-16T11:31:04.000Z",
+        "summary": "IT之家 9 月 16 日消息， 型号为“Xiaomi M154FF”的小米手机昨日（9 月 15 日）现身 GeekBench 跑分库，预估关联小米 18 Pro 机型 。 型号 M1544F 此前已现身跑分库，预估关联小米 18 Pro Max 。 数据显示，该机搭载了高通第六代骁龙 8 超级至尊版（两颗 5.01GHz 超大核，3 颗 4.03GHz 大核，3 颗 3.74GHz 中核），此外 GPU 部分显示配备 Adreno 850。 页面显示该手机配备 16GB…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242441",
+        "id": "v2ex-1242483",
         "category": "dev",
-        "title": "我要再次发出暴论， AGI 离我们还很遥远。",
-        "url": "https://www.v2ex.com/t/1242441",
+        "title": "我的 v 站余额是什么水平？",
+        "url": "https://www.v2ex.com/t/1242483",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T07:04:10.000Z",
-        "summary": "标题党一下，从成本上来说，让自主迭代一个工程很难，成本太高。只能说从 0-1 ，平时迭代效率提高了不少，这个过程依旧非常需要人工介入，上很多约束，子会话什么的也不现实，Token 成本会很高。 我自己用 200 刀的 gpt ，跑的时候会让他开 Terra middle 多很多次代码审查，确实能避免绝大多数问题了，但也还有不少问题。还是得我自己真机实操去回归，发现，给他讲，写测试，锁死，修改。 现在能源也没什么大突破，算力危机感觉一时半会也搞不定，如果真到 Token 和流…",
+        "publishedAt": "2026-09-16T09:10:45.000Z",
+        "summary": "我是 V2EX 第 272263 号会员，加入于 2017-12-04 17:20:32 +08:00 目前账号 1 金 35 银 1 铜，余额来源基本都是签到来的，中间有几年 gap 没坐班没怎么上 v 站 想知道我是属于垫底还是中间？大家会有余额焦虑吗，会因为余额不足不轻易发帖/回复吗？",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "52 回复"
       },
       {
-        "id": "cn-baidu-d76db3b40bee9cb3",
+        "id": "cn-baidu-78baad6ea1ea5079",
         "category": "cn",
-        "title": "赵家驹 从外卖小哥到世界冠军",
-        "url": "https://www.baidu.com/s?wd=%E8%B5%B5%E5%AE%B6%E9%A9%B9+%E4%BB%8E%E5%A4%96%E5%8D%96%E5%B0%8F%E5%93%A5%E5%88%B0%E4%B8%96%E7%95%8C%E5%86%A0%E5%86%9B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "医保大动作！全国统一目录来了",
+        "url": "https://www.baidu.com/s?wd=%E5%8C%BB%E4%BF%9D%E5%A4%A7%E5%8A%A8%E4%BD%9C%EF%BC%81%E5%85%A8%E5%9B%BD%E7%BB%9F%E4%B8%80%E7%9B%AE%E5%BD%95%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京时间9月16日，中国越野跑运动员赵家驹在意大利“巨人之旅”330公里越野赛上以65小时55分22秒夺冠，成为首位在该赛事登顶并跑进66小时的中国选手，打破赛道纪录。此前，曾做过外卖员的赵家驹在去年该项赛事中因体力透支未能完赛，经过战术调整最终成功逆袭。",
+        "summary": "近日，国家医保局首次制定全国统一的医保医疗服务项目目录。首批纳入心血管、呼吸等13类项目，美容、非功能性整容、健康体检等一律不报销。目录将先用于跨省异地就医直接结算，再逐步与各省政策衔接。",
         "badge": "热搜",
-        "signal": "7,809,466 热度"
+        "signal": "7,808,843 热度"
       },
       {
         "id": "cisa-kev-cve-2026-84869",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49721322",
+        "id": "hn-49724488",
         "category": "dev",
-        "title": "Apple Reference Image: A New Approach for Verified Photography",
-        "url": "https://security.apple.com/blog/apple-reference-image/",
+        "title": "Salesforce Global Outage",
+        "url": "https://status.salesforce.com/products/all",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T02:07:31.000Z",
+        "publishedAt": "2026-09-16T10:37:08.000Z",
         "badge": "HN",
-        "signal": "191 分 · 117 评论"
+        "signal": "36 分 · 17 评论"
       },
       {
-        "id": "cn-item-c0197c51ce25781f",
+        "id": "cn-item-edd08f5f0df638a7",
         "category": "cn",
-        "title": "中新网评：三九胃泰的营销病，比胃病更该治",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697437.shtml",
+        "title": "拼到最后！中国男篮击败沙特队晋级亚运会四强",
+        "url": "https://www.chinanews.com.cn/ty/2026/09-16/10697633.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-16T05:47:46.000Z",
-        "summary": "中新网北京9月16日电(记者 查志远) 三九胃泰营销又在危险的边缘试探。中秋本是团聚的象征，三九胃泰却因为一则“求‘你们’中秋别团圆了”的广告，把自己送上热搜。",
+        "publishedAt": "2026-09-16T09:17:58.000Z",
+        "summary": "比赛现场。中新社记者 韩海丹 摄 中新网9月16日电(记者 李志全)当地时间9月16日，爱知·名古屋亚运会男子篮球项目进行1/4决赛，中国男篮以87:78力克沙特阿拉伯队，晋级本届亚运会四强。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1242429",
+        "id": "v2ex-1242480",
         "category": "dev",
-        "title": "建议针对 Claude， ChatGPT 设置 hosts 文件，而 Surge 这些设置不读取 hosts 文件",
-        "url": "https://www.v2ex.com/t/1242429",
+        "title": "听了 V 友们的建议， Subpool 又更新了，顺便交个半个月的使用作业",
+        "url": "https://www.v2ex.com/t/1242480",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T06:39:13.000Z",
-        "summary": "/etc/hosts 127.0.0.1 api.anthropic.com 127.0.0.1 claude.ai 127.0.0.1 chatgpt.com 127.0.0.1 chat.openai.com 127.0.0.1 ws.chatgpt.com 然后 Surge 之类的设置不要读取 hosts 文件，这样只有在代理工作时才能正常访问，代理崩溃掉或者开机后启动顺序在 Claude ，ChatGPT 之后也没关系，避免直连",
+        "publishedAt": "2026-09-16T09:03:05.000Z",
+        "summary": "之前在 V2EX 分享过自己做的 Subpool ，收到了 V 友们不少建议，先谢谢大家。这段时间我们结合大家的反馈和公司内部的实际使用，继续做了一些改进，回来更新一下进展。 这次加上了 Codex 账号设备指纹支持。 简单说，就是让同一个上游账号保持稳定的安装标识，不同同事通过 Subpool 使用这个账号时，会统一使用该账号的标识。服务重启、凭证刷新后也能保持一致，自动生效，不需要额外配置。 也分享一下实际使用情况：我们团队接了两个 $200/月的账号，公司里多位同事一…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-48bea0e49d0d94d2",
+        "id": "cn-it-7ea0828b3eacdaf8",
         "category": "cn",
-        "title": "本田中国总经理五十岚雅行：目前“没考虑”南北本田合并",
-        "url": "https://www.ithome.com/1/003/105.htm",
+        "title": "“安全事件”发生前，曝 OpenAI 失控智能体 5 月就已试图探测 Hugging Face 弱点",
+        "url": "https://www.ithome.com/1/003/269.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T07:39:08.000Z",
-        "summary": "IT之家 9 月 16 日消息，据财联社今天（16 日）下午报道，本田技研工业株式会社执行役常务、中国本部长、本田中国总经理五十岚雅行表示，一汽股份成为广汽集团第二大股东， 不会影响本田与广汽合资公司广汽本田的运营 。 针对“南北本田（IT之家注：广汽本田和东风本田）合并”的说法，五十岚雅行回应称：“本田与东风合资公司东风本田的合资期限尚未到期，与广汽合资公司广汽本田刚刚完成续约， 目前没有考虑南北本田的合并 。” 目前，广汽集团与海外车企合资的公司包含广汽本田、广汽丰田。…",
+        "publishedAt": "2026-09-16T11:21:48.000Z",
+        "summary": "IT之家 9 月 16 日消息，今天（16 日）晚间，据路透社援引审查过有关活动的研究人员消息称，OpenAI 的失控 AI 智能体 早在 5 月就劫持了 Hugging Face 的用户账户 ，并探测网站漏洞。 此次曝光的恶意活动表明，失控智能体尝试寻找 Hugging Face 的入侵途径，比此前公开的信息所显示的更早。 上月，OpenAI 在公开的事件报告中披露，智能体曾窃取一名 Hugging Face 用户的数字凭证，访问一份生物学方面的文件。不过，研究人员告诉路…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49711544",
+        "id": "hn-49723408",
         "category": "dev",
-        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-        "url": "https://github.com/arnegiacomo/fugleramme",
+        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
+        "url": "https://mistral.ai/news/mistral-x-mozilla/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T12:31:10.000Z",
+        "publishedAt": "2026-09-16T08:08:57.000Z",
         "badge": "HN",
-        "signal": "1565 分 · 195 评论"
+        "signal": "87 分 · 21 评论"
       },
       {
-        "id": "cn-baidu-7bb004cfbfd1127d",
+        "id": "cn-baidu-b805a637d6806dce",
         "category": "cn",
-        "title": "啄木鸟维修换1个开关收费2800",
-        "url": "https://www.baidu.com/s?wd=%E5%95%84%E6%9C%A8%E9%B8%9F%E7%BB%B4%E4%BF%AE%E6%8D%A21%E4%B8%AA%E5%BC%80%E5%85%B3%E6%94%B6%E8%B4%B92800&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“戒烟10年能戒出一套房首付钱”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E6%88%92%E7%83%9F10%E5%B9%B4%E8%83%BD%E6%88%92%E5%87%BA%E4%B8%80%E5%A5%97%E6%88%BF%E9%A6%96%E4%BB%98%E9%92%B1%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，南京一户独居老人家中跳闸，“啄木鸟”平台师傅给换了个市价几十块的开关，竟张嘴就收2800元，还拒不提供收费明细，目前平台仅同意退款1000元。",
+        "summary": "近日，河南一男子晒出戒烟65天成果，称一天省下25元，攒下的钱密密麻麻贴满一墙。有网友算账称，若每天省下一盒20元的烟，10年可省出一套房的小首付。",
         "badge": "热搜",
-        "signal": "7,712,821 热度"
+        "signal": "7,713,304 热度"
       },
       {
         "id": "github-advisory-ghsa-5648-rgj9-v224",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242428",
+        "id": "v2ex-1242467",
         "category": "dev",
-        "title": "Boss 说要全面拥抱 AI 之后，我怎么感觉工作量变大了，省下来的时间进了谁口袋？？",
-        "url": "https://www.v2ex.com/t/1242428",
+        "title": "Selected model is at capacity. Please try a different model.",
+        "url": "https://www.v2ex.com/t/1242467",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T06:38:20.000Z",
-        "summary": "AI 变强了？确实变强了，但排期变了，工作量也变了。 AI 变革生产力？生产力已经变了。以前是学怎么实现，现在是学怎么用 AI 实现，工作效率上去了，但工时一点没变少，多出来的那部分产出，进了谁口袋？ 护城河也是真薄了，个人的学习速度远远比不过 AI 模型迭代的速度。 同一把刀收割着时间。 有没有佬用 AI 省下来的时间，提前下班了。 （这不是个想表达悲伤的帖子，这是自我反思无果后的帖子） : <",
+        "publishedAt": "2026-09-16T08:20:42.000Z",
+        "summary": "Selected model is at capacity. Please try a different model. 我靠，今天怎么老出现这个？我号难道被黑了吗？",
         "badge": "程序员",
         "signal": "4 回复"
       },
       {
-        "id": "cn-item-2ae6af057f12f863",
+        "id": "cn-item-24201fe0f79bae7c",
         "category": "cn",
-        "title": "中国天眼FAST发现极短周期、最轻双中子星系统",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-16/10697374.shtml",
+        "title": "亚运会来了！中国队有哪些看点？",
+        "url": "https://www.chinanews.com.cn/ty/2026/09-16/10697620.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-16T03:52:05.000Z",
-        "summary": "中新网9月16日电 据中国科学院国家天文台网站消息，近日，依托中国天眼FAST超高探测灵敏度，国家天文台韩金林研究员领衔的FAST银道面脉冲星巡天团队取得重要发现，捕获一颗处于紧致轨道的双中子星系统PSRJ1856-0039。该系统是轨道周期极短、目前已知总质量最轻的双中子星系统，多项观测结果精准验证了广义相对论，为探索极端天体物理、引力本质与宇宙元素起源提供了关键的新目标，相关研究成果2026年9月15日发表于《物理评论快报》(PRL)，并被期刊编辑遴选为重点推介成果。",
+        "publishedAt": "2026-09-16T08:54:30.000Z",
+        "summary": "第二十届亚洲运动会将于9月19日在日本爱知县名古屋市开幕，中国代表团将派出815名运动员参加38个大项、369个小项的角逐。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49693971",
+        "id": "hn-49717558",
         "category": "dev",
-        "title": "Show HN: I made a flight simulator, except you're just a passenger",
-        "url": "https://inflightsimulator.com",
+        "title": "Introducing System One Models and Jev",
+        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
         "source": "Hacker News",
-        "publishedAt": "2026-09-14T09:08:56.000Z",
+        "publishedAt": "2026-09-15T19:25:03.000Z",
         "badge": "HN",
-        "signal": "134 分 · 60 评论"
+        "signal": "1473 分 · 422 评论"
       },
       {
-        "id": "cn-it-36d1ed3cf7d3a67c",
+        "id": "cn-it-ee28d44d2962b901",
         "category": "cn",
-        "title": "海信新一代影像旗舰 U7T Pro 电视 9 月 23 日发布，首搭全新升级真彩黑曜屏",
-        "url": "https://www.ithome.com/1/003/103.htm",
+        "title": "享界 S9、S9T 累计交付突破 6 万台，连续 9 个月居 30 万以上新能源轿车销冠",
+        "url": "https://www.ithome.com/1/003/268.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T07:37:03.000Z",
-        "summary": "IT之家 9 月 16 日消息，海信 RGB-Mini LED 原生色彩大师 2026 海信电视秋季新品发布会定档 9 月 23 日，旗下全新 RGB-Mini LED 影像旗舰 U7T Pro 官宣搭载 全新升级真彩黑曜屏 。 据海信官方介绍，专为 RGB-Mini LED 深度定制的真彩黑曜屏，将首次搭载于 U7T Pro。 海信经典黑曜屏已实现 1.28% 超低反射率，屏幕黑度较普通屏幕提升 4 倍。而新一代真彩黑曜屏， 为原生真彩 RGB-Mini LED 量身定制…",
+        "publishedAt": "2026-09-16T11:21:32.000Z",
+        "summary": "IT之家 9 月 16 日消息，今天是享界 S9T 旅行车上市一周年。华为智选车产品总监（享界系列）彭磊今日发文回顾了享界 S9T 的上市历程。据其透露，一年前旅行车还是小众选择，如今行业调研显示， 旅行车以 33.9% 成为用户最期待的车身形式 。 彭磊介绍称，享界 S9T 上市 72 小时大定破万， 同时享界 S9、S9T 累计交付超 6 万台 ，连续 9 个月稳居 30 万以上新能源轿车销冠。 据IT之家此前报道，今年 6 月，在工信部第 408 批《道路机动车辆生产…",
         "badge": "IT之家"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242419",
+        "id": "v2ex-1242461",
         "category": "dev",
-        "title": "Which model to pick? 你用什么模型？",
-        "url": "https://www.v2ex.com/t/1242419",
+        "title": "[完全开源] IP 纯净度检测 AI 服务区状态检测 可一键部署到自己的 CF",
+        "url": "https://www.v2ex.com/t/1242461",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T06:13:35.000Z",
-        "summary": "Which model to pick? Opus 5 — Coding / Claude Code / Agents Fable 5 — Advanced Reasoning / Complex Coding / Research GPT-5.6 — All-Rounder / API / Agents / Automation GPT-6 Astra — Extreme Reasoning / Terminal / Heavy-Duty Agents Opus 4.8 …",
+        "publishedAt": "2026-09-16T08:02:54.000Z",
+        "summary": "很多轮子大家都是看到过 现在手搓直接开源 让大家也可以用自己的轮子 🌐 在线体验 ： https://ip.huzhihui.com 📦 开源仓库 ： https://github.com/zhihui-hu/one-ip （如果觉得顺手，求个 Star ⭐️） 目前主要能做这些事： 看出口和分流：分别探测国内、外部 IPv4 ，再看不同网站实际使用哪个出口。 查 IP 信息：归属地、运营商、ASN 、企业类型、住宅/机房标记、信誉分，以及更详细的网络信息。 排查连通性：网…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "7 回复"
       },
       {
         "id": "cn-baidu-8615a5d44bb18536",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "9月16日，西部陆海新通道骨干工程——平陆运河正式通航。这项世纪工程集齐了最新、最强、最大等多重硬核标签，这些“最”的背后，是平陆运河硬核实力的真实体现。",
         "badge": "热搜",
-        "signal": "7,618,211 热度"
+        "signal": "7,618,032 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85706",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49722276",
+        "id": "hn-49723873",
         "category": "dev",
-        "title": "Datamimic – don't let your coding agent invent its own test world",
-        "url": "https://github.com/rapiddweller/datamimic",
+        "title": "Learning Programming in an Age of LLMs",
+        "url": "https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T04:58:36.000Z",
+        "publishedAt": "2026-09-16T09:12:34.000Z",
         "badge": "HN",
-        "signal": "28 分 · 4 评论"
+        "signal": "73 分 · 44 评论"
       },
       {
-        "id": "cn-item-8fd97f04058d58b0",
+        "id": "cn-item-cfc268f44d7c4d00",
         "category": "cn",
-        "title": "1至8月全国各级行政复议机关办理案件77.2万件",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-16/10697292.shtml",
+        "title": "王毅同伊朗外长阿拉格齐会谈",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-16/10697597.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-16T03:33:38.000Z",
-        "summary": "中新网9月16日电 9月16日，国新办就“十五五”时期推进全面依法治国任务落实和司法行政工作，服务保障经济社会高质量发展情况举行发布会。",
+        "publishedAt": "2026-09-16T08:26:10.000Z",
+        "summary": "2026年9月16日，中共中央政治局委员、外交部长王毅在北京同伊朗外长阿拉格齐举行会谈。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1242384",
+        "id": "v2ex-1242453",
         "category": "dev",
-        "title": "codex 出了问题，大佬们帮忙看看",
-        "url": "https://www.v2ex.com/t/1242384",
+        "title": "开源|基于 DSH 创意设计方向 Agent",
+        "url": "https://www.v2ex.com/t/1242453",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T03:58:42.000Z",
-        "summary": "问题是 codex 无法发送消息，右下角的发送是暗的。怀疑过是 codex++的问题，但是单独开 codex 也还是一样。前两天也有这样的情况，不过过一会就能够正常使用了。现在就是找不到哪里出了问题，一直用不了",
+        "publishedAt": "2026-09-16T07:40:50.000Z",
+        "summary": "Hi, V2EXers 大家好，我是 Sai ，基于 DeepSeek Harness 制作了类似 Lovart 的产品，已经在 github 开源（ repo 地址在最下面），并持续根据微信群里面的开发和设计行业的朋友的反馈进行更新，核心思路是让用户在创作时将所有的关注点（创作、修改等）集中在和 agent 的交互上，同时提供了一个无限画布便于查看结果，希望大家多提意见和建议。 谢谢🙏 Github Repo: https://github.com/saihhold-zh…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-937ecd9bb21789e7",
+        "id": "cn-it-2126b1d45a2c3b30",
         "category": "cn",
-        "title": "苹果携手王嘉尔推出音乐视频《Thank You》，全程使用 iPhone 18 Pro 拍摄",
-        "url": "https://www.ithome.com/1/003/102.htm",
+        "title": "英伟达黄仁勋：在中国，没人谈所谓“AI 末日论”",
+        "url": "https://www.ithome.com/1/003/266.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T07:29:28.000Z",
-        "summary": "IT之家 9 月 16 日消息，Apple 苹果再度与歌手王嘉尔合作， 共同推出音乐视频《Thank You》 ，这支双方第二次合作用 iPhone 拍摄的作品即将于 9 ⽉ 21 日中午 12 点正式发布。 《Thank You》全程使用全新 iPhone 18 Pro 拍摄 ，由王嘉尔与导演 Ojun Kwon 共同执导，以长镜头形式呈现，让观众跟随镜头走进王嘉尔的内心世界。 论及创作《Thank You》的初衷，王嘉尔表示是为了回馈他的粉丝们，并向那些在他的整个音乐旅…",
+        "publishedAt": "2026-09-16T11:16:42.000Z",
+        "summary": "IT之家 9 月 16 日消息，据《商业内幕》今天报道，英伟达首席执行官黄仁勋本周一在 All-In Summit 峰会表示，在中国，没有人会谈“AI 末日论”。 黄仁勋认为， 中国的叙事要现实得多 。没有人在中国说“这一切要结束了”“那要完了”，也没有人谈论什么灾难，或者说什么世界末日。 IT之家注意到，一旁的主持人补充道，中国人对 AI 的态度是实用主义，他们将 AI 视作一种能够推动经济、促进社会发展的事物， 而且他们没有一群整天嚷嚷着“AI 将毁灭人类文明”的群体 …",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49721548",
+        "id": "hn-49711544",
         "category": "dev",
-        "title": "Negativland, Culture Jamming, and the Art of Making Something New",
-        "url": "https://blog.archive.org/2026/09/11/negativland-culture-jamming-and-the-art-of-making-something-new/",
+        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+        "url": "https://github.com/arnegiacomo/fugleramme",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T02:46:06.000Z",
+        "publishedAt": "2026-09-15T12:31:10.000Z",
         "badge": "HN",
-        "signal": "71 分 · 17 评论"
+        "signal": "1702 分 · 210 评论"
       },
       {
-        "id": "cn-baidu-a64ebf388445d5c9",
+        "id": "cn-baidu-93a7f541b99d47ec",
         "category": "cn",
-        "title": "警方介入南方医科大学坠亡事件",
-        "url": "https://www.baidu.com/s?wd=%E8%AD%A6%E6%96%B9%E4%BB%8B%E5%85%A5%E5%8D%97%E6%96%B9%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6%E5%9D%A0%E4%BA%A1%E4%BA%8B%E4%BB%B6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "南京博物院原院长徐湖平获刑3年",
+        "url": "https://www.baidu.com/s?wd=%E5%8D%97%E4%BA%AC%E5%8D%9A%E7%89%A9%E9%99%A2%E5%8E%9F%E9%99%A2%E9%95%BF%E5%BE%90%E6%B9%96%E5%B9%B3%E8%8E%B7%E5%88%913%E5%B9%B4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "网传9月15日凌晨，南方医科大学白云校区一名临床医学八年制本博连读学生从宿舍楼坠亡。校方内部人士确认确有此事，辖区京溪派出所表示仍在跟进处理，相关案件情况不便透露。目前校方及警方均未就此事发布正式通报。",
+        "summary": "9月16日，江苏省有关部门通报南京博物院受赠文物管理问题处理结果。徐湖平因受贿罪被判有期徒刑三年并处罚金二十万元，此前已被开除党籍并取消待遇。原省文化厅、南京博物院等相关责任人因履职不力被给予开除、撤职等处理。",
         "badge": "热搜",
-        "signal": "7,520,051 热度"
+        "signal": "7,522,762 热度"
       },
       {
         "id": "github-advisory-ghsa-5hq8-qhww-jm7q",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242374",
+        "id": "v2ex-1242441",
         "category": "dev",
-        "title": "如何用 AI 管理标签页、阅读列表这类浏览器内置功能？",
-        "url": "https://www.v2ex.com/t/1242374",
+        "title": "我要再次发出暴论， AGI 离我们还很遥远。",
+        "url": "https://www.v2ex.com/t/1242441",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T03:28:36.000Z",
-        "summary": "ChatGPT Atlas 下线了，感觉独立 AI 浏览器这个方向不太乐观。 但我真实的需求其实不是换一个 AI 浏览器，而是用 AI 管理好现有浏览器的内置功能： 1. 标签页：几十个 tab 开着，如何用 AI 自动分组、去重、摘要、该关的关掉； 2. 阅读列表/稍后读：存了几百条没读，如何让 AI 帮忙消化、归类、生成摘要； 3. 历史记录：想找一个之前隐约看过的地方，靠 AI 语义搜索而不是翻时间线。 大家有什么成熟的玩法？是靠浏览器扩展（各家 AI tab man…",
+        "publishedAt": "2026-09-16T07:04:10.000Z",
+        "summary": "标题党一下，从成本上来说，让自主迭代一个工程很难，成本太高。只能说从 0-1 ，平时迭代效率提高了不少，这个过程依旧非常需要人工介入，上很多约束，子会话什么的也不现实，Token 成本会很高。 我自己用 200 刀的 gpt ，跑的时候会让他开 Terra middle 多很多次代码审查，确实能避免绝大多数问题了，但也还有不少问题。还是得我自己真机实操去回归，发现，给他讲，写测试，锁死，修改。 现在能源也没什么大突破，算力危机感觉一时半会也搞不定，如果真到 Token 和流…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "32 回复"
       }
     ]
   },
@@ -510,100 +510,99 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 29602,
+        "stars": 30233,
         "starsToday": 2756
       },
       {
-        "id": "github-c4394ed11770f8b3",
+        "id": "github-adc2afef89175c61",
         "rank": 2,
+        "name": "cloudflare/security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "language": "JavaScript",
+        "stars": 5442,
+        "starsToday": 1434
+      },
+      {
+        "id": "github-c4394ed11770f8b3",
+        "rank": 3,
         "name": "JustVugg/colibri",
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 34271,
+        "stars": 34538,
         "starsToday": 2026
       },
       {
+        "id": "github-96dc67a898f0b8da",
+        "rank": 4,
+        "name": "abue-ammar/tinycast",
+        "url": "https://github.com/abue-ammar/tinycast",
+        "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+        "language": "Swift",
+        "stars": 5169,
+        "starsToday": 1076
+      },
+      {
+        "id": "github-886294fb8b37fefa",
+        "rank": 5,
+        "name": "jamiepine/voicebox",
+        "url": "https://github.com/jamiepine/voicebox",
+        "description": "The open-source AI voice studio. Clone, dictate, create.",
+        "language": "TypeScript",
+        "stars": 54056,
+        "starsToday": 409
+      },
+      {
+        "id": "github-8ae6dc83497f2e47",
+        "rank": 6,
+        "name": "Lakr233/vphone-cli",
+        "url": "https://github.com/Lakr233/vphone-cli",
+        "language": "Swift",
+        "stars": 13126,
+        "starsToday": 907
+      },
+      {
+        "id": "github-a3140cb175a451a9",
+        "rank": 7,
+        "name": "anthropics/knowledge-work-plugins",
+        "url": "https://github.com/anthropics/knowledge-work-plugins",
+        "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "language": "Python",
+        "stars": 24133,
+        "starsToday": 96
+      },
+      {
         "id": "github-167687c65646f683",
-        "rank": 3,
+        "rank": 8,
         "name": "ever-co/ever-gauzy",
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 6915,
+        "stars": 7054,
         "starsToday": 634
       },
       {
-        "id": "github-90d09492a98e7644",
-        "rank": 4,
-        "name": "debpalash/VoiceStudio",
-        "url": "https://github.com/debpalash/VoiceStudio",
-        "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-        "language": "Python",
-        "stars": 31425,
-        "starsToday": 2072
-      },
-      {
-        "id": "github-836a3dc076ac1b5d",
-        "rank": 5,
-        "name": "Homebrew/BrewUI",
-        "url": "https://github.com/Homebrew/BrewUI",
-        "description": "📺 Homebrew's official macOS GUI",
-        "language": "Swift",
-        "stars": 1608,
-        "starsToday": 271
-      },
-      {
-        "id": "github-f6adaf1dfd8ddc19",
-        "rank": 6,
-        "name": "melgarafael/DeskcommCRM",
-        "url": "https://github.com/melgarafael/DeskcommCRM",
-        "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
-        "language": "TypeScript",
-        "stars": 2977,
-        "starsToday": 193
-      },
-      {
-        "id": "github-04f60e304eb1335d",
-        "rank": 7,
-        "name": "alphaXiv/OpenResearch",
-        "url": "https://github.com/alphaXiv/OpenResearch",
-        "description": "Turn your coding agents into research agents",
+        "id": "github-5577bd41c8e462b3",
+        "rank": 9,
+        "name": "ankitects/anki",
+        "url": "https://github.com/ankitects/anki",
+        "description": "Anki is a smart spaced repetition flashcard program",
         "language": "Rust",
-        "stars": 3680,
-        "starsToday": 531
+        "stars": 30619,
+        "starsToday": 50
       },
       {
         "id": "github-6ef4c515500f18cb",
-        "rank": 8,
+        "rank": 10,
         "name": "NationalSecurityAgency/ghidra",
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 77061,
+        "stars": 77271,
         "starsToday": 725
-      },
-      {
-        "id": "github-7c9b0304bc64c2fd",
-        "rank": 9,
-        "name": "danny-avila/LibreChat",
-        "url": "https://github.com/danny-avila/LibreChat",
-        "description": "Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active",
-        "language": "TypeScript",
-        "stars": 43994,
-        "starsToday": 254
-      },
-      {
-        "id": "github-70b433eb5304b395",
-        "rank": 10,
-        "name": "pacifio/atlas",
-        "url": "https://github.com/pacifio/atlas",
-        "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
-        "language": "Rust",
-        "stars": 4744,
-        "starsToday": 91
       }
     ],
-    "updatedAt": "2026-09-16T07:41:21.855Z"
+    "updatedAt": "2026-09-16T11:36:04.121Z"
   }
 }
