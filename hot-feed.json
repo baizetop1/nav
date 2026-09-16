@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-16T16:34:10.847Z",
+  "generatedAt": "2026-09-16T16:57:30.463Z",
   "intelligence": {
-    "updatedAt": "2026-09-16T16:34:10.847Z",
+    "updatedAt": "2026-09-16T16:57:30.463Z",
     "items": [
       {
         "id": "cn-item-fd457e3d2c223341",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-16T15:56:47.000Z",
         "badge": "HN",
-        "signal": "36 分 · 9 评论"
+        "signal": "58 分 · 37 评论"
       },
       {
         "id": "cn-it-677a1f16d935a6e7",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "“我要举报我的资助人！”国安机关接待室，某航发研究所助理工程师最终选择举报。他从小在福利院长大，高中时王老师突然出现，每年资助5000元直到他大学毕业。他毕业入职后，王老师开始索要内部敏感信息……经查，王老师是境外间谍，专门物色学子妄图“放长线、钓大鱼”。",
         "badge": "热搜",
-        "signal": "7,808,801 热度"
+        "signal": "7,808,204 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76461",
@@ -124,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-16T16:13:55.000Z",
         "badge": "HN",
-        "signal": "19 分 · 7 评论"
+        "signal": "36 分 · 28 评论"
       },
       {
         "id": "cn-item-62e530be2f8535c1",
@@ -207,7 +207,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-16T13:44:40.000Z",
         "badge": "HN",
-        "signal": "88 分 · 22 评论"
+        "signal": "93 分 · 24 评论"
       },
       {
         "id": "cn-baidu-42da4e701ce7fe14",
@@ -217,7 +217,7 @@
         "source": "百度热搜",
         "summary": "据数据统计，2025年全国4个县域社零总额超千亿元，义乌以2153.8亿元居首，昆山、晋江、常熟紧随其后。此前，县域已成扩消费重要潜力来源，各大品牌纷纷抢滩布局。",
         "badge": "热搜",
-        "signal": "7,712,423 热度"
+        "signal": "7,714,513 热度"
       },
       {
         "id": "github-advisory-ghsa-5h8j-6crg-7rmw",
@@ -248,7 +248,7 @@
         "publishedAt": "2026-09-16T13:15:48.000Z",
         "summary": "项目的客户端需要使用 mpv ，如果各客户端直接从 github 上下载，倒好，问题是 国内访问 github 不稳定；那如果把 mpv 放在 cloudflare 等 OSS 上分发给客户端，是否又需要附带对应的源码？ 但是现在根据 mpv-winbuild-cmake 构建 mpv 一直失败。",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-item-edd08f5f0df638a7",
@@ -289,7 +289,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-16T08:08:57.000Z",
         "badge": "HN",
-        "signal": "347 分 · 114 评论"
+        "signal": "359 分 · 118 评论"
       },
       {
         "id": "cn-it-23c0452c7c479b95",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "9月16日，平陆运河正式通航，这项世纪工程的顺畅运转，离不开“全能管家”青年调度中心。青年调度中心作为国内首个全生命周期智慧运河数字孪生平台，可以实现一屏观全线、一脑统江海，对全流程业务进行一体化智能闭环管控。",
         "badge": "热搜",
-        "signal": "7,616,801 热度"
+        "signal": "7,618,330 热度"
       },
       {
         "id": "cisa-kev-cve-2026-42018",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49717558",
+        "id": "hn-49729412",
         "category": "dev",
-        "title": "Introducing System One Models and Jev",
-        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+        "title": "Claude Cowork and chat are now one Claude",
+        "url": "https://claude.com/blog/cowork-is-now-claude",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T19:25:03.000Z",
+        "publishedAt": "2026-09-16T16:26:25.000Z",
         "badge": "HN",
-        "signal": "1680 分 · 459 评论"
+        "signal": "7 分 · 0 评论"
       },
       {
         "id": "cn-item-24201fe0f79bae7c",
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49711544",
+        "id": "hn-49717558",
         "category": "dev",
-        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-        "url": "https://github.com/arnegiacomo/fugleramme",
+        "title": "Introducing System One Models and Jev",
+        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
         "source": "Hacker News",
-        "publishedAt": "2026-09-15T12:31:10.000Z",
+        "publishedAt": "2026-09-15T19:25:03.000Z",
         "badge": "HN",
-        "signal": "1855 分 · 221 评论"
+        "signal": "1696 分 · 459 评论"
       },
       {
         "id": "cn-baidu-cbbd19b3f177925e",
@@ -462,7 +462,7 @@
         "source": "百度热搜",
         "summary": "16日，多国代表团抵达日本名古屋备战亚运会，因系统故障被困机场近6小时无车可乘、无饭可吃。中国体操队等至下午6点才离开，羽毛球队求助领事馆自行租车。此前，名古屋亚运会因预算不足改用集装箱房等拼合住宿，已遭韩国等多国代表团吐槽条件恶劣。",
         "badge": "热搜",
-        "signal": "7,522,615 热度"
+        "signal": "7,523,403 热度"
       },
       {
         "id": "github-advisory-ghsa-v8pv-4842-x354",
@@ -510,7 +510,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 31064,
+        "stars": 31108,
         "starsToday": 3215
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 6260,
+        "stars": 6313,
         "starsToday": 1249
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 34765,
+        "stars": 34784,
         "starsToday": 1532
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/abue-ammar/tinycast",
         "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
         "language": "Swift",
-        "stars": 5403,
+        "stars": 5417,
         "starsToday": 1136
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/jamiepine/voicebox",
         "description": "The open-source AI voice studio. Clone, dictate, create.",
         "language": "TypeScript",
-        "stars": 54188,
+        "stars": 54195,
         "starsToday": 409
       },
       {
@@ -559,7 +559,7 @@
         "name": "Lakr233/vphone-cli",
         "url": "https://github.com/Lakr233/vphone-cli",
         "language": "Swift",
-        "stars": 13245,
+        "stars": 13251,
         "starsToday": 444
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 24200,
+        "stars": 24206,
         "starsToday": 96
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 7140,
+        "stars": 7151,
         "starsToday": 771
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/ankitects/anki",
         "description": "Anki is a smart spaced repetition flashcard program",
         "language": "Rust",
-        "stars": 30697,
+        "stars": 30706,
         "starsToday": 50
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 77530,
+        "stars": 77546,
         "starsToday": 1059
       }
     ],
-    "updatedAt": "2026-09-16T16:34:10.847Z"
+    "updatedAt": "2026-09-16T16:57:30.463Z"
   }
 }
