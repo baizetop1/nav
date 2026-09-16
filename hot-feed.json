@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-16T12:41:03.496Z",
+  "generatedAt": "2026-09-16T12:41:36.539Z",
   "intelligence": {
-    "updatedAt": "2026-09-16T12:41:03.496Z",
+    "updatedAt": "2026-09-16T12:41:36.539Z",
     "items": [
       {
         "id": "cn-item-fd457e3d2c223341",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-16T09:54:05.000Z",
         "badge": "HN",
-        "signal": "406 分 · 408 评论"
+        "signal": "407 分 · 410 评论"
       },
       {
         "id": "cn-it-38ec9d510e2c7ae6",
@@ -124,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-16T11:19:11.000Z",
         "badge": "HN",
-        "signal": "46 分 · 32 评论"
+        "signal": "47 分 · 32 评论"
       },
       {
         "id": "cn-item-62e530be2f8535c1",
@@ -510,7 +510,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 30407,
+        "stars": 30409,
         "starsToday": 3215
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 5585,
+        "stars": 5587,
         "starsToday": 1434
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/abue-ammar/tinycast",
         "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
         "language": "Swift",
-        "stars": 5214,
+        "stars": 5215,
         "starsToday": 1076
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/jamiepine/voicebox",
         "description": "The open-source AI voice studio. Clone, dictate, create.",
         "language": "TypeScript",
-        "stars": 54095,
+        "stars": 54096,
         "starsToday": 409
       },
       {
@@ -603,6 +603,6 @@
         "starsToday": 1059
       }
     ],
-    "updatedAt": "2026-09-16T12:41:03.496Z"
+    "updatedAt": "2026-09-16T12:41:36.539Z"
   }
 }
