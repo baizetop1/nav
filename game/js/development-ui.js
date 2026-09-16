@@ -1,6 +1,6 @@
 import { deployedTroops, troopShares, heroCommand } from './logistics.js?v=0.29.0';
-import { rotationCalendar } from './rotations.js?v=0.29.0';
-import { specialtyPanel, bondsPanel } from './strategy-ui.js?v=0.29.0';
+import { rotationCalendar } from './rotations.js?v=0.29.3';
+import { specialtyPanel, bondsPanel } from './strategy-ui.js?v=0.29.3';
 import { doctrinePanel } from './frontier-ui.js?v=0.29.0';
 import { CORPS, CORPS_PROFILES, corpsRank, corpsQuote, targetQuote, presetReason } from './development.js?v=0.29.0';
 import { ARMS } from './martial.js?v=0.29.0';

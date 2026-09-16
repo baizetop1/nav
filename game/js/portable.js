@@ -1,5 +1,5 @@
 import { hasOwn } from './utils.js?v=0.29.0';
-import { parseSave } from './save.js?v=0.29.0';
+import { parseSave } from './save.js?v=0.29.3';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));

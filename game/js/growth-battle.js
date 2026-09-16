@@ -1,9 +1,9 @@
-import {personalFactor} from './expansion-combat.js?v=0.29.0';
+import {personalFactor} from './expansion-combat.js?v=0.29.3';
 import {talentFactor} from './talents.js?v=0.29.0';
 import { healingSupply } from './fieldcraft.js?v=0.29.0';
 import { isChapterBattle } from './volume-three-data.js?v=0.29.0';
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.29.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.29.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.29.3';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.29.3';
 import { orderDamageFactor } from './commands.js?v=0.29.0';
 import { NAVAL, waterBattle } from './doctrines.js?v=0.29.0';
 import { unitArm } from './martial.js?v=0.29.0';

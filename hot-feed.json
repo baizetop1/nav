@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-16T12:41:36.539Z",
+  "generatedAt": "2026-09-16T16:32:59.133Z",
   "intelligence": {
-    "updatedAt": "2026-09-16T12:41:36.539Z",
+    "updatedAt": "2026-09-16T16:32:59.133Z",
     "items": [
       {
         "id": "cn-item-fd457e3d2c223341",
@@ -13,6 +13,88 @@
         "publishedAt": "2026-09-16T11:58:33.000Z",
         "summary": "中新网9月16日电 9月16日，南方医科大学在官方微信公众号发布情况通报称，2026年9月15日凌晨1:55左右，南方医科大学高层公寓发生一学生坠楼事件。经警方现场勘查，确认为高坠身亡，排除他杀。",
         "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-58704",
+        "category": "security",
+        "title": "Google Pixel：Google Pixel Improper Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58704",
+        "source": "CISA KEV",
+        "publishedAt": "2026-09-16T00:00:00.000Z",
+        "summary": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
+        "badge": "CVE-2026-58704",
+        "signal": "已遭利用 · 整改期限 2026-09-19"
+      },
+      {
+        "id": "ai-openai-b0366f9850a9d166",
+        "category": "ai",
+        "title": "Helping older adults use AI in everyday life",
+        "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-16T16:00:00.000Z",
+        "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-49729000",
+        "category": "dev",
+        "title": "Small Programming Tricks",
+        "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-16T15:56:47.000Z",
+        "badge": "HN",
+        "signal": "35 分 · 8 评论"
+      },
+      {
+        "id": "cn-it-677a1f16d935a6e7",
+        "category": "cn",
+        "title": "联合国秘书长古特雷斯：世界承受不起 AI 安全领域的恶性竞争",
+        "url": "https://www.ithome.com/1/003/338.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-09-16T15:47:40.000Z",
+        "summary": "IT之家 9 月 16 日消息，据彭博社今天（16 日）晚间报道，联合国秘书长安东尼奥 · 古特雷斯呼吁各国共同推进 AI 监管，并加强对技术的监督。“我们不能忽视已经出现的担忧，尤其不能忽视那些 亲自参与 AI 开发的人提出的警告 。地缘政治分歧确实存在，也可能诱使各方采取冒险做法。然而， 世界承受不起在 AI 安全领域不断的恶性竞争 。” 古特雷斯表示，AI 治理需要“真正的国际合作”和“协调一致的全球行动”。几天后，世界各国领导人就将前往纽约，参加联合国大会年度高级别…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-r2pf-9cw4-5j65",
+        "category": "security",
+        "title": "node-opcua: TCP Socket Leak (FIN-WAIT-2) via keepalive reconnection cycle - Resource Exhaustion",
+        "url": "https://github.com/advisories/GHSA-r2pf-9cw4-5j65",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-16T16:19:21.000Z",
+        "summary": "SUMMARY ------- A combination of bugs in node-opcua causes unlimited TCP socket accumulation (FIN-WAIT-2 state) during automatic reconnection, leading to memory exhaustion and eventual container/process crash (OOM kill). The issue is trigg…",
+        "badge": "CVE-2026-68904",
+        "signal": "HIGH · CVSS 7.0"
+      },
+      {
+        "id": "ai-google-deepmind-947e89eaa83a27ae",
+        "category": "ai",
+        "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-15T17:05:57.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1242549",
+        "category": "dev",
+        "title": "[开源自荐] tool-bridge: Agent 的触手, 连接 设备/Context/MCP. 支持反向注册, SDK...",
+        "url": "https://www.v2ex.com/t/1242549",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-16T15:46:50.000Z",
+        "summary": "先上链接: https://github.com/TokenRollAI/tool-bridge 官方文档: https://tool-bridge.tokenroll.ai/ 过去一年在一些 AI Starup 工作, 在这些强调 AI Native 的公司中做 Agent Infra 的过程中, 经常会遇到一些问题: 大量的不同业务的 Agent 希望能够共享工具, 但是也希望有足够的限制(某些工具禁止访问) 希望 Agent 和 Agent 之间能够共享 Contex…",
+        "badge": "程序员",
+        "signal": "0 回复"
+      },
+      {
+        "id": "cn-baidu-e3b73843a5240361",
+        "category": "cn",
+        "title": "大学毕业生举报资助人是间谍",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%A7%E5%AD%A6%E6%AF%95%E4%B8%9A%E7%94%9F%E4%B8%BE%E6%8A%A5%E8%B5%84%E5%8A%A9%E4%BA%BA%E6%98%AF%E9%97%B4%E8%B0%8D&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "“我要举报我的资助人！”国安机关接待室，某航发研究所助理工程师最终选择举报。他从小在福利院长大，高中时王老师突然出现，每年资助5000元直到他大学毕业。他毕业入职后，王老师开始索要内部敏感信息……经查，王老师是境外间谍，专门物色学子妄图“放长线、钓大鱼”。",
+        "badge": "热搜",
+        "signal": "7,809,179 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76461",
@@ -26,53 +108,217 @@
         "signal": "已遭利用 · 整改期限 2026-09-17"
       },
       {
-        "id": "ai-openai-7f82d995c515e5ba",
+        "id": "ai-hugging-face-a1d018f16fad79f9",
         "category": "ai",
-        "title": "How Fyxer built an AI executive assistant people trust",
-        "url": "https://openai.com/index/fyxer",
+        "title": "Your Agent Aced the Task. Will It Do It Again?",
+        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-15T16:00:44.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-49729228",
+        "category": "dev",
+        "title": "Code Is Crap",
+        "url": "https://testing.googleblog.com/2011/02/this-code-is-crap.html",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-16T16:13:55.000Z",
+        "badge": "HN",
+        "signal": "16 分 · 7 评论"
+      },
+      {
+        "id": "cn-item-62e530be2f8535c1",
+        "category": "cn",
+        "title": "中国夏粮收购接近尾声 累计收购小麦1亿吨",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697674.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-09-16T10:34:02.000Z",
+        "summary": "中新社北京9月16日电 (记者 陈溯)中国国家粮食和物资储备局16日发布数据显示，目前，夏粮旺季收购接近尾声，全国累计收购小麦1亿吨、早籼稻1200万吨，进度略快于上年，秋粮收购各项准备工作已基本就绪。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-pg97-jvmf-qfvc",
+        "category": "security",
+        "title": "djust has Cross-Site Request Forgery on the Server-Sent-Events transport: a cross-origin page can drive a victim-authenticated SSE session",
+        "url": "https://github.com/advisories/GHSA-pg97-jvmf-qfvc",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-16T15:45:03.000Z",
+        "summary": "### Impact The SSE client→server POST endpoints are `@csrf_exempt` and the SSE GET stream endpoint had no Origin check, so a cross-origin page could drive a victim-cookie-authenticated SSE session: force the victim's browser to GET the str…",
+        "badge": "CVE-2026-61593",
+        "signal": "HIGH · CVSS 8.1"
+      },
+      {
+        "id": "ai-openai-6ac27c68838b29ee",
+        "category": "ai",
+        "title": "Reimagining advertising with AI",
+        "url": "https://openai.com/index/reimagining-advertising-with-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-09-14T12:00:00.000Z",
-        "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+        "publishedAt": "2026-09-16T13:00:00.000Z",
+        "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49724141",
+        "id": "v2ex-1242538",
         "category": "dev",
-        "title": "EU chief opens door for Canada to become 'associate member'",
-        "url": "https://www.bbc.com/news/articles/cjwyzrr9d3dko",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-16T09:54:05.000Z",
-        "badge": "HN",
-        "signal": "407 分 · 410 评论"
+        "title": "杀死那个“自嗨”的工匠",
+        "url": "https://www.v2ex.com/t/1242538",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-16T14:14:24.000Z",
+        "summary": "昨天，表弟给我发消息，说他最近折腾闲鱼业务跑通了。 但有个麻烦。 他每天得不停地刷闲鱼，盯着那几类商品，有合适的就赶紧下单。时间久了，人有点扛不住。 他问我：“哥哥，能不能用 AI 快速搞个软件，帮我把这件事自动化？” 我第一反应是，可以。 现在 AI 写代码很快。如果事情不复杂，花不了多少时间，顺手帮他弄一下也没什么。 晚上，我开始研究。 抓取商品，分析，监控。 弄着弄着，验证码弹出来了。 要处理反爬，接着还有下单。 再一看时间，凌晨两点。 我合上电脑，去睡了。 躺下以后…",
+        "badge": "程序员",
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-38ec9d510e2c7ae6",
+        "id": "cn-it-fe7be2291b97ef3f",
         "category": "cn",
-        "title": "18.99 万元起，比亚迪方程豹方程 S/S GT 上市",
-        "url": "https://www.ithome.com/1/003/285.htm",
+        "title": "多名欧美艺人集体发帖，暗示自己将入选《GTA 6》电台音乐或出任 DJ",
+        "url": "https://www.ithome.com/1/003/336.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T12:34:04.000Z",
-        "summary": "IT之家 9 月 16 日消息，比亚迪方程豹旗下方程 S、方程 S GT 正式上市，售价 18.99 万元起。 更新中......",
+        "publishedAt": "2026-09-16T15:32:36.000Z",
+        "summary": "IT之家 9 月 16 日消息，据外媒 VGC 今天（16 日）晚间报道，多位艺人开始暗示自己将参与《GTA 6》，陆续在 Instagram 上发布《GTA 6》美术图。 说唱歌手特拉维斯 · 斯科特发布了一张舞者双脚缠着钢管的图片并写道：“第一阶段 —— 现在轮到我了。我重返游戏，必须带着怒火和大量舞蹈而来。出发吧。 J.O.H .未完待续，Rockstar Games，很快再见。” 滚石乐队成员基思 · 理查兹随后发布了一张鬣蜥图片，没有配文。美国乡村歌手摩根 · 沃…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-2h44-8472-frjj",
+        "id": "cisa-kev-cve-2026-84869",
         "category": "security",
-        "title": "@zereight/mcp-gitlab Vulnerable to Server-Side Request Forgery",
-        "url": "https://github.com/advisories/GHSA-2h44-8472-frjj",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-15T20:57:28.000Z",
-        "summary": "# Server-Side Request Forgery via X-GitLab-API-URL Header Allows Credential Theft ## Affected - **Repository:** `zereight/gitlab-mcp` - **Affected versions:** All versions through commit `74a8c83` - **Patched versions:** None at time of re…",
-        "badge": "CVE-2026-61559",
-        "signal": "CRITICAL · CVSS 9.6"
+        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
+        "source": "CISA KEV",
+        "publishedAt": "2026-09-11T00:00:00.000Z",
+        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confir…",
+        "badge": "CVE-2026-84869",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-google-deepmind-947e89eaa83a27ae",
+        "id": "ai-google-deepmind-f0e27f432f48fb86",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-        "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+        "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+        "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-15T17:05:57.000Z",
+        "publishedAt": "2026-09-08T14:00:15.000Z",
+        "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49726955",
+        "category": "dev",
+        "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+        "url": "https://arxiv.org/abs/2609.14858",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-16T13:44:40.000Z",
+        "badge": "HN",
+        "signal": "88 分 · 22 评论"
+      },
+      {
+        "id": "cn-baidu-42da4e701ce7fe14",
+        "category": "cn",
+        "title": "中国十大消费县排行",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%8D%81%E5%A4%A7%E6%B6%88%E8%B4%B9%E5%8E%BF%E6%8E%92%E8%A1%8C&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "据数据统计，2025年全国4个县域社零总额超千亿元，义乌以2153.8亿元居首，昆山、晋江、常熟紧随其后。此前，县域已成扩消费重要潜力来源，各大品牌纷纷抢滩布局。",
+        "badge": "热搜",
+        "signal": "7,711,879 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-5h8j-6crg-7rmw",
+        "category": "security",
+        "title": "LMdeploy has Remote Code Execution by Pickle Deserialization via zmq_rpc.call_and_response() in InterLM/lmdeploy",
+        "url": "https://github.com/advisories/GHSA-5h8j-6crg-7rmw",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-16T15:34:27.000Z",
+        "summary": "### Description The LMdeploy implements an rpc server (AsyncRPCServer in zmq_rpc.py) for supporting the RPC communications. In its core functionality call_and_response(), I found it will directly use the pickles.loads() to deserialize the …",
+        "badge": "CVE-2025-59953",
+        "signal": "CRITICAL · CVSS 9.8"
+      },
+      {
+        "id": "ai-hugging-face-85052f9befba2c4e",
+        "category": "ai",
+        "title": "Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL",
+        "url": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-10T00:00:00.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1242529",
+        "category": "dev",
+        "title": "求助： mpv 在 GPLv3 下的分发",
+        "url": "https://www.v2ex.com/t/1242529",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-16T13:15:48.000Z",
+        "summary": "项目的客户端需要使用 mpv ，如果各客户端直接从 github 上下载，倒好，问题是 国内访问 github 不稳定；那如果把 mpv 放在 cloudflare 等 OSS 上分发给客户端，是否又需要附带对应的源码？ 但是现在根据 mpv-winbuild-cmake 构建 mpv 一直失败。",
+        "badge": "程序员",
+        "signal": "2 回复"
+      },
+      {
+        "id": "cn-item-edd08f5f0df638a7",
+        "category": "cn",
+        "title": "拼到最后！中国男篮击败沙特队晋级亚运会四强",
+        "url": "https://www.chinanews.com.cn/ty/2026/09-16/10697633.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-09-16T09:17:58.000Z",
+        "summary": "比赛现场。中新社记者 韩海丹 摄 中新网9月16日电(记者 李志全)当地时间9月16日，爱知·名古屋亚运会男子篮球项目进行1/4决赛，中国男篮以87:78力克沙特阿拉伯队，晋级本届亚运会四强。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-42016",
+        "category": "security",
+        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
+        "source": "CISA KEV",
+        "publishedAt": "2026-09-11T00:00:00.000Z",
+        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+        "badge": "CVE-2026-42016",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
+      },
+      {
+        "id": "ai-openai-7d2872733a614740",
+        "category": "ai",
+        "title": "How workers are unlocking new ways of working",
+        "url": "https://openai.com/index/unlocking-new-ways-of-working",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-16T09:00:00.000Z",
+        "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-49723408",
+        "category": "dev",
+        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
+        "url": "https://mistral.ai/news/mistral-x-mozilla/",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-16T08:08:57.000Z",
+        "badge": "HN",
+        "signal": "347 分 · 114 评论"
+      },
+      {
+        "id": "cn-it-23c0452c7c479b95",
+        "category": "cn",
+        "title": "任天堂推出《朋友收集：梦想生活》同捆版 Switch Lite 游戏机，10 月 29 日发售",
+        "url": "https://www.ithome.com/1/003/330.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-09-16T15:27:10.000Z",
+        "summary": "IT之家 9 月 16 日消息，任天堂现已在欧洲市场推出《朋友收集：梦想生活》同捆版 Switch Lite 游戏机，10 月 29 日正式发售，价格暂未公布。 据介绍，该套装内包含一台蓝绿色 Switch Lite 游戏机、 《朋友收集：梦想生活》数字版游戏 ，并额外附赠 30 天 Nintendo Switch Online 会员兑换码。 据IT之家了解，任天堂 Switch Lite 游戏机最初发售于 2019 年 7 月，该机主打小巧设计， 相比普通版 Switch…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-3492-cvg7-9mr2",
+        "category": "security",
+        "title": "djust: Multi-tenant isolation fails open on the WebSocket/SSE path, disclosing other tenants' data",
+        "url": "https://github.com/advisories/GHSA-3492-cvg7-9mr2",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-16T15:32:10.000Z",
+        "summary": "### Impact `djust.tenants` isolation was enforced only on the HTTP path. The current tenant was stored in `threading.local()` and set exclusively by the HTTP-only `TenantMiddleware`, so on the live (WebSocket/SSE) path `get_current_tenant(…",
+        "badge": "CVE-2026-61595",
+        "signal": "HIGH · CVSS 7.7"
+      },
+      {
+        "id": "ai-google-deepmind-2b0379511ea05114",
+        "category": "ai",
+        "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
+        "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-03T15:02:08.000Z",
         "badge": "Google DeepMind"
       },
       {
@@ -87,74 +333,74 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-d46e7d179309618b",
+        "id": "cn-baidu-01fac1f8e43e1e1f",
         "category": "cn",
-        "title": "未来北京飞上海可能只需半小时",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%AA%E6%9D%A5%E5%8C%97%E4%BA%AC%E9%A3%9E%E4%B8%8A%E6%B5%B7%E5%8F%AF%E8%83%BD%E5%8F%AA%E9%9C%80%E5%8D%8A%E5%B0%8F%E6%97%B6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "平陆运河“全能管家”有多硬核",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%B3%E9%99%86%E8%BF%90%E6%B2%B3%E2%80%9C%E5%85%A8%E8%83%BD%E7%AE%A1%E5%AE%B6%E2%80%9D%E6%9C%89%E5%A4%9A%E7%A1%AC%E6%A0%B8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，在江苏无锡召开的中国航空科学技术大会上，发布了2026年度航空领域的重大科技问题，超音速客机成为全场焦点。未来坐上超音速客机，北京飞上海，可能只需半小时。",
+        "summary": "9月16日，平陆运河正式通航，这项世纪工程的顺畅运转，离不开“全能管家”青年调度中心。青年调度中心作为国内首个全生命周期智慧运河数字孪生平台，可以实现一屏观全线、一脑统江海，对全流程业务进行一体化智能闭环管控。",
         "badge": "热搜",
-        "signal": "7,807,971 热度"
+        "signal": "7,618,430 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-84869",
+        "id": "cisa-kev-cve-2026-42018",
         "category": "security",
-        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
+        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42018",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host conf…",
-        "badge": "CVE-2026-84869",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+        "badge": "CVE-2026-42018",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-hugging-face-a1d018f16fad79f9",
+        "id": "ai-hugging-face-075fed980e67c694",
         "category": "ai",
-        "title": "Your Agent Aced the Task. Will It Do It Again?",
-        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+        "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
+        "url": "https://huggingface.co/blog/gradio-workflow-1111",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-15T16:00:44.000Z",
+        "publishedAt": "2026-09-10T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49724927",
+        "id": "hn-49717558",
         "category": "dev",
-        "title": "The Google Play app review process now regularly takes longer than a week",
-        "url": "https://gultsch.social/@daniel/117280438824908947",
+        "title": "Introducing System One Models and Jev",
+        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T11:19:11.000Z",
+        "publishedAt": "2026-09-15T19:25:03.000Z",
         "badge": "HN",
-        "signal": "47 分 · 32 评论"
+        "signal": "1679 分 · 459 评论"
       },
       {
-        "id": "cn-item-62e530be2f8535c1",
+        "id": "cn-item-24201fe0f79bae7c",
         "category": "cn",
-        "title": "中国夏粮收购接近尾声 累计收购小麦1亿吨",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-16/10697674.shtml",
+        "title": "亚运会来了！中国队有哪些看点？",
+        "url": "https://www.chinanews.com.cn/ty/2026/09-16/10697620.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-16T10:34:02.000Z",
-        "summary": "中新社北京9月16日电 (记者 陈溯)中国国家粮食和物资储备局16日发布数据显示，目前，夏粮旺季收购接近尾声，全国累计收购小麦1亿吨、早籼稻1200万吨，进度略快于上年，秋粮收购各项准备工作已基本就绪。",
+        "publishedAt": "2026-09-16T08:54:30.000Z",
+        "summary": "第二十届亚洲运动会将于9月19日在日本爱知县名古屋市开幕，中国代表团将派出815名运动员参加38个大项、369个小项的角逐。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-vmp7-252j-cwp7",
+        "id": "github-advisory-ghsa-cc7c-9jff-58wj",
         "category": "security",
-        "title": "@zereight/mcp-gitlab: DNS rebinding reaches local Streamable HTTP MCP transport",
-        "url": "https://github.com/advisories/GHSA-vmp7-252j-cwp7",
+        "title": "djust: Client mass-assignment of arbitrary view attributes via the default dj-model update_model handler",
+        "url": "https://github.com/advisories/GHSA-cc7c-9jff-58wj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-15T20:54:55.000Z",
-        "summary": "`@zereight/mcp-gitlab` exposes its Streamable HTTP MCP endpoint without an effective Host or Origin allowlist. A malicious web page can use DNS rebinding to route browser requests to a victim's local MCP listener while preserving an attack…",
-        "badge": "CVE-2026-61568",
-        "signal": "CRITICAL · CVSS 9.6"
+        "publishedAt": "2026-09-16T13:55:48.000Z",
+        "summary": "### Impact `djust.mixins.model_binding.ModelBindingMixin` provides a default `update_model` event handler and is part of the **LiveView base MRO**, so every LiveView exposes it. It `setattr`s a view attribute whose **name is client-supplie…",
+        "badge": "CVE-2026-61598",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-968c32634dc2a1cb",
+        "id": "ai-openai-7f82d995c515e5ba",
         "category": "ai",
-        "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-        "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+        "title": "How Fyxer built an AI executive assistant people trust",
+        "url": "https://openai.com/index/fyxer",
         "source": "OpenAI",
-        "publishedAt": "2026-09-14T00:00:00.000Z",
-        "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+        "publishedAt": "2026-09-14T12:00:00.000Z",
+        "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
         "badge": "OpenAI"
       },
       {
@@ -169,178 +415,14 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-76e0464f56a25ae8",
+        "id": "cn-it-a245e756465b2222",
         "category": "cn",
-        "title": "OpenAI 奥尔特曼：AI 事故无法完全避免，应借鉴航空业建立公开上报机制",
-        "url": "https://www.ithome.com/1/003/284.htm",
+        "title": "《饥饿游戏》前传电影《饥饿游戏：收获日出》曝全新中字预告，北美 2026 年 11 月 20 日上映",
+        "url": "https://www.ithome.com/1/003/329.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T12:31:17.000Z",
-        "summary": "IT之家 9 月 16 日消息，萨姆 · 奥尔特曼（Sam Altman）表示，部分 AI 事故无法完全避免，但关键在于如何从事故当中吸取教训。 当地时间周二，这位 OpenAI 首席执行官在赛富时（Salesforce）的 Dreamforce 大会上发表讲话。他提出，科技企业应当建立公开上报事故的企业文化，可以借鉴航空业的做法。 “我确实认为，对于一项新兴技术而言，一定程度上的事故是难以避免的。”奥尔特曼说道，“我真正在意的是，我们能够形成一套完善的事故上报与复盘学习机…",
+        "publishedAt": "2026-09-16T15:17:09.000Z",
+        "summary": "IT之家 9 月 16 日消息，《饥饿游戏》前传电影《饥饿游戏：收获日出》曝出全新中字预告。 本片已定档 2026 年 11 月 20 日在北美上映 。 本片还发布了全新“对峙”系列海报。 IT之家查询获悉，新片《饥饿游戏：收获日出》由弗朗西斯・劳伦斯回归执导，编剧为系列电影联合编剧比利・雷，詹妮弗 · 劳伦斯、乔什 · 哈切森将客串出演。电影设定在第一部前传《饥饿游戏：鸣鸟与蛇之歌》的 40 年后，将围绕着 16 岁的黑密斯展开。 影片改编自苏珊・柯林斯同名小说，是继《饥…",
         "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-42016",
-        "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
-        "badge": "CVE-2026-42016",
-        "signal": "已遭利用 · 整改期限 2026-09-25"
-      },
-      {
-        "id": "ai-google-deepmind-f0e27f432f48fb86",
-        "category": "ai",
-        "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-        "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-08T14:00:15.000Z",
-        "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-49723408",
-        "category": "dev",
-        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-        "url": "https://mistral.ai/news/mistral-x-mozilla/",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-16T08:08:57.000Z",
-        "badge": "HN",
-        "signal": "151 分 · 38 评论"
-      },
-      {
-        "id": "cn-baidu-78baad6ea1ea5079",
-        "category": "cn",
-        "title": "医保大动作！全国统一目录来了",
-        "url": "https://www.baidu.com/s?wd=%E5%8C%BB%E4%BF%9D%E5%A4%A7%E5%8A%A8%E4%BD%9C%EF%BC%81%E5%85%A8%E5%9B%BD%E7%BB%9F%E4%B8%80%E7%9B%AE%E5%BD%95%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "近日，国家医保局首次制定全国统一的医保医疗服务项目目录。首批纳入心血管、呼吸等13类项目，美容、非功能性整容、健康体检等一律不报销。目录将先用于跨省异地就医直接结算，再逐步与各省政策衔接。",
-        "badge": "热搜",
-        "signal": "7,711,971 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-5648-rgj9-v224",
-        "category": "security",
-        "title": "@zereight/mcp-gitlab has multiple safety-control bypasses: execute_graphql read-only + allow-list bypass, unauthenticated transports, session-exhaustion DoS",
-        "url": "https://github.com/advisories/GHSA-5648-rgj9-v224",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-15T20:48:22.000Z",
-        "summary": "### Summary @zereight/mcp-gitlab exposes GitLab to an LLM agent while relying on read-only mode, a project allow-list, and transport auth as its safety controls. Five defects defeat those controls. Under the MCP threat model, tool-call arg…",
-        "badge": "GHSA-5648-RGJ9-V224",
-        "signal": "HIGH · CVSS 8.1"
-      },
-      {
-        "id": "ai-hugging-face-85052f9befba2c4e",
-        "category": "ai",
-        "title": "Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL",
-        "url": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-10T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1242483",
-        "category": "dev",
-        "title": "我的 v 站余额是什么水平？",
-        "url": "https://www.v2ex.com/t/1242483",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T09:10:45.000Z",
-        "summary": "我是 V2EX 第 272263 号会员，加入于 2017-12-04 17:20:32 +08:00 目前账号 1 金 35 银 1 铜，余额来源基本都是签到来的，中间有几年 gap 没坐班没怎么上 v 站 想知道我是属于垫底还是中间？大家会有余额焦虑吗，会因为余额不足不轻易发帖/回复吗？",
-        "badge": "程序员",
-        "signal": "59 回复"
-      },
-      {
-        "id": "cn-item-edd08f5f0df638a7",
-        "category": "cn",
-        "title": "拼到最后！中国男篮击败沙特队晋级亚运会四强",
-        "url": "https://www.chinanews.com.cn/ty/2026/09-16/10697633.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-09-16T09:17:58.000Z",
-        "summary": "比赛现场。中新社记者 韩海丹 摄 中新网9月16日电(记者 李志全)当地时间9月16日，爱知·名古屋亚运会男子篮球项目进行1/4决赛，中国男篮以87:78力克沙特阿拉伯队，晋级本届亚运会四强。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "cisa-kev-cve-2026-42018",
-        "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42018",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
-        "badge": "CVE-2026-42018",
-        "signal": "已遭利用 · 整改期限 2026-09-25"
-      },
-      {
-        "id": "ai-openai-4aeb82da9975e2f5",
-        "category": "ai",
-        "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
-        "url": "https://openai.com/index/cognition-devin-testing-with-astra",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-11T16:00:00.000Z",
-        "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-49717558",
-        "category": "dev",
-        "title": "Introducing System One Models and Jev",
-        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-15T19:25:03.000Z",
-        "badge": "HN",
-        "signal": "1517 分 · 431 评论"
-      },
-      {
-        "id": "cn-it-1c5382bfab67e326",
-        "category": "cn",
-        "title": "上市补贴价 13.28 万元起：极狐阿尔法 T7 汽车上市，可选增程 / 纯电动力、华为乾崑智驾 ADS 5 Pro",
-        "url": "https://www.ithome.com/1/003/283.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-09-16T12:31:09.000Z",
-        "summary": "IT之家 9 月 16 日消息，极狐阿尔法 T7 汽车今日上市，新车提供增程、纯电两种动力，部分型号搭载华为乾崑智驾 ADS 5 Pro，全系标配宁德时代电池。 该车上市补贴价 13.28 万元起 ，即日起下单可享受价值 4000 元置换补贴、6000 元 ADS 高阶包补贴、三电终身质保、3 年不限量娱乐流量等权益。 IT之家附该车各版本定价如下： 增程 1315 PLUS：13.28 万元 1315 MAX：14.48 万元 1315 MAX 乾崑版：15.38 万元 …",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-4595-rvpx-4q34",
-        "category": "security",
-        "title": "emp3r0r has an unauthenticated HTTP Polling DoS",
-        "url": "https://github.com/advisories/GHSA-4595-rvpx-4q34",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-15T20:47:17.000Z",
-        "summary": "### Summary The `http_poll` C2 transport accepts attacker-controlled HTTP polling sessions before CBOR `MsgAuth` authentication is completed. A remote unauthenticated attacker can create arbitrary polling sessions and send request bodies t…",
-        "badge": "CVE-2026-61554",
-        "signal": "HIGH · CVSS 7.5"
-      },
-      {
-        "id": "ai-google-deepmind-2b0379511ea05114",
-        "category": "ai",
-        "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
-        "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-03T15:02:08.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "v2ex-1242480",
-        "category": "dev",
-        "title": "听了 V 友们的建议， Subpool 又更新了，顺便交个半个月的使用作业",
-        "url": "https://www.v2ex.com/t/1242480",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T09:03:05.000Z",
-        "summary": "之前在 V2EX 分享过自己做的 Subpool ，收到了 V 友们不少建议，先谢谢大家。这段时间我们结合大家的反馈和公司内部的实际使用，继续做了一些改进，回来更新一下进展。 这次加上了 Codex 账号设备指纹支持。 简单说，就是让同一个上游账号保持稳定的安装标识，不同同事通过 Subpool 使用这个账号时，会统一使用该账号的标识。服务重启、凭证刷新后也能保持一致，自动生效，不需要额外配置。 也分享一下实际使用情况：我们团队接了两个 $200/月的账号，公司里多位同事一…",
-        "badge": "程序员",
-        "signal": "1 回复"
-      },
-      {
-        "id": "cn-baidu-8615a5d44bb18536",
-        "category": "cn",
-        "title": "平陆运河集齐多个“最硬核”标签",
-        "url": "https://www.baidu.com/s?wd=%E5%B9%B3%E9%99%86%E8%BF%90%E6%B2%B3%E9%9B%86%E9%BD%90%E5%A4%9A%E4%B8%AA%E2%80%9C%E6%9C%80%E7%A1%AC%E6%A0%B8%E2%80%9D%E6%A0%87%E7%AD%BE&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "9月16日，西部陆海新通道骨干工程——平陆运河正式通航。这项世纪工程集齐了最新、最强、最大等多重硬核标签，这些“最”的背后，是平陆运河硬核实力的真实体现。",
-        "badge": "热搜",
-        "signal": "7,616,640 热度"
       },
       {
         "id": "cisa-kev-cve-2026-85706",
@@ -354,88 +436,6 @@
         "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
-        "id": "ai-hugging-face-075fed980e67c694",
-        "category": "ai",
-        "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
-        "url": "https://huggingface.co/blog/gradio-workflow-1111",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-10T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-49711544",
-        "category": "dev",
-        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-        "url": "https://github.com/arnegiacomo/fugleramme",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-15T12:31:10.000Z",
-        "badge": "HN",
-        "signal": "1733 分 · 213 评论"
-      },
-      {
-        "id": "cn-item-24201fe0f79bae7c",
-        "category": "cn",
-        "title": "亚运会来了！中国队有哪些看点？",
-        "url": "https://www.chinanews.com.cn/ty/2026/09-16/10697620.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-09-16T08:54:30.000Z",
-        "summary": "第二十届亚洲运动会将于9月19日在日本爱知县名古屋市开幕，中国代表团将派出815名运动员参加38个大项、369个小项的角逐。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-gq9p-f254-h286",
-        "category": "security",
-        "title": "Http4s: Ember HTTP/2 buffers a frame's declared payload before checking SETTINGS_MAX_FRAME_SIZE",
-        "url": "https://github.com/advisories/GHSA-gq9p-f254-h286",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-15T20:01:22.000Z",
-        "summary": "### Summary An unauthenticated peer can make Ember's HTTP/2 read loop hold 16 MiB of a single frame in memory on a connection where Ember advertised a 16 KiB limit. The declared length is readable from the frame's first 9 bytes, but it is …",
-        "badge": "CVE-2026-88975",
-        "signal": "HIGH · CVSS 7.5"
-      },
-      {
-        "id": "ai-openai-46fcf5bb7b99520f",
-        "category": "ai",
-        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-11T10:00:00.000Z",
-        "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1242467",
-        "category": "dev",
-        "title": "Selected model is at capacity. Please try a different model.",
-        "url": "https://www.v2ex.com/t/1242467",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T08:20:42.000Z",
-        "summary": "Selected model is at capacity. Please try a different model. 我靠，今天怎么老出现这个？我号难道被黑了吗？",
-        "badge": "程序员",
-        "signal": "4 回复"
-      },
-      {
-        "id": "cn-it-69c66db909f875c2",
-        "category": "cn",
-        "title": "全新理想 i9 Home 六座 SUV 发布：第二代纯电平台的首发旗舰，36.98 万元",
-        "url": "https://www.ithome.com/1/003/280.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-09-16T12:26:18.000Z",
-        "summary": "IT之家 9 月 16 日消息，全新理想 i9 Home 旗舰六座 SUV 今晚正式发布，新车是系列首台家庭纯电旗舰 SUV，也是理想第二代纯电平台的首发旗舰， 全国统一零售价格 36.98 万元 。 据介绍，全新理想 i9 只提供 Home 一个版本，尺寸为 5225×1970×1752mm、轴距为 3168mm，风阻系数 0.215Cd（全球量产 SUV 最低）。 全系标配 101kWh 三元锂 5C 超充电池、前后双电机智能四驱，CLTC 综合续航里程 705 公里，…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-86060",
-        "category": "security",
-        "title": "MikroTik RouterOS：MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86060",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-10T00:00:00.000Z",
-        "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
-        "badge": "CVE-2026-86060",
-        "signal": "已遭利用 · 整改期限 2026-09-13"
-      },
-      {
         "id": "ai-google-deepmind-d721843382f3485e",
         "category": "ai",
         "title": "Proactive cyber defense for governments and enterprises",
@@ -445,35 +445,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49724488",
+        "id": "hn-49711544",
         "category": "dev",
-        "title": "Salesforce Global Outage",
-        "url": "https://status.salesforce.com/products/all",
+        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+        "url": "https://github.com/arnegiacomo/fugleramme",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T10:37:08.000Z",
+        "publishedAt": "2026-09-15T12:31:10.000Z",
         "badge": "HN",
-        "signal": "79 分 · 45 评论"
+        "signal": "1855 分 · 221 评论"
       },
       {
-        "id": "cn-baidu-746bf25967a40f78",
+        "id": "cn-baidu-cbbd19b3f177925e",
         "category": "cn",
-        "title": "亚运开门红！国足2-1逆转朝鲜",
-        "url": "https://www.baidu.com/s?wd=%E4%BA%9A%E8%BF%90%E5%BC%80%E9%97%A8%E7%BA%A2%EF%BC%81%E5%9B%BD%E8%B6%B32-1%E9%80%86%E8%BD%AC%E6%9C%9D%E9%B2%9C&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "多国运动员被困日本机场：又困又饿",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%9B%BD%E8%BF%90%E5%8A%A8%E5%91%98%E8%A2%AB%E5%9B%B0%E6%97%A5%E6%9C%AC%E6%9C%BA%E5%9C%BA%EF%BC%9A%E5%8F%88%E5%9B%B0%E5%8F%88%E9%A5%BF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京时间9月16日，2026年亚运会男足B组首轮，中国U23男足迎战朝鲜U23男足，最终2比1战胜对手，实现亚运开门红！",
+        "summary": "16日，多国代表团抵达日本名古屋备战亚运会，因系统故障被困机场近6小时无车可乘、无饭可吃。中国体操队等至下午6点才离开，羽毛球队求助领事馆自行租车。此前，名古屋亚运会因预算不足改用集装箱房等拼合住宿，已遭韩国等多国代表团吐槽条件恶劣。",
         "badge": "热搜",
-        "signal": "7,524,220 热度"
+        "signal": "7,522,864 热度"
       },
       {
-        "id": "github-advisory-ghsa-5hq8-qhww-jm7q",
+        "id": "github-advisory-ghsa-v8pv-4842-x354",
         "category": "security",
-        "title": "libp2p-quic: Remote panic via certificate expiry race during QUIC handshake",
-        "url": "https://github.com/advisories/GHSA-5hq8-qhww-jm7q",
+        "title": "OpenTelemetry.Resources.Host vulnerable to arbitrary code execution via local PATH hijacking on macOS",
+        "url": "https://github.com/advisories/GHSA-v8pv-4842-x354",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-15T20:01:17.000Z",
-        "summary": "### Summary `libp2p-quic` can panic on an inbound QUIC handshake if a malicious peer presents a valid, short lived libp2p TLS certificate and delays the final TLS 1.3 handshake fragment until the certificate expires. This is remotely reach…",
-        "badge": "CVE-2026-61544",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-16T13:54:16.000Z",
+        "summary": "### Summary The `OpenTelemetry.Resources.Host` NuGet package is affected by an untrusted search path vulnerability on macOS. The `host.id` resource attribute detector launches the `sh` and `ioreg` executables by bare name rather than by ab…",
+        "badge": "CVE-2026-81192",
+        "signal": "HIGH · CVSS 7.0"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242461",
+        "id": "v2ex-1242483",
         "category": "dev",
-        "title": "[完全开源] IP 纯净度检测 AI 服务区状态检测 可一键部署到自己的 CF",
-        "url": "https://www.v2ex.com/t/1242461",
+        "title": "我的 v 站余额是什么水平？",
+        "url": "https://www.v2ex.com/t/1242483",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-16T08:02:54.000Z",
-        "summary": "很多轮子大家都是看到过 现在手搓直接开源 让大家也可以用自己的轮子 🌐 在线体验 ： https://ip.huzhihui.com 📦 开源仓库 ： https://github.com/zhihui-hu/one-ip （如果觉得顺手，求个 Star ⭐️） 目前主要能做这些事： 看出口和分流：分别探测国内、外部 IPv4 ，再看不同网站实际使用哪个出口。 查 IP 信息：归属地、运营商、ASN 、企业类型、住宅/机房标记、信誉分，以及更详细的网络信息。 排查连通性：网…",
+        "publishedAt": "2026-09-16T09:10:45.000Z",
+        "summary": "我是 V2EX 第 272263 号会员，加入于 2017-12-04 17:20:32 +08:00 目前账号 1 金 35 银 1 铜，余额来源基本都是签到来的，中间有几年 gap 没坐班没怎么上 v 站 想知道我是属于垫底还是中间？大家会有余额焦虑吗，会因为余额不足不轻易发帖/回复吗？",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "67 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 30409,
+        "stars": 31063,
         "starsToday": 3215
       },
       {
@@ -520,8 +520,8 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 5587,
-        "starsToday": 1434
+        "stars": 6257,
+        "starsToday": 1249
       },
       {
         "id": "github-c4394ed11770f8b3",
@@ -530,7 +530,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 34589,
+        "stars": 34763,
         "starsToday": 1532
       },
       {
@@ -540,8 +540,8 @@
         "url": "https://github.com/abue-ammar/tinycast",
         "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
         "language": "Swift",
-        "stars": 5215,
-        "starsToday": 1076
+        "stars": 5401,
+        "starsToday": 1136
       },
       {
         "id": "github-886294fb8b37fefa",
@@ -550,7 +550,7 @@
         "url": "https://github.com/jamiepine/voicebox",
         "description": "The open-source AI voice studio. Clone, dictate, create.",
         "language": "TypeScript",
-        "stars": 54096,
+        "stars": 54188,
         "starsToday": 409
       },
       {
@@ -559,8 +559,8 @@
         "name": "Lakr233/vphone-cli",
         "url": "https://github.com/Lakr233/vphone-cli",
         "language": "Swift",
-        "stars": 13148,
-        "starsToday": 907
+        "stars": 13245,
+        "starsToday": 444
       },
       {
         "id": "github-a3140cb175a451a9",
@@ -569,7 +569,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 24152,
+        "stars": 24200,
         "starsToday": 96
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 7080,
+        "stars": 7140,
         "starsToday": 771
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/ankitects/anki",
         "description": "Anki is a smart spaced repetition flashcard program",
         "language": "Rust",
-        "stars": 30637,
+        "stars": 30697,
         "starsToday": 50
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 77321,
+        "stars": 77530,
         "starsToday": 1059
       }
     ],
-    "updatedAt": "2026-09-16T12:41:36.539Z"
+    "updatedAt": "2026-09-16T16:32:59.133Z"
   }
 }

@@ -1,4 +1,4 @@
-import { parseSave } from './save.js?v=0.29.0';
+import { parseSave } from './save.js?v=0.29.3';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 export const savedTime=value=>{if(value===undefined||value===null||value==='')return '未记录';const d=new Date(value);return Number.isFinite(d.getTime())?d.toLocaleString('zh-CN'):'未记录';};
 export function progressSummary(s,d){if(!s)return null;const owned=Object.values(s.heroes).filter(h=>h.status==='owned');return [['完成章节',d.chapters.filter(c=>s.progress.flags[c.completeFlag]).length+' / '+d.chapters.length],['入寨英雄 / 最高等级',owned.length+' 人 / '+Math.max(0,...owned.map(h=>h.level))+' 级'],['威望 / 碎银',s.player.prestige+' / '+s.player.silver],['在营 / 伤兵',(s.camp?.troops||0)+' / '+(s.camp?.wounded||0)],['粮草 / 木材',(s.camp?.food||0)+' / '+(s.camp?.wood||0)],['招贤令 / 经验丹',(s.inventory.recruit_order||0)+' / '+(s.inventory.exp_pill||0)],['当前进度',s.battle?'交战中 / 待结算':s.scheme?'计策进行中':s.event?'际遇待选择':'已收兵'],['游戏记录时间',savedTime(s.clock)]];}

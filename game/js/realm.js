@@ -1,13 +1,13 @@
-import {finishChallenge} from './challenges.js?v=0.29.0';
-import {weeklyScore} from './rotations.js?v=0.29.0';
-import {finishTrek,validateTrek} from './trek.js?v=0.29.0';
+import {finishChallenge} from './challenges.js?v=0.29.3';
+import {weeklyScore} from './rotations.js?v=0.29.3';
+import {finishTrek,validateTrek} from './trek.js?v=0.29.3';
 import {TALENTS} from './talents.js?v=0.29.0';
-import {validateSquad} from './squads.js?v=0.29.0';
+import {validateSquad} from './squads.js?v=0.29.3';
 import { REGIONS, FACTIONS, CONTRACTS, BRANCHES, RELICS, CHALLENGES } from './realm-data.js?v=0.29.0';
 import { deployedTroops } from './logistics.js?v=0.29.0';
-import { startBattle } from './battle.js?v=0.29.0';
-import { attachTroops } from './camp.js?v=0.29.0';
-import { affairReward } from './affairs.js?v=0.29.0';
+import { startBattle } from './battle.js?v=0.29.3';
+import { attachTroops } from './camp.js?v=0.29.3';
+import { affairReward } from './affairs.js?v=0.29.3';
 import { requireRule, hasOwn, count, journal } from './utils.js?v=0.29.0';
 export function realmOpen(s){requireRule(s.camp&&!s.realm,'先建寨；已开启的山河经营不必重开。');s.realm={version:1,regions:Object.fromEntries(Object.keys(REGIONS).map(id=>[id,{security:40,supply:40,pact:false}])),relations:{merchants:0,villages:0,river:0},branches:{},armyXp:0,relics:[],equipped:null,squad:null,trek:null,records:{}};journal(s,'【山河经营】三路商情已展开。治安与补给随主动处理事务改变，离线不会自动衰退。');}
 export function realmPlan(s,id,kind){const m=REGIONS[id],a=CONTRACTS[kind],r=s.realm?.regions[id];let reason=!r?'先开启山河经营':!a?'无效的委托':s.camp.buildings.hall<m.hall?'聚义厅需要 '+m.hall+' 级':!s.team.length?'先安排主队':s.daily.counters['realm_'+id]?'今日此地区已受理一件委托':kind==='commission'&&s.realm.relations[m.faction]<20?'对应势力关系达到 20 后开放':'';const troops=deployedTroops(s),food=Math.ceil(troops/2)+5;

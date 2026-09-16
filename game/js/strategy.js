@@ -1,4 +1,4 @@
-import { reportHealing, reportOtherDamage } from './debrief.js?v=0.29.0';
+import { reportHealing, reportOtherDamage } from './debrief.js?v=0.29.3';
 import { HERO_SPECIALTIES, DRILLS, STYLES, TERRAIN_NAMES, MECHANICS, activeBonds, battleTerrain } from './strategy-data.js?v=0.29.0';
 import { hasOwn, requireRule, journal } from './utils.js?v=0.29.0';
 

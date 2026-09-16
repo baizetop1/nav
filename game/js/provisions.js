@@ -1,8 +1,8 @@
 import {staminaCap} from './logistics.js?v=0.29.0';
 import {expansion} from './expansion-state.js?v=0.29.0';
 import {requireRule,count,journal,hasOwn} from './utils.js?v=0.29.0';
-import {pay,grant} from './item.js?v=0.29.0';
-import {rotationCalendar} from './rotations.js?v=0.29.0';
+import {pay,grant} from './item.js?v=0.29.3';
+import {rotationCalendar} from './rotations.js?v=0.29.3';
 export const RECIPES={mount_feed:{name:'草料调配',building:'farm',silver:20,items:{horse_feed:3,herb:1},limit:2},ration:{name:'膳房干粮',building:'farm',food:35,silver:20,items:{grain:2},limit:2},camp_pack:{name:'野营药包',building:'clinic',silver:35,items:{herb:5,cloth:2},limit:2},medical_crate:{name:'军医药箱',building:'clinic',silver:50,items:{herb:8,tiger_bone:1,cloth:2},limit:2},smoke_pack:{name:'护行烟幕',building:'market',silver:45,items:{herb:3,tiger_skin:1},limit:1}};
 export const BOX_OPTIONS={iron:5,cloth:5,herb:8,martial_pages:3};
 export const ordinaryUsed=s=>(s.daily.counters.wine||0)*10+(s.daily.counters.ration||0)*20;

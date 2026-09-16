@@ -1,3 +1,4 @@
+import { dailyExperience } from './growth-rewards.js?v=0.29.3';
 import { deployedTroops } from './logistics.js?v=0.29.0';
 import { requireRule, journal } from './utils.js?v=0.29.0';
 
@@ -48,7 +49,7 @@ export function enterRotation(s,kind,id,tier){
 export function finishRotation(s,b){
   if(b.outcome!=='victory')return null;
   const {kind,id,tier,period}=b.context;
-  if(kind==='daily'){if(b.team.every(u=>u.hp>0)&&b.elapsed<=60000&&!b.itemReadyAt){s.campaign.mastery??={};const key=id+'_'+tier;s.campaign.mastery[key]=Math.min(2,(s.campaign.mastery[key]||0)+1);}const r=DAILY_ROUTES.find(r=>r.id===id);journal(s,`【材料历练】${r.name} ${tier} 阶完成。`);return {items:Object.fromEntries(Object.entries(r.reward).map(([k,n])=>[k,n*tier]))};}
+  if(kind==='daily'){if(b.team.every(u=>u.hp>0)&&b.elapsed<=60000&&!b.itemReadyAt){s.campaign.mastery??={};const key=id+'_'+tier;s.campaign.mastery[key]=Math.min(2,(s.campaign.mastery[key]||0)+1);}const r=DAILY_ROUTES.find(r=>r.id===id);journal(s,`【材料历练】${r.name} ${tier} 阶完成。`);return {exp:dailyExperience(id,tier),items:Object.fromEntries(Object.entries(r.reward).map(([k,n])=>[k,n*tier]))};}
   const p=s.campaign,old=p.weekly[period],hp=Math.floor(b.team.reduce((n,u)=>n+u.hp/u.maxHp,0)/b.team.length*1000),score=weeklyScore(tier,b.elapsed,hp),first=tier>(old?.tier||0);
   if(!old||score>old.score)p.weekly[period]={tier,score,elapsed:b.elapsed,hp};
   const keys=Object.keys(p.weekly).sort();while(keys.length>48)delete p.weekly[keys.shift()];

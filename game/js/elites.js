@@ -1,7 +1,7 @@
 import { deployedTroops, troopShares, heroCommand } from './logistics.js?v=0.29.0';
-import { startBattle } from './battle.js?v=0.29.0';
-import { attachTroops } from './camp.js?v=0.29.0';
-import { grant } from './item.js?v=0.29.0';
+import { startBattle } from './battle.js?v=0.29.3';
+import { attachTroops } from './camp.js?v=0.29.3';
+import { grant } from './item.js?v=0.29.3';
 import { requireRule, count, journal, hasOwn } from './utils.js?v=0.29.0';
 export const ELITES={
  siege:{name:'精英·铁壁营',level:20,hall:3,terrain:'land',enemies:['guard','bandit_chief'],scale:3.8,reward:{iron:8,scrap_iron:10,martial_pages:4},use:'精铁用于强化，碎铁用于练兵，残页用于招式与升品。'},

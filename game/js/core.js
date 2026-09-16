@@ -1,38 +1,39 @@
-import {ventureAction,finishExpansion,diplomacyAction} from './ventures.js?v=0.29.0';
-import {provisionAction} from './provisions.js?v=0.29.0';
+import { battleExperience } from './growth-rewards.js?v=0.29.3';
+import {ventureAction,finishExpansion,diplomacyAction} from './ventures.js?v=0.29.3';
+import {provisionAction} from './provisions.js?v=0.29.3';
 import {expansionGuard,expansion} from './expansion-state.js?v=0.29.0';
-import {challengeStart} from './challenges.js?v=0.29.0';
-import {relicAction} from './relics.js?v=0.29.0';
-import {trekAction,trekGuard} from './trek.js?v=0.29.0';
+import {challengeStart} from './challenges.js?v=0.29.3';
+import {relicAction} from './relics.js?v=0.29.3';
+import {trekAction,trekGuard} from './trek.js?v=0.29.3';
 import {buildingBranch} from './realm-buildings.js?v=0.29.0';
 import {chooseHeroPath} from './talents.js?v=0.29.0';
-import { squadAction, assignmentGuard } from './squads.js?v=0.29.0';
-import { realmAction, finishRealmBattle } from './realm.js?v=0.29.0';
-import { applySweep } from './sweep.js?v=0.29.0';
+import { squadAction, assignmentGuard } from './squads.js?v=0.29.3';
+import { realmAction, finishRealmBattle } from './realm.js?v=0.29.3';
+import { applySweep } from './sweep.js?v=0.29.3';
 import { staminaCap, deployedTroops } from './logistics.js?v=0.29.0';
-import { enterElite, finishElite } from './elites.js?v=0.29.0';
-import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.29.0';
-import { mentorHero } from './mentorship.js?v=0.29.0';
-import { saveDebrief } from './debrief.js?v=0.29.0';
-import { batchApply } from './batch.js?v=0.29.0';
-import { affairAction, finishAffairBattle } from './affairs.js?v=0.29.0';
-import { trainDrill } from './strategy.js?v=0.29.0';
+import { enterElite, finishElite } from './elites.js?v=0.29.3';
+import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.29.3';
+import { mentorHero } from './mentorship.js?v=0.29.3';
+import { saveDebrief } from './debrief.js?v=0.29.3';
+import { batchApply } from './batch.js?v=0.29.3';
+import { affairAction, finishAffairBattle } from './affairs.js?v=0.29.3';
+import { trainDrill } from './strategy.js?v=0.29.3';
 import { battleOrder } from './commands.js?v=0.29.0';
 import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.29.0';
 import { developmentAction, recordLedger } from './development.js?v=0.29.0';
-import { enterRotation, finishRotation } from './rotations.js?v=0.29.0';
+import { enterRotation, finishRotation } from './rotations.js?v=0.29.3';
 import { promoteHero } from './quality.js?v=0.29.0';
-import { routeTo, claimLocalBenefit } from './world-map.js?v=0.29.0';
+import { routeTo, claimLocalBenefit } from './world-map.js?v=0.29.3';
 import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.29.0';
 import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.29.0';
 import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.29.0';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.29.0';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.29.0';
-import { effects, storyAction, visit } from './story.js?v=0.29.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.29.3';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.29.3';
+import { effects, storyAction, visit } from './story.js?v=0.29.3';
 import { growthAction, awardMountContracts } from './growth.js?v=0.29.0';
 
-import { searchEquipment } from './camp-development.js?v=0.29.0';
-import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.29.0';
+import { searchEquipment } from './camp-development.js?v=0.29.3';
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.29.3';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -90,7 +91,7 @@ function finishBattle(state,data) {
     count(state,'battleWin');recordHeroWins(state,b);
     if(b.enemy.some(e=>e.model==='bandit'||e.model==='bandit_chief'))count(state,'bandits');
     if(state.formationPending&&!b.guest){count(state,'formationBattle');state.formationPending=false;}
-    if(b.context.type==='story'){state.progress.stories[b.context.id].step=b.context.next;const story=data.by.stories[b.context.id];journal(state,'此战得胜，请在'+data.by.maps[story.steps[b.context.next].map].name+'续记【'+story.title+'】。');}
+    if(b.context.type==='story'){const exp=battleExperience(b);if(exp){for(const u of b.team)gainExp(state,u.id,exp,data);journal(state,'【主线历练】参战好汉每人获得 '+exp+' 经验；满级溢出不保留。');}state.progress.stories[b.context.id].step=b.context.next;const story=data.by.stories[b.context.id];journal(state,'此战得胜，请在'+data.by.maps[story.steps[b.context.next].map].name+'续记【'+story.title+'】。');}
     else if(b.context.type==='dungeon')rewardDungeon(state,data,b.context.id);
     else if(b.context.type==='elite')finishElite(state,data,b);
     else if(b.context.type==='frontier')finishPost(state,b);
