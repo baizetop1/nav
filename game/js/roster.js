@@ -1,5 +1,5 @@
-import { hasOwn, requireRule } from './utils.js?v=0.28.0';
-import { meets } from './map.js?v=0.28.0';
+import { hasOwn, requireRule } from './utils.js?v=0.29.0';
+import { meets } from './map.js?v=0.29.0';
 export const rosterVersion=d=>d.config.rosterVersion||3;
 export const isExternal=h=>h.group==='external';
 export const canonicalHeroes=d=>d.heroes.filter(h=>!isExternal(h));

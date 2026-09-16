@@ -1,18 +1,18 @@
-import {recruitPrice} from './realm-buildings.js?v=0.28.0';
-import {reservedTroops} from './squads.js?v=0.28.0';
-import { supplyBoard } from './supplies.js?v=0.28.0';
-import { staminaCap, barracksCapacity, commandCapacity, deployedTroops } from './logistics.js?v=0.28.0';
-import { mentorshipPanel } from './mentorship-ui.js?v=0.28.0';
-import { campOverview } from './camp-overview.js?v=0.28.0';
-import { affairsPanel } from './management-ui.js?v=0.28.0';
-import { productionPanel, frontierMap } from './frontier-ui.js?v=0.28.0';
-import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.28.0';
-import { ARMS } from './martial.js?v=0.28.0';
-import { enemyIntel } from './martial-ui.js?v=0.28.0';
-import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.28.0';
-import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.28.0';
-import { dungeonMountLoot } from './growth-ui.js?v=0.28.0';
-import { icon } from './icons.js?v=0.28.0';
+import {recruitPrice} from './realm-buildings.js?v=0.29.0';
+import {reservedTroops} from './squads.js?v=0.29.0';
+import { supplyBoard } from './supplies.js?v=0.29.0';
+import { staminaCap, barracksCapacity, commandCapacity, deployedTroops } from './logistics.js?v=0.29.0';
+import { mentorshipPanel } from './mentorship-ui.js?v=0.29.0';
+import { campOverview } from './camp-overview.js?v=0.29.0';
+import { affairsPanel } from './management-ui.js?v=0.29.0';
+import { productionPanel, frontierMap } from './frontier-ui.js?v=0.29.0';
+import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.29.0';
+import { ARMS } from './martial.js?v=0.29.0';
+import { enemyIntel } from './martial-ui.js?v=0.29.0';
+import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.29.0';
+import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.29.0';
+import { dungeonMountLoot } from './growth-ui.js?v=0.29.0';
+import { icon } from './icons.js?v=0.29.0';
 
 export const portrait=(h,small=false)=>h.portrait?`<span class="hero-portrait portrait-${h.id}${small?' portrait-small':''}"><img src="${h.portrait}" alt="${h.name}人物像" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></span>`:`<span class="hero-portrait portrait-${h.id}${h.introducedIn===3?' portrait-new':''}${small?' portrait-small':''}" role="img" aria-label="${h.name}人物卡">${h.introducedIn===3?`<span class="portrait-monogram"><b>${h.name.slice(0,1)}</b><small>立绘待补</small></span>`:''}</span>`;
 export function campPage(s,d,esc,btn){

@@ -1,7 +1,7 @@
-import { dispatch } from './core.js?v=0.28.0';
-import { advanceBattle } from './battle.js?v=0.28.0';
-import { dailyUses, rotationPlan, rotationCalendar } from './rotations.js?v=0.28.0';
-import { requireRule, journal } from './utils.js?v=0.28.0';
+import { dispatch } from './core.js?v=0.29.0';
+import { advanceBattle } from './battle.js?v=0.29.0';
+import { dailyUses, rotationPlan, rotationCalendar } from './rotations.js?v=0.29.0';
+import { requireRule, journal } from './utils.js?v=0.29.0';
 export const mastery=(s,id,tier)=>s.campaign?.mastery?.[id+'_'+tier]||0;
 export function sweepReason(s,id,tier,count=1){
  if(s.battle||s.scheme||s.event)return '先结束当前交战或际遇';

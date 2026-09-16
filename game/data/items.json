@@ -135,7 +135,7 @@
     "type": "material",
     "price": 15,
     "effect": {},
-    "description": "暂存马料，坐骑养成在后续版本开放。"
+    "description": "农田 2 级后可学习草料调配，用于加工坐骑养成草料；行囊查看配方。"
   },
   {
     "id": "skill_page",
@@ -4242,5 +4242,53 @@
     "price": 0,
     "effect": {},
     "description": "栾廷玉专属坐骑契，野猪林传闻历练独立 20% 概率掉落，非必得。"
+  },
+  {
+    "id": "ration",
+    "name": "行军干粮",
+    "type": "consume",
+    "price": 0,
+    "effect": {},
+    "description": "恢复 20 点体力，与村酒共用每日 60 点普通补给额度。"
+  },
+  {
+    "id": "vital_pill",
+    "name": "养元丹",
+    "type": "consume",
+    "price": 0,
+    "effect": {},
+    "description": "恢复体力上限的 30%（向上取整），每日最多一颗。"
+  },
+  {
+    "id": "camp_pack",
+    "name": "野营药包",
+    "type": "consume",
+    "price": 0,
+    "effect": {},
+    "description": "短程远征节点间恢复仍在阵英雄 20% 气血，每次远征最多用两包。"
+  },
+  {
+    "id": "medical_crate",
+    "name": "军医药箱",
+    "type": "consume",
+    "price": 0,
+    "effect": {},
+    "description": "医馆达到 2 级后治疗最多 30 名伤兵，另需每人粮草 1；不能复活阵亡士兵。"
+  },
+  {
+    "id": "smoke_pack",
+    "name": "烟幕包",
+    "type": "consume",
+    "price": 0,
+    "effect": {},
+    "description": "出征前携带一包：主动撤退兵损减少 25%，胜负与消耗不回滚；未用也不返还。"
+  },
+  {
+    "id": "material_choice",
+    "name": "军需自选箱",
+    "type": "consume",
+    "price": 0,
+    "effect": {},
+    "description": "选择精铁 5、粗布 5、药草 8 或武学残页 3 中的一份。"
   }
 ]

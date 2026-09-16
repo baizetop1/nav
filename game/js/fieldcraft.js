@@ -1,5 +1,5 @@
-import { battleTerrain } from './strategy-data.js?v=0.28.0';
-import { CORPS } from './corps-data.js?v=0.28.0';
+import { battleTerrain } from './strategy-data.js?v=0.29.0';
+import { CORPS } from './corps-data.js?v=0.29.0';
 // Explicit marker: ongoing old battles keep their original combat and casualty rules.
 export const FIELD_RULES=2;
 export const healingSupply=(b,u)=>fieldRules(b)&&u.side==='enemy'?(b.elapsed>=120000?.25:b.elapsed>=60000?.5:1):1;
@@ -42,6 +42,6 @@ export function casualtyQuote(b,tacticLoss,raidLoss=1,{outcome=b.outcome||'retre
  deathRate*=Math.min(medic?.9:1,has('andaoquan')?.75:1,has('huangfuduan')?1-.15*cavalry/Math.max(1,n):1);
  }
  deathRate*=b.realm?.medical||1;
- const loss=Math.min(n,Math.ceil(n*Math.max(0,rate)*raidLoss)),fallen=Math.floor(loss*deathRate),wounded=loss-fallen;
+ const smoke=b.expansion?.smoke&&outcome==='retreat'&&b.metrics?.reason==='manual'?.75:1;const loss=Math.min(n,Math.ceil(n*Math.max(0,rate)*raidLoss*smoke)),fallen=Math.floor(loss*deathRate),wounded=loss-fallen;
  return {troops:n,loss,fallen,wounded,returned:n-loss,replaceSilver:fallen*3,recoverFood:wounded+fallen*2};
 }

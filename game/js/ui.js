@@ -1,37 +1,40 @@
-import { retreatForecast } from './fieldcraft-ui.js?v=0.28.0';
-import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.28.0';
-import { staminaCap } from './logistics.js?v=0.28.0';
-import { isExternal } from './roster.js?v=0.28.0';
-import { fifthMissionCard, fifthLocalHelp, volumeFiveBoard } from './volume-five-ui.js?v=0.28.0';
-import { fourthMissionCard, fourthLocalHelp, volumeFourBoard } from './volume-four-ui.js?v=0.28.0';
-import { chapterMissionCard, thirdLocalHelp, volumeThreeBoard } from './volume-three-ui.js?v=0.28.0';
-import { chroniclePanel } from './hero-chronicles.js?v=0.28.0';
-import { progressionPanel, experienceLabel } from './progression-ui.js?v=0.28.0';
-import { debriefPanel } from './sortie-ui.js?v=0.28.0';
-import { batchButtons } from './batch-ui.js?v=0.28.0';
-import { equipmentComparison } from './management-ui.js?v=0.28.0';
-import { objectivePanel } from './strategy-ui.js?v=0.28.0';
-import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.28.0';
-import { equipmentMatches } from './commands.js?v=0.28.0';
-import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.28.0';
-import {talentPanel} from './talents.js?v=0.28.0';
-import { realmPanel } from './realm-ui.js?v=0.28.0';
-import { rotationsPage } from './rotations-ui.js?v=0.28.0';
-import { traitCard } from './martial-ui.js?v=0.28.0';
-import { helpersBoard } from './helpers-ui.js?v=0.28.0';
-import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.28.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.28.0';
-import { worldMap, localBenefit } from './world-map-ui.js?v=0.28.0';
-import { saveBoxPage } from './savebox-ui.js?v=0.28.0';
-import { attributes } from './hero.js?v=0.28.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.28.0';
-import { isBusy, questReady } from './core.js?v=0.28.0';
-import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.28.0';
-import { strengthenQuote } from './item.js?v=0.28.0';
-import { icon, actionIcon } from './icons.js?v=0.28.0';
-import { heroStewardCard } from './camp-development-ui.js?v=0.28.0';
-import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.28.0';
-import { campPage, portrait } from './camp-ui.js?v=0.28.0';
+import { frontierMap } from './frontier-ui.js?v=0.29.0';
+import {personalTaskPanel} from './expansion-ui.js?v=0.29.0';
+import { retreatForecast } from './fieldcraft-ui.js?v=0.29.0';
+import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.29.0';
+import {staminaPanel,inventoryPanel,recipePanel,provisionSources} from './provisions-ui.js?v=0.29.0';
+import { staminaCap } from './logistics.js?v=0.29.0';
+import { isExternal } from './roster.js?v=0.29.0';
+import { fifthMissionCard, fifthLocalHelp, volumeFiveBoard } from './volume-five-ui.js?v=0.29.0';
+import { fourthMissionCard, fourthLocalHelp, volumeFourBoard } from './volume-four-ui.js?v=0.29.0';
+import { chapterMissionCard, thirdLocalHelp, volumeThreeBoard } from './volume-three-ui.js?v=0.29.0';
+import { chroniclePanel } from './hero-chronicles.js?v=0.29.0';
+import { progressionPanel, experienceLabel } from './progression-ui.js?v=0.29.0';
+import { debriefPanel } from './sortie-ui.js?v=0.29.0';
+import { batchButtons } from './batch-ui.js?v=0.29.0';
+import { equipmentComparison } from './management-ui.js?v=0.29.0';
+import { objectivePanel } from './strategy-ui.js?v=0.29.0';
+import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.29.0';
+import { equipmentMatches } from './commands.js?v=0.29.0';
+import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.29.0';
+import {talentPanel} from './talents.js?v=0.29.0';
+import { realmPanel } from './realm-ui.js?v=0.29.0';
+import { rotationsPage } from './rotations-ui.js?v=0.29.0';
+import { traitCard } from './martial-ui.js?v=0.29.0';
+import { helpersBoard } from './helpers-ui.js?v=0.29.0';
+import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.29.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.29.0';
+import { worldMap, localBenefit } from './world-map-ui.js?v=0.29.1';
+import { saveBoxPage } from './savebox-ui.js?v=0.29.0';
+import { attributes } from './hero.js?v=0.29.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.29.0';
+import { isBusy, questReady } from './core.js?v=0.29.0';
+import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.29.0';
+import { strengthenQuote } from './item.js?v=0.29.0';
+import { icon, actionIcon } from './icons.js?v=0.29.0';
+import { heroStewardCard } from './camp-development-ui.js?v=0.29.0';
+import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.29.0';
+import { campPage, portrait } from './camp-ui.js?v=0.29.0';
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const btn=(label,command,kind='text-action',disabled=false)=>{const symbol=icon(actionIcon(command));return `<button type="button" class="${kind}${symbol?' with-icon':''}" data-command="${esc(JSON.stringify(command))}" ${disabled?'disabled':''}>${symbol}<span>${esc(label)}</span></button>`;};
 const nav=(label,view)=>`<button type="button" class="text-action with-icon" data-view="${view}" aria-label="${esc(label)}">${icon(view)}<span>${esc(label)}</span></button>`;
@@ -42,7 +45,7 @@ function heroOptions(s,d,selected='',empty='选择好汉',forTeam=false){return 
 function storyCards(s,d) {
   return d.by.maps[s.location].stories.map(id=>{
     const model=d.by.stories[id],p=s.progress.stories[id];
-    if(p?.status==='completed')return `<p class="note">${esc(model.title)}已记入梁山志。</p>`;
+    if(p?.status==='completed')return '';
     if(!p)return model.map===s.location&&meets(s,model.condition)?`<article class="card"><h2>${esc(model.title)}</h2>${btn(/^v[3456]_/.test(id)?'查看此地事务':'开始这段相识',{type:'story',id})}</article>`:'';
     const step=model.steps[p.step];if(step.map!==s.location)return '';if(!meets(s,step.condition))return `<article class="card"><h2>${esc(model.title)}</h2><p>${esc(step.hint||'请先推进相关人物的往事，再回来续记。')}</p></article>`;
     return `<article class="card"><p class="kicker">${esc(model.title)} · 往事进行中</p><p class="prose">${esc(step.text)}</p>${step.choices.some(c=>c.battle)?(id.startsWith('v6_')?sixthMissionCard(s,d,id):id.startsWith('v5_')?fifthMissionCard(s,d,id):id.startsWith('v4_')?fourthMissionCard(s,d,id):chapterMissionCard(s,d,id)):''}<div class="actions">${step.choices.map(c=>btn(c.label,{type:/^v[3456]_/.test(id)&&c.battle?'chapterBattle':'story',id,choice:c.id},'primary',!meets(s,c.condition))).join('')}</div></article>`;
@@ -66,23 +69,26 @@ function localVoices(s){
   return '';
 }
 function searchCard(s){return `<article class="card"><h2>江湖寻访</h2><p class="note">寻访耗体力 2；每处际遇每日一次。今日已访 ${s.daily.counters.search||0}/12 回。等候可改变游戏昼夜，不加速真实体力恢复。</p><div class="actions">${btn('四下寻访',{type:'search'},'secondary',s.player.stamina<2||(s.daily.counters.search||0)>=12)}${btn('等候半日',{type:'wait'})}</div></article>`;}
-function mapPage(s,d,mapTarget){const m=d.by.maps[s.location];return worldMap(s,d,mapTarget,esc,btn)+'<section id="map-local">'+title(m.name,m.region+' · '+(s.worldMinute>=1080||s.worldMinute<360?'夜色渐深':'白日行路'),'卷'+(d.by.chapters[m.chapter]?.number||1))+
-  localBenefit(s,btn)+locationScene(s,d)+localVoices(s)+
-  (s.location==='stable'?stableMounts(s,d,esc,btn):'')+
-  fifthLocalHelp(s)+fourthLocalHelp(s)+thirdLocalHelp(s,d)+storyCards(s,d)+m.actions.filter(a=>meets(s,a.condition)&&(!a.once||!s.progress.actions[a.id])).map(a=>btn(a.label,{type:'mapAction',id:a.id})).join(' ')+
+const journeySections={story:'剧情行路',atlas:'江湖地图',explore:'当地探索',territory:'领地据点'};
+function journeyNavigation(s,d,section){return '<nav class="journey-sections" aria-label="江湖功能分区">'+Object.entries(journeySections).map(([id,label])=>'<button type="button" data-map-section="'+id+'" aria-current="'+(section===id?'page':'false')+'">'+label+'</button>').join('')+'</nav><p class="journey-location">当前所在：'+esc(d.by.maps[s.location].name)+'</p>';}
+function continuingStories(s,d){const rows=d.stories.filter(m=>s.progress.stories[m.id]?.status==='active').filter(m=>m.steps[s.progress.stories[m.id].step]?.map!==s.location);if(!rows.length)return '';return '<section class="journey-next"><h2 class="subhead">接下来去哪里</h2>'+rows.map(m=>{const step=m.steps[s.progress.stories[m.id].step];return '<p><b>'+esc(m.title)+'</b> · '+esc(d.by.maps[step.map].name)+'</p>'+(step.hint?'<p class="note">'+esc(step.hint)+'</p>':'')+btn('查看路线 · '+d.by.maps[step.map].name,{type:'ui_mapInspect',id:step.map},'secondary');}).join('')+'</section>';}
+function localStoryPage(s,d){const m=d.by.maps[s.location],completed=m.stories.filter(id=>s.progress.stories[id]?.status==='completed');return '<section id="map-local">'+title(m.name+' · 剧情',m.region+' · '+(s.worldMinute>=1080||s.worldMinute<360?'夜色渐深':'白日行路'),'卷'+(d.by.chapters[m.chapter]?.number||1))+
+  '<div class="journey-story" id="journey-story">'+storyCards(s,d)+
+  m.actions.filter(a=>meets(s,a.condition)&&(!a.once||!s.progress.actions[a.id])).map(a=>btn(a.label,{type:'mapAction',id:a.id},'secondary')).join(' ')+
   d.heroes.filter(h=>h.meetMap===s.location&&meets(s,h.meetCondition)&&heroRank[s.heroes[h.id].status]<2).map(h=>btn(h.id==='baisheng'?'与卖酒汉子交谈':h.id==='shiqian'?'与窗边瘦汉交谈':'与'+h.title+'交谈',{type:'meet',id:h.id})).join(' ')+
-  (s.location==='tavern'&&s.heroes.baisheng.status==='known'&&!s.progress.flags.guide?`<article class="card"><h2>乡人相助</h2><p>白胜拍了拍酒担：“乡道我熟，可先替你照应行路。”</p>${btn('邀白胜作向导',{type:'guide'},'primary')}</article>`:'')+
-  (s.location==='ridge'&&s.progress.flags.seven_stars&&!s.progress.flags.huangni_complete?`<article class="card"><h2>智取生辰纲</h2><p>你负责察看时机，吴用、晁盖等人依计行事。这里不靠强攻。</p>${btn('商议冈上的安排',{type:'startScheme'},'primary')}</article>`:'')+
+  (s.location==='tavern'&&s.heroes.baisheng.status==='known'&&!s.progress.flags.guide?'<article class="card"><h2>乡人相助</h2><p>白胜拍了拍酒担：“乡道我熟，可先替你照应行路。”</p>'+btn('邀白胜作向导',{type:'guide'},'primary')+'</article>':'')+
+  (s.location==='ridge'&&s.progress.flags.seven_stars&&!s.progress.flags.huangni_complete?'<article class="card"><h2>智取生辰纲</h2><p>你负责察看时机，吴用、晁盖等人依计行事。这里不靠强攻。</p>'+btn('商议冈上的安排',{type:'startScheme'},'primary')+'</article>':'')+'</div>'+
+  fifthLocalHelp(s)+fourthLocalHelp(s)+thirdLocalHelp(s,d)+continuingStories(s,d)+locationScene(s,d)+localVoices(s)+
   (s.location==='forge'?nav('进入打造与强化','forge'):s.location==='recruit'?nav('进入招贤','recruit'):s.location==='office'?nav('查看主线与今日差事','quests'):s.location==='stable'?nav('为好汉领骑与养成','heroes'):'')+
-  m.dungeons.map(id=>{const x=d.by.dungeons[id],open=dungeonEntry(s,x);return `<article class="card"><h2>${esc(x.name)}<span class="badge">历练</span></h2><p class="note">${esc(x.description)}</p>${dungeonMountLoot(s,d,id,esc)}<p class="meta">队中一人达到 ${x.level}级 · 体力 ${x.cost} · 今日 ${s.daily.dungeons[id]||0}/${x.limit} 次</p>${btn(open?'开始历练':'需先完成此地剧情',{type:'dungeon',id},'secondary',!open||s.team.length===0||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||(s.daily.dungeons[id]||0)>=x.limit||s.player.stamina<x.cost)}</article>`;}).join('')+
-  (isFirstArrival(s)?`<details class="fold-section" data-fold="arrival-search"><summary>驻足与寻访</summary>${searchCard(s)}</details>`:searchCard(s))+'</section>';
-}
+  (completed.length?'<details class="fold-section" data-fold="local-completed"><summary>此地已完成的往事 · '+completed.length+'</summary>'+completed.map(id=>'<p class="note">'+esc(d.by.stories[id].title)+'已记入梁山志。</p>').join('')+nav('查看梁山志','chronicle')+'</details>':'')+'</section>';}
+function localExplorationPage(s,d){const m=d.by.maps[s.location];return '<section id="map-explore">'+title(m.name+' · 探索','探访酬谢、坐骑与当地副本')+localBenefit(s,btn)+(s.location==='stable'?stableMounts(s,d,esc,btn):'')+m.dungeons.map(id=>{const x=d.by.dungeons[id],open=dungeonEntry(s,x);return `<article class="card"><h2>${esc(x.name)}<span class="badge">历练</span></h2><p class="note">${esc(x.description)}</p>${dungeonMountLoot(s,d,id,esc)}<p class="meta">队中一人达到 ${x.level}级 · 体力 ${x.cost} · 今日 ${s.daily.dungeons[id]||0}/${x.limit} 次</p>${btn(open?'开始历练':'需先完成此地剧情',{type:'dungeon',id},'secondary',!open||s.team.length===0||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||(s.daily.dungeons[id]||0)>=x.limit||s.player.stamina<x.cost)}</article>`;}).join('')+searchCard(s)+'</section>';}
+function mapPage(s,d,mapTarget,mapSection='story'){const section=Object.prototype.hasOwnProperty.call(journeySections,mapSection)?mapSection:'story';return journeyNavigation(s,d,section)+'<div class="journey-content" data-journey-section="'+section+'">'+(section==='atlas'?worldMap(s,d,mapTarget,esc,btn):section==='explore'?localExplorationPage(s,d):section==='territory'?'<section class="realm-map-link"><h2>地区商情与势力</h2><p>三路治安、商会关系与委托在山河经营中查看。</p>'+nav('前往山河经营','realm')+'</section>'+ (frontierMap(s,d,esc,btn)||'<p class="note">先建立寨子，再开办经营拓土。</p>'):localStoryPage(s,d))+'</div>';}
 function heroCard(s,d,h){
   const v=s.heroes[h.id],owned=v.status==='owned';
   return `<article class="card hero-card">${portrait(h)}<h2>${esc(h.title)} · ${esc(h.name)}<span class="badge">${statusLabels[v.status]}</span></h2>
     <p class="meta">${isExternal(h)?'外传人物 · 不占正册座次':h.starSign+' · 第 '+h.seat+' 席'} · ${QUALITIES[qualityOf(v)].name}品 · 资质 ${'★'.repeat(h.star)} · ${owned?experienceLabel(v,d.config.balance.heroLevelCap):'先相识，再以信物邀贤'}</p>
     ${owned?stats(attributes(s,h.id,d))+progressionPanel(s,d,h.id)+btn('赠 1 颗经验丹 · 先预览（现有 '+(s.inventory.exp_pill||0)+'）',{type:'ui_batchPreview',kind:'experience',id:h.id,count:1},'secondary',!s.inventory.exp_pill||v.level>=d.config.balance.heroLevelCap)+batchButtons(h.id,'experience',btn)+btn('去寨中演武传习',{type:'ui_campJump',id:'camp-mentorship'},'text-action'):`<p class="note">可在${esc(d.by.maps[h.meetMap].name)}寻访${h.meetCondition?'，还须推进相关主线':''}。</p>`}
-    ${s.affairs?.mission?.hero===h.id?'<p class="notice">此人正在外派，请到寨子接回后再安排出阵或任职。</p>':''}${traitCard(h)}${corpsPanel(s,d,h,btn)}${owned?setPanel(s,d,h.id):''}${invitation(s,h,btn)}${owned?qualityPanel(s,d,h,esc,btn):stats(attributes(s,h.id,d,1,false))}${heroStewardCard(s,d,h,btn)}${owned?chroniclePanel(s,d,h,btn):''}${talentPanel(s,d,h,btn)}<details data-fold="hero-${h.id}"><summary>人物往事与招式</summary><p class="note">${esc(h.story)}</p>${heroArc(s,d,h.id)}
+    ${s.affairs?.mission?.hero===h.id?'<p class="notice">此人正在外派，请到寨子接回后再安排出阵或任职。</p>':''}${traitCard(h)}${corpsPanel(s,d,h,btn)}${owned?setPanel(s,d,h.id):''}${invitation(s,h,btn)}${owned?qualityPanel(s,d,h,esc,btn):stats(attributes(s,h.id,d,1,false))}${heroStewardCard(s,d,h,btn)}${owned?chroniclePanel(s,d,h,btn):''}${talentPanel(s,d,h,btn)}${personalTaskPanel(s,d,h,btn)}<details data-fold="hero-${h.id}"><summary>人物往事与招式</summary><p class="note">${esc(h.story)}</p>${heroArc(s,d,h.id)}
       <p class="meta">信物 ${s.inventory[h.id+'_token']||0}/10${isExternal(h)?' · 外传直接邀请':' · 专属令 '+(s.inventory[h.id+'_order']||0)}</p>
       ${heroGrowth(s,d,h,esc,btn)}
     </details></article>`;
@@ -97,7 +103,7 @@ function equipmentList(s,d,forge=false,filter={}){return equipmentComparison(s,d
 function bagPage(s,d,gear={}){
   const shop=true;
   return title('行囊','使用物品与整理装备','','bag')+
-    `<div class="grid-two">${d.items.filter(i=>(s.inventory[i.id]||0)>0).map(i=>`<article class="card"><h3>${esc(i.name)} ×${s.inventory[i.id]}</h3><p class="note">${esc(i.description)}</p>${i.effect.stamina?btn('小饮一碗',{type:'use',id:i.id},'secondary'):i.effect.exp?nav('选择好汉赠经验丹','heroes'):''}</article>`).join('')}</div>
+    `${staminaPanel(s,d,btn)}${inventoryPanel(s,d,esc,btn)}<div id="supply-recipes-anchor">${recipePanel(s,d,btn)}</div>${provisionSources(s,d,btn)}
     <details class="fold-section" data-fold="equipment"><summary>随身装备 · ${s.equipment.length} 件</summary>${equipmentList(s,d,false,gear)}${nav('查看铁匠铺','forge')}</details>
     <details class="fold-section" data-fold="materials"><summary>材料合成</summary><div class="actions">${btn('10 招贤碎片 → 招贤令',{type:'exchange',id:'order'},'secondary')}${btn('3 药草 → 2 金创药',{type:'exchange',id:'medicine'},'secondary')}${btn('20 生辰纲残册 → 失落财货',{type:'exchange',id:'ledger'},'secondary')}${btn('5 强化符碎片 → 强化符',{type:'exchange',id:'charm'},'secondary')}</div></details>
     <details class="fold-section" data-fold="shop"><summary>随时采买</summary><div class="batch-shop"><label>批量采买物品<select id="batch-shop-item">${['jinchuangyao','huiqisan','jiedudan','exp_pill','wine','iron','cloth','night_clothes','recruit_order'].map(id=>`<option value="${id}">${d.by.items[id].name} · ${d.by.items[id].price}银 / 份</option>`).join('')}</select></label>${btn('预览采买 5 份',{type:'ui_batchShop',count:5},'secondary')}${btn('预览采买 10 份',{type:'ui_batchShop',count:10},'secondary')}</div>${shop?`<p class="note">招贤令每日限购三张。</p><div class="actions">${['jinchuangyao','huiqisan','jiedudan','exp_pill','wine','iron','cloth','night_clothes','recruit_order'].map(id=>btn(`${d.by.items[id].name} · ${d.by.items[id].price}银`,{type:'buy',id},'secondary')).join('')}</div>`:'<p class="note">到郓城集市、铁匠铺、酒肆、招贤馆或药草坡才可交易。</p>'+nav('返回江湖','map')}</details>`;
@@ -181,12 +187,12 @@ function overview(s,d){
 }
 function pageResources(s,screen){
   const rows={camp:[['碎银',s.player.silver],['体力',s.player.stamina+'/'+staminaCap(s)]],map:[['体力',s.player.stamina+'/'+staminaCap(s)],['出阵',s.team.length+'/3']],heroes:[['已入寨',Object.values(s.heroes).filter(h=>h.status==='owned').length+' 位'],['经验丹',s.inventory.exp_pill||0]],bag:[['碎银',s.player.silver],['体力',s.player.stamina+'/'+staminaCap(s)]],forge:[['碎银',s.player.silver],['精铁',s.inventory.iron||0],['强化符',s.inventory.strength_charm||0]],quests:[['威望',s.player.prestige],['功勋',s.player.merit]]}[screen]||[];
-  return rows.length?`<div class="resources" aria-label="当前功能相关资源">${rows.map(([name,value])=>`<span>${icon(({体力:'energy',出阵:'heroes',已入寨:'heroes',经验丹:'medicine',碎银:'coins',精铁:'forge',强化符:'ticket',威望:'medal',功勋:'medal'})[name])}<span>${name}</span><b>${value}</b></span>`).join('')}</div>`:'';
+  return rows.length?`<div class="resources" aria-label="当前功能相关资源">${rows.some(([name])=>name==='体力')?'<button type="button" class="text-action" data-view="bag">补充体力</button>':''}${rows.map(([name,value])=>`<span>${icon(({体力:'energy',出阵:'heroes',已入寨:'heroes',经验丹:'medicine',碎银:'coins',精铁:'forge',强化符:'ticket',威望:'medal',功勋:'medal'})[name])}<span>${name}</span><b>${value}</b></span>`).join('')}</div>`:'';
 }
-export function render({state:s,data:d,view,status='',error='',locked=false,notice='',recruitTarget='',entered=true,battlePaused=false,battlePauseReason='',saveBox={},activity=null,battleSpeed=.5,mapTarget=null,roster={},leaderboard={},gear={}}){
+export function render({state:s,data:d,view,status='',error='',locked=false,notice='',recruitTarget='',entered=true,battlePaused=false,battlePauseReason='',saveBox={},activity=null,battleSpeed=.5,mapTarget=null,mapSection='story',roster={},leaderboard={},gear={}}){
   const busy=isBusy(s),tabs=[['camp','寨子'],['map','江湖'],['realm','山河'],['heroes','好汉'],['trials','历练'],['bag','行囊'],['recruit','招贤'],['forge','打造'],['quests','差事'],['chronicle','梁山志'],['save','存档']];
   const screen=['welcome','save','chronicle'].includes(view)?view:s.battle?'battle':s.scheme?'scheme':s.event?'event':view;
-  let content=screen==='realm'?realmPanel(s,d,esc,btn):screen==='trials'?rotationsPage(s,d,esc,btn,leaderboard):screen==='camp'?campPage(s,d,esc,btn):screen==='save'?saveBoxPage(s,status,locked,saveBox):screen==='chronicle'?chroniclePage(s,d):screen==='battle'?battlePage(s,d,battlePaused,battlePauseReason,locked,battleSpeed):screen==='scheme'?schemePage(s,d):screen==='event'?eventPage(s,d):screen==='heroes'?heroesPage(s,d,roster):screen==='bag'?bagPage(s,d,gear):screen==='forge'?forgePage(s,d,gear):screen==='recruit'?recruitPage(s,d,recruitTarget,roster):screen==='quests'?questsPage(s,d):mapPage(s,d,mapTarget);
+  let content=screen==='realm'?realmPanel(s,d,esc,btn):screen==='trials'?rotationsPage(s,d,esc,btn,leaderboard):screen==='camp'?campPage(s,d,esc,btn):screen==='save'?saveBoxPage(s,status,locked,saveBox):screen==='chronicle'?chroniclePage(s,d):screen==='battle'?battlePage(s,d,battlePaused,battlePauseReason,locked,battleSpeed):screen==='scheme'?schemePage(s,d):screen==='event'?eventPage(s,d):screen==='heroes'?heroesPage(s,d,roster):screen==='bag'?bagPage(s,d,gear):screen==='forge'?forgePage(s,d,gear):screen==='recruit'?recruitPage(s,d,recruitTarget,roster):screen==='quests'?questsPage(s,d):mapPage(s,d,mapTarget,mapSection);
   if(screen==='welcome')content=`<section class="intro opening"><p class="kicker">水泊梁山 · 白手立寨</p><h1>从一座寨子开始。</h1><div class="intro-line" aria-hidden="true"></div><div class="opening-lines"><p>先安顿乡人，修农田、伐木场与兵营。</p><p>再聚英雄，带兵出征，或单骑走江湖。</p><div class="camp-faces">${['baisheng','wusong','linchong','wuyong'].map(id=>portrait(d.by.heroes[id])).join('')}</div></div><div class="opening-actions">${btn('立寨，开一番事业',{type:'ui_start'},'primary')}${nav('接续旧卷','save')}</div><p class="note">从营建到出征，由你安排。立寨后开始本机保存。</p></section>`;
   const active=['battle','scheme','event'].includes(screen)?'map':screen;
   const prologue=screen==='welcome'||(!entered&&screen==='save'),arrival=screen==='map'&&isFirstArrival(s);
