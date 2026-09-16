@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-16T20:08:40.924Z",
+  "generatedAt": "2026-09-16T22:57:26.730Z",
   "intelligence": {
-    "updatedAt": "2026-09-16T20:08:40.924Z",
+    "updatedAt": "2026-09-16T22:57:26.730Z",
     "items": [
       {
         "id": "cn-item-fd457e3d2c223341",
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
-        "id": "ai-openai-b0366f9850a9d166",
+        "id": "ai-openai-f3899afd4d6a0a2d",
         "category": "ai",
-        "title": "Helping older adults use AI in everyday life",
-        "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+        "title": "Our framework for reporting model misalignment",
+        "url": "https://openai.com/index/model-misalignment-reporting-framework",
         "source": "OpenAI",
-        "publishedAt": "2026-09-16T16:00:00.000Z",
-        "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+        "publishedAt": "2026-09-16T17:00:00.000Z",
+        "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49731054",
+        "id": "hn-49731285",
         "category": "dev",
-        "title": "Vectorized and performance-portable Quicksort",
-        "url": "https://opensource.googleblog.com/2022/06/Vectorized%20and%20performance%20portable%20Quicksort.html",
+        "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+        "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T18:31:35.000Z",
+        "publishedAt": "2026-09-16T18:50:00.000Z",
         "badge": "HN",
-        "signal": "129 分 · 19 评论"
+        "signal": "308 分 · 58 评论"
       },
       {
-        "id": "cn-it-4b4dcea293bde0fa",
+        "id": "cn-it-6f6675423a4a1ce7",
         "category": "cn",
-        "title": "苹果 watchOS 27.2 开发者预览版 Beta 发布",
-        "url": "https://www.ithome.com/1/003/345.htm",
+        "title": "苹果 iOS 27.2 Beta 1 新特性：支持新旧 App 数据 / 设置“搬家”",
+        "url": "https://www.ithome.com/1/003/347.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T19:00:11.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 9 月 17 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.2 开发者预览版 Beta 更新（内部版本号：24S5086l），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览…",
+        "publishedAt": "2026-09-16T22:54:18.000Z",
+        "summary": "IT之家 9 月 17 日消息，科技媒体 9to5Mac 昨日（9 月 16 日）发布博文，报道称通过挖掘 iOS 27.2 Beta 1 更新代码，发现苹果公司计划新增系统管理迁移流程， 支持开发者把旧应用的数据和相关设置迁移到指定替代应用。 IT之家援引博文介绍，在 iOS 27.2 Beta 1 更新代码中，出现以下字符串： 开发者建议将您现有的“%1$@”应用程序数据和设置迁移到新的“%2$@”应用程序。 在你开始使用新应用之前，iPhone 可以自动完成此操作。旧…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-r2pf-9cw4-5j65",
+        "id": "github-advisory-ghsa-mxm6-v9r6-r94c",
         "category": "security",
-        "title": "node-opcua: TCP Socket Leak (FIN-WAIT-2) via keepalive reconnection cycle - Resource Exhaustion",
-        "url": "https://github.com/advisories/GHSA-r2pf-9cw4-5j65",
+        "title": "@nuxtjs/mdc's URL sanitizer misses SVG xlink:href and data:text/html, allowing XSS from untrusted markdown at the default configuration",
+        "url": "https://github.com/advisories/GHSA-mxm6-v9r6-r94c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T16:19:21.000Z",
-        "summary": "SUMMARY ------- A combination of bugs in node-opcua causes unlimited TCP socket accumulation (FIN-WAIT-2 state) during automatic reconnection, leading to memory exhaustion and eventual container/process crash (OOM kill). The issue is trigg…",
-        "badge": "CVE-2026-68904",
-        "signal": "HIGH · CVSS 7.0"
+        "publishedAt": "2026-09-16T22:14:01.000Z",
+        "summary": "## Summary `@nuxtjs/mdc` renders untrusted markdown (including raw HTML) to a Vue component tree. Across two prior advisories it added a URL/attribute sanitizer to block dangerous links in that HTML: `validateProps` / `validateProp` and an…",
+        "badge": "CVE-2026-63671",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -84,7 +84,7 @@
         "publishedAt": "2026-09-16T18:45:48.000Z",
         "summary": "提前发在抖音, 可是不给流量, 好家伙.",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-e3b73843a5240361",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "“我要举报我的资助人！”国安机关接待室，某航发研究所助理工程师最终选择举报。他从小在福利院长大，高中时王老师突然出现，每年资助5000元直到他大学毕业。他毕业入职后，王老师开始索要内部敏感信息……经查，王老师是境外间谍，专门物色学子妄图“放长线、钓大鱼”。",
         "badge": "热搜",
-        "signal": "7,809,342 热度"
+        "signal": "7,808,782 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76460",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49731285",
+        "id": "hn-49732931",
         "category": "dev",
-        "title": "Training a 4B model to produce 81% faster query plans than Postgres",
-        "url": "https://rohanbansal.com/qorl",
+        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+        "url": "https://arxiv.org/abs/2609.16338",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T18:50:00.000Z",
+        "publishedAt": "2026-09-16T20:59:24.000Z",
         "badge": "HN",
-        "signal": "69 分 · 12 评论"
+        "signal": "81 分 · 5 评论"
       },
       {
         "id": "cn-item-62e530be2f8535c1",
@@ -137,24 +137,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-pg97-jvmf-qfvc",
+        "id": "github-advisory-ghsa-9pj6-vhgr-3mwh",
         "category": "security",
-        "title": "djust has Cross-Site Request Forgery on the Server-Sent-Events transport: a cross-origin page can drive a victim-authenticated SSE session",
-        "url": "https://github.com/advisories/GHSA-pg97-jvmf-qfvc",
+        "title": "RMCP: Unauthenticated permanent session-table leak in rmcp Streamable HTTP server transport leads to remote denial-of-service",
+        "url": "https://github.com/advisories/GHSA-9pj6-vhgr-3mwh",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T15:45:03.000Z",
-        "summary": "### Impact The SSE client→server POST endpoints are `@csrf_exempt` and the SSE GET stream endpoint had no Origin check, so a cross-origin page could drive a victim-cookie-authenticated SSE session: force the victim's browser to GET the str…",
-        "badge": "CVE-2026-61593",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-16T22:13:34.000Z",
+        "summary": "### Summary An unauthenticated remote attacker can leak one entry per HTTP request out of the in-memory session table of `LocalSessionManager` by sending a well-formed JSON-RPC `POST` that is *not* an `InitializeRequest`. The Streamable HT…",
+        "badge": "CVE-2026-63128",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-6ac27c68838b29ee",
+        "id": "ai-openai-b0366f9850a9d166",
         "category": "ai",
-        "title": "Reimagining advertising with AI",
-        "url": "https://openai.com/index/reimagining-advertising-with-ai",
+        "title": "Helping older adults use AI in everyday life",
+        "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
         "source": "OpenAI",
-        "publishedAt": "2026-09-16T13:00:00.000Z",
-        "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+        "publishedAt": "2026-09-16T16:00:00.000Z",
+        "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
         "badge": "OpenAI"
       },
       {
@@ -169,25 +169,25 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-e7885005d02fa950",
+        "id": "cn-it-4b4dcea293bde0fa",
         "category": "cn",
-        "title": "苹果 visionOS 27.2 开发者预览版 Beta 发布",
-        "url": "https://www.ithome.com/1/003/344.htm",
+        "title": "苹果 watchOS 27.2 开发者预览版 Beta 发布",
+        "url": "https://www.ithome.com/1/003/345.htm",
         "source": "IT之家",
         "publishedAt": "2026-09-16T19:00:11.000Z",
-        "summary": "IT之家 9 月 17 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.2 开发者预览版 Beta 更新（内部版本号：24N5088l），本次更新距离上次发布 Beta/RC 间隔 7 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-09-15：visionOS …",
+        "summary": "【 点此直达升级教程 】 IT之家 9 月 17 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.2 开发者预览版 Beta 更新（内部版本号：24S5086l），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-76461",
+        "id": "cisa-kev-cve-2026-87886",
         "category": "security",
-        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway SQL Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461",
+        "title": "Acronis Backup：Acronis Backup Incorrect Default Permissions Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87886",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-14T00:00:00.000Z",
-        "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
-        "badge": "CVE-2026-76461",
-        "signal": "已遭利用 · 整改期限 2026-09-17"
+        "publishedAt": "2026-09-16T00:00:00.000Z",
+        "summary": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
+        "badge": "CVE-2026-87886",
+        "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
         "id": "ai-google-deepmind-f0e27f432f48fb86",
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49729000",
+        "id": "hn-49732270",
         "category": "dev",
-        "title": "Small programming tricks",
-        "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
+        "title": "Xiaomi Mimo 2.6 live post-training dashboard",
+        "url": "https://mimo.xiaomi.com/rl/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T15:56:47.000Z",
+        "publishedAt": "2026-09-16T20:09:18.000Z",
         "badge": "HN",
-        "signal": "229 分 · 128 评论"
+        "signal": "168 分 · 45 评论"
       },
       {
         "id": "cn-baidu-42da4e701ce7fe14",
@@ -217,18 +217,18 @@
         "source": "百度热搜",
         "summary": "据数据统计，2025年全国4个县域社零总额超千亿元，义乌以2153.8亿元居首，昆山、晋江、常熟紧随其后。此前，县域已成扩消费重要潜力来源，各大品牌纷纷抢滩布局。",
         "badge": "热搜",
-        "signal": "7,712,654 热度"
+        "signal": "7,712,707 热度"
       },
       {
-        "id": "github-advisory-ghsa-5h8j-6crg-7rmw",
+        "id": "github-advisory-ghsa-33f5-2c5q-wgwj",
         "category": "security",
-        "title": "LMdeploy has Remote Code Execution by Pickle Deserialization via zmq_rpc.call_and_response() in InterLM/lmdeploy",
-        "url": "https://github.com/advisories/GHSA-5h8j-6crg-7rmw",
+        "title": "RMCP: Missing Resource Field Validation in OAuth Protected Resource Metadata Discovery",
+        "url": "https://github.com/advisories/GHSA-33f5-2c5q-wgwj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T15:34:27.000Z",
-        "summary": "### Description The LMdeploy implements an rpc server (AsyncRPCServer in zmq_rpc.py) for supporting the RPC communications. In its core functionality call_and_response(), I found it will directly use the pickles.loads() to deserialize the …",
-        "badge": "CVE-2025-59953",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-09-16T22:13:26.000Z",
+        "summary": "### Summary The `rmcp` library does not validate the `resource` parameter in OAuth Protected Resource metadata (RFC 9728), allowing a malicious MCP server to redirect OAuth flows to a legitimate authorization server and steal the resulting…",
+        "badge": "CVE-2026-63127",
+        "signal": "HIGH · CVSS 8.2"
       },
       {
         "id": "ai-hugging-face-85052f9befba2c4e",
@@ -261,56 +261,56 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-84869",
+        "id": "cisa-kev-cve-2026-76461",
         "category": "security",
-        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
+        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway SQL Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confir…",
-        "badge": "CVE-2026-84869",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "publishedAt": "2026-09-14T00:00:00.000Z",
+        "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
+        "badge": "CVE-2026-76461",
+        "signal": "已遭利用 · 整改期限 2026-09-17"
       },
       {
-        "id": "ai-openai-4410122683c56925",
+        "id": "ai-openai-6ac27c68838b29ee",
         "category": "ai",
-        "title": "How to connect AI usage to business value",
-        "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+        "title": "Reimagining advertising with AI",
+        "url": "https://openai.com/index/reimagining-advertising-with-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-09-16T12:00:00.000Z",
-        "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
+        "publishedAt": "2026-09-16T13:00:00.000Z",
+        "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49731360",
+        "id": "hn-49724881",
         "category": "dev",
-        "title": "Accurate Models of AMD Matrix Cores",
-        "url": "https://arxiv.org/abs/2609.14845",
+        "title": "Nvidia announces native GPU programming in Rust",
+        "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T18:56:05.000Z",
+        "publishedAt": "2026-09-16T11:15:53.000Z",
         "badge": "HN",
-        "signal": "19 分 · 1 评论"
+        "signal": "57 分 · 10 评论"
       },
       {
-        "id": "cn-it-d9266fffc5d05239",
+        "id": "cn-it-e7885005d02fa950",
         "category": "cn",
-        "title": "苹果 macOS 27.2 开发者预览版 Beta 发布",
-        "url": "https://www.ithome.com/1/003/343.htm",
+        "title": "苹果 visionOS 27.2 开发者预览版 Beta 发布，初步支持原生 Mac 窗口控件渲染",
+        "url": "https://www.ithome.com/1/003/344.htm",
         "source": "IT之家",
         "publishedAt": "2026-09-16T19:00:11.000Z",
-        "summary": "IT之家 9 月 17 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.2 开发者预览版 Beta 更新（内部版本号：26B5086k），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 ，之后通…",
+        "summary": "IT之家 9 月 17 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.2 开发者预览版 Beta 更新（内部版本号：24N5088l），本次更新距离上次发布 Beta / RC 间隔 7 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 和 macOS 一样，visionOS 也跳过了 27.1 测试周期，直接从 27.0 进入 27.2。 截至目前，苹果尚未公布 vi…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-3492-cvg7-9mr2",
+        "id": "github-advisory-ghsa-7prp-2623-8g45",
         "category": "security",
-        "title": "djust: Multi-tenant isolation fails open on the WebSocket/SSE path, disclosing other tenants' data",
-        "url": "https://github.com/advisories/GHSA-3492-cvg7-9mr2",
+        "title": "djust has an unauthenticated arbitrary module import via the WebSocket/SSE view-mount path",
+        "url": "https://github.com/advisories/GHSA-7prp-2623-8g45",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T15:32:10.000Z",
-        "summary": "### Impact `djust.tenants` isolation was enforced only on the HTTP path. The current tenant was stored in `threading.local()` and set exclusively by the HTTP-only `TenantMiddleware`, so on the live (WebSocket/SSE) path `get_current_tenant(…",
-        "badge": "CVE-2026-61595",
-        "signal": "HIGH · CVSS 7.7"
+        "publishedAt": "2026-09-16T22:09:38.000Z",
+        "summary": "### Impact The djust live transport resolves the LiveView to mount from a **client-supplied dotted path** by calling `__import__(module_path, ...)`. The module is imported — running its **top-level code (import side effects)** — *before* t…",
+        "badge": "CVE-2026-61599",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -340,18 +340,18 @@
         "source": "百度热搜",
         "summary": "9月16日，平陆运河正式通航，这项世纪工程的顺畅运转，离不开“全能管家”青年调度中心。青年调度中心作为国内首个全生命周期智慧运河数字孪生平台，可以实现一屏观全线、一脑统江海，对全流程业务进行一体化智能闭环管控。",
         "badge": "热搜",
-        "signal": "7,618,780 热度"
+        "signal": "7,616,196 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-42016",
+        "id": "cisa-kev-cve-2026-84869",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
+        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
-        "badge": "CVE-2026-42016",
-        "signal": "已遭利用 · 整改期限 2026-09-25"
+        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confir…",
+        "badge": "CVE-2026-84869",
+        "signal": "已遭利用 · 整改期限 2026-09-14"
       },
       {
         "id": "ai-hugging-face-075fed980e67c694",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49731356",
+        "id": "hn-49729000",
         "category": "dev",
-        "title": "Fed hikes rates as inflation worries push up bond yields",
-        "url": "https://www.reuters.com/live/live-fed-rate-hike-expected-inflation-worries-push-up-bond-yields-2026-09-16/",
+        "title": "Small programming tricks",
+        "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T18:55:21.000Z",
+        "publishedAt": "2026-09-16T15:56:47.000Z",
         "badge": "HN",
-        "signal": "89 分 · 49 评论"
+        "signal": "336 分 · 166 评论"
       },
       {
         "id": "cn-item-24201fe0f79bae7c",
@@ -383,24 +383,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-cc7c-9jff-58wj",
+        "id": "github-advisory-ghsa-c7c5-5j6r-q957",
         "category": "security",
-        "title": "djust: Client mass-assignment of arbitrary view attributes via the default dj-model update_model handler",
-        "url": "https://github.com/advisories/GHSA-cc7c-9jff-58wj",
+        "title": "djust has broken object-level access control (IDOR)",
+        "url": "https://github.com/advisories/GHSA-c7c5-5j6r-q957",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T13:55:48.000Z",
-        "summary": "### Impact `djust.mixins.model_binding.ModelBindingMixin` provides a default `update_model` event handler and is part of the **LiveView base MRO**, so every LiveView exposes it. It `setattr`s a view attribute whose **name is client-supplie…",
-        "badge": "CVE-2026-61598",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-16T22:06:02.000Z",
+        "summary": "### Impact djust's per-object authorization (`get_object` + `has_object_permission`, ADR-017) was enforced on the WebSocket **mount** and **event** paths but **not** on three other render entry points: (a) the initial **HTTP GET** render, …",
+        "badge": "CVE-2026-61596",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
-        "id": "ai-openai-7d2872733a614740",
+        "id": "ai-openai-4410122683c56925",
         "category": "ai",
-        "title": "How workers are unlocking new ways of working",
-        "url": "https://openai.com/index/unlocking-new-ways-of-working",
+        "title": "How to connect AI usage to business value",
+        "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
         "source": "OpenAI",
-        "publishedAt": "2026-09-16T09:00:00.000Z",
-        "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+        "publishedAt": "2026-09-16T12:00:00.000Z",
+        "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
         "badge": "OpenAI"
       },
       {
@@ -415,24 +415,24 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-04e581bcf37a9f2b",
+        "id": "cn-it-d9266fffc5d05239",
         "category": "cn",
-        "title": "苹果 iOS/iPadOS 27.2 开发者预览版 Beta 发布",
-        "url": "https://www.ithome.com/1/003/342.htm",
+        "title": "苹果 macOS 27.2 开发者预览版 Beta 发布",
+        "url": "https://www.ithome.com/1/003/343.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-16T19:00:10.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 9 月 17 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.2 开发者预览版 Beta 更新（内部版本号：24B5084k），本次更新距离上次发布 Beta/RC 间隔 7 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； •…",
+        "publishedAt": "2026-09-16T19:00:11.000Z",
+        "summary": "IT之家 9 月 17 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.2 开发者预览版 Beta 更新（内部版本号：26B5086k），本次更新距离上次发布 Beta / RC 间隔 7 天。 值得注意的是， 苹果此次直接跳过了 macOS 27.1 的测试周期，从 27.0 直接进入 27.2。 已参与 Apple Developer 计划的注册开发者可以前往“系统设置 → 通用 → 软件更新”，选择加入 macOS Golden Gate 测试版来下载 …",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-42018",
+        "id": "cisa-kev-cve-2026-42016",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42018",
+        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
         "source": "CISA KEV",
         "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
-        "badge": "CVE-2026-42018",
+        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+        "badge": "CVE-2026-42016",
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49726955",
+        "id": "hn-49674451",
         "category": "dev",
-        "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
-        "url": "https://arxiv.org/abs/2609.14858",
+        "title": "Reversing Factorio's RNG",
+        "url": "https://gegell.github.io/posts/factorio-rng/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T13:44:40.000Z",
+        "publishedAt": "2026-09-12T17:02:19.000Z",
         "badge": "HN",
-        "signal": "143 分 · 44 评论"
+        "signal": "91 分 · 11 评论"
       },
       {
         "id": "cn-baidu-cbbd19b3f177925e",
@@ -462,18 +462,18 @@
         "source": "百度热搜",
         "summary": "16日，多国代表团抵达日本名古屋备战亚运会，因系统故障被困机场近6小时无车可乘、无饭可吃。中国体操队等至下午6点才离开，羽毛球队求助领事馆自行租车。此前，名古屋亚运会因预算不足改用集装箱房等拼合住宿，已遭韩国等多国代表团吐槽条件恶劣。",
         "badge": "热搜",
-        "signal": "7,523,970 热度"
+        "signal": "7,523,702 热度"
       },
       {
-        "id": "github-advisory-ghsa-v8pv-4842-x354",
+        "id": "github-advisory-ghsa-xhhm-f6hp-2qwj",
         "category": "security",
-        "title": "OpenTelemetry.Resources.Host vulnerable to arbitrary code execution via local PATH hijacking on macOS",
-        "url": "https://github.com/advisories/GHSA-v8pv-4842-x354",
+        "title": "djust has an authorization bypass on the WebSocket/SSE mount path",
+        "url": "https://github.com/advisories/GHSA-xhhm-f6hp-2qwj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T13:54:16.000Z",
-        "summary": "### Summary The `OpenTelemetry.Resources.Host` NuGet package is affected by an untrusted search path vulnerability on macOS. The `host.id` resource attribute detector launches the `sh` and `ioreg` executables by bare name rather than by ab…",
-        "badge": "CVE-2026-81192",
-        "signal": "HIGH · CVSS 7.0"
+        "publishedAt": "2026-09-16T21:58:05.000Z",
+        "summary": "### Impact The live (WebSocket) transport authorizes a mount via `check_view_auth`, not Django's `View.dispatch()` chain. As a result, standard Django authorization — `LoginRequiredMixin`, `PermissionRequiredMixin`, `UserPassesTestMixin`, …",
+        "badge": "CVE-2026-61594",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -510,7 +510,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 31445,
+        "stars": 31682,
         "starsToday": 3215
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 6728,
+        "stars": 7037,
         "starsToday": 1249
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 34881,
+        "stars": 34990,
         "starsToday": 1532
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/abue-ammar/tinycast",
         "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
         "language": "Swift",
-        "stars": 5495,
+        "stars": 5551,
         "starsToday": 1136
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/jamiepine/voicebox",
         "description": "The open-source AI voice studio. Clone, dictate, create.",
         "language": "TypeScript",
-        "stars": 54265,
+        "stars": 54338,
         "starsToday": 409
       },
       {
@@ -559,7 +559,7 @@
         "name": "Lakr233/vphone-cli",
         "url": "https://github.com/Lakr233/vphone-cli",
         "language": "Swift",
-        "stars": 13290,
+        "stars": 13316,
         "starsToday": 444
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 24238,
+        "stars": 24267,
         "starsToday": 96
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/ever-co/ever-gauzy",
         "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
         "language": "TypeScript",
-        "stars": 7213,
+        "stars": 7276,
         "starsToday": 771
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/ankitects/anki",
         "description": "Anki is a smart spaced repetition flashcard program",
         "language": "Rust",
-        "stars": 30751,
+        "stars": 30828,
         "starsToday": 50
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 77648,
+        "stars": 77734,
         "starsToday": 1059
       }
     ],
-    "updatedAt": "2026-09-16T20:08:40.924Z"
+    "updatedAt": "2026-09-16T22:57:26.730Z"
   }
 }
