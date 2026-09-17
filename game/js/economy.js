@@ -1,5 +1,5 @@
-import { totalExperience } from './progression.js?v=0.31.0';
-import { dailyExperience } from './growth-rewards.js?v=0.31.0';
+import { totalExperience } from './progression.js?v=0.32.0';
+import { dailyExperience } from './growth-rewards.js?v=0.32.0';
 export const GROWTH_MILESTONES=[10,15,20,30,40];
 export function growthBudget(s,d,id,target){
   const h=s.heroes[id],cap=d.config.balance.heroLevelCap;

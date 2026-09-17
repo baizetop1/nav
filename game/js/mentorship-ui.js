@@ -1,4 +1,4 @@
-import { MENTOR_LIMIT } from './mentorship.js?v=0.31.0';
+import { MENTOR_LIMIT } from './mentorship.js?v=0.32.0';
 export function mentorshipPanel(s,d,esc,btn){
   const away=id=>s.affairs?.mission?.hero===id||s.realm?.squad?.team.includes(id);
   const owned=d.heroes.filter(h=>s.heroes[h.id].status==='owned'),mentors=owned.filter(h=>s.heroes[h.id].level>=10).sort((a,b)=>s.heroes[b.id].level-s.heroes[a.id].level),students=[...owned].sort((a,b)=>s.heroes[a.id].level-s.heroes[b.id].level),mentor=mentors.find(h=>!away(h.id))?.id,student=students.find(h=>h.id!==mentor&&!away(h.id))?.id;

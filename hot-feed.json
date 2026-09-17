@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-17T14:52:20.503Z",
+  "generatedAt": "2026-09-17T15:16:54.805Z",
   "intelligence": {
-    "updatedAt": "2026-09-17T14:52:20.503Z",
+    "updatedAt": "2026-09-17T15:16:54.805Z",
     "items": [
       {
         "id": "cn-item-9bb5db19fd34cbd8",
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-15T17:28:38.000Z",
         "badge": "HN",
-        "signal": "133 分 · 45 评论"
+        "signal": "158 分 · 53 评论"
       },
       {
-        "id": "cn-it-88ee864f5d875db2",
+        "id": "cn-it-007ccf457ad029e5",
         "category": "cn",
-        "title": "乘联分会预计本月狭义乘用车零售 169 万辆，同比降幅进一步扩大至 24.6%",
-        "url": "https://www.ithome.com/1/003/861.htm",
+        "title": "何小鹏称做机器人难度是造车的 20 倍，小鹏机器人最快今年四季度实现能力跳跃",
+        "url": "https://www.ithome.com/1/003/867.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-17T14:49:40.000Z",
-        "summary": "IT之家 9 月 17 日消息，乘联分会今天（17 日）发布 9 月车市展望，本月进入传统“金九银十”的消费旺季，终端客流有望持续回暖。以旧换新与地方补贴政策按当前节奏延续，为“金九”行情提供托底。 综合研判，9 月狭义乘用车（IT之家注：轿车、MPV、SUV）零售市场规模 约 169 万辆，环比增长 9.7% ，在去年同期 224.1 万辆的超高基数上，同比降幅预计 进一步扩大至 24.6% 。分能源类型来看，新能源在新车交付与季度末冲量的双重预期下预计可达 111 万辆…",
+        "publishedAt": "2026-09-17T15:15:45.000Z",
+        "summary": "IT之家 9 月 17 日消息，据新浪科技报道，小鹏集团 CEO 何小鹏今天在 G9L 汽车发布会结束后，与媒体进行对话。他在谈到机器人业务时透露， 做机器人的难度大约相当于造车的 20 倍 。 何小鹏认为：“基本上我们机器人的硬件、软件、设计及供应链都是我们自己的。过去我一直不愿意把机器人拿出来，主要是因为不能量产，市面上很多机器人能力演示都是通过剪辑之后放出来的。” 他还表示，小鹏机器人从研发到量产走得非常痛苦，但也快乐。他们已经逐步开始量产，等到（今年）四季度、明年的…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-rfx3-98h7-v3xp",
+        "id": "github-advisory-ghsa-g74q-6g2f-874x",
         "category": "security",
-        "title": "Marten's LINQ provider has SQL injection via unescaped string literals",
-        "url": "https://github.com/advisories/GHSA-rfx3-98h7-v3xp",
+        "title": "Tina: [Broken Access Control] letting any TinaCloud user authorize against any self-hosted site",
+        "url": "https://github.com/advisories/GHSA-g74q-6g2f-874x",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:51:41.000Z",
-        "summary": "Several code paths in Marten's LINQ provider and tenant-management internals interpolated a runtime, potentially attacker-influenced value into generated SQL as a single-quoted string literal without escaping or parameterization. A value c…",
-        "badge": "CVE-2026-75513",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-17T14:59:00.000Z",
+        "summary": "## Summary `@tinacms/auth`'s `isAuthorized(req)` decides authorization by validating the caller's bearer token against `https://identity.tinajs.io/v2/apps/${req.query.clientID}/currentUser`, where the `clientID` comes from the request and …",
+        "badge": "CVE-2026-63506",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "国家统计局数据显示，今年1‑8月全国二手房网签面积同比增10.6%，交易规模反超新房，楼市步入二手房存量时代。新房销售有所下滑，但二手房拉动整体市场总量保持平稳，一线城市二手房交易回暖，市场交易格局发生重大转变。",
         "badge": "热搜",
-        "signal": "7,807,964 热度"
+        "signal": "7,809,795 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76460",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49737849",
+        "id": "hn-49740834",
         "category": "dev",
-        "title": "One Year of Sponsored Servo Development",
-        "url": "https://servo.org/blog/2026/09/15/one-year-of-sponsorship/",
+        "title": "I Don't Like LLMs",
+        "url": "https://martinfowler.com/articles/2026-dont-like-llms.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-17T08:13:54.000Z",
+        "publishedAt": "2026-09-17T13:57:07.000Z",
         "badge": "HN",
-        "signal": "239 分 · 106 评论"
+        "signal": "56 分 · 31 评论"
       },
       {
         "id": "cn-item-b43ceae104f973db",
@@ -137,14 +137,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-q69g-4hcv-6jg4",
+        "id": "github-advisory-ghsa-84vh-m24q-wjjx",
         "category": "security",
-        "title": "@cyclonedx/cyclonedx-npm: Shell Injection via Unsanitized --workspace Argument on Windows",
-        "url": "https://github.com/advisories/GHSA-q69g-4hcv-6jg4",
+        "title": "Pocketbase: Unhandled panic in worker goroutines",
+        "url": "https://github.com/advisories/GHSA-84vh-m24q-wjjx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:50:40.000Z",
-        "summary": "## Summary A **Windows-specific** command injection vulnerability exists in `@cyclonedx/cyclonedx-npm` when the CLI is invoked with the `--workspace ` option. User-supplied `--workspace` values can be passed to a shell command without prop…",
-        "badge": "CVE-2026-71538",
+        "publishedAt": "2026-09-17T14:58:42.000Z",
+        "summary": "PocketBase already has builtin panic-recover middleware for the regular requests handling but it doesn't cover panics in internal child/worker goroutines which in some situations could cause termination of the server process. To prevent th…",
+        "badge": "CVE-2026-82410",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -168,13 +168,13 @@
         "signal": "3 回复"
       },
       {
-        "id": "cn-it-2de1b6e70c6ffc38",
+        "id": "cn-it-db0d64c718f08fd0",
         "category": "cn",
-        "title": "鸿蒙 7 花粉 Beta 版有惊喜，华为 Mate 60 系列手机升级后新增支持眼动翻页功能",
-        "url": "https://www.ithome.com/1/003/860.htm",
+        "title": "米哈游法务部：盗用个人信息批量注册账号非法牟利，游戏黑灰产团伙成员被判实刑",
+        "url": "https://www.ithome.com/1/003/864.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-17T14:39:37.000Z",
-        "summary": "IT之家 9 月 17 日消息，华为 Mate 60、Mate X5、Pura 70 等系列老机型今日提前开启了鸿蒙 HarmonyOS 7 系统的花粉 Beta 版升级活动。用户可前往设置 → 软件更新处报名尝鲜。报名成功的用户无需等待，点击系统更新后就可以获得推送。 ▲ IT之家开箱：华为 Mate60 Pro+「宣白」图赏 IT之家实测发现，此次鸿蒙 7 花粉 Beta 版“暗藏惊喜”， 华为 Mate 60 系列手机升级后新增支持眼动翻页功能 。 作为参考，去年 3…",
+        "publishedAt": "2026-09-17T15:05:54.000Z",
+        "summary": "IT之家 9 月 17 日消息，米哈游法务部今日发文，宣布米哈游日前协助上海警方成功侦破一起游戏账号非法售卖案， 全链条摧毁一个专业“造号、养号、卖号”的犯罪团伙 。 目前此案迎来一审判决，判决已生效。法院判决，本案被告张某、姚某犯非法获取计算机信息系统数据罪，分别被判处有期徒刑三年，并处罚金；犯侵犯公民个人信息罪，分别被判处有期徒刑三年，并处罚金。 最终，法院决定张某、姚某分别执行有期徒刑三年十个月，并处罚金人民币六万元 。 本案的成功侦破，不仅直接捣毁了一个极具代表性的…",
         "badge": "IT之家"
       },
       {
@@ -199,35 +199,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49740047",
+        "id": "hn-49737849",
         "category": "dev",
-        "title": "Show HN: I built a new version of my fun spatial 3D online meeting app",
-        "url": "https://flat.social",
+        "title": "One Year of Sponsored Servo Development",
+        "url": "https://servo.org/blog/2026/09/15/one-year-of-sponsorship/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-17T12:57:09.000Z",
+        "publishedAt": "2026-09-17T08:13:54.000Z",
         "badge": "HN",
-        "signal": "56 分 · 34 评论"
+        "signal": "248 分 · 110 评论"
       },
       {
-        "id": "cn-baidu-b06b9f171905d0fc",
+        "id": "cn-baidu-78487073320f28e8",
         "category": "cn",
-        "title": "中国团队发现5.18亿年前“玉净虫”",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%9B%A2%E9%98%9F%E5%8F%91%E7%8E%B05.18%E4%BA%BF%E5%B9%B4%E5%89%8D%E2%80%9C%E7%8E%89%E5%87%80%E8%99%AB%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "超86万中小学教师有研究生学历",
+        "url": "https://www.baidu.com/s?wd=%E8%B6%8586%E4%B8%87%E4%B8%AD%E5%B0%8F%E5%AD%A6%E6%95%99%E5%B8%88%E6%9C%89%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E5%8E%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月16日，西北大学地质学系韩健研究员团队在《当代生物学》发表成果，宣布在云南澄江生物群中发现距今约5.18亿年的步带动物新物种“胶膜玉净虫”。",
+        "summary": "近年来，在中小学专任教师中，具有硕博士学历的老师数量快速增加。整体来看，具有研究生学历的中小学教师已经超过了86万人。",
         "badge": "热搜",
-        "signal": "7,711,941 热度"
+        "signal": "7,714,207 热度"
       },
       {
-        "id": "github-advisory-ghsa-6j36-r6pr-59x4",
+        "id": "github-advisory-ghsa-9rm7-3qhh-h2mc",
         "category": "security",
-        "title": "Vendure affected by external-authentication account takeover: external login linked to a pre-existing account by email without verification",
-        "url": "https://github.com/advisories/GHSA-6j36-r6pr-59x4",
+        "title": "Wire: Unauthenticated decoder crash via 32-bit length integer overflow in ByteArrayProtoReader32 (incomplete fix of CVE-2026-45799)",
+        "url": "https://github.com/advisories/GHSA-9rm7-3qhh-h2mc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:50:22.000Z",
-        "summary": "# External-authentication account takeover: external login linked to a pre-existing account by email without requiring verification **Package:** @vendure/core (vendure-ecommerce/vendure, latest master) · > [!IMPORTANT] > This vulnerability…",
-        "badge": "CVE-2026-63472",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-17T14:52:52.000Z",
+        "summary": "Wire's protobuf decoders did not consistently validate attacker-controlled length-delimited sizes against the current reader bounds before computing cursor, limit, or pointer positions. In the Kotlin runtime, `ProtoAdapter.decode(ByteArray…",
+        "badge": "CVE-2026-63126",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-85052f9befba2c4e",
@@ -288,28 +288,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-17T13:17:16.000Z",
         "badge": "HN",
-        "signal": "51 分 · 16 评论"
+        "signal": "68 分 · 22 评论"
       },
       {
-        "id": "cn-it-2bb63a807cb2c0b8",
+        "id": "cn-it-a4878b2fa3e9b0ff",
         "category": "cn",
-        "title": "消息称苹果已接受三星 2027 年内存涨价，iPhone 等产品有可能再度涨价",
-        "url": "https://www.ithome.com/1/003/859.htm",
+        "title": "Epic 喜加二：《心灵警探》《将军对决》游戏免费领",
+        "url": "https://www.ithome.com/1/003/863.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-17T14:35:14.000Z",
-        "summary": "IT之家 9 月 17 日消息，苹果 iPhone 18 Pro 系列手机将在明天上市，售价相比 17 Pro 系列增加 1000 元人民币。与此同时，去年发布的 iPhone 17 涨价了 800 元，iPhone Air 也涨了 800 元-2300 元不等。 据科技媒体 GSMArena 今天报道，三星电子曾在几天前与苹果等智能手机厂商重新谈判 DRAM 与 NAND 价格。如今，苹果似乎已经与三星电子达成新一轮内存 / 闪存价格协议， iPhone 等产品明年还有涨…",
+        "publishedAt": "2026-09-17T15:00:18.000Z",
+        "summary": "IT之家 9 月 17 日消息， Epic Game Store 本周送出的游戏是《心灵警探》《将军对决》 ，下周送出的游戏是《Astrea Six Sided Oracles》《钢铁指挥官》。 领取链接： 《心灵警探》 ， 《Shogun Showdown》 IT之家附《心灵警探》游戏简介如下： 《心灵警探》是一款非线性的悬疑侦探游戏。本作糅合了故事驱动式冒险与实时三消解谜玩法。玩家将扮演声名在外的心灵警探，能够进入嫌疑人的心灵，揭开他们的秘密并看破他们的谎言。 本作最初…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-jgm3-qmp2-c4p7",
+        "id": "github-advisory-ghsa-jh4v-gfqj-7rhx",
         "category": "security",
-        "title": "Vendure: Unauthenticated ReDoS via `regex` filter on SQLite backends",
-        "url": "https://github.com/advisories/GHSA-jgm3-qmp2-c4p7",
+        "title": "RabbitMQ Java client has frame-level OOM: Math.min(maxInboundMessageBodySize, 0) defeats frame size enforcement",
+        "url": "https://github.com/advisories/GHSA-jh4v-gfqj-7rhx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:49:56.000Z",
-        "summary": "### Summary > [!IMPORTANT] > Only instances running on the SQLite driver (better-sqlite3) are affected; SQLite is usually used in development/testing backend, so production deployments on PostgreSQL or MySQL/MariaDB are unaffected. The `St…",
-        "badge": "CVE-2026-63460",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-17T14:52:21.000Z",
+        "summary": "## Vulnerability In `AMQConnection.java` (line 435-436), after `Connection.Tune` negotiation, the frame-max limit is set via: ```java _frameHandler.setFrameMax( Math.min(this.maxInboundMessageBodySize, frameMax)); ``` When `frameMax = 0` (…",
+        "badge": "CVE-2026-75516",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "记者16日从国家粮食和物资储备局获悉，目前，夏粮旺季收购接近尾声，秋粮收购各项准备工作已基本就绪。全国累计收购小麦1亿吨、早籼稻1200万吨，进度略快于上年。",
         "badge": "热搜",
-        "signal": "7,619,233 热度"
+        "signal": "7,617,296 热度"
       },
       {
         "id": "cisa-kev-cve-2026-84869",
@@ -369,7 +369,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-16T11:15:53.000Z",
         "badge": "HN",
-        "signal": "837 分 · 333 评论"
+        "signal": "852 分 · 337 评论"
       },
       {
         "id": "cn-item-dfa57f838aacea4a",
@@ -382,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xhq9-whgq-49j5",
+        "id": "github-advisory-ghsa-rfx3-98h7-v3xp",
         "category": "security",
-        "title": "Vendure has stored XSS in the Admin Dashboard via unsafe HTML-stripping (innerHTML) of entity descriptions",
-        "url": "https://github.com/advisories/GHSA-xhq9-whgq-49j5",
+        "title": "Marten's LINQ provider has SQL injection via unescaped string literals",
+        "url": "https://github.com/advisories/GHSA-rfx3-98h7-v3xp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:49:34.000Z",
-        "summary": "# Stored XSS in the Admin Dashboard via unsafe HTML-stripping (`innerHTML`) of entity descriptions **Package:** @vendure/dashboard (vendure-ecommerce/vendure, latest master) · ## Summary The dashboard's `RichTextDescriptionCell` \"strips HT…",
-        "badge": "CVE-2026-63459",
-        "signal": "HIGH · CVSS 8.7"
+        "publishedAt": "2026-09-17T14:51:41.000Z",
+        "summary": "Several code paths in Marten's LINQ provider and tenant-management internals interpolated a runtime, potentially attacker-influenced value into generated SQL as a single-quoted string literal without escaping or parameterization. A value c…",
+        "badge": "CVE-2026-75513",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-openai-4410122683c56925",
@@ -414,13 +414,13 @@
         "signal": "13 回复"
       },
       {
-        "id": "cn-it-91fddeb28d6ac2ca",
+        "id": "cn-it-bb6fb1183c0c22db",
         "category": "cn",
-        "title": "不到一个月连破两道千禧年大奖难题？消息称 OpenAI 即将攻克霍奇猜想",
-        "url": "https://www.ithome.com/1/003/858.htm",
+        "title": "谷歌称部分 Pixel 手机用户在 0-Day 攻击中遭到入侵，没有点击链接也会被黑",
+        "url": "https://www.ithome.com/1/003/862.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-17T14:30:25.000Z",
-        "summary": "IT之家 9 月 17 日消息，今天（17 日）晚间，据《The Information》援引一名了解解法的人士消息称，OpenAI 已接近攻克“千禧年大奖难题”中的另一道题 。这组著名数学难题共有 7 道，此前引发争议的“纳维-斯托克斯存在性与光滑性问题”也是其中之一。 据这名人士透露，OpenAI 员工预计， 下一道“霍奇猜想”有望在不久后得到解决 。 IT之家注：霍奇猜想研究的是由多项式方程定义的几何形状中，某些几何特征能否始终用更简单的代数结构来描述。不过，即使找到…",
+        "publishedAt": "2026-09-17T14:56:06.000Z",
+        "summary": "IT之家 9 月 17 日消息，谷歌公司周二表示，部分 Pixel 手机用户曾遭遇一次针对性 0-Day 零日网络攻击。 据介绍， 黑客利用了 CVE-2026-58704 漏洞对部分用户进行攻击 。根据目前公布的信息，该漏洞存在于 Pixel 手机的调制解调器中，黑客可利用其突破调制解调器的沙箱限制，进一步访问手机的其他数据。 IT之家注意到，该漏洞可在用户无法察觉的情况下加以利用， 整个过程无需用户进行点击链接 、 打开文件等任何操作 。 谷歌称该漏洞已经修复，但并没有…",
         "badge": "IT之家"
       },
       {
@@ -451,7 +451,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-17T08:03:54.000Z",
         "badge": "HN",
-        "signal": "138 分 · 32 评论"
+        "signal": "161 分 · 41 评论"
       },
       {
         "id": "cn-baidu-cb08d2eb7779c71d",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "近日，山西一小伙举办极简婚礼引发关注。婚礼无司仪，婚服仅29.9元网购，婚车用自家车，朋友兼职摄像。小伙表示要把钱花在刀刃上，省下的钱用于旅游。",
         "badge": "热搜",
-        "signal": "7,523,533 热度"
+        "signal": "7,521,673 热度"
       },
       {
-        "id": "github-advisory-ghsa-mxm6-v9r6-r94c",
+        "id": "github-advisory-ghsa-q69g-4hcv-6jg4",
         "category": "security",
-        "title": "@nuxtjs/mdc's URL sanitizer misses SVG xlink:href and data:text/html, allowing XSS from untrusted markdown at the default configuration",
-        "url": "https://github.com/advisories/GHSA-mxm6-v9r6-r94c",
+        "title": "@cyclonedx/cyclonedx-npm: Shell Injection via Unsanitized --workspace Argument on Windows",
+        "url": "https://github.com/advisories/GHSA-q69g-4hcv-6jg4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T22:14:01.000Z",
-        "summary": "## Summary `@nuxtjs/mdc` renders untrusted markdown (including raw HTML) to a Vue component tree. Across two prior advisories it added a URL/attribute sanitizer to block dangerous links in that HTML: `validateProps` / `validateProp` and an…",
-        "badge": "CVE-2026-63671",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-17T14:50:40.000Z",
+        "summary": "## Summary A **Windows-specific** command injection vulnerability exists in `@cyclonedx/cyclonedx-npm` when the CLI is invoked with the `--workspace ` option. User-supplied `--workspace` values can be passed to a shell command without prop…",
+        "badge": "CVE-2026-71538",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -509,7 +509,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 33954,
+        "stars": 33995,
         "starsToday": 3290
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 9626,
+        "stars": 9702,
         "starsToday": 3606
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 95902,
+        "stars": 95916,
         "starsToday": 680
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/Tencent/BrowserSkill",
         "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
         "language": "TypeScript",
-        "stars": 3781,
+        "stars": 3813,
         "starsToday": 1350
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/alphaXiv/OpenResearch",
         "description": "Turn your coding agents into research agents",
         "language": "Rust",
-        "stars": 4931,
+        "stars": 4946,
         "starsToday": 940
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/anthropics/claude-code",
         "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "language": "TypeScript",
-        "stars": 145825,
+        "stars": 145833,
         "starsToday": 538
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 78267,
+        "stars": 78277,
         "starsToday": 912
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/Tencent/WeKnora",
         "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
         "language": "Go",
-        "stars": 26081,
+        "stars": 26097,
         "starsToday": 1123
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/abue-ammar/tinycast",
         "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
         "language": "Swift",
-        "stars": 5979,
+        "stars": 5985,
         "starsToday": 738
       }
     ],
-    "updatedAt": "2026-09-17T14:52:20.503Z"
+    "updatedAt": "2026-09-17T15:16:54.805Z"
   }
 }

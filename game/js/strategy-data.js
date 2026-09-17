@@ -1,4 +1,4 @@
-import { CORPS } from './corps-data.js?v=0.31.0';
+import { CORPS } from './corps-data.js?v=0.32.0';
 // Game design, not a claim about historical or novel military organization.
 export const TERRAIN_NAMES={land:'平原',forest:'林地',mountain:'山地',water:'水域'};
 const group=text=>new Set(text.split(' '));
@@ -17,7 +17,7 @@ export const STYLES={
  naval:{name:'搏浪',text:'水域每第三次普攻后，为最低气血同伴提供 10% 护阵 4 秒。'}
 };
 export const HERO_SPECIALTIES=Object.fromEntries(Object.entries(CORPS).map(([id,c])=>[id,{
- terrain:naval.has(id)?'water':mountain.has(id)?'mountain':forest.has(id)||c.profile==='scout'?'forest':'land',
+ terrain:naval.has(id)||c.profile==='naval'?'water':mountain.has(id)?'mountain':forest.has(id)||c.profile==='scout'?'forest':'land',
  job:smiths.has(id)?'workshop':farmers.has(id)||naval.has(id)||c.profile==='medic'?'farm':'lumber',style:c.profile
 }]));
 export const BONDS=[

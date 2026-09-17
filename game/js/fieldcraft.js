@@ -1,5 +1,5 @@
-import { battleTerrain } from './strategy-data.js?v=0.31.0';
-import { CORPS } from './corps-data.js?v=0.31.0';
+import { battleTerrain } from './strategy-data.js?v=0.32.0';
+import { CORPS } from './corps-data.js?v=0.32.0';
 // Explicit marker: ongoing old battles keep their original combat and casualty rules.
 export const FIELD_RULES=2;
 export const healingSupply=(b,u)=>fieldRules(b)&&u.side==='enemy'?(b.elapsed>=120000?.25:b.elapsed>=60000?.5:1):1;

@@ -1,4 +1,4 @@
-import { dispatch } from './core.js?v=0.31.0';
+import { dispatch } from './core.js?v=0.32.0';
 export const SORTIES=['campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle','realmBattle','challengeStart','personalStart','ventureNext'];
 export function prepareSortie(s,d,action,setup,now=s.clock){
  let next=s;

@@ -1,7 +1,7 @@
-import { upcomingSkills } from './growth-preview.js?v=0.31.0';
-import { budgetPanel } from './economy.js?v=0.31.0';
-import { experienceToNext, ATTRIBUTE_NAMES } from './progression.js?v=0.31.0';
-import { attributes } from './hero.js?v=0.31.0';
+import { upcomingSkills } from './growth-preview.js?v=0.32.0';
+import { budgetPanel } from './economy.js?v=0.32.0';
+import { experienceToNext, ATTRIBUTE_NAMES } from './progression.js?v=0.32.0';
+import { attributes } from './hero.js?v=0.32.0';
 export function experienceLabel(h,cap){return h.level>=cap?'已满级 · '+cap+' 级':h.level+'级 · 经验 '+h.exp+' / '+experienceToNext(h.level);}
 export function progressionPanel(s,d,id){
   const h=s.heroes[id],model=d.by.heroes[id],cap=d.config.balance.heroLevelCap,full=h.level>=cap,need=full?0:Math.max(0,experienceToNext(h.level)-h.exp),pill=d.by.items.exp_pill.effect.exp;

@@ -2,3 +2,4 @@
 .roster-filters label{margin:0}.roster-filters select{margin:0}
 @media(max-width:1100px){.roster-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.roster-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.roster-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.roster-filters{padding:12px;gap:10px}.roster-tile>strong{font-size:23px}.roster-heading h2{font-size:24px}.roster-heading>strong{font-size:28px}#roster-detail>.hero-card{padding:14px}#roster-detail .hero-card>.hero-portrait{width:104px}.quality-panel{padding:12px}.roster-pager{gap:6px}.roster-pager span{font-size:12px}.roster-pager button{padding:8px}}
+.roster-grid{scroll-margin-top:76px}

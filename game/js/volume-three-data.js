@@ -1,7 +1,7 @@
-import { SIXTH_MISSIONS } from './volume-six-data.js?v=0.31.0';
-import { FIFTH_MISSIONS } from './volume-five-data.js?v=0.31.0';
-import { FOURTH_MISSIONS } from './volume-four-data.js?v=0.31.0';
-import { hasOwn } from './utils.js?v=0.31.0';
+import { SIXTH_MISSIONS } from './volume-six-data.js?v=0.32.0';
+import { FIFTH_MISSIONS } from './volume-five-data.js?v=0.32.0';
+import { FOURTH_MISSIONS } from './volume-four-data.js?v=0.32.0';
+import { hasOwn } from './utils.js?v=0.32.0';
 export const CHAPTER_MISSIONS={...FOURTH_MISSIONS,...FIFTH_MISSIONS,...SIXTH_MISSIONS,
  v3_grain:{level:10,scale:1.35,terrain:'land',stamina:8},
  v3_timber:{level:10,scale:1.3,terrain:'forest',stamina:8},

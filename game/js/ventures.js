@@ -1,8 +1,8 @@
-import {PERSONAL,COMBOS,LAYOUTS} from './expansion-data.js?v=0.31.0';
-import {expansion} from './expansion-state.js?v=0.31.0';
-import {startBattle} from './battle.js?v=0.31.0';import {attachTroops} from './camp.js?v=0.31.0';
-import {deployedTroops,heroCommand} from './logistics.js?v=0.31.0';
-import {affairReward} from './affairs.js?v=0.31.0';import {grant} from './item.js?v=0.31.0';import {requireRule,hasOwn,count,journal} from './utils.js?v=0.31.0';
+import {PERSONAL,COMBOS,LAYOUTS} from './expansion-data.js?v=0.32.0';
+import {expansion} from './expansion-state.js?v=0.32.0';
+import {startBattle} from './battle.js?v=0.32.0';import {attachTroops} from './camp.js?v=0.32.0';
+import {deployedTroops,heroCommand} from './logistics.js?v=0.32.0';
+import {affairReward} from './affairs.js?v=0.32.0';import {grant} from './item.js?v=0.32.0';import {requireRule,hasOwn,count,journal} from './utils.js?v=0.32.0';
 function enter(s,d,kind,id,enemies,scale,terrain,n){requireRule(s.camp.mode==='solo'||n>0,'请募兵或改为独行。');startBattle(s,d,{enemies,scale,context:{type:'realm',kind,id,terrain,tier:(s.expansion.run?.stage||0)+1}});attachTroops(s,n);}
 export function personalReason(s,id){if(!hasOwn(PERSONAL,id)||s.heroes[id]?.status!=='owned'||s.heroes[id].level<10)return '本人入寨并达到 10 级';if(!s.team.includes(id))return '请将本人编入阵容';const n=deployedTroops(s);if(id==='linchong'&&n<50)return '需要随军至少 50 人';if(id==='ruanxiaoqi'&&n<100)return '需要随军至少 100 人';if(id==='huarong'&&(s.team.length!==1||s.camp.mode!=='solo'))return '花荣单人独行';return '';}
 export function ventureAction(s,d,a){const x=expansion(s);requireRule(s.realm&&s.camp,'先开启山河经营。');if(a.type==='personalStart'){requireRule(s.camp.buildings.hall>=2,'聚义厅需要 2 级。');requireRule(!x.personal[a.id],'此专属任务已经完成。');requireRule(!personalReason(s,a.id),personalReason(s,a.id));requireRule((s.daily.counters.personal_attempt||0)<3,'专属任务每天合计三次。');const n=deployedTroops(s),food=5+Math.ceil(n/2);requireRule(s.player.stamina>=10&&s.camp.food>=food,'体力 10 或粮草不足。');s.player.stamina-=10;s.camp.food-=food;count(s,'personal_attempt');const m=PERSONAL[a.id];enter(s,d,'personal',a.id,m.enemies,m.scale,m.terrain,n);return;}
