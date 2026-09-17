@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-17T14:51:43.813Z",
+  "generatedAt": "2026-09-17T14:52:20.503Z",
   "intelligence": {
-    "updatedAt": "2026-09-17T14:51:43.813Z",
+    "updatedAt": "2026-09-17T14:52:20.503Z",
     "items": [
       {
         "id": "cn-item-9bb5db19fd34cbd8",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-15T17:28:38.000Z",
         "badge": "HN",
-        "signal": "132 分 · 45 评论"
+        "signal": "133 分 · 45 评论"
       },
       {
         "id": "cn-it-88ee864f5d875db2",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-q69g-4hcv-6jg4",
+        "id": "github-advisory-ghsa-rfx3-98h7-v3xp",
         "category": "security",
-        "title": "@cyclonedx/cyclonedx-npm: Shell Injection via Unsanitized --workspace Argument on Windows",
-        "url": "https://github.com/advisories/GHSA-q69g-4hcv-6jg4",
+        "title": "Marten's LINQ provider has SQL injection via unescaped string literals",
+        "url": "https://github.com/advisories/GHSA-rfx3-98h7-v3xp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:50:40.000Z",
-        "summary": "## Summary A **Windows-specific** command injection vulnerability exists in `@cyclonedx/cyclonedx-npm` when the CLI is invoked with the `--workspace ` option. User-supplied `--workspace` values can be passed to a shell command without prop…",
-        "badge": "CVE-2026-71538",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-17T14:51:41.000Z",
+        "summary": "Several code paths in Marten's LINQ provider and tenant-management internals interpolated a runtime, potentially attacker-influenced value into generated SQL as a single-quoted string literal without escaping or parameterization. A value c…",
+        "badge": "CVE-2026-75513",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -124,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-17T08:13:54.000Z",
         "badge": "HN",
-        "signal": "238 分 · 106 评论"
+        "signal": "239 分 · 106 评论"
       },
       {
         "id": "cn-item-b43ceae104f973db",
@@ -137,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-6j36-r6pr-59x4",
+        "id": "github-advisory-ghsa-q69g-4hcv-6jg4",
         "category": "security",
-        "title": "Vendure affected by external-authentication account takeover: external login linked to a pre-existing account by email without verification",
-        "url": "https://github.com/advisories/GHSA-6j36-r6pr-59x4",
+        "title": "@cyclonedx/cyclonedx-npm: Shell Injection via Unsanitized --workspace Argument on Windows",
+        "url": "https://github.com/advisories/GHSA-q69g-4hcv-6jg4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:50:22.000Z",
-        "summary": "# External-authentication account takeover: external login linked to a pre-existing account by email without requiring verification **Package:** @vendure/core (vendure-ecommerce/vendure, latest master) · > [!IMPORTANT] > This vulnerability…",
-        "badge": "CVE-2026-63472",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-17T14:50:40.000Z",
+        "summary": "## Summary A **Windows-specific** command injection vulnerability exists in `@cyclonedx/cyclonedx-npm` when the CLI is invoked with the `--workspace ` option. User-supplied `--workspace` values can be passed to a shell command without prop…",
+        "badge": "CVE-2026-71538",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-b0366f9850a9d166",
@@ -219,15 +219,15 @@
         "signal": "7,711,941 热度"
       },
       {
-        "id": "github-advisory-ghsa-jgm3-qmp2-c4p7",
+        "id": "github-advisory-ghsa-6j36-r6pr-59x4",
         "category": "security",
-        "title": "Vendure: Unauthenticated ReDoS via `regex` filter on SQLite backends",
-        "url": "https://github.com/advisories/GHSA-jgm3-qmp2-c4p7",
+        "title": "Vendure affected by external-authentication account takeover: external login linked to a pre-existing account by email without verification",
+        "url": "https://github.com/advisories/GHSA-6j36-r6pr-59x4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:49:56.000Z",
-        "summary": "### Summary > [!IMPORTANT] > Only instances running on the SQLite driver (better-sqlite3) are affected; SQLite is usually used in development/testing backend, so production deployments on PostgreSQL or MySQL/MariaDB are unaffected. The `St…",
-        "badge": "CVE-2026-63460",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-17T14:50:22.000Z",
+        "summary": "# External-authentication account takeover: external login linked to a pre-existing account by email without requiring verification **Package:** @vendure/core (vendure-ecommerce/vendure, latest master) · > [!IMPORTANT] > This vulnerability…",
+        "badge": "CVE-2026-63472",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-hugging-face-85052f9befba2c4e",
@@ -301,15 +301,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-xhq9-whgq-49j5",
+        "id": "github-advisory-ghsa-jgm3-qmp2-c4p7",
         "category": "security",
-        "title": "Vendure has stored XSS in the Admin Dashboard via unsafe HTML-stripping (innerHTML) of entity descriptions",
-        "url": "https://github.com/advisories/GHSA-xhq9-whgq-49j5",
+        "title": "Vendure: Unauthenticated ReDoS via `regex` filter on SQLite backends",
+        "url": "https://github.com/advisories/GHSA-jgm3-qmp2-c4p7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:49:34.000Z",
-        "summary": "# Stored XSS in the Admin Dashboard via unsafe HTML-stripping (`innerHTML`) of entity descriptions **Package:** @vendure/dashboard (vendure-ecommerce/vendure, latest master) · ## Summary The dashboard's `RichTextDescriptionCell` \"strips HT…",
-        "badge": "CVE-2026-63459",
-        "signal": "HIGH · CVSS 8.7"
+        "publishedAt": "2026-09-17T14:49:56.000Z",
+        "summary": "### Summary > [!IMPORTANT] > Only instances running on the SQLite driver (better-sqlite3) are affected; SQLite is usually used in development/testing backend, so production deployments on PostgreSQL or MySQL/MariaDB are unaffected. The `St…",
+        "badge": "CVE-2026-63460",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -382,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-mxm6-v9r6-r94c",
+        "id": "github-advisory-ghsa-xhq9-whgq-49j5",
         "category": "security",
-        "title": "@nuxtjs/mdc's URL sanitizer misses SVG xlink:href and data:text/html, allowing XSS from untrusted markdown at the default configuration",
-        "url": "https://github.com/advisories/GHSA-mxm6-v9r6-r94c",
+        "title": "Vendure has stored XSS in the Admin Dashboard via unsafe HTML-stripping (innerHTML) of entity descriptions",
+        "url": "https://github.com/advisories/GHSA-xhq9-whgq-49j5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T22:14:01.000Z",
-        "summary": "## Summary `@nuxtjs/mdc` renders untrusted markdown (including raw HTML) to a Vue component tree. Across two prior advisories it added a URL/attribute sanitizer to block dangerous links in that HTML: `validateProps` / `validateProp` and an…",
-        "badge": "CVE-2026-63671",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-17T14:49:34.000Z",
+        "summary": "# Stored XSS in the Admin Dashboard via unsafe HTML-stripping (`innerHTML`) of entity descriptions **Package:** @vendure/dashboard (vendure-ecommerce/vendure, latest master) · ## Summary The dashboard's `RichTextDescriptionCell` \"strips HT…",
+        "badge": "CVE-2026-63459",
+        "signal": "HIGH · CVSS 8.7"
       },
       {
         "id": "ai-openai-4410122683c56925",
@@ -464,15 +464,15 @@
         "signal": "7,523,533 热度"
       },
       {
-        "id": "github-advisory-ghsa-9pj6-vhgr-3mwh",
+        "id": "github-advisory-ghsa-mxm6-v9r6-r94c",
         "category": "security",
-        "title": "RMCP: Unauthenticated permanent session-table leak in rmcp Streamable HTTP server transport leads to remote denial-of-service",
-        "url": "https://github.com/advisories/GHSA-9pj6-vhgr-3mwh",
+        "title": "@nuxtjs/mdc's URL sanitizer misses SVG xlink:href and data:text/html, allowing XSS from untrusted markdown at the default configuration",
+        "url": "https://github.com/advisories/GHSA-mxm6-v9r6-r94c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-16T22:13:34.000Z",
-        "summary": "### Summary An unauthenticated remote attacker can leak one entry per HTTP request out of the in-memory session table of `LocalSessionManager` by sending a well-formed JSON-RPC `POST` that is *not* an `InitializeRequest`. The Streamable HT…",
-        "badge": "CVE-2026-63128",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-16T22:14:01.000Z",
+        "summary": "## Summary `@nuxtjs/mdc` renders untrusted markdown (including raw HTML) to a Vue component tree. Across two prior advisories it added a URL/attribute sanitizer to block dangerous links in that HTML: `validateProps` / `validateProp` and an…",
+        "badge": "CVE-2026-63671",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -509,7 +509,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 33952,
+        "stars": 33954,
         "starsToday": 3290
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 9624,
+        "stars": 9626,
         "starsToday": 3606
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 78266,
+        "stars": 78267,
         "starsToday": 912
       },
       {
@@ -603,6 +603,6 @@
         "starsToday": 738
       }
     ],
-    "updatedAt": "2026-09-17T14:51:43.813Z"
+    "updatedAt": "2026-09-17T14:52:20.503Z"
   }
 }
