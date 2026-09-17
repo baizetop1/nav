@@ -1,5 +1,5 @@
-import { STATIONS, POSTS } from './frontier-data.js?v=0.31.0';
-import { requireRule, journal } from './utils.js?v=0.31.0';
+import { STATIONS, POSTS } from './frontier-data.js?v=0.32.0';
+import { requireRule, journal } from './utils.js?v=0.32.0';
 export const STOCK_CAP=10000000;
 export const RESOURCE_NAMES={food:'粮草',wood:'木材',silver:'碎银',scrap_iron:'碎铁',iron:'精铁'};
 const stock=(s,id)=>id==='silver'?s.player.silver:['wood','food'].includes(id)?s.camp[id]:s.inventory[id]||0;

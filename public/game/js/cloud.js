@@ -1,8 +1,8 @@
-import { hasSixthVolume } from './volume-six-data.js?v=0.31.0';
-import { hasFifthVolume } from './volume-five-data.js?v=0.31.0';
-import { hasFourthVolume } from './volume-four-data.js?v=0.31.0';
-import { hasThirdVolume } from './volume-three.js?v=0.31.0';
-import { gameSnapshot, slotId, slotName } from './portable.js?v=0.31.0';
+import { hasSixthVolume } from './volume-six-data.js?v=0.32.0';
+import { hasFifthVolume } from './volume-five-data.js?v=0.32.0';
+import { hasFourthVolume } from './volume-four-data.js?v=0.32.0';
+import { hasThirdVolume } from './volume-three.js?v=0.32.0';
+import { gameSnapshot, slotId, slotName } from './portable.js?v=0.32.0';
 const revision=n=>{if(!Number.isSafeInteger(n)||n<0)throw new Error('云端版本格式无效。');return n;};
 const listing=s=>({id:slotId(s.id),name:slotName(s.name),public:s.public===true});
 export class CloudError extends Error { constructor(message,status,details={}){super(message);this.status=status;Object.assign(this,details);} }

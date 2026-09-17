@@ -44,3 +44,53 @@ html[data-short-viewport] .activity-panel{grid-template-rows:32px 28px minmax(0,
 .hero-portrait.portrait-taozhiwei{background-image:url('../art/hero-atlas-wanderers-v1.png');background-size:400% 300%;background-position:100% 100%;}
 
 .result-hero > .hero-portrait{display:block;width:104px;height:104px;margin:0 auto 12px;border:1px solid var(--line);border-radius:8px;}
+
+/* 江湖散人扩充：每星级一张 4×4 肖像图集。 */
+.hero-portrait.portrait-tianmao{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:0% 0%;}
+.hero-portrait.portrait-qiaoli{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:33.333333333333336% 0%;}
+.hero-portrait.portrait-niushun{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:66.66666666666667% 0%;}
+.hero-portrait.portrait-duhe{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:100% 0%;}
+.hero-portrait.portrait-sunli_quarry{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:0% 33.333333333333336%;}
+.hero-portrait.portrait-lupu{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:33.333333333333336% 33.333333333333336%;}
+.hero-portrait.portrait-weiyu{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:66.66666666666667% 33.333333333333336%;}
+.hero-portrait.portrait-yangzhi_tea{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:100% 33.333333333333336%;}
+.hero-portrait.portrait-qindou{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:0% 66.66666666666667%;}
+.hero-portrait.portrait-zhuli{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:33.333333333333336% 66.66666666666667%;}
+.hero-portrait.portrait-fuchen{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:66.66666666666667% 66.66666666666667%;}
+.hero-portrait.portrait-luya{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:100% 66.66666666666667%;}
+.hero-portrait.portrait-pandeng{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:0% 100%;}
+.hero-portrait.portrait-fengsui{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:33.333333333333336% 100%;}
+.hero-portrait.portrait-baoquan{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:66.66666666666667% 100%;}
+.hero-portrait.portrait-jiangsuo{background-image:url('../art/hero-atlas-wanderers-tier1-v2.png');background-size:400% 400%;background-position:100% 100%;}
+.hero-portrait.portrait-gunan{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:0% 0%;}
+.hero-portrait.portrait-yuechuan{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:33.333333333333336% 0%;}
+.hero-portrait.portrait-jibai{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:66.66666666666667% 0%;}
+.hero-portrait.portrait-liangxing{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:100% 0%;}
+.hero-portrait.portrait-chuan_grain{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:0% 33.333333333333336%;}
+.hero-portrait.portrait-chengli{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:33.333333333333336% 33.333333333333336%;}
+.hero-portrait.portrait-wenlan{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:66.66666666666667% 33.333333333333336%;}
+.hero-portrait.portrait-xuezhen{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:100% 33.333333333333336%;}
+.hero-portrait.portrait-luowei{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:0% 66.66666666666667%;}
+.hero-portrait.portrait-peidi{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:33.333333333333336% 66.66666666666667%;}
+.hero-portrait.portrait-hanyue{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:66.66666666666667% 66.66666666666667%;}
+.hero-portrait.portrait-jitang{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:100% 66.66666666666667%;}
+.hero-portrait.portrait-wuyanzhou{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:0% 100%;}
+.hero-portrait.portrait-xucen{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:33.333333333333336% 100%;}
+.hero-portrait.portrait-gaoqi{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:66.66666666666667% 100%;}
+.hero-portrait.portrait-lince{background-image:url('../art/hero-atlas-wanderers-tier2-v2.png');background-size:400% 400%;background-position:100% 100%;}
+.hero-portrait.portrait-mengshi{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:0% 0%;}
+.hero-portrait.portrait-suhe{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:33.333333333333336% 0%;}
+.hero-portrait.portrait-yandu{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:66.66666666666667% 0%;}
+.hero-portrait.portrait-shaoqing{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:100% 0%;}
+.hero-portrait.portrait-fangpu{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:0% 33.333333333333336%;}
+.hero-portrait.portrait-yinmiao{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:33.333333333333336% 33.333333333333336%;}
+.hero-portrait.portrait-leiyue{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:66.66666666666667% 33.333333333333336%;}
+.hero-portrait.portrait-caoxi{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:100% 33.333333333333336%;}
+.hero-portrait.portrait-yinsong{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:0% 66.66666666666667%;}
+.hero-portrait.portrait-yeshuang{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:33.333333333333336% 66.66666666666667%;}
+.hero-portrait.portrait-zouheng{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:66.66666666666667% 66.66666666666667%;}
+.hero-portrait.portrait-xiongzhi{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:100% 66.66666666666667%;}
+.hero-portrait.portrait-jiangshuo{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:0% 100%;}
+.hero-portrait.portrait-wanglu{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:33.333333333333336% 100%;}
+.hero-portrait.portrait-yuanzhu{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:66.66666666666667% 100%;}
+.hero-portrait.portrait-dongli{background-image:url('../art/hero-atlas-wanderers-tier3-v2.png');background-size:400% 400%;background-position:100% 100%;}

@@ -1,10 +1,10 @@
-import {pageSection,sectionNavigation} from './page-sections.js?v=0.31.0';
-import {expansionPanel,diplomacyPanel} from './expansion-ui.js?v=0.31.0';
-import {challengesPanel} from './challenges.js?v=0.31.0';
-import {relicsPanel} from './relics.js?v=0.31.0';
-import {veteransPanel} from './veterans.js?v=0.31.0';
-import {trekPanel} from './trek.js?v=0.31.0';
-import {buildingsPanel} from './realm-buildings.js?v=0.31.0';
-import {squadsPanel} from './squads-ui.js?v=0.31.0';
-import {REGIONS,FACTIONS,CONTRACTS} from './realm-data.js?v=0.31.0';import {realmPlan} from './realm.js?v=0.31.0';
+import {pageSection,sectionNavigation} from './page-sections.js?v=0.32.0';
+import {expansionPanel,diplomacyPanel} from './expansion-ui.js?v=0.32.0';
+import {challengesPanel} from './challenges.js?v=0.32.0';
+import {relicsPanel} from './relics.js?v=0.32.0';
+import {veteransPanel} from './veterans.js?v=0.32.0';
+import {trekPanel} from './trek.js?v=0.32.0';
+import {buildingsPanel} from './realm-buildings.js?v=0.32.0';
+import {squadsPanel} from './squads-ui.js?v=0.32.0';
+import {REGIONS,FACTIONS,CONTRACTS} from './realm-data.js?v=0.32.0';import {realmPlan} from './realm.js?v=0.32.0';
 export function realmPanel(s,d,esc,btn,requested){if(!s.realm)return '<section class="realm-panel"><h1>山河经营</h1><p>郓城商路、景阳山道、东溪渡运都已标在图上。处理委托改善治安与补给，结交商会，再组织分队与短程远征。</p>'+btn('开启山河经营',{type:'realmOpen'},'primary',!s.camp)+'<p class="note">保留旧进度。从此刻开始记录；离线不会自动衰退治安或扣粮。</p></section>';if(s.expansion?.run)return expansionPanel(s,d,esc,btn);if(s.realm.trek)return trekPanel(s,d,btn)+squadsPanel(s,d,esc,btn);const section=pageSection('realm',requested);let content;if(section==='trade')content='<section class="realm-panel" id="realm-world"><h1>山河经营 · 商路与盟约</h1><p>每地区每日受理一件委托，三种处理方式共用额度；开始即扣次数与补给。地区状况只随你的行动改变。</p><div class="realm-grid">'+Object.entries(REGIONS).map(([id,m])=>{const r=s.realm.regions[id],relation=s.realm.relations[m.faction],cost=r.pact?120:relation>=20?150:180;return '<article class="realm-card"><h2>'+m.name+'</h2><p>势力：'+FACTIONS[m.faction]+(r.pact?' · 山寨商盟':' · 未缔约')+'</p><p>治安 '+r.security+' / 100 · 补给 '+r.supply+' / 100 · 关系 '+relation+'</p><p class="note">'+(r.security<60?'路匪仍在拦截行旅，粮队请求护送。':'商路逐渐安定，可继续清剿或受理商盟委托。')+'</p>'+Object.entries(CONTRACTS).map(([kind,a])=>{const q=realmPlan(s,id,kind);return '<details data-fold="realm-'+id+'-'+kind+'"><summary>'+a.name+'</summary><p>体力 '+q.stamina+' · 粮草 '+q.food+' · 随军 '+q.troops+' 人</p><p>胜利：治安 +'+a.security+'，补给 +'+a.supply+'，关系 +'+a.relation+'。</p><p class="note">'+esc(q.reason||'出征准备会展示敌情、实际阵容与兵损预算。')+'</p>'+btn('准备'+a.name,{type:'realmBattle',id,kind},'primary',!!q.reason)+'</details>';}).join('')+'<p>互市：碎银 '+cost+' 换粮草 '+(40+Math.floor(r.supply/2))+'，每日一次。</p>'+btn('本地互市',{type:'realmTrade',id},'secondary',!!s.daily.counters['realm_trade_'+id]||s.camp.buildings.hall<m.hall||s.player.silver<cost)+btn(r.pact?'已缔商盟':'缔结商盟 · 碎银 300',{type:'realmPact',id},'secondary',r.pact||r.security<80||relation<30||s.player.silver<300)+'<p class="note">治安 80、关系 30 可缔盟，首次获得招贤令 1，之后本地交易优惠。</p></article>';}).join('')+'</div></section>'+(s.expansion?diplomacyPanel(s,btn):'');else if(section==='expeditions')content=squadsPanel(s,d,esc,btn)+trekPanel(s,d,btn);else if(section==='military')content=buildingsPanel(s,btn)+veteransPanel(s)+relicsPanel(s,btn);else if(section==='challenges')content=challengesPanel(s,d,esc,btn);else content=expansionPanel(s,d,esc,btn,false);return sectionNavigation('realm',section,btn)+'<section data-page-section="realm:'+section+'">'+content+'</section>';}

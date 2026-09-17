@@ -1,5 +1,5 @@
-import { HERO_SPECIALTIES, STYLES, TERRAIN_NAMES, JOB_NAMES, BONDS, DRILLS, MECHANICS, activeBonds } from './strategy-data.js?v=0.31.0';
-import { drillQuote } from './strategy.js?v=0.31.0';
+import { HERO_SPECIALTIES, STYLES, TERRAIN_NAMES, JOB_NAMES, BONDS, DRILLS, MECHANICS, activeBonds } from './strategy-data.js?v=0.32.0';
+import { drillQuote } from './strategy.js?v=0.32.0';
 export function specialtyPanel(s,d,h,btn){
  const p=HERO_SPECIALTIES[h.id],choice=s.strategy?.drills[h.id],q=drillQuote(s,h.id),busy=!!(s.battle||s.scheme||s.event);
  return `<section class="hero-specialty"><h3>${h.name} · 行军与任职</h3><p><b>${TERRAIN_NAMES[p.terrain]}专长：</b>对应地形直接伤害 +12%，独行与带兵均生效。</p><p><b>${STYLES[p.style].name}：</b>${STYLES[p.style].text}</p><p class="note">任职${JOB_NAMES[p.job]}时，每半小时额外 +1 ${p.job==='workshop'?'加工额度':'份产出'}；任职英雄出征时暂停加成。以上战斗专长仅建寨后的非剧情新战局生效。</p>
