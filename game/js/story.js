@@ -1,9 +1,9 @@
-import { CHAPTER_MISSIONS, startChapterBattle } from './volume-three.js?v=0.29.3';
-import { count, journal, requireRule } from './utils.js?v=0.29.0';
-import { meets } from './map.js?v=0.29.0';
-import { knowHero } from './hero.js?v=0.29.0';
-import { gainItem, pay } from './item.js?v=0.29.3';
-import { startBattle } from './battle.js?v=0.29.3';
+import { CHAPTER_MISSIONS, startChapterBattle } from './volume-three.js?v=0.31.0';
+import { count, journal, requireRule } from './utils.js?v=0.31.0';
+import { meets } from './map.js?v=0.31.0';
+import { knowHero } from './hero.js?v=0.31.0';
+import { gainItem, pay } from './item.js?v=0.31.0';
+import { startBattle } from './battle.js?v=0.31.0';
 export function effects(state, values=[], data) {
   for(const e of values) {
     if(e.type==='flag')state.progress.flags[e.id]=true;

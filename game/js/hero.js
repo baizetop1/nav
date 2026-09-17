@@ -1,10 +1,11 @@
-import { isExternal } from './roster.js?v=0.29.0';
-import { experienceResult } from './progression.js?v=0.29.0';
-import { applySets } from './equipment-sets.js?v=0.29.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.29.0';
-import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.29.0';
-import { heroRank } from './map.js?v=0.29.0';
-import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.29.0';
+import { recordRecruitSupport } from './recruit-support.js?v=0.31.0';
+import { isExternal, isWanderer, ordinaryHeroes } from './roster.js?v=0.31.0';
+import { experienceResult } from './progression.js?v=0.31.0';
+import { applySets } from './equipment-sets.js?v=0.31.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.31.0';
+import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.31.0';
+import { heroRank } from './map.js?v=0.31.0';
+import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.31.0';
 export function knowHero(state, id, status, data) {
   const hero = state.heroes[id];
   if (heroRank[status] > heroRank[hero.status]) { hero.status = status; journal(state, `${data.by.heroes[id].name}：${({heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'})[status]}。`); }
@@ -56,7 +57,7 @@ export function rollOrdinary(state, data) {
 export function recruit(state, data, target) {
   let chosen;
   if (target) {
-    requireRule(data.by.heroes[target]&&!isExternal(data.by.heroes[target]),'外传人物请在名册中交付信物邀请。');
+    requireRule(data.by.heroes[target]&&!isExternal(data.by.heroes[target]),isWanderer(data.by.heroes[target])?'江湖散人参与普通招贤，也可在名册中直接邀请。':'外传人物请在名册中交付信物邀请。');
     requireRule(data.by.heroes[target] && heroRank[state.heroes[target].status] >= 2, '先在江湖与此人相识，再行专属招贤。');
     requireRule(state.inventory[target+'_order'] > 0, '尚无这位好汉的专属招贤令。');
     state.inventory[target+'_order']--;
@@ -69,18 +70,19 @@ export function recruit(state, data, target) {
     requireRule(state.inventory.recruit_order > 0, '尚无招贤令，可从差事、剧情或集市取得。');
     state.inventory.recruit_order--;
     const star = rollOrdinary(state, data);
-    chosen = pick(state, data.heroes.filter(h => !isExternal(h) && h.star === star));
+    chosen = pick(state, ordinaryHeroes(data).filter(h => h.star === star));
   }
   const previousStatus=state.heroes[chosen.id].status;
   const previousTokens=state.inventory[chosen.id+'_token']||0,previousMerit=state.player.merit;
   state.recruit.total++; count(state, 'recruit');
-  if (heroRank[state.heroes[chosen.id].status] < 2) {
+  if (!isWanderer(chosen) && heroRank[state.heroes[chosen.id].status] < 2) {
     knowHero(state, chosen.id, 'heard', data);
     state.inventory[chosen.id+'_token'] = (state.inventory[chosen.id+'_token'] || 0) + 2;
     journal(state, `${chosen.title}·${chosen.name}尚未与你相识。来人带回两枚信物，仍需亲自寻访。`);
   } else ownHero(state, chosen.id, data);
   // A factual receipt of this draw, separate from flavour text and later chapter rewards.
-  state.recruit.lastResult={hero:chosen.id,target:target||null,kind:heroRank[previousStatus]<2?'clue':previousStatus==='owned'?'duplicate':'joined',tokens:(state.inventory[chosen.id+'_token']||0)-previousTokens,merit:state.player.merit-previousMerit,inTeam:previousStatus!=='owned'&&state.heroes[chosen.id].status==='owned'&&state.team.includes(chosen.id),number:state.recruit.total};
+  state.recruit.lastResult={hero:chosen.id,target:target||null,kind:!isWanderer(chosen)&&heroRank[previousStatus]<2?'clue':previousStatus==='owned'?'duplicate':'joined',tokens:(state.inventory[chosen.id+'_token']||0)-previousTokens,merit:state.player.merit-previousMerit,inTeam:previousStatus!=='owned'&&state.heroes[chosen.id].status==='owned'&&state.team.includes(chosen.id),number:state.recruit.total};
+  recordRecruitSupport(state,state.recruit.lastResult);
   return chosen.id;
 }
 export function syncAvailability(state, data) {

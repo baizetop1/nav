@@ -1,4 +1,4 @@
-import { STATIONS, POSTS, stationYield, CYCLE } from './frontier.js?v=0.29.0';
+import { STATIONS, POSTS, stationYield, CYCLE } from './frontier.js?v=0.31.0';
 export const FOCUSES={balanced:'均衡经营',farm:'粮草优先',lumber:'木材优先',workshop:'工坊优先'};
 export const workFactor=(s,id)=>!s.frontier?.focus||s.frontier.focus==='balanced'?4:s.frontier.focus===id?6:3;
 export const batchMinutes=(s,id)=>CYCLE/60000*4/workFactor(s,id);

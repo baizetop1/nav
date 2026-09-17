@@ -1,6 +1,6 @@
-import { dailyExperience } from './growth-rewards.js?v=0.29.3';
-import { deployedTroops } from './logistics.js?v=0.29.0';
-import { requireRule, journal } from './utils.js?v=0.29.0';
+import { dailyExperience } from './growth-rewards.js?v=0.31.0';
+import { deployedTroops } from './logistics.js?v=0.31.0';
+import { requireRule, journal } from './utils.js?v=0.31.0';
 
 export const DAILY_ROUTES=[
   {id:'ore',name:'铁石山道',days:[1,4,0],enemies:['soldier','guard'],reward:{iron:4,cloth:3,scrap_iron:3},use:'铁与布用于打造装备，碎铁用于练兵、工坊加工与重熔精铁。'},

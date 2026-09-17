@@ -1,4 +1,5 @@
-import { count, journal, requireRule, random } from './utils.js?v=0.29.0';
+import { isWanderer } from './roster.js?v=0.31.0';
+import { count, journal, requireRule, random } from './utils.js?v=0.31.0';
 
 export const MOUNT_DROP_RATE=.2;
 export const SKILL_CAP=5, MOUNT_CAP=5;
@@ -82,8 +83,8 @@ export function growthAction(state,data,action){
     spend(state,quote.cost);state.growth.skills[id]=quote.level+1;
     journal(state,`【招式精进】${data.by.heroes[skill.training.hero].name}的「${skill.name}」升至 ${quote.level+1} 级；消耗碎银 ${quote.cost.silver}、专属招式书 ${quote.level}、经验丹 ${quote.level}。`);
   }else if(type==='skillBook'){
-    owned(state,id,data);spend(state,{items:{martial_pages:2}});state.inventory[id+'_manual']=(state.inventory[id+'_manual']||0)+1;
-    journal(state,`【抄录招式】武学残页 -2，${data.by.heroes[id].name}专属招式书 +1。`);
+    owned(state,id,data);requireRule(action.source===undefined||action.source==='tokens'&&isWanderer(data.by.heroes[id]),'只有江湖散人可用信物换招式书。');spend(state,{items:action.source==='tokens'?{[id+'_token']:3}:{martial_pages:2}});state.inventory[id+'_manual']=(state.inventory[id+'_manual']||0)+1;
+    journal(state,`【抄录招式】${action.source==='tokens'?data.by.heroes[id].name+'信物 -3':'武学残页 -2'}，${data.by.heroes[id].name}专属招式书 +1。`);
   }else if(type==='martialDrill'){
     requireRule(Object.values(state.heroes).some(h=>h.status==='owned'),'先邀请一位好汉入寨。');
     // Hero training is available from the hero page in any location.

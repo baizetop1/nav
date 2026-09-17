@@ -1,10 +1,10 @@
-import { CORPS } from './corps-data.js?v=0.29.0';
+import { CORPS } from './corps-data.js?v=0.31.0';
 // Game design, not a claim about historical or novel military organization.
 export const TERRAIN_NAMES={land:'平原',forest:'林地',mountain:'山地',water:'水域'};
 const group=text=>new Set(text.split(' '));
-const naval=group('lijun ruanxiaoer ruanxiaowu ruanxiaoqi zhangheng zhangshun tongwei tongmeng mengkang');
-const mountain=group('wusong luzhishen yangzhi likui jiezhen jiebao baoxu fanrui xiangchong ligun lizhong zhoutong liyun');
-const forest=group('liutang shijin zhuwu chenda yangchun shixiu yangxiong yanshun wangying zhengtianshou kongming kongliang shien sunerniang zhangqing_gardener');
+const naval=group('chengao lijun ruanxiaoer ruanxiaowu ruanxiaoqi zhangheng zhangshun tongwei tongmeng mengkang');
+const mountain=group('heqi zhouaduo wusong luzhishen yangzhi likui jiezhen jiebao baoxu fanrui xiangchong ligun lizhong zhoutong liyun');
+const forest=group('liuyan liutang shijin zhuwu chenda yangchun shixiu yangxiong yanshun wangying zhengtianshou kongming kongliang shien sunerniang zhangqing_gardener');
 const smiths=group('tanglong lingzhen jindajian houjian mengkang');
 const farmers=group('taozongwang songqing baisheng caozheng zhangqing_gardener sunerniang gudasao huangfuduan andaoquan');
 export const JOB_NAMES={farm:'农田',lumber:'伐木场',workshop:'冶铁工坊'};

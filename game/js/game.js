@@ -1,28 +1,29 @@
-import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.29.2';
-import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.29.3';
-import { sweepQuote } from './sweep.js?v=0.29.3';
-import { sweepDialog } from './sweep-ui.js?v=0.29.3';
-import { collectionQuote, workshopQuote } from './production.js?v=0.29.0';
-import { productionDialog } from './production-ui.js?v=0.29.0';
-import { mentorshipQuote } from './mentorship.js?v=0.29.3';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.29.3';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.29.3';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.29.3';
-import { presetReason } from './development.js?v=0.29.0';
-import { batchQuote } from './batch.js?v=0.29.3';
-import { batchDialog } from './batch-ui.js?v=0.29.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.29.0';
-import { ActivityLog } from './activity.js?v=0.29.0';
-import { loadData } from './data.js?v=0.29.0';
-import { dispatch, newGame } from './core.js?v=0.29.3';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.29.3';
-import { esc, recruitDialog, render } from './ui.js?v=0.29.3';
-import { patchElement } from './dom.js?v=0.29.0';
+import { supportReceipt } from './recruit-support-ui.js?v=0.31.0';
+import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.31.0';
+import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.31.0';
+import { sweepQuote } from './sweep.js?v=0.31.0';
+import { sweepDialog } from './sweep-ui.js?v=0.31.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.31.0';
+import { productionDialog } from './production-ui.js?v=0.31.0';
+import { mentorshipQuote } from './mentorship.js?v=0.31.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.31.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.31.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.31.0';
+import { presetReason } from './development.js?v=0.31.0';
+import { batchQuote } from './batch.js?v=0.31.0';
+import { batchDialog } from './batch-ui.js?v=0.31.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.31.0';
+import { ActivityLog } from './activity.js?v=0.31.0';
+import { loadData } from './data.js?v=0.31.0';
+import { dispatch, newGame } from './core.js?v=0.31.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.31.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.31.0';
+import { patchElement } from './dom.js?v=0.31.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.29.3';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.29.3';
-import { CloudClient } from './cloud.js?v=0.29.3';
-import { boxImportDialog } from './savebox-ui.js?v=0.29.3';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.31.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.31.0';
+import { CloudClient } from './cloud.js?v=0.31.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.31.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 let logFollowing=true,logPaused=false,logMode='important',visibleEntries=[],lastLogPaint=0,battleSpeed=.5;
 try{const speed=Number(localStorage.getItem('baize_shuihu_battle_speed'));if([.5,1,2].includes(speed))battleSpeed=speed;}catch{}
@@ -74,9 +75,9 @@ function paint(focus=false){
 function updateLogCaption(){const caption=document.getElementById('activity-caption');if(caption)caption.textContent=logPaused?'日志已冻结 · 战斗仍在进行':!logFollowing?'正在阅读历史 · 新日志不打断':'每 2 秒更新 · '+(logMode==='important'?'仅看重点':'完整战报');const pause=root.querySelector('[data-log-pause]'),filter=root.querySelector('[data-log-filter]');if(pause){pause.textContent=logPaused?'继续刷新':'冻结阅读';pause.setAttribute('aria-pressed',String(logPaused));}if(filter){filter.textContent=logMode==='important'?'查看完整战报':'只看重点';filter.setAttribute('aria-pressed',String(logMode==='all'));}}
 root.addEventListener('scroll',event=>{if(event.target.id!=='activity-log')return;const el=event.target;logFollowing=el.scrollHeight-el.scrollTop-el.clientHeight<24;updateLogCaption();},true);
 function updateRecruitNotice(){const notice=document.getElementById('recruit-result-save');if(notice){notice.textContent=locked?status:dirty?'此结果尚未写入本机：请保持本页打开，到存档页导出进度。':'本次结果已保存到本机。';notice.className=locked||dirty?'warning':'note';}}
-function showRecruitResult(result,returnCommand){
+function showRecruitResult(result,returnCommand,extra=''){
   document.getElementById('recruit-result')?.remove();
-  document.body.insertAdjacentHTML('beforeend',recruitDialog(result,data));
+  document.body.insertAdjacentHTML('beforeend',recruitDialog(result,data).replace('<div class="recruit-batch-grid">',extra+'<div class="recruit-batch-grid">').replace('<div class="result-hero">',extra+'<div class="result-hero">'));
   const dialog=document.getElementById('recruit-result');let destination=null;
   dialog.addEventListener('keydown',event=>{
     if(event.key!=='Tab')return;
@@ -220,7 +221,7 @@ async function handleBox(command){
 async function handle(command){
   const {type,id}=command;error='';let prepared=null;
   if(type==='ui_section'){if(!PAGE_SECTIONS[command.view]||!Object.prototype.hasOwnProperty.call(PAGE_SECTIONS[command.view],id)||!entered||state.battle||state.scheme||state.event)return;if(command.hero&&data.by.heroes[command.hero])roster={...roster,selected:command.hero};view=command.view;pageSections[view]=id;notice='';paint(true);const selected=root.querySelector('.page-sections [aria-current="page"]');selected?.focus({preventScroll:true});selected?.scrollIntoView({block:'nearest',inline:'nearest'});return;}
-  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.29.3'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
+  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.31.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
   if(type==='ui_sortieCancel'){document.getElementById('sortie-preview')?.close();return;}
   if(SORTIES.includes(type)){showSortie(command);return;}
   if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
@@ -241,6 +242,9 @@ async function handle(command){
   }
   if(['frontierCollect','frontierProcess'].includes(type))document.getElementById('production-preview')?.close();
   if(type==='ui_mentorCancel'){document.getElementById('mentorship-preview')?.close();return;}
+  if(type==='ui_recruitWelcome')command={type:'recruitWelcome',id:document.getElementById('recruit-welcome-hero').value};
+  if(type==='ui_recruitSelect')command={type:'recruitSelect',id:document.getElementById('recruit-select-hero').value};
+  if(type==='ui_recruitCamp'){view='camp';paint(true);document.getElementById('supply-board')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_mentorPreview'){
     const mentor=document.getElementById('mentor-hero').value,student=document.getElementById('mentor-student').value,q=mentorshipQuote(dispatch(data,state,{type:'refresh'}),data,mentor,student);
     document.getElementById('mentorship-preview')?.remove();
@@ -326,7 +330,7 @@ async function handle(command){
     // Loading a preset is an explicit request to replace those pending form edits.
     for(const [id,value] of Object.entries({'camp-mode':next.camp.mode,'camp-tactic':next.camp.tactic,'camp-deployment':next.camp.deployment,...Object.fromEntries([0,1,2].map(i=>['team-'+i,next.team[i]||'']))})){const el=document.getElementById(id);if(el)el.value=String(value);}
   }
-  if(['recruit','recruitTen'].includes(type))showRecruitResult(type==='recruitTen'?next.recruit.lastBatch:next.recruit.lastResult,JSON.stringify(command));
+  if(['recruit','recruitTen'].includes(type))showRecruitResult(type==='recruitTen'?next.recruit.lastBatch:next.recruit.lastResult,JSON.stringify(command),supportReceipt(before,next));
   else {if(gains(before,next,data).length&&next.battle&&!next.battle.outcome)await pauseBattle('查看收获时已暂停，关闭后可继续交战。');showRewards(before,next,JSON.stringify(command));}
 }
 root.addEventListener('click',async event=>{

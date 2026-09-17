@@ -5416,5 +5416,617 @@
     "group": "external",
     "starSign": "外传人物",
     "portrait": "art/luantingyu-v1.png"
+  },
+  {
+    "id": "zhanghuai",
+    "name": "张槐",
+    "title": "守村乡勇",
+    "star": 1,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 850,
+      "attack": 78,
+      "defense": 70,
+      "speed": 58,
+      "strategy": 40
+    },
+    "growth": {
+      "hp": 42,
+      "attack": 4,
+      "defense": 4,
+      "speed": 2,
+      "strategy": 2
+    },
+    "skills": [
+      "zhanghuai_active",
+      "zhanghuai_passive",
+      "zhanghuai_advanced",
+      "zhanghuai_bond"
+    ],
+    "story": "从没出过远门的庄稼汉，村口的木栅却守了三年。带着邻里投寨，只求老幼有处安身。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "zhanghuai_token",
+      "count": 3,
+      "silver": 120,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "张槐道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "青骡",
+      "description": "与张槐同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "jingyanggang",
+      "contract": "zhanghuai_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "heqi",
+    "name": "何七",
+    "title": "山中樵客",
+    "star": 1,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 740,
+      "attack": 94,
+      "defense": 49,
+      "speed": 75,
+      "strategy": 42
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 2
+    },
+    "skills": [
+      "heqi_active",
+      "heqi_passive",
+      "heqi_advanced",
+      "heqi_bond"
+    ],
+    "story": "以砍柴换米过活，熟悉荒山小径。手中柴斧未必名贵，遇见拦路恶汉却不肯退。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "heqi_token",
+      "count": 3,
+      "silver": 120,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "何七道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "黄驴",
+      "description": "与何七同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "jingyanggang",
+      "contract": "heqi_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "chengao",
+    "name": "陈篙",
+    "title": "渡口船工",
+    "star": 1,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 620,
+      "attack": 86,
+      "defense": 38,
+      "speed": 98,
+      "strategy": 54
+    },
+    "growth": {
+      "hp": 30,
+      "attack": 5,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 2
+    },
+    "skills": [
+      "chengao_active",
+      "chengao_passive",
+      "chengao_advanced",
+      "chengao_bond"
+    ],
+    "story": "摆渡二十年的船工，风雨里救过不少落水客。愿领同乡水手，为寨中探清浅滩。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "chengao_token",
+      "count": 3,
+      "silver": 120,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "陈篙道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "乌骡",
+      "description": "与陈篙同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "jingyanggang",
+      "contract": "chengao_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "zhouaduo",
+    "name": "周阿朵",
+    "title": "采药山女",
+    "star": 1,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 650,
+      "attack": 62,
+      "defense": 42,
+      "speed": 76,
+      "strategy": 67
+    },
+    "growth": {
+      "hp": 34,
+      "attack": 3,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 4
+    },
+    "skills": [
+      "zhouaduo_active",
+      "zhouaduo_passive",
+      "zhouaduo_advanced",
+      "zhouaduo_bond"
+    ],
+    "story": "背药篓走遍山坡，常替买不起药的乡人裹伤。她不识名门招式，却知道怎样把人平安带回来。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "zhouaduo_token",
+      "count": 3,
+      "silver": 120,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "周阿朵道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "药篓青驴",
+      "description": "与周阿朵同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "jingyanggang",
+      "contract": "zhouaduo_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "zhaoqingmo",
+    "name": "赵青陌",
+    "title": "押粮短盾",
+    "star": 2,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 915,
+      "attack": 84,
+      "defense": 75,
+      "speed": 61,
+      "strategy": 46
+    },
+    "growth": {
+      "hp": 42,
+      "attack": 4,
+      "defense": 4,
+      "speed": 2,
+      "strategy": 2
+    },
+    "skills": [
+      "zhaoqingmo_active",
+      "zhaoqingmo_passive",
+      "zhaoqingmo_advanced",
+      "zhaoqingmo_bond"
+    ],
+    "story": "做过粮队护卫，最不愿看见粮车被劫。后来带几个老伙计投寨，仍把护住队尾当作本分。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "zhaoqingmo_token",
+      "count": 3,
+      "silver": 240,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "赵青陌道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "枣红马",
+      "description": "与赵青陌同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "jingyanggang",
+      "contract": "zhaoqingmo_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "liuyan",
+    "name": "柳雁",
+    "title": "林间猎户",
+    "star": 2,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 685,
+      "attack": 92,
+      "defense": 43,
+      "speed": 101,
+      "strategy": 60
+    },
+    "growth": {
+      "hp": 30,
+      "attack": 5,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 2
+    },
+    "skills": [
+      "liuyan_active",
+      "liuyan_passive",
+      "liuyan_advanced",
+      "liuyan_bond"
+    ],
+    "story": "靠猎物皮毛养家的猎户，耐心胜过蛮力。擅看足迹、听弦辨风，出征时常替同伴盯住敌后。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "liuyan_token",
+      "count": 3,
+      "silver": 240,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "柳雁道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "灰山驹",
+      "description": "与柳雁同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "jingyanggang",
+      "contract": "liuyan_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "dingyan",
+    "name": "丁砚",
+    "title": "落第书生",
+    "star": 2,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 685,
+      "attack": 61,
+      "defense": 45,
+      "speed": 83,
+      "strategy": 102
+    },
+    "growth": {
+      "hp": 28,
+      "attack": 2,
+      "defense": 2,
+      "speed": 3,
+      "strategy": 6
+    },
+    "skills": [
+      "dingyan_active",
+      "dingyan_passive",
+      "dingyan_advanced",
+      "dingyan_bond"
+    ],
+    "story": "赶考落第后替村塾代课，沿路见过饥民流离。书箱里的兵书终于有了用处，他想让同伴少走险路。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "dingyan_token",
+      "count": 3,
+      "silver": 240,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "丁砚道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "瘦青驴",
+      "description": "与丁砚同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "jingyanggang",
+      "contract": "dingyan_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "majiu",
+    "name": "马九",
+    "title": "驿路脚夫",
+    "star": 2,
+    "type": "ranger",
+    "status": "unknown",
+    "attribute": {
+      "hp": 685,
+      "attack": 92,
+      "defense": 43,
+      "speed": 101,
+      "strategy": 60
+    },
+    "growth": {
+      "hp": 30,
+      "attack": 5,
+      "defense": 2,
+      "speed": 4,
+      "strategy": 2
+    },
+    "skills": [
+      "majiu_active",
+      "majiu_passive",
+      "majiu_advanced",
+      "majiu_bond"
+    ],
+    "story": "跑惯驿路的脚夫，鞋底磨破也不误送信。投寨以后认路传讯，遇见敌哨便抢上一步。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "majiu_token",
+      "count": 3,
+      "silver": 240,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "马九道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "栗色驿马",
+      "description": "与马九同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "jingyanggang",
+      "contract": "majiu_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "shichanggeng",
+    "name": "石长庚",
+    "title": "退伍老卒",
+    "star": 3,
+    "type": "fighter",
+    "status": "unknown",
+    "attribute": {
+      "hp": 870,
+      "attack": 106,
+      "defense": 59,
+      "speed": 81,
+      "strategy": 54
+    },
+    "growth": {
+      "hp": 36,
+      "attack": 6,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 2
+    },
+    "skills": [
+      "shichanggeng_active",
+      "shichanggeng_passive",
+      "shichanggeng_advanced",
+      "shichanggeng_bond"
+    ],
+    "story": "离伍多年仍日日擦枪，教乡勇先护住身旁的人。他愿把吃过的亏，变成年轻人少挨的一刀。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "shichanggeng_token",
+      "count": 3,
+      "silver": 360,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "石长庚道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "沙场老马",
+      "description": "与石长庚同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "yezhulin",
+      "contract": "shichanggeng_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "shenqiuniang",
+    "name": "沈秋娘",
+    "title": "乡里郎中",
+    "star": 3,
+    "type": "support",
+    "status": "unknown",
+    "attribute": {
+      "hp": 780,
+      "attack": 74,
+      "defense": 52,
+      "speed": 82,
+      "strategy": 79
+    },
+    "growth": {
+      "hp": 34,
+      "attack": 3,
+      "defense": 3,
+      "speed": 3,
+      "strategy": 4
+    },
+    "skills": [
+      "shenqiuniang_active",
+      "shenqiuniang_passive",
+      "shenqiuniang_advanced",
+      "shenqiuniang_bond"
+    ],
+    "story": "在乡间开小药铺的郎中，遇到兵灾便背箱出诊。随军不为声名，只愿药帐中少一声叹息。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "shenqiuniang_token",
+      "count": 3,
+      "silver": 360,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "沈秋娘道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "花斑药骡",
+      "description": "与沈秋娘同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "yezhulin",
+      "contract": "shenqiuniang_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "gupingchuan",
+    "name": "顾平川",
+    "title": "护庄教习",
+    "star": 3,
+    "type": "defender",
+    "status": "unknown",
+    "attribute": {
+      "hp": 980,
+      "attack": 90,
+      "defense": 80,
+      "speed": 64,
+      "strategy": 52
+    },
+    "growth": {
+      "hp": 42,
+      "attack": 4,
+      "defense": 4,
+      "speed": 2,
+      "strategy": 2
+    },
+    "skills": [
+      "gupingchuan_active",
+      "gupingchuan_passive",
+      "gupingchuan_advanced",
+      "gupingchuan_bond"
+    ],
+    "story": "受雇教庄丁棍棒，最看重站稳脚跟和互相照应。庄园败落后，他把一套合阵本领带到了寨中。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "gupingchuan_token",
+      "count": 3,
+      "silver": 360,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "顾平川道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "青鬃庄马",
+      "description": "与顾平川同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "yezhulin",
+      "contract": "gupingchuan_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
+  },
+  {
+    "id": "taozhiwei",
+    "name": "陶知微",
+    "title": "游方策士",
+    "star": 3,
+    "type": "strategist",
+    "status": "unknown",
+    "attribute": {
+      "hp": 750,
+      "attack": 67,
+      "defense": 50,
+      "speed": 86,
+      "strategy": 108
+    },
+    "growth": {
+      "hp": 28,
+      "attack": 2,
+      "defense": 2,
+      "speed": 3,
+      "strategy": 6
+    },
+    "skills": [
+      "taozhiwei_active",
+      "taozhiwei_passive",
+      "taozhiwei_advanced",
+      "taozhiwei_bond"
+    ],
+    "story": "以抄书记账换盘缠的游方女子，沿路记录水道与粮价。她相信把路看清，便能替众人省下一场苦战。（本作原创江湖人物，不占一百零八星位。）",
+    "core": false,
+    "meetMap": "tavern",
+    "meetCondition": null,
+    "obtain": {
+      "type": "wanderer",
+      "token": "taozhiwei_token",
+      "count": 3,
+      "silver": 360,
+      "hall": 1,
+      "condition": null
+    },
+    "dialogue": "陶知微道：“愿凭这点本领，与诸位互相照应。”",
+    "mount": {
+      "name": "白额驹",
+      "description": "与陶知微同行的普通脚力，可培养并解锁专属羁绊。",
+      "dungeon": "yezhulin",
+      "contract": "taozhiwei_mount_contract"
+    },
+    "seat": null,
+    "group": "external",
+    "starSign": "江湖散人",
+    "introducedIn": 6
   }
 ]

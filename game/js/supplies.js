@@ -1,7 +1,7 @@
-import {expansion} from './expansion-state.js?v=0.29.0';
-import {rotationCalendar} from './rotations.js?v=0.29.3';
-import {requireRule,count,journal} from './utils.js?v=0.29.0';
-import {grant} from './item.js?v=0.29.3';
+import {expansion} from './expansion-state.js?v=0.31.0';
+import {rotationCalendar} from './rotations.js?v=0.31.0';
+import {requireRule,count,journal} from './utils.js?v=0.31.0';
+import {grant} from './item.js?v=0.31.0';
 export function supplyOffers(s){const c=s.camp,cal=rotationCalendar(s.clock),tier=s.campaign?.weekly[cal.period]?.tier||0;return [
 {id:'daily',name:'每日勤勉荐书',period:cal.date,cost:0,reward:{items:{recruit_order:1,recruit_shard:2,ration:1}},reason:!c?'先建立寨子':s.daily.counters.supply_daily?'今日已领取':!(s.daily.counters.campWork>=1&&s.daily.counters.battleWin>=1)?'今日经营一次并取得一场胜利':''},
 {id:'week',name:'本期周本军功兑换',period:cal.period,cost:120,reward:{items:{spirit_essence:2,strength_charm:1}},reason:!c?'先建立寨子':c.supply?.week===cal.period?'本期已兑换':c.buildings.hall<3||tier<2?'聚义厅 3 级，本期周本通关 2 层':s.player.merit<120?'需要功勋 120':''},

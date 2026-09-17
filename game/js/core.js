@@ -1,39 +1,40 @@
-import { battleExperience } from './growth-rewards.js?v=0.29.3';
-import {ventureAction,finishExpansion,diplomacyAction} from './ventures.js?v=0.29.3';
-import {provisionAction} from './provisions.js?v=0.29.3';
-import {expansionGuard,expansion} from './expansion-state.js?v=0.29.0';
-import {challengeStart} from './challenges.js?v=0.29.3';
-import {relicAction} from './relics.js?v=0.29.3';
-import {trekAction,trekGuard} from './trek.js?v=0.29.3';
-import {buildingBranch} from './realm-buildings.js?v=0.29.0';
-import {chooseHeroPath} from './talents.js?v=0.29.0';
-import { squadAction, assignmentGuard } from './squads.js?v=0.29.3';
-import { realmAction, finishRealmBattle } from './realm.js?v=0.29.3';
-import { applySweep } from './sweep.js?v=0.29.3';
-import { staminaCap, deployedTroops } from './logistics.js?v=0.29.0';
-import { enterElite, finishElite } from './elites.js?v=0.29.3';
-import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.29.3';
-import { mentorHero } from './mentorship.js?v=0.29.3';
-import { saveDebrief } from './debrief.js?v=0.29.3';
-import { batchApply } from './batch.js?v=0.29.3';
-import { affairAction, finishAffairBattle } from './affairs.js?v=0.29.3';
-import { trainDrill } from './strategy.js?v=0.29.3';
-import { battleOrder } from './commands.js?v=0.29.0';
-import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.29.0';
-import { developmentAction, recordLedger } from './development.js?v=0.29.0';
-import { enterRotation, finishRotation } from './rotations.js?v=0.29.3';
-import { promoteHero } from './quality.js?v=0.29.0';
-import { routeTo, claimLocalBenefit } from './world-map.js?v=0.29.3';
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.29.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.29.0';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.29.0';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.29.3';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.29.3';
-import { effects, storyAction, visit } from './story.js?v=0.29.3';
-import { growthAction, awardMountContracts } from './growth.js?v=0.29.0';
+import { recruitSupportAction, recordRecruitWeek } from './recruit-support.js?v=0.31.0';
+import { battleExperience } from './growth-rewards.js?v=0.31.0';
+import {ventureAction,finishExpansion,diplomacyAction} from './ventures.js?v=0.31.0';
+import {provisionAction} from './provisions.js?v=0.31.0';
+import {expansionGuard,expansion} from './expansion-state.js?v=0.31.0';
+import {challengeStart} from './challenges.js?v=0.31.0';
+import {relicAction} from './relics.js?v=0.31.0';
+import {trekAction,trekGuard} from './trek.js?v=0.31.0';
+import {buildingBranch} from './realm-buildings.js?v=0.31.0';
+import {chooseHeroPath} from './talents.js?v=0.31.0';
+import { squadAction, assignmentGuard } from './squads.js?v=0.31.0';
+import { realmAction, finishRealmBattle } from './realm.js?v=0.31.0';
+import { applySweep } from './sweep.js?v=0.31.0';
+import { staminaCap, deployedTroops } from './logistics.js?v=0.31.0';
+import { enterElite, finishElite } from './elites.js?v=0.31.0';
+import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.31.0';
+import { mentorHero } from './mentorship.js?v=0.31.0';
+import { saveDebrief } from './debrief.js?v=0.31.0';
+import { batchApply } from './batch.js?v=0.31.0';
+import { affairAction, finishAffairBattle } from './affairs.js?v=0.31.0';
+import { trainDrill } from './strategy.js?v=0.31.0';
+import { battleOrder } from './commands.js?v=0.31.0';
+import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.31.0';
+import { developmentAction, recordLedger } from './development.js?v=0.31.0';
+import { enterRotation, finishRotation } from './rotations.js?v=0.31.0';
+import { promoteHero } from './quality.js?v=0.31.0';
+import { routeTo, claimLocalBenefit } from './world-map.js?v=0.31.0';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.31.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.31.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.31.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.31.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.31.0';
+import { effects, storyAction, visit } from './story.js?v=0.31.0';
+import { growthAction, awardMountContracts } from './growth.js?v=0.31.0';
 
-import { searchEquipment } from './camp-development.js?v=0.29.3';
-import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.29.3';
+import { searchEquipment } from './camp-development.js?v=0.31.0';
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.31.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -196,6 +197,7 @@ export function dispatch(data,current,action,now=Date.now()) {
   else if(type==='battleItem')useBattleItem(state,data,id);
   else if(type==='battleRetreat')retreatBattle(state);
   else if(type==='finishBattle')finishBattle(state,data);
+  else if(['recruitSupply','recruitWelcome','recruitWelcomeConvert','recruitSelect'].includes(type))recruitSupportAction(state,data,action);
   else if(type==='recruit'){delete state.recruit.lastBatch;recruit(state,data,id);}
   else if(type==='recruitTen'){
     requireRule(!id,'十连仅限普通招贤。');
@@ -227,5 +229,5 @@ export function dispatch(data,current,action,now=Date.now()) {
   else if(['skillUpgrade','skillBook','martialDrill','mountAdopt','mountFeed','mountRank','mountRide'].includes(type))growthAction(state,data,action);
   else if(['buy','use','craftOrder','exchange','craftEquip','buyEquip','equip','equipLock','strengthen','dismantle'].includes(type))itemAction(state,data,action);
   else throw new Error('尚未支持这个操作。');
-  syncAvailability(state,data);completeVolume(state,data);recordLedger(current,state);state.revision++;return state;
+  syncAvailability(state,data);completeVolume(state,data);recordLedger(current,state);recordRecruitWeek(current,state);state.revision++;return state;
 }

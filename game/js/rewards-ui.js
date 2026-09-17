@@ -1,12 +1,13 @@
-import {COMBOS,PERSONAL} from './expansion-data.js?v=0.29.0';
-import {RELICS,CHALLENGES} from './realm-data.js?v=0.29.0';
-import { totalExperience } from './progression.js?v=0.29.0';
-import { CORPS, corpsRank } from './development.js?v=0.29.0';
-import { HELPERS, hasHelper } from './helpers.js?v=0.29.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.29.0';
+import {COMBOS,PERSONAL} from './expansion-data.js?v=0.31.0';
+import {RELICS,CHALLENGES} from './realm-data.js?v=0.31.0';
+import { totalExperience } from './progression.js?v=0.31.0';
+import { CORPS, corpsRank } from './development.js?v=0.31.0';
+import { HELPERS, hasHelper } from './helpers.js?v=0.31.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.31.0';
 // Derive the visible receipt from a completed transaction, never from a second roll.
 export function gains(before,after,data){
   const rows=[];const add=(name,n)=>{if(n>0)rows.push({name,amount:n});};
+  for(const [key,name] of [['points','荐贤积分'],['tickets','迎贤荐书']])add(name,(after.recruit.support?.[key]||0)-(before.recruit.support?.[key]||0));
   for(const [id,name] of Object.entries({silver:'碎银',merit:'功勋',prestige:'威望',stamina:'体力'}))add(name,after.player[id]-before.player[id]);
   for(const [id,n] of Object.entries(after.inventory))add(data.by.items[id]?.name||id,n-(before.inventory[id]||0));
   for(const [id,name] of Object.entries({wood:'木材',food:'粮草',troops:'乡勇归队'}))add(name,(after.camp?.[id]||0)-(before.camp?.[id]||0));
