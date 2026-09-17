@@ -75,7 +75,7 @@ async function route(request,env){
   const url=new URL(request.url);
   if(url.protocol!=='https:'&&!(env.LOCAL_DEV==='true'&&['localhost','127.0.0.1'].includes(url.hostname)))fail(400,'存档服务只接受 HTTPS。');
   const ip=request.headers.get('CF-Connecting-IP')||'local';await limit(env,`request:${ip}`,120);
-  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,realm:1,challengeGroups:1,expansion:1,cooperative:1,supplies:1,elite:1,chapters:data.chapters.length});
+  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,realm:1,challengeGroups:1,expansion:1,cooperative:1,supplies:1,recruitSupport:1,elite:1,chapters:data.chapters.length});
   if(url.pathname==='/v1/cooperative'&&request.method==='GET'){await cooperativeReady(env,fail);return json(await cooperativeBoard(env,Date.now()));}
   if(url.pathname==='/v1/leaderboard'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,raw FROM slots WHERE raw IS NOT NULL ORDER BY id').all();return json(rankSnapshots(rows.results,Date.now()));}
   if(url.pathname==='/v1/verified-leaderboard'&&request.method==='GET'){
@@ -127,6 +127,7 @@ async function route(request,env){
   }
   if(!action&&request.method==='PUT'){
     const input=await body(request);
+    if(row.raw&&JSON.parse(row.raw).recruit?.support&&!input.state?.recruit?.support)fail(409,'此存档已有招贤荐书、积分和补给记录，请刷新至 0.30.0 后上传。');
     if(row.raw&&(JSON.parse(row.raw).rosterVersion||0)>(input.state?.rosterVersion||0))fail(409,'此云端进度已升级名册，请刷新游戏后再上传，避免旧页面覆盖新增好汉。');
     if(row.raw&&JSON.parse(row.raw).affairs&&!input.state?.affairs)fail(409,'此存档已有寨事和外派进度，请刷新新版后上传。');
     if(row.raw&&JSON.parse(row.raw).strategy&&!input.state?.strategy)fail(409,'此存档已有部队专精或副本机制，请刷新至新版后上传。');

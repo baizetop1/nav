@@ -1,4 +1,4 @@
-import {requireRule} from './utils.js?v=0.29.0';
+import {requireRule} from './utils.js?v=0.31.0';
 export function expansion(s){s.expansion??={version:1,recipes:[],combos:{},personal:{},run:null,diplomacy:{},coopClaims:{}};return s.expansion;}
 export const NEW_ITEMS=['ration','vital_pill','camp_pack','medical_crate','smoke_pack','material_choice'];
 export function expansionGuard(s,a){const r=s.expansion?.run;if(!r)return;const common=['refresh','battleTick','battleSkill','battleSkillMode','battleItem','battleOrder','battleRetreat','finishBattle','smokeRetreat','ventureNext','ventureReturn'];common.push('team','campFormation');if(r.kind==='relay')common.push('presetLoad');if(r.kind==='defense'&&a.type==='team')requireRule(JSON.stringify(a.ids)===JSON.stringify(r.team),'寨防途中不能换人。');requireRule(common.includes(a.type),'当前战役尚未结束。先收队结算，再经营、培养或另行出征。');}

@@ -26,7 +26,7 @@ for(const seed of [1,51,413,19282]){
  assert.equal(d.by.heroes[receipts[0].hero].star,5);assert.equal(act(ten,'recruit').recruit.lastBatch,undefined);
  const html=recruitDialog(ten.recruit.lastBatch,d);assert.equal((html.match(/batch-draw/g)||[]).length,10);
 }
-const unknown=newGame(d,at,123);unknown.inventory.recruit_order=10;assert.ok(act(unknown,'recruitTen').recruit.lastBatch.every(r=>r.kind==='clue'));
+const unknown=newGame(d,at,123);unknown.inventory.recruit_order=10;assert.ok(act(unknown,'recruitTen').recruit.lastBatch.every(r=>d.by.heroes[r.hero].obtain.type==='wanderer'?['joined','duplicate'].includes(r.kind):r.kind==='clue'));
 const poor=fixture();poor.inventory.recruit_order=9;const raw=JSON.stringify(poor);assert.throws(()=>act(poor,'recruitTen'),/10 张/);assert.equal(JSON.stringify(poor),raw);
 assert.throws(()=>act(fixture(),'recruitTen',{id:'baisheng'}),/普通/);
 let s=act(fixture(),'equipLock',{id:'eq_1',locked:true});const lockedRaw=JSON.stringify(s);

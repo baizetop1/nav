@@ -9232,5 +9232,992 @@
       "kind": "rage",
       "rate": 5
     }
+  },
+  {
+    "id": "zhanghuai_active",
+    "name": "护门棍",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "zhanghuai",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhanghuai_passive",
+    "name": "守土",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhanghuai",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhanghuai_advanced",
+    "name": "合盾护邻",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "zhanghuai",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "zhanghuai_bond",
+    "name": "青骡守夜",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 12%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhanghuai",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    },
+    "bondEffect": {
+      "kind": "guard",
+      "rate": 0.12,
+      "duration": 4000
+    }
+  },
+  {
+    "id": "heqi_active",
+    "name": "开山斧",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "heqi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "heqi_passive",
+    "name": "山行",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "heqi",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "heqi_advanced",
+    "name": "断枝截路",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "heqi",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "heqi_bond",
+    "name": "黄驴探山",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对当前敌人追加一次 30% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "heqi",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    },
+    "bondEffect": {
+      "kind": "strike",
+      "rate": 0.3
+    }
+  },
+  {
+    "id": "chengao_active",
+    "name": "撑篙",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "chengao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "chengao_passive",
+    "name": "识水",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "chengao",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "chengao_advanced",
+    "name": "横篙截流",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "chengao",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "chengao_bond",
+    "name": "乌骡渡岸",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对当前敌人追加一次 30% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "chengao",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    },
+    "bondEffect": {
+      "kind": "strike",
+      "rate": 0.3
+    }
+  },
+  {
+    "id": "zhouaduo_active",
+    "name": "敷草止血",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.25
+    },
+    "training": {
+      "hero": "zhouaduo",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhouaduo_passive",
+    "name": "识草",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhouaduo",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhouaduo_advanced",
+    "name": "山药救急",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3
+    },
+    "description": "照应气血比例最低的同伴，回复 30% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "zhouaduo",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "zhouaduo_bond",
+    "name": "小驴驮药",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhouaduo",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    },
+    "bondEffect": {
+      "kind": "heal",
+      "rate": 0.04
+    }
+  },
+  {
+    "id": "zhaoqingmo_active",
+    "name": "短盾撞阵",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "zhaoqingmo",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhaoqingmo_passive",
+    "name": "厚肩",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "zhaoqingmo",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "zhaoqingmo_advanced",
+    "name": "守粮结阵",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "zhaoqingmo",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "zhaoqingmo_bond",
+    "name": "枣马护粮",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 12%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "zhaoqingmo",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    },
+    "bondEffect": {
+      "kind": "guard",
+      "rate": 0.12,
+      "duration": 4000
+    }
+  },
+  {
+    "id": "liuyan_active",
+    "name": "猎矢",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "liuyan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "liuyan_passive",
+    "name": "辨风",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "liuyan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "liuyan_advanced",
+    "name": "截势箭",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "liuyan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "liuyan_bond",
+    "name": "山驹逐迹",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对当前敌人追加一次 30% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "liuyan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    },
+    "bondEffect": {
+      "kind": "strike",
+      "rate": 0.3
+    }
+  },
+  {
+    "id": "dingyan_active",
+    "name": "扰阵书",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2
+    },
+    "training": {
+      "hero": "dingyan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "dingyan_passive",
+    "name": "静思",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "dingyan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "dingyan_advanced",
+    "name": "整队解困",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.14
+    },
+    "description": "清除全队流血、中毒、破甲、眩晕和削弱，再各回复 14% 最大气血。",
+    "training": {
+      "hero": "dingyan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "dingyan_bond",
+    "name": "瘦驴问路",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，为全队回复 2 点怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "dingyan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "purify"
+    },
+    "bondEffect": {
+      "kind": "rage",
+      "rate": 2
+    }
+  },
+  {
+    "id": "majiu_active",
+    "name": "疾鞭",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "majiu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "majiu_passive",
+    "name": "快脚",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "majiu",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "majiu_advanced",
+    "name": "截哨",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "majiu",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "majiu_bond",
+    "name": "快马送信",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对当前敌人追加一次 30% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "majiu",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    },
+    "bondEffect": {
+      "kind": "strike",
+      "rate": 0.3
+    }
+  },
+  {
+    "id": "shichanggeng_active",
+    "name": "老卒刺",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "shichanggeng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shichanggeng_passive",
+    "name": "沉稳",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "shichanggeng",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shichanggeng_advanced",
+    "name": "断势枪",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "damage",
+      "rate": 1.8
+    },
+    "description": "优先攻击正在蓄势的首领，打断其本次绝招；无蓄势者则攻击后位敌人。",
+    "training": {
+      "hero": "shichanggeng",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "interrupt"
+    }
+  },
+  {
+    "id": "shichanggeng_bond",
+    "name": "老马识阵",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "speed",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时速度 +5%。每三次普攻，对当前敌人追加一次 30% 攻击。触发强度随招式等级提高。",
+    "training": {
+      "hero": "shichanggeng",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "interrupt"
+    },
+    "bondEffect": {
+      "kind": "strike",
+      "rate": 0.3
+    }
+  },
+  {
+    "id": "shenqiuniang_active",
+    "name": "行针",
+    "type": "active",
+    "cost": 50,
+    "description": "照应伤势最重的同伴，回复气血。",
+    "effect": {
+      "kind": "heal",
+      "rate": 0.25
+    },
+    "training": {
+      "hero": "shenqiuniang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shenqiuniang_passive",
+    "name": "仁术",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身攻击 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "attack",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "shenqiuniang",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "shenqiuniang_advanced",
+    "name": "急症施治",
+    "type": "active",
+    "cost": 40,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.3
+    },
+    "description": "照应气血比例最低的同伴，回复 30% 最大气血并减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "shenqiuniang",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "triage"
+    }
+  },
+  {
+    "id": "shenqiuniang_bond",
+    "name": "药骡随队",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴回复 4% 最大气血。触发强度随招式等级提高。",
+    "training": {
+      "hero": "shenqiuniang",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "triage"
+    },
+    "bondEffect": {
+      "kind": "heal",
+      "rate": 0.04
+    }
+  },
+  {
+    "id": "gupingchuan_active",
+    "name": "横棍",
+    "type": "active",
+    "cost": 50,
+    "description": "奋起一击，消耗怒气。",
+    "effect": {
+      "kind": "damage",
+      "rate": 2.2
+    },
+    "training": {
+      "hero": "gupingchuan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "gupingchuan_passive",
+    "name": "扎根",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身气血 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "gupingchuan",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "gupingchuan_advanced",
+    "name": "环阵护众",
+    "type": "active",
+    "cost": 45,
+    "effect": {
+      "kind": "heal",
+      "rate": 0
+    },
+    "description": "自身嘲讽 4 秒并减伤 40%；其他同伴减伤 20%，持续 4 秒。",
+    "training": {
+      "hero": "gupingchuan",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "protect"
+    }
+  },
+  {
+    "id": "gupingchuan_bond",
+    "name": "庄马守阵",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "hp",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时气血 +5%。每三次普攻，为气血比例最低的同伴减伤 12%，持续 4 秒。触发强度随招式等级提高。",
+    "training": {
+      "hero": "gupingchuan",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "protect"
+    },
+    "bondEffect": {
+      "kind": "guard",
+      "rate": 0.12,
+      "duration": 4000
+    }
+  },
+  {
+    "id": "taozhiwei_active",
+    "name": "扰敌筹",
+    "type": "strategy",
+    "cost": 50,
+    "description": "依谋略扰乱敌阵。",
+    "effect": {
+      "kind": "strategy",
+      "rate": 2
+    },
+    "training": {
+      "hero": "taozhiwei",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "taozhiwei_passive",
+    "name": "察微",
+    "type": "passive",
+    "cost": 0,
+    "description": "出战时提升自身谋略 8%。",
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.08
+    },
+    "training": {
+      "hero": "taozhiwei",
+      "tier": "base",
+      "level": 1,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "legacy"
+    }
+  },
+  {
+    "id": "taozhiwei_advanced",
+    "name": "解围策",
+    "type": "active",
+    "cost": 50,
+    "effect": {
+      "kind": "heal",
+      "rate": 0.14
+    },
+    "description": "清除全队流血、中毒、破甲、眩晕和削弱，再各回复 14% 最大气血。",
+    "training": {
+      "hero": "taozhiwei",
+      "tier": "advanced",
+      "level": 8,
+      "flag": "",
+      "label": "正式入寨并达到所需等级",
+      "profile": "purify"
+    }
+  },
+  {
+    "id": "taozhiwei_bond",
+    "name": "白驹伴行",
+    "type": "passive",
+    "cost": 0,
+    "effect": {
+      "kind": "attribute",
+      "attribute": "strategy",
+      "rate": 0.05
+    },
+    "description": "羁绊生效时谋略 +5%。每三次普攻，为全队回复 2 点怒气。触发强度随招式等级提高。",
+    "training": {
+      "hero": "taozhiwei",
+      "tier": "bond",
+      "level": 15,
+      "flag": "",
+      "label": "专属坐骑达到 3 阶、亲密 80，且处于骑乘状态",
+      "profile": "purify"
+    },
+    "bondEffect": {
+      "kind": "rage",
+      "rate": 2
+    }
   }
 ]

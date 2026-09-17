@@ -4290,5 +4290,317 @@
     "price": 0,
     "effect": {},
     "description": "选择精铁 5、粗布 5、药草 8 或武学残页 3 中的一份。"
+  },
+  {
+    "id": "zhanghuai_token",
+    "name": "张槐信物",
+    "type": "token",
+    "hero": "zhanghuai",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得张槐获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "zhanghuai_manual",
+    "name": "张槐专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于张槐招式升级。"
+  },
+  {
+    "id": "zhanghuai_mount_contract",
+    "name": "青骡坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；张槐入寨后凭契领骑。"
+  },
+  {
+    "id": "heqi_token",
+    "name": "何七信物",
+    "type": "token",
+    "hero": "heqi",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得何七获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "heqi_manual",
+    "name": "何七专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于何七招式升级。"
+  },
+  {
+    "id": "heqi_mount_contract",
+    "name": "黄驴坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；何七入寨后凭契领骑。"
+  },
+  {
+    "id": "chengao_token",
+    "name": "陈篙信物",
+    "type": "token",
+    "hero": "chengao",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得陈篙获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "chengao_manual",
+    "name": "陈篙专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于陈篙招式升级。"
+  },
+  {
+    "id": "chengao_mount_contract",
+    "name": "乌骡坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；陈篙入寨后凭契领骑。"
+  },
+  {
+    "id": "zhouaduo_token",
+    "name": "周阿朵信物",
+    "type": "token",
+    "hero": "zhouaduo",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得周阿朵获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "zhouaduo_manual",
+    "name": "周阿朵专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于周阿朵招式升级。"
+  },
+  {
+    "id": "zhouaduo_mount_contract",
+    "name": "药篓青驴坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；周阿朵入寨后凭契领骑。"
+  },
+  {
+    "id": "zhaoqingmo_token",
+    "name": "赵青陌信物",
+    "type": "token",
+    "hero": "zhaoqingmo",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得赵青陌获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "zhaoqingmo_manual",
+    "name": "赵青陌专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于赵青陌招式升级。"
+  },
+  {
+    "id": "zhaoqingmo_mount_contract",
+    "name": "枣红马坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；赵青陌入寨后凭契领骑。"
+  },
+  {
+    "id": "liuyan_token",
+    "name": "柳雁信物",
+    "type": "token",
+    "hero": "liuyan",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得柳雁获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "liuyan_manual",
+    "name": "柳雁专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于柳雁招式升级。"
+  },
+  {
+    "id": "liuyan_mount_contract",
+    "name": "灰山驹坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；柳雁入寨后凭契领骑。"
+  },
+  {
+    "id": "dingyan_token",
+    "name": "丁砚信物",
+    "type": "token",
+    "hero": "dingyan",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得丁砚获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "dingyan_manual",
+    "name": "丁砚专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于丁砚招式升级。"
+  },
+  {
+    "id": "dingyan_mount_contract",
+    "name": "瘦青驴坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；丁砚入寨后凭契领骑。"
+  },
+  {
+    "id": "majiu_token",
+    "name": "马九信物",
+    "type": "token",
+    "hero": "majiu",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得马九获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "majiu_manual",
+    "name": "马九专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于马九招式升级。"
+  },
+  {
+    "id": "majiu_mount_contract",
+    "name": "栗色驿马坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「景阳冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；马九入寨后凭契领骑。"
+  },
+  {
+    "id": "shichanggeng_token",
+    "name": "石长庚信物",
+    "type": "token",
+    "hero": "shichanggeng",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得石长庚获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "shichanggeng_manual",
+    "name": "石长庚专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于石长庚招式升级。"
+  },
+  {
+    "id": "shichanggeng_mount_contract",
+    "name": "沙场老马坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「野猪林传闻历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；石长庚入寨后凭契领骑。"
+  },
+  {
+    "id": "shenqiuniang_token",
+    "name": "沈秋娘信物",
+    "type": "token",
+    "hero": "shenqiuniang",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得沈秋娘获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "shenqiuniang_manual",
+    "name": "沈秋娘专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于沈秋娘招式升级。"
+  },
+  {
+    "id": "shenqiuniang_mount_contract",
+    "name": "花斑药骡坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「野猪林传闻历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；沈秋娘入寨后凭契领骑。"
+  },
+  {
+    "id": "gupingchuan_token",
+    "name": "顾平川信物",
+    "type": "token",
+    "hero": "gupingchuan",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得顾平川获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "gupingchuan_manual",
+    "name": "顾平川专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于顾平川招式升级。"
+  },
+  {
+    "id": "gupingchuan_mount_contract",
+    "name": "青鬃庄马坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「野猪林传闻历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；顾平川入寨后凭契领骑。"
+  },
+  {
+    "id": "taozhiwei_token",
+    "name": "陶知微信物",
+    "type": "token",
+    "hero": "taozhiwei",
+    "need": 3,
+    "price": 0,
+    "effect": {},
+    "description": "重复招得陶知微获得三枚；入寨后可用三枚换一本专属招式书，不合成专属招贤令。"
+  },
+  {
+    "id": "taozhiwei_manual",
+    "name": "陶知微专属招式书",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "消耗两张武学残页抄录，或在人物培养页用三枚对应散人信物换取。用于陶知微招式升级。"
+  },
+  {
+    "id": "taozhiwei_mount_contract",
+    "name": "白额驹坐骑契",
+    "type": "special",
+    "price": 0,
+    "effect": {},
+    "description": "在「野猪林传闻历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；陶知微入寨后凭契领骑。"
   }
 ]

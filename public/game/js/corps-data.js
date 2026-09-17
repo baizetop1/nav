@@ -1,5 +1,17 @@
 // 本作设定：108 位好汉各有自己的统领部队；名称并非原著编制考据。
-export const CORPS={wangjin:{"name":"教头枪棒营","arm":"infantry","profile":"assault"},hucheng:{"name":"扈庄接应营","arm":"infantry","profile":"medic"},luantingyu:{"name":"铁棒坚阵营","arm":"infantry","profile":"shield"},chaogai:{name:'东溪护义营',arm:'infantry',profile:'shield'},
+export const CORPS={zhanghuai:{"name":"村口盾队","arm":"infantry","profile":"shield"},
+heqi:{"name":"樵夫斧队","arm":"infantry","profile":"assault"},
+chengao:{"name":"渡口篙手","arm":"infantry","profile":"naval"},
+zhouaduo:{"name":"药篓救护队","arm":"infantry","profile":"medic"},
+zhaoqingmo:{"name":"押粮盾卫","arm":"infantry","profile":"shield"},
+liuyan:{"name":"林间猎弓队","arm":"ranged","profile":"archer"},
+dingyan:{"name":"乡学筹策队","arm":"ranged","profile":"scout"},
+majiu:{"name":"驿道快脚队","arm":"cavalry","profile":"scout"},
+shichanggeng:{"name":"老卒长枪队","arm":"infantry","profile":"assault"},
+shenqiuniang:{"name":"行军药帐队","arm":"infantry","profile":"medic"},
+gupingchuan:{"name":"护庄棍阵","arm":"infantry","profile":"shield"},
+taozhiwei:{"name":"行路筹谋队","arm":"ranged","profile":"scout"},
+wangjin:{"name":"教头枪棒营","arm":"infantry","profile":"assault"},hucheng:{"name":"扈庄接应营","arm":"infantry","profile":"medic"},luantingyu:{"name":"铁棒坚阵营","arm":"infantry","profile":"shield"},chaogai:{name:'东溪护义营',arm:'infantry',profile:'shield'},
   "songjiang": {
     "name": "忠义护旗军",
     "arm": "infantry",

@@ -457,16 +457,23 @@
                 "type": "integer"
               },
               "condition": {
-                "type": "object",
-                "required": [
-                  "flag"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "flag": {
-                    "type": "string"
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "required": [
+                      "flag"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "flag": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
                   }
-                }
+                ]
               }
             }
           },

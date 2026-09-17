@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.29.0';
-import { parseSave } from './save.js?v=0.29.3';
+import { hasOwn } from './utils.js?v=0.31.0';
+import { parseSave } from './save.js?v=0.31.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -23,7 +23,7 @@ const shape = {
   equipment: [fields('uid item plus hero locked')],
   progress: {flags: {'*': true}, stories: {'*': fields('status step')}, visited: true, actions: {'*': true}, claims: true, clears: {'*': true}},
   stats: {'*': true}, daily: {...fields('date ids claimed bonus events'), counters: {'*': true}, dungeons: {'*': true}},
-  recruit: {total: true, pity: fields('three four five'), fate: {'*': true}, lastResult: fields('hero target kind number inTeam tokens merit'), lastBatch:[fields('hero target kind number inTeam tokens merit')]},
+  recruit: {support:{version:true,dry:true,tickets:true,points:true,claims:true,week:fields('period work wins claimed')},total: true, pity: fields('three four five'), fate: {'*': true}, lastResult: fields('hero target kind number inTeam tokens merit'), lastBatch:[fields('hero target kind number inTeam tokens merit')]},
   battle: {expansion:{version:true,smoke:true,personal:true,combos:{'*':fields('count readyAt')}},realm:{version:true,medical:true,relic:true,veteran:true,paths:{'*':true},qualities:{'*':true}},metrics,depth:{version:true,terrain:true,drills:{'*':true},objective:fields('kind nextAt integrity waves')},orders:fields('version focus stance reserve readyAt'),expedition:fields('troops tactic arm fallen fieldRules'),...fields('mode elapsed itemReadyAt guest outcome log rules martial frontierRules'), team: [unit], enemy: [unit], context},
   scheme: {...fields('id turn outcome log'), values: fields('alert fatigue heat trust exposure'), context},
   event: fields('id'), journal: [fields('at text')]
