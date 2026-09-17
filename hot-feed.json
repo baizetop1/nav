@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-17T15:18:23.090Z",
+  "generatedAt": "2026-09-17T18:15:19.944Z",
   "intelligence": {
-    "updatedAt": "2026-09-17T15:18:23.090Z",
+    "updatedAt": "2026-09-17T18:15:19.944Z",
     "items": [
       {
         "id": "cn-item-9bb5db19fd34cbd8",
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-15T17:28:38.000Z",
         "badge": "HN",
-        "signal": "160 分 · 54 评论"
+        "signal": "358 分 · 135 评论"
       },
       {
-        "id": "cn-it-a51b29c239ea1163",
+        "id": "cn-it-c210ee6ef50289bf",
         "category": "cn",
-        "title": "天文学家发现已知最年轻系外行星：诞生不足百万年",
-        "url": "https://www.ithome.com/1/003/868.htm",
+        "title": "苹果 Apple Watch Series 12 与 Ultra 4 今日开售，2999/6499 元起",
+        "url": "https://www.ithome.com/1/003/874.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-17T15:17:09.000Z",
-        "summary": "IT之家 9 月 17 日消息，天文学家发现了有记录以来最年轻的系外行星，而且这个“新生儿”并不是通过最新观测设备发现的，而是隐藏在过去的观测数据档案中。 新发现的系外行星 Elias 2-24 b 质量与木星大致相当。尽管体型庞大，但它的年龄却小得惊人，目前估计还不到 100 万年，是迄今发现的最年轻行星。更特别的是，这颗位于太阳系之外的行星距离地球约 450 光年，目前仍处于孕育它的气体和尘埃盘中。 智利天体物理研究所（Instituto de Estudios Ast…",
+        "publishedAt": "2026-09-17T16:00:15.000Z",
+        "summary": "IT之家 9 月 18 日消息，苹果最新发布的 Apple Watch Series 12 与 Apple Watch Ultra 4 两款智能手表今日正式发售。 其中，Apple Watch Series 12 的 GPS 款国行起售价 2999 元（教育优惠 2699 元起），GPS + 蜂窝网络款 3799 元；Apple Watch Ultra 4 起售价 6499 元（教育优惠 5799 元起）。 京东 Apple / 苹果 Watch Series 12 智能手…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-g74q-6g2f-874x",
+        "id": "github-advisory-ghsa-vrf4-mx87-p53w",
         "category": "security",
-        "title": "Tina: [Broken Access Control] letting any TinaCloud user authorize against any self-hosted site",
-        "url": "https://github.com/advisories/GHSA-g74q-6g2f-874x",
+        "title": "libp2p: PeerStore accepts attacker-signed PeerRecords for a victim peer ID and stores certified attacker addresses",
+        "url": "https://github.com/advisories/GHSA-vrf4-mx87-p53w",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:59:00.000Z",
-        "summary": "## Summary `@tinacms/auth`'s `isAuthorized(req)` decides authorization by validating the caller's bearer token against `https://identity.tinajs.io/v2/apps/${req.query.clientID}/currentUser`, where the `clientID` comes from the request and …",
-        "badge": "CVE-2026-63506",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-17T18:01:38.000Z",
+        "summary": "### Summary `@libp2p/peer-store` accepts a signed `PeerRecord` whose envelope is signed by one peer but whose payload claims a different peer ID. The vulnerable `consumePeerRecord` path verifies the envelope signature, but does not verify …",
+        "badge": "CVE-2026-86039",
+        "signal": "HIGH · CVSS 8.2"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242790",
+        "id": "v2ex-1242825",
         "category": "dev",
-        "title": "vibe coding 讨论",
-        "url": "https://www.v2ex.com/t/1242790",
+        "title": "typeless 的每周额度降级到 2k 词,会员开不太起，有啥平替吗",
+        "url": "https://www.v2ex.com/t/1242825",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-17T11:22:50.000Z",
-        "summary": "现在使用 AI 进行开发的时候，大家还会去看代码吗？ 现在组内在搞 Loop ，AgentTeam ，一问实现方案根本讲不清楚，问某个功能的逻辑，根本讲不清楚。 大佬们在公司会遇到这个问题吗？未来的开发模式是 AI 全程接管，还是人也需要对 AI Coding 的结果进行掌控",
+        "publishedAt": "2026-09-17T17:00:42.000Z",
+        "summary": "这个语音输入做的确实挺好的，但是钱被 llm 厂商薅走太多了，一年 139 美刀有点不舍得",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-88b55197ce81caee",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "国家统计局数据显示，今年1‑8月全国二手房网签面积同比增10.6%，交易规模反超新房，楼市步入二手房存量时代。新房销售有所下滑，但二手房拉动整体市场总量保持平稳，一线城市二手房交易回暖，市场交易格局发生重大转变。",
         "badge": "热搜",
-        "signal": "7,809,596 热度"
+        "signal": "7,809,070 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76460",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49740834",
+        "id": "hn-49743097",
         "category": "dev",
-        "title": "I Don't Like LLMs",
-        "url": "https://martinfowler.com/articles/2026-dont-like-llms.html",
+        "title": "hister",
+        "url": "https://github.com/asciimoo/hister",
         "source": "Hacker News",
-        "publishedAt": "2026-09-17T13:57:07.000Z",
+        "publishedAt": "2026-09-17T16:25:37.000Z",
         "badge": "HN",
-        "signal": "61 分 · 37 评论"
+        "signal": "87 分 · 26 评论"
       },
       {
         "id": "cn-item-b43ceae104f973db",
@@ -137,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-84vh-m24q-wjjx",
+        "id": "github-advisory-ghsa-c3gv-825q-fvmp",
         "category": "security",
-        "title": "Pocketbase: Unhandled panic in worker goroutines",
-        "url": "https://github.com/advisories/GHSA-84vh-m24q-wjjx",
+        "title": "libp2p: Gossipsub StrictSign accepts attacker-signed messages as a victim RSA peer ID",
+        "url": "https://github.com/advisories/GHSA-c3gv-825q-fvmp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:58:42.000Z",
-        "summary": "PocketBase already has builtin panic-recover middleware for the regular requests handling but it doesn't cover panics in internal child/worker goroutines which in some situations could cause termination of the server process. To prevent th…",
-        "badge": "CVE-2026-82410",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-17T17:29:31.000Z",
+        "summary": "### Summary `@libp2p/gossipsub` `StrictSign` validation does not bind a supplied message public key to the claimed `from` peer ID when `from` is an RSA-style peer ID that does not inline its public key. An attacker can set `from` to a vict…",
+        "badge": "CVE-2026-86038",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-b0366f9850a9d166",
@@ -158,23 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1242787",
+        "id": "v2ex-1242790",
         "category": "dev",
-        "title": "土区礼品卡这价格真是越来越低了，之前在 kryptomate 都是 80RMB 多才 500 里拉",
-        "url": "https://www.v2ex.com/t/1242787",
+        "title": "vibe coding 讨论",
+        "url": "https://www.v2ex.com/t/1242790",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-17T11:05:16.000Z",
+        "publishedAt": "2026-09-17T11:22:50.000Z",
+        "summary": "现在使用 AI 进行开发的时候，大家还会去看代码吗？ 现在组内在搞 Loop ，AgentTeam ，一问实现方案根本讲不清楚，问某个功能的逻辑，根本讲不清楚。 大佬们在公司会遇到这个问题吗？未来的开发模式是 AI 全程接管，还是人也需要对 AI Coding 的结果进行掌控",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-007ccf457ad029e5",
+        "id": "cn-it-e835f7337d158fc9",
         "category": "cn",
-        "title": "何小鹏称做机器人难度是造车的 20 倍，小鹏机器人最快今年四季度实现能力跳跃",
-        "url": "https://www.ithome.com/1/003/867.htm",
+        "title": "苹果 AirPods 5 耳机今日正式开售：999 元起标配主动降噪，部分地区可享国补",
+        "url": "https://www.ithome.com/1/003/873.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-17T15:15:45.000Z",
-        "summary": "IT之家 9 月 17 日消息，据新浪科技报道，小鹏集团 CEO 何小鹏今天在 G9L 汽车发布会结束后，与媒体进行对话。他在谈到机器人业务时透露， 做机器人的难度大约相当于造车的 20 倍 。 何小鹏认为：“基本上我们机器人的硬件、软件、设计及供应链都是我们自己的。过去我一直不愿意把机器人拿出来，主要是因为不能量产，市面上很多机器人能力演示都是通过剪辑之后放出来的。” 他还表示，小鹏机器人从研发到量产走得非常痛苦，但也快乐。他们已经逐步开始量产，等到（今年）四季度、明年的…",
+        "publishedAt": "2026-09-17T16:00:14.000Z",
+        "summary": "IT之家 9 月 18 日消息，苹果全新的 AirPods 5 无线耳机今日正式开售，官方定价 999 元起，配备无线充电盒的版本售价 1149 元。 IT之家注意到，北京、江苏、大连、吉林（收货地址）可享 15% 国家补贴，以旧换新补贴至高 220 元。 京东 苹果 AirPods 5（支持主动降噪） 搭配 USB-C 充电盒 蓝牙耳机 适用 iPhone / iPad / Mac 999 元 直达链接 京东 苹果 AirPods 5（支持主动降噪）搭配无线充电盒 蓝牙耳…",
         "badge": "IT之家"
       },
       {
@@ -199,34 +200,34 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49737849",
+        "id": "hn-49742355",
         "category": "dev",
-        "title": "One Year of Sponsored Servo Development",
-        "url": "https://servo.org/blog/2026/09/15/one-year-of-sponsorship/",
+        "title": "CrowdSec Source Code Leak",
+        "url": "https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure",
         "source": "Hacker News",
-        "publishedAt": "2026-09-17T08:13:54.000Z",
+        "publishedAt": "2026-09-17T15:34:01.000Z",
         "badge": "HN",
-        "signal": "248 分 · 110 评论"
+        "signal": "50 分 · 22 评论"
       },
       {
-        "id": "cn-baidu-78487073320f28e8",
+        "id": "cn-baidu-98ccdb104aa58d66",
         "category": "cn",
-        "title": "超86万中小学教师有研究生学历",
-        "url": "https://www.baidu.com/s?wd=%E8%B6%8586%E4%B8%87%E4%B8%AD%E5%B0%8F%E5%AD%A6%E6%95%99%E5%B8%88%E6%9C%89%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E5%8E%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "苹果最贵手机还没开售就翻车了吗",
+        "url": "https://www.baidu.com/s?wd=%E8%8B%B9%E6%9E%9C%E6%9C%80%E8%B4%B5%E6%89%8B%E6%9C%BA%E8%BF%98%E6%B2%A1%E5%BC%80%E5%94%AE%E5%B0%B1%E7%BF%BB%E8%BD%A6%E4%BA%86%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近年来，在中小学专任教师中，具有硕博士学历的老师数量快速增加。整体来看，具有研究生学历的中小学教师已经超过了86万人。",
+        "summary": "苹果首款折叠屏手机iPhone Duo尚未发售就舆论不断。科技博主“影视飓风”Tim在9月16日发布的视频中提到了iPhone Duo的发热和可靠性问题，同时，反掰iPhone Duo发现闪屏问题也迅速引发争议。",
         "badge": "热搜",
-        "signal": "7,713,434 热度"
+        "signal": "7,713,816 热度"
       },
       {
-        "id": "github-advisory-ghsa-9rm7-3qhh-h2mc",
+        "id": "github-advisory-ghsa-7grg-jcf7-rpmx",
         "category": "security",
-        "title": "Wire: Unauthenticated decoder crash via 32-bit length integer overflow in ByteArrayProtoReader32 (incomplete fix of CVE-2026-45799)",
-        "url": "https://github.com/advisories/GHSA-9rm7-3qhh-h2mc",
+        "title": "AsyncHttpClient's unbounded HTTP/1.1 response decompression enables a decompression-bomb denial of service",
+        "url": "https://github.com/advisories/GHSA-7grg-jcf7-rpmx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:52:52.000Z",
-        "summary": "Wire's protobuf decoders did not consistently validate attacker-controlled length-delimited sizes against the current reader bounds before computing cursor, limit, or pointer positions. In the Kotlin runtime, `ProtoAdapter.decode(ByteArray…",
-        "badge": "CVE-2026-63126",
+        "publishedAt": "2026-09-17T17:18:56.000Z",
+        "summary": "### Impact With automatic response decompression enabled (the default), the HTTP/1.1 path decompresses response bodies with no limit on the total output size. A hostile or compromised server, or an attacker who can change a response in tra…",
+        "badge": "CVE-2026-85721",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -239,15 +240,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242782",
+        "id": "v2ex-1242787",
         "category": "dev",
-        "title": "OpenAI 自曝 AI“黑历史”，外人却又翻出更多“旧账”",
-        "url": "https://www.v2ex.com/t/1242782",
+        "title": "土区礼品卡这价格真是越来越低了，之前在 kryptomate 都是 80RMB 多才 500 里拉",
+        "url": "https://www.v2ex.com/t/1242787",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-17T10:53:17.000Z",
-        "summary": "第三份报告里，一个内部模型要查询加州某县三个行业、三个年份的男性收入数据。正常接口受阻后，它尝试注册临时邮箱，又去公开代码仓库寻找泄露的 API 密钥。模型找到了一枚能够通过认证的密钥，却仍没拿到目标数据，最后直接编造了九个数字，并声称自己是从指定网站的图表中抄录出来的。 第四份报告的动机不太一样。一个未发布模型已经用 Python 查到了面积超过 500 万平方米的湖泊数据，但任务还要求浏览器引用。浏览器既打不开本地文件，也无法把 Python 结果当成网页来源。模型于是…",
+        "publishedAt": "2026-09-17T11:05:16.000Z",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-item-c8ccacdc52997be0",
@@ -281,35 +281,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49740330",
+        "id": "hn-49742353",
         "category": "dev",
-        "title": "I had Gemini train its own replacement for $9",
-        "url": "https://www.petervijeh.com/projects/reddit-ner",
+        "title": "Rate limits on GitLab.com are changing",
+        "url": "https://about.gitlab.com/blog/rate-limit-change-2026/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-17T13:17:16.000Z",
+        "publishedAt": "2026-09-17T15:33:54.000Z",
         "badge": "HN",
-        "signal": "69 分 · 22 评论"
+        "signal": "87 分 · 76 评论"
       },
       {
-        "id": "cn-it-db0d64c718f08fd0",
+        "id": "cn-it-dc985e33665b14af",
         "category": "cn",
-        "title": "米哈游法务部：盗用个人信息批量注册账号非法牟利，游戏黑灰产团伙成员被判实刑",
-        "url": "https://www.ithome.com/1/003/864.htm",
+        "title": "苹果 iPhone 18 Pro/Max 系列今日正式开售，国行 9999 元起",
+        "url": "https://www.ithome.com/1/003/872.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-17T15:05:54.000Z",
-        "summary": "IT之家 9 月 17 日消息，米哈游法务部今日发文，宣布米哈游日前协助上海警方成功侦破一起游戏账号非法售卖案， 全链条摧毁一个专业“造号、养号、卖号”的犯罪团伙 。 目前此案迎来一审判决，判决已生效。法院判决，本案被告张某、姚某犯非法获取计算机信息系统数据罪，分别被判处有期徒刑三年，并处罚金；犯侵犯公民个人信息罪，分别被判处有期徒刑三年，并处罚金。 最终，法院决定张某、姚某分别执行有期徒刑三年十个月，并处罚金人民币六万元 。 本案的成功侦破，不仅直接捣毁了一个极具代表性的…",
+        "publishedAt": "2026-09-17T16:00:14.000Z",
+        "summary": "IT之家 9 月 18 日消息，苹果 iPhone 18 Pro 与 iPhone 18 Pro Max 两款机型将于 9 月 18 日正式开售，而如果是在苹果官网参与预购的用户也会在今天收到包裹。 苹果 iPhone 18 Pro 国行起售价为 9999 元，iPhone 18 Pro Max 为 10999 元，均为 256GB 存储起步。 京东 苹果【需签收激活】iPhone 18 Pro 256GB 勃艮第酒红色 支持移动联通电信 5G 双卡 9999 元 直达链接…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-jh4v-gfqj-7rhx",
+        "id": "github-advisory-ghsa-mggc-4xg6-vcxf",
         "category": "security",
-        "title": "RabbitMQ Java client has frame-level OOM: Math.min(maxInboundMessageBodySize, 0) defeats frame size enforcement",
-        "url": "https://github.com/advisories/GHSA-jh4v-gfqj-7rhx",
+        "title": "SSH.NET: ScpClient allows server-side RCE via default SCP path handling",
+        "url": "https://github.com/advisories/GHSA-mggc-4xg6-vcxf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:52:21.000Z",
-        "summary": "## Vulnerability In `AMQConnection.java` (line 435-436), after `Connection.Tune` negotiation, the frame-max limit is set via: ```java _frameHandler.setFrameMax( Math.min(this.maxInboundMessageBodySize, frameMax)); ``` When `frameMax = 0` (…",
-        "badge": "CVE-2026-75516",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-17T17:18:01.000Z",
+        "summary": "## Summary Default SCP remote-path handling places caller-supplied paths into the command that runs scp on the server. On a shell-based server that command is interpreted by a shell, so an attacker-influenced path that is not quoted to sui…",
+        "badge": "CVE-2026-85756",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -321,13 +321,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1242778",
+        "id": "v2ex-1242782",
         "category": "dev",
-        "title": "太难了， 2 个月做了 7 个桌面应用， 0 收入",
-        "url": "https://www.v2ex.com/t/1242778",
+        "title": "OpenAI 自曝 AI“黑历史”，外人却又翻出更多“旧账”",
+        "url": "https://www.v2ex.com/t/1242782",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-17T10:23:38.000Z",
-        "summary": "只看到 Token 烧得开心 😂",
+        "publishedAt": "2026-09-17T10:53:17.000Z",
+        "summary": "第三份报告里，一个内部模型要查询加州某县三个行业、三个年份的男性收入数据。正常接口受阻后，它尝试注册临时邮箱，又去公开代码仓库寻找泄露的 API 密钥。模型找到了一枚能够通过认证的密钥，却仍没拿到目标数据，最后直接编造了九个数字，并声称自己是从指定网站的图表中抄录出来的。 第四份报告的动机不太一样。一个未发布模型已经用 Python 查到了面积超过 500 万平方米的湖泊数据，但任务还要求浏览器引用。浏览器既打不开本地文件，也无法把 Python 结果当成网页来源。模型于是…",
         "badge": "程序员",
         "signal": "2 回复"
       },
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "记者16日从国家粮食和物资储备局获悉，目前，夏粮旺季收购接近尾声，秋粮收购各项准备工作已基本就绪。全国累计收购小麦1亿吨、早籼稻1200万吨，进度略快于上年。",
         "badge": "热搜",
-        "signal": "7,616,903 热度"
+        "signal": "7,617,406 热度"
       },
       {
         "id": "cisa-kev-cve-2026-84869",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49724881",
+        "id": "hn-49742714",
         "category": "dev",
-        "title": "Nvidia announces native GPU programming in Rust",
-        "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+        "title": "Whoisinspace.com/",
+        "url": "https://whoisinspace.com",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T11:15:53.000Z",
+        "publishedAt": "2026-09-17T15:59:37.000Z",
         "badge": "HN",
-        "signal": "852 分 · 337 评论"
+        "signal": "85 分 · 34 评论"
       },
       {
         "id": "cn-item-dfa57f838aacea4a",
@@ -382,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-rfx3-98h7-v3xp",
+        "id": "github-advisory-ghsa-w3f4-8pj2-599w",
         "category": "security",
-        "title": "Marten's LINQ provider has SQL injection via unescaped string literals",
-        "url": "https://github.com/advisories/GHSA-rfx3-98h7-v3xp",
+        "title": "Grav: Path Traversal in ImageMedium::watermark() — arbitrary file disclosure via publicly-cached images",
+        "url": "https://github.com/advisories/GHSA-w3f4-8pj2-599w",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:51:41.000Z",
-        "summary": "Several code paths in Marten's LINQ provider and tenant-management internals interpolated a runtime, potentially attacker-influenced value into generated SQL as a single-quoted string literal without escaping or parameterization. A value c…",
-        "badge": "CVE-2026-75513",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-17T17:16:56.000Z",
+        "summary": "Reported by: Nihad Huseynli (@nihaddhuseynli (https://github.com/nihaddhuseynli)) — nihadd.huseynli@gmail.com ▎ Note: I attempted to report this via security@getgrav.org first, per SECURITY.md, but the email bounced with 550 5.1.1 Address …",
+        "badge": "CVE-2026-69089",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-4410122683c56925",
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1242771",
+        "id": "v2ex-1242778",
         "category": "dev",
-        "title": "最近突然发现，程序员和美团骑手还真是绝配",
-        "url": "https://www.v2ex.com/t/1242771",
+        "title": "太难了， 2 个月做了 7 个桌面应用， 0 收入",
+        "url": "https://www.v2ex.com/t/1242778",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-17T09:37:11.000Z",
-        "summary": "vibe coding 过程中还能跑几单 （🤣）",
+        "publishedAt": "2026-09-17T10:23:38.000Z",
+        "summary": "只看到 Token 烧得开心 😂",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-a4878b2fa3e9b0ff",
+        "id": "cn-it-8c51952e04a86106",
         "category": "cn",
-        "title": "Epic 喜加二：《心灵警探》《将军对决》游戏免费领",
-        "url": "https://www.ithome.com/1/003/863.htm",
+        "title": "因排放法规限制，本田讴歌燃油 SUV 车型 MDX Type S 将在美国停产",
+        "url": "https://www.ithome.com/1/003/871.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-17T15:00:18.000Z",
-        "summary": "IT之家 9 月 17 日消息， Epic Game Store 本周送出的游戏是《心灵警探》《将军对决》 ，下周送出的游戏是《Astrea Six Sided Oracles》《钢铁指挥官》。 领取链接： 《心灵警探》 ， 《Shogun Showdown》 IT之家附《心灵警探》游戏简介如下： 《心灵警探》是一款非线性的悬疑侦探游戏。本作糅合了故事驱动式冒险与实时三消解谜玩法。玩家将扮演声名在外的心灵警探，能够进入嫌疑人的心灵，揭开他们的秘密并看破他们的谎言。 本作最初…",
+        "publishedAt": "2026-09-17T15:49:10.000Z",
+        "summary": "IT之家 9 月 17 日消息，据汽车媒体 AutoEvolution 今天报道，本田旗下豪华品牌讴歌计划在美国停产 2026 款 MDX Type S 车型， 原因为当地排放法规限制 。 讴歌发言人对此表示，上述停产计划确有其事，公司正在等待美国排放法规进一步更新，因此目前无法给出具体的复产时间表。 据介绍，讴歌 MDX Type S 搭载 3.0 升涡轮增压 V6 发动机，最大马力可达 355 匹，峰值扭矩 354 磅 · 英尺（480 牛 · 米），匹配 10 速自动…",
         "badge": "IT之家"
       },
       {
@@ -444,14 +444,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49737787",
+        "id": "hn-49743483",
         "category": "dev",
-        "title": "CCC invites all model citizens to 40C3",
-        "url": "https://events.ccc.de/en/2026/09/12/40c3-model-citizens/",
+        "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+        "url": "https://arxiv.org/abs/2609.18842",
         "source": "Hacker News",
-        "publishedAt": "2026-09-17T08:03:54.000Z",
+        "publishedAt": "2026-09-17T16:55:14.000Z",
         "badge": "HN",
-        "signal": "162 分 · 42 评论"
+        "signal": "14 分 · 2 评论"
       },
       {
         "id": "cn-baidu-cb08d2eb7779c71d",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "近日，山西一小伙举办极简婚礼引发关注。婚礼无司仪，婚服仅29.9元网购，婚车用自家车，朋友兼职摄像。小伙表示要把钱花在刀刃上，省下的钱用于旅游。",
         "badge": "热搜",
-        "signal": "7,522,005 热度"
+        "signal": "7,520,844 热度"
       },
       {
-        "id": "github-advisory-ghsa-q69g-4hcv-6jg4",
+        "id": "github-advisory-ghsa-7pgq-cr25-xvc8",
         "category": "security",
-        "title": "@cyclonedx/cyclonedx-npm: Shell Injection via Unsanitized --workspace Argument on Windows",
-        "url": "https://github.com/advisories/GHSA-q69g-4hcv-6jg4",
+        "title": "Grav: Incomplete callable validation in blueprint dynamic fields allows arbitrary static method invocation and file disclosure",
+        "url": "https://github.com/advisories/GHSA-7pgq-cr25-xvc8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T14:50:40.000Z",
-        "summary": "## Summary A **Windows-specific** command injection vulnerability exists in `@cyclonedx/cyclonedx-npm` when the CLI is invoked with the `--workspace ` option. User-supplied `--workspace` values can be passed to a shell command without prop…",
-        "badge": "CVE-2026-71538",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-17T17:16:39.000Z",
+        "summary": "### Summary Grav CMS's blueprint dynamic-field callable guard can be bypassed with a fully-qualified `Class::method` string, letting an account with only page-editing rights (`admin.pages`, not super-admin) plant a directive in a page's fo…",
+        "badge": "CVE-2026-69088",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1242760",
+        "id": "v2ex-1242771",
         "category": "dev",
-        "title": "v2ex 帖子排序机制是什么？过去的帖子顶不上来？",
-        "url": "https://www.v2ex.com/t/1242760",
+        "title": "最近突然发现，程序员和美团骑手还真是绝配",
+        "url": "https://www.v2ex.com/t/1242771",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-17T09:01:31.000Z",
-        "summary": "https://v2ex.com/t/1063732",
+        "publishedAt": "2026-09-17T09:37:11.000Z",
+        "summary": "vibe coding 过程中还能跑几单 （🤣）",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "15 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 33996,
+        "stars": 34376,
         "starsToday": 3290
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 9707,
+        "stars": 10235,
         "starsToday": 3606
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 95917,
+        "stars": 96012,
         "starsToday": 680
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/Tencent/BrowserSkill",
         "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
         "language": "TypeScript",
-        "stars": 3815,
+        "stars": 3991,
         "starsToday": 1350
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/alphaXiv/OpenResearch",
         "description": "Turn your coding agents into research agents",
         "language": "Rust",
-        "stars": 4946,
+        "stars": 5031,
         "starsToday": 940
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/anthropics/claude-code",
         "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "language": "TypeScript",
-        "stars": 145833,
+        "stars": 145896,
         "starsToday": 538
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 78279,
+        "stars": 78362,
         "starsToday": 912
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 24461,
+        "stars": 24493,
         "starsToday": 287
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/Tencent/WeKnora",
         "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
         "language": "Go",
-        "stars": 26100,
+        "stars": 26192,
         "starsToday": 1123
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/abue-ammar/tinycast",
         "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
         "language": "Swift",
-        "stars": 5985,
+        "stars": 6052,
         "starsToday": 738
       }
     ],
-    "updatedAt": "2026-09-17T15:18:23.090Z"
+    "updatedAt": "2026-09-17T18:15:19.944Z"
   }
 }
