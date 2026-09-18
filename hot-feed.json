@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-18T15:01:48.410Z",
+  "generatedAt": "2026-09-18T18:29:54.202Z",
   "intelligence": {
-    "updatedAt": "2026-09-18T15:01:48.410Z",
+    "updatedAt": "2026-09-18T18:29:54.202Z",
     "items": [
       {
         "id": "cn-item-b60403c9e22b7f1d",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-58704",
+        "id": "cisa-kev-cve-2025-39964",
         "category": "security",
-        "title": "Google Pixel：Google Pixel Improper Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58704",
+        "title": "Linux Kernel：Linux Kernel Race Condition Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39964",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-16T00:00:00.000Z",
-        "summary": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
-        "badge": "CVE-2026-58704",
-        "signal": "已遭利用 · 整改期限 2026-09-19"
+        "publishedAt": "2026-09-18T00:00:00.000Z",
+        "summary": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.",
+        "badge": "CVE-2025-39964",
+        "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
         "id": "ai-openai-d22acfa5d0cc1d09",
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49753878",
+        "id": "hn-49754785",
         "category": "dev",
-        "title": "An Empirical Study of Harness Design for Coding Agents",
-        "url": "https://arxiv.org/abs/2609.20804",
+        "title": "Cloudflare Quick Tunnels",
+        "url": "https://try.cloudflare.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-18T13:06:30.000Z",
+        "publishedAt": "2026-09-18T14:18:41.000Z",
         "badge": "HN",
-        "signal": "90 分 · 13 评论"
+        "signal": "294 分 · 140 评论"
       },
       {
-        "id": "cn-it-2ef47b94d47244af",
+        "id": "cn-it-71230b55cf21cd25",
         "category": "cn",
-        "title": "2026 巴黎车展最大展台：Stellantis 将展出标致、雪铁龙、零跑各品牌 60 余款车型",
-        "url": "https://www.ithome.com/1/004/339.htm",
+        "title": "消息称特斯拉针对 Optimus 机器人业务启动量产审厂，多家供应链企业回应",
+        "url": "https://www.ithome.com/1/004/343.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-18T14:51:18.000Z",
-        "summary": "IT之家 9 月 18 日消息，2026 巴黎车展将于 10 月 12 日至 18 日期间举行。Stellantis 集团 17 日宣布，将在本届车展展出 来自 8 个品牌的 9 款概念车及 60 余款车型 ，集团展台面积超过 5000 平方米，是本届车展 拥有最大展台面积 的参展商。 集团旗下参展的品牌包含 阿尔法 · 罗密欧、雪铁龙、DS、菲亚特、蓝旗亚、零跑汽车、欧宝和标致 ；全球首发车型包括豪华紧凑型 SUV DS N°7、全新菲亚特 Grizzly、标志着蓝旗亚重…",
+        "publishedAt": "2026-09-18T15:28:54.000Z",
+        "summary": "IT之家 9 月 18 日消息，日前，21 世纪经济报道援引产业链人士消息称，特斯拉相关团队已于 9 月 16 日落地宁波，并于 17 日开启新一轮针对旗下机器人业务的量产审厂。据称此轮审厂将 实质导向机器人 Optimus 的量产 ，已向供应链企业下达相关订单。 按计划，特斯拉今年将下线 约 5 万台 Optimus 机器人 ，在世界各地特斯拉超级工厂中部署。不过，现阶段普通消费者仍无购买渠道。 消息称特斯拉去年 9 月在华曾启动一轮机器人审厂工作，涉及的公司包括 拓普集…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-m6c8-jcw2-5r25",
+        "id": "github-advisory-ghsa-jgh3-fggc-mcpm",
         "category": "security",
-        "title": "Opencast: Stored XSS in Paella player via WebVTT/DFXP caption cue text",
-        "url": "https://github.com/advisories/GHSA-m6c8-jcw2-5r25",
+        "title": "Obot: Server-Side Request Forgery via remote MCP server URL",
+        "url": "https://github.com/advisories/GHSA-jgh3-fggc-mcpm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T13:11:59.000Z",
-        "summary": "## Summary The Opencast Paella player renders caption cue text into `innerHTML` without escaping. The captions canvas clears `_captionsContainer.innerHTML` and then appends each active cue with `_captionsContainer.innerHTML += cue`, so HTM…",
-        "badge": "CVE-2026-77615",
-        "signal": "HIGH · CVSS 8.7"
+        "publishedAt": "2026-09-18T17:59:46.000Z",
+        "summary": "## Summary In affected versions, the URL of a remote MCP server is attacker-controlled at registration and is fetched server-side with no validation of the destination. There is no guard against loopback, link-local, RFC1918 private ranges…",
+        "badge": "GHSA-JGH3-FGGC-MCPM",
+        "signal": "HIGH · CVSS 7.6"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243075",
+        "id": "v2ex-1243092",
         "category": "dev",
-        "title": "有没有适合 CPU 的特小型的用于日常对话的这种小模型？",
-        "url": "https://www.v2ex.com/t/1243075",
+        "title": "兄弟们，赛博鸡蛋香吗 🧺🥚🥚🥚",
+        "url": "https://www.v2ex.com/t/1243092",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T13:51:22.000Z",
-        "summary": "比如给我一个关于买菜的简单的场景，中等复杂的和比较复杂的对话场景;比如给我一个问路的简单，中等和复杂的对话. 或者更进一步给我一个青蛙与老鼠的小故事",
+        "publishedAt": "2026-09-18T16:45:12.000Z",
+        "summary": "哎，这下大家都是一起脱裤子了 🐶🐶🐶",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-fa6b792c0367bb68",
@@ -94,18 +94,18 @@
         "source": "百度热搜",
         "summary": "今年中秋临近，记者走访北京市场发现，月饼企业纷纷推出低糖、低GI、药食同源等健康概念产品。此前高油高糖月饼常被诟病，73%消费者优先选择健康产品。如今部分减糖月饼销量飙升2倍，健康化已从风口变成标配，将倒逼行业迎来新一轮洗牌。",
         "badge": "热搜",
-        "signal": "7,808,453 热度"
+        "signal": "7,809,407 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-76460",
+        "id": "cisa-kev-cve-2026-53266",
         "category": "security",
-        "title": "Cisco Identity Services Engine：Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76460",
+        "title": "Linux Kernel：Linux Kernel Out-of-Bounds Write Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53266",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-16T00:00:00.000Z",
-        "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affec…",
-        "badge": "CVE-2026-76460",
-        "signal": "已遭利用 · 整改期限 2026-09-19"
+        "publishedAt": "2026-09-18T00:00:00.000Z",
+        "summary": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The…",
+        "badge": "CVE-2026-53266",
+        "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
         "id": "ai-hugging-face-a1d018f16fad79f9",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49755024",
+        "id": "hn-49757050",
         "category": "dev",
-        "title": "I Vibed a Proof of Conway's Conjecture",
-        "url": "https://overreacted.io/how-i-vibed-a-proof-of-conways-conjecture/",
+        "title": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
+        "url": "https://donjon.ledger.com/blog/rp2350-secure-debug-laser-fault-injection/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-18T14:36:10.000Z",
+        "publishedAt": "2026-09-18T16:54:18.000Z",
         "badge": "HN",
-        "signal": "27 分 · 6 评论"
+        "signal": "53 分 · 11 评论"
       },
       {
         "id": "cn-item-92adcbe095853688",
@@ -137,14 +137,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-r94f-hx44-8jqf",
+        "id": "github-advisory-ghsa-xwmw-prc4-v3cr",
         "category": "security",
-        "title": "Grav CMS vulnerable to remote code execution via .zip file upload",
-        "url": "https://github.com/advisories/GHSA-r94f-hx44-8jqf",
+        "title": "Obot: OAuth Dynamic Client Registration Enables API Token Theft via Audience Confusion",
+        "url": "https://github.com/advisories/GHSA-xwmw-prc4-v3cr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:45:57.000Z",
-        "summary": "### Summary A logged-in user can run any command on the server. A settings field can fill itself by calling one of Grav's built-in routines, and a safety check is supposed to allow only harmless ones. The check only recognises a routine wh…",
-        "badge": "CVE-2026-72819",
+        "publishedAt": "2026-09-18T17:59:35.000Z",
+        "summary": "## Summary In affected versions, an unauthenticated attacker could register an OAuth client with an arbitrary external redirect URI, and the authorization flow would auto-complete without a consent screen. If a logged-in victim visited a c…",
+        "badge": "GHSA-XWMW-PRC4-V3CR",
         "signal": "HIGH · CVSS 8.8"
       },
       {
@@ -158,35 +158,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243054",
+        "id": "v2ex-1243088",
         "category": "dev",
-        "title": "这是不是代表没被 zcode 坑到？",
-        "url": "https://www.v2ex.com/t/1243054",
+        "title": "申请成功的龟壳可以 DD 重装系统吗？",
+        "url": "https://www.v2ex.com/t/1243088",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T11:04:35.000Z",
-        "summary": "让 zocde 里的 glm 查的 app.asar 中存在 RepoSnapshotSidecarService 类和 /api/v1/snapshot/upload-credential 端点：每条 prompt 前触发捕获 → 打包 workspace → 信封加密 → 向 zcode.z.ai 要凭证 → 直传阿里云 OSS 。 反编译的调用链里唯一门控是登录 token ，全程不读 repoSnapshotIndexingEnabled / optimizeAge…",
+        "publishedAt": "2026-09-18T16:30:17.000Z",
+        "summary": "会不会导致读取不到活跃数据直接判定为不活跃呢",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-bf95dbf83dc91a69",
+        "id": "cn-it-0347199acdf80e81",
         "category": "cn",
-        "title": "消息称 vivo 新开 7 英寸大屏 + 万级大电池方案，预计为中端线新机",
-        "url": "https://www.ithome.com/1/004/338.htm",
+        "title": "又跳票了：马斯克 SpaceX 星舰计划最早 9 月 28 日第 14 次试飞",
+        "url": "https://www.ithome.com/1/004/342.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-18T14:32:00.000Z",
-        "summary": "IT之家 9 月 18 日消息，博主 @数码闲聊站 昨晚爆料，vivo 最近也开了一块 7 英寸大屏 + 万级大电池方案，不过规格看起来是给中端线，旗舰线再等等。 IT之家注意到，该博主曾在今年 6 月爆料有 3 家主流品牌的迭代线新机会上 7 英寸，涵盖中端线和旗舰线，有直屏和等深四曲屏，至高有旗舰芯， 至高有 10000mAh 级大电池 ，至高有潜望长焦。另外还有头部大厂也在评估 7 英寸。 今年 7 月，该博主还爆料某厂中端线新机搭载 7 英寸超大直屏、天玑 8 系处…",
+        "publishedAt": "2026-09-18T15:13:04.000Z",
+        "summary": "IT之家 9 月 18 日消息，北京时间今天（18 日）凌晨，SpaceX 通过 X 平台发帖宣布：“目前计划 最早于 9 月 28 日 （周一）执行星舰第 14 次飞行任务，具体时间尚待监管部门批准。” 就在 16 日，SpaceX 宣布将于当地时间 9 月 22 日实施星舰第 14 次试飞。这次任务中，星舰上面级将首次尝试进入地球轨道。据IT之家了解，如果任务顺利，这将成为星舰项目的一项重要进展。SpaceX 此前多次试飞星舰，但上面级尚未真正进入环绕地球运行的轨道。 …",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-87886",
+        "id": "cisa-kev-cve-2026-58704",
         "category": "security",
-        "title": "Acronis Backup：Acronis Backup Incorrect Default Permissions Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87886",
+        "title": "Google Pixel：Google Pixel Improper Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58704",
         "source": "CISA KEV",
         "publishedAt": "2026-09-16T00:00:00.000Z",
-        "summary": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
-        "badge": "CVE-2026-87886",
+        "summary": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
+        "badge": "CVE-2026-58704",
         "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49753179",
+        "id": "hn-49748553",
         "category": "dev",
-        "title": "Bend 2 and the Vibe-Coding Trap",
-        "url": "https://blog.liampwll.com/posts/bend_vibe_coding/",
+        "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
+        "url": "https://cactuscompute.com/needle",
         "source": "Hacker News",
-        "publishedAt": "2026-09-18T12:03:55.000Z",
+        "publishedAt": "2026-09-18T00:11:44.000Z",
         "badge": "HN",
-        "signal": "251 分 · 168 评论"
+        "signal": "73 分 · 29 评论"
       },
       {
         "id": "cn-baidu-3e9cec3beec4ad3a",
@@ -217,18 +217,18 @@
         "source": "百度热搜",
         "summary": "近日，新加坡铁人三项运动员展示亚运房间，掀开床板惊讶发现床是纸板做的，并称其很坚固。此外，其发现自行车架也是纸板做的。",
         "badge": "热搜",
-        "signal": "7,712,442 热度"
+        "signal": "7,714,481 热度"
       },
       {
-        "id": "github-advisory-ghsa-xhfv-7758-r9hx",
+        "id": "github-advisory-ghsa-9jjc-fw8x-fmwx",
         "category": "security",
-        "title": "Grav: Missing admin.super guard on core group blueprint access field allows admin.users operator to escalate to super-admin",
-        "url": "https://github.com/advisories/GHSA-xhfv-7758-r9hx",
+        "title": "io.moquette:moquette-broker has a Missing Authorization issue",
+        "url": "https://github.com/advisories/GHSA-9jjc-fw8x-fmwx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:45:15.000Z",
-        "summary": "## Summary The core Flex group blueprint `system/blueprints/user/group.yaml` (access field, lines 48-55) omits the `security@: admin.super` field guard that its sibling account blueprint carries (`account.yaml:131/138/150`, added by the CV…",
-        "badge": "CVE-2026-75837",
-        "signal": "HIGH · CVSS 9.1"
+        "publishedAt": "2026-09-18T17:58:39.000Z",
+        "summary": "## Summary Moquette MQTT Broker fails to enforce ACL write permission checks when publishing Will (Last Will and Testament) messages on behalf of disconnected clients. All normal PUBLISH paths (`receivedPublishQos0`, `receivedPublishQos1`,…",
+        "badge": "CVE-2026-85058",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-85052f9befba2c4e",
@@ -240,13 +240,13 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243046",
+        "id": "v2ex-1243087",
         "category": "dev",
-        "title": "Zcode 给我了两次重置额度？",
-        "url": "https://www.v2ex.com/t/1243046",
+        "title": "今天新出的挺有意思的 AI 模型： TypeSafe Jev",
+        "url": "https://www.v2ex.com/t/1243087",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T10:33:05.000Z",
-        "summary": "就刚刚给的",
+        "publishedAt": "2026-09-18T16:19:51.000Z",
+        "summary": "最近在整理 LLM API Prices https://llmapiprices.com/ 的模型数据时，关注到了 TypeSafe AI 推出的 Jev 。TypeSafe AI 推出的 Jev ，思路和 GPT 、Claude 这类大模型不太一样。 它不主打聊天和长文本生成，而是专门做结构化决策：你提前定义好选项，Jev 返回每个选项的评分和概率。 比如： PASS 0.92 FAIL 0.06 NEEDS_REVIEW 0.02 这种方式特别适合 AI Agent …",
         "badge": "程序员",
         "signal": "1 回复"
       },
@@ -261,15 +261,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-76461",
+        "id": "cisa-kev-cve-2026-76460",
         "category": "security",
-        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway SQL Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461",
+        "title": "Cisco Identity Services Engine：Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76460",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-14T00:00:00.000Z",
-        "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
-        "badge": "CVE-2026-76461",
-        "signal": "已遭利用 · 整改期限 2026-09-17"
+        "publishedAt": "2026-09-16T00:00:00.000Z",
+        "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affec…",
+        "badge": "CVE-2026-76460",
+        "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
         "id": "ai-openai-f3899afd4d6a0a2d",
@@ -282,35 +282,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49753211",
+        "id": "hn-49755160",
         "category": "dev",
-        "title": "I don't like passkeys",
-        "url": "https://hawksley.dev/blog/i-dont-like-passkeys",
+        "title": "North Korean nuclear test sets off years of earthquakes",
+        "url": "https://www.science.org/content/article/north-korean-nuclear-test-sets-years-earthquakes",
         "source": "Hacker News",
-        "publishedAt": "2026-09-18T12:06:50.000Z",
+        "publishedAt": "2026-09-18T14:45:32.000Z",
         "badge": "HN",
-        "signal": "314 分 · 277 评论"
+        "signal": "116 分 · 89 评论"
       },
       {
-        "id": "cn-it-5d6febd71c22ef2d",
+        "id": "cn-it-290ce3888d3429f9",
         "category": "cn",
-        "title": "长安汽车首席专家谭欢：未来要用机器人造车、卖车，让机器人上车、造机器人",
-        "url": "https://www.ithome.com/1/004/337.htm",
+        "title": "极狐阿尔法 T7 公布安心交付承诺：延期按天补偿现金，上限 3000 元",
+        "url": "https://www.ithome.com/1/004/340.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-18T14:28:19.000Z",
-        "summary": "IT之家 9 月 18 日消息，在今天（18 日）的第 22 届中国汽车产业发展（泰达）国际论坛“新赛道生态专场：具身智能新赛道”活动中，长安汽车首席专家、长安天枢智能机器人公司总经理谭欢在演讲中指出，AI 正推动以物理具身智能为核心的基础设施革新，汽车未来形态是“汽车机器人”—— 自学习、自组 织、自进化 的组合智能体。 谭欢表示，长安汽车布局机器人的路径，是 首先实现座舱、中控、扶手等汽车部件组件化 ，再走向智能出行生态机器人，覆盖搬运、物流、清洁、储能、补能等环节，并…",
+        "publishedAt": "2026-09-18T15:09:55.000Z",
+        "summary": "IT之家 9 月 18 日消息，极狐汽车今日公布阿尔法 T7 安心交付承诺，如出现不能及时交付的情况，将进行延期交付补偿。 适用对象 ：2026 年 10 月 31 日 (含) 前下定并锁单的用户。 补偿标准 ：自锁单之日起至车辆到店之日止，若等待超过 21 天，则从第 22 天开始，每多等待 1 天，补偿用户现金 150 元，上限 3000 元。 兑现方式 ：以尾款抵扣形式进行兑现。 IT之家注意到， 极狐阿尔法 T7 大五座 SUV 9 月 16 日正式上市 ，提供增程…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-f8wv-xp27-6gq7",
+        "id": "github-advisory-ghsa-xcw4-53cc-hv32",
         "category": "security",
-        "title": "Grav: Blueprint dynamic-data bare-function branch is denylist-gated and omits error_log, giving arbitrary file write",
-        "url": "https://github.com/advisories/GHSA-f8wv-xp27-6gq7",
+        "title": "Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass",
+        "url": "https://github.com/advisories/GHSA-xcw4-53cc-hv32",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:44:16.000Z",
-        "summary": "## Affected versions and vulnerable location - Confirmed on grav core at `78ebfc1` (tag 2.0.13). - Sinks: - `system/src/Grav/Common/Data/Blueprint.php:455-458` `call_user_func_array($o, $params)` (bare-function dynamic-data provider). - Tw…",
-        "badge": "CVE-2026-75827",
-        "signal": "CRITICAL · CVSS 8.8"
+        "publishedAt": "2026-09-18T17:54:26.000Z",
+        "summary": "### Summary The Mnemosyne sync server's authentication check decoded JWT bearer tokens but never verified their HMAC-SHA256 signatures. Any well-formed token was accepted, allowing an unauthenticated attacker to impersonate any user and re…",
+        "badge": "CVE-2026-59163",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243032",
+        "id": "v2ex-1243075",
         "category": "dev",
-        "title": "Zcode 飞书群官方回应来了",
-        "url": "https://www.v2ex.com/t/1243032",
+        "title": "有没有适合 CPU 的特小型的用于日常对话的这种小模型？",
+        "url": "https://www.v2ex.com/t/1243075",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T09:44:02.000Z",
-        "summary": "各位 ZCode 用户： 今日社区中的相关讨论我们高度重视，第一时间完成自查，先向受影响的用户道歉。现就有关情况说明如下： 此次问题源于 ZCode 的“代码库索引”功能。该功能旨在帮助用户在本地生成仓库索引，以支持包括历史版本在内的会话检查点恢复、历史版本回退及 Repo Wiki 等功能。 Repo Wiki 功能在生成 Wiki 页面时可能会触发仓库数据上传。Wiki 页面在云端生成后，相关上传数据会立即销毁，不会保存。由于该功能在上线初期默认开启，部分用户因此受到影…",
+        "publishedAt": "2026-09-18T13:51:22.000Z",
+        "summary": "比如给我一个关于买菜的简单的场景，中等复杂的和比较复杂的对话场景;比如给我一个问路的简单，中等和复杂的对话. 或者更进一步给我一个青蛙与老鼠的小故事",
         "badge": "程序员",
-        "signal": "16 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-73db832ea43a4997",
@@ -340,18 +340,18 @@
         "source": "百度热搜",
         "summary": "金秋时节，陕西延安、黑龙江北安、广东梅州与广西柳州四地迎来丰收。延安苹果全产业链产值突破600亿元；北安玉米全产业链带动种植户户均年增收2800元以上；梅州金柚通过科技赋能实现稳产提质；柳州粉用稻全产业链综合产值持续提升。四地通过延伸产业链等方式带动农户增收致富。",
         "badge": "热搜",
-        "signal": "7,619,584 热度"
+        "signal": "7,619,136 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-84869",
+        "id": "cisa-kev-cve-2026-87886",
         "category": "security",
-        "title": "ConnectWise ScreenConnect：ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-84869",
+        "title": "Acronis Backup：Acronis Backup Incorrect Default Permissions Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87886",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confir…",
-        "badge": "CVE-2026-84869",
-        "signal": "已遭利用 · 整改期限 2026-09-14"
+        "publishedAt": "2026-09-16T00:00:00.000Z",
+        "summary": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
+        "badge": "CVE-2026-87886",
+        "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
         "id": "ai-hugging-face-075fed980e67c694",
@@ -370,7 +370,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-18T09:42:22.000Z",
         "badge": "HN",
-        "signal": "306 分 · 182 评论"
+        "signal": "423 分 · 215 评论"
       },
       {
         "id": "cn-item-5d790c8949ca0c3c",
@@ -383,15 +383,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-vfmf-q6x9-cw96",
+        "id": "github-advisory-ghsa-vr5f-w35q-98jp",
         "category": "security",
-        "title": "Grav: detectXss() misses an event-handler attribute after an unpaired quote in an unquoted attribute value, giving stored XSS",
-        "url": "https://github.com/advisories/GHSA-vfmf-q6x9-cw96",
+        "title": "Perses's unvalidated project parameter enables filesystem path traversal",
+        "url": "https://github.com/advisories/GHSA-vr5f-w35q-98jp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:43:43.000Z",
-        "summary": "## Affected versions and vulnerable location - Confirmed on grav core at `78ebfc1` (tag 2.0.13). - Detector: `system/src/Grav/Common/Security.php:290`, the `on_events` regex, run via `patternMatches()` (`:315-330`). - The `on_events` patte…",
-        "badge": "CVE-2026-75828",
-        "signal": "CRITICAL · CVSS 8.7"
+        "publishedAt": "2026-09-18T17:40:03.000Z",
+        "summary": "### Impact When Perses is using the file system database, on the list endpoints, the project value is bound from the request into the resource `Query` struct and is never validated against directory-traversal characters (validation/Flatten…",
+        "badge": "CVE-2026-63445",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-b0366f9850a9d166",
@@ -404,35 +404,36 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243025",
+        "id": "v2ex-1243054",
         "category": "dev",
-        "title": "zcode 有整包上传的问题， 不知道 kimi code 是否也有，双子星",
-        "url": "https://www.v2ex.com/t/1243025",
+        "title": "这是不是代表没被 zcode 坑到？",
+        "url": "https://www.v2ex.com/t/1243054",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T09:08:33.000Z",
+        "publishedAt": "2026-09-18T11:04:35.000Z",
+        "summary": "让 zocde 里的 glm 查的 app.asar 中存在 RepoSnapshotSidecarService 类和 /api/v1/snapshot/upload-credential 端点：每条 prompt 前触发捕获 → 打包 workspace → 信封加密 → 向 zcode.z.ai 要凭证 → 直传阿里云 OSS 。 反编译的调用链里唯一门控是登录 token ，全程不读 repoSnapshotIndexingEnabled / optimizeAge…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-61d2fb35e5698ade",
+        "id": "cn-it-2ef47b94d47244af",
         "category": "cn",
-        "title": "QQ 音乐官宣适配苹果 iPhone Duo 折叠屏手机",
-        "url": "https://www.ithome.com/1/004/335.htm",
+        "title": "2026 巴黎车展最大展台：Stellantis 将展出标致、雪铁龙、零跑各品牌 60 余款车型",
+        "url": "https://www.ithome.com/1/004/339.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-18T14:18:34.000Z",
-        "summary": "IT之家 9 月 18 日消息，苹果在今年秋季发布会发布了旗下首款折叠屏手机 iPhone Duo，定价 15999 元起，将于 10 月 16 日接受预购，10 月 23 日发售。 QQ 音乐官方今晚（9 月 18 日）宣布，QQ MUSIC for iPhone Duo“抢鲜”适配 iOS 27， 即将上线，敬请期待 。 根据 QQ 音乐官方公布的视频 / 图片，QQ 音乐 App 的导航栏现在都显示在屏幕一侧，以便为内容留出尽可能多的纵向空间，音乐控制项则依然在屏幕下…",
+        "publishedAt": "2026-09-18T14:51:18.000Z",
+        "summary": "IT之家 9 月 18 日消息，2026 巴黎车展将于 10 月 12 日至 18 日期间举行。Stellantis 集团 17 日宣布，将在本届车展展出 来自 8 个品牌的 9 款概念车及 60 余款车型 ，集团展台面积超过 5000 平方米，是本届车展 拥有最大展台面积 的参展商。 集团旗下参展的品牌包含 阿尔法 · 罗密欧、雪铁龙、DS、菲亚特、蓝旗亚、零跑汽车、欧宝和标致 ；全球首发车型包括豪华紧凑型 SUV DS N°7、全新菲亚特 Grizzly、标志着蓝旗亚重…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-42016",
+        "id": "cisa-kev-cve-2026-76461",
         "category": "security",
-        "title": "JFrog Artifactory：JFrog Artifactory Incorrect Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-42016",
+        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway SQL Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-11T00:00:00.000Z",
-        "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
-        "badge": "CVE-2026-42016",
-        "signal": "已遭利用 · 整改期限 2026-09-25"
+        "publishedAt": "2026-09-14T00:00:00.000Z",
+        "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
+        "badge": "CVE-2026-76461",
+        "signal": "已遭利用 · 整改期限 2026-09-17"
       },
       {
         "id": "ai-google-deepmind-d721843382f3485e",
@@ -444,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49721507",
+        "id": "hn-49757520",
         "category": "dev",
-        "title": "The Shadows Lurking in the Equations – Underwater Islands",
-        "url": "https://gods.art/articles/equation_shadows",
+        "title": "US Military had close call after using AI for hallucinated intelligence report",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
         "source": "Hacker News",
-        "publishedAt": "2026-09-16T02:37:22.000Z",
+        "publishedAt": "2026-09-18T17:28:01.000Z",
         "badge": "HN",
-        "signal": "31 分 · 3 评论"
+        "signal": "67 分 · 23 评论"
       },
       {
         "id": "cn-baidu-2c4e0cddfffabcf5",
@@ -461,18 +462,18 @@
         "source": "百度热搜",
         "summary": "9月18日晚，中国男篮以77比97不敌日本队，无缘2026年名古屋亚运会男篮决赛。9月20日，日本队和韩国队将进行冠亚军争夺战。",
         "badge": "热搜",
-        "signal": "7,524,410 热度"
+        "signal": "7,523,423 热度"
       },
       {
-        "id": "github-advisory-ghsa-4v9q-p283-qc2m",
+        "id": "github-advisory-ghsa-4227-9989-jrhx",
         "category": "security",
-        "title": "Grav: Unauthenticated Path Traversal via Missing Directory-Boundary Check in `plugin-asset-map.php` Static Asset Server (`index.php`)",
-        "url": "https://github.com/advisories/GHSA-4v9q-p283-qc2m",
+        "title": "Perses's missing authorization in datasource proxy allows cross-scope secret disclosure",
+        "url": "https://github.com/advisories/GHSA-4227-9989-jrhx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:43:16.000Z",
-        "summary": "**Verified against:** `getgrav/grav` devel branch, `GRAV_VERSION = \"2.0.15\"`, file `index.php ## Title Unauthenticated Path Traversal via Missing Directory-Boundary Check in `plugin-asset-map.php` Static Asset Server (`index.php`) ## Produ…",
-        "badge": "CVE-2026-74907",
-        "signal": "HIGH · CVSS 5.9"
+        "publishedAt": "2026-09-18T17:39:48.000Z",
+        "summary": "### Impact The datasource proxy authorizes the caller on the Datasource scope, then resolves and decrypts any Secret named in the request body with no Secret-scope check. Datasource and Secret are distinct, independently grantable role sco…",
+        "badge": "CVE-2026-63199",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -484,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243021",
+        "id": "v2ex-1243046",
         "category": "dev",
-        "title": "Zcode 投诉信已经拟好（感谢 DeepSeek 友情代笔）",
-        "url": "https://www.v2ex.com/t/1243021",
+        "title": "Zcode 给我了两次重置额度？",
+        "url": "https://www.v2ex.com/t/1243046",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T08:54:19.000Z",
-        "summary": "Metadata Model: deepseek-default Time: 2026-09-18 16:05:37 +08:00 🧑‍💻 User 这个行为违法了哪些法律，国内和国外，重点是上市地区的相关法律条文 🤖 Assistant 🤔 Thought Process 用户想了解 ZCode 事件可能违反的法律，重点在上市地区。智谱 AI 是上市公司，我需要覆盖国内和国外法律。先搜索几个关键方向：中国法律、美国法律、香港法律，以及数据安全法和隐私政策。这些搜索能帮我确…",
+        "publishedAt": "2026-09-18T10:33:05.000Z",
+        "summary": "就刚刚给的",
         "badge": "程序员",
-        "signal": "16 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -509,7 +510,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 12431,
+        "stars": 13012,
         "starsToday": 3019
       },
       {
@@ -519,7 +520,7 @@
         "url": "https://github.com/anthropics/claude-code",
         "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "language": "TypeScript",
-        "stars": 146122,
+        "stars": 146186,
         "starsToday": 442
       },
       {
@@ -529,7 +530,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 36310,
+        "stars": 36474,
         "starsToday": 2724
       },
       {
@@ -539,7 +540,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 261671,
+        "stars": 261813,
         "starsToday": 965
       },
       {
@@ -549,7 +550,7 @@
         "url": "https://github.com/Tencent/BrowserSkill",
         "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
         "language": "TypeScript",
-        "stars": 5005,
+        "stars": 5152,
         "starsToday": 1319
       },
       {
@@ -559,7 +560,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 96195,
+        "stars": 96275,
         "starsToday": 677
       },
       {
@@ -569,7 +570,7 @@
         "url": "https://github.com/TencentCloud/Octop",
         "description": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
         "language": "Python",
-        "stars": 3827,
+        "stars": 3890,
         "starsToday": 571
       },
       {
@@ -579,7 +580,7 @@
         "url": "https://github.com/Fission-AI/OpenSpec",
         "description": "Spec-driven development (SDD) for AI coding assistants.",
         "language": "TypeScript",
-        "stars": 69155,
+        "stars": 69230,
         "starsToday": 298
       },
       {
@@ -589,8 +590,8 @@
         "url": "https://github.com/ankitects/anki",
         "description": "Anki is a smart spaced repetition flashcard program",
         "language": "Rust",
-        "stars": 31110,
-        "starsToday": 430
+        "stars": 31148,
+        "starsToday": 177
       },
       {
         "id": "github-a3140cb175a451a9",
@@ -599,10 +600,10 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 24757,
+        "stars": 24811,
         "starsToday": 300
       }
     ],
-    "updatedAt": "2026-09-18T15:01:48.410Z"
+    "updatedAt": "2026-09-18T18:29:54.202Z"
   }
 }
