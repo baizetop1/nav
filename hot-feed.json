@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-18T11:16:42.584Z",
+  "generatedAt": "2026-09-18T15:01:48.410Z",
   "intelligence": {
-    "updatedAt": "2026-09-18T11:16:42.584Z",
+    "updatedAt": "2026-09-18T15:01:48.410Z",
     "items": [
       {
-        "id": "cn-item-9b7d20bd82a049aa",
+        "id": "cn-item-b60403c9e22b7f1d",
         "category": "cn",
-        "title": "文旅部等十部门出台促进房车消费新措施",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699064.shtml",
+        "title": "中国证监会拟对十七起案件线索的“吹哨人”给予奖励",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699210.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-18T09:09:30.000Z",
-        "summary": "中新网9月18日电 据中国政府网消息，近日，为贯彻落实党中央、国务院关于扩大内需、提振消费的决策部署，打通房车(包括旅居车、旅居挂车、宿营车)消费堵点，培育房车露营等新业态，释放房车消费潜力，更好满足人民日益增长的美好生活需要，文化和旅游部等十部门出台促进房车消费新措施。",
+        "publishedAt": "2026-09-18T12:47:50.000Z",
+        "summary": "中新网9月18日电 据“证监会发布”微信公众号消息，近日，中国证监会拟根据《证券法》等相关法律法规，对提供以下案件线索的“吹哨人”依法给予奖励：",
         "badge": "中新网要闻"
       },
       {
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49752041",
+        "id": "hn-49753878",
         "category": "dev",
-        "title": "OpenJev",
-        "url": "https://openjev.com/",
+        "title": "An Empirical Study of Harness Design for Coding Agents",
+        "url": "https://arxiv.org/abs/2609.20804",
         "source": "Hacker News",
-        "publishedAt": "2026-09-18T09:42:22.000Z",
+        "publishedAt": "2026-09-18T13:06:30.000Z",
         "badge": "HN",
-        "signal": "117 分 · 55 评论"
+        "signal": "90 分 · 13 评论"
       },
       {
-        "id": "cn-it-bfdfd031851d61c8",
+        "id": "cn-it-2ef47b94d47244af",
         "category": "cn",
-        "title": "影石等孵化的无人机品牌：消息称影翎完成第二轮融资，估值达 10 亿美元",
-        "url": "https://www.ithome.com/1/004/308.htm",
+        "title": "2026 巴黎车展最大展台：Stellantis 将展出标致、雪铁龙、零跑各品牌 60 余款车型",
+        "url": "https://www.ithome.com/1/004/339.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-18T11:15:30.000Z",
-        "summary": "IT之家 9 月 18 日消息，据雷峰网 · 鲸犀消息，无人机品牌“影翎 Antigravity”已完成新一轮融资交割，融资金额超 10 亿元人民币，投资方为淡马锡等美元基金。 多位接近影翎的人士透露， 此次是影翎的第二轮融资 ，于 2025 年底启动， 本轮融资估值已达 10 亿美元 （IT之家注：现汇率约合 67.22 亿元人民币） 。 影翎官网显示，该品牌由影石 Insta360 与第三方共同孵化。2025 年 12 月， 影翎 Antigravity A1 发布 ，…",
+        "publishedAt": "2026-09-18T14:51:18.000Z",
+        "summary": "IT之家 9 月 18 日消息，2026 巴黎车展将于 10 月 12 日至 18 日期间举行。Stellantis 集团 17 日宣布，将在本届车展展出 来自 8 个品牌的 9 款概念车及 60 余款车型 ，集团展台面积超过 5000 平方米，是本届车展 拥有最大展台面积 的参展商。 集团旗下参展的品牌包含 阿尔法 · 罗密欧、雪铁龙、DS、菲亚特、蓝旗亚、零跑汽车、欧宝和标致 ；全球首发车型包括豪华紧凑型 SUV DS N°7、全新菲亚特 Grizzly、标志着蓝旗亚重…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-r94f-hx44-8jqf",
+        "id": "github-advisory-ghsa-m6c8-jcw2-5r25",
         "category": "security",
-        "title": "Grav CMS vulnerable to remote code execution via .zip file upload",
-        "url": "https://github.com/advisories/GHSA-r94f-hx44-8jqf",
+        "title": "Opencast: Stored XSS in Paella player via WebVTT/DFXP caption cue text",
+        "url": "https://github.com/advisories/GHSA-m6c8-jcw2-5r25",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:45:57.000Z",
-        "summary": "### Summary A logged-in user can run any command on the server. A settings field can fill itself by calling one of Grav's built-in routines, and a safety check is supposed to allow only harmless ones. The check only recognises a routine wh…",
-        "badge": "CVE-2026-72819",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-18T13:11:59.000Z",
+        "summary": "## Summary The Opencast Paella player renders caption cue text into `innerHTML` without escaping. The captions canvas clears `_captionsContainer.innerHTML` and then appends each active cue with `_captionsContainer.innerHTML += cue`, so HTM…",
+        "badge": "CVE-2026-77615",
+        "signal": "HIGH · CVSS 8.7"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243046",
+        "id": "v2ex-1243075",
         "category": "dev",
-        "title": "Zcode 给我了两次重置额度？",
-        "url": "https://www.v2ex.com/t/1243046",
+        "title": "有没有适合 CPU 的特小型的用于日常对话的这种小模型？",
+        "url": "https://www.v2ex.com/t/1243075",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T10:33:05.000Z",
-        "summary": "就刚刚给的",
+        "publishedAt": "2026-09-18T13:51:22.000Z",
+        "summary": "比如给我一个关于买菜的简单的场景，中等复杂的和比较复杂的对话场景;比如给我一个问路的简单，中等和复杂的对话. 或者更进一步给我一个青蛙与老鼠的小故事",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-fe4eee15dc0796e6",
+        "id": "cn-baidu-fa6b792c0367bb68",
         "category": "cn",
-        "title": "中国男篮vs日本男篮",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E7%94%B7%E7%AF%AEvs%E6%97%A5%E6%9C%AC%E7%94%B7%E7%AF%AE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "养生的风终于吹到了月饼行业",
+        "url": "https://www.baidu.com/s?wd=%E5%85%BB%E7%94%9F%E7%9A%84%E9%A3%8E%E7%BB%88%E4%BA%8E%E5%90%B9%E5%88%B0%E4%BA%86%E6%9C%88%E9%A5%BC%E8%A1%8C%E4%B8%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京时间9月18日18时20分，中国男篮将在亚运会半决赛对阵东道主日本男篮。此前，北京时间9月16日，中国男篮在名古屋亚运会1/4决赛中力克沙特阿拉伯队挺进四强。日本队虽未征召八村塁等队员，但1/4决赛战胜中国台北队闯进四强，实力不俗。",
+        "summary": "今年中秋临近，记者走访北京市场发现，月饼企业纷纷推出低糖、低GI、药食同源等健康概念产品。此前高油高糖月饼常被诟病，73%消费者优先选择健康产品。如今部分减糖月饼销量飙升2倍，健康化已从风口变成标配，将倒逼行业迎来新一轮洗牌。",
         "badge": "热搜",
-        "signal": "7,809,197 热度"
+        "signal": "7,808,453 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76460",
@@ -117,35 +117,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49750152",
+        "id": "hn-49755024",
         "category": "dev",
-        "title": "Jemalloc 5.4.0",
-        "url": "https://github.com/jemalloc/jemalloc/releases/tag/5.4.0",
+        "title": "I Vibed a Proof of Conway's Conjecture",
+        "url": "https://overreacted.io/how-i-vibed-a-proof-of-conways-conjecture/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-18T04:20:24.000Z",
+        "publishedAt": "2026-09-18T14:36:10.000Z",
         "badge": "HN",
-        "signal": "170 分 · 49 评论"
+        "signal": "27 分 · 6 评论"
       },
       {
-        "id": "cn-item-5d790c8949ca0c3c",
+        "id": "cn-item-92adcbe095853688",
         "category": "cn",
-        "title": "弹指一挥二十载，北京香山论坛的“变与不变”",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-18/10699018.shtml",
+        "title": "巴菲特卸任董事长 其子霍华德·巴菲特接任",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-18/10699167.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-18T08:26:41.000Z",
-        "summary": "中新网9月18日电(记者 刁炜 张东方 黄方 徐峻杰)天高云淡，金风送爽。9月15日至17日，第十三届北京香山论坛在北京国际会议中心举行，主题为“凝聚稳定共识、同促安全治理”。今年正值论坛创办20周年，约2000名来自百余个国家、地区和国际组织的防务及学界代表参会。",
+        "publishedAt": "2026-09-18T12:19:46.000Z",
+        "summary": "中新网9月18日电 综合报道，投资机构伯克希尔-哈撒韦公司18日发表声明宣布，知名投资人沃伦·巴菲特卸任该公司董事长。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xhfv-7758-r9hx",
+        "id": "github-advisory-ghsa-r94f-hx44-8jqf",
         "category": "security",
-        "title": "Grav: Missing admin.super guard on core group blueprint access field allows admin.users operator to escalate to super-admin",
-        "url": "https://github.com/advisories/GHSA-xhfv-7758-r9hx",
+        "title": "Grav CMS vulnerable to remote code execution via .zip file upload",
+        "url": "https://github.com/advisories/GHSA-r94f-hx44-8jqf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:45:15.000Z",
-        "summary": "## Summary The core Flex group blueprint `system/blueprints/user/group.yaml` (access field, lines 48-55) omits the `security@: admin.super` field guard that its sibling account blueprint carries (`account.yaml:131/138/150`, added by the CV…",
-        "badge": "CVE-2026-75837",
-        "signal": "HIGH · CVSS 9.1"
+        "publishedAt": "2026-09-17T20:45:57.000Z",
+        "summary": "### Summary A logged-in user can run any command on the server. A settings field can fill itself by calling one of Grav's built-in routines, and a safety check is supposed to allow only harmless ones. The check only recognises a routine wh…",
+        "badge": "CVE-2026-72819",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-openai-192794312f979cbd",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243042",
+        "id": "v2ex-1243054",
         "category": "dev",
-        "title": "ZCode 官方回复了, 跟老马的处理方式一样,也要开源了",
-        "url": "https://www.v2ex.com/t/1243042",
+        "title": "这是不是代表没被 zcode 坑到？",
+        "url": "https://www.v2ex.com/t/1243054",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T09:57:20.000Z",
-        "summary": "各位 ZCode 用户： 今日社区中的相关讨论我们高度重视，第一时间完成自查，先向受影响的用户道歉。现就有关情况说明如下： 此次问题源于 ZCode 的“代码库索引”功能。该功能旨在帮助用户在本地生成仓库索引，以支持包括历史版本在内的会话检查点恢复、历史版本回退及 Repo Wiki 等功能。 Repo Wiki 功能在生成 Wiki 页面时可能会触发仓库数据上传。Wiki 页面在云端生成后，相关上传数据会立即销毁，不会保存。由于该功能在上线初期默认开启，部分用户因此受到影…",
+        "publishedAt": "2026-09-18T11:04:35.000Z",
+        "summary": "让 zocde 里的 glm 查的 app.asar 中存在 RepoSnapshotSidecarService 类和 /api/v1/snapshot/upload-credential 端点：每条 prompt 前触发捕获 → 打包 workspace → 信封加密 → 向 zcode.z.ai 要凭证 → 直传阿里云 OSS 。 反编译的调用链里唯一门控是登录 token ，全程不读 repoSnapshotIndexingEnabled / optimizeAge…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-e85f696b1aad2391",
+        "id": "cn-it-bf95dbf83dc91a69",
         "category": "cn",
-        "title": "消息称 Anthropic 低调建立生物实验室，借 AI 推进药学研究",
-        "url": "https://www.ithome.com/1/004/288.htm",
+        "title": "消息称 vivo 新开 7 英寸大屏 + 万级大电池方案，预计为中端线新机",
+        "url": "https://www.ithome.com/1/004/338.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-18T10:46:57.000Z",
-        "summary": "IT之家 9 月 18 日消息，路透社今天（18 日）晚间援引知情人士消息称，Anthropic 在旧金山湾区低调建立了一座湿实验室，把 AI 业务进一步延伸到 需要实际动手操作的生物学研究和药物科学领域 。 知情人士透露，在公众对 AI 风险愈发担忧之际，Anthropic 开始在湿实验室进行实体实验。Anthropic 此前提出，希望借助 AI 推动罕见病治疗方法的发展 ，公司的生物学研究也从“计算机模拟”和计算机评估进一步走向真实实验。 IT之家注：湿实验室是一个科学…",
+        "publishedAt": "2026-09-18T14:32:00.000Z",
+        "summary": "IT之家 9 月 18 日消息，博主 @数码闲聊站 昨晚爆料，vivo 最近也开了一块 7 英寸大屏 + 万级大电池方案，不过规格看起来是给中端线，旗舰线再等等。 IT之家注意到，该博主曾在今年 6 月爆料有 3 家主流品牌的迭代线新机会上 7 英寸，涵盖中端线和旗舰线，有直屏和等深四曲屏，至高有旗舰芯， 至高有 10000mAh 级大电池 ，至高有潜望长焦。另外还有头部大厂也在评估 7 英寸。 今年 7 月，该博主还爆料某厂中端线新机搭载 7 英寸超大直屏、天玑 8 系处…",
         "badge": "IT之家"
       },
       {
@@ -200,35 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49752056",
+        "id": "hn-49753179",
         "category": "dev",
-        "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
-        "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+        "title": "Bend 2 and the Vibe-Coding Trap",
+        "url": "https://blog.liampwll.com/posts/bend_vibe_coding/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-18T09:45:07.000Z",
+        "publishedAt": "2026-09-18T12:03:55.000Z",
         "badge": "HN",
-        "signal": "134 分 · 73 评论"
+        "signal": "251 分 · 168 评论"
       },
       {
-        "id": "cn-baidu-fcbf7368815398be",
+        "id": "cn-baidu-3e9cec3beec4ad3a",
         "category": "cn",
-        "title": "中国男篮半场落后日本19分",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E7%94%B7%E7%AF%AE%E5%8D%8A%E5%9C%BA%E8%90%BD%E5%90%8E%E6%97%A5%E6%9C%AC19%E5%88%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "运动员展示亚运房间：全是纸板做的",
+        "url": "https://www.baidu.com/s?wd=%E8%BF%90%E5%8A%A8%E5%91%98%E5%B1%95%E7%A4%BA%E4%BA%9A%E8%BF%90%E6%88%BF%E9%97%B4%EF%BC%9A%E5%85%A8%E6%98%AF%E7%BA%B8%E6%9D%BF%E5%81%9A%E7%9A%84&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月18日，男篮亚运会半决赛，中国男篮上半场落后日本男篮19分。",
+        "summary": "近日，新加坡铁人三项运动员展示亚运房间，掀开床板惊讶发现床是纸板做的，并称其很坚固。此外，其发现自行车架也是纸板做的。",
         "badge": "热搜",
-        "signal": "7,713,617 热度"
+        "signal": "7,712,442 热度"
       },
       {
-        "id": "github-advisory-ghsa-f8wv-xp27-6gq7",
+        "id": "github-advisory-ghsa-xhfv-7758-r9hx",
         "category": "security",
-        "title": "Grav: Blueprint dynamic-data bare-function branch is denylist-gated and omits error_log, giving arbitrary file write",
-        "url": "https://github.com/advisories/GHSA-f8wv-xp27-6gq7",
+        "title": "Grav: Missing admin.super guard on core group blueprint access field allows admin.users operator to escalate to super-admin",
+        "url": "https://github.com/advisories/GHSA-xhfv-7758-r9hx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:44:16.000Z",
-        "summary": "## Affected versions and vulnerable location - Confirmed on grav core at `78ebfc1` (tag 2.0.13). - Sinks: - `system/src/Grav/Common/Data/Blueprint.php:455-458` `call_user_func_array($o, $params)` (bare-function dynamic-data provider). - Tw…",
-        "badge": "CVE-2026-75827",
-        "signal": "CRITICAL · CVSS 8.8"
+        "publishedAt": "2026-09-17T20:45:15.000Z",
+        "summary": "## Summary The core Flex group blueprint `system/blueprints/user/group.yaml` (access field, lines 48-55) omits the `security@: admin.super` field guard that its sibling account blueprint carries (`account.yaml:131/138/150`, added by the CV…",
+        "badge": "CVE-2026-75837",
+        "signal": "HIGH · CVSS 9.1"
       },
       {
         "id": "ai-hugging-face-85052f9befba2c4e",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243032",
+        "id": "v2ex-1243046",
         "category": "dev",
-        "title": "Zcode 飞书群官方回应来了",
-        "url": "https://www.v2ex.com/t/1243032",
+        "title": "Zcode 给我了两次重置额度？",
+        "url": "https://www.v2ex.com/t/1243046",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T09:44:02.000Z",
-        "summary": "各位 ZCode 用户： 今日社区中的相关讨论我们高度重视，第一时间完成自查，先向受影响的用户道歉。现就有关情况说明如下： 此次问题源于 ZCode 的“代码库索引”功能。该功能旨在帮助用户在本地生成仓库索引，以支持包括历史版本在内的会话检查点恢复、历史版本回退及 Repo Wiki 等功能。 Repo Wiki 功能在生成 Wiki 页面时可能会触发仓库数据上传。Wiki 页面在云端生成后，相关上传数据会立即销毁，不会保存。由于该功能在上线初期默认开启，部分用户因此受到影…",
+        "publishedAt": "2026-09-18T10:33:05.000Z",
+        "summary": "就刚刚给的",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-item-cff498d194ae69ad",
+        "id": "cn-item-9b7d20bd82a049aa",
         "category": "cn",
-        "title": "闫国春任国家电投集团董事、总经理、党组副书记",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-18/10698967.shtml",
+        "title": "文旅部等十部门出台促进房车消费新措施",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699064.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-18T07:16:19.000Z",
-        "summary": "中新网9月18日电 据国家电力投资集团有限公司网站消息，2026年9月18日，国家电力投资集团有限公司召开领导班子(扩大)会议。受中央组织部领导委托，中央组织部有关干部局负责同志宣布了党中央关于国家电力投资集团有限公司总经理任职的决定：闫国春同志任国家电力投资集团有限公司董事、总经理、党组副书记，免去其国家能源投资集团有限责任公司副总经理、党组成员职务。相关职务任免，按有关法律和章程的规定办理。",
+        "publishedAt": "2026-09-18T09:09:30.000Z",
+        "summary": "中新网9月18日电 据中国政府网消息，近日，为贯彻落实党中央、国务院关于扩大内需、提振消费的决策部署，打通房车(包括旅居车、旅居挂车、宿营车)消费堵点，培育房车露营等新业态，释放房车消费潜力，更好满足人民日益增长的美好生活需要，文化和旅游部等十部门出台促进房车消费新措施。",
         "badge": "中新网要闻"
       },
       {
@@ -282,35 +282,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49750094",
+        "id": "hn-49753211",
         "category": "dev",
-        "title": "The scourge of x86 emulation",
-        "url": "https://fex-emu.com/Scourge-of-emulation/",
+        "title": "I don't like passkeys",
+        "url": "https://hawksley.dev/blog/i-dont-like-passkeys",
         "source": "Hacker News",
-        "publishedAt": "2026-09-18T04:09:48.000Z",
+        "publishedAt": "2026-09-18T12:06:50.000Z",
         "badge": "HN",
-        "signal": "164 分 · 28 评论"
+        "signal": "314 分 · 277 评论"
       },
       {
-        "id": "cn-it-0f379d797e68c9f4",
+        "id": "cn-it-5d6febd71c22ef2d",
         "category": "cn",
-        "title": "96 岁一代股神巴菲特正式卸任伯克希尔董事长，出任名誉董事长",
-        "url": "https://www.ithome.com/1/004/287.htm",
+        "title": "长安汽车首席专家谭欢：未来要用机器人造车、卖车，让机器人上车、造机器人",
+        "url": "https://www.ithome.com/1/004/337.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-18T10:45:55.000Z",
-        "summary": "IT之家 9 月 18 日消息，伯克希尔 · 哈撒韦公司（Berkshire Hathaway Inc.）于当地时间 9 月 18 日宣布，沃伦 · 巴菲特（Warren E. Buffett）卸任董事长。 官方表示，为表彰巴菲特对公司及其股东所作出的卓越贡献， 即日起委任其为名誉董事长 。履新名誉董事长后， 巴菲特仍将留任董事会成员 ，继续贡献其深具价值的商业远见与专业判断。 同时，根据公司长期拟定的接班规划，伯克希尔 · 哈撒韦董事会选举霍华德 · 巴菲特（Howard…",
+        "publishedAt": "2026-09-18T14:28:19.000Z",
+        "summary": "IT之家 9 月 18 日消息，在今天（18 日）的第 22 届中国汽车产业发展（泰达）国际论坛“新赛道生态专场：具身智能新赛道”活动中，长安汽车首席专家、长安天枢智能机器人公司总经理谭欢在演讲中指出，AI 正推动以物理具身智能为核心的基础设施革新，汽车未来形态是“汽车机器人”—— 自学习、自组 织、自进化 的组合智能体。 谭欢表示，长安汽车布局机器人的路径，是 首先实现座舱、中控、扶手等汽车部件组件化 ，再走向智能出行生态机器人，覆盖搬运、物流、清洁、储能、补能等环节，并…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-vfmf-q6x9-cw96",
+        "id": "github-advisory-ghsa-f8wv-xp27-6gq7",
         "category": "security",
-        "title": "Grav: detectXss() misses an event-handler attribute after an unpaired quote in an unquoted attribute value, giving stored XSS",
-        "url": "https://github.com/advisories/GHSA-vfmf-q6x9-cw96",
+        "title": "Grav: Blueprint dynamic-data bare-function branch is denylist-gated and omits error_log, giving arbitrary file write",
+        "url": "https://github.com/advisories/GHSA-f8wv-xp27-6gq7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:43:43.000Z",
-        "summary": "## Affected versions and vulnerable location - Confirmed on grav core at `78ebfc1` (tag 2.0.13). - Detector: `system/src/Grav/Common/Security.php:290`, the `on_events` regex, run via `patternMatches()` (`:315-330`). - The `on_events` patte…",
-        "badge": "CVE-2026-75828",
-        "signal": "CRITICAL · CVSS 8.7"
+        "publishedAt": "2026-09-17T20:44:16.000Z",
+        "summary": "## Affected versions and vulnerable location - Confirmed on grav core at `78ebfc1` (tag 2.0.13). - Sinks: - `system/src/Grav/Common/Data/Blueprint.php:455-458` `call_user_func_array($o, $params)` (bare-function dynamic-data provider). - Tw…",
+        "badge": "CVE-2026-75827",
+        "signal": "CRITICAL · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243027",
+        "id": "v2ex-1243032",
         "category": "dev",
-        "title": "Zcode 偷数据工信部投诉指引-大家一起才有效果",
-        "url": "https://www.v2ex.com/t/1243027",
+        "title": "Zcode 飞书群官方回应来了",
+        "url": "https://www.v2ex.com/t/1243032",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T09:17:21.000Z",
-        "summary": "这种无耻行为不该仅仅声讨、锁目录预防，主动维权，把声势做大，才能保护将来的安全 指路投诉网站： https://12321.cn/index.html 投诉类型：投诉数据安全 投诉企业：北京智谱华章科技股份有限公司 投诉内容大家可以根据自己 AI 的检查情况让总结下，事实求是说就行 “参考 https://blog.ferstar.org/posts/zcode-silent-workspace-snapshot-upload/，定位本地是否发生数据泄漏、影响范围，现在需要…",
+        "publishedAt": "2026-09-18T09:44:02.000Z",
+        "summary": "各位 ZCode 用户： 今日社区中的相关讨论我们高度重视，第一时间完成自查，先向受影响的用户道歉。现就有关情况说明如下： 此次问题源于 ZCode 的“代码库索引”功能。该功能旨在帮助用户在本地生成仓库索引，以支持包括历史版本在内的会话检查点恢复、历史版本回退及 Repo Wiki 等功能。 Repo Wiki 功能在生成 Wiki 页面时可能会触发仓库数据上传。Wiki 页面在云端生成后，相关上传数据会立即销毁，不会保存。由于该功能在上线初期默认开启，部分用户因此受到影…",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "16 回复"
       },
       {
-        "id": "cn-baidu-c9d5e810fdf40764",
+        "id": "cn-baidu-73db832ea43a4997",
         "category": "cn",
-        "title": "硬核突破！中国先进制造接连“上新”",
-        "url": "https://www.baidu.com/s?wd=%E7%A1%AC%E6%A0%B8%E7%AA%81%E7%A0%B4%EF%BC%81%E4%B8%AD%E5%9B%BD%E5%85%88%E8%BF%9B%E5%88%B6%E9%80%A0%E6%8E%A5%E8%BF%9E%E2%80%9C%E4%B8%8A%E6%96%B0%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "绘就丰收画卷 这四个地方给出答案",
+        "url": "https://www.baidu.com/s?wd=%E7%BB%98%E5%B0%B1%E4%B8%B0%E6%94%B6%E7%94%BB%E5%8D%B7+%E8%BF%99%E5%9B%9B%E4%B8%AA%E5%9C%B0%E6%96%B9%E7%BB%99%E5%87%BA%E7%AD%94%E6%A1%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "全国先进制造业大会9月16日至17日在北京召开。“十五五”开局，中国制造多点突围！今年上半年，规模以上装备制造业、高技术制造业增加值分别同比增长9.3%和13.3%，前7个月新动能对规模以上工业增长的贡献率超过50%。",
+        "summary": "金秋时节，陕西延安、黑龙江北安、广东梅州与广西柳州四地迎来丰收。延安苹果全产业链产值突破600亿元；北安玉米全产业链带动种植户户均年增收2800元以上；梅州金柚通过科技赋能实现稳产提质；柳州粉用稻全产业链综合产值持续提升。四地通过延伸产业链等方式带动农户增收致富。",
         "badge": "热搜",
-        "signal": "7,616,704 热度"
+        "signal": "7,619,584 热度"
       },
       {
         "id": "cisa-kev-cve-2026-84869",
@@ -363,35 +363,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243025",
+        "id": "hn-49752041",
         "category": "dev",
-        "title": "zcode 有整包上传的问题， 不知道 kimi code 是否也有，双子星",
-        "url": "https://www.v2ex.com/t/1243025",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T09:08:33.000Z",
-        "badge": "程序员",
-        "signal": "4 回复"
+        "title": "OpenJev",
+        "url": "https://openjev.com/",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-18T09:42:22.000Z",
+        "badge": "HN",
+        "signal": "306 分 · 182 评论"
       },
       {
-        "id": "cn-item-af6c8cf337ba4c68",
+        "id": "cn-item-5d790c8949ca0c3c",
         "category": "cn",
-        "title": "中新网评：几十元开关收2800元，“维修刺客”的病根在哪？",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10698910.shtml",
+        "title": "弹指一挥二十载，北京香山论坛的“变与不变”",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-18/10699018.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-18T06:55:34.000Z",
-        "summary": "中新网北京9月18日电(记者 谢艺观)维修本是为了解决问题，碰上“维修刺客”，反而制造出新的问题。",
+        "publishedAt": "2026-09-18T08:26:41.000Z",
+        "summary": "中新网9月18日电(记者 刁炜 张东方 黄方 徐峻杰)天高云淡，金风送爽。9月15日至17日，第十三届北京香山论坛在北京国际会议中心举行，主题为“凝聚稳定共识、同促安全治理”。今年正值论坛创办20周年，约2000名来自百余个国家、地区和国际组织的防务及学界代表参会。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-4v9q-p283-qc2m",
+        "id": "github-advisory-ghsa-vfmf-q6x9-cw96",
         "category": "security",
-        "title": "Grav: Unauthenticated Path Traversal via Missing Directory-Boundary Check in `plugin-asset-map.php` Static Asset Server (`index.php`)",
-        "url": "https://github.com/advisories/GHSA-4v9q-p283-qc2m",
+        "title": "Grav: detectXss() misses an event-handler attribute after an unpaired quote in an unquoted attribute value, giving stored XSS",
+        "url": "https://github.com/advisories/GHSA-vfmf-q6x9-cw96",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:43:16.000Z",
-        "summary": "**Verified against:** `getgrav/grav` devel branch, `GRAV_VERSION = \"2.0.15\"`, file `index.php ## Title Unauthenticated Path Traversal via Missing Directory-Boundary Check in `plugin-asset-map.php` Static Asset Server (`index.php`) ## Produ…",
-        "badge": "CVE-2026-74907",
-        "signal": "HIGH · CVSS 5.9"
+        "publishedAt": "2026-09-17T20:43:43.000Z",
+        "summary": "## Affected versions and vulnerable location - Confirmed on grav core at `78ebfc1` (tag 2.0.13). - Detector: `system/src/Grav/Common/Security.php:290`, the `on_events` regex, run via `patternMatches()` (`:315-330`). - The `on_events` patte…",
+        "badge": "CVE-2026-75828",
+        "signal": "CRITICAL · CVSS 8.7"
       },
       {
         "id": "ai-openai-b0366f9850a9d166",
@@ -404,23 +404,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49746618",
+        "id": "v2ex-1243025",
         "category": "dev",
-        "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
-        "url": "https://prismml.com/news/bonsai-2-27b",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-17T21:13:31.000Z",
-        "badge": "HN",
-        "signal": "463 分 · 136 评论"
+        "title": "zcode 有整包上传的问题， 不知道 kimi code 是否也有，双子星",
+        "url": "https://www.v2ex.com/t/1243025",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-18T09:08:33.000Z",
+        "badge": "程序员",
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-78d1fb30d33198e0",
+        "id": "cn-it-61d2fb35e5698ade",
         "category": "cn",
-        "title": "加州一县拟议新政：用机器人替代人力的企业，应提供同酬就业机会或遣散费、培训费",
-        "url": "https://www.ithome.com/1/004/285.htm",
+        "title": "QQ 音乐官宣适配苹果 iPhone Duo 折叠屏手机",
+        "url": "https://www.ithome.com/1/004/335.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-18T10:31:23.000Z",
-        "summary": "IT之家 9 月 18 日消息，据外媒 TechSpot 今天（18 日）傍晚报道，美国加州的圣马特奥县监事会本周通过了一套“首创性”机器人许可制度，针对使用自主 AI 控制机器人的企业 建立监管框架 。 该条例由县监事雷 · 穆勒提出，不仅针对锂电池起火等机器人使用过程中的潜在公共安全风险，更受关注的是 如何处理机器人取代人工后对员工造成的影响 。 如果条例最终获得通过，企业凡是在人类能够进入的场所使用具备一定自主运行能力、配备摄像头或传感器，并由充电锂电池供电的机器人，…",
+        "publishedAt": "2026-09-18T14:18:34.000Z",
+        "summary": "IT之家 9 月 18 日消息，苹果在今年秋季发布会发布了旗下首款折叠屏手机 iPhone Duo，定价 15999 元起，将于 10 月 16 日接受预购，10 月 23 日发售。 QQ 音乐官方今晚（9 月 18 日）宣布，QQ MUSIC for iPhone Duo“抢鲜”适配 iOS 27， 即将上线，敬请期待 。 根据 QQ 音乐官方公布的视频 / 图片，QQ 音乐 App 的导航栏现在都显示在屏幕一侧，以便为内容留出尽可能多的纵向空间，音乐控制项则依然在屏幕下…",
         "badge": "IT之家"
       },
       {
@@ -444,36 +444,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243021",
+        "id": "hn-49721507",
         "category": "dev",
-        "title": "Zcode 投诉信已经拟好（感谢 DeepSeek 友情代笔）",
-        "url": "https://www.v2ex.com/t/1243021",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-18T08:54:19.000Z",
-        "summary": "Metadata Model: deepseek-default Time: 2026-09-18 16:05:37 +08:00 🧑‍💻 User 这个行为违法了哪些法律，国内和国外，重点是上市地区的相关法律条文 🤖 Assistant 🤔 Thought Process 用户想了解 ZCode 事件可能违反的法律，重点在上市地区。智谱 AI 是上市公司，我需要覆盖国内和国外法律。先搜索几个关键方向：中国法律、美国法律、香港法律，以及数据安全法和隐私政策。这些搜索能帮我确…",
-        "badge": "程序员",
-        "signal": "16 回复"
+        "title": "The Shadows Lurking in the Equations – Underwater Islands",
+        "url": "https://gods.art/articles/equation_shadows",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-16T02:37:22.000Z",
+        "badge": "HN",
+        "signal": "31 分 · 3 评论"
       },
       {
-        "id": "cn-baidu-4a07e469b2d36130",
+        "id": "cn-baidu-2c4e0cddfffabcf5",
         "category": "cn",
-        "title": "“亏了一个月 今天翻身了”",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%BA%8F%E4%BA%86%E4%B8%80%E4%B8%AA%E6%9C%88+%E4%BB%8A%E5%A4%A9%E7%BF%BB%E8%BA%AB%E4%BA%86%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国男篮不敌日本无缘决赛",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E7%94%B7%E7%AF%AE%E4%B8%8D%E6%95%8C%E6%97%A5%E6%9C%AC%E6%97%A0%E7%BC%98%E5%86%B3%E8%B5%9B&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月18日，市场全天高开高走，双创指数均涨超2%。市场共4234只个股上涨，79只个股涨停。C沈鼓盘中从低点一度涨近300%，被股民戏称为“神鼓”，很多社交群的股民纷纷晒出截图，更有人亏了一个月，靠新股翻身了！",
+        "summary": "9月18日晚，中国男篮以77比97不敌日本队，无缘2026年名古屋亚运会男篮决赛。9月20日，日本队和韩国队将进行冠亚军争夺战。",
         "badge": "热搜",
-        "signal": "7,521,877 热度"
+        "signal": "7,524,410 热度"
       },
       {
-        "id": "github-advisory-ghsa-jq29-c7v8-rg55",
+        "id": "github-advisory-ghsa-4v9q-p283-qc2m",
         "category": "security",
-        "title": "Grav: Path Traversal in MediaUploadTrait::deleteFile() Allows Arbitrary File Deletion",
-        "url": "https://github.com/advisories/GHSA-jq29-c7v8-rg55",
+        "title": "Grav: Unauthenticated Path Traversal via Missing Directory-Boundary Check in `plugin-asset-map.php` Static Asset Server (`index.php`)",
+        "url": "https://github.com/advisories/GHSA-4v9q-p283-qc2m",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-17T20:34:05.000Z",
-        "summary": "# Path Traversal in MediaUploadTrait::deleteFile() Allows Arbitrary File Deletion ## Summary A path traversal vulnerability in `MediaUploadTrait::deleteFile()` allows an authenticated user with media management permissions to delete arbitr…",
-        "badge": "CVE-2026-72695",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-17T20:43:16.000Z",
+        "summary": "**Verified against:** `getgrav/grav` devel branch, `GRAV_VERSION = \"2.0.15\"`, file `index.php ## Title Unauthenticated Path Traversal via Missing Directory-Boundary Check in `plugin-asset-map.php` Static Asset Server (`index.php`) ## Produ…",
+        "badge": "CVE-2026-74907",
+        "signal": "HIGH · CVSS 5.9"
       },
       {
         "id": "ai-hugging-face-5cbcf08e288841ac",
@@ -483,6 +482,17 @@
         "source": "Hugging Face",
         "publishedAt": "2026-09-08T14:23:07.000Z",
         "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1243021",
+        "category": "dev",
+        "title": "Zcode 投诉信已经拟好（感谢 DeepSeek 友情代笔）",
+        "url": "https://www.v2ex.com/t/1243021",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-18T08:54:19.000Z",
+        "summary": "Metadata Model: deepseek-default Time: 2026-09-18 16:05:37 +08:00 🧑‍💻 User 这个行为违法了哪些法律，国内和国外，重点是上市地区的相关法律条文 🤖 Assistant 🤔 Thought Process 用户想了解 ZCode 事件可能违反的法律，重点在上市地区。智谱 AI 是上市公司，我需要覆盖国内和国外法律。先搜索几个关键方向：中国法律、美国法律、香港法律，以及数据安全法和隐私政策。这些搜索能帮我确…",
+        "badge": "程序员",
+        "signal": "16 回复"
       }
     ]
   },
@@ -499,8 +509,8 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 11744,
-        "starsToday": 3607
+        "stars": 12431,
+        "starsToday": 3019
       },
       {
         "id": "github-48179362e46afbbc",
@@ -509,8 +519,8 @@
         "url": "https://github.com/anthropics/claude-code",
         "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "language": "TypeScript",
-        "stars": 146042,
-        "starsToday": 538
+        "stars": 146122,
+        "starsToday": 442
       },
       {
         "id": "github-c8f5678810f1cfbe",
@@ -519,8 +529,8 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 36107,
-        "starsToday": 3286
+        "stars": 36310,
+        "starsToday": 2724
       },
       {
         "id": "github-0658d7fa2f877963",
@@ -529,8 +539,8 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 261516,
-        "starsToday": 1171
+        "stars": 261671,
+        "starsToday": 965
       },
       {
         "id": "github-372cfb796b64c1ec",
@@ -539,8 +549,8 @@
         "url": "https://github.com/Tencent/BrowserSkill",
         "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
         "language": "TypeScript",
-        "stars": 4827,
-        "starsToday": 1302
+        "stars": 5005,
+        "starsToday": 1319
       },
       {
         "id": "github-1b1a194f4fbb088b",
@@ -549,8 +559,8 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 96142,
-        "starsToday": 680
+        "stars": 96195,
+        "starsToday": 677
       },
       {
         "id": "github-72170de6b1bac132",
@@ -559,8 +569,8 @@
         "url": "https://github.com/TencentCloud/Octop",
         "description": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
         "language": "Python",
-        "stars": 3758,
-        "starsToday": 367
+        "stars": 3827,
+        "starsToday": 571
       },
       {
         "id": "github-5c7b1a31c4f1ffdb",
@@ -569,7 +579,7 @@
         "url": "https://github.com/Fission-AI/OpenSpec",
         "description": "Spec-driven development (SDD) for AI coding assistants.",
         "language": "TypeScript",
-        "stars": 69054,
+        "stars": 69155,
         "starsToday": 298
       },
       {
@@ -579,7 +589,7 @@
         "url": "https://github.com/ankitects/anki",
         "description": "Anki is a smart spaced repetition flashcard program",
         "language": "Rust",
-        "stars": 31048,
+        "stars": 31110,
         "starsToday": 430
       },
       {
@@ -589,10 +599,10 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 24705,
-        "starsToday": 287
+        "stars": 24757,
+        "starsToday": 300
       }
     ],
-    "updatedAt": "2026-09-18T11:16:42.584Z"
+    "updatedAt": "2026-09-18T15:01:48.410Z"
   }
 }
