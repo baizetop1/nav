@@ -1,0 +1,10 @@
+const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
+export const ITINERARIES={steady:{name:'稳行旧道',text:'护送、休整与交锋兼有，适合第一次探路。'},salvage:{name:'访商寻藏',text:'第二段提前遇货栈，第三段可采买；第四段需选择交锋或休整。'},assault:{name:'连破强敌',text:'第二、三、四段都有强敌，更多辎重伴随更多粮耗与伤势。'}};
+export function campaignRoutes(id,fourth=['fight','camp']){if(id==='salvage')return [['event','fight'],['cache','fight'],['trade','elite'],['fight','camp'],['boss']];if(id==='assault')return [['fight','event'],['elite','camp'],['elite','trade'],['elite','cache'],['boss']];return [['fight','event'],['fight','camp'],['elite','trade'],fourth,['boss']];}
+export const PREPARATIONS={none:{name:'轻装出行',text:'不额外付费，没有备战加成。',cost:{}},guide:{name:'修制路标',building:'lumber',text:'伐木场 2 级；启程木材 20、碎银 30。本趟每场战斗粮耗额外降低 20%。',cost:{wood:20,silver:30}},medicine:{name:'随军医囊',building:'clinic',text:'医馆 2 级；启程草药 3、布匹 2。本趟每场胜利后在阵英雄恢复 8% 气血，不复活。',cost:{herb:3,cloth:2}},drill:{name:'出征合练',building:'barracks',text:'兵营 2 级；启程粮草 25、碎银 40。本趟每场开战在阵英雄怒气 +10。',cost:{food:25,silver:40}}};
+export const CONTRACTS={none:{name:'常规游历',text:'按所选难度出行。',scale:1},safe:{name:'全员归寨',text:'险途以上走通，英雄从未退阵；敌方气血、攻击、防御提高 15%。',scale:1.15},noMedicine:{name:'无药行军',text:'险途以上走通，战斗药品与野营药包均未使用；敌方气血、攻击、防御提高 20%。',scale:1.2},swift:{name:'破阵疾行',text:'险途以上走通，全部交战用时合计不超过 60 秒；敌方气血、攻击、防御提高 25%。',scale:1.25}};
+export const ROUTE_DROPS={forest:[{id:'strength_shard',count:2,rate:.35},{id:'martial_pages',count:3,rate:.20},{id:'strength_charm',count:1,rate:.08}],water:[{id:'herb',count:3,rate:.35},{id:'mount_feed',count:2,rate:.20},{id:'vital_pill',count:1,rate:.08}],mountain:[{id:'scrap_iron',count:3,rate:.35},{id:'cloth',count:3,rate:.20},{id:'strength_charm',count:1,rate:.08}]};
+export const defaultPlan=()=>({itinerary:'steady',preparation:'none',challenge:'none'});
+export const validPlan=p=>p&&own(ITINERARIES,p.itinerary)&&own(PREPARATIONS,p.preparation)&&own(CONTRACTS,p.challenge);
+export function contractPassed(p){return p.challenge==='safe'?!p.retired:p.challenge==='noMedicine'?p.medicine===0:p.challenge==='swift'?p.elapsed<=60000:false;}
+

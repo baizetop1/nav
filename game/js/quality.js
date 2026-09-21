@@ -1,4 +1,4 @@
-import { hasOwn, requireRule, journal, count } from './utils.js?v=0.32.0';
+import { hasOwn, requireRule, journal, count } from './utils.js?v=0.44.0';
 
 export const QUALITIES=[
   {name:'凡',power:1,speed:1,level:1,hall:1},

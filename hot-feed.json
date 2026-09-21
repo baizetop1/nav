@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-21T14:10:20.259Z",
+  "generatedAt": "2026-09-21T16:55:17.309Z",
   "intelligence": {
-    "updatedAt": "2026-09-21T14:10:20.259Z",
+    "updatedAt": "2026-09-21T16:55:17.309Z",
     "items": [
       {
-        "id": "cn-item-a2ddf36050e06a13",
+        "id": "cn-item-079925754ddf0141",
         "category": "cn",
-        "title": "中国“快递进村”邮政兜底试点工作取得阶段性成效",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-21/10700956.shtml",
+        "title": "王毅同德国外长瓦德富尔通电话",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701192.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T10:13:50.000Z",
-        "summary": "中新社北京9月21日电 (记者 王梦瑶)中国国家邮政局21日在北京举行新闻发布会，介绍中西部农村地区“快递进村”邮政兜底试点工作背景和进展情况。国家邮政局新闻发言人、市场监管司司长林虎表示，试点工作开展以来取得了阶段性成效。",
+        "publishedAt": "2026-09-21T16:34:06.000Z",
+        "summary": "中新社北京9月21日电 9月21日，中共中央政治局委员、外交部长王毅应约同德国外长瓦德富尔通电话。",
         "badge": "中新网要闻"
       },
       {
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49785429",
+        "id": "hn-49787436",
         "category": "dev",
-        "title": "ZuckOff Know when a camera is in the room",
-        "url": "https://zuckoff.app/",
+        "title": "What Sun got wrong",
+        "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T10:33:14.000Z",
+        "publishedAt": "2026-09-21T14:03:18.000Z",
         "badge": "HN",
-        "signal": "496 分 · 208 评论"
+        "signal": "249 分 · 117 评论"
       },
       {
-        "id": "cn-it-302c0b5387fc9b7b",
+        "id": "cn-it-ff7815debdc23bbd",
         "category": "cn",
-        "title": "华为鸿蒙 HarmonyOS 7 游戏助手功能上新，支持超级分辨率、智能 HDR、内存清理等",
-        "url": "https://www.ithome.com/1/005/451.htm",
+        "title": "小米 69 元米家夜灯 4 开售：支持磁吸 / 悬挂 / 粘贴 + 8 个月长续航",
+        "url": "https://www.ithome.com/1/005/480.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T14:08:56.000Z",
-        "summary": "IT之家 9 月 21 日消息，在 9 月 7 日的 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会上，鸿蒙 7 操作系统正式发布。 目前，华为 Mate 80 系列手机、MatePad Edge、MateBook Pro 等设备已开启公测，Mate 60 系列、MatePad Pro 13.2 英寸 2025、WATCH GT 7 等已开启花粉 Beta 版尝鲜。 IT之家实测，在鸿蒙 HarmonyOS 7 系统上，游戏助手迎来一波升级…",
+        "publishedAt": "2026-09-21T16:00:10.000Z",
+        "summary": "IT之家 9 月 22 日消息，小米月初才开启众筹的米家夜灯 4 现已直接上架京东并开售，首发到手价 69 元起，首发期间晒单返 500 京豆（9 月 22 日-10 月 22 日）。 京东 米家夜灯 4 米家智能人体感应小夜灯婴儿喂奶起夜灯卫生间卧室床头灯磁吸充电 69 元 直达链接 米家夜灯 4 为全新升级版本，主打暗光感应，微动即亮，拥有多项核心升级。 首先，这款产品 升级 24GHz 雷达 ，人体感应更精准，拥有 120° 大广角感知人体，正前方感应范围可达 3m …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-jgh3-fggc-mcpm",
+        "id": "github-advisory-ghsa-phg3-3g28-wq9v",
         "category": "security",
-        "title": "Obot: Server-Side Request Forgery via remote MCP server URL",
-        "url": "https://github.com/advisories/GHSA-jgh3-fggc-mcpm",
+        "title": "Hatchet - Unauthenticated OAuth state CSRF / login-CSRF via empty-state collision in ValidateOAuthState",
+        "url": "https://github.com/advisories/GHSA-phg3-3g28-wq9v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:59:46.000Z",
-        "summary": "## Summary In affected versions, the URL of a remote MCP server is attacker-controlled at registration and is fetched server-side with no validation of the destination. There is no guard against loopback, link-local, RFC1918 private ranges…",
-        "badge": "GHSA-JGH3-FGGC-MCPM",
-        "signal": "HIGH · CVSS 7.6"
+        "publishedAt": "2026-09-21T15:47:01.000Z",
+        "summary": "### Summary Hatchet version v0.86.26 and below is vulnerable to OAuth state CSRF (login CSRF / account fixation). The vulnerable code clears the session `oauth_state_ ` value to the empty string `\"\"` after a successful OAuth callback rathe…",
+        "badge": "CVE-2026-61687",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243762",
+        "id": "v2ex-1243783",
         "category": "dev",
-        "title": "问一下哪家域名续费便宜 又不需要开通扣款协议？",
-        "url": "https://www.v2ex.com/t/1243762",
+        "title": "为啥 codex cli 总莫名其妙停工， DSH 和 Trae 没事",
+        "url": "https://www.v2ex.com/t/1243783",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T14:04:27.000Z",
-        "summary": "域名在 namesilo 放了很多年，后来发现好像越来越贵，就转到了 spaceship. spaceship 打算续费的时候 发现不是一次性付费 是开通扣款协议 这种。 心里不太舒服，不太喜欢一直被一个商家开通权限，总感觉不安全。我每次都是自己付费。 有没有哪家续费便宜， 不是开通扣费协议 是一次性用支付宝 微信 paypal 付费的商家？",
+        "publishedAt": "2026-09-21T16:34:05.000Z",
+        "summary": "我用 cc switch+codex+中转站 API 干活，同一个 KEY 配置，DSH 和 Trae 都能持续保持不断，就 codex 执行一个任务自动停 N 回。但它不是连接中断或报错码，它是懒狗🐶式停下来，催一下干几分钟又停，而且还没有规律。有时候也能持续一个小时一直刷屏。大神们有啥经验丰富的，在哪设置一下能解决这问题吗？ C C cli 也没这情况，但老连不上各种报错让我弃用了。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-15eff55b95680073",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "我国多地陆续推出婚育激励举措，部分市县、村居针对符合条件的初婚夫妻，发放现金红包或结婚消费券。山西吕梁、福建明溪、广东部分村镇均出台相关奖励政策，部分企业也给结婚员工发放奖金，以此鼓励适龄婚育，减轻新人婚恋相关开销压力。",
         "badge": "热搜",
-        "signal": "7,808,330 热度"
+        "signal": "7,808,109 热度"
       },
       {
         "id": "cisa-kev-cve-2026-53266",
@@ -117,35 +117,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49784336",
+        "id": "hn-49787726",
         "category": "dev",
-        "title": "Disney+: New user agreement allows ads before movies in all subscriptions",
-        "url": "https://consumerrights.wiki/w/Disney%2B_ad_policy_change",
+        "title": "Attention is all you have",
+        "url": "https://alicegg.tech/2026/09/21/attention",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T07:55:28.000Z",
+        "publishedAt": "2026-09-21T14:26:56.000Z",
         "badge": "HN",
-        "signal": "256 分 · 180 评论"
+        "signal": "131 分 · 23 评论"
       },
       {
-        "id": "cn-item-19810ca22c7d74fa",
+        "id": "cn-item-8cd4288ebb8bd1c1",
         "category": "cn",
-        "title": "张又侠、刘振立严重违纪违法被开除党籍军籍",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-21/10700958.shtml",
+        "title": "专访艺人任嘉伦：在浪潮与浪漫间从容歌唱",
+        "url": "https://www.chinanews.com.cn/cul/2026/09-21/10700944.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T10:02:08.000Z",
-        "summary": "新华社北京9月21日电#8195;经中共中央、中央军委批准，中央军委纪委监委对中央政治局委员、中央军委副主席张又侠，中央军委委员、军委联合参谋部原参谋长刘振立2人立案审查调查。9月21日，中共中央政治局会议审议并通过中央军委《关于张又侠问题审查结果和处理意见的报告》《关于刘振立问题审查结果和处理意见的报告》。",
+        "publishedAt": "2026-09-21T10:30:09.000Z",
+        "summary": "中新网澳门9月21日电 题：专访艺人任嘉伦：在浪潮与浪漫间从容歌唱",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xwmw-prc4-v3cr",
+        "id": "github-advisory-ghsa-jgh3-fggc-mcpm",
         "category": "security",
-        "title": "Obot: OAuth Dynamic Client Registration Enables API Token Theft via Audience Confusion",
-        "url": "https://github.com/advisories/GHSA-xwmw-prc4-v3cr",
+        "title": "Obot: Server-Side Request Forgery via remote MCP server URL",
+        "url": "https://github.com/advisories/GHSA-jgh3-fggc-mcpm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:59:35.000Z",
-        "summary": "## Summary In affected versions, an unauthenticated attacker could register an OAuth client with an arbitrary external redirect URI, and the authorization flow would auto-complete without a consent screen. If a logged-in victim visited a c…",
-        "badge": "GHSA-XWMW-PRC4-V3CR",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-18T17:59:46.000Z",
+        "summary": "## Summary In affected versions, the URL of a remote MCP server is attacker-controlled at registration and is fetched server-side with no validation of the destination. There is no guard against loopback, link-local, RFC1918 private ranges…",
+        "badge": "GHSA-JGH3-FGGC-MCPM",
+        "signal": "HIGH · CVSS 7.6"
       },
       {
         "id": "ai-openai-a00923bf4ddda715",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243757",
+        "id": "v2ex-1243781",
         "category": "dev",
-        "title": "trae 是不是步 Zcode 后尘了？",
-        "url": "https://www.v2ex.com/t/1243757",
+        "title": "Grok 4.7 发布",
+        "url": "https://www.v2ex.com/t/1243781",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T13:37:52.000Z",
-        "summary": "另外 zcode 保存第三方 api 好像是这样保存的 ZCode 把用户的各模型厂商 API Key （含 OAuth token ）用 AES-256-GCM 加密后落盘。但默认情况下加密密钥不是任何秘密，而是由平台名 + 家目录路径 + OS 用户名拼接的字符串做一次 SHA-256： key = sha256(\"zcode-credential-fallback:darwin:/Users/ : \")",
+        "publishedAt": "2026-09-21T16:23:13.000Z",
+        "summary": "https://x.ai/news/grok-4-7",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-cd0dd61286dc6838",
+        "id": "cn-it-c966ad0ce5db286f",
         "category": "cn",
-        "title": "CMF 将脱离 Nothing 独立运营，成为一家印度本土企业",
-        "url": "https://www.ithome.com/1/005/450.htm",
+        "title": "苹果 2026 款 Mac mini 发售：全新 M6 / M5 Pro 芯片，6999 元起",
+        "url": "https://www.ithome.com/1/005/479.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T14:04:28.000Z",
-        "summary": "IT之家 9 月 21 日消息，瑞典华裔企业家裴宇（Carl Pei）计划将 Nothing 旗下的平价手机与消费电子业务板块分拆出来，组建一家由印度资本控股的独立新公司。裴宇押注印度即将成长为下一个全球消费电子产业中心。 当地时间周一，Nothing 联合创始人兼首席执行官裴宇在 X 平台发布题为《印度是大势所趋》（India Is Inevitable）的文章表示，CMF 将会作为独立企业运营，在印度设立专属的管理团队与研发团队。总部位于伦敦的 Nothing 仍会保留…",
+        "publishedAt": "2026-09-21T15:45:09.000Z",
+        "summary": "IT之家 9 月 21 日消息，苹果全新 Mac mini（2026 款）将于 9 月 22 日发售，搭载全新 M6 芯片和 M5 Pro 芯片，售价 6999 元起。 IT之家从官方介绍获悉，M6 芯片集成 12 核中央处理器，比前代增加 2 颗核心。12 核图形处理器同样比前代增加 2 颗核心，首次为 Mac mini 的每颗图形处理器核心均配备神经网络加速器，相比搭载 M4 芯片的 Mac mini，AI 性能提升最高可达 4 倍，图形处理速度提升最高可达 2 倍，全…",
         "badge": "IT之家"
       },
       {
@@ -200,35 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49783999",
+        "id": "hn-49788838",
         "category": "dev",
-        "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
-        "url": "https://github.com/jaredpalmer/kev/tree/main",
+        "title": "Grok 4.7",
+        "url": "https://x.ai/news/grok-4-7",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T07:11:55.000Z",
+        "publishedAt": "2026-09-21T15:50:15.000Z",
         "badge": "HN",
-        "signal": "222 分 · 96 评论"
+        "signal": "109 分 · 55 评论"
       },
       {
-        "id": "cn-baidu-dff3bf29af4ec6dd",
+        "id": "cn-baidu-cc854039cddf95da",
         "category": "cn",
-        "title": "张展硕最后一棒绝杀日本队",
-        "url": "https://www.baidu.com/s?wd=%E5%BC%A0%E5%B1%95%E7%A1%95%E6%9C%80%E5%90%8E%E4%B8%80%E6%A3%92%E7%BB%9D%E6%9D%80%E6%97%A5%E6%9C%AC%E9%98%9F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国队已夺23金10银5铜",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E9%98%9F%E5%B7%B2%E5%A4%BA23%E9%87%9110%E9%93%B65%E9%93%9C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月21日，在亚运会男子4×200米自由泳接力赛中，中国队夺得金牌并打破亚洲纪录。此前日本队领先前三棒，最后一棒张展硕凭借出色发挥完成反超，助力中国队夺冠并刷新亚洲纪录。",
+        "summary": "北京时间9月21日，名古屋亚运会迎来第二个比赛日，中国队单日斩获12枚金牌。目前以23金10银5铜领跑奖牌榜。",
         "badge": "热搜",
-        "signal": "7,713,998 热度"
+        "signal": "7,712,759 热度"
       },
       {
-        "id": "github-advisory-ghsa-9jjc-fw8x-fmwx",
+        "id": "github-advisory-ghsa-xwmw-prc4-v3cr",
         "category": "security",
-        "title": "io.moquette:moquette-broker has a Missing Authorization issue",
-        "url": "https://github.com/advisories/GHSA-9jjc-fw8x-fmwx",
+        "title": "Obot: OAuth Dynamic Client Registration Enables API Token Theft via Audience Confusion",
+        "url": "https://github.com/advisories/GHSA-xwmw-prc4-v3cr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:58:39.000Z",
-        "summary": "## Summary Moquette MQTT Broker fails to enforce ACL write permission checks when publishing Will (Last Will and Testament) messages on behalf of disconnected clients. All normal PUBLISH paths (`receivedPublishQos0`, `receivedPublishQos1`,…",
-        "badge": "CVE-2026-85058",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-18T17:59:35.000Z",
+        "summary": "## Summary In affected versions, an unauthenticated attacker could register an OAuth client with an arbitrary external redirect URI, and the authorization flow would auto-complete without a consent screen. If a logged-in victim visited a c…",
+        "badge": "GHSA-XWMW-PRC4-V3CR",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-hugging-face-693b3130e25cc880",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243751",
+        "id": "v2ex-1243773",
         "category": "dev",
-        "title": "终于用上 20X 了，一波三折",
-        "url": "https://www.v2ex.com/t/1243751",
+        "title": "kimi K3 是不是吹的厉害",
+        "url": "https://www.v2ex.com/t/1243773",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T13:14:47.000Z",
-        "summary": "本来继续用 5X 的。。真的不够用。。哎",
+        "publishedAt": "2026-09-21T14:44:20.000Z",
+        "summary": "699/月用户，之前官网还有 kimi code 多少倍额度，悄悄移除了。 说是跑分比肩 fable ，实际体感没觉得比 DeepSeek 4.1 flash 高到哪里去。",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "17 回复"
       },
       {
-        "id": "cn-item-54ef656aee93c896",
+        "id": "cn-item-a2ddf36050e06a13",
         "category": "cn",
-        "title": "两部门紧急拨付2亿元支持4省自然灾害应急抢险救灾",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-21/10700953.shtml",
+        "title": "中国“快递进村”邮政兜底试点工作取得阶段性成效",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-21/10700956.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T09:58:45.000Z",
-        "summary": "近期，我国南方多地出现大范围持续性强降雨，降雨极端性突出，引发洪涝、地质灾害，造成人员伤亡和房屋倒损。",
+        "publishedAt": "2026-09-21T10:13:50.000Z",
+        "summary": "中新社北京9月21日电 (记者 王梦瑶)中国国家邮政局21日在北京举行新闻发布会，介绍中西部农村地区“快递进村”邮政兜底试点工作背景和进展情况。国家邮政局新闻发言人、市场监管司司长林虎表示，试点工作开展以来取得了阶段性成效。",
         "badge": "中新网要闻"
       },
       {
@@ -282,35 +282,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49784706",
+        "id": "hn-49789356",
         "category": "dev",
-        "title": "Jev-Leftpad",
-        "url": "https://github.com/f/jev-leftpad",
+        "title": "Show HN: Foremerge – Catch Intent Conflicts Between Parallel Coding Agents",
+        "url": "https://github.com/naw103/foremerge",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T08:39:32.000Z",
+        "publishedAt": "2026-09-21T16:22:06.000Z",
         "badge": "HN",
-        "signal": "160 分 · 59 评论"
+        "signal": "9 分 · 0 评论"
       },
       {
-        "id": "cn-it-f038515a29b4e41b",
+        "id": "cn-it-f0241de8258c2757",
         "category": "cn",
-        "title": "工信部将优化无线电频谱资源布局，支撑先进制造业发展",
-        "url": "https://www.ithome.com/1/005/449.htm",
+        "title": "苹果 2026 款 Mac Studio 发售：M5 Max / Ultra 芯片，19999 元起",
+        "url": "https://www.ithome.com/1/005/478.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T14:03:40.000Z",
-        "summary": "IT之家 9 月 21 日消息，据新华社今日报道，工业和信息化部将优化无线电频谱资源布局，充分发挥频谱资源引领无线电技术创新应用、支撑无线电产业发展的作用，夯实产业发展根基。 报道称，发展先进制造业，加快推进新型工业化，离不开稀缺的无线电频谱资源的支撑保障和安全有序的电磁环境。2026 中国无线电大会 21 日在河北雄安新区开幕，工业和信息化部有关负责人在会上说，要做好频谱资源科学规划、精准供给、合理开发、高效利用，让无形的频谱资源释放出有形的巨大能量，为加快构建以先进制造…",
+        "publishedAt": "2026-09-21T15:40:09.000Z",
+        "summary": "IT之家 9 月 21 日消息，苹果于 8 月 25 日推出全新 Mac Studio（2026 款），搭载 M5 Max 和全新 M5 Ultra 芯片，新品将于 9 月 22 日正式发售。 IT之家附全新 Mac Studio 售价如下： Mac Studio（搭载 M5 Max 处理器）起售价为 19,999 元（36GB+512GB），教育版售价为 18,399 元。 Mac Studio（搭载 M5 Ultra 处理器）起售价为 46,999 元（96GB+1TB…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-xcw4-53cc-hv32",
+        "id": "github-advisory-ghsa-9jjc-fw8x-fmwx",
         "category": "security",
-        "title": "Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass",
-        "url": "https://github.com/advisories/GHSA-xcw4-53cc-hv32",
+        "title": "io.moquette:moquette-broker has a Missing Authorization issue",
+        "url": "https://github.com/advisories/GHSA-9jjc-fw8x-fmwx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:54:26.000Z",
-        "summary": "### Summary The Mnemosyne sync server's authentication check decoded JWT bearer tokens but never verified their HMAC-SHA256 signatures. Any well-formed token was accepted, allowing an unauthenticated attacker to impersonate any user and re…",
-        "badge": "CVE-2026-59163",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-18T17:58:39.000Z",
+        "summary": "## Summary Moquette MQTT Broker fails to enforce ACL write permission checks when publishing Will (Last Will and Testament) messages on behalf of disconnected clients. All normal PUBLISH paths (`receivedPublishQos0`, `receivedPublishQos1`,…",
+        "badge": "CVE-2026-85058",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243735",
+        "id": "v2ex-1243762",
         "category": "dev",
-        "title": "Local-First 的纯静态 AI 工作流工具，如何优雅处理敏感 Key 的本地安全？",
-        "url": "https://www.v2ex.com/t/1243735",
+        "title": "问一下哪家域名续费便宜 又不需要开通扣款协议？",
+        "url": "https://www.v2ex.com/t/1243762",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T12:01:42.000Z",
-        "summary": "各位 V 友， 最近在做一款纯前端运行、无服务端依赖的轻量级可视化 AI 工作流编排器： PatchCat 打包后只有几 MB 纯静态资源，支持本地/局域网部署（丢在 NAS 、软路由或 OpenWrt 路由器上点开即用），数据和 DAG 拓扑全走浏览器端 LocalStorage/IndexedDB ，自带 Key （ BYOK ）直连模型。 做轻的初衷：希望保持真正的 Local-First 和轻量家用，不用专门开一台 NAS 或常开主机拉 Docker/数据库，不给用…",
+        "publishedAt": "2026-09-21T14:04:27.000Z",
+        "summary": "域名在 namesilo 放了很多年，后来发现好像越来越贵，就转到了 spaceship. spaceship 打算续费的时候 发现不是一次性付费 是开通扣款协议 这种。 心里不太舒服，不太喜欢一直被一个商家开通权限，总感觉不安全。我每次都是自己付费。 有没有哪家续费便宜， 不是开通扣费协议 是一次性用支付宝 微信 paypal 付费的商家？",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-8ae7dda747243d8c",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "日前，商务部等7部门发布《关于推动商品消费扩容升级的实施意见》，提出到2030年社会消费品零售总额达60万亿元左右。专家指出，该文件构建三重机制：通过供给侧创新创造有效需求，以结构分层拓展空间，并通过制度供给降低交易成本。",
         "badge": "热搜",
-        "signal": "7,617,612 热度"
+        "signal": "7,615,940 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76460",
@@ -363,35 +363,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49783495",
+        "id": "hn-49783999",
         "category": "dev",
-        "title": "Grim Fandango Puzzle Document (1996) [pdf]",
-        "url": "http://gameshelf.jmac.org/2008/11/13/GrimPuzzleDoc_small.pdf",
+        "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+        "url": "https://github.com/jaredpalmer/kev/tree/main",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T05:55:22.000Z",
+        "publishedAt": "2026-09-21T07:11:55.000Z",
         "badge": "HN",
-        "signal": "266 分 · 60 评论"
+        "signal": "294 分 · 137 评论"
       },
       {
-        "id": "cn-item-29cc008cebca5e9c",
+        "id": "cn-item-19810ca22c7d74fa",
         "category": "cn",
-        "title": "广东省人大常委会党组成员覃伟中被查",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-21/10700846.shtml",
+        "title": "张又侠、刘振立严重违纪违法被开除党籍军籍",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-21/10700958.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T09:06:28.000Z",
-        "summary": "中新网9月21日电 据中央纪委国家监委网站消息，广东省人大常委会党组成员覃伟中涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
+        "publishedAt": "2026-09-21T10:02:08.000Z",
+        "summary": "新华社北京9月21日电#8195;经中共中央、中央军委批准，中央军委纪委监委对中央政治局委员、中央军委副主席张又侠，中央军委委员、军委联合参谋部原参谋长刘振立2人立案审查调查。9月21日，中共中央政治局会议审议并通过中央军委《关于张又侠问题审查结果和处理意见的报告》《关于刘振立问题审查结果和处理意见的报告》。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-vr5f-w35q-98jp",
+        "id": "github-advisory-ghsa-xcw4-53cc-hv32",
         "category": "security",
-        "title": "Perses's unvalidated project parameter enables filesystem path traversal",
-        "url": "https://github.com/advisories/GHSA-vr5f-w35q-98jp",
+        "title": "Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass",
+        "url": "https://github.com/advisories/GHSA-xcw4-53cc-hv32",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:40:03.000Z",
-        "summary": "### Impact When Perses is using the file system database, on the list endpoints, the project value is bound from the request into the resource `Query` struct and is never validated against directory-traversal characters (validation/Flatten…",
-        "badge": "CVE-2026-63445",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-18T17:54:26.000Z",
+        "summary": "### Summary The Mnemosyne sync server's authentication check decoded JWT bearer tokens but never verified their HMAC-SHA256 signatures. Any well-formed token was accepted, allowing an unauthenticated attacker to impersonate any user and re…",
+        "badge": "CVE-2026-59163",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
         "id": "ai-openai-192794312f979cbd",
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243733",
+        "id": "v2ex-1243757",
         "category": "dev",
-        "title": "AI 时代，移动开发用 React Native / Flutter / 原生",
-        "url": "https://www.v2ex.com/t/1243733",
+        "title": "trae 是不是步 Zcode 后尘了？",
+        "url": "https://www.v2ex.com/t/1243757",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T11:47:55.000Z",
-        "summary": "有跨平台需求的话，各位选谁？",
+        "publishedAt": "2026-09-21T13:37:52.000Z",
+        "summary": "另外 zcode 保存第三方 api 好像是这样保存的 ZCode 把用户的各模型厂商 API Key （含 OAuth token ）用 AES-256-GCM 加密后落盘。但默认情况下加密密钥不是任何秘密，而是由平台名 + 家目录路径 + OS 用户名拼接的字符串做一次 SHA-256： key = sha256(\"zcode-credential-fallback:darwin:/Users/ : \")",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-it-5ad65ad635223aae",
+        "id": "cn-it-ea8dc0f3416f025f",
         "category": "cn",
-        "title": "联发科技面向 Googlebook 推出天玑 CX C10 Max SoC",
-        "url": "https://www.ithome.com/1/005/448.htm",
+        "title": "【视频】首发 2nm 的苹果 M6 Mac mini 体验：对比上代提升多大？",
+        "url": "https://www.ithome.com/1/005/477.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T13:54:53.000Z",
-        "summary": "IT之家 9 月 21 日消息，联发科技 (Mediatek) 今日面向 Googlebook 推出天玑 CX C10 Max 芯片，这也是天玑 CX “计算体验”系列的首款 SoC。 天玑 CX C10 Max 基于台积电 3nm 先进制程，拥有 8 个“全大”CPU 核心、11 核 Immortalis-G925 GPU、45 TOPS NPU，集成支持 32MP 摄像头传感器的 Imagiq 1090 ISP，支持 7.3Gbps Wi-Fi 7、蓝牙 6.0。 其 …",
+        "publishedAt": "2026-09-21T15:32:20.000Z",
+        "summary": "首发 2nm 的苹果 M6 Mac mini 体验：对比上代提升多大，IT之家这就带你第一时间体验一下。 点击关注IT之家B站账号",
         "badge": "IT之家"
       },
       {
@@ -445,34 +445,34 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49786419",
+        "id": "hn-49788773",
         "category": "dev",
-        "title": "Show HN: Lossless-memory – a personal AI memory that never summarizes",
-        "url": "https://github.com/aru-labs/lossless-memory",
+        "title": "A restored PDP-11/83 serving this page on 211BSD Unix",
+        "url": "http://pdp1173.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T12:28:17.000Z",
+        "publishedAt": "2026-09-21T15:45:06.000Z",
         "badge": "HN",
-        "signal": "16 分 · 6 评论"
+        "signal": "14 分 · 3 评论"
       },
       {
-        "id": "cn-baidu-c619eee00ac10e0b",
+        "id": "cn-baidu-4ad03aa9f8061ac3",
         "category": "cn",
-        "title": "央视解说惊叹于子迪：不可思议",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%AE%E8%A7%86%E8%A7%A3%E8%AF%B4%E6%83%8A%E5%8F%B9%E4%BA%8E%E5%AD%90%E8%BF%AA%EF%BC%9A%E4%B8%8D%E5%8F%AF%E6%80%9D%E8%AE%AE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "妹妹送哥哥入伍上一秒微笑下一秒大哭",
+        "url": "https://www.baidu.com/s?wd=%E5%A6%B9%E5%A6%B9%E9%80%81%E5%93%A5%E5%93%A5%E5%85%A5%E4%BC%8D%E4%B8%8A%E4%B8%80%E7%A7%92%E5%BE%AE%E7%AC%91%E4%B8%8B%E4%B8%80%E7%A7%92%E5%A4%A7%E5%93%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "2025年至2026年，于子迪与余依婷三次刷新200米个人混合泳亚洲纪录。此前该纪录由叶诗文保持。13岁的于子迪表现引发关注，央视解说惊叹其不可思议，直呼激动得起鸡皮疙瘩。",
+        "summary": "近日，在安徽马鞍山车站，妹妹送别入伍的哥哥，前一刻还面带微笑，转瞬情绪破防、失声大哭，这一幕令人动容。",
         "badge": "热搜",
-        "signal": "7,521,637 热度"
+        "signal": "7,522,994 热度"
       },
       {
-        "id": "github-advisory-ghsa-4227-9989-jrhx",
+        "id": "github-advisory-ghsa-vr5f-w35q-98jp",
         "category": "security",
-        "title": "Perses's missing authorization in datasource proxy allows cross-scope secret disclosure",
-        "url": "https://github.com/advisories/GHSA-4227-9989-jrhx",
+        "title": "Perses's unvalidated project parameter enables filesystem path traversal",
+        "url": "https://github.com/advisories/GHSA-vr5f-w35q-98jp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:39:48.000Z",
-        "summary": "### Impact The datasource proxy authorizes the caller on the Datasource scope, then resolves and decrypts any Secret named in the request body with no Secret-scope check. Datasource and Secret are distinct, independently grantable role sco…",
-        "badge": "CVE-2026-63199",
+        "publishedAt": "2026-09-18T17:40:03.000Z",
+        "summary": "### Impact When Perses is using the file system database, on the list endpoints, the project value is bound from the request into the resource `Query` struct and is never validated against directory-traversal characters (validation/Flatten…",
+        "badge": "CVE-2026-63445",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243730",
+        "id": "v2ex-1243751",
         "category": "dev",
-        "title": "codex 明天 18:00 重置",
-        "url": "https://www.v2ex.com/t/1243730",
+        "title": "终于用上 20X 了，一波三折",
+        "url": "https://www.v2ex.com/t/1243751",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T11:41:36.000Z",
-        "summary": "tibo：3am on a tuesday 算下来应该是明天下午下班的时候重置 登起来",
+        "publishedAt": "2026-09-21T13:14:47.000Z",
+        "summary": "本来继续用 5X 的。。真的不够用。。哎",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "7 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/BuilderIO/agent-native",
         "description": "A framework for building agentic apps",
         "language": "TypeScript",
-        "stars": 5647,
+        "stars": 5719,
         "starsToday": 607
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/trycua/cua",
         "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
         "language": "HTML",
-        "stars": 25520,
+        "stars": 25578,
         "starsToday": 609
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/Open-Dev-Society/OpenStock",
         "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
         "language": "TypeScript",
-        "stars": 17352,
+        "stars": 17476,
         "starsToday": 843
       },
       {
@@ -540,8 +540,8 @@
         "url": "https://github.com/akitaonrails/ai-memory",
         "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "language": "Rust",
-        "stars": 7470,
-        "starsToday": 114
+        "stars": 7536,
+        "starsToday": 217
       },
       {
         "id": "github-eb7cf9c05b3c8130",
@@ -550,7 +550,7 @@
         "url": "https://github.com/coder/coder",
         "description": "Secure environments for developers and their agents",
         "language": "Go",
-        "stars": 16291,
+        "stars": 16321,
         "starsToday": 461
       },
       {
@@ -559,7 +559,7 @@
         "name": "anthropics/financial-services",
         "url": "https://github.com/anthropics/financial-services",
         "language": "Python",
-        "stars": 35654,
+        "stars": 35702,
         "starsToday": 425
       },
       {
@@ -569,8 +569,8 @@
         "url": "https://github.com/cloudflare/quiche",
         "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
         "language": "Rust",
-        "stars": 12195,
-        "starsToday": 242
+        "stars": 12243,
+        "starsToday": 69
       },
       {
         "id": "github-9581560c8fcedaf6",
@@ -579,7 +579,7 @@
         "url": "https://github.com/mvt-project/mvt",
         "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
         "language": "Python",
-        "stars": 13404,
+        "stars": 13446,
         "starsToday": 177
       },
       {
@@ -589,8 +589,8 @@
         "url": "https://github.com/zhouxiaoka/autoclip",
         "description": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
         "language": "Python",
-        "stars": 8049,
-        "starsToday": 395
+        "stars": 8092,
+        "starsToday": 266
       },
       {
         "id": "github-8044cecdc56c279b",
@@ -598,10 +598,10 @@
         "name": "ruanyf/weekly",
         "url": "https://github.com/ruanyf/weekly",
         "description": "科技爱好者周刊，每周五发布",
-        "stars": 103822,
-        "starsToday": 621
+        "stars": 103856,
+        "starsToday": 221
       }
     ],
-    "updatedAt": "2026-09-21T14:10:20.259Z"
+    "updatedAt": "2026-09-21T16:55:17.309Z"
   }
 }

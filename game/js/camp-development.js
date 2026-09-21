@@ -1,8 +1,8 @@
-import { stewardshipBonus } from './stewardship.js?v=0.32.0';
-import { helperBonus } from './helpers.js?v=0.32.0';
-import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.32.0';
-import { gainExp } from './hero.js?v=0.32.0';
-import { grant, newEquipment } from './item.js?v=0.32.0';
+import { stewardshipBonus } from './stewardship.js?v=0.44.0';
+import { helperBonus } from './helpers.js?v=0.44.0';
+import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.44.0';
+import { gainExp } from './hero.js?v=0.44.0';
+import { grant, newEquipment } from './item.js?v=0.44.0';
 
 export const DUTIES={
   balanced:{name:'各司其职',description:'木粮银均衡生产。'},
@@ -53,7 +53,7 @@ export const RAID_INTEL={
 };
 export function raidBonus(b){const i=b.context.type==='camp'&&RAID_INTEL[b.context.id];return i&&i.tactic===b.expedition?.tactic?i:{attack:1,defense:1,loss:1};}
 export const EQUIPMENT_DROP_RATE=.25;
-export function equipmentPool(d,tier){return d.equipments.filter(e=>e.tier===Math.min(3,tier));}
+export function equipmentPool(d,tier){return d.equipments.filter(e=>e.source!=='journey'&&e.tier===Math.min(3,tier));}
 export function searchEquipment(s,d,tier){
   if(random(s)>=EQUIPMENT_DROP_RATE){journal(s,'【战后搜获】本次未找到完好的装备。');return;}
   const e=pick(s,equipmentPool(d,tier));

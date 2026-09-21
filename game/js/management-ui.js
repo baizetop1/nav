@@ -1,8 +1,8 @@
-import { clone } from './utils.js?v=0.32.0';
-import { AFFAIRS } from './affairs.js?v=0.32.0';
-import { attributes } from './hero.js?v=0.32.0';
-import { itemAction } from './item.js?v=0.32.0';
-import { equippedSets } from './equipment-sets.js?v=0.32.0';
+import { clone } from './utils.js?v=0.44.0';
+import { AFFAIRS } from './affairs.js?v=0.44.0';
+import { attributes } from './hero.js?v=0.44.0';
+import { itemAction } from './item.js?v=0.44.0';
+import { equippedSets } from './equipment-sets.js?v=0.44.0';
 export function affairsPanel(s,d,btn){const f=s.affairs;if(!f?.pending&&!f?.mission)return '<p class="note">每完成三次寨务，可能有商队、乡人或匪患来报；未处理的来报会保留。</p>';
  const names={silver:'碎银',food:'粮草',wood:'木材',prestige:'威望'},show=r=>Object.entries(r).flatMap(([k,n])=>k==='items'?Object.entries(n).map(([id,v])=>d.by.items[id].name+' '+v):(names[k]||k)+' '+n).join(' · ');
  if(f.mission){const m=f.mission;return `<section class="affairs-panel" id="camp-affairs"><h2>外派待归 · ${d.by.heroes[m.hero].name}</h2><p>${AFFAIRS[m.kind].name} · ${s.clock>=m.readyAt?'已办妥':'约 '+Math.ceil((m.readyAt-s.clock)/60000)+' 分钟后归来'}</p><p>酬谢：${show(AFFAIRS[m.kind].dispatch)}</p>${btn('接回好汉，收取酬谢',{type:'affairCollect'},'primary',s.clock<m.readyAt)}<p class="note">领取后可重新编队；不会自动替换现有阵容。</p></section>`;}
@@ -12,5 +12,5 @@ export function affairsPanel(s,d,btn){const f=s.affairs;if(!f?.pending&&!f?.miss
 }
 export function equipmentComparison(s,d,p,btn,esc){if(!p)return '';const e=s.equipment.find(e=>e.uid===p.id);if(!e)return '';const after=clone(s);try{itemAction(after,d,{type:'equip',id:p.id,hero:p.hero});}catch{return '';}
  const heroes=[...new Set([e.hero,p.hero].filter(Boolean))],labels={hp:'气血',attack:'攻击',defense:'防御',strategy:'谋略',speed:'速度'};
- return `<section class="equipment-comparison"><h2>穿戴前后对比</h2><p>${esc(d.by.equipments[e.item].name)} → ${p.hero?esc(d.by.heroes[p.hero].name):'卸下收回'}</p><p class="note">已计入强化、套装、坐骑与品质。比较的是人物属性，战场地形和军令加成另行计算。</p>${heroes.map(id=>{const a=attributes(s,id,d),b=attributes(after,id,d);return `<h3>${esc(d.by.heroes[id].name)}</h3><table><thead><tr><th>属性</th><th>现在</th><th>穿戴后</th><th>变化</th></tr></thead><tbody>${Object.keys(labels).map(k=>`<tr><td>${labels[k]}</td><td>${a[k]}</td><td>${b[k]}</td><td class="${b[k]>a[k]?'stat-up':b[k]<a[k]?'stat-down':''}">${b[k]-a[k]>0?'+':''}${b[k]-a[k]}</td></tr>`).join('')}</tbody></table><p class="note">套装：${equippedSets(s,id).filter(x=>x.count>=2).map(x=>x.name+' '+x.count+'件').join('、')||'未激活'} → ${equippedSets(after,id).filter(x=>x.count>=2).map(x=>x.name+' '+x.count+'件').join('、')||'未激活'}</p>`;}).join('')}<div class="actions">${btn('按此方案穿戴',{type:'equip',id:p.id,hero:p.hero},'primary')}${btn('关闭对比',{type:'ui_compareClose'},'secondary')}</div></section>`;
+ return `<section class="equipment-comparison"><h2>穿戴前后对比</h2><p>${esc(d.by.equipments[e.item].name)} → ${p.hero?esc(d.by.heroes[p.hero].name):'卸下收回'}</p>${d.by.equipments[e.item].source==='journey'?'<p class="note">'+esc(d.by.equipments[e.item].description)+'</p>':''}<p class="note">已计入强化、套装、坐骑与品质。比较的是人物属性，战场地形和军令加成另行计算。</p>${heroes.map(id=>{const a=attributes(s,id,d),b=attributes(after,id,d);return `<h3>${esc(d.by.heroes[id].name)}</h3><table><thead><tr><th>属性</th><th>现在</th><th>穿戴后</th><th>变化</th></tr></thead><tbody>${Object.keys(labels).map(k=>`<tr><td>${labels[k]}</td><td>${a[k]}</td><td>${b[k]}</td><td class="${b[k]>a[k]?'stat-up':b[k]<a[k]?'stat-down':''}">${b[k]-a[k]>0?'+':''}${b[k]-a[k]}</td></tr>`).join('')}</tbody></table><p class="note">套装：${equippedSets(s,id).filter(x=>x.count>=2).map(x=>x.name+' '+x.count+'件').join('、')||'未激活'} → ${equippedSets(after,id).filter(x=>x.count>=2).map(x=>x.name+' '+x.count+'件').join('、')||'未激活'}</p>`;}).join('')}<div class="actions">${btn('按此方案穿戴',{type:'equip',id:p.id,hero:p.hero},'primary')}${btn('关闭对比',{type:'ui_compareClose'},'secondary')}</div></section>`;
 }

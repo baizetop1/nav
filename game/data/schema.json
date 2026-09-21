@@ -738,97 +738,187 @@
     "equipments": {
       "type": "array",
       "items": {
-        "type": "object",
-        "required": [
-          "id",
-          "name",
-          "type",
-          "quality",
-          "tier",
-          "price",
-          "attribute",
-          "recipe",
-          "description"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^[a-z][a-z0-9_]*$"
-          },
-          "name": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "quality": {
-            "type": "string"
-          },
-          "tier": {
-            "type": "integer"
-          },
-          "price": {
-            "type": "integer"
-          },
-          "attribute": {
-            "type": "object",
-            "required": [],
-            "additionalProperties": false,
-            "properties": {
-              "attack": {
-                "type": "integer"
-              },
-              "defense": {
-                "type": "integer"
-              },
-              "hp": {
-                "type": "integer"
-              },
-              "speed": {
-                "type": "integer"
-              },
-              "strategy": {
-                "type": "integer"
-              }
-            }
-          },
-          "recipe": {
+        "anyOf": [
+          {
             "type": "object",
             "required": [
-              "silver",
-              "items"
+              "id",
+              "name",
+              "type",
+              "quality",
+              "tier",
+              "price",
+              "attribute",
+              "recipe",
+              "description"
             ],
             "additionalProperties": false,
             "properties": {
-              "silver": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "quality": {
+                "type": "string"
+              },
+              "tier": {
                 "type": "integer"
               },
-              "items": {
+              "price": {
+                "type": "integer"
+              },
+              "attribute": {
                 "type": "object",
-                "required": [
-                  "iron",
-                  "cloth"
-                ],
+                "required": [],
                 "additionalProperties": false,
                 "properties": {
-                  "iron": {
+                  "attack": {
                     "type": "integer"
                   },
-                  "cloth": {
+                  "defense": {
                     "type": "integer"
                   },
-                  "tiger_skin": {
+                  "hp": {
+                    "type": "integer"
+                  },
+                  "speed": {
+                    "type": "integer"
+                  },
+                  "strategy": {
                     "type": "integer"
                   }
                 }
+              },
+              "recipe": {
+                "type": "object",
+                "required": [
+                  "silver",
+                  "items"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "silver": {
+                    "type": "integer"
+                  },
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "iron",
+                      "cloth"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "iron": {
+                        "type": "integer"
+                      },
+                      "cloth": {
+                        "type": "integer"
+                      },
+                      "tiger_skin": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              "description": {
+                "type": "string"
               }
             }
           },
-          "description": {
-            "type": "string"
+          {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "type",
+              "quality",
+              "tier",
+              "price",
+              "attribute",
+              "recipe",
+              "description",
+              "source"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "quality": {
+                "type": "string"
+              },
+              "tier": {
+                "type": "integer"
+              },
+              "price": {
+                "type": "integer",
+                "const": 0
+              },
+              "attribute": {
+                "type": "object",
+                "required": [],
+                "additionalProperties": false,
+                "properties": {
+                  "attack": {
+                    "type": "integer"
+                  },
+                  "defense": {
+                    "type": "integer"
+                  },
+                  "hp": {
+                    "type": "integer"
+                  },
+                  "speed": {
+                    "type": "integer"
+                  },
+                  "strategy": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "recipe": {
+                "type": "object",
+                "required": [
+                  "silver",
+                  "items"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "silver": {
+                    "type": "integer",
+                    "const": 0
+                  },
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {}
+                  }
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string",
+                "const": "journey"
+              }
+            }
           }
-        }
+        ]
       }
     },
     "enemies": {

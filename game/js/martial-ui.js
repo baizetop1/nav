@@ -1,6 +1,6 @@
-import { deployedTroops, troopShares, heroCommand } from './logistics.js?v=0.32.0';
-import { ARMS, heroArm, heroTrait, enemyArm, armFactor } from './martial.js?v=0.32.0';
-import { CORPS } from './development.js?v=0.32.0';
+import { deployedTroops, troopShares, heroCommand } from './logistics.js?v=0.44.0';
+import { ARMS, heroArm, heroTrait, enemyArm, armFactor } from './martial.js?v=0.44.0';
+import { CORPS } from './development.js?v=0.44.0';
 export function traitCard(h){const [name,text]=heroTrait(h);return `<section class="martial-trait"><b>英雄专长 · ${ARMS[heroArm(h)].name} · ${name}</b><p class="note">${text} 特性在建寨后的非剧情战生效。</p></section>`;}
 export function enemyIntel(s,d,ids,scale=1){
  const n=deployedTroops(s);

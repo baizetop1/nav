@@ -379,5 +379,59 @@
       }
     },
     "description": "常行江湖所用，可强化至 +5。"
+  },
+  {
+    "id": "route_forest_blade",
+    "name": "截令短刃",
+    "type": "weapon",
+    "attribute": {
+      "attack": 32,
+      "speed": 8
+    },
+    "description": "青石古道路契 6 兑换；开战时敌方首位攻击降低 15%，持续 6 秒，多件不叠加。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "journey",
+    "recipe": {
+      "silver": 0,
+      "items": {}
+    }
+  },
+  {
+    "id": "route_water_charm",
+    "name": "渡潮佩",
+    "type": "accessory",
+    "attribute": {
+      "strategy": 24,
+      "hp": 100
+    },
+    "description": "芦荡渡口路契 6 兑换；穿戴者每场开战怒气 +20。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "journey",
+    "recipe": {
+      "silver": 0,
+      "items": {}
+    }
+  },
+  {
+    "id": "route_mountain_armor",
+    "name": "守隘甲",
+    "type": "armor",
+    "attribute": {
+      "defense": 25,
+      "hp": 180
+    },
+    "description": "断崖粮道路契 6 兑换；穿戴者开战获得 15% 护阵，持续 8 秒。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "journey",
+    "recipe": {
+      "silver": 0,
+      "items": {}
+    }
   }
 ]

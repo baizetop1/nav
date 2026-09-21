@@ -1,15 +1,17 @@
-import {personalFactor} from './expansion-combat.js?v=0.32.0';
-import {talentFactor} from './talents.js?v=0.32.0';
-import { healingSupply } from './fieldcraft.js?v=0.32.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.32.0';
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.32.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.32.0';
-import { orderDamageFactor } from './commands.js?v=0.32.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.32.0';
-import { unitArm } from './martial.js?v=0.32.0';
-import { martialFactor } from './martial.js?v=0.32.0';
-import { bounded, pick, random } from './utils.js?v=0.32.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.32.0';
+import {roleDamageFactor,roleInterrupt} from './hero-roles.js?v=0.44.0';
+import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.44.0';
+import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.44.0';
+import {talentFactor} from './talents.js?v=0.44.0';
+import { healingSupply } from './fieldcraft.js?v=0.44.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.44.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.44.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.44.0';
+import { orderDamageFactor } from './commands.js?v=0.44.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.44.0';
+import { unitArm } from './martial.js?v=0.44.0';
+import { martialFactor } from './martial.js?v=0.44.0';
+import { bounded, pick, random } from './utils.js?v=0.44.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.44.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -24,7 +26,7 @@ export function initializeGrowthBattle(state,b,data){
     u.skills=u.skills.filter(id=>!unlockReason(state,data.by.skills[id],b.guest));
     u.training={levels:Object.fromEntries(u.skills.map(id=>[id,b.guest?1:skillLevel(state,id)])),bond:u.skills.find(id=>data.by.skills[id].training?.tier==='bond')||null};
   }
-  if(['dungeon','rotation','frontier','realm'].includes(b.context.type)||isChapterBattle(b))for(const u of b.enemy){
+  if(['dungeon','rotation','frontier','realm','lesson'].includes(b.context.type)||isChapterBattle(b))for(const u of b.enemy){
     const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider',v5_luan_tingyu:'chief',v5_zhu_biao:'raider',v6_gaolian:'chief',v6_rider:'raider'})[u.model];
     if(kind)u.boss={kind,readyAt:6000,pendingAt:0,phase:0};
   }
@@ -39,8 +41,8 @@ function status(b,target,id,value,ms,api){
   api.log(b,`${target.name}获得【${api.statusName(id)} · ${ms/1000}秒】${['guard','weaken'].includes(id)?` · ${Math.round(value*100)}%`:''}。`);
 }
 function heal(b,u,target,rate,name,api){
-  if(!target)return;const n=Math.min(target.maxHp-target.hp,Math.round(target.maxHp*rate*healingSupply(b,u)));
-  reportHealing(b,u,n);target.hp+=n;api.log(b,`${u.name}施展【${name}】，照应${target.name}，回复 ${n} 点气血${healingSupply(b,u)<1?'（敌军久战，治疗补给衰减）':''}。`);
+  if(!target)return;const n=Math.min(target.maxHp-target.hp,Math.round(target.maxHp*rate*healingSupply(b,u)*personalHealingFactor(b,u)));
+  reportHealing(b,u,n,target);target.hp+=n;api.log(b,`${u.name}施展【${name}】，照应${target.name}，回复 ${n} 点气血${healingSupply(b,u)<1?'（敌军久战，治疗补给衰减）':''}。`);
 }
 function rage(b,units,n,name,api){
   for(const u of units){const gain=Math.min(100-u.rage,n);u.rage+=gain;if(gain)api.log(b,`${u.name}【${name}】怒气 +${gain}。`);}
@@ -51,11 +53,12 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const weakened=has(u,'weaken')?.value||0;
   const attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1)*(1-weakened)*(u.boss?.phase===1&&u.boss.kind==='tiger'?1.2:1);
   const raw=api.damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
-  const loss=Math.max(1,Math.round(raw*personalFactor(b,u,!name)*talentFactor(b,u,target,{normal:!name,strategy:effect.kind==='strategy'})*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0))));
+  const loss=journeyAbsorb(b,target,Math.max(1,Math.round(raw*roleDamageFactor(b,u,target,!name)*journeyDamageFactor(b,u,target,!name)*personalFactor(b,u,!name)*talentFactor(b,u,target,{normal:!name,strategy:effect.kind==='strategy'})*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0)))));
   reportDamage(b,u,target,loss);target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
   if(!alive(target))api.log(b,`${target.name}已无力再战。`);
+  journeyAfterHit(b,u,target,{...api,reportDamage},!name,loss);
 }
 function targetOf(state,u,targets){
   const forced=targets.find(t=>has(t,'taunt'));if(forced)return forced;
@@ -128,7 +131,7 @@ export function growthHit(state,u,rawSkill,data,api){
     rage(b,party.filter(v=>v!==u),Math.round(10*boost),skill.name,api);
   }else if(profile==='interrupt'){
     const enemy=enemies.find(v=>v.boss?.pendingAt)||enemies[enemies.length-1];
-    if(enemy.boss?.pendingAt){contribution(b,u,'interrupts');enemy.boss.pendingAt=0;enemy.boss.readyAt=b.elapsed+10000;api.log(b,`${u.name}【截脉打断】${enemy.name}本次蓄势被截住。`);}
+    if(enemy.boss?.pendingAt){contribution(b,u,'interrupts');roleInterrupt(b,u,enemy);enemy.boss.pendingAt=0;enemy.boss.readyAt=b.elapsed+10000;journeyInterrupt(b,u,enemy,{...api,reportDamage});api.log(b,`${u.name}【截脉打断】${enemy.name}本次蓄势被截住。`);}
     strike(state,u,enemy,effect,skill.name,api);
   }else if(profile==='pierce')strike(state,u,lowest(enemies),effect,skill.name,api,{pierce:true});
   else if(profile==='steal'||profile==='wave'){
@@ -156,7 +159,7 @@ export function growthTimes(b){return b.enemy.filter(u=>alive(u)&&u.boss).map(u=
 export function advanceBosses(state,api){
   const b=state.battle;
   for(const u of b.enemy.filter(u=>alive(u)&&u.boss)){
-    const boss=u.boss;
+    const boss=u.boss;if(advanceJourneyBoss(state,u,api,strike))continue;
     if(boss.kind==='tiger'&&!boss.phase&&u.hp<=u.maxHp*.5){boss.phase=1;api.log(b,`${u.name}【困兽之怒】气血过半损失，攻击提升 20%；可用削弱与护阵应对。`);}
     if(boss.pendingAt===b.elapsed){
       boss.pendingAt=0;boss.readyAt=b.elapsed+10000;
@@ -166,8 +169,8 @@ export function advanceBosses(state,api){
       if(boss.kind==='chief')for(const ally of party)status(b,ally,'guard',.3,5000,api);
       if(boss.kind==='raider'){const target=enemies[enemies.length-1];strike(state,u,target,{kind:'damage',rate:1.8},'绕后截粮',api);status(b,target,'weaken',.2,4000,api);}
     }else if(!boss.pendingAt&&boss.readyAt===b.elapsed){
-      boss.pendingAt=b.elapsed+2000;
-      api.log(b,`${u.name}【首领蓄势 · 2秒】${({tiger:'即将虎啸扑阵，伤及全队',chief:'即将结阵，使敌方全体减伤 30%',raider:'即将绕后截粮，重击后位'})[boss.kind]}；可用截脉/眩晕打断，或护阵承受。`);
+      boss.pendingAt=b.elapsed+(b.context.type==='lesson'?6000:2000);
+      api.log(b,`${u.name}【首领蓄势 · ${b.context.type==='lesson'?6:2}秒】${({tiger:'即将虎啸扑阵，伤及全队',chief:'即将结阵，使敌方全体减伤 30%',raider:'即将绕后截粮，重击后位'})[boss.kind]}；可用截脉/眩晕打断，或护阵承受。`);
     }
   }
 }

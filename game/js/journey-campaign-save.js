@@ -1,0 +1,10 @@
+const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
+import {ITINERARIES,PREPARATIONS,CONTRACTS,ROUTE_DROPS,validPlan,contractPassed} from './journey-campaign-data.js?v=0.44.0';
+const obj=x=>x&&typeof x==='object'&&!Array.isArray(x),num=(n,max=10000000)=>Number.isSafeInteger(n)&&n>=0&&n<=max;
+export function validateCampaign(s,check){const r=s.realm?.journey?.campaign,j=s.realm?.trek?.journey,last=s.realm?.journey?.last,b=s.battle;if(!r){check(!j?.campaign&&!last?.campaign&&!b?.journey?.campaign,'出行计划缺少记录');return;}check(obj(r)&&r.version===1&&validPlan(r.plan)&&obj(r.contracts)&&num(r.clears),'出行计划记录');for(const [key,v]of Object.entries(r.contracts)){const [region,c]=key.split(':');check(own(ROUTE_DROPS,region)&&own(CONTRACTS,c)&&c!=='none'&&key===region+':'+c&&obj(v)&&num(v.tier,3)&&v.tier>=2&&num(v.elapsed,900000)&&s.realm.journey.best[region]>=v.tier,'契约留名');}check(Object.keys(r.contracts).length<=r.clears,'契约次数');
+ const run=(p,tier)=>check(obj(p)&&p.version===1&&validPlan(p)&&(p.challenge==='none'||tier>=2)&&num(p.elapsed,900000)&&num(p.medicine,1000)&&typeof p.retired==='boolean'&&num(p.battles,5),'本趟出行记录');
+ if(j?.campaign){const p=j.campaign;run(p,j.tier);check(p.battles===j.path.filter(x=>['fight','elite','boss'].includes(x)).length,'本趟交锋统计');const m=PREPARATIONS[p.preparation];check(!m.building||s.camp.buildings[m.building]>=2,'本趟备战设施');if(b){const x=b.journey?.campaign;check(obj(x)&&x.version===1&&['itinerary','preparation','challenge'].every(k=>x[k]===p[k]),'战局出行计划');}}
+ else check(!b?.journey?.campaign,'旧战局出行记录');
+ if(last?.campaign){const p=last.campaign;run(p,last.tier);const pool=ROUTE_DROPS[last.region];check(Array.isArray(p.drops)&&p.drops.length===pool.length&&p.drops.every((v,i)=>obj(v)&&v.id===pool[i].id&&v.count===pool[i].count&&typeof v.won==='boolean'&&(last.complete||!v.won)),'额外掉落凭据');const expected=last.complete&&contractPassed(p)?last.region+':'+p.challenge:null;check(p.seal===expected&&typeof p.first==='boolean'&&(!p.first||!!p.seal)&&(!p.seal||!!r.contracts[p.seal]),'契约完成凭据');check(!last.complete||r.clears>0,'游历完成次数');}
+}
+

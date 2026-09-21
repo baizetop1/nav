@@ -1,7 +1,7 @@
-import { ownHero } from './hero.js?v=0.32.0';
-import { canonicalHeroes } from './roster.js?v=0.32.0';
-import { grant } from './item.js?v=0.32.0';
-import { requireRule, journal } from './utils.js?v=0.32.0';
+import { ownHero } from './hero.js?v=0.44.0';
+import { canonicalHeroes } from './roster.js?v=0.44.0';
+import { grant } from './item.js?v=0.44.0';
+import { requireRule, journal } from './utils.js?v=0.44.0';
 export const SELECT_COST=[0,10,15,25,40,60];
 export function recruitWeek(now){const d=new Date(now+8*3600000);d.setUTCDate(d.getUTCDate()-(d.getUTCDay()+6)%7);return d.toISOString().slice(0,10);}
 export function supportState(s){return s.recruit.support||{version:1,dry:0,tickets:0,points:0,claims:[],week:null};}

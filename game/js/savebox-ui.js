@@ -1,16 +1,16 @@
-import { savedTime, importComparison } from './save-comparison.js?v=0.32.0';
-import { emptySlot } from './slots.js?v=0.32.0';
-import { slotNumber } from './portable.js?v=0.32.0';
-import { icon } from './icons.js?v=0.32.0';
+import {pageSection,sectionPicker} from './page-sections.js?v=0.44.0';
+import { savedTime, importComparison } from './save-comparison.js?v=0.44.0';
+import { emptySlot } from './slots.js?v=0.44.0';
+import { slotNumber } from './portable.js?v=0.44.0';
+import { icon } from './icons.js?v=0.44.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const button=(label,type,extra={},symbol='save',disabled=false)=>`<button type="button" class="secondary with-icon" data-command="${esc(JSON.stringify({type,...extra}))}" ${disabled?'disabled':''}>${icon(symbol)}<span>${esc(label)}</span></button>`;
 export const localOptions=(slots,selected)=>Array.from({length:20},(_,i)=>slots.find(s=>s.id===i+1)||emptySlot(i+1)).map(s=>`<option value="${s.id}" ${s.id===selected?'selected':''}>${slotNumber(s.id)}号 · ${esc(s.name)} · ${s.raw?'已有进度':'空位'}</option>`).join('');
-export function saveBoxPage(state,status,locked,box={}){
+export function saveBoxPage(state,status,locked,box={},requested){
   const record=box.record||emptySlot(1),slots=box.slots||[],link=record.cloud,cloud=box.cloud||{},selected=cloud.selected||record.id;
   const linked=link&&link.origin===cloud.baseUrl;
   const syncText=!cloud.baseUrl?'未连接（本机保存不等于云端上传）':!linked?'当前本机档尚未关联云端':link.clean&&!box.dirty?`已提交 / 接续 ${slotNumber(link.id)}号第 ${link.revision} 版`:`尚有本机变化未上传（含时间刷新） · 基于 ${slotNumber(link.id)}号第 ${link.revision} 版`;
-  return `<div class="section-top"><div><p class="kicker">20 个编号 · 每份江湖，各自珍重</p><h1 class="page-title">${icon('save')}<span>梁山存档匣</span></h1></div></div>
-  <section class="savebox-current card"><h2>本机 ${slotNumber(record.id)}号 · ${esc(record.name)}</h2>
+  const section=pageSection('save',requested),panels={local:()=>`  <section class="savebox-current card"><h2>本机 ${slotNumber(record.id)}号 · ${esc(record.name)}</h2>
     <p class="notice ${locked?'error':''}">本机：${esc(status)}</p><p class="note">云端：${esc(syncText)}</p><p class="note">本机保存：${esc(savedTime(record.updatedAt))}<br>最近上传：${esc(savedTime(link?.uploadedAt))}${linked?' · 云端第 '+link.revision+' 版':''}</p>
     <div class="actions">${button('导出当前进度','ui_export',{},'download')}${button('重新载入本机存档','ui_reload',{},'restore')}${button('恢复上次有效备份','ui_backup',{},'restore')}</div>
     <p class="note">本机自动保存使用 IndexedDB；每档最多一份有效备份。无痕窗口、清理网站数据或浏览器回收空间都可能丢失本机档，请定期导出。</p>
@@ -20,11 +20,11 @@ export function saveBoxPage(state,status,locked,box={}){
       <p class="note">空位会打开新卷；不同编号互不覆盖。同编号被其他标签页修改时，会暂停本页写入。</p>
     </details>
   </section>
-  <section class="fold-section savebox-files"><h2>${icon('upload')} 从其他设备导入存档</h2><p class="note">旧设备点击“导出当前进度”，将 JSON 文件发到此设备，在下方选择文件即可。无需云端服务或上传密钥。</p>
-    <label>选择存档 JSON 文件<input id="import-file" type="file" accept=".json,application/json"></label><label for="import-text">或粘贴存档文本</label><textarea id="import-text" spellcheck="false" placeholder="在这里粘贴导出的 JSON"></textarea>
+`,files:()=>`  <section class="fold-section savebox-files"><h2>${icon('upload')} 从其他设备导入存档</h2><p class="note">旧设备点击“导出当前进度”，将 JSON 文件发到此设备，在下方选择文件即可。无需云端服务或上传密钥。</p>
+    <label>选择存档 JSON 文件<input id="import-file" type="file" accept=".json,application/json"></label><details data-fold="paste-import"><summary>或粘贴存档文本</summary><label for="import-text">或粘贴存档文本</label><textarea id="import-text" spellcheck="false" placeholder="在这里粘贴导出的 JSON"></textarea></details>
     ${button('检查导入内容','ui_import',{},'upload')}<p class="note">先校验和预览，再选择目标本机编号，最后确认替换。文件只包含游戏进度，不包含导航、Inbox 或密钥。文件里的云端版本仅供识别，不授予上传权限。</p>
   </section>
-  <details class="fold-section savebox-cloud" data-fold="cloud"><summary>${icon('upload')} 云端接续与朋友分享</summary>
+`,cloud:()=>`  <details class="fold-section savebox-cloud" data-fold="cloud" data-default-open><summary>${icon('upload')} 云端接续与朋友分享</summary>
     <p class="note">全站共享 01—20 号，由站长分配密钥，不是每个访客各占 20 号。本机位置与云端位置可以不同；上传始终需要对应密钥。</p>
     ${cloud.baseUrl?`<p class="meta">服务：${esc(cloud.baseUrl)}</p><div class="actions">${button('刷新云端列表','ui_cloudList',{},'restore')}${button('清除本页授权','ui_cloudForget',{},'close')}</div>
       <label>云端编号<select id="cloud-slot">${Array.from({length:20},(_,i)=>{const s=cloud.slots?.find(s=>s.id===i+1);return `<option value="${i+1}" ${selected===i+1?'selected':''}>${slotNumber(i+1)}号 · ${s?`${esc(s.name)} · ${s.public?'公开副本':'私有'}`:'尚未读取'}</option>`;}).join('')}</select></label>
@@ -42,7 +42,9 @@ export function saveBoxPage(state,status,locked,box={}){
       <details class="danger-zone" data-fold="cloud-admin"><summary>站长管理（不要向朋友提供站长密钥）</summary><label>站长密钥<input id="admin-key" type="password" autocomplete="off"></label><p class="note">为所选编号生成 / 重置独立密钥；旧密钥立即失效。新密钥仅在一次结果弹窗中显示。</p><div class="actions">${button('生成 / 重置此档密钥','ui_cloudAdminKey',{},'shield')}${button('删除云端当前进度','ui_cloudAdminDelete',{},'trash')}</div></details>`
       :'<p class="warning">云端服务尚未配置。本站目前只有本机存档和文件流转；上传到 GitHub 并不会自动开通云端。站长请按 docs/shuihu-save-box.md 部署接口。</p>'}
   </details>
-  <details class="danger-zone" data-fold="reset"><summary>另开新卷（只替换本机当前 ${slotNumber(record.id)}号）</summary><p class="note">建议先导出。不删除云端档，不影响其他编号、导航、博客、Inbox 或学习记录。</p><label>输入“白泽新卷”确认<input id="reset-phrase" autocomplete="off"></label>${button('确认另开新卷','ui_reset',{},'restore')}</details>`;
+`,reset:()=>`  <details class="danger-zone" data-fold="reset"><summary>另开新卷（只替换本机当前 ${slotNumber(record.id)}号）</summary><p class="note">建议先导出。不删除云端档，不影响其他编号、导航、博客、Inbox 或学习记录。</p><label>输入“白泽新卷”确认<input id="reset-phrase" autocomplete="off"></label>${button('确认另开新卷','ui_reset',{},'restore')}</details>`};
+ return sectionPicker('save',section,(label,cmd,kind)=>button(label,cmd.type,cmd))+`<div class="section-top"><div><p class="kicker">20 个编号 · 每份江湖，各自珍重</p><h1 class="page-title">${icon('save')}<span>梁山存档匣</span></h1></div></div>
+`+'<section data-page-section="save:'+section+'">'+panels[section]()+'</section>';
 }
 export function boxImportDialog(pending,slots,current,data){
   const s=pending.state;
