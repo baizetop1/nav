@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-21T19:28:35.865Z",
+  "generatedAt": "2026-09-21T23:17:53.928Z",
   "intelligence": {
-    "updatedAt": "2026-09-21T19:28:35.865Z",
+    "updatedAt": "2026-09-21T23:17:53.928Z",
     "items": [
       {
-        "id": "cn-item-079925754ddf0141",
+        "id": "cn-item-afc8adf894037983",
         "category": "cn",
-        "title": "王毅同德国外长瓦德富尔通电话",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701192.shtml",
+        "title": "受台风影响 日本关东地区发生山体滑坡已致2死4失联",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-22/10701203.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T16:34:06.000Z",
-        "summary": "中新社北京9月21日电 9月21日，中共中央政治局委员、外交部长王毅应约同德国外长瓦德富尔通电话。",
+        "publishedAt": "2026-09-21T22:57:32.000Z",
+        "summary": "中新网9月22日电 据日本共同社等日媒22日报道，今年第25号台风“杜鹃”逼近日本，日本关东地区21日遭遇强降雨，发生多起山体滑坡，已致2人死亡，4人失联。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2025-39964",
+        "id": "cisa-kev-cve-2026-7273",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Race Condition Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39964",
+        "title": "Zyxel GS1900 Series Switches：Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-7273",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-18T00:00:00.000Z",
-        "summary": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.",
-        "badge": "CVE-2025-39964",
-        "signal": "已遭利用 · 整改期限 2026-09-21"
+        "publishedAt": "2026-09-21T00:00:00.000Z",
+        "summary": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+        "badge": "CVE-2026-7273",
+        "signal": "已遭利用 · 整改期限 2026-09-24"
       },
       {
         "id": "ai-openai-08ffdb24bebd9aa2",
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49787436",
+        "id": "hn-49792730",
         "category": "dev",
-        "title": "What Sun got wrong",
-        "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
+        "title": "Xiaomi MiMo v2.6",
+        "url": "https://mimo.xiaomi.com/mimo-v2-6",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T14:03:18.000Z",
+        "publishedAt": "2026-09-21T20:12:12.000Z",
         "badge": "HN",
-        "signal": "370 分 · 198 评论"
+        "signal": "388 分 · 192 评论"
       },
       {
-        "id": "cn-it-65d1a4e1ea510043",
+        "id": "cn-it-f1f5e0b0fc4e45ed",
         "category": "cn",
-        "title": "苹果 watchOS 27.2 开发者预览版 Beta 2 发布",
-        "url": "https://www.ithome.com/1/005/486.htm",
+        "title": "英国消费者权益机构 Citizens Advice：基本服务供应商应停止在客服工作中依赖 AI 聊天机器人",
+        "url": "https://www.ithome.com/1/005/497.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T17:36:13.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 9 月 22 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.2 开发者预览版 Beta 2 更新（内部版本号：24S5091f），本次更新距离上次发布 Beta/RC 间隔 5 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发…",
+        "publishedAt": "2026-09-21T23:14:46.000Z",
+        "summary": "IT之家 9 月 22 日消息，英国消费者权益机构 Citizens Advice 近日呼吁，能源、银行、电话和互联网等提供基本服务的企业在客服工作中应当停止依赖 AI 机器人，保障用户“与真人沟通的权利”。该机构调查发现，超过一半需要使用聊天机器人的用户因此浪费时间、产生压力或面临问题解决延迟。 Citizens Advice 表示，越来越多能源、银行、电话和互联网服务商使用 AI 系统提供客户支持，让数百万本就面临数字化障碍的用户更难解决日常服务问题。该机构去年在英格兰…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-phg3-3g28-wq9v",
+        "id": "github-advisory-ghsa-pxcx-fv34-x9p5",
         "category": "security",
-        "title": "Hatchet - Unauthenticated OAuth state CSRF / login-CSRF via empty-state collision in ValidateOAuthState",
-        "url": "https://github.com/advisories/GHSA-phg3-3g28-wq9v",
+        "title": "nginx ignition has Unauthenticated Admin Account Creation via Onboarding Race Condition",
+        "url": "https://github.com/advisories/GHSA-pxcx-fv34-x9p5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-21T15:47:01.000Z",
-        "summary": "### Summary Hatchet version v0.86.26 and below is vulnerable to OAuth state CSRF (login CSRF / account fixation). The vulnerable code clears the session `oauth_state_ ` value to the empty string `\"\"` after a successful OAuth callback rathe…",
-        "badge": "CVE-2026-61687",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-09-21T21:54:42.000Z",
+        "summary": "## Summary `POST /api/users/onboarding/finish` is registered as **anonymous (unauthenticated)** and creates a user with **full ReadWrite admin permissions**. Because the handler uses a check-then-act (TOCTOU) pattern between the \"onboardin…",
+        "badge": "CVE-2026-61628",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -94,17 +94,17 @@
         "source": "百度热搜",
         "summary": "我国多地陆续推出婚育激励举措，部分市县、村居针对符合条件的初婚夫妻，发放现金红包或结婚消费券。山西吕梁、福建明溪、广东部分村镇均出台相关奖励政策，部分企业也给结婚员工发放奖金，以此鼓励适龄婚育，减轻新人婚恋相关开销压力。",
         "badge": "热搜",
-        "signal": "7,808,758 热度"
+        "signal": "7,809,390 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-53266",
+        "id": "cisa-kev-cve-2025-39964",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Out-of-Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53266",
+        "title": "Linux Kernel：Linux Kernel Race Condition Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39964",
         "source": "CISA KEV",
         "publishedAt": "2026-09-18T00:00:00.000Z",
-        "summary": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The…",
-        "badge": "CVE-2026-53266",
+        "summary": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.",
+        "badge": "CVE-2025-39964",
         "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
@@ -117,44 +117,44 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49787726",
+        "id": "hn-49791939",
         "category": "dev",
-        "title": "Attention is all you have",
-        "url": "https://alicegg.tech/2026/09/21/attention",
+        "title": "NASA’s Mars Sample Return mission is dead",
+        "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T14:26:56.000Z",
+        "publishedAt": "2026-09-21T19:14:12.000Z",
         "badge": "HN",
-        "signal": "349 分 · 98 评论"
+        "signal": "250 分 · 181 评论"
       },
       {
-        "id": "cn-item-8cd4288ebb8bd1c1",
+        "id": "cn-item-5525834bb1f1e099",
         "category": "cn",
-        "title": "专访艺人任嘉伦：在浪潮与浪漫间从容歌唱",
-        "url": "https://www.chinanews.com.cn/cul/2026/09-21/10700944.shtml",
+        "title": "联合国大会期间 丹麦及格陵兰岛将和美国签署安全协议",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-22/10701198.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T10:30:09.000Z",
-        "summary": "中新网澳门9月21日电 题：专访艺人任嘉伦：在浪潮与浪漫间从容歌唱",
+        "publishedAt": "2026-09-21T22:28:38.000Z",
+        "summary": "中新网9月22日电 据法新社报道，当地时间21日，丹麦首相府宣布，丹麦及其自治领地格陵兰岛和美国将于联合国大会期间，在纽约签署一项安全协议。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-jgh3-fggc-mcpm",
+        "id": "github-advisory-ghsa-jr34-h97m-9hpx",
         "category": "security",
-        "title": "Obot: Server-Side Request Forgery via remote MCP server URL",
-        "url": "https://github.com/advisories/GHSA-jgh3-fggc-mcpm",
+        "title": "nginx ignition has ParseAcceptLanguage `_` separator bypass that enables ~75x CPU amplification via Accept-Language header in i18nMiddleware",
+        "url": "https://github.com/advisories/GHSA-jr34-h97m-9hpx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:59:46.000Z",
-        "summary": "## Summary In affected versions, the URL of a remote MCP server is attacker-controlled at registration and is fetched server-side with no validation of the destination. There is no guard against loopback, link-local, RFC1918 private ranges…",
-        "badge": "GHSA-JGH3-FGGC-MCPM",
-        "signal": "HIGH · CVSS 7.6"
+        "publishedAt": "2026-09-21T21:49:03.000Z",
+        "summary": "### Summary The gin i18n middleware in nginx-ignition's API server runs in front of every HTTP request and calls `golang.org/x/text/language.ParseAcceptLanguage` on the raw `Accept-Language` header without imposing any size or shape filter…",
+        "badge": "CVE-2026-61629",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-10538c022345675d",
+        "id": "ai-openai-8fe4474fdbb9c4c4",
         "category": "ai",
-        "title": "Building standards for the next phase of AI",
-        "url": "https://openai.com/index/building-standards-next-phase-ai",
+        "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+        "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-21T10:00:00.000Z",
-        "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
+        "publishedAt": "2026-09-21T12:00:00.000Z",
+        "summary": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
         "badge": "OpenAI"
       },
       {
@@ -169,24 +169,24 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-acd45486a5fd7133",
+        "id": "cn-it-732bfd313d6ca9d1",
         "category": "cn",
-        "title": "苹果 visionOS 27.2 开发者预览版 Beta 2 发布",
-        "url": "https://www.ithome.com/1/005/485.htm",
+        "title": "小米 MiMo-V2.6 发布并开源：Pro 与 Flash 双版本，API 价格与前代持平",
+        "url": "https://www.ithome.com/1/005/496.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T17:36:13.000Z",
-        "summary": "IT之家 9 月 22 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.2 开发者预览版 Beta 2 更新（内部版本号：24N5093f），本次更新距离上次发布 Beta/RC 间隔 5 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-09-17：visionO…",
+        "publishedAt": "2026-09-21T23:05:45.000Z",
+        "summary": "IT之家 9 月 22 日消息，小米今日凌晨正式发布并开源了全新的 Xiaomi MiMo-V2.6 系列，包含 Pro 与 Flash 两个原生全模态模型。 小米称这是其探索 RSI（递归自我改进）路径的关键一步，通过规模化扩展强化学习算力，让模型在持续的探索与反馈中拓展智能边界。 得益于 RL 算力的扩展，MiMo-V2.6-Pro 在 Artificial Analysis Intelligence Index（AA 综合智能指数）v4.3.2 中取得 46 分，超过…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2025-39682",
+        "id": "cisa-kev-cve-2026-53266",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39682",
+        "title": "Linux Kernel：Linux Kernel Out-of-Bounds Write Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53266",
         "source": "CISA KEV",
         "publishedAt": "2026-09-18T00:00:00.000Z",
-        "summary": "Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potenti…",
-        "badge": "CVE-2025-39682",
+        "summary": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The…",
+        "badge": "CVE-2026-53266",
         "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
@@ -200,35 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49790409",
+        "id": "hn-49793322",
         "category": "dev",
-        "title": "Turn off and restrict access to Apple Intelligence features on Mac",
-        "url": "https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac",
+        "title": "Suspension of the de minimis administrative exemption for imports $800 or less",
+        "url": "https://www.personalimportation.org/advocacy",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T17:30:21.000Z",
+        "publishedAt": "2026-09-21T20:58:17.000Z",
         "badge": "HN",
-        "signal": "100 分 · 68 评论"
+        "signal": "91 分 · 48 评论"
       },
       {
-        "id": "cn-baidu-cc854039cddf95da",
+        "id": "cn-baidu-4f4cda375572574e",
         "category": "cn",
-        "title": "中国队已夺23金10银5铜",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E9%98%9F%E5%B7%B2%E5%A4%BA23%E9%87%9110%E9%93%B65%E9%93%9C&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "多地禁产“老头乐”",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%9C%B0%E7%A6%81%E4%BA%A7%E2%80%9C%E8%80%81%E5%A4%B4%E4%B9%90%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京时间9月21日，名古屋亚运会迎来第二个比赛日，中国队单日斩获12枚金牌。目前以23金10银5铜领跑奖牌榜。",
+        "summary": "近日，江苏徐州和鲁西南部分地区厂家已被限制生产低速电动四轮车。受此影响，有座椅配件厂订单减少三分之一，保险杠厂订单下降20%至30%。此前，各地多从使用层面限制“老头乐”上路。随着部分地区过渡期到期，全面禁行与禁产政策接连落地，低速四轮车市场空间被压缩。",
         "badge": "热搜",
-        "signal": "7,714,653 热度"
+        "signal": "7,714,641 热度"
       },
       {
-        "id": "github-advisory-ghsa-xwmw-prc4-v3cr",
+        "id": "github-advisory-ghsa-phg3-3g28-wq9v",
         "category": "security",
-        "title": "Obot: OAuth Dynamic Client Registration Enables API Token Theft via Audience Confusion",
-        "url": "https://github.com/advisories/GHSA-xwmw-prc4-v3cr",
+        "title": "Hatchet - Unauthenticated OAuth state CSRF / login-CSRF via empty-state collision in ValidateOAuthState",
+        "url": "https://github.com/advisories/GHSA-phg3-3g28-wq9v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:59:35.000Z",
-        "summary": "## Summary In affected versions, an unauthenticated attacker could register an OAuth client with an arbitrary external redirect URI, and the authorization flow would auto-complete without a consent screen. If a logged-in victim visited a c…",
-        "badge": "GHSA-XWMW-PRC4-V3CR",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-21T15:47:01.000Z",
+        "summary": "### Summary Hatchet version v0.86.26 and below is vulnerable to OAuth state CSRF (login CSRF / account fixation). The vulnerable code clears the session `oauth_state_ ` value to the empty string `\"\"` after a successful OAuth callback rathe…",
+        "badge": "CVE-2026-61687",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
         "id": "ai-hugging-face-693b3130e25cc880",
@@ -248,69 +248,69 @@
         "publishedAt": "2026-09-21T16:34:05.000Z",
         "summary": "我用 cc switch+codex+中转站 API 干活，同一个 KEY 配置，DSH 和 Trae 都能持续保持不断，就 codex 执行一个任务自动停 N 回。但它不是连接中断或报错码，它是懒狗🐶式停下来，催一下干几分钟又停，而且还没有规律。有时候也能持续一个小时一直刷屏。大神们有啥经验丰富的，在哪设置一下能解决这问题吗？ C C cli 也没这情况，但老连不上各种报错让我弃用了。",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-item-a2ddf36050e06a13",
+        "id": "cn-item-079925754ddf0141",
         "category": "cn",
-        "title": "中国“快递进村”邮政兜底试点工作取得阶段性成效",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-21/10700956.shtml",
+        "title": "王毅同德国外长瓦德富尔通电话",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701192.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T10:13:50.000Z",
-        "summary": "中新社北京9月21日电 (记者 王梦瑶)中国国家邮政局21日在北京举行新闻发布会，介绍中西部农村地区“快递进村”邮政兜底试点工作背景和进展情况。国家邮政局新闻发言人、市场监管司司长林虎表示，试点工作开展以来取得了阶段性成效。",
+        "publishedAt": "2026-09-21T16:34:06.000Z",
+        "summary": "中新社北京9月21日电 9月21日，中共中央政治局委员、外交部长王毅应约同德国外长瓦德富尔通电话。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-58704",
+        "id": "cisa-kev-cve-2025-39682",
         "category": "security",
-        "title": "Google Pixel：Google Pixel Improper Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58704",
+        "title": "Linux Kernel：Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39682",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-16T00:00:00.000Z",
-        "summary": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
-        "badge": "CVE-2026-58704",
-        "signal": "已遭利用 · 整改期限 2026-09-19"
+        "publishedAt": "2026-09-18T00:00:00.000Z",
+        "summary": "Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potenti…",
+        "badge": "CVE-2025-39682",
+        "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
-        "id": "ai-openai-2f8d9b98fc157bb3",
+        "id": "ai-openai-10538c022345675d",
         "category": "ai",
-        "title": "Expanding OpenAI Academy with new learning paths",
-        "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
+        "title": "Building standards for the next phase of AI",
+        "url": "https://openai.com/index/building-standards-next-phase-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-09-21T07:00:00.000Z",
-        "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
+        "publishedAt": "2026-09-21T10:00:00.000Z",
+        "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49791378",
+        "id": "hn-49794354",
         "category": "dev",
-        "title": "Why Does an NPM Math Library Need an Encrypted Loader?",
-        "url": "https://safedep.io/mathmain-encrypted-loader/",
+        "title": "Data Protection Commission fines Google €403M over processing of location data",
+        "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T18:33:44.000Z",
+        "publishedAt": "2026-09-21T22:33:45.000Z",
         "badge": "HN",
-        "signal": "33 分 · 2 评论"
+        "signal": "21 分 · 3 评论"
       },
       {
-        "id": "cn-it-0c5fa4ea1e5dd06c",
+        "id": "cn-it-da16d2cc31c249ef",
         "category": "cn",
-        "title": "苹果 macOS 27.2 开发者预览版 Beta 2 发布",
-        "url": "https://www.ithome.com/1/005/484.htm",
+        "title": "独立开发者称自己游戏新作遭其他开发商使用 AI 工具 1:1 恶意复刻，双方各执一词",
+        "url": "https://www.ithome.com/1/005/495.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T17:36:12.000Z",
-        "summary": "IT之家 9 月 22 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.2 开发者预览版 Beta 2 更新（内部版本号：26B5091g），本次更新距离上次发布 Beta/RC 间隔 5 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 ，之…",
+        "publishedAt": "2026-09-21T23:05:33.000Z",
+        "summary": "IT之家 9 月 22 日消息，据 IGN 报道，独立游戏开发者 Rado Klasa 发文，抨击一家名为 Golden Horn Studios 的开发商新作《Potato Please》预告片 1:1 复刻了自己的游戏《1,000,000 Potatoes》。 IT之家获悉，《1,000,000 Potatoes》是一款第一人称物理模拟游戏，玩家需要利用物理机制削土豆。而这款《Potato Please》的游戏同样以削土豆为核心玩法，两款作品还都采用了前苏联风格的军事场…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-9jjc-fw8x-fmwx",
+        "id": "github-advisory-ghsa-jgh3-fggc-mcpm",
         "category": "security",
-        "title": "io.moquette:moquette-broker has a Missing Authorization issue",
-        "url": "https://github.com/advisories/GHSA-9jjc-fw8x-fmwx",
+        "title": "Obot: Server-Side Request Forgery via remote MCP server URL",
+        "url": "https://github.com/advisories/GHSA-jgh3-fggc-mcpm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:58:39.000Z",
-        "summary": "## Summary Moquette MQTT Broker fails to enforce ACL write permission checks when publishing Will (Last Will and Testament) messages on behalf of disconnected clients. All normal PUBLISH paths (`receivedPublishQos0`, `receivedPublishQos1`,…",
-        "badge": "CVE-2026-85058",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-18T17:59:46.000Z",
+        "summary": "## Summary In affected versions, the URL of a remote MCP server is attacker-controlled at registration and is fetched server-side with no validation of the destination. There is no guard against loopback, link-local, RFC1918 private ranges…",
+        "badge": "GHSA-JGH3-FGGC-MCPM",
+        "signal": "HIGH · CVSS 7.6"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -340,17 +340,17 @@
         "source": "百度热搜",
         "summary": "日前，商务部等7部门发布《关于推动商品消费扩容升级的实施意见》，提出到2030年社会消费品零售总额达60万亿元左右。专家指出，该文件构建三重机制：通过供给侧创新创造有效需求，以结构分层拓展空间，并通过制度供给降低交易成本。",
         "badge": "热搜",
-        "signal": "7,618,434 热度"
+        "signal": "7,617,559 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-76460",
+        "id": "cisa-kev-cve-2026-58704",
         "category": "security",
-        "title": "Cisco Identity Services Engine：Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76460",
+        "title": "Google Pixel：Google Pixel Improper Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58704",
         "source": "CISA KEV",
         "publishedAt": "2026-09-16T00:00:00.000Z",
-        "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affec…",
-        "badge": "CVE-2026-76460",
+        "summary": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
+        "badge": "CVE-2026-58704",
         "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
@@ -363,44 +363,44 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49788838",
+        "id": "hn-49792342",
         "category": "dev",
-        "title": "Grok 4.7",
-        "url": "https://x.ai/news/grok-4-7",
+        "title": "Transformers Explained Visually",
+        "url": "https://poloclub.github.io/transformer-explainer/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T15:50:15.000Z",
+        "publishedAt": "2026-09-21T19:43:49.000Z",
         "badge": "HN",
-        "signal": "330 分 · 282 评论"
+        "signal": "134 分 · 19 评论"
       },
       {
-        "id": "cn-item-19810ca22c7d74fa",
+        "id": "cn-item-8cd4288ebb8bd1c1",
         "category": "cn",
-        "title": "张又侠、刘振立严重违纪违法被开除党籍军籍",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-21/10700958.shtml",
+        "title": "专访艺人任嘉伦：在浪潮与浪漫间从容歌唱",
+        "url": "https://www.chinanews.com.cn/cul/2026/09-21/10700944.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T10:02:08.000Z",
-        "summary": "新华社北京9月21日电#8195;经中共中央、中央军委批准，中央军委纪委监委对中央政治局委员、中央军委副主席张又侠，中央军委委员、军委联合参谋部原参谋长刘振立2人立案审查调查。9月21日，中共中央政治局会议审议并通过中央军委《关于张又侠问题审查结果和处理意见的报告》《关于刘振立问题审查结果和处理意见的报告》。",
+        "publishedAt": "2026-09-21T10:30:09.000Z",
+        "summary": "中新网澳门9月21日电 题：专访艺人任嘉伦：在浪潮与浪漫间从容歌唱",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xcw4-53cc-hv32",
+        "id": "github-advisory-ghsa-xwmw-prc4-v3cr",
         "category": "security",
-        "title": "Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass",
-        "url": "https://github.com/advisories/GHSA-xcw4-53cc-hv32",
+        "title": "Obot: OAuth Dynamic Client Registration Enables API Token Theft via Audience Confusion",
+        "url": "https://github.com/advisories/GHSA-xwmw-prc4-v3cr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:54:26.000Z",
-        "summary": "### Summary The Mnemosyne sync server's authentication check decoded JWT bearer tokens but never verified their HMAC-SHA256 signatures. Any well-formed token was accepted, allowing an unauthenticated attacker to impersonate any user and re…",
-        "badge": "CVE-2026-59163",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-18T17:59:35.000Z",
+        "summary": "## Summary In affected versions, an unauthenticated attacker could register an OAuth client with an arbitrary external redirect URI, and the authorization flow would auto-complete without a consent screen. If a logged-in victim visited a c…",
+        "badge": "GHSA-XWMW-PRC4-V3CR",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-openai-d2871d486c61275a",
+        "id": "ai-openai-2f8d9b98fc157bb3",
         "category": "ai",
-        "title": "How V7 gives AI agents institutional memory",
-        "url": "https://openai.com/index/v7",
+        "title": "Expanding OpenAI Academy with new learning paths",
+        "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
         "source": "OpenAI",
-        "publishedAt": "2026-09-21T00:00:00.000Z",
-        "summary": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
+        "publishedAt": "2026-09-21T07:00:00.000Z",
+        "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
         "badge": "OpenAI"
       },
       {
@@ -415,24 +415,24 @@
         "signal": "18 回复"
       },
       {
-        "id": "cn-it-e322ce900a605726",
+        "id": "cn-it-1ee4dddcdbf7fb80",
         "category": "cn",
-        "title": "苹果 iOS/iPadOS 27.2 开发者预览版 Beta 2 发布",
-        "url": "https://www.ithome.com/1/005/483.htm",
+        "title": "马斯克 SpaceXAI 发布旗下最强编码和知识处理模型 Grok 4.7，百万词元输入 2 美元起",
+        "url": "https://www.ithome.com/1/005/494.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T17:36:12.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 9 月 22 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.2 开发者预览版 Beta 2 更新（内部版本号：24B5089g），本次更新距离上次发布 Beta/RC 间隔 5 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级；…",
+        "publishedAt": "2026-09-21T22:56:49.000Z",
+        "summary": "IT之家 9 月 22 日消息，SpaceXAI 今日宣布推出新一代 Grok 4.7，主打编程和知识工作场景。 官方称其采用全新更大规模基础模型，并通过更长时间的强化学习训练提升复杂任务处理能力，是该公司目前最强的编码和知识处理模型 —— 速度是同类模型的两倍，价格却只有一半。 如前所述，Grok 4.7 针对编程和知识工作进行了优化。与 Grok 4.6 相比，新模型能够在困难任务上持续更长时间，并加强了对自身输出结果的检查能力。 在 CursorBench 4.0 测…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-87886",
+        "id": "cisa-kev-cve-2026-76460",
         "category": "security",
-        "title": "Acronis Backup：Acronis Backup Incorrect Default Permissions Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87886",
+        "title": "Cisco Identity Services Engine：Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76460",
         "source": "CISA KEV",
         "publishedAt": "2026-09-16T00:00:00.000Z",
-        "summary": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
-        "badge": "CVE-2026-87886",
+        "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affec…",
+        "badge": "CVE-2026-76460",
         "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
@@ -445,35 +445,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49791509",
+        "id": "hn-49787436",
         "category": "dev",
-        "title": "US halts flights at busy East Coast airports, says fiber line cut",
-        "url": "https://www.reuters.com/world/us/faa-halts-some-us-east-coast-flights-due-communication-issues-2026-09-21/",
+        "title": "What Sun got wrong",
+        "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T18:41:59.000Z",
+        "publishedAt": "2026-09-21T14:03:18.000Z",
         "badge": "HN",
-        "signal": "53 分 · 18 评论"
+        "signal": "471 分 · 260 评论"
       },
       {
-        "id": "cn-baidu-4ad03aa9f8061ac3",
+        "id": "cn-baidu-3f80bf0157774cf7",
         "category": "cn",
-        "title": "妹妹送哥哥入伍上一秒微笑下一秒大哭",
-        "url": "https://www.baidu.com/s?wd=%E5%A6%B9%E5%A6%B9%E9%80%81%E5%93%A5%E5%93%A5%E5%85%A5%E4%BC%8D%E4%B8%8A%E4%B8%80%E7%A7%92%E5%BE%AE%E7%AC%91%E4%B8%8B%E4%B8%80%E7%A7%92%E5%A4%A7%E5%93%AD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "潘展乐称张展硕是奇迹之子",
+        "url": "https://www.baidu.com/s?wd=%E6%BD%98%E5%B1%95%E4%B9%90%E7%A7%B0%E5%BC%A0%E5%B1%95%E7%A1%95%E6%98%AF%E5%A5%87%E8%BF%B9%E4%B9%8B%E5%AD%90&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，在安徽马鞍山车站，妹妹送别入伍的哥哥，前一刻还面带微笑，转瞬情绪破防、失声大哭，这一幕令人动容。",
+        "summary": "9月21日，亚运会男子游泳接力决赛，中国队逆转日本队夺冠。赛后，潘展乐打趣称张展硕是“奇迹之子”，并自嘲“最菜”所以游第三棒。",
         "badge": "热搜",
-        "signal": "7,524,202 热度"
+        "signal": "7,523,155 热度"
       },
       {
-        "id": "github-advisory-ghsa-vr5f-w35q-98jp",
+        "id": "github-advisory-ghsa-9jjc-fw8x-fmwx",
         "category": "security",
-        "title": "Perses's unvalidated project parameter enables filesystem path traversal",
-        "url": "https://github.com/advisories/GHSA-vr5f-w35q-98jp",
+        "title": "io.moquette:moquette-broker has a Missing Authorization issue",
+        "url": "https://github.com/advisories/GHSA-9jjc-fw8x-fmwx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:40:03.000Z",
-        "summary": "### Impact When Perses is using the file system database, on the list endpoints, the project value is bound from the request into the resource `Query` struct and is never validated against directory-traversal characters (validation/Flatten…",
-        "badge": "CVE-2026-63445",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-18T17:58:39.000Z",
+        "summary": "## Summary Moquette MQTT Broker fails to enforce ACL write permission checks when publishing Will (Last Will and Testament) messages on behalf of disconnected clients. All normal PUBLISH paths (`receivedPublishQos0`, `receivedPublishQos1`,…",
+        "badge": "CVE-2026-85058",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-85052f9befba2c4e",
@@ -510,7 +510,7 @@
         "url": "https://github.com/BuilderIO/agent-native",
         "description": "A framework for building agentic apps",
         "language": "TypeScript",
-        "stars": 5784,
+        "stars": 5862,
         "starsToday": 607
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/trycua/cua",
         "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
         "language": "HTML",
-        "stars": 25626,
+        "stars": 25673,
         "starsToday": 609
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/Open-Dev-Society/OpenStock",
         "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
         "language": "TypeScript",
-        "stars": 17554,
+        "stars": 17676,
         "starsToday": 843
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/akitaonrails/ai-memory",
         "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "language": "Rust",
-        "stars": 7589,
+        "stars": 7649,
         "starsToday": 217
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/coder/coder",
         "description": "Secure environments for developers and their agents",
         "language": "Go",
-        "stars": 16359,
+        "stars": 16399,
         "starsToday": 461
       },
       {
@@ -559,7 +559,7 @@
         "name": "anthropics/financial-services",
         "url": "https://github.com/anthropics/financial-services",
         "language": "Python",
-        "stars": 35740,
+        "stars": 35798,
         "starsToday": 425
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/cloudflare/quiche",
         "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
         "language": "Rust",
-        "stars": 12290,
+        "stars": 12332,
         "starsToday": 69
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/mvt-project/mvt",
         "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
         "language": "Python",
-        "stars": 13505,
+        "stars": 13563,
         "starsToday": 177
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/zhouxiaoka/autoclip",
         "description": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
         "language": "Python",
-        "stars": 8153,
+        "stars": 8201,
         "starsToday": 266
       },
       {
@@ -598,10 +598,10 @@
         "name": "ruanyf/weekly",
         "url": "https://github.com/ruanyf/weekly",
         "description": "科技爱好者周刊，每周五发布",
-        "stars": 103882,
+        "stars": 103903,
         "starsToday": 221
       }
     ],
-    "updatedAt": "2026-09-21T19:28:35.865Z"
+    "updatedAt": "2026-09-21T23:17:53.928Z"
   }
 }
