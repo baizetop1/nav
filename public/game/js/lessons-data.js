@@ -1,0 +1,3 @@
+export const LESSONS={guard:{name:'接住重击',hero:'linchong',enemy:'road_raider',tip:'敌人蓄势时切换固守，接住一次攻击。固守令双方伤害降低 20%，危险过去后可恢复攻势。'},heal:{name:'及时照应',hero:'baisheng',enemy:'bandit',skill:'baisheng_active',tip:'白胜带伤入阵，怒气已备好。施展乡路照应，观察实际恢复的气血；满血时无法施展治疗。'},interrupt:{name:'截住蓄势',hero:'wangjin',enemy:'road_raider',skill:'wangjin_active',tip:'先等敌人开始蓄势，再施展王进的打断招式。过早出招会消耗怒气，无法打断尚未开始的蓄势。'}};
+export const lessonPassed=b=>b?.context.type==='lesson'&&(b.context.id==='guard'?b.lesson?.guarded>0:b.context.id==='heal'?Object.values(b.metrics?.heroes||{}).some(x=>x.healing>0):b.context.id==='interrupt'&&Object.values(b.metrics?.heroes||{}).some(x=>x.interrupts>0));
+export const validLessonContext=c=>c?.type==='lesson'&&Object.hasOwn(LESSONS,c.id);

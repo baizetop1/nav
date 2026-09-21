@@ -1,6 +1,6 @@
-import { CORPS } from './corps-data.js?v=0.32.0';
-import { hasOwn, idPattern, requireRule } from './utils.js?v=0.32.0';
-import { GROWTH_PROFILES } from './growth.js?v=0.32.0';
+import { CORPS } from './corps-data.js?v=0.44.0';
+import { hasOwn, idPattern, requireRule } from './utils.js?v=0.44.0';
+import { GROWTH_PROFILES } from './growth.js?v=0.44.0';
 export const collections=['heroes','skills','items','equipments','enemies','maps','stories','schemes','dungeons','rewards','events','quests','chapters'];
 const numeric=(n,min=0)=>typeof n==='number'&&Number.isFinite(n)&&n>=min;
 export function prepareData(raw) {
@@ -36,7 +36,7 @@ export function prepareData(raw) {
     requireRule(tiers.filter(t=>t==='base').length===2&&tiers.includes('advanced')&&tiers.includes('bond'),'每位人物需基础两招、进阶一招与羁绊一招。');ref('items',h.id+'_manual');
   }
   for(const item of data.items){requireRule(item.name&&item.description&&['consume','material','token','quest','special'].includes(item.type)&&numeric(item.price),'道具字段无效。');if(item.hero)ref('heroes',item.hero);}
-  for(const equip of data.equipments){requireRule(['weapon','helmet','armor','belt','shoes','accessory'].includes(equip.type)&&equip.name&&numeric(equip.price),'装备字段无效。');for(const id of Object.keys(equip.recipe.items))ref('items',id);}
+  for(const equip of data.equipments){requireRule(equip.source===undefined||equip.source==='journey'&&equip.price===0&&equip.tier===3&&equip.recipe.silver===0&&Object.keys(equip.recipe.items).length===0,'装备来源无效。');requireRule(['weapon','helmet','armor','belt','shoes','accessory'].includes(equip.type)&&equip.name&&numeric(equip.price),'装备字段无效。');for(const id of Object.keys(equip.recipe.items))ref('items',id);}
   for(const enemy of data.enemies){enemy.skills.forEach(id=>ref('skills',id));for(const key of ['hp','attack','defense','speed','strategy'])requireRule(numeric(enemy.attribute[key],1),'敌人属性无效。');requireRule(enemy.telegraphs.length>0,'敌人缺少预兆。');}
   for(const map of data.maps){requireRule(map.name&&map.description&&map.links.length>0,'地图缺少描述或返回路径。');for(const link of map.links){ref('maps',link.target);condition(link.condition);}for(const a of map.actions){effects(a.effects);condition(a.condition);}map.stories.forEach(id=>ref('stories',id));map.dungeons.forEach(id=>ref('dungeons',id));}
   for(const story of data.stories){ref('maps',story.map);condition(story.condition);requireRule(story.steps[story.start],'剧情起点不存在。');for(const step of Object.values(story.steps)){ref('maps',step.map);condition(step.condition);requireRule(step.text&&step.choices.length,'剧情缺少文本或选项。');requireRule(new Set(step.choices.map(c=>c.id)).size===step.choices.length,'剧情选项 ID 重复。');for(const c of step.choices){effects(c.effects);condition(c.condition);cost(c.cost);if(!c.finish)requireRule(story.steps[c.next],'剧情后续步骤不存在。');if(c.goMap)ref('maps',c.goMap);if(c.battle){requireRule(!c.finish&&c.battle.enemies.length>0,'剧情战必须有敌人及后续步骤。');c.battle.enemies.forEach(id=>ref('enemies',id));if(c.battle.guest){ref('heroes',c.battle.guest.id);requireRule(Number.isInteger(c.battle.guest.level)&&c.battle.guest.level>=1&&c.battle.guest.level<=data.config.balance.heroLevelCap,'剧情助阵等级无效。');}}}}}

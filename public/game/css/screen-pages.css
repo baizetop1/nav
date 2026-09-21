@@ -1,0 +1,40 @@
+@media(max-width:900px){
+ .screen-paged{overflow:hidden!important;scrollbar-gutter:auto!important;position:relative}
+ .screen-window{width:100%;min-width:0;overflow:hidden!important;overscroll-behavior:none;scrollbar-width:none}
+ .screen-paper{width:100%;column-fill:auto;column-count:auto;overflow:visible;min-width:0}
+ .screen-pager{display:flex;align-items:center;justify-content:space-between;gap:8px;height:44px;min-height:44px;margin:4px 0 0;background:var(--panel);border-top:1px solid var(--line);position:relative;z-index:5}
+ .screen-pager button{min-height:40px!important;padding:4px 12px;font-size:12px!important;border:1px solid var(--line);background:transparent;color:var(--green)}.screen-pager output{font-size:12px;color:var(--muted)}
+ .screen-paper .page-keep,.screen-paper :is(button,label,input,select,textarea,summary,img,svg){break-inside:avoid}
+ .screen-paper :is(.section-picker,.page-sections,.journey-sections,.battle-transport){position:static!important}
+ .screen-paper :is(.building-grid,.raid-grid,.debrief-grid,.grid-two,.quality-grid,.duty-grid,.battle-grid,.medicine-grid,.atlas-chart,.recruit-batch-grid){display:block!important}
+ .screen-paper :is(.building-card,.duty-card,.battle-unit,.recruit-batch-card){margin-bottom:8px}
+ .screen-paper :is(.combat-log,.plain-list,.equipment-list){max-height:none!important;overflow:visible!important}
+ .screen-paper p{orphans:2;widows:2}.screen-paper .prose{white-space:normal}
+ .screen-dialog .result-hero{margin:4px 0;text-align:center}.screen-dialog .result-hero .hero-portrait{width:70px;height:80px;margin:0 auto}.screen-dialog .result-name{font-size:22px;margin:4px 0}.screen-dialog .result-title,.screen-dialog .result-stars{margin:3px 0}.screen-dialog .result-close{position:static;float:right;min-height:32px}
+ .screen-dialog .recruit-batch-card{padding:6px}.screen-dialog .recruit-batch-card .hero-portrait{width:42px;height:48px}.screen-dialog .batch-changes{padding:6px;margin:6px 0}.screen-dialog .batch-changes p{padding:4px 0;margin:0}
+ .screen-dialog .dialog-header:empty,.screen-dialog .dialog-footer:empty{display:none}
+ .screen-paper .hero-card>.hero-portrait{width:60px!important;height:72px!important}.screen-paper .hero-card{padding:8px!important}
+ .screen-paper .roster-grid{display:block}.screen-paper .roster-tile{width:100%;min-height:72px;margin-bottom:5px;break-inside:avoid}
+ .screen-paper textarea{min-height:80px;max-height:100px}
+ .viewport-shell .main.screen-paged{padding-bottom:4px}
+ .activity-list.screen-paged{padding:0 6px}.activity-list .screen-pager{height:34px;min-height:34px}.activity-list .screen-pager button{min-height:32px!important}
+}
+
+@media(max-width:900px){.screen-paper .page-flow{display:block!important}.section-picker label{margin:0}.section-picker{padding-block:2px}}
+@media(max-width:900px){.viewport-shell .screen-paper .hero-card{overflow:visible!important}.screen-paper #roster-detail{margin-top:8px}.screen-paper .hero-card>.hero-portrait{float:none!important;display:inline-block;margin:0 8px 4px 0!important}.screen-paper .focused-hero>h2{display:block;min-height:0}}
+@media(max-width:900px){
+ .screen-paper .roster-tile{display:grid!important;grid-template-columns:42px minmax(0,1fr);gap:2px 6px;padding:6px;min-height:76px}
+ .screen-paper .roster-tile>.hero-portrait{grid-column:1;grid-row:1/4;width:42px!important;height:48px!important;margin:0;aspect-ratio:auto}
+ .screen-paper .roster-tile>.roster-seat,.screen-paper .roster-tile>.roster-title{display:none}.screen-paper .roster-tile>strong{grid-column:2;grid-row:1;font-size:15px;margin:0}.screen-paper .roster-tile>.roster-tile-meta{grid-column:2;grid-row:2;font-size:11px;margin:0}.screen-paper .roster-tile>.roster-stars{grid-column:2;grid-row:3;font-size:10px;margin:0}
+ .screen-paper :is(h1,h2,h3){break-after:avoid}
+}
+@media(max-width:900px){
+ .viewport-shell .screen-paper .section-top .kicker{display:none}.viewport-shell .screen-paper .section-top h1{font-size:18px;line-height:1.4;margin:0 0 5px;letter-spacing:1px}.screen-paper .section-top{margin:0 0 6px}
+ .screen-paper .subhead{margin:8px 0 6px}.screen-paper .building-card{padding:8px;margin-bottom:6px}.screen-paper .building-card p{margin:4px 0;line-height:1.45}
+}
+@media(max-width:900px){
+ .screen-page-jump{display:flex;align-items:center;gap:4px;margin:0;font-size:12px;white-space:nowrap}.screen-page-jump input{width:48px!important;min-height:36px!important;height:36px;padding:3px!important;margin:0!important;font-size:14px!important;text-align:center}.screen-page-jump output{max-width:60px}
+ dialog.screen-dialog[open]{overflow:hidden!important;max-height:calc(100dvh - 12px)!important}.screen-dialog .batch-draw{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px 8px;padding:6px;margin-bottom:6px;break-inside:avoid}.screen-dialog .batch-draw .hero-portrait{grid-row:1/5;width:42px!important;height:48px!important;float:none}.screen-dialog .batch-draw p,.screen-dialog .batch-draw h3{margin:0!important;font-size:12px}.screen-dialog .batch-draw p.meta{font-size:11px}
+}
+@media(max-width:900px){.screen-paper .comparison-body{overflow:visible!important;padding:0!important}.screen-paper .save-comparison{display:block!important}.screen-paper .save-comparison article{margin-bottom:8px;padding:8px}.screen-paper .save-comparison dl div{padding:4px 0}}
+@media(max-width:900px){.activity-list .screen-page-jump input{min-height:30px!important;height:30px!important}}

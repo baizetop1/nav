@@ -41,6 +41,6 @@ try{
   let disabled=false;const html=affairsPanel(pending,d,(label,a,k,off)=>{if(a.type==='ui_affairDispatch')disabled=off;return '';});assert.ok(disabled);assert.match(html,/暂无可外派/);assert.match(html,/id="camp-affairs"/);
   const board={loading:false,error:'进度榜失败',verifiedLoading:true,verifiedError:'演武榜失败',data:null,verified:null};let busy=false;
   const verified=verifiedPanel(board,(_l,_a,_k,off)=>{busy=off;return '';},String);assert.ok(busy);assert.match(verified,/演武榜失败/);assert.doesNotMatch(verified,/进度榜失败/);
-  const full=rotationsPage(s,d,String,()=>'',board),progress=full.slice(full.indexOf('id="rank-rotation"'));assert.match(progress,/进度榜失败/);assert.doesNotMatch(progress,/演武榜失败/);
+  const full=rotationsPage(s,d,String,()=>'',board,'rank'),progress=full.slice(full.indexOf('id="rank-rotation"'));assert.match(progress,/进度榜失败/);assert.doesNotMatch(progress,/演武榜失败/);
 }finally{globalThis.structuredClone=native;Object.hasOwn=own;Array.prototype.at=at;}
 console.log('Polish: missing browser APIs, seeded full battle parity, safe isolated cloning, legacy migration, export/import, external mission preset guard, immutable camp reminders and separate ranking states passed.');

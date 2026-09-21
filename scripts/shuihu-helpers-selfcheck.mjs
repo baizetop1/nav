@@ -39,5 +39,5 @@ assert.deepEqual(importSave(exportSave(s,{id:1,name:'乡里来投'},data),data).
 const invalid=structuredClone(s);invalid.progress.flags.camp_helper_fake=true;assert.throws(()=>validateSave(invalid,data),/乡里帮手/);
 const homeless=structuredClone(s);delete homeless.camp;assert.throws(()=>validateSave(homeless,data),/乡里帮手/);
 assert.deepEqual(helperBonus(base),{wood:0,food:0,silver:0,heal:0});validateSave(base,data);
-const html=render({state:s,data,view:'recruit'});assert.equal((html.match(/data-helper=/g)||[]).length,6);assert.ok(html.includes('不占 108 将席位'));assert.ok(html.includes('108'));assert.ok(!html.includes('portrait-zhou_aqiao'));
+const html=render({state:s,data,view:'recruit',pageSections:{recruit:'helpers'}});assert.equal((html.match(/data-helper=/g)||[]).length,6);assert.ok(html.includes('不占 108 将席位'));assert.ok(html.includes('108'));assert.ok(!html.includes('portrait-zhou_aqiao'));
 console.log('Village helpers: 6 separate characters, paid one-time hiring, no hero/pity dilution, facility-gated duty/heal bonuses, receipts, busy/invalid guards and portable persistence passed.');

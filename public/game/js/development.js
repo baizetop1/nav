@@ -1,6 +1,6 @@
-import { requireRule, journal } from './utils.js?v=0.32.0';
-import { CORPS } from './corps-data.js?v=0.32.0';
-import { promotionQuote } from './quality.js?v=0.32.0';
+import { requireRule, journal } from './utils.js?v=0.44.0';
+import { CORPS } from './corps-data.js?v=0.44.0';
+import { promotionQuote } from './quality.js?v=0.44.0';
 
 export { CORPS };
 export const CORPS_PROFILES={
@@ -44,7 +44,7 @@ export function developmentAction(s,d,a){
     const p=dev.presets[a.slot],reason=presetReason(s,a.slot);requireRule(!reason,reason);
     s.formationPending=JSON.stringify(s.team)!==JSON.stringify(p.team)||s.formationPending;s.team=[...p.team];Object.assign(s.camp,{mode:p.mode,tactic:p.tactic,deployment:p.deployment});journal(s,`【阵容】已启用阵容 ${a.slot}。兵力不足时仅派实际在营乡勇。`);
   }else if(a.type==='goalSet'){
-    requireRule(['promotion','corps','craft'].includes(a.kind)&&(a.kind==='craft'?d.by.equipments[a.id]:s.heroes[a.id]?.status==='owned'),'无法追踪这个目标。');dev.goal={kind:a.kind,id:a.id};journal(s,'【养成目标】已在寨子与历练页置顶材料清单。');
+    requireRule(['promotion','corps','craft'].includes(a.kind)&&(a.kind==='craft'?(d.by.equipments[a.id]&&d.by.equipments[a.id].source!=='journey'):s.heroes[a.id]?.status==='owned'),'无法追踪这个目标。');dev.goal={kind:a.kind,id:a.id};journal(s,'【养成目标】已在寨子与历练页置顶材料清单。');
   }else if(a.type==='goalClear'){dev.goal=null;
   }else if(a.type==='scrapSmelt'){
     requireRule((s.inventory.scrap_iron||0)>=5&&s.player.silver>=20,'重熔需要碎铁 5、碎银 20。');s.inventory.scrap_iron-=5;s.player.silver-=20;s.inventory.iron=(s.inventory.iron||0)+2;journal(s,'【回炉重熔】碎铁 5、碎银 20，炼得精铁 2。');

@@ -14,7 +14,7 @@ for(const line of ['从一座寨子开始','农田','兵营','英雄','portrait-
 for(const absent of ['class="tabs"','class="resources"','招贤','战斗'])assert.ok(!welcome.includes(absent));
 assert.ok(welcome.includes('立寨，开一番事业'));assert.ok(welcome.includes('接续旧卷'));
 assert.ok(welcome.includes(command('ui_start')));assert.ok(welcome.includes('data-view="save"'));
-const importPage=frame(initial,'save',{entered:false});assert.ok(!importPage.includes('class="tabs"'));assert.ok(importPage.includes('返回卷首'));assert.ok(importPage.includes('id="import-text"'));
+const importPage=frame(initial,'save',{entered:false,pageSections:{save:'files'}});assert.ok(!importPage.includes('class="tabs"'));assert.ok(importPage.includes('返回卷首'));assert.ok(importPage.includes('id="import-text"'));
 const badSave=frame(initial,'save',{entered:false,locked:true,status:'原文保留'});assert.ok(!badSave.includes('返回卷首'));assert.ok(!badSave.includes(command('ui_start')));assert.ok(badSave.includes('原文保留'));
 assert.ok(isFirstArrival(initial));const arrival=frame();assert.ok(arrival.includes('arrival-layout'));assert.ok(arrival.includes('class="resource-strip"'));assert.ok(arrival.includes('class="rail"'),'Fixed navigation remains in its own region on first arrival');
 for(const id of ['city-paths'])assert.ok(arrival.includes(`data-fold="${id}"`));

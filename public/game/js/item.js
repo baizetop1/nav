@@ -1,7 +1,7 @@
-import {useStamina} from './provisions.js?v=0.32.0';
-import { staminaCap } from './logistics.js?v=0.32.0';
-import { count, journal, random, requireRule } from './utils.js?v=0.32.0';
-import { gainExp } from './hero.js?v=0.32.0';
+import {useStamina} from './provisions.js?v=0.44.0';
+import { staminaCap } from './logistics.js?v=0.44.0';
+import { count, journal, random, requireRule } from './utils.js?v=0.44.0';
+import { gainExp } from './hero.js?v=0.44.0';
 export function gainItem(state, id, amount, data) {
   requireRule(data.by.items[id] && Number.isInteger(amount) && amount > 0,'无效的道具奖励。');
   state.inventory[id]=(state.inventory[id]||0)+amount;count(state,'gain_'+id,amount);
@@ -43,7 +43,7 @@ export function itemAction(state, data, action) {
     const recipe=recipes[id];requireRule(recipe,'没有这种合成方式。');pay(state,{items:recipe.cost});grant(state,{items:recipe.reward,silver:id==='ledger'?1000:0},data);journal(state,'材料已换成行路所需之物。');return;
   }
   if(type==='craftEquip'||type==='buyEquip') {
-    const model=data.by.equipments[id];requireRule(model,'未知装备。');requireRule(state.equipment.length<200,'装备已达 200 件，请先分解旧物。');
+    const model=data.by.equipments[id];requireRule(model,'未知装备。');requireRule(model.source!=='journey','路线专属装备只能用路契兑换。');requireRule(state.equipment.length<200,'装备已达 200 件，请先分解旧物。');
     pay(state,type==='craftEquip'?model.recipe:{silver:model.price*2});newEquipment(state,id);journal(state,`取得${model.quality}·${model.name}。`);return;
   }
   const equip=state.equipment.find(e=>e.uid===id);requireRule(equip,'未找到这件装备。');const model=data.by.equipments[equip.item];

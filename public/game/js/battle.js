@@ -1,15 +1,19 @@
-import {advanceCombos} from './expansion-combat.js?v=0.32.0';
-import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.32.0';
-import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.32.0';
-import { autoOrderAllows } from './commands.js?v=0.32.0';
-import { initializeMartial, martialFactor } from './martial.js?v=0.32.0';
-import { attributes } from './hero.js?v=0.32.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.32.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.32.0';
+import {initializeRoles} from './hero-roles.js?v=0.44.0';
+import {lessonPassed} from './lessons-data.js?v=0.44.0';
+import {routeEquipmentOpening} from './journey-rewards.js?v=0.44.0';
+import {journeyAbsorb} from './journey-combat.js?v=0.44.0';
+import {advanceCombos} from './expansion-combat.js?v=0.44.0';
+import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.44.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.44.0';
+import { autoOrderAllows } from './commands.js?v=0.44.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.44.0';
+import { attributes } from './hero.js?v=0.44.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.44.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.44.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
-export const battleSkillMode=state=>state.battleSkillMode||'manual';
+export const battleSkillMode=state=>state.battle?.context.type==='lesson'?'manual':state.battleSkillMode||'manual';
 const alive=u=>u.hp>0;
 const harmful=negativeStatus;
 const log=(b,text)=>{b.log.push(`【${(b.elapsed/1000).toFixed(1)}秒】${text}`);if(b.log.length>120)b.log.shift();};
@@ -28,14 +32,14 @@ function unit(id,name,attribute,skills,side){const u={id,name,...attribute,maxHp
 export function startBattle(state,data,{enemies,guest,scale=1,context}){
   requireRule(!state.battle&&!state.scheme,'先结束当前战局。');
   const team=guest?[unit(guest.id,data.by.heroes[guest.id].name,attributes(state,guest.id,data,guest.level,false),data.by.heroes[guest.id].skills,'team')]:state.team.map(id=>unit(id,data.by.heroes[id].name,attributes(state,id,data),data.by.heroes[id].skills,'team'));
-  requireRule(!state.affairs?.mission||!team.some(u=>u.id===state.affairs.mission.hero),'好汉仍在外派，请先接回。');
-  requireRule(!state.realm?.squad||!team.some(u=>state.realm.squad.team.includes(u.id)),'好汉仍在分队外派，请先接回。');
+  requireRule(context.type==='lesson'||!state.affairs?.mission||!team.some(u=>u.id===state.affairs.mission.hero),'好汉仍在外派，请先接回。');
+  requireRule(context.type==='lesson'||!state.realm?.squad||!team.some(u=>state.realm.squad.team.includes(u.id)),'好汉仍在分队外派，请先接回。');
   requireRule(team.length>0,'先与白胜相识、邀他作向导，或在招贤馆招募好汉并编队。');
   state.battle={mode:'realtime',elapsed:0,itemReadyAt:0,team,enemy:enemies.map((id,i)=>{
     const e=data.by.enemies[id],stats=Object.fromEntries(Object.entries(e.attribute).map(([key,value])=>[key,Math.round(value*(key==='speed'?1:scale))]));
     return {...unit(id+'_'+i,e.name,stats,e.skills,'enemy'),model:id};
   }),context,guest:!!guest,outcome:null,log:['【交战开始】双方自行迎敌。你可随时调度技能、用药或撤退。']};
-  state.battle.metrics=newMetrics(team);initializeGrowthBattle(state,state.battle,data);initializeMartial(state,state.battle,data);
+  state.battle.metrics=newMetrics(team);initializeGrowthBattle(state,state.battle,data);initializeMartial(state,state.battle,data);routeEquipmentOpening(state,state.battle);initializeRoles(state.battle,state);
 }
 // Only convert validated legacy battles. Never replay time spent away from the page.
 export function migrateBattle(b){
@@ -49,8 +53,9 @@ export function migrateBattle(b){
 }
 function settle(b){
   if(b.outcome)return true;
+  if(lessonPassed(b)){b.outcome='victory';b.metrics.reason='objective';log(b,'演武目标完成，已停手。');return true;}
   if(!b.team.some(alive)){b.outcome='defeat';if(b.metrics)b.metrics.reason='team';log(b,'众好汉已无力再战。收拢人手，整备后可再来。');}
-  else if(!b.enemy.some(alive)){b.outcome='victory';if(b.metrics)b.metrics.reason='enemy';log(b,'敌阵已散，此战得胜。');}
+  else if(!b.enemy.some(alive)){b.outcome=b.context.type==='lesson'?'retreat':'victory';if(b.metrics)b.metrics.reason='enemy';log(b,b.context.type==='lesson'?'对手已停手，但指定操作尚未完成，可重新练习。':'敌阵已散，此战得胜。');}
   else if(objectiveFailed(b)){b.outcome='defeat';if(b.metrics)b.metrics.reason='objective';log(b,'【目标失败】护运耐久耗尽或限时已到，此战未完成副本目标。');}
   else if(b.elapsed>=BATTLE_LIMIT_MS){b.outcome='retreat';if(b.metrics)b.metrics.reason='timeout';log(b,'交战已久，双方难分胜负，你下令撤出。');}
   return !!b.outcome;
@@ -61,7 +66,7 @@ function hit(state,u,skill,data){
   if(skill)u.rage-=skill.cost;else u.rage=bounded(u.rage+10,0,100);
   if(effect.kind==='heal'){
     const target=friends.filter(alive).sort((a,b)=>a.hp/a.maxHp-b.hp/b.maxHp)[0],heal=Math.min(target.maxHp-target.hp,Math.round(target.maxHp*effect.rate));
-    reportHealing(b,u,heal);target.hp+=heal;log(b,`${u.name}施展【${skill.name}】，照应${target.name}，回复 ${heal} 点气血。`);return;
+    reportHealing(b,u,heal,target);target.hp+=heal;log(b,`${u.name}施展【${skill.name}】，照应${target.name}，回复 ${heal} 点气血。`);return;
   }
   const targets=opponents.filter(alive),target=random(state)<.8?targets[0]:pick(state,targets),critical=random(state)<.05;
   const defense=target.defense*(has(target,'armor_break')?.7:1),attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1);
@@ -77,6 +82,7 @@ export function enemySkill(b,u,data){
 }
 export function setBattleSkillMode(state,mode){
   const b=state.battle;requireRule(b&&!b.outcome,'当前没有进行中的交战。');
+  requireRule(b.context.type!=='lesson','演武使用手动技能，练习亲自判断时机。');
   requireRule(['manual','auto'].includes(mode),'无效的技能释放方式。');
   if(battleSkillMode(state)===mode)return;
   state.battleSkillMode=mode;
@@ -112,7 +118,7 @@ export function advanceBattle(state,data,delta){
     const next=Math.min(...times);if(next>end)break;b.elapsed=next;
     for(const u of units){
       for(const s of u.statuses)if(s.nextTickAt===next&&alive(u)){
-        const loss=s.id==='bleeding'?Math.max(1,Math.round(u.maxHp*.02)):Math.round(s.value);reportOtherDamage(b,u,loss,'dot');u.hp=Math.max(0,u.hp-loss);
+        const loss=journeyAbsorb(b,u,s.id==='bleeding'?Math.max(1,Math.round(u.maxHp*.02)):Math.round(s.value));reportOtherDamage(b,u,loss,'dot');u.hp=Math.max(0,u.hp-loss);
         log(b,`${u.name}【${statusName(s.id)}】损失 ${loss} 点气血。`);
       }
       for(const s of u.statuses)if(s.nextTickAt===next)s.nextTickAt+=STATUS_MS;
@@ -150,6 +156,7 @@ export function castSkill(state,data,heroId,skillId){
 export function battleItemQuote(state,data,id){
   const b=state.battle,item=data.by.items[id];
   if(!b||b.outcome)return {reason:'战局已结束'};
+  if(b.context.type==='lesson')return {reason:'演武不消耗药物，请使用军令或教习招式'};
     if(b.context.type==='elite'&&b.context.kind==='hard')return {reason:'禁药挑战不能使用战斗药品，治疗技能仍可用'};
   if(!BATTLE_ITEMS.includes(id)||!item)return {reason:'这件物品不能在战斗中使用'};
   if(!(state.inventory[id]>0))return {reason:'行囊中没有此药'};
@@ -159,12 +166,12 @@ export function battleItemQuote(state,data,id){
 }
 export function useBattleItem(state,data,id){
   const {target,reason}=battleItemQuote(state,data,id);requireRule(!reason,reason+'，不消耗道具。');
-  const b=state.battle,item=data.by.items[id];state.inventory[id]--;
+  const b=state.battle,item=data.by.items[id];state.inventory[id]--;if(b.metrics)b.metrics.medicineUses=(b.metrics.medicineUses||0)+1;
   if(item.effect.hp&&b.metrics)b.metrics.medicine+=Math.min(target.maxHp-target.hp,item.effect.hp);
   if(item.effect.hp)target.hp=Math.min(target.maxHp,target.hp+item.effect.hp);
   if(item.effect.rage)target.rage=Math.min(100,target.rage+item.effect.rage);
   if(item.effect.cleanse)target.statuses=target.statuses.filter(s=>!harmful(s.id));
   b.itemReadyAt=b.elapsed+ITEM_COOLDOWN_MS;log(b,`你将【${item.name}】交给${target.name}，药效即刻生效，双方仍在交战。`);
 }
-export function retreatBattle(state){const b=state.battle;requireRule(b&&!b.outcome,'当前没有可撤出的战斗。');b.outcome='retreat';if(b.metrics)b.metrics.reason='manual';log(b,'你下令退回安全处。此战未取胜，已消耗的药物与历练次数不会返还。');}
+export function retreatBattle(state){const b=state.battle;requireRule(b&&!b.outcome,'当前没有可撤出的战斗。');b.outcome='retreat';if(b.metrics)b.metrics.reason='manual';log(b,b.context.type==='lesson'?'演武已停止，没有消耗物资或出征次数。':'你下令退回安全处。此战未取胜，已消耗的药物与历练次数不会返还。');}
 const growthApi={log,damage,addStatus,statusName};

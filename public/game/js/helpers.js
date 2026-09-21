@@ -1,4 +1,4 @@
-import { requireRule, journal } from './utils.js?v=0.32.0';
+import { requireRule, journal } from './utils.js?v=0.44.0';
 
 // Original village characters live outside the 108-star hero dictionary.
 export const HELPERS=[

@@ -7,7 +7,7 @@ import {render} from '../public/game/js/ui.js';
 import {gameSnapshot} from '../public/game/js/portable.js';
 const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL('../public/game/data/'+n+'.json',import.meta.url)))])));
 const act=(s,type,extra={},now=s.clock)=>{const next=dispatch(data,s,{type,...extra},now);assert.deepEqual(gameSnapshot(next,data),next);return next;};
-const initial=newGame(data,Date.now(),53123),before=JSON.stringify(initial),html=render({state:initial,data,view:'map',mapSection:'atlas'});
+const initial=newGame(data,Date.now(),53123),before=JSON.stringify(initial),html=render({state:initial,data,view:'map',mapSection:'atlas',mapTarget:'__all__'});
 for(const map of data.maps){assert.ok(html.includes(map.name),map.name+' visible before travel');for(const l of map.links)assert.ok(html.includes('→ '+data.by.maps[l.target].name));}
 assert.equal(JSON.stringify(initial),before,'Map inspection never awards or mutates');
 assert.deepEqual(routeTo(initial,data,'forge'),['forge']);assert.equal(routeTo(initial,data,'dongjing'),null);
@@ -26,5 +26,5 @@ assert.equal(s.location,location,'Common services do not teleport the player');
 for(const id of Object.keys(LOCAL_BENEFITS)){let visitor=structuredClone(s);visitor.location=id;if(LOCAL_BENEFITS[id].flag){assert.throws(()=>act(visitor,'localBenefit'));visitor.progress.flags[LOCAL_BENEFITS[id].flag]=true;}const received=act(visitor,'localBenefit');assert.equal(received.daily.counters['visit_bonus_'+id],1);assert.throws(()=>act(received,'localBenefit'));const tomorrow=act(received,'refresh',{},received.clock+86400000);act(tomorrow,'localBenefit');}
 assert.throws(()=>act(s,'localBenefit'),'No remote claim of a different location benefit');
 const battle=act(act(s,'campFormation',{mode:'solo',deployment:1,tactic:'balanced'}),'campRaid',{id:'woods'});for(const type of ['travel','localBenefit','recruit','craftEquip'])assert.throws(()=>act(battle,type,{id:'forge'}));
-assert.ok(render({state:s,data,view:'forge'}).includes('craftEquip'));assert.ok(render({state:s,data,view:'recruit'}).includes('任何地点邀贤'));
+assert.ok(render({state:s,data,view:'forge',pageSections:{forge:'craft'}}).includes('craftEquip'));assert.ok(render({state:s,data,view:'recruit'}).includes('使用一张招贤令'));
 console.log('World map: all locations/roads visible, locked-path explanations, transactional multi-road travel, night gates, location-independent services, daily visit rewards, busy guards and save projection passed.');

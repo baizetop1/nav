@@ -1,8 +1,8 @@
-import { deployedTroops, troopShares, heroCommand } from './logistics.js?v=0.32.0';
-import { startBattle } from './battle.js?v=0.32.0';
-import { attachTroops } from './camp.js?v=0.32.0';
-import { grant } from './item.js?v=0.32.0';
-import { requireRule, count, journal, hasOwn } from './utils.js?v=0.32.0';
+import { deployedTroops, troopShares, heroCommand } from './logistics.js?v=0.44.0';
+import { startBattle } from './battle.js?v=0.44.0';
+import { attachTroops } from './camp.js?v=0.44.0';
+import { grant } from './item.js?v=0.44.0';
+import { requireRule, count, journal, hasOwn } from './utils.js?v=0.44.0';
 export const ELITES={
  siege:{name:'精英·铁壁营',level:20,hall:3,terrain:'land',enemies:['guard','bandit_chief'],scale:3.8,reward:{iron:8,scrap_iron:10,martial_pages:4},use:'精铁用于强化，碎铁用于练兵，残页用于招式与升品。'},
  convoy:{name:'精英·长路护粮',level:25,hall:4,terrain:'land',enemies:['road_raider','soldier'],scale:4.3,reward:{exp_pill:4,cloth:6,spirit_essence:2},use:'经验丹培养新人，布匹用于装备，灵蕴用于升品。'},

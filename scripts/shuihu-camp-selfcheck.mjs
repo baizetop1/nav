@@ -34,7 +34,7 @@ const mounted={inventory:{},growth:{mounts:{wusong:{rank:1,intimacy:0,riding:tru
 // Force an actual no-contract winning settlement and verify its receipt.
 let dungeon=act(s,'dungeon',{id:'jingyanggang'});for(const u of dungeon.battle.enemy)u.hp=0;dungeon=act(dungeon,'battleTick',{delta:1});
 let seed=1;for(;;seed++){const r={rng:seed};if(data.heroes.filter(x=>x.mount.dungeon==='jingyanggang').every(()=>random(r)>=.2))break;}dungeon.rng=seed;const settled=act(dungeon,'finishBattle');assert.equal(settled.inventory[h.mount.contract],undefined);assert.ok(!gains(dungeon,settled,data).some(r=>r.name.includes('坐骑契')));
-for(const view of ['camp','heroes','save']){const html=render({state:s,data,view});assert.ok(html.includes('activity-log'));if(view==='camp')for(const word of ['农田','点将出征','英雄独行','20%'])assert.ok(html.includes(word));}
+for(const view of ['camp','heroes','save']){const html=view==='camp'?['buildings','formation','raids'].map(id=>render({state:s,data,view,pageSections:{camp:id}})).join(''):render({state:s,data,view});assert.ok(html.includes('activity-log'));if(view==='camp')for(const word of ['农田','点将出征','英雄独行','20%'])assert.ok(html.includes(word));}
 const receipt=rewardDialog([{name:'<script>',amount:1}],esc);assert.ok(receipt.includes('&lt;script&gt;'));assert.ok(!receipt.includes('<script>'));
 assert.ok(JSON.parse(old).camp===undefined,'Old saves do not gain resources merely by loading');
 console.log(`Shuihu camp: build/work/recruit/heal, real starter victory, solo retreat, one-shot rewards, mid-battle import/export, invalid-save guards and 12,000 mount rolls (${hits} drops) passed.`);

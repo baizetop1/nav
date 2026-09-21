@@ -1,11 +1,11 @@
-import { batchButtons } from './batch-ui.js?v=0.32.0';
-import { equipmentLoot } from './camp-development-ui.js?v=0.32.0';
-import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.32.0';
+import { batchButtons } from './batch-ui.js?v=0.44.0';
+import { equipmentLoot } from './camp-development-ui.js?v=0.44.0';
+import { skillLevel, unlockReason, skillUpgradeQuote, mountQuote, trainedSkill } from './growth.js?v=0.44.0';
 const attr={hp:'气血',attack:'攻击',defense:'防御',speed:'速度',strategy:'谋略'};
 export function dungeonMountLoot(s,d,id,esc){
   const heroes=d.heroes.filter(h=>h.mount.dungeon===id);
   const loot=equipmentLoot(d,Math.min(3,1+Math.floor(d.by.dungeons[id].level/15)));
-  return loot+(heroes.length>4?`<details class="fold-section" data-fold="contracts-${id}"><summary>坐骑契名录 · ${heroes.length} 位好汉 · 每张 20%</summary>`:'')+(heroes.length?`<p class="note mount-loot">坐骑契掉落：${heroes.map(h=>`${esc(h.name)} · ${esc(h.mount.name)}${s.growth?.mounts[h.id]?'（已领骑）':s.inventory[h.mount.contract]>0?'（已持契）':'（独立掉率 20%）'}`).join('；')}。胜利后领取战果获得；重复通关不重复掉契，养成材料照常给。</p>`:'')+(heroes.length>4?'</details>':'');
+  const reward=d.by.rewards[d.by.dungeons[id].reward],table='<details class="dungeon-drops"><summary>必得与随机材料</summary><p class="note">胜利结算必得：碎银 '+reward.silver+'、威望 '+reward.prestige+'、功勋 '+reward.merit+'，参战好汉每人历练 '+reward.exp+'；'+Object.entries(reward.guaranteed).map(([id,n])=>esc(d.by.items[id].name)+' ×'+n).join('、')+'。</p><p class="note">额外独立判定：'+reward.items.map(x=>esc(d.by.items[x.id].name)+' ×'+x.count+' · '+Math.round(x.rate*100)+'%').join('；')+'。可同时掉落，也可能全部未掉落；不影响必得收益。</p></details>';return table+loot+(heroes.length>4?`<details class="fold-section" data-fold="contracts-${id}"><summary>坐骑契名录 · ${heroes.length} 位好汉 · 每张 20%</summary>`:'')+(heroes.length?`<p class="note mount-loot">坐骑契掉落：${heroes.map(h=>`${esc(h.name)} · ${esc(h.mount.name)}${s.growth?.mounts[h.id]?'（已领骑）':s.inventory[h.mount.contract]>0?'（已持契）':'（独立掉率 20%）'}`).join('；')}。胜利后领取战果获得；重复通关不重复掉契，养成材料照常给。</p>`:'')+(heroes.length>4?'</details>':'');
 }
 function mountOrigin(s,d,h,esc){
   const dungeon=d.by.dungeons[h.mount.dungeon],places=[dungeon.map,...(dungeon.entrances||[]).map(e=>e.map)].map(id=>d.by.maps[id].name);

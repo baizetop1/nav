@@ -42,6 +42,6 @@ for(let i=0;i<4000;i++){loot.equipment=[];searchEquipment(loot,data,2);if(loot.e
 assert.ok(hit>850&&hit<1150,`Observed ${hit}/4000 drops`);
 loot.equipment=Array.from({length:200},(_,i)=>({uid:'eq_'+i,item:'oak_staff',hero:null,plus:0}));loot.rng=1;const iron=loot.inventory.scrap_iron||0;searchEquipment(loot,data,3);assert.equal(loot.equipment.length,200);assert.equal(loot.inventory.scrap_iron-iron,6);
 for(const g of CAMP_GOALS){const state=structuredClone(s);state.camp.buildings={hall:3,farm:1,lumber:1,barracks:1,clinic:1,market:1};state.camp.sorties=2;state.stats.camp_win_convoy=1;state.stats.camp_win_fort=1;delete state.progress.flags['camp_goal_'+g.id];const done=act(state,'campClaim',{id:g.id});assert.throws(()=>act(done,'campClaim',{id:g.id}));}
-for(const view of ['camp','heroes']){const html=render({state:s,data,view,pageSections:{heroes:'training'}});assert.ok(html.includes(view==='camp'?'建寨志':'委派为寨务主事'));}
+for(const view of ['camp','heroes']){const html=render({state:s,data,view,pageSections:{heroes:'talents',camp:'goals'}});assert.ok(html.includes(view==='camp'?'建寨志':'委派为寨务主事'));}
 const invalid=structuredClone(s);invalid.progress.flags.camp_steward_wuyong=true;assert.throws(()=>validateSave(invalid,data));
 console.log(`Development: duty tradeoffs, steward experience/levels, one-time goals, real tactics/casualties, retreat, portable snapshots, loot capacity and 4,000 random draws (${hit} drops) passed.`);
