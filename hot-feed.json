@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-22T14:55:26.863Z",
+  "generatedAt": "2026-09-22T18:55:31.857Z",
   "intelligence": {
-    "updatedAt": "2026-09-22T14:55:26.863Z",
+    "updatedAt": "2026-09-22T18:55:31.857Z",
     "items": [
       {
-        "id": "cn-item-92db0f096af76726",
+        "id": "cn-item-ae6564ebd1fc62d7",
         "category": "cn",
-        "title": "创新药半年观察：集体扭亏背后，钱到底是怎么赚来的？",
-        "url": "https://www.chinanews.com.cn/jk/2026/09-22/10701482.shtml",
+        "title": "台媒曝光“战时盾牌”机密选址：台北故宫等多处民用设施在列",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701875.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-22T10:05:55.000Z",
-        "summary": "中新网北京9月22日电(记者 赵方园)2026年上半年，中国创新药行业迎来一轮集体业绩兑现。",
+        "publishedAt": "2026-09-22T15:19:16.000Z",
+        "summary": "中新网9月22日电（燕新台）近日有台湾民众在岛内论坛爆料，一份疑似“台湾联合应变中心”的内部机密选址简报显示，其备选选址清单中包含台北故宫、台北车站、儿童未来馆以及五星级酒店等场所，此事在台湾社会引发巨大恐慌与舆论声讨。",
         "badge": "中新网要闻"
       },
       {
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-24"
       },
       {
-        "id": "ai-openai-08ffdb24bebd9aa2",
+        "id": "ai-openai-60efaf744a4d6c2c",
         "category": "ai",
-        "title": "Advisory Group on Mathematics and Artificial Intelligence",
-        "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+        "title": "Priorities and principles for effective third party assessments",
+        "url": "https://openai.com/index/priorities-principles-third-party-assessments",
         "source": "OpenAI",
-        "publishedAt": "2026-09-21T12:00:00.000Z",
-        "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "summary": "OpenAI outlines priorities and principles for rigorous, secure, and independent third-party AI safety assessments of frontier models and safeguards.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49801324",
+        "id": "hn-49805509",
         "category": "dev",
-        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "title": "GPT-6 Sol and Luna",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T13:52:15.000Z",
+        "publishedAt": "2026-09-22T18:00:34.000Z",
         "badge": "HN",
-        "signal": "131 分 · 148 评论"
+        "signal": "390 分 · 191 评论"
       },
       {
-        "id": "cn-it-094fc39a43cbd37f",
+        "id": "cn-it-903e5505faeeabb5",
         "category": "cn",
-        "title": "拿下 2 亿日活跃用户后，消息称字节跳动豆包收缩对话团队",
-        "url": "https://www.ithome.com/1/005/981.htm",
+        "title": "美国纳斯达克综合指数周二盘中再创历史新高：科技股回暖 / 油价回落等因素驱动",
+        "url": "https://www.ithome.com/1/005/999.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-22T14:48:14.000Z",
-        "summary": "IT之家 9 月 22 日消息，《晚点 LatePost》今天（22 日）晚间发布消息称，豆包通用 Session 团队正在减员，规模预计减半。该团队此前约有 50 人， 一度是豆包内规模最大的团队 ，主要负责豆包的对话（Chat）产品能力，包括策略、评测等工作。此次调整后，部分人员将转岗至豆包商业化、飞书等团队，其余人员将被裁撤。 消息称豆包负责人赵祺推动了此次人员调整。他在字节已有十余年履历，此前负责增长中台、穿山甲（字节旗下广告平台），之后转岗至集团人力资源部门，为字…",
+        "publishedAt": "2026-09-22T18:55:13.000Z",
+        "summary": "IT之家 9 月 23 日消息， 美国纳斯达克综合指数（Nasdaq Composite）于美国当地时间周二（9 月 22 日）盘中再度刷新历史高位 ，其中科技股强势反弹叠加油价回落提振市场风险偏好，成为推动指数突破的关键力量。 IT之家发稿前，美国当地时间 9 月 22 日纳斯达克综合指数盘中最高触及 27,272.72 点 ，超越此前于 6 月 1 日创下的盘中纪录 27,190.21 点 。 伴随着纳斯达克综合指数上涨，道琼斯工业平均指数与标普 500 指数亦同步走高…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-92cr-jxw4-5wjg",
+        "id": "github-advisory-ghsa-5mj8-gf6m-fhw8",
         "category": "security",
-        "title": "Sync-in Server has a complete 2FA Bypass via `POST /api/auth/token`",
-        "url": "https://github.com/advisories/GHSA-92cr-jxw4-5wjg",
+        "title": "9Router has an Authentication Bypass in Public LLM API via Spoofable X-9r-Real-Ip Header",
+        "url": "https://github.com/advisories/GHSA-5mj8-gf6m-fhw8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T14:46:30.000Z",
-        "summary": "**Affected component:** Sync-in Server v2.3.0, `POST /api/auth/token` (`auth.controller.ts:50-55`). **Required attacker capability:** Valid username and password for a 2FA-enabled account. ## Summary `POST /api/auth/token` authenticates wi…",
-        "badge": "CVE-2026-58269",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-22T16:34:06.000Z",
+        "summary": "## Summary 9router determines whether an incoming request originates from localhost by trusting the X-9r-Real-Ip HTTP request header. This header is intended to be produced and sanitized exclusively by the bundled custom-server.js layer fr…",
+        "badge": "CVE-2026-56681",
+        "signal": "HIGH · CVSS 7.3"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244057",
+        "id": "v2ex-1244097",
         "category": "dev",
-        "title": "那啥 mimo plan 可以用，但是别用它们的 mimo cli",
-        "url": "https://www.v2ex.com/t/1244057",
+        "title": "codex reset 的这个需求太火爆了，我也注册了个域名上线了一个网站",
+        "url": "https://www.v2ex.com/t/1244097",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-22T12:23:16.000Z",
-        "summary": "代码已写好，接口还没更新，未来哪个版本说不定就改名 mimo 云存储了。 MiMo CLI：后果与复现 对象：官方包 v0.1.14 （ mimocode-windows-x64 ）。公开仓库 XiaomiMiMo/MiMo-Code 的 main 里没有这些实现。未实机抓包。 后果 默认开着 MIMOCODE_ENABLE_ANALYSIS 。在 Git 仓库里跑完一轮会调模型的会话后，向 https://tracking.miui.com/track/v4/o 发送 t…",
+        "publishedAt": "2026-09-22T18:23:31.000Z",
+        "summary": "今天看了下，昨天居然有 200 多的用户，都不清楚哪里来的用户。现在宣传一下： codex reset",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-956b5dcd70a59b24",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "9月22日，亚运会女子排球决赛，中国队3-0击败日本队，夺得金牌！在上一届杭州亚运会女子排球决赛中，中国队也是以同样的比分3-0战胜日本队，获得冠军。",
         "badge": "热搜",
-        "signal": "7,808,802 热度"
+        "signal": "7,809,081 热度"
       },
       {
         "id": "cisa-kev-cve-2025-39964",
@@ -108,44 +108,44 @@
         "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
-        "id": "ai-hugging-face-689d78c6e007ab8e",
+        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
         "category": "ai",
-        "title": "Transformers now runs llama.cpp quants",
-        "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+        "url": "https://huggingface.co/blog/evaleval-aisi",
         "source": "Hugging Face",
         "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49802161",
+        "id": "hn-49803892",
         "category": "dev",
-        "title": "OpenAI is about to eat Jev's lunch – Arcturus Labs",
-        "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+        "title": "Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T14:42:59.000Z",
+        "publishedAt": "2026-09-22T16:29:05.000Z",
         "badge": "HN",
-        "signal": "20 分 · 2 评论"
+        "signal": "598 分 · 535 评论"
       },
       {
-        "id": "cn-item-8fae25ca0d24fa79",
+        "id": "cn-item-92db0f096af76726",
         "category": "cn",
-        "title": "企业境外反垄断合规指引修订草案公开征求意见",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701599.shtml",
+        "title": "创新药半年观察：集体扭亏背后，钱到底是怎么赚来的？",
+        "url": "https://www.chinanews.com.cn/jk/2026/09-22/10701482.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-22T10:01:24.000Z",
-        "summary": "市场监管总局今天(22日)就《企业境外反垄断合规指引(修订草案征求意见稿)》公开征求意见，进一步引导我国企业增强海外反垄断合规意识，防范相关法律风险。意见反馈截止日期为2026年9月29日。",
+        "publishedAt": "2026-09-22T10:05:55.000Z",
+        "summary": "中新网北京9月22日电(记者 赵方园)2026年上半年，中国创新药行业迎来一轮集体业绩兑现。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-jjhp-8crj-mppq",
+        "id": "github-advisory-ghsa-92cr-jxw4-5wjg",
         "category": "security",
-        "title": "@roomi-fields/notebooklm-mcp has a path traversal in vault.batch tool that allows arbitrary file write outside intended vault directory",
-        "url": "https://github.com/advisories/GHSA-jjhp-8crj-mppq",
+        "title": "Sync-in Server has a complete 2FA Bypass via `POST /api/auth/token`",
+        "url": "https://github.com/advisories/GHSA-92cr-jxw4-5wjg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T14:43:26.000Z",
-        "summary": "## Summary The `vault_batch` MCP tool (and the equivalent `POST /batch-to-vault` HTTP endpoint) accepted a caller-supplied `vault_dir` path that was passed directly to `path.resolve()` + `fs.mkdir()` with no containment check. A caller — o…",
-        "badge": "CVE-2026-61647",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-22T14:46:30.000Z",
+        "summary": "**Affected component:** Sync-in Server v2.3.0, `POST /api/auth/token` (`auth.controller.ts:50-55`). **Required attacker capability:** Valid username and password for a 2FA-enabled account. ## Summary `POST /api/auth/token` authenticates wi…",
+        "badge": "CVE-2026-58269",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-openai-8fe4474fdbb9c4c4",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244054",
+        "id": "v2ex-1244090",
         "category": "dev",
-        "title": "api key 被人盗用了",
-        "url": "https://www.v2ex.com/t/1244054",
+        "title": "openclaw 更新后，历史对话消失了",
+        "url": "https://www.v2ex.com/t/1244090",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-22T12:18:38.000Z",
-        "summary": "排查不出原因 这是我个人的一个项目 就我一个人开发 代码上传到的是 gitee 代码里确实写了 key 现在已经改到环境变量里了 平时用的 ai 是 claude 我自己用的都是 deepseek 的 flash 模型 每天都有 pro 的调用量 一天几十块钱的样子 我的猜测 1 、感觉服务器被人黑了 2 、gitee 上泄露了 git 上是一个私人项目 3 、cluade 的渠道泄露出去",
+        "publishedAt": "2026-09-22T16:54:36.000Z",
+        "summary": "openclaw 更新后，曾经的历史对话消息记录了我发现居然不见了，我使用 ai 的尝试修复，说是数据库坏了，问题是我啥都没做啊，只是更新升级了下，为什么就会坏尼?有遇到同意问题的没？我想修复。",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-358e85cbc9b84321",
+        "id": "cn-it-085ca0d5ebfecbbf",
         "category": "cn",
-        "title": "英伟达黄仁勋解释为何每天穿黑色皮衣：可以少做一个选择，让我把精力放在更重要的事情",
-        "url": "https://www.ithome.com/1/005/980.htm",
+        "title": "Anthropic 发布 Claude Opus 5.5 模型：性能媲美 Fable 5.1，运行成本比 Opus 5 低 40%",
+        "url": "https://www.ithome.com/1/005/998.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-22T14:43:16.000Z",
-        "summary": "IT之家 9 月 22 日消息，众所周知，英伟达 CEO 黄仁勋总是穿着黑色皮夹克面对公众。这件黑色皮衣形象的知名度，几乎不亚于英伟达的 Logo。 黄仁勋近日接受 CBS News 采访时解释了自己为何每天都穿黑色皮衣。当主持人问他到底有多少件皮衣时，黄仁勋回答道：“ 大概有三四十件吧 ，都是 Lori（黄仁勋妻子）给的。” 他继续说道：“黑色意味着不需要做选择， 每天穿相同的衣服挺好 ，每件的合身程度和手感也差不多。决定好穿什么衣服， 就意味着每天少做一个决定 ， 可以…",
+        "publishedAt": "2026-09-22T18:55:08.000Z",
+        "summary": "IT之家 9 月 23 日消息，Anthropic 今日正式发布了 Claude Opus 5.5 模型，这是其全新 Claude 5.5 家族的首个模型， 宣称在大多数工作上表现可媲美 Claude Fable 5.1，运行成本比 Opus 5 低 40% 。 IT之家从 Anthropic 公告获悉，具体来看，Claude Opus 5.5 模型有以下提升： 性能方面，Opus 5.5 比 Opus 5 有了很大提升，官方宣传早期测试者在最复杂的工作中看到性能大幅提升。…",
         "badge": "IT之家"
       },
       {
@@ -200,64 +200,64 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49801329",
+        "id": "hn-49801324",
         "category": "dev",
-        "title": "Show HN: Drop – a rootless Linux sandbox with gVisor support",
-        "url": "https://droprun.sh/",
+        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T13:52:47.000Z",
+        "publishedAt": "2026-09-22T13:52:15.000Z",
         "badge": "HN",
-        "signal": "34 分 · 4 评论"
+        "signal": "406 分 · 306 评论"
       },
       {
-        "id": "cn-baidu-5d47795059a3143a",
+        "id": "cn-baidu-5938d046b720657a",
         "category": "cn",
-        "title": "多家银行存款利息涨了",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E5%AD%98%E6%AC%BE%E5%88%A9%E6%81%AF%E6%B6%A8%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国首批航天员已全部停航停训",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E9%A6%96%E6%89%B9%E8%88%AA%E5%A4%A9%E5%91%98%E5%B7%B2%E5%85%A8%E9%83%A8%E5%81%9C%E8%88%AA%E5%81%9C%E8%AE%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月以来，多家中小银行逆势上调存款利率，与当前普遍降息背景形成反差。例如，微众银行App9月21日存款挂牌利率表显示，该行3年期定存利率为1.75%，较之前上调15个基点；湖北监利农商银行、广东五华惠民村镇银行等中小型银行也调整了大额存单、长期定期存款利率。",
+        "summary": "9月21日，杨利伟在国务院新闻办公室举行的中外记者见面会上透露，其与我国首批航天员已于2025年10月停航停训，目前从事选拔训练等技术工作。我国载人航天工程于34年前的9月21日立项，首批14名航天员中9人曾执行飞行任务。目前第二批航天员已成中坚力量。",
         "badge": "热搜",
-        "signal": "7,712,885 热度"
+        "signal": "7,712,557 热度"
       },
       {
-        "id": "github-advisory-ghsa-pxcx-fv34-x9p5",
+        "id": "github-advisory-ghsa-jjhp-8crj-mppq",
         "category": "security",
-        "title": "nginx ignition has Unauthenticated Admin Account Creation via Onboarding Race Condition",
-        "url": "https://github.com/advisories/GHSA-pxcx-fv34-x9p5",
+        "title": "@roomi-fields/notebooklm-mcp has a path traversal in vault.batch tool that allows arbitrary file write outside intended vault directory",
+        "url": "https://github.com/advisories/GHSA-jjhp-8crj-mppq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-21T21:54:42.000Z",
-        "summary": "## Summary `POST /api/users/onboarding/finish` is registered as **anonymous (unauthenticated)** and creates a user with **full ReadWrite admin permissions**. Because the handler uses a check-then-act (TOCTOU) pattern between the \"onboardin…",
-        "badge": "CVE-2026-61628",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-22T14:43:26.000Z",
+        "summary": "## Summary The `vault_batch` MCP tool (and the equivalent `POST /batch-to-vault` HTTP endpoint) accepted a caller-supplied `vault_dir` path that was passed directly to `path.resolve()` + `fs.mkdir()` with no containment check. A caller — o…",
+        "badge": "CVE-2026-61647",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-6b3083011aeb49b1",
+        "id": "ai-hugging-face-689d78c6e007ab8e",
         "category": "ai",
-        "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
-        "url": "https://huggingface.co/blog/omlx",
+        "title": "Transformers now runs llama.cpp quants",
+        "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
         "source": "Hugging Face",
         "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244034",
+        "id": "v2ex-1244086",
         "category": "dev",
-        "title": "向大家介绍一款我们独立开发、纯浏览器运行的录屏与视频创作工具",
-        "url": "https://www.v2ex.com/t/1244034",
+        "title": "Qoder 如何",
+        "url": "https://www.v2ex.com/t/1244086",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-22T10:18:26.000Z",
-        "summary": "各位 V 友大家好！ 向大家介绍一款我们独立开发、基于纯前端与现代 Web 技术打造的浏览器端录屏与视频创作工作站 —— Recordel 。 以往制作高质量的产品演示、技术教程或 SaaS 宣传片，通常需要依赖像 Screen Studio 这样的 macOS 专属付费客户端。我们希望打破平台限制，打造一个 零安装门槛、极致保护隐私、打开网页即用，且能直接输出高级质感演示视频 的录屏剪辑利器。 🔗 官方体验地址 ： https://recordel.com (推荐使用 C…",
+        "publishedAt": "2026-09-22T16:25:40.000Z",
+        "summary": "国内使用的开发 agent 工具，Qoder 实际效果如何？听说还有移动端。",
         "badge": "程序员",
         "signal": "2 回复"
       },
       {
-        "id": "cn-item-ceda6063ad182eb2",
+        "id": "cn-item-8fae25ca0d24fa79",
         "category": "cn",
-        "title": "2026年8月全国查处违反中央八项规定精神问题29171起",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701552.shtml",
+        "title": "企业境外反垄断合规指引修订草案公开征求意见",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701599.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-22T09:04:29.000Z",
-        "summary": "图片来源：中央纪委国家监委网站 中新网9月22日电 据中央纪委国家监委网站消息，9月22日，中央纪委国家监委公布了2026年8月全国查处违反中央八项规定精神问题汇总情况。当月，全国共查处违反中央八项规定精神问题29171起，批评教育和处理35901人，其中党纪政务处分24494人，这是连续第156个月公布月报数据。",
+        "publishedAt": "2026-09-22T10:01:24.000Z",
+        "summary": "市场监管总局今天(22日)就《企业境外反垄断合规指引(修订草案征求意见稿)》公开征求意见，进一步引导我国企业增强海外反垄断合规意识，防范相关法律风险。意见反馈截止日期为2026年9月29日。",
         "badge": "中新网要闻"
       },
       {
@@ -272,45 +272,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
-        "id": "ai-openai-10538c022345675d",
+        "id": "ai-openai-08ffdb24bebd9aa2",
         "category": "ai",
-        "title": "Building standards for the next phase of AI",
-        "url": "https://openai.com/index/building-standards-next-phase-ai",
+        "title": "Advisory Group on Mathematics and Artificial Intelligence",
+        "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-09-21T10:00:00.000Z",
-        "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
+        "publishedAt": "2026-09-21T12:00:00.000Z",
+        "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49801939",
+        "id": "hn-49803959",
         "category": "dev",
-        "title": "Apple has added persistent 'ads' to iOS, and it's driving users crazy",
-        "url": "https://www.techradar.com/phones/iphone/i-wish-apple-would-just-stop-that-crap-apple-has-added-persistent-ads-to-ios-and-its-driving-users-crazy",
+        "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T14:30:12.000Z",
+        "publishedAt": "2026-09-22T16:33:45.000Z",
         "badge": "HN",
-        "signal": "53 分 · 21 评论"
+        "signal": "70 分 · 31 评论"
       },
       {
-        "id": "cn-it-aa1aa09e7153ea62",
+        "id": "cn-it-e18d57b9f0c925b8",
         "category": "cn",
-        "title": "零刻公布 \"Panther Lake\" 款 ME Pro NAS 迷你主机，支持多项 AI 应用",
-        "url": "https://www.ithome.com/1/005/979.htm",
+        "title": "IT之家受邀前往夏威夷：2026 高通骁龙峰会开幕，骁龙 8 Elite Gen 6 旗舰芯马上揭晓",
+        "url": "https://www.ithome.com/1/005/997.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-22T14:42:52.000Z",
-        "summary": "IT之家 9 月 22 日消息，零刻 (Beelink) 今日在英特尔技术创新与产业生态大会 (Intel Connection 2026) 上公布了基于第三代酷睿 Ultra 处理器 \"Panther Lake\" 的新款 ME Pro 系列 NAS 型迷你主机。 新款 ME Pro 可选酷睿 Ultra X7 358H / 酷睿 Ultra 5 325 处理器 ，其中前者拥有更为强大的 GPU AI 算力。新品计划于 2026 年 10 月底前正式上线。 IT之家了解到，…",
+        "publishedAt": "2026-09-22T18:34:40.000Z",
+        "summary": "IT之家 9 月 23 日消息，2026 高通骁龙峰会于当地时间 9 月 22 日至 24 日在美国夏威夷举行（北京时间 9 月 23 日凌晨 3 点开幕），IT之家受邀前往峰会现场，为大家带来第一手现场报道。 夏威夷茂宜岛时间 9 月 21 日，全球媒体陆续抵达。海景会场、标志性的 Snapdragon 打卡点，海岛的暖阳和骁龙红色看起来很配哦。 今年骁龙峰会的小礼品也很有夏威夷特色，包括贝壳项链、手链，以及印有骁龙 Logo 的黑色水杯。 向窗外望去，夏威夷茂宜岛的景色…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-jr34-h97m-9hpx",
+        "id": "github-advisory-ghsa-pxcx-fv34-x9p5",
         "category": "security",
-        "title": "nginx ignition has ParseAcceptLanguage `_` separator bypass that enables ~75x CPU amplification via Accept-Language header in i18nMiddleware",
-        "url": "https://github.com/advisories/GHSA-jr34-h97m-9hpx",
+        "title": "nginx ignition has Unauthenticated Admin Account Creation via Onboarding Race Condition",
+        "url": "https://github.com/advisories/GHSA-pxcx-fv34-x9p5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-21T21:49:03.000Z",
-        "summary": "### Summary The gin i18n middleware in nginx-ignition's API server runs in front of every HTTP request and calls `golang.org/x/text/language.ParseAcceptLanguage` on the raw `Accept-Language` header without imposing any size or shape filter…",
-        "badge": "CVE-2026-61629",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-21T21:54:42.000Z",
+        "summary": "## Summary `POST /api/users/onboarding/finish` is registered as **anonymous (unauthenticated)** and creates a user with **full ReadWrite admin permissions**. Because the handler uses a check-then-act (TOCTOU) pattern between the \"onboardin…",
+        "badge": "CVE-2026-61628",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244030",
+        "id": "v2ex-1244074",
         "category": "dev",
-        "title": "18 点了，什么也没发生？",
-        "url": "https://www.v2ex.com/t/1244030",
+        "title": "在本站做过推广的 xybbz 中转站疑似掺水加料",
+        "url": "https://www.v2ex.com/t/1244074",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-22T10:02:15.000Z",
-        "summary": "RT 说好的重置呢？",
+        "publishedAt": "2026-09-22T14:45:22.000Z",
+        "summary": "同一个电脑、同一个客户端、同一份提示词、同一个模型，他家的接口每时每刻都在跑莫名其妙的东西 1. 不管你如何说明多清楚，一直在整个项目里翻东西，包括 node_modules ，而且翻的东西和任务完全没关联 2. 死循环似的无限重复跑命令或者读文件（高达几十次都有） 3. 虽然汇率低，表面上比大部分中转低一半，但是实际这么一折腾，耗时是几倍，任务都是小时起步完成的，烧的钱基本也是别人家的几倍，晚上挂机跑长任务，说不定比正版还贵 4. 上个月我还以为是模型降智，停用了一段时间…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-cc695829b0c986bd",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "刚刚公布的《信息通信行业发展“十五五”规划》明确，到“十五五”末，每万人拥有5G（含5G-A）基站数从2025年的34个增加到2030年的50个，同时提出加快6G核心技术研发攻关，持续开展6G技术试验，适时启动6G商用。5G与6G携手，将使咱们的生产生活再上新台阶。",
         "badge": "热搜",
-        "signal": "7,617,251 热度"
+        "signal": "7,617,113 热度"
       },
       {
         "id": "cisa-kev-cve-2026-58704",
@@ -354,74 +354,74 @@
         "signal": "已遭利用 · 整改期限 2026-09-19"
       },
       {
-        "id": "ai-hugging-face-ae2a66f3c360fd17",
+        "id": "ai-hugging-face-6b3083011aeb49b1",
         "category": "ai",
-        "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
+        "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+        "url": "https://huggingface.co/blog/omlx",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-21T13:44:34.000Z",
+        "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49797323",
+        "id": "hn-49804316",
         "category": "dev",
-        "title": "Can gzip be a language model?",
-        "url": "https://nathan.rs/posts/gzip-lm/",
+        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
+        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T06:08:39.000Z",
+        "publishedAt": "2026-09-22T16:51:31.000Z",
         "badge": "HN",
-        "signal": "287 分 · 108 评论"
+        "signal": "91 分 · 34 评论"
       },
       {
-        "id": "cn-item-bb804be59cee5aea",
+        "id": "cn-item-ceda6063ad182eb2",
         "category": "cn",
-        "title": "国家卫健委印发孤独症干预康复指南 最佳治疗期6岁前",
-        "url": "https://www.chinanews.com.cn/jk/2026/09-22/10701530.shtml",
+        "title": "2026年8月全国查处违反中央八项规定精神问题29171起",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701552.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-22T08:51:50.000Z",
-        "summary": "中新网9月22日电 据国家卫健委网站消息，为深入实施《儿童青少年“五健”促进行动计划(2026—2030年)》，规范儿童孤独症筛查干预服务有关工作，国家卫健委组织编写了《孤独症谱系障碍儿童干预康复指南(2026年版)》(以下简称《指南》)并印发。",
+        "publishedAt": "2026-09-22T09:04:29.000Z",
+        "summary": "图片来源：中央纪委国家监委网站 中新网9月22日电 据中央纪委国家监委网站消息，9月22日，中央纪委国家监委公布了2026年8月全国查处违反中央八项规定精神问题汇总情况。当月，全国共查处违反中央八项规定精神问题29171起，批评教育和处理35901人，其中党纪政务处分24494人，这是连续第156个月公布月报数据。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-phg3-3g28-wq9v",
+        "id": "github-advisory-ghsa-jr34-h97m-9hpx",
         "category": "security",
-        "title": "Hatchet - Unauthenticated OAuth state CSRF / login-CSRF via empty-state collision in ValidateOAuthState",
-        "url": "https://github.com/advisories/GHSA-phg3-3g28-wq9v",
+        "title": "nginx ignition has ParseAcceptLanguage `_` separator bypass that enables ~75x CPU amplification via Accept-Language header in i18nMiddleware",
+        "url": "https://github.com/advisories/GHSA-jr34-h97m-9hpx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-21T15:47:01.000Z",
-        "summary": "### Summary Hatchet version v0.86.26 and below is vulnerable to OAuth state CSRF (login CSRF / account fixation). The vulnerable code clears the session `oauth_state_ ` value to the empty string `\"\"` after a successful OAuth callback rathe…",
-        "badge": "CVE-2026-61687",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-09-21T21:49:03.000Z",
+        "summary": "### Summary The gin i18n middleware in nginx-ignition's API server runs in front of every HTTP request and calls `golang.org/x/text/language.ParseAcceptLanguage` on the raw `Accept-Language` header without imposing any size or shape filter…",
+        "badge": "CVE-2026-61629",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-2f8d9b98fc157bb3",
+        "id": "ai-openai-10538c022345675d",
         "category": "ai",
-        "title": "Expanding OpenAI Academy with new learning paths",
-        "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
+        "title": "Building standards for the next phase of AI",
+        "url": "https://openai.com/index/building-standards-next-phase-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-09-21T07:00:00.000Z",
-        "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
+        "publishedAt": "2026-09-21T10:00:00.000Z",
+        "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244023",
+        "id": "v2ex-1244057",
         "category": "dev",
-        "title": "Moka 平台会给联盟共享员工的记录并决定是否录用",
-        "url": "https://www.v2ex.com/t/1244023",
+        "title": "那啥 mimo plan 可以用，但是别用它们的 mimo cli",
+        "url": "https://www.v2ex.com/t/1244057",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-22T09:37:16.000Z",
-        "summary": "刷到了网上的这个消息，只能说现在员工现在就像摆在货架上的商品任由企业挑选。",
+        "publishedAt": "2026-09-22T12:23:16.000Z",
+        "summary": "代码已写好，接口还没更新，未来哪个版本说不定就改名 mimo 云存储了。 MiMo CLI：后果与复现 对象：官方包 v0.1.14 （ mimocode-windows-x64 ）。公开仓库 XiaomiMiMo/MiMo-Code 的 main 里没有这些实现。未实机抓包。 后果 默认开着 MIMOCODE_ENABLE_ANALYSIS 。在 Git 仓库里跑完一轮会调模型的会话后，向 https://tracking.miui.com/track/v4/o 发送 t…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-6f3cdb0635eaad72",
+        "id": "cn-it-2524da2aae84249c",
         "category": "cn",
-        "title": "联合国秘书长古特雷斯呼吁全球监管人工智能，避免出现杀人机器人",
-        "url": "https://www.ithome.com/1/005/978.htm",
+        "title": "苹果 Beats 360 快速上手：Beats 首款能换耳罩的头戴式耳机，耳目一新，眼也一新",
+        "url": "https://www.ithome.com/1/005/996.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-22T14:36:46.000Z",
-        "summary": "IT之家 9 月 22 日消息，据彭博社报道，联合国秘书长进一步呼吁对人工智能实施监管，以避免出现企业权力泛滥、杀人机器人横行的反乌托邦未来。 安东尼奥 · 古特雷斯（Antonio Guterres）在联合国大会上向各国领导人发表卸任前最后一次讲话，就人工智能的各类风险发出警示。他提出，前沿大模型的飞速发展，有可能削弱主权国家的治理能力。 “我们正在目睹权力正大规模从各国政府手中，转移到少数私营企业与个人手里。”古特雷斯于当地时间周二发言时呼吁各方达成国际共识，建立全新的…",
+        "publishedAt": "2026-09-22T17:23:51.000Z",
+        "summary": "9 月 22 日， Beats 全新旗舰头戴式耳机 Beats 360 正式登场 ，售价 2999 元。 这一次，Beats 带来了一个让人眼前一亮的设计 —— 首次采用可更换耳罩和头梁软垫。除了机器自带的黑色、云白、粉色和晴空蓝四款高颜值配色，以及标配的同色系机能编织耳罩外，官方还提供了材质、色彩各异的替换套件供大家单独选购。 当下，头戴式耳机不仅仅是用来听音乐的音频设备，更是一件挂在颈间的潮流单品，是个人审美与当下情绪最直接的外化表达。那么，当自带潮流基因的 Beats…",
         "badge": "IT之家"
       },
       {
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49792730",
+        "id": "hn-49804683",
         "category": "dev",
-        "title": "MiMo v2.6",
-        "url": "https://mimo.xiaomi.com/mimo-v2-6",
+        "title": "There's a high chance of devices being sold with GrapheneOS preinstalled in 2027",
+        "url": "https://grapheneos.social/@GrapheneOS/117299954135808210",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T20:12:12.000Z",
+        "publishedAt": "2026-09-22T17:12:51.000Z",
         "badge": "HN",
-        "signal": "998 分 · 450 评论"
+        "signal": "124 分 · 48 评论"
       },
       {
         "id": "cn-baidu-14e84c190684792c",
@@ -462,38 +462,38 @@
         "source": "百度热搜",
         "summary": "近日，黑龙江一位73岁老人突发心梗，5次拨打120未能接通后抢救无效死亡。院方回应：通信光缆故障，报警电话未响。",
         "badge": "热搜",
-        "signal": "7,524,372 热度"
+        "signal": "7,523,992 热度"
       },
       {
-        "id": "github-advisory-ghsa-jgh3-fggc-mcpm",
+        "id": "github-advisory-ghsa-phg3-3g28-wq9v",
         "category": "security",
-        "title": "Obot: Server-Side Request Forgery via remote MCP server URL",
-        "url": "https://github.com/advisories/GHSA-jgh3-fggc-mcpm",
+        "title": "Hatchet - Unauthenticated OAuth state CSRF / login-CSRF via empty-state collision in ValidateOAuthState",
+        "url": "https://github.com/advisories/GHSA-phg3-3g28-wq9v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-18T17:59:46.000Z",
-        "summary": "## Summary In affected versions, the URL of a remote MCP server is attacker-controlled at registration and is fetched server-side with no validation of the destination. There is no guard against loopback, link-local, RFC1918 private ranges…",
-        "badge": "GHSA-JGH3-FGGC-MCPM",
-        "signal": "HIGH · CVSS 7.6"
+        "publishedAt": "2026-09-21T15:47:01.000Z",
+        "summary": "### Summary Hatchet version v0.86.26 and below is vulnerable to OAuth state CSRF (login CSRF / account fixation). The vulnerable code clears the session `oauth_state_ ` value to the empty string `\"\"` after a successful OAuth callback rathe…",
+        "badge": "CVE-2026-61687",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
-        "id": "ai-hugging-face-693b3130e25cc880",
+        "id": "ai-hugging-face-ae2a66f3c360fd17",
         "category": "ai",
-        "title": "tokenizers v1: encode, decode and scaling, measured",
-        "url": "https://huggingface.co/blog/tokenizers-v1",
+        "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-21T00:00:00.000Z",
+        "publishedAt": "2026-09-21T13:44:34.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244013",
+        "id": "v2ex-1244054",
         "category": "dev",
-        "title": "普通程序员，大模型之争如同 Jdk 版本",
-        "url": "https://www.v2ex.com/t/1244013",
+        "title": "api key 被人盗用了",
+        "url": "https://www.v2ex.com/t/1244054",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-22T08:58:15.000Z",
-        "summary": "之前一直使用 opus ，然后 gpt 困惑于各种封号和中转，决定直接 deepseek flash 试试 非常惊讶，我甚至区分不出差异，尤其你任务拆分的够细的话，实现差距极小 让我不由得想起以前远古时代，“你们用 jdk 几？” 实际上，好的代码，核心并非在 jdk 几点几版本，同理现在差距不大的大模型，用于普通业务差距很小",
+        "publishedAt": "2026-09-22T12:18:38.000Z",
+        "summary": "排查不出原因 这是我个人的一个项目 就我一个人开发 代码上传到的是 gitee 代码里确实写了 key 现在已经改到环境变量里了 平时用的 ai 是 claude 我自己用的都是 deepseek 的 flash 模型 每天都有 pro 的调用量 一天几十块钱的样子 我的猜测 1 、感觉服务器被人黑了 2 、gitee 上泄露了 git 上是一个私人项目 3 、cluade 的渠道泄露出去",
         "badge": "程序员",
-        "signal": "18 回复"
+        "signal": "11 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "name": "anthropics/financial-services",
         "url": "https://github.com/anthropics/financial-services",
         "language": "Python",
-        "stars": 36133,
+        "stars": 36226,
         "starsToday": 436
       },
       {
@@ -519,8 +519,8 @@
         "url": "https://github.com/agent-substrate/substrate",
         "description": "Agent Substrate: the core system",
         "language": "Go",
-        "stars": 2792,
-        "starsToday": 498
+        "stars": 2867,
+        "starsToday": 301
       },
       {
         "id": "github-5b2653ab79f36aef",
@@ -529,7 +529,7 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 15058,
+        "stars": 15221,
         "starsToday": 202
       },
       {
@@ -539,8 +539,8 @@
         "url": "https://github.com/davila7/claude-code-templates",
         "description": "CLI tool for configuring and monitoring Claude Code",
         "language": "Python",
-        "stars": 30975,
-        "starsToday": 33
+        "stars": 31032,
+        "starsToday": 113
       },
       {
         "id": "github-9442edb1a4e4e270",
@@ -549,7 +549,7 @@
         "url": "https://github.com/google/ax",
         "description": "Google's open agentic orchestration runtime",
         "language": "Go",
-        "stars": 7073,
+        "stars": 7327,
         "starsToday": 2324
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/mvt-project/mvt",
         "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
         "language": "Python",
-        "stars": 13844,
+        "stars": 13936,
         "starsToday": 441
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/superdesigndev/treg",
         "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
         "language": "Python",
-        "stars": 2045,
+        "stars": 2117,
         "starsToday": 197
       },
       {
@@ -579,10 +579,10 @@
         "url": "https://github.com/browser-use/video-use",
         "description": "Edit videos with coding agents",
         "language": "Python",
-        "stars": 25614,
+        "stars": 25705,
         "starsToday": 155
       }
     ],
-    "updatedAt": "2026-09-22T14:55:26.863Z"
+    "updatedAt": "2026-09-22T18:55:31.857Z"
   }
 }
