@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-21T23:17:53.928Z",
+  "generatedAt": "2026-09-22T04:57:56.130Z",
   "intelligence": {
-    "updatedAt": "2026-09-21T23:17:53.928Z",
+    "updatedAt": "2026-09-22T04:57:56.130Z",
     "items": [
       {
-        "id": "cn-item-afc8adf894037983",
+        "id": "cn-item-e4edd39144e56fd1",
         "category": "cn",
-        "title": "受台风影响 日本关东地区发生山体滑坡已致2死4失联",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-22/10701203.shtml",
+        "title": "比了76年！全世界都来上海比\"手艺活\"，比的到底是啥",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701376.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T22:57:32.000Z",
-        "summary": "中新网9月22日电 据日本共同社等日媒22日报道，今年第25号台风“杜鹃”逼近日本，日本关东地区21日遭遇强降雨，发生多起山体滑坡，已致2人死亡，4人失联。",
+        "publishedAt": "2026-09-22T04:19:59.000Z",
+        "summary": "9月22日，第48届世界技能大赛将在上海开幕，68个国家和地区的1385名选手飞来参赛。很多人看到新闻的第一反应是这比的是什么？看到比赛项目也有人会好奇，焊管子、砌墙，也有世界比赛？",
         "badge": "中新网要闻"
       },
       {
@@ -38,21 +38,21 @@
       {
         "id": "hn-49792730",
         "category": "dev",
-        "title": "Xiaomi MiMo v2.6",
+        "title": "MiMo v2.6",
         "url": "https://mimo.xiaomi.com/mimo-v2-6",
         "source": "Hacker News",
         "publishedAt": "2026-09-21T20:12:12.000Z",
         "badge": "HN",
-        "signal": "388 分 · 192 评论"
+        "signal": "687 分 · 325 评论"
       },
       {
-        "id": "cn-it-f1f5e0b0fc4e45ed",
+        "id": "cn-it-77b0293a9fbcc9c3",
         "category": "cn",
-        "title": "英国消费者权益机构 Citizens Advice：基本服务供应商应停止在客服工作中依赖 AI 聊天机器人",
-        "url": "https://www.ithome.com/1/005/497.htm",
+        "title": "铁路 12306 App 新增“车”标识，客服称系“自行车随身行”服务、收费 88 元 / 辆",
+        "url": "https://www.ithome.com/1/005/654.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T23:14:46.000Z",
-        "summary": "IT之家 9 月 22 日消息，英国消费者权益机构 Citizens Advice 近日呼吁，能源、银行、电话和互联网等提供基本服务的企业在客服工作中应当停止依赖 AI 机器人，保障用户“与真人沟通的权利”。该机构调查发现，超过一半需要使用聊天机器人的用户因此浪费时间、产生压力或面临问题解决延迟。 Citizens Advice 表示，越来越多能源、银行、电话和互联网服务商使用 AI 系统提供客户支持，让数百万本就面临数字化障碍的用户更难解决日常服务问题。该机构去年在英格兰…",
+        "publishedAt": "2026-09-22T04:51:43.000Z",
+        "summary": "IT之家 9 月 22 日消息，据极目新闻 9 月 21 日报道，有网友在铁路 12306 App 中发现， 有的车次特别备注了“车”的标识 。这是铁路部门上线的“自行车随身行”服务，乘客可携带符合规定的自行车同车出行，实现人与自行车同步抵达，费用为 88 元 / 辆。 目前， 北京至崇礼、海南环岛高铁个别车次 已推出该服务。 铁路 12306 客服人员表示，“自行车随身行”服务已上线一段时间，旅客可先购买提供该服务车次的客票，再在 12306 App 上选择自行车随车行服…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243786",
+        "id": "v2ex-1243920",
         "category": "dev",
-        "title": "CRDTs Are Not Enough: 从 CRDT 到本地优先同步引擎",
-        "url": "https://www.v2ex.com/t/1243786",
+        "title": "Jev 五子棋",
+        "url": "https://www.v2ex.com/t/1243920",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T17:57:04.000Z",
-        "summary": "周日（昨天） 本地优先会议 ,举行了第一场活动“CRDTs Are Not Enough: 从 CRDT 到本地优先同步引擎“。 活动的形式是线上（能力有限）。 模式是社区开源沙龙，即自由发起活动，社区做支持。 工具是 bd.ailishi.ai 。 活动逐字稿第一时间发布在： https://bd.ailishi.ai/blog/ 欧洲的本地优先大会已经是第三届，许多内容很有趣，这得益于他们历史与生态。 欧洲的 Hacker 文化原本就健壮 ，较成熟的技术知识流动体系。结…",
+        "publishedAt": "2026-09-22T04:36:07.000Z",
+        "summary": "搞了一个 Jev 五子棋。 Jev 每一步都会结合本地五子棋引擎判断，页面上还能看到它这一手为什么这么走、有没有其他候选。 现在做了几个对局等级： 等级 3 · Jev 大师：棋力优先，更深搜索 + Jev 判断 等级 2 · Jev 快速：速度优先，仍有 Jev 参与 实验 · Jev 直觉：更直接让 Jev 选棋，Jev 感更强，但不代表更强 本地 · 本地引擎：完全不使用 Jev 如果 Jev 挂了，也会自动切成本地引擎，不会直接卡死。 欢迎来虐一下 Jev： htt…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-15eff55b95680073",
+        "id": "cn-baidu-4f9f358839c71fb2",
         "category": "cn",
-        "title": "多地宣布结婚发钱",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%9C%B0%E5%AE%A3%E5%B8%83%E7%BB%93%E5%A9%9A%E5%8F%91%E9%92%B1&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "微信上新2大功能",
+        "url": "https://www.baidu.com/s?wd=%E5%BE%AE%E4%BF%A1%E4%B8%8A%E6%96%B02%E5%A4%A7%E5%8A%9F%E8%83%BD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "我国多地陆续推出婚育激励举措，部分市县、村居针对符合条件的初婚夫妻，发放现金红包或结婚消费券。山西吕梁、福建明溪、广东部分村镇均出台相关奖励政策，部分企业也给结婚员工发放奖金，以此鼓励适龄婚育，减轻新人婚恋相关开销压力。",
+        "summary": "9月21日，记者实测发现微信8.0.78版上新两大功能。一是“大家在搜”栏目支持用表情包表态；二是朋友圈新增“私密发表”入口，发表后自动转为“仅自己可见”。此前用户发私密朋友圈需手动选择，此次更新简化操作。",
         "badge": "热搜",
-        "signal": "7,809,390 热度"
+        "signal": "7,808,597 热度"
       },
       {
         "id": "cisa-kev-cve-2025-39964",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49791939",
+        "id": "hn-49794615",
         "category": "dev",
-        "title": "NASA’s Mars Sample Return mission is dead",
-        "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
+        "title": "Spymarks, Not Watermarks",
+        "url": "https://brand.io/article/spymarks/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T19:14:12.000Z",
+        "publishedAt": "2026-09-21T23:03:49.000Z",
         "badge": "HN",
-        "signal": "250 分 · 181 评论"
+        "signal": "242 分 · 45 评论"
       },
       {
-        "id": "cn-item-5525834bb1f1e099",
+        "id": "cn-item-bf6148af609c80c3",
         "category": "cn",
-        "title": "联合国大会期间 丹麦及格陵兰岛将和美国签署安全协议",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-22/10701198.shtml",
+        "title": "日本上万民众集会抗议 反对高市政府打造“战争国家”",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-22/10701333.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T22:28:38.000Z",
-        "summary": "中新网9月22日电 据法新社报道，当地时间21日，丹麦首相府宣布，丹麦及其自治领地格陵兰岛和美国将于联合国大会期间，在纽约签署一项安全协议。",
+        "publishedAt": "2026-09-22T03:21:05.000Z",
+        "summary": "中新网9月22日电 综合日媒报道，近日，大批日本民众在日本国会前举行集会，抗议日本高市早苗政府的修宪企图，反对高市政府“再军事化”动向。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243785",
+        "id": "v2ex-1243916",
         "category": "dev",
-        "title": "马斯克赛高了， Grok 4.7 已上线｜ CursorBench 上 Extra High 超过同档 Opus 5",
-        "url": "https://www.v2ex.com/t/1243785",
+        "title": "Agent 工作流里的快速决策： Laya vs TypeSafe Jev",
+        "url": "https://www.v2ex.com/t/1243916",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T17:50:44.000Z",
-        "summary": "https://modelflare.dev/zh/pricing Grok 4.7 已上线｜ CursorBench 上 Extra High 超过同档 Opus 5. ###Grok 有极其显著的能力提升，太顶了!!!!! xAI 新旗舰 grok-4.7 已在 Modelflare 开放。上下文 50 万 tokens ，支持文本和图片输入、文本输出，可用 Chat Completions 与 Responses API 。grok-4.5 和 grok-4.6 继续…",
+        "publishedAt": "2026-09-22T04:30:45.000Z",
+        "summary": "英文原文： Fast Decisions in Agent Workflows: Laya vs TypeSafe Jev （ JevLab ）。本文为独立、非官方评测视角，与 TypeSafe 、Convai Innovations 均无隶属或背书关系。 一句话结论： 用 70B 级自回归大模型去做简单的 Agent 路由，越来越不划算。Convai Innovations 开源的 Laya （ 421M ModernBERT-large ）正在挑战 TypeSafe 托…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-732bfd313d6ca9d1",
+        "id": "cn-it-0ac82aac08b95e2a",
         "category": "cn",
-        "title": "小米 MiMo-V2.6 发布并开源：Pro 与 Flash 双版本，API 价格与前代持平",
-        "url": "https://www.ithome.com/1/005/496.htm",
+        "title": "阿里平头哥首次公布 CPU 规划：将推倚天 720、730、750 三代芯片，单核性能持续提升",
+        "url": "https://www.ithome.com/1/005/653.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T23:05:45.000Z",
-        "summary": "IT之家 9 月 22 日消息，小米今日凌晨正式发布并开源了全新的 Xiaomi MiMo-V2.6 系列，包含 Pro 与 Flash 两个原生全模态模型。 小米称这是其探索 RSI（递归自我改进）路径的关键一步，通过规模化扩展强化学习算力，让模型在持续的探索与反馈中拓展智能边界。 得益于 RL 算力的扩展，MiMo-V2.6-Pro 在 Artificial Analysis Intelligence Index（AA 综合智能指数）v4.3.2 中取得 46 分，超过…",
+        "publishedAt": "2026-09-22T04:48:37.000Z",
+        "summary": "IT之家 9 月 22 日消息，阿里巴巴“2026 云栖大会”于 9 月 22 日-24 日在杭州举行，IT之家亲临现场，将为大家持续带来相关报道。 除了真武 V900 之外，阿里今天上午还首次公布了平头哥倚天服务器 CPU 的规划 ——2027 年 Q3 将推出倚天 720 和倚天 730 两代服务器 CPU。 据介绍，倚天 720 将实现单核性能、核密度与能效的全面提升；倚天 730 将首次基于平头哥全自研 CPU 微架构设计，单核 SPECint2017/GHz 性能…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49793322",
+        "id": "hn-49787436",
         "category": "dev",
-        "title": "Suspension of the de minimis administrative exemption for imports $800 or less",
-        "url": "https://www.personalimportation.org/advocacy",
+        "title": "What Sun got wrong",
+        "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T20:58:17.000Z",
+        "publishedAt": "2026-09-21T14:03:18.000Z",
         "badge": "HN",
-        "signal": "91 分 · 48 评论"
+        "signal": "539 分 · 313 评论"
       },
       {
-        "id": "cn-baidu-4f4cda375572574e",
+        "id": "cn-baidu-f6eaa3703f65173b",
         "category": "cn",
-        "title": "多地禁产“老头乐”",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%9C%B0%E7%A6%81%E4%BA%A7%E2%80%9C%E8%80%81%E5%A4%B4%E4%B9%90%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "今年中秋高端月饼礼盒卖不动了",
+        "url": "https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E4%B8%AD%E7%A7%8B%E9%AB%98%E7%AB%AF%E6%9C%88%E9%A5%BC%E7%A4%BC%E7%9B%92%E5%8D%96%E4%B8%8D%E5%8A%A8%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，江苏徐州和鲁西南部分地区厂家已被限制生产低速电动四轮车。受此影响，有座椅配件厂订单减少三分之一，保险杠厂订单下降20%至30%。此前，各地多从使用层面限制“老头乐”上路。随着部分地区过渡期到期，全面禁行与禁产政策接连落地，低速四轮车市场空间被压缩。",
+        "summary": "中秋临近，今年月饼市场表现平淡，千元以上月饼礼盒销量下滑近80%，团购销售占比接近腰斩。百元左右的平价月饼成为主流，销量占大头约40%，散装月饼表现不错。被月饼挤出的高端礼赠需求并未消失，而是流向了燕窝、茶叶等品类。",
         "badge": "热搜",
-        "signal": "7,714,641 热度"
+        "signal": "7,713,286 热度"
       },
       {
         "id": "github-advisory-ghsa-phg3-3g28-wq9v",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243783",
+        "id": "v2ex-1243907",
         "category": "dev",
-        "title": "为啥 codex cli 总莫名其妙停工， DSH 和 Trae 没事",
-        "url": "https://www.v2ex.com/t/1243783",
+        "title": "每个月阿里云 CDT 流量费太贵了, 大家有啥好的办法吗",
+        "url": "https://www.v2ex.com/t/1243907",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T16:34:05.000Z",
-        "summary": "我用 cc switch+codex+中转站 API 干活，同一个 KEY 配置，DSH 和 Trae 都能持续保持不断，就 codex 执行一个任务自动停 N 回。但它不是连接中断或报错码，它是懒狗🐶式停下来，催一下干几分钟又停，而且还没有规律。有时候也能持续一个小时一直刷屏。大神们有啥经验丰富的，在哪设置一下能解决这问题吗？ C C cli 也没这情况，但老连不上各种报错让我弃用了。",
+        "publishedAt": "2026-09-22T03:54:33.000Z",
+        "summary": "排名 商品 费用 占比 1 云数据传输 ¥8,704.00 46.8% 2 NAT 网关 ¥3,096.72 16.7% 3 云数据库 RDS ¥3,095.07 16.7% 4 容器计算服务 ¥1,891.28 10.2% 5 千问办公 ¥970.84 5.2% 每个月阿里云 CDT 流量费太贵了, 大家有啥好的办法吗? 能找商务要折扣吗",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-item-079925754ddf0141",
+        "id": "cn-item-379b85ba21ccd9e6",
         "category": "cn",
-        "title": "王毅同德国外长瓦德富尔通电话",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-22/10701192.shtml",
+        "title": "事关中秋国庆假期出行 公安部交管局发布最新提示",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-22/10701274.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T16:34:06.000Z",
-        "summary": "中新社北京9月21日电 9月21日，中共中央政治局委员、外交部长王毅应约同德国外长瓦德富尔通电话。",
+        "publishedAt": "2026-09-22T02:48:51.000Z",
+        "summary": "中新网9月22日电 据公安部交通管理局官方微博消息，中秋国庆双节将至，旅游探亲出行频繁，农村地区秋收农业生产出行集中，部分地区降雨团雾易发，道路交通安全风险交织叠加。公安部交通管理局对中秋国庆假期道路交通安全存在的突出风险进行研判分析，提醒广大驾驶人假期出行要自觉遵规守法，平安文明出行。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49794354",
+        "id": "hn-49787726",
         "category": "dev",
-        "title": "Data Protection Commission fines Google €403M over processing of location data",
-        "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location",
+        "title": "Attention is all you have",
+        "url": "https://alicegg.tech/2026/09/21/attention",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T22:33:45.000Z",
+        "publishedAt": "2026-09-21T14:26:56.000Z",
         "badge": "HN",
-        "signal": "21 分 · 3 评论"
+        "signal": "654 分 · 198 评论"
       },
       {
-        "id": "cn-it-da16d2cc31c249ef",
+        "id": "cn-it-12aaa26f9ade4417",
         "category": "cn",
-        "title": "独立开发者称自己游戏新作遭其他开发商使用 AI 工具 1:1 恶意复刻，双方各执一词",
-        "url": "https://www.ithome.com/1/005/495.htm",
+        "title": "七彩虹 iGame Guard G114「御甲」140W 带屏充电头发售：3C+1A，199 元",
+        "url": "https://www.ithome.com/1/005/652.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T23:05:33.000Z",
-        "summary": "IT之家 9 月 22 日消息，据 IGN 报道，独立游戏开发者 Rado Klasa 发文，抨击一家名为 Golden Horn Studios 的开发商新作《Potato Please》预告片 1:1 复刻了自己的游戏《1,000,000 Potatoes》。 IT之家获悉，《1,000,000 Potatoes》是一款第一人称物理模拟游戏，玩家需要利用物理机制削土豆。而这款《Potato Please》的游戏同样以削土豆为核心玩法，两款作品还都采用了前苏联风格的军事场…",
+        "publishedAt": "2026-09-22T04:44:08.000Z",
+        "summary": "IT之家 9 月 22 日消息，七彩虹旗下 iGame Guard G114「御甲」140W 带屏氮化镓充电头现已在京东发售，该产品采用 3C+1A 设计，定价为 199 元。 京东 七彩虹 140W 带屏充电头 199 元 直达链接 该充电头采用硬朗“星舰”设计语言，充电头表面采用超哑光工艺，配以“月光银”金属漆，通过微观纹理实现低光泽和细腻肤感。顶部带有黑色三角形“黑曜智显”区域（可显示累计使用时间 / 输出功率 / 温度）。 该充电头的 USB-C1/C2 接口支持单…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1243781",
+        "id": "v2ex-1243901",
         "category": "dev",
-        "title": "Grok 4.7 发布",
-        "url": "https://www.v2ex.com/t/1243781",
+        "title": "k3 还是贵啊，一个爬取+整理的任务耗费了总额的 23%",
+        "url": "https://www.v2ex.com/t/1243901",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T16:23:13.000Z",
-        "summary": "https://x.ai/news/grok-4-7",
+        "publishedAt": "2026-09-22T03:30:38.000Z",
+        "summary": "睡前在网页上给 k3 swarm 下达了一个爬取 50 家头部的招聘 JD ，并汇总为 excel+word ，早上一睁眼搞好，格式上都挺不错的，如果我有一个人类助理的话，他加班加点搞个两天也差不多就这样了。 起床一看，耗费总额度的 23%，相当于这份报告 140¥。",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-8ae7dda747243d8c",
+        "id": "cn-baidu-b438a9d6d2f6f080",
         "category": "cn",
-        "title": "商品消费扩容升级的三重机制",
-        "url": "https://www.baidu.com/s?wd=%E5%95%86%E5%93%81%E6%B6%88%E8%B4%B9%E6%89%A9%E5%AE%B9%E5%8D%87%E7%BA%A7%E7%9A%84%E4%B8%89%E9%87%8D%E6%9C%BA%E5%88%B6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "共赴技能之约 同筑匠心之基",
+        "url": "https://www.baidu.com/s?wd=%E5%85%B1%E8%B5%B4%E6%8A%80%E8%83%BD%E4%B9%8B%E7%BA%A6+%E5%90%8C%E7%AD%91%E5%8C%A0%E5%BF%83%E4%B9%8B%E5%9F%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "日前，商务部等7部门发布《关于推动商品消费扩容升级的实施意见》，提出到2030年社会消费品零售总额达60万亿元左右。专家指出，该文件构建三重机制：通过供给侧创新创造有效需求，以结构分层拓展空间，并通过制度供给降低交易成本。",
+        "summary": "9月22日至9月27日，第48届世界技能大赛在上海举办。来自全球68个国家和地区的1385名选手，将在这场技能领域的重大赛事中切磋技艺、增进友谊，展现工匠精神，促进交流互鉴。这场在“十五五”开局之年举办的盛会，也将推动中国以技能更好支撑新质生产力发展和劳动者就业增收，为高质量发展注入澎湃动能。",
         "badge": "热搜",
-        "signal": "7,617,559 热度"
+        "signal": "7,616,637 热度"
       },
       {
         "id": "cisa-kev-cve-2026-58704",
@@ -370,16 +370,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-21T19:43:49.000Z",
         "badge": "HN",
-        "signal": "134 分 · 19 评论"
+        "signal": "269 分 · 41 评论"
       },
       {
-        "id": "cn-item-8cd4288ebb8bd1c1",
+        "id": "cn-item-3c52d8d51f8b2063",
         "category": "cn",
-        "title": "专访艺人任嘉伦：在浪潮与浪漫间从容歌唱",
-        "url": "https://www.chinanews.com.cn/cul/2026/09-21/10700944.shtml",
+        "title": "“两高”联合发布依法惩治网络食品安全犯罪典型案例",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-22/10701266.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-21T10:30:09.000Z",
-        "summary": "中新网澳门9月21日电 题：专访艺人任嘉伦：在浪潮与浪漫间从容歌唱",
+        "publishedAt": "2026-09-22T02:22:19.000Z",
+        "summary": "中新网9月22日电 据最高人民法院微信公众号消息，2026年9月22日，在全国食品安全宣传周期间，最高人民法院、最高人民检察院联合发布一批依法惩治网络食品安全犯罪典型案例，彰显司法机关依法从严惩处此类犯罪的鲜明态度和坚定决心，通过以案释法，净化网络食品市场环境，切实保障人民群众合法权益。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1243773",
+        "id": "v2ex-1243896",
         "category": "dev",
-        "title": "kimi K3 是不是吹的厉害",
-        "url": "https://www.v2ex.com/t/1243773",
+        "title": "codex 命令行还是 app？",
+        "url": "https://www.v2ex.com/t/1243896",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T14:44:20.000Z",
-        "summary": "699/月用户，之前官网还有 kimi code 多少倍额度，悄悄移除了。 说是跑分比肩 fable ，实际体感没觉得比 DeepSeek 4.1 flash 高到哪里去。",
+        "publishedAt": "2026-09-22T03:17:19.000Z",
+        "summary": "大家用命令行还是 app 多？命令行自动按项目,/resume 什么都比较方便，但是没有远程，不能用浏览器...",
         "badge": "程序员",
-        "signal": "18 回复"
+        "signal": "13 回复"
       },
       {
-        "id": "cn-it-1ee4dddcdbf7fb80",
+        "id": "cn-it-8062f0f69725e8eb",
         "category": "cn",
-        "title": "马斯克 SpaceXAI 发布旗下最强编码和知识处理模型 Grok 4.7，百万词元输入 2 美元起",
-        "url": "https://www.ithome.com/1/005/494.htm",
+        "title": "中兴 U10 系列随身 WiFi 全球累计销量突破 300 万台",
+        "url": "https://www.ithome.com/1/005/651.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-21T22:56:49.000Z",
-        "summary": "IT之家 9 月 22 日消息，SpaceXAI 今日宣布推出新一代 Grok 4.7，主打编程和知识工作场景。 官方称其采用全新更大规模基础模型，并通过更长时间的强化学习训练提升复杂任务处理能力，是该公司目前最强的编码和知识处理模型 —— 速度是同类模型的两倍，价格却只有一半。 如前所述，Grok 4.7 针对编程和知识工作进行了优化。与 Grok 4.6 相比，新模型能够在困难任务上持续更长时间，并加强了对自身输出结果的检查能力。 在 CursorBench 4.0 测…",
+        "publishedAt": "2026-09-22T04:42:55.000Z",
+        "summary": "IT之家 9 月 22 日消息，中兴终端官方今日宣布， 中兴 U10 系列随身 WiFi 全球累计销量突破 300 万台 。 目前， 中兴 U10 S Pro 全新版本现已开售 。参考IT之家此前报道， 中兴 U10 S Pro 随身 Wi-Fi 适用于出差旅行、自驾出行、野餐聚会、宿舍游戏、临时展会、户外直播等场景，可为用户带来“全场景”上网体验。 功能方面：中兴 U10S Pro4G 随身 WiFi 系列最多支持 32 台设备同时连接； 通信方面：适配中国移动、联通 4…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49787436",
+        "id": "hn-49794330",
         "category": "dev",
-        "title": "What Sun got wrong",
-        "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
+        "title": "I don't want to read what you didn't write",
+        "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-21T14:03:18.000Z",
+        "publishedAt": "2026-09-21T22:30:41.000Z",
         "badge": "HN",
-        "signal": "471 分 · 260 评论"
+        "signal": "456 分 · 156 评论"
       },
       {
-        "id": "cn-baidu-3f80bf0157774cf7",
+        "id": "cn-baidu-621ef6dfe818787b",
         "category": "cn",
-        "title": "潘展乐称张展硕是奇迹之子",
-        "url": "https://www.baidu.com/s?wd=%E6%BD%98%E5%B1%95%E4%B9%90%E7%A7%B0%E5%BC%A0%E5%B1%95%E7%A1%95%E6%98%AF%E5%A5%87%E8%BF%B9%E4%B9%8B%E5%AD%90&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "日本选手被张展硕逆转后破防",
+        "url": "https://www.baidu.com/s?wd=%E6%97%A5%E6%9C%AC%E9%80%89%E6%89%8B%E8%A2%AB%E5%BC%A0%E5%B1%95%E7%A1%95%E9%80%86%E8%BD%AC%E5%90%8E%E7%A0%B4%E9%98%B2&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月21日，亚运会男子游泳接力决赛，中国队逆转日本队夺冠。赛后，潘展乐打趣称张展硕是“奇迹之子”，并自嘲“最菜”所以游第三棒。",
+        "summary": "名古屋亚运会期间，男子4x200米自由泳接力决赛中，中国选手张展硕在最后50米完成惊天逆转，帮助中国队以7分0秒17夺金并绝杀东道主日本队。赛后日本选手松下知之表示非常不甘心与自责，称在洗刷掉这份屈辱之前，绝不会忘记最后50米被逆转的一幕。",
         "badge": "热搜",
-        "signal": "7,523,155 热度"
+        "signal": "7,523,794 热度"
       },
       {
         "id": "github-advisory-ghsa-9jjc-fw8x-fmwx",
@@ -485,13 +485,13 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1243762",
+        "id": "v2ex-1243895",
         "category": "dev",
-        "title": "问一下哪家域名续费便宜 又不需要开通扣款协议？",
-        "url": "https://www.v2ex.com/t/1243762",
+        "title": "开源项目获得 OpenAI 的两次赞助！😄",
+        "url": "https://www.v2ex.com/t/1243895",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-21T14:04:27.000Z",
-        "summary": "域名在 namesilo 放了很多年，后来发现好像越来越贵，就转到了 spaceship. spaceship 打算续费的时候 发现不是一次性付费 是开通扣款协议 这种。 心里不太舒服，不太喜欢一直被一个商家开通权限，总感觉不安全。我每次都是自己付费。 有没有哪家续费便宜， 不是开通扣费协议 是一次性用支付宝 微信 paypal 付费的商家？",
+        "publishedAt": "2026-09-22T03:14:41.000Z",
+        "summary": "半年前申请的 OpenAI OSS 支持计划 Pro20x 刚到期，又给我续上了。 难道是项目名有加成？ https://github.com/tbphp/gpt-load 顺便求关注，求 star 😊 不过有区别的是，上一次是 20x ，这次是 5x 。 有开源项目的伙伴也可以填写申请试一下： https://developers.openai.com/community/codex-for-oss",
         "badge": "程序员",
         "signal": "2 回复"
       }
@@ -510,7 +510,7 @@
         "url": "https://github.com/BuilderIO/agent-native",
         "description": "A framework for building agentic apps",
         "language": "TypeScript",
-        "stars": 5862,
+        "stars": 6051,
         "starsToday": 607
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/trycua/cua",
         "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
         "language": "HTML",
-        "stars": 25673,
+        "stars": 25789,
         "starsToday": 609
       },
       {
@@ -530,8 +530,8 @@
         "url": "https://github.com/Open-Dev-Society/OpenStock",
         "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
         "language": "TypeScript",
-        "stars": 17676,
-        "starsToday": 843
+        "stars": 17948,
+        "starsToday": 844
       },
       {
         "id": "github-099a05080dd8db13",
@@ -540,8 +540,8 @@
         "url": "https://github.com/akitaonrails/ai-memory",
         "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "language": "Rust",
-        "stars": 7649,
-        "starsToday": 217
+        "stars": 7804,
+        "starsToday": 167
       },
       {
         "id": "github-eb7cf9c05b3c8130",
@@ -550,8 +550,8 @@
         "url": "https://github.com/coder/coder",
         "description": "Secure environments for developers and their agents",
         "language": "Go",
-        "stars": 16399,
-        "starsToday": 461
+        "stars": 16488,
+        "starsToday": 460
       },
       {
         "id": "github-041b95968690360d",
@@ -559,8 +559,8 @@
         "name": "anthropics/financial-services",
         "url": "https://github.com/anthropics/financial-services",
         "language": "Python",
-        "stars": 35798,
-        "starsToday": 425
+        "stars": 35911,
+        "starsToday": 424
       },
       {
         "id": "github-9003f2e57a53a518",
@@ -569,8 +569,8 @@
         "url": "https://github.com/cloudflare/quiche",
         "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
         "language": "Rust",
-        "stars": 12332,
-        "starsToday": 69
+        "stars": 12402,
+        "starsToday": 32
       },
       {
         "id": "github-9581560c8fcedaf6",
@@ -579,8 +579,8 @@
         "url": "https://github.com/mvt-project/mvt",
         "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
         "language": "Python",
-        "stars": 13563,
-        "starsToday": 177
+        "stars": 13678,
+        "starsToday": 169
       },
       {
         "id": "github-4f0a030e7267a514",
@@ -589,8 +589,8 @@
         "url": "https://github.com/zhouxiaoka/autoclip",
         "description": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
         "language": "Python",
-        "stars": 8201,
-        "starsToday": 266
+        "stars": 8398,
+        "starsToday": 250
       },
       {
         "id": "github-8044cecdc56c279b",
@@ -598,10 +598,10 @@
         "name": "ruanyf/weekly",
         "url": "https://github.com/ruanyf/weekly",
         "description": "科技爱好者周刊，每周五发布",
-        "stars": 103903,
-        "starsToday": 221
+        "stars": 104153,
+        "starsToday": 182
       }
     ],
-    "updatedAt": "2026-09-21T23:17:53.928Z"
+    "updatedAt": "2026-09-22T04:57:56.130Z"
   }
 }
