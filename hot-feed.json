@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-22T18:55:31.857Z",
+  "generatedAt": "2026-09-22T22:09:52.136Z",
   "intelligence": {
-    "updatedAt": "2026-09-22T18:55:31.857Z",
+    "updatedAt": "2026-09-22T22:09:52.136Z",
     "items": [
       {
         "id": "cn-item-ae6564ebd1fc62d7",
@@ -15,24 +15,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-7273",
+        "id": "cisa-kev-cve-2026-93952",
         "category": "security",
-        "title": "Zyxel GS1900 Series Switches：Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-7273",
+        "title": "Arista VeloCloud Orchestrator：Arista VeloCloud Orchestrator Improper Input Validation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-93952",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-21T00:00:00.000Z",
-        "summary": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
-        "badge": "CVE-2026-7273",
-        "signal": "已遭利用 · 整改期限 2026-09-24"
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "summary": "Arista VeloCloud Orchestrator (VCO) on-prem contains an improper input validation vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise th…",
+        "badge": "CVE-2026-93952",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-openai-60efaf744a4d6c2c",
+        "id": "ai-openai-f9027d80e820682e",
         "category": "ai",
-        "title": "Priorities and principles for effective third party assessments",
-        "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+        "title": "Better prompt caching for GPT-6",
+        "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
         "source": "OpenAI",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
-        "summary": "OpenAI outlines priorities and principles for rigorous, secure, and independent third-party AI safety assessments of frontier models and safeguards.",
+        "publishedAt": "2026-09-22T21:00:00.000Z",
+        "summary": "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.",
         "badge": "OpenAI"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-22T18:00:34.000Z",
         "badge": "HN",
-        "signal": "390 分 · 191 评论"
+        "signal": "926 分 · 494 评论"
       },
       {
-        "id": "cn-it-903e5505faeeabb5",
+        "id": "cn-it-05abf4369754222a",
         "category": "cn",
-        "title": "美国纳斯达克综合指数周二盘中再创历史新高：科技股回暖 / 油价回落等因素驱动",
-        "url": "https://www.ithome.com/1/005/999.htm",
+        "title": "“超级”在哪里？高通第六代骁龙 8 超级至尊版 / 至尊版芯片规格对比",
+        "url": "https://www.ithome.com/1/006/016.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-22T18:55:13.000Z",
-        "summary": "IT之家 9 月 23 日消息， 美国纳斯达克综合指数（Nasdaq Composite）于美国当地时间周二（9 月 22 日）盘中再度刷新历史高位 ，其中科技股强势反弹叠加油价回落提振市场风险偏好，成为推动指数突破的关键力量。 IT之家发稿前，美国当地时间 9 月 22 日纳斯达克综合指数盘中最高触及 27,272.72 点 ，超越此前于 6 月 1 日创下的盘中纪录 27,190.21 点 。 伴随着纳斯达克综合指数上涨，道琼斯工业平均指数与标普 500 指数亦同步走高…",
+        "publishedAt": "2026-09-22T22:07:09.000Z",
+        "summary": "IT之家 9 月 23 日消息，夏威夷时间 9 月 22 日 9 点（北京时间 9 月 23 日 3 点）召开的 2026 骁龙峰会上， 高通正式宣布推出第六代骁龙 8 超级至尊版和第六代骁龙 8 至尊版两款芯片。 IT之家查询高通官网规格资料，附上两款芯片的差异如下： 项目 第六代骁龙 8 至尊版 Snapdragon 8 Elite Gen 6 第六代骁龙 8 超级至尊版 Snapdragon 8 Elite Extreme Gen 6 CPU 定制 Oryon CPU…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-5mj8-gf6m-fhw8",
+        "id": "github-advisory-ghsa-wx4m-69m9-gx3m",
         "category": "security",
-        "title": "9Router has an Authentication Bypass in Public LLM API via Spoofable X-9r-Real-Ip Header",
-        "url": "https://github.com/advisories/GHSA-5mj8-gf6m-fhw8",
+        "title": "Home Assistant: XSS in Statistics Graph Card",
+        "url": "https://github.com/advisories/GHSA-wx4m-69m9-gx3m",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T16:34:06.000Z",
-        "summary": "## Summary 9router determines whether an incoming request originates from localhost by trusting the X-9r-Real-Ip HTTP request header. This header is intended to be produced and sanitized exclusively by the bundled custom-server.js layer fr…",
-        "badge": "CVE-2026-56681",
-        "signal": "HIGH · CVSS 7.3"
+        "publishedAt": "2026-09-22T20:40:55.000Z",
+        "summary": "### Summary An authenticated party can add a malicious name to any statistics-capable entity, allowing for Cross-Site Scripting attacks against anyone who views a Statistics Graph card containing that entity, when they hover over any data …",
+        "badge": "CVE-2026-91130",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -94,18 +94,18 @@
         "source": "百度热搜",
         "summary": "9月22日，亚运会女子排球决赛，中国队3-0击败日本队，夺得金牌！在上一届杭州亚运会女子排球决赛中，中国队也是以同样的比分3-0战胜日本队，获得冠军。",
         "badge": "热搜",
-        "signal": "7,809,081 热度"
+        "signal": "7,809,423 热度"
       },
       {
-        "id": "cisa-kev-cve-2025-39964",
+        "id": "cisa-kev-cve-2026-94127",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Race Condition Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39964",
+        "title": "F5 BIG-IP APM：F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-94127",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-18T00:00:00.000Z",
-        "summary": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.",
-        "badge": "CVE-2025-39964",
-        "signal": "已遭利用 · 整改期限 2026-09-21"
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "summary": "F5 BIG-IP APM contains a heap-based buffer overflow vulnerability when access policy and an OAuth profile are configured on a virtual server. This vulnerability could allow an unauthenticated attacker to perform remote code execution.",
+        "badge": "CVE-2026-94127",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
         "id": "ai-hugging-face-e9f63aa1f7aaa02f",
@@ -124,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-22T16:29:05.000Z",
         "badge": "HN",
-        "signal": "598 分 · 535 评论"
+        "signal": "979 分 · 712 评论"
       },
       {
         "id": "cn-item-92db0f096af76726",
@@ -137,25 +137,25 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-92cr-jxw4-5wjg",
+        "id": "github-advisory-ghsa-xj3h-wwxq-gfcj",
         "category": "security",
-        "title": "Sync-in Server has a complete 2FA Bypass via `POST /api/auth/token`",
-        "url": "https://github.com/advisories/GHSA-92cr-jxw4-5wjg",
+        "title": "Cloudreve: Storage-quota TOCTOU race allows quota bypass and storage-based denial of service",
+        "url": "https://github.com/advisories/GHSA-xj3h-wwxq-gfcj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T14:46:30.000Z",
-        "summary": "**Affected component:** Sync-in Server v2.3.0, `POST /api/auth/token` (`auth.controller.ts:50-55`). **Required attacker capability:** Valid username and password for a 2FA-enabled account. ## Summary `POST /api/auth/token` authenticates wi…",
-        "badge": "CVE-2026-58269",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-22T20:40:33.000Z",
+        "summary": "## Summary Cloudreve v4 splits the storage-quota **check** (reading the user's `used` bytes and comparing them to `MaxStorage`) and the **charge** (incrementing `users.storage`) into two non-atomic steps in the `PrepareUpload` code path. T…",
+        "badge": "CVE-2026-77633",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
-        "id": "ai-openai-8fe4474fdbb9c4c4",
+        "id": "ai-google-deepmind-f0e27f432f48fb86",
         "category": "ai",
-        "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
-        "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-21T12:00:00.000Z",
-        "summary": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
-        "badge": "OpenAI"
+        "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+        "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-08T14:00:15.000Z",
+        "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1244090",
@@ -169,66 +169,25 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-085ca0d5ebfecbbf",
+        "id": "cn-it-ab7719eeb28c1c64",
         "category": "cn",
-        "title": "Anthropic 发布 Claude Opus 5.5 模型：性能媲美 Fable 5.1，运行成本比 Opus 5 低 40%",
-        "url": "https://www.ithome.com/1/005/998.htm",
+        "title": "高通 CEO 安蒙：智能体时代并不是让 AI 替我们包办一切，而是让技术变得更实用",
+        "url": "https://www.ithome.com/1/006/015.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-22T18:55:08.000Z",
-        "summary": "IT之家 9 月 23 日消息，Anthropic 今日正式发布了 Claude Opus 5.5 模型，这是其全新 Claude 5.5 家族的首个模型， 宣称在大多数工作上表现可媲美 Claude Fable 5.1，运行成本比 Opus 5 低 40% 。 IT之家从 Anthropic 公告获悉，具体来看，Claude Opus 5.5 模型有以下提升： 性能方面，Opus 5.5 比 Opus 5 有了很大提升，官方宣传早期测试者在最复杂的工作中看到性能大幅提升。…",
+        "publishedAt": "2026-09-22T21:52:58.000Z",
+        "summary": "IT之家 9 月 23 日消息，在北京时间 9 月 23 日凌晨的 2026 高通骁龙峰会现场， 高通公司宣布推出第六代骁龙 8 超级至尊版移动平台和第六代骁龙 8 至尊版移动平台 ，官方表示这是“全球最快移动 CPU”。 高通公司总裁兼 CEO 安蒙（Cristiano Amon）谈到了关于 AI 时代的思考，他表示智能体时代已经到来。推理成为关键，边缘侧将发挥重要作用， 而骁龙正是面向智能体时代的处理器 。 安蒙表示：“智能体时代所承诺的， 并不是让 AI 替我们包办一…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-53266",
+        "id": "cisa-kev-cve-2026-93616",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Out-of-Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53266",
+        "title": "Check Point Multiple Products：Check Point Multiple Products Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-93616",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-18T00:00:00.000Z",
-        "summary": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The…",
-        "badge": "CVE-2026-53266",
-        "signal": "已遭利用 · 整改期限 2026-09-21"
-      },
-      {
-        "id": "ai-google-deepmind-f0e27f432f48fb86",
-        "category": "ai",
-        "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-        "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-08T14:00:15.000Z",
-        "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-49801324",
-        "category": "dev",
-        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-22T13:52:15.000Z",
-        "badge": "HN",
-        "signal": "406 分 · 306 评论"
-      },
-      {
-        "id": "cn-baidu-5938d046b720657a",
-        "category": "cn",
-        "title": "中国首批航天员已全部停航停训",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E9%A6%96%E6%89%B9%E8%88%AA%E5%A4%A9%E5%91%98%E5%B7%B2%E5%85%A8%E9%83%A8%E5%81%9C%E8%88%AA%E5%81%9C%E8%AE%AD&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "9月21日，杨利伟在国务院新闻办公室举行的中外记者见面会上透露，其与我国首批航天员已于2025年10月停航停训，目前从事选拔训练等技术工作。我国载人航天工程于34年前的9月21日立项，首批14名航天员中9人曾执行飞行任务。目前第二批航天员已成中坚力量。",
-        "badge": "热搜",
-        "signal": "7,712,557 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-jjhp-8crj-mppq",
-        "category": "security",
-        "title": "@roomi-fields/notebooklm-mcp has a path traversal in vault.batch tool that allows arbitrary file write outside intended vault directory",
-        "url": "https://github.com/advisories/GHSA-jjhp-8crj-mppq",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T14:43:26.000Z",
-        "summary": "## Summary The `vault_batch` MCP tool (and the equivalent `POST /batch-to-vault` HTTP endpoint) accepted a caller-supplied `vault_dir` path that was passed directly to `path.resolve()` + `fs.mkdir()` with no containment check. A caller — o…",
-        "badge": "CVE-2026-61647",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "summary": "Check Point Security Management Server, Multi-Domain Security Management Server, Log Server, Multi-Domain Log Server, and SmartEvent contain a path traversal vulnerability that allows an unauthenticated attacker to upload and execute arbit…",
+        "badge": "CVE-2026-93616",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
         "id": "ai-hugging-face-689d78c6e007ab8e",
@@ -240,6 +199,47 @@
         "badge": "Hugging Face"
       },
       {
+        "id": "hn-49808023",
+        "category": "dev",
+        "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived",
+        "url": "https://foxscript.org/",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-22T21:00:30.000Z",
+        "badge": "HN",
+        "signal": "65 分 · 38 评论"
+      },
+      {
+        "id": "cn-baidu-5938d046b720657a",
+        "category": "cn",
+        "title": "中国首批航天员已全部停航停训",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E9%A6%96%E6%89%B9%E8%88%AA%E5%A4%A9%E5%91%98%E5%B7%B2%E5%85%A8%E9%83%A8%E5%81%9C%E8%88%AA%E5%81%9C%E8%AE%AD&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "9月21日，杨利伟在国务院新闻办公室举行的中外记者见面会上透露，其与我国首批航天员已于2025年10月停航停训，目前从事选拔训练等技术工作。我国载人航天工程于34年前的9月21日立项，首批14名航天员中9人曾执行飞行任务。目前第二批航天员已成中坚力量。",
+        "badge": "热搜",
+        "signal": "7,714,075 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-4825-p4xm-pcf2",
+        "category": "security",
+        "title": "Spree: Broken Access Control in `PATCH /api/v3/store/carts/:id/associate` (IDOR)",
+        "url": "https://github.com/advisories/GHSA-4825-p4xm-pcf2",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-22T20:40:30.000Z",
+        "summary": "## Summary The Store API v3 endpoint `PATCH /api/v3/store/carts/:id/associate` binds a guest cart to the authenticated caller without verifying possession of that cart. It locates the cart by prefixed ID only — `current_store.carts.where(u…",
+        "badge": "CVE-2026-94462",
+        "signal": "HIGH · CVSS 7.1"
+      },
+      {
+        "id": "ai-openai-60efaf744a4d6c2c",
+        "category": "ai",
+        "title": "Priorities and principles for effective third party assessments",
+        "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "summary": "OpenAI outlines priorities and principles for rigorous, secure, and independent third-party AI safety assessments of frontier models and safeguards.",
+        "badge": "OpenAI"
+      },
+      {
         "id": "v2ex-1244086",
         "category": "dev",
         "title": "Qoder 如何",
@@ -248,7 +248,7 @@
         "publishedAt": "2026-09-22T16:25:40.000Z",
         "summary": "国内使用的开发 agent 工具，Qoder 实际效果如何？听说还有移动端。",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "5 回复"
       },
       {
         "id": "cn-item-8fae25ca0d24fa79",
@@ -261,56 +261,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2025-39682",
+        "id": "cisa-kev-cve-2026-85102",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39682",
+        "title": "Check Point Multiple Products：Check Point Multiple Products Improper Certificate Validation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-85102",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-18T00:00:00.000Z",
-        "summary": "Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potenti…",
-        "badge": "CVE-2025-39682",
-        "signal": "已遭利用 · 整改期限 2026-09-21"
-      },
-      {
-        "id": "ai-openai-08ffdb24bebd9aa2",
-        "category": "ai",
-        "title": "Advisory Group on Mathematics and Artificial Intelligence",
-        "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-21T12:00:00.000Z",
-        "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-49803959",
-        "category": "dev",
-        "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
-        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-22T16:33:45.000Z",
-        "badge": "HN",
-        "signal": "70 分 · 31 评论"
-      },
-      {
-        "id": "cn-it-e18d57b9f0c925b8",
-        "category": "cn",
-        "title": "IT之家受邀前往夏威夷：2026 高通骁龙峰会开幕，骁龙 8 Elite Gen 6 旗舰芯马上揭晓",
-        "url": "https://www.ithome.com/1/005/997.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-09-22T18:34:40.000Z",
-        "summary": "IT之家 9 月 23 日消息，2026 高通骁龙峰会于当地时间 9 月 22 日至 24 日在美国夏威夷举行（北京时间 9 月 23 日凌晨 3 点开幕），IT之家受邀前往峰会现场，为大家带来第一手现场报道。 夏威夷茂宜岛时间 9 月 21 日，全球媒体陆续抵达。海景会场、标志性的 Snapdragon 打卡点，海岛的暖阳和骁龙红色看起来很配哦。 今年骁龙峰会的小礼品也很有夏威夷特色，包括贝壳项链、手链，以及印有骁龙 Logo 的黑色水杯。 向窗外望去，夏威夷茂宜岛的景色…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-pxcx-fv34-x9p5",
-        "category": "security",
-        "title": "nginx ignition has Unauthenticated Admin Account Creation via Onboarding Race Condition",
-        "url": "https://github.com/advisories/GHSA-pxcx-fv34-x9p5",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-21T21:54:42.000Z",
-        "summary": "## Summary `POST /api/users/onboarding/finish` is registered as **anonymous (unauthenticated)** and creates a user with **full ReadWrite admin permissions**. Because the handler uses a check-then-act (TOCTOU) pattern between the \"onboardin…",
-        "badge": "CVE-2026-61628",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "summary": "Check Point Security Gateway and Check Point Spark Firewall using Site to Site VPN or Remote Access VPN contain an improper certificate validation vulnerability which could allow an unauthenticated remote attacker to execute arbitrary code…",
+        "badge": "CVE-2026-85102",
+        "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
         "id": "ai-google-deepmind-2b0379511ea05114",
@@ -320,6 +279,46 @@
         "source": "Google DeepMind",
         "publishedAt": "2026-09-03T15:02:08.000Z",
         "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49807688",
+        "category": "dev",
+        "title": "LLM Ass Bench",
+        "url": "https://www.assbench.com/",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-22T20:34:19.000Z",
+        "badge": "HN",
+        "signal": "83 分 · 28 评论"
+      },
+      {
+        "id": "cn-it-06ddfe603e2c997c",
+        "category": "cn",
+        "title": "全球最快移动 CPU：高通官宣小米、vivo、红魔、REDMI 等率先适配第六代骁龙 8 超级至尊版",
+        "url": "https://www.ithome.com/1/006/014.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-09-22T21:43:35.000Z",
+        "summary": "IT之家 9 月 23 日消息，夏威夷时间 9 月 22 日 9 点（北京时间 9 月 23 日 3 点）召开的 2026 骁龙峰会上， 高通宣布小米、vivo、红魔、REDMI、OPPO 等（按官方新闻稿排序）手机品牌将率先适配第六代骁龙 8 超级至尊版 / 至尊版芯片。 高通官方表示小米、vivo、红魔、REDMI、OPPO、一加、Motorola、iQOO、荣耀等（按照官方新闻稿排序）全球领先 OEM 厂商和智能手机品牌，将率先在其旗舰产品中采用第六代骁龙 8 超级至…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-vv3m-f8x4-7377",
+        "category": "security",
+        "title": "lightrag-hku: SSRF via IPv6-transition address bypass (NAT64, IPv4-compatible, 6to4) of the native-markdown image-download guard",
+        "url": "https://github.com/advisories/GHSA-vv3m-f8x4-7377",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-22T20:40:25.000Z",
+        "summary": "## Summary LightRAG's native markdown parser downloads external images referenced by an uploaded markdown or textpack document. The only SSRF guard, `_validated_addresses()` in `lightrag/parser/markdown/parser.py`, resolves the image host …",
+        "badge": "CVE-2026-85740",
+        "signal": "HIGH · CVSS 7.1"
+      },
+      {
+        "id": "ai-hugging-face-6b3083011aeb49b1",
+        "category": "ai",
+        "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+        "url": "https://huggingface.co/blog/omlx",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "badge": "Hugging Face"
       },
       {
         "id": "v2ex-1244074",
@@ -340,37 +339,38 @@
         "source": "百度热搜",
         "summary": "刚刚公布的《信息通信行业发展“十五五”规划》明确，到“十五五”末，每万人拥有5G（含5G-A）基站数从2025年的34个增加到2030年的50个，同时提出加快6G核心技术研发攻关，持续开展6G技术试验，适时启动6G商用。5G与6G携手，将使咱们的生产生活再上新台阶。",
         "badge": "热搜",
-        "signal": "7,617,113 热度"
+        "signal": "7,618,007 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-58704",
+        "id": "cisa-kev-cve-2026-7273",
         "category": "security",
-        "title": "Google Pixel：Google Pixel Improper Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58704",
+        "title": "Zyxel GS1900 Series Switches：Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-7273",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-16T00:00:00.000Z",
-        "summary": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
-        "badge": "CVE-2026-58704",
-        "signal": "已遭利用 · 整改期限 2026-09-19"
+        "publishedAt": "2026-09-21T00:00:00.000Z",
+        "summary": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+        "badge": "CVE-2026-7273",
+        "signal": "已遭利用 · 整改期限 2026-09-24"
       },
       {
-        "id": "ai-hugging-face-6b3083011aeb49b1",
+        "id": "ai-openai-08ffdb24bebd9aa2",
         "category": "ai",
-        "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
-        "url": "https://huggingface.co/blog/omlx",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
-        "badge": "Hugging Face"
+        "title": "Advisory Group on Mathematics and Artificial Intelligence",
+        "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-21T12:00:00.000Z",
+        "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
+        "badge": "OpenAI"
       },
       {
-        "id": "hn-49804316",
+        "id": "hn-49801324",
         "category": "dev",
-        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T16:51:31.000Z",
+        "publishedAt": "2026-09-22T13:52:15.000Z",
         "badge": "HN",
-        "signal": "91 分 · 34 评论"
+        "signal": "510 分 · 346 评论"
       },
       {
         "id": "cn-item-ceda6063ad182eb2",
@@ -383,25 +383,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-jr34-h97m-9hpx",
+        "id": "github-advisory-ghsa-frch-4w6v-q5xx",
         "category": "security",
-        "title": "nginx ignition has ParseAcceptLanguage `_` separator bypass that enables ~75x CPU amplification via Accept-Language header in i18nMiddleware",
-        "url": "https://github.com/advisories/GHSA-jr34-h97m-9hpx",
+        "title": "lightrag-hku: No Rate Limiting on /login Endpoint Allows Brute-Force Attacks",
+        "url": "https://github.com/advisories/GHSA-frch-4w6v-q5xx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-21T21:49:03.000Z",
-        "summary": "### Summary The gin i18n middleware in nginx-ignition's API server runs in front of every HTTP request and calls `golang.org/x/text/language.ParseAcceptLanguage` on the raw `Accept-Language` header without imposing any size or shape filter…",
-        "badge": "CVE-2026-61629",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-22T20:40:22.000Z",
+        "summary": "### Summary The POST /login endpoint has no rate limiting, account lockout, or delay on failed attempts. An attacker can submit unlimited password guesses at full network speed. ### Details ```python # lightrag/api/lightrag_server.py:2161 …",
+        "badge": "CVE-2026-85734",
+        "signal": "CRITICAL · CVSS 9.1"
       },
       {
-        "id": "ai-openai-10538c022345675d",
+        "id": "ai-google-deepmind-d721843382f3485e",
         "category": "ai",
-        "title": "Building standards for the next phase of AI",
-        "url": "https://openai.com/index/building-standards-next-phase-ai",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-21T10:00:00.000Z",
-        "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
-        "badge": "OpenAI"
+        "title": "Proactive cyber defense for governments and enterprises",
+        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-02T16:24:24.000Z",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1244057",
@@ -415,65 +414,25 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-2524da2aae84249c",
+        "id": "cn-it-c61dd6d60962cabd",
         "category": "cn",
-        "title": "苹果 Beats 360 快速上手：Beats 首款能换耳罩的头戴式耳机，耳目一新，眼也一新",
-        "url": "https://www.ithome.com/1/005/996.htm",
+        "title": "红魔 12 Pro+ 手机官宣搭载高通第六代骁龙 8 超级至尊版芯片，号称“迄今为止手感最好的红魔旗舰”",
+        "url": "https://www.ithome.com/1/006/013.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-22T17:23:51.000Z",
-        "summary": "9 月 22 日， Beats 全新旗舰头戴式耳机 Beats 360 正式登场 ，售价 2999 元。 这一次，Beats 带来了一个让人眼前一亮的设计 —— 首次采用可更换耳罩和头梁软垫。除了机器自带的黑色、云白、粉色和晴空蓝四款高颜值配色，以及标配的同色系机能编织耳罩外，官方还提供了材质、色彩各异的替换套件供大家单独选购。 当下，头戴式耳机不仅仅是用来听音乐的音频设备，更是一件挂在颈间的潮流单品，是个人审美与当下情绪最直接的外化表达。那么，当自带潮流基因的 Beats…",
+        "publishedAt": "2026-09-22T21:18:46.000Z",
+        "summary": "IT之家 9 月 23 日 2026 高通骁龙峰会现场报道， 高通公司宣布推出第六代骁龙 8 超级至尊版移动平台和第六代骁龙 8 至尊版移动平台 ，官方表示这是“全球最快移动 CPU”。 中兴通讯股份有限公司终端事业部总裁、努比亚技术有限公司总裁倪飞表示：“红魔致力于为全球手游玩家提供极致的游戏体验。第六代骁龙 8 超级至尊版凭借出色的速度、能效和先进的技术，为新一代移动游戏体验提供强劲支持。与高通技术公司的持续合作， 将助力我们在即将推出的红魔 12Pro+ 上 ，为玩家…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-76460",
+        "id": "cisa-kev-cve-2025-39964",
         "category": "security",
-        "title": "Cisco Identity Services Engine：Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76460",
+        "title": "Linux Kernel：Linux Kernel Race Condition Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39964",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-16T00:00:00.000Z",
-        "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affec…",
-        "badge": "CVE-2026-76460",
-        "signal": "已遭利用 · 整改期限 2026-09-19"
-      },
-      {
-        "id": "ai-google-deepmind-d721843382f3485e",
-        "category": "ai",
-        "title": "Proactive cyber defense for governments and enterprises",
-        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-02T16:24:24.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-49804683",
-        "category": "dev",
-        "title": "There's a high chance of devices being sold with GrapheneOS preinstalled in 2027",
-        "url": "https://grapheneos.social/@GrapheneOS/117299954135808210",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-22T17:12:51.000Z",
-        "badge": "HN",
-        "signal": "124 分 · 48 评论"
-      },
-      {
-        "id": "cn-baidu-14e84c190684792c",
-        "category": "cn",
-        "title": "老人心梗去世前5次打120未接通",
-        "url": "https://www.baidu.com/s?wd=%E8%80%81%E4%BA%BA%E5%BF%83%E6%A2%97%E5%8E%BB%E4%B8%96%E5%89%8D5%E6%AC%A1%E6%89%93120%E6%9C%AA%E6%8E%A5%E9%80%9A&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "近日，黑龙江一位73岁老人突发心梗，5次拨打120未能接通后抢救无效死亡。院方回应：通信光缆故障，报警电话未响。",
-        "badge": "热搜",
-        "signal": "7,523,992 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-phg3-3g28-wq9v",
-        "category": "security",
-        "title": "Hatchet - Unauthenticated OAuth state CSRF / login-CSRF via empty-state collision in ValidateOAuthState",
-        "url": "https://github.com/advisories/GHSA-phg3-3g28-wq9v",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-21T15:47:01.000Z",
-        "summary": "### Summary Hatchet version v0.86.26 and below is vulnerable to OAuth state CSRF (login CSRF / account fixation). The vulnerable code clears the session `oauth_state_ ` value to the empty string `\"\"` after a successful OAuth callback rathe…",
-        "badge": "CVE-2026-61687",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-09-18T00:00:00.000Z",
+        "summary": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.",
+        "badge": "CVE-2025-39964",
+        "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
         "id": "ai-hugging-face-ae2a66f3c360fd17",
@@ -483,6 +442,37 @@
         "source": "Hugging Face",
         "publishedAt": "2026-09-21T13:44:34.000Z",
         "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-49805278",
+        "category": "dev",
+        "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
+        "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-22T17:46:02.000Z",
+        "badge": "HN",
+        "signal": "201 分 · 146 评论"
+      },
+      {
+        "id": "cn-baidu-14e84c190684792c",
+        "category": "cn",
+        "title": "老人心梗去世前5次打120未接通",
+        "url": "https://www.baidu.com/s?wd=%E8%80%81%E4%BA%BA%E5%BF%83%E6%A2%97%E5%8E%BB%E4%B8%96%E5%89%8D5%E6%AC%A1%E6%89%93120%E6%9C%AA%E6%8E%A5%E9%80%9A&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "近日，黑龙江一位73岁老人突发心梗，5次拨打120未能接通后抢救无效死亡。院方回应：通信光缆故障，报警电话未响。",
+        "badge": "热搜",
+        "signal": "7,519,975 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-53266",
+        "category": "security",
+        "title": "Linux Kernel：Linux Kernel Out-of-Bounds Write Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53266",
+        "source": "CISA KEV",
+        "publishedAt": "2026-09-18T00:00:00.000Z",
+        "summary": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The…",
+        "badge": "CVE-2026-53266",
+        "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
         "id": "v2ex-1244054",
@@ -509,7 +499,7 @@
         "name": "anthropics/financial-services",
         "url": "https://github.com/anthropics/financial-services",
         "language": "Python",
-        "stars": 36226,
+        "stars": 36289,
         "starsToday": 436
       },
       {
@@ -519,7 +509,7 @@
         "url": "https://github.com/agent-substrate/substrate",
         "description": "Agent Substrate: the core system",
         "language": "Go",
-        "stars": 2867,
+        "stars": 2923,
         "starsToday": 301
       },
       {
@@ -529,7 +519,7 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 15221,
+        "stars": 15330,
         "starsToday": 202
       },
       {
@@ -539,7 +529,7 @@
         "url": "https://github.com/davila7/claude-code-templates",
         "description": "CLI tool for configuring and monitoring Claude Code",
         "language": "Python",
-        "stars": 31032,
+        "stars": 31083,
         "starsToday": 113
       },
       {
@@ -549,7 +539,7 @@
         "url": "https://github.com/google/ax",
         "description": "Google's open agentic orchestration runtime",
         "language": "Go",
-        "stars": 7327,
+        "stars": 7487,
         "starsToday": 2324
       },
       {
@@ -559,7 +549,7 @@
         "url": "https://github.com/mvt-project/mvt",
         "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
         "language": "Python",
-        "stars": 13936,
+        "stars": 14036,
         "starsToday": 441
       },
       {
@@ -569,7 +559,7 @@
         "url": "https://github.com/superdesigndev/treg",
         "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
         "language": "Python",
-        "stars": 2117,
+        "stars": 2169,
         "starsToday": 197
       },
       {
@@ -579,10 +569,10 @@
         "url": "https://github.com/browser-use/video-use",
         "description": "Edit videos with coding agents",
         "language": "Python",
-        "stars": 25705,
+        "stars": 25792,
         "starsToday": 155
       }
     ],
-    "updatedAt": "2026-09-22T18:55:31.857Z"
+    "updatedAt": "2026-09-22T22:09:52.136Z"
   }
 }
