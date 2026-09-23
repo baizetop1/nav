@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-23T11:38:45.979Z",
+  "generatedAt": "2026-09-23T17:00:58.737Z",
   "intelligence": {
-    "updatedAt": "2026-09-23T11:38:45.979Z",
+    "updatedAt": "2026-09-23T17:00:58.737Z",
     "items": [
       {
-        "id": "cn-item-d8bd2524b7750a65",
+        "id": "cn-item-b0b92e50d6535548",
         "category": "cn",
-        "title": "2026年中国农民丰收节主场活动在湖北枣阳启幕",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-23/10702290.shtml",
+        "title": "中国成功发射卫星互联网低轨26组卫星",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-24/10702669.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-23T08:45:24.000Z",
-        "summary": "中新社湖北枣阳9月23日电 (记者 梁婷)秋分时节，湖北襄阳市枣阳市东郊村稻浪翻涌。中国农民丰收节全国主场活动23日在此启幕。",
+        "publishedAt": "2026-09-23T16:12:16.000Z",
+        "summary": "中新社北京9月23日电 (记者 马帅莎)据中国航天科技集团消息，北京时间9月23日21时32分，中国在海南商业航天发射场使用长征八号甲运载火箭，成功将卫星互联网低轨26组卫星发射升空，卫星顺利进入预定轨道，发射任务获得圆满成功。",
         "badge": "中新网要闻"
       },
       {
@@ -26,75 +26,75 @@
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-openai-5ab590850491008e",
+        "id": "ai-openai-4e56c7312349a760",
         "category": "ai",
-        "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
-        "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+        "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+        "url": "https://openai.com/index/ringg",
         "source": "OpenAI",
-        "publishedAt": "2026-09-23T00:00:00.000Z",
-        "summary": "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia.",
+        "publishedAt": "2026-09-24T12:00:00.000Z",
+        "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49814159",
+        "id": "hn-49817469",
         "category": "dev",
-        "title": "The darker side of being a doctor",
-        "url": "https://drericlevi.pages.dev/the-darker-side-of-being-a-doctor/",
+        "title": "Fixing the Portobello Police Station Clock",
+        "url": "https://pointinthecloud.com/2026-04-11-211700.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T10:54:55.000Z",
+        "publishedAt": "2026-09-23T15:18:53.000Z",
         "badge": "HN",
-        "signal": "68 分 · 30 评论"
+        "signal": "130 分 · 27 评论"
       },
       {
-        "id": "cn-it-5593ba2b3876705f",
+        "id": "cn-it-dec46e027c555e4c",
         "category": "cn",
-        "title": "预售价 14.99 万元起、燃油 / 插混可选，捷途旅行者 7 开启预售",
-        "url": "https://www.ithome.com/1/006/419.htm",
+        "title": "Anthropic 工程师解释为何 Claude 写作变差：模型被训练成写给 AI 看而非写给人看",
+        "url": "https://www.ithome.com/1/006/510.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-23T11:34:51.000Z",
-        "summary": "IT之家 9 月 23 日消息，捷途旅行者 7 已开启预售，新车共推出 7 款配置车型，预售价区间为 14.99 万至 17.99 万元。 IT之家注意到，作为捷途旅行者的衍生车型，捷途旅行者 7 在外观上进行了多项细节调整。前脸部分，新车前格栅新增贯穿式饰条，品牌 LOGO 位置上移至前舱盖，前包围则改为与车身同色的设计，整体视觉效果更为精致。车身侧面与现款旅行者基本保持一致。 车身尺寸方面，新车的长宽高分别为 4827mm、2006mm 和 1875mm，轴距 2800…",
+        "publishedAt": "2026-09-23T15:34:48.000Z",
+        "summary": "IT之家 9 月 23 日消息，AI 模型在数学、编程和推理能力上进步迅速，写作水平却停滞不前，甚至有所退步，Anthropic 的 Claude 同样也存在这一问题。 为何 Opus 4.6 会成为 Anthropic 最后一款写作表现出色的模型？负责 Claude 微调的 Anthropic 工程师杰克逊 · 克尼恩今天（23 日）对此给出了解释：后续模型的优化重点 更多放在数学和代码能力上 。 这些模型还接受了大量 面向其他 AI 模型撰写技术解释 的训练，而这正是 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-wx4m-69m9-gx3m",
+        "id": "github-advisory-ghsa-5f42-97gr-vfhq",
         "category": "security",
-        "title": "Home Assistant: XSS in Statistics Graph Card",
-        "url": "https://github.com/advisories/GHSA-wx4m-69m9-gx3m",
+        "title": "Moquette: Pattern-ACL wildcard injection (cross-tenant authorization bypass) plus a remote-unauthenticated DoS cluster, a Will-message authorization bypass, and a cross-session durable-corruption bug",
+        "url": "https://github.com/advisories/GHSA-5f42-97gr-vfhq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T20:40:55.000Z",
-        "summary": "### Summary An authenticated party can add a malicious name to any statistics-capable entity, allowing for Cross-Site Scripting attacks against anyone who views a Statistics Graph card containing that entity, when they hover over any data …",
-        "badge": "CVE-2026-91130",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-09-23T16:11:18.000Z",
+        "summary": "moquette is reachable by untrusted MQTT clients (anonymous by default), so every byte from any client, including pre-authentication, is untrusted. This is a memory-safe JVM: the ceiling is authorization/ACL bypass + denial of service + cro…",
+        "badge": "CVE-2026-85724",
+        "signal": "CRITICAL · CVSS 9.6"
       },
       {
-        "id": "ai-google-deepmind-947e89eaa83a27ae",
+        "id": "ai-google-deepmind-68ead6b6af2b7144",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-        "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+        "title": "Advancing Private AI Compute with secure, server-side memory",
+        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-15T17:05:57.000Z",
+        "publishedAt": "2026-09-23T16:00:57.000Z",
+        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244309",
+        "id": "v2ex-1244372",
         "category": "dev",
-        "title": "你们的 GPT 降智吗，号又又又被标记了",
-        "url": "https://www.v2ex.com/t/1244309",
+        "title": "[自用分享] 折腾了一圈 AI 中转，最后留了个按量透明的",
+        "url": "https://www.v2ex.com/t/1244372",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T09:36:59.000Z",
-        "summary": "有什么解决方法吗大佬",
+        "publishedAt": "2026-09-23T16:26:28.000Z",
+        "summary": "各位老哥好，利益相关先声明：我在运营 modelsell.com ，下面是自用体验分享，轻喷。 背景 我是 OpenCode + Claude Code 重度用户，之前 MAX 200 刀的订阅一个多小时就烧完了，被迫转中转。踩过的坑： 某站调 opus，单个任务扣 $7，中转扣 30 多块，跟官方价差不多了 某站充 21 块跑几次 embedding 就没了，账单完全对不上 所以我现在选站就看两点：计费能不能查明细、多模型能不能一个 key 搞定。 现在在用的 model…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-e245c62e1daf22bc",
+        "id": "cn-baidu-a13ee98407022b1a",
         "category": "cn",
-        "title": "教育部回应“13岁于子迪亚运夺2金”",
-        "url": "https://www.baidu.com/s?wd=%E6%95%99%E8%82%B2%E9%83%A8%E5%9B%9E%E5%BA%94%E2%80%9C13%E5%B2%81%E4%BA%8E%E5%AD%90%E8%BF%AA%E4%BA%9A%E8%BF%90%E5%A4%BA2%E9%87%91%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平离京对美国进行国事访问",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E7%A6%BB%E4%BA%AC%E5%AF%B9%E7%BE%8E%E5%9B%BD%E8%BF%9B%E8%A1%8C%E5%9B%BD%E4%BA%8B%E8%AE%BF%E9%97%AE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月23日上午，教育部在发布会上回应13岁的于子迪亚运连夺两金，称这是一件非常了不起的事情。此前，年仅13岁的于子迪在9月20日和21日的亚运会游泳比赛中，分别打破赛会纪录和创造亚洲纪录，勇夺两金。",
         "badge": "热搜",
-        "signal": "7,809,458 热度"
+        "signal": "7,809,388 热度"
       },
       {
         "id": "cisa-kev-cve-2026-94127",
@@ -108,74 +108,74 @@
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
+        "id": "ai-hugging-face-bf57ce3f2e77f395",
         "category": "ai",
-        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
-        "url": "https://huggingface.co/blog/evaleval-aisi",
+        "title": "**Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization**",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-diarization",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "publishedAt": "2026-09-23T13:17:01.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49812769",
+        "id": "hn-49817615",
         "category": "dev",
-        "title": "Jev in 25 Lines of Python",
-        "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
+        "title": "Gemini 3.8 text-to-speech says hello",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T07:26:23.000Z",
+        "publishedAt": "2026-09-23T15:29:23.000Z",
         "badge": "HN",
-        "signal": "231 分 · 77 评论"
+        "signal": "67 分 · 33 评论"
       },
       {
-        "id": "cn-item-bd6bae48853b755c",
+        "id": "cn-item-fffc885c9827c923",
         "category": "cn",
-        "title": "李子柒：传统文化在烟火里生长，向全世界流淌",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-23/10702261.shtml",
+        "title": "柬埔寨首相洪玛奈：打击电信网络诈骗需要加强国际合作",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-23/10702623.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-23T08:03:38.000Z",
-        "summary": "中新社北京9月23日电 (记者 吕少威)“前段时间出差，朋友在介绍我时说，‘这是咱们短视频的老人李子柒’，我心想我还是大好青年呢，怎么就跟‘老’字沾边了？”知名国际博主李子柒23日在北京一场活动上发言时以自嘲开场，引得台下哄堂大笑。",
+        "publishedAt": "2026-09-23T14:30:54.000Z",
+        "summary": "中新社金边9月23日电 (杨强 张堰林)柬埔寨首相洪玛奈23日在首都金边表示，电信网络诈骗已成为数字时代快速演变的重大跨国犯罪威胁，国际反诈不能停留在表态和口号上，各方应以互信为基础，将合作承诺转化为具体行动，共同应对这一跨国区域性问题。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xj3h-wwxq-gfcj",
+        "id": "github-advisory-ghsa-j43x-5hjq-rgxf",
         "category": "security",
-        "title": "Cloudreve: Storage-quota TOCTOU race allows quota bypass and storage-based denial of service",
-        "url": "https://github.com/advisories/GHSA-xj3h-wwxq-gfcj",
+        "title": "Plug: quadratic-time decoding of nested query/body parameters enables denial of service",
+        "url": "https://github.com/advisories/GHSA-j43x-5hjq-rgxf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T20:40:33.000Z",
-        "summary": "## Summary Cloudreve v4 splits the storage-quota **check** (reading the user's `used` bytes and comparing them to `MaxStorage`) and the **charge** (incrementing `users.storage`) into two non-atomic steps in the `PrepareUpload` code path. T…",
-        "badge": "CVE-2026-77633",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-09-23T14:00:22.000Z",
+        "summary": "### Summary Plug's nested-parameter decoder (`Plug.Conn.Query`) parses URL-encoded keys in time quadratic in their bracket-nesting depth. Any unauthenticated remote attacker that can reach a Plug-based HTTP endpoint can pin a BEAM schedule…",
+        "badge": "CVE-2026-54892",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-f9027d80e820682e",
+        "id": "ai-openai-52e46e8371e1f699",
         "category": "ai",
-        "title": "Better prompt caching for GPT-6",
-        "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+        "title": "Two years of OpenAI Academy",
+        "url": "https://openai.com/index/two-years-of-openai-academy",
         "source": "OpenAI",
-        "publishedAt": "2026-09-22T21:00:00.000Z",
-        "summary": "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.",
+        "publishedAt": "2026-09-23T16:00:00.000Z",
+        "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244307",
+        "id": "v2ex-1244367",
         "category": "dev",
-        "title": "有用阿拉伯语申诉 Claude 账号成功的吗",
-        "url": "https://www.v2ex.com/t/1244307",
+        "title": "大家工作打游戏之余，吃饭休闲的时候的电子榨菜/零食是啥",
+        "url": "https://www.v2ex.com/t/1244367",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T09:28:29.000Z",
-        "summary": "听说已经有人成功了并且发了截图，我忘保存了想找已经找不到了",
+        "publishedAt": "2026-09-23T15:56:03.000Z",
+        "summary": "偏爱带点喜剧和历史向的，之前是 铁齿铜牙纪晓岚，康熙微服私访，宰相刘罗锅这类戏说剧 大明王朝，康熙/雍正王朝，大宅门，神探狄仁杰，燕双鹰这类的大男主剧也看完，切片也翻来覆去 然后武林外传，龙门镖局，老友记，我爱我家这种情景剧 相声小品东北赵本山团伙儿、北京郭德纲团伙儿、天津葫芦社、西安青曲社、王自健第二班网上的一些可听的老段子基本上也听完了，现在新的片段一方面可能版权不上传了，一方面曲艺界的创作水平大幅下滑，没什么可看可听的。 脱口秀的话看看早年王自健，目前付航的切片。李诞…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-dd776485ca97db79",
+        "id": "cn-it-60dfed4b6780868d",
         "category": "cn",
-        "title": "海信 U7T Pro RGB-Mini LED 电视发布：103% BT.2020 色域，国补后首销价 9999 元起",
-        "url": "https://www.ithome.com/1/006/418.htm",
+        "title": "谷歌推出 Gemini 3.8 Flash / Flash-Lite 文本转语音模型，每一行台词都能精确控制",
+        "url": "https://www.ithome.com/1/006/509.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-23T11:33:31.000Z",
-        "summary": "IT之家 9 月 23 日消息 ， 海信 U7T Pro RGB-Mini LED 电视今日正式发布， 建议零售价 12499 元起，国补后首销价 9999 元起 。 海信 U7T Pro 采用 1.8mm 极窄金属边框设计， 支持 44mm 超薄无缝贴墙 ，配备 AI 灵动呼吸灯。 海信 U7T Pro 搭载了 全新一代玲珑真彩背光 2.0、全新一代真彩黑曜屏 。 玲珑真彩背光 2.0 在动态画面细节、小窗口画面精细度方面都有提升，支持“全时全场景稳定好色彩”。 海信 U…",
+        "publishedAt": "2026-09-23T15:31:11.000Z",
+        "summary": "IT之家 9 月 23 日消息，谷歌今日宣布，Gemini 家族新增两款全新文本转语音模型，将语音生成 从静态预设转变为动态创意工作室 ，能够帮助创作者、开发者和企业打造更丰富、更具表现力的音频体验，同时为 Gemini Notebook 和 Google Vids 等产品改进用户体验。 两款新模型分别为 Gemini 3.8 Flash TTS 和 Gemini 3.8 Flash-Lite TTS ，定位各有不同： Gemini 3.8 Flash TTS ：面向深度创…",
         "badge": "IT之家"
       },
       {
@@ -190,74 +190,74 @@
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-google-deepmind-f0e27f432f48fb86",
+        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
         "category": "ai",
-        "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-        "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-08T14:00:15.000Z",
-        "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-49805509",
-        "category": "dev",
-        "title": "GPT-6 Sol and Luna",
-        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-22T18:00:34.000Z",
-        "badge": "HN",
-        "signal": "1580 分 · 760 评论"
-      },
-      {
-        "id": "cn-baidu-cef2215e9d8f4a99",
-        "category": "cn",
-        "title": "张展硕亚运男子200自夺冠",
-        "url": "https://www.baidu.com/s?wd=%E5%BC%A0%E5%B1%95%E7%A1%95%E4%BA%9A%E8%BF%90%E7%94%B7%E5%AD%90200%E8%87%AA%E5%A4%BA%E5%86%A0&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "9月23日，名古屋亚运会男子200米自由泳决赛，中国选手张展硕以1分43秒49的成绩夺得金牌，收获本届亚运会个人第三金！",
-        "badge": "热搜",
-        "signal": "7,713,280 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-4825-p4xm-pcf2",
-        "category": "security",
-        "title": "Spree: Broken Access Control in `PATCH /api/v3/store/carts/:id/associate` (IDOR)",
-        "url": "https://github.com/advisories/GHSA-4825-p4xm-pcf2",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T20:40:30.000Z",
-        "summary": "## Summary The Store API v3 endpoint `PATCH /api/v3/store/carts/:id/associate` binds a guest cart to the authenticated caller without verifying possession of that cart. It locates the cart by prefixed ID only — `current_store.carts.where(u…",
-        "badge": "CVE-2026-94462",
-        "signal": "HIGH · CVSS 7.1"
-      },
-      {
-        "id": "ai-hugging-face-689d78c6e007ab8e",
-        "category": "ai",
-        "title": "Transformers now runs llama.cpp quants",
-        "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+        "url": "https://huggingface.co/blog/evaleval-aisi",
         "source": "Hugging Face",
         "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244296",
+        "id": "hn-49817404",
         "category": "dev",
-        "title": "通过反向隧道连到了 muse 智能体的终端",
-        "url": "https://www.v2ex.com/t/1244296",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T08:38:35.000Z",
-        "summary": "方法很简单 muse 自带了 tailscale 的连接器，直接页面上 设置 - 连接器 就可以连上 然后本来想让 muse 自建 ssh 服务，但是连不上，可能是因为沙盒的原因 只能反向隧道，我在 tailscale 本身就有几台小主机，然后随便找一台，开 sshd ，把鉴权信息告诉 muse ，它会帮你搞定后面的流程，然后在那台机器上 ssh localhost:port 就反向连到了 muse 的 linux 简单测试了一下： 8G 内存，2 核 2 线程，访问谷歌正…",
-        "badge": "程序员",
-        "signal": "1 回复"
+        "title": "GPT-6 Astra has gained the ability to drive a car",
+        "url": "https://drivingbench.com/",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-23T15:14:22.000Z",
+        "badge": "HN",
+        "signal": "151 分 · 116 评论"
       },
       {
-        "id": "cn-item-41dff29d3cde7569",
+        "id": "cn-baidu-18cf434653fe31dc",
         "category": "cn",
-        "title": "两岸直航航点全面复航呼声强 国台办：希望顺应民意",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-23/10702260.shtml",
+        "title": "打一针管数月的降压疫苗要来了",
+        "url": "https://www.baidu.com/s?wd=%E6%89%93%E4%B8%80%E9%92%88%E7%AE%A1%E6%95%B0%E6%9C%88%E7%9A%84%E9%99%8D%E5%8E%8B%E7%96%AB%E8%8B%97%E8%A6%81%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "武汉华纪元生物研发的治疗性降压疫苗Ⅰ期研究达到预设终点，即将启动Ⅱ期临床。该疫苗一针效果可维持数月，依靠自身抗体降压，有望解决高血压患者吃药依从性差难题，目前全球同类产品仍无上市成品。",
+        "badge": "热搜",
+        "signal": "7,713,673 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-6cp7-3m3c-5x5c",
+        "category": "security",
+        "title": "Zapros: Streaming decoders ignored the requested chunk size, allowing a single compressed response chunk to allocate unbounded memory (decompression bomb)",
+        "url": "https://github.com/advisories/GHSA-6cp7-3m3c-5x5c",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-23T13:57:48.000Z",
+        "summary": "### Impact Denial of service via memory exhaustion. Affects all callers who streamed compressed responses relying on the chunk size — explicit (`iter_bytes(chunk_size=...)`) or the default — to bound memory. The decoder ignored that bound,…",
+        "badge": "CVE-2026-61652",
+        "signal": "HIGH · CVSS 0.0"
+      },
+      {
+        "id": "ai-openai-9328fa400dd37e6b",
+        "category": "ai",
+        "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+        "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-23T13:00:00.000Z",
+        "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1244361",
+        "category": "dev",
+        "title": "对比了一下 deepseek v4 和 mimo 2.6 的价格",
+        "url": "https://www.v2ex.com/t/1244361",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-23T14:48:40.000Z",
+        "summary": "Deepseek 平时主要下班和周末个人项目用，参考了最近一个月的 token 消耗和费用，换算到 mimo 之后能省一半呢",
+        "badge": "程序员",
+        "signal": "3 回复"
+      },
+      {
+        "id": "cn-item-f90646e00cbbef74",
+        "category": "cn",
+        "title": "神舟二十号、神舟二十一号航天员授称颁奖仪式在京举行",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-23/10702461.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-23T08:03:26.000Z",
-        "summary": "中新社北京9月23日电 (记者 刘大炜 李百加)临近中秋、国庆假期，许多大陆台胞期盼恢复更多两岸空中客运直航航线。国务院台办发言人朱凤莲23日在北京举行的国台办例行新闻发布会上表示，希望台湾方面顺应民意。",
+        "publishedAt": "2026-09-23T11:56:02.000Z",
+        "summary": "原标题：神舟二十号、神舟二十一号航天员授称颁奖仪式在京举行 张升民出席并向受褒奖的航天员颁授奖章证书",
         "badge": "中新网要闻"
       },
       {
@@ -272,74 +272,74 @@
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-google-deepmind-2b0379511ea05114",
+        "id": "ai-google-deepmind-947e89eaa83a27ae",
         "category": "ai",
-        "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
-        "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+        "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-03T15:02:08.000Z",
+        "publishedAt": "2026-09-15T17:05:57.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49803892",
+        "id": "hn-49817524",
         "category": "dev",
-        "title": "Claude Opus 5.5",
-        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "title": "Radicle: Disclosure of Vulnerability in the Network Protocol",
+        "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T16:29:05.000Z",
+        "publishedAt": "2026-09-23T15:23:05.000Z",
         "badge": "HN",
-        "signal": "1586 分 · 984 评论"
+        "signal": "30 分 · 9 评论"
       },
       {
-        "id": "cn-it-9cd7e1e099dd7d90",
+        "id": "cn-it-18ce867a5586f5e7",
         "category": "cn",
-        "title": "海信 E7S Pro+ RGB-Mini LED 电视发布，国补后首销价 9999 元起",
-        "url": "https://www.ithome.com/1/006/417.htm",
+        "title": "华为 WATCH GT Runner 2 智能手表开启 HarmonyOS 7 花粉 Beta 版升级尝鲜招募",
+        "url": "https://www.ithome.com/1/006/508.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-23T11:31:31.000Z",
-        "summary": "IT之家 9 月 23 日消息，在 9 月 23 日晚的 2026 海信电视秋季新品发布会上，海信 E7S Pro+ RGB-Mini LED 电视发布， 建议零售价 11,499 元起，国补后首销价 9,999 元起 。IT之家附各版本定价如下： 75 英寸：3,888 背光分区，5,000 尼特峰值亮度，建议零售价 11,499 元，国补后首销价 9,999 元 85 英寸：5,184 背光分区，6,000 尼特峰值亮度，建议零售价 14,499 元，国补后首销价 12…",
+        "publishedAt": "2026-09-23T15:24:14.000Z",
+        "summary": "IT之家 9 月 23 日消息，华为官方今日宣布， HUAWEI WATCH GT Runner 2 开启 HarmonyOS 7 花粉 Beta 版升级尝鲜招募 。 华为手机 / 平板：【我的华为 / 服务】APP > 首页 > 升级尝鲜（根据提示一键报名） 其他品牌手机 / 平板：微信小程序 >【我的华为】> 点击首页热门活动下对应产品图（根据提示填写信息报名） IT之家附华为 WATCH GT Runner 2 智能手表新版本更新内容如下： 【新增】 1. 系统界面焕…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-vv3m-f8x4-7377",
+        "id": "github-advisory-ghsa-rr49-f9g6-c9r5",
         "category": "security",
-        "title": "lightrag-hku: SSRF via IPv6-transition address bypass (NAT64, IPv4-compatible, 6to4) of the native-markdown image-download guard",
-        "url": "https://github.com/advisories/GHSA-vv3m-f8x4-7377",
+        "title": "plone.app.portlets Vulnerable to Remote Code Execution via TALES Injection",
+        "url": "https://github.com/advisories/GHSA-rr49-f9g6-c9r5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T20:40:25.000Z",
-        "summary": "## Summary LightRAG's native markdown parser downloads external images referenced by an uploaded markdown or textpack document. The only SSRF guard, `_validated_addresses()` in `lightrag/parser/markdown/parser.py`, resolves the image host …",
-        "badge": "CVE-2026-85740",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-09-23T13:55:47.000Z",
+        "summary": "### Impact The Classic portlet (plone.app.portlets.portlets.classic) used its user-supplied template/macro fields to build a TALES path expression that was then evaluated by the TAL path() helper. Because the value was interpreted as a ful…",
+        "badge": "CVE-2026-57149",
+        "signal": "CRITICAL · CVSS 9.9"
       },
       {
-        "id": "ai-hugging-face-6b3083011aeb49b1",
+        "id": "ai-hugging-face-689d78c6e007ab8e",
         "category": "ai",
-        "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
-        "url": "https://huggingface.co/blog/omlx",
+        "title": "Transformers now runs llama.cpp quants",
+        "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
         "source": "Hugging Face",
         "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244294",
+        "id": "v2ex-1244343",
         "category": "dev",
-        "title": "开源｜标注 + 评论：一种更简单的 AI 图像编辑方法",
-        "url": "https://www.v2ex.com/t/1244294",
+        "title": "最近重装了系统, 想看看 windows 玩容器 docker 之类有没有新方法",
+        "url": "https://www.v2ex.com/t/1244343",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T08:29:45.000Z",
-        "summary": "前言 目前，大多数 AI 图像编辑工具都依赖 纯文本 Prompt 来描述需要修改的内容以及具体的修改方式。 然而，当图像编辑任务变得更加复杂时，编写 Prompt 很快就会变得繁琐。更重要的是，有时候仅靠文本很难准确指出图像中需要编辑的具体位置。 例如，假设我想对下面这张图片进行多项修改： 让模特拿着一个指定的物品 将她的鞋子颜色改为红色 将她的服装替换为指定的衣服 将背景环境修改为咖啡厅 使用传统的纯文本方式，我可能需要编写这样的 Prompt： 让模特举起手并拿着 I…",
+        "publishedAt": "2026-09-23T12:57:41.000Z",
+        "summary": "如果不装 docker 就更好 有没有什么不修改系统玩容器的方式啊, 绿色的那种 或者微软新搞的 wslc? 有人实战过吗",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-d5da05a93dac79da",
+        "id": "cn-baidu-cfc5c60cadd52237",
         "category": "cn",
-        "title": "“十五五”教师发展国家行动来了",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%8D%81%E4%BA%94%E4%BA%94%E2%80%9D%E6%95%99%E5%B8%88%E5%8F%91%E5%B1%95%E5%9B%BD%E5%AE%B6%E8%A1%8C%E5%8A%A8%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国接受过高等教育人口达2.7亿",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%8E%A5%E5%8F%97%E8%BF%87%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2%E4%BA%BA%E5%8F%A3%E8%BE%BE2.7%E4%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "在国务院新闻办公室9月23日举行的“开局起步‘十五五’”系列主题新闻发布会上，教育部副部长杜江峰介绍，面向“十五五”，教育部将启动教师发展国家行动，强化教育家精神引领，加快培养造就新时代高水平教师队伍。",
+        "summary": "23日，教育部在国务院新闻办发布会上介绍，我国已建成世界规模最大且有质量的教育体系。目前，我国接受过高等教育的人口达2.7亿，基础教育达到高收入国家平均水平，总体近视率连续5年下降。",
         "badge": "热搜",
-        "signal": "7,618,439 热度"
+        "signal": "7,618,097 热度"
       },
       {
         "id": "cisa-kev-cve-2026-7273",
@@ -353,74 +353,75 @@
         "signal": "已遭利用 · 整改期限 2026-09-24"
       },
       {
-        "id": "ai-openai-3fcefd9c665fb2c2",
+        "id": "ai-openai-5ab590850491008e",
         "category": "ai",
-        "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
-        "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+        "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
+        "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
         "source": "OpenAI",
-        "publishedAt": "2026-09-22T12:00:00.000Z",
-        "summary": "GPT‑6 Astra allowed Parallel’s agents to research and synthesize labor-market data in half the time and at half the cost vs. prior models.",
+        "publishedAt": "2026-09-23T00:00:00.000Z",
+        "summary": "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49811065",
+        "id": "hn-49815982",
         "category": "dev",
-        "title": "Transit rewards",
-        "url": "https://waymo.com/blog/2026/09/transit-rewards/",
+        "title": "Stripe's Knowledge AI Platform",
+        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T02:52:29.000Z",
+        "publishedAt": "2026-09-23T13:38:00.000Z",
         "badge": "HN",
-        "signal": "154 分 · 178 评论"
+        "signal": "102 分 · 59 评论"
       },
       {
-        "id": "cn-item-90ed2349f2b7ad04",
+        "id": "cn-item-d8bd2524b7750a65",
         "category": "cn",
-        "title": "爱知·名古屋亚运会：中国男足0:0战平阿联酋队 小组头名晋级八强",
-        "url": "https://www.chinanews.com.cn/ty/2026/09-23/10702339.shtml",
+        "title": "2026年中国农民丰收节主场活动在湖北枣阳启幕",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-23/10702290.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-23T08:01:16.000Z",
-        "summary": "中新网9月23日电(记者 国璇)当地时间23日进行的爱知·名古屋亚运会男足小组赛B组第三轮比赛中，中国男足以0:0战平阿联酋队。前两轮比赛中，中国队在首轮以2:1战胜朝鲜队，在第二轮以0:0战平伊朗队。小组赛战罢，中国队以1胜2平积5分的战绩位列B组头名，晋级八强。",
+        "publishedAt": "2026-09-23T08:45:24.000Z",
+        "summary": "中新社湖北枣阳9月23日电 (记者 梁婷)秋分时节，湖北襄阳市枣阳市东郊村稻浪翻涌。中国农民丰收节全国主场活动23日在此启幕。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-frch-4w6v-q5xx",
+        "id": "github-advisory-ghsa-wx4m-69m9-gx3m",
         "category": "security",
-        "title": "lightrag-hku: No Rate Limiting on /login Endpoint Allows Brute-Force Attacks",
-        "url": "https://github.com/advisories/GHSA-frch-4w6v-q5xx",
+        "title": "Home Assistant: XSS in Statistics Graph Card",
+        "url": "https://github.com/advisories/GHSA-wx4m-69m9-gx3m",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-22T20:40:22.000Z",
-        "summary": "### Summary The POST /login endpoint has no rate limiting, account lockout, or delay on failed attempts. An attacker can submit unlimited password guesses at full network speed. ### Details ```python # lightrag/api/lightrag_server.py:2161 …",
-        "badge": "CVE-2026-85734",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-22T20:40:55.000Z",
+        "summary": "### Summary An authenticated party can add a malicious name to any statistics-capable entity, allowing for Cross-Site Scripting attacks against anyone who views a Statistics Graph card containing that entity, when they hover over any data …",
+        "badge": "CVE-2026-91130",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
-        "id": "ai-google-deepmind-d721843382f3485e",
+        "id": "ai-google-deepmind-f0e27f432f48fb86",
         "category": "ai",
-        "title": "Proactive cyber defense for governments and enterprises",
-        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+        "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+        "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-02T16:24:24.000Z",
+        "publishedAt": "2026-09-08T14:00:15.000Z",
+        "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244289",
+        "id": "v2ex-1244337",
         "category": "dev",
-        "title": "使用 Codex + DeepSeek API，需要 Codex 的订阅吗？",
-        "url": "https://www.v2ex.com/t/1244289",
+        "title": "在用各种商业指纹浏览器时，敢放核心主账号和 Cookie 吗？",
+        "url": "https://www.v2ex.com/t/1244337",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T08:13:59.000Z",
-        "summary": "类似的，其它需要订阅的 Agent ，比如 CodeBuddy + 自己的 DeepSeek API ，会消耗 CodeBuddy 的积分吗？",
+        "publishedAt": "2026-09-23T12:44:15.000Z",
+        "summary": "最近理了理手里的多环境管理，突然想到一个老生常谈但一直让人犯嘀咕的问题： 市面上绝大多数商业指纹浏览器（ AdsPower 、Hubstudio 、比特、Dolphin 等）基本都是闭源客户端，而且很多配置、环境和 Cookie 默认都会同步到云端。 平时拿来挂挂小号、跑跑批量脚本还好，但如果是价值较高的主号、带资产的钱包、或者核心服务凭证： 大家平时都是直接信任闭源客户端，还是有针对性地做物理/沙盒隔离？ 会不会特意找支持纯本地存储、禁止云端同步配置的工具？ 目前有没有什…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-fd4d65ba5b2fbe69",
+        "id": "cn-it-52b8b77dad13bc53",
         "category": "cn",
-        "title": "德国以外唯一工厂：宝马沈阳生产基地启动能量智控系统试产",
-        "url": "https://www.ithome.com/1/006/416.htm",
+        "title": "迄今最长卫星观测记录：半个世纪极地冰层消失 11.3 万亿吨，海平面上升 3 厘米",
+        "url": "https://www.ithome.com/1/006/506.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-23T11:24:17.000Z",
-        "summary": "IT之家 9 月 23 日消息，据宝马集团官方公众号，9 月 22 日，宝马集团在沈阳生产基地动力总成工厂正式启动能量智控系统试生产。官方表示，这标志第六代动力电池涉及的所有核心环节均将在中国实现全面本土化，涵盖 技术研发、零部件供应、电芯制造，以及电池包和能量智控系统生产 。 能量智控系统是 第六代动力电池的中央控制单元 ，其硬件和软件均由宝马集团自主研发，安装于第六代动力电池包顶部，负责多线程工作，确保高压动力电池安全、智能地运行。 沈阳新线筹备中，虚拟规划与调试作用关…",
+        "publishedAt": "2026-09-23T15:11:36.000Z",
+        "summary": "IT之家 9 月 23 日消息，研究人员发现，自 20 世纪 70 年代以来，格陵兰岛和南极洲已经累计损失约 11.3 万亿吨极地冰层，规模之大令人震惊。 一个国际科学家团队整理出了迄今最长的卫星观测记录，揭示过去约 50 年间极地冰层流失的真实规模。这份综合记录最早追溯至 1972 年的格陵兰岛和 1979 年的南极洲，一直持续到 2023 年，涵盖 42 项不同的卫星调查以及 27 次卫星任务。 在观测到的 11.3 万亿吨冰损失中，大部分来自格陵兰岛冰盖。 北安普顿大…",
         "badge": "IT之家"
       },
       {
@@ -435,55 +436,55 @@
         "signal": "已遭利用 · 整改期限 2026-09-21"
       },
       {
-        "id": "ai-hugging-face-ae2a66f3c360fd17",
+        "id": "ai-hugging-face-6b3083011aeb49b1",
         "category": "ai",
-        "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
+        "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+        "url": "https://huggingface.co/blog/omlx",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-21T13:44:34.000Z",
+        "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49801324",
+        "id": "hn-49818698",
         "category": "dev",
-        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "title": "28% of job postings on company career sites have been open over 90 days",
+        "url": "https://unlisted.careers/ghost-jobs/report/2026-09",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T13:52:15.000Z",
+        "publishedAt": "2026-09-23T16:35:34.000Z",
         "badge": "HN",
-        "signal": "675 分 · 391 评论"
+        "signal": "8 分 · 3 评论"
       },
       {
-        "id": "cn-baidu-a75fc3c1e3c2754f",
+        "id": "cn-baidu-d96f99a0023281d1",
         "category": "cn",
-        "title": "第一地级市冲刺6万亿",
-        "url": "https://www.baidu.com/s?wd=%E7%AC%AC%E4%B8%80%E5%9C%B0%E7%BA%A7%E5%B8%82%E5%86%B2%E5%88%BA6%E4%B8%87%E4%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "余额宝将无法直接付款了吗",
+        "url": "https://www.baidu.com/s?wd=%E4%BD%99%E9%A2%9D%E5%AE%9D%E5%B0%86%E6%97%A0%E6%B3%95%E7%9B%B4%E6%8E%A5%E4%BB%98%E6%AC%BE%E4%BA%86%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月20日，全国第一地级市、第二工业强市苏州召开第十四次党代会，立足产业立市、创新强市、开放兴市，提出五年内规上工业总产值再增1万亿，冲刺6万亿，打造4个万亿级产业，培育1至2家世界500强企业。",
+        "summary": "据悉，网传9月30日起余额宝、零钱通无法直接付款的传言，为不实信息。余额宝等仍可正常支付，资金流动性未受限。此前，部分自媒体片面理解本月底施行的《金融产品网络营销管理办法》，将调整展示规则误读为禁止支付功能。",
         "badge": "热搜",
-        "signal": "7,523,902 热度"
+        "signal": "7,521,183 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-53266",
+        "id": "github-advisory-ghsa-xj3h-wwxq-gfcj",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Out-of-Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53266",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-18T00:00:00.000Z",
-        "summary": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The…",
-        "badge": "CVE-2026-53266",
-        "signal": "已遭利用 · 整改期限 2026-09-21"
+        "title": "Cloudreve: Storage-quota TOCTOU race allows quota bypass and storage-based denial of service",
+        "url": "https://github.com/advisories/GHSA-xj3h-wwxq-gfcj",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-22T20:40:33.000Z",
+        "summary": "## Summary Cloudreve v4 splits the storage-quota **check** (reading the user's `used` bytes and comparing them to `MaxStorage`) and the **charge** (incrementing `users.storage`) into two non-atomic steps in the `PrepareUpload` code path. T…",
+        "badge": "CVE-2026-77633",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
-        "id": "v2ex-1244277",
+        "id": "v2ex-1244327",
         "category": "dev",
-        "title": "酷壳无法访问了",
-        "url": "https://www.v2ex.com/t/1244277",
+        "title": "阿里云在抖音直播卖 plan 割韭菜",
+        "url": "https://www.v2ex.com/t/1244327",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T07:40:18.000Z",
-        "summary": "https://coolshell.cn/ 一个人的消亡真的很快，普通人更是无声无息",
+        "publishedAt": "2026-09-23T11:46:03.000Z",
+        "summary": "看不惯，直接举报一手，明显就是骗不懂得新人韭菜，实话说卖一份就是骗一个人 ds 价格比官网还贵，问主播 2000 积分有多少 token ，能用多久都不回答，选择性忽略 就是不停得重复复读机强调价格怎么划算有多少积分，贻笑大方。 -- 刚又去看了下好像给我举报封禁了，解气！",
         "badge": "程序员",
-        "signal": "23 回复"
+        "signal": "11 回复"
       }
     ]
   },
@@ -499,8 +500,8 @@
         "name": "anthropics/financial-services",
         "url": "https://github.com/anthropics/financial-services",
         "language": "Python",
-        "stars": 36684,
-        "starsToday": 438
+        "stars": 36817,
+        "starsToday": 665
       },
       {
         "id": "github-9442edb1a4e4e270",
@@ -509,8 +510,8 @@
         "url": "https://github.com/google/ax",
         "description": "Google's open agentic orchestration runtime",
         "language": "Go",
-        "stars": 8290,
-        "starsToday": 2305
+        "stars": 8698,
+        "starsToday": 1542
       },
       {
         "id": "github-59e2238b6e883dd3",
@@ -519,8 +520,8 @@
         "url": "https://github.com/davila7/claude-code-templates",
         "description": "CLI tool for configuring and monitoring Claude Code",
         "language": "Python",
-        "stars": 31303,
-        "starsToday": 64
+        "stars": 31401,
+        "starsToday": 393
       },
       {
         "id": "github-ee2eebaaf777f8ef",
@@ -529,8 +530,8 @@
         "url": "https://github.com/BuilderIO/agent-native",
         "description": "A framework for building agentic apps",
         "language": "TypeScript",
-        "stars": 6361,
-        "starsToday": 609
+        "stars": 6444,
+        "starsToday": 135
       },
       {
         "id": "github-4251a228ae407247",
@@ -539,7 +540,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 290420,
+        "stars": 290552,
         "starsToday": 528
       },
       {
@@ -549,8 +550,8 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 16037,
-        "starsToday": 255
+        "stars": 16179,
+        "starsToday": 1140
       },
       {
         "id": "github-3fb22e26432bc598",
@@ -559,8 +560,8 @@
         "url": "https://github.com/Open-Dev-Society/OpenStock",
         "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
         "language": "TypeScript",
-        "stars": 18534,
-        "starsToday": 832
+        "stars": 18670,
+        "starsToday": 379
       },
       {
         "id": "github-9b8aac3b47fa817a",
@@ -569,8 +570,8 @@
         "url": "https://github.com/agent-substrate/substrate",
         "description": "Agent Substrate: the core system",
         "language": "Go",
-        "stars": 3240,
-        "starsToday": 245
+        "stars": 3358,
+        "starsToday": 560
       },
       {
         "id": "github-e0b6405937538663",
@@ -579,7 +580,7 @@
         "url": "https://github.com/strands-agents/harness-sdk",
         "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
         "language": "Python",
-        "stars": 7609,
+        "stars": 7735,
         "starsToday": 96
       },
       {
@@ -589,10 +590,10 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 49728,
+        "stars": 49817,
         "starsToday": 41
       }
     ],
-    "updatedAt": "2026-09-23T11:38:45.979Z"
+    "updatedAt": "2026-09-23T17:00:58.737Z"
   }
 }
