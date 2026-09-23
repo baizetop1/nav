@@ -1,17 +1,16 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-23T20:22:54.586Z",
+  "generatedAt": "2026-09-23T23:42:50.483Z",
   "intelligence": {
-    "updatedAt": "2026-09-23T20:22:54.586Z",
+    "updatedAt": "2026-09-23T23:42:50.483Z",
     "items": [
       {
-        "id": "cn-item-b0b92e50d6535548",
+        "id": "cn-item-abad9ab516488aea",
         "category": "cn",
-        "title": "中国成功发射卫星互联网低轨26组卫星",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-24/10702669.shtml",
+        "title": "长期护理保险支付新规落地 专家解读",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-24/10702679.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-23T16:12:16.000Z",
-        "summary": "中新社北京9月23日电 (记者 马帅莎)据中国航天科技集团消息，北京时间9月23日21时32分，中国在海南商业航天发射场使用长征八号甲运载火箭，成功将卫星互联网低轨26组卫星发射升空，卫星顺利进入预定轨道，发射任务获得圆满成功。",
+        "publishedAt": "2026-09-23T21:20:38.000Z",
         "badge": "中新网要闻"
       },
       {
@@ -43,28 +42,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-23T18:06:47.000Z",
         "badge": "HN",
-        "signal": "212 分 · 207 评论"
+        "signal": "426 分 · 469 评论"
       },
       {
-        "id": "cn-it-dec46e027c555e4c",
+        "id": "cn-it-a1346c8a13aa4a8a",
         "category": "cn",
-        "title": "Anthropic 工程师解释为何 Claude 写作变差：模型被训练成写给 AI 看而非写给人看",
-        "url": "https://www.ithome.com/1/006/510.htm",
+        "title": "2026 年内首次上调：苹果 Apple Card 储蓄账户利率涨至 3.5%",
+        "url": "https://www.ithome.com/1/006/523.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-23T15:34:48.000Z",
-        "summary": "IT之家 9 月 23 日消息，AI 模型在数学、编程和推理能力上进步迅速，写作水平却停滞不前，甚至有所退步，Anthropic 的 Claude 同样也存在这一问题。 为何 Opus 4.6 会成为 Anthropic 最后一款写作表现出色的模型？负责 Claude 微调的 Anthropic 工程师杰克逊 · 克尼恩今天（23 日）对此给出了解释：后续模型的优化重点 更多放在数学和代码能力上 。 这些模型还接受了大量 面向其他 AI 模型撰写技术解释 的训练，而这正是 …",
+        "publishedAt": "2026-09-23T23:40:11.000Z",
+        "summary": "IT之家 9 月 24 日消息，科技媒体 AppleInsider 昨日（9 月 23 日）发布博文，报道称苹果上调 Apple Card 储蓄账户的利率， 从 3.4% 上调至 3.5% ，此次调整发生在该产品 2026 年两次降息之后，成为年内首次上调。 IT之家援引博文介绍，附上苹果公司相关利率变动时间线如下： 2023 年 4 月：产品首发利率 4.15% 2023 年 12 月，年利率上调至 4.25% 2024 年 1 月初，年利率上调至 4.35% 2024 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-97cv-x867-6xhm",
+        "id": "github-advisory-ghsa-9643-4qgh-g8mx",
         "category": "security",
-        "title": "Klever-Go Account takeover: `kleverUpdateAccountPermission` authorizes on attacker-controlled `RecipientAddr` instead of the authenticated caller",
-        "url": "https://github.com/advisories/GHSA-97cv-x867-6xhm",
+        "title": "elysia has Inefficient Algorithmic Complexity and Interpretation Conflict",
+        "url": "https://github.com/advisories/GHSA-9643-4qgh-g8mx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T19:27:08.000Z",
-        "summary": "### Description The VM built-in function `KleverUpdateAccountPermission` (registered always-active, `creator.go:381-390` / `core/vmconstants.go:234`) rewrites an account's entire permission set. Its authorization check uses `vmInput.Recipi…",
-        "badge": "CVE-2026-82405",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-23T21:54:50.000Z",
+        "summary": "Elysia v1.4.28 is vulnerable to denial-of-service attacks due to CPU exhaustion in the form data normalization code. Elysia uses `getAll` to retrieve value from FormData. It is called directly relative to the total number of key-value pair…",
+        "badge": "CVE-2026-56669",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-68ead6b6af2b7144",
@@ -77,24 +76,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244377",
+        "id": "v2ex-1244383",
         "category": "dev",
-        "title": "微信输入法已被移植到 Linux",
-        "url": "https://www.v2ex.com/t/1244377",
+        "title": "Muse 听说对新手小白，比较友好，能力在线？",
+        "url": "https://www.v2ex.com/t/1244383",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T19:01:25.000Z",
-        "summary": "https://github.com/yu1745/wetype-ime-linux 使用了安卓的微信输入法作为底座，使用 qemu 运行其 so ，完全剥离了 Java 部分，不联网，保留了用户输入学习功能，输入一个词之后，再次输入，其权重将提升。最终内存占用 平均 80M 峰值 160M 停止打字之后迅速回落 ,硬盘占用仅 207M ,冷启动 1.5 秒出候选，热状态 70ms 出候选，依赖 Fcitx 框架，UI 复原了 windows 微信输入法的不翻页单行展示候选…",
+        "publishedAt": "2026-09-23T23:21:43.000Z",
+        "summary": "大佬们，测试过吗？到底能不能打？请大佬们支招",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-a13ee98407022b1a",
+        "id": "cn-baidu-520147d533741ddd",
         "category": "cn",
-        "title": "习近平离京对美国进行国事访问",
-        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E7%A6%BB%E4%BA%AC%E5%AF%B9%E7%BE%8E%E5%9B%BD%E8%BF%9B%E8%A1%8C%E5%9B%BD%E4%BA%8B%E8%AE%BF%E9%97%AE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平抵达美国首都华盛顿",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%8A%B5%E8%BE%BE%E7%BE%8E%E5%9B%BD%E9%A6%96%E9%83%BD%E5%8D%8E%E7%9B%9B%E9%A1%BF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,809,438 热度"
+        "signal": "7,809,656 热度"
       },
       {
         "id": "cisa-kev-cve-2026-94127",
@@ -117,34 +116,34 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49817469",
+        "id": "hn-49823582",
         "category": "dev",
-        "title": "Fixing the Portobello Police Station Clock",
-        "url": "https://pointinthecloud.com/2026-04-11-211700.html",
+        "title": "Linux support is coming to Snapdragon X2 Series",
+        "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T15:18:53.000Z",
+        "publishedAt": "2026-09-23T22:38:16.000Z",
         "badge": "HN",
-        "signal": "308 分 · 68 评论"
+        "signal": "48 分 · 20 评论"
       },
       {
-        "id": "cn-item-fffc885c9827c923",
+        "id": "cn-item-a3f20d81250d6bcd",
         "category": "cn",
-        "title": "柬埔寨首相洪玛奈：打击电信网络诈骗需要加强国际合作",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-23/10702623.shtml",
+        "title": "医院职工食堂月饼走红，为何引发行业跟风仿冒？",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-24/10702677.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-23T14:30:54.000Z",
-        "summary": "中新社金边9月23日电 (杨强 张堰林)柬埔寨首相洪玛奈23日在首都金边表示，电信网络诈骗已成为数字时代快速演变的重大跨国犯罪威胁，国际反诈不能停留在表态和口号上，各方应以互信为基础，将合作承诺转化为具体行动，共同应对这一跨国区域性问题。",
+        "publishedAt": "2026-09-23T21:00:13.000Z",
+        "summary": "医院职工食堂月饼走红，大量商家跟风仿冒",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-4fwh-wrm6-97xm",
+        "id": "github-advisory-ghsa-wmw4-mw6x-6vfm",
         "category": "security",
-        "title": "Klever-Go: Unauthenticated WebSocket /subscribe: no read-size limit, no connection cap, permissive origin -> remote node memory/goroutine exhaustion (DoS)",
-        "url": "https://github.com/advisories/GHSA-4fwh-wrm6-97xm",
+        "title": "ReactPress has SQL injection via dynamic column names in TypeORM query builders",
+        "url": "https://github.com/advisories/GHSA-wmw4-mw6x-6vfm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T19:16:40.000Z",
-        "summary": "## Summary The unauthenticated WebSocket endpoint `GET /subscribe` is registered `open: true` by default (`config/node/api.yaml`) and lets a remote, unauthenticated client exhaust the node's memory and goroutines. Because the REST API runs…",
-        "badge": "CVE-2026-86065",
+        "publishedAt": "2026-09-23T21:51:59.000Z",
+        "summary": "## Summary ReactPress API list endpoints build TypeORM `QueryBuilder` conditions using unsanitized HTTP query parameter *names* as SQL column identifiers (e.g. `` `article.${key}` ``). TypeORM parameterizes values but not column names, all…",
+        "badge": "CVE-2026-61685",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -158,24 +157,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244372",
+        "id": "v2ex-1244380",
         "category": "dev",
-        "title": "[自用分享] 折腾了一圈 AI 中转，最后留了个按量透明的",
-        "url": "https://www.v2ex.com/t/1244372",
+        "title": "关于新 GPT-6 如何替换 GPT-5.6，我的建议是不要用 6-luna",
+        "url": "https://www.v2ex.com/t/1244380",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T16:26:28.000Z",
-        "summary": "各位老哥好，利益相关先声明：我在运营 modelsell.com ，下面是自用体验分享，轻喷。 背景 我是 OpenCode + Claude Code 重度用户，之前 MAX 200 刀的订阅一个多小时就烧完了，被迫转中转。踩过的坑： 某站调 opus，单个任务扣 $7，中转扣 30 多块，跟官方价差不多了 某站充 21 块跑几次 embedding 就没了，账单完全对不上 所以我现在选站就看两点：计费能不能查明细、多模型能不能一个 key 搞定。 现在在用的 model…",
+        "publishedAt": "2026-09-23T20:25:01.000Z",
+        "summary": "架构说明 首先说明一下我的使用环境以及模型配置：Claude Code + Trellis Opus 负责 Plan + Check （ Review ） 唯一选择：GPT-Sol(xhigh) Sonnet 负责主会话 + Implement 首选：GLM(max) 备选：GPT-Terra(xhigh) Haiku 负责 Research / Explore 首选：GLM-Flash(high) 备选：GPT-Luna(xhigh) 为什么 Sonnet 和 Haiku…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-60dfed4b6780868d",
+        "id": "cn-it-80d8da8c5bee7304",
         "category": "cn",
-        "title": "谷歌推出 Gemini 3.8 Flash / Flash-Lite 文本转语音模型，每一行台词都能精确控制",
-        "url": "https://www.ithome.com/1/006/509.htm",
+        "title": "苹果最强家庭影院方案：tvOS 27.2 Beta 2 可配对 4 台 HomePod",
+        "url": "https://www.ithome.com/1/006/522.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-23T15:31:11.000Z",
-        "summary": "IT之家 9 月 23 日消息，谷歌今日宣布，Gemini 家族新增两款全新文本转语音模型，将语音生成 从静态预设转变为动态创意工作室 ，能够帮助创作者、开发者和企业打造更丰富、更具表现力的音频体验，同时为 Gemini Notebook 和 Google Vids 等产品改进用户体验。 两款新模型分别为 Gemini 3.8 Flash TTS 和 Gemini 3.8 Flash-Lite TTS ，定位各有不同： Gemini 3.8 Flash TTS ：面向深度创…",
+        "publishedAt": "2026-09-23T23:32:43.000Z",
+        "summary": "IT之家 9 月 24 日消息，消息源 @Flatpanels 昨日（9 月 23 日）在 X 平台发布推文，指出在 tvOS 27.2 Beta 2 更新中，苹果正在测试无线家庭影院体验， 支持 Apple TV 4K 同时无线配对 4 台 HomePod（当前最多支持 2 台）。 消息源分享的 Home 应用截图显示，Apple TV 4K 升级 tvOS 27.2 Beta 2 更新后，可以配对连接 2 台全尺寸 HomePod 和 2 台 HomePod mini，…",
         "badge": "IT之家"
       },
       {
@@ -199,35 +198,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49821196",
+        "id": "hn-49822555",
         "category": "dev",
-        "title": "How we made claude.ai 3x faster in two weeks",
-        "url": "https://claude.dev/blog/how-we-made-claude-ai-faster/",
+        "title": "VSCode's SSH Agent Is Bananas (2025)",
+        "url": "https://fly.io/blog/vscode-ssh-wtf/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T19:23:40.000Z",
+        "publishedAt": "2026-09-23T21:01:48.000Z",
         "badge": "HN",
-        "signal": "65 分 · 30 评论"
+        "signal": "89 分 · 65 评论"
       },
       {
-        "id": "cn-baidu-18cf434653fe31dc",
+        "id": "cn-baidu-11255609c5ff07d1",
         "category": "cn",
-        "title": "打一针管数月的降压疫苗要来了",
-        "url": "https://www.baidu.com/s?wd=%E6%89%93%E4%B8%80%E9%92%88%E7%AE%A1%E6%95%B0%E6%9C%88%E7%9A%84%E9%99%8D%E5%8E%8B%E7%96%AB%E8%8B%97%E8%A6%81%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "特朗普夫妇机场迎接",
+        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E5%A4%AB%E5%A6%87%E6%9C%BA%E5%9C%BA%E8%BF%8E%E6%8E%A5&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "武汉华纪元生物研发的治疗性降压疫苗Ⅰ期研究达到预设终点，即将启动Ⅱ期临床。该疫苗一针效果可维持数月，依靠自身抗体降压，有望解决高血压患者吃药依从性差难题，目前全球同类产品仍无上市成品。",
+        "summary": "当地时间9月23日下午，国家主席习近平乘专机抵达美国首都华盛顿。特朗普夫妇来到安德鲁斯空军基地，迎接习近平主席到访。",
         "badge": "热搜",
-        "signal": "7,713,720 热度"
+        "signal": "7,714,357 热度"
       },
       {
-        "id": "github-advisory-ghsa-9v8p-frvj-2pcm",
+        "id": "github-advisory-ghsa-gvf2-2rh5-mpgf",
         "category": "security",
-        "title": "Klever-Go: /log controls global node logging",
-        "url": "https://github.com/advisories/GHSA-9v8p-frvj-2pcm",
+        "title": "OpenC3 COSMOS: Stored, cross-user XSS via Telemetry screen BUTTON widget",
+        "url": "https://github.com/advisories/GHSA-gvf2-2rh5-mpgf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T19:13:46.000Z",
-        "summary": "An unauthenticated client can connect to `GET /log`, send an arbitrary logger profile as the first WebSocket message, and mutate the node's global logging configuration before receiving live logs from the process. I confirmed this against …",
-        "badge": "CVE-2026-86064",
-        "signal": "HIGH · CVSS 8.6"
+        "publishedAt": "2026-09-23T21:24:11.000Z",
+        "summary": "## Summary A user who can save a telemetry **screen** (permission `system_set`) can embed JavaScript in a screen `BUTTON` widget. The `BUTTON` widget **`eval()`s the stored button text in the browser** when the button is activated, and scr…",
+        "badge": "CVE-2026-77394",
+        "signal": "HIGH · CVSS 7.6"
       },
       {
         "id": "ai-hugging-face-e9f63aa1f7aaa02f",
@@ -239,24 +238,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244367",
+        "id": "v2ex-1244377",
         "category": "dev",
-        "title": "大家工作打游戏之余，吃饭休闲的时候的电子榨菜/零食是啥",
-        "url": "https://www.v2ex.com/t/1244367",
+        "title": "微信输入法已被移植到 Linux",
+        "url": "https://www.v2ex.com/t/1244377",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T15:56:03.000Z",
-        "summary": "偏爱带点喜剧和历史向的，之前是 铁齿铜牙纪晓岚，康熙微服私访，宰相刘罗锅这类戏说剧 大明王朝，康熙/雍正王朝，大宅门，神探狄仁杰，燕双鹰这类的大男主剧也看完，切片也翻来覆去 然后武林外传，龙门镖局，老友记，我爱我家这种情景剧 相声小品东北赵本山团伙儿、北京郭德纲团伙儿、天津葫芦社、西安青曲社、王自健第二班网上的一些可听的老段子基本上也听完了，现在新的片段一方面可能版权不上传了，一方面曲艺界的创作水平大幅下滑，没什么可看可听的。 脱口秀的话看看早年王自健，目前付航的切片。李诞…",
+        "publishedAt": "2026-09-23T19:01:25.000Z",
+        "summary": "https://github.com/yu1745/wetype-ime-linux 使用了安卓的微信输入法作为底座，使用 qemu 运行其 so ，完全剥离了 Java 部分，不联网，保留了用户输入学习功能，输入一个词之后，再次输入，其权重将提升。最终内存占用 平均 80M 峰值 160M 停止打字之后迅速回落 ,硬盘占用仅 207M ,冷启动 1.5 秒出候选，热状态 70ms 出候选，依赖 Fcitx 框架，UI 复原了 windows 微信输入法的不翻页单行展示候选…",
         "badge": "程序员",
         "signal": "1 回复"
       },
       {
-        "id": "cn-item-f90646e00cbbef74",
+        "id": "cn-item-7623fdada6360837",
         "category": "cn",
-        "title": "神舟二十号、神舟二十一号航天员授称颁奖仪式在京举行",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-23/10702461.shtml",
+        "title": "生态环境法典实施后 涉农环境司法保护如何落地",
+        "url": "https://www.chinanews.com.cn/fz/2026/09-24/10702676.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-23T11:56:02.000Z",
-        "summary": "原标题：神舟二十号、神舟二十一号航天员授称颁奖仪式在京举行 张升民出席并向受褒奖的航天员颁授奖章证书",
+        "publishedAt": "2026-09-23T20:53:54.000Z",
+        "summary": "某村一地块因被人采挖山石销售，形成7个采坑，一审法院对4名被告人以非法采矿罪定罪量刑，驳回了检察机关附带民事公益诉讼诉请，导致生态修复未实际进行。二审法院根据生态环境法典中“损害担责”原则及相关规定，确定本案采取原地覆土并植树、种草的人工修复与自然恢复相结合方案，实现案结事了。这是自8月15日生态环境法典实施以来，河北雄安新区中级人民法院(以下简称“雄安中院”)基于该法典审结的一起环境资源类案件。",
         "badge": "中新网要闻"
       },
       {
@@ -271,45 +270,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-openai-52b80abd4e046c04",
+        "id": "ai-openai-347b65ce144a221e",
         "category": "ai",
-        "title": "Harvey turns legal context into stronger drafts with GPT-6 Astra",
-        "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
+        "title": "Sam Altman’s remarks at the United Nations Security Council",
+        "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
         "source": "OpenAI",
         "publishedAt": "2026-09-23T12:00:00.000Z",
-        "summary": "GPT-6 Astra produces more structured, context-aware legal documents, freeing lawyers to focus on strategy.",
+        "summary": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49820267",
+        "id": "hn-49823348",
         "category": "dev",
-        "title": "Cloud Agents Are Inevitable AI Prisons",
-        "url": "https://normanponte.io/19df691f",
+        "title": "Mercury 2.5 LLM hits 770 tokens per second",
+        "url": "https://artificialanalysis.ai/models/mercury-2-5",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T18:16:41.000Z",
+        "publishedAt": "2026-09-23T22:16:19.000Z",
         "badge": "HN",
-        "signal": "36 分 · 29 评论"
+        "signal": "17 分 · 6 评论"
       },
       {
-        "id": "cn-it-18ce867a5586f5e7",
+        "id": "cn-it-15b7dfdd7cd7d4cb",
         "category": "cn",
-        "title": "华为 WATCH GT Runner 2 智能手表开启 HarmonyOS 7 花粉 Beta 版升级尝鲜招募",
-        "url": "https://www.ithome.com/1/006/508.htm",
+        "title": "OpenAI CEO 奥尔特曼联合国演讲：AI 可能走向文艺复兴，也可能带来工业革命式动荡",
+        "url": "https://www.ithome.com/1/006/521.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-23T15:24:14.000Z",
-        "summary": "IT之家 9 月 23 日消息，华为官方今日宣布， HUAWEI WATCH GT Runner 2 开启 HarmonyOS 7 花粉 Beta 版升级尝鲜招募 。 华为手机 / 平板：【我的华为 / 服务】APP > 首页 > 升级尝鲜（根据提示一键报名） 其他品牌手机 / 平板：微信小程序 >【我的华为】> 点击首页热门活动下对应产品图（根据提示填写信息报名） IT之家附华为 WATCH GT Runner 2 智能手表新版本更新内容如下： 【新增】 1. 系统界面焕…",
+        "publishedAt": "2026-09-23T23:31:33.000Z",
+        "summary": "IT之家 9 月 24 日消息，当地时间 9 月 23 日，OpenAI CEO 萨姆 · 奥尔特曼（Sam Altman）在联合国安理会就 AI 议题发表讲话，讨论 AI 发展带来的机遇与风险，并呼吁加强国际合作，建立针对前沿 AI 系统的能力评估、风险评估、安全防护和人类监督标准。 他表示，随着 AI 能力的快速提升，相关技术的潜在收益和风险都逐渐变得更加直接且显现。他提出，AI 可能更像一场充满创造力与发现的文艺复兴，也可能像一场引发动荡与混乱的工业革命。 奥尔特曼表…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-jjq7-m736-w977",
+        "id": "github-advisory-ghsa-9wh6-9hq7-9688",
         "category": "security",
-        "title": "OpenC3 COSMOS: Authenticated remote code execution via the user-writable config overlay (table definitions, cmd/tlm definitions, and script suites)",
-        "url": "https://github.com/advisories/GHSA-jjq7-m736-w977",
+        "title": "Klever-Go: Validator registration accepts an unvalidated BLS public key → consensus liveness DoS",
+        "url": "https://github.com/advisories/GHSA-9wh6-9hq7-9688",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T18:57:24.000Z",
-        "summary": "### Summary COSMOS reads configuration from a user-writable overlay (`targets_modified/`) before the read-only plugin-installed `targets/` tree, and the config subsystem executes code on those files: `ConfigParser` renders every file as ER…",
-        "badge": "CVE-2026-77602",
-        "signal": "CRITICAL · CVSS 9.9"
+        "publishedAt": "2026-09-23T21:24:08.000Z",
+        "summary": "**Location:** `core/kapp/validators/validators.go:201` (`Register`), (`genesis/checking/nodesSetupChecker.go:73`). `core/consensus/slot/bls/subslotStartSlot.go:165` `core/consensus/.../headerSignatureVerify.go:123` (`Create(...)`). ### Des…",
+        "badge": "CVE-2026-82407",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -321,15 +320,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244361",
+        "id": "v2ex-1244372",
         "category": "dev",
-        "title": "对比了一下 deepseek v4 和 mimo 2.6 的价格",
-        "url": "https://www.v2ex.com/t/1244361",
+        "title": "[自用分享] 折腾了一圈 AI 中转，最后留了个按量透明的",
+        "url": "https://www.v2ex.com/t/1244372",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T14:48:40.000Z",
-        "summary": "Deepseek 平时主要下班和周末个人项目用，参考了最近一个月的 token 消耗和费用，换算到 mimo 之后能省一半呢",
+        "publishedAt": "2026-09-23T16:26:28.000Z",
+        "summary": "各位老哥好，利益相关先声明：我在运营 modelsell.com ，下面是自用体验分享，轻喷。 背景 我是 OpenCode + Claude Code 重度用户，之前 MAX 200 刀的订阅一个多小时就烧完了，被迫转中转。踩过的坑： 某站调 opus，单个任务扣 $7，中转扣 30 多块，跟官方价差不多了 某站充 21 块跑几次 embedding 就没了，账单完全对不上 所以我现在选站就看两点：计费能不能查明细、多模型能不能一个 key 搞定。 现在在用的 model…",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "5 回复"
       },
       {
         "id": "cn-baidu-cfc5c60cadd52237",
@@ -339,7 +338,7 @@
         "source": "百度热搜",
         "summary": "23日，教育部在国务院新闻办发布会上介绍，我国已建成世界规模最大且有质量的教育体系。目前，我国接受过高等教育的人口达2.7亿，基础教育达到高收入国家平均水平，总体近视率连续5年下降。",
         "badge": "热搜",
-        "signal": "7,617,888 热度"
+        "signal": "7,617,973 热度"
       },
       {
         "id": "cisa-kev-cve-2026-7273",
@@ -362,65 +361,65 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49820065",
+        "id": "hn-49817469",
         "category": "dev",
-        "title": "A brief history of Windows scroll bar shortcuts",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/",
+        "title": "Fixing the Portobello Police Station Clock",
+        "url": "https://pointinthecloud.com/2026-04-11-211700.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T18:02:08.000Z",
+        "publishedAt": "2026-09-23T15:18:53.000Z",
         "badge": "HN",
-        "signal": "56 分 · 19 评论"
+        "signal": "368 分 · 84 评论"
       },
       {
-        "id": "cn-item-d8bd2524b7750a65",
+        "id": "cn-item-b93c6e362119c0db",
         "category": "cn",
-        "title": "2026年中国农民丰收节主场活动在湖北枣阳启幕",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-23/10702290.shtml",
+        "title": "警惕套路！利用AI批量生成软文“搭车”引流被判侵权",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-24/10702670.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-23T08:45:24.000Z",
-        "summary": "中新社湖北枣阳9月23日电 (记者 梁婷)秋分时节，湖北襄阳市枣阳市东郊村稻浪翻涌。中国农民丰收节全国主场活动23日在此启幕。",
+        "publishedAt": "2026-09-23T16:18:13.000Z",
+        "summary": "明明搜的是自家产品，跳出来的却是竞争对手的广告？这种“李鬼”变“李逵”的闹剧，如今有了新花样。近日，最高人民法院发布了一起反不正当竞争典型案例，有公司利用AI批量炮制虚假测评文章，专门蹭同行热度，把潜在客户硬生生“拐”到自家店里。这种靠AI技术“搭便车”、截和流量的做法，不仅让消费者晕头转向，还可能涉嫌侵犯他人合法权益、踩法律红线。技术不是挡箭牌，一起来看案件始末。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-vp3w-52v9-q57f",
+        "id": "github-advisory-ghsa-7c7c-373r-gfjj",
         "category": "security",
-        "title": "OpenC3 COSMOS: Authenticated OS command injection via the `pypi_url` setting",
-        "url": "https://github.com/advisories/GHSA-vp3w-52v9-q57f",
+        "title": "Klever-Go: Elasticsearch bulk / painless injection via on-chain account name -> explorer/indexer data forgery",
+        "url": "https://github.com/advisories/GHSA-7c7c-373r-gfjj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T18:51:01.000Z",
-        "summary": "## Summary An authenticated user can execute arbitrary operating system commands on the `openc3-cosmos-cmd-tlm-api` service. The `pypi_url` setting is interpolated, unescaped, into a command line that is run through a shell backtick when a…",
-        "badge": "CVE-2026-77601",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-09-23T21:24:06.000Z",
+        "summary": "**Component:** Elasticsearch indexer (`indexer/`) **Primary location:** `indexer/common.go:2395-2407` (`serializedDataForUpdateAccounts`) **Entry point:** `SetAccountName` native transaction (contract type 12) — `core/process/transaction/t…",
+        "badge": "CVE-2026-82409",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-f2ff7f7605612041",
+        "id": "ai-openai-52b80abd4e046c04",
         "category": "ai",
-        "title": "How invideo improves color grading 3x with GPT‑6 Astra",
-        "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+        "title": "Harvey turns legal context into stronger drafts with GPT-6 Astra",
+        "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
         "source": "OpenAI",
         "publishedAt": "2026-09-23T12:00:00.000Z",
-        "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
+        "summary": "GPT-6 Astra produces more structured, context-aware legal documents, freeing lawyers to focus on strategy.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244343",
+        "id": "v2ex-1244367",
         "category": "dev",
-        "title": "最近重装了系统, 想看看 windows 玩容器 docker 之类有没有新方法",
-        "url": "https://www.v2ex.com/t/1244343",
+        "title": "大家工作打游戏之余，吃饭休闲的时候的电子榨菜/零食是啥",
+        "url": "https://www.v2ex.com/t/1244367",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T12:57:41.000Z",
-        "summary": "如果不装 docker 就更好 有没有什么不修改系统玩容器的方式啊, 绿色的那种 或者微软新搞的 wslc? 有人实战过吗",
+        "publishedAt": "2026-09-23T15:56:03.000Z",
+        "summary": "偏爱带点喜剧和历史向的，之前是 铁齿铜牙纪晓岚，康熙微服私访，宰相刘罗锅这类戏说剧 大明王朝，康熙/雍正王朝，大宅门，神探狄仁杰，燕双鹰这类的大男主剧也看完，切片也翻来覆去 然后武林外传，龙门镖局，老友记，我爱我家这种情景剧 相声小品东北赵本山团伙儿、北京郭德纲团伙儿、天津葫芦社、西安青曲社、王自健第二班网上的一些可听的老段子基本上也听完了，现在新的片段一方面可能版权不上传了，一方面曲艺界的创作水平大幅下滑，没什么可看可听的。 脱口秀的话看看早年王自健，目前付航的切片。李诞…",
         "badge": "程序员",
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-52b8b77dad13bc53",
+        "id": "cn-it-96f14dc7a2a7def8",
         "category": "cn",
-        "title": "迄今最长卫星观测记录：半个世纪极地冰层消失 11.3 万亿吨，海平面上升 3 厘米",
-        "url": "https://www.ithome.com/1/006/506.htm",
+        "title": "苹果推送 watchOS 27.0.1 更新：修复 Apple Watch Series 12/Ultra 4 随机重启故障",
+        "url": "https://www.ithome.com/1/006/520.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-23T15:11:36.000Z",
-        "summary": "IT之家 9 月 23 日消息，研究人员发现，自 20 世纪 70 年代以来，格陵兰岛和南极洲已经累计损失约 11.3 万亿吨极地冰层，规模之大令人震惊。 一个国际科学家团队整理出了迄今最长的卫星观测记录，揭示过去约 50 年间极地冰层流失的真实规模。这份综合记录最早追溯至 1972 年的格陵兰岛和 1979 年的南极洲，一直持续到 2023 年，涵盖 42 项不同的卫星调查以及 27 次卫星任务。 在观测到的 11.3 万亿吨冰损失中，大部分来自格陵兰岛冰盖。 北安普顿大…",
+        "publishedAt": "2026-09-23T23:21:13.000Z",
+        "summary": "IT之家 9 月 24 日消息，科技媒体 AppleInsider 昨日（9 月 23 日）发布博文，报道称苹果公司面向 Apple Watch Series 12 和 Apple Watch Ultra 4 智能手表， 紧急推送 watchOS 27.0.1 更新（24R365），修复随机重启故障。 图源： @吃螃蟹的快乐 IT之家此前报道，部分刚入手 Apple Watch Ultra 4 以及 Apple Watch Series 12 的用户反馈， 设备会出现意外重…",
         "badge": "IT之家"
       },
       {
@@ -445,35 +444,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49819221",
+        "id": "hn-49820496",
         "category": "dev",
-        "title": "Italian parliament votes for return to nuclear energy",
-        "url": "https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567",
+        "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
+        "url": "https://huggingface.co/apple/LensVLM-9B",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T17:06:16.000Z",
+        "publishedAt": "2026-09-23T18:36:29.000Z",
         "badge": "HN",
-        "signal": "300 分 · 173 评论"
+        "signal": "39 分 · 3 评论"
       },
       {
-        "id": "cn-baidu-d96f99a0023281d1",
+        "id": "cn-baidu-1059ef0767e8dcdd",
         "category": "cn",
-        "title": "余额宝将无法直接付款了吗",
-        "url": "https://www.baidu.com/s?wd=%E4%BD%99%E9%A2%9D%E5%AE%9D%E5%B0%86%E6%97%A0%E6%B3%95%E7%9B%B4%E6%8E%A5%E4%BB%98%E6%AC%BE%E4%BA%86%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "特朗普挥手并目送习近平专车离开",
+        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E6%8C%A5%E6%89%8B%E5%B9%B6%E7%9B%AE%E9%80%81%E4%B9%A0%E8%BF%91%E5%B9%B3%E4%B8%93%E8%BD%A6%E7%A6%BB%E5%BC%80&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "据悉，网传9月30日起余额宝、零钱通无法直接付款的传言，为不实信息。余额宝等仍可正常支付，资金流动性未受限。此前，部分自媒体片面理解本月底施行的《金融产品网络营销管理办法》，将调整展示规则误读为禁止支付功能。",
+        "summary": "当地时间9月23日下午，习近平主席乘专机抵达华盛顿，应特朗普邀请对美国进行国事访问。特朗普夫妇赴机场迎接，现场画面显示其挥手目送专车离开，访问将持续至25日。",
         "badge": "热搜",
-        "signal": "7,521,886 热度"
+        "signal": "7,520,546 热度"
       },
       {
-        "id": "github-advisory-ghsa-86wm-r4c5-2rc9",
+        "id": "github-advisory-ghsa-26r5-4mm2-px5c",
         "category": "security",
-        "title": "Wire Swift runtime: negative LENGTH_DELIMITED length in skipGroup() crashes any protobuf-decoding service",
-        "url": "https://github.com/advisories/GHSA-86wm-r4c5-2rc9",
+        "title": "Klever-Go: Zombie-order theft: `Buy` missing `IsClaimed` guard in native marketplace",
+        "url": "https://github.com/advisories/GHSA-26r5-4mm2-px5c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T18:45:52.000Z",
-        "summary": "### Summary Wire's Swift runtime (`Wire` SPM/CocoaPods product, implemented by `wire-runtime-swift`) did not reject a negative `LENGTH_DELIMITED` field length while skipping an unknown protobuf group. A crafted 10-byte protobuf payload cou…",
-        "badge": "CVE-2026-61695",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-23T21:24:03.000Z",
+        "summary": "**Location:** `core/kapp/market/market.go` — `Buy()` (approx. L281–436)\\ **Severity:** High The native marketplace enforces an `IsClaimed` guard in `Claim` (`market.go:752`), `CancelOrder` (`market.go:1125`), and `orderEscrowAmount` (`mark…",
+        "badge": "CVE-2026-82406",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-6b3083011aeb49b1",
@@ -485,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244337",
+        "id": "v2ex-1244361",
         "category": "dev",
-        "title": "在用各种商业指纹浏览器时，敢放核心主账号和 Cookie 吗？",
-        "url": "https://www.v2ex.com/t/1244337",
+        "title": "对比了一下 deepseek v4 和 mimo 2.6 的价格",
+        "url": "https://www.v2ex.com/t/1244361",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-23T12:44:15.000Z",
-        "summary": "最近理了理手里的多环境管理，突然想到一个老生常谈但一直让人犯嘀咕的问题： 市面上绝大多数商业指纹浏览器（ AdsPower 、Hubstudio 、比特、Dolphin 等）基本都是闭源客户端，而且很多配置、环境和 Cookie 默认都会同步到云端。 平时拿来挂挂小号、跑跑批量脚本还好，但如果是价值较高的主号、带资产的钱包、或者核心服务凭证： 大家平时都是直接信任闭源客户端，还是有针对性地做物理/沙盒隔离？ 会不会特意找支持纯本地存储、禁止云端同步配置的工具？ 目前有没有什…",
+        "publishedAt": "2026-09-23T14:48:40.000Z",
+        "summary": "Deepseek 平时主要下班和周末个人项目用，参考了最近一个月的 token 消耗和费用，换算到 mimo 之后能省一半呢",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "4 回复"
       }
     ]
   },
@@ -509,7 +508,7 @@
         "name": "anthropics/financial-services",
         "url": "https://github.com/anthropics/financial-services",
         "language": "Python",
-        "stars": 36873,
+        "stars": 36921,
         "starsToday": 665
       },
       {
@@ -519,7 +518,7 @@
         "url": "https://github.com/google/ax",
         "description": "Google's open agentic orchestration runtime",
         "language": "Go",
-        "stars": 8881,
+        "stars": 9012,
         "starsToday": 1542
       },
       {
@@ -529,7 +528,7 @@
         "url": "https://github.com/davila7/claude-code-templates",
         "description": "CLI tool for configuring and monitoring Claude Code",
         "language": "Python",
-        "stars": 31438,
+        "stars": 31484,
         "starsToday": 393
       },
       {
@@ -539,7 +538,7 @@
         "url": "https://github.com/BuilderIO/agent-native",
         "description": "A framework for building agentic apps",
         "language": "TypeScript",
-        "stars": 6484,
+        "stars": 6524,
         "starsToday": 135
       },
       {
@@ -549,7 +548,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 290623,
+        "stars": 290669,
         "starsToday": 485
       },
       {
@@ -559,7 +558,7 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 16248,
+        "stars": 16311,
         "starsToday": 1140
       },
       {
@@ -569,7 +568,7 @@
         "url": "https://github.com/Open-Dev-Society/OpenStock",
         "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
         "language": "TypeScript",
-        "stars": 18740,
+        "stars": 18800,
         "starsToday": 379
       },
       {
@@ -579,7 +578,7 @@
         "url": "https://github.com/agent-substrate/substrate",
         "description": "Agent Substrate: the core system",
         "language": "Go",
-        "stars": 3422,
+        "stars": 3483,
         "starsToday": 560
       },
       {
@@ -589,7 +588,7 @@
         "url": "https://github.com/strands-agents/harness-sdk",
         "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
         "language": "Python",
-        "stars": 7783,
+        "stars": 7828,
         "starsToday": 96
       },
       {
@@ -599,10 +598,10 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 49866,
+        "stars": 49909,
         "starsToday": 41
       }
     ],
-    "updatedAt": "2026-09-23T20:22:54.586Z"
+    "updatedAt": "2026-09-23T23:42:50.483Z"
   }
 }
