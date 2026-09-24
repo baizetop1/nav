@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-24T10:02:35.297Z",
+  "generatedAt": "2026-09-24T15:07:41.642Z",
   "intelligence": {
-    "updatedAt": "2026-09-24T10:02:35.297Z",
+    "updatedAt": "2026-09-24T15:07:41.642Z",
     "items": [
       {
         "id": "cn-item-7f13c7cb64490cee",
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49826565",
+        "id": "hn-49831201",
         "category": "dev",
-        "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
-        "url": "https://transluce.org/agent-activity",
+        "title": "Dynamic Abliteration: Non-Destructive Refusal Suppression via Engram Steering",
+        "url": "https://blog.madhukaraphatak.in/non-destructive-refusal-supression-using-engram",
         "source": "Hacker News",
-        "publishedAt": "2026-09-24T05:21:10.000Z",
+        "publishedAt": "2026-09-24T14:33:52.000Z",
         "badge": "HN",
-        "signal": "128 分 · 88 评论"
+        "signal": "15 分 · 1 评论"
       },
       {
-        "id": "cn-it-b23c51059af763a9",
+        "id": "cn-it-f807ec4aff1dd98d",
         "category": "cn",
-        "title": "Counterpoint 数据：四足机器人 2026H1 全球出货约 3.5 万台，达 2025 全年 3/4",
-        "url": "https://www.ithome.com/1/006/958.htm",
+        "title": "铭凡推出 MS-01 迷你工作站 SE 降级版：支持 DDR4，取消双 10GbE SFP+",
+        "url": "https://www.ithome.com/1/007/035.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-24T09:57:29.000Z",
-        "summary": "IT之家 9 月 24 日消息，Counterpoint Research 当地时间 21 日发布见解：全球四足机器人出货规模在 2026 年上半年达到约 3.5 万台， 已是 2025 全年水平的 3/4 ；而这 3.5 万台中 40% 面向垂直工业应用。 ▲ 图源：Counterpoint Research 中国制造商仍然主导四足机器人市场 ，宇树科技 (Unitree)、智元酷拓 (AGIQUAD)、智身科技 (Genisom AI)、云深处科技 (DEEP Robo…",
+        "publishedAt": "2026-09-24T15:00:16.000Z",
+        "summary": "IT之家 9 月 24 日消息，MINISFORUM（铭凡）近日推出了其工作站型迷你主机 MS-01 的 SE 衍生变体， 多处配置存在降级或调整 。 这一新款式仅可选英特尔酷睿 i5-12600H 处理器；拥有 2 条 DDR4 SO-DIMM 内存插槽；PCIe Gen4 插槽降至 ×4 通道；后置 I/O 的 2 个 10GbE SFP+ 被替换为 2 个 USB-A 480Mbps；无线网卡调整至联发科 MT7902，支持 Wi-Fi 6E & 蓝牙 5.3。 MS…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-9643-4qgh-g8mx",
+        "id": "github-advisory-ghsa-6rf4-v2fh-m6p4",
         "category": "security",
-        "title": "elysia has Inefficient Algorithmic Complexity and Interpretation Conflict",
-        "url": "https://github.com/advisories/GHSA-9643-4qgh-g8mx",
+        "title": "SunEditor: Critical XSS vulnerability - sanitizer bypass",
+        "url": "https://github.com/advisories/GHSA-6rf4-v2fh-m6p4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T21:54:50.000Z",
-        "summary": "Elysia v1.4.28 is vulnerable to denial-of-service attacks due to CPU exhaustion in the form data normalization code. Elysia uses `getAll` to retrieve value from FormData. It is called directly relative to the total number of key-value pair…",
-        "badge": "CVE-2026-56669",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-24T14:57:55.000Z",
+        "summary": "## Summary SUNEDITOR `v2.47.10` appears to allow JavaScript execution through crafted namespaced HTML elements. The sanitization logic does not fully remove executable event-handler attributes from certain custom/namespaced tags. As a resu…",
+        "badge": "CVE-2026-59167",
+        "signal": "CRITICAL · CVSS 10.0"
       },
       {
         "id": "ai-google-deepmind-68ead6b6af2b7144",
@@ -77,24 +77,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244622",
+        "id": "v2ex-1244647",
         "category": "dev",
-        "title": "Muse 注册有个偏门路子",
-        "url": "https://www.v2ex.com/t/1244622",
+        "title": "Free Qwen3.8-Flash API",
+        "url": "https://www.v2ex.com/t/1244647",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-24T09:38:13.000Z",
-        "summary": "用指纹浏览器+住宅代理， adscrawl.net 实测一次成功，本质就是指纹浏览器 adspower+住宅代理 http://www.adscrawl.net/?ref=090807",
+        "publishedAt": "2026-09-24T11:59:38.000Z",
+        "summary": "Qoder 免费提供 Qwen3.8-Flash ， https://github.com/ufec/CLIProxyAPI （ fork https://github.com/router-for-me/CLIProxyAPI 的）内部已内置了 QoderAuth ，你可以在任意你喜欢的 Agent 中使用 Qwen3.8-Flash 使用愉快！！",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-c303f953ad114b64",
+        "id": "cn-baidu-cdd6f1ba7548da60",
         "category": "cn",
-        "title": "习近平：中美应该成为伙伴而不是对手",
-        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%EF%BC%9A%E4%B8%AD%E7%BE%8E%E5%BA%94%E8%AF%A5%E6%88%90%E4%B8%BA%E4%BC%99%E4%BC%B4%E8%80%8C%E4%B8%8D%E6%98%AF%E5%AF%B9%E6%89%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平出席特朗普举行的欢迎仪式",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%87%BA%E5%B8%AD%E7%89%B9%E6%9C%97%E6%99%AE%E4%B8%BE%E8%A1%8C%E7%9A%84%E6%AC%A2%E8%BF%8E%E4%BB%AA%E5%BC%8F&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,808,604 热度"
+        "signal": "7,809,793 热度"
       },
       {
         "id": "cisa-kev-cve-2026-94127",
@@ -108,23 +108,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-hugging-face-30aa7c0acfe7f380",
+        "id": "ai-hugging-face-280bf64dcca75cee",
         "category": "ai",
-        "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
-        "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
+        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-23T18:41:40.000Z",
+        "publishedAt": "2026-09-24T14:08:57.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49823582",
+        "id": "hn-49828385",
         "category": "dev",
-        "title": "Linux support is coming to Snapdragon X2 Series",
-        "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+        "title": "Nokia Design Archive (2025)",
+        "url": "https://nokiadesignarchive.aalto.fi/index.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T22:38:16.000Z",
+        "publishedAt": "2026-09-24T09:49:33.000Z",
         "badge": "HN",
-        "signal": "410 分 · 174 评论"
+        "signal": "152 分 · 80 评论"
       },
       {
         "id": "cn-item-a8975e2c49c2d1a6",
@@ -137,14 +137,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-wmw4-mw6x-6vfm",
+        "id": "github-advisory-ghsa-9643-4qgh-g8mx",
         "category": "security",
-        "title": "ReactPress has SQL injection via dynamic column names in TypeORM query builders",
-        "url": "https://github.com/advisories/GHSA-wmw4-mw6x-6vfm",
+        "title": "elysia has Inefficient Algorithmic Complexity and Interpretation Conflict",
+        "url": "https://github.com/advisories/GHSA-9643-4qgh-g8mx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T21:51:59.000Z",
-        "summary": "## Summary ReactPress API list endpoints build TypeORM `QueryBuilder` conditions using unsanitized HTTP query parameter *names* as SQL column identifiers (e.g. `` `article.${key}` ``). TypeORM parameterizes values but not column names, all…",
-        "badge": "CVE-2026-61685",
+        "publishedAt": "2026-09-23T21:54:50.000Z",
+        "summary": "Elysia v1.4.28 is vulnerable to denial-of-service attacks due to CPU exhaustion in the form data normalization code. Elysia uses `getAll` to retrieve value from FormData. It is called directly relative to the total number of key-value pair…",
+        "badge": "CVE-2026-56669",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244616",
+        "id": "v2ex-1244631",
         "category": "dev",
-        "title": "看到各种注册 muse ai 的方法，为什么我直接输入邮件和验证码就好了",
-        "url": "https://www.v2ex.com/t/1244616",
+        "title": "新项目： OpenApp 开源了。",
+        "url": "https://www.v2ex.com/t/1244631",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-24T09:19:27.000Z",
-        "summary": "如题，是不是因为我的邮箱注册过 facebook ？",
+        "publishedAt": "2026-09-24T10:18:17.000Z",
+        "summary": "GitHub： https://github.com/seekskyworld/openapp 一句话介绍： 让单用户应用，成为每个人都能独立使用的服务。 很多 Web 工具、AI 工作台、自托管项目，本来已经很好用，但一旦要给更多人使用，就要补账号、权限、多租户、用户环境、部署后台和升级管理。 OpenApp 的思路不是重构业务，而是通过 Adapter ，把这些平台能力抽离出来。 它提供： 独立用户环境：每个用户都有自己的工作区和持久数据。 Adapter 接入：保留原…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-111fa8f711450a31",
+        "id": "cn-it-5c6cf2cbf3b48366",
         "category": "cn",
-        "title": "海外金融巨头 Revolut 推出英国首个线下刷脸支付服务，看镜头笑一笑即可结账",
-        "url": "https://www.ithome.com/1/006/956.htm",
+        "title": "原《星空》首席系统设计师库尔曼：可能不会再有《星空 2》了",
+        "url": "https://www.ithome.com/1/007/034.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-24T09:52:37.000Z",
-        "summary": "IT之家 9 月 24 日消息，据科技媒体 TechRadar 今天报道，海外金融巨头 Revolut 宣布在英国推出“Revolut Pay with Smile”，这是英国首个线下刷脸支付服务。消费者不需要带钱包、信用卡，只需要看着支付终端笑一下，就能完成结账。 据介绍，该服务已率先落地伦敦市中心的 Kiss the Hippo Coffee 咖啡店。 使用刷脸支付的顾客 ， 可享受 1 英镑 （IT之家注：现汇率约合 8.9 元人民币） 特色咖啡优惠 。 要是用这项服…",
+        "publishedAt": "2026-09-24T14:59:43.000Z",
+        "summary": "IT之家 9 月 24 日消息，据外媒 VGC 今天（24 日）晚间报道，曾担任《星空》首席系统设计师的库尔特 · 库尔曼认为，《星空》恐怕不会迎来续作，这个系列也可能因此无法完全实现原本的潜力。 当被问及 B 社未来是否会考虑开发新的《星空》作品时，库尔曼给出了否定的判断。“如果真的推出续作，我会非常惊讶的。我觉得《星空》的成功程度 远远不足以支撑一部《星空 2》 。” 在库尔曼看来，这一结果令人遗憾，因为《星空》没有完全实现总监陶德 · 霍华德最初的构想。“从某种角度看…",
         "badge": "IT之家"
       },
       {
@@ -199,55 +199,55 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49820134",
+        "id": "hn-49805806",
         "category": "dev",
-        "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "title": "Enjoy Every Sandwich",
+        "url": "https://bradmontague.substack.com/p/enjoy-every-sandwich",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T18:06:47.000Z",
+        "publishedAt": "2026-09-22T18:19:25.000Z",
         "badge": "HN",
-        "signal": "652 分 · 670 评论"
+        "signal": "60 分 · 18 评论"
       },
       {
-        "id": "cn-baidu-67dcd182bc4726b1",
+        "id": "cn-baidu-a75daecc52e22336",
         "category": "cn",
-        "title": "80秒看美方高规格迎接",
-        "url": "https://www.baidu.com/s?wd=80%E7%A7%92%E7%9C%8B%E7%BE%8E%E6%96%B9%E9%AB%98%E8%A7%84%E6%A0%BC%E8%BF%8E%E6%8E%A5&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平在白宫欢迎仪式上的致辞",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%9C%A8%E7%99%BD%E5%AE%AB%E6%AC%A2%E8%BF%8E%E4%BB%AA%E5%BC%8F%E4%B8%8A%E7%9A%84%E8%87%B4%E8%BE%9E&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "当地时间9月23日下午，国家主席习近平乘专机抵达华盛顿，应美国总统特朗普邀请，对美国进行国事访问。80秒看美方高规格迎接：美国儿童向习近平和彭丽媛献上鲜花。礼兵分列红毯两侧致敬，军乐团奏中美两国国歌，现场鸣放21响礼炮，战机飞越致敬。",
+        "summary": "当地时间9月24日上午，国家主席习近平出席美国总统特朗普在白宫举行的欢迎仪式。习近平主席发表致辞。",
         "badge": "热搜",
-        "signal": "7,713,115 热度"
+        "signal": "7,711,895 热度"
       },
       {
-        "id": "github-advisory-ghsa-gvf2-2rh5-mpgf",
+        "id": "github-advisory-ghsa-wmw4-mw6x-6vfm",
         "category": "security",
-        "title": "OpenC3 COSMOS: Stored, cross-user XSS via Telemetry screen BUTTON widget",
-        "url": "https://github.com/advisories/GHSA-gvf2-2rh5-mpgf",
+        "title": "ReactPress has SQL injection via dynamic column names in TypeORM query builders",
+        "url": "https://github.com/advisories/GHSA-wmw4-mw6x-6vfm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T21:24:11.000Z",
-        "summary": "## Summary A user who can save a telemetry **screen** (permission `system_set`) can embed JavaScript in a screen `BUTTON` widget. The `BUTTON` widget **`eval()`s the stored button text in the browser** when the button is activated, and scr…",
-        "badge": "CVE-2026-77394",
-        "signal": "HIGH · CVSS 7.6"
+        "publishedAt": "2026-09-23T21:51:59.000Z",
+        "summary": "## Summary ReactPress API list endpoints build TypeORM `QueryBuilder` conditions using unsanitized HTTP query parameter *names* as SQL column identifiers (e.g. `` `article.${key}` ``). TypeORM parameterizes values but not column names, all…",
+        "badge": "CVE-2026-61685",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
+        "id": "ai-hugging-face-30aa7c0acfe7f380",
         "category": "ai",
-        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
-        "url": "https://huggingface.co/blog/evaleval-aisi",
+        "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
+        "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "publishedAt": "2026-09-23T18:41:40.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244593",
+        "id": "v2ex-1244630",
         "category": "dev",
-        "title": "现在程序员找工作，都用什么渠道？",
-        "url": "https://www.v2ex.com/t/1244593",
+        "title": "使用免费云浏览器注册 Muse",
+        "url": "https://www.v2ex.com/t/1244630",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-24T08:14:09.000Z",
-        "summary": "最近找工作有感，发现 BOSS 上推荐的岗位很多都是僵尸岗位，而智联就更不用说了，每天推荐的都是那几个岗位，有时候还会穿插着一些让你做主播的岗位，而且现在外包的岗位超级多，最后感概一下，现在程序员找工作太难了，尤其是加上 35+ 年龄的 buff",
+        "publishedAt": "2026-09-24T10:10:20.000Z",
+        "summary": "都说 Muse 不好注册，刚试了这个可以免费使用的 AdsCrawl 云浏览器，还提供了 US 设置，直接邮箱注册就成功了！！！",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-item-2d55aeddd44fb96e",
@@ -281,35 +281,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49825642",
+        "id": "hn-49828731",
         "category": "dev",
-        "title": "Ideas on modernizing the open-source desktop",
-        "url": "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/",
+        "title": "Two-Tier Encryption in the UK – Identical Apple Devices, Different Protection",
+        "url": "https://macanorak.com/two-tier-encryption-in-the-uk/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-24T02:52:09.000Z",
+        "publishedAt": "2026-09-24T10:39:19.000Z",
         "badge": "HN",
-        "signal": "132 分 · 107 评论"
+        "signal": "188 分 · 121 评论"
       },
       {
-        "id": "cn-it-0ce79d1a2c1f4c1f",
+        "id": "cn-it-160a7a588a0eaf12",
         "category": "cn",
-        "title": "雷神 STATION 系列 AI 工作站 AI Max+ 395 款预约：128GB + 1TB 到手 25499 元",
-        "url": "https://www.ithome.com/1/006/954.htm",
+        "title": "华为鸿蒙 HarmonyOS 7.0.0.109 SP6 版本开启推送，新增智能识别信息内容等功能",
+        "url": "https://www.ithome.com/1/007/033.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-24T09:39:37.000Z",
-        "summary": "IT之家 9 月 24 日消息，雷神 (THUNDEROBOT) 现已在电商平台开启 STATION 系列 AI 工作站 AMD 锐龙 AI Max+ 395 款的预约， 后续还将推出 AMD 锐龙 AI Max+ 495 款 。 AMD 锐龙 AI Max+ 395 款雷神 STATION 系列 AI 工作站拥有 128GB LPDDR5X-8000+ 内存、1TB PCIe Gen4 SSD 存储，新品限时价 26999 元、 国补到手价 25499 元 ，10 月 9…",
+        "publishedAt": "2026-09-24T14:51:41.000Z",
+        "summary": "IT之家 9 月 24 日消息，华为鸿蒙 HarmonyOS 7.0.0.109 SP6 版本今日开启推送，首批面向 Mate 80 系列、Pura 90 系列、nova 16 系列等机型，系统包大小约 702.73MB。据介绍，本次更新优化了部分场景的显示效果，同时提升了整机系统稳定性。 ▲ IT之家开箱：华为 Mate 80 Pro Max 风驰版图赏 IT之家附新版本更新内容如下： 信息 智能识别信息内容 ，挪车提醒、候补车票成功等信息可通过实况窗展示，提醒更及时 关…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-9wh6-9hq7-9688",
+        "id": "github-advisory-ghsa-gvf2-2rh5-mpgf",
         "category": "security",
-        "title": "Klever-Go: Validator registration accepts an unvalidated BLS public key → consensus liveness DoS",
-        "url": "https://github.com/advisories/GHSA-9wh6-9hq7-9688",
+        "title": "OpenC3 COSMOS: Stored, cross-user XSS via Telemetry screen BUTTON widget",
+        "url": "https://github.com/advisories/GHSA-gvf2-2rh5-mpgf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T21:24:08.000Z",
-        "summary": "**Location:** `core/kapp/validators/validators.go:201` (`Register`), (`genesis/checking/nodesSetupChecker.go:73`). `core/consensus/slot/bls/subslotStartSlot.go:165` `core/consensus/.../headerSignatureVerify.go:123` (`Create(...)`). ### Des…",
-        "badge": "CVE-2026-82407",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-23T21:24:11.000Z",
+        "summary": "## Summary A user who can save a telemetry **screen** (permission `system_set`) can embed JavaScript in a screen `BUTTON` widget. The `BUTTON` widget **`eval()`s the stored button text in the browser** when the button is activated, and scr…",
+        "badge": "CVE-2026-77394",
+        "signal": "HIGH · CVSS 7.6"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -321,24 +321,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244588",
+        "id": "v2ex-1244622",
         "category": "dev",
-        "title": "dmit 洛杉矶 补货了！",
-        "url": "https://www.v2ex.com/t/1244588",
+        "title": "Muse 注册有个偏门路子",
+        "url": "https://www.v2ex.com/t/1244622",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-24T08:09:18.000Z",
+        "publishedAt": "2026-09-24T09:38:13.000Z",
+        "summary": "用指纹浏览器+住宅代理， adscrawl.net 实测一次成功，本质就是指纹浏览器 adspower+住宅代理 http://www.adscrawl.net/?ref=090807",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-baidu-1234d142712d78e2",
+        "id": "cn-baidu-65b7f985695b7804",
         "category": "cn",
-        "title": "中国已成为国际旅游最大客源国",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%B7%B2%E6%88%90%E4%B8%BA%E5%9B%BD%E9%99%85%E6%97%85%E6%B8%B8%E6%9C%80%E5%A4%A7%E5%AE%A2%E6%BA%90%E5%9B%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "世界技能大赛究竟比什么",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%96%E7%95%8C%E6%8A%80%E8%83%BD%E5%A4%A7%E8%B5%9B%E7%A9%B6%E7%AB%9F%E6%AF%94%E4%BB%80%E4%B9%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月24日，国新办举行“开局起步‘十五五’”系列主题新闻发布会。发布会上，文化和旅游部有关负责人介绍，我国已经成为国际旅游最大客源国和主要目的地。2025年，入境旅游人次达1.54亿，同比增长17.1%；内地居民出境旅游人次达1.48亿，同比增长20.8%。",
+        "summary": "第48届世界技能大赛9月23日进入开赛首日，从精密制造到数字技术，从匠心手作到智能应用，赛场内外处处是毫厘之间的较量。71位中国选手亮相全部64个项目，向世界展示硬核技艺。",
         "badge": "热搜",
-        "signal": "7,619,373 热度"
+        "signal": "7,617,788 热度"
       },
       {
         "id": "cisa-kev-cve-2026-7273",
@@ -352,23 +353,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-24"
       },
       {
-        "id": "ai-hugging-face-689d78c6e007ab8e",
+        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
         "category": "ai",
-        "title": "Transformers now runs llama.cpp quants",
-        "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+        "url": "https://huggingface.co/blog/evaleval-aisi",
         "source": "Hugging Face",
         "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49802661",
+        "id": "hn-49830866",
         "category": "dev",
-        "title": "RAM: the forgotten history (2024)",
-        "url": "https://blog.coredump.cx/p/memory-the-forgotten-history",
+        "title": "Best LLM for every budget, updated daily",
+        "url": "https://bestmodelforyourbudget.terrydjony.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-22T15:12:17.000Z",
+        "publishedAt": "2026-09-24T14:09:57.000Z",
         "badge": "HN",
-        "signal": "16 分 · 0 评论"
+        "signal": "54 分 · 34 评论"
       },
       {
         "id": "cn-item-a1f15e59f7f940e3",
@@ -381,14 +382,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-7c7c-373r-gfjj",
+        "id": "github-advisory-ghsa-9wh6-9hq7-9688",
         "category": "security",
-        "title": "Klever-Go: Elasticsearch bulk / painless injection via on-chain account name -> explorer/indexer data forgery",
-        "url": "https://github.com/advisories/GHSA-7c7c-373r-gfjj",
+        "title": "Klever-Go: Validator registration accepts an unvalidated BLS public key → consensus liveness DoS",
+        "url": "https://github.com/advisories/GHSA-9wh6-9hq7-9688",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T21:24:06.000Z",
-        "summary": "**Component:** Elasticsearch indexer (`indexer/`) **Primary location:** `indexer/common.go:2395-2407` (`serializedDataForUpdateAccounts`) **Entry point:** `SetAccountName` native transaction (contract type 12) — `core/process/transaction/t…",
-        "badge": "CVE-2026-82409",
+        "publishedAt": "2026-09-23T21:24:08.000Z",
+        "summary": "**Location:** `core/kapp/validators/validators.go:201` (`Register`), (`genesis/checking/nodesSetupChecker.go:73`). `core/consensus/slot/bls/subslotStartSlot.go:165` `core/consensus/.../headerSignatureVerify.go:123` (`Create(...)`). ### Des…",
+        "badge": "CVE-2026-82407",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -402,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244568",
+        "id": "v2ex-1244616",
         "category": "dev",
-        "title": "AI 量化",
-        "url": "https://www.v2ex.com/t/1244568",
+        "title": "看到各种注册 muse ai 的方法，为什么我直接输入邮件和验证码就好了",
+        "url": "https://www.v2ex.com/t/1244616",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-24T07:18:02.000Z",
-        "summary": "很多人都在用 ai 量化，或者分析各种财报，各种小工具一大堆，请问实际使用情况下，有盈利吗，收益如何。很焦虑，感觉大家都在疯狂地赚钱",
+        "publishedAt": "2026-09-24T09:19:27.000Z",
+        "summary": "如题，是不是因为我的邮箱注册过 facebook ？",
         "badge": "程序员",
         "signal": "3 回复"
       },
       {
-        "id": "cn-it-b75c0f3e6f1bb8cb",
+        "id": "cn-it-ad66f55f7442f07c",
         "category": "cn",
-        "title": "国家金融监督管理总局：2025 年我国交强险赔付 2524 亿元，3.47 亿辆汽车参保",
-        "url": "https://www.ithome.com/1/006/953.htm",
+        "title": "消息称《帝国时代》开发商 World's Edge 取消开发新作，近半数员工被裁",
+        "url": "https://www.ithome.com/1/007/032.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-24T09:34:17.000Z",
-        "summary": "IT之家 9 月 24 日消息，国家金融监督管理总局今天（24 日）发文披露，2025 年，国家金融监督管理总局持续指导保险业提升交强险保障功能，积极承担社会责任，助力筑牢民生保障底线，更好服务经济社会发展。 IT之家从数据中获悉，2025 年交强险覆盖面持续扩大， 参保机动车数量达 3.86 亿辆 ，同比增长 3.8%。其中，汽车参保数量共计 3.47 亿辆，同比增长 3.9%。 风险保障能力有效加强，当年交强险保障金额达 76.8 万亿元，同比增长 3.4%。 当年赔付…",
+        "publishedAt": "2026-09-24T14:44:32.000Z",
+        "summary": "IT之家 9 月 24 日消息，据游戏媒体 Insider Gaming 今天报道，多名前员工透露，World's Edge 工作室已取消开发新作。 据报道，World's Edge 为微软 XBOX 旗下，曾开发《帝国时代》系列游戏。在微软前天的新一轮裁员下， World's Edge 近一半员工被裁 ，工作室本身被规划为动视管理。 目前我们还无法确认 World's Edge 的这款被砍作品是否为《帝国时代》新作。不过至少可以确定的是，这款作品应该是一款全新即时战略游戏…",
         "badge": "IT之家"
       },
       {
@@ -444,55 +445,55 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49823664",
+        "id": "hn-49823582",
         "category": "dev",
-        "title": "ArXiv receives multiyear commitments to support it as an independent nonprofit",
-        "url": "https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/",
+        "title": "Linux support is coming to Snapdragon X2 Series",
+        "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
         "source": "Hacker News",
-        "publishedAt": "2026-09-23T22:45:49.000Z",
+        "publishedAt": "2026-09-23T22:38:16.000Z",
         "badge": "HN",
-        "signal": "184 分 · 20 评论"
+        "signal": "540 分 · 221 评论"
       },
       {
-        "id": "cn-baidu-4a921b5e44d37f3c",
+        "id": "cn-baidu-2840b1ddbed84b64",
         "category": "cn",
-        "title": "陪看亚运乒乓男团决赛：中国vs日本",
-        "url": "https://www.baidu.com/s?wd=%E9%99%AA%E7%9C%8B%E4%BA%9A%E8%BF%90%E4%B9%92%E4%B9%93%E7%94%B7%E5%9B%A2%E5%86%B3%E8%B5%9B%EF%BC%9A%E4%B8%AD%E5%9B%BDvs%E6%97%A5%E6%9C%AC&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平主席车队抵达白宫",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E4%B8%BB%E5%B8%AD%E8%BD%A6%E9%98%9F%E6%8A%B5%E8%BE%BE%E7%99%BD%E5%AE%AB&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月24日，爱知·名古屋亚运会乒乓球男子团体决赛，中国队对阵东道主日本队。王楚钦领衔，目标只有一个——男团金牌、亚运九连冠！关注直播，一起为国乒刷屏助威！",
+        "summary": "当地时间9月24日上午，国家主席习近平和夫人彭丽媛乘车抵达白宫，出席美国总统特朗普举行的欢迎仪式。",
         "badge": "热搜",
-        "signal": "7,522,754 热度"
+        "signal": "7,520,600 热度"
       },
       {
-        "id": "github-advisory-ghsa-26r5-4mm2-px5c",
+        "id": "github-advisory-ghsa-7c7c-373r-gfjj",
         "category": "security",
-        "title": "Klever-Go: Zombie-order theft: `Buy` missing `IsClaimed` guard in native marketplace",
-        "url": "https://github.com/advisories/GHSA-26r5-4mm2-px5c",
+        "title": "Klever-Go: Elasticsearch bulk / painless injection via on-chain account name -> explorer/indexer data forgery",
+        "url": "https://github.com/advisories/GHSA-7c7c-373r-gfjj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-23T21:24:03.000Z",
-        "summary": "**Location:** `core/kapp/market/market.go` — `Buy()` (approx. L281–436)\\ **Severity:** High The native marketplace enforces an `IsClaimed` guard in `Claim` (`market.go:752`), `CancelOrder` (`market.go:1125`), and `orderEscrowAmount` (`mark…",
-        "badge": "CVE-2026-82406",
+        "publishedAt": "2026-09-23T21:24:06.000Z",
+        "summary": "**Component:** Elasticsearch indexer (`indexer/`) **Primary location:** `indexer/common.go:2395-2407` (`serializedDataForUpdateAccounts`) **Entry point:** `SetAccountName` native transaction (contract type 12) — `core/process/transaction/t…",
+        "badge": "CVE-2026-82409",
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-6b3083011aeb49b1",
+        "id": "ai-hugging-face-689d78c6e007ab8e",
         "category": "ai",
-        "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
-        "url": "https://huggingface.co/blog/omlx",
+        "title": "Transformers now runs llama.cpp quants",
+        "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
         "source": "Hugging Face",
         "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244557",
+        "id": "v2ex-1244593",
         "category": "dev",
-        "title": "这次我们推出了全新的 Agent Harness，并且发布了新的桌面端 0.3.3",
-        "url": "https://www.v2ex.com/t/1244557",
+        "title": "现在程序员找工作，都用什么渠道？",
+        "url": "https://www.v2ex.com/t/1244593",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-24T06:58:21.000Z",
-        "summary": "https://github.com/golutra/golutra-agent 它的目标很简单： 让 Agent 更简单、更快、更省 Token ，同时让 Agent 的运行过程真正可观测。 核心特性： • 简单易用：尽可能减少复杂的抽象，让 Agent Loop 回归本质 • Token 高效：精简上下文与工具交互，减少不必要的 Token 消耗 • 快速：轻量的 Harness ，不给 Agent Loop 增加额外负担 • 完整可观测：Event 、Tool Cal…",
+        "publishedAt": "2026-09-24T08:14:09.000Z",
+        "summary": "最近找工作有感，发现 BOSS 上推荐的岗位很多都是僵尸岗位，而智联就更不用说了，每天推荐的都是那几个岗位，有时候还会穿插着一些让你做主播的岗位，而且现在外包的岗位超级多，最后感概一下，现在程序员找工作太难了，尤其是加上 35+ 年龄的 buff",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "12 回复"
       }
     ]
   },
@@ -503,105 +504,105 @@
     },
     "items": [
       {
-        "id": "github-041b95968690360d",
+        "id": "github-2fe557721be7835e",
         "rank": 1,
-        "name": "anthropics/financial-services",
-        "url": "https://github.com/anthropics/financial-services",
+        "name": "rohitg00/ai-engineering-from-scratch",
+        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+        "description": "Learn it. Build it. Ship it for others.",
         "language": "Python",
-        "stars": 37174,
-        "starsToday": 664
+        "stars": 56104,
+        "starsToday": 310
       },
       {
-        "id": "github-9442edb1a4e4e270",
+        "id": "github-57687486696d1493",
         "rank": 2,
-        "name": "google/ax",
-        "url": "https://github.com/google/ax",
-        "description": "Google's open agentic orchestration runtime",
-        "language": "Go",
-        "stars": 9609,
-        "starsToday": 1543
-      },
-      {
-        "id": "github-59e2238b6e883dd3",
-        "rank": 3,
-        "name": "davila7/claude-code-templates",
-        "url": "https://github.com/davila7/claude-code-templates",
-        "description": "CLI tool for configuring and monitoring Claude Code",
+        "name": "vectorize-io/hindsight",
+        "url": "https://github.com/vectorize-io/hindsight",
+        "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 31668,
-        "starsToday": 389
-      },
-      {
-        "id": "github-ee2eebaaf777f8ef",
-        "rank": 4,
-        "name": "BuilderIO/agent-native",
-        "url": "https://github.com/BuilderIO/agent-native",
-        "description": "A framework for building agentic apps",
-        "language": "TypeScript",
-        "stars": 6727,
-        "starsToday": 87
-      },
-      {
-        "id": "github-4251a228ae407247",
-        "rank": 5,
-        "name": "obra/superpowers",
-        "url": "https://github.com/obra/superpowers",
-        "description": "An agentic skills framework & software development methodology that works.",
-        "language": "Shell",
-        "stars": 290940,
-        "starsToday": 474
+        "stars": 27168,
+        "starsToday": 1607
       },
       {
         "id": "github-5b2653ab79f36aef",
-        "rank": 6,
+        "rank": 3,
         "name": "dream-num/univer",
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 16640,
-        "starsToday": 1142
+        "stars": 17234,
+        "starsToday": 1060
       },
       {
-        "id": "github-3fb22e26432bc598",
-        "rank": 7,
-        "name": "Open-Dev-Society/OpenStock",
-        "url": "https://github.com/Open-Dev-Society/OpenStock",
-        "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
-        "language": "TypeScript",
-        "stars": 19069,
-        "starsToday": 344
-      },
-      {
-        "id": "github-9b8aac3b47fa817a",
-        "rank": 8,
-        "name": "agent-substrate/substrate",
-        "url": "https://github.com/agent-substrate/substrate",
-        "description": "Agent Substrate: the core system",
+        "id": "github-9442edb1a4e4e270",
+        "rank": 4,
+        "name": "google/ax",
+        "url": "https://github.com/google/ax",
+        "description": "Google's open agentic orchestration runtime",
         "language": "Go",
-        "stars": 3662,
-        "starsToday": 558
+        "stars": 9878,
+        "starsToday": 1376
       },
       {
-        "id": "github-e0b6405937538663",
-        "rank": 9,
-        "name": "strands-agents/harness-sdk",
-        "url": "https://github.com/strands-agents/harness-sdk",
-        "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+        "id": "github-b0c9659bf6e19858",
+        "rank": 5,
+        "name": "NVIDIA/Model-Optimizer",
+        "url": "https://github.com/NVIDIA/Model-Optimizer",
+        "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
         "language": "Python",
-        "stars": 8036,
-        "starsToday": 115
+        "stars": 3928,
+        "starsToday": 22
+      },
+      {
+        "id": "github-b87e9d9137ef35f5",
+        "rank": 6,
+        "name": "FxEmbed/FxEmbed",
+        "url": "https://github.com/FxEmbed/FxEmbed",
+        "description": "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
+        "language": "TypeScript",
+        "stars": 5294,
+        "starsToday": 165
+      },
+      {
+        "id": "github-041b95968690360d",
+        "rank": 7,
+        "name": "anthropics/financial-services",
+        "url": "https://github.com/anthropics/financial-services",
+        "language": "Python",
+        "stars": 37244,
+        "starsToday": 510
       },
       {
         "id": "github-6cad99e48ae79e8b",
-        "rank": 10,
+        "rank": 8,
         "name": "HKUDS/CLI-Anything",
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 50116,
-        "starsToday": 57
+        "stars": 50195,
+        "starsToday": 415
+      },
+      {
+        "id": "github-9581560c8fcedaf6",
+        "rank": 9,
+        "name": "mvt-project/mvt",
+        "url": "https://github.com/mvt-project/mvt",
+        "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+        "language": "Python",
+        "stars": 14628,
+        "starsToday": 275
+      },
+      {
+        "id": "github-4251a228ae407247",
+        "rank": 10,
+        "name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework & software development methodology that works.",
+        "language": "Shell",
+        "stars": 291052,
+        "starsToday": 606
       }
     ],
-    "updatedAt": "2026-09-24T10:02:35.297Z"
+    "updatedAt": "2026-09-24T15:07:41.642Z"
   }
 }
