@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-25T18:37:45.069Z",
+  "generatedAt": "2026-09-25T22:21:44.920Z",
   "intelligence": {
-    "updatedAt": "2026-09-25T18:37:45.069Z",
+    "updatedAt": "2026-09-25T22:21:44.920Z",
     "items": [
       {
         "id": "cn-item-e74f7f60462091db",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49843269",
+        "id": "hn-49848269",
         "category": "dev",
-        "title": "Platform-Independent SIMD in Go",
-        "url": "https://go.dev/blog/simd-experiment",
+        "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+        "url": "https://ollaya.dev/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T11:47:06.000Z",
+        "publishedAt": "2026-09-25T18:33:50.000Z",
         "badge": "HN",
-        "signal": "276 分 · 99 评论"
+        "signal": "233 分 · 76 评论"
       },
       {
         "id": "cn-it-34ee765ba7d8ca2d",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-g7vj-c29h-3h5m",
+        "id": "github-advisory-ghsa-q986-4x7x-gx39",
         "category": "security",
-        "title": "FriendsOfFlarum OAuth: Unauthenticated account takeover via unverified email trust in Discord OAuth provider",
-        "url": "https://github.com/advisories/GHSA-g7vj-c29h-3h5m",
+        "title": "SCBE-AETHERMOORE Unauthenticated AetherBrowser Ops API Exposes Operator Email Digests",
+        "url": "https://github.com/advisories/GHSA-q986-4x7x-gx39",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T15:55:07.000Z",
-        "summary": "### Impact An unauthenticated account takeover vulnerability exists in `fof/oauth` when the Discord OAuth provider is enabled. Discord allows an account to use an unverified email address when its phone number has been verified. During OAu…",
-        "badge": "CVE-2026-92161",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-09-25T21:48:03.000Z",
+        "summary": "### Summary The AetherBrowser API server (`scripts/aetherbrowser/api_server.py`) exposes the `POST /api/ops/check-email` endpoint without any authentication. Any remote attacker can call this endpoint and trigger execution of the `email_re…",
+        "badge": "CVE-2026-57443",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-34692efacd3b982a",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244814",
+        "id": "v2ex-1244818",
         "category": "dev",
-        "title": "独立开发产品无收入，有必要买 Claude Max 吗",
-        "url": "https://www.v2ex.com/t/1244814",
+        "title": "[开源] 基于 Edge TTS 的语音合成服务，兼容 OpenAI 音频接口",
+        "url": "https://www.v2ex.com/t/1244818",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T18:09:00.000Z",
-        "summary": "现在是一个 20 的 codex 和一个 20 刀的 Claude 体感是 codex 干不了什么需求就没额度了，Claude 还行。 但是加起来 40 刀，做独立开发的进度就很慢。 但是有时候忙起来，没时间 vibe coding ，也会有一周下来额度还剩一大半的情况。 同时考虑到自己开发的产品没收入，还有一些本以为 2 个月能上线结果半年没上线的产品。 在想是不是应该直接上个 Claude Max ，然后快速把产品推上线看看。 但根据经验，现在是产品比用户多，所以对于自…",
+        "publishedAt": "2026-09-25T19:38:52.000Z",
+        "summary": "项目地址： https://github.com/DejavuMoe/edgeTTS 这是一个用 Edge TTS 免费接口封装的语音合成服务 特性： 协议兼容：支持 OpenAI 标准 /v1/audio/speech 格式，现有客户端改个 Base URL 即可使用 长文本处理：内置分段切片与音频流拼接，解决长文本请求容易失败的问题 支持声音映射与参数微调 Docker 镜像一键部署",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-cc0a72badb54e550",
@@ -93,7 +93,7 @@
         "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%9C%86%E6%BB%A1%E7%BB%93%E6%9D%9F%E5%AF%B9%E7%BE%8E%E5%9B%BD%E7%9A%84%E5%9B%BD%E4%BA%8B%E8%AE%BF%E9%97%AE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,808,642 热度"
+        "signal": "7,808,594 热度"
       },
       {
         "id": "cisa-kev-cve-2026-65660",
@@ -116,14 +116,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49843174",
+        "id": "hn-49849985",
         "category": "dev",
-        "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
-        "url": "https://github.com/git-bug/git-bug",
+        "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+        "url": "https://swarmtraces.org/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T11:38:31.000Z",
+        "publishedAt": "2026-09-25T21:09:27.000Z",
         "badge": "HN",
-        "signal": "225 分 · 74 评论"
+        "signal": "35 分 · 9 评论"
       },
       {
         "id": "cn-item-34c0ca6cbff1ca40",
@@ -136,15 +136,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-v65j-hff3-753c",
+        "id": "github-advisory-ghsa-vj8p-hp9x-gh47",
         "category": "security",
-        "title": "Mediawiki EmbedVideo Extension has stored XSS via malformed src url with $wgEmbedVideoRequireConsent disabled",
-        "url": "https://github.com/advisories/GHSA-v65j-hff3-753c",
+        "title": "mpp vulnerable to Gas Draining with low gas limit",
+        "url": "https://github.com/advisories/GHSA-vj8p-hp9x-gh47",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T15:03:43.000Z",
-        "summary": "### Summary With $wgEmbedVideoRequireConsent disabled (not the default), the urls for videos are passed into an iframe src attribute without sanitization. When given a malformed url or id, the src attribute can be escaped via double quotes…",
-        "badge": "CVE-2026-57440",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-25T21:47:36.000Z",
+        "summary": "## Vulnerability When the server acts as the fee payer, `mpp` Elixir 0.4.0 (ZenHive/mpp) does not validate whether the `gas_limit` set by the client is enough before broadcasting. A malicious client can drain the server's gas without payin…",
+        "badge": "GHSA-VJ8P-HP9X-GH47",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-52e46e8371e1f699",
@@ -155,6 +155,88 @@
         "publishedAt": "2026-09-23T16:00:00.000Z",
         "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
         "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1244814",
+        "category": "dev",
+        "title": "独立开发产品无收入，有必要买 Claude Max 吗",
+        "url": "https://www.v2ex.com/t/1244814",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-09-25T18:09:00.000Z",
+        "summary": "现在是一个 20 的 codex 和一个 20 刀的 Claude 体感是 codex 干不了什么需求就没额度了，Claude 还行。 但是加起来 40 刀，做独立开发的进度就很慢。 但是有时候忙起来，没时间 vibe coding ，也会有一周下来额度还剩一大半的情况。 同时考虑到自己开发的产品没收入，还有一些本以为 2 个月能上线结果半年没上线的产品。 在想是不是应该直接上个 Claude Max ，然后快速把产品推上线看看。 但根据经验，现在是产品比用户多，所以对于自…",
+        "badge": "程序员",
+        "signal": "8 回复"
+      },
+      {
+        "id": "cn-it-5ab81c978d6d95fa",
+        "category": "cn",
+        "title": "畅销小说被指用 AI 创作，法国最有名文学奖龚古尔奖将其移出初选名单",
+        "url": "https://www.ithome.com/1/007/252.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-09-25T15:33:07.000Z",
+        "summary": "IT之家 9 月 25 日消息，据路透社报道，当地时间 25 日，法国最负盛名的文学奖项 —— 龚古尔奖主办方宣布，将海地裔加拿大作家泰利森 · 奥雷利安的畅销小说《C'etait Ca ou Mourir（要么就这样，要么死）》移出初选名单，原因是有人指控奥雷利安使用 AI 创作该书。 奥雷利安否认使用 AI 写作。围绕他的指控随后引发了有关种族、文学价值和原创性的争论，法国文学界也因此出现一场风波。 指控最早由鲜为人知的 X 账号“Balance ton Claude”…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2026-87902",
+        "category": "security",
+        "title": "WordPress Core：WordPress Core Remote File Inclusion Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87902",
+        "source": "CISA KEV",
+        "publishedAt": "2026-09-25T00:00:00.000Z",
+        "summary": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remot…",
+        "badge": "CVE-2026-87902",
+        "signal": "已遭利用 · 整改期限 2026-09-28"
+      },
+      {
+        "id": "ai-google-deepmind-68ead6b6af2b7144",
+        "category": "ai",
+        "title": "Advancing Private AI Compute with secure, server-side memory",
+        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-23T16:00:57.000Z",
+        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49843269",
+        "category": "dev",
+        "title": "Platform-independent SIMD in Go",
+        "url": "https://go.dev/blog/simd-experiment",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-25T11:47:06.000Z",
+        "badge": "HN",
+        "signal": "333 分 · 125 评论"
+      },
+      {
+        "id": "cn-baidu-f193fcf487f23751",
+        "category": "cn",
+        "title": "进一步丰富中美关系定位的内涵",
+        "url": "https://www.baidu.com/s?wd=%E8%BF%9B%E4%B8%80%E6%AD%A5%E4%B8%B0%E5%AF%8C%E4%B8%AD%E7%BE%8E%E5%85%B3%E7%B3%BB%E5%AE%9A%E4%BD%8D%E7%9A%84%E5%86%85%E6%B6%B5&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "当地时间9月25日上午，国家主席习近平和夫人彭丽媛同美国总统特朗普和夫人梅拉尼娅在白宫举行茶叙。两国元首同意进一步丰富中美关系定位的内涵，共同构建“基于尊重、公平、对等的建设性战略稳定关系”。",
+        "badge": "热搜",
+        "signal": "7,712,665 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-vv77-66rf-pm86",
+        "category": "security",
+        "title": "mpp vulnerable to Gas Draining with no limit",
+        "url": "https://github.com/advisories/GHSA-vv77-66rf-pm86",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-25T21:44:12.000Z",
+        "summary": "### Details When the server acts as the fee_payer, the `mpp` Elixir 0.4.0 does not validate `gas_limit`, `max_fee_per_gas` and `max_priority_fee_per_gas` before cosigning the client's fee-payer transaction. A malicious client embeds arbitr…",
+        "badge": "GHSA-VV77-66RF-PM86",
+        "signal": "HIGH · CVSS 0.0"
+      },
+      {
+        "id": "ai-hugging-face-30aa7c0acfe7f380",
+        "category": "ai",
+        "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
+        "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-23T18:41:40.000Z",
+        "badge": "Hugging Face"
       },
       {
         "id": "v2ex-1244806",
@@ -168,14 +250,14 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-5ab81c978d6d95fa",
+        "id": "cn-item-0ff777e20e81dc62",
         "category": "cn",
-        "title": "畅销小说被指用 AI 创作，法国最有名文学奖龚古尔奖将其移出初选名单",
-        "url": "https://www.ithome.com/1/007/252.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-09-25T15:33:07.000Z",
-        "summary": "IT之家 9 月 25 日消息，据路透社报道，当地时间 25 日，法国最负盛名的文学奖项 —— 龚古尔奖主办方宣布，将海地裔加拿大作家泰利森 · 奥雷利安的畅销小说《C'etait Ca ou Mourir（要么就这样，要么死）》移出初选名单，原因是有人指控奥雷利安使用 AI 创作该书。 奥雷利安否认使用 AI 写作。围绕他的指控随后引发了有关种族、文学价值和原创性的争论，法国文学界也因此出现一场风波。 指控最早由鲜为人知的 X 账号“Balance ton Claude”…",
-        "badge": "IT之家"
+        "title": "一生一“世”：世赛只限一次，赛场之外仍是技能人生",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-25/10703856.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-09-25T13:57:00.000Z",
+        "summary": "中新网上海9月25日电(田静)世界技能大赛(以下简称“世赛”)有一项特殊规则：选手一生仅能参加一次世赛决赛。",
+        "badge": "中新网要闻"
       },
       {
         "id": "cisa-kev-cve-2026-5430",
@@ -189,54 +271,54 @@
         "signal": "已遭利用 · 整改期限 2026-09-27"
       },
       {
-        "id": "ai-google-deepmind-68ead6b6af2b7144",
+        "id": "ai-openai-9328fa400dd37e6b",
         "category": "ai",
-        "title": "Advancing Private AI Compute with secure, server-side memory",
-        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-23T16:00:57.000Z",
-        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
-        "badge": "Google DeepMind"
+        "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+        "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-23T13:00:00.000Z",
+        "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+        "badge": "OpenAI"
       },
       {
-        "id": "hn-49844736",
+        "id": "hn-49843174",
         "category": "dev",
-        "title": "First Principles Thinking",
-        "url": "https://sunilsadasivan.com/writing/first-principles-thinking/",
+        "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
+        "url": "https://github.com/git-bug/git-bug",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T13:55:37.000Z",
+        "publishedAt": "2026-09-25T11:38:31.000Z",
         "badge": "HN",
-        "signal": "120 分 · 54 评论"
+        "signal": "277 分 · 92 评论"
       },
       {
-        "id": "cn-baidu-f193fcf487f23751",
+        "id": "cn-it-f26eac9e5e506a65",
         "category": "cn",
-        "title": "进一步丰富中美关系定位的内涵",
-        "url": "https://www.baidu.com/s?wd=%E8%BF%9B%E4%B8%80%E6%AD%A5%E4%B8%B0%E5%AF%8C%E4%B8%AD%E7%BE%8E%E5%85%B3%E7%B3%BB%E5%AE%9A%E4%BD%8D%E7%9A%84%E5%86%85%E6%B6%B5&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "当地时间9月25日上午，国家主席习近平和夫人彭丽媛同美国总统特朗普和夫人梅拉尼娅在白宫举行茶叙。两国元首同意进一步丰富中美关系定位的内涵，共同构建“基于尊重、公平、对等的建设性战略稳定关系”。",
-        "badge": "热搜",
-        "signal": "7,713,480 热度"
+        "title": "首个入驻纽约时代广场的中国影像品牌，影石首家美国旗舰店开业",
+        "url": "https://www.ithome.com/1/007/251.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-09-25T15:23:52.000Z",
+        "summary": "IT之家 9 月 25 日消息，影石今日宣布，首家美国旗舰店于纽约时代广场正式开业。据此前官方介绍，这也是首个在纽约时代广场开业的 中国影像品牌 。截至目前，影石在全球体验零售店已超 10000 家，品牌旗舰店超 300 家。 IT之家注意到，国际数据公司（IDC） 9 月 23 日发布 2026 年二季度全球手持智能影像设备市场数据 。期内全球销量达 588.7 万台，同比增长 57.24%；销售额 156.89 亿元人民币。其中云台相机增长最快，销量同比激增 86.9%…",
+        "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-qxg3-46rw-79j8",
+        "id": "github-advisory-ghsa-wrvw-254r-wpmv",
         "category": "security",
-        "title": "code16 Sharp vulnerable to stored XSS via iframe srcdoc Attribute",
-        "url": "https://github.com/advisories/GHSA-qxg3-46rw-79j8",
+        "title": "CliInvoke.Specializations has command injection in PowerShell and Cmd shell wrappers",
+        "url": "https://github.com/advisories/GHSA-wrvw-254r-wpmv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T15:02:11.000Z",
-        "summary": "### Impact A Stored Cross-Site Scripting (XSS) vulnerability exists in the rich text editor due to improper sanitization of the srcdoc attribute on elements. While the underlying Symfony HtmlSanitizer correctly HTML-encodes special charact…",
-        "badge": "CVE-2026-61823",
-        "signal": "HIGH · CVSS 7.3"
+        "publishedAt": "2026-09-25T21:41:48.000Z",
+        "summary": "### Impact An OS command injection vulnerability exists in the PowerShell and Cmd shell wrappers provided by the `CliInvoke.Specializations` package (the `PowershellProcessInvoker`/`CmdProcessInvoker` invokers, and the `UsePowerShell`/`Use…",
+        "badge": "CVE-2026-100368",
+        "signal": "HIGH · CVSS 8.4"
       },
       {
-        "id": "ai-hugging-face-30aa7c0acfe7f380",
+        "id": "ai-google-deepmind-81481aa316e38773",
         "category": "ai",
-        "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
-        "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-23T18:41:40.000Z",
-        "badge": "Hugging Face"
+        "title": "Gemini 3.8 text-to-speech says hello",
+        "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-23T15:25:14.000Z",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1244801",
@@ -250,14 +332,14 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-item-0ff777e20e81dc62",
+        "id": "cn-baidu-f07bad6a529b9b09",
         "category": "cn",
-        "title": "一生一“世”：世赛只限一次，赛场之外仍是技能人生",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-25/10703856.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-09-25T13:57:00.000Z",
-        "summary": "中新网上海9月25日电(田静)世界技能大赛(以下简称“世赛”)有一项特殊规则：选手一生仅能参加一次世赛决赛。",
-        "badge": "中新网要闻"
+        "title": "平陆运河首条外贸航线首艘货船抵越",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%B3%E9%99%86%E8%BF%90%E6%B2%B3%E9%A6%96%E6%9D%A1%E5%A4%96%E8%B4%B8%E8%88%AA%E7%BA%BF%E9%A6%96%E8%89%98%E8%B4%A7%E8%88%B9%E6%8A%B5%E8%B6%8A&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "9月24日，平陆运河首条外贸航线“中国南宁港至越南芹苴港”航线货船抵港仪式在芹苴市举行，中越业内人士共同迎接首艘抵达芹苴港的国际江海联运集装箱船舶“北港南宁博润”轮。",
+        "badge": "热搜",
+        "signal": "7,619,103 热度"
       },
       {
         "id": "cisa-kev-cve-2026-71362",
@@ -271,54 +353,54 @@
         "signal": "已遭利用 · 整改期限 2026-09-27"
       },
       {
-        "id": "ai-openai-9328fa400dd37e6b",
+        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
         "category": "ai",
-        "title": "OpenAI extends cyber access to Ukraine for civilian defense",
-        "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-23T13:00:00.000Z",
-        "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
-        "badge": "OpenAI"
+        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+        "url": "https://huggingface.co/blog/evaleval-aisi",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-49841285",
+        "id": "hn-49845172",
         "category": "dev",
-        "title": "Pentium II at 600Mhz with Voodoo 3 Emulated on 86Box with M6 Mac Mini",
-        "url": "https://nyaa.sh/reviews/mac-mini-m6-emulation",
+        "title": "Show HN: Jev Plays Pokémon Red",
+        "url": "https://jev-pokemon.vercel.app/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T07:27:45.000Z",
+        "publishedAt": "2026-09-25T14:28:07.000Z",
         "badge": "HN",
-        "signal": "217 分 · 96 评论"
+        "signal": "86 分 · 43 评论"
       },
       {
-        "id": "cn-it-f26eac9e5e506a65",
+        "id": "cn-item-e4bbc3fac82cf2e2",
         "category": "cn",
-        "title": "首个入驻纽约时代广场的中国影像品牌，影石首家美国旗舰店开业",
-        "url": "https://www.ithome.com/1/007/251.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-09-25T15:23:52.000Z",
-        "summary": "IT之家 9 月 25 日消息，影石今日宣布，首家美国旗舰店于纽约时代广场正式开业。据此前官方介绍，这也是首个在纽约时代广场开业的 中国影像品牌 。截至目前，影石在全球体验零售店已超 10000 家，品牌旗舰店超 300 家。 IT之家注意到，国际数据公司（IDC） 9 月 23 日发布 2026 年二季度全球手持智能影像设备市场数据 。期内全球销量达 588.7 万台，同比增长 57.24%；销售额 156.89 亿元人民币。其中云台相机增长最快，销量同比激增 86.9%…",
-        "badge": "IT之家"
+        "title": "从南美订单到智能房屋：数博会“场景小院”组团出海",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-25/10703777.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-09-25T10:58:53.000Z",
+        "summary": "中新网石家庄9月25日电 (裴国荣 邢璐 任亦婷)9月23日至25日，为期3天的2026中国国际数字经济博览会(简称“数博会”)在河北石家庄举办，一座通水即可拎包入住、室内恒温的“被动式智能化节能型房屋”成为展区焦点。",
+        "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-vj3q-vp3g-j9c8",
+        "id": "github-advisory-ghsa-j73w-8hfr-4gc9",
         "category": "security",
-        "title": "code16/sharp has a stored XSS via data-html-content Sanitizer Bypass",
-        "url": "https://github.com/advisories/GHSA-vj3q-vp3g-j9c8",
+        "title": "CliInvoke: Argument Injection in Extensibility Runner Factory",
+        "url": "https://github.com/advisories/GHSA-j73w-8hfr-4gc9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T15:00:44.000Z",
-        "summary": "### Impact The vulnerability allows an attacker to bypass the HTML sanitizer by using the `data-html-content` attribute in the content of a `SharpEditorFormField`. ### Patches The field must now explicitly configure `SharpFormEditorField::…",
-        "badge": "CVE-2026-61825",
-        "signal": "HIGH · CVSS 8.7"
+        "publishedAt": "2026-09-25T21:41:36.000Z",
+        "summary": "### Impact An argument-injection vulnerability exists in the `CliInvoke` package's runner factory: `RunnerProcessFactory` on the 2.x line and `RunnerConfigurationFactory` on the 3.x line. The factory joins the runner arguments, the caller'…",
+        "badge": "CVE-2026-100369",
+        "signal": "HIGH · CVSS 8.4"
       },
       {
-        "id": "ai-google-deepmind-81481aa316e38773",
+        "id": "ai-openai-347b65ce144a221e",
         "category": "ai",
-        "title": "Gemini 3.8 text-to-speech says hello",
-        "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-23T15:25:14.000Z",
-        "badge": "Google DeepMind"
+        "title": "Sam Altman’s remarks at the United Nations Security Council",
+        "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-23T12:00:00.000Z",
+        "summary": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1244769",
@@ -332,14 +414,14 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-f07bad6a529b9b09",
+        "id": "cn-it-bad1aad45e0f5d8f",
         "category": "cn",
-        "title": "平陆运河首条外贸航线首艘货船抵越",
-        "url": "https://www.baidu.com/s?wd=%E5%B9%B3%E9%99%86%E8%BF%90%E6%B2%B3%E9%A6%96%E6%9D%A1%E5%A4%96%E8%B4%B8%E8%88%AA%E7%BA%BF%E9%A6%96%E8%89%98%E8%B4%A7%E8%88%B9%E6%8A%B5%E8%B6%8A&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "9月24日，平陆运河首条外贸航线“中国南宁港至越南芹苴港”航线货船抵港仪式在芹苴市举行，中越业内人士共同迎接首艘抵达芹苴港的国际江海联运集装箱船舶“北港南宁博润”轮。",
-        "badge": "热搜",
-        "signal": "7,617,729 热度"
+        "title": "前 R 星开发者哈特维克：《GTA 6》登陆任天堂 Switch 2“没什么意义”",
+        "url": "https://www.ithome.com/1/007/250.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-09-25T15:22:22.000Z",
+        "summary": "IT之家 9 月 25 日消息，据外媒 Wccftech 今天（25 日）晚间报道，前 R 星开发者杰里米 · 哈特维克认为，考虑到玩家群体和硬件条件等因素，《GTA 6》登陆 Switch 2 并没有太大意义。 哈特维克在 Kiwi Talkz 最新一期采访中直言：“我觉得这么做甚至没有什么意义，因为我不确定《GTA 6》的受众和 Switch 玩家群体有多少重合。如果你是 GTA 粉丝， 你大概会直接买一台能玩 GTA 的主机 。…… 明知道大家都会为了你的游戏去买 P…",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2026-93952",
@@ -353,88 +435,6 @@
         "signal": "已遭利用 · 整改期限 2026-09-25"
       },
       {
-        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
-        "category": "ai",
-        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
-        "url": "https://huggingface.co/blog/evaleval-aisi",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-49831968",
-        "category": "dev",
-        "title": "F-Droid 2.0",
-        "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-24T15:26:12.000Z",
-        "badge": "HN",
-        "signal": "1407 分 · 403 评论"
-      },
-      {
-        "id": "cn-item-e4bbc3fac82cf2e2",
-        "category": "cn",
-        "title": "从南美订单到智能房屋：数博会“场景小院”组团出海",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-25/10703777.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-09-25T10:58:53.000Z",
-        "summary": "中新网石家庄9月25日电 (裴国荣 邢璐 任亦婷)9月23日至25日，为期3天的2026中国国际数字经济博览会(简称“数博会”)在河北石家庄举办，一座通水即可拎包入住、室内恒温的“被动式智能化节能型房屋”成为展区焦点。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-3c93-f73f-qc9h",
-        "category": "security",
-        "title": "social-auth-core: VK App backend accepts unsigned callback data when auth_key is missing",
-        "url": "https://github.com/advisories/GHSA-3c93-f73f-qc9h",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-24T19:57:22.000Z",
-        "summary": "### Impact The `vk-app` backend accepted VK application callback data without verifying the callback signature when the `auth_key` parameter was omitted. Applications using this backend could treat unsigned attacker-controlled data as a ve…",
-        "badge": "CVE-2026-57178",
-        "signal": "HIGH · CVSS 7.4"
-      },
-      {
-        "id": "ai-openai-347b65ce144a221e",
-        "category": "ai",
-        "title": "Sam Altman’s remarks at the United Nations Security Council",
-        "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-23T12:00:00.000Z",
-        "summary": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1244762",
-        "category": "dev",
-        "title": "如何在安卓上浏览 TikTok？",
-        "url": "https://www.v2ex.com/t/1244762",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T09:03:25.000Z",
-        "summary": "Google Play 上安装了 TikTok ，网络也设置好了，但打开 TikTok 加载不出来内容，显示“无网络连接，请连接到互联网并重试” （ FlClash 全局模式，YouTube 等都访问正常） 我的诉求就是可以登录我的账号，正常浏览就好了。有没有比较懂的 V 友分享经验啊",
-        "badge": "程序员",
-        "signal": "15 回复"
-      },
-      {
-        "id": "cn-it-bad1aad45e0f5d8f",
-        "category": "cn",
-        "title": "前 R 星开发者哈特维克：《GTA 6》登陆任天堂 Switch 2“没什么意义”",
-        "url": "https://www.ithome.com/1/007/250.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-09-25T15:22:22.000Z",
-        "summary": "IT之家 9 月 25 日消息，据外媒 Wccftech 今天（25 日）晚间报道，前 R 星开发者杰里米 · 哈特维克认为，考虑到玩家群体和硬件条件等因素，《GTA 6》登陆 Switch 2 并没有太大意义。 哈特维克在 Kiwi Talkz 最新一期采访中直言：“我觉得这么做甚至没有什么意义，因为我不确定《GTA 6》的受众和 Switch 玩家群体有多少重合。如果你是 GTA 粉丝， 你大概会直接买一台能玩 GTA 的主机 。…… 明知道大家都会为了你的游戏去买 P…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-94127",
-        "category": "security",
-        "title": "F5 BIG-IP APM：F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-94127",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
-        "summary": "F5 BIG-IP APM contains a heap-based buffer overflow vulnerability when access policy and an OAuth profile are configured on a virtual server. This vulnerability could allow an unauthenticated attacker to perform remote code execution.",
-        "badge": "CVE-2026-94127",
-        "signal": "已遭利用 · 整改期限 2026-09-25"
-      },
-      {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
         "category": "ai",
         "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
@@ -444,14 +444,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49848033",
+        "id": "hn-49848955",
         "category": "dev",
-        "title": "Yes, Claude can do Nine Loops",
-        "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+        "title": "Ask HN: Who's still keeping a DOS machine up because the business depends on it?",
+        "url": "https://news.ycombinator.com/item?id=49848955",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T18:11:48.000Z",
+        "publishedAt": "2026-09-25T19:37:55.000Z",
         "badge": "HN",
-        "signal": "5 分 · 0 评论"
+        "signal": "26 分 · 5 评论"
       },
       {
         "id": "cn-baidu-e090437533f0444a",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "当地时间9月25日上午，国家主席习近平和夫人彭丽媛在美国总统特朗普和夫人梅拉尼娅陪同下参观美国国家档案馆。",
         "badge": "热搜",
-        "signal": "7,522,099 热度"
+        "signal": "7,524,486 热度"
       },
       {
-        "id": "github-advisory-ghsa-r4vp-3vw6-r2x5",
+        "id": "github-advisory-ghsa-62mm-xwmv-crhg",
         "category": "security",
-        "title": "Trestle is vulnerable to arbitrary file write via path traversal in author generate commands (Incomplete fix of CVE-2026-46345)",
-        "url": "https://github.com/advisories/GHSA-r4vp-3vw6-r2x5",
+        "title": "khoj has an unauthenticated path traversal in /home/ endpoint that allows file read from server filesystem",
+        "url": "https://github.com/advisories/GHSA-62mm-xwmv-crhg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-24T19:52:34.000Z",
-        "summary": "**At a glance** - **Actor:** attacker who controls the -o/--output argument to trestle author {catalog,profile,ssp}-generate (e.g. via a CI pipeline that derives the output directory from repository-controlled data) - **Primitive:** attack…",
-        "badge": "CVE-2026-57171",
-        "signal": "HIGH · CVSS 8.4"
+        "publishedAt": "2026-09-25T21:38:15.000Z",
+        "summary": "### Summary The `/home/{file_path:path}` endpoint in `web_client.py` serves static files by directly concatenating the user-supplied `file_path` with the `home_directory` constant. There is no path traversal filtering, no path normalizatio…",
+        "badge": "GHSA-62MM-XWMV-CRHG",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-689d78c6e007ab8e",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244759",
+        "id": "v2ex-1244762",
         "category": "dev",
-        "title": "打脸食言了， Opus 5.5 确实有其强大之处",
-        "url": "https://www.v2ex.com/t/1244759",
+        "title": "如何在安卓上浏览 TikTok？",
+        "url": "https://www.v2ex.com/t/1244762",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T08:33:01.000Z",
-        "summary": "我之前在 v 站发过好几次反对 Claude 的评论，因为在去年人在海外仍然被 Claude 封号，再加上达里奥的各种神必发言，而且后来 gpt 还出了相当优秀的 gpt-image-2 ，所以我转向 chatgpt 快将近一年了，并且还说不理解为什么一群人顶着封号仍然强行用 claude 。 但是最近 RMB 汇率略走强，我外行卡恰好有些剩余的钱，codex 的额度也跑差不多，于是我就充了一个 claude pro ，用了下来发现 claude 确实很强，算是打脸我之前的…",
+        "publishedAt": "2026-09-25T09:03:25.000Z",
+        "summary": "Google Play 上安装了 TikTok ，网络也设置好了，但打开 TikTok 加载不出来内容，显示“无网络连接，请连接到互联网并重试” （ FlClash 全局模式，YouTube 等都访问正常） 我的诉求就是可以登录我的账号，正常浏览就好了。有没有比较懂的 V 友分享经验啊",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "15 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/paperclipai/paperclip",
         "description": "The open-source app everyone uses to manage agents at work",
         "language": "TypeScript",
-        "stars": 84329,
+        "stars": 84736,
         "starsToday": 1853
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official",
         "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "language": "Python",
-        "stars": 36839,
+        "stars": 36893,
         "starsToday": 62
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/vectorize-io/hindsight",
         "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 29611,
+        "stars": 29734,
         "starsToday": 1652
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 291561,
+        "stars": 291631,
         "starsToday": 465
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 269597,
+        "stars": 269689,
         "starsToday": 588
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 18308,
+        "stars": 18381,
         "starsToday": 1048
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 178201,
+        "stars": 178272,
         "starsToday": 231
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/androoAGI/starnet",
         "description": "A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
         "language": "JavaScript",
-        "stars": 394,
+        "stars": 446,
         "starsToday": 118
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/derv82/wifit3",
         "description": "Wifite but USB-only & cross-platform.",
         "language": "Python",
-        "stars": 817,
+        "stars": 887,
         "starsToday": 168
       },
       {
@@ -598,10 +598,10 @@
         "name": "kelseyhightower/kubernetes-the-hard-way",
         "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
         "description": "Bootstrap Kubernetes the hard way. No scripts.",
-        "stars": 50083,
+        "stars": 50114,
         "starsToday": 105
       }
     ],
-    "updatedAt": "2026-09-25T18:37:45.069Z"
+    "updatedAt": "2026-09-25T22:21:44.920Z"
   }
 }
