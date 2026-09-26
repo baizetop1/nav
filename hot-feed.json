@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-25T22:21:44.920Z",
+  "generatedAt": "2026-09-26T01:34:55.931Z",
   "intelligence": {
-    "updatedAt": "2026-09-25T22:21:44.920Z",
+    "updatedAt": "2026-09-26T01:34:55.931Z",
     "items": [
       {
         "id": "cn-item-e74f7f60462091db",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49848269",
+        "id": "hn-49849985",
         "category": "dev",
-        "title": "Ollaya – Ollama for open-source, Jev-style decision models",
-        "url": "https://ollaya.dev/",
+        "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+        "url": "https://swarmtraces.org/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T18:33:50.000Z",
+        "publishedAt": "2026-09-25T21:09:27.000Z",
         "badge": "HN",
-        "signal": "233 分 · 76 评论"
+        "signal": "201 分 · 123 评论"
       },
       {
-        "id": "cn-it-34ee765ba7d8ca2d",
+        "id": "cn-it-7ec4761623eb8bed",
         "category": "cn",
-        "title": "比尔 · 盖茨呼吁美国立法监管 AI 开发：没有人会认为只靠行业自律就够了",
-        "url": "https://www.ithome.com/1/007/253.htm",
+        "title": "苹果首款折叠 iPhone Duo 左手操作视频曝光，操作者称“体验还不错”",
+        "url": "https://www.ithome.com/1/007/292.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-25T15:48:28.000Z",
-        "summary": "IT之家 9 月 25 日消息，据美国 NBC News 北京时间今天（25 日）晚间报道，微软联合创始人、亿万富翁慈善家比尔 · 盖茨呼吁美国国会立法监管人工智能开发。 盖茨在接受 NBC 新闻《Meet the Press》节目采访时直言：“没有人认为靠行业自律就足够了。” 主持人克里斯滕 · 韦尔克问他，华盛顿是否需要通过立法介入时，盖茨回答：“ 当然需要 。执法部门和政界人士必须参与进来，讨论应该设置什么样的安全措施，又该怎样监督，而且这些要求 必须具有强制性 。这…",
+        "publishedAt": "2026-09-26T01:32:25.000Z",
+        "summary": "IT之家 9 月 26 日消息，科技媒体 9to5Mac 昨日（9 月 25 日）发布博文，分享了一段 Instagram 用户 Tom Hitchins 发布的视频， 展示了苹果首款折叠 iPhone Duo 的左手操作体验。 该媒体指出，苹果 iPhone Duo 在折叠状态下，设备左侧配有铰链，外屏应用程序的 Dock 位于屏幕右侧，现阶段官方支持文档并未明确显示可以将应用 Dock 挪到左侧。 在最新分享的视频中，Hitchins（他本人惯常使用右手）以左撇子视角体…",
         "badge": "IT之家"
       },
       {
@@ -76,13 +76,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244818",
+        "id": "v2ex-1244838",
         "category": "dev",
-        "title": "[开源] 基于 Edge TTS 的语音合成服务，兼容 OpenAI 音频接口",
-        "url": "https://www.v2ex.com/t/1244818",
+        "title": "每周免费 10 亿 token 的 muse，使用场景有哪些呢？附上注册方法，大家一起来探讨",
+        "url": "https://www.v2ex.com/t/1244838",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T19:38:52.000Z",
-        "summary": "项目地址： https://github.com/DejavuMoe/edgeTTS 这是一个用 Edge TTS 免费接口封装的语音合成服务 特性： 协议兼容：支持 OpenAI 标准 /v1/audio/speech 格式，现有客户端改个 Base URL 即可使用 长文本处理：内置分段切片与音频流拼接，解决长文本请求容易失败的问题 支持声音映射与参数微调 Docker 镜像一键部署",
+        "publishedAt": "2026-09-26T01:29:21.000Z",
+        "summary": "注册了一个 muse.ai ，但是搞不清楚使用场景是什么，有人说很牛逼，但是好像也说不清楚使用场景。 附录： 1.打开 gemini pro 的 spark--> 输入:打开 https://muse.ai/join-- > 授予权限--> 在 remote 浏览器中进行注册--> 输入邮箱--> 接验证码--> 要求验证年龄--> 选择第一个验证方式(信用卡验证,可以使用国内 visa 信用卡)--> 注册成功. 登录后在设置中输入邀请码：NF4Z0T 后可以获得 10 …",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -93,7 +93,7 @@
         "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%9C%86%E6%BB%A1%E7%BB%93%E6%9D%9F%E5%AF%B9%E7%BE%8E%E5%9B%BD%E7%9A%84%E5%9B%BD%E4%BA%8B%E8%AE%BF%E9%97%AE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,808,594 热度"
+        "signal": "7,808,523 热度"
       },
       {
         "id": "cisa-kev-cve-2026-65660",
@@ -116,14 +116,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49849985",
+        "id": "hn-49848269",
         "category": "dev",
-        "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
-        "url": "https://swarmtraces.org/",
+        "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+        "url": "https://ollaya.dev/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T21:09:27.000Z",
+        "publishedAt": "2026-09-25T18:33:50.000Z",
         "badge": "HN",
-        "signal": "35 分 · 9 评论"
+        "signal": "333 分 · 98 评论"
       },
       {
         "id": "cn-item-34c0ca6cbff1ca40",
@@ -157,24 +157,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244814",
+        "id": "v2ex-1244835",
         "category": "dev",
-        "title": "独立开发产品无收入，有必要买 Claude Max 吗",
-        "url": "https://www.v2ex.com/t/1244814",
+        "title": "自建反代用 pi/opencode 的同学注意",
+        "url": "https://www.v2ex.com/t/1244835",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T18:09:00.000Z",
-        "summary": "现在是一个 20 的 codex 和一个 20 刀的 Claude 体感是 codex 干不了什么需求就没额度了，Claude 还行。 但是加起来 40 刀，做独立开发的进度就很慢。 但是有时候忙起来，没时间 vibe coding ，也会有一周下来额度还剩一大半的情况。 同时考虑到自己开发的产品没收入，还有一些本以为 2 个月能上线结果半年没上线的产品。 在想是不是应该直接上个 Claude Max ，然后快速把产品推上线看看。 但根据经验，现在是产品比用户多，所以对于自…",
+        "publishedAt": "2026-09-26T01:22:25.000Z",
+        "summary": "总觉得哪不对劲，快是快，但是长对话总有点瑕疵。研究了一下这几个反代的源码，几乎所以反代/中转站都是这个逻辑。 原来反代看见非 claude code 的 agent 的时候把原始 system 指令搬到 user ，但不是把所有消息都改成 user 。 也就是 pi/opencode 等非 cc 的 agent 发的所有 system 都是原本的系统指令会降到 user 角色；[System Instructions] 只是文本标签，并不能保留 system 的优先级。 我…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-5ab81c978d6d95fa",
+        "id": "cn-it-27085267bfc8cbd5",
         "category": "cn",
-        "title": "畅销小说被指用 AI 创作，法国最有名文学奖龚古尔奖将其移出初选名单",
-        "url": "https://www.ithome.com/1/007/252.htm",
+        "title": "上汽追投 10 亿与华为终端深化协同，尚界今年 1 至 8 月累计批售超 5 万辆",
+        "url": "https://www.ithome.com/1/007/290.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-25T15:33:07.000Z",
-        "summary": "IT之家 9 月 25 日消息，据路透社报道，当地时间 25 日，法国最负盛名的文学奖项 —— 龚古尔奖主办方宣布，将海地裔加拿大作家泰利森 · 奥雷利安的畅销小说《C'etait Ca ou Mourir（要么就这样，要么死）》移出初选名单，原因是有人指控奥雷利安使用 AI 创作该书。 奥雷利安否认使用 AI 写作。围绕他的指控随后引发了有关种族、文学价值和原创性的争论，法国文学界也因此出现一场风波。 指控最早由鲜为人知的 X 账号“Balance ton Claude”…",
+        "publishedAt": "2026-09-26T01:14:36.000Z",
+        "summary": "IT之家 9 月 26 日消息，据新华社、经济参考报报道，上汽集团与华为终端将进一步深化在尚界品牌上的协同合作 。 在深化合作新阶段， 上汽追加 10 亿元投资，对金桥尚界专属工厂进行智能化升级改造 。 据介绍，该基地是上汽集团大乘用车战略版图中的核心制造高地，以“工业 4.0”标准规划建设，全面对标全球领先整车工厂。报道还提到， 2026 年 1 至 8 月，尚界累计批售超 5 万辆 。 目前，尚界品牌经销商有近 1000 家、建设专网约 200 家、渠道覆盖率达到 75…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49843269",
+        "id": "hn-49845172",
         "category": "dev",
-        "title": "Platform-independent SIMD in Go",
-        "url": "https://go.dev/blog/simd-experiment",
+        "title": "Show HN: Jev Plays Pokémon Red",
+        "url": "https://jev-pokemon.vercel.app/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T11:47:06.000Z",
+        "publishedAt": "2026-09-25T14:28:07.000Z",
         "badge": "HN",
-        "signal": "333 分 · 125 评论"
+        "signal": "151 分 · 68 评论"
       },
       {
-        "id": "cn-baidu-f193fcf487f23751",
+        "id": "cn-baidu-86b6a06568fdc9c0",
         "category": "cn",
-        "title": "进一步丰富中美关系定位的内涵",
-        "url": "https://www.baidu.com/s?wd=%E8%BF%9B%E4%B8%80%E6%AD%A5%E4%B8%B0%E5%AF%8C%E4%B8%AD%E7%BE%8E%E5%85%B3%E7%B3%BB%E5%AE%9A%E4%BD%8D%E7%9A%84%E5%86%85%E6%B6%B5&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中美元首夫妇茶叙高清大图",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%BE%8E%E5%85%83%E9%A6%96%E5%A4%AB%E5%A6%87%E8%8C%B6%E5%8F%99%E9%AB%98%E6%B8%85%E5%A4%A7%E5%9B%BE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "当地时间9月25日上午，国家主席习近平和夫人彭丽媛同美国总统特朗普和夫人梅拉尼娅在白宫举行茶叙。两国元首同意进一步丰富中美关系定位的内涵，共同构建“基于尊重、公平、对等的建设性战略稳定关系”。",
+        "summary": "当地时间9月25日上午，国家主席习近平和夫人彭丽媛同美国总统特朗普和夫人梅拉尼娅在白宫举行茶叙。",
         "badge": "热搜",
-        "signal": "7,712,665 热度"
+        "signal": "7,714,516 热度"
       },
       {
         "id": "github-advisory-ghsa-vv77-66rf-pm86",
@@ -239,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244806",
+        "id": "v2ex-1244826",
         "category": "dev",
-        "title": "Muse 让我有种不一样的协作感",
-        "url": "https://www.v2ex.com/t/1244806",
+        "title": "Codex 早上宕机了，重置大概率要来一个吧",
+        "url": "https://www.v2ex.com/t/1244826",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T15:54:44.000Z",
-        "summary": "刚用了一下 Muse ，来安利一把。我的邀请码：UCXDOY 以前用 codex 和 claude code ，认知里这就是 ai ，是一种工具，但是这两天用 Muse ，它有自己的名字，自己的电脑，它工作时你能看到它电脑屏幕的操作，感觉好像是一个人一样，不得不说这个产品思路相当牛逼，其实 Google spark 也是类似的产品思路，但是还是工具感太强。",
+        "publishedAt": "2026-09-26T00:03:20.000Z",
+        "summary": "Codex 早上宕机了，截止发帖时已经恢复，重置大概率要来一个吧，不然说不过去 不过前几周有一次好像故障了也没有给补偿",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "6 回复"
       },
       {
         "id": "cn-item-0ff777e20e81dc62",
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49843174",
+        "id": "hn-49850305",
         "category": "dev",
-        "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
-        "url": "https://github.com/git-bug/git-bug",
+        "title": "What even is an OS now?",
+        "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T11:38:31.000Z",
+        "publishedAt": "2026-09-25T21:36:56.000Z",
         "badge": "HN",
-        "signal": "277 分 · 92 评论"
+        "signal": "74 分 · 99 评论"
       },
       {
-        "id": "cn-it-f26eac9e5e506a65",
+        "id": "cn-it-e9d41581f0a5e5a1",
         "category": "cn",
-        "title": "首个入驻纽约时代广场的中国影像品牌，影石首家美国旗舰店开业",
-        "url": "https://www.ithome.com/1/007/251.htm",
+        "title": "共事约 11 年：苹果零售总设计师约翰逊谈乔布斯理念“不急于求成”",
+        "url": "https://www.ithome.com/1/007/289.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-25T15:23:52.000Z",
-        "summary": "IT之家 9 月 25 日消息，影石今日宣布，首家美国旗舰店于纽约时代广场正式开业。据此前官方介绍，这也是首个在纽约时代广场开业的 中国影像品牌 。截至目前，影石在全球体验零售店已超 10000 家，品牌旗舰店超 300 家。 IT之家注意到，国际数据公司（IDC） 9 月 23 日发布 2026 年二季度全球手持智能影像设备市场数据 。期内全球销量达 588.7 万台，同比增长 57.24%；销售额 156.89 亿元人民币。其中云台相机增长最快，销量同比激增 86.9%…",
+        "publishedAt": "2026-09-26T01:08:43.000Z",
+        "summary": "IT之家 9 月 26 日消息，科技媒体 Business Insider 今天（9 月 26 日）发布博文，报道称在新书发布会上，苹果零售“总设计师”罗恩 · 约翰逊（Ron Johnson）表示， 史蒂夫 · 乔布斯留给他的核心教训是“不急于求成”（Don't be in a hurry）。 IT之家查询公开资料，约翰逊出生于 1959 年，于 2000 年被史蒂夫 · 乔布斯聘请，担任苹果零售业务高级副总裁，负责从零搭建 Apple Store，可谓是苹果零售体系真正…",
         "badge": "IT之家"
       },
       {
@@ -321,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244801",
+        "id": "v2ex-1244818",
         "category": "dev",
-        "title": "大佬们如何获取抖音高码率链接",
-        "url": "https://www.v2ex.com/t/1244801",
+        "title": "[开源] 基于 Edge TTS 的语音合成服务，兼容 OpenAI 音频接口",
+        "url": "https://www.v2ex.com/t/1244818",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T15:02:16.000Z",
-        "summary": "[问与答] 抖音解析同一视频，为什么别人拿到高码率原画链接，我只能拿到低码率链接？ 解析入口： https://v.douyin.com/xyq3fjLXpYU 我解析到的（低码率 2209kbps ，douyinvod 转码桶） ： https://v11-weba.douyinvod.com/ebe8f8f752b5479c3ddbd8873563c345/6ab6b646/video/tos/cn/tos-cn-ve-15c000-ce/o0SnnIREDKqYABM…",
+        "publishedAt": "2026-09-25T19:38:52.000Z",
+        "summary": "项目地址： https://github.com/DejavuMoe/edgeTTS 这是一个用 Edge TTS 免费接口封装的语音合成服务 特性： 协议兼容：支持 OpenAI 标准 /v1/audio/speech 格式，现有客户端改个 Base URL 即可使用 长文本处理：内置分段切片与音频流拼接，解决长文本请求容易失败的问题 支持声音映射与参数微调 Docker 镜像一键部署",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-f07bad6a529b9b09",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "9月24日，平陆运河首条外贸航线“中国南宁港至越南芹苴港”航线货船抵港仪式在芹苴市举行，中越业内人士共同迎接首艘抵达芹苴港的国际江海联运集装箱船舶“北港南宁博润”轮。",
         "badge": "热搜",
-        "signal": "7,619,103 热度"
+        "signal": "7,616,320 热度"
       },
       {
         "id": "cisa-kev-cve-2026-71362",
@@ -362,14 +362,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49845172",
+        "id": "hn-49840054",
         "category": "dev",
-        "title": "Show HN: Jev Plays Pokémon Red",
-        "url": "https://jev-pokemon.vercel.app/",
+        "title": "Plan mode is dead",
+        "url": "https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T14:28:07.000Z",
+        "publishedAt": "2026-09-25T03:59:11.000Z",
         "badge": "HN",
-        "signal": "86 分 · 43 评论"
+        "signal": "77 分 · 81 评论"
       },
       {
         "id": "cn-item-e4bbc3fac82cf2e2",
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244769",
+        "id": "v2ex-1244814",
         "category": "dev",
-        "title": "完美解决 GPT Astra 降智问题",
-        "url": "https://www.v2ex.com/t/1244769",
+        "title": "独立开发产品无收入，有必要买 Claude Max 吗",
+        "url": "https://www.v2ex.com/t/1244814",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T10:13:00.000Z",
-        "summary": "无论账号多黑，都能免于降智 Codex 730 292 糖果测试、鹈鹕测试、Excel——统统搞定 代码 sub2api 已开源 https://github.com/ranxi2001/sub2api/releases/tag/v2.8.11 希望我们能坚持到 O÷ 风控限制解除。",
+        "publishedAt": "2026-09-25T18:09:00.000Z",
+        "summary": "现在是一个 20 的 codex 和一个 20 刀的 Claude 体感是 codex 干不了什么需求就没额度了，Claude 还行。 但是加起来 40 刀，做独立开发的进度就很慢。 但是有时候忙起来，没时间 vibe coding ，也会有一周下来额度还剩一大半的情况。 同时考虑到自己开发的产品没收入，还有一些本以为 2 个月能上线结果半年没上线的产品。 在想是不是应该直接上个 Claude Max ，然后快速把产品推上线看看。 但根据经验，现在是产品比用户多，所以对于自…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "22 回复"
       },
       {
-        "id": "cn-it-bad1aad45e0f5d8f",
+        "id": "cn-it-5bfba67c000f0116",
         "category": "cn",
-        "title": "前 R 星开发者哈特维克：《GTA 6》登陆任天堂 Switch 2“没什么意义”",
-        "url": "https://www.ithome.com/1/007/250.htm",
+        "title": "苹果零售总设计师约翰逊：Apple Store 未过时，iPhone Duo 等仍需“亲手摸、现场试”体验",
+        "url": "https://www.ithome.com/1/007/288.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-25T15:22:22.000Z",
-        "summary": "IT之家 9 月 25 日消息，据外媒 Wccftech 今天（25 日）晚间报道，前 R 星开发者杰里米 · 哈特维克认为，考虑到玩家群体和硬件条件等因素，《GTA 6》登陆 Switch 2 并没有太大意义。 哈特维克在 Kiwi Talkz 最新一期采访中直言：“我觉得这么做甚至没有什么意义，因为我不确定《GTA 6》的受众和 Switch 玩家群体有多少重合。如果你是 GTA 粉丝， 你大概会直接买一台能玩 GTA 的主机 。…… 明知道大家都会为了你的游戏去买 P…",
+        "publishedAt": "2026-09-26T00:56:17.000Z",
+        "summary": "IT之家 9 月 26 日消息，科技媒体 AppleInsider 昨日（9 月 25 日）发布博文，采访了罗恩 · 约翰逊（Ron Johnson），并围绕着苹果零售店（Apple Store）等话题展开讨论。 IT之家查询公开资料，约翰逊出生于 1959 年，于 2000 年被史蒂夫 · 乔布斯聘请，担任苹果零售业务高级副总裁，负责从零搭建 Apple Store， 可谓是苹果零售体系真正的“总设计师”。 一、为什么苹果必须开自己的店？ 约翰逊称 2000 年前后，苹果…",
         "badge": "IT之家"
       },
       {
@@ -444,24 +444,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49848955",
+        "id": "hn-49843269",
         "category": "dev",
-        "title": "Ask HN: Who's still keeping a DOS machine up because the business depends on it?",
-        "url": "https://news.ycombinator.com/item?id=49848955",
+        "title": "Platform-independent SIMD in Go",
+        "url": "https://go.dev/blog/simd-experiment",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T19:37:55.000Z",
+        "publishedAt": "2026-09-25T11:47:06.000Z",
         "badge": "HN",
-        "signal": "26 分 · 5 评论"
+        "signal": "360 分 · 133 评论"
       },
       {
-        "id": "cn-baidu-e090437533f0444a",
+        "id": "cn-baidu-26d2ec037966d18a",
         "category": "cn",
-        "title": "中美元首夫妇参观美国国家档案馆",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%BE%8E%E5%85%83%E9%A6%96%E5%A4%AB%E5%A6%87%E5%8F%82%E8%A7%82%E7%BE%8E%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%A1%A3%E6%A1%88%E9%A6%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "一对大熊猫即将赴美 意味着什么",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AF%B9%E5%A4%A7%E7%86%8A%E7%8C%AB%E5%8D%B3%E5%B0%86%E8%B5%B4%E7%BE%8E+%E6%84%8F%E5%91%B3%E7%9D%80%E4%BB%80%E4%B9%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "当地时间9月25日上午，国家主席习近平和夫人彭丽媛在美国总统特朗普和夫人梅拉尼娅陪同下参观美国国家档案馆。",
+        "summary": "成都繁育基地的大熊猫“平平”“福双”即将启程赴美，落户亚特兰大动物园开展为期十年的保护合作。美方耗资600万美元完成场馆改造，中方已完成一月隔离检疫与运输适应训练。此举延续中美半个世纪熊猫情缘，深化科研协作与民间友谊，推动全球生物多样性保护。",
         "badge": "热搜",
-        "signal": "7,524,486 热度"
+        "signal": "7,520,481 热度"
       },
       {
         "id": "github-advisory-ghsa-62mm-xwmv-crhg",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244762",
+        "id": "v2ex-1244801",
         "category": "dev",
-        "title": "如何在安卓上浏览 TikTok？",
-        "url": "https://www.v2ex.com/t/1244762",
+        "title": "大佬们如何获取抖音高码率链接",
+        "url": "https://www.v2ex.com/t/1244801",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-25T09:03:25.000Z",
-        "summary": "Google Play 上安装了 TikTok ，网络也设置好了，但打开 TikTok 加载不出来内容，显示“无网络连接，请连接到互联网并重试” （ FlClash 全局模式，YouTube 等都访问正常） 我的诉求就是可以登录我的账号，正常浏览就好了。有没有比较懂的 V 友分享经验啊",
+        "publishedAt": "2026-09-25T15:02:16.000Z",
+        "summary": "[问与答] 抖音解析同一视频，为什么别人拿到高码率原画链接，我只能拿到低码率链接？ 解析入口： https://v.douyin.com/xyq3fjLXpYU 我解析到的（低码率 2209kbps ，douyinvod 转码桶） ： https://v11-weba.douyinvod.com/ebe8f8f752b5479c3ddbd8873563c345/6ab6b646/video/tos/cn/tos-cn-ve-15c000-ce/o0SnnIREDKqYABM…",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -509,8 +509,8 @@
         "url": "https://github.com/paperclipai/paperclip",
         "description": "The open-source app everyone uses to manage agents at work",
         "language": "TypeScript",
-        "stars": 84736,
-        "starsToday": 1853
+        "stars": 85003,
+        "starsToday": 2109
       },
       {
         "id": "github-3e90fac1501aeb3d",
@@ -519,8 +519,8 @@
         "url": "https://github.com/anthropics/claude-plugins-official",
         "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "language": "Python",
-        "stars": 36893,
-        "starsToday": 62
+        "stars": 36944,
+        "starsToday": 83
       },
       {
         "id": "github-57687486696d1493",
@@ -529,8 +529,8 @@
         "url": "https://github.com/vectorize-io/hindsight",
         "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 29734,
-        "starsToday": 1652
+        "stars": 29822,
+        "starsToday": 1653
       },
       {
         "id": "github-4251a228ae407247",
@@ -539,8 +539,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 291631,
-        "starsToday": 465
+        "stars": 291667,
+        "starsToday": 468
       },
       {
         "id": "github-89e612f6ea973712",
@@ -549,8 +549,8 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 269689,
-        "starsToday": 588
+        "stars": 269736,
+        "starsToday": 583
       },
       {
         "id": "github-5b2653ab79f36aef",
@@ -559,8 +559,8 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 18381,
-        "starsToday": 1048
+        "stars": 18452,
+        "starsToday": 1050
       },
       {
         "id": "github-f2db8404c222e36c",
@@ -569,8 +569,8 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 178272,
-        "starsToday": 231
+        "stars": 178325,
+        "starsToday": 189
       },
       {
         "id": "github-28921bdacbe325b1",
@@ -579,8 +579,8 @@
         "url": "https://github.com/androoAGI/starnet",
         "description": "A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
         "language": "JavaScript",
-        "stars": 446,
-        "starsToday": 118
+        "stars": 486,
+        "starsToday": 93
       },
       {
         "id": "github-edb88110fdfde8af",
@@ -589,8 +589,8 @@
         "url": "https://github.com/derv82/wifit3",
         "description": "Wifite but USB-only & cross-platform.",
         "language": "Python",
-        "stars": 887,
-        "starsToday": 168
+        "stars": 930,
+        "starsToday": 183
       },
       {
         "id": "github-e4f1994b2ce66b9c",
@@ -598,10 +598,10 @@
         "name": "kelseyhightower/kubernetes-the-hard-way",
         "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
         "description": "Bootstrap Kubernetes the hard way. No scripts.",
-        "stars": 50114,
-        "starsToday": 105
+        "stars": 50125,
+        "starsToday": 119
       }
     ],
-    "updatedAt": "2026-09-25T22:21:44.920Z"
+    "updatedAt": "2026-09-26T01:34:55.931Z"
   }
 }
