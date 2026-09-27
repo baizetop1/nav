@@ -85,25 +85,25 @@ function IntelligenceList({ items, limit, compact }: { items: IntelligenceItem[]
     <ol id="intelligence-feed-list" className="trending-feed-list mt-3 space-y-1" aria-label="技术情报列表">
       {visible.map(item => (
         <li key={`${item.id}-${item.url}`}>
-          <a href={item.url} target="_blank" rel="noreferrer" className="group flex min-w-0 items-start gap-2 rounded-xl px-2 py-2 transition hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8">
+          <a href={item.url} target="_blank" rel="noreferrer" className="group flex min-w-0 items-start gap-2 rounded-xl px-2 py-2 transition hover:bg-[var(--app-soft)]">
             <span className={`mt-0.5 flex h-6 min-w-9 shrink-0 items-center justify-center rounded-lg px-1.5 text-[10px] font-bold ${CATEGORY_TONES[item.category]}`}>{CATEGORY_LABELS[item.category]}</span>
             <span className="min-w-0 flex-1">
-              <strong className="block truncate text-sm font-semibold text-[#234b4e] group-hover:text-[#285954] dark:text-[#e8e8e0] dark:group-hover:text-[#dfc68e]">{item.title}</strong>
-              {!compact && item.summary && <span className="mt-0.5 block truncate text-[11px] text-[#718986]">{item.summary}</span>}
-              <span className="mt-1 flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 text-[10px] text-[#7a918d]">
+              <strong className="block truncate text-sm font-semibold appearance-heading group-hover:text-[var(--app-accent)]">{item.title}</strong>
+              {!compact && item.summary && <span className="mt-0.5 block truncate text-[11px] appearance-muted">{item.summary}</span>}
+              <span className="mt-1 flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 text-[10px] appearance-muted">
                 <span className="max-w-32 truncate">{item.source}</span>
                 {item.publishedAt && <time dateTime={item.publishedAt}>{formatPublishedAt(item.publishedAt)}</time>}
-                {item.badge && <span className="rounded-md bg-[#5f8f84]/8 px-1.5 py-0.5 text-[#567771] dark:bg-[#c9a96b]/8 dark:text-[#c9b581]">{item.badge}</span>}
+                {item.badge && <span className="rounded-md appearance-soft px-1.5 py-0.5 appearance-accent">{item.badge}</span>}
                 {item.signal && <span className="font-medium text-[#9b7048] dark:text-[#d0b06f]">{item.signal}</span>}
               </span>
             </span>
-            <ExternalLink size={12} className="mt-1 shrink-0 text-[#91a39f] opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true" />
+            <ExternalLink size={12} className="mt-1 shrink-0 appearance-muted opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true" />
           </a>
         </li>
       ))}
     </ol>
   ) : (
-    <p id="intelligence-feed-list" className="mt-3 rounded-xl bg-[#5f8f84]/7 px-3 py-8 text-center text-xs text-[#718986]">这个分类暂时没有可展示的情报。</p>
+    <p id="intelligence-feed-list" className="mt-3 rounded-xl appearance-soft px-3 py-8 text-center text-xs appearance-muted">这个分类暂时没有可展示的情报。</p>
   );
 }
 
@@ -113,24 +113,24 @@ function GithubList({ items, limit, compact }: { items: GithubTrendingItem[]; li
     <ol className="trending-feed-list mt-3 space-y-1" aria-label="GitHub 今日热门仓库">
       {visible.map(item => (
         <li key={item.id}>
-          <a href={item.url} target="_blank" rel="noreferrer" className="group flex min-w-0 items-start gap-2 rounded-xl px-2 py-2 transition hover:bg-[#5f8f84]/8 dark:hover:bg-[#c9a96b]/8">
-            <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-bold ${item.rank <= 3 ? 'bg-[#c9a96b]/16 text-[#886d32] dark:text-[#e0c477]' : 'bg-[#5f8f84]/9 text-[#567771] dark:bg-[#c9a96b]/9 dark:text-[#c9b581]'}`}>{item.rank}</span>
+          <a href={item.url} target="_blank" rel="noreferrer" className="group flex min-w-0 items-start gap-2 rounded-xl px-2 py-2 transition hover:bg-[var(--app-soft)]">
+            <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-bold ${item.rank <= 3 ? 'bg-[#c9a96b]/16 text-[#886d32] dark:text-[#e0c477]' : 'appearance-soft appearance-accent'}`}>{item.rank}</span>
             <span className="min-w-0 flex-1">
-              <strong className="block truncate text-sm font-semibold text-[#234b4e] group-hover:text-[#285954] dark:text-[#e8e8e0] dark:group-hover:text-[#dfc68e]">{item.name}</strong>
-              {!compact && item.description && <span className="github-trending-description mt-0.5 block truncate text-[11px] text-[#718986]">{item.description}</span>}
-              <span className="mt-1 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-[#7a918d]">
+              <strong className="block truncate text-sm font-semibold appearance-heading group-hover:text-[var(--app-accent)]">{item.name}</strong>
+              {!compact && item.description && <span className="github-trending-description mt-0.5 block truncate text-[11px] appearance-muted">{item.description}</span>}
+              <span className="mt-1 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-[10px] appearance-muted">
                 {item.language && <span className="truncate">{item.language}</span>}
                 {item.stars !== undefined && <span className="inline-flex shrink-0 items-center gap-1"><Star size={10} />{formatCount(item.stars)}</span>}
                 {item.starsToday !== undefined && <span className="shrink-0 font-medium text-[#9b7048] dark:text-[#d0b06f]">今日 +{formatCount(item.starsToday)}</span>}
               </span>
             </span>
-            <ExternalLink size={12} className="mt-1 shrink-0 text-[#91a39f] opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true" />
+            <ExternalLink size={12} className="mt-1 shrink-0 appearance-muted opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true" />
           </a>
         </li>
       ))}
     </ol>
   ) : (
-    <p className="mt-3 rounded-xl bg-[#5f8f84]/7 px-3 py-8 text-center text-xs text-[#718986]">GitHub 今日榜单正在生成，可先打开 Trending 查看。</p>
+    <p className="mt-3 rounded-xl appearance-soft px-3 py-8 text-center text-xs appearance-muted">GitHub 今日榜单正在生成，可先打开 Trending 查看。</p>
   );
 }
 
@@ -215,8 +215,8 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
     <section id="hot-feed" className="trending-feed-panel baize-panel min-w-0 max-w-full basis-full rounded-2xl p-4 sm:p-5" aria-labelledby="hot-feed-title">
       <header className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h2 id="hot-feed-title" className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Flame size={17} />技术情报</h2>
-          <p className="trending-feed-description mt-1 truncate text-xs text-[#718986]" aria-live="polite">
+          <h2 id="hot-feed-title" className="flex items-center gap-2 text-sm font-semibold appearance-heading"><Flame size={17} />技术情报</h2>
+          <p className="trending-feed-description mt-1 truncate text-xs appearance-muted" aria-live="polite">
             {report ? `情报 ${formatGeneratedAt(report.intelligence.updatedAt)} · GitHub ${formatGeneratedAt(report.github.updatedAt)}` : '国内、AI、安全、开发情报与 GitHub 今日热门仓库'}
             {staleChannels.length > 0 ? ` · ${staleChannels.join('、')}数据可能已过期` : ''}
           </p>
@@ -234,10 +234,10 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
       {error && <p role="status" className={`mt-3 rounded-lg px-3 py-2 text-xs ${report ? 'bg-[#c9a96b]/10 text-[#7e6c42] dark:text-[#d9c386]' : 'bg-[#a85d50]/10 text-[#985247] dark:text-[#e1a294]'}`}>{report ? `${error}，当前显示上次缓存。` : error}</p>}
       {report ? (
         <div className="mt-3 grid gap-3 lg:grid-cols-2">
-          <article className="min-w-0 rounded-2xl border border-[#5f8f84]/14 bg-white/25 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20" aria-labelledby="intelligence-feed-title">
+          <article className="min-w-0 rounded-2xl border appearance-border appearance-soft p-3" aria-labelledby="intelligence-feed-title">
             <div className="flex items-center justify-between gap-3 px-2">
-              <h3 id="intelligence-feed-title" className="flex items-center gap-2 text-sm font-semibold text-[#315e5b] dark:text-[#e2dfd5]"><Flame size={15} />技术情报</h3>
-              <span className="text-[11px] text-[#718986]">{intelligenceItems.length} 条 · {sourceCount} 个来源</span>
+              <h3 id="intelligence-feed-title" className="flex items-center gap-2 text-sm font-semibold appearance-heading"><Flame size={15} />技术情报</h3>
+              <span className="text-[11px] appearance-muted">{intelligenceItems.length} 条 · {sourceCount} 个来源</span>
             </div>
             <div className="mt-3 flex flex-wrap gap-1.5 px-2" role="group" aria-label="筛选技术情报分类">
               {FILTERS.map(option => {
@@ -249,7 +249,7 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
                     aria-controls="intelligence-feed-list"
                     aria-pressed={selected}
                     onClick={() => chooseFilter(option.id)}
-                    className={`rounded-lg px-2.5 py-1.5 text-[11px] font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5f8f84]/45 ${selected ? 'bg-[#356b66] text-white shadow-sm dark:bg-[#c9a96b] dark:text-[#102c33]' : 'bg-[#5f8f84]/7 text-[#567771] hover:bg-[#5f8f84]/13 dark:bg-[#c9a96b]/7 dark:text-[#c9b581] dark:hover:bg-[#c9a96b]/12'}`}
+                    className={`rounded-lg px-2.5 py-1.5 text-[11px] font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--app-accent)] ${selected ? 'appearance-nav-active shadow-sm' : 'appearance-soft appearance-nav-idle'}`}
                   >
                     {option.label}<span className="ml-1 opacity-70" aria-hidden="true">{categoryCounts[option.id]}</span>
                   </button>
@@ -258,17 +258,17 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
             </div>
             <IntelligenceList items={intelligenceItems} limit={limit} compact={compact} />
           </article>
-          <article className="min-w-0 rounded-2xl border border-[#5f8f84]/14 bg-white/25 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20" aria-labelledby="github-feed-title">
+          <article className="min-w-0 rounded-2xl border appearance-border appearance-soft p-3" aria-labelledby="github-feed-title">
             <div className="flex items-center justify-between gap-3 px-2">
-              <h3 id="github-feed-title" className="flex items-center gap-2 text-sm font-semibold text-[#315e5b] dark:text-[#e2dfd5]"><Github size={15} />GitHub 热榜</h3>
-              <a href={report.github.source.url} target="_blank" rel="noreferrer" className="text-[11px] text-[#718986] transition hover:text-[#356b66] dark:hover:text-[#d2b775]">今日趋势 <ExternalLink className="inline" size={11} /></a>
+              <h3 id="github-feed-title" className="flex items-center gap-2 text-sm font-semibold appearance-heading"><Github size={15} />GitHub 热榜</h3>
+              <a href={report.github.source.url} target="_blank" rel="noreferrer" className="text-[11px] appearance-muted transition hover:text-[var(--app-accent)]">今日趋势 <ExternalLink className="inline" size={11} /></a>
             </div>
             <GithubList items={report.github.items} limit={limit} compact={compact} />
           </article>
         </div>
-      ) : !loading && <div className="mt-4 rounded-xl bg-[#5f8f84]/7 px-3 py-8 text-center text-xs text-[#718986]">首次部署后，定时任务会生成技术情报与 GitHub 热门仓库。</div>}
+      ) : !loading && <div className="mt-4 rounded-xl appearance-soft px-3 py-8 text-center text-xs appearance-muted">首次部署后，定时任务会生成技术情报与 GitHub 热门仓库。</div>}
       {!report && loading && <div className="mt-4 grid gap-3 lg:grid-cols-2" aria-label="正在加载情报数据">
-        {[0, 1].map(column => <div key={column} className="h-64 animate-pulse rounded-2xl bg-[#5f8f84]/7 dark:bg-[#c9a96b]/6" />)}
+        {[0, 1].map(column => <div key={column} className="h-64 animate-pulse rounded-2xl appearance-soft" />)}
       </div>}
     </section>
   );

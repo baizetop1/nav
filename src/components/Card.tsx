@@ -12,7 +12,7 @@ export function Card({ site, onVisit, onShowQr, dailyVisits = 0, health }: { sit
   const hostname = safeHostname(site.url);
   return (
     <motion.div
-      className="site-card group relative flex h-full flex-col overflow-hidden rounded-xl border border-white/70 bg-[#f7f6f0]/90 p-4 shadow-sm backdrop-blur-md transition-all duration-300 hover:border-[#5f8f84]/60 hover:shadow-md dark:border-[#5f8f84]/20 dark:bg-[#102c33]/88 dark:hover:border-[#c9a96b]/50"
+      className="site-card appearance-site-card group relative flex h-full flex-col overflow-hidden rounded-xl border p-4 shadow-sm backdrop-blur-md transition-all duration-300 hover:shadow-md"
       whileHover={{ y: -2 }}
     >
       <a href={safeUrl || undefined} target="_blank" rel="noopener noreferrer" aria-disabled={!safeUrl} onClick={event => { if (!safeUrl) { event.preventDefault(); return; } onVisit?.(site.id); }} className="flex h-full flex-col" aria-label={safeUrl ? '打开 ' + site.name : site.name + ' 的网址无效'}>

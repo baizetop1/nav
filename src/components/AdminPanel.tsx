@@ -13,6 +13,7 @@ import { decryptBackup, encryptBackup } from '../services/encryptedBackup';
 import { clearPendingDeployment, loadPendingDeployment, savePendingDeployment, type PendingDeployment } from '../lib/deploymentState';
 import { safeRemoveLocalStorageItem, safeSetLocalStorageItem, SHARED_SYNC_ENTRY_MAX_BYTES } from '../lib/safeStorage';
 import { dispatchHotFeedRefresh, dispatchLinkHealthCheck, getAuthenticatedUser, getEncryptedBackup, getLatestHotFeedRun, getLatestLinkHealthRun, getRemoteNavigationSnapshot, getWorkflowRun, normalizeGithubToken, publishNavigationData, saveEncryptedBackup, verifyRepositoryAccess, type WorkflowRun } from '../services/github';
+import { AppearanceButton } from './appearance/AppearanceProvider';
 import { NavigationOrganizer } from './NavigationOrganizer';
 import { SmartOrganizerPanel } from './SmartOrganizerPanel';
 import { suggestImportMetadata } from '../lib/smartOrganizer';
@@ -56,7 +57,7 @@ interface HtmlImportPreview {
 
 const inputClass = 'baize-input';
 const panelClass = 'baize-panel rounded-2xl p-5';
-const labelClass = 'text-sm font-medium text-[#526f6c] dark:text-[#b8c4c0]';
+const labelClass = 'text-sm font-medium appearance-muted';
 
 function createSiteDraft(categoryId: string): SiteDraft {
   return { name: '', url: '', description: '', categoryId, tags: '', favorite: false, icon: '' };
@@ -669,31 +670,31 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
   };
 
   return (
-    <div className="admin-shell fixed inset-0 z-[70] overflow-y-auto bg-[#dce6e1]/96 p-4 dark:bg-[#07191d]/97 lg:p-8">
+    <div className="admin-shell appearance-admin-shell fixed inset-0 z-[70] overflow-y-auto p-4 lg:p-8">
       <div className="mx-auto max-w-7xl">
-        <header className="mb-6 flex items-center justify-between">
+        <header className="mb-6 flex items-center justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold tracking-[0.18em] text-[#4f8179] dark:text-[#c9a96b]">白泽导航 CMS</p>
-            <h1 className="text-2xl font-bold text-[#173b41] dark:text-[#f4f1e8]">管理导航内容</h1>
-            <a className="mt-2 inline-flex items-center gap-1 text-sm text-[#456b68] underline dark:text-[#d9ddd6]" href="#/blog"><FileUp size={14} />前往博客工作台</a>
-            <p className="mt-1 text-sm text-[#64807c] dark:text-[#9fb2ad]">修改会自动保存为本地草稿，点击发布后才写入 GitHub。</p>
+            <p className="text-sm font-semibold tracking-[0.18em] appearance-accent">白泽导航 CMS</p>
+            <h1 className="text-2xl font-bold appearance-heading">管理导航内容</h1>
+            <a className="mt-2 inline-flex items-center gap-1 text-sm appearance-accent underline" href="#/blog"><FileUp size={14} />前往博客工作台</a>
+            <p className="mt-1 text-sm appearance-muted">修改会自动保存为本地草稿，点击发布后才写入 GitHub。</p>
           </div>
-          <button onClick={onClose} className="baize-icon-button p-3" aria-label="关闭管理面板"><X /></button>
+          <div className="flex shrink-0 items-center gap-2"><AppearanceButton compact /><button onClick={onClose} className="baize-icon-button p-3" aria-label="关闭管理面板"><X /></button></div>
         </header>
 
-        <nav className="mb-6 flex gap-1 overflow-x-auto rounded-2xl border border-white/70 bg-[#f4f1e8]/90 p-1.5 shadow-sm dark:border-[#c9a96b]/15 dark:bg-[#102c33]/92" aria-label="管理功能分区">
+        <nav className="mb-6 flex gap-1 overflow-x-auto rounded-2xl appearance-toolbar border p-1.5 shadow-sm" aria-label="管理功能分区">
           {([
             ['content', '内容编辑', '网站表单和分类'],
             ['layout', '布局排序', '拖拽与网格尺寸'],
             ['organize', '智能整理', '去重、补全和批量修改'],
             ['insights', '统计与健康', '访问趋势和失效链接'],
-          ] as const).map(([id, label, description]) => <button key={id} type="button" aria-current={activeSection === id ? 'page' : undefined} onClick={() => setActiveSection(id)} className={`min-w-fit flex-1 rounded-xl px-4 py-2 text-left transition ${activeSection === id ? 'bg-[#356b66] text-white shadow-sm dark:bg-[#c9a96b] dark:text-[#102c33]' : 'text-[#526f6c] hover:bg-[#5f8f84]/10 dark:text-[#b8c4c0] dark:hover:bg-[#c9a96b]/8'}`}><strong className="block text-sm">{label}</strong><span className="hidden text-[10px] opacity-75 sm:block">{description}</span></button>)}
+          ] as const).map(([id, label, description]) => <button key={id} type="button" aria-current={activeSection === id ? 'page' : undefined} onClick={() => setActiveSection(id)} className={`min-w-fit flex-1 rounded-xl px-4 py-2 text-left transition ${activeSection === id ? 'appearance-nav-active shadow-sm' : 'appearance-nav-idle'}`}><strong className="block text-sm">{label}</strong><span className="hidden text-[10px] opacity-75 sm:block">{description}</span></button>)}
         </nav>
 
         <div className="grid gap-6 xl:grid-cols-[minmax(0,1.6fr)_minmax(340px,1fr)]">
           <div className="space-y-6">
             {activeSection === 'content' && <section className={panelClass}>
-              <h2 className="mb-4 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">{draft.id ? '编辑网站' : '添加网站'}</h2>
+              <h2 className="mb-4 text-lg font-bold appearance-heading">{draft.id ? '编辑网站' : '添加网站'}</h2>
               <form onSubmit={saveSite} className="grid gap-4 md:grid-cols-2">
                 <label className={labelClass}>名称<input required className={`${inputClass} mt-1`} value={draft.name} onChange={event => setDraft({ ...draft, name: event.target.value })} /></label>
                 <label className={labelClass}>地址<input required type="url" className={`${inputClass} mt-1`} value={draft.url} onChange={event => setDraft({ ...draft, url: event.target.value })} /></label>
@@ -701,7 +702,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
                 <label className={labelClass}>标签<input className={`${inputClass} mt-1`} value={draft.tags} onChange={event => setDraft({ ...draft, tags: event.target.value })} placeholder="工具, 常用" /></label>
                 <label className={`${labelClass} md:col-span-2`}>描述<input className={`${inputClass} mt-1`} value={draft.description} onChange={event => setDraft({ ...draft, description: event.target.value })} /></label>
                 <label className={labelClass}>图标名称或 URL<input className={`${inputClass} mt-1`} value={draft.icon || ''} onChange={event => setDraft({ ...draft, icon: event.target.value })} /></label>
-                <label className={`${labelClass} flex items-center gap-2 self-end pb-2`}><input type="checkbox" className="accent-[#4f8179]" checked={Boolean(draft.favorite)} onChange={event => setDraft({ ...draft, favorite: event.target.checked })} />加入收藏</label>
+                <label className={`${labelClass} flex items-center gap-2 self-end pb-2`}><input type="checkbox" className="accent-[var(--app-accent)]" checked={Boolean(draft.favorite)} onChange={event => setDraft({ ...draft, favorite: event.target.checked })} />加入收藏</label>
                 <div className="flex gap-2 md:col-span-2">
                   <button className="baize-button-primary"><Save size={16} />保存到草稿</button>
                   {draft.id && <button type="button" onClick={() => resetForm(draft.categoryId)} className="baize-button-secondary">取消编辑</button>}
@@ -716,8 +717,8 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
               <section className={panelClass} aria-labelledby="hot-feed-refresh-title">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div>
-                    <h2 id="hot-feed-refresh-title" className="flex items-center gap-2 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]"><Flame size={20} className="text-[#4f8179] dark:text-[#c9a96b]" />热榜数据</h2>
-                    <p className="mt-1 text-xs leading-5 text-[#718986]">这里会真正触发 hot-feed.yml，重新抓取数据并部署；首页的圆形刷新按钮只读取已经生成的报告。</p>
+                    <h2 id="hot-feed-refresh-title" className="flex items-center gap-2 text-lg font-bold appearance-heading"><Flame size={20} className="appearance-accent" />热榜数据</h2>
+                    <p className="mt-1 text-xs leading-5 appearance-muted">这里会真正触发 hot-feed.yml，重新抓取数据并部署；首页的圆形刷新按钮只读取已经生成的报告。</p>
                   </div>
                   <button type="button" className="baize-button-primary shrink-0" disabled={hotFeedState === 'starting' || hotFeedState === 'running'} onClick={() => { void runHotFeedRefresh(); }}><RefreshCw size={16} className={hotFeedState === 'starting' || hotFeedState === 'running' ? 'animate-spin' : ''} />{hotFeedState === 'starting' ? '启动中…' : hotFeedState === 'running' ? '更新中…' : '立即更新热榜'}</button>
                 </div>
@@ -729,12 +730,12 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
 
           <div className="space-y-6">
             <section className={panelClass}>
-              <h2 className="mb-4 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">新建分类</h2>
+              <h2 className="mb-4 text-lg font-bold appearance-heading">新建分类</h2>
               <form onSubmit={addCategory} className="mt-3 flex gap-2"><input className={inputClass} value={newCategoryName} onChange={event => setNewCategoryName(event.target.value)} placeholder="新分类名称" /><button className="baize-button-primary px-3" aria-label="添加分类"><Plus size={18} /></button></form>
             </section>
 
             <section className={panelClass}>
-              <h2 className="mb-2 flex items-center gap-2 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]"><Github size={20} className="text-[#4f8179] dark:text-[#c9a96b]" />发布到 GitHub</h2>
+              <h2 className="mb-2 flex items-center gap-2 text-lg font-bold appearance-heading"><Github size={20} className="appearance-accent" />发布到 GitHub</h2>
               <p className="mb-4 rounded-xl border border-[#c9a96b]/25 bg-[#c9a96b]/8 p-3 text-xs leading-5 text-[#735f31] dark:text-[#dac58f]">Token 只保存在当前页面内存中。请使用仅允许此仓库 Contents 读写的 fine-grained Token。</p>
               <form onSubmit={publish} className="space-y-3">
                 <label className={`${labelClass} block`}>Personal Access Token<input type="password" autoComplete="new-password" spellCheck={false} className={`${inputClass} mt-1 font-mono`} value={token} onChange={event => { setToken(event.target.value); setVerifiedUser(''); }} placeholder="github_pat_… 或 ghp_…" /></label>
@@ -745,21 +746,21 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
                 <button disabled={publishState.type === 'loading'} className="baize-button-primary w-full py-2.5"><Github size={17} />{publishState.type === 'loading' ? '发布中…' : '提交并部署'}</button>
               </form>
               <button type="button" onClick={loadRemote} disabled={remoteState === 'loading'} className="baize-button-secondary mt-3 w-full"><RefreshCw size={16} className={remoteState === 'loading' ? 'animate-spin' : ''} />读取远端内容并比较</button>
-              {remoteData && <div className="mt-3 rounded-xl border border-[#5f8f84]/20 bg-[#5f8f84]/8 p-3 text-sm text-[#315e5b] dark:text-[#c7d1cd]">
+              {remoteData && <div className="mt-3 rounded-xl border appearance-border appearance-soft p-3 text-sm appearance-heading">
                 <div className="flex items-center gap-2 font-semibold"><GitMerge size={16} />发现远端数据</div>
                 <p className="mt-1 text-xs">远端 {remoteData.categories.length} 个分类、{remoteData.sites.length} 个网站；本地 {data.categories.length} 个分类、{data.sites.length} 个网站。{remoteBaseSha ? ` 基线 ${remoteBaseSha.slice(0, 8)}` : ''}</p>
                 {remoteMergePreview && <p className="mt-1 text-xs">三方比较：本地变化 {remoteMergePreview.localChanges} 项、远端变化 {remoteMergePreview.remoteChanges} 项{remoteMergePreview.conflicts ? `，冲突 ${remoteMergePreview.conflicts} 项，请逐项选择` : '，没有冲突'}。删除操作会保留。</p>}
-                {remoteConflicts.length > 0 && <div className="mt-3 max-h-96 space-y-3 overflow-auto">{remoteConflicts.map(conflict => <fieldset key={conflict.key} className="rounded-lg border border-[#5f8f84]/25 p-2"><legend className="px-1 text-xs font-semibold">{conflict.collection === 'layout' ? '布局' : conflict.collection === 'categories' ? '分类' : '网站'} · {conflict.label}</legend>{(['local', 'remote'] as const).map(side => <label key={side} className="mt-2 block text-xs"><span className="flex items-center gap-2"><input type="radio" name={`conflict-${conflict.key}`} checked={conflictChoices[conflict.key] === side} onChange={() => setConflictChoices(current => ({ ...current, [conflict.key]: side }))} />保留{side === 'local' ? '本机' : '远端'}</span><pre className="mt-1 max-h-28 overflow-auto whitespace-pre-wrap break-all rounded bg-[#5f8f84]/5 p-2">{conflict[side] ? JSON.stringify(conflict[side], null, 2) : '（此项已删除）'}</pre></label>)}</fieldset>)}</div>}
+                {remoteConflicts.length > 0 && <div className="mt-3 max-h-96 space-y-3 overflow-auto">{remoteConflicts.map(conflict => <fieldset key={conflict.key} className="rounded-lg border appearance-border p-2"><legend className="px-1 text-xs font-semibold">{conflict.collection === 'layout' ? '布局' : conflict.collection === 'categories' ? '分类' : '网站'} · {conflict.label}</legend>{(['local', 'remote'] as const).map(side => <label key={side} className="mt-2 block text-xs"><span className="flex items-center gap-2"><input type="radio" name={`conflict-${conflict.key}`} checked={conflictChoices[conflict.key] === side} onChange={() => setConflictChoices(current => ({ ...current, [conflict.key]: side }))} />保留{side === 'local' ? '本机' : '远端'}</span><pre className="mt-1 max-h-28 overflow-auto whitespace-pre-wrap break-all rounded appearance-soft p-2">{conflict[side] ? JSON.stringify(conflict[side], null, 2) : '（此项已删除）'}</pre></label>)}</fieldset>)}</div>}
                 <div className="mt-3 flex flex-wrap gap-2"><button type="button" onClick={mergeRemote} disabled={remoteConflicts.some(item => !conflictChoices[item.key])} className="baize-button-primary px-3 py-1.5">应用三方合并</button><button type="button" onClick={() => { if (!window.confirm('用远端内容替换当前导航草稿？未发布的本机改动将被替换。')) return; onChange(remoteData); setRemoteBaseline(remoteData); setRemoteData(null); setRemoteState('idle'); }} className="baize-button-secondary px-3 py-1.5">使用远端覆盖</button><button type="button" onClick={() => { setRemoteData(null); setRemoteState('idle'); }} className="baize-button-secondary px-3 py-1.5">取消</button></div>
               </div>}
               {publishState.message && <div className={`mt-3 rounded-xl border p-3 text-sm ${publishState.type === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{publishState.message}{publishState.url && <a className="ml-2 inline-flex items-center gap-1 underline" href={publishState.url} target="_blank" rel="noreferrer">查看 commit <ExternalLink size={13} /></a>}</div>}
-              {publishedSha && <div className="mt-3 rounded-xl border border-[#c9a96b]/20 bg-[#c9a96b]/8 p-3 text-sm"><div className="flex items-center gap-2 font-semibold text-[#5d552f] dark:text-[#dccb9d]"><Activity size={16} className={deploymentPollState === 'checking' ? 'animate-pulse' : ''} />部署状态</div><p className="mt-1 text-xs text-[#718986]">{deploymentPollState === 'needs-token' ? '待确认：请输入 Token，系统会继续检查这次部署。' : deploymentPollState === 'timeout' ? '检查已暂停：15 分钟内没有确认完成，可手动重试。' : deploymentPollState === 'error' ? '暂时无法读取 Actions 状态，可检查网络后重试。' : !workflowRun ? '等待 GitHub Actions 创建任务…' : workflowRun.status === 'completed' ? `已完成：${workflowRun.conclusion || 'unknown'}` : workflowRun.status === 'in_progress' ? '正在构建和部署…' : `状态：${workflowRun.status}`}</p><div className="mt-2 flex flex-wrap gap-2">{workflowRun && <a href={workflowRun.html_url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs underline">查看 Actions <ExternalLink size={12} /></a>}{(deploymentPollState === 'timeout' || deploymentPollState === 'error') && <button type="button" className="baize-button-secondary px-2 py-1 text-xs" disabled={!token.trim()} onClick={() => setDeploymentRetry(value => value + 1)}><RefreshCw size={12} />重新检查</button>}</div></div>}
+              {publishedSha && <div className="mt-3 rounded-xl border border-[#c9a96b]/20 bg-[#c9a96b]/8 p-3 text-sm"><div className="flex items-center gap-2 font-semibold text-[#5d552f] dark:text-[#dccb9d]"><Activity size={16} className={deploymentPollState === 'checking' ? 'animate-pulse' : ''} />部署状态</div><p className="mt-1 text-xs appearance-muted">{deploymentPollState === 'needs-token' ? '待确认：请输入 Token，系统会继续检查这次部署。' : deploymentPollState === 'timeout' ? '检查已暂停：15 分钟内没有确认完成，可手动重试。' : deploymentPollState === 'error' ? '暂时无法读取 Actions 状态，可检查网络后重试。' : !workflowRun ? '等待 GitHub Actions 创建任务…' : workflowRun.status === 'completed' ? `已完成：${workflowRun.conclusion || 'unknown'}` : workflowRun.status === 'in_progress' ? '正在构建和部署…' : `状态：${workflowRun.status}`}</p><div className="mt-2 flex flex-wrap gap-2">{workflowRun && <a href={workflowRun.html_url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs underline">查看 Actions <ExternalLink size={12} /></a>}{(deploymentPollState === 'timeout' || deploymentPollState === 'error') && <button type="button" className="baize-button-secondary px-2 py-1 text-xs" disabled={!token.trim()} onClick={() => setDeploymentRetry(value => value + 1)}><RefreshCw size={12} />重新检查</button>}</div></div>}
             </section>
 
             <section className={panelClass}>
-              <h2 className="text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]">导入、备份与恢复</h2>
-              <p className="mb-2 mt-1 text-xs leading-5 text-[#718986]">自动识别 HTML 类型：Chrome、Edge 等浏览器导出的书签文件会批量导入；普通保存网页只读取页面自身保留的原地址，不会导入页面里的其他链接。</p>
-              <p className="mb-4 text-xs leading-5 text-[#718986]">完整备份不会包含 GitHub Token 或加密密码；临时网址、临时文本和翻译历史会按本机明文导出，请妥善保管备份文件。</p>
+              <h2 className="text-lg font-bold appearance-heading">导入、备份与恢复</h2>
+              <p className="mb-2 mt-1 text-xs leading-5 appearance-muted">自动识别 HTML 类型：Chrome、Edge 等浏览器导出的书签文件会批量导入；普通保存网页只读取页面自身保留的原地址，不会导入页面里的其他链接。</p>
+              <p className="mb-4 text-xs leading-5 appearance-muted">完整备份不会包含 GitHub Token 或加密密码；临时网址、临时文本和翻译历史会按本机明文导出，请妥善保管备份文件。</p>
               <div className="flex flex-wrap gap-2">
                 <label className="baize-button-secondary cursor-pointer">
                   <BookmarkPlus size={16} />导入 HTML
@@ -791,11 +792,11 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
                 <button type="button" onClick={() => { if (confirm('确定丢弃所有本地修改并恢复仓库内置数据吗？')) onReset(); }} className="baize-danger-button"><RotateCcw size={16} />恢复默认</button>
               </div>
               {dataToolState.message && <p className={`mt-3 rounded-xl border p-3 text-sm ${dataToolState.type === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{dataToolState.message}</p>}
-              {htmlImportPreview && <div className="mt-4 rounded-2xl border border-[#5f8f84]/20 bg-[#f4f1e8]/55 p-3 dark:border-[#c9a96b]/15 dark:bg-[#07191d]/35">
+              {htmlImportPreview && <div className="mt-4 rounded-2xl border appearance-border appearance-soft p-3">
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>
-                    <h3 className="text-sm font-semibold text-[#315e5b] dark:text-[#d9ddd6]">导入前确认</h3>
-                    <p className="mt-1 text-xs text-[#718986]">可逐条修改名称、介绍、标签和分类；重复地址默认不会导入。</p>
+                    <h3 className="text-sm font-semibold appearance-heading">导入前确认</h3>
+                    <p className="mt-1 text-xs appearance-muted">可逐条修改名称、介绍、标签和分类；重复地址默认不会导入。</p>
                   </div>
                   <div className="flex gap-2">
                     <button type="button" className="baize-button-secondary px-2.5 py-1 text-xs" onClick={() => setHtmlImportPreview(current => current ? { ...current, records: current.records.map(record => ({ ...record, include: !record.duplicate })) } : current)}>全选非重复</button>
@@ -803,10 +804,10 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
                   </div>
                 </div>
                 <div className="mt-3 max-h-[34rem] space-y-3 overflow-y-auto pr-1">
-                  {htmlImportPreview.records.map((record, index) => <div key={`${record.url}-${index}`} className={`rounded-xl border p-3 ${record.duplicate ? 'border-[#a85d50]/20 bg-[#a85d50]/5' : 'border-[#5f8f84]/15 bg-white/35 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20'}`}>
+                  {htmlImportPreview.records.map((record, index) => <div key={`${record.url}-${index}`} className={`rounded-xl border p-3 ${record.duplicate ? 'border-[#a85d50]/20 bg-[#a85d50]/5' : 'appearance-border appearance-soft'}`}>
                     <div className="mb-2 flex items-center gap-2">
-                      <input type="checkbox" className="accent-[#4f8179]" checked={record.include} disabled={record.duplicate} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, include: event.target.checked } : item) } : current)} aria-label={`选择 ${record.name}`} />
-                      <span className="min-w-0 flex-1 truncate text-xs text-[#718986]" title={record.url}>{record.url}</span>
+                      <input type="checkbox" className="accent-[var(--app-accent)]" checked={record.include} disabled={record.duplicate} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, include: event.target.checked } : item) } : current)} aria-label={`选择 ${record.name}`} />
+                      <span className="min-w-0 flex-1 truncate text-xs appearance-muted" title={record.url}>{record.url}</span>
                       {record.duplicate && <span className="shrink-0 text-[11px] text-[#985247]">重复地址</span>}
                     </div>
                     <div className="grid gap-2 md:grid-cols-2">
@@ -816,7 +817,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
                       <label className={`${labelClass} md:col-span-2`}>标签<input className={`${inputClass} mt-1`} value={record.tags} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, tags: event.target.value } : item) } : current)} placeholder="书签, 常用" /></label>
                     </div>
                     {!record.duplicate && <div className="mt-2 flex flex-wrap items-center gap-2">
-                      <p className="flex-1 text-xs text-[#718986]">{record.suggestion.category ? `建议分类：${record.suggestion.category}。` : ''}{record.suggestion.reason}</p>
+                      <p className="flex-1 text-xs appearance-muted">{record.suggestion.category ? `建议分类：${record.suggestion.category}。` : ''}{record.suggestion.reason}</p>
                       <button type="button" className="baize-button-secondary px-2 py-1 text-xs" onClick={() => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? {
                         ...item,
                         category: item.suggestion.category || item.category,
@@ -827,13 +828,13 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
                   </div>)}
                 </div>
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs text-[#718986]">已选择 {htmlImportPreview.records.filter(record => record.include && !record.duplicate).length} / {htmlImportPreview.records.length} 条</span>
+                  <span className="text-xs appearance-muted">已选择 {htmlImportPreview.records.filter(record => record.include && !record.duplicate).length} / {htmlImportPreview.records.length} 条</span>
                   <button type="button" className="baize-button-primary" onClick={confirmHtmlImport}><BookmarkPlus size={16} />确认导入</button>
                 </div>
               </div>}
-              <div className="mt-4 rounded-xl border border-[#5f8f84]/15 bg-white/20 p-3 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
-                <h3 className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Lock size={16} />GitHub 加密云备份</h3>
-                <p className="mb-3 mt-1 text-xs leading-5 text-[#718986]">使用上方仓库和 Token。完整备份只在本机加密，GitHub 中仅保存密文；密码无法找回，也不会保存在浏览器中。</p>
+              <div className="mt-4 rounded-xl border appearance-border appearance-soft p-3">
+                <h3 className="flex items-center gap-2 text-sm font-semibold appearance-heading"><Lock size={16} />GitHub 加密云备份</h3>
+                <p className="mb-3 mt-1 text-xs leading-5 appearance-muted">使用上方仓库和 Token。完整备份只在本机加密，GitHub 中仅保存密文；密码无法找回，也不会保存在浏览器中。</p>
                 <div className="space-y-2">
                   <input type="password" autoComplete="new-password" className={inputClass} value={cloudBackupPassword} onChange={event => setCloudBackupPassword(event.target.value)} placeholder="加密密码（至少 12 个字符）" />
                   <input type="password" autoComplete="new-password" className={inputClass} value={cloudBackupPasswordConfirm} onChange={event => setCloudBackupPasswordConfirm(event.target.value)} placeholder="再次输入密码（仅上传时需要）" />

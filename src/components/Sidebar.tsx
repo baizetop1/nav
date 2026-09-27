@@ -2,7 +2,8 @@ import { siteConfig } from '../data';
 import type { Category } from '../types/navigation';
 import { cn } from '../lib/utils';
 import type { SceneMode } from '../types/scene';
-import { X, Github, Moon, Sun, Settings, Palette, Briefcase, StickyNote, Download, BookOpen, Coffee, Sparkles } from 'lucide-react';
+import { X, Github, Moon, Sun, Settings, Briefcase, StickyNote, Download, BookOpen, Coffee, Sparkles } from 'lucide-react';
+import { AppearanceButton } from './appearance/AppearanceProvider';
 
 interface SidebarProps {
   activeCategory: string;
@@ -17,9 +18,6 @@ interface SidebarProps {
   onTempTextClick: () => void;
   tempText: string;
   onTempTextChange: (value: string) => void;
-  isAutoGradient: boolean;
-  toggleAutoGradient: () => void;
-  customGradient?: string;
   canInstall: boolean;
   onInstall: () => void;
 }
@@ -37,13 +35,9 @@ export function Sidebar({
     onTempTextClick,
     tempText,
     onTempTextChange,
-    isAutoGradient,
-    toggleAutoGradient,
-    customGradient,
     canInstall,
     onInstall
 }: SidebarProps) {
-    const isWorkMode = sceneMode === 'work';
     const sceneOptions = [
         { id: 'default' as const, name: '日常', icon: Sparkles },
         { id: 'work' as const, name: '工作', icon: Briefcase },
@@ -71,9 +65,8 @@ export function Sidebar({
 
             {/* Sidebar */}
             <aside className={cn(
-                    "sidebar-shell fixed top-0 left-0 h-full w-64 backdrop-blur-2xl border-r border-white/60 dark:border-[#c9a96b]/12 z-50 transform transition-transform duration-300 lg:translate-x-0 transition-colors shadow-[16px_0_60px_-42px_rgba(16,44,51,0.7)]",
-                isOpen ? "translate-x-0" : "-translate-x-full",
-                customGradient ? customGradient : "bg-[#f4f1e8]/82 dark:bg-[#102c33]/88"
+                    "sidebar-shell appearance-sidebar fixed top-0 left-0 h-full w-64 backdrop-blur-2xl border-r z-50 transform transition-transform duration-300 lg:translate-x-0 shadow-[16px_0_60px_-42px_rgba(16,44,51,0.7)]",
+                isOpen ? "translate-x-0" : "-translate-x-full"
             )}>
                 <div className="p-6 h-full flex flex-col">
                     <div className="flex items-center justify-between mb-8">
@@ -84,7 +77,7 @@ export function Sidebar({
                                 <div className="brand-subtitle text-[10px] font-medium tracking-[0.24em] text-[#5f8f84] dark:text-[#c9a96b]">知万物 · 辨吉凶</div>
                             </div>
                         </div>
-                        <button onClick={() => setIsOpen(false)} className="baize-icon-button p-1 lg:hidden">
+                        <button onClick={() => setIsOpen(false)} className="baize-icon-button p-1 lg:hidden" aria-label="关闭导航">
                             <X size={20} className="text-[#52736f] dark:text-[#c9a96b]" />
                         </button>
                     </div>
@@ -97,8 +90,8 @@ export function Sidebar({
                                 className={cn(
                                     "w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-colors duration-200",
                                     activeCategory === cat.id
-                                        ? "bg-[#5f8f84]/15 text-[#285f5c] dark:bg-[#c9a96b]/10 dark:text-[#dfc68e]"
-                                        : "text-[#58726f] hover:bg-[#5f8f84]/8 dark:text-[#afbeb9] dark:hover:bg-[#c9a96b]/8"
+                                        ? "appearance-nav-active"
+                                        : "appearance-nav-idle"
                                 )}
                             >
                                 {cat.name}
@@ -120,7 +113,7 @@ export function Sidebar({
                             {sceneOptions.map(option => {
                                 const Icon = option.icon;
                                 const active = sceneMode === option.id;
-                                return <button key={option.id} type="button" onClick={() => onSceneModeChange(option.id)} className={cn('flex items-center gap-1.5 rounded-lg px-2 py-2 text-xs font-medium transition', active ? 'bg-[#356b66] text-white dark:bg-[#c9a96b] dark:text-[#102c33]' : 'text-[#58726f] hover:bg-[#5f8f84]/10 dark:text-[#afbeb9] dark:hover:bg-[#c9a96b]/10')}><Icon size={14} />{option.name}</button>;
+                                return <button key={option.id} type="button" onClick={() => onSceneModeChange(option.id)} className={cn('flex items-center gap-1.5 rounded-lg px-2 py-2 text-xs font-medium transition', active ? 'appearance-nav-active' : 'appearance-nav-idle')}><Icon size={14} />{option.name}</button>;
                             })}
                         </div>
                     </section>
@@ -136,22 +129,12 @@ export function Sidebar({
                              <button
                                 onClick={toggleTheme}
                                 className="baize-icon-button"
-                                title="Toggle Theme"
+                                title={isDark ? '切换到浅色主题' : '切换到深色主题'}
+                                aria-label={isDark ? '切换到浅色主题' : '切换到深色主题'}
                             >
                                 {isDark ? <Sun size={20} /> : <Moon size={20} />}
                             </button>
-                             {!isWorkMode && <button
-                                onClick={toggleAutoGradient}
-                                className={cn(
-                                    "p-2 rounded-lg transition-colors",
-                                    isAutoGradient
-                                        ? "text-[#4d8179] hover:bg-[#5f8f84]/10 dark:text-[#d3b976] dark:hover:bg-[#c9a96b]/10"
-                                        : "text-[#66807c] hover:bg-[#5f8f84]/10 dark:text-[#aebdb8] dark:hover:bg-[#c9a96b]/10"
-                                )}
-                                title={isAutoGradient ? "关闭自动渐变" : "开启自动渐变"}
-                            >
-                                <Palette size={20} />
-                            </button>}
+                             <AppearanceButton compact />
                             <a
                                 href={siteConfig.github}
                                 target="_blank"

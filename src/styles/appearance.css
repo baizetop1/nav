@@ -1,0 +1,379 @@
+/* One palette across navigation and workspaces. Game and immersive scenes are separate documents/layers. */
+:root, :root[data-appearance="landscape"] {
+  --app-bg: #dce6e1;
+  --app-text: #183e41;
+  --app-muted: #536d68;
+  --app-accent: #356b66;
+  --app-accent-hover: #285954;
+  --app-accent-rgb: 53 107 102;
+  --app-on-accent: #fffdf5;
+  --app-border: #b5c8bf;
+  --app-panel: rgb(248 247 240 / .9);
+  --app-panel-solid: #f8f7f0;
+  --app-input: rgb(255 254 249 / .92);
+  --app-sidebar: rgb(239 244 236 / .95);
+  --app-toolbar: rgb(239 244 236 / .89);
+  --app-soft: rgb(53 107 102 / .09);
+  --app-shadow: 0 18px 60px -38px rgb(20 50 43 / .36);
+  --app-atmosphere: radial-gradient(ellipse at 85% 0%, rgb(243 234 204 / .42), transparent 50%);
+  --app-texture: none;
+  --app-shade: linear-gradient(180deg, rgb(220 230 225 / .2), rgb(220 230 225 / .56));
+  --app-photo-opacity: .85;
+}
+:root.dark, :root.dark[data-appearance="landscape"] {
+  --app-bg: #09191b;
+  --app-text: #e6ebe6;
+  --app-muted: #a9b9b1;
+  --app-accent: #d4b67c;
+  --app-accent-hover: #e2c998;
+  --app-accent-rgb: 212 182 124;
+  --app-on-accent: #17292b;
+  --app-border: #455b58;
+  --app-panel: rgb(17 40 44 / .94);
+  --app-panel-solid: #11282c;
+  --app-input: rgb(9 28 31 / .95);
+  --app-sidebar: rgb(10 29 32 / .97);
+  --app-toolbar: rgb(10 29 32 / .93);
+  --app-soft: rgb(212 182 124 / .11);
+  --app-shadow: 0 18px 60px -38px rgb(0 0 0 / .65);
+  --app-atmosphere: radial-gradient(ellipse at 85% 0%, rgb(138 133 86 / .1), transparent 60%);
+  --app-shade: linear-gradient(180deg, rgb(9 25 27 / .48), rgb(9 25 27 / .9));
+  --app-photo-opacity: .38;
+}
+:root[data-appearance="mist"] {
+  --app-bg: #e6eef6;
+  --app-text: #23384f;
+  --app-muted: #516781;
+  --app-accent: #385f98;
+  --app-accent-hover: #294c80;
+  --app-accent-rgb: 56 95 152;
+  --app-on-accent: #ffffff;
+  --app-border: #b6c9e0;
+  --app-panel: rgb(247 251 255 / .92);
+  --app-panel-solid: #f7fbff;
+  --app-input: rgb(255 255 255 / .93);
+  --app-sidebar: rgb(239 246 253 / .95);
+  --app-toolbar: rgb(239 246 253 / .9);
+  --app-soft: rgb(56 95 152 / .085);
+  --app-shadow: 0 18px 60px -38px rgb(30 68 109 / .38);
+  --app-atmosphere: radial-gradient(ellipse at 90% 0%, #fff9f3 0%, transparent 46%), radial-gradient(ellipse at 0% 75%, #c8dcf0 0%, transparent 60%), linear-gradient(125deg, #dbeaf8, #ecf2fa 58%, #dbe0f0);
+  --app-texture: none;
+  --app-shade: none;
+  --app-photo-opacity: 0;
+}
+:root.dark[data-appearance="mist"] {
+  --app-bg: #101e30;
+  --app-text: #e6effc;
+  --app-muted: #a9bedb;
+  --app-accent: #98bde9;
+  --app-accent-hover: #b9d5f7;
+  --app-accent-rgb: 152 189 233;
+  --app-on-accent: #12243f;
+  --app-border: #425b78;
+  --app-panel: rgb(23 41 63 / .95);
+  --app-panel-solid: #17293f;
+  --app-input: rgb(14 29 48 / .96);
+  --app-sidebar: rgb(15 31 49 / .97);
+  --app-toolbar: rgb(15 31 49 / .93);
+  --app-soft: rgb(152 189 233 / .11);
+  --app-shadow: 0 18px 60px -38px rgb(0 0 0 / .65);
+  --app-atmosphere: radial-gradient(ellipse at 90% 0%, #384058 0%, transparent 54%), radial-gradient(ellipse at 0% 85%, #183c58 0%, transparent 66%), linear-gradient(125deg, #102035, #182139);
+}
+:root[data-appearance="paper"] {
+  --app-bg: #efe8dd;
+  --app-text: #42382f;
+  --app-muted: #706150;
+  --app-accent: #885434;
+  --app-accent-hover: #6b4025;
+  --app-accent-rgb: 136 84 52;
+  --app-on-accent: #fffaf2;
+  --app-border: #cdbcaa;
+  --app-panel: rgb(255 250 239 / .94);
+  --app-panel-solid: #fffaf0;
+  --app-input: rgb(255 253 247 / .95);
+  --app-sidebar: rgb(245 237 221 / .97);
+  --app-toolbar: rgb(248 241 227 / .93);
+  --app-soft: rgb(136 84 52 / .085);
+  --app-shadow: 0 18px 60px -38px rgb(93 66 40 / .3);
+  --app-atmosphere: radial-gradient(ellipse at 90% 0%, #fff9e7 0%, transparent 55%), linear-gradient(135deg, #e8dbc5, #f5eee0 53%, #eee0cb);
+  --app-texture: repeating-linear-gradient(0deg, rgb(100 72 42 / .035) 0px, rgb(100 72 42 / .035) 1px, transparent 1px, transparent 4px);
+  --app-shade: none;
+  --app-photo-opacity: 0;
+}
+:root.dark[data-appearance="paper"] {
+  --app-bg: #241e19;
+  --app-text: #f2e6d7;
+  --app-muted: #c6b4a1;
+  --app-accent: #dcb087;
+  --app-accent-hover: #edcaa7;
+  --app-accent-rgb: 220 176 135;
+  --app-on-accent: #312216;
+  --app-border: #665343;
+  --app-panel: rgb(48 39 32 / .96);
+  --app-panel-solid: #302720;
+  --app-input: rgb(34 28 22 / .97);
+  --app-sidebar: rgb(36 30 24 / .98);
+  --app-toolbar: rgb(36 30 24 / .95);
+  --app-soft: rgb(220 176 135 / .11);
+  --app-shadow: 0 18px 60px -38px rgb(0 0 0 / .6);
+  --app-atmosphere: radial-gradient(ellipse at 90% 0%, #4b3b29, transparent 63%), linear-gradient(135deg, #241e19, #30271e 60%, #211e1a);
+  --app-texture: repeating-linear-gradient(0deg, rgb(219 188 149 / .025) 0px, rgb(219 188 149 / .025) 1px, transparent 1px, transparent 4px);
+}
+:root[data-appearance="graphite"] {
+  --app-bg: #e7e9ed;
+  --app-text: #292f38;
+  --app-muted: #606875;
+  --app-accent: #495467;
+  --app-accent-hover: #333e50;
+  --app-accent-rgb: 73 84 103;
+  --app-on-accent: #ffffff;
+  --app-border: #bac0cb;
+  --app-panel: rgb(249 250 252 / .96);
+  --app-panel-solid: #f9fafc;
+  --app-input: #ffffff;
+  --app-sidebar: rgb(239 241 245 / .98);
+  --app-toolbar: rgb(244 246 249 / .95);
+  --app-soft: rgb(73 84 103 / .075);
+  --app-shadow: 0 12px 36px -28px rgb(22 30 46 / .28);
+  --app-atmosphere: linear-gradient(128deg, #eef0f4 0%, #e4e8ee 52%, #f8f9fb 100%);
+  --app-texture: linear-gradient(rgb(84 96 112 / .045) 1px, transparent 1px), linear-gradient(90deg, rgb(84 96 112 / .045) 1px, transparent 1px);
+  --app-shade: none;
+  --app-photo-opacity: 0;
+}
+:root.dark[data-appearance="graphite"] {
+  --app-bg: #14171d;
+  --app-text: #e8ecf2;
+  --app-muted: #b4bbc7;
+  --app-accent: #bdc9dc;
+  --app-accent-hover: #d8e0ed;
+  --app-accent-rgb: 189 201 220;
+  --app-on-accent: #242d3c;
+  --app-border: #4e5869;
+  --app-panel: rgb(31 36 46 / .97);
+  --app-panel-solid: #1f242e;
+  --app-input: #181d25;
+  --app-sidebar: rgb(23 28 36 / .98);
+  --app-toolbar: rgb(23 28 36 / .96);
+  --app-soft: rgb(189 201 220 / .1);
+  --app-shadow: 0 12px 36px -28px rgb(0 0 0 / .65);
+  --app-atmosphere: linear-gradient(128deg, #1e2531 0%, #13171e 52%, #242b36 100%);
+  --app-texture: linear-gradient(rgb(159 178 206 / .045) 1px, transparent 1px), linear-gradient(90deg, rgb(159 178 206 / .045) 1px, transparent 1px);
+}
+
+.appearance-backdrop { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; background: var(--app-bg); }
+.appearance-backdrop > div { position: absolute; inset: 0; }
+.appearance-backdrop-image { background-position: center top; background-size: cover; opacity: var(--app-photo-opacity); }
+.appearance-backdrop-art { background-image: var(--app-atmosphere); }
+.appearance-backdrop-texture { background-image: var(--app-texture); }
+:root[data-appearance="graphite"] .appearance-backdrop-texture { background-size: 48px 48px; }
+.appearance-backdrop-shade { background-image: var(--app-shade); }
+:root[data-appearance-scene="work"] .appearance-backdrop > div { opacity: 0; visibility: hidden; }
+:root[data-appearance-scene="study"] .appearance-backdrop { background: var(--app-bg); }
+:root[data-appearance-scene="study"] .appearance-backdrop > div { opacity: .18; }
+:root[data-appearance-scene="study"]:not([data-appearance="landscape"]) .appearance-backdrop-image { display: none; }
+
+.appearance-surface { position: relative; z-index: 1; background: transparent; color: var(--app-text); }
+.appearance-admin-shell { color: var(--app-text); background-color: var(--app-bg); background-image: var(--app-atmosphere); }
+.appearance-sidebar { border-color: var(--app-border); background: var(--app-sidebar); color: var(--app-text); }
+.appearance-toolbar { border-color: var(--app-border); background: var(--app-toolbar); color: var(--app-text); }
+.appearance-hero { border-color: var(--app-border); color: var(--app-text); background: linear-gradient(135deg, var(--app-soft), transparent), var(--app-panel); box-shadow: var(--app-shadow); }
+.appearance-nav-active, .appearance-brand { background: var(--app-accent); color: var(--app-on-accent); }
+.appearance-nav-idle { color: var(--app-muted); }
+.appearance-nav-idle:hover { background: var(--app-soft); color: var(--app-text); }
+.appearance-muted { color: var(--app-muted); }
+.appearance-heading { color: var(--app-text); }
+.appearance-accent { color: var(--app-accent); }
+.appearance-soft { background: var(--app-soft); }
+.appearance-border { border-color: var(--app-border); }
+.appearance-site-card { background: var(--app-panel); border-color: var(--app-border); color: var(--app-text); }
+.appearance-site-card:hover { border-color: var(--app-accent); }
+
+/* These shared primitives deliberately override their legacy light/dark palette.
+   Error/warning/success colors are not remapped. Keep layout utilities untouched. */
+:root[data-appearance] .baize-panel {
+  background: var(--app-panel); border-color: var(--app-border); color: var(--app-text); box-shadow: var(--app-shadow);
+}
+:root[data-appearance] .baize-toolbar { background: var(--app-toolbar); border-color: var(--app-border); box-shadow: var(--app-shadow); }
+:root[data-appearance] .baize-input { background: var(--app-input); border-color: var(--app-border); color: var(--app-text); }
+:root[data-appearance] .baize-input::placeholder { color: var(--app-muted); opacity: .85; }
+:root[data-appearance] .baize-input:focus { border-color: var(--app-accent); --tw-ring-color: rgb(var(--app-accent-rgb) / .22); }
+:root[data-appearance] .baize-button-primary { background: var(--app-accent); color: var(--app-on-accent); }
+:root[data-appearance] .baize-button-primary:hover { background: var(--app-accent-hover); }
+:root[data-appearance] .baize-button-secondary { background: var(--app-input); color: var(--app-text); border-color: var(--app-border); }
+:root[data-appearance] .baize-button-secondary:hover { background: var(--app-soft); }
+:root[data-appearance] .baize-icon-button { color: var(--app-muted); }
+:root[data-appearance] .baize-icon-button:hover { background: var(--app-soft); color: var(--app-accent); }
+:root[data-appearance] .baize-chip { background: var(--app-input); color: var(--app-muted); border-color: var(--app-border); }
+:root[data-appearance] .baize-chip:hover { background: var(--app-soft); border-color: var(--app-accent); }
+:root[data-appearance] .utility-launcher-button { background: var(--app-panel); box-shadow: var(--app-shadow); }
+:root[data-appearance] .utility-launcher-badge { background: var(--app-soft); color: var(--app-text); }
+:root[data-appearance] .scene-study .site-card,
+:root[data-appearance] .scene-relax .site-card { border-color: var(--app-border); background: var(--app-panel); }
+:root[data-appearance-scene="work"] :is(.baize-panel, .site-card, .utility-launcher-button) { background: var(--app-panel-solid); box-shadow: none; backdrop-filter: none; }
+:root[data-appearance-scene="work"] :is(.baize-toolbar, .appearance-toolbar, .appearance-sidebar) { background: var(--app-panel-solid); box-shadow: none; backdrop-filter: none; }
+:root[data-appearance-scene="work"] .appearance-admin-shell { background-image: none; }
+:root[data-appearance] :is(.baize-button-primary, .baize-button-secondary, .baize-icon-button, .baize-chip):focus-visible {
+  outline: 2px solid var(--app-accent); outline-offset: 3px; --tw-ring-color: transparent;
+}
+:root[data-appearance] input[type="checkbox"], :root[data-appearance] input[type="radio"] { accent-color: var(--app-accent); }
+:root[data-appearance] progress { accent-color: var(--app-accent); }
+
+/* Appearance dialog + static, code-rendered previews. */
+.appearance-overlay { background: rgb(13 21 31 / .52); }
+:root[data-appearance] .appearance-dialog { width: min(58rem, 100%); max-height: calc(100dvh - 2rem); overflow: hidden; border: 1px solid var(--app-border); border-radius: 1.5rem; background: var(--app-panel-solid); color: var(--app-text); box-shadow: 0 30px 100px rgb(0 0 0 / .25); backdrop-filter: none; }
+.appearance-dialog-header { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.4rem 1.5rem; border-bottom: 1px solid var(--app-border); background: var(--app-panel-solid); }
+.appearance-dialog-header h2 { font-size: 1.25rem; font-weight: 750; }
+.appearance-dialog-body { padding: 1.5rem; }
+.appearance-mode-options { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0; }
+.appearance-mode-option { display: flex; align-items: center; gap: .5rem; border: 1px solid var(--app-border); border-radius: .75rem; padding: .75rem 1rem; cursor: pointer; font-size: .875rem; }
+.appearance-mode-option:has(input:checked) { border-color: var(--app-accent); background: var(--app-soft); }
+.appearance-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+.appearance-card { display: block; position: relative; min-width: 0; overflow: hidden; border-radius: 1rem; border: 2px solid var(--app-border); cursor: pointer; background: var(--app-input); text-align: left; }
+.appearance-card[data-selected="true"] { border-color: var(--app-accent); box-shadow: 0 0 0 2px var(--app-soft); }
+.appearance-card:focus-within { outline: 2px solid var(--app-accent); outline-offset: 3px; }
+.appearance-card > input { position: absolute; top: .7rem; right: .7rem; left: auto; z-index: 1; width: 1rem; height: 1rem; }
+.appearance-card-copy { display: block; padding: .85rem 1rem 1rem; }
+.appearance-card-title { display: flex; align-items: center; justify-content: space-between; gap: .5rem; font-size: .9rem; font-weight: 700; color: var(--app-text); }
+.appearance-card-description { display: block; margin-top: .3rem; font-size: .75rem; line-height: 1.6; color: var(--app-muted); }
+.appearance-preview { position: relative; display: flex; gap: 9%; height: 7rem; padding: 1rem 1.25rem 0 0; overflow: hidden; background: var(--preview-bg); }
+.appearance-preview-sidebar { width: 23%; height: 100%; flex-shrink: 0; border-radius: 0 .6rem 0 0; background: var(--preview-panel); border-right: 1px solid rgb(0 0 0 / .06); }
+.appearance-preview-lines { display: grid; flex: 1; align-content: start; gap: .55rem; padding-top: .4rem; }
+.appearance-preview-lines > span { display: block; height: .85rem; border-radius: .25rem; background: var(--preview-panel); }
+.appearance-preview-lines > span:nth-child(2) { width: 80%; }
+.appearance-preview-accent { position: absolute; bottom: .75rem; left: 32%; width: 30%; height: .8rem; border-radius: .25rem; background: var(--preview-accent); }
+.appearance-preview-landscape { --preview-bg: linear-gradient(145deg, #87a39b, #d2d6bc 60%, #698c78); --preview-panel: #f5f2e6; --preview-accent: #356b66; }
+.appearance-preview-mist { --preview-bg: linear-gradient(145deg, #c3dff5, #f1e6ed 60%, #accae7); --preview-panel: #f9fcff; --preview-accent: #385f98; }
+.appearance-preview-paper { --preview-bg: linear-gradient(145deg, #e4d0ab, #f9efd9 65%, #e8d9c2); --preview-panel: #fffaf0; --preview-accent: #885434; }
+.appearance-preview-graphite { --preview-bg: linear-gradient(145deg, #c8cdd7, #eff1f4 65%, #c8cfdb); --preview-panel: #fafbfc; --preview-accent: #495467; }
+.dark .appearance-preview-landscape { --preview-bg: linear-gradient(145deg, #183b3b, #324c41, #0d252a); --preview-panel: #11282c; --preview-accent: #d4b67c; }
+.dark .appearance-preview-mist { --preview-bg: linear-gradient(145deg, #153453, #3b3c59 65%, #102339); --preview-panel: #17293f; --preview-accent: #98bde9; }
+.dark .appearance-preview-paper { --preview-bg: linear-gradient(145deg, #473323, #554631 65%, #241e19); --preview-panel: #302720; --preview-accent: #dcb087; }
+.dark .appearance-preview-graphite { --preview-bg: linear-gradient(145deg, #303b4a, #1b222e 65%, #343e4e); --preview-panel: #1f242e; --preview-accent: #bdc9dc; }
+.appearance-note { margin-top: .85rem; font-size: .8rem; line-height: 1.8; color: var(--app-muted); }
+.appearance-storage-warning { border: 1px solid #b98035; border-radius: .8rem; padding: .8rem; font-size: .8rem; line-height: 1.7; background: #fff2d8; color: #694313; }
+.dark .appearance-storage-warning { background: #382c1b; color: #f1ce90; }
+@media (max-width: 640px) {
+  .appearance-dialog { max-height: calc(100dvh - 1rem); border-radius: 1.1rem; }
+  .appearance-dialog-header, .appearance-dialog-body { padding: 1rem; }
+  .appearance-grid { gap: .6rem; }
+  .appearance-preview { height: 5.4rem; padding-top: .7rem; }
+  .appearance-card-copy { padding: .7rem; }
+  .appearance-backdrop-image { background-position: 38% top; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .appearance-backdrop, .appearance-backdrop > div, .appearance-dialog, .appearance-card { animation: none !important; transition: none !important; }
+}
+@media (max-width: 379px) {
+  .appearance-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Compatibility for older widgets' neutral/brand text utilities; semantic red/amber
+   feedback utilities remain unchanged. New components should use the semantic classes above. */
+:root[data-appearance] :is(
+  [class~="text-[#173b41]"],
+  [class~="dark:text-[#173b41]"],
+  [class~="text-[#234b4e]"],
+  [class~="dark:text-[#234b4e]"],
+  [class~="text-[#f4f1e8]"],
+  [class~="dark:text-[#f4f1e8]"],
+  [class~="text-[#ecebe4]"],
+  [class~="dark:text-[#ecebe4]"],
+  [class~="text-[#d9ddd6]"],
+  [class~="dark:text-[#d9ddd6]"],
+  [class~="text-[#d9e3de]"],
+  [class~="dark:text-[#d9e3de]"],
+  [class~="text-[#e8ebe3]"],
+  [class~="dark:text-[#e8ebe3]"],
+  [class~="text-[#dbe3de]"],
+  [class~="dark:text-[#dbe3de]"]
+) { color: var(--app-text); }
+:root[data-appearance] :is(
+  [class~="text-[#64807c]"],
+  [class~="dark:text-[#64807c]"],
+  [class~="text-[#718986]"],
+  [class~="dark:text-[#718986]"],
+  [class~="text-[#456b68]"],
+  [class~="dark:text-[#456b68]"],
+  [class~="text-[#526f6c]"],
+  [class~="dark:text-[#526f6c]"],
+  [class~="text-[#78918c]"],
+  [class~="dark:text-[#78918c]"],
+  [class~="text-[#58726f]"],
+  [class~="dark:text-[#58726f]"],
+  [class~="text-[#54716e]"],
+  [class~="dark:text-[#54716e]"],
+  [class~="text-[#52736f]"],
+  [class~="dark:text-[#52736f]"],
+  [class~="text-[#6f8984]"],
+  [class~="dark:text-[#6f8984]"],
+  [class~="text-[#829793]"],
+  [class~="dark:text-[#829793]"],
+  [class~="text-[#91a6a1]"],
+  [class~="dark:text-[#91a6a1]"],
+  [class~="text-[#66807c]"],
+  [class~="dark:text-[#66807c]"],
+  [class~="text-[#4a706c]"],
+  [class~="dark:text-[#4a706c]"],
+  [class~="text-[#8aa39d]"],
+  [class~="dark:text-[#8aa39d]"],
+  [class~="text-[#9fb2ad]"],
+  [class~="dark:text-[#9fb2ad]"],
+  [class~="text-[#afbeb9]"],
+  [class~="dark:text-[#afbeb9]"],
+  [class~="text-[#b8c6c1]"],
+  [class~="dark:text-[#b8c6c1]"],
+  [class~="text-[#b8c4c0]"],
+  [class~="dark:text-[#b8c4c0]"],
+  [class~="text-[#bac7c3]"],
+  [class~="dark:text-[#bac7c3]"],
+  [class~="text-[#c7d1cd]"],
+  [class~="dark:text-[#c7d1cd]"],
+  [class~="text-[#c5d0cc]"],
+  [class~="dark:text-[#c5d0cc]"],
+  [class~="text-[#c9cbbf]"],
+  [class~="dark:text-[#c9cbbf]"],
+  [class~="text-[#dedbd0]"],
+  [class~="dark:text-[#dedbd0]"],
+  [class~="text-[#aebdb8]"],
+  [class~="dark:text-[#aebdb8]"],
+  [class~="text-[#8fa39d]"],
+  [class~="dark:text-[#8fa39d]"],
+  [class~="text-[#869b95]"],
+  [class~="dark:text-[#869b95]"],
+  [class~="text-[#b7a36f]"],
+  [class~="dark:text-[#b7a36f]"],
+  [class~="text-[#baa978]"],
+  [class~="dark:text-[#baa978]"],
+  [class~="text-[#b8cec7]"],
+  [class~="dark:text-[#b8cec7]"]
+) { color: var(--app-muted); }
+:root[data-appearance] :is(
+  [class~="text-[#356b66]"],
+  [class~="dark:text-[#356b66]"],
+  [class~="text-[#285954]"],
+  [class~="dark:text-[#285954]"],
+  [class~="text-[#285f5c]"],
+  [class~="dark:text-[#285f5c]"],
+  [class~="text-[#4f8179]"],
+  [class~="dark:text-[#4f8179]"],
+  [class~="text-[#5f8f84]"],
+  [class~="dark:text-[#5f8f84]"],
+  [class~="text-[#3f746e]"],
+  [class~="dark:text-[#3f746e]"],
+  [class~="text-[#4d8179]"],
+  [class~="dark:text-[#4d8179]"],
+  [class~="text-[#c9a96b]"],
+  [class~="dark:text-[#c9a96b]"],
+  [class~="text-[#dfc68e]"],
+  [class~="dark:text-[#dfc68e]"],
+  [class~="text-[#d2b775]"],
+  [class~="dark:text-[#d2b775]"],
+  [class~="text-[#dec58b]"],
+  [class~="dark:text-[#dec58b]"],
+  [class~="text-[#d3b976]"],
+  [class~="dark:text-[#d3b976]"],
+  [class~="text-[#d8bd7e]"],
+  [class~="dark:text-[#d8bd7e]"]
+) { color: var(--app-accent); }
+:root[data-appearance] .appearance-site-card .site-tags > span { color: var(--app-muted); background: var(--app-soft); border-color: var(--app-border); }
+:root[data-appearance] .appearance-site-card .site-card-header > div:first-child > div:first-child { color: var(--app-accent); background: var(--app-soft); border-color: var(--app-border); }

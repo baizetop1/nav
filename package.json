@@ -32,6 +32,8 @@
     "test:backup": "node --experimental-strip-types scripts/backup-selfcheck.mjs",
     "test:encrypted-backup": "node --experimental-strip-types scripts/encrypted-backup-selfcheck.mjs",
     "test:feature-data": "node --experimental-strip-types scripts/feature-data-selfcheck.mjs",
+    "test:appearance": "node --experimental-strip-types scripts/appearance-selfcheck.mjs",
+    "check:appearance": "node scripts/appearance-browser.mjs",
     "test:text-transfer": "node --experimental-strip-types scripts/text-transfer-selfcheck.mjs",
     "test:text-network": "node --experimental-strip-types scripts/text-network-selfcheck.mjs",
     "test:inbox": "node --experimental-strip-types scripts/inbox-selfcheck.mjs",

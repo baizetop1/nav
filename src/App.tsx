@@ -11,6 +11,7 @@ import type { TextIndex } from './types/text-network';
 const TextGraphPanel = lazy(() => import('./components/TextGraphPanel').then(module => ({ default: module.TextGraphPanel })));
 const AdminPanel = lazy(() => import('./components/AdminPanel').then(module => ({ default: module.AdminPanel })));
 import { Sidebar } from './components/Sidebar';
+import { AppearanceButton, useAppearance } from './components/appearance/AppearanceProvider';
 const CommandPalette = lazy(() => import('./components/CommandPalette').then(module => ({ default: module.CommandPalette })));
 const ReadingPanel = lazy(() => import('./components/ReadingPanel').then(module => ({ default: module.ReadingPanel })));
 const InboxPanel = lazy(() => import('./components/inbox/InboxPanel').then(module => ({ default: module.InboxPanel })));
@@ -100,6 +101,7 @@ function loadInitialData(): NavigationData {
 }
 
 function App() {
+  const { openSettings: openAppearance } = useAppearance();
   const [incomingShare, setIncomingShare] = useState(() => parseIncomingShare(window.location));
   const [captureOpen, setCaptureOpen] = useState(() => Boolean(incomingShare));
   const [captureMounted, setCaptureMounted] = useState(() => Boolean(incomingShare));
@@ -136,10 +138,7 @@ function App() {
   const [activeCategory, setActiveCategory] = useState(defaultNavigationData.categories[0]?.id || '');
   const [search, setSearch] = useState('');
   const [isDark, setIsDark] = useState(false);
-  const [isAutoGradient, setIsAutoGradient] = useState(true);
   const [sceneMode, setSceneMode] = useState<SceneMode>(loadSceneMode);
-  const [mainGradient, setMainGradient] = useState('');
-  const [sidebarGradient, setSidebarGradient] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(window.location.hash === '#/admin');
   const [isTechOsOpen, setIsTechOsOpen] = useState(window.location.hash === '#/tech-os');
   const [isBlogOpen, setIsBlogOpen] = useState(window.location.hash === '#/blog');
@@ -334,24 +333,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (!isAutoGradient) {
-      setMainGradient('');
-      setSidebarGradient('');
-      return;
-    }
-    const updateGradient = () => {
-      const isDay = new Date().getHours() >= 6 && new Date().getHours() < 18;
-      setMainGradient(isDay
-        ? 'bg-[#eef3ed]/35 dark:bg-[#07191d]/55'
-        : 'bg-[#0b242a]/55 dark:bg-[#061418]/70');
-      setSidebarGradient(isDay
-        ? 'bg-[#f4f1e8]/82 dark:bg-[#102c33]/88'
-        : 'bg-[#e8eee9]/78 dark:bg-[#091f25]/92');
-    };
-    updateGradient();
-    const interval = window.setInterval(updateGradient, 60_000);
-    return () => window.clearInterval(interval);
-  }, [isAutoGradient]);
+    // Scene controls the amount of decoration, independently from the chosen palette.
+    document.documentElement.dataset.appearanceScene = isWorkMode ? 'work' : sceneMode;
+    return () => { delete document.documentElement.dataset.appearanceScene; };
+  }, [isWorkMode, sceneMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -453,6 +438,19 @@ function App() {
     document.documentElement.classList.toggle('dark', next);
     safeSetLocalStorageItem('theme', next ? 'dark' : 'light', sharedStorageOptions('主题偏好', false));
   };
+
+  useEffect(() => {
+    const setScheme = (event: Event) => {
+      const scheme = (event as CustomEvent<unknown>).detail;
+      if (scheme !== 'light' && scheme !== 'dark') return;
+      const dark = scheme === 'dark';
+      setIsDark(dark);
+      document.documentElement.classList.toggle('dark', dark);
+      safeSetLocalStorageItem('theme', scheme, sharedStorageOptions('主题偏好', false));
+    };
+    window.addEventListener('baize:appearance-color-scheme', setScheme);
+    return () => window.removeEventListener('baize:appearance-color-scheme', setScheme);
+  }, []);
 
   const recordVisit = (siteId: string) => {
     const now = new Date();
@@ -588,21 +586,6 @@ function App() {
     }
   };
 
-  const backgroundOpacity = isWorkMode ? 'opacity-0' : sceneMode === 'study' ? 'opacity-55' : sceneMode === 'relax' ? 'opacity-80' : 'opacity-100';
-  const sceneOverlay = isWorkMode
-    ? 'bg-[#f1f3f0] dark:bg-[#0c1618]'
-    : sceneMode === 'study'
-      ? 'bg-[#eef2e6]/55 dark:bg-[#0a1c21]/65'
-      : sceneMode === 'relax'
-        ? 'bg-[#efe2cb]/35 dark:bg-[#1b1714]/55'
-        : mainGradient;
-  const sceneSidebar = isWorkMode
-    ? 'bg-[#f8f9f7] dark:bg-[#111c1f]'
-    : sceneMode === 'study'
-      ? 'bg-[#f3f3e7]/88 dark:bg-[#102b2c]/92'
-      : sceneMode === 'relax'
-        ? 'bg-[#f3e8d7]/88 dark:bg-[#211d19]/92'
-        : sidebarGradient;
   const focusAfterRender = (id: string) => window.setTimeout(() => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -842,6 +825,7 @@ function App() {
     { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: () => openAdmin('content') },
     { id: 'layout', title: '打开布局排序', description: '拖拽网站、分类和调整卡片尺寸', keywords: ['layout', '布局', '拖拽', '排序'], icon: 'settings', run: () => openAdmin('layout') },
     { id: 'stats', title: '查看访问统计', description: '查看 7/30 天趋势和网站排行', keywords: ['stats', '统计', '数据'], icon: 'stats', run: () => { openAdmin('insights'); focusAfterRender('stats-title'); } },
+    { id: 'appearance', title: '打开外观设置', description: '全站四套配色、固定主题或每日轮换', keywords: ['appearance', '外观', '壁纸', '背景', '皮肤', '配色'], icon: 'default', run: openAppearance },
     { id: 'theme', title: isDark ? '切换到浅色主题' : '切换到深色主题', description: '立即切换页面明暗外观', keywords: ['theme', '主题', 'dark', 'light'], icon: isDark ? 'sun' : 'moon', run: toggleTheme },
     { id: 'scene-default', title: '切换到日常场景', description: sceneMode === 'default' ? '当前正在使用' : '恢复完整背景与标准布局', keywords: ['scene', '场景', '日常'], icon: 'default', run: () => changeSceneMode('default') },
     { id: 'scene-work', title: '切换到工作场景', description: sceneMode === 'work' ? '当前正在使用' : '隐藏装饰并压缩卡片布局', keywords: ['scene', '场景', '工作'], icon: 'work', run: () => changeSceneMode('work') },
@@ -852,11 +836,11 @@ function App() {
   ];
 
   if (isBlogOpen) {
-    return <Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-[#e4ebe5] text-[#456b68] dark:bg-[#07191d] dark:text-[#d9ddd6]">正在载入博客工作台…</div>}><BlogWorkbench onClose={closeBlog} onDirtyChange={setBlogUnsaved} /></Suspense>;
+    return <Suspense fallback={<div className="appearance-surface flex min-h-screen items-center justify-center">正在载入博客工作台…</div>}><BlogWorkbench onClose={closeBlog} onDirtyChange={setBlogUnsaved} /></Suspense>;
   }
 
   if (isTechOsOpen) {
-    return <><Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-[#dce6e1] text-sm font-medium text-[#456b68] dark:bg-[#07191d] dark:text-[#d9ddd6]">正在载入 Tech OS…</div>}>
+    return <><Suspense fallback={<div className="appearance-surface flex min-h-screen items-center justify-center text-sm font-medium">正在载入 Tech OS…</div>}>
       <TechOsWorkspace
         initialFocusedId={focusedTechOsId}
         isDark={isDark}
@@ -873,9 +857,7 @@ function App() {
   }
 
   return (
-    <div className={`scene-${sceneMode} ${isWorkMode ? 'work-mode' : ''} ${isAdminOpen ? 'admin-open' : ''} min-h-screen bg-[#dce6e1] font-sans transition-colors duration-300 dark:bg-[#07191d]`}>
-      <div className={`site-background fixed inset-0 z-0 transition-opacity duration-300 ${backgroundOpacity}`} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}baize-background.webp)` }} aria-hidden="true" />
-      <div className={`scene-overlay fixed inset-0 z-0 transition-colors duration-500 ${sceneOverlay}`} aria-hidden="true" />
+    <div className={`appearance-surface scene-${sceneMode} ${isWorkMode ? 'work-mode' : ''} ${isAdminOpen ? 'admin-open' : ''} min-h-screen font-sans transition-colors duration-300`}>
       <Sidebar
         activeCategory={activeCategory}
         isOpen={isSidebarOpen}
@@ -889,9 +871,6 @@ function App() {
         onTempTextClick={() => setIsTempTextOpen(true)}
         tempText={tempText}
         onTempTextChange={value => { setTempText(value); setIsCopied(false); }}
-        isAutoGradient={isAutoGradient}
-        toggleAutoGradient={() => setIsAutoGradient(value => !value)}
-        customGradient={sceneSidebar}
         canInstall={Boolean(installPrompt)}
         onInstall={() => { void installApp(); }}
       />
@@ -923,6 +902,7 @@ function App() {
                 {searchEngines.map(engine => <button key={engine.id} type="button" data-search-engine={engine.id} onClick={() => { const query = activeEngine ? search.slice(activeEngine.prefix.length + 1) : search; setSearch(`${engine.prefix} ${query}`); document.getElementById('search-input')?.focus(); }} className="baize-chip inline-flex items-center gap-1.5"><SearchEngineIcon engineId={engine.id} /><span>{engine.name}</span></button>)}
               </div>
             </div>
+            <AppearanceButton compact />
             <button type="button" onClick={() => setIsCommandPaletteOpen(true)} className="baize-button-secondary shrink-0 px-3" aria-label="打开全局命令面板"><Command size={18} /><span className="hidden md:inline">命令</span><kbd className="hidden rounded border border-[#5f8f84]/20 px-1.5 py-0.5 text-[10px] text-[#718986] lg:inline">Ctrl K</kbd></button>
           </div>
         </div>
