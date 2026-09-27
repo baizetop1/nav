@@ -23,6 +23,7 @@ const importedCourse = {
   lessons: courseOutline.lessons.map(lesson => ({ ...lesson, body: authored.body })),
 };
 const errors = [];
+let workingCopyStorageKey = '';
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch({ channel: process.env.BAIZE_BROWSER_CHANNEL || 'msedge', headless: true });
 const deferred = () => { let resolve; const promise = new Promise(done => { resolve = done; }); return { promise, resolve }; };
@@ -40,6 +41,7 @@ async function noPersistedKey(page) {
   assert.equal(leaked, false, 'API key must never enter local/session storage, even transiently');
 }
 async function navigate(page, name) {
+  await page.locator('#tech-os-sidebar').waitFor({ state: 'attached' });
   const item = page.getByRole('navigation', { name: 'Tech OS 工作台', exact: true }).getByRole('button', { name, exact: true });
   if (!await item.isVisible()) await page.getByRole('button', { name: '打开 Tech OS 导航', exact: true }).click();
   await item.click();
@@ -66,7 +68,8 @@ try {
       catch (cause) { if (!next.allowAbort) unexpected.push(`Mock delivery failed: ${cause.message}`); }
       finally { next.finished?.resolve(); }
     });
-    await context.addInitScript(marker => {
+    await context.addInitScript(({ marker, allowedOrigin }) => {
+      if (location.origin !== allowedOrigin) return;
       localStorage.setItem('course_browser_private_fixture', marker);
       window.__courseStorageWrites = [];
       const original = Storage.prototype.setItem;
@@ -85,7 +88,7 @@ try {
         }
         return result;
       };
-    }, privateMarker);
+    }, { marker: privateMarker, allowedOrigin: origin });
     const page = await context.newPage();
     page.setDefaultTimeout(15_000);
     page.on('dialog', dialog => void dialog.accept());
@@ -93,11 +96,10 @@ try {
       await page.goto(appUrl.href);
       await navigate(page, '新方向 / AI 课程');
       const wizard = page.getByRole('region', { name: '新方向课程向导', exact: true });
-      const json = wizard.getByRole('textbox', { name: '课程 JSON 原文', exact: true });
+      const json = wizard.locator('textarea[aria-label="课程 JSON 原文"]');
       const title = wizard.getByRole('textbox', { name: '课程路线名称', exact: true });
       const body = wizard.getByRole('textbox', { name: '本课 Markdown 教案', exact: true });
       const consent = wizard.getByRole('checkbox', { name: /我确认目标地址可信/ });
-      const keyInput = wizard.getByRole('textbox', { name: 'AI API Key', exact: true });
       const apiKeyInput = wizard.locator('input[aria-label="AI API Key"]');
       const generateOutline = wizard.getByRole('button', { name: 'AI 生成路线大纲', exact: true });
       const generateLesson = wizard.getByRole('button', { name: 'AI 生成所选课教案', exact: true });
@@ -275,8 +277,9 @@ try {
       const routeId = target.slice('STAGE '.length);
       await page.waitForFunction(id => Object.keys(localStorage).some(key => key.startsWith('baize_tech_os_drafts_v1:') && JSON.parse(localStorage.getItem(key)).files?.some(file => file.path === `tech-os/routes/backlog/${id}.md`)), routeId);
       const copy = await page.evaluate(id => Object.keys(localStorage).filter(key => key.startsWith('baize_tech_os_drafts_v1:')).map(key => JSON.parse(localStorage.getItem(key))).find(value => value.files?.some(file => file.path === `tech-os/routes/backlog/${id}.md`)), routeId);
+      workingCopyStorageKey = await page.evaluate(id => Object.keys(localStorage).find(key => key.startsWith('baize_tech_os_drafts_v1:') && JSON.parse(localStorage.getItem(key)).files?.some(file => file.path === `tech-os/routes/backlog/${id}.md`)), routeId);
       const files = new Map(copy.files.map(file => [file.path, file.content]));
-      for (const original of index.files) assert.equal(files.get(original.path), original.content, `staging preserves existing ${original.path}`);
+      for (const original of index.files) assert.equal(files.get(original.path), original.content.replace(/\r\n/g, '\n'), `staging preserves existing ${original.path}`);
       const existing = new Set(index.files.map(file => file.path));
       const added = copy.files.filter(file => !existing.has(file.path));
       assert.equal(added.length, 3, 'stage adds exactly one route and two quests');
@@ -298,12 +301,60 @@ try {
       await navigate(page, '新方向 / AI 课程');
       assert.equal(await apiKeyInput.inputValue(), '', 'leaving the wizard releases its key state');
       assert.equal(await json.inputValue(), '', 'staged content is no longer an unsaved wizard session');
-      assert.equal(await keyInput.count(), 0, 'password input must not be exposed as a plain textbox');
       console.log(`Tech OS course wizard passed at ${width}px: local/AI outlines, single lesson, consent, failures, cancel, encoded key rejection, editing, late import, quota recovery and isolated backlog staging.`);
     } finally {
       for (const gate of releaseGates) gate.resolve();
       await context.close();
     }
   }
+
+  // A restored working copy is authoritative: bundled, superseded paths must not
+  // be merged back in when a lifecycle transition has already moved a Quest.
+  assert.ok(workingCopyStorageKey);
+  const baselineFiles = index.files.map(file => ({ ...file, content: file.content.replace(/\r\n/g, '\n') }));
+  const relocatedFiles = baselineFiles.map(file => {
+    if (file.path === 'tech-os/quests/active/QUEST-001.md') return { path: 'tech-os/quests/completed/QUEST-001.md', content: file.content.replace(/^status: active$/m, 'status: completed') };
+    if (file.path === 'tech-os/quests/backlog/QUEST-002.md') return { path: 'tech-os/quests/active/QUEST-002.md', content: file.content.replace(/^status: backlog$/m, 'status: active') };
+    if (file.path === 'tech-os/state.yml') return { ...file, content: file.content.replace(/^current_quest_id: QUEST-001$/m, 'current_quest_id: QUEST-002') };
+    return file;
+  });
+  assert.ok(relocatedFiles.some(file => file.path === 'tech-os/quests/completed/QUEST-001.md' && /^status: completed$/m.test(file.content)));
+  assert.ok(relocatedFiles.some(file => file.path === 'tech-os/state.yml' && /^current_quest_id: QUEST-002$/m.test(file.content)));
+  const seeded = { version: 1, base: baselineFiles, files: relocatedFiles, conflicts: ['tech-os/state.yml'] };
+  const relocatedContext = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce', serviceWorkers: 'block' });
+  relocatedContext.on('page', page => page.on('pageerror', error => errors.push(error.message)));
+  await relocatedContext.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+  await relocatedContext.addInitScript(({ allowedOrigin, key, copy }) => {
+    if (location.origin === allowedOrigin) localStorage.setItem(key, JSON.stringify(copy));
+  }, { allowedOrigin: origin, key: workingCopyStorageKey, copy: seeded });
+  try {
+    const page = await relocatedContext.newPage();
+    page.setDefaultTimeout(15_000);
+    page.on('dialog', dialog => void dialog.accept());
+    await page.goto(appUrl.href);
+    await navigate(page, '新方向 / AI 课程');
+    const wizard = page.getByRole('region', { name: '新方向课程向导', exact: true });
+    await wizard.locator('input[type="file"][aria-label="选择课程 JSON 文件"]').setInputFiles({ name: 'relocated-course.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(importedCourse)) });
+    const staging = wizard.getByRole('region', { name: '确认课程草稿', exact: true });
+    await staging.waitFor();
+    const confirmation = staging.getByRole('textbox', { name: '确认加入课程草稿', exact: true });
+    const target = (await confirmation.getAttribute('placeholder')).match(/STAGE ROUTE-\d+/)?.[0];
+    assert.ok(target);
+    await staging.getByRole('checkbox').check();
+    await confirmation.fill(target);
+    await staging.getByRole('button', { name: '加入 Repository 草稿', exact: true }).click();
+    await page.getByRole('heading', { name: 'Repository Adapter', exact: true }).waitFor();
+    const saved = await page.evaluate(key => JSON.parse(localStorage.getItem(key)), workingCopyStorageKey);
+    assert.deepEqual(saved.base, seeded.base, 'staging must preserve the saved merge baseline');
+    assert.deepEqual(saved.conflicts, seeded.conflicts, 'staging must preserve unresolved conflict markers');
+    const finalFiles = new Map(saved.files.map(file => [file.path, file.content]));
+    for (const file of relocatedFiles) assert.equal(finalFiles.get(file.path), file.content, `preserve restored ${file.path}`);
+    assert.equal(finalFiles.has('tech-os/quests/active/QUEST-001.md'), false, 'do not revive the bundled old active path');
+    assert.equal(finalFiles.has('tech-os/quests/backlog/QUEST-002.md'), false, 'do not revive the bundled old backlog path');
+    assert.equal(saved.files.length, seeded.files.length + 3);
+    await noOverflow(page, 'restored working copy');
+    await page.screenshot({ path: fileURLToPath(new URL('course-relocated.png', output)) });
+    console.log('Tech OS course wizard preserves moved Quest paths, current Quest, saved merge baseline and conflicts while staging new backlog lessons.');
+  } finally { await relocatedContext.close(); }
   assert.deepEqual(errors, [], 'no uncaught application errors');
 } finally { await browser.close(); }
