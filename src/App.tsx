@@ -41,7 +41,7 @@ import { loadSceneMode, SCENE_MODE_KEY, type SceneMode } from './types/scene';
 import type { TextNode } from './types/text-network';
 import { applySharedWorkspace, captureSharedWorkspace, configureSharedDefaults, mergeSharedWorkspace, WORKSPACE_EVENT } from './services/workspaceSync';
 import { parseIncomingShare } from './lib/shareCapture';
-import { loadWorkSession } from './lib/workSession';
+import { loadWorkSession, type WorkPhase } from './lib/workSession';
 import { markNavigationPublished } from './lib/pendingSync';
 import { activateAppUpdate } from './services/pwaUpdate';
 import { publishRssConfiguration } from './services/rssPublish';
@@ -104,8 +104,9 @@ function App() {
   const [captureOpen, setCaptureOpen] = useState(() => Boolean(incomingShare));
   const [captureMounted, setCaptureMounted] = useState(() => Boolean(incomingShare));
   const [initialWork] = useState(loadWorkSession);
-  const [workOpen, setWorkOpen] = useState(() => Boolean(initialWork.current));
+  const [workOpen, setWorkOpen] = useState(() => Boolean(initialWork.current || initialWork.notice || initialWork.nextPhase !== 'focus'));
   const [workActive, setWorkActive] = useState(() => Boolean(initialWork.current));
+  const [workPhase, setWorkPhase] = useState<WorkPhase>(() => initialWork.current?.phase || initialWork.nextPhase);
   const [workSiteIds, setWorkSiteIds] = useState<string[]>(() => initialWork.current?.siteIds || []);
   const [rssOpen, setRssOpen] = useState(false);
   const [focusedInboxId, setFocusedInboxId] = useState<string | undefined>();
@@ -953,9 +954,9 @@ function App() {
             <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openWebCapture}><Plus size={17} />收集网页</button>
             <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={rssOpen} onClick={() => setRssOpen(value => !value)}><FileText size={17} />RSS 订阅</button>
             {rssOpen && <Suspense fallback={<p>正在载入 RSS…</p>}><RssPanel onClose={() => setRssOpen(false)} onCapture={createLocalInboxItem} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo}`} onPublishSources={(sources, token, baseline) => publishRssConfiguration(siteConfig.repository, token, sources, baseline)} /></Suspense>}
-            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={workOpen} onClick={() => setWorkOpen(value => workActive || !value)}><Check size={17} />{workActive ? '正在专注' : '工作会话'}</button>
+            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={workOpen} onClick={() => setWorkOpen(value => workActive || !value)}><Check size={17} />{workActive ? workPhase === 'focus' ? '正在专注' : '正在休息' : '工作会话'}</button>
             <Suspense fallback={null}><PendingSyncPanel data={data} bundled={defaultNavigationData} items={inboxItems} syncMeta={inboxSyncMeta} onPublish={() => openAdmin('content')} onPrivateSync={openInbox} /></Suspense>
-            {workOpen && <div className="basis-full"><Suspense fallback={<p>正在加载工作会话…</p>}><WorkSessionPanel sites={data.sites} onActiveChange={setWorkActive} onSelectionChange={setWorkSiteIds} onSiteVisit={recordVisit} onClose={() => setWorkOpen(false)} /></Suspense></div>}
+            {workOpen && <div className="basis-full"><Suspense fallback={<p>正在加载工作会话…</p>}><WorkSessionPanel sites={data.sites} onActiveChange={setWorkActive} onPhaseChange={setWorkPhase} onSelectionChange={setWorkSiteIds} onSiteVisit={recordVisit} onClose={() => setWorkOpen(false)} /></Suspense></div>}
             {readingOpen && <Suspense fallback={null}><ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} /></Suspense>}
             {graphOpen && <Suspense fallback={<p>正在加载图谱…</p>}><TextGraphPanel index={graphIndex} onClose={() => setGraphOpen(false)} /></Suspense>}
             {!workActive && <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />}

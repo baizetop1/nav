@@ -21,6 +21,7 @@
     "check:personal-workflows": "node scripts/personal-workflows-browser.mjs",
     "check:rss-capture": "node scripts/rss-capture-browser.mjs",
     "check:work-session": "node scripts/work-session-browser.mjs",
+    "check:pomodoro": "node scripts/pomodoro-browser.mjs",
     "check:blog-workbench": "node scripts/blog-workbench-browser.mjs",
     "check:blog-autosave": "node scripts/blog-autosave-browser.mjs",
     "preview": "vite preview",
