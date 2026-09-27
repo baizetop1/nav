@@ -40,7 +40,7 @@ for(let seed=1;seed<1000&&!miss;seed++){
   const next=draw(s,'wusong');if(next.recruit.lastResult.hero!=='wusong')miss=next;
 }
 assert.ok(miss);assert.equal(miss.recruit.lastResult.kind,'clue');assert.equal(miss.recruit.fate.wusong,1);
-assert.equal(miss.heroes.wusong.status,'available');assert.ok(recruitDialog(miss.recruit.lastResult,data).includes('此番所邀：武松'));
+assert.equal(miss.heroes.wusong.status,'available');assert.ok(recruitDialog(miss.recruit.lastResult,data).includes('招贤目标：武松'));
 const legacy=fixture();delete legacy.recruit.lastResult;assert.deepEqual(parseSave(JSON.stringify(legacy),data,legacy.clock),legacy);
 // Chapter rewards occurring in the same action must not be labelled as recruitment loot.
 const ending=fixture('duplicate');ending.progress.flags={volume_complete:true,lin_departure:true,lu_complete:true,chai_refuge:true,yang_complete:true};

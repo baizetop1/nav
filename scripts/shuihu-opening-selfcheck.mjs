@@ -10,9 +10,9 @@ const frame=(s=initial,view='map',extra={})=>render({state:s,data,view,...extra}
 const command=(type,id)=>`data-command="${esc(JSON.stringify(id?{type,id}:{type}))}"`;
 assert.deepEqual(data.config.opening,['宣和年间。','山东郓城。','江湖风云初起。','你没有武艺。','但你有识人之能。','今日起：','你便是白泽寨主。']);
 const before=JSON.stringify(initial),welcome=frame(initial,'welcome',{entered:false});
-for(const line of ['从一座寨子开始','农田','兵营','英雄','portrait-wusong'])assert.ok(welcome.includes(line));
+for(const line of ['从一座寨子开始','农田','兵营','白胜','portrait-wusong'])assert.ok(welcome.includes(line));
 for(const absent of ['class="tabs"','class="resources"','招贤','战斗'])assert.ok(!welcome.includes(absent));
-assert.ok(welcome.includes('立寨，开一番事业'));assert.ok(welcome.includes('接续旧卷'));
+assert.ok(welcome.includes('开始游戏'));assert.ok(welcome.includes('读取存档'));
 assert.ok(welcome.includes(command('ui_start')));assert.ok(welcome.includes('data-view="save"'));
 const importPage=frame(initial,'save',{entered:false,pageSections:{save:'files'}});assert.ok(!importPage.includes('class="tabs"'));assert.ok(importPage.includes('返回卷首'));assert.ok(importPage.includes('id="import-text"'));
 const badSave=frame(initial,'save',{entered:false,locked:true,status:'原文保留'});assert.ok(!badSave.includes('返回卷首'));assert.ok(!badSave.includes(command('ui_start')));assert.ok(badSave.includes('原文保留'));
@@ -34,7 +34,7 @@ assert.ok(!frame(rumor).includes(command('mapAction','rumor_dongxi')));
 assert.throws(()=>dispatch(data,rumor,{type:'mapAction',id:'rumor_dongxi'},now));
 rumor=dispatch(data,rumor,{type:'meet',id:'baisheng'},now);assert.equal(rumor.heroes.baisheng.status,'known');
 const guided=dispatch(data,rumor,{type:'guide'},now);assert.equal(guided.heroes.baisheng.status,'owned');assert.ok(guided.team.includes('baisheng'));
-assert.ok(guided.journal.some(e=>e.text.includes('附近乡道走得熟')));
+assert.ok(guided.journal.some(e=>e.text.includes(data.by.heroes.baisheng.dialogue)));
 for(const changed of [s=>s.recruit.total=1,s=>s.heroes.baisheng.status='known',s=>s.progress.flags.guide=true,s=>s.progress.actions.news=true]){
   const s=structuredClone(initial);changed(s);assert.ok(!isFirstArrival(s),'Progressed saves keep their normal navigation');
 }

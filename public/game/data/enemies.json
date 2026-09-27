@@ -362,5 +362,637 @@
       "庄兵正在收拢阵形，注意前排承伤与首领蓄势。"
     ],
     "description": "高唐救援战役敌军"
+  },
+  {
+    "id": "v7_chain_rider",
+    "name": "连环甲骑",
+    "attribute": {
+      "hp": 920,
+      "attack": 112,
+      "defense": 88,
+      "speed": 78,
+      "strategy": 24
+    },
+    "skills": [],
+    "telegraphs": [
+      "甲骑收紧铁链，向阵前并拢。"
+    ],
+    "description": "破连环马战役敌军"
+  },
+  {
+    "id": "v7_archer",
+    "name": "随军弓手",
+    "attribute": {
+      "hp": 580,
+      "attack": 105,
+      "defense": 42,
+      "speed": 82,
+      "strategy": 32
+    },
+    "skills": [],
+    "telegraphs": [
+      "弓手换上一束箭，瞄向后排。"
+    ],
+    "description": "破连环马战役敌军"
+  },
+  {
+    "id": "v7_hantao",
+    "name": "韩滔",
+    "attribute": {
+      "hp": 1250,
+      "attack": 125,
+      "defense": 62,
+      "speed": 86,
+      "strategy": 40
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "韩滔转向侧翼，留意后阵。"
+    ],
+    "description": "破连环马战役敌军"
+  },
+  {
+    "id": "v7_pengqi",
+    "name": "彭玘",
+    "attribute": {
+      "hp": 1320,
+      "attack": 120,
+      "defense": 72,
+      "speed": 78,
+      "strategy": 40
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "彭玘正招呼弓手靠拢，准备护阵。"
+    ],
+    "description": "破连环马战役敌军"
+  },
+  {
+    "id": "v7_huyanzhuo",
+    "name": "呼延灼",
+    "attribute": {
+      "hp": 1680,
+      "attack": 140,
+      "defense": 75,
+      "speed": 88,
+      "strategy": 45
+    },
+    "skills": [
+      "bandit_cut",
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "呼延灼提起双鞭，策马寻找绕后的空处。"
+    ],
+    "description": "破连环马战役敌军"
+  },
+  {
+    "id": "v8_guard",
+    "name": "曾市护院",
+    "attribute": {
+      "hp": 850,
+      "attack": 106,
+      "defense": 72,
+      "speed": 75,
+      "strategy": 30
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "护院将盾沿并在一处，遮住后排。"
+    ],
+    "description": "曾头疑云战役敌军"
+  },
+  {
+    "id": "v8_crossbow",
+    "name": "曾市弩手",
+    "attribute": {
+      "hp": 560,
+      "attack": 108,
+      "defense": 40,
+      "speed": 84,
+      "strategy": 36
+    },
+    "skills": [],
+    "telegraphs": [
+      "弩手压低弩臂，瞄向墙边的商旅。"
+    ],
+    "description": "曾头疑云战役敌军"
+  },
+  {
+    "id": "v8_runner",
+    "name": "押粮传令者",
+    "attribute": {
+      "hp": 600,
+      "attack": 108,
+      "defense": 42,
+      "speed": 98,
+      "strategy": 38
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "传令者绕过车辕，准备突向侧翼。"
+    ],
+    "description": "曾头疑云战役敌军"
+  },
+  {
+    "id": "v8_aid",
+    "name": "东门援兵",
+    "attribute": {
+      "hp": 650,
+      "attack": 108,
+      "defense": 48,
+      "speed": 80,
+      "strategy": 28
+    },
+    "skills": [],
+    "telegraphs": [
+      "援兵正沿旗边靠近门洞。"
+    ],
+    "description": "曾头疑云战役敌军"
+  },
+  {
+    "id": "v8_shiwengong",
+    "name": "史文恭",
+    "attribute": {
+      "hp": 1620,
+      "attack": 140,
+      "defense": 78,
+      "speed": 92,
+      "strategy": 48
+    },
+    "skills": [
+      "bandit_cut",
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "史文恭压住枪尾，准备从盾侧穿入。"
+    ],
+    "description": "曾头疑云战役敌军"
+  },
+  {
+    "id": "v9_sentry",
+    "name": "北门哨兵",
+    "attribute": {
+      "hp": 740,
+      "attack": 114,
+      "defense": 56,
+      "speed": 86,
+      "strategy": 32
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "哨兵试图退向门钟。"
+    ],
+    "description": "大名救援战役敌军"
+  },
+  {
+    "id": "v9_messenger",
+    "name": "城门传令者",
+    "attribute": {
+      "hp": 570,
+      "attack": 112,
+      "defense": 38,
+      "speed": 106,
+      "strategy": 44
+    },
+    "skills": [],
+    "telegraphs": [
+      "传令者捏住号哨，正寻一处空隙。"
+    ],
+    "description": "大名救援战役敌军"
+  },
+  {
+    "id": "v9_armor",
+    "name": "门军重甲",
+    "attribute": {
+      "hp": 840,
+      "attack": 106,
+      "defense": 92,
+      "speed": 62,
+      "strategy": 26
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "重甲军士把盾架住，等后队换位。"
+    ],
+    "description": "大名救援战役敌军"
+  },
+  {
+    "id": "v9_captain",
+    "name": "门军队正",
+    "attribute": {
+      "hp": 1040,
+      "attack": 118,
+      "defense": 70,
+      "speed": 76,
+      "strategy": 44
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "队正用刀背敲盾，催两翼一齐压上。"
+    ],
+    "description": "大名救援战役敌军"
+  },
+  {
+    "id": "v9_jailer",
+    "name": "牢城管营",
+    "attribute": {
+      "hp": 1370,
+      "attack": 126,
+      "defense": 74,
+      "speed": 78,
+      "strategy": 50
+    },
+    "skills": [
+      "guard_wall",
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "管营将钥匙收进腰带，喝令封住过道。"
+    ],
+    "description": "大名救援战役敌军"
+  },
+  {
+    "id": "v9_crossbow",
+    "name": "追射弩手",
+    "attribute": {
+      "hp": 540,
+      "attack": 112,
+      "defense": 40,
+      "speed": 88,
+      "strategy": 38
+    },
+    "skills": [],
+    "telegraphs": [
+      "弩手沿河岸移动，追瞄暴露的担架。"
+    ],
+    "description": "大名救援战役敌军"
+  },
+  {
+    "id": "v9_pursuer",
+    "name": "城西追兵",
+    "attribute": {
+      "hp": 760,
+      "attack": 116,
+      "defense": 58,
+      "speed": 88,
+      "strategy": 34
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "追兵踏过浅水，向上船的缺口冲来。"
+    ],
+    "description": "大名救援战役敌军"
+  },
+  {
+    "id": "v10_raider",
+    "name": "拦路散兵",
+    "attribute": {
+      "hp": 750,
+      "attack": 112,
+      "defense": 55,
+      "speed": 84,
+      "strategy": 30
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "散兵扯住行李绳，试图把归人队伍拉散。"
+    ],
+    "description": "百川归泊战役敌军"
+  },
+  {
+    "id": "v10_raider_archer",
+    "name": "追粮弓手",
+    "attribute": {
+      "hp": 510,
+      "attack": 110,
+      "defense": 38,
+      "speed": 88,
+      "strategy": 36
+    },
+    "skills": [],
+    "telegraphs": [
+      "弓手从芦苇后探身，瞄准桥上归人。"
+    ],
+    "description": "百川归泊战役敌军"
+  },
+  {
+    "id": "v10_shield",
+    "name": "试渡盾兵",
+    "attribute": {
+      "hp": 890,
+      "attack": 112,
+      "defense": 86,
+      "speed": 68,
+      "strategy": 32
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "盾兵沿栈桥逼近，身后有人在解小船的缆绳。"
+    ],
+    "description": "百川归泊战役敌军"
+  },
+  {
+    "id": "v10_pursuer",
+    "name": "追舟快手",
+    "attribute": {
+      "hp": 700,
+      "attack": 118,
+      "defense": 46,
+      "speed": 98,
+      "strategy": 32
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "快手将短刀衔住，准备攀上船舷。"
+    ],
+    "description": "百川归泊战役敌军"
+  },
+  {
+    "id": "v10_commander",
+    "name": "追舟队正",
+    "attribute": {
+      "hp": 1360,
+      "attack": 132,
+      "defense": 72,
+      "speed": 86,
+      "strategy": 48
+    },
+    "skills": [
+      "bandit_cut",
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "队正举手指向归人的船，催促后队加桨。"
+    ],
+    "description": "百川归泊战役敌军"
+  },
+  {
+    "id": "v11_raider",
+    "name": "堵路乱兵",
+    "attribute": {
+      "hp": 760,
+      "attack": 111,
+      "defense": 51,
+      "speed": 82,
+      "strategy": 25
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "乱兵用盾抵住车辕，刀锋向抬担架的人靠近。"
+    ],
+    "description": "以流民车队为饵堵路的溃兵。"
+  },
+  {
+    "id": "v11_marksman",
+    "name": "高坡弩手",
+    "attribute": {
+      "hp": 510,
+      "attack": 104,
+      "defense": 29,
+      "speed": 90,
+      "strategy": 34
+    },
+    "skills": [],
+    "telegraphs": [
+      "坡上弩手换好弩矢，正瞄准没有甲胄的车队。"
+    ],
+    "description": "弩手在场时会按护送规则持续伤害车队，应尽快击倒。"
+  },
+  {
+    "id": "v11_grain_chief",
+    "name": "截粮头目",
+    "attribute": {
+      "hp": 1320,
+      "attack": 135,
+      "defense": 66,
+      "speed": 86,
+      "strategy": 39
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "头目催人把粮袋推上私车，自己提刀守着岔口。"
+    ],
+    "description": "借官军名号截取民粮，身上带有私卖粮食的账单。"
+  },
+  {
+    "id": "v11_grain_guard",
+    "name": "粮车刀手",
+    "attribute": {
+      "hp": 830,
+      "attack": 114,
+      "defense": 61,
+      "speed": 80,
+      "strategy": 24
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "刀手转动粮车，试图挡住通往头目的路。"
+    ],
+    "description": "守在粮队两侧的刀手。"
+  },
+  {
+    "id": "v12_heavy_guard",
+    "name": "压阵重盾兵",
+    "attribute": {
+      "hp": 920,
+      "attack": 114,
+      "defense": 85,
+      "speed": 69,
+      "strategy": 27
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "重盾缓缓并拢，后面的军士正借盾缝推进。"
+    ],
+    "description": "依靠盾阵固守狭口，适合以破防招式处理。"
+  },
+  {
+    "id": "v12_siege_bow",
+    "name": "围村弓手",
+    "attribute": {
+      "hp": 540,
+      "attack": 111,
+      "defense": 33,
+      "speed": 86,
+      "strategy": 35
+    },
+    "skills": [],
+    "telegraphs": [
+      "弓手绕过土墙，寻找出村队伍的位置。"
+    ],
+    "description": "弓手在场时会按护送规则伤害撤出的村民。"
+  },
+  {
+    "id": "v12_siege_captain",
+    "name": "围泊主将",
+    "attribute": {
+      "hp": 1450,
+      "attack": 139,
+      "defense": 76,
+      "speed": 82,
+      "strategy": 44
+    },
+    "skills": [
+      "bandit_cut",
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "主将收拢溃兵，准备再向渡口冲击。"
+    ],
+    "description": "围泊军的主将，须在击退前锋后迎战。"
+  },
+  {
+    "id": "v12_boarder",
+    "name": "钩船刀手",
+    "attribute": {
+      "hp": 740,
+      "attack": 120,
+      "defense": 44,
+      "speed": 94,
+      "strategy": 24
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "刀手将铁钩甩向船舷，试着拉近两船。"
+    ],
+    "description": "趁船队接人时逼近的水上追兵。"
+  },
+  {
+    "id": "v12_firebow",
+    "name": "火矢弓手",
+    "attribute": {
+      "hp": 510,
+      "attack": 107,
+      "defense": 30,
+      "speed": 88,
+      "strategy": 38
+    },
+    "skills": [],
+    "telegraphs": [
+      "弓手把箭头伸近火盆，盯住载人的渡船。"
+    ],
+    "description": "火矢弓手在场时会按护送规则损伤渡船。"
+  },
+  {
+    "id": "v12_water_captain",
+    "name": "拦江统领",
+    "attribute": {
+      "hp": 1430,
+      "attack": 137,
+      "defense": 70,
+      "speed": 88,
+      "strategy": 40
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "统领命人横过战船，要截断出海的水道。"
+    ],
+    "description": "带队封锁出海水道的统领。"
+  },
+  {
+    "id": "v12_road_bow",
+    "name": "追路弩手",
+    "attribute": {
+      "hp": 530,
+      "attack": 111,
+      "defense": 32,
+      "speed": 88,
+      "strategy": 36
+    },
+    "skills": [],
+    "telegraphs": [
+      "弩手登上道旁高处，重新瞄准缓行的归民。"
+    ],
+    "description": "弩手在场时会按护送规则伤害归民队伍。"
+  },
+  {
+    "id": "v12_levy_guard",
+    "name": "擅征军士",
+    "attribute": {
+      "hp": 840,
+      "attack": 119,
+      "defense": 61,
+      "speed": 82,
+      "strategy": 25
+    },
+    "skills": [
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "军士把征粮旗插进粮车，举盾拒绝退开。"
+    ],
+    "description": "拿着额外征调令扣住归民口粮的军士。"
+  },
+  {
+    "id": "v12_levy_captain",
+    "name": "违约征粮官",
+    "attribute": {
+      "hp": 1380,
+      "attack": 133,
+      "defense": 72,
+      "speed": 81,
+      "strategy": 44
+    },
+    "skills": [
+      "bandit_cut",
+      "guard_wall"
+    ],
+    "telegraphs": [
+      "征粮官收起文牒，命亲兵从两侧围上。"
+    ],
+    "description": "无视已签约条擅自征粮，携有本次征调的底账。"
+  },
+  {
+    "id": "v12_rear_captain",
+    "name": "追袭营将",
+    "attribute": {
+      "hp": 1450,
+      "attack": 140,
+      "defense": 70,
+      "speed": 85,
+      "strategy": 42
+    },
+    "skills": [
+      "bandit_cut"
+    ],
+    "telegraphs": [
+      "营将听见前队退兵，催马追向界碑。"
+    ],
+    "description": "试图在交接前扣住归民的最后一支追兵。"
   }
 ]

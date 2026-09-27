@@ -108,7 +108,11 @@ T4.2 在 Learning Engine 下方新增 Route Candidate Generator。它只把至�
 
 T4.3–T4.6 新增独立 Route Engine：Candidate 可选择 Save for Later、Archive 或 Not Interested 并保留理由；当前路线完成或进度达到 80% 后才开放 Route Review；Review 就绪后才给出 2–4 条带来源解释的 Next Route 建议；Manual Route Generator 可随时从主题、原因与目标生成可编辑路线骨架。Review 与 Route 均只进入内存草稿，路线固定为 `status: backlog`、`main: false`，不会修改 `state.yml`、切换 Main Route 或创建 Active Quest。
 
-Repository 页面使用运行时 GitHub fine-grained PAT 读取远端 `tech-os/`，逐文件比较构建版本、内存草稿与远端基线。Token 和草稿不写 LocalStorage；提交前必须通过浏览器端完整 schema 校验、输入确认短语并再次确认。多文件通过 Git Data API 生成单个 commit，写入前重新检查 branch head，最终更新 `force: false`；冲突即停止，不覆盖远端新版本。第一版不支持删除文件或修改 templates/README。
+Repository 页面使用运行时 GitHub fine-grained PAT 读取远端 `tech-os/`，逐文件比较本地草稿与远端基线。Token 不保存；进入 Repository 的 Markdown 草稿会自动保存在当前浏览器，刷新后可恢复，不属于加密的私人笔记。读取远端会进行三方合并，冲突需人工解决；提交前必须通过浏览器端完整 schema 校验、输入确认短语并再次确认。多文件通过 Git Data API 生成单个 commit，写入前重新检查 branch head，最终更新 `force: false`，不覆盖远端新版本。Repository 编辑器不支持删除远端文件或修改 templates/README。
+
+日常学习增强：总览可继续第一个未打卡步骤；对象列表支持全文关键词和状态筛选；正文提供目录、安全外链、代码复制。阅读与打卡分开，打卡错误可重试、损坏存档不会自动覆盖，同一浏览器的多标签页会同步进度。打卡不等于正式完成 Quest，跨设备仍由用户主动执行加密同步。详见 [`tech-os/README.md`](tech-os/README.md)。
+
+新方向课程向导：在“新方向 / AI 课程”填写学习条件，可先建立本地大纲，或配置自己的 OpenAI 兼容接口生成大纲和单课教案。支持课程 JSON 导入/导出、Markdown 预览与教学结构检查；人工确认后仅新增 Backlog 路线和任务，不覆盖旧内容、不切换主线。API 设置和密钥只在当前向导内存使用，优先使用自己控制且有鉴权/限额的网关。详见 [`课程使用说明`](docs/TECH-OS-COURSES.md)。
 
 当前示例主线是“从输入网址到网页显示”，从 Browser 依次连接 URL、DNS、IP/TCP、TLS、HTTP/Server、Linux、CPU/Instruction/Logic/Transistor。开始编辑前先阅读 [`tech-os/README.md`](tech-os/README.md)，修改后运行：
 

@@ -22,3 +22,5 @@
  .compact-dialog .sortie-team{grid-template-columns:repeat(2,minmax(0,1fr))}.compact-dialog .sortie-team label:last-child{grid-column:1/-1}.compact-dialog .sortie-team:first-child{grid-template-columns:repeat(3,minmax(0,1fr))}.compact-dialog .sortie-team:first-child label:last-child{grid-column:auto}
 }
 .compact-dialog .primary{background:#e5c17a;color:#172320;border-color:#e5c17a}.compact-dialog .primary:hover{background:#f0d293}.compact-dialog .primary:disabled{opacity:.5}.compact-dialog button:focus-visible{outline:2px solid #f1d494;outline-offset:2px}
+
+.lineup-role{padding:6px 0;border-bottom:1px solid var(--line)}.lineup-panel h3{margin:6px 0;font-size:14px}.lineup-panel p{margin:4px 0;line-height:1.5}

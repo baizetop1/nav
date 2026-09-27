@@ -1,17 +1,18 @@
-import {roleDamageFactor,roleInterrupt} from './hero-roles.js?v=0.44.0';
-import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.44.0';
-import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.44.0';
-import {talentFactor} from './talents.js?v=0.44.0';
-import { healingSupply } from './fieldcraft.js?v=0.44.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.44.0';
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.44.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.44.0';
-import { orderDamageFactor } from './commands.js?v=0.44.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.44.0';
-import { unitArm } from './martial.js?v=0.44.0';
-import { martialFactor } from './martial.js?v=0.44.0';
-import { bounded, pick, random } from './utils.js?v=0.44.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.44.0';
+import {LATE_BOSSES} from './late-mainline-data.js?v=0.52.0';
+import {roleDamageFactor,roleInterrupt,roleAfterHit} from './hero-roles.js?v=0.52.0';
+import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.52.0';
+import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.52.0';
+import {talentFactor} from './talents.js?v=0.52.0';
+import { healingSupply } from './fieldcraft.js?v=0.52.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.52.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.52.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.52.0';
+import { orderDamageFactor } from './commands.js?v=0.52.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.52.0';
+import { unitArm } from './martial.js?v=0.52.0';
+import { martialFactor } from './martial.js?v=0.52.0';
+import { bounded, pick, random } from './utils.js?v=0.52.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.52.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -26,8 +27,8 @@ export function initializeGrowthBattle(state,b,data){
     u.skills=u.skills.filter(id=>!unlockReason(state,data.by.skills[id],b.guest));
     u.training={levels:Object.fromEntries(u.skills.map(id=>[id,b.guest?1:skillLevel(state,id)])),bond:u.skills.find(id=>data.by.skills[id].training?.tier==='bond')||null};
   }
-  if(['dungeon','rotation','frontier','realm','lesson'].includes(b.context.type)||isChapterBattle(b))for(const u of b.enemy){
-    const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider',v5_luan_tingyu:'chief',v5_zhu_biao:'raider',v6_gaolian:'chief',v6_rider:'raider'})[u.model];
+  if(['dungeon','rotation','frontier','realm','lesson','special'].includes(b.context.type)||isChapterBattle(b))for(const u of b.enemy){
+    const kind=({tiger_king:'tiger',bandit_chief:'chief',road_raider:'raider',v5_luan_tingyu:'chief',v5_zhu_biao:'raider',v6_gaolian:'chief',v6_rider:'raider',v7_huyanzhuo:'raider',v7_pengqi:'chief',v7_hantao:'raider'})[u.model]||LATE_BOSSES[u.model];
     if(kind)u.boss={kind,readyAt:6000,pendingAt:0,phase:0};
   }
 }
@@ -58,6 +59,7 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
   if(!alive(target))api.log(b,`${target.name}已无力再战。`);
+  roleAfterHit(b,u,target,!name,loss,{reportHealing});
   journeyAfterHit(b,u,target,{...api,reportDamage},!name,loss);
 }
 function targetOf(state,u,targets){

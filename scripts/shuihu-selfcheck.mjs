@@ -14,6 +14,12 @@ const raw=Object.fromEntries(['config',...collections].map(name=>[name,JSON.pars
 const schema=JSON.parse(readFileSync(new URL('data/schema.json',root),'utf8'));
 // Validate the JSON Schema keywords used by our data contract, without a runtime dependency.
 function checkSchema(value, rule, at='$') {
+  if(rule.$ref){
+    assert.match(rule.$ref,/^#\//,at+' local reference');
+    const target=rule.$ref.slice(2).split('/').reduce((node,key)=>{const decoded=key.replace(/~1/g,'/').replace(/~0/g,'~');assert.ok(Object.hasOwn(node,decoded),at+' schema reference');return node[decoded];},schema);
+    checkSchema(value,target,at);return;
+  }
+  if(rule.enum)assert.ok(rule.enum.includes(value),at+' enum');
   if(rule.anyOf){assert.ok(rule.anyOf.some(option=>{try{checkSchema(value,option,at);return true;}catch{return false;}}),at+' anyOf');return;}
   if(Object.hasOwn(rule,'const'))assert.deepEqual(value,rule.const,at+' const');
   if(rule.type){
@@ -21,7 +27,9 @@ function checkSchema(value, rule, at='$') {
     assert.ok(matches,at+' must be '+rule.type);
   }
   if(rule.pattern)assert.match(value,new RegExp(rule.pattern),at);
+  if(rule.minimum!==undefined)assert.ok(value>=rule.minimum,at+' minimum');
   if(rule.type==='object'){
+    if(rule.minProperties!==undefined)assert.ok(Object.keys(value).length>=rule.minProperties,at+' minProperties');
     for(const key of rule.required||[])assert.ok(Object.hasOwn(value,key),at+'.'+key+' required');
     for(const [key,entry] of Object.entries(value)){
       if(rule.properties?.[key])checkSchema(entry,rule.properties[key],at+'.'+key);
@@ -29,13 +37,22 @@ function checkSchema(value, rule, at='$') {
       else if(rule.additionalProperties&&typeof rule.additionalProperties==='object')checkSchema(entry,rule.additionalProperties,at+'.'+key);
     }
   }
-  if(rule.type==='array'&&rule.items)value.forEach((entry,index)=>checkSchema(entry,rule.items,at+'['+index+']'));
+  if(rule.type==='array'){
+    if(rule.minItems!==undefined)assert.ok(value.length>=rule.minItems,at+' minItems');
+    if(rule.items)value.forEach((entry,index)=>checkSchema(entry,rule.items,at+'['+index+']'));
+  }
 }
 checkSchema(raw,schema);
 const badSchemaData=structuredClone(raw);badSchemaData.heroes[0].star='five';assert.throws(()=>checkSchema(badSchemaData,schema));
+for(const items of [{},{unknown_material:1},{tempered_steel:0}]){const malformed=structuredClone(raw);malformed.equipments.find(e=>e.id==='guard_pike').recipe.items=items;assert.throws(()=>checkSchema(malformed,schema));}
+for(const cost of [{silver:120,items:{}},{silver:120,items:{iron:8,unknown_material:1}},{silver:120,items:{iron:-1}},{silver:'120',items:{iron:8}}]){const malformed=structuredClone(raw);malformed.stories.find(s=>s.id==='v7_prepare').steps.start.choices[0].cost=cost;assert.throws(()=>checkSchema(malformed,schema));}
+// A recursive condition accepts known routes at any depth but rejects unknown fields and malformed operands.
+for(const condition of [{notFlag:'unknown_flag'},{any:[]},{all:[{flag:'v7_prepared',route:'wrong'}]},{all:[{any:[{notFlag:9}]}]}]){const malformed=structuredClone(raw);malformed.stories.find(s=>s.id==='v7_cut').steps.fight.condition=condition;assert.throws(()=>checkSchema(malformed,schema));}
+checkSchema({all:[{flag:'v7_prepared'},{any:[{notFlag:'v7_final_done'},{all:[{flag:'volume_seven_complete'}]}]}]},schema.$defs.condition);
+assert.deepEqual(raw.stories.find(s=>s.id==='v7_cut').steps.fight.condition,{notFlag:'v7_final_done'},'optional support remains unavailable after the seventh-volume final battle');
 console.log('Shuihu: JSON Schema structural contract passed.');
 const data=prepareData(raw), now=new Date(2026,8,9,10).getTime();
-for(const [kind,count] of Object.entries({heroes:172,maps:79,items:662,equipments:23,skills:694,events:24,dungeons:9}))assert.equal(data[kind].length,count);
+for(const [kind,count] of Object.entries({heroes:172,maps:113,stories:78,enemies:56,chapters:12,items:669,equipments:29,skills:694,events:24,dungeons:9}))assert.equal(data[kind].length,count);
 assert.equal(data.quests.filter(q=>q.type==='daily').length,12);
 assert.equal(data.heroes.some(h=>h.id==='chaogai'&&h.group==='external'),true);
 const bad=structuredClone(raw);bad.maps[0].links[0].target='missing';assert.throws(()=>prepareData(bad),/引用不存在/);

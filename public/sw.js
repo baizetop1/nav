@@ -189,6 +189,8 @@ self.addEventListener('fetch', (event) => {
     url.origin !== self.location.origin ||
     // The standalone game must never replace the navigation's cached index.html.
     url.pathname.startsWith(`${APP_SCOPE}game/`) ||
+    // Learning experiments must not replace the app shell or be served as it.
+    url.pathname.startsWith(`${APP_SCOPE}learning-lab/`) ||
     !url.pathname.startsWith(APP_SCOPE)
   ) {
     return

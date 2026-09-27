@@ -1,3 +1,4 @@
+import {completeLateRoute} from './shuihu-late-mainline-selfcheck.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
@@ -46,7 +47,10 @@ for(let i=0;i<5;i++){week=act(week,'campRaid',{id:'woods'});for(let t=0;t<180&&!
 let claimed=act(week,'recruitSupply',{id:'week'});assert.equal(claimed.inventory.recruit_order,week.inventory.recruit_order+2);assert.throws(()=>act(claimed,'recruitSupply',{id:'week'}),/已领取/);
 assert.equal(recruitWeek(Date.parse('2026-09-13T15:59:59Z')),'2026-09-07');assert.equal(recruitWeek(Date.parse('2026-09-13T16:00:00Z')),'2026-09-14');let next=act(claimed,'refresh',{},Date.parse('2026-09-13T16:00:00Z'));assert.equal(supportWeek(next).work,0);assert.equal(supportWeek(next).wins,0);assert.throws(()=>act(next,'recruitSupply',{id:'week'}),/本周/);next=act(next,'campWork');assert.equal(supportWeek(next).work,1);assert.equal(supportWeek(next).claimed,false);
 // Old completed chapters/dungeons receive the new finite bonus once, with persistent claims.
-let done=base();for(const c of d.chapters)done.progress.flags[c.completeFlag]=true;for(const x of d.dungeons)done.progress.clears[x.id]=1;const orders=done.inventory.recruit_order;for(const q of recruitOffers(done,d).filter(q=>q.id!=='week')){assert.equal(q.reason,'');done=act(done,'recruitSupply',{id:q.id});assert.throws(()=>act(done,'recruitSupply',{id:q.id}),/已领取/);}assert.equal(done.inventory.recruit_order-orders,d.chapters.length*2+d.dungeons.length);assert.deepEqual(importSave(exportSave(done,{id:1,name:'补给'},d),d).state,done);
+// Model a real completed twelve-volume save from before chapter-support claims existed.
+// The path helper claims the five new bonuses while checking them; undo only those
+// ten fixture tickets and their claim records, preserving every actual story checkpoint.
+let done=completeLateRoute().s;assert.equal(done.recruit.support.claims.length,5);done.inventory.recruit_order-=done.recruit.support.claims.length*2;done.recruit.support.claims=[];assert.ok(d.chapters.every(c=>done.progress.flags[c.completeFlag]));for(const x of d.dungeons)done.progress.clears[x.id]=1;const orders=done.inventory.recruit_order;for(const q of recruitOffers(done,d).filter(q=>q.id!=='week')){assert.equal(q.reason,'');done=act(done,'recruitSupply',{id:q.id});assert.throws(()=>act(done,'recruitSupply',{id:q.id}),/已领取/);}assert.equal(done.inventory.recruit_order-orders,d.chapters.length*2+d.dungeons.length);assert.deepEqual(importSave(exportSave(done,{id:1,name:'补给'},d),d).state,done);
 assert.throws(()=>act(base(),'recruitSupply',{id:'first_missing'}));assert.throws(()=>act(base(),'recruitSupply',{id:'chapter_volume_one'}),/完成本卷/);
 for(const mutate of [v=>v.recruit.support.dry=10,v=>v.recruit.support.points=-1,v=>v.recruit.support.tickets=999,v=>v.recruit.support.claims=['first_missing'],v=>v.recruit.support.week={period:'2026-09-15',work:3,wins:5,claimed:true}]){const bad=structuredClone(s);mutate(bad);assert.throws(()=>gameSnapshot(bad,d),/招贤/);}
 assert.match(recruitSupportPanel(s,d,String,()=>''),/抽取概率不变/);

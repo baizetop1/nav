@@ -57,7 +57,7 @@ tech-os/
 
 新手机或电脑第一次接入时，在 Inbox 的“多端加密同步”中输入运行时 PAT 和同一加密密码，选择“从云端恢复”。该操作只 GET、解密并与本机合并，不提交 GitHub；“合并并同步”才会 GET、合并、加密并 PUT。PAT 和密码均不保存。
 
-PC 在 Tech OS Inbox 中选择“加入 Repository 草稿”后生成 `tech-os/inbox/INBOX-….md`，保留 `source_inbox_id`。草稿先停留在当前工作台内存；完成远端读取、差异检查、schema 校验和人工确认后才提交。提交成功才归档来源记录，失败或冲突时来源仍留在 Inbox。
+PC 在 Tech OS Inbox 中选择“加入 Repository 草稿”后生成 `tech-os/inbox/INBOX-….md`，保留 `source_inbox_id`。进入 Repository 的草稿会自动保存在当前浏览器；完成远端读取、差异检查、schema 校验和人工确认后才提交。提交成功才归档来源记录，失败或冲突时来源仍留在 Inbox。Repository 草稿是明文公开内容的工作副本，不是加密私人笔记；转入前请检查敏感内容。
 
 ### 2. 推进 Quest
 
@@ -66,6 +66,26 @@ PC 在 Tech OS Inbox 中选择“加入 Repository 草稿”后生成 `tech-os/i
 3. 工作台会把这些步骤显示为可点击的学习打卡，并立即保存在当前浏览器；用户主动执行 Inbox 多端同步时，打卡状态会与 Inbox 一起写入私有共享数据。它只代表个人推进记录，不会修改公开仓库中的 Quest Markdown。
 4. 在 Quest 中记录当前结论、证据和下一步。新问题写入 `questions/`，不要塞进一篇无限增长的笔记。
 5. 形成稳定理解时创建 Knowledge；需要验证时创建 Lab；多个节点汇合时创建 Project。
+
+#### 在工作台中继续学习
+
+工作台的“逐步辅导”不是 AI 自动评卷，而是直接从 Quest Markdown 读取的可审阅教案。当前主线按入门者补充了课前思路、工具说明和最小实验；没有教案的任务仍显示原始正文，不凭空生成教程。
+
+- 每次只展示一个步骤，按“为什么这样做 → 工具与操作 → 观察与预期 → 自测 → 完成标志”跟做。
+- “常见误区”“卡住时怎么办”可展开查阅；参考答案默认折叠，先自己作答再核对。
+- 前两课提供“打开导航实验页”按钮，练习同源链接、查询串、片段与 GET 表单。实验页不存输入、不注册 Service Worker，也不保证某种缓存或网络结果；GET 字段会进入 URL，勿输入隐私。
+- 手机可预习；DevTools、终端、抓包等实验注明桌面工具与环境限制。真实观察由用户记录，系统不读取屏幕、运行教程命令或自动认定理解。
+- “完整正文”保留全部材料、当前结论及完成证据；任何阅读、翻页或查看答案都不会自动打卡。
+
+- 总览的“今天从这里继续”显示当前 Quest 的个人步骤进度，并直接定位第一个尚未打卡的步骤。所有步骤完成后可回看任务，但不会自动修改仓库状态。
+- “阅读 S1”等按钮只定位正文；“完成 S1”才保存打卡。正文支持可折叠目录、安全的 HTTP(S) 链接和代码复制，章节跳转不会改变 `#/tech-os` 路由。
+- 核心任务、知识库、实验和项目可以按标题、标签、ID、正文搜索，并按状态筛选。点击相关对象时会清除当前筛选，避免目标被隐藏。
+- 打卡保存失败时会明确提示并提供重试，不会假装已保存；损坏存档保留原文、禁止自动覆盖。多个同源标签页会同步进度，支持 Web Locks 的浏览器会串行处理打卡写入；不支持时使用写前重读与冲突检测。
+- 这些操作默认只影响本机。跨设备仍需主动执行 Inbox 多端加密同步；正式完成 Quest 仍需结论、证据和人工确认。
+
+浏览器回归：先启动本地预览，再运行 `npm run check:tech-os-workspace`（需要 Playwright；可用 `BAIZE_PLAYWRIGHT_PATH` 指定已安装的模块路径，`BAIZE_APP_URL` 指定预览地址）。覆盖桌面/手机阅读、分类与关联跳转、保存失败重试、损坏保护和多标签页同步。
+
+辅导回归：`npm run test:tech-os-coaching` 检查 Markdown 章节解析，`npm run test:tech-os-lab` 检查实验页与主站缓存隔离，`npm run check:tech-os-coaching` 验证逐步阅读、答案折叠、不自动打卡及实验页入口。
 
 #### Quest 怎样正式标记完成
 
@@ -117,7 +137,7 @@ T4.2 读取 Route Seed 与 T4.1 未保存信号：
 1. 只按共同的具体 tag 建立关系，至少两条输入才形成 Candidate Group。
 2. 领域级 tag（如 `internet`、`system`、`architecture`）不会单独触发聚合。
 3. 用户编辑 Route Name、Why、Expected Outcome 与至少两个 Outline 步骤。
-4. 输入 `STAGE RS-XXX` 后，Candidate 才进入当前页面的 Repository 内存草稿。
+4. 输入 `STAGE RS-XXX` 后，Candidate 才进入 Repository 草稿，并在本机自动保存。
 5. Repository 再执行完整 Tech OS 校验、远端比较、`COMMIT TECH-OS` 与浏览器二次确认。
 
 如果候选包含私有 Inbox 输入，编辑器会提示其标题在进入 Repository 后将成为明文，并可能出现在公开 Pages 投影；保存前必须先检查或移除敏感内容。
@@ -135,6 +155,14 @@ Route Engine 实现 T4.3–T4.6，并保持逐阶段人工确认：
 5. 推荐与手工路线固定写入 `routes/backlog/`，使用 `status: backlog` 和 `main: false`。加入草稿仍需 `STAGE ...`，真正提交仍需 Repository 全量校验、远端比较、`COMMIT TECH-OS` 与浏览器确认。
 
 这些阶段不会修改 `state.yml`、自动切换 Main Route、创建 Active Quest、升级 Knowledge 或宣称实验完成。当前示例路线进度为 0%，因此 Review 与 Next Route 推荐会按规则锁定；Manual Route 仍可使用。
+
+## 新方向与 AI 课程
+
+工作台的“新方向 / AI 课程”用于准备之后要学的方向：需求 → 大纲 → 单课教案 → 预览检查 → Repository 草稿。可以不调用 AI，手工编写或导入课程 JSON；也可以填写 OpenAI 兼容接口地址、模型和临时 API Key，逐课生成。
+
+每课会区分只有大纲、教案待完善、结构齐全；结构检查不验证事实。新路线与全部课程任务固定进入 Backlog，不改当前主线、学习打卡或完成状态。课程内容可能随 GitHub 发布公开；API 配置与 Key 不持久保存、不导出。推荐自有安全网关，不要把服务商密钥写进前端构建环境。详见 [课程使用说明](../docs/TECH-OS-COURSES.md)。
+
+相关测试：`npm run test:tech-os-course-package`、`npm run test:tech-os-course-readiness`、`npm run test:tech-os-course-ai`；启动本地预览后运行 `npm run check:tech-os-course`。接口测试全部使用模拟响应，不会调用付费 API。
 
 ## 校验
 
@@ -171,7 +199,7 @@ npm run test:tech-os-route-engine
 - 不自动选择 Main Route。
 - 不自动宣称实验完成或升级 Knowledge。
 - T2 Dashboard 读取由本目录生成的前端投影；Repository 页面可以在用户确认后原子提交受管 Markdown 草稿。
-- Repository Adapter 不删除文件、不 force push、不管理 templates/README，也不保存 Token 或草稿。
+- Repository Adapter 不删除远端文件、不 force push、不管理 templates/README，也不保存 Token；Markdown 草稿和比较基线保存在本机，只有人工确认提交才会写入 GitHub。
 - T3 Capture Adapter 不改变 Inbox v1、不自动创建 Route Seed，并只在 Repository 提交成功后归档来源记录。
 - T4.1 Learning Engine 只读派生 Next Action 与 Route Seed Signals，不保存、聚合或自动选择路线。
 - T4.2 只处理显式相关信号聚合、可编辑 Candidate 和多阶段确认，不自动保存或选择路线。

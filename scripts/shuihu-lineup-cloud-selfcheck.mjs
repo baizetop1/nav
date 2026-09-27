@@ -1,0 +1,18 @@
+import {startBattle,advanceBattle} from '../public/game/js/battle.js';
+import {gameSnapshot} from '../public/game/js/portable.js';
+import assert from 'node:assert/strict';import fs from 'node:fs';import {DatabaseSync} from 'node:sqlite';import {build} from 'esbuild';import {d,fixture,act,walk} from './shuihu-campaign-fixtures.mjs';import {CloudClient} from '../public/game/js/cloud.js';
+const bundle=await build({entryPoints:[new URL('../cloud/shuihu/worker.js',import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1')],bundle:true,format:'esm',platform:'browser',write:false}),worker=(await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'))).default;
+const db=new DatabaseSync(':memory:');try{db.exec(fs.readFileSync(new URL('../cloud/shuihu/schema.sql',import.meta.url),'utf8'));const DB={prepare(sql){let args=[];return {bind(...v){args=v;return this;},async first(){return db.prepare(sql).get(...args)||null;},async all(){return {results:db.prepare(sql).all(...args)};},async run(){return db.prepare(sql).run(...args);}};}};
+const admin='A'.repeat(64),env={DB,KEY_PEPPER:'opening-tests-pepper-longer-than-32-chars',ADMIN_KEY:admin},request=(path,method,key,body,rev)=>worker.fetch(new Request('https://test.invalid'+path,{method,headers:{Authorization:'Bearer '+key,'Content-Type':'application/json',...(rev===undefined?{}:{'If-Match':'"'+rev+'"'})},body:body===undefined?undefined:JSON.stringify(body)}),env);
+
+const caps=await(await request('/v1/game-version','GET',admin)).json();assert.equal(caps.heroRoles,3);assert.equal(caps.release,d.config.release);
+const key=(await(await request('/v1/admin/slots/1/key','POST',admin,{})).json()).key;let rev=1;
+const upload=state=>request('/v1/slots/1','PUT',key,{name:'人物搭配',state},rev);
+async function roundtrip(s){db.exec('DELETE FROM rate_limits');const r=await upload(s);assert.equal(r.status,200,await r.text());rev++;const res=await request('/v1/slots/1','GET',key);const saved=await res.json();assert.deepEqual(saved.state,s);return saved.state;}
+let s=fixture();s.team=['ruanxiaoqi','songjiang','wuyong'];for(const id of s.team)Object.assign(s.heroes[id],{status:'owned',level:30,exp:0});startBattle(s,d,{enemies:['road_raider'],context:{type:'dungeon',id:'yezhulin',terrain:'water'}});assert.equal(s.battle.roles.counts.ruanxiaoqi,1);await roundtrip(s);
+const downgrade=structuredClone(s);downgrade.battle.roles={version:1,counts:{},cooldowns:{}};gameSnapshot(downgrade,d);assert.equal((await upload(downgrade)).status,409);
+const malformed=structuredClone(s);malformed.battle.roles.cooldowns.songjiang=6001;assert.equal((await upload(malformed)).status,400);
+const oldCaps={...caps};delete oldCaps.heroRoles;let writes=0;const cloud=new CloudClient('https://test.invalid',d,async(_,o)=>{if(o.method==='PUT')writes++;return Response.json(oldCaps);});await assert.rejects(()=>cloud.upload(1,1,s,'旧服务'),/0.46.0/);assert.equal(writes,0);
+s.battleSkillMode='auto';for(let i=0;i<180&&!s.battle.outcome;i++)advanceBattle(s,d,1000);s=act(s,'finishBattle');assert.equal(s.lastBattle.roleReport.version,3);await roundtrip(s);const oldReport=structuredClone(s);oldReport.lastBattle.roleReport={version:1,counts:{}};gameSnapshot(oldReport,d);assert.equal((await upload(oldReport)).status,409);
+await assert.rejects(()=>cloud.upload(1,1,s,'旧服务战报'),/0.46.0/);assert.equal(writes,0);assert.equal(db.prepare('SELECT revision FROM slots WHERE id=1').get().revision,rev);
+console.log('Lineup cloud PASS: version 3 battle and report roundtrips, old-service preflight, downgrade rejection and no revision changes on failed writes; in-memory SQLite only.');}finally{db.close();}

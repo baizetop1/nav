@@ -19,7 +19,7 @@
         "jinchuangyao": 2
       }
     },
-    "description": "去县衙看榜文，再到酒肆听听消息。",
+    "description": "去郓城县衙看榜文，再到郓城酒肆听消息。",
     "chapter": "volume_one"
   },
   {
@@ -32,7 +32,7 @@
     "reward": {
       "prestige": 5
     },
-    "description": "沿城门、官道，前往景阳冈下。",
+    "description": "出郓城城门，沿城外官道前往景阳冈下。",
     "chapter": "volume_one"
   },
   {
@@ -47,7 +47,7 @@
         "tiger_bone": 1
       }
     },
-    "description": "察看枯树林脚印，再循虎踪探路。",
+    "description": "到枯树林查看爪印，再回景阳冈山道，沿新发现的虎踪探路。",
     "chapter": "volume_one"
   },
   {
@@ -60,7 +60,7 @@
     "reward": {
       "silver": 150
     },
-    "description": "协助武松判断虎势；打虎信物随剧情只发一次。",
+    "description": "在三碗不过冈结识武松，循虎踪到密林深处，助他打虎。",
     "chapter": "volume_one"
   },
   {
@@ -73,7 +73,7 @@
     "reward": {
       "prestige": 5
     },
-    "description": "酒肆打听东溪村后，拜访晁盖庄。",
+    "description": "先在郓城酒肆打听东溪村，再从城门出发，去晁盖庄拜访。",
     "chapter": "volume_one"
   },
   {
@@ -88,7 +88,7 @@
         "exp_pill": 2
       }
     },
-    "description": "听庄中商议，访三阮，再回客舍聚义。",
+    "description": "在晁盖庄听吴用商议，去溪边渡口见三阮，再回庄后客舍聚义。",
     "chapter": "volume_one"
   },
   {
@@ -101,7 +101,7 @@
     "reward": {
       "silver": 300
     },
-    "description": "掌握暑热、疑心和卖酒的时机；两人的首次信物随剧情只发一次。",
+    "description": "去黄泥冈设局夺取生辰纲，留意军汉的暑热、疑心和卖酒时机。",
     "chapter": "volume_one"
   },
   {
@@ -122,7 +122,7 @@
         "martial_pages": 1
       }
     },
-    "description": "巡视景阳冈一次。"
+    "description": "前往景阳冈下，打通一次“景阳冈历练”。"
   },
   {
     "id": "daily_medicine",
@@ -139,7 +139,7 @@
         "martial_pages": 1
       }
     },
-    "description": "今日备得两份金创药，可购买或探访郎中。"
+    "description": "今日取得金创药两份。可在行囊中采买，也可去药草坡找老郎中。"
   },
   {
     "id": "daily_battle",
@@ -158,7 +158,7 @@
         "martial_pages": 1
       }
     },
-    "description": "让好汉们在两场交战中得胜。"
+    "description": "带好汉赢下两场交战。"
   },
   {
     "id": "daily_recruit",
@@ -175,7 +175,7 @@
         "martial_pages": 1
       }
     },
-    "description": "在招贤馆拜访一次江湖人物。"
+    "description": "到招贤馆拜访一次江湖人物。"
   },
   {
     "id": "daily_forge",
@@ -194,7 +194,7 @@
         "martial_pages": 1
       }
     },
-    "description": "为一件兵刃或衣甲强化一次。"
+    "description": "到城西铁匠铺，将一件兵刃或衣甲强化一次。"
   },
   {
     "id": "daily_explore",
@@ -234,7 +234,7 @@
         "martial_pages": 1
       }
     },
-    "description": "踏上一处尚未到过的地方。"
+    "description": "去一处此前没到过的地方。"
   },
   {
     "id": "daily_event",
@@ -251,7 +251,7 @@
         "martial_pages": 1
       }
     },
-    "description": "在江湖寻访中处理一桩际遇。"
+    "description": "在“江湖寻访”中遇人问事，办妥一桩际遇。"
   },
   {
     "id": "daily_bandit",
@@ -280,7 +280,7 @@
         "martial_pages": 1
       }
     },
-    "description": "带队解两次山贼拦路之急。"
+    "description": "与山贼交战并得胜两次。"
   },
   {
     "id": "daily_bone",
@@ -299,7 +299,7 @@
         "martial_pages": 1
       }
     },
-    "description": "今日为铁匠搜集三份虎骨。"
+    "description": "今日取得虎骨三份。"
   },
   {
     "id": "daily_team",
@@ -335,7 +335,7 @@
         "martial_pages": 1
       }
     },
-    "description": "在酒肆听一条消息或处理一桩酒客际遇。"
+    "description": "在郓城酒肆听一条消息，或办妥一桩酒客的事。"
   },
   {
     "id": "daily_horse",
@@ -354,7 +354,7 @@
         "martial_pages": 1
       }
     },
-    "description": "给坐骑添一份草料。坐骑系统开放后才会派发。"
+    "description": "给坐骑喂一次草料。"
   },
   {
     "id": "main_tokyo",
@@ -364,7 +364,7 @@
     "condition": {
       "flag": "lin_tolerant"
     },
-    "description": "第一卷卷终后，从梁山渡口到东京旧居，与林教头叙过姓名。",
+    "description": "第一卷结束后，从金沙渡前往东京，到教头旧居结识林冲。",
     "reward": {
       "silver": 200,
       "items": {
@@ -380,7 +380,7 @@
     "condition": {
       "flag": "lu_complete"
     },
-    "description": "先在大相国寺与鲁智深相识，再到野猪林护住林冲。",
+    "description": "在大相国寺与菜园结识鲁智深，再去野猪林深处，救下林冲。",
     "reward": {
       "silver": 300,
       "items": {
@@ -396,7 +396,7 @@
     "condition": {
       "flag": "lin_temple"
     },
-    "description": "从沧州酒铺到草料场，察看雪路脚印，听清山神庙外的真相。",
+    "description": "从李小二酒铺查到草料场，察看风雪山道的脚印，再到山神庙助林冲脱险。",
     "reward": {
       "silver": 300,
       "items": {
@@ -412,7 +412,7 @@
     "condition": {
       "flag": "chai_refuge"
     },
-    "description": "带着投庄书信拜访柴进，得一处安身之所。",
+    "description": "带投庄书信拜访柴进庄，在客舍交书，再回庄中答应护送行旅。",
     "reward": {
       "silver": 200,
       "items": {
@@ -428,7 +428,7 @@
     "condition": {
       "flag": "yang_complete"
     },
-    "description": "在青州行旅道与杨志相识，协助他护送过路行旅。",
+    "description": "去青州行旅道结识杨志，帮他护住过路商旅。",
     "reward": {
       "silver": 200,
       "items": {
@@ -444,7 +444,7 @@
     "condition": {
       "flag": "volume_two_complete"
     },
-    "description": "林冲归向水泊、鲁智深护友、柴进留客、杨志护道，四段往事都已记下。",
+    "description": "办完林冲、鲁智深、柴进和杨志四段往事。林冲的归途在金沙渡收尾。",
     "reward": {
       "silver": 500,
       "items": {
@@ -455,7 +455,7 @@
   {
     "id": "main_v3_foundation",
     "name": "安居之后",
-    "description": "完善安寨设施并在寨民新居确认。已有建筑直接满足条件。",
+    "description": "聚义厅升至二级，农田、伐木场、医馆各一级，招到三名好汉后，去寨民新居办妥安寨。",
     "type": "main",
     "chapter": "volume_three",
     "condition": {
@@ -471,7 +471,7 @@
   {
     "id": "main_v3_supply",
     "name": "水陆连通",
-    "description": "在两条物资路任一打通后，夺回水陆接驳口。",
+    "description": "先打通东岸粮仓的粮道或青石材场的木道，再夺回水陆接驳口，并在当地确认战果。",
     "type": "main",
     "chapter": "volume_three",
     "condition": {
@@ -487,7 +487,7 @@
   {
     "id": "main_v3_complete",
     "name": "梁山初聚",
-    "description": "安寨、通路、守寨之后，在水泊盟亭立约，完成第三卷。",
+    "description": "安置寨民，打通粮道、木道与渡口，守住外寨栅门后，去水泊盟亭立约。",
     "type": "main",
     "chapter": "volume_three",
     "condition": {
@@ -503,7 +503,7 @@
   {
     "id": "main_v4_erlong",
     "name": "二龙同行",
-    "description": "通过该寨任一种合作方式结盟，酬谢只领取一次。",
+    "description": "去二龙山客舍，送药相助，或到险道解围后回客舍结盟。",
     "type": "main",
     "chapter": "volume_four",
     "condition": {
@@ -519,7 +519,7 @@
   {
     "id": "main_v4_taohua",
     "name": "桃花相约",
-    "description": "通过该寨任一种合作方式结盟，酬谢只领取一次。",
+    "description": "去桃花山修械棚，送来修械材料，或到校场切磋后回棚结盟。",
     "type": "main",
     "chapter": "volume_four",
     "condition": {
@@ -535,7 +535,7 @@
   {
     "id": "main_v4_baihu",
     "name": "白虎来援",
-    "description": "通过该寨任一种合作方式结盟，酬谢只领取一次。",
+    "description": "去白虎山议棚，送回山外军情，或护送粮队后回来结盟。",
     "type": "main",
     "chapter": "volume_four",
     "condition": {
@@ -551,7 +551,7 @@
   {
     "id": "main_v4_union",
     "name": "三山聚义",
-    "description": "三寨结盟后，完成联合守寨并在联合营确认立约。",
+    "description": "与三寨结盟后，到三山联合营合兵守寨，得胜后在营中立约。",
     "type": "main",
     "chapter": "volume_four",
     "condition": {
@@ -567,7 +567,7 @@
   {
     "id": "main_v5_probe",
     "name": "试明虚实",
-    "description": "完成第五卷对应事务并在当地确认战果，酬劳只领取一次。",
+    "description": "查清盘陀迷径后，攻下祝庄外哨，并在哨口确认战果。",
     "type": "main",
     "chapter": "volume_five",
     "condition": {
@@ -583,7 +583,7 @@
   {
     "id": "main_v5_cut",
     "name": "断援截粮",
-    "description": "完成第五卷对应事务并在当地确认战果，酬劳只领取一次。",
+    "description": "截断东援路或西粮道任意一路，得胜后在当地确认战果。",
     "type": "main",
     "chapter": "volume_five",
     "condition": {
@@ -606,7 +606,7 @@
   {
     "id": "main_v5_second",
     "name": "破开庄门",
-    "description": "完成第五卷对应事务并在当地确认战果，酬劳只领取一次。",
+    "description": "拿下外哨、截断援路或粮道后，攻破祝庄前门，并在门前确认战果。",
     "type": "main",
     "chapter": "volume_five",
     "condition": {
@@ -622,7 +622,7 @@
   {
     "id": "main_v5_settle",
     "name": "祝庄事毕",
-    "description": "完成第五卷对应事务并在当地确认战果，酬劳只领取一次。",
+    "description": "攻下祝庄内院后，去庄后粮仓清点粮食、安置归来的百姓。",
     "type": "main",
     "chapter": "volume_five",
     "condition": {

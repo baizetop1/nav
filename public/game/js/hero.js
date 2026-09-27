@@ -1,11 +1,12 @@
-import { recordRecruitSupport } from './recruit-support.js?v=0.44.0';
-import { isExternal, isWanderer, ordinaryHeroes } from './roster.js?v=0.44.0';
-import { experienceResult } from './progression.js?v=0.44.0';
-import { applySets } from './equipment-sets.js?v=0.44.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.44.0';
-import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.44.0';
-import { heroRank } from './map.js?v=0.44.0';
-import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.44.0';
+import {chronicleGearMultiplier} from './chronicle-data.js?v=0.52.0';
+import { recordRecruitSupport } from './recruit-support.js?v=0.52.0';
+import { isExternal, isWanderer, ordinaryHeroes } from './roster.js?v=0.52.0';
+import { experienceResult } from './progression.js?v=0.52.0';
+import { applySets } from './equipment-sets.js?v=0.52.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.52.0';
+import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.52.0';
+import { heroRank } from './map.js?v=0.52.0';
+import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.52.0';
 export function knowHero(state, id, status, data) {
   const hero = state.heroes[id];
   if (heroRank[status] > heroRank[hero.status]) { hero.status = status; journal(state, `${data.by.heroes[id].name}：${({heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'})[status]}。`); }
@@ -21,7 +22,7 @@ export function attributes(state, id, data, level = state.heroes[id].level, with
   const model = data.by.heroes[id], result = { ...model.attribute };
   for (const key of Object.keys(result)) result[key] += model.growth[key] * (level - 1);
   if (withEquipment) for (const equip of state.equipment.filter(e => e.hero === id)) {
-    for (const [key, amount] of Object.entries(data.by.equipments[equip.item].attribute)) result[key] += Math.round(amount * (1 + equip.plus * .1));
+    for (const [key, amount] of Object.entries(data.by.equipments[equip.item].attribute)) result[key] += Math.round(amount * (1 + equip.plus * .1) * chronicleGearMultiplier(state,equip.item));
   }
   for (const skillId of model.skills) {
     const skill=data.by.skills[skillId];

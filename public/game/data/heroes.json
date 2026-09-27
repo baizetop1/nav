@@ -26,7 +26,7 @@
       "songjiang_advanced",
       "songjiang_bond"
     ],
-    "story": "仗义疏财，言语温厚。",
+    "story": "郓城押司，熟悉衙门里的文书，也肯掏钱接济人。来找他的人多，桌上的公文常被搁到半夜。",
     "core": true,
     "meetMap": "office",
     "meetCondition": null,
@@ -35,10 +35,10 @@
       "token": "songjiang_token",
       "count": 10
     },
-    "dialogue": "宋江拱手让座：“出门在外，谁还没有难处？你既到郓城，便不算生客。若有用得着宋某之处，只管开口。”",
+    "dialogue": "“饭还热着，吃了再说。盘缠若不够，我这里还有些。”",
     "mount": {
       "name": "黄骠义骑",
-      "description": "专属脚力；与宋江同行养成。名称与羁绊为本作原创设定。",
+      "description": "黄毛黑尾，鞍侧挂着水囊，走长路时步子不急。",
       "dungeon": "chai_escort",
       "contract": "songjiang_mount_contract"
     },
@@ -73,7 +73,7 @@
       "lujunyi_advanced",
       "lujunyi_bond"
     ],
-    "story": "天罡星 · 梁山第 2 席。玉麒麟卢俊义，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "大名府的富户，一身好枪棒，偏不肯只守着家业过日子。提起比武，待客的茶都能忘在一旁。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -82,10 +82,10 @@
       "token": "lujunyi_token",
       "count": 10
     },
-    "dialogue": "卢俊义道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“听说你也使枪？院子宽敞，走上几合。”",
     "mount": {
       "name": "玉麒麟义骑",
-      "description": "与卢俊义同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "骨架高大，缰绳和鞍具收拾得一尘不染。",
       "dungeon": "huangnigang",
       "contract": "lujunyi_mount_contract"
     },
@@ -121,7 +121,7 @@
       "wuyong_advanced",
       "wuyong_bond"
     ],
-    "story": "先看局势，再落一子。",
+    "story": "乡间教书先生，袖里常揣着几页写满小字的纸。遇上难事，先把人名、时辰、来路一一问清。",
     "core": true,
     "meetMap": "zhuang",
     "meetCondition": {
@@ -132,10 +132,10 @@
       "token": "wuyong_token",
       "count": 10
     },
-    "dialogue": "先看局势，再落一子。",
+    "dialogue": "“那人原话怎么说的？别添改，再讲一遍。”",
     "mount": {
       "name": "青鬃策骑",
-      "description": "专属脚力；与吴用同行养成。名称与羁绊为本作原创设定。",
+      "description": "青鬃垂在颈边，鞍后绑着书袋，沿途少受颠簸。",
       "dungeon": "huangnigang",
       "contract": "wuyong_mount_contract"
     },
@@ -170,7 +170,7 @@
       "gongsunsheng_advanced",
       "gongsunsheng_bond"
     ],
-    "story": "云游四方，见识不凡。",
+    "story": "蓟州来的道士，常在山路上独行。住店只要一间清静屋，天亮时往往已经上路。",
     "core": true,
     "meetMap": "guesthouse",
     "meetCondition": {
@@ -181,10 +181,10 @@
       "token": "gongsunsheng_token",
       "count": 10
     },
-    "dialogue": "云游四方，见识不凡。",
+    "dialogue": "“山里夜凉，多带件衣裳。我去前头看看路。”",
     "mount": {
       "name": "云踪白马",
-      "description": "专属脚力；与公孙胜同行养成。名称与羁绊为本作原创设定。",
+      "description": "白毛沾着山间草屑，惯走小径，遇陡坡便放慢脚步。",
       "dungeon": "huangnigang",
       "contract": "gongsunsheng_mount_contract"
     },
@@ -219,7 +219,7 @@
       "guansheng_advanced",
       "guansheng_bond"
     ],
-    "story": "天勇星 · 梁山第 5 席。大刀关胜，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "使一口青龙偃月刀，领兵出阵时看重军令。收兵之后，刀上有一点缺口也要亲自查过。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -228,10 +228,10 @@
       "token": "guansheng_token",
       "count": 10
     },
-    "dialogue": "关胜道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“人马可到齐了？点过再走，别漏了后队。”",
     "mount": {
       "name": "大刀义骑",
-      "description": "与关胜同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "胸阔腿长，惯随队列行走，鞍旁留着挂刀的位置。",
       "dungeon": "zhujiazhuang",
       "contract": "guansheng_mount_contract"
     },
@@ -267,7 +267,7 @@
       "linchong_advanced",
       "linchong_bond"
     ],
-    "story": "待人克制，枪法沉稳。",
+    "story": "东京禁军枪棒教头，教人时少有高声，错了却要从头重来。受过的委屈不常提，枪仍擦得干净。",
     "core": true,
     "meetMap": "dongjing_lane",
     "meetCondition": {
@@ -278,10 +278,10 @@
       "token": "linchong_token",
       "count": 10
     },
-    "dialogue": "待人克制，枪法沉稳。",
+    "dialogue": "“枪别握死了。你再扎一回，我看看。”",
     "mount": {
       "name": "踏雪青骢",
-      "description": "专属脚力；与林冲同行养成。名称与羁绊为本作原创设定。",
+      "description": "青骢四蹄带白，缰绳略收便停，鞍垫用旧了仍很平整。",
       "dungeon": "shanshenmiao",
       "contract": "linchong_mount_contract"
     },
@@ -316,7 +316,7 @@
       "qinming_advanced",
       "qinming_bond"
     ],
-    "story": "天猛星 · 梁山第 7 席。霹雳火秦明，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "原在青州领兵，使狼牙棒，脾气上来连话都像吼的。行军最嫌等人，常第一个牵马出营。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -325,10 +325,10 @@
       "token": "qinming_token",
       "count": 10
     },
-    "dialogue": "秦明道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“都收拾好了没有？天都亮了，还磨蹭！”",
     "mount": {
       "name": "霹雳火义骑",
-      "description": "与秦明同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "毛色深红，候人时爱刨地，辔头上留着齿痕。",
       "dungeon": "qingzhou_patrol",
       "contract": "qinming_mount_contract"
     },
@@ -364,7 +364,7 @@
       "huyanzhuo_advanced",
       "huyanzhuo_bond"
     ],
-    "story": "天威星 · 梁山第 8 席。双鞭呼延灼，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "将门出身，惯使双鞭，熟悉骑兵操练。营中人能歇，马具没查完，他却不肯先走。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -373,10 +373,10 @@
       "token": "huyanzhuo_token",
       "count": 10
     },
-    "dialogue": "呼延灼道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“把肚带再紧一紧。人坐得稳，才谈得上使兵器。”",
     "mount": {
       "name": "双鞭义骑",
-      "description": "与呼延灼同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "马身结实，习惯甲胄的碰响，鞍带扣得牢靠。",
       "dungeon": "jingyanggang",
       "contract": "huyanzhuo_mount_contract"
     },
@@ -412,7 +412,7 @@
       "huarong_advanced",
       "huarong_bond"
     ],
-    "story": "引弓不语，眼中自有准星。",
+    "story": "清风寨的武将，随身的弓保养得仔细。别人聚在一处说话，他也会留意树梢的风向。",
     "core": true,
     "meetMap": "training",
     "meetCondition": {
@@ -423,10 +423,10 @@
       "token": "huarong_token",
       "count": 10
     },
-    "dialogue": "引弓不语，眼中自有准星。",
+    "dialogue": "“站到我身后来。那根树枝，看见了么？”",
     "mount": {
       "name": "追风银骢",
-      "description": "专属脚力；与花荣同行养成。名称与羁绊为本作原创设定。",
+      "description": "银灰毛色，耳朵常转向远处；歇脚时先卸下弓袋。",
       "dungeon": "zhujiazhuang",
       "contract": "huarong_mount_contract"
     },
@@ -461,7 +461,7 @@
       "chaijin_advanced",
       "chaijin_bond"
     ],
-    "story": "仗义疏财，广纳落难好汉；好客不是索取回报。",
+    "story": "沧州柴大官人，庄上常住着来投奔的客人。听说谁有一身好本事，便要留饭，还想多留几日。",
     "core": true,
     "meetMap": "chaijin_manor",
     "meetCondition": {
@@ -472,11 +472,11 @@
       "token": "chaijin_token",
       "count": 10
     },
-    "dialogue": "“只管宽心住下。江湖人落难，岂有袖手之理。”",
+    "dialogue": "“客房已经收拾了。急着走做什么，明日再请你看马。”",
     "introducedIn": 2,
     "mount": {
       "name": "庄园紫骝",
-      "description": "专属脚力；与柴进同行养成。名称与羁绊为本作原创设定。",
+      "description": "紫骝养得膘足，皮鞍讲究，出门前总有人替它刷毛。",
       "dungeon": "chai_escort",
       "contract": "chaijin_mount_contract"
     },
@@ -511,7 +511,7 @@
       "liying_advanced",
       "liying_bond"
     ],
-    "story": "天富星 · 梁山第 11 席。扑天雕李应，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "独龙冈李家庄的庄主，使浑铁点钢枪，背后还藏着飞刀。庄里的账目、人情，他都分得清楚。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -520,10 +520,10 @@
       "token": "liying_token",
       "count": 10
     },
-    "dialogue": "李应道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“先说是谁家的事。我若应下，自会给你个交代。”",
     "mount": {
       "name": "扑天雕义骑",
-      "description": "与李应同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "随主人巡庄的高头马，鞍侧皮袋缝得很紧。",
       "dungeon": "shanshenmiao",
       "contract": "liying_mount_contract"
     },
@@ -559,7 +559,7 @@
       "zhutong_advanced",
       "zhutong_bond"
     ],
-    "story": "天满星 · 梁山第 12 席。美髯公朱仝，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "郓城做过都头，长髯很惹眼，办事却肯给人留余地。遇着熟人落难，往往自己先担下麻烦。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -568,10 +568,10 @@
       "token": "zhutong_token",
       "count": 10
     },
-    "dialogue": "朱仝道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“街上人多，换个地方说。你家里可都安顿了？”",
     "mount": {
       "name": "美髯公义骑",
-      "description": "与朱仝同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "行路平稳，朱仝常下马检查蹄底夹着的碎石。",
       "dungeon": "zhujiazhuang",
       "contract": "zhutong_mount_contract"
     },
@@ -607,7 +607,7 @@
       "luzhishen_advanced",
       "luzhishen_bond"
     ],
-    "story": "粗豪而细心，见不平便要管。",
+    "story": "做过提辖，出家后仍改不了直脾气。听见隔壁有人哭，酒碗一放便要过去问个明白。",
     "core": true,
     "meetMap": "vegetable_garden",
     "meetCondition": {
@@ -618,10 +618,10 @@
       "token": "luzhishen_token",
       "count": 10
     },
-    "dialogue": "粗豪而细心，见不平便要管。",
+    "dialogue": "“哭甚么？把欺负你的人说出来，洒家去寻他。”",
     "mount": {
       "name": "乌鬃护法",
-      "description": "专属脚力；与鲁智深同行养成。名称与羁绊为本作原创设定。",
+      "description": "乌鬃厚实，驮得动沉行囊，拴在树边便低头吃草。",
       "dungeon": "yezhulin",
       "contract": "luzhishen_mount_contract"
     },
@@ -656,7 +656,7 @@
       "wusong_advanced",
       "wusong_bond"
     ],
-    "story": "话不多，行事刚烈果断。",
+    "story": "阳谷县打虎的好汉，出门常带着一身酒气。谁待他好，他记得；有人欺到头上，也绝不含糊。",
     "core": true,
     "meetMap": "inn",
     "meetCondition": {
@@ -667,10 +667,10 @@
       "token": "wusong_token",
       "count": 10
     },
-    "dialogue": "话不多，行事刚烈果断。",
+    "dialogue": "“酒钱我自会付。你把方才那句话再说清楚。”",
     "mount": {
       "name": "赤鬃行者",
-      "description": "专属脚力；与武松同行养成。名称与羁绊为本作原创设定。",
+      "description": "赤鬃夹着几缕杂毛，脚程长，鞍边挂着旧酒葫芦。",
       "dungeon": "jingyanggang",
       "contract": "wusong_mount_contract"
     },
@@ -705,7 +705,7 @@
       "dongping_advanced",
       "dongping_bond"
     ],
-    "story": "天立星 · 梁山第 15 席。双枪将董平，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "东平府出身的武将，一手一杆枪，临阵爱抢在前面。闲下来也通音律，吹弹的兴致不小。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -714,10 +714,10 @@
       "token": "dongping_token",
       "count": 10
     },
-    "dialogue": "董平道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“我先走一趟。两杆枪还在手里，怕什么？”",
     "mount": {
       "name": "双枪将义骑",
-      "description": "与董平同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "额前鬃毛修得齐整，鞍具轻便，双枪分挂两侧。",
       "dungeon": "jingyanggang",
       "contract": "dongping_mount_contract"
     },
@@ -753,7 +753,7 @@
       "zhangqing_advanced",
       "zhangqing_bond"
     ],
-    "story": "天捷星 · 梁山第 16 席。没羽箭张清，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "东昌府的将领，出手用的石子比箭还让人难防。路过河滩，也会弯腰拣几块趁手的。",
     "core": false,
     "meetMap": "stable",
     "meetCondition": null,
@@ -762,10 +762,10 @@
       "token": "zhangqing_token",
       "count": 10
     },
-    "dialogue": "张清道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“莫看那块石头小。要不要试试你头上的缨子？”",
     "mount": {
       "name": "没羽箭义骑",
-      "description": "与张清同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍边系着装石子的皮袋，走动时轻轻相碰。",
       "dungeon": "huangnigang",
       "contract": "zhangqing_mount_contract"
     },
@@ -801,7 +801,7 @@
       "yangzhi_advanced",
       "yangzhi_bond"
     ],
-    "story": "武艺精熟，一心求立身之地；几番失意仍不愿弃了本领。",
+    "story": "杨家将后人，脸上有块青记，一心想凭武艺挣回前程。差事接到手里，便绷紧了神经，不许人偷懒。",
     "core": true,
     "meetMap": "qingzhou_road",
     "meetCondition": {
@@ -812,11 +812,11 @@
       "token": "yangzhi_token",
       "count": 10
     },
-    "dialogue": "“失去的差事且不说，眼前这些行旅，总得护过去。”",
+    "dialogue": "“水在囊里，喝自己的。前头那担酒来路不明。”",
     "introducedIn": 2,
     "mount": {
       "name": "押纲黄骠",
-      "description": "专属脚力；与杨志同行养成。名称与羁绊为本作原创设定。",
+      "description": "黄骠常走押运长路，鞍后留着绑行李的粗绳。",
       "dungeon": "qingzhou_patrol",
       "contract": "yangzhi_mount_contract"
     },
@@ -851,7 +851,7 @@
       "xuning_advanced",
       "xuning_bond"
     ],
-    "story": "天祐星 · 梁山第 18 席。金枪手徐宁，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "东京金枪班教头，会使家传的钩镰枪。教起这门本事，连收脚的分寸都要挨个纠正。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -860,10 +860,10 @@
       "token": "xuning_token",
       "count": 10
     },
-    "dialogue": "徐宁道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“钩住以后别忙着拽。腰转过来，力才使得上。”",
     "mount": {
       "name": "金枪手义骑",
-      "description": "与徐宁同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍前固定着枪套，站定后不乱挪，便于主人上下马。",
       "dungeon": "shanshenmiao",
       "contract": "xuning_mount_contract"
     },
@@ -899,7 +899,7 @@
       "suochao_advanced",
       "suochao_bond"
     ],
-    "story": "天空星 · 梁山第 19 席。急先锋索超，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "大名府的军官，使一柄金蘸斧，比旁人更按捺不住性子。操练一开场，总想先找人较量。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -908,11 +908,11 @@
       "token": "suochao_token",
       "count": 10
     },
-    "dialogue": "索超道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“谁先来？我在这里等得胳膊都酸了！”",
     "introducedIn": 3,
     "mount": {
       "name": "急先锋义骑",
-      "description": "与索超同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "蹄铁常磨得发亮，牵到校场便昂头张望。",
       "dungeon": "zhujiazhuang",
       "contract": "suochao_mount_contract"
     },
@@ -947,7 +947,7 @@
       "daizong_advanced",
       "daizong_bond"
     ],
-    "story": "天速星 · 梁山第 20 席。神行太保戴宗，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "江州院里做过节级，练有神行法，跑远路是拿手本事。信送到还要等回话，鞋上泥干了也顾不上拍。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -956,10 +956,10 @@
       "token": "daizong_token",
       "count": 10
     },
-    "dialogue": "戴宗道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“回话写好了么？给我两个馒头，我这就动身。”",
     "mount": {
       "name": "神行太保义骑",
-      "description": "与戴宗同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "替主人驮包袱的瘦马，途中常由驿店暂时照看。",
       "dungeon": "chai_escort",
       "contract": "daizong_mount_contract"
     },
@@ -995,7 +995,7 @@
       "liutang_advanced",
       "liutang_bond"
     ],
-    "story": "性情急切，对朋友却极真。",
+    "story": "鬓边有块朱砂记，走南闯北靠一身朴刀本事。认定要办的事，翻山过夜也得亲自把话送到。",
     "core": false,
     "meetMap": "zhuang",
     "meetCondition": {
@@ -1006,10 +1006,10 @@
       "token": "liutang_token",
       "count": 10
     },
-    "dialogue": "性情急切，对朋友却极真。",
+    "dialogue": "“我赶了这许多路，便为见你一面。找个没人的地方细说。”",
     "mount": {
       "name": "赤蹄骁骑",
-      "description": "专属脚力；与刘唐同行养成。名称与羁绊为本作原创设定。",
+      "description": "马腿修长，身上几处旧擦痕，跟着主人走过不少土路。",
       "dungeon": "huangnigang",
       "contract": "liutang_mount_contract"
     },
@@ -1044,7 +1044,7 @@
       "likui_advanced",
       "likui_bond"
     ],
-    "story": "天杀星 · 梁山第 22 席。黑旋风李逵，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "在江州牢里做过差役的黑大汉，双斧使得凶，脾气也冲。肚里藏不住话，恼起来谁的劝也未必肯听。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1053,10 +1053,10 @@
       "token": "likui_token",
       "count": 10
     },
-    "dialogue": "李逵道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“有话快说！莫又让俺在门外干等。”",
     "mount": {
       "name": "黑旋风义骑",
-      "description": "与李逵同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "一匹敦实黑马，鞍子宽大，喂食稍慢便拱槽子。",
       "dungeon": "jingyanggang",
       "contract": "likui_mount_contract"
     },
@@ -1092,7 +1092,7 @@
       "shijin_advanced",
       "shijin_bond"
     ],
-    "story": "天微星 · 梁山第 23 席。九纹龙史进，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "史家村的少庄主，身上刺着九条龙，最爱习武。遇到真本事才肯服气，肯教他的人更会被记在心里。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -1101,10 +1101,10 @@
       "token": "shijin_token",
       "count": 10
     },
-    "dialogue": "史进道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“这一招我还没练熟。劳烦再使一遍，慢些。”",
     "mount": {
       "name": "九纹龙义骑",
-      "description": "与史进同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "年轻马匹，毛刷和鞍巾常一同挂在厩门边。",
       "dungeon": "huangnigang",
       "contract": "shijin_mount_contract"
     },
@@ -1140,7 +1140,7 @@
       "muhong_advanced",
       "muhong_bond"
     ],
-    "story": "天究星 · 梁山第 24 席。没遮拦穆弘，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "揭阳镇的富户，和弟弟穆春在当地颇有声势。说话硬，做事也强横，少有人愿与他当面争执。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1149,10 +1149,10 @@
       "token": "muhong_token",
       "count": 10
     },
-    "dialogue": "穆弘道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“既到了我这里，就住一晚。急事让下人跑一趟便是。”",
     "mount": {
       "name": "没遮拦义骑",
-      "description": "与穆弘同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "身量壮实，缰头用厚皮缝成，惯走镇上石路。",
       "dungeon": "yezhulin",
       "contract": "muhong_mount_contract"
     },
@@ -1188,7 +1188,7 @@
       "leiheng_advanced",
       "leiheng_bond"
     ],
-    "story": "天退星 · 梁山第 25 席。插翅虎雷横，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "郓城步兵都头，力大，跳跃也好。办差时性急，回家却惦记着老母有没有按时吃饭。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1197,10 +1197,10 @@
       "token": "leiheng_token",
       "count": 10
     },
-    "dialogue": "雷横道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“差事办完我得回趟家。我娘还在等着。”",
     "mount": {
       "name": "插翅虎义骑",
-      "description": "与雷横同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "短鬃栗马，鞍包里常放着带回家的吃食。",
       "dungeon": "shanshenmiao",
       "contract": "leiheng_mount_contract"
     },
@@ -1236,7 +1236,7 @@
       "lijun_advanced",
       "lijun_bond"
     ],
-    "story": "天寿星 · 梁山第 26 席。混江龙李俊，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "在浔阳江上讨生活，私盐买卖和水路门道都熟。见过的人多，开口前总先听各人把话说完。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1245,10 +1245,10 @@
       "token": "lijun_token",
       "count": 10
     },
-    "dialogue": "李俊道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“上游今早来过什么船？靠岸的是哪一家？”",
     "mount": {
       "name": "混江龙义骑",
-      "description": "与李俊同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "岸上代步的褐马，缰绳打的是船上常用的活结。",
       "dungeon": "zhujiazhuang",
       "contract": "lijun_mount_contract"
     },
@@ -1284,7 +1284,7 @@
       "ruanxiaoer_advanced",
       "ruanxiaoer_bond"
     ],
-    "story": "天剑星 · 梁山第 27 席。立地太岁阮小二，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "石碣村的渔人，阮家兄弟里年长的一个。下网、撑船都利索，家里的事也习惯多担一份。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -1293,10 +1293,10 @@
       "token": "ruanxiaoer_token",
       "count": 10
     },
-    "dialogue": "阮小二道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“船归我收拾。你们两个，把网带上，别又忘了。”",
     "mount": {
       "name": "立地太岁义骑",
-      "description": "与阮小二同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "常拴在村边柳下，鬃毛里偶尔挂着晒网的麻丝。",
       "dungeon": "chai_escort",
       "contract": "ruanxiaoer_mount_contract"
     },
@@ -1332,7 +1332,7 @@
       "zhangheng_advanced",
       "zhangheng_bond"
     ],
-    "story": "天平星 · 梁山第 28 席。船火儿张横，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "浔阳江上撑船的，水性好，胆子更大。拿惯了橹把的人，开起狠玩笑也不管客人脸色。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1341,10 +1341,10 @@
       "token": "zhangheng_token",
       "count": 10
     },
-    "dialogue": "张横道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“上了船就坐稳。要往哪儿去，先说个明白。”",
     "mount": {
       "name": "船火儿义骑",
-      "description": "与张横同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "不常披鞍，平日在江边吃草，出远门才牵来。",
       "dungeon": "qingzhou_patrol",
       "contract": "zhangheng_mount_contract"
     },
@@ -1380,7 +1380,7 @@
       "ruanxiaowu_advanced",
       "ruanxiaowu_bond"
     ],
-    "story": "天罪星 · 梁山第 29 席。短命二郎阮小五，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "石碣村打鱼为生，胸前刺着豹子，闲时爱往赌桌边凑。手气差了，便回水里找饭吃。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -1389,11 +1389,11 @@
       "token": "ruanxiaowu_token",
       "count": 10
     },
-    "dialogue": "阮小五道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“今日不赌了，先打几尾鱼。酒钱总得挣出来。”",
     "introducedIn": 3,
     "mount": {
       "name": "短命二郎义骑",
-      "description": "与阮小五同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "瘦而有精神，旧鞍下垫着一块洗褪色的布。",
       "dungeon": "jingyanggang",
       "contract": "ruanxiaowu_mount_contract"
     },
@@ -1428,7 +1428,7 @@
       "zhangshun_advanced",
       "zhangshun_bond"
     ],
-    "story": "天损星 · 梁山第 30 席。浪里白条张顺，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "在江州卖过鱼，潜水游泳是看家本领。平时笑着做买卖，下到深水里也半点不慌。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -1437,10 +1437,10 @@
       "token": "zhangshun_token",
       "count": 10
     },
-    "dialogue": "张顺道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“这水看着急，底下另有走向。我下去摸一摸。”",
     "mount": {
       "name": "浪里白条义骑",
-      "description": "与张顺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "白鼻头的小马，惯等在渡口，见船靠岸便抬耳。",
       "dungeon": "huangnigang",
       "contract": "zhangshun_mount_contract"
     },
@@ -1476,7 +1476,7 @@
       "ruanxiaoqi_advanced",
       "ruanxiaoqi_bond"
     ],
-    "story": "在水上讨生活，胸中有一股不平。",
+    "story": "阮家最小的兄弟，打鱼喝酒，快活时还要高唱几句。受不得人摆架子，有气当场就说。",
     "core": false,
     "meetMap": "creek",
     "meetCondition": {
@@ -1487,10 +1487,10 @@
       "token": "ruanxiaoqi_token",
       "count": 10
     },
-    "dialogue": "在水上讨生活，胸中有一股不平。",
+    "dialogue": "“只说上岸喝酒，磨蹭什么？鱼还在舱里活蹦呢！”",
     "mount": {
       "name": "踏浪乌驹",
-      "description": "专属脚力；与阮小七同行养成。名称与羁绊为本作原创设定。",
+      "description": "乌毛小马，常沾一腿泥，过浅水时不急着迈步。",
       "dungeon": "huangnigang",
       "contract": "ruanxiaoqi_mount_contract"
     },
@@ -1525,7 +1525,7 @@
       "yangxiong_advanced",
       "yangxiong_bond"
     ],
-    "story": "天牢星 · 梁山第 32 席。病关索杨雄，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "蓟州两院押狱，也做刽子手，腰间常挂着刀。脸色微黄，认了兄弟便愿把家中事托付出去。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1534,10 +1534,10 @@
       "token": "yangxiong_token",
       "count": 10
     },
-    "dialogue": "杨雄道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“我还要去院里点卯。你若不急，坐下等我回来。”",
     "mount": {
       "name": "病关索义骑",
-      "description": "与杨雄同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "毛色暗褐，旧皮鞍擦得光滑，熟悉城门到衙署的路。",
       "dungeon": "shanshenmiao",
       "contract": "yangxiong_mount_contract"
     },
@@ -1573,7 +1573,7 @@
       "shixiu_advanced",
       "shixiu_bond"
     ],
-    "story": "天慧星 · 梁山第 33 席。拼命三郎石秀，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "做过买卖，也在街边卖过柴，一手棍棒从不荒废。遇到蹊跷事，非亲自查清才肯罢休。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -1582,10 +1582,10 @@
       "token": "shixiu_token",
       "count": 10
     },
-    "dialogue": "石秀道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“你先别露面。我今夜去看过，明早再来找你。”",
     "mount": {
       "name": "拼命三郎义骑",
-      "description": "与石秀同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "不起眼的黄马，行装裹得紧，枝叶不易勾住。",
       "dungeon": "zhujiazhuang",
       "contract": "shixiu_mount_contract"
     },
@@ -1621,7 +1621,7 @@
       "jiezhen_advanced",
       "jiezhen_bond"
     ],
-    "story": "天暴星 · 梁山第 34 席。两头蛇解珍，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "登州猎户，兄弟两个常一道上山，惯使钢叉。追兽先看脚印，草折向哪里也要蹲下来辨。",
     "core": false,
     "meetMap": "stable",
     "meetCondition": null,
@@ -1630,10 +1630,10 @@
       "token": "jiezhen_token",
       "count": 10
     },
-    "dialogue": "解珍道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“这里的印子还新。别踩乱了，让我看看。”",
     "mount": {
       "name": "两头蛇义骑",
-      "description": "与解珍同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "蹄子小而结实，山口的碎石路走得惯了。",
       "dungeon": "chai_escort",
       "contract": "jiezhen_mount_contract"
     },
@@ -1669,7 +1669,7 @@
       "jiebao_advanced",
       "jiebao_bond"
     ],
-    "story": "天哭星 · 梁山第 35 席。双尾蝎解宝，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "与哥哥解珍在山中打猎，翻坡钻林很是利落。进了林子便少说话，钢叉随时握在手边。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -1678,10 +1678,10 @@
       "token": "jiebao_token",
       "count": 10
     },
-    "dialogue": "解宝道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“哥哥从那边绕。我守住这条沟，跑不远。”",
     "mount": {
       "name": "双尾蝎义骑",
-      "description": "与解宝同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "背上常驮绳索和干粮，鞍侧挂着一张卷好的兽皮。",
       "dungeon": "qingzhou_patrol",
       "contract": "jiebao_mount_contract"
     },
@@ -1717,7 +1717,7 @@
       "yanqing_advanced",
       "yanqing_bond"
     ],
-    "story": "身手轻巧，善察人情。",
+    "story": "卢俊义身边长大的小乙，吹唱、相扑都拿得出手。人情世故看得明白，有些话却得拣着时候劝。",
     "core": true,
     "meetMap": "liangshan",
     "meetCondition": {
@@ -1728,10 +1728,10 @@
       "token": "yanqing_token",
       "count": 10
     },
-    "dialogue": "身手轻巧，善察人情。",
+    "dialogue": "“主人先别应。这人的话，咱们回去再琢磨。”",
     "mount": {
       "name": "柳影轻骑",
-      "description": "专属脚力；与燕青同行养成。名称与羁绊为本作原创设定。",
+      "description": "体形轻巧，柳荫下歇脚时，总有人替它拂去背上的浮尘。",
       "dungeon": "zhujiazhuang",
       "contract": "yanqing_mount_contract"
     },
@@ -1766,7 +1766,7 @@
       "zhuwu_advanced",
       "zhuwu_bond"
     ],
-    "story": "地魁星 · 梁山第 37 席。神机军师朱武，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "story": "少华山出身，懂阵法，也会替急性子的同伴收拾残局。议事时爱在地上画线，把道路一条条指清。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1775,10 +1775,10 @@
       "token": "zhuwu_token",
       "count": 10
     },
-    "dialogue": "朱武道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“从这里绕过去得多走半日。你算过干粮够不够？”",
     "mount": {
       "name": "神机军师义骑",
-      "description": "与朱武同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍后绑着图卷，皮筒口包了油布，雨天也不轻易解开。",
       "dungeon": "huangnigang",
       "contract": "zhuwu_mount_contract"
     },
@@ -1814,7 +1814,7 @@
       "huangxin_advanced",
       "huangxin_bond"
     ],
-    "story": "地煞星 · 梁山第 38 席。镇三山黄信，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "青州的武官，拜秦明学过本事，自号镇三山。穿惯官军衣甲，点兵列队自有一套习惯。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1823,10 +1823,10 @@
       "token": "huangxin_token",
       "count": 10
     },
-    "dialogue": "黄信道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“队伍排齐些。教头在场，看你们怎么交代。”",
     "mount": {
       "name": "镇三山义骑",
-      "description": "与黄信同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "军厩里养惯的马，听见点卯声便在栏里转身。",
       "dungeon": "yezhulin",
       "contract": "huangxin_mount_contract"
     },
@@ -1862,7 +1862,7 @@
       "sunli_advanced",
       "sunli_bond"
     ],
-    "story": "地勇星 · 梁山第 39 席。病尉迟孙立，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "登州提辖，熟使枪鞭，和栾廷玉是同门。领人办事有章法，换岗交接都要问个仔细。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -1871,10 +1871,10 @@
       "token": "sunli_token",
       "count": 10
     },
-    "dialogue": "孙立道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“上一班何时换的？人名报给我，莫只说一声无事。”",
     "mount": {
       "name": "病尉迟义骑",
-      "description": "与孙立同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "乌黑鬃毛梳向一侧，鞍桥和脚镫都结实趁手。",
       "dungeon": "shanshenmiao",
       "contract": "sunli_mount_contract"
     },
@@ -1910,7 +1910,7 @@
       "xuanzan_advanced",
       "xuanzan_bond"
     ],
-    "story": "地杰星 · 梁山第 40 席。丑郡马宣赞，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "一张丑脸常惹人议论，弓马本事却叫人不敢小看。比起席间应酬，他更愿到校场露两手。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -1919,10 +1919,10 @@
       "token": "xuanzan_token",
       "count": 10
     },
-    "dialogue": "宣赞道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“看够了脸，便来看箭。靶子再往远处搬些。”",
     "mount": {
       "name": "丑郡马义骑",
-      "description": "与宣赞同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "前额有道窄白纹，主人常牵它在校场边慢走散汗。",
       "dungeon": "zhujiazhuang",
       "contract": "xuanzan_mount_contract"
     },
@@ -1958,7 +1958,7 @@
       "haosiwen_advanced",
       "haosiwen_bond"
     ],
-    "story": "地雄星 · 梁山第 41 席。井木犴郝思文，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "关胜的结义兄弟，骑马使枪的功夫纯熟。平日跟着练兵，旁人争先时，他还在查看队伍。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -1967,10 +1967,10 @@
       "token": "haosiwen_token",
       "count": 10
     },
-    "dialogue": "郝思文道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“关兄带前队，我随后就到。马歇够了再催。”",
     "mount": {
       "name": "井木犴义骑",
-      "description": "与郝思文同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍扣用得发亮，每次远行前都会重新检查一遍。",
       "dungeon": "chai_escort",
       "contract": "haosiwen_mount_contract"
     },
@@ -2006,7 +2006,7 @@
       "hantao_advanced",
       "hantao_bond"
     ],
-    "story": "地威星 · 梁山第 42 席。百胜将韩滔，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "使枣木槊的军官，随呼延灼带过兵。出营前挨队看过装备，少一件也要追问是谁领的。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -2015,10 +2015,10 @@
       "token": "hantao_token",
       "count": 10
     },
-    "dialogue": "韩滔道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“缺的枪头去领，坏的皮甲去换。别到半路才开口。”",
     "mount": {
       "name": "百胜将义骑",
-      "description": "与韩滔同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "肩背厚实，鞍上常带备用皮带和修缰的锥子。",
       "dungeon": "qingzhou_patrol",
       "contract": "hantao_mount_contract"
     },
@@ -2054,7 +2054,7 @@
       "pengqi_advanced",
       "pengqi_bond"
     ],
-    "story": "地英星 · 梁山第 43 席。天目将彭玘，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "跟随呼延灼出征的将领，使一柄三尖两刃刀。操练时认真，歇下来便爱拉着同袍谈旧日战事。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -2063,10 +2063,10 @@
       "token": "pengqi_token",
       "count": 10
     },
-    "dialogue": "彭玘道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“这地方我随军来过。前头有水，到了再歇。”",
     "mount": {
       "name": "天目将义骑",
-      "description": "与彭玘同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "棕毛军马，鼻梁留着辔痕，长途后爱在沙地打滚。",
       "dungeon": "jingyanggang",
       "contract": "pengqi_mount_contract"
     },
@@ -2102,7 +2102,7 @@
       "shantinggui_advanced",
       "shantinggui_bond"
     ],
-    "story": "地奇星 · 梁山第 44 席。圣水将单廷珪，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "story": "凌州武将，长于水战，出兵前总要查河道与水势。船只搁了浅，在他看来比少带件兵器还糟。",
     "core": false,
     "meetMap": "recruit",
     "meetCondition": null,
@@ -2111,10 +2111,10 @@
       "token": "shantinggui_token",
       "count": 10
     },
-    "dialogue": "单廷珪道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“昨日的水深今日未必作数。拿竹竿再探一遍。”",
     "mount": {
       "name": "圣水将义骑",
-      "description": "与单廷珪同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "惯走河堤，见着湿滑的下坡便放缓步子。",
       "dungeon": "huangnigang",
       "contract": "shantinggui_mount_contract"
     },
@@ -2150,7 +2150,7 @@
       "weidingguo_advanced",
       "weidingguo_bond"
     ],
-    "story": "地猛星 · 梁山第 45 席。神火将魏定国，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "story": "凌州出身，熟习火攻。别人忙着摆兵器，他先去翻看火具受没受潮，再抬头辨风。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -2159,10 +2159,10 @@
       "token": "weidingguo_token",
       "count": 10
     },
-    "dialogue": "魏定国道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“火具盖严实些。风还没定，谁也不许点。”",
     "mount": {
       "name": "神火将义骑",
-      "description": "与魏定国同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "行囊中的火具另包一层油布，马身也收拾得干燥。",
       "dungeon": "yezhulin",
       "contract": "weidingguo_mount_contract"
     },
@@ -2198,7 +2198,7 @@
       "xiaorang_advanced",
       "xiaorang_bond"
     ],
-    "story": "地文星 · 梁山第 46 席。圣手书生萧让，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "济州的书生，能临多家笔迹，写公文尤其像样。纸一铺开便顾不上闲谈，最忌旁人碰翻砚台。",
     "core": false,
     "meetMap": "forge",
     "meetCondition": null,
@@ -2207,11 +2207,11 @@
       "token": "xiaorang_token",
       "count": 10
     },
-    "dialogue": "萧让道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“姓名一个字也别错。念慢些，我写给你看。”",
     "introducedIn": 3,
     "mount": {
       "name": "圣手书生义骑",
-      "description": "与萧让同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "走得温吞，背上书箱包着旧毡，砚台另收在小匣里。",
       "dungeon": "shanshenmiao",
       "contract": "xiaorang_mount_contract"
     },
@@ -2246,7 +2246,7 @@
       "peixuan_advanced",
       "peixuan_bond"
     ],
-    "story": "地正星 · 梁山第 47 席。铁面孔目裴宣，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "做过孔目，案卷、刑名都熟，算功过时不肯通融。熟人来求情，也得先把事情交代清楚。",
     "core": false,
     "meetMap": "stable",
     "meetCondition": null,
@@ -2255,10 +2255,10 @@
       "token": "peixuan_token",
       "count": 10
     },
-    "dialogue": "裴宣道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“哪日的事，谁在场？没有凭据，这笔不能算。”",
     "mount": {
       "name": "铁面孔目义骑",
-      "description": "与裴宣同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "额毛略秃，缰绳没有饰物，行装也收得方正。",
       "dungeon": "zhujiazhuang",
       "contract": "peixuan_mount_contract"
     },
@@ -2294,7 +2294,7 @@
       "oupeng_advanced",
       "oupeng_bond"
     ],
-    "story": "地阔星 · 梁山第 48 席。摩云金翅欧鹏，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "军户出身，后来落脚黄门山，手里的铁枪仍是旧习惯。个子高，挤在低棚里总得弯着腰。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -2303,10 +2303,10 @@
       "token": "oupeng_token",
       "count": 10
     },
-    "dialogue": "欧鹏道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“棚里坐不直，到外头说吧。你找我比枪还是喝酒？”",
     "mount": {
       "name": "摩云金翅义骑",
-      "description": "与欧鹏同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "四腿修长，配的鞍镫也比寻常放得低些。",
       "dungeon": "chai_escort",
       "contract": "oupeng_mount_contract"
     },
@@ -2342,7 +2342,7 @@
       "dengfei_advanced",
       "dengfei_bond"
     ],
-    "story": "地阖星 · 梁山第 49 席。火眼狻猊邓飞，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "在饮马川落过草，一双红眼格外显眼，使的是铁链。看见同伴有难，往往来不及商量便赶上去。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -2351,11 +2351,11 @@
       "token": "dengfei_token",
       "count": 10
     },
-    "dialogue": "邓飞道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“他还没回来？把马牵来，我去接。”",
     "introducedIn": 3,
     "mount": {
       "name": "火眼狻猊义骑",
-      "description": "与邓飞同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "背上常搭厚布，免得铁链磨破鞍边皮面。",
       "dungeon": "qingzhou_patrol",
       "contract": "dengfei_mount_contract"
     },
@@ -2390,7 +2390,7 @@
       "yanshun_advanced",
       "yanshun_bond"
     ],
-    "story": "地强星 · 梁山第 50 席。锦毛虎燕顺，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "清风山的头领，赤发黄须，早年也贩过羊马。席间看着豪气，听到有名的好汉便急着结交。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -2399,10 +2399,10 @@
       "token": "yanshun_token",
       "count": 10
     },
-    "dialogue": "燕顺道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“原来是你！早报姓名，哪会有这些麻烦，快把酒拿来。”",
     "mount": {
       "name": "锦毛虎义骑",
-      "description": "与燕顺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鬃毛浓密，牙口腿脚都是燕顺亲自挑过的。",
       "dungeon": "jingyanggang",
       "contract": "yanshun_mount_contract"
     },
@@ -2438,7 +2438,7 @@
       "yanglin_advanced",
       "yanglin_bond"
     ],
-    "story": "地暗星 · 梁山第 51 席。锦豹子杨林，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "常年在外行走，红缨枪不离身，也乐意结交新朋友。路边碰着能说上话的，便能同走一程。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -2447,10 +2447,10 @@
       "token": "yanglin_token",
       "count": 10
     },
-    "dialogue": "杨林道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“你也往这边去？正好，一路有个人说话。”",
     "mount": {
       "name": "锦豹子义骑",
-      "description": "与杨林同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍上行李不多，水囊和草料袋却总留着。",
       "dungeon": "huangnigang",
       "contract": "yanglin_mount_contract"
     },
@@ -2486,7 +2486,7 @@
       "lingzhen_advanced",
       "lingzhen_bond"
     ],
-    "story": "地轴星 · 梁山第 52 席。轰天雷凌振，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "story": "东京来的炮手，会造炮，也会放炮。装药、架炮一项项查得细，旁人嫌慢，他也不省步骤。",
     "core": false,
     "meetMap": "recruit",
     "meetCondition": null,
@@ -2495,10 +2495,10 @@
       "token": "lingzhen_token",
       "count": 10
     },
-    "dialogue": "凌振道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“都退远些！引线没查完，谁让你凑过来的？”",
     "mount": {
       "name": "轰天雷义骑",
-      "description": "与凌振同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "驮具用厚毡包着，零碎铁件逐一捆牢才上路。",
       "dungeon": "yezhulin",
       "contract": "lingzhen_mount_contract"
     },
@@ -2534,7 +2534,7 @@
       "jiangjing_advanced",
       "jiangjing_bond"
     ],
-    "story": "地会星 · 梁山第 53 席。神算子蒋敬，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "读过书，算盘打得快，寨里钱粮账目由他经手。酒席散了，他桌上往往还摊着几本账。",
     "core": false,
     "meetMap": "office",
     "meetCondition": null,
@@ -2543,10 +2543,10 @@
       "token": "jiangjing_token",
       "count": 10
     },
-    "dialogue": "蒋敬道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“且慢，少了一斗。把昨日那张单子拿来对对。”",
     "mount": {
       "name": "神算子义骑",
-      "description": "与蒋敬同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "常随粮车慢行，鞍包里账簿用绳子捆得整齐。",
       "dungeon": "shanshenmiao",
       "contract": "jiangjing_mount_contract"
     },
@@ -2582,7 +2582,7 @@
       "lvfang_advanced",
       "lvfang_bond"
     ],
-    "story": "地佐星 · 梁山第 54 席。小温侯吕方，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "爱学吕布的模样，使方天画戟，穿红衣骑马。与郭盛凑在一起，闲话说着说着便想较量。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -2591,11 +2591,11 @@
       "token": "lvfang_token",
       "count": 10
     },
-    "dialogue": "吕方道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“上回没分胜负。等吃过饭，再去场上试试。”",
     "introducedIn": 3,
     "mount": {
       "name": "小温侯义骑",
-      "description": "与吕方同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "红缨系在辔头，鞍旁的戟套时常换新绳。",
       "dungeon": "zhujiazhuang",
       "contract": "lvfang_mount_contract"
     },
@@ -2630,7 +2630,7 @@
       "guosheng_advanced",
       "guosheng_bond"
     ],
-    "story": "地祐星 · 梁山第 55 席。赛仁贵郭盛，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "做过买卖，后来提着画戟闯荡。爱穿一身白，与吕方一红一白站着，很难认错。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -2639,10 +2639,10 @@
       "token": "guosheng_token",
       "count": 10
     },
-    "dialogue": "郭盛道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“你的戟穗又缠住了。收拾妥当再比，免得赖我。”",
     "mount": {
       "name": "赛仁贵义骑",
-      "description": "与郭盛同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "浅毛马配素色鞍垫，赶路沾了泥就得仔细刷洗。",
       "dungeon": "chai_escort",
       "contract": "guosheng_mount_contract"
     },
@@ -2678,7 +2678,7 @@
       "andaoquan_advanced",
       "andaoquan_bond"
     ],
-    "story": "地灵星 · 梁山第 56 席。神医安道全，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "建康行医的郎中，看得内症，也治得外伤。人一到诊桌前，他先问吃睡，听完才肯下笔。",
     "core": false,
     "meetMap": "recruit",
     "meetCondition": null,
@@ -2687,10 +2687,10 @@
       "token": "andaoquan_token",
       "count": 10
     },
-    "dialogue": "安道全道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“手伸过来。昨夜睡了多久，可曾吃过东西？”",
     "mount": {
       "name": "神医义骑",
-      "description": "与安道全同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍袋两侧放药箱，内衬软布，走路少有瓶罐碰响。",
       "dungeon": "qingzhou_patrol",
       "contract": "andaoquan_mount_contract"
     },
@@ -2726,7 +2726,7 @@
       "huangfuduan_advanced",
       "huangfuduan_bond"
     ],
-    "story": "地兽星 · 梁山第 57 席。紫髯伯皇甫端，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "生着一脸紫髯，治马是他的本业。进马厩先看食槽，再挨匹摸腿查蹄，比见人还仔细。",
     "core": false,
     "meetMap": "office",
     "meetCondition": null,
@@ -2735,10 +2735,10 @@
       "token": "huangfuduan_token",
       "count": 10
     },
-    "dialogue": "皇甫端道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“这马几顿没吃了？把草料拿给我看看。”",
     "mount": {
       "name": "紫髯伯义骑",
-      "description": "与皇甫端同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "毛色匀净，四蹄修得好，连鞍垫也常翻晒。",
       "dungeon": "jingyanggang",
       "contract": "huangfuduan_mount_contract"
     },
@@ -2774,7 +2774,7 @@
       "wangying_advanced",
       "wangying_bond"
     ],
-    "story": "地微星 · 梁山第 58 席。矮脚虎王英，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "清风山落草的矮个汉子，骑上马使枪，最不肯让人小看。爱逞能，也常惹出麻烦让人收拾。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -2783,10 +2783,10 @@
       "token": "wangying_token",
       "count": 10
     },
-    "dialogue": "王英道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“嫌我个矮？拿枪来，比过再说！”",
     "mount": {
       "name": "矮脚虎义骑",
-      "description": "与王英同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "个头不高，镫带特意收短，上下马很方便。",
       "dungeon": "huangnigang",
       "contract": "wangying_mount_contract"
     },
@@ -2822,7 +2822,7 @@
       "husanniang_advanced",
       "husanniang_bond"
     ],
-    "story": "地慧星 · 梁山第 59 席。一丈青扈三娘，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "扈家庄的女将，惯使双刀，也会使套索。操练完把刀一抹，便牵马离场，不爱留下听闲话。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -2831,10 +2831,10 @@
       "token": "husanniang_token",
       "count": 10
     },
-    "dialogue": "扈三娘道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“刀收好，绳圈拿来。今日练马上擒人。”",
     "mount": {
       "name": "一丈青义骑",
-      "description": "与扈三娘同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍身贴背，侧面挂着卷好的绳索，缰头很轻巧。",
       "dungeon": "yezhulin",
       "contract": "husanniang_mount_contract"
     },
@@ -2870,7 +2870,7 @@
       "baoxu_advanced",
       "baoxu_bond"
     ],
-    "story": "地暴星 · 梁山第 60 席。丧门神鲍旭，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "枯树山来的狠汉，提一口阔剑，爱和李逵凑在一处。坐席还没坐热，听见打斗声便要起身。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -2879,10 +2879,10 @@
       "token": "baoxu_token",
       "count": 10
     },
-    "dialogue": "鲍旭道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“外头谁在吵？我去瞧瞧，你把酒留着。”",
     "mount": {
       "name": "丧门神义骑",
-      "description": "与鲍旭同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "粗骨架黑马，鞍袋磨旧了，主人也懒得换花样。",
       "dungeon": "shanshenmiao",
       "contract": "baoxu_mount_contract"
     },
@@ -2918,7 +2918,7 @@
       "fanrui_advanced",
       "fanrui_bond"
     ],
-    "story": "地然星 · 梁山第 61 席。混世魔王樊瑞，察势布阵，以谋略扰敌。入寨后可领兵出征，也可独行历练。",
+    "story": "芒砀山来的道人，披头散发，法术和流星锤都拿手。旁人怕他那副模样，他自己倒不觉得奇怪。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -2927,10 +2927,10 @@
       "token": "fanrui_token",
       "count": 10
     },
-    "dialogue": "樊瑞道：“察势布阵，以谋略扰敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“站那么远做什么？我又没作法，过来坐。”",
     "mount": {
       "name": "混世魔王义骑",
-      "description": "与樊瑞同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍边挂着旧布幡，山风吹起时擦过灰色马鬃。",
       "dungeon": "zhujiazhuang",
       "contract": "fanrui_mount_contract"
     },
@@ -2966,7 +2966,7 @@
       "kongming_advanced",
       "kongming_bond"
     ],
-    "story": "地猖星 · 梁山第 62 席。毛头星孔明，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "孔家庄的少爷，和兄弟孔亮一同学武。性子急，争起拳棒来，饭凉了也不肯停。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -2975,10 +2975,10 @@
       "token": "kongming_token",
       "count": 10
     },
-    "dialogue": "孔明道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“方才那一拳没接好。再来，我这回记住了。”",
     "mount": {
       "name": "毛头星义骑",
-      "description": "与孔明同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鬃毛短而硬，常与孔亮的马拴在相邻的槽边。",
       "dungeon": "chai_escort",
       "contract": "kongming_mount_contract"
     },
@@ -3014,7 +3014,7 @@
       "kongliang_advanced",
       "kongliang_bond"
     ],
-    "story": "地狂星 · 梁山第 63 席。独火星孔亮，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "和兄长孔明练过拳棒，遇事容易动气。出门总带着兵器，碰到生面孔也想问问对方本事。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3023,10 +3023,10 @@
       "token": "kongliang_token",
       "count": 10
     },
-    "dialogue": "孔亮道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“你那根棒有多重？借我掂一掂。”",
     "mount": {
       "name": "独火星义骑",
-      "description": "与孔亮同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "背上配一副旧练习鞍，镫带的松紧时常调整。",
       "dungeon": "qingzhou_patrol",
       "contract": "kongliang_mount_contract"
     },
@@ -3062,7 +3062,7 @@
       "xiangchong_advanced",
       "xiangchong_bond"
     ],
-    "story": "地飞星 · 梁山第 64 席。八臂哪吒项充，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "芒砀山出身，使团牌，背上插着飞刀。行前要把刀数一遍，少了一柄便四处翻找。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -3071,10 +3071,10 @@
       "token": "xiangchong_token",
       "count": 10
     },
-    "dialogue": "项充道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“脚边那柄刀递给我。刀鞘空着，看着就不舒坦。”",
     "mount": {
       "name": "八臂哪吒义骑",
-      "description": "与项充同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍后有个皮套，专放团牌，靠背一面垫得很厚。",
       "dungeon": "jingyanggang",
       "contract": "xiangchong_mount_contract"
     },
@@ -3110,7 +3110,7 @@
       "ligun_advanced",
       "ligun_bond"
     ],
-    "story": "地走星 · 梁山第 65 席。飞天大圣李衮，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "与项充一道使团牌，带的却是一排标枪。操练结束还要绕场走一圈，把投出去的逐支捡回。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3119,10 +3119,10 @@
       "token": "ligun_token",
       "count": 10
     },
-    "dialogue": "李衮道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“你在左，我在右。地方窄，莫把兵器绊在一处。”",
     "mount": {
       "name": "飞天大圣义骑",
-      "description": "与李衮同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "马背宽平，标枪束扎成一捆，驮着走也不松散。",
       "dungeon": "huangnigang",
       "contract": "ligun_mount_contract"
     },
@@ -3158,7 +3158,7 @@
       "jindajian_advanced",
       "jindajian_bond"
     ],
-    "story": "地巧星 · 梁山第 66 席。玉臂匠金大坚，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "会刻印，也能雕石头，细小的笔画都难不住他。做活时一身石屑，谁来叫都得等这一刀刻完。",
     "core": false,
     "meetMap": "forge",
     "meetCondition": null,
@@ -3167,10 +3167,10 @@
       "token": "jindajian_token",
       "count": 10
     },
-    "dialogue": "金大坚道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“印样放下吧。这里少一笔，得问清了再刻。”",
     "mount": {
       "name": "玉臂匠义骑",
-      "description": "与金大坚同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "驮袋里装着刻刀和小锤，硬物各用布条隔开。",
       "dungeon": "yezhulin",
       "contract": "jindajian_mount_contract"
     },
@@ -3206,7 +3206,7 @@
       "malin_advanced",
       "malin_bond"
     ],
-    "story": "地明星 · 梁山第 67 席。铁笛仙马麟，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "吹得铁笛，也使双刀，曾在黄门山落脚。歇脚时若有兴致，能吹得一桌人暂且放下酒碗。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -3215,10 +3215,10 @@
       "token": "malin_token",
       "count": 10
     },
-    "dialogue": "马麟道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“还想听哪支曲子？酒添满了，我再吹一遍。”",
     "mount": {
       "name": "铁笛仙义骑",
-      "description": "与马麟同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍边缝有笛袋，袋口盖严，免得一路吃灰。",
       "dungeon": "shanshenmiao",
       "contract": "malin_mount_contract"
     },
@@ -3254,7 +3254,7 @@
       "tongwei_advanced",
       "tongwei_bond"
     ],
-    "story": "地进星 · 梁山第 68 席。出洞蛟童威，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "跟随李俊走水路，撑船、使枪都是熟手。做惯船上活，动身前习惯挨处试一试绳结。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3263,10 +3263,10 @@
       "token": "tongwei_token",
       "count": 10
     },
-    "dialogue": "童威道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“货都压稳了么？船一离岸，可没处重新摆。”",
     "mount": {
       "name": "出洞蛟义骑",
-      "description": "与童威同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "驮着岸上用的行李，过渡时要由人牵着上船。",
       "dungeon": "zhujiazhuang",
       "contract": "tongwei_mount_contract"
     },
@@ -3302,7 +3302,7 @@
       "tongmeng_advanced",
       "tongmeng_bond"
     ],
-    "story": "地退星 · 梁山第 69 席。翻江蜃童猛，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "童威的兄弟，水性好，搬起缆绳来也不惜力。船一靠岸便忙着跳下去，找桩系牢。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3311,10 +3311,10 @@
       "token": "tongmeng_token",
       "count": 10
     },
-    "dialogue": "童猛道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“把绳抛来！这根桩不牢，换那棵树。”",
     "mount": {
       "name": "翻江蜃义骑",
-      "description": "与童猛同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "短腿壮马，停在岸边时爱用鼻子拨弄缆绳。",
       "dungeon": "chai_escort",
       "contract": "tongmeng_mount_contract"
     },
@@ -3350,7 +3350,7 @@
       "mengkang_advanced",
       "mengkang_bond"
     ],
-    "story": "地满星 · 梁山第 70 席。玉幡竿孟康，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "造船的匠人，个子高，木料好坏摸一摸便有数。新船下水前，连舱底看不见的缝也要查。",
     "core": false,
     "meetMap": "forge",
     "meetCondition": null,
@@ -3359,11 +3359,11 @@
       "token": "mengkang_token",
       "count": 10
     },
-    "dialogue": "孟康道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“这块板有裂，换掉。刷上漆也遮不住漏水。”",
     "introducedIn": 3,
     "mount": {
       "name": "玉幡竿义骑",
-      "description": "与孟康同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "驮着木尺、墨斗和刨子，走过木料堆时格外小心。",
       "dungeon": "qingzhou_patrol",
       "contract": "mengkang_mount_contract"
     },
@@ -3398,7 +3398,7 @@
       "houjian_advanced",
       "houjian_bond"
     ],
-    "story": "地遂星 · 梁山第 71 席。通臂猿侯健，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "针线手艺精细的裁缝，身手也灵活。量衣时话不多，尺寸记进心里，剪子下得快而准。",
     "core": false,
     "meetMap": "stable",
     "meetCondition": null,
@@ -3407,10 +3407,10 @@
       "token": "houjian_token",
       "count": 10
     },
-    "dialogue": "侯健道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“胳膊抬起来。袖子太紧，怎么抡得开兵器？”",
     "mount": {
       "name": "通臂猿义骑",
-      "description": "与侯健同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍袋挂着布卷，外头罩一层厚布，防磨也防尘。",
       "dungeon": "jingyanggang",
       "contract": "houjian_mount_contract"
     },
@@ -3446,7 +3446,7 @@
       "chenda_advanced",
       "chenda_bond"
     ],
-    "story": "地周星 · 梁山第 72 席。跳涧虎陈达，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "少华山的头领，喜欢提枪直闯，劝他慢一步并不容易。吃过亏，嘴上还总说下回不会如此。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3455,10 +3455,10 @@
       "token": "chenda_token",
       "count": 10
     },
-    "dialogue": "陈达道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“路就在前面，何必绕？你倒说说有何不妥。”",
     "mount": {
       "name": "跳涧虎义骑",
-      "description": "与陈达同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "膝边有旧擦伤，鞍前的枪套缝补过几次。",
       "dungeon": "huangnigang",
       "contract": "chenda_mount_contract"
     },
@@ -3494,7 +3494,7 @@
       "yangchun_advanced",
       "yangchun_bond"
     ],
-    "story": "地隐星 · 梁山第 73 席。白花蛇杨春，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "与朱武、陈达同在少华山，一柄大杆刀使得熟。身形瘦长，坐下时膝盖常顶着桌沿。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -3503,10 +3503,10 @@
       "token": "yangchun_token",
       "count": 10
     },
-    "dialogue": "杨春道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“你们商量，我把刀磨了。定好走哪条路，再叫我。”",
     "mount": {
       "name": "白花蛇义骑",
-      "description": "与杨春同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "身腰修长，载着长刀时，鞍旁另加一道绑绳。",
       "dungeon": "yezhulin",
       "contract": "yangchun_mount_contract"
     },
@@ -3542,7 +3542,7 @@
       "zhengtianshou_advanced",
       "zhengtianshou_bond"
     ],
-    "story": "地异星 · 梁山第 74 席。白面郎君郑天寿，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "白净面皮的银匠，也爱使枪弄棒，后来到了清风山。看东西惯看细处，刀枪接缝也逃不过他的眼。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3551,10 +3551,10 @@
       "token": "zhengtianshou_token",
       "count": 10
     },
-    "dialogue": "郑天寿道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“这箍松了，借我看看。再使两回，怕要脱出来。”",
     "mount": {
       "name": "白面郎君义骑",
-      "description": "与郑天寿同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "额头一撮白毛，辔头上小小的银扣常擦得发亮。",
       "dungeon": "shanshenmiao",
       "contract": "zhengtianshou_mount_contract"
     },
@@ -3590,7 +3590,7 @@
       "taozongwang_advanced",
       "taozongwang_bond"
     ],
-    "story": "地理星 · 梁山第 75 席。九尾龟陶宗旺，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "庄稼人出身，一条铁锹使得有力气。寨墙、沟渠交到他手里，哪里要补土，他绕一圈就知道。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3599,10 +3599,10 @@
       "token": "taozongwang_token",
       "count": 10
     },
-    "dialogue": "陶宗旺道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“土还没夯实，先别踩。拿两根木桩来。”",
     "mount": {
       "name": "九尾龟义骑",
-      "description": "与陶宗旺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "耐劳的壮马，鞍垫边常沾着泥土和碎草。",
       "dungeon": "zhujiazhuang",
       "contract": "taozongwang_mount_contract"
     },
@@ -3638,7 +3638,7 @@
       "songqing_advanced",
       "songqing_bond"
     ],
-    "story": "地俊星 · 梁山第 76 席。铁扇子宋清，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "宋江的弟弟，习惯料理田产家事。到了寨中张罗筵席，人多了，也知道桌椅碗盏该往哪里添。",
     "core": false,
     "meetMap": "recruit",
     "meetCondition": null,
@@ -3647,11 +3647,11 @@
       "token": "songqing_token",
       "count": 10
     },
-    "dialogue": "宋清道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“里头还有空桌。先坐，热菜马上就来。”",
     "introducedIn": 3,
     "mount": {
       "name": "铁扇子义骑",
-      "description": "与宋清同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "性子温和，常驮宴席要用的米面和酒坛。",
       "dungeon": "chai_escort",
       "contract": "songqing_mount_contract"
     },
@@ -3686,7 +3686,7 @@
       "yuehe_advanced",
       "yuehe_bond"
     ],
-    "story": "地乐星 · 梁山第 77 席。铁叫子乐和，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "登州做过小牢子，聪明，又唱得一口好曲。别人只顾听热闹，他还记得把口信带到。",
     "core": false,
     "meetMap": "office",
     "meetCondition": null,
@@ -3695,10 +3695,10 @@
       "token": "yuehe_token",
       "count": 10
     },
-    "dialogue": "乐和道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“方才那句话我记下了。等人齐了，再唱也不迟。”",
     "mount": {
       "name": "铁叫子义骑",
-      "description": "与乐和同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "走路时耳朵一动一动，惯听主人在鞍上哼曲。",
       "dungeon": "qingzhou_patrol",
       "contract": "yuehe_mount_contract"
     },
@@ -3734,7 +3734,7 @@
       "gongwang_advanced",
       "gongwang_bond"
     ],
-    "story": "地捷星 · 梁山第 78 席。花项虎龚旺，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "颈上刺着虎头，曾随张清在东昌府当差，马上飞枪使得好。下场后常自己检看枪尖有没有歪。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -3743,10 +3743,10 @@
       "token": "gongwang_token",
       "count": 10
     },
-    "dialogue": "龚旺道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“把靶子扶正。我人在马上，准头一样算数。”",
     "mount": {
       "name": "花项虎义骑",
-      "description": "与龚旺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "马肩结实，鞍边备着数个枪套，空套也束得齐整。",
       "dungeon": "jingyanggang",
       "contract": "gongwang_mount_contract"
     },
@@ -3782,7 +3782,7 @@
       "dingdesun_advanced",
       "dingdesun_bond"
     ],
-    "story": "地速星 · 梁山第 79 席。中箭虎丁得孙，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "脸颊和脖颈有伤疤，跟张清一起练过飞叉。练完归来，先找水洗净兵器，再收进鞍袋。",
     "core": false,
     "meetMap": "stable",
     "meetCondition": null,
@@ -3791,10 +3791,10 @@
       "token": "dingdesun_token",
       "count": 10
     },
-    "dialogue": "丁得孙道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“别站在靶旁边，往后退些。我可要试手了。”",
     "mount": {
       "name": "中箭虎义骑",
-      "description": "与丁得孙同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "深栗色马匹，飞叉收入皮套后才由主人牵走。",
       "dungeon": "huangnigang",
       "contract": "dingdesun_mount_contract"
     },
@@ -3830,7 +3830,7 @@
       "muchun_advanced",
       "muchun_bond"
     ],
-    "story": "地镇星 · 梁山第 80 席。小遮拦穆春，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "穆弘的弟弟，在揭阳镇长大，性子比哥哥还躁。气头上嗓门大，哥哥一到，又忍不住先看他的脸色。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -3839,10 +3839,10 @@
       "token": "muchun_token",
       "count": 10
     },
-    "dialogue": "穆春道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“这事我也要去。你们别总把我留在家里。”",
     "mount": {
       "name": "小遮拦义骑",
-      "description": "与穆春同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鼻头一点白，槽边等不到草料便甩头踢踏。",
       "dungeon": "yezhulin",
       "contract": "muchun_mount_contract"
     },
@@ -3878,7 +3878,7 @@
       "caozheng_advanced",
       "caozheng_bond"
     ],
-    "story": "地嵇星 · 梁山第 81 席。操刀鬼曹正，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "屠户出身，开过酒店，也练过枪棒。待客时不只会切肉斟酒，出起主意来常叫人意外。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3887,10 +3887,10 @@
       "token": "caozheng_token",
       "count": 10
     },
-    "dialogue": "曹正道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“肉给你切厚些。一路没吃饭吧，先垫垫肚子。”",
     "mount": {
       "name": "操刀鬼义骑",
-      "description": "与曹正同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "驮架上留着装米面的位置，缰绳常拴在店后门。",
       "dungeon": "shanshenmiao",
       "contract": "caozheng_mount_contract"
     },
@@ -3926,7 +3926,7 @@
       "songwan_advanced",
       "songwan_bond"
     ],
-    "story": "地魔星 · 梁山第 82 席。云里金刚宋万，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "梁山早先的一员头领，个头大，在寨门口很是显眼。住山日久，旧屋、旧路都是熟的。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -3935,10 +3935,10 @@
       "token": "songwan_token",
       "count": 10
     },
-    "dialogue": "宋万道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“跟我走吧。那条坡道雨后滑，换东边这条。”",
     "mount": {
       "name": "云里金刚义骑",
-      "description": "与宋万同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "高肩厚背，山寨的上下坡已走过许多遍。",
       "dungeon": "zhujiazhuang",
       "contract": "songwan_mount_contract"
     },
@@ -3974,7 +3974,7 @@
       "duqian_advanced",
       "duqian_bond"
     ],
-    "story": "地妖星 · 梁山第 83 席。摸着天杜迁，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "很早便在梁山落脚，人长得高，走到哪儿都容易被认出。新来的人问路，常是他领上山去。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -3983,10 +3983,10 @@
       "token": "duqian_token",
       "count": 10
     },
-    "dialogue": "杜迁道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“屋在上头，还要走一段。包袱沉就歇会儿。”",
     "mount": {
       "name": "摸着天义骑",
-      "description": "与杜迁同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍子磨得发暗，主人常下马，牵着它一道爬坡。",
       "dungeon": "chai_escort",
       "contract": "duqian_mount_contract"
     },
@@ -4022,7 +4022,7 @@
       "xueyong_advanced",
       "xueyong_bond"
     ],
-    "story": "地幽星 · 梁山第 84 席。病大虫薛永，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "靠使枪棒、卖膏药讨生活的汉子。街头练完一套，便把药箱摆出来，等看客肯不肯掏钱。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4031,11 +4031,11 @@
       "token": "xueyong_token",
       "count": 10
     },
-    "dialogue": "薛永道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“看也看过了，有要膏药的没有？小本买卖，赏个脸吧。”",
     "introducedIn": 3,
     "mount": {
       "name": "病大虫义骑",
-      "description": "与薛永同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "行李里有药箱和铺地的布，马蹄常沾集市尘土。",
       "dungeon": "qingzhou_patrol",
       "contract": "xueyong_mount_contract"
     },
@@ -4070,7 +4070,7 @@
       "shien_advanced",
       "shien_bond"
     ],
-    "story": "地伏星 · 梁山第 85 席。金眼彪施恩，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "孟州小管营之子，在快活林做过买卖，靠拳棒镇场面。失了地盘才知道，有些人情得亲自登门去求。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -4079,10 +4079,10 @@
       "token": "shien_token",
       "count": 10
     },
-    "dialogue": "施恩道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“里头请，酒菜早备好了。有件事，我想请你帮忙。”",
     "mount": {
       "name": "金眼彪义骑",
-      "description": "与施恩同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "毛色亮，辔头保养得好，常有人从店里出来接缰。",
       "dungeon": "jingyanggang",
       "contract": "shien_mount_contract"
     },
@@ -4118,7 +4118,7 @@
       "lizhong_advanced",
       "lizhong_bond"
     ],
-    "story": "地僻星 · 梁山第 86 席。打虎将李忠，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "卖药使棒的江湖人，做买卖习惯先算成本。平日钱袋抓得紧，遇到要紧事也只得咬牙掏出来。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -4127,10 +4127,10 @@
       "token": "lizhong_token",
       "count": 10
     },
-    "dialogue": "李忠道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“等我把这几贴药卖完。饭钱总得先凑齐。”",
     "mount": {
       "name": "打虎将义骑",
-      "description": "与李忠同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍后搭着药包，旧绳接了一截，又能用上许久。",
       "dungeon": "huangnigang",
       "contract": "lizhong_mount_contract"
     },
@@ -4166,7 +4166,7 @@
       "zhoutong_advanced",
       "zhoutong_bond"
     ],
-    "story": "地空星 · 梁山第 87 席。小霸王周通，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "桃花山出身，爱摆威风，也爱听人夸他。被人揭了短处，脸上挂不住，嗓门便格外大。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4175,10 +4175,10 @@
       "token": "zhoutong_token",
       "count": 10
     },
-    "dialogue": "周通道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“提那些旧事作甚？今日有酒，喝酒便是！”",
     "mount": {
       "name": "小霸王义骑",
-      "description": "与周通同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "红缨辔头颇显眼，皮鞍上的铜件擦得锃亮。",
       "dungeon": "yezhulin",
       "contract": "zhoutong_mount_contract"
     },
@@ -4214,7 +4214,7 @@
       "tanglong_advanced",
       "tanglong_bond"
     ],
-    "story": "地孤星 · 梁山第 88 席。金钱豹子汤隆，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "铁匠，满身麻斑，一身打铁的好手艺。炉火一起便盯着铁色，天黑了还惦记着没打完的枪头。",
     "core": false,
     "meetMap": "recruit",
     "meetCondition": null,
@@ -4223,11 +4223,11 @@
       "token": "tanglong_token",
       "count": 10
     },
-    "dialogue": "汤隆道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“火候还差些。再拉几下风箱，这一锤得趁热。”",
     "introducedIn": 3,
     "mount": {
       "name": "金钱豹子义骑",
-      "description": "与汤隆同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "背上常驮铁料，驮垫加厚过，受力处没有露缝。",
       "dungeon": "shanshenmiao",
       "contract": "tanglong_mount_contract"
     },
@@ -4262,7 +4262,7 @@
       "duxing_advanced",
       "duxing_bond"
     ],
-    "story": "地全星 · 梁山第 89 席。鬼脸儿杜兴，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "李家庄的管家，生得面貌粗怪，办事却周全。粮钱和杂事经他一遍，来人便不必四处找人。",
     "core": false,
     "meetMap": "office",
     "meetCondition": null,
@@ -4271,10 +4271,10 @@
       "token": "duxing_token",
       "count": 10
     },
-    "dialogue": "杜兴道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“找庄主办什么事？先告诉我，省得你在这里空等。”",
     "mount": {
       "name": "鬼脸儿义骑",
-      "description": "与杜兴同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "惯随主人往返庄上，鞍侧收着账单和库门钥匙。",
       "dungeon": "zhujiazhuang",
       "contract": "duxing_mount_contract"
     },
@@ -4310,7 +4310,7 @@
       "zouyuan_advanced",
       "zouyuan_bond"
     ],
-    "story": "地短星 · 梁山第 90 席。出林龙邹渊，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "登云山的汉子，性子硬，赌酒使枪都是常事。朋友有急难来找，嘴上骂两句，人却已经起身。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4319,10 +4319,10 @@
       "token": "zouyuan_token",
       "count": 10
     },
-    "dialogue": "邹渊道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“早干什么去了？拿上兵器，路上说！”",
     "mount": {
       "name": "出林龙义骑",
-      "description": "与邹渊同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "马鬃蓬着，鞍具虽旧，肚带却勒得齐整。",
       "dungeon": "chai_escort",
       "contract": "zouyuan_mount_contract"
     },
@@ -4358,7 +4358,7 @@
       "zourun_advanced",
       "zourun_bond"
     ],
-    "story": "地角星 · 梁山第 91 席。独角龙邹润，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "后脑生着肉瘤，因此得了独角龙的名号。平时不爱惹话，若有人拿他的模样取笑，便没那么好说了。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4367,10 +4367,10 @@
       "token": "zourun_token",
       "count": 10
     },
-    "dialogue": "邹润道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“有事说事，莫盯着我的头看。”",
     "mount": {
       "name": "独角龙义骑",
-      "description": "与邹润同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鼻梁宽，脚步沉，停下来时爱蹭旁边的树干。",
       "dungeon": "qingzhou_patrol",
       "contract": "zourun_mount_contract"
     },
@@ -4406,7 +4406,7 @@
       "zhugui_advanced",
       "zhugui_bond"
     ],
-    "story": "地囚星 · 梁山第 92 席。旱地忽律朱贵，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "水泊边开酒店的，柜台底下藏着不少消息。来客说要饮酒，他还要留意对方从哪里来。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4415,10 +4415,10 @@
       "token": "zhugui_token",
       "count": 10
     },
-    "dialogue": "朱贵道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“打尖还是住店？若要过泊，得等船来。”",
     "mount": {
       "name": "旱地忽律义骑",
-      "description": "与朱贵同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "养在店后草棚，夜里不用时，鞍具另挂在墙上。",
       "dungeon": "jingyanggang",
       "contract": "zhugui_mount_contract"
     },
@@ -4454,7 +4454,7 @@
       "zhufu_advanced",
       "zhufu_bond"
     ],
-    "story": "地藏星 · 梁山第 93 席。笑面虎朱富，照应同袍，也能分担寨中事务。入寨后可领兵出征，也可独行历练。",
+    "story": "朱贵的弟弟，笑脸迎客，酒肉生意做得熟。听人说话少有插嘴，转身却能把细处记得清楚。",
     "core": false,
     "meetMap": "office",
     "meetCondition": null,
@@ -4463,10 +4463,10 @@
       "token": "zhufu_token",
       "count": 10
     },
-    "dialogue": "朱富道：“照应同袍，也能分担寨中事务。寨中若有安排，且与我细说。”",
+    "dialogue": "“再添一碗？慢慢喝，店里不催客。”",
     "mount": {
       "name": "笑面虎义骑",
-      "description": "与朱富同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "常驮酿酒用的粮食，草棚里总留着一份干料。",
       "dungeon": "huangnigang",
       "contract": "zhufu_mount_contract"
     },
@@ -4502,7 +4502,7 @@
       "caifu_advanced",
       "caifu_bond"
     ],
-    "story": "地平星 · 梁山第 94 席。铁臂膊蔡福，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "大名府两院押狱兼刽子手，提刀的胳膊练得粗壮。官府差事见得多，遇到生人先把来意问清。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -4511,11 +4511,11 @@
       "token": "caifu_token",
       "count": 10
     },
-    "dialogue": "蔡福道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“找我办什么事？这里耳朵多，先把门带上。”",
     "introducedIn": 3,
     "mount": {
       "name": "铁臂膊义骑",
-      "description": "与蔡福同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "棕黑毛色，鞍桥包着旧皮，平日拴在后院。",
       "dungeon": "yezhulin",
       "contract": "caifu_mount_contract"
     },
@@ -4550,7 +4550,7 @@
       "caiqing_advanced",
       "caiqing_bond"
     ],
-    "story": "地损星 · 梁山第 95 席。一枝花蔡庆，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "蔡福的弟弟，也做刽子手，鬓边爱簪一枝花。差事再忙，出门前也要把衣帽理齐整。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4559,10 +4559,10 @@
       "token": "caiqing_token",
       "count": 10
     },
-    "dialogue": "蔡庆道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“我哥哥还在忙。你先坐，茶自己倒。”",
     "mount": {
       "name": "一枝花义骑",
-      "description": "与蔡庆同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "辔头扎着一小条彩布，换季时会重新打结。",
       "dungeon": "shanshenmiao",
       "contract": "caiqing_mount_contract"
     },
@@ -4598,7 +4598,7 @@
       "lili_advanced",
       "lili_bond"
     ],
-    "story": "地奴星 · 梁山第 96 席。催命判官李立，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "揭阳岭的酒店主人，做过暗算过客的黑生意。打量进门的人，先看的往往是行李有多沉。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -4607,10 +4607,10 @@
       "token": "lili_token",
       "count": 10
     },
-    "dialogue": "李立道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“路上来的？行李放稳了，要酒还是要饭？”",
     "mount": {
       "name": "催命判官义骑",
-      "description": "与李立同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "马背宽，旧驮筐靠在槽旁，常用来载店里的杂货。",
       "dungeon": "zhujiazhuang",
       "contract": "lili_mount_contract"
     },
@@ -4646,7 +4646,7 @@
       "liyun_advanced",
       "liyun_bond"
     ],
-    "story": "地察星 · 梁山第 97 席。青眼虎李云，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "沂水县做过都头，善使朴刀。管起营房修造也肯下场，梁柱有没有歪，非亲眼量过才放心。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4655,10 +4655,10 @@
       "token": "liyun_token",
       "count": 10
     },
-    "dialogue": "李云道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“这根梁先别抬。地脚没垫平，抬上去还得重来。”",
     "mount": {
       "name": "青眼虎义骑",
-      "description": "与李云同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍上挂着短尺和麻绳，常随主人沿寨墙走动。",
       "dungeon": "chai_escort",
       "contract": "liyun_mount_contract"
     },
@@ -4694,7 +4694,7 @@
       "jiaoting_advanced",
       "jiaoting_bond"
     ],
-    "story": "地恶星 · 梁山第 98 席。没面目焦挺，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "家传相扑手艺，走到哪里都不大受人待见，才有没面目的绰号。论摔跤，却不是凭一脸凶相就能吓住他。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -4703,10 +4703,10 @@
       "token": "jiaoting_token",
       "count": 10
     },
-    "dialogue": "焦挺道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“先站稳。摔下去别恼，说好了只是试手。”",
     "mount": {
       "name": "没面目义骑",
-      "description": "与焦挺同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "矮壮结实，鞍座宽平，主人上下时也不乱晃。",
       "dungeon": "qingzhou_patrol",
       "contract": "jiaoting_mount_contract"
     },
@@ -4742,7 +4742,7 @@
       "shiyong_advanced",
       "shiyong_bond"
     ],
-    "story": "地丑星 · 梁山第 99 席。石将军石勇，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "大名府来的汉子，赌桌边混过日子，一脸不服人的样子。口气虽大，碰着真心待他的，也肯认这个情。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4751,11 +4751,11 @@
       "token": "shiyong_token",
       "count": 10
     },
-    "dialogue": "石勇道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“话已经带到了。你认得这封信，我就没白跑。”",
     "introducedIn": 3,
     "mount": {
       "name": "石将军义骑",
-      "description": "与石勇同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "两侧鞍袋大小不同，装的都是赶路用的零碎。",
       "dungeon": "jingyanggang",
       "contract": "shiyong_mount_contract"
     },
@@ -4790,7 +4790,7 @@
       "sunxin_advanced",
       "sunxin_bond"
     ],
-    "story": "地数星 · 梁山第 100 席。小尉迟孙新，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "与顾大嫂开酒店，枪棒功夫从不搁下。店里遇到麻烦，两口子往往不用多说便知道如何照应。",
     "core": false,
     "meetMap": "training",
     "meetCondition": null,
@@ -4799,10 +4799,10 @@
       "token": "sunxin_token",
       "count": 10
     },
-    "dialogue": "孙新道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“大嫂在后院。你先把事情告诉我，急不急？”",
     "mount": {
       "name": "小尉迟义骑",
-      "description": "与孙新同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "常驮采买的粮米，回店时会在后院门前停住。",
       "dungeon": "huangnigang",
       "contract": "sunxin_mount_contract"
     },
@@ -4838,7 +4838,7 @@
       "gudasao_advanced",
       "gudasao_bond"
     ],
-    "story": "地阴星 · 梁山第 101 席。母大虫顾大嫂，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "登州开酒店的顾大嫂，招呼客人嗓门亮，动起手来更不含糊。自家人受了欺负，她第一个要去问。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -4847,10 +4847,10 @@
       "token": "gudasao_token",
       "count": 10
     },
-    "dialogue": "顾大嫂道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“谁把你打成这样？坐下，我去叫人！”",
     "mount": {
       "name": "母大虫义骑",
-      "description": "与顾大嫂同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "膘壮有力，驮袋结扣扎得牢，装满了也不松垮。",
       "dungeon": "yezhulin",
       "contract": "gudasao_mount_contract"
     },
@@ -4886,7 +4886,7 @@
       "zhangqing_gardener_advanced",
       "zhangqing_gardener_bond"
     ],
-    "story": "地刑星 · 梁山第 102 席。菜园子张青，近身破阵，宜在前列持续进攻。入寨后可领兵出征，也可独行历练。",
+    "story": "十字坡酒店的主人，种过菜，也劫过过路客。人情世故熟悉，遇事比孙二娘多问几句来历。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4895,10 +4895,10 @@
       "token": "zhangqing_gardener_token",
       "count": 10
     },
-    "dialogue": "张青道：“近身破阵，宜在前列持续进攻。寨中若有安排，且与我细说。”",
+    "dialogue": "“二娘，且慢动手。先听他把姓名说完。”",
     "mount": {
       "name": "菜园子义骑",
-      "description": "与张青同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "平日驮菜蔬和柴火，腿上常挂着田里的泥点。",
       "dungeon": "shanshenmiao",
       "contract": "zhangqing_gardener_mount_contract"
     },
@@ -4934,7 +4934,7 @@
       "sunerniang_advanced",
       "sunerniang_bond"
     ],
-    "story": "地壮星 · 梁山第 103 席。母夜叉孙二娘，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "在十字坡开黑店，腰间围着裙子，笑骂都响亮。端来的酒看着寻常，客人却得多留个心眼。",
     "core": false,
     "meetMap": "stable",
     "meetCondition": null,
@@ -4943,10 +4943,10 @@
       "token": "sunerniang_token",
       "count": 10
     },
-    "dialogue": "孙二娘道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“杵在门口做什么？进来坐，要几斤肉？”",
     "mount": {
       "name": "母夜叉义骑",
-      "description": "与孙二娘同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "鞍边挂着买卖用的布袋，辔头被她收拾得利利索索。",
       "dungeon": "zhujiazhuang",
       "contract": "sunerniang_mount_contract"
     },
@@ -4982,7 +4982,7 @@
       "wangdingliu_advanced",
       "wangdingliu_bond"
     ],
-    "story": "地劣星 · 梁山第 104 席。活闪婆王定六，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "江边酒店里长大的瘦汉，走路跳跃极快。忙起店里的活，才见他在门前，转眼已到了后院。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -4991,10 +4991,10 @@
       "token": "wangdingliu_token",
       "count": 10
     },
-    "dialogue": "王定六道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“要热水？这就来！你把桶放门边。”",
     "mount": {
       "name": "活闪婆义骑",
-      "description": "与王定六同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "脚步轻快，驮的东西不多，小鞍袋里总留些干粮。",
       "dungeon": "chai_escort",
       "contract": "wangdingliu_mount_contract"
     },
@@ -5030,7 +5030,7 @@
       "yubaosi_advanced",
       "yubaosi_bond"
     ],
-    "story": "地健星 · 梁山第 105 席。险道神郁保四，承接敌势，护住同伴再谋反击。入寨后可领兵出征，也可独行历练。",
+    "story": "身材高大，立在人群中很显眼。掌旗时两手握住旗杆，布面再沉也不随手放地上。",
     "core": false,
     "meetMap": "gate",
     "meetCondition": null,
@@ -5039,10 +5039,10 @@
       "token": "yubaosi_token",
       "count": 10
     },
-    "dialogue": "郁保四道：“承接敌势，护住同伴再谋反击。寨中若有安排，且与我细说。”",
+    "dialogue": "“旗杆递上来。下面的人让一让，别绊着。”",
     "mount": {
       "name": "险道神义骑",
-      "description": "与郁保四同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "高腿大马，鞍上添了固定长杆的皮环。",
       "dungeon": "qingzhou_patrol",
       "contract": "yubaosi_mount_contract"
     },
@@ -5078,7 +5078,7 @@
       "baisheng_advanced",
       "baisheng_bond"
     ],
-    "story": "会唱山歌，熟悉乡道和酒担。",
+    "story": "安乐村的闲汉，会挑酒担，也会唱山歌。乡间哪条路近、哪家有酒，问他便容易问对。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5087,10 +5087,10 @@
       "token": "baisheng_token",
       "count": 10
     },
-    "dialogue": "汉子扶住酒担，咧嘴一笑：“小人白胜，附近乡道走得熟。客官初到郓城？若不嫌弃，这一路的风土人情，我倒能说上几句。”",
+    "dialogue": "“这条路晒得慌，走树荫底下吧。酒担我常挑过去。”",
     "mount": {
       "name": "乡路青驴",
-      "description": "专属脚力；与白胜同行养成。名称与羁绊为本作原创设定。",
+      "description": "青驴耳朵长，鞍后可架小筐，村道上慢慢悠悠。",
       "dungeon": "jingyanggang",
       "contract": "baisheng_mount_contract"
     },
@@ -5125,7 +5125,7 @@
       "shiqian_advanced",
       "shiqian_bond"
     ],
-    "story": "脚步轻，眼睛亮，善探道路。",
+    "story": "瘦小机灵，翻墙上屋是熟手，手脚快得让人难防。到了生地方，门窗和退路总先被他看一遍。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5134,10 +5134,10 @@
       "token": "shiqian_token",
       "count": 10
     },
-    "dialogue": "瘦汉把酒盏往里一挪：“时迁。别的本事不敢夸，哪条路有人，哪扇门开着，我倒看得分明。”他笑了笑，又朝窗外瞥了一眼。",
+    "dialogue": "“门闩在里头？你等一等，我从后边看看。”",
     "mount": {
       "name": "夜行灰驹",
-      "description": "专属脚力；与时迁同行养成。名称与羁绊为本作原创设定。",
+      "description": "灰毛小马，身量不显眼，夜宿时常拴在偏院。",
       "dungeon": "jingyanggang",
       "contract": "shiqian_mount_contract"
     },
@@ -5172,7 +5172,7 @@
       "duanjingzhu_advanced",
       "duanjingzhu_bond"
     ],
-    "story": "地狗星 · 梁山第 108 席。金毛犬段景住，轻身游击，善用先手牵制要敌。入寨后可领兵出征，也可独行历练。",
+    "story": "北地贩马、盗马的汉子，赤发黄须，认马很有眼力。看一眼牙口，再看几步走相，便能说出好歹。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5181,10 +5181,10 @@
       "token": "duanjingzhu_token",
       "count": 10
     },
-    "dialogue": "段景住道：“轻身游击，善用先手牵制要敌。寨中若有安排，且与我细说。”",
+    "dialogue": "“先让它走两圈。光看毛色，可挑不出好马。”",
     "mount": {
       "name": "金毛犬义骑",
-      "description": "与段景住同行的专属脚力；名称与羁绊为本作原创设定。",
+      "description": "牙口齐，蹄形正，鞍子朴素，腿脚却挑得仔细。",
       "dungeon": "yezhulin",
       "contract": "duanjingzhu_mount_contract"
     },
@@ -5220,7 +5220,7 @@
       "chaogai_advanced",
       "chaogai_bond"
     ],
-    "story": "东溪村保正，仗义疏财。外传收录，不占一百零八星位；在本作中可与寨中好汉共同出征。",
+    "story": "东溪村保正，爱习武，也肯接济来投的人。庄上客人再多，听见有人求见，仍要亲自出来迎。",
     "core": false,
     "meetMap": "dongxi",
     "meetCondition": {
@@ -5236,11 +5236,11 @@
         "flag": "external_chaogai_helped"
       }
     },
-    "dialogue": "晁盖道：“先安顿乡人，再说同往。寨中若肯担事，晁某也愿出一分力。”",
+    "dialogue": "“今夜就在庄上住。有什么难处，吃饭时慢慢说。”",
     "introducedIn": 4,
     "mount": {
       "name": "青骢护寨",
-      "description": "晁盖专属脚力；名称与羁绊为本作改编设定。",
+      "description": "青骢身躯结实，巡庄回来，先卸鞍再牵去饮水。",
       "dungeon": "yezhulin",
       "contract": "chaogai_mount_contract"
     },
@@ -5276,7 +5276,7 @@
       "wangjin_advanced",
       "wangjin_bond"
     ],
-    "story": "教授乡勇枪棒，与寨主约定：兵营三级、医馆一级，先练兵也先护兵。",
+    "story": "禁军教头，枪棒功夫扎实，教人肯花笨工夫。一个起手式不对，也能陪着练上半日。",
     "core": false,
     "meetMap": "training",
     "meetCondition": {
@@ -5292,11 +5292,11 @@
         "flag": "external_wangjin_helped"
       }
     },
-    "dialogue": "教授乡勇枪棒，与寨主约定：兵营三级、医馆一级，先练兵也先护兵。",
+    "dialogue": "“脚再挪半步。别急着出枪，站稳了重来。”",
     "introducedIn": 5,
     "mount": {
       "name": "白蹄义骑",
-      "description": "王进的专属脚力，为本作原创设定。",
+      "description": "白蹄老练，常驮一束练习棍，鞍具没有多余装饰。",
       "dungeon": "yezhulin",
       "contract": "wangjin_mount_contract"
     },
@@ -5332,7 +5332,7 @@
       "hucheng_advanced",
       "hucheng_bond"
     ],
-    "story": "祝庄战后，扈成带乡人参与医护接应。医馆二级、农田二级后，可确认安民之约。",
+    "story": "扈家庄的扈成，战后带着乡人接送伤者。点人数时格外仔细，少了谁都得再去找一遍。",
     "core": false,
     "meetMap": "v5_refuge",
     "meetCondition": {
@@ -5348,11 +5348,11 @@
         "flag": "external_hucheng_helped"
       }
     },
-    "dialogue": "祝庄战后，扈成带乡人参与医护接应。医馆二级、农田二级后，可确认安民之约。",
+    "dialogue": "“西边那车还没到。先留出屋子，我去路口接。”",
     "introducedIn": 5,
     "mount": {
       "name": "青骢义骑",
-      "description": "扈成的专属脚力，为本作原创设定。",
+      "description": "青骢背着宽鞍，鞍后常备一条供伤者盖的毯子。",
       "dungeon": "yezhulin",
       "contract": "hucheng_mount_contract"
     },
@@ -5388,7 +5388,7 @@
       "luantingyu_advanced",
       "luantingyu_bond"
     ],
-    "story": "本作外传改编：栾廷玉战后留在庄外护送散兵。兵营四级、医馆二级，再以一百功勋担保，可邀他授艺。",
+    "story": "使铁棒的庄上教头，战后仍在庄外照看散兵。旧日学过的枪棒，他愿从头教给留下的人。",
     "core": false,
     "meetMap": "v5_store",
     "meetCondition": {
@@ -5404,11 +5404,11 @@
         "flag": "external_luantingyu_helped"
       }
     },
-    "dialogue": "本作外传改编：栾廷玉战后留在庄外护送散兵。兵营四级、医馆二级，再以一百功勋担保，可邀他授艺。",
+    "dialogue": "“兵器拿稳。今日先练这几下，练对了再往下教。”",
     "introducedIn": 5,
     "mount": {
       "name": "骅骝义骑",
-      "description": "栾廷玉的专属脚力，为本作原创设定。",
+      "description": "骅骝肩背宽阔，鞍上缚着长棒，歇脚便卸下擦净。",
       "dungeon": "yezhulin",
       "contract": "luantingyu_mount_contract"
     },
@@ -5444,7 +5444,7 @@
       "zhanghuai_advanced",
       "zhanghuai_bond"
     ],
-    "story": "从没出过远门的庄稼汉，村口的木栅却守了三年。带着邻里投寨，只求老幼有处安身。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "庄稼汉，出过最远的门便是这回带邻里来投寨。村口木栅守了三年，临走还托人补好松动的横木。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5456,10 +5456,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "张槐道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“屋子小些不碍事。老人和孩子怕冷，夜里别漏风就成。”",
     "mount": {
       "name": "青骡",
-      "description": "与张槐同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "青骡背宽，驮着几床旧被褥，走累了才停下来喘气。",
       "dungeon": "jingyanggang",
       "contract": "zhanghuai_mount_contract"
     },
@@ -5495,7 +5495,7 @@
       "heqi_advanced",
       "heqi_bond"
     ],
-    "story": "以砍柴换米过活，熟悉荒山小径。手中柴斧未必名贵，遇见拦路恶汉却不肯退。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "每天挑柴下山换米，哪条小路能走人，他最清楚。柴斧用了多年，木柄被手掌磨得发亮。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5507,10 +5507,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "何七道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“大路要绕一座山。你跟紧些，我带你走近的。”",
     "mount": {
       "name": "黄驴",
-      "description": "与何七同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "黄驴常驮柴捆，听见扁担落地便凑过来闻。",
       "dungeon": "jingyanggang",
       "contract": "heqi_mount_contract"
     },
@@ -5546,7 +5546,7 @@
       "chengao_advanced",
       "chengao_bond"
     ],
-    "story": "摆渡二十年的船工，风雨里救过不少落水客。愿领同乡水手，为寨中探清浅滩。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在渡口撑了二十年船，见过不少急着赶路的客人。遇上涨水，任人怎样催，他也得先看过河面。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5558,10 +5558,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "陈篙道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“今日水急，一趟少坐两人。赶路也差不了这一会儿。”",
     "mount": {
       "name": "乌骡",
-      "description": "与陈篙同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "乌骡蹄子沾着岸泥，鞍架上常搭一件半干的蓑衣。",
       "dungeon": "jingyanggang",
       "contract": "chengao_mount_contract"
     },
@@ -5597,7 +5597,7 @@
       "zhouaduo_advanced",
       "zhouaduo_bond"
     ],
-    "story": "背药篓走遍山坡，常替买不起药的乡人裹伤。她不识名门招式，却知道怎样把人平安带回来。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "背药篓上山采药，回村时常被人拦下来请她看伤。药送出去不少，换回来的多是鸡蛋和杂粮。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5609,10 +5609,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "周阿朵道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“手怎么划的？先坐下，篓里还有干净布。”",
     "mount": {
       "name": "药篓青驴",
-      "description": "与周阿朵同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "青驴驮着两只药篓，窄路上由主人牵着慢走。",
       "dungeon": "jingyanggang",
       "contract": "zhouaduo_mount_contract"
     },
@@ -5648,7 +5648,7 @@
       "zhaoqingmo_advanced",
       "zhaoqingmo_bond"
     ],
-    "story": "做过粮队护卫，最不愿看见粮车被劫。后来带几个老伙计投寨，仍把护住队尾当作本分。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在粮队里拿短盾护车，习惯走在队尾。投寨时带来了几个老伙计，赶路仍不时回头数人。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5660,10 +5660,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "赵青陌道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“最后那辆车轴响了。都慢些，别把他们甩在后头。”",
     "mount": {
       "name": "枣红马",
-      "description": "与赵青陌同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "枣红马常随车队缓行，鞍侧留着挂短盾的皮扣。",
       "dungeon": "jingyanggang",
       "contract": "zhaoqingmo_mount_contract"
     },
@@ -5699,7 +5699,7 @@
       "liuyan_advanced",
       "liuyan_bond"
     ],
-    "story": "靠猎物皮毛养家的猎户，耐心胜过蛮力。擅看足迹、听弦辨风，出征时常替同伴盯住敌后。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "打猎换皮毛养家，能在林子里蹲守大半日。脚印断在硬地上，便去看附近折断的细枝。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5711,10 +5711,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "柳雁道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“别往前走，套子就在草里。踩坏了，今晚又得重下。”",
     "mount": {
       "name": "灰山驹",
-      "description": "与柳雁同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "灰色山驹熟走林道，过横枝时会低下头。",
       "dungeon": "jingyanggang",
       "contract": "liuyan_mount_contract"
     },
@@ -5750,7 +5750,7 @@
       "dingyan_advanced",
       "dingyan_bond"
     ],
-    "story": "赶考落第后替村塾代课，沿路见过饥民流离。书箱里的兵书终于有了用处，他想让同伴少走险路。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "赶考落了第，暂且在村塾教孩子读书。书箱里装着兵书，也夹着几页没批完的功课。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5762,10 +5762,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "丁砚道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“纸给我一张。我把这几处路口画下来，省得走岔。”",
     "mount": {
       "name": "瘦青驴",
-      "description": "与丁砚同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "瘦青驴，书箱比鞍袋还大，停下来便啃路边草。",
       "dungeon": "jingyanggang",
       "contract": "dingyan_mount_contract"
     },
@@ -5801,7 +5801,7 @@
       "majiu_advanced",
       "majiu_bond"
     ],
-    "story": "跑惯驿路的脚夫，鞋底磨破也不误送信。投寨以后认路传讯，遇见敌哨便抢上一步。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "靠替人送信走驿路，哪处能换鞋、哪处有热饭都记得。拆不得的信封，总要贴身收好。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5813,10 +5813,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "马九道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“收信人住哪一户？说准些，莫让我挨家敲门。”",
     "mount": {
       "name": "栗色驿马",
-      "description": "与马九同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "栗色驿马，鞍具轻省，途中饮水歇脚都有老地方。",
       "dungeon": "jingyanggang",
       "contract": "majiu_mount_contract"
     },
@@ -5852,7 +5852,7 @@
       "shichanggeng_advanced",
       "shichanggeng_bond"
     ],
-    "story": "离伍多年仍日日擦枪，教乡勇先护住身旁的人。他愿把吃过的亏，变成年轻人少挨的一刀。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "退伍多年，早起擦枪的习惯一直没改。教乡勇时爱唠叨，尤其见不得人把盾牌胡乱一丢。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5864,10 +5864,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "石长庚道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“盾收回来，胳膊露着呢。这样挡，一下就伤了。”",
     "mount": {
       "name": "沙场老马",
-      "description": "与石长庚同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "上了年岁的军马，步子不快，熟悉号角和营地杂声。",
       "dungeon": "yezhulin",
       "contract": "shichanggeng_mount_contract"
     },
@@ -5903,7 +5903,7 @@
       "shenqiuniang_advanced",
       "shenqiuniang_bond"
     ],
-    "story": "在乡间开小药铺的郎中，遇到兵灾便背箱出诊。随军不为声名，只愿药帐中少一声叹息。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "乡里开药铺的郎中，出诊常赶不上自己家里的饭。药箱底下压着几张欠账，许久没去讨。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5915,10 +5915,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "沈秋娘道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“坐近些，我看看脸色。药钱下回再带也成。”",
     "mount": {
       "name": "花斑药骡",
-      "description": "与沈秋娘同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "花斑骡子常停在人家门前，药箱卸下了便安静等着。",
       "dungeon": "yezhulin",
       "contract": "shenqiuniang_mount_contract"
     },
@@ -5954,7 +5954,7 @@
       "gupingchuan_advanced",
       "gupingchuan_bond"
     ],
-    "story": "受雇教庄丁棍棒，最看重站稳脚跟和互相照应。庄园败落后，他把一套合阵本领带到了寨中。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "受雇教庄丁棍棒，庄子败落后才来到寨里。带新人练习，总从握棍和挪步教起。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -5966,10 +5966,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "顾平川道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“两个人挨得太近了。各退半步，抡开试试。”",
     "mount": {
       "name": "青鬃庄马",
-      "description": "与顾平川同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "青鬃庄马，旧鞍上添过新垫，操练时拴在场边。",
       "dungeon": "yezhulin",
       "contract": "gupingchuan_mount_contract"
     },
@@ -6005,7 +6005,7 @@
       "taozhiwei_advanced",
       "taozhiwei_bond"
     ],
-    "story": "以抄书记账换盘缠的游方女子，沿路记录水道与粮价。她相信把路看清，便能替众人省下一场苦战。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "靠抄书、记账挣盘缠，沿途顺手记下水路和粮价。每到一地，先找店家换几张便宜纸。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6017,10 +6017,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "陶知微道：“愿凭这点本领，与诸位互相照应。”",
+    "dialogue": "“这袋米是哪边运来的？昨日问的价，还没这么高。”",
     "mount": {
       "name": "白额驹",
-      "description": "与陶知微同行的普通脚力，可培养并解锁专属羁绊。",
+      "description": "白额小马，鞍袋里的纸簿用油纸包着，外头再扎绳。",
       "dungeon": "yezhulin",
       "contract": "taozhiwei_mount_contract"
     },
@@ -6056,7 +6056,7 @@
       "tianmao_advanced",
       "tianmao_bond"
     ],
-    "story": "把农具藏在村口的老槐树下，带着邻里守过两次秋收。投寨只求田里种出的粮能留下。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "带邻里守过两季秋收，村口老槐树下还藏着几把农具。到寨里安顿后，先问附近有没有能种的地。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6068,10 +6068,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "田茂道：“把农具藏在村口的老槐树下，带着邻里守过两次秋收，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“那块荒地有人种么？给我一把锄头，明日去翻翻。”",
     "mount": {
       "name": "田埂乡勇行骑",
-      "description": "与田茂同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "常驮种子和农具，鞍绳上沾着细细的麦芒。",
       "dungeon": "jingyanggang",
       "contract": "tianmao_mount_contract"
     },
@@ -6107,7 +6107,7 @@
       "qiaoli_advanced",
       "qiaoli_bond"
     ],
-    "story": "替村人织布，知道如何把旧布裁成裹伤带。随军时总多带几卷干净细布。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "靠织布接济家用，零碎布头也舍不得扔。随队出门便另包几卷洗净的细布，谁破了衣裳也来找她。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6119,10 +6119,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "乔梨道：“替村人织布，知道如何把旧布裁成裹伤带，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“袖口都开了，脱下来吧。几针的工夫，不耽误你吃饭。”",
     "mount": {
       "name": "村坊织娘行骑",
-      "description": "与乔梨同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "驮着布包的小马，鞍沿包过软布，不会刮坏织物。",
       "dungeon": "jingyanggang",
       "contract": "qiaoli_mount_contract"
     },
@@ -6158,7 +6158,7 @@
       "niushun_advanced",
       "niushun_bond"
     ],
-    "story": "肩上挑过盐袋与粮包，走遍乡间石桥。遇上盘剥行人的恶徒，宁肯折了扁担也不低头。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "挑盐袋和粮包走村过桥，肩膀压出了厚茧。遇到拦路乱收钱的，扁担往地上一杵便要理论。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6170,10 +6170,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "牛顺道：“肩上挑过盐袋与粮包，走遍乡间石桥，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“来时已经交过钱了。你再收一回，拿个凭据来。”",
     "mount": {
       "name": "挑担脚夫行骑",
-      "description": "与牛顺同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "背宽腿粗，配一副旧驮架，两边货物总称得差不多重。",
       "dungeon": "jingyanggang",
       "contract": "niushun_mount_contract"
     },
@@ -6209,7 +6209,7 @@
       "duhe_advanced",
       "duhe_bond"
     ],
-    "story": "平日抢收麦子，乱时领乡亲割苇藏身。愿把认路和用镰的本领教给寨中新人。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "种麦子的好手，抢收时两把镰刀轮着磨。带乡人躲过兵乱，知道芦苇荡里哪处地面干些。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6221,10 +6221,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "杜禾道：“平日抢收麦子，乱时领乡亲割苇藏身，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这片先割，低处容易积水。绳子给我，两捆扎一块儿。”",
     "mount": {
       "name": "麦田镰手行骑",
-      "description": "与杜禾同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "褐色小马，鞍后常捆一束干苇，作歇脚时的铺垫。",
       "dungeon": "jingyanggang",
       "contract": "duhe_mount_contract"
     },
@@ -6260,7 +6260,7 @@
       "sunli_quarry_advanced",
       "sunli_quarry_bond"
     ],
-    "story": "采石场塌方时救出过三个工友，背上留下旧伤。作战也先照应身旁的人。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "采石场塌方时背出了三个工友，背上的旧伤逢阴雨便疼。力气仍大，搬重物时却总先看绳结。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6272,10 +6272,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "孙砺道：“采石场塌方时救出过三个工友，背上留下旧伤，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“别抢着抬。石头下面塞根木头，手才伸得进去。”",
     "mount": {
       "name": "采石壮丁行骑",
-      "description": "与孙砺同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "驮鞍用厚皮包边，走碎石地时蹄声沉而稳。",
       "dungeon": "jingyanggang",
       "contract": "sunli_quarry_mount_contract"
     },
@@ -6311,7 +6311,7 @@
       "lupu_advanced",
       "lupu_bond"
     ],
-    "story": "靠湖中鱼获过活，闭眼也认得芦苇湾的水声。愿替山寨看住浅滩暗口。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "住在湖边，以打鱼为生，船上的网都是自己补。清早出门先瞧芦苇歪向哪边，再挑今日下网的地方。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6323,10 +6323,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "卢蒲道：“靠湖中鱼获过活，闭眼也认得芦苇湾的水声，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这网昨晚挂破了。你坐会儿，我补完这一角就开船。”",
     "mount": {
       "name": "湖岸渔户行骑",
-      "description": "与卢蒲同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "湖岸边养的小马，歇在草棚里，鞍旁晾着半张旧网。",
       "dungeon": "jingyanggang",
       "contract": "lupu_mount_contract"
     },
@@ -6362,7 +6362,7 @@
       "weiyu_advanced",
       "weiyu_bond"
     ],
-    "story": "走村搭棚修门，灾年给流民搭过挡雨木屋。入寨后仍坚持先修屋，再练盾。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "走村搭棚修门的木匠，替流民搭过一排避雨屋。住进新地方，总要敲一敲门框，看看牢不牢。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6374,10 +6374,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "魏榆道：“走村搭棚修门，灾年给流民搭过挡雨木屋，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“门歪了，下雨要卡住。借我把锤子，一会儿就好。”",
     "mount": {
       "name": "木棚匠人行骑",
-      "description": "与魏榆同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "驮架上挂着斧锯，工具刃口都套着皮套。",
       "dungeon": "jingyanggang",
       "contract": "weiyu_mount_contract"
     },
@@ -6413,7 +6413,7 @@
       "yangzhi_tea_advanced",
       "yangzhi_tea_bond"
     ],
-    "story": "采茶时练出稳手，擅长照料赶山受伤的人。总把自家烘的茶分给值夜同伴。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "茶山上采茶的女子，手指快，也惯替同伴包扎擦伤。自己烘的茶舍不得卖尽，总留一些给值夜人喝。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6425,10 +6425,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "杨栀道：“采茶时练出稳手，擅长照料赶山受伤的人，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“茶刚烘好，闻闻。今夜轮到你值守，带一小包去。”",
     "mount": {
       "name": "茶山采女行骑",
-      "description": "与杨栀同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "浅棕毛色，驮着竹编茶筐，筐底垫了一层净布。",
       "dungeon": "jingyanggang",
       "contract": "yangzhi_tea_mount_contract"
     },
@@ -6464,7 +6464,7 @@
       "qindou_advanced",
       "qindou_bond"
     ],
-    "story": "二十岁才第一次独自出远门，随身带着师父送的小铁锤。愿从修补寨兵的旧甲开始立足。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "铁铺学徒，二十岁头一回独自走远路。师父给的小锤一直收着，问到手艺便忙着找件东西修给人看。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6476,10 +6476,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "秦豆道：“二十岁才第一次独自出远门，随身带着师父送的小铁锤，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这扣环断了？我试试，补这样的小件还成。”",
     "mount": {
       "name": "铁铺学徒行骑",
-      "description": "与秦豆同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "年轻小马，秦豆骑得少，多半牵着它边走边说话。",
       "dungeon": "jingyanggang",
       "contract": "qindou_mount_contract"
     },
@@ -6515,7 +6515,7 @@
       "zhuli_advanced",
       "zhuli_bond"
     ],
-    "story": "识得山坡上数十种药草，也懂晒药防潮。出征前会把包好的药散一份份交到同伴手里。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "山坡上种药的，认得草药，也懂晾晒和收存。见云压低了就忙着收筐，比旁人更怕一场雨。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6527,10 +6527,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "祝篱道：“识得山坡上数十种药草，也懂晒药防潮，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“快搭把手，把这两筐抬进去。淋湿了得坏一半。”",
     "mount": {
       "name": "山坡药农行骑",
-      "description": "与祝篱同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍上搭竹筐，晒好的药另装布袋，免得与湿草混在一处。",
       "dungeon": "jingyanggang",
       "contract": "zhuli_mount_contract"
     },
@@ -6566,7 +6566,7 @@
       "fuchen_advanced",
       "fuchen_bond"
     ],
-    "story": "在山寺扫过十余年落叶，善听脚步辨来人。寺门毁于兵火后，带着一卷旧路记投寨。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在山寺扫了十余年地，早晚哪时有人经过，听脚步便有数。寺门烧毁后，只带出一卷记着旧路的册子。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6578,10 +6578,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "傅尘道：“在山寺扫过十余年落叶，善听脚步辨来人，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这条路以前能通到寺后。如今有没有塌，我得再看看。”",
     "mount": {
       "name": "古寺扫客行骑",
-      "description": "与傅尘同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "灰马不怕扫帚声，休息时常站在院墙的阴影里。",
       "dungeon": "jingyanggang",
       "contract": "fuchen_mount_contract"
     },
@@ -6617,7 +6617,7 @@
       "luya_advanced",
       "luya_bond"
     ],
-    "story": "成年后仍替村里放羊，熟悉险坡和避风坳。她的牧哨一响，走散的伙伴就知道该往哪边回。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替村里放羊，熟悉山坳里避风的地方。出门带一支牧哨，羊群走散了便站到高处吹几声。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6629,10 +6629,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "陆芽道：“成年后仍替村里放羊，熟悉险坡和避风坳，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“那边草深，别踩下去。我吹声哨，你们跟着声音走。”",
     "mount": {
       "name": "山岭牧女行骑",
-      "description": "与陆芽同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "山路上养惯的小马，常与羊群一同在坡下吃草。",
       "dungeon": "jingyanggang",
       "contract": "luya_mount_contract"
     },
@@ -6668,7 +6668,7 @@
       "pandeng_advanced",
       "pandeng_bond"
     ],
-    "story": "打更多年，记得每户人家的门。夜巡时宁愿多走半里，也要确认队尾的灯还亮着。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "村口打更的，哪家老人耳背、哪条巷子狗多都记得。夜里巡到熟门前，会多停一停听听动静。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6680,10 +6680,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "潘灯道：“打更多年，记得每户人家的门，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“还没睡？把门闩好，后半夜要起风。”",
     "mount": {
       "name": "村口更夫行骑",
-      "description": "与潘灯同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "老马耳朵缺一小角，听惯梆子声，夜里也少受惊。",
       "dungeon": "jingyanggang",
       "contract": "pandeng_mount_contract"
     },
@@ -6719,7 +6719,7 @@
       "fengsui_advanced",
       "fengsui_bond"
     ],
-    "story": "推过赈粮车，也独自把受伤的邻居背回村。出征时把米袋垫在伤者身下，让他们少受颠簸。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "推过赈粮车，也背过走不动的邻居。上路前总要多烙几张饼，到了歇脚处再分给没带饭的人。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6731,10 +6731,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "冯穗道：“推过赈粮车，也独自把受伤的邻居背回村，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“拿去吃，还温着呢。你那点干粮留到明天。”",
     "mount": {
       "name": "粮担村妇行骑",
-      "description": "与冯穗同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "背上搭着粗布粮袋，另有一小包饼，挂在容易取的地方。",
       "dungeon": "jingyanggang",
       "contract": "fengsui_mount_contract"
     },
@@ -6770,7 +6770,7 @@
       "baoquan_advanced",
       "baoquan_bond"
     ],
-    "story": "打井时专找岩层薄处，临敌也善看盾牌缝隙。随身麻绳既能救人，也能绊住追兵。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替乡人打井，凿过石层，也下井捞过东西。粗麻绳背在肩上，打结解结都不用低头看。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6782,10 +6782,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "鲍泉道：“打井时专找岩层薄处，临敌也善看盾牌缝隙，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“绳头攥住，别松。我下去看一眼，你在上头应声。”",
     "mount": {
       "name": "打井乡人行骑",
-      "description": "与鲍泉同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "驮着盘好的井绳，铁凿另装小袋，免得磨伤马背。",
       "dungeon": "jingyanggang",
       "contract": "baoquan_mount_contract"
     },
@@ -6821,7 +6821,7 @@
       "jiangsuo_advanced",
       "jiangsuo_bond"
     ],
-    "story": "编蓑衣和鱼篓维生，落雨天也能稳稳撑船。被人请来带路后，索性留寨照看水边新兵。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "住芦荡边，编鱼篓、蓑衣换些米钱。有人来请他带水路，工具一裹，撑起船便能走。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6833,10 +6833,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "蒋蓑道：“编蓑衣和鱼篓维生，落雨天也能稳稳撑船，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“鱼篓口子别编太大。来，我给你收两道。”",
     "mount": {
       "name": "芦荡篾匠行骑",
-      "description": "与蒋蓑同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍边堆着轻巧的竹器，走动时能听见篾条相碰。",
       "dungeon": "jingyanggang",
       "contract": "jiangsuo_mount_contract"
     },
@@ -6872,7 +6872,7 @@
       "gunan_advanced",
       "gunan_bond"
     ],
-    "story": "替竹器商队守货，自制的小弩轻巧耐湿。出阵时只盯露出空隙的敌人，不轻易浪费弩矢。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替竹器商队看货，会做一张随身小弩。每晚收工先清点弩矢，再去查捆货的绳子。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6884,10 +6884,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "顾楠道：“替竹器商队守货，自制的小弩轻巧耐湿，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“少了一支箭，你看见落在哪儿了吗？天亮前得找回来。”",
     "mount": {
       "name": "竹弩护客行骑",
-      "description": "与顾楠同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "马背驮竹货多，重量不大，过门洞却要防着筐沿磕碰。",
       "dungeon": "yezhulin",
       "contract": "gunan_mount_contract"
     },
@@ -6923,7 +6923,7 @@
       "yuechuan_advanced",
       "yuechuan_bond"
     ],
-    "story": "常年摆渡急水，曾连夜运走被围的村民。愿把分舟接应的法子教给山寨舟工。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在急水渡口撑船，夜里也运过逃难的人。开船前说话不急，真到了水急处，喊一声谁都得听。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6935,10 +6935,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "岳川道：“常年摆渡急水，曾连夜运走被围的村民，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“包袱往中间挪，人别全站一边。好，坐稳了！”",
     "mount": {
       "name": "急渡艄公行骑",
-      "description": "与岳川同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "岸上歇着的褐马，鞍袋里常留替换的干衣裳。",
       "dungeon": "yezhulin",
       "contract": "yuechuan_mount_contract"
     },
@@ -6974,7 +6974,7 @@
       "jibai_advanced",
       "jibai_bond"
     ],
-    "story": "跟师父出诊多年，认药比背医书更熟。随军第一件事是检查每人包扎是否过紧。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "跟着师父出诊多年的学徒，药名记得熟，遇到生症仍要翻书。出门前最怕少带东西，药箱总查两遍。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -6986,10 +6986,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "纪白道：“跟师父出诊多年，认药比背医书更熟，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这个我拿不准，得问师父。你先别走，我马上回来。”",
     "mount": {
       "name": "行医学徒行骑",
-      "description": "与纪白同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "步子小而匀，背上的药箱分成几格，小包药材不易散。",
       "dungeon": "yezhulin",
       "contract": "jibai_mount_contract"
     },
@@ -7025,7 +7025,7 @@
       "liangxing_advanced",
       "liangxing_bond"
     ],
-    "story": "为摔伤的采石工接过许多断骨。兵乱之后带着夹板和药箱入寨，专管把伤者安全送回。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "村里的接骨郎中，常给采石工看摔伤。见到人疼得坐不住，自己也不急，先把带来的夹板摆好。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7037,10 +7037,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "梁杏道：“为摔伤的采石工接过许多断骨，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“是哪条腿摔的？先别挪，我过去看。”",
     "mount": {
       "name": "接骨村医行骑",
-      "description": "与梁杏同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍后捆着几副木夹板，棱角都用布包住了。",
       "dungeon": "yezhulin",
       "contract": "liangxing_mount_contract"
     },
@@ -7076,7 +7076,7 @@
       "chuan_grain_advanced",
       "chuan_grain_bond"
     ],
-    "story": "替粮行记账，早看透商旅欺瞒的手法。临阵借旗号和空车扰乱敌人判断。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "粮行账房，算盘和秤都使得熟。来送粮的人笑着攀交情，他仍要把袋口拆开验过。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7088,10 +7088,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "褚安道：“替粮行记账，早看透商旅欺瞒的手法，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“底下这层怎么掺了沙？先别卸，叫你掌柜来。”",
     "mount": {
       "name": "粮行账房行骑",
-      "description": "与褚安同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "跟着粮车走惯了，鞍边有只装秤砣的小皮袋。",
       "dungeon": "yezhulin",
       "contract": "chuan_grain_mount_contract"
     },
@@ -7127,7 +7127,7 @@
       "chengli_advanced",
       "chengli_bond"
     ],
-    "story": "修桥时惯于分派工序，遇险也能把散人排成一线。最不愿桥修好了，却无人能平安过桥。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "桥头做活的石匠，带人凿石、砌墩，分派起来清楚。桥面铺好后，还要亲自走几趟听脚下声响。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7139,10 +7139,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "程砺道：“修桥时惯于分派工序，遇险也能把散人排成一线，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这块翻过来，平面朝上。桥头每天走人，不能硌脚。”",
     "mount": {
       "name": "桥头石匠行骑",
-      "description": "与程砺同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "灰褐毛色，驮着锤凿时走得慢，工地上总有一处拴桩。",
       "dungeon": "yezhulin",
       "contract": "chengli_mount_contract"
     },
@@ -7178,7 +7178,7 @@
       "wenlan_advanced",
       "wenlan_bond"
     ],
-    "story": "从缝婚帐改做军旗，只盼旗号能让走散的人找到同伴。作战时用鲜明布色标出安全归路。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "原先替人绣婚帐，后来接起缝军旗的活。布料经她手，哪块还能补、哪块得换，一展开就知道。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7190,10 +7190,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "温澜道：“从缝婚帐改做军旗，只盼旗号能让走散的人找到同伴，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“旗角磨烂了，放这里吧。明早来拿，赶得及。”",
     "mount": {
       "name": "缝旗绣工行骑",
-      "description": "与温澜同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍上绑着长布卷，下雨前先把布卷罩好才动身。",
       "dungeon": "yezhulin",
       "contract": "wenlan_mount_contract"
     },
@@ -7229,7 +7229,7 @@
       "xuezhen_advanced",
       "xuezhen_bond"
     ],
-    "story": "锻过犁头，也修过断刀。见徒弟被掳，带着锤子投寨，只求众人不再任由人欺负。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在炉边打铁多年，犁头断刀都能修。徒弟被掳后收起铺子，带着锤子出来打听去向。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7241,10 +7241,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "薛砧道：“锻过犁头，也修过断刀，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“见过一个瘦高的后生没有？左手虎口有道烫疤。”",
     "mount": {
       "name": "炉边铁匠行骑",
-      "description": "与薛砧同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "马鞍旁悬着铁锤，出发前总用粗绳多绕两圈。",
       "dungeon": "yezhulin",
       "contract": "xuezhen_mount_contract"
     },
@@ -7280,7 +7280,7 @@
       "luowei_advanced",
       "luowei_bond"
     ],
-    "story": "常在漏水船底补板，越危急越沉得住气。带船工临敌时，总让几艘小船彼此照应。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "修船的木匠，漏水的舱底钻过不少。人在水里泡着也能干活，干完才想起来拧衣裳。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7292,10 +7292,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "罗苇道：“常在漏水船底补板，越危急越沉得住气，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“还漏？灯往低处照，我看看是不是旁边那道缝。”",
     "mount": {
       "name": "补船木匠行骑",
-      "description": "与罗苇同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "驮着补船的木料和麻丝，靠近码头时由人牵行。",
       "dungeon": "yezhulin",
       "contract": "luowei_mount_contract"
     },
@@ -7331,7 +7331,7 @@
       "peidi_advanced",
       "peidi_bond"
     ],
-    "story": "靠吹笛换饭钱，能听出街头每一种叫卖的远近。入寨后用不同节拍传讯，不让同伴迷失。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在街头吹笛换饭钱，哪家酒肆肯留饭、哪家只听白曲都熟。来了兴致，也会白送挑担人一段。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7343,10 +7343,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "裴笛道：“靠吹笛换饭钱，能听出街头每一种叫卖的远近，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“想听快的还是慢的？你点一支，给几个钱便成。”",
     "mount": {
       "name": "街巷笛客行骑",
-      "description": "与裴笛同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍包轻得很，装一床薄被，外加收好的笛子。",
       "dungeon": "yezhulin",
       "contract": "peidi_mount_contract"
     },
@@ -7382,7 +7382,7 @@
       "hanyue_advanced",
       "hanyue_bond"
     ],
-    "story": "替商队探关道的年轻骑手，跑得快也记得回头看。擅在敌人蓄势时抢上前截住动静。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "年轻骑手，替商队走在前面探路。头几趟总跑得太远，后来才学会隔一阵就折回来报个信。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7394,10 +7394,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "韩越道：“替商队探关道的年轻骑手，跑得快也记得回头看，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“前面塌了半边路，车过不去。走西边，得多绕两里。”",
     "mount": {
       "name": "关道趟马行骑",
-      "description": "与韩越同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "年轻栗马，腿长，鞍下汗迹还没干透又要出门。",
       "dungeon": "yezhulin",
       "contract": "hanyue_mount_contract"
     },
@@ -7433,7 +7433,7 @@
       "jitang_advanced",
       "jitang_bond"
     ],
-    "story": "给驿马治过伤，也替跌下马背的骑手裹过伤口。随队时总留一副干净鞍垫给伤者。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在马厩照看驿马，也替摔伤的骑手裹过伤。鞍垫洗了几块、哪匹少吃草，心里都有数。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7445,10 +7445,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "季棠道：“给驿马治过伤，也替跌下马背的骑手裹过伤口，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“它今早没怎么吃。今日换一匹吧，我留着瞧瞧。”",
     "mount": {
       "name": "马厩看护行骑",
-      "description": "与季棠同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "毛刷常在鞍袋里，垫布洗得干净，背上没有磨破的地方。",
       "dungeon": "yezhulin",
       "contract": "jitang_mount_contract"
     },
@@ -7484,7 +7484,7 @@
       "wuyanzhou_advanced",
       "wuyanzhou_bond"
     ],
-    "story": "替客商抄舆图，图上每一道河弯都亲自问过船家。借熟悉的岔路牵住敌军后队。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替客商抄舆图，遇到画不明白的河弯，就去问走船的人。新听来的渡口会先用淡墨点上，问准了再描。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7496,10 +7496,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "吴砚舟道：“替客商抄舆图，图上每一道河弯都亲自问过船家，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“你上回过河，是从这边还是那边？指给我看，别只说往东。”",
     "mount": {
       "name": "舆图抄手行骑",
-      "description": "与吴砚舟同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍边装着长纸筒，墨瓶封好口，另放在小袋里。",
       "dungeon": "yezhulin",
       "contract": "wuyanzhou_mount_contract"
     },
@@ -7535,7 +7535,7 @@
       "xucen_advanced",
       "xucen_bond"
     ],
-    "story": "猎兽时宁肯多等半日，也不在险处贸然追逐。带队追敌也一样，先找可靠的立足地。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在深林打猎的人，等上半日也肯，追到险坡便收脚。猎物没带回来，会老老实实说扑了空。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7547,10 +7547,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "许岑道：“猎兽时宁肯多等半日，也不在险处贸然追逐，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这坡太陡，绕下去再找。绳子留着，回程用得上。”",
     "mount": {
       "name": "深林猎户行骑",
-      "description": "与许岑同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "蹄铁磨得薄，踩林中湿叶时一步一步走得很仔细。",
       "dungeon": "yezhulin",
       "contract": "xucen_mount_contract"
     },
@@ -7586,7 +7586,7 @@
       "gaoqi_advanced",
       "gaoqi_bond"
     ],
-    "story": "退下关卡差事后替村人守桥，把旧盾重新蒙了皮。愿站在队伍前头替后方挡住冲势。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "离开关卡后替村里守桥，旧盾重新蒙了皮。有人赶车过桥，他便走在旁边看看车轮有没有压偏。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7598,10 +7598,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "高岐道：“退下关卡差事后替村人守桥，把旧盾重新蒙了皮，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“左边轮子往里收些。桥板窄，别贴着边走。”",
     "mount": {
       "name": "板桥守卒行骑",
-      "description": "与高岐同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "短身粗腿，习惯木板桥上的空响，过桥仍要牵着。",
       "dungeon": "yezhulin",
       "contract": "gaoqi_mount_contract"
     },
@@ -7637,7 +7637,7 @@
       "lince_advanced",
       "lince_bond"
     ],
-    "story": "替马帮管过草料，最懂一支队伍哪里经不起拖延。临战用虚实车辆扰敌，让同伴保存气力。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替马帮管草料，沿路哪处能补给都记在账上。碰到赶路太急的，总要问问马最后一顿何时吃的。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7649,10 +7649,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "林策道：“替马帮管过草料，最懂一支队伍哪里经不起拖延，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“草还够今晚，明早就没了。到前面村子得买两捆。”",
     "mount": {
       "name": "草料管事行骑",
-      "description": "与林策同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍后挂着料袋，停下吃草时，主人也要看一眼牙口。",
       "dungeon": "yezhulin",
       "contract": "lince_mount_contract"
     },
@@ -7688,7 +7688,7 @@
       "mengshi_advanced",
       "mengshi_bond"
     ],
-    "story": "跑过多年长途，护送的多是小户人家的薄货。遇敌先把客人送进安全处，再回身迎上。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "跑长途多年的镖客，护送的常是小户人家的几箱薄货。晚饭后还会绕着货堆走走，试试绳索松没松。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7700,10 +7700,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "孟石道：“跑过多年长途，护送的多是小户人家的薄货，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“箱子靠墙摆，我睡外头。你们明早还要赶路，先歇吧。”",
     "mount": {
       "name": "长途镖客行骑",
-      "description": "与孟石同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "走惯长路的老马，鞍边备有修蹄的小工具。",
       "dungeon": "huangnigang",
       "contract": "mengshi_mount_contract"
     },
@@ -7739,7 +7739,7 @@
       "suhe_advanced",
       "suhe_bond"
     ],
-    "story": "守着一间小草堂，熟悉沿途病痛与毒虫。她带来的药方不玄奇，却救过许多无钱求医的人。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "守一间小草堂，常替附近乡人看虫咬、风寒。柜上药包不贵，来买的人大多叫得出名字。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7751,10 +7751,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "苏荷道：“守着一间小草堂，熟悉沿途病痛与毒虫，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“上回的药吃完了么？别把旧纸包丢了，我看看写的方子。”",
     "mount": {
       "name": "草堂药师行骑",
-      "description": "与苏荷同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "药袋按用途分开挂着，远看不过一匹朴素的村马。",
       "dungeon": "huangnigang",
       "contract": "suhe_mount_contract"
     },
@@ -7790,7 +7790,7 @@
       "yandu_advanced",
       "yandu_bond"
     ],
-    "story": "走船三十年，能从漂枝判断上游水势。愿替水泊的新舟队掌舵，直到后船都平安靠岸。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "走船三十年，见了河上漂来的枯枝便要抬头看水。后船没到齐，就坐在岸边抽空补补蓑衣。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7802,10 +7802,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "严渡道：“走船三十年，能从漂枝判断上游水势，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“上游下雨了，今日别贪这段水路。靠岸歇一夜。”",
     "mount": {
       "name": "老河引航行骑",
-      "description": "与严渡同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "上岸代步的老马，鞍垫是旧蓑衣拆下来的厚草衬。",
       "dungeon": "huangnigang",
       "contract": "yandu_mount_contract"
     },
@@ -7841,7 +7841,7 @@
       "shaoqing_advanced",
       "shaoqing_bond"
     ],
-    "story": "替商旅走过许多险道，能从鸟雀惊起处看出伏兵。传讯只讲看见的事，从不拿猜测误人。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替商旅探山路，认得几处容易藏人的险口。回报时记得说清时辰，看不见的地方便直说没看见。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7853,10 +7853,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "邵青道：“替商旅走过许多险道，能从鸟雀惊起处看出伏兵，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“岭上有三个人，带没带兵器没看清。我换个地方再瞧。”",
     "mount": {
       "name": "山路探哨行骑",
-      "description": "与邵青同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "毛色贴近山土，鞍包压得扁平，不易被树枝挂住。",
       "dungeon": "huangnigang",
       "contract": "shaoqing_mount_contract"
     },
@@ -7892,7 +7892,7 @@
       "fangpu_advanced",
       "fangpu_bond"
     ],
-    "story": "常替穷军汉补缀旧甲，把每一处裂口都记在心里。临阵也总先堵住队伍的薄弱处。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替军汉修补旧甲，哪片甲叶松了、哪根皮绳要断，翻一遍就能找出。没人送活时，便低头磨锥子。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7904,10 +7904,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "方朴道：“常替穷军汉补缀旧甲，把每一处裂口都记在心里，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“胳膊伸一伸，勒不勒？不合身的甲，穿着也遭罪。”",
     "mount": {
       "name": "补甲匠师行骑",
-      "description": "与方朴同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍袋里装着皮条和铆钉，小件分袋收好，走路不叮当响。",
       "dungeon": "huangnigang",
       "contract": "fangpu_mount_contract"
     },
@@ -7943,7 +7943,7 @@
       "yinmiao_advanced",
       "yinmiao_bond"
     ],
-    "story": "管理过灾年的公仓，知道怎样把不多的粮分得长久。擅以真假粮路拖住躁进的敌人。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "管过灾年的公仓，舀粮习惯用同一把斗。夜里下了雨，天不亮便要去仓门前查漏。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -7955,10 +7955,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "殷苗道：“管理过灾年的公仓，知道怎样把不多的粮分得长久，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“先领旧粮，新到的压后头。那边墙角有潮，袋子挪开些。”",
     "mount": {
       "name": "粮仓掌事行骑",
-      "description": "与殷苗同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "常往返粮仓，鞍侧备着一块盖粮袋的厚油布。",
       "dungeon": "huangnigang",
       "contract": "yinmiao_mount_contract"
     },
@@ -7994,7 +7994,7 @@
       "leiyue_advanced",
       "leiyue_bond"
     ],
-    "story": "离开边地时只留下旧弓，不愿再为恶吏驱使。入寨教人先练稳准，再谈远射。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "从边地带回一张旧弓，不愿再替欺压人的官吏办差。教新人射箭，近靶没练准，就不肯让人换远靶。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8006,10 +8006,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "雷岳道：“离开边地时只留下旧弓，不愿再为恶吏驱使，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“箭都偏在一边了。你先松松肩，再试一支。”",
     "mount": {
       "name": "边地旧弓行骑",
-      "description": "与雷岳同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "旧军马换了轻鞍，弓袋的皮面晒得有些发白。",
       "dungeon": "huangnigang",
       "contract": "leiyue_mount_contract"
     },
@@ -8045,7 +8045,7 @@
       "caoxi_advanced",
       "caoxi_bond"
     ],
-    "story": "替乡民写诉状，却屡见公堂不理。带着未送出的文书入寨，愿为受困伙伴寻一条出路。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替乡民写诉状，写好的文书却常被衙门退回来。搬来寨中时，仍把那些没递进去的旧状纸带着。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8057,10 +8057,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "曹溪道：“替乡民写诉状，却屡见公堂不理，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“哪天借的，哪天还的？慢慢想，我替你记清楚。”",
     "mount": {
       "name": "乡约代书行骑",
-      "description": "与曹溪同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍袋一边放纸，一边放换洗衣裳，重量总不大相称。",
       "dungeon": "huangnigang",
       "contract": "caoxi_mount_contract"
     },
@@ -8096,7 +8096,7 @@
       "yinsong_advanced",
       "yinsong_bond"
     ],
-    "story": "替数村修过木栅，知道门闩要压在哪根梁上。带乡勇作战时也讲究站位和彼此照应。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替附近几村修过木栅，带工时边做边教。门闩安好后自己推几下，还要再叫个人来试。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8108,10 +8108,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "尹松道：“替数村修过木栅，知道门闩要压在哪根梁上，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这根料短了，门顶不住。去挑那根粗的来。”",
     "mount": {
       "name": "木寨工头行骑",
-      "description": "与尹松同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "惯驮长木料，出窄门时要先松开一侧绑绳。",
       "dungeon": "huangnigang",
       "contract": "yinsong_mount_contract"
     },
@@ -8147,7 +8147,7 @@
       "yeshuang_advanced",
       "yeshuang_bond"
     ],
-    "story": "没有名门师承，靠替人护送家书与银钱行走江湖。出剑简练，救回同行者比挣名声更要紧。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "没有名门师承，靠护送家书和银钱挣路费。东西交到收件人手里，总得等一句回话才肯走。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8159,10 +8159,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "叶霜道：“没有名门师承，靠替人护送家书与银钱行走江湖，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“信送到了。要捎什么话回去，我替你记着。”",
     "mount": {
       "name": "行路剑客行骑",
-      "description": "与叶霜同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "行囊小，信件贴鞍收好，走到人家门前便下马等。",
       "dungeon": "huangnigang",
       "contract": "yeshuang_mount_contract"
     },
@@ -8198,7 +8198,7 @@
       "zouheng_advanced",
       "zouheng_bond"
     ],
-    "story": "曾管一小队营兵，最痛恨拿人命冒领功劳。入寨后把合队、撤退和接应一遍遍教给新人。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "带过一小队营兵，不愿再替人冒领战功。教新人时，集合和撤回都要练，谁掉队便亲自去找。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8210,10 +8210,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "邹衡道：“曾管一小队营兵，最痛恨拿人命冒领功劳，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“出门十二个，回来怎么少一个？谁最后见过他？”",
     "mount": {
       "name": "旧营队正行骑",
-      "description": "与邹衡同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鼻梁有旧伤，退下军鞍后，改铺了一块宽厚的毡垫。",
       "dungeon": "huangnigang",
       "contract": "zouheng_mount_contract"
     },
@@ -8249,7 +8249,7 @@
       "xiongzhi_advanced",
       "xiongzhi_bond"
     ],
-    "story": "几十年巡诊练出一双稳手，见惯伤痛却不肯麻木。她的药帐不大，受伤的人总能有个位置。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在山村巡诊几十年的医婆，问起病来很有耐心，遇到逞强的也会数落几句。屋里再挤，也会挪出一张凳子让病人坐。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8261,10 +8261,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "熊芷道：“几十年巡诊练出一双稳手，见惯伤痛却不肯麻木，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“逞什么能，脸都白了。坐这里，把伤处给我看。”",
     "mount": {
       "name": "山村医婆行骑",
-      "description": "与熊芷同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "温顺矮马，上鞍不用踩得太高，药篮放在伸手够得着的地方。",
       "dungeon": "huangnigang",
       "contract": "xiongzhi_mount_contract"
     },
@@ -8300,7 +8300,7 @@
       "jiangshuo_advanced",
       "jiangshuo_bond"
     ],
-    "story": "带马群走过北路风雪，能及时发现掉队的同伴。追敌时先断对方的号令，再催马赶上。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "替人赶马群走北路，风雪里也要一匹匹数清。最挂心落在后头的小马，走一段便回头看。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8312,10 +8312,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "江朔道：“带马群走过北路风雪，能及时发现掉队的同伴，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“后头还有两匹，别关栅门。我绕过去赶。”",
     "mount": {
       "name": "北路马客行骑",
-      "description": "与江朔同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "惯走北地长路，冬毛厚，鬃下的缰绳垫着软皮。",
       "dungeon": "huangnigang",
       "contract": "jiangshuo_mount_contract"
     },
@@ -8351,7 +8351,7 @@
       "wanglu_advanced",
       "wanglu_bond"
     ],
-    "story": "自幼随家人走水路，成年后护船挡过几回河盗。擅用钩绳缠住登船者，为后队争取时间。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "跟家人走水路长大，遇过几回登船抢货的河盗。钩绳就放在舱口，平时拿来搬货，急时也趁手。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8363,10 +8363,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "汪芦道：“自幼随家人走水路，成年后护船挡过几回河盗，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“那根绳别收，我一会儿还用。货往里搬，船边留条路。”",
     "mount": {
       "name": "护舷舟娘行骑",
-      "description": "与汪芦同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "在岸上替人驮货，鞍上系着一小捆干燥的钩绳。",
       "dungeon": "huangnigang",
       "contract": "wanglu_mount_contract"
     },
@@ -8402,7 +8402,7 @@
       "yuanzhu_advanced",
       "yuanzhu_bond"
     ],
-    "story": "行脚时以修桥补路换斋饭，竹杖磨出了光。乱世中不求扬名，只愿用棍法替乡人挡一阵。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "四处行脚的僧人，替人修桥补路换一顿斋饭。竹杖用了多年，杖头磨短了，还舍不得换。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8414,10 +8414,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "袁竹道：“行脚时以修桥补路换斋饭，竹杖磨出了光，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“这几块石头我来搬。饭多煮一碗便好，不必另做菜。”",
     "mount": {
       "name": "行脚僧人行骑",
-      "description": "与袁竹同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "驮行李的瘦马，僧人常自己拄杖走，把鞍上位置空着。",
       "dungeon": "huangnigang",
       "contract": "yuanzhu_mount_contract"
     },
@@ -8453,7 +8453,7 @@
       "dongli_advanced",
       "dongli_bond"
     ],
-    "story": "没有教过禁军，只在几处乡团传过枪术。教人先学握稳枪杆，再学护住身后的家人。（本作原创江湖人物，不占一百零八星位。）",
+    "story": "在几处乡团教枪，学徒多是白天下田的庄稼汉。趁傍晚有空，便在村边划块地教他们扎刺。",
     "core": false,
     "meetMap": "tavern",
     "meetCondition": null,
@@ -8465,10 +8465,10 @@
       "hall": 1,
       "condition": null
     },
-    "dialogue": "董砺道：“没有教过禁军，只在几处乡团传过枪术，寨中若有用得着的地方，我愿出一份力。”",
+    "dialogue": "“锄地累了一天，手先歇歇。今日只练脚下，不练扎枪。”",
     "mount": {
       "name": "长枪教习行骑",
-      "description": "与董砺同行的普通脚力；可培养并解锁专属羁绊。",
+      "description": "鞍上捆着几杆木枪，出村时总有人搭手扶稳。",
       "dungeon": "huangnigang",
       "contract": "dongli_mount_contract"
     },

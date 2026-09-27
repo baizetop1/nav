@@ -16,4 +16,10 @@ legacy_backup
 .dev.vars
 .dev.vars.*
 
+# Android local builds and signing materials
+/android/.build/
 /artifacts/
+*.jks
+*.keystore
+*.p12
+signing-password.txt

@@ -433,5 +433,131 @@
       "silver": 0,
       "items": {}
     }
+  },
+  {
+    "id": "guard_pike",
+    "name": "守路长枪",
+    "type": "weapon",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 500,
+    "attribute": {
+      "attack": 44,
+      "defense": 10
+    },
+    "recipe": {
+      "silver": 220,
+      "items": {
+        "tempered_steel": 3,
+        "iron": 4,
+        "wood": 3
+      }
+    },
+    "description": "枪尾加了铁鐏，便于持枪守住狭路。攻击 +44、防御 +10；适合前排持枪者。淬炼钢由集市加工，铁匠处打造或购买。"
+  },
+  {
+    "id": "guard_helmet",
+    "name": "护额铁盔",
+    "type": "helmet",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 390,
+    "attribute": {
+      "defense": 28,
+      "hp": 80
+    },
+    "recipe": {
+      "silver": 180,
+      "items": {
+        "tempered_steel": 2,
+        "woven_linen": 1,
+        "iron": 3
+      }
+    },
+    "description": "额前覆铁，内里垫了厚麻布。防御 +28、气血 +80；适合承受首轮攻击的前排。加工淬炼钢和密织麻布后可打造。"
+  },
+  {
+    "id": "scout_coat",
+    "name": "斥候短褐",
+    "type": "armor",
+    "quality": "良品",
+    "tier": 2,
+    "price": 260,
+    "attribute": {
+      "defense": 24,
+      "speed": 10
+    },
+    "recipe": {
+      "silver": 160,
+      "items": {
+        "woven_linen": 2,
+        "cured_hide": 1,
+        "cloth": 2
+      }
+    },
+    "description": "袖口收紧，肩肘缀革，过林不易钩住枝条。防御 +24、速度 +10；适合追击与尽早施招。以密织麻布、鞣制硬革打造。"
+  },
+  {
+    "id": "sturdy_belt",
+    "name": "稳步束带",
+    "type": "belt",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 280,
+    "attribute": {
+      "hp": 220,
+      "defense": 8
+    },
+    "recipe": {
+      "silver": 170,
+      "items": {
+        "cured_hide": 2,
+        "woven_linen": 1,
+        "cloth": 3
+      }
+    },
+    "description": "宽革束腰，内侧缝了软布。气血 +220、防御 +8；适合承伤与久战。以鞣制硬革、密织麻布打造。"
+  },
+  {
+    "id": "river_boots",
+    "name": "涉水绑腿",
+    "type": "shoes",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 280,
+    "attribute": {
+      "speed": 14,
+      "hp": 110
+    },
+    "recipe": {
+      "silver": 170,
+      "items": {
+        "cured_hide": 1,
+        "woven_linen": 2,
+        "leather": 2
+      }
+    },
+    "description": "熟皮裹住鞋口，绑带一直扎到膝下。速度 +14、气血 +110；以部分速度换取更稳的生存，适合行路护送。铁匠处打造。"
+  },
+  {
+    "id": "medic_pouch",
+    "name": "行医药囊",
+    "type": "accessory",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 320,
+    "attribute": {
+      "strategy": 22,
+      "hp": 180
+    },
+    "recipe": {
+      "silver": 180,
+      "items": {
+        "woven_linen": 2,
+        "medicinal_extract": 1,
+        "herb": 3
+      }
+    },
+    "description": "布囊隔开药瓶与针包，赶路时不相互碰撞。谋略 +22、气血 +180；适合需要留在阵中的谋攻与照应人物。以麻布和药引打造。"
   }
 ]

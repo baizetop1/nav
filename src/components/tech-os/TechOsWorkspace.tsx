@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   ArrowLeft, ArrowRight, BookOpen, BrainCircuit, ChevronDown, Coffee, Compass, Database, FlaskConical,
   FolderKanban, GitCompareArrows, GitFork, HelpCircle, Inbox, LayoutDashboard, ListTree, Map as MapIcon, Menu, Milestone, Moon, Network, Sparkles, Sun, X,
@@ -26,12 +26,18 @@ import { TechOsCandidatePanel } from './TechOsCandidatePanel';
 import { TechOsRouteEnginePanel } from './TechOsRouteEnginePanel';
 import type { RouteEngineStageDraft } from './TechOsRouteEnginePanel';
 import { TechOsManualRoutePanel } from './TechOsManualRoutePanel';
-import { QuestStudyChecklist } from './QuestStudyChecklist';
+import { TechOsCourseWizard, emptyCourseWizardSession } from './TechOsCourseWizard';
+import type { CoursePackageDraft } from '../../types/tech-os-course';
+import { getBundledTechOsFiles } from '../../services/techOsRepository';
+import { loadTechOsWorkingCopy, saveTechOsWorkingCopy } from '../../services/techOsDraftStore';
+import { QuestLearningGuide } from './QuestLearningGuide';
+import { TechOsStudyResume } from './TechOsStudyResume';
+import { filterTechOsEntities, focusTechOsStudyStep, selectTechOsCollectionEntity } from '../../services/techOsWorkspaceView';
 import { TechOsLifecyclePanel } from './TechOsLifecyclePanel';
 import { indexFromTechOsFiles } from '../../services/techOsLifecycle';
 import type { TechOsSourceFile } from '../../types/tech-os';
 
-type WorkspaceView = 'dashboard' | 'learning' | 'route-engine' | 'route' | 'quest' | 'inbox' | 'knowledge' | 'lab' | 'project' | 'map' | 'backlog' | 'repository';
+type WorkspaceView = 'dashboard' | 'learning' | 'route-engine' | 'course' | 'route' | 'quest' | 'inbox' | 'knowledge' | 'lab' | 'project' | 'map' | 'backlog' | 'repository';
 
 interface TechOsWorkspaceProps {
   initialFocusedId?: string;
@@ -50,6 +56,7 @@ const NAV_ITEMS: Array<{ id: WorkspaceView; label: string; icon: LucideIcon }> =
   { id: 'dashboard', label: '总览', icon: LayoutDashboard },
   { id: 'learning', label: '学习引擎', icon: Sparkles },
   { id: 'route-engine', label: '路线引擎', icon: GitFork },
+  { id: 'course', label: '新方向 / AI 课程', icon: Sparkles },
   { id: 'route', label: '主路线', icon: Milestone },
   { id: 'quest', label: '核心问题', icon: HelpCircle },
   { id: 'inbox', label: '收件箱', icon: Inbox },
@@ -77,15 +84,19 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
   const updateIndex = (files: TechOsSourceFile[]) => { replaceTechOsIndex(indexFromTechOsFiles(files)); setRevision(value => value + 1); };
   const [activeView, setActiveView] = useState<WorkspaceView>(() => { const entity = initialFocusedId && getTechOsEntity(initialFocusedId); return entity ? viewForEntity(entity) : 'dashboard'; });
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [stepTarget, setStepTarget] = useState<{ questId: string; stepId: string } | null>(null);
   const [focusedId, setFocusedId] = useState(initialFocusedId || techOsIndex.state.currentQuestId);
   const [sessionMode, setSessionMode] = useState<TechOsMode>(techOsIndex.state.mode);
   const [captureDrafts, setCaptureDrafts] = useState<TechOsCaptureDraft[]>([]);
   const [candidateDrafts, setCandidateDrafts] = useState<RouteCandidateDraft[]>([]);
   const [routeEngineDrafts, setRouteEngineDrafts] = useState<RouteEngineStageDraft[]>([]);
+  const [courseSourceFiles, setCourseSourceFiles] = useState<TechOsSourceFile[]>([]);
+  const [courseWizard, setCourseWizard] = useState(emptyCourseWizardSession);
   const vision = getTechOsEntity(techOsIndex.state.visionId);
   const mainRoute = getTechOsEntity(techOsIndex.state.mainRouteId);
   const currentQuest = getTechOsEntity(techOsIndex.state.currentQuestId);
   const routeQuests = mainRoute ? resolveTechOsIds(getTechOsIds(mainRoute, 'quest_ids')).sort((a, b) => (getTechOsNumber(a, 'order') || 0) - (getTechOsNumber(b, 'order') || 0)) : [];
+  const questEntities = [...routeQuests, ...getTechOsEntities('quest').filter(quest => !routeQuests.some(item => item.id === quest.id)), ...getTechOsEntities('question')];
   const completedQuests = routeQuests.filter(quest => quest.status === 'completed').length;
   const progress = routeQuests.length ? Math.round(completedQuests / routeQuests.length * 100) : 0;
   const indexedInboxIds = useMemo(() => new Set(getTechOsEntities('inbox-item').flatMap(entity => [getTechOsString(entity, 'source_inbox_id'), getTechOsString(entity, 'origin_id')]).filter(Boolean)), [revision]);
@@ -97,11 +108,48 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
   const completionReview = useMemo(() => buildRouteCompletionReview(sessionIndex), [sessionIndex]);
   const nextRouteRecommendations = useMemo(() => buildNextRouteRecommendations(sessionIndex, candidateGroups, completionReview), [candidateGroups, completionReview, sessionIndex]);
   const routeEngineSourceFiles = useMemo(() => routeEngineDrafts.map(draft => draft.file), [routeEngineDrafts]);
-  const repositoryDraftFiles = useMemo(() => [...captureSourceFiles, ...candidateSourceFiles, ...routeEngineSourceFiles], [captureSourceFiles, candidateSourceFiles, routeEngineSourceFiles]);
+  const repositoryDraftFiles = useMemo(() => [...captureSourceFiles, ...candidateSourceFiles, ...routeEngineSourceFiles, ...courseSourceFiles], [captureSourceFiles, candidateSourceFiles, routeEngineSourceFiles, courseSourceFiles]);
   const stagedCandidatePaths = useMemo(() => new Set(candidateSourceFiles.map(file => file.path)), [candidateSourceFiles]);
   const stagedRouteEnginePaths = useMemo(() => new Set(routeEngineSourceFiles.map(file => file.path)), [routeEngineSourceFiles]);
 
+  const currentReservedFiles = () => {
+    const bundled = getBundledTechOsFiles(techOsIndex);
+    let saved = bundled;
+    try { saved = loadTechOsWorkingCopy(repository, bundled).files; } catch { /* No storage permission: retain the current in-memory baseline. */ }
+    // Saved Repository edits take precedence over the original in-memory seed.
+    const files = new Map(saved.map(file => [file.path, file]));
+    repositoryDraftFiles.forEach(file => { if (!files.has(file.path)) files.set(file.path, file); });
+    return [...files.values()];
+  };
+  useEffect(() => {
+    if (!courseWizard.text) return;
+    const protect = (event: BeforeUnloadEvent) => { event.preventDefault(); event.returnValue = ''; };
+    window.addEventListener('beforeunload', protect);
+    return () => window.removeEventListener('beforeunload', protect);
+  }, [courseWizard.text]);
+  const closeWorkspace = () => {
+    if (courseWizard.text && !window.confirm('新方向向导中还有会话草稿，离开工作台将丢失。请先下载课程包或加入 Repository。仍然离开吗？')) return;
+    onClose();
+  };
+  const stageCoursePackage = (draft: CoursePackageDraft) => {
+    const saved = loadTechOsWorkingCopy(repository, getBundledTechOsFiles(techOsIndex));
+    const existing = new Map(saved.files.map(file => [file.path, file]));
+    repositoryDraftFiles.forEach(file => { if (!existing.has(file.path)) existing.set(file.path, file); });
+    const reserved = [...existing.values()];
+    if (draft.files.some(file => reserved.some(existing => existing.path === file.path))) throw new Error('其他草稿占用了课程文件位置，请重新打开新方向向导生成预览。原有内容未覆盖。');
+    const files = [...reserved, ...draft.files];
+    if (files.length > 500) throw new Error('本机工作副本文件数已达上限，请先整理仓库；课程原文仍保留，可下载备份。');
+    indexFromTechOsFiles(files);
+    // Do not clear the only editable copy until local persistence actually succeeds.
+    // Keep the remote baseline and unresolved conflicts exactly as they were.
+    if (!saveTechOsWorkingCopy(repository, { ...saved, files })) throw new Error('本机保存失败（空间不足或存储受限）。课程原文仍保留，请先下载课程包，再处理存储问题。');
+    setCourseSourceFiles(current => [...current, ...draft.files]);
+    setCourseWizard(emptyCourseWizardSession());
+    navigate('repository');
+  };
+
   const navigate = (view: WorkspaceView, focusId?: string) => {
+    setStepTarget(null);
     setActiveView(view);
     if (focusId) setFocusedId(focusId);
     setMobileNavOpen(false);
@@ -109,11 +157,32 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
   };
 
   const focusEntity = (id: string) => {
+    setStepTarget(null);
     const entity = getTechOsEntity(id);
     setFocusedId(id);
     if (entity) setActiveView(viewForEntity(entity));
+    setMobileNavOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const resumeStudy = (questId: string, stepId?: string) => {
+    navigate('quest', questId);
+    if (stepId) setStepTarget({ questId, stepId });
+  };
+  useEffect(() => {
+    if (!stepTarget || activeView !== 'quest' || focusedId !== stepTarget.questId) return;
+    const frame = requestAnimationFrame(() => {
+      focusTechOsStudyStep(stepTarget.questId, stepTarget.stepId);
+      setStepTarget(null);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [activeView, focusedId, stepTarget, revision]);
+  useEffect(() => {
+    if (!mobileNavOpen) return;
+    const keydown = (event: KeyboardEvent) => { if (event.key === 'Escape') setMobileNavOpen(false); };
+    window.addEventListener('keydown', keydown);
+    return () => window.removeEventListener('keydown', keydown);
+  }, [mobileNavOpen]);
 
   const stageCapture = (item: InboxItem) => {
     const capture = createTechOsCaptureDraft(item);
@@ -142,6 +211,7 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
     setCaptureDrafts(current => current.filter(capture => !committed.has(capture.file.path)));
     setCandidateDrafts(current => current.filter(candidate => !committed.has(candidate.file.path)));
     setRouteEngineDrafts(current => current.filter(draft => !committed.has(draft.file.path)));
+    setCourseSourceFiles(current => current.filter(file => !committed.has(file.path)));
   };
 
   const stageCandidate = (draft: RouteCandidateDraft) => {
@@ -154,7 +224,7 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
   };
 
   const stageRouteEngineDraft = (draft: RouteEngineStageDraft) => {
-    const transientCollision = [...captureSourceFiles, ...candidateSourceFiles].some(file => file.path === draft.file.path);
+    const transientCollision = [...captureSourceFiles, ...candidateSourceFiles, ...courseSourceFiles].some(file => file.path === draft.file.path);
     const pendingCollision = routeEngineDrafts.some(candidate => candidate.key !== draft.key && candidate.file.path === draft.file.path);
     if (transientCollision || pendingCollision) {
       alert('检测到 Route Engine 草稿路径冲突，已停止加入 Repository。');
@@ -176,7 +246,7 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
 
   return <div className="min-h-screen bg-[#dce6e1] text-[#173b41] dark:bg-[#07191d] dark:text-[#ecebe4]">
     <div className="fixed inset-0 bg-[radial-gradient(circle_at_80%_0%,rgba(95,143,132,0.18),transparent_35%),radial-gradient(circle_at_0%_100%,rgba(201,169,107,0.12),transparent_32%)]" aria-hidden="true" />
-    <aside className={`fixed inset-y-0 left-0 z-50 flex w-72 flex-col border-r border-white/60 bg-[#edf2eb]/95 p-5 shadow-2xl backdrop-blur-xl transition-transform dark:border-[#c9a96b]/12 dark:bg-[#0b252b]/95 lg:translate-x-0 ${mobileNavOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+    <aside id="tech-os-sidebar" aria-label="Tech OS 侧栏" className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[88vw] flex-col overflow-y-auto overscroll-contain border-r border-white/60 bg-[#edf2eb]/95 p-5 shadow-2xl backdrop-blur-xl transition-transform dark:border-[#c9a96b]/12 dark:bg-[#0b252b]/95 lg:flex lg:translate-x-0 ${mobileNavOpen ? 'flex translate-x-0' : 'hidden -translate-x-full'}`}>
       <div className="mb-7 flex items-center justify-between">
         <button type="button" onClick={() => navigate('dashboard')} className="flex items-center gap-3 text-left">
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#356b66] text-white shadow-lg dark:bg-[#c9a96b] dark:text-[#102c33]"><BrainCircuit size={23} /></span>
@@ -192,7 +262,7 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
       </nav>
       <div className="mt-auto space-y-2 border-t border-[#5f8f84]/15 pt-4 dark:border-[#c9a96b]/12">
         <p className="px-3 text-[11px] leading-5 text-[#718986]">当前加载的数据 · 更新于 {techOsIndex.sourceUpdated}<br />候选路线仅在确认后加入本机草稿。</p>
-        <button type="button" onClick={onClose} className="baize-button-secondary w-full"><ArrowLeft size={16} />返回导航</button>
+        <button type="button" onClick={closeWorkspace} className="baize-button-secondary w-full"><ArrowLeft size={16} />返回导航</button>
       </div>
     </aside>
 
@@ -201,7 +271,7 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
     <main className="relative z-10 min-h-screen lg:ml-72">
       <header className="sticky top-0 z-30 border-b border-white/60 bg-[#edf2eb]/75 px-4 py-3 backdrop-blur-xl dark:border-[#c9a96b]/10 dark:bg-[#07191d]/75 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl items-center gap-3">
-          <button type="button" className="baize-icon-button lg:hidden" onClick={() => setMobileNavOpen(true)} aria-label="打开 Tech OS 导航"><Menu size={21} /></button>
+          <button type="button" className="baize-icon-button lg:hidden" onClick={() => setMobileNavOpen(true)} aria-label="打开 Tech OS 导航" aria-expanded={mobileNavOpen} aria-controls="tech-os-sidebar"><Menu size={21} /></button>
           <div className="min-w-0 flex-1"><p className="truncate text-xs font-semibold uppercase tracking-[0.16em] text-[#64807c] dark:text-[#b7a36f]">{NAV_ITEMS.find(item => item.id === activeView)?.label}</p><h1 className="truncate text-lg font-bold">{activeView === 'dashboard' ? vision?.title : getViewTitle(activeView)}</h1></div>
           <label className="relative hidden shrink-0 sm:block" title="只切换当前工作台会话；不会修改 state.yml">
             <span className="sr-only">当前工作模式</span>
@@ -212,16 +282,17 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
           </label>
           <button type="button" className="baize-icon-button" onClick={onToggleTheme} aria-label={isDark ? '切换到浅色主题' : '切换到深色主题'}>{isDark ? <Sun size={19} /> : <Moon size={19} />}</button>
           <button type="button" className="baize-button-secondary shrink-0 px-3" data-rest-launcher onClick={onRest} aria-label="休息一下"><Coffee size={19} /><span className="hidden sm:inline">休息一下</span></button>
-          <button type="button" className="baize-icon-button" onClick={onClose} aria-label="返回导航"><X size={20} /></button>
+          <button type="button" className="baize-icon-button" onClick={closeWorkspace} aria-label="返回导航"><X size={20} /></button>
         </div>
       </header>
 
       <div className="mx-auto max-w-7xl p-4 pb-16 sm:p-6 lg:p-8">
-        {activeView === 'dashboard' && <Dashboard vision={vision} mainRoute={mainRoute} currentQuest={currentQuest} routeQuests={routeQuests} progress={progress} inboxCount={inboxCount} nextAction={learningEngine.nextAction} activeMode={sessionMode} onModeChange={setSessionMode} onNavigate={navigate} onOpenLearningAction={openLearningAction} />}
+        {activeView === 'dashboard' && <Dashboard vision={vision} mainRoute={mainRoute} currentQuest={currentQuest} routeQuests={routeQuests} progress={progress} inboxCount={inboxCount} nextAction={learningEngine.nextAction} activeMode={sessionMode} onModeChange={setSessionMode} onNavigate={navigate} onResume={resumeStudy} onOpenLearningAction={openLearningAction} />}
         {activeView === 'learning' && <div className="space-y-6"><TechOsLearningPanel engine={learningEngine} onOpenAction={openLearningAction} onOpenSource={openLearningSource} /><TechOsCandidatePanel groups={candidateGroups} stagedPaths={stagedCandidatePaths} created={techOsIndex.sourceUpdated} onOpenSource={openLearningSource} onOpenRepository={() => navigate('repository')} onStage={stageCandidate} /></div>}
         {activeView === 'route-engine' && <div className="space-y-6"><TechOsRouteEnginePanel review={completionReview} recommendations={nextRouteRecommendations} stagedPaths={stagedRouteEnginePaths} created={techOsIndex.sourceUpdated} onOpenSource={openLearningSource} onOpenRepository={() => navigate('repository')} onStage={stageRouteEngineDraft} /><TechOsManualRoutePanel reservedRouteIds={nextRouteRecommendations.map(item => item.routeId)} stagedPaths={stagedRouteEnginePaths} created={techOsIndex.sourceUpdated} onOpenRepository={() => navigate('repository')} onStage={stageRouteEngineDraft} /></div>}
         {activeView === 'route' && <RouteView mainRoute={mainRoute} quests={routeQuests} progress={progress} onFocus={focusEntity} />}
-        {activeView === 'quest' && <div className="space-y-6"><EntityCollection title="路线核心问题" description="先学习和打卡，再在下方填写结论与证据，确认正式完成。" entities={routeQuests} focusedId={focusedId} onFocus={focusEntity} /><TechOsLifecyclePanel target={repository} onUpdated={updateIndex} /></div>}
+        {activeView === 'course' && <TechOsCourseWizard index={sessionIndex} reservedFiles={currentReservedFiles()} session={courseWizard} onChange={setCourseWizard} onStage={stageCoursePackage} />}
+        {activeView === 'quest' && <div className="space-y-6"><EntityCollection title="核心任务与开放问题" description="主路线任务优先显示；打卡只记个人进度，正式完成仍需结论与证据。" entities={questEntities} focusedId={focusedId} onFocus={focusEntity} /><TechOsLifecyclePanel target={repository} onUpdated={updateIndex} /></div>}
         {activeView === 'inbox' && <InboxView items={inboxItems} indexedInboxIds={indexedInboxIds} captureDrafts={captureDrafts} onStage={stageCapture} onOpenInbox={onOpenInbox} onOpenRepository={() => navigate('repository')} />}
         {activeView === 'knowledge' && <EntityCollection title="知识库" description="技术地图表达我知道什么；L2/L3 必须有真实证据。" entities={getTechOsEntities('knowledge')} focusedId={focusedId} onFocus={focusEntity} />}
         {activeView === 'lab' && <EntityCollection title="实验" description="实验状态完全来自记录；planned 不会被界面展示为完成。" entities={getTechOsEntities('lab')} focusedId={focusedId} onFocus={focusEntity} />}
@@ -245,10 +316,11 @@ interface DashboardProps {
   activeMode: TechOsMode;
   onModeChange: (mode: TechOsMode) => void;
   onNavigate: (view: WorkspaceView, focusId?: string) => void;
+  onResume: (questId: string, stepId?: string) => void;
   onOpenLearningAction: (action: LearningAction) => void;
 }
 
-function Dashboard({ vision, mainRoute, currentQuest, routeQuests, progress, inboxCount, nextAction, activeMode, onModeChange, onNavigate, onOpenLearningAction }: DashboardProps) {
+function Dashboard({ vision, mainRoute, currentQuest, routeQuests, progress, inboxCount, nextAction, activeMode, onModeChange, onNavigate, onResume, onOpenLearningAction }: DashboardProps) {
   const stats = [
     { label: '知识', value: getTechOsEntities('knowledge').length, icon: Database, view: 'knowledge' as const },
     { label: '实验', value: getTechOsEntities('lab').length, icon: FlaskConical, view: 'lab' as const },
@@ -264,7 +336,7 @@ function Dashboard({ vision, mainRoute, currentQuest, routeQuests, progress, inb
     </section>
 
     <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-      <section className="baize-panel rounded-2xl p-5 sm:p-6"><div className="flex items-start justify-between gap-4"><div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64807c]">当前核心问题</p><h2 className="mt-2 text-xl font-bold">{currentQuest?.title || '没有进行中的核心问题'}</h2></div><span className="rounded-full bg-[#5f8f84]/10 px-3 py-1 text-xs font-semibold text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{currentQuest?.id}</span></div>{currentQuest && <><p className="mt-4 line-clamp-3 text-sm leading-7 text-[#64807c] dark:text-[#b8c6c1]">{summaryFromBody(currentQuest.body)}</p><button type="button" className="baize-button-primary mt-5" onClick={() => onNavigate('quest', currentQuest.id)}>继续探索<ArrowRight size={16} /></button></>}</section>
+      <TechOsStudyResume quest={currentQuest} onResume={onResume} />
       <section className="baize-panel rounded-2xl p-5 sm:p-6"><div className="flex items-center justify-between gap-3"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64807c]">今日模式</p><span className="text-[10px] text-[#718986]">仅当前会话</span></div><div className="mt-4 space-y-2">{Object.entries(MODE_LABELS).map(([mode, config]) => <button key={mode} type="button" aria-pressed={activeMode === mode} onClick={() => onModeChange(mode as TechOsMode)} className={`w-full rounded-xl border p-3 text-left transition ${activeMode === mode ? 'border-[#5f8f84]/40 bg-[#5f8f84]/10 dark:border-[#c9a96b]/35 dark:bg-[#c9a96b]/8' : 'border-[#5f8f84]/10 hover:border-[#5f8f84]/30 dark:border-[#c9a96b]/10'}`}><span className="flex items-center gap-2"><span className={`h-2 w-2 rounded-full ${activeMode === mode ? 'bg-[#356b66] dark:bg-[#c9a96b]' : 'bg-[#9fb2ad]'}`} /><strong className="text-sm">{config.label}</strong>{activeMode === mode && <span className="ml-auto text-[10px] font-semibold tracking-wider text-[#64807c]">当前</span>}</span><span className="mt-1 block pl-4 text-xs text-[#718986]">{config.detail}</span></button>)}</div></section>
     </div>
 
@@ -282,14 +354,25 @@ function RouteView({ mainRoute, quests, progress, onFocus }: { mainRoute?: TechO
 }
 
 function EntityCollection({ title, description, entities, focusedId, onFocus }: { title: string; description: string; entities: TechOsEntity[]; focusedId: string; onFocus: (id: string) => void }) {
-  const selected = getTechOsEntity(focusedId) || entities[0];
-  if (!selected) return <EmptyState title={`暂无 ${title}`} detail="创建并通过 T1 校验后会自动出现在这里。" />;
-  return <div className="grid gap-6 xl:grid-cols-[22rem_minmax(0,1fr)]"><section className="baize-panel self-start rounded-2xl p-4 xl:sticky xl:top-24"><h2 className="px-2 text-lg font-bold">{title}</h2><p className="px-2 pt-1 text-xs leading-5 text-[#718986]">{description}</p><div className="mt-4 max-h-[65vh] space-y-2 overflow-y-auto pr-1">{entities.map(entity => <EntityListButton key={entity.id} entity={entity} active={selected.id === entity.id} onClick={() => onFocus(entity.id)} />)}</div></section><EntityViewer entity={selected} onFocus={onFocus} /></div>;
+  const [query, setQuery] = useState('');
+  const [status, setStatus] = useState('all');
+  useEffect(() => { setQuery(''); setStatus('all'); }, [title]);
+  const filtered = useMemo(() => filterTechOsEntities(entities, query, status), [entities, query, status]);
+  const selected = selectTechOsCollectionEntity(filtered, focusedId);
+  const statuses = [...new Set(entities.map(entity => entity.status))].sort();
+  return <div className="grid gap-6 xl:grid-cols-[22rem_minmax(0,1fr)]">
+    <section className="baize-panel min-w-0 self-start rounded-2xl p-4 xl:sticky xl:top-24" aria-label={`${title}列表`}>
+      <h2 className="px-2 text-lg font-bold">{title}</h2><p className="px-2 pt-1 text-xs leading-5 text-[#718986]">{description}</p>
+      <div className="mt-4 space-y-2"><input className="baize-input" aria-label="搜索当前对象" maxLength={200} placeholder="搜索标题、标签、ID 或正文" value={query} onChange={event => setQuery(event.target.value)} /><select className="baize-input" aria-label="筛选对象状态" value={status} onChange={event => setStatus(event.target.value)}><option value="all">全部状态</option>{statuses.map(value => <option key={value} value={value}>{statusLabel(value)}</option>)}</select><p className="text-xs text-[#718986]" role="status">显示 {filtered.length} / {entities.length} 项</p>{(query || status !== 'all') && <button type="button" className="text-xs underline" onClick={() => { setQuery(''); setStatus('all'); }}>清除筛选</button>}</div>
+      <div className="mt-4 max-h-[65vh] space-y-2 overflow-y-auto pr-1">{filtered.map(entity => <EntityListButton key={entity.id} entity={entity} active={selected?.id === entity.id} onClick={() => onFocus(entity.id)} />)}</div>
+    </section>
+    {selected ? <EntityViewer key={selected.id} entity={selected} onFocus={id => { setQuery(''); setStatus('all'); onFocus(id); }} /> : <EmptyState title={entities.length ? '没有匹配的对象' : `暂无 ${title}`} detail={entities.length ? '试试其他关键词，或清除筛选查看全部。' : '创建并通过校验后会显示在这里。'} />}
+  </div>;
 }
 
 function EntityViewer({ entity, onFocus }: { entity: TechOsEntity; onFocus: (id: string) => void }) {
   const relations = getTechOsRelations(entity);
-  return <article className="baize-panel min-w-0 rounded-2xl p-5 sm:p-7"><header className="border-b border-[#5f8f84]/15 pb-5 dark:border-[#c9a96b]/12"><div className="flex flex-wrap items-center gap-2 text-xs"><span className="rounded-full bg-[#5f8f84]/10 px-2.5 py-1 font-semibold text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{KIND_LABELS[entity.kind]}</span><span className="text-[#718986]">{entity.id}</span><span className="text-[#718986]">·</span><span className="text-[#718986]">{statusLabel(entity.status)}</span>{entity.kind === 'knowledge' && <span className="rounded-full border border-[#5f8f84]/20 px-2 py-0.5 font-semibold">{getTechOsString(entity, 'level')}</span>}</div><h2 className="mt-3 text-2xl font-bold leading-tight">{entity.title}</h2><div className="mt-4 flex flex-wrap gap-2">{entity.tags.map(tag => <span key={tag} className="rounded-lg bg-[#5f8f84]/8 px-2 py-1 text-[11px] text-[#64807c] dark:bg-[#c9a96b]/8 dark:text-[#b8c6c1]">#{tag}</span>)}</div></header><div className="py-6">{entity.kind === 'quest' && <QuestStudyChecklist key={entity.id} quest={entity} />}<MarkdownView body={entity.body} /></div>{relations.length > 0 && <footer className="border-t border-[#5f8f84]/15 pt-5 dark:border-[#c9a96b]/12"><p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#718986]">相关对象</p><div className="flex flex-wrap gap-2">{relations.map(relation => <button key={relation.id} type="button" onClick={() => onFocus(relation.id)} className="baize-chip inline-flex items-center gap-1.5"><span>{relation.id}</span><ArrowRight size={12} /></button>)}</div></footer>}<p className="mt-6 break-all text-[10px] text-[#8aa09c]">来源：{entity.sourcePath}</p></article>;
+  return <article aria-label="对象详情" data-entity-id={entity.id} className="baize-panel min-w-0 rounded-2xl p-5 sm:p-7"><header className="border-b border-[#5f8f84]/15 pb-5 dark:border-[#c9a96b]/12"><div className="flex flex-wrap items-center gap-2 text-xs"><span className="rounded-full bg-[#5f8f84]/10 px-2.5 py-1 font-semibold text-[#356b66] dark:bg-[#c9a96b]/10 dark:text-[#e1ca91]">{KIND_LABELS[entity.kind]}</span><span className="text-[#718986]">{entity.id}</span><span className="text-[#718986]">·</span><span className="text-[#718986]">{statusLabel(entity.status)}</span>{entity.kind === 'knowledge' && <span className="rounded-full border border-[#5f8f84]/20 px-2 py-0.5 font-semibold">{getTechOsString(entity, 'level')}</span>}</div><h2 className="mt-3 text-2xl font-bold leading-tight">{entity.title}</h2><div className="mt-4 flex flex-wrap gap-2">{entity.tags.map(tag => <span key={tag} className="rounded-lg bg-[#5f8f84]/8 px-2 py-1 text-[11px] text-[#64807c] dark:bg-[#c9a96b]/8 dark:text-[#b8c6c1]">#{tag}</span>)}</div></header><div className="py-6">{entity.kind === 'quest' ? <QuestLearningGuide key={entity.id} quest={entity} /> : <MarkdownView body={entity.body} anchorPrefix={entity.id} />}</div>{relations.length > 0 && <footer className="border-t border-[#5f8f84]/15 pt-5 dark:border-[#c9a96b]/12"><p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#718986]">相关对象</p><div className="flex flex-wrap gap-2">{relations.map(relation => <button key={relation.id} type="button" onClick={() => onFocus(relation.id)} className="baize-chip inline-flex items-center gap-1.5"><span>{relation.id}</span><ArrowRight size={12} /></button>)}</div></footer>}<p className="mt-6 break-all text-[10px] text-[#8aa09c]">来源：{entity.sourcePath}</p></article>;
 }
 
 function TechMapView({ focusedId, onFocus }: { focusedId: string; onFocus: (id: string) => void }) {
@@ -341,10 +424,6 @@ function EmptyState({ title, detail }: { title: string; detail: string }) {
   return <section className="baize-panel rounded-2xl px-6 py-16 text-center"><Database size={28} className="mx-auto text-[#8aa09c]" /><h2 className="mt-4 text-xl font-bold">{title}</h2><p className="mt-2 text-sm text-[#718986]">{detail}</p></section>;
 }
 
-function summaryFromBody(body: string): string {
-  return body.split('\n').map(line => line.trim()).filter(line => line && !line.startsWith('#') && !line.startsWith('```'))[0] || '等待补充当前理解。';
-}
-
 function captureItemTitle(item: InboxItem): string {
   if (item.title) return item.title;
   if (item.type === 'link' && item.url) return new URL(item.url).hostname;
@@ -353,7 +432,7 @@ function captureItemTitle(item: InboxItem): string {
 
 function statusLabel(status: string): string {
   const labels: Record<string, string> = {
-    active: '进行中', backlog: '未开始', completed: '已完成', skipped: '已跳过', archived: '已归档', seed: '种子', candidate: '候选', planned: '计划中', draft: '草稿', open: '待回答', answered: '已回答', unknown: '未知', learning: '学习中', understood: '已理解', building: '构建中', paused: '已暂停', maintained: '维护中', proposed: '待确认', rejected: '不采用', 'not-interested': '不感兴趣', saved: '稍后处理', reviewed: '已复盘', indexed: '已收录', processed: '已处理',
+    active: '进行中', backlog: '未开始', completed: '已完成', skipped: '已跳过', archived: '已归档', seed: '种子', candidate: '候选', planned: '计划中', draft: '草稿', open: '待回答', answered: '已回答', deferred: '暂缓', converted: '已转化', stable: '已稳定', idea: '想法', running: '进行中', unknown: '未知', learning: '学习中', understood: '已理解', building: '构建中', paused: '已暂停', maintained: '维护中', proposed: '待确认', rejected: '不采用', 'not-interested': '不感兴趣', saved: '稍后处理', reviewed: '已复盘', indexed: '已收录', processed: '已处理',
   };
   return labels[status] || status;
 }

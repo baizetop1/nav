@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="data:,">
+  <title>Tech OS · 导航实验页</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.75; color: #173b41; background: #edf2eb; }
+    body { max-width: 850px; padding: 24px; margin: auto; } h1 { line-height: 1.3; } h2 { font-size: 1.1rem; }
+    section { background: #fff9; border: 1px solid #5f8f8433; border-radius: 16px; padding: 20px; margin: 20px 0; }
+    a { color: #28685e; text-underline-offset: 3px; } li { margin: 12px 0; }
+    button, input { font: inherit; border: 1px solid #5f8f8455; border-radius: 8px; padding: 9px 12px; max-width: 100%; box-sizing: border-box; }
+    button { cursor: pointer; } input { background: transparent; } form { display: flex; flex-wrap: wrap; gap: 10px; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; } dt { font-weight: 700; } dd { margin: 0 0 10px; overflow-wrap: anywhere; }
+    .note { color: #55706d; font-size: .9rem; } :focus-visible { outline: 3px solid #9c7b3d; outline-offset: 4px; }
+    @media (prefers-color-scheme: dark) { :root { color: #e8eee9; background: #102c33; } section { background: #173b41; } a { color: #e1ca91; } .note { color: #b8c6c1; } }
+  </style>
+</head>
+<body>
+  <h1>导航实验页</h1>
+  <p>先预测，再操作，再看证据。本页是静态 HTML，不调用外部 API、不注册 Service Worker、不保存输入。</p>
+  <p class="note">请使用电脑 Chrome / Edge 的开发者工具 → Network，打开 Preserve log（保留日志），选择 Doc / Document。Network 没有新行不等于没有任何浏览器活动；请同时看地址、缓存和历史恢复。</p>
+  <section aria-labelledby="controls-title">
+    <h2 id="controls-title">1. 比较导航入口</h2>
+    <ul>
+      <li><a href="?visit=link">普通同源链接：?visit=link</a></li>
+      <li><a href="?topic=network&amp;sample=1">改变查询参数：?topic=network&amp;sample=1</a></li>
+      <li><a href="#section-two">只改变 fragment：#section-two</a></li>
+    </ul>
+    <form method="get" action="navigation.html">
+      <label for="keyword">GET 表单关键词（只填测试文字）</label>
+      <input id="keyword" name="keyword" value="hello network" maxlength="80">
+      <button type="submit">提交 GET 表单</button>
+    </form>
+    <p class="note">表单内容会进入地址栏、浏览历史，服务端也可能记录查询串；请勿输入密码、Token 或隐私。刷新与前进后退请使用浏览器自己的按钮。</p>
+  </section>
+  <section aria-labelledby="url-title">
+    <h2 id="url-title">2. 当前 URL（浏览器解析结果）</h2>
+    <dl id="url-fields"></dl>
+    <p class="note">fragment 可由此页脚本读取，但不包含在 HTTP 请求目标中。页面没有拦截链接/表单，也没有调用 pushState。</p>
+  </section>
+  <section aria-labelledby="observation-title">
+    <h2 id="observation-title">3. 辅助观察，不代替 Network 证据</h2>
+    <pre id="navigation-info"></pre>
+    <p class="note">navigation.type 只描述当前文档的加载类型，并不能证明“刚才发出了 HTTP 请求”。锚点变化通常沿用当前文档。缓存、连接复用、bfcache 和上级 Service Worker 都可能改变现象。此页不保证 302、304、TCP/TLS 新连接或离线可用。</p>
+    <button id="copy-template" type="button">复制空白观察表</button>
+    <p id="copy-status" role="status"></p>
+    <pre id="record-template">操作 | 操作前预测 | URL变化 | 新Document行 | Status/Size/Timing证据 | 我的解释
+普通链接 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写
+改query | 待填写 | 待填写 | 待填写 | 待填写 | 待填写
+改fragment | 待填写 | 待填写 | 待填写 | 待填写 | 待填写
+GET表单 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写
+刷新/后退 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写</pre>
+  </section>
+  <section id="section-two" tabindex="-1">
+    <h2>4. 锚点目标：section-two</h2>
+    <p>到达这里时，先检查地址栏里的 #section-two，再检查有没有新的 Document 行。不要仅凭页面滚动就认定发生了网络请求。</p>
+    <a href="../#/tech-os">返回 Tech OS</a>
+  </section>
+  <noscript>本页交互链接与表单无需 JavaScript，但字段解析和辅助信息需要启用 JavaScript。</noscript>
+  <script src="navigation.js"></script>
+</body>
+</html>

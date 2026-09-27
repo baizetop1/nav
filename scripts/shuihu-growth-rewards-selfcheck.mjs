@@ -1,3 +1,5 @@
+import {lateBattleFixtures,resupply as lateResupply,travel as lateTravel,conduct as lateConduct} from './shuihu-late-mainline-selfcheck.mjs';
+import {fixture as seventhFixture,ready as seventhReady,fight as seventhFight,travel as seventhTravel,story as seventhStory} from './shuihu-volume-seven-selfcheck.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
@@ -24,8 +26,22 @@ function fixture(level=35){
  return s;
 }
 const act=(s,type,a={})=>{const n=dispatch(d,s,{type,...a},s.clock);assert.deepEqual(gameSnapshot(n,d),n);return n;};
-function fight(s){for(let t=0;t<180&&!s.battle.outcome;t++)advanceBattle(s,d,1000);assert.equal(s.battle.outcome,'victory',s.battle.context.id);return s;}
+function fight(s){if(s.battle.mainline){const result=lateConduct(s,{reloadAt:Infinity});assert.equal(result.s.battle.outcome,'victory',JSON.stringify(result.report));return result.s;}for(let t=0;t<180&&!s.battle.outcome;t++)advanceBattle(s,d,1000);assert.equal(s.battle.outcome,'victory',s.battle.context.id);return s;}
+let lateCheckpoints;
 function chapter(id,level=35){
+ if(/^v(?:8|9|10|11|12)_/.test(id)){
+  lateCheckpoints??=lateBattleFixtures();let s=structuredClone(lateCheckpoints[id]);
+  for(const hero of s.team){s.heroes[hero].level=hero===s.team[0]?CHAPTER_MISSIONS[id].level:35;s.heroes[hero].exp=0;}
+  s.heroes.huarong={status:'owned',level:5,exp:70};s=lateResupply(s,id);s=lateTravel(s,d.by.stories[id].map);return {s,action:{type:'chapterBattle',id,choice:'fight'}};
+ }
+ if(id.startsWith('v7_')){
+  const target=Math.max(level,CHAPTER_MISSIONS[id].level);let s;
+  if(id==='v7_probe'){s=seventhFixture({level:target,quality:2});s=seventhStory(seventhTravel(s,'v7_camp'),'v7_report');s=seventhStory(seventhTravel(s,'v7_watch'),'v7_scout');}
+  else{s=seventhReady('hook',{level:target,quality:2});if(id==='v7_final')s=seventhFight(s,'v7_break');}
+  s=seventhTravel(s,d.by.stories[id].map);for(const hero of s.team){s.heroes[hero].level=target;s.heroes[hero].exp=0;}
+  s.heroes.huarong={status:'owned',level:5,exp:70};return {s,action:{type:'chapterBattle',id,choice:'fight'}};
+ }
+
  const s=fixture(level),m=d.by.stories[id];
  // Isolate each real battle at a valid active step; narrative paths are covered by the volume suites.
  for(const flag of ['volume_complete','volume_two_complete','volume_three_complete','volume_four_complete','volume_five_complete','v4_erlong_allied','v4_erlong_medics','v4_taohua_allied','v4_taohua_engines','v4_baihu_allied','v4_baihu_initiative'])s.progress.flags[flag]=true;
@@ -36,9 +52,9 @@ const table=[];
 for(const [id,m] of Object.entries(CHAPTER_MISSIONS)){
  const {s,action}=chapter(id),q=prepareSortie(s,d,action),raw=JSON.stringify(s);assert.equal(q.reason,'',id);assert.equal(JSON.stringify(s),raw);
  const expected=experienceToNext(m.level);assert.equal(battleExperience(q.battle),expected);assert.match(sortieDialog(s,d,action,null,q,String,()=>''),new RegExp('每名参战好汉 '+expected+' 经验'));
- let active=act(s,action.type,action);active=importSave(exportSave(active,{id:1,name:'成长结算战中'},d),d).state;fight(active);const done=act(active,'finishBattle');
- for(const hero of s.team)assert.equal(totalExperience(done.heroes[hero])-totalExperience(s.heroes[hero]),expected,id+' '+hero);
- assert.deepEqual(done.heroes.huarong,s.heroes.huarong,'Only participants earn XP');assert.equal(gains(active,done,d).find(r=>r.name==='林冲 · 历练').amount,expected);
+ let active=act(s,action.type,action);active=importSave(exportSave(active,{id:1,name:'成长结算战中'},d),d).state;active=fight(active);const done=act(active,'finishBattle');
+ for(const hero of s.team){const earned=Math.min(expected,totalExperience({level:40,exp:0})-totalExperience(s.heroes[hero]));assert.equal(totalExperience(done.heroes[hero])-totalExperience(s.heroes[hero]),earned,id+' '+hero);assert.equal(gains(active,done,d).find(r=>r.name===d.by.heroes[hero].name+' · 历练')?.amount||0,earned,'receipt matches actual capped gain');}
+ assert.deepEqual(done.heroes.huarong,s.heroes.huarong,'Only participants earn XP');assert.ok(s.team.some(hero=>s.heroes[hero].level<40),'each mission verifies an uncapped participant too');
  assert.throws(()=>act(done,'finishBattle'));assert.throws(()=>act(done,action.type,action),'Story cannot replay its completed battle step');assert.deepEqual(importSave(exportSave(done,{id:1,name:'成长结算'},d),d).state,done);
  table.push({mission:id,level:m.level,experience:expected});
 }
@@ -83,5 +99,3 @@ assert.deepEqual(importSave(exportSave(journey,{id:1,name:'连续战役成长基
 console.table(ledger);console.log(JSON.stringify({benchmark:'17 consecutive chapter battles; preconfigured buildings, prerequisites and 300 pills',newPillsUsed:300-journey.inventory.exp_pill,oldZeroChapterXPBudgetTo34:noStoryXP,endingLevels:journey.team.map(id=>journey.heroes[id].level),foodConsumed:journeyStart.camp.food-journey.camp.food,fallen:journey.camp.fallen||0}));
 const nativeHasOwn=Object.hasOwn;try{Object.hasOwn=undefined;assert.equal(dailyExperience('manual',3),600);assert.equal(dailyExperience('__proto__',1),0);}finally{Object.hasOwn=nativeHasOwn;}
 console.table(table);console.log('Growth rewards PASS: all chapter battle payouts and save roundtrips, no repeat/loss/guest/weekly XP, capped receipts, 9 daily tiers, shared daily caps, real 3-battle sweep/manual parity, shared-inventory budgets and stale away-mentor rejection.');
-
-

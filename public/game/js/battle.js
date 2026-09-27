@@ -1,18 +1,21 @@
-import {initializeRoles} from './hero-roles.js?v=0.44.0';
-import {lessonPassed} from './lessons-data.js?v=0.44.0';
-import {routeEquipmentOpening} from './journey-rewards.js?v=0.44.0';
-import {journeyAbsorb} from './journey-combat.js?v=0.44.0';
-import {advanceCombos} from './expansion-combat.js?v=0.44.0';
-import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.44.0';
-import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.44.0';
-import { autoOrderAllows } from './commands.js?v=0.44.0';
-import { initializeMartial, martialFactor } from './martial.js?v=0.44.0';
-import { attributes } from './hero.js?v=0.44.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.44.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.44.0';
+import {lateMissionPlan} from './late-mainline-data.js?v=0.52.0';
+import {lateTimes,advanceLateObjective,advanceLateWave} from './late-mainline-combat.js?v=0.52.0';
+import {EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.52.0';
+import {initializeRoles} from './hero-roles.js?v=0.52.0';
+import {lessonPassed} from './lessons-data.js?v=0.52.0';
+import {routeEquipmentOpening} from './journey-rewards.js?v=0.52.0';
+import {journeyAbsorb} from './journey-combat.js?v=0.52.0';
+import {advanceCombos} from './expansion-combat.js?v=0.52.0';
+import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.52.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.52.0';
+import { autoOrderAllows } from './commands.js?v=0.52.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.52.0';
+import { attributes } from './hero.js?v=0.52.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.52.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.52.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
-export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan'];
+export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan',...EXTRA_BATTLE_ITEMS];
 export const battleSkillMode=state=>state.battle?.context.type==='lesson'?'manual':state.battleSkillMode||'manual';
 const alive=u=>u.hp>0;
 const harmful=negativeStatus;
@@ -29,16 +32,14 @@ export function addStatus(u,status,elapsed=0){
   if(u.statuses.length<100)u.statuses.push(next);
 }
 function unit(id,name,attribute,skills,side){const u={id,name,...attribute,maxHp:attribute.hp,rage:0,skills:[...skills],side,statuses:[],attacks:0,skillReadyAt:0};u.nextAttackAt=attackInterval(u);return u;}
+export function makeEnemyUnits(data,enemies,scale=1,elapsed=0){return enemies.map((id,i)=>{const e=data.by.enemies[id],stats=Object.fromEntries(Object.entries(e.attribute).map(([k,v])=>[k,Math.round(v*(k==='speed'?1:scale))]));const u={...unit(id+'_'+i,e.name,stats,e.skills,'enemy'),model:id};u.nextAttackAt+=elapsed;return u;});}
 export function startBattle(state,data,{enemies,guest,scale=1,context}){
   requireRule(!state.battle&&!state.scheme,'先结束当前战局。');
   const team=guest?[unit(guest.id,data.by.heroes[guest.id].name,attributes(state,guest.id,data,guest.level,false),data.by.heroes[guest.id].skills,'team')]:state.team.map(id=>unit(id,data.by.heroes[id].name,attributes(state,id,data),data.by.heroes[id].skills,'team'));
   requireRule(context.type==='lesson'||!state.affairs?.mission||!team.some(u=>u.id===state.affairs.mission.hero),'好汉仍在外派，请先接回。');
   requireRule(context.type==='lesson'||!state.realm?.squad||!team.some(u=>state.realm.squad.team.includes(u.id)),'好汉仍在分队外派，请先接回。');
   requireRule(team.length>0,'先与白胜相识、邀他作向导，或在招贤馆招募好汉并编队。');
-  state.battle={mode:'realtime',elapsed:0,itemReadyAt:0,team,enemy:enemies.map((id,i)=>{
-    const e=data.by.enemies[id],stats=Object.fromEntries(Object.entries(e.attribute).map(([key,value])=>[key,Math.round(value*(key==='speed'?1:scale))]));
-    return {...unit(id+'_'+i,e.name,stats,e.skills,'enemy'),model:id};
-  }),context,guest:!!guest,outcome:null,log:['【交战开始】双方自行迎敌。你可随时调度技能、用药或撤退。']};
+  state.battle={mode:'realtime',elapsed:0,itemReadyAt:0,team,enemy:makeEnemyUnits(data,enemies,scale),context,guest:!!guest,outcome:null,log:['【交战开始】双方自行迎敌。你可随时调度技能、用药或撤退。']};
   state.battle.metrics=newMetrics(team);initializeGrowthBattle(state,state.battle,data);initializeMartial(state,state.battle,data);routeEquipmentOpening(state,state.battle);initializeRoles(state.battle,state);
 }
 // Only convert validated legacy battles. Never replay time spent away from the page.
@@ -51,11 +52,18 @@ export function migrateBattle(b){
   }
   log(b,'原战局已接续为自动交战，气血、怒气、药物与剧情均保留。点击继续交战后再行推进。');
 }
-function settle(b){
+function settle(state,data){
+  const b=state.battle;
   if(b.outcome)return true;
   if(lessonPassed(b)){b.outcome='victory';b.metrics.reason='objective';log(b,'演武目标完成，已停手。');return true;}
   if(!b.team.some(alive)){b.outcome='defeat';if(b.metrics)b.metrics.reason='team';log(b,'众好汉已无力再战。收拢人手，整备后可再来。');}
-  else if(!b.enemy.some(alive)){b.outcome=b.context.type==='lesson'?'retreat':'victory';if(b.metrics)b.metrics.reason='enemy';log(b,b.context.type==='lesson'?'对手已停手，但指定操作尚未完成，可重新练习。':'敌阵已散，此战得胜。');}
+  else if(b.mainline?.escort?.hp===0){b.outcome='defeat';if(b.metrics)b.metrics.reason='objective';log(b,'护送目标已失守，此战未完成。');}
+  else if(!b.enemy.some(alive)){
+    const pending=b.mainline&&b.mainline.wave<lateMissionPlan(state,b.context.id,data).waves.length;
+    if(pending&&b.elapsed>=BATTLE_LIMIT_MS){b.outcome='retreat';if(b.metrics)b.metrics.reason='timeout';log(b,'交战已久，仍有援军未退，你下令撤出。');}
+    else if(advanceLateWave(state,data,makeEnemyUnits))return false;
+    else{b.outcome=b.context.type==='lesson'?'retreat':'victory';if(b.metrics)b.metrics.reason='enemy';log(b,b.context.type==='lesson'?'对手已停手，但指定操作尚未完成，可重新练习。':'敌阵已散，此战得胜。');}
+  }
   else if(objectiveFailed(b)){b.outcome='defeat';if(b.metrics)b.metrics.reason='objective';log(b,'【目标失败】护运耐久耗尽或限时已到，此战未完成副本目标。');}
   else if(b.elapsed>=BATTLE_LIMIT_MS){b.outcome='retreat';if(b.metrics)b.metrics.reason='timeout';log(b,'交战已久，双方难分胜负，你下令撤出。');}
   return !!b.outcome;
@@ -89,18 +97,23 @@ export function setBattleSkillMode(state,mode){
   log(b,mode==='auto'?'【技能模式】已启用自动技能：条件满足时按出阵顺序施招，药物仍由你手动使用。':'【技能模式】已切换手动技能：普攻继续自动进行，招式由你决定。');
 }
 function castAutomaticSkills(state,data){
-  const b=state.battle;if(battleSkillMode(state)!=='auto'||settle(b))return;
-  // Same-time decisions follow saved team order, then each hero's skill order.
-  // Use the exact manual validation/cost/cooldown path; never automate medicines.
-  for(const u of b.team){
-    const options=u.skills.map(id=>data.by.skills[id]);
-    if(b.rules===2)options.sort((a,c)=>(c.training?.tier==='advanced')-(a.training?.tier==='advanced'));
-    const skill=options.find(s=>autoOrderAllows(b,u,s,data)&&!skillReason(b,u,s));
-    if(!skill)continue;
-    log(b,`【自动技能】${u.name}自行施展【${skill.name}】。`);
-    castSkill(state,data,u.id,skill.id);
-    if(b.outcome)break;
-  }
+  const b=state.battle;if(battleSkillMode(state)!=='auto'||settle(state,data))return;
+  // Resolve every newly enabled skill at this timestamp. A later ally's rally may
+  // give an earlier ally enough rage; waiting for the next UI tick changes combat.
+  // Casting starts a positive cooldown, so each hero can act at most once here.
+  let cast;
+  do{
+    cast=false;
+    for(const u of b.team){
+      const options=u.skills.map(id=>data.by.skills[id]);
+      if(b.rules===2)options.sort((a,c)=>(c.training?.tier==='advanced')-(a.training?.tier==='advanced'));
+      const skill=options.find(s=>autoOrderAllows(b,u,s,data)&&!skillReason(b,u,s));
+      if(!skill)continue;
+      log(b,`【自动技能】${u.name}自行施展【${skill.name}】。`);
+      castSkill(state,data,u.id,skill.id);cast=true;
+      if(b.outcome)break;
+    }
+  }while(cast&&!b.outcome);
 }
 // Independent timestamps: a fast unit may strike twice before a slower unit acts.
 // Exact event resolution keeps results independent of UI timer slice sizes.
@@ -108,11 +121,12 @@ export function advanceBattle(state,data,delta){
   const b=state.battle;requireRule(b?.mode==='realtime','当前没有自动交战。');
   requireRule(Number.isInteger(delta)&&delta>0&&delta<=1000,'战斗时间步长无效。');
   if(b.outcome)return;
-  const end=Math.min(b.elapsed+delta,BATTLE_LIMIT_MS),units=[...b.team,...b.enemy];
+  const end=Math.min(b.elapsed+delta,BATTLE_LIMIT_MS);
   castAutomaticSkills(state,data);
   while(!b.outcome){
+    const units=[...b.team,...b.enemy];
     const times=units.filter(alive).map(u=>u.nextAttackAt);
-    if(b.rules===2)times.push(...growthTimes(b));times.push(...objectiveTimes(b));
+    if(b.rules===2)times.push(...growthTimes(b));times.push(...objectiveTimes(b),...lateTimes(b));
     if(battleSkillMode(state)==='auto')for(const u of b.team)if(alive(u)&&u.skillReadyAt>b.elapsed)times.push(u.skillReadyAt);
     for(const u of units)for(const s of u.statuses){times.push(s.expiresAt);if(s.nextTickAt)times.push(s.nextTickAt);}
     const next=Math.min(...times);if(next>end)break;b.elapsed=next;
@@ -124,19 +138,19 @@ export function advanceBattle(state,data,delta){
       for(const s of u.statuses)if(s.nextTickAt===next)s.nextTickAt+=STATUS_MS;
       u.statuses=u.statuses.filter(s=>s.expiresAt>next);
     }
-    if(settle(b))break;
-    advanceObjective(b,log);if(settle(b))break;
-    if(b.rules===2){advanceBosses(state,{...growthApi,data});if(settle(b))break;}
+    if(settle(state,data))break;
+    advanceLateObjective(state,data);advanceObjective(b,log);if(settle(state,data))break;
+    if(b.rules===2){advanceBosses(state,{...growthApi,data});if(settle(state,data))break;}
     const due=units.filter(u=>alive(u)&&u.nextAttackAt===next).sort((a,b)=>b.speed-a.speed);
     for(const u of due){
-      if(!alive(u))continue;u.nextAttackAt=next+attackInterval(u);
+      if(!alive(u)||(u.side==='enemy'&&!b.enemy.includes(u)))continue;u.nextAttackAt=next+attackInterval(u);
       if(has(u,'stun'))log(b,`${u.name}【眩晕】一时无法行动。`);
       else{hit(state,u,u.side==='enemy'?enemySkill(b,u,data):undefined,data);u.attacks++;}
-      if(settle(b))break;
+      if(settle(state,data))break;
     }
-    if(!b.outcome){castAutomaticSkills(state,data);advanceCombos(b);settle(b);}
+    if(!b.outcome){castAutomaticSkills(state,data);advanceCombos(b);settle(state,data);}
   }
-  if(!b.outcome){b.elapsed=end;settle(b);}
+  if(!b.outcome){b.elapsed=end;settle(state,data);}
 }
 export function skillReason(b,u,skill){
   if(!b||b.outcome)return '战局已结束';
@@ -151,7 +165,7 @@ export function skillReason(b,u,skill){
 }
 export function castSkill(state,data,heroId,skillId){
   const b=state.battle,u=b?.team.find(u=>u.id===heroId),skill=data.by.skills[skillId],reason=skillReason(b,u,skill);
-  requireRule(!reason,reason);contribution(b,u,'skills');hit(state,u,skill,data);u.skillReadyAt=b.elapsed+(b.rules===2&&skill.training?.tier==='advanced'?7000:SKILL_COOLDOWN_MS);settle(b);
+  requireRule(!reason,reason);contribution(b,u,'skills');hit(state,u,skill,data);u.skillReadyAt=b.elapsed+(b.rules===2&&skill.training?.tier==='advanced'?7000:SKILL_COOLDOWN_MS);settle(state,data);
 }
 export function battleItemQuote(state,data,id){
   const b=state.battle,item=data.by.items[id];
