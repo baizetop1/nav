@@ -4,6 +4,8 @@ import type { Site } from '../types/navigation';
 import { safeHttpUrl } from '../lib/navigationData';
 import { acknowledgeWorkNotice, finishWork, loadWorkSession, pauseWork, readWorkSession, reconcileWork, remainingWorkMs, resumeWork, sameWorkSession, saveWorkSession, setWorkPreset, skipBreak, startNextPhase, workPhaseMinutes, WORK_SESSION_KEY, type WorkPhase, type WorkPreset, type WorkSessionStore } from '../lib/workSession';
 import { armPomodoroSound, playPomodoroNotice } from '../lib/pomodoroSound';
+import { usePomodoroAmbient } from '../lib/usePomodoroAmbient';
+import { PomodoroAmbientControls } from './PomodoroAmbientControls';
 
 const PomodoroImmersive = lazy(() => import('./PomodoroImmersive'));
 const phaseNames: Record<WorkPhase, string> = { focus: '专注', 'short-break': '短休息', 'long-break': '长休息' };
@@ -79,6 +81,7 @@ export function WorkSessionPanel({ sites, onActiveChange, onPhaseChange, onSelec
       void flushChanges();
     } catch (error) { setMessage((error as Error).message); }
   }, [flushChanges]);
+  const ambient = usePomodoroAmbient(store.ambientTrack, store.ambientVolume, (ambientTrack, ambientVolume) => change(latest => ({ ...latest, ambientTrack, ambientVolume })));
   useEffect(() => {
     const externalChange = (event: StorageEvent) => { if (event.key === WORK_SESSION_KEY || event.key === null) refreshFromStorage(); };
     window.addEventListener('storage', externalChange);
@@ -136,11 +139,24 @@ export function WorkSessionPanel({ sites, onActiveChange, onPhaseChange, onSelec
       }}>打开网站组合</button>}
     </div>
     {chosenSites.length > 0 && <div className="flex flex-wrap gap-2">{chosenSites.map(site => <a key={site.id} className="baize-chip" href={safeHttpUrl(site.url) || undefined} target="_blank" rel="noopener noreferrer" onClick={() => onSiteVisit(site.id)}>{site.name}</a>)}</div>}
+    <PomodoroAmbientControls {...ambient} />
+    <p className="text-xs text-[#718986]">背景声音与计时独立；暂停计时或退出沉浸不会停播，收起工作会话或离开此页面后停止。刷新只恢复音色和音量，不会自动播放。</p>
     <p className="text-xs text-[#718986]">会话期间隐藏热榜，首页只显示所选工作网站。退出沉浸不停止计时；刷新可恢复。每个阶段手动开始，关闭网页后不会响铃。</p>
     {!saved && <p role="alert" className="text-sm text-[#985247]">工作会话未能保存，本页内容已保留，请保持此页打开并重试。<button type="button" className="underline" disabled={saving} onClick={() => change(latest => latest)}>重试保存</button></p>}
     {recovery && <details><summary className="cursor-pointer text-xs">查看本页冲突前副本</summary><textarea readOnly aria-label="工作会话冲突前副本" className="baize-input mt-2 font-mono text-xs" rows={5} value={JSON.stringify(recovery, null, 2)} /></details>}
     {message && <p role="status" className="text-xs">{message}</p>}
     {store.history.length > 0 && <details><summary className="cursor-pointer text-sm">最近工作小结</summary><ul className="mt-2 space-y-2 text-xs">{store.history.slice(0, 10).map(item => <li key={item.id} className="flex flex-wrap justify-between gap-2"><span>{item.task}</span><span>{new Date(item.endedAt).toLocaleString('zh-CN')} · 专注 {Math.floor(item.focusedMs / 60_000)} 分 {Math.floor(item.focusedMs / 1000) % 60} 秒 · {item.completed ? '计时完成' : '提前结束'}</span></li>)}</ul></details>}
-    {immersive && <Suspense fallback={<p role="status">正在打开沉浸画面…</p>}><PomodoroImmersive open task={current?.task || store.task} timeText={timeText} progress={current ? 1 - remainingWorkMs(current, now) / (current.minutes * 60_000) : 0} phaseLabel={phaseNames[phase]} roundLabel={roundLabel} active={Boolean(current)} running={Boolean(current && current.deadline !== null)} primaryLabel={primaryLabel} background={store.background} sound={store.sound} notice={[notice, !saved ? '本次更改尚未保存，请保持此页打开并返回卡片重试。' : '', message].filter(Boolean).join(' ') || undefined} sites={chosenSites} onClose={() => setImmersive(false)} onPrimary={primary} onFinish={finish} onSkipBreak={phase !== 'focus' ? () => change(skipBreak) : undefined} onBackgroundChange={background => change(latest => ({ ...latest, background }))} onSoundChange={setSound} onSiteVisit={onSiteVisit} /></Suspense>}
+    {immersive && <Suspense fallback={<p role="status">正在打开沉浸画面…</p>}><PomodoroImmersive
+      open task={current?.task || store.task} timeText={timeText}
+      progress={current ? 1 - remainingWorkMs(current, now) / (current.minutes * 60_000) : 0}
+      phaseLabel={phaseNames[phase]} roundLabel={roundLabel}
+      active={Boolean(current)} running={Boolean(current && current.deadline !== null)}
+      primaryLabel={primaryLabel} background={store.background} sound={store.sound} ambient={ambient}
+      notice={[notice, !saved ? '本次更改尚未保存，请保持此页打开并返回卡片重试。' : '', message].filter(Boolean).join(' ') || undefined}
+      sites={chosenSites} onClose={() => setImmersive(false)} onPrimary={primary} onFinish={finish}
+      onSkipBreak={phase !== 'focus' ? () => change(skipBreak) : undefined}
+      onBackgroundChange={background => change(latest => ({ ...latest, background }))}
+      onSoundChange={setSound} onSiteVisit={onSiteVisit}
+    /></Suspense>}
   </section>;
 }

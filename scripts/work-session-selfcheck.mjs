@@ -326,4 +326,29 @@ raw = validRaw;
   assert.equal(latest.history.length, 1);
 }
 
-console.log('Work session v1/v2: migration, presets, custom timers, four-tomato cycles, breaks, notices, bounded history, offline recovery and multi-tab CAS passed.');
+// Old v2 records gain silent defaults; playback is deliberately never persisted.
+{
+  const old = { ...base };
+  delete old.ambientTrack; delete old.ambientVolume;
+  assert.equal(parseWorkSession(old).ambientTrack, 'rain');
+  assert.equal(parseWorkSession(old).ambientVolume, 30);
+  assert.equal(sameWorkSession(old, base), true);
+  for (const ambientTrack of ['rain', 'stream', 'white-noise']) {
+    for (const ambientVolume of [0, 30, 100]) {
+      const parsed = parseWorkSession({ ...base, ambientTrack, ambientVolume, ambientPlaying: true });
+      assert.equal(parsed.ambientTrack, ambientTrack);
+      assert.equal(parsed.ambientVolume, ambientVolume);
+      assert.equal(Object.hasOwn(parsed, 'ambientPlaying'), false);
+      assert.equal(parsed.sound, false, 'background volume never enables completion reminders');
+    }
+  }
+  for (const ambientTrack of ['', 'unknown', null, 1]) assert.throws(() => parseWorkSession({ ...base, ambientTrack }), /背景声音/);
+  for (const ambientVolume of [-1, 101, 0.5, NaN, Infinity, null, '30']) assert.throws(() => parseWorkSession({ ...base, ambientVolume }), /背景声音/);
+  let raw = JSON.stringify(old);
+  const storage = { getItem: () => raw, setItem: (_key, value) => { raw = value; }, removeItem: () => { raw = null; } };
+  const changed = { ...base, ambientTrack: 'stream', ambientVolume: 45 };
+  assert.equal(commitWorkSession(base, changed, storage).status, 'saved');
+  assert.equal(readWorkSession(storage).ambientVolume, 45);
+  assert.equal(commitWorkSession(base, { ...base, task: 'stale update' }, storage).status, 'conflict');
+}
+console.log('Work session v1/v2: migration, ambient preferences, presets, custom timers, four-tomato cycles, breaks, notices, bounded history, offline recovery and multi-tab CAS passed.');

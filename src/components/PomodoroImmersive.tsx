@@ -1,8 +1,9 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { ArrowLeft, ChevronDown, ExternalLink, Globe2, Pause, Play, SkipForward, Square, Volume2, VolumeX } from 'lucide-react';
+import { ArrowLeft, ChevronDown, ExternalLink, Globe2, Headphones, Pause, Play, SkipForward, Square, Volume2, VolumeX } from 'lucide-react';
 import type { Site } from '../types/navigation';
 import { safeHostname, safeHttpUrl } from '../lib/navigationData';
+import { AMBIENT_STATUS_LABELS, AMBIENT_TRACK_LABELS, PomodoroAmbientControls, type AmbientControlsProps } from './PomodoroAmbientControls';
 import './PomodoroImmersive.css';
 
 export type PomodoroBackground = 'paper' | 'forest' | 'night' | 'landscape';
@@ -18,6 +19,7 @@ export interface PomodoroImmersiveProps {
   primaryLabel: string;
   background: PomodoroBackground;
   sound: boolean;
+  ambient?: AmbientControlsProps;
   notice?: string;
   sites: Site[];
   onClose: () => void;
@@ -37,14 +39,16 @@ const FOCUSABLE = 'button:not([disabled]), a[href], input:not([disabled]), selec
 const RADIUS = 94;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-export function PomodoroImmersive({ open, task, timeText, progress, phaseLabel, roundLabel, active, running, primaryLabel, background, sound, notice, sites, onClose, onPrimary, onFinish, onSkipBreak, onBackgroundChange, onSoundChange, onSiteVisit }: PomodoroImmersiveProps) {
+export function PomodoroImmersive({ open, task, timeText, progress, phaseLabel, roundLabel, active, running, primaryLabel, background, sound, ambient, notice, sites, onClose, onPrimary, onFinish, onSkipBreak, onBackgroundChange, onSoundChange, onSiteVisit }: PomodoroImmersiveProps) {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [ambientOpen, setAmbientOpen] = useState(false);
   const [toolsHidden, setToolsHidden] = useState(false);
   const [backgroundFailed, setBackgroundFailed] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef(onClose);
   closeRef.current = onClose;
-  const titleId = useId(), hintId = useId(), drawerId = useId();
+  const titleId = useId(), hintId = useId(), drawerId = useId(), ambientDrawerId = useId();
+  const hasAmbient = Boolean(ambient);
   const boundedProgress = Number.isFinite(progress) ? Math.max(0, Math.min(1, progress)) : 0;
   const isBreak = phaseLabel.includes('休息');
   const clockState = isBreak
@@ -100,7 +104,7 @@ export function PomodoroImmersive({ open, task, timeText, progress, phaseLabel, 
     let timer = 0;
     const wake = () => {
       window.clearTimeout(timer); setToolsHidden(false);
-      if (!running || drawerOpen) return;
+      if (!running || drawerOpen || (ambientOpen && hasAmbient)) return;
       timer = window.setTimeout(() => {
         const panel = panelRef.current, focused = document.activeElement;
         // A keyboard user must not lose a focused control, and an open website
@@ -113,9 +117,15 @@ export function PomodoroImmersive({ open, task, timeText, progress, phaseLabel, 
     const events = ['pointermove', 'pointerdown', 'touchstart', 'keydown', 'focusin', 'focusout'] as const;
     for (const event of events) document.addEventListener(event, wake, { passive: true });
     return () => { window.clearTimeout(timer); for (const event of events) document.removeEventListener(event, wake); };
-  }, [open, running, drawerOpen]);
+  }, [open, running, drawerOpen, ambientOpen, hasAmbient]);
 
-  useEffect(() => { if (!open) { setDrawerOpen(false); setToolsHidden(false); } }, [open]);
+  useEffect(() => { if (!open) { setDrawerOpen(false); setAmbientOpen(false); setToolsHidden(false); } }, [open]);
+  useEffect(() => { if (!hasAmbient) setAmbientOpen(false); }, [hasAmbient]);
+  useEffect(() => {
+    if (!open) return;
+    const expandedId = ambientOpen && hasAmbient ? ambientDrawerId : drawerOpen ? drawerId : null;
+    if (expandedId) document.getElementById(expandedId)?.scrollIntoView({ block: 'nearest', behavior: 'auto' });
+  }, [open, ambientOpen, hasAmbient, drawerOpen, ambientDrawerId, drawerId]);
 
   if (!open || typeof document === 'undefined') return null;
 
@@ -152,11 +162,13 @@ export function PomodoroImmersive({ open, task, timeText, progress, phaseLabel, 
         <div className="pomo-footer-row">
           <fieldset className="pomo-backgrounds"><legend className="pomo-sr-only">沉浸背景</legend>{BACKGROUNDS.map(option => <button key={option.value} type="button" className={`pomo-background-option ${background === option.value ? 'is-selected' : ''}`} aria-pressed={background === option.value} aria-label={`切换${option.label}背景`} onClick={() => onBackgroundChange(option.value)}><span className={`pomo-background-dot pomo-dot-${option.value}`} aria-hidden="true" /><span>{option.label}</span></button>)}</fieldset>
           <div className="pomo-footer-actions">
-            <button type="button" className="pomo-button pomo-button-quiet" aria-pressed={sound} aria-label={sound ? '关闭完成提醒声音' : '开启完成提醒声音'} onClick={() => onSoundChange(!sound)}>{sound ? <Volume2 size={17} /> : <VolumeX size={17} />}<span>声音{sound ? '开' : '关'}</span></button>
-            <button type="button" className="pomo-button pomo-button-quiet" aria-expanded={drawerOpen} aria-controls={drawerId} onClick={() => setDrawerOpen(value => !value)}><Globe2 size={17} /><span>工作网站 {sites.length}</span><ChevronDown size={15} className={drawerOpen ? 'pomo-chevron-open' : ''} /></button>
+            <button type="button" className="pomo-button pomo-button-quiet" aria-pressed={sound} aria-label={sound ? '关闭完成提醒声音' : '开启完成提醒声音'} onClick={() => onSoundChange(!sound)}>{sound ? <Volume2 size={17} /> : <VolumeX size={17} />}<span>到时音{sound ? '开' : '关'}</span></button>
+            {ambient && <button type="button" className="pomo-button pomo-button-quiet" aria-label="背景声音" aria-expanded={ambientOpen} aria-controls={ambientDrawerId} onClick={() => { setAmbientOpen(value => !value); setDrawerOpen(false); }}><Headphones size={17} /><span className="pomo-ambient-entry-copy"><span>背景声音</span><small>{AMBIENT_TRACK_LABELS[ambient.track]} · {AMBIENT_STATUS_LABELS[ambient.status]}{ambient.volume === 0 ? ' · 静音' : ''}</small></span><ChevronDown size={15} className={ambientOpen ? 'pomo-chevron-open' : ''} /></button>}
+            <button type="button" className="pomo-button pomo-button-quiet" aria-expanded={drawerOpen} aria-controls={drawerId} onClick={() => { setDrawerOpen(value => !value); setAmbientOpen(false); }}><Globe2 size={17} /><span>工作网站 {sites.length}</span><ChevronDown size={15} className={drawerOpen ? 'pomo-chevron-open' : ''} /></button>
           </div>
         </div>
         {backgroundFailed && background === 'landscape' && <p className="pomo-background-fallback">山水背景暂不可用，已使用纯色背景。</p>}
+        {ambient && ambientOpen && <div id={ambientDrawerId} className="pomo-ambient-drawer"><PomodoroAmbientControls {...ambient} immersive /></div>}
         {drawerOpen && <section id={drawerId} className="pomo-sites" aria-label="本次工作网站">
           <div className="pomo-sites-heading"><h3>本次工作网站</h3><p>按需打开，不会自动启动网站</p></div>
           {links.length ? <ul className="pomo-sites-list">{links.map(({ site, href }) => <li key={site.id}>{href ? <a className="pomo-site" href={href} target="_blank" rel="noopener noreferrer" onClick={() => onSiteVisit(site.id)} onAuxClick={event => { if (event.button === 1) onSiteVisit(site.id); }}><span className="pomo-site-avatar" aria-hidden="true">{site.name.slice(0, 1).toUpperCase() || '↗'}</span><span className="pomo-site-copy"><strong>{site.name}</strong><span>{safeHostname(href)}</span></span><ExternalLink size={14} aria-hidden="true" /></a> : <span className="pomo-site pomo-site-unavailable" aria-disabled="true"><span className="pomo-site-copy"><strong>{site.name}</strong><span>网址无效，无法打开</span></span></span>}</li>)}</ul> : <p className="pomo-sites-empty">还没有指定网站。可退出沉浸后，在工作会话中选择。</p>}

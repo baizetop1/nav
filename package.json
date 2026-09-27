@@ -22,6 +22,8 @@
     "check:rss-capture": "node scripts/rss-capture-browser.mjs",
     "check:work-session": "node scripts/work-session-browser.mjs",
     "check:pomodoro": "node scripts/pomodoro-browser.mjs",
+    "check:pomodoro-ambient": "node scripts/pomodoro-ambient-browser.mjs",
+    "test:pomodoro-ambient": "node --experimental-strip-types scripts/pomodoro-ambient-selfcheck.mjs",
     "check:blog-workbench": "node scripts/blog-workbench-browser.mjs",
     "check:blog-autosave": "node scripts/blog-autosave-browser.mjs",
     "preview": "vite preview",

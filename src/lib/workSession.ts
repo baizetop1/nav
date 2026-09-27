@@ -1,4 +1,5 @@
 import { safeGetLocalStorageItem, writeStorageItem } from './safeStorage.ts';
+import type { AmbientTrack } from './pomodoroAmbient.ts';
 
 export const WORK_SESSION_KEY = 'baize_work_session_v1';
 type WorkStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
@@ -19,9 +20,10 @@ export interface WorkSessionStore {
   current: WorkRun | null; history: WorkSummary[];
   shortBreakMinutes: number; longBreakMinutes: number; preset: WorkPreset;
   background: WorkBackground; sound: boolean; completedCount: number;
+  ambientTrack: AmbientTrack; ambientVolume: number;
   nextPhase: WorkPhase; notice: WorkNotice | null;
 }
-export const emptyWorkSession = (): WorkSessionStore => ({ version: 2, task: '', minutes: 25, siteIds: [], current: null, history: [], shortBreakMinutes: 5, longBreakMinutes: 15, preset: '25/5', background: 'paper', sound: false, completedCount: 0, nextPhase: 'focus', notice: null });
+export const emptyWorkSession = (): WorkSessionStore => ({ version: 2, task: '', minutes: 25, siteIds: [], current: null, history: [], shortBreakMinutes: 5, longBreakMinutes: 15, preset: '25/5', background: 'paper', sound: false, ambientTrack: 'rain', ambientVolume: 30, completedCount: 0, nextPhase: 'focus', notice: null });
 const validIds = (value: unknown): value is string[] => Array.isArray(value) && value.length <= 1000 && value.every(id => typeof id === 'string' && id.length <= 300);
 const timestamp = (value: unknown): value is number => typeof value === 'number' && Number.isFinite(value) && value >= 0;
 const minutesValid = (value: unknown, max: number): value is number => typeof value === 'number' && Number.isInteger(value) && value >= 1 && value <= max;
@@ -32,6 +34,10 @@ export function parseWorkSession(raw: unknown): WorkSessionStore {
   const data = raw as (Omit<WorkSessionStore, 'version'> & { version: number }) | null;
   if (!data || ![1, 2].includes(data.version) || typeof data.task !== 'string' || data.task.length > 200 || !minutesValid(data.minutes, 180) || (data.version === 1 && ![25, 50].includes(data.minutes)) || !validIds(data.siteIds) || !Array.isArray(data.history)) throw new Error('工作会话数据无效。');
   const legacy = data.version === 1;
+  // Keep v2 saves compatible: only preferences persist, never a playing flag.
+  const ambientTrack = legacy || data.ambientTrack === undefined ? 'rain' : data.ambientTrack;
+  const ambientVolume = legacy || data.ambientVolume === undefined ? 30 : data.ambientVolume;
+  if (!['rain', 'stream', 'white-noise'].includes(ambientTrack) || !Number.isInteger(ambientVolume) || ambientVolume < 0 || ambientVolume > 100) throw new Error('背景声音设置无效。');
   if (data.current) {
     const run = data.current;
     const phase = legacy ? 'focus' : run.phase;
@@ -49,6 +55,7 @@ export function parseWorkSession(raw: unknown): WorkSessionStore {
     longBreakMinutes: legacy ? (data.minutes === 50 ? 20 : 15) : data.longBreakMinutes,
     preset: legacy ? (data.minutes === 50 ? '50/10' : '25/5') : data.preset,
     background: legacy ? 'paper' : data.background, sound: legacy ? false : data.sound,
+    ambientTrack, ambientVolume,
     completedCount: legacy ? data.history.filter(item => item.completed).length : data.completedCount,
     nextPhase: legacy ? 'focus' : data.nextPhase,
     notice: notice ? { id: notice.id, runId: notice.runId, phase: notice.phase, endedAt: notice.endedAt } : null,
