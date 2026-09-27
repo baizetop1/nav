@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronUp, Clock3, ExternalLink, Globe2, Trash2, X } from 'lucide-react';
 import type { TemporaryVisitSummary } from '../lib/temporaryVisits';
+import { safeGetLocalStorageItem, safeSetLocalStorageItem } from '../lib/safeStorage';
 
 const COLLAPSED_KEY = 'nav_temporary_visits_collapsed';
 
@@ -21,13 +22,13 @@ function formatVisitedAt(timestamp: number): string {
 }
 
 export function TemporaryVisitsPanel({ visits, onVisit, onDelete, onClear }: TemporaryVisitsPanelProps) {
-  const [collapsed, setCollapsed] = useState(() => localStorage.getItem(COLLAPSED_KEY) === 'true');
+  const [collapsed, setCollapsed] = useState(() => safeGetLocalStorageItem(COLLAPSED_KEY, { label: '临时访问折叠偏好', important: false }) === 'true');
   const [input, setInput] = useState('');
   const [error, setError] = useState('');
   const totalVisits = visits.reduce((total, visit) => total + visit.count, 0);
 
   const toggle = () => setCollapsed(current => {
-    localStorage.setItem(COLLAPSED_KEY, String(!current));
+    safeSetLocalStorageItem(COLLAPSED_KEY, String(!current), { label: '临时访问折叠偏好', important: false });
     return !current;
   });
 

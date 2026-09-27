@@ -1,4 +1,6 @@
 import type { Category, LayoutItem, NavigationData, Site } from '../types/navigation';
+import { parseNavigationData } from './navigationData.ts';
+import { formatStorageBytes, SHARED_SYNC_ENTRY_MAX_BYTES, utf8ByteLength } from './safeStorage.ts';
 
 export const BACKUP_VERSION = 1 as const;
 export const BACKUP_STORAGE_KEYS = [
@@ -12,6 +14,10 @@ export const BACKUP_STORAGE_KEYS = [
   'scene_mode',
   'theme',
   'nav_translator_collapsed',
+  'nav_search_aliases_v1',
+  'baize_rss_sources_v1',
+  'baize_rss_reader_v1',
+  'baize_work_session_v1',
 ] as const;
 
 export type BackupStorageKey = (typeof BACKUP_STORAGE_KEYS)[number];
@@ -116,7 +122,7 @@ function parseNavigation(value: unknown): NavigationData {
   const siteIds = new Set(sites.map(site => site.id));
   if (sites.some(site => !categoryIds.has(site.categoryId))) fail('a site references an unknown category');
   if (layout.some(item => !siteIds.has(item.siteId))) fail('layout references an unknown site');
-  return { sites, categories, layout };
+  return parseNavigationData({ sites, categories, layout });
 }
 
 function storageOrBrowser(storage?: StorageLike): StorageLike {
@@ -174,6 +180,15 @@ export function parseBackup(input: string | unknown): NavigationBackup {
 
 export function restoreBackup(input: string | unknown, storage?: StorageLike): NavigationData {
   const backup = parseBackup(input);
+  const sizeCandidates: Array<[string, string | null]> = [
+    ['navigation', JSON.stringify(backup.navigation)],
+    ...BACKUP_STORAGE_KEYS.map(key => [`storage.${key}`, backup.storage[key]] as [string, string | null]),
+  ];
+  const oversized = sizeCandidates.find(([, value]) => value !== null && utf8ByteLength(value) > SHARED_SYNC_ENTRY_MAX_BYTES);
+  if (oversized) {
+    const bytes = utf8ByteLength(oversized[1] || '');
+    throw new Error(`Could not restore browser storage: ${oversized[0]} is ${formatStorageBytes(bytes)}, above the ${formatStorageBytes(SHARED_SYNC_ENTRY_MAX_BYTES)} shared-sync limit`);
+  }
   const target = storageOrBrowser(storage);
   const previous = new Map(BACKUP_STORAGE_KEYS.map(key => [key, target.getItem(key)]));
   const changed: BackupStorageKey[] = [];

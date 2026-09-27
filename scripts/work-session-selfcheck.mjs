@@ -1,0 +1,66 @@
+import assert from 'node:assert/strict';
+import { emptyWorkSession, startWork, pauseWork, resumeWork, reconcileWork, finishWork, remainingWorkMs, parseWorkSession, commitWorkSession, readWorkSession, sameWorkSession, WORK_SESSION_KEY } from '../src/lib/workSession.ts';
+const base = { ...emptyWorkSession(), task: '修复导航', siteIds: ['github'] };
+assert.throws(() => startWork(emptyWorkSession(), 0, 'a'), /任务/);
+let store = startWork(base, 1000, 'one');
+assert.equal(remainingWorkMs(store.current, 61_000), 24 * 60_000);
+store = pauseWork(store, 61_000);
+assert.equal(remainingWorkMs(store.current, 999_999), 24 * 60_000);
+store = resumeWork(store, 86_400_000);
+store = reconcileWork(JSON.parse(JSON.stringify(store)), 86_400_000 + 24 * 60_000 + 1000);
+assert.equal(store.current, null);
+assert.equal(store.history[0].focusedMs, 25 * 60_000);
+assert.equal(store.history[0].completed, true);
+assert.equal(reconcileWork(store).history.length, 1);
+let early = startWork(base, 1000, 'two');
+early = pauseWork(early, 16_000);
+assert.equal(finishWork(early, 200_000).history[0].focusedMs, 15_000);
+assert.throws(() => parseWorkSession({ ...base, current: { ...startWork(base, 0, 'bad').current, remainingMs: -1 } }), /无效/);
+let raw = null, writes = 0, rejectWrites = false;
+const storage = {
+  getItem: key => key === WORK_SESSION_KEY ? raw : null,
+  setItem: (key, value) => { assert.equal(key, WORK_SESSION_KEY); if (rejectWrites) throw Object.assign(new Error('full'), { name: 'QuotaExceededError' }); raw = value; writes += 1; },
+  removeItem: () => { raw = null; },
+};
+assert.equal(commitWorkSession(emptyWorkSession(), base, storage).status, 'saved');
+const sharedRun = startWork(base, 1000, 'shared');
+assert.equal(commitWorkSession(base, sharedRun, storage).status, 'saved');
+const pausedByTabA = pauseWork(sharedRun, 61_000);
+assert.equal(commitWorkSession(sharedRun, pausedByTabA, storage).status, 'saved');
+const staleCompletion = reconcileWork(sharedRun, 26 * 60_000);
+const staleResult = commitWorkSession(sharedRun, staleCompletion, storage);
+assert.equal(staleResult.status, 'conflict');
+assert.equal(staleResult.store.current.deadline, null, 'the old running tab must adopt the pause');
+assert.equal(readWorkSession(storage).current.deadline, null, 'stale timer cannot erase a pause');
+const resumedByTabB = resumeWork(pausedByTabA, 100_000);
+assert.equal(commitWorkSession(pausedByTabA, resumedByTabB, storage).status, 'saved');
+assert.equal(commitWorkSession(pausedByTabA, finishWork(pausedByTabA, 110_000), storage).status, 'conflict', 'stale end button cannot overwrite a newer resume');
+const endedByTabB = finishWork(resumedByTabB, 120_000);
+assert.equal(commitWorkSession(resumedByTabB, endedByTabB, storage).status, 'saved');
+const newTask = startWork({ ...endedByTabB, task: 'New task' }, 130_000, 'new-task');
+assert.equal(commitWorkSession(endedByTabB, newTask, storage).status, 'saved');
+assert.equal(commitWorkSession(sharedRun, staleCompletion, storage).status, 'conflict');
+assert.equal(readWorkSession(storage).current.id, 'new-task', 'late expiry of the previous run must not remove a new run');
+assert.deepEqual(readWorkSession(storage).history, newTask.history);
+const beforeRetryWrites = writes;
+assert.equal(commitWorkSession(sharedRun, newTask, storage).status, 'saved', 'saving identical current state is idempotent even with an old baseline');
+assert.equal(writes, beforeRetryWrites);
+
+rejectWrites = true;
+const failedPause = pauseWork(newTask, 140_000);
+const failedResult = commitWorkSession(newTask, failedPause, storage);
+assert.equal(failedResult.status, 'error');
+assert.equal(failedPause.current.deadline, null, 'caller retains its failed in-memory change');
+assert.equal(readWorkSession(storage).current.deadline, newTask.current.deadline);
+rejectWrites = false;
+const newerPause = pauseWork(newTask, 150_000);
+assert.equal(commitWorkSession(newTask, newerPause, storage).status, 'saved');
+assert.equal(commitWorkSession(newTask, failedPause, storage).status, 'conflict', 'retry after a save failure must compare the original baseline again');
+assert.equal(readWorkSession(storage).current.remainingMs, newerPause.current.remainingMs);
+assert.equal(sameWorkSession(newTask, { history: newTask.history, current: newTask.current, siteIds: newTask.siteIds, minutes: newTask.minutes, task: newTask.task, version: 1 }), true);
+const validRaw = raw;
+raw = '{invalid';
+assert.equal(commitWorkSession(emptyWorkSession(), base, storage).status, 'error', 'invalid remote data must not be overwritten');
+assert.equal(raw, '{invalid');
+raw = validRaw;
+console.log('Work session: deadline recovery, pauses, multi-tab stale writes, retry conflicts and idempotent summaries passed.');

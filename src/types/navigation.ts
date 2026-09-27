@@ -31,10 +31,12 @@ export interface NavigationData {
   layout: LayoutItem[];
 }
 
+export type SearchEngineId = 'google' | 'baidu' | 'bing' | 'github' | 'bilibili';
+
 export interface SearchEngine {
+  id: SearchEngineId;
   name: string;
   url: string;
   prefix: string;
-  icon: string;
   placeholder: string;
 }

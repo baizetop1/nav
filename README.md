@@ -1,5 +1,9 @@
 # 白泽个人导航 CMS
 
+新增智能整理、网页一键收集、工作会话、全局内容搜索、RSS 订阅和离线待同步中心。入口、数据保存及部署方式见 [个人工作流说明](docs/PERSONAL-WORKFLOWS.md)。
+
+博客现在可通过独立的 `#/blog` 工作台完成文章列表、直接写作、本地自动保存、预览、草稿提交和旧文章更新。见 [博客工作台说明](docs/BLOG-WORKBENCH.md)。
+
 > 2026-09-08：已增加网页确认完成 Quest / 启用路线、草稿自动保存、正式发博、统一加密同步、跨端续读与公开图谱。新版操作与边界见 [使用及验收说明](docs/completion-and-sync-guide.md)；其中说明优先于下文旧阶段的限制。验证：Node 24，`npm run verify`。
 
 一个基于 React、Vite 和 GitHub Pages 的个人导航站。网站内容可以在浏览器中编辑为本地草稿，并通过 GitHub API 提交回仓库，由 GitHub Actions 自动重新部署。
@@ -88,6 +92,8 @@ npm run test:blog-draft
 
 浏览器中的未发布修改保存在 `localStorage.nav_cms_draft`。场景偏好、翻译历史、最近 90 天正式网站统计和最近 30 天临时网址统计也保存在本机，并包含在完整备份及加密云备份中；仓库中的导航 JSON 文件仍是正式发布数据源。
 
+管理后台发布导航前会验证目标仓库写权限，并使用远端 commit SHA 保护提交；发现远端变化时会停止发布并打开合并预览。待部署状态可跨刷新恢复，输入 Token 后继续限时轮询。统计与健康页可真正触发热榜和链接检测工作流；链接首次失败仅进入待复查，连续两次服务器检查失败才确认异常。
+
 ### Tech OS T1–T4.6 数据、工作台与 Route Lifecycle
 
 Tech OS 的规范数据位于仓库根目录 `tech-os/`，使用 Markdown + 扁平 Front Matter 保存 Vision、Route、Quest、Question、Knowledge、Lab、Project 与 Tech Map。`tech-os/state.yml` 只保存当前 Vision、唯一 Main Route、当前 Active Quest 和工作模式指针。
@@ -126,7 +132,7 @@ npm run test:tech-os-route-engine
 3. 在“发布到 GitHub”区域输入仓库信息和 fine-grained Personal Access Token。
 4. 点击“提交并部署”。成功后页面会显示 commit 链接，GitHub Actions 随后重新部署页面。
 
-发布前可以点击“读取远端内容并比较”。“合并，本地优先”会保留本地同 ID 内容并加入远端独有内容；“使用远端覆盖”会完全替换当前草稿。
+发布前可以点击“读取远端内容并比较”。无冲突内容自动合并，冲突按网站、分类和布局逐项选择保留本机或远端；“使用远端覆盖”需确认后替换当前草稿。
 
 Token 应只授予目标仓库的 Contents 读写权限。Token 仅保存在当前管理页面的内存中，不要把它写入 `.env`、源码、GitHub Actions 前端构建变量或 LocalStorage。
 

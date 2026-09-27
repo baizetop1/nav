@@ -3,9 +3,24 @@ export interface LinkHealthEntry {
   url: string;
   status: number | null;
   ok: boolean;
+  reachable?: boolean;
+  restricted?: boolean;
   checkedAt: string;
   error: string | null;
   source?: 'github-actions' | 'browser';
+  consecutiveFailures?: number;
+  confirmedFailure?: boolean;
+  lastSuccessfulAt?: string | null;
+  failureKind?: 'http' | 'not-found' | 'server' | 'timeout' | 'dns' | 'tls' | 'network' | null;
+}
+
+export type LinkHealthState = 'healthy' | 'warning' | 'unhealthy' | 'unchecked';
+
+export function getLinkHealthState(entry?: LinkHealthEntry): LinkHealthState {
+  if (!entry) return 'unchecked';
+  if (entry.ok || entry.restricted) return 'healthy';
+  if (entry.source === 'browser') return 'warning';
+  return entry.confirmedFailure || (entry.consecutiveFailures ?? 1) >= 2 ? 'unhealthy' : 'warning';
 }
 
 export interface BrowserLinkCheckOptions {
@@ -51,6 +66,14 @@ function readStatus(value: unknown): number | null | undefined {
     : undefined;
 }
 
+function isCountedHttpFailure(status: number): boolean {
+  return status === 404 || status === 410 || status >= 500;
+}
+
+function isRestrictedHttpStatus(status: number): boolean {
+  return status >= 400 && status < 500 && status !== 404 && status !== 410;
+}
+
 function parseEntry(value: unknown): LinkHealthEntry | null {
   if (!isRecord(value)) return null;
 
@@ -75,7 +98,47 @@ function parseEntry(value: unknown): LinkHealthEntry | null {
     : null;
 
   const source = value.source === 'browser' || value.source === 'github-actions' ? value.source : undefined;
-  return { siteId, url, status, ok: value.ok, checkedAt, error, ...(source ? { source } : {}) };
+  // Old reports stored every non-2xx response as `ok: false`. Normalize HTTP
+  // responses that prove reachability (401/403/405/429, etc.) while parsing so
+  // existing Pages deployments stop showing false failures immediately.
+  const restricted = status !== null && isRestrictedHttpStatus(status);
+  const normalizedOk = value.ok || (status !== null && !isCountedHttpFailure(status));
+  const reachable = normalizedOk || status !== null
+    ? true
+    : typeof value.reachable === 'boolean' ? value.reachable : false;
+  const consecutiveFailures = typeof value.consecutiveFailures === 'number' && Number.isInteger(value.consecutiveFailures) && value.consecutiveFailures >= 0
+    ? normalizedOk ? 0 : Math.min(value.consecutiveFailures, 99)
+    : normalizedOk ? 0 : 1;
+  const lastSuccessfulAt = value.lastSuccessfulAt === null
+    ? null
+    : typeof value.lastSuccessfulAt === 'string' && Number.isFinite(Date.parse(value.lastSuccessfulAt))
+      ? value.lastSuccessfulAt
+      : undefined;
+  const declaredFailureKind = ['http', 'not-found', 'server', 'timeout', 'dns', 'tls', 'network'].includes(String(value.failureKind))
+    ? value.failureKind as LinkHealthEntry['failureKind']
+    : value.failureKind === null ? null : undefined;
+  const failureKind = normalizedOk
+    ? null
+    : status === 404 || status === 410
+      ? 'not-found'
+      : status !== null && status >= 500
+        ? 'server'
+        : declaredFailureKind;
+  return {
+    siteId,
+    url,
+    status,
+    ok: normalizedOk,
+    reachable,
+    restricted,
+    checkedAt,
+    error,
+    ...(source ? { source } : {}),
+    consecutiveFailures,
+    confirmedFailure: !normalizedOk && (value.confirmedFailure === true || consecutiveFailures >= 2),
+    ...(normalizedOk ? { lastSuccessfulAt: lastSuccessfulAt ?? checkedAt } : lastSuccessfulAt !== undefined ? { lastSuccessfulAt } : {}),
+    ...(failureKind !== undefined ? { failureKind } : {}),
+  };
 }
 
 /**
@@ -109,20 +172,29 @@ export async function checkLinksFromBrowser(
       });
       await response.body?.cancel();
       const opaque = response.type === 'opaque' || response.status === 0;
+      const restricted = !opaque && isRestrictedHttpStatus(response.status);
+      const ok = opaque || !isCountedHttpFailure(response.status);
+      const failureKind = ok ? null : response.status === 404 || response.status === 410 ? 'not-found' : 'server';
       return {
         siteId: site.id,
         url: site.url,
         status: opaque ? null : response.status,
-        ok: opaque ? true : response.ok,
+        ok,
+        reachable: true,
+        restricted,
         checkedAt,
-        error: opaque ? '可连接（跨域，无法读取 HTTP 状态）' : response.ok ? null : `HTTP ${response.status}`,
+        error: opaque ? '可连接（跨域，无法读取 HTTP 状态）' : ok ? null : `HTTP ${response.status}`,
         source: 'browser',
+        consecutiveFailures: ok ? 0 : 1,
+        confirmedFailure: false,
+        lastSuccessfulAt: ok ? checkedAt : null,
+        failureKind,
       };
     } catch (error) {
       const message = error instanceof Error && error.name === 'AbortError'
         ? `超时（${Math.round(timeoutMs / 1000)} 秒）`
         : '浏览器无法连接，可能是网络、混合内容或站点拦截';
-      return { siteId: site.id, url: site.url, status: null, ok: false, checkedAt, error: message, source: 'browser' };
+      return { siteId: site.id, url: site.url, status: null, ok: false, reachable: false, restricted: false, checkedAt, error: message, source: 'browser', consecutiveFailures: 1, confirmedFailure: false, lastSuccessfulAt: null, failureKind: message.startsWith('超时') ? 'timeout' : 'network' };
     } finally {
       window.clearTimeout(timeout);
       options.signal?.removeEventListener('abort', abortFromCaller);

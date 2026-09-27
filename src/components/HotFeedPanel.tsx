@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ChevronUp, ExternalLink, Flame, Github, RefreshCw, Star } from 'lucide-react';
 import {
   cacheHotFeedReport,
+  HOT_FEED_REFRESH_EVENT,
   loadCachedHotFeedReport,
   loadHotFeedReport,
   selectIntelligenceItems,
@@ -11,6 +12,7 @@ import {
   type IntelligenceFilter,
   type IntelligenceItem,
 } from '../lib/hotFeed';
+import { safeGetLocalStorageItem, safeSetLocalStorageItem } from '../lib/safeStorage';
 
 const COLLAPSED_KEY = 'nav_hot_feed_collapsed';
 const CATEGORY_KEY = 'nav_hot_feed_category_v1';
@@ -43,28 +45,16 @@ export interface HotFeedPanelProps {
 }
 
 function readStoredFilter(): IntelligenceFilter {
-  try {
-    const value = localStorage.getItem(CATEGORY_KEY);
-    return FILTERS.some(filter => filter.id === value) ? value as IntelligenceFilter : 'all';
-  } catch {
-    return 'all';
-  }
+  const value = safeGetLocalStorageItem(CATEGORY_KEY, { label: '热榜分类偏好', important: false });
+  return FILTERS.some(filter => filter.id === value) ? value as IntelligenceFilter : 'all';
 }
 
 function readStoredCollapsed(): boolean {
-  try {
-    return localStorage.getItem(COLLAPSED_KEY) === 'true';
-  } catch {
-    return false;
-  }
+  return safeGetLocalStorageItem(COLLAPSED_KEY, { label: '热榜折叠偏好', important: false }) === 'true';
 }
 
 function writeStoredValue(key: string, value: string): void {
-  try {
-    localStorage.setItem(key, value);
-  } catch {
-    // Storage is an enhancement; the in-memory interaction remains usable.
-  }
+  safeSetLocalStorageItem(key, value, { label: key === COLLAPSED_KEY ? '热榜折叠偏好' : '热榜分类偏好', important: false });
 }
 
 function formatGeneratedAt(value: string): string {
@@ -170,6 +160,12 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
     const controller = new AbortController();
     void refresh(controller.signal);
     return () => controller.abort();
+  }, [refresh]);
+
+  useEffect(() => {
+    const refreshAfterDeployment = () => { void refresh(); };
+    window.addEventListener(HOT_FEED_REFRESH_EVENT, refreshAfterDeployment);
+    return () => window.removeEventListener(HOT_FEED_REFRESH_EVENT, refreshAfterDeployment);
   }, [refresh]);
 
   const staleChannels = useMemo(() => {

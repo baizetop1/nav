@@ -1,29 +1,35 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { ArrowLeftRight, BrainCircuit, Check, ChevronUp, Coffee, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Network, Plus, QrCode, Search, Trash2, Upload, X } from 'lucide-react';
-import { AdminPanel, type AdminSection } from './components/AdminPanel';
+import { AlertTriangle, ArrowLeftRight, BrainCircuit, Check, ChevronUp, Coffee, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Network, Plus, QrCode, RefreshCw, Search, Trash2, Upload, X } from 'lucide-react';
+import type { AdminSection } from './components/AdminPanel';
 import { Card } from './components/Card';
-import { CommandPalette, type CommandPaletteAction } from './components/CommandPalette';
+import { SearchEngineIcon } from './components/SearchEngineIcon';
+import type { CommandPaletteAction } from './components/CommandPalette';
 import { HotFeedPanel } from './components/HotFeedPanel';
-import { ReadingPanel } from './components/ReadingPanel';
 import { RestOverlay } from './components/rest/RestOverlay';
 import type { TextIndex } from './types/text-network';
 const TextGraphPanel = lazy(() => import('./components/TextGraphPanel').then(module => ({ default: module.TextGraphPanel })));
-import { InboxPanel } from './components/inbox/InboxPanel';
-import { QrCodeModal } from './components/QrCodeModal';
+const AdminPanel = lazy(() => import('./components/AdminPanel').then(module => ({ default: module.AdminPanel })));
 import { Sidebar } from './components/Sidebar';
-import { TempTextQrModal, TextTransferReceiveModal } from './components/TempTextTransferModals';
+const CommandPalette = lazy(() => import('./components/CommandPalette').then(module => ({ default: module.CommandPalette })));
+const ReadingPanel = lazy(() => import('./components/ReadingPanel').then(module => ({ default: module.ReadingPanel })));
+const InboxPanel = lazy(() => import('./components/inbox/InboxPanel').then(module => ({ default: module.InboxPanel })));
+const QrCodeModal = lazy(() => import('./components/QrCodeModal').then(module => ({ default: module.QrCodeModal })));
+const TempTextQrModal = lazy(() => import('./components/TempTextTransferModals').then(module => ({ default: module.TempTextQrModal })));
+const TextTransferReceiveModal = lazy(() => import('./components/TempTextTransferModals').then(module => ({ default: module.TextTransferReceiveModal })));
 import { TemporaryVisitsPanel } from './components/TemporaryVisitsPanel';
 import { TranslationHistoryPanel } from './components/TranslationHistoryPanel';
 import { defaultNavigationData, searchEngines, siteConfig } from './data';
 import { CLICK_STATS_KEY, getTodayClicks, loadClickStats, localDateKey, recordSiteVisit, type ClickStatsStore } from './lib/activityStats';
 import { checkLinksFromBrowser, loadLinkHealthReport, type LinkHealthEntry } from './lib/linkHealth';
+import { parseNavigationData } from './lib/navigationData.ts';
 import { getTemporaryVisitSummaries, loadTemporaryVisits, normalizeTemporaryUrl, pruneTemporaryVisits, recordTemporaryVisit, removeTemporaryVisit, TEMPORARY_VISITS_KEY, temporaryUrlKey, type TemporaryVisitsStore } from './lib/temporaryVisits';
 import { addTranslationHistory, loadTranslationHistory, TRANSLATION_HISTORY_KEY, type TranslationHistoryItem } from './lib/translationHistory';
 import { parseTextTransferHash } from './lib/textTransfer';
 import { createInboxBlogDraft, type BlogDraftInput } from './services/blogDraft';
 import { decryptNote, encryptNote } from './services/encryptedNote';
 import { getEncryptedNote, saveEncryptedNote } from './services/github';
+import { getStoragePersistenceSnapshot, NAVIGATION_DRAFT_RECOVERY_KEY, retryPendingLocalStorageWrites, safeGetLocalStorageItem, safeRemoveLocalStorageItem, safeSetLocalStorageItem, SHARED_SYNC_ENTRY_MAX_BYTES, STORAGE_PERSISTENCE_EVENT } from './lib/safeStorage';
 import { createInboxItem, loadInbox, normalizeInboxDraft, saveInbox, setInboxItemStatus, softDeleteInboxItem, updateInboxItem } from './services/inbox';
 import { createInboxSyncMeta, loadInboxSyncMeta, mergeInboxItems, restoreInboxFromCloud, saveInboxSyncMeta, synchronizeInbox } from './services/inboxSync';
 import { loadStudyProgressStore, mergeStudyProgressStores, saveStudyProgressStore } from './services/techOsStudyProgress';
@@ -34,11 +40,28 @@ import type { NavigationData, Site } from './types/navigation';
 import { loadSceneMode, SCENE_MODE_KEY, type SceneMode } from './types/scene';
 import type { TextNode } from './types/text-network';
 import { applySharedWorkspace, captureSharedWorkspace, configureSharedDefaults, mergeSharedWorkspace, WORKSPACE_EVENT } from './services/workspaceSync';
+import { parseIncomingShare } from './lib/shareCapture';
+import { loadWorkSession } from './lib/workSession';
+import { markNavigationPublished } from './lib/pendingSync';
+import { activateAppUpdate } from './services/pwaUpdate';
+import { publishRssConfiguration } from './services/rssPublish';
+const RssPanel = lazy(() => import('./components/RssPanel').then(module => ({ default: module.RssPanel })));
+const ShareCapturePanel = lazy(() => import('./components/ShareCapturePanel').then(module => ({ default: module.ShareCapturePanel })));
+const WorkSessionPanel = lazy(() => import('./components/WorkSessionPanel').then(module => ({ default: module.WorkSessionPanel })));
+const PendingSyncPanel = lazy(() => import('./components/PendingSyncPanel').then(module => ({ default: module.PendingSyncPanel })));
+const BlogWorkbench = lazy(() => import('./components/blog/BlogWorkbench').then(module => ({ default: module.BlogWorkbench })));
 
 const DRAFT_KEY = 'nav_cms_draft';
 const TEMP_TEXT_KEY = 'nav_temp_text';
 const TRANSLATOR_COLLAPSED_KEY = 'nav_translator_collapsed';
+let navigationDraftWriteBlocked = false;
+let navigationDraftRecoveryAvailable = false;
 configureSharedDefaults({ nav_cms_draft: JSON.stringify(defaultNavigationData), scene_mode: 'default', work_mode: 'false', theme: 'light', nav_temp_text: '', nav_translator_collapsed: 'false', nav_translation_history: '[]', nav_click_stats_v2: JSON.stringify({ version: 2, days: {} }), nav_temporary_url_visits_v1: JSON.stringify({ version: 1, records: [] }) });
+const sharedStorageOptions = (label: string, important = true) => ({
+  label,
+  important,
+  maxBytes: SHARED_SYNC_ENTRY_MAX_BYTES,
+});
 const TRANSLATION_LANGUAGES = [
   ['zh-CN', '简体中文'], ['en', '英语'], ['ja', '日语'], ['ko', '韩语'],
   ['fr', '法语'], ['de', '德语'], ['es', '西班牙语'], ['ru', '俄语'],
@@ -55,25 +78,50 @@ interface InstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-function isNavigationData(value: unknown): value is NavigationData {
-  if (!value || typeof value !== 'object') return false;
-  const data = value as Partial<NavigationData>;
-  return Array.isArray(data.sites) && Array.isArray(data.categories) && Array.isArray(data.layout);
-}
-
 function loadInitialData(): NavigationData {
-  const savedDraft = localStorage.getItem(DRAFT_KEY);
-  if (!savedDraft) return defaultNavigationData;
+  const savedDraft = safeGetLocalStorageItem(DRAFT_KEY, { label: '导航草稿' });
+  if (!savedDraft) {
+    navigationDraftWriteBlocked = false;
+    navigationDraftRecoveryAvailable = false;
+    return defaultNavigationData;
+  }
   try {
-    const parsed: unknown = JSON.parse(savedDraft);
-    return isNavigationData(parsed) ? parsed : defaultNavigationData;
-  } catch {
-    console.error('无法读取本地导航草稿。');
+    const parsed = parseNavigationData(JSON.parse(savedDraft) as unknown);
+    navigationDraftWriteBlocked = false;
+    navigationDraftRecoveryAvailable = false;
+    return parsed;
+  } catch (error) {
+    const recovery = safeSetLocalStorageItem(NAVIGATION_DRAFT_RECOVERY_KEY, savedDraft, { label: '损坏导航草稿的恢复副本' });
+    navigationDraftWriteBlocked = !recovery.ok;
+    navigationDraftRecoveryAvailable = recovery.ok;
+    console.error(recovery.ok ? '本地导航草稿无效，原文已复制到恢复副本并回退到仓库数据。' : '本地导航草稿无效，但恢复副本写入失败；已禁止默认数据覆盖原草稿。', error);
     return defaultNavigationData;
   }
 }
 
 function App() {
+  const [incomingShare, setIncomingShare] = useState(() => parseIncomingShare(window.location));
+  const [captureOpen, setCaptureOpen] = useState(() => Boolean(incomingShare));
+  const [captureMounted, setCaptureMounted] = useState(() => Boolean(incomingShare));
+  const [initialWork] = useState(loadWorkSession);
+  const [workOpen, setWorkOpen] = useState(() => Boolean(initialWork.current));
+  const [workActive, setWorkActive] = useState(() => Boolean(initialWork.current));
+  const [workSiteIds, setWorkSiteIds] = useState<string[]>(() => initialWork.current?.siteIds || []);
+  const [rssOpen, setRssOpen] = useState(false);
+  const [focusedInboxId, setFocusedInboxId] = useState<string | undefined>();
+  const [focusedTechOsId, setFocusedTechOsId] = useState<string | undefined>();
+  useEffect(() => {
+    const receive = () => {
+      const incoming = parseIncomingShare(window.location);
+      if (!incoming) return;
+      setIncomingShare(incoming); setCaptureMounted(true); setCaptureOpen(true);
+      history.replaceState(history.state, '', incoming.cleanUrl);
+    };
+    if (incomingShare) history.replaceState(history.state, '', incomingShare.cleanUrl);
+    window.addEventListener('hashchange', receive);
+    return () => window.removeEventListener('hashchange', receive);
+  }, []);
+  const openWebCapture = () => { setCaptureMounted(true); setCaptureOpen(true); };
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [restOpen, setRestOpen] = useState(false);
@@ -93,6 +141,8 @@ function App() {
   const [sidebarGradient, setSidebarGradient] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(window.location.hash === '#/admin');
   const [isTechOsOpen, setIsTechOsOpen] = useState(window.location.hash === '#/tech-os');
+  const [isBlogOpen, setIsBlogOpen] = useState(window.location.hash === '#/blog');
+  const [blogUnsaved, setBlogUnsaved] = useState(false);
   const [adminSection, setAdminSection] = useState<AdminSection>('content');
   const [isTempTextOpen, setIsTempTextOpen] = useState(false);
   const [isTempTextQrOpen, setIsTempTextQrOpen] = useState(false);
@@ -102,7 +152,7 @@ function App() {
   const [inboxSyncMeta, setInboxSyncMeta] = useState(loadInboxSyncMeta);
   const [inboxSyncState, setInboxSyncState] = useState<InboxSyncUiState>({ phase: 'idle' });
   const [incomingTempText, setIncomingTempText] = useState<string | null>(null);
-  const [tempText, setTempText] = useState(() => localStorage.getItem(TEMP_TEXT_KEY) || '');
+  const [tempText, setTempText] = useState(() => safeGetLocalStorageItem(TEMP_TEXT_KEY, { label: '临时文本' }) || '');
   const [isCopied, setIsCopied] = useState(false);
   const [noteGithubToken, setNoteGithubToken] = useState('');
   const [notePassword, setNotePassword] = useState('');
@@ -114,7 +164,7 @@ function App() {
   const [targetLanguage, setTargetLanguage] = useState('zh-CN');
   const [translationState, setTranslationState] = useState<{ loading: boolean; error: string }>({ loading: false, error: '' });
   const [translationHistory, setTranslationHistory] = useState<TranslationHistoryItem[]>(loadTranslationHistory);
-  const [isTranslatorOpen, setIsTranslatorOpen] = useState(() => localStorage.getItem(TRANSLATOR_COLLAPSED_KEY) !== 'true');
+  const [isTranslatorOpen, setIsTranslatorOpen] = useState(() => safeGetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, { label: '翻译面板偏好', important: false }) !== 'true');
   const [linkHealthEntries, setLinkHealthEntries] = useState<LinkHealthEntry[]>([]);
   const [isLinkHealthLoading, setIsLinkHealthLoading] = useState(false);
   const [clickStats, setClickStats] = useState<ClickStatsStore>(loadClickStats);
@@ -122,24 +172,36 @@ function App() {
   const [currentDate, setCurrentDate] = useState(localDateKey);
   const [qrSite, setQrSite] = useState<Site | null>(null);
   const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
-  const isWorkMode = sceneMode === 'work';
+  const [appUpdateReady, setAppUpdateReady] = useState(() => {
+    try { return sessionStorage.getItem('baize_app_update_ready') === 'true'; } catch { return false; }
+  });
+  const isWorkMode = sceneMode === 'work' || workActive;
+  const [storagePersistence, setStoragePersistence] = useState(getStoragePersistenceSnapshot);
+  const [draftRecoveryNotice, setDraftRecoveryNotice] = useState(() => navigationDraftRecoveryAvailable);
   const inboxSyncBusy = inboxSyncState.phase === 'syncing' || inboxSyncState.phase === 'restoring';
+
+  useEffect(() => {
+    const refreshStorageState = () => setStoragePersistence(getStoragePersistenceSnapshot());
+    refreshStorageState();
+    window.addEventListener(STORAGE_PERSISTENCE_EVENT, refreshStorageState);
+    return () => window.removeEventListener(STORAGE_PERSISTENCE_EVENT, refreshStorageState);
+  }, []);
 
   useEffect(() => {
     const collect = () => { try { captureSharedWorkspace(); } catch { /* Sync reports storage failures explicitly. */ } };
     const refresh = () => {
-      setData(loadInitialData()); setTempText(localStorage.getItem(TEMP_TEXT_KEY) || '');
+      setData(loadInitialData()); setTempText(safeGetLocalStorageItem(TEMP_TEXT_KEY, { label: '临时文本' }) || '');
       setClickStats(loadClickStats()); setTemporaryVisits(loadTemporaryVisits()); setTranslationHistory(loadTranslationHistory()); setSceneMode(loadSceneMode());
-      const dark = localStorage.getItem('theme') === 'dark'; setIsDark(dark); document.documentElement.classList.toggle('dark', dark);
-      setIsTranslatorOpen(localStorage.getItem(TRANSLATOR_COLLAPSED_KEY) !== 'true');
+      const dark = safeGetLocalStorageItem('theme', { label: '主题偏好', important: false }) === 'dark'; setIsDark(dark); document.documentElement.classList.toggle('dark', dark);
+      setIsTranslatorOpen(safeGetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, { label: '翻译面板偏好', important: false }) !== 'true');
     };
-    collect(); const initialCapture = window.setTimeout(collect, 0); const timer = window.setInterval(collect, 2000);
+    collect(); const initialCapture = window.setTimeout(collect, 0); const timer = window.setInterval(() => { if (document.visibilityState === 'visible') collect(); }, 30_000);
     window.addEventListener(WORKSPACE_EVENT, refresh);
     return () => { clearTimeout(initialCapture); clearInterval(timer); window.removeEventListener(WORKSPACE_EVENT, refresh); };
   }, []);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = safeGetLocalStorageItem('theme', { label: '主题偏好', important: false });
     const dark = savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
     setIsDark(dark);
     document.documentElement.classList.toggle('dark', dark);
@@ -147,23 +209,23 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(DRAFT_KEY, JSON.stringify(data));
+    if (!navigationDraftWriteBlocked) safeSetLocalStorageItem(DRAFT_KEY, JSON.stringify(data), sharedStorageOptions('导航草稿'));
   }, [data]);
 
   useEffect(() => {
-    localStorage.setItem(CLICK_STATS_KEY, JSON.stringify(clickStats));
+    safeSetLocalStorageItem(CLICK_STATS_KEY, JSON.stringify(clickStats), sharedStorageOptions('访问统计'));
   }, [clickStats]);
 
   useEffect(() => {
-    localStorage.setItem(TEMPORARY_VISITS_KEY, JSON.stringify(temporaryVisits));
+    safeSetLocalStorageItem(TEMPORARY_VISITS_KEY, JSON.stringify(temporaryVisits), sharedStorageOptions('临时访问记录'));
   }, [temporaryVisits]);
 
   useEffect(() => {
-    localStorage.setItem(TRANSLATION_HISTORY_KEY, JSON.stringify(translationHistory));
+    safeSetLocalStorageItem(TRANSLATION_HISTORY_KEY, JSON.stringify(translationHistory), sharedStorageOptions('翻译历史'));
   }, [translationHistory]);
 
   useEffect(() => {
-    localStorage.setItem(TEMP_TEXT_KEY, tempText);
+    safeSetLocalStorageItem(TEMP_TEXT_KEY, tempText, sharedStorageOptions('临时文本'));
   }, [tempText]);
 
   useEffect(() => {
@@ -213,12 +275,17 @@ function App() {
 
   useEffect(() => {
     const handleHash = () => {
+      if (isBlogOpen && blogUnsaved && window.location.hash !== '#/blog') {
+        history.replaceState(null, '', `${window.location.pathname}${window.location.search}#/blog`);
+        return;
+      }
       setIsAdminOpen(window.location.hash === '#/admin');
       setIsTechOsOpen(window.location.hash === '#/tech-os');
+      setIsBlogOpen(window.location.hash === '#/blog');
     };
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
-  }, []);
+  }, [isBlogOpen, blogUnsaved]);
 
   useEffect(() => {
     if (!isAdminOpen) return;
@@ -243,6 +310,12 @@ function App() {
     readTransferHash();
     window.addEventListener('hashchange', readTransferHash);
     return () => window.removeEventListener('hashchange', readTransferHash);
+  }, []);
+
+  useEffect(() => {
+    const handleAppUpdate = () => setAppUpdateReady(true);
+    window.addEventListener('baize:app-update-ready', handleAppUpdate);
+    return () => window.removeEventListener('baize:app-update-ready', handleAppUpdate);
   }, []);
 
   useEffect(() => {
@@ -362,9 +435,10 @@ function App() {
   }), [textNodes]);
 
   const visibleSiteIds = useMemo(() => {
-    if (!search.trim() || activeEngine) return new Set(data.sites.map(site => site.id));
-    return new Set(fuse.search(search.trim()).map(result => result.item.id));
-  }, [activeEngine, data.sites, fuse, search]);
+    const allowed = workActive && workSiteIds.length ? new Set(workSiteIds) : null;
+    const matches = !search.trim() || activeEngine ? data.sites : fuse.search(search.trim()).map(result => result.item);
+    return new Set(matches.filter(site => !allowed || allowed.has(site.id)).map(site => site.id));
+  }, [activeEngine, data.sites, fuse, search, workActive, workSiteIds]);
   const visibleTextNodes = useMemo(() => {
     if (!search.trim() || activeEngine || searchUrl) return [];
     return textFuse.search(search.trim(), { limit: 8 }).map(result => result.item);
@@ -376,7 +450,7 @@ function App() {
     const next = !isDark;
     setIsDark(next);
     document.documentElement.classList.toggle('dark', next);
-    localStorage.setItem('theme', next ? 'dark' : 'light');
+    safeSetLocalStorageItem('theme', next ? 'dark' : 'light', sharedStorageOptions('主题偏好', false));
   };
 
   const recordVisit = (siteId: string) => {
@@ -399,8 +473,8 @@ function App() {
 
   const changeSceneMode = (mode: SceneMode) => {
     setSceneMode(mode);
-    localStorage.setItem(SCENE_MODE_KEY, mode);
-    localStorage.setItem('work_mode', String(mode === 'work'));
+    safeSetLocalStorageItem(SCENE_MODE_KEY, mode, sharedStorageOptions('场景模式', false));
+    safeSetLocalStorageItem('work_mode', String(mode === 'work'), sharedStorageOptions('工作模式偏好', false));
     if (mode === 'relax') openRest();
   };
 
@@ -423,6 +497,16 @@ function App() {
   const closeTechOs = () => {
     history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
     setIsTechOsOpen(false);
+  };
+
+  const openBlog = () => {
+    setIsAdminOpen(false); setIsCommandPaletteOpen(false); setIsBlogOpen(true);
+    window.location.hash = '/blog';
+  };
+  const closeBlog = () => {
+    if (blogUnsaved) return;
+    history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    setIsBlogOpen(false);
   };
 
   const closeIncomingTransfer = () => {
@@ -477,9 +561,11 @@ function App() {
       return;
     }
     setTranslationState({ loading: true, error: '' });
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 12_000);
     try {
       const params = new URLSearchParams({ q: translationText, langpair: `${sourceLanguage}|${targetLanguage}` });
-      const response = await fetch(`https://api.mymemory.translated.net/get?${params}`);
+      const response = await fetch(`https://api.mymemory.translated.net/get?${params}`, { signal: controller.signal });
       const payload = await response.json() as { responseStatus: number; responseData?: { translatedText?: string } };
       if (!response.ok || payload.responseStatus >= 400 || !payload.responseData?.translatedText) throw new Error('免费翻译接口暂时不可用。');
       const result = new DOMParser().parseFromString(payload.responseData.translatedText, 'text/html').documentElement.textContent || payload.responseData.translatedText;
@@ -492,19 +578,24 @@ function App() {
       }));
       setTranslationState({ loading: false, error: '' });
     } catch (error) {
-      setTranslationState({ loading: false, error: error instanceof Error ? error.message : '翻译失败，请稍后再试。' });
+      const message = error instanceof Error && error.name === 'AbortError'
+        ? '翻译请求超过 12 秒，请稍后重试或使用 Google 回退。'
+        : error instanceof Error ? error.message : '翻译失败，请稍后再试。';
+      setTranslationState({ loading: false, error: message });
+    } finally {
+      window.clearTimeout(timeout);
     }
   };
 
-  const backgroundOpacity = sceneMode === 'work' ? 'opacity-0' : sceneMode === 'study' ? 'opacity-55' : sceneMode === 'relax' ? 'opacity-80' : 'opacity-100';
-  const sceneOverlay = sceneMode === 'work'
+  const backgroundOpacity = isWorkMode ? 'opacity-0' : sceneMode === 'study' ? 'opacity-55' : sceneMode === 'relax' ? 'opacity-80' : 'opacity-100';
+  const sceneOverlay = isWorkMode
     ? 'bg-[#f1f3f0] dark:bg-[#0c1618]'
     : sceneMode === 'study'
       ? 'bg-[#eef2e6]/55 dark:bg-[#0a1c21]/65'
       : sceneMode === 'relax'
         ? 'bg-[#efe2cb]/35 dark:bg-[#1b1714]/55'
         : mainGradient;
-  const sceneSidebar = sceneMode === 'work'
+  const sceneSidebar = isWorkMode
     ? 'bg-[#f8f9f7] dark:bg-[#111c1f]'
     : sceneMode === 'study'
       ? 'bg-[#f3f3e7]/88 dark:bg-[#102b2c]/92'
@@ -654,6 +745,73 @@ function App() {
       || replaceInboxItems(setInboxItemStatus(inboxItems, item.id, 'archived'));
     return { ...result, sourceArchived };
   };
+  const retryStoragePersistence = () => {
+    let snapshot = retryPendingLocalStorageWrites();
+    const wasRecoveryBlocked = navigationDraftWriteBlocked;
+    if (!snapshot.issues.some(issue => issue.key === NAVIGATION_DRAFT_RECOVERY_KEY)) {
+      navigationDraftWriteBlocked = false;
+      if (wasRecoveryBlocked) setDraftRecoveryNotice(true);
+      safeSetLocalStorageItem(DRAFT_KEY, JSON.stringify(data), sharedStorageOptions('导航草稿'));
+    }
+    safeSetLocalStorageItem(CLICK_STATS_KEY, JSON.stringify(clickStats), sharedStorageOptions('访问统计'));
+    safeSetLocalStorageItem(TEMPORARY_VISITS_KEY, JSON.stringify(temporaryVisits), sharedStorageOptions('临时访问记录'));
+    safeSetLocalStorageItem(TRANSLATION_HISTORY_KEY, JSON.stringify(translationHistory), sharedStorageOptions('翻译历史'));
+    safeSetLocalStorageItem(TEMP_TEXT_KEY, tempText, sharedStorageOptions('临时文本'));
+    safeSetLocalStorageItem('theme', isDark ? 'dark' : 'light', sharedStorageOptions('主题偏好', false));
+    safeSetLocalStorageItem(SCENE_MODE_KEY, sceneMode, sharedStorageOptions('场景模式', false));
+    safeSetLocalStorageItem('work_mode', String(sceneMode === 'work'), sharedStorageOptions('工作模式偏好', false));
+    safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, String(!isTranslatorOpen), sharedStorageOptions('翻译面板偏好', false));
+    snapshot = getStoragePersistenceSnapshot();
+    setStoragePersistence(snapshot);
+  };
+
+  const exportUnsavedBackup = () => {
+    const exportedAt = new Date().toISOString();
+    const payload = {
+      version: 1,
+      exportedAt,
+      navigation: data,
+      storage: {
+        nav_cms_draft: JSON.stringify(data),
+        nav_daily_click_stats: null,
+        nav_click_stats_v2: JSON.stringify(clickStats),
+        nav_temporary_url_visits_v1: JSON.stringify(temporaryVisits),
+        nav_translation_history: JSON.stringify(translationHistory),
+        nav_temp_text: tempText,
+        work_mode: String(sceneMode === 'work'),
+        scene_mode: sceneMode,
+        theme: isDark ? 'dark' : 'light',
+        nav_translator_collapsed: String(!isTranslatorOpen),
+      },
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `baize-unsaved-backup-${exportedAt.slice(0, 10)}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+  const downloadRecoveredNavigationDraft = () => {
+    const raw = safeGetLocalStorageItem(NAVIGATION_DRAFT_RECOVERY_KEY, { label: '损坏导航草稿的恢复副本' });
+    if (!raw) return;
+    const blob = new Blob([raw], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `baize-invalid-navigation-draft-${new Date().toISOString().slice(0, 10)}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+    setDraftRecoveryNotice(false);
+  };
+
+
+  const importantStorageIssue = storagePersistence.issues.find(issue => issue.important);
+  const storageIssue = importantStorageIssue || storagePersistence.issues[0];
+  const storageWarningText = importantStorageIssue
+    ? `当前修改未持久化，请勿刷新。 ${storageIssue?.message || ''}`
+    : `部分界面偏好未保存。 ${storageIssue?.message || ''}`;
+
   const inboxCount = inboxItems.filter(item => !item.deletedAt && item.status === 'inbox').length;
   const showInboxLauncher = !isAdminOpen
     && !isInboxOpen
@@ -662,8 +820,14 @@ function App() {
     && incomingTempText === null
     && !qrSite
     && !isCommandPaletteOpen
+    && !captureOpen
     && !restOpen;
   const commandActions: CommandPaletteAction[] = [
+    { id: 'blog', title: '打开博客工作台', description: '写文章、管理草稿、预览与发布更新', keywords: ['blog', '博客', '文章', '写作', '发布'], icon: 'note', run: openBlog },
+    { id: 'rss', title: 'RSS 阅读中心', description: '订阅、OPML、未读、收藏与稍后阅读', keywords: ['rss', '订阅', '阅读', 'opml'], icon: 'study', run: () => setRssOpen(true) },
+    { id: 'organize', title: '智能整理中心', description: '查重复、补全资料、批量调整分类与标签', keywords: ['整理', '去重', 'organize'], icon: 'settings', run: () => openAdmin('organize') },
+    { id: 'web-capture', title: '收集网页', description: '保存网址、备注或安装一键收集书签', keywords: ['收集', '分享', 'capture'], icon: 'add', run: openWebCapture },
+    { id: 'work-session', title: '工作会话', description: '专注计时、工作网站组合与小结', keywords: ['工作', '专注', '番茄', 'focus'], icon: 'work', run: () => setWorkOpen(true) },
     { id: 'shuihu', title: '打开白泽水浒', description: '两卷江湖 · 梁山存档匣 0.3 · 20个本机位置', keywords: ['game', '游戏', '水浒', '梁山', '寨主', '林冲', '鲁智深'], icon: 'study', run: () => { window.open(`${import.meta.env.BASE_URL}game/`, '_blank', 'noopener,noreferrer'); } },
     { id: 'rest', title: '休息一下', description: '在多幅动态风景间轮播，回来继续学习', keywords: ['rest', 'break', '休息', '放松', '动画', '泛舟', '轮播', '鹈鹕', '骑行'], icon: 'relax', run: openRest },
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
@@ -686,9 +850,14 @@ function App() {
     ...(installPrompt ? [{ id: 'install', title: '安装白泽导航', description: '将当前站点安装到设备', keywords: ['pwa', '安装', 'install'], icon: 'install' as const, run: () => { void installApp(); } }] : []),
   ];
 
+  if (isBlogOpen) {
+    return <Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-[#e4ebe5] text-[#456b68] dark:bg-[#07191d] dark:text-[#d9ddd6]">正在载入博客工作台…</div>}><BlogWorkbench onClose={closeBlog} onDirtyChange={setBlogUnsaved} /></Suspense>;
+  }
+
   if (isTechOsOpen) {
     return <><Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-[#dce6e1] text-sm font-medium text-[#456b68] dark:bg-[#07191d] dark:text-[#d9ddd6]">正在载入 Tech OS…</div>}>
       <TechOsWorkspace
+        initialFocusedId={focusedTechOsId}
         isDark={isDark}
         inboxCount={inboxCount}
         inboxItems={inboxItems}
@@ -712,7 +881,7 @@ function App() {
         setIsOpen={setIsSidebarOpen}
         isDark={isDark}
         toggleTheme={toggleTheme}
-        categories={categories}
+        categories={workActive && workSiteIds.length ? categories.filter(category => data.sites.some(site => site.categoryId === category.id && workSiteIds.includes(site.id))) : categories}
         onAdminClick={() => openAdmin('content')}
         sceneMode={sceneMode}
         onSceneModeChange={changeSceneMode}
@@ -731,7 +900,7 @@ function App() {
           <div className="mx-auto flex max-w-7xl items-center gap-4">
             <button onClick={() => setIsSidebarOpen(true)} className="baize-icon-button -ml-2 lg:hidden"><Menu size={24} /></button>
             <div className="group relative max-w-2xl flex-1">
-              <div className="absolute left-3 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center text-[#6f8984] group-focus-within:text-[#356b66] dark:group-focus-within:text-[#d2b775]">{activeEngine ? <span className="text-lg font-bold">{activeEngine.icon}</span> : <Search size={20} />}</div>
+              <div className="absolute left-3 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center text-[#6f8984] group-focus-within:text-[#356b66] dark:group-focus-within:text-[#d2b775]">{activeEngine ? <SearchEngineIcon engineId={activeEngine.id} className="h-5 w-5" /> : <Search size={20} />}</div>
               <input
                 id="search-input"
                 value={search}
@@ -750,7 +919,7 @@ function App() {
               />
               <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-[#5f8f84]/20 bg-[#5f8f84]/8 px-2 py-0.5 text-xs text-[#6f8984] dark:border-[#c9a96b]/15 dark:bg-[#c9a96b]/8 dark:text-[#baa978] sm:block">/</kbd>
               <div className="pointer-events-none absolute left-0 top-full mt-2 flex w-full flex-wrap gap-2 px-1 opacity-0 transition-opacity group-focus-within:pointer-events-auto group-focus-within:opacity-100">
-                {searchEngines.map(engine => <button key={engine.prefix} onClick={() => { const query = activeEngine ? search.slice(activeEngine.prefix.length + 1) : search; setSearch(`${engine.prefix} ${query}`); document.getElementById('search-input')?.focus(); }} className="baize-chip">{engine.icon} {engine.name}</button>)}
+                {searchEngines.map(engine => <button key={engine.id} type="button" data-search-engine={engine.id} onClick={() => { const query = activeEngine ? search.slice(activeEngine.prefix.length + 1) : search; setSearch(`${engine.prefix} ${query}`); document.getElementById('search-input')?.focus(); }} className="baize-chip inline-flex items-center gap-1.5"><SearchEngineIcon engineId={engine.id} /><span>{engine.name}</span></button>)}
               </div>
             </div>
             <button type="button" onClick={() => setIsCommandPaletteOpen(true)} className="baize-button-secondary shrink-0 px-3" aria-label="打开全局命令面板"><Command size={18} /><span className="hidden md:inline">命令</span><kbd className="hidden rounded border border-[#5f8f84]/20 px-1.5 py-0.5 text-[10px] text-[#718986] lg:inline">Ctrl K</kbd></button>
@@ -776,24 +945,31 @@ function App() {
           </section>}
           <div className="utility-launcher-row flex flex-wrap items-start gap-2 sm:gap-3">
             <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openTechOs}><BrainCircuit size={17} />Tech OS</button>
+            <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openBlog}><FileText size={17} />博客工作台</button>
             <button type="button" className="baize-button-secondary utility-launcher-button" data-rest-launcher onClick={openRest}><Coffee size={17} />休息一下</button>
             <a className="baize-button-secondary utility-launcher-button" href={`${import.meta.env.BASE_URL}game/`} target="_blank" rel="noopener noreferrer">白泽水浒</a>
             <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={readingOpen} onClick={() => setReadingOpen(value => !value)}><FileText size={17} />阅读中心</button>
             <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={graphOpen} onClick={() => setGraphOpen(value => !value)}><Network size={17} />知识图谱</button>
-            {readingOpen && <ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} />}
+            <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openWebCapture}><Plus size={17} />收集网页</button>
+            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={rssOpen} onClick={() => setRssOpen(value => !value)}><FileText size={17} />RSS 订阅</button>
+            {rssOpen && <Suspense fallback={<p>正在载入 RSS…</p>}><RssPanel onClose={() => setRssOpen(false)} onCapture={createLocalInboxItem} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo}`} onPublishSources={(sources, token, baseline) => publishRssConfiguration(siteConfig.repository, token, sources, baseline)} /></Suspense>}
+            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={workOpen} onClick={() => setWorkOpen(value => workActive || !value)}><Check size={17} />{workActive ? '正在专注' : '工作会话'}</button>
+            <Suspense fallback={null}><PendingSyncPanel data={data} bundled={defaultNavigationData} items={inboxItems} syncMeta={inboxSyncMeta} onPublish={() => openAdmin('content')} onPrivateSync={openInbox} /></Suspense>
+            {workOpen && <div className="basis-full"><Suspense fallback={<p>正在加载工作会话…</p>}><WorkSessionPanel sites={data.sites} onActiveChange={setWorkActive} onSelectionChange={setWorkSiteIds} onSiteVisit={recordVisit} onClose={() => setWorkOpen(false)} /></Suspense></div>}
+            {readingOpen && <Suspense fallback={null}><ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} /></Suspense>}
             {graphOpen && <Suspense fallback={<p>正在加载图谱…</p>}><TextGraphPanel index={graphIndex} onClose={() => setGraphOpen(false)} /></Suspense>}
-            <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />
+            {!workActive && <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />}
             <TemporaryVisitsPanel
               visits={temporaryVisitSummaries}
               onVisit={visitTemporaryUrl}
               onDelete={key => setTemporaryVisits(current => removeTemporaryVisit(current, key))}
               onClear={() => setTemporaryVisits(current => ({ ...current, records: [] }))}
             />
-            {!isTranslatorOpen && <button type="button" className="baize-button-secondary utility-launcher-button" aria-controls="quick-translator" aria-expanded="false" onClick={() => { localStorage.setItem(TRANSLATOR_COLLAPSED_KEY, 'false'); setIsTranslatorOpen(true); }}><Languages size={17} />翻译{translationHistory.length > 0 && <span className="utility-launcher-badge">{translationHistory.length}</span>}</button>}
+            {!isTranslatorOpen && <button type="button" className="baize-button-secondary utility-launcher-button" aria-controls="quick-translator" aria-expanded="false" onClick={() => { safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, 'false', sharedStorageOptions('翻译面板偏好', false)); setIsTranslatorOpen(true); }}><Languages size={17} />翻译{translationHistory.length > 0 && <span className="utility-launcher-badge">{translationHistory.length}</span>}</button>}
             {isTranslatorOpen && <section id="quick-translator" className="baize-panel basis-full rounded-2xl p-4 sm:p-5">
             <div className="mb-3 flex items-center justify-between">
               <span className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Languages size={17} />快捷翻译</span>
-              <button type="button" className="baize-icon-button flex items-center gap-1 text-xs" aria-expanded="true" onClick={() => { localStorage.setItem(TRANSLATOR_COLLAPSED_KEY, 'true'); setIsTranslatorOpen(false); }}><ChevronUp size={16} />收起</button>
+              <button type="button" className="baize-icon-button flex items-center gap-1 text-xs" aria-expanded="true" onClick={() => { safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, 'true', sharedStorageOptions('翻译面板偏好', false)); setIsTranslatorOpen(false); }}><ChevronUp size={16} />收起</button>
             </div>
             <form onSubmit={translateInline}>
               <div className="mb-3 flex flex-wrap items-center gap-2">
@@ -848,7 +1024,7 @@ function App() {
               cells.forEach(cell => occupiedCells.add(cell));
               safePositionedSites.add(site.id);
             }
-            if (!sites.length && search.trim()) return null;
+            if (!sites.length && (search.trim() || workActive)) return null;
             return (
               <section key={category.id} id={category.id} className="scroll-mt-28">
                 <div className="category-heading baize-panel mb-6 inline-flex items-center gap-2 rounded-xl px-4 py-2">
@@ -881,8 +1057,10 @@ function App() {
         <button type="button" className="baize-button-secondary h-11 px-4" onClick={openInbox} aria-label={`打开 Inbox，${inboxCount} 条`}><InboxIcon size={19} /><span>Inbox</span>{inboxCount > 0 && <span className="rounded-full bg-[#356b66] px-2 py-0.5 text-[11px] text-white dark:bg-[#c9a96b] dark:text-[#102c33]">{inboxCount}</span>}</button>
       </nav>}
 
-      {isAdminOpen && <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onRunBrowserLinkHealthCheck={runBrowserLinkHealthCheck} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onReset={() => { localStorage.removeItem(DRAFT_KEY); setData(defaultNavigationData); }} onClose={closeAdmin} />}
-      <InboxPanel open={isInboxOpen} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} blogRepositoryLabel={`${siteConfig.blogRepository.owner}/${siteConfig.blogRepository.repo} · ${siteConfig.blogRepository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onRestore={restorePrivateSharedData} onSync={syncInboxWithCloud} onCreateBlogDraft={createBlogDraftFromInbox} onClose={() => setIsInboxOpen(false)} />
+      {isAdminOpen && <Suspense fallback={<div className="fixed inset-0 z-[70] flex items-center justify-center bg-[#dce6e1]/96 text-sm font-medium text-[#456b68] dark:bg-[#07191d]/97 dark:text-[#d9ddd6]">正在载入管理后台…</div>}>
+        <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onRunBrowserLinkHealthCheck={runBrowserLinkHealthCheck} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onPublished={(published, sha, target) => { if (target.owner === siteConfig.repository.owner && target.repo === siteConfig.repository.repo && target.branch === siteConfig.repository.branch) markNavigationPublished(published, sha, defaultNavigationData); }} onReset={() => { safeRemoveLocalStorageItem(DRAFT_KEY, { label: '导航草稿' }); setData(defaultNavigationData); }} onClose={closeAdmin} />
+      </Suspense>}
+      {isInboxOpen && <Suspense fallback={null}><InboxPanel open focusItemId={focusedInboxId} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} blogRepositoryLabel={`${siteConfig.blogRepository.owner}/${siteConfig.blogRepository.repo} · ${siteConfig.blogRepository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onRestore={restorePrivateSharedData} onSync={syncInboxWithCloud} onCreateBlogDraft={createBlogDraftFromInbox} onClose={() => setIsInboxOpen(false)} /></Suspense>}
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">
@@ -914,10 +1092,33 @@ function App() {
           </footer>
         </aside>
       </div>}
-      <QrCodeModal site={qrSite} onClose={() => setQrSite(null)} />
-      {isTempTextQrOpen && <TempTextQrModal text={tempText} onClose={() => setIsTempTextQrOpen(false)} />}
-      {incomingTempText !== null && <TextTransferReceiveModal text={incomingTempText} currentText={tempText} onClose={closeIncomingTransfer} onAccept={() => { setTempText(incomingTempText); setIsTempTextOpen(true); closeIncomingTransfer(); }} />}
-      <CommandPalette open={isCommandPaletteOpen} sites={data.sites} categories={categories} textNodes={textNodes} actions={commandActions} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} />
+      {qrSite && <Suspense fallback={null}><QrCodeModal site={qrSite} onClose={() => setQrSite(null)} /></Suspense>}
+      {isTempTextQrOpen && <Suspense fallback={null}><TempTextQrModal text={tempText} onClose={() => setIsTempTextQrOpen(false)} /></Suspense>}
+      {incomingTempText !== null && <Suspense fallback={null}><TextTransferReceiveModal text={incomingTempText} currentText={tempText} onClose={closeIncomingTransfer} onAccept={() => { setTempText(incomingTempText); setIsTempTextOpen(true); closeIncomingTransfer(); }} /></Suspense>}
+      {captureMounted && <Suspense fallback={null}><ShareCapturePanel open={captureOpen} incoming={incomingShare} onCapture={createLocalInboxItem} onClose={() => setCaptureOpen(false)} /></Suspense>}
+      {isCommandPaletteOpen && <Suspense fallback={null}><CommandPalette open sites={data.sites} categories={categories} textNodes={textNodes} actions={commandActions} inboxItems={inboxItems} temporaryVisits={temporaryVisitSummaries} translationHistory={translationHistory} onOpenInboxItem={id => { setFocusedInboxId(id); openInbox(); }} onUseTranslation={item => { setTranslationText(item.sourceText); setTranslatedText(item.translatedText); setSourceLanguage(item.sourceLanguage); setTargetLanguage(item.targetLanguage); setTranslationState({ loading: false, error: '' }); setIsTranslatorOpen(true); focusAfterRender('translation-input'); }} onTemporaryVisit={visitTemporaryUrl} onOpenTechOs={id => { setFocusedTechOsId(id); openTechOs(); }} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} /></Suspense>}
+      {storagePersistence.issues.length > 0 && <aside
+        className="fixed inset-x-4 z-[110] mx-auto flex max-w-2xl flex-wrap items-center gap-2 rounded-2xl border border-[#a85d50]/30 bg-[#fff7ee]/96 p-3 shadow-2xl backdrop-blur-xl dark:border-[#d58a78]/25 dark:bg-[#2a1c1a]/96"
+        style={{ bottom: appUpdateReady ? '10.5rem' : '5rem' }}
+        role="alert"
+        aria-live="assertive"
+      >
+        <AlertTriangle size={18} className="shrink-0 text-[#a85d50] dark:text-[#e1a294]" />
+        <p className="min-w-48 flex-1 text-xs leading-5 text-[#74473f] dark:text-[#f0c0b4]">{storageWarningText}{storagePersistence.issues.length > 1 ? `（另有 ${storagePersistence.issues.length - 1} 项）` : ''}</p>
+        <button type="button" className="baize-button-secondary shrink-0 px-3 py-1.5 text-xs" onClick={retryStoragePersistence}><RefreshCw size={14} />重试保存</button>
+        {importantStorageIssue && <button type="button" className="baize-button-primary shrink-0 px-3 py-1.5 text-xs" onClick={exportUnsavedBackup}><Download size={14} />导出备份</button>}
+      </aside>}
+      {draftRecoveryNotice && <aside
+        className="fixed inset-x-4 z-[109] mx-auto flex max-w-2xl flex-wrap items-center gap-2 rounded-2xl border border-[#c9a96b]/35 bg-[#f8f2df]/96 p-3 shadow-2xl backdrop-blur-xl dark:border-[#c9a96b]/25 dark:bg-[#292719]/96"
+        style={{ bottom: storagePersistence.issues.length > 0 ? (appUpdateReady ? '17rem' : '11.5rem') : (appUpdateReady ? '10.5rem' : '5rem') }}
+        role="status" aria-live="polite"
+      >
+        <FileText size={18} className="shrink-0 text-[#886d32] dark:text-[#dfc68e]" />
+        <p className="min-w-48 flex-1 text-xs leading-5 text-[#6f5b31] dark:text-[#ead9aa]">检测到无效导航草稿，页面已回退到仓库数据；原文保存在 <code>{NAVIGATION_DRAFT_RECOVERY_KEY}</code>，未被静默丢弃。</p>
+        <button type="button" className="baize-button-primary shrink-0 px-3 py-1.5 text-xs" onClick={downloadRecoveredNavigationDraft}><Download size={14} />下载原草稿</button>
+        <button type="button" className="baize-icon-button shrink-0 p-1.5" aria-label="关闭草稿恢复提示" onClick={() => setDraftRecoveryNotice(false)}><X size={15} /></button>
+      </aside>}
+      {appUpdateReady && <aside className="fixed inset-x-4 bottom-20 z-[100] mx-auto flex max-w-md items-center gap-3 rounded-2xl border border-[#5f8f84]/25 bg-[#f4f1e8]/96 p-3 shadow-2xl backdrop-blur-xl dark:border-[#c9a96b]/20 dark:bg-[#102c33]/96" role="status" aria-live="polite"><RefreshCw size={18} className="shrink-0 text-[#356b66] dark:text-[#d2b775]" /><p className="min-w-0 flex-1 text-xs leading-5 text-[#456b68] dark:text-[#d9ddd6]">新版本已准备好。请先保存正在编辑的表单，再更新页面。</p><button type="button" className="baize-button-primary shrink-0 px-3 py-1.5 text-xs" disabled={Boolean(importantStorageIssue)} onClick={() => { try { sessionStorage.removeItem('baize_app_update_ready'); } catch { /* Update can proceed without session storage. */ } void activateAppUpdate(); }}>保存后更新</button><button type="button" className="baize-icon-button shrink-0 p-1.5" aria-label="稍后刷新" onClick={() => { try { sessionStorage.removeItem('baize_app_update_ready'); } catch { /* Dismiss in memory. */ } setAppUpdateReady(false); }}><X size={16} /></button></aside>}
       <RestOverlay open={restOpen} onClose={closeRest} />
     </div>
   );

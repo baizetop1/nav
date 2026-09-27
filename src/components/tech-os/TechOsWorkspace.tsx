@@ -34,6 +34,7 @@ import type { TechOsSourceFile } from '../../types/tech-os';
 type WorkspaceView = 'dashboard' | 'learning' | 'route-engine' | 'route' | 'quest' | 'inbox' | 'knowledge' | 'lab' | 'project' | 'map' | 'backlog' | 'repository';
 
 interface TechOsWorkspaceProps {
+  initialFocusedId?: string;
   isDark: boolean;
   inboxCount: number;
   inboxItems: InboxItem[];
@@ -71,12 +72,12 @@ const MODE_LABELS: Record<TechOsMode, { label: string; detail: string }> = {
   'keep-alive': { label: '保持活跃', detail: '只推进一个轻量动作' },
 };
 
-export function TechOsWorkspace({ isDark, inboxCount, inboxItems, onToggleTheme, onOpenInbox, onArchiveInboxItems, onClose, onRest, repository }: TechOsWorkspaceProps) {
+export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxItems, onToggleTheme, onOpenInbox, onArchiveInboxItems, onClose, onRest, repository }: TechOsWorkspaceProps) {
   const [revision, setRevision] = useState(0);
   const updateIndex = (files: TechOsSourceFile[]) => { replaceTechOsIndex(indexFromTechOsFiles(files)); setRevision(value => value + 1); };
-  const [activeView, setActiveView] = useState<WorkspaceView>('dashboard');
+  const [activeView, setActiveView] = useState<WorkspaceView>(() => { const entity = initialFocusedId && getTechOsEntity(initialFocusedId); return entity ? viewForEntity(entity) : 'dashboard'; });
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [focusedId, setFocusedId] = useState(techOsIndex.state.currentQuestId);
+  const [focusedId, setFocusedId] = useState(initialFocusedId || techOsIndex.state.currentQuestId);
   const [sessionMode, setSessionMode] = useState<TechOsMode>(techOsIndex.state.mode);
   const [captureDrafts, setCaptureDrafts] = useState<TechOsCaptureDraft[]>([]);
   const [candidateDrafts, setCandidateDrafts] = useState<RouteCandidateDraft[]>([]);

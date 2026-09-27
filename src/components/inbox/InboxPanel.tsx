@@ -16,6 +16,7 @@ import type { TechOsCaptureKind } from '../../types/tech-os-capture';
 interface InboxPanelProps {
   open: boolean;
   captureRequest: number;
+  focusItemId?: string;
   items: InboxItem[];
   repositoryLabel: string;
   blogRepositoryLabel: string;
@@ -39,7 +40,7 @@ interface InboxEditorProps {
   onCancel?: () => void;
 }
 
-export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogRepositoryLabel, syncMeta, syncState, onCreate, onUpdate, onStatusChange, onDelete, onRestore, onSync, onCreateBlogDraft, onClose }: InboxPanelProps) {
+export function InboxPanel({ open, captureRequest, focusItemId, items, repositoryLabel, blogRepositoryLabel, syncMeta, syncState, onCreate, onUpdate, onStatusChange, onDelete, onRestore, onSync, onCreateBlogDraft, onClose }: InboxPanelProps) {
   const [view, setView] = useState<InboxItemStatus>('inbox');
   const [captureOpen, setCaptureOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -87,6 +88,15 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
       setCaptureOpen(true);
     }
   }, [captureRequest, open]);
+
+  useEffect(() => {
+    if (!open || !focusItemId) return;
+    const item = items.find(value => value.id === focusItemId && !value.deletedAt);
+    if (!item) return;
+    setView(item.status); setCaptureOpen(false); setEditingId(null);
+    const timer = window.setTimeout(() => document.getElementById(`inbox-item-${focusItemId}`)?.scrollIntoView({ block: 'center' }), 60);
+    return () => window.clearTimeout(timer);
+  }, [open, focusItemId]);
 
   useEffect(() => {
     if (open) return;
@@ -185,7 +195,7 @@ export function InboxPanel({ open, captureRequest, items, repositoryLabel, blogR
 
           {groups.map(group => <section key={group.label} className="mb-6" aria-label={group.label}>
             <h3 className="mb-2 text-xs font-semibold tracking-[0.15em] text-[#718986]">{group.label}</h3>
-            <div className="space-y-3">{group.items.map(item => <article key={item.id} className="rounded-2xl border border-[#5f8f84]/15 bg-white/20 p-4 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20">
+            <div className="space-y-3">{group.items.map(item => <article id={`inbox-item-${item.id}`} key={item.id} className={`rounded-2xl border border-[#5f8f84]/15 bg-white/20 p-4 dark:border-[#c9a96b]/10 dark:bg-[#07191d]/20 ${focusItemId === item.id ? 'ring-2 ring-[#5f8f84]/50' : ''}`}>
               {editingId === item.id ? <InboxEditor initial={item} submitLabel="保存修改" onSubmit={draft => {
                 const error = onUpdate(item.id, draft);
                 if (!error) setEditingId(null);

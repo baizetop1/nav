@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { navigationChanges, stableNavigationSignature, markNavigationPublished, loadPublishBaseline } from '../src/lib/pendingSync.ts';
+const base = { sites: [{ id: 'a', name: 'A', url: 'https://a.example/', categoryId: 'c', tags: [], description: '' }], categories: [{ id: 'c', name: 'C', order: 0 }], layout: [{ siteId: 'a', order: 0, size: 'normal' }] };
+const edited = structuredClone(base); edited.sites[0].url = 'https://new.example/';
+assert.deepEqual(navigationChanges(base, edited).map(x => [x.kind, x.fields]), [['modified', ['url']]]);
+assert.equal(navigationChanges(base, { ...base, sites: [], layout: [] }).length, 2);
+assert.equal(navigationChanges(base, structuredClone(base)).length, 0);
+const values = new Map(); globalThis.localStorage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value), removeItem: key => values.delete(key) };
+assert.equal(markNavigationPublished(edited, 'sha', base), true);
+assert.deepEqual(loadPublishBaseline(base), edited);
+const newBuild = structuredClone(base); newBuild.sites[0].name = 'changed on other device';
+assert.deepEqual(loadPublishBaseline(newBuild), newBuild, 'a new deployed build supersedes the old local baseline');
+assert.notEqual(stableNavigationSignature(base), stableNavigationSignature(edited));
+console.log('Pending sync: changes, publication acknowledgement and new-build baselines passed.');

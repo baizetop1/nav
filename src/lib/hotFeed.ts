@@ -1,3 +1,4 @@
+import { safeGetLocalStorageItem, safeSetLocalStorageItem } from './safeStorage.ts';
 export type IntelligenceCategory = 'cn' | 'ai' | 'security' | 'dev';
 
 export type IntelligenceFilter = 'all' | IntelligenceCategory;
@@ -64,6 +65,7 @@ export interface HotFeedLoadOptions {
   fetcher?: typeof fetch;
 }
 
+export const HOT_FEED_REFRESH_EVENT = 'baize:hot-feed-refresh';
 const CACHE_KEY = 'nav_hot_feed_cache_v3';
 const LEGACY_CACHE_KEY = 'nav_hot_feed_cache_v2';
 const MIXED_CATEGORY_ORDER: readonly IntelligenceCategory[] = ['cn', 'security', 'ai', 'dev'];
@@ -296,9 +298,8 @@ export async function loadHotFeedReport(url: string, options: HotFeedLoadOptions
 
 export function loadCachedHotFeedReport(): HotFeedReport | null {
   try {
-    if (typeof localStorage === 'undefined') return null;
     for (const key of [CACHE_KEY, LEGACY_CACHE_KEY]) {
-      const raw = localStorage.getItem(key);
+      const raw = safeGetLocalStorageItem(key, { label: '热榜缓存', important: false });
       const report = raw ? parseHotFeedReport(JSON.parse(raw) as unknown) : null;
       if (report) return report;
     }
@@ -309,9 +310,5 @@ export function loadCachedHotFeedReport(): HotFeedReport | null {
 }
 
 export function cacheHotFeedReport(report: HotFeedReport): void {
-  try {
-    if (typeof localStorage !== 'undefined') localStorage.setItem(CACHE_KEY, JSON.stringify(report));
-  } catch {
-    // The live report still works when browser storage is unavailable or full.
-  }
+  safeSetLocalStorageItem(CACHE_KEY, JSON.stringify(report), { label: '热榜缓存', important: false });
 }

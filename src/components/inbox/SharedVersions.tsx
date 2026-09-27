@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { captureSharedWorkspace, loadSharedWorkspace, restoreSharedVersion, WORKSPACE_EVENT } from '../../services/workspaceSync';
-const labels: Record<string, string> = { nav_cms_draft: '导航内容与布局', nav_temp_text: '临时文本', nav_click_stats_v2: '访问统计', nav_translation_history: '翻译历史', nav_temporary_url_visits_v1: '临时访问', scene_mode: '场景模式', theme: '主题' };
+const labels: Record<string, string> = { nav_cms_draft: '导航内容与布局', nav_temp_text: '临时文本', nav_click_stats_v2: '访问统计', nav_translation_history: '翻译历史', nav_temporary_url_visits_v1: '临时访问', scene_mode: '场景模式', theme: '主题', nav_search_aliases_v1: '搜索别名', baize_rss_sources_v1: 'RSS 订阅草稿', baize_rss_reader_v1: 'RSS 阅读状态' };
 export function SharedVersions() {
   const [store, setStore] = useState(() => loadSharedWorkspace());
   const [message, setMessage] = useState('');

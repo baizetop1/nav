@@ -3,9 +3,8 @@ name: Check link health
 on:
   push:
     branches: [main, master]
-    # The checker commits only this file; ignoring it prevents a loop.
-    paths-ignore:
-      - public/link-health.json
+    paths:
+      - src/data/sites.json
   schedule:
     - cron: "17 2 * * *"
   workflow_dispatch:
@@ -27,42 +26,31 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
+          cache: npm
+
+      - name: Restore previous link health report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/restore-pages-data.mjs link-health.json rss-feed.json
 
       - name: Check links
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/check-links.mjs
 
-      - name: Commit changed report
-        id: commit
-        run: |
-          if git diff --quiet -- public/link-health.json; then
-            echo "Link-health report is unchanged."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/link-health.json
-          git commit -m "chore: update link health report"
-          git push
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-
       - name: Install dependencies
-        if: steps.commit.outputs.changed == 'true'
         run: npm ci
 
       - name: Refresh technology intelligence and GitHub Trending
-        if: steps.commit.outputs.changed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-hot-feed.mjs
 
-      - name: Build updated site
-        if: steps.commit.outputs.changed == 'true'
-        run: npm run build
+      - name: Build and verify navigation application
+        run: npm run verify:app
 
       - name: Deploy updated health report
-        if: steps.commit.outputs.changed == 'true'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist

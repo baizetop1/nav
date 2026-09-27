@@ -1,4 +1,5 @@
 import type { NavigationData } from '../types/navigation';
+import { parseNavigationData } from '../lib/navigationData.ts';
 import type { EncryptedNavigationBackup } from './encryptedBackup';
 import type { EncryptedInbox } from './inboxSync';
 import type { EncryptedNote } from './encryptedNote';
@@ -18,6 +19,19 @@ export interface PublishResult {
   commitUrl: string;
   sha: string;
 }
+
+export interface NavigationSnapshot {
+  data: NavigationData;
+  headSha: string;
+}
+
+export interface RepositoryAccess {
+  fullName: string;
+  branch: string;
+  canPush: boolean;
+}
+
+// Repository tree types used by the Git data API.
 
 interface RepositoryTreeEntry {
   path: string;
@@ -93,6 +107,32 @@ async function githubRequest<T>(path: string, token: string, init?: RequestInit)
 
 export function getAuthenticatedUser(token: string): Promise<GitHubUser> {
   return githubRequest<GitHubUser>('/user', token);
+}
+
+export async function verifyRepositoryAccess(
+  target: RepositoryTarget,
+  token: string,
+): Promise<RepositoryAccess> {
+  const owner = target.owner.trim();
+  const repo = target.repo.trim();
+  const branch = target.branch.trim();
+  if (!owner || !repo || !branch) throw new Error('请完整填写 Owner、Repository 和 Branch。');
+
+  const repository = await githubRequest<{
+    full_name: string;
+    permissions?: { push?: boolean };
+  }>(
+    `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`,
+    token,
+  );
+  if (repository.permissions?.push !== true) {
+    throw new Error('Token 可以读取仓库，但没有 Contents 写入权限。请把该仓库加入 Token，并授予 Contents: Read and write。');
+  }
+  await githubRequest(
+    `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/branches/${encodeURIComponent(branch)}`,
+    token,
+  );
+  return { fullName: repository.full_name, branch, canPush: true };
 }
 
 function utf8ToBase64(value: string): string {
@@ -211,8 +251,12 @@ export async function saveEncryptedBackup(target: RepositoryTarget, token: strin
   return result.commit.html_url;
 }
 
-export async function getRemoteNavigationData(target: RepositoryTarget, token: string): Promise<NavigationData> {
-  const query = `?ref=${encodeURIComponent(target.branch)}`;
+export async function getRemoteNavigationSnapshot(target: RepositoryTarget, token: string): Promise<NavigationSnapshot> {
+  const ref = await githubRequest<{ object: { sha: string } }>(
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/git/ref/heads/${encodeURIComponent(target.branch)}`,
+    token,
+  );
+  const query = `?ref=${encodeURIComponent(ref.object.sha)}`;
   const read = <T,>(path: string) => githubRequest<T>(
     `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${path}${query}`,
     token,
@@ -223,7 +267,11 @@ export async function getRemoteNavigationData(target: RepositoryTarget, token: s
     read<NavigationData['categories']>('src/data/categories.json'),
     read<NavigationData['layout']>('src/data/layout.json'),
   ]);
-  return { sites, categories, layout };
+  return { data: parseNavigationData({ sites, categories, layout }), headSha: ref.object.sha };
+}
+
+export async function getRemoteNavigationData(target: RepositoryTarget, token: string): Promise<NavigationData> {
+  return (await getRemoteNavigationSnapshot(target, token)).data;
 }
 
 export async function getWorkflowRun(
@@ -232,7 +280,7 @@ export async function getWorkflowRun(
   sha: string,
 ): Promise<WorkflowRun | null> {
   const response = await githubRequest<{ workflow_runs: WorkflowRun[] }>(
-    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/actions/runs?branch=${encodeURIComponent(target.branch)}&per_page=20`,
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/actions/workflows/deploy.yml/runs?branch=${encodeURIComponent(target.branch)}&head_sha=${encodeURIComponent(sha)}&per_page=20`,
     token,
   );
   return response.workflow_runs.find(run => run.head_sha === sha) || null;
@@ -242,10 +290,10 @@ export async function getWorkflowRun(
  * Starts the server-side link checker. A browser cannot reliably inspect
  * cross-origin HTTP responses, so the actual probes run in GitHub Actions.
  */
-export async function dispatchLinkHealthCheck(target: RepositoryTarget, token: string): Promise<void> {
+async function dispatchWorkflow(target: RepositoryTarget, token: string, workflow: string, label: string): Promise<void> {
   const normalizedToken = requireGithubToken(token);
   const response = await fetch(
-    `${API_ROOT}/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/actions/workflows/link-health.yml/dispatches`,
+    `${API_ROOT}/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/actions/workflows/${encodeURIComponent(workflow)}/dispatches`,
     {
       method: 'POST',
       headers: {
@@ -262,8 +310,12 @@ export async function dispatchLinkHealthCheck(target: RepositoryTarget, token: s
   const payload = await response.json().catch(() => null) as { message?: string } | null;
   if (response.status === 401) throw new Error('GitHub Token 无效或已过期。');
   if (response.status === 403) throw new Error('Token 没有触发 GitHub Actions 的权限，请在 fine-grained Token 中开启 Actions 读写权限。');
-  if (response.status === 404) throw new Error('未找到 link-health.yml 工作流，请确认仓库和分支填写正确。');
-  throw new Error(payload?.message || `触发链接检测失败 (${response.status})。`);
+  if (response.status === 404) throw new Error(`未找到 ${workflow} 工作流，请确认仓库和分支填写正确。`);
+  throw new Error(payload?.message || `触发${label}失败 (${response.status})。`);
+}
+
+export async function dispatchLinkHealthCheck(target: RepositoryTarget, token: string): Promise<void> {
+  return dispatchWorkflow(target, token, 'link-health.yml', '链接检测');
 }
 
 /** Returns the newest manually-triggered link-health workflow run. */
@@ -275,25 +327,42 @@ export async function getLatestLinkHealthRun(target: RepositoryTarget, token: st
   return response.workflow_runs[0] || null;
 }
 
+export async function dispatchHotFeedRefresh(target: RepositoryTarget, token: string): Promise<void> {
+  return dispatchWorkflow(target, token, 'hot-feed.yml', '热榜更新');
+}
+
+export async function getLatestHotFeedRun(target: RepositoryTarget, token: string): Promise<WorkflowRun | null> {
+  const response = await githubRequest<{ workflow_runs: WorkflowRun[] }>(
+    `/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/actions/workflows/hot-feed.yml/runs?branch=${encodeURIComponent(target.branch)}&event=workflow_dispatch&per_page=5`,
+    token,
+  );
+  return response.workflow_runs[0] || null;
+}
+
 export async function publishNavigationData(
   target: RepositoryTarget,
   data: NavigationData,
   token: string,
   message = 'Update navigation data from CMS',
+  expectedParentSha?: string,
 ): Promise<PublishResult> {
+  const validatedData = parseNavigationData(data);
   const { owner, repo, branch } = target;
   const refPath = `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/ref/heads/${encodeURIComponent(branch)}`;
   const ref = await githubRequest<{ object: { sha: string } }>(refPath, token);
   const parentSha = ref.object.sha;
+  if (expectedParentSha && parentSha !== expectedParentSha) {
+    throw new Error('远端分支在你读取后又发生了变化。为避免覆盖内容，请重新读取远端并合并后再发布。');
+  }
   const parent = await githubRequest<{ tree: { sha: string } }>(
     `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/commits/${parentSha}`,
     token,
   );
 
   const files = [
-    { path: 'src/data/sites.json', value: data.sites },
-    { path: 'src/data/categories.json', value: data.categories },
-    { path: 'src/data/layout.json', value: data.layout },
+    { path: 'src/data/sites.json', value: validatedData.sites },
+    { path: 'src/data/categories.json', value: validatedData.categories },
+    { path: 'src/data/layout.json', value: validatedData.layout },
   ];
 
   const tree = await githubRequest<{ sha: string }>(
@@ -357,6 +426,7 @@ export async function createRepositoryTextFile(
     token,
   );
   const parentSha = ref.object.sha;
+
   const parent = await githubRequest<{ tree: { sha: string } }>(
     `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/commits/${parentSha}`,
     token,

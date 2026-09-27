@@ -32,6 +32,9 @@ const HACKER_NEWS_LOOKAHEAD = 24;
 const GITHUB_ITEM_LIMIT = 10;
 const REQUEST_TIMEOUT_MS = 20_000;
 const USER_AGENT = 'baize-nav-hot-feed/3.0 (+https://github.com/baizetop1/nav)';
+const MIN_GITHUB_ITEMS = 3;
+const OUTPUT_CLOCK_SKEW_MS = 5 * 60 * 1000;
+const OUTPUT_GENERATION_WINDOW_MS = 15 * 60 * 1000;
 
 function stableId(value) {
   return createHash('sha256').update(String(value)).digest('hex').slice(0, 16);
@@ -668,14 +671,45 @@ async function loadGithubTrending(existing) {
   }
 }
 
-function assertV3Output(output) {
+function isGithubTrendingItem(value) {
+  return Boolean(
+    value
+    && typeof value.id === 'string'
+    && value.id.trim()
+    && Number.isSafeInteger(value.rank)
+    && value.rank > 0
+    && typeof value.name === 'string'
+    && /^[^/\s]+\/[^/\s]+$/.test(value.name)
+    && isWebUrl(value.url),
+  );
+}
+
+function assertUniqueItems(items, label) {
+  assert.equal(new Set(items.map((item) => item.id)).size, items.length, `${label} contains duplicate IDs`);
+  assert.equal(new Set(items.map((item) => item.url)).size, items.length, `${label} contains duplicate URLs`);
+}
+
+function assertV3Output(output, now = Date.now()) {
   assert.equal(output.version, 3);
-  assert.ok(toIsoDate(output.generatedAt));
-  assert.ok(toIsoDate(output.intelligence.updatedAt));
-  assert.ok(toIsoDate(output.github.updatedAt));
+  const generatedAt = Date.parse(toIsoDate(output.generatedAt) ?? '');
+  const intelligenceUpdatedAt = Date.parse(toIsoDate(output.intelligence.updatedAt) ?? '');
+  const githubUpdatedAt = Date.parse(toIsoDate(output.github.updatedAt) ?? '');
+  assert.ok(Number.isFinite(generatedAt), 'generatedAt must be a valid date');
+  assert.ok(generatedAt >= now - OUTPUT_GENERATION_WINDOW_MS, 'generatedAt is too old for a new output');
+  assert.ok(generatedAt <= now + OUTPUT_CLOCK_SKEW_MS, 'generatedAt is unexpectedly in the future');
+  assert.ok(Number.isFinite(intelligenceUpdatedAt) && intelligenceUpdatedAt <= now + OUTPUT_CLOCK_SKEW_MS, 'intelligence.updatedAt is invalid');
+  assert.ok(Number.isFinite(githubUpdatedAt) && githubUpdatedAt <= now + OUTPUT_CLOCK_SKEW_MS, 'github.updatedAt is invalid');
   assert.ok(Array.isArray(output.intelligence.items));
   output.intelligence.items.forEach((item) => assert.ok(isIntelligenceItem(item)));
-  assert.ok(hasGithubTrendingItems(output.github));
+  CATEGORY_ORDER.forEach((category) => assert.ok(
+    output.intelligence.items.some((item) => item.category === category),
+    `intelligence category ${category} must contain at least one item`,
+  ));
+  assertUniqueItems(output.intelligence.items, 'intelligence.items');
+  assert.ok(hasGithubTrendingItems(output.github), 'github.items and source are required');
+  assert.ok(Array.isArray(output.github.items) && output.github.items.length >= MIN_GITHUB_ITEMS, `github.items must contain at least ${MIN_GITHUB_ITEMS} repositories`);
+  output.github.items.forEach((item) => assert.ok(isGithubTrendingItem(item)));
+  assertUniqueItems(output.github.items, 'github.items');
 }
 
 async function runSelfTest() {
@@ -793,14 +827,27 @@ async function runSelfTest() {
     assert.equal(githubItems[0].name, 'openai/example');
     assert.equal(githubItems[0].stars, 12345);
     assert.equal(githubItems[0].starsToday, 678);
+    const fixtureGithubItems = [
+      githubItems[0],
+      { ...githubItems[0], id: 'github-example-two', rank: 2, name: 'openai/example-two', url: 'https://github.com/openai/example-two' },
+      { ...githubItems[0], id: 'github-example-three', rank: 3, name: 'openai/example-three', url: 'https://github.com/openai/example-three' },
+    ];
 
     const fixtureOutput = {
       version: 3,
       generatedAt: '2026-08-31T08:00:00.000Z',
       intelligence: { updatedAt: '2026-08-31T08:00:00.000Z', items: roundRobinMerge([domesticRss, cisa, rss, hn], 8) },
-      github: { updatedAt: '2026-08-31T08:00:00.000Z', source: { name: 'GitHub Trending', url: GITHUB_TRENDING_URL }, items: githubItems },
+      github: { updatedAt: '2026-08-31T08:00:00.000Z', source: { name: 'GitHub Trending', url: GITHUB_TRENDING_URL }, items: fixtureGithubItems },
     };
-    assertV3Output(fixtureOutput);
+    assertV3Output(fixtureOutput, Date.parse(fixtureOutput.generatedAt));
+    assert.throws(
+      () => assertV3Output({ ...fixtureOutput, intelligence: { ...fixtureOutput.intelligence, items: [] } }, Date.parse(fixtureOutput.generatedAt)),
+      /category cn/,
+    );
+    assert.throws(
+      () => assertV3Output({ ...fixtureOutput, github: { ...fixtureOutput.github, items: [] } }, Date.parse(fixtureOutput.generatedAt)),
+      /github\.items/,
+    );
     assert.ok(isSupportedExistingFeed({ version: 1, generatedAt: fixtureOutput.generatedAt }));
     assert.ok(isSupportedExistingFeed({ version: 2, generatedAt: fixtureOutput.generatedAt }));
     assert.ok(isSupportedExistingFeed(fixtureOutput));
@@ -832,6 +879,7 @@ async function main() {
     updatedAt: githubResult.refreshed ? generatedAt : toIsoDate(existing?.github?.updatedAt ?? existing?.generatedAt) ?? generatedAt,
   };
   const output = { version: 3, generatedAt, intelligence, github };
+  assertV3Output(output);
   await writeFile(OUTPUT_PATH, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
 
   const categoryCounts = Object.fromEntries(CATEGORY_ORDER.map((category) => [

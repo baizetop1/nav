@@ -1,12 +1,21 @@
 import { useEffect, useState } from 'react';
-import { Activity, BookmarkPlus, Download, ExternalLink, FileUp, GitMerge, Github, Lock, Plus, RefreshCw, RotateCcw, Save, Upload, X } from 'lucide-react';
+import { Activity, BookmarkPlus, Download, ExternalLink, FileUp, Flame, GitMerge, Github, Lock, Plus, RefreshCw, RotateCcw, Save, Upload, X } from 'lucide-react';
 import { createBackup, restoreBackup } from '../lib/backup';
 import type { ClickStatsStore } from '../lib/activityStats';
 import { normalizeBookmarkUrl, parseHtmlImport, type BookmarkImportRecord } from '../lib/bookmarks';
 import type { LinkHealthEntry } from '../lib/linkHealth';
+import { HOT_FEED_REFRESH_EVENT } from '../lib/hotFeed';
+import { defaultNavigationData } from '../data';
+import { mergeNavigationData } from '../lib/navigationMerge';
+import { getNavigationConflicts, resolveNavigationConflicts, type NavigationChoices } from '../lib/navigationConflicts';
+import { loadPublishBaseline } from '../lib/pendingSync';
 import { decryptBackup, encryptBackup } from '../services/encryptedBackup';
-import { dispatchLinkHealthCheck, getAuthenticatedUser, getEncryptedBackup, getLatestLinkHealthRun, getRemoteNavigationData, getWorkflowRun, normalizeGithubToken, publishNavigationData, saveEncryptedBackup, type WorkflowRun } from '../services/github';
+import { clearPendingDeployment, loadPendingDeployment, savePendingDeployment, type PendingDeployment } from '../lib/deploymentState';
+import { safeRemoveLocalStorageItem, safeSetLocalStorageItem, SHARED_SYNC_ENTRY_MAX_BYTES } from '../lib/safeStorage';
+import { dispatchHotFeedRefresh, dispatchLinkHealthCheck, getAuthenticatedUser, getEncryptedBackup, getLatestHotFeedRun, getLatestLinkHealthRun, getRemoteNavigationSnapshot, getWorkflowRun, normalizeGithubToken, publishNavigationData, saveEncryptedBackup, verifyRepositoryAccess, type WorkflowRun } from '../services/github';
 import { NavigationOrganizer } from './NavigationOrganizer';
+import { SmartOrganizerPanel } from './SmartOrganizerPanel';
+import { suggestImportMetadata } from '../lib/smartOrganizer';
 import { LinkHealthPanel } from './LinkHealthPanel';
 import { StatsPanel } from './StatsPanel';
 import type { NavigationData, Site } from '../types/navigation';
@@ -22,12 +31,13 @@ interface AdminPanelProps {
   clickStats: ClickStatsStore;
   onClearClickStats: () => void;
   onChange: (data: NavigationData) => void;
+  onPublished?: (data: NavigationData, sha: string, target: { owner: string; repo: string; branch: string }) => void;
   onReset: () => void;
   onClose: () => void;
 }
 
 type SiteDraft = Omit<Site, 'id' | 'tags'> & { id?: string; tags: string };
-export type AdminSection = 'content' | 'layout' | 'insights';
+export type AdminSection = 'content' | 'layout' | 'organize' | 'insights';
 
 interface HtmlImportDraft extends BookmarkImportRecord {
   category: string;
@@ -35,6 +45,7 @@ interface HtmlImportDraft extends BookmarkImportRecord {
   tags: string;
   duplicate: boolean;
   include: boolean;
+  suggestion: ReturnType<typeof suggestImportMetadata>;
 }
 
 interface HtmlImportPreview {
@@ -68,6 +79,10 @@ function validateSiteDraft(draft: SiteDraft): string | null {
   return null;
 }
 
+function sameNavigationData(left: NavigationData, right: NavigationData): boolean {
+  return JSON.stringify(left) === JSON.stringify(right);
+}
+
 function siteFromDraft(draft: SiteDraft, id: string): Site {
   return {
     id,
@@ -81,19 +96,25 @@ function siteFromDraft(draft: SiteDraft, id: string): Site {
   };
 }
 
-export function AdminPanel({ data, initialSection, defaultRepository, linkHealthEntries, isLinkHealthLoading, onRefreshLinkHealth, onRunBrowserLinkHealthCheck, clickStats, onClearClickStats, onChange, onReset, onClose }: AdminPanelProps) {
+export function AdminPanel({ data, initialSection, defaultRepository, linkHealthEntries, isLinkHealthLoading, onRefreshLinkHealth, onRunBrowserLinkHealthCheck, clickStats, onClearClickStats, onChange, onPublished, onReset, onClose }: AdminPanelProps) {
   const firstCategoryId = data.categories[0]?.id || '';
   const [draft, setDraft] = useState<SiteDraft>(() => createSiteDraft(firstCategoryId));
   const [newCategoryName, setNewCategoryName] = useState('');
   const [token, setToken] = useState('');
   const [verifiedUser, setVerifiedUser] = useState('');
-  const [repository, setRepository] = useState(defaultRepository);
+  const [pendingDeployment, setPendingDeployment] = useState<PendingDeployment | null>(loadPendingDeployment);
+  const [repository, setRepository] = useState(() => pendingDeployment?.repository || defaultRepository);
   const [commitMessage, setCommitMessage] = useState('Update navigation data from CMS');
-  const [publishState, setPublishState] = useState<{ type: 'idle' | 'loading' | 'success' | 'error'; message?: string; url?: string }>({ type: 'idle' });
+  const [publishState, setPublishState] = useState<{ type: 'idle' | 'loading' | 'success' | 'error'; message?: string; url?: string }>(() => pendingDeployment ? { type: 'success', message: '已恢复上次待确认的部署。输入 Token 后会继续检查 Actions 状态。', url: pendingDeployment.commitUrl } : { type: 'idle' });
   const [remoteData, setRemoteData] = useState<NavigationData | null>(null);
+  const [remoteBaseline, setRemoteBaseline] = useState<NavigationData>(() => loadPublishBaseline(defaultNavigationData));
+  const [conflictChoices, setConflictChoices] = useState<NavigationChoices>({});
+  const [remoteBaseSha, setRemoteBaseSha] = useState('');
   const [remoteState, setRemoteState] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
-  const [publishedSha, setPublishedSha] = useState('');
+  const [publishedSha, setPublishedSha] = useState(() => pendingDeployment?.sha || '');
   const [workflowRun, setWorkflowRun] = useState<WorkflowRun | null>(null);
+  const [deploymentPollState, setDeploymentPollState] = useState<'idle' | 'needs-token' | 'checking' | 'timeout' | 'error'>('idle');
+  const [deploymentRetry, setDeploymentRetry] = useState(0);
   const [dataToolState, setDataToolState] = useState<{ type: 'idle' | 'success' | 'error'; message?: string }>({ type: 'idle' });
   const [cloudBackupPassword, setCloudBackupPassword] = useState('');
   const [cloudBackupPasswordConfirm, setCloudBackupPasswordConfirm] = useState('');
@@ -102,33 +123,81 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
   const [htmlImportPreview, setHtmlImportPreview] = useState<HtmlImportPreview | null>(null);
   const [linkCheckState, setLinkCheckState] = useState<'idle' | 'starting' | 'running' | 'success' | 'error'>('idle');
   const [linkCheckMessage, setLinkCheckMessage] = useState('');
+  const [hotFeedState, setHotFeedState] = useState<'idle' | 'starting' | 'running' | 'success' | 'error'>('idle');
+  const [hotFeedMessage, setHotFeedMessage] = useState('');
+  const [hotFeedRun, setHotFeedRun] = useState<WorkflowRun | null>(null);
+  const remoteMergePreview = remoteData ? mergeNavigationData(remoteBaseline, data, remoteData) : null;
+  const remoteConflicts = remoteData ? getNavigationConflicts(remoteBaseline, data, remoteData) : [];
+  useEffect(() => setConflictChoices({}), [remoteData, data, remoteBaseline]);
 
   useEffect(() => setActiveSection(initialSection), [initialSection]);
 
   useEffect(() => {
-    if (!publishedSha || !token.trim()) return;
+    if (!publishedSha) {
+      setDeploymentPollState('idle');
+      return;
+    }
+    if (!token.trim()) {
+      setDeploymentPollState('needs-token');
+      return;
+    }
     let disposed = false;
     let timer = 0;
+    let attempts = 0;
+    const maxAttempts = 180;
+    setDeploymentPollState('checking');
     const poll = async () => {
+      attempts += 1;
       try {
         const run = await getWorkflowRun(repository, token.trim(), publishedSha);
         if (!disposed && run) {
           setWorkflowRun(run);
-          if (run.status === 'completed') return;
+          setDeploymentPollState(run.status === 'completed' ? 'idle' : 'checking');
+          if (run.status === 'completed') {
+            setDeploymentPollState('idle');
+            return;
+          }
         }
       } catch {
-        // Publishing already succeeded; polling failures remain non-blocking.
+        if (!disposed && attempts >= 3) setDeploymentPollState('error');
       }
-      if (!disposed) timer = window.setTimeout(poll, 5000);
+      if (disposed) return;
+      if (attempts >= maxAttempts) {
+        setDeploymentPollState('timeout');
+        return;
+      }
+      timer = window.setTimeout(poll, 5000);
     };
     void poll();
     return () => { disposed = true; window.clearTimeout(timer); };
-  }, [publishedSha, repository, token]);
+  }, [publishedSha, repository, token, deploymentRetry]);
+
+  useEffect(() => {
+    if (workflowRun?.status !== 'completed' || workflowRun.head_sha !== publishedSha) return;
+    clearPendingDeployment();
+    setPendingDeployment(null);
+    if (workflowRun.conclusion === 'success') {
+      safeRemoveLocalStorageItem('nav_cms_draft', { label: '导航草稿' });
+      setPublishState(current => ({
+        ...current,
+        type: 'success',
+        message: 'GitHub Pages 部署成功，本地待发布草稿已清理。',
+      }));
+    } else if (workflowRun.conclusion) {
+      setPublishState(current => ({
+        ...current,
+        type: 'error',
+        message: `部署结果为 ${workflowRun.conclusion}，本地草稿已保留，可修改后重新发布。`,
+      }));
+    }
+  }, [publishedSha, workflowRun]);
 
   const resetForm = (categoryId = firstCategoryId) => setDraft(createSiteDraft(categoryId));
 
   const editSite = (site: Site) => {
     setDraft({ ...site, tags: site.tags.join(', ') });
+    setActiveSection('content');
+    document.querySelector('.admin-shell')?.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const saveSite = (event: React.FormEvent) => {
@@ -228,6 +297,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
           tags: '书签',
           duplicate,
           include: !duplicate,
+          suggestion: suggestImportMetadata(record, data),
         } satisfies HtmlImportDraft;
       });
       setHtmlImportPreview({ mode: result.mode, records, duplicateCount });
@@ -307,7 +377,8 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
     if (!confirm('恢复完整备份会覆盖当前导航草稿、访问统计、临时网址、翻译历史、临时文本和场景偏好，是否继续？')) return;
     try {
       const restored = restoreBackup(await file.text());
-      localStorage.setItem('nav_cms_draft', JSON.stringify(restored));
+      const draftWrite = safeSetLocalStorageItem('nav_cms_draft', JSON.stringify(restored), { label: '导航草稿', maxBytes: SHARED_SYNC_ENTRY_MAX_BYTES });
+      if (!draftWrite.ok) throw new Error(draftWrite.issue.message);
       onChange(restored);
       setDataToolState({ type: 'success', message: '备份恢复成功，正在重新载入界面设置…' });
       window.setTimeout(() => window.location.reload(), 500);
@@ -351,7 +422,8 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
         return;
       }
       const restored = restoreBackup(backup);
-      localStorage.setItem('nav_cms_draft', JSON.stringify(restored));
+      const draftWrite = safeSetLocalStorageItem('nav_cms_draft', JSON.stringify(restored), { label: '导航草稿', maxBytes: SHARED_SYNC_ENTRY_MAX_BYTES });
+      if (!draftWrite.ok) throw new Error(draftWrite.issue.message);
       onChange(restored);
       setCloudBackupState({ busy: false, type: 'success', message: '加密云备份恢复成功，正在重新载入…' });
       window.setTimeout(() => window.location.reload(), 500);
@@ -363,10 +435,13 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
   const verifyToken = async () => {
     setPublishState({ type: 'loading', message: '正在验证 Token…' });
     try {
-      const user = await getAuthenticatedUser(token);
+      const [user, access] = await Promise.all([
+        getAuthenticatedUser(token),
+        verifyRepositoryAccess(repository, token),
+      ]);
       setVerifiedUser(user.login);
       setToken(normalizeGithubToken(token));
-      setPublishState({ type: 'success', message: `Token 有效，当前账号：@${user.login}` });
+      setPublishState({ type: 'success', message: `Token 有效：@${user.login} 可以写入 ${access.fullName} 的 ${access.branch} 分支。` });
     } catch (error) {
       setVerifiedUser('');
       setPublishState({ type: 'error', message: error instanceof Error ? error.message : 'Token 验证失败。' });
@@ -380,11 +455,62 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
     }
     setRemoteState('loading');
     try {
-      setRemoteData(await getRemoteNavigationData(repository, token.trim()));
+      const snapshot = await getRemoteNavigationSnapshot(repository, token.trim());
+      setRemoteData(snapshot.data);
+      setRemoteBaseSha(snapshot.headSha);
       setRemoteState('ready');
     } catch (error) {
       setRemoteState('error');
       setPublishState({ type: 'error', message: error instanceof Error ? error.message : '读取远端数据失败。' });
+    }
+  };
+
+  const runHotFeedRefresh = async () => {
+    if (!token.trim()) {
+      setHotFeedState('error');
+      setHotFeedMessage('请先在右侧“发布到 GitHub”中输入 Token。即时更新需要 Actions 读写权限。');
+      return;
+    }
+    const startedAt = Date.now();
+    setHotFeedRun(null);
+    setHotFeedState('starting');
+    setHotFeedMessage('正在请求 GitHub Actions 重新抓取技术情报和 GitHub 热榜…');
+    try {
+      await dispatchHotFeedRefresh(repository, token.trim());
+      setHotFeedState('running');
+      setHotFeedMessage('热榜任务已启动，正在等待抓取与部署完成。');
+      let run: WorkflowRun | null = null;
+      for (let attempt = 0; attempt < 30; attempt += 1) {
+        await new Promise<void>(resolve => window.setTimeout(resolve, attempt === 0 ? 2500 : 5000));
+        run = await getLatestHotFeedRun(repository, token.trim());
+        const createdAt = run?.created_at ? Date.parse(run.created_at) : Number.NaN;
+        if (run && (!Number.isFinite(createdAt) || createdAt >= startedAt - 10_000)) break;
+        run = null;
+      }
+      if (!run) throw new Error('任务已触发，但暂时没有读到新的 Actions 记录。可稍后重试或打开 Actions 查看。');
+      let latestRun = run;
+      setHotFeedRun(latestRun);
+      for (let attempt = 0; attempt < 72 && latestRun.status !== 'completed'; attempt += 1) {
+        await new Promise<void>(resolve => window.setTimeout(resolve, 5000));
+        const nextRun = await getLatestHotFeedRun(repository, token.trim());
+        if (!nextRun || nextRun.id !== latestRun.id) continue;
+        latestRun = nextRun;
+        setHotFeedRun(latestRun);
+      }
+      if (latestRun.status !== 'completed') {
+        setHotFeedState('running');
+        setHotFeedMessage('热榜仍在生成。可以关闭管理页，稍后回到首页重新读取。');
+      } else if (latestRun.conclusion === 'success') {
+        setHotFeedState('success');
+        setHotFeedMessage('热榜抓取和部署成功，首页数据已自动重新读取。');
+        window.dispatchEvent(new Event(HOT_FEED_REFRESH_EVENT));
+      } else {
+        setHotFeedState('error');
+        setHotFeedMessage(`热榜任务结果为 ${latestRun.conclusion || 'unknown'}，请打开 Actions 查看日志。`);
+      }
+    } catch (error) {
+      setHotFeedState('error');
+      setHotFeedMessage(error instanceof Error ? error.message : '启动热榜更新失败。');
     }
   };
 
@@ -424,15 +550,13 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
 
       if (!run) throw new Error('已启动检测，但暂时没有读到 Actions 任务。请稍后点击“读取报告”查看结果。');
       let latestRun: WorkflowRun = run;
-      setWorkflowRun(latestRun);
       if (latestRun.status !== 'completed') {
         for (let attempt = 0; attempt < 36 && latestRun.status !== 'completed'; attempt += 1) {
           await new Promise<void>(resolve => window.setTimeout(resolve, 5000));
           const nextRun = await getLatestLinkHealthRun(repository, token.trim());
           if (!nextRun) continue;
           latestRun = nextRun;
-          setWorkflowRun(latestRun);
-        }
+            }
       }
 
       if (latestRun.status === 'completed') {
@@ -455,15 +579,14 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
   };
 
   const mergeRemote = () => {
-    if (!remoteData) return;
-    const mergeById = <T extends { id: string }>(remote: T[], local: T[]) => {
-      const result = new Map(remote.map(item => [item.id, item]));
-      local.forEach(item => result.set(item.id, item));
-      return [...result.values()];
-    };
-    const layout = new Map(remoteData.layout.map(item => [item.siteId, item]));
-    data.layout.forEach(item => layout.set(item.siteId, item));
-    onChange({ sites: mergeById(remoteData.sites, data.sites), categories: mergeById(remoteData.categories, data.categories), layout: [...layout.values()] });
+    if (!remoteMergePreview || !remoteData) return;
+    try { onChange(resolveNavigationConflicts(remoteBaseline, data, remoteData, conflictChoices)); }
+    catch (error) { setDataToolState({ type: 'error', message: (error as Error).message }); return; }
+    setRemoteBaseline(remoteData);
+    setDataToolState({
+      type: 'success',
+      message: `三方合并完成：识别本地变化 ${remoteMergePreview.localChanges} 项、远端变化 ${remoteMergePreview.remoteChanges} 项${remoteMergePreview.conflicts ? `，${remoteMergePreview.conflicts} 项冲突已按逐项选择处理` : ''}。本地删除项不会因远端旧数据重新出现。`,
+    });
     setRemoteData(null);
     setRemoteState('idle');
   };
@@ -498,6 +621,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
 
   const publish = async (event: React.FormEvent) => {
     event.preventDefault();
+    if (!navigator.onLine) { setPublishState({ type: 'error', message: '当前离线，草稿已留在本机。联网后再比较远端并提交。' }); return; }
     if (!token.trim()) {
       setPublishState({ type: 'error', message: '请输入 fine-grained Personal Access Token。' });
       return;
@@ -505,18 +629,39 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
     const publishData = dataForPublish();
     if (!publishData) return;
     const hasDraftEdit = Boolean(draft.id) || [draft.name, draft.url, draft.description, draft.tags, draft.icon || ''].some(value => value.trim());
-    // Flush an unsaved form edit before the network request. This keeps the
-    // visible state and local draft aligned even if the request takes a while,
-    // and lets the success path safely clear the draft afterward.
+    // Flush an unsaved form edit before the request so the visible state and
+    // retained local draft match the commit being created.
     if (publishData !== data) onChange(publishData);
     setPublishState({ type: 'loading', message: '正在验证账号并创建提交…' });
     try {
-      const user = await getAuthenticatedUser(token.trim());
-      const result = await publishNavigationData(repository, publishData, token.trim(), commitMessage.trim() || undefined);
-      setPublishState({ type: 'success', message: `已由 @${user.login} 提交，GitHub Actions 将开始部署。`, url: result.commitUrl });
+      const [user] = await Promise.all([
+        getAuthenticatedUser(token.trim()),
+        verifyRepositoryAccess(repository, token.trim()),
+      ]);
+      const snapshot = await getRemoteNavigationSnapshot(repository, token.trim());
+      if (!sameNavigationData(snapshot.data, remoteBaseline)) {
+        setRemoteData(snapshot.data);
+        setRemoteBaseSha(snapshot.headSha);
+        setRemoteState('ready');
+        throw new Error('远端导航数据已变化，发布已停止。请先在下方检查并合并远端内容，避免覆盖其他修改。');
+      }
+      const result = await publishNavigationData(repository, publishData, token.trim(), commitMessage.trim() || undefined, snapshot.headSha);
+      onPublished?.(publishData, result.sha, repository);
+      setRemoteBaseline(publishData);
+      setRemoteBaseSha(result.sha);
+      const pending: PendingDeployment = {
+        repository,
+        sha: result.sha,
+        commitUrl: result.commitUrl,
+        createdAt: new Date().toISOString(),
+      };
+      savePendingDeployment(pending);
+      setPendingDeployment(pending);
+      setPublishState({ type: 'success', message: `已由 @${user.login} 提交，等待 GitHub Actions 部署；本地草稿会保留到部署成功。`, url: result.commitUrl });
       setPublishedSha(result.sha);
       setWorkflowRun(null);
-      localStorage.removeItem('nav_cms_draft');
+      setDeploymentPollState('checking');
+      // Keep the local draft until the workflow polling effect confirms a successful deployment.
       if (hasDraftEdit) resetForm();
     } catch (error) {
       setPublishState({ type: 'error', message: error instanceof Error ? error.message : '发布失败，请检查 Token 和仓库设置。' });
@@ -530,6 +675,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
           <div>
             <p className="text-sm font-semibold tracking-[0.18em] text-[#4f8179] dark:text-[#c9a96b]">白泽导航 CMS</p>
             <h1 className="text-2xl font-bold text-[#173b41] dark:text-[#f4f1e8]">管理导航内容</h1>
+            <a className="mt-2 inline-flex items-center gap-1 text-sm text-[#456b68] underline dark:text-[#d9ddd6]" href="#/blog"><FileUp size={14} />前往博客工作台</a>
             <p className="mt-1 text-sm text-[#64807c] dark:text-[#9fb2ad]">修改会自动保存为本地草稿，点击发布后才写入 GitHub。</p>
           </div>
           <button onClick={onClose} className="baize-icon-button p-3" aria-label="关闭管理面板"><X /></button>
@@ -539,6 +685,7 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
           {([
             ['content', '内容编辑', '网站表单和分类'],
             ['layout', '布局排序', '拖拽与网格尺寸'],
+            ['organize', '智能整理', '去重、补全和批量修改'],
             ['insights', '统计与健康', '访问趋势和失效链接'],
           ] as const).map(([id, label, description]) => <button key={id} type="button" aria-current={activeSection === id ? 'page' : undefined} onClick={() => setActiveSection(id)} className={`min-w-fit flex-1 rounded-xl px-4 py-2 text-left transition ${activeSection === id ? 'bg-[#356b66] text-white shadow-sm dark:bg-[#c9a96b] dark:text-[#102c33]' : 'text-[#526f6c] hover:bg-[#5f8f84]/10 dark:text-[#b8c4c0] dark:hover:bg-[#c9a96b]/8'}`}><strong className="block text-sm">{label}</strong><span className="hidden text-[10px] opacity-75 sm:block">{description}</span></button>)}
         </nav>
@@ -563,7 +710,21 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
             </section>}
 
             {activeSection === 'layout' && <NavigationOrganizer data={data} onChange={onChange} onEdit={editSite} onDeleteSite={deleteSite} onRenameCategory={renameCategory} onDeleteCategory={deleteCategory} />}
-            {activeSection === 'insights' && <><StatsPanel data={data} stats={clickStats} onClear={onClearClickStats} /><LinkHealthPanel sites={data.sites} entries={linkHealthEntries} loading={isLinkHealthLoading} onRefresh={onRefreshLinkHealth} onRunCheck={runLinkHealthCheck} checkState={linkCheckState} checkMessage={linkCheckMessage} /></>}
+            {activeSection === 'organize' && <SmartOrganizerPanel data={data} linkHealthEntries={linkHealthEntries} clickStats={clickStats} onChange={onChange} onEdit={editSite} />}
+            {activeSection === 'insights' && <>
+              <StatsPanel data={data} stats={clickStats} onClear={onClearClickStats} />
+              <section className={panelClass} aria-labelledby="hot-feed-refresh-title">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h2 id="hot-feed-refresh-title" className="flex items-center gap-2 text-lg font-bold text-[#234b4e] dark:text-[#f4f1e8]"><Flame size={20} className="text-[#4f8179] dark:text-[#c9a96b]" />热榜数据</h2>
+                    <p className="mt-1 text-xs leading-5 text-[#718986]">这里会真正触发 hot-feed.yml，重新抓取数据并部署；首页的圆形刷新按钮只读取已经生成的报告。</p>
+                  </div>
+                  <button type="button" className="baize-button-primary shrink-0" disabled={hotFeedState === 'starting' || hotFeedState === 'running'} onClick={() => { void runHotFeedRefresh(); }}><RefreshCw size={16} className={hotFeedState === 'starting' || hotFeedState === 'running' ? 'animate-spin' : ''} />{hotFeedState === 'starting' ? '启动中…' : hotFeedState === 'running' ? '更新中…' : '立即更新热榜'}</button>
+                </div>
+                {hotFeedMessage && <p className={`mt-3 rounded-xl border p-3 text-xs leading-5 ${hotFeedState === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/8 text-[#315e5b] dark:text-[#b8cec7]'}`}>{hotFeedMessage}{hotFeedRun && <a href={hotFeedRun.html_url} target="_blank" rel="noreferrer" className="ml-2 inline-flex items-center gap-1 underline">查看 Actions <ExternalLink size={12} /></a>}</p>}
+              </section>
+              <LinkHealthPanel sites={data.sites} entries={linkHealthEntries} loading={isLinkHealthLoading} onRefresh={onRefreshLinkHealth} onRunCheck={runLinkHealthCheck} checkState={linkCheckState} checkMessage={linkCheckMessage} />
+            </>}
           </div>
 
           <div className="space-y-6">
@@ -578,15 +739,21 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
               <form onSubmit={publish} className="space-y-3">
                 <label className={`${labelClass} block`}>Personal Access Token<input type="password" autoComplete="new-password" spellCheck={false} className={`${inputClass} mt-1 font-mono`} value={token} onChange={event => { setToken(event.target.value); setVerifiedUser(''); }} placeholder="github_pat_… 或 ghp_…" /></label>
                 <button type="button" onClick={verifyToken} disabled={!token.trim() || publishState.type === 'loading'} className="baize-button-secondary w-full"><Github size={16} />{verifiedUser ? `已验证 @${verifiedUser}` : '先验证 Token'}</button>
-                <div className="grid grid-cols-2 gap-2"><label className={labelClass}>Owner<input className={`${inputClass} mt-1`} value={repository.owner} onChange={event => setRepository({ ...repository, owner: event.target.value })} /></label><label className={labelClass}>Repository<input className={`${inputClass} mt-1`} value={repository.repo} onChange={event => setRepository({ ...repository, repo: event.target.value })} /></label></div>
-                <label className={`${labelClass} block`}>Branch<input className={`${inputClass} mt-1`} value={repository.branch} onChange={event => setRepository({ ...repository, branch: event.target.value })} /></label>
+                <div className="grid grid-cols-2 gap-2"><label className={labelClass}>Owner<input className={`${inputClass} mt-1`} value={repository.owner} onChange={event => { setRepository({ ...repository, owner: event.target.value }); setRemoteBaseline(defaultNavigationData); setRemoteBaseSha(''); setVerifiedUser(''); }} /></label><label className={labelClass}>Repository<input className={`${inputClass} mt-1`} value={repository.repo} onChange={event => { setRepository({ ...repository, repo: event.target.value }); setRemoteBaseline(defaultNavigationData); setRemoteBaseSha(''); setVerifiedUser(''); }} /></label></div>
+                <label className={`${labelClass} block`}>Branch<input className={`${inputClass} mt-1`} value={repository.branch} onChange={event => { setRepository({ ...repository, branch: event.target.value }); setRemoteBaseline(defaultNavigationData); setRemoteBaseSha(''); setVerifiedUser(''); }} /></label>
                 <label className={`${labelClass} block`}>提交说明<input className={`${inputClass} mt-1`} value={commitMessage} onChange={event => setCommitMessage(event.target.value)} /></label>
                 <button disabled={publishState.type === 'loading'} className="baize-button-primary w-full py-2.5"><Github size={17} />{publishState.type === 'loading' ? '发布中…' : '提交并部署'}</button>
               </form>
               <button type="button" onClick={loadRemote} disabled={remoteState === 'loading'} className="baize-button-secondary mt-3 w-full"><RefreshCw size={16} className={remoteState === 'loading' ? 'animate-spin' : ''} />读取远端内容并比较</button>
-              {remoteData && <div className="mt-3 rounded-xl border border-[#5f8f84]/20 bg-[#5f8f84]/8 p-3 text-sm text-[#315e5b] dark:text-[#c7d1cd]"><div className="flex items-center gap-2 font-semibold"><GitMerge size={16} />发现远端数据</div><p className="mt-1 text-xs">远端 {remoteData.categories.length} 个分类、{remoteData.sites.length} 个网站；本地 {data.categories.length} 个分类、{data.sites.length} 个网站。</p><div className="mt-3 flex flex-wrap gap-2"><button type="button" onClick={mergeRemote} className="baize-button-primary px-3 py-1.5">合并，本地优先</button><button type="button" onClick={() => { onChange(remoteData); setRemoteData(null); setRemoteState('idle'); }} className="baize-button-secondary px-3 py-1.5">使用远端覆盖</button><button type="button" onClick={() => { setRemoteData(null); setRemoteState('idle'); }} className="baize-button-secondary px-3 py-1.5">取消</button></div></div>}
+              {remoteData && <div className="mt-3 rounded-xl border border-[#5f8f84]/20 bg-[#5f8f84]/8 p-3 text-sm text-[#315e5b] dark:text-[#c7d1cd]">
+                <div className="flex items-center gap-2 font-semibold"><GitMerge size={16} />发现远端数据</div>
+                <p className="mt-1 text-xs">远端 {remoteData.categories.length} 个分类、{remoteData.sites.length} 个网站；本地 {data.categories.length} 个分类、{data.sites.length} 个网站。{remoteBaseSha ? ` 基线 ${remoteBaseSha.slice(0, 8)}` : ''}</p>
+                {remoteMergePreview && <p className="mt-1 text-xs">三方比较：本地变化 {remoteMergePreview.localChanges} 项、远端变化 {remoteMergePreview.remoteChanges} 项{remoteMergePreview.conflicts ? `，冲突 ${remoteMergePreview.conflicts} 项，请逐项选择` : '，没有冲突'}。删除操作会保留。</p>}
+                {remoteConflicts.length > 0 && <div className="mt-3 max-h-96 space-y-3 overflow-auto">{remoteConflicts.map(conflict => <fieldset key={conflict.key} className="rounded-lg border border-[#5f8f84]/25 p-2"><legend className="px-1 text-xs font-semibold">{conflict.collection === 'layout' ? '布局' : conflict.collection === 'categories' ? '分类' : '网站'} · {conflict.label}</legend>{(['local', 'remote'] as const).map(side => <label key={side} className="mt-2 block text-xs"><span className="flex items-center gap-2"><input type="radio" name={`conflict-${conflict.key}`} checked={conflictChoices[conflict.key] === side} onChange={() => setConflictChoices(current => ({ ...current, [conflict.key]: side }))} />保留{side === 'local' ? '本机' : '远端'}</span><pre className="mt-1 max-h-28 overflow-auto whitespace-pre-wrap break-all rounded bg-[#5f8f84]/5 p-2">{conflict[side] ? JSON.stringify(conflict[side], null, 2) : '（此项已删除）'}</pre></label>)}</fieldset>)}</div>}
+                <div className="mt-3 flex flex-wrap gap-2"><button type="button" onClick={mergeRemote} disabled={remoteConflicts.some(item => !conflictChoices[item.key])} className="baize-button-primary px-3 py-1.5">应用三方合并</button><button type="button" onClick={() => { if (!window.confirm('用远端内容替换当前导航草稿？未发布的本机改动将被替换。')) return; onChange(remoteData); setRemoteBaseline(remoteData); setRemoteData(null); setRemoteState('idle'); }} className="baize-button-secondary px-3 py-1.5">使用远端覆盖</button><button type="button" onClick={() => { setRemoteData(null); setRemoteState('idle'); }} className="baize-button-secondary px-3 py-1.5">取消</button></div>
+              </div>}
               {publishState.message && <div className={`mt-3 rounded-xl border p-3 text-sm ${publishState.type === 'error' ? 'border-[#a85d50]/25 bg-[#a85d50]/8 text-[#8f4b42] dark:text-[#e3a69a]' : 'border-[#5f8f84]/25 bg-[#5f8f84]/10 text-[#315e5b] dark:text-[#b8cec7]'}`}>{publishState.message}{publishState.url && <a className="ml-2 inline-flex items-center gap-1 underline" href={publishState.url} target="_blank" rel="noreferrer">查看 commit <ExternalLink size={13} /></a>}</div>}
-              {publishedSha && <div className="mt-3 rounded-xl border border-[#c9a96b]/20 bg-[#c9a96b]/8 p-3 text-sm"><div className="flex items-center gap-2 font-semibold text-[#5d552f] dark:text-[#dccb9d]"><Activity size={16} className={workflowRun?.status !== 'completed' ? 'animate-pulse' : ''} />部署状态</div><p className="mt-1 text-xs text-[#718986]">{!workflowRun ? '等待 GitHub Actions 创建任务…' : workflowRun.status === 'completed' ? `已完成：${workflowRun.conclusion || 'unknown'}` : workflowRun.status === 'in_progress' ? '正在构建和部署…' : `状态：${workflowRun.status}`}</p>{workflowRun && <a href={workflowRun.html_url} target="_blank" rel="noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs underline">查看 Actions <ExternalLink size={12} /></a>}</div>}
+              {publishedSha && <div className="mt-3 rounded-xl border border-[#c9a96b]/20 bg-[#c9a96b]/8 p-3 text-sm"><div className="flex items-center gap-2 font-semibold text-[#5d552f] dark:text-[#dccb9d]"><Activity size={16} className={deploymentPollState === 'checking' ? 'animate-pulse' : ''} />部署状态</div><p className="mt-1 text-xs text-[#718986]">{deploymentPollState === 'needs-token' ? '待确认：请输入 Token，系统会继续检查这次部署。' : deploymentPollState === 'timeout' ? '检查已暂停：15 分钟内没有确认完成，可手动重试。' : deploymentPollState === 'error' ? '暂时无法读取 Actions 状态，可检查网络后重试。' : !workflowRun ? '等待 GitHub Actions 创建任务…' : workflowRun.status === 'completed' ? `已完成：${workflowRun.conclusion || 'unknown'}` : workflowRun.status === 'in_progress' ? '正在构建和部署…' : `状态：${workflowRun.status}`}</p><div className="mt-2 flex flex-wrap gap-2">{workflowRun && <a href={workflowRun.html_url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs underline">查看 Actions <ExternalLink size={12} /></a>}{(deploymentPollState === 'timeout' || deploymentPollState === 'error') && <button type="button" className="baize-button-secondary px-2 py-1 text-xs" disabled={!token.trim()} onClick={() => setDeploymentRetry(value => value + 1)}><RefreshCw size={12} />重新检查</button>}</div></div>}
             </section>
 
             <section className={panelClass}>
@@ -648,6 +815,15 @@ export function AdminPanel({ data, initialSection, defaultRepository, linkHealth
                       <label className={`${labelClass} md:col-span-2`}>介绍<input className={`${inputClass} mt-1`} value={record.description} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, description: event.target.value } : item) } : current)} placeholder="例如：前端文档、在线工具" /></label>
                       <label className={`${labelClass} md:col-span-2`}>标签<input className={`${inputClass} mt-1`} value={record.tags} onChange={event => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? { ...item, tags: event.target.value } : item) } : current)} placeholder="书签, 常用" /></label>
                     </div>
+                    {!record.duplicate && <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <p className="flex-1 text-xs text-[#718986]">{record.suggestion.category ? `建议分类：${record.suggestion.category}。` : ''}{record.suggestion.reason}</p>
+                      <button type="button" className="baize-button-secondary px-2 py-1 text-xs" onClick={() => setHtmlImportPreview(current => current ? { ...current, records: current.records.map((item, itemIndex) => itemIndex === index ? {
+                        ...item,
+                        category: item.suggestion.category || item.category,
+                        description: !item.description.trim() || ['从浏览器书签导入', '从保存的 HTML 页面导入'].includes(item.description.trim()) ? item.suggestion.description : item.description,
+                        tags: !item.tags.trim() || item.tags.trim() === '书签' ? [...new Set(['书签', ...item.suggestion.tags.split(/[,，]/).map(tag => tag.trim()).filter(Boolean)])].join(', ') : item.tags,
+                      } : item) } : current)}>采用建议并补全空项</button>
+                    </div>}
                   </div>)}
                 </div>
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2">

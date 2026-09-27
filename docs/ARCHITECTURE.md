@@ -45,8 +45,8 @@
 - 完整备份可在浏览器中使用 AES-256-GCM 加密，并以单份密文文件同步到 GitHub；密码不落盘也不上传。
 - 运行时输入 fine-grained PAT，通过 Git Data API 原子提交三个 JSON 数据文件。
 - 推送到 `main` 或 `master` 后，由 GitHub Actions 构建并发布 `dist` 到 `gh-pages`。
-- GitHub Actions 按日程、代码提交或管理页手动触发检查正式导航链接，并生成 `public/link-health.json`；首页为异常链接显示状态提醒。
-- 首页提供可切换的信息流（综合、国内、安全、AI、开发）与 GitHub Trending 热门仓库；国内分类轮询聚合中国新闻网要闻、IT之家与百度热搜（百度失败时回退今日头条），综合分类按国内、安全、AI、开发轮询混排。GitHub Actions 每小时在服务端聚合公开 API/RSS 为 `public/hot-feed.json`，前端只读取同源静态报告，不暴露 Token，并在更新失败时回退已部署的上次有效数据与本机缓存。
+- GitHub Actions 按日程、代码提交或管理页手动触发检查正式导航链接，并生成 `public/link-health.json`；首次失败标记为待复查，连续两次服务器检查失败才确认异常，同时保留最后成功时间和失败类型。
+- 首页提供可切换的信息流（综合、国内、安全、AI、开发）与 GitHub Trending 热门仓库；国内分类轮询聚合中国新闻网要闻、IT之家与百度热搜（百度失败时回退今日头条），综合分类按国内、安全、AI、开发轮询混排。GitHub Actions 每小时在服务端聚合公开 API/RSS 为 `public/hot-feed.json`，管理后台也可使用运行时 Token 立即触发、轮询并确认热榜部署；前端只读取同源静态报告，不暴露 Token，并在更新失败时回退已部署的上次有效数据与本机缓存。
 - 管理后台提供链接健康汇总和明细；有 Token 时使用 Actions 服务器端检查，无 Token 时提供浏览器可达性检查，并明确标注跨域无法读取 HTTP 状态。
 - 站点可安装为 PWA，并提供不缓存外部 API 的离线应用壳。
 - 支持日常、工作、学习和休闲四种场景；翻译历史最多保留 100 条，正式网站访问统计保留 90 天并提供本机统计面板。
@@ -57,12 +57,16 @@
 - 博客公开索引兼容 version 1 和 version 2。version 2 使用 `related`、`wiki` 与 `topic` edges：文章和 Topic 都是公开节点，`topic` 边只能从文章指向正式 Topic，普通 tag 不会自动升级。Nav 校验端点、语义类型、重复和自我关联，并在搜索中分组展示 Topic 与文章；仍不下载文章正文。
 - Tech OS 以仓库根目录 `tech-os/` 为规范来源，使用 Markdown + 扁平 Front Matter 表达 Vision、Route、Quest、Question、Knowledge、Lab、Project 和 Tech Map；T2 已提供 Viewer 与独立 Repository Adapter，T3 复用既有 Inbox 完成移动 Capture 接入。
 
-### 2.3 尚未实现
+### 2.3 个人工作流扩展
+
+已增加智能整理、手机分享收集、工作会话、跨模块命令搜索、RSS/OPML 阅读与离线待同步中心，操作和数据边界见 [个人工作流说明](PERSONAL-WORKFLOWS.md)。RSS 由 Actions 聚合，来源配置为 `data/rss-sources.json`；本机阅读状态随加密共享数据按条目合并。生产构建生成离线模块清单和内容版本，预缓存按需编辑模块。
+
+### 2.4 尚未实现
 
 - GitHub OAuth（纯 Pages 环境无法安全保存 client secret）。
-- RSS 聚合、AI 辅助分类等高级能力。
+- AI 辅助分类（当前为可解释的本地规则建议）。
 
-### 2.4 当前目录职责
+### 2.5 当前目录职责
 
 ```text
 .
@@ -510,8 +514,8 @@ name > tags > category > description
 
 - 实现运行时 PAT 输入、账号确认和最小权限说明。
 - 接入 Git Data API，以单个 commit 原子更新三份 JSON 数据。
-- 支持读取远端三份 JSON，并提供本地优先合并或远端覆盖。
-- 发布后按 commit SHA 轮询 GitHub Actions，展示排队、运行和最终结果。
+- 支持读取远端三份 JSON，自动合并不冲突的修改；冲突按网站、分类、布局逐项选择本机或远端，也可确认后使用远端覆盖。
+- 发布前重新验证仓库写权限，按远端 commit SHA 读取一致快照并阻止并发覆盖；发布后按 commit SHA 限时轮询 GitHub Actions，刷新页面后可恢复待确认部署并手动重试。
 - 显示 commit 链接以及构建、部署状态提示。
 - 移除当前前端口令对“安全”的依赖。
 
@@ -528,8 +532,8 @@ name > tags > category > description
 
 ### 阶段 5：可选高级能力
 
-- PWA 与只读离线访问（基础版本已完成：可安装、离线壳和同源静态资源缓存）。
-- RSS 聚合、浏览历史（GitHub Trending 热榜已完成基础版本）。
+- PWA 与离线编辑（已完成：可安装、按需模块预缓存、离线草稿和待同步中心；首次在线安装后可用）。
+- RSS/Atom 聚合和 OPML 订阅管理（已完成：Actions 抓取、未读/收藏、本机摘要缓存）；浏览记录限于本站记录，不读取浏览器全局历史。
 - 网站健康检测和失效链接报告（基础版本已完成：每日检查并在卡片标记异常）。
 - 场景模式、翻译历史、二维码与访问统计面板（已完成基础版本）。
 - AI 搜索入口与辅助分类。

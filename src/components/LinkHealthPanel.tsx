@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Activity, AlertTriangle, CheckCircle2, Clock3, ExternalLink, HelpCircle, RefreshCw } from 'lucide-react';
-import type { LinkHealthEntry } from '../lib/linkHealth';
+import { getLinkHealthState, type LinkHealthEntry, type LinkHealthState } from '../lib/linkHealth';
 import type { Site } from '../types/navigation';
 
 export interface LinkHealthPanelProps {
@@ -13,11 +13,12 @@ export interface LinkHealthPanelProps {
   checkMessage?: string;
 }
 
-type HealthFilter = 'all' | 'unhealthy';
+type HealthFilter = 'all' | 'attention';
 
 interface SiteHealthRow {
   site: Site;
   entry?: LinkHealthEntry;
+  state: LinkHealthState;
 }
 
 function formatCheckedAt(value?: string): string {
@@ -37,9 +38,11 @@ function formatCheckedAt(value?: string): string {
 
 function statusLabel(entry?: LinkHealthEntry): string {
   if (!entry) return '未检查';
-  if (entry.source === 'browser' && entry.status === null) return entry.ok ? '可连接' : '无法连接';
-  if (entry.status !== null) return `HTTP ${entry.status}`;
-  return entry.error || '连接失败';
+  if (entry.restricted && entry.status !== null) return `可达受限 · HTTP ${entry.status}`;
+  const prefix = getLinkHealthState(entry) === 'warning' && !entry.ok ? '待复查 · ' : '';
+  if (entry.source === 'browser' && entry.status === null) return entry.ok ? '可连接' : `${prefix}无法连接`;
+  if (entry.status !== null) return `${prefix}HTTP ${entry.status}`;
+  return `${prefix}${entry.error || '连接失败'}`;
 }
 
 export function LinkHealthPanel({ sites, entries, loading, onRefresh, onRunCheck, checkState = 'idle', checkMessage }: LinkHealthPanelProps) {
@@ -48,14 +51,16 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh, onRunCheck
     const entryBySite = new Map(entries.map(entry => [entry.siteId, entry]));
     return sites.map(site => {
       const entry = entryBySite.get(site.id);
-      return { site, entry: entry?.url === site.url ? entry : undefined };
+      const matchingEntry = entry?.url === site.url ? entry : undefined;
+      return { site, entry: matchingEntry, state: getLinkHealthState(matchingEntry) };
     });
   }, [entries, sites]);
 
   const summary = useMemo(() => {
-    const healthy = rows.filter(row => row.entry?.ok).length;
-    const unhealthy = rows.filter(row => row.entry && !row.entry.ok).length;
-    const unchecked = rows.length - healthy - unhealthy;
+    const healthy = rows.filter(row => row.state === 'healthy').length;
+    const warning = rows.filter(row => row.state === 'warning').length;
+    const unhealthy = rows.filter(row => row.state === 'unhealthy').length;
+    const unchecked = rows.filter(row => row.state === 'unchecked').length;
     const latestTimestamp = rows.reduce((latest, row) => {
       const timestamp = row.entry ? Date.parse(row.entry.checkedAt) : Number.NaN;
       return Number.isFinite(timestamp) ? Math.max(latest, timestamp) : latest;
@@ -64,20 +69,22 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh, onRunCheck
     return {
       total: rows.length,
       healthy,
+      warning,
       unhealthy,
       unchecked,
       latestCheckedAt: latestTimestamp ? new Date(latestTimestamp).toISOString() : undefined,
     };
   }, [rows]);
 
-  const visibleRows = filter === 'unhealthy'
-    ? rows.filter(row => row.entry && !row.entry.ok)
+  const visibleRows = filter === 'attention'
+    ? rows.filter(row => row.state === 'warning' || row.state === 'unhealthy')
     : rows;
   const browserOnly = entries.length > 0 && entries.every(entry => entry.source === 'browser');
 
   const metrics = [
     { label: '网站总数', value: summary.total, icon: Activity, tone: 'text-[#456b68] dark:text-[#d9ddd6]' },
     { label: '正常', value: summary.healthy, icon: CheckCircle2, tone: 'text-[#397066] dark:text-[#9bc9b9]' },
+    { label: '待复查', value: summary.warning, icon: Clock3, tone: 'text-[#8a713d] dark:text-[#d9c386]' },
     { label: '异常', value: summary.unhealthy, icon: AlertTriangle, tone: 'text-[#985247] dark:text-[#e1a294]' },
     { label: '未检查', value: summary.unchecked, icon: HelpCircle, tone: 'text-[#718986] dark:text-[#aab9b5]' },
   ] as const;
@@ -124,7 +131,7 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh, onRunCheck
         </div>
       )}
 
-      <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+      <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-5">
         {metrics.map(metric => {
           const Icon = metric.icon;
           return (
@@ -140,11 +147,11 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh, onRunCheck
         <div className="flex rounded-xl border border-[#5f8f84]/20 bg-white/25 p-1 dark:border-[#c9a96b]/15 dark:bg-[#07191d]/20" role="group" aria-label="筛选链接状态">
           <button
             type="button"
-            aria-pressed={filter === 'unhealthy'}
-            onClick={() => setFilter('unhealthy')}
-            className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${filter === 'unhealthy' ? 'bg-[#985247] text-white shadow-sm dark:bg-[#c97765]' : 'text-[#64807c] hover:bg-[#5f8f84]/10 dark:text-[#aab9b5]'}`}
+            aria-pressed={filter === 'attention'}
+            onClick={() => setFilter('attention')}
+            className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${filter === 'attention' ? 'bg-[#985247] text-white shadow-sm dark:bg-[#c97765]' : 'text-[#64807c] hover:bg-[#5f8f84]/10 dark:text-[#aab9b5]'}`}
           >
-            异常 {summary.unhealthy}
+            需关注 {summary.warning + summary.unhealthy}
           </button>
           <button
             type="button"
@@ -160,24 +167,25 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh, onRunCheck
 
       {visibleRows.length ? (
         <ul className="max-h-[28rem] divide-y divide-[#5f8f84]/15 overflow-y-auto dark:divide-[#c9a96b]/10">
-          {visibleRows.map(({ site, entry }) => {
-            const unhealthy = Boolean(entry && !entry.ok);
-            const healthy = Boolean(entry?.ok);
+          {visibleRows.map(({ site, entry, state }) => {
+            const unhealthy = state === 'unhealthy';
+            const warning = state === 'warning';
+            const healthy = state === 'healthy';
             return (
               <li key={site.id} className="flex min-w-0 items-start gap-3 py-3">
-                <span className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${unhealthy ? 'bg-[#a85d50]/10 text-[#985247] dark:text-[#e1a294]' : healthy ? 'bg-[#5f8f84]/10 text-[#397066] dark:text-[#9bc9b9]' : 'bg-[#718986]/10 text-[#718986] dark:text-[#aab9b5]'}`}>
-                  {unhealthy ? <AlertTriangle size={16} /> : healthy ? <CheckCircle2 size={16} /> : <HelpCircle size={16} />}
+                <span className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${unhealthy ? 'bg-[#a85d50]/10 text-[#985247] dark:text-[#e1a294]' : warning ? 'bg-[#c9a96b]/12 text-[#8a713d] dark:text-[#d9c386]' : healthy ? 'bg-[#5f8f84]/10 text-[#397066] dark:text-[#9bc9b9]' : 'bg-[#718986]/10 text-[#718986] dark:text-[#aab9b5]'}`}>
+                  {unhealthy ? <AlertTriangle size={16} /> : warning ? <Clock3 size={16} /> : healthy ? <CheckCircle2 size={16} /> : <HelpCircle size={16} />}
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="flex min-w-0 flex-wrap items-center gap-2">
                     <strong className="min-w-0 truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{site.name}</strong>
-                    <span className={`rounded-md px-1.5 py-0.5 text-[11px] font-semibold ${unhealthy ? 'bg-[#a85d50]/10 text-[#985247] dark:text-[#e1a294]' : healthy ? 'bg-[#5f8f84]/10 text-[#397066] dark:text-[#9bc9b9]' : 'bg-[#718986]/10 text-[#718986] dark:text-[#aab9b5]'}`}>
+                    <span className={`rounded-md px-1.5 py-0.5 text-[11px] font-semibold ${unhealthy ? 'bg-[#a85d50]/10 text-[#985247] dark:text-[#e1a294]' : warning ? 'bg-[#c9a96b]/12 text-[#8a713d] dark:text-[#d9c386]' : healthy ? 'bg-[#5f8f84]/10 text-[#397066] dark:text-[#9bc9b9]' : 'bg-[#718986]/10 text-[#718986] dark:text-[#aab9b5]'}`}>
                       {statusLabel(entry)}
                     </span>
                   </div>
                   <p className="mt-0.5 truncate text-xs text-[#718986] dark:text-[#9fb2ad]" title={site.url}>{site.url}</p>
-                  {unhealthy && entry?.error && <p className="mt-1 break-words text-xs text-[#985247] dark:text-[#e1a294]">{entry.error}</p>}
-                  {entry && <p className="mt-1 text-[11px] text-[#829793] dark:text-[#879d98]">检查于 {formatCheckedAt(entry.checkedAt)}</p>}
+                  {(unhealthy || warning) && entry?.error && <p className={`mt-1 break-words text-xs ${unhealthy ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#8a713d] dark:text-[#d9c386]'}`}>{entry.error}{entry.failureKind ? ` · ${entry.failureKind}` : ''}</p>}
+                  {entry && <p className="mt-1 text-[11px] text-[#829793] dark:text-[#879d98]">检查于 {formatCheckedAt(entry.checkedAt)}{(warning || unhealthy) ? ` · 连续失败 ${entry.consecutiveFailures ?? 1} 次` : ''}{entry.lastSuccessfulAt ? ` · 最后成功 ${formatCheckedAt(entry.lastSuccessfulAt)}` : ''}</p>}
                 </div>
                 <a
                   className="baize-icon-button shrink-0"
@@ -195,12 +203,12 @@ export function LinkHealthPanel({ sites, entries, loading, onRefresh, onRunCheck
         </ul>
       ) : (
         <div className="py-8 text-center text-sm text-[#64807c] dark:text-[#9fb2ad]">
-          {loading ? '正在读取健康报告…' : filter === 'unhealthy' ? summary.unchecked ? `当前没有异常记录，另有 ${summary.unchecked} 个网站尚未检查。` : '当前没有检测到异常链接。' : '还没有可显示的网站。'}
+          {loading ? '正在读取健康报告…' : filter === 'attention' ? summary.unchecked ? `当前没有需关注记录，另有 ${summary.unchecked} 个网站尚未检查。` : '当前没有需要复查或确认异常的链接。' : '还没有可显示的网站。'}
         </div>
       )}
 
       <p className="mt-3 rounded-lg bg-[#5f8f84]/8 px-3 py-2 text-[11px] leading-5 text-[#718986] dark:bg-[#c9a96b]/5 dark:text-[#9fb2ad]">
-        {browserOnly ? '当前是浏览器即时结果：“可连接”不代表 HTTP 200；填写 Token 后点击“立即检测”，可由 GitHub Actions 返回准确 HTTP 状态。' : '“立即检测”会在 GitHub Actions 中访问所有网址，完成后自动更新报告；“读取报告”只读取最近一次结果。'}
+        {browserOnly ? '当前是浏览器即时结果：“可连接”不代表 HTTP 200；填写 Token 后点击“立即检测”，可由 GitHub Actions 返回准确 HTTP 状态。' : '401、403、405、429 等表示网站可达但限制自动检测，不计为异常；页面不存在、服务器错误或网络失败首次会标记“待复查”，连续两次才标记“异常”。'}
       </p>
     </section>
   );

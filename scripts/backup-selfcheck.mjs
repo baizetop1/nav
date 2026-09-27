@@ -1,3 +1,4 @@
+import assert from 'node:assert/strict';
 import { BACKUP_STORAGE_KEYS, createBackup, parseBackup, restoreBackup } from '../src/lib/backup.ts';
 
 class MemoryStorage {
@@ -27,6 +28,14 @@ delete legacyBackup.storage.nav_translation_history;
 delete legacyBackup.storage.scene_mode;
 const parsedLegacy = parseBackup(legacyBackup);
 if (parsedLegacy.storage.nav_click_stats_v2 !== null || parsedLegacy.storage.scene_mode !== null) throw new Error('Legacy backup compatibility failed');
+const oversizedBackup = structuredClone(backup);
+oversizedBackup.storage.nav_temp_text = '中'.repeat(200_000);
+const atomicTarget = new MemoryStorage();
+atomicTarget.setItem('theme', 'light');
+assert.throws(() => restoreBackup(oversizedBackup, atomicTarget), /shared-sync limit/);
+assert.equal(atomicTarget.getItem('theme'), 'light', 'oversized backup must fail before changing existing values');
+assert.equal(atomicTarget.getItem('nav_temp_text'), null, 'oversized backup must not partially restore');
+
 
 const invalid = structuredClone(backup);
 invalid.version = 2;
