@@ -5850,5 +5850,69 @@
     "price": 0,
     "effect": {},
     "description": "在「黄泥冈历练」胜利结算时，尚未持契或领骑则独立 20% 概率掉落；董砺入寨后凭契领骑。"
+  },
+  {
+    "id": "tempered_steel",
+    "name": "淬炼钢",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "集市 2 级学习淬钢配方，以碎铁 4、精铁 2 和碎银 35 加工一份。用于打造守路长枪、护额铁盔。"
+  },
+  {
+    "id": "woven_linen",
+    "name": "密织麻布",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "集市 2 级学习织布配方，以粗布 4 和碎银 20 加工一份。用于缝制短褐、束带、绑腿、药囊，也作铁盔内衬。"
+  },
+  {
+    "id": "cured_hide",
+    "name": "鞣制硬革",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "集市 2 级学习鞣革配方，以熟皮 3、虎皮 1 和碎银 25 加工一份。用于斥候短褐、稳步束带与涉水绑腿。"
+  },
+  {
+    "id": "medicinal_extract",
+    "name": "浓制药引",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "description": "医馆 2 级学习煎药配方，以药草 5、虎骨 1 和碎银 25 加工一份。用于三种新药，也用于打造行医药囊。"
+  },
+  {
+    "id": "jinchuang_gao",
+    "name": "金疮膏",
+    "type": "consume",
+    "price": 0,
+    "effect": {
+      "hp": 900
+    },
+    "description": "医馆 2 级学配方加工。战斗中给气血比例最低的受伤同伴恢复 900 气血；不能复活，与其他药共用 3 秒间隔。"
+  },
+  {
+    "id": "xing_shen_san",
+    "name": "醒神散",
+    "type": "consume",
+    "price": 0,
+    "effect": {
+      "cleanse": true,
+      "hp": 240
+    },
+    "description": "医馆 2 级学配方加工。给仍在阵且有负面状态的同伴解除负面状态，并恢复 240 气血；无负面状态时不消耗。"
+  },
+  {
+    "id": "zhuanggu_tang",
+    "name": "壮骨汤",
+    "type": "consume",
+    "price": 0,
+    "effect": {
+      "hp": 360,
+      "rage": 25
+    },
+    "description": "医馆 2 级学配方加工。给仍在阵且怒气最低的同伴恢复 25 怒气、360 气血；全队满怒时不消耗，共用用药间隔。"
   }
 ]

@@ -1,17 +1,18 @@
-import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.44.0';
-import { volumeFiveBoard } from './volume-five-ui.js?v=0.44.0';
-import { volumeFourBoard } from './volume-four-ui.js?v=0.44.0';
-import { volumeThreeBoard } from './volume-three-ui.js?v=0.44.0';
-import { readinessPanel, productionReady } from './readiness.js?v=0.44.0';
-import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.44.0';
-import { questReady } from './core.js?v=0.44.0';
+import {volumeSevenBoard} from './volume-seven-ui.js?v=0.52.0';
+import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.52.0';
+import { volumeFiveBoard } from './volume-five-ui.js?v=0.52.0';
+import { volumeFourBoard } from './volume-four-ui.js?v=0.52.0';
+import { volumeThreeBoard } from './volume-three-ui.js?v=0.52.0';
+import { readinessPanel, productionReady } from './readiness.js?v=0.52.0';
+import { CAMP_GOALS, goalReady, goalClaimed } from './camp-development.js?v=0.52.0';
+import { questReady } from './core.js?v=0.52.0';
 
 // Read-only overview: visiting the camp never spends resources or claims rewards.
 export function campNotices(s,d){
   if(!s.camp)return [];
   const list=[],m=s.affairs?.mission;
   if(m)list.push({label:d.by.heroes[m.hero].name+(s.clock>=m.readyAt?'已归来，待接回':'外派中 · 约 '+Math.ceil((m.readyAt-s.clock)/60000)+' 分钟'),target:'camp-affairs'});
-  else if(s.affairs?.pending)list.push({label:'有一件寨中来报待处理',target:'camp-affairs'});
+  else if(s.affairs?.pending)list.push({label:'寨中有新来报',target:'camp-affairs'});
   const goals=CAMP_GOALS.filter(g=>!goalClaimed(s,g)&&goalReady(s,g)).length;
   if(goals)list.push({label:goals+' 项建寨酬劳可领取',target:'camp-goals'});
   const quests=d.quests.filter(q=>q.type==='daily'?s.daily.ids.includes(q.id)&&!s.daily.claimed.includes(q.id)&&questReady(s,q):!s.progress.claims.includes(q.id)&&questReady(s,q)).length;
@@ -27,5 +28,5 @@ export function campNotices(s,d){
 }
 export function campOverview(s,d,btn){
   const list=campNotices(s,d);
-  return `<section class="camp-overview"><h2>回寨待办</h2><p class="note">只列当前可处理事项；酬劳和物资由你确认领取。</p>${list.length?`<div class="camp-notices">${list.map(n=>n.view?`<button type="button" class="secondary" data-view="${n.view}">${n.label}</button>`:btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')}</div>`:'<p class="note">暂无待领酬劳或来报，可安排寨务、培养好汉或查看历练日历。</p>'}</section>${s.progress.flags.volume_five_complete?volumeSixBoard(s,d,btn):s.progress.flags.volume_four_complete?volumeFiveBoard(s,d,btn):s.progress.flags.volume_three_complete?volumeFourBoard(s,d,btn):volumeThreeBoard(s,d,btn)}${readinessPanel(s,d,btn)}`;
+  return `<section class="camp-overview"><h2>回寨待办</h2>${list.length?`<div class="camp-notices">${list.map(n=>n.view?`<button type="button" class="secondary" data-view="${n.view}">${n.label}</button>`:btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')}</div>`:'<p class="note">没有新来报。</p>'}</section>${s.progress.flags.volume_six_complete?volumeSevenBoard(s,d,btn):s.progress.flags.volume_five_complete?volumeSixBoard(s,d,btn):s.progress.flags.volume_four_complete?volumeFiveBoard(s,d,btn):s.progress.flags.volume_three_complete?volumeFourBoard(s,d,btn):volumeThreeBoard(s,d,btn)}${readinessPanel(s,d,btn)}`;
 }

@@ -1,24 +1,27 @@
-import {openingGoal} from './opening-ui.js?v=0.44.0';
-import {ROUTE_PRIZES,ROUTE_PRICE,routeBalance} from './journey-rewards.js?v=0.44.0';
-import {JOURNEYS,JOURNEY_TIERS} from './journey-data.js?v=0.44.0';
-import {totalExperience} from './progression.js?v=0.44.0';
-import {deployedTroops} from './logistics.js?v=0.44.0';
-export function journeyNextGoal(s,d){const page=(title,text,view,id,hero)=>({title,text,command:{type:'ui_section',view,id,...(hero?{hero}:{})},label:'前往准备'}),c=s.camp;
- if(!c)return page('先把寨子建起来','立寨后修起伐木场和农田，让下一趟有粮有木。','camp','home');
- if(s.realm?.trek||s.expansion?.run)return page('先完成这一趟','行程和已选战法已保存，回到路线继续。','realm',s.realm?.trek?.journey?'journey':s.realm?.trek?'expeditions':'battles');
+import {chronicleObjective} from './chronicle.js?v=0.52.0';
+import {openingGoal} from './opening-ui.js?v=0.52.0';
+import {ROUTE_PRIZES,ROUTE_PRICE,routeBalance} from './journey-rewards.js?v=0.52.0';
+import {JOURNEYS,JOURNEY_TIERS} from './journey-data.js?v=0.52.0';
+import {totalExperience} from './progression.js?v=0.52.0';
+import {deployedTroops} from './logistics.js?v=0.52.0';
+export function journeyNextGoal(s,d){const page=(title,text,view,id,hero)=>({title,text,command:{type:'ui_section',view,id,...(hero?{hero}:{})},label:'前往'}),c=s.camp;
+ if(!c)return page('安营立寨','先立寨，再修伐木场和农田，积攒木料与粮草。','camp','home');
+ if(s.realm?.trek||s.expansion?.run)return page('游历未归','队伍尚在途中，可接着上回的路继续走。','realm',s.realm?.trek?.journey?'journey':s.realm?.trek?'expeditions':'battles');
  const opening=openingGoal(s,d);if(opening)return opening;
- if(!c.buildings.lumber)return page('先有稳定木料','修建伐木场需要木材 20、碎银 50；随后经营可补足扩建材料。','camp',c.wood>=20&&s.player.silver>=50?'buildings':'duties');
- if(!c.buildings.farm)return page('备好下一趟口粮','修建农田需要木材 25、碎银 60，经营可补充行路粮草。','camp',c.wood>=25&&s.player.silver>=60?'buildings':'duties');
- if(c.buildings.hall<2)return page('把聚义厅扩至 2 级','需要木材 80、碎银 200；目前木材 '+c.wood+'、碎银 '+s.player.silver+'。','camp',c.wood>=80&&s.player.silver>=200?'buildings':'duties');
- if(!s.team.length)return page('安排第一支出阵小队','至少安排一位好汉，英雄独行也可走路线。','heroes','formation');
+ if(!c.buildings.lumber)return page('修建伐木场','修建伐木场需要木材 20、碎银 50；建成后可伐木备料。','camp',c.wood>=20&&s.player.silver>=50?'buildings':'duties');
+ if(!c.buildings.farm)return page('开垦农田','修建农田需要木材 25、碎银 60，建成后可耕种收粮。','camp',c.wood>=25&&s.player.silver>=60?'buildings':'duties');
+ if(c.buildings.hall<2)return page('扩建聚义厅 · 2 级','需要木材 80、碎银 200；目前木材 '+c.wood+'、碎银 '+s.player.silver+'。','camp',c.wood>=80&&s.player.silver>=200?'buildings':'duties');
+ if(!s.team.length)return page('点将出阵','至少选一位好汉出阵，不带兵也能游历。','heroes','formation');
  const leader=[...s.team].sort((a,b)=>s.heroes[b].level-s.heroes[a].level)[0],h=s.heroes[leader];
  if(h.level<8){const need=totalExperience({level:8,exp:0})-totalExperience(h);return {...page('培养一位 8 级主力',(d?.by.heroes[leader]?.name||'当前主力')+'目前 '+h.level+' 级，还需 '+need+' 经验。山林清剿胜利有历练和经验丹。',s.inventory.exp_pill?'heroes':'camp',s.inventory.exp_pill?'training':'raids',s.inventory.exp_pill?leader:undefined),secondary:{label:'调整带兵 / 独行',command:{type:'ui_section',view:'camp',id:'formation'}}};}
- if(c.mode==='army'&&!deployedTroops(s))return page('补好兵，或英雄独行','当前没有可随行乡勇；可募兵，也可改为独行，避免卡在出发条件。','camp','formation');
- if(s.player.stamina<16)return page('补充出发体力','探路需要体力 16。可使用现有体力补给，或等待自然恢复。','bag','supplies');
- if(c.food<15+Math.ceil(deployedTroops(s)/3)+35)return page('为整趟预留粮草','启程后，交锋与休整仍会耗粮。先经营一轮补给，途中也可选择采粮。','camp','duties');
+ if(c.mode==='army'&&!deployedTroops(s))return page('营中无兵可调','先招些乡勇，或改为好汉独行。','camp','formation');
+ if(s.player.stamina<16)return page('体力不足','探路需要体力 16。可使用现有体力补给，或等待自然恢复。','bag','supplies');
+ if(c.food<15+Math.ceil(deployedTroops(s)/3)+35)return page('备足行粮','启程后，交锋与休整仍会耗粮。可先回寨筹粮，沿途也有采粮的机会。','camp','duties');
+ const chronicle=chronicleObjective(s);if(chronicle)return chronicle;
+ if(s.realm?.journey?.chronicle&&Object.values(s.realm.journey.chronicle.routes).some(r=>r.choices.length<3||r.patrol<8||r.forged<3))return page('再访商路','沿路的乡人还有事相托。接下行记，出征办事，再带材料回去修成路栈与哨所。','realm','chronicles');
  const region=s.realm?.journey?.rewards?.target||Object.keys(ROUTE_PRIZES).find(id=>!s.equipment.some(e=>e.item===ROUTE_PRIZES[id].equipment))||'forest',m=ROUTE_PRIZES[region],balance=routeBalance(s,region),owned=s.equipment.some(e=>e.item===m.equipment),all=Object.values(ROUTE_PRIZES).every(x=>s.equipment.some(e=>e.item===x.equipment));
- if(all&&h.level>=15&&Object.keys(s.realm?.journey?.campaign?.contracts||{}).length<9)return page('为这支队伍留下江湖名号','三件珍藏已齐。选择全员归寨、无药行军或破阵疾行；九项首奖各领一次，已达 '+Object.keys(s.realm?.journey?.campaign?.contracts||{}).length+'/9。','realm','contracts');
- if(all){const next=Object.keys(ROUTE_PRIZES).find(id=>(s.realm?.journey?.best[id]||0)<3);return page(next?'挑战'+JOURNEYS[next].name+'下一难度':'试一组新的阵容与战法',next?'三件珍藏已齐。险途和绝险会增加路契与定向物资；缺少条件时可先培养。':'三路线绝险已走通。可为其他好汉兑换装备，或换阵容尝试不同战法组合。','realm',next?'journey':'rewards');}
+ if(all&&h.level>=15&&Object.keys(s.realm?.journey?.campaign?.contracts||{}).length<9)return page('挑战游历契约','三件珍藏已齐。选择全员归寨、无药行军或破阵疾行；九项首奖各领一次，已达 '+Object.keys(s.realm?.journey?.campaign?.contracts||{}).length+'/9。','realm','contracts');
+ if(all){const next=Object.keys(ROUTE_PRIZES).find(id=>(s.realm?.journey?.best[id]||0)<3);if(!next&&!s.realm?.journey?.chronicle)return page('再访三路乡人','商路行记从沿途委托开始。办事归来可修建路栈，随后开放八阶巡守与图谱淬炼。','realm','chronicles');return page(next?'挑战'+JOURNEYS[next].name+'下一难度':'三路绝险已通',next?'三件珍藏已齐。险途、绝险的路契和物资更多，可查看出发条件。':'三路线绝险已走通。可为其他好汉兑换装备，或换阵容尝试不同战法组合。','realm',next?'journey':'rewards');}
  const tier=Math.max(1,...Object.keys(JOURNEY_TIERS).map(Number).filter(n=>n<=(s.realm?.journey?.best[region]||0)+1&&h.level>=JOURNEY_TIERS[n].level)),missing=Math.max(0,ROUTE_PRICE-balance),runs=Math.ceil(missing/(tier+1));
  return {...page(balance>=ROUTE_PRICE?'可以兑换'+m.title:'下一件：'+m.title,JOURNEYS[region].name+' · '+m.name+' '+balance+'/'+ROUTE_PRICE+(missing?'；按'+JOURNEY_TIERS[tier].name+'，还需走通 '+runs+' 趟。':'；回寨兑换后到行囊穿戴。')+(owned?' 已有一件，可为同伴再备一件。':''),'realm',balance>=ROUTE_PRICE?'rewards':'journey'),label:balance>=ROUTE_PRICE?'兑换专属装备':'前往目标路线',region,...(h.level>=15&&Object.values(s.realm?.journey?.best||{}).some(n=>n>=1)&&Object.keys(s.realm?.journey?.campaign?.contracts||{}).length<9?{secondary:{label:'挑战路线契约',command:{type:'ui_section',view:'realm',id:'contracts'}}}:{})};
 }

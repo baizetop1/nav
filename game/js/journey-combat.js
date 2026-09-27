@@ -1,4 +1,5 @@
-import {ROUTE_BOSSES,EFFECT_LABELS,journeyConsequences} from './journey-data.js?v=0.44.0';
+import {lateAbsorb} from './late-mainline-combat.js?v=0.52.0';
+import {ROUTE_BOSSES,EFFECT_LABELS,journeyConsequences} from './journey-data.js?v=0.52.0';
 const active=b=>b.journey?.rules===2&&b.journey.combat,has=(b,id)=>!!active(b)&&b.journey.boons.includes(id);
 const living=u=>u.hp>0,guarded=(b,u)=>b.orders?.stance==='guard'||u.statuses.some(s=>s.id==='guard'&&s.expiresAt>b.elapsed);
 const log=(b,text)=>{b.log.push('【'+(b.elapsed/1000).toFixed(1)+'秒】'+text);if(b.log.length>120)b.log.shift();};
@@ -12,7 +13,7 @@ export function initializeJourneyCombat(b,j){if(j.rules!==2)return;b.journey.rul
 export function journeyHealing(b,source,n,target){if(!active(b)||n<=0||source?.side!=='team'||target?.side!=='team'||!living(target))return;
  if(has(b,'heal_guard')){const shields=active(b).shields,amount=Math.max(0,Math.min(Math.floor(target.maxHp*.15)-shields[target.id],Math.floor(n*.4)));shields[target.id]+=amount;if(amount){count(b,'heal_guard');log(b,'【回春护体】'+target.name+'护盾 +'+amount+'。');}}
  if(has(b,'battle_hymn')&&target.rage<100&&ready(b,target,'battle_hymn')){const n=Math.min(8,100-target.rage);target.rage+=n;count(b,'battle_hymn');log(b,'【济困振气】'+target.name+'怒气 +'+n+'。');}}
-export function journeyAbsorb(b,target,loss){if(!active(b)||target.side!=='team')return loss;const shields=active(b).shields,n=Math.min(shields[target.id],loss);shields[target.id]-=n;if(n){count(b,'absorbed',n);log(b,'【护盾吸收】'+target.name+'抵去 '+n+' 点伤害。');}return loss-n;}
+export function journeyAbsorb(b,target,loss){loss=lateAbsorb(b,target,loss);if(!active(b)||target.side!=='team')return loss;const shields=active(b).shields,n=Math.min(shields[target.id],loss);shields[target.id]-=n;if(n){count(b,'absorbed',n);log(b,'【护盾吸收】'+target.name+'抵去 '+n+' 点伤害。');}return loss-n;}
 export function journeyDamageFactor(b,u,target,normal){return active(b)&&b.journey.kind==='boss'&&b.journey.region==='mountain'&&u.side==='team'&&normal&&target===b.enemy[0]&&b.enemy[1]?.hp>0?.55:1;}
 function extraDamage(b,u,target,amount,name,api){if(!living(u)||!target||!living(target))return;const loss=Math.min(target.hp,Math.max(1,Math.round(amount)));api.reportDamage(b,u,target,loss);target.hp-=loss;target.rage=Math.min(100,target.rage+10);log(b,'【'+name+'】'+u.name+'令'+target.name+'损失 '+loss+' 气血。');}
 export function journeyAfterHit(b,u,target,api,normal,loss){if(!active(b)||!normal)return;

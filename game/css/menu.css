@@ -1,0 +1,47 @@
+/* The function menu has its own bounded grid; it never becomes a long page. */
+.viewport-shell .masthead-more{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:0 11px;border:1px solid var(--folio-edge);border-radius:9px;background:var(--folio-soft);color:var(--green);font-size:13px;white-space:nowrap}
+.masthead-more span{font-size:10px;opacity:.65}.masthead-more[aria-expanded=true] span{transform:rotate(180deg)}
+#function-menu{--menu-marker:#76988b;box-sizing:border-box;width:min(600px,calc(100vw - 24px));max-width:none;max-height:calc(var(--game-height,100dvh) - 24px);margin:auto;padding:14px 18px 18px;border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--ink);overflow:hidden;box-shadow:0 14px 48px #223f3326}
+#function-menu[open]{display:flex;flex-direction:column;gap:0}
+#function-menu::backdrop{background:#2e443b45}
+#function-menu .function-menu-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 8px;padding:0;border:0;background:none}
+#function-menu h2{font-size:16px;line-height:1.3;font-weight:600;color:var(--ink);margin:0;letter-spacing:1px}
+#function-menu [data-menu-close]{flex:none;min-height:40px;width:40px;padding:0;border:1px solid var(--line);background:var(--folio-control);color:var(--muted);font-size:24px;line-height:1;border-radius:10px}
+#function-menu .function-menu-note{font-size:12px;line-height:1.4;color:var(--muted);margin:0 0 8px}
+.function-menu-groups{min-height:0;display:grid;gap:12px}
+#function-menu .function-menu-group{margin:0;padding:10px 0 0;border:0;border-top:1px solid var(--line);background:none;box-shadow:none}
+#function-menu .function-menu-group h3{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px;line-height:18px;font-weight:500;margin:0 0 7px;padding:0}
+.function-menu-group h3::before{content:'';display:block;width:5px;height:13px;border-radius:3px;background:var(--menu-marker)}
+.function-menu-group[data-menu-group=journey]{--menu-marker:#b19a66}
+.function-menu-group[data-menu-group=camp]{--menu-marker:#759a8b}
+.function-menu-group[data-menu-group=heroes]{--menu-marker:#9b90b5}
+.function-menu-group[data-menu-group=other]{--menu-marker:#7c9a98}
+.function-menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+#function-menu .function-menu-grid button{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;min-height:44px;margin:0;padding:7px 6px 7px 15px;border:1px solid var(--line);border-radius:9px;background:var(--folio-soft);color:var(--ink);font-size:14px;line-height:1.4;font-weight:400;box-shadow:0 1px 1px #223f3305;white-space:nowrap}
+.function-menu-grid button::before{content:'';position:absolute;left:8px;top:12px;bottom:12px;width:3px;min-height:14px;border-radius:3px;background:var(--menu-marker)}
+#function-menu .function-menu-grid button:hover:not(:disabled){background:var(--folio-selected);border-color:var(--folio-edge)}
+#function-menu .function-menu-grid button[aria-current=page]{border-color:var(--folio-edge);color:var(--green);background:var(--folio-selected)}
+#function-menu .function-menu-grid button:disabled{opacity:.45;cursor:default}
+#function-menu :is(button):focus-visible{outline:2px solid var(--green);outline-offset:2px}
+#function-menu .function-menu-tabs{display:none}
+:root[data-theme=night] #function-menu{box-shadow:0 16px 48px #0006}
+:root[data-theme=night] #function-menu::backdrop{background:#060d0ac4}
+@media(max-width:599px){
+ #function-menu{padding:10px 12px 12px;border-radius:13px}
+ .function-menu-groups{gap:9px}
+ #function-menu .function-menu-group{padding-top:8px}
+ #function-menu .function-menu-group h3{margin-bottom:6px}
+ .viewport-shell .masthead-more{min-height:34px;padding:0 8px;font-size:12px}
+ .viewport-shell .mast-links{gap:6px}
+ .viewport-shell .mast-links>a{font-size:0}
+ .viewport-shell .mast-links>a::after{content:'导航';font-size:11px}
+}
+/* Short phones and landscape use four categories, with full-sized controls. */
+@media(max-height:700px){
+ #function-menu{width:min(560px,calc(100vw - 24px))}
+ #function-menu .function-menu-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:0 0 10px}
+ #function-menu .function-menu-tabs button{min-width:0;min-height:40px;padding:5px;border:1px solid transparent;background:var(--folio-control);color:var(--muted);font-size:13px;border-radius:8px}
+ #function-menu .function-menu-tabs button[aria-pressed=true]{color:var(--green);border-color:var(--folio-edge);background:var(--folio-selected)}
+ #function-menu .function-menu-group[data-selected=false]{display:none}
+ #function-menu .function-menu-group{padding-top:10px}
+}

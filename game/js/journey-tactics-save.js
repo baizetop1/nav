@@ -1,4 +1,4 @@
-import {JOURNEYS,EFFECT_LABELS,journeyConsequences} from './journey-data.js?v=0.44.0';
+import {JOURNEYS,EFFECT_LABELS,journeyConsequences} from './journey-data.js?v=0.52.0';
 const obj=x=>x&&typeof x==='object'&&!Array.isArray(x),num=(x,max=1000000000)=>Number.isSafeInteger(x)&&x>=0&&x<=max;
 function counts(c,check){check(obj(c)&&Object.keys(c).length===Object.keys(EFFECT_LABELS).length&&Object.keys(EFFECT_LABELS).every(id=>num(c[id])),'游历战法贡献');}
 export function validateJourneyReport(r,check){const j=r.journeyReport;if(j===undefined)return;check(obj(j)&&j.version===1&&Object.hasOwn(JOURNEYS,j.region)&&['fight','elite','boss'].includes(j.kind)&&r.context.type==='realm'&&r.context.id==='journey_'+j.region,'游历复盘');counts(j.counts,check);}

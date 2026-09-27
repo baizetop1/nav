@@ -4,7 +4,7 @@
     "name": "郓城县",
     "region": "郓城",
     "type": "area",
-    "description": "青石街上，挑担的脚夫与赶路的客商擦肩而过。\n酒旗在檐下轻摆，县衙门前围着看榜的人。你拢好行囊，走进这座山东小城。",
+    "description": "挑担的脚夫侧身让过一辆牛车，车轮碾得青石咯咯响。县衙门前围着看榜的人，街对面挑出一面酒旗。",
     "links": [
       {
         "target": "office"
@@ -35,7 +35,7 @@
     "name": "郓城县衙",
     "region": "郓城",
     "type": "area",
-    "description": "堂前衙役按着刀柄，催围观的人莫堵了路。\n你挤到榜墙边，新糨糊还未干，纸角却已被风掀起。人群里有人低声问：“这冈上的虎，究竟谁敢去除？”",
+    "description": "新榜文贴在墙上，纸角的糨糊还没干。人群正议论冈上的虎患，衙役隔着台阶催人让路。",
     "links": [
       {
         "target": "yuncheng"
@@ -51,7 +51,7 @@
     "name": "郓城酒肆",
     "region": "郓城",
     "type": "area",
-    "description": "门帘一掀，酒香裹着热气扑面而来。掌柜抹了抹桌沿：“客官，且坐。”\n卖酒汉子歇下挑担，哼着半阕山歌；窗边一条瘦汉不甚言语，一双眼却把来往的人都看在心里。",
+    "description": "酒坛码在柜后，几张方桌挤满了赶路的客商。掌柜提着酒壶穿堂而过，窗边的瘦汉一直没放下手里的碗。",
     "links": [
       {
         "target": "yuncheng"
@@ -61,7 +61,7 @@
       {
         "id": "rumor_dongxi",
         "label": "打听东溪村",
-        "text": "掌柜压低声音：“沿城门外那条溪走，便是东溪村。晁保正庄上这几日常有客来，有个教书先生，唤作吴用，最是个有计较的人。”你记下了这条乡路，也记下了吴用的名字。",
+        "text": "掌柜朝门外一指：“出城沿溪走，就是东溪村。晁保正庄上近日客人不少，吴学究也在那里。这先生姓吴名用，在乡间教书。”",
         "effects": [
           {
             "type": "flag",
@@ -78,7 +78,7 @@
       {
         "id": "rumor_tiger",
         "label": "打听景阳冈",
-        "text": "邻桌的客商放下酒盏：“景阳冈上又少了行人。听说近日来了个武二郎，几碗酒下肚，还要独自过冈。”掌柜直摇头，你却留心记住了武松这个名字。",
+        "text": "邻桌客商放下碗：“景阳冈又闹虎了。偏有个姓武名松的汉子，喝完酒还要独自上冈，店家怎么劝也不听。”",
         "effects": [
           {
             "type": "hero",
@@ -95,7 +95,7 @@
       {
         "id": "news",
         "label": "听江湖闲话",
-        "text": "说书人醒木轻落：“郓城有位宋押司，姓宋名江。人若落难，他肯周济；朋友登门，他肯相待。”一桌人纷纷点头。你想，这样的人，日后总要见上一面。",
+        "text": "酒客说起县里的宋江：“宋押司人称及时雨。人家断了盘缠，或是落了难，去求他周济，多半不会空手回来。”",
         "effects": [
           {
             "type": "hero",
@@ -115,7 +115,7 @@
     "name": "城西铁匠铺",
     "region": "郓城",
     "type": "area",
-    "description": "炉火通红，锤声不歇。铁匠说：兵刃不利，到了江湖上可要吃亏。",
+    "description": "炉边落了一地铁屑。铁匠夹出烧红的铁条，锤子落下，火星溅到皮围裙上。",
     "links": [
       {
         "target": "yuncheng"
@@ -124,12 +124,12 @@
     "actions": [
       {
         "id": "forge_new_method",
-        "label": "请教风雪淬炼法",
+        "label": "请教锻造",
         "once": true,
         "condition": {
           "flag": "lin_temple"
         },
-        "text": "铁匠听完草料场的风雪，说起冷热相济的锻法。强化上限开放至 +10；+6 起需强化符，八成可成，失败只耗材料，不降级、不毁装备。",
+        "text": "铁匠翻过炉边的钳子，给你细讲淬火的手法。\n\n（装备可强化至+10；+6起需强化符，成功率80%。失败只耗材料，装备不会降级或损毁。）",
         "effects": [
           {
             "type": "flag",
@@ -147,7 +147,7 @@
     "name": "郓城马厩",
     "region": "郓城",
     "type": "area",
-    "description": "马倌指着一排空栏：“好脚力要从江湖带回来。去对应副本得胜，收好坐骑契，再来这里安置。”此处只凭专属坐骑契领骑，不出售坐骑；草料和驯骑凭记用于后续养成。",
+    "description": "马倌把干草抖进槽里，墙上挂着缰绳与鞍具。\n\n（相应副本中取得的坐骑契可在此领骑，须先请对应好汉入寨，不另收碎银。）",
     "links": [
       {
         "target": "yuncheng"
@@ -156,8 +156,8 @@
     "actions": [
       {
         "id": "horse_rumor",
-        "label": "询问脚力消息",
-        "text": "马夫递来一张寻马的字条：先留着，待梁山安定后再访。坐骑养成不在本卷开放。",
+        "label": "打听好马",
+        "text": "马夫从怀里摸出一张寻马的字条，上面提到一匹黄骠马。你收好字条，留作日后查访。",
         "effects": [
           {
             "type": "item",
@@ -177,7 +177,7 @@
     "name": "招贤馆",
     "region": "郓城",
     "type": "area",
-    "description": "堂中悬着英雄帖，来往消息都在此汇拢。相识只是一面之缘，入寨还需诚意。",
+    "description": "堂中挂满英雄帖，桌上一摞荐书压着镇纸。管事翻开名册，等你报上要拜访的人。",
     "links": [
       {
         "target": "yuncheng"
@@ -193,7 +193,7 @@
     "name": "郓城城门",
     "region": "郓城",
     "type": "area",
-    "description": "守门人望着远方官道。往东可去景阳冈，溪水那头却少有人提起。",
+    "description": "车马在门洞里排成一列，守门人挨个查问。出门是通往景阳冈的官道，溪边另有一条乡路。",
     "links": [
       {
         "target": "yuncheng"
@@ -218,7 +218,7 @@
     "name": "城外官道",
     "region": "郓城",
     "type": "area",
-    "description": "车辙伸向远山，行旅有些匆忙。路边旧庙与草药坡各有小径。",
+    "description": "两道车辙压进黄土，路边的草沾满灰尘。岔路一头通药草坡，一头通旧庙。",
     "links": [
       {
         "target": "gate"
@@ -243,7 +243,7 @@
     "name": "药草坡",
     "region": "郓城",
     "type": "area",
-    "description": "露水留在草叶上，药香很淡。老郎中常来这里分辨药性。",
+    "description": "草叶上的露水湿了鞋面。老郎中蹲在坡上，把两株模样相近的药草放在一起辨认。",
     "links": [
       {
         "target": "road"
@@ -259,7 +259,7 @@
     "name": "城外破庙",
     "region": "郓城",
     "type": "area",
-    "description": "庙门失修，供桌上还有一盏残灯。入夜后，墙角似乎另有脚印。",
+    "description": "半扇庙门歪在门框里，供桌上的油灯只剩豆大一点火。墙根的泥地上留着几行脚印。",
     "links": [
       {
         "target": "road"
@@ -290,7 +290,7 @@
     "name": "景阳冈下",
     "region": "景阳冈",
     "type": "area",
-    "description": "旧木牌上写着“山中有虎，行人慎入”。前方酒旗招展，山道渐高。",
+    "description": "冈下立着一块旧木牌：“山中有虎，行人慎入。”酒肆就在路旁，再往前，山道便陡了。",
     "links": [
       {
         "target": "road"
@@ -314,7 +314,7 @@
     "name": "三碗不过冈",
     "region": "景阳冈",
     "type": "area",
-    "description": "店家正劝一个高大的汉子不要上冈。那汉子放下空碗，神色并无醉意。",
+    "description": "店家拦在门口，劝那高大汉子明早再走。桌上空碗摞了几只，汉子的哨棒靠在手边。",
     "links": [
       {
         "target": "jingyang"
@@ -335,7 +335,7 @@
     "name": "景阳冈山道",
     "region": "景阳冈",
     "type": "area",
-    "description": "树木渐密，日光从叶隙落下。地上的落叶掩不住深浅不一的脚印。",
+    "description": "越往上走，树荫越密。路旁落叶被踩进泥里，有些脚印比人的巴掌还宽。",
     "links": [
       {
         "target": "jingyang"
@@ -364,7 +364,7 @@
     "name": "枯树林",
     "region": "景阳冈",
     "type": "area",
-    "description": "枯枝横在小径上，附近散着碎布。几处巨大的爪印一直延伸到草丛中。",
+    "description": "断枝拦住小径，一条碎布挂在树杈上。土里的爪印绕过枯树，伸进草丛。",
     "links": [
       {
         "target": "path"
@@ -373,8 +373,8 @@
     "actions": [
       {
         "id": "tracks",
-        "label": "查看巨大的脚印",
-        "text": "爪印深入草丛。你在树上留下一处记号，返回山道便能沿虎踪追查。",
+        "label": "查看爪印",
+        "text": "爪印从树根旁穿过去，草丛里压出一条路。你在树干上划了记号，回到山道便能找到虎踪。",
         "effects": [
           {
             "type": "flag",
@@ -393,7 +393,7 @@
     "name": "大青石",
     "region": "景阳冈",
     "type": "area",
-    "description": "青石还留着白日的暖意。四下忽然安静，林中没有鸟声。",
+    "description": "大青石横在路旁，石面晒得温热。林子里静下来，连方才的鸟叫也听不见了。",
     "links": [
       {
         "target": "path"
@@ -416,7 +416,7 @@
     "name": "虎踪",
     "region": "景阳冈",
     "type": "area",
-    "description": "草丛被压倒，树皮上有几道新痕。循着痕迹向前，深林里传出沉重鼻息。",
+    "description": "草被压倒了一片，树干上几道爪痕还露着白茬。痕迹朝深林延去。",
     "links": [
       {
         "target": "path"
@@ -431,8 +431,8 @@
     "actions": [
       {
         "id": "follow",
-        "label": "继续追踪",
-        "text": "深林的方向已经辨明。武松点了点头，提着哨棒往前走。",
+        "label": "循迹探路",
+        "text": "你拨开挡路的枝条，跟着爪印往前走。痕迹一直通向密林深处。",
         "effects": [
           {
             "type": "flag",
@@ -451,7 +451,7 @@
     "name": "密林深处",
     "region": "景阳冈",
     "type": "area",
-    "description": "风停了，林叶不再作响。武松立住脚步，看向暗处的一双眼睛。",
+    "description": "树冠挡住天光，眼前只剩一条窄路。草丛猛地一晃，暗处传来粗重的鼻息。",
     "links": [
       {
         "target": "stone"
@@ -472,7 +472,7 @@
     "name": "东溪村",
     "region": "东溪村",
     "type": "area",
-    "description": "溪水绕村，炊烟低垂。晁盖庄门前近日多了几个陌生面孔。",
+    "description": "溪水绕过村口，几只鸡在篱下刨土。晁盖庄门前拴着远客的马，庄客正往里搬行李。",
     "links": [
       {
         "target": "gate"
@@ -499,7 +499,7 @@
     "name": "晁盖庄",
     "region": "东溪村",
     "type": "area",
-    "description": "一位书生与赤发汉子低声交谈。庄主人晁盖抬手，示意众人稍安。",
+    "description": "晁盖坐在堂前，吴用与刘唐在一旁低声商量。有人端茶进来，几人便暂且住了口。",
     "links": [
       {
         "target": "dongxi"
@@ -520,7 +520,7 @@
     "name": "溪边渡口",
     "region": "东溪村",
     "type": "area",
-    "description": "打鱼的小船系在岸旁。三阮说起水上的日子，言语间颇有不平。",
+    "description": "三只渔船挨在岸边，湿网摊在船头。三阮一面理网，一面骂近日来催鱼税的官差。",
     "links": [
       {
         "target": "dongxi"
@@ -541,7 +541,7 @@
     "name": "庄后客舍",
     "region": "东溪村",
     "type": "area",
-    "description": "七人围坐，不为功名，只问义气。吴用铺开一幅简陋路图。",
+    "description": "七人在桌边坐下，门已从里闩住。吴用摊开路图，手指点在黄泥冈上。",
     "links": [
       {
         "target": "zhuang"
@@ -568,7 +568,7 @@
     "name": "芦苇浅湾",
     "region": "东溪村",
     "type": "area",
-    "description": "芦苇遮住了水面，脚步要放得轻些。有人留下的绳结还很新。",
+    "description": "芦苇长得齐人高，风一吹，才露出湾里的水面。岸边木桩上系着一截新绳。",
     "links": [
       {
         "target": "creek"
@@ -587,7 +587,7 @@
     "name": "黄泥冈口",
     "region": "黄泥冈",
     "type": "area",
-    "description": "官道上尘土未落，日头渐毒。远处军汉挑着重担，杨志不断催促。",
+    "description": "日头晒得路面发白。军汉挑着重担挪上冈，杨志提刀跟在后头，不住催行。",
     "links": [
       {
         "target": "guesthouse"
@@ -620,7 +620,7 @@
     "name": "冈上松岗",
     "region": "黄泥冈",
     "type": "area",
-    "description": "松荫只能遮住几个人。疲惫的军汉想歇脚，押运的人仍不放心。",
+    "description": "松荫只够遮住几副担子。军汉把扁担往肩上换了换，盯着树下那块凉地。",
     "links": [
       {
         "target": "huangni"
@@ -636,7 +636,7 @@
     "name": "松林阴处",
     "region": "黄泥冈",
     "type": "area",
-    "description": "吴用借树影察看来路。此处能听清军汉抱怨，却不容易被看见。",
+    "description": "松枝低垂，遮住了官道上的视线。吴用站在树后，军汉们的抱怨声隔着林子传来。",
     "links": [
       {
         "target": "huangni"
@@ -655,7 +655,7 @@
     "name": "卖酒小径",
     "region": "黄泥冈",
     "type": "area",
-    "description": "白胜挑着酒担在远处候着。来早一步或迟一步，都可能坏了安排。",
+    "description": "白胜把酒担搁在路边，一只手扶着桶盖。小径通向松岗，担绳已经被汗浸湿。",
     "links": [
       {
         "target": "huangni"
@@ -671,7 +671,7 @@
     "name": "梁山脚下",
     "region": "梁山",
     "type": "area",
-    "description": "远水尽头一片苍茫，已有流落的乡人搭起草棚。要在此安身，还得有人、有粮，也有一份担当。",
+    "description": "水泊对岸露出山影，岸边新搭了几间草棚。逃难来的乡人围着灶火，湿衣裳晾在树枝上。",
     "links": [
       {
         "target": "huangni",
@@ -699,7 +699,7 @@
     "name": "金沙渡",
     "region": "梁山",
     "type": "area",
-    "description": "小舟在浅水里轻轻打转。远来的行脚僧谈起了野猪林中的不平事。",
+    "description": "船头靠着木桩，缆绳绷一下，又松一下。渡客蹲在岸边等船，一个行脚僧说起野猪林的事。",
     "links": [
       {
         "target": "liangshan"
@@ -735,7 +735,7 @@
     "name": "临时校场",
     "region": "梁山",
     "type": "area",
-    "description": "空地上竖了几根木桩。花荣看着弓弦，示意众人先站稳阵脚。",
+    "description": "空地上立着几根木桩，箭靶上扎满了旧箭。花荣拨了拨弓弦，让练箭的人把脚站稳。",
     "links": [
       {
         "target": "liangshan"
@@ -756,7 +756,7 @@
     "name": "江湖历练处",
     "region": "梁山",
     "type": "area",
-    "description": "过路人带来了野猪林、沧州与祝家庄的见闻。可先据传闻演练，完整往事待下一卷展开。",
+    "description": "墙上挂着野猪林、沧州和祝家庄的路图，桌边围着几名过路客。听过各处战况，便可在此挑一场历练。",
     "links": [
       {
         "target": "liangshan"
@@ -775,7 +775,7 @@
     "id": "dongjing",
     "name": "东京城门",
     "region": "东京",
-    "description": "城门内车马如织，禁军校尉穿行其间。渡口带来的书信提到一位林教头，大相国寺的钟声正从城中传来。",
+    "description": "车马挤过城门，禁军校尉沿街巡行。大相国寺的钟声传来，卖香烛的摊贩忙着招呼客人。",
     "links": [
       {
         "target": "ferry",
@@ -805,7 +805,7 @@
     "id": "dongjing_lane",
     "name": "教头旧居",
     "region": "东京",
-    "description": "屋檐下挂着一杆旧枪。林冲衣冠齐整，说话仍留三分余地，门外却总有陌生人的脚步停留。",
+    "description": "旧枪挂在檐下，枪杆擦得很亮。林冲坐在门内，听见巷中脚步停下，抬头看了一眼。",
     "links": [
       {
         "target": "dongjing",
@@ -823,7 +823,7 @@
     "id": "temple_gate",
     "name": "大相国寺山门",
     "region": "东京",
-    "description": "香客沿石阶进出，钟声越过高墙。寺后的菜园传来吵嚷，一名僧人正大步赶去。",
+    "description": "香客沿石阶进出，门边摆着几副空香担。菜园那头有人吵嚷，声音越过了院墙。",
     "links": [
       {
         "target": "dongjing",
@@ -843,7 +843,7 @@
     "id": "xiangguosi",
     "name": "大相国寺",
     "region": "东京",
-    "description": "廊下僧人忙着洒扫。一柄沉重禅杖靠在柱旁，来客说它的主人脾气粗直，却从不欺压穷苦人。",
+    "description": "廊下僧人提水洒扫，湿石板上留着扫帚印。一柄粗重的禅杖靠在柱旁。",
     "links": [
       {
         "target": "temple_gate",
@@ -865,7 +865,7 @@
     "id": "vegetable_garden",
     "name": "相国寺菜园",
     "region": "东京",
-    "description": "柳荫盖着菜畦，几个泼皮在篱边赔笑。鲁智深提起他们弄翻的木桶，要他们把糟蹋的菜地收拾干净。",
+    "description": "木桶翻在菜畦里，水顺着沟流。几个泼皮在篱边赔笑，鲁智深指着踩坏的菜苗，催他们收拾。",
     "links": [
       {
         "target": "xiangguosi",
@@ -883,7 +883,7 @@
     "id": "boar_road",
     "name": "东京北官道",
     "region": "北行路",
-    "description": "押解的行列刚走过驿亭，泥地还留着拖曳的脚印。前方林木渐深，行旅说那里少有村落。",
+    "description": "押解的人刚过驿亭，泥地上拖出两道脚印。前方古树连成一片，路边已看不见人家。",
     "links": [
       {
         "target": "dongjing",
@@ -909,7 +909,7 @@
     "id": "boar_forest",
     "name": "野猪林深处",
     "region": "野猪林",
-    "description": "古木蔽日，风声从高枝间漏下。董超、薛霸把林冲领到树下，说是歇脚，却将水火棍握紧了。",
+    "description": "古树遮住日头，树根间落满湿叶。董超、薛霸把林冲领到树下，水火棍仍攥在手里。",
     "links": [
       {
         "target": "boar_road",
@@ -936,7 +936,7 @@
     "id": "cangzhou",
     "name": "沧州城",
     "region": "沧州",
-    "description": "北地风硬，城墙脚下积着残雪。林冲暂在此安身，一家小酒铺的店主认出了旧日恩人。",
+    "description": "残雪堆在城墙根，风从城门洞里直灌进来。街边酒铺挂起厚门帘，炉烟贴着屋檐飘。",
     "links": [
       {
         "target": "boar_forest",
@@ -962,7 +962,7 @@
     "id": "cangzhou_inn",
     "name": "李小二酒铺",
     "region": "沧州",
-    "description": "炉上温着薄酒，李小二隔着门缝察看街面。他记得林冲曾经周济自己，见有陌生客人问话便留了心。",
+    "description": "酒壶温在炉边，李小二掀开门帘看了看街上。方才问起草料场的外乡客还没走远。",
     "links": [
       {
         "target": "cangzhou",
@@ -980,7 +980,7 @@
     "id": "feed_depot",
     "name": "草料场",
     "region": "沧州",
-    "description": "草堆高过屋檐，风吹得破门发响。差拨把看守之事交给林冲，远处雪云一层层压来。",
+    "description": "草堆高过屋檐，破门被风吹得来回撞。看守的草屋很矮，房顶已经积了厚厚一层雪。",
     "links": [
       {
         "target": "cangzhou",
@@ -1002,7 +1002,7 @@
     "id": "snow_road",
     "name": "风雪山道",
     "region": "沧州",
-    "description": "大雪压低了树枝，草屋已难遮风。林冲挑着酒葫芦走来，山神庙露出一线屋檐，雪地上还有几行新脚印。",
+    "description": "雪压弯了路旁的树枝。几行新脚印越过山道，山神庙的屋檐从雪幕里露出来。",
     "links": [
       {
         "target": "feed_depot",
@@ -1023,7 +1023,7 @@
         "condition": {
           "flag": "lin_cangzhou"
         },
-        "text": "脚印绕向山神庙，远处传来酒气与低语。林冲收紧衣襟，决定先到庙中避雪。",
+        "text": "几行脚印转向山神庙，庙旁隐约有人说话。林冲拢紧衣襟，抬头望向庙门。",
         "effects": [
           {
             "type": "flag",
@@ -1040,7 +1040,7 @@
     "id": "mountain_temple",
     "name": "风雪山神庙",
     "region": "沧州",
-    "description": "庙门被石头掩住，供桌旁只容一人避雪。门外忽然响起说话声，远处草料场的火光映红了半边天。",
+    "description": "一块大石抵住庙门，雪从破窗灌进来。门外响起说话声，草料场那边的火光映在窗纸上。",
     "links": [
       {
         "target": "snow_road",
@@ -1066,7 +1066,7 @@
     "id": "chaijin_manor",
     "name": "柴进庄",
     "region": "横海郡",
-    "description": "庄门前拴着远客的马，庄客见持书之人便请入内。柴进素来接济落难好汉，堂中并无催问来历的声音。",
+    "description": "庄门前拴着几匹远客的马，门房里烧着炭盆。庄客接过来人的书信，转身往堂中通报。",
     "links": [
       {
         "target": "mountain_temple",
@@ -1096,7 +1096,7 @@
     "id": "chaijin_guesthouse",
     "name": "柴庄客舍",
     "region": "横海郡",
-    "description": "灶边备着干衣热饭，墙上挂了几件兵器。林冲终于坐定，柴进的庄客正在安排送往水泊的书信。",
+    "description": "干衣搭在灶边，桌上摆着热饭。庄客折好一封送往水泊的书信，拿蜡封住信口。",
     "links": [
       {
         "target": "chaijin_manor",
@@ -1114,7 +1114,7 @@
     "id": "south_route",
     "name": "南下水泊路",
     "region": "梁山外",
-    "description": "北地的积雪渐渐化成泥水，远处芦苇迎风起伏。庄客在岔路口停下，指向一条可抵梁山渡口的小径。",
+    "description": "积雪化进路上的车辙，走一步便陷一脚泥。庄客在岔口停下，指向芦苇后的渡船。",
     "links": [
       {
         "target": "chaijin_manor",
@@ -1134,7 +1134,7 @@
     "id": "qingzhou_road",
     "name": "青州行旅道",
     "region": "青州",
-    "description": "一队商旅被倒木拦在路边。一个面有青记的汉子默默整理行装，他提起失陷的差事时仍有不甘，却不肯看眼前弱者受欺。",
+    "description": "倒木拦住了商旅的车，几名脚夫使力也搬不动。杨志把包袱放下，提着刀走到路前。",
     "links": [
       {
         "target": "boar_road",
@@ -1155,7 +1155,7 @@
     "name": "聚义议事坪",
     "region": "梁山初聚",
     "type": "area",
-    "description": "安寨、稳粮、通路、守寨四项事务已写在木牌上。建成的设施直接计入，不必重新营建。招贤、打造与训练仍从各自入口办理。",
+    "description": "木牌上记着眼下四件事：安置寨民、运粮、取材、守寨。众人围着路图，商量先从哪处动手。",
     "links": [
       {
         "target": "ferry",
@@ -1226,7 +1226,7 @@
     "name": "寨民新居",
     "region": "梁山初聚",
     "type": "area",
-    "description": "先让寨民安居：聚义厅二级，农田、伐木场、医馆各一级，三名好汉共同照应。已建成的设施和已入寨好汉直接计入。",
+    "description": "新屋的门板刚装上，乡人抱着铺盖来认住处。\n\n（安寨需聚义厅二级，农田、伐木场、医馆各一级，已有三名好汉入寨；齐备后在此交接。）",
     "links": [
       {
         "target": "v3_council",
@@ -1245,7 +1245,7 @@
     "name": "东岸粮仓",
     "region": "梁山初聚",
     "type": "area",
-    "description": "粮仓有粮，沿路却有拦截。清出粮道后，乡人愿每日送来一份村酒；先走粮道或木道由你决定。",
+    "description": "粮袋堆在东岸，运粮的车被匪徒堵在路上。\n\n（清出粮道后，粮仓每日可领村酒一份。）",
     "links": [
       {
         "target": "v3_council",
@@ -1277,7 +1277,7 @@
     "name": "青石材场",
     "region": "梁山初聚",
     "type": "area",
-    "description": "散落的木料可以修补寨栅。击退林间匪徒，便能打通木道；巡过路后，材场每日可提供碎铁。",
+    "description": "锯下的木料堆满材场，林间匪徒把住出口。\n\n（打通木道后，每日可来领取碎铁两份。）",
     "links": [
       {
         "target": "v3_council",
@@ -1309,7 +1309,7 @@
     "name": "芦苇望哨",
     "region": "梁山初聚",
     "type": "area",
-    "description": "芦苇间藏着观察水陆动静的小径。改为英雄独行可探清敌营，后续本卷水战与守寨战的敌军气血、攻击、防御、谋略降低 15%，只侦察一次即可。",
+    "description": "芦苇间有条窄径，能看见敌营的哨火。\n\n（以英雄独行前去侦察，本卷水战与守寨战的敌军气血、攻击、防御、谋略各降低15%。）",
     "links": [
       {
         "target": "v3_council",
@@ -1338,7 +1338,7 @@
     "actions": [
       {
         "id": "v3_scout",
-        "label": "独行察看敌营 · 后续敌军气血、攻击、防御、谋略降低 15%",
+        "label": "独行侦察",
         "once": true,
         "condition": {
           "all": [
@@ -1350,7 +1350,7 @@
             }
           ]
         },
-        "text": "你们借芦苇遮身，记下敌营的换哨与进军路线。第三卷水域交战及守寨战可提前应对，敌军气血、攻击、防御、谋略降低 15%；情报长期有效，不消耗物资。",
+        "text": "你伏在芦苇后，记下换哨时辰和进军的路线。\n\n（情报在第三卷水战与守寨战中持续有效：敌军气血、攻击、防御、谋略各降低15%。）",
         "effects": [
           {
             "type": "flag",
@@ -1368,7 +1368,7 @@
     "name": "水陆接驳口",
     "region": "梁山初聚",
     "type": "area",
-    "description": "粮道或木道任一打通即可到达。掌住渡船便能连通另一条补给线，也能发挥水战好汉的地形专长。",
+    "description": "渡船拴在浅滩，粮车和木车都要从此过水。先打通粮道或木道，再来夺回渡口。",
     "links": [
       {
         "target": "v3_council",
@@ -1406,7 +1406,7 @@
     "name": "外寨栅门",
     "region": "梁山初聚",
     "type": "area",
-    "description": "寨民已安、两条物资路已通、渡船已稳，方可迎战来袭匪众。敌情预览会计入望哨情报；不要求指定英雄。",
+    "description": "木栅外留着车辙，守寨的人把缺口补上。安置好寨民，打通粮道、木道与渡口后，便可在此迎敌。",
     "links": [
       {
         "target": "v3_council",
@@ -1432,7 +1432,7 @@
     "name": "水泊盟亭",
     "region": "梁山初聚",
     "type": "area",
-    "description": "守住寨门后，众人在此立下互助之约。第三卷完成后，可沿新开的三山驿路进入第四卷；旧设施和已入寨好汉继续沿用。",
+    "description": "亭中备好了酒碗，几封三山来的书信压在桌上。守寨得胜后在此立约，再循三山驿路拜访各寨。",
     "links": [
       {
         "target": "v3_council",
@@ -1476,7 +1476,7 @@
     "name": "三山驿路",
     "region": "三山聚义",
     "type": "area",
-    "description": "三山的来信都已展开。二龙、桃花、白虎三条路线可任选先后；每寨有两种合作方式，结盟后带来不同支援。招贤与打造仍可随时直接访问。",
+    "description": "三岔路旁钉着路牌，分别指向二龙山、桃花山、白虎山。三寨都在等回信，先访哪处由你定。",
     "links": [
       {
         "target": "v3_post",
@@ -1533,7 +1533,7 @@
     "name": "二龙山客舍",
     "region": "三山聚义",
     "type": "area",
-    "description": "鲁智深与杨志正安顿受伤乡人。可交付药草六份与金创药两份，换来医援；也可上山解围，换来护阵援手。选择与具体消耗在交谈时列明。",
+    "description": "鲁智深在廊下煎药，杨志正给伤者裹伤。可送药草六份、金创药两份相助，也可上险道替他们解围。",
     "links": [
       {
         "target": "v4_crossroads",
@@ -1556,7 +1556,7 @@
     "name": "二龙山险道",
     "region": "三山聚义",
     "type": "area",
-    "description": "匪众截住了山间归路。解围需要主力十八级，可以带兵或独行；结盟前仍可返回客舍重新商议，已花的出征消耗不返还。",
+    "description": "山路贴着峭壁，匪众堵住了回寨的窄口。解围后回客舍商议结盟。\n\n（出阵好汉中需有一人达到十八级。）",
     "links": [
       {
         "target": "v4_erlong",
@@ -1579,7 +1579,7 @@
     "name": "桃花山修械棚",
     "region": "三山聚义",
     "type": "area",
-    "description": "李忠与周通请你看看寨中器械。交付精铁六份与粗布四份，可准备联合进攻所用的器械；也可在校场切磋，以奇袭相约。",
+    "description": "修械棚里摆着拆开的兵器，李忠正试一根新枪杆。送精铁六份、粗布四份修械，或去校场与周通切磋，皆可结盟。",
     "links": [
       {
         "target": "v4_crossroads",
@@ -1602,7 +1602,7 @@
     "name": "桃花山校场",
     "region": "三山聚义",
     "type": "area",
-    "description": "校场只论阵法，不强求某一位好汉上场。十八级主力可来切磋；独行与带兵都能参加，军令和真实兵损沿用既有规则。",
+    "description": "校场的旗杆插在沙土里，周通已把阵势排开。\n\n（出阵好汉中需有一人达到十八级，可独行，也可带兵。）",
     "links": [
       {
         "target": "v4_taohua",
@@ -1625,7 +1625,7 @@
     "name": "白虎山议棚",
     "region": "三山聚义",
     "type": "area",
-    "description": "孔明、孔亮提到两件急事：传递斥候情报，或把粮队接进山。前者为联合守寨争取先手，后者补足各部辎重。",
+    "description": "孔明、孔亮把粮队行程摊在桌上，正等山外的消息。替他们带回军情，或护送粮队入山，便可商议结盟。",
     "links": [
       {
         "target": "v4_crossroads",
@@ -1652,7 +1652,7 @@
     "name": "白虎山粮径",
     "region": "三山聚义",
     "type": "area",
-    "description": "沿路的拦截者盯住了粮队。十八级主力可以护送；这一条路不要求先送情报。",
+    "description": "粮车沿山路排开，护粮人握紧兵器，盯着林中的拦路者。\n\n（出阵好汉中需有一人达到十八级。）",
     "links": [
       {
         "target": "v4_baihu",
@@ -1675,7 +1675,7 @@
     "name": "山外递信亭",
     "region": "三山聚义",
     "type": "area",
-    "description": "改为英雄独行后，可以沿小路查明围寨动向，再把情报带回白虎山。递信不自动结盟，也不代替招贤或打造。",
+    "description": "亭后的窄路绕向敌营，山头能望见集结的旗号。以英雄独行查明军情，再去白虎山议棚递信结盟。",
     "links": [
       {
         "target": "v4_crossroads",
@@ -1689,7 +1689,7 @@
     "actions": [
       {
         "id": "v4_dispatch_intel",
-        "label": "独行查明军情，带回传书",
+        "label": "独行探听军情",
         "once": true,
         "condition": {
           "all": [
@@ -1701,7 +1701,7 @@
             }
           ]
         },
-        "text": "你们借山路避开大队，确认敌军集结的方向。传书已经带回，可去白虎山选择递信结盟；本次不消耗材料，也不自动结盟。",
+        "text": "你沿小路绕到山头，看清敌军集结的方向，把所见写进传书。去白虎山议棚递信，便可商议结盟。",
         "effects": [
           {
             "type": "flag",
@@ -1719,7 +1719,7 @@
     "name": "三山联合营",
     "region": "三山聚义",
     "type": "area",
-    "description": "三寨都已结盟、聚义厅达到三级后，在此合议守寨。二十二级主力可出征，已经选择的三项支援会在战前列明并实际生效。",
+    "description": "三寨旗号立在营前，来使正核对守寨人手。\n\n（三寨结盟、聚义厅三级，且出阵好汉中有一人达到二十二级，便可合兵守寨。）",
     "links": [
       {
         "target": "v4_crossroads",
@@ -1744,7 +1744,7 @@
     "name": "独龙冈行营",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "三山聚义之后，众人把祝家庄周围的道路摊开。先检点粮木与医馆，再探明迷径。断援和断粮至少完成一条便可继续，另一条与救助百姓都是可选准备。",
+    "description": "桌上摊着独龙冈的路图，祝家庄四周尽是岔道。先在行营备齐粮木、医护，再去盘陀迷径认路。",
     "links": [
       {
         "target": "v4_union",
@@ -1833,7 +1833,7 @@
     "name": "盘陀迷径",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "岔道已标在全图。可改为英雄独行辨路，或付三百碎银请向导带路；两种方式都能安全查清路径，不安排必败战，也不要求招到某位好汉。",
+    "description": "盘陀路绕来绕去，走出一片树丛，又见相似的岔口。可独行辨路，也可花三百碎银请向导。",
     "links": [
       {
         "target": "v5_camp",
@@ -1858,7 +1858,7 @@
     "name": "祝庄外哨",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "一打先探虚实。使用自己的英雄与部队击退外哨，确认战果后，援路、粮道和安置所开放。",
+    "description": "庄外哨楼架在路口，守卒见人便敲梆子。先攻下此处，再去东援路、西粮道或庄外安置所。",
     "links": [
       {
         "target": "v5_camp",
@@ -1883,7 +1883,7 @@
     "name": "东援路",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "切断援路，三打时援骑不会加入祝家庄内院守军。与西粮道可任选先后；即使二打已完成，也可以回来补做。",
+    "description": "马蹄印从东面直通祝庄，沿路有援兵设哨。截住此路，攻内院时便少一队援骑。",
     "links": [
       {
         "target": "v5_camp",
@@ -1908,7 +1908,7 @@
     "name": "西粮道",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "截住输送守军的粮道，三打时敌方最大气血与攻击降低一成。与东援路至少完成一处便能二打。",
+    "description": "运粮车从西面进庄，车旁跟着持枪的庄丁。\n\n（截断粮道后，内院守军的最大气血与攻击各降低10%。）",
     "links": [
       {
         "target": "v5_camp",
@@ -1933,7 +1933,7 @@
     "name": "庄外安置所",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "百姓离庄避战。交药草四份与粗布四份帮助安置，可获知守庄薄弱处，三打时敌方防御降低百分之十五。这是可选相助，不影响直接招贤与打造。",
+    "description": "避战的百姓挤在棚下，伤者靠着行李歇息。\n\n（送药草四份、粗布四份，可问明庄中虚实，使内院守军防御降低15%。）",
     "links": [
       {
         "target": "v5_camp",
@@ -1953,7 +1953,7 @@
     "name": "祝庄前门",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "二打破门，栾廷玉正在门前布阵。先完成一打，再截断援路或粮道之一；战前可以继续补足两路准备。",
+    "description": "庄门紧闭，栾廷玉领人把住门前空地。拿下外哨，再截断东援或西粮一路，便可进攻。",
     "links": [
       {
         "target": "v5_camp",
@@ -1972,7 +1972,7 @@
     "name": "祝庄内院",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "三打收束，祝彪率守军守住内院。聚义厅四级、二打完成后开放，战前可核对援军、粮道和内应带来的实际变化。",
+    "description": "祝彪带守卒退入内院，院门后横着拒马。\n\n（攻破前门、聚义厅达到四级后，可来合围。）",
     "links": [
       {
         "target": "v5_camp",
@@ -1997,7 +1997,7 @@
     "name": "庄后粮仓",
     "region": "三打祝家庄",
     "type": "area",
-    "description": "战事结束后，在此清点粮仓，安排百姓归居并完成第五卷。清点前不会自动结卷；卷终后可每日领取一份药草。",
+    "description": "粮仓厚门落着铁锁，仓外等着归家的乡人。攻下内院后在此清点粮食、安置百姓。\n\n（事毕每日可领药草两份。）",
     "links": [
       {
         "target": "v5_camp",
@@ -2037,7 +2037,7 @@
     "name": "高唐行营",
     "region": "高唐救援",
     "type": "area",
-    "description": "第五卷结束后可来整备。救人须备好军粮、医护，再逐步打通城外与牢城。",
+    "description": "柴进受困的消息传到营里，众人已在点兵备粮。\n\n（聚义厅四级、兵营三级、医馆二级后，在此办妥整备。）",
     "links": [
       {
         "target": "v5_store",
@@ -2092,7 +2092,7 @@
     "name": "高唐城外",
     "region": "高唐救援",
     "type": "area",
-    "description": "守军封锁入城道路，先夺外哨。",
+    "description": "外哨横在入城路上，守军用拒马封住通道。拿下外哨，才好向牢城接应。",
     "links": [
       {
         "target": "v6_camp",
@@ -2111,7 +2111,7 @@
     "name": "郊外静庐",
     "region": "高唐救援",
     "type": "area",
-    "description": "可选：辨明烟阵、救治受困乡人，终战敌军攻击降低 15%。",
+    "description": "静庐里歇着几名从烟阵中逃出的乡人。\n\n（送药草四份救治，可听取阵中见闻，使攻打高廉时的敌军攻击降低15%。）",
     "links": [
       {
         "target": "v6_camp",
@@ -2130,7 +2130,7 @@
     "name": "东路援道",
     "region": "高唐救援",
     "type": "area",
-    "description": "可选：拦截援骑，终战不再出现高唐援骑。",
+    "description": "东路尘土扬起，高唐援骑正赶往城中。外哨得胜后可来截援，攻打高廉时便不会遇上这队骑兵。",
     "links": [
       {
         "target": "v6_camp",
@@ -2149,7 +2149,7 @@
     "name": "牢城外院",
     "region": "高唐救援",
     "type": "area",
-    "description": "外哨得胜后可攻入，打通接应柴进的道路。",
+    "description": "牢城外院门窗紧闭，廊下站着持枪的守军。夺下外哨后，从这里打通接应柴进的路。",
     "links": [
       {
         "target": "v6_camp",
@@ -2168,7 +2168,7 @@
     "name": "高唐内城",
     "region": "高唐救援",
     "type": "area",
-    "description": "高廉率亲兵固守，可打断蓄势。先准备、再合围。",
+    "description": "高廉率亲兵守在内城，阵前烟气未散。先打通牢城；交战时留意他的蓄势，及时打断。",
     "links": [
       {
         "target": "v6_camp",
@@ -2187,11 +2187,17 @@
     "name": "城南接应点",
     "region": "高唐救援",
     "type": "area",
-    "description": "确认救援与伤员安置后结束第六卷，后续仍可在地图自由行动。",
+    "description": "城南备着接人的车马，医者正在铺置草席。救出柴进后，来此安置伤者，点齐回寨人马。",
     "links": [
       {
         "target": "v6_camp",
         "condition": null
+      },
+      {
+        "target": "v7_camp",
+        "condition": {
+          "flag": "volume_six_complete"
+        }
       }
     ],
     "actions": [],
@@ -2200,5 +2206,1091 @@
     ],
     "dungeons": [],
     "chapter": "volume_six"
+  },
+  {
+    "id": "v7_camp",
+    "name": "泊东营地",
+    "region": "破连环马",
+    "type": "area",
+    "description": "归营的车队还在卸粮，探马报来骑军动向。先接下急报，再到土岗查看马阵。",
+    "links": [
+      {
+        "target": "v6_refuge",
+        "condition": null
+      },
+      {
+        "target": "v7_watch",
+        "condition": {
+          "flag": "v7_reported"
+        }
+      },
+      {
+        "target": "v7_ford",
+        "condition": {
+          "flag": "v7_scouted"
+        }
+      },
+      {
+        "target": "v7_forge",
+        "condition": {
+          "flag": "v7_probe_done"
+        }
+      },
+      {
+        "target": "v7_road",
+        "condition": {
+          "flag": "v7_prepared"
+        }
+      },
+      {
+        "target": "v7_field",
+        "condition": {
+          "flag": "v7_prepared"
+        }
+      },
+      {
+        "target": "v7_command",
+        "condition": {
+          "flag": "v7_break_done"
+        }
+      },
+      {
+        "target": "v8_camp",
+        "condition": {
+          "flag": "volume_seven_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v7_report",
+      "v7_settle"
+    ],
+    "dungeons": [],
+    "chapter": "volume_seven"
+  },
+  {
+    "id": "v7_watch",
+    "name": "芦湾土岗",
+    "region": "破连环马",
+    "type": "area",
+    "description": "岗下几匹战马并排而行，甲片下有铁链相连。前哨每到急弯就放慢脚步。",
+    "links": [
+      {
+        "target": "v7_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v7_scout"
+    ],
+    "dungeons": [],
+    "chapter": "volume_seven"
+  },
+  {
+    "id": "v7_ford",
+    "name": "浅水渡口",
+    "region": "破连环马",
+    "type": "area",
+    "description": "韩滔率一队前军试探渡口，连环马还在后方整队。此战不必硬碰整座马阵。",
+    "links": [
+      {
+        "target": "v7_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v7_probe"
+    ],
+    "dungeons": [],
+    "chapter": "volume_seven"
+  },
+  {
+    "id": "v7_forge",
+    "name": "营后铁棚",
+    "region": "破连环马",
+    "type": "area",
+    "description": "汤隆把截来的链环放在炉边。徐宁已赶到，正在沙地上画骑阵的间隔。",
+    "links": [
+      {
+        "target": "v7_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v7_prepare"
+    ],
+    "dungeons": [],
+    "chapter": "volume_seven"
+  },
+  {
+    "id": "v7_road",
+    "name": "北路粮车道",
+    "region": "破连环马",
+    "type": "area",
+    "description": "彭玘护着弓手和粮车赶往中军。可在此截援，胜后决战少一队弓手；也可直接前往破阵。",
+    "links": [
+      {
+        "target": "v7_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v7_cut"
+    ],
+    "dungeons": [],
+    "chapter": "volume_seven"
+  },
+  {
+    "id": "v7_field",
+    "name": "东泊平野",
+    "region": "破连环马",
+    "type": "area",
+    "description": "两列连环马压住堤外的平地。按备好的钩镰或壕沟战法接敌，再向中军推进。",
+    "links": [
+      {
+        "target": "v7_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v7_break"
+    ],
+    "dungeons": [],
+    "chapter": "volume_seven"
+  },
+  {
+    "id": "v7_command",
+    "name": "双鞭中军",
+    "region": "破连环马",
+    "type": "area",
+    "description": "连环马已散，呼延灼仍领亲骑守着旗门。击败中军后，回泊东营地议定善后。",
+    "links": [
+      {
+        "target": "v7_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v7_final"
+    ],
+    "dungeons": [],
+    "chapter": "volume_seven"
+  },
+  {
+    "id": "v8_camp",
+    "name": "曾市外营",
+    "region": "曾头疑云",
+    "type": "area",
+    "description": "失踪马队的车辙止在曾头市外。先定下要紧的事，再从营地分路查人、查账、截粮。",
+    "links": [
+      {
+        "target": "v7_camp",
+        "condition": null
+      },
+      {
+        "target": "v8_barn",
+        "condition": {
+          "all": [
+            {
+              "flag": "v8_chosen"
+            },
+            {
+              "any": [
+                {
+                  "flag": "v8_priority_rescue"
+                },
+                {
+                  "any": [
+                    {
+                      "flag": "v8_rescue_done"
+                    },
+                    {
+                      "flag": "v8_evidence_done"
+                    },
+                    {
+                      "flag": "v8_supply_done"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "target": "v8_office",
+        "condition": {
+          "all": [
+            {
+              "flag": "v8_chosen"
+            },
+            {
+              "any": [
+                {
+                  "flag": "v8_priority_evidence"
+                },
+                {
+                  "any": [
+                    {
+                      "flag": "v8_rescue_done"
+                    },
+                    {
+                      "flag": "v8_evidence_done"
+                    },
+                    {
+                      "flag": "v8_supply_done"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "target": "v8_road",
+        "condition": {
+          "all": [
+            {
+              "flag": "v8_chosen"
+            },
+            {
+              "any": [
+                {
+                  "flag": "v8_priority_supply"
+                },
+                {
+                  "any": [
+                    {
+                      "flag": "v8_rescue_done"
+                    },
+                    {
+                      "flag": "v8_evidence_done"
+                    },
+                    {
+                      "flag": "v8_supply_done"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "target": "v8_gate",
+        "condition": {
+          "all": [
+            {
+              "flag": "v8_rescue_done"
+            },
+            {
+              "flag": "v8_evidence_done"
+            },
+            {
+              "flag": "v8_supply_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v9_camp",
+        "condition": {
+          "flag": "volume_eight_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v8_choose",
+      "v8_settle"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eight"
+  },
+  {
+    "id": "v8_barn",
+    "name": "西郊废马棚",
+    "region": "曾头疑云",
+    "type": "area",
+    "description": "几名商旅被围在漏雨的马棚，后墙外有弩手。先让他们活着走出巷口。",
+    "links": [
+      {
+        "target": "v8_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v8_rescue"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eight"
+  },
+  {
+    "id": "v8_office",
+    "name": "旧税亭",
+    "region": "曾头疑云",
+    "type": "area",
+    "description": "一份写着“梁山劫粮”的口供留在亭内。签押的车夫与账上的行期对不上。",
+    "links": [
+      {
+        "target": "v8_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v8_evidence"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eight"
+  },
+  {
+    "id": "v8_road",
+    "name": "北坡粮车道",
+    "region": "曾头疑云",
+    "type": "area",
+    "description": "押运者把粮车往市内赶，后队弩手专守狭口。先压住后排，再夺车。",
+    "links": [
+      {
+        "target": "v8_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v8_supply"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eight"
+  },
+  {
+    "id": "v8_gate",
+    "name": "曾市东门",
+    "region": "曾头疑云",
+    "type": "area",
+    "description": "人证与账册齐了，史文恭仍不肯打开东门。最后一批押车人关在门后的仓院。",
+    "links": [
+      {
+        "target": "v8_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v8_final"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eight"
+  },
+  {
+    "id": "v9_camp",
+    "name": "大名城外营",
+    "region": "大名救援",
+    "type": "area",
+    "description": "曾头市转送名册上写着大名牢城。燕青带来了城门换岗的时辰，先在此议定救援路线。",
+    "links": [
+      {
+        "target": "v8_camp",
+        "condition": null
+      },
+      {
+        "target": "v9_gate_map",
+        "condition": {
+          "flag": "v9_chosen"
+        }
+      },
+      {
+        "target": "v9_prison_map",
+        "condition": {
+          "flag": "v9_gate_done"
+        }
+      },
+      {
+        "target": "v9_river",
+        "condition": {
+          "flag": "v9_prison_done"
+        }
+      },
+      {
+        "target": "v10_camp",
+        "condition": {
+          "flag": "volume_nine_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v9_choose",
+      "v9_settle"
+    ],
+    "dungeons": [],
+    "chapter": "volume_nine"
+  },
+  {
+    "id": "v9_gate_map",
+    "name": "北门接应口",
+    "region": "大名救援",
+    "type": "area",
+    "description": "控制门洞，才能把接应队与伤者送过来。暗线先断传令，正攻则要扛过两阵重甲。",
+    "links": [
+      {
+        "target": "v9_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v9_gate"
+    ],
+    "dungeons": [],
+    "chapter": "volume_nine"
+  },
+  {
+    "id": "v9_prison_map",
+    "name": "牢城后院",
+    "region": "大名救援",
+    "type": "area",
+    "description": "石秀在墙根留了三道划痕。牢门里不止卢俊义，还有被一道押来的商旅与脚夫。",
+    "links": [
+      {
+        "target": "v9_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v9_prison"
+    ],
+    "dungeons": [],
+    "chapter": "volume_nine"
+  },
+  {
+    "id": "v9_river",
+    "name": "城西浅渡",
+    "region": "大名救援",
+    "type": "area",
+    "description": "船板已经搭好，伤者还得走过暴露的河岸。敌弩手活着时会持续追射。",
+    "links": [
+      {
+        "target": "v9_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v9_escape"
+    ],
+    "dungeons": [],
+    "chapter": "volume_nine"
+  },
+  {
+    "id": "v10_camp",
+    "name": "归泊接应营",
+    "region": "百川归泊",
+    "type": "area",
+    "description": "三条来路都有人等船。先护送归人，再核对仓粮和守备，办妥后众人才肯安心落座。",
+    "links": [
+      {
+        "target": "v9_camp",
+        "condition": null
+      },
+      {
+        "target": "v10_roads",
+        "condition": {
+          "flag": "v10_reported"
+        }
+      },
+      {
+        "target": "v10_store",
+        "condition": {
+          "flag": "v10_escort_done"
+        }
+      },
+      {
+        "target": "v10_ford_map",
+        "condition": {
+          "flag": "v10_allocated"
+        }
+      },
+      {
+        "target": "v11_camp",
+        "condition": {
+          "flag": "volume_ten_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v10_report",
+      "v10_gather"
+    ],
+    "dungeons": [],
+    "chapter": "volume_ten"
+  },
+  {
+    "id": "v10_roads",
+    "name": "三路会合口",
+    "region": "百川归泊",
+    "type": "area",
+    "description": "北来的车队、东岸的渔船、山路的家眷依次过口，前一队过去后才能接下一队。",
+    "links": [
+      {
+        "target": "v10_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v10_escort"
+    ],
+    "dungeons": [],
+    "chapter": "volume_ten"
+  },
+  {
+    "id": "v10_store",
+    "name": "新寨粮仓",
+    "region": "百川归泊",
+    "type": "area",
+    "description": "军粮与民粮都要留够。余下的力气是多备热饭药汤，还是先加固渡口，需要众人定下。",
+    "links": [
+      {
+        "target": "v10_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v10_allocate"
+    ],
+    "dungeons": [],
+    "chapter": "volume_ten"
+  },
+  {
+    "id": "v10_ford_map",
+    "name": "南泊渡口",
+    "region": "百川归泊",
+    "type": "area",
+    "description": "敌前阵试探栈桥，后阵藏在芦湾。守住第一阵后，还要截住追向归人船只的第二阵。",
+    "links": [
+      {
+        "target": "v10_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v10_ford"
+    ],
+    "dungeons": [],
+    "chapter": "volume_ten"
+  },
+  {
+    "id": "v11_camp",
+    "name": "诏书议事营",
+    "region": "两道诏书",
+    "type": "area",
+    "description": "桌上压着两份诏书，门外还停着待修的伤车。先把人接来，再逐字核对能否落在纸上的承诺。",
+    "links": [
+      {
+        "target": "v10_camp",
+        "condition": null
+      },
+      {
+        "target": "v11_refuge",
+        "condition": {
+          "flag": "v11_reported"
+        }
+      },
+      {
+        "target": "v11_road",
+        "condition": {
+          "flag": "v11_escort_done"
+        }
+      },
+      {
+        "target": "v11_archive",
+        "condition": {
+          "flag": "v11_grain_done"
+        }
+      },
+      {
+        "target": "v12_camp",
+        "condition": {
+          "flag": "volume_eleven_complete"
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v11_report",
+      "v11_reply"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eleven"
+  },
+  {
+    "id": "v11_refuge",
+    "name": "断桥接应处",
+    "region": "两道诏书",
+    "type": "area",
+    "description": "河桥只剩半幅，伤者挤在等候修补的车边。坡上的弩手把退路看得很紧。",
+    "links": [
+      {
+        "target": "v11_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v11_escort"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eleven"
+  },
+  {
+    "id": "v11_road",
+    "name": "柳堤粮道",
+    "region": "两道诏书",
+    "type": "area",
+    "description": "车上粮袋都有村里的记号，截粮人却举着官军旗号，准备改道运走。",
+    "links": [
+      {
+        "target": "v11_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v11_grain"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eleven"
+  },
+  {
+    "id": "v11_archive",
+    "name": "营中文案棚",
+    "region": "两道诏书",
+    "type": "area",
+    "description": "两名使者在棚外等候。这里存着原诏、增补约条、被劫粮车的底账，以及刚接回来的流民名册。",
+    "links": [
+      {
+        "target": "v11_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v11_plain",
+      "v11_covenant"
+    ],
+    "dungeons": [],
+    "chapter": "volume_eleven"
+  },
+  {
+    "id": "v12_camp",
+    "name": "去路清点营",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "名册摊在长桌上。每走完一程便回营核对，直到名单上的人都有可去的住处。",
+    "links": [
+      {
+        "target": "v11_camp",
+        "condition": null
+      },
+      {
+        "target": "v12_stay_first_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_sea"
+                },
+                {
+                  "notFlag": "v12_return"
+                }
+              ]
+            },
+            {
+              "flag": "v12_chosen"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v12_stay_second_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_sea"
+                },
+                {
+                  "notFlag": "v12_return"
+                }
+              ]
+            },
+            {
+              "flag": "v12_stay_first_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v12_stay_third_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_sea"
+                },
+                {
+                  "notFlag": "v12_return"
+                }
+              ]
+            },
+            {
+              "flag": "v12_stay_second_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v12_sea_first_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_sea"
+                },
+                {
+                  "notFlag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_return"
+                }
+              ]
+            },
+            {
+              "flag": "v12_chosen"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v12_sea_second_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_sea"
+                },
+                {
+                  "notFlag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_return"
+                }
+              ]
+            },
+            {
+              "flag": "v12_sea_first_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v12_sea_third_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_sea"
+                },
+                {
+                  "notFlag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_return"
+                }
+              ]
+            },
+            {
+              "flag": "v12_sea_second_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v12_return_first_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_return"
+                },
+                {
+                  "notFlag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_sea"
+                }
+              ]
+            },
+            {
+              "flag": "v12_chosen"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v12_return_second_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_return"
+                },
+                {
+                  "notFlag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_sea"
+                }
+              ]
+            },
+            {
+              "flag": "v12_return_first_done"
+            }
+          ]
+        }
+      },
+      {
+        "target": "v12_return_third_site",
+        "condition": {
+          "all": [
+            {
+              "all": [
+                {
+                  "flag": "v12_return"
+                },
+                {
+                  "notFlag": "v12_stay"
+                },
+                {
+                  "notFlag": "v12_sea"
+                }
+              ]
+            },
+            {
+              "flag": "v12_return_second_done"
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_choose",
+      "v12_epilogue"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_stay_first_site",
+    "name": "北汊渡口",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "北汊是村民入泊的近路。守住这里，粮船与看病的人才不必绕过军营。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_stay_first"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_stay_second_site",
+    "name": "被围的柳湾村",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "村中粮仓已空，井边还有走不动的老人。围军的弓手守着南墙缺口。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_stay_second"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_stay_third_site",
+    "name": "南堤议约口",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "围泊军主力压到南堤。村里推来的议事人带着乡约草稿，等渡口的炮声停下。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_stay_third"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_sea_first_site",
+    "name": "旧港修船场",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "船匠已换好朽板，缆绳和饮水桶还扣在港口。要先取回船料，才能按名单接人。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_sea_first"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_sea_second_site",
+    "name": "双汊接人码头",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "家眷分两批等船，伤者先上宽底船。外汊的追兵正试着截断第二次接送。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_sea_second"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_sea_third_site",
+    "name": "最后的出海口",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "大船已经张帆，接应伤者的小渡船还在岸边。拦江战船横在出口，必须给最后一船留出水道。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_sea_third"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_return_first_site",
+    "name": "归民粮道",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "粮车按户装好，车尾系着归乡村落的布条。路上的关卡还不肯认使者带来的约书。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_return_first"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_return_second_site",
+    "name": "违约征粮营",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "征粮官把额外征调令贴在营门，扣着归民口粮不放。约书副本与交接见证人都已到场。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_return_second"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
+  },
+  {
+    "id": "v12_return_third_site",
+    "name": "归乡界碑",
+    "region": "梁山去路",
+    "type": "area",
+    "description": "前面是乡里接人的车队，后面仍有追骑。过了界碑还要逐户交接，不能只把人赶出营门。",
+    "links": [
+      {
+        "target": "v12_camp",
+        "condition": null
+      }
+    ],
+    "actions": [],
+    "stories": [
+      "v12_return_third"
+    ],
+    "dungeons": [],
+    "chapter": "volume_twelve"
   }
 ]

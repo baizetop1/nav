@@ -414,23 +414,7 @@
             "type": "string"
           },
           "meetCondition": {
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "object",
-                "required": [
-                  "flag"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "flag": {
-                    "type": "string"
-                  }
-                }
-              }
-            ]
+            "$ref": "#/$defs/condition"
           },
           "obtain": {
             "type": "object",
@@ -457,23 +441,7 @@
                 "type": "integer"
               },
               "condition": {
-                "anyOf": [
-                  {
-                    "type": "object",
-                    "required": [
-                      "flag"
-                    ],
-                    "additionalProperties": false,
-                    "properties": {
-                      "flag": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
+                "$ref": "#/$defs/condition"
               }
             }
           },
@@ -808,22 +776,51 @@
                   },
                   "items": {
                     "type": "object",
-                    "required": [
-                      "iron",
-                      "cloth"
-                    ],
+                    "required": [],
                     "additionalProperties": false,
                     "properties": {
                       "iron": {
-                        "type": "integer"
+                        "type": "integer",
+                        "minimum": 1
                       },
                       "cloth": {
-                        "type": "integer"
+                        "type": "integer",
+                        "minimum": 1
                       },
                       "tiger_skin": {
-                        "type": "integer"
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "tempered_steel": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "wood": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "woven_linen": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "cured_hide": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "leather": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "medicinal_extract": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "herb": {
+                        "type": "integer",
+                        "minimum": 1
                       }
-                    }
+                    },
+                    "minProperties": 1
                   }
                 }
               },
@@ -838,13 +835,13 @@
               "id",
               "name",
               "type",
+              "attribute",
+              "description",
               "quality",
               "tier",
               "price",
-              "attribute",
-              "recipe",
-              "description",
-              "source"
+              "source",
+              "recipe"
             ],
             "additionalProperties": false,
             "properties": {
@@ -858,6 +855,31 @@
               "type": {
                 "type": "string"
               },
+              "attribute": {
+                "type": "object",
+                "required": [],
+                "additionalProperties": false,
+                "properties": {
+                  "attack": {
+                    "type": "integer"
+                  },
+                  "speed": {
+                    "type": "integer"
+                  },
+                  "strategy": {
+                    "type": "integer"
+                  },
+                  "hp": {
+                    "type": "integer"
+                  },
+                  "defense": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "description": {
+                "type": "string"
+              },
               "quality": {
                 "type": "string"
               },
@@ -868,27 +890,9 @@
                 "type": "integer",
                 "const": 0
               },
-              "attribute": {
-                "type": "object",
-                "required": [],
-                "additionalProperties": false,
-                "properties": {
-                  "attack": {
-                    "type": "integer"
-                  },
-                  "defense": {
-                    "type": "integer"
-                  },
-                  "hp": {
-                    "type": "integer"
-                  },
-                  "speed": {
-                    "type": "integer"
-                  },
-                  "strategy": {
-                    "type": "integer"
-                  }
-                }
+              "source": {
+                "type": "string",
+                "const": "journey"
               },
               "recipe": {
                 "type": "object",
@@ -904,17 +908,11 @@
                   },
                   "items": {
                     "type": "object",
+                    "required": [],
                     "additionalProperties": false,
                     "properties": {}
                   }
                 }
-              },
-              "description": {
-                "type": "string"
-              },
-              "source": {
-                "type": "string",
-                "const": "journey"
               }
             }
           }
@@ -1033,91 +1031,7 @@
                   "type": "string"
                 },
                 "condition": {
-                  "anyOf": [
-                    {
-                      "type": "object",
-                      "required": [],
-                      "additionalProperties": false,
-                      "properties": {
-                        "flag": {
-                          "type": "string"
-                        },
-                        "all": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "required": [],
-                            "additionalProperties": false,
-                            "properties": {
-                              "time": {
-                                "type": "string"
-                              },
-                              "item": {
-                                "type": "string"
-                              },
-                              "count": {
-                                "type": "integer"
-                              },
-                              "flag": {
-                                "type": "string"
-                              },
-                              "all": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "required": [
-                                    "flag"
-                                  ],
-                                  "additionalProperties": false,
-                                  "properties": {
-                                    "flag": {
-                                      "type": "string"
-                                    }
-                                  }
-                                }
-                              },
-                              "campBuilding": {
-                                "type": "string"
-                              },
-                              "any": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "required": [
-                                    "flag"
-                                  ],
-                                  "additionalProperties": false,
-                                  "properties": {
-                                    "flag": {
-                                      "type": "string"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "any": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "required": [
-                              "flag"
-                            ],
-                            "additionalProperties": false,
-                            "properties": {
-                              "flag": {
-                                "type": "string"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
+                  "$ref": "#/$defs/condition"
                 },
                 "hidden": {
                   "type": "boolean"
@@ -1178,30 +1092,7 @@
                   "type": "boolean"
                 },
                 "condition": {
-                  "type": "object",
-                  "required": [],
-                  "additionalProperties": false,
-                  "properties": {
-                    "flag": {
-                      "type": "string"
-                    },
-                    "all": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [],
-                        "additionalProperties": false,
-                        "properties": {
-                          "flag": {
-                            "type": "string"
-                          },
-                          "campMode": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "$ref": "#/$defs/condition"
                 }
               }
             }
@@ -1252,116 +1143,7 @@
             "type": "string"
           },
           "condition": {
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "object",
-                "required": [],
-                "additionalProperties": false,
-                "properties": {
-                  "flag": {
-                    "type": "string"
-                  },
-                  "all": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "required": [],
-                      "additionalProperties": false,
-                      "properties": {
-                        "flag": {
-                          "type": "string"
-                        },
-                        "any": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "required": [
-                              "flag"
-                            ],
-                            "additionalProperties": false,
-                            "properties": {
-                              "flag": {
-                                "type": "string"
-                              }
-                            }
-                          }
-                        },
-                        "all": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "required": [],
-                            "additionalProperties": false,
-                            "properties": {
-                              "flag": {
-                                "type": "string"
-                              },
-                              "all": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "required": [
-                                    "flag"
-                                  ],
-                                  "additionalProperties": false,
-                                  "properties": {
-                                    "flag": {
-                                      "type": "string"
-                                    }
-                                  }
-                                }
-                              },
-                              "campBuilding": {
-                                "type": "string"
-                              },
-                              "count": {
-                                "type": "integer"
-                              },
-                              "any": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "required": [
-                                    "flag"
-                                  ],
-                                  "additionalProperties": false,
-                                  "properties": {
-                                    "flag": {
-                                      "type": "string"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "heroLevel": {
-                          "type": "integer"
-                        }
-                      }
-                    }
-                  },
-                  "any": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "required": [
-                        "flag"
-                      ],
-                      "additionalProperties": false,
-                      "properties": {
-                        "flag": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            ]
+            "$ref": "#/$defs/condition"
           },
           "steps": {
             "type": "object",
@@ -1451,16 +1233,7 @@
                     "type": "string"
                   },
                   "condition": {
-                    "type": "object",
-                    "required": [
-                      "flag"
-                    ],
-                    "additionalProperties": false,
-                    "properties": {
-                      "flag": {
-                        "type": "string"
-                      }
-                    }
+                    "$ref": "#/$defs/condition"
                   },
                   "text": {
                     "type": "string"
@@ -1990,16 +1763,7 @@
                     }
                   },
                   "condition": {
-                    "type": "object",
-                    "required": [
-                      "flag"
-                    ],
-                    "additionalProperties": false,
-                    "properties": {
-                      "flag": {
-                        "type": "string"
-                      }
-                    }
+                    "$ref": "#/$defs/condition"
                   },
                   "hint": {
                     "type": "string"
@@ -2332,16 +2096,7 @@
                     }
                   },
                   "condition": {
-                    "type": "object",
-                    "required": [
-                      "flag"
-                    ],
-                    "additionalProperties": false,
-                    "properties": {
-                      "flag": {
-                        "type": "string"
-                      }
-                    }
+                    "$ref": "#/$defs/condition"
                   },
                   "hint": {
                     "type": "string"
@@ -2547,16 +2302,7 @@
                     }
                   },
                   "condition": {
-                    "type": "object",
-                    "required": [
-                      "flag"
-                    ],
-                    "additionalProperties": false,
-                    "properties": {
-                      "flag": {
-                        "type": "string"
-                      }
-                    }
+                    "$ref": "#/$defs/condition"
                   },
                   "hint": {
                     "type": "string"
@@ -2677,16 +2423,7 @@
                           "items": {}
                         },
                         "condition": {
-                          "type": "object",
-                          "required": [
-                            "item"
-                          ],
-                          "additionalProperties": false,
-                          "properties": {
-                            "item": {
-                              "type": "string"
-                            }
-                          }
+                          "$ref": "#/$defs/condition"
                         },
                         "cost": {
                           "type": "object",
@@ -2962,32 +2699,7 @@
                           "type": "string"
                         },
                         "condition": {
-                          "type": "object",
-                          "required": [
-                            "all"
-                          ],
-                          "additionalProperties": false,
-                          "properties": {
-                            "all": {
-                              "type": "array",
-                              "items": {
-                                "type": "object",
-                                "required": [],
-                                "additionalProperties": false,
-                                "properties": {
-                                  "campBuilding": {
-                                    "type": "string"
-                                  },
-                                  "count": {
-                                    "type": "integer"
-                                  },
-                                  "ownedCount": {
-                                    "type": "integer"
-                                  }
-                                }
-                              }
-                            }
-                          }
+                          "$ref": "#/$defs/condition"
                         },
                         "finish": {
                           "type": "boolean"
@@ -3011,6 +2723,9 @@
                               },
                               "amount": {
                                 "type": "integer"
+                              },
+                              "status": {
+                                "type": "string"
                               }
                             }
                           }
@@ -3029,6 +2744,9 @@
                         }
                       }
                     }
+                  },
+                  "condition": {
+                    "$ref": "#/$defs/condition"
                   }
                 }
               },
@@ -3110,9 +2828,7 @@
                       "type": "object",
                       "required": [
                         "id",
-                        "label",
-                        "finish",
-                        "effects"
+                        "label"
                       ],
                       "additionalProperties": false,
                       "properties": {
@@ -3151,6 +2867,12 @@
                               }
                             }
                           }
+                        },
+                        "condition": {
+                          "$ref": "#/$defs/condition"
+                        },
+                        "next": {
+                          "type": "string"
                         }
                       }
                     }
@@ -3316,36 +3038,7 @@
                           "type": "string"
                         },
                         "condition": {
-                          "type": "object",
-                          "required": [],
-                          "additionalProperties": false,
-                          "properties": {
-                            "flag": {
-                              "type": "string"
-                            },
-                            "all": {
-                              "type": "array",
-                              "items": {
-                                "type": "object",
-                                "required": [
-                                  "campBuilding",
-                                  "count"
-                                ],
-                                "additionalProperties": false,
-                                "properties": {
-                                  "campBuilding": {
-                                    "type": "string"
-                                  },
-                                  "count": {
-                                    "type": "integer"
-                                  }
-                                }
-                              }
-                            },
-                            "campMode": {
-                              "type": "string"
-                            }
-                          }
+                          "$ref": "#/$defs/condition"
                         }
                       }
                     }
@@ -3501,9 +3194,7 @@
                       "required": [
                         "id",
                         "label",
-                        "condition",
-                        "finish",
-                        "effects"
+                        "condition"
                       ],
                       "additionalProperties": false,
                       "properties": {
@@ -3515,39 +3206,7 @@
                           "type": "string"
                         },
                         "condition": {
-                          "anyOf": [
-                            {
-                              "type": "object",
-                              "required": [
-                                "all"
-                              ],
-                              "additionalProperties": false,
-                              "properties": {
-                                "all": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "required": [
-                                      "campBuilding",
-                                      "count"
-                                    ],
-                                    "additionalProperties": false,
-                                    "properties": {
-                                      "campBuilding": {
-                                        "type": "string"
-                                      },
-                                      "count": {
-                                        "type": "integer"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
+                          "$ref": "#/$defs/condition"
                         },
                         "finish": {
                           "type": "boolean"
@@ -3579,28 +3238,97 @@
                           }
                         },
                         "cost": {
-                          "type": "object",
-                          "required": [
-                            "items"
-                          ],
-                          "additionalProperties": false,
-                          "properties": {
-                            "items": {
+                          "anyOf": [
+                            {
                               "type": "object",
                               "required": [
-                                "herb"
+                                "items"
                               ],
                               "additionalProperties": false,
                               "properties": {
-                                "herb": {
-                                  "type": "integer"
+                                "items": {
+                                  "type": "object",
+                                  "required": [
+                                    "herb"
+                                  ],
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "herb": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "required": [
+                                "silver",
+                                "items"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "silver": {
+                                  "type": "integer",
+                                  "const": 120
+                                },
+                                "items": {
+                                  "type": "object",
+                                  "required": [
+                                    "iron"
+                                  ],
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "iron": {
+                                      "type": "integer",
+                                      "const": 8
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "required": [
+                                "silver",
+                                "items"
+                              ],
+                              "additionalProperties": false,
+                              "properties": {
+                                "silver": {
+                                  "type": "integer",
+                                  "const": 120
+                                },
+                                "items": {
+                                  "type": "object",
+                                  "required": [
+                                    "cloth",
+                                    "wood"
+                                  ],
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "cloth": {
+                                      "type": "integer",
+                                      "const": 8
+                                    },
+                                    "wood": {
+                                      "type": "integer",
+                                      "const": 8
+                                    }
+                                  }
                                 }
                               }
                             }
-                          }
+                          ]
+                        },
+                        "next": {
+                          "type": "string"
                         }
                       }
                     }
+                  },
+                  "condition": {
+                    "$ref": "#/$defs/condition"
                   }
                 }
               },
@@ -3659,6 +3387,370 @@
                               "type": "integer"
                             }
                           }
+                        },
+                        "condition": {
+                          "$ref": "#/$defs/condition"
+                        }
+                      }
+                    }
+                  },
+                  "condition": {
+                    "$ref": "#/$defs/condition"
+                  }
+                }
+              },
+              "council": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "condition",
+                        "next"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "condition": {
+                          "$ref": "#/$defs/condition"
+                        },
+                        "next": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "homeland": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "condition"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "condition": {
+                          "$ref": "#/$defs/condition"
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "charter": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "condition"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "condition": {
+                          "$ref": "#/$defs/condition"
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "stay": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "condition"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "condition": {
+                          "$ref": "#/$defs/condition"
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "sea": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "condition"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "condition": {
+                          "$ref": "#/$defs/condition"
+                        },
+                        "finish": {
+                          "type": "boolean"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "type",
+                              "id"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "pattern": "^[a-z][a-z0-9_]*$"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "rollcall": {
+                "type": "object",
+                "required": [
+                  "map",
+                  "text",
+                  "choices"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "map": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "choices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "label",
+                        "condition",
+                        "next"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]*$"
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "condition": {
+                          "$ref": "#/$defs/condition"
+                        },
+                        "next": {
+                          "type": "string"
                         }
                       }
                     }
@@ -3833,16 +3925,7 @@
             "type": "string"
           },
           "condition": {
-            "type": "object",
-            "required": [
-              "flag"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "flag": {
-                "type": "string"
-              }
-            }
+            "$ref": "#/$defs/condition"
           },
           "enemy": {
             "type": "array",
@@ -3889,16 +3972,7 @@
                   "type": "string"
                 },
                 "condition": {
-                  "type": "object",
-                  "required": [
-                    "flag"
-                  ],
-                  "additionalProperties": false,
-                  "properties": {
-                    "flag": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/$defs/condition"
                 }
               }
             }
@@ -4140,40 +4214,7 @@
             }
           },
           "condition": {
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "object",
-                "required": [],
-                "additionalProperties": false,
-                "properties": {
-                  "time": {
-                    "type": "string"
-                  },
-                  "flag": {
-                    "type": "string"
-                  },
-                  "all": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "required": [],
-                      "additionalProperties": false,
-                      "properties": {
-                        "time": {
-                          "type": "string"
-                        },
-                        "flag": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            ]
+            "$ref": "#/$defs/condition"
           },
           "limit": {
             "type": "integer"
@@ -4206,87 +4247,7 @@
             "type": "string"
           },
           "condition": {
-            "anyOf": [
-              {
-                "type": "object",
-                "required": [],
-                "additionalProperties": false,
-                "properties": {
-                  "all": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "required": [],
-                      "additionalProperties": false,
-                      "properties": {
-                        "visited": {
-                          "type": "string"
-                        },
-                        "ownedCount": {
-                          "type": "integer"
-                        },
-                        "heroLevel": {
-                          "type": "integer"
-                        },
-                        "flag": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  },
-                  "visited": {
-                    "type": "string"
-                  },
-                  "flag": {
-                    "type": "string"
-                  },
-                  "ownedCount": {
-                    "type": "integer"
-                  },
-                  "equipmentCount": {
-                    "type": "integer"
-                  },
-                  "any": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "required": [],
-                      "additionalProperties": false,
-                      "properties": {
-                        "all": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "required": [],
-                            "additionalProperties": false,
-                            "properties": {
-                              "notFlag": {
-                                "type": "string"
-                              },
-                              "unvisited": {
-                                "type": "integer"
-                              },
-                              "flag": {
-                                "type": "string"
-                              }
-                            }
-                          }
-                        },
-                        "flag": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  },
-                  "feature": {
-                    "type": "string"
-                  }
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "$ref": "#/$defs/condition"
           },
           "reward": {
             "type": "object",
@@ -4410,23 +4371,7 @@
             "type": "string"
           },
           "condition": {
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "type": "object",
-                "required": [
-                  "flag"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "flag": {
-                    "type": "string"
-                  }
-                }
-              }
-            ]
+            "$ref": "#/$defs/condition"
           },
           "completeFlag": {
             "type": "string"
@@ -4445,41 +4390,7 @@
                   "type": "string"
                 },
                 "condition": {
-                  "type": "object",
-                  "required": [],
-                  "additionalProperties": false,
-                  "properties": {
-                    "flag": {
-                      "type": "string"
-                    },
-                    "ownedCount": {
-                      "type": "integer"
-                    },
-                    "stat": {
-                      "type": "string"
-                    },
-                    "count": {
-                      "type": "integer"
-                    },
-                    "prestige": {
-                      "type": "integer"
-                    },
-                    "any": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "flag"
-                        ],
-                        "additionalProperties": false,
-                        "properties": {
-                          "flag": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "$ref": "#/$defs/condition"
                 }
               }
             }
@@ -4516,6 +4427,396 @@
           }
         }
       }
+    }
+  },
+  "$defs": {
+    "condition": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": false,
+          "properties": {
+            "all": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            },
+            "any": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            },
+            "flag": {
+              "type": "string",
+              "enum": [
+                "advanced_forge",
+                "chai_met",
+                "chai_refuge",
+                "dongxi_rumor",
+                "external_chaogai_helped",
+                "external_chaogai_met",
+                "external_hucheng_helped",
+                "external_luantingyu_helped",
+                "external_wangjin_helped",
+                "guide",
+                "huangni_complete",
+                "lin_cangzhou",
+                "lin_departure",
+                "lin_escort",
+                "lin_resolved",
+                "lin_temple",
+                "lin_tolerant",
+                "lin_warned",
+                "lu_complete",
+                "lu_kindness",
+                "quality_trials_unlocked",
+                "secret_path",
+                "seven_stars",
+                "snow_evidence",
+                "tiger_complete",
+                "tiger_rumor",
+                "tracks_found",
+                "trail_followed",
+                "v10_allocated",
+                "v10_defense",
+                "v10_escort_done",
+                "v10_ford_done",
+                "v10_gathered",
+                "v10_reported",
+                "v10_supply",
+                "v11_charter",
+                "v11_covenant_read",
+                "v11_decided",
+                "v11_escort_done",
+                "v11_grain_done",
+                "v11_homeland",
+                "v11_plain_read",
+                "v11_reported",
+                "v12_chosen",
+                "v12_ending_return",
+                "v12_ending_sea",
+                "v12_ending_stay",
+                "v12_return",
+                "v12_return_first_done",
+                "v12_return_second_done",
+                "v12_return_third_done",
+                "v12_sea",
+                "v12_sea_first_done",
+                "v12_sea_second_done",
+                "v12_sea_third_done",
+                "v12_settled",
+                "v12_stay",
+                "v12_stay_first_done",
+                "v12_stay_second_done",
+                "v12_stay_third_done",
+                "v3_defended",
+                "v3_ferry_done",
+                "v3_grain_done",
+                "v3_oath_done",
+                "v3_scouted",
+                "v3_settled",
+                "v3_timber_done",
+                "v3_veteran_done",
+                "v4_baihu_allied",
+                "v4_baihu_initiative",
+                "v4_baihu_supply",
+                "v4_erlong_allied",
+                "v4_erlong_guard",
+                "v4_erlong_medics",
+                "v4_intel",
+                "v4_taohua_allied",
+                "v4_taohua_ambush",
+                "v4_taohua_engines",
+                "v4_union_done",
+                "v5_east_cut",
+                "v5_first_done",
+                "v5_inside_support",
+                "v5_prepared",
+                "v5_route_known",
+                "v5_second_done",
+                "v5_settled",
+                "v5_third_done",
+                "v5_west_cut",
+                "v6_aid_cut",
+                "v6_final_done",
+                "v6_outer_done",
+                "v6_prepared",
+                "v6_prison_done",
+                "v6_settled",
+                "v6_smoke_known",
+                "v7_aid_cut",
+                "v7_break_done",
+                "v7_final_done",
+                "v7_hook",
+                "v7_prepared",
+                "v7_probe_done",
+                "v7_reported",
+                "v7_scouted",
+                "v7_settled",
+                "v7_trench",
+                "v8_chosen",
+                "v8_evidence_done",
+                "v8_final_done",
+                "v8_priority_evidence",
+                "v8_priority_rescue",
+                "v8_priority_supply",
+                "v8_rescue_done",
+                "v8_settled",
+                "v8_supply_done",
+                "v9_assault",
+                "v9_chosen",
+                "v9_covert",
+                "v9_escape_done",
+                "v9_gate_done",
+                "v9_prison_done",
+                "v9_settled",
+                "volume_complete",
+                "volume_eight_complete",
+                "volume_eleven_complete",
+                "volume_five_complete",
+                "volume_four_complete",
+                "volume_nine_complete",
+                "volume_seven_complete",
+                "volume_six_complete",
+                "volume_ten_complete",
+                "volume_three_complete",
+                "volume_twelve_complete",
+                "volume_two_complete",
+                "wusong_met",
+                "yang_complete",
+                "yang_met"
+              ]
+            },
+            "notFlag": {
+              "type": "string",
+              "enum": [
+                "advanced_forge",
+                "chai_met",
+                "chai_refuge",
+                "dongxi_rumor",
+                "external_chaogai_helped",
+                "external_chaogai_met",
+                "external_hucheng_helped",
+                "external_luantingyu_helped",
+                "external_wangjin_helped",
+                "guide",
+                "huangni_complete",
+                "lin_cangzhou",
+                "lin_departure",
+                "lin_escort",
+                "lin_resolved",
+                "lin_temple",
+                "lin_tolerant",
+                "lin_warned",
+                "lu_complete",
+                "lu_kindness",
+                "quality_trials_unlocked",
+                "secret_path",
+                "seven_stars",
+                "snow_evidence",
+                "tiger_complete",
+                "tiger_rumor",
+                "tracks_found",
+                "trail_followed",
+                "v10_allocated",
+                "v10_defense",
+                "v10_escort_done",
+                "v10_ford_done",
+                "v10_gathered",
+                "v10_reported",
+                "v10_supply",
+                "v11_charter",
+                "v11_covenant_read",
+                "v11_decided",
+                "v11_escort_done",
+                "v11_grain_done",
+                "v11_homeland",
+                "v11_plain_read",
+                "v11_reported",
+                "v12_chosen",
+                "v12_ending_return",
+                "v12_ending_sea",
+                "v12_ending_stay",
+                "v12_return",
+                "v12_return_first_done",
+                "v12_return_second_done",
+                "v12_return_third_done",
+                "v12_sea",
+                "v12_sea_first_done",
+                "v12_sea_second_done",
+                "v12_sea_third_done",
+                "v12_settled",
+                "v12_stay",
+                "v12_stay_first_done",
+                "v12_stay_second_done",
+                "v12_stay_third_done",
+                "v3_defended",
+                "v3_ferry_done",
+                "v3_grain_done",
+                "v3_oath_done",
+                "v3_scouted",
+                "v3_settled",
+                "v3_timber_done",
+                "v3_veteran_done",
+                "v4_baihu_allied",
+                "v4_baihu_initiative",
+                "v4_baihu_supply",
+                "v4_erlong_allied",
+                "v4_erlong_guard",
+                "v4_erlong_medics",
+                "v4_intel",
+                "v4_taohua_allied",
+                "v4_taohua_ambush",
+                "v4_taohua_engines",
+                "v4_union_done",
+                "v5_east_cut",
+                "v5_first_done",
+                "v5_inside_support",
+                "v5_prepared",
+                "v5_route_known",
+                "v5_second_done",
+                "v5_settled",
+                "v5_third_done",
+                "v5_west_cut",
+                "v6_aid_cut",
+                "v6_final_done",
+                "v6_outer_done",
+                "v6_prepared",
+                "v6_prison_done",
+                "v6_settled",
+                "v6_smoke_known",
+                "v7_aid_cut",
+                "v7_break_done",
+                "v7_final_done",
+                "v7_hook",
+                "v7_prepared",
+                "v7_probe_done",
+                "v7_reported",
+                "v7_scouted",
+                "v7_settled",
+                "v7_trench",
+                "v8_chosen",
+                "v8_evidence_done",
+                "v8_final_done",
+                "v8_priority_evidence",
+                "v8_priority_rescue",
+                "v8_priority_supply",
+                "v8_rescue_done",
+                "v8_settled",
+                "v8_supply_done",
+                "v9_assault",
+                "v9_chosen",
+                "v9_covert",
+                "v9_escape_done",
+                "v9_gate_done",
+                "v9_prison_done",
+                "v9_settled",
+                "volume_complete",
+                "volume_eight_complete",
+                "volume_eleven_complete",
+                "volume_five_complete",
+                "volume_four_complete",
+                "volume_nine_complete",
+                "volume_seven_complete",
+                "volume_six_complete",
+                "volume_ten_complete",
+                "volume_three_complete",
+                "volume_twelve_complete",
+                "volume_two_complete",
+                "wusong_met",
+                "yang_complete",
+                "yang_met"
+              ]
+            },
+            "item": {
+              "type": "string"
+            },
+            "hero": {
+              "type": "string"
+            },
+            "visited": {
+              "type": "string"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "unknown",
+                "heard",
+                "known",
+                "available",
+                "owned"
+              ]
+            },
+            "campBuilding": {
+              "type": "string",
+              "enum": [
+                "hall",
+                "farm",
+                "lumber",
+                "barracks",
+                "clinic",
+                "market"
+              ]
+            },
+            "campMode": {
+              "type": "string",
+              "enum": [
+                "solo",
+                "army"
+              ]
+            },
+            "time": {
+              "type": "string",
+              "enum": [
+                "day",
+                "night"
+              ]
+            },
+            "liangshanLevel": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "ownedCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "heroLevel": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "equipmentCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unvisited": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "feature": {
+              "type": "string"
+            },
+            "stat": {
+              "type": "string"
+            },
+            "prestige": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      ]
     }
   }
 }

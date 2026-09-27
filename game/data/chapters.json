@@ -20,7 +20,7 @@
         }
       },
       {
-        "label": "至少三名正式好汉",
+        "label": "至少三名好汉正式入寨",
         "condition": {
           "ownedCount": 3
         }
@@ -39,7 +39,7 @@
         }
       }
     ],
-    "ending": "【江湖风起】第一卷《郓城风起》完。你与好汉在梁山脚下立起初级据点。渡口来了一封东京书信，第二卷《逼上梁山》的路已打开。",
+    "ending": "【江湖风起】梁山脚下搭起了几间屋舍，同行的好汉暂且在此歇脚。渡口有人送来一封东京的信。\n\n（第一卷《郓城风起》完，第二卷《逼上梁山》已开放。）",
     "effects": [],
     "baseLevel": 1
   },
@@ -54,7 +54,7 @@
     "completeFlag": "volume_two_complete",
     "requirements": [
       {
-        "label": "林冲走过风雪，来到梁山渡口",
+        "label": "林冲抵达梁山渡口",
         "condition": {
           "flag": "lin_departure"
         }
@@ -66,7 +66,7 @@
         }
       },
       {
-        "label": "柴进庄托书相识",
+        "label": "向柴进交书，约定护送行旅",
         "condition": {
           "flag": "chai_refuge"
         }
@@ -78,7 +78,7 @@
         }
       }
     ],
-    "ending": "【逼上梁山】忍让未换来生路，风雪却让人看清了归处。林冲望向水泊，鲁智深的禅杖声渐远，柴进与杨志各有一番叮嘱。第二卷完。下一卷《梁山初聚》将把这处落脚地建成真正的山寨。",
+    "ending": "【逼上梁山】渡船拢岸，林冲提枪走了上去。船篙一点，岸上的芦苇渐渐退远。梁山脚下的住处还小，等着众人回去修整。\n\n（第二卷完，可继续第三卷《梁山初聚》，营建山寨。）",
     "effects": [
       {
         "type": "currency",
@@ -145,7 +145,7 @@
         }
       }
     ],
-    "ending": "【梁山初聚】第三卷完。寨民安居，粮木水路畅通。水泊盟亭已开通三山驿路，可继续第四卷《三山聚义》；原有经营、人物行记、精英远征与进阶守寨演武仍可办理。",
+    "ending": "【梁山初聚】粮车卸进仓里，木料堆在寨边，渡船往来已有了班次。三山的来信送到盟亭，邀众人沿驿路前去相会。\n\n（第三卷完。从水泊盟亭进入三山驿路，继续第四卷《三山聚义》。经营、人物行记、精英远征与进阶守寨演武仍可进行。）",
     "effects": [
       {
         "type": "currency",
@@ -200,7 +200,7 @@
         }
       }
     ],
-    "ending": "【三山聚义】第四卷完。各寨的合作记录已留下。三山联合营已开通独龙冈行营，可继续第五卷《三打祝家庄》，探明迷径、断援截粮，再合围庄院。",
+    "ending": "【三山聚义】各寨收起旗号，约好下次相助的事，陆续离营。去独龙冈的人已在路口等候，祝家庄外的岔道还须细查。\n\n（第四卷完。从三山联合营进入独龙冈行营，继续第五卷《三打祝家庄》。）",
     "effects": [
       {
         "type": "item",
@@ -275,7 +275,7 @@
         }
       }
     ],
-    "ending": "【三打祝家庄】第五卷完。百姓归居，队伍收整。可从庄后粮仓进入第六卷《高唐救援》。",
+    "ending": "【三打祝家庄】庄外的人家渐渐开了门，粮仓里的账目也已清点完。队伍还没歇定，高唐的消息就传来了。\n\n（第五卷完。从庄后粮仓进入第六卷《高唐救援》。）",
     "effects": [
       {
         "type": "item",
@@ -336,7 +336,7 @@
         }
       }
     ],
-    "ending": "【高唐救援】第六卷完。城南归人已安顿，军中核清伤亡，功勋与卷终酬劳一并记入。可继续培养好汉、完成未做的外传与轮换历练。第七卷尚未开放。",
+    "ending": "【高唐救援】柴进随车队启程，伤者也已安顿妥当。离开城南时，一骑快马赶来：朝廷遣呼延灼领兵，连环马已到梁山泊外。\n\n（第六卷完。从城南接应点返回泊东营地，继续第七卷《破连环马》。）",
     "effects": [
       {
         "type": "item",
@@ -352,6 +352,416 @@
         "type": "item",
         "id": "spirit_essence",
         "amount": 6
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_seven",
+    "title": "破连环马",
+    "number": 7,
+    "entry": "v7_camp",
+    "condition": {
+      "flag": "volume_six_complete"
+    },
+    "completeFlag": "volume_seven_complete",
+    "requirements": [
+      {
+        "label": "回营接报",
+        "condition": {
+          "flag": "v7_reported"
+        }
+      },
+      {
+        "label": "看清连环马阵",
+        "condition": {
+          "flag": "v7_scouted"
+        }
+      },
+      {
+        "label": "击退试探的前军",
+        "condition": {
+          "flag": "v7_probe_done"
+        }
+      },
+      {
+        "label": "备好一种破骑战法",
+        "condition": {
+          "flag": "v7_prepared"
+        }
+      },
+      {
+        "label": "拆散连环马阵",
+        "condition": {
+          "flag": "v7_break_done"
+        }
+      },
+      {
+        "label": "击败呼延灼中军",
+        "condition": {
+          "flag": "v7_final_done"
+        }
+      },
+      {
+        "label": "议定留营与归路",
+        "condition": {
+          "flag": "v7_settled"
+        }
+      }
+    ],
+    "ending": "【破连环马】铁链卸下，伤马牵进棚中。韩滔和彭玘留下整顿旧部，呼延灼将双鞭解在桌边，接过一碗热酒。\n\n几日后，北路马商送来消息：一批送往梁山的马匹在曾头市被扣，押车的人也没回来。晁盖把信看了两遍，让人先去查清人马的下落。\n\n第七卷完。第八卷《曾头疑云》已开启，前往曾市外营追查失踪马队。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 4
+      },
+      {
+        "type": "item",
+        "id": "immortal_seal",
+        "amount": 2
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 8
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_eight",
+    "title": "曾头疑云",
+    "number": 8,
+    "entry": "v8_camp",
+    "condition": {
+      "flag": "volume_seven_complete"
+    },
+    "completeFlag": "volume_eight_complete",
+    "requirements": [
+      {
+        "label": "在曾市外定下先办之事",
+        "condition": {
+          "flag": "v8_chosen"
+        }
+      },
+      {
+        "label": "接出马棚受伤商旅",
+        "condition": {
+          "flag": "v8_rescue_done"
+        }
+      },
+      {
+        "label": "核清税亭口供",
+        "condition": {
+          "flag": "v8_evidence_done"
+        }
+      },
+      {
+        "label": "夺回北坡粮车",
+        "condition": {
+          "flag": "v8_supply_done"
+        }
+      },
+      {
+        "label": "打开东门，点齐押车人",
+        "condition": {
+          "flag": "v8_final_done"
+        }
+      },
+      {
+        "label": "安置人马，带回转送名册",
+        "condition": {
+          "flag": "v8_settled"
+        }
+      }
+    ],
+    "ending": "【曾头疑云】马匹牵回营中，扣押的商旅各自应了名字。晁盖留下与伤者同走，吴用把三份凭据夹进名册。\n\n燕青已在大名府城外等候。他送来的口信只有两句：“牢门的位置查清了。请多留一条送伤者出城的路。”\n第九卷《大名救援》已开启。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 2
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 5
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_nine",
+    "title": "大名救援",
+    "number": 9,
+    "entry": "v9_camp",
+    "condition": {
+      "flag": "volume_eight_complete"
+    },
+    "completeFlag": "volume_nine_complete",
+    "requirements": [
+      {
+        "label": "与燕青议定暗线或正攻",
+        "condition": {
+          "flag": "v9_chosen"
+        }
+      },
+      {
+        "label": "夺下北门接应点",
+        "condition": {
+          "flag": "v9_gate_done"
+        }
+      },
+      {
+        "label": "打开牢门，接出卢俊义与同行者",
+        "condition": {
+          "flag": "v9_prison_done"
+        }
+      },
+      {
+        "label": "护送伤者通过城西浅渡",
+        "condition": {
+          "flag": "v9_escape_done"
+        }
+      },
+      {
+        "label": "核齐名单，筹备归泊",
+        "condition": {
+          "flag": "v9_settled"
+        }
+      }
+    ],
+    "ending": "【大名救援】最后一船离开浅渡，名单上的名字全部有了应声。卢俊义与石秀随队归泊，燕青留到最后，将门板和空担架一并搬上船。\n\n梁山又来急信：三路归人已到，要接船，要口粮，也要把旧账与新规说清。第十卷《百川归泊》已开启。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 2
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 5
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_ten",
+    "title": "百川归泊",
+    "number": 10,
+    "entry": "v10_camp",
+    "condition": {
+      "flag": "volume_nine_complete"
+    },
+    "completeFlag": "volume_ten_complete",
+    "requirements": [
+      {
+        "label": "接下三路归人的来信",
+        "condition": {
+          "flag": "v10_reported"
+        }
+      },
+      {
+        "label": "护送三路队伍到营",
+        "condition": {
+          "flag": "v10_escort_done"
+        }
+      },
+      {
+        "label": "在粮仓确定补给或防守",
+        "condition": {
+          "flag": "v10_allocated"
+        }
+      },
+      {
+        "label": "守住渡口并截住追舟兵",
+        "condition": {
+          "flag": "v10_ford_done"
+        }
+      },
+      {
+        "label": "核齐安置，议定分工后聚义",
+        "condition": {
+          "flag": "v10_gathered"
+        }
+      }
+    ],
+    "ending": "【百川归泊】酒席散后，厨房照新册发粮，伤者换到背风的屋里。旧日各寨的人开始按同一张值守表轮班，争执还会有，至少知道该去哪里把话说明白。\n\n两位使者先后上山，各捧一份诏书。一份只谈赦罪，一份附着军粮与安置的条款。山下却传来流民受阻、粮队遭劫的消息，众人先把桌上的诏书压住，起身去接人。第十一卷《两道诏书》已开启。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 2
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 5
+      },
+      {
+        "type": "item",
+        "id": "immortal_seal",
+        "amount": 1
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_eleven",
+    "title": "两道诏书",
+    "number": 11,
+    "entry": "v11_camp",
+    "condition": {
+      "flag": "volume_ten_complete"
+    },
+    "completeFlag": "volume_eleven_complete",
+    "requirements": [
+      {
+        "label": "留下两份原件，接报出营",
+        "condition": {
+          "flag": "v11_reported"
+        }
+      },
+      {
+        "label": "从断桥接回流民与伤者",
+        "condition": {
+          "flag": "v11_escort_done"
+        }
+      },
+      {
+        "label": "在柳堤追回被截口粮",
+        "condition": {
+          "flag": "v11_grain_done"
+        }
+      },
+      {
+        "label": "核实赦罪诏书的缺漏",
+        "condition": {
+          "flag": "v11_plain_read"
+        }
+      },
+      {
+        "label": "核验安置约条与会签副本",
+        "condition": {
+          "flag": "v11_covenant_read"
+        }
+      },
+      {
+        "label": "听取两方意见并确认答复",
+        "condition": {
+          "flag": "v11_decided"
+        }
+      }
+    ],
+    "ending": "答复已写进正式文书，两位使者各自收回了应带走的一份。留下的原件与会签副本都封入匣中，流民名册则留在桌上，明日还要按它分粮。\n\n晁盖把新削的木牌放在门边，宋江叫各队来领各自的名单。此后要守哪片岸、坐哪班船、走哪条归乡路，都须先把同行的人点齐。第十一卷完，前往去路清点营，开始第十二卷《梁山去路》。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 2
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 5
+      },
+      {
+        "type": "item",
+        "id": "immortal_seal",
+        "amount": 1
+      }
+    ],
+    "baseLevel": 1
+  },
+  {
+    "id": "volume_twelve",
+    "title": "梁山去路",
+    "number": 12,
+    "entry": "v12_camp",
+    "condition": {
+      "flag": "volume_eleven_complete"
+    },
+    "completeFlag": "volume_twelve_complete",
+    "requirements": [
+      {
+        "label": "确认终章去路与安置安排",
+        "condition": {
+          "flag": "v12_chosen"
+        }
+      },
+      {
+        "label": "完成首段接应：守渡、筹船或护粮",
+        "condition": {
+          "any": [
+            {
+              "flag": "v12_stay_first_done"
+            },
+            {
+              "flag": "v12_sea_first_done"
+            },
+            {
+              "flag": "v12_return_first_done"
+            }
+          ]
+        }
+      },
+      {
+        "label": "接回被围者、接齐家眷或追回民粮",
+        "condition": {
+          "any": [
+            {
+              "flag": "v12_stay_second_done"
+            },
+            {
+              "flag": "v12_sea_second_done"
+            },
+            {
+              "flag": "v12_return_second_done"
+            }
+          ]
+        }
+      },
+      {
+        "label": "完成最后的守备、断后或护送",
+        "condition": {
+          "any": [
+            {
+              "flag": "v12_stay_third_done"
+            },
+            {
+              "flag": "v12_sea_third_done"
+            },
+            {
+              "flag": "v12_return_third_done"
+            }
+          ]
+        }
+      },
+      {
+        "label": "核完名册，交代同行者的去处",
+        "condition": {
+          "flag": "v12_settled"
+        }
+      }
+    ],
+    "ending": "名单上的最后一个名字已有着落，同行者各自收好行装与留给旧友的地址。十二卷主线至此完结。\n\n本次正式结局已记入梁山志，队伍与培养继续保留。可回寨经营、安排好汉修习，或前往历练与副本。",
+    "effects": [
+      {
+        "type": "item",
+        "id": "recruit_order",
+        "amount": 2
+      },
+      {
+        "type": "item",
+        "id": "spirit_essence",
+        "amount": 5
+      },
+      {
+        "type": "item",
+        "id": "immortal_seal",
+        "amount": 1
       }
     ],
     "baseLevel": 1

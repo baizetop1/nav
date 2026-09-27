@@ -47,7 +47,7 @@ function adaptDialog(dialog){
 function observe(){observer?.observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['open','hidden']});}
 function refresh(){queued=0;observer?.disconnect();for(const host of books.keys())if(!host.isConnected)books.delete(host);const focus=focused();
  const main=document.getElementById('main');if(main?.closest('.viewport-shell'))paginate(main,'main:'+main.dataset.screen+':'+(main.querySelector('[data-page-section]')?.dataset.pageSection||main.querySelector('[data-journey-section]')?.dataset.journeySection||''));
- for(const dialog of document.querySelectorAll('dialog[open]')){if(mobile.matches)adaptDialog(dialog);else {const body=dialog.querySelector('.dialog-body');if(body)unwrap(body);}}
+ for(const dialog of document.querySelectorAll('dialog[open]')){if(dialog.dataset.dialogLayout==='grid')continue;if(mobile.matches)adaptDialog(dialog);else {const body=dialog.querySelector('.dialog-body');if(body)unwrap(body);}}
  const log=document.getElementById('activity-log');if(log?.clientHeight)paginate(log,'activity-log');
  restoreFocus(focus);observe();
 }

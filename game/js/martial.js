@@ -1,12 +1,13 @@
-import { terrainRate, signatureFactor } from './fieldcraft.js?v=0.44.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.44.0';
-import { doctrineFactor, waterBattle } from './doctrines.js?v=0.44.0';
-import { CORPS } from './development.js?v=0.44.0';
+import {LATE_ARMS,lateStory} from './late-mainline-data.js?v=0.52.0';
+import { terrainRate, signatureFactor } from './fieldcraft.js?v=0.52.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.52.0';
+import { doctrineFactor, waterBattle } from './doctrines.js?v=0.52.0';
+import { CORPS } from './development.js?v=0.52.0';
 export const ARMS={infantry:{name:'步军',hall:1,beats:'ranged'},ranged:{name:'弓军',hall:2,beats:'cavalry'},cavalry:{name:'骑军',hall:3,beats:'infantry'},neutral:{name:'无兵种克制',hall:1}};
 const cavalry=new Set(['guansheng','qinming','huyanzhuo','dongping','xuning','suochao','hantao','pengqi','xuanzan','haosiwen','huangxin','sunli']);
 const ranged=new Set(['huarong','zhangqing','yanqing','gongwang','dingdesun','lingzhen']);
 export const heroArm=h=>cavalry.has(h.id)?'cavalry':ranged.has(h.id)||h.type==='ranger'?'ranged':['strategist','support','healer'].includes(h.type)?'neutral':'infantry';
-export const enemyArm=id=>({soldier:'ranged',guard:'infantry',bandit:'infantry',bandit_chief:'infantry',road_raider:'cavalry',v5_manor_guard:'infantry',v5_relief_rider:'cavalry',v5_luan_tingyu:'infantry',v5_zhu_biao:'cavalry',v6_guard:'infantry',v6_rider:'cavalry',v6_gaolian:'infantry'})[id]||'neutral';
+export const enemyArm=id=>({soldier:'ranged',guard:'infantry',bandit:'infantry',bandit_chief:'infantry',road_raider:'cavalry',v5_manor_guard:'infantry',v5_relief_rider:'cavalry',v5_luan_tingyu:'infantry',v5_zhu_biao:'cavalry',v6_guard:'infantry',v6_rider:'cavalry',v6_gaolian:'infantry',v7_chain_rider:'cavalry',v7_hantao:'cavalry',v7_pengqi:'cavalry',v7_huyanzhuo:'cavalry',v7_archer:'ranged'})[id]||LATE_ARMS[id]||(lateStory(id)?'infantry':'neutral');
 export const armFactor=(from,to)=>ARMS[from]?.beats===to?1.2:ARMS[to]?.beats===from ? .85 : 1;
 const traits={
   wusong:['孤胆','单英雄出阵且不带兵时，伤害 +20%。'],
