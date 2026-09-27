@@ -6,6 +6,7 @@ import { assessCoursePackage, createCoursePackageDraft, parseCoursePackage, read
 import { assessQuestCoaching } from '../../services/techOsCoaching';
 import { buildCourseLessonMessages, buildCourseOutlineMessages, normalizeCourseAiEndpoint, requestCourseAi } from '../../services/techOsCourseAi';
 import { buildManualRouteSuggestion } from '../../services/techOsManualRoute';
+import { indexFromTechOsFiles } from '../../services/techOsLifecycle';
 import { MarkdownView } from './MarkdownView';
 
 export interface CourseWizardSession { profile: CourseProfile; text: string }
@@ -74,7 +75,12 @@ export function TechOsCourseWizard({ index, reservedFiles, session, onChange, on
   const selected = editingCourse?.lessons[selectedIndex];
   const draftResult = useMemo(() => {
     if (!course) return { draft: null, error: '' };
-    try { return { draft: createCoursePackageDraft(index, course, new Date().toISOString().slice(0, 10), reservedFiles), error: '' }; }
+    try {
+      // The Repository working copy may have moved tasks since the bundled index was built.
+      // Validate its actual files, never resurrect stale lifecycle paths from that old index.
+      const latestIndex = reservedFiles.length ? indexFromTechOsFiles(reservedFiles) : index;
+      return { draft: createCoursePackageDraft(latestIndex, course, new Date().toISOString().slice(0, 10), reservedFiles), error: '' };
+    }
     catch (cause) { return { draft: null, error: cause instanceof Error ? cause.message : '暂不能建立安全草稿。' }; }
   }, [course, index, reservedFiles]);
   const preview = useMemo(() => {
