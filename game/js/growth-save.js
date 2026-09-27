@@ -1,5 +1,5 @@
-import {LATE_BOSSES} from './late-mainline-data.js?v=0.52.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.52.0';
+import {LATE_BOSSES} from './late-mainline-data.js?v=0.54.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.54.0';
 export function validateGrowthBattle(b,data,check){
   const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
   const integer=(v,min,max)=>Number.isSafeInteger(v)&&v>=min&&v<=max;

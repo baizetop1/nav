@@ -3,7 +3,7 @@ export const FUNCTION_GROUPS = [
   {id:'journey',label:'历练',entries:[
     {label:'主线',view:'map',map:'story'}, {label:'地图',view:'map',map:'atlas'},
     {label:'游历',view:'realm',section:'journey'}, {label:'每日副本',view:'trials',section:'daily'},
-    {label:'周本',view:'trials',section:'weekly'}, {label:'特殊副本',view:'trials',section:'special'}]},
+    {label:'资源副本',view:'trials',section:'resources'}, {label:'周本',view:'trials',section:'weekly'}, {label:'特殊副本',view:'trials',section:'special'}]},
   {id:'camp',label:'寨务',entries:[
     {label:'营建',view:'camp',section:'buildings'}, {label:'募兵',view:'camp',section:'troops'},
     {label:'寨事',view:'camp',section:'affairs'}, {label:'生产',view:'camp',section:'production'},

@@ -1,8 +1,9 @@
-import { totalExperience } from './progression.js?v=0.52.0';
-import { dispatch } from './core.js?v=0.52.0';
-import { advanceBattle } from './battle.js?v=0.52.0';
-import { dailyUses, rotationPlan, rotationCalendar } from './rotations.js?v=0.52.0';
-import { requireRule, journal } from './utils.js?v=0.52.0';
+import { RESOURCE_ROUTES } from './resource-dungeons-data.js?v=0.54.0';
+import { totalExperience } from './progression.js?v=0.54.0';
+import { dispatch } from './core.js?v=0.54.0';
+import { advanceBattle } from './battle.js?v=0.54.0';
+import { dailyUses, rotationPlan, rotationCalendar } from './rotations.js?v=0.54.0';
+import { requireRule, journal } from './utils.js?v=0.54.0';
 export const mastery=(s,id,tier)=>s.campaign?.mastery?.[id+'_'+tier]||0;
 export function sweepReason(s,id,tier,count=1){
  if(s.battle||s.scheme||s.event)return '先结束当前交战或际遇';
@@ -23,9 +24,10 @@ export function sweepQuote(s,d,a){
   next.battleSkillMode=mode;
   const items=Object.fromEntries(Object.entries(next.inventory).map(([id,n])=>[id,n-(s.inventory[id]||0)]).filter(([,n])=>n));
   const experience=Object.fromEntries(s.team.map(id=>[id,totalExperience(next.heroes[id])-totalExperience(s.heroes[id])]));
-  const summary={count:a.count,food,stamina:a.count*10,fallen,wounded,items,experience};
-  const signature=JSON.stringify({id:a.id,tier:a.tier,date:rotationCalendar(s.clock).date,revision:s.revision,rng:s.rng,team:s.team,summary,uses:dailyUses(s,a.id),remaining:[next.player.stamina,next.camp.food,next.camp.troops,next.camp.wounded],finalRng:next.rng});
+  const resourceGains={silver:Math.max(0,next.player.silver-s.player.silver),food:Math.max(0,next.camp.food-s.camp.food+food),wood:Math.max(0,next.camp.wood-s.camp.wood)};
+  const summary={count:a.count,food,stamina:a.count*10,fallen,wounded,items,experience,resourceGains};
+  const signature=JSON.stringify({id:a.id,tier:a.tier,date:rotationCalendar(s.clock).date,revision:s.revision,rng:s.rng,team:s.team,summary,uses:dailyUses(s,a.id),remaining:[next.player.stamina,next.camp.food,next.camp.troops,next.camp.wounded,next.player.silver,next.camp.wood,next.inventory.herb||0],casualtyCarry:[s.camp.casualtyCarry||0,next.camp.casualtyCarry||0],finalRng:next.rng});
   return {next,summary,signature,reason:''};
  }catch(e){return {reason:e.message};}
 }
-export function applySweep(s,d,a){const q=sweepQuote(s,d,a);requireRule(!q.reason,q.reason);requireRule(typeof a.expected==='string'&&a.expected===q.signature,'阵容、资源或日期已变化，请重新预览扫荡。');journal(q.next,'【材料扫荡】完成 '+a.count+' 场；体力 '+q.summary.stamina+'、粮草 '+q.summary.food+'，伤兵 '+q.summary.wounded+'、阵亡 '+q.summary.fallen+'。仍共用每日三次挑战额度。');return q.next;}
+export function applySweep(s,d,a){const q=sweepQuote(s,d,a);requireRule(!q.reason,q.reason);requireRule(typeof a.expected==='string'&&a.expected===q.signature,'阵容、资源或日期已变化，请重新预览扫荡。');journal(q.next,(RESOURCE_ROUTES.some(r=>r.id===a.id)?'【资源扫荡】完成 ':'【材料扫荡】完成 ')+a.count+' 场；体力 '+q.summary.stamina+'、粮草 '+q.summary.food+'，伤兵 '+q.summary.wounded+'、阵亡 '+q.summary.fallen+'。仍共用每日三次挑战额度。');return q.next;}

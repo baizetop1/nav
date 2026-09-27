@@ -1,7 +1,8 @@
-import { battleTerrain } from './strategy-data.js?v=0.52.0';
-import { CORPS } from './corps-data.js?v=0.52.0';
+import { battleTerrain } from './strategy-data.js?v=0.54.0';
+import { CORPS } from './corps-data.js?v=0.54.0';
 // Explicit marker: ongoing old battles keep their original combat and casualty rules.
 export const FIELD_RULES=2;
+export const CASUALTY_RULES=1,CASUALTY_SCALE=10000;
 export const healingSupply=(b,u)=>fieldRules(b)&&u.side==='enemy'?(b.elapsed>=120000?.25:b.elapsed>=60000?.5:1):1;
 export const fieldRules=b=>b.expedition?.fieldRules===FIELD_RULES;
 export const FIELD_TERRAIN={land:{infantry:1,ranged:1,cavalry:1.08},forest:{infantry:1.08,ranged:1.05,cavalry:.9},mountain:{infantry:1.08,ranged:1.08,cavalry:.88},water:{infantry:.94,ranged:.94,cavalry:.85}};
@@ -35,13 +36,18 @@ export function signatureFactor(b,u,target,{normal=false,strategy=false}={}){if(
 }
 export function casualtyQuote(b,tacticLoss,raidLoss=1,{outcome=b.outcome||'retreat',health,elapsed=b.elapsed}={}){
  const n=b.expedition?.troops||0,ratio=health??(b.team.reduce((sum,u)=>sum+u.hp/u.maxHp,0)/Math.max(1,b.team.length));
+ const cumulative=fieldRules(b)&&b.expedition?.casualtyRules===CASUALTY_RULES;
+ const taken=health===undefined&&cumulative&&b.metrics?Math.min(1,b.team.reduce((sum,u)=>sum+(b.metrics.heroes[u.id]?.taken||0)/u.maxHp,0)/Math.max(1,b.team.length)):0;
+ const pressure=Math.max(1-ratio,taken);
  let rate=tacticLoss+(1-ratio)*.2+(outcome==='victory'?0:.2),deathRate=outcome==='victory'?.2:outcome==='retreat'?.35:.45;
- if(fieldRules(b)){const exposure=Math.min(1,.25+Math.max(0,elapsed||0)/60000);rate=tacticLoss*(outcome==='victory'?.35*exposure:1)+(1-ratio)*.2+(outcome==='victory'?0:.2);
+ if(fieldRules(b)){const exposure=Math.min(1,.25+Math.max(0,elapsed||0)/60000);rate=tacticLoss*(outcome==='victory'?.35*exposure:1)+pressure*.2+(outcome==='victory'?0:.2);
  const has=id=>b.team.some(u=>u.id===id&&u.corps?.troops>0);if(outcome!=='victory'&&has('baisheng'))rate*=.9;
  const cavalry=b.team.reduce((sum,u)=>sum+(u.corps?.arm==='cavalry'?u.corps.troops:0),0),medic=b.team.some(u=>u.corps?.troops&&CORPS[u.id]?.profile==='medic');
  deathRate*=Math.min(medic?.9:1,has('andaoquan')?.75:1,has('huangfuduan')?1-.15*cavalry/Math.max(1,n):1);
  }
  deathRate*=b.realm?.medical||1;
- const smoke=b.expansion?.smoke&&outcome==='retreat'&&b.metrics?.reason==='manual'?.75:1;const loss=Math.min(n,Math.ceil(n*Math.max(0,rate)*raidLoss*smoke)),fallen=Math.floor(loss*deathRate),wounded=loss-fallen;
- return {troops:n,loss,fallen,wounded,returned:n-loss,replaceSilver:fallen*3,recoverFood:wounded+fallen*2};
+ const smoke=b.expansion?.smoke&&outcome==='retreat'&&b.metrics?.reason==='manual'?.75:1;const loss=Math.min(n,Math.ceil(n*Math.max(0,rate)*raidLoss*smoke));
+ const carry=cumulative?(b.expedition.casualtyCarry||0):0,total=Math.round(loss*deathRate*CASUALTY_SCALE)+carry;
+ const fallen=cumulative?Math.min(loss,Math.floor(total/CASUALTY_SCALE)):Math.floor(loss*deathRate),wounded=loss-fallen,nextCarry=cumulative?total-fallen*CASUALTY_SCALE:undefined;
+ return {...(cumulative?{nextCarry}:{}),troops:n,loss,fallen,wounded,returned:n-loss,replaceSilver:fallen*3,recoverFood:wounded+fallen*2};
 }

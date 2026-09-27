@@ -1,4 +1,4 @@
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,specialPlan} from './special-dungeons.js?v=0.52.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,specialPlan} from './special-dungeons.js?v=0.54.0';
 const percent=n=>Number((n*100).toFixed(2))+'%';
 const model=(d,row)=>(row.kind==='equipment'?d.by.equipments:d.by.items)[row.id];
 const uses={scrap_iron:'熔炼精铁，或加工淬炼钢。',iron:'打造和强化装备，也可加工淬炼钢。',wood:'用于打造守路长枪；与寨内营建木材分开存放。',cloth:'制作衣甲、药品和密织麻布。',grain:'制作干粮、煎煮壮骨汤。',herb:'合成金创药、煎药引，也用于多种补给配方。',leather:'打造装备、加工鞣制硬革。',tiger_skin:'加工鞣制硬革、制作烟幕包。',tiger_bone:'煎制浓制药引、制作军医药箱。',strength_shard:'5 枚合成 1 张强化符。',strength_charm:'装备强化到 +6 及以上时使用。',martial_pages:'2 张可抄录指定好汉的招式书。',mount_feed:'喂养坐骑，增加 10 亲密。',horse_feed:'配合药草加工精制草料。',mount_token:'用于坐骑升阶。',spirit_essence:'用于好汉升品。'};
