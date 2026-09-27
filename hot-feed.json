@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-26T22:52:27.536Z",
+  "generatedAt": "2026-09-27T01:28:45.106Z",
   "intelligence": {
-    "updatedAt": "2026-09-26T22:52:27.536Z",
+    "updatedAt": "2026-09-27T01:28:45.106Z",
     "items": [
       {
-        "id": "cn-item-b1c91fb9d5ec9f78",
+        "id": "cn-item-a5f2fd994e28bd9f",
         "category": "cn",
-        "title": "“请3休13”，一些职场人“拼假游”“拼 ” 出新体验",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-27/10704310.shtml",
+        "title": "全网模仿“闪身步”藏隐患 别拿膝盖跟风网红动作",
+        "url": "https://www.chinanews.com.cn/jk/2026/09-27/10704321.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-26T22:45:19.000Z",
-        "summary": "有的自驾游三个城市，有的边玩边学做木工，还有的游玩三个欧洲国家",
+        "publishedAt": "2026-09-27T00:28:19.000Z",
+        "summary": "近日，一条“闪身步”的切片视频爆火网络，引发大量网友和明星的模仿和二创。据了解，该视频片段来自一条安徽花鼓灯舞蹈的教学视频，而“闪身步”是其中的一个基本功动作。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49859112",
+        "id": "hn-49844657",
         "category": "dev",
-        "title": "DeepSeek Elastic Compute (DSec)",
-        "url": "https://arxiv.org/abs/2609.22978",
+        "title": "Does Georgism work? Five years later",
+        "url": "https://www.astralcodexten.com/p/does-georgism-work-five-years-later",
         "source": "Hacker News",
-        "publishedAt": "2026-09-26T18:22:41.000Z",
+        "publishedAt": "2026-09-25T13:48:38.000Z",
         "badge": "HN",
-        "signal": "104 分 · 24 评论"
+        "signal": "100 分 · 55 评论"
       },
       {
-        "id": "cn-it-4e3dee0971f913b1",
+        "id": "cn-it-cb4aca412a7a0543",
         "category": "cn",
-        "title": "Anthropic Claude 刷新物理学世界纪录：单挑基于杨振宁理论 9 圈难题",
-        "url": "https://www.ithome.com/1/007/444.htm",
+        "title": "开发商“日本一”与索尼讨论停产实体盘问题，称双方或许能找到某种妥协方案",
+        "url": "https://www.ithome.com/1/007/468.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-26T15:44:10.000Z",
-        "summary": "Anthropic 官宣，Claude 拿下了理论物理的一项前沿纪录。 它在几乎无人类干预的情况下，连续运行数天，一举攻克了高能物理学界出了名难算的「九圈散射振幅」计算难题！ 具体来说，它算出了平面 N=4 超杨-米尔斯理论里六粒子振幅的九圈结果，人类此前的纪录停在八圈。 注意，杨-米尔斯模型（Yang-Mills）其中的「杨」，指的正是物理学泰斗杨振宁先生。 他与米尔斯在 1954 年共同创立的「杨-米尔斯理论」，是整个现代粒子物理学的基石。 基于它的任何高阶计算，都堪称…",
+        "publishedAt": "2026-09-27T01:27:25.000Z",
+        "summary": "IT之家 9 月 27 日消息，据外媒 Kotaku 本周（9 月 25 日）报道，“日本一”开发商 CEO 北角浩一最近对索尼 2028 年停产 PS 新游戏实体光盘感到担忧。他乐观地认为， 双方或许能找到某种妥协方案 ， 让公司继续售卖限定版实体游戏 。 IT之家从原报道获悉，日本一不仅会为自家游戏推出实体版本，还会推出精心制作的限定盒装版，除了游戏光盘 / 卡带外还附带各种周边。该公司曾短暂尝试过任天堂 Switch 2 的钥匙卡，但玩家群体对此强烈反对。 北角浩一表…",
         "badge": "IT之家"
       },
       {
@@ -76,24 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244952",
+        "id": "v2ex-1244975",
         "category": "dev",
-        "title": "开始弃用 vscode",
-        "url": "https://www.v2ex.com/t/1244952",
+        "title": "刚刚验证还可以注册 muse，并直接注册成功，没有跳出 xyk 验证的路径",
+        "url": "https://www.v2ex.com/t/1244975",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-26T16:23:44.000Z",
-        "summary": "Agent 时代，曾经陪我从 16 年走到 26 年的 vscode ，或者说 以 vscode 为基础开发的编辑器都给我弃用了。cursor,antigravity IDE 都不再需要了。 实话说 vscode 在 mac 一直存在一个奇怪的 bug 。有时候打开太久的时候，整个编辑器的内容都变得不可用，只有一个灰灰的背景色。一直没有修复。不过我大概再也不会关注这个问题了。 把这些都删除之后，下载了 ZED 作为编辑器。关闭 ZED 里面的所有 AI 功能。一个高效，简洁…",
+        "publishedAt": "2026-09-27T00:49:26.000Z",
+        "summary": "用的刚刚这个帖子注册的 https://www.v2ex.com/t/1244920 我的注册都是用的 Google 联合登录 注册 muse 时用的注册过 Facebook 的 Google 邮箱地址， 验证后直接到了 muse 主页，没有 xyk 验证这一步 大家可以自测一下 附上邀请码 ZVSJX6 加入后 48 小时内通过“设置”兑现邀请码，就能获得 10 亿个 Muse 词元。 ZVSJX6",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-a902d0c00d0bbf23",
+        "id": "cn-baidu-d1407268669df27f",
         "category": "cn",
-        "title": "中美达成八点成果共识",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%BE%8E%E8%BE%BE%E6%88%90%E5%85%AB%E7%82%B9%E6%88%90%E6%9E%9C%E5%85%B1%E8%AF%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“赛考斯”还有一个“中国女儿”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E8%B5%9B%E8%80%83%E6%96%AF%E2%80%9D%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%AA%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%A5%B3%E5%84%BF%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "近日，“赛考斯”与中国治沙英雄殷玉珍重逢的故事感动全网。鲜为人知的是，他还有一个“中国女儿”。2000年，27岁的周湘立赴美任交换教师，住进赛考斯家中，他主动邀请她入住，仅收象征性租金，将她当家人一样对待。",
         "badge": "热搜",
-        "signal": "7,809,153 热度"
+        "signal": "7,807,966 热度"
       },
       {
         "id": "cisa-kev-cve-2026-65660",
@@ -116,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49842764",
+        "id": "hn-49859112",
         "category": "dev",
-        "title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
-        "url": "https://github.com/InfinityLoop1308/PipePipe",
+        "title": "DeepSeek Elastic Compute (DSec)",
+        "url": "https://arxiv.org/abs/2609.22978",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T10:55:40.000Z",
+        "publishedAt": "2026-09-26T18:22:41.000Z",
         "badge": "HN",
-        "signal": "283 分 · 152 评论"
+        "signal": "157 分 · 43 评论"
       },
       {
-        "id": "cn-item-3dea84175b8a6e2e",
+        "id": "cn-item-37714544513e1248",
         "category": "cn",
-        "title": "4条高铁将同日开通 多地迈入高铁时代",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-27/10704309.shtml",
+        "title": "南部战区位黄岩岛周边海空域组织海空联合演训",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-27/10704317.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-26T22:41:54.000Z",
-        "summary": "本报北京9月26日电(记者刘静)记者今天从中国国家铁路集团有限公司获悉，京港高铁雄安至商丘段、西渝高铁西安至安康段、宜昌至兴山高铁、哈尔滨至伊春高铁将于9月28日集中开通运营。4条线路横跨南北、纵贯东西，覆盖华北、东北、西北、华中四大区域，以350公里、250公里不同时速等级的钢铁动脉，打破地域时空壁垒，让多地正式迈入高铁时代。",
+        "publishedAt": "2026-09-27T00:08:08.000Z",
+        "summary": "中新网9月27日电 据“南部战区”微信公众号消息，9月27日，中国人民解放军南部战区位黄岩岛周边海空域组织海空联合演训，这是针对当前个别国家破坏地区和平稳定的必要行动，旨在检验提升部队维护国家领土主权和海洋权益的实战能力。",
         "badge": "中新网要闻"
       },
       {
@@ -157,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244940",
+        "id": "v2ex-1244973",
         "category": "dev",
-        "title": "写了个支持脚本化的 J-Link RTT 命令行工具（rttsh）， AI 在板调试、批量脚本验证、数据导出、CI ...",
-        "url": "https://www.v2ex.com/t/1244940",
+        "title": "怎么在安卓上使用富途交易？",
+        "url": "https://www.v2ex.com/t/1244973",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-26T14:23:03.000Z",
-        "summary": "正文 各位好，写了个工具分享给大家，也顺便收集反馈。 背景是我自己做固件时的老问题：代码写完，烧进板子，开串口终端，敲几个命令，看看输出对不对，或者复制贴给 AI 。单次一两分钟，但改一处就要来一遍，回归全靠记忆，经常漏。想放 CI 里，又会遇到： UART 往往被业务日志占用，或者根本没引出； 串口在 CI 里不好枚举，多板并行更麻烦； 烧录要另一个工具，和验证流程对不上。 后来发现我这场景下 RTT 很合适：SEGGER J-Link 的 RTT 走调试探针，不占外设。…",
+        "publishedAt": "2026-09-27T00:40:27.000Z",
+        "summary": "在 iOS 上似乎比较简单，只要使用 HK 节点基本上就 ok 了，但在安卓上似乎比较麻烦。 失败尝试： 关掉定位 试过多种节点都不 work (Global, 栈模式 :System ）. 使用 nrfr 修改了 SIM 卡的国别和运营商，也不 work. 在交易的时候，富途总是能精准识别到在中国大陆。（而且我没开启定位权限） 求助万能的 V 友们： 你们是怎么来绕开的？求分享。 富途到底是怎么来识别的",
         "badge": "程序员",
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-9f006576c1f4ab39",
+        "id": "cn-it-6ad3893be59aa2f6",
         "category": "cn",
-        "title": "宇树王兴兴回应为何造 390 万元起的载人变形机甲：大型机器人是行业不可阻挡的趋势",
-        "url": "https://www.ithome.com/1/007/443.htm",
+        "title": "微软员工为 Copilot 辩护：没人用的印象来自旧金山科技泡沫",
+        "url": "https://www.ithome.com/1/007/466.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-26T14:29:11.000Z",
-        "summary": "IT之家 9 月 26 日消息，今年 5 月，宇树科技发布 GD01 载人变形机甲， 390 万元起 。 9 月 23 日至 27 日，第五届全球数字贸易博览会在杭州举行。宇树 GD01 载人机甲现身数贸会主题馆，据科创板日报报道，现场工作人员表示，问价的人不少，还没有卖出去一台。 在数贸会数字贸易与人工智能对话论坛上，宇树科技创始人王兴兴以《从机械到灵智 —— 具身未来进化论》为题发表主旨演讲。在演讲中，王兴兴解释了为什么要研发这台载人机甲。 随着 AI 与机器人底层技术…",
+        "publishedAt": "2026-09-27T01:18:44.000Z",
+        "summary": "IT之家 9 月 27 日消息，据 Windows Latest 报道，微软首席执行官萨提亚 · 纳德拉（Satya Nadella）宣布 Copilot 迎来迄今规模最大的更新，甚至将其称为“面向工作的全新操作系统”后，一条略带嘲讽意味的评论迅速获得了 20 万次浏览。 “认真问一句：到底有谁在用 Copilot？”一名开发者关系工程师发问。 通常情况下，这类评论不会得到微软方面的回应，因为微软很清楚，在这种争论中很难占到便宜。不过，这次新版 Copilot 的潜力似乎足…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49858513",
+        "id": "hn-49842764",
         "category": "dev",
-        "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
-        "url": "https://github.com/reladraw/reladraw",
+        "title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
+        "url": "https://github.com/InfinityLoop1308/PipePipe",
         "source": "Hacker News",
-        "publishedAt": "2026-09-26T17:10:40.000Z",
+        "publishedAt": "2026-09-25T10:55:40.000Z",
         "badge": "HN",
-        "signal": "124 分 · 35 评论"
+        "signal": "317 分 · 168 评论"
       },
       {
-        "id": "cn-baidu-0a08bd7a451e1ef3",
+        "id": "cn-baidu-331fe3668686a315",
         "category": "cn",
-        "title": "防止军国主义复活是中美共同责任",
-        "url": "https://www.baidu.com/s?wd=%E9%98%B2%E6%AD%A2%E5%86%9B%E5%9B%BD%E4%B8%BB%E4%B9%89%E5%A4%8D%E6%B4%BB%E6%98%AF%E4%B8%AD%E7%BE%8E%E5%85%B1%E5%90%8C%E8%B4%A3%E4%BB%BB&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国选手刷新了尘封36年的纪录",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E9%80%89%E6%89%8B%E5%88%B7%E6%96%B0%E4%BA%86%E5%B0%98%E5%B0%8136%E5%B9%B4%E7%9A%84%E7%BA%AA%E5%BD%95&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月26日是东京审判开庭80周年，中美同为联合国安理会常任理事国，维护战后国际秩序，防止军国主义复活是双方的共同责任。",
+        "summary": "当地时间9月26日晚，在瑞穗公园陆上竞技场进行的名古屋亚运会男子三级跳远决赛中，中国选手粟文以17米42的成绩夺得冠军，同时刷新了该项目尘封36年的亚运会纪录。",
         "badge": "热搜",
-        "signal": "7,714,365 热度"
+        "signal": "7,713,716 热度"
       },
       {
         "id": "github-advisory-ghsa-vv77-66rf-pm86",
@@ -239,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244930",
+        "id": "v2ex-1244972",
         "category": "dev",
-        "title": "开源了一个自定义鼠标样式包：@sherotree/cursors",
-        "url": "https://www.v2ex.com/t/1244930",
+        "title": "屌爆了，一句话使用 Opus5.5 制作了一个开源项目 StrokeMouse 宣传片，附提示词",
+        "url": "https://www.v2ex.com/t/1244972",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-26T13:40:30.000Z",
-        "summary": "从自己的设计工具站 Uwarp 里拆出来的一套 SVG hotspot cursor ，做成了 npm 包： https://github.com/sherotree/cursors https://www.npmjs.com/package/@sherotree/cursors README 里有个短 demo GIF 。欢迎试一下，有问题开 issue 也行。",
+        "publishedAt": "2026-09-27T00:38:09.000Z",
+        "summary": "使用了 6% 的周限额，耗时一个小时左右多，为 https://github.com/Licoy/StrokeMouse 制作了这个宣传片，效果还是很不错的，但是优化的空间还是存在 https://www.bilibili.com/video/BV1rsho63EW8 或者也可以直接 X 上看（比较高清，B 站要会员才 60 帧）： https://x.com/licoycn/status/2103867067195928690 提示词为 帮我制作一个视频，主题是介绍当前项…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-item-34f0cd528342d66e",
+        "id": "cn-item-eaa632566f7deff8",
         "category": "cn",
-        "title": "驻泰国使馆提醒在泰中国公民防范强降雨及洪涝灾害",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-27/10704303.shtml",
+        "title": "大熊猫“平平”“福双”已启程赴美",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-27/10704316.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-26T16:07:38.000Z",
-        "summary": "近日，泰国多地持续出现强降雨天气，曼谷及周边地区受影响较为明显。泰国气象局发布强降雨预警称，曼谷未来一段时间仍有大范围雷雨及局地大雨天气。9月26-27日，泰国中部包括曼谷及周边地区可能出现大雨至特大暴雨，提醒公众防范持续降雨引发的洪涝灾害。曼谷市政府宣布全市均为灾害影响区域，并启动防洪救灾指挥机制。",
+        "publishedAt": "2026-09-26T23:20:45.000Z",
+        "summary": "2026年9月27日2时55分，大熊猫“平平”“福双”从成都双流机场搭乘包机前往亚特兰大动物园，开启为期十年的旅居生活。启程前，成都大熊猫繁育研究基地为两只大熊猫举办了欢送仪式。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49833444",
+        "id": "hn-49858513",
         "category": "dev",
-        "title": "LA Metro has some of the slowest escalators on Earth",
-        "url": "https://basin.la/articles/ninety-feet-a-minute.html",
+        "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
+        "url": "https://github.com/reladraw/reladraw",
         "source": "Hacker News",
-        "publishedAt": "2026-09-24T16:52:24.000Z",
+        "publishedAt": "2026-09-26T17:10:40.000Z",
         "badge": "HN",
-        "signal": "53 分 · 29 评论"
+        "signal": "176 分 · 52 评论"
       },
       {
-        "id": "cn-it-9f6168f6ba919a1f",
+        "id": "cn-it-fc676c9e4c15d027",
         "category": "cn",
-        "title": "Opus 5.5 干一半就开溜？Anthropic 揭秘：你的程序替它打了下班卡",
-        "url": "https://www.ithome.com/1/007/442.htm",
+        "title": "消息称微软 XBOX 与小岛秀夫《PHYSINT》的合作预算远低于 4 亿美元",
+        "url": "https://www.ithome.com/1/007/465.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-26T14:20:02.000Z",
-        "summary": "你让 AI Agent 连夜迁移一个代码库。第二天一早，满怀期待地打开终端，没想到只看到这样一条消息： 已完成 3 个接口迁移，接下来我将处理剩余两个端点，并补上测试。 然后，就没有下文了。想让它干完剩下的活，你还得再敲两个字：继续。本以为它会一口气干到底，结果它只给你画了张「下一步」的饼，程序就替它打卡下班了。这不是某一个人的倒霉经历。 Opus 5.5 一发布，跑 Agent 的开发者就发现，模型能力是强了，可干着干着就爱停下来，你不催它就不动。 Anthropic 自…",
+        "publishedAt": "2026-09-27T01:11:39.000Z",
+        "summary": "IT之家 9 月 27 日消息，据外媒 Windows Central 今天报道，近期一则关于微软 XBOX 工作室对游戏制作人小岛秀夫的投资传闻引发关注，该报道称双方合作金额非常夸张。 不过《PHYSINT》项目的最终花费仍然有待观察 。 过去一段时间，微软 XBOX 一直在进行大规模重组，导致数千名员工被裁员，部分工作室被关闭或合并。微软 XBOX CEO 阿莎 · 夏尔马明确表示，公司将重点放在《辐射》《上古卷轴》等知名 IP。因此有人开始质疑 XBOX 与小岛工作室…",
         "badge": "IT之家"
       },
       {
@@ -321,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1244925",
+        "id": "v2ex-1244969",
         "category": "dev",
-        "title": "关于 Keepane，我重新想了一下",
-        "url": "https://www.v2ex.com/t/1244925",
+        "title": "大家 muse 都是怎么使用的？",
+        "url": "https://www.v2ex.com/t/1244969",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-26T13:14:03.000Z",
-        "summary": "之前仅仅是因为个人需求，没有深度调研吧，重复造了个 windows 的 tmux ，当时叫 wmux ，然后发现可能早就烂大街了，而且 ai 写的乱七八糟，所以现在还是自己来写吧，先说声抱歉，浪费大家时间，现在都是我自己写的。 然后后面我想了一下，既然这个东西做出来了，而且前面本身就有很多优秀的项目了，我实在不想做个烂东西，就考虑了一下定位。目前已经实现的特性，现在是这样的： 手机端控制，局域网或者 tailscale 联通的，可以通过手机查看所有 window 和 pan…",
+        "publishedAt": "2026-09-27T00:11:29.000Z",
+        "summary": "美国 ip 网页能打开，但是登录不上,这个页面打不开： https://auth.muse.ai/aymh/?origin=https%3A%2F%2Fmuse.ai 都下载的客户端还是直接在网页里使用？ 1 、 https://www.hyperbrowser.ai/ 注册的，进去也没有要验证啥的，直接邮箱和验证码就登录了，但是登录后聊天页面要求绑定 gmail 账号，打开是登录 gmail,感觉不安全就没有登录，推出了 2 、手机用美 ip ，用 gmail 注册后就是…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-baidu-d14bc4c1a8c70851",
@@ -339,7 +340,7 @@
         "source": "百度热搜",
         "summary": "今年是中美各自发展的关键之年，中美关系又站在新的历史起点。双方应当展现大国担当，顺应人民期盼和时代大势，共同落实好两国元首重要共识，把中美建设性战略稳定关系从愿景转化为行动，朝着合作为主、竞争有度、分歧可控、和平可期的方向努力，走出一条两个大国在这个星球上的正确相处之道。",
         "badge": "热搜",
-        "signal": "7,617,057 热度"
+        "signal": "7,616,280 热度"
       },
       {
         "id": "cisa-kev-cve-2026-71362",
@@ -369,16 +370,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-24T16:11:42.000Z",
         "badge": "HN",
-        "signal": "83 分 · 19 评论"
+        "signal": "112 分 · 25 评论"
       },
       {
-        "id": "cn-item-265a68d3fea578d9",
+        "id": "cn-item-2a7afd2ec154ee85",
         "category": "cn",
-        "title": "福建罗源县碧里乡发生滑坡泥石流险情 3人暂未联系上",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-27/10704301.shtml",
+        "title": "AI时代，为啥还要拼技能？世赛现场即答案",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-27/10704312.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-26T16:05:06.000Z",
-        "summary": "记者从福建省福州市罗源县应急指挥部了解到： 9月26日17时03分，罗源县碧里乡发生一起土地平整项目滑坡-泥石流险情。险情发生后，当地第一时间组织6支、116名专业力量，开展人员搜救、应急抢险，并做好现场清理、道路疏通、人员安置等工作。目前，有2处房屋受损、3人暂未联系上，受阻道路已抢通。",
+        "publishedAt": "2026-09-26T22:51:35.000Z",
+        "summary": "一生只能参与一次，全球青年同台竞技——",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1244920",
+        "id": "v2ex-1244952",
         "category": "dev",
-        "title": "26 号还能注册 muse.ai 的方法",
-        "url": "https://www.v2ex.com/t/1244920",
+        "title": "开始弃用 vscode",
+        "url": "https://www.v2ex.com/t/1244952",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-26T12:26:34.000Z",
-        "summary": "1: https://www.hyperbrowser.ai/ 注册这个网站, 我用的 gmail 联合登陆. 2: 点击左侧的 playground,再点击中间上部的 run 3 出现的浏览器左下角点击全屏 4: 地址栏输入 muse.ai 5: 输入邮箱继续, 一个 gmail 不成功的话, 多试几个. 6: 用国内 visa master 信用卡都能验证, 下面的国家 我选择的美国, 邮编填的是: 37210 7: 成功的兄弟, 可以在左下角设置里面填入我的邀请码: …",
+        "publishedAt": "2026-09-26T16:23:44.000Z",
+        "summary": "Agent 时代，曾经陪我从 16 年走到 26 年的 vscode ，或者说 以 vscode 为基础开发的编辑器都给我弃用了。cursor,antigravity IDE 都不再需要了。 实话说 vscode 在 mac 一直存在一个奇怪的 bug 。有时候打开太久的时候，整个编辑器的内容都变得不可用，只有一个灰灰的背景色。一直没有修复。不过我大概再也不会关注这个问题了。 把这些都删除之后，下载了 ZED 作为编辑器。关闭 ZED 里面的所有 AI 功能。一个高效，简洁…",
         "badge": "程序员",
-        "signal": "34 回复"
+        "signal": "13 回复"
       },
       {
-        "id": "cn-it-79acde79d3faa356",
+        "id": "cn-it-ed0bd1403cd09f76",
         "category": "cn",
-        "title": "从代码分析到授权争议：一用户用 AI 破解 IDM 引发争议",
-        "url": "https://www.ithome.com/1/007/441.htm",
+        "title": "2026 中秋档总票房突破 2.1 亿超去年，《复仇者联盟 4：终局之战（加码臻享版）》暂列第一",
+        "url": "https://www.ithome.com/1/007/464.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-26T14:12:27.000Z",
-        "summary": "IT之家 9 月 26 日消息，据 Wccftech 报道，一则关于“大语言模型破解付费软件”的帖子今日在 Reddit 上引发关注。 用户 No_Ideal8394 声称，他利用无审查限制的 Qwen3.8-Flash-Next-Uncensored ，成功破解了 Internet Download Manager（IDM）6.43 版本，使其绕过 IDM 试用限制，将软件变为完全激活版本，从而省去每年每台电脑 11.95 美元 （IT之家注：现汇率约合 80.4 元人民…",
+        "publishedAt": "2026-09-27T01:08:51.000Z",
+        "summary": "IT之家 9 月 27 日消息，据猫眼专业版数据，截至 2026 年 9 月 26 日 19 时 15 分，2026 年中秋档总票房（含预售）突破 2.10 亿，超 2025 年中秋档票房成绩。 《复仇者联盟 4：终局之战（加码臻享版）》《欢迎来龙餐馆》《八仙！》暂列中秋档票房榜前三位 。 《复仇者联盟 4：终局之战（加码臻享版）》6870.51 万元 《欢迎来龙餐馆》3797.71 万元 《八仙！》2330.51 万元 《老江湖》1847.30 万元 《空枪》1331.5…",
         "badge": "IT之家"
       },
       {
@@ -444,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49857729",
+        "id": "hn-49839567",
         "category": "dev",
-        "title": "Drawgent: Coding agent on a live Excalidraw canvas",
-        "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+        "title": "Evolving programming languages in the AI era",
+        "url": "https://dashbit.co/blog/evolving-ai-era",
         "source": "Hacker News",
-        "publishedAt": "2026-09-26T15:56:34.000Z",
+        "publishedAt": "2026-09-25T02:34:39.000Z",
         "badge": "HN",
-        "signal": "89 分 · 31 评论"
+        "signal": "26 分 · 10 评论"
       },
       {
-        "id": "cn-baidu-7823d0b1fc723c78",
+        "id": "cn-baidu-b8a3266843d804d1",
         "category": "cn",
-        "title": "林诗栋蒯曼4比0王楚钦孙颖莎夺冠",
-        "url": "https://www.baidu.com/s?wd=%E6%9E%97%E8%AF%97%E6%A0%8B%E8%92%AF%E6%9B%BC4%E6%AF%940%E7%8E%8B%E6%A5%9A%E9%92%A6%E5%AD%99%E9%A2%96%E8%8E%8E%E5%A4%BA%E5%86%A0&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "项目唯一女选手采访中笑着笑着哭了",
+        "url": "https://www.baidu.com/s?wd=%E9%A1%B9%E7%9B%AE%E5%94%AF%E4%B8%80%E5%A5%B3%E9%80%89%E6%89%8B%E9%87%87%E8%AE%BF%E4%B8%AD%E7%AC%91%E7%9D%80%E7%AC%91%E7%9D%80%E5%93%AD%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月26日，名古屋亚运会乒乓球混合双打决赛，中国队包揽金银牌！林诗栋/蒯曼组合夺得金牌，王楚钦/孙颖莎组合获得银牌。",
+        "summary": "9月26日，2026世界技能大赛瓷砖贴面项目唯一女选手、21岁的戴心怡顺利完赛。面对观众欢呼，她露出灿烂笑容，采访时却笑着笑着落下眼泪。她坦言训练中曾承受压力和自我怀疑。",
         "badge": "热搜",
-        "signal": "7,521,495 热度"
+        "signal": "7,520,778 热度"
       },
       {
         "id": "github-advisory-ghsa-62mm-xwmv-crhg",
@@ -484,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1244919",
+        "id": "v2ex-1244940",
         "category": "dev",
-        "title": "总结 muse 用途，两个字：顺滑",
-        "url": "https://www.v2ex.com/t/1244919",
+        "title": "写了个支持脚本化的 J-Link RTT 命令行工具（rttsh）， AI 在板调试、批量脚本验证、数据导出、CI ...",
+        "url": "https://www.v2ex.com/t/1244940",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-26T12:21:16.000Z",
-        "summary": "长期使用的先放下不提，就是当 一次性工具 可以做下面这些事： 注册美区 appleid ，即开即得 注册 claude ，一开就有 注册 gmail 账户，随到随开 基本上所有之前各种人机验证的事，全没了，纯净家宽待遇",
+        "publishedAt": "2026-09-26T14:23:03.000Z",
+        "summary": "正文 各位好，写了个工具分享给大家，也顺便收集反馈。 背景是我自己做固件时的老问题：代码写完，烧进板子，开串口终端，敲几个命令，看看输出对不对，或者复制贴给 AI 。单次一两分钟，但改一处就要来一遍，回归全靠记忆，经常漏。想放 CI 里，又会遇到： UART 往往被业务日志占用，或者根本没引出； 串口在 CI 里不好枚举，多板并行更麻烦； 烧录要另一个工具，和验证流程对不上。 后来发现我这场景下 RTT 很合适：SEGGER J-Link 的 RTT 走调试探针，不占外设。…",
         "badge": "程序员",
-        "signal": "22 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -509,8 +510,8 @@
         "url": "https://github.com/paperclipai/paperclip",
         "description": "The open-source app everyone uses to manage agents at work",
         "language": "TypeScript",
-        "stars": 87169,
-        "starsToday": 2589
+        "stars": 87381,
+        "starsToday": 2608
       },
       {
         "id": "github-57687486696d1493",
@@ -519,8 +520,8 @@
         "url": "https://github.com/vectorize-io/hindsight",
         "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 32088,
-        "starsToday": 2152
+        "stars": 32236,
+        "starsToday": 2147
       },
       {
         "id": "github-b0c9659bf6e19858",
@@ -529,8 +530,8 @@
         "url": "https://github.com/NVIDIA/Model-Optimizer",
         "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
         "language": "Python",
-        "stars": 4727,
-        "starsToday": 354
+        "stars": 4759,
+        "starsToday": 357
       },
       {
         "id": "github-5b2653ab79f36aef",
@@ -539,8 +540,8 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 19180,
-        "starsToday": 845
+        "stars": 19237,
+        "starsToday": 849
       },
       {
         "id": "github-433d69852d17cbb4",
@@ -549,8 +550,8 @@
         "url": "https://github.com/tensorflow/tensorflow",
         "description": "An Open Source Machine Learning Framework for Everyone",
         "language": "C++",
-        "stars": 200436,
-        "starsToday": 31
+        "stars": 200463,
+        "starsToday": 46
       },
       {
         "id": "github-2fe557721be7835e",
@@ -559,8 +560,8 @@
         "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
         "description": "Learn it. Build it. Ship it for others.",
         "language": "Python",
-        "stars": 58325,
-        "starsToday": 828
+        "stars": 58397,
+        "starsToday": 827
       },
       {
         "id": "github-2629824cbbddbf56",
@@ -569,8 +570,8 @@
         "url": "https://github.com/openbao/openbao",
         "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
         "language": "Go",
-        "stars": 7987,
-        "starsToday": 360
+        "stars": 8010,
+        "starsToday": 364
       },
       {
         "id": "github-1605113f2702fa82",
@@ -579,8 +580,8 @@
         "url": "https://github.com/block/buzz",
         "description": "A hive mind communication platform",
         "language": "Rust",
-        "stars": 34815,
-        "starsToday": 367
+        "stars": 34834,
+        "starsToday": 339
       },
       {
         "id": "github-9d39a0593e6d7288",
@@ -589,8 +590,8 @@
         "url": "https://github.com/microsoft/vscode",
         "description": "Visual Studio Code",
         "language": "TypeScript",
-        "stars": 193062,
-        "starsToday": 78
+        "stars": 193078,
+        "starsToday": 95
       },
       {
         "id": "github-f4dc3559b4025365",
@@ -599,10 +600,10 @@
         "url": "https://github.com/zhaoxuya520/reverse-skill",
         "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "language": "PowerShell",
-        "stars": 37971,
-        "starsToday": 409
+        "stars": 38021,
+        "starsToday": 361
       }
     ],
-    "updatedAt": "2026-09-26T22:52:27.536Z"
+    "updatedAt": "2026-09-27T01:28:45.106Z"
   }
 }
