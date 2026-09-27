@@ -12,6 +12,15 @@
   "background_color": "#102c33",
   "theme_color": "#102c33",
   "categories": ["productivity", "utilities"],
+  "share_target": {
+    "action": "/nav/",
+    "method": "GET",
+    "params": {
+      "title": "share_title",
+      "text": "share_text",
+      "url": "share_url"
+    }
+  },
   "icons": [
     {
       "src": "/nav/baize-logo.webp",
