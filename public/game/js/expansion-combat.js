@@ -1,9 +1,10 @@
-import {journeyHealing} from './journey-combat.js?v=0.52.0';
-import {COMBOS,PERSONAL,LAYOUTS} from './expansion-data.js?v=0.52.0';
-import {addStatus,attackInterval} from './battle.js?v=0.52.0';
-import {contribution} from './debrief.js?v=0.52.0';
+import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.54.0';
+import {journeyHealing} from './journey-combat.js?v=0.54.0';
+import {COMBOS,PERSONAL,LAYOUTS} from './expansion-data.js?v=0.54.0';
+import {addStatus,attackInterval} from './battle.js?v=0.54.0';
+import {contribution} from './debrief.js?v=0.54.0';
 export function initializeExpansion(s,b){if(!s.expansion||b.guest||b.expansion)return;const x=s.expansion;b.expansion={version:1,smoke:false,personal:b.team.filter(u=>x.personal[u.id]).map(u=>u.id),combos:Object.fromEntries(Object.entries(COMBOS).filter(([id,m])=>(x.combos[id]||0)>=3&&m.team.every(id=>b.team.some(u=>u.id===id))).map(([id])=>[id,{count:0,readyAt:0}]))};
- if(x.smoke&&b.context.type!=='special'){s.inventory.smoke_pack--;x.smoke=false;b.expansion.smoke=true;b.log.push('【行军烟幕】已携带一包，本场主动撤退兵损减少 25%；无论是否使用，结束后不返还。');}
+ if(x.smoke&&b.context.type!=='special'&&!(b.context.type==='rotation'&&b.context.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===b.context.id))){s.inventory.smoke_pack--;x.smoke=false;b.expansion.smoke=true;b.log.push('【行军烟幕】已携带一包，本场主动撤退兵损减少 25%；无论是否使用，结束后不返还。');}
  for(const u of b.team){if(!b.expansion.personal.includes(u.id))continue;const m=PERSONAL[u.id];if(m.hp){u.maxHp=Math.round(u.maxHp*(1+m.hp));u.hp=u.maxHp;}if(m.speed){u.speed=Math.round(u.speed*(1+m.speed));u.nextAttackAt=attackInterval(u);}if(m.rage)u.rage=Math.min(100,u.rage+m.rage);if(m.armyDefense&&u.corps?.troops)u.defense=Math.round(u.defense*(1+m.armyDefense));if(u.id==='linchong')addStatus(u,{id:'guard',value:.04,turns:4},0);if(u.id==='ruanxiaoqi'&&b.depth?.terrain==='water')u.defense=Math.round(u.defense*1.05);}
  const r=x.run;if(b.context.kind==='defense'&&r){if(r.layout==='wall')for(const u of b.team)u.defense=Math.round(u.defense*1.12);if(r.layout==='archer')for(const u of b.enemy)u.hp=Math.max(1,Math.floor(u.hp*.92));if(r.layout==='trap')for(const u of b.enemy){u.speed=Math.max(1,Math.floor(u.speed*.85));u.nextAttackAt=attackInterval(u);}b.log.push('【寨防】'+LAYOUTS[r.layout].name+'：'+LAYOUTS[r.layout].text);}
  const localFaction=({yuncheng:'merchants',jingyang:'villages',dongxi:'river'})[b.context.id];if(b.context.type==='realm'&&localFaction&&x.diplomacy[b.context.id+'_'+s.daily.date.slice(0,7)]===localFaction){for(const u of b.team)u.rage=Math.min(100,u.rage+5);b.log.push('【乡盟声援】本地支持者协助出征，全队初始怒气 +5。');}}

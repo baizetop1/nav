@@ -1,12 +1,16 @@
-import { dailyExperience } from './growth-rewards.js?v=0.52.0';
-import { deployedTroops } from './logistics.js?v=0.52.0';
-import { requireRule, journal } from './utils.js?v=0.52.0';
+import { RESOURCE_ROUTES, resourceReward } from './resource-dungeons-data.js?v=0.54.0';
+import { STOCK_CAP } from './production.js?v=0.54.0';
+export { RESOURCE_ROUTES } from './resource-dungeons-data.js?v=0.54.0';
+import { dailyExperience } from './growth-rewards.js?v=0.54.0';
+import { deployedTroops } from './logistics.js?v=0.54.0';
+import { requireRule, journal } from './utils.js?v=0.54.0';
 
 export const DAILY_ROUTES=[
   {id:'ore',name:'铁石山道',days:[1,4,0],enemies:['soldier','guard'],reward:{iron:4,cloth:3,scrap_iron:3},use:'铁与布用于打造装备，碎铁用于练兵、工坊加工与重熔精铁。'},
   {id:'manual',name:'演武旧场',days:[2,5,0],enemies:['bandit','bandit_chief'],reward:{martial_pages:4,exp_pill:2},use:'武学残页用于招式升级与升品，经验丹用于提升好汉等级。'},
   {id:'stable',name:'牧野护运',days:[3,6,0],enemies:['road_raider','bandit'],reward:{mount_feed:4,mount_token:2},use:'草料用于培养坐骑亲密度，驯骑凭记用于坐骑升阶。'},
 ];
+export const ALL_DAILY_ROUTES=[...DAILY_ROUTES,...RESOURCE_ROUTES];
 export const WEEKLY_ROUTES=[
   {id:'siege',name:'破阵攻坚',enemies:['guard','bandit_chief'],terrain:'land',tip:'重甲守军护住寨门，谋攻与破甲更有效。'},
   {id:'convoy',name:'千里护粮',enemies:['road_raider','soldier'],terrain:'land',tip:'游骑绕后截粮，准备远射与护阵应对。'},
@@ -23,20 +27,27 @@ export function rotationCalendar(now){
 export const weeklyScore=(tier,elapsed,hp)=>tier*1000000+hp*100+Math.max(0,180-Math.ceil(elapsed/1000));
 export function rotationProgress(s){return s.campaign||{version:1,daily:{date:rotationCalendar(s.clock).date,uses:{}},weekly:{}};}
 export function dailyUses(s,id){const p=rotationProgress(s);return p.daily.date===rotationCalendar(s.clock).date?p.daily.uses[id]||0:0;}
+function resourceCapacityReason(s,id,tier){
+  const reward=resourceReward(id,tier);if(!reward)return '';
+  const route=RESOURCE_ROUTES.find(r=>r.id===id),key=route.resourceKey;
+  const stock=key==='silver'?s.player.silver:key==='herb'?(s.inventory.herb||0):s.camp[key],amount=key==='herb'?reward.items.herb:reward[key];
+  return stock+amount>STOCK_CAP?route.resourceName+'库存不足以容纳本次奖励，请先使用；未扣体力和次数。':'';
+}
 export function rotationPlan(s,kind,id,tier=1){
-  const cal=rotationCalendar(s.clock),weekly=kind==='weekly',route=weekly?cal.route:DAILY_ROUTES.find(r=>r.id===id),record=rotationProgress(s).weekly[cal.period];
+  const cal=rotationCalendar(s.clock),weekly=kind==='weekly',route=weekly?cal.route:ALL_DAILY_ROUTES.find(r=>r.id===id),record=rotationProgress(s).weekly[cal.period];
   requireRule(['daily','weekly'].includes(kind)&&route&&route.id===id,'这处轮换历练尚未开放。');
   requireRule(Number.isInteger(tier)&&tier>=1&&tier<=(weekly?5:3),'历练难度无效。');
   const level=weekly?5+tier*5:(tier-1)*10+1,hall=weekly?Math.ceil(tier/2)+1:tier,stamina=weekly?15:10;
-  const n=deployedTroops(s),food=weekly?5+Math.ceil(n/2):Math.ceil(n/2);
+  const resource=!!route.resource,n=resource?0:deployedTroops(s),food=resource?0:weekly?5+Math.ceil(n/2):Math.ceil(n/2);
   let reason=!s.camp?'先建立寨子':!s.team.length?'先安排出阵好汉':s.camp.buildings.hall<hall?`需要聚义厅 ${hall} 级`:Math.max(...s.team.map(id=>s.heroes[id].level))<level?`队中一人需要 ${level} 级`:'';
   if(!reason&&!weekly&&!route.days.includes(cal.weekday))reason='今日未开放，可查看七日轮换表';
   if(!reason&&!weekly&&dailyUses(s,id)>=3)reason='今日此处已挑战 3 次';
   if(!reason&&weekly&&tier>(record?.tier||0)+1)reason='先通关上一层';
   if(!reason&&s.player.stamina<stamina)reason='体力不足';
-  if(!reason&&s.camp.mode==='army'&&!n)reason='先募兵或改为英雄独行';
+  if(!reason&&!resource&&s.camp.mode==='army'&&!n)reason='先募兵或改为英雄独行';
   if(!reason&&s.camp.food<food)reason='出征粮草不足';
-  return {route,weekly,tier,level,hall,stamina,food,troops:n,reason,scale:weekly?.8+tier*.7:.55+(tier-1)*1.2,period:weekly?cal.period:cal.date};
+  if(!reason&&resource)reason=resourceCapacityReason(s,id,tier);
+  return {route,weekly,resource,tier,level,hall,stamina,food,troops:n,reason,scale:weekly?.8+tier*.7:.55+(tier-1)*1.2,period:weekly?cal.period:cal.date};
 }
 export function enterRotation(s,kind,id,tier){
   const plan=rotationPlan(s,kind,id,tier);requireRule(!plan.reason,plan.reason);
@@ -49,7 +60,19 @@ export function enterRotation(s,kind,id,tier){
 export function finishRotation(s,b){
   if(b.outcome!=='victory')return null;
   const {kind,id,tier,period}=b.context;
-  if(kind==='daily'){if(b.team.every(u=>u.hp>0)&&b.elapsed<=60000&&!b.itemReadyAt){s.campaign.mastery??={};const key=id+'_'+tier;s.campaign.mastery[key]=Math.min(2,(s.campaign.mastery[key]||0)+1);}const r=DAILY_ROUTES.find(r=>r.id===id);journal(s,`【材料历练】${r.name} ${tier} 阶完成。`);return {exp:dailyExperience(id,tier),items:Object.fromEntries(Object.entries(r.reward).map(([k,n])=>[k,n*tier]))};}
+  if(kind==='daily'){
+    const r=ALL_DAILY_ROUTES.find(r=>r.id===id);requireRule(r,'这处轮换历练尚未开放。');
+    if(r.resource)requireRule(!resourceCapacityReason(s,id,tier),resourceCapacityReason(s,id,tier));
+    if(b.team.every(u=>u.hp>0)&&b.elapsed<=60000&&!b.itemReadyAt){s.campaign.mastery??={};const key=id+'_'+tier;s.campaign.mastery[key]=Math.min(2,(s.campaign.mastery[key]||0)+1);}
+    if(r.resource){
+      const reward=resourceReward(id,tier);
+      if(reward.food)s.camp.food+=reward.food;if(reward.wood)s.camp.wood+=reward.wood;
+      journal(s,`【资源历练】${r.name} ${tier} 阶完成，${r.resourceName} +${r.amounts[tier-1]}。`);
+      return reward.items?{items:reward.items}:reward.silver?{silver:reward.silver}:null;
+    }
+    journal(s,`【材料历练】${r.name} ${tier} 阶完成。`);
+    return {exp:dailyExperience(id,tier),items:Object.fromEntries(Object.entries(r.reward).map(([k,n])=>[k,n*tier]))};
+  }
   const p=s.campaign,old=p.weekly[period],hp=Math.floor(b.team.reduce((n,u)=>n+u.hp/u.maxHp,0)/b.team.length*1000),score=weeklyScore(tier,b.elapsed,hp),first=tier>(old?.tier||0);
   if(!old||score>old.score)p.weekly[period]={tier,score,elapsed:b.elapsed,hp};
   const keys=Object.keys(p.weekly).sort();while(keys.length>48)delete p.weekly[keys.shift()];
@@ -58,19 +81,25 @@ export function finishRotation(s,b){
 }
 export function validRotationContext(c){
   if(c?.type!=='rotation'||!Number.isInteger(c.tier))return false;
-  if(c.kind==='daily')return DAILY_ROUTES.some(r=>r.id===c.id)&&validDate(c.period)&&c.tier>=1&&c.tier<=3;
+  if(c.kind==='daily')return ALL_DAILY_ROUTES.some(r=>r.id===c.id)&&validDate(c.period)&&c.tier>=1&&c.tier<=3;
   const m=periodPattern.exec(c.period);return c.kind==='weekly'&&m&&WEEKLY_ROUTES[Number(m[2])-1].id===c.id&&c.tier>=1&&c.tier<=5;
 }
 export function validateCampaign(s,check){
+  const report=s.lastBattle;
+  if(report?.context?.type==='rotation'){
+    check(validRotationContext(report.context),'轮换复盘来源');
+    if(report.context.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===report.context.id))check(report.troops===0&&report.wounded===0&&(report.fallen||0)===0,'资源历练复盘兵力');
+  }
   if(s.campaign===undefined){check(s.battle?.context.type!=='rotation','轮换战局进度');return;}
   const p=s.campaign;check(s.camp&&p&&p.version===1&&p.daily&&validDate(p.daily.date)&&p.daily.uses&&typeof p.daily.uses==='object'&&!Array.isArray(p.daily.uses)&&p.weekly&&typeof p.weekly==='object'&&!Array.isArray(p.weekly),'轮换进度');
-  for(const [id,n] of Object.entries(p.daily.uses))check(DAILY_ROUTES.some(r=>r.id===id)&&Number.isInteger(n)&&n>=0&&n<=3,'材料本次数');
-  if(p.mastery!==undefined){check(p.mastery&&typeof p.mastery==='object'&&!Array.isArray(p.mastery),'材料本熟练记录');for(const [key,n] of Object.entries(p.mastery))check(/^(ore|manual|stable)_[123]$/.test(key)&&Number.isInteger(n)&&n>=1&&n<=2,'材料本稳定通关');}
+  for(const [id,n] of Object.entries(p.daily.uses))check(ALL_DAILY_ROUTES.some(r=>r.id===id)&&Number.isInteger(n)&&n>=0&&n<=3,'每日历练次数');
+  if(p.mastery!==undefined){check(p.mastery&&typeof p.mastery==='object'&&!Array.isArray(p.mastery),'材料本熟练记录');for(const [key,n] of Object.entries(p.mastery))check(ALL_DAILY_ROUTES.some(r=>[1,2,3].some(tier=>key===r.id+'_'+tier))&&Number.isInteger(n)&&n>=1&&n<=2,'材料本稳定通关');}
   check(Object.keys(p.weekly).length<=48,'周本历史长度');
   for(const [period,r] of Object.entries(p.weekly))check(periodPattern.test(period)&&r&&Number.isInteger(r.tier)&&r.tier>=1&&r.tier<=5&&Number.isInteger(r.elapsed)&&r.elapsed>=0&&r.elapsed<=180000&&Number.isInteger(r.hp)&&r.hp>=0&&r.hp<=1000&&r.score===weeklyScore(r.tier,r.elapsed,r.hp),'周本成绩');
   check(s.scheme?.context.type!=='rotation','轮换战局类型');
   if(s.battle?.context.type==='rotation'){
     const c=s.battle.context;check(validRotationContext(c)&&!s.battle.guest,'轮换战局');
+    if(c.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===c.id))check(s.battle.expedition?.troops===0&&s.battle.team.every(u=>!u.corps||u.corps.troops===0),'资源历练只由好汉出阵');
     check(c.kind==='daily'?p.daily.date===c.period&&(p.daily.uses[c.id]||0)>0:c.tier<=(p.weekly[c.period]?.tier||0)+1,'轮换挑战记录');
   }
 }

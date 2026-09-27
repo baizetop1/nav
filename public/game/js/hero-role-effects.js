@@ -1,6 +1,6 @@
-import {EXTRA_ROLES} from './hero-role-data.js?v=0.52.0';
-import {waterBattle} from './frontier-data.js?v=0.52.0';
-import {battleTerrain} from './strategy-data.js?v=0.52.0';
+import {EXTRA_ROLES} from './hero-role-data.js?v=0.54.0';
+import {waterBattle} from './frontier-data.js?v=0.54.0';
+import {battleTerrain} from './strategy-data.js?v=0.54.0';
 const spec=(b,u)=>b.roles?.version===3&&!b.guest&&u?.side==='team'&&u.hp>0?EXTRA_ROLES[u.id]:null;
 const has=(b,u,id)=>u.statuses.some(s=>s.id===id&&s.expiresAt>b.elapsed);
 const living=b=>b.team.filter(u=>u.hp>0);

@@ -178,7 +178,12 @@
     "test:shuihu-late-mainline-cloud": "node scripts/shuihu-late-mainline-cloud-selfcheck.mjs",
     "test:shuihu-late-mainline-guide": "node scripts/shuihu-late-mainline-guide-selfcheck.mjs",
     "test:shuihu-volumes-eight-ten-content": "node scripts/shuihu-volumes-eight-ten-content-selfcheck.mjs",
-    "check:shuihu-late-mainline": "node scripts/shuihu-late-mainline-browser.mjs"
+    "check:shuihu-late-mainline": "node scripts/shuihu-late-mainline-browser.mjs",
+    "test:shuihu-resource-dungeons": "node scripts/shuihu-resource-dungeons-selfcheck.mjs",
+    "test:shuihu-resource-cloud": "node scripts/shuihu-resource-cloud-selfcheck.mjs",
+    "check:shuihu-resource-dungeons": "node scripts/shuihu-resource-dungeons-browser.mjs",
+    "test:shuihu-casualties": "node scripts/shuihu-casualties-selfcheck.mjs",
+    "check:shuihu-casualties": "node scripts/shuihu-casualties-browser.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

@@ -1,10 +1,10 @@
 # 白泽水浒 Android 安装包
 
-0.52.0（versionCode 37）为自行签名的 APK，包名 `top.baizeone.shuihu`，支持 Android 8.0 及以上。游戏资源完整内置，云存档需要联网。首次安装请使用手机系统的文件管理器打开 APK；后续使用同一签名、同一包名、递增 versionCode 的 APK 覆盖安装。
+0.54.0（versionCode 39）为自行签名的 APK，包名 `top.baizeone.shuihu`，支持 Android 8.0 及以上。游戏资源完整内置，云存档需要联网。首次安装请使用手机系统的文件管理器打开 APK；后续使用同一签名、同一包名、递增 versionCode 的 APK 覆盖安装。
 
 ## 安装与存档迁移
 
-1. 将 `artifacts/android/baize-shuihu-0.52.0.apk` 传到手机并安装。
+1. 将 `artifacts/android/baize-shuihu-0.54.0.apk` 传到手机并安装。
 2. 原浏览器中进入“存档 → 导出当前进度”，把 JSON 文件保存到手机。
 3. 打开 APK 的“存档 → 切换到“导入文件” → 从其他设备导入存档”，选择 JSON，检查预览并确认导入。
 4. 或在 APK 中下载已有云档；更新原云档仍需该档的上传密钥。
@@ -30,7 +30,7 @@ cd 'F:\nav-main\nav-main'
 
 使用站点所有者已有的 HTTPS 域名作为本地资源来源，专用路径为 `https://baizeone.top/__android__/game/`。该路径由 WebViewClient 从 APK 读取，**不请求线上站点、不需要创建线上目录**。缺失资源返回 404，不回退到网络页面。只有既有云存档来源允许外部请求，外部网页交给系统浏览器。
 
-JavaScript 原生接口仅用于显式导出存档，保存位置通过系统文件选择器由用户确定。导入也通过系统文件选择器，不申请全盘存储权限。App 使用网站原有 Origin，因此当前仅允许 `https://baizeone.top` 的 Worker CORS 配置可直接兼容；本次十二卷主线需要先将云存档 Worker 更新至 0.52.0，确认 /v1/game-version 返回 chapters: 12；没有新增数据库表，不需要执行 SQL。仅推送 GitHub 不会部署 Worker，也不会更新手机内置的游戏文件。
+JavaScript 原生接口仅用于显式导出存档，保存位置通过系统文件选择器由用户确定。导入也通过系统文件选择器，不申请全盘存储权限。App 使用网站原有 Origin，因此当前仅允许 `https://baizeone.top` 的 Worker CORS 配置可直接兼容；本次士兵伤亡修正及基础资源副本需要先将云存档 Worker 更新至 0.54.0，确认 /v1/game-version 返回 casualtyRules: 1、resourceDungeons: 1（同时保留 chapters: 12）；没有新增数据库表，不需要执行 SQL。仅推送 GitHub 不会部署 Worker，也不会更新手机内置的游戏文件。
 
 方案参考 Android 官方 [加载应用内网页](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content) 和 [APK 签名工具](https://developer.android.com/tools/apksigner)。
 

@@ -1,4 +1,4 @@
-import {hasOwn} from './utils.js?v=0.52.0';
+import {hasOwn} from './utils.js?v=0.54.0';
 export const SPECIAL_TIERS={
  1:{name:'寻常',level:5,hall:1,scale:.72,rate:1},
  2:{name:'险境',level:15,hall:2,scale:1.65,rate:1.3},

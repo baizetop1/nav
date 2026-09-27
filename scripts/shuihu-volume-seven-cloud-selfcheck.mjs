@@ -60,7 +60,7 @@ try{
  const roundtrip=async state=>{const res=await upload(state);assert.equal(res.status,200,await res.text());rev++;const got=await request('/v1/slots/'+slot,'GET',key);assert.equal(got.status,200);assert.deepEqual((await got.json()).state,state);};
  const rejectStable=async(state,status)=>{const before=db.prepare('SELECT revision,raw FROM slots WHERE id=?').get(slot),res=await upload(state);assert.equal(res.status,status,await res.text());assert.deepEqual(db.prepare('SELECT revision,raw FROM slots WHERE id=?').get(slot),before);};
  await roundtrip(legacy);for(const bad of malformed)await rejectStable(bad,400);
- await roundtrip(firstBattle);await roundtrip(retreated);await roundtrip(firstBattle);await roundtrip(settling);await roundtrip(afterProbe);await rejectStable(firstBattle,409);await roundtrip(prepared);await roundtrip(finalBattle);await roundtrip(complete);
+ await roundtrip(firstBattle);const battleRevision=rev;await roundtrip(retreated);await rejectStable(firstBattle,409);const retryRollback=await request('/v1/slots/'+slot+'/rollback','POST',key,{revision:battleRevision},rev);assert.equal(retryRollback.status,200,await retryRollback.text());rev++;assert.deepEqual((await(await request('/v1/slots/'+slot,'GET',key)).json()).state,firstBattle);await roundtrip(settling);await roundtrip(afterProbe);await rejectStable(firstBattle,409);await roundtrip(prepared);await roundtrip(finalBattle);await roundtrip(complete);
  await rejectStable(legacy,409);await rejectStable(prepared,409);await rejectStable(trench,409);
  const beforeReport=copy(complete);delete beforeReport.lastBattle;await roundtrip(beforeReport);await roundtrip(complete);
  // Explicit history rollback remains available even after chapter completion.

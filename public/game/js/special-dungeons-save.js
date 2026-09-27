@@ -1,4 +1,4 @@
-import {SPECIAL_DUNGEONS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.52.0';
+import {SPECIAL_DUNGEONS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.54.0';
 const object=o=>o!==null&&typeof o==='object'&&!Array.isArray(o);
 const exact=(o,keys)=>object(o)&&Object.keys(o).length===keys.length&&keys.every(k=>Object.hasOwn(o,k));
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;

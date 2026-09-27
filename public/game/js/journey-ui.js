@@ -1,9 +1,9 @@
-import {chronicleBanner,chronicleRunNote} from './chronicle-ui.js?v=0.52.0';
-import {planSummary,routeDropTable,campaignProgress} from './journey-campaign-ui.js?v=0.52.0';
-import {journeyNextGoal,routePrizeLine} from './journey-goals-ui.js?v=0.52.0';
-import {journeyBuildPanel,journeyEventNote,journeyBossPreview} from './journey-tactics-ui.js?v=0.52.0';
-import {journeyTradeCost,ROUTE_BOSSES,JOURNEYS,JOURNEY_TIERS,JOURNEY_GOALS,BOONS,JOURNEY_NODES,boonPool,journeyGoalReward} from './journey-data.js?v=0.52.0';
-import {journeyQuote,journeyFood} from './journey.js?v=0.52.0';import {rotationCalendar} from './rotations.js?v=0.52.0';
+import {chronicleBanner,chronicleRunNote} from './chronicle-ui.js?v=0.54.0';
+import {planSummary,routeDropTable,campaignProgress} from './journey-campaign-ui.js?v=0.54.0';
+import {journeyNextGoal,routePrizeLine} from './journey-goals-ui.js?v=0.54.0';
+import {journeyBuildPanel,journeyEventNote,journeyBossPreview} from './journey-tactics-ui.js?v=0.54.0';
+import {journeyTradeCost,ROUTE_BOSSES,JOURNEYS,JOURNEY_TIERS,JOURNEY_GOALS,BOONS,JOURNEY_NODES,boonPool,journeyGoalReward} from './journey-data.js?v=0.54.0';
+import {journeyQuote,journeyFood} from './journey.js?v=0.54.0';import {rotationCalendar} from './rotations.js?v=0.54.0';
 function rewardText(goal,tier,d){const r=journeyGoalReward(goal,tier);return [r.wood?'木材 '+r.wood:'',r.food?'粮草 '+r.food:'',...Object.entries(r.items||{}).map(([id,n])=>(d.by.items[id]?.name||id)+' '+n)].filter(Boolean).join('、');}
 export function journeyHome(s,btn,d){const t=s.realm?.trek,j=t?.journey,last=s.realm?.journey?.last,g=journeyNextGoal(s,d);return '<section class="journey-home" aria-label="下一步游玩目标"><h2>'+(j?'接着走完这一趟':g.title)+'</h2><p>'+(j?JOURNEYS[j.region].name+' · 已走 '+t.node+'/5 段，战法与暂存物资已保存。':g.text)+'</p>'+btn(j?'继续游历':g.label||'前往准备',j?{type:'ui_section',view:'realm',id:'journey'}:g.command,'primary')+(g.secondary&&!j?btn(g.secondary.label,g.secondary.command,'secondary'):'')+(last&&!j?'<p class="note">'+(last.complete?'上趟已走通':'上趟收队于')+JOURNEYS[last.region].name+'；'+(last.complete?'所得与路契已入库。':'可调整阵容后再试。')+'</p>':'')+'</section>';}
 export function journeyPanel(s,d,esc,btn){const t=s.realm?.trek,j=t?.journey,record=s.realm?.journey;

@@ -1,15 +1,15 @@
-import {lateMissionPlan,lateStory} from './late-mainline-data.js?v=0.52.0';
-import {initializeLateBattle} from './late-mainline-combat.js?v=0.52.0';
-import { seventhEnemyList, applySeventhPreparation } from './volume-seven-data.js?v=0.52.0';
-import { sixthEnemyList, applySixthPreparation } from './volume-six-data.js?v=0.52.0';
-import { deployedTroops } from './logistics.js?v=0.52.0';
-import { fifthEnemyList, applySiegePreparation } from './volume-five-data.js?v=0.52.0';
-import { applyAllianceSupport } from './volume-four-data.js?v=0.52.0';
-import { CHAPTER_MISSIONS } from './volume-three-data.js?v=0.52.0';
+import {lateMissionPlan,lateStory} from './late-mainline-data.js?v=0.54.0';
+import {initializeLateBattle} from './late-mainline-combat.js?v=0.54.0';
+import { seventhEnemyList, applySeventhPreparation } from './volume-seven-data.js?v=0.54.0';
+import { sixthEnemyList, applySixthPreparation } from './volume-six-data.js?v=0.54.0';
+import { deployedTroops } from './logistics.js?v=0.54.0';
+import { fifthEnemyList, applySiegePreparation } from './volume-five-data.js?v=0.54.0';
+import { applyAllianceSupport } from './volume-four-data.js?v=0.54.0';
+import { CHAPTER_MISSIONS } from './volume-three-data.js?v=0.54.0';
 export { CHAPTER_MISSIONS };
-import { startBattle } from './battle.js?v=0.52.0';
-import { attachTroops } from './camp.js?v=0.52.0';
-import { hasOwn, requireRule, journal } from './utils.js?v=0.52.0';
+import { startBattle } from './battle.js?v=0.54.0';
+import { attachTroops } from './camp.js?v=0.54.0';
+import { hasOwn, requireRule, journal } from './utils.js?v=0.54.0';
 export function chapterBattlePlan(s,id){const m=hasOwn(CHAPTER_MISSIONS,id)?CHAPTER_MISSIONS[id]:null,n=deployedTroops(s),food=8+Math.ceil(n/2),scouted=!!(m?.intel&&s.progress.flags.v3_scouted);
  const seventh=id.startsWith('v7_'),sixth=id.startsWith('v6_'),fifth=id.startsWith('v5_'),fourth=id.startsWith('v4_'),prior=lateStory(id)?'volume_'+({8:'seven',9:'eight',10:'nine',11:'ten',12:'eleven'})[Number(id.match(/^v(\d+)_/)[1])]+'_complete':seventh?'volume_six_complete':sixth?'volume_five_complete':fifth?'volume_four_complete':fourth?'volume_three_complete':'volume_two_complete',reason=!m?'没有此章战役。':!s.progress.flags[prior]?(lateStory(id)?'请先完成前一卷。':seventh?'先完成第六卷。':sixth?'先完成第五卷。':fifth?'先完成第四卷。':fourth?'先完成第三卷。':'先完成第二卷。'):seventh&&id==='v7_cut'&&s.progress.flags.v7_final_done?'中军已击退，无需再截援。':!s.camp?'先建立寨子。':s.camp.buildings.hall<(m.hall||1)?'聚义厅须达 '+m.hall+' 级。':s.battle||s.scheme||s.event?'先结束当前战局或际遇。':!s.team.length?'先安排出阵好汉。':!s.team.some(id=>s.heroes[id].level>=m.level)?'队中一人须达 '+m.level+' 级。':s.player.stamina<m.stamina?'体力不足。':s.camp.food<food?'粮草不足。':s.camp.mode==='army'&&!n?'请先募兵，或改为英雄独行。':'';
  return {model:m,reason,troops:n,food,stamina:m?.stamina||0,scale:(m?.scale||1)*(scouted?.85:1),scouted};}

@@ -1,41 +1,41 @@
-import {lateChoiceWarning} from './late-mainline-ui.js?v=0.52.0';
-import {specialReceipt,specialNext} from './special-dungeons-ui.js?v=0.52.0';
-import {chronicleReceipt} from './chronicle-ui.js?v=0.52.0';
-import {showFunctionMenu} from './menu-ui.js?v=0.52.0';
-import {inventoryEntry} from './provisions-ui.js?v=0.52.0';
-import {installTheme} from './theme.js?v=0.52.0';
-import {campaignReceipt} from './journey-campaign-ui.js?v=0.52.0';
-import {growthRecap,afterBattleNext} from './opening-ui.js?v=0.52.0';
-import {journeyNextGoal} from './journey-goals-ui.js?v=0.52.0';
-import {beforeScreenPaint,afterScreenPaint,installScreenPages,screenInteractionActive} from './screen-pages.js?v=0.52.0';
-import {bindDialogPages} from './dialog-pages.js?v=0.52.0';
-import {storyObjective} from './story-guide.js?v=0.52.0';
-import { supportReceipt } from './recruit-support-ui.js?v=0.52.0';
-import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.52.0';
-import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.52.0';
-import { sweepQuote } from './sweep.js?v=0.52.0';
-import { sweepDialog } from './sweep-ui.js?v=0.52.0';
-import { collectionQuote, workshopQuote } from './production.js?v=0.52.0';
-import { productionDialog } from './production-ui.js?v=0.52.0';
-import { mentorshipQuote } from './mentorship.js?v=0.52.0';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.52.0';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.52.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.52.0';
-import { presetReason } from './development.js?v=0.52.0';
-import { batchQuote } from './batch.js?v=0.52.0';
-import { batchDialog } from './batch-ui.js?v=0.52.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.52.0';
-import { ActivityLog } from './activity.js?v=0.52.0';
-import { loadData } from './data.js?v=0.52.0';
-import { dispatch, newGame } from './core.js?v=0.52.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.52.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.52.0';
-import { patchElement } from './dom.js?v=0.52.0';
+import {lateChoiceWarning} from './late-mainline-ui.js?v=0.54.0';
+import {specialReceipt,specialNext} from './special-dungeons-ui.js?v=0.54.0';
+import {chronicleReceipt} from './chronicle-ui.js?v=0.54.0';
+import {showFunctionMenu} from './menu-ui.js?v=0.54.0';
+import {inventoryEntry} from './provisions-ui.js?v=0.54.0';
+import {installTheme} from './theme.js?v=0.54.0';
+import {campaignReceipt} from './journey-campaign-ui.js?v=0.54.0';
+import {growthRecap,afterBattleNext} from './opening-ui.js?v=0.54.0';
+import {journeyNextGoal} from './journey-goals-ui.js?v=0.54.0';
+import {beforeScreenPaint,afterScreenPaint,installScreenPages,screenInteractionActive} from './screen-pages.js?v=0.54.0';
+import {bindDialogPages} from './dialog-pages.js?v=0.54.0';
+import {storyObjective} from './story-guide.js?v=0.54.0';
+import { supportReceipt } from './recruit-support-ui.js?v=0.54.0';
+import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.54.0';
+import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.54.0';
+import { sweepQuote } from './sweep.js?v=0.54.0';
+import { sweepDialog } from './sweep-ui.js?v=0.54.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.54.0';
+import { productionDialog } from './production-ui.js?v=0.54.0';
+import { mentorshipQuote } from './mentorship.js?v=0.54.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.54.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.54.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.54.0';
+import { presetReason } from './development.js?v=0.54.0';
+import { batchQuote } from './batch.js?v=0.54.0';
+import { batchDialog } from './batch-ui.js?v=0.54.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.54.0';
+import { ActivityLog } from './activity.js?v=0.54.0';
+import { loadData } from './data.js?v=0.54.0';
+import { dispatch, newGame } from './core.js?v=0.54.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.54.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.54.0';
+import { patchElement } from './dom.js?v=0.54.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.52.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.52.0';
-import { CloudClient } from './cloud.js?v=0.52.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.52.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.54.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.54.0';
+import { CloudClient } from './cloud.js?v=0.54.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.54.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 const applyTheme=installTheme();
 installScreenPages();
@@ -266,7 +266,7 @@ async function handle(command){
   }
   if(type==='story'){const warning=lateChoiceWarning(state,data,command);if(warning&&!window.confirm(warning))return;}
   if(type==='story'&&id==='v7_prepare'&&['hook','trench'].includes(command.choice)){const choice=data.by.stories[id].steps.start.choices.find(c=>c.id===command.choice),effect=command.choice==='hook'?'破阵与决战中敌军防御降低 25%。':'破阵与决战中敌军攻击降低 20%、速度降低 15%。';if(!window.confirm(choice.label+'。'+effect+' 本卷只能选一次，确认后不能更换。'))return;}
-  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.52.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
+  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.54.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
   if(type==='ui_sortieCancel'){document.getElementById('sortie-preview')?.close();return;}
   if(SORTIES.includes(type)){showSortie(command);return;}
   if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieRecommend','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortieRecommend')setup={...setup,team:command.team};if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);if(type==='ui_sortieRecommend')document.querySelector('#sortie-preview [data-dialog-tab="lineup"]').click();return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
@@ -340,6 +340,7 @@ async function handle(command){
   if(type==='ui_compareClose'){gear={...gear,comparison:null};paint();return;}
   if(type==='ui_campJump'){if(!['camp-affairs','camp-goals','camp-production','frontier-map','camp-resources','camp-mentorship'].includes(id))return;view='camp';pageSections.camp=({'camp-affairs':'affairs','camp-goals':'goals','camp-production':'production','frontier-map':'production','camp-resources':'troops','camp-mentorship':'mentorship'})[id];paint(true);const el=document.getElementById(id);for(let p=el?.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;if(id==='camp-mentorship')el?.querySelector('details')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_affairDispatch')command={type:'affairChoice',choice:'dispatch',hero:document.getElementById('affair-hero').value};
+  if(type==='ui_resourceSource'){if(!['silver','grain','timber','herbs'].includes(id)||state.battle||state.scheme||state.event)return;root.querySelectorAll('dialog[open]').forEach(el=>el.close());view='trials';pageSections.trials='resources';leaderboard.resourceRoute=id;notice='';paint(true);return;}
   if(type==='ui_materialSource'){view='trials';pageSections.trials=command.kind==='weekly'?'weekly':'daily';leaderboard.dailyRoute=id;paint(true);const target=document.querySelector('[data-fold^="rotation-'+command.kind+'-'+command.id+'-"]');if(target){target.open=true;target.scrollIntoView({block:'start'});}return;}
   if(type==='ui_gearFilter'){gear=Object.fromEntries(['query','type','quality','state'].map(k=>[k,document.getElementById('gear-'+k).value]));paint();return;}
   if(type==='ui_gearReset'){gear={};paint();for(const k of ['query','type','quality','state'])document.getElementById('gear-'+k).value=k==='query'?'':'all';return;}
@@ -425,6 +426,8 @@ root.addEventListener('submit',event=>{if(event.target.matches('[data-inventory-
 root.addEventListener('keydown',event=>{if(event.target.id==='inventory-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('[data-inventory-search] button')?.click();}if(event.target.id==='roster-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('button[data-command*="ui_rosterFilter"]')?.click();}});
 root.addEventListener('change',event=>{
   if(event.target.dataset.sectionView){if(operation)return;const section=event.target.value,view=event.target.dataset.sectionView;handle({type:'ui_section',view,id:section}).catch(e=>{error=e.message;paint();});return;}
+  if(event.target.id==='resource-tier'){if(operation)return;leaderboard.resourceTier=Number(event.target.value);paint(true);return;}
+  if(event.target.id==='resource-route'){if(operation)return;leaderboard.resourceRoute=event.target.value;paint(true);return;}
   if(event.target.id==='daily-route'){if(operation)return;leaderboard.dailyRoute=event.target.value;paint(true);return;}
   if(event.target.id==='atlas-region'){if(operation)return;mapTarget=event.target.value;paint(true);return;}
   if(event.target.id==='section-hero'){if(operation||!data.by.heroes[event.target.value])return;roster={...roster,selected:event.target.value};paint(true);document.getElementById('section-hero')?.focus({preventScroll:true});return;}
