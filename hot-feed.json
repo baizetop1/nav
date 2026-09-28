@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-28T08:41:38.676Z",
+  "generatedAt": "2026-09-28T15:29:21.760Z",
   "intelligence": {
-    "updatedAt": "2026-09-28T08:41:38.676Z",
+    "updatedAt": "2026-09-28T15:29:21.760Z",
     "items": [
       {
-        "id": "cn-item-997df6f656a0d256",
+        "id": "cn-item-7ec4b00d250c525d",
         "category": "cn",
-        "title": "西康高铁开通！肉夹馍离重庆火锅不远啦！",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-28/10704885.shtml",
+        "title": "中国七部门：到2030年全固态电池初步实现规模化应用",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704964.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T07:32:15.000Z",
-        "summary": "千里秦岭不再是天堑，南北烟火从此双向奔赴！",
+        "publishedAt": "2026-09-28T09:09:15.000Z",
+        "summary": "中新社北京9月28日电 (记者 刘亮)中国工信部等七部门28日对外发布的《新型电池产业发展“十五五”规划》(以下简称规划)提出，到2030年，全固态电池初步实现规模化应用，长寿命锂电池循环寿命达15000次。",
         "badge": "中新网要闻"
       },
       {
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49874728",
+        "id": "hn-49875913",
         "category": "dev",
-        "title": "Prompting Claude Opus 5.5",
-        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
+        "title": "Parley: Federated, decentralised chat that speaks plain IRC",
+        "url": "https://git.mills.io/prologic/parley",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T07:33:29.000Z",
+        "publishedAt": "2026-09-28T10:30:54.000Z",
         "badge": "HN",
-        "signal": "28 分 · 8 评论"
+        "signal": "194 分 · 88 评论"
       },
       {
-        "id": "cn-it-17af34dc13e7eb60",
+        "id": "cn-it-6a7145a7feaaaf78",
         "category": "cn",
-        "title": "三星电子移动固态硬盘 P9 经典版 2TB 款上市：USB4 高速，3799 元",
-        "url": "https://www.ithome.com/1/007/877.htm",
+        "title": "长城大狗 HEV 混动版车型上市，限时换新价 10.59 万元起",
+        "url": "https://www.ithome.com/1/008/063.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T08:40:30.000Z",
-        "summary": "IT之家 9 月 28 日消息，三星电子存储新品移动固态硬盘“P9 经典版”的 2TB 型号现已上架电商平台。其 标价 3799 元 ，享受 5 年质保。 P9 2TB 整体棱角分明，搭载先进的散热保护和抗冲击机身，可抗 2m 跌落与高强度振动，集成 LED 状态指示灯。 其配备 USB4 Type-C (40Gbps) 接口，顺序读取速率至高可达 4000MB/s、顺序写入速率至高可达 3800MB/s，开启智能 TurboWrite 加速后 可持续维持 2000 MB/…",
+        "publishedAt": "2026-09-28T15:27:32.000Z",
+        "summary": "IT之家 9 月 28 日消息，哈弗汽车宣布长城大狗 HEV 混动版正式上市。新车提供两驱和四驱车型，限时优惠换新价 10.59 万元起。 三款车型分别为 Hi2 电混 Pro 版、Hi4 电混 MAX 版和 Hi4 电混 MAX 领航版。建议零售价分别为 11.99 万元、12.99 万元和 13.79 万元，限时优惠换新价分别为 10.59 万元、11.59 万元和 12.39 万元。 外观方面，新车延续大狗家族方盒子造型，保留现款格栅样式，并新增半封闭式中网饰板版本。…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-q986-4x7x-gx39",
+        "id": "github-advisory-ghsa-456v-xq2p-r4cj",
         "category": "security",
-        "title": "SCBE-AETHERMOORE Unauthenticated AetherBrowser Ops API Exposes Operator Email Digests",
-        "url": "https://github.com/advisories/GHSA-q986-4x7x-gx39",
+        "title": "code-ollama: `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78)",
+        "url": "https://github.com/advisories/GHSA-456v-xq2p-r4cj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:48:03.000Z",
-        "summary": "### Summary The AetherBrowser API server (`scripts/aetherbrowser/api_server.py`) exposes the `POST /api/ops/check-email` endpoint without any authentication. Any remote attacker can call this endpoint and trigger execution of the `email_re…",
-        "badge": "CVE-2026-57443",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-28T13:59:43.000Z",
+        "summary": "## `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78) ### Summary The `grep_search` tool in `code-ollama` constructs a shell command string by interpolating attacker-controlled `pattern` and `path` arguments, t…",
+        "badge": "GHSA-456V-XQ2P-R4CJ",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
         "id": "ai-google-deepmind-34692efacd3b982a",
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245283",
+        "id": "v2ex-1245363",
         "category": "dev",
-        "title": "做了一个 agent websearch 工具， 有没有必要产品化， 想听听大家的意见",
-        "url": "https://www.v2ex.com/t/1245283",
+        "title": "前端大神看看 edge 浏览器网络面板无法监控 这是为什么？",
+        "url": "https://www.v2ex.com/t/1245363",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T08:11:02.000Z",
-        "summary": "最近研究了一下 google botguard 的算法，搞清楚了其识别自动化非人类行为的机制，由此可以解锁 agent 经 browser 操控 google search 获取搜索结果，不会触发验证, 市场上没用 agent 可以自主做到这件事情。 websearch 广泛用于消除 agent 的幻觉, 扩大知识量, 提升讯息及时度,做信息溯源. 产品可以预期的发布方式是提供主流 agent 的 tool 扩展, 让它可以自己使用, 同时接入服务器获取人类行为数据操作 g…",
+        "publishedAt": "2026-09-28T14:14:24.000Z",
+        "summary": "需要用 ai 做一个简单的前后端页面的小东西。突然发现 edge 浏览器的网络面板没办法监控请求了。 我做了一个简单的测试， 刷新页面 再多次提交登录。edge 的网络面板里面没有变化。 同样的操作 在本地 chrome 里面就是好的，可以实时看到 请求出现在面板里。 操作的视频 看这个 https://demo1.k8seasy.com/22.mp4 当然里面有个文件可能巨大 ele-plus.js 有 8.5M 这么大，以现代计算机这应该没什么，而且 chrome 就是…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-df51bc73b55ffd7e",
+        "id": "cn-baidu-df2537c758ff8ac8",
         "category": "cn",
-        "title": "日媒惊呼中国队出了怪物级天才",
-        "url": "https://www.baidu.com/s?wd=%E6%97%A5%E5%AA%92%E6%83%8A%E5%91%BC%E4%B8%AD%E5%9B%BD%E9%98%9F%E5%87%BA%E4%BA%86%E6%80%AA%E7%89%A9%E7%BA%A7%E5%A4%A9%E6%89%8D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "林诗栋4比0王楚钦男单夺冠",
+        "url": "https://www.baidu.com/s?wd=%E6%9E%97%E8%AF%97%E6%A0%8B4%E6%AF%940%E7%8E%8B%E6%A5%9A%E9%92%A6%E7%94%B7%E5%8D%95%E5%A4%BA%E5%86%A0&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "名古屋亚运会女子标枪决赛上，18岁中国选手严子怡第一投掷出70米46破纪录夺金，随后放弃5投。落后7米多的日本奥运冠军北口榛花痛哭，日媒惊呼其为“怪物级天才”。",
+        "summary": "9月28日，名古屋亚运会乒乓球男子单打决赛，中国选手林诗栋4-0战胜王楚钦夺得金牌！",
         "badge": "热搜",
-        "signal": "7,808,515 热度"
+        "signal": "7,809,589 热度"
       },
       {
         "id": "cisa-kev-cve-2026-88771",
@@ -108,44 +108,44 @@
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-hugging-face-280bf64dcca75cee",
+        "id": "ai-hugging-face-09d1d26fa19dd694",
         "category": "ai",
-        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
-        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
+        "title": "Holo4: powering generalist computer-use agents",
+        "url": "https://huggingface.co/blog/Hcompany/holo4",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-24T14:08:57.000Z",
+        "publishedAt": "2026-09-28T09:44:05.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49872723",
+        "id": "hn-49877988",
         "category": "dev",
-        "title": "Owed a billion dollars in Nvidia stock",
-        "url": "https://colo.to/nvidia-stock-narrative.html",
+        "title": "Coding Is Not Solved",
+        "url": "https://blog.alexewerlof.com/p/coding-is-not-solved",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T02:05:13.000Z",
+        "publishedAt": "2026-09-28T13:52:57.000Z",
         "badge": "HN",
-        "signal": "629 分 · 265 评论"
+        "signal": "156 分 · 136 评论"
       },
       {
-        "id": "cn-item-9583e1e3539a818a",
+        "id": "cn-item-ae4cd025b75c6494",
         "category": "cn",
-        "title": "英国歌唱家莎拉·布莱曼发文悼念刘欢：将永远怀念他",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-28/10704837.shtml",
+        "title": "市场监管总局发布13项食品快检方法 可查18种风险物质",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704929.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T06:14:04.000Z",
-        "summary": "中新网9月28日电 北京时间9月27日晚，英国歌唱家莎拉·布莱曼在社交媒体平台上悼念中国音乐家刘欢。",
+        "publishedAt": "2026-09-28T08:50:42.000Z",
+        "summary": "中新网9月28日电 据“市说新语”微信公众号消息，近日，市场监管总局发布13项食品快速检测方法。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-vj8p-hp9x-gh47",
+        "id": "github-advisory-ghsa-q986-4x7x-gx39",
         "category": "security",
-        "title": "mpp vulnerable to Gas Draining with low gas limit",
-        "url": "https://github.com/advisories/GHSA-vj8p-hp9x-gh47",
+        "title": "SCBE-AETHERMOORE Unauthenticated AetherBrowser Ops API Exposes Operator Email Digests",
+        "url": "https://github.com/advisories/GHSA-q986-4x7x-gx39",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:47:36.000Z",
-        "summary": "## Vulnerability When the server acts as the fee payer, `mpp` Elixir 0.4.0 (ZenHive/mpp) does not validate whether the `gas_limit` set by the client is enough before broadcasting. A malicious client can drain the server's gas without payin…",
-        "badge": "GHSA-VJ8P-HP9X-GH47",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-25T21:48:03.000Z",
+        "summary": "### Summary The AetherBrowser API server (`scripts/aetherbrowser/api_server.py`) exposes the `POST /api/ops/check-email` endpoint without any authentication. Any remote attacker can call this endpoint and trigger execution of the `email_re…",
+        "badge": "CVE-2026-57443",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-52e46e8371e1f699",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245270",
+        "id": "v2ex-1245358",
         "category": "dev",
-        "title": "现在上架个 app 好难啊",
-        "url": "https://www.v2ex.com/t/1245270",
+        "title": "求 Star | 会组队，也会自进化：最强多智能体系统 Raven 已开源",
+        "url": "https://www.v2ex.com/t/1245358",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T07:40:41.000Z",
-        "summary": "ICP 备案 公安备案 软著 大模型算法备案 应用安全评估 ，上架时间比开发时间长多了。",
+        "publishedAt": "2026-09-28T14:02:48.000Z",
+        "summary": "电脑里安装了这么多 Agent ，能不能有一个 Agent 调度其他所有 Agent 去完成任何任务？做得不够好时，能不能自己改进 Agent ？ 我们 EverMind 做的 Raven ，就是为了实现多智能体协作和 Harness 自进化。 接到任务后，Raven 会画出一张任务图：谁负责调研，谁写代码，哪些工作可以同时做，成果又该交给谁。Raven 内置研究、编程、设计和持续执行 Agent ，也能接入第三方 Agent ，让不同专长在同一个项目里接力。 我们还想让这…",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-08910a69a50ad84f",
+        "id": "cn-it-07c6702ccec07c8e",
         "category": "cn",
-        "title": "三星暖心行动：为美国洛杉矶山火幸存者提供家电、Galaxy Z Fold 8 折叠手机",
-        "url": "https://www.ithome.com/1/007/876.htm",
+        "title": "HMD 106 Pure 手机悄然发布，仅支持 2G 网络",
+        "url": "https://www.ithome.com/1/008/062.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T08:39:46.000Z",
-        "summary": "IT之家 9 月 28 日消息，据科技媒体 SammyGuru 今天报道，三星正在帮助美国洛杉矶火灾的幸存者们重建家园，为他们提供全新家电以及手机。 据报道，三星员工和售后专家上周随 Habitat LA's 慈善组织，在太平洋帕利塞德和马里布举办社区重建活动。此次活动一共有超 200 名志愿者、幸存者和当地居民参与，为火灾侵袭的家庭提供支持。 太平洋帕利塞德的居民西奥多 · 安（Theodore Ang）是众多受助者之一。 他的房屋在山火后遭受严重烟熏和火灾损坏 ，需要修…",
+        "publishedAt": "2026-09-28T15:19:05.000Z",
+        "summary": "IT之家 9 月 28 日消息，HMD 现已在巴基斯坦市场悄然推出 106 Pure 手机。这款产品是功能手机，仅支持 GSM 网络， 售价 3250 巴基斯坦卢比（IT之家注：现汇率合人民币 78.81 元） 。 据介绍，这款手机提供深灰色、青绿色两种配色可选，搭载紫光展锐 6531E 芯片。 规格方面， 该手机配备一块 1.8 英寸 QQVGA（120*160）显示屏 ，运行 S30+ 操作系统。配备 3.5mm 耳机接口，支持 FM 收音机，拥有 microSD 卡槽…",
         "badge": "IT之家"
       },
       {
@@ -200,64 +200,64 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49873241",
+        "id": "hn-49876760",
         "category": "dev",
-        "title": "Thinking fast and slow in AI: The role of metacognition (2021)",
-        "url": "https://arxiv.org/abs/2110.01834",
+        "title": "Show HN: Hntui – A TUI for Hacker News",
+        "url": "https://github.com/ahmd-sh/hntui",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T03:23:53.000Z",
+        "publishedAt": "2026-09-28T12:11:20.000Z",
         "badge": "HN",
-        "signal": "84 分 · 22 评论"
+        "signal": "82 分 · 35 评论"
       },
       {
-        "id": "cn-baidu-1fb0d87923b6765a",
+        "id": "cn-baidu-7a51a8de78faf463",
         "category": "cn",
-        "title": "国乒提前锁定男单冠亚军",
-        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E4%B9%92%E6%8F%90%E5%89%8D%E9%94%81%E5%AE%9A%E7%94%B7%E5%8D%95%E5%86%A0%E4%BA%9A%E5%86%9B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "骗子骗了8省11地超1亿元补贴",
+        "url": "https://www.baidu.com/s?wd=%E9%AA%97%E5%AD%90%E9%AA%97%E4%BA%868%E7%9C%8111%E5%9C%B0%E8%B6%851%E4%BA%BF%E5%85%83%E8%A1%A5%E8%B4%B4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月28日，在名古屋亚运会乒乓球男单半决赛中，林诗栋4-3战胜中国台北选手林昀儒，晋级决赛。林诗栋和王楚钦会师男单决赛，国乒提前包揽男单冠亚军。",
+        "summary": "近日，裁判文书网披露一起骗补案。此前，2018至2022年间，黄某彬在8省11地以“投资数亿”大饼骗取超1亿元补贴，项目多烂尾。起因是地方官员片面追求招商政绩，此事暴露政绩观偏差，易劣化营商环境。",
         "badge": "热搜",
-        "signal": "7,712,142 热度"
+        "signal": "7,712,841 热度"
       },
       {
-        "id": "github-advisory-ghsa-vv77-66rf-pm86",
+        "id": "github-advisory-ghsa-vj8p-hp9x-gh47",
         "category": "security",
-        "title": "mpp vulnerable to Gas Draining with no limit",
-        "url": "https://github.com/advisories/GHSA-vv77-66rf-pm86",
+        "title": "mpp vulnerable to Gas Draining with low gas limit",
+        "url": "https://github.com/advisories/GHSA-vj8p-hp9x-gh47",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:44:12.000Z",
-        "summary": "### Details When the server acts as the fee_payer, the `mpp` Elixir 0.4.0 does not validate `gas_limit`, `max_fee_per_gas` and `max_priority_fee_per_gas` before cosigning the client's fee-payer transaction. A malicious client embeds arbitr…",
-        "badge": "GHSA-VV77-66RF-PM86",
+        "publishedAt": "2026-09-25T21:47:36.000Z",
+        "summary": "## Vulnerability When the server acts as the fee payer, `mpp` Elixir 0.4.0 (ZenHive/mpp) does not validate whether the `gas_limit` set by the client is enough before broadcasting. A malicious client can drain the server's gas without payin…",
+        "badge": "GHSA-VJ8P-HP9X-GH47",
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-30aa7c0acfe7f380",
+        "id": "ai-hugging-face-280bf64dcca75cee",
         "category": "ai",
-        "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
-        "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
+        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-23T18:41:40.000Z",
+        "publishedAt": "2026-09-24T14:08:57.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245243",
+        "id": "v2ex-1245333",
         "category": "dev",
-        "title": "独立开发怎么做推广?",
-        "url": "https://www.v2ex.com/t/1245243",
+        "title": "打败 seedance 难道会是 opus？",
+        "url": "https://www.v2ex.com/t/1245333",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T06:47:10.000Z",
-        "summary": "求问 目前已经撸了好几个程序了 都有一些交易 但是不知道推广怎么做 有没有大佬指点指点 给个思路啥的?",
+        "publishedAt": "2026-09-28T11:38:53.000Z",
+        "summary": "这两天看了不少 opus5.5 做的视频和动画，视觉、音效和节奏卡点，收集整理到了一起， 很多完全是顶级制作水平了，照这个势头，有种视频模型也会被 LLM 一统江湖的感觉。 不得不说，除了封号，A 畜还是有点东西的 https://promptcat.org/",
         "badge": "程序员",
-        "signal": "17 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-item-d9352da10e8cd6fa",
+        "id": "cn-item-d67e0a48f348b643",
         "category": "cn",
-        "title": "提供12万平方公里靶场，澳大利亚要帮日本测试高超音速导弹",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-28/10704810.shtml",
+        "title": "0.2毫米，两张A4纸厚度，是选手与世界冠军的距离",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-28/10704942.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T05:44:10.000Z",
-        "summary": "中新网9月28日电(记者 刁炜)俄著名智库“俄罗斯国际事务委员会”近日刊文披露，澳大利亚已允许日本自卫队使用该国靶场，开展包括高超音速武器在内的新型导弹测试。",
+        "publishedAt": "2026-09-28T08:44:01.000Z",
+        "summary": "精细木工项目，是古老榫卯技艺与现代工业精度的融合。在第48届世界技能大赛上，该项目采用全盲题赛制，选手要在4天22小时内完成全榫卯楼梯制作。",
         "badge": "中新网要闻"
       },
       {
@@ -282,35 +282,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49868830",
+        "id": "hn-49878900",
         "category": "dev",
-        "title": "Ember-1",
-        "url": "https://fireworks.ai/blog/ember-1",
+        "title": "What Heraldry and Mon Can Teach Us About Building Visual-Identity Generators",
+        "url": "https://benovermyer.com/blog/2026/09/japanese-vs-western-heraldry/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-27T17:31:53.000Z",
+        "publishedAt": "2026-09-28T14:48:44.000Z",
         "badge": "HN",
-        "signal": "446 分 · 208 评论"
+        "signal": "6 分 · 0 评论"
       },
       {
-        "id": "cn-it-a53c6c23f723652a",
+        "id": "cn-it-267e92b7d523c419",
         "category": "cn",
-        "title": "星曜光学推出 MF 50mm F2 TRI-SIGHT 镜头：柔焦 / 标准 / 泡泡三模式，首发 2149 元",
-        "url": "https://www.ithome.com/1/007/875.htm",
+        "title": "美国 FBI 确认遭黑客袭击：员工姓名、住址及社安号码等信息被泄露",
+        "url": "https://www.ithome.com/1/008/061.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T08:39:44.000Z",
-        "summary": "IT之家 9 月 28 日消息，星曜光学 MF 50mm F2 TRI-SIGHT 全画幅手动对焦镜头今日正式上市，官方指导价 2299 元，新品首发价 2149 元（9 月 28 日 20:00 至 10 月 7 日 23:59）。 该镜头此前已在 2026 年 CP+ 展会上亮相。其最大特点是内置三种成像模式，用户通过转动镜身上的物理模式环即可切换柔焦、标准和泡泡散景三种焦外效果，无需更换镜头或加装滤镜。官方随附蝴蝶、星星、弧三角、四叶草四种图案插片，可进一步改变焦外光…",
+        "publishedAt": "2026-09-28T15:15:52.000Z",
+        "summary": "IT之家 9 月 28 日消息，据 MS NOW，美国联邦调查局（FBI）已向员工通报一起“网络安全事件”，确认其求职网站 FBIJobs.gov 遭入侵，包括员工的社会安全号码、住址、职位等信息都已被泄露。 当地时间 9 月 22 日，黑客组织 ShinyHunters 声称窃取了大量 FBI 员工及求职者数据。 FBI 于当地时间 2026 年 9 月 23 日公开表示，已注意到 ShinyHunters 声称入侵 FBIJobs.gov 并影响 FBI 员工个人身份信…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-wrvw-254r-wpmv",
+        "id": "github-advisory-ghsa-vv77-66rf-pm86",
         "category": "security",
-        "title": "CliInvoke.Specializations has command injection in PowerShell and Cmd shell wrappers",
-        "url": "https://github.com/advisories/GHSA-wrvw-254r-wpmv",
+        "title": "mpp vulnerable to Gas Draining with no limit",
+        "url": "https://github.com/advisories/GHSA-vv77-66rf-pm86",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:41:48.000Z",
-        "summary": "### Impact An OS command injection vulnerability exists in the PowerShell and Cmd shell wrappers provided by the `CliInvoke.Specializations` package (the `PowershellProcessInvoker`/`CmdProcessInvoker` invokers, and the `UsePowerShell`/`Use…",
-        "badge": "CVE-2026-100368",
-        "signal": "HIGH · CVSS 8.4"
+        "publishedAt": "2026-09-25T21:44:12.000Z",
+        "summary": "### Details When the server acts as the fee_payer, the `mpp` Elixir 0.4.0 does not validate `gas_limit`, `max_fee_per_gas` and `max_priority_fee_per_gas` before cosigning the client's fee-payer transaction. A malicious client embeds arbitr…",
+        "badge": "GHSA-VV77-66RF-PM86",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-81481aa316e38773",
@@ -322,24 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245240",
+        "id": "v2ex-1245326",
         "category": "dev",
-        "title": "免费的 Clash App 靠啥赚钱？",
-        "url": "https://www.v2ex.com/t/1245240",
+        "title": "公司 claude code 企业账号被封， 100 来人的 Team 账号都登录不了",
+        "url": "https://www.v2ex.com/t/1245326",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T06:40:13.000Z",
-        "summary": "今天发现 appstore 新上线了一个 clash App ，原生 macos 和 ios ，没有广告，没有内购，靠啥赚钱？收集用户的配置？",
+        "publishedAt": "2026-09-28T11:01:27.000Z",
+        "summary": "所有账号: Organization disabled This organization has been disabled. 希望国模能力快起来吧， 就不要这么受气了， 现在应急方案 gpt 共享账号， 和 copilot 企业 team 账号过渡, 怀疑是调休导致检测出来了",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-baidu-2e69316f9a756ca4",
+        "id": "cn-baidu-8cacb0164f183c1c",
         "category": "cn",
-        "title": "第八轮中美经贸磋商成果解读",
-        "url": "https://www.baidu.com/s?wd=%E7%AC%AC%E5%85%AB%E8%BD%AE%E4%B8%AD%E7%BE%8E%E7%BB%8F%E8%B4%B8%E7%A3%8B%E5%95%86%E6%88%90%E6%9E%9C%E8%A7%A3%E8%AF%BB&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "美民众热切期待见到“平平”“福双”",
+        "url": "https://www.baidu.com/s?wd=%E7%BE%8E%E6%B0%91%E4%BC%97%E7%83%AD%E5%88%87%E6%9C%9F%E5%BE%85%E8%A7%81%E5%88%B0%E2%80%9C%E5%B9%B3%E5%B9%B3%E2%80%9D%E2%80%9C%E7%A6%8F%E5%8F%8C%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "时隔两年，美国亚特兰大动物园27日再次迎来中国大熊猫。记者当天在亚特兰大采访，当地民众纷纷表示热切期待见到大熊猫，延续20多年的“熊猫情”。",
         "badge": "热搜",
-        "signal": "7,618,531 热度"
+        "signal": "7,618,254 热度"
       },
       {
         "id": "cisa-kev-cve-2026-87902",
@@ -353,43 +354,43 @@
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
+        "id": "ai-hugging-face-30aa7c0acfe7f380",
         "category": "ai",
-        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
-        "url": "https://huggingface.co/blog/evaleval-aisi",
+        "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
+        "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "publishedAt": "2026-09-23T18:41:40.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49870367",
+        "id": "hn-49878759",
         "category": "dev",
-        "title": "When did Google get so weird?",
-        "url": "https://sancho.bearblog.dev/google-weird/",
+        "title": "I Switched to Brave Browser",
+        "url": "https://kevquirk.com/i-switched-to-brave-browser",
         "source": "Hacker News",
-        "publishedAt": "2026-09-27T20:12:54.000Z",
+        "publishedAt": "2026-09-28T14:40:43.000Z",
         "badge": "HN",
-        "signal": "1221 分 · 685 评论"
+        "signal": "16 分 · 5 评论"
       },
       {
-        "id": "cn-item-0e8b409fbb3d1bb0",
+        "id": "cn-item-fab080d8ae86e1c9",
         "category": "cn",
-        "title": "中国最北高铁开通运营",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704788.shtml",
+        "title": "中方支持哪位联合国秘书长候选人？外交部回应",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-28/10704904.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T04:43:08.000Z",
-        "summary": "中新社黑龙江伊春9月28日电 (记者 史轶夫)中国最北高铁——哈尔滨至伊春高速铁路(以下简称哈伊高铁)28日正式开通运营，绥化、伊春等地市接入中国高铁网。",
+        "publishedAt": "2026-09-28T08:03:17.000Z",
+        "summary": "中新网北京9月28日电 (记者 谢雁冰 郭超凯)中国外交部发言人郭嘉昆28日主持例行记者会。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-j73w-8hfr-4gc9",
+        "id": "github-advisory-ghsa-wrvw-254r-wpmv",
         "category": "security",
-        "title": "CliInvoke: Argument Injection in Extensibility Runner Factory",
-        "url": "https://github.com/advisories/GHSA-j73w-8hfr-4gc9",
+        "title": "CliInvoke.Specializations has command injection in PowerShell and Cmd shell wrappers",
+        "url": "https://github.com/advisories/GHSA-wrvw-254r-wpmv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:41:36.000Z",
-        "summary": "### Impact An argument-injection vulnerability exists in the `CliInvoke` package's runner factory: `RunnerProcessFactory` on the 2.x line and `RunnerConfigurationFactory` on the 3.x line. The factory joins the runner arguments, the caller'…",
-        "badge": "CVE-2026-100369",
+        "publishedAt": "2026-09-25T21:41:48.000Z",
+        "summary": "### Impact An OS command injection vulnerability exists in the PowerShell and Cmd shell wrappers provided by the `CliInvoke.Specializations` package (the `PowershellProcessInvoker`/`CmdProcessInvoker` invokers, and the `UsePowerShell`/`Use…",
+        "badge": "CVE-2026-100368",
         "signal": "HIGH · CVSS 8.4"
       },
       {
@@ -403,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245225",
+        "id": "v2ex-1245320",
         "category": "dev",
-        "title": "趁现在无聊分享一下自己瞎琢磨出来的一套 agent 开发流程和工具",
-        "url": "https://www.v2ex.com/t/1245225",
+        "title": "做有声自媒体的别买配音包了！ yovoice 支持多角色演绎啦",
+        "url": "https://www.v2ex.com/t/1245320",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T05:56:03.000Z",
-        "summary": "Agent 工作流 English | 中文 在自托管 Forgejo 实例上的一条评论，如何变成一次代码变更，同时又不把人类 账户交给自主 agent 。三个部分协同完成： 组件 位置 职责 Forgejo https://forgejo.shylockhg.me 代码托管平台：仓库、issue 、pull request 、评论与 CI 。它是对话与代码的权威记录。 forge-bot https://github.com/Shylock-Hg/forge-bot 与具…",
+        "publishedAt": "2026-09-28T10:09:55.000Z",
+        "summary": "yovoice 即将上线的新版本正式支持本地多角色演绎。可以零成本在本地创建多人有声故事。对于做相关自媒体的人来说，可谓是重大利好。整一张好点的显卡，可以无限输出内容。",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-093f13737f2a902e",
+        "id": "cn-it-61d399294cc620a4",
         "category": "cn",
-        "title": "上汽 MG4 530 周年限量版上市，限时补贴价 8.48 万元",
-        "url": "https://www.ithome.com/1/007/873.htm",
+        "title": "AI 初创公司 Instinct 完成 10 亿美元融资，投后估值达 100 亿美元",
+        "url": "https://www.ithome.com/1/008/060.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T08:35:04.000Z",
-        "summary": "IT之家 9 月 28 日消息，上汽 MG 今日宣布，MG4 530 周年限量版正式上市， 限时补贴价 8.48 万元 。 IT之家获悉，MG4 530 周年限量版搭载宁德时代电池，续航可达 530 公里；采用 120kW / 250N·m 六合一大电机，支持 HeatMatrix 一体式热管理系统，支持 3.3kW VTOL 移动电站功能。 这款车型支持前排座椅通风 / 加热、主驾 8 点按摩、主驾座椅记忆、小憩模式、方向盘加热；搭载 15.6 英寸 2.5K 中控屏，支…",
+        "publishedAt": "2026-09-28T15:08:19.000Z",
+        "summary": "IT之家 9 月 28 日消息，据路透社今天报道，人工智能初创公司 Instinct 现已完成 10 亿美元 （IT之家注：现汇率约合 67.19 亿元人民币） 融资， 投后估值达到 100 亿美元 （现汇率约合 671.95 亿元人民币 ） ，反映出市场对 AI 智能体兴趣持续高涨。 据报道，本轮融资由红杉资本、基准资本和 Coatue 参与。Instinct 公司正在开发一款个人 AI 智能体，可以自主执行日常任务。该公司还计划推出礼宾服务，将数字智能体进一步扩展至现实…",
         "badge": "IT之家"
       },
       {
@@ -444,54 +445,55 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49869755",
+        "id": "hn-49875142",
         "category": "dev",
-        "title": "Malleable software: Restoring user agency in a world of locked-down apps (2025)",
-        "url": "https://www.inkandswitch.com/essay/malleable-software/",
+        "title": "37,500 border drawings: a map of the world as people remember it",
+        "url": "https://www.habibicode.org/thedrawnworld",
         "source": "Hacker News",
-        "publishedAt": "2026-09-27T19:01:31.000Z",
+        "publishedAt": "2026-09-28T08:35:10.000Z",
         "badge": "HN",
-        "signal": "71 分 · 29 评论"
+        "signal": "108 分 · 28 评论"
       },
       {
-        "id": "cn-baidu-225785d9f043b9b1",
+        "id": "cn-baidu-f2207da2a6abdecf",
         "category": "cn",
-        "title": "林雨薇宣布转入校园任教",
-        "url": "https://www.baidu.com/s?wd=%E6%9E%97%E9%9B%A8%E8%96%87%E5%AE%A3%E5%B8%83%E8%BD%AC%E5%85%A5%E6%A0%A1%E5%9B%AD%E4%BB%BB%E6%95%99&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "购房者加价抢购上海“老破小”",
+        "url": "https://www.baidu.com/s?wd=%E8%B4%AD%E6%88%BF%E8%80%85%E5%8A%A0%E4%BB%B7%E6%8A%A2%E8%B4%AD%E4%B8%8A%E6%B5%B7%E2%80%9C%E8%80%81%E7%A0%B4%E5%B0%8F%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月27日，在名古屋亚运会田径女子100米栏决赛中，杭州亚运会冠军林雨薇带伤出战，最终以13秒47位列第七。赛后，林雨薇发布长文宣布告别职业体坛，将进入福州大学担任体育教师。",
+        "summary": "截至9月26日，9月上海新房累计销售9717套，同比上涨22%，多盘首开“日光”后加推仍一房难求。二手房“捡漏”难现，甚至有购房者加价抢购“老破小”，一套30余平米房源最终加价5万元成交。分析师判断，上海楼市已进入止跌回稳阶段，未来或现“量稳价涨”行情。",
         "badge": "热搜",
-        "signal": "7,523,833 热度"
+        "signal": "7,522,633 热度"
       },
       {
-        "id": "github-advisory-ghsa-62mm-xwmv-crhg",
+        "id": "github-advisory-ghsa-j73w-8hfr-4gc9",
         "category": "security",
-        "title": "khoj has an unauthenticated path traversal in /home/ endpoint that allows file read from server filesystem",
-        "url": "https://github.com/advisories/GHSA-62mm-xwmv-crhg",
+        "title": "CliInvoke: Argument Injection in Extensibility Runner Factory",
+        "url": "https://github.com/advisories/GHSA-j73w-8hfr-4gc9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:38:15.000Z",
-        "summary": "### Summary The `/home/{file_path:path}` endpoint in `web_client.py` serves static files by directly concatenating the user-supplied `file_path` with the `home_directory` constant. There is no path traversal filtering, no path normalizatio…",
-        "badge": "GHSA-62MM-XWMV-CRHG",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-25T21:41:36.000Z",
+        "summary": "### Impact An argument-injection vulnerability exists in the `CliInvoke` package's runner factory: `RunnerProcessFactory` on the 2.x line and `RunnerConfigurationFactory` on the 3.x line. The factory joins the runner arguments, the caller'…",
+        "badge": "CVE-2026-100369",
+        "signal": "HIGH · CVSS 8.4"
       },
       {
-        "id": "ai-hugging-face-689d78c6e007ab8e",
+        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
         "category": "ai",
-        "title": "Transformers now runs llama.cpp quants",
-        "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+        "url": "https://huggingface.co/blog/evaleval-aisi",
         "source": "Hugging Face",
         "publishedAt": "2026-09-22T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245194",
+        "id": "v2ex-1245312",
         "category": "dev",
-        "title": "全新的项目 AICoding 有什么最佳实践吗？",
-        "url": "https://www.v2ex.com/t/1245194",
+        "title": "继 opencode go 之后， commandcode goat 也搞欺诈",
+        "url": "https://www.v2ex.com/t/1245312",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T03:42:50.000Z",
+        "publishedAt": "2026-09-28T09:38:33.000Z",
+        "summary": "背景说明： commandcode goat 在之前通知是自 9.28 之前，deepseek v4.1flash 额度限时 60$，9.28 之后降低至 40$ 其实这没什么，commandcode 在之前一致都是官转，速度能跑到 250t/s ，99%的缓存占用，即便只有 40$量也蛮大的 然而今天 9.28 号发现官方没有任何通知的情况下，在文档中修改了描述： DeepSeek V4.1 Flash carries permanently boosted monthl…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "12 回复"
       }
     ]
   },
@@ -502,64 +504,64 @@
     },
     "items": [
       {
-        "id": "github-2d4d3afa6fb542f6",
-        "rank": 1,
-        "name": "paperclipai/paperclip",
-        "url": "https://github.com/paperclipai/paperclip",
-        "description": "The open-source app everyone uses to manage agents at work",
-        "language": "TypeScript",
-        "stars": 91100,
-        "starsToday": 2401
-      },
-      {
-        "id": "github-57687486696d1493",
-        "rank": 2,
-        "name": "vectorize-io/hindsight",
-        "url": "https://github.com/vectorize-io/hindsight",
-        "description": "Hindsight: Agent Memory That Learns",
-        "language": "Python",
-        "stars": 38944,
-        "starsToday": 4520
-      },
-      {
         "id": "github-90d09492a98e7644",
-        "rank": 3,
+        "rank": 1,
         "name": "debpalash/VoiceStudio",
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 41141,
-        "starsToday": 3086
+        "stars": 42547,
+        "starsToday": 3274
       },
       {
-        "id": "github-2fe557721be7835e",
-        "rank": 4,
-        "name": "rohitg00/ai-engineering-from-scratch",
-        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-        "description": "Learn it. Build it. Ship it for others.",
-        "language": "Python",
-        "stars": 59863,
-        "starsToday": 790
-      },
-      {
-        "id": "github-61047900df5ca080",
-        "rank": 5,
-        "name": "InfinityLoop1308/PipePipe",
-        "url": "https://github.com/InfinityLoop1308/PipePipe",
-        "description": "An open-source Android app to let you browse YouTube and other services freely.",
-        "language": "Shell",
-        "stars": 6727,
-        "starsToday": 242
-      },
-      {
-        "id": "github-ebe63522fb3ce7f2",
-        "rank": 6,
-        "name": "vercel-labs/scriptc",
-        "url": "https://github.com/vercel-labs/scriptc",
-        "description": "TypeScript-to-Native Compiler",
+        "id": "github-2d4d3afa6fb542f6",
+        "rank": 2,
+        "name": "paperclipai/paperclip",
+        "url": "https://github.com/paperclipai/paperclip",
+        "description": "The open-source app everyone uses to manage agents at work",
         "language": "TypeScript",
-        "stars": 5535,
-        "starsToday": 102
+        "stars": 91997,
+        "starsToday": 3185
+      },
+      {
+        "id": "github-57687486696d1493",
+        "rank": 3,
+        "name": "vectorize-io/hindsight",
+        "url": "https://github.com/vectorize-io/hindsight",
+        "description": "Hindsight: Agent Memory That Learns",
+        "language": "Python",
+        "stars": 40160,
+        "starsToday": 4413
+      },
+      {
+        "id": "github-165b4bf6d0fcbce4",
+        "rank": 4,
+        "name": "NawfalMotii79/PLFM_RADAR",
+        "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+        "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+        "language": "PLSQL",
+        "stars": 25653,
+        "starsToday": 145
+      },
+      {
+        "id": "github-d599eb6c66a59baa",
+        "rank": 5,
+        "name": "cs341-illinois/coursebook",
+        "url": "https://github.com/cs341-illinois/coursebook",
+        "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
+        "language": "TeX",
+        "stars": 2323,
+        "starsToday": 265
+      },
+      {
+        "id": "github-8247b13667126028",
+        "rank": 6,
+        "name": "byoungd/up",
+        "url": "https://github.com/byoungd/up",
+        "description": "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
+        "language": "JavaScript",
+        "stars": 64489,
+        "starsToday": 310
       },
       {
         "id": "github-89d643cfdc660041",
@@ -568,8 +570,8 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 1242,
-        "starsToday": 114
+        "stars": 1477,
+        "starsToday": 781
       },
       {
         "id": "github-5b2653ab79f36aef",
@@ -578,20 +580,10 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 20837,
-        "starsToday": 895
-      },
-      {
-        "id": "github-376f1ebefda0a923",
-        "rank": 9,
-        "name": "willfaust/Madeira",
-        "url": "https://github.com/willfaust/Madeira",
-        "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
-        "language": "C",
-        "stars": 905,
-        "starsToday": 83
+        "stars": 21041,
+        "starsToday": 1105
       }
     ],
-    "updatedAt": "2026-09-28T08:41:38.676Z"
+    "updatedAt": "2026-09-28T15:29:21.760Z"
   }
 }
