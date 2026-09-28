@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-28T15:29:21.760Z",
+  "generatedAt": "2026-09-28T22:02:00.069Z",
   "intelligence": {
-    "updatedAt": "2026-09-28T15:29:21.760Z",
+    "updatedAt": "2026-09-28T22:02:00.069Z",
     "items": [
       {
-        "id": "cn-item-7ec4b00d250c525d",
+        "id": "cn-item-d94d9cb2af62db03",
         "category": "cn",
-        "title": "中国七部门：到2030年全固态电池初步实现规模化应用",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704964.shtml",
+        "title": "2026北京马拉松10月18日开跑 最新亮点汇总",
+        "url": "https://www.chinanews.com.cn/ty/2026/09-28/10705177.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T09:09:15.000Z",
-        "summary": "中新社北京9月28日电 (记者 刘亮)中国工信部等七部门28日对外发布的《新型电池产业发展“十五五”规划》(以下简称规划)提出，到2030年，全固态电池初步实现规模化应用，长寿命锂电池循环寿命达15000次。",
+        "publishedAt": "2026-09-28T15:10:56.000Z",
+        "summary": "中新网北京9月28日电 9月28日，2026中国银行北京马拉松暨全国马拉松锦标赛新闻发布会举行。记者从会上了解到，本次比赛定于10月18日7:30起跑，总规模达到32000人。",
         "badge": "中新网要闻"
       },
       {
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-openai-9de028fbe46cac8b",
+        "id": "ai-openai-0adf5bb2a473897d",
         "category": "ai",
-        "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
-        "url": "https://openai.com/index/proaction",
+        "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+        "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
         "source": "OpenAI",
-        "publishedAt": "2026-09-25T19:00:00.000Z",
-        "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+        "publishedAt": "2026-09-28T07:00:00.000Z",
+        "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49875913",
+        "id": "hn-49883760",
         "category": "dev",
-        "title": "Parley: Federated, decentralised chat that speaks plain IRC",
-        "url": "https://git.mills.io/prologic/parley",
+        "title": "World Labs Is Joining AMD",
+        "url": "https://www.worldlabs.ai/blog/amd-announcement",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T10:30:54.000Z",
+        "publishedAt": "2026-09-28T20:18:05.000Z",
         "badge": "HN",
-        "signal": "194 分 · 88 评论"
+        "signal": "101 分 · 28 评论"
       },
       {
-        "id": "cn-it-6a7145a7feaaaf78",
+        "id": "cn-it-2231c12d459afec8",
         "category": "cn",
-        "title": "长城大狗 HEV 混动版车型上市，限时换新价 10.59 万元起",
-        "url": "https://www.ithome.com/1/008/063.htm",
+        "title": "小米米家筒灯 / 射灯 3 Pro 新品今日开售：国补价 129.2~169.2 元",
+        "url": "https://www.ithome.com/1/008/071.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T15:27:32.000Z",
-        "summary": "IT之家 9 月 28 日消息，哈弗汽车宣布长城大狗 HEV 混动版正式上市。新车提供两驱和四驱车型，限时优惠换新价 10.59 万元起。 三款车型分别为 Hi2 电混 Pro 版、Hi4 电混 MAX 版和 Hi4 电混 MAX 领航版。建议零售价分别为 11.99 万元、12.99 万元和 13.79 万元，限时优惠换新价分别为 10.59 万元、11.59 万元和 12.39 万元。 外观方面，新车延续大狗家族方盒子造型，保留现款格栅样式，并新增半封闭式中网饰板版本。…",
+        "publishedAt": "2026-09-28T20:59:10.000Z",
+        "summary": "IT之家 9 月 29 日消息，小米上周刚推出的三款米家灯具新品将于今日 10 点开售。IT之家汇总如下： 米家筒灯 3 Pro，首发价 152 元，国补价 129.2 元 米家射灯 3 Pro，首发价 176 元，国补价 149.6 元 米家筒灯 3 Pro 人在感应版，首发价 199 元，国补价 169.2 元 活动期间晒单评价满足要求可返 10 元京东红包，预约且前 3 名购买用户还可获赠筒灯 3 Pro。 米家筒灯 3 Pro 采用弧面一体设计，无缝贴合天花板，简约…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-456v-xq2p-r4cj",
+        "id": "github-advisory-ghsa-f67j-2jqw-jpq7",
         "category": "security",
-        "title": "code-ollama: `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78)",
-        "url": "https://github.com/advisories/GHSA-456v-xq2p-r4cj",
+        "title": "Angular SSR: Denial of Service (DoS) via Infinite Loop on Malformed DOCTYPE",
+        "url": "https://github.com/advisories/GHSA-f67j-2jqw-jpq7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-28T13:59:43.000Z",
-        "summary": "## `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78) ### Summary The `grep_search` tool in `code-ollama` constructs a shell command string by interpolating attacker-controlled `pattern` and `path` arguments, t…",
-        "badge": "GHSA-456V-XQ2P-R4CJ",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-09-28T21:31:21.000Z",
+        "summary": "A Denial of Service (DoS) vulnerability exists in `@angular/platform-server`'s DOM emulation parser (`domino`). When processing untrusted user input containing an incomplete DOCTYPE declaration ending with whitespace before EOF (such as ` …",
+        "badge": "CVE-2026-101895",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-34692efacd3b982a",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245363",
+        "id": "v2ex-1245383",
         "category": "dev",
-        "title": "前端大神看看 edge 浏览器网络面板无法监控 这是为什么？",
-        "url": "https://www.v2ex.com/t/1245363",
+        "title": "Muse.ai 还可以通过 Airtap 注册！",
+        "url": "https://www.v2ex.com/t/1245383",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T14:14:24.000Z",
-        "summary": "需要用 ai 做一个简单的前后端页面的小东西。突然发现 edge 浏览器的网络面板没办法监控请求了。 我做了一个简单的测试， 刷新页面 再多次提交登录。edge 的网络面板里面没有变化。 同样的操作 在本地 chrome 里面就是好的，可以实时看到 请求出现在面板里。 操作的视频 看这个 https://demo1.k8seasy.com/22.mp4 当然里面有个文件可能巨大 ele-plus.js 有 8.5M 这么大，以现代计算机这应该没什么，而且 chrome 就是…",
+        "publishedAt": "2026-09-28T17:09:20.000Z",
+        "summary": "刚刚注册成功，特地过来分享一下～ 邀请码换 10 亿 token： 4JSB5Q 方法如下： 1. 打开 http://airtap.ai 2. 一键登录账号 3. 发送提示词“访问 http://muse.ai ，使用 xx 邮箱注册” 4. 成功率几乎 100% 验证年龄的方式有以下两种： 1 ）信用卡（实测国区 mastercard 卡可以） 2 ） Facebook/ Instagram 账号关联验证",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "7 回复"
       },
       {
         "id": "cn-baidu-df2537c758ff8ac8",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "9月28日，名古屋亚运会乒乓球男子单打决赛，中国选手林诗栋4-0战胜王楚钦夺得金牌！",
         "badge": "热搜",
-        "signal": "7,809,589 热度"
+        "signal": "7,808,375 热度"
       },
       {
         "id": "cisa-kev-cve-2026-88771",
@@ -117,65 +117,65 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49877988",
+        "id": "hn-49883844",
         "category": "dev",
-        "title": "Coding Is Not Solved",
-        "url": "https://blog.alexewerlof.com/p/coding-is-not-solved",
+        "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
+        "url": "https://github.com/firelex/jeff",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T13:52:57.000Z",
+        "publishedAt": "2026-09-28T20:23:36.000Z",
         "badge": "HN",
-        "signal": "156 分 · 136 评论"
+        "signal": "100 分 · 11 评论"
       },
       {
-        "id": "cn-item-ae4cd025b75c6494",
+        "id": "cn-item-7ec4b00d250c525d",
         "category": "cn",
-        "title": "市场监管总局发布13项食品快检方法 可查18种风险物质",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704929.shtml",
+        "title": "中国七部门：到2030年全固态电池初步实现规模化应用",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704964.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T08:50:42.000Z",
-        "summary": "中新网9月28日电 据“市说新语”微信公众号消息，近日，市场监管总局发布13项食品快速检测方法。",
+        "publishedAt": "2026-09-28T09:09:15.000Z",
+        "summary": "中新社北京9月28日电 (记者 刘亮)中国工信部等七部门28日对外发布的《新型电池产业发展“十五五”规划》(以下简称规划)提出，到2030年，全固态电池初步实现规模化应用，长寿命锂电池循环寿命达15000次。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-q986-4x7x-gx39",
+        "id": "github-advisory-ghsa-qw65-cvwx-89v3",
         "category": "security",
-        "title": "SCBE-AETHERMOORE Unauthenticated AetherBrowser Ops API Exposes Operator Email Digests",
-        "url": "https://github.com/advisories/GHSA-q986-4x7x-gx39",
+        "title": "fast-uri vulnerable to authority injection via an unvalidated port in serialize",
+        "url": "https://github.com/advisories/GHSA-qw65-cvwx-89v3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:48:03.000Z",
-        "summary": "### Summary The AetherBrowser API server (`scripts/aetherbrowser/api_server.py`) exposes the `POST /api/ops/check-email` endpoint without any authentication. Any remote attacker can call this endpoint and trigger execution of the `email_re…",
-        "badge": "CVE-2026-57443",
+        "publishedAt": "2026-09-28T21:24:39.000Z",
+        "summary": "### Impact `fast-uri` serializes the `port` component of a URI without validating it. When recomposing the authority, `fast-uri` escapes the userinfo and host components but concatenates the port verbatim, so a `port` value that is not a s…",
+        "badge": "CVE-2026-84292",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-52e46e8371e1f699",
+        "id": "ai-openai-833e9419a34f8836",
         "category": "ai",
-        "title": "Two years of OpenAI Academy",
-        "url": "https://openai.com/index/two-years-of-openai-academy",
+        "title": "Are you a Codex Original?",
+        "url": "https://openai.com/form/codex-originals",
         "source": "OpenAI",
-        "publishedAt": "2026-09-23T16:00:00.000Z",
-        "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+        "publishedAt": "2026-09-28T00:00:00.000Z",
+        "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about your story and pro…",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245358",
+        "id": "v2ex-1245381",
         "category": "dev",
-        "title": "求 Star | 会组队，也会自进化：最强多智能体系统 Raven 已开源",
-        "url": "https://www.v2ex.com/t/1245358",
+        "title": "ai 时代，怎么样快速建站？",
+        "url": "https://www.v2ex.com/t/1245381",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T14:02:48.000Z",
-        "summary": "电脑里安装了这么多 Agent ，能不能有一个 Agent 调度其他所有 Agent 去完成任何任务？做得不够好时，能不能自己改进 Agent ？ 我们 EverMind 做的 Raven ，就是为了实现多智能体协作和 Harness 自进化。 接到任务后，Raven 会画出一张任务图：谁负责调研，谁写代码，哪些工作可以同时做，成果又该交给谁。Raven 内置研究、编程、设计和持续执行 Agent ，也能接入第三方 Agent ，让不同专长在同一个项目里接力。 我们还想让这…",
+        "publishedAt": "2026-09-28T16:30:17.000Z",
+        "summary": "如题，小公司的门户网站，纯宣传作用，怎么快速建站？ 另外，在网上找到其他类似风格的，如何用 ai 仿制？",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-07c6702ccec07c8e",
+        "id": "cn-it-38432664734ae00d",
         "category": "cn",
-        "title": "HMD 106 Pure 手机悄然发布，仅支持 2G 网络",
-        "url": "https://www.ithome.com/1/008/062.htm",
+        "title": "苹果 watchOS 27.0.1 正式版发布",
+        "url": "https://www.ithome.com/1/008/070.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T15:19:05.000Z",
-        "summary": "IT之家 9 月 28 日消息，HMD 现已在巴基斯坦市场悄然推出 106 Pure 手机。这款产品是功能手机，仅支持 GSM 网络， 售价 3250 巴基斯坦卢比（IT之家注：现汇率合人民币 78.81 元） 。 据介绍，这款手机提供深灰色、青绿色两种配色可选，搭载紫光展锐 6531E 芯片。 规格方面， 该手机配备一块 1.8 英寸 QQVGA（120*160）显示屏 ，运行 S30+ 操作系统。配备 3.5mm 耳机接口，支持 FM 收音机，拥有 microSD 卡槽…",
+        "publishedAt": "2026-09-28T20:07:11.000Z",
+        "summary": "IT之家 9 月 29 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.0.1 更新（内部版本号：24R365），本次更新距离上次发布正式版间隔 14 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 watchOS 27 发布历史： 2026-09-22：watchOS 27.2 Beta 2 (24S509…",
         "badge": "IT之家"
       },
       {
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49876760",
+        "id": "hn-49880036",
         "category": "dev",
-        "title": "Show HN: Hntui – A TUI for Hacker News",
-        "url": "https://github.com/ahmd-sh/hntui",
+        "title": "Pirating the Pirates",
+        "url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T12:11:20.000Z",
+        "publishedAt": "2026-09-28T15:54:15.000Z",
         "badge": "HN",
-        "signal": "82 分 · 35 评论"
+        "signal": "345 分 · 168 评论"
       },
       {
         "id": "cn-baidu-7a51a8de78faf463",
@@ -217,18 +217,18 @@
         "source": "百度热搜",
         "summary": "近日，裁判文书网披露一起骗补案。此前，2018至2022年间，黄某彬在8省11地以“投资数亿”大饼骗取超1亿元补贴，项目多烂尾。起因是地方官员片面追求招商政绩，此事暴露政绩观偏差，易劣化营商环境。",
         "badge": "热搜",
-        "signal": "7,712,841 热度"
+        "signal": "7,712,657 热度"
       },
       {
-        "id": "github-advisory-ghsa-vj8p-hp9x-gh47",
+        "id": "github-advisory-ghsa-58mr-gqgx-xq4g",
         "category": "security",
-        "title": "mpp vulnerable to Gas Draining with low gas limit",
-        "url": "https://github.com/advisories/GHSA-vj8p-hp9x-gh47",
+        "title": "fast-uri vulnerable to host confusion via an unclosed bracket in the URI authority",
+        "url": "https://github.com/advisories/GHSA-58mr-gqgx-xq4g",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:47:36.000Z",
-        "summary": "## Vulnerability When the server acts as the fee payer, `mpp` Elixir 0.4.0 (ZenHive/mpp) does not validate whether the `gas_limit` set by the client is enough before broadcasting. A malicious client can drain the server's gas without payin…",
-        "badge": "GHSA-VJ8P-HP9X-GH47",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-28T21:23:35.000Z",
+        "summary": "### Impact `fast-uri` accepts a host that contains an unbalanced or misplaced authority bracket (`[` or `]`) without reporting an error. A host that starts with `[` but does not end with `]`, such as `[@127.0.0.1`, is neither validated as …",
+        "badge": "CVE-2026-84394",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-280bf64dcca75cee",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245333",
+        "id": "v2ex-1245377",
         "category": "dev",
-        "title": "打败 seedance 难道会是 opus？",
-        "url": "https://www.v2ex.com/t/1245333",
+        "title": "被 Google Play「12 人 14 天封闭测试」折磨半年后，写了个自动组队互测工具（BetaLobby）",
+        "url": "https://www.v2ex.com/t/1245377",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T11:38:53.000Z",
-        "summary": "这两天看了不少 opus5.5 做的视频和动画，视觉、音效和节奏卡点，收集整理到了一起， 很多完全是顶级制作水平了，照这个势头，有种视频模型也会被 LLM 一统江湖的感觉。 不得不说，除了封号，A 畜还是有点东西的 https://promptcat.org/",
+        "publishedAt": "2026-09-28T15:51:48.000Z",
+        "summary": "尝试过上架海外安卓的新个人开发者应该都知道，2023 年 11 月之后注册的个人开发者账号，Google 要求必须走封闭测试： 找到至少 12 个真人测试者，把你的 app 装上，连续保留并测试 14 天 ，然后才有资格申请正式发布。 中间遇到的问题包括但不限于 身边根本没有几个能跑去 Play 商店帮忙安装测试的朋友 发个贴找人帮忙测试，直接石沉大海 去互测群发帖求人，你帮别人装了，对方转头就卸了你的，14 天白跑 每天在群里催人\"今天打卡了没？截图发一下\"，跟催作业似的…",
         "badge": "程序员",
         "signal": "2 回复"
       },
       {
-        "id": "cn-item-d67e0a48f348b643",
+        "id": "cn-item-ae4cd025b75c6494",
         "category": "cn",
-        "title": "0.2毫米，两张A4纸厚度，是选手与世界冠军的距离",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-28/10704942.shtml",
+        "title": "市场监管总局发布13项食品快检方法 可查18种风险物质",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704929.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T08:44:01.000Z",
-        "summary": "精细木工项目，是古老榫卯技艺与现代工业精度的融合。在第48届世界技能大赛上，该项目采用全盲题赛制，选手要在4天22小时内完成全榫卯楼梯制作。",
+        "publishedAt": "2026-09-28T08:50:42.000Z",
+        "summary": "中新网9月28日电 据“市说新语”微信公众号消息，近日，市场监管总局发布13项食品快速检测方法。",
         "badge": "中新网要闻"
       },
       {
@@ -272,44 +272,44 @@
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-openai-9328fa400dd37e6b",
+        "id": "ai-openai-eb674100bb687fff",
         "category": "ai",
-        "title": "OpenAI extends cyber access to Ukraine for civilian defense",
-        "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+        "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+        "url": "https://openai.com/index/basis-tax-workbook-with-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-09-23T13:00:00.000Z",
-        "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+        "publishedAt": "2026-09-28T00:00:00.000Z",
+        "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49878900",
+        "id": "hn-49882781",
         "category": "dev",
-        "title": "What Heraldry and Mon Can Teach Us About Building Visual-Identity Generators",
-        "url": "https://benovermyer.com/blog/2026/09/japanese-vs-western-heraldry/",
+        "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
+        "url": "https://stateofutopia.com/experiments/microllmlab/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T14:48:44.000Z",
+        "publishedAt": "2026-09-28T18:58:53.000Z",
         "badge": "HN",
-        "signal": "6 分 · 0 评论"
+        "signal": "88 分 · 33 评论"
       },
       {
-        "id": "cn-it-267e92b7d523c419",
+        "id": "cn-it-58ef741e80a5c0be",
         "category": "cn",
-        "title": "美国 FBI 确认遭黑客袭击：员工姓名、住址及社安号码等信息被泄露",
-        "url": "https://www.ithome.com/1/008/061.htm",
+        "title": "苹果 iPadOS 26.7.1 正式版发布",
+        "url": "https://www.ithome.com/1/008/069.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T15:15:52.000Z",
-        "summary": "IT之家 9 月 28 日消息，据 MS NOW，美国联邦调查局（FBI）已向员工通报一起“网络安全事件”，确认其求职网站 FBIJobs.gov 遭入侵，包括员工的社会安全号码、住址、职位等信息都已被泄露。 当地时间 9 月 22 日，黑客组织 ShinyHunters 声称窃取了大量 FBI 员工及求职者数据。 FBI 于当地时间 2026 年 9 月 23 日公开表示，已注意到 ShinyHunters 声称入侵 FBIJobs.gov 并影响 FBI 员工个人身份信…",
+        "publishedAt": "2026-09-28T17:58:09.000Z",
+        "summary": "IT之家 9 月 29 日消息，苹果今日向 iPad 用户推送了 iPadOS 26.7.1 更新，本次更新距离上次发布正式版间隔 19 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 iOS/iPadOS 26 发布历史： 2026-09-10：iPadOS 26.7 (23H24) 2026-09-09：iOS 26.6.2 (23G…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-vv77-66rf-pm86",
+        "id": "github-advisory-ghsa-j3r3-mxqp-r2p4",
         "category": "security",
-        "title": "mpp vulnerable to Gas Draining with no limit",
-        "url": "https://github.com/advisories/GHSA-vv77-66rf-pm86",
+        "title": "Angular SSR: XSS via Unescaped Processing Instruction ( ) Nodes in Fallback Raw-Content Elements",
+        "url": "https://github.com/advisories/GHSA-j3r3-mxqp-r2p4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:44:12.000Z",
-        "summary": "### Details When the server acts as the fee_payer, the `mpp` Elixir 0.4.0 does not validate `gas_limit`, `max_fee_per_gas` and `max_priority_fee_per_gas` before cosigning the client's fee-payer transaction. A malicious client embeds arbitr…",
-        "badge": "GHSA-VV77-66RF-PM86",
+        "publishedAt": "2026-09-28T20:39:26.000Z",
+        "summary": "### Summary An XSS vulnerability exists in `@angular/platform-server` during server-side rendering (SSR) HTML serialization of `ProcessingInstruction` DOM nodes (` `, `nodeType === 7`) when nested inside fallback raw-content elements (` `,…",
+        "badge": "CVE-2026-88058",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245326",
+        "id": "v2ex-1245363",
         "category": "dev",
-        "title": "公司 claude code 企业账号被封， 100 来人的 Team 账号都登录不了",
-        "url": "https://www.v2ex.com/t/1245326",
+        "title": "前端大神看看 edge 浏览器网络面板无法监控 这是为什么？",
+        "url": "https://www.v2ex.com/t/1245363",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T11:01:27.000Z",
-        "summary": "所有账号: Organization disabled This organization has been disabled. 希望国模能力快起来吧， 就不要这么受气了， 现在应急方案 gpt 共享账号， 和 copilot 企业 team 账号过渡, 怀疑是调休导致检测出来了",
+        "publishedAt": "2026-09-28T14:14:24.000Z",
+        "summary": "需要用 ai 做一个简单的前后端页面的小东西。突然发现 edge 浏览器的网络面板没办法监控请求了。 我做了一个简单的测试， 刷新页面 再多次提交登录。edge 的网络面板里面没有变化。 同样的操作 在本地 chrome 里面就是好的，可以实时看到 请求出现在面板里。 操作的视频 看这个 https://demo1.k8seasy.com/22.mp4 当然里面有个文件可能巨大 ele-plus.js 有 8.5M 这么大，以现代计算机这应该没什么，而且 chrome 就是…",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-8cacb0164f183c1c",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "时隔两年，美国亚特兰大动物园27日再次迎来中国大熊猫。记者当天在亚特兰大采访，当地民众纷纷表示热切期待见到大熊猫，延续20多年的“熊猫情”。",
         "badge": "热搜",
-        "signal": "7,618,254 热度"
+        "signal": "7,618,375 热度"
       },
       {
         "id": "cisa-kev-cve-2026-87902",
@@ -363,65 +363,65 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49878759",
+        "id": "hn-49884119",
         "category": "dev",
-        "title": "I Switched to Brave Browser",
-        "url": "https://kevquirk.com/i-switched-to-brave-browser",
+        "title": "Pacing the Frontier is not the actual goal for AI labs",
+        "url": "https://www.lesswrong.com/posts/Nm4ewbYovtjq69dvH/pacing-the-frontier-is-not-the-actual-goal-for-ai-labs",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T14:40:43.000Z",
+        "publishedAt": "2026-09-28T20:47:26.000Z",
         "badge": "HN",
-        "signal": "16 分 · 5 评论"
+        "signal": "30 分 · 23 评论"
       },
       {
-        "id": "cn-item-fab080d8ae86e1c9",
+        "id": "cn-item-d67e0a48f348b643",
         "category": "cn",
-        "title": "中方支持哪位联合国秘书长候选人？外交部回应",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-28/10704904.shtml",
+        "title": "0.2毫米，两张A4纸厚度，是选手与世界冠军的距离",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-28/10704942.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T08:03:17.000Z",
-        "summary": "中新网北京9月28日电 (记者 谢雁冰 郭超凯)中国外交部发言人郭嘉昆28日主持例行记者会。",
+        "publishedAt": "2026-09-28T08:44:01.000Z",
+        "summary": "精细木工项目，是古老榫卯技艺与现代工业精度的融合。在第48届世界技能大赛上，该项目采用全盲题赛制，选手要在4天22小时内完成全榫卯楼梯制作。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-wrvw-254r-wpmv",
+        "id": "github-advisory-ghsa-q4xh-88c3-wmh7",
         "category": "security",
-        "title": "CliInvoke.Specializations has command injection in PowerShell and Cmd shell wrappers",
-        "url": "https://github.com/advisories/GHSA-wrvw-254r-wpmv",
+        "title": "jackson-databind: Duration XMLGregorianCalendar Unbounded Number Parse DoS",
+        "url": "https://github.com/advisories/GHSA-q4xh-88c3-wmh7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:41:48.000Z",
-        "summary": "### Impact An OS command injection vulnerability exists in the PowerShell and Cmd shell wrappers provided by the `CliInvoke.Specializations` package (the `PowershellProcessInvoker`/`CmdProcessInvoker` invokers, and the `UsePowerShell`/`Use…",
-        "badge": "CVE-2026-100368",
-        "signal": "HIGH · CVSS 8.4"
+        "publishedAt": "2026-09-28T20:19:46.000Z",
+        "summary": "### Summary `jackson-databind` 3.2.1 deserializes a JSON **string** bound to a `javax.xml.datatype.Duration` or `javax.xml.datatype.XMLGregorianCalendar` field by passing the raw string verbatim to `DatatypeFactory.newDuration(value)` / `n…",
+        "badge": "CVE-2026-68497",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-347b65ce144a221e",
+        "id": "ai-openai-9de028fbe46cac8b",
         "category": "ai",
-        "title": "Sam Altman’s remarks at the United Nations Security Council",
-        "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+        "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+        "url": "https://openai.com/index/proaction",
         "source": "OpenAI",
-        "publishedAt": "2026-09-23T12:00:00.000Z",
-        "summary": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+        "publishedAt": "2026-09-25T19:00:00.000Z",
+        "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245320",
+        "id": "v2ex-1245358",
         "category": "dev",
-        "title": "做有声自媒体的别买配音包了！ yovoice 支持多角色演绎啦",
-        "url": "https://www.v2ex.com/t/1245320",
+        "title": "求 Star | 会组队，也会自进化：最强多智能体系统 Raven 已开源",
+        "url": "https://www.v2ex.com/t/1245358",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T10:09:55.000Z",
-        "summary": "yovoice 即将上线的新版本正式支持本地多角色演绎。可以零成本在本地创建多人有声故事。对于做相关自媒体的人来说，可谓是重大利好。整一张好点的显卡，可以无限输出内容。",
+        "publishedAt": "2026-09-28T14:02:48.000Z",
+        "summary": "电脑里安装了这么多 Agent ，能不能有一个 Agent 调度其他所有 Agent 去完成任何任务？做得不够好时，能不能自己改进 Agent ？ 我们 EverMind 做的 Raven ，就是为了实现多智能体协作和 Harness 自进化。 接到任务后，Raven 会画出一张任务图：谁负责调研，谁写代码，哪些工作可以同时做，成果又该交给谁。Raven 内置研究、编程、设计和持续执行 Agent ，也能接入第三方 Agent ，让不同专长在同一个项目里接力。 我们还想让这…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-61d399294cc620a4",
+        "id": "cn-it-56ac580005ab9c81",
         "category": "cn",
-        "title": "AI 初创公司 Instinct 完成 10 亿美元融资，投后估值达 100 亿美元",
-        "url": "https://www.ithome.com/1/008/060.htm",
+        "title": "苹果 visionOS 27.0.1 正式版发布",
+        "url": "https://www.ithome.com/1/008/068.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T15:08:19.000Z",
-        "summary": "IT之家 9 月 28 日消息，据路透社今天报道，人工智能初创公司 Instinct 现已完成 10 亿美元 （IT之家注：现汇率约合 67.19 亿元人民币） 融资， 投后估值达到 100 亿美元 （现汇率约合 671.95 亿元人民币 ） ，反映出市场对 AI 智能体兴趣持续高涨。 据报道，本轮融资由红杉资本、基准资本和 Coatue 参与。Instinct 公司正在开发一款个人 AI 智能体，可以自主执行日常任务。该公司还计划推出礼宾服务，将数字智能体进一步扩展至现实…",
+        "publishedAt": "2026-09-28T17:58:09.000Z",
+        "summary": "IT之家 9 月 29 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.0.1 更新（内部版本号：24M372），本次更新距离上次发布正式版间隔 14 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-09-22：visionOS 27.2 Beta 2 (24N5…",
         "badge": "IT之家"
       },
       {
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49875142",
+        "id": "hn-49855059",
         "category": "dev",
-        "title": "37,500 border drawings: a map of the world as people remember it",
-        "url": "https://www.habibicode.org/thedrawnworld",
+        "title": "12,000-year-old Göbeklitepe burials explain scattered bones",
+        "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T08:35:10.000Z",
+        "publishedAt": "2026-09-26T10:16:26.000Z",
         "badge": "HN",
-        "signal": "108 分 · 28 评论"
+        "signal": "36 分 · 5 评论"
       },
       {
         "id": "cn-baidu-f2207da2a6abdecf",
@@ -462,18 +462,18 @@
         "source": "百度热搜",
         "summary": "截至9月26日，9月上海新房累计销售9717套，同比上涨22%，多盘首开“日光”后加推仍一房难求。二手房“捡漏”难现，甚至有购房者加价抢购“老破小”，一套30余平米房源最终加价5万元成交。分析师判断，上海楼市已进入止跌回稳阶段，未来或现“量稳价涨”行情。",
         "badge": "热搜",
-        "signal": "7,522,633 热度"
+        "signal": "7,520,560 热度"
       },
       {
-        "id": "github-advisory-ghsa-j73w-8hfr-4gc9",
+        "id": "github-advisory-ghsa-456v-xq2p-r4cj",
         "category": "security",
-        "title": "CliInvoke: Argument Injection in Extensibility Runner Factory",
-        "url": "https://github.com/advisories/GHSA-j73w-8hfr-4gc9",
+        "title": "code-ollama: `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78)",
+        "url": "https://github.com/advisories/GHSA-456v-xq2p-r4cj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-25T21:41:36.000Z",
-        "summary": "### Impact An argument-injection vulnerability exists in the `CliInvoke` package's runner factory: `RunnerProcessFactory` on the 2.x line and `RunnerConfigurationFactory` on the 3.x line. The factory joins the runner arguments, the caller'…",
-        "badge": "CVE-2026-100369",
-        "signal": "HIGH · CVSS 8.4"
+        "publishedAt": "2026-09-28T13:59:43.000Z",
+        "summary": "## `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78) ### Summary The `grep_search` tool in `code-ollama` constructs a shell command string by interpolating attacker-controlled `pattern` and `path` arguments, t…",
+        "badge": "GHSA-456V-XQ2P-R4CJ",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
         "id": "ai-hugging-face-e9f63aa1f7aaa02f",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245312",
+        "id": "v2ex-1245333",
         "category": "dev",
-        "title": "继 opencode go 之后， commandcode goat 也搞欺诈",
-        "url": "https://www.v2ex.com/t/1245312",
+        "title": "打败 seedance 难道会是 opus？",
+        "url": "https://www.v2ex.com/t/1245333",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T09:38:33.000Z",
-        "summary": "背景说明： commandcode goat 在之前通知是自 9.28 之前，deepseek v4.1flash 额度限时 60$，9.28 之后降低至 40$ 其实这没什么，commandcode 在之前一致都是官转，速度能跑到 250t/s ，99%的缓存占用，即便只有 40$量也蛮大的 然而今天 9.28 号发现官方没有任何通知的情况下，在文档中修改了描述： DeepSeek V4.1 Flash carries permanently boosted monthl…",
+        "publishedAt": "2026-09-28T11:38:53.000Z",
+        "summary": "这两天看了不少 opus5.5 做的视频和动画，视觉、音效和节奏卡点，收集整理到了一起， 很多完全是顶级制作水平了，照这个势头，有种视频模型也会被 LLM 一统江湖的感觉。 不得不说，除了封号，A 畜还是有点东西的 https://promptcat.org/",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 42547,
+        "stars": 43732,
         "starsToday": 3274
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/paperclipai/paperclip",
         "description": "The open-source app everyone uses to manage agents at work",
         "language": "TypeScript",
-        "stars": 91997,
+        "stars": 92611,
         "starsToday": 3185
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/vectorize-io/hindsight",
         "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 40160,
+        "stars": 40851,
         "starsToday": 4413
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
         "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
         "language": "PLSQL",
-        "stars": 25653,
+        "stars": 25727,
         "starsToday": 145
       },
       {
@@ -550,8 +550,8 @@
         "url": "https://github.com/cs341-illinois/coursebook",
         "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
         "language": "TeX",
-        "stars": 2323,
-        "starsToday": 265
+        "stars": 2465,
+        "starsToday": 316
       },
       {
         "id": "github-8247b13667126028",
@@ -560,7 +560,7 @@
         "url": "https://github.com/byoungd/up",
         "description": "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
         "language": "JavaScript",
-        "stars": 64489,
+        "stars": 64609,
         "starsToday": 310
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 1477,
+        "stars": 1645,
         "starsToday": 781
       },
       {
@@ -580,10 +580,10 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 21041,
+        "stars": 21185,
         "starsToday": 1105
       }
     ],
-    "updatedAt": "2026-09-28T15:29:21.760Z"
+    "updatedAt": "2026-09-28T22:02:00.069Z"
   }
 }
