@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-28T06:55:38.169Z",
+  "generatedAt": "2026-09-28T08:41:38.676Z",
   "intelligence": {
-    "updatedAt": "2026-09-28T06:55:38.169Z",
+    "updatedAt": "2026-09-28T08:41:38.676Z",
     "items": [
       {
-        "id": "cn-item-9583e1e3539a818a",
+        "id": "cn-item-997df6f656a0d256",
         "category": "cn",
-        "title": "英国歌唱家莎拉·布莱曼发文悼念刘欢：将永远怀念他",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-28/10704837.shtml",
+        "title": "西康高铁开通！肉夹馍离重庆火锅不远啦！",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-28/10704885.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T06:14:04.000Z",
-        "summary": "中新网9月28日电 北京时间9月27日晚，英国歌唱家莎拉·布莱曼在社交媒体平台上悼念中国音乐家刘欢。",
+        "publishedAt": "2026-09-28T07:32:15.000Z",
+        "summary": "千里秦岭不再是天堑，南北烟火从此双向奔赴！",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49873241",
+        "id": "hn-49874728",
         "category": "dev",
-        "title": "Thinking fast and slow in AI: The role of metacognition (2021)",
-        "url": "https://arxiv.org/abs/2110.01834",
+        "title": "Prompting Claude Opus 5.5",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T03:23:53.000Z",
+        "publishedAt": "2026-09-28T07:33:29.000Z",
         "badge": "HN",
-        "signal": "63 分 · 9 评论"
+        "signal": "28 分 · 8 评论"
       },
       {
-        "id": "cn-it-6e80309fd3a984b1",
+        "id": "cn-it-17af34dc13e7eb60",
         "category": "cn",
-        "title": "工信部：截至 8 月末 5G 基站总数达 519.5 万个，5G 用户达 13.11 亿户占比 70.9%",
-        "url": "https://www.ithome.com/1/007/825.htm",
+        "title": "三星电子移动固态硬盘 P9 经典版 2TB 款上市：USB4 高速，3799 元",
+        "url": "https://www.ithome.com/1/007/877.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T06:54:38.000Z",
-        "summary": "IT之家 9 月 28 日消息，工信部今日发布了最新的 2026 年前 8 个月通信业经济运行情况。 截至 8 月末，5G 基站总数达 519.5 万个，比上年末净增 35.7 万个，占移动基站总数的 39.7%，占比较前 7 个月提高 0.3 个百分点。 ▲ 电信业务收入和电信业务总量累计增速 今年前 8 个月，我国电信业务总量稳步增长，5G、千兆光网等网络建设和应用不断推进，连接用户规模稳步扩大，移动互联网接入流量保持较快增势。 总体运行方面，前 8 个月电信业务收入累…",
+        "publishedAt": "2026-09-28T08:40:30.000Z",
+        "summary": "IT之家 9 月 28 日消息，三星电子存储新品移动固态硬盘“P9 经典版”的 2TB 型号现已上架电商平台。其 标价 3799 元 ，享受 5 年质保。 P9 2TB 整体棱角分明，搭载先进的散热保护和抗冲击机身，可抗 2m 跌落与高强度振动，集成 LED 状态指示灯。 其配备 USB4 Type-C (40Gbps) 接口，顺序读取速率至高可达 4000MB/s、顺序写入速率至高可达 3800MB/s，开启智能 TurboWrite 加速后 可持续维持 2000 MB/…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245240",
+        "id": "v2ex-1245283",
         "category": "dev",
-        "title": "免费的 Clash App 靠啥赚钱？",
-        "url": "https://www.v2ex.com/t/1245240",
+        "title": "做了一个 agent websearch 工具， 有没有必要产品化， 想听听大家的意见",
+        "url": "https://www.v2ex.com/t/1245283",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T06:40:13.000Z",
-        "summary": "今天发现 appstore 新上线了一个 clash App ，原生 macos 和 ios ，没有广告，没有内购，靠啥赚钱？收集用户的配置？",
+        "publishedAt": "2026-09-28T08:11:02.000Z",
+        "summary": "最近研究了一下 google botguard 的算法，搞清楚了其识别自动化非人类行为的机制，由此可以解锁 agent 经 browser 操控 google search 获取搜索结果，不会触发验证, 市场上没用 agent 可以自主做到这件事情。 websearch 广泛用于消除 agent 的幻觉, 扩大知识量, 提升讯息及时度,做信息溯源. 产品可以预期的发布方式是提供主流 agent 的 tool 扩展, 让它可以自己使用, 同时接入服务器获取人类行为数据操作 g…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-1fb0d87923b6765a",
+        "id": "cn-baidu-df51bc73b55ffd7e",
         "category": "cn",
-        "title": "国乒提前锁定男单冠亚军",
-        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E4%B9%92%E6%8F%90%E5%89%8D%E9%94%81%E5%AE%9A%E7%94%B7%E5%8D%95%E5%86%A0%E4%BA%9A%E5%86%9B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "日媒惊呼中国队出了怪物级天才",
+        "url": "https://www.baidu.com/s?wd=%E6%97%A5%E5%AA%92%E6%83%8A%E5%91%BC%E4%B8%AD%E5%9B%BD%E9%98%9F%E5%87%BA%E4%BA%86%E6%80%AA%E7%89%A9%E7%BA%A7%E5%A4%A9%E6%89%8D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月28日，在名古屋亚运会乒乓球男单半决赛中，林诗栋4-3战胜中国台北选手林昀儒，晋级决赛。林诗栋和王楚钦会师男单决赛，国乒提前包揽男单冠亚军。",
+        "summary": "名古屋亚运会女子标枪决赛上，18岁中国选手严子怡第一投掷出70米46破纪录夺金，随后放弃5投。落后7米多的日本奥运冠军北口榛花痛哭，日媒惊呼其为“怪物级天才”。",
         "badge": "热搜",
-        "signal": "7,808,210 热度"
+        "signal": "7,808,515 热度"
       },
       {
         "id": "cisa-kev-cve-2026-88771",
@@ -124,16 +124,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-28T02:05:13.000Z",
         "badge": "HN",
-        "signal": "458 分 · 187 评论"
+        "signal": "629 分 · 265 评论"
       },
       {
-        "id": "cn-item-0e8b409fbb3d1bb0",
+        "id": "cn-item-9583e1e3539a818a",
         "category": "cn",
-        "title": "中国最北高铁开通运营",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704788.shtml",
+        "title": "英国歌唱家莎拉·布莱曼发文悼念刘欢：将永远怀念他",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-28/10704837.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T04:43:08.000Z",
-        "summary": "中新社黑龙江伊春9月28日电 (记者 史轶夫)中国最北高铁——哈尔滨至伊春高速铁路(以下简称哈伊高铁)28日正式开通运营，绥化、伊春等地市接入中国高铁网。",
+        "publishedAt": "2026-09-28T06:14:04.000Z",
+        "summary": "中新网9月28日电 北京时间9月27日晚，英国歌唱家莎拉·布莱曼在社交媒体平台上悼念中国音乐家刘欢。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245225",
+        "id": "v2ex-1245270",
         "category": "dev",
-        "title": "趁现在无聊分享一下自己瞎琢磨出来的一套 agent 开发流程和工具",
-        "url": "https://www.v2ex.com/t/1245225",
+        "title": "现在上架个 app 好难啊",
+        "url": "https://www.v2ex.com/t/1245270",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T05:56:03.000Z",
-        "summary": "Agent 工作流 English | 中文 在自托管 Forgejo 实例上的一条评论，如何变成一次代码变更，同时又不把人类 账户交给自主 agent 。三个部分协同完成： 组件 位置 职责 Forgejo https://forgejo.shylockhg.me 代码托管平台：仓库、issue 、pull request 、评论与 CI 。它是对话与代码的权威记录。 forge-bot https://github.com/Shylock-Hg/forge-bot 与具…",
+        "publishedAt": "2026-09-28T07:40:41.000Z",
+        "summary": "ICP 备案 公安备案 软著 大模型算法备案 应用安全评估 ，上架时间比开发时间长多了。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "15 回复"
       },
       {
-        "id": "cn-it-280cf3d2def0313e",
+        "id": "cn-it-08910a69a50ad84f",
         "category": "cn",
-        "title": "世界先进-恩智浦合资企业 VSMC 首座新加坡晶圆厂开幕，2027Q1 量产",
-        "url": "https://www.ithome.com/1/007/824.htm",
+        "title": "三星暖心行动：为美国洛杉矶山火幸存者提供家电、Galaxy Z Fold 8 折叠手机",
+        "url": "https://www.ithome.com/1/007/876.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T06:54:05.000Z",
-        "summary": "IT之家 9 月 28 日消息，世界先进 (VIS) 与 NXP（恩智浦）合资企业 VSMC 当地时间今日在新加坡淡滨尼举行其首座 12 英寸 (300mm) 晶圆厂开幕典礼。该晶圆厂目前已进入试产阶段， 预计 2027Q1 开始量产 。 VSMC 于 2024 年正式成立，同年 12 月举办动工仪式。其首座晶圆厂已顺利试产首批晶圆，良率超过 99%；该厂 有望在 2029 年达到每月 4.4 万片晶圆的满载产能 。 VSMC 首座晶圆厂 将采用 130nm 至 40nm …",
+        "publishedAt": "2026-09-28T08:39:46.000Z",
+        "summary": "IT之家 9 月 28 日消息，据科技媒体 SammyGuru 今天报道，三星正在帮助美国洛杉矶火灾的幸存者们重建家园，为他们提供全新家电以及手机。 据报道，三星员工和售后专家上周随 Habitat LA's 慈善组织，在太平洋帕利塞德和马里布举办社区重建活动。此次活动一共有超 200 名志愿者、幸存者和当地居民参与，为火灾侵袭的家庭提供支持。 太平洋帕利塞德的居民西奥多 · 安（Theodore Ang）是众多受助者之一。 他的房屋在山火后遭受严重烟熏和火灾损坏 ，需要修…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49868830",
+        "id": "hn-49873241",
         "category": "dev",
-        "title": "Ember-1",
-        "url": "https://fireworks.ai/blog/ember-1",
+        "title": "Thinking fast and slow in AI: The role of metacognition (2021)",
+        "url": "https://arxiv.org/abs/2110.01834",
         "source": "Hacker News",
-        "publishedAt": "2026-09-27T17:31:53.000Z",
+        "publishedAt": "2026-09-28T03:23:53.000Z",
         "badge": "HN",
-        "signal": "430 分 · 202 评论"
+        "signal": "84 分 · 22 评论"
       },
       {
-        "id": "cn-baidu-0723d142ac14d7e2",
+        "id": "cn-baidu-1fb0d87923b6765a",
         "category": "cn",
-        "title": "对手穿错鞋子 中国队递补获得金银牌",
-        "url": "https://www.baidu.com/s?wd=%E5%AF%B9%E6%89%8B%E7%A9%BF%E9%94%99%E9%9E%8B%E5%AD%90+%E4%B8%AD%E5%9B%BD%E9%98%9F%E9%80%92%E8%A1%A5%E8%8E%B7%E5%BE%97%E9%87%91%E9%93%B6%E7%89%8C&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "国乒提前锁定男单冠亚军",
+        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E4%B9%92%E6%8F%90%E5%89%8D%E9%94%81%E5%AE%9A%E7%94%B7%E5%8D%95%E5%86%A0%E4%BA%9A%E5%86%9B&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "因为穿错鞋，在爱知·名古屋女子马拉松竞走决赛中第一个冲线的哈萨克选手亚斯米娜·托汉巴耶娃，赛后被取消成绩。中国选手旦增曲宗递补获得金牌，马丽递补获得银牌。",
+        "summary": "9月28日，在名古屋亚运会乒乓球男单半决赛中，林诗栋4-3战胜中国台北选手林昀儒，晋级决赛。林诗栋和王楚钦会师男单决赛，国乒提前包揽男单冠亚军。",
         "badge": "热搜",
-        "signal": "7,714,600 热度"
+        "signal": "7,712,142 热度"
       },
       {
         "id": "github-advisory-ghsa-vv77-66rf-pm86",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245218",
+        "id": "v2ex-1245243",
         "category": "dev",
-        "title": "国庆前又喜提裁员",
-        "url": "https://www.v2ex.com/t/1245218",
+        "title": "独立开发怎么做推广?",
+        "url": "https://www.v2ex.com/t/1245243",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T05:38:45.000Z",
-        "summary": "25 年 gap 了半年，7 月份才找到一份外包工作，年前被裁员。 年后 2 月也算无缝找了家创业公司，今天又被裁了。 曾经也呆过大厂，这把年纪投大厂毫无音信。小厂难得有机会也基本熬不过一年。 感觉半年一年失业一次已经进入常态了（对于我来说）",
+        "publishedAt": "2026-09-28T06:47:10.000Z",
+        "summary": "求问 目前已经撸了好几个程序了 都有一些交易 但是不知道推广怎么做 有没有大佬指点指点 给个思路啥的?",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "17 回复"
       },
       {
-        "id": "cn-item-6878bb638353c70e",
+        "id": "cn-item-d9352da10e8cd6fa",
         "category": "cn",
-        "title": "长期高频率“玩梗” 会导致语言贫乏吗？",
-        "url": "https://www.chinanews.com.cn/cul/2026/09-28/10704714.shtml",
+        "title": "提供12万平方公里靶场，澳大利亚要帮日本测试高超音速导弹",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-28/10704810.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T03:39:56.000Z",
-        "summary": "中新网北京9月28日电(记者 上官云)“爱你老己”“活人感”“夯爆了”……如今打开社交媒体，网络热梗或热词的使用并不鲜见，它们鲜活生动，言简意赅地传递情绪，流传范围极广。",
+        "publishedAt": "2026-09-28T05:44:10.000Z",
+        "summary": "中新网9月28日电(记者 刁炜)俄著名智库“俄罗斯国际事务委员会”近日刊文披露，澳大利亚已允许日本自卫队使用该国靶场，开展包括高超音速武器在内的新型导弹测试。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49870367",
+        "id": "hn-49868830",
         "category": "dev",
-        "title": "When did Google get so weird?",
-        "url": "https://sancho.bearblog.dev/google-weird/",
+        "title": "Ember-1",
+        "url": "https://fireworks.ai/blog/ember-1",
         "source": "Hacker News",
-        "publishedAt": "2026-09-27T20:12:54.000Z",
+        "publishedAt": "2026-09-27T17:31:53.000Z",
         "badge": "HN",
-        "signal": "1097 分 · 589 评论"
+        "signal": "446 分 · 208 评论"
       },
       {
-        "id": "cn-it-36e3817cff65cf76",
+        "id": "cn-it-a53c6c23f723652a",
         "category": "cn",
-        "title": "《饥荒》国服手游《饥困荒野》上架 App Store：腾讯代理，预计 11 月 24 日推出",
-        "url": "https://www.ithome.com/1/007/822.htm",
+        "title": "星曜光学推出 MF 50mm F2 TRI-SIGHT 镜头：柔焦 / 标准 / 泡泡三模式，首发 2149 元",
+        "url": "https://www.ithome.com/1/007/875.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T06:51:23.000Z",
-        "summary": "IT之家 9 月 28 日消息，《饥荒》国服手游《饥困荒野》现已上架国区 App Store。 本作由腾讯代理，预计于 2026 年 11 月 24 日推出 。 IT之家了解到，《饥困荒野》获得了 Klei 正版授权，是以经典 PC 游戏“饥荒：联机版”为基础开发的全新沙盒生存类手游，冒险家们将从这里进入一个未经探索的奇幻世界，开启一段超高自由度的探索、挑战、生存与成长之旅。 商店页显示，本作大小为 3.5GB，开发者为深圳腾讯天游科技有限公司，兼容 iOS 13.0 及以…",
+        "publishedAt": "2026-09-28T08:39:44.000Z",
+        "summary": "IT之家 9 月 28 日消息，星曜光学 MF 50mm F2 TRI-SIGHT 全画幅手动对焦镜头今日正式上市，官方指导价 2299 元，新品首发价 2149 元（9 月 28 日 20:00 至 10 月 7 日 23:59）。 该镜头此前已在 2026 年 CP+ 展会上亮相。其最大特点是内置三种成像模式，用户通过转动镜身上的物理模式环即可切换柔焦、标准和泡泡散景三种焦外效果，无需更换镜头或加装滤镜。官方随附蝴蝶、星星、弧三角、四叶草四种图案插片，可进一步改变焦外光…",
         "badge": "IT之家"
       },
       {
@@ -322,24 +322,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245194",
+        "id": "v2ex-1245240",
         "category": "dev",
-        "title": "全新的项目 AICoding 有什么最佳实践吗？",
-        "url": "https://www.v2ex.com/t/1245194",
+        "title": "免费的 Clash App 靠啥赚钱？",
+        "url": "https://www.v2ex.com/t/1245240",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T03:42:50.000Z",
+        "publishedAt": "2026-09-28T06:40:13.000Z",
+        "summary": "今天发现 appstore 新上线了一个 clash App ，原生 macos 和 ios ，没有广告，没有内购，靠啥赚钱？收集用户的配置？",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "14 回复"
       },
       {
-        "id": "cn-baidu-d3b6d707ace989cf",
+        "id": "cn-baidu-2e69316f9a756ca4",
         "category": "cn",
-        "title": "美民众热烈期盼大熊猫重返亚特兰大",
-        "url": "https://www.baidu.com/s?wd=%E7%BE%8E%E6%B0%91%E4%BC%97%E7%83%AD%E7%83%88%E6%9C%9F%E7%9B%BC%E5%A4%A7%E7%86%8A%E7%8C%AB%E9%87%8D%E8%BF%94%E4%BA%9A%E7%89%B9%E5%85%B0%E5%A4%A7&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "第八轮中美经贸磋商成果解读",
+        "url": "https://www.baidu.com/s?wd=%E7%AC%AC%E5%85%AB%E8%BD%AE%E4%B8%AD%E7%BE%8E%E7%BB%8F%E8%B4%B8%E7%A3%8B%E5%95%86%E6%88%90%E6%9E%9C%E8%A7%A3%E8%AF%BB&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "来自成都大熊猫繁育研究基地的大熊猫“平平”“福双”27日启程，前往美国亚特兰大动物园，中美双方开启新一轮大熊猫保护国际合作。“平平”“福双”赴美国亚特兰大动物园的消息让不少美国民众非常兴奋。他们表示，期待中国大熊猫的到来，希望能尽快与两只大熊猫见面。",
         "badge": "热搜",
-        "signal": "7,616,236 热度"
+        "signal": "7,618,531 热度"
       },
       {
         "id": "cisa-kev-cve-2026-87902",
@@ -362,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49869755",
+        "id": "hn-49870367",
         "category": "dev",
-        "title": "Malleable software: Restoring user agency in a world of locked-down apps (2025)",
-        "url": "https://www.inkandswitch.com/essay/malleable-software/",
+        "title": "When did Google get so weird?",
+        "url": "https://sancho.bearblog.dev/google-weird/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-27T19:01:31.000Z",
+        "publishedAt": "2026-09-27T20:12:54.000Z",
         "badge": "HN",
-        "signal": "47 分 · 13 评论"
+        "signal": "1221 分 · 685 评论"
       },
       {
-        "id": "cn-item-e72ea29a6d5eedcc",
+        "id": "cn-item-0e8b409fbb3d1bb0",
         "category": "cn",
-        "title": "教育部原副部长鲁昕被查",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-28/10704752.shtml",
+        "title": "中国最北高铁开通运营",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704788.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-28T03:38:16.000Z",
-        "summary": "中新社北京9月28日电 中国官方28日通报，教育部原党组成员、副部长鲁昕涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
+        "publishedAt": "2026-09-28T04:43:08.000Z",
+        "summary": "中新社黑龙江伊春9月28日电 (记者 史轶夫)中国最北高铁——哈尔滨至伊春高速铁路(以下简称哈伊高铁)28日正式开通运营，绥化、伊春等地市接入中国高铁网。",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245178",
+        "id": "v2ex-1245225",
         "category": "dev",
-        "title": "AI 写代码越快，企业越需要自己的 Harness",
-        "url": "https://www.v2ex.com/t/1245178",
+        "title": "趁现在无聊分享一下自己瞎琢磨出来的一套 agent 开发流程和工具",
+        "url": "https://www.v2ex.com/t/1245225",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T03:00:48.000Z",
-        "summary": "周六在上海的 AI Maker Summit 大会上，分享了一下我们在 Harness Coding 上的一些实践。 这次也把分享时使用的 PPT ，以及我演讲前准备的完整口播稿 ，一起放到公众号上。 这里先多聊两句。 我个人做 PPT 的习惯，一般是先把整场 PPT 梳理出来，然后再针对每一页，单独写对应的口播稿。 写口播稿并不是为了逐字背诵，更多是为了提前把整场分享过一遍。 而真正到了现场，我会基于每一页 PPT 建立几个自己的 演讲锚点 ，只记住关键的核心内容，具体怎…",
+        "publishedAt": "2026-09-28T05:56:03.000Z",
+        "summary": "Agent 工作流 English | 中文 在自托管 Forgejo 实例上的一条评论，如何变成一次代码变更，同时又不把人类 账户交给自主 agent 。三个部分协同完成： 组件 位置 职责 Forgejo https://forgejo.shylockhg.me 代码托管平台：仓库、issue 、pull request 、评论与 CI 。它是对话与代码的权威记录。 forge-bot https://github.com/Shylock-Hg/forge-bot 与具…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-5e76b1dff45f3acd",
+        "id": "cn-it-093f13737f2a902e",
         "category": "cn",
-        "title": "铭匠 AF 85mm F1.8 Neo 全画幅相机镜头新增 L 卡口，活动价 499 元",
-        "url": "https://www.ithome.com/1/007/821.htm",
+        "title": "上汽 MG4 530 周年限量版上市，限时补贴价 8.48 万元",
+        "url": "https://www.ithome.com/1/007/873.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-28T06:51:15.000Z",
-        "summary": "IT之家 9 月 28 日消息，铭匠今日宣布，铭匠 Neo 系列 AF 85mm F1.8 L 口全画幅相机镜头将于 今日 17:00 上市 ， 活动价 499 元 ，日常价 599 元。 这款镜头采用 8 组 12 片的全玻璃光学结构，带有 2 片高折射镜片、2 片超低色散（ED）镜片；最近对焦距离 0.8m，滤镜口径为 62mm。 这款镜头搭载 STM 步进马达，支持眼部对焦、人脸对焦等功能。重约 332g，采用玻纤复合材料。 IT之家附该镜头详细参数如下： 京东 铭匠…",
+        "publishedAt": "2026-09-28T08:35:04.000Z",
+        "summary": "IT之家 9 月 28 日消息，上汽 MG 今日宣布，MG4 530 周年限量版正式上市， 限时补贴价 8.48 万元 。 IT之家获悉，MG4 530 周年限量版搭载宁德时代电池，续航可达 530 公里；采用 120kW / 250N·m 六合一大电机，支持 HeatMatrix 一体式热管理系统，支持 3.3kW VTOL 移动电站功能。 这款车型支持前排座椅通风 / 加热、主驾 8 点按摩、主驾座椅记忆、小憩模式、方向盘加热；搭载 15.6 英寸 2.5K 中控屏，支…",
         "badge": "IT之家"
       },
       {
@@ -444,24 +444,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49870070",
+        "id": "hn-49869755",
         "category": "dev",
-        "title": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
-        "url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
+        "title": "Malleable software: Restoring user agency in a world of locked-down apps (2025)",
+        "url": "https://www.inkandswitch.com/essay/malleable-software/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-27T19:37:05.000Z",
+        "publishedAt": "2026-09-27T19:01:31.000Z",
         "badge": "HN",
-        "signal": "106 分 · 36 评论"
+        "signal": "71 分 · 29 评论"
       },
       {
-        "id": "cn-baidu-9f36336d4c676f1e",
+        "id": "cn-baidu-225785d9f043b9b1",
         "category": "cn",
-        "title": "“严一枪”投哭日本奥运冠军",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%A5%E4%B8%80%E6%9E%AA%E2%80%9D%E6%8A%95%E5%93%AD%E6%97%A5%E6%9C%AC%E5%A5%A5%E8%BF%90%E5%86%A0%E5%86%9B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "林雨薇宣布转入校园任教",
+        "url": "https://www.baidu.com/s?wd=%E6%9E%97%E9%9B%A8%E8%96%87%E5%AE%A3%E5%B8%83%E8%BD%AC%E5%85%A5%E6%A0%A1%E5%9B%AD%E4%BB%BB%E6%95%99&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京时间9月27日，在爱知·名古屋亚运会女子标枪决赛中，18岁中国小将严子怡第一投掷出70米46打破赛会纪录，力压主场作战的日本奥运冠军北口榛花夺金。据悉，当天北口榛花谢场时用日本国旗掩面哭泣。",
+        "summary": "9月27日，在名古屋亚运会田径女子100米栏决赛中，杭州亚运会冠军林雨薇带伤出战，最终以13秒47位列第七。赛后，林雨薇发布长文宣布告别职业体坛，将进入福州大学担任体育教师。",
         "badge": "热搜",
-        "signal": "7,521,721 热度"
+        "signal": "7,523,833 热度"
       },
       {
         "id": "github-advisory-ghsa-62mm-xwmv-crhg",
@@ -484,15 +484,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245174",
+        "id": "v2ex-1245194",
         "category": "dev",
-        "title": "做了一个环形 AI 加持的划词工具: QDuo",
-        "url": "https://www.v2ex.com/t/1245174",
+        "title": "全新的项目 AICoding 有什么最佳实践吗？",
+        "url": "https://www.v2ex.com/t/1245194",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-28T02:58:46.000Z",
-        "summary": "功能介绍 QDuo 是一款专为 macos 打造的划词即显的工具 app 特点： 纯 SwiftUI Native 实现，轻量，快速 支持三种风格，环形，条形 展示 支持二级菜单 支持 AI 动作，翻译、润色、搜索、朗读、处理文本、问大模型等 30+内置动作，可自定义动作 下载 GitHub: https://github.com/XueshiQiao/qduo 效果图 动图： 高清静图：",
+        "publishedAt": "2026-09-28T03:42:50.000Z",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -509,7 +508,7 @@
         "url": "https://github.com/paperclipai/paperclip",
         "description": "The open-source app everyone uses to manage agents at work",
         "language": "TypeScript",
-        "stars": 90790,
+        "stars": 91100,
         "starsToday": 2401
       },
       {
@@ -519,7 +518,7 @@
         "url": "https://github.com/vectorize-io/hindsight",
         "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 38433,
+        "stars": 38944,
         "starsToday": 4520
       },
       {
@@ -529,7 +528,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 40881,
+        "stars": 41141,
         "starsToday": 3086
       },
       {
@@ -539,7 +538,7 @@
         "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
         "description": "Learn it. Build it. Ship it for others.",
         "language": "Python",
-        "stars": 59730,
+        "stars": 59863,
         "starsToday": 790
       },
       {
@@ -549,7 +548,7 @@
         "url": "https://github.com/InfinityLoop1308/PipePipe",
         "description": "An open-source Android app to let you browse YouTube and other services freely.",
         "language": "Shell",
-        "stars": 6692,
+        "stars": 6727,
         "starsToday": 242
       },
       {
@@ -559,7 +558,7 @@
         "url": "https://github.com/vercel-labs/scriptc",
         "description": "TypeScript-to-Native Compiler",
         "language": "TypeScript",
-        "stars": 5500,
+        "stars": 5535,
         "starsToday": 102
       },
       {
@@ -569,7 +568,7 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 1183,
+        "stars": 1242,
         "starsToday": 114
       },
       {
@@ -579,7 +578,7 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 20779,
+        "stars": 20837,
         "starsToday": 895
       },
       {
@@ -589,10 +588,10 @@
         "url": "https://github.com/willfaust/Madeira",
         "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
         "language": "C",
-        "stars": 883,
+        "stars": 905,
         "starsToday": 83
       }
     ],
-    "updatedAt": "2026-09-28T06:55:38.169Z"
+    "updatedAt": "2026-09-28T08:41:38.676Z"
   }
 }
