@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-27T22:12:43.240Z",
+  "generatedAt": "2026-09-28T00:48:52.425Z",
   "intelligence": {
-    "updatedAt": "2026-09-27T22:12:43.240Z",
+    "updatedAt": "2026-09-28T00:48:52.425Z",
     "items": [
       {
-        "id": "cn-item-9f5c0bf5bb24b997",
+        "id": "cn-item-454535423cf96c8b",
         "category": "cn",
-        "title": "武契奇宣布即将辞去总统职务",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-27/10704555.shtml",
+        "title": "武契奇辞职，承认在执政期间“犯过很多错误”，“但战争才刚刚开始！”",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-28/10704663.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-27T12:02:09.000Z",
-        "summary": "新华社贝尔格莱德9月27日电(记者张璇 石中玉)当地时间27日中午，塞尔维亚总统武契奇在接受塞尔维亚广播电视台采访时表示，他将于当地时间27日晚8时左右正式提交辞呈，辞去总统职务。",
+        "publishedAt": "2026-09-28T00:25:06.000Z",
+        "summary": "原标题：武契奇辞职，承认在执政期间“犯过很多错误”，“但战争才刚刚开始！没有那把交椅，我们也能打败他们”",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-67279",
+        "id": "cisa-kev-cve-2026-88772",
         "category": "security",
-        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
-        "badge": "CVE-2026-67279",
-        "signal": "已遭利用 · 整改期限 2026-09-28"
+        "publishedAt": "2026-09-27T00:00:00.000Z",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+        "badge": "CVE-2026-88772",
+        "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
         "id": "ai-openai-9de028fbe46cac8b",
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-27T20:12:54.000Z",
         "badge": "HN",
-        "signal": "370 分 · 195 评论"
+        "signal": "690 分 · 373 评论"
       },
       {
-        "id": "cn-it-758a65f036c7c742",
+        "id": "cn-it-b0050066e7cb366c",
         "category": "cn",
-        "title": "小米米家智能意式半自动咖啡机 Pro 首销，首发国补价 3395.84 元",
-        "url": "https://www.ithome.com/1/007/615.htm",
+        "title": "中科宇航深化太空制药合作，力鸿二号计划 2027 年携医药载荷首飞",
+        "url": "https://www.ithome.com/1/007/643.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-27T20:59:06.000Z",
-        "summary": "IT之家 9 月 28 日消息，小米米家智能意式半自动咖啡机 Pro 今日正式开售，官方指导价 4999 元，预售前台价 4439 元，叠加国补后 3395.84 元。 京东 米家小米智能意式半自动咖啡机 Pro 冷热双萃 双泵双加热 半自动研磨豆一体奶泡机 APP 互联 CME001 3395.83 元 直达链接 IT之家从商品页面获悉，这款咖啡机由宁波坤林科技有限公司制造，额定功率 2200W。 该机定位专业级意式半自动产品，集成磨豆、萃取、打奶功能。落粉支持精准称重，…",
+        "publishedAt": "2026-09-28T00:46:38.000Z",
+        "summary": "IT之家 9 月 28 日消息，中科宇航今日宣布与广州实验室围绕太空制药载荷开展联合研制攻关，并拟联合开展太空制药场景验证。 首批载荷计划于 2027 年第一季度搭乘力鸿二号可重复使用运载器开展亚轨道飞行验证 ，实施蛋白质和小分子药物结晶实验，开展太空制药装备的前期技术验证。 此次合作中，广州实验室提出药物结晶的科学问题，负责实验方案、样品、地面对照和结果分析。其核心合作团队 —— 徐强研究员团队长期从事高端医疗器械、MEMS 传感和显微成像技术研究，把成熟的生物医药自动化…",
         "badge": "IT之家"
       },
       {
@@ -84,28 +84,28 @@
         "publishedAt": "2026-09-27T18:17:56.000Z",
         "summary": "看了影视飓风 Tim 发了一个讲自己创业的视频，他给年轻人的建议是「先发内容，再考虑商业模式」。 之前上班也积累了不少，今年没上班了，收入还算稳定，聊聊我的看法 1 、在没有产品的时候 找对标或者先发内容都是一种找方向的办法；在没有方向的时候，要么对标别人的路径去干，要么自己走走看摸索摸索。 我的看法：只要把事干了，成为一个有价值的人，给别人带来价值，都能找到自己的道路。 2 、在有产品的时候 对于没有创作经验的人来说，缺乏产品是个枷锁 —— 因为不知道自己该发什么。 产品…",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "13 回复"
       },
       {
-        "id": "cn-baidu-3be379c911c93e1f",
+        "id": "cn-baidu-19ffe73dd59b2953",
         "category": "cn",
-        "title": "王曼昱亚运女单冠军",
-        "url": "https://www.baidu.com/s?wd=%E7%8E%8B%E6%9B%BC%E6%98%B1%E4%BA%9A%E8%BF%90%E5%A5%B3%E5%8D%95%E5%86%A0%E5%86%9B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "电车 买得起修不起",
+        "url": "https://www.baidu.com/s?wd=%E7%94%B5%E8%BD%A6+%E4%B9%B0%E5%BE%97%E8%B5%B7%E4%BF%AE%E4%B8%8D%E8%B5%B7&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月27日，第二十届亚运会乒乓球项目在丰田市丰田天空体育馆继续进行。在27日结束的女单决赛中，中国队选手王曼昱以4∶2战胜队友孙颖莎夺得金牌。",
+        "summary": "近日，有媒体报道，新能源车维修均价达燃油车1.7倍，9成以上维修资源被车企垄断。起因是仅2%汽修门店具备完整三电维修能力。目前，商务部等九部门已发文要求车企开放维修技术授权，推行“以修代换”。",
         "badge": "热搜",
-        "signal": "7,809,187 热度"
+        "signal": "7,808,202 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-65660",
+        "id": "cisa-kev-cve-2026-88771",
         "category": "security",
-        "title": "Microsoft SharePoint：Microsoft SharePoint Code Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Input Validation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88771",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
-        "badge": "CVE-2026-65660",
-        "signal": "已遭利用 · 整改期限 2026-09-28"
+        "publishedAt": "2026-09-27T00:00:00.000Z",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+        "badge": "CVE-2026-88771",
+        "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
         "id": "ai-hugging-face-280bf64dcca75cee",
@@ -124,16 +124,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-27T17:31:53.000Z",
         "badge": "HN",
-        "signal": "263 分 · 146 评论"
+        "signal": "334 分 · 177 评论"
       },
       {
-        "id": "cn-item-8953ca0f5985f593",
+        "id": "cn-item-68127f5705e76e30",
         "category": "cn",
-        "title": "9月26日全社会跨区域人员流动量19946.2万人次",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-27/10704512.shtml",
+        "title": "华西至江汉江淮多降水 冷空气将影响中东部地区",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-28/10704652.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-27T10:10:38.000Z",
-        "summary": "中新网9月27日电 据交通运输部微信公众号27日消息，2026年9月26日(中秋假期第2日，下同)，全社会跨区域人员流动量19946.2万人次，环比下降17.6%，比2024年同期增长3.4%(以下同比均为与2024年同期比较)。其中：",
+        "publishedAt": "2026-09-28T00:13:43.000Z",
+        "summary": "中新网9月28日电 据中央气象台网站消息，昨日，重庆、湖北、安徽、江苏、浙江等地出现大到暴雨。未来三天，华西地区至江汉、江淮等地有持续降雨，青藏高原有明显雨雪天气，注意防范次生灾害；28日夜间起冷空气将影响中东部地区，关注大风降温、降雨对交通运输、旅游、农业生产等的不利影响。",
         "badge": "中新网要闻"
       },
       {
@@ -166,27 +166,27 @@
         "publishedAt": "2026-09-27T14:40:23.000Z",
         "summary": "想问一下各位 V 友有啥免费又好用的模型可以薅羊毛的么？ 最近这几个月一直在高强度开发 DataZen。之前一直用公司用 cursor 年费套餐，模型额度用完之后还可以免费用 composer 2.5 。现在 cursor 不让续订年费套餐，套餐大幅缩水，完全不够用来开发 DataZen ，只能自己想办法。刚开始用了几天的 DS 的 API ，不过账单实在是忍不了，于是各种找免费模型。当时正好 opencode 在搞 DS flash 的免费赠送活动，于是下载了 openc…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-0c1bd90b47e4a008",
+        "id": "cn-it-079592ef369d1c86",
         "category": "cn",
-        "title": "iQOO Pad Ultra 平板官宣搭载 9020mAh 蓝海电池，8.8 英寸机身轻至 298g",
-        "url": "https://www.ithome.com/1/007/612.htm",
+        "title": "鸿蒙智行 2027 产品规划曝光：四界新车 Q1-Q4 轮番上，尊界 MPV / SUV 还有典藏版",
+        "url": "https://www.ithome.com/1/007/642.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-27T15:47:01.000Z",
-        "summary": "IT之家 9 月 27 日消息，iQOO Pad Ultra 平板 9 月 27 日官宣搭载 9020mAh 蓝海大电池，8.8 英寸机身轻至 298g，机身厚度仅 5.74mm。 IT之家注意到， iQOO Pad Ultra 小平板已官宣将于 9 月 29 日 19:00 发布 ，新机提供星铠银 / 末影黑双色、内置风扇，采用全金属机身，将首批搭载 高通第六代骁龙 8 超级至尊版处理器 ，配备对称式超线性双扬声器、双 X 轴线性马达。 iQOO Pad Ultra 搭载…",
+        "publishedAt": "2026-09-28T00:41:14.000Z",
+        "summary": "IT之家 9 月 28 日消息，博主 @SugarDesign 昨晚曝光了鸿蒙智行 2027 新车规划： Q1 ：尚界 H8（30 万级）| 智界 V9 纯电四座（50 万级） Q2：尚界 H9（40 万级）| 智界 R8 中型 SUV（40 万级）| 智界 S7 改款（20 万级）| 享界大型轿车（50 万-70 万）| 享界 S9、S9T 改款 | 尊界 MPV 典藏版 | 尊界 SUV 800（预计 4 月）| 尊界 SUV 600 Q3：尚界 Z7 / Z7T 改款…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-87902",
+        "id": "cisa-kev-cve-2026-67279",
         "category": "security",
-        "title": "WordPress Core：WordPress Core Remote File Inclusion Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87902",
+        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
         "source": "CISA KEV",
         "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remot…",
-        "badge": "CVE-2026-87902",
+        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
+        "badge": "CVE-2026-67279",
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
@@ -207,17 +207,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-27T21:06:17.000Z",
         "badge": "HN",
-        "signal": "19 分 · 4 评论"
+        "signal": "41 分 · 25 评论"
       },
       {
-        "id": "cn-baidu-0ae0085bc653e66f",
+        "id": "cn-baidu-900e107cdbb1c7f1",
         "category": "cn",
-        "title": "戎马半生 归来还是高中生",
-        "url": "https://www.baidu.com/s?wd=%E6%88%8E%E9%A9%AC%E5%8D%8A%E7%94%9F+%E5%BD%92%E6%9D%A5%E8%BF%98%E6%98%AF%E9%AB%98%E4%B8%AD%E7%94%9F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "日本选手现役亚洲第一 但我是冠军",
+        "url": "https://www.baidu.com/s?wd=%E6%97%A5%E6%9C%AC%E9%80%89%E6%89%8B%E7%8E%B0%E5%BD%B9%E4%BA%9A%E6%B4%B2%E7%AC%AC%E4%B8%80+%E4%BD%86%E6%88%91%E6%98%AF%E5%86%A0%E5%86%9B&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "27日，17岁小将陈妤颉拿下亚运会田径女子200米银牌。此前她刚夺得女子百米金牌，打破亚运会纪录。这名高中生兼顾学业与训练，凭借出色表现出圈，网友调侃她 “戎马半生，归来还是个高中生”。",
+        "summary": "27日，陈圆将夺得亚运会田径男子110米栏冠军。他坦言夺冠是为了出一口气，年轻就是要拼搏。针对日本选手是现役亚洲历史第一人，他表示“今天我是冠军，应该说是我们”。",
         "badge": "热搜",
-        "signal": "7,712,777 热度"
+        "signal": "7,712,186 热度"
       },
       {
         "id": "github-advisory-ghsa-vv77-66rf-pm86",
@@ -251,25 +251,25 @@
         "signal": "3 回复"
       },
       {
-        "id": "cn-item-0d57b502812c8d5e",
+        "id": "cn-item-d447bf5d3e4ab8b7",
         "category": "cn",
-        "title": "从共享到共筑：数贸会上的开放之约",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-27/10704473.shtml",
+        "title": "虚拟货币并非法外之地！国安部门最新提醒",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-28/10704650.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-27T09:11:22.000Z",
-        "summary": "中新网杭州9月27日电(奚金燕)9月23日至27日，第五届全球数字贸易博览会(简称“数贸会”)在浙江杭州如期举办。",
+        "publishedAt": "2026-09-27T23:46:43.000Z",
+        "summary": "原标题：虚拟货币犯罪无法追踪？想多了！",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-5430",
+        "id": "cisa-kev-cve-2026-65660",
         "category": "security",
-        "title": "WSO2 Multiple Products：WSO2 Multiple Products Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-5430",
+        "title": "Microsoft SharePoint：Microsoft SharePoint Code Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-24T00:00:00.000Z",
-        "summary": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.",
-        "badge": "CVE-2026-5430",
-        "signal": "已遭利用 · 整改期限 2026-09-27"
+        "publishedAt": "2026-09-25T00:00:00.000Z",
+        "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
+        "badge": "CVE-2026-65660",
+        "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
         "id": "ai-openai-9328fa400dd37e6b",
@@ -284,21 +284,21 @@
       {
         "id": "hn-49870070",
         "category": "dev",
-        "title": "Alan Kay's answer to \"Did the ENIAC have a BIOS\"?",
+        "title": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
         "url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
         "source": "Hacker News",
         "publishedAt": "2026-09-27T19:37:05.000Z",
         "badge": "HN",
-        "signal": "44 分 · 17 评论"
+        "signal": "66 分 · 27 评论"
       },
       {
-        "id": "cn-it-3191fa52cd4e5a9a",
+        "id": "cn-it-21c248dbc0157305",
         "category": "cn",
-        "title": "腾讯《三角洲行动》官宣联动国产武侠游戏《影之刃零》",
-        "url": "https://www.ithome.com/1/007/611.htm",
+        "title": "得不到就强攻？曝 OpenAI 智能体曾尝试“暴力破解”联合国机构网站",
+        "url": "https://www.ithome.com/1/007/641.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-27T15:02:07.000Z",
-        "summary": "IT之家 9 月 27 日消息，9 月 26 日，腾讯 FPS 游戏《三角洲行动》官宣联动国产武侠游戏《影之刃零》，敬请期待。 《影之刃零》游戏确定于 10 月 29 日正式发售 ，各平台预购已经开放。游戏首发登陆 PS5、PS5 Pro，以及 Steam、Epic、WeGame、TapTap PC 平台。国区定价分为两档，数字标准版 268 元，数字豪华版 328 元，预购可获得专属游戏奖励。除此之外，灵游坊还提供了限量 20000 套的实体收藏版礼盒。 参考IT之家此前…",
+        "publishedAt": "2026-09-28T00:30:40.000Z",
+        "summary": "IT之家 9 月 28 日消息，据外媒 The Verge 今天（28 日）凌晨报道，安全研究人员罗文 · 霍华德-琼斯称，今年 4 月至 6 月，OpenAI 智能体对联合国贸易和发展会议（UNCTAD）的统计网站发起了 超过 16000 次扫描 。 这起事件还没有严重到 Hugging Face 遭黑客攻击或近期美国政府网站遇袭的程度，却再次引发了一个令人担忧的问题：AI 智能体为了完成任务， 会突破通常的行为边界 。 霍华德-琼斯称，这些智能体很可能承担了通过 UNC…",
         "badge": "IT之家"
       },
       {
@@ -338,20 +338,20 @@
         "title": "美民众热烈期盼大熊猫重返亚特兰大",
         "url": "https://www.baidu.com/s?wd=%E7%BE%8E%E6%B0%91%E4%BC%97%E7%83%AD%E7%83%88%E6%9C%9F%E7%9B%BC%E5%A4%A7%E7%86%8A%E7%8C%AB%E9%87%8D%E8%BF%94%E4%BA%9A%E7%89%B9%E5%85%B0%E5%A4%A7&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "自成都大熊猫繁育研究基地的大熊猫“平平”“福双”27日启程，前往美国亚特兰大动物园，中美双方开启新一轮大熊猫保护国际合作。“平平”“福双”赴美国亚特兰大动物园的消息让不少美国民众非常兴奋。他们表示，期待中国大熊猫的到来，希望能尽快与两只大熊猫见面。",
+        "summary": "来自成都大熊猫繁育研究基地的大熊猫“平平”“福双”27日启程，前往美国亚特兰大动物园，中美双方开启新一轮大熊猫保护国际合作。“平平”“福双”赴美国亚特兰大动物园的消息让不少美国民众非常兴奋。他们表示，期待中国大熊猫的到来，希望能尽快与两只大熊猫见面。",
         "badge": "热搜",
-        "signal": "7,618,297 热度"
+        "signal": "7,615,928 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-71362",
+        "id": "cisa-kev-cve-2026-87902",
         "category": "security",
-        "title": "Adobe Commerce and Magento：Adobe Commerce and Magento Incorrect Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-71362",
+        "title": "WordPress Core：WordPress Core Remote File Inclusion Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87902",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-24T00:00:00.000Z",
-        "summary": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction.",
-        "badge": "CVE-2026-71362",
-        "signal": "已遭利用 · 整改期限 2026-09-27"
+        "publishedAt": "2026-09-25T00:00:00.000Z",
+        "summary": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remot…",
+        "badge": "CVE-2026-87902",
+        "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
         "id": "ai-hugging-face-e9f63aa1f7aaa02f",
@@ -370,16 +370,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-27T18:44:30.000Z",
         "badge": "HN",
-        "signal": "107 分 · 46 评论"
+        "signal": "150 分 · 72 评论"
       },
       {
-        "id": "cn-item-7d77c4b156ebe3ab",
+        "id": "cn-item-9f5c0bf5bb24b997",
         "category": "cn",
-        "title": "九天揽月、向海筑能！本周我国多项硬核工程接连突破",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-27/10704451.shtml",
+        "title": "武契奇宣布即将辞去总统职务",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-27/10704555.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-27T08:07:16.000Z",
-        "summary": "本周",
+        "publishedAt": "2026-09-27T12:02:09.000Z",
+        "summary": "新华社贝尔格莱德9月27日电(记者张璇 石中玉)当地时间27日中午，塞尔维亚总统武契奇在接受塞尔维亚广播电视台采访时表示，他将于当地时间27日晚8时左右正式提交辞呈，辞去总统职务。",
         "badge": "中新网要闻"
       },
       {
@@ -415,25 +415,25 @@
         "signal": "7 回复"
       },
       {
-        "id": "cn-it-54de5c783acd1270",
+        "id": "cn-it-ff8fac7f61ced994",
         "category": "cn",
-        "title": "第八代宝马 3 系 9 月 30 日全球首发，首次同时覆盖纯电和燃油动力",
-        "url": "https://www.ithome.com/1/007/610.htm",
+        "title": "CDPR 开发者回顾《赛博朋克 2077：往日之影》开发：以结局为起点反向构建剧情",
+        "url": "https://www.ithome.com/1/007/640.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-27T14:40:22.000Z",
-        "summary": "IT之家 9 月 27 日消息，宝马集团官方宣布，第八代宝马 3 系将于 9 月 30 日迎来全球首发，新车将首次同时覆盖纯电和燃油动力。 IT之家注意到，今年 8 月，宝马 BMW 3 系中国累计销量突破 200 万辆。 宝马 3 系是 宝马公司 生产的中型豪华运动轿车，自 1975 年推出以来历经七代革新， 全球累计销量超千万辆 ，被誉为品牌最具代表性的车型。2026 年 3 月 3 日，宝马集团宣布 2026 款宝马 3 系等马年版车型正式上市，售价 31.8 万元起…",
+        "publishedAt": "2026-09-28T00:21:00.000Z",
+        "summary": "IT之家 9 月 28 日消息，《赛博朋克 2077》的谍战惊悚资料片《往日之影》日前迎来发售三周年。据外媒 Gamesradar 当地时间 27 日报道，《赛博朋克 2》副游戏总监、《往日之影》首席任务设计师帕维尔 · 萨斯科借此机会回顾了开发过程，并分享了一些此前未曾透露的细节。 《往日之影》帮助《赛博朋克 2077》实现了一次令人印象深刻的口碑逆转，而谈到这段经历，就绕不开本体游戏灾难性的首发。萨斯科坦诚，为了不让《往日之影》重演本体发售时的问题，CD Projekt…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-93952",
+        "id": "cisa-kev-cve-2026-5430",
         "category": "security",
-        "title": "Arista VeloCloud Orchestrator：Arista VeloCloud Orchestrator Improper Input Validation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-93952",
+        "title": "WSO2 Multiple Products：WSO2 Multiple Products Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-5430",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
-        "summary": "Arista VeloCloud Orchestrator (VCO) on-prem contains an improper input validation vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise th…",
-        "badge": "CVE-2026-93952",
-        "signal": "已遭利用 · 整改期限 2026-09-25"
+        "publishedAt": "2026-09-24T00:00:00.000Z",
+        "summary": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.",
+        "badge": "CVE-2026-5430",
+        "signal": "已遭利用 · 整改期限 2026-09-27"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49844629",
+        "id": "hn-49857281",
         "category": "dev",
-        "title": "The state of SIMD in Rust in 2026",
-        "url": "https://shnatsel.github.io/state-of-simd-rust-2026/",
+        "title": "There is more to code review than (automatable) detection",
+        "url": "https://www.adaptivecapacitylabs.com/2026/08/24/there-is-more-to-code-review-than-automatable-detection/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-25T13:46:34.000Z",
+        "publishedAt": "2026-09-26T15:06:28.000Z",
         "badge": "HN",
-        "signal": "55 分 · 16 评论"
+        "signal": "52 分 · 20 评论"
       },
       {
-        "id": "cn-baidu-72f6d15437622070",
+        "id": "cn-baidu-26ed81ad97f5dfb2",
         "category": "cn",
-        "title": "贷款中介这几天集体删除朋友圈",
-        "url": "https://www.baidu.com/s?wd=%E8%B4%B7%E6%AC%BE%E4%B8%AD%E4%BB%8B%E8%BF%99%E5%87%A0%E5%A4%A9%E9%9B%86%E4%BD%93%E5%88%A0%E9%99%A4%E6%9C%8B%E5%8F%8B%E5%9C%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "武契奇宣布辞职",
+        "url": "https://www.baidu.com/s?wd=%E6%AD%A6%E5%A5%91%E5%A5%87%E5%AE%A3%E5%B8%83%E8%BE%9E%E8%81%8C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月30日起《金融产品网络营销管理办法》实施，明确禁止非持牌个人开展网络营销。受此监管组合拳影响，贷款中介集体解散客户群、删除朋友圈以降低存在感，助贷行业野蛮生长阶段终结。7家上市助贷公司2026年二季度业绩全面下滑，合规能力将成入场门槛。",
+        "summary": "当地时间9月27日晚，塞尔维亚总统武契奇向民众发表讲话，宣布辞职。武契奇在讲话中感谢塞尔维亚民众两次在总统选举中给予他的信任。随后，武契奇签署辞呈，正式辞去塞尔维亚总统职务，提前结束其第二个总统任期。根据此前宣布，他将竞选下届政府总理。",
         "badge": "热搜",
-        "signal": "7,522,054 热度"
+        "signal": "7,522,152 热度"
       },
       {
         "id": "github-advisory-ghsa-62mm-xwmv-crhg",
@@ -510,8 +510,8 @@
         "url": "https://github.com/paperclipai/paperclip",
         "description": "The open-source app everyone uses to manage agents at work",
         "language": "TypeScript",
-        "stars": 89653,
-        "starsToday": 2527
+        "stars": 89862,
+        "starsToday": 2401
       },
       {
         "id": "github-57687486696d1493",
@@ -520,8 +520,8 @@
         "url": "https://github.com/vectorize-io/hindsight",
         "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 37131,
-        "starsToday": 4463
+        "stars": 37297,
+        "starsToday": 4520
       },
       {
         "id": "github-90d09492a98e7644",
@@ -530,8 +530,8 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 39895,
-        "starsToday": 3060
+        "stars": 40145,
+        "starsToday": 3086
       },
       {
         "id": "github-2fe557721be7835e",
@@ -540,8 +540,8 @@
         "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
         "description": "Learn it. Build it. Ship it for others.",
         "language": "Python",
-        "stars": 59197,
-        "starsToday": 848
+        "stars": 59284,
+        "starsToday": 790
       },
       {
         "id": "github-61047900df5ca080",
@@ -550,8 +550,8 @@
         "url": "https://github.com/InfinityLoop1308/PipePipe",
         "description": "An open-source Android app to let you browse YouTube and other services freely.",
         "language": "Shell",
-        "stars": 6540,
-        "starsToday": 139
+        "stars": 6566,
+        "starsToday": 242
       },
       {
         "id": "github-ebe63522fb3ce7f2",
@@ -560,8 +560,8 @@
         "url": "https://github.com/vercel-labs/scriptc",
         "description": "TypeScript-to-Native Compiler",
         "language": "TypeScript",
-        "stars": 5366,
-        "starsToday": 186
+        "stars": 5400,
+        "starsToday": 102
       },
       {
         "id": "github-89d643cfdc660041",
@@ -570,7 +570,7 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 905,
+        "stars": 974,
         "starsToday": 114
       },
       {
@@ -580,8 +580,8 @@
         "url": "https://github.com/dream-num/univer",
         "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "language": "TypeScript",
-        "stars": 20115,
-        "starsToday": 920
+        "stars": 20174,
+        "starsToday": 895
       },
       {
         "id": "github-376f1ebefda0a923",
@@ -590,10 +590,10 @@
         "url": "https://github.com/willfaust/Madeira",
         "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
         "language": "C",
-        "stars": 786,
-        "starsToday": 117
+        "stars": 814,
+        "starsToday": 83
       }
     ],
-    "updatedAt": "2026-09-27T22:12:43.240Z"
+    "updatedAt": "2026-09-28T00:48:52.425Z"
   }
 }
