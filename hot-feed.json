@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-29T08:32:22.586Z",
+  "generatedAt": "2026-09-29T15:53:00.773Z",
   "intelligence": {
-    "updatedAt": "2026-09-29T08:32:22.586Z",
+    "updatedAt": "2026-09-29T15:53:00.773Z",
     "items": [
       {
-        "id": "cn-item-c753a91512525221",
+        "id": "cn-item-4b8e643d96bb1b8d",
         "category": "cn",
-        "title": "鞋不对为何会丢金？比对手重700克为何会出局？亚运会“冷门”规则盘点",
-        "url": "https://www.chinanews.com.cn/ty/2026/09-29/10705573.shtml",
+        "title": "北京理工大学：取消裴某研究生导师资格 解除聘用关系",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-29/10705785.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-29T07:46:42.000Z",
-        "summary": "中新网北京9月29日电 (记者 苏婧欣)爱知·名古屋亚运会组委会28日确认，在9月27日进行的女子马拉松竞走比赛中，率先冲线的哈萨克斯坦选手托克桑巴耶娃因所穿鞋款并未在世界田联的官方注册鞋库(白名单)中，属于违规行为，比赛成绩被取消。",
+        "publishedAt": "2026-09-29T11:34:19.000Z",
+        "summary": "中新网9月29日电 据北京理工大学官方微博消息，9月29日，北京理工大学发布情况通报称，近日，学校收到反映该校教师裴某相关问题的线索。学校高度重视，第一时间成立专项工作组，开展全面细致的调查工作。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-88772",
+        "id": "cisa-kev-cve-2026-86950",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
+        "title": "Apple Multiple Products：Apple Multiple Products Out-of-Bounds Write Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86950",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-27T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
-        "badge": "CVE-2026-88772",
-        "signal": "已遭利用 · 整改期限 2026-09-30"
+        "publishedAt": "2026-09-29T00:00:00.000Z",
+        "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+        "badge": "CVE-2026-86950",
+        "signal": "已遭利用 · 整改期限 2026-10-02"
       },
       {
         "id": "ai-openai-50d71cd52400f551",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49880411",
+        "id": "hn-49894005",
         "category": "dev",
-        "title": "Phyllotaxis: An audio-reactive LED display",
-        "url": "https://jagi.studio/posts/phyllotaxis/",
+        "title": "macOS Golden Gate Is a Buggy Mess",
+        "url": "https://www.squareorbits.com/blog/2026/09/macos-golden-gate-is-a-buggy-mess/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T16:18:57.000Z",
+        "publishedAt": "2026-09-29T14:32:33.000Z",
         "badge": "HN",
-        "signal": "124 分 · 13 评论"
+        "signal": "184 分 · 119 评论"
       },
       {
-        "id": "cn-it-dbe42dc043aa331a",
+        "id": "cn-it-5a4d22d220604ee0",
         "category": "cn",
-        "title": "传台积电考虑在美国设立第二园区，再建 6 座先进晶圆厂",
-        "url": "https://www.ithome.com/1/008/364.htm",
+        "title": "微信鸿蒙版 App 获 8.0.22.35 尝鲜升级，修复了一些已知问题",
+        "url": "https://www.ithome.com/1/008/517.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-29T08:22:55.000Z",
-        "summary": "IT之家 9 月 29 日消息，台媒《经济日报》今日援引半导体制造设备行业消息报道称， 台积电拟在现有亚利桑那凤凰城园区之外再在美国设立一个制造基地 ，额外建设 6 座先进晶圆厂。 ▲ TSMC Arizona 报道称，新园区的投资规模可能超过 TSMC Arizona 的 2,650 亿美元 （IT之家注：现汇率约合 1.78 万亿元人民币） ，最有可能的选址则是得克萨斯达拉斯。 ▲ TSMC Arizona 半导体晶圆厂对水电人力资源都有相当高的需求。如果生产设施过于集…",
+        "publishedAt": "2026-09-29T15:39:40.000Z",
+        "summary": "IT之家 9 月 29 日消息，继 8.0.22.34 之后，微信鸿蒙版 App 在华为应用市场（App Gallery）紧接着开启了 8.0.22.35 (8394275) 版本尝鲜升级，测试时间为 2026/9/29-2026/10/29。 微信鸿蒙版 App 尝鲜可能量少，有需要的朋友可通过应用市场-我的-应用尝鲜-点击搜索框搜索。 和往常一样，本次更新的说明依旧为“修复了一些已知问题”。 IT之家附网友 @伤心萨摩耶 和 MeoW 整理的最新版本已知灰度测试内容（不…",
         "badge": "IT之家"
       },
       {
@@ -76,64 +76,64 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245568",
+        "id": "v2ex-1245655",
         "category": "dev",
-        "title": "做了个 MCP 把网页 AI 接进本地项目，但被它的“长记忆”机制搞懵了",
-        "url": "https://www.v2ex.com/t/1245568",
+        "title": "你还会读所谓技术论坛上面的文章吗",
+        "url": "https://www.v2ex.com/t/1245655",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-29T08:02:09.000Z",
-        "summary": "最近在折腾一个方向： 把网页端 AI 和本地开发环境打通 。 我有个网站，因为有些顶级模型只能在网页端免费使用（比如 GPT6 、Fable5 ），所以我写了一个 VS Code 插件，通过 MCP 让网页里的 AI 可以直接操作本地项目。 目前已经能做到： 读取本地项目文件 修改代码 运行任务 调用 MCP 使用 Skills 让网页 AI 直接参与本地开发流程 这部分基本已经跑通了，实际用起来也比较顺。 但最近有一个问题一直没想明白。 我发现有些网页端 AI 的同一个会…",
+        "publishedAt": "2026-09-29T15:10:46.000Z",
+        "summary": "现在 ai 太泛滥了，以前还会读一下那些论坛上的文章，Android 安全方面的，以前读的时候还是能认真读读的，现在一读感觉 ai 味道扑面而来，说啥都不读了，可能有些是自己动笔写的（说实话，可能吗？）太反胃了。所谓读文章已“死”",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-a3e62e8ace81178b",
+        "id": "cn-baidu-06b22696a4eb3ce6",
         "category": "cn",
-        "title": "成都文旅通报那英唱《弯弯的月亮》",
-        "url": "https://www.baidu.com/s?wd=%E6%88%90%E9%83%BD%E6%96%87%E6%97%85%E9%80%9A%E6%8A%A5%E9%82%A3%E8%8B%B1%E5%94%B1%E3%80%8A%E5%BC%AF%E5%BC%AF%E7%9A%84%E6%9C%88%E4%BA%AE%E3%80%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "房地产迎来史诗级大招",
+        "url": "https://www.baidu.com/s?wd=%E6%88%BF%E5%9C%B0%E4%BA%A7%E8%BF%8E%E6%9D%A5%E5%8F%B2%E8%AF%97%E7%BA%A7%E5%A4%A7%E6%8B%9B&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月29日，成都市文化广电旅游局发布通报回应那英演唱《弯弯的月亮》一事。经核实，那英是在演唱会现场观众互动环节进行片段化演唱，未完整演唱该歌曲，不属于变更节目重新报批的情形。",
+        "summary": "楼市迎来房贷贴息重磅政策，10月1日起实施，首套新房二手房可享最高100万贷款贴息，财政兜底。该政策能降低刚需购房成本，有望托住房价，但难以推动房价大幅上涨。",
         "badge": "热搜",
-        "signal": "7,808,054 热度"
+        "signal": "7,807,968 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-88771",
+        "id": "cisa-kev-cve-2026-88772",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Input Validation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88771",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
         "source": "CISA KEV",
         "publishedAt": "2026-09-27T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
-        "badge": "CVE-2026-88771",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+        "badge": "CVE-2026-88772",
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-hugging-face-09d1d26fa19dd694",
+        "id": "ai-hugging-face-dc53fce90c6f36f5",
         "category": "ai",
-        "title": "Holo4: powering generalist computer-use agents",
-        "url": "https://huggingface.co/blog/Hcompany/holo4",
+        "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
+        "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-28T09:44:05.000Z",
+        "publishedAt": "2026-09-29T15:30:38.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49876052",
+        "id": "hn-49893876",
         "category": "dev",
-        "title": "The systems that no one will test",
-        "url": "https://blog.christianperone.com/2026/09/the-systems-that-no-one-will-test/",
+        "title": "Claude partial outage",
+        "url": "https://status.claude.com/incidents/4xvtc2gnq73l",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T10:51:46.000Z",
+        "publishedAt": "2026-09-29T14:25:41.000Z",
         "badge": "HN",
-        "signal": "39 分 · 13 评论"
+        "signal": "149 分 · 110 评论"
       },
       {
-        "id": "cn-item-655ca69f1315763b",
+        "id": "cn-item-a40b4dc402e72344",
         "category": "cn",
-        "title": "以收孩子学杂费为由诈骗 警惕家长群里的高仿“班主任”",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-29/10705546.shtml",
+        "title": "中国人民银行调整完善若干货币政策工具",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-29/10705718.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-29T07:16:47.000Z",
-        "summary": "新学期，家长群出现缴费通知看起来挺正常。但谁能想到，群消息背后，可能藏着精心设计的骗局。湖北武汉警方就侦办了这样一起案件，有人潜入学校家长群，冒充班主任发布收费通知，短短十多分钟，就有三十多位家长被骗。",
+        "publishedAt": "2026-09-29T09:58:34.000Z",
+        "summary": "中新网9月29日电 据中国人民银行网站消息，为贯彻中央政治局会议精神和国务院常务会议部署，实施好适度宽松的货币政策，中国人民银行在充分发挥各项存量政策效能的基础上，决定进一步调整完善几项货币政策工具，为经济平稳增长、高质量发展和金融市场稳定运行创造适宜的货币金融环境，推动经济持续向新向优向好发展，支持“十五五”实现良好开局。",
         "badge": "中新网要闻"
       },
       {
@@ -158,36 +158,36 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245541",
+        "id": "v2ex-1245653",
         "category": "dev",
-        "title": "1 号员工被屠， 2 号员工 Codex 全靠赛博义父 Tibo 续命",
-        "url": "https://www.v2ex.com/t/1245541",
+        "title": "被 AI 取代的只是中低端程序员",
+        "url": "https://www.v2ex.com/t/1245653",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-29T06:50:58.000Z",
-        "summary": "佬友们，上一篇刚聊完《 一号员工满月了：Claude Code 两次封号，第三次活下来 》，今天脸就被打肿了…… 作为独立开发，手下有两个最能打的王牌员工： 1 号：Claude Code ，干活心细、架构审美在线、能打大仗，是我的首席架构兼主力牛马。 2 号：Codex ，皮实耐操、手速极快，主打一个执行力拉满。 两天后，1 号员工突然弹窗要求重新登录。我熟练地点下 Google 一键登录，屏幕上冰冷地蹦出一行红字： Your account has been suspe…",
+        "publishedAt": "2026-09-29T15:03:01.000Z",
+        "summary": "那么多人吹 vibe coding ，但是也没有人能 vibe coding 出来一款 Surge ，这无良的钱活该他赚。 牛逼的软件和产品还是护城河很深的，不是谁都可以当程序员的，谁都可以当的只是一些中低端程序员",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-361a12c85a5ea5ef",
+        "id": "cn-it-f7bf16a0c5ee76d1",
         "category": "cn",
-        "title": "豪威集团发布 OX08D30 车外摄像头图像传感器：800 万像素，支持 LED 闪烁抑制",
-        "url": "https://www.ithome.com/1/008/363.htm",
+        "title": "古尔曼：苹果新任 CEO 特努斯着手全面改革，加快产品开发、精简管理层",
+        "url": "https://www.ithome.com/1/008/516.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-29T08:21:49.000Z",
-        "summary": "IT之家 9 月 29 日消息，豪威集团近日发布 800 万像素 CMOS 汽车图像传感器 OX08D30。产品基于 TheiaCel™技术打造，面向高级驾驶辅助系统（ADAS）与自动驾驶（AD）车外摄像头应用。 IT之家从官方介绍获悉，OX08D30 进一步拓展单次曝光动态范围， 有效抑制 LED 闪烁以及各类时序采样伪影 ，在复杂光照环境下均可输出高质量图像。该传感器与目前主流 ADAS 平台广泛使用的 OX08D10 实现引脚对引脚兼容。 闪烁的 LED 交通信号灯 …",
+        "publishedAt": "2026-09-29T15:21:45.000Z",
+        "summary": "IT之家 9 月 29 日消息，彭博社马克 · 古尔曼刚刚报道称，苹果新任 CEO 约翰 · 特努斯（John Ternus）上任不到一个月，便已着手对公司内部展开大刀阔斧的改革。 特努斯希望调整公司组织和产品开发方式， 目标包括加快产品研发节奏、扩大硬件产品线，并精简管理层，将更多资源和决策重心放在工程团队上 。当然，相关方案目前仍处于内部讨论阶段。 特努斯于 9 月 1 日正式接替蒂姆 · 库克（Tim Cook）出任 CEO，库克则转任董事会执行主席。特努斯此前担任苹…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-67279",
+        "id": "cisa-kev-cve-2026-88771",
         "category": "security",
-        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Input Validation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88771",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
-        "badge": "CVE-2026-67279",
-        "signal": "已遭利用 · 整改期限 2026-09-28"
+        "publishedAt": "2026-09-27T00:00:00.000Z",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+        "badge": "CVE-2026-88771",
+        "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
         "id": "ai-google-deepmind-68ead6b6af2b7144",
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49870376",
+        "id": "hn-49892245",
         "category": "dev",
-        "title": "Booted up in 1993, this server still runs – but not for much longer (2017)",
-        "url": "https://www.computerworld.com/article/1673071/booted-up-in-1993-this-server-still-runs-but-not-for-much-longer-2.html",
+        "title": "How Delhi Cut Electricity Loss from 50 to 5 Percent",
+        "url": "https://spectrum.ieee.org/delhi-electricity-loss",
         "source": "Hacker News",
-        "publishedAt": "2026-09-27T20:13:22.000Z",
+        "publishedAt": "2026-09-29T12:43:29.000Z",
         "badge": "HN",
-        "signal": "21 分 · 4 评论"
+        "signal": "216 分 · 137 评论"
       },
       {
-        "id": "cn-baidu-3a22365dacfb0339",
+        "id": "cn-baidu-3506b8a5749b9f69",
         "category": "cn",
-        "title": "又一条“南北大动脉”来了",
-        "url": "https://www.baidu.com/s?wd=%E5%8F%88%E4%B8%80%E6%9D%A1%E2%80%9C%E5%8D%97%E5%8C%97%E5%A4%A7%E5%8A%A8%E8%84%89%E2%80%9D%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "于和伟获金鹰奖最佳男主角",
+        "url": "https://www.baidu.com/s?wd=%E4%BA%8E%E5%92%8C%E4%BC%9F%E8%8E%B7%E9%87%91%E9%B9%B0%E5%A5%96%E6%9C%80%E4%BD%B3%E7%94%B7%E4%B8%BB%E8%A7%92&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "目前，设计时速350公里的京港高铁雄商段开通在即。该线路途经山东聊城、济宁、菏泽3市，将结束临清、阳谷等多县市不通高铁的历史。开通后，鲁西北上京津冀、南下珠三角无需绕行，聊城与菏泽将形成“双十字”高铁枢纽格局，重塑鲁西发展新版图。",
+        "summary": "第33届中国电视金鹰奖颁奖典礼29日晚在湖南长沙举行。于和伟凭借《沉默的荣耀》获金鹰奖最佳男主角奖。",
         "badge": "热搜",
-        "signal": "7,712,099 热度"
+        "signal": "7,713,865 热度"
       },
       {
         "id": "github-advisory-ghsa-58mr-gqgx-xq4g",
@@ -231,44 +231,44 @@
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-280bf64dcca75cee",
+        "id": "ai-hugging-face-afa8c33f8eb7996a",
         "category": "ai",
-        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
-        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
+        "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-24T14:08:57.000Z",
+        "publishedAt": "2026-09-29T13:07:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245517",
+        "id": "v2ex-1245626",
         "category": "dev",
-        "title": "感觉最近 AI 的能力明显上了一层台阶，每天被 AI 带着走，难顶",
-        "url": "https://www.v2ex.com/t/1245517",
+        "title": "这里技术向居多，有没有发现很多客户根本不懂技术，却能大把赚钱？",
+        "url": "https://www.v2ex.com/t/1245626",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-29T05:57:16.000Z",
-        "summary": "最近白天蹬 opus 5.5 ，晚上蹬 gpt 6 ，另外开源社区还有体感上更猛的 agent 来给我提 code review 意见。 还记得半年前 AI review 准确率其实没那么高，个人体感九成吧，经常有些啼笑皆非的误报。 现在 AI review 准确率感觉基本没有误报了，而且报的都是非常难察觉的问题。很多边边角角的问题，我需要让 AI 反复给我讲背景和前置知识，我才能搞明白😂。 怀念一年多前，用 AI 跟带新人一样的感觉，还是自己牢牢掌控局面。现在得很费劲才能…",
+        "publishedAt": "2026-09-29T12:34:09.000Z",
+        "summary": "我经常向各种等级的老板推销 SAAS ，总会有一种油然而生的感觉，WTF 他为什么这都不懂还有顾客花大把钱买他的东西？",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "21 回复"
       },
       {
-        "id": "cn-item-45072ba24b5c381e",
+        "id": "cn-item-0fe95ad9c66d33b1",
         "category": "cn",
-        "title": "以色列总理和防长发表联合声明：打死一名哈马斯指挥官",
-        "url": "https://www.chinanews.com.cn/gj/2026/09-29/10705497.shtml",
+        "title": "受贿2.63亿余元 广西壮族自治区政协原副主席彭晓春一审被判死缓",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-29/10705666.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-29T06:27:05.000Z",
-        "summary": "中新网9月29日电 综合《以色列时报》等报道，当地时间29日，以色列总理内塔尼亚胡与国防部长卡茨发表联合声明称，28日夜间至29日凌晨期间的一次空袭行动中，以军打死巴勒斯坦伊斯兰抵抗运动(哈马斯)加沙北部旅指挥官伊兹·丁·比克。",
+        "publishedAt": "2026-09-29T09:01:09.000Z",
+        "summary": "2026年9月29日，广东省佛山市中级人民法院一审公开宣判广西壮族自治区政协原党组成员、副主席彭晓春受贿一案，对被告人彭晓春以受贿罪判处死刑，缓期二年执行，剥夺政治权利终身，并处没收个人全部财产；对追缴在案的彭晓春受贿所得财物及孳息依法上缴国库，不足部分继续追缴。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-65660",
+        "id": "cisa-kev-cve-2026-67279",
         "category": "security",
-        "title": "Microsoft SharePoint：Microsoft SharePoint Code Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660",
+        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
         "source": "CISA KEV",
         "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
-        "badge": "CVE-2026-65660",
+        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
+        "badge": "CVE-2026-67279",
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49880036",
+        "id": "hn-49890226",
         "category": "dev",
-        "title": "Pirating the Pirates",
-        "url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
+        "title": "AI companies leak data to advertisers [pdf]",
+        "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T15:54:15.000Z",
+        "publishedAt": "2026-09-29T09:03:41.000Z",
         "badge": "HN",
-        "signal": "558 分 · 272 评论"
+        "signal": "337 分 · 106 评论"
       },
       {
-        "id": "cn-it-0829717c3dfa824b",
+        "id": "cn-it-5814880eeb384407",
         "category": "cn",
-        "title": "苹果 iOS 27.2 Beta 2 系统新改动：控制中心单独设置 App 文字大小滑块回归",
-        "url": "https://www.ithome.com/1/008/362.htm",
+        "title": "苹果 iPhone 18 Pro 售价大涨，越来越多日本人开始考虑二手手机",
+        "url": "https://www.ithome.com/1/008/515.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-29T08:17:08.000Z",
-        "summary": "IT之家 9 月 29 日消息，据科技媒体 MacObserver 今天报道，部分用户发现苹果 iOS 27.2 Beta 2 测试版系统出现一项改动， 此前在控制中心消失的 App 单独设置文字大小滑块已然回归 。 IT之家从原报道获悉，用户目前可在 App 内打开控制中心，然后点击 AA 按钮呼出滑块调整应用内文字大小。 如果控制中心内没有 AA 按钮 ， 可以通过左上角的加号按钮重新加回去 。 该功能允许用户放大或缩小单个 App 的文字大小，不会影响整个系统的大小。…",
+        "publishedAt": "2026-09-29T15:15:39.000Z",
+        "summary": "IT之家 9 月 29 日消息，苹果本月初推出 iPhone 18 Pro 系列手机。新机带来可变光圈、灵动岛尺寸缩小等一系列升级，售价增长也引发热议。在日本市场， iPhone 18 Pro 与 5 年前同级机型相比 ， 价格几乎翻了一番 。 ▲ IT之家 Apple Park 实拍：iPhone 18 Pro 系列真机 据共同社今天报道， 苹果 iPhone 18 Pro 在日本直营渠道起售价 21.98 万日元 （IT之家注：现汇率约合 9,385 元人民币） ，最大…",
         "badge": "IT之家"
       },
       {
@@ -322,64 +322,64 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245516",
+        "id": "v2ex-1245619",
         "category": "dev",
-        "title": "[开源项目] Umem-cache：键值对缓存",
-        "url": "https://www.v2ex.com/t/1245516",
+        "title": "发现市面上没有一个好看的 markdown 编辑工具，除了 mac 上的 ulysses.",
+        "url": "https://www.v2ex.com/t/1245619",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-29T05:54:51.000Z",
-        "summary": "项目地址 https://github.com/imchuncai/umem-cache Umem-cache Umem-cache 是一个用户空间键值对缓存。它的目标是做到全世界最好。 在基于 Zipf 分布且键值对大小在 1KB 以内的基准测试中，Umem-cache 的命中率比 Memcached 和 Redis 高 出 10%，命中吞吐量高出 50%。 特性 强一致 缓存数据能够与后端数据库保持完全同步。换言之，你不会取到旧数据。 反缓存击穿 反缓存击穿是内置的。 …",
+        "publishedAt": "2026-09-29T11:14:46.000Z",
+        "summary": "AI 时代用的最多的文档格式就是 markdown ，但是用了很多编辑器，包括 vscode ，zed ，typora ，总感觉界面和排版不美观。没有一个能打过甚至接近 ulysses 的，难怪一年可以卖 293 。 感觉谁要是能先做出来一个审美在线的 md 编辑器，应该会有市场。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-baidu-5597f9dcf76e88fb",
+        "id": "cn-baidu-9fea2482f721af3f",
         "category": "cn",
-        "title": "未来五年 汽车产业迎来新图景",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%B9%B4+%E6%B1%BD%E8%BD%A6%E4%BA%A7%E4%B8%9A%E8%BF%8E%E6%9D%A5%E6%96%B0%E5%9B%BE%E6%99%AF&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国已建成世界规模最大的教育体系",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%B7%B2%E5%BB%BA%E6%88%90%E4%B8%96%E7%95%8C%E8%A7%84%E6%A8%A1%E6%9C%80%E5%A4%A7%E7%9A%84%E6%95%99%E8%82%B2%E4%BD%93%E7%B3%BB&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "《智能网联新能源汽车产业发展“十五五”规划》提出，到2030年，我国智能网联新能源汽车全产业链优势进一步巩固，进入世界汽车强国行列，国内市场新能源乘用车、商用车在各自领域新车总销量的占比分别达到70%、40%，具备自动驾驶功能的汽车实现规模应用。未来五年，汽车产业迎来新图景！",
+        "summary": "在国务院新闻办公室29日举行的“开局起步‘十五五’”系列主题新闻发布会上，科技部部长阴和俊介绍，经过多年不懈努力，我国已建成全世界规模最大的教育体系，拥有学科门类最齐全的人才资源，拥有总量位居世界第一的研发人员队伍，为我国科技实力不断跃升提供有力保障，也为进一步推动一体发展奠定了坚实基础。",
         "badge": "热搜",
-        "signal": "7,618,737 热度"
+        "signal": "7,619,155 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-87902",
+        "id": "cisa-kev-cve-2026-65660",
         "category": "security",
-        "title": "WordPress Core：WordPress Core Remote File Inclusion Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87902",
+        "title": "Microsoft SharePoint：Microsoft SharePoint Code Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660",
         "source": "CISA KEV",
         "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remot…",
-        "badge": "CVE-2026-87902",
+        "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
+        "badge": "CVE-2026-65660",
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-hugging-face-30aa7c0acfe7f380",
+        "id": "ai-hugging-face-09d1d26fa19dd694",
         "category": "ai",
-        "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
-        "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
+        "title": "Holo4: powering generalist computer-use agents",
+        "url": "https://huggingface.co/blog/Hcompany/holo4",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-23T18:41:40.000Z",
+        "publishedAt": "2026-09-28T09:44:05.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49883539",
+        "id": "hn-49891290",
         "category": "dev",
-        "title": "California farmers are struggling to sell grapes as demand for wine drops",
-        "url": "https://www.kqed.org/news/12101534/california-farmers-are-struggling-to-sell-grapes-as-demand-for-wine-drops",
+        "title": "Jeeves. Reasoning improves Jev-like decision models",
+        "url": "https://github.com/PostHog/jeeves",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T20:00:06.000Z",
+        "publishedAt": "2026-09-29T11:13:54.000Z",
         "badge": "HN",
-        "signal": "199 分 · 431 评论"
+        "signal": "151 分 · 64 评论"
       },
       {
-        "id": "cn-item-367033f450d929c3",
+        "id": "cn-item-8631bcba0250deca",
         "category": "cn",
-        "title": "那英演唱会缅怀刘欢即兴演唱《弯弯的月亮》疑未报批，官方通报",
-        "url": "https://www.chinanews.com.cn/sh/2026/09-29/10705471.shtml",
+        "title": "国务院任免国家工作人员",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-29/10705605.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-29T06:04:18.000Z",
-        "summary": "中新网9月29日电 据“文旅成都”微信公众号消息，成都市文化广电旅游局发布情况通报称，针对那英演唱会缅怀刘欢即兴演唱《弯弯的月亮》一事，经核实，相关情况为那英在演唱会现场观众互动环节的片段化演唱，未完整演唱该首歌曲，不属于变更节目重新报批的情形。感谢网友的关注与监督。",
+        "publishedAt": "2026-09-29T08:46:58.000Z",
+        "summary": "国务院任免国家工作人员。",
         "badge": "中新网要闻"
       },
       {
@@ -404,36 +404,36 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245511",
+        "id": "v2ex-1245612",
         "category": "dev",
-        "title": "什么 AI 工具能辅助制作动物的 3D 模型？",
-        "url": "https://www.v2ex.com/t/1245511",
+        "title": "好牛的 GPT，降智降的奥特曼连他妈都不认了",
+        "url": "https://www.v2ex.com/t/1245612",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-29T05:47:24.000Z",
-        "summary": "带多个动作动画的，懂得的大佬说说~",
+        "publishedAt": "2026-09-29T10:17:07.000Z",
+        "summary": "好家伙， 做个 i18n ，gpt-6-sol 中，这给我翻译的， 还是 grok 验收 找出来的 支付宝、微信支付不再写成 “Pay the treasure” 和 “Micro-credit payments”。",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "19 回复"
       },
       {
-        "id": "cn-it-b46008b0b837f957",
+        "id": "cn-it-921874c2dc2858cd",
         "category": "cn",
-        "title": "我国拥有总量世界第一的研发人员队伍，校企联合培养工程硕博士近 3.6 万人",
-        "url": "https://www.ithome.com/1/008/361.htm",
+        "title": "RGB 硬件最后一环：英特尔专利提出在 CPU 封装中集成 Micro LED，可用作指示灯或装饰",
+        "url": "https://www.ithome.com/1/008/511.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-29T08:15:43.000Z",
-        "summary": "IT之家 9 月 29 日消息，据央视新闻报道，在国务院新闻办公室今天（9 月 29 日）举行的“开局起步‘十五五’”系列主题新闻发布会上，科技部部长阴和俊介绍，近年来，科技部与教育、人才等部门加强工作对接，强化规划衔接、政策协同、资源统筹、评价联动，合力推进教育科技人才一体发展。 我国已建成世界规模最大的教育体系 一是注重在科研实践中造就人才 。 在重大任务组织、重大工程实施、重大平台建设中，统筹科研攻关和人才培养目标。比如，“十四五”期间，国家重点研发计划支持超 70 …",
+        "publishedAt": "2026-09-29T15:07:24.000Z",
+        "summary": "IT之家 9 月 29 日消息，TomsHardWare 发现，英特尔本月初公开了一项关于 CPU 封装的新专利，提出将 Micro LED 灯珠直接集成到处理器内部的想法。 这意味着，未来处理器表面不仅可以显示 RGB 灯效，还可以自定义点亮 Logo 或文字，或者根据处理器负载、温度或执行状态实时改变光效。 这项专利于 2022 年提交，并于本月正式公开。该专利描述了一种基于玻璃基板（Glass Substrate）和穿玻璃通孔（TGV）的封装方案，可将 Micro L…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-5430",
+        "id": "cisa-kev-cve-2026-87902",
         "category": "security",
-        "title": "WSO2 Multiple Products：WSO2 Multiple Products Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-5430",
+        "title": "WordPress Core：WordPress Core Remote File Inclusion Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87902",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-24T00:00:00.000Z",
-        "summary": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.",
-        "badge": "CVE-2026-5430",
-        "signal": "已遭利用 · 整改期限 2026-09-27"
+        "publishedAt": "2026-09-25T00:00:00.000Z",
+        "summary": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remot…",
+        "badge": "CVE-2026-87902",
+        "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
         "id": "ai-google-deepmind-947e89eaa83a27ae",
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49882781",
+        "id": "hn-49893709",
         "category": "dev",
-        "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
-        "url": "https://stateofutopia.com/experiments/microllmlab/",
+        "title": "Unsurprisingly, Meta's new Muse AI agent blatantly ignores users permissions",
+        "url": "https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T18:58:53.000Z",
+        "publishedAt": "2026-09-29T14:15:24.000Z",
         "badge": "HN",
-        "signal": "227 分 · 81 评论"
+        "signal": "118 分 · 19 评论"
       },
       {
-        "id": "cn-baidu-d219ff1ed4b79d32",
+        "id": "cn-baidu-8fe5451305403664",
         "category": "cn",
-        "title": "中方回应中美俄元首是否在深圳会晤",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E6%96%B9%E5%9B%9E%E5%BA%94%E4%B8%AD%E7%BE%8E%E4%BF%84%E5%85%83%E9%A6%96%E6%98%AF%E5%90%A6%E5%9C%A8%E6%B7%B1%E5%9C%B3%E4%BC%9A%E6%99%A4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "重大利好！央行“四箭齐发”",
+        "url": "https://www.baidu.com/s?wd=%E9%87%8D%E5%A4%A7%E5%88%A9%E5%A5%BD%EF%BC%81%E5%A4%AE%E8%A1%8C%E2%80%9C%E5%9B%9B%E7%AE%AD%E9%BD%90%E5%8F%91%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月29日，外交部发言人郭嘉昆主持例行记者会。克里姆林宫发言人表示，将在深圳举行的亚太经合组织峰会为俄中美元首举行三方会议提供良机。对此，郭嘉昆回应称，作为东道主，中方愿同各方推动APEC中国年取得丰硕成果，关于该问题目前没有可以提供的信息。",
+        "summary": "9月29日，央行“四箭齐发”：下调PSL利率0.25个百分点，增加科技创新再贷款2000亿元、支农支小再贷款5000亿元。同日，财政部等三部门发通知，10月1日起对新发放首套房贷实施贴息政策。",
         "badge": "热搜",
-        "signal": "7,523,420 热度"
+        "signal": "7,524,197 热度"
       },
       {
         "id": "github-advisory-ghsa-456v-xq2p-r4cj",
@@ -476,24 +476,24 @@
         "signal": "HIGH · CVSS 7.8"
       },
       {
-        "id": "ai-hugging-face-e9f63aa1f7aaa02f",
+        "id": "ai-hugging-face-280bf64dcca75cee",
         "category": "ai",
-        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
-        "url": "https://huggingface.co/blog/evaleval-aisi",
+        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "publishedAt": "2026-09-24T14:08:57.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245498",
+        "id": "v2ex-1245607",
         "category": "dev",
-        "title": "做个给 agent 专用的电商平台怎么样",
-        "url": "https://www.v2ex.com/t/1245498",
+        "title": "记一次网站缓存排查：改完内容清了所有缓存，访客还是看到旧版",
+        "url": "https://www.v2ex.com/t/1245607",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-29T04:39:39.000Z",
-        "summary": "一个交互只有接口和 skills 的电商平台 AI 可以根据用户需求访问商品、自动比较商品、自动下单 商家可以让 AI 整理商品、自动上下架、自动运营",
+        "publishedAt": "2026-09-29T09:54:56.000Z",
+        "summary": "先说结论，可能不少人已经知道了：WordPress 挂了对象缓存和 CDN 之后，清缓存的顺序要从最里层往外——先 Redis ，再服务器整页缓存（ Nginx FastCGI ），最后 CDN 。顺序反了，清了也白清。 我前阵子反复遇到一个场景：后台改完文章提示成功，前台打开还是旧内容。第一反应清缓存，一层两层三层全清一遍，还是旧的。加个 ?v=123 马上就新了，去掉参数又变回旧的。 折腾了一段时间才把链路想明白。 三层缓存各自的性格： CDN：缓存整页 HTML ，按…",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "4 回复"
       }
     ]
   },
@@ -510,18 +510,18 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 45611,
-        "starsToday": 3221
+        "stars": 47024,
+        "starsToday": 4712
       },
       {
-        "id": "github-2d4d3afa6fb542f6",
+        "id": "github-4a822c098ee8277f",
         "rank": 2,
-        "name": "paperclipai/paperclip",
-        "url": "https://github.com/paperclipai/paperclip",
-        "description": "The open-source app everyone uses to manage agents at work",
-        "language": "TypeScript",
-        "stars": 93605,
-        "starsToday": 3197
+        "name": "NVIDIA/OpenShell",
+        "url": "https://github.com/NVIDIA/OpenShell",
+        "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+        "language": "Rust",
+        "stars": 10208,
+        "starsToday": 978
       },
       {
         "id": "github-57687486696d1493",
@@ -530,60 +530,80 @@
         "url": "https://github.com/vectorize-io/hindsight",
         "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 41697,
-        "starsToday": 4561
+        "stars": 42339,
+        "starsToday": 2541
       },
       {
-        "id": "github-165b4bf6d0fcbce4",
+        "id": "github-2d4d3afa6fb542f6",
         "rank": 4,
-        "name": "NawfalMotii79/PLFM_RADAR",
-        "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
-        "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
-        "language": "PLSQL",
-        "stars": 25929,
-        "starsToday": 158
+        "name": "paperclipai/paperclip",
+        "url": "https://github.com/paperclipai/paperclip",
+        "description": "The open-source app everyone uses to manage agents at work",
+        "language": "TypeScript",
+        "stars": 94128,
+        "starsToday": 2412
       },
       {
-        "id": "github-d599eb6c66a59baa",
+        "id": "github-47a1da9fa52e0c81",
         "rank": 5,
-        "name": "cs341-illinois/coursebook",
-        "url": "https://github.com/cs341-illinois/coursebook",
-        "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
-        "language": "TeX",
-        "stars": 2688,
-        "starsToday": 195
-      },
-      {
-        "id": "github-8247b13667126028",
-        "rank": 6,
-        "name": "byoungd/up",
-        "url": "https://github.com/byoungd/up",
-        "description": "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
-        "language": "JavaScript",
-        "stars": 65186,
-        "starsToday": 327
+        "name": "t8y2/dbx",
+        "url": "https://github.com/t8y2/dbx",
+        "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+        "language": "Rust",
+        "stars": 21768,
+        "starsToday": 460
       },
       {
         "id": "github-89d643cfdc660041",
-        "rank": 7,
+        "rank": 6,
         "name": "mvschwarz/openrig",
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 1966,
-        "starsToday": 734
+        "stars": 2192,
+        "starsToday": 733
       },
       {
-        "id": "github-5b2653ab79f36aef",
-        "rank": 8,
-        "name": "dream-num/univer",
-        "url": "https://github.com/dream-num/univer",
-        "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "id": "github-70c9103343e142dc",
+        "rank": 7,
+        "name": "oblien/openship",
+        "url": "https://github.com/oblien/openship",
+        "description": "Self-hosted deployment platform",
         "language": "TypeScript",
-        "stars": 21508,
-        "starsToday": 1099
+        "stars": 13656,
+        "starsToday": 436
+      },
+      {
+        "id": "github-4bd768c7cdfc6c20",
+        "rank": 8,
+        "name": "averygan/reclip",
+        "url": "https://github.com/averygan/reclip",
+        "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+        "language": "HTML",
+        "stars": 9903,
+        "starsToday": 114
+      },
+      {
+        "id": "github-d599eb6c66a59baa",
+        "rank": 9,
+        "name": "cs341-illinois/coursebook",
+        "url": "https://github.com/cs341-illinois/coursebook",
+        "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
+        "language": "TeX",
+        "stars": 2931,
+        "starsToday": 569
+      },
+      {
+        "id": "github-2fe557721be7835e",
+        "rank": 10,
+        "name": "rohitg00/ai-engineering-from-scratch",
+        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+        "description": "Learn it. Build it. Ship it for others.",
+        "language": "Python",
+        "stars": 61016,
+        "starsToday": 855
       }
     ],
-    "updatedAt": "2026-09-29T08:32:22.586Z"
+    "updatedAt": "2026-09-29T15:53:00.773Z"
   }
 }
