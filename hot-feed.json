@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-29T15:53:00.773Z",
+  "generatedAt": "2026-09-29T20:48:01.528Z",
   "intelligence": {
-    "updatedAt": "2026-09-29T15:53:00.773Z",
+    "updatedAt": "2026-09-29T20:48:01.528Z",
     "items": [
       {
         "id": "cn-item-4b8e643d96bb1b8d",
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-10-02"
       },
       {
-        "id": "ai-openai-50d71cd52400f551",
+        "id": "ai-openai-6071f63e21f64254",
         "category": "ai",
-        "title": "How we will do better for Australia",
-        "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+        "title": "DevDay 2026 Recap",
+        "url": "https://openai.com/index/devday-2026-recap",
         "source": "OpenAI",
-        "publishedAt": "2026-09-28T19:00:00.000Z",
-        "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49894005",
+        "id": "hn-49899090",
         "category": "dev",
-        "title": "macOS Golden Gate Is a Buggy Mess",
-        "url": "https://www.squareorbits.com/blog/2026/09/macos-golden-gate-is-a-buggy-mess/",
+        "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
+        "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T14:32:33.000Z",
+        "publishedAt": "2026-09-29T19:30:17.000Z",
         "badge": "HN",
-        "signal": "184 分 · 119 评论"
+        "signal": "34 分 · 23 评论"
       },
       {
-        "id": "cn-it-5a4d22d220604ee0",
+        "id": "cn-it-f423b7d1521fb1e5",
         "category": "cn",
-        "title": "微信鸿蒙版 App 获 8.0.22.35 尝鲜升级，修复了一些已知问题",
-        "url": "https://www.ithome.com/1/008/517.htm",
+        "title": "尴尬时刻：OpenAI 全天候 AI 智能体 dots 首次公开演示卡壳",
+        "url": "https://www.ithome.com/1/008/534.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-29T15:39:40.000Z",
-        "summary": "IT之家 9 月 29 日消息，继 8.0.22.34 之后，微信鸿蒙版 App 在华为应用市场（App Gallery）紧接着开启了 8.0.22.35 (8394275) 版本尝鲜升级，测试时间为 2026/9/29-2026/10/29。 微信鸿蒙版 App 尝鲜可能量少，有需要的朋友可通过应用市场-我的-应用尝鲜-点击搜索框搜索。 和往常一样，本次更新的说明依旧为“修复了一些已知问题”。 IT之家附网友 @伤心萨摩耶 和 MeoW 整理的最新版本已知灰度测试内容（不…",
+        "publishedAt": "2026-09-29T19:11:25.000Z",
+        "summary": "IT之家 9 月 30 日消息，在今天召开 2026 开发者日活动中， OpenAI 在首次公开演示其全天候智能助理 Dots 时突然停止响应，现场一度陷入尴尬。 演示期间，OpenAI ChatGPT 团队产品负责人 Holly Li 要求名为“Dottie”的 Dot 为一款虚构音乐应用准备上线工作。然而，智能体迟迟没有回应，演示被迫暂停。面对现场冷场，主持人只能打趣说：“我猜 Dot 今天早上有点慢。”IT之家附上相关视频如下： OpenAI 介绍称，Dots 是能够…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-f67j-2jqw-jpq7",
+        "id": "github-advisory-ghsa-rcw4-f5rp-g42v",
         "category": "security",
-        "title": "Angular SSR: Denial of Service (DoS) via Infinite Loop on Malformed DOCTYPE",
-        "url": "https://github.com/advisories/GHSA-f67j-2jqw-jpq7",
+        "title": "adm-zip: Decompression-bomb protection (fix for CVE-2026-39244) can be bypassed by declaring uncompressed size as 0",
+        "url": "https://github.com/advisories/GHSA-rcw4-f5rp-g42v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-28T21:31:21.000Z",
-        "summary": "A Denial of Service (DoS) vulnerability exists in `@angular/platform-server`'s DOM emulation parser (`domino`). When processing untrusted user input containing an incomplete DOCTYPE declaration ending with whitespace before EOF (such as ` …",
-        "badge": "CVE-2026-101895",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-29T18:25:20.000Z",
+        "summary": "**Affected package:** adm-zip (npm) **Affected version:** 0.6.0 ## Summary The fix shipped for CVE-2026-39244 (`methods/inflater.js`) caps zlib's decompression output via `maxOutputLength: expectedLength`, where `expectedLength` is read di…",
+        "badge": "GHSA-RCW4-F5RP-G42V",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-34692efacd3b982a",
@@ -84,7 +84,7 @@
         "publishedAt": "2026-09-29T15:10:46.000Z",
         "summary": "现在 ai 太泛滥了，以前还会读一下那些论坛上的文章，Android 安全方面的，以前读的时候还是能认真读读的，现在一读感觉 ai 味道扑面而来，说啥都不读了，可能有些是自己动笔写的（说实话，可能吗？）太反胃了。所谓读文章已“死”",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "11 回复"
       },
       {
         "id": "cn-baidu-06b22696a4eb3ce6",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "楼市迎来房贷贴息重磅政策，10月1日起实施，首套新房二手房可享最高100万贷款贴息，财政兜底。该政策能降低刚需购房成本，有望托住房价，但难以推动房价大幅上涨。",
         "badge": "热搜",
-        "signal": "7,807,968 热度"
+        "signal": "7,809,262 热度"
       },
       {
         "id": "cisa-kev-cve-2026-88772",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49893876",
+        "id": "hn-49896586",
         "category": "dev",
-        "title": "Claude partial outage",
-        "url": "https://status.claude.com/incidents/4xvtc2gnq73l",
+        "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+        "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T14:25:41.000Z",
+        "publishedAt": "2026-09-29T17:06:45.000Z",
         "badge": "HN",
-        "signal": "149 分 · 110 评论"
+        "signal": "615 分 · 535 评论"
       },
       {
         "id": "cn-item-a40b4dc402e72344",
@@ -137,25 +137,25 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-qw65-cvwx-89v3",
+        "id": "github-advisory-ghsa-j5f4-cc29-5x44",
         "category": "security",
-        "title": "fast-uri vulnerable to authority injection via an unvalidated port in serialize",
-        "url": "https://github.com/advisories/GHSA-qw65-cvwx-89v3",
+        "title": "adm-zip extraction preserves SUID/SGID bits from untrusted ZIPs -> local privilege escalation",
+        "url": "https://github.com/advisories/GHSA-j5f4-cc29-5x44",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-28T21:24:39.000Z",
-        "summary": "### Impact `fast-uri` serializes the `port` component of a URI without validating it. When recomposing the authority, `fast-uri` escapes the userinfo and host components but concatenates the port verbatim, so a `port` value that is not a s…",
-        "badge": "CVE-2026-84292",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-29T18:24:57.000Z",
+        "summary": "## Summary adm-zip applies the Unix permission bits stored in a zip entry directly to the extracted file via `fs.chmodSync()` when `keepOriginalPermission=true` is passed to `extractAllTo()`/`extractEntryTo()` — and it never filters the se…",
+        "badge": "CVE-2026-102282",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
-        "id": "ai-openai-2fc54b690d7b20a2",
+        "id": "ai-google-deepmind-68ead6b6af2b7144",
         "category": "ai",
-        "title": "Towards safety cases for frontier AI training",
-        "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-28T19:00:00.000Z",
-        "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
-        "badge": "OpenAI"
+        "title": "Advancing Private AI Compute with secure, server-side memory",
+        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-23T16:00:57.000Z",
+        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1245653",
@@ -166,16 +166,16 @@
         "publishedAt": "2026-09-29T15:03:01.000Z",
         "summary": "那么多人吹 vibe coding ，但是也没有人能 vibe coding 出来一款 Surge ，这无良的钱活该他赚。 牛逼的软件和产品还是护城河很深的，不是谁都可以当程序员的，谁都可以当的只是一些中低端程序员",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-f7bf16a0c5ee76d1",
+        "id": "cn-it-9c5262630e5039c2",
         "category": "cn",
-        "title": "古尔曼：苹果新任 CEO 特努斯着手全面改革，加快产品开发、精简管理层",
-        "url": "https://www.ithome.com/1/008/516.htm",
+        "title": "2026 OpenAI 开发者日遭 15+ 组织抗议，要求 AI 数据中心设 100 英里安全距离",
+        "url": "https://www.ithome.com/1/008/533.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-29T15:21:45.000Z",
-        "summary": "IT之家 9 月 29 日消息，彭博社马克 · 古尔曼刚刚报道称，苹果新任 CEO 约翰 · 特努斯（John Ternus）上任不到一个月，便已着手对公司内部展开大刀阔斧的改革。 特努斯希望调整公司组织和产品开发方式， 目标包括加快产品研发节奏、扩大硬件产品线，并精简管理层，将更多资源和决策重心放在工程团队上 。当然，相关方案目前仍处于内部讨论阶段。 特努斯于 9 月 1 日正式接替蒂姆 · 库克（Tim Cook）出任 CEO，库克则转任董事会执行主席。特努斯此前担任苹…",
+        "publishedAt": "2026-09-29T19:07:28.000Z",
+        "summary": "IT之家 9 月 30 日消息，科技媒体 The Verge 今天（9 月 30 日）发布博文， 报道称 2026 年度 OpenAI 开发者日（DevDay）在旧金山开幕，现场遭遇大规模抗议活动。 包括湾区抵抗组织（Bay Resistance）、科技工作者联盟（Tech Workers Coalition）、服务业雇员国际工会（SEIU）在内，超过 15 个组织联合发起集会。 集会地点设在旧金山梅森堡（Fort Mason）活动入口外，现场悬挂“人比 AI 更重要”等标…",
         "badge": "IT之家"
       },
       {
@@ -190,24 +190,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-google-deepmind-68ead6b6af2b7144",
+        "id": "ai-hugging-face-afa8c33f8eb7996a",
         "category": "ai",
-        "title": "Advancing Private AI Compute with secure, server-side memory",
-        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-23T16:00:57.000Z",
-        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
-        "badge": "Google DeepMind"
+        "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-29T13:07:00.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-49892245",
+        "id": "hn-49896712",
         "category": "dev",
-        "title": "How Delhi Cut Electricity Loss from 50 to 5 Percent",
-        "url": "https://spectrum.ieee.org/delhi-electricity-loss",
+        "title": "Tcl/Tk 9.1 Released",
+        "url": "https://www.tcl-lang.org/software/tcltk/9.1.html",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T12:43:29.000Z",
+        "publishedAt": "2026-09-29T17:13:38.000Z",
         "badge": "HN",
-        "signal": "216 分 · 137 评论"
+        "signal": "171 分 · 49 评论"
       },
       {
         "id": "cn-baidu-3506b8a5749b9f69",
@@ -217,27 +216,28 @@
         "source": "百度热搜",
         "summary": "第33届中国电视金鹰奖颁奖典礼29日晚在湖南长沙举行。于和伟凭借《沉默的荣耀》获金鹰奖最佳男主角奖。",
         "badge": "热搜",
-        "signal": "7,713,865 热度"
+        "signal": "7,712,865 热度"
       },
       {
-        "id": "github-advisory-ghsa-58mr-gqgx-xq4g",
+        "id": "github-advisory-ghsa-rfgv-xxqx-mfg5",
         "category": "security",
-        "title": "fast-uri vulnerable to host confusion via an unclosed bracket in the URI authority",
-        "url": "https://github.com/advisories/GHSA-58mr-gqgx-xq4g",
+        "title": "undici vulnerable to Denial of Service via unrequested WebSocket subprotocol",
+        "url": "https://github.com/advisories/GHSA-rfgv-xxqx-mfg5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-28T21:23:35.000Z",
-        "summary": "### Impact `fast-uri` accepts a host that contains an unbalanced or misplaced authority bracket (`[` or `]`) without reporting an error. A host that starts with `[` but does not end with `]`, such as `[@127.0.0.1`, is neither validated as …",
-        "badge": "CVE-2026-84394",
+        "publishedAt": "2026-09-29T18:21:33.000Z",
+        "summary": "### Impact The undici WebSocket client throws an uncaught `TypeError` during the opening handshake when a server's `101` response includes a `Sec-WebSocket-Protocol` header that the client never requested. The throw occurs in a `queueMicro…",
+        "badge": "CVE-2026-19534",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-afa8c33f8eb7996a",
+        "id": "ai-openai-dec620cb7225d243",
         "category": "ai",
-        "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-29T13:07:00.000Z",
-        "badge": "Hugging Face"
+        "title": "Introducing dots",
+        "url": "https://openai.com/index/introducing-dots",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-29T00:00:00.000Z",
+        "summary": "Dots by OpenAI are a proactive assistant that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
+        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1245626",
@@ -248,7 +248,7 @@
         "publishedAt": "2026-09-29T12:34:09.000Z",
         "summary": "我经常向各种等级的老板推销 SAAS ，总会有一种油然而生的感觉，WTF 他为什么这都不懂还有顾客花大把钱买他的东西？",
         "badge": "程序员",
-        "signal": "21 回复"
+        "signal": "26 回复"
       },
       {
         "id": "cn-item-0fe95ad9c66d33b1",
@@ -272,47 +272,6 @@
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-openai-0adf5bb2a473897d",
-        "category": "ai",
-        "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
-        "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-28T07:00:00.000Z",
-        "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-49890226",
-        "category": "dev",
-        "title": "AI companies leak data to advertisers [pdf]",
-        "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
-        "source": "Hacker News",
-        "publishedAt": "2026-09-29T09:03:41.000Z",
-        "badge": "HN",
-        "signal": "337 分 · 106 评论"
-      },
-      {
-        "id": "cn-it-5814880eeb384407",
-        "category": "cn",
-        "title": "苹果 iPhone 18 Pro 售价大涨，越来越多日本人开始考虑二手手机",
-        "url": "https://www.ithome.com/1/008/515.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-09-29T15:15:39.000Z",
-        "summary": "IT之家 9 月 29 日消息，苹果本月初推出 iPhone 18 Pro 系列手机。新机带来可变光圈、灵动岛尺寸缩小等一系列升级，售价增长也引发热议。在日本市场， iPhone 18 Pro 与 5 年前同级机型相比 ， 价格几乎翻了一番 。 ▲ IT之家 Apple Park 实拍：iPhone 18 Pro 系列真机 据共同社今天报道， 苹果 iPhone 18 Pro 在日本直营渠道起售价 21.98 万日元 （IT之家注：现汇率约合 9,385 元人民币） ，最大…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-j3r3-mxqp-r2p4",
-        "category": "security",
-        "title": "Angular SSR: XSS via Unescaped Processing Instruction ( ) Nodes in Fallback Raw-Content Elements",
-        "url": "https://github.com/advisories/GHSA-j3r3-mxqp-r2p4",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-09-28T20:39:26.000Z",
-        "summary": "### Summary An XSS vulnerability exists in `@angular/platform-server` during server-side rendering (SSR) HTML serialization of `ProcessingInstruction` DOM nodes (` `, `nodeType === 7`) when nested inside fallback raw-content elements (` `,…",
-        "badge": "CVE-2026-88058",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
         "id": "ai-google-deepmind-81481aa316e38773",
         "category": "ai",
         "title": "Gemini 3.8 text-to-speech says hello",
@@ -320,6 +279,46 @@
         "source": "Google DeepMind",
         "publishedAt": "2026-09-23T15:25:14.000Z",
         "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49892245",
+        "category": "dev",
+        "title": "How Delhi cut electricity loss from 50 to 5 percent",
+        "url": "https://spectrum.ieee.org/delhi-electricity-loss",
+        "source": "Hacker News",
+        "publishedAt": "2026-09-29T12:43:29.000Z",
+        "badge": "HN",
+        "signal": "382 分 · 213 评论"
+      },
+      {
+        "id": "cn-it-bb9f4b6750534cc0",
+        "category": "cn",
+        "title": "OpenAI 宣布 ChatGPT 周活跃用户超 12 亿，AI 加速走向工作场景",
+        "url": "https://www.ithome.com/1/008/532.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-09-29T18:47:22.000Z",
+        "summary": "IT之家 9 月 30 日消息，在 2026 开发者日活动中， OpenAI 宣布 ChatGPT 每周活跃用户已超过 12 亿 ，ChatGPT Work 和 Codex 每周用户超过 3,500 万，使用 OpenAI 产品的企业数量达到 250 万家。 OpenAI 表示，较今年 7 月公布的 10 亿，ChatGPT 的周活跃用户规模进一步增长， 表明生成式人工智能正加速从个人应用走向工作场景。 ChatGPT Work 和 Codex 用户的快速增长，也反映出企业…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-w293-vg96-wgc3",
+        "category": "security",
+        "title": "undici vulnerable to TLS certificate validation bypass via dropped connect options in BalancedPool",
+        "url": "https://github.com/advisories/GHSA-w293-vg96-wgc3",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-09-29T18:17:15.000Z",
+        "summary": "### Impact undici's `BalancedPool` passes its constructor options through a JSON-based deep clone (`JSON.parse(JSON.stringify(...))`) before forwarding them to each per-upstream `Pool`. JSON cannot represent functions, so a caller-supplied…",
+        "badge": "CVE-2026-84961",
+        "signal": "HIGH · CVSS 7.4"
+      },
+      {
+        "id": "ai-hugging-face-09d1d26fa19dd694",
+        "category": "ai",
+        "title": "Holo4: powering generalist computer-use agents",
+        "url": "https://huggingface.co/blog/Hcompany/holo4",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-28T09:44:05.000Z",
+        "badge": "Hugging Face"
       },
       {
         "id": "v2ex-1245619",
@@ -330,7 +329,7 @@
         "publishedAt": "2026-09-29T11:14:46.000Z",
         "summary": "AI 时代用的最多的文档格式就是 markdown ，但是用了很多编辑器，包括 vscode ，zed ，typora ，总感觉界面和排版不美观。没有一个能打过甚至接近 ulysses 的，难怪一年可以卖 293 。 感觉谁要是能先做出来一个审美在线的 md 编辑器，应该会有市场。",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "8 回复"
       },
       {
         "id": "cn-baidu-9fea2482f721af3f",
@@ -340,7 +339,7 @@
         "source": "百度热搜",
         "summary": "在国务院新闻办公室29日举行的“开局起步‘十五五’”系列主题新闻发布会上，科技部部长阴和俊介绍，经过多年不懈努力，我国已建成全世界规模最大的教育体系，拥有学科门类最齐全的人才资源，拥有总量位居世界第一的研发人员队伍，为我国科技实力不断跃升提供有力保障，也为进一步推动一体发展奠定了坚实基础。",
         "badge": "热搜",
-        "signal": "7,619,155 热度"
+        "signal": "7,617,243 热度"
       },
       {
         "id": "cisa-kev-cve-2026-65660",
@@ -354,23 +353,24 @@
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-hugging-face-09d1d26fa19dd694",
+        "id": "ai-openai-2fc54b690d7b20a2",
         "category": "ai",
-        "title": "Holo4: powering generalist computer-use agents",
-        "url": "https://huggingface.co/blog/Hcompany/holo4",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-28T09:44:05.000Z",
-        "badge": "Hugging Face"
+        "title": "Towards safety cases for frontier AI training",
+        "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+        "source": "OpenAI",
+        "publishedAt": "2026-09-28T19:00:00.000Z",
+        "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
+        "badge": "OpenAI"
       },
       {
-        "id": "hn-49891290",
+        "id": "hn-49895304",
         "category": "dev",
-        "title": "Jeeves. Reasoning improves Jev-like decision models",
-        "url": "https://github.com/PostHog/jeeves",
+        "title": "PS5 Relapse Exploit",
+        "url": "https://github.com/ntfargo/Relapse-Exploit",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T11:13:54.000Z",
+        "publishedAt": "2026-09-29T15:44:41.000Z",
         "badge": "HN",
-        "signal": "151 分 · 64 评论"
+        "signal": "153 分 · 79 评论"
       },
       {
         "id": "cn-item-8631bcba0250deca",
@@ -383,25 +383,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-q4xh-88c3-wmh7",
+        "id": "github-advisory-ghsa-vp8m-p9jh-q5pm",
         "category": "security",
-        "title": "jackson-databind: Duration XMLGregorianCalendar Unbounded Number Parse DoS",
-        "url": "https://github.com/advisories/GHSA-q4xh-88c3-wmh7",
+        "title": "undici vulnerable to cross-origin cache poisoning via missing origin isolation in interceptors",
+        "url": "https://github.com/advisories/GHSA-vp8m-p9jh-q5pm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-28T20:19:46.000Z",
-        "summary": "### Summary `jackson-databind` 3.2.1 deserializes a JSON **string** bound to a `javax.xml.datatype.Duration` or `javax.xml.datatype.XMLGregorianCalendar` field by passing the raw string verbatim to `DatatypeFactory.newDuration(value)` / `n…",
-        "badge": "CVE-2026-68497",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-29T18:15:13.000Z",
+        "summary": "## Impact When `interceptors.cache()` or `interceptors.deduplicate()` is used with a dispatcher that does not carry a single authoritative origin, or when a request supplies its own `origin`, undici builds the cache and deduplication keys …",
+        "badge": "CVE-2026-85152",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
-        "id": "ai-openai-833e9419a34f8836",
+        "id": "ai-google-deepmind-947e89eaa83a27ae",
         "category": "ai",
-        "title": "Are you a Codex Original?",
-        "url": "https://openai.com/form/codex-originals",
-        "source": "OpenAI",
-        "publishedAt": "2026-09-28T00:00:00.000Z",
-        "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about your story and pro…",
-        "badge": "OpenAI"
+        "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-15T17:05:57.000Z",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1245612",
@@ -412,16 +411,16 @@
         "publishedAt": "2026-09-29T10:17:07.000Z",
         "summary": "好家伙， 做个 i18n ，gpt-6-sol 中，这给我翻译的， 还是 grok 验收 找出来的 支付宝、微信支付不再写成 “Pay the treasure” 和 “Micro-credit payments”。",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "23 回复"
       },
       {
-        "id": "cn-it-921874c2dc2858cd",
+        "id": "cn-it-efa4f782500d9bb9",
         "category": "cn",
-        "title": "RGB 硬件最后一环：英特尔专利提出在 CPU 封装中集成 Micro LED，可用作指示灯或装饰",
-        "url": "https://www.ithome.com/1/008/511.htm",
+        "title": "150 毫秒极速响应：OpenAI 推出 Decisions API，让 AI 从“聊天”走向“实时决策”",
+        "url": "https://www.ithome.com/1/008/531.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-29T15:07:24.000Z",
-        "summary": "IT之家 9 月 29 日消息，TomsHardWare 发现，英特尔本月初公开了一项关于 CPU 封装的新专利，提出将 Micro LED 灯珠直接集成到处理器内部的想法。 这意味着，未来处理器表面不仅可以显示 RGB 灯效，还可以自定义点亮 Logo 或文字，或者根据处理器负载、温度或执行状态实时改变光效。 这项专利于 2022 年提交，并于本月正式公开。该专利描述了一种基于玻璃基板（Glass Substrate）和穿玻璃通孔（TGV）的封装方案，可将 Micro L…",
+        "publishedAt": "2026-09-29T18:35:38.000Z",
+        "summary": "IT之家 9 月 30 日消息，在今天召开的 2026 开发者日活动中，OpenAI 宣布推出 Decisions API，这是一个面向实时、低延迟分类与路由场景的全新 API， 可以大约在 150 毫秒内返回结果 ，比通过常规 API 使用 Luna 快大约 10 倍。 定位方面，Decisions API 为“快速单次决策”设计，把模型（当前基于 OpenAI 的小型模型 Luna）的“智能”聚焦到一组用户预定义的问题 + 有限答案集合上， 用极低的延迟返回结构化决策结…",
         "badge": "IT之家"
       },
       {
@@ -436,23 +435,23 @@
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-google-deepmind-947e89eaa83a27ae",
+        "id": "ai-hugging-face-280bf64dcca75cee",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-        "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-15T17:05:57.000Z",
-        "badge": "Google DeepMind"
+        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-24T14:08:57.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-49893709",
+        "id": "hn-49898877",
         "category": "dev",
-        "title": "Unsurprisingly, Meta's new Muse AI agent blatantly ignores users permissions",
-        "url": "https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions",
+        "title": "Nicholas Polson has authored 258 academic papers in 2026 (so far)",
+        "url": "https://statmodeling.stat.columbia.edu/2026/08/27/258/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T14:15:24.000Z",
+        "publishedAt": "2026-09-29T19:15:58.000Z",
         "badge": "HN",
-        "signal": "118 分 · 19 评论"
+        "signal": "79 分 · 52 评论"
       },
       {
         "id": "cn-baidu-8fe5451305403664",
@@ -462,27 +461,18 @@
         "source": "百度热搜",
         "summary": "9月29日，央行“四箭齐发”：下调PSL利率0.25个百分点，增加科技创新再贷款2000亿元、支农支小再贷款5000亿元。同日，财政部等三部门发通知，10月1日起对新发放首套房贷实施贴息政策。",
         "badge": "热搜",
-        "signal": "7,524,197 热度"
+        "signal": "7,522,552 热度"
       },
       {
-        "id": "github-advisory-ghsa-456v-xq2p-r4cj",
+        "id": "github-advisory-ghsa-6h2x-m376-mqjq",
         "category": "security",
-        "title": "code-ollama: `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78)",
-        "url": "https://github.com/advisories/GHSA-456v-xq2p-r4cj",
+        "title": "joi: Quadratic regular-expression backtracking in `Joi.string().isoDate()`",
+        "url": "https://github.com/advisories/GHSA-6h2x-m376-mqjq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-28T13:59:43.000Z",
-        "summary": "## `grep_search` Command Injection via Unescaped `$()` Shell Substitution (CWE-78) ### Summary The `grep_search` tool in `code-ollama` constructs a shell command string by interpolating attacker-controlled `pattern` and `path` arguments, t…",
-        "badge": "GHSA-456V-XQ2P-R4CJ",
-        "signal": "HIGH · CVSS 7.8"
-      },
-      {
-        "id": "ai-hugging-face-280bf64dcca75cee",
-        "category": "ai",
-        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
-        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-24T14:08:57.000Z",
-        "badge": "Hugging Face"
+        "publishedAt": "2026-09-29T18:07:42.000Z",
+        "summary": "### Impact Any application that validates a user-supplied string with `Joi.string().isoDate()` can be stalled by a single request. One of the regular expressions the rule runs over the input was unanchored, so a valid ISO date followed by …",
+        "badge": "GHSA-6H2X-M376-MQJQ",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "v2ex-1245607",
@@ -510,7 +500,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 47024,
+        "stars": 47727,
         "starsToday": 4712
       },
       {
@@ -520,7 +510,7 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 10208,
+        "stars": 10443,
         "starsToday": 978
       },
       {
@@ -530,7 +520,7 @@
         "url": "https://github.com/vectorize-io/hindsight",
         "description": "Hindsight: Agent Memory That Learns",
         "language": "Python",
-        "stars": 42339,
+        "stars": 42717,
         "starsToday": 2541
       },
       {
@@ -540,7 +530,7 @@
         "url": "https://github.com/paperclipai/paperclip",
         "description": "The open-source app everyone uses to manage agents at work",
         "language": "TypeScript",
-        "stars": 94128,
+        "stars": 94318,
         "starsToday": 2412
       },
       {
@@ -550,8 +540,8 @@
         "url": "https://github.com/t8y2/dbx",
         "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
         "language": "Rust",
-        "stars": 21768,
-        "starsToday": 460
+        "stars": 21891,
+        "starsToday": 349
       },
       {
         "id": "github-89d643cfdc660041",
@@ -560,7 +550,7 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 2192,
+        "stars": 2337,
         "starsToday": 733
       },
       {
@@ -570,7 +560,7 @@
         "url": "https://github.com/oblien/openship",
         "description": "Self-hosted deployment platform",
         "language": "TypeScript",
-        "stars": 13656,
+        "stars": 13759,
         "starsToday": 436
       },
       {
@@ -580,7 +570,7 @@
         "url": "https://github.com/averygan/reclip",
         "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
         "language": "HTML",
-        "stars": 9903,
+        "stars": 10011,
         "starsToday": 114
       },
       {
@@ -590,7 +580,7 @@
         "url": "https://github.com/cs341-illinois/coursebook",
         "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
         "language": "TeX",
-        "stars": 2931,
+        "stars": 3036,
         "starsToday": 569
       },
       {
@@ -600,10 +590,10 @@
         "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
         "description": "Learn it. Build it. Ship it for others.",
         "language": "Python",
-        "stars": 61016,
+        "stars": 61221,
         "starsToday": 855
       }
     ],
-    "updatedAt": "2026-09-29T15:53:00.773Z"
+    "updatedAt": "2026-09-29T20:48:01.528Z"
   }
 }
