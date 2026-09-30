@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-30T13:45:05.042Z",
+  "generatedAt": "2026-09-30T19:21:23.633Z",
   "intelligence": {
-    "updatedAt": "2026-09-30T13:45:05.042Z",
+    "updatedAt": "2026-09-30T19:21:23.633Z",
     "items": [
       {
-        "id": "cn-item-5b7f096ae68376cd",
+        "id": "cn-item-eb478ebbb4e06c92",
         "category": "cn",
-        "title": "维维一句“已召回”，能解释霉菌超标27倍吗？",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-30/10706514.shtml",
+        "title": "第四次全国文物普查省域整体验收全面完成",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706547.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-30T12:58:30.000Z",
-        "summary": "中新网北京9月30日电(记者 谢艺观)近日，上海市市场监督管理局公布的食品安全抽检信息显示，维维股份全资子公司维维华山核桃产业有限公司生产的一批次“维维无添加蔗糖黑芝麻糊”霉菌抽检不合格。",
+        "publishedAt": "2026-09-30T13:33:47.000Z",
+        "summary": "中新网9月30日电 据国家文物局微信公众号消息，9月29日，第四次全国文物普查领导小组办公室组织完成西藏自治区和青海省第四次全国文物普查省域整体验收工作。至此，全国31个省、自治区、直辖市及新疆生产建设兵团的普查省域整体验收全面完成。",
         "badge": "中新网要闻"
       },
       {
@@ -26,75 +26,76 @@
         "signal": "已遭利用 · 整改期限 2026-10-02"
       },
       {
-        "id": "ai-openai-d6b9f5e651b1891e",
+        "id": "ai-openai-90249c2a3882c6d3",
         "category": "ai",
-        "title": "Introducing GPT-6.1 Sol",
-        "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+        "title": "Disrupting a coordinated model-distillation campaign",
+        "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
         "source": "OpenAI",
-        "publishedAt": "2026-09-29T10:00:00.000Z",
-        "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+        "publishedAt": "2026-09-30T10:30:00.000Z",
+        "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49906637",
+        "id": "hn-49911995",
         "category": "dev",
-        "title": "Pi.dev: You Said No MCP",
-        "url": "https://earendil.com/posts/you-said-no-mcp/",
+        "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+        "url": "https://github.com/magnitudedev/magnitude",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T09:55:23.000Z",
+        "publishedAt": "2026-09-30T17:37:40.000Z",
         "badge": "HN",
-        "signal": "252 分 · 119 评论"
+        "signal": "57 分 · 33 评论"
       },
       {
-        "id": "cn-it-06ec8ba06b068b8c",
+        "id": "cn-it-ebe15bade8d4d714",
         "category": "cn",
-        "title": "三星 Galaxy Tab S12+/S12 Ultra 平板发布：天玑 9500 芯片，12.6/14.6 英寸 AMOLED 大屏",
-        "url": "https://www.ithome.com/1/008/918.htm",
+        "title": "乐扩公布 B650 扩展卡 PB65MX4，支持模块化按需拓展",
+        "url": "https://www.ithome.com/1/008/950.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T13:42:52.000Z",
-        "summary": "IT之家 9 月 30 日消息，三星电子今天宣布推出 Galaxy Tab S12 系列平板，包含 Tab S12+ 和 Tab S12 Ultra 两个机型。两款机器均采用轻薄设计，提供更强性能和全新 AI 功能，10 月 7 日起陆续在全球各地上市。 据介绍，三星 Galaxy Tab S12 系列平板配备沉浸式显示屏，附赠符合人体工学设计的 S Pen 手写笔，可轻松记录笔记，满足工作和学习要求。其中，Tab S12 Ultra 机身厚度仅 5.1mm，是三星迄今为止…",
+        "publishedAt": "2026-09-30T16:15:09.000Z",
+        "summary": "IT之家 10 月 1 日消息，乐扩 (Lekuo) 昨日公布了基于 AMD B650 芯片组 \"PROM 21\" 的新款 PCIe AIC 扩展卡 PB65MX4。这一型号采用模块化设计， 支持用户按需拓展 I/O 。 PB65MX4 正面提供 2 个 M.2 2230 / 2242 / 2260 / 2280 插槽，支持 PCIe Gen3 ×2。这两个插槽既可直接安装 M.2 SSD，也 兼容 M.2 转 10GbE RJ-45 / 10GbE SFP+ / 多口 S…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-m8vh-jmq9-5rjg",
+        "id": "github-advisory-ghsa-ff3f-86qr-9cv3",
         "category": "security",
-        "title": "Nest: Remote process termination via a deeply nested microservice message pattern",
-        "url": "https://github.com/advisories/GHSA-m8vh-jmq9-5rjg",
+        "title": "Angular Server-Side Rendering (SSR): Denial of Service via Numeric URL Matrix Parameters",
+        "url": "https://github.com/advisories/GHSA-ff3f-86qr-9cv3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-29T23:54:44.000Z",
-        "summary": "| Field | Value | | --- | --- | | Ecosystem | npm | | Package | `@nestjs/microservices` | | Affected versions | `>= 12.0.0, { // Nest's TCP framing is # socket.write(`${Buffer.byteLength(payload)}#${payload}`); }); ``` The service exits wi…",
-        "badge": "CVE-2026-102281",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-30T15:40:47.000Z",
+        "summary": "A denial of service (DoS) vulnerability was identified in `@angular/router` when Server-Side Rendering (SSR) is enabled on Node.js (V8). When `@angular/router` parses incoming request URLs, it extracts path segments, matrix parameters, and…",
+        "badge": "CVE-2026-101896",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-google-deepmind-34692efacd3b982a",
+        "id": "ai-google-deepmind-c696e8b1f3422473",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live with Live Avatar",
-        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+        "title": "Introducing SynthID Bio",
+        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-24T16:20:39.000Z",
+        "publishedAt": "2026-09-30T15:03:07.000Z",
+        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245908",
+        "id": "v2ex-1245930",
         "category": "dev",
-        "title": "尝试用 DS V4.1 Flash 做 C#逆向，出活很快，承认错误也很快",
-        "url": "https://www.v2ex.com/t/1245908",
+        "title": "AI 让压缩包包含自己？一个“完整”博客压缩包的诞生",
+        "url": "https://www.v2ex.com/t/1245930",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T13:16:57.000Z",
-        "summary": "出于降本增效目的调研一下 DS V4.1 Flash 的逆向 C#的能力 从一个简单的 DLL 开始，无混淆，DEBUG 构建，让他根据 DLL 重建项目中一个重要逻辑 然后我对着源码分析它的逆向结果，看到了这处错误 // 源代码 if (_firstDamageTime 以下是这一段聊天记录： 我 why _lastDamageTime = now in the if block ? Deepseek The original keeps _lastDamageTime …",
+        "publishedAt": "2026-09-30T16:19:00.000Z",
+        "summary": "你有没有想过，一个压缩包可以包含它自己？去年我尝试用 ZIP Quine 实现，却被 DEFLATE 的 32KiB 回溯窗口卡死。直到我把论文和生成器扔给 AI……它只花了两个小时，就基于 LZMA2 和 7z 做出了真正的递归压缩包！现在我的博客压缩包不仅包含全站内容，还包含这个压缩包本身——下载、解压、再解压，无限套娃（理论上）。 文章亮点： 为什么 ZIP Quine 受限于 32KiB ？ LZMA2 如何破局？ AI 写出的 CRC32 求解代码：高斯消元法偷懒…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-711c4f839ca4563d",
+        "id": "cn-baidu-1b7e0ae8a2a5f59e",
         "category": "cn",
-        "title": "“一年举报1520次”就该及时叫停",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%80%E5%B9%B4%E4%B8%BE%E6%8A%A51520%E6%AC%A1%E2%80%9D%E5%B0%B1%E8%AF%A5%E5%8F%8A%E6%97%B6%E5%8F%AB%E5%81%9C&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "去年中国25至29岁结婚人数最多",
+        "url": "https://www.baidu.com/s?wd=%E5%8E%BB%E5%B9%B4%E4%B8%AD%E5%9B%BD25%E8%87%B329%E5%B2%81%E7%BB%93%E5%A9%9A%E4%BA%BA%E6%95%B0%E6%9C%80%E5%A4%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "重庆市场监管部门公布案例，蔡某某一年在12315平台举报1520次，另有一人举报735件，二人属于牟利型职业索赔，已被终止调解。媒体指出，正常维权应当保护，但滥用举报牟利扰乱秩序，相关部门及时叫停此类行为，是依法履职之举。",
+        "summary": "9月30日，民政部公布《2025年民政事业发展统计公报》显示，去年25至29岁年龄段结婚人数最多，占比达36.88%，连续13年成为占比最高年龄段。",
         "badge": "热搜",
-        "signal": "7,808,462 热度"
+        "signal": "7,808,615 热度"
       },
       {
         "id": "cisa-kev-cve-2026-88772",
@@ -108,74 +109,74 @@
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-hugging-face-dc53fce90c6f36f5",
+        "id": "ai-hugging-face-74c2ff7e2707d1f6",
         "category": "ai",
-        "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
-        "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+        "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
+        "url": "https://huggingface.co/blog/open-tts-leaderboard",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-29T15:30:38.000Z",
+        "publishedAt": "2026-09-30T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49908394",
+        "id": "hn-49911757",
         "category": "dev",
-        "title": "The last time my family was replaced by technology",
-        "url": "https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/",
+        "title": "Commit Description as a Thinking Tool",
+        "url": "https://yedhu.me/posts/commit-description-as-a-thinking-tool/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T13:06:11.000Z",
+        "publishedAt": "2026-09-30T17:18:13.000Z",
         "badge": "HN",
-        "signal": "25 分 · 18 评论"
+        "signal": "64 分 · 25 评论"
       },
       {
-        "id": "cn-item-89704819164a037a",
+        "id": "cn-item-5b7f096ae68376cd",
         "category": "cn",
-        "title": "中央网信办部署开展“清朗·整治短视频虚假人设乱象”专项行动",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706334.shtml",
+        "title": "维维一句“已召回”，能解释霉菌超标27倍吗？",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-30/10706514.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-30T08:43:18.000Z",
-        "summary": "中新网9月30日电 据“网信中国”微信公众号消息，为进一步推动短视频行业健康有序发展，营造风清气正的网络空间，近日，中央网信办印发通知，在全国范围内部署开展为期2个月的“清朗·整治短视频虚假人设乱象”专项行动。",
+        "publishedAt": "2026-09-30T12:58:30.000Z",
+        "summary": "中新网北京9月30日电(记者 谢艺观)近日，上海市市场监督管理局公布的食品安全抽检信息显示，维维股份全资子公司维维华山核桃产业有限公司生产的一批次“维维无添加蔗糖黑芝麻糊”霉菌抽检不合格。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-hrh2-vp3x-79xf",
+        "id": "github-advisory-ghsa-cxp5-3px4-pw24",
         "category": "security",
-        "title": "@xhmikosr/decompress: Path traversal via symlink chain",
-        "url": "https://github.com/advisories/GHSA-hrh2-vp3x-79xf",
+        "title": "jackson-databind quadratic forward-reference completion",
+        "url": "https://github.com/advisories/GHSA-cxp5-3px4-pw24",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-29T23:49:42.000Z",
-        "summary": "### Impact When extracting an untrusted archive with the default `decompress(input, output)` API, a crafted archive containing a chain of symlink entries can make a later entry resolve **outside** the output directory. The lexical containm…",
-        "badge": "CVE-2026-101894",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-09-30T15:37:24.000Z",
+        "summary": "### Summary When an `@JsonIdentityInfo` collection or map first creates N unresolved object-ID references and later resolves the same IDs in reverse order, jackson-databind scans the remaining pending-reference accumulator for each resolut…",
+        "badge": "CVE-2026-91777",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-6071f63e21f64254",
+        "id": "ai-openai-061338e668ed6974",
         "category": "ai",
-        "title": "DevDay 2026 Recap",
-        "url": "https://openai.com/index/devday-2026-recap",
+        "title": "Helping small businesses put AI to work",
+        "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
         "source": "OpenAI",
-        "publishedAt": "2026-09-29T10:00:00.000Z",
-        "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+        "publishedAt": "2026-09-30T10:00:00.000Z",
+        "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245903",
+        "id": "v2ex-1245911",
         "category": "dev",
-        "title": "关于买房，现在是一个好的机会么？",
-        "url": "https://www.v2ex.com/t/1245903",
+        "title": "1 号员工被封屠， 2 号员工 Codex 全靠义父 Tibo 续命",
+        "url": "https://www.v2ex.com/t/1245911",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T12:36:57.000Z",
-        "summary": "21-23 年左右，当时家里也提起要买房，周围的同事也陆续在北京上车了，当时家里催着看看买套房，贷款可能也要 200 个左右买个 550w 的房子，当时的买房的情绪，房价双双都在影响着我，但是我坚持再等等，后来慢慢的忘记这个事情了，到了最近几年发现貌似当时也是一个正确的选择，当时上车的同事现在也不知道怎么样了，聊天的时候也不敢提这个事情，我不想说明自己有多幸运，我也不想嘲讽他们，毕竟钱都是辛苦挣来的。 现在虽然不用贷款可以上车了，但是感觉又开始犹豫了。 大家现在的情况是怎么…",
+        "publishedAt": "2026-09-30T13:31:22.000Z",
+        "summary": "兄弟们，刚聊完 Claude 的满月，今天脸就被打肿了…… 两个最能打员工： 1 号：Claude Code ，我的首席架构兼主力牛马。 2 号：Codex 。 两天后，1 号员工突然弹窗要求重新登录。重新登录，屏幕上冰冷地蹦出一行红字： Your account has been suspended 第一反应不是悲伤，赶紧打开 Wise 看退没退款。 翻了一圈，好家伙，一毛没退。找客服申诉？对不起，压根没有活人客服，接待我的全程 AI 。 几轮对话，结论：“we are …",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-b52819e195dbdefc",
+        "id": "cn-it-34143af40ceca1c5",
         "category": "cn",
-        "title": "新思科技与亚马逊签署多年期超 10 亿美元协议，推进定制芯片合作",
-        "url": "https://www.ithome.com/1/008/917.htm",
+        "title": "复兴号 CR400AF-X 动车组首发上线 UFCS 支持：高铁无线快充迈入 30W 时代，半小时充至 60%",
+        "url": "https://www.ithome.com/1/008/946.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T13:42:06.000Z",
-        "summary": "IT之家 9 月 30 日消息，当地时间 9 月 30 日，新思科技宣布与亚马逊达成多年期定制芯片 IP 战略合作协议，合作范围进一步拓展至云端及 AI 赋能的工程研发领域。 官方表示，通过引入新思科技的芯片知识产权以及 AI 驱动的工程软件解决方案，将加速亚马逊定制芯片与 AWS 基础设施的工程研发进程。 双方达成 多年期、总额超 10 亿美元 （IT之家注：现汇率约合 67.18 亿元人民币） 的合作协议，新思科技将借助 AWS 服务加快自身产品迭代步伐，并与亚马逊协同…",
+        "publishedAt": "2026-09-30T16:01:31.000Z",
+        "summary": "IT之家 10 月 1 日消息，9 月 30 日，第三代智能高铁 CR400AF-X 型动车组首次上线运营，从北京南开往杭州东的 G43 次列车成为首发车次，随后 G42、G35 京沪、京杭热门线路均已上线（仅复兴号商务座）。 该动车组由国铁集团主导、中车四方股份公司研制，搭载的无线充电功能使用我国自主推动的 UFCS（融合快速充电）无线充电技术规范。 据中国信息通信研究院总工程师魏然介绍，以往高铁等公共设施上的无线充电装置多采用无线充电联盟（WPC）的 Qi 规范，最高充…",
         "badge": "IT之家"
       },
       {
@@ -190,74 +191,73 @@
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-google-deepmind-68ead6b6af2b7144",
+        "id": "ai-google-deepmind-34692efacd3b982a",
         "category": "ai",
-        "title": "Advancing Private AI Compute with secure, server-side memory",
-        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+        "title": "Introducing Gemini 3.8 Live with Live Avatar",
+        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-23T16:00:57.000Z",
-        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+        "publishedAt": "2026-09-24T16:20:39.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49890707",
+        "id": "hn-49909583",
         "category": "dev",
-        "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot",
-        "url": "https://projecthub.arduino.cc/syntheticaidata/jbr-001-a-desktop-companion-robot-powered-by-arduino-uno-q-b11c96",
+        "title": "A brief history of the Bloomberg terminal",
+        "url": "https://spectrum.ieee.org/bloomberg-terminal",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T10:05:56.000Z",
+        "publishedAt": "2026-09-30T14:34:07.000Z",
         "badge": "HN",
-        "signal": "58 分 · 10 评论"
+        "signal": "142 分 · 50 评论"
       },
       {
-        "id": "cn-baidu-944d743a08b96a65",
+        "id": "cn-baidu-70f00f5ea30bfeb6",
         "category": "cn",
-        "title": "公安部通报重大战果：170余人被抓",
-        "url": "https://www.baidu.com/s?wd=%E5%85%AC%E5%AE%89%E9%83%A8%E9%80%9A%E6%8A%A5%E9%87%8D%E5%A4%A7%E6%88%98%E6%9E%9C%EF%BC%9A170%E4%BD%99%E4%BA%BA%E8%A2%AB%E6%8A%93&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "警方破获跨国制毒案：退休教授参与",
+        "url": "https://www.baidu.com/s?wd=%E8%AD%A6%E6%96%B9%E7%A0%B4%E8%8E%B7%E8%B7%A8%E5%9B%BD%E5%88%B6%E6%AF%92%E6%A1%88%EF%BC%9A%E9%80%80%E4%BC%91%E6%95%99%E6%8E%88%E5%8F%82%E4%B8%8E&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "记者从公安部获悉，今年5月内地联合香港警方收网，打掉盘踞粤港的跨境地下钱庄团伙，抓获170余人。该团伙通过多种手段非法转移资金，为赌诈犯罪提供服务，行动冻结、扣押巨额涉案资产，有力维护大湾区金融秩序。",
+        "summary": "日前，山东警方侦破一起跨国制贩依托咪酯大案。退休化学教授吴某伙同黄某等人，在国内生产未列管的制毒前体，转运至境外合成毒品。2026年4月多国同步收网，抓获71人，涉案超亿元，主犯已被批捕。该案也揭示新型毒品犯罪专业化、产业化、国际化的特点。",
         "badge": "热搜",
-        "signal": "7,713,190 热度"
+        "signal": "7,713,205 热度"
       },
       {
-        "id": "github-advisory-ghsa-qhr7-859c-m2p7",
+        "id": "github-advisory-ghsa-wv8q-qhhj-9h54",
         "category": "security",
-        "title": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
-        "url": "https://github.com/advisories/GHSA-qhr7-859c-m2p7",
+        "title": "jackson-databind retains every unknown raw type ID",
+        "url": "https://github.com/advisories/GHSA-wv8q-qhhj-9h54",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-29T23:45:17.000Z",
-        "summary": "### Summary `expand_()` recurses once per level of brace *nesting*. Deeply nested input exhausts the native stack and crashes the process. This is distinct from CVE-2026-14257 / GHSA-mh99-v99m-4gvg, which made the *tail* iterative (recursi…",
-        "badge": "CVE-2026-102278",
+        "publishedAt": "2026-09-30T15:36:55.000Z",
+        "summary": "### Summary With `@JsonTypeInfo(use = Id.NAME, defaultImpl = ...)`, every distinct unknown raw type ID selects the same fallback deserializer but is retained as a separate key in `TypeDeserializerBase._deserializers`. An attacker who can r…",
+        "badge": "CVE-2026-91776",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-afa8c33f8eb7996a",
+        "id": "ai-hugging-face-dc53fce90c6f36f5",
         "category": "ai",
-        "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+        "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
+        "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-29T13:07:00.000Z",
+        "publishedAt": "2026-09-29T15:30:38.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245899",
+        "id": "v2ex-1245908",
         "category": "dev",
-        "title": "手搓了一个基于 Debian13 的 x86 路由器系统",
-        "url": "https://www.v2ex.com/t/1245899",
+        "title": "尝试用 DS V4.1 Flash 做 C#逆向，出活很快，承认错误也很快",
+        "url": "https://www.v2ex.com/t/1245908",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T12:19:14.000Z",
-        "summary": "用过一圈 x86 路由系统，商业的受限制，开源的生态不通，学习维护成本太高。索性基于 Debian 13 自己手搓了一个 drouter ，稳定、通用、自由，终于不再折腾了。 开源地址： https://github.com/liuzhuohua/drouter",
+        "publishedAt": "2026-09-30T13:16:57.000Z",
+        "summary": "出于降本增效目的调研一下 DS V4.1 Flash 的逆向 C#的能力 从一个简单的 DLL 开始，无混淆，DEBUG 构建，让他根据 DLL 重建项目中一个重要逻辑 然后我对着源码分析它的逆向结果，看到了这处错误 // 源代码 if (_firstDamageTime 以下是这一段聊天记录： 我 why _lastDamageTime = now in the if block ? Deepseek The original keeps _lastDamageTime …",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-item-ee911d411592ebdf",
+        "id": "cn-item-63e66781ac8cedd4",
         "category": "cn",
-        "title": "A股医药相关板块9月表现亮眼",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-30/10706328.shtml",
+        "title": "国务院办公厅印发《关于发展体育赛事激发消费活力的意见》",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706416.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-30T08:41:04.000Z",
-        "summary": "中新社北京9月30日电 (记者 陈康亮)在9月的最后一个交易日，中国A股主要股指总体表现平稳，医药相关板块涨幅居前，表现亮眼。",
+        "publishedAt": "2026-09-30T10:30:15.000Z",
+        "summary": "中新网9月30日电 据中国政府网消息，国务院办公厅日前印发《关于发展体育赛事激发消费活力的意见》(以下简称《意见》)。",
         "badge": "中新网要闻"
       },
       {
@@ -272,64 +272,66 @@
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-openai-dec620cb7225d243",
+        "id": "ai-openai-d6b9f5e651b1891e",
         "category": "ai",
-        "title": "Introducing dots",
-        "url": "https://openai.com/index/introducing-dots",
+        "title": "Introducing GPT-6.1 Sol",
+        "url": "https://openai.com/index/introducing-gpt-6-1-sol",
         "source": "OpenAI",
-        "publishedAt": "2026-09-29T00:00:00.000Z",
-        "summary": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49901736",
+        "id": "hn-49906637",
         "category": "dev",
-        "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
-        "url": "https://github.com/ninjahawk/livenerf",
+        "title": "You Said No MCP",
+        "url": "https://earendil.com/posts/you-said-no-mcp/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T22:36:14.000Z",
+        "publishedAt": "2026-09-30T09:55:23.000Z",
         "badge": "HN",
-        "signal": "736 分 · 299 评论"
+        "signal": "515 分 · 296 评论"
       },
       {
-        "id": "cn-it-5d88cbe11ca6c6e7",
+        "id": "cn-it-466e2afdf21a0171",
         "category": "cn",
-        "title": "清华大学跻身 THE 2027 全球大学第 11 名及亚洲第一，亚洲高校首次超越欧洲",
-        "url": "https://www.ithome.com/1/008/916.htm",
+        "title": "海盗船《英雄联盟》选手 Gumayusi 联名键鼠发售，1749 / 1549 元",
+        "url": "https://www.ithome.com/1/008/945.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T13:41:42.000Z",
-        "summary": "IT之家 9 月 30 日消息，英国《泰晤士高等教育》（THE）今日公布 2027 年度世界大学排名。 清华大学排名升至全球第 11 位，成为亚洲排名最高的高校，并首次超过欧洲大陆排名最高的瑞士苏黎世联邦理工学院（ETH Zurich）。这是亚洲高校首次在该榜单中超过欧洲大陆高校。 本次排名共纳入来自 118 个国家和地区的 2297 所大学。英国牛津大学连续第 11 年位居榜首，麻省理工学院（MIT）排名第二，普林斯顿大学与斯坦福大学并列第三。全球前十名仍全部由英国和美国…",
+        "publishedAt": "2026-09-30T15:52:42.000Z",
+        "summary": "IT之家 9 月 30 日消息，CORSAIR（海盗船）正式发售了与《英雄联盟》三届全球总决赛冠军选手李 \"Gumayusi\" 珉炯合作打造的键盘与鼠标，两款外设的定价分别为 1749 元和 1549 元。 ▲ 先锋者 VANGUARD PRO 96 霍尔效应游戏键盘 Gumayusi 限量版 京东 海盗船 Gumayusi 联名键盘 1749 元 直达链接 ▲ 圣剑 SABRE v2 PRO CARBON FIBER WIRELESS 游戏鼠标 Gumayusi 限量版 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-6j4f-fj2g-mc7p",
+        "id": "github-advisory-ghsa-3q6v-r5mr-hxv8",
         "category": "security",
-        "title": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
-        "url": "https://github.com/advisories/GHSA-6j4f-fj2g-mc7p",
+        "title": "league/commonmark: Quadratic-time denial of service in the GitHub Flavored Markdown Table extension block-start scan",
+        "url": "https://github.com/advisories/GHSA-3q6v-r5mr-hxv8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-29T23:44:58.000Z",
-        "summary": "### Summary `parseCommaParts()` can exhaust the native stack and crash the process. There are two distinct ways to trigger it, both reachable from a single untrusted pattern string. This is the parsing-side counterpart to CVE-2026-14257 / …",
-        "badge": "CVE-2026-102276",
+        "publishedAt": "2026-09-30T15:36:13.000Z",
+        "summary": "## Summary `league/commonmark`'s GitHub Flavored Markdown Table extension registers `TableStartParser` as a block-start parser. While a paragraph is the active block, the core block parser calls `TableStartParser::tryStart()` on every non-…",
+        "badge": "GHSA-3Q6V-R5MR-HXV8",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-google-deepmind-81481aa316e38773",
+        "id": "ai-google-deepmind-68ead6b6af2b7144",
         "category": "ai",
-        "title": "Gemini 3.8 text-to-speech says hello",
-        "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+        "title": "Advancing Private AI Compute with secure, server-side memory",
+        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-23T15:25:14.000Z",
+        "publishedAt": "2026-09-23T16:00:57.000Z",
+        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245889",
+        "id": "v2ex-1245903",
         "category": "dev",
-        "title": "AI 写的项目，让 AI 排查问题。但是有没有感觉沟通过程中读 AI 说的话很费劲，很难懂。。。",
-        "url": "https://www.v2ex.com/t/1245889",
+        "title": "关于买房，现在是一个好的机会么？",
+        "url": "https://www.v2ex.com/t/1245903",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T10:55:08.000Z",
+        "publishedAt": "2026-09-30T12:36:57.000Z",
+        "summary": "21-23 年左右，当时家里也提起要买房，周围的同事也陆续在北京上车了，当时家里催着看看买套房，贷款可能也要 200 个左右买个 550w 的房子，当时的买房的情绪，房价双双都在影响着我，但是我坚持再等等，后来慢慢的忘记这个事情了，到了最近几年发现貌似当时也是一个正确的选择，当时上车的同事现在也不知道怎么样了，聊天的时候也不敢提这个事情，我不想说明自己有多幸运，我也不想嘲讽他们，毕竟钱都是辛苦挣来的。 现在虽然不用贷款可以上车了，但是感觉又开始犹豫了。 大家现在的情况是怎么…",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "18 回复"
       },
       {
         "id": "cn-baidu-1dbd65021dac1c30",
@@ -339,7 +341,7 @@
         "source": "百度热搜",
         "summary": "近日，云南丽江、甘肃兰州、新疆喀什等地装扮一新迎国庆。丽江古城开展放水冲街并展出秋菊，甘肃兰州在桥梁及主城区悬挂国旗并栽植54.5万余株花卉，新疆喀什古城街巷悬挂红旗与彩旗。多地鲜亮的“中国红”与古建筑、自然景观交相辉映，营造喜庆祥和的浓厚国庆氛围。",
         "badge": "热搜",
-        "signal": "7,618,814 热度"
+        "signal": "7,615,946 热度"
       },
       {
         "id": "cisa-kev-cve-2026-65660",
@@ -353,74 +355,74 @@
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-hugging-face-09d1d26fa19dd694",
+        "id": "ai-hugging-face-afa8c33f8eb7996a",
         "category": "ai",
-        "title": "Holo4: powering generalist computer-use agents",
-        "url": "https://huggingface.co/blog/Hcompany/holo4",
+        "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-28T09:44:05.000Z",
+        "publishedAt": "2026-09-29T13:07:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49887343",
+        "id": "hn-49883970",
         "category": "dev",
-        "title": "Solving Factorio Quality",
-        "url": "https://exyr.org/2026/solving-factorio-quality/",
+        "title": "I Could've Accessed 17T Microsoft Records",
+        "url": "https://blog.faav.net/how-i-couldve-accessed-17-trillion-microsoft-records",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T02:27:54.000Z",
+        "publishedAt": "2026-09-28T20:32:46.000Z",
         "badge": "HN",
-        "signal": "154 分 · 43 评论"
+        "signal": "171 分 · 77 评论"
       },
       {
-        "id": "cn-item-2aa86ff386c8b20a",
+        "id": "cn-item-89704819164a037a",
         "category": "cn",
-        "title": "水利部：“十五五”末力争新增水库库容150亿立方米",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706320.shtml",
+        "title": "中央网信办部署开展“清朗·整治短视频虚假人设乱象”专项行动",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706334.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-30T08:40:44.000Z",
-        "summary": "中新网9月30日电 9月30日下午，国新办举行“开局起步‘十五五’”系列主题新闻发布会，介绍加快建设现代化水网有关情况。水利部部长李国英表示，将加快构建流域防洪减灾体系。完善由水库、河道及堤防、蓄滞洪区组成的流域防洪工程体系，由卫星雷达网、雨量站网、水文站网组成的雨水情监测预报体系，由责任落实、决策支持、调度指挥机制组成的洪涝灾害防御工作体系。力争到“十五五”末，新增水库库容150亿立方米，重要堤防达标率达到91%。",
+        "publishedAt": "2026-09-30T08:43:18.000Z",
+        "summary": "中新网9月30日电 据“网信中国”微信公众号消息，为进一步推动短视频行业健康有序发展，营造风清气正的网络空间，近日，中央网信办印发通知，在全国范围内部署开展为期2个月的“清朗·整治短视频虚假人设乱象”专项行动。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-2gc4-cqfq-p2gv",
+        "id": "github-advisory-ghsa-m9gg-hp2v-232j",
         "category": "security",
-        "title": "Socket.IO: Engine.IO Protocol Revision Mismatch DoS",
-        "url": "https://github.com/advisories/GHSA-2gc4-cqfq-p2gv",
+        "title": "@grpc/grpc-js: In certain configurations, getAuthContext can return unauthorized certificates as though they were authorized",
+        "url": "https://github.com/advisories/GHSA-m9gg-hp2v-232j",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-29T23:44:33.000Z",
-        "summary": "### Impact A denial-of-service vulnerability exists in Engine.IO / Socket.IO servers that allow transport upgrades. The Engine.IO protocol revision is negotiated during the initial handshake and stored on the session, but a newly-created t…",
-        "badge": "CVE-2026-102599",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-30T15:35:53.000Z",
+        "summary": "### Impact When server credentials are created with the `requireClientCertificate` option set to `false`, `getAuthContext` does not distinguish between authorized and unauthorized certificates in its return value. This can create improper …",
+        "badge": "CVE-2026-101916",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
-        "id": "ai-openai-2fc54b690d7b20a2",
+        "id": "ai-openai-6071f63e21f64254",
         "category": "ai",
-        "title": "Towards safety cases for frontier AI training",
-        "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+        "title": "DevDay 2026 Recap",
+        "url": "https://openai.com/index/devday-2026-recap",
         "source": "OpenAI",
-        "publishedAt": "2026-09-28T19:00:00.000Z",
-        "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
+        "publishedAt": "2026-09-29T10:00:00.000Z",
+        "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245887",
+        "id": "v2ex-1245899",
         "category": "dev",
-        "title": "Railway 出了免注册 VM， 一行命令试用",
-        "url": "https://www.v2ex.com/t/1245887",
+        "title": "手搓了一个基于 Debian13 的 x86 路由器系统",
+        "url": "https://www.v2ex.com/t/1245899",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T10:17:17.000Z",
-        "summary": "终端直接敲：ssh https://railway.new 大约 1.4 秒起来，2 vCPU / 2GB 预装 Node 、Python 、gh ，还有 Claude Code 、Codex 、Cursor CLI 、Grok 等 coding agent 未认领盒子算力免费； 60 分钟搭建窗 from X @ dingyi",
+        "publishedAt": "2026-09-30T12:19:14.000Z",
+        "summary": "用过一圈 x86 路由系统，商业的受限制，开源的生态不通，学习维护成本太高。索性基于 Debian 13 自己手搓了一个 drouter ，稳定、通用、自由，终于不再折腾了。 开源地址： https://github.com/liuzhuohua/drouter",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-0ae14dc382a0c44a",
+        "id": "cn-it-e5cb623c33feb447",
         "category": "cn",
-        "title": "国内首个科技期刊出版集团：中科期刊出版集团挂牌成立",
-        "url": "https://www.ithome.com/1/008/915.htm",
+        "title": "三星发布 Galaxy SmartTag 3 追踪器：体积缩小 35%，续航最长 790 天",
+        "url": "https://www.ithome.com/1/008/944.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T13:25:39.000Z",
-        "summary": "IT之家 9 月 30 日消息，据新华社，中国科学院推进一流科技期刊建设新闻发布会今日在京举行。会上，北京中科期刊出版传媒集团有限公司正式挂牌成立。 该集团是国内首个专注于科技期刊的出版集团，标志着中国科学院一流科技期刊建设取得阶段性进展，我国科技期刊出版从“分散办刊”向“集约运营”迈出关键一步。 科技期刊是科技基础能力的重要组成部分，体现国家科技竞争力与文化软实力。作为国家战略科技力量，中国科学院主管科技期刊 400 余种，覆盖自然科学主要学科领域。 2025 年以来，中…",
+        "publishedAt": "2026-09-30T15:46:55.000Z",
+        "summary": "IT之家 9 月 30 日消息，三星电子今日宣布推出新一代 Galaxy SmartTag3 追踪器。 该产品体积比前代小约 35%，重量轻 33%，单个售价 29.99 美元 （现汇率约合 201.5 元人民币） ，四件装 99.99 美元 （IT之家注：现汇率约合 671.7 元人民币） ，将于 11 月初上市，提供白、黑两色，还可单独购买硅胶保护壳和环扣保护壳等配件。 三星 Galaxy SmartTag3 标准使用续航最长 550 天，省电模式下最长 790 天（前…",
         "badge": "IT之家"
       },
       {
@@ -435,64 +437,63 @@
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-google-deepmind-947e89eaa83a27ae",
+        "id": "ai-google-deepmind-81481aa316e38773",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-        "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+        "title": "Gemini 3.8 text-to-speech says hello",
+        "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-15T17:05:57.000Z",
+        "publishedAt": "2026-09-23T15:25:14.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49889140",
+        "id": "hn-49882754",
         "category": "dev",
-        "title": "Mathematical Origami",
-        "url": "https://mathigon.org/origami",
+        "title": "Burning Man Death Rates – A Short Lesson in Statistics",
+        "url": "https://ihavenapkinthoughts.substack.com/p/burning-man-death-rates-a-short-lesson",
         "source": "Hacker News",
-        "publishedAt": "2026-09-29T06:45:46.000Z",
+        "publishedAt": "2026-09-28T18:57:16.000Z",
         "badge": "HN",
-        "signal": "22 分 · 4 评论"
+        "signal": "62 分 · 54 评论"
       },
       {
-        "id": "cn-baidu-75f3c851b0612d67",
+        "id": "cn-baidu-bf24c464f4e8850f",
         "category": "cn",
-        "title": "九毛九股价跌破“九毛九”",
-        "url": "https://www.baidu.com/s?wd=%E4%B9%9D%E6%AF%9B%E4%B9%9D%E8%82%A1%E4%BB%B7%E8%B7%8C%E7%A0%B4%E2%80%9C%E4%B9%9D%E6%AF%9B%E4%B9%9D%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "寒武纪：离职高管梁军索赔278.32亿元",
+        "url": "https://www.baidu.com/s?wd=%E5%AF%92%E6%AD%A6%E7%BA%AA%EF%BC%9A%E7%A6%BB%E8%81%8C%E9%AB%98%E7%AE%A1%E6%A2%81%E5%86%9B%E7%B4%A2%E8%B5%94278.32%E4%BA%BF%E5%85%83&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月28日，“酸菜鱼第一股”九毛九开盘价0.99港元/股，股价跌破1港元创历史新低。数据显示，企业上半年收入23.91亿元，同比下降13.2%；期间溢利7824万元，同比增长33.2%。",
+        "summary": "9月30日寒武纪公告，原副总梁军变更诉讼请求，向公司索赔278.32亿元股权激励损失。此前梁军2022年离职后拒办股权回购手续，公司2023年起诉。目前双方相关案件已有6起梁军均败诉。本次劳动争议案尚处法院受理阶段未开庭，涉案金额仅为其单方主张。",
         "badge": "热搜",
-        "signal": "7,521,563 热度"
+        "signal": "7,524,410 热度"
       },
       {
-        "id": "github-advisory-ghsa-v53p-9fqp-m79j",
+        "id": "github-advisory-ghsa-m8m8-qj5v-23w3",
         "category": "security",
-        "title": "Nodemailer: Quadratic backtracking in the addressparser free-text fallback allows remote denial of service",
-        "url": "https://github.com/advisories/GHSA-v53p-9fqp-m79j",
+        "title": "Axios: Node HTTP adapter prototype-pollution gadget allows request socket hijack via inherited createConnection",
+        "url": "https://github.com/advisories/GHSA-m8m8-qj5v-23w3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-29T23:43:36.000Z",
-        "summary": "### Summary When `addressparser` finds no address by its strict reading, it falls back to pulling one out of the free text with `/\\s*\\b[^@\\s]+@[^\\s]+\\b\\s*/`. That pattern backtracks quadratically: `[^@\\s]+` is retried from every offset and…",
-        "badge": "GHSA-V53P-9FQP-M79J",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-30T15:32:51.000Z",
+        "summary": "## Summary Axios' Node HTTP adapter can act as a read-side prototype-pollution gadget for Node's sensitive `createConnection` request option. The adapter creates a null-prototype options object, but Node's HTTP client can copy or normalize…",
+        "badge": "CVE-2026-101905",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-280bf64dcca75cee",
+        "id": "ai-hugging-face-09d1d26fa19dd694",
         "category": "ai",
-        "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
-        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
+        "title": "Holo4: powering generalist computer-use agents",
+        "url": "https://huggingface.co/blog/Hcompany/holo4",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-24T14:08:57.000Z",
+        "publishedAt": "2026-09-28T09:44:05.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245883",
+        "id": "v2ex-1245889",
         "category": "dev",
-        "title": "你们的 gpt6.1 sol 都有了吗",
-        "url": "https://www.v2ex.com/t/1245883",
+        "title": "AI 写的项目，让 AI 排查问题。但是有没有感觉沟通过程中读 AI 说的话很费劲，很难懂。。。",
+        "url": "https://www.v2ex.com/t/1245889",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T09:58:11.000Z",
-        "summary": "我 plus 账户，为啥到现在 codex cli 里都还没有 gpt6.1 的模型，更新到最新版本了",
+        "publishedAt": "2026-09-30T10:55:08.000Z",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "17 回复"
       }
     ]
   },
@@ -509,7 +510,7 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 11457,
+        "stars": 12212,
         "starsToday": 1280
       },
       {
@@ -519,7 +520,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 49821,
+        "stars": 50162,
         "starsToday": 3481
       },
       {
@@ -529,7 +530,7 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 2742,
+        "stars": 2893,
         "starsToday": 622
       },
       {
@@ -539,7 +540,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 24322,
+        "stars": 24410,
         "starsToday": 88
       },
       {
@@ -549,8 +550,8 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 148679,
-        "starsToday": 675
+        "stars": 148986,
+        "starsToday": 865
       },
       {
         "id": "github-72bea5f84ba33820",
@@ -559,8 +560,8 @@
         "url": "https://github.com/harry0703/MoneyPrinterTurbo",
         "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
         "language": "Python",
-        "stars": 127289,
-        "starsToday": 338
+        "stars": 127443,
+        "starsToday": 464
       },
       {
         "id": "github-5dcd5a46c4da9d02",
@@ -569,7 +570,7 @@
         "url": "https://github.com/openclaw/openclaw",
         "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
         "language": "TypeScript",
-        "stars": 390847,
+        "stars": 390934,
         "starsToday": 136
       },
       {
@@ -579,7 +580,7 @@
         "url": "https://github.com/ComposioHQ/awesome-claude-skills",
         "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
         "language": "Python",
-        "stars": 75976,
+        "stars": 76065,
         "starsToday": 118
       },
       {
@@ -589,8 +590,8 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 272622,
-        "starsToday": 736
+        "stars": 272856,
+        "starsToday": 908
       },
       {
         "id": "github-0495d9fe7b8c8525",
@@ -599,10 +600,10 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 54446,
+        "stars": 54612,
         "starsToday": 352
       }
     ],
-    "updatedAt": "2026-09-30T13:45:05.042Z"
+    "updatedAt": "2026-09-30T19:21:23.633Z"
   }
 }
