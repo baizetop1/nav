@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-30T19:21:23.633Z",
+  "generatedAt": "2026-09-30T23:51:13.288Z",
   "intelligence": {
-    "updatedAt": "2026-09-30T19:21:23.633Z",
+    "updatedAt": "2026-09-30T23:51:13.288Z",
     "items": [
       {
         "id": "cn-item-eb478ebbb4e06c92",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-86950",
+        "id": "cisa-kev-cve-2026-76504",
         "category": "security",
-        "title": "Apple Multiple Products：Apple Multiple Products Out-of-Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86950",
+        "title": "Cisco Catalyst SD-WAN Manager：Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-29T00:00:00.000Z",
-        "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
-        "badge": "CVE-2026-86950",
-        "signal": "已遭利用 · 整改期限 2026-10-02"
+        "publishedAt": "2026-09-30T00:00:00.000Z",
+        "summary": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP req…",
+        "badge": "CVE-2026-76504",
+        "signal": "已遭利用 · 整改期限 2026-10-03"
       },
       {
         "id": "ai-openai-90249c2a3882c6d3",
@@ -36,44 +36,43 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49911995",
+        "id": "hn-49913571",
         "category": "dev",
-        "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-        "url": "https://github.com/magnitudedev/magnitude",
+        "title": "Gemini 4 Argon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T17:37:40.000Z",
+        "publishedAt": "2026-09-30T20:04:37.000Z",
         "badge": "HN",
-        "signal": "57 分 · 33 评论"
+        "signal": "854 分 · 568 评论"
       },
       {
-        "id": "cn-it-ebe15bade8d4d714",
+        "id": "cn-it-cb890cc991b1b6f4",
         "category": "cn",
-        "title": "乐扩公布 B650 扩展卡 PB65MX4，支持模块化按需拓展",
-        "url": "https://www.ithome.com/1/008/950.htm",
+        "title": "IT早报 1001：豆包支持出行服务；被罗永浩炮轰后东方甄选溜溜凳退款 2 倍不退货；凯越机车辟谣网传经销商跑路；金融新规实施贷款中介集体“消失”...",
+        "url": "https://www.ithome.com/1/008/961.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T16:15:09.000Z",
-        "summary": "IT之家 10 月 1 日消息，乐扩 (Lekuo) 昨日公布了基于 AMD B650 芯片组 \"PROM 21\" 的新款 PCIe AIC 扩展卡 PB65MX4。这一型号采用模块化设计， 支持用户按需拓展 I/O 。 PB65MX4 正面提供 2 个 M.2 2230 / 2242 / 2260 / 2280 插槽，支持 PCIe Gen3 ×2。这两个插槽既可直接安装 M.2 SSD，也 兼容 M.2 转 10GbE RJ-45 / 10GbE SFP+ / 多口 S…",
+        "publishedAt": "2026-09-30T23:48:24.000Z",
+        "summary": "“IT早报”时间，大家好，现在是 2026 年 10 月 1 日星期四，今天的重要科技资讯有： 1. 豆包宣布支持出行服务：覆盖订机票、火车票以及打车导航 豆包新增机票、火车票预订及打车导航等服务，动动嘴就能搞定全程出行。豆包出行服务已合作航班管家、高铁管家、曹操出行、百度地图等头部服务商。>> 查看详情 2. 被罗永浩炮轰后东方甄选回应溜溜凳事件：退双倍货款不退货 针对近期引发关注的“溜溜凳”产品质量争议，东方甄选宣布为购买该产品的用户办理全额退款不退货，并给予货价两倍的…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-ff3f-86qr-9cv3",
+        "id": "github-advisory-ghsa-chx6-46f5-w4vp",
         "category": "security",
-        "title": "Angular Server-Side Rendering (SSR): Denial of Service via Numeric URL Matrix Parameters",
-        "url": "https://github.com/advisories/GHSA-ff3f-86qr-9cv3",
+        "title": "tornado: CurlAsyncHTTPClient enforces no response-size limit — decompression bomb drives unbounded memory accumulation to OOM",
+        "url": "https://github.com/advisories/GHSA-chx6-46f5-w4vp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T15:40:47.000Z",
-        "summary": "A denial of service (DoS) vulnerability was identified in `@angular/router` when Server-Side Rendering (SSR) is enabled on Node.js (V8). When `@angular/router` parses incoming request URLs, it extracts path segments, matrix parameters, and…",
-        "badge": "CVE-2026-101896",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-30T23:49:13.000Z",
+        "summary": "An unbounded memory accumulation (decompression bomb) in `tornado.curl_httpclient.CurlAsyncHTTPClient` — the client-side sibling gap of CVE-2026-49855 — verified end-to-end on the 2026-08-15 master snapshot (`6.6.dev1`) and present unchang…",
+        "badge": "GHSA-CHX6-46F5-W4VP",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-google-deepmind-c696e8b1f3422473",
+        "id": "ai-google-deepmind-ce56aa83d0064ef1",
         "category": "ai",
-        "title": "Introducing SynthID Bio",
-        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+        "title": "Gemini 4 Argon: our next era of frontier intelligence",
+        "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-30T15:03:07.000Z",
-        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+        "publishedAt": "2026-09-30T20:01:45.000Z",
         "badge": "Google DeepMind"
       },
       {
@@ -88,25 +87,25 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-1b7e0ae8a2a5f59e",
+        "id": "cn-baidu-d1169e125d032f82",
         "category": "cn",
-        "title": "去年中国25至29岁结婚人数最多",
-        "url": "https://www.baidu.com/s?wd=%E5%8E%BB%E5%B9%B4%E4%B8%AD%E5%9B%BD25%E8%87%B329%E5%B2%81%E7%BB%93%E5%A9%9A%E4%BA%BA%E6%95%B0%E6%9C%80%E5%A4%9A&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "迎着清晨第一缕阳光五星红旗冉冉升起",
+        "url": "https://www.baidu.com/s?wd=%E8%BF%8E%E7%9D%80%E6%B8%85%E6%99%A8%E7%AC%AC%E4%B8%80%E7%BC%95%E9%98%B3%E5%85%89%E4%BA%94%E6%98%9F%E7%BA%A2%E6%97%97%E5%86%89%E5%86%89%E5%8D%87%E8%B5%B7&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月30日，民政部公布《2025年民政事业发展统计公报》显示，去年25至29岁年龄段结婚人数最多，占比达36.88%，连续13年成为占比最高年龄段。",
+        "summary": "10月1日，天安门广场举行国庆升旗仪式，迎着清晨第一缕阳光，五星红旗冉冉升起。",
         "badge": "热搜",
-        "signal": "7,808,615 热度"
+        "signal": "7,809,203 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-88772",
+        "id": "cisa-kev-cve-2026-86950",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
+        "title": "Apple Multiple Products：Apple Multiple Products Out-of-Bounds Write Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86950",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-27T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
-        "badge": "CVE-2026-88772",
-        "signal": "已遭利用 · 整改期限 2026-09-30"
+        "publishedAt": "2026-09-29T00:00:00.000Z",
+        "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+        "badge": "CVE-2026-86950",
+        "signal": "已遭利用 · 整改期限 2026-10-02"
       },
       {
         "id": "ai-hugging-face-74c2ff7e2707d1f6",
@@ -118,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49911757",
+        "id": "hn-49915082",
         "category": "dev",
-        "title": "Commit Description as a Thinking Tool",
-        "url": "https://yedhu.me/posts/commit-description-as-a-thinking-tool/",
+        "title": "The top secret URSALA, RAQUEL, and FARRAH satellites",
+        "url": "https://www.thespacereview.com/article/4951/1",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T17:18:13.000Z",
+        "publishedAt": "2026-09-30T22:03:04.000Z",
         "badge": "HN",
-        "signal": "64 分 · 25 评论"
+        "signal": "90 分 · 17 评论"
       },
       {
         "id": "cn-item-5b7f096ae68376cd",
@@ -138,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-cxp5-3px4-pw24",
+        "id": "github-advisory-ghsa-c2m8-h5v5-343r",
         "category": "security",
-        "title": "jackson-databind quadratic forward-reference completion",
-        "url": "https://github.com/advisories/GHSA-cxp5-3px4-pw24",
+        "title": "Tornado: StaticFileHandler follows symlinks outside static root (path traversal)",
+        "url": "https://github.com/advisories/GHSA-c2m8-h5v5-343r",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T15:37:24.000Z",
-        "summary": "### Summary When an `@JsonIdentityInfo` collection or map first creates N unresolved object-ID references and later resolves the same IDs in reverse order, jackson-databind scans the remaining pending-reference accumulator for each resolut…",
-        "badge": "CVE-2026-91777",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-30T23:48:55.000Z",
+        "summary": "### Summary StaticFileHandler allows an unauthenticated attacker to read arbitrary files from the server's filesystem by requesting a path that resolves to a symbolic link placed inside the static root directory. Any application that serve…",
+        "badge": "GHSA-C2M8-H5V5-343R",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-061338e668ed6974",
@@ -170,65 +169,66 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-34143af40ceca1c5",
+        "id": "cn-it-c69fd0b58ded6e8b",
         "category": "cn",
-        "title": "复兴号 CR400AF-X 动车组首发上线 UFCS 支持：高铁无线快充迈入 30W 时代，半小时充至 60%",
-        "url": "https://www.ithome.com/1/008/946.htm",
+        "title": "1100 亿美元大并购：派拉蒙收购华纳兄弟预计 10 月 6 日完成交易",
+        "url": "https://www.ithome.com/1/008/960.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T16:01:31.000Z",
-        "summary": "IT之家 10 月 1 日消息，9 月 30 日，第三代智能高铁 CR400AF-X 型动车组首次上线运营，从北京南开往杭州东的 G43 次列车成为首发车次，随后 G42、G35 京沪、京杭热门线路均已上线（仅复兴号商务座）。 该动车组由国铁集团主导、中车四方股份公司研制，搭载的无线充电功能使用我国自主推动的 UFCS（融合快速充电）无线充电技术规范。 据中国信息通信研究院总工程师魏然介绍，以往高铁等公共设施上的无线充电装置多采用无线充电联盟（WPC）的 Qi 规范，最高充…",
+        "publishedAt": "2026-09-30T23:46:41.000Z",
+        "summary": "IT之家 10 月 1 日消息，北京时间今天（1 日）凌晨，据彭博社报道，美国加州联邦法官批准和解协议，结束 12 州总检察长为反对合并提起的诉讼，为交易完成扫清了道路。 派拉蒙计划于 10 月 6 日完成收购华纳兄弟的交易 。根据和解条件，派拉蒙承诺每年至少有 30 部电影登陆院线，并为旗下 CBS 和 CNN 两家新闻机构设立编辑独立委员会。 派拉蒙天舞公司董事长兼 CEO 大卫 · 埃里森宣布，1,100 亿美元 （IT之家注：现汇率约合 7,389.64 亿元人民币…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-88771",
+        "id": "cisa-kev-cve-2026-88772",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Input Validation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88771",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
         "source": "CISA KEV",
         "publishedAt": "2026-09-27T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
-        "badge": "CVE-2026-88771",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+        "badge": "CVE-2026-88772",
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-google-deepmind-34692efacd3b982a",
+        "id": "ai-google-deepmind-c696e8b1f3422473",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live with Live Avatar",
-        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+        "title": "Introducing SynthID Bio",
+        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-24T16:20:39.000Z",
+        "publishedAt": "2026-09-30T15:03:07.000Z",
+        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49909583",
+        "id": "hn-49912955",
         "category": "dev",
-        "title": "A brief history of the Bloomberg terminal",
-        "url": "https://spectrum.ieee.org/bloomberg-terminal",
+        "title": "Surprisingly complex waves reveal the brain's inner workings",
+        "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T14:34:07.000Z",
+        "publishedAt": "2026-09-30T19:04:50.000Z",
         "badge": "HN",
-        "signal": "142 分 · 50 评论"
+        "signal": "104 分 · 38 评论"
       },
       {
-        "id": "cn-baidu-70f00f5ea30bfeb6",
+        "id": "cn-baidu-d411fbead0743141",
         "category": "cn",
-        "title": "警方破获跨国制毒案：退休教授参与",
-        "url": "https://www.baidu.com/s?wd=%E8%AD%A6%E6%96%B9%E7%A0%B4%E8%8E%B7%E8%B7%A8%E5%9B%BD%E5%88%B6%E6%AF%92%E6%A1%88%EF%BC%9A%E9%80%80%E4%BC%91%E6%95%99%E6%8E%88%E5%8F%82%E4%B8%8E&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "为看升旗 天安门前长队一眼望不到头",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%BA%E7%9C%8B%E5%8D%87%E6%97%97+%E5%A4%A9%E5%AE%89%E9%97%A8%E5%89%8D%E9%95%BF%E9%98%9F%E4%B8%80%E7%9C%BC%E6%9C%9B%E4%B8%8D%E5%88%B0%E5%A4%B4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "日前，山东警方侦破一起跨国制贩依托咪酯大案。退休化学教授吴某伙同黄某等人，在国内生产未列管的制毒前体，转运至境外合成毒品。2026年4月多国同步收网，抓获71人，涉案超亿元，主犯已被批捕。该案也揭示新型毒品犯罪专业化、产业化、国际化的特点。",
+        "summary": "10月1日凌晨，不少群众为观看国庆当日天安门升旗，连夜前往排队。天安门前队伍绵延，一眼望不到头。人群中有人百米冲刺，只为站得离国旗更近一些，现场几乎人手一面小红旗。",
         "badge": "热搜",
-        "signal": "7,713,205 热度"
+        "signal": "7,712,313 热度"
       },
       {
-        "id": "github-advisory-ghsa-wv8q-qhhj-9h54",
+        "id": "github-advisory-ghsa-667r-xxjv-c9mm",
         "category": "security",
-        "title": "jackson-databind retains every unknown raw type ID",
-        "url": "https://github.com/advisories/GHSA-wv8q-qhhj-9h54",
+        "title": "fastify vulnerable to request body replacement via an async validation result collision",
+        "url": "https://github.com/advisories/GHSA-667r-xxjv-c9mm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T15:36:55.000Z",
-        "summary": "### Summary With `@JsonTypeInfo(use = Id.NAME, defaultImpl = ...)`, every distinct unknown raw type ID selects the same fallback deserializer but is retained as a separate key in `TypeDeserializerBase._deserializers`. An attacker who can r…",
-        "badge": "CVE-2026-91776",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-30T23:45:45.000Z",
+        "summary": "### Impact Fastify runs a route's validator and, for a result shaped like `{ value, error }`, unwraps it: an `error` becomes a validation failure and `value` replaces the request part. This convention is intended for synchronous custom com…",
+        "badge": "CVE-2026-84504",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-hugging-face-dc53fce90c6f36f5",
@@ -261,15 +261,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-67279",
+        "id": "cisa-kev-cve-2026-88771",
         "category": "security",
-        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Input Validation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88771",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
-        "badge": "CVE-2026-67279",
-        "signal": "已遭利用 · 整改期限 2026-09-28"
+        "publishedAt": "2026-09-27T00:00:00.000Z",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+        "badge": "CVE-2026-88771",
+        "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
         "id": "ai-openai-d6b9f5e651b1891e",
@@ -282,44 +282,43 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49906637",
+        "id": "hn-49913192",
         "category": "dev",
-        "title": "You Said No MCP",
-        "url": "https://earendil.com/posts/you-said-no-mcp/",
+        "title": "EDG C++ front-end goes public",
+        "url": "https://edgcpp.org/#transition",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T09:55:23.000Z",
+        "publishedAt": "2026-09-30T19:26:37.000Z",
         "badge": "HN",
-        "signal": "515 分 · 296 评论"
+        "signal": "126 分 · 46 评论"
       },
       {
-        "id": "cn-it-466e2afdf21a0171",
+        "id": "cn-it-5809dd848046c063",
         "category": "cn",
-        "title": "海盗船《英雄联盟》选手 Gumayusi 联名键鼠发售，1749 / 1549 元",
-        "url": "https://www.ithome.com/1/008/945.htm",
+        "title": "仅用 22 天：Meta Muse 超越 ChatGPT，成美国下载量破 500 万次最快 AI 应用",
+        "url": "https://www.ithome.com/1/008/959.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T15:52:42.000Z",
-        "summary": "IT之家 9 月 30 日消息，CORSAIR（海盗船）正式发售了与《英雄联盟》三届全球总决赛冠军选手李 \"Gumayusi\" 珉炯合作打造的键盘与鼠标，两款外设的定价分别为 1749 元和 1549 元。 ▲ 先锋者 VANGUARD PRO 96 霍尔效应游戏键盘 Gumayusi 限量版 京东 海盗船 Gumayusi 联名键盘 1749 元 直达链接 ▲ 圣剑 SABRE v2 PRO CARBON FIBER WIRELESS 游戏鼠标 Gumayusi 限量版 …",
+        "publishedAt": "2026-09-30T23:45:52.000Z",
+        "summary": "IT之家 10 月 1 日消息，根据市场调查机构 Sensor Tower 公布数据， Meta 的 AI 助手 Muse 上线约三周，下载量突破 500 万次 ，成为美国 App Store 免费榜榜首，并连续 12 天保持榜首位置。 Sensor Tower 高级洞察分析师 Kara Lee 预测 Muse 下载量在 9 月 30 日（耗时 22 天）突破 500 万次，达到这一规模所用时间明显短于 ChatGPT（56 天）、Grok（103 天）与 Claude（4…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-3q6v-r5mr-hxv8",
+        "id": "github-advisory-ghsa-p68q-wchp-6fh7",
         "category": "security",
-        "title": "league/commonmark: Quadratic-time denial of service in the GitHub Flavored Markdown Table extension block-start scan",
-        "url": "https://github.com/advisories/GHSA-3q6v-r5mr-hxv8",
+        "title": "fastify vulnerable to authentication bypass via malformed URLs reaching encapsulated not-found handlers",
+        "url": "https://github.com/advisories/GHSA-p68q-wchp-6fh7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T15:36:13.000Z",
-        "summary": "## Summary `league/commonmark`'s GitHub Flavored Markdown Table extension registers `TableStartParser` as a block-start parser. While a paragraph is the active block, the core block parser calls `TableStartParser::tryStart()` on every non-…",
-        "badge": "GHSA-3Q6V-R5MR-HXV8",
+        "publishedAt": "2026-09-30T23:45:34.000Z",
+        "summary": "### Impact Fastify routes a malformed URL under one plugin prefix to the custom not-found handler of a different sibling plugin, invoking the handler registered last and skipping the `preHandler` declared in its `setNotFoundHandler()`. Whe…",
+        "badge": "CVE-2026-76169",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-google-deepmind-68ead6b6af2b7144",
+        "id": "ai-google-deepmind-34692efacd3b982a",
         "category": "ai",
-        "title": "Advancing Private AI Compute with secure, server-side memory",
-        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+        "title": "Introducing Gemini 3.8 Live with Live Avatar",
+        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-23T16:00:57.000Z",
-        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+        "publishedAt": "2026-09-24T16:20:39.000Z",
         "badge": "Google DeepMind"
       },
       {
@@ -331,7 +330,7 @@
         "publishedAt": "2026-09-30T12:36:57.000Z",
         "summary": "21-23 年左右，当时家里也提起要买房，周围的同事也陆续在北京上车了，当时家里催着看看买套房，贷款可能也要 200 个左右买个 550w 的房子，当时的买房的情绪，房价双双都在影响着我，但是我坚持再等等，后来慢慢的忘记这个事情了，到了最近几年发现貌似当时也是一个正确的选择，当时上车的同事现在也不知道怎么样了，聊天的时候也不敢提这个事情，我不想说明自己有多幸运，我也不想嘲讽他们，毕竟钱都是辛苦挣来的。 现在虽然不用贷款可以上车了，但是感觉又开始犹豫了。 大家现在的情况是怎么…",
         "badge": "程序员",
-        "signal": "18 回复"
+        "signal": "24 回复"
       },
       {
         "id": "cn-baidu-1dbd65021dac1c30",
@@ -341,17 +340,17 @@
         "source": "百度热搜",
         "summary": "近日，云南丽江、甘肃兰州、新疆喀什等地装扮一新迎国庆。丽江古城开展放水冲街并展出秋菊，甘肃兰州在桥梁及主城区悬挂国旗并栽植54.5万余株花卉，新疆喀什古城街巷悬挂红旗与彩旗。多地鲜亮的“中国红”与古建筑、自然景观交相辉映，营造喜庆祥和的浓厚国庆氛围。",
         "badge": "热搜",
-        "signal": "7,615,946 热度"
+        "signal": "7,618,870 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-65660",
+        "id": "cisa-kev-cve-2026-67279",
         "category": "security",
-        "title": "Microsoft SharePoint：Microsoft SharePoint Code Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660",
+        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
         "source": "CISA KEV",
         "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
-        "badge": "CVE-2026-65660",
+        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
+        "badge": "CVE-2026-67279",
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
@@ -364,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49883970",
+        "id": "hn-49915484",
         "category": "dev",
-        "title": "I Could've Accessed 17T Microsoft Records",
-        "url": "https://blog.faav.net/how-i-couldve-accessed-17-trillion-microsoft-records",
+        "title": "EDG C++ Compiler is open source",
+        "url": "https://github.com/edgcpp/compiler",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T20:32:46.000Z",
+        "publishedAt": "2026-09-30T22:48:44.000Z",
         "badge": "HN",
-        "signal": "171 分 · 77 评论"
+        "signal": "11 分 · 0 评论"
       },
       {
         "id": "cn-item-89704819164a037a",
@@ -384,15 +383,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-m9gg-hp2v-232j",
+        "id": "github-advisory-ghsa-hwr6-493r-vm6h",
         "category": "security",
-        "title": "@grpc/grpc-js: In certain configurations, getAuthContext can return unauthorized certificates as though they were authorized",
-        "url": "https://github.com/advisories/GHSA-m9gg-hp2v-232j",
+        "title": "fastify vulnerable to request validation bypass via skipped boolean false schemas",
+        "url": "https://github.com/advisories/GHSA-hwr6-493r-vm6h",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T15:35:53.000Z",
-        "summary": "### Impact When server credentials are created with the `requireClientCertificate` option set to `false`, `getAuthContext` does not distinguish between authorized and unauthorized certificates in its return value. This can create improper …",
-        "badge": "CVE-2026-101916",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-09-30T23:44:58.000Z",
+        "summary": "### Impact Fastify decided whether to validate a request part by checking its schema for JavaScript truthiness. JSON Schema Draft 7 defines the boolean `false` as a valid schema that rejects every instance, but because `false` is falsy, a …",
+        "badge": "CVE-2026-84469",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-6071f63e21f64254",
@@ -416,65 +415,66 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-e5cb623c33feb447",
+        "id": "cn-it-ea3e7633007d726e",
         "category": "cn",
-        "title": "三星发布 Galaxy SmartTag 3 追踪器：体积缩小 35%，续航最长 790 天",
-        "url": "https://www.ithome.com/1/008/944.htm",
+        "title": "苹果 iPad Mini 8 前瞻：首次支持 IP 防水，A20 Pro 芯片、OLED 屏、12GB 内存",
+        "url": "https://www.ithome.com/1/008/958.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T15:46:55.000Z",
-        "summary": "IT之家 9 月 30 日消息，三星电子今日宣布推出新一代 Galaxy SmartTag3 追踪器。 该产品体积比前代小约 35%，重量轻 33%，单个售价 29.99 美元 （现汇率约合 201.5 元人民币） ，四件装 99.99 美元 （IT之家注：现汇率约合 671.7 元人民币） ，将于 11 月初上市，提供白、黑两色，还可单独购买硅胶保护壳和环扣保护壳等配件。 三星 Galaxy SmartTag3 标准使用续航最长 550 天，省电模式下最长 790 天（前…",
+        "publishedAt": "2026-09-30T23:34:36.000Z",
+        "summary": "IT之家 10 月 1 日消息，科技媒体 MacRumors 昨日（9 月 30 日）发布博文，进一步补充关于苹果 iPad mini 8 的更多细节信息，除了 A20 Pro 芯片外，还将首次引入 IP 等级防水等。 发布日期方面，该媒体认为苹果可能会在 2026 年 10 月发布该产品。售价方面，现款 iPad Mini 在美国起售价为 599 美元 （IT之家注：现汇率约合 4,024 元人民币） ，6 月因内存与存储芯片涨价上调 100 美元 （现汇率约合 671.…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-87902",
+        "id": "cisa-kev-cve-2026-65660",
         "category": "security",
-        "title": "WordPress Core：WordPress Core Remote File Inclusion Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87902",
+        "title": "Microsoft SharePoint：Microsoft SharePoint Code Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660",
         "source": "CISA KEV",
         "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remot…",
-        "badge": "CVE-2026-87902",
+        "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
+        "badge": "CVE-2026-65660",
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
-        "id": "ai-google-deepmind-81481aa316e38773",
+        "id": "ai-google-deepmind-68ead6b6af2b7144",
         "category": "ai",
-        "title": "Gemini 3.8 text-to-speech says hello",
-        "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+        "title": "Advancing Private AI Compute with secure, server-side memory",
+        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-23T15:25:14.000Z",
+        "publishedAt": "2026-09-23T16:00:57.000Z",
+        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49882754",
+        "id": "hn-49906432",
         "category": "dev",
-        "title": "Burning Man Death Rates – A Short Lesson in Statistics",
-        "url": "https://ihavenapkinthoughts.substack.com/p/burning-man-death-rates-a-short-lesson",
+        "title": "Singapore govt dating app uses Gale-Shapley stable marriage algorithm",
+        "url": "https://twitter.com/tuakdotsol/status/2105105417760391258",
         "source": "Hacker News",
-        "publishedAt": "2026-09-28T18:57:16.000Z",
+        "publishedAt": "2026-09-30T09:27:04.000Z",
         "badge": "HN",
-        "signal": "62 分 · 54 评论"
+        "signal": "139 分 · 58 评论"
       },
       {
-        "id": "cn-baidu-bf24c464f4e8850f",
+        "id": "cn-baidu-ca6e68d15a4229b4",
         "category": "cn",
-        "title": "寒武纪：离职高管梁军索赔278.32亿元",
-        "url": "https://www.baidu.com/s?wd=%E5%AF%92%E6%AD%A6%E7%BA%AA%EF%BC%9A%E7%A6%BB%E8%81%8C%E9%AB%98%E7%AE%A1%E6%A2%81%E5%86%9B%E7%B4%A2%E8%B5%94278.32%E4%BA%BF%E5%85%83&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中方不再称高市早苗为“首相”",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E6%96%B9%E4%B8%8D%E5%86%8D%E7%A7%B0%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E4%B8%BA%E2%80%9C%E9%A6%96%E7%9B%B8%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月30日寒武纪公告，原副总梁军变更诉讼请求，向公司索赔278.32亿元股权激励损失。此前梁军2022年离职后拒办股权回购手续，公司2023年起诉。目前双方相关案件已有6起梁军均败诉。本次劳动争议案尚处法院受理阶段未开庭，涉案金额仅为其单方主张。",
+        "summary": "9月30日，中方在外交部例行记者会上不再称高市早苗为“首相”，而是直接称其姓名。针对日本方面提出“不设禁忌讨论核武器和核潜艇”，郭嘉昆表示，日本作为无核武器缔约国，没有讨价还价的余地。",
         "badge": "热搜",
-        "signal": "7,524,410 热度"
+        "signal": "7,521,130 热度"
       },
       {
-        "id": "github-advisory-ghsa-m8m8-qj5v-23w3",
+        "id": "github-advisory-ghsa-9q9j-q6p8-xq58",
         "category": "security",
-        "title": "Axios: Node HTTP adapter prototype-pollution gadget allows request socket hijack via inherited createConnection",
-        "url": "https://github.com/advisories/GHSA-m8m8-qj5v-23w3",
+        "title": "fastify vulnerable to header validation bypass via incomplete schema case normalization",
+        "url": "https://github.com/advisories/GHSA-9q9j-q6p8-xq58",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T15:32:51.000Z",
-        "summary": "## Summary Axios' Node HTTP adapter can act as a read-side prototype-pollution gadget for Node's sensitive `createConnection` request option. The adapter creates a null-prototype options object, but Node's HTTP client can copy or normalize…",
-        "badge": "CVE-2026-101905",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-30T23:44:27.000Z",
+        "summary": "### Impact Fastify lowercases header-schema property names before compiling the schema, because Node.js stores request header names in lowercase. That normalization was incomplete: it lowercased only top-level `properties` keys and the roo…",
+        "badge": "CVE-2026-84428",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-09d1d26fa19dd694",
@@ -493,7 +493,7 @@
         "source": "V2EX 技术",
         "publishedAt": "2026-09-30T10:55:08.000Z",
         "badge": "程序员",
-        "signal": "17 回复"
+        "signal": "19 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 12212,
+        "stars": 12594,
         "starsToday": 1280
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 50162,
+        "stars": 50396,
         "starsToday": 3481
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 2893,
+        "stars": 3003,
         "starsToday": 622
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 24410,
+        "stars": 24479,
         "starsToday": 88
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 148986,
+        "stars": 149152,
         "starsToday": 865
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/harry0703/MoneyPrinterTurbo",
         "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
         "language": "Python",
-        "stars": 127443,
+        "stars": 127539,
         "starsToday": 464
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/openclaw/openclaw",
         "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
         "language": "TypeScript",
-        "stars": 390934,
+        "stars": 390982,
         "starsToday": 136
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/ComposioHQ/awesome-claude-skills",
         "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
         "language": "Python",
-        "stars": 76065,
+        "stars": 76117,
         "starsToday": 118
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 272856,
+        "stars": 272980,
         "starsToday": 908
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 54612,
+        "stars": 54711,
         "starsToday": 352
       }
     ],
-    "updatedAt": "2026-09-30T19:21:23.633Z"
+    "updatedAt": "2026-09-30T23:51:13.288Z"
   }
 }
