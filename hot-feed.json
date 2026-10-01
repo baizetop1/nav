@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-01T19:32:02.928Z",
+  "generatedAt": "2026-10-01T23:53:13.810Z",
   "intelligence": {
-    "updatedAt": "2026-10-01T19:32:02.928Z",
+    "updatedAt": "2026-10-01T23:53:13.810Z",
     "items": [
       {
         "id": "cn-item-5161497a8aaf8f0c",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-76504",
+        "id": "cisa-kev-cve-2026-104286",
         "category": "security",
-        "title": "Cisco Catalyst SD-WAN Manager：Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504",
+        "title": "Fortinet FortiMail：Fortinet FortiMail Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104286",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-30T00:00:00.000Z",
-        "summary": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP req…",
-        "badge": "CVE-2026-76504",
-        "signal": "已遭利用 · 整改期限 2026-10-03"
+        "publishedAt": "2026-10-01T00:00:00.000Z",
+        "summary": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS…",
+        "badge": "CVE-2026-104286",
+        "signal": "已遭利用 · 整改期限 2026-10-04"
       },
       {
         "id": "ai-openai-b8087b88cb63ae7f",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49923692",
+        "id": "hn-49926069",
         "category": "dev",
-        "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
-        "url": "https://blog.cloudflare.com/clef-decision-models/",
+        "title": "Pi 1.0",
+        "url": "https://earendil.com/posts/pi-1-0/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T16:18:57.000Z",
+        "publishedAt": "2026-10-01T19:33:05.000Z",
         "badge": "HN",
-        "signal": "275 分 · 103 评论"
+        "signal": "640 分 · 213 评论"
       },
       {
-        "id": "cn-it-4492d04e856a23fe",
+        "id": "cn-it-f1338071d4ae4ef9",
         "category": "cn",
-        "title": "长安汽车 9 月交付 22.89 万辆，海外 96200 辆同比增长 73.8%",
-        "url": "https://www.ithome.com/1/009/170.htm",
+        "title": "IT早报 1002：5999 元起华为 Mate 90 系列旗舰手机发布；2026 年 9 月车企销量交付汇总；华为与赛力斯达成新五年合作；曝苹果 HomeHub 宣传物料已送往苹果门店...",
+        "url": "https://www.ithome.com/1/009/201.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-01T15:47:33.000Z",
-        "summary": "IT之家 10 月 1 日消息，长安汽车 9 月交付 22.89 万辆新车，其中海外交付 96200 辆同比增长 73.8%。IT之家从官方获悉，长安汽车 9 月交付新能源汽车 113200 辆，同比增长 13.9%。 细分来看，长安汽车 9 月交付新车 50300 辆，长安启源 9 月交付 46507 辆，长安启源累计销量突破 100 万辆。 另外，深蓝汽车 9 月销量达 30185 辆。阿维塔 9 月交付 8183 辆。长安凯程 9 月交付 19000 辆，海外交付同比…",
+        "publishedAt": "2026-10-01T23:52:26.000Z",
+        "summary": "“IT早报”时间，大家好，现在是 2026 年 10 月 2 日星期五，今天的重要科技资讯有： 1. 华为 Mate 90 手机发布：麒麟 9030 旗舰 τ 芯片，5999 元起 在 10 月 1 日举行的华为 Mate 90 系列及全场景新品发布会上，华为 Mate 90 手机正式发布。>> 查看详情 2. 2026 年 9 月汽车销量 / 交付榜出炉：比亚迪 46.36 万辆稳坐头把交椅，小米澎程上市首月交付破万 比亚迪以超 46 万辆稳居榜首，上汽、奇瑞、吉利紧随其…",
         "badge": "IT之家"
       },
       {
@@ -94,18 +94,18 @@
         "source": "百度热搜",
         "summary": "77年前的10月1日，开国少将方槐和战友驾驶17架飞机参加开国大典受阅。方槐女儿方蕾回忆，其中9架战斗机因速度快，通过天安门上空后绕城折返，第二次飞过天安门。如今，山河锦绣，祖国繁荣富强！我们的飞机再也不用飞第二遍了！",
         "badge": "热搜",
-        "signal": "7,808,259 热度"
+        "signal": "7,809,071 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-86950",
+        "id": "cisa-kev-cve-2026-76504",
         "category": "security",
-        "title": "Apple Multiple Products：Apple Multiple Products Out-of-Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86950",
+        "title": "Cisco Catalyst SD-WAN Manager：Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-29T00:00:00.000Z",
-        "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
-        "badge": "CVE-2026-86950",
-        "signal": "已遭利用 · 整改期限 2026-10-02"
+        "publishedAt": "2026-09-30T00:00:00.000Z",
+        "summary": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP req…",
+        "badge": "CVE-2026-76504",
+        "signal": "已遭利用 · 整改期限 2026-10-03"
       },
       {
         "id": "ai-hugging-face-f928531f96372519",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49923466",
+        "id": "hn-49923692",
         "category": "dev",
-        "title": "RIP, vector database",
-        "url": "https://turbopuffer.com/blog/rip-vector-database",
+        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+        "url": "https://blog.cloudflare.com/clef-decision-models/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T16:01:56.000Z",
+        "publishedAt": "2026-10-01T16:18:57.000Z",
         "badge": "HN",
-        "signal": "183 分 · 51 评论"
+        "signal": "394 分 · 154 评论"
       },
       {
         "id": "cn-item-c7d57c2aa2602aa3",
@@ -166,28 +166,28 @@
         "publishedAt": "2026-10-01T15:09:55.000Z",
         "summary": "总感觉有人干了....",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "12 回复"
       },
       {
-        "id": "cn-it-e9633460fba055e5",
+        "id": "cn-it-0dd60abb4daa260e",
         "category": "cn",
-        "title": "英伟达为 GTX 700-10 系显卡发布 582.78 安全更新，修复 114 个漏洞",
-        "url": "https://www.ithome.com/1/009/169.htm",
+        "title": "Crew-13 任务完成对接，刷新美国载人飞船赴国际空间站最快纪录",
+        "url": "https://www.ithome.com/1/009/199.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-01T15:35:42.000Z",
-        "summary": "IT之家 10 月 1 日消息，英伟达于当地时间 30 日推出 GeForce 安全更新驱动程序 582.78，适用于 Maxwell、Pascal 和 Volta 架构显卡，涵盖 GTX 700 系、GTX 900 系、GTX 10 系显卡及 Tesla V100、Titan V 等专业卡。 据IT之家了解，英伟达已经不会为上述显卡发布常规 Game Ready 驱动更新，但仍然会不时推出安全更新。该更新支持 Windows 10 和 Windows 11 操作系统， 大…",
+        "publishedAt": "2026-10-01T23:42:27.000Z",
+        "summary": "IT之家 10 月 2 日消息，美国宇航局（NASA）发布公告，宣布 Crew-13 载人飞行任务已经于美国东部时间 10 月 1 日 19:05（北京时间 10 月 2 日早上 7:05）和国际空间站对接， 从发射到对接耗时约 7 小时 50 分钟，刷新美国太空旅行纪录。 IT之家援引官方公告内容，附上本次 Crew-13 载人飞行任务相关时间节点如下： 美国东部时间 11:10（北京时间：10 月 1 日 23:10）：猎鹰 9 号火箭从 SLC-40 点火升空。 美国…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-88772",
+        "id": "cisa-kev-cve-2026-86950",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
+        "title": "Apple Multiple Products：Apple Multiple Products Out-of-Bounds Write Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86950",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-27T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
-        "badge": "CVE-2026-88772",
-        "signal": "已遭利用 · 整改期限 2026-09-30"
+        "publishedAt": "2026-09-29T00:00:00.000Z",
+        "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+        "badge": "CVE-2026-86950",
+        "signal": "已遭利用 · 整改期限 2026-10-02"
       },
       {
         "id": "ai-google-deepmind-c696e8b1f3422473",
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49920160",
+        "id": "hn-49926536",
         "category": "dev",
-        "title": "StreetComplete on iOS is now in public beta",
-        "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
+        "title": "SvelteKit 3",
+        "url": "https://svelte.dev/blog/sveltekit-3-is-here",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T10:59:57.000Z",
+        "publishedAt": "2026-10-01T20:14:23.000Z",
         "badge": "HN",
-        "signal": "441 分 · 101 评论"
+        "signal": "84 分 · 23 评论"
       },
       {
-        "id": "cn-baidu-ecbd42e6a6615442",
+        "id": "cn-baidu-30828986f07ef65c",
         "category": "cn",
-        "title": "一时恍惚分不清是在中国还是在澳洲",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E6%97%B6%E6%81%8D%E6%83%9A%E5%88%86%E4%B8%8D%E6%B8%85%E6%98%AF%E5%9C%A8%E4%B8%AD%E5%9B%BD%E8%BF%98%E6%98%AF%E5%9C%A8%E6%BE%B3%E6%B4%B2&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "国庆出行有车辆仅剩1%电量后“趴窝”",
+        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E5%BA%86%E5%87%BA%E8%A1%8C%E6%9C%89%E8%BD%A6%E8%BE%86%E4%BB%85%E5%89%A91%25%E7%94%B5%E9%87%8F%E5%90%8E%E2%80%9C%E8%B6%B4%E7%AA%9D%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，网友发布9月28日拍摄的澳大利亚景点视频，画面中游客大多来自中国。10月1日该网友表示，热门景点中国游客比例达九成，本地人看傻眼，恍惚间分不清身处中国还是澳洲。从业者称，此现象主要因中秋国庆叠加形成超长假期，且澳洲成为出境游的“最优平替”。",
+        "summary": "10月1日，多名车主反映国庆高速服务区迎来新能源车充电高峰。有网友称，一辆新能源车在达州北服务区时只剩下了1%的电，直接在离充电桩不远处的路边“趴窝”。",
         "badge": "热搜",
-        "signal": "7,713,384 热度"
+        "signal": "7,713,720 热度"
       },
       {
         "id": "github-advisory-ghsa-jxxv-8r27-vm4p",
@@ -248,7 +248,7 @@
         "publishedAt": "2026-10-01T15:01:46.000Z",
         "summary": "说句公道话，上一代个人 Agent 大家忘啦？ 只要不追求主动让 AI 把自己开盒了，有限度地让 AI 干活，上一代其实完全不比各种 Bot/Muse/Dots/Cue 差啊。 智谱 AgentMore ，完整持久云端环境，带记忆系统，有移动版有网页版，每天免费额度能干不少事。 智谱 AutoClaw ，用户体验有点糟糕，但它甚至支持 BYOK ，网页读取工具还能翻墙，应用本身却不用翻墙，这么特殊的存在你找不到第二个。 字节扣子，同样 BYOK ，虽然不订阅几乎没法用，但如…",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "8 回复"
       },
       {
         "id": "cn-item-20f83167786ea9de",
@@ -261,44 +261,44 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-88771",
+        "id": "cisa-kev-cve-2026-88772",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Input Validation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88771",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
         "source": "CISA KEV",
         "publishedAt": "2026-09-27T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
-        "badge": "CVE-2026-88771",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+        "badge": "CVE-2026-88772",
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-openai-90249c2a3882c6d3",
+        "id": "ai-openai-2167384f51e2a446",
         "category": "ai",
-        "title": "Disrupting a coordinated model-distillation campaign",
-        "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+        "title": "The Den frees up 10-15 hours a week to grow with ChatGPT Work",
+        "url": "https://openai.com/index/the-den-family-social",
         "source": "OpenAI",
-        "publishedAt": "2026-09-30T10:30:00.000Z",
-        "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
+        "publishedAt": "2026-10-01T00:00:00.000Z",
+        "summary": "As it opens a new location, the social club prepares grant applications in 2 hours instead of 3 days and liquor-license materials in 3 hours instead of 4 days.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49925036",
+        "id": "hn-49926773",
         "category": "dev",
-        "title": "Bez: Generating a browser engine from specs and tests",
-        "url": "https://tangled.org/burrito.space/bez",
+        "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia",
+        "url": "https://github.com/Vibra-Ingenn/Janus",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T18:08:03.000Z",
+        "publishedAt": "2026-10-01T20:36:47.000Z",
         "badge": "HN",
-        "signal": "27 分 · 1 评论"
+        "signal": "44 分 · 4 评论"
       },
       {
-        "id": "cn-it-92f7366e74a7d169",
+        "id": "cn-it-5db5b342a0a083d9",
         "category": "cn",
-        "title": "2026 年 9 月汽车销量 / 交付榜出炉：比亚迪 46.36 万辆稳坐头把交椅，小米澎程上市首月交付破万",
-        "url": "https://www.ithome.com/1/009/168.htm",
+        "title": "谷歌首次送先进芯片上天，估算 SpaceX 星舰发射 1800 次才能让太空数据中心“飞起来”",
+        "url": "https://www.ithome.com/1/009/198.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-01T15:16:31.000Z",
-        "summary": "IT之家 10 月 1 日消息，2026 年 9 月汽车销量 / 交付数据现已陆续公布。比亚迪拿出交付 463,561 辆的答卷， 继续稳坐头把交椅 。上汽集团凭销售 40.6 万辆的成绩持续位居亚军。奇瑞集团拿出 29.23 万辆的成果，持续位居季军。 在 9 月， 进入“20 万辆俱乐部”的车企有比亚迪、上汽、奇瑞、吉利 。榜单中同比增长幅度最大的是零跑汽车，当月交出 10.57 万辆答卷，增幅达 58.51%。 同时，小米汽车 9 月交付量超过 40,000 台，其中…",
+        "publishedAt": "2026-10-01T23:41:50.000Z",
+        "summary": "IT之家 10 月 2 日消息，据外媒 TechCrunch 报道，当地时间 1 日，谷歌的在轨计算原型卫星搭乘 SpaceX 火箭，从美国加利福尼亚州升空，启动在地球轨道上建立大规模计算集群的“太阳捕手”项目。卫星由 Planet Labs 制造，用于验证谷歌的 Tensor 处理器能否在太空正常运行。测试需要持续供应 1kW 电力、给芯片散热，并运行一系列模型，检查有没有问题。 据IT之家了解，这是谷歌首次把先进芯片送入太空。负责项目的谷歌高管特拉维斯 · 比尔斯说：“…",
         "badge": "IT之家"
       },
       {
@@ -330,7 +330,7 @@
         "publishedAt": "2026-10-01T14:42:28.000Z",
         "summary": "近期 Google 又扫号了，如果一直申诉不成功，跟 Google 关联的账号都废了，主力邮箱还是得国内邮箱，至少在国内还有投诉的渠道，Google 说封你就封你，根本没得商量",
         "badge": "程序员",
-        "signal": "28 回复"
+        "signal": "34 回复"
       },
       {
         "id": "cn-baidu-be6d8528f2293b00",
@@ -339,18 +339,18 @@
         "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E4%B8%93%E5%B1%9E%E4%BB%AA%E5%BC%8F%E6%84%9F&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,616,527 热度"
+        "signal": "7,618,282 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-67279",
+        "id": "cisa-kev-cve-2026-88771",
         "category": "security",
-        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Input Validation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88771",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
-        "badge": "CVE-2026-67279",
-        "signal": "已遭利用 · 整改期限 2026-09-28"
+        "publishedAt": "2026-09-27T00:00:00.000Z",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+        "badge": "CVE-2026-88771",
+        "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
         "id": "ai-hugging-face-dc53fce90c6f36f5",
@@ -369,7 +369,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-01T15:02:07.000Z",
         "badge": "HN",
-        "signal": "87 分 · 92 评论"
+        "signal": "137 分 · 139 评论"
       },
       {
         "id": "cn-item-4ec150f98b93863e",
@@ -393,13 +393,13 @@
         "signal": "CRITICAL · CVSS 9.9"
       },
       {
-        "id": "ai-openai-061338e668ed6974",
+        "id": "ai-openai-90249c2a3882c6d3",
         "category": "ai",
-        "title": "Helping small businesses put AI to work",
-        "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+        "title": "Disrupting a coordinated model-distillation campaign",
+        "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
         "source": "OpenAI",
-        "publishedAt": "2026-09-30T10:00:00.000Z",
-        "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
+        "publishedAt": "2026-09-30T10:30:00.000Z",
+        "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
         "badge": "OpenAI"
       },
       {
@@ -411,27 +411,27 @@
         "publishedAt": "2026-10-01T13:14:14.000Z",
         "summary": "https://dejavu.moe/",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "12 回复"
       },
       {
-        "id": "cn-it-77dc95ced1be4ca3",
+        "id": "cn-it-00edaadbc6d75bda",
         "category": "cn",
-        "title": "Epic 喜加二：《网络奇兵 2：25 周年纪念版重制版》《深埋之星》游戏免费领取",
-        "url": "https://www.ithome.com/1/009/167.htm",
+        "title": "OpenAI 上线“虚拟试穿”功能：ChatGPT 能帮你试衣，还能找“明星同款”",
+        "url": "https://www.ithome.com/1/009/197.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-01T15:05:16.000Z",
-        "summary": "IT之家 10 月 1 日消息，Epic 本周送出的游戏是《网络奇兵 2：25 周年纪念版重制版》以及《深埋之星》，下周送出的游戏是《虎视眈眈 (Out of Sight)》，《愿景之城》。 领取链接： 《网络奇兵 2：25 周年纪念版重制版》 ， 《深埋之星》 IT之家附《网络奇兵 2：25 周年纪念版重制版》游戏简介如下： 本作设定在公元 2114 年，玩家醒来时身处满是变异体和机器人危机的 FTL 飞船“冯 · 布劳恩号”(Von Braun) 上，面对失控的叛逆人工…",
+        "publishedAt": "2026-10-01T23:18:01.000Z",
+        "summary": "IT之家 10 月 2 日消息，当地时间 1 日，OpenAI 再次扩展 ChatGPT 的购物能力。公司宣布在全球推出两项新功能，一项是让用户 虚拟试穿服装和配饰 ，另一项是 新增收藏功能 ，方便用户先把看中的商品存起来，之后再查看。 据IT之家了解，新功能基于不久前推出的 ChatGPT Images 2.5 模型。按照 OpenAI 的说法，这一模型生成的画面 光线更自然、纹理更丰富，执行编辑指令也更稳定 ，同时还能缩短生成图片所需时间。 ChatGPT 用户可以上传…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-65660",
+        "id": "cisa-kev-cve-2026-67279",
         "category": "security",
-        "title": "Microsoft SharePoint：Microsoft SharePoint Code Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660",
+        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
         "source": "CISA KEV",
         "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
-        "badge": "CVE-2026-65660",
+        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
+        "badge": "CVE-2026-67279",
         "signal": "已遭利用 · 整改期限 2026-09-28"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49922515",
+        "id": "hn-49927212",
         "category": "dev",
-        "title": "RacketCon Is Saturday",
-        "url": "https://con.racket-lang.org/",
+        "title": "CSS Bed: Classless CSS themes to use as starting points in web development",
+        "url": "https://www.cssbed.com",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T14:58:13.000Z",
+        "publishedAt": "2026-10-01T21:21:32.000Z",
         "badge": "HN",
-        "signal": "98 分 · 25 评论"
+        "signal": "36 分 · 8 评论"
       },
       {
-        "id": "cn-baidu-72c99aa2e8ad94e1",
+        "id": "cn-baidu-930df551b68a0a3b",
         "category": "cn",
-        "title": "昔日明星电动车彻底卖不动了",
-        "url": "https://www.baidu.com/s?wd=%E6%98%94%E6%97%A5%E6%98%8E%E6%98%9F%E7%94%B5%E5%8A%A8%E8%BD%A6%E5%BD%BB%E5%BA%95%E5%8D%96%E4%B8%8D%E5%8A%A8%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "华为与赛力斯达成新五年合作",
+        "url": "https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E4%B8%8E%E8%B5%9B%E5%8A%9B%E6%96%AF%E8%BE%BE%E6%88%90%E6%96%B0%E4%BA%94%E5%B9%B4%E5%90%88%E4%BD%9C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月1日消息，通用雪佛兰Bolt确认将于2027年第一季度正式停产。作为通用汽车首款大规模量产纯电车型，雪佛兰Bolt曾是美国平价电动车市场的标杆产品，2023年创下超6.2万台的年度销量巅峰，一度是最热门的非特斯拉电动车。",
+        "summary": "9月30日，华为与赛力斯在深圳举行问界业务升级战略合作签约仪式，达成新五年合作。目前问界用户已突破120万，双方将联合组建问界业务专属团队，进一步升级问界业务，持续推动问界新豪华品牌向上。",
         "badge": "热搜",
-        "signal": "7,524,056 热度"
+        "signal": "7,524,313 热度"
       },
       {
         "id": "github-advisory-ghsa-6rh5-qq4q-97xh",
@@ -493,7 +493,7 @@
         "publishedAt": "2026-10-01T09:46:09.000Z",
         "summary": "RT, 可能具体的计数还没有做好... 我用的是 5x pro. 今天把任务交给 dot ，在云端开了 6 个 Agent ，跑了约 4 小时 15 分钟，生成了 1,358 张图片，连提示词和来源记录一起保存，打包成 187 个 ZIP, 13G. 开跑前，我的用量面板显示剩余 9%；跑完后，还是 9%. 昨天本地 3 个 session, 大约也是用了 4 个小时,生成了 1300 多张, 用 Sol 都消耗了 20% Dots 短期内还是可以冲的, 我估计默认的还是 …",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "4 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 150257,
+        "stars": 150470,
         "starsToday": 1179
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 273713,
+        "stars": 273873,
         "starsToday": 888
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 13898,
+        "stars": 13994,
         "starsToday": 2503
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/firebase/firebase-ios-sdk",
         "description": "Firebase SDK for Apple App Development",
         "language": "C++",
-        "stars": 6841,
+        "stars": 6856,
         "starsToday": 112
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
         "language": "TypeScript",
-        "stars": 3578,
+        "stars": 3703,
         "starsToday": 640
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 9294,
+        "stars": 9318,
         "starsToday": 157
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 293872,
+        "stars": 293955,
         "starsToday": 476
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 24730,
+        "stars": 24772,
         "starsToday": 357
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 55235,
+        "stars": 55328,
         "starsToday": 624
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/earendil-works/pi",
         "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
         "language": "TypeScript",
-        "stars": 111077,
+        "stars": 111195,
         "starsToday": 294
       }
     ],
-    "updatedAt": "2026-10-01T19:32:02.928Z"
+    "updatedAt": "2026-10-01T23:53:13.810Z"
   }
 }
