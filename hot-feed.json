@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-30T23:51:13.288Z",
+  "generatedAt": "2026-10-01T05:56:01.251Z",
   "intelligence": {
-    "updatedAt": "2026-09-30T23:51:13.288Z",
+    "updatedAt": "2026-10-01T05:56:01.251Z",
     "items": [
       {
-        "id": "cn-item-eb478ebbb4e06c92",
+        "id": "cn-item-e7340a2489102a36",
         "category": "cn",
-        "title": "第四次全国文物普查省域整体验收全面完成",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706547.shtml",
+        "title": "中国驻美大使谢锋：中美合作是双行道，永远在进行时",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-01/10706675.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-30T13:33:47.000Z",
-        "summary": "中新网9月30日电 据国家文物局微信公众号消息，9月29日，第四次全国文物普查领导小组办公室组织完成西藏自治区和青海省第四次全国文物普查省域整体验收工作。至此，全国31个省、自治区、直辖市及新疆生产建设兵团的普查省域整体验收全面完成。",
+        "publishedAt": "2026-10-01T05:30:57.000Z",
+        "summary": "中新社华盛顿10月1日电 (记者 陈孟统)中国驻美大使谢锋9月30日在华盛顿表示，中美双方要加快把新定位的愿景转化为行动，朝着合作为主、竞争有度、分歧可控、和平可期的方向努力，跨越“修昔底德陷阱”，走出中美正确相处之道。",
         "badge": "中新网要闻"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-09-30T20:04:37.000Z",
         "badge": "HN",
-        "signal": "854 分 · 568 评论"
+        "signal": "1217 分 · 786 评论"
       },
       {
-        "id": "cn-it-cb890cc991b1b6f4",
+        "id": "cn-it-a7199bfb7103de96",
         "category": "cn",
-        "title": "IT早报 1001：豆包支持出行服务；被罗永浩炮轰后东方甄选溜溜凳退款 2 倍不退货；凯越机车辟谣网传经销商跑路；金融新规实施贷款中介集体“消失”...",
-        "url": "https://www.ithome.com/1/008/961.htm",
+        "title": "“大空头”伯里：为了人类的利益，市场应该狠跌一次，别让 OpenAI 和 Anthropic 上市",
+        "url": "https://www.ithome.com/1/009/055.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T23:48:24.000Z",
-        "summary": "“IT早报”时间，大家好，现在是 2026 年 10 月 1 日星期四，今天的重要科技资讯有： 1. 豆包宣布支持出行服务：覆盖订机票、火车票以及打车导航 豆包新增机票、火车票预订及打车导航等服务，动动嘴就能搞定全程出行。豆包出行服务已合作航班管家、高铁管家、曹操出行、百度地图等头部服务商。>> 查看详情 2. 被罗永浩炮轰后东方甄选回应溜溜凳事件：退双倍货款不退货 针对近期引发关注的“溜溜凳”产品质量争议，东方甄选宣布为购买该产品的用户办理全额退款不退货，并给予货价两倍的…",
+        "publishedAt": "2026-10-01T05:38:59.000Z",
+        "summary": "IT之家 10 月 1 日消息，据《商业内幕》今天（1 日）凌晨报道，知名做空投资者、《大空头》原型迈克尔 · 伯里认为，如果市场来一场足以阻止 OpenAI 和 Anthropic 上市的暴跌，对人类反而是好事。“ 为了人类的利益，市场应该狠狠跌一场，别让 OpenAI 和 Anthropic 上市 。” 伯里进一步解释称，两家公司会 吸走数万亿美元资金 ，最终再把这些钱毁掉，而这还只是它们可能造成的最小损害。 一名用户调侃称：“把市场砸崩，这样天网就没法上市了。”伯里回…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-chx6-46f5-w4vp",
+        "id": "github-advisory-ghsa-94p9-xgh2-xp45",
         "category": "security",
-        "title": "tornado: CurlAsyncHTTPClient enforces no response-size limit — decompression bomb drives unbounded memory accumulation to OOM",
-        "url": "https://github.com/advisories/GHSA-chx6-46f5-w4vp",
+        "title": "virtualenv: Downloaded seed wheels (pip/setuptools) are not integrity-checked before use",
+        "url": "https://github.com/advisories/GHSA-94p9-xgh2-xp45",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T23:49:13.000Z",
-        "summary": "An unbounded memory accumulation (decompression bomb) in `tornado.curl_httpclient.CurlAsyncHTTPClient` — the client-side sibling gap of CVE-2026-49855 — verified end-to-end on the 2026-08-15 master snapshot (`6.6.dev1`) and present unchang…",
-        "badge": "GHSA-CHX6-46F5-W4VP",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-30T23:54:13.000Z",
+        "summary": "`download_wheel()` runs `pip download` and hands the result straight to the seeder, with nothing checking the bytes it gets back. The embedded pip and setuptools wheels carry a `BUNDLE_SHA256` that virtualenv checks on every load, but a wh…",
+        "badge": "CVE-2026-102930",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-ce56aa83d0064ef1",
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245930",
+        "id": "v2ex-1245995",
         "category": "dev",
-        "title": "AI 让压缩包包含自己？一个“完整”博客压缩包的诞生",
-        "url": "https://www.v2ex.com/t/1245930",
+        "title": "提醒一下 codex 有两个重置 10/4、10/5",
+        "url": "https://www.v2ex.com/t/1245995",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T16:19:00.000Z",
-        "summary": "你有没有想过，一个压缩包可以包含它自己？去年我尝试用 ZIP Quine 实现，却被 DEFLATE 的 32KiB 回溯窗口卡死。直到我把论文和生成器扔给 AI……它只花了两个小时，就基于 LZMA2 和 7z 做出了真正的递归压缩包！现在我的博客压缩包不仅包含全站内容，还包含这个压缩包本身——下载、解压、再解压，无限套娃（理论上）。 文章亮点： 为什么 ZIP Quine 受限于 32KiB ？ LZMA2 如何破局？ AI 写出的 CRC32 求解代码：高斯消元法偷懒…",
+        "publishedAt": "2026-10-01T05:24:14.000Z",
+        "summary": "今天用一个 后天用一个",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-d1169e125d032f82",
+        "id": "cn-baidu-d3c15831cf44ceaa",
         "category": "cn",
-        "title": "迎着清晨第一缕阳光五星红旗冉冉升起",
-        "url": "https://www.baidu.com/s?wd=%E8%BF%8E%E7%9D%80%E6%B8%85%E6%99%A8%E7%AC%AC%E4%B8%80%E7%BC%95%E9%98%B3%E5%85%89%E4%BA%94%E6%98%9F%E7%BA%A2%E6%97%97%E5%86%89%E5%86%89%E5%8D%87%E8%B5%B7&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "华为Mate90系列价格",
+        "url": "https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BAMate90%E7%B3%BB%E5%88%97%E4%BB%B7%E6%A0%BC&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月1日，天安门广场举行国庆升旗仪式，迎着清晨第一缕阳光，五星红旗冉冉升起。",
+        "summary": "10月1日，华为Mate90系列手机正式发布。售价方面，华为Mate90起售价为5999元，Mate90 Pro为6999元，Mate90 Pro Max为9499元，Pro Max典藏版与RS非凡大师版分别售10999元和12999元。",
         "badge": "热搜",
-        "signal": "7,809,203 热度"
+        "signal": "7,808,612 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86950",
@@ -119,33 +119,33 @@
       {
         "id": "hn-49915082",
         "category": "dev",
-        "title": "The top secret URSALA, RAQUEL, and FARRAH satellites",
+        "title": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
         "url": "https://www.thespacereview.com/article/4951/1",
         "source": "Hacker News",
         "publishedAt": "2026-09-30T22:03:04.000Z",
         "badge": "HN",
-        "signal": "90 分 · 17 评论"
+        "signal": "186 分 · 81 评论"
       },
       {
-        "id": "cn-item-5b7f096ae68376cd",
+        "id": "cn-item-d66da04a69f1ada6",
         "category": "cn",
-        "title": "维维一句“已召回”，能解释霉菌超标27倍吗？",
-        "url": "https://www.chinanews.com.cn/cj/2026/09-30/10706514.shtml",
+        "title": "金秋十月星月相伴 猎户座流星雨浪漫来袭",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-01/10706646.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-30T12:58:30.000Z",
-        "summary": "中新网北京9月30日电(记者 谢艺观)近日，上海市市场监督管理局公布的食品安全抽检信息显示，维维股份全资子公司维维华山核桃产业有限公司生产的一批次“维维无添加蔗糖黑芝麻糊”霉菌抽检不合格。",
+        "publishedAt": "2026-10-01T05:07:48.000Z",
+        "summary": "中新网南京10月1日电 (记者 徐珊珊)据中国科学院紫金山天文台9月30日消息，金秋十月，天宇将迎来多场精彩天象。猎户座流星雨将在下旬登场，火星、木星等行星也接连与月亮相伴，为秋夜星空增添浪漫气息。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-c2m8-h5v5-343r",
+        "id": "github-advisory-ghsa-chx6-46f5-w4vp",
         "category": "security",
-        "title": "Tornado: StaticFileHandler follows symlinks outside static root (path traversal)",
-        "url": "https://github.com/advisories/GHSA-c2m8-h5v5-343r",
+        "title": "tornado: CurlAsyncHTTPClient enforces no response-size limit — decompression bomb drives unbounded memory accumulation to OOM",
+        "url": "https://github.com/advisories/GHSA-chx6-46f5-w4vp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T23:48:55.000Z",
-        "summary": "### Summary StaticFileHandler allows an unauthenticated attacker to read arbitrary files from the server's filesystem by requesting a path that resolves to a symbolic link placed inside the static root directory. Any application that serve…",
-        "badge": "GHSA-C2M8-H5V5-343R",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-09-30T23:49:13.000Z",
+        "summary": "An unbounded memory accumulation (decompression bomb) in `tornado.curl_httpclient.CurlAsyncHTTPClient` — the client-side sibling gap of CVE-2026-49855 — verified end-to-end on the 2026-08-15 master snapshot (`6.6.dev1`) and present unchang…",
+        "badge": "GHSA-CHX6-46F5-W4VP",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-061338e668ed6974",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245911",
+        "id": "v2ex-1245989",
         "category": "dev",
-        "title": "1 号员工被封屠， 2 号员工 Codex 全靠义父 Tibo 续命",
-        "url": "https://www.v2ex.com/t/1245911",
+        "title": "为什么 AI 写代码的功能老是在变？",
+        "url": "https://www.v2ex.com/t/1245989",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T13:31:22.000Z",
-        "summary": "兄弟们，刚聊完 Claude 的满月，今天脸就被打肿了…… 两个最能打员工： 1 号：Claude Code ，我的首席架构兼主力牛马。 2 号：Codex 。 两天后，1 号员工突然弹窗要求重新登录。重新登录，屏幕上冰冷地蹦出一行红字： Your account has been suspended 第一反应不是悲伤，赶紧打开 Wise 看退没退款。 翻了一圈，好家伙，一毛没退。找客服申诉？对不起，压根没有活人客服，接待我的全程 AI 。 几轮对话，结论：“we are …",
+        "publishedAt": "2026-10-01T04:43:49.000Z",
+        "summary": "我用 vs code Copilot 的 ChatGPT 模型，好像每个月初 AI 都有变化，比如昨天我让 AI 写完代码后会有一个 accept 按钮，但是今天就没了，虽然不影响写代码，但是这种差异让人感觉很奇怪，我订阅了$40/月，你们会遇见这种奇怪问题吗？",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-c69fd0b58ded6e8b",
+        "id": "cn-it-47c40f56a347767e",
         "category": "cn",
-        "title": "1100 亿美元大并购：派拉蒙收购华纳兄弟预计 10 月 6 日完成交易",
-        "url": "https://www.ithome.com/1/008/960.htm",
+        "title": "Omdia 报告 2026Q2 印度平板出货量：三星同比增 2.6%、苹果增 34.5%，联想增 89.9%",
+        "url": "https://www.ithome.com/1/009/054.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T23:46:41.000Z",
-        "summary": "IT之家 10 月 1 日消息，北京时间今天（1 日）凌晨，据彭博社报道，美国加州联邦法官批准和解协议，结束 12 州总检察长为反对合并提起的诉讼，为交易完成扫清了道路。 派拉蒙计划于 10 月 6 日完成收购华纳兄弟的交易 。根据和解条件，派拉蒙承诺每年至少有 30 部电影登陆院线，并为旗下 CBS 和 CNN 两家新闻机构设立编辑独立委员会。 派拉蒙天舞公司董事长兼 CEO 大卫 · 埃里森宣布，1,100 亿美元 （IT之家注：现汇率约合 7,389.64 亿元人民币…",
+        "publishedAt": "2026-10-01T05:29:16.000Z",
+        "summary": "IT之家 10 月 1 日消息，市场调查机构 Omdia 今天（10 月 1 日）发布博文，由于提前购买和零部件成本上涨等多重因素影响， 预估 2026 年下半年印度 PC 市场同比下滑 22%。 报告指出 2026 年第二季度印度 PC 市场出货量达 410 万台，同比增长 14%。其中，笔记本电脑出货量为 300 万台，同比增长 13%。台式电脑出货量为 95.4 万台，同比增长 15%。 消费市场中，线上和线下促销支撑了设备购买。苹果笔记本电脑出货量接近翻倍。新款 M…",
         "badge": "IT之家"
       },
       {
@@ -200,35 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49912955",
+        "id": "hn-49890732",
         "category": "dev",
-        "title": "Surprisingly complex waves reveal the brain's inner workings",
-        "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
+        "title": "Why the Bronze Age Collapsed",
+        "url": "https://www.worksinprogress.news/p/why-really-caused-the-bronze-age",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T19:04:50.000Z",
+        "publishedAt": "2026-09-29T10:10:18.000Z",
         "badge": "HN",
-        "signal": "104 分 · 38 评论"
+        "signal": "157 分 · 82 评论"
       },
       {
-        "id": "cn-baidu-d411fbead0743141",
+        "id": "cn-baidu-cbc6bcebfe825e1c",
         "category": "cn",
-        "title": "为看升旗 天安门前长队一眼望不到头",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%BA%E7%9C%8B%E5%8D%87%E6%97%97+%E5%A4%A9%E5%AE%89%E9%97%A8%E5%89%8D%E9%95%BF%E9%98%9F%E4%B8%80%E7%9C%BC%E6%9C%9B%E4%B8%8D%E5%88%B0%E5%A4%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "国庆假期中国每天搬运一个美国",
+        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E5%BA%86%E5%81%87%E6%9C%9F%E4%B8%AD%E5%9B%BD%E6%AF%8F%E5%A4%A9%E6%90%AC%E8%BF%90%E4%B8%80%E4%B8%AA%E7%BE%8E%E5%9B%BD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月1日凌晨，不少群众为观看国庆当日天安门升旗，连夜前往排队。天安门前队伍绵延，一眼望不到头。人群中有人百米冲刺，只为站得离国旗更近一些，现场几乎人手一面小红旗。",
+        "summary": "按照交通运输部的预测，国庆7天假期全社会跨区域人员流动量将达21.3亿人次。平均到每天，有3亿人次出行，是平时的1.7倍左右。形象来说，每天大约“搬运”一个美国的人口。",
         "badge": "热搜",
-        "signal": "7,712,313 热度"
+        "signal": "7,713,796 热度"
       },
       {
-        "id": "github-advisory-ghsa-667r-xxjv-c9mm",
+        "id": "github-advisory-ghsa-c2m8-h5v5-343r",
         "category": "security",
-        "title": "fastify vulnerable to request body replacement via an async validation result collision",
-        "url": "https://github.com/advisories/GHSA-667r-xxjv-c9mm",
+        "title": "Tornado: StaticFileHandler follows symlinks outside static root (path traversal)",
+        "url": "https://github.com/advisories/GHSA-c2m8-h5v5-343r",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T23:45:45.000Z",
-        "summary": "### Impact Fastify runs a route's validator and, for a result shaped like `{ value, error }`, unwraps it: an `error` becomes a validation failure and `value` replaces the request part. This convention is intended for synchronous custom com…",
-        "badge": "CVE-2026-84504",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-09-30T23:48:55.000Z",
+        "summary": "### Summary StaticFileHandler allows an unauthenticated attacker to read arbitrary files from the server's filesystem by requesting a path that resolves to a symbolic link placed inside the static root directory. Any application that serve…",
+        "badge": "GHSA-C2M8-H5V5-343R",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-dc53fce90c6f36f5",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245908",
+        "id": "v2ex-1245979",
         "category": "dev",
-        "title": "尝试用 DS V4.1 Flash 做 C#逆向，出活很快，承认错误也很快",
-        "url": "https://www.v2ex.com/t/1245908",
+        "title": "看到一个网很有意思，输入一个网址就能把它变成一个网站拆迁游戏，直接让 opus 5.5 直接 copy 一个，效果还不错",
+        "url": "https://www.v2ex.com/t/1245979",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T13:16:57.000Z",
-        "summary": "出于降本增效目的调研一下 DS V4.1 Flash 的逆向 C#的能力 从一个简单的 DLL 开始，无混淆，DEBUG 构建，让他根据 DLL 重建项目中一个重要逻辑 然后我对着源码分析它的逆向结果，看到了这处错误 // 源代码 if (_firstDamageTime 以下是这一段聊天记录： 我 why _lastDamageTime = now in the if block ? Deepseek The original keeps _lastDamageTime …",
+        "publishedAt": "2026-10-01T03:03:37.000Z",
+        "summary": "体验网址： destroy any website",
         "badge": "程序员",
         "signal": "4 回复"
       },
       {
-        "id": "cn-item-63e66781ac8cedd4",
+        "id": "cn-item-616b8cfdc2fc436e",
         "category": "cn",
-        "title": "国务院办公厅印发《关于发展体育赛事激发消费活力的意见》",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706416.shtml",
+        "title": "重庆贵州等地局地有暴雨 江南华南有分散雷阵雨",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-01/10706591.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-30T10:30:15.000Z",
-        "summary": "中新网9月30日电 据中国政府网消息，国务院办公厅日前印发《关于发展体育赛事激发消费活力的意见》(以下简称《意见》)。",
+        "publishedAt": "2026-10-01T00:51:49.000Z",
+        "summary": "中新网10月1日电 据中央气象台网站消息，昨日，重庆、贵州、湖北、湖南、浙江等地出现较强降雨，内蒙古、华北、东北等地出现大风降温天气。预计未来三天，青藏高原东部至南方大部地区多阴雨天气，贵州、重庆、湖南等局地有强降雨，关注对交通、旅游安全的不利影响；今日较强冷空气继续影响东部地区，内蒙古、华北、东北及东海等海域风力大，黄淮、江汉、江南等地降温明显；明日起，新一股冷空气影响，中东部地区有大风降温天气；关注大风降温对交通、城市运行、农牧业设施等影响。",
         "badge": "中新网要闻"
       },
       {
@@ -282,35 +282,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49913192",
+        "id": "hn-49912955",
         "category": "dev",
-        "title": "EDG C++ front-end goes public",
-        "url": "https://edgcpp.org/#transition",
+        "title": "Surprisingly complex waves reveal the brain's inner workings",
+        "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T19:26:37.000Z",
+        "publishedAt": "2026-09-30T19:04:50.000Z",
         "badge": "HN",
-        "signal": "126 分 · 46 评论"
+        "signal": "159 分 · 51 评论"
       },
       {
-        "id": "cn-it-5809dd848046c063",
+        "id": "cn-it-af042edc7836f4ae",
         "category": "cn",
-        "title": "仅用 22 天：Meta Muse 超越 ChatGPT，成美国下载量破 500 万次最快 AI 应用",
-        "url": "https://www.ithome.com/1/008/959.htm",
+        "title": "英飞凌推出 USB-C 20Gbps PCIe 扩展卡参考设计，助力该接口工业应用",
+        "url": "https://www.ithome.com/1/009/053.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T23:45:52.000Z",
-        "summary": "IT之家 10 月 1 日消息，根据市场调查机构 Sensor Tower 公布数据， Meta 的 AI 助手 Muse 上线约三周，下载量突破 500 万次 ，成为美国 App Store 免费榜榜首，并连续 12 天保持榜首位置。 Sensor Tower 高级洞察分析师 Kara Lee 预测 Muse 下载量在 9 月 30 日（耗时 22 天）突破 500 万次，达到这一规模所用时间明显短于 ChatGPT（56 天）、Grok（103 天）与 Claude（4…",
+        "publishedAt": "2026-10-01T05:22:07.000Z",
+        "summary": "IT之家 10 月 1 日消息，Infineon（英飞凌）当地时间昨日宣布推出 USB 3.2 Gen 2×2 (20Gbps) Type-C 接口扩展 PCIe AIC 参考设计，旨在加速这一接口在工业领域的应用。 这张附加卡上行侧为 PCIe Gen4 ×4；配备祥硕 USB4 主机控制器 ASM4242 和英飞凌 USB PD 控制器 EZ-PD CCG7；下行侧为 2 个支持 36W PD 输出的 USB-C， 可通过 5m 无源数据线传输 20Gbps 信号 。 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-p68q-wchp-6fh7",
+        "id": "github-advisory-ghsa-667r-xxjv-c9mm",
         "category": "security",
-        "title": "fastify vulnerable to authentication bypass via malformed URLs reaching encapsulated not-found handlers",
-        "url": "https://github.com/advisories/GHSA-p68q-wchp-6fh7",
+        "title": "fastify vulnerable to request body replacement via an async validation result collision",
+        "url": "https://github.com/advisories/GHSA-667r-xxjv-c9mm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T23:45:34.000Z",
-        "summary": "### Impact Fastify routes a malformed URL under one plugin prefix to the custom not-found handler of a different sibling plugin, invoking the handler registered last and skipping the `preHandler` declared in its `setNotFoundHandler()`. Whe…",
-        "badge": "CVE-2026-76169",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-09-30T23:45:45.000Z",
+        "summary": "### Impact Fastify runs a route's validator and, for a result shaped like `{ value, error }`, unwraps it: an `error` becomes a validation failure and `value` replaces the request part. This convention is intended for synchronous custom com…",
+        "badge": "CVE-2026-84504",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-google-deepmind-34692efacd3b982a",
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1245903",
+        "id": "v2ex-1245970",
         "category": "dev",
-        "title": "关于买房，现在是一个好的机会么？",
-        "url": "https://www.v2ex.com/t/1245903",
+        "title": "产品形态来说，好多咱们的程序员以为 APP > WEB",
+        "url": "https://www.v2ex.com/t/1245970",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T12:36:57.000Z",
-        "summary": "21-23 年左右，当时家里也提起要买房，周围的同事也陆续在北京上车了，当时家里催着看看买套房，贷款可能也要 200 个左右买个 550w 的房子，当时的买房的情绪，房价双双都在影响着我，但是我坚持再等等，后来慢慢的忘记这个事情了，到了最近几年发现貌似当时也是一个正确的选择，当时上车的同事现在也不知道怎么样了，聊天的时候也不敢提这个事情，我不想说明自己有多幸运，我也不想嘲讽他们，毕竟钱都是辛苦挣来的。 现在虽然不用贷款可以上车了，但是感觉又开始犹豫了。 大家现在的情况是怎么…",
+        "publishedAt": "2026-10-01T02:13:03.000Z",
+        "summary": "web 在咱们这边也有回归的趋势。 规范一直在升级，性能和其他优势越来越多 而且只是在咱们这边被无法描述的原因，让 APP 横扫一切，但其实地球上不全是这样的 我感觉是喜欢 web",
         "badge": "程序员",
-        "signal": "24 回复"
+        "signal": "27 回复"
       },
       {
-        "id": "cn-baidu-1dbd65021dac1c30",
+        "id": "cn-baidu-de23c8aea86a7a61",
         "category": "cn",
-        "title": "感受各地浓厚国庆氛围",
-        "url": "https://www.baidu.com/s?wd=%E6%84%9F%E5%8F%97%E5%90%84%E5%9C%B0%E6%B5%93%E5%8E%9A%E5%9B%BD%E5%BA%86%E6%B0%9B%E5%9B%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "我爱你中国！庆祝新中国成立77周年",
+        "url": "https://www.baidu.com/s?wd=%E6%88%91%E7%88%B1%E4%BD%A0%E4%B8%AD%E5%9B%BD%EF%BC%81%E5%BA%86%E7%A5%9D%E6%96%B0%E4%B8%AD%E5%9B%BD%E6%88%90%E7%AB%8B77%E5%91%A8%E5%B9%B4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，云南丽江、甘肃兰州、新疆喀什等地装扮一新迎国庆。丽江古城开展放水冲街并展出秋菊，甘肃兰州在桥梁及主城区悬挂国旗并栽植54.5万余株花卉，新疆喀什古城街巷悬挂红旗与彩旗。多地鲜亮的“中国红”与古建筑、自然景观交相辉映，营造喜庆祥和的浓厚国庆氛围。",
+        "summary": "2026年10月1日，新中国成立77周年，祝福伟大祖国山河锦绣、国泰民安。",
         "badge": "热搜",
-        "signal": "7,618,870 热度"
+        "signal": "7,617,722 热度"
       },
       {
         "id": "cisa-kev-cve-2026-67279",
@@ -363,34 +363,34 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49915484",
+        "id": "hn-49913192",
         "category": "dev",
-        "title": "EDG C++ Compiler is open source",
-        "url": "https://github.com/edgcpp/compiler",
+        "title": "EDG C++ front-end goes public",
+        "url": "https://edgcpp.org/#transition",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T22:48:44.000Z",
+        "publishedAt": "2026-09-30T19:26:37.000Z",
         "badge": "HN",
-        "signal": "11 分 · 0 评论"
+        "signal": "193 分 · 89 评论"
       },
       {
-        "id": "cn-item-89704819164a037a",
+        "id": "cn-item-eb478ebbb4e06c92",
         "category": "cn",
-        "title": "中央网信办部署开展“清朗·整治短视频虚假人设乱象”专项行动",
-        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706334.shtml",
+        "title": "第四次全国文物普查省域整体验收全面完成",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706547.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-09-30T08:43:18.000Z",
-        "summary": "中新网9月30日电 据“网信中国”微信公众号消息，为进一步推动短视频行业健康有序发展，营造风清气正的网络空间，近日，中央网信办印发通知，在全国范围内部署开展为期2个月的“清朗·整治短视频虚假人设乱象”专项行动。",
+        "publishedAt": "2026-09-30T13:33:47.000Z",
+        "summary": "中新网9月30日电 据国家文物局微信公众号消息，9月29日，第四次全国文物普查领导小组办公室组织完成西藏自治区和青海省第四次全国文物普查省域整体验收工作。至此，全国31个省、自治区、直辖市及新疆生产建设兵团的普查省域整体验收全面完成。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-hwr6-493r-vm6h",
+        "id": "github-advisory-ghsa-p68q-wchp-6fh7",
         "category": "security",
-        "title": "fastify vulnerable to request validation bypass via skipped boolean false schemas",
-        "url": "https://github.com/advisories/GHSA-hwr6-493r-vm6h",
+        "title": "fastify vulnerable to authentication bypass via malformed URLs reaching encapsulated not-found handlers",
+        "url": "https://github.com/advisories/GHSA-p68q-wchp-6fh7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T23:44:58.000Z",
-        "summary": "### Impact Fastify decided whether to validate a request part by checking its schema for JavaScript truthiness. JSON Schema Draft 7 defines the boolean `false` as a valid schema that rejects every instance, but because `false` is falsy, a …",
-        "badge": "CVE-2026-84469",
+        "publishedAt": "2026-09-30T23:45:34.000Z",
+        "summary": "### Impact Fastify routes a malformed URL under one plugin prefix to the custom not-found handler of a different sibling plugin, invoking the handler registered last and skipping the `preHandler` declared in its `setNotFoundHandler()`. Whe…",
+        "badge": "CVE-2026-76169",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1245899",
+        "id": "v2ex-1245966",
         "category": "dev",
-        "title": "手搓了一个基于 Debian13 的 x86 路由器系统",
-        "url": "https://www.v2ex.com/t/1245899",
+        "title": "最近在玩 Muse，然后突然想买一个 Meta 智能眼镜。",
+        "url": "https://www.v2ex.com/t/1245966",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T12:19:14.000Z",
-        "summary": "用过一圈 x86 路由系统，商业的受限制，开源的生态不通，学习维护成本太高。索性基于 Debian 13 自己手搓了一个 drouter ，稳定、通用、自由，终于不再折腾了。 开源地址： https://github.com/liuzhuohua/drouter",
+        "publishedAt": "2026-10-01T02:02:53.000Z",
+        "summary": "日常不戴眼镜，想买一个不要太突兀的 Meta AI 智能眼镜。 不知道各位友友有没有戴过的，希望推荐一下。 想体验一下 Meta Display 那个带机电手环的眼镜，可惜同城没有，不知道去哪里可以体验。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-ea3e7633007d726e",
+        "id": "cn-it-9ff2ba6ae0884c96",
         "category": "cn",
-        "title": "苹果 iPad Mini 8 前瞻：首次支持 IP 防水，A20 Pro 芯片、OLED 屏、12GB 内存",
-        "url": "https://www.ithome.com/1/008/958.htm",
+        "title": "华为鸿蒙星河互联 App 升级 2.0.0 版本：液态玻璃上线、新增双机互联，Mate 90 系列首发支持",
+        "url": "https://www.ithome.com/1/009/052.htm",
         "source": "IT之家",
-        "publishedAt": "2026-09-30T23:34:36.000Z",
-        "summary": "IT之家 10 月 1 日消息，科技媒体 MacRumors 昨日（9 月 30 日）发布博文，进一步补充关于苹果 iPad mini 8 的更多细节信息，除了 A20 Pro 芯片外，还将首次引入 IP 等级防水等。 发布日期方面，该媒体认为苹果可能会在 2026 年 10 月发布该产品。售价方面，现款 iPad Mini 在美国起售价为 599 美元 （IT之家注：现汇率约合 4,024 元人民币） ，6 月因内存与存储芯片涨价上调 100 美元 （现汇率约合 671.…",
+        "publishedAt": "2026-10-01T05:21:54.000Z",
+        "summary": "IT之家 10 月 1 日消息，在今天的华为 Mate 90 系列及全场景新品发布会结束后， 鸿蒙星河互联 App 迎来 2.0.0 版本升级 ，新增双机互联功能。 IT之家附更新内容如下： 1.新增双机互联功能（ 对端华为手机版本需升级至 HarmonyOS 7 及以上版本 ）。 2.修复其他已知问题。 需要注意的是，目前双机互联功能并未全量开放， 首发适配机型包括 Pura X View、Mate 90 系列、Mate XT 2 。华为官方表示，其他机型将在近期陆续开放…",
         "badge": "IT之家"
       },
       {
@@ -446,34 +446,34 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49906432",
+        "id": "hn-49911995",
         "category": "dev",
-        "title": "Singapore govt dating app uses Gale-Shapley stable marriage algorithm",
-        "url": "https://twitter.com/tuakdotsol/status/2105105417760391258",
+        "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+        "url": "https://github.com/magnitudedev/magnitude",
         "source": "Hacker News",
-        "publishedAt": "2026-09-30T09:27:04.000Z",
+        "publishedAt": "2026-09-30T17:37:40.000Z",
         "badge": "HN",
-        "signal": "139 分 · 58 评论"
+        "signal": "143 分 · 70 评论"
       },
       {
-        "id": "cn-baidu-ca6e68d15a4229b4",
+        "id": "cn-baidu-6513b182890ebc53",
         "category": "cn",
-        "title": "中方不再称高市早苗为“首相”",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E6%96%B9%E4%B8%8D%E5%86%8D%E7%A7%B0%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E4%B8%BA%E2%80%9C%E9%A6%96%E7%9B%B8%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "2025年全国办理结婚登记676.5万对",
+        "url": "https://www.baidu.com/s?wd=2025%E5%B9%B4%E5%85%A8%E5%9B%BD%E5%8A%9E%E7%90%86%E7%BB%93%E5%A9%9A%E7%99%BB%E8%AE%B0676.5%E4%B8%87%E5%AF%B9&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月30日，中方在外交部例行记者会上不再称高市早苗为“首相”，而是直接称其姓名。针对日本方面提出“不设禁忌讨论核武器和核潜艇”，郭嘉昆表示，日本作为无核武器缔约国，没有讨价还价的余地。",
+        "summary": "9月30日，民政部公布2025年民政事业发展统计公报，显示去年全年办理结婚登记676.5万对，比上年增长10.8%，25至29岁年龄段人数最多。",
         "badge": "热搜",
-        "signal": "7,521,130 热度"
+        "signal": "7,520,928 热度"
       },
       {
-        "id": "github-advisory-ghsa-9q9j-q6p8-xq58",
+        "id": "github-advisory-ghsa-hwr6-493r-vm6h",
         "category": "security",
-        "title": "fastify vulnerable to header validation bypass via incomplete schema case normalization",
-        "url": "https://github.com/advisories/GHSA-9q9j-q6p8-xq58",
+        "title": "fastify vulnerable to request validation bypass via skipped boolean false schemas",
+        "url": "https://github.com/advisories/GHSA-hwr6-493r-vm6h",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-09-30T23:44:27.000Z",
-        "summary": "### Impact Fastify lowercases header-schema property names before compiling the schema, because Node.js stores request header names in lowercase. That normalization was incomplete: it lowercased only top-level `properties` keys and the roo…",
-        "badge": "CVE-2026-84428",
+        "publishedAt": "2026-09-30T23:44:58.000Z",
+        "summary": "### Impact Fastify decided whether to validate a request part by checking its schema for JavaScript truthiness. JSON Schema Draft 7 defines the boolean `false` as a valid schema that rejects every instance, but because `false` is falsy, a …",
+        "badge": "CVE-2026-84469",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -486,14 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1245889",
+        "id": "v2ex-1245962",
         "category": "dev",
-        "title": "AI 写的项目，让 AI 排查问题。但是有没有感觉沟通过程中读 AI 说的话很费劲，很难懂。。。",
-        "url": "https://www.v2ex.com/t/1245889",
+        "title": "开源一个纯自研的开发工作流，欢迎探讨交流",
+        "url": "https://www.v2ex.com/t/1245962",
         "source": "V2EX 技术",
-        "publishedAt": "2026-09-30T10:55:08.000Z",
+        "publishedAt": "2026-10-01T01:18:40.000Z",
+        "summary": "https://lulufoo.github.io/interview/lulu-workflow.html https://github.com/lulufoo/lulu-workflow",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -510,8 +511,8 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 12594,
-        "starsToday": 1280
+        "stars": 13090,
+        "starsToday": 1281
       },
       {
         "id": "github-90d09492a98e7644",
@@ -520,8 +521,8 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 50396,
-        "starsToday": 3481
+        "stars": 50702,
+        "starsToday": 3483
       },
       {
         "id": "github-89d643cfdc660041",
@@ -530,8 +531,8 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
         "language": "TypeScript",
-        "stars": 3003,
-        "starsToday": 622
+        "stars": 3160,
+        "starsToday": 624
       },
       {
         "id": "github-c0524b8a4609ea7c",
@@ -540,8 +541,8 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 24479,
-        "starsToday": 88
+        "stars": 24552,
+        "starsToday": 90
       },
       {
         "id": "github-61b98383e7d93589",
@@ -550,8 +551,8 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 149152,
-        "starsToday": 865
+        "stars": 149413,
+        "starsToday": 743
       },
       {
         "id": "github-72bea5f84ba33820",
@@ -560,8 +561,8 @@
         "url": "https://github.com/harry0703/MoneyPrinterTurbo",
         "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
         "language": "Python",
-        "stars": 127539,
-        "starsToday": 464
+        "stars": 127661,
+        "starsToday": 431
       },
       {
         "id": "github-5dcd5a46c4da9d02",
@@ -570,7 +571,7 @@
         "url": "https://github.com/openclaw/openclaw",
         "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
         "language": "TypeScript",
-        "stars": 390982,
+        "stars": 391041,
         "starsToday": 136
       },
       {
@@ -580,8 +581,8 @@
         "url": "https://github.com/ComposioHQ/awesome-claude-skills",
         "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
         "language": "Python",
-        "stars": 76117,
-        "starsToday": 118
+        "stars": 76203,
+        "starsToday": 123
       },
       {
         "id": "github-89e612f6ea973712",
@@ -590,8 +591,8 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 272980,
-        "starsToday": 908
+        "stars": 273168,
+        "starsToday": 876
       },
       {
         "id": "github-0495d9fe7b8c8525",
@@ -600,10 +601,10 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 54711,
-        "starsToday": 352
+        "stars": 54856,
+        "starsToday": 349
       }
     ],
-    "updatedAt": "2026-09-30T23:51:13.288Z"
+    "updatedAt": "2026-10-01T05:56:01.251Z"
   }
 }
