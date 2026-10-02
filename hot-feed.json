@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-01T23:53:13.810Z",
+  "generatedAt": "2026-10-02T05:38:56.304Z",
   "intelligence": {
-    "updatedAt": "2026-10-01T23:53:13.810Z",
+    "updatedAt": "2026-10-02T05:38:56.304Z",
     "items": [
       {
-        "id": "cn-item-5161497a8aaf8f0c",
+        "id": "cn-item-4ab9fa50575f91d9",
         "category": "cn",
-        "title": "从“看戏”到“入戏” 沉浸式影视游成文旅新风尚",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-01/10706851.shtml",
+        "title": "鄱阳湖跌破10米低枯水位线 水体面积“瘦身”",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-02/10707081.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-01T11:42:56.000Z",
-        "summary": "中新网济南10月1日电 (吕妍)“谁不知道这乐陵城是顾家的地盘。”10月1日，国庆假期首日，山东省德州市乐陵影视城“唐人街”实景片场内，一位身穿民国长衫的游客眉头微蹙、语气凌厉，一句台词出口，已然入戏。导演一声“Action”，摄像机缓缓推进，他正式开启了自己的短剧首秀。",
+        "publishedAt": "2026-10-02T05:33:06.000Z",
+        "summary": "中新社南昌10月2日电 (记者 姜涛)连日来，受天气及五河入湖流量减少等多重因素影响，中国最大淡水湖鄱阳湖水位持续下降，于2日跌破10米低枯水位线。",
         "badge": "中新网要闻"
       },
       {
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-01T19:33:05.000Z",
         "badge": "HN",
-        "signal": "640 分 · 213 评论"
+        "signal": "991 分 · 317 评论"
       },
       {
-        "id": "cn-it-f1338071d4ae4ef9",
+        "id": "cn-it-f1b645d404a18b4d",
         "category": "cn",
-        "title": "IT早报 1002：5999 元起华为 Mate 90 系列旗舰手机发布；2026 年 9 月车企销量交付汇总；华为与赛力斯达成新五年合作；曝苹果 HomeHub 宣传物料已送往苹果门店...",
-        "url": "https://www.ithome.com/1/009/201.htm",
+        "title": "阿斯顿 · 马丁首款纯电动汽车推迟至 2033 年后，V8/V12 发动机保留至 2035 年",
+        "url": "https://www.ithome.com/1/009/273.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-01T23:52:26.000Z",
-        "summary": "“IT早报”时间，大家好，现在是 2026 年 10 月 2 日星期五，今天的重要科技资讯有： 1. 华为 Mate 90 手机发布：麒麟 9030 旗舰 τ 芯片，5999 元起 在 10 月 1 日举行的华为 Mate 90 系列及全场景新品发布会上，华为 Mate 90 手机正式发布。>> 查看详情 2. 2026 年 9 月汽车销量 / 交付榜出炉：比亚迪 46.36 万辆稳坐头把交椅，小米澎程上市首月交付破万 比亚迪以超 46 万辆稳居榜首，上汽、奇瑞、吉利紧随其…",
+        "publishedAt": "2026-10-02T05:32:18.000Z",
+        "summary": "IT之家 10 月 2 日消息，汽车媒体 autocar 今天（10 月 2 日）发布博文，报道称阿斯顿 · 马丁（Aston Martin）计划延后其首款纯电动汽车上市时间，推迟到 2033~2035 年， 并制定路线图确保 V8 与 V12 发动机车型至少供应至 2035 年。 在伦敦梅菲尔区新 Q London 展厅开幕活动上，阿斯顿 · 马丁首席执行官阿德里安 · 霍尔马克（Adrian Hallmark）表示，公司首款纯电动车最早 2033 年上市，最晚不迟于 2…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246070",
+        "id": "v2ex-1246111",
         "category": "dev",
-        "title": "B 站用微软浏览器 看不到弹幕，是太卡还是插件作祟？",
-        "url": "https://www.v2ex.com/t/1246070",
+        "title": "从 WebView 到原生桌面：开源终端工具 NyaTerm 2.0",
+        "url": "https://www.v2ex.com/t/1246111",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-01T16:29:41.000Z",
-        "summary": "如题，插件装太多 弹幕看不到",
+        "publishedAt": "2026-10-02T03:57:49.000Z",
+        "summary": "NyaTerm 2.0 ，轻装上阵，全新出发！ 之前发 NyaTerm 的时候，我提过它是受 WindTerm 启发做的一个开源终端管理工具。 这一个多月 1.x 其实一直没停，还在持续修问题、补功能。 不过与此同时，我又给自己挖了个更大的坑： 把 NyaTerm 用 Rust + GPUI 重新做一遍。 现在这个版本已经放出来一段时间了，也迭代了几个 Preview ，感觉差不多可以单独介绍一下。 NyaTerm 2.0 预览版： https://github.com/n…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-5ae4d20d5d45f16a",
+        "id": "cn-baidu-0f7ca050748af627",
         "category": "cn",
-        "title": "我们的飞机不用再飞第二遍了",
-        "url": "https://www.baidu.com/s?wd=%E6%88%91%E4%BB%AC%E7%9A%84%E9%A3%9E%E6%9C%BA%E4%B8%8D%E7%94%A8%E5%86%8D%E9%A3%9E%E7%AC%AC%E4%BA%8C%E9%81%8D%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "退伍军人办国旗工厂 地面擦到反光",
+        "url": "https://www.baidu.com/s?wd=%E9%80%80%E4%BC%8D%E5%86%9B%E4%BA%BA%E5%8A%9E%E5%9B%BD%E6%97%97%E5%B7%A5%E5%8E%82+%E5%9C%B0%E9%9D%A2%E6%93%A6%E5%88%B0%E5%8F%8D%E5%85%89&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "77年前的10月1日，开国少将方槐和战友驾驶17架飞机参加开国大典受阅。方槐女儿方蕾回忆，其中9架战斗机因速度快，通过天安门上空后绕城折返，第二次飞过天安门。如今，山河锦绣，祖国繁荣富强！我们的飞机再也不用飞第二遍了！",
+        "summary": "据悉，退伍军人黄先生创办的国旗工厂里，地面擦到反光，产品叠成豆腐块。黄先生表示：整洁的工厂，才可以做出好的产品！",
         "badge": "热搜",
-        "signal": "7,809,071 热度"
+        "signal": "7,808,980 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76504",
@@ -108,32 +108,32 @@
         "signal": "已遭利用 · 整改期限 2026-10-03"
       },
       {
-        "id": "ai-hugging-face-f928531f96372519",
+        "id": "ai-hugging-face-56c490db040147f1",
         "category": "ai",
-        "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
-        "url": "https://huggingface.co/blog/allenai/olmocore3",
+        "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+        "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-01T15:01:43.000Z",
+        "publishedAt": "2026-10-02T04:01:31.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49923692",
+        "id": "hn-49929489",
         "category": "dev",
-        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
-        "url": "https://blog.cloudflare.com/clef-decision-models/",
+        "title": "DeepSeek Harness",
+        "url": "https://www.deepseek.com/en/harness/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T16:18:57.000Z",
+        "publishedAt": "2026-10-02T03:11:20.000Z",
         "badge": "HN",
-        "signal": "394 分 · 154 评论"
+        "signal": "83 分 · 25 评论"
       },
       {
-        "id": "cn-item-c7d57c2aa2602aa3",
+        "id": "cn-item-24396a01cf54280a",
         "category": "cn",
-        "title": "2026年中国电影国庆档首日票房破亿元 已呈 “一超一强”格局",
-        "url": "https://www.chinanews.com.cn/cul/2026/10-01/10706826.shtml",
+        "title": "（经济观察）中国“交旅融合”焕新体验 盘活旅途“闲置”时空",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707074.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-01T11:21:21.000Z",
-        "summary": "中新社北京10月1日电 (记者 高凯)据灯塔专业版数据，截至北京时间10月1日16时，2026年中国内地电影国庆档首日票房已达1.24亿元(人民币，下同)，观影人次342.87万，放映场次47.07万场。",
+        "publishedAt": "2026-10-02T05:28:49.000Z",
+        "summary": "中新社济南10月2日电 (记者 赵晓 李欣)自山东泰安东平老湖码头启航，“东平湖号”游船沿京杭大运河新开通的“好客山东·运河1号”(简称“运河1号”)航线前行，船上非遗演艺、NPC互动接续展开，传统“交通线”悄然变为游客“体验场”。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246062",
+        "id": "v2ex-1246108",
         "category": "dev",
-        "title": "有没有 token 信用合作社,蹬不完的 token 先给别人用,那天自己不够了再去取用",
-        "url": "https://www.v2ex.com/t/1246062",
+        "title": "请问深度使用 AI 编程的大佬，现在 AI 能猜对你的心思了吗？",
+        "url": "https://www.v2ex.com/t/1246108",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-01T15:09:55.000Z",
-        "summary": "总感觉有人干了....",
+        "publishedAt": "2026-10-02T03:50:15.000Z",
+        "summary": "AI 猜的准吗？",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-0dd60abb4daa260e",
+        "id": "cn-it-fbb99fb218928a98",
         "category": "cn",
-        "title": "Crew-13 任务完成对接，刷新美国载人飞船赴国际空间站最快纪录",
-        "url": "https://www.ithome.com/1/009/199.htm",
+        "title": "摄影师 Zavitz 测试苹果 iPhone 18 Pro 人像模式，媲美专业相机",
+        "url": "https://www.ithome.com/1/009/272.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-01T23:42:27.000Z",
-        "summary": "IT之家 10 月 2 日消息，美国宇航局（NASA）发布公告，宣布 Crew-13 载人飞行任务已经于美国东部时间 10 月 1 日 19:05（北京时间 10 月 2 日早上 7:05）和国际空间站对接， 从发射到对接耗时约 7 小时 50 分钟，刷新美国太空旅行纪录。 IT之家援引官方公告内容，附上本次 Crew-13 载人飞行任务相关时间节点如下： 美国东部时间 11:10（北京时间：10 月 1 日 23:10）：猎鹰 9 号火箭从 SLC-40 点火升空。 美国…",
+        "publishedAt": "2026-10-02T05:26:02.000Z",
+        "summary": "IT之家 10 月 2 日消息，摄影师 Lee Zavitz 于 9 月 30 日发布视频， 通过对比认为苹果 iPhone 18 Pro 在拍摄人像模式上，表现接近专业相机水准。 IT之家查询公开资料，Lee Zavitz 是一位来自加拿大多伦多的摄影师、电影摄影师，其内容主要围绕人像摄影、视频拍摄、相机评测、镜头体验和后期调色展开，在 Instagram 和 YouTube 上都有较高活跃度。 本次参与对比的相机是索尼 A7RIV，搭配腾龙（Tamron）35–150m…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49926536",
+        "id": "hn-49929113",
         "category": "dev",
-        "title": "SvelteKit 3",
-        "url": "https://svelte.dev/blog/sveltekit-3-is-here",
+        "title": "How Singapore's government-run dating service works",
+        "url": "https://www.singapore-samizdat.com/p/how-singapores-government-run-dating-service-firstdate-works",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T20:14:23.000Z",
+        "publishedAt": "2026-10-02T01:56:52.000Z",
         "badge": "HN",
-        "signal": "84 分 · 23 评论"
+        "signal": "63 分 · 29 评论"
       },
       {
-        "id": "cn-baidu-30828986f07ef65c",
+        "id": "cn-baidu-0efa58f89a25c346",
         "category": "cn",
-        "title": "国庆出行有车辆仅剩1%电量后“趴窝”",
-        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E5%BA%86%E5%87%BA%E8%A1%8C%E6%9C%89%E8%BD%A6%E8%BE%86%E4%BB%85%E5%89%A91%25%E7%94%B5%E9%87%8F%E5%90%8E%E2%80%9C%E8%B6%B4%E7%AA%9D%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "普京：买吧 中国汽车又便宜又好",
+        "url": "https://www.baidu.com/s?wd=%E6%99%AE%E4%BA%AC%EF%BC%9A%E4%B9%B0%E5%90%A7+%E4%B8%AD%E5%9B%BD%E6%B1%BD%E8%BD%A6%E5%8F%88%E4%BE%BF%E5%AE%9C%E5%8F%88%E5%A5%BD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月1日，多名车主反映国庆高速服务区迎来新能源车充电高峰。有网友称，一辆新能源车在达州北服务区时只剩下了1%的电，直接在离充电桩不远处的路边“趴窝”。",
+        "summary": "近日，普京在发言中指出，欧洲汽车工业深陷危机之中，大家很快都将开上便宜且质量高的中国汽车。",
         "badge": "热搜",
-        "signal": "7,713,720 热度"
+        "signal": "7,714,639 热度"
       },
       {
         "id": "github-advisory-ghsa-jxxv-8r27-vm4p",
@@ -231,33 +231,33 @@
         "signal": "HIGH · CVSS 8.6"
       },
       {
-        "id": "ai-hugging-face-74c2ff7e2707d1f6",
+        "id": "ai-hugging-face-f928531f96372519",
         "category": "ai",
-        "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
-        "url": "https://huggingface.co/blog/open-tts-leaderboard",
+        "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
+        "url": "https://huggingface.co/blog/allenai/olmocore3",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-30T00:00:00.000Z",
+        "publishedAt": "2026-10-01T15:01:43.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246061",
+        "id": "v2ex-1246096",
         "category": "dev",
-        "title": "Grok Bot/Muse/Dots 这些龙虾类产品卷土重来，我想给上一代产品说几句公道话",
-        "url": "https://www.v2ex.com/t/1246061",
+        "title": "gpt 6 luna 都这么蠢吗？连个小插件，都写了 10 几遍，还没有写好！",
+        "url": "https://www.v2ex.com/t/1246096",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-01T15:01:46.000Z",
-        "summary": "说句公道话，上一代个人 Agent 大家忘啦？ 只要不追求主动让 AI 把自己开盒了，有限度地让 AI 干活，上一代其实完全不比各种 Bot/Muse/Dots/Cue 差啊。 智谱 AgentMore ，完整持久云端环境，带记忆系统，有移动版有网页版，每天免费额度能干不少事。 智谱 AutoClaw ，用户体验有点糟糕，但它甚至支持 BYOK ，网页读取工具还能翻墙，应用本身却不用翻墙，这么特殊的存在你找不到第二个。 字节扣子，同样 BYOK ，虽然不订阅几乎没法用，但如…",
+        "publishedAt": "2026-10-02T02:42:43.000Z",
+        "summary": "还要涨价，谁给的自信？",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-item-20f83167786ea9de",
+        "id": "cn-item-bb1134e4f10ac920",
         "category": "cn",
-        "title": "东西问｜埃及汉学家哈赛宁：中国故事如何真正抵达阿拉伯读者？",
-        "url": "https://www.chinanews.com.cn/dxw/2026/10-01/10706814.shtml",
+        "title": "（走进中国乡村）八百年浙江后吴古村：闲置老屋“长”出新业态",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-02/10707060.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-01T10:14:43.000Z",
-        "summary": "中新社开罗10月1日电 题：中国故事如何真正抵达阿拉伯读者？",
+        "publishedAt": "2026-10-02T03:37:32.000Z",
+        "summary": "中新社浙江金华10月2日电 题：八百年浙江后吴古村：闲置老屋“长”出新业态",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49926773",
+        "id": "hn-49929970",
         "category": "dev",
-        "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia",
-        "url": "https://github.com/Vibra-Ingenn/Janus",
+        "title": "Meta's Muse is fantastic for web scraping",
+        "url": "https://sigh.dev/posts/metas-muse-is-fantastic-for-web-scraping/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T20:36:47.000Z",
+        "publishedAt": "2026-10-02T04:56:02.000Z",
         "badge": "HN",
-        "signal": "44 分 · 4 评论"
+        "signal": "12 分 · 6 评论"
       },
       {
-        "id": "cn-it-5db5b342a0a083d9",
+        "id": "cn-it-eddae300ed827c09",
         "category": "cn",
-        "title": "谷歌首次送先进芯片上天，估算 SpaceX 星舰发射 1800 次才能让太空数据中心“飞起来”",
-        "url": "https://www.ithome.com/1/009/198.htm",
+        "title": "填充 AI 资金弹药：曝 OpenAI 融资再落袋 200 亿美元，英伟达、软银和亚马逊已出资约 90%",
+        "url": "https://www.ithome.com/1/009/270.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-01T23:41:50.000Z",
-        "summary": "IT之家 10 月 2 日消息，据外媒 TechCrunch 报道，当地时间 1 日，谷歌的在轨计算原型卫星搭乘 SpaceX 火箭，从美国加利福尼亚州升空，启动在地球轨道上建立大规模计算集群的“太阳捕手”项目。卫星由 Planet Labs 制造，用于验证谷歌的 Tensor 处理器能否在太空正常运行。测试需要持续供应 1kW 电力、给芯片散热，并运行一系列模型，检查有没有问题。 据IT之家了解，这是谷歌首次把先进芯片送入太空。负责项目的谷歌高管特拉维斯 · 比尔斯说：“…",
+        "publishedAt": "2026-10-02T05:07:45.000Z",
+        "summary": "IT之家 10 月 2 日消息，科技媒体 The Information 今天（10 月 2 日）发布博文， 报道称英伟达与软银已分别向 OpenAI 支付最后一笔 100 亿美元 （IT之家注：现汇率约合 671.46 亿元人民币） 投资，完成各自 300 亿美元 （现汇率约合 2,014.37 亿元人民币） 的投资承诺。 本轮融资总承诺金额约为 1,220 亿美元 （现汇率约合 8,191.75 亿元人民币） ，对 OpenAI 的估值约为 8,520 亿美元 （现汇率…",
         "badge": "IT之家"
       },
       {
@@ -322,24 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246060",
+        "id": "v2ex-1246070",
         "category": "dev",
-        "title": "主力邮箱还是得选国内邮箱",
-        "url": "https://www.v2ex.com/t/1246060",
+        "title": "B 站用微软浏览器 看不到弹幕，是太卡还是插件作祟？",
+        "url": "https://www.v2ex.com/t/1246070",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-01T14:42:28.000Z",
-        "summary": "近期 Google 又扫号了，如果一直申诉不成功，跟 Google 关联的账号都废了，主力邮箱还是得国内邮箱，至少在国内还有投诉的渠道，Google 说封你就封你，根本没得商量",
+        "publishedAt": "2026-10-01T16:29:41.000Z",
+        "summary": "如题，插件装太多 弹幕看不到",
         "badge": "程序员",
-        "signal": "34 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-be6d8528f2293b00",
+        "id": "cn-baidu-cc7a6e07d33b4ac8",
         "category": "cn",
-        "title": "中国人专属仪式感",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E4%B8%93%E5%B1%9E%E4%BB%AA%E5%BC%8F%E6%84%9F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "到祖国大江南北邂逅山河盛景",
+        "url": "https://www.baidu.com/s?wd=%E5%88%B0%E7%A5%96%E5%9B%BD%E5%A4%A7%E6%B1%9F%E5%8D%97%E5%8C%97%E9%82%82%E9%80%85%E5%B1%B1%E6%B2%B3%E7%9B%9B%E6%99%AF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "这个国庆假期，去祖国大江南北感受不同的假日氛围。游客既可以在南京城墙领略中国文化之美，也能到喀纳斯塔桥赏边城布尔津秋日童话。国庆假期，祖国大江南北处处风光正好。",
         "badge": "热搜",
-        "signal": "7,618,282 热度"
+        "signal": "7,616,041 热度"
       },
       {
         "id": "cisa-kev-cve-2026-88771",
@@ -353,32 +354,32 @@
         "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
-        "id": "ai-hugging-face-dc53fce90c6f36f5",
+        "id": "ai-hugging-face-74c2ff7e2707d1f6",
         "category": "ai",
-        "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
-        "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+        "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
+        "url": "https://huggingface.co/blog/open-tts-leaderboard",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-29T15:30:38.000Z",
+        "publishedAt": "2026-09-30T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49922569",
+        "id": "hn-49930047",
         "category": "dev",
-        "title": "Ask HN: Who is hiring? (October 2026)",
-        "url": "https://news.ycombinator.com/item?id=49922569",
+        "title": "Shimano Bicycle Museum Review",
+        "url": "https://inrng.com/2026/10/shimano-bicycle-museum/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T15:02:07.000Z",
+        "publishedAt": "2026-10-02T05:12:58.000Z",
         "badge": "HN",
-        "signal": "137 分 · 139 评论"
+        "signal": "5 分 · 0 评论"
       },
       {
-        "id": "cn-item-4ec150f98b93863e",
+        "id": "cn-item-9ebaea246f8a2293",
         "category": "cn",
-        "title": "（文化新纪行）“天下第一潮”涌动 钱塘江畔千年古镇焕新机",
-        "url": "https://www.chinanews.com.cn/cul/2026/10-01/10706795.shtml",
+        "title": "（经济观察）民企出海“上新” 全球市场重新定义“中国货”",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707062.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-01T08:56:20.000Z",
-        "summary": "中新社浙江嘉兴10月1日电 题：“天下第一潮”涌动 钱塘江畔千年古镇焕新机",
+        "publishedAt": "2026-10-02T03:30:40.000Z",
+        "summary": "中新社北京10月2日电 (记者 尹倩芸)在纽约时报广场，中国影像品牌影石Insta360的美国首家直营旗舰店开业，吸引超千人排队；在东南亚，当地消费者开始骑上雅迪、爱玛等中国品牌的电动两轮车；在欧洲，越来越多中国车标出现在街头。",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246052",
+        "id": "v2ex-1246062",
         "category": "dev",
-        "title": "时隔 3 年，终于更新了个人主页",
-        "url": "https://www.v2ex.com/t/1246052",
+        "title": "有没有 token 信用合作社,蹬不完的 token 先给别人用,那天自己不够了再去取用",
+        "url": "https://www.v2ex.com/t/1246062",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-01T13:14:14.000Z",
-        "summary": "https://dejavu.moe/",
+        "publishedAt": "2026-10-01T15:09:55.000Z",
+        "summary": "总感觉有人干了....",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "29 回复"
       },
       {
-        "id": "cn-it-00edaadbc6d75bda",
+        "id": "cn-it-f4c7c248a290849d",
         "category": "cn",
-        "title": "OpenAI 上线“虚拟试穿”功能：ChatGPT 能帮你试衣，还能找“明星同款”",
-        "url": "https://www.ithome.com/1/009/197.htm",
+        "title": "乘联分会崔东树：2026 年 1-8 月中国占世界汽车份额 32%",
+        "url": "https://www.ithome.com/1/009/269.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-01T23:18:01.000Z",
-        "summary": "IT之家 10 月 2 日消息，当地时间 1 日，OpenAI 再次扩展 ChatGPT 的购物能力。公司宣布在全球推出两项新功能，一项是让用户 虚拟试穿服装和配饰 ，另一项是 新增收藏功能 ，方便用户先把看中的商品存起来，之后再查看。 据IT之家了解，新功能基于不久前推出的 ChatGPT Images 2.5 模型。按照 OpenAI 的说法，这一模型生成的画面 光线更自然、纹理更丰富，执行编辑指令也更稳定 ，同时还能缩短生成图片所需时间。 ChatGPT 用户可以上传…",
+        "publishedAt": "2026-10-02T05:07:32.000Z",
+        "summary": "IT之家 10 月 2 日消息，乘联分会秘书长崔东树今日发文，2026 年 1-8 月，世界汽车累计销量 6343 万台，同比增长 2%；其中 8 月单月销量 771.9 万台，同比仅增 1%，环比下滑 4.9%，全球车市增长动力偏弱。 分国家来看， 中国销量 2031 万台，份额 32.0% ，较 2025 年 35.4% 明显回落；美国销量 1094 万台，份额 17.2%，小幅下滑。 崔东树表示，印度等新兴市场的快速增长，一定程度对冲了中、美市场的增长压力，支撑全球车…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49927212",
+        "id": "hn-49923692",
         "category": "dev",
-        "title": "CSS Bed: Classless CSS themes to use as starting points in web development",
-        "url": "https://www.cssbed.com",
+        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+        "url": "https://blog.cloudflare.com/clef-decision-models/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T21:21:32.000Z",
+        "publishedAt": "2026-10-01T16:18:57.000Z",
         "badge": "HN",
-        "signal": "36 分 · 8 评论"
+        "signal": "473 分 · 170 评论"
       },
       {
-        "id": "cn-baidu-930df551b68a0a3b",
+        "id": "cn-baidu-6b6004142ffb0ec3",
         "category": "cn",
-        "title": "华为与赛力斯达成新五年合作",
-        "url": "https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E4%B8%8E%E8%B5%9B%E5%8A%9B%E6%96%AF%E8%BE%BE%E6%88%90%E6%96%B0%E4%BA%94%E5%B9%B4%E5%90%88%E4%BD%9C&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“充电至80%必须离场”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%85%85%E7%94%B5%E8%87%B380%25%E5%BF%85%E9%A1%BB%E7%A6%BB%E5%9C%BA%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月30日，华为与赛力斯在深圳举行问界业务升级战略合作签约仪式，达成新五年合作。目前问界用户已突破120万，双方将联合组建问界业务专属团队，进一步升级问界业务，持续推动问界新豪华品牌向上。",
+        "summary": "10月1日，新能源车主黄女士反映，9月30日晚驶入湖北枣阳北服务区充电时遇取号排队。现场分轮放号，其等一个多小时才充上电，走时已排到第五轮约两百台车。因国庆人流量多，机器自动设置限流，车辆充至80%必须离场。",
         "badge": "热搜",
-        "signal": "7,524,313 热度"
+        "signal": "7,523,417 热度"
       },
       {
         "id": "github-advisory-ghsa-6rh5-qq4q-97xh",
@@ -476,24 +477,24 @@
         "signal": "HIGH · CVSS 8.5"
       },
       {
-        "id": "ai-hugging-face-afa8c33f8eb7996a",
+        "id": "ai-hugging-face-dc53fce90c6f36f5",
         "category": "ai",
-        "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+        "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
+        "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
         "source": "Hugging Face",
-        "publishedAt": "2026-09-29T13:07:00.000Z",
+        "publishedAt": "2026-09-29T15:30:38.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246032",
+        "id": "v2ex-1246061",
         "category": "dev",
-        "title": "实测：目前 dot 跑任务，不扣我 Codex 的使用额度",
-        "url": "https://www.v2ex.com/t/1246032",
+        "title": "Grok Bot/Muse/Dots 这些龙虾类产品卷土重来，我想给上一代产品说几句公道话",
+        "url": "https://www.v2ex.com/t/1246061",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-01T09:46:09.000Z",
-        "summary": "RT, 可能具体的计数还没有做好... 我用的是 5x pro. 今天把任务交给 dot ，在云端开了 6 个 Agent ，跑了约 4 小时 15 分钟，生成了 1,358 张图片，连提示词和来源记录一起保存，打包成 187 个 ZIP, 13G. 开跑前，我的用量面板显示剩余 9%；跑完后，还是 9%. 昨天本地 3 个 session, 大约也是用了 4 个小时,生成了 1300 多张, 用 Sol 都消耗了 20% Dots 短期内还是可以冲的, 我估计默认的还是 …",
+        "publishedAt": "2026-10-01T15:01:46.000Z",
+        "summary": "说句公道话，上一代个人 Agent 大家忘啦？ 只要不追求主动让 AI 把自己开盒了，有限度地让 AI 干活，上一代其实完全不比各种 Bot/Muse/Dots/Cue 差啊。 智谱 AgentMore ，完整持久云端环境，带记忆系统，有移动版有网页版，每天免费额度能干不少事。 智谱 AutoClaw ，用户体验有点糟糕，但它甚至支持 BYOK ，网页读取工具还能翻墙，应用本身却不用翻墙，这么特殊的存在你找不到第二个。 字节扣子，同样 BYOK ，虽然不订阅几乎没法用，但如…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "16 回复"
       }
     ]
   },
@@ -510,8 +511,8 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 150470,
-        "starsToday": 1179
+        "stars": 150788,
+        "starsToday": 1194
       },
       {
         "id": "github-89e612f6ea973712",
@@ -520,8 +521,8 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 273873,
-        "starsToday": 888
+        "stars": 274079,
+        "starsToday": 883
       },
       {
         "id": "github-4a822c098ee8277f",
@@ -530,8 +531,8 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 13994,
-        "starsToday": 2503
+        "stars": 14111,
+        "starsToday": 2456
       },
       {
         "id": "github-5fa0be6111c6750a",
@@ -540,7 +541,7 @@
         "url": "https://github.com/firebase/firebase-ios-sdk",
         "description": "Firebase SDK for Apple App Development",
         "language": "C++",
-        "stars": 6856,
+        "stars": 6884,
         "starsToday": 112
       },
       {
@@ -550,8 +551,8 @@
         "url": "https://github.com/mvschwarz/openrig",
         "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
         "language": "TypeScript",
-        "stars": 3703,
-        "starsToday": 640
+        "stars": 3837,
+        "starsToday": 642
       },
       {
         "id": "github-e0c5b60fcbe6479b",
@@ -560,8 +561,8 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 9318,
-        "starsToday": 157
+        "stars": 9351,
+        "starsToday": 150
       },
       {
         "id": "github-4251a228ae407247",
@@ -570,8 +571,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 293955,
-        "starsToday": 476
+        "stars": 294070,
+        "starsToday": 455
       },
       {
         "id": "github-c0524b8a4609ea7c",
@@ -580,8 +581,8 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 24772,
-        "starsToday": 357
+        "stars": 24841,
+        "starsToday": 362
       },
       {
         "id": "github-0495d9fe7b8c8525",
@@ -590,8 +591,8 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 55328,
-        "starsToday": 624
+        "stars": 55451,
+        "starsToday": 627
       },
       {
         "id": "github-0c558be2bc3b8ea3",
@@ -600,10 +601,10 @@
         "url": "https://github.com/earendil-works/pi",
         "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
         "language": "TypeScript",
-        "stars": 111195,
-        "starsToday": 294
+        "stars": 111361,
+        "starsToday": 298
       }
     ],
-    "updatedAt": "2026-10-01T23:53:13.810Z"
+    "updatedAt": "2026-10-02T05:38:56.304Z"
   }
 }
