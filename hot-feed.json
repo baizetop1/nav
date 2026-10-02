@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-02T18:25:20.754Z",
+  "generatedAt": "2026-10-02T22:58:06.246Z",
   "intelligence": {
-    "updatedAt": "2026-10-02T18:25:20.754Z",
+    "updatedAt": "2026-10-02T22:58:06.246Z",
     "items": [
       {
         "id": "cn-item-1de280110718a49c",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-104286",
+        "id": "cisa-kev-cve-2026-102490",
         "category": "security",
-        "title": "Fortinet FortiMail：Fortinet FortiMail Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104286",
+        "title": "Zammad GmbH Zammad：Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102490",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-01T00:00:00.000Z",
-        "summary": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS…",
-        "badge": "CVE-2026-104286",
-        "signal": "已遭利用 · 整改期限 2026-10-04"
+        "publishedAt": "2026-10-02T00:00:00.000Z",
+        "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
+        "badge": "CVE-2026-102490",
+        "signal": "已遭利用 · 整改期限 2026-10-05"
       },
       {
         "id": "ai-openai-c38af6e5cae43e23",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49935751",
+        "id": "hn-49938521",
         "category": "dev",
-        "title": "Dutch computer museums (2022)",
-        "url": "https://aresluna.org/dutch-computer-museums/",
+        "title": "Zig v0.17.0",
+        "url": "https://ziglang.org/download/0.17.0/release-notes.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-02T16:52:39.000Z",
+        "publishedAt": "2026-10-02T20:56:36.000Z",
         "badge": "HN",
-        "signal": "64 分 · 15 评论"
+        "signal": "151 分 · 75 评论"
       },
       {
         "id": "cn-it-e595ddbcf92f393f",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-9cqf-hhrq-7v45",
+        "id": "github-advisory-ghsa-72qq-p3r5-f7wq",
         "category": "security",
-        "title": "SiYuan: getAttributeViewSearchTarget returns database row content to anonymous readers with no publish-access check, reopening the class closed one day earlier at the adjacent route",
-        "url": "https://github.com/advisories/GHSA-9cqf-hhrq-7v45",
+        "title": "@a2ui/web_core: `openUrl` permits `javascript:` URI execution via agent-supplied button actions",
+        "url": "https://github.com/advisories/GHSA-72qq-p3r5-f7wq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-01T16:24:38.000Z",
-        "summary": "### Scope note This endpoint does not exist in v3.7.3 or on master. It was introduced on the development branch by commit `9b8e8956f` on 2026-07-27 and is present on the current development head. No released stable version is affected. ###…",
-        "badge": "GHSA-9CQF-HHRQ-7V45",
-        "signal": "HIGH · CVSS 8.6"
+        "publishedAt": "2026-10-02T22:55:49.000Z",
+        "summary": "### Summary The `openUrl` function in `@a2ui/web_core` passes an agent-controlled URL directly to `window.open()` without validating the URI scheme. A malicious agent can supply a `javascript:` URI as the `url` argument of a `Button` compo…",
+        "badge": "CVE-2026-10032",
+        "signal": "CRITICAL · CVSS 9.3"
       },
       {
         "id": "ai-google-deepmind-ce56aa83d0064ef1",
@@ -74,6 +74,88 @@
         "source": "Google DeepMind",
         "publishedAt": "2026-09-30T20:01:45.000Z",
         "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1246196",
+        "category": "dev",
+        "title": "[CCProgress] 给 Claude Code 加了一个进度条， 长任务时能看到走到哪一步",
+        "url": "https://www.v2ex.com/t/1246196",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-02T19:53:20.000Z",
+        "summary": "我自己作为 Claude Code 的重度用户（月 150 亿 token 消耗），经常会让 Claude Opus 去跑一个长任务，有一个痛点就是在把任务丢给他以后，他在做的过程时完全没法看他走到哪一步了，只能通过看他的一些输出、工具调用去推，非常的不直观，也不知道到底是做偏了，会话也不敢停。 刚刷 X 看到 claude 支持 mod 了，就撸了一个进度条插件，欢迎体验！ Github: https://github.com/amigoer/ccprogress",
+        "badge": "程序员",
+        "signal": "3 回复"
+      },
+      {
+        "id": "cn-baidu-0f2daedde7d965a9",
+        "category": "cn",
+        "title": "全国各地为何都在“爆改地铁”",
+        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E5%9B%BD%E5%90%84%E5%9C%B0%E4%B8%BA%E4%BD%95%E9%83%BD%E5%9C%A8%E2%80%9C%E7%88%86%E6%94%B9%E5%9C%B0%E9%93%81%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "近期，全国多地地铁站被改造成运动馆、菜市场等多元空间。事件起因于地铁票务收入难抵高昂运维成本，且此前依赖房地产反补收入的路径受阻。为寻求出路，地铁运营方转变思路，从早期单纯出租空间收租，转向参与招商管理及打造体育、阅读等生活方式场景，试图在存量时代通过精细化经营挖掘增量空间。",
+        "badge": "热搜",
+        "signal": "7,808,736 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-102489",
+        "category": "security",
+        "title": "Zammad GmbH Zammad：Zammad GmbH Zammad Session Fixation Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102489",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-02T00:00:00.000Z",
+        "summary": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
+        "badge": "CVE-2026-102489",
+        "signal": "已遭利用 · 整改期限 2026-10-05"
+      },
+      {
+        "id": "ai-hugging-face-e81b1dea7ce0fb42",
+        "category": "ai",
+        "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
+        "url": "https://huggingface.co/blog/allenai/astabrief",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-02T15:19:50.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-49937276",
+        "category": "dev",
+        "title": "Apple Pass Designer",
+        "url": "https://developer.apple.com/pass-designer/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-02T19:06:56.000Z",
+        "badge": "HN",
+        "signal": "253 分 · 176 评论"
+      },
+      {
+        "id": "cn-item-90777bf4e82c63cb",
+        "category": "cn",
+        "title": "贵州“村超”赛场绘就统战帮扶同心画卷",
+        "url": "https://www.chinanews.com.cn/txy/2026/10-02/10707275.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-02T11:49:43.000Z",
+        "summary": "中新网贵州榕江10月2日电 贵州“村超”第三届国际足球赛1日在贵州榕江启幕，来自南美洲、欧洲、亚洲、非洲等地区国家的551名球员齐聚贵州“村超”发源地榕江县，共赴一场草根足球盛会。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-8ffr-xgwf-xj56",
+        "category": "security",
+        "title": "aws-smithy-json: Uncontrolled recursion in the aws-smithy-json unknown-key skip path allows unauthenticated remote denial of service in smithy-rs generated servers",
+        "url": "https://github.com/advisories/GHSA-8ffr-xgwf-xj56",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-02T22:44:52.000Z",
+        "summary": "### Summary Smithy-RS is a Rust code generation and runtime framework that generates HTTP clients and servers from Smithy interface definitions, powering the AWS SDK for Rust and custom service implementations. An issue exists which allows…",
+        "badge": "CVE-2026-18140",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
+        "id": "ai-openai-882596cbc7639eb4",
+        "category": "ai",
+        "title": "Chatham scales its capital markets expertise with OpenAI",
+        "url": "https://openai.com/index/chatham-financial",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-02T00:00:00.000Z",
+        "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
+        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1246164",
@@ -87,14 +169,96 @@
         "signal": "6 回复"
       },
       {
-        "id": "cn-baidu-0f2daedde7d965a9",
+        "id": "cn-it-bdd4942b773b2856",
         "category": "cn",
-        "title": "全国各地为何都在“爆改地铁”",
-        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E5%9B%BD%E5%90%84%E5%9C%B0%E4%B8%BA%E4%BD%95%E9%83%BD%E5%9C%A8%E2%80%9C%E7%88%86%E6%94%B9%E5%9C%B0%E9%93%81%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "AMD“锐龙 9 5900X3D”处理器工程样品现身，配备 32MB + 96MB L3 缓存",
+        "url": "https://www.ithome.com/1/009/372.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-02T15:36:05.000Z",
+        "summary": "IT之家 10 月 2 日消息，Chiphell 论坛用户 @灵乌路空 9 月 28 日分享了一款 AMD Socket AM4 平台处理器工程样品的信息。 该处理器代号 \"100-000000652\"，属于 \"Zen 3\" 微架构的 \"Vermeer\" 家族，步进 \"B2\"，拥有 12 核心 24 线程的规格，频率可达 4.85GHz， 配备 32MB + 96MB 的 L3 末级高速缓存 ，热设计功耗为 105W。 从其 L3 缓存规格来看，该芯片拥有 2 颗 CCD，…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2026-104286",
+        "category": "security",
+        "title": "Fortinet FortiMail：Fortinet FortiMail Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104286",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-01T00:00:00.000Z",
+        "summary": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS…",
+        "badge": "CVE-2026-104286",
+        "signal": "已遭利用 · 整改期限 2026-10-04"
+      },
+      {
+        "id": "ai-google-deepmind-c696e8b1f3422473",
+        "category": "ai",
+        "title": "Introducing SynthID Bio",
+        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-30T15:03:07.000Z",
+        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49938616",
+        "category": "dev",
+        "title": "The Harness Is the Company",
+        "url": "https://blog.sshh.io/p/the-harness-is-the-company",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-02T21:06:56.000Z",
+        "badge": "HN",
+        "signal": "46 分 · 34 评论"
+      },
+      {
+        "id": "cn-baidu-e50ccce6669518f6",
+        "category": "cn",
+        "title": "亚运三金到手 归来仍是高中生",
+        "url": "https://www.baidu.com/s?wd=%E4%BA%9A%E8%BF%90%E4%B8%89%E9%87%91%E5%88%B0%E6%89%8B+%E5%BD%92%E6%9D%A5%E4%BB%8D%E6%98%AF%E9%AB%98%E4%B8%AD%E7%94%9F&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近期，全国多地地铁站被改造成运动馆、菜市场等多元空间。事件起因于地铁票务收入难抵高昂运维成本，且此前依赖房地产反补收入的路径受阻。为寻求出路，地铁运营方转变思路，从早期单纯出租空间收租，转向参与招商管理及打造体育、阅读等生活方式场景，试图在存量时代通过精细化经营挖掘增量空间。",
+        "summary": "9月29日，不到18岁的高中生陈妤颉在亚运会4x100米混合接力中极限逆转夺冠，最终斩获3金1银。赛后她表现“松弛”，笑称奖牌太重。此前她由网球转练田径，父母将训练全程托付教练。目前高三的她面临高考与备战奥运双重压力，她坦言先高考加油，没有目标就是最好的目标。",
         "badge": "热搜",
-        "signal": "7,809,431 热度"
+        "signal": "7,714,563 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-v2f8-6655-7grj",
+        "category": "security",
+        "title": "Vibe-Trading FastAPI endpoints permit unauthenticated access, file upload, and an RCE chain",
+        "url": "https://github.com/advisories/GHSA-v2f8-6655-7grj",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-02T22:44:26.000Z",
+        "summary": "### Summary: 5 findings — unauthenticated full-API exposure (F1, lead Critical), read-side authorization gap that persists even with `API_AUTH_KEY` set (F2), unauthenticated file write of `.py`/`.sh`/`.yaml` to a server-returned path (F3),…",
+        "badge": "GHSA-V2F8-6655-7GRJ",
+        "signal": "CRITICAL · CVSS 10.0"
+      },
+      {
+        "id": "ai-hugging-face-56c490db040147f1",
+        "category": "ai",
+        "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+        "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-02T04:01:31.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1246163",
+        "category": "dev",
+        "title": "一天上线了个万圣节小站",
+        "url": "https://www.v2ex.com/t/1246163",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-02T13:01:34.000Z",
+        "summary": "今天一天上线了个万圣节小站 Cloudflare + Stripe ，已经跑通第一单 $1.99 。冲一下万圣节季节词，看能不能吃到流量 🎃 https://hallowpaws.com",
+        "badge": "程序员",
+        "signal": "1 回复"
+      },
+      {
+        "id": "cn-item-0dfb48d3cfcc407e",
+        "category": "cn",
+        "title": "中国年轻人掀起“AI定制游”热潮",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707226.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-02T10:00:45.000Z",
+        "summary": "中新网济南10月2日电 (刘驰原)“以前做攻略像是在‘期末备考’，要在上百条长文、短视频里反复比对路线。现在有了AI，只需输入预算和喜好，30秒就能收获一份精确到小时的完美攻略，彻底解放双手。”在浙江宁海的一家古村落茶馆里，刚刚结束第四次“AI定制游”的“00后”林玉，一边喝茶，一边记录着自己的旅途心得。",
+        "badge": "中新网要闻"
       },
       {
         "id": "cisa-kev-cve-2026-76504",
@@ -108,13 +272,14 @@
         "signal": "已遭利用 · 整改期限 2026-10-03"
       },
       {
-        "id": "ai-hugging-face-e81b1dea7ce0fb42",
+        "id": "ai-openai-b8087b88cb63ae7f",
         "category": "ai",
-        "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
-        "url": "https://huggingface.co/blog/allenai/astabrief",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-02T15:19:50.000Z",
-        "badge": "Hugging Face"
+        "title": "The eternal complement",
+        "url": "https://openai.com/index/the-eternal-complement",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-01T17:00:00.000Z",
+        "summary": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
+        "badge": "OpenAI"
       },
       {
         "id": "hn-49927754",
@@ -124,120 +289,37 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-01T22:23:07.000Z",
         "badge": "HN",
-        "signal": "156 分 · 65 评论"
+        "signal": "423 分 · 190 评论"
       },
       {
-        "id": "cn-item-90777bf4e82c63cb",
+        "id": "cn-it-b887be1ecdf22f16",
         "category": "cn",
-        "title": "贵州“村超”赛场绘就统战帮扶同心画卷",
-        "url": "https://www.chinanews.com.cn/txy/2026/10-02/10707275.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-02T11:49:43.000Z",
-        "summary": "中新网贵州榕江10月2日电 贵州“村超”第三届国际足球赛1日在贵州榕江启幕，来自南美洲、欧洲、亚洲、非洲等地区国家的551名球员齐聚贵州“村超”发源地榕江县，共赴一场草根足球盛会。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-qhwx-74w5-xhxq",
-        "category": "security",
-        "title": "vm2: NodeVM builtin allowlist bypass via node:test.run() execArgv allows sandbox escape",
-        "url": "https://github.com/advisories/GHSA-qhwx-74w5-xhxq",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-01T15:41:31.000Z",
-        "summary": "## Summary On Node.js 24 and newer, `vm2` can expose the host `node:test` module to sandboxed `NodeVM` code when the embedder explicitly allows the `node:test` builtin. Sandbox code can reach that module through `require('node:node:test')`…",
-        "badge": "CVE-2026-92948",
-        "signal": "CRITICAL · CVSS 9.9"
-      },
-      {
-        "id": "ai-openai-882596cbc7639eb4",
-        "category": "ai",
-        "title": "Chatham scales its capital markets expertise with OpenAI",
-        "url": "https://openai.com/index/chatham-financial",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-02T00:00:00.000Z",
-        "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1246163",
-        "category": "dev",
-        "title": "一天上线了个万圣节小站",
-        "url": "https://www.v2ex.com/t/1246163",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T13:01:34.000Z",
-        "summary": "今天一天上线了个万圣节小站 Cloudflare + Stripe ，已经跑通第一单 $1.99 。冲一下万圣节季节词，看能不能吃到流量 🎃 https://hallowpaws.com",
-        "badge": "程序员",
-        "signal": "0 回复"
-      },
-      {
-        "id": "cn-it-bdd4942b773b2856",
-        "category": "cn",
-        "title": "AMD“锐龙 9 5900X3D”处理器工程样品现身，配备 32MB + 96MB L3 缓存",
-        "url": "https://www.ithome.com/1/009/372.htm",
+        "title": "焕新极氪 001 配色上新：推出哑光岩灰车色、冰川灰内饰",
+        "url": "https://www.ithome.com/1/009/371.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-02T15:36:05.000Z",
-        "summary": "IT之家 10 月 2 日消息，Chiphell 论坛用户 @灵乌路空 9 月 28 日分享了一款 AMD Socket AM4 平台处理器工程样品的信息。 该处理器代号 \"100-000000652\"，属于 \"Zen 3\" 微架构的 \"Vermeer\" 家族，步进 \"B2\"，拥有 12 核心 24 线程的规格，频率可达 4.85GHz， 配备 32MB + 96MB 的 L3 末级高速缓存 ，热设计功耗为 105W。 从其 L3 缓存规格来看，该芯片拥有 2 颗 CCD，…",
+        "publishedAt": "2026-10-02T15:30:57.000Z",
+        "summary": "IT之家 10 月 2 日消息，极氪汽车今日宣布焕新极氪 001 色彩上新，推出全新外饰色“哑光岩灰”以及全新内饰色“冰川灰”。2026 年 10 月 1 日-10 月 31 日，下定焕新极氪 001 可享更多限时权益。 IT之家注意到，焕新极氪 001 于 2025 年 10 月 11 日上市， 售价 26.98 万元起 ，可限时叠加 1 万元置换金。 焕新极氪 001 全系标配 900V 全栈高压架构，实现 CLTC 综合工况续航里程最长达到 810 公里；实现电池最大…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-86950",
+        "id": "github-advisory-ghsa-5rmq-chc7-m22f",
         "category": "security",
-        "title": "Apple Multiple Products：Apple Multiple Products Out-of-Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86950",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-29T00:00:00.000Z",
-        "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
-        "badge": "CVE-2026-86950",
-        "signal": "已遭利用 · 整改期限 2026-10-02"
-      },
-      {
-        "id": "ai-google-deepmind-c696e8b1f3422473",
-        "category": "ai",
-        "title": "Introducing SynthID Bio",
-        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-30T15:03:07.000Z",
-        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-49933235",
-        "category": "dev",
-        "title": "The Legend of von Neumann (1973) [pdf]",
-        "url": "https://gwern.net/doc/math/1973-halmos.pdf",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-02T13:18:32.000Z",
-        "badge": "HN",
-        "signal": "185 分 · 97 评论"
-      },
-      {
-        "id": "cn-baidu-e50ccce6669518f6",
-        "category": "cn",
-        "title": "亚运三金到手 归来仍是高中生",
-        "url": "https://www.baidu.com/s?wd=%E4%BA%9A%E8%BF%90%E4%B8%89%E9%87%91%E5%88%B0%E6%89%8B+%E5%BD%92%E6%9D%A5%E4%BB%8D%E6%98%AF%E9%AB%98%E4%B8%AD%E7%94%9F&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "9月29日，不到18岁的高中生陈妤颉在亚运会4x100米混合接力中极限逆转夺冠，最终斩获3金1银。赛后她表现“松弛”，笑称奖牌太重。此前她由网球转练田径，父母将训练全程托付教练。目前高三的她面临高考与备战奥运双重压力，她坦言先高考加油，没有目标就是最好的目标。",
-        "badge": "热搜",
-        "signal": "7,714,100 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-jxxv-8r27-vm4p",
-        "category": "security",
-        "title": "vm2 CLI provides no sandbox isolation - host-realm require() is reachable from sandboxed scripts",
-        "url": "https://github.com/advisories/GHSA-jxxv-8r27-vm4p",
+        "title": "Vibe-Trading file-read tools expose arbitrary server-readable files",
+        "url": "https://github.com/advisories/GHSA-5rmq-chc7-m22f",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-01T15:40:45.000Z",
-        "summary": "### Summary The `vm2` command-line tool installed by `npm install -g vm2` and documented in the README's \"CLI\" section runs the supplied script under `NodeVM` with `require:{external:true}` and no `root` / `context` / `builtin` configured.…",
-        "badge": "CVE-2026-92950",
-        "signal": "HIGH · CVSS 8.6"
+        "publishedAt": "2026-10-02T22:44:12.000Z",
+        "summary": "### Summary: 2 findings — `safe_user_path()` accepts any path under `Path.home()` or `Path.cwd()`, which inside the shipped root container resolves to `/root` and `/app` (so all of root's home, including `/root/.ssh/id_rsa`, `/root/.aws/cr…",
+        "badge": "GHSA-5RMQ-CHC7-M22F",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-56c490db040147f1",
+        "id": "ai-google-deepmind-34692efacd3b982a",
         "category": "ai",
-        "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
-        "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-02T04:01:31.000Z",
-        "badge": "Hugging Face"
+        "title": "Introducing Gemini 3.8 Live with Live Avatar",
+        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-24T16:20:39.000Z",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1246158",
@@ -251,75 +333,75 @@
         "signal": "13 回复"
       },
       {
-        "id": "cn-item-0dfb48d3cfcc407e",
+        "id": "cn-baidu-18cd4eea1c1e18a5",
         "category": "cn",
-        "title": "中国年轻人掀起“AI定制游”热潮",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707226.shtml",
+        "title": "万里边关 同升五星红旗",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%87%E9%87%8C%E8%BE%B9%E5%85%B3+%E5%90%8C%E5%8D%87%E4%BA%94%E6%98%9F%E7%BA%A2%E6%97%97&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "破晓闻号，戎装整装，步履铿锵，坚守在岗，陆军官兵扎根四方边疆，以晨光为令，以山河为岗，以戎装为责，同升一面五星红旗，共守万里锦绣山河。",
+        "badge": "热搜",
+        "signal": "7,616,322 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-86950",
+        "category": "security",
+        "title": "Apple Multiple Products：Apple Multiple Products Out-of-Bounds Write Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86950",
+        "source": "CISA KEV",
+        "publishedAt": "2026-09-29T00:00:00.000Z",
+        "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+        "badge": "CVE-2026-86950",
+        "signal": "已遭利用 · 整改期限 2026-10-02"
+      },
+      {
+        "id": "ai-hugging-face-74c2ff7e2707d1f6",
+        "category": "ai",
+        "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
+        "url": "https://huggingface.co/blog/open-tts-leaderboard",
+        "source": "Hugging Face",
+        "publishedAt": "2026-09-30T00:00:00.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-49932147",
+        "category": "dev",
+        "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
+        "url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-02T11:07:17.000Z",
+        "badge": "HN",
+        "signal": "144 分 · 32 评论"
+      },
+      {
+        "id": "cn-item-706e3ee8ca74e6c7",
+        "category": "cn",
+        "title": "国庆档票房破3亿！“电影+”玩法上新 文化消费升温",
+        "url": "https://www.chinanews.com.cn/cul/2026/10-02/10707175.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-02T10:00:45.000Z",
-        "summary": "中新网济南10月2日电 (刘驰原)“以前做攻略像是在‘期末备考’，要在上百条长文、短视频里反复比对路线。现在有了AI，只需输入预算和喜好，30秒就能收获一份精确到小时的完美攻略，彻底解放双手。”在浙江宁海的一家古村落茶馆里，刚刚结束第四次“AI定制游”的“00后”林玉，一边喝茶，一边记录着自己的旅途心得。",
+        "publishedAt": "2026-10-02T07:31:39.000Z",
+        "summary": "据网络平台数据",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-88772",
+        "id": "github-advisory-ghsa-jqmf-mx4f-hfr6",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-27T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
-        "badge": "CVE-2026-88772",
-        "signal": "已遭利用 · 整改期限 2026-09-30"
-      },
-      {
-        "id": "ai-openai-b8087b88cb63ae7f",
-        "category": "ai",
-        "title": "The eternal complement",
-        "url": "https://openai.com/index/the-eternal-complement",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-01T17:00:00.000Z",
-        "summary": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-49925974",
-        "category": "dev",
-        "title": "FLUX 3 Image",
-        "url": "https://bfl.ai/models/flux-3-image",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-01T19:24:29.000Z",
-        "badge": "HN",
-        "signal": "137 分 · 22 评论"
-      },
-      {
-        "id": "cn-it-b887be1ecdf22f16",
-        "category": "cn",
-        "title": "焕新极氪 001 配色上新：推出哑光岩灰车色、冰川灰内饰",
-        "url": "https://www.ithome.com/1/009/371.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-02T15:30:57.000Z",
-        "summary": "IT之家 10 月 2 日消息，极氪汽车今日宣布焕新极氪 001 色彩上新，推出全新外饰色“哑光岩灰”以及全新内饰色“冰川灰”。2026 年 10 月 1 日-10 月 31 日，下定焕新极氪 001 可享更多限时权益。 IT之家注意到，焕新极氪 001 于 2025 年 10 月 11 日上市， 售价 26.98 万元起 ，可限时叠加 1 万元置换金。 焕新极氪 001 全系标配 900V 全栈高压架构，实现 CLTC 综合工况续航里程最长达到 810 公里；实现电池最大…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-h85j-hv3c-qfgq",
-        "category": "security",
-        "title": "vm2 exposes host HTTPS credentials and TLS traffic through globalAgent",
-        "url": "https://github.com/advisories/GHSA-h85j-hv3c-qfgq",
+        "title": "Vibe-Trading LLM-callable tools permit command execution, code injection, and SSRF",
+        "url": "https://github.com/advisories/GHSA-jqmf-mx4f-hfr6",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-01T15:38:26.000Z",
-        "summary": "Summary vm2 3.11.6 exposes the host process's real `https.globalAgent` when a `NodeVM` is explicitly allowed to require `https`. The module is wrapped as read-only, but calls to methods on the shared agent still mutate the host object. San…",
-        "badge": "CVE-2026-92940",
+        "publishedAt": "2026-10-02T22:44:03.000Z",
+        "summary": "### Summary: 5 findings — `BashTool` shell-injection sink (F6, the canonical RCE primitive), `BackgroundRunTool` async shell-injection sink (F7), backtest `exec_module()` runs top-level statements before the `SignalEngine` class check (F8 …",
+        "badge": "GHSA-JQMF-MX4F-HFR6",
         "signal": "CRITICAL · CVSS 10.0"
       },
       {
-        "id": "ai-google-deepmind-34692efacd3b982a",
+        "id": "ai-openai-637d3dfa247fa816",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live with Live Avatar",
-        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-24T16:20:39.000Z",
-        "badge": "Google DeepMind"
+        "title": "How Albertsons Companies is reimagining retail from the inside out",
+        "url": "https://openai.com/index/albertsons-reimagining-retail",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-01T16:00:00.000Z",
+        "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
+        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1246156",
@@ -333,88 +415,6 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-18cd4eea1c1e18a5",
-        "category": "cn",
-        "title": "万里边关 同升五星红旗",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%87%E9%87%8C%E8%BE%B9%E5%85%B3+%E5%90%8C%E5%8D%87%E4%BA%94%E6%98%9F%E7%BA%A2%E6%97%97&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "破晓闻号，戎装整装，步履铿锵，坚守在岗，陆军官兵扎根四方边疆，以晨光为令，以山河为岗，以戎装为责，同升一面五星红旗，共守万里锦绣山河。",
-        "badge": "热搜",
-        "signal": "7,617,490 热度"
-      },
-      {
-        "id": "cisa-kev-cve-2026-88771",
-        "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Input Validation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88771",
-        "source": "CISA KEV",
-        "publishedAt": "2026-09-27T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
-        "badge": "CVE-2026-88771",
-        "signal": "已遭利用 · 整改期限 2026-09-30"
-      },
-      {
-        "id": "ai-hugging-face-74c2ff7e2707d1f6",
-        "category": "ai",
-        "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
-        "url": "https://huggingface.co/blog/open-tts-leaderboard",
-        "source": "Hugging Face",
-        "publishedAt": "2026-09-30T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-49927747",
-        "category": "dev",
-        "title": "Sites in ChatGPT",
-        "url": "https://chatgpt.com/features/sites/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-01T22:22:21.000Z",
-        "badge": "HN",
-        "signal": "52 分 · 60 评论"
-      },
-      {
-        "id": "cn-item-706e3ee8ca74e6c7",
-        "category": "cn",
-        "title": "国庆档票房破3亿！“电影+”玩法上新 文化消费升温",
-        "url": "https://www.chinanews.com.cn/cul/2026/10-02/10707175.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-02T07:31:39.000Z",
-        "summary": "据网络平台数据",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-c48m-32m9-vx93",
-        "category": "security",
-        "title": "vm2 Custom Module Resolver Can Bypass the External Package Allowlist by Loading a Colliding Host Package",
-        "url": "https://github.com/advisories/GHSA-c48m-32m9-vx93",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-01T15:37:19.000Z",
-        "summary": "### Summary vm2 is a sandbox library for isolating and executing untrusted JavaScript code inside a Node.js process. It can restrict access to built-in modules and external packages. When `NodeVM` enables an `external` allowlist together w…",
-        "badge": "CVE-2026-92951",
-        "signal": "CRITICAL · CVSS 9.9"
-      },
-      {
-        "id": "ai-openai-637d3dfa247fa816",
-        "category": "ai",
-        "title": "How Albertsons Companies is reimagining retail from the inside out",
-        "url": "https://openai.com/index/albertsons-reimagining-retail",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-01T16:00:00.000Z",
-        "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1246151",
-        "category": "dev",
-        "title": "一份行为，三种宿主：聊聊 XiHan.UI 这个框架无关的 Headless 组件库",
-        "url": "https://www.v2ex.com/t/1246151",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T10:41:06.000Z",
-        "summary": "一份行为，三种宿主：聊聊 XiHan.UI 这个框架无关的 Headless 组件库 做前端久了，多半碰到过这种局面：后台用 Vue ，官网用 React ，角落里还剩几个没有框架的老页面。三边各有一个弹窗，按 Esc 有的关有的不关，关掉以后焦点有的回到按钮上，有的掉回页面顶部。用鼠标的人察觉不到，用键盘和读屏的人每天都被绊一下。再往后换框架，组件库整套重写，最先丢的正是这些看不见的东西：方向键往哪走，读屏念什么，焦点落在哪。 XiHan.UI 就是冲着这件事做的： 快速…",
-        "badge": "程序员",
-        "signal": "5 回复"
-      },
-      {
         "id": "cn-it-050d3d7dab3e6917",
         "category": "cn",
         "title": "韩国全胜卫冕亚运会《英雄联盟》项目冠军，中国台北收获第二",
@@ -425,15 +425,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-67279",
+        "id": "cisa-kev-cve-2026-88772",
         "category": "security",
-        "title": "MikroTik RouterOS：Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88772",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-25T00:00:00.000Z",
-        "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthentic…",
-        "badge": "CVE-2026-67279",
-        "signal": "已遭利用 · 整改期限 2026-09-28"
+        "publishedAt": "2026-09-27T00:00:00.000Z",
+        "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+        "badge": "CVE-2026-88772",
+        "signal": "已遭利用 · 整改期限 2026-09-30"
       },
       {
         "id": "ai-google-deepmind-68ead6b6af2b7144",
@@ -446,14 +446,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49928566",
+        "id": "hn-49933740",
         "category": "dev",
-        "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
-        "url": "https://stillwet.art/",
+        "title": "With most information hidden, the game Stratego had stumped AI until now",
+        "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-02T00:27:56.000Z",
+        "publishedAt": "2026-10-02T14:11:24.000Z",
         "badge": "HN",
-        "signal": "105 分 · 34 评论"
+        "signal": "134 分 · 58 评论"
       },
       {
         "id": "cn-baidu-3f294d83e6a7622c",
@@ -463,18 +463,18 @@
         "source": "百度热搜",
         "summary": "近日，一男子骑行偶然路过某地停车赏景，回头发现竟停在烈士纪念碑前，心中十分自责。他特意在纪念碑上留下一面国旗，哽咽表示“这是他们应得的”，并呼吁更多人缅怀先烈。",
         "badge": "热搜",
-        "signal": "7,520,829 热度"
+        "signal": "7,520,378 热度"
       },
       {
-        "id": "github-advisory-ghsa-6rh5-qq4q-97xh",
+        "id": "github-advisory-ghsa-9q4r-4842-93vw",
         "category": "security",
-        "title": "vm2: NodeVM builtin denylist bypass via fs/promises despite -fs, allowing host filesystem writes",
-        "url": "https://github.com/advisories/GHSA-6rh5-qq4q-97xh",
+        "title": "Trigger.dev: Cross-tenant SQL injection in the TSQL query compiler (POST /api/v1/query) via unsanitized window-function name",
+        "url": "https://github.com/advisories/GHSA-9q4r-4842-93vw",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-01T15:36:48.000Z",
-        "summary": "## Summary NodeVM's builtin wildcard policy can allow sandboxed code to access `fs/promises` even when the embedder denies `fs`. With the following configuration: ```js require: { builtin: ['*', '-fs', '-child_process'] } ``` `require('fs'…",
-        "badge": "CVE-2026-92958",
-        "signal": "HIGH · CVSS 8.5"
+        "publishedAt": "2026-10-02T22:42:20.000Z",
+        "summary": "### Summary A cross-tenant SQL injection in the TSQL query compiler lets **any authenticated trigger.dev customer read every other tenant's analytics data**. The customer-facing query endpoint `POST /api/v1/query` accepts a TSQL/TRQL query…",
+        "badge": "GHSA-9Q4R-4842-93VW",
+        "signal": "HIGH · CVSS 7.7"
       },
       {
         "id": "ai-hugging-face-dc53fce90c6f36f5",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246138",
+        "id": "v2ex-1246151",
         "category": "dev",
-        "title": "tg 号被限制 群里发言，不能私信群陌生人，可以申诉解封吗",
-        "url": "https://www.v2ex.com/t/1246138",
+        "title": "一份行为，三种宿主：聊聊 XiHan.UI 这个框架无关的 Headless 组件库",
+        "url": "https://www.v2ex.com/t/1246151",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T08:36:18.000Z",
-        "summary": "自己的号很少聊天，就是加的群比较多。但没发言。 最近使用 api 读取群消息，后面就被限制了。 有解封的渠道吗，用那个 spambot 申诉几次 都不管用。",
+        "publishedAt": "2026-10-02T10:41:06.000Z",
+        "summary": "一份行为，三种宿主：聊聊 XiHan.UI 这个框架无关的 Headless 组件库 做前端久了，多半碰到过这种局面：后台用 Vue ，官网用 React ，角落里还剩几个没有框架的老页面。三边各有一个弹窗，按 Esc 有的关有的不关，关掉以后焦点有的回到按钮上，有的掉回页面顶部。用鼠标的人察觉不到，用键盘和读屏的人每天都被绊一下。再往后换框架，组件库整套重写，最先丢的正是这些看不见的东西：方向键往哪走，读屏念什么，焦点落在哪。 XiHan.UI 就是冲着这件事做的： 快速…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "5 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 88318,
+        "stars": 88557,
         "starsToday": 683
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
         "language": "Go",
-        "stars": 108980,
+        "stars": 109074,
         "starsToday": 271
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 294337,
+        "stars": 294433,
         "starsToday": 561
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 151455,
+        "stars": 151726,
         "starsToday": 1429
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design language that makes your AI harness better at design.",
         "language": "JavaScript",
-        "stars": 74152,
+        "stars": 74280,
         "starsToday": 717
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 274553,
+        "stars": 274671,
         "starsToday": 955
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 14343,
+        "stars": 14412,
         "starsToday": 584
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/coreyhaines31/marketingskills",
         "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "language": "JavaScript",
-        "stars": 52325,
+        "stars": 52388,
         "starsToday": 139
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 55771,
+        "stars": 55863,
         "starsToday": 584
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 24972,
+        "stars": 25017,
         "starsToday": 276
       }
     ],
-    "updatedAt": "2026-10-02T18:25:20.754Z"
+    "updatedAt": "2026-10-02T22:58:06.246Z"
   }
 }
