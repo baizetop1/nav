@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-02T22:58:06.246Z",
+  "generatedAt": "2026-10-03T01:58:43.084Z",
   "intelligence": {
-    "updatedAt": "2026-10-02T22:58:06.246Z",
+    "updatedAt": "2026-10-03T01:58:43.084Z",
     "items": [
       {
-        "id": "cn-item-1de280110718a49c",
+        "id": "cn-item-a11f6fd77634cd01",
         "category": "cn",
-        "title": "我国首个百兆瓦级 这个巨型“充电宝”成功并网",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-02/10707319.shtml",
+        "title": "澳大利亚发生汽车冲撞人群事件 致数人受伤",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-03/10707358.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-02T12:49:43.000Z",
-        "summary": "今天(10月2日)，我国首个百兆瓦级压缩二氧化碳储能项目——中国华电新疆木垒压缩二氧化碳储能项目成功并网，开辟了大容量压缩二氧化碳储能绿色、零碳、高效、经济的新路线。",
+        "publishedAt": "2026-10-03T00:52:28.000Z",
+        "summary": "中新网10月3日电 据澳大利亚广播公司(ABC)报道，澳大利亚新南威尔士州救护车服务中心证实，当地时间3日，纽卡斯尔市发生一起汽车冲撞人群事件，导致数人受伤。",
         "badge": "中新网要闻"
       },
       {
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49938521",
+        "id": "hn-49933869",
         "category": "dev",
-        "title": "Zig v0.17.0",
-        "url": "https://ziglang.org/download/0.17.0/release-notes.html",
+        "title": "The Forgetful CPU (Linux on M4)",
+        "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-02T20:56:36.000Z",
+        "publishedAt": "2026-10-02T14:22:12.000Z",
         "badge": "HN",
-        "signal": "151 分 · 75 评论"
+        "signal": "109 分 · 35 评论"
       },
       {
-        "id": "cn-it-e595ddbcf92f393f",
+        "id": "cn-it-7ac345478ef64b91",
         "category": "cn",
-        "title": "继 AMD 后，高通、英特尔、英伟达硬件本月将全面支持微软高级着色器交付",
-        "url": "https://www.ithome.com/1/009/373.htm",
+        "title": "烤串店未开业就被差评，车评人韩路质疑点评平台可随意造假评论",
+        "url": "https://www.ithome.com/1/009/399.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-02T16:16:55.000Z",
-        "summary": "IT之家 10 月 3 日消息，Microsoft（微软）当地时间 1 日通过 DirectX 开发者博客宣布，高级着色器交付 (ASD) 将在本月扩展到高通、英特尔、英伟达硬件上。 由于 AMD 的 \"RDNA\" 家族已率先支持 ASD，这意味着 该特性即将实现对四大 GPU 制造商平台的全覆盖 。更多用户将可享受到直接下载云端预编译着色器带来的好处：缩短加载时间、消除着色器卡顿。 高通已通过今年 9 月 22 日上线的 2026.08.3 显卡驱动为骁龙 X2 的核显提…",
+        "publishedAt": "2026-10-03T01:48:21.000Z",
+        "summary": "IT之家 10 月 3 日消息，10 月 2 日，车评人韩路在微博发文称，自己的“去野烤串”饭馆当天 17 点才开始试营业，然而店没开门，差评却提前来到。 韩路表示，该店在美团、高德、大众点评平台收到了一堆造假抹黑“已经吃过了”的差评点评。“实体经济本来就不好弄，平台为了评论热闹， 把真实点评的门槛去掉 ，任何人可随意可以造假真实评论抹黑商家， 也没任何审核机制 ，完全不需要上传任何吃过这家的证据， 造假抹黑成本为 0 ，这样对于商家真是太不公平和打击了。” 韩路直言，自己…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-72qq-p3r5-f7wq",
+        "id": "github-advisory-ghsa-x4q3-gcj3-m6cf",
         "category": "security",
-        "title": "@a2ui/web_core: `openUrl` permits `javascript:` URI execution via agent-supplied button actions",
-        "url": "https://github.com/advisories/GHSA-72qq-p3r5-f7wq",
+        "title": "gitea-runner: workflow container.options passes host namespaces and capability flags to job container when privileged mode is disabled",
+        "url": "https://github.com/advisories/GHSA-x4q3-gcj3-m6cf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T22:55:49.000Z",
-        "summary": "### Summary The `openUrl` function in `@a2ui/web_core` passes an agent-controlled URL directly to `window.open()` without validating the URI scheme. A malicious agent can supply a `javascript:` URI as the `url` argument of a `Button` compo…",
-        "badge": "CVE-2026-10032",
-        "signal": "CRITICAL · CVSS 9.3"
+        "publishedAt": "2026-10-02T23:18:12.000Z",
+        "summary": "### Summary act_runner appends workflow-controlled `jobs. .container.options` directly to the Docker HostConfig for the job container. When runner privileged mode is disabled, only `Privileged` is forced false. Host namespace flags, capabi…",
+        "badge": "CVE-2026-73802",
+        "signal": "CRITICAL · CVSS 9.9"
       },
       {
         "id": "ai-google-deepmind-ce56aa83d0064ef1",
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246196",
+        "id": "v2ex-1246207",
         "category": "dev",
-        "title": "[CCProgress] 给 Claude Code 加了一个进度条， 长任务时能看到走到哪一步",
-        "url": "https://www.v2ex.com/t/1246196",
+        "title": "这两年 AI 进步太快了 一年一个新模样",
+        "url": "https://www.v2ex.com/t/1246207",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T19:53:20.000Z",
-        "summary": "我自己作为 Claude Code 的重度用户（月 150 亿 token 消耗），经常会让 Claude Opus 去跑一个长任务，有一个痛点就是在把任务丢给他以后，他在做的过程时完全没法看他走到哪一步了，只能通过看他的一些输出、工具调用去推，非常的不直观，也不知道到底是做偏了，会话也不敢停。 刚刷 X 看到 claude 支持 mod 了，就撸了一个进度条插件，欢迎体验！ Github: https://github.com/amigoer/ccprogress",
+        "publishedAt": "2026-10-03T01:01:32.000Z",
+        "summary": "2024：网页代码补全/问答助手 2025：AI 能认真帮你写代码 2026：AI 可以独立负责一整块开发任务 按这速度，估计明年 AI 可以负责整个小型项目的自我迭代，维护，完全不需要人工参与，直接\"许愿式开发\"",
         "badge": "程序员",
         "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-0f2daedde7d965a9",
+        "id": "cn-baidu-d30201a480dbfc81",
         "category": "cn",
-        "title": "全国各地为何都在“爆改地铁”",
-        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E5%9B%BD%E5%90%84%E5%9C%B0%E4%B8%BA%E4%BD%95%E9%83%BD%E5%9C%A8%E2%80%9C%E7%88%86%E6%94%B9%E5%9C%B0%E9%93%81%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国男足争亚运铜牌",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E7%94%B7%E8%B6%B3%E4%BA%89%E4%BA%9A%E8%BF%90%E9%93%9C%E7%89%8C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近期，全国多地地铁站被改造成运动馆、菜市场等多元空间。事件起因于地铁票务收入难抵高昂运维成本，且此前依赖房地产反补收入的路径受阻。为寻求出路，地铁运营方转变思路，从早期单纯出租空间收租，转向参与招商管理及打造体育、阅读等生活方式场景，试图在存量时代通过精细化经营挖掘增量空间。",
+        "summary": "10月3日，中国男足亚运队将在铜牌赛中迎战乌兹别克斯坦队。这支青年军本届赛事表现可圈可点，中国男足时隔28年再度晋级四强，半决赛被卫冕冠军韩国队逆转后，全队上下都铆足一股劲，希望带一枚亚运奖牌回国。",
         "badge": "热搜",
-        "signal": "7,808,736 热度"
+        "signal": "7,809,397 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102489",
@@ -117,34 +117,34 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49937276",
+        "id": "hn-49940219",
         "category": "dev",
-        "title": "Apple Pass Designer",
-        "url": "https://developer.apple.com/pass-designer/",
+        "title": "Things That Apparently Cause Cancer",
+        "url": "https://www.breakthroughjournal.org/p/things-that-apparently-cause-cancer",
         "source": "Hacker News",
-        "publishedAt": "2026-10-02T19:06:56.000Z",
+        "publishedAt": "2026-10-03T00:23:11.000Z",
         "badge": "HN",
-        "signal": "253 分 · 176 评论"
+        "signal": "36 分 · 16 评论"
       },
       {
-        "id": "cn-item-90777bf4e82c63cb",
+        "id": "cn-item-1de280110718a49c",
         "category": "cn",
-        "title": "贵州“村超”赛场绘就统战帮扶同心画卷",
-        "url": "https://www.chinanews.com.cn/txy/2026/10-02/10707275.shtml",
+        "title": "我国首个百兆瓦级 这个巨型“充电宝”成功并网",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-02/10707319.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-02T11:49:43.000Z",
-        "summary": "中新网贵州榕江10月2日电 贵州“村超”第三届国际足球赛1日在贵州榕江启幕，来自南美洲、欧洲、亚洲、非洲等地区国家的551名球员齐聚贵州“村超”发源地榕江县，共赴一场草根足球盛会。",
+        "publishedAt": "2026-10-02T12:49:43.000Z",
+        "summary": "今天(10月2日)，我国首个百兆瓦级压缩二氧化碳储能项目——中国华电新疆木垒压缩二氧化碳储能项目成功并网，开辟了大容量压缩二氧化碳储能绿色、零碳、高效、经济的新路线。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-8ffr-xgwf-xj56",
+        "id": "github-advisory-ghsa-gjj5-9665-rwrc",
         "category": "security",
-        "title": "aws-smithy-json: Uncontrolled recursion in the aws-smithy-json unknown-key skip path allows unauthenticated remote denial of service in smithy-rs generated servers",
-        "url": "https://github.com/advisories/GHSA-8ffr-xgwf-xj56",
+        "title": "probe-image-size: Quadratic-time Denial of Service in the SVG Parser",
+        "url": "https://github.com/advisories/GHSA-gjj5-9665-rwrc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T22:44:52.000Z",
-        "summary": "### Summary Smithy-RS is a Rust code generation and runtime framework that generates HTTP clients and servers from Smithy interface definitions, powering the AWS SDK for Rust and custom service implementations. An issue exists which allows…",
-        "badge": "CVE-2026-18140",
+        "publishedAt": "2026-10-02T23:18:02.000Z",
+        "summary": "## Overview `probe-image-size` scans the SVG header with a searching regular expression, `/ ]*>/`. On input that contains many ` `, the engine restarts the `[^>]*` scan at every ` ' probe.sync(Buffer.from('<a'.repeat(100000), 'latin1')) ``…",
+        "badge": "CVE-2026-104861",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246164",
+        "id": "v2ex-1246196",
         "category": "dev",
-        "title": "这会是 windows 上最好看的终端！",
-        "url": "https://www.v2ex.com/t/1246164",
+        "title": "[CCProgress] 给 Claude Code 加了一个进度条， 长任务时能看到走到哪一步",
+        "url": "https://www.v2ex.com/t/1246196",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T13:18:49.000Z",
-        "summary": "项目出发点其实是眼馋 mac 的各种优秀的终端，分屏，终端持久化，消息通知，命令补齐，平滑光标等等，由于 win 上实在没有太全面的终端 本次更新重大，加入了非常多的内容 项目介绍 彩蛋：在 cc ，codex ，pwsh 内可以显示 Latex 的哟 欢迎各位朋友建议+提 issue ui 方面希望给出更多的建议，争取赶上 mac 的体验！ 喜欢的朋友可以点个 star 哦 项目地址： https://github.com/Kuddev/pebrel",
+        "publishedAt": "2026-10-02T19:53:20.000Z",
+        "summary": "我自己作为 Claude Code 的重度用户（月 150 亿 token 消耗），经常会让 Claude Opus 去跑一个长任务，有一个痛点就是在把任务丢给他以后，他在做的过程时完全没法看他走到哪一步了，只能通过看他的一些输出、工具调用去推，非常的不直观，也不知道到底是做偏了，会话也不敢停。 刚刷 X 看到 claude 支持 mod 了，就撸了一个进度条插件，欢迎体验！ Github: https://github.com/amigoer/ccprogress",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-bdd4942b773b2856",
+        "id": "cn-it-9670beccd819e61f",
         "category": "cn",
-        "title": "AMD“锐龙 9 5900X3D”处理器工程样品现身，配备 32MB + 96MB L3 缓存",
-        "url": "https://www.ithome.com/1/009/372.htm",
+        "title": "“全球首例”：用户反馈 RTX 4090 FE 显卡三角散热件脱落",
+        "url": "https://www.ithome.com/1/009/398.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-02T15:36:05.000Z",
-        "summary": "IT之家 10 月 2 日消息，Chiphell 论坛用户 @灵乌路空 9 月 28 日分享了一款 AMD Socket AM4 平台处理器工程样品的信息。 该处理器代号 \"100-000000652\"，属于 \"Zen 3\" 微架构的 \"Vermeer\" 家族，步进 \"B2\"，拥有 12 核心 24 线程的规格，频率可达 4.85GHz， 配备 32MB + 96MB 的 L3 末级高速缓存 ，热设计功耗为 105W。 从其 L3 缓存规格来看，该芯片拥有 2 颗 CCD，…",
+        "publishedAt": "2026-10-03T01:47:40.000Z",
+        "summary": "IT之家 10 月 3 日消息，网友 u/Maker_753 昨日（10 月 2 日）发布博文，反馈称在移动电脑之后， 其 RTX 4090 Founders Edition 显卡散热器的一块三角形部件脱落，暴露出热管与焊点。 IT之家援引该网友帖子内容，该显卡为 Ada Lovelace 架构旗舰型号，购买时间为 2023 年 8 月。用户联系 NVIDIA 寻求协助，但因 3 年保修期结束，官方拒绝提供维修或更换服务。 该网友尝试检索类似案例，未找到可对照的公开报告。 …",
         "badge": "IT之家"
       },
       {
@@ -200,35 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49938616",
+        "id": "hn-49927754",
         "category": "dev",
-        "title": "The Harness Is the Company",
-        "url": "https://blog.sshh.io/p/the-harness-is-the-company",
+        "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
+        "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
         "source": "Hacker News",
-        "publishedAt": "2026-10-02T21:06:56.000Z",
+        "publishedAt": "2026-10-01T22:23:07.000Z",
         "badge": "HN",
-        "signal": "46 分 · 34 评论"
+        "signal": "511 分 · 228 评论"
       },
       {
-        "id": "cn-baidu-e50ccce6669518f6",
+        "id": "cn-baidu-4a80d8f5188eb2d0",
         "category": "cn",
-        "title": "亚运三金到手 归来仍是高中生",
-        "url": "https://www.baidu.com/s?wd=%E4%BA%9A%E8%BF%90%E4%B8%89%E9%87%91%E5%88%B0%E6%89%8B+%E5%BD%92%E6%9D%A5%E4%BB%8D%E6%98%AF%E9%AB%98%E4%B8%AD%E7%94%9F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "刺伤迪拜航空机长的副驾驶身份披露",
+        "url": "https://www.baidu.com/s?wd=%E5%88%BA%E4%BC%A4%E8%BF%AA%E6%8B%9C%E8%88%AA%E7%A9%BA%E6%9C%BA%E9%95%BF%E7%9A%84%E5%89%AF%E9%A9%BE%E9%A9%B6%E8%BA%AB%E4%BB%BD%E6%8A%AB%E9%9C%B2&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月29日，不到18岁的高中生陈妤颉在亚运会4x100米混合接力中极限逆转夺冠，最终斩获3金1银。赛后她表现“松弛”，笑称奖牌太重。此前她由网球转练田径，父母将训练全程托付教练。目前高三的她面临高考与备战奥运双重压力，她坦言先高考加油，没有目标就是最好的目标。",
+        "summary": "当地时间10月2日，消息人士透露，涉嫌袭击迪拜航空航班机长的副驾驶曾因其极端主义观点而遭另一家航空公司解职。此前，载有以色列乘客的迪拜航空FZ1073航班从阿联酋迪拜飞往以色列特拉维夫途中发生安全事件。",
         "badge": "热搜",
-        "signal": "7,714,563 热度"
+        "signal": "7,713,013 热度"
       },
       {
-        "id": "github-advisory-ghsa-v2f8-6655-7grj",
+        "id": "github-advisory-ghsa-x8gv-g2g3-65fj",
         "category": "security",
-        "title": "Vibe-Trading FastAPI endpoints permit unauthenticated access, file upload, and an RCE chain",
-        "url": "https://github.com/advisories/GHSA-v2f8-6655-7grj",
+        "title": "SiYuan Agent Tools SSRF via DNS-Rebinding TOCTOU (Bypass of CheckHostSSRF)",
+        "url": "https://github.com/advisories/GHSA-x8gv-g2g3-65fj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T22:44:26.000Z",
-        "summary": "### Summary: 5 findings — unauthenticated full-API exposure (F1, lead Critical), read-side authorization gap that persists even with `API_AUTH_KEY` set (F2), unauthenticated file write of `.py`/`.sh`/`.yaml` to a server-returned path (F3),…",
-        "badge": "GHSA-V2F8-6655-7GRJ",
-        "signal": "CRITICAL · CVSS 10.0"
+        "publishedAt": "2026-10-02T23:17:16.000Z",
+        "summary": "# Security Advisory — SiYuan Agent Tools SSRF via DNS-Rebinding TOCTOU (Bypass of `CheckHostSSRF`) | Field | Value | |---|---| | **Disclosed by** | joysinleung (`joysinleung@gmail.com`) | | **Report date** | 2026-08-13 | | **Product** | Si…",
+        "badge": "GHSA-X8GV-G2G3-65FJ",
+        "signal": "HIGH · CVSS 8.2"
       },
       {
         "id": "ai-hugging-face-56c490db040147f1",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246163",
+        "id": "v2ex-1246164",
         "category": "dev",
-        "title": "一天上线了个万圣节小站",
-        "url": "https://www.v2ex.com/t/1246163",
+        "title": "这会是 windows 上最好看的终端！",
+        "url": "https://www.v2ex.com/t/1246164",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T13:01:34.000Z",
-        "summary": "今天一天上线了个万圣节小站 Cloudflare + Stripe ，已经跑通第一单 $1.99 。冲一下万圣节季节词，看能不能吃到流量 🎃 https://hallowpaws.com",
+        "publishedAt": "2026-10-02T13:18:49.000Z",
+        "summary": "项目出发点其实是眼馋 mac 的各种优秀的终端，分屏，终端持久化，消息通知，命令补齐，平滑光标等等，由于 win 上实在没有太全面的终端 本次更新重大，加入了非常多的内容 项目介绍 彩蛋：在 cc ，codex ，pwsh 内可以显示 Latex 的哟 欢迎各位朋友建议+提 issue ui 方面希望给出更多的建议，争取赶上 mac 的体验！ 喜欢的朋友可以点个 star 哦 项目地址： https://github.com/Kuddev/pebrel",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-item-0dfb48d3cfcc407e",
+        "id": "cn-item-90777bf4e82c63cb",
         "category": "cn",
-        "title": "中国年轻人掀起“AI定制游”热潮",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707226.shtml",
+        "title": "贵州“村超”赛场绘就统战帮扶同心画卷",
+        "url": "https://www.chinanews.com.cn/txy/2026/10-02/10707275.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-02T10:00:45.000Z",
-        "summary": "中新网济南10月2日电 (刘驰原)“以前做攻略像是在‘期末备考’，要在上百条长文、短视频里反复比对路线。现在有了AI，只需输入预算和喜好，30秒就能收获一份精确到小时的完美攻略，彻底解放双手。”在浙江宁海的一家古村落茶馆里，刚刚结束第四次“AI定制游”的“00后”林玉，一边喝茶，一边记录着自己的旅途心得。",
+        "publishedAt": "2026-10-02T11:49:43.000Z",
+        "summary": "中新网贵州榕江10月2日电 贵州“村超”第三届国际足球赛1日在贵州榕江启幕，来自南美洲、欧洲、亚洲、非洲等地区国家的551名球员齐聚贵州“村超”发源地榕江县，共赴一场草根足球盛会。",
         "badge": "中新网要闻"
       },
       {
@@ -282,34 +282,34 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49927754",
+        "id": "hn-49937276",
         "category": "dev",
-        "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
-        "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
+        "title": "Apple Pass Designer",
+        "url": "https://developer.apple.com/pass-designer/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-01T22:23:07.000Z",
+        "publishedAt": "2026-10-02T19:06:56.000Z",
         "badge": "HN",
-        "signal": "423 分 · 190 评论"
+        "signal": "323 分 · 215 评论"
       },
       {
-        "id": "cn-it-b887be1ecdf22f16",
+        "id": "cn-it-ae197b7144ed7c60",
         "category": "cn",
-        "title": "焕新极氪 001 配色上新：推出哑光岩灰车色、冰川灰内饰",
-        "url": "https://www.ithome.com/1/009/371.htm",
+        "title": "曝索尼重启《捉猴啦》，沉寂 16 年经典游戏 IP 有望回归",
+        "url": "https://www.ithome.com/1/009/397.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-02T15:30:57.000Z",
-        "summary": "IT之家 10 月 2 日消息，极氪汽车今日宣布焕新极氪 001 色彩上新，推出全新外饰色“哑光岩灰”以及全新内饰色“冰川灰”。2026 年 10 月 1 日-10 月 31 日，下定焕新极氪 001 可享更多限时权益。 IT之家注意到，焕新极氪 001 于 2025 年 10 月 11 日上市， 售价 26.98 万元起 ，可限时叠加 1 万元置换金。 焕新极氪 001 全系标配 900V 全栈高压架构，实现 CLTC 综合工况续航里程最长达到 810 公里；实现电池最大…",
+        "publishedAt": "2026-10-03T01:35:19.000Z",
+        "summary": "IT之家 10 月 3 日消息，科技媒体 Wccftech 昨日（10 月 2 日）发布博文， 报道称索尼可能重启沉寂约 16 年的经典游戏 IP《捉猴啦》（Ape Escape），该项目已进入实际开发阶段。 有用户于 10 月 1 日在 ResetEra 论坛上发帖，表示两个独立信源的交叉印证，指出索尼正在重启开发《捉猴啦》游戏，而消息源 Nate The Hate 随后跟帖表示：“正如我之前所说，索尼正计划重启一些沉寂已久的系列游戏。” IT之家注：《捉猴啦》由索尼日本…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-5rmq-chc7-m22f",
+        "id": "github-advisory-ghsa-x8mw-p69m-v3mx",
         "category": "security",
-        "title": "Vibe-Trading file-read tools expose arbitrary server-readable files",
-        "url": "https://github.com/advisories/GHSA-5rmq-chc7-m22f",
+        "title": "@fastify/busboy vulnerable to Denial of Service via prototype-named multipart part header",
+        "url": "https://github.com/advisories/GHSA-x8mw-p69m-v3mx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T22:44:12.000Z",
-        "summary": "### Summary: 2 findings — `safe_user_path()` accepts any path under `Path.home()` or `Path.cwd()`, which inside the shipped root container resolves to `/root` and `/app` (so all of root's home, including `/root/.ssh/id_rsa`, `/root/.aws/cr…",
-        "badge": "GHSA-5RMQ-CHC7-M22F",
+        "publishedAt": "2026-10-02T23:16:36.000Z",
+        "summary": "### Impact Versions of `@fastify/busboy` from 1.0.0 and prior to 3.2.1 are vulnerable to a Denial of Service. The multipart header parser stores part-header names on a plain JavaScript object, so a part header named `__proto__` or `constru…",
+        "badge": "CVE-2026-19481",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246158",
+        "id": "v2ex-1246163",
         "category": "dev",
-        "title": "做了个真匿名的树洞",
-        "url": "https://www.v2ex.com/t/1246158",
+        "title": "一天上线了个万圣节小站",
+        "url": "https://www.v2ex.com/t/1246163",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T12:13:44.000Z",
-        "summary": "想做个真正的匿名树洞应该好多年了，域名都注册十多年了，现在开发容易多了 https://siyuzhe.com 刚做好，没内容，都是乱七八糟的测试主题和留言",
+        "publishedAt": "2026-10-02T13:01:34.000Z",
+        "summary": "今天一天上线了个万圣节小站 Cloudflare + Stripe ，已经跑通第一单 $1.99 。冲一下万圣节季节词，看能不能吃到流量 🎃 https://hallowpaws.com",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-baidu-18cd4eea1c1e18a5",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "破晓闻号，戎装整装，步履铿锵，坚守在岗，陆军官兵扎根四方边疆，以晨光为令，以山河为岗，以戎装为责，同升一面五星红旗，共守万里锦绣山河。",
         "badge": "热搜",
-        "signal": "7,616,322 热度"
+        "signal": "7,615,957 热度"
       },
       {
         "id": "cisa-kev-cve-2026-86950",
@@ -370,28 +370,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-02T11:07:17.000Z",
         "badge": "HN",
-        "signal": "144 分 · 32 评论"
+        "signal": "198 分 · 45 评论"
       },
       {
-        "id": "cn-item-706e3ee8ca74e6c7",
+        "id": "cn-item-0dfb48d3cfcc407e",
         "category": "cn",
-        "title": "国庆档票房破3亿！“电影+”玩法上新 文化消费升温",
-        "url": "https://www.chinanews.com.cn/cul/2026/10-02/10707175.shtml",
+        "title": "中国年轻人掀起“AI定制游”热潮",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707226.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-02T07:31:39.000Z",
-        "summary": "据网络平台数据",
+        "publishedAt": "2026-10-02T10:00:45.000Z",
+        "summary": "中新网济南10月2日电 (刘驰原)“以前做攻略像是在‘期末备考’，要在上百条长文、短视频里反复比对路线。现在有了AI，只需输入预算和喜好，30秒就能收获一份精确到小时的完美攻略，彻底解放双手。”在浙江宁海的一家古村落茶馆里，刚刚结束第四次“AI定制游”的“00后”林玉，一边喝茶，一边记录着自己的旅途心得。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-jqmf-mx4f-hfr6",
+        "id": "github-advisory-ghsa-xjh9-v7x6-24jw",
         "category": "security",
-        "title": "Vibe-Trading LLM-callable tools permit command execution, code injection, and SSRF",
-        "url": "https://github.com/advisories/GHSA-jqmf-mx4f-hfr6",
+        "title": "@fastify/busboy vulnerable to Denial of Service via oversized multipart boundary",
+        "url": "https://github.com/advisories/GHSA-xjh9-v7x6-24jw",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T22:44:03.000Z",
-        "summary": "### Summary: 5 findings — `BashTool` shell-injection sink (F6, the canonical RCE primitive), `BackgroundRunTool` async shell-injection sink (F7), backtest `exec_module()` runs top-level statements before the `SignalEngine` class check (F8 …",
-        "badge": "GHSA-JQMF-MX4F-HFR6",
-        "signal": "CRITICAL · CVSS 10.0"
+        "publishedAt": "2026-10-02T23:16:17.000Z",
+        "summary": "### Impact Versions of `@fastify/busboy` from 3.1.0 and prior to 3.2.1 are vulnerable to a Denial of Service. The vendored streaming multipart search stores its default skip distance in a `Uint8Array(256)`. A multipart boundary of exactly …",
+        "badge": "CVE-2026-19484",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-637d3dfa247fa816",
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246156",
+        "id": "v2ex-1246158",
         "category": "dev",
-        "title": "冷笑话: Claude 是东方人或匈牙利人",
-        "url": "https://www.v2ex.com/t/1246156",
+        "title": "做了个真匿名的树洞",
+        "url": "https://www.v2ex.com/t/1246158",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T11:38:17.000Z",
-        "summary": "claude 会在 commit message 署名: Co-Authored-By: Claude Fable 5.1 Claude 应该是姓氏，按西方顺序要写成 Fable \"5.1\" Claude 或 Fable Claude V.1 。 结论：Claude 是中国人。",
+        "publishedAt": "2026-10-02T12:13:44.000Z",
+        "summary": "想做个真正的匿名树洞应该好多年了，域名都注册十多年了，现在开发容易多了 https://siyuzhe.com 刚做好，没内容，都是乱七八糟的测试主题和留言",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "14 回复"
       },
       {
-        "id": "cn-it-050d3d7dab3e6917",
+        "id": "cn-it-342a140afaa12aef",
         "category": "cn",
-        "title": "韩国全胜卫冕亚运会《英雄联盟》项目冠军，中国台北收获第二",
-        "url": "https://www.ithome.com/1/009/370.htm",
+        "title": "因内存等成本暴涨，英伟达标准版 Shield TV 停产、Pro 版涨价 50%",
+        "url": "https://www.ithome.com/1/009/396.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-02T15:15:53.000Z",
-        "summary": "IT之家 10 月 2 日消息，在当地时间今日举行的 2026 年爱知 · 名古屋亚运会《英雄联盟》项目决赛中，韩国队以 3:0 的比分战胜中国台北队， 以未失小局的全胜战绩完成对该项目的卫冕 。越南与沙特阿拉伯并列三四名。 在韩国《英雄联盟》代表队中，李 \"Faker\" 相赫、崔 \"Zeus\" 祐齐、柳 \"Keria\" 岷析均为上届冠军阵容成员，另外三名选手则是金 \"Canyon\" 建敷、金 \"Zeka\" 建佑、李 \"Gumayusi\" 珉炯。",
+        "publishedAt": "2026-10-03T01:24:47.000Z",
+        "summary": "IT之家 10 月 3 日消息，科技媒体 Wccftech 昨日（10 月 2 日）发布博文，报道称由于内存等相关组件成本上涨， 英伟达宣布停止生产标准版 Shield TV，并将 Shield TV Pro 售价上调 100 美元至 299.99 美元 （IT之家注：现汇率约合 671.4 元至 2,014 元人民币） ，增涨 50%。 英伟达官方声明称，包括 DRAM 在内的组件成本在整个行业范围内大幅上涨，因此不得不调整售价。此次调价自 10 月 2 日起生效，适用于…",
         "badge": "IT之家"
       },
       {
@@ -446,35 +446,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49933740",
+        "id": "hn-49925184",
         "category": "dev",
-        "title": "With most information hidden, the game Stratego had stumped AI until now",
-        "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+        "title": "Mike Tomlin spent 12 years building a Minecraft city",
+        "url": "https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-02T14:11:24.000Z",
+        "publishedAt": "2026-10-01T18:20:18.000Z",
         "badge": "HN",
-        "signal": "134 分 · 58 评论"
+        "signal": "284 分 · 78 评论"
       },
       {
-        "id": "cn-baidu-3f294d83e6a7622c",
+        "id": "cn-baidu-4bd7accba3331bf4",
         "category": "cn",
-        "title": "男子偶遇烈士纪念碑 留下国旗后哽咽",
-        "url": "https://www.baidu.com/s?wd=%E7%94%B7%E5%AD%90%E5%81%B6%E9%81%87%E7%83%88%E5%A3%AB%E7%BA%AA%E5%BF%B5%E7%A2%91+%E7%95%99%E4%B8%8B%E5%9B%BD%E6%97%97%E5%90%8E%E5%93%BD%E5%92%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“这是国际社会前所未闻的恶性事件”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E8%BF%99%E6%98%AF%E5%9B%BD%E9%99%85%E7%A4%BE%E4%BC%9A%E5%89%8D%E6%89%80%E6%9C%AA%E9%97%BB%E7%9A%84%E6%81%B6%E6%80%A7%E4%BA%8B%E4%BB%B6%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，一男子骑行偶然路过某地停车赏景，回头发现竟停在烈士纪念碑前，心中十分自责。他特意在纪念碑上留下一面国旗，哽咽表示“这是他们应得的”，并呼吁更多人缅怀先烈。",
+        "summary": "近日，中国驻日使馆发言人就原自卫队官员村田晃大持刀侵闯中国驻日使馆案开庭作出回应，称该事件是国际社会前所未闻的恶性事件，严重侵害中方主权与馆舍安全，敦促日方严惩凶手、彻查整改并给出负责任交代。",
         "badge": "热搜",
-        "signal": "7,520,378 热度"
+        "signal": "7,523,812 热度"
       },
       {
-        "id": "github-advisory-ghsa-9q4r-4842-93vw",
+        "id": "github-advisory-ghsa-cjcg-cxmh-9wcr",
         "category": "security",
-        "title": "Trigger.dev: Cross-tenant SQL injection in the TSQL query compiler (POST /api/v1/query) via unsanitized window-function name",
-        "url": "https://github.com/advisories/GHSA-9q4r-4842-93vw",
+        "title": "Praxis affected by HTTP/2 Bomb",
+        "url": "https://github.com/advisories/GHSA-cjcg-cxmh-9wcr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T22:42:20.000Z",
-        "summary": "### Summary A cross-tenant SQL injection in the TSQL query compiler lets **any authenticated trigger.dev customer read every other tenant's analytics data**. The customer-facing query endpoint `POST /api/v1/query` accepts a TSQL/TRQL query…",
-        "badge": "GHSA-9Q4R-4842-93VW",
-        "signal": "HIGH · CVSS 7.7"
+        "publishedAt": "2026-10-02T23:09:37.000Z",
+        "summary": "### Summary Multiple denial-of-service vulnerabilities have been discovered in HTTP/2 server implementations. All have been rated with a severity impact of Important. The vulnerabilities target HPACK, the header compression scheme in HTTP/…",
+        "badge": "GHSA-CJCG-CXMH-9WCR",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-dc53fce90c6f36f5",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246151",
+        "id": "v2ex-1246156",
         "category": "dev",
-        "title": "一份行为，三种宿主：聊聊 XiHan.UI 这个框架无关的 Headless 组件库",
-        "url": "https://www.v2ex.com/t/1246151",
+        "title": "冷笑话: Claude 是东方人或匈牙利人",
+        "url": "https://www.v2ex.com/t/1246156",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-02T10:41:06.000Z",
-        "summary": "一份行为，三种宿主：聊聊 XiHan.UI 这个框架无关的 Headless 组件库 做前端久了，多半碰到过这种局面：后台用 Vue ，官网用 React ，角落里还剩几个没有框架的老页面。三边各有一个弹窗，按 Esc 有的关有的不关，关掉以后焦点有的回到按钮上，有的掉回页面顶部。用鼠标的人察觉不到，用键盘和读屏的人每天都被绊一下。再往后换框架，组件库整套重写，最先丢的正是这些看不见的东西：方向键往哪走，读屏念什么，焦点落在哪。 XiHan.UI 就是冲着这件事做的： 快速…",
+        "publishedAt": "2026-10-02T11:38:17.000Z",
+        "summary": "claude 会在 commit message 署名: Co-Authored-By: Claude Fable 5.1 Claude 应该是姓氏，按西方顺序要写成 Fable \"5.1\" Claude 或 Fable Claude V.1 。 结论：Claude 是中国人。",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -511,8 +511,8 @@
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 88557,
-        "starsToday": 683
+        "stars": 88696,
+        "starsToday": 696
       },
       {
         "id": "github-72f8b46c06f13945",
@@ -521,8 +521,8 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
         "language": "Go",
-        "stars": 109074,
-        "starsToday": 271
+        "stars": 109112,
+        "starsToday": 209
       },
       {
         "id": "github-4251a228ae407247",
@@ -531,8 +531,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 294433,
-        "starsToday": 561
+        "stars": 294485,
+        "starsToday": 556
       },
       {
         "id": "github-61b98383e7d93589",
@@ -541,8 +541,8 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 151726,
-        "starsToday": 1429
+        "stars": 151858,
+        "starsToday": 1435
       },
       {
         "id": "github-21fcbee2e5fa5e51",
@@ -551,8 +551,8 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design language that makes your AI harness better at design.",
         "language": "JavaScript",
-        "stars": 74280,
-        "starsToday": 717
+        "stars": 74353,
+        "starsToday": 722
       },
       {
         "id": "github-89e612f6ea973712",
@@ -561,7 +561,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 274671,
+        "stars": 274736,
         "starsToday": 955
       },
       {
@@ -571,8 +571,8 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 14412,
-        "starsToday": 584
+        "stars": 14445,
+        "starsToday": 594
       },
       {
         "id": "github-9df5cf3dc0bd384d",
@@ -581,8 +581,8 @@
         "url": "https://github.com/coreyhaines31/marketingskills",
         "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "language": "JavaScript",
-        "stars": 52388,
-        "starsToday": 139
+        "stars": 52424,
+        "starsToday": 140
       },
       {
         "id": "github-0495d9fe7b8c8525",
@@ -591,8 +591,8 @@
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "Write HTML. Render video. Built for agents.",
         "language": "TypeScript",
-        "stars": 55863,
-        "starsToday": 584
+        "stars": 55919,
+        "starsToday": 580
       },
       {
         "id": "github-c0524b8a4609ea7c",
@@ -601,10 +601,10 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 25017,
-        "starsToday": 276
+        "stars": 25050,
+        "starsToday": 282
       }
     ],
-    "updatedAt": "2026-10-02T22:58:06.246Z"
+    "updatedAt": "2026-10-03T01:58:43.084Z"
   }
 }
