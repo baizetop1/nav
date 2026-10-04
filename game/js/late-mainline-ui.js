@@ -1,5 +1,5 @@
-import {lateMissionPlan} from './late-mainline-data.js?v=0.54.0';
-import {chapterBattlePlan} from './volume-three.js?v=0.54.0';
+import {lateMissionPlan} from './late-mainline-data.js?v=0.58.0';
+import {chapterBattlePlan} from './volume-three.js?v=0.58.0';
 export function lateMissionCard(s,d,id,esc){
  const q=chapterBattlePlan(s,id),p=lateMissionPlan(s,id,d);if(!p)return '';
  return '<div class="story-rules"><p>队中一人 '+p.level+' 级 · 聚义厅 '+p.hall+' 级 · 体力 '+q.stamina+' · 粮草 '+q.food+'</p><p>共 '+(p.waves.length+1)+' 波。出发时扣费，失败或撤退不返还；胜后回到此处确认战果。</p>'+lateMissionRules(s,d,id,esc)+(q.reason?'<p class="notice">'+esc(q.reason)+'</p>':'')+'</div>';

@@ -559,5 +559,199 @@
       }
     },
     "description": "布囊隔开药瓶与针包，赶路时不相互碰撞。谋略 +22、气血 +180；适合需要留在阵中的谋攻与照应人物。以麻布和药引打造。"
+  },
+  {
+    "id": "bastion_spear",
+    "name": "拒马枪",
+    "type": "weapon",
+    "attribute": {
+      "attack": 36,
+      "defense": 16
+    },
+    "description": "枪杆加固，便于抵住来敌。攻击不及镔铁杖，能多承受一些伤害。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "dark_iron": 3,
+        "tempered_steel": 2,
+        "wood": 3
+      }
+    }
+  },
+  {
+    "id": "bastion_armor",
+    "name": "叠片甲",
+    "type": "armor",
+    "attribute": {
+      "defense": 36,
+      "hp": 160
+    },
+    "description": "甲片下衬硬革，兼顾防御和气血；不提供速度。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "dark_iron": 3,
+        "cured_hide": 2,
+        "woven_linen": 2
+      }
+    }
+  },
+  {
+    "id": "bastion_mirror",
+    "name": "包铁护心镜",
+    "type": "accessory",
+    "attribute": {
+      "hp": 140,
+      "defense": 12
+    },
+    "description": "护住胸腹，用气血和防御换下谋略饰物。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "dark_iron": 2,
+        "tempered_steel": 2,
+        "cloth": 3
+      }
+    }
+  },
+  {
+    "id": "skirmish_blade",
+    "name": "雁翎短刀",
+    "type": "weapon",
+    "attribute": {
+      "attack": 42,
+      "speed": 6
+    },
+    "description": "刀身较短，出手轻快；单次攻击不及镔铁杖。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "dark_iron": 2,
+        "tempered_steel": 2,
+        "cured_hide": 1
+      }
+    }
+  },
+  {
+    "id": "skirmish_coat",
+    "name": "窄袖行衣",
+    "type": "armor",
+    "attribute": {
+      "defense": 18,
+      "speed": 12
+    },
+    "description": "收紧袖口便于抢攻，承伤能力低于重甲。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "woven_linen": 3,
+        "cured_hide": 2,
+        "dark_iron": 1
+      }
+    }
+  },
+  {
+    "id": "skirmish_tally",
+    "name": "行军筹牌",
+    "type": "accessory",
+    "attribute": {
+      "strategy": 18,
+      "speed": 10
+    },
+    "description": "便于传递队中号令。兼顾谋略和出手速度，谋略低于兵略手抄。",
+    "quality": "珍品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "woven_linen": 2,
+        "wood": 3,
+        "dark_iron": 1
+      }
+    }
+  },
+  {
+    "id": "furnace_hammer",
+    "name": "守炉重锤",
+    "type": "weapon",
+    "quality": "上品",
+    "tier": 3,
+    "price": 0,
+    "source": "special",
+    "attribute": {
+      "attack": 64,
+      "defense": 16,
+      "speed": -2
+    },
+    "recipe": {
+      "silver": 0,
+      "items": {}
+    },
+    "description": "炉底密窟专属掉落。攻防兼顾，出手稍慢。"
+  },
+  {
+    "id": "reed_medicine_case",
+    "name": "芦荡药匣",
+    "type": "accessory",
+    "quality": "上品",
+    "tier": 3,
+    "price": 0,
+    "source": "special",
+    "attribute": {
+      "hp": 180,
+      "strategy": 32
+    },
+    "recipe": {
+      "silver": 0,
+      "items": {}
+    },
+    "description": "芦荡药船专属掉落。提高气血和谋略，适合救护好汉。"
+  },
+  {
+    "id": "vault_strategy",
+    "name": "地宫残兵书",
+    "type": "accessory",
+    "quality": "上品",
+    "tier": 3,
+    "price": 0,
+    "source": "special",
+    "attribute": {
+      "attack": 24,
+      "strategy": 26,
+      "speed": 3
+    },
+    "recipe": {
+      "silver": 0,
+      "items": {}
+    },
+    "description": "地宫内室专属掉落。适合兼用兵刃与谋攻的好汉。"
   }
 ]

@@ -122,3 +122,10 @@ html:not([data-theme=night]),html:not([data-theme=night]) body{background:var(--
 
 /* Keep both seal characters inside the compact header. */
 .viewport-shell .brand>.seal{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;width:26px;height:32px;padding:2px;font-size:12px;line-height:1;letter-spacing:1px;white-space:nowrap;overflow:hidden}
+
+/* Full-width hero pickers must not inherit the inline label select offset. */
+.section-hero-picker select{margin-left:0;min-width:0;box-sizing:border-box}
+
+.build-guides details,.gear-refine{border:1px solid var(--line,#d6e1dc);border-radius:8px;padding:8px;margin-block:6px}.build-guides summary,.gear-refine summary{cursor:pointer}.tactics-target h2{font-size:1rem}.tracked-goal{gap:8px}.tracked-goal>div{min-width:0}.tracked-goal .note{display:block;font-size:.75rem;overflow-wrap:anywhere}.gear-trait{line-height:1.5}.tactics-report p{margin-block:5px}@media(max-width:600px){.tactics-target{padding:8px}.tactics-target p{margin-block:5px}.build-guides h2{font-size:1rem}.build-guides details{padding:6px}.gear-refine{padding:5px}}
+
+.battle-threat{padding:8px 10px;border-left:3px solid var(--gold,#b39755);background:var(--surface,#f6faf8);border-radius:6px;margin-bottom:8px}.battle-threat p{margin:4px 0}.threat-countdown{font-weight:600;color:var(--ink,#284d46)}.starter-guide,.replacement-panel,.growth-budget{margin:8px 0;padding:8px;border:1px solid #d9e4df;border-radius:6px}.phase-goals .actions{display:flex;flex-wrap:wrap;gap:6px}

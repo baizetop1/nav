@@ -915,6 +915,214 @@
                 }
               }
             }
+          },
+          {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "type",
+              "attribute",
+              "description",
+              "quality",
+              "tier",
+              "price",
+              "source",
+              "recipe"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "attribute": {
+                "type": "object",
+                "required": [],
+                "additionalProperties": false,
+                "properties": {
+                  "attack": {
+                    "type": "integer"
+                  },
+                  "defense": {
+                    "type": "integer"
+                  },
+                  "hp": {
+                    "type": "integer"
+                  },
+                  "speed": {
+                    "type": "integer"
+                  },
+                  "strategy": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "quality": {
+                "type": "string"
+              },
+              "tier": {
+                "type": "integer",
+                "const": 3
+              },
+              "price": {
+                "type": "integer",
+                "const": 0
+              },
+              "source": {
+                "type": "string",
+                "const": "forge"
+              },
+              "recipe": {
+                "type": "object",
+                "required": [
+                  "silver",
+                  "items"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "silver": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "blueprint",
+                      "dark_iron"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "blueprint": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "const": 1
+                      },
+                      "dark_iron": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "tempered_steel": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "wood": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "cured_hide": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "woven_linen": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "cloth": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "type",
+              "quality",
+              "tier",
+              "price",
+              "source",
+              "attribute",
+              "recipe",
+              "description"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "quality": {
+                "type": "string"
+              },
+              "tier": {
+                "type": "integer"
+              },
+              "price": {
+                "type": "integer",
+                "const": 0
+              },
+              "source": {
+                "type": "string",
+                "const": "special"
+              },
+              "attribute": {
+                "type": "object",
+                "required": [],
+                "additionalProperties": false,
+                "properties": {
+                  "attack": {
+                    "type": "integer"
+                  },
+                  "defense": {
+                    "type": "integer"
+                  },
+                  "speed": {
+                    "type": "integer"
+                  },
+                  "hp": {
+                    "type": "integer"
+                  },
+                  "strategy": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "recipe": {
+                "type": "object",
+                "required": [
+                  "silver",
+                  "items"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "silver": {
+                    "type": "integer",
+                    "const": 0
+                  },
+                  "items": {
+                    "type": "object",
+                    "required": [],
+                    "additionalProperties": false,
+                    "properties": {}
+                  }
+                }
+              },
+              "description": {
+                "type": "string"
+              }
+            }
           }
         ]
       }

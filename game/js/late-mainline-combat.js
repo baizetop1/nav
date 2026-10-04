@@ -1,4 +1,4 @@
-import {LATE_MISSIONS,LATE_BOSSES,lateMissionPlan} from './late-mainline-data.js?v=0.54.0';
+import {LATE_MISSIONS,LATE_BOSSES,lateMissionPlan} from './late-mainline-data.js?v=0.58.0';
 const log=(b,text)=>{b.log.push('【'+(b.elapsed/1000).toFixed(1)+'秒】'+text);if(b.log.length>120)b.log.shift();};
 export function initializeLateBattle(s,b,d){
  const p=lateMissionPlan(s,b.context.id,d);if(!p)return;
@@ -33,9 +33,9 @@ export function advanceLateWave(s,d,makeEnemies){
  return true;
 }
 export function validateLateBattle(s,d,check){
- const b=s.battle;if(!b)return;const m=LATE_MISSIONS[b.context?.id],x=b.mainline;
+ const b=s.battle;if(!b)return;const m=LATE_MISSIONS[b.context?.id?.replace(/^echo_/,'')],x=b.mainline;
  if(!m){check(x===undefined,'非主线战局不可带后五卷战况');return;}
- check(b.context.type==='story'&&x&&x.version===1&&Object.keys(x).every(k=>['version','wave','shields','escort'].includes(k)),'后五卷战况格式');
+ check(['story','replay'].includes(b.context.type)&&x&&x.version===1&&Object.keys(x).every(k=>['version','wave','shields','escort'].includes(k)),'后五卷战况格式');
  const p=lateMissionPlan(s,b.context.id,d),integer=(n,max)=>Number.isSafeInteger(n)&&n>=0&&n<=max;
  check(integer(x.wave,p.waves.length),'主线增援波次');
  const current=x.wave?p.waves[x.wave-1]:p.enemies;

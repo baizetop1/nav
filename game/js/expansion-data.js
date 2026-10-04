@@ -19,3 +19,21 @@ Object.assign(COMBOS,{
  scouts:{introduced:2,name:'响箭夜行',team:['zhugui','shiqian'],text:'两人存活、怒气各 20，后位敌人仍存活时合击后位敌人，并削去其最多 10 怒气。',kind:'scout'}
 });
 export function hasPersonalExpansion(s){const x=s.expansion;return Object.keys(x?.personal||{}).some(id=>PERSONAL[id]?.introduced===2)||Object.keys(x?.combos||{}).some(id=>COMBOS[id]?.introduced===2)||[s.battle,s.lastBattle].some(b=>b?.context?.kind==='personal'&&PERSONAL[b.context.id]?.introduced===2);}
+
+Object.assign(PERSONAL,{
+ wusong:{introduced:3,name:'夜守桥头',text:'武松单人独行，60 秒内取胜，亲自施放至少一次主动招式。',enemies:['soldier','bandit'],scale:2,terrain:'land',solo:true,seconds:60,skills:1,reward:'开战初始怒气 +10。',rage:10},
+ yangzhi:{introduced:3,name:'押粮过岭',text:'杨志带至少 80 名士兵和一名同伴，全员存活取胜，整场不用药品。',enemies:['bandit_chief','guard'],scale:2.2,terrain:'mountain',troops:80,companions:1,allAlive:true,noMedicine:true,reward:'带有专属部队时，自身防御 +5%。',armyDefense:.05},
+ wuyong:{introduced:3,name:'草庐设伏',text:'吴用带至少一名同伴取胜，本人施放至少一次主动招式，全员存活，整场不用药品。',enemies:['guard','soldier','guard'],scale:2.4,terrain:'forest',companions:1,allAlive:true,skills:1,noMedicine:true,reward:'开战初始怒气 +10。',rage:10},
+ gongsunsheng:{introduced:3,name:'山口阻敌',text:'公孙胜带至少一名同伴取胜，本人施放至少两次主动招式，整场不用药品。',enemies:['soldier','guard','bandit_chief'],scale:2.4,terrain:'mountain',companions:1,skills:2,noMedicine:true,reward:'自身速度 +5%。',speed:.05},
+ guansheng:{introduced:3,name:'横刀护阵',text:'关胜列于第一位，带至少一名同伴，全员存活取胜；本人实际承伤至少 400。',enemies:['road_raider','soldier','bandit_chief'],scale:1.5,scaling:true,terrain:'land',front:true,companions:1,allAlive:true,taken:400,reward:'自身气血上限 +5%。',hp:.05},
+ daizong:{introduced:3,name:'急递军书',text:'戴宗单人独行，45 秒内取胜，本人施放至少一次主动招式。',enemies:['bandit','guard'],scale:1.5,terrain:'forest',solo:true,seconds:45,skills:1,reward:'自身速度 +5%。',speed:.05}
+});
+
+Object.assign(PERSONAL,{
+ songjiang:{introduced:4,name:'渡口送人',text:'宋江带至少一名同伴取胜，全员存活，本人有效治疗至少 300。',enemies:['soldier','road_raider'],scale:1.7,scaling:true,terrain:'water',companions:1,allAlive:true,healing:300,reward:'本人有效治疗后，受疗者怒气 +6，每 6 秒一次。满血溢出不触发。'},
+ yanqing:{introduced:4,name:'夜开后门',text:'燕青带至少一名同伴，60 秒内取胜，本人主动施招至少一次，不使用药品。',enemies:['bandit_chief','guard'],scale:1.5,terrain:'forest',companions:1,seconds:60,skills:1,noMedicine:true,reward:'本人成功打断后，追加攻击 70% 伤害，每 6 秒一次。'},
+ xuning:{introduced:4,name:'钩枪守坡',text:'徐宁站在首位，带至少一名同伴，全员存活取胜，本人承伤至少 300。',enemies:['road_raider','soldier'],scale:1.6,scaling:true,terrain:'land',front:true,companions:1,allAlive:true,taken:300,reward:'有护阵时承受直接攻击，反击攻击者，造成自身攻击 40% 的伤害，每 4 秒一次。'},
+ liutang:{introduced:4,name:'路口夺粮',text:'刘唐随队取胜，本人主动施招至少一次，整场不用药品。',enemies:['bandit_chief','soldier','guard'],scale:2.2,terrain:'land',skills:1,noMedicine:true,reward:'普攻命中后移除敌方护阵，每 8 秒一次。'},
+ ruanxiaoer:{introduced:4,name:'雾里接船',text:'阮小二站在首位，带至少一名同伴，全员存活取胜，本人承伤至少 300。',enemies:['soldier','road_raider'],scale:1.7,scaling:true,terrain:'water',front:true,companions:1,allAlive:true,taken:300,reward:'有护阵时承受直接攻击，为气血比例最低的同伴护阵 12%，持续 4 秒，每 6 秒一次。'},
+ ruanxiaowu:{introduced:4,name:'窄汊脱围',text:'阮小五带至少一名同伴，全员存活取胜，本人主动施招至少一次。',enemies:['snake','soldier','guard'],scale:2,terrain:'water',companions:1,allAlive:true,skills:1,reward:'每第三次普攻后，自身获得 15% 护阵，持续 4 秒。'}
+});

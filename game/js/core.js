@@ -1,44 +1,47 @@
-import {enterSpecial,finishSpecial} from './special-dungeons.js?v=0.54.0';
-import {chronicleAction} from './chronicle.js?v=0.54.0';
-import {lessonStart,finishLesson} from './lessons.js?v=0.54.0';
-import {journeyAction} from './journey.js?v=0.54.0';
-import { recruitSupportAction, recordRecruitWeek } from './recruit-support.js?v=0.54.0';
-import { battleExperience } from './growth-rewards.js?v=0.54.0';
-import {ventureAction,finishExpansion,diplomacyAction} from './ventures.js?v=0.54.0';
-import {provisionAction} from './provisions.js?v=0.54.0';
-import {expansionGuard,expansion} from './expansion-state.js?v=0.54.0';
-import {challengeStart} from './challenges.js?v=0.54.0';
-import {relicAction} from './relics.js?v=0.54.0';
-import {trekAction,trekGuard} from './trek.js?v=0.54.0';
-import {buildingBranch} from './realm-buildings.js?v=0.54.0';
-import {chooseHeroPath} from './talents.js?v=0.54.0';
-import { squadAction, assignmentGuard } from './squads.js?v=0.54.0';
-import { realmAction, realmOpen, finishRealmBattle } from './realm.js?v=0.54.0';
-import { applySweep } from './sweep.js?v=0.54.0';
-import { staminaCap, deployedTroops } from './logistics.js?v=0.54.0';
-import { enterElite, finishElite } from './elites.js?v=0.54.0';
-import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.54.0';
-import { mentorHero } from './mentorship.js?v=0.54.0';
-import { saveDebrief } from './debrief.js?v=0.54.0';
-import { batchApply } from './batch.js?v=0.54.0';
-import { affairAction, finishAffairBattle } from './affairs.js?v=0.54.0';
-import { trainDrill } from './strategy.js?v=0.54.0';
-import { battleOrder } from './commands.js?v=0.54.0';
-import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.54.0';
-import { developmentAction, recordLedger } from './development.js?v=0.54.0';
-import { enterRotation, finishRotation } from './rotations.js?v=0.54.0';
-import { promoteHero } from './quality.js?v=0.54.0';
-import { routeTo, claimLocalBenefit } from './world-map.js?v=0.54.0';
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.54.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.54.0';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.54.0';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.54.0';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.54.0';
-import { effects, storyAction, visit } from './story.js?v=0.54.0';
-import { growthAction, awardMountContracts } from './growth.js?v=0.54.0';
+import {replaceHero} from './hero-replacement.js?v=0.58.0';
+import {refineEquipment} from './equipment-refine.js?v=0.58.0';
+import {startReplay,finishReplay} from './replays.js?v=0.58.0';
+import {enterSpecial,finishSpecial} from './special-dungeons.js?v=0.58.0';
+import {chronicleAction} from './chronicle.js?v=0.58.0';
+import {lessonStart,finishLesson} from './lessons.js?v=0.58.0';
+import {journeyAction} from './journey.js?v=0.58.0';
+import { recruitSupportAction, recordRecruitWeek } from './recruit-support.js?v=0.58.0';
+import { battleExperience } from './growth-rewards.js?v=0.58.0';
+import {ventureAction,finishExpansion,diplomacyAction} from './ventures.js?v=0.58.0';
+import {provisionAction} from './provisions.js?v=0.58.0';
+import {expansionGuard,expansion} from './expansion-state.js?v=0.58.0';
+import {challengeStart} from './challenges.js?v=0.58.0';
+import {relicAction} from './relics.js?v=0.58.0';
+import {trekAction,trekGuard} from './trek.js?v=0.58.0';
+import {buildingBranch} from './realm-buildings.js?v=0.58.0';
+import {chooseHeroPath} from './talents.js?v=0.58.0';
+import { squadAction, assignmentGuard } from './squads.js?v=0.58.0';
+import { realmAction, realmOpen, finishRealmBattle } from './realm.js?v=0.58.0';
+import { applySweep } from './sweep.js?v=0.58.0';
+import { staminaCap, deployedTroops } from './logistics.js?v=0.58.0';
+import { enterElite, finishElite } from './elites.js?v=0.58.0';
+import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.58.0';
+import { mentorHero } from './mentorship.js?v=0.58.0';
+import { saveDebrief } from './debrief.js?v=0.58.0';
+import { batchApply } from './batch.js?v=0.58.0';
+import { affairAction, finishAffairBattle } from './affairs.js?v=0.58.0';
+import { trainDrill } from './strategy.js?v=0.58.0';
+import { battleOrder } from './commands.js?v=0.58.0';
+import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.58.0';
+import { developmentAction, recordLedger } from './development.js?v=0.58.0';
+import { enterRotation, finishRotation } from './rotations.js?v=0.58.0';
+import { promoteHero } from './quality.js?v=0.58.0';
+import { routeTo, claimLocalBenefit } from './world-map.js?v=0.58.0';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.58.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.58.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.58.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.58.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.58.0';
+import { effects, storyAction, visit } from './story.js?v=0.58.0';
+import { growthAction, awardMountContracts } from './growth.js?v=0.58.0';
 
-import { searchEquipment } from './camp-development.js?v=0.54.0';
-import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.54.0';
+import { searchEquipment } from './camp-development.js?v=0.58.0';
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.58.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -91,6 +94,7 @@ function rewardDungeon(state,data,id) {
 }
 function finishBattle(state,data) {
   const b=state.battle;requireRule(b&&b.outcome,'还未分出胜负。');
+  if(b.context.type==='replay'){saveDebrief(state,b,state.camp?.wounded||0);finishReplay(state,b);return;}
   if(b.context.type==='lesson'){finishLesson(state,b);return;}
   if(b.context.type==='special'){saveDebrief(state,b,state.camp?.wounded||0);finishSpecial(state,data,b);return;}
   const previousWounded=state.camp?.wounded||0;settleCampBattle(state,data,b);saveDebrief(state,b,previousWounded);finishAffairBattle(state,b,data);finishRealmBattle(state,b,data);finishExpansion(state,b,data);
@@ -151,8 +155,10 @@ export function dispatch(data,current,action,now=Date.now()) {
   assignmentGuard(state,data,action);trekGuard(state,action);expansionGuard(state,action);
   if(type==='rotationSweep')return applySweep(state,data,action);
   if(state.affairs?.mission){const hero=state.affairs.mission.hero;requireRule(!(type==='team'&&action.ids.includes(hero))&&!(type==='frontierGuard'&&action.hero===hero)&&!(type==='frontierAssign'&&action.worker==='hero:'+hero)&&!(type==='campSteward'&&id===hero),'这位好汉仍在外派，接回后才能出战或任职。');}
-  if(type==='expansionOpen'){requireRule(state.realm,'先开启山河经营。');expansion(state);}
-  else if(type.startsWith('venture')||type==='personalStart')ventureAction(state,data,action);
+  if(type==='heroReplace')replaceHero(state,data,action);
+  else if(type==='equipRefine')refineEquipment(state,data,action);
+  else if(type==='expansionOpen'){requireRule(state.realm,'先开启山河经营。');expansion(state);}
+  else if(type.startsWith('venture')||type==='personalStart'||type==='personalStyle')ventureAction(state,data,action);
   else if(type==='diplomacyChoose')diplomacyAction(state,data,action);
   else if(type==='smokeReady'){requireRule((state.inventory.smoke_pack||0)>0,'先备好烟幕包。');expansion(state).smoke=!state.expansion.smoke;}
   else if(type.startsWith('provision'))provisionAction(state,data,action);
@@ -165,6 +171,7 @@ export function dispatch(data,current,action,now=Date.now()) {
   else if(type==='heroPath')chooseHeroPath(state,action);
   else if(type.startsWith('squad'))squadAction(state,data,action);
   else if(type.startsWith('realm'))realmAction(state,data,action);
+  else if(type==='replayStart')startReplay(state,data,action);
   else if(type==='specialStart')enterSpecial(state,data,action);
   else if(type==='eliteStart')enterElite(state,data,action);
   else if(type==='heroChronicleClaim')claimChronicle(state,data,action);

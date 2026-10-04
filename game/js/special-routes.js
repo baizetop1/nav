@@ -1,0 +1,2 @@
+export const SPECIAL_ROUTES={ambush:{name:'侧道伏兵',enemy:'road_raider',hp:1.1,speed:1.1,bonus:'scrap_iron',amount:2,text:'增援一名绕后骑兵，全敌气血、速度提高 10%。胜利另得碎铁；注意保护后排。'},supplies:{name:'深处药箱',enemy:'snake',hp:1.2,speed:1,bonus:'herb',amount:2,text:'增援一条毒蛇（开场怒气 90），全敌气血提高 20%。胜利另得药草；备好解毒和治疗。'}};
+export const routeReward=(route,tier)=>Object.hasOwn(SPECIAL_ROUTES,route)?{id:SPECIAL_ROUTES[route].bonus,count:SPECIAL_ROUTES[route].amount*tier}:null;

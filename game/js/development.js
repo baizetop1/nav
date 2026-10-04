@@ -1,6 +1,10 @@
-import { requireRule, journal } from './utils.js?v=0.54.0';
-import { CORPS } from './corps-data.js?v=0.54.0';
-import { promotionQuote } from './quality.js?v=0.54.0';
+import {PHASES,phaseGoal} from './progression-paths.js?v=0.58.0';
+import {tacticsGoal} from './tactics-goals.js?v=0.58.0';
+import {BUILD_GUIDES} from './tactics-data.js?v=0.58.0';
+import {PERSONAL} from './expansion-data.js?v=0.58.0';
+import { requireRule, journal } from './utils.js?v=0.58.0';
+import { CORPS } from './corps-data.js?v=0.58.0';
+import { promotionQuote } from './quality.js?v=0.58.0';
 
 export { CORPS };
 export const CORPS_PROFILES={
@@ -27,7 +31,7 @@ export function presetReason(s,slot){
   return active(s)?'先结束当前战局或际遇。':'';
 }
 export function targetQuote(s,d,goal=s.development?.goal){
-  if(!goal)return null;
+  if(!goal)return null;if(goal.kind==='phase')return phaseGoal(s,d,goal.id);if(['build','gear','personal','phase'].includes(goal.kind))return tacticsGoal(s,d,goal);
   if(goal.kind==='promotion'){const q=promotionQuote(s,goal.id);return {name:d.by.heroes[goal.id].name+'升品',cost:q.cost,reason:q.reason,view:'heroes'};}
   if(goal.kind==='corps'){const q=corpsQuote(s,goal.id);return {name:CORPS[goal.id].name+'练兵',cost:q.rank<3?q.cost:null,reason:q.reason,view:'heroes'};}
   const e=d.by.equipments[goal.id];return {name:'打造'+e.name,cost:e.recipe,view:'forge'};
@@ -44,7 +48,7 @@ export function developmentAction(s,d,a){
     const p=dev.presets[a.slot],reason=presetReason(s,a.slot);requireRule(!reason,reason);
     s.formationPending=JSON.stringify(s.team)!==JSON.stringify(p.team)||s.formationPending;s.team=[...p.team];Object.assign(s.camp,{mode:p.mode,tactic:p.tactic,deployment:p.deployment});journal(s,`【阵容】已启用阵容 ${a.slot}。兵力不足时仅派实际在营乡勇。`);
   }else if(a.type==='goalSet'){
-    requireRule(['promotion','corps','craft'].includes(a.kind)&&(a.kind==='craft'?(d.by.equipments[a.id]&&d.by.equipments[a.id].source!=='journey'):s.heroes[a.id]?.status==='owned'),'无法追踪这个目标。');dev.goal={kind:a.kind,id:a.id};journal(s,'【养成目标】已在寨子与历练页置顶材料清单。');
+    requireRule(['promotion','corps','craft','build','gear','personal','phase'].includes(a.kind)&&(a.kind==='phase'?Object.hasOwn(PHASES,a.id):a.kind==='build'?Object.hasOwn(BUILD_GUIDES,a.id):a.kind==='gear'?!!d.by.equipments[a.id]:a.kind==='personal'?Object.hasOwn(PERSONAL,a.id)&&s.heroes[a.id]?.status==='owned':a.kind==='craft'?!!d.by.equipments[a.id]&&!['journey','special'].includes(d.by.equipments[a.id].source):s.heroes[a.id]?.status==='owned'),'无法追踪这个目标。');dev.goal={kind:a.kind,id:a.id};journal(s,'【养成目标】已在寨子与历练页置顶材料清单。');
   }else if(a.type==='goalClear'){dev.goal=null;
   }else if(a.type==='scrapSmelt'){
     requireRule((s.inventory.scrap_iron||0)>=5&&s.player.silver>=20,'重熔需要碎铁 5、碎银 20。');s.inventory.scrap_iron-=5;s.player.silver-=20;s.inventory.iron=(s.inventory.iron||0)+2;journal(s,'【回炉重熔】碎铁 5、碎银 20，炼得精铁 2。');
@@ -65,7 +69,7 @@ export function validateDevelopment(s,d,check){
     check(obj(dev)&&dev.version===1&&obj(dev.corps)&&obj(dev.presets)&&Array.isArray(dev.ledger)&&dev.ledger.length<=2,'寨中养成');
     for(const [id,n] of Object.entries(dev.corps))check(CORPS[id]&&s.heroes[id]?.status==='owned'&&num(n,2,3)&&s.camp?.buildings.hall>=n&&s.camp?.buildings.barracks>=n-1,'专属兵阶');
     for(const [id,p] of Object.entries(dev.presets))check(['1','2','3'].includes(id)&&s.camp&&obj(p)&&Array.isArray(p.team)&&p.team.length>0&&p.team.length<=3&&new Set(p.team).size===p.team.length&&p.team.every(id=>s.heroes[id]?.status==='owned')&&['army','solo'].includes(p.mode)&&['balanced','assault','guard'].includes(p.tactic)&&num(p.deployment,1,1000),'阵容预设');
-    const g=dev.goal;check(g===null||(obj(g)&&['promotion','corps','craft'].includes(g.kind)&&(g.kind==='craft'?!!d.by.equipments[g.id]:s.heroes[g.id]?.status==='owned')),'材料目标');
+    const g=dev.goal;check(g===null||(obj(g)&&['promotion','corps','craft','build','gear','personal','phase'].includes(g.kind)&&(g.kind==='phase'?Object.hasOwn(PHASES,g.id):g.kind==='build'?Object.hasOwn(BUILD_GUIDES,g.id):g.kind==='gear'||g.kind==='craft'?!!d.by.equipments[g.id]:g.kind==='personal'?Object.hasOwn(PERSONAL,g.id)&&s.heroes[g.id]?.status==='owned':s.heroes[g.id]?.status==='owned')),'材料目标');
     let last='';for(const r of dev.ledger){check(obj(r)&&/^\d{4}-\d{2}-\d{2}$/.test(r.date)&&r.date>last&&r.date<=dateKey(s.clock),'小结日期');last=r.date;for(const k of ['gained','spent']){check(obj(r[k]),'小结材料');for(const [id,n] of Object.entries(r[k]))check((['silver','wood','food'].includes(id)||d.by.items[id])&&num(n,1,10000000),'小结数量');}for(const k of ['wins','losses','recruits'])check(num(r[k],0,10000000),'小结次数');}
   }
   const b=s.battle;if(!b)return;
