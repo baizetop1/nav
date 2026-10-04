@@ -1,3 +1,5 @@
+import {tacticsPreserved} from '../../public/game/js/tactics-save.js';
+import {endgamePreserved} from '../../public/game/js/endgame-save.js';
 import {casualtyProgressPreserved} from '../../public/game/js/casualty-save.js';
 import {resourceDungeonsPreserved} from '../../public/game/js/resource-dungeons-save.js';
 import {lateMainlinePreserved} from '../../public/game/js/late-mainline-save.js';
@@ -82,7 +84,7 @@ async function route(request,env){
   const url=new URL(request.url);
   if(url.protocol!=='https:'&&!(env.LOCAL_DEV==='true'&&['localhost','127.0.0.1'].includes(url.hostname)))fail(400,'存档服务只接受 HTTPS。');
   const ip=request.headers.get('CF-Connecting-IP')||'local';await limit(env,`request:${ip}`,120);
-  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,casualtyRules:1,resourceDungeons:1,realm:1,challengeGroups:1,expansion:1,personalTrials:2,journeys:1,journeyTactics:1,journeyRewards:1,openingLessons:1,campaignPlans:1,chronicleRoutes:1,specialDungeons:1,workshopSupplies:1,heroRoles:3,cooperative:1,supplies:1,recruitSupport:1,elite:1,chapters:data.chapters.length});
+  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,forgeExpansion:1,endgameExpansion:1,tacticsExpansion:1,progressionPaths:1,casualtyRules:1,resourceDungeons:1,realm:1,challengeGroups:1,expansion:1,personalTrials:2,journeys:1,journeyTactics:1,journeyRewards:1,openingLessons:1,campaignPlans:1,chronicleRoutes:1,specialDungeons:1,workshopSupplies:1,heroRoles:3,cooperative:1,supplies:1,recruitSupport:1,elite:1,chapters:data.chapters.length});
   if(url.pathname==='/v1/cooperative'&&request.method==='GET'){await cooperativeReady(env,fail);return json(await cooperativeBoard(env,Date.now()));}
   if(url.pathname==='/v1/leaderboard'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,raw FROM slots WHERE raw IS NOT NULL ORDER BY id').all();return json(rankSnapshots(rows.results,Date.now()));}
   if(url.pathname==='/v1/verified-leaderboard'&&request.method==='GET'){
@@ -136,7 +138,10 @@ async function route(request,env){
     const input=await body(request);
     if(row.raw&&!lateMainlinePreserved(JSON.parse(row.raw),input.state,data))fail(409,'云档已有第八至十二卷剧情、路线选择或结局，请先下载接续；如需退回旧进度，请使用历史回滚。');
     if(row.raw&&!seventhVolumePreserved(JSON.parse(row.raw),input.state,data))fail(409,'云档已有第七卷剧情或破阵选择，请先下载接续；如需退回旧进度，请使用历史回滚。');
+    if(row.raw&&!tacticsPreserved(JSON.parse(row.raw),input.state))fail(409,'云档已有装备精修，请先下载接续。');
+    if(row.raw&&!endgamePreserved(JSON.parse(row.raw),input.state))fail(409,'云档已有回顾成绩或人物本领，请先下载接续。');
     if(row.raw&&!specialDungeonsPreserved(JSON.parse(row.raw),input.state))fail(409,'云档已有特殊副本记录，请先下载接续，避免旧页面覆盖通关进度。');
+    if(row.raw&&['dark_iron','blueprint','martial_pages'].some(id=>JSON.parse(row.raw).expansion?.recipes.includes(id)&&!input.state.expansion?.recipes.includes(id)))fail(409,'云档已有新式打造配方，请先下载接续；退回旧进度请使用历史回滚。');
     if(row.raw&&!casualtyProgressPreserved(JSON.parse(row.raw),input.state))fail(409,'云档已有新版兵损记录，请先下载接续；退回旧进度请使用历史回滚。');
     if(row.raw&&!resourceDungeonsPreserved(JSON.parse(row.raw),input.state))fail(409,'云档已有基础资源副本次数或熟练记录，请先下载接续；如需退回旧进度，请使用历史回滚。');
     if(row.raw&&!chroniclePreserved(JSON.parse(row.raw),input.state))fail(409,'云档已有路线篇章、巡防或锻造进度，请先下载接续，避免旧页面覆盖。');

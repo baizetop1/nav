@@ -1,18 +1,19 @@
-import {LATE_BOSSES} from './late-mainline-data.js?v=0.54.0';
-import {roleDamageFactor,roleInterrupt,roleAfterHit} from './hero-roles.js?v=0.54.0';
-import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.54.0';
-import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.54.0';
-import {talentFactor} from './talents.js?v=0.54.0';
-import { healingSupply } from './fieldcraft.js?v=0.54.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.54.0';
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.54.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.54.0';
-import { orderDamageFactor } from './commands.js?v=0.54.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.54.0';
-import { unitArm } from './martial.js?v=0.54.0';
-import { martialFactor } from './martial.js?v=0.54.0';
-import { bounded, pick, random } from './utils.js?v=0.54.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.54.0';
+import {tacticsAfterHit,tacticsInterrupt,specialBossMove} from './tactics-combat.js?v=0.58.0';
+import {LATE_BOSSES} from './late-mainline-data.js?v=0.58.0';
+import {roleDamageFactor,roleInterrupt,roleAfterHit} from './hero-roles.js?v=0.58.0';
+import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.58.0';
+import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.58.0';
+import {talentFactor} from './talents.js?v=0.58.0';
+import { healingSupply } from './fieldcraft.js?v=0.58.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.58.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.58.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.58.0';
+import { orderDamageFactor } from './commands.js?v=0.58.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.58.0';
+import { unitArm } from './martial.js?v=0.58.0';
+import { martialFactor } from './martial.js?v=0.58.0';
+import { bounded, pick, random } from './utils.js?v=0.58.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.58.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -55,10 +56,11 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1)*(1-weakened)*(u.boss?.phase===1&&u.boss.kind==='tiger'?1.2:1);
   const raw=api.damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
   const loss=journeyAbsorb(b,target,Math.max(1,Math.round(raw*roleDamageFactor(b,u,target,!name)*journeyDamageFactor(b,u,target,!name)*personalFactor(b,u,!name)*talentFactor(b,u,target,{normal:!name,strategy:effect.kind==='strategy'})*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0)))));
-  reportDamage(b,u,target,loss);target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
+  const guarded=!!has(target,'guard');reportDamage(b,u,target,loss);target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
   if(!alive(target))api.log(b,`${target.name}已无力再战。`);
+  tacticsAfterHit(b,u,target,!name,loss,{reportDamage,reportHealing,absorb:journeyAbsorb},guarded);
   roleAfterHit(b,u,target,!name,loss,{reportHealing});
   journeyAfterHit(b,u,target,{...api,reportDamage},!name,loss);
 }
@@ -133,7 +135,7 @@ export function growthHit(state,u,rawSkill,data,api){
     rage(b,party.filter(v=>v!==u),Math.round(10*boost),skill.name,api);
   }else if(profile==='interrupt'){
     const enemy=enemies.find(v=>v.boss?.pendingAt)||enemies[enemies.length-1];
-    if(enemy.boss?.pendingAt){contribution(b,u,'interrupts');roleInterrupt(b,u,enemy);enemy.boss.pendingAt=0;enemy.boss.readyAt=b.elapsed+10000;journeyInterrupt(b,u,enemy,{...api,reportDamage});api.log(b,`${u.name}【截脉打断】${enemy.name}本次蓄势被截住。`);}
+    if(enemy.boss?.pendingAt){contribution(b,u,'interrupts');roleInterrupt(b,u,enemy);enemy.boss.pendingAt=0;enemy.boss.readyAt=b.elapsed+10000;tacticsInterrupt(b,u,enemy,{reportDamage,reportHealing,absorb:journeyAbsorb});journeyInterrupt(b,u,enemy,{...api,reportDamage});api.log(b,`${u.name}【截脉打断】${enemy.name}本次蓄势被截住。`);}
     strike(state,u,enemy,effect,skill.name,api);
   }else if(profile==='pierce')strike(state,u,lowest(enemies),effect,skill.name,api,{pierce:true});
   else if(profile==='steal'||profile==='wave'){
@@ -161,7 +163,7 @@ export function growthTimes(b){return b.enemy.filter(u=>alive(u)&&u.boss).map(u=
 export function advanceBosses(state,api){
   const b=state.battle;
   for(const u of b.enemy.filter(u=>alive(u)&&u.boss)){
-    const boss=u.boss;if(advanceJourneyBoss(state,u,api,strike))continue;
+    const boss=u.boss;if(specialBossMove(state,u,api,strike))continue;if(advanceJourneyBoss(state,u,api,strike))continue;
     if(boss.kind==='tiger'&&!boss.phase&&u.hp<=u.maxHp*.5){boss.phase=1;api.log(b,`${u.name}【困兽之怒】气血过半损失，攻击提升 20%；可用削弱与护阵应对。`);}
     if(boss.pendingAt===b.elapsed){
       boss.pendingAt=0;boss.readyAt=b.elapsed+10000;

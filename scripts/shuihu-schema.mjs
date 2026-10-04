@@ -38,12 +38,17 @@ const condition={anyOf:[{type:'null'},{type:'object',minProperties:1,additionalP
 const schema={$schema:'https://json-schema.org/draft/2020-12/schema',title:'白泽水浒内容数据集 v2',description:'以文件名为键合并 config 和各数据集合；引用由 data.js 验证。',...infer([raw]),$defs:{condition}};
 schema.properties.config.properties.version.const=2;
 // Ordinary recipes require a known positive material amount; journey items are not craftable.
-const craftable=infer(raw.equipments.filter(e=>e.source!=='journey'));
+const craftable=infer(raw.equipments.filter(e=>!e.source));
 const materials=craftable.properties.recipe.properties.items;materials.minProperties=1;
 for(const rule of Object.values(materials.properties))rule.minimum=1;
 const journey=infer(raw.equipments.filter(e=>e.source==='journey'));
 journey.properties.source.const='journey';journey.properties.price.const=0;journey.properties.recipe.properties.silver.const=0;
-schema.properties.equipments.items={anyOf:[craftable,journey]};
+const forge=infer(raw.equipments.filter(e=>e.source==='forge'));
+forge.properties.source.const='forge';forge.properties.price.const=0;forge.properties.tier.const=3;forge.properties.recipe.properties.silver.minimum=1;
+for(const rule of Object.values(forge.properties.recipe.properties.items.properties))rule.minimum=1;
+forge.properties.recipe.properties.items.properties.blueprint.const=1;
+const special=infer(raw.equipments.filter(e=>e.source==='special'));special.properties.source.const='special';special.properties.price.const=0;special.properties.recipe.properties.silver.const=0;
+schema.properties.equipments.items={anyOf:[craftable,journey,forge,special]};
 // Paid preparations must keep their advertised exact costs, including the full material set.
 function exact(value){const rule=infer([value]);if(value&&typeof value==='object'&&!Array.isArray(value))for(const [key,entry]of Object.entries(value))rule.properties[key]=exact(entry);else if(typeof value==='number')rule.const=value;return rule;}
 const startCosts=raw.stories.filter(s=>s.id!=='v7_prepare').flatMap(s=>s.steps.start?.choices||[]).map(c=>c.cost).filter(Boolean);

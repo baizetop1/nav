@@ -1,0 +1,9 @@
+import {startBattle} from './battle.js?v=0.58.0';
+import {attachTroops} from './camp.js?v=0.58.0';
+import {initializeLateBattle} from './late-mainline-combat.js?v=0.58.0';
+import {lateMissionPlan} from './late-mainline-data.js?v=0.58.0';
+import {replayMissions,replayUnlocked,replayId,replayKey,REPLAY_DIFFICULTIES} from './replays-data.js?v=0.58.0';
+import {requireRule,journal} from './utils.js?v=0.58.0';
+export function replayReason(s,id,tier){return !replayUnlocked(s,id)?'完成这段主线后可回顾；终卷通关后开放另外两条结局路线。':![1,2].includes(tier)?'请选择难度。':!s.camp?'先建立寨子。':s.battle||s.scheme||s.event||s.realm?.trek||s.expansion?.run?'先结束当前行动。':!s.team.length?'先安排出阵好汉。':s.team.some(id=>s.heroes[id]?.status!=='owned'||s.affairs?.mission?.hero===id||s.realm?.squad?.team.includes(id))?'出阵好汉尚未归队。':(s.replays?.clears[replayKey(id,tier)]||0)>=10000000?'已达记录上限。':'';}
+export function startReplay(s,d,a){requireRule(!replayReason(s,a.id,a.tier),replayReason(s,a.id,a.tier));const m=replayMissions[a.id],choice=Object.values(d.by.stories[a.id].steps).flatMap(x=>x.choices).find(c=>c.battle),context={type:'replay',id:'echo_'+a.id,tier:a.tier,terrain:m.terrain};requireRule(choice,'这段主线没有可回顾的战斗。');s.replays??={version:1,clears:{},best:{}};const p=lateMissionPlan(s,context.id,d,a.tier);startBattle(s,d,{enemies:p?.enemies||choice.battle.enemies,scale:p?.scale||m.scale*REPLAY_DIFFICULTIES[a.tier].scale,context});attachTroops(s,0);initializeLateBattle(s,s.battle,d);journal(s,'回顾：'+d.by.stories[a.id].title+'。不耗体力、粮草，不带兵、不用药，不发正式主线奖励。');}
+export function finishReplay(s,b){const key=replayKey(replayId(b.context.id),b.context.tier);if(b.outcome==='victory'){s.replays.clears[key]=(s.replays.clears[key]||0)+1;s.replays.best[key]=Math.min(s.replays.best[key]??180000,b.elapsed);}journal(s,b.outcome==='victory'?'回顾完成，用时 '+(b.elapsed/1000).toFixed(1)+' 秒。成绩已记下，正式剧情保持原选择。':'本次回顾结束，可以调整阵容再试。');s.battle=null;}

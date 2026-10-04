@@ -1,11 +1,11 @@
-import {HERO_ROLES} from './hero-roles.js?v=0.54.0';
-import { promotionPreview } from './growth-preview.js?v=0.54.0';
-import { deployedTroops } from './logistics.js?v=0.54.0';
-import { isExternal, isWanderer, externalInvitation, canonicalHeroes } from './roster.js?v=0.54.0';
-import { qualityTechnique } from './development-ui.js?v=0.54.0';
-import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.54.0';
-import { portrait } from './camp-ui.js?v=0.54.0';
-import { dungeonEntry } from './map.js?v=0.54.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.58.0';
+import { promotionPreview } from './growth-preview.js?v=0.58.0';
+import { deployedTroops } from './logistics.js?v=0.58.0';
+import { isExternal, isWanderer, externalInvitation, canonicalHeroes } from './roster.js?v=0.58.0';
+import { qualityTechnique } from './development-ui.js?v=0.58.0';
+import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.58.0';
+import { portrait } from './camp-ui.js?v=0.58.0';
+import { dungeonEntry } from './map.js?v=0.58.0';
 
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 const statuses={unknown:'未闻',heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'};

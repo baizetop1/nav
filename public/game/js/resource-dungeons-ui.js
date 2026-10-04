@@ -1,7 +1,7 @@
-import {RESOURCE_ROUTES,resourceReward} from './resource-dungeons-data.js?v=0.54.0';
-import {rotationPlan,dailyUses} from './rotations.js?v=0.54.0';
-import {sweepControls} from './sweep-ui.js?v=0.54.0';
-import {enemyIntel} from './martial-ui.js?v=0.54.0';
+import {RESOURCE_ROUTES,resourceReward} from './resource-dungeons-data.js?v=0.58.0';
+import {rotationPlan,dailyUses} from './rotations.js?v=0.58.0';
+import {sweepControls} from './sweep-ui.js?v=0.58.0';
+import {enemyIntel} from './martial-ui.js?v=0.58.0';
 const stock=(s,r)=>r.resourceKey==='silver'?s.player.silver:r.resourceKey==='herb'?(s.inventory.herb||0):(s.camp?.[r.resourceKey]||0);
 export function resourceRewardText(id,tier){const r=RESOURCE_ROUTES.find(r=>r.id===id),reward=resourceReward(id,tier);return reward?r.resourceName+' ×'+r.amounts[tier-1]+(['food','wood'].includes(r.resourceKey)?'（存入寨库）':r.resourceKey==='herb'?'（收入行囊）':''):'';}
 export function resourceLinks(s,btn){return '<section class="resource-links" aria-label="基础资源获取"><h2>基础资源</h2><div>'+RESOURCE_ROUTES.map(r=>btn(r.resourceName+' '+stock(s,r)+' · 获取',{type:'ui_resourceSource',id:r.id},'secondary')).join('')+'</div><p class="note">粮草、木材记入寨库，与行囊中的加工原料分开存放。</p></section>';}

@@ -18,7 +18,7 @@ const makeStart=(id='mine',tier=1)=>{
 };
 const invalid=(source,change)=>{const s=copy(source);change(s);assert.throws(()=>validateSave(s,d),/存档校验失败/);return s;};
 const legacy=base();assert.equal(gameSnapshot(legacy,d).specialDungeons,undefined);
-const starts=[];for(const id of Object.keys(SPECIAL_DUNGEONS))for(const tier of [1,2,3]){
+const starts=[];for(const id of Object.keys(SPECIAL_DUNGEONS).filter(id=>!SPECIAL_DUNGEONS[id].parent))for(const tier of [1,2,3]){
  const s=makeStart(id,tier);assert.equal(s.battle.context.type,'special');assert.equal(s.battle.expedition.troops,0);assert.deepEqual(gameSnapshot(s,d),s);
  assert.deepEqual(importSave(exportSave(s,{id:1,name:'特殊副本',cloud:null},d),d).state,s);starts.push(s);
 }

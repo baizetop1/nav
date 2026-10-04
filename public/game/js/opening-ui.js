@@ -1,8 +1,8 @@
-import {LESSONS} from './lessons-data.js?v=0.54.0';
-import {CAMP_GOALS,goalReady,goalClaimed} from './camp-development.js?v=0.54.0';
-import {deployedTroops} from './logistics.js?v=0.54.0';
-import {attributes} from './hero.js?v=0.54.0';
-import {gainedSkills,growthDelta} from './growth-preview.js?v=0.54.0';
+import {LESSONS} from './lessons-data.js?v=0.58.0';
+import {CAMP_GOALS,goalReady,goalClaimed} from './camp-development.js?v=0.58.0';
+import {deployedTroops} from './logistics.js?v=0.58.0';
+import {attributes} from './hero.js?v=0.58.0';
+import {gainedSkills,growthDelta} from './growth-preview.js?v=0.58.0';
 export function openingGoal(s,d){if(!s.camp||s.realm?.trek||s.expansion?.run)return null;const c=s.camp,page=(title,text,view,id,hero)=>({title,text,label:'前往',command:{type:'ui_section',view,id,...(hero?{hero}:{})}});
  const ready=CAMP_GOALS.find(g=>['foundation','first_win'].includes(g.id)&&!goalClaimed(s,g)&&goalReady(s,g));if(ready)return {...page(ready.name+' · 待领酬劳',ready.id==='foundation'?'农田、伐木场和兵营已建成。':'山林清剿已获胜。','camp','goals'),label:'领取酬劳',command:{type:'campClaim',id:ready.id}};
  if(c.sorties||c.buildings.hall>2)return null;

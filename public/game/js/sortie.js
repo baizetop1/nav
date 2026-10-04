@@ -1,8 +1,8 @@
-import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.54.0';
-import { dispatch } from './core.js?v=0.54.0';
-export const SORTIES=['specialStart','campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle','realmBattle','challengeStart','personalStart','ventureNext'];
+import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.58.0';
+import { dispatch } from './core.js?v=0.58.0';
+export const SORTIES=['replayStart','specialStart','campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle','realmBattle','challengeStart','personalStart','ventureNext'];
 export function prepareSortie(s,d,action,setup,now=s.clock){
- const heroOnly=action.type==='specialStart'||action.type==='rotationStart'&&action.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===action.id);
+ const heroOnly=action.type==='replayStart'||action.type==='specialStart'||action.type==='rotationStart'&&action.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===action.id);
  let next=s;
  try{
   if(!SORTIES.includes(action.type))throw new Error('此入口不属于可准备的出征。');
@@ -10,7 +10,7 @@ export function prepareSortie(s,d,action,setup,now=s.clock){
   next=dispatch(d,next,action,now);
   const b=next.battle,scheme=!!next.scheme,cost={stamina:s.player.stamina-next.player.stamina,food:(s.camp?.food||0)-(next.camp?.food||0)};
   // Preview uses the real entry rules but never writes or advances the battle.
-  const signature=JSON.stringify({context:b?.context||next.scheme?.context,team:b?.team||next.team.map(id=>[id,next.heroes[id].level]),enemy:b?.enemy,cost,stamina:next.player.stamina,food:next.camp?.food,expedition:b?.expedition,expansion:b?.expansion});
+  const signature=JSON.stringify({context:b?.context||next.scheme?.context,team:b?.team||next.team.map(id=>[id,next.heroes[id].level]),enemy:b?.enemy,cost,stamina:next.player.stamina,food:next.camp?.food,expedition:b?.expedition,expansion:b?.expansion,tactics:b?.tactics});
   return {next,battle:b,scheme,cost,signature,reason:''};
  }catch(e){return {reason:e.message,next:null};}
 }

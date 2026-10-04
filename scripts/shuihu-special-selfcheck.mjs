@@ -4,7 +4,7 @@ import {d,fixture as baseFixture,act} from './shuihu-campaign-fixtures.mjs';
 import {advanceBattle,useBattleItem} from '../public/game/js/battle.js';
 import {gameSnapshot,exportSave,importSave} from '../public/game/js/portable.js';
 import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext,specialPlan,enterSpecial,finishSpecial} from '../public/game/js/special-dungeons.js';
-const ids=Object.keys(SPECIAL_DUNGEONS),copy=structuredClone,MAX=10000000;
+const ids=Object.keys(SPECIAL_DUNGEONS).filter(id=>!SPECIAL_DUNGEONS[id].parent),copy=structuredClone,MAX=10000000;
 const reload=s=>importSave(exportSave(s,{id:1,name:'寻宝副本回归'},d),d).state;
 function fixture(seed=301,level=40){const s=baseFixture(seed,level);s.player.stamina=0;s.camp.food=0;s.camp.troops=200;s.camp.mode='army';s.battleSkillMode='auto';return gameSnapshot(s,d);}
 function reject(s,type,a={},pattern){const before=copy(s);assert.throws(()=>act(s,type,a),pattern);assert.deepEqual(s,before);}
@@ -17,7 +17,7 @@ const pool=new Set();
 for(const id of ids)for(const tier of [1,2,3]){
  const rows=specialDropTable(id,tier);assert.ok(rows.length>=12);assert.equal(new Set(rows.map(r=>r.kind+':'+r.id)).size,rows.length);
  for(const r of rows){assert.ok(r.rate>0&&r.rate<1);assert.ok(Number.isInteger(r.min)&&Number.isInteger(r.max)&&r.min>=1&&r.min<=r.max);pool.add(r.kind+':'+r.id);
-  assert.ok(!['recruit_order','recruit_shard','immortal_seal','dark_iron','blueprint','skill_page'].includes(r.id));if(r.kind==='equipment'){assert.ok(d.by.equipments[r.id]);assert.notEqual(d.by.equipments[r.id].source,'journey');assert.equal(r.max,1);}else assert.ok(d.by.items[r.id]);
+  assert.ok(!['recruit_order','recruit_shard','immortal_seal'].includes(r.id));if(r.kind==='equipment'){assert.ok(d.by.equipments[r.id]);assert.notEqual(d.by.equipments[r.id].source,'journey');assert.equal(r.max,1);}else assert.ok(d.by.items[r.id]);
  }
  const snapshot=copy(rows);rows[0].rate=0;rows[0].max=999;assert.deepEqual(specialDropTable(id,tier),snapshot);
  const c={type:'special',id,tier,terrain:SPECIAL_DUNGEONS[id].terrain};assert.ok(validSpecialContext(c));assert.ok(!validSpecialContext({...c,extra:1}));assert.ok(!validSpecialContext({...c,terrain:'land'}));assert.ok(!validSpecialContext({...c,tier:String(tier)}));

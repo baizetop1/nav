@@ -30,9 +30,9 @@ unchanged(supplied,'provisionCraft',{id:'tempered_steel'},/配方/);unchanged(su
 for(const id of EXTRA_BATTLE_ITEMS)supplied=make(supplied,id);
 const owned=[];
 for(const id of EXTRA_EQUIPMENT){const e=d.by.equipments[id];supplied=stock(supplied,e.recipe.items);const poor=copy(supplied);poor.inventory[Object.keys(e.recipe.items)[0]]=0;unchanged(poor,'craftEquip',{id},/材料/);const before=copy(supplied);supplied=act(supplied,'craftEquip',{id});assert.equal(before.player.silver-supplied.player.silver,e.recipe.silver);for(const [raw,n] of Object.entries(e.recipe.items))assert.equal(amount(before,raw)-amount(supplied,raw),n);owned.push(supplied.equipment.at(-1).uid);assert.equal(supplied.equipment.at(-1).item,id);}
-assert.ok(Object.keys(WORKSHOP_RECIPES).every(id=>supplied.expansion.recipes.includes(id)));assert.deepEqual(reload(supplied),supplied);
+assert.ok([...CRAFT_MATERIALS,...EXTRA_BATTLE_ITEMS].every(id=>supplied.expansion.recipes.includes(id)));assert.deepEqual(reload(supplied),supplied);
 const badRecipe=copy(supplied);badRecipe.expansion.recipes.push('invented_recipe');assert.throws(()=>gameSnapshot(badRecipe,d));
-for(const id of Object.keys(WORKSHOP_RECIPES))unchanged(supplied,'provisionUnlock',{id},/学会/);
+for(const id of [...CRAFT_MATERIALS,...EXTRA_BATTLE_ITEMS])unchanged(supplied,'provisionUnlock',{id},/学会/);
 const exhausted=copy(supplied);exhausted.daily.counters.craft_tempered_steel=WORKSHOP_RECIPES.tempered_steel.limit;unchanged(exhausted,'provisionCraft',{id:'tempered_steel'},/次数/);
 const poorMedicine=copy(supplied);poorMedicine.inventory.medicinal_extract=0;unchanged(poorMedicine,'provisionCraft',{id:'jinchuang_gao'},/材料/);
 const poorSilver=copy(supplied);poorSilver.player.silver=0;unchanged(poorSilver,'provisionCraft',{id:'medicinal_extract'},/碎银|材料/);
@@ -48,7 +48,7 @@ for(const id of EXTRA_EQUIPMENT){const before=copy(supplied),bought=act(supplied
 
 // The inventory shows real uses and visible routes to every raw ingredient.
 const html=recipePanel(supplied,d,button);assert.ok(!html.includes('undefined'));assert.ok(html.includes('<details'));
-for(const [category,count] of [['materials',4],['medicines',3],['supplies',5],['raw',0]]){const categoryHTML=recipePanel(supplied,d,button,true,category);assert.ok(!categoryHTML.includes('<details'));assert.equal((categoryHTML.match(/data-recipe=/g)||[]).length,count);assert.ok(categoryHTML.includes('data-recipe-category="'+category+'"'));}assert.equal((recipePanel(supplied,d,button,true).match(/data-recipe=/g)||[]).length,4);
+for(const [category,count] of [['materials',7],['medicines',3],['supplies',5],['raw',0]]){const categoryHTML=recipePanel(supplied,d,button,true,category);assert.ok(!categoryHTML.includes('<details'));assert.equal((categoryHTML.match(/data-recipe=/g)||[]).length,count);assert.ok(categoryHTML.includes('data-recipe-category="'+category+'"'));}assert.equal((recipePanel(supplied,d,button,true).match(/data-recipe=/g)||[]).length,7);
 for(const id of [...CRAFT_MATERIALS,...EXTRA_BATTLE_ITEMS,...RAW_WORKSHOP_ITEMS])assert.ok(html.includes(d.by.items[id].name));
 for(const id of CRAFT_MATERIALS){const entry=inventoryEntry(supplied,d,d.by.items[id],String,button);assert.ok(entry.includes('用途'));assert.ok(entry.includes('加工配方')||entry.includes('前往打造'));}
 

@@ -1,4 +1,6 @@
 export const EQUIPMENT_SETS=[
+ {id:'bastion',name:'拒马装',items:['bastion_spear','bastion_armor','bastion_mirror'],two:{defense:.08},three:{hp:.10},text:'两件防御 +8%；三件再加气血 +10%。适合前排承伤。'},
+ {id:'skirmish',name:'轻袭装',items:['skirmish_blade','skirmish_coat','skirmish_tally'],two:{speed:.08},three:{attack:.08},text:'两件速度 +8%；三件再加攻击 +8%。以较低防御换取快攻。'},
   {id:'guard',name:'守寨装',items:['cloth_armor','felt_cap','leather_belt'],two:{defense:.08},three:{hp:.10},text:'两件防御 +8%；三件再加气血 +10%。'},
   {id:'hunter',name:'游猎装',items:['short_bow','leather_armor','swift_boots'],two:{speed:.08},three:{attack:.10},text:'两件速度 +8%；三件再加攻击 +10%。'},
   {id:'breaker',name:'破阵装',items:['long_spear','iron_helmet','chain_armor'],two:{attack:.08},three:{defense:.10},text:'两件攻击 +8%；三件再加防御 +10%。'},

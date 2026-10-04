@@ -1,0 +1,2 @@
+export const PERSONAL_STYLES={force:{name:'攻势',text:'主动招式伤害 +8%。'},guard:{name:'守势',text:'开战获得 8% 护阵，持续 8 秒。'}};
+export function personalStylePanel(s,id,btn){if(!s.expansion?.personal[id])return '';const chosen=s.expansion.styles?.[id];return '<h4>本领取向</h4><p class="note">首次选择免费，改选消耗碎银 50。下场战斗生效。</p>'+Object.entries(PERSONAL_STYLES).map(([style,m])=>'<p>'+m.name+'：'+m.text+'</p>'+btn(chosen===style?'已选'+m.name:'选择'+m.name,{type:'personalStyle',id,style},'secondary',chosen===style||!!chosen&&s.player.silver<50)).join('');}

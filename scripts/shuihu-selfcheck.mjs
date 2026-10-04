@@ -52,7 +52,7 @@ checkSchema({all:[{flag:'v7_prepared'},{any:[{notFlag:'v7_final_done'},{all:[{fl
 assert.deepEqual(raw.stories.find(s=>s.id==='v7_cut').steps.fight.condition,{notFlag:'v7_final_done'},'optional support remains unavailable after the seventh-volume final battle');
 console.log('Shuihu: JSON Schema structural contract passed.');
 const data=prepareData(raw), now=new Date(2026,8,9,10).getTime();
-for(const [kind,count] of Object.entries({heroes:172,maps:113,stories:78,enemies:56,chapters:12,items:669,equipments:29,skills:694,events:24,dungeons:9}))assert.equal(data[kind].length,count);
+for(const [kind,count] of Object.entries({heroes:172,maps:113,stories:78,enemies:56,chapters:12,items:669,equipments:38,skills:694,events:24,dungeons:9}))assert.equal(data[kind].length,count);
 assert.equal(data.quests.filter(q=>q.type==='daily').length,12);
 assert.equal(data.heroes.some(h=>h.id==='chaogai'&&h.group==='external'),true);
 const bad=structuredClone(raw);bad.maps[0].links[0].target='missing';assert.throws(()=>prepareData(bad),/引用不存在/);

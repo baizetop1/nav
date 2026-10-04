@@ -1,18 +1,19 @@
-import {lateMissionPlan} from './late-mainline-data.js?v=0.54.0';
-import {lateTimes,advanceLateObjective,advanceLateWave} from './late-mainline-combat.js?v=0.54.0';
-import {EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.54.0';
-import {initializeRoles} from './hero-roles.js?v=0.54.0';
-import {lessonPassed} from './lessons-data.js?v=0.54.0';
-import {routeEquipmentOpening} from './journey-rewards.js?v=0.54.0';
-import {journeyAbsorb} from './journey-combat.js?v=0.54.0';
-import {advanceCombos} from './expansion-combat.js?v=0.54.0';
-import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.54.0';
-import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.54.0';
-import { autoOrderAllows } from './commands.js?v=0.54.0';
-import { initializeMartial, martialFactor } from './martial.js?v=0.54.0';
-import { attributes } from './hero.js?v=0.54.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.54.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.54.0';
+import {initializeTactics} from './tactics-combat.js?v=0.58.0';
+import {lateMissionPlan} from './late-mainline-data.js?v=0.58.0';
+import {lateTimes,advanceLateObjective,advanceLateWave} from './late-mainline-combat.js?v=0.58.0';
+import {EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.58.0';
+import {initializeRoles} from './hero-roles.js?v=0.58.0';
+import {lessonPassed} from './lessons-data.js?v=0.58.0';
+import {routeEquipmentOpening} from './journey-rewards.js?v=0.58.0';
+import {journeyAbsorb} from './journey-combat.js?v=0.58.0';
+import {advanceCombos} from './expansion-combat.js?v=0.58.0';
+import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.58.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.58.0';
+import { autoOrderAllows } from './commands.js?v=0.58.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.58.0';
+import { attributes } from './hero.js?v=0.58.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.58.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.58.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan',...EXTRA_BATTLE_ITEMS];
@@ -40,7 +41,7 @@ export function startBattle(state,data,{enemies,guest,scale=1,context}){
   requireRule(context.type==='lesson'||!state.realm?.squad||!team.some(u=>state.realm.squad.team.includes(u.id)),'好汉仍在分队外派，请先接回。');
   requireRule(team.length>0,'先与白胜相识、邀他作向导，或在招贤馆招募好汉并编队。');
   state.battle={mode:'realtime',elapsed:0,itemReadyAt:0,team,enemy:makeEnemyUnits(data,enemies,scale),context,guest:!!guest,outcome:null,log:['【交战开始】双方自行迎敌。你可随时调度技能、用药或撤退。']};
-  state.battle.metrics=newMetrics(team);initializeGrowthBattle(state,state.battle,data);initializeMartial(state,state.battle,data);routeEquipmentOpening(state,state.battle);initializeRoles(state.battle,state);
+  initializeTactics(state,state.battle);state.battle.metrics=newMetrics(team);initializeGrowthBattle(state,state.battle,data);initializeMartial(state,state.battle,data);routeEquipmentOpening(state,state.battle);initializeRoles(state.battle,state);
 }
 // Only convert validated legacy battles. Never replay time spent away from the page.
 export function migrateBattle(b){
@@ -170,6 +171,7 @@ export function castSkill(state,data,heroId,skillId){
 export function battleItemQuote(state,data,id){
   const b=state.battle,item=data.by.items[id];
   if(!b||b.outcome)return {reason:'战局已结束'};
+  if(b.context.type==='replay')return {reason:'回顾不消耗药品，请调整阵容或使用军令'};
   if(b.context.type==='lesson')return {reason:'演武不消耗药物，请使用军令或教习招式'};
     if(b.context.type==='elite'&&b.context.kind==='hard')return {reason:'禁药挑战不能使用战斗药品，治疗技能仍可用'};
   if(!BATTLE_ITEMS.includes(id)||!item)return {reason:'这件物品不能在战斗中使用'};
