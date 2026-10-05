@@ -1,6 +1,6 @@
-import {REPLAY_CHALLENGES,challengeKey} from './replay-challenges.js?v=0.64.0';
-import {replayMissions,replayUnlocked,replayKey,REPLAY_DIFFICULTIES,ENDING_DEFINITIONS} from './replays-data.js?v=0.64.0';
-import {replayReason} from './replays.js?v=0.64.0';
+import {REPLAY_CHALLENGES,challengeKey} from './replay-challenges.js?v=0.66.0';
+import {replayMissions,replayUnlocked,replayKey,REPLAY_DIFFICULTIES,ENDING_DEFINITIONS} from './replays-data.js?v=0.66.0';
+import {replayReason} from './replays.js?v=0.66.0';
 export function replaysPanel(s,d,esc,btn,view={}){
  const ids=Object.keys(replayMissions).filter(id=>replayUnlocked(s,id)),id=ids.includes(view.id)?view.id:ids[0],tier=view.tier===2?2:1;
  const nav=(name,a)=>btn(name,{type:'ui_replayView',...view,...a},'secondary');

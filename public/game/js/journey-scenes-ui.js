@@ -1,8 +1,8 @@
-import {MAP_SCENES,sceneForMap} from './scene-library.js?v=0.64.0';
-import {isHarbor,harborBusiness} from './harbor-scenes.js?v=0.64.0';
-import {journeyMoment,JOURNEY_ART,hasJourneyScene} from './journey-scenes.js?v=0.64.0';
-import {meets} from './map.js?v=0.64.0';
-import {conditionText} from './world-map.js?v=0.64.0';
+import {MAP_SCENES,sceneForMap} from './scene-library.js?v=0.66.0';
+import {isHarbor,harborBusiness} from './harbor-scenes.js?v=0.66.0';
+import {journeyMoment,JOURNEY_ART,hasJourneyScene} from './journey-scenes.js?v=0.66.0';
+import {meets} from './map.js?v=0.66.0';
+import {conditionText} from './world-map.js?v=0.66.0';
 export function journeyScenePicture(id,esc,small=false){const art=sceneForMap(id);if(!art)return '';return '<button type="button" class="journey-scene-picture '+(small?'journey-scene-preview':'')+'" data-command="'+esc(JSON.stringify({type:'ui_sceneArt',id:MAP_SCENES[id]}))+'" aria-label="查看此地场景图"><img src="'+esc(art.src)+'" alt="'+esc(art.alt)+'" width="'+art.width+'" height="'+art.height+'" decoding="async"><small><span>看大图</span></small></button>';}
 export function journeyScenePage(s,d,esc,btn,portrait,request={}){const m=journeyMoment(s,d);if(!m)return '';const tab=request?.map===s.location&&['here','people','roads'].includes(request.tab)?request.tab:'here';
  const tabs='<nav class="journey-scene-tabs" aria-label="地点内查看内容">'+[['here','眼前'],['people',isHarbor(s.location)?'渡口事务':'人物传闻'],['roads','附近道路']].map(([id,label])=>btn(label,{type:'ui_journeyScene',tab:id},'secondary').replace('<button ','<button aria-pressed="'+(id===tab)+'" ')).join('')+'</nav>';

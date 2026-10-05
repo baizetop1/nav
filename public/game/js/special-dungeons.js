@@ -1,9 +1,9 @@
-import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.64.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.64.0';
-import {startBattle,addStatus,attackInterval} from './battle.js?v=0.64.0';
-import {attachTroops} from './camp.js?v=0.64.0';
-import {newEquipment} from './item.js?v=0.64.0';
-import {hasOwn,requireRule,journal,random} from './utils.js?v=0.64.0';
+import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.66.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.66.0';
+import {startBattle,addStatus,attackInterval} from './battle.js?v=0.66.0';
+import {attachTroops} from './camp.js?v=0.66.0';
+import {newEquipment} from './item.js?v=0.66.0';
+import {hasOwn,requireRule,journal,random} from './utils.js?v=0.66.0';
 export {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext};
 const LIMIT=10000000,EQUIPMENT_LIMIT=200;
 export function specialRecord(s){return s.specialDungeons??={version:1,clears:{},last:null};}

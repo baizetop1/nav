@@ -1,46 +1,48 @@
-import {sceneReturn} from './scenes.js?v=0.64.0';
-import {sceneArtDialog} from './scenes-ui.js?v=0.64.0';
-import {replacementQuote} from './hero-replacement.js?v=0.64.0';
-import {replacementDialog} from './progression-paths-ui.js?v=0.64.0';
-import {lootEquipment} from './loot-ui.js?v=0.64.0';
-import {lateChoiceWarning} from './late-mainline-ui.js?v=0.64.0';
-import {specialReceipt,specialNext} from './special-dungeons-ui.js?v=0.64.0';
-import {chronicleReceipt} from './chronicle-ui.js?v=0.64.0';
-import {showFunctionMenu} from './menu-ui.js?v=0.64.0';
-import {inventoryEntry} from './provisions-ui.js?v=0.64.0';
-import {installTheme} from './theme.js?v=0.64.0';
-import {campaignReceipt} from './journey-campaign-ui.js?v=0.64.0';
-import {growthRecap,afterBattleNext} from './opening-ui.js?v=0.64.0';
-import {journeyNextGoal} from './journey-goals-ui.js?v=0.64.0';
-import {beforeScreenPaint,afterScreenPaint,installScreenPages,screenInteractionActive} from './screen-pages.js?v=0.64.0';
-import {bindDialogPages} from './dialog-pages.js?v=0.64.0';
-import {storyObjective} from './story-guide.js?v=0.64.0';
-import { supportReceipt } from './recruit-support-ui.js?v=0.64.0';
-import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.64.0';
-import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.64.0';
-import { sweepQuote } from './sweep.js?v=0.64.0';
-import { sweepDialog } from './sweep-ui.js?v=0.64.0';
-import { collectionQuote, workshopQuote } from './production.js?v=0.64.0';
-import { productionDialog } from './production-ui.js?v=0.64.0';
-import { mentorshipQuote } from './mentorship.js?v=0.64.0';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.64.0';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.64.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.64.0';
-import { presetReason } from './development.js?v=0.64.0';
-import { batchQuote } from './batch.js?v=0.64.0';
-import { batchDialog } from './batch-ui.js?v=0.64.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.64.0';
-import { ActivityLog } from './activity.js?v=0.64.0';
-import { loadData } from './data.js?v=0.64.0';
-import { dispatch, newGame } from './core.js?v=0.64.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.64.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.64.0';
-import { patchElement } from './dom.js?v=0.64.0';
+import {COMPLETION_ACTIONS,pendingCompletion,completionDialog,receiptPrompt,completionReview} from './completion-ui.js?v=0.66.0';
+import {battleOutcomeDialog} from './battle-outcome-ui.js?v=0.66.0';
+import {sceneReturn} from './scenes.js?v=0.66.0';
+import {sceneArtDialog} from './scenes-ui.js?v=0.66.0';
+import {replacementQuote} from './hero-replacement.js?v=0.66.0';
+import {replacementDialog} from './progression-paths-ui.js?v=0.66.0';
+import {lootEquipment} from './loot-ui.js?v=0.66.0';
+import {lateChoiceWarning} from './late-mainline-ui.js?v=0.66.0';
+import {specialReceipt,specialNext} from './special-dungeons-ui.js?v=0.66.0';
+import {chronicleReceipt} from './chronicle-ui.js?v=0.66.0';
+import {showFunctionMenu} from './menu-ui.js?v=0.66.0';
+import {inventoryEntry} from './provisions-ui.js?v=0.66.0';
+import {installTheme} from './theme.js?v=0.66.0';
+import {campaignReceipt} from './journey-campaign-ui.js?v=0.66.0';
+import {growthRecap,afterBattleNext} from './opening-ui.js?v=0.66.0';
+import {journeyNextGoal} from './journey-goals-ui.js?v=0.66.0';
+import {beforeScreenPaint,afterScreenPaint,installScreenPages,screenInteractionActive} from './screen-pages.js?v=0.66.0';
+import {bindDialogPages} from './dialog-pages.js?v=0.66.0';
+import {storyObjective} from './story-guide.js?v=0.66.0';
+import { supportReceipt } from './recruit-support-ui.js?v=0.66.0';
+import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.66.0';
+import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.66.0';
+import { sweepQuote } from './sweep.js?v=0.66.0';
+import { sweepDialog } from './sweep-ui.js?v=0.66.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.66.0';
+import { productionDialog } from './production-ui.js?v=0.66.0';
+import { mentorshipQuote } from './mentorship.js?v=0.66.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.66.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.66.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.66.0';
+import { presetReason } from './development.js?v=0.66.0';
+import { batchQuote } from './batch.js?v=0.66.0';
+import { batchDialog } from './batch-ui.js?v=0.66.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.66.0';
+import { ActivityLog } from './activity.js?v=0.66.0';
+import { loadData } from './data.js?v=0.66.0';
+import { dispatch, newGame } from './core.js?v=0.66.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.66.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.66.0';
+import { patchElement } from './dom.js?v=0.66.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.64.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.64.0';
-import { CloudClient } from './cloud.js?v=0.64.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.64.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.66.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.66.0';
+import { CloudClient } from './cloud.js?v=0.66.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.66.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 const applyTheme=installTheme();
 installScreenPages();
@@ -68,8 +70,20 @@ function showSortie(action,setup){const q=prepareSortie(state,data,action,setup,
 
 let data,state,store,view='map',status='',error='',notice='',recruitTarget='',locked=false,invalid=false,dirty=false,pendingImport=null,entered=false;
 let battlePaused=true,battlePauseReason='',lastBattlePulse=null,lastBattleSaved=0,paintRevision=0;
+function syncBattleOutcome(){
+ const battle=state?.battle?.outcome&&view==='map',pending=battle?null:pendingCompletion(state);
+ const key=battle?'finishBattle':pending?.command.type,old=root.querySelector('#battle-outcome,#activity-outcome');
+ if(!entered||!key||locked||invalid||['save','welcome'].includes(view)){old?.remove();return;}
+ if(old&&old.dataset.completionKey===key)return;old?.remove();
+ if(operation||document.hidden||document.querySelector('dialog[open]'))return;
+ const html=battle?battleOutcomeDialog(state.battle,esc):completionDialog(pending,esc);if(!html)return;
+ root.insertAdjacentHTML('beforeend',html);const dialog=root.querySelector('#battle-outcome,#activity-outcome');dialog.dataset.completionKey=key;
+ dialog.addEventListener('cancel',event=>event.preventDefault());
+ dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
+}
+document.addEventListener('close',()=>queueMicrotask(syncBattleOutcome),true);
 function paint(focus=false){
-  if(!focus&&screenInteractionActive())return;
+  if(!focus&&screenInteractionActive()){syncBattleOutcome();return;}
   const screenFocus=beforeScreenPaint();
   paintRevision++;
   const formValues=Object.fromEntries(Array.from(root.querySelectorAll('input:not([type=file]):not([type=password]),select,textarea')).filter(el=>el.id).map(el=>[el.id,el.value]));
@@ -100,6 +114,7 @@ function paint(focus=false){
   if(!pendingImport){document.getElementById('import-confirm')?.close();document.getElementById('import-confirm')?.remove();}
   updateRecruitNotice();
   afterScreenPaint(screenFocus,focus);
+  syncBattleOutcome();
 }
 function updateLogCaption(){fitLog();const bookLog=document.getElementById('activity-log');if(bookLog)bookLog.dataset.followLatest=String(logFollowing);const caption=document.getElementById('activity-caption');if(caption)caption.textContent=logPaused?'日志已冻结 · 战斗仍在进行':!logFollowing?'正在阅读历史 · 新日志不打断':'每 2 秒更新 · '+(logMode==='important'?'仅看重点':'完整战报');const pause=root.querySelector('[data-log-pause]'),filter=root.querySelector('[data-log-filter]');if(pause){pause.textContent=logPaused?'继续刷新':'冻结阅读';pause.setAttribute('aria-pressed',String(logPaused));}if(filter){filter.textContent=logMode==='important'?'查看完整战报':'只看重点';filter.setAttribute('aria-pressed',String(logMode==='all'));}}
 window.addEventListener('baize-log-page',event=>{logFollowing=event.detail.latest;updateLogCaption();});
@@ -123,15 +138,20 @@ function showRecruitResult(result,returnCommand,extra=''){
   },{once:true});
   updateRecruitNotice();dialog.showModal();document.body.classList.add('recruit-modal-open');dialog.querySelector('h2').focus({preventScroll:true});
 }
-function showRewards(before,after,returnCommand){
-  const rows=gains(before,after,data),finished=!!before.battle?.outcome&&!after.battle,victory=finished&&before.battle.outcome==='victory';if(!rows.length&&!finished)return;
+function showRewards(before,after,returnCommand,initialTab=null){
+  const rows=gains(before,after,data),finished=!!before.battle?.outcome&&!after.battle,victory=finished&&before.battle.outcome==='victory';const otherReview=completionReview(before,after,esc);if(!rows.length&&!finished&&!otherReview)return;
+  if(initialTab===null&&!dirty&&!locked){
+    const title=before.scheme?.outcome&&!after.scheme?(before.scheme.outcome==='success'?'计策成功':'计策失败'):before.realm?.squad&&!after.realm?.squad?'分队归来':finished?'战斗结算':'本次所得';
+    document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',receiptPrompt(title,rows.length?'共 '+rows.length+' 项所得，可查看明细。':'本次已结算，没有新增物品。',esc));
+    const dialog=document.getElementById('reward-result');dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.querySelector('[data-receipt-details]').addEventListener('click',()=>{dialog.remove();showRewards(before,after,returnCommand,'rewards');});dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});return;
+  }
   const battleSummary=finished?{team:before.battle.team,elapsed:before.battle.elapsed,context:before.battle.context,fallen:after.lastBattle?.fallen||0,outcome:before.battle.outcome,troops:before.battle.expedition?.troops||0,wounded:Math.max(0,(after.camp?.wounded||0)-(before.camp?.wounded||0))}:null;
   const mainlineChanged=Object.keys(after.progress.stories).some(id=>/^v(?:[3-9]|1[012])_/.test(id)&&JSON.stringify(before.progress.stories[id])!==JSON.stringify(after.progress.stories[id]));
   const goal=mainlineChanged?storyObjective(after,data):null;
   const mainlineNext=goal?{title:goal.title,text:goal.reason||goal.detail,label:after.progress.flags.volume_twelve_complete?'查看结局':'继续主线',command:{type:after.progress.flags.volume_twelve_complete?'ui_mainlinePlan':'ui_storyResume'}}:null;
   const dungeonVictory=(victory&&before.battle?.context.type==='dungeon')||(before.scheme?.outcome==='success'&&before.scheme.context.type==='dungeon'&&!after.scheme);
-  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary,lesson:before.battle?.context.type==='lesson',replay:before.battle?.context.type==='replay',growth:growthRecap(before,after,data,esc),loot:lootEquipment(before,after,data,esc)+campaignReceipt(before,after,data)+chronicleReceipt(before,after)+specialReceipt(before,after,data,esc),next:!after.battle&&!after.scheme&&!after.event?((before.battle?.context.type==='replay'?{title:'战役回顾',label:'再练一次',command:{type:'replayStart',id:before.battle.context.id.slice(5),tier:before.battle.context.tier,...(before.battle.context.challenge?{challenge:before.battle.context.challenge}:{})}}:null)||sceneReturn(finished?before.battle:null)||specialNext(finished?before.battle:null)||mainlineNext||afterBattleNext(after,finished?before.battle:null,data,journeyNextGoal(after,data))):null,review:finished&&before.battle.context.type!=='lesson'&&after.lastBattle?debriefPanel(after.lastBattle,data,esc):''}));
-  const dialog=document.getElementById('reward-result');bindDialogPages(dialog);dialog.querySelectorAll('[data-reward-command],[data-reward-action]').forEach(button=>button.addEventListener('click',async event=>{if(operation)return;operation=true;root.setAttribute('aria-busy','true');const command=JSON.parse(event.currentTarget.dataset.rewardCommand||event.currentTarget.dataset.rewardAction);dialog.close();try{await handle(command);}catch(e){error=e.message;paint();}finally{operation=false;root.removeAttribute('aria-busy');}}));dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
+  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{initialTab:initialTab||'rewards',heading:before.scheme?.outcome&&!after.scheme?(before.scheme.outcome==='success'?'计策成功':'计策失败'):before.realm?.squad&&!after.realm?.squad?'分队归来':'',saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary,lesson:before.battle?.context.type==='lesson',replay:before.battle?.context.type==='replay',growth:growthRecap(before,after,data,esc),loot:lootEquipment(before,after,data,esc)+campaignReceipt(before,after,data)+chronicleReceipt(before,after)+specialReceipt(before,after,data,esc),next:!after.battle&&!after.scheme&&!after.event?((before.battle?.context.type==='replay'?{title:'战役回顾',label:'再练一次',command:{type:'replayStart',id:before.battle.context.id.slice(5),tier:before.battle.context.tier,...(before.battle.context.challenge?{challenge:before.battle.context.challenge}:{})}}:null)||sceneReturn(finished?before.battle:null)||specialNext(finished?before.battle:null)||mainlineNext||afterBattleNext(after,finished?before.battle:null,data,journeyNextGoal(after,data))):null,review:finished&&before.battle.context.type!=='lesson'&&after.lastBattle?debriefPanel(after.lastBattle,data,esc):otherReview}));
+  const dialog=document.getElementById('reward-result');bindDialogPages(dialog);dialog.querySelectorAll('[data-reward-command],[data-reward-action]').forEach(button=>button.addEventListener('click',async event=>{if(operation)return;operation=true;root.setAttribute('aria-busy','true');const command=JSON.parse(event.currentTarget.dataset.rewardCommand||event.currentTarget.dataset.rewardAction);dialog.close();try{await handle(command);}catch(e){error=e.message;paint();}finally{operation=false;syncBattleOutcome();root.removeAttribute('aria-busy');}}));dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
 }
 function download(text,name){if(typeof window.BaizeAndroid?.exportSave==='function'){window.BaizeAndroid.exportSave(text,name);return;}const blob=new Blob([text],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 async function persist(next,force=false){
@@ -154,7 +174,7 @@ async function battleFrame(){
     state=dispatch(data,state,{type:'battleTick',delta:Math.min(Math.floor(delta*battleSpeed),1000)});dirty=true;
     if(state.battle.outcome||now-lastBattleSaved>=1000)await flushBattle();
     paint();
-  }catch(e){battlePaused=true;battlePauseReason='交战已暂停，请先处理提示。';error=e.message;paint();}finally{operation=false;}
+  }catch(e){battlePaused=true;battlePauseReason='交战已暂停，请先处理提示。';error=e.message;paint();}finally{operation=false;syncBattleOutcome();}
 }
 async function load(){pageSections={};mapSection='scene';mapTarget=null;visibleEntries=[];logPaused=false;activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
   if(result.status==='ok'){state=result.state;view=state.battle||state.scheme||state.event?'map':'camp';status='已保存到本机 · 已接续原有进度';try{await persist(dispatch(data,state,{type:'refresh'}));}catch(e){status=e.message;}}
@@ -251,7 +271,7 @@ async function handleBox(command){
     await refreshSlots();paint();return true;
   }catch(e){cloudView.conflict=e.status===412;cloudView.message=e.message;paint();return true;}
 }
-async function handle(command){
+async function handle(command,{battleReceipt='rewards'}={}){
   const {type,id}=command;error='';let prepared=null;
   if(type==='ui_journeyText'){if(!entered||state.battle||state.scheme||state.event)return;view='map';mapSection='story';paint(true);return;}
   if(type==='ui_journeyScene'){if(!entered||state.battle||state.scheme||state.event)return;view='map';mapSection='scene';pageSections.journeyScene={map:state.location,tab:command.tab};paint(true);return;}
@@ -282,7 +302,7 @@ async function handle(command){
   }
   if(type==='story'){const warning=lateChoiceWarning(state,data,command);if(warning&&!window.confirm(warning))return;}
   if(type==='story'&&id==='v7_prepare'&&['hook','trench'].includes(command.choice)){const choice=data.by.stories[id].steps.start.choices.find(c=>c.id===command.choice),effect=command.choice==='hook'?'破阵与决战中敌军防御降低 25%。':'破阵与决战中敌军攻击降低 20%、速度降低 15%。';if(!window.confirm(choice.label+'。'+effect+' 本卷只能选一次，确认后不能更换。'))return;}
-  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.64.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
+  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.66.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
   if(type==='ui_sortieCancel'){document.getElementById('sortie-preview')?.close();return;}
   if(SORTIES.includes(type)){showSortie(command);return;}
   if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieRecommend','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortieRecommend')setup={...setup,team:command.team};if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);if(type==='ui_sortieRecommend')document.querySelector('#sortie-preview [data-dialog-tab="lineup"]').click();return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
@@ -403,7 +423,7 @@ async function handle(command){
     for(const [id,value] of Object.entries({'camp-mode':next.camp.mode,'camp-tactic':next.camp.tactic,'camp-deployment':next.camp.deployment,...Object.fromEntries([0,1,2].map(i=>['team-'+i,next.team[i]||'']))})){const el=document.getElementById(id);if(el)el.value=String(value);}
   }
   if(['recruit','recruitTen'].includes(type))showRecruitResult(type==='recruitTen'?next.recruit.lastBatch:next.recruit.lastResult,JSON.stringify(command),supportReceipt(before,next));
-  else {if(gains(before,next,data).length&&next.battle&&!next.battle.outcome)await pauseBattle('查看收获时已暂停，关闭后可继续交战。');showRewards(before,next,JSON.stringify(command));}
+  else {if(gains(before,next,data).length&&next.battle&&!next.battle.outcome)await pauseBattle('查看收获时已暂停，关闭后可继续交战。');if(!COMPLETION_ACTIONS.includes(type)||battleReceipt!=='skip'||dirty||locked)showRewards(before,next,JSON.stringify(command),battleReceipt==='review'?'review':battleReceipt==='details'?'rewards':null);}
 }
 root.addEventListener('click',async event=>{
   const button=event.target.closest('button');if(!button||button.disabled)return;
@@ -436,13 +456,13 @@ root.addEventListener('click',async event=>{
       if(view==='map')mapSection=menu&&button.dataset.menuMap==='atlas'?'atlas':'scene';
       if(menu&&button.dataset.menuSection&&Object.hasOwn(PAGE_SECTIONS[view]||{},button.dataset.menuSection))pageSections[view]=button.dataset.menuSection;
       error='';notice='';if(view==='save')await refreshSlots();paint(true);
-    }finally{operation=false;}
+    }finally{operation=false;syncBattleOutcome();}
     return;
   }
   if(!button.dataset.command)return;const painted=paintRevision;button.disabled=true;operation=true;root.setAttribute('aria-busy','true');
-  try{await handle(JSON.parse(button.dataset.command));}
+  try{await handle(JSON.parse(button.dataset.command),{battleReceipt:button.dataset.battleReceipt});}
   catch(e){pendingImport=null;error=e.message||'操作未完成，原进度保留。';paint();}
-  finally{operation=false;root.removeAttribute('aria-busy');if(button.isConnected&&painted===paintRevision)button.disabled=false;}
+  finally{operation=false;syncBattleOutcome();root.removeAttribute('aria-busy');if(button.isConnected&&painted===paintRevision)button.disabled=false;}
 });
 root.addEventListener('submit',event=>{if(event.target.matches('[data-inventory-search]')){event.preventDefault();event.target.querySelector('button').click();}});
 root.addEventListener('keydown',event=>{if(event.target.id==='inventory-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('[data-inventory-search] button')?.click();}if(event.target.id==='roster-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('button[data-command*="ui_rosterFilter"]')?.click();}});
@@ -465,9 +485,9 @@ async function checkSlotConflict(){
 window.addEventListener('beforeunload',event=>{if(!operation)flushBattle();if(dirty||operation){event.preventDefault();event.returnValue='';}});
 window.addEventListener('pagehide',()=>pauseBattle('离开页面，交战已暂停。'));
 window.addEventListener('baize-app-pause',async()=>{await pauseBattle('切到后台时已暂停。回来后点击继续交战。');if(state)paint();});
-window.addEventListener('baize-app-resume',()=>{if(state){lastBattlePulse=null;checkSlotConflict();refreshClock();}});
-async function refreshClock(){if(operation||!state||!entered||locked||invalid||view==='welcome'||view==='save'||document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;operation=true;try{await persist(dispatch(data,state,{type:'refresh'}));paint();}catch(e){error=e.message;paint();}finally{operation=false;}}
-document.addEventListener('visibilitychange',()=>{if(document.hidden){pauseBattle('切到后台时已暂停。回来后点击继续交战。');if(state)paint();}else{lastBattlePulse=null;checkSlotConflict();refreshClock();}});
+window.addEventListener('baize-app-resume',()=>{if(state){lastBattlePulse=null;checkSlotConflict();syncBattleOutcome();refreshClock();}});
+async function refreshClock(){if(operation||!state||!entered||locked||invalid||view==='welcome'||view==='save'||document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;operation=true;try{await persist(dispatch(data,state,{type:'refresh'}));paint();}catch(e){error=e.message;paint();}finally{operation=false;syncBattleOutcome();}}
+document.addEventListener('visibilitychange',()=>{if(document.hidden){pauseBattle('切到后台时已暂停。回来后点击继续交战。');if(state)paint();}else{lastBattlePulse=null;checkSlotConflict();syncBattleOutcome();refreshClock();}});
 try{
   data=await loadData();let storage;try{storage=window.localStorage;}catch{storage={getItem(){throw new Error('浏览器禁止访问本机存储。');},setItem(){throw new Error('浏览器禁止访问本机存储。');}};}
   try{database=await SlotDatabase.open(window.indexedDB);await database.migrate(storage);}

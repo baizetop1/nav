@@ -205,7 +205,11 @@
     "test:shuihu-journey-scenes": "node scripts/shuihu-journey-scenes-selfcheck.mjs",
     "test:shuihu-gathering-scenes": "node scripts/shuihu-gathering-scenes-selfcheck.mjs",
     "test:shuihu-harbor-scenes": "node scripts/shuihu-harbor-scenes-selfcheck.mjs",
-    "test:shuihu-scene-library": "node scripts/shuihu-scene-library-selfcheck.mjs"
+    "test:shuihu-scene-library": "node scripts/shuihu-scene-library-selfcheck.mjs",
+    "test:shuihu-battle-outcome": "node scripts/shuihu-battle-outcome-selfcheck.mjs",
+    "test:shuihu-completion": "node scripts/shuihu-completion-selfcheck.mjs",
+    "check:shuihu-completion": "node scripts/shuihu-completion-browser.mjs",
+    "check:shuihu-battle-outcome": "node scripts/shuihu-battle-outcome-browser.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

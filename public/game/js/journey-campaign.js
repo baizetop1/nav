@@ -1,5 +1,5 @@
-import {ITINERARIES,PREPARATIONS,CONTRACTS,ROUTE_DROPS,defaultPlan,validPlan,contractPassed} from './journey-campaign-data.js?v=0.64.0';
-import {requireRule,random,journal} from './utils.js?v=0.64.0';import {gainItem} from './item.js?v=0.64.0';
+import {ITINERARIES,PREPARATIONS,CONTRACTS,ROUTE_DROPS,defaultPlan,validPlan,contractPassed} from './journey-campaign-data.js?v=0.66.0';
+import {requireRule,random,journal} from './utils.js?v=0.66.0';import {gainItem} from './item.js?v=0.66.0';
 export function campaignRecord(s){return s.realm.journey.campaign??={version:1,plan:defaultPlan(),contracts:{},clears:0};}
 export function campaignPlan(s,a){return {...defaultPlan(),...s.realm?.journey?.campaign?.plan,...Object.fromEntries(['itinerary','preparation','challenge'].filter(k=>a[k]!==undefined).map(k=>[k,a[k]]))};}
 export function campaignQuote(s,a){const p=campaignPlan(s,a);if(!validPlan(p))return {reason:'无效的路线、备战或挑战。',plan:p};const m=PREPARATIONS[p.preparation];let reason=m.building&&(!s.camp||s.camp.buildings[m.building]<2)?'这项备战需要对应设施 2 级。':p.challenge!=='none'&&a.tier<2?'挑战契约需要险途或绝险。':'';for(const [id,n]of Object.entries(m.cost)){const have=id==='silver'?s.player.silver:['wood','food'].includes(id)?s.camp?.[id]:s.inventory[id];if(!reason&&(have||0)<n)reason='备战物资不足：'+m.name+'。';}return {reason,plan:p,cost:m.cost};}

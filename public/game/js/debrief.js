@@ -1,9 +1,9 @@
-import {tacticsHealing} from './tactics-combat.js?v=0.64.0';
-import {validReplayContext} from './replays-data.js?v=0.64.0';
-import {validSpecialContext} from './special-dungeons-data.js?v=0.64.0';
-import {roleTaken,roleHeal} from './hero-roles.js?v=0.64.0';
-import {journeyHealing} from './journey-combat.js?v=0.64.0';import {validateJourneyReport} from './journey-tactics-save.js?v=0.64.0';
-import { validEliteContext } from './elites.js?v=0.64.0';
+import {tacticsHealing} from './tactics-combat.js?v=0.66.0';
+import {validReplayContext} from './replays-data.js?v=0.66.0';
+import {validSpecialContext} from './special-dungeons-data.js?v=0.66.0';
+import {roleTaken,roleHeal} from './hero-roles.js?v=0.66.0';
+import {journeyHealing} from './journey-combat.js?v=0.66.0';import {validateJourneyReport} from './journey-tactics-save.js?v=0.66.0';
+import { validEliteContext } from './elites.js?v=0.66.0';
 export const METRICS=['damage','healing','taken','controls','interrupts','skills'];
 export function newMetrics(team){return {version:1,reason:'ongoing',heroes:Object.fromEntries(team.map(u=>[u.id,Object.fromEntries(METRICS.map(k=>[k,0]))])),dot:0,environment:0,medicine:0,medicineUses:0};}
 export function contribution(b,u,key,n=1){const row=u?.side==='team'&&b.metrics?.heroes[u.id];if(row)row[key]+=n;}
