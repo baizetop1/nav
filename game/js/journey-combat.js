@@ -1,5 +1,5 @@
-import {lateAbsorb} from './late-mainline-combat.js?v=0.58.0';
-import {ROUTE_BOSSES,EFFECT_LABELS,journeyConsequences} from './journey-data.js?v=0.58.0';
+import {lateAbsorb} from './late-mainline-combat.js?v=0.64.0';
+import {ROUTE_BOSSES,EFFECT_LABELS,journeyConsequences} from './journey-data.js?v=0.64.0';
 const active=b=>b.journey?.rules===2&&b.journey.combat,has=(b,id)=>!!active(b)&&b.journey.boons.includes(id);
 const living=u=>u.hp>0,guarded=(b,u)=>b.orders?.stance==='guard'||u.statuses.some(s=>s.id==='guard'&&s.expiresAt>b.elapsed);
 const log=(b,text)=>{b.log.push('【'+(b.elapsed/1000).toFixed(1)+'秒】'+text);if(b.log.length>120)b.log.shift();};

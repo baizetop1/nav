@@ -1,5 +1,5 @@
-import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.58.0';
-import { dispatch } from './core.js?v=0.58.0';
+import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.64.0';
+import { dispatch } from './core.js?v=0.64.0';
 export const SORTIES=['replayStart','specialStart','campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle','realmBattle','challengeStart','personalStart','ventureNext'];
 export function prepareSortie(s,d,action,setup,now=s.clock){
  const heroOnly=action.type==='replayStart'||action.type==='specialStart'||action.type==='rotationStart'&&action.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===action.id);

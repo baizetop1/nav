@@ -1,4 +1,4 @@
-import {PERSONAL} from './expansion-data.js?v=0.58.0';
+import {PERSONAL} from './expansion-data.js?v=0.64.0';
 // Derive progress from the real battle and retained report; no duplicate counters.
 export function personalProgress(b){
  if(b?.context?.type!=='realm'||b.context.kind!=='personal')return null;
@@ -7,7 +7,7 @@ export function personalProgress(b){
  add('击败全部敌人',b.outcome==='victory');add('任务人物仍在阵中',hero?.hp>0);
  if(m.allAlive)add('全员存活',b.team.every(u=>u.hp>0));
  if(m.seconds)add('用时 '+(b.elapsed/1000).toFixed(1)+' / '+m.seconds+' 秒',b.elapsed<=m.seconds*1000);
- for(const [key,label]of [['healing','本人有效治疗'],['taken','本人实际承伤'],['skills','本人主动施招']])if(m[key])add(label+' '+(stats[key]||0)+' / '+m[key],(stats[key]||0)>=m[key]);
+ for(const [key,label]of [['damage','本人直接伤害'],['healing','本人有效治疗'],['taken','本人实际承伤'],['skills','本人主动施招']])if(m[key])add(label+' '+(stats[key]||0)+' / '+m[key],(stats[key]||0)>=m[key]);
  if(m.noMedicine)add('战斗药品使用 '+(b.metrics?.medicineUses||0)+' 次',b.metrics?.medicineUses===0);
  return {name:m.name,rows,complete:rows.every(r=>r.done)};
 }

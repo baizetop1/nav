@@ -1,5 +1,5 @@
-import {newEquipment,gainItem} from './item.js?v=0.58.0';
-import {requireRule,journal,hasOwn} from './utils.js?v=0.58.0';
+import {newEquipment,gainItem} from './item.js?v=0.64.0';
+import {requireRule,journal,hasOwn} from './utils.js?v=0.64.0';
 export const ROUTE_PRIZES={forest:{name:'青石路契',equipment:'route_forest_blade',title:'截令短刃',text:'攻击 +32、速度 +8；开战时敌方首位攻击降低 15%，持续 6 秒。适合抢先压制。'},water:{name:'芦荡路契',equipment:'route_water_charm',title:'渡潮佩',text:'谋略 +24、气血 +100；穿戴者开战怒气 +20。适合尽早施展治疗或打断。'},mountain:{name:'断崖路契',equipment:'route_mountain_armor',title:'守隘甲',text:'防御 +25、气血 +180；穿戴者开战获得 15% 护阵，持续 8 秒。适合前排承伤。'}};
 export const ROUTE_PRICE=6;
 export const routeBalance=(s,id)=>(s.realm?.journey?.rewards?.earned[id]||0)-(s.realm?.journey?.rewards?.spent[id]||0);

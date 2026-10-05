@@ -1,9 +1,9 @@
-import {chronicleObjective} from './chronicle.js?v=0.58.0';
-import {openingGoal} from './opening-ui.js?v=0.58.0';
-import {ROUTE_PRIZES,ROUTE_PRICE,routeBalance} from './journey-rewards.js?v=0.58.0';
-import {JOURNEYS,JOURNEY_TIERS} from './journey-data.js?v=0.58.0';
-import {totalExperience} from './progression.js?v=0.58.0';
-import {deployedTroops} from './logistics.js?v=0.58.0';
+import {chronicleObjective} from './chronicle.js?v=0.64.0';
+import {openingGoal} from './opening-ui.js?v=0.64.0';
+import {ROUTE_PRIZES,ROUTE_PRICE,routeBalance} from './journey-rewards.js?v=0.64.0';
+import {JOURNEYS,JOURNEY_TIERS} from './journey-data.js?v=0.64.0';
+import {totalExperience} from './progression.js?v=0.64.0';
+import {deployedTroops} from './logistics.js?v=0.64.0';
 export function journeyNextGoal(s,d){const page=(title,text,view,id,hero)=>({title,text,command:{type:'ui_section',view,id,...(hero?{hero}:{})},label:'前往'}),c=s.camp;
  if(!c)return page('安营立寨','先立寨，再修伐木场和农田，积攒木料与粮草。','camp','home');
  if(s.realm?.trek||s.expansion?.run)return page('游历未归','队伍尚在途中，可接着上回的路继续走。','realm',s.realm?.trek?.journey?'journey':s.realm?.trek?'expeditions':'battles');

@@ -26,3 +26,14 @@ export const PERSONAL_TRAITS={songjiang:'heal_rally',yanqing:'follow',xuning:'co
 export const TRAIT_LABELS={heal_rally:'救伤鼓气',counter:'护阵反击',guard:'稳步结阵',cover:'护住后排',follow:'截势追击',recover:'借隙调息',rally:'传令抢攻',shatter:'击碎护阵',cleanse:'施药解毒',weaken:'断令乱阵'};
 export const traitText=e=>GEAR_TRAITS[e.item]?GEAR_TRAITS[e.item].text+((e.refine||0)>0?(GEAR_TRAITS[e.item].kind==='shatter'?' 精修 '+e.refine+' 阶：实际间隔 '+(8/(1+.15*e.refine)).toFixed(2)+' 秒。':' 精修 '+e.refine+' 阶：数值效果提高 '+(e.refine*15)+'%，触发次数和间隔不变。'):''):'';
 
+
+Object.assign(PERSONAL_TALES,{
+ duqian:{before:'山下来了几户避兵的人。杜迁搬开寨门前的拒马，叫他们先过，自己站到路中间。',after:'人进齐了，杜迁才闩上寨门。一个孩子落下的草鞋，还挂在他的枪杆上。'},
+ songwan:{before:'雨水冲坏了上山的石阶。宋万把绳子拴在树上，让背粮的乡勇攀着走，自己留下断后。',after:'最后一担粮上了坡。宋万扯下断绳，抹去脸上的泥，叫人明早来补石阶。'},
+ caozheng:{before:'粮车停在店后，押车的军士却要连店里的米一并搬走。曹正摘下围裙，把门口让给同伴。',after:'车夫领回缰绳，曹正回厨房看锅。灶里的火灭了，还得重新生。'},
+ zhufu:{before:'草棚里躺着几个受伤的客人，林边还听得见追赶声。朱富烧了热水，托你守住棚口。',after:'伤者能坐起来了。朱富把剩下的热水倒进碗里，又去找干净的布。'},
+ houjian:{before:'护送的人还没上路，衣甲上的绳扣已断了几处。侯健刚穿好针，前头便传来喊声。',after:'侯健沿着旧针脚把裂口缝拢，拉了两下才交还：回去换块整皮，这处撑不久。'},
+ shien:{before:'快活林的伙计被堵在林口，扁担和碗碟散了一地。施恩认出领头的，提着短刀追过去。',after:'伙计蹲下收拾碎碗。施恩让他先扶伤者回店，自己留下把路清开。'}
+});
+Object.assign(PERSONAL_TRAITS,{duqian:'cover',songwan:'brace',caozheng:'shatter',zhufu:'cleanse',houjian:'stitch',shien:'bleed_chase'});
+Object.assign(TRAIT_LABELS,{brace:'守住坡口',stitch:'补甲护身',bleed_chase:'趁伤追击'});

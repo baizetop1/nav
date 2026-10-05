@@ -1,5 +1,5 @@
-import {SPECIAL_ROUTES,routeReward} from './special-routes.js?v=0.58.0';
-import {SPECIAL_DUNGEONS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.58.0';
+import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.64.0';
+import {SPECIAL_DUNGEONS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.64.0';
 const object=o=>o!==null&&typeof o==='object'&&!Array.isArray(o);
 const exact=(o,keys)=>object(o)&&Object.keys(o).length===keys.length&&keys.every(k=>Object.hasOwn(o,k));
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
@@ -19,7 +19,7 @@ export function validateSpecialDungeons(s,check){
   const dungeon=Object.hasOwn(SPECIAL_DUNGEONS,last.id)?SPECIAL_DUNGEONS[last.id]:null;
   check(!!dungeon&&integer(last.tier,1,3)&&['victory','defeat','retreat'].includes(last.outcome)&&integer(last.at,0,s.clock)&&Array.isArray(last.drops),'特殊副本战果来源');
   check(unlocked(last.id,last.tier),'特殊副本战果前置');
-  if(last.route!==undefined){check(Object.hasOwn(SPECIAL_ROUTES,last.route),'副本路线');const reward=routeReward(last.route,last.tier);check(last.outcome!=='victory'?last.bonus===null:exact(last.bonus,['id','count','stored'])&&last.bonus.id===reward.id&&last.bonus.count===reward.count&&integer(last.bonus.stored,0,reward.count),'路线收获');}
+  if(last.route!==undefined){check(routeAllowed(last.route,last.id),'副本路线');const reward=routeReward(last.route,last.tier);check(last.outcome!=='victory'?last.bonus===null:exact(last.bonus,['id','count','stored'])&&last.bonus.id===reward.id&&last.bonus.count===reward.count&&integer(last.bonus.stored,0,reward.count),'路线收获');}
   const table=specialDropTable(last.id,last.tier);
   check(last.drops.length<=table.length&&new Set(last.drops.map(v=>v?.kind+':'+v?.id)).size===last.drops.length,'特殊副本掉落条目');
   check(last.outcome==='victory'?(x.clears[last.id+'_'+last.tier]||0)>=1:last.drops.length===0,'特殊副本胜负与掉落');

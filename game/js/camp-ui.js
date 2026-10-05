@@ -1,29 +1,31 @@
-import {campDashboard} from './folio-ui.js?v=0.58.0';
-import {lessonsPanel} from './opening-ui.js?v=0.58.0';
-import {journeyHome} from './journey-ui.js?v=0.58.0';
-import {pageSection,sectionPicker,sectionHome} from './page-sections.js?v=0.58.0';
-import {storyGuide} from './story-guide.js?v=0.58.0';
-import {recruitPrice} from './realm-buildings.js?v=0.58.0';
-import {reservedTroops} from './squads.js?v=0.58.0';
-import { supplyBoard } from './supplies.js?v=0.58.0';
-import { staminaCap, barracksCapacity, commandCapacity, deployedTroops } from './logistics.js?v=0.58.0';
-import { mentorshipPanel } from './mentorship-ui.js?v=0.58.0';
-import { campOverview } from './camp-overview.js?v=0.58.0';
-import { affairsPanel } from './management-ui.js?v=0.58.0';
-import { productionPanel, frontierMap } from './frontier-ui.js?v=0.58.0';
-import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.58.0';
-import { ARMS } from './martial.js?v=0.58.0';
-import { enemyIntel } from './martial-ui.js?v=0.58.0';
-import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.58.0';
-import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.58.0';
-import { dungeonMountLoot } from './growth-ui.js?v=0.58.0';
-import { icon } from './icons.js?v=0.58.0';
+import {sceneBanner,scenePage} from './scenes-ui.js?v=0.64.0';
+import {campDashboard} from './folio-ui.js?v=0.64.0';
+import {lessonsPanel} from './opening-ui.js?v=0.64.0';
+import {journeyHome} from './journey-ui.js?v=0.64.0';
+import {pageSection,sectionPicker,sectionHome} from './page-sections.js?v=0.64.0';
+import {storyGuide} from './story-guide.js?v=0.64.0';
+import {recruitPrice} from './realm-buildings.js?v=0.64.0';
+import {reservedTroops} from './squads.js?v=0.64.0';
+import { supplyBoard } from './supplies.js?v=0.64.0';
+import { staminaCap, barracksCapacity, commandCapacity, deployedTroops } from './logistics.js?v=0.64.0';
+import { mentorshipPanel } from './mentorship-ui.js?v=0.64.0';
+import { campOverview } from './camp-overview.js?v=0.64.0';
+import { affairsPanel } from './management-ui.js?v=0.64.0';
+import { productionPanel, frontierMap } from './frontier-ui.js?v=0.64.0';
+import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.64.0';
+import { ARMS } from './martial.js?v=0.64.0';
+import { enemyIntel } from './martial-ui.js?v=0.64.0';
+import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.64.0';
+import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.64.0';
+import { dungeonMountLoot } from './growth-ui.js?v=0.64.0';
+import { icon } from './icons.js?v=0.64.0';
 
 const portraitText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const portrait=(h,small=false)=>h.portrait?`<span class="hero-portrait portrait-${h.id}${small?' portrait-small':''}"><img src="${h.portrait}" alt="${portraitText(h.name)}人物像" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></span>`:`<span class="hero-portrait portrait-${h.id}${h.introducedIn===3?' portrait-new':''}${small?' portrait-small':''}" role="img" aria-label="${portraitText(h.name)}人物卡">${h.introducedIn===3?`<span class="portrait-monogram"><b>${portraitText(h.name.slice(0,1))}</b><small>立绘待补</small></span>`:''}</span>`;
-export function campPage(s,d,esc,btn,requested){
+export function campPage(s,d,esc,btn,requested,scene){
   const c=s.camp;
   if(!c)return `<section class="camp-arrival"><p class="kicker">水泊初起 · 自立门户</p><h1>在此立寨</h1><p class="prose">白胜带着乡人在山脚等候。空地可以建聚义厅，东边还有几亩荒田。</p><div class="camp-faces">${['baisheng','wusong','linchong','wuyong'].map(id=>portrait(d.by.heroes[id])).join('')}</div>${btn('建立自己的寨子',{type:'campFound'},'primary')}<p class="note">已有英雄、坐骑和剧情进度保留。寨务与江湖历练可自由选择。</p></section>`;
+  if(requested==='scene')return scenePage(s,d,esc,btn,portrait,scene);
   const n=deployedTroops(s);
   const next=!c.buildings.lumber?'先修伐木场，后续扩建就有稳定木料。':!c.buildings.farm?'再修农田，为募兵和出征储粮。':!c.buildings.barracks?'建起兵营，让乡勇跟随好汉出征。':!c.troops?'募一队乡勇，或选择英雄独行去山林清剿。':'募兵消耗粮草和碎银；伤兵需在医馆治疗。';
   const section=pageSection('camp',requested),panels={preparation:()=>'<h1>寨中备战</h1><p>选一项准备，供本次游历使用。</p><article class="realm-card"><h2>伐木场 2 级 · 修制路标</h2><p>付木材 20、碎银 30，本趟战斗粮耗降低 20%。</p></article><article class="realm-card"><h2>医馆 2 级 · 随军医囊</h2><p>付草药 3、布匹 2，每场胜利后在阵英雄恢复 8% 气血。</p></article><article class="realm-card"><h2>兵营 2 级 · 出征合练</h2><p>付粮草 25、碎银 40，每场开战怒气 +10。</p></article><p class="note">每趟最多选择一项，也可免费轻装出行。仅启程扣费，途中不可更换。</p>'+btn('安排下一趟备战',{type:'ui_section',view:'realm',id:'planning'},'primary')+btn('营建设施',{type:'ui_section',view:'camp',id:'buildings'},'secondary'),
@@ -42,6 +44,6 @@ export function campPage(s,d,esc,btn,requested){
  goals:()=>goalBoard(s,d,btn),supply:()=>supplyBoard(s,d,btn),mentorship:()=>mentorshipPanel(s,d,esc,btn),
  ledger:()=>targetPanel(s,d,btn)+ledgerPanel(s,d)
  };
- return (section==='home'?'':sectionPicker('camp',section,btn))+(section==='home'?'<div class="home-banner"><strong>白泽寨</strong><span>'+c.buildings.hall+' 级 · 寨务第 '+c.day+' 日</span></div>':`<div class="section-top"><div><p class="kicker">水泊梁山 · 寨务第 ${c.day} 日</p><h1 class="page-title">${icon('chronicle')}白泽寨</h1></div><span class="camp-rank">${c.buildings.hall} 级寨子</span></div>
+ return (section==='home'?'':sectionPicker('camp',section,btn))+(section==='home'?sceneBanner(s,esc):`<div class="section-top"><div><p class="kicker">水泊梁山 · 寨务第 ${c.day} 日</p><h1 class="page-title">${icon('chronicle')}白泽寨</h1></div><span class="camp-rank">${c.buildings.hall} 级寨子</span></div>
 `)+'<section data-page-section="camp:'+section+'">'+panels[section]()+'</section>';
 }

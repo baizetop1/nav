@@ -1,44 +1,46 @@
-import {replacementQuote} from './hero-replacement.js?v=0.58.0';
-import {replacementDialog} from './progression-paths-ui.js?v=0.58.0';
-import {lootEquipment} from './loot-ui.js?v=0.58.0';
-import {lateChoiceWarning} from './late-mainline-ui.js?v=0.58.0';
-import {specialReceipt,specialNext} from './special-dungeons-ui.js?v=0.58.0';
-import {chronicleReceipt} from './chronicle-ui.js?v=0.58.0';
-import {showFunctionMenu} from './menu-ui.js?v=0.58.0';
-import {inventoryEntry} from './provisions-ui.js?v=0.58.0';
-import {installTheme} from './theme.js?v=0.58.0';
-import {campaignReceipt} from './journey-campaign-ui.js?v=0.58.0';
-import {growthRecap,afterBattleNext} from './opening-ui.js?v=0.58.0';
-import {journeyNextGoal} from './journey-goals-ui.js?v=0.58.0';
-import {beforeScreenPaint,afterScreenPaint,installScreenPages,screenInteractionActive} from './screen-pages.js?v=0.58.0';
-import {bindDialogPages} from './dialog-pages.js?v=0.58.0';
-import {storyObjective} from './story-guide.js?v=0.58.0';
-import { supportReceipt } from './recruit-support-ui.js?v=0.58.0';
-import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.58.0';
-import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.58.0';
-import { sweepQuote } from './sweep.js?v=0.58.0';
-import { sweepDialog } from './sweep-ui.js?v=0.58.0';
-import { collectionQuote, workshopQuote } from './production.js?v=0.58.0';
-import { productionDialog } from './production-ui.js?v=0.58.0';
-import { mentorshipQuote } from './mentorship.js?v=0.58.0';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.58.0';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.58.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.58.0';
-import { presetReason } from './development.js?v=0.58.0';
-import { batchQuote } from './batch.js?v=0.58.0';
-import { batchDialog } from './batch-ui.js?v=0.58.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.58.0';
-import { ActivityLog } from './activity.js?v=0.58.0';
-import { loadData } from './data.js?v=0.58.0';
-import { dispatch, newGame } from './core.js?v=0.58.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.58.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.58.0';
-import { patchElement } from './dom.js?v=0.58.0';
+import {sceneReturn} from './scenes.js?v=0.64.0';
+import {sceneArtDialog} from './scenes-ui.js?v=0.64.0';
+import {replacementQuote} from './hero-replacement.js?v=0.64.0';
+import {replacementDialog} from './progression-paths-ui.js?v=0.64.0';
+import {lootEquipment} from './loot-ui.js?v=0.64.0';
+import {lateChoiceWarning} from './late-mainline-ui.js?v=0.64.0';
+import {specialReceipt,specialNext} from './special-dungeons-ui.js?v=0.64.0';
+import {chronicleReceipt} from './chronicle-ui.js?v=0.64.0';
+import {showFunctionMenu} from './menu-ui.js?v=0.64.0';
+import {inventoryEntry} from './provisions-ui.js?v=0.64.0';
+import {installTheme} from './theme.js?v=0.64.0';
+import {campaignReceipt} from './journey-campaign-ui.js?v=0.64.0';
+import {growthRecap,afterBattleNext} from './opening-ui.js?v=0.64.0';
+import {journeyNextGoal} from './journey-goals-ui.js?v=0.64.0';
+import {beforeScreenPaint,afterScreenPaint,installScreenPages,screenInteractionActive} from './screen-pages.js?v=0.64.0';
+import {bindDialogPages} from './dialog-pages.js?v=0.64.0';
+import {storyObjective} from './story-guide.js?v=0.64.0';
+import { supportReceipt } from './recruit-support-ui.js?v=0.64.0';
+import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.64.0';
+import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.64.0';
+import { sweepQuote } from './sweep.js?v=0.64.0';
+import { sweepDialog } from './sweep-ui.js?v=0.64.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.64.0';
+import { productionDialog } from './production-ui.js?v=0.64.0';
+import { mentorshipQuote } from './mentorship.js?v=0.64.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.64.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.64.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.64.0';
+import { presetReason } from './development.js?v=0.64.0';
+import { batchQuote } from './batch.js?v=0.64.0';
+import { batchDialog } from './batch-ui.js?v=0.64.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.64.0';
+import { ActivityLog } from './activity.js?v=0.64.0';
+import { loadData } from './data.js?v=0.64.0';
+import { dispatch, newGame } from './core.js?v=0.64.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.64.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.64.0';
+import { patchElement } from './dom.js?v=0.64.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.58.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.58.0';
-import { CloudClient } from './cloud.js?v=0.58.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.58.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.64.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.64.0';
+import { CloudClient } from './cloud.js?v=0.64.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.64.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 const applyTheme=installTheme();
 installScreenPages();
@@ -60,7 +62,7 @@ const makeStore=id=>new SlotStore(database,data,id,change=>channel?.postMessage(
 async function refreshSlots(){try{slots=await database.all();}catch{slots=[store.record];}}
 function rememberSlot(){try{sessionStorage.setItem('baize_shuihu_active_slot',String(store.id));}catch{}}
 function saveBox(){return {record:store.record,slots,cloud:cloudView,dirty};}
-let mapTarget=null,mapSection='story',pageSections={},roster={},gear={},pendingSortie=null;
+let mapTarget=null,mapSection='scene',pageSections={},roster={},gear={},pendingSortie=null;
 const sortieSetup=()=>({team:[0,1,2].map(i=>document.getElementById('sortie-hero-'+i).value).filter(Boolean),...(state.camp?{mode:document.getElementById('sortie-mode').value,tactic:document.getElementById('sortie-tactic').value,deployment:Number(document.getElementById('sortie-troops').value)}:{})});
 function showSortie(action,setup){const q=prepareSortie(state,data,action,setup,Date.now());pendingSortie={action,setup,signature:q.signature};document.getElementById('sortie-preview')?.remove();const btn=(label,a,kind,disabled)=>`<button type="button" class="${kind}" data-command="${esc(JSON.stringify(a))}" ${disabled?'disabled':''}>${esc(label)}</button>`;root.insertAdjacentHTML('beforeend',sortieDialog(state,data,action,setup,q,esc,btn));const dialog=document.getElementById('sortie-preview');dialog.addEventListener('close',()=>{pendingSortie=null;dialog.remove();},{once:true});bindDialogPages(dialog);dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});}
 
@@ -123,12 +125,12 @@ function showRecruitResult(result,returnCommand,extra=''){
 }
 function showRewards(before,after,returnCommand){
   const rows=gains(before,after,data),finished=!!before.battle?.outcome&&!after.battle,victory=finished&&before.battle.outcome==='victory';if(!rows.length&&!finished)return;
-  const battleSummary=finished?{context:before.battle.context,fallen:after.lastBattle?.fallen||0,outcome:before.battle.outcome,troops:before.battle.expedition?.troops||0,wounded:Math.max(0,(after.camp?.wounded||0)-(before.camp?.wounded||0))}:null;
+  const battleSummary=finished?{team:before.battle.team,elapsed:before.battle.elapsed,context:before.battle.context,fallen:after.lastBattle?.fallen||0,outcome:before.battle.outcome,troops:before.battle.expedition?.troops||0,wounded:Math.max(0,(after.camp?.wounded||0)-(before.camp?.wounded||0))}:null;
   const mainlineChanged=Object.keys(after.progress.stories).some(id=>/^v(?:[3-9]|1[012])_/.test(id)&&JSON.stringify(before.progress.stories[id])!==JSON.stringify(after.progress.stories[id]));
   const goal=mainlineChanged?storyObjective(after,data):null;
   const mainlineNext=goal?{title:goal.title,text:goal.reason||goal.detail,label:after.progress.flags.volume_twelve_complete?'查看结局':'继续主线',command:{type:after.progress.flags.volume_twelve_complete?'ui_mainlinePlan':'ui_storyResume'}}:null;
   const dungeonVictory=(victory&&before.battle?.context.type==='dungeon')||(before.scheme?.outcome==='success'&&before.scheme.context.type==='dungeon'&&!after.scheme);
-  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary,lesson:before.battle?.context.type==='lesson',replay:before.battle?.context.type==='replay',growth:growthRecap(before,after,data,esc),loot:lootEquipment(before,after,data,esc)+campaignReceipt(before,after,data)+chronicleReceipt(before,after)+specialReceipt(before,after,data,esc),next:!after.battle&&!after.scheme&&!after.event?((before.battle?.context.type==='replay'?{title:'战役回顾',label:'再练一次',command:{type:'replayStart',id:before.battle.context.id.slice(5),tier:before.battle.context.tier}}:null)||specialNext(finished?before.battle:null)||mainlineNext||afterBattleNext(after,finished?before.battle:null,data,journeyNextGoal(after,data))):null,review:finished&&before.battle.context.type!=='lesson'&&after.lastBattle?debriefPanel(after.lastBattle,data,esc):''}));
+  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary,lesson:before.battle?.context.type==='lesson',replay:before.battle?.context.type==='replay',growth:growthRecap(before,after,data,esc),loot:lootEquipment(before,after,data,esc)+campaignReceipt(before,after,data)+chronicleReceipt(before,after)+specialReceipt(before,after,data,esc),next:!after.battle&&!after.scheme&&!after.event?((before.battle?.context.type==='replay'?{title:'战役回顾',label:'再练一次',command:{type:'replayStart',id:before.battle.context.id.slice(5),tier:before.battle.context.tier,...(before.battle.context.challenge?{challenge:before.battle.context.challenge}:{})}}:null)||sceneReturn(finished?before.battle:null)||specialNext(finished?before.battle:null)||mainlineNext||afterBattleNext(after,finished?before.battle:null,data,journeyNextGoal(after,data))):null,review:finished&&before.battle.context.type!=='lesson'&&after.lastBattle?debriefPanel(after.lastBattle,data,esc):''}));
   const dialog=document.getElementById('reward-result');bindDialogPages(dialog);dialog.querySelectorAll('[data-reward-command],[data-reward-action]').forEach(button=>button.addEventListener('click',async event=>{if(operation)return;operation=true;root.setAttribute('aria-busy','true');const command=JSON.parse(event.currentTarget.dataset.rewardCommand||event.currentTarget.dataset.rewardAction);dialog.close();try{await handle(command);}catch(e){error=e.message;paint();}finally{operation=false;root.removeAttribute('aria-busy');}}));dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
 }
 function download(text,name){if(typeof window.BaizeAndroid?.exportSave==='function'){window.BaizeAndroid.exportSave(text,name);return;}const blob=new Blob([text],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
@@ -154,7 +156,7 @@ async function battleFrame(){
     paint();
   }catch(e){battlePaused=true;battlePauseReason='交战已暂停，请先处理提示。';error=e.message;paint();}finally{operation=false;}
 }
-async function load(){pageSections={};mapSection='story';mapTarget=null;visibleEntries=[];logPaused=false;activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
+async function load(){pageSections={};mapSection='scene';mapTarget=null;visibleEntries=[];logPaused=false;activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
   if(result.status==='ok'){state=result.state;view=state.battle||state.scheme||state.event?'map':'camp';status='已保存到本机 · 已接续原有进度';try{await persist(dispatch(data,state,{type:'refresh'}));}catch(e){status=e.message;}}
   else{state=newGame(data);view=result.status==='invalid'?'save':'welcome';invalid=result.status==='invalid';locked=invalid;status=invalid?'存档无法读取，原文与已有备份均保留。请恢复备份或导入；导出按钮可取回坏档原文。':result.status==='unavailable'?'本机存储不可用，可临时游玩，但务必导出进度。':'尚未入卷，点击进入后开始保存。';}
   resumeSavedBattle();paint(true);
@@ -251,6 +253,11 @@ async function handleBox(command){
 }
 async function handle(command){
   const {type,id}=command;error='';let prepared=null;
+  if(type==='ui_journeyText'){if(!entered||state.battle||state.scheme||state.event)return;view='map';mapSection='story';paint(true);return;}
+  if(type==='ui_journeyScene'){if(!entered||state.battle||state.scheme||state.event)return;view='map';mapSection='scene';pageSections.journeyScene={map:state.location,tab:command.tab};paint(true);return;}
+  if(type==='ui_sceneArtClose'){document.getElementById('scene-art')?.close();return;}
+  if(type==='ui_scene'){if(!entered||!state.camp||state.battle||state.scheme||state.event)return;view='camp';pageSections.camp='scene';pageSections.scene={place:command.place==='woods'?'woods':'gate',topic:command.topic};paint(true);return;}
+  if(type==='ui_sceneArt'){if(!entered||state.battle||state.scheme||state.event)return;const button=(label,a,kind='secondary')=>'<button type="button" class="'+kind+'" data-command="'+esc(JSON.stringify(a))+'">'+esc(label)+'</button>',html=sceneArtDialog(id,esc,button);if(!html)return;document.getElementById('scene-art')?.remove();root.insertAdjacentHTML('beforeend',html);const dialog=document.getElementById('scene-art');dialog.addEventListener('close',()=>dialog.remove(),{once:true});bindDialogPages(dialog);dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});return;}
   if(type==='ui_replacementCancel'){document.getElementById('replacement-preview')?.close();return;}
   if(type==='ui_replacementPreview'){const q=replacementQuote(state,data,document.getElementById('replace-from')?.value,document.getElementById('replace-to')?.value);document.getElementById('replacement-preview')?.remove();const host=document.createElement('div'),button=(label,a,kind='secondary',disabled=false)=>'<button type="button" class="'+kind+'" data-command="'+esc(JSON.stringify(a))+'" '+(disabled?'disabled':'')+'>'+esc(label)+'</button>';host.innerHTML=replacementDialog(q,data,esc,button);const dialog=host.firstElementChild;root.append(dialog);dialog.addEventListener('close',()=>dialog.remove(),{once:true});bindDialogPages(dialog);dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});return;}
   if(type==='ui_dossierTab'){if(view==='heroes'&&['attributes','ability','develop'].includes(id)){roster={...roster,dossierTab:id};paint(true);}return;}
@@ -271,11 +278,11 @@ async function handle(command){
     const goal=storyObjective(state,data);
     if(goal.view){view=goal.view;if(goal.section)pageSections[view]=goal.section;paint(true);return;}
     if(goal.map&&goal.map!==state.location){if(!goal.route){view='map';mapSection='atlas';mapTarget=goal.map;paint(true);return;}await persist(dispatch(data,state,{type:'travel',id:goal.map}));}
-    view='map';mapSection='story';mapTarget=state.location;paint(true);return;
+    view='map';mapSection='scene';mapTarget=state.location;pageSections.journeyScene=null;paint(true);return;
   }
   if(type==='story'){const warning=lateChoiceWarning(state,data,command);if(warning&&!window.confirm(warning))return;}
   if(type==='story'&&id==='v7_prepare'&&['hook','trench'].includes(command.choice)){const choice=data.by.stories[id].steps.start.choices.find(c=>c.id===command.choice),effect=command.choice==='hook'?'破阵与决战中敌军防御降低 25%。':'破阵与决战中敌军攻击降低 20%、速度降低 15%。';if(!window.confirm(choice.label+'。'+effect+' 本卷只能选一次，确认后不能更换。'))return;}
-  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.58.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
+  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.64.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
   if(type==='ui_sortieCancel'){document.getElementById('sortie-preview')?.close();return;}
   if(SORTIES.includes(type)){showSortie(command);return;}
   if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieRecommend','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortieRecommend')setup={...setup,team:command.team};if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);if(type==='ui_sortieRecommend')document.querySelector('#sortie-preview [data-dialog-tab="lineup"]').click();return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
@@ -300,10 +307,11 @@ async function handle(command){
   if(type==='ui_recruitSelect')command={type:'recruitSelect',id:document.getElementById('recruit-select-hero').value};
   if(type==='ui_recruitCamp'){view='camp';pageSections.camp='supply';paint(true);document.getElementById('supply-board')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_mentorPreview'){
-    const mentor=document.getElementById('mentor-hero').value,student=document.getElementById('mentor-student').value,q=mentorshipQuote(dispatch(data,state,{type:'refresh'}),data,mentor,student);
+    document.getElementById('replacement-preview')?.close();
+    const mentor=command.mentor??document.getElementById('mentor-hero')?.value,student=command.student??document.getElementById('mentor-student')?.value,q=mentorshipQuote(dispatch(data,state,{type:'refresh'}),data,mentor,student);
     document.getElementById('mentorship-preview')?.remove();
     const btn=(label,a,kind,disabled)=>'<button type="button" class="'+kind+'" data-command="'+esc(JSON.stringify(a))+'" '+(disabled?'disabled':'')+'>'+esc(label)+'</button>';
-    root.insertAdjacentHTML('beforeend',mentorshipDialog(q,data,esc,btn));const dialog=document.getElementById('mentorship-preview');dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;
+    root.insertAdjacentHTML('beforeend',mentorshipDialog(q,data,esc,btn));const dialog=document.getElementById('mentorship-preview');dialog.addEventListener('close',()=>dialog.remove(),{once:true});bindDialogPages(dialog);dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});return;
   }
   if(type==='heroMentor')document.getElementById('mentorship-preview')?.close();
   if(type==='ui_batchCancel'){document.getElementById('batch-preview')?.close();return;}
@@ -347,6 +355,7 @@ async function handle(command){
   if(type==='ui_verifiedRefresh'){if(leaderboard.verifiedLoading)return;const group=document.getElementById('verified-group-board')?.value||'open';leaderboard.verifiedGroup=group;leaderboard.verifiedLoading=true;leaderboard.verifiedError='';leaderboard.verified=null;paint();try{leaderboard.verified=await cloud.verifiedLeaderboard(group);}catch(e){leaderboard.verifiedError=e.status===404?'服务器演武服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.verifiedLoading=false;paint();}return;}
   if(type==='ui_rankRefresh'){if(leaderboard.loading)return;leaderboard.loading=true;leaderboard.error='';leaderboard.data=null;paint();try{leaderboard.data=await cloud.leaderboard();}catch(e){leaderboard.error=e.status===404?'排行榜服务尚未升级，请先更新云存档服务。':e.message;}finally{leaderboard.loading=false;paint();}return;}
   if(type==='ui_lootCompare'){const item=state.equipment.find(e=>e.uid===id);if(!item)return;view='forge';pageSections.forge='equipment';gear={...gear,query:data.by.equipments[item.item].name,type:'all',quality:'all',state:'all',comparison:{id,hero:state.team[0]||null}};paint(true);return;}
+  if(type==='ui_fitCompare'){const item=state.equipment.find(e=>e.uid===id);if(!item||state.heroes[command.hero]?.status!=='owned')return;gear={...gear,comparison:{id,hero:command.hero}};paint(true);return;}
   if(type==='ui_compareClose'){gear={...gear,comparison:null};paint();return;}
   if(type==='ui_campJump'){if(!['camp-affairs','camp-goals','camp-production','frontier-map','camp-resources','camp-mentorship'].includes(id))return;view='camp';pageSections.camp=({'camp-affairs':'affairs','camp-goals':'goals','camp-production':'production','frontier-map':'production','camp-resources':'troops','camp-mentorship':'mentorship'})[id];paint(true);const el=document.getElementById(id);for(let p=el?.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;if(id==='camp-mentorship')el?.querySelector('details')?.setAttribute('open','');el?.scrollIntoView({block:'start'});return;}
   if(type==='ui_affairDispatch')command={type:'affairChoice',choice:'dispatch',hero:document.getElementById('affair-hero').value};
@@ -378,7 +387,7 @@ async function handle(command){
   if(type==='heroReplace')document.getElementById('replacement-preview')?.close();
   if(type==='equip')gear={...gear,comparison:null};
   notice=['recruit','recruitTen'].includes(type)||type.startsWith('battle')||next.battle?'':next.message;
-  if(['travel','move','story','startScheme'].includes(type)){mapTarget=next.location;mapSection='story';}
+  if(['travel','move','story','startScheme','mapAction','meet','guide'].includes(type)){mapTarget=next.location;mapSection='scene';pageSections.journeyScene=null;}
   if(next.battle||next.scheme||next.event||['move','travel','story','startScheme'].includes(type))view='map';
   if(type==='finishBattle'&&['camp','frontier','lesson'].includes(before.battle?.context.type)){view='camp';if(before.battle.context.type==='lesson')pageSections.camp='lessons';else if(before.battle.context.type==='camp'&&next.camp.sorties<=1)pageSections.camp='home';}
   if(type==='finishBattle'&&before.battle?.context.type==='replay'){view='trials';pageSections.trials='replays';leaderboard.replays={id:before.battle.context.id.slice(5),tier:before.battle.context.tier};}
@@ -407,7 +416,7 @@ root.addEventListener('click',async event=>{
   if(operation)return;
   if(button.hasAttribute('data-frontier-jump')){document.getElementById('frontier-'+button.dataset.frontierJump)?.scrollIntoView({block:'start'});return;}
     if(button.hasAttribute('data-map-region')){document.getElementById('map-region-'+button.dataset.mapRegion)?.scrollIntoView({block:'start'});return;}
-  if(button.hasAttribute('data-map-section')||button.hasAttribute('data-map-local')){if(view!=='map'||state.battle||state.scheme||state.event)return;const section=button.dataset.mapSection||'story';if(!['story','atlas','explore','territory'].includes(section))return;mapSection=section;error='';notice='';paint(true);root.querySelector('[data-map-section="'+section+'"]')?.focus({preventScroll:true});return;}
+  if(button.hasAttribute('data-map-section')||button.hasAttribute('data-map-local')){if(view!=='map'||state.battle||state.scheme||state.event)return;const section=button.dataset.mapSection||'story';if(!['story','atlas','explore','territory'].includes(section))return;mapSection=section==='story'?'scene':section;pageSections.journeyScene=null;error='';notice='';paint(true);root.querySelector('[data-map-section="'+section+'"]')?.focus({preventScroll:true});return;}
   if(button.dataset.view){
     if(!entered&&button.dataset.view!=='save'&&(locked||button.dataset.view!=='welcome'))return;
     operation=true;
@@ -424,7 +433,7 @@ root.addEventListener('click',async event=>{
       if(button.dataset.view!==view)await pauseBattle('离开战斗页面时已暂停。返回后点击继续交战。');
       if(menu)menu.close('navigate');
       view=button.dataset.view;
-      if(view==='map')mapSection=menu&&['story','atlas'].includes(button.dataset.menuMap)?button.dataset.menuMap:'story';
+      if(view==='map')mapSection=menu&&button.dataset.menuMap==='atlas'?'atlas':'scene';
       if(menu&&button.dataset.menuSection&&Object.hasOwn(PAGE_SECTIONS[view]||{},button.dataset.menuSection))pageSections[view]=button.dataset.menuSection;
       error='';notice='';if(view==='save')await refreshSlots();paint(true);
     }finally{operation=false;}

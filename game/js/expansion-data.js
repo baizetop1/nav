@@ -37,3 +37,12 @@ Object.assign(PERSONAL,{
  ruanxiaoer:{introduced:4,name:'雾里接船',text:'阮小二站在首位，带至少一名同伴，全员存活取胜，本人承伤至少 300。',enemies:['soldier','road_raider'],scale:1.7,scaling:true,terrain:'water',front:true,companions:1,allAlive:true,taken:300,reward:'有护阵时承受直接攻击，为气血比例最低的同伴护阵 12%，持续 4 秒，每 6 秒一次。'},
  ruanxiaowu:{introduced:4,name:'窄汊脱围',text:'阮小五带至少一名同伴，全员存活取胜，本人主动施招至少一次。',enemies:['snake','soldier','guard'],scale:2,terrain:'water',companions:1,allAlive:true,skills:1,reward:'每第三次普攻后，自身获得 15% 护阵，持续 4 秒。'}
 });
+
+Object.assign(PERSONAL,{
+ duqian:{introduced:5,name:'寨门接人',text:'杜迁站在首位，带一名同伴，全员存活取胜，本人承伤至少 250。',enemies:['road_raider','soldier'],scale:1.5,scaling:true,terrain:'land',front:true,companions:1,allAlive:true,taken:250,reward:'有护阵时受直接攻击，为气血比例最低的同伴护阵 12%，持续 4 秒，每 6 秒一次。'},
+ songwan:{introduced:5,name:'雨夜守坡',text:'宋万站在首位，带一名同伴，全员存活取胜，本人承伤至少 350。',enemies:['soldier','bandit_chief'],scale:1.7,scaling:true,terrain:'mountain',front:true,companions:1,allAlive:true,taken:350,reward:'受直接攻击后气血低于一半且未退阵，获得 25% 护阵，持续 6 秒，每 12 秒一次。'},
+ caozheng:{introduced:5,name:'店后截粮',text:'曹正带一名同伴取胜，本人施放至少一次主动招式，不使用战斗药品。',enemies:['guard','soldier'],scale:2.2,terrain:'land',companions:1,skills:1,noMedicine:true,reward:'普攻命中后移除敌方护阵，每 8 秒一次。'},
+ zhufu:{introduced:5,name:'草棚救客',text:'朱富带一名同伴，全员存活取胜，本人有效治疗至少 300。',enemies:['snake','road_raider'],scale:1.8,scaling:true,terrain:'forest',companions:1,allAlive:true,healing:300,reward:'有效治疗后清除受疗者一项毒伤或流血，并护阵 8%，持续 4 秒，每 6 秒一次。'},
+ houjian:{introduced:5,name:'缝甲护归',text:'侯健带一名同伴，全员存活取胜，本人有效治疗至少 300，不使用战斗药品。',enemies:['soldier','road_raider'],scale:1.8,scaling:true,terrain:'land',companions:1,allAlive:true,healing:300,noMedicine:true,reward:'有效治疗后，受疗者获得 12% 护阵，持续 6 秒，每 8 秒一次。'},
+ shien:{introduced:5,name:'快活林追寇',text:'施恩带一名同伴，60 秒内取胜，本人主动施招至少一次、直接伤害至少 1200。',enemies:['soldier','guard','bandit'],scale:2.4,terrain:'forest',companions:1,seconds:60,skills:1,damage:1200,reward:'普攻命中正在流血的敌人后，追加自身攻击 35% 的伤害，每 4 秒一次。'}
+});

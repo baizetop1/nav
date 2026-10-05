@@ -1,15 +1,15 @@
-import { hasOwn } from './utils.js?v=0.58.0';
-import { parseSave } from './save.js?v=0.58.0';
+import { hasOwn } from './utils.js?v=0.64.0';
+import { parseSave } from './save.js?v=0.64.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
-const context = fields('type id next kind tier period terrain affair route');
+const context = fields('type id next kind tier period terrain affair route challenge');
 const unit = {...fields('id name hp attack defense speed strategy maxHp rage skills side attacks skillReadyAt nextAttackAt model resistUntil'), statuses: [{...fields('id value expiresAt nextTickAt')}], corps:fields('id arm rank troops'), training:{quality:true,levels:{'*':true},bond:true},boss:fields('kind readyAt pendingAt phase')};
 const metrics={version:true,reason:true,heroes:{'*':fields('damage healing taken controls interrupts skills')},dot:true,environment:true,medicine:true,medicineUses:true};
 const chronicleJob=fields('kind region chapter choice rank');
 const chronicle={version:true,routes:{'*':fields('choices patrol forged')},active:{...chronicleJob,ready:true}};
 const shape = {
-  replays:{version:true,clears:{'*':true},best:{'*':true}},
+  replays:{version:true,clears:{'*':true},best:{'*':true},challenges:{'*':fields('count best')}},
   specialDungeons:{version:true,clears:{'*':true},last:{...fields('id tier outcome at route'),bonus:fields('id count stored'),drops:[fields('kind id count stored')]}},
   lessons:{version:true,completed:true},
   expansion:{version:true,smoke:true,recipes:true,combos:{'*':true},personal:{'*':true},styles:{'*':true},run:{kind:true,stage:true,used:true,team:true,hp:{'*':true},layout:true,loot:{'*':true}},diplomacy:{'*':true},coopClaims:{'*':true}},

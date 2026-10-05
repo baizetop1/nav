@@ -1,10 +1,10 @@
-import {PHASES,phaseGoal} from './progression-paths.js?v=0.58.0';
-import {tacticsGoal} from './tactics-goals.js?v=0.58.0';
-import {BUILD_GUIDES} from './tactics-data.js?v=0.58.0';
-import {PERSONAL} from './expansion-data.js?v=0.58.0';
-import { requireRule, journal } from './utils.js?v=0.58.0';
-import { CORPS } from './corps-data.js?v=0.58.0';
-import { promotionQuote } from './quality.js?v=0.58.0';
+import {PHASES,phaseGoal} from './progression-paths.js?v=0.64.0';
+import {tacticsGoal} from './tactics-goals.js?v=0.64.0';
+import {BUILD_GUIDES} from './tactics-data.js?v=0.64.0';
+import {PERSONAL} from './expansion-data.js?v=0.64.0';
+import { requireRule, journal } from './utils.js?v=0.64.0';
+import { CORPS } from './corps-data.js?v=0.64.0';
+import { promotionQuote } from './quality.js?v=0.64.0';
 
 export { CORPS };
 export const CORPS_PROFILES={
