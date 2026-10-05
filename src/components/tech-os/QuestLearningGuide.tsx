@@ -6,6 +6,8 @@ import { readStudyProgressStore } from '../../services/techOsStudyProgress';
 import { focusTechOsStudyStep, TECH_OS_READ_STEP_EVENT } from '../../services/techOsWorkspaceView';
 import { MarkdownView } from './MarkdownView';
 import { QuestStudyChecklist } from './QuestStudyChecklist';
+import { StudyFeedbackPanel } from './StudyFeedbackPanel';
+import { canLeaveStudyFeedback } from '../../lib/studyEditingGuard';
 
 export function QuestLearningGuide({ quest }: { quest: TechOsEntity }) {
   const guide = useMemo(() => parseQuestCoaching(quest.body), [quest.body]);
@@ -20,13 +22,14 @@ export function QuestLearningGuide({ quest }: { quest: TechOsEntity }) {
   const [readingTarget, setReadingTarget] = useState<{ id: string } | null>(null);
   const selected = guide.steps.find(step => step.id === stepId) || guide.steps[0];
   const selectedIndex = guide.steps.indexOf(selected);
-  const goToStep = (id: string) => { setStepId(id); setReadingTarget({ id }); };
+  const goToStep = (id: string) => { if (!canLeaveStudyFeedback()) return; setStepId(id); setReadingTarget({ id }); };
 
   useEffect(() => {
     const read = (event: Event) => {
       const { questId, stepId: requested } = (event as CustomEvent<{ questId: string; stepId: string }>).detail;
       if (questId !== quest.id || mode !== 'guided' || !guide.available || !guide.steps.some(step => step.id === requested)) return;
       event.preventDefault();
+      if (!canLeaveStudyFeedback()) return;
       setStepId(requested);
       setReadingTarget({ id: requested });
     };
@@ -49,7 +52,7 @@ export function QuestLearningGuide({ quest }: { quest: TechOsEntity }) {
       <div><p className="flex items-center gap-2 font-bold"><BookOpen size={18} />跟着做，再解释给自己听</p><p className="mt-1 text-xs leading-5 text-[#64807c] dark:text-[#b8c6c1]">静态教案辅导 · 不会读取你的操作，也不会自动判定掌握程度</p></div>
       <div className="flex flex-wrap gap-2" role="group" aria-label="学习阅读方式">
         <button type="button" className="baize-button-secondary" aria-pressed={mode === 'guided'} disabled={!guide.available} onClick={() => setMode('guided')}>逐步辅导</button>
-        <button type="button" className="baize-button-secondary" aria-pressed={mode === 'full'} onClick={() => setMode('full')}>完整正文</button>
+        <button type="button" className="baize-button-secondary" aria-pressed={mode === 'full'} onClick={() => { if (canLeaveStudyFeedback()) setMode('full'); }}>完整正文</button>
       </div>
     </div>
     {!guide.available && <div role="status" className="rounded-xl bg-[#5f8f84]/8 p-3 text-sm"><p className="font-semibold">{readiness.status === 'outline' ? '只有大纲' : '教案待完善'}</p><p className="mt-1">本任务还没有完整辅导教案，先显示原始正文；不会自动编造工具、实验结果或答案。</p><ul className="mt-2 list-disc space-y-1 pl-5 text-xs">{readiness.issues.slice(0, 6).map((issue, i) => <li key={i}>{issue}</li>)}</ul></div>}
@@ -72,6 +75,7 @@ export function QuestLearningGuide({ quest }: { quest: TechOsEntity }) {
           return <section key={`${section.title}-${i}`} aria-label={section.title} className={`rounded-xl p-4 ${section.title === '工具与操作' ? 'border border-[#5f8f84]/20 bg-[#5f8f84]/5 dark:border-[#c9a96b]/20' : 'bg-white/25 dark:bg-black/10'}`}><h4 className="mb-3 font-bold">{section.title}</h4>{content}</section>;
         }) : <MarkdownView body={selected.body} anchorPrefix={`${quest.id}-guide-${selected.id}`} />}
       </article>
+      <StudyFeedbackPanel key={quest.id + '/' + selected.id} questId={quest.id} stepId={selected.id} />
       <div className="flex flex-wrap justify-between gap-2 border-t border-[#5f8f84]/15 pt-4">
         <button type="button" className="baize-button-secondary" disabled={selectedIndex <= 0} onClick={() => goToStep(guide.steps[selectedIndex - 1].id)}><ArrowLeft size={16} />上一步辅导</button>
         <button type="button" className="baize-button-primary" disabled={selectedIndex >= guide.steps.length - 1} onClick={() => goToStep(guide.steps[selectedIndex + 1].id)}>下一步辅导<ArrowRight size={16} /></button>

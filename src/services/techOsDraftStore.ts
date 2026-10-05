@@ -4,12 +4,19 @@ import { isManagedTechOsPath } from './techOsRepository.ts';
 
 type StorageLike = Pick<Storage, 'getItem' | 'setItem'>;
 export interface TechOsWorkingCopy { version: 1; base: TechOsSourceFile[]; files: TechOsSourceFile[]; conflicts?: string[] }
-const key = (target: RepositoryTarget) => `baize_tech_os_drafts_v1:${encodeURIComponent(`${target.owner}/${target.repo}:${target.branch}`)}`;
-function parseWorkingCopy(raw: string | null): TechOsWorkingCopy | null {
+export const TECH_OS_DRAFT_EVENT = 'baize:tech-os-drafts-updated';
+export const techOsDraftKey = (target: RepositoryTarget) => `baize_tech_os_drafts_v1:${encodeURIComponent(`${target.owner}/${target.repo}:${target.branch}`)}`;
+const key = techOsDraftKey;
+export function parseWorkingCopy(raw: string | null): TechOsWorkingCopy | null {
   try {
     const value = JSON.parse(raw || 'null');
     const validFiles = (files: unknown): files is TechOsSourceFile[] => Array.isArray(files) && files.length <= 500 && files.every(file => file && typeof file.path === 'string' && isManagedTechOsPath(file.path) && typeof file.content === 'string' && file.content.length <= 256 * 1024) && new Set(files.map(file => file.path)).size === files.length;
-    if (value?.version === 1 && validFiles(value.files) && validFiles(value.base) && (value.conflicts === undefined || (Array.isArray(value.conflicts) && value.conflicts.every((path: unknown) => typeof path === 'string' && isManagedTechOsPath(path))))) return value;
+    if (value?.version === 1 && validFiles(value.files) && validFiles(value.base) && (value.conflicts === undefined || (Array.isArray(value.conflicts) && value.conflicts.every((path: unknown) => typeof path === 'string' && isManagedTechOsPath(path))))) return {
+      version: 1,
+      base: value.base.map(({ path, content }: TechOsSourceFile) => ({ path, content })),
+      files: value.files.map(({ path, content }: TechOsSourceFile) => ({ path, content })),
+      ...(value.conflicts === undefined ? {} : { conflicts: [...new Set<string>(value.conflicts)] }),
+    };
   } catch { /* Leave recovery to the explicit save path. */ }
   return null;
 }
@@ -29,7 +36,12 @@ export function saveTechOsWorkingCopy(target: RepositoryTarget, copy: TechOsWork
       if (existing !== null && existing !== previous) return false;
       if (existing !== previous) storage.setItem(recoveryKey, previous);
     }
-    storage.setItem(storageKey, JSON.stringify(copy)); return true;
+    const serialized = JSON.stringify(copy);
+    if (previous !== serialized) {
+      storage.setItem(storageKey, serialized);
+      if (typeof window !== 'undefined') window.dispatchEvent(new Event(TECH_OS_DRAFT_EVENT));
+    }
+    return true;
   } catch { return false; }
 }
 

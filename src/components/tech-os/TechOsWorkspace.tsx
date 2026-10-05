@@ -37,8 +37,10 @@ import { filterTechOsEntities, focusTechOsStudyStep, selectTechOsCollectionEntit
 import { TechOsLifecyclePanel } from './TechOsLifecyclePanel';
 import { indexFromTechOsFiles } from '../../services/techOsLifecycle';
 import type { TechOsSourceFile } from '../../types/tech-os';
+import { StudyReviewPanel } from './StudyReviewPanel';
+import { canLeaveStudyFeedback } from '../../lib/studyEditingGuard';
 
-type WorkspaceView = 'dashboard' | 'learning' | 'route-engine' | 'course' | 'route' | 'quest' | 'inbox' | 'knowledge' | 'lab' | 'project' | 'map' | 'backlog' | 'repository';
+type WorkspaceView = 'dashboard' | 'learning' | 'review' | 'route-engine' | 'course' | 'route' | 'quest' | 'inbox' | 'knowledge' | 'lab' | 'project' | 'map' | 'backlog' | 'repository';
 
 interface TechOsWorkspaceProps {
   initialFocusedId?: string;
@@ -56,6 +58,7 @@ interface TechOsWorkspaceProps {
 const NAV_ITEMS: Array<{ id: WorkspaceView; label: string; icon: LucideIcon }> = [
   { id: 'dashboard', label: '总览', icon: LayoutDashboard },
   { id: 'learning', label: '学习引擎', icon: Sparkles },
+  { id: 'review', label: '复习与反馈', icon: BookOpen },
   { id: 'route-engine', label: '路线引擎', icon: GitFork },
   { id: 'course', label: '新方向 / AI 课程', icon: Sparkles },
   { id: 'route', label: '主路线', icon: Milestone },
@@ -150,14 +153,17 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
   };
 
   const navigate = (view: WorkspaceView, focusId?: string) => {
+    if (!canLeaveStudyFeedback()) return false;
     setStepTarget(null);
     setActiveView(view);
     if (focusId) setFocusedId(focusId);
     setMobileNavOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    return true;
   };
 
   const focusEntity = (id: string) => {
+    if (!canLeaveStudyFeedback()) return;
     setStepTarget(null);
     const entity = getTechOsEntity(id);
     setFocusedId(id);
@@ -167,7 +173,7 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
   };
 
   const resumeStudy = (questId: string, stepId?: string) => {
-    navigate('quest', questId);
+    if (!navigate('quest', questId)) return;
     if (stepId) setStepTarget({ questId, stepId });
   };
   useEffect(() => {
@@ -289,6 +295,7 @@ export function TechOsWorkspace({ initialFocusedId, isDark, inboxCount, inboxIte
 
       <div className="mx-auto max-w-7xl p-4 pb-16 sm:p-6 lg:p-8">
         {activeView === 'dashboard' && <Dashboard vision={vision} mainRoute={mainRoute} currentQuest={currentQuest} routeQuests={routeQuests} progress={progress} inboxCount={inboxCount} nextAction={learningEngine.nextAction} activeMode={sessionMode} onModeChange={setSessionMode} onNavigate={navigate} onResume={resumeStudy} onOpenLearningAction={openLearningAction} />}
+        {activeView === 'review' && <StudyReviewPanel quests={getTechOsEntities('quest')} onOpenStep={resumeStudy} />}
         {activeView === 'learning' && <div className="space-y-6"><TechOsLearningPanel engine={learningEngine} onOpenAction={openLearningAction} onOpenSource={openLearningSource} /><TechOsCandidatePanel groups={candidateGroups} stagedPaths={stagedCandidatePaths} created={techOsIndex.sourceUpdated} onOpenSource={openLearningSource} onOpenRepository={() => navigate('repository')} onStage={stageCandidate} /></div>}
         {activeView === 'route-engine' && <div className="space-y-6"><TechOsRouteEnginePanel review={completionReview} recommendations={nextRouteRecommendations} stagedPaths={stagedRouteEnginePaths} created={techOsIndex.sourceUpdated} onOpenSource={openLearningSource} onOpenRepository={() => navigate('repository')} onStage={stageRouteEngineDraft} /><TechOsManualRoutePanel reservedRouteIds={nextRouteRecommendations.map(item => item.routeId)} stagedPaths={stagedRouteEnginePaths} created={techOsIndex.sourceUpdated} onOpenRepository={() => navigate('repository')} onStage={stageRouteEngineDraft} /></div>}
         {activeView === 'route' && <RouteView mainRoute={mainRoute} quests={routeQuests} progress={progress} onFocus={focusEntity} />}

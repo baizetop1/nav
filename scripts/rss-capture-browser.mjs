@@ -30,6 +30,7 @@ const noOverflow = async label => {
   assert.ok(size.scroll <= size.width + 1, `${label}: page overflow ${size.scroll} > ${size.width}`);
 };
 const openRss = async () => {
+  if (!await page.getByRole('button', { name: 'RSS 订阅', exact: true }).isVisible()) await page.getByRole('button', { name: /^更多工具/ }).click();
   await page.getByRole('button', { name: 'RSS 订阅', exact: true }).click();
   const panel = page.getByRole('region', { name: 'RSS 阅读中心', exact: true });
   await panel.waitFor();

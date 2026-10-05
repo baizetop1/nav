@@ -10,6 +10,8 @@ export interface TemporaryVisitsPanelProps {
   onVisit: (url: string) => string | null;
   onDelete: (key: string) => void;
   onClear: () => void;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 function formatVisitedAt(timestamp: number): string {
@@ -21,16 +23,20 @@ function formatVisitedAt(timestamp: number): string {
   return date.toLocaleDateString('zh-CN', { month: 'numeric', day: 'numeric' });
 }
 
-export function TemporaryVisitsPanel({ visits, onVisit, onDelete, onClear }: TemporaryVisitsPanelProps) {
-  const [collapsed, setCollapsed] = useState(() => safeGetLocalStorageItem(COLLAPSED_KEY, { label: '临时访问折叠偏好', important: false }) === 'true');
+export function TemporaryVisitsPanel({ visits, onVisit, onDelete, onClear, open, onOpenChange }: TemporaryVisitsPanelProps) {
+  const [localCollapsed, setCollapsed] = useState(() => safeGetLocalStorageItem(COLLAPSED_KEY, { label: '临时访问折叠偏好', important: false }) === 'true');
+  const collapsed = open === undefined ? localCollapsed : !open;
   const [input, setInput] = useState('');
   const [error, setError] = useState('');
   const totalVisits = visits.reduce((total, visit) => total + visit.count, 0);
 
-  const toggle = () => setCollapsed(current => {
+  const toggle = () => {
+    if (onOpenChange) { safeSetLocalStorageItem(COLLAPSED_KEY, String(!collapsed), { label: '临时访问折叠偏好', important: false }); onOpenChange(collapsed); return; }
+    setCollapsed(current => {
     safeSetLocalStorageItem(COLLAPSED_KEY, String(!current), { label: '临时访问折叠偏好', important: false });
     return !current;
-  });
+    });
+  };
 
   const submit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -44,6 +50,7 @@ export function TemporaryVisitsPanel({ visits, onVisit, onDelete, onClear }: Tem
   };
 
   if (collapsed) {
+    if (open !== undefined) return null;
     return (
       <button type="button" className="baize-button-secondary utility-launcher-button" onClick={toggle} aria-controls="temporary-visits" aria-expanded="false">
         <Clock3 size={17} />临时访问

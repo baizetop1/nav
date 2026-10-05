@@ -101,7 +101,7 @@ try {
     assert.equal(writes.length, beforeConflict);
     await editor.getByRole('button', { name: '读取远端并比较', exact: true }).click();
     await page.getByRole('region', { name: '博客远端比较' }).waitFor();
-    assert.match(await page.getByRole('textbox', { name: '远端 Markdown', exact: true }).inputValue(), /其他设备改动/);
+    assert.match(await page.getByRole('region', { name: '博客远端比较' }).textContent(), /其他设备改动/);
     await editor.getByRole('button', { name: '关闭比较', exact: true }).click();
     // Promote a remote draft atomically; remove the stale list entry afterwards.
     await list.getByRole('button', { name: /remote-draft/ }).click();

@@ -475,11 +475,11 @@ name > tags > category > description
 当前 `.github/workflows/deploy.yml`：
 
 - 监听 `main`、`master` 和手动触发。
-- 使用 Node.js 20。
-- 执行 `npm ci`、`npm run build`。
+- 使用 Node.js 24。
+- 执行 `npm ci`、情报与 RSS 刷新、`npm run verify:app`（构建及非游戏自测）。
 - 将 `dist` 发布到 `gh-pages` 分支。
 
-`npm run build` 已包含 `tsc` 类型检查。仓库已有 `package-lock.json`，后续可将 Actions 改为 `npm ci` 以获得可复现安装。Vite 的 `base` 当前固定为 `/nav/`，如果仓库名或自定义域名变化，必须同步调整。
+`npm run build` 已包含 `tsc` 类型检查；Actions 已使用 `npm ci` 和锁文件获得可复现安装。Vite 的 `base` 当前固定为 `/nav/`，如果仓库名或自定义域名变化，必须同步调整。
 
 ## 12. 分阶段实施计划
 
@@ -543,10 +543,22 @@ name > tags > category > description
 ## 13. 关键决策摘要
 
 - GitHub 仓库中的 JSON 是导航发布数据的唯一事实来源；LocalStorage 保存草稿、场景偏好、翻译历史、90 天正式网站统计和 30 天临时网址统计，这些本机数据可通过加密完整备份跨设备迁移。
-- Inbox 与 Tech OS 个人学习打卡组成同一个本地优先私有共享域：Inbox 本机 schema 保持 version 1，`data/inbox.enc.json` 解密后的共享数据使用 version 2；用户可只读恢复或主动合并同步，旧 version 1 密文继续可读。它们不进入公开文本索引或导航覆盖式备份。
+- Inbox 与 Tech OS 个人学习打卡组成同一个本地优先私有共享域：Inbox 本机 schema 保持 version 1，`data/inbox.enc.json` 解密后的共享数据使用 version 2；用户可只读恢复或主动合并同步，旧 version 1 密文继续可读。它们不进入公开文本索引。学习打卡和学习反馈也纳入完整备份。
 - 公开 Tech OS Markdown 与导航 CMS 是独立的 GitHub 发布数据域，不会被私有共享同步自动创建、覆盖或发布。
 - 前端构建变量不是秘密，不能用于安全认证或保存 GitHub Token。
 - 布局同时支持稳定排序和可选的四列自由桌面坐标，窄屏回落为响应式流式布局。
 - 标签先由网站数据聚合，减少重复维护。
 - GitHub Pages 环境优先采用 Hash 路由或页内管理，避免 `/admin` 刷新 404。
 - 多文件原子发布和纯静态 OAuth 都会显著增加复杂度，应在基础 CMS 稳定后再评估。
+
+## 14. 写作、首页与学习记录增强
+
+博客图片由 `src/services/blogImages.ts` 独立创建资产提交，仅接受签名匹配的 PNG/JPEG/GIF/WebP（最多 5 MiB）。选择和粘贴只产生内存预览，显式公开确认后才上传；文章仍需另行发布。`src/lib/blogMerge.ts` 按原文、本机、远端三方比较，采用有界的无损行级改动块；不同位置自动合并，同位置需选择。合并更新本地文章及读取基线，不自动提交。
+
+首页入口设置使用 `baize_home_tools_v1`，按显示、固定和排序组织 12 个入口。普通模式展示固定项及最多 6 个直接入口，其余进入“更多”；工作模式只直接显示固定项。`HomeToolLauncher`、`QuickTranslationPanel`、`useQuickTranslation` 从 `App.tsx` 分离，翻译请求随输入/语言变化取消。`FeatureBoundary` 为主要路由和按需面板提供关闭、返回及显式刷新恢复，不自动清空数据或假装重试已拒绝的 lazy 导入。
+
+学习反馈由 `src/services/studyFeedback.ts` 保存为 `baize_study_feedback_v1`（version 1）。每个 `QUEST-编号/S编号` 独立记录自己的回答、观察、卡点、自评及复习时间，保存时检查版本并使用可用的 Web Lock。首次复习间隔按自评为 1/3/7 天，后续最长 30 天；仅为页面内清单，非系统通知或自动评分。反馈、阅读、打卡与正式 Quest 完成相互独立。
+
+反馈作为私人工作区设置随 Inbox 加密同步，按步骤合并，同一步骤的并发不同文本保留可见冲突副本。学习打卡仍走独立 `studyProgress` 字段，不重复纳入共享设置。两类记录及首页设置均纳入完整/加密云备份；旧备份缺失新增字段时保留本机，非法新增存档在恢复前拒绝，不先修改其他数据。公开 Tech OS Markdown 不受这些操作影响。
+
+验证使用 `verify:app`、`test:blog-enhancements`、`test:home-tools`、`test:study-feedback` 和 `check:app-enhancements`；外部写入全部使用模拟接口，游戏目录保持独立。

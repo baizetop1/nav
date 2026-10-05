@@ -2,7 +2,7 @@
 
 新增智能整理、网页一键收集、工作会话、全局内容搜索、RSS 订阅和离线待同步中心。入口、数据保存及部署方式见 [个人工作流说明](docs/PERSONAL-WORKFLOWS.md)。
 
-博客现在可通过独立的 `#/blog` 工作台完成文章列表、直接写作、本地自动保存、预览、草稿提交和旧文章更新。见 [博客工作台说明](docs/BLOG-WORKBENCH.md)。
+博客现在可通过独立的 `#/blog` 工作台完成文章列表、直接写作、本地自动保存、图片选择/粘贴上传、分块远端合并、预览、草稿提交和旧文章更新。首页“整理入口”可固定、排序或隐藏工具，工作场景精简展示。见 [博客工作台说明](docs/BLOG-WORKBENCH.md) 和 [个人工作流说明](docs/PERSONAL-WORKFLOWS.md)。
 
 > 2026-09-08：已增加网页确认完成 Quest / 启用路线、草稿自动保存、正式发博、统一加密同步、跨端续读与公开图谱。新版操作与边界见 [使用及验收说明](docs/completion-and-sync-guide.md)；其中说明优先于下文旧阶段的限制。验证：Node 24，`npm run verify`。
 
@@ -31,7 +31,7 @@
 - 使用运行时输入的 GitHub fine-grained PAT 创建数据提交。
 - 支持读取远端 JSON、合并或覆盖本地草稿，并轮询 GitHub Actions 部署状态。
 - 管理后台可自动识别 HTML：Chrome、Edge 书签导出文件会批量导入并保留文件夹分类；普通保存网页只导入 canonical/og:url 指向的页面自身，不扫描页面内链接。
-- 支持带版本校验的完整备份与恢复，覆盖导航草稿、点击统计、30 天临时网址、翻译历史、临时文本和场景偏好，不导出 Token 或密码；临时网址、翻译历史与临时文本在本地备份文件中为明文。
+- 支持带版本校验的完整备份与恢复，覆盖导航草稿、点击统计、30 天临时网址、翻译历史、临时文本、场景偏好、博客本地副本与 Tech OS 工作副本（含远端基线），不导出 Token 或密码；临时网址、翻译历史、文本与工作草稿在本地备份文件中为明文。
 - 可将完整备份使用 AES-256-GCM 在浏览器中加密后保存到 GitHub，并在其他设备读取、解密和恢复；仓库中只保存密文。
 - GitHub Actions 每日检查正式导航中的链接；检测到异常时，首页卡片显示状态提醒。
 - GitHub Actions 每小时生成 `public/hot-feed.json` 并重新部署；国内消息由中国新闻网要闻、IT之家和百度热搜轮询混排，百度不可用时改用今日头条热榜。安全情报来自 CISA KEV 与 GitHub Security Advisories，AI 动态来自 OpenAI、Google DeepMind 与 Hugging Face，开发动态来自 Hacker News 与 V2EX，右栏继续读取 GitHub Trending。来源失败时会回退到已部署的上一份有效静态数据。
@@ -73,7 +73,7 @@ src/data/layout.json
 npm run test:text-network
 ```
 
-Inbox 本机存储继续使用 `localStorage.baize_inbox_v1` 和 `InboxStore version: 1`，删除操作写入 `deletedAt` 而不是物理移除。`data/inbox.enc.json` 解密后的私有共享数据升级为 version 2，包含 Inbox items 和 Tech OS 个人学习打卡；读取时兼容旧 version 1 数据，旧密文不需要手工迁移。同步标记保存在 `localStorage.baize_inbox_sync_meta_v1`，不包含 Token、密码或正文。Inbox 与学习打卡都不进入现有覆盖式导航完整备份。可以运行：
+Inbox 本机存储继续使用 `localStorage.baize_inbox_v1` 和 `InboxStore version: 1`，删除操作写入 `deletedAt` 而不是物理移除。`data/inbox.enc.json` 解密后的私有共享数据升级为 version 2，包含 Inbox items 和 Tech OS 个人学习打卡；读取时兼容旧 version 1 数据，旧密文不需要手工迁移。同步标记保存在 `localStorage.baize_inbox_sync_meta_v1`，不包含 Token、密码或正文。Inbox 仍通过私人合并同步管理；学习打卡及新学习反馈已纳入完整备份。可以运行：
 
 ```bash
 npm run test:inbox
@@ -82,7 +82,7 @@ npm run test:inbox-sync
 
 GitHub Token 和至少 12 字符的加密密码只在当前页面内存中使用，不写入 LocalStorage、仓库或前端构建变量。新设备可以使用“从云端恢复”：只读取、解密并与本机内容合并，不会创建 commit；日常使用“合并并同步”时才执行“GET → 解密 → 合并 → 加密 → PUT”。仓库中只有 AES-256-GCM 密文；读取、解密、合并或提交失败不会清空本机 Inbox 或学习打卡。首次同步会创建远端文件，之后每次同步都携带远端 SHA，遇到并发修改时停止并提示重试。
 
-这份私有共享数据只负责 Inbox 和 Tech OS 个人学习打卡。公开 `tech-os/**/*.md` 仍通过 Repository Adapter / Git 提交，导航 CMS 的 `src/data/*.json` 仍通过管理页发布；两者都不会被“从云端恢复”或 Inbox 同步隐式修改。
+这份私有共享数据包含 Inbox、Tech OS 个人学习打卡和私人工作区设置（含学习反馈与复习记录）。公开 `tech-os/**/*.md` 仍通过 Repository Adapter / Git 提交，导航 CMS 的 `src/data/*.json` 仍通过管理页发布；两者都不会被“从云端恢复”或 Inbox 同步隐式修改。
 
 Inbox 的“转为博客草稿”会用博客仓库的 GitHub Contents 读写 Token，生成与博客现有脚本兼容的 `_drafts/<slug>.md`。写入前会检查 `_drafts` 和 `_posts` 的 slug 冲突，不会覆盖远端文件；成功后归档来源 Inbox 记录，但不会直接公开发布。Token 仅保留在当前页面内存。可以运行：
 
@@ -110,7 +110,7 @@ T4.3–T4.6 新增独立 Route Engine：Candidate 可选择 Save for Later、Arc
 
 Repository 页面使用运行时 GitHub fine-grained PAT 读取远端 `tech-os/`，逐文件比较本地草稿与远端基线。Token 不保存；进入 Repository 的 Markdown 草稿会自动保存在当前浏览器，刷新后可恢复，不属于加密的私人笔记。读取远端会进行三方合并，冲突需人工解决；提交前必须通过浏览器端完整 schema 校验、输入确认短语并再次确认。多文件通过 Git Data API 生成单个 commit，写入前重新检查 branch head，最终更新 `force: false`，不覆盖远端新版本。Repository 编辑器不支持删除远端文件或修改 templates/README。
 
-日常学习增强：总览可继续第一个未打卡步骤；对象列表支持全文关键词和状态筛选；正文提供目录、安全外链、代码复制。阅读与打卡分开，打卡错误可重试、损坏存档不会自动覆盖，同一浏览器的多标签页会同步进度。打卡不等于正式完成 Quest，跨设备仍由用户主动执行加密同步。详见 [`tech-os/README.md`](tech-os/README.md)。
+日常学习增强：总览可继续第一个未打卡步骤；对象列表支持全文关键词和状态筛选；正文提供目录、安全外链、代码复制。逐步辅导可记录自己的回答、实验观察、卡点和自评，侧栏“复习与反馈”管理到期复习。阅读、反馈、打卡与正式 Quest 完成分开；存储错误或版本冲突不会自动覆盖，同一步骤的并发笔记保留冲突副本。个人记录纳入完整备份，跨设备仍由用户主动执行加密同步。详见 [个人工作流说明](docs/PERSONAL-WORKFLOWS.md) 和 [`tech-os/README.md`](tech-os/README.md)。
 
 新方向课程向导：在“新方向 / AI 课程”填写学习条件，可先建立本地大纲，或配置自己的 OpenAI 兼容接口生成大纲和单课教案。支持课程 JSON 导入/导出、Markdown 预览与教学结构检查；人工确认后仅新增 Backlog 路线和任务，不覆盖旧内容、不切换主线。API 设置和密钥只在当前向导内存使用，优先使用自己控制且有鉴权/限额的网关。详见 [`课程使用说明`](docs/TECH-OS-COURSES.md)。
 
@@ -146,10 +146,10 @@ Token 应只授予目标仓库的 Contents 读写权限。Token 仅保存在当�
 
 ## 部署
 
-`.github/workflows/deploy.yml` 监听 `main`、`master` 和手动触发，使用 Node.js 20 执行：
+`.github/workflows/deploy.yml` 监听 `main`、`master` 和手动触发，使用 Node.js 24 执行：
 
 ```text
-npm ci → npm run build → 发布 dist 到 gh-pages
+npm ci → 刷新情报与 RSS → npm run verify:app → 发布 dist 到 gh-pages
 ```
 
 GitHub 仓库需要允许 Actions 写入内容，并将 Pages 发布源配置为 `gh-pages` 分支。

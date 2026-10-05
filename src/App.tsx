@@ -1,9 +1,12 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
-import { AlertTriangle, ArrowLeftRight, BrainCircuit, Check, ChevronUp, Coffee, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Network, Plus, QrCode, RefreshCw, Search, Trash2, Upload, X } from 'lucide-react';
+import { AlertTriangle, BrainCircuit, Check, Coffee, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Network, Plus, QrCode, RefreshCw, Search, Trash2, Upload, X } from 'lucide-react';
 import type { AdminSection } from './components/AdminPanel';
 import { Card } from './components/Card';
 import { SearchEngineIcon } from './components/SearchEngineIcon';
+import { HomeToolLauncher } from './components/HomeToolLauncher';
+import { FeatureBoundary } from './components/FeatureBoundary';
+import { canLeaveStudyFeedback } from './lib/studyEditingGuard';
 import type { CommandPaletteAction } from './components/CommandPalette';
 import { HotFeedPanel } from './components/HotFeedPanel';
 import { RestOverlay } from './components/rest/RestOverlay';
@@ -19,13 +22,13 @@ const QrCodeModal = lazy(() => import('./components/QrCodeModal').then(module =>
 const TempTextQrModal = lazy(() => import('./components/TempTextTransferModals').then(module => ({ default: module.TempTextQrModal })));
 const TextTransferReceiveModal = lazy(() => import('./components/TempTextTransferModals').then(module => ({ default: module.TextTransferReceiveModal })));
 import { TemporaryVisitsPanel } from './components/TemporaryVisitsPanel';
-import { TranslationHistoryPanel } from './components/TranslationHistoryPanel';
+import { useQuickTranslation } from './hooks/useQuickTranslation';
 import { defaultNavigationData, searchEngines, siteConfig } from './data';
 import { CLICK_STATS_KEY, getTodayClicks, loadClickStats, localDateKey, recordSiteVisit, type ClickStatsStore } from './lib/activityStats';
 import { checkLinksFromBrowser, loadLinkHealthReport, type LinkHealthEntry } from './lib/linkHealth';
 import { parseNavigationData } from './lib/navigationData.ts';
 import { getTemporaryVisitSummaries, loadTemporaryVisits, normalizeTemporaryUrl, pruneTemporaryVisits, recordTemporaryVisit, removeTemporaryVisit, TEMPORARY_VISITS_KEY, temporaryUrlKey, type TemporaryVisitsStore } from './lib/temporaryVisits';
-import { addTranslationHistory, loadTranslationHistory, TRANSLATION_HISTORY_KEY, type TranslationHistoryItem } from './lib/translationHistory';
+import { loadTranslationHistory, TRANSLATION_HISTORY_KEY } from './lib/translationHistory';
 import { parseTextTransferHash } from './lib/textTransfer';
 import { createInboxBlogDraft, type BlogDraftInput } from './services/blogDraft';
 import { decryptNote, encryptNote } from './services/encryptedNote';
@@ -51,6 +54,7 @@ const ShareCapturePanel = lazy(() => import('./components/ShareCapturePanel').th
 const WorkSessionPanel = lazy(() => import('./components/WorkSessionPanel').then(module => ({ default: module.WorkSessionPanel })));
 const PendingSyncPanel = lazy(() => import('./components/PendingSyncPanel').then(module => ({ default: module.PendingSyncPanel })));
 const BlogWorkbench = lazy(() => import('./components/blog/BlogWorkbench').then(module => ({ default: module.BlogWorkbench })));
+const QuickTranslationPanel = lazy(() => import('./components/QuickTranslationPanel').then(module => ({ default: module.QuickTranslationPanel })));
 
 const DRAFT_KEY = 'nav_cms_draft';
 const TEMP_TEXT_KEY = 'nav_temp_text';
@@ -63,16 +67,9 @@ const sharedStorageOptions = (label: string, important = true) => ({
   important,
   maxBytes: SHARED_SYNC_ENTRY_MAX_BYTES,
 });
-const TRANSLATION_LANGUAGES = [
-  ['zh-CN', '简体中文'], ['en', '英语'], ['ja', '日语'], ['ko', '韩语'],
-  ['fr', '法语'], ['de', '德语'], ['es', '西班牙语'], ['ru', '俄语'],
-] as const;
 
 const TechOsWorkspace = lazy(() => import('./components/tech-os/TechOsWorkspace').then(module => ({ default: module.TechOsWorkspace })));
 
-function translationLanguageName(code: string): string {
-  return TRANSLATION_LANGUAGES.find(([value]) => value === code)?.[1] || code;
-}
 
 interface InstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -158,13 +155,15 @@ function App() {
   const [notePassword, setNotePassword] = useState('');
   const [notePasswordConfirm, setNotePasswordConfirm] = useState('');
   const [noteSyncState, setNoteSyncState] = useState<{ busy: boolean; message: string; error: boolean }>({ busy: false, message: '', error: false });
-  const [translationText, setTranslationText] = useState('');
-  const [translatedText, setTranslatedText] = useState('');
-  const [sourceLanguage, setSourceLanguage] = useState('en');
-  const [targetLanguage, setTargetLanguage] = useState('zh-CN');
-  const [translationState, setTranslationState] = useState<{ loading: boolean; error: string }>({ loading: false, error: '' });
-  const [translationHistory, setTranslationHistory] = useState<TranslationHistoryItem[]>(loadTranslationHistory);
+  const translator = useQuickTranslation();
+  const [translatorFocusRequest, setTranslatorFocusRequest] = useState(0);
+  const { setTranslationText, setTranslatedText, setSourceLanguage, setTargetLanguage, setTranslationState, translationHistory, setTranslationHistory } = translator;
   const [isTranslatorOpen, setIsTranslatorOpen] = useState(() => safeGetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, { label: '翻译面板偏好', important: false }) !== 'true');
+  const [hotFeedOpen, setHotFeedOpen] = useState(() => safeGetLocalStorageItem('nav_hot_feed_collapsed') === 'false');
+  const [temporaryVisitsOpen, setTemporaryVisitsOpen] = useState(() => safeGetLocalStorageItem('nav_temporary_visits_collapsed') === 'false');
+  const [homeToolsEditing, setHomeToolsEditing] = useState(false);
+  useEffect(() => { safeSetLocalStorageItem('nav_hot_feed_collapsed', String(!hotFeedOpen), { label: '情报面板折叠偏好', important: false }); }, [hotFeedOpen]);
+  useEffect(() => { safeSetLocalStorageItem('nav_temporary_visits_collapsed', String(!temporaryVisitsOpen), { label: '临时访问折叠偏好', important: false }); }, [temporaryVisitsOpen]);
   const [linkHealthEntries, setLinkHealthEntries] = useState<LinkHealthEntry[]>([]);
   const [isLinkHealthLoading, setIsLinkHealthLoading] = useState(false);
   const [clickStats, setClickStats] = useState<ClickStatsStore>(loadClickStats);
@@ -220,9 +219,6 @@ function App() {
     safeSetLocalStorageItem(TEMPORARY_VISITS_KEY, JSON.stringify(temporaryVisits), sharedStorageOptions('临时访问记录'));
   }, [temporaryVisits]);
 
-  useEffect(() => {
-    safeSetLocalStorageItem(TRANSLATION_HISTORY_KEY, JSON.stringify(translationHistory), sharedStorageOptions('翻译历史'));
-  }, [translationHistory]);
 
   useEffect(() => {
     safeSetLocalStorageItem(TEMP_TEXT_KEY, tempText, sharedStorageOptions('临时文本'));
@@ -275,6 +271,10 @@ function App() {
 
   useEffect(() => {
     const handleHash = () => {
+      if (isTechOsOpen && window.location.hash !== '#/tech-os' && !canLeaveStudyFeedback()) {
+        history.replaceState(null, '', window.location.pathname + window.location.search + '#/tech-os');
+        return;
+      }
       if (isBlogOpen && blogUnsaved && window.location.hash !== '#/blog') {
         history.replaceState(null, '', `${window.location.pathname}${window.location.search}#/blog`);
         return;
@@ -285,7 +285,7 @@ function App() {
     };
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
-  }, [isBlogOpen, blogUnsaved]);
+  }, [isBlogOpen, blogUnsaved, isTechOsOpen]);
 
   useEffect(() => {
     if (!isAdminOpen) return;
@@ -494,8 +494,10 @@ function App() {
   };
 
   const closeTechOs = () => {
+    if (!canLeaveStudyFeedback()) return false;
     history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
     setIsTechOsOpen(false);
+    return true;
   };
 
   const openBlog = () => {
@@ -507,6 +509,7 @@ function App() {
     history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
     setIsBlogOpen(false);
   };
+  const openTranslator = () => { setIsTranslatorOpen(true); setTranslatorFocusRequest(value => value + 1); };
 
   const closeIncomingTransfer = () => {
     setIncomingTempText(null);
@@ -553,38 +556,6 @@ function App() {
     }
   };
 
-  const translateInline = async (event: React.FormEvent) => {
-    event.preventDefault();
-    if (new TextEncoder().encode(translationText).length > 500) {
-      setTranslationState({ loading: false, error: '免费接口单次最多支持 500 字节，请缩短文本。' });
-      return;
-    }
-    setTranslationState({ loading: true, error: '' });
-    const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 12_000);
-    try {
-      const params = new URLSearchParams({ q: translationText, langpair: `${sourceLanguage}|${targetLanguage}` });
-      const response = await fetch(`https://api.mymemory.translated.net/get?${params}`, { signal: controller.signal });
-      const payload = await response.json() as { responseStatus: number; responseData?: { translatedText?: string } };
-      if (!response.ok || payload.responseStatus >= 400 || !payload.responseData?.translatedText) throw new Error('免费翻译接口暂时不可用。');
-      const result = new DOMParser().parseFromString(payload.responseData.translatedText, 'text/html').documentElement.textContent || payload.responseData.translatedText;
-      setTranslatedText(result);
-      setTranslationHistory(current => addTranslationHistory(current, {
-        sourceText: translationText.trim(),
-        translatedText: result,
-        sourceLanguage,
-        targetLanguage,
-      }));
-      setTranslationState({ loading: false, error: '' });
-    } catch (error) {
-      const message = error instanceof Error && error.name === 'AbortError'
-        ? '翻译请求超过 12 秒，请稍后重试或使用 Google 回退。'
-        : error instanceof Error ? error.message : '翻译失败，请稍后再试。';
-      setTranslationState({ loading: false, error: message });
-    } finally {
-      window.clearTimeout(timeout);
-    }
-  };
 
   const focusAfterRender = (id: string) => window.setTimeout(() => {
     const element = document.getElementById(id);
@@ -797,7 +768,7 @@ function App() {
     : `部分界面偏好未保存。 ${storageIssue?.message || ''}`;
 
   const inboxCount = inboxItems.filter(item => !item.deletedAt && item.status === 'inbox').length;
-  const showInboxLauncher = !isAdminOpen
+  const showInboxLauncher = !isAdminOpen && !homeToolsEditing
     && !isInboxOpen
     && !isTempTextOpen
     && !isTempTextQrOpen
@@ -817,10 +788,11 @@ function App() {
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
     { id: 'quick-capture', title: '快速记录', description: '立即写入本机 Inbox', keywords: ['capture', '记录', '收件箱', '+'], icon: 'add', run: openQuickCapture },
     { id: 'inbox', title: `打开 Inbox (${inboxCount})`, description: '查看、编辑、复制、归档本地记录', keywords: ['inbox', '收件箱', '稍后处理'], icon: 'inbox', run: openInbox },
-    { id: 'translator', title: '打开快捷翻译', description: '输入文本并查看翻译历史', keywords: ['translate', '翻译', 'language'], icon: 'translate', run: () => { setIsTranslatorOpen(true); focusAfterRender('translation-input'); } },
+    { id: 'translator', title: '打开快捷翻译', description: '输入文本并查看翻译历史', keywords: ['translate', '翻译', 'language'], icon: 'translate', run: () => { openTranslator(); } },
     { id: 'temp-note', title: '打开临时文本', description: '编辑、复制或加密同步临时内容', keywords: ['note', '文本', '便签'], icon: 'note', run: () => { setIsTempTextOpen(true); focusAfterRender('temp-text-editor'); } },
     ...(tempText ? [{ id: 'temp-qr', title: '临时文本二维码传输', description: '生成接收链接或纯文本二维码', keywords: ['qr', '二维码', '传输'], icon: 'qr' as const, run: () => setIsTempTextQrOpen(true) }] : []),
-    { id: 'hot-feed', title: '查看技术情报', description: '国内、AI、安全、开发动态和 GitHub 今日热门仓库', keywords: ['hot', '热榜', '情报', '国内', '新闻', 'AI', '安全', '开发', 'github', 'trending'], icon: 'stats', run: () => focusAfterRender('hot-feed') },
+    { id: 'hot-feed', title: '查看技术情报', description: workActive ? '专注期间暂不显示，结束会话后可查看' : '国内、AI、安全、开发动态和 GitHub 今日热门仓库', keywords: ['hot', '热榜', '情报', '国内', '新闻', 'AI', '安全', '开发', 'github', 'trending'], icon: 'stats', run: () => { setHotFeedOpen(true); focusAfterRender('hot-feed'); } },
+    { id: 'temporary-visits', title: '打开临时访问', description: '再次访问最近 30 天的网址，查看次数或整理记录', keywords: ['temporary', '临时访问', '网址', '历史'], icon: 'search', run: () => { setTemporaryVisitsOpen(true); focusAfterRender('temporary-visits'); } },
     { id: 'tech-os', title: '打开 Tech OS', description: '查看当前路线、Quest、Knowledge、Labs 与 Tech Map', keywords: ['tech os', '学习', '路线', 'quest', 'knowledge'], icon: 'study', run: openTechOs },
     { id: 'admin', title: '打开导航管理', description: '编辑网站、布局、备份与发布', keywords: ['admin', 'cms', '管理', '设置'], icon: 'settings', run: () => openAdmin('content') },
     { id: 'layout', title: '打开布局排序', description: '拖拽网站、分类和调整卡片尺寸', keywords: ['layout', '布局', '拖拽', '排序'], icon: 'settings', run: () => openAdmin('layout') },
@@ -836,24 +808,24 @@ function App() {
   ];
 
   if (isBlogOpen) {
-    return <Suspense fallback={<div className="appearance-surface flex min-h-screen items-center justify-center">正在载入博客工作台…</div>}><BlogWorkbench onClose={closeBlog} onDirtyChange={setBlogUnsaved} /></Suspense>;
+    return <FeatureBoundary name="博客工作台" fullPage onClose={() => { setBlogUnsaved(false); setIsBlogOpen(false); window.location.hash = ''; }}><Suspense fallback={<div className="appearance-surface flex min-h-screen items-center justify-center">正在载入博客工作台…</div>}><BlogWorkbench onClose={closeBlog} onDirtyChange={setBlogUnsaved} /></Suspense></FeatureBoundary>;
   }
 
   if (isTechOsOpen) {
-    return <><Suspense fallback={<div className="appearance-surface flex min-h-screen items-center justify-center text-sm font-medium">正在载入 Tech OS…</div>}>
+    return <><FeatureBoundary name="Tech OS" fullPage onClose={closeTechOs}><Suspense fallback={<div className="appearance-surface flex min-h-screen items-center justify-center text-sm font-medium">正在载入 Tech OS…</div>}>
       <TechOsWorkspace
         initialFocusedId={focusedTechOsId}
         isDark={isDark}
         inboxCount={inboxCount}
         inboxItems={inboxItems}
         onToggleTheme={toggleTheme}
-        onOpenInbox={() => { closeTechOs(); openInbox(); }}
+        onOpenInbox={() => { if (closeTechOs()) openInbox(); }}
         onArchiveInboxItems={archiveInboxItems}
         onClose={closeTechOs}
         onRest={openRest}
         repository={siteConfig.repository}
       />
-    </Suspense><RestOverlay open={restOpen} onClose={closeRest} /></>;
+    </Suspense></FeatureBoundary><RestOverlay open={restOpen} onClose={closeRest} /></>;
   }
 
   return (
@@ -925,63 +897,34 @@ function App() {
             <div className="grid gap-3 sm:grid-cols-2">{visiblePostNodes.map(node => <a key={node.id} href={node.url} className="baize-panel group flex min-w-0 items-center gap-3 rounded-xl p-4 transition hover:-translate-y-0.5 hover:border-[#5f8f84]/40 dark:hover:border-[#c9a96b]/30"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#5f8f84]/10 text-[#456b68] dark:bg-[#c9a96b]/8 dark:text-[#d9ddd6]"><FileText size={18} /></span><span className="min-w-0 flex-1"><strong className="block truncate text-sm text-[#234b4e] dark:text-[#f4f1e8]">{node.title}</strong><span className="mt-0.5 block truncate text-xs text-[#718986]">{[node.category, node.format, node.summary].filter(Boolean).join(' · ') || '公开文章'}</span></span><ExternalLink size={15} className="shrink-0 text-[#829793] transition group-hover:text-[#356b66] dark:group-hover:text-[#d2b775]" /></a>)}</div>
           </section>}
           <div className="utility-launcher-row flex flex-wrap items-start gap-2 sm:gap-3">
-            <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openTechOs}><BrainCircuit size={17} />Tech OS</button>
-            <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openBlog}><FileText size={17} />博客工作台</button>
-            <button type="button" className="baize-button-secondary utility-launcher-button" data-rest-launcher onClick={openRest}><Coffee size={17} />休息一下</button>
-            <a className="baize-button-secondary utility-launcher-button" href={`${import.meta.env.BASE_URL}game/`} target="_blank" rel="noopener noreferrer">白泽水浒</a>
-            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={readingOpen} onClick={() => setReadingOpen(value => !value)}><FileText size={17} />阅读中心</button>
-            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={graphOpen} onClick={() => setGraphOpen(value => !value)}><Network size={17} />知识图谱</button>
-            <button type="button" className="baize-button-secondary utility-launcher-button" onClick={openWebCapture}><Plus size={17} />收集网页</button>
-            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={rssOpen} onClick={() => setRssOpen(value => !value)}><FileText size={17} />RSS 订阅</button>
-            {rssOpen && <Suspense fallback={<p>正在载入 RSS…</p>}><RssPanel onClose={() => setRssOpen(false)} onCapture={createLocalInboxItem} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo}`} onPublishSources={(sources, token, baseline) => publishRssConfiguration(siteConfig.repository, token, sources, baseline)} /></Suspense>}
-            <button type="button" className="baize-button-secondary utility-launcher-button" aria-expanded={workOpen} onClick={() => setWorkOpen(value => workActive || !value)}><Check size={17} />{workActive ? workPhase === 'focus' ? '正在专注' : '正在休息' : '工作会话'}</button>
-            <Suspense fallback={null}><PendingSyncPanel data={data} bundled={defaultNavigationData} items={inboxItems} syncMeta={inboxSyncMeta} onPublish={() => openAdmin('content')} onPrivateSync={openInbox} /></Suspense>
-            {workOpen && <div className="basis-full"><Suspense fallback={<p>正在加载工作会话…</p>}><WorkSessionPanel sites={data.sites} onActiveChange={setWorkActive} onPhaseChange={setWorkPhase} onSelectionChange={setWorkSiteIds} onSiteVisit={recordVisit} onClose={() => setWorkOpen(false)} /></Suspense></div>}
-            {readingOpen && <Suspense fallback={null}><ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} /></Suspense>}
-            {graphOpen && <Suspense fallback={<p>正在加载图谱…</p>}><TextGraphPanel index={graphIndex} onClose={() => setGraphOpen(false)} /></Suspense>}
-            {!workActive && <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} compact={isWorkMode} />}
+            <HomeToolLauncher compact={isWorkMode} onEditingChange={setHomeToolsEditing} actions={[
+              { id: 'tech-os', label: 'Tech OS', icon: <BrainCircuit size={17} />, run: openTechOs },
+              { id: 'blog', label: '博客工作台', icon: <FileText size={17} />, run: openBlog },
+              { id: 'rest', label: '休息一下', icon: <Coffee size={17} />, run: openRest },
+              { id: 'game', label: '白泽水浒', href: import.meta.env.BASE_URL + 'game/' },
+              { id: 'reading', label: '阅读中心', icon: <FileText size={17} />, active: readingOpen, run: () => setReadingOpen(value => !value) },
+              { id: 'graph', label: '知识图谱', icon: <Network size={17} />, active: graphOpen, run: () => setGraphOpen(value => !value) },
+              { id: 'capture', label: '收集网页', icon: <Plus size={17} />, run: openWebCapture },
+              { id: 'rss', label: 'RSS 订阅', icon: <FileText size={17} />, active: rssOpen, run: () => setRssOpen(value => !value) },
+              { id: 'work-session', label: workActive ? workPhase === 'focus' ? '正在专注' : '正在休息' : '工作会话', icon: <Check size={17} />, active: workOpen, run: () => setWorkOpen(value => workActive || !value) },
+              { id: 'hot-feed', label: '情报', active: hotFeedOpen && !workActive, disabled: workActive, run: () => setHotFeedOpen(value => !value) },
+              { id: 'temporary-visits', label: '临时访问', active: temporaryVisitsOpen, run: () => setTemporaryVisitsOpen(value => !value) },
+              { id: 'translate', label: '翻译', icon: <Languages size={17} />, active: isTranslatorOpen, run: () => { safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, String(isTranslatorOpen), sharedStorageOptions('翻译面板偏好', false)); if (isTranslatorOpen) setIsTranslatorOpen(false); else openTranslator(); } },
+            ]} />
+            {rssOpen && <FeatureBoundary name="RSS 订阅" onClose={() => setRssOpen(false)}><Suspense fallback={<p>正在载入 RSS…</p>}><RssPanel onClose={() => setRssOpen(false)} onCapture={createLocalInboxItem} repositoryLabel={siteConfig.repository.owner + '/' + siteConfig.repository.repo} onPublishSources={(sources, token, baseline) => publishRssConfiguration(siteConfig.repository, token, sources, baseline)} /></Suspense></FeatureBoundary>}
+            <Suspense fallback={null}><PendingSyncPanel data={data} bundled={defaultNavigationData} items={inboxItems} syncMeta={inboxSyncMeta} onPublish={() => openAdmin('content')} onPrivateSync={openInbox} onOpenBlog={openBlog} onOpenTechOs={openTechOs} /></Suspense>
+            {workOpen && <div className="basis-full"><FeatureBoundary name="工作会话" onClose={() => setWorkOpen(false)}><Suspense fallback={<p>正在加载工作会话…</p>}><WorkSessionPanel sites={data.sites} onActiveChange={setWorkActive} onPhaseChange={setWorkPhase} onSelectionChange={setWorkSiteIds} onSiteVisit={recordVisit} onClose={() => setWorkOpen(false)} /></Suspense></FeatureBoundary></div>}
+            {readingOpen && <FeatureBoundary name="阅读中心" onClose={() => setReadingOpen(false)}><Suspense fallback={null}><ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} /></Suspense></FeatureBoundary>}
+            {graphOpen && <FeatureBoundary name="知识图谱" onClose={() => setGraphOpen(false)}><Suspense fallback={<p>正在加载图谱…</p>}><TextGraphPanel index={graphIndex} onClose={() => setGraphOpen(false)} /></Suspense></FeatureBoundary>}
+            {!workActive && <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} open={hotFeedOpen} onOpenChange={setHotFeedOpen} compact={isWorkMode} />}
             <TemporaryVisitsPanel
+              open={temporaryVisitsOpen} onOpenChange={setTemporaryVisitsOpen}
               visits={temporaryVisitSummaries}
               onVisit={visitTemporaryUrl}
               onDelete={key => setTemporaryVisits(current => removeTemporaryVisit(current, key))}
               onClear={() => setTemporaryVisits(current => ({ ...current, records: [] }))}
             />
-            {!isTranslatorOpen && <button type="button" className="baize-button-secondary utility-launcher-button" aria-controls="quick-translator" aria-expanded="false" onClick={() => { safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, 'false', sharedStorageOptions('翻译面板偏好', false)); setIsTranslatorOpen(true); }}><Languages size={17} />翻译{translationHistory.length > 0 && <span className="utility-launcher-badge">{translationHistory.length}</span>}</button>}
-            {isTranslatorOpen && <section id="quick-translator" className="baize-panel basis-full rounded-2xl p-4 sm:p-5">
-            <div className="mb-3 flex items-center justify-between">
-              <span className="flex items-center gap-2 text-sm font-semibold text-[#456b68] dark:text-[#d9ddd6]"><Languages size={17} />快捷翻译</span>
-              <button type="button" className="baize-icon-button flex items-center gap-1 text-xs" aria-expanded="true" onClick={() => { safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, 'true', sharedStorageOptions('翻译面板偏好', false)); setIsTranslatorOpen(false); }}><ChevronUp size={16} />收起</button>
-            </div>
-            <form onSubmit={translateInline}>
-              <div className="mb-3 flex flex-wrap items-center gap-2">
-                <span className="mr-auto text-xs text-[#718986]">选择翻译语言</span>
-                <select value={sourceLanguage} onChange={event => setSourceLanguage(event.target.value)} className="baize-input w-auto py-1.5">{TRANSLATION_LANGUAGES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
-                <button type="button" className="baize-icon-button" aria-label="互换翻译语言" onClick={() => { setSourceLanguage(targetLanguage); setTargetLanguage(sourceLanguage); if (translatedText) { setTranslationText(translatedText); setTranslatedText(''); } }}><ArrowLeftRight size={17} /></button>
-                <select value={targetLanguage} onChange={event => setTargetLanguage(event.target.value)} className="baize-input w-auto py-1.5">{TRANSLATION_LANGUAGES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select>
-              </div>
-              <div className="grid gap-3 md:grid-cols-2">
-                <textarea id="translation-input" required value={translationText} onChange={event => { setTranslationText(event.target.value); setTranslationState({ loading: false, error: '' }); }} rows={5} className="baize-input resize-y" placeholder="输入要翻译的单句或短段落…" />
-                <div className="baize-input relative min-h-32 whitespace-pre-wrap"><span className={translatedText ? '' : 'text-[#8aa39d]'}>{translatedText || '翻译结果会显示在这里'}</span>{translatedText && <button type="button" className="baize-icon-button absolute right-2 top-2" aria-label="复制翻译结果" onClick={() => navigator.clipboard.writeText(translatedText)}><Copy size={15} /></button>}</div>
-              </div>
-              <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-                <p className={`text-xs ${translationState.error ? 'text-[#985247] dark:text-[#e1a294]' : 'text-[#718986]'}`}>{translationState.error || '直接调用 MyMemory 免费接口；请勿翻译敏感文本，单次最多 500 字节。'}</p>
-                <div className="flex gap-2"><a className="baize-button-secondary" target="_blank" rel="noreferrer" href={`https://translate.google.com/?sl=${encodeURIComponent(sourceLanguage)}&tl=${encodeURIComponent(targetLanguage)}&text=${encodeURIComponent(translationText)}&op=translate`}>Google 回退</a><button disabled={translationState.loading || !translationText.trim()} className="baize-button-primary" type="submit"><Languages size={17} />{translationState.loading ? '翻译中…' : '立即翻译'}</button></div>
-              </div>
-            </form>
-            <TranslationHistoryPanel
-              history={translationHistory}
-              languageName={translationLanguageName}
-              onUse={item => {
-                setTranslationText(item.sourceText);
-                setTranslatedText(item.translatedText);
-                setSourceLanguage(item.sourceLanguage);
-                setTargetLanguage(item.targetLanguage);
-                setTranslationState({ loading: false, error: '' });
-              }}
-              onDelete={id => setTranslationHistory(current => current.filter(item => item.id !== id))}
-              onClear={() => setTranslationHistory([])}
-            />
-          </section>}
+            {isTranslatorOpen && <FeatureBoundary name="快捷翻译" onClose={() => setIsTranslatorOpen(false)}><Suspense fallback={<p>正在加载翻译…</p>}><QuickTranslationPanel focusRequest={translatorFocusRequest} {...translator} onClose={() => { safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, "true", sharedStorageOptions("翻译面板偏好", false)); setIsTranslatorOpen(false); }} /></Suspense></FeatureBoundary>}
           </div>
           {categories.map(category => {
             const categorySites = data.sites
@@ -1038,10 +981,10 @@ function App() {
         <button type="button" className="baize-button-secondary h-11 px-4" onClick={openInbox} aria-label={`打开 Inbox，${inboxCount} 条`}><InboxIcon size={19} /><span>Inbox</span>{inboxCount > 0 && <span className="rounded-full bg-[#356b66] px-2 py-0.5 text-[11px] text-white dark:bg-[#c9a96b] dark:text-[#102c33]">{inboxCount}</span>}</button>
       </nav>}
 
-      {isAdminOpen && <Suspense fallback={<div className="fixed inset-0 z-[70] flex items-center justify-center bg-[#dce6e1]/96 text-sm font-medium text-[#456b68] dark:bg-[#07191d]/97 dark:text-[#d9ddd6]">正在载入管理后台…</div>}>
+      {isAdminOpen && <FeatureBoundary name="导航管理" overlay onClose={closeAdmin}><Suspense fallback={<div className="fixed inset-0 z-[70] flex items-center justify-center bg-[#dce6e1]/96 text-sm font-medium text-[#456b68] dark:bg-[#07191d]/97 dark:text-[#d9ddd6]">正在载入管理后台…</div>}>
         <AdminPanel data={data} initialSection={adminSection} defaultRepository={siteConfig.repository} linkHealthEntries={linkHealthEntries} isLinkHealthLoading={isLinkHealthLoading} onRefreshLinkHealth={refreshLinkHealth} onRunBrowserLinkHealthCheck={runBrowserLinkHealthCheck} clickStats={clickStats} onClearClickStats={() => setClickStats({ version: 2, days: {} })} onChange={setData} onPublished={(published, sha, target) => { if (target.owner === siteConfig.repository.owner && target.repo === siteConfig.repository.repo && target.branch === siteConfig.repository.branch) markNavigationPublished(published, sha, defaultNavigationData); }} onReset={() => { safeRemoveLocalStorageItem(DRAFT_KEY, { label: '导航草稿' }); setData(defaultNavigationData); }} onClose={closeAdmin} />
-      </Suspense>}
-      {isInboxOpen && <Suspense fallback={null}><InboxPanel open focusItemId={focusedInboxId} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} blogRepositoryLabel={`${siteConfig.blogRepository.owner}/${siteConfig.blogRepository.repo} · ${siteConfig.blogRepository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onRestore={restorePrivateSharedData} onSync={syncInboxWithCloud} onCreateBlogDraft={createBlogDraftFromInbox} onClose={() => setIsInboxOpen(false)} /></Suspense>}
+      </Suspense></FeatureBoundary>}
+      {isInboxOpen && <FeatureBoundary name="Inbox" onClose={() => setIsInboxOpen(false)}><Suspense fallback={null}><InboxPanel open focusItemId={focusedInboxId} captureRequest={captureRequest} items={inboxItems} repositoryLabel={`${siteConfig.repository.owner}/${siteConfig.repository.repo} · ${siteConfig.repository.branch}`} blogRepositoryLabel={`${siteConfig.blogRepository.owner}/${siteConfig.blogRepository.repo} · ${siteConfig.blogRepository.branch}`} syncMeta={inboxSyncMeta} syncState={inboxSyncState} onCreate={createLocalInboxItem} onUpdate={updateLocalInboxItem} onStatusChange={changeInboxItemStatus} onDelete={deleteInboxItem} onRestore={restorePrivateSharedData} onSync={syncInboxWithCloud} onCreateBlogDraft={createBlogDraftFromInbox} onClose={() => setIsInboxOpen(false)} /></Suspense></FeatureBoundary>}
       {isTempTextOpen && <div className="fixed inset-0 z-[65] bg-[#07191d]/35 backdrop-blur-sm" onMouseDown={event => { if (event.target === event.currentTarget) setIsTempTextOpen(false); }}>
         <aside className="baize-panel ml-auto flex h-full w-full max-w-lg flex-col border-y-0 border-r-0 p-5">
           <header className="mb-4 flex items-center justify-between">
@@ -1073,11 +1016,11 @@ function App() {
           </footer>
         </aside>
       </div>}
-      {qrSite && <Suspense fallback={null}><QrCodeModal site={qrSite} onClose={() => setQrSite(null)} /></Suspense>}
+      {qrSite && <FeatureBoundary name="二维码" onClose={() => setQrSite(null)}><Suspense fallback={null}><QrCodeModal site={qrSite} onClose={() => setQrSite(null)} /></Suspense></FeatureBoundary>}
       {isTempTextQrOpen && <Suspense fallback={null}><TempTextQrModal text={tempText} onClose={() => setIsTempTextQrOpen(false)} /></Suspense>}
       {incomingTempText !== null && <Suspense fallback={null}><TextTransferReceiveModal text={incomingTempText} currentText={tempText} onClose={closeIncomingTransfer} onAccept={() => { setTempText(incomingTempText); setIsTempTextOpen(true); closeIncomingTransfer(); }} /></Suspense>}
       {captureMounted && <Suspense fallback={null}><ShareCapturePanel open={captureOpen} incoming={incomingShare} onCapture={createLocalInboxItem} onClose={() => setCaptureOpen(false)} /></Suspense>}
-      {isCommandPaletteOpen && <Suspense fallback={null}><CommandPalette open sites={data.sites} categories={categories} textNodes={textNodes} actions={commandActions} inboxItems={inboxItems} temporaryVisits={temporaryVisitSummaries} translationHistory={translationHistory} onOpenInboxItem={id => { setFocusedInboxId(id); openInbox(); }} onUseTranslation={item => { setTranslationText(item.sourceText); setTranslatedText(item.translatedText); setSourceLanguage(item.sourceLanguage); setTargetLanguage(item.targetLanguage); setTranslationState({ loading: false, error: '' }); setIsTranslatorOpen(true); focusAfterRender('translation-input'); }} onTemporaryVisit={visitTemporaryUrl} onOpenTechOs={id => { setFocusedTechOsId(id); openTechOs(); }} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} /></Suspense>}
+      {isCommandPaletteOpen && <FeatureBoundary name="命令面板" onClose={() => setIsCommandPaletteOpen(false)}><Suspense fallback={null}><CommandPalette open sites={data.sites} categories={categories} textNodes={textNodes} actions={commandActions} inboxItems={inboxItems} temporaryVisits={temporaryVisitSummaries} translationHistory={translationHistory} onOpenInboxItem={id => { setFocusedInboxId(id); openInbox(); }} onUseTranslation={item => { setTranslationText(item.sourceText); setTranslatedText(item.translatedText); setSourceLanguage(item.sourceLanguage); setTargetLanguage(item.targetLanguage); setTranslationState({ loading: false, error: '' }); openTranslator(); }} onTemporaryVisit={visitTemporaryUrl} onOpenTechOs={id => { setFocusedTechOsId(id); openTechOs(); }} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} /></Suspense></FeatureBoundary>}
       {storagePersistence.issues.length > 0 && <aside
         className="fixed inset-x-4 z-[110] mx-auto flex max-w-2xl flex-wrap items-center gap-2 rounded-2xl border border-[#a85d50]/30 bg-[#fff7ee]/96 p-3 shadow-2xl backdrop-blur-xl dark:border-[#d58a78]/25 dark:bg-[#2a1c1a]/96"
         style={{ bottom: appUpdateReady ? '10.5rem' : '5rem' }}

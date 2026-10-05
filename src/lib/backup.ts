@@ -1,8 +1,13 @@
 import type { Category, LayoutItem, NavigationData, Site } from '../types/navigation';
 import { parseNavigationData } from './navigationData.ts';
 import { formatStorageBytes, SHARED_SYNC_ENTRY_MAX_BYTES, utf8ByteLength } from './safeStorage.ts';
+import { applyStorageWrites, captureWorkingDrafts, notifyDraftRestore, parseWorkingDraftBackup, planDraftRestore, type DraftRestorePlan, type DraftStorage, type WorkingDraftBackup } from './workingDrafts.ts';
+import { parseHomeTools } from './homeTools.ts';
+import { parseStudyFeedback } from '../services/studyFeedback.ts';
+import { parseStudyProgressStore } from '../services/techOsStudyProgress.ts';
 
 export const BACKUP_VERSION = 1 as const;
+export const FULL_BACKUP_MAX_BYTES = 16 * 1024 * 1024;
 export const BACKUP_STORAGE_KEYS = [
   'nav_cms_draft',
   'nav_daily_click_stats',
@@ -18,18 +23,25 @@ export const BACKUP_STORAGE_KEYS = [
   'baize_rss_sources_v1',
   'baize_rss_reader_v1',
   'baize_work_session_v1',
+  'baize_home_tools_v1',
+  'baize_study_feedback_v1',
+  'baize_tech_os_study_progress_v1',
 ] as const;
 
 export type BackupStorageKey = (typeof BACKUP_STORAGE_KEYS)[number];
+type BackupExtensionKey = 'baize_home_tools_v1' | 'baize_study_feedback_v1' | 'baize_tech_os_study_progress_v1';
+const EXTENSION_KEYS = new Set<BackupStorageKey>(['baize_home_tools_v1', 'baize_study_feedback_v1', 'baize_tech_os_study_progress_v1']);
+type BackupStorage = Record<Exclude<BackupStorageKey, BackupExtensionKey>, string | null> & Partial<Record<BackupExtensionKey, string | null>>;
 
 export interface NavigationBackup {
   version: typeof BACKUP_VERSION;
   exportedAt: string;
   navigation: NavigationData;
-  storage: Record<BackupStorageKey, string | null>;
+  storage: BackupStorage;
+  workingDrafts?: WorkingDraftBackup;
 }
 
-type StorageLike = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
+type StorageLike = DraftStorage;
 
 function fail(message: string): never {
   throw new Error(`Invalid navigation backup: ${message}`);
@@ -138,17 +150,19 @@ export function createBackup(data: NavigationData, storage?: StorageLike): Navig
     key,
     key === 'nav_cms_draft' ? JSON.stringify(navigation) : source.getItem(key),
   ] as const);
-  return {
+  return parseBackup({
     version: BACKUP_VERSION,
     exportedAt: new Date().toISOString(),
     navigation,
     storage: Object.fromEntries(entries) as Record<BackupStorageKey, string | null>,
-  };
+    workingDrafts: captureWorkingDrafts(source),
+  });
 }
 
 export function parseBackup(input: string | unknown): NavigationBackup {
   let value: unknown = input;
   if (typeof input === 'string') {
+    if (utf8ByteLength(input) > FULL_BACKUP_MAX_BYTES) fail('file exceeds the 16 MiB backup limit');
     try {
       value = JSON.parse(input) as unknown;
     } catch {
@@ -164,25 +178,42 @@ export function parseBackup(input: string | unknown): NavigationBackup {
   const allowedKeys = new Set<string>(BACKUP_STORAGE_KEYS);
   if (Object.keys(savedStorage).some(key => !allowedKeys.has(key))) fail('storage contains an unsupported key');
 
-  const storageEntries = BACKUP_STORAGE_KEYS.map(key => {
+  const storageEntries = BACKUP_STORAGE_KEYS.flatMap(key => {
+    // A backup predating these features cannot explicitly request deleting them.
+    if (EXTENSION_KEYS.has(key) && !Object.prototype.hasOwnProperty.call(savedStorage, key)) return [];
     const valueForKey = Object.prototype.hasOwnProperty.call(savedStorage, key) ? savedStorage[key] : null;
     if (valueForKey !== null && typeof valueForKey !== 'string') fail(`storage.${key} must be a string or null`);
-    return [key, valueForKey] as const;
+    if (typeof valueForKey === 'string' && EXTENSION_KEYS.has(key)) {
+      try {
+        const raw: unknown = JSON.parse(valueForKey);
+        const clean = key === 'baize_home_tools_v1' ? parseHomeTools(raw) : key === 'baize_study_feedback_v1' ? parseStudyFeedback(raw) : parseStudyProgressStore(raw);
+        if (!clean) throw new Error('Invalid study progress');
+        return [[key, JSON.stringify(clean)] as const];
+      } catch { fail('storage.' + key + ' is invalid; existing records were not changed'); }
+    }
+    return [[key, valueForKey] as const];
   });
 
-  return {
+  const parsed: NavigationBackup = {
     version: BACKUP_VERSION,
     exportedAt,
     navigation: parseNavigation(backup.navigation),
     storage: Object.fromEntries(storageEntries) as Record<BackupStorageKey, string | null>,
+    ...(backup.workingDrafts === undefined ? {} : { workingDrafts: parseWorkingDraftBackup(backup.workingDrafts) }),
   };
+  if (utf8ByteLength(JSON.stringify(parsed)) > FULL_BACKUP_MAX_BYTES) fail('content exceeds the 16 MiB backup limit');
+  return parsed;
 }
 
 export function restoreBackup(input: string | unknown, storage?: StorageLike): NavigationData {
+  return restoreBackupWithReport(input, storage).navigation;
+}
+
+export function restoreBackupWithReport(input: string | unknown, storage?: StorageLike): { navigation: NavigationData; drafts: DraftRestorePlan | null } {
   const backup = parseBackup(input);
   const sizeCandidates: Array<[string, string | null]> = [
     ['navigation', JSON.stringify(backup.navigation)],
-    ...BACKUP_STORAGE_KEYS.map(key => [`storage.${key}`, backup.storage[key]] as [string, string | null]),
+    ...BACKUP_STORAGE_KEYS.filter(key => Object.prototype.hasOwnProperty.call(backup.storage, key)).map(key => ['storage.' + key, backup.storage[key] ?? null] as [string, string | null]),
   ];
   const oversized = sizeCandidates.find(([, value]) => value !== null && utf8ByteLength(value) > SHARED_SYNC_ENTRY_MAX_BYTES);
   if (oversized) {
@@ -190,30 +221,9 @@ export function restoreBackup(input: string | unknown, storage?: StorageLike): N
     throw new Error(`Could not restore browser storage: ${oversized[0]} is ${formatStorageBytes(bytes)}, above the ${formatStorageBytes(SHARED_SYNC_ENTRY_MAX_BYTES)} shared-sync limit`);
   }
   const target = storageOrBrowser(storage);
-  const previous = new Map(BACKUP_STORAGE_KEYS.map(key => [key, target.getItem(key)]));
-  const changed: BackupStorageKey[] = [];
-
-  try {
-    for (const key of BACKUP_STORAGE_KEYS) {
-      const value = backup.storage[key];
-      if (value === null) target.removeItem(key);
-      else target.setItem(key, value);
-      changed.push(key);
-    }
-  } catch (error) {
-    let rollbackFailed = false;
-    for (const key of changed.reverse()) {
-      try {
-        const value = previous.get(key) ?? null;
-        if (value === null) target.removeItem(key);
-        else target.setItem(key, value);
-      } catch {
-        rollbackFailed = true;
-      }
-    }
-    const reason = error instanceof Error ? error.message : String(error);
-    throw new Error(`Could not restore browser storage${rollbackFailed ? ' and rollback was incomplete' : ''}: ${reason}`);
-  }
-
-  return backup.navigation;
+  const drafts = backup.workingDrafts ? planDraftRestore(backup.workingDrafts, target) : null;
+  const writes = BACKUP_STORAGE_KEYS.filter(key => Object.prototype.hasOwnProperty.call(backup.storage, key)).map(key => ({ key, before: target.getItem(key), after: backup.storage[key] ?? null }));
+  applyStorageWrites([...writes, ...(drafts?.writes || [])], target);
+  if (drafts) notifyDraftRestore();
+  return { navigation: backup.navigation, drafts };
 }

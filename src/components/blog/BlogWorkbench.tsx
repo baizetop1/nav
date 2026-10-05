@@ -7,6 +7,10 @@ import type { BlogDocument, BlogEntry, BlogSaveAction, BlogSource, BlogWritePlan
 import { AppearanceButton } from '../appearance/AppearanceProvider';
 import { BlogPreview } from './BlogPreview';
 import { useBlogAutosave } from './useBlogAutosave';
+import { rememberDraftDeployment } from '../../lib/draftDeployment';
+import { BlogMergePanel } from './BlogMergePanel';
+import { BlogImagePanel } from './BlogImagePanel';
+import type { BlogImageUpload } from '../../services/blogImages';
 
 const target = siteConfig.blogRepository;
 const repositoryUrl = `https://github.com/${target.owner}/${target.repo}`;
@@ -114,7 +118,7 @@ export function BlogWorkbench({ onClose, onDirtyChange }: { onClose: () => void;
           {!rows.length && <p className="py-5 text-sm leading-6 appearance-muted">还没有文章。可以直接新建，或连接仓库读取已有文章。</p>}
           <button type="button" className="baize-button-secondary w-full text-xs" onClick={() => { if (canSwitch()) importRef.current?.click(); }}>导入 Markdown 为本地草稿</button>
           <input ref={importRef} hidden type="file" accept=".md,.markdown,text/markdown" onChange={async event => { const file = event.target.files?.[0]; event.target.value = ''; if (!file) return; if (file.size > 256 * 1024) { setMessage('Markdown 文件不能超过 256 KB。'); return; } try { const raw = await file.text(); const text = raw.replace(/^\uFEFF/, ''); await addLocal(text.startsWith('---\n') || text.startsWith('---\r\n') ? text : createBlogMarkdown({ title: file.name.replace(/\.md(?:own)?$/i, ''), body: text, slug: `note-${Date.now().toString(36)}` })); } catch (error) { setMessage((error as Error).message); } }} />
-          <p className="text-[11px] leading-5 appearance-muted">本地副本只在此浏览器，不随导航备份或 Inbox 同步；重要文章请导出 Markdown，或主动提交仓库草稿。</p>
+          <p className="text-[11px] leading-5 appearance-muted">本地副本已纳入完整备份，也可在首页“待同步”中批量备份或恢复；提交仓库前只保存在此浏览器。</p>
         </aside>
         {selected ? <BlogEditor key={selected.id} initial={selected} token={token} onSaved={refresh} onDirty={setDirty} onConnect={() => setConnectionOpen(true)} onRemove={() => void removeLocal()} onCommitted={(source, previousPath) => setEntries(current => [{ path: source.path, sha: source.sha, kind: source.path.startsWith('_posts/') ? 'published' : 'draft', title: readBlogDocument(source.markdown).title }, ...current.filter(entry => entry.path !== source.path && entry.path !== previousPath)])} onCopy={copyLocal} /> : <section className="baize-panel rounded-2xl px-6 py-16 text-center"><FileText size={38} className="mx-auto mb-4 opacity-50" /><h2 className="text-xl font-semibold">在这里安心写一篇文章</h2><p className="mx-auto mt-3 max-w-md text-sm leading-7 appearance-muted">新建文章不需要先写 Inbox。正文会自动保存到本机，预览后再确认提交；已发布文章也能直接打开修改。</p><button type="button" className="baize-button-primary mx-auto mt-6" onClick={() => void addLocal()}><Plus size={16} />开始写作</button></section>}
       </div>
@@ -124,16 +128,22 @@ export function BlogWorkbench({ onClose, onDirtyChange }: { onClose: () => void;
 
 interface EditorProps { initial: BlogLocalDraft; token: string; onSaved: () => void; onDirty: (dirty: boolean) => void; onConnect: () => void; onRemove: () => void; onCopy: (markdown: string) => Promise<void>; onCommitted: (source: BlogSource, previousPath?: string) => void }
 function BlogEditor({ initial, token, onSaved, onDirty, onConnect, onRemove, onCopy, onCommitted }: EditorProps) {
-  const auto = useBlogAutosave(initial, target, onSaved, onDirty);
+  const pendingGuard = useRef({ busy: false, imagePending: false });
+  const reportDirty = useCallback((dirty: boolean) => onDirty(dirty || pendingGuard.current.busy || pendingGuard.current.imagePending), [onDirty]);
+  const auto = useBlogAutosave(initial, target, onSaved, reportDirty);
   const { draft } = auto;
   const [mode, setMode] = useState<'edit' | 'preview' | 'split' | 'source'>('edit');
   const [message, setMessage] = useState(''), [busy, setBusy] = useState(false), [confirmed, setConfirmed] = useState(false);
   const [plan, setPlan] = useState<BlogWritePlan | null>(null);
   const [deployment, setDeployment] = useState<{ state: string; message: string; url?: string } | null>(null), [pollRetry, setPollRetry] = useState(0);
   const bodyRef = useRef<HTMLTextAreaElement>(null);
+  const [imageOpen, setImageOpen] = useState(false), [imageFile, setImageFile] = useState<File | null>(null), [imagePending, setImagePending] = useState(false);
+  const [imagePreviews, setImagePreviews] = useState<Record<string, string>>({});
+  const imagePosition = useRef<{ start: number; end: number; body: string } | null>(null);
+  pendingGuard.current = { busy, imagePending };
   const parsed = useMemo(() => { try { return { document: readBlogDocument(draft.markdown), error: '' }; } catch (error) { return { document: null, error: (error as Error).message }; } }, [draft.markdown]);
   const doc = parsed.document, published = draft.source?.path.startsWith('_posts/') || false;
-  useEffect(() => { onDirty(auto.dirty || busy); }, [auto.dirty, busy, onDirty]);
+  useEffect(() => { onDirty(auto.dirty || busy || imagePending); }, [auto.dirty, busy, imagePending, onDirty]);
   useEffect(() => { setPlan(null); setConfirmed(false); }, [draft.markdown, draft.source]);
   useEffect(() => {
     const commit = draft.lastCommit;
@@ -144,6 +154,7 @@ function BlogEditor({ initial, token, onSaved, onDirty, onConnect, onRemove, onC
       const result = await getBlogDeployment(target, token, commit.sha);
       if (cancelled) return;
       tries++; setDeployment(result);
+      rememberDraftDeployment(target, commit.sha, result.state);
       if (['waiting', 'running'].includes(result.state) && tries < 30) timer = window.setTimeout(poll, 12_000);
       else if (tries >= 30) setDeployment({ ...result, message: '暂未确认部署完成，已暂停检查。稍后可重试或打开 GitHub Actions。' });
     };
@@ -161,21 +172,35 @@ function BlogEditor({ initial, token, onSaved, onDirty, onConnect, onRemove, onC
     window.setTimeout(() => { area?.focus(); area?.setSelectionRange(start + prefix.length, start + prefix.length + selection.length); }, 0);
   };
   const insertLink = (image: boolean) => {
-    const url = window.prompt(image ? '输入图片的 HTTPS 地址（暂不上传本地图片）' : '输入链接的 HTTPS 地址');
+    const url = window.prompt(image ? '输入图片的 HTTPS 地址' : '输入链接的 HTTPS 地址');
     if (!url) return;
     try { const parsedUrl = new URL(url); if (parsedUrl.protocol !== 'https:' || parsedUrl.username || parsedUrl.password) throw new Error(); insert(image ? '![' : '[', `](${parsedUrl.href.replace(/\(/g, '%28').replace(/\)/g, '%29')})`, image ? '图片说明' : '链接文字'); }
     catch { setMessage('请输入有效且不含账号密码的 HTTPS 地址。'); }
   };
+  const chooseImage = (file?: File) => {
+    if (imagePending) { setMessage('请先完成或取消当前图片上传。'); return; }
+    imagePosition.current = doc ? { start: bodyRef.current?.selectionStart ?? doc.body.length, end: bodyRef.current?.selectionEnd ?? doc.body.length, body: doc.body } : null;
+    setImageFile(file || null); setImagePending(Boolean(file)); setImageOpen(true); setPlan(null); setConfirmed(false); setMessage('');
+  };
+  const insertUploadedImage = (markdown: string, result: BlogImageUpload) => {
+    try {
+      const current = auto.current.current, currentDoc = readBlogDocument(current.markdown), position = imagePosition.current;
+      // If writing continued during upload, append instead of replacing a stale selection.
+      const body = position?.body === currentDoc.body ? currentDoc.body.slice(0, position.start) + markdown + currentDoc.body.slice(position.end) : currentDoc.body + markdown;
+      auto.change({ ...current, markdown: editBlogDocument(current.markdown, { body }) });
+      setImagePreviews(values => ({ ...values, [result.markdownUrl]: result.previewUrl }));
+    } catch (error) { setMessage('图片已上传，但插入失败：' + (error as Error).message + '。请复制图片面板中的 Markdown 到源码。'); }
+  };
   const prepare = async (action: BlogSaveAction) => {
     if (!token.trim()) { onConnect(); setMessage('本地内容已保留，请先输入博客仓库 Token。'); return; }
-    if (auto.dirty) { setMessage('请先完成本地保存或处理保存冲突。'); return; }
+    if (auto.dirty || imagePending) { setMessage('请先完成本地保存、关闭图片面板或处理保存冲突。'); return; }
     setBusy(true); setPlan(null); setConfirmed(false); setMessage('');
     try { setPlan(await prepareBlogWrite({ source: draft.source, markdown: draft.markdown, action }, token, target)); }
     catch (error) { setMessage((error as Error).message); }
     finally { setBusy(false); }
   };
   const submit = async () => {
-    if (!plan || !confirmed || auto.dirty) return;
+    if (!plan || !confirmed || auto.dirty || imagePending) return;
     setBusy(true); setMessage('');
     try {
       const result = await commitBlogWrite(plan, token, target);
@@ -197,9 +222,10 @@ function BlogEditor({ initial, token, onSaved, onDirty, onConnect, onRemove, onC
     finally { setBusy(false); }
   };
   const [comparison, setComparison] = useState<BlogLocalDraft['source']>(null);
+  useEffect(() => { setComparison(null); }, [draft.source?.sha]);
   return <section className="baize-panel min-w-0 space-y-4 rounded-2xl p-4 sm:p-6" aria-label="博客编辑器">
     <div className="flex flex-wrap items-center gap-2"><span className="mr-auto text-xs" role="status">{auto.conflict ? '检测到另一页修改，请处理冲突' : auto.error ? '本地保存失败，请勿关闭' : auto.saving ? '正在保存到本机…' : draft.revision ? `已自动保存到本机 · ${new Date(draft.updatedAt).toLocaleTimeString('zh-CN')}` : '尚未保存到本机'}</span><button type="button" className="baize-button-secondary text-xs" onClick={() => exportMarkdown(draft.markdown, doc?.slug || doc?.title)}><Download size={14} />导出 Markdown</button><button type="button" className="baize-icon-button" aria-label="移除本地编辑副本" disabled={busy || auto.dirty} onClick={onRemove}><Trash2 size={16} /></button></div>
-    {(auto.error || auto.conflict) && <div role="alert" className="space-y-2 rounded-xl border border-[#b77960]/50 p-3 text-sm"><p>{auto.error || '另一标签页已改动这篇文章，本页内容未被覆盖。可另存副本，再与最新内容比较。'}</p><div className="flex flex-wrap gap-2"><button type="button" className="baize-button-secondary" onClick={() => void onCopy(draft.markdown)}>另存为本地副本</button>{auto.error && <button type="button" className="baize-button-secondary" onClick={auto.retry}>重试本地保存</button>}{auto.conflict?.current && <button type="button" className="baize-button-secondary" onClick={() => { if (auto.conflict?.current && window.confirm('使用另一页版本会放弃本页未保存修改。确认已经导出或另存副本？')) auto.adopt(auto.conflict.current); }}>使用另一页版本</button>}</div></div>}
+    {(auto.error || auto.conflict) && <div role="alert" className="space-y-2 rounded-xl border border-[#b77960]/50 p-3 text-sm"><p>{auto.error || '另一标签页已改动这篇文章，本页内容未被覆盖。可另存副本，再与最新内容比较。'}</p><div className="flex flex-wrap gap-2"><button type="button" className="baize-button-secondary" disabled={imagePending} onClick={() => void onCopy(draft.markdown)}>另存为本地副本</button>{auto.error && <button type="button" className="baize-button-secondary" onClick={auto.retry}>重试本地保存</button>}{auto.conflict?.current && <button type="button" className="baize-button-secondary" onClick={() => { if (auto.conflict?.current && window.confirm('使用另一页版本会放弃本页未保存修改。确认已经导出或另存副本？')) auto.adopt(auto.conflict.current); }}>使用另一页版本</button>}</div></div>}
     {parsed.error && <p role="alert" className="text-sm text-[#985247]">{parsed.error} 请在“源码”中修正；原文不会被覆盖。</p>}
     <fieldset disabled={busy} className="min-w-0 space-y-4 disabled:opacity-70">
       <label className="block"><span className="text-xs font-semibold">文章标题</span><input className="baize-input mt-1 text-lg font-semibold" aria-label="文章标题" value={doc?.title || ''} disabled={!doc} placeholder="给这篇文章一个标题" onChange={event => edit({ title: event.target.value })} /></label>
@@ -212,11 +238,12 @@ function BlogEditor({ initial, token, onSaved, onDirty, onConnect, onRemove, onC
       </div></details>
       <nav className="flex flex-wrap gap-2" aria-label="博客编辑视图">{([['edit', '写作'], ['preview', '预览'], ['split', '对照'], ['source', '源码']] as const).map(([value, label]) => <button key={value} type="button" className={mode === value ? 'baize-button-primary' : 'baize-button-secondary'} aria-pressed={mode === value} onClick={() => setMode(value)}>{value === 'preview' && <Eye size={14} />}{label}</button>)}</nav>
       <div className={mode === 'split' ? 'grid min-w-0 gap-5 xl:grid-cols-2' : 'min-w-0'}>
-        {(mode === 'edit' || mode === 'split') && <div className="min-w-0"><div className="mb-2 flex flex-wrap gap-1" aria-label="Markdown 工具栏"><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insert('## ', '', '小标题')}>标题</button><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insert('**', '**')}>粗体</button><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insert('\n```\n', '\n```\n', '代码')}>代码块</button><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insertLink(false)}><Link size={13} />链接</button><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insertLink(true)}><ImagePlus size={13} />图片地址</button></div><textarea ref={bodyRef} aria-label="文章正文" className="baize-input min-h-[50vh] resize-y font-mono text-sm leading-7" value={doc?.body || ''} disabled={!doc} placeholder="从这里开始写。支持 Markdown，也可以直接输入普通文字…" onChange={event => edit({ body: event.target.value })} /></div>}
+        {(mode === 'edit' || mode === 'split') && <div className="min-w-0"><div className="mb-2 flex flex-wrap gap-1" aria-label="Markdown 工具栏"><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insert('## ', '', '小标题')}>标题</button><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insert('**', '**')}>粗体</button><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insert('\n```\n', '\n```\n', '代码')}>代码块</button><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insertLink(false)}><Link size={13} />链接</button><button type="button" className="baize-chip inline-flex items-center gap-1 whitespace-nowrap" onClick={() => insertLink(true)}><ImagePlus size={13} />图片地址</button></div><button type="button" className="baize-button-secondary mb-2 text-xs" onClick={() => chooseImage()}><ImagePlus size={13} />上传图片</button><textarea onPaste={event => { const file = Array.from(event.clipboardData.files).find(item => item.type.startsWith("image/")); if (file) { event.preventDefault(); chooseImage(file); } }} ref={bodyRef} aria-label="文章正文" className="baize-input min-h-[50vh] resize-y font-mono text-sm leading-7" value={doc?.body || ''} disabled={!doc} placeholder="从这里开始写。支持 Markdown，也可以直接输入普通文字…" onChange={event => edit({ body: event.target.value })} /></div>}
         {mode === 'source' && <label className="block text-xs">完整 Markdown（包含 Front Matter）<textarea aria-label="文章 Markdown 源码" spellCheck={false} className="baize-input mt-2 min-h-[55vh] resize-y font-mono text-sm leading-6" value={draft.markdown} onChange={event => auto.change({ ...auto.current.current, markdown: event.target.value })} /></label>}
-        {(mode === 'preview' || mode === 'split') && <article className="min-w-0 rounded-xl border appearance-border appearance-soft p-4"><h2 className="mb-5 break-words text-2xl font-bold">{doc?.title || '未命名文章'}</h2><BlogPreview body={doc?.body || ''} /><p className="mt-8 border-t appearance-border pt-3 text-xs appearance-muted">安全预览不会执行 HTML、Liquid 或脚本；最终排版由博客主题决定。</p></article>}
+        {(mode === 'preview' || mode === 'split') && <article className="min-w-0 rounded-xl border appearance-border appearance-soft p-4"><h2 className="mb-5 break-words text-2xl font-bold">{doc?.title || '未命名文章'}</h2><BlogPreview imagePreviews={imagePreviews} body={doc?.body || ''} /><p className="mt-8 border-t appearance-border pt-3 text-xs appearance-muted">安全预览不会执行 HTML、Liquid 或脚本；最终排版由博客主题决定。</p></article>}
       </div>
     </fieldset>
+    {imageOpen && <BlogImagePanel file={imageFile} slug={doc?.slug || ''} token={token} target={target} onState={setImagePending} onInsert={insertUploadedImage} onChoose={file => chooseImage(file)} onClose={() => { setImageFile(null); setImageOpen(false); }} />}
     <div className="flex flex-wrap items-center gap-2 border-t appearance-border pt-4">
       {!published && <button type="button" className="baize-button-secondary" disabled={busy || auto.dirty || !doc} onClick={() => void prepare('save-draft')}>保存为仓库草稿</button>}
       <button type="button" className="baize-button-primary" disabled={busy || auto.dirty || !doc} onClick={() => void prepare('publish')}><Github size={15} />{published ? '预览文章更新' : '预览并发表'}</button>
@@ -224,8 +251,8 @@ function BlogEditor({ initial, token, onSaved, onDirty, onConnect, onRemove, onC
       {busy && <span className="text-xs">正在处理，请稍候…</span>}
     </div>
     {message && <p role="status" className="break-words text-sm">{message}</p>}
-    {comparison && <section className="space-y-3 rounded-xl border appearance-border p-4" aria-label="博客远端比较"><h3 className="font-semibold">远端与本机比较</h3><p className="text-xs">{comparison.sha === draft.source?.sha ? '远端仍与打开时一致。' : '远端在打开后发生了变化。先核对正文，再决定采用哪个版本。'}</p><div className="grid gap-3 md:grid-cols-2"><label className="text-xs">本机 Markdown<textarea readOnly rows={12} className="baize-input mt-1 font-mono text-xs" value={draft.markdown} /></label><label className="text-xs">远端 Markdown<textarea readOnly rows={12} className="baize-input mt-1 font-mono text-xs" value={comparison.markdown} /></label></div><div className="flex flex-wrap gap-2"><button type="button" className="baize-button-secondary" disabled={auto.dirty} onClick={() => { if (window.confirm('采用远端正文将替换本地编辑内容。确认已导出需要保留的修改？')) { auto.change({ ...draft, markdown: comparison.markdown, source: comparison }); setComparison(null); } }}>采用远端正文</button><button type="button" className="baize-button-secondary" disabled={auto.dirty} onClick={() => { if (window.confirm('保留本机正文，并以刚读取的远端版本作为更新基线？下次提交可能覆盖远端编辑的内容，请确认已比较。')) { auto.change({ ...draft, source: comparison }); setComparison(null); } }}>已核对，保留本机正文</button><button type="button" className="baize-button-secondary" onClick={() => setComparison(null)}>关闭比较</button></div></section>}
-    {plan && <section className="space-y-3 rounded-xl border appearance-border p-4" aria-label="博客提交预览"><h3 className="font-semibold">{plan.action === 'save-draft' ? '确认提交仓库草稿' : published ? '确认更新已发布文章' : '确认公开发表'}</h3><p className="break-all text-xs">{plan.path}{plan.deletePath ? ` · 成功后移除原草稿 ${plan.deletePath}` : ''}</p><div className="max-h-80 overflow-y-auto rounded-xl appearance-soft p-3"><BlogPreview body={readBlogDocument(plan.markdown).body} /></div><details><summary className="cursor-pointer text-xs">查看即将提交的完整 Markdown</summary><pre className="max-h-64 overflow-auto whitespace-pre-wrap break-words text-xs">{plan.markdown}</pre></details><label className="flex gap-2 text-sm"><input type="checkbox" checked={confirmed} disabled={busy} onChange={event => setConfirmed(event.target.checked)} />我已检查内容，确认允许上传至博客仓库（公开仓库中的草稿也公开可读）</label><button type="button" className="baize-button-primary" disabled={!confirmed || busy || auto.dirty} onClick={() => void submit()}>确认提交{plan.action === 'save-draft' ? '草稿' : published ? '更新' : '发表'}</button><button type="button" className="baize-button-secondary ml-2" disabled={busy} onClick={() => setPlan(null)}>取消</button></section>}
+    {comparison && draft.source && <BlogMergePanel base={draft.source.markdown} local={draft.markdown} remote={comparison.markdown} disabled={busy || auto.dirty || imagePending} onApply={markdown => { auto.change({ ...auto.current.current, markdown, source: comparison }); setComparison(null); setMessage("合并结果已交给本地自动保存。请等待保存完成，再预览发布。"); }} onClose={() => setComparison(null)} />}
+    {plan && <section className="space-y-3 rounded-xl border appearance-border p-4" aria-label="博客提交预览"><h3 className="font-semibold">{plan.action === 'save-draft' ? '确认提交仓库草稿' : published ? '确认更新已发布文章' : '确认公开发表'}</h3><p className="break-all text-xs">{plan.path}{plan.deletePath ? ` · 成功后移除原草稿 ${plan.deletePath}` : ''}</p><div className="max-h-80 overflow-y-auto rounded-xl appearance-soft p-3"><BlogPreview body={readBlogDocument(plan.markdown).body} /></div><details><summary className="cursor-pointer text-xs">查看即将提交的完整 Markdown</summary><pre className="max-h-64 overflow-auto whitespace-pre-wrap break-words text-xs">{plan.markdown}</pre></details><label className="flex gap-2 text-sm"><input type="checkbox" checked={confirmed} disabled={busy} onChange={event => setConfirmed(event.target.checked)} />我已检查内容，确认允许上传至博客仓库（公开仓库中的草稿也公开可读）</label><button type="button" className="baize-button-primary" disabled={!confirmed || busy || auto.dirty || imagePending} onClick={() => void submit()}>确认提交{plan.action === 'save-draft' ? '草稿' : published ? '更新' : '发表'}</button><button type="button" className="baize-button-secondary ml-2" disabled={busy} onClick={() => setPlan(null)}>取消</button></section>}
     {draft.lastCommit && <div className="space-y-2 rounded-xl appearance-soft p-3 text-xs"><p>{deployment?.message || '最近一次提交已保存，可打开 GitHub 查看。'}</p><div className="flex flex-wrap gap-4"><a className="underline" href={draft.lastCommit.url} target="_blank" rel="noreferrer">查看提交</a><a className="underline" href={`${repositoryUrl}/actions`} target="_blank" rel="noreferrer">查看 Actions</a>{deployment?.url && <a className="underline" href={deployment.url} target="_blank" rel="noreferrer">部署详情</a>}{published && doc?.permalink?.startsWith('/p/') && !doc.permalink.includes('..') && <a className="underline" href={`https://baizeone.top${doc.permalink}`} target="_blank" rel="noreferrer">打开文章（部署后更新）</a>}{published && <button type="button" className="underline" onClick={() => setPollRetry(value => value + 1)}>重新检查部署</button>}</div></div>}
     {draft.source && <p className="break-all text-[11px] appearance-muted">原文件：{draft.source.path} · 更新会检查远端版本，不强制覆盖。</p>}
   </section>;

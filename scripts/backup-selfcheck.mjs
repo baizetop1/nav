@@ -38,6 +38,17 @@ assert.equal(atomicTarget.getItem('nav_temp_text'), null, 'oversized backup must
 
 
 const invalid = structuredClone(backup);
+const beforeExtension = structuredClone(backup);
+for (const key of ['baize_home_tools_v1', 'baize_study_feedback_v1', 'baize_tech_os_study_progress_v1']) {
+  delete beforeExtension.storage[key];
+  target.setItem(key, 'retain-original-new-feature');
+}
+restoreBackup(parseBackup(beforeExtension), target);
+for (const key of ['baize_home_tools_v1', 'baize_study_feedback_v1', 'baize_tech_os_study_progress_v1']) assert.equal(target.getItem(key), 'retain-original-new-feature', 'old backups must not clear new archives');
+const badExtension = structuredClone(backup);
+badExtension.storage.baize_study_feedback_v1 = '{broken';
+assert.throws(() => restoreBackup(badExtension, target), /existing records were not changed/);
+assert.equal(target.getItem('baize_study_feedback_v1'), 'retain-original-new-feature');
 invalid.version = 2;
 try {
   parseBackup(invalid);

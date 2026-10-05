@@ -42,6 +42,8 @@ const CATEGORY_TONES: Record<IntelligenceCategory, string> = {
 export interface HotFeedPanelProps {
   reportUrl: string;
   compact?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 function readStoredFilter(): IntelligenceFilter {
@@ -134,11 +136,12 @@ function GithubList({ items, limit, compact }: { items: GithubTrendingItem[]; li
   );
 }
 
-export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) {
+export function HotFeedPanel({ reportUrl, compact = false, open, onOpenChange }: HotFeedPanelProps) {
   const [report, setReport] = useState<HotFeedReport | null>(loadCachedHotFeedReport);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [collapsed, setCollapsed] = useState(readStoredCollapsed);
+  const [localCollapsed, setCollapsed] = useState(readStoredCollapsed);
+  const collapsed = open === undefined ? localCollapsed : !open;
   const [filter, setFilter] = useState<IntelligenceFilter>(readStoredFilter);
 
   const refresh = useCallback(async (signal?: AbortSignal) => {
@@ -193,16 +196,20 @@ export function HotFeedPanel({ reportUrl, compact = false }: HotFeedPanelProps) 
   }, [report]);
   const limit = compact ? 5 : 8;
 
-  const toggle = () => setCollapsed(current => {
+  const toggle = () => {
+    if (onOpenChange) { writeStoredValue(COLLAPSED_KEY, String(!collapsed)); onOpenChange(collapsed); return; }
+    setCollapsed(current => {
     writeStoredValue(COLLAPSED_KEY, String(!current));
     return !current;
-  });
+    });
+  };
   const chooseFilter = (next: IntelligenceFilter) => {
     setFilter(next);
     writeStoredValue(CATEGORY_KEY, next);
   };
 
   if (collapsed) {
+    if (open !== undefined) return null;
     return (
       <button type="button" className="baize-button-secondary utility-launcher-button" onClick={toggle} aria-controls="hot-feed" aria-expanded="false">
         <Flame size={17} />情报

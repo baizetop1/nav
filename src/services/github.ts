@@ -214,19 +214,34 @@ export async function saveEncryptedInbox(
   return result.commit.html_url;
 }
 
-export async function getEncryptedBackup(target: RepositoryTarget, token: string): Promise<{ payload: EncryptedNavigationBackup; sha: string } | null> {
+export async function getEncryptedBackup(target: RepositoryTarget, token: string, request: typeof fetch = fetch): Promise<{ payload: EncryptedNavigationBackup; sha: string } | null> {
   const normalizedToken = normalizeGithubToken(token);
   const url = `${API_ROOT}/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/contents/${ENCRYPTED_BACKUP_PATH}?ref=${encodeURIComponent(target.branch)}`;
-  const response = await fetch(url, { headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${normalizedToken}`, 'X-GitHub-Api-Version': '2022-11-28' } });
+  const headers = { Accept: 'application/vnd.github.object+json', Authorization: `Bearer ${normalizedToken}`, 'X-GitHub-Api-Version': '2022-11-28' };
+  const response = await request(url, { headers });
   if (response.status === 404) return null;
   if (!response.ok) {
     if (response.status === 401) throw new Error('GitHub Token 无效或已过期。');
     if (response.status === 403) throw new Error('Token 没有读取加密备份的权限。');
     throw new Error(`读取加密云备份失败 (${response.status})。`);
   }
-  const file = await response.json() as { content: string; sha: string };
+  const file = await response.json() as { content: string; sha: string; size?: number; encoding?: string };
+  const maxBytes = 24 * 1024 * 1024;
+  if (!/^(?:[a-f0-9]{40}|[a-f0-9]{64})$/i.test(file.sha) || (file.size !== undefined && (!Number.isSafeInteger(file.size) || file.size < 0 || file.size > maxBytes))) throw new Error('远端加密备份元数据无效或超过 24 MiB。');
+  let content = file.content;
+  if (file.encoding === 'none' || !content) {
+    // Contents omits data above 1 MB. Pin the blob SHA, never a download URL.
+    // https://docs.github.com/en/rest/git/blobs#get-a-blob
+    const blobUrl = `${API_ROOT}/repos/${encodeURIComponent(target.owner)}/${encodeURIComponent(target.repo)}/git/blobs/${file.sha}`;
+    const blobResponse = await request(blobUrl, { headers: { ...headers, Accept: 'application/vnd.github+json' } });
+    if (!blobResponse.ok) throw new Error(`读取大文件加密备份失败 (${blobResponse.status})。`);
+    const blob = await blobResponse.json() as { content: string; sha: string; encoding: string; size: number };
+    if (blob.sha !== file.sha || blob.encoding !== 'base64' || !Number.isSafeInteger(blob.size) || blob.size < 0 || blob.size > maxBytes) throw new Error('远端加密备份 blob 与基线不一致。');
+    content = blob.content;
+  }
   try {
-    const json = new TextDecoder().decode(Uint8Array.from(atob(file.content.replace(/\s/g, '')), character => character.charCodeAt(0)));
+    if (typeof content !== 'string' || content.length > Math.ceil(maxBytes / 3) * 4 + 100_000) throw new Error();
+    const json = new TextDecoder('utf-8', { fatal: true }).decode(Uint8Array.from(atob(content.replace(/\s/g, '')), character => character.charCodeAt(0)));
     return { payload: JSON.parse(json) as EncryptedNavigationBackup, sha: file.sha };
   } catch {
     throw new Error('远端加密备份文件格式已损坏。');

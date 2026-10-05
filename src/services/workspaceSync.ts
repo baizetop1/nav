@@ -14,6 +14,8 @@ import { TRANSLATION_HISTORY_LIMIT, type TranslationHistoryItem } from '../lib/t
 import type { NavigationData } from '../types/navigation.ts';
 import { SHARED_SYNC_ENTRY_MAX_BYTES, utf8ByteLength } from '../lib/safeStorage.ts';
 import { loadReading, READING_EVENT, READING_KEY, validReadingItem, type ReadingItem } from './readingHistory.ts';
+import { mergeStudyFeedback, parseStudyFeedback, STUDY_FEEDBACK_KEY } from './studyFeedback.ts';
+import { HOME_TOOLS_KEY, parseHomeTools } from '../lib/homeTools.ts';
 
 export const WORKSPACE_KEY = 'baize_shared_workspace_v1';
 export const WORKSPACE_EVENT = 'baize-shared-workspace-updated';
@@ -21,8 +23,8 @@ export interface SharedValue { value: string | null; updatedAt: string; baseline
 export interface SharedWorkspace { version: 1; entries: Record<string, SharedValue>; history: Record<string, SharedValue[]> }
 type StorageLike = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
 // Running timers belong to the current device; explicit backup restores may carry them.
-const SETTING_KEYS = new Set<string>(BACKUP_STORAGE_KEYS.filter(key => key !== 'baize_work_session_v1'));
-const STRUCTURED_MERGE_KEYS = new Set(['nav_cms_draft', 'nav_click_stats_v2', 'nav_translation_history', 'nav_temporary_url_visits_v1', 'baize_rss_reader_v1']);
+const SETTING_KEYS = new Set<string>(BACKUP_STORAGE_KEYS.filter(key => key !== 'baize_work_session_v1' && key !== 'baize_tech_os_study_progress_v1'));
+const STRUCTURED_MERGE_KEYS = new Set(['nav_cms_draft', 'nav_click_stats_v2', 'nav_translation_history', 'nav_temporary_url_visits_v1', 'baize_rss_reader_v1', STUDY_FEEDBACK_KEY]);
 let defaultValues: Record<string, string | null> = {};
 export function configureSharedDefaults(values: Record<string, string | null>) { defaultValues = values; }
 const empty = (): SharedWorkspace => ({ version: 1, entries: {}, history: {} });
@@ -246,6 +248,11 @@ function mergeStructuredValue(
   baselineValue: string | null | undefined,
   preferLeft: boolean,
 ): string | null {
+  if (key === STUDY_FEEDBACK_KEY) {
+    const left = parseStudyFeedback(JSON.parse(leftValue)), right = parseStudyFeedback(JSON.parse(rightValue));
+    const base = typeof baselineValue === 'string' ? parseStudyFeedback(JSON.parse(baselineValue)) : null;
+    return JSON.stringify(mergeStudyFeedback(left, right, base));
+  }
   if (key === 'baize_rss_reader_v1') {
     type ReaderEntry = { read: boolean; favorite: boolean; updatedAt: string };
     const parse = (value: string): Record<string, ReaderEntry> | null => {
@@ -304,6 +311,8 @@ function validValue(key: string, entry: unknown): entry is SharedValue {
     try { const item = JSON.parse(data.value); return validReadingItem(item) && `reading:${item.url}` === key; } catch { return false; }
   }
   if (data.value === null) return true;
+  if (key === STUDY_FEEDBACK_KEY) { try { parseStudyFeedback(JSON.parse(data.value)); return true; } catch { return false; } }
+  if (key === HOME_TOOLS_KEY) { try { parseHomeTools(JSON.parse(data.value)); return true; } catch { return false; } }
   if (key === 'theme') return ['light', 'dark'].includes(data.value);
   if (key === 'scene_mode') return ['default', 'work', 'study', 'relax'].includes(data.value);
   if (['work_mode', 'nav_translator_collapsed'].includes(key)) return ['true', 'false'].includes(data.value);
@@ -336,7 +345,7 @@ export function mergeSharedWorkspace(a: SharedWorkspace, b: SharedWorkspace): Sh
     const candidates = [a.entries[key], b.entries[key], ...(a.history[key] || []), ...(b.history[key] || [])].filter((item): item is SharedValue => Boolean(item));
     const ordered = uniqueVersions(key, candidates);
     const left = a.entries[key], right = b.entries[key];
-    if (STRUCTURED_MERGE_KEYS.has(key) && left?.value !== null && right?.value !== null && left.value !== right.value) {
+    if (STRUCTURED_MERGE_KEYS.has(key) && left && right && left.value !== null && right.value !== null && left.value !== right.value) {
       const preferLeft = compareValues(key, left, right) <= 0;
       const mergedValue = mergeStructuredValue(key, left.value, right.value, commonAncestorValue(key, a, b), preferLeft);
       if (mergedValue !== null) {
