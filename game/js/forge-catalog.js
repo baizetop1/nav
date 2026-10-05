@@ -1,7 +1,7 @@
-import {gearTraitLine} from './tactics-ui.js?v=0.64.0';
-import {specialDropTable} from './special-dungeons-data.js?v=0.64.0';
-import {EQUIPMENT_SETS} from './equipment-sets.js?v=0.64.0';
-import {RECIPES} from './provisions.js?v=0.64.0';
+import {gearTraitLine} from './tactics-ui.js?v=0.66.0';
+import {specialDropTable} from './special-dungeons-data.js?v=0.66.0';
+import {EQUIPMENT_SETS} from './equipment-sets.js?v=0.66.0';
+import {RECIPES} from './provisions.js?v=0.66.0';
 export const FORGE_EQUIPMENT=['bastion_spear','bastion_armor','bastion_mirror','skirmish_blade','skirmish_coat','skirmish_tally'];
 export const FORGE_RECIPES=['dark_iron','blueprint','martial_pages'];
 export const hasForgeExpansion=s=>s.equipment.some(e=>FORGE_EQUIPMENT.includes(e.item))||s.expansion?.recipes.some(id=>FORGE_RECIPES.includes(id))||s.specialDungeons?.last?.drops.some(r=>['dark_iron','blueprint','skill_page'].includes(r.id));

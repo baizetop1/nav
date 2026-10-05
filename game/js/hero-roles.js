@@ -1,7 +1,7 @@
-import {EXTRA_ROLES} from './hero-role-data.js?v=0.64.0';
-import {extraOpening,extraDamage,extraTaken,extraHeal,extraAfterHit,extraInterrupt} from './hero-role-effects.js?v=0.64.0';
+import {EXTRA_ROLES} from './hero-role-data.js?v=0.66.0';
+import {extraOpening,extraDamage,extraTaken,extraHeal,extraAfterHit,extraInterrupt} from './hero-role-effects.js?v=0.66.0';
 export {extraAfterHit as roleAfterHit};
-import {waterBattle} from './frontier-data.js?v=0.64.0';
+import {waterBattle} from './frontier-data.js?v=0.66.0';
 const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
 export const HERO_ROLES={
  songjiang:{name:'济困振心',text:'本人造成有效治疗时，受疗者额外获得最多 8 怒气；每 6 秒最多一次。满血或满怒不触发。'},

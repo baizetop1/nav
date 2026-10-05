@@ -24,3 +24,10 @@
 .compact-dialog .primary{background:#e5c17a;color:#172320;border-color:#e5c17a}.compact-dialog .primary:hover{background:#f0d293}.compact-dialog .primary:disabled{opacity:.5}.compact-dialog button:focus-visible{outline:2px solid #f1d494;outline-offset:2px}
 
 .lineup-role{padding:6px 0;border-bottom:1px solid var(--line)}.lineup-panel h3{margin:6px 0;font-size:14px}.lineup-panel p{margin:4px 0;line-height:1.5}
+
+/* Battle end choices stay visible without paging through combat panels. */
+:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog){width:min(420px,calc(100vw - 24px));height:fit-content;min-height:0;max-height:calc(100dvh - 24px)}
+:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .dialog-header{padding:14px 16px 8px}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .dialog-body{padding:4px 16px 10px;flex:0 1 auto}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .dialog-body p{margin:5px 0;line-height:1.5;font-size:13px}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .dialog-footer{padding:10px 16px 14px}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .actions button{min-height:40px;font-size:13px;padding:6px 9px}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) h2{font-size:20px;margin:0}
+@media(max-height:420px){:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .dialog-header{padding:8px 12px 4px}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .dialog-body{padding:0 12px 4px}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .dialog-footer{padding:6px 12px}:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) .dialog-body p{font-size:12px}}
+
+:is(#battle-outcome,#activity-outcome,#reward-result.outcome-dialog) h2:focus{outline:none}

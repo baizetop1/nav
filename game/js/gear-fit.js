@@ -1,7 +1,7 @@
-import {roleKind} from './lineup-model.js?v=0.64.0';
-import {GEAR_TRAITS} from './tactics-data.js?v=0.64.0';
-import {unlockReason} from './growth.js?v=0.64.0';
-import {away} from './progression-paths.js?v=0.64.0';
+import {roleKind} from './lineup-model.js?v=0.66.0';
+import {GEAR_TRAITS} from './tactics-data.js?v=0.66.0';
+import {unlockReason} from './growth.js?v=0.66.0';
+import {away} from './progression-paths.js?v=0.66.0';
 export function gearFit(s,d,e,id){
  const h=d.by.heroes[id],trait=GEAR_TRAITS[e.item];if(!h||s.heroes[id]?.status!=='owned')return null;
  const skills=h.skills.map(k=>d.by.skills[k]).filter(k=>k.type!=='passive'&&!unlockReason(s,k));

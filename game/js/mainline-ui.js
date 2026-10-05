@@ -1,4 +1,4 @@
-import {meets} from './map.js?v=0.64.0';
+import {meets} from './map.js?v=0.66.0';
 // The catalogue describes only chapters present in the playable data.
 export const MAINLINE_PLAN=[
  {number:7,title:'破连环马',text:'观阵、备械，破开连环骑阵，再安排卸甲归营。'},

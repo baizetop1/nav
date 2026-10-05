@@ -1,9 +1,9 @@
-import {CHRONICLES,CHRONICLE_RANK_CAP,patrolRule,patrolStrength} from './chronicle-data.js?v=0.64.0';
-import {chronicleForgeQuote,chroniclePerks,chronicleObjective} from './chronicle.js?v=0.64.0';
-import {journeyQuote} from './journey.js?v=0.64.0';
-import {JOURNEYS,JOURNEY_TIERS} from './journey-data.js?v=0.64.0';
-import {routeBalance} from './journey-rewards.js?v=0.64.0';
-import {routeDropTable,planSummary} from './journey-campaign-ui.js?v=0.64.0';
+import {CHRONICLES,CHRONICLE_RANK_CAP,patrolRule,patrolStrength} from './chronicle-data.js?v=0.66.0';
+import {chronicleForgeQuote,chroniclePerks,chronicleObjective} from './chronicle.js?v=0.66.0';
+import {journeyQuote} from './journey.js?v=0.66.0';
+import {JOURNEYS,JOURNEY_TIERS} from './journey-data.js?v=0.66.0';
+import {routeBalance} from './journey-rewards.js?v=0.66.0';
+import {routeDropTable,planSummary} from './journey-campaign-ui.js?v=0.66.0';
 function patrolStrengthNote(rank){const q=patrolStrength(rank);return '<p class="note">本阶敌军倍率：气血 ×'+q.hp.toFixed(2)+'、攻击 ×'+q.attack.toFixed(2)+'、防御 ×'+q.defense.toFixed(2)+'（已计入本阶规则，在绝险及所选契约基础上计算）。</p>';}
 function departure(s,q,btn){return '<p class="note">启程消耗：体力 '+q.stamina+'、粮草 '+q.food+'；备战另计，途中战斗仍需粮草。</p>'+planSummary(s,btn);}
 const go={type:'ui_section',view:'realm',id:'chronicles'};

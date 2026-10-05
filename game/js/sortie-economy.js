@@ -1,7 +1,7 @@
-import {recruitPrice} from './realm-buildings.js?v=0.64.0';
-import {RAIDS,TACTICS} from './camp.js?v=0.64.0';
-import {casualtyQuote} from './fieldcraft.js?v=0.64.0';
-import {raidBonus} from './camp-development.js?v=0.64.0';
-import {resourceReward} from './resource-dungeons-data.js?v=0.64.0';
+import {recruitPrice} from './realm-buildings.js?v=0.66.0';
+import {RAIDS,TACTICS} from './camp.js?v=0.66.0';
+import {casualtyQuote} from './fieldcraft.js?v=0.66.0';
+import {raidBonus} from './camp-development.js?v=0.66.0';
+import {resourceReward} from './resource-dungeons-data.js?v=0.66.0';
 export function economyQuote(s,b,cost={},scenario){const casualty=casualtyQuote(b,TACTICS[b.expedition?.tactic||'balanced'].loss,raidBonus(b).loss,scenario),victory=(scenario?.outcome||b.outcome)==='victory',raid=b.context.type==='camp'?RAIDS[b.context.id]:null,resource=b.context.type==='rotation'&&b.context.kind==='daily'?resourceReward(b.context.id,b.context.tier):null,known=!!raid||!!resource||['special','replay'].includes(b.context.type),silver=victory?(raid?.silver||resource?.silver||0):0,food=victory?(raid?(b.context.id==='convoy'?55:15):resource?.food||0):0,recruit=casualty.fallen*recruitPrice(s);return {...casualty,replaceSilver:recruit,known,rewardSilver:silver,rewardFood:food,netSilver:silver-recruit,netFood:food-(cost.food||0)-casualty.recoverFood};}
 export function economyPanel(s,b,cost){const rows=[['快胜',{outcome:'victory',health:1,elapsed:15000}],['苦战',{outcome:'victory',health:.5,elapsed:60000}],['败退',{outcome:'defeat',health:0,elapsed:60000}]],sample=economyQuote(s,b,cost,rows[0][1]);if(!sample.known)return '';const sign=n=>n>0?'+'+n:String(n);return '<details class="economy-budget"><summary>收支预算</summary><p class="note">固定战况示例，已计入场粮耗、治疗伤兵与补齐阵亡；按每人费用折算补员，实际募兵按批次扣费。药品和随机物品不折算银两，不是胜率预测。</p>'+rows.map(([label,args])=>{const q=economyQuote(s,b,cost,args);return '<p><b>'+label+'</b> · 银 '+sign(q.netSilver)+' · 粮 '+sign(q.netFood)+'</p>';}).join('')+'<p class="note">当前募兵每人 '+recruitPrice(s)+' 银、2 粮；治伤每人 1 粮。粮银不足可去“历练 → 基础资源”，只派好汉，不耗粮。</p></details>';}

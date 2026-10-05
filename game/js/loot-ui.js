@@ -1,2 +1,2 @@
-import {gearTraitLine} from './tactics-ui.js?v=0.64.0';
+import {gearTraitLine} from './tactics-ui.js?v=0.66.0';
 export function lootEquipment(before,after,d,esc){const gained=after.equipment.filter(e=>!before.equipment.some(x=>x.uid===e.uid));if(!gained.length)return '';return '<section><h3>新装备</h3>'+gained.map(e=>'<article class="card"><b>'+esc(d.by.equipments[e.item].name)+'</b>'+gearTraitLine(e)+'<div class="actions"><button class="secondary" data-reward-action="'+esc(JSON.stringify({type:'ui_lootCompare',id:e.uid}))+'">比较与穿戴</button><button class="secondary" data-reward-action="'+esc(JSON.stringify({type:'equipLock',id:e.uid,locked:true}))+'">锁定</button></div></article>').join('')+'</section>';}

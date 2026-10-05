@@ -1,4 +1,4 @@
-import {GEAR_TRAITS,PERSONAL_TRAITS,TRAIT_LABELS} from './tactics-data.js?v=0.64.0';
+import {GEAR_TRAITS,PERSONAL_TRAITS,TRAIT_LABELS} from './tactics-data.js?v=0.66.0';
 const alive=u=>u.hp>0;
 const active=(b,u,id)=>u.statuses.some(s=>s.id===id&&s.expiresAt>b.elapsed);
 const log=(b,text)=>{b.log.push(text);if(b.log.length>120)b.log.shift();};

@@ -1,7 +1,7 @@
-import {roleKind} from './lineup-model.js?v=0.64.0';
-import {experienceToNext} from './progression.js?v=0.64.0';
-import {unlockReason} from './growth.js?v=0.64.0';
-import {GEAR_TRAITS} from './tactics-data.js?v=0.64.0';
+import {roleKind} from './lineup-model.js?v=0.66.0';
+import {experienceToNext} from './progression.js?v=0.66.0';
+import {unlockReason} from './growth.js?v=0.66.0';
+import {GEAR_TRAITS} from './tactics-data.js?v=0.66.0';
 const page=(view,id,hero)=>({type:'ui_section',view,id,...(hero?{hero}:{})});
 export const PHASES={company:'立寨成队',arms:'第一套战法兵甲',story:'走完前两卷'};
 export const away=(s,id)=>s.affairs?.mission?.hero===id||!!s.realm?.squad?.team.includes(id)||!!s.realm?.trek?.team.includes(id)||!!s.expansion?.run?.team.includes(id);

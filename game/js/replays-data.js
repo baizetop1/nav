@@ -1,6 +1,6 @@
-import {REPLAY_CHALLENGES} from './replay-challenges.js?v=0.64.0';
-import {CHAPTER_MISSIONS} from './volume-three-data.js?v=0.64.0';
-export {ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.64.0';
+import {REPLAY_CHALLENGES} from './replay-challenges.js?v=0.66.0';
+import {CHAPTER_MISSIONS} from './volume-three-data.js?v=0.66.0';
+export {ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.66.0';
 export const replayId=id=>typeof id==='string'?id.replace(/^echo_/,''):'';
 export const REPLAY_DIFFICULTIES={1:{name:'温习',scale:.65},2:{name:'实战',scale:1}};
 export const replayMissions=CHAPTER_MISSIONS;
