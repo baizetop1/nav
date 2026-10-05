@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-05T00:56:23.675Z",
+  "generatedAt": "2026-10-05T07:03:59.418Z",
   "intelligence": {
-    "updatedAt": "2026-10-05T00:56:23.675Z",
+    "updatedAt": "2026-10-05T07:03:59.418Z",
     "items": [
       {
-        "id": "cn-item-52f9b876934e79ab",
+        "id": "cn-item-c42da930bffe425c",
         "category": "cn",
-        "title": "商务部：国庆假期前四天全国消费市场平稳有序",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-04/10707975.shtml",
+        "title": "也门政府启动大规模军事行动收复胡塞武装控制区",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-05/10708106.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-04T13:20:22.000Z",
-        "summary": "记者从商务部了解到，国庆假期过半，全国消费市场平稳有序，生活必需品货足价稳。",
+        "publishedAt": "2026-10-05T06:35:43.000Z",
+        "summary": "中新社北京10月5日电 综合消息：也门总统领导委员会主席拉沙德·阿里米4日宣布启动大规模军事行动，收复胡塞武装控制地区。沙特阿拉伯方面表示，继续向也门政府提供“全面支持”。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49953495",
+        "id": "hn-49960901",
         "category": "dev",
-        "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
-        "url": "https://github.com/Niko1221/Strata",
+        "title": "Replacement of petroleum based products with plant-based materials (2025)",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/eng2.70108",
         "source": "Hacker News",
-        "publishedAt": "2026-10-04T12:51:53.000Z",
+        "publishedAt": "2026-10-05T05:09:43.000Z",
         "badge": "HN",
-        "signal": "596 分 · 279 评论"
+        "signal": "35 分 · 4 评论"
       },
       {
-        "id": "cn-it-5fd299071b2c3425",
+        "id": "cn-it-c0de854770d27084",
         "category": "cn",
-        "title": "DeepSeek V4.1 Flash 发力，中美顶尖模型 LiveBench 跑分差距缩至 3%",
-        "url": "https://www.ithome.com/1/009/751.htm",
+        "title": "10 月 5 日全国铁路预计发送旅客 2105 万人次，计划加开 1463 列",
+        "url": "https://www.ithome.com/1/009/818.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T00:50:23.000Z",
-        "summary": "北京时间 10 月 5 日，据彭博行业研究称，过去几个月，随着 DeepSeek 等中国 AI 实验室的模型不断进步，美国 AI 公司相对中国同行的性能领先优势急剧缩小，降至历史最低水平，这让美国的科技主导地位面临威胁。 DeepSeek 彭博行业研究高级分析师罗伯特 · 利亚 (Robert Lea) 在周一的一份报告中写道，在 DeepSeek 9 月发布 V4.1 Flash 之后，中国顶尖模型在基准测试得分上仅落后美国竞争对手 3%。这一差距较 5 月份的约 9% …",
+        "publishedAt": "2026-10-05T06:59:13.000Z",
+        "summary": "IT之家 10 月 5 日消息，据中国铁路官方，10 月 4 日，全国铁路发送旅客 2032 万人次，运输安全平稳有序。10 月 5 日，铁路客流保持高位运行，中短途客流持续攀升，全国铁路预计发送旅客 2105 万人次，计划加开旅客列车 1463 列。 IT之家从公告获悉，从铁路 12306 预售情况来看，今日 热门出发城市 主要有北京、广州、成都、上海、杭州、武汉、西安、南京、郑州、长沙； 热门到达城市 主要有北京、上海、广州、成都、深圳、杭州、武汉、西安、郑州、南京；南…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246444",
+        "id": "v2ex-1246495",
         "category": "dev",
-        "title": "ai 时代怎么感觉招 js/ts 全栈还是那么少？",
-        "url": "https://www.v2ex.com/t/1246444",
+        "title": "Windows 搭建 WSL2 AI 开发环境",
+        "url": "https://www.v2ex.com/t/1246495",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-05T00:17:16.000Z",
-        "summary": "现在网上各种 ts ai 全干， 之前感觉 ai 时代 很多新公司 新业务搞全栈不应该首选 ts 了，昨晚看本地二线城市招聘信息 全是各种 java 全栈，php ，python 全栈都比 ts 多，烦了几个一线城市，感觉好像也这样，但是从网上一看 全是 ts 全栈，是受外网影响吗，国外好像是 ts 全栈比较流行吧？",
+        "publishedAt": "2026-10-05T06:33:40.000Z",
+        "summary": "介绍我在 Windows 上使用 WSL2 打造 AI 开发环境的一些思路，源码和 AI Agent 留在 Windows ，WSL2 只当编译测试沙盒，用调度脚本和约束规则串联工作流 https://blog.dejavu.moe/posts/windows-wsl2-ai-dev-environment/",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-76c64d4337c07f50",
+        "id": "cn-baidu-b4b75a644cb4cfa3",
         "category": "cn",
-        "title": "日本罕见1天3次强烈抗议美国",
-        "url": "https://www.baidu.com/s?wd=%E6%97%A5%E6%9C%AC%E7%BD%95%E8%A7%811%E5%A4%A93%E6%AC%A1%E5%BC%BA%E7%83%88%E6%8A%97%E8%AE%AE%E7%BE%8E%E5%9B%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "白应苍被执行死刑前受访画面曝光",
+        "url": "https://www.baidu.com/s?wd=%E7%99%BD%E5%BA%94%E8%8B%8D%E8%A2%AB%E6%89%A7%E8%A1%8C%E6%AD%BB%E5%88%91%E5%89%8D%E5%8F%97%E8%AE%BF%E7%94%BB%E9%9D%A2%E6%9B%9D%E5%85%89&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，日本罕见在一天内3次向美国提出强烈抗议，针对驻冲绳美军在酒店劫杀日本女子事件。日本防卫省、外务省等相继表态，要求美军整顿军纪并配合调查。",
+        "summary": "10月5日至7日，纪录片《缅北电诈覆灭纪实》首播，披露已于2026年2月2日被执行死刑的缅北白家首要分子白应苍受访画面。此前在今年2月节目中，白应苍曾出庭忏悔，称当地“你不做诈骗就代表你无所事事”，并代表全家向中国人民道歉。",
         "badge": "热搜",
-        "signal": "7,809,756 热度"
+        "signal": "7,809,404 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49943637",
+        "id": "hn-49953495",
         "category": "dev",
-        "title": "Infidel goes wild",
-        "url": "https://blog.zarfhome.com/2026/10/infidel-goes-wild",
+        "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+        "url": "https://github.com/Niko1221/Strata",
         "source": "Hacker News",
-        "publishedAt": "2026-10-03T12:19:40.000Z",
+        "publishedAt": "2026-10-04T12:51:53.000Z",
         "badge": "HN",
-        "signal": "65 分 · 9 评论"
+        "signal": "741 分 · 333 评论"
       },
       {
-        "id": "cn-item-1cc633dec7013f16",
+        "id": "cn-item-f6c8623275c775c1",
         "category": "cn",
-        "title": "“心价比”崛起：情绪消费成国庆消费新主角",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-04/10707972.shtml",
+        "title": "国庆档票房破8亿！“电影+”新活力激发消费新增量",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-05/10708127.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-04T13:08:35.000Z",
-        "summary": "原标题：开局之年看中国·潮涌荆楚丨“心价比”崛起：情绪消费成国庆消费新主角",
+        "publishedAt": "2026-10-05T06:29:39.000Z",
+        "summary": "据网络平台数据",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246432",
+        "id": "v2ex-1246486",
         "category": "dev",
-        "title": "[开源推广] Oh-My-CPA: 更现代的 CPA 管理面板,原生移动端 / MCP Agent / 完整 CPAMC 体验",
-        "url": "https://www.v2ex.com/t/1246432",
+        "title": "在 AI 驱动下开发的项目，如果后续由人来介入开发阻力很大 算不算对项目上的失控",
+        "url": "https://www.v2ex.com/t/1246486",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-04T15:52:27.000Z",
-        "summary": "仓库地址: https://github.com/WizisCool/oh-my-cpa Oh-My-CPA 这个项目从 8 月 31 日创建仓库至今已连续开发一个多月，消耗 200+ 亿 Token 。 起初只是为了让自己的 CPA 用着舒服一些，后来有一些佬友感兴趣，于是决定继续优化后开源 感谢开发期间社区的意见和 Bug 报告 :pray: 仓库的 PR 在我一人开发的情况下已经累计合并了 124 个 PR ，总 Commit 在压缩合并的情况下也已经到达了 458 …",
+        "publishedAt": "2026-10-05T05:22:50.000Z",
+        "summary": "现在 Vibe Coding 开发已经算是主流了，基本是人人都是使用 AI 来辅助开发。逐渐发现一个问题，组里的同事在 AI 辅助下开发速度提升了。 但是对整个项目代码理解的程度下降的比较严重。 甚至出现了脱离 AI 无法定位问题，不知道自己负责开发的组件,为什么要这样处理,输入的是什么，输出的是什么 这样算不算是 对项目的一种失控",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-e4b7eeebb780e35a",
+        "id": "cn-it-a5ceacefba788f97",
         "category": "cn",
-        "title": "古尔曼：配备 OLED 触控屏的全新苹果 MacBook Pro 将大幅减重",
-        "url": "https://www.ithome.com/1/009/750.htm",
+        "title": "日本大和证券内部数据外泄：官方通报称“外部服务提供商遭黑客入侵”，约 22 万条信息泄露",
+        "url": "https://www.ithome.com/1/009/817.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T00:39:58.000Z",
-        "summary": "IT之家 10 月 5 日消息，苹果即将对 MacBook Pro 进行一次重大重塑，新机大约会在一个月之内正式亮相。这将是首款支持触控屏的 MacBook，同时也是首次采用叠层 OLED（Tandem OLED）屏幕的机型。除此之外，据彭博社的马克 · 古尔曼（Mark Gurman）在最新一期《Power On》中透露，新款 MacBook 相比上一代机型， 重量还将会出现“显著”下降。 古尔曼再次提到，新款 MacBook Pro 预计“在下个月之前”发布，也就是说新…",
+        "publishedAt": "2026-10-05T06:56:24.000Z",
+        "summary": "IT之家 10 月 5 日消息，据外媒 itmedia 报道，日本大和证券于今天通报公司内部数据遭外泄，涉及约 22 万条信息，其中包括约 11 万名客户的姓名、电子邮箱地址、证券账户号码、咨询记录等内容。 大和证券表示，本次安全事件系公司外部服务提供商“斯卡拉通信”的服务器于 10 月 2 日 20 时 33 分左右至 10 月 3 日 8 时 1 分左右遭黑客非法访问，该服务器保存了已经受理的客户咨询记录，其中包含大和证券客户的信息。目前，公司已经采取紧急安全措施。 大…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49957116",
+        "id": "hn-49957812",
         "category": "dev",
-        "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
-        "url": "https://github.com/omlahore/RemoveMacAI",
+        "title": "In the wake of closure, a digital archive of animated materials appears online",
+        "url": "https://filmstories.co.uk/news/tippett-studios-in-the-wake-of-its-closure-a-digital-archive-of-animated-materials-appears-online/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-04T19:42:25.000Z",
+        "publishedAt": "2026-10-04T21:01:28.000Z",
         "badge": "HN",
-        "signal": "327 分 · 207 评论"
+        "signal": "109 分 · 11 评论"
       },
       {
-        "id": "cn-baidu-c2063e2063c36e0b",
+        "id": "cn-baidu-46cf33c906d99b62",
         "category": "cn",
-        "title": "官方通报“阿尔山景区200一晚酒店”",
-        "url": "https://www.baidu.com/s?wd=%E5%AE%98%E6%96%B9%E9%80%9A%E6%8A%A5%E2%80%9C%E9%98%BF%E5%B0%94%E5%B1%B1%E6%99%AF%E5%8C%BA200%E4%B8%80%E6%99%9A%E9%85%92%E5%BA%97%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "年轻人十一出片全靠15元次抛衣",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%B4%E8%BD%BB%E4%BA%BA%E5%8D%81%E4%B8%80%E5%87%BA%E7%89%87%E5%85%A8%E9%9D%A015%E5%85%83%E6%AC%A1%E6%8A%9B%E8%A1%A3&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月4日，阿尔山市市场监督管理局通报“二百一晚大酒店”视频核查情况。经查，该地为居民自有住宅，当事人未办执照私自提供住宿，构成无照经营，已被责令停业。通报称，入住系随团司机因无房被推荐入住，协商100元/人/晚并提供免费餐食，未发现价格欺诈。",
+        "summary": "今年十一期间，全国景点流行起十几元的“次抛衣”。年轻人低价购买仅供拍照的衣服，以最小成本换取旅行出片的新鲜感。",
         "badge": "热搜",
-        "signal": "7,711,937 热度"
+        "signal": "7,711,987 热度"
       },
       {
         "id": "github-advisory-ghsa-x8gv-g2g3-65fj",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246416",
+        "id": "v2ex-1246485",
         "category": "dev",
-        "title": "为什么我的 codex 只能认 cc-switch 里边的第一个模型呢？",
-        "url": "https://www.v2ex.com/t/1246416",
+        "title": "Gemini Flash 和 Pro 将转入付费方案",
+        "url": "https://www.v2ex.com/t/1246485",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-04T12:48:31.000Z",
-        "summary": "rt ，不管是 mac+CCS 最新版还是 vps+CCS cli 版，里边的 codex 只认同一个运营商底下的第一个模型，然后/model 命令里边还都是自带的模型。 claudecode 就没问题。 请问大佬们有碰到的吗？如何解决呢？",
+        "publishedAt": "2026-10-05T05:15:19.000Z",
+        "summary": "自 2026 年 10 月起，使用个人账号访问 Gemini 应用时，模型可用情况将发生变更。 对于未订阅 AI 方案的用户，这些变更将于 10 月 9 日生效。如果你订阅了 AI Plus ，应该会收到一封电子邮件，说明这些变化何时对你生效。 这些变更生效后的模型可用情况： Google AI 方案 Flash-Lite Flash Pro 未订阅方案 ✓ ✗ ✗ AI Plus ✓ ✓ ✗ AI Pro ✓ ✓ ✓ AI Ultra ✓ ✓ ✓ 参考链接: https:…",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-item-92aef78c64c9266c",
+        "id": "cn-item-e21f0b118b6efb62",
         "category": "cn",
-        "title": "年轻人热衷DIY体验 假期“指尖经济”升温",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-04/10707958.shtml",
+        "title": "青海拉面出海四十年：从民间谋生到官方推进",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708112.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-04T12:53:20.000Z",
-        "summary": "中新网杭州10月4日电(蓝伊旎)“花一整天沉浸式创作，既有仪式感又很放松。”国庆假期，手作爱好者林清婕时常“泡”在拼豆店里。手起手落间，不同颜色的豆粒按图样整齐排列，熨烫定型后，她喜欢的动漫角色便跃然“纸”上。",
+        "publishedAt": "2026-10-05T06:08:30.000Z",
+        "summary": "中新社西宁10月5日电 题：青海拉面出海四十年：从民间谋生到官方推进",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49957812",
+        "id": "hn-49959654",
         "category": "dev",
-        "title": "In the wake of closure, a digital archive of animated materials appears online",
-        "url": "https://filmstories.co.uk/news/tippett-studios-in-the-wake-of-its-closure-a-digital-archive-of-animated-materials-appears-online/",
+        "title": "A 40ms Go garbage collector pause caused by swap",
+        "url": "https://frn.sh/go-gc/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-04T21:01:28.000Z",
+        "publishedAt": "2026-10-05T01:11:56.000Z",
         "badge": "HN",
-        "signal": "12 分 · 2 评论"
+        "signal": "64 分 · 28 评论"
       },
       {
-        "id": "cn-it-3d1674d161bc3795",
+        "id": "cn-it-c3176c2f96742f1d",
         "category": "cn",
-        "title": "2026 诺贝尔奖即将揭晓，9 位华人科学家成热门候选人",
-        "url": "https://www.ithome.com/1/009/748.htm",
+        "title": "HMD Slate Tab 5G 平板完整规格曝光：10.6 英寸 2K 90Hz 面板、骁龙 7s Gen 2 + 8G + 128G",
+        "url": "https://www.ithome.com/1/009/816.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T00:27:39.000Z",
-        "summary": "IT之家 10 月 5 日消息，2026 年诺贝尔奖各奖项揭晓活动将于 10 月 5 日至 12 日依次进行，其中与科技相关的生理学或医学奖（10 月 5 日）、物理学奖（10 月 6 日）、化学奖（10 月 7 日）即将公布，目前有 9 位华人科学家被视作相关奖项的热门候选人，其中薛其坤、卢煜明、陈志坚等人呼声最高。 据IT之家了解，薛其坤是南方科技大学校长，因 2012 年率团队首次实验观测到量子反常霍尔效应而入选。他于 9 月刚获得科睿唯安引文桂冠奖，该奖项被视为诺奖…",
+        "publishedAt": "2026-10-05T06:47:16.000Z",
+        "summary": "IT之家 10 月 5 日消息，外媒 nokianews 现已曝光了 HMD Slate Tab 5G 平板电脑完整规格信息。 该机使用 Fabula 设计，灵感来自于诺基亚 Lumia 2520 平板。正面配备一块 10.6 英寸 2000x1200 分辨率 90Hz IPS LCD 面板，外覆大猩猩玻璃 3，匹配 8Mp 自拍摄像头和 13Mp 后置摄像头。 该机搭载高通骁龙 7s Gen 2 处理器，匹配 8GB RAM 和 128GB UFS 2.2 存储空间，内置…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246398",
+        "id": "v2ex-1246444",
         "category": "dev",
-        "title": "产品的前端被抄了，又无语又想笑。",
-        "url": "https://www.v2ex.com/t/1246398",
+        "title": "ai 时代怎么感觉招 js/ts 全栈还是那么少？",
+        "url": "https://www.v2ex.com/t/1246444",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-04T09:42:08.000Z",
-        "summary": "我第一次做产品，打磨了 6 个月才推出，结果推出 2 个月后被电诈站抄了我们的前端页面。是直接拿我们的前端 nuxt 构建档案改，连混淆后的 *.js 和 *.css 档名都一样，联系方式也不换一下。 你说你抄袭产品功能做个好玩的竞品出来就算了，只抄前端是怎样？还在抄袭的页面上放别的产品的宣传视频（直连偷别的产品的 cdn ），联系方式又不改，害别人投诉到我们这来。 虽然被抄袭也算是另类的肯定，但这种买椟还珠式抄袭我之前真没想像过，现在既无语又想笑。",
+        "publishedAt": "2026-10-05T00:17:16.000Z",
+        "summary": "现在网上各种 ts ai 全干， 之前感觉 ai 时代 很多新公司 新业务搞全栈不应该首选 ts 了，昨晚看本地二线城市招聘信息 全是各种 java 全栈，php ，python 全栈都比 ts 多，烦了几个一线城市，感觉好像也这样，但是从网上一看 全是 ts 全栈，是受外网影响吗，国外好像是 ts 全栈比较流行吧？",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "17 回复"
       },
       {
-        "id": "cn-baidu-d03a34b10f19169b",
+        "id": "cn-baidu-0f5fa9918943b477",
         "category": "cn",
-        "title": "全国客流持续高位运行",
-        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E5%9B%BD%E5%AE%A2%E6%B5%81%E6%8C%81%E7%BB%AD%E9%AB%98%E4%BD%8D%E8%BF%90%E8%A1%8C&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "六张“超级大网” 如何编织",
+        "url": "https://www.baidu.com/s?wd=%E5%85%AD%E5%BC%A0%E2%80%9C%E8%B6%85%E7%BA%A7%E5%A4%A7%E7%BD%91%E2%80%9D+%E5%A6%82%E4%BD%95%E7%BC%96%E7%BB%87&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "国庆假期第四天，全国交通客流继续保持高位运行。铁路、公路、水路等部门及时增加运力、优化服务，全力保障旅客安全顺畅出行。",
+        "summary": "提到中国基建，很多人脑海里浮现的是高铁、大桥、超级港口。但其实，中国基建的“打开方式”早就升级了。当前，国家正在编织一套超级新基建体系——“六张网”。",
         "badge": "热搜",
-        "signal": "7,618,668 热度"
+        "signal": "7,618,932 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76504",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49958569",
+        "id": "hn-49948300",
         "category": "dev",
-        "title": "Self-hosted HTTP tunnels with SSH and Nginx",
-        "url": "https://vincent.bernat.ch/en/blog/2026-http-over-ssh",
+        "title": "We ported the original Doom to SQL",
+        "url": "https://cedardb.com/blog/sqldoom/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-04T22:25:10.000Z",
+        "publishedAt": "2026-10-03T22:14:00.000Z",
         "badge": "HN",
-        "signal": "42 分 · 11 评论"
+        "signal": "34 分 · 4 评论"
       },
       {
-        "id": "cn-item-61b9a4ad35125627",
+        "id": "cn-item-abf168e7b8c850de",
         "category": "cn",
-        "title": "长三角多地官宣入秋 冷空气携降温大风登场",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-04/10707923.shtml",
+        "title": "机器人在北京上“幼儿园”",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708108.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-04T12:47:00.000Z",
-        "summary": "中新社南京10月4日电 (记者 徐珊珊)一股冷空气4日自北向南影响长三角地区，带来降温、大风和降雨。随着气温持续走低，沪苏浙皖多地正式迈入秋天门槛，浙江杭州、宁波等地相继官宣入秋，江苏也有望在近期全面入秋。",
+        "publishedAt": "2026-10-05T06:07:32.000Z",
+        "summary": "中新社北京10月5日电 (记者 陈杭)机器人在彩色跑道上奔跑、翻过低矮障碍物，被按电子皮肤时脱口而出“好疼呀”……位于北京首钢园的“机器人幼儿园”(“幼儿园”)内，十余台不同形态的机器人正开展学习之旅，不背标准答案，全靠试错成长。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246372",
+        "id": "v2ex-1246432",
         "category": "dev",
-        "title": "已撤回",
-        "url": "https://www.v2ex.com/t/1246372",
+        "title": "[开源推广] Oh-My-CPA: 更现代的 CPA 管理面板,原生移动端 / MCP Agent / 完整 CPAMC 体验",
+        "url": "https://www.v2ex.com/t/1246432",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-04T07:17:48.000Z",
-        "summary": "已撤回。",
+        "publishedAt": "2026-10-04T15:52:27.000Z",
+        "summary": "仓库地址: https://github.com/WizisCool/oh-my-cpa Oh-My-CPA 这个项目从 8 月 31 日创建仓库至今已连续开发一个多月，消耗 200+ 亿 Token 。 起初只是为了让自己的 CPA 用着舒服一些，后来有一些佬友感兴趣，于是决定继续优化后开源 感谢开发期间社区的意见和 Bug 报告 :pray: 仓库的 PR 在我一人开发的情况下已经累计合并了 124 个 PR ，总 Commit 在压缩合并的情况下也已经到达了 458 …",
         "badge": "程序员",
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-ad047b3d1537541a",
+        "id": "cn-it-272d136771fb42cd",
         "category": "cn",
-        "title": "宝马中国 2027 年产品规划路线图曝光：iX1 长轴距版与 3 系长轴距版有望同期亮相",
-        "url": "https://www.ithome.com/1/009/747.htm",
+        "title": "消息某厂商 2 亿像素三摄旗舰机被砍，预计为小米 18 Ultra",
+        "url": "https://www.ithome.com/1/009/815.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T00:24:57.000Z",
-        "summary": "IT之家 10 月 5 日消息，宝马在 2026 资本市场日活动的相关文件中披露了一张面向中国市场的产品路线图，其中展示了数款身披伪装车衣、计划于 2027 年底前登陆中国市场的神秘车型。 这张路线图并未标注具体车型名称，但结合宝马当前的产品规划，BMWBlog 对其中的蒙布车型给出了若干推测。 已明确出现在路线图中的车型包括：iX3 长轴距版将于 2026 年第四季度推出；2027 年第一季度，i3 长轴距版、新款 7 系及纯电版 i7、全新 X5 以及纯电版 iX5 将…",
+        "publishedAt": "2026-10-05T06:41:29.000Z",
+        "summary": "IT之家 10 月 5 日消息，博主 @数码闲聊站 发文，曝光了一款未能量产的旗舰手机，该机计划采用 1mm 级四等边直屏、配备三颗 2 亿像素摄像头（包括 1/1.12 英寸 LOFIC 主摄、1/1.56 英寸超广角，以及 1/1.28 英寸 LOFIC 连续光学变焦潜望长焦），搭载高端旗舰芯片，跑分超过 500 万。还规划了多光谱镜头、磁吸外接镜头、0916 马达以及对称式双扬声器等配置。 但遗憾的是，该机最终因为“内部认为过高的定价可能影响市场表现”被砍。结合相应配…",
         "badge": "IT之家"
       },
       {
@@ -446,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49957068",
+        "id": "hn-49943637",
         "category": "dev",
-        "title": "Improper redaction reveals Google Data Center water and electricity usage",
-        "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
+        "title": "Infidel goes wild",
+        "url": "https://blog.zarfhome.com/2026/10/infidel-goes-wild",
         "source": "Hacker News",
-        "publishedAt": "2026-10-04T19:37:05.000Z",
+        "publishedAt": "2026-10-03T12:19:40.000Z",
         "badge": "HN",
-        "signal": "228 分 · 332 评论"
+        "signal": "122 分 · 19 评论"
       },
       {
-        "id": "cn-baidu-16d38f47a74c68df",
+        "id": "cn-baidu-49357d08e569d714",
         "category": "cn",
-        "title": "零跑汽车下线蔡康永全部内容",
-        "url": "https://www.baidu.com/s?wd=%E9%9B%B6%E8%B7%91%E6%B1%BD%E8%BD%A6%E4%B8%8B%E7%BA%BF%E8%94%A1%E5%BA%B7%E6%B0%B8%E5%85%A8%E9%83%A8%E5%86%85%E5%AE%B9&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中方10分钟收网缅北四大家族重要成员",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E6%96%B910%E5%88%86%E9%92%9F%E6%94%B6%E7%BD%91%E7%BC%85%E5%8C%97%E5%9B%9B%E5%A4%A7%E5%AE%B6%E6%97%8F%E9%87%8D%E8%A6%81%E6%88%90%E5%91%98&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月4日，“蔡康永现身台独分子竞选现场”话题登上热搜。零跑汽车发布声明，表明坚持一个中国原则，反对“台独”分裂言行。声明称蔡康永只是过往合作艺人，并非品牌代言人，现已下架其相关全部内容并保留追责权利，后续会强化合作方背景审核。",
+        "summary": "10月5日至7日，纪录片《缅北电诈覆灭纪实》在央视首播，展现我国公安机关铲除缅北“四大家族”等犯罪集团的历程。此前，借“四大家族”重要成员魏青涛、刘正琦等人进入我国境内之机，中国警方特别行动小组果断收网，整个过程仅持续10分钟。",
         "badge": "热搜",
-        "signal": "7,521,484 热度"
+        "signal": "7,523,554 热度"
       },
       {
         "id": "github-advisory-ghsa-cjcg-cxmh-9wcr",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246364",
+        "id": "v2ex-1246416",
         "category": "dev",
-        "title": "gemini4 还不下放，导致我下一步从 openai 叛逃都不知道该去 gemini 还是 grok",
-        "url": "https://www.v2ex.com/t/1246364",
+        "title": "为什么我的 codex 只能认 cc-switch 里边的第一个模型呢？",
+        "url": "https://www.v2ex.com/t/1246416",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-04T05:51:28.000Z",
-        "summary": "怒了，哪有这样的，发新模型不给用，还国际一流大厂呢🐶",
+        "publishedAt": "2026-10-04T12:48:31.000Z",
+        "summary": "rt ，不管是 mac+CCS 最新版还是 vps+CCS cli 版，里边的 codex 只认同一个运营商底下的第一个模型，然后/model 命令里边还都是自带的模型。 claudecode 就没问题。 请问大佬们有碰到的吗？如何解决呢？",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "7 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/tester-army/e2e",
         "description": "Next generation e2e testing framework for web and mobile apps.",
         "language": "TypeScript",
-        "stars": 3114,
+        "stars": 3497,
         "starsToday": 345
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design language that makes your AI harness better at design.",
         "language": "JavaScript",
-        "stars": 76298,
+        "stars": 76532,
         "starsToday": 1171
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/coreyhaines31/marketingskills",
         "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "language": "JavaScript",
-        "stars": 53074,
+        "stars": 53201,
         "starsToday": 197
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 154885,
+        "stars": 155225,
         "starsToday": 1894
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/earthtojake/text-to-cad",
         "description": "Give your agent CAD superpowers.",
         "language": "Python",
-        "stars": 16864,
+        "stars": 16997,
         "starsToday": 83
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 90886,
+        "stars": 91187,
         "starsToday": 980
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/getsentry/sentry",
         "description": "Developer-first error tracking and performance monitoring",
         "language": "Python",
-        "stars": 45383,
+        "stars": 45438,
         "starsToday": 152
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/calesthio/OpenMontage",
         "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "language": "Python",
-        "stars": 63225,
+        "stars": 63387,
         "starsToday": 245
       },
       {
@@ -590,7 +590,7 @@
         "name": "pingdotgg/t3code",
         "url": "https://github.com/pingdotgg/t3code",
         "language": "TypeScript",
-        "stars": 25170,
+        "stars": 25302,
         "starsToday": 490
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/caddyserver/caddy",
         "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
         "language": "Go",
-        "stars": 76565,
+        "stars": 76690,
         "starsToday": 24
       }
     ],
-    "updatedAt": "2026-10-05T00:56:23.675Z"
+    "updatedAt": "2026-10-05T07:03:59.418Z"
   }
 }
