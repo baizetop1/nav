@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-05T16:52:18.901Z",
+  "generatedAt": "2026-10-05T22:38:13.144Z",
   "intelligence": {
-    "updatedAt": "2026-10-05T16:52:18.901Z",
+    "updatedAt": "2026-10-05T22:38:13.144Z",
     "items": [
       {
         "id": "cn-item-6b60ed2bd4011b60",
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49965894",
+        "id": "hn-49969183",
         "category": "dev",
-        "title": "Borland Turbo Basic",
-        "url": "https://dosdays.co.uk/topics/Software/borland_turbo_basic.php",
+        "title": "Beam: Reflection's 501B open-weight model",
+        "url": "https://reflection.ai/blog/introducing-beam",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T15:11:31.000Z",
+        "publishedAt": "2026-10-05T19:16:35.000Z",
         "badge": "HN",
-        "signal": "61 分 · 26 评论"
+        "signal": "222 分 · 62 评论"
       },
       {
-        "id": "cn-it-a11047148af77d99",
+        "id": "cn-it-d0ff1f7e32b13a88",
         "category": "cn",
-        "title": "纳指盘中再创历史新高：SpaceX 涨逾 5%，英伟达涨超 1% 再度逼近历史新高",
-        "url": "https://www.ithome.com/1/009/904.htm",
+        "title": "苹果 watchOS 27.2 开发者预览版 Beta 3 发布",
+        "url": "https://www.ithome.com/1/009/908.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T16:08:34.000Z",
-        "summary": "IT之家 10 月 6 日消息，美股纳斯达克指数周一（当地时间 10 月 5 日） 创下盘中历史新高 ，多数大型股和成长股上涨。 IT之家注意到， 英伟达盘中最高上涨 1.65%，再度逼近历史新高 。Meta、微软和特斯拉股价均上涨超过 1%。 SpaceX 盘中股价最高涨超 5% ，是近三个月来的历史新高。",
+        "publishedAt": "2026-10-05T18:38:15.000Z",
+        "summary": "【 点此直达升级教程 】 IT之家 10 月 6 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.2 开发者预览版 Beta 3 更新（内部版本号：24S5101f），本次更新距离上次发布 Beta/RC 间隔 14 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-x4q3-gcj3-m6cf",
+        "id": "github-advisory-ghsa-x965-fc75-jpqh",
         "category": "security",
-        "title": "gitea-runner: workflow container.options passes host namespaces and capability flags to job container when privileged mode is disabled",
-        "url": "https://github.com/advisories/GHSA-x4q3-gcj3-m6cf",
+        "title": "vm2 sandbox escape to host RCE via revisited host-wrapped AggregateError bypassing Error sanitization cycle short-circuit",
+        "url": "https://github.com/advisories/GHSA-x965-fc75-jpqh",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T23:18:12.000Z",
-        "summary": "### Summary act_runner appends workflow-controlled `jobs. .container.options` directly to the Docker HostConfig for the job container. When runner privileged mode is disabled, only `Privileged` is forced false. Host namespace flags, capabi…",
-        "badge": "CVE-2026-73802",
-        "signal": "CRITICAL · CVSS 9.9"
+        "publishedAt": "2026-10-05T22:38:04.000Z",
+        "summary": "## Summary vm2 `3.11.6` (this fork's latest release) contains an incomplete-fix bypass of the Error.cause host-reference sanitization added in GHSA-m283-3h24-438v (commit `7e3faaf`). Sandbox code that catches a host-wrapped `AggregateError…",
+        "badge": "CVE-2026-92934",
+        "signal": "CRITICAL · CVSS 9.0"
       },
       {
         "id": "ai-google-deepmind-ce56aa83d0064ef1",
@@ -87,13 +87,14 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-toutiao-7692875083153408036",
+        "id": "cn-baidu-dfc9a9052389e177",
         "category": "cn",
-        "title": "第一批返程的“大聪明”又失算了",
-        "url": "https://www.toutiao.com/trending/7692875083153408036/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227692875083153408036%22%2C%22hot_board_impr_id%22%3A%22202610060052182FF28603F7B3F506B7F6%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E7%AC%AC%E4%B8%80%E6%89%B9%E8%BF%94%E7%A8%8B%E7%9A%84%E2%80%9C%E5%A4%A7%E8%81%AA%E6%98%8E%E2%80%9D%E5%8F%88%E5%A4%B1%E7%AE%97%E4%BA%86%22%7D&rank=&style_id=40132&topic_id=7692875083153408036",
-        "source": "今日头条",
-        "badge": "热榜",
-        "signal": "32,546,643 热度"
+        "title": "放假期间 这7种照片建议别发朋友圈",
+        "url": "https://www.baidu.com/s?wd=%E6%94%BE%E5%81%87%E6%9C%9F%E9%97%B4+%E8%BF%997%E7%A7%8D%E7%85%A7%E7%89%87%E5%BB%BA%E8%AE%AE%E5%88%AB%E5%8F%91%E6%9C%8B%E5%8F%8B%E5%9C%88&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "国庆假期，央视新闻综合公安部网安局提示，过度分享易致隐私泄露，建议勿在朋友圈发布7类照片：含位置信息照片、证件、交通凭证、银行卡、快递开箱图、老幼照片及家门钥匙。此外，建议公众关闭微信相关隐私设置以守护信息安全。",
+        "badge": "热搜",
+        "signal": "7,808,121 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -116,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49963171",
+        "id": "hn-49970871",
         "category": "dev",
-        "title": "Web Search API",
-        "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+        "title": "Dust: Pretraining Transformers Without Backpropagation",
+        "url": "https://qlabs.sh/research/dust",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T10:47:06.000Z",
+        "publishedAt": "2026-10-05T21:15:07.000Z",
         "badge": "HN",
-        "signal": "250 分 · 124 评论"
+        "signal": "47 分 · 3 评论"
       },
       {
         "id": "cn-item-1ca0f581c90692bc",
@@ -136,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-gjj5-9665-rwrc",
+        "id": "github-advisory-ghsa-c8x8-7fp4-3x9w",
         "category": "security",
-        "title": "probe-image-size: Quadratic-time Denial of Service in the SVG Parser",
-        "url": "https://github.com/advisories/GHSA-gjj5-9665-rwrc",
+        "title": "ProseMirror has a XSS vulnerability in prosemirror-view's paste handling",
+        "url": "https://github.com/advisories/GHSA-c8x8-7fp4-3x9w",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T23:18:02.000Z",
-        "summary": "## Overview `probe-image-size` scans the SVG header with a searching regular expression, `/ ]*>/`. On input that contains many ` `, the engine restarts the `[^>]*` scan at every ` ' probe.sync(Buffer.from('<a'.repeat(100000), 'latin1')) ``…",
-        "badge": "CVE-2026-104861",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-05T22:36:06.000Z",
+        "summary": "### Impact When a user pastes attacker-provided HTML into a ProseMirror editor component, this can cause attacker-controlled JavaScript code to run in the browser window containing the editor. ### Patches Version 1.42.3 adds validation tha…",
+        "badge": "CVE-2026-104847",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-2d8e70fb45cef747",
@@ -165,16 +166,16 @@
         "publishedAt": "2026-10-05T10:20:22.000Z",
         "summary": "国庆又被封了一个 100 美金的号, 好几个大额的号了, 大部分都 Fully refunded, 但我的目的是正常使用, 而不是贪小便宜. 这几天开始用 100 美金的 codex, 这货比货真的不能比, codex 真的是白给你都不要的那种. 我研究了一轮,其实也尝试过好多方法, 比如在其他国家家里使用家庭宽带, 托管电脑远程连过去, 但最终逃不过. 发现只能通过注册美国公司的方式来进行, 这个是最稳定的, 和 claude 公司销售直接联系后不会轻易被封号, 还可以使…",
         "badge": "程序员",
-        "signal": "32 回复"
+        "signal": "41 回复"
       },
       {
-        "id": "cn-it-ca362f0c200c3531",
+        "id": "cn-it-7497540f2cc06278",
         "category": "cn",
-        "title": "OpenAI 将在欧盟为 ChatGPT 和 Codex 文本输出添加隐形水印",
-        "url": "https://www.ithome.com/1/009/903.htm",
+        "title": "苹果 visionOS 27.2 开发者预览版 Beta 3 发布",
+        "url": "https://www.ithome.com/1/009/907.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T15:58:02.000Z",
-        "summary": "IT之家 10 月 5 日消息，OpenAI 今日宣布，为配合《欧盟人工智能法案》的内容透明要求，未来几周将在欧盟地区符合条件的 ChatGPT 和 Codex 文本输出中加入机器可识别的隐形水印。 据介绍，文本水印技术名为 textGrain（文本粒水印） ，会在模型选词过程中嵌入不可见的统计信号。检测器通过识别该信号，判断一段文本是否带有 OpenAI 水印。 IT之家注意到，OpenAI 下一步将在欧盟推广文本水印。未来几周，团队将仅在欧盟所有计划中向符合条件的 Ch…",
+        "publishedAt": "2026-10-05T18:38:15.000Z",
+        "summary": "IT之家 10 月 6 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.2 开发者预览版 Beta 3 更新（内部版本号：24N5103f），本次更新距离上次发布 Beta/RC 间隔 14 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-09-29：vision…",
         "badge": "IT之家"
       },
       {
@@ -199,34 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49965308",
+        "id": "hn-49971230",
         "category": "dev",
-        "title": "Making a GTK application in Haskell, part 1",
-        "url": "https://floreal.tech/blog/2026/making-a-gtk-app-in-haskell-part-1/",
+        "title": "Find the flattest route between any two points in SF",
+        "url": "https://flattensf.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T14:23:47.000Z",
+        "publishedAt": "2026-10-05T21:40:50.000Z",
         "badge": "HN",
-        "signal": "43 分 · 2 评论"
+        "signal": "31 分 · 7 评论"
       },
       {
-        "id": "cn-toutiao-7692982754535358506",
+        "id": "cn-baidu-387114c052859e72",
         "category": "cn",
-        "title": "被执行死刑的巫鸿明、白应苍出镜",
-        "url": "https://www.toutiao.com/trending/7692982754535358506/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2216%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227692982754535358506%22%2C%22hot_board_impr_id%22%3A%22202610060052182FF28603F7B3F506B7F6%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E8%A2%AB%E6%89%A7%E8%A1%8C%E6%AD%BB%E5%88%91%E7%9A%84%E5%B7%AB%E9%B8%BF%E6%98%8E%E3%80%81%E7%99%BD%E5%BA%94%E8%8B%8D%E5%87%BA%E9%95%9C%22%7D&rank=&style_id=40132&topic_id=7692982754535358506",
-        "source": "今日头条",
-        "badge": "热榜",
-        "signal": "29,449,420 热度"
+        "title": "中国收废品的大爷可能已经赚翻了",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%94%B6%E5%BA%9F%E5%93%81%E7%9A%84%E5%A4%A7%E7%88%B7%E5%8F%AF%E8%83%BD%E5%B7%B2%E7%BB%8F%E8%B5%9A%E7%BF%BB%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "受中东局势紧张导致全球铝等供应链承压影响，中国废弃资源综合利用业利润暴增，废旧金属回收价格明显抬升。此前，地缘冲突波及大宗商品供应，而中国上游资源依赖进口，废品回收成为保障资源安全的关键。",
+        "badge": "热搜",
+        "signal": "7,713,197 热度"
       },
       {
-        "id": "github-advisory-ghsa-x8gv-g2g3-65fj",
+        "id": "github-advisory-ghsa-r4fx-v8hh-22mv",
         "category": "security",
-        "title": "SiYuan Agent Tools SSRF via DNS-Rebinding TOCTOU (Bypass of CheckHostSSRF)",
-        "url": "https://github.com/advisories/GHSA-x8gv-g2g3-65fj",
+        "title": "vm2: timeout Option Bypass via FinalizationRegistry Cleanup Callback (Unbounded Host Event-Loop Block)",
+        "url": "https://github.com/advisories/GHSA-r4fx-v8hh-22mv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T23:17:16.000Z",
-        "summary": "# Security Advisory — SiYuan Agent Tools SSRF via DNS-Rebinding TOCTOU (Bypass of `CheckHostSSRF`) | Field | Value | |---|---| | **Disclosed by** | joysinleung (`joysinleung@gmail.com`) | | **Report date** | 2026-08-13 | | **Product** | Si…",
-        "badge": "GHSA-X8GV-G2G3-65FJ",
-        "signal": "HIGH · CVSS 8.2"
+        "publishedAt": "2026-10-05T22:35:04.000Z",
+        "summary": "### Vulnerability Summary vm2's `VM({ timeout })` option is documented and relied upon as the mechanism that bounds how long sandboxed code may execute. In the current implementation, the timeout only wraps the single synchronous call to `…",
+        "badge": "CVE-2026-92942",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-e81b1dea7ce0fb42",
@@ -280,35 +282,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49962012",
+        "id": "hn-49970667",
         "category": "dev",
-        "title": "Denmark Data Breach Exposes 8.8M People's Personal Data",
-        "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger",
+        "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+        "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T08:09:36.000Z",
+        "publishedAt": "2026-10-05T21:00:21.000Z",
         "badge": "HN",
-        "signal": "353 分 · 257 评论"
+        "signal": "123 分 · 106 评论"
       },
       {
-        "id": "cn-it-cb17a46e3ca401ea",
+        "id": "cn-it-70715dd38f99e76c",
         "category": "cn",
-        "title": "2026《英雄联盟》S16 全球总决赛 10 月 16 日开赛，11 月 15 日冠亚军决赛",
-        "url": "https://www.ithome.com/1/009/902.htm",
+        "title": "苹果 macOS 27.2 开发者预览版 Beta 3 发布",
+        "url": "https://www.ithome.com/1/009/906.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T15:23:13.000Z",
-        "summary": "IT之家 10 月 5 日消息，今日，《英雄联盟》发布 2026 年全球总决赛（S16）观赛指南。全球总决赛由三个阶段组成：分别是入围赛阶段（10 月 16 日至 19 日）、瑞士轮赛阶段（10 月 24 日至 11 月 1 日）和淘汰赛阶段（11 月 4 日至 15 日），以上日期均为北京时间。 入围赛阶段（Bo5） - 洛杉矶 所有比赛将于北京时间凌晨 2 点开始，北京时间比赛日期为： 10 月 16 日 10 月 17 日 10 月 18 日 10 月 19 日 瑞士…",
+        "publishedAt": "2026-10-05T18:38:14.000Z",
+        "summary": "IT之家 10 月 6 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.2 开发者预览版 Beta 3 更新（内部版本号：26B5101f），本次更新距离上次发布 Beta/RC 间隔 14 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 ，…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-x8mw-p69m-v3mx",
+        "id": "github-advisory-ghsa-j3hm-6rg5-mchv",
         "category": "security",
-        "title": "@fastify/busboy vulnerable to Denial of Service via prototype-named multipart part header",
-        "url": "https://github.com/advisories/GHSA-x8mw-p69m-v3mx",
+        "title": "vm2: NodeVM `require.external` without an explicit `require.root` grants unrestricted host filesystem access and full RCE",
+        "url": "https://github.com/advisories/GHSA-j3hm-6rg5-mchv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T23:16:36.000Z",
-        "summary": "### Impact Versions of `@fastify/busboy` from 1.0.0 and prior to 3.2.1 are vulnerable to a Denial of Service. The multipart header parser stores part-header names on a plain JavaScript object, so a part header named `__proto__` or `constru…",
-        "badge": "CVE-2026-19481",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-05T22:34:50.000Z",
+        "summary": "## Summary `NodeVM`'s `require.external` option lets sandboxed code `require()` local files and npm packages. When `require.external` is enabled and `require.root` is **not explicitly set to a path that excludes `node_modules`**, two defau…",
+        "badge": "CVE-2026-92946",
+        "signal": "CRITICAL · CVSS 10.0"
       },
       {
         "id": "ai-google-deepmind-34692efacd3b982a",
@@ -328,16 +330,17 @@
         "publishedAt": "2026-10-05T06:33:40.000Z",
         "summary": "介绍我在 Windows 上使用 WSL2 打造 AI 开发环境的一些思路，源码和 AI Agent 留在 Windows ，WSL2 只当编译测试沙盒，用调度脚本和约束规则串联工作流 https://blog.dejavu.moe/posts/windows-wsl2-ai-dev-environment/",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-toutiao-7693074676242759689",
+        "id": "cn-baidu-91ce7b926624c59a",
         "category": "cn",
-        "title": "假期过半，在照片中看见活力中国",
-        "url": "https://www.toutiao.com/article/7693112334583087659",
-        "source": "今日头条",
-        "badge": "热榜",
-        "signal": "26,646,937 热度"
+        "title": "国庆假期返程 这份安全提示请收好",
+        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E5%BA%86%E5%81%87%E6%9C%9F%E8%BF%94%E7%A8%8B+%E8%BF%99%E4%BB%BD%E5%AE%89%E5%85%A8%E6%8F%90%E7%A4%BA%E8%AF%B7%E6%94%B6%E5%A5%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "10月5日，交管部门预测今起进京方向将出现返程车流高峰，下午时段最为集中。交通运输部研判当日全国高速公路有36个路段易发拥堵，主要涉及江苏、安徽、浙江等省份。应急管理部发布安全提示，特别提醒开启“智驾”时双手不离盘、视线不离路，严禁分心睡觉。",
+        "badge": "热搜",
+        "signal": "7,619,293 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76504",
@@ -360,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49963385",
+        "id": "hn-49963171",
         "category": "dev",
-        "title": "Mold Linker Version 3.0.0 Release – Rewritten in Rust",
-        "url": "https://github.com/rui314/mold/releases/tag/v3.0.0",
+        "title": "Web Search API",
+        "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T11:17:18.000Z",
+        "publishedAt": "2026-10-05T10:47:06.000Z",
         "badge": "HN",
-        "signal": "93 分 · 31 评论"
+        "signal": "456 分 · 208 评论"
       },
       {
         "id": "cn-item-4a113f19f98028a2",
@@ -380,15 +383,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xjh9-v7x6-24jw",
+        "id": "github-advisory-ghsa-fcqc-726x-5wfc",
         "category": "security",
-        "title": "@fastify/busboy vulnerable to Denial of Service via oversized multipart boundary",
-        "url": "https://github.com/advisories/GHSA-xjh9-v7x6-24jw",
+        "title": "vm2: Sandboxed code can read and write host-realm memory via Node's shared Buffer pool",
+        "url": "https://github.com/advisories/GHSA-fcqc-726x-5wfc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T23:16:17.000Z",
-        "summary": "### Impact Versions of `@fastify/busboy` from 3.1.0 and prior to 3.2.1 are vulnerable to a Denial of Service. The vendored streaming multipart search stores its default skip distance in a `Uint8Array(256)`. A multipart boundary of exactly …",
-        "badge": "CVE-2026-19484",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-05T22:34:35.000Z",
+        "summary": "### Summary Sandboxed code is able to disclose host memory used by small allocations by `Buffer.from`, `Buffer.concat`. ### Details vm2 exposes `Buffer` object to sandboxed code by default. Small `Buffer` allocations (for example, Buffer.a…",
+        "badge": "CVE-2026-92947",
+        "signal": "CRITICAL · CVSS 10.0"
       },
       {
         "id": "ai-openai-882596cbc7639eb4",
@@ -412,13 +415,13 @@
         "signal": "10 回复"
       },
       {
-        "id": "cn-it-c45d7310818af7ab",
+        "id": "cn-it-34767db41ef2f8cb",
         "category": "cn",
-        "title": "OpenAI 将在 ChatGPT 中推出全新图片广告形式，不会影响生成结果",
-        "url": "https://www.ithome.com/1/009/901.htm",
+        "title": "苹果 iOS/iPadOS 27.2 开发者预览版 Beta 3 发布",
+        "url": "https://www.ithome.com/1/009/905.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T15:01:59.000Z",
-        "summary": "IT之家 10 月 5 日消息，OpenAI 今日宣布，将在 ChatGPT 中推出全新的图片广告形式，扩充广告效果衡量工具与合作生态，并研发新方案用于评估品牌适配性。 IT之家从官方介绍获悉， ChatGPT 每周覆盖 12 亿用户 ，是全球规模最大的原生 AI 消费平台。这款全新图片广告形式，能够帮助用户想象产品与服务如何融入日常生活。广告图片可以展示产品灵感、使用场景或是产品带来的体验，让用户认识新品牌、了解产品的独特优势，辅助消费决策。对广告主而言，这也创造了借助图…",
+        "publishedAt": "2026-10-05T18:38:14.000Z",
+        "summary": "【 点此直达升级教程 】 IT之家 10 月 6 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.2 开发者预览版 Beta 3 更新（内部版本号：24B5099f），本次更新距离上次发布 Beta/RC 间隔 14 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级…",
         "badge": "IT之家"
       },
       {
@@ -443,34 +446,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49956290",
+        "id": "hn-49944049",
         "category": "dev",
-        "title": "The technology to eradicate mosquito-borne disease exists",
-        "url": "https://worksinprogress.co/issue/mosquitoes-are-a-choice/",
+        "title": "Competitive Programmer's Handbook (2018) [pdf]",
+        "url": "https://cses.fi/book/book.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-10-04T18:06:04.000Z",
+        "publishedAt": "2026-10-03T13:24:01.000Z",
         "badge": "HN",
-        "signal": "123 分 · 102 评论"
+        "signal": "76 分 · 17 评论"
       },
       {
-        "id": "cn-toutiao-7692592754895028250",
+        "id": "cn-baidu-f7b80f58caefa079",
         "category": "cn",
-        "title": "大兴安岭的秋看一眼就醉了",
-        "url": "https://www.toutiao.com/trending/7692592754895028250/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227692592754895028250%22%2C%22hot_board_impr_id%22%3A%22202610060052182FF28603F7B3F506B7F6%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A4%A7%E5%85%B4%E5%AE%89%E5%B2%AD%E7%9A%84%E7%A7%8B%E7%9C%8B%E4%B8%80%E7%9C%BC%E5%B0%B1%E9%86%89%E4%BA%86%22%7D&rank=&style_id=40132&topic_id=7692592754895028250",
-        "source": "今日头条",
-        "badge": "热榜",
-        "signal": "24,111,146 热度"
+        "title": "“黄金睡眠时长”出炉",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E9%BB%84%E9%87%91%E7%9D%A1%E7%9C%A0%E6%97%B6%E9%95%BF%E2%80%9D%E5%87%BA%E7%82%89&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "2026年9月，国际期刊《自然》子刊《npj Aging》刊发的一项研究发现，睡眠时长过短或过长，都会增加身体衰弱风险！而睡眠时长在7.1小时左右，身体的衰弱风险最低。",
+        "badge": "热搜",
+        "signal": "7,522,972 热度"
       },
       {
-        "id": "github-advisory-ghsa-cjcg-cxmh-9wcr",
+        "id": "github-advisory-ghsa-wjwh-qqvp-g4p4",
         "category": "security",
-        "title": "Praxis affected by HTTP/2 Bomb",
-        "url": "https://github.com/advisories/GHSA-cjcg-cxmh-9wcr",
+        "title": "vm2 sandbox escape via WebAssembly.compileStreaming Promise species bypass",
+        "url": "https://github.com/advisories/GHSA-wjwh-qqvp-g4p4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-02T23:09:37.000Z",
-        "summary": "### Summary Multiple denial-of-service vulnerabilities have been discovered in HTTP/2 server implementations. All have been rated with a severity impact of Important. The vulnerabilities target HPACK, the header compression scheme in HTTP/…",
-        "badge": "GHSA-CJCG-CXMH-9WCR",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-05T22:34:22.000Z",
+        "summary": "## Summary There is a sandbox escape in vm2 `3.11.5` / current HEAD when it is used on Node.js 26. The issue is reachable from a default `new VM()` sandbox. No `NodeVM`, `require` permission, host object injection, or intentionally unsafe …",
+        "badge": "CVE-2026-92956",
+        "signal": "CRITICAL · CVSS 10.0"
       },
       {
         "id": "ai-hugging-face-74c2ff7e2707d1f6",
@@ -507,7 +511,7 @@
         "url": "https://github.com/tester-army/e2e",
         "description": "Next generation e2e testing framework for web and mobile apps.",
         "language": "TypeScript",
-        "stars": 4235,
+        "stars": 4664,
         "starsToday": 1430
       },
       {
@@ -517,89 +521,89 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 96484,
+        "stars": 96603,
         "starsToday": 534
       },
       {
-        "id": "github-67bc7022bb0752a1",
-        "rank": 3,
-        "name": "michael-denyer/pstack-claude",
-        "url": "https://github.com/michael-denyer/pstack-claude",
-        "description": "Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
-        "language": "JavaScript",
-        "stars": 1352,
-        "starsToday": 222
-      },
-      {
         "id": "github-97fd47923097e03f",
-        "rank": 4,
+        "rank": 3,
         "name": "earthtojake/text-to-cad",
         "url": "https://github.com/earthtojake/text-to-cad",
         "description": "Give your agent CAD superpowers.",
         "language": "Python",
-        "stars": 17237,
+        "stars": 17373,
         "starsToday": 456
       },
       {
         "id": "github-ca3faa494e15ccd9",
-        "rank": 5,
+        "rank": 4,
         "name": "pingdotgg/t3code",
         "url": "https://github.com/pingdotgg/t3code",
         "language": "TypeScript",
-        "stars": 25487,
+        "stars": 25583,
         "starsToday": 487
       },
       {
         "id": "github-2987e657c453bf43",
-        "rank": 6,
+        "rank": 5,
         "name": "boykopovar/AnyPS5",
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 4677,
+        "stars": 4891,
         "starsToday": 994
       },
       {
         "id": "github-7694a26ca72c822a",
-        "rank": 7,
+        "rank": 6,
         "name": "Panniantong/Agent-Reach",
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 91655,
+        "stars": 91831,
         "starsToday": 1156
       },
       {
         "id": "github-31424b832fa82c27",
-        "rank": 8,
+        "rank": 7,
         "name": "calesthio/OpenMontage",
         "url": "https://github.com/calesthio/OpenMontage",
         "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "language": "Python",
-        "stars": 63763,
+        "stars": 63959,
         "starsToday": 758
       },
       {
         "id": "github-6844f4bed6bbbe11",
-        "rank": 9,
+        "rank": 8,
         "name": "caddyserver/caddy",
         "url": "https://github.com/caddyserver/caddy",
         "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
         "language": "Go",
-        "stars": 76947,
+        "stars": 77074,
         "starsToday": 526
       },
       {
         "id": "github-6a42fad702e32681",
-        "rank": 10,
+        "rank": 9,
         "name": "DuarteSantos8/openGym",
         "url": "https://github.com/DuarteSantos8/openGym",
         "description": "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
         "language": "JavaScript",
-        "stars": 3811,
+        "stars": 4134,
         "starsToday": 1444
+      },
+      {
+        "id": "github-f932df9927ff2b5f",
+        "rank": 10,
+        "name": "cloudflare/cloudflare-os",
+        "url": "https://github.com/cloudflare/cloudflare-os",
+        "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+        "language": "TypeScript",
+        "stars": 10984,
+        "starsToday": 102
       }
     ],
-    "updatedAt": "2026-10-05T16:52:18.901Z"
+    "updatedAt": "2026-10-05T22:38:13.144Z"
   }
 }
