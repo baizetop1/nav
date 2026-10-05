@@ -1,5 +1,5 @@
-import {GEAR_TRAITS,traitText} from './tactics-data.js?v=0.58.0';
-import {requireRule,journal} from './utils.js?v=0.58.0';
+import {GEAR_TRAITS,traitText} from './tactics-data.js?v=0.64.0';
+import {requireRule,journal} from './utils.js?v=0.64.0';
 export function refineQuote(s,id,material){const e=s.equipment.find(e=>e.uid===id),rank=(e?.refine||0)+1,candidates=s.equipment.filter(x=>x.uid!==id&&x.item===e?.item&&!x.hero&&!x.locked&&!(x.refine>0)&&x.plus===0),copy=material?candidates.find(x=>x.uid===material):candidates[0],silver=rank*100,scrap=rank*5;
  const reason=!e||!Object.hasOwn(GEAR_TRAITS,e.item)?'这件装备没有可精修的特效':rank>3?'已达精修三阶':!copy?'需要一件未穿戴、未锁定、未强化和未精修的同款装备':s.player.silver<silver?'碎银不足':(s.inventory.scrap_iron||0)<scrap?'碎铁不足':'';
  return {e,copy,rank,silver,scrap,reason};

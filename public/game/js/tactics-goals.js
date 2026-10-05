@@ -1,8 +1,8 @@
-import {phaseGoal} from './progression-paths.js?v=0.58.0';
-import {unlockReason} from './growth.js?v=0.58.0';
-import {BUILD_GUIDES,GEAR_TRAITS} from './tactics-data.js?v=0.58.0';
-import {SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.58.0';
-import {PERSONAL} from './expansion-data.js?v=0.58.0';
+import {phaseGoal} from './progression-paths.js?v=0.64.0';
+import {unlockReason} from './growth.js?v=0.64.0';
+import {BUILD_GUIDES,GEAR_TRAITS} from './tactics-data.js?v=0.64.0';
+import {SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.64.0';
+import {PERSONAL} from './expansion-data.js?v=0.64.0';
 const page=(view,id,hero)=>({type:'ui_section',view,id,...(hero?{hero}:{})});
 export function gearGoal(s,d,id){const m=d.by.equipments[id],owned=s.equipment.some(e=>e.item===id),area=Object.entries(SPECIAL_DUNGEONS).find(([,x])=>x.drops.some(r=>r.kind==='equipment'&&r.id===id));
  const where=area?.[1],key=area?.[0],clears=s.specialDungeons?.clears||{},locked=where?.parent&&(clears[where.parent+'_1']||0)<5;

@@ -1,0 +1,3 @@
+import {PERSONAL} from './expansion-data.js?v=0.64.0';
+import {SPECIAL_ROUTES} from './special-routes.js?v=0.64.0';
+export const hasCampaignDepth=s=>s.replays?.challenges!==undefined||Object.keys(s.expansion?.personal||{}).some(id=>PERSONAL[id]?.introduced>=5)||s.development?.goal?.kind==='personal'&&PERSONAL[s.development.goal.id]?.introduced>=5||[s.battle,s.lastBattle].some(b=>b?.context?.challenge!==undefined||b?.context?.kind==='personal'&&PERSONAL[b.context.id]?.introduced>=5||SPECIAL_ROUTES[b?.context?.route]?.introduced>=2)||SPECIAL_ROUTES[s.specialDungeons?.last?.route]?.introduced>=2;

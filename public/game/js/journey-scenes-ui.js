@@ -1,0 +1,23 @@
+import {MAP_SCENES,sceneForMap} from './scene-library.js?v=0.64.0';
+import {isHarbor,harborBusiness} from './harbor-scenes.js?v=0.64.0';
+import {journeyMoment,JOURNEY_ART,hasJourneyScene} from './journey-scenes.js?v=0.64.0';
+import {meets} from './map.js?v=0.64.0';
+import {conditionText} from './world-map.js?v=0.64.0';
+export function journeyScenePicture(id,esc,small=false){const art=sceneForMap(id);if(!art)return '';return '<button type="button" class="journey-scene-picture '+(small?'journey-scene-preview':'')+'" data-command="'+esc(JSON.stringify({type:'ui_sceneArt',id:MAP_SCENES[id]}))+'" aria-label="查看此地场景图"><img src="'+esc(art.src)+'" alt="'+esc(art.alt)+'" width="'+art.width+'" height="'+art.height+'" decoding="async"><small><span>看大图</span></small></button>';}
+export function journeyScenePage(s,d,esc,btn,portrait,request={}){const m=journeyMoment(s,d);if(!m)return '';const tab=request?.map===s.location&&['here','people','roads'].includes(request.tab)?request.tab:'here';
+ const tabs='<nav class="journey-scene-tabs" aria-label="地点内查看内容">'+[['here','眼前'],['people',isHarbor(s.location)?'渡口事务':'人物传闻'],['roads','附近道路']].map(([id,label])=>btn(label,{type:'ui_journeyScene',tab:id},'secondary').replace('<button ','<button aria-pressed="'+(id===tab)+'" ')).join('')+'</nav>';
+ const choices=rows=>rows.map(a=>btn(a.label,a.command,'primary',!!a.disabled)+(a.disabled&&a.condition?'<small class="journey-scene-note">'+esc(conditionText(a.condition,d))+'</small>':'')).join('');
+ let body;if(tab==='here')body='<div class="scene-conversation">'+(m.hero?portrait(d.by.heroes[m.hero],true):'')+'<div><strong>'+esc(m.speaker)+'</strong><p>'+esc(m.text)+'</p></div></div>'+(m.note?'<p class="journey-scene-note">'+esc(m.note)+'</p>':'')+'<div class="journey-scene-actions">'+choices(m.actions)+'</div>';
+ else if(tab==='people'&&isHarbor(s.location))body=harborBusiness(s,d,esc,btn,m.goal)+(m.people.length?'<details class="harbor-completed"><summary>渡口人物</summary><div class="journey-scene-actions">'+choices(m.people)+'</div></details>':'');
+ else if(tab==='people')body='<div class="journey-scene-local"><h2>人物与传闻</h2>'+((m.people.length||m.localActions.length)?'<div class="journey-scene-actions">'+choices([...m.people,...m.localActions])+'</div>':'<p class="note">此时没有新的话可问。</p>')+'</div>';
+ else body='<div class="journey-scene-roads">'+m.map.links.map(l=>{const open=meets(s,l.condition);return '<div>'+btn(d.by.maps[l.target].name,{type:'move',id:l.target},'secondary',!open)+(!open?'<small>'+esc(conditionText(l.condition,d))+'</small>':'')+'</div>';}).join('')+'</div><p class="journey-scene-note">行路经过半个时辰；不会自动办完当地事务。</p>';
+ return '<section class="journey-scene" id="map-local"><header><h1>'+esc(m.map.name)+'</h1>'+btn('查看全文',{type:'ui_journeyText'},'text-action')+'</header><div class="scene-'+m.time+'">'+(isHarbor(s.location)&&tab==='people'?'':journeyScenePicture(s.location,esc))+'</div>'+tabs+body+(isHarbor(s.location)&&tab==='people'?'':'<div class="journey-scene-goal"><span>主线 · '+esc(m.goal.title)+'</span>'+btn('主线指引',{type:'ui_storyResume'},'text-action')+'</div>')+'</section>';
+}
+export const journeySceneEntry=(s,esc,btn)=>hasJourneyScene(s.location)?'<div class="journey-scene-entry">'+btn('走进此地',{type:'ui_journeyScene',tab:'here'},'secondary')+'</div>':'';
+
+export function schemeScenePage(s,d,esc,btn){
+ const q=s.scheme,m=d.by.schemes[q.id],v=q.values,rules=m.success;
+ const reaction=q.outcome==='success'?'军汉饮下了酒，取纲得手。':q.outcome==='failure'?'吴用招手叫众人退开。此计未成，可重新安排。':v.alert>=50?'杨志的手一直按在刀柄上。':v.fatigue>=rules.fatigue&&v.trust>=rules.trust?'军汉卸下担子，正向白胜讨酒。':v.fatigue>=rules.fatigue?'军汉已走不动，仍没人敢接酒碗。':v.trust>=rules.trust?'军汉看过枣客饮酒，杨志没再喝止。':'军汉想歇脚，杨志还在催着赶路。';
+ const actions=q.outcome?btn(q.outcome==='success'?'收下酬谢':q.context.type==='dungeon'?'返回历练地点':'回松岗重议',{type:'finishScheme'},'primary'):m.choices.map(c=>btn(c.label,{type:'scheme',id:c.id},'secondary')).join('')+btn('收网',{type:'scheme',id:'finish'},'primary')+btn('暂退',{type:'scheme',id:'retreat'},'secondary');
+ return '<section class="journey-scene scheme-scene"><header><h1>'+esc(m.name)+'</h1><small>'+(q.outcome?(q.outcome==='success'?'计成':'未成'):q.turn+' / '+m.maxTurns+' 次安排')+'</small></header><img class="journey-scene-picture" src="'+JOURNEY_ART.huangni+'" alt="黄泥冈官道旁的松荫" width="2163" height="727"><p class="scheme-reaction">'+esc(reaction)+'</p><p class="journey-scene-note scheme-last">'+esc(q.log.at(-1))+'</p><div class="journey-scene-actions scheme-actions">'+actions+'</div><details class="scheme-history"><summary>查看经过</summary>'+q.log.map(t=>'<p>'+esc(t)+'</p>').join('')+'</details></section>';
+}

@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {d,act} from './shuihu-campaign-fixtures.mjs';
+import {battleStep} from './shuihu-battle-test-helpers.mjs';
+import {newGame} from '../public/game/js/core.js';
+import {journeyMoment,tigerStage,JOURNEY_PLACES,JOURNEY_ART} from '../public/game/js/journey-scenes.js';
+import {journeyScenePage} from '../public/game/js/journey-scenes-ui.js';
+import {esc} from '../public/game/js/ui.js';
+import {exportSave,importSave} from '../public/game/js/portable.js';
+const step=(s)=>{const c=journeyMoment(s,d).actions[0].command;return act(s,c.type,c);};
+let s=newGame(d,Date.parse('2026-10-05T04:00:00Z'),12345);
+s=step(s);assert.equal(s.location,'tavern');s=step(s);assert.equal(s.heroes.baisheng.status,'known');s=step(s);assert.equal(s.heroes.baisheng.status,'owned');s=step(s);assert.equal(s.progress.flags.tiger_rumor,true);
+assert.ok(!journeyMoment(s,d).localActions.some(a=>a.command.id==='rumor_tiger'));
+s=act(s,'travel',{id:'inn'});s=step(s);assert.equal(s.progress.stories.wusong_story.step,'meeting');s=step(s);assert.equal(s.location,'path');assert.equal(tigerStage(s),1);
+assert.throws(()=>act(s,'travel',{id:'deepforest'}));s=act(s,'travel',{id:'drywood'});s=step(s);assert.equal(tigerStage(s),2);assert.match(journeyMoment(s,d).text,/记号/);
+s=importSave(exportSave(s,{id:1,name:'寻踪'},d),d).state;
+s=act(s,'travel',{id:'tracks'});s=step(s);assert.equal(tigerStage(s),3);s=act(s,'travel',{id:'deepforest'});assert.match(journeyMoment(s,d).note,/临时助阵/);
+const retry=act(act(step(s),'battleRetreat'),'finishBattle');assert.equal(retry.progress.stories.wusong_story.step,'trail');assert.equal(tigerStage(retry),3);assert.equal(journeyMoment(retry,d).actions[0].command.choice,'battle');
+s=step(s);for(let i=0;i<400&&!s.battle.outcome;i++)s=battleStep(d,s);assert.equal(s.battle.outcome,'victory');s=act(s,'finishBattle');assert.equal(tigerStage(s),4);assert.equal(s.progress.flags.tiger_complete,undefined);const rewards=structuredClone(s.inventory),silver=s.player.silver;s=step(s);assert.equal(tigerStage(s),5);assert.equal(s.player.silver,silver);assert.equal(s.inventory.wusong_token,(rewards.wusong_token||0)+1);assert.equal(s.inventory.recruit_order,(rewards.recruit_order||0)+1);assert.throws(()=>act(s,'story',{id:'wusong_story',choice:'finish'}));assert.deepEqual(importSave(exportSave(s,{id:1,name:'打虎'},d),d).state,s);
+const btn=(label,c,kind,disabled)=>'<button '+(disabled?'disabled':'')+' data-command="'+esc(JSON.stringify(c))+'">'+esc(label)+'</button>';
+for(const id of Object.keys(JOURNEY_PLACES).filter(id=>['town','tavern','ridge'].includes(JOURNEY_PLACES[id]))){const x=structuredClone(s);x.location=id;const before=structuredClone(x);for(const tab of ['here','people','roads']){const html=journeyScenePage(x,d,esc,btn,()=>'',{map:id,tab});assert.ok(html.includes('journey-scene'));assert.ok(!html.includes('undefined'));}assert.equal(journeyMoment(x,d).label,'打虎之后');assert.deepEqual(x,before);}
+const safe=structuredClone(d);safe.by.maps.deepforest.description='<img onerror=alert(1)>';const early=newGame(d,s.clock,22);early.location='deepforest';assert.ok(journeyScenePage(early,safe,esc,btn,()=>'',{}).includes('&lt;img'));assert.equal(journeyMoment({...s,location:'forge'},d),null);for(const path of Object.values(JOURNEY_ART))assert.ok(fs.statSync(new URL('../public/game/'+path,import.meta.url)).size<450000);
+console.log('Journey scenes PASS: real meetings, recruitment, rumors, gated travel, tracks, reload, retreat/retry, real tiger victory, once-only reward, eleven post-event locations, escaping and read-only rendering.');

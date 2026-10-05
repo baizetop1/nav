@@ -1,7 +1,7 @@
-import {skillReason} from './battle.js?v=0.58.0';
+import {skillReason} from './battle.js?v=0.64.0';
 export function bossThreat(b){
  if(!b||b.outcome)return null;const u=b.enemy.filter(u=>u.hp>0&&u.boss).sort((a,c)=>(a.boss.pendingAt||a.boss.readyAt)-(c.boss.pendingAt||c.boss.readyAt))[0];if(!u)return null;
- const special=b.tactics&&b.context.type==='special'&&u===b.enemy[0]?{minechief:['重锤扫阵','护阵减轻直接伤害，或用打断截住。'],marshnest:['全队毒雾','优先打断；中毒后用解毒或净化。'],ruinsvault:['全队治疗','优先打断，或集火头目使其退阵。']}[b.context.id]:null;
+ const special=b.tactics&&b.context.type==='special'&&u===b.enemy[0]?{minechief:['重锤扫阵','护阵减轻直接伤害，或用打断截住。'],marshnest:['全队毒雾','优先打断；中毒后用解毒或净化。'],ruinsvault:['全队治疗','优先打断，或集火头目使其退阵。']}[b.context.route==='warbell'?'ruinsvault':b.context.id]:null;
  const info=special||{tiger:['虎啸扑阵','全队受击，可固守或打断。'],chief:['敌方护阵','可打断；护阵后可用破阵招式。'],raider:['绕后重击','保护最后一位同伴，可固守或打断。']}[u.boss.kind]||['首领招式','可用已解锁的打断招式截住；详细机制见敌情。'];
  return {enemy:u,pending:!!u.boss.pendingAt,seconds:Math.max(0,((u.boss.pendingAt||u.boss.readyAt)-b.elapsed)/1000),title:info[0],advice:info[1]};
 }

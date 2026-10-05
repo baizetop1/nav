@@ -195,7 +195,17 @@
     "test:shuihu-progression-paths": "node scripts/shuihu-progression-paths-selfcheck.mjs",
     "test:shuihu-progression-paths-cloud": "node scripts/shuihu-progression-paths-cloud-selfcheck.mjs",
     "check:shuihu-progression-paths": "node scripts/shuihu-progression-paths-browser.mjs",
-    "check:shuihu-progression-budget": "node scripts/shuihu-progression-audit.mjs"
+    "check:shuihu-progression-budget": "node scripts/shuihu-progression-audit.mjs",
+    "test:shuihu-campaign-depth": "node scripts/shuihu-campaign-depth-selfcheck.mjs",
+    "test:shuihu-campaign-depth-cloud": "node scripts/shuihu-campaign-depth-cloud-selfcheck.mjs",
+    "check:shuihu-sustained-budget": "node scripts/shuihu-sustained-audit.mjs",
+    "check:shuihu-campaign-depth": "node scripts/shuihu-campaign-depth-browser.mjs",
+    "test:shuihu-scenes": "node scripts/shuihu-scenes-selfcheck.mjs",
+    "check:shuihu-scenes": "node scripts/shuihu-scenes-browser.mjs",
+    "test:shuihu-journey-scenes": "node scripts/shuihu-journey-scenes-selfcheck.mjs",
+    "test:shuihu-gathering-scenes": "node scripts/shuihu-gathering-scenes-selfcheck.mjs",
+    "test:shuihu-harbor-scenes": "node scripts/shuihu-harbor-scenes-selfcheck.mjs",
+    "test:shuihu-scene-library": "node scripts/shuihu-scene-library-selfcheck.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

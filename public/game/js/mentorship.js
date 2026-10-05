@@ -1,6 +1,6 @@
-import { attributes, gainExp } from './hero.js?v=0.58.0';
-import { experienceToNext, experienceResult, ATTRIBUTE_NAMES } from './progression.js?v=0.58.0';
-import { count, journal, requireRule } from './utils.js?v=0.58.0';
+import { attributes, gainExp } from './hero.js?v=0.64.0';
+import { experienceToNext, experienceResult, ATTRIBUTE_NAMES } from './progression.js?v=0.64.0';
+import { count, journal, requireRule } from './utils.js?v=0.64.0';
 export const MENTOR_LIMIT=3;
 export function mentorshipQuote(s,d,mentor,student){
   const m=s.heroes[mentor],h=s.heroes[student],used=s.daily.counters.heroMentor||0;
@@ -10,7 +10,7 @@ export function mentorshipQuote(s,d,mentor,student){
   let amount=0,next=null,rows=[];
   if(!reason){
     let remaining=-h.exp;for(let level=h.level;level<target;level++)remaining+=experienceToNext(level);
-    const offered=Math.floor((200+m.level*10+(s.camp.buildings.barracks-1)*40)*(matched?1.2:1));
+    const offered=mentorshipYield(s,d,mentor,student);
     amount=Math.min(offered,Math.max(0,remaining));
     if(!amount)reason='现有经验已足够达到本次传习上限，请先通过历练结算。';
     else{
@@ -27,4 +27,17 @@ export function mentorHero(s,d,a){
   s.player.stamina-=q.cost.stamina;s.player.silver-=q.cost.silver;s.camp.food-=q.cost.food;
   gainExp(s,a.student,q.amount,d);count(s,'heroMentor');
   journal(s,'【演武传习】'+d.by.heroes[a.mentor].name+'指点'+d.by.heroes[a.student].name+'，学员历练 +'+q.amount+'；体力 -5、粮草 -20、碎银 -100。今日 '+(q.used+1)+' / '+MENTOR_LIMIT+' 次。');
+}
+
+export function mentorshipYield(s,d,mentor,student){
+ const m=s.heroes[mentor],target=Math.min(d.config.balance.heroLevelCap,m.level-3),matched=d.by.heroes[mentor].type===d.by.heroes[student].type;
+ const catchup=Math.floor(Math.max(0,experienceToNext(Math.max(1,target))-experienceToNext(17))*.6);
+ return Math.floor((200+m.level*10+((s.camp?.buildings.barracks||1)-1)*40+catchup)*(matched?1.2:1));
+}
+export function mentorshipPlan(s,d,mentor,student){
+ const m=s.heroes[mentor],h=s.heroes[student];if(mentor===student||!m||!h||m.status!=='owned'||h.status!=='owned'||m.level<10||!s.camp)return null;
+ const target=Math.min(d.config.balance.heroLevelCap,m.level-3);if(h.level>=target)return null;
+ let exp=-h.exp;for(let lv=h.level;lv<target;lv++)exp+=experienceToNext(lv);
+ const amount=mentorshipYield(s,d,mentor,student),sessions=Math.ceil(exp/amount),remaining=Math.max(0,MENTOR_LIMIT-(s.daily.counters.heroMentor||0));
+ return {target,exp,amount,sessions,days:1+Math.ceil(Math.max(0,sessions-remaining)/MENTOR_LIMIT),silver:sessions*100,food:sessions*20,stamina:sessions*5};
 }

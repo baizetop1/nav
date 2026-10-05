@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>白泽水浒 · 场景图审查</title><link rel="stylesheet" href="./review.css?v=0.64.0"></head>
+<body><header><div class="heading"><div><small>白泽水浒 · 十二卷</small><h1>场景画册</h1></div><a href="../../index.html">返回游戏</a></div><p id="coverage">正在读取图片目录…</p>
+<div class="filters"><label>卷目<select id="chapter"><option value="all">全部十二卷</option></select></label><label>查看<select id="mode"><option value="art">按图片</option><option value="places">按地点</option></select></label><label class="search">搜索<input id="search" type="search" placeholder="地点或画面名称" autocomplete="off"></label></div></header>
+<main id="gallery" aria-label="场景图片"></main><p id="empty" hidden>没有找到对应的场景。</p>
+<footer><button id="previous" type="button">上一页</button><span id="position" role="status" aria-live="polite"></span><button id="next" type="button">下一页</button></footer>
+<dialog id="viewer" aria-labelledby="art-title"><div class="viewer-top"><h2 id="art-title"></h2><button id="close" type="button" aria-label="关闭大图">关闭</button></div><img id="full-art" alt=""><p id="art-places"></p><p id="art-file"></p><div class="viewer-bottom"><button id="art-previous" type="button">上一张</button><span id="art-position"></span><button id="art-next" type="button">下一张</button></div></dialog>
+<script type="module" src="./review.js?v=0.64.0"></script></body></html>

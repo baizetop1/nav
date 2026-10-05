@@ -1,5 +1,5 @@
-import {SPECIAL_ROUTES} from './special-routes.js?v=0.58.0';
-import {hasOwn} from './utils.js?v=0.58.0';
+import {SPECIAL_ROUTES,routeAllowed} from './special-routes.js?v=0.64.0';
+import {hasOwn} from './utils.js?v=0.64.0';
 export const SPECIAL_TIERS={
  1:{name:'寻常',level:5,hall:1,scale:.72,rate:1},
  2:{name:'险境',level:15,hall:2,scale:1.65,rate:1.3},
@@ -25,4 +25,4 @@ export function specialDropTable(id,tier){
  if(!hasOwn(SPECIAL_DUNGEONS,id)||!hasOwn(SPECIAL_TIERS,tier)||!Number.isInteger(tier))return [];
  return SPECIAL_DUNGEONS[id].drops.map(row=>({kind:row.kind,id:row.id,min:row.amounts[tier-1][0],max:row.amounts[tier-1][1],rate:Math.round(row.rate*SPECIAL_TIERS[tier].rate*10000)/10000}));
 }
-export function validSpecialContext(c){return !!c&&typeof c==='object'&&!Array.isArray(c)&&Object.keys(c).length===(c.route===undefined?4:5)&&(c.route===undefined||Object.hasOwn(SPECIAL_ROUTES,c.route))&&Object.keys(c).every(k=>['type','id','tier','terrain','route'].includes(k))&&c.type==='special'&&hasOwn(SPECIAL_DUNGEONS,c.id)&&Number.isInteger(c.tier)&&hasOwn(SPECIAL_TIERS,c.tier)&&c.terrain===SPECIAL_DUNGEONS[c.id].terrain;}
+export function validSpecialContext(c){return !!c&&typeof c==='object'&&!Array.isArray(c)&&Object.keys(c).length===(c.route===undefined?4:5)&&routeAllowed(c.route,c.id)&&Object.keys(c).every(k=>['type','id','tier','terrain','route'].includes(k))&&c.type==='special'&&hasOwn(SPECIAL_DUNGEONS,c.id)&&Number.isInteger(c.tier)&&hasOwn(SPECIAL_TIERS,c.tier)&&c.terrain===SPECIAL_DUNGEONS[c.id].terrain;}

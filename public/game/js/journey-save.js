@@ -1,8 +1,8 @@
-import {validateCampaign} from './journey-campaign-save.js?v=0.58.0';
-import {campaignRoutes} from './journey-campaign-data.js?v=0.58.0';
-import {validateRouteRewards} from './journey-rewards.js?v=0.58.0';
-import {validateJourneyTactics} from './journey-tactics-save.js?v=0.58.0';
-import {JOURNEYS,JOURNEY_GOALS,BOONS,boonPool} from './journey-data.js?v=0.58.0';
+import {validateCampaign} from './journey-campaign-save.js?v=0.64.0';
+import {campaignRoutes} from './journey-campaign-data.js?v=0.64.0';
+import {validateRouteRewards} from './journey-rewards.js?v=0.64.0';
+import {validateJourneyTactics} from './journey-tactics-save.js?v=0.64.0';
+import {JOURNEYS,JOURNEY_GOALS,BOONS,boonPool} from './journey-data.js?v=0.64.0';
 const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k),obj=o=>o&&typeof o==='object'&&!Array.isArray(o),num=(n,max)=>Number.isSafeInteger(n)&&n>=0&&n<=max;
 const list=(a,max,p)=>Array.isArray(a)&&a.length<=max&&new Set(a).size===a.length&&a.every(p);
 export function validateJourneyRecord(s,check){validateCampaign(s,check);validateJourneyTactics(s,check);validateRouteRewards(s,check);if(s.battle?.context.id?.startsWith('journey_'))check(!!s.realm?.trek?.journey,'游历战局缺少行程');const r=s.realm?.journey;if(r===undefined){check(!s.realm?.trek?.journey&&!s.battle?.journey,'游历记录缺失');return;}check(obj(r)&&r.version===1&&obj(r.best)&&obj(r.weekly),'游历记录');check(Object.entries(r.best).every(([id,n])=>own(JOURNEYS,id)&&num(n,3)&&n>=1),'游历通路');check(/^\d{4}-\d{2}-[1-4]$/.test(r.weekly.period)&&num(r.weekly.tickets,3),'游历本期补给');const l=r.last;if(l!==null)check(obj(l)&&own(JOURNEYS,l.region)&&num(l.tier,3)&&l.tier>0&&own(JOURNEY_GOALS,l.goal)&&typeof l.complete==='boolean'&&list(l.boons,5,id=>own(BOONS,id))&&(!l.complete||l.boons.length===5&&(r.best[l.region]||0)>=l.tier),'上趟游历');if(s.battle?.journey)check(!!s.realm.trek?.journey,'游历战局缺少行程');}

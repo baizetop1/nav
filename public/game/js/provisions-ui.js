@@ -1,6 +1,6 @@
-import {RAW_WORKSHOP_ITEMS,CRAFT_MATERIALS,EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.58.0';
-import {RECIPES,BOX_OPTIONS,staminaQuote,ordinaryUsed} from './provisions.js?v=0.58.0';
-import {rotationCalendar} from './rotations.js?v=0.58.0';
+import {RAW_WORKSHOP_ITEMS,CRAFT_MATERIALS,EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.64.0';
+import {RECIPES,BOX_OPTIONS,staminaQuote,ordinaryUsed} from './provisions.js?v=0.64.0';
+import {rotationCalendar} from './rotations.js?v=0.64.0';
 export function staminaPanel(s,d,btn){return '<section class="realm-section" id="stamina-supplies"><h2>体力补给</h2><p>普通补给今日 '+ordinaryUsed(s)+' / 60 点；村酒最多两碗，养元丹另限每日一颗。按道具标示恢复量扣额度，超出体力上限的部分不保留。</p><div class="realm-grid">'+['wine','ration','vital_pill'].map(id=>{const q=staminaQuote(s,id);return '<article class="realm-card"><h3>'+d.by.items[id].name+' ×'+(s.inventory[id]||0)+'</h3><p>恢复 '+q.amount+' 点；实际 '+q.before+' → '+q.after+' / '+q.cap+'</p><p>'+q.reason+'</p>'+btn('使用',{type:'ui_provisionUse',id},'secondary',!!q.reason)+(id==='wine'?btn('采买 · 碎银 25',{type:'buy',id},'secondary',s.player.silver<25):'')+'</article>';}).join('')+'</div></section>';}
 export function provisionSources(s,d,btn){const period=rotationCalendar(s.clock).period,flag='kit_week_'+period.replaceAll('-','_');return '<section class="realm-section"><h2>补给酬劳</h2><p>每日寨中悬赏附赠干粮 1。本期周本 2 层、本卷首次完成各可领取养元丹 1 与军需自选箱 1，不重复领取。</p>'+btn('领取本期周本补给',{type:'provisionWeekly'},'secondary',!(s.campaign?.weekly[period]?.tier>=2)||s.progress.flags[flag])+d.chapters.map((c,i)=>btn('第 '+(i+1)+' 卷补给',{type:'provisionMilestone',id:c.id},'secondary',!s.progress.flags[c.completeFlag]||s.progress.flags['kit_chapter_'+c.id])).join('')+'</section>';}
 const recipeCategories={materials:'材料',medicines:'药品',supplies:'行路补给',raw:'原料'};
