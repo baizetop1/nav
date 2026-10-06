@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-05T22:38:13.144Z",
+  "generatedAt": "2026-10-06T02:59:15.805Z",
   "intelligence": {
-    "updatedAt": "2026-10-05T22:38:13.144Z",
+    "updatedAt": "2026-10-06T02:59:15.805Z",
     "items": [
       {
-        "id": "cn-item-6b60ed2bd4011b60",
+        "id": "cn-item-2762a94e25c9e225",
         "category": "cn",
-        "title": "首届“东北超”落幕：绿茵聚力，振兴起脚",
-        "url": "https://www.chinanews.com.cn/ty/2026/10-05/10708290.shtml",
+        "title": "铜价连续刷新历史高点 铜产业需跳出结构性困局",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-06/10708368.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-05T15:13:30.000Z",
-        "summary": "中新社大连10月5日电 (记者 杨毅)10月5日晚，大连梭鱼湾足球场，长春队1:0击败大连队，夺得2026年东北地区城市足球联赛(简称“东北超”)的冠军。63259人见证这一时刻，刷新梭鱼湾足球场观赛纪录，同时创下“东北超”开赛以来上座纪录。",
+        "publishedAt": "2026-10-06T02:39:19.000Z",
+        "summary": "近期，铜价连续刷新历史高点。伦敦金属交易所3个月期铜价格盘中一度突破14800美元/吨，创历史新高；国内沪铜主力合约也站上11万元/吨关口。随后价格虽迅速回撤，但整体仍运行在高位区间。",
         "badge": "中新网要闻"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-05T19:16:35.000Z",
         "badge": "HN",
-        "signal": "222 分 · 62 评论"
+        "signal": "335 分 · 96 评论"
       },
       {
-        "id": "cn-it-d0ff1f7e32b13a88",
+        "id": "cn-it-566ce54862b460b2",
         "category": "cn",
-        "title": "苹果 watchOS 27.2 开发者预览版 Beta 3 发布",
-        "url": "https://www.ithome.com/1/009/908.htm",
+        "title": "散热制造商 Dynatron 确认 AMD EPYC \"Verano\" 处理器采用 SB1 插槽",
+        "url": "https://www.ithome.com/1/009/967.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T18:38:15.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 10 月 6 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.2 开发者预览版 Beta 3 更新（内部版本号：24S5101f），本次更新距离上次发布 Beta/RC 间隔 14 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开…",
+        "publishedAt": "2026-10-06T02:52:28.000Z",
+        "summary": "IT之家 10 月 6 日消息，散热制造商 Dynatron（传达）此前已在其官网上线了 SB1-4U-ACTIVE 风冷散热器。该型号 支持 Socket SB1 平台上的 AMD \"Zen 6\" 微架构 EPYC 9006 LP \"Verano\" 处理器 。 EPYC \"Verano\" 瞄准 AI 加速器头节点应用场景，支持 LPDDR5X SOCAMM2 内存模组， 预计 2027 年推出 。其至多拥有 72 个 CPU 核心，频率可达 5GHz，支持 112Gbps…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-x965-fc75-jpqh",
+        "id": "github-advisory-ghsa-v5rq-49vh-5v5c",
         "category": "security",
-        "title": "vm2 sandbox escape to host RCE via revisited host-wrapped AggregateError bypassing Error sanitization cycle short-circuit",
-        "url": "https://github.com/advisories/GHSA-x965-fc75-jpqh",
+        "title": "simple-git: `VISUAL` editor environment variable is omitted from unsafe editor detection",
+        "url": "https://github.com/advisories/GHSA-v5rq-49vh-5v5c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-05T22:38:04.000Z",
-        "summary": "## Summary vm2 `3.11.6` (this fork's latest release) contains an incomplete-fix bypass of the Error.cause host-reference sanitization added in GHSA-m283-3h24-438v (commit `7e3faaf`). Sandbox code that catches a host-wrapped `AggregateError…",
-        "badge": "CVE-2026-92934",
-        "signal": "CRITICAL · CVSS 9.0"
+        "publishedAt": "2026-10-05T23:48:21.000Z",
+        "summary": "# Security control bypass in `@simple-git/argv-parser`: Git's `VISUAL` editor fallback is not classified as `allowUnsafeEditor` ## Report metadata | Field | Value | | --- | --- | | Package | `@simple-git/argv-parser` (npm, `pkg:npm/%40simp…",
+        "badge": "CVE-2026-102829",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-ce56aa83d0064ef1",
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246548",
+        "id": "v2ex-1246591",
         "category": "dev",
-        "title": "codex 正在思考",
-        "url": "https://www.v2ex.com/t/1246548",
+        "title": "DeepSeek V4.1 Flash 还有 Qwen3.8 Flash 总是不好好整理文件，是 Harness 的问题吗？",
+        "url": "https://www.v2ex.com/t/1246591",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-05T14:37:47.000Z",
-        "summary": "现在是 10 月 5 号 22:37 ，codex 一直处在正在思考的状态，是不是出啥问题了？",
+        "publishedAt": "2026-10-06T02:02:00.000Z",
+        "summary": "最近有些简单的任务分配给了 DeepSeek V4 Flash 还有 Qwen3.8 Flash, 前者用的是 DSH 后者是在 Codex 本地模式，发现有个共通的毛病就是在不特殊交代的情况下，它们总是会把一些脚本还有调研记录等中间产物直接放到项目的根目录，导致几轮过后一打开项目文件夹根目录下一堆乱七八糟的文件，看着就烦 使用 Claude 和 GPT 就没出现过这种问题，是因为 Harness 的原因吗？还是本身模型的工作习惯就不好",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-dfc9a9052389e177",
+        "id": "cn-baidu-f58fa2444b0b2a62",
         "category": "cn",
-        "title": "放假期间 这7种照片建议别发朋友圈",
-        "url": "https://www.baidu.com/s?wd=%E6%94%BE%E5%81%87%E6%9C%9F%E9%97%B4+%E8%BF%997%E7%A7%8D%E7%85%A7%E7%89%87%E5%BB%BA%E8%AE%AE%E5%88%AB%E5%8F%91%E6%9C%8B%E5%8F%8B%E5%9C%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "缅北电诈主犯随机杀人祭天",
+        "url": "https://www.baidu.com/s?wd=%E7%BC%85%E5%8C%97%E7%94%B5%E8%AF%88%E4%B8%BB%E7%8A%AF%E9%9A%8F%E6%9C%BA%E6%9D%80%E4%BA%BA%E7%A5%AD%E5%A4%A9&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "国庆假期，央视新闻综合公安部网安局提示，过度分享易致隐私泄露，建议勿在朋友圈发布7类照片：含位置信息照片、证件、交通凭证、银行卡、快递开箱图、老幼照片及家门钥匙。此外，建议公众关闭微信相关隐私设置以守护信息安全。",
+        "summary": "10月5日至7日，纪录片《缅北电诈覆灭纪实》首播，曝光缅北魏家犯罪集团主犯陈大卫等人的作案细节。此前，陈大卫为与金主结拜立投名状，随机物色陌生人杀人祭天。",
         "badge": "热搜",
-        "signal": "7,808,121 热度"
+        "signal": "7,809,098 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -117,35 +117,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49970871",
+        "id": "hn-49971230",
         "category": "dev",
-        "title": "Dust: Pretraining Transformers Without Backpropagation",
-        "url": "https://qlabs.sh/research/dust",
+        "title": "Find the flattest route between any two points in SF",
+        "url": "https://flattensf.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T21:15:07.000Z",
+        "publishedAt": "2026-10-05T21:40:50.000Z",
         "badge": "HN",
-        "signal": "47 分 · 3 评论"
+        "signal": "126 分 · 40 评论"
       },
       {
-        "id": "cn-item-1ca0f581c90692bc",
+        "id": "cn-item-c3cb3a2ce13e99f6",
         "category": "cn",
-        "title": "警惕这些第三方平台“抢票”常见套路，小心别中招！",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708277.shtml",
+        "title": "网传稻城亚丁封闭是真的吗？高原景区如何保障游客安全？",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-06/10708366.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-05T13:33:50.000Z",
-        "summary": "伪科普、加速包、",
+        "publishedAt": "2026-10-06T02:32:17.000Z",
+        "summary": "今年国庆假期，四川甘孜藏族自治州的稻城亚丁景区依然是热门目的地。社交平台数据显示，稻城亚丁9月份搜索量同比上涨61%，9月28日单日同比上涨186%，这个时间点正好接近国庆前抢票、制定旅游攻略的高峰。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-c8x8-7fp4-3x9w",
+        "id": "github-advisory-ghsa-x6jw-m9v5-85vh",
         "category": "security",
-        "title": "ProseMirror has a XSS vulnerability in prosemirror-view's paste handling",
-        "url": "https://github.com/advisories/GHSA-c8x8-7fp4-3x9w",
+        "title": "simple-git unsafe-operation guard does not block trailer command configuration",
+        "url": "https://github.com/advisories/GHSA-x6jw-m9v5-85vh",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-05T22:36:06.000Z",
-        "summary": "### Impact When a user pastes attacker-provided HTML into a ProseMirror editor component, this can cause attacker-controlled JavaScript code to run in the browser window containing the editor. ### Patches Version 1.42.3 adds validation tha…",
-        "badge": "CVE-2026-104847",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-05T23:48:14.000Z",
+        "summary": "## Affected product The default `blockUnsafeOperationsPlugin` in `simple-git` when an application permits untrusted values to reach `SimpleGitOptions.config` or Git inline configuration arguments such as `-c = `. ## Summary `trailer. .cmd`…",
+        "badge": "CVE-2026-102828",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-openai-2d8e70fb45cef747",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246523",
+        "id": "v2ex-1246590",
         "category": "dev",
-        "title": "准备注册美国公司来使用 claude",
-        "url": "https://www.v2ex.com/t/1246523",
+        "title": "codex 的电脑控制用的是什么技术？",
+        "url": "https://www.v2ex.com/t/1246590",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-05T10:20:22.000Z",
-        "summary": "国庆又被封了一个 100 美金的号, 好几个大额的号了, 大部分都 Fully refunded, 但我的目的是正常使用, 而不是贪小便宜. 这几天开始用 100 美金的 codex, 这货比货真的不能比, codex 真的是白给你都不要的那种. 我研究了一轮,其实也尝试过好多方法, 比如在其他国家家里使用家庭宽带, 托管电脑远程连过去, 但最终逃不过. 发现只能通过注册美国公司的方式来进行, 这个是最稳定的, 和 claude 公司销售直接联系后不会轻易被封号, 还可以使…",
+        "publishedAt": "2026-10-06T02:01:46.000Z",
+        "summary": "在 macos 右上角菜单栏有个电脑的图标，图标右下角有个小人头像。 在被控制的 app 左上角也有显示这个图标； 可以在后台操作这个 app ，不阻塞用户使用电脑。",
         "badge": "程序员",
-        "signal": "41 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-7497540f2cc06278",
+        "id": "cn-it-de8ddbd4d5e1bf30",
         "category": "cn",
-        "title": "苹果 visionOS 27.2 开发者预览版 Beta 3 发布",
-        "url": "https://www.ithome.com/1/009/907.htm",
+        "title": "消息称苹果 10 月推 2 波新品上市：M6 iMac、首款触控 MacBook 等",
+        "url": "https://www.ithome.com/1/009/965.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T18:38:15.000Z",
-        "summary": "IT之家 10 月 6 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.2 开发者预览版 Beta 3 更新（内部版本号：24N5103f），本次更新距离上次发布 Beta/RC 间隔 14 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-09-29：vision…",
+        "publishedAt": "2026-10-06T02:43:36.000Z",
+        "summary": "IT之家 10 月 6 日消息，科技媒体 MacRumors 今天（10 月 6 日）发布博文，报道称苹果公司本月（2026 年 10 月）有望分 2 波推出诸多新产品， 第一波聚焦智能家居产品，第二波主角是 Mac 系列，预估为 10 月最后 1 周。 IT之家此前援引彭博社马克 · 古尔曼（Mark Gurman）报道，苹果公司有望于 10 月 13 日发布其首款智能家居中枢（Home Hub）、Apple TV 4K（第四代）等产品。 而最新消息称苹果公司可能会在 1…",
         "badge": "IT之家"
       },
       {
@@ -200,35 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49971230",
+        "id": "hn-49972419",
         "category": "dev",
-        "title": "Find the flattest route between any two points in SF",
-        "url": "https://flattensf.com/",
+        "title": "AI tutoring with Khanmigo in a two-year school experiment",
+        "url": "https://edworkingpapers.com/ai26-1551",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T21:40:50.000Z",
+        "publishedAt": "2026-10-06T00:00:45.000Z",
         "badge": "HN",
-        "signal": "31 分 · 7 评论"
+        "signal": "39 分 · 27 评论"
       },
       {
-        "id": "cn-baidu-387114c052859e72",
+        "id": "cn-baidu-7ece6a74a3231f5e",
         "category": "cn",
-        "title": "中国收废品的大爷可能已经赚翻了",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%94%B6%E5%BA%9F%E5%93%81%E7%9A%84%E5%A4%A7%E7%88%B7%E5%8F%AF%E8%83%BD%E5%B7%B2%E7%BB%8F%E8%B5%9A%E7%BF%BB%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中方放弃谈判直接抓佤邦副总司令",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E6%96%B9%E6%94%BE%E5%BC%83%E8%B0%88%E5%88%A4%E7%9B%B4%E6%8E%A5%E6%8A%93%E4%BD%A4%E9%82%A6%E5%89%AF%E6%80%BB%E5%8F%B8%E4%BB%A4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "受中东局势紧张导致全球铝等供应链承压影响，中国废弃资源综合利用业利润暴增，废旧金属回收价格明显抬升。此前，地缘冲突波及大宗商品供应，而中国上游资源依赖进口，废品回收成为保障资源安全的关键。",
+        "summary": "2023年9月26日晚，中方放弃谈判，在昆明将佤邦联合军副总司令鲍军峰及其团伙抓捕归案。鲍军峰伙同他人成立“荷官公司”，提供武装庇护大肆参诈护诈攫取利益。抓捕同时，警方在其住所查获大量珠宝名表及多辆豪车。",
         "badge": "热搜",
-        "signal": "7,713,197 热度"
+        "signal": "7,712,548 热度"
       },
       {
-        "id": "github-advisory-ghsa-r4fx-v8hh-22mv",
+        "id": "github-advisory-ghsa-g4wm-2vf7-vfgr",
         "category": "security",
-        "title": "vm2: timeout Option Bypass via FinalizationRegistry Cleanup Callback (Unbounded Host Event-Loop Block)",
-        "url": "https://github.com/advisories/GHSA-r4fx-v8hh-22mv",
+        "title": "simple-git allows command execution through unblocked Git configuration includes",
+        "url": "https://github.com/advisories/GHSA-g4wm-2vf7-vfgr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-05T22:35:04.000Z",
-        "summary": "### Vulnerability Summary vm2's `VM({ timeout })` option is documented and relied upon as the mechanism that bounds how long sandboxed code may execute. In the current implementation, the timeout only wraps the single synchronous call to `…",
-        "badge": "CVE-2026-92942",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-05T23:48:05.000Z",
+        "summary": "## Summary An OS command injection vulnerability in `git.clone()` allows any application that flows attacker-influenced data into `customArgs` to execute arbitrary code. simple-git 3.36.0 (current latest on npm) ships without any `include.…",
+        "badge": "CVE-2026-102826",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-hugging-face-e81b1dea7ce0fb42",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246519",
+        "id": "v2ex-1246548",
         "category": "dev",
-        "title": "开发 Windows 桌面应用，大家用什么 AI 模型和工具比较顺手？",
-        "url": "https://www.v2ex.com/t/1246519",
+        "title": "codex 正在思考",
+        "url": "https://www.v2ex.com/t/1246548",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-05T09:02:44.000Z",
-        "summary": "最近在做一个 Windows 桌面工具，主要用 Tauri + Vue / TypeScript + Rust ，只考虑 Windows 10 及以上。 除了普通界面，还有一些透明置顶的悬浮窗，涉及鼠标穿透、悬停交互、焦点切换等，对资源占用也有要求。 目前比较想解决的是 AI 写代码之后怎么验证的问题。前端页面可以在浏览器里看，但窗口行为和交互需要放到实际 Windows 环境里测试。 所以想问问： 这种前端 + Rust + Windows 原生交互的项目，用什么模型比较…",
+        "publishedAt": "2026-10-05T14:37:47.000Z",
+        "summary": "现在是 10 月 5 号 22:37 ，codex 一直处在正在思考的状态，是不是出啥问题了？",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-item-680b592acaa38613",
+        "id": "cn-item-a3836f60c56b577e",
         "category": "cn",
-        "title": "中国航协：依法维护乘务权益 共建客舱服务秩序",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708247.shtml",
+        "title": "我国海水淡化日处理能力突破300万吨",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-06/10708356.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-05T12:14:41.000Z",
-        "summary": "依法维护乘务权益 共建客舱服务秩序",
+        "publishedAt": "2026-10-06T02:11:42.000Z",
+        "summary": "记者从自然资源部了解到，截至目前，我国海水淡化总规模已达到每日307.7万吨。",
         "badge": "中新网要闻"
       },
       {
@@ -282,35 +282,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49970667",
+        "id": "hn-49970871",
         "category": "dev",
-        "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
-        "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+        "title": "Dust: Pretraining Transformers Without Backpropagation",
+        "url": "https://qlabs.sh/research/dust",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T21:00:21.000Z",
+        "publishedAt": "2026-10-05T21:15:07.000Z",
         "badge": "HN",
-        "signal": "123 分 · 106 评论"
+        "signal": "116 分 · 19 评论"
       },
       {
-        "id": "cn-it-70715dd38f99e76c",
+        "id": "cn-it-89aab6aa82c71a74",
         "category": "cn",
-        "title": "苹果 macOS 27.2 开发者预览版 Beta 3 发布",
-        "url": "https://www.ithome.com/1/009/906.htm",
+        "title": "消息称快手旗下可灵 AI 已选定投行筹备赴港 IPO，拟募资至少 10 亿美元",
+        "url": "https://www.ithome.com/1/009/964.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T18:38:14.000Z",
-        "summary": "IT之家 10 月 6 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.2 开发者预览版 Beta 3 更新（内部版本号：26B5101f），本次更新距离上次发布 Beta/RC 间隔 14 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 ，…",
+        "publishedAt": "2026-10-06T02:41:41.000Z",
+        "summary": "IT之家 10 月 6 日消息，据彭博社报道，知情人士透露，快手科技旗下的可灵 AI（Kling AI）已经选定承销银行，筹备赴香港开展首次公开募股，此次 IPO 募资规模至少可达 10 亿美元 （IT之家注：现汇率约合 67.14 亿元人民币） 。 知情人士称，这家人工智能视频服务提供商目前正与中金公司、高盛集团以及瑞银集团合作推进潜在的股票发行事宜。可灵 AI 的目标是最早于明年完成上市。 相关人士补充称，目前相关商讨仍在进行当中，融资规模、上市时间等细节仍有可能发生变…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-j3hm-6rg5-mchv",
+        "id": "github-advisory-ghsa-858h-whjf-mvg5",
         "category": "security",
-        "title": "vm2: NodeVM `require.external` without an explicit `require.root` grants unrestricted host filesystem access and full RCE",
-        "url": "https://github.com/advisories/GHSA-j3hm-6rg5-mchv",
+        "title": "simple-git: unsafe-operations plugin bypass via git long-option abbreviation (--receive-p/--exe) -> command execution (residual of CVE-2026-28291)",
+        "url": "https://github.com/advisories/GHSA-858h-whjf-mvg5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-05T22:34:50.000Z",
-        "summary": "## Summary `NodeVM`'s `require.external` option lets sandboxed code `require()` local files and npm packages. When `require.external` is enabled and `require.root` is **not explicitly set to a path that excludes `node_modules`**, two defau…",
-        "badge": "CVE-2026-92946",
-        "signal": "CRITICAL · CVSS 10.0"
+        "publishedAt": "2026-10-05T23:47:58.000Z",
+        "summary": "simple-git's blockUnsafeOperationsPlugin blocks dangerous git options (--upload-pack/--receive-pack/--exec/...) unless the consumer opts in via unsafe:{allowUnsafePack:true}. Detection (@simple-git/argv-parser detectVulnerableFlags) matche…",
+        "badge": "CVE-2026-102827",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-google-deepmind-34692efacd3b982a",
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246495",
+        "id": "v2ex-1246523",
         "category": "dev",
-        "title": "Windows 搭建 WSL2 AI 开发环境",
-        "url": "https://www.v2ex.com/t/1246495",
+        "title": "准备注册美国公司来使用 claude",
+        "url": "https://www.v2ex.com/t/1246523",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-05T06:33:40.000Z",
-        "summary": "介绍我在 Windows 上使用 WSL2 打造 AI 开发环境的一些思路，源码和 AI Agent 留在 Windows ，WSL2 只当编译测试沙盒，用调度脚本和约束规则串联工作流 https://blog.dejavu.moe/posts/windows-wsl2-ai-dev-environment/",
+        "publishedAt": "2026-10-05T10:20:22.000Z",
+        "summary": "国庆又被封了一个 100 美金的号, 好几个大额的号了, 大部分都 Fully refunded, 但我的目的是正常使用, 而不是贪小便宜. 这几天开始用 100 美金的 codex, 这货比货真的不能比, codex 真的是白给你都不要的那种. 我研究了一轮,其实也尝试过好多方法, 比如在其他国家家里使用家庭宽带, 托管电脑远程连过去, 但最终逃不过. 发现只能通过注册美国公司的方式来进行, 这个是最稳定的, 和 claude 公司销售直接联系后不会轻易被封号, 还可以使…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "43 回复"
       },
       {
-        "id": "cn-baidu-91ce7b926624c59a",
+        "id": "cn-baidu-0a11ede720fe0b6d",
         "category": "cn",
-        "title": "国庆假期返程 这份安全提示请收好",
-        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E5%BA%86%E5%81%87%E6%9C%9F%E8%BF%94%E7%A8%8B+%E8%BF%99%E4%BB%BD%E5%AE%89%E5%85%A8%E6%8F%90%E7%A4%BA%E8%AF%B7%E6%94%B6%E5%A5%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“宝藏小城”藏不住了",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%AE%9D%E8%97%8F%E5%B0%8F%E5%9F%8E%E2%80%9D%E8%97%8F%E4%B8%8D%E4%BD%8F%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月5日，交管部门预测今起进京方向将出现返程车流高峰，下午时段最为集中。交通运输部研判当日全国高速公路有36个路段易发拥堵，主要涉及江苏、安徽、浙江等省份。应急管理部发布安全提示，特别提醒开启“智驾”时双手不离盘、视线不离路，严禁分心睡觉。",
+        "summary": "这个国庆假期，小城小镇特色游火热，成为很多人选择出游的目的地。小城小镇既有县域产业突围、文旅融合的鲜活探索，也有古老文脉在小城焕发新生的转型实践；既能体验乡村里的千年手艺，更能感受到中国县域的生机、韧性与真实生活。",
         "badge": "热搜",
-        "signal": "7,619,293 热度"
+        "signal": "7,616,802 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76504",
@@ -363,35 +363,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49963171",
+        "id": "hn-49971719",
         "category": "dev",
-        "title": "Web Search API",
-        "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+        "title": "Friendship ended with Deno, now Node is my best friend",
+        "url": "https://dbushell.com/2026/10/03/deno-to-node/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-05T10:47:06.000Z",
+        "publishedAt": "2026-10-05T22:30:02.000Z",
         "badge": "HN",
-        "signal": "456 分 · 208 评论"
+        "signal": "80 分 · 21 评论"
       },
       {
-        "id": "cn-item-4a113f19f98028a2",
+        "id": "cn-item-78fcd0163c8b3ef5",
         "category": "cn",
-        "title": "国产大型水陆两栖飞机AG600顺利完成北疆驻防",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708220.shtml",
+        "title": "百日千万招聘专项行动推出四个线上招聘专场",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-06/10708355.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-05T10:49:05.000Z",
-        "summary": "中新网北京10月5日电 (记者 阮煜琳)记者5日从中国航空工业集团获悉，国产大型水陆两栖飞机AG600“鲲龙”顺利完成2026年度加格达奇北疆驻防各项任务，圆满结束为期四个月的林区航空应急值守与防火实战任务，以硬核国产航空力量筑牢大兴安岭原始林区生态安全屏障。",
+        "publishedAt": "2026-10-06T02:09:44.000Z",
+        "summary": "央视网消息：记者从人力资源社会保障部获悉，10月5日起，百日千万招聘专项行动推出4个线上招聘专场。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-fcqc-726x-5wfc",
+        "id": "github-advisory-ghsa-v4x9-3549-crwv",
         "category": "security",
-        "title": "vm2: Sandboxed code can read and write host-realm memory via Node's shared Buffer pool",
-        "url": "https://github.com/advisories/GHSA-fcqc-726x-5wfc",
+        "title": "PyMongo: PYTHON-5996 Heap out-of-bounds write via signed size overflow in BSON document encoding",
+        "url": "https://github.com/advisories/GHSA-v4x9-3549-crwv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-05T22:34:35.000Z",
-        "summary": "### Summary Sandboxed code is able to disclose host memory used by small allocations by `Buffer.from`, `Buffer.concat`. ### Details vm2 exposes `Buffer` object to sandboxed code by default. Small `Buffer` allocations (for example, Buffer.a…",
-        "badge": "CVE-2026-92947",
-        "signal": "CRITICAL · CVSS 10.0"
+        "publishedAt": "2026-10-05T23:47:10.000Z",
+        "summary": "An integer overflow in the BSON document encoding component of the MongoDB Python Driver's bundled native extension may occur when a single document is built from an unusually large amount of caller-supplied data. Size arithmetic is perfor…",
+        "badge": "CVE-2026-96749",
+        "signal": "HIGH · CVSS 8.4"
       },
       {
         "id": "ai-openai-882596cbc7639eb4",
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246486",
+        "id": "v2ex-1246519",
         "category": "dev",
-        "title": "在 AI 驱动下开发的项目，如果后续由人来介入开发阻力很大 算不算对项目上的失控",
-        "url": "https://www.v2ex.com/t/1246486",
+        "title": "开发 Windows 桌面应用，大家用什么 AI 模型和工具比较顺手？",
+        "url": "https://www.v2ex.com/t/1246519",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-05T05:22:50.000Z",
-        "summary": "现在 Vibe Coding 开发已经算是主流了，基本是人人都是使用 AI 来辅助开发。逐渐发现一个问题，组里的同事在 AI 辅助下开发速度提升了。 但是对整个项目代码理解的程度下降的比较严重。 甚至出现了脱离 AI 无法定位问题，不知道自己负责开发的组件,为什么要这样处理,输入的是什么，输出的是什么 这样算不算是 对项目的一种失控",
+        "publishedAt": "2026-10-05T09:02:44.000Z",
+        "summary": "最近在做一个 Windows 桌面工具，主要用 Tauri + Vue / TypeScript + Rust ，只考虑 Windows 10 及以上。 除了普通界面，还有一些透明置顶的悬浮窗，涉及鼠标穿透、悬停交互、焦点切换等，对资源占用也有要求。 目前比较想解决的是 AI 写代码之后怎么验证的问题。前端页面可以在浏览器里看，但窗口行为和交互需要放到实际 Windows 环境里测试。 所以想问问： 这种前端 + Rust + Windows 原生交互的项目，用什么模型比较…",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "11 回复"
       },
       {
-        "id": "cn-it-34767db41ef2f8cb",
+        "id": "cn-it-1dbc6d42ef9a0fc3",
         "category": "cn",
-        "title": "苹果 iOS/iPadOS 27.2 开发者预览版 Beta 3 发布",
-        "url": "https://www.ithome.com/1/009/905.htm",
+        "title": "华硕推出 XG32UQDS 显示器：31.5\" UHD 180Hz QD-OLED 面板",
+        "url": "https://www.ithome.com/1/009/963.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-05T18:38:14.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 10 月 6 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.2 开发者预览版 Beta 3 更新（内部版本号：24B5099f），本次更新距离上次发布 Beta/RC 间隔 14 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级…",
+        "publishedAt": "2026-10-06T02:38:23.000Z",
+        "summary": "IT之家 10 月 6 日消息，华硕 (ASUS) 近日推出了显示器新品 ROG Strix OLED XG32UQDS。这一型号基于 32\"(31.5\") 的 UHD (3840×2160) 180Hz QD-OLED 面板，覆盖 BlackShield 低反抗刮镀膜。 XG32UQDS 采用了相对平价的 QD-OLED 面板 ， SDR 亮度 250nits 、 HDR 峰值亮度 450nits ；灰阶 (GtG) 响应时间 0.03ms；色域 99% DCI-P3，色…",
         "badge": "IT之家"
       },
       {
@@ -446,35 +446,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49944049",
+        "id": "hn-49970667",
         "category": "dev",
-        "title": "Competitive Programmer's Handbook (2018) [pdf]",
-        "url": "https://cses.fi/book/book.pdf",
+        "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+        "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
         "source": "Hacker News",
-        "publishedAt": "2026-10-03T13:24:01.000Z",
+        "publishedAt": "2026-10-05T21:00:21.000Z",
         "badge": "HN",
-        "signal": "76 分 · 17 评论"
+        "signal": "233 分 · 167 评论"
       },
       {
-        "id": "cn-baidu-f7b80f58caefa079",
+        "id": "cn-baidu-4f11997f273a9a48",
         "category": "cn",
-        "title": "“黄金睡眠时长”出炉",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E9%BB%84%E9%87%91%E7%9D%A1%E7%9C%A0%E6%97%B6%E9%95%BF%E2%80%9D%E5%87%BA%E7%82%89&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "明学昌畏罪自杀身亡照片曝光",
+        "url": "https://www.baidu.com/s?wd=%E6%98%8E%E5%AD%A6%E6%98%8C%E7%95%8F%E7%BD%AA%E8%87%AA%E6%9D%80%E8%BA%AB%E4%BA%A1%E7%85%A7%E7%89%87%E6%9B%9D%E5%85%89&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "2026年9月，国际期刊《自然》子刊《npj Aging》刊发的一项研究发现，睡眠时长过短或过长，都会增加身体衰弱风险！而睡眠时长在7.1小时左右，身体的衰弱风险最低。",
+        "summary": "2023年11月12日，中国警方对缅北电诈明学昌等4人发布通缉令。4天后，明国平、明菊兰、明珍珍3人被成功抓捕并移交中方。其间，明学昌畏罪自杀身亡。",
         "badge": "热搜",
-        "signal": "7,522,972 热度"
+        "signal": "7,521,441 热度"
       },
       {
-        "id": "github-advisory-ghsa-wjwh-qqvp-g4p4",
+        "id": "github-advisory-ghsa-vp6j-j7w5-5xjj",
         "category": "security",
-        "title": "vm2 sandbox escape via WebAssembly.compileStreaming Promise species bypass",
-        "url": "https://github.com/advisories/GHSA-wjwh-qqvp-g4p4",
+        "title": "PyMongo: PYTHON-5986 Host injection in PyMongo connection string parsing via percent-encoded delimiters",
+        "url": "https://github.com/advisories/GHSA-vp6j-j7w5-5xjj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-05T22:34:22.000Z",
-        "summary": "## Summary There is a sandbox escape in vm2 `3.11.5` / current HEAD when it is used on Node.js 26. The issue is reachable from a default `new VM()` sandbox. No `NodeVM`, `require` permission, host object injection, or intentionally unsafe …",
-        "badge": "CVE-2026-92956",
-        "signal": "CRITICAL · CVSS 10.0"
+        "publishedAt": "2026-10-05T23:47:07.000Z",
+        "summary": "### Summary PyMongo percent-decoded the entire host section of a connection string before splitting it into individual `host:port` entries. A percent-encoded `,` or `:` in a hostname therefore decoded into a real delimiter, injecting an ad…",
+        "badge": "CVE-2026-96748",
+        "signal": "HIGH · CVSS 6.5"
       },
       {
         "id": "ai-hugging-face-74c2ff7e2707d1f6",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246485",
+        "id": "v2ex-1246495",
         "category": "dev",
-        "title": "Gemini Flash 和 Pro 将转入付费方案",
-        "url": "https://www.v2ex.com/t/1246485",
+        "title": "Windows 搭建 WSL2 AI 开发环境",
+        "url": "https://www.v2ex.com/t/1246495",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-05T05:15:19.000Z",
-        "summary": "自 2026 年 10 月起，使用个人账号访问 Gemini 应用时，模型可用情况将发生变更。 对于未订阅 AI 方案的用户，这些变更将于 10 月 9 日生效。如果你订阅了 AI Plus ，应该会收到一封电子邮件，说明这些变化何时对你生效。 这些变更生效后的模型可用情况： Google AI 方案 Flash-Lite Flash Pro 未订阅方案 ✓ ✗ ✗ AI Plus ✓ ✓ ✗ AI Pro ✓ ✓ ✓ AI Ultra ✓ ✓ ✓ 参考链接: https:…",
+        "publishedAt": "2026-10-05T06:33:40.000Z",
+        "summary": "介绍我在 Windows 上使用 WSL2 打造 AI 开发环境的一些思路，源码和 AI Agent 留在 Windows ，WSL2 只当编译测试沙盒，用调度脚本和约束规则串联工作流 https://blog.dejavu.moe/posts/windows-wsl2-ai-dev-environment/",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -511,8 +511,8 @@
         "url": "https://github.com/tester-army/e2e",
         "description": "Next generation e2e testing framework for web and mobile apps.",
         "language": "TypeScript",
-        "stars": 4664,
-        "starsToday": 1430
+        "stars": 4920,
+        "starsToday": 1398
       },
       {
         "id": "github-1ba5bb3a805d2f64",
@@ -521,7 +521,7 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 96603,
+        "stars": 96674,
         "starsToday": 534
       },
       {
@@ -531,8 +531,8 @@
         "url": "https://github.com/earthtojake/text-to-cad",
         "description": "Give your agent CAD superpowers.",
         "language": "Python",
-        "stars": 17373,
-        "starsToday": 456
+        "stars": 17484,
+        "starsToday": 437
       },
       {
         "id": "github-ca3faa494e15ccd9",
@@ -540,8 +540,8 @@
         "name": "pingdotgg/t3code",
         "url": "https://github.com/pingdotgg/t3code",
         "language": "TypeScript",
-        "stars": 25583,
-        "starsToday": 487
+        "stars": 25645,
+        "starsToday": 485
       },
       {
         "id": "github-2987e657c453bf43",
@@ -550,8 +550,8 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 4891,
-        "starsToday": 994
+        "stars": 5011,
+        "starsToday": 997
       },
       {
         "id": "github-7694a26ca72c822a",
@@ -560,8 +560,8 @@
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 91831,
-        "starsToday": 1156
+        "stars": 91972,
+        "starsToday": 1155
       },
       {
         "id": "github-31424b832fa82c27",
@@ -570,8 +570,8 @@
         "url": "https://github.com/calesthio/OpenMontage",
         "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "language": "Python",
-        "stars": 63959,
-        "starsToday": 758
+        "stars": 64118,
+        "starsToday": 742
       },
       {
         "id": "github-6844f4bed6bbbe11",
@@ -580,8 +580,8 @@
         "url": "https://github.com/caddyserver/caddy",
         "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
         "language": "Go",
-        "stars": 77074,
-        "starsToday": 526
+        "stars": 77167,
+        "starsToday": 515
       },
       {
         "id": "github-6a42fad702e32681",
@@ -590,8 +590,8 @@
         "url": "https://github.com/DuarteSantos8/openGym",
         "description": "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
         "language": "JavaScript",
-        "stars": 4134,
-        "starsToday": 1444
+        "stars": 4307,
+        "starsToday": 1433
       },
       {
         "id": "github-f932df9927ff2b5f",
@@ -600,10 +600,10 @@
         "url": "https://github.com/cloudflare/cloudflare-os",
         "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
         "language": "TypeScript",
-        "stars": 10984,
-        "starsToday": 102
+        "stars": 11041,
+        "starsToday": 101
       }
     ],
-    "updatedAt": "2026-10-05T22:38:13.144Z"
+    "updatedAt": "2026-10-06T02:59:15.805Z"
   }
 }
