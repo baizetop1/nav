@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-06T17:11:47.410Z",
+  "generatedAt": "2026-10-06T21:38:06.699Z",
   "intelligence": {
-    "updatedAt": "2026-10-06T17:11:47.410Z",
+    "updatedAt": "2026-10-06T21:38:06.699Z",
     "items": [
       {
         "id": "cn-item-0d97f3fa03aeef31",
@@ -43,48 +43,48 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-06T13:15:49.000Z",
         "badge": "HN",
-        "signal": "912 分 · 607 评论"
+        "signal": "1420 分 · 889 评论"
       },
       {
-        "id": "cn-it-0c2c0cee9f820d7f",
+        "id": "cn-it-4907e3aa893e4ae6",
         "category": "cn",
-        "title": "德国交通部长：希望特斯拉 FSD（监督版）辅助驾驶系统能在欧盟获批",
-        "url": "https://www.ithome.com/1/010/124.htm",
+        "title": "小米米家智能晾衣机 3 Max 今日开售：首创柔烘除菌专区，首发国补价 2699 元",
+        "url": "https://www.ithome.com/1/010/126.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-06T15:06:34.000Z",
-        "summary": "IT之家 10 月 6 日消息，据外媒 Golem 今天报道，德国联邦交通部长施特芬 · 比尔格表示， 他希望特斯拉 FSD（监督版）辅助驾驶系统能在欧盟范围内获批 ，他认为欧盟能够统一审批类似系统具有积极意义。 比尔格表示，特斯拉 FSD（监督版）的审批工作涉及很多有待解决的技术问题， 同时还要划分好责任认定等 。对他而言，推动创新落地是最重要的目的。 这位交通部长还表示，FSD 监督版有望提升德国道路交通安全。他希望这套系统能够尽快在欧洲投入使用。 IT之家注意到，特斯…",
+        "publishedAt": "2026-10-06T20:59:09.000Z",
+        "summary": "IT之家 10 月 7 日消息，米家智能晾衣机 3 Max 今日 20:00 正式开售，首发国补价 2698.75 元。 京东 米家【重磅新品】电动晾衣架 3 Max 柔烘除菌超薄隐形阳台智能升降晾衣机 2698.75 元 直达链接 该机是米家首款柔烘除菌晾衣机，首创米家半封闭式柔烘专区。衣物平铺在晾晒网上后，启动干衣或除菌功能时，晾杆组件自动上升贴近风口，形成半封闭柔烘专区，通过热风循环锁温实现更快干衣与除菌。 据介绍，柔烘专区支持标准烘、智能烘、柔护风三种模式。标准烘以…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-fx49-4h83-wjv9",
+        "id": "github-advisory-ghsa-6r3q-mjv7-xr8m",
         "category": "security",
-        "title": "Payload didn't enforce field-level password update restrictions",
-        "url": "https://github.com/advisories/GHSA-fx49-4h83-wjv9",
+        "title": "Coraza: Silent argument drop at ArgumentLimit allows bypass of ARGS-targeted rules via parameter flooding",
+        "url": "https://github.com/advisories/GHSA-6r3q-mjv7-xr8m",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:21:52.000Z",
-        "summary": "## Impact When an auth collection defined a field-level access.update restriction on the password field, the restriction was not enforced on the server correctly. ## Patches Users should upgrade Payload packages to `>= 3.90.0` or `>= 4.0.0…",
-        "badge": "CVE-2026-105855",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-06T20:38:03.000Z",
+        "summary": "## Root Cause File: `internal/corazawaf/transaction.go`, lines 770–808 (since commit 2fd87b89, PR #812, 2023-06-14) ```go func (tx *Transaction) AddGetRequestArgument(key string, value string) { if tx.checkArgumentLimit(tx.variables.argsGe…",
+        "badge": "CVE-2026-41510",
+        "signal": "HIGH · CVSS 7.2"
       },
       {
-        "id": "ai-google-deepmind-ce56aa83d0064ef1",
+        "id": "ai-google-deepmind-c11a83f73b42d756",
         "category": "ai",
-        "title": "Gemini 4 Argon: our next era of frontier intelligence",
-        "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+        "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+        "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-30T20:01:45.000Z",
+        "publishedAt": "2026-10-06T19:57:04.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246702",
+        "id": "v2ex-1246700",
         "category": "dev",
-        "title": "又一个知名大厂程序员被判，很好奇这是怎么被抓到的？",
-        "url": "https://www.v2ex.com/t/1246702",
+        "title": "Tibo 28 天营销逻辑",
+        "url": "https://www.v2ex.com/t/1246700",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-06T16:14:00.000Z",
-        "summary": "总结一下犯法的主要原因： 靠“越狱”大模型，专挑大模型安全防线下刀子。 绕过防护网后，用户充完值就能挑角色、开黄腔。聊天记录还能消耗积分，一键合成静态或动态的违规影像。 这是怎么被抓的？ 1 、这套系统在海外正式上线。后台直连**“第四方支付平台”，挂接虚拟货币收款通道，直接结算盈利。 2 、应该不可能使用国产的大模型 补充一下原文链接： https://mp.weixin.qq.com/s/wnJ5vOXW7rsaXKElCf04ig",
+        "publishedAt": "2026-10-06T15:32:12.000Z",
+        "summary": "1. 用重置吸引尚未叛逃用户的每日关注，在模型处于劣于 claude 的情况之下的话题度 2. 利用其中“正常重置”以及“重置卡”到期的前后几天进行重置，兑现营销重置诺言，同时重置损失最小化 3. 利用套餐额度下调额度减半以及路由降智省下的成本，给正常功能迭代的员工发工资 可谓，一箭三雕。",
         "badge": "程序员",
-        "signal": "16 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-6a8da1eefdef100f",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "国庆假期即将结束，这次假期最后离家，下一趟再回家，就是2027年了。",
         "badge": "热搜",
-        "signal": "7,809,689 热度"
+        "signal": "7,808,821 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49980715",
+        "id": "hn-49980487",
         "category": "dev",
-        "title": "AI is now capable of developing its own inference hardware",
-        "url": "https://github.com/FeSens/openTPU",
+        "title": "EmbeddingGemma 2",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T16:23:25.000Z",
+        "publishedAt": "2026-10-06T16:03:49.000Z",
         "badge": "HN",
-        "signal": "62 分 · 25 评论"
+        "signal": "100 分 · 14 评论"
       },
       {
         "id": "cn-item-eed1bf018bccc231",
@@ -137,45 +137,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-2g7p-5934-q4w7",
+        "id": "github-advisory-ghsa-mc52-mwq4-vfx3",
         "category": "security",
-        "title": "Payload: ReDoS in Multipart Content-Type Validation",
-        "url": "https://github.com/advisories/GHSA-2g7p-5934-q4w7",
+        "title": "knowns OS Command Injection via Insecure LSP Binary Path Config in .knowns/config.json",
+        "url": "https://github.com/advisories/GHSA-mc52-mwq4-vfx3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:18:27.000Z",
-        "summary": "## Impact A malformed multipart request body could take an extremely long time to finish. ## Patches Users should upgrade Payload packages to `>= 3.90.0` or `>= 4.0.0-canary.34`.",
-        "badge": "CVE-2026-105854",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-06T18:58:38.000Z",
+        "summary": "## Overview A critical **Arbitrary Code Execution (ACE)** vulnerability exists in the Knowns Language Server Protocol (LSP) detection and startup pipeline. The system blindly trusts the `settings.lsp.languages. .binary` field defined in th…",
+        "badge": "CVE-2026-86540",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
-        "id": "ai-openai-d2b5b29b4c815525",
+        "id": "ai-openai-f57eff9c23a4454b",
         "category": "ai",
-        "title": "Our approach to EU text provenance rules",
-        "url": "https://openai.com/index/eu-text-provenance",
+        "title": "Advancing computer use with Ironclad",
+        "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
         "source": "OpenAI",
-        "publishedAt": "2026-10-05T15:00:00.000Z",
-        "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
+        "publishedAt": "2026-10-06T10:00:00.000Z",
+        "summary": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246700",
+        "id": "v2ex-1246684",
         "category": "dev",
-        "title": "Tibo 28 天营销逻辑",
-        "url": "https://www.v2ex.com/t/1246700",
+        "title": "手太痒了，开发了安卓手机控制安卓手机的 ascrcpy，结合 nl2sh 实现手机 vibecoding+app 验收",
+        "url": "https://www.v2ex.com/t/1246684",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-06T15:32:12.000Z",
-        "summary": "1. 用重置吸引尚未叛逃用户的每日关注，在模型处于劣于 claude 的情况之下的话题度 2. 利用其中“正常重置”以及“重置卡”到期的前后几天进行重置，兑现营销重置诺言，同时重置损失最小化 3. 利用套餐额度下调额度减半以及路由降智省下的成本，给正常功能迭代的员工发工资 可谓，一箭三雕。",
+        "publishedAt": "2026-10-06T13:30:17.000Z",
+        "summary": "我最近迷上了只用一部安卓手机开发 App 。代码让服务器跑，手机只管发指令和看效果。 以前用 SSH 连服务器，Agent 改完代码跑完测试，终端一显示通过我就头疼。页面挤没挤在一起？按钮好不好点？这些根本看不见。直到我把 Tailcat 、AScrcpy 和 nl2sh 串了起来。 现在流程很顺：先在手机 SSH 里让 Agent 写代码、跑测试；接着切到模拟器里的 nl2sh ，批准共享端口拿到配对码；再打开 AScrcpy 连上远端画面。界面卡不卡、弹窗挡不挡按钮，我…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-4792ce5cff1811f9",
+        "id": "cn-it-0c2c0cee9f820d7f",
         "category": "cn",
-        "title": "《明日方舟：终末地》游戏将支持英伟达 RTX Spark 笔记本，「丹青渡」版本上线",
-        "url": "https://www.ithome.com/1/010/123.htm",
+        "title": "德国交通部长：希望特斯拉 FSD（监督版）辅助驾驶系统能在欧盟获批",
+        "url": "https://www.ithome.com/1/010/124.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-06T14:49:57.000Z",
-        "summary": "IT之家 10 月 6 日消息，鹰角网络今日发布《明日方舟：终末地》「丹青渡」版本前瞻视频， 确认本作即将支持搭载英伟达 RTX Spark 处理器的笔记本 。 据介绍，《明日方舟：终末地》将在更新后支持即将上市的英伟达 RTX Spark 笔记本电脑，玩家未来可以使用这些笔记本游玩本作。 IT之家注意到，在 6 月的 2026 台北国际电脑展主题演讲中， 英伟达 CEO 黄仁勋正式宣布推出 RTX Spark PC 处理器 ，首批搭载该处理器的笔记本将在今年秋季推出。 S…",
+        "publishedAt": "2026-10-06T15:06:34.000Z",
+        "summary": "IT之家 10 月 6 日消息，据外媒 Golem 今天报道，德国联邦交通部长施特芬 · 比尔格表示， 他希望特斯拉 FSD（监督版）辅助驾驶系统能在欧盟范围内获批 ，他认为欧盟能够统一审批类似系统具有积极意义。 比尔格表示，特斯拉 FSD（监督版）的审批工作涉及很多有待解决的技术问题， 同时还要划分好责任认定等 。对他而言，推动创新落地是最重要的目的。 这位交通部长还表示，FSD 监督版有望提升德国道路交通安全。他希望这套系统能够尽快在欧洲投入使用。 IT之家注意到，特斯…",
         "badge": "IT之家"
       },
       {
@@ -190,24 +190,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-05"
       },
       {
-        "id": "ai-google-deepmind-c696e8b1f3422473",
+        "id": "ai-google-deepmind-ce56aa83d0064ef1",
         "category": "ai",
-        "title": "Introducing SynthID Bio",
-        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+        "title": "Gemini 4 Argon: our next era of frontier intelligence",
+        "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-30T15:03:07.000Z",
-        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+        "publishedAt": "2026-09-30T20:01:45.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49977177",
+        "id": "hn-49976265",
         "category": "dev",
-        "title": "Release of Polars 2.0",
-        "url": "https://pola.rs/posts/release-polars-2/",
+        "title": "Nobel Prize in Physics 2026: Francis Halzen",
+        "url": "https://www.nobelprize.org/prizes/physics/2026/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T11:59:01.000Z",
+        "publishedAt": "2026-10-06T09:48:46.000Z",
         "badge": "HN",
-        "signal": "267 分 · 45 评论"
+        "signal": "484 分 · 157 评论"
       },
       {
         "id": "cn-baidu-9e499911217b05f3",
@@ -217,17 +216,17 @@
         "source": "百度热搜",
         "summary": "国庆返程高峰期间，全国多地陆续迎来集中返程车流，主要高速公路、国省道干线车流量高位运行。高速段均出现拥堵，道路堵成“长龙”，车辆尾灯红成一片。",
         "badge": "热搜",
-        "signal": "7,713,885 热度"
+        "signal": "7,713,917 热度"
       },
       {
-        "id": "github-advisory-ghsa-238x-w2j9-gwwr",
+        "id": "github-advisory-ghsa-fx49-4h83-wjv9",
         "category": "security",
-        "title": "Payload vulnerable to API key disclosure through ordinary document reads",
-        "url": "https://github.com/advisories/GHSA-238x-w2j9-gwwr",
+        "title": "Payload didn't enforce field-level password update restrictions",
+        "url": "https://github.com/advisories/GHSA-fx49-4h83-wjv9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:18:16.000Z",
-        "summary": "### Impact Users with read access to other user documents could access their active API keys. An exposed key grants the target account’s permissions until rotated or disabled. You are affected if: - An authentication collection enables `us…",
-        "badge": "CVE-2026-105849",
+        "publishedAt": "2026-10-06T16:21:52.000Z",
+        "summary": "## Impact When an auth collection defined a field-level access.update restriction on the password field, the restriction was not enforced on the server correctly. ## Patches Users should upgrade Payload packages to `>= 3.90.0` or `>= 4.0.0…",
+        "badge": "CVE-2026-105855",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -240,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246684",
+        "id": "v2ex-1246642",
         "category": "dev",
-        "title": "手太痒了，开发了安卓手机控制安卓手机的 ascrcpy，结合 nl2sh 实现手机 vibecoding+app 验收",
-        "url": "https://www.v2ex.com/t/1246684",
+        "title": "手太痒了，终于开发了个操作系统，免安装那种",
+        "url": "https://www.v2ex.com/t/1246642",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-06T13:30:17.000Z",
-        "summary": "我最近迷上了只用一部安卓手机开发 App 。代码让服务器跑，手机只管发指令和看效果。 以前用 SSH 连服务器，Agent 改完代码跑完测试，终端一显示通过我就头疼。页面挤没挤在一起？按钮好不好点？这些根本看不见。直到我把 Tailcat 、AScrcpy 和 nl2sh 串了起来。 现在流程很顺：先在手机 SSH 里让 Agent 写代码、跑测试；接着切到模拟器里的 nl2sh ，批准共享端口拿到配对码；再打开 AScrcpy 连上远端画面。界面卡不卡、弹窗挡不挡按钮，我…",
+        "publishedAt": "2026-10-06T07:35:49.000Z",
+        "summary": "[先问] 朋友们，谁用过 Windows 98? 有没有完全没有见过 Windows 98 的朋友？ 从 Dos 时代开始，到了 Windows 98 ，太迷了人，我对那种立体强交互反馈的 Windows classic 设计，喜欢得要命 理想中的电脑交互界面就是那样。家里永远有一台旧电脑是装着 w98 的，隔段时间打开来看看，就像那个黄昏坐在那间吵得要命的机房角落一样，扣代码劲儿就更大了 终于动手了。哈哈 ↓ https://win98.si 可以看看古时候的 V2EX …",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "80 回复"
       },
       {
         "id": "cn-item-ceb4a72e03a40e61",
@@ -272,65 +271,66 @@
         "signal": "已遭利用 · 整改期限 2026-10-04"
       },
       {
-        "id": "ai-openai-2d8e70fb45cef747",
+        "id": "ai-openai-d2b5b29b4c815525",
         "category": "ai",
-        "title": "Building advertising for the way people use AI",
-        "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+        "title": "Our approach to EU text provenance rules",
+        "url": "https://openai.com/index/eu-text-provenance",
         "source": "OpenAI",
-        "publishedAt": "2026-10-05T10:00:00.000Z",
-        "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
+        "publishedAt": "2026-10-05T15:00:00.000Z",
+        "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49976265",
+        "id": "hn-49980715",
         "category": "dev",
-        "title": "Nobel Prize in Physics goes to Francis Halzen",
-        "url": "https://www.nobelprize.org/prizes/physics/2026/",
+        "title": "AI is now capable of developing its own inference hardware",
+        "url": "https://github.com/FeSens/openTPU",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T09:48:46.000Z",
+        "publishedAt": "2026-10-06T16:23:25.000Z",
         "badge": "HN",
-        "signal": "355 分 · 104 评论"
+        "signal": "170 分 · 228 评论"
       },
       {
-        "id": "cn-it-91fb63e16862cdb5",
+        "id": "cn-it-4792ce5cff1811f9",
         "category": "cn",
-        "title": "AMD 股价创历史新高！CEO 苏姿丰称 AI 芯片需求非常旺盛，将持续大幅扩产",
-        "url": "https://www.ithome.com/1/010/114.htm",
+        "title": "《明日方舟：终末地》游戏将支持英伟达 RTX Spark 笔记本，「丹青渡」版本上线",
+        "url": "https://www.ithome.com/1/010/123.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-06T14:30:54.000Z",
-        "summary": "IT之家 10 月 6 日消息，AMD 盘初涨近 3%，报 649.88 美元 （IT之家注：现汇率约合 4,364 元人民币） ， 创历史新高 ，市值达 1.06 万亿美元 （现汇率约合 7.12 万亿元人民币） 。 开盘后 AMD 股价有所回落，目前涨超 2%，报 646.48 美元 （现汇率约合 4,335 元人民币）。 AMD CEO 苏姿丰今日在受访时表示，2026 年整体运算市场需求极为强劲，AMD 虽已同步扩充产能，但当前需求依然远高于供给。面对供不应求的现况…",
+        "publishedAt": "2026-10-06T14:49:57.000Z",
+        "summary": "IT之家 10 月 6 日消息，鹰角网络今日发布《明日方舟：终末地》「丹青渡」版本前瞻视频， 确认本作即将支持搭载英伟达 RTX Spark 处理器的笔记本 。 据介绍，《明日方舟：终末地》将在更新后支持即将上市的英伟达 RTX Spark 笔记本电脑，玩家未来可以使用这些笔记本游玩本作。 IT之家注意到，在 6 月的 2026 台北国际电脑展主题演讲中， 英伟达 CEO 黄仁勋正式宣布推出 RTX Spark PC 处理器 ，首批搭载该处理器的笔记本将在今年秋季推出。 S…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-8r29-2mp2-pmrw",
+        "id": "github-advisory-ghsa-2g7p-5934-q4w7",
         "category": "security",
-        "title": "Payload Ecommerce has an order confirmation validation issue",
-        "url": "https://github.com/advisories/GHSA-8r29-2mp2-pmrw",
+        "title": "Payload: ReDoS in Multipart Content-Type Validation",
+        "url": "https://github.com/advisories/GHSA-2g7p-5934-q4w7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:17:54.000Z",
-        "summary": "## Impact When using the Stripe payment adapter, an order confirmation could be processed more than once under certain conditions. You are affected if: - You use `@payloadcms/plugin-ecommerce` with the Stripe payment adapter. Deployments t…",
-        "badge": "CVE-2026-105850",
+        "publishedAt": "2026-10-06T16:18:27.000Z",
+        "summary": "## Impact A malformed multipart request body could take an extremely long time to finish. ## Patches Users should upgrade Payload packages to `>= 3.90.0` or `>= 4.0.0-canary.34`.",
+        "badge": "CVE-2026-105854",
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-google-deepmind-34692efacd3b982a",
+        "id": "ai-google-deepmind-c696e8b1f3422473",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live with Live Avatar",
-        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+        "title": "Introducing SynthID Bio",
+        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-24T16:20:39.000Z",
+        "publishedAt": "2026-09-30T15:03:07.000Z",
+        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246642",
+        "id": "v2ex-1246591",
         "category": "dev",
-        "title": "手太痒了，终于开发了个操作系统，免安装那种",
-        "url": "https://www.v2ex.com/t/1246642",
+        "title": "DeepSeek V4.1 Flash 还有 Qwen3.8 Flash 总是不好好整理文件，是 Harness 的问题吗？",
+        "url": "https://www.v2ex.com/t/1246591",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-06T07:35:49.000Z",
-        "summary": "[先问] 朋友们，谁用过 Windows 98? 有没有完全没有见过 Windows 98 的朋友？ 从 Dos 时代开始，到了 Windows 98 ，太迷了人，我对那种立体强交互反馈的 Windows classic 设计，喜欢得要命 理想中的电脑交互界面就是那样。家里永远有一台旧电脑是装着 w98 的，隔段时间打开来看看，就像那个黄昏坐在那间吵得要命的机房角落一样，扣代码劲儿就更大了 终于动手了。哈哈 ↓ https://win98.si 可以看看古时候的 V2EX …",
+        "publishedAt": "2026-10-06T02:02:00.000Z",
+        "summary": "最近有些简单的任务分配给了 DeepSeek V4 Flash 还有 Qwen3.8 Flash, 前者用的是 DSH 后者是在 Codex 本地模式，发现有个共通的毛病就是在不特殊交代的情况下，它们总是会把一些脚本还有调研记录等中间产物直接放到项目的根目录，导致几轮过后一打开项目文件夹根目录下一堆乱七八糟的文件，看着就烦 使用 Claude 和 GPT 就没出现过这种问题，是因为 Harness 的原因吗？还是本身模型的工作习惯就不好",
         "badge": "程序员",
-        "signal": "76 回复"
+        "signal": "9 回复"
       },
       {
         "id": "cn-baidu-fdc359c2737bc746",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "国庆期间，我国多项大国重器与重点工程集中上新：我国沙漠最大油田哈得-富满油田采出油气突破2600万吨；首个海上注碳增气平台主体完工，延榆高铁高梁隧道贯通；新疆首个百兆瓦级压缩二氧化碳储能项目并网，青岛胶州湾第二海底隧道盾构完工；青海首个三塔光伏光热基地并网，成达万高铁铺轨启动。",
         "badge": "热搜",
-        "signal": "7,619,433 热度"
+        "signal": "7,619,497 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76504",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49979845",
+        "id": "hn-49983703",
         "category": "dev",
-        "title": "The Early History of Smalltalk (1993)",
-        "url": "https://worrydream.com/EarlyHistoryOfSmalltalk/",
+        "title": "Paramount completes $111B Warner merger, creating \"Skydance\" behemoth",
+        "url": "https://arstechnica.com/tech-policy/2026/10/paramount-completes-111b-warner-merger-creating-skydance-behemoth/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T15:19:57.000Z",
+        "publishedAt": "2026-10-06T20:33:47.000Z",
         "badge": "HN",
-        "signal": "47 分 · 10 评论"
+        "signal": "71 分 · 60 评论"
       },
       {
         "id": "cn-item-914f4725aff25dab",
@@ -383,45 +383,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xgv3-crq2-6f69",
+        "id": "github-advisory-ghsa-238x-w2j9-gwwr",
         "category": "security",
-        "title": "Payload: Token refresh and password reset responses may expose restricted user fields",
-        "url": "https://github.com/advisories/GHSA-xgv3-crq2-6f69",
+        "title": "Payload vulnerable to API key disclosure through ordinary document reads",
+        "url": "https://github.com/advisories/GHSA-238x-w2j9-gwwr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:17:28.000Z",
-        "summary": "## Impact Token refresh and password reset responses could return fields that the requesting user did not have access to. You are affected if: - An authentication collection contains hidden or read-restricted fields. ## Patches Authenticat…",
-        "badge": "CVE-2026-105853",
+        "publishedAt": "2026-10-06T16:18:16.000Z",
+        "summary": "### Impact Users with read access to other user documents could access their active API keys. An exposed key grants the target account’s permissions until rotated or disabled. You are affected if: - An authentication collection enables `us…",
+        "badge": "CVE-2026-105849",
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-c38af6e5cae43e23",
+        "id": "ai-openai-2d8e70fb45cef747",
         "category": "ai",
-        "title": "A model guide for the GPT-6 family",
-        "url": "https://openai.com/index/practical-guide-building-gpt-6",
+        "title": "Building advertising for the way people use AI",
+        "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
         "source": "OpenAI",
-        "publishedAt": "2026-10-02T16:15:00.000Z",
-        "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
+        "publishedAt": "2026-10-05T10:00:00.000Z",
+        "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246591",
+        "id": "v2ex-1246590",
         "category": "dev",
-        "title": "DeepSeek V4.1 Flash 还有 Qwen3.8 Flash 总是不好好整理文件，是 Harness 的问题吗？",
-        "url": "https://www.v2ex.com/t/1246591",
+        "title": "codex 的电脑控制用的是什么技术？",
+        "url": "https://www.v2ex.com/t/1246590",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-06T02:02:00.000Z",
-        "summary": "最近有些简单的任务分配给了 DeepSeek V4 Flash 还有 Qwen3.8 Flash, 前者用的是 DSH 后者是在 Codex 本地模式，发现有个共通的毛病就是在不特殊交代的情况下，它们总是会把一些脚本还有调研记录等中间产物直接放到项目的根目录，导致几轮过后一打开项目文件夹根目录下一堆乱七八糟的文件，看着就烦 使用 Claude 和 GPT 就没出现过这种问题，是因为 Harness 的原因吗？还是本身模型的工作习惯就不好",
+        "publishedAt": "2026-10-06T02:01:46.000Z",
+        "summary": "在 macos 右上角菜单栏有个电脑的图标，图标右下角有个小人头像。 在被控制的 app 左上角也有显示这个图标； 可以在后台操作这个 app ，不阻塞用户使用电脑。",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-e60ba8ce684af51b",
+        "id": "cn-it-91fb63e16862cdb5",
         "category": "cn",
-        "title": "特斯拉在印度市场交付超一年，仅注册不到 1000 辆汽车",
-        "url": "https://www.ithome.com/1/010/111.htm",
+        "title": "AMD 股价创历史新高！CEO 苏姿丰称 AI 芯片需求非常旺盛，将持续大幅扩产",
+        "url": "https://www.ithome.com/1/010/114.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-06T14:20:44.000Z",
-        "summary": "IT之家 10 月 6 日消息，据 electrek 报道，根据印度电动汽车刊物 ElecTree 汇总的注册数据，特斯拉自 2025 年 9 月在印度开始交付以来， 仅注册了 993 辆汽车 。 上述数据覆盖了 2025 年 9 月至 2026 年 9 月共 13 个自然月；若严格按前 12 个自然月计算，特斯拉交付第一年的新车总注册量仅为 699 辆。鉴于特斯拉官方并不按国家单独披露销售明细，注册量已是最接近真实销量的数据参考。 2025 年 7 月，特斯拉正式进军印度…",
+        "publishedAt": "2026-10-06T14:30:54.000Z",
+        "summary": "IT之家 10 月 6 日消息，AMD 盘初涨近 3%，报 649.88 美元 （IT之家注：现汇率约合 4,364 元人民币） ， 创历史新高 ，市值达 1.06 万亿美元 （现汇率约合 7.12 万亿元人民币） 。 开盘后 AMD 股价有所回落，目前涨超 2%，报 646.48 美元 （现汇率约合 4,335 元人民币）。 AMD CEO 苏姿丰今日在受访时表示，2026 年整体运算市场需求极为强劲，AMD 虽已同步扩充产能，但当前需求依然远高于供给。面对供不应求的现况…",
         "badge": "IT之家"
       },
       {
@@ -436,24 +436,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-02"
       },
       {
-        "id": "ai-google-deepmind-68ead6b6af2b7144",
+        "id": "ai-google-deepmind-34692efacd3b982a",
         "category": "ai",
-        "title": "Advancing Private AI Compute with secure, server-side memory",
-        "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+        "title": "Introducing Gemini 3.8 Live with Live Avatar",
+        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-23T16:00:57.000Z",
-        "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+        "publishedAt": "2026-09-24T16:20:39.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49978563",
+        "id": "hn-49983791",
         "category": "dev",
-        "title": "Tapo (Rust/Python library) now speaks TP-Link's TPAP protocol",
-        "url": "https://mihai.dinculescu.dev/posts/tapo-speaks-tpap/",
+        "title": "OpenSSH 10.6",
+        "url": "https://www.openssh.org/releasenotes.html#10.6",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T13:55:37.000Z",
+        "publishedAt": "2026-10-06T20:41:39.000Z",
         "badge": "HN",
-        "signal": "81 分 · 25 评论"
+        "signal": "33 分 · 2 评论"
       },
       {
         "id": "cn-baidu-eea466c8bb54349c",
@@ -463,18 +462,18 @@
         "source": "百度热搜",
         "summary": "10月6日，央视新闻披露缅北电诈覆灭纪实，明家案系首次对境外武装跨国犯罪集团实施完整司法管辖。该案涉电诈及赌资近290亿元，16名受害者遗体仅找回5具尸体与1份骨灰。",
         "badge": "热搜",
-        "signal": "7,523,505 热度"
+        "signal": "7,519,996 热度"
       },
       {
-        "id": "github-advisory-ghsa-vc4h-q48j-5hcx",
+        "id": "github-advisory-ghsa-8r29-2mp2-pmrw",
         "category": "security",
-        "title": "Payload: Field access control bypass on auth collections",
-        "url": "https://github.com/advisories/GHSA-vc4h-q48j-5hcx",
+        "title": "Payload Ecommerce has an order confirmation validation issue",
+        "url": "https://github.com/advisories/GHSA-8r29-2mp2-pmrw",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:17:23.000Z",
-        "summary": "## Impact Payload's duplicate operation copies field values from the source document even when a field is hidden, or its `access.read` or `access.create` rule would reject the value for that caller. The `disableDuplicate` collection settin…",
-        "badge": "CVE-2026-105851",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-10-06T16:17:54.000Z",
+        "summary": "## Impact When using the Stripe payment adapter, an order confirmation could be processed more than once under certain conditions. You are affected if: - You use `@payloadcms/plugin-ecommerce` with the Stripe payment adapter. Deployments t…",
+        "badge": "CVE-2026-105850",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-56c490db040147f1",
@@ -486,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246590",
+        "id": "v2ex-1246548",
         "category": "dev",
-        "title": "codex 的电脑控制用的是什么技术？",
-        "url": "https://www.v2ex.com/t/1246590",
+        "title": "codex 正在思考",
+        "url": "https://www.v2ex.com/t/1246548",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-06T02:01:46.000Z",
-        "summary": "在 macos 右上角菜单栏有个电脑的图标，图标右下角有个小人头像。 在被控制的 app 左上角也有显示这个图标； 可以在后台操作这个 app ，不阻塞用户使用电脑。",
+        "publishedAt": "2026-10-05T14:37:47.000Z",
+        "summary": "现在是 10 月 5 号 22:37 ，codex 一直处在正在思考的状态，是不是出啥问题了？",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "5 回复"
       }
     ]
   },
@@ -511,7 +510,7 @@
         "url": "https://github.com/tester-army/e2e",
         "description": "Next generation e2e testing framework for web and mobile apps.",
         "language": "TypeScript",
-        "stars": 5938,
+        "stars": 6172,
         "starsToday": 1720
       },
       {
@@ -521,7 +520,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 277818,
+        "stars": 278037,
         "starsToday": 972
       },
       {
@@ -531,7 +530,7 @@
         "url": "https://github.com/earthtojake/text-to-cad",
         "description": "Give your agent CAD superpowers.",
         "language": "Python",
-        "stars": 17823,
+        "stars": 17917,
         "starsToday": 620
       },
       {
@@ -541,7 +540,7 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 5820,
+        "stars": 6287,
         "starsToday": 943
       },
       {
@@ -551,7 +550,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design language that makes your AI harness better at design.",
         "language": "JavaScript",
-        "stars": 77522,
+        "stars": 77622,
         "starsToday": 609
       },
       {
@@ -561,7 +560,7 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 97005,
+        "stars": 97105,
         "starsToday": 536
       },
       {
@@ -571,7 +570,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 54248,
+        "stars": 54337,
         "starsToday": 318
       },
       {
@@ -581,7 +580,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 7910,
+        "stars": 8808,
         "starsToday": 2963
       },
       {
@@ -591,7 +590,7 @@
         "url": "https://github.com/deepseek-ai/DeepGEMM",
         "description": "DeepGEMM: clean and efficient BLAS kernel library on GPU",
         "language": "Cuda",
-        "stars": 8623,
+        "stars": 8666,
         "starsToday": 363
       },
       {
@@ -601,10 +600,10 @@
         "url": "https://github.com/msitarzewski/agency-agents",
         "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
         "language": "Shell",
-        "stars": 157672,
+        "stars": 157757,
         "starsToday": 621
       }
     ],
-    "updatedAt": "2026-10-06T17:11:47.410Z"
+    "updatedAt": "2026-10-06T21:38:06.699Z"
   }
 }
