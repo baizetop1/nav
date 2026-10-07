@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-07T08:40:29.921Z",
+  "generatedAt": "2026-10-07T16:29:47.091Z",
   "intelligence": {
-    "updatedAt": "2026-10-07T08:40:29.921Z",
+    "updatedAt": "2026-10-07T16:29:47.091Z",
     "items": [
       {
-        "id": "cn-item-518f3b482853d00b",
+        "id": "cn-item-353555e2c305e827",
         "category": "cn",
-        "title": "南京大屠杀幸存者郭秀兰去世 在册在世幸存者仅剩20人",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708718.shtml",
+        "title": "韩国“世界”号运载火箭第五次发射取得成功",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-07/10708815.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-07T08:18:06.000Z",
-        "summary": "中新社南京10月7日电 据侵华日军南京大屠杀遇难同胞纪念馆10月7日消息，南京大屠杀幸存者郭秀兰于当日在家中去世，享年94岁。",
+        "publishedAt": "2026-10-07T12:59:27.000Z",
+        "summary": "中新社首尔10月7日电 (记者 金旭)据韩国宇宙航空厅当地时间7日消息，韩国自主研制的运载火箭“世界”号第五次发射取得成功。此次发射搭载的5颗对地观测卫星均已与地面完成首次通信。",
         "badge": "中新网要闻"
       },
       {
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-10-07"
       },
       {
-        "id": "ai-openai-2896758265cec81d",
+        "id": "ai-openai-661f64ddb5f472a2",
         "category": "ai",
-        "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
-        "url": "https://openai.com/index/atlassian-partnership",
+        "title": "Helping teens learn, plan, and shape the future of AI",
+        "url": "https://openai.com/index/teens-learn-and-plan",
         "source": "OpenAI",
-        "publishedAt": "2026-10-06T16:00:00.000Z",
-        "summary": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help teams plan, build, and deliver work.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-49984923",
+        "id": "hn-49994027",
         "category": "dev",
-        "title": "Sharing AI progress in mathematics",
-        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+        "title": "GitHub Incident with Git Operations, Pull Requests and Actions",
+        "url": "https://www.githubstatus.com/incidents/djlmxz2zd0j7",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T22:17:21.000Z",
+        "publishedAt": "2026-10-07T15:17:23.000Z",
         "badge": "HN",
-        "signal": "867 分 · 781 评论"
+        "signal": "134 分 · 96 评论"
       },
       {
-        "id": "cn-it-e20623387975e3b9",
+        "id": "cn-it-ba3c2e9a3760808a",
         "category": "cn",
-        "title": "Spotify 有声书功能将在年内扩展至超 180 个市场，覆盖超 120 种语言",
-        "url": "https://www.ithome.com/1/010/229.htm",
+        "title": "今日寒露：天҈要҈凉҈了҈",
+        "url": "https://www.ithome.com/1/010/305.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-07T08:37:10.000Z",
-        "summary": "IT之家 10 月 7 日消息，Spotify 当地时间今日在德国法兰克福书展上宣布，其有声书 (Audiobooks) 功能将在 2026 年内大幅扩展覆盖范围。 Spotify 有声书当前仅在 22 个市场提供，而在年内 其将扩展到超过 180 个市场 ；语言种类也得到极大丰富，支持西班牙语、葡萄牙语、意大利语、波兰语等逾 120 种语言；潜在总触达用户总数突破 7.5 亿人。 为进一步改进用户的有声书使用体验，Spotify 宣布为 Page Match 内容位置匹配…",
+        "publishedAt": "2026-10-07T16:00:10.000Z",
+        "summary": "IT之家 10 月 8 日消息，今天是二十四节气中的寒露， 寒露通常会在每年的 10 月 7 日至 10 月 9 日这几天 ，寒露的到来表示秋季的正式结束。寒露之后，气候从凉爽到寒冷，此节气中，南岭及以北的广大地区均已进入秋季，目前，北方大部分地区都已经入秋，东北、西北、西南等地已经进入冬季。 此时节，荷败蝉噤，桐残叶黄，千里霜铺，鸿雁南归，呈现出一派深秋景象。由于“寒露”是气候从凉爽到寒冷的过渡和转折，相对于“白露”而言，“寒露”期间气候更凉，气温更低，标志着深秋来临。“…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-6r3q-mjv7-xr8m",
+        "id": "github-advisory-ghsa-p75x-jh7p-ppcx",
         "category": "security",
-        "title": "Coraza: Silent argument drop at ArgumentLimit allows bypass of ARGS-targeted rules via parameter flooding",
-        "url": "https://github.com/advisories/GHSA-6r3q-mjv7-xr8m",
+        "title": "Backstage: Bypass of MkDocs configuration sanitizer in TechDocs backend",
+        "url": "https://github.com/advisories/GHSA-p75x-jh7p-ppcx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T20:38:03.000Z",
-        "summary": "## Root Cause File: `internal/corazawaf/transaction.go`, lines 770–808 (since commit 2fd87b89, PR #812, 2023-06-14) ```go func (tx *Transaction) AddGetRequestArgument(key string, value string) { if tx.checkArgumentLimit(tx.variables.argsGe…",
-        "badge": "CVE-2026-41510",
-        "signal": "HIGH · CVSS 7.2"
+        "publishedAt": "2026-10-07T16:23:52.000Z",
+        "summary": "### Impact Users with the ability to commit changes to a repository that uses TechDocs can circumvent the MkDocs configuration file sanitizer introduced in response to CVE-2026-25153 and execute arbitrary code on the TechDocs backend host …",
+        "badge": "CVE-2026-106505",
+        "signal": "HIGH · CVSS 7.7"
       },
       {
         "id": "ai-google-deepmind-c11a83f73b42d756",
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1246779",
+        "id": "v2ex-1246843",
         "category": "dev",
-        "title": "做了么时代即将来临",
-        "url": "https://www.v2ex.com/t/1246779",
+        "title": "阿里云那个权益活动页面， 99 权益之类的产品点击购买无法点击",
+        "url": "https://www.v2ex.com/t/1246843",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-07T07:58:57.000Z",
-        "summary": "开发门槛大幅降低，真正的全民制作人，大做了么时代即将来临。",
+        "publishedAt": "2026-10-07T14:32:39.000Z",
+        "summary": "谁能说说 MacOS 上我不管用 Safari 还是 chrome 都无法点击阿里云权益活动页面里的产品购买按钮吗？查看 console 里面一堆错误，那个购买按钮一直无法触发。",
         "badge": "程序员",
         "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-407c46d15ca4ff14",
+        "id": "cn-baidu-4d970025e8fa7fcb",
         "category": "cn",
-        "title": "王星4天被卖3次",
-        "url": "https://www.baidu.com/s?wd=%E7%8E%8B%E6%98%9F4%E5%A4%A9%E8%A2%AB%E5%8D%963%E6%AC%A1&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "孙颖莎爆冷1-3不敌泰国选手",
+        "url": "https://www.baidu.com/s?wd=%E5%AD%99%E9%A2%96%E8%8E%8E%E7%88%86%E5%86%B71-3%E4%B8%8D%E6%95%8C%E6%B3%B0%E5%9B%BD%E9%80%89%E6%89%8B&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月5日至7日，纪录片披露演员王某案详细案情。此前，2025年1月初，王某被微信名为“颜十六”的人以赴泰拍戏为由骗至泰国，随后被挟持偷渡至缅甸妙瓦底。短短4天内，王某被转卖3次。",
+        "summary": "10月7日，中国大满贯女单第二轮中，孙颖莎1-3爆冷不敌帕拉南出局，世界第1被世界第101淘汰。",
         "badge": "热搜",
-        "signal": "7,808,192 热度"
+        "signal": "7,808,282 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -108,74 +108,74 @@
         "signal": "已遭利用 · 整改期限 2026-10-05"
       },
       {
-        "id": "ai-hugging-face-fe424883c3cacf66",
+        "id": "ai-hugging-face-67f5f61696a2949d",
         "category": "ai",
-        "title": "Falcon-Emirati: When an LLM Learns the Dialect, the Culture, and the Nuance",
-        "url": "https://huggingface.co/blog/tiiuae/falcon-emirati",
+        "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-06T06:44:39.000Z",
+        "publishedAt": "2026-10-07T12:45:31.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49987076",
+        "id": "hn-49991227",
         "category": "dev",
-        "title": "Strands Decider 2B: a small, open-source, decision model",
-        "url": "https://strandsagents.com/blog/introducing-strands-decider/",
+        "title": "Shipping JPEG XL in Chrome",
+        "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
         "source": "Hacker News",
-        "publishedAt": "2026-10-07T02:02:11.000Z",
+        "publishedAt": "2026-10-07T11:25:02.000Z",
         "badge": "HN",
-        "signal": "160 分 · 38 评论"
+        "signal": "324 分 · 190 评论"
       },
       {
-        "id": "cn-item-ba1b0c1d6d2b32e0",
+        "id": "cn-item-9e2e6a466a1e2ad3",
         "category": "cn",
-        "title": "在泰失联的上海音乐教师已安全回国",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708715.shtml",
+        "title": "票房超11.5亿元 2026年中国电影国庆档收官",
+        "url": "https://www.chinanews.com.cn/cul/2026/10-07/10708811.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-07T07:48:07.000Z",
-        "summary": "中国驻泰国大使馆发言人7日表示，此前在泰国曼谷失联的上海音乐教师已于近日安全返回上海。",
+        "publishedAt": "2026-10-07T12:57:49.000Z",
+        "summary": "中新社北京10月7日电 (记者 高凯)据灯塔专业版数据，截至北京时间10月7日19时30分，2026年中国内地电影国庆档(10月1日至7日)总票房(含预售)达11.51亿元(人民币，下同)，观影人次3163.18万，放映场次329.06万场，平均票价36.4元。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-mc52-mwq4-vfx3",
+        "id": "github-advisory-ghsa-8w7q-29mw-gf5c",
         "category": "security",
-        "title": "knowns OS Command Injection via Insecure LSP Binary Path Config in .knowns/config.json",
-        "url": "https://github.com/advisories/GHSA-mc52-mwq4-vfx3",
+        "title": "Backstage: Improper validation of MkDocs theme configuration in TechDocs",
+        "url": "https://github.com/advisories/GHSA-8w7q-29mw-gf5c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T18:58:38.000Z",
-        "summary": "## Overview A critical **Arbitrary Code Execution (ACE)** vulnerability exists in the Knowns Language Server Protocol (LSP) detection and startup pipeline. The system blindly trusts the `settings.lsp.languages. .binary` field defined in th…",
-        "badge": "CVE-2026-86540",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-10-07T16:23:30.000Z",
+        "summary": "### Impact When TechDocs is configured to build documentation locally or in a container, a user with write access to a registered repository can include configuration values in `mkdocs.yml` that cause arbitrary code execution during the do…",
+        "badge": "CVE-2026-106509",
+        "signal": "HIGH · CVSS 7.7"
       },
       {
-        "id": "ai-openai-ebb413cc5359756b",
+        "id": "ai-openai-2896758265cec81d",
         "category": "ai",
-        "title": "How Jump Trading is scaling quant research with ChatGPT",
-        "url": "https://openai.com/index/jump-trading",
+        "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+        "url": "https://openai.com/index/atlassian-partnership",
         "source": "OpenAI",
-        "publishedAt": "2026-10-06T12:00:00.000Z",
-        "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
+        "publishedAt": "2026-10-06T16:00:00.000Z",
+        "summary": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help teams plan, build, and deliver work.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246777",
+        "id": "v2ex-1246841",
         "category": "dev",
-        "title": "最强文件传输助手「虾传」重构上线",
-        "url": "https://www.v2ex.com/t/1246777",
+        "title": "Cordis 的坑与账-DeepSeek Harness 运行时拿它当底座",
+        "url": "https://www.v2ex.com/t/1246841",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-07T07:41:52.000Z",
-        "summary": "虽然有点自吹自擂，但是确实现在最新版虾传在我心中是最强的，从最初开发“闪电藤”，到现在虾传也二次重构，现在已经初步能够让我满意，虽然 UI 上还差点意思，但后面会慢慢优化起来的。 局域网自动发现+互传 广域网传输，多 s3 源+webdav 免登录即可打通单向网络，无需关闭防火墙，无需担心上下游特殊路由场景 断点续传 接收不再中转，直接落到外部目标存储目录 速度打满带宽 全平台支持，包括安卓、iOS 、鸿蒙、windows 、Mac 和网页 突出说几个特性，首先是我们提供了…",
+        "publishedAt": "2026-10-07T14:27:42.000Z",
+        "summary": "坑是陷人的地方，账是未来要承担的后果。 读不完的话（估计很少有人会读完的）：第 2 节讲它真正做了什么（其实只有一个栈），第 4 节讲它哪里长错了，第 8 节讲你该不该用。 0. 两个主角 被评估的：Cordis Koishi 聊天机器人框架的内核，后来 DeepSeek 的 DSH （ DeepSeek Harness ，Agent 运行时）拿它当底座。 类型上是 插件元框架 ：本身不含任何业务能力，只管插件怎么装进一个长期运行的进程、怎么互相依赖、怎么卸载。Koishi…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-aa9bdddf1a3a8eb3",
+        "id": "cn-it-cc03b09e83fdd771",
         "category": "cn",
-        "title": "雷蛇幻影战狼 V4 系列手柄发布：最高 8K 轮询率、支持 XBOX / PC 平台",
-        "url": "https://www.ithome.com/1/010/228.htm",
+        "title": "余承东称华为自 2019 年以来为生存克服了许多困难，基本摆脱美国技术依赖",
+        "url": "https://www.ithome.com/1/010/304.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-07T08:29:29.000Z",
-        "summary": "IT之家 10 月 7 日消息，雷蛇昨日宣布推出幻影战狼 V4 系列游戏手柄。新品专为发烧电竞玩家打造，包含幻影战狼 V4 专业版、幻影战狼 V4 竞技版，适配 XBOX / PC 平台。 据介绍，幻影战狼 V4 专业版搭载电容式摇杆，拥有四个磁吸可更换背键， 在 PC 平台下最高轮询率可达 8000Hz （IT之家注：XBOX 为 250Hz），为竞技玩家在 FPS、赛车游戏提供旗舰手感。 规格方面，该系列手柄采用非对称式摇杆布局， 拥有全新电容式摇杆 ，相比 TMR 和…",
+        "publishedAt": "2026-10-07T15:37:27.000Z",
+        "summary": "IT之家 10 月 7 日消息，华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东在 9 月 29 日的国际媒体圆桌会议上透露，为了生存，华为自 2019 年以来克服了许多困难 —— 依靠自主技术和能力，与国内供应链合作制造先进芯片、设计自己的操作系统、自主开发基础工具和软件，逐步建立起国内供应链。 他表示，2023 年，华为才重新开始在国内制造智能手机所使用的芯片。 余承东坦言，依靠这些芯片、鸿蒙操作系统，以及中国国内的供应链、材料和工艺制程， 华为基本摆脱了…",
         "badge": "IT之家"
       },
       {
@@ -199,35 +199,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49984025",
+        "id": "hn-49994145",
         "category": "dev",
-        "title": "Decisions API is in public beta",
-        "url": "https://developers.openai.com/api/docs/guides/decisions",
+        "title": "Navier–Stokes Lost in Translation",
+        "url": "https://arxiv.org/abs/2610.08144",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T20:57:25.000Z",
+        "publishedAt": "2026-10-07T15:24:38.000Z",
         "badge": "HN",
-        "signal": "272 分 · 130 评论"
+        "signal": "22 分 · 5 评论"
       },
       {
-        "id": "cn-baidu-c963f30a946c7996",
+        "id": "cn-baidu-2350c305234cded7",
         "category": "cn",
-        "title": "吴奇隆 不赚钱也是这个立场",
-        "url": "https://www.baidu.com/s?wd=%E5%90%B4%E5%A5%87%E9%9A%86+%E4%B8%8D%E8%B5%9A%E9%92%B1%E4%B9%9F%E6%98%AF%E8%BF%99%E4%B8%AA%E7%AB%8B%E5%9C%BA&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "上3休1再上5休2",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%8A3%E4%BC%911%E5%86%8D%E4%B8%8A5%E4%BC%912&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "继国庆在天安门手持国旗之后，吴奇隆又晒出爬长城、游览天坛的视频。他坚持称 “我们国家”，并回复网友：不赚钱也是这个立场。",
+        "summary": "10月7日为国庆假期最后一天。8日起，打工人需按“上3休1再上5休2”出勤，记得调整闹钟。随着国庆结束，今年法定节假日已全部结束，下一个假期需等到2027年元旦。",
         "badge": "热搜",
-        "signal": "7,711,967 热度"
+        "signal": "7,713,825 热度"
       },
       {
-        "id": "github-advisory-ghsa-fx49-4h83-wjv9",
+        "id": "github-advisory-ghsa-f7v3-xhm6-w245",
         "category": "security",
-        "title": "Payload didn't enforce field-level password update restrictions",
-        "url": "https://github.com/advisories/GHSA-fx49-4h83-wjv9",
+        "title": "Backstage has improper input validation in TechDocs Markdown extension configuration",
+        "url": "https://github.com/advisories/GHSA-f7v3-xhm6-w245",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:21:52.000Z",
-        "summary": "## Impact When an auth collection defined a field-level access.update restriction on the password field, the restriction was not enforced on the server correctly. ## Patches Users should upgrade Payload packages to `>= 3.90.0` or `>= 4.0.0…",
-        "badge": "CVE-2026-105855",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-07T16:22:58.000Z",
+        "summary": "### Impact An authenticated user who can register or modify documentation sources may cause a TechDocs build to access resources outside the intended documentation boundary. Depending on deployment configuration, this may expose sensitive …",
+        "badge": "CVE-2026-106557",
+        "signal": "HIGH · CVSS 7.7"
       },
       {
         "id": "ai-hugging-face-bd1136d0fcfd6f13",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1246774",
+        "id": "v2ex-1246836",
         "category": "dev",
-        "title": "分享一个 Claude Opus 5.5 可视化案例精选仓库（114 精选 / 1019 全量 + 提示词）",
-        "url": "https://www.v2ex.com/t/1246774",
+        "title": "asc-cli 技能手册",
+        "url": "https://www.v2ex.com/t/1246836",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-07T07:17:19.000Z",
-        "summary": "刷 X 上 Opus 5.5 的游戏 / 3D / 动效 / 讲解视频太散了，这位作者整理了一份 awesome 清单： github.com 从约 1019 条真实帖子里手挑 114 个最值得看的 分类：游戏、动效、Three.js 、Blender 、讲解动画、交互可视化、Agent 工作流、同题对比等 能找到的提示词也收了（有完整 prompt 可直接跑） 在线画廊可搜可筛可播： xianyu110.github.io 顶流大概是：相机对焦实验室（ 1.6 万赞级）、…",
+        "publishedAt": "2026-10-07T13:58:20.000Z",
+        "summary": "每天都在用 asc-cli ，本地化、更新日志、创建商品都靠它，因此做了个中文使用场景的网站，欢迎指正和补充。 https://ascskill.wiki/zh-CN",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-item-fa3cd30c6d13686b",
+        "id": "cn-item-f81ac2413d76fa16",
         "category": "cn",
-        "title": "访中国海军遵义舰：迈向深蓝新长征",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-07/10708713.shtml",
+        "title": "中国乒协：将推动建立赛场禁入名单制度",
+        "url": "https://www.chinanews.com.cn/ty/2026/10-07/10708795.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-07T07:45:33.000Z",
-        "summary": "中新社海南三亚10月7日电 题：访中国海军遵义舰：迈向深蓝新长征",
+        "publishedAt": "2026-10-07T12:14:20.000Z",
+        "summary": "新华社北京10月7日电#8195;中国乒乓球协会7日发布关于抵制极端球迷越界行为的声明，表示坚决维护教练员、运动员合法权益，下一步将推动建立赛场禁入名单制度，加强现场秩序维护。声明全文如下：",
         "badge": "中新网要闻"
       },
       {
@@ -271,6 +271,47 @@
         "signal": "已遭利用 · 整改期限 2026-10-04"
       },
       {
+        "id": "ai-openai-ebb413cc5359756b",
+        "category": "ai",
+        "title": "How Jump Trading is scaling quant research with ChatGPT",
+        "url": "https://openai.com/index/jump-trading",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-06T12:00:00.000Z",
+        "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-49990224",
+        "category": "dev",
+        "title": "A font recreated from photographs of classic Commodore 64 keycaps",
+        "url": "https://github.com/szabadkai/c64-keyboard-font/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-07T09:17:55.000Z",
+        "badge": "HN",
+        "signal": "271 分 · 48 评论"
+      },
+      {
+        "id": "cn-it-4783a113e8ec066c",
+        "category": "cn",
+        "title": "传三星电子 12Hi HBM4E 内存已通过英伟达等主要客户质量验证测试",
+        "url": "https://www.ithome.com/1/010/303.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-07T15:35:14.000Z",
+        "summary": "IT之家 10 月 7 日消息，《韩国经济日报》当地时间今日报道称，三星电子存储器业务的 12 层堆叠 HBM4E 内存已于 9 月末通过 NVIDIA（英伟达）和主要超大规模数据中心企业的质量验证测试， 各客户的供货量、合同规模、出货时间尚未敲定 。 三星电子此前在今年 5 月实现了 12Hi HBM4E 产品的出样。其结合了 1c nm DRAM Die 与 4nm Logic Die，单堆栈容量达 48GB， 支持 14~16Gbps 引脚速率 ，实现 16% 能效提…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-4ww4-68q3-h7g5",
+        "category": "security",
+        "title": "Payload: Field-level write access bypass in Payload on MongoDB",
+        "url": "https://github.com/advisories/GHSA-4ww4-68q3-h7g5",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-07T16:19:57.000Z",
+        "summary": "### Impact A vulnerability in field-level access control could allow an authenticated user to modify fields they are not permitted to change on documents they can otherwise update. You are affected if: Payload version < `3.87.0` (or a `4.0…",
+        "badge": "CVE-2026-106100",
+        "signal": "HIGH · CVSS 7.1"
+      },
+      {
         "id": "ai-google-deepmind-c696e8b1f3422473",
         "category": "ai",
         "title": "Introducing SynthID Bio",
@@ -281,65 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49987858",
+        "id": "v2ex-1246808",
         "category": "dev",
-        "title": "The art of defusing a second world war bomb",
-        "url": "https://www.theguardian.com/news/ng-interactive/2026/oct/06/it-could-knock-a-whole-street-down-the-art-of-defusing-a-second-world-war-bomb",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-07T03:43:14.000Z",
-        "badge": "HN",
-        "signal": "45 分 · 15 评论"
-      },
-      {
-        "id": "cn-it-846b11be8f88135e",
-        "category": "cn",
-        "title": "荣耀 Magic9 全系列支持红外功能，Pro Max 搭载独有「360° 红外遥控增强」技术",
-        "url": "https://www.ithome.com/1/010/227.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-07T08:28:45.000Z",
-        "summary": "IT之家 10 月 7 日消息，荣耀研发工程师 @荣耀曹工 昨日发文，解答了关于 Magic9 系列手机（手机顶部没有红外发射的开孔）是否支持红外遥控这一问题。他表示： 荣耀 Magic9 全系列都支持红外的功能： ① 荣耀 Magic9 Pro Max 搭载的荣耀独有的「360° 红外遥控增强」 实现遥控全角度覆盖，无需对准即可自由遥控。 ② 荣耀 Magic9 和 荣耀 Magic9 超能版 把红外遥控放在相机模组， 不需要像以前手机那样把顶部对着电视、空调设备 ，正常…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-2g7p-5934-q4w7",
-        "category": "security",
-        "title": "Payload: ReDoS in Multipart Content-Type Validation",
-        "url": "https://github.com/advisories/GHSA-2g7p-5934-q4w7",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:18:27.000Z",
-        "summary": "## Impact A malformed multipart request body could take an extremely long time to finish. ## Patches Users should upgrade Payload packages to `>= 3.90.0` or `>= 4.0.0-canary.34`.",
-        "badge": "CVE-2026-105854",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-hugging-face-e81b1dea7ce0fb42",
-        "category": "ai",
-        "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
-        "url": "https://huggingface.co/blog/allenai/astabrief",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-02T15:19:50.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1246766",
-        "category": "dev",
-        "title": "Google AI studio BAN 的 IP 库和 antigravity 不一样？",
-        "url": "https://www.v2ex.com/t/1246766",
+        "title": "我有个很缺德的想法",
+        "url": "https://www.v2ex.com/t/1246808",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-07T06:33:47.000Z",
-        "summary": "之前用的美国节点 IP ，能用 Google AI studio ，但是 antigravity 返回 LOCATION 错误。 今天节点好像更新了，倒反天罡，antigravity 能用，但是 Google AI studio 提示 location 不支持了。 太费劲了，难道 IP 库你们也不弄一套统一的吗？拆尼斯用户太难了",
+        "publishedAt": "2026-10-07T10:59:01.000Z",
+        "summary": "做个 web 放到暗网上 每天记录拉的屎的照片 留个收款码，满 100 美金网站下线 24 小时",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "26 回复"
       },
       {
-        "id": "cn-baidu-61c864285446acd7",
+        "id": "cn-baidu-6e5bb4ce5e22435d",
         "category": "cn",
-        "title": "大国工程重器进度条刷新",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%A7%E5%9B%BD%E5%B7%A5%E7%A8%8B%E9%87%8D%E5%99%A8%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%88%B7%E6%96%B0&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国新能源跑出四个“全球第一”",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%96%B0%E8%83%BD%E6%BA%90%E8%B7%91%E5%87%BA%E5%9B%9B%E4%B8%AA%E2%80%9C%E5%85%A8%E7%90%83%E7%AC%AC%E4%B8%80%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "国庆假期，我国能源、基建、应急救援等多个领域传来好消息：大国重器接连突破，多项“首个”“首次”上新，多个重大交通项目迎来建设新进展……戳图看，为每一项突破喝彩，致敬每一位建设者！",
+        "summary": "目前，中国新能源产业体系已完全建立，跑出四个“全球第一”。关键核心技术是要不来、买不来、讨不来的。穿越九十年，坚持独立自主、实事求是的精神，仍是中国新能源攻艰克难、行稳致远的制胜法宝。",
         "badge": "热搜",
-        "signal": "7,616,817 热度"
+        "signal": "7,617,386 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76504",
@@ -353,74 +354,74 @@
         "signal": "已遭利用 · 整改期限 2026-10-03"
       },
       {
-        "id": "ai-openai-f57eff9c23a4454b",
+        "id": "ai-hugging-face-e81b1dea7ce0fb42",
         "category": "ai",
-        "title": "Advancing computer use with Ironclad",
-        "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-06T10:00:00.000Z",
-        "summary": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
-        "badge": "OpenAI"
+        "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
+        "url": "https://huggingface.co/blog/allenai/astabrief",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-02T15:19:50.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-49977979",
+        "id": "hn-49993857",
         "category": "dev",
-        "title": "Mistral Large 4",
-        "url": "https://mistral.ai/news/mistral-large-4/\\",
+        "title": "Animated ASCII Art for Web Pages",
+        "url": "https://ascii.rest/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T13:15:49.000Z",
+        "publishedAt": "2026-10-07T15:05:37.000Z",
         "badge": "HN",
-        "signal": "1778 分 · 1051 评论"
+        "signal": "38 分 · 3 评论"
       },
       {
-        "id": "cn-item-94badf11ba02408b",
+        "id": "cn-item-539c94ca63792ec2",
         "category": "cn",
-        "title": "俄罗斯总统助理、海事委员会主席帕特鲁舍夫将访华",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-07/10708702.shtml",
+        "title": "10月6日全社会跨区域人员流动量30346.0万人次",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708788.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-07T07:16:12.000Z",
-        "summary": "外交部发言人宣布：",
+        "publishedAt": "2026-10-07T11:53:05.000Z",
+        "summary": "中新网10月7日电 据“交通运输部”微信公众号消息，2026年10月6日(国庆假期第6日)，全社会跨区域人员流动量30346.0万人次，环比增长0.04%，比2025年同期(10月7日，中秋国庆假期第7日，下同)下降1.9%。其中：",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-238x-w2j9-gwwr",
+        "id": "github-advisory-ghsa-v76p-62qx-wwq2",
         "category": "security",
-        "title": "Payload vulnerable to API key disclosure through ordinary document reads",
-        "url": "https://github.com/advisories/GHSA-238x-w2j9-gwwr",
+        "title": "ImageSharp: Tiled fax TIFF: tile buffer sized by TileWidth but fax decompressor writes scanlines of ImageWidth — heap OOB write",
+        "url": "https://github.com/advisories/GHSA-v76p-62qx-wwq2",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:18:16.000Z",
-        "summary": "### Impact Users with read access to other user documents could access their active API keys. An exposed key grants the target account’s permissions until rotated or disabled. You are affected if: - An authentication collection enables `us…",
-        "badge": "CVE-2026-105849",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-07T16:18:57.000Z",
+        "summary": "## Summary When decoding a tiled TIFF with fax compression (T4/T6/MH), `DecodeTilesChunky` allocates each tile buffer from **TileWidth** (`ceil(TileWidth*bpp/8)*TileLength` bytes) but constructs the fax decompressor with **frame.Width**: `…",
+        "badge": "CVE-2026-106118",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-google-deepmind-34692efacd3b982a",
+        "id": "ai-openai-00427e47df5ef306",
         "category": "ai",
-        "title": "Introducing Gemini 3.8 Live with Live Avatar",
-        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-24T16:20:39.000Z",
-        "badge": "Google DeepMind"
+        "title": "Sharing AI progress in mathematics",
+        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-06T12:00:00.000Z",
+        "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
+        "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1246725",
+        "id": "v2ex-1246795",
         "category": "dev",
-        "title": "PerimeterX 的按压验证咋这么牛?",
-        "url": "https://www.v2ex.com/t/1246725",
+        "title": "有人订阅 open-design 的 ai plan 吗？",
+        "url": "https://www.v2ex.com/t/1246795",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-07T01:46:56.000Z",
-        "summary": "配合 ai 搞了半个月了还没过,太难了!",
+        "publishedAt": "2026-10-07T08:51:33.000Z",
+        "summary": "7 刀套餐和 opencode go 还有 command code goat 差不多，支持 API 调用价格更便宜，14 刀套餐多了 ai image 相关的调用。搜了下好像没什么热度，有没有用过的 v 友聊聊靠不靠谱。 https://open-design.ai/pricing/",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-204769110d908681",
+        "id": "cn-it-47497fbad35fd390",
         "category": "cn",
-        "title": "2026 诺贝尔物理学奖得主哈尔岑回应获奖：是一种“如释重负”，过去每年 10 月都因未获奖而愧对合作者",
-        "url": "https://www.ithome.com/1/010/226.htm",
+        "title": "索尼两款新设备获 Wi-Fi 联盟认证，预计为新款 PS Portal 串流掌机",
+        "url": "https://www.ithome.com/1/010/302.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-07T08:27:46.000Z",
-        "summary": "IT之家 10 月 7 日消息， 2026 年诺贝尔物理学奖于 10 月 6 日正式揭晓 ，授予 Francis Halzen（弗朗西斯 · 哈尔岑），表彰他“对冰立方中微子天文台（IceCube Neutrino Observatory）的决定性贡献以及发现具有天体物理起源的高能中微子”。 当地时间 10 月 6 日，美国威斯康星大学麦迪逊分校举行新闻发布会，表彰诺贝尔物理学奖新晋得主弗朗西斯 · 哈尔岑。 哈尔岑表示， 获奖并非他刻意追求的目标，但对他而言是一种“如释重…",
+        "publishedAt": "2026-10-07T15:27:28.000Z",
+        "summary": "IT之家 10 月 7 日消息，索尼两款新设备近日在 Wi-Fi 联盟完成认证，型号分别为 CFI-Y2000 和 CFI-Y2105，这些机器很可能是 PlayStation Portal 串流掌机（IT之家注：CFI-Y1001）的新款机型。 根据认证信息所述，这两款设备均支持 802.11a/b/g/n/ac，包含 2.4GHz 和 5GHz 频段， 均运行 Android 15 系统 。作为参考，PlayStation Portal 采用定制版 Android，与使…",
         "badge": "IT之家"
       },
       {
@@ -435,6 +436,45 @@
         "signal": "已遭利用 · 整改期限 2026-10-02"
       },
       {
+        "id": "ai-google-deepmind-34692efacd3b982a",
+        "category": "ai",
+        "title": "Introducing Gemini 3.8 Live with Live Avatar",
+        "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-24T16:20:39.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-49990470",
+        "category": "dev",
+        "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
+        "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-07T09:51:43.000Z",
+        "badge": "HN",
+        "signal": "205 分 · 34 评论"
+      },
+      {
+        "id": "cn-baidu-0d4b5f6274f5083b",
+        "category": "cn",
+        "title": "郑钦文晋级中网八强",
+        "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87%E6%99%8B%E7%BA%A7%E4%B8%AD%E7%BD%91%E5%85%AB%E5%BC%BA&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "badge": "热搜",
+        "signal": "7,519,763 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-jj3q-cwqj-842r",
+        "category": "security",
+        "title": "ImageSharp: CCITT fax decompression (T4/Modified Huffman): unbounded WriteBits overflows strip buffer — heap OOB write in SixLabors.ImageSharp",
+        "url": "https://github.com/advisories/GHSA-jj3q-cwqj-842r",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-07T16:18:50.000Z",
+        "summary": "## Summary When decoding a fax-compressed strip TIFF (Compression=3 / Group 3 1D, or Compression=2 / Modified Huffman), the CCITT decompressors write decoded runs through `BitWriterUtils.WriteBits/WriteBit/WriteZeroBit`, which advance and …",
+        "badge": "CVE-2026-106117",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
         "id": "ai-hugging-face-56c490db040147f1",
         "category": "ai",
         "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
@@ -444,46 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-49953939",
+        "id": "v2ex-1246791",
         "category": "dev",
-        "title": "The Legend of the Paper Crane",
-        "url": "https://mazdastories.com/en_us/inspire/paper-cranes-into-the-fold/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-04T13:49:51.000Z",
-        "badge": "HN",
-        "signal": "10 分 · 1 评论"
-      },
-      {
-        "id": "cn-baidu-b69d95e68ed01152",
-        "category": "cn",
-        "title": "佘智江被捕画面：满脸笑意 十分嚣张",
-        "url": "https://www.baidu.com/s?wd=%E4%BD%98%E6%99%BA%E6%B1%9F%E8%A2%AB%E6%8D%95%E7%94%BB%E9%9D%A2%EF%BC%9A%E6%BB%A1%E8%84%B8%E7%AC%91%E6%84%8F+%E5%8D%81%E5%88%86%E5%9A%A3%E5%BC%A0&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "据悉，妙瓦底地区的整个犯罪生态、亚太新城核心操盘者之一佘智江被捕时表现得十分嚣张，认为凭着他的人脉关系和他通过灰黑产获得的这些利益，能够完全摆平这些事情。",
-        "badge": "热搜",
-        "signal": "7,524,454 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-8r29-2mp2-pmrw",
-        "category": "security",
-        "title": "Payload Ecommerce has an order confirmation validation issue",
-        "url": "https://github.com/advisories/GHSA-8r29-2mp2-pmrw",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-06T16:17:54.000Z",
-        "summary": "## Impact When using the Stripe payment adapter, an order confirmation could be processed more than once under certain conditions. You are affected if: - You use `@payloadcms/plugin-ecommerce` with the Stripe payment adapter. Deployments t…",
-        "badge": "CVE-2026-105850",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "v2ex-1246700",
-        "category": "dev",
-        "title": "Tibo 28 天营销逻辑",
-        "url": "https://www.v2ex.com/t/1246700",
+        "title": "面向企业客户的 SaaS 系统",
+        "url": "https://www.v2ex.com/t/1246791",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-06T15:32:12.000Z",
-        "summary": "1. 用重置吸引尚未叛逃用户的每日关注，在模型处于劣于 claude 的情况之下的话题度 2. 利用其中“正常重置”以及“重置卡”到期的前后几天进行重置，兑现营销重置诺言，同时重置损失最小化 3. 利用套餐额度下调额度减半以及路由降智省下的成本，给正常功能迭代的员工发工资 可谓，一箭三雕。",
+        "publishedAt": "2026-10-07T08:35:38.000Z",
+        "summary": "我打算做一款面向企业客户的 SaaS 系统，业务是公司注册这类资料代办服务。 需求核心： 支持微信 / 手机号 / 邮箱多方式登录，完整鉴权、身份验证； 客户端可以线上提交资料、上传材料； 客户在微信里就能查看业务办理进度； 后台管理、数据库、工单管理整套基础能力； 需要部署在国内云服务器，要符合国内环境。 想请教下各位开发者，国内开发者常用、成熟的框架 / 开源 starter 有哪些？",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "4 回复"
       }
     ]
   },
@@ -494,14 +503,14 @@
     },
     "items": [
       {
-        "id": "github-cc4c678ba99719c8",
+        "id": "github-a5b6cf30f0c2b39a",
         "rank": 1,
-        "name": "tester-army/e2e",
-        "url": "https://github.com/tester-army/e2e",
-        "description": "Next generation e2e testing framework for web and mobile apps.",
+        "name": "morluto/rea",
+        "url": "https://github.com/morluto/rea",
+        "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 6719,
-        "starsToday": 1725
+        "stars": 13040,
+        "starsToday": 4666
       },
       {
         "id": "github-89e612f6ea973712",
@@ -510,90 +519,90 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 278589,
-        "starsToday": 889
-      },
-      {
-        "id": "github-97fd47923097e03f",
-        "rank": 3,
-        "name": "earthtojake/text-to-cad",
-        "url": "https://github.com/earthtojake/text-to-cad",
-        "description": "Give your agent CAD superpowers.",
-        "language": "Python",
-        "stars": 18163,
-        "starsToday": 619
+        "stars": 279163,
+        "starsToday": 1406
       },
       {
         "id": "github-2987e657c453bf43",
-        "rank": 4,
+        "rank": 3,
         "name": "boykopovar/AnyPS5",
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 7424,
-        "starsToday": 949
-      },
-      {
-        "id": "github-21fcbee2e5fa5e51",
-        "rank": 5,
-        "name": "pbakaus/impeccable",
-        "url": "https://github.com/pbakaus/impeccable",
-        "description": "The design language that makes your AI harness better at design.",
-        "language": "JavaScript",
-        "stars": 77944,
-        "starsToday": 616
-      },
-      {
-        "id": "github-1ba5bb3a805d2f64",
-        "rank": 6,
-        "name": "thedotmack/claude-mem",
-        "url": "https://github.com/thedotmack/claude-mem",
-        "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-        "language": "TypeScript",
-        "stars": 97339,
-        "starsToday": 534
+        "stars": 9185,
+        "starsToday": 2725
       },
       {
         "id": "github-32d4385133b004ff",
-        "rank": 7,
+        "rank": 4,
         "name": "ayghri/i-have-adhd",
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 54607,
-        "starsToday": 326
+        "stars": 54879,
+        "starsToday": 620
       },
       {
-        "id": "github-a5b6cf30f0c2b39a",
+        "id": "github-231c4b191ae0f4ae",
+        "rank": 5,
+        "name": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "language": "HTML",
+        "stars": 44676,
+        "starsToday": 828
+      },
+      {
+        "id": "github-1b1a194f4fbb088b",
+        "rank": 6,
+        "name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "language": "JavaScript",
+        "stars": 102542,
+        "starsToday": 453
+      },
+      {
+        "id": "github-83b72e8fbb7d5bd3",
+        "rank": 7,
+        "name": "EpicGames/raddebugger",
+        "url": "https://github.com/EpicGames/raddebugger",
+        "description": "A native, user-mode, multi-process, graphical debugger.",
+        "language": "C",
+        "stars": 7768,
+        "starsToday": 82
+      },
+      {
+        "id": "github-1ba5bb3a805d2f64",
         "rank": 8,
-        "name": "morluto/rea",
-        "url": "https://github.com/morluto/rea",
-        "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "name": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 10911,
-        "starsToday": 2956
+        "stars": 97528,
+        "starsToday": 578
       },
       {
-        "id": "github-cbc3292ffe1d9e63",
+        "id": "github-b0f68d409e372116",
         "rank": 9,
-        "name": "deepseek-ai/DeepGEMM",
-        "url": "https://github.com/deepseek-ai/DeepGEMM",
-        "description": "DeepGEMM: clean and efficient BLAS kernel library on GPU",
-        "language": "Cuda",
-        "stars": 8806,
-        "starsToday": 199
+        "name": "manaflow-ai/cmux",
+        "url": "https://github.com/manaflow-ai/cmux",
+        "description": "Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.",
+        "language": "Swift",
+        "stars": 27753,
+        "starsToday": 96
       },
       {
-        "id": "github-65e281143ae0892e",
+        "id": "github-0bb4cf3bf006d506",
         "rank": 10,
-        "name": "msitarzewski/agency-agents",
-        "url": "https://github.com/msitarzewski/agency-agents",
-        "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
-        "language": "Shell",
-        "stars": 158025,
-        "starsToday": 623
+        "name": "trycua/cua",
+        "url": "https://github.com/trycua/cua",
+        "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+        "language": "Rust",
+        "stars": 28640,
+        "starsToday": 229
       }
     ],
-    "updatedAt": "2026-10-07T08:40:29.921Z"
+    "updatedAt": "2026-10-07T16:29:47.091Z"
   }
 }
