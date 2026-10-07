@@ -55,7 +55,7 @@ try{
  // A failed disk write must show the existing unsaved-progress warning.
  {
   const {context,page,errors}=await setup(terminal());await fit(page);
-  await page.evaluate(async()=>{const {SlotStore}=await import('./js/slots.js?v=0.66.0');SlotStore.prototype.write=async()=>{throw Error('test storage full');};});
+  await page.evaluate(async()=>{const {SlotStore}=await import('./js/slots.js?v=0.68.0');SlotStore.prototype.write=async()=>{throw Error('test storage full');};});
   await page.locator('[data-battle-receipt="skip"]').click();await idle(page);
   await page.locator('#reward-result[open]').waitFor();assert.match(await page.locator('#reward-result').innerText(),/本机暂未保存/);
   assert.ok((await snapshot(page)).battle?.outcome,'saved terminal battle remains recoverable');assert.deepEqual(errors,[]);await context.close();
@@ -63,7 +63,7 @@ try{
  // A conflicting tab keeps the saved result untouched and permits recovery.
  {
   const {context,page,errors}=await setup(terminal());await fit(page);const before=await snapshot(page);
-  await page.evaluate(async()=>{const {SlotStore}=await import('./js/slots.js?v=0.66.0');const {SaveConflict}=await import('./js/save.js?v=0.66.0');SlotStore.prototype.write=async()=>{throw new SaveConflict('test conflicting tab');};});
+  await page.evaluate(async()=>{const {SlotStore}=await import('./js/slots.js?v=0.68.0');const {SaveConflict}=await import('./js/save.js?v=0.68.0');SlotStore.prototype.write=async()=>{throw new SaveConflict('test conflicting tab');};});
   await page.locator('[data-battle-receipt="skip"]').click();await idle(page);
   assert.equal(await page.locator('#battle-outcome[open],#reward-result[open]').count(),0);
   assert.deepEqual((await snapshot(page)).inventory,before.inventory);assert.ok((await snapshot(page)).battle?.outcome);

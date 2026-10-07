@@ -1,7 +1,7 @@
-import {mentorshipPlan} from './mentorship.js?v=0.66.0';
-import {away} from './progression-paths.js?v=0.66.0';
-import {attributes} from './hero.js?v=0.66.0';
-import {requireRule,journal} from './utils.js?v=0.66.0';
+import {mentorshipPlan} from './mentorship.js?v=0.68.0';
+import {away} from './progression-paths.js?v=0.68.0';
+import {attributes} from './hero.js?v=0.68.0';
+import {requireRule,journal} from './utils.js?v=0.68.0';
 export function replacementQuote(s,d,from,to){
  const valid=d.by.heroes[from]&&d.by.heroes[to],reason=!valid?'请选择两位好汉':!s.team.includes(from)?'原好汉已不在出阵队伍':s.heroes[to].status!=='owned'?'接替者尚未入寨':s.team.includes(to)?'接替者已经在阵中':away(s,from)||away(s,to)?'须先接回外派或远征好汉':s.battle||s.scheme||s.event?'先结束当前交战或际遇':'';
  const moving=s.equipment.filter(e=>e.hero===from),types=new Set(moving.map(e=>d.by.equipments[e.item].type)),returned=s.equipment.filter(e=>e.hero===to&&types.has(d.by.equipments[e.item].type));

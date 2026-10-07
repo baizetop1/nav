@@ -1,8 +1,8 @@
-import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.66.0';
-import { dispatch } from './core.js?v=0.66.0';
-export const SORTIES=['replayStart','specialStart','campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle','realmBattle','challengeStart','personalStart','ventureNext'];
+import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.68.0';
+import { dispatch } from './core.js?v=0.68.0';
+export const SORTIES=['delveStart','replayStart','specialStart','campRaid','dungeon','rotationStart','frontierAttack','affairBattle','eliteStart','chapterBattle','realmBattle','challengeStart','personalStart','ventureNext'];
 export function prepareSortie(s,d,action,setup,now=s.clock){
- const heroOnly=action.type==='replayStart'||action.type==='specialStart'||action.type==='rotationStart'&&action.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===action.id);
+ const heroOnly=action.type==='delveStart'||action.type==='replayStart'||action.type==='specialStart'||action.type==='rotationStart'&&action.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===action.id);
  let next=s;
  try{
   if(!SORTIES.includes(action.type))throw new Error('此入口不属于可准备的出征。');

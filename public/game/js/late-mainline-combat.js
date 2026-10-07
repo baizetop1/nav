@@ -1,4 +1,4 @@
-import {LATE_MISSIONS,LATE_BOSSES,lateMissionPlan} from './late-mainline-data.js?v=0.66.0';
+import {LATE_MISSIONS,LATE_BOSSES,lateMissionPlan} from './late-mainline-data.js?v=0.68.0';
 const log=(b,text)=>{b.log.push('【'+(b.elapsed/1000).toFixed(1)+'秒】'+text);if(b.log.length>120)b.log.shift();};
 export function initializeLateBattle(s,b,d){
  const p=lateMissionPlan(s,b.context.id,d);if(!p)return;
@@ -38,7 +38,7 @@ export function validateLateBattle(s,d,check){
  check(['story','replay'].includes(b.context.type)&&x&&x.version===1&&Object.keys(x).every(k=>['version','wave','shields','escort'].includes(k)),'后五卷战况格式');
  const p=lateMissionPlan(s,b.context.id,d),integer=(n,max)=>Number.isSafeInteger(n)&&n>=0&&n<=max;
  check(integer(x.wave,p.waves.length),'主线增援波次');
- const current=x.wave?p.waves[x.wave-1]:p.enemies;
+ const current=[...(x.wave?p.waves[x.wave-1]:p.enemies)];if(!x.wave&&b.context.type==='replay'&&b.context.challenge==='ambush')while(current.length<5)current.push('road_raider');
  check(b.enemy.length===current.length&&b.enemy.every((u,i)=>u.model===current[i]),'当前波敌阵与选择不符');
  check(x.shields&&typeof x.shields==='object'&&!Array.isArray(x.shields)&&Object.keys(x.shields).length===b.team.length&&b.team.every(u=>integer(x.shields[u.id],Math.round(u.maxHp*p.shield))),'主线护盾');
  if(!p.escort)check(x.escort===null,'此战没有护送目标');

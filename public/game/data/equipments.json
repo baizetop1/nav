@@ -753,5 +753,74 @@
       "items": {}
     },
     "description": "地宫内室专属掉落。适合兼用兵刃与谋攻的好汉。"
+  },
+  {
+    "id": "field_bandage",
+    "name": "行医束带",
+    "type": "belt",
+    "attribute": {
+      "hp": 140,
+      "strategy": 22
+    },
+    "description": "药囊缝在腰侧，救治重伤者时可多止一处血。",
+    "quality": "精品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "dark_iron": 3,
+        "woven_linen": 2,
+        "iron": 4
+      }
+    }
+  },
+  {
+    "id": "watchman_blade",
+    "name": "追寇短刀",
+    "type": "weapon",
+    "attribute": {
+      "attack": 38,
+      "speed": 4
+    },
+    "description": "短刃便于近身，等同伴破开敌甲再进刀。",
+    "quality": "精品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "dark_iron": 3,
+        "woven_linen": 2,
+        "iron": 4
+      }
+    }
+  },
+  {
+    "id": "thorn_coat",
+    "name": "护身软甲",
+    "type": "armor",
+    "attribute": {
+      "hp": 100,
+      "defense": 30
+    },
+    "description": "内衬备有止血布，重伤时可先止住毒血。",
+    "quality": "精品",
+    "tier": 3,
+    "price": 0,
+    "source": "forge",
+    "recipe": {
+      "silver": 240,
+      "items": {
+        "blueprint": 1,
+        "dark_iron": 3,
+        "woven_linen": 2,
+        "iron": 4
+      }
+    }
   }
 ]

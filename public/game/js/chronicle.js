@@ -1,10 +1,10 @@
-import {CHRONICLES,CHRONICLE_RANK_CAP,FORGE_STEPS,patrolRule,patrolStrength} from './chronicle-data.js?v=0.66.0';
-import {JOURNEYS} from './journey-data.js?v=0.66.0';
-import {routeBalance,openRouteRewards} from './journey-rewards.js?v=0.66.0';
-import {gainItem} from './item.js?v=0.66.0';
-import {rotationCalendar} from './rotations.js?v=0.66.0';
-import {attackInterval} from './battle.js?v=0.66.0';
-import {requireRule,hasOwn,journal} from './utils.js?v=0.66.0';
+import {CHRONICLES,CHRONICLE_RANK_CAP,FORGE_STEPS,patrolRule,patrolStrength} from './chronicle-data.js?v=0.68.0';
+import {JOURNEYS} from './journey-data.js?v=0.68.0';
+import {routeBalance,openRouteRewards} from './journey-rewards.js?v=0.68.0';
+import {gainItem} from './item.js?v=0.68.0';
+import {rotationCalendar} from './rotations.js?v=0.68.0';
+import {attackInterval} from './battle.js?v=0.68.0';
+import {requireRule,hasOwn,journal} from './utils.js?v=0.68.0';
 export function chronicleRecord(s){
  s.realm.journey??={version:1,best:{},weekly:{period:rotationCalendar(s.clock).period,tickets:0},last:null};
  return s.realm.journey.chronicle??={version:1,routes:Object.fromEntries(Object.keys(CHRONICLES).map(id=>[id,{choices:[],patrol:0,forged:0}])),active:null};

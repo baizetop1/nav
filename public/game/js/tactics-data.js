@@ -37,3 +37,19 @@ Object.assign(PERSONAL_TALES,{
 });
 Object.assign(PERSONAL_TRAITS,{duqian:'cover',songwan:'brace',caozheng:'shatter',zhufu:'cleanse',houjian:'stitch',shien:'bleed_chase'});
 Object.assign(TRAIT_LABELS,{brace:'守住坡口',stitch:'补甲护身',bleed_chase:'趁伤追击'});
+
+Object.assign(GEAR_TRAITS,{
+ field_bandage:{name:'重伤救护',kind:'fieldcare',text:'有效治疗后，若受疗者气血仍低于一半，再恢复其最大气血 5%；每 8 秒一次。'},
+ watchman_blade:{name:'破隙追击',kind:'press',text:'普攻命中破甲或虚弱的敌人后，追加自身攻击 30% 的伤害；每 5 秒一次。'},
+ thorn_coat:{name:'止血脱困',kind:'tenacity',text:'受到直接攻击后气血低于一半且未退阵，清除自身一项毒伤或流血，再获得 10% 护阵 4 秒；每 12 秒一次。'}
+});
+Object.assign(TRAIT_LABELS,{fieldcare:'重伤救护',press:'破隙追击',tenacity:'止血脱困'});
+Object.assign(PERSONAL_TRAITS,{xueyong:'press',xiangchong:'counter',ligun:'cover',songqing:'fieldcare',yuehe:'heal_rally',fanrui:'tenacity'});
+Object.assign(PERSONAL_TALES,{
+ xueyong:{before:'路边卖艺的家伙被人踢翻了。薛永捡起棍子，叫你拦住那人的退路。',after:'银钱一枚枚拾回盘中。薛永收好棍子，给摔倒的孩子拍去土。'},
+ xiangchong:{before:'山口容不得并排走人。项充把团牌向前一横，让搬粮的人贴着他过去。',after:'最后一个粮袋运过山口，项充拔下牌上的断箭，才退了下来。'},
+ ligun:{before:'同伴的盾带断了。李衮挪步挡到他身前，叫他先把绳结扎紧。',after:'李衮试了试新扎的盾带，把盾交还同伴，两人一道下山。'},
+ songqing:{before:'运粮人倒在车旁，车轮还卡着他的腿。宋清掀开粮袋，腾出一块平地。',after:'伤者终于喝下半碗热水。宋清重新捆好粮车，让他躺在最稳当的一辆上。'},
+ yuehe:{before:'牢门外乱了起来，伤者听见脚步就要起身。乐和扶住他，低声叫他等一等。',after:'追兵退远，乐和把门闩抽出来，扶着伤者从侧门离开。'},
+ fanrui:{before:'林间有毒蛇出没。樊瑞拾了根长枝拨开草丛，让同伴跟紧脚印。',after:'穿出密林，樊瑞割开染血的袖口，在溪边洗去残毒。'}
+});

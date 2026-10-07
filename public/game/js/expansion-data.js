@@ -46,3 +46,12 @@ Object.assign(PERSONAL,{
  houjian:{introduced:5,name:'缝甲护归',text:'侯健带一名同伴，全员存活取胜，本人有效治疗至少 300，不使用战斗药品。',enemies:['soldier','road_raider'],scale:1.8,scaling:true,terrain:'land',companions:1,allAlive:true,healing:300,noMedicine:true,reward:'有效治疗后，受疗者获得 12% 护阵，持续 6 秒，每 8 秒一次。'},
  shien:{introduced:5,name:'快活林追寇',text:'施恩带一名同伴，60 秒内取胜，本人主动施招至少一次、直接伤害至少 1200。',enemies:['soldier','guard','bandit'],scale:2.4,terrain:'forest',companions:1,seconds:60,skills:1,damage:1200,reward:'普攻命中正在流血的敌人后，追加自身攻击 35% 的伤害，每 4 秒一次。'}
 });
+
+Object.assign(PERSONAL,{
+ xueyong:{introduced:6,name:'街口护摊',text:'薛永带一位同伴取胜，本人主动施招一次、造成直接伤害至少 800，不使用药品。',enemies:['soldier','guard'],scale:2,terrain:'land',companions:1,skills:1,damage:800,noMedicine:true,reward:'普攻命中破甲或虚弱敌人，追加攻击 30% 伤害，每 5 秒一次。'},
+ xiangchong:{introduced:6,name:'团牌守口',text:'项充站首位，带一位同伴，全员存活取胜，本人承伤至少 200。',enemies:['road_raider','soldier'],scale:1.5,scaling:true,terrain:'mountain',front:true,companions:1,allAlive:true,taken:200,reward:'身有护阵时承受直接攻击，反击攻击者，造成攻击 40% 的伤害，每 4 秒一次。'},
+ ligun:{introduced:6,name:'补位护粮',text:'李衮站首位，带一位同伴，全员存活取胜，本人承伤至少 200。',enemies:['soldier','bandit'],scale:1.6,scaling:true,terrain:'land',front:true,companions:1,allAlive:true,taken:200,reward:'身有护阵时受直接攻击，为气血比例最低的同伴护阵 12%，持续 4 秒，每 6 秒一次。'},
+ songqing:{introduced:6,name:'粮车救伤',text:'宋清带一位同伴，全员存活取胜，本人有效治疗至少 250。',enemies:['road_raider','soldier'],scale:1.7,scaling:true,terrain:'land',companions:1,allAlive:true,healing:250,reward:'有效治疗后，若受疗者仍不足半血，额外恢复最大气血 5%，每 8 秒一次。'},
+ yuehe:{introduced:6,name:'侧门接应',text:'乐和带一位同伴，全员存活取胜，本人有效治疗至少 250，不使用药品。',enemies:['guard','soldier'],scale:1.7,scaling:true,terrain:'land',companions:1,allAlive:true,healing:250,noMedicine:true,reward:'本人有效治疗后，受疗者怒气 +6，每 6 秒一次。'},
+ fanrui:{introduced:6,name:'林中引路',text:'樊瑞站首位，带一位同伴，全员存活取胜，本人主动施招一次、承伤至少 200。',enemies:['snake','road_raider'],scale:1.7,scaling:true,terrain:'forest',front:true,companions:1,allAlive:true,skills:1,taken:200,reward:'受直接攻击后气血不足一半且未退阵，清除自身一项毒伤或流血，并护阵 10% 持续 4 秒，每 12 秒一次。'}
+});

@@ -1,5 +1,5 @@
-import {SCENE_LIBRARY} from './scene-library.js?v=0.66.0';
-import {campScene,SCENE_ART} from './scenes.js?v=0.66.0';
+import {SCENE_LIBRARY} from './scene-library.js?v=0.68.0';
+import {campScene,SCENE_ART} from './scenes.js?v=0.68.0';
 export function sceneBanner(s,esc){const m=campScene(s);return '<button type="button" class="scene-banner scene-'+m.time+'" data-command="'+esc(JSON.stringify({type:'ui_scene',place:'gate'}))+'" aria-label="走到白泽寨门"><img src="'+m.art+'" alt="木寨门外的小路通向聚义厅，右侧是水泊" width="2172" height="724" decoding="async"><span><b>白泽寨</b><small>'+s.camp.buildings.hall+' 级 · '+(m.repaired?'寨门已修整':'水泊初立')+'</small></span><em>入寨看看 ›</em></button>';}
 export function scenePage(s,d,esc,btn,portrait,request){const m=campScene(s,request),gate=m.place==='gate',name=m.person?d.by.heroes[m.person].name:'守门乡勇';
  const speaker=gate?(m.person?portrait(d.by.heroes[m.person],true):'<span class="scene-npc-symbol" aria-hidden="true">寨</span>'):'<span class="scene-npc-symbol" aria-hidden="true">林</span>';

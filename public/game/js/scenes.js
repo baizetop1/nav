@@ -1,6 +1,6 @@
-import {SCENE_LIBRARY} from './scene-library.js?v=0.66.0';
+import {SCENE_LIBRARY} from './scene-library.js?v=0.68.0';
 // Scene presentation is derived from existing saves; looking and talking never grants rewards.
-import {deployedTroops} from './logistics.js?v=0.66.0';
+import {deployedTroops} from './logistics.js?v=0.68.0';
 export const SCENE_ART=Object.fromEntries(Object.entries(SCENE_LIBRARY).map(([id,art])=>[id,art.src]));
 const present=(s,id)=>s.heroes[id]?.status==='owned'&&s.affairs?.mission?.hero!==id&&!s.realm?.squad?.team.includes(id)&&!s.realm?.trek?.team.includes(id)&&!s.expansion?.run?.team.includes(id);
 export const woodlandReport=s=>s.lastBattle?.context.type==='camp'&&s.lastBattle.context.id==='woods'?s.lastBattle:null;

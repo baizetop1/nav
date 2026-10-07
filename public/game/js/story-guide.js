@@ -1,7 +1,7 @@
-import {chapterStory,ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.66.0';
-import {chapterBattlePlan} from './volume-three.js?v=0.66.0';
-import {meets} from './map.js?v=0.66.0';
-import {routeTo,conditionText} from './world-map.js?v=0.66.0';
+import {chapterStory,ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.68.0';
+import {chapterBattlePlan} from './volume-three.js?v=0.68.0';
+import {meets} from './map.js?v=0.68.0';
+import {routeTo,conditionText} from './world-map.js?v=0.68.0';
 
 // Derived entirely from the current save: reloading or travelling cannot lose the objective.
 export function storyObjective(s,d){
@@ -49,7 +49,7 @@ export function storyObjective(s,d){
   if(c.campMode)return screen('调整出征方式','camp','formation',conditionText(c,d));
   if(c.ownedCount)return screen('迎入更多好汉','recruit','ordinary','已入寨 '+Object.values(s.heroes).filter(h=>h.status==='owned').length+' / '+c.ownedCount+'；可用招贤令，也可在名册直接邀请。');
   if(c.heroLevel)return screen('培养主力好汉','heroes','training','至少一名正式好汉达到 '+c.heroLevel+' 级。');
-  if(c.prestige||c.stat==='clears')return screen(c.prestige?'积累江湖威望':'完成历练','trials','daily',c.prestige?'当前威望 '+s.player.prestige+' / '+c.prestige:'历练已完成 '+(s.stats.clears||0)+' / '+(c.count||1)+' 次；胜利结算后继续。');
+  if(c.prestige||c.stat==='clears'){const id=(s.daily.dungeons.jingyanggang||0)<3?'jingyanggang':'huangnigang',m=d.by.dungeons[id];return point(c.prestige?'积累江湖威望':'完成剧情历练',m.map,(c.prestige?'当前威望 '+s.player.prestige+' / '+c.prestige:'剧情历练 '+(s.stats.clears||0)+' / '+(c.count||1)+' 次')+'；景阳冈、黄泥冈等剧情历练计入，每日材料和特殊副本不计入。今日此处已用 '+(s.daily.dungeons[id]||0)+' / 3 次。',{action:{type:'dungeon',id}});}
   if(c.item)return screen('准备所需物品','bag',d.by.items[c.item]?.price?'shop':'materials',conditionText(c,d));
   if(c.hero){const h=d.by.heroes[c.hero];return point('结识'+h.name,h.meetMap,'在当地与'+h.title+'交谈。');}
   return null;
@@ -77,7 +77,7 @@ export function storyObjective(s,d){
  }
  function story(id){
   const m=d.by.stories[id],p=s.progress.stories[id];if(!m||p?.status==='completed'||seen.has('story:'+id))return null;seen.add('story:'+id);
-  if(!p)return condition(m.condition)||(m.steps[m.start].choices.some(c=>c.battle)?battleNeed(id):null)||point('开始 · '+m.title,m.map,chapterStory(id)?'前往'+d.by.maps[m.map].name+'，查看“'+m.title+'”。':'到达后选择“开始剧情 / 查看此地事务”。',{story:id});
+  if(!p)return condition(m.condition)||(!m.steps[m.start].choices.some(c=>meets(s,c.condition))?condition(m.steps[m.start].choices[0]?.condition):null)||(m.steps[m.start].choices.some(c=>c.battle)?battleNeed(id):null)||point('开始 · '+m.title,m.map,chapterStory(id)?'前往'+d.by.maps[m.map].name+'，查看“'+m.title+'”。':'到达后选择“开始剧情 / 查看此地事务”。',{story:id});
   const step=m.steps[p.step];
   if(id==='wusong_story'&&p.step==='trail'){
    if(!s.progress.flags.tracks_found)return point('查看巨大的脚印','drywood','武松已在山道等候。先去枯树林查看脚印，才能找到虎踪。',{action:{type:'mapAction',id:'tracks'},story:id});
