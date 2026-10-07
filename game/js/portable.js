@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.66.0';
-import { parseSave } from './save.js?v=0.66.0';
+import { hasOwn } from './utils.js?v=0.68.0';
+import { parseSave } from './save.js?v=0.68.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -9,6 +9,8 @@ const metrics={version:true,reason:true,heroes:{'*':fields('damage healing taken
 const chronicleJob=fields('kind region chapter choice rank');
 const chronicle={version:true,routes:{'*':fields('choices patrol forged')},active:{...chronicleJob,ready:true}};
 const shape = {
+  fieldwork:{version:true,hunts:{'*':fields('runs hits dry')}},
+  adventure:{version:true,badge:true,feats:{'*':fields('count best team')},clears:{'*':true},run:{...fields('id tier stage team choices events'),hp:{'*':true}}},
   replays:{version:true,clears:{'*':true},best:{'*':true},challenges:{'*':fields('count best')}},
   specialDungeons:{version:true,clears:{'*':true},last:{...fields('id tier outcome at route'),bonus:fields('id count stored'),drops:[fields('kind id count stored')]}},
   lessons:{version:true,completed:true},

@@ -1,12 +1,12 @@
-import {phaseGoal} from './progression-paths.js?v=0.66.0';
-import {unlockReason} from './growth.js?v=0.66.0';
-import {BUILD_GUIDES,GEAR_TRAITS} from './tactics-data.js?v=0.66.0';
-import {SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.66.0';
-import {PERSONAL} from './expansion-data.js?v=0.66.0';
+import {phaseGoal} from './progression-paths.js?v=0.68.0';
+import {unlockReason} from './growth.js?v=0.68.0';
+import {BUILD_GUIDES,GEAR_TRAITS} from './tactics-data.js?v=0.68.0';
+import {SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.68.0';
+import {PERSONAL} from './expansion-data.js?v=0.68.0';
 const page=(view,id,hero)=>({type:'ui_section',view,id,...(hero?{hero}:{})});
 export function gearGoal(s,d,id){const m=d.by.equipments[id],owned=s.equipment.some(e=>e.item===id),area=Object.entries(SPECIAL_DUNGEONS).find(([,x])=>x.drops.some(r=>r.kind==='equipment'&&r.id===id));
  const where=area?.[1],key=area?.[0],clears=s.specialDungeons?.clears||{},locked=where?.parent&&(clears[where.parent+'_1']||0)<5;
- return {text:m.name+(owned?'：已有':'：未得')+(locked?'；入口 '+(clears[where.parent+'_1']||0)+'/5 次':''),done:owned,label:owned?'查看装备':area?(locked?'寻找入口':'查看掉落'):'准备打造',command:owned?{type:'ui_gearModel',id}:area?{type:'ui_specialView',id:locked?where.parent:key,tier:1,tab:'overview'}:{type:'ui_forgeTarget',id}};
+ return {text:m.name+(owned?'：已有':'：未得')+(s.fieldwork?.hunts[id]?'；记录以来 '+s.fieldwork.hunts[id].runs+' 场，掉落 '+s.fieldwork.hunts[id].hits+' 场，连续 '+s.fieldwork.hunts[id].dry+' 场未得':'；新记录从本版开始累计')+(locked?'；入口 '+(clears[where.parent+'_1']||0)+'/5 次':''),done:owned,label:owned?'查看装备':area?(locked?'寻找入口':'查看掉落'):'准备打造',command:owned?{type:'ui_gearModel',id}:area?{type:'ui_specialView',id:locked?where.parent:key,tier:1,tab:'overview'}:{type:'ui_forgeTarget',id}};
 }
 export function tacticsGoal(s,d,g){
  if(g.kind==='phase')return phaseGoal(s,d,g.id);

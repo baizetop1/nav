@@ -1,5 +1,5 @@
-import { battleTerrain } from './strategy-data.js?v=0.66.0';
-import { CORPS } from './corps-data.js?v=0.66.0';
+import { battleTerrain } from './strategy-data.js?v=0.68.0';
+import { CORPS } from './corps-data.js?v=0.68.0';
 // Explicit marker: ongoing old battles keep their original combat and casualty rules.
 export const FIELD_RULES=2;
 export const CASUALTY_RULES=1,CASUALTY_SCALE=10000;

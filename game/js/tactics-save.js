@@ -1,4 +1,4 @@
-import {GEAR_TRAITS,BUILD_GUIDES,PERSONAL_TRAITS} from './tactics-data.js?v=0.66.0';
+import {GEAR_TRAITS,BUILD_GUIDES,PERSONAL_TRAITS} from './tactics-data.js?v=0.68.0';
 export const hasTactics=s=>!!s.battle?.tactics||!!s.lastBattle?.tacticsReport||s.equipment.some(e=>e.refine>0)||Object.keys(s.expansion?.personal||{}).some(id=>Object.hasOwn(PERSONAL_TRAITS,id))||['build','gear','personal'].includes(s.development?.goal?.kind);
 export function tacticsPreserved(a,b){return a.equipment.every(e=>!(e.refine>0)||!b.equipment.some(x=>x.uid===e.uid)||b.equipment.find(x=>x.uid===e.uid).refine>=e.refine);}
 export function validateTactics(s,d,check){

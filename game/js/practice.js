@@ -1,0 +1,13 @@
+import {clone,requireRule} from './utils.js?v=0.68.0';
+import {itemAction} from './item.js?v=0.68.0';
+import {enterSpecial} from './special-dungeons.js?v=0.68.0';
+import {advanceBattle} from './battle.js?v=0.68.0';
+export function practiceCompare(s,d,{id,hero,enemy='mine',tier=1}={}){
+ requireRule(!s.battle&&!s.scheme&&!s.event&&!s.adventure?.run,'先结束当前行动，再试阵。');requireRule(['mine','marsh','ruins'].includes(enemy)&&[1,2,3].includes(tier),'无效试阵场地。');
+ if(id)requireRule(s.team.includes(hero),'请先将穿戴人安排进出阵队伍，再试阵。');
+ const run=change=>{const t=clone(s);t.rng=680068;t.battleSkillMode='auto';if(change)itemAction(t,d,{type:'equip',id,hero});enterSpecial(t,d,{id:enemy,tier});for(let n=0;n<180&&!t.battle.outcome;n++)advanceBattle(t,d,1000);const b=t.battle,metrics=Object.values(b.metrics.heroes),sum=k=>metrics.reduce((n,h)=>n+h[k],0);return {outcome:b.outcome,elapsed:b.elapsed,damage:sum('damage'),healing:sum('healing'),taken:sum('taken'),alive:b.team.filter(h=>h.hp>0).length,hp:b.team.reduce((n,h)=>n+h.hp,0),triggers:Object.values(b.tactics?.counts||{}).reduce((n,x)=>n+x,0),counts:b.tactics?.counts||{}};};
+ return {before:run(false),after:id?run(true):null,enemy,tier};
+}
+export function practiceDialog(q,esc){const labels={elapsed:'用时（秒）',damage:'造成伤害',healing:'有效治疗',taken:'承受伤害',alive:'存活人数',hp:'剩余气血',triggers:'装备与任务本领触发'},value=(r,k)=>k==='elapsed'?(r[k]/1000).toFixed(1):r[k];return '<dialog id="practice-result" class="compact-dialog"><header class="dialog-header"><h2 tabindex="-1">同条件试阵</h2></header><div class="dialog-body"><p class="note">固定随机种子；自动施招，不用药、不带兵。只比较本场条件，不代表所有敌人。</p><table><thead><tr><th>项目</th><th>当前</th>'+(q.after?'<th>换装后</th>':'')+'</tr></thead><tbody><tr><td>结果</td><td>'+esc(q.before.outcome==='victory'?'取胜':'未通过')+'</td>'+(q.after?'<td>'+(q.after.outcome==='victory'?'取胜':'未通过')+'</td>':'')+'</tr>'+Object.entries(labels).map(([k,n])=>'<tr><td>'+n+'</td><td>'+value(q.before,k)+'</td>'+(q.after?'<td>'+value(q.after,k)+'</td>':'')+'</tr>').join('')+'</tbody></table><p class="note">不扣资源，不发奖励，不改变存档和真实掉落随机数。</p></div><footer class="dialog-footer"><button class="secondary" data-practice-close>返回</button></footer></dialog>';}
+
+export function practiceControls(btn,id,hero){return '<details data-fold="practice"><summary>同条件试阵</summary><label>敌情<select id="practice-enemy"><option value="mine">矿洞护阵</option><option value="marsh">芦荡毒蛇</option><option value="ruins">旧营快攻</option></select></label><label>难度<select id="practice-tier"><option value="1">寻常</option><option value="2">险境</option><option value="3">绝地</option></select></label>'+btn(id?'比较换装前后':'试试当前阵容',{type:'ui_practice',...(id?{id,hero}:{})},'secondary')+'<p class="note">使用自己的出阵队伍；难度沿用副本解锁条件，不用药、不耗资源。</p></details>';}

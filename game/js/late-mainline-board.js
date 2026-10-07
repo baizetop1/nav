@@ -1,6 +1,6 @@
-import {meets} from './map.js?v=0.66.0';
-import {storyObjective} from './story-guide.js?v=0.66.0';
-import {ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.66.0';
+import {meets} from './map.js?v=0.68.0';
+import {storyObjective} from './story-guide.js?v=0.68.0';
+import {ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.68.0';
 const introductions={
   8:'从曾市外营出发，先办选定的一件事，再接齐商旅、核清口供、夺回粮车，最后到东门讨人。',
   9:'与燕青议定暗线或正攻，逐关夺取接应点、打开牢门，再把伤者送过浅渡。每关战后都可整备。',

@@ -1,14 +1,15 @@
-import {REPLAY_CHALLENGES,challengeKey} from './replay-challenges.js?v=0.66.0';
-import {replayMissions,replayUnlocked,replayKey,REPLAY_DIFFICULTIES,ENDING_DEFINITIONS} from './replays-data.js?v=0.66.0';
-import {replayReason} from './replays.js?v=0.66.0';
+import {honorsPanel} from './adventure-ui.js?v=0.68.0';
+import {REPLAY_CHALLENGES,challengeKey} from './replay-challenges.js?v=0.68.0';
+import {replayMissions,replayUnlocked,replayKey,REPLAY_DIFFICULTIES,ENDING_DEFINITIONS} from './replays-data.js?v=0.68.0';
+import {replayReason} from './replays.js?v=0.68.0';
 export function replaysPanel(s,d,esc,btn,view={}){
  const ids=Object.keys(replayMissions).filter(id=>replayUnlocked(s,id)),id=ids.includes(view.id)?view.id:ids[0],tier=view.tier===2?2:1;
  const nav=(name,a)=>btn(name,{type:'ui_replayView',...view,...a},'secondary');
- let out='<p class="note">独行回顾 · 不耗体力粮草 · 不用药 · 无奖励</p>';
+ let out=honorsPanel(s,d,btn,view)+'<p class="note">独行回顾 · 不耗体力粮草 · 不用药 · 无奖励</p>';
  if(!id)return out+'<p>第三卷起，完成一段战役后会在这里出现。</p>';
  out+='<label>选择战役<select id="replay-mission">'+ids.map(k=>'<option value="'+k+'" '+(k===id?'selected':'')+'>'+esc(d.by.stories[k].title)+'</option>').join('')+'</select></label><nav class="special-tabs">'+Object.entries(REPLAY_DIFFICULTIES).map(([t,m])=>nav(m.name+(+t===tier?' · 已选':''),{id,tier:+t})).join('')+'</nav>';
  const challenge=s.progress.flags.volume_twelve_complete&&tier===2&&Object.hasOwn(REPLAY_CHALLENGES,view.challenge)?view.challenge:undefined;
- if(s.progress.flags.volume_twelve_complete)out+='<nav class="special-tabs" aria-label="回顾挑战">'+nav('普通回顾'+(!challenge?' · 已选':''),{challenge:undefined})+Object.entries(REPLAY_CHALLENGES).map(([key,m])=>nav(m.name+(challenge===key?' · 已选':''),{challenge:key,tier:2})).join('')+'</nav>';
+ if(s.progress.flags.volume_twelve_complete)out+='<label>挑战规则<select id="replay-challenge"><option value="">普通回顾</option>'+Object.entries(REPLAY_CHALLENGES).map(([key,m])=>'<option value="'+key+'" '+(challenge===key?'selected':'')+'>'+m.name+'</option>').join('')+'</select></label>';
  const key=replayKey(id,tier),q=replayReason(s,id,tier,challenge),record=challenge?s.replays?.challenges?.[challengeKey(id,tier,challenge)]:null;
  if(challenge)out+='<p class="note">'+REPLAY_CHALLENGES[challenge].text+' 达成 '+(record?.count||0)+' 次'+(record?' · 最快 '+(record.best/1000).toFixed(1)+' 秒':'')+'。仅记录本战荣誉，不发额外物资。</p>';
  out+='<div class="replay-summary">'+btn(q||'开始回顾',{type:'replayStart',id,tier,...(challenge?{challenge}:{})},'primary',!!q)+'<p class="note">通关 '+(s.replays?.clears[key]||0)+' 次 · 最快 '+(s.replays?.best[key]===undefined?'未记录':(s.replays.best[key]/1000).toFixed(1)+' 秒')+'</p><details><summary>本战规则</summary><p class="note">'+(tier===1?'敌军气血、攻击、防御与谋略为原战役的 65%。':'敌军属性与原战役相同。')+'后五卷保留增援、护送和已有准备效果。</p></details></div>';

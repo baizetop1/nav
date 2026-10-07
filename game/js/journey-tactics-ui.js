@@ -1,4 +1,4 @@
-import {BOONS,ROUTE_BOSSES,EFFECT_LABELS,journeyBuilds,journeyConsequences} from './journey-data.js?v=0.66.0';
+import {BOONS,ROUTE_BOSSES,EFFECT_LABELS,journeyBuilds,journeyConsequences} from './journey-data.js?v=0.68.0';
 export function journeyBuildPanel(j){if(j.rules!==2)return '';const builds=journeyBuilds(j.boons).filter(m=>m.ids.some(id=>j.boons.includes(id)));return '<details data-fold="journey-build"><summary>战法搭配 · '+builds.filter(m=>m.ready).length+' 组已成形</summary>'+ (builds.map(m=>'<p><b>'+m.name+'</b> · '+(m.ready?'已成形':('还差 '+m.missing.map(id=>BOONS[id].name).join('、')))+'</p>').join('')||'<p>治疗护盾可接反击或盾击；踏影可加强乘隙追击。</p>')+'</details>';}
 export function journeyEventNote(j){if(j.rules!==2)return '';const c=journeyConsequences(j);return '<p class="note journey-consequence">'+(c.helped?'商旅记着你的援手：货摊半价；首领战前在阵好汉恢复 12% 气血、怒气 +10。':c.pursuit?'遗货失主追来：下一场多一名追兵，胜利的碎银、精铁 +20%。':j.decisions.includes('event:search')?'追兵已甩脱，本趟不会再次追来。':'护送行旅会带来商旅援助；搜索遗货会引来一次追兵。')+'</p>';}
 export function journeyBossPreview(j){return j.rules===2?'<p class="note"><b>'+ROUTE_BOSSES[j.region].name+'</b>：'+ROUTE_BOSSES[j.region].warning+'</p>':'';}

@@ -1,7 +1,7 @@
-import {harborMoment} from './harbor-scenes.js?v=0.66.0';
-import {gatheringMoment,storyVoice} from './gathering-scenes.js?v=0.66.0';
-import {meets,heroRank} from './map.js?v=0.66.0';
-import {storyObjective} from './story-guide.js?v=0.66.0';
+import {harborMoment} from './harbor-scenes.js?v=0.68.0';
+import {gatheringMoment,storyVoice} from './gathering-scenes.js?v=0.68.0';
+import {meets,heroRank} from './map.js?v=0.68.0';
+import {storyObjective} from './story-guide.js?v=0.68.0';
 export const JOURNEY_ART={harbor:'./art/scenes/liangshan-ferry-v1.webp',village:'./art/scenes/dongxi-manor-v1.webp',huangni:'./art/scenes/huangni-pines-v1.webp',town:'./art/scenes/yuncheng-street-v1.webp',tavern:'./art/scenes/wine-tavern-v1.webp',ridge:'./art/scenes/jingyang-ridge-v1.webp'};
 export const JOURNEY_PLACES={liangshan:'harbor',ferry:'harbor',dongxi:'village',zhuang:'village',creek:'village',guesthouse:'village',huangni:'huangni',ridge:'huangni',pines:'huangni',winepath:'huangni',yuncheng:'town',office:'town',gate:'town',tavern:'tavern',inn:'tavern',jingyang:'ridge',path:'ridge',drywood:'ridge',stone:'ridge',tracks:'ridge',deepforest:'ridge'};
 export const hasJourneyScene=id=>Object.hasOwn(JOURNEY_PLACES,id);

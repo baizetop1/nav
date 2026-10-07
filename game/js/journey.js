@@ -1,10 +1,10 @@
-import {captureChronicle,applyChronicleBattle,settleChronicle,chroniclePerks} from './chronicle.js?v=0.66.0';
-import {campaignQuote,startCampaign,planCampaign,campaignBattle,recordCampaignBattle,finishCampaign} from './journey-campaign.js?v=0.66.0';
-import {campaignRoutes} from './journey-campaign-data.js?v=0.66.0';
-import {awardRouteMarks,routeRewardAction} from './journey-rewards.js?v=0.66.0';
-import {initializeJourneyCombat} from './journey-combat.js?v=0.66.0';
-import {journeyConsequences,journeyTradeCost,JOURNEYS,JOURNEY_TIERS,JOURNEY_GOALS,BOONS,boonPool,journeyGoalReward,journeyModifiers} from './journey-data.js?v=0.66.0';
-import {startBattle,attackInterval} from './battle.js?v=0.66.0';import {attachTroops} from './camp.js?v=0.66.0';import {deployedTroops,heroCommand} from './logistics.js?v=0.66.0';import {affairReward} from './affairs.js?v=0.66.0';import {gainExp} from './hero.js?v=0.66.0';import {rotationCalendar} from './rotations.js?v=0.66.0';import {requireRule,hasOwn,random,count,journal} from './utils.js?v=0.66.0';
+import {captureChronicle,applyChronicleBattle,settleChronicle,chroniclePerks} from './chronicle.js?v=0.68.0';
+import {campaignQuote,startCampaign,planCampaign,campaignBattle,recordCampaignBattle,finishCampaign} from './journey-campaign.js?v=0.68.0';
+import {campaignRoutes} from './journey-campaign-data.js?v=0.68.0';
+import {awardRouteMarks,routeRewardAction} from './journey-rewards.js?v=0.68.0';
+import {initializeJourneyCombat} from './journey-combat.js?v=0.68.0';
+import {journeyConsequences,journeyTradeCost,JOURNEYS,JOURNEY_TIERS,JOURNEY_GOALS,BOONS,boonPool,journeyGoalReward,journeyModifiers} from './journey-data.js?v=0.68.0';
+import {startBattle,attackInterval} from './battle.js?v=0.68.0';import {attachTroops} from './camp.js?v=0.68.0';import {deployedTroops,heroCommand} from './logistics.js?v=0.68.0';import {affairReward} from './affairs.js?v=0.68.0';import {gainExp} from './hero.js?v=0.68.0';import {rotationCalendar} from './rotations.js?v=0.68.0';import {requireRule,hasOwn,random,count,journal} from './utils.js?v=0.68.0';
 export function journeyQuote(s,region,tier,options={}){const m=JOURNEYS[region],q=JOURNEY_TIERS[tier],food=15+Math.ceil(deployedTroops(s)/3);const reason=!hasOwn(JOURNEYS,region)||!Number.isInteger(tier)||!hasOwn(JOURNEY_TIERS,tier)?'请选择有效路线和难度':!s.camp||s.camp.buildings.hall<2?'聚义厅达到 2 级开放':s.realm?.trek||s.expansion?.run||s.battle||s.scheme||s.event?'先结束正在进行的远征或战局':!s.team.length?'先安排出阵好汉':Math.max(...s.team.map(id=>s.heroes[id].level))<q.level?'队中至少一人达到 '+q.level+' 级':tier>1&&(s.realm?.journey?.best[region]||0)<tier-1?'先完成本路线上一难度':s.camp.mode==='army'&&!deployedTroops(s)?'先募兵或改为英雄独行':s.player.stamina<q.stamina?'体力不足':s.camp.food<food?'粮草不足':'';const pack=campaignQuote(s,{region,tier,...options});return {reason:reason||pack.reason||(s.camp?.food<food+(pack.cost?.food||0)?'粮草不足以同时支付启程与备战。':''),food,stamina:q?.stamina||0};}
 function offer(s){const j=s.realm.trek.journey,pool=boonPool(s).filter(id=>!j.boons.includes(id));j.offers=[];if(s.realm.trek.node===5)return;while(pool.length&&j.offers.length<3)j.offers.push(pool.splice(Math.floor(random(s)*pool.length),1)[0]);}
 export function journeyFood(s){const t=s.realm.trek,ids=t.team.filter(id=>t.hp[id]>0),troops=Math.min(deployedTroops(s),ids.reduce((n,id)=>n+heroCommand(s,id),0));return {troops,food:Math.ceil((5+Math.ceil(troops/5))*(t.journey.boons.includes('forager')?.7:1)*(t.journey.campaign?.preparation==='guide'?.8:1))};}
