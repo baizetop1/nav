@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-08T08:57:06.988Z",
+  "generatedAt": "2026-10-08T08:59:27.418Z",
   "intelligence": {
-    "updatedAt": "2026-10-08T08:57:06.988Z",
+    "updatedAt": "2026-10-08T08:59:27.418Z",
     "items": [
       {
         "id": "cn-item-ddce314d04e8428a",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-08T05:14:14.000Z",
         "badge": "HN",
-        "signal": "252 分 · 213 评论"
+        "signal": "255 分 · 214 评论"
       },
       {
         "id": "cn-it-caaae3773aa661b5",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "8日，中国外交部发言人毛宁主持例行记者会。针对日方称中方应对日本首相高市早苗给予适当尊重，并称中国外交部在记者会上时常直接称呼高市早苗名字而没有增加任何头衔，毛宁回应表示，中方已经多次阐明对当前中日关系的立场。",
         "badge": "热搜",
-        "signal": "7,808,962 热度"
+        "signal": "7,808,450 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -166,7 +166,7 @@
         "publishedAt": "2026-10-08T07:42:17.000Z",
         "summary": "做了 4 个多月的个人项目 type-pal ，发上来请大家看看。 试玩： https://pal.illegalscreed.cn/ （推荐电脑浏览器） 源码： https://github.com/IllegalCreed/type-pal 之前站里有朋友发过 sdlpal 编译成 WASM 的网页版。这个不一样：运行时是用 TS 从头写的，sdlpal 只当参考，以原版数据和行为为准。 第一阶段（ v1.0.0 ）可以从开场玩到结局：MKF 解包 + YJ_2 解压、…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "11 回复"
       },
       {
         "id": "cn-it-09d8aadf27d42331",
@@ -206,7 +206,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-08T06:29:25.000Z",
         "badge": "HN",
-        "signal": "25 分 · 6 评论"
+        "signal": "28 分 · 6 评论"
       },
       {
         "id": "cn-baidu-478c7d03c67c3dd3",
@@ -216,7 +216,7 @@
         "source": "百度热搜",
         "summary": "国庆假期每天超3亿人出行，旅游市场异常火爆。但传统旅行社正被无情洗牌，今年上半年已有2400家旅社关停。事件起因于OTA平台抹平信息差，年轻人转向自由行与沉浸式定制体验，致使传统跟团游盈利模式失效。",
         "badge": "热搜",
-        "signal": "7,714,376 热度"
+        "signal": "7,712,785 热度"
       },
       {
         "id": "github-advisory-ghsa-69qc-f5m6-889c",
@@ -288,7 +288,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-05T21:08:33.000Z",
         "badge": "HN",
-        "signal": "195 分 · 49 评论"
+        "signal": "195 分 · 50 评论"
       },
       {
         "id": "cn-it-9f66d92b84150ecf",
@@ -330,7 +330,7 @@
         "publishedAt": "2026-10-08T06:11:05.000Z",
         "summary": "后端 Spring 全家桶项目，前端 vue3+yarn 。以前主要是通过接口做集成测试，现在感觉已经跟不上 AI 编码的速度了，想尽可能的跑 E2E 测试，同时把测试工作量从测试转一些到开发这端。该怎么玩？ 主要问题就是可能一个业务影响了系统核心的十几个关联业务，这些关联业务有些通过事务影响，有些通过 mq 滞后影响，有些还需要定时任务进行队列计算。",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-baidu-a864ce16bb10afd9",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "7天假期已结束，很多人已经旅行归来。记者从文化和旅游部获悉，今年国庆假期，全国文旅市场供给丰富，城乡居民出游意愿高涨，众多文旅新图景带给人们别样的出行体验。",
         "badge": "热搜",
-        "signal": "7,616,307 热度"
+        "signal": "7,616,787 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76504",
@@ -370,7 +370,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-05T00:06:43.000Z",
         "badge": "HN",
-        "signal": "83 分 · 28 评论"
+        "signal": "85 分 · 28 评论"
       },
       {
         "id": "cn-item-439c7e2c7092b368",
@@ -412,7 +412,7 @@
         "publishedAt": "2026-10-08T05:48:47.000Z",
         "summary": "自己看的别人的开源仓库，自己也提交了一些改进。但是不是自己从 0 写的。属于尾期加入进去的。 但是是完全把整个代码和架构都了解得很清楚 这种我想写进我的实习简历里面，应该怎么去写和描述啊。",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "8 回复"
       },
       {
         "id": "cn-it-08ca05327c29933c",
@@ -452,7 +452,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-07T21:16:18.000Z",
         "badge": "HN",
-        "signal": "1438 分 · 161 评论"
+        "signal": "1446 分 · 161 评论"
       },
       {
         "id": "cn-baidu-c4d37e2eff5019f6",
@@ -462,7 +462,7 @@
         "source": "百度热搜",
         "summary": "中央纪委国家监委网站10月8日消息，广东省人大常委会党组成员、副主任张硕辅涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
         "badge": "热搜",
-        "signal": "7,523,960 热度"
+        "signal": "7,524,127 热度"
       },
       {
         "id": "github-advisory-ghsa-mcr4-qmvw-px4g",
@@ -493,7 +493,7 @@
         "publishedAt": "2026-10-08T05:34:24.000Z",
         "summary": "大门逐次关闭，真的要考虑本地部署大模型方式来开发了， 各位对开源模型能力有什么心得吗？ 主要是企业用来开发 erp 这样的。 能买得起显卡目前是 5090 或者刚出的那个 dxg 64G 的。",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "7 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 18310,
+        "stars": 18330,
         "starsToday": 4655
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 280280,
+        "stars": 280283,
         "starsToday": 1403
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 12085,
+        "stars": 12090,
         "starsToday": 2716
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/ayghri/i-have-adhd",
         "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "language": "Python",
-        "stars": 55479,
+        "stars": 55480,
         "starsToday": 619
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 45432,
+        "stars": 45433,
         "starsToday": 825
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 103099,
+        "stars": 103102,
         "starsToday": 677
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/trycua/cua",
         "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
         "language": "Rust",
-        "stars": 28928,
+        "stars": 28929,
         "starsToday": 228
       }
     ],
-    "updatedAt": "2026-10-08T08:57:06.988Z"
+    "updatedAt": "2026-10-08T08:59:27.418Z"
   }
 }
