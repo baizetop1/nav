@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-08T16:29:34.246Z",
+  "generatedAt": "2026-10-08T22:04:49.961Z",
   "intelligence": {
-    "updatedAt": "2026-10-08T16:29:34.246Z",
+    "updatedAt": "2026-10-08T22:04:49.961Z",
     "items": [
       {
         "id": "cn-item-448c135473b19f07",
@@ -15,56 +15,56 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-88779",
+        "id": "cisa-kev-cve-2015-5477",
         "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88779",
+        "title": "ISC BIND：ISC BIND Data Processing Errors Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5477",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-04T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
-        "badge": "CVE-2026-88779",
-        "signal": "已遭利用 · 整改期限 2026-10-07"
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
+        "badge": "CVE-2015-5477",
+        "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
-        "id": "ai-openai-d9e485b409fe8517",
+        "id": "ai-openai-db7b9e6fe248e314",
         "category": "ai",
-        "title": "Disrupting AI-enabled “false front” operations",
-        "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+        "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+        "url": "https://openai.com/index/oracle",
         "source": "OpenAI",
-        "publishedAt": "2026-10-08T00:00:00.000Z",
-        "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
+        "publishedAt": "2026-10-08T16:00:00.000Z",
+        "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50006366",
+        "id": "hn-50008427",
         "category": "dev",
-        "title": "Tell HN: I've been paying for a rural Tanzanian's education for 10 years",
-        "url": "https://news.ycombinator.com/item?id=50006366",
+        "title": "Whistle: Speech to Text in 16.9 MB",
+        "url": "https://cactuscompute.com/blog/whistle",
         "source": "Hacker News",
-        "publishedAt": "2026-10-08T14:39:47.000Z",
+        "publishedAt": "2026-10-08T16:59:39.000Z",
         "badge": "HN",
-        "signal": "230 分 · 48 评论"
+        "signal": "386 分 · 95 评论"
       },
       {
-        "id": "cn-it-33ce245a4f58dfbf",
+        "id": "cn-it-494f893664f154b4",
         "category": "cn",
-        "title": "苹果官宣“欢迎回家”发布会定档 10 月 13 日，暗示首款智能家居中枢产品",
-        "url": "https://www.ithome.com/1/010/743.htm",
+        "title": "899 元起雷蛇巴塞利斯蛇 V4 专业版 / 极速版鼠标发布，还有第二代无线充电底座",
+        "url": "https://www.ithome.com/1/010/745.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-08T16:26:13.000Z",
-        "summary": "IT之家 10 月 9 日消息，苹果营销高级副总裁 Greg Joswiak 发布预告，官宣“Welcome home（欢迎回家）”发布会定档美国东部时间 10 月 13 日上午 9 点（ 北京时间 10 月 13 日晚 9 点 ）。 从宣传语来看， 预计将发布苹果首款智能家居中枢产品 。该产品此前被曝配备 6 英寸屏幕，提供壁挂与桌面两款形态。 IT之家综合此前爆料，桌面版整体外形类似 iMac G4，配有圆形金属底座，屏幕则通过金属支臂连接，用户可以手动调整俯仰角度；机…",
+        "publishedAt": "2026-10-08T16:58:03.000Z",
+        "summary": "IT之家 10 月 9 日消息，雷蛇 10 月 8 日晚正式发布了 Razer Basilisk V4 Pro 雷蛇巴塞利斯蛇 V4 专业版鼠标， 售价 1399 元 。 该鼠标搭载第二代 Razer Hyperscroll 纵横滚轮， 四种滚轮模式兼顾游戏操控与日常浏览 ；以及第三代 Razer Focus Pro 50K 光学传感器、第四代 Razer 光学鼠标微动，支持最高 50000 DPI。 该鼠标配备第二代 Razer HyperSpeed 无线技术， 原生 8…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-rqf5-2wxv-rjf4",
+        "id": "github-advisory-ghsa-8wpc-h4q6-8fxv",
         "category": "security",
-        "title": "AsyncHttpClient: Digest challenge without a usable nonce downgrades to Basic and sends the password in cleartext",
-        "url": "https://github.com/advisories/GHSA-rqf5-2wxv-rjf4",
+        "title": "fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set",
+        "url": "https://github.com/advisories/GHSA-8wpc-h4q6-8fxv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T16:23:36.000Z",
-        "summary": "### Impact A Digest challenge that does not yield a usable nonce is treated as a Basic challenge. The client then answers it with `Authorization: Basic`, which carries the username and password base64 encoded and so recoverable by anyone w…",
-        "badge": "CVE-2026-107231",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-08T22:02:12.000Z",
+        "summary": "### Summary `createVerifier` in fast-jwt ≤ 6.3.0 skips signature verification entirely when the `key` option is a falsy synchronous value (`''` or `null`) **and** the `algorithms` option is set to a non-empty allowlist. An attacker who can…",
+        "badge": "CVE-2026-107720",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
         "id": "ai-google-deepmind-c11a83f73b42d756",
@@ -76,13 +76,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247211",
+        "id": "v2ex-1247220",
         "category": "dev",
-        "title": "你们用 AI 写代码，会每次都看它改了什么吗？",
-        "url": "https://www.v2ex.com/t/1247211",
+        "title": "为了用 claude， 在美国公司没下来之前， 我先用了国外的朋友家里主机",
+        "url": "https://www.v2ex.com/t/1247220",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T16:12:07.000Z",
-        "summary": "想问问大家，让 AI 改完代码以后，你们会逐行看 diff ，还是功能试一下没问题就提交？ 只改几行还好，一次改了十几个文件，看起来也挺费劲。但完全不看，又怕它顺手改了不该改的地方。 你们一般怎么检查？有没有哪些部分是一定会自己看的？",
+        "publishedAt": "2026-10-08T19:37:21.000Z",
+        "summary": "几个月前分别托管了 3 台电脑跑在国外朋友家里，现在终于派上用场了，今天先用了其中一台电脑配置了利用 rustdesk 远程登录，并使用朋友注册/注册 claude 账号，完美临时可以用了。 半夜去越南的网络超快，和本地操作没区别，一直使用 windows/macos, 晚上转了操作下 debian 桌面， 感觉切换成本很低。 还有另外 2 台电脑，后面如果还是封号，那只能重新找其它朋友搞账号，我在想 kyc 和托管会不会是下一个大生意，或者说一直是个大生意？ 目前不敢使用…",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -94,18 +94,18 @@
         "source": "百度热搜",
         "summary": "近日，一位近70岁阿姨为看短剧充值22.58万元的事件引发关注。据悉，在两年多的时间里，该阿姨累计充值4887笔，巅峰时期一天充值29次，单日花费1400余元。据分析，该事件起因于短剧平台利用小额付费、换马甲及大数据精准推送等套路诱导老人消费。",
         "badge": "热搜",
-        "signal": "7,808,234 热度"
+        "signal": "7,809,184 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-102490",
+        "id": "cisa-kev-cve-2016-3081",
         "category": "security",
-        "title": "Zammad GmbH Zammad：Zammad GmbH Zammad Improper Privilege Management Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102490",
+        "title": "Apache Struts：Apache Struts Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2016-3081",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-02T00:00:00.000Z",
-        "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
-        "badge": "CVE-2026-102490",
-        "signal": "已遭利用 · 整改期限 2026-10-05"
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.",
+        "badge": "CVE-2016-3081",
+        "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
         "id": "ai-hugging-face-88e871d5a8d26738",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50007353",
+        "id": "hn-50011928",
         "category": "dev",
-        "title": "New gTLD Application for .lan",
-        "url": "https://newgtldprogram-aps.icann.org/applications/CD2694T-T26351/summary",
+        "title": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy",
+        "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full",
         "source": "Hacker News",
-        "publishedAt": "2026-10-08T15:51:51.000Z",
+        "publishedAt": "2026-10-08T20:42:16.000Z",
         "badge": "HN",
-        "signal": "47 分 · 38 评论"
+        "signal": "40 分 · 21 评论"
       },
       {
         "id": "cn-item-aa19eac531bfe554",
@@ -137,25 +137,189 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-fj8f-m44g-c479",
+        "id": "github-advisory-ghsa-ww5h-9m49-7xx4",
         "category": "security",
-        "title": "PraisonAI: Prompt Injection Defense Bypassed for HIGH-Level Threats",
-        "url": "https://github.com/advisories/GHSA-fj8f-m44g-c479",
+        "title": "fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion",
+        "url": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-07T20:43:58.000Z",
-        "summary": "### Summary Injection Defense is a purpose-built prompt injection defense layer. It scans LLM inputs through six detection categories: instruction overrides, authority claims, boundary manipulation, obfuscation, financial manipulation, and…",
-        "badge": "CVE-2026-61439",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-08T22:02:07.000Z",
+        "summary": "### Summary The fix for CVE-2026-34950 (CVSS 9.1, released in v6.2.0) is **incomplete**. It adds `key.trim()` to the PEM-detection path in `src/crypto.js`, but `String.prototype.trim()` only strips characters classified as whitespace by th…",
+        "badge": "CVE-2026-107722",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
-        "id": "ai-openai-661f64ddb5f472a2",
+        "id": "ai-openai-855092fba1df7e8a",
         "category": "ai",
-        "title": "Helping teens learn, plan, and shape the future of AI",
-        "url": "https://openai.com/index/teens-learn-and-plan",
+        "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+        "url": "https://openai.com/index/pollo-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-10-07T12:00:00.000Z",
-        "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
+        "publishedAt": "2026-10-08T12:00:00.000Z",
+        "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
         "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1247214",
+        "category": "dev",
+        "title": "XXL-AI v1.1.1 发布｜ Desk 桌面客户端正式上线，云本结合再进一步",
+        "url": "https://www.v2ex.com/t/1247214",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-08T16:38:57.000Z",
+        "summary": "Release Notes [云版（ Web 服务端）] 1 、 [优化] 项目合并部署：研发环节前后端分离，部署期前端产物内嵌进后端 Jar ，单进程单端口对外； 2 、 [新增] I18N 模块重构：前后端国际化逻辑优化，统一后端控制；标准化国际化资源文件结构，支持多语言配置，并优化前端国际化加载逻辑； 3 、 [优化] 模型 API 请求通参调整，设置 User-Agent: XXL-AI 便于供应商识别； 4 、 [优化] 供应商模型请求参数属性优化，支持格式检测与…",
+        "badge": "程序员",
+        "signal": "0 回复"
+      },
+      {
+        "id": "cn-it-04d06fa34ecda534",
+        "category": "cn",
+        "title": "消息称华为阔直板机型有多产品线布局动作，nova 中端线也在评估中",
+        "url": "https://www.ithome.com/1/010/744.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-08T16:50:47.000Z",
+        "summary": "IT之家 10 月 9 日消息，博主 @数码闲聊站 发文透露，菊菊（此处预计指华为）阔直板手机有多产品线布局的动作， n 中端线（预计指 nova 产品线）也在评估阔直板中 。 有网友询问 Mate 系列是否会推出阔直板形态手机，博主表示：“ Mate 暂时没有这个计划。 ”还有网友谈及了 Pura X View 的销量带火了阔直板这一形态，博主回复称：“ 所以都在跟，但进度最快的也还是晚华子大半年。 ” 据IT之家此前报道， 全球首款阔直板手机 —— 华为 Pura X …",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2023-22894",
+        "category": "security",
+        "title": "Strapi Strapi：Strapi Cleartext Storage of Sensitive Information Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-22894",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL…",
+        "badge": "CVE-2023-22894",
+        "signal": "已遭利用 · 整改期限 2026-10-11"
+      },
+      {
+        "id": "ai-google-deepmind-ce56aa83d0064ef1",
+        "category": "ai",
+        "title": "Gemini 4 Argon: our next era of frontier intelligence",
+        "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-30T20:01:45.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-50000488",
+        "category": "dev",
+        "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
+        "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-08T00:14:48.000Z",
+        "badge": "HN",
+        "signal": "233 分 · 203 评论"
+      },
+      {
+        "id": "cn-baidu-f65aa01e3b5324ef",
+        "category": "cn",
+        "title": "三甲医生回应“喝大水”",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%89%E7%94%B2%E5%8C%BB%E7%94%9F%E5%9B%9E%E5%BA%94%E2%80%9C%E5%96%9D%E5%A4%A7%E6%B0%B4%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "近日，“喝大水”上热搜引发关注。浙江省中山医院内分泌科徐英英主任回应称，喝大水不等于科学饮水。徐英英表示，用白水替代含糖饮料值得肯定，但短时间内大口猛灌可能超过肾脏排水能力，诱发低钠血症，严重时会出现头痛、恶心、乏力甚至意识障碍。",
+        "badge": "热搜",
+        "signal": "7,711,863 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-5hjw-83fp-phq9",
+        "category": "security",
+        "title": "fast-jwt : Silent claim-validator bypass when JWT payload is a JSON array",
+        "url": "https://github.com/advisories/GHSA-5hjw-83fp-phq9",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-08T22:01:58.000Z",
+        "summary": "### Summary `fast-jwt`'s `createVerifier` silently skips **all** configured claim validators (`exp`, `nbf`, `iss`, `aud`, `sub`, `jti`, `nonce`) when a validly-signed JWT carries a JSON array as its payload instead of an object. The verifi…",
+        "badge": "CVE-2026-107723",
+        "signal": "HIGH · CVSS 8.1"
+      },
+      {
+        "id": "ai-hugging-face-16b7810afb00bdc0",
+        "category": "ai",
+        "title": "Introducing Falcon ASR",
+        "url": "https://huggingface.co/blog/tiiuae/falcon-asr",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-07T13:21:03.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1247211",
+        "category": "dev",
+        "title": "你们用 AI 写代码，会每次都看它改了什么吗？",
+        "url": "https://www.v2ex.com/t/1247211",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-08T16:12:07.000Z",
+        "summary": "想问问大家，让 AI 改完代码以后，你们会逐行看 diff ，还是功能试一下没问题就提交？ 只改几行还好，一次改了十几个文件，看起来也挺费劲。但完全不看，又怕它顺手改了不该改的地方。 你们一般怎么检查？有没有哪些部分是一定会自己看的？",
+        "badge": "程序员",
+        "signal": "5 回复"
+      },
+      {
+        "id": "cn-item-67b0a34147b0fb2f",
+        "category": "cn",
+        "title": "成都一小区楼顶发现7岁男童坟墓系谣言 警方通报",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-08/10709381.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-08T13:43:35.000Z",
+        "summary": "近日，网传“金堂县某小区楼顶发现可疑骨头”引发市民关注，成都警方通报：",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2021-3199",
+        "category": "security",
+        "title": "ONLYOFFICE Docs：ONLYOFFICE Docs Server Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-3199",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
+        "badge": "CVE-2021-3199",
+        "signal": "已遭利用 · 整改期限 2026-10-11"
+      },
+      {
+        "id": "ai-openai-d9e485b409fe8517",
+        "category": "ai",
+        "title": "Disrupting AI-enabled “false front” operations",
+        "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50009295",
+        "category": "dev",
+        "title": "Theranos.world",
+        "url": "https://www.theranos.world/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-08T17:51:49.000Z",
+        "badge": "HN",
+        "signal": "150 分 · 78 评论"
+      },
+      {
+        "id": "cn-it-33ce245a4f58dfbf",
+        "category": "cn",
+        "title": "苹果官宣“欢迎回家”发布会定档 10 月 13 日，暗示首款智能家居中枢产品",
+        "url": "https://www.ithome.com/1/010/743.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-08T16:26:13.000Z",
+        "summary": "IT之家 10 月 9 日消息，苹果营销高级副总裁 Greg Joswiak 发布预告，官宣“Welcome home（欢迎回家）”发布会定档美国东部时间 10 月 13 日上午 9 点（ 北京时间 10 月 13 日晚 9 点 ）。 从宣传语来看， 预计将发布苹果首款智能家居中枢产品 。该产品此前被曝配备 6 英寸屏幕，提供壁挂与桌面两款形态。 IT之家综合此前爆料，桌面版整体外形类似 iMac G4，配有圆形金属底座，屏幕则通过金属支臂连接，用户可以手动调整俯仰角度；机…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-g3jj-5cmm-3hxx",
+        "category": "security",
+        "title": "fast-jwt treats raw public JWK JSON as an HMAC secret, enabling HS256 token forgery",
+        "url": "https://github.com/advisories/GHSA-g3jj-5cmm-3hxx",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-08T22:01:53.000Z",
+        "summary": "### Summary `fast-jwt` 6.2.4 silently classifies raw serialized public JWK JSON as an HMAC secret. If an application supplies public JWK JSON text as the verifier key and HS256 is explicitly allowed or automatically inferred, an attacker w…",
+        "badge": "CVE-2026-107724",
+        "signal": "HIGH · CVSS 7.4"
+      },
+      {
+        "id": "ai-google-deepmind-c696e8b1f3422473",
+        "category": "ai",
+        "title": "Introducing SynthID Bio",
+        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-09-30T15:03:07.000Z",
+        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1247205",
@@ -169,170 +333,6 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-33f3d189bf0605b2",
-        "category": "cn",
-        "title": "鸿蒙新补丁包惊喜 +1：华为 Mate 80 等系列机型新增隔空手势翻转加密分享功能",
-        "url": "https://www.ithome.com/1/010/742.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-08T16:16:27.000Z",
-        "summary": "IT之家 10 月 9 日消息，华为今日面向 Mate 80 系列等机型，推送了鸿蒙 HarmonyOS 7.0.0.109 版本最新补丁包，包体大小约 206.99MB，优化了部分场景的使用体验。 IT之家实测发现，更新该补丁包除了带来多设备互助通信共享外， 还支持了隔空手势翻转加密分享功能 （使用隔空手势抓取需要分享的内容，设备弹出动画后再翻转手势）。具体效果如下： 根据华为官方说法，加密后的内容仅可查看一次，无法截屏录屏或分享；加密分享的图片和视频不支持缩略图预览。 …",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-102489",
-        "category": "security",
-        "title": "Zammad GmbH Zammad：Zammad GmbH Zammad Session Fixation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102489",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-02T00:00:00.000Z",
-        "summary": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
-        "badge": "CVE-2026-102489",
-        "signal": "已遭利用 · 整改期限 2026-10-05"
-      },
-      {
-        "id": "ai-google-deepmind-ce56aa83d0064ef1",
-        "category": "ai",
-        "title": "Gemini 4 Argon: our next era of frontier intelligence",
-        "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-30T20:01:45.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50006832",
-        "category": "dev",
-        "title": "US Suspends Visa Program for Tech Firms Including Microsoft",
-        "url": "https://www.bloomberg.com/news/articles/2026-10-08/us-suspends-visa-program-for-tech-firms-including-microsoft",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-08T15:15:00.000Z",
-        "badge": "HN",
-        "signal": "162 分 · 183 评论"
-      },
-      {
-        "id": "cn-baidu-f65aa01e3b5324ef",
-        "category": "cn",
-        "title": "三甲医生回应“喝大水”",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%89%E7%94%B2%E5%8C%BB%E7%94%9F%E5%9B%9E%E5%BA%94%E2%80%9C%E5%96%9D%E5%A4%A7%E6%B0%B4%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "近日，“喝大水”上热搜引发关注。浙江省中山医院内分泌科徐英英主任回应称，喝大水不等于科学饮水。徐英英表示，用白水替代含糖饮料值得肯定，但短时间内大口猛灌可能超过肾脏排水能力，诱发低钠血症，严重时会出现头痛、恶心、乏力甚至意识障碍。",
-        "badge": "热搜",
-        "signal": "7,712,350 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-788w-68h3-cvxp",
-        "category": "security",
-        "title": "Ghost: Remote Code Execution via Bookmark Card Images",
-        "url": "https://github.com/advisories/GHSA-788w-68h3-cvxp",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-07T20:43:08.000Z",
-        "summary": "### Impact An image processing library bundled with Ghost contained a vulnerability in its SVG handling. Any staff user, including Contributors, could create a bookmark card for an attacker-controlled website, resulting in arbitrary comman…",
-        "badge": "CVE-2026-105642",
-        "signal": "HIGH · CVSS 8.8"
-      },
-      {
-        "id": "ai-hugging-face-16b7810afb00bdc0",
-        "category": "ai",
-        "title": "Introducing Falcon ASR",
-        "url": "https://huggingface.co/blog/tiiuae/falcon-asr",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-07T13:21:03.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1247196",
-        "category": "dev",
-        "title": "前 AI 时代挖的坑， AI 时代填上了：一个算法可视化网站",
-        "url": "https://www.v2ex.com/t/1247196",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T14:54:28.000Z",
-        "summary": "这个项目其实是前 AI 时代就开始做的。起因是我自己学算法，总是学完就忘，就想着做一个算法可视化项目，既能顺便学习，又能刷一点开源项目。那一阵子新拟物风格比较火，正好拿来练练手。 结果做完第一个算法（冒泡）就搁置了，工作太忙，一放就是好几年。后来有了 AI 才重新捡起来，今年补到了 92 个条目，也算是圆梦了吧。 现在大概是这样： 9 大类：数据结构、排序、图、DP 、回溯、字符串、数论、计算几何、查找 每一步都能前进、后退、拖进度条，倍速可调 TS / Python / …",
-        "badge": "程序员",
-        "signal": "0 回复"
-      },
-      {
-        "id": "cn-item-67b0a34147b0fb2f",
-        "category": "cn",
-        "title": "成都一小区楼顶发现7岁男童坟墓系谣言 警方通报",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-08/10709381.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-08T13:43:35.000Z",
-        "summary": "近日，网传“金堂县某小区楼顶发现可疑骨头”引发市民关注，成都警方通报：",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "cisa-kev-cve-2026-104286",
-        "category": "security",
-        "title": "Fortinet FortiMail：Fortinet FortiMail Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104286",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-01T00:00:00.000Z",
-        "summary": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS…",
-        "badge": "CVE-2026-104286",
-        "signal": "已遭利用 · 整改期限 2026-10-04"
-      },
-      {
-        "id": "ai-openai-4e324623ab7ca6fe",
-        "category": "ai",
-        "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
-        "url": "https://openai.com/index/radisson",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-07T07:00:00.000Z",
-        "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-50005527",
-        "category": "dev",
-        "title": "Beauty in DVD Menus",
-        "url": "https://vale.rocks/posts/dvd-menus",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-08T13:22:01.000Z",
-        "badge": "HN",
-        "signal": "128 分 · 85 评论"
-      },
-      {
-        "id": "cn-it-52e91c33cf91816a",
-        "category": "cn",
-        "title": "NASA SpaceX “龙飞船”Crew-12 在洛杉矶海岸溅落，四名宇航员完成 235 天驻留任务",
-        "url": "https://www.ithome.com/1/010/741.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-08T15:51:49.000Z",
-        "summary": "IT之家 10 月 8 日消息，NASA 刚刚宣布，美国东部时间上午 11 点 34 分（北京时间 23 点 34 分），搭载杰西卡・U・梅尔、杰克・哈撒韦两名美国国家航空航天局（NASA）宇航员、欧洲空间局（ESA）宇航员索菲・阿德诺以及俄罗斯航天集团（俄罗斯联邦航天局）宇航员安德烈・费佳耶夫的 SpaceX “龙”飞船，在加利福尼亚州洛杉矶附近海域完成溅落。 IT之家从官方公告获悉，回收船上的作业团队，含两艘高速快艇人员，正在固定 SpaceX “龙飞船”，保障飞船状态…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-69qc-f5m6-889c",
-        "category": "security",
-        "title": "Ghost: Stored XSS via Embed Card Previews",
-        "url": "https://github.com/advisories/GHSA-69qc-f5m6-889c",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-07T20:43:05.000Z",
-        "summary": "### Impact Embed cards in the Ghost editor could be used to bypass the fix for GHSA-8vhf-xxpj-4qrg. Any staff user, including Contributors, could store scripts in post content that ran when another staff user opened the post in the editor,…",
-        "badge": "CVE-2026-105643",
-        "signal": "HIGH · CVSS 7.3"
-      },
-      {
-        "id": "ai-google-deepmind-c696e8b1f3422473",
-        "category": "ai",
-        "title": "Introducing SynthID Bio",
-        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-09-30T15:03:07.000Z",
-        "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "v2ex-1247186",
-        "category": "dev",
-        "title": "新发的 Haiku5.5 什么水平，和 6Luna 谁更胜一筹",
-        "url": "https://www.v2ex.com/t/1247186",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T13:59:15.000Z",
-        "summary": "两家 Pro 用户能不能 Haiku/Luna 自由？ Haiku5.5 如果能吊着打 6Luna 的话是不是可以转投 Claude 去了？",
-        "badge": "程序员",
-        "signal": "6 回复"
-      },
-      {
         "id": "cn-baidu-581304e1f3d2b796",
         "category": "cn",
         "title": "一批重大工程刷新“进度条”",
@@ -340,18 +340,18 @@
         "source": "百度热搜",
         "summary": "国庆假期，神州大地喜庆祥和，重大工程建设一线热潮涌动。从高原戈壁到滨海之地，从能源基地到交通干线，多项“首个”“首次”成果接连上新。这些新进展新突破，持续刷新着重大工程的“进度条”。",
         "badge": "热搜",
-        "signal": "7,616,767 热度"
+        "signal": "7,618,598 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-76504",
+        "id": "cisa-kev-cve-2015-3306",
         "category": "security",
-        "title": "Cisco Catalyst SD-WAN Manager：Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504",
+        "title": "ProFTPD ProFTPD：ProFTPD Improper Access Control Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-3306",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-30T00:00:00.000Z",
-        "summary": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP req…",
-        "badge": "CVE-2026-76504",
-        "signal": "已遭利用 · 整改期限 2026-10-03"
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "summary": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
+        "badge": "CVE-2015-3306",
+        "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
         "id": "ai-hugging-face-67f5f61696a2949d",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50002008",
+        "id": "hn-50010470",
         "category": "dev",
-        "title": "“Math 2.0” will need to value mathematical progress more holistically",
-        "url": "https://mathstodon.xyz/@tao/117395269325940185",
+        "title": "The value of not getting to the point (2015)",
+        "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-08T05:14:14.000Z",
+        "publishedAt": "2026-10-08T19:04:56.000Z",
         "badge": "HN",
-        "signal": "514 分 · 516 评论"
+        "signal": "74 分 · 25 评论"
       },
       {
         "id": "cn-item-d11613d93c19c449",
@@ -383,57 +383,57 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-x3q2-h9hx-4r4j",
+        "id": "github-advisory-ghsa-6wjp-v33h-5cvq",
         "category": "security",
-        "title": "Docling has arbitrary file read/write (and command execution when shell-escape is enabled) when rendering untrusted TikZ with the opt-in Tectonic engine",
-        "url": "https://github.com/advisories/GHSA-x3q2-h9hx-4r4j",
+        "title": "PraisonAI: AgentOS defaults to network-exposed no-auth mode, allowing unauthenticated agent invocation and instruction disclosure",
+        "url": "https://github.com/advisories/GHSA-6wjp-v33h-5cvq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-07T20:42:05.000Z",
-        "summary": "### Summary When the LaTeX backend is configured to render TikZ pictures with the Tectonic engine (`LatexBackendOptions(tikz_engine=\"tectonic\")`), the TikZ body and the document preamble from the input file are compiled by Tectonic without…",
-        "badge": "CVE-2026-105744",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-08T22:01:29.000Z",
+        "summary": "## Summary The AgentOS server in the `praisonai` TypeScript/npm package ships an insecure default: it binds `0.0.0.0`, sets no API key, and uses CORS `*` with credentials. The API-key middleware is only registered when an API key is config…",
+        "badge": "CVE-2026-61426",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
-        "id": "ai-openai-a097ef0d441a7216",
+        "id": "ai-openai-661f64ddb5f472a2",
         "category": "ai",
-        "title": "GPT-6 and Intelligent UI for everyone",
-        "url": "https://openai.com/index/gpt-6-for-everyone",
+        "title": "Helping teens learn, plan, and shape the future of AI",
+        "url": "https://openai.com/index/teens-learn-and-plan",
         "source": "OpenAI",
-        "publishedAt": "2026-10-07T00:00:00.000Z",
-        "summary": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247180",
+        "id": "v2ex-1247196",
         "category": "dev",
-        "title": "现在哪个工具实现多 agent 一起编程效果比较好呀？",
-        "url": "https://www.v2ex.com/t/1247180",
+        "title": "前 AI 时代挖的坑， AI 时代填上了：一个算法可视化网站",
+        "url": "https://www.v2ex.com/t/1247196",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T13:36:02.000Z",
-        "summary": "现在大家 AI 编程有没有多个项目一起开发的经验？比如 2 个项目， 每个项目开 5-10 个 agent 一起干活。实际效果如何？ 使用什么工具？冲突如何解决？",
+        "publishedAt": "2026-10-08T14:54:28.000Z",
+        "summary": "这个项目其实是前 AI 时代就开始做的。起因是我自己学算法，总是学完就忘，就想着做一个算法可视化项目，既能顺便学习，又能刷一点开源项目。那一阵子新拟物风格比较火，正好拿来练练手。 结果做完第一个算法（冒泡）就搁置了，工作太忙，一放就是好几年。后来有了 AI 才重新捡起来，今年补到了 92 个条目，也算是圆梦了吧。 现在大概是这样： 9 大类：数据结构、排序、图、DP 、回溯、字符串、数论、计算几何、查找 每一步都能前进、后退、拖进度条，倍速可调 TS / Python / …",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-3e761d51367d1f09",
+        "id": "cn-it-33f3d189bf0605b2",
         "category": "cn",
-        "title": "又一里程碑时刻：深开鸿宣布开鸿开发者注册量突破 20 万",
-        "url": "https://www.ithome.com/1/010/740.htm",
+        "title": "鸿蒙新补丁包惊喜 +1：华为 Mate 80 等系列机型新增隔空手势翻转加密分享功能",
+        "url": "https://www.ithome.com/1/010/742.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-08T15:44:02.000Z",
-        "summary": "IT之家 10 月 8 日消息，深开鸿官方今日发布喜报， 宣布开鸿开发服务平台开发者注册量突破 20 万 （统计数据截止：2026 年 10 月 8 日）。 据IT之家此前报道，今年 8 月，深圳开鸿数字产业发展有限公司 CEO 王成录宣布： 深开鸿贡献 OpenHarmony 主干代码达 1000 万行 ！这是一个值得纪念的里程碑！ 四年来，深开鸿在开源社区里每敲下一行代码，都是对“技术立命”的践行，对“生态共建”的承诺，是深开鸿在开源社区交出的答卷，更是献给开源鸿蒙生态…",
+        "publishedAt": "2026-10-08T16:16:27.000Z",
+        "summary": "IT之家 10 月 9 日消息，华为今日面向 Mate 80 系列等机型，推送了鸿蒙 HarmonyOS 7.0.0.109 版本最新补丁包，包体大小约 206.99MB，优化了部分场景的使用体验。 IT之家实测发现，更新该补丁包除了带来多设备互助通信共享外， 还支持了隔空手势翻转加密分享功能 （使用隔空手势抓取需要分享的内容，设备弹出动画后再翻转手势）。具体效果如下： 根据华为官方说法，加密后的内容仅可查看一次，无法截屏录屏或分享；加密分享的图片和视频不支持缩略图预览。 …",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-86950",
+        "id": "cisa-kev-cve-2026-88779",
         "category": "security",
-        "title": "Apple Multiple Products：Apple Multiple Products Out-of-Bounds Write Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-86950",
+        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88779",
         "source": "CISA KEV",
-        "publishedAt": "2026-09-29T00:00:00.000Z",
-        "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
-        "badge": "CVE-2026-86950",
-        "signal": "已遭利用 · 整改期限 2026-10-02"
+        "publishedAt": "2026-10-04T00:00:00.000Z",
+        "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
+        "badge": "CVE-2026-88779",
+        "signal": "已遭利用 · 整改期限 2026-10-07"
       },
       {
         "id": "ai-google-deepmind-34692efacd3b982a",
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-49980346",
+        "id": "hn-50011999",
         "category": "dev",
-        "title": "The Slow Formation of Durable Software",
-        "url": "https://newsletter.dancohen.org/archive/the-slow-formation-of-durable-software/",
+        "title": "AI-ready biological data: $1.8B global commitment",
+        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-06T15:54:24.000Z",
+        "publishedAt": "2026-10-08T20:46:25.000Z",
         "badge": "HN",
-        "signal": "162 分 · 53 评论"
+        "signal": "25 分 · 1 评论"
       },
       {
         "id": "cn-baidu-56f0a4774b3c538a",
@@ -462,18 +462,18 @@
         "source": "百度热搜",
         "summary": "近日，河南化工技师学院电子显微镜技术专业亮相世界技能大赛。现场老师介绍，该专业累计已有101余名毕业生入职北京大学。此前，该学院于2012年创办全国唯一的电子显微镜技术专业。截至2026年六月，已向北京大学、浙江大学、中国科学院等顶尖科研平台输送496余名毕业生。",
         "badge": "热搜",
-        "signal": "7,521,456 热度"
+        "signal": "7,524,350 热度"
       },
       {
-        "id": "github-advisory-ghsa-w794-rj3p-xv45",
+        "id": "github-advisory-ghsa-c78w-2q4r-68r7",
         "category": "security",
-        "title": "Langflow: OS command injection (RCE) via arbitrary command in MCP stdio server configuration",
-        "url": "https://github.com/advisories/GHSA-w794-rj3p-xv45",
+        "title": "PraisonAI: Platform member PATCH routes allow owner resource rewrites and project lead reassignment delete bypass",
+        "url": "https://github.com/advisories/GHSA-c78w-2q4r-68r7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-07T20:36:35.000Z",
-        "summary": "### Summary Before **Langflow 1.10.3**, the MCP stdio transport launched whatever `command` / `args` a user put in an MCP server configuration, with no allowlist and (before 1.10.3) wrapped in `bash -c \"exec {command} ...\"`. Any user able …",
-        "badge": "CVE-2026-105697",
-        "signal": "CRITICAL · CVSS 9.9"
+        "publishedAt": "2026-10-08T22:01:11.000Z",
+        "summary": "# Platform member PATCH routes allow owner resource rewrites and project lead reassignment delete bypass ## Summary `praisonai-platform` lets an ordinary workspace member patch owner-created project, issue, and agent records even though th…",
+        "badge": "CVE-2026-61442",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
         "id": "ai-hugging-face-bd1136d0fcfd6f13",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247178",
+        "id": "v2ex-1247186",
         "category": "dev",
-        "title": "Clash(Mihomo) Rules 规则(尤其是 AI 供应商)，哪里的订阅更新得最及时？",
-        "url": "https://www.v2ex.com/t/1247178",
+        "title": "新发的 Haiku5.5 什么水平，和 6Luna 谁更胜一筹",
+        "url": "https://www.v2ex.com/t/1247186",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T13:24:45.000Z",
-        "summary": "A 社，OAI ，Gork ，包括最新不知名的，资料都能及时跟上的？",
+        "publishedAt": "2026-10-08T13:59:15.000Z",
+        "summary": "两家 Pro 用户能不能 Haiku/Luna 自由？ Haiku5.5 如果能吊着打 6Luna 的话是不是可以转投 Claude 去了？",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "6 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 14073,
+        "stars": 15192,
         "starsToday": 4640
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 45889,
+        "stars": 46199,
         "starsToday": 1163
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 20800,
+        "stars": 24750,
         "starsToday": 7744
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 280863,
+        "stars": 280966,
         "starsToday": 1770
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 98213,
+        "stars": 98380,
         "starsToday": 662
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/EpicGames/raddebugger",
         "description": "A native, user-mode, multi-process, graphical debugger.",
         "language": "C",
-        "stars": 8026,
+        "stars": 8088,
         "starsToday": 283
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 27359,
+        "stars": 27470,
         "starsToday": 309
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 6733,
+        "stars": 7622,
         "starsToday": 2510
       },
       {
@@ -589,10 +589,10 @@
         "name": "liquidslr/system-design-notes",
         "url": "https://github.com/liquidslr/system-design-notes",
         "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-        "stars": 24360,
+        "stars": 24545,
         "starsToday": 398
       }
     ],
-    "updatedAt": "2026-10-08T16:29:34.246Z"
+    "updatedAt": "2026-10-08T22:04:49.961Z"
   }
 }
