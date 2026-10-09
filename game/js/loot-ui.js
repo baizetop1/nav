@@ -1,12 +1,13 @@
-import {gearFit} from './gear-fit.js?v=0.68.0';
-import {away} from './progression-paths.js?v=0.68.0';
-import {gearTraitLine} from './tactics-ui.js?v=0.68.0';
+import {gearFit} from './gear-fit.js?v=0.69.0';
+import {away} from './progression-paths.js?v=0.69.0';
+import {gearTraitLine} from './tactics-ui.js?v=0.69.0';
 export function lootEquipment(before,after,d,esc){const gained=after.equipment.filter(e=>!before.equipment.some(x=>x.uid===e.uid));if(!gained.length)return '';return '<section><h3>新装备</h3>'+gained.map(e=>'<article class="card"><b>'+esc(d.by.equipments[e.item].name)+'</b>'+gearTraitLine(e)+'<div class="actions"><button class="secondary" data-reward-action="'+esc(JSON.stringify({type:'ui_lootCompare',id:e.uid}))+'">比较与穿戴</button><button class="secondary" data-reward-action="'+esc(JSON.stringify({type:'equipLock',id:e.uid,locked:true}))+'">锁定</button></div></article>').join('')+'</section>';}
 
 export function recommendedHolder(s,d,e){return d.heroes.filter(h=>s.heroes[h.id].status==='owned'&&!away(s,h.id)).sort((a,b)=>Number(gearFit(s,d,e,b.id)?.ready)-Number(gearFit(s,d,e,a.id)?.ready)||Number(s.team.includes(b.id))-Number(s.team.includes(a.id))||s.heroes[b.id].level-s.heroes[a.id].level)[0]?.id||null;}
 export function lootHighlights(before,after,d){
  const rows=after.equipment.filter(e=>!before.equipment.some(x=>x.uid===e.uid)).map(e=>({name:d.by.equipments[e.item].name,amount:1,id:e.uid,new:!before.equipment.some(x=>x.item===e.item),rare:d.by.equipments[e.item].tier>=3}));
  for(const [id,n]of Object.entries(after.inventory)){const amount=n-(before.inventory[id]||0);if(amount>0)rows.push({name:d.by.items[id].name,amount,new:!(before.inventory[id]>0),rare:['recruit_order','spirit_essence','blueprint','mount_token','martial_pages'].includes(id)});}
+ for(const [group,labels] of [['camp',{food:'粮草',wood:'木材',troops:'乡勇归队'}],['player',{silver:'碎银',merit:'功勋',prestige:'威望'}]])for(const [id,name]of Object.entries(labels)){const amount=(after[group]?.[id]||0)-(before[group]?.[id]||0);if(amount>0)rows.push({name,amount,new:false,rare:false});}
  return rows.sort((a,b)=>Number(!!b.id)-Number(!!a.id)||Number(b.rare)-Number(a.rare)||Number(b.new)-Number(a.new));
 }
 export function quickLoot(before,after,d,esc){const rows=lootHighlights(before,after,d);return '<aside id="quick-loot" class="quick-loot" aria-label="本次所得"><div role="status">'+(rows.length?rows.slice(0,3).map(r=>'<span class="'+(r.rare?'loot-rare':'')+'">'+(r.new?'[新] ':'')+esc(r.name)+' ×'+r.amount+'</span>').join('')+(rows.length>3?'<small>另有 '+(rows.length-3)+' 种</small>':''):'<span>本次结算完成，未获得新物品。</span>')+'</div><div class="actions"><button data-loot-details>明细</button>'+(rows.find(r=>r.id)?'<button data-loot-equip="'+esc(rows.find(r=>r.id).id)+'">比较装备</button>':'')+(!after.adventure?.run&&before.battle?.context.type==='special'?'<button data-loot-again>再战</button>':'')+'<button data-loot-dismiss aria-label="收起所得">收起</button></div></aside>';}

@@ -1,10 +1,10 @@
-import {PERSONAL_TALES} from './tactics-data.js?v=0.68.0';
-import {personalProgress} from './personal-tasks.js?v=0.68.0';
-import {PERSONAL,COMBOS,LAYOUTS} from './expansion-data.js?v=0.68.0';
-import {expansion} from './expansion-state.js?v=0.68.0';
-import {startBattle} from './battle.js?v=0.68.0';import {attachTroops} from './camp.js?v=0.68.0';
-import {deployedTroops,heroCommand} from './logistics.js?v=0.68.0';
-import {affairReward} from './affairs.js?v=0.68.0';import {grant} from './item.js?v=0.68.0';import {requireRule,hasOwn,count,journal} from './utils.js?v=0.68.0';
+import {PERSONAL_TALES} from './tactics-data.js?v=0.69.0';
+import {personalProgress} from './personal-tasks.js?v=0.69.0';
+import {PERSONAL,COMBOS,LAYOUTS} from './expansion-data.js?v=0.69.0';
+import {expansion} from './expansion-state.js?v=0.69.0';
+import {startBattle} from './battle.js?v=0.69.0';import {attachTroops} from './camp.js?v=0.69.0';
+import {deployedTroops,heroCommand} from './logistics.js?v=0.69.0';
+import {affairReward} from './affairs.js?v=0.69.0';import {grant} from './item.js?v=0.69.0';import {requireRule,hasOwn,count,journal} from './utils.js?v=0.69.0';
 function enter(s,d,kind,id,enemies,scale,terrain,n){requireRule(s.camp.mode==='solo'||n>0,'请募兵或改为独行。');startBattle(s,d,{enemies,scale,context:{type:'realm',kind,id,terrain,tier:(s.expansion.run?.stage||0)+1}});attachTroops(s,n);}
 export function personalReason(s,id){if(!hasOwn(PERSONAL,id)||s.heroes[id]?.status!=='owned'||s.heroes[id].level<10)return '本人入寨并达到 10 级';if(!s.team.includes(id))return '请将本人编入阵容';const n=deployedTroops(s),m=PERSONAL[id];if(m.troops&&n<m.troops)return '需要随军至少 '+m.troops+' 人';if(m.solo&&(s.team.length!==1||s.camp.mode!=='solo'))return '任务人物需要单人独行';if(m.companions&&s.team.length<m.companions+1)return '至少安排一位同伴';if(m.front&&s.team[0]!==id)return '任务人物需要位于阵容第一位';return '';}
 export function ventureAction(s,d,a){const x=expansion(s);requireRule(s.realm&&s.camp,'先开启山河经营。');if(a.type==='personalStyle'){requireRule(x.personal[a.id]&&['force','guard'].includes(a.style),'先完成本人的专属任务，再选择本领。');const old=x.styles?.[a.id];requireRule(old!==a.style,'已选此本领。');requireRule(!old||s.player.silver>=50,'改选需要碎银 50。');if(old)s.player.silver-=50;(x.styles??={})[a.id]=a.style;journal(s,d.by.heroes[a.id].name+'改习'+(a.style==='force'?'攻势':'守势')+'，下场战斗生效。');return;}if(a.type==='personalStart'){requireRule(s.camp.buildings.hall>=2,'聚义厅需要 2 级。');requireRule(!x.personal[a.id],'此专属任务已经完成。');requireRule(!personalReason(s,a.id),personalReason(s,a.id));requireRule((s.daily.counters.personal_attempt||0)<3,'专属任务每天合计三次。');const n=deployedTroops(s),food=5+Math.ceil(n/2);requireRule(s.player.stamina>=10&&s.camp.food>=food,'体力 10 或粮草不足。');s.player.stamina-=10;s.camp.food-=food;count(s,'personal_attempt');const m=PERSONAL[a.id];enter(s,d,'personal',a.id,m.enemies,m.scale*(m.scaling?Math.max(1,s.heroes[a.id].level/15):1),m.terrain,n);if(PERSONAL_TALES[a.id])journal(s,PERSONAL_TALES[a.id].before);return;}

@@ -1,7 +1,8 @@
-import {delvePanel} from './adventure-ui.js?v=0.68.0';
-import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.68.0';
-import {GEAR_TRAITS} from './tactics-data.js?v=0.68.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,specialPlan} from './special-dungeons.js?v=0.68.0';
+import {gatheringDiscovery} from './gathering-ui.js?v=0.69.0';
+import {delvePanel} from './adventure-ui.js?v=0.69.0';
+import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.69.0';
+import {GEAR_TRAITS} from './tactics-data.js?v=0.69.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,specialPlan} from './special-dungeons.js?v=0.69.0';
 const percent=n=>Number((n*100).toFixed(2))+'%';
 const model=(d,row)=>(row.kind==='equipment'?d.by.equipments:d.by.items)[row.id];
 const uses={scrap_iron:'熔炼精铁，或加工淬炼钢。',iron:'打造和强化装备，也可加工淬炼钢。',wood:'用于打造守路长枪；与寨内营建木材分开存放。',cloth:'制作衣甲、药品和密织麻布。',grain:'制作干粮、煎煮壮骨汤。',herb:'合成金创药、煎药引，也用于多种补给配方。',leather:'打造装备、加工鞣制硬革。',tiger_skin:'加工鞣制硬革、制作烟幕包。',tiger_bone:'煎制浓制药引、制作军医药箱。',strength_shard:'5 枚合成 1 张强化符。',strength_charm:'装备强化到 +6 及以上时使用。',martial_pages:'2 张可抄录指定好汉的招式书。',mount_feed:'喂养坐骑，增加 10 亲密。',horse_feed:'配合药草加工精制草料。',mount_token:'用于坐骑升阶。',spirit_essence:'用于好汉升品。'};
@@ -19,6 +20,8 @@ export function specialPanel(s,d,esc,btn,view={}){
  let body='';
  if(tab==='overview')body=routes+'<div class="special-overview"><div class="special-actions">'+btn('挑战 · '+q.difficulty.name+(q.route?' · '+SPECIAL_ROUTES[q.route].name:''),{type:'specialStart',id,tier,...(q.route?{route:q.route}:{})},'primary',!!q.reason)+(q.reason.includes('装备')||q.reason.includes('材料')?btn('整理行囊',{type:'ui_section',view:'bag',id:q.reason.includes('装备')?'equipment':'materials'},'secondary'):btn('调整阵容',{type:'ui_section',view:'heroes',id:'formation'},'secondary'))+'</div><p class="special-status" role="status">'+esc(q.reason||'可挑战 · 本档通关 '+(s.specialDungeons?.clears[id+'_'+tier]||0)+' 次')+'</p><p class="note">体力 0 · 粮草 0 · 次数不限</p>'+(m.parent?'<p class="note">'+({minechief:'留意全队重击：护阵、反击或打断。',marshnest:'留意全队毒雾：净化、解毒或打断。',ruinsvault:'留意蓄势治疗：打断或集火头目。'})[id]+'</p>':'')+'<details><summary>敌情与掉落规则</summary><p>'+esc(m.description)+'</p><p class="special-rule">'+esc(m.rule)+'</p><p class="note">好汉独行，不带兵。用药按件扣除，烟幕留给普通出征。各物品独立判定，也可能空手；无固定经验或银两。</p></details></div>';
 
+ if(tab==='overview'&&['mine','marsh'].includes(m.parent||id))body=btn('进入'+((m.parent||id)==='mine'?'旧矿洞':'芦苇泽')+'地图',{type:'ui_regionOpen',region:m.parent||id},'primary')+body;
+ if(tab==='overview')body=gatheringDiscovery(s,m.parent||id,d)+btn('通关后派遣采集',{type:'ui_idleOpen',region:m.parent||id},'secondary')+body;
  if(tab==='overview')body=delvePanel(s,id,tier,q.reason,btn)+body+'<details data-fold="farm"><summary>连续挑战与整理</summary><label>金创药至少保留 <select id="farm-medicine"><option value="0">0</option><option value="2" selected>2</option><option value="5">5</option></select> 件</label><div class="actions">'+[2,5,10].map(count=>btn('连战 '+count+' 场',{type:'ui_farmStart',id,tier,route:q.route,count},'secondary',!!q.reason||!!s.adventure?.run)).join('')+'</div><p class="note">须已通关本难度。自动施招，不自动用药；珍稀掉落、战败、背包不足即停。刷新或离开页面停止，不在后台刷取。</p>'+btn('整理普通重复装备',{type:'ui_duplicatePreview'},'secondary')+'</details>';
  if(tab==='drops'){
   const kind=['all','material','medicine','equipment'].includes(view.category)?view.category:'all',table=specialDropTable(id,tier),rows=table.filter(r=>kind==='all'||category(d,r)===kind),size=3,pages=Math.max(1,Math.ceil(rows.length/size)),page=Math.min(pages-1,Math.max(0,Number(view.page)||0));

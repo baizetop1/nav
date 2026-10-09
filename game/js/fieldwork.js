@@ -1,6 +1,6 @@
-import {specialDropTable,SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.68.0';
-import {requireRule} from './utils.js?v=0.68.0';
-import {itemAction} from './item.js?v=0.68.0';
+import {specialDropTable,SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.69.0';
+import {requireRule} from './utils.js?v=0.69.0';
+import {itemAction} from './item.js?v=0.69.0';
 export function recordHunt(s,b){if(b.outcome!=='victory')return;const x=s.fieldwork??={version:1,hunts:{}};for(const row of specialDropTable(b.context.id,b.context.tier).filter(r=>r.kind==='equipment')){const old=x.hunts[row.id]||{runs:0,hits:0,dry:0},hit=s.specialDungeons.last.drops.some(r=>r.kind==='equipment'&&r.id===row.id&&r.stored>0);x.hunts[row.id]={runs:Math.min(10000000,old.runs+1),hits:Math.min(10000000,old.hits+(hit?1:0)),dry:hit?0:Math.min(10000000,old.dry+1)};}}
 export function duplicateQuote(s,d){const keep=new Set(s.equipment.filter(e=>e.hero||e.locked||e.plus||e.refine||d.by.equipments[e.item].tier>=3).map(e=>e.item)),ids=[];let scrap=0;for(const e of s.equipment){if(e.hero||e.locked||e.plus||e.refine||d.by.equipments[e.item].tier>=3)continue;if(!keep.has(e.item)){keep.add(e.item);continue;}ids.push(e.uid);scrap+=d.by.equipments[e.item].tier*2;}return {ids,scrap};}
 export function dismantleDuplicates(s,d,a){const q=duplicateQuote(s,d);requireRule(q.ids.length&&JSON.stringify(a.ids)===JSON.stringify(q.ids),'装备已变化，请重新预览整理。');requireRule((s.inventory.scrap_iron||0)+q.scrap<=10000000,'碎铁已达上限。');for(const id of q.ids)itemAction(s,d,{type:'dismantle',id});}

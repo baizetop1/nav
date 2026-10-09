@@ -1,52 +1,55 @@
-import {practiceCompare,practiceDialog} from './practice.js?v=0.68.0';
-import {duplicateQuote,farmStop} from './fieldwork.js?v=0.68.0';
-import {specialPlan} from './special-dungeons.js?v=0.68.0';
-import {COMPLETION_ACTIONS,pendingCompletion,completionDialog,receiptPrompt,completionReview} from './completion-ui.js?v=0.68.0';
-import {battleOutcomeDialog} from './battle-outcome-ui.js?v=0.68.0';
-import {sceneReturn} from './scenes.js?v=0.68.0';
-import {sceneArtDialog} from './scenes-ui.js?v=0.68.0';
-import {replacementQuote} from './hero-replacement.js?v=0.68.0';
-import {replacementDialog} from './progression-paths-ui.js?v=0.68.0';
-import {delveDialog} from './adventure-ui.js?v=0.68.0';
-import {lootEquipment,quickLoot,recommendedHolder} from './loot-ui.js?v=0.68.0';
-import {lateChoiceWarning} from './late-mainline-ui.js?v=0.68.0';
-import {specialReceipt,specialNext} from './special-dungeons-ui.js?v=0.68.0';
-import {chronicleReceipt} from './chronicle-ui.js?v=0.68.0';
-import {showFunctionMenu} from './menu-ui.js?v=0.68.0';
-import {inventoryEntry} from './provisions-ui.js?v=0.68.0';
-import {installTheme} from './theme.js?v=0.68.0';
-import {campaignReceipt} from './journey-campaign-ui.js?v=0.68.0';
-import {growthRecap,afterBattleNext} from './opening-ui.js?v=0.68.0';
-import {journeyNextGoal} from './journey-goals-ui.js?v=0.68.0';
-import {beforeScreenPaint,afterScreenPaint,installScreenPages,screenInteractionActive} from './screen-pages.js?v=0.68.0';
-import {bindDialogPages} from './dialog-pages.js?v=0.68.0';
-import {storyObjective} from './story-guide.js?v=0.68.0';
-import { supportReceipt } from './recruit-support-ui.js?v=0.68.0';
-import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.68.0';
-import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.68.0';
-import { sweepQuote } from './sweep.js?v=0.68.0';
-import { sweepDialog } from './sweep-ui.js?v=0.68.0';
-import { collectionQuote, workshopQuote } from './production.js?v=0.68.0';
-import { productionDialog } from './production-ui.js?v=0.68.0';
-import { mentorshipQuote } from './mentorship.js?v=0.68.0';
-import { mentorshipDialog } from './mentorship-ui.js?v=0.68.0';
-import { SORTIES, prepareSortie } from './sortie.js?v=0.68.0';
-import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.68.0';
-import { presetReason } from './development.js?v=0.68.0';
-import { batchQuote } from './batch.js?v=0.68.0';
-import { batchDialog } from './batch-ui.js?v=0.68.0';
-import { gains, rewardDialog } from './rewards-ui.js?v=0.68.0';
-import { ActivityLog } from './activity.js?v=0.68.0';
-import { loadData } from './data.js?v=0.68.0';
-import { dispatch, newGame } from './core.js?v=0.68.0';
-import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.68.0';
-import { esc, recruitDialog, render } from './ui.js?v=0.68.0';
-import { patchElement } from './dom.js?v=0.68.0';
+import {EXPLORATION_REGIONS,activeRegion,regionState,regionPending} from './exploration-data.js?v=0.69.0';
+import {guideKey,guideEnabled,guidance,highlightGuidance} from './onboarding.js?v=0.69.0';
+import {practiceCompare,practiceDialog} from './practice.js?v=0.69.0';
+import {duplicateQuote,farmStop} from './fieldwork.js?v=0.69.0';
+import {specialPlan} from './special-dungeons.js?v=0.69.0';
+import {COMPLETION_ACTIONS,pendingCompletion,completionDialog,receiptPrompt,completionReview} from './completion-ui.js?v=0.69.0';
+import {battleOutcomeDialog,settledOutcomeDialog} from './battle-outcome-ui.js?v=0.69.0';
+import {sceneReturn} from './scenes.js?v=0.69.0';
+import {sceneArtDialog} from './scenes-ui.js?v=0.69.0';
+import {replacementQuote} from './hero-replacement.js?v=0.69.0';
+import {replacementDialog} from './progression-paths-ui.js?v=0.69.0';
+import {delveDialog} from './adventure-ui.js?v=0.69.0';
+import {lootEquipment,quickLoot,recommendedHolder} from './loot-ui.js?v=0.69.0';
+import {lateChoiceWarning} from './late-mainline-ui.js?v=0.69.0';
+import {specialReceipt,specialNext} from './special-dungeons-ui.js?v=0.69.0';
+import {chronicleReceipt} from './chronicle-ui.js?v=0.69.0';
+import {showFunctionMenu} from './menu-ui.js?v=0.69.0';
+import {inventoryEntry} from './provisions-ui.js?v=0.69.0';
+import {installTheme} from './theme.js?v=0.69.0';
+import {campaignReceipt} from './journey-campaign-ui.js?v=0.69.0';
+import {grainRoute} from './grain-road-data.js?v=0.69.0';
+import {growthRecap,afterBattleNext} from './opening-ui.js?v=0.69.0';
+import {journeyNextGoal} from './journey-goals-ui.js?v=0.69.0';
+import {beforeScreenPaint,afterScreenPaint,installScreenPages,screenInteractionActive} from './screen-pages.js?v=0.69.0';
+import {bindDialogPages} from './dialog-pages.js?v=0.69.0';
+import {storyObjective} from './story-guide.js?v=0.69.0';
+import { supportReceipt } from './recruit-support-ui.js?v=0.69.0';
+import {PAGE_SECTIONS,pageSection} from './page-sections.js?v=0.69.0';
+import { cloudCompareDialog, importComparison } from './save-comparison.js?v=0.69.0';
+import { sweepQuote } from './sweep.js?v=0.69.0';
+import { sweepDialog } from './sweep-ui.js?v=0.69.0';
+import { collectionQuote, workshopQuote } from './production.js?v=0.69.0';
+import { productionDialog } from './production-ui.js?v=0.69.0';
+import { mentorshipQuote } from './mentorship.js?v=0.69.0';
+import { mentorshipDialog } from './mentorship-ui.js?v=0.69.0';
+import { SORTIES, prepareSortie } from './sortie.js?v=0.69.0';
+import { sortieDialog, debriefPanel } from './sortie-ui.js?v=0.69.0';
+import { presetReason } from './development.js?v=0.69.0';
+import { batchQuote } from './batch.js?v=0.69.0';
+import { batchDialog } from './batch-ui.js?v=0.69.0';
+import { gains, rewardDialog } from './rewards-ui.js?v=0.69.0';
+import { ActivityLog } from './activity.js?v=0.69.0';
+import { loadData } from './data.js?v=0.69.0';
+import { dispatch, newGame } from './core.js?v=0.69.0';
+import { SaveConflict, SAVE_KEY, BACKUP_KEY } from './save.js?v=0.69.0';
+import { esc, recruitDialog, render } from './ui.js?v=0.69.0';
+import { patchElement } from './dom.js?v=0.69.0';
 
-import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.68.0';
-import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.68.0';
-import { CloudClient } from './cloud.js?v=0.68.0';
-import { boxImportDialog } from './savebox-ui.js?v=0.68.0';
+import { SlotDatabase, SlotStore, emptySlot, CHANNEL } from './slots.js?v=0.69.0';
+import { exportSave, importSave, exportName, slotId, slotNumber } from './portable.js?v=0.69.0';
+import { CloudClient } from './cloud.js?v=0.69.0';
+import { boxImportDialog } from './savebox-ui.js?v=0.69.0';
 const root=document.getElementById('app'),activity=new ActivityLog();
 const applyTheme=installTheme();
 installScreenPages();
@@ -74,7 +77,7 @@ function showSortie(action,setup){const q=prepareSortie(state,data,action,setup,
 
 let data,state,store,view='map',status='',error='',notice='',recruitTarget='',locked=false,invalid=false,dirty=false,pendingImport=null,entered=false;
 let battlePaused=true,battlePauseReason='',lastBattlePulse=null,lastBattleSaved=0,paintRevision=0;
-let farmSession=null;
+let farmSession=null,outcomeReceipt=null,outcomeError=null;
 function stopFarm(message='连续挑战已停止，当前战斗保留。'){farmSession=null;document.getElementById('farm-status')?.remove();if(message){notice=message;const receipt=document.querySelector('#quick-loot [role=status]');if(receipt){const line=document.createElement('strong');line.textContent=message;line.style.flexBasis='100%';receipt.prepend(line);}}}
 function syncFarm(){
  if(!farmSession)return false;
@@ -97,6 +100,17 @@ function syncFarm(){
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopFarm();});
 function syncBattleOutcome(){
  if(syncFarm())return;
+ if(outcomeReceipt&&outcomeReceipt.slot!==store?.id)outcomeReceipt=null;
+ if(outcomeReceipt?.after&&entered&&!operation&&!locked&&!invalid&&!document.hidden&&!['save','welcome'].includes(view)){
+  if(document.querySelector('dialog[open]'))return;
+  const receipt=outcomeReceipt;root.insertAdjacentHTML('beforeend',settledOutcomeDialog(receipt.before.battle,esc,!dirty));const dialog=document.getElementById('battle-outcome');
+  dialog.addEventListener('cancel',e=>e.preventDefault());dialog.querySelectorAll('[data-settled-choice]').forEach(button=>button.onclick=()=>{outcomeReceipt=null;dialog.close();dialog.remove();if(button.dataset.settledChoice==='review')showRewards(receipt.before,receipt.after,null,'review');else syncBattleOutcome();});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});return;
+ }
+ if(entered&&state?.battle?.outcome&&view==='map'&&!operation&&!dirty&&!locked&&!invalid&&!document.hidden&&!document.querySelector('dialog[open]')&&outcomeError!==state.battle){
+  const before=state;operation=true;root.setAttribute('aria-busy','true');
+  (async()=>{try{await handle({type:'finishBattle'},{battleReceipt:'silent'});outcomeReceipt={before,after:state,slot:store.id};}catch(e){outcomeError=state.battle;error=e.message;paint();}finally{operation=false;root.removeAttribute('aria-busy');syncBattleOutcome();}})();return;
+ }
+
 
  if(!state?.adventure?.run||state.battle||!entered||locked||invalid||['save','welcome'].includes(view))document.getElementById('delve-choice')?.remove();
  if(entered&&!operation&&!locked&&!invalid&&!document.hidden&&!document.querySelector('dialog[open]')&&!['save','welcome'].includes(view)){const html=delveDialog(state,data,esc);if(html){root.insertAdjacentHTML('beforeend',html);const dialog=document.getElementById('delve-choice');dialog.addEventListener('cancel',e=>e.preventDefault());dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});return;}}
@@ -112,6 +126,10 @@ function syncBattleOutcome(){
  dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
 }
 document.addEventListener('close',()=>queueMicrotask(syncBattleOutcome),true);
+const guidePreferences=new Map();
+function currentGuideEnabled(){const key=guideKey(state,store?.record?.id||1);let value=guidePreferences.get(key);if(value===undefined)try{value=localStorage.getItem(key);}catch{}if(value!=='on'&&value!=='off'){value=guideEnabled(state,value)?'on':'off';guidePreferences.set(key,value);try{localStorage.setItem(key,value);}catch{}}return value==='on';}
+function currentGuidance(){const main=document.getElementById('main');return main&&currentGuideEnabled()?guidance(state,data,main.dataset.screen,pageSection(main.dataset.screen,pageSections[main.dataset.screen])||'',battlePaused):null;}
+function locateGuide(){const targets=highlightGuidance(root,currentGuidance()),button=targets.find(b=>b.getClientRects().length)||targets[0];if(!button)return false;for(let parent=button.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')parent.open=true;requestAnimationFrame(()=>requestAnimationFrame(()=>button.isConnected&&button.focus()));return true;}
 function paint(focus=false){
   if(!focus&&screenInteractionActive()){syncBattleOutcome();return;}
   const screenFocus=beforeScreenPaint();
@@ -125,7 +143,7 @@ function paint(focus=false){
   const anchorId=anchor?.dataset.logEntry,anchorOffset=anchor&&anchor.getBoundingClientRect().top-oldLog.getBoundingClientRect().top;
   const entries=activity.observe(state,{available:entered&&!invalid,feedback:notice});
   if(!logPaused&&(focus||!state.battle||performance.now()-lastLogPaint>=2000)){visibleEntries=entries.filter(e=>logMode==='all'||e.kind!=='battle'||!/进击|普攻|受到持续|损失.*气血/.test(e.text)||/施展|首领|蓄势|得胜|退阵|无力再战|军令/.test(e.text)).map(e=>({...e}));lastLogPaint=performance.now();}
-  const html=render({state,data,view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed,mapTarget,mapSection,pageSections,roster:{...roster,pageSize:window.matchMedia('(max-width:900px)').matches?4:12},leaderboard,gear:{...gear,inventory:{...gear.inventory,pageSize:window.innerWidth<=900&&window.innerHeight<650?2:4}}});
+  const html=render({state,data,guideActive:entered&&!invalid&&currentGuideEnabled(),view,status,error,locked,notice,recruitTarget,entered,battlePaused,battlePauseReason,saveBox:saveBox(),activity:visibleEntries,battleSpeed,mapTarget,mapSection,pageSections,roster:{...roster,pageSize:window.matchMedia('(max-width:900px)').matches?4:12},leaderboard,gear:{...gear,inventory:{...gear.inventory,pageSize:window.innerWidth<=900&&window.innerHeight<650?2:4}}});
   if(root.querySelector('.viewport-shell')){const next=document.createElement('template');next.innerHTML=html;patchElement(root.firstElementChild,next.content.firstElementChild);}
   else root.innerHTML=html;
   root.dataset.view=view;applyTheme();
@@ -143,6 +161,7 @@ function paint(focus=false){
   updateLogCaption();
   if(!pendingImport){document.getElementById('import-confirm')?.close();document.getElementById('import-confirm')?.remove();}
   updateRecruitNotice();
+  highlightGuidance(root,currentGuidance());
   afterScreenPaint(screenFocus,focus);
   syncBattleOutcome();
 }
@@ -187,7 +206,7 @@ function showRewards(before,after,returnCommand,initialTab=null){
   const goal=mainlineChanged?storyObjective(after,data):null;
   const mainlineNext=goal?{title:goal.title,text:goal.reason||goal.detail,label:after.progress.flags.volume_twelve_complete?'查看结局':'继续主线',command:{type:after.progress.flags.volume_twelve_complete?'ui_mainlinePlan':'ui_storyResume'}}:null;
   const dungeonVictory=(victory&&before.battle?.context.type==='dungeon')||(before.scheme?.outcome==='success'&&before.scheme.context.type==='dungeon'&&!after.scheme);
-  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{initialTab:initialTab||'rewards',heading:before.scheme?.outcome&&!after.scheme?(before.scheme.outcome==='success'?'计策成功':'计策失败'):before.realm?.squad&&!after.realm?.squad?'分队归来':'',saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary,lesson:before.battle?.context.type==='lesson',replay:before.battle?.context.type==='replay',growth:growthRecap(before,after,data,esc),loot:lootEquipment(before,after,data,esc)+campaignReceipt(before,after,data)+chronicleReceipt(before,after)+specialReceipt(before,after,data,esc),next:!after.battle&&!after.scheme&&!after.event?((after.adventure?.run?{title:'三段探索',label:'继续选路',command:{type:'ui_delveChoice'}}:null)||(before.battle?.context.type==='replay'?{title:'战役回顾',label:'再练一次',command:{type:'replayStart',id:before.battle.context.id.slice(5),tier:before.battle.context.tier,...(before.battle.context.challenge?{challenge:before.battle.context.challenge}:{})}}:null)||sceneReturn(finished?before.battle:null)||specialNext(finished?before.battle:null)||mainlineNext||afterBattleNext(after,finished?before.battle:null,data,journeyNextGoal(after,data))):null,review:finished&&before.battle.context.type!=='lesson'&&after.lastBattle?debriefPanel(after.lastBattle,data,esc):otherReview}));
+  document.getElementById('reward-result')?.remove();document.body.insertAdjacentHTML('beforeend',rewardDialog(rows,esc,{initialTab:initialTab||'rewards',heading:before.scheme?.outcome&&!after.scheme?(before.scheme.outcome==='success'?'计策成功':'计策失败'):before.realm?.squad&&!after.realm?.squad?'分队归来':'',saved:!dirty&&!locked,emptyVictory:victory,dungeonVictory,battleSummary,lesson:before.battle?.context.type==='lesson',replay:before.battle?.context.type==='replay',growth:growthRecap(before,after,data,esc),loot:lootEquipment(before,after,data,esc)+campaignReceipt(before,after,data)+chronicleReceipt(before,after)+specialReceipt(before,after,data,esc),next:!after.battle&&!after.scheme&&!after.event?((regionPending(before)?{title:EXPLORATION_REGIONS[regionPending(before).region],label:'继续探索',command:{type:'ui_regionOpen',region:regionPending(before).region}}:null)||(after.adventure?.run?{title:'三段探索',label:'继续选路',command:{type:'ui_delveChoice'}}:null)||(before.battle?.context.type==='replay'?{title:'战役回顾',label:'再练一次',command:{type:'replayStart',id:before.battle.context.id.slice(5),tier:before.battle.context.tier,...(before.battle.context.challenge?{challenge:before.battle.context.challenge}:{})}}:null)||sceneReturn(finished?before.battle:null)||specialNext(finished?before.battle:null)||mainlineNext||afterBattleNext(after,finished?before.battle:null,data,journeyNextGoal(after,data))):null,review:finished&&before.battle.context.type!=='lesson'&&after.lastBattle?debriefPanel(after.lastBattle,data,esc):otherReview}));
   const dialog=document.getElementById('reward-result');bindDialogPages(dialog);dialog.querySelectorAll('[data-reward-command],[data-reward-action]').forEach(button=>button.addEventListener('click',async event=>{if(operation)return;operation=true;root.setAttribute('aria-busy','true');const command=JSON.parse(event.currentTarget.dataset.rewardCommand||event.currentTarget.dataset.rewardAction);dialog.close();try{await handle(command);}catch(e){error=e.message;paint();}finally{operation=false;syncBattleOutcome();root.removeAttribute('aria-busy');}}));dialog.querySelector('[data-reward-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{dialog.remove();Array.from(root.querySelectorAll('button[data-command]')).find(b=>b.dataset.command===returnCommand&&!b.disabled)?.focus({preventScroll:true});},{once:true});dialog.showModal();dialog.querySelector('h2').focus({preventScroll:true});
 }
 function download(text,name){if(typeof window.BaizeAndroid?.exportSave==='function'){window.BaizeAndroid.exportSave(text,name);return;}const blob=new Blob([text],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
@@ -213,7 +232,7 @@ async function battleFrame(){
     paint();
   }catch(e){battlePaused=true;battlePauseReason='交战已暂停，请先处理提示。';error=e.message;paint();}finally{operation=false;syncBattleOutcome();}
 }
-async function load(){pageSections={};mapSection='scene';mapTarget=null;visibleEntries=[];logPaused=false;activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
+async function load(){outcomeReceipt=null;outcomeError=null;pageSections={};mapSection='scene';mapTarget=null;visibleEntries=[];logPaused=false;activity.reset();logFollowing=true;const result=await store.load();await refreshSlots();rememberSlot();error='';notice='';recruitTarget='';locked=false;invalid=false;dirty=false;entered=result.status==='ok';
   if(result.status==='ok'){state=result.state;view=state.battle||state.scheme||state.event?'map':'camp';status='已保存到本机 · 已接续原有进度';try{await persist(dispatch(data,state,{type:'refresh'}));}catch(e){status=e.message;}}
   else{state=newGame(data);view=result.status==='invalid'?'save':'welcome';invalid=result.status==='invalid';locked=invalid;status=invalid?'存档无法读取，原文与已有备份均保留。请恢复备份或导入；导出按钮可取回坏档原文。':result.status==='unavailable'?'本机存储不可用，可临时游玩，但务必导出进度。':'尚未入卷，点击进入后开始保存。';}
   resumeSavedBattle();paint(true);
@@ -310,6 +329,12 @@ async function handleBox(command){
 }
 async function handle(command,{battleReceipt='rewards'}={}){
   const {type,id}=command;error='';let prepared=null;document.getElementById('quick-loot')?.remove();
+  if(type==='ui_regionalRecipe'){view='bag';pageSections.bag='craft';gear={...gear,recipeCategory:'regional',recipeTarget:id};paint(true);return;}
+  if(type==='ui_idleTab'){view='camp';pageSections.camp='idle';pageSections.idleTab=id;if(command.region)pageSections.idleUseRegion=command.region;paint(true);return;}
+  if(type==='ui_idleOpen'){view='camp';pageSections.camp='idle';pageSections.idleTab='dispatch';if(command.region)pageSections.idleRoute=command.region;paint(true);return;}
+  if(type==='ui_idleSend')command={type:'idleSend',region:document.getElementById('idle-region').value,hero:document.getElementById('idle-hero').value};
+  if(type==='idleRecall'&&!window.confirm('接回好汉并收取完整批次的材料？未满一批的时间不计，库存放不下的材料保留。'))return;
+  if(type==='ui_grainRoute'){pageSections.grainRoute=id;paint(true);return;}
   if(type==='ui_practice'){const q=practiceCompare(state,data,{id,hero:command.hero,enemy:document.getElementById('practice-enemy')?.value||'mine',tier:Number(document.getElementById('practice-tier')?.value||1)});document.getElementById('practice-result')?.remove();root.insertAdjacentHTML('beforeend',practiceDialog(q,esc));const dialog=document.getElementById('practice-result');dialog.querySelector('[data-practice-close]').onclick=()=>dialog.close();dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;}
   if(type==='ui_duplicatePreview'){const q=duplicateQuote(state,data);if(!q.ids.length){notice='没有可整理的普通重复装备。';paint();return;}if(!window.confirm('分解 '+q.ids.length+' 件普通重复装备，得到碎铁 '+q.scrap+'。每种至少保留一件，穿戴、锁定、强化、精修及精品以上装备均保留。确认整理？'))return;await handle({type:'dismantleDuplicates',ids:q.ids});return;}
   if(type==='ui_farmStart'){
@@ -331,7 +356,7 @@ async function handle(command,{battleReceipt='rewards'}={}){
   if(type==='ui_forgeCategory'){if(!entered||state.battle||state.scheme||state.event||!['new','basic'].includes(id))return;root.querySelectorAll('dialog[open]').forEach(el=>el.close());gear={...gear,forgeCategory:id,forgeTarget:null};view='forge';pageSections.forge='craft';paint(true);return;}
   if(type==='ui_forgeTarget'||type==='ui_gearModel'){if(!entered||state.battle||state.scheme||state.event)return;const model=data.by.equipments[id];if(!model)return;if(type==='ui_forgeTarget'){if(!model.recipe||model.source&&model.source!=='forge')return;gear={...gear,forgeCategory:model.source==='forge'?'new':'basic',forgeTarget:id};pageSections.forge='craft';}else{gear={...gear,query:model.name,type:'all',quality:'all',state:'all',comparison:null};pageSections.forge='equipment';}view='forge';paint(true);return;}
   if(type==='ui_recipeSource'){if(!entered||state.battle||state.scheme||state.event)return;root.querySelectorAll('dialog[open]').forEach(el=>el.close());gear={...gear,recipeCategory:'materials',recipeTarget:id};view='bag';pageSections.bag='craft';paint(true);return;}
-  if(type==='ui_recipeCategory'){if(view!=='bag'||!entered||state.battle||state.scheme||state.event||!['materials','medicines','supplies','raw'].includes(id))return;gear={...gear,recipeCategory:id,recipeTarget:null};paint(true);return;}
+  if(type==='ui_recipeCategory'){if(view!=='bag'||!entered||state.battle||state.scheme||state.event||!['materials','medicines','supplies','regional','raw'].includes(id))return;gear={...gear,recipeCategory:id,recipeTarget:null};paint(true);return;}
   if(type==='ui_inventoryFilter'||type==='ui_inventoryPage'){if(view!=='bag'||state.battle||state.scheme||state.event)return;gear={...gear,inventory:{query:document.getElementById('inventory-query')?.value||'',page:type==='ui_inventoryPage'?command.page:0}};paint(true);return;}
   if(type==='ui_inventoryDetail'){if(view!=='bag'||!entered||state.battle||state.scheme||state.event||!data.by.items[id]||!state.inventory[id])return;document.getElementById('inventory-detail')?.remove();const dialog=document.createElement('dialog');dialog.id='inventory-detail';dialog.className='compact-dialog inventory-detail';dialog.setAttribute('aria-labelledby','inventory-detail-title');const btn=(label,a,kind='secondary',disabled=false)=>'<button type="button" class="'+kind+'" data-command="'+esc(JSON.stringify(a))+'" '+(disabled?'disabled':'')+'>'+esc(label)+'</button>';dialog.innerHTML='<header class="dialog-header"><h2 id="inventory-detail-title" tabindex="-1">'+esc(data.by.items[id].name)+'</h2><button type="button" data-inventory-close aria-label="关闭物品详情">×</button></header><div class="dialog-body">'+inventoryEntry(state,data,data.by.items[id],esc,btn)+'</div><footer class="dialog-footer"><button type="button" class="secondary" data-inventory-close>返回行囊</button></footer>';root.append(dialog);dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();dialog.querySelector('h2').focus();return;}
   if(type==='ui_replayView'){leaderboard.replays={...leaderboard.replays,...command};view='trials';pageSections.trials='replays';paint(true);return;}
@@ -345,11 +370,13 @@ async function handle(command,{battleReceipt='rewards'}={}){
     const goal=storyObjective(state,data);
     if(goal.view){view=goal.view;if(goal.section)pageSections[view]=goal.section;paint(true);return;}
     if(goal.map&&goal.map!==state.location){if(!goal.route){view='map';mapSection='atlas';mapTarget=goal.map;paint(true);return;}await persist(dispatch(data,state,{type:'travel',id:goal.map}));}
-    view='map';mapSection='scene';mapTarget=state.location;pageSections.journeyScene=null;paint(true);return;
+    view='map';mapSection=goal.action?.type==='dungeon'?'explore':'scene';mapTarget=state.location;pageSections.journeyScene=null;paint(true);return;
   }
+  if(type==='ui_grainScout')command={type:'grainRoadScout',hero:document.getElementById('grain-scout').value};
+  if(type==='grainRoadInvest'&&!window.confirm('本战役只选一项，建成后不能更换。消耗木材 30、碎银 60，收取已满天数的粮草后重新计时。确认建造？'))return;
   if(type==='story'){const warning=lateChoiceWarning(state,data,command);if(warning&&!window.confirm(warning))return;}
   if(type==='story'&&id==='v7_prepare'&&['hook','trench'].includes(command.choice)){const choice=data.by.stories[id].steps.start.choices.find(c=>c.id===command.choice),effect=command.choice==='hook'?'破阵与决战中敌军防御降低 25%。':'破阵与决战中敌军攻击降低 20%、速度降低 15%。';if(!window.confirm(choice.label+'。'+effect+' 本卷只能选一次，确认后不能更换。'))return;}
-  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.68.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
+  if(type==='ui_provisionUse'){const {staminaQuote}=await import('./provisions.js?v=0.69.0'),q=staminaQuote(state,id);if(q.reason)throw Error(q.reason);if(!window.confirm(data.by.items[id].name+'：体力 '+q.before+' → '+q.after+' / '+q.cap+'；实际恢复 '+q.actual+'，溢出 '+(q.amount-q.actual)+'。确认使用？'))return;command={type:id==='wine'?'use':'provisionUse',id};}
   if(type==='ui_sortieCancel'){document.getElementById('sortie-preview')?.close();return;}
   if(SORTIES.includes(type)){showSortie(command);return;}
   if(['ui_sortieUpdate','ui_sortiePreset','ui_sortieRecommend','ui_sortieConfirm'].includes(type)){if(!pendingSortie)throw new Error('请重新打开出征准备。');let setup=sortieSetup();if(type==='ui_sortieRecommend')setup={...setup,team:command.team};if(type==='ui_sortiePreset'){const slot=Number(document.getElementById('sortie-preset').value),reason=presetReason(state,slot);if(reason){const feedback=document.getElementById('sortie-feedback');feedback.textContent=reason;feedback.scrollIntoView({block:'nearest'});return;}setup=state.development.presets[slot];}const action=pendingSortie.action;if(type!=='ui_sortieConfirm'){showSortie(action,setup);if(type==='ui_sortieRecommend')document.querySelector('#sortie-preview [data-dialog-tab="lineup"]').click();return;}const q=prepareSortie(state,data,action,setup,Date.now());if(q.reason||q.signature!==pendingSortie.signature){showSortie(action,setup);if(!q.reason)document.getElementById('sortie-feedback').textContent='出征方案已更新，请核对后再次确认。';return;}prepared=q.next;command=action;document.getElementById('sortie-preview').close();}
@@ -446,6 +473,8 @@ async function handle(command,{battleReceipt='rewards'}={}){
     if(type==='ui_frontierAssign')command={type:'frontierAssign',id,worker:document.getElementById('frontier-worker-'+id).value||null};
   if(type==='ui_frontierGuard')command={type:'frontierGuard',id,hero:document.getElementById('frontier-guard-'+id).value.replace(/^hero:/,'')||null};
   if(type==='ui_rosterSelect'){roster={...roster,selected:id};view='heroes';pageSections.heroes='profile';paint(true);document.getElementById('roster-detail')?.scrollIntoView({block:'start'});return;}
+  if(type==='ui_regionOpen'){if(command.region&&state.camp)return handle({type:'regionOpen',region:command.region});view='map';mapSection='region';pageSections.journeyScene=null;paint(true);return;}
+  if(type==='ui_regionInspect'){view='map';mapSection='region';pageSections.journeyScene=id;paint(true);return;}
   if(type==='ui_mapInspect'){if(!data.by.maps[id])throw new Error('没有这个地点。');mapTarget=id;view='map';mapSection='atlas';paint(true);document.getElementById('atlas-target')?.scrollIntoView({block:'start'});return;}
   if(type==='ui_campFormation')command={type:'campFormation',mode:document.getElementById('camp-mode').value,tactic:document.getElementById('camp-tactic').value,deployment:Number(document.getElementById('camp-deployment').value)};
   if(type==='ui_team')command={type:'team',ids:[0,1,2].map(i=>document.getElementById('team-'+i).value).filter(Boolean)};
@@ -454,25 +483,28 @@ async function handle(command,{battleReceipt='rewards'}={}){
   const before=state,hadBattle=!!state.battle,next=prepared||dispatch(data,state,command);await persist(next);
   if(!hadBattle&&next.battle&&!next.battle.outcome){battlePaused=next.battle.context.type==='lesson';battlePauseReason='';lastBattlePulse=performance.now();}
   if(type==='heroReplace')document.getElementById('replacement-preview')?.close();
+  if(['idleCollect','idleRecall','frontierCollect'].includes(type)){view='camp';pageSections.camp='idle';pageSections.idleTab='use';pageSections.idleUseRegion=before.idleDispatch?.mission?.region||pageSections.idleUseRegion||pageSections.idleRoute;}
   if(type==='equip')gear={...gear,comparison:null};
   notice=['recruit','recruitTen'].includes(type)||type.startsWith('battle')||next.battle?'':next.message;
   if(['travel','move','story','startScheme','mapAction','meet','guide'].includes(type)){mapTarget=next.location;mapSection='scene';pageSections.journeyScene=null;}
   if(next.battle||next.scheme||next.event||['move','travel','story','startScheme'].includes(type))view='map';
   if(type==='finishBattle'&&['camp','frontier','lesson'].includes(before.battle?.context.type)){view='camp';if(before.battle.context.type==='lesson')pageSections.camp='lessons';else if(before.battle.context.type==='camp'&&next.camp.sorties<=1)pageSections.camp='home';}
+  if(type==='finishBattle'&&before.battle?.context.type==='camp'&&grainRoute(before.battle.context.id)){view='camp';pageSections.camp='grainRoad';}
   if(type==='finishBattle'&&before.battle?.context.type==='replay'){view='trials';pageSections.trials='replays';leaderboard.replays={id:before.battle.context.id.slice(5),tier:before.battle.context.tier};}
   if(type==='finishBattle'&&before.battle?.context.type==='special'){view='trials';pageSections.trials='special';leaderboard.special={id:before.battle.context.id,tier:before.battle.context.tier,tab:'overview'};}
+  if((command.type.startsWith('region')&&!['regionalCraft','regionBuild','regionVisits'].includes(command.type))||(type==='finishBattle'&&regionPending(before))){view='map';mapSection='region';pageSections.journeyScene=command.type==='regionOpen'?null:regionState(next)?.position;}
   if(type==='finishBattle'&&before.battle?.context.type==='rotation')view='trials';if(type==='finishBattle'&&before.battle?.context.type==='realm'){view='realm';const kind=before.battle.context.kind;pageSections.realm=['trek'].includes(kind)?(before.battle.journey?'journey':'expeditions'):['personal','defense','relay'].includes(kind)?'battles':kind==='challenge'?'challenges':'trade';if(kind==='personal'){view='heroes';pageSections.heroes='tasks';roster={...roster,selected:before.battle.context.id};}}
   if(command.type.startsWith('chronicle')){view='realm';pageSections.realm='chronicles';if(command.region)pageSections.chronicleRegion=command.region;}
   if(command.type.startsWith('journey')&&!next.battle){view='realm';pageSections.realm=['journeyTarget','journeyExchange'].includes(command.type)?'rewards':'journey';}
   if(type==='goalSet'&&['build','gear','personal','phase'].includes(command.kind)){view='forge';pageSections.forge='goals';}
-  paint(type==='goalSet'||command.type.startsWith('chronicle')||command.type.startsWith('journey')||!!prepared||['presetLoad','move','travel','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
+  paint(command.type.startsWith('region')||['goalSet','idleCollect','idleRecall','frontierCollect'].includes(type)||command.type.startsWith('chronicle')||command.type.startsWith('journey')||!!prepared||['presetLoad','move','travel','story','startScheme','dungeon','search','finishBattle','finishScheme','eventChoice'].includes(type));
   if(type==='presetLoad'){
     // A user-edited select retains its DOM value even when selected attributes match.
     // Loading a preset is an explicit request to replace those pending form edits.
     for(const [id,value] of Object.entries({'camp-mode':next.camp.mode,'camp-tactic':next.camp.tactic,'camp-deployment':next.camp.deployment,...Object.fromEntries([0,1,2].map(i=>['team-'+i,next.team[i]||'']))})){const el=document.getElementById(id);if(el)el.value=String(value);}
   }
   if(['recruit','recruitTen'].includes(type))showRecruitResult(type==='recruitTen'?next.recruit.lastBatch:next.recruit.lastResult,JSON.stringify(command),supportReceipt(before,next));
-  else {if(gains(before,next,data).length&&next.battle&&!next.battle.outcome)await pauseBattle('查看收获时已暂停，关闭后可继续交战。');if(COMPLETION_ACTIONS.includes(type)&&battleReceipt==='skip'&&!dirty&&!locked)showQuickLoot(before,next);else showRewards(before,next,JSON.stringify(command),battleReceipt==='review'?'review':battleReceipt==='details'?'rewards':null);}
+  else if(battleReceipt!=='silent'){if(gains(before,next,data).length&&next.battle&&!next.battle.outcome)await pauseBattle('查看收获时已暂停，关闭后可继续交战。');if((['idleCollect','idleRecall','frontierCollect'].includes(type)||COMPLETION_ACTIONS.includes(type)&&battleReceipt==='skip')&&!dirty&&!locked)showQuickLoot(before,next);else showRewards(before,next,JSON.stringify(command),battleReceipt==='review'?'review':battleReceipt==='details'?'rewards':null);}
 }
 root.addEventListener('click',async event=>{
   const button=event.target.closest('button');if(!button||button.disabled)return;
@@ -484,9 +516,11 @@ root.addEventListener('click',async event=>{
   if(button.hasAttribute('data-log-pause')){logPaused=!logPaused;lastLogPaint=0;paint();return;}
   if(button.hasAttribute('data-log-filter')){logMode=logMode==='all'?'important':'all';logPaused=false;lastLogPaint=0;paint();return;}
   if(operation)return;
+  if(button.hasAttribute('data-guide-toggle')){const key=guideKey(state,store?.record?.id||1),value=currentGuideEnabled()?'off':'on';guidePreferences.set(key,value);try{localStorage.setItem(key,value);}catch{}paint(true);return;}
+  if(button.hasAttribute('data-guide-locate')){if(!locateGuide()){notice='此页没有可用的目标按钮，可点接回主线。';paint();}return;}
   if(button.hasAttribute('data-frontier-jump')){document.getElementById('frontier-'+button.dataset.frontierJump)?.scrollIntoView({block:'start'});return;}
     if(button.hasAttribute('data-map-region')){document.getElementById('map-region-'+button.dataset.mapRegion)?.scrollIntoView({block:'start'});return;}
-  if(button.hasAttribute('data-map-section')||button.hasAttribute('data-map-local')){if(view!=='map'||state.battle||state.scheme||state.event)return;const section=button.dataset.mapSection||'story';if(!['story','atlas','explore','territory'].includes(section))return;mapSection=section==='story'?'scene':section;pageSections.journeyScene=null;error='';notice='';paint(true);root.querySelector('[data-map-section="'+section+'"]')?.focus({preventScroll:true});return;}
+  if(button.hasAttribute('data-map-section')||button.hasAttribute('data-map-local')){if(view!=='map'||state.battle||state.scheme||state.event)return;const section=button.dataset.mapSection||'story';if(!['region','story','atlas','explore','territory'].includes(section))return;mapSection=section==='story'?'scene':section;pageSections.journeyScene=null;error='';notice='';paint(true);root.querySelector('[data-map-section="'+section+'"]')?.focus({preventScroll:true});return;}
   if(button.dataset.view){
     if(!entered&&button.dataset.view!=='save'&&(locked||button.dataset.view!=='welcome'))return;
     operation=true;
@@ -503,7 +537,7 @@ root.addEventListener('click',async event=>{
       if(button.dataset.view!==view)await pauseBattle('离开战斗页面时已暂停。返回后点击继续交战。');
       if(menu)menu.close('navigate');
       view=button.dataset.view;
-      if(view==='map')mapSection=menu&&button.dataset.menuMap==='atlas'?'atlas':'scene';
+      if(view==='map')mapSection=menu&&['atlas','region'].includes(button.dataset.menuMap)?button.dataset.menuMap:'scene';
       if(menu&&button.dataset.menuSection&&Object.hasOwn(PAGE_SECTIONS[view]||{},button.dataset.menuSection))pageSections[view]=button.dataset.menuSection;
       error='';notice='';if(view==='save')await refreshSlots();paint(true);
     }finally{operation=false;syncBattleOutcome();}
@@ -517,6 +551,8 @@ root.addEventListener('click',async event=>{
 root.addEventListener('submit',event=>{if(event.target.matches('[data-inventory-search]')){event.preventDefault();event.target.querySelector('button').click();}});
 root.addEventListener('keydown',event=>{if(event.target.id==='inventory-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('[data-inventory-search] button')?.click();}if(event.target.id==='roster-query'&&event.key==='Enter'){event.preventDefault();root.querySelector('button[data-command*="ui_rosterFilter"]')?.click();}});
 root.addEventListener('change',event=>{
+  if(event.target.hasAttribute('data-regional-recipe-select')){if(operation)return;gear={...gear,recipeCategory:'regional',recipeTarget:event.target.value};paint(true);return;}
+  if(event.target.dataset.idleSelect){if(operation)return;pageSections[event.target.dataset.idleSelect]=event.target.value;paint();return;}
   if(event.target.dataset.sectionView){if(operation)return;const section=event.target.value,view=event.target.dataset.sectionView;handle({type:'ui_section',view,id:section}).catch(e=>{error=e.message;paint();});return;}
   if(event.target.id==='resource-tier'){if(operation)return;leaderboard.resourceTier=Number(event.target.value);paint(true);return;}
   if(event.target.id==='resource-route'){if(operation)return;leaderboard.resourceRoute=event.target.value;paint(true);return;}
@@ -536,7 +572,7 @@ async function checkSlotConflict(){
 }
 window.addEventListener('beforeunload',event=>{if(!operation)flushBattle();if(dirty||operation){event.preventDefault();event.returnValue='';}});
 window.addEventListener('pagehide',()=>pauseBattle('离开页面，交战已暂停。'));
-window.addEventListener('baize-app-pause',async()=>{await pauseBattle('切到后台时已暂停。回来后点击继续交战。');if(state)paint();});
+window.addEventListener('baize-app-pause',async()=>{if(farmSession)stopFarm('切到后台，连续挑战已停止。');await pauseBattle('切到后台时已暂停。回来后点击继续交战。');if(state)paint();});
 window.addEventListener('baize-app-resume',()=>{if(state){lastBattlePulse=null;checkSlotConflict();syncBattleOutcome();refreshClock();}});
 async function refreshClock(){if(operation||!state||!entered||locked||invalid||view==='welcome'||view==='save'||document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;operation=true;try{await persist(dispatch(data,state,{type:'refresh'}));paint();}catch(e){error=e.message;paint();}finally{operation=false;syncBattleOutcome();}}
 document.addEventListener('visibilitychange',()=>{if(document.hidden){pauseBattle('切到后台时已暂停。回来后点击继续交战。');if(state)paint();}else{lastBattlePulse=null;checkSlotConflict();syncBattleOutcome();refreshClock();}});
@@ -555,3 +591,7 @@ try{
   catch{cloud=new CloudClient('',data);}cloudView.baseUrl=cloud.baseUrl;
   await load();setInterval(refreshClock,60000);setInterval(battleFrame,200);setInterval(checkSlotConflict,2500);
 }catch(e){root.innerHTML=`<main class="loading" id="main"><p class="kicker">白泽水浒 · 未能开卷</p><h1>江湖尚未载入</h1><p class="notice error">${esc(e.message)}</p><p>本次没有写入或清空任何存档。请联网后刷新再试；本地预览需通过 HTTP 服务打开，不要直接双击 HTML。</p><a href="./">重新载入</a> · <a href="../">返回白泽导航</a></main>`;}
+
+root.addEventListener('change',event=>{if(event.target.matches('[data-region-building]')){pageSections.regionBuilding=event.target.value;paint(true);}});
+
+root.addEventListener('change',event=>{if(event.target.matches('[data-region-visitor]')){pageSections.regionVisitor=event.target.value;paint(true);}});

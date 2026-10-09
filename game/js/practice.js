@@ -1,7 +1,7 @@
-import {clone,requireRule} from './utils.js?v=0.68.0';
-import {itemAction} from './item.js?v=0.68.0';
-import {enterSpecial} from './special-dungeons.js?v=0.68.0';
-import {advanceBattle} from './battle.js?v=0.68.0';
+import {clone,requireRule} from './utils.js?v=0.69.0';
+import {itemAction} from './item.js?v=0.69.0';
+import {enterSpecial} from './special-dungeons.js?v=0.69.0';
+import {advanceBattle} from './battle.js?v=0.69.0';
 export function practiceCompare(s,d,{id,hero,enemy='mine',tier=1}={}){
  requireRule(!s.battle&&!s.scheme&&!s.event&&!s.adventure?.run,'先结束当前行动，再试阵。');requireRule(['mine','marsh','ruins'].includes(enemy)&&[1,2,3].includes(tier),'无效试阵场地。');
  if(id)requireRule(s.team.includes(hero),'请先将穿戴人安排进出阵队伍，再试阵。');

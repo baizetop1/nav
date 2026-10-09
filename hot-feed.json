@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-09T16:13:52.531Z",
+  "generatedAt": "2026-10-09T16:48:29.350Z",
   "intelligence": {
-    "updatedAt": "2026-10-09T16:13:52.531Z",
+    "updatedAt": "2026-10-09T16:48:29.350Z",
     "items": [
       {
         "id": "cn-item-ad0b3d98144a0e52",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-09T13:03:48.000Z",
         "badge": "HN",
-        "signal": "553 分 · 296 评论"
+        "signal": "609 分 · 331 评论"
       },
       {
         "id": "cn-it-9d0ac54df13ca0cb",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-pfvf-fwfp-25mp",
+        "id": "github-advisory-ghsa-r44w-v6gf-x3p6",
         "category": "security",
-        "title": "Strawberry GraphQL: Synchronous permission checks can treat an awaitable authorization result as truthy",
-        "url": "https://github.com/advisories/GHSA-pfvf-fwfp-25mp",
+        "title": "pyLoad has an authentication bypass in API key validation (check_apikey cache)",
+        "url": "https://github.com/advisories/GHSA-r44w-v6gf-x3p6",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T14:07:16.000Z",
-        "summary": "### Summary `PermissionExtension.resolve()` evaluates the return value of `has_permission()` for truthiness on the synchronous path. `supports_sync` only classifies a permission as asynchronous when `has_permission` is declared with `async…",
-        "badge": "CVE-2026-107728",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-09T16:43:55.000Z",
+        "summary": "## Summary The API-key cache in `check_apikey()` allows an attacker to authenticate with a **forged API key** as long as the legitimate key for the same `key_id` has been used recently. On a cache hit, the API key **secret is never verifie…",
+        "badge": "GHSA-R44W-V6GF-X3P6",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
         "id": "ai-google-deepmind-c11a83f73b42d756",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "10月9日，第35届电视剧“飞天奖”颁奖典礼在山东烟台举行。宋佳凭借《山花烂漫时》获得优秀女演员奖。至此，宋佳成为内娱首位凭同一部剧集齐三大奖“一串三”的女演员。此前，宋佳已凭《山花烂漫时》中对张桂梅校长的出色演绎，拿下白玉兰与金鹰两座最佳女主角奖杯。",
         "badge": "热搜",
-        "signal": "7,808,243 热度"
+        "signal": "7,809,324 热度"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -124,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-09T13:12:47.000Z",
         "badge": "HN",
-        "signal": "290 分 · 106 评论"
+        "signal": "329 分 · 125 评论"
       },
       {
         "id": "cn-item-377d5aef5d32301d",
@@ -137,15 +137,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-6v25-8wq6-xq4j",
+        "id": "github-advisory-ghsa-j6cw-g6p4-7hch",
         "category": "security",
-        "title": "Hazelcast allows arbitrary member memory access by low-privileged client",
-        "url": "https://github.com/advisories/GHSA-6v25-8wq6-xq4j",
+        "title": "Argo CD repo-server command injection via crafted SSH repository SOCKS5 proxy URL",
+        "url": "https://github.com/advisories/GHSA-j6cw-g6p4-7hch",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:10:29.000Z",
-        "summary": "### Impact A flaw has been found in Hazelcast Enterprise Edition and Community Edition, which would allow a low-privileged malicious client to read arbitrary data in memory from any cluster member (including Java heap memory, off-heap data…",
-        "badge": "CVE-2026-107726",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-10-09T16:37:24.000Z",
+        "summary": "### Impact Argo CD runs a shell command in the repo-server when it clones or fetches an SSH Git repository that has a proxy URL. The proxy host and port are copied into an SSH `ProxyCommand`. A host that contains shell metacharacters break…",
+        "badge": "CVE-2026-55797",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-openai-db7b9e6fe248e314",
@@ -206,7 +206,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-09T11:03:48.000Z",
         "badge": "HN",
-        "signal": "246 分 · 101 评论"
+        "signal": "265 分 · 112 评论"
       },
       {
         "id": "cn-baidu-545ac8df448555f4",
@@ -215,18 +215,18 @@
         "url": "https://www.baidu.com/s?wd=%E9%A3%9E%E5%A4%A9%E5%A5%96%E8%8E%B7%E5%A5%96%E5%90%8D%E5%8D%95&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,714,417 热度"
+        "signal": "7,712,482 热度"
       },
       {
-        "id": "github-advisory-ghsa-w294-6q5q-53p8",
+        "id": "github-advisory-ghsa-pfvf-fwfp-25mp",
         "category": "security",
-        "title": "Hazelcast has an authorization bypass in IMap Predicates API",
-        "url": "https://github.com/advisories/GHSA-w294-6q5q-53p8",
+        "title": "Strawberry GraphQL: Synchronous permission checks can treat an awaitable authorization result as truthy",
+        "url": "https://github.com/advisories/GHSA-pfvf-fwfp-25mp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:09:34.000Z",
-        "summary": "### Impact Missing authorization checks in the Predicates API may allow a malicious client to execute arbitrary code on a Hazelcast member. ### Patches Enterprise customers should upgrade to a fixed version of Hazelcast Enterprise Edition:…",
-        "badge": "CVE-2026-107725",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-09T14:07:16.000Z",
+        "summary": "### Summary `PermissionExtension.resolve()` evaluates the return value of `has_permission()` for truthiness on the synchronous path. `supports_sync` only classifies a permission as asynchronous when `has_permission` is declared with `async…",
+        "badge": "CVE-2026-107728",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-ffd2818196374b7e",
@@ -287,7 +287,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-09T09:21:48.000Z",
         "badge": "HN",
-        "signal": "355 分 · 133 评论"
+        "signal": "393 分 · 151 评论"
       },
       {
         "id": "cn-it-7813b9082766caad",
@@ -300,15 +300,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-8wpc-h4q6-8fxv",
+        "id": "github-advisory-ghsa-6v25-8wq6-xq4j",
         "category": "security",
-        "title": "fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set",
-        "url": "https://github.com/advisories/GHSA-8wpc-h4q6-8fxv",
+        "title": "Hazelcast allows arbitrary member memory access by low-privileged client",
+        "url": "https://github.com/advisories/GHSA-6v25-8wq6-xq4j",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:02:12.000Z",
-        "summary": "### Summary `createVerifier` in fast-jwt ≤ 6.3.0 skips signature verification entirely when the `key` option is a falsy synchronous value (`''` or `null`) **and** the `algorithms` option is set to a non-empty allowlist. An attacker who can…",
-        "badge": "CVE-2026-107720",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-10-08T22:10:29.000Z",
+        "summary": "### Impact A flaw has been found in Hazelcast Enterprise Edition and Community Edition, which would allow a low-privileged malicious client to read arbitrary data in memory from any cluster member (including Java heap memory, off-heap data…",
+        "badge": "CVE-2026-107726",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-c696e8b1f3422473",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "我国城市地下管网普遍“年龄大、欠账多”，大量管道铺设于20世纪80、90年代，存在材质老化、腐蚀严重等问题，小区管网跑冒滴漏、淤堵破损等“带病运行”情况也比较常见。管网老旧会带来燃气泄漏、供水污染、城市内涝等风险。",
         "badge": "热搜",
-        "signal": "7,617,920 热度"
+        "signal": "7,617,313 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -369,7 +369,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-09T10:12:11.000Z",
         "badge": "HN",
-        "signal": "274 分 · 145 评论"
+        "signal": "296 分 · 158 评论"
       },
       {
         "id": "cn-item-6d26f96ac71c9b6f",
@@ -382,15 +382,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-ww5h-9m49-7xx4",
+        "id": "github-advisory-ghsa-w294-6q5q-53p8",
         "category": "security",
-        "title": "fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion",
-        "url": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4",
+        "title": "Hazelcast has an authorization bypass in IMap Predicates API",
+        "url": "https://github.com/advisories/GHSA-w294-6q5q-53p8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:02:07.000Z",
-        "summary": "### Summary The fix for CVE-2026-34950 (CVSS 9.1, released in v6.2.0) is **incomplete**. It adds `key.trim()` to the PEM-detection path in `src/crypto.js`, but `String.prototype.trim()` only strips characters classified as whitespace by th…",
-        "badge": "CVE-2026-107722",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-10-08T22:09:34.000Z",
+        "summary": "### Impact Missing authorization checks in the Predicates API may allow a malicious client to execute arbitrary code on a Hazelcast member. ### Patches Enterprise customers should upgrade to a fixed version of Hazelcast Enterprise Edition:…",
+        "badge": "CVE-2026-107725",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-45d6a2b79938283a",
@@ -451,7 +451,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-09T15:05:24.000Z",
         "badge": "HN",
-        "signal": "40 分 · 14 评论"
+        "signal": "68 分 · 25 评论"
       },
       {
         "id": "cn-baidu-58873469a0cba6b9",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "10月9日晚，第35届“飞天奖”、第29届“星光奖”颁奖典礼在山东烟台举行。王仁君凭借《浴血荣光》获优秀男演员奖。",
         "badge": "热搜",
-        "signal": "7,520,130 热度"
+        "signal": "7,519,931 热度"
       },
       {
-        "id": "github-advisory-ghsa-5hjw-83fp-phq9",
+        "id": "github-advisory-ghsa-8wpc-h4q6-8fxv",
         "category": "security",
-        "title": "fast-jwt : Silent claim-validator bypass when JWT payload is a JSON array",
-        "url": "https://github.com/advisories/GHSA-5hjw-83fp-phq9",
+        "title": "fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set",
+        "url": "https://github.com/advisories/GHSA-8wpc-h4q6-8fxv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:01:58.000Z",
-        "summary": "### Summary `fast-jwt`'s `createVerifier` silently skips **all** configured claim validators (`exp`, `nbf`, `iss`, `aud`, `sub`, `jti`, `nonce`) when a validly-signed JWT carries a JSON array as its payload instead of an object. The verifi…",
-        "badge": "CVE-2026-107723",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-10-08T22:02:12.000Z",
+        "summary": "### Summary `createVerifier` in fast-jwt ≤ 6.3.0 skips signature verification entirely when the `key` option is a falsy synchronous value (`''` or `null`) **and** the `algorithms` option is set to a non-empty allowlist. An attacker who can…",
+        "badge": "CVE-2026-107720",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
         "id": "ai-hugging-face-16b7810afb00bdc0",
@@ -509,7 +509,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 38895,
+        "stars": 39457,
         "starsToday": 15335
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 20205,
+        "stars": 20377,
         "starsToday": 5925
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 282258,
+        "stars": 282288,
         "starsToday": 1696
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 47563,
+        "stars": 47586,
         "starsToday": 1744
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 44953,
+        "stars": 44979,
         "starsToday": 323
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 28077,
+        "stars": 28086,
         "starsToday": 714
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/BerriAI/litellm",
         "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
         "language": "Python",
-        "stars": 60519,
+        "stars": 60533,
         "starsToday": 95
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 103764,
+        "stars": 103778,
         "starsToday": 523
       },
       {
@@ -589,7 +589,7 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 10442,
+        "stars": 10531,
         "starsToday": 3723
       },
       {
@@ -599,10 +599,10 @@
         "url": "https://github.com/Robbyant/lingbot-map",
         "description": "[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction",
         "language": "Python",
-        "stars": 17599,
+        "stars": 17606,
         "starsToday": 109
       }
     ],
-    "updatedAt": "2026-10-09T16:13:52.531Z"
+    "updatedAt": "2026-10-09T16:48:29.350Z"
   }
 }

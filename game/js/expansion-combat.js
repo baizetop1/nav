@@ -1,8 +1,8 @@
-import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.68.0';
-import {journeyHealing} from './journey-combat.js?v=0.68.0';
-import {COMBOS,PERSONAL,LAYOUTS} from './expansion-data.js?v=0.68.0';
-import {addStatus,attackInterval} from './battle.js?v=0.68.0';
-import {contribution} from './debrief.js?v=0.68.0';
+import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.69.0';
+import {journeyHealing} from './journey-combat.js?v=0.69.0';
+import {COMBOS,PERSONAL,LAYOUTS} from './expansion-data.js?v=0.69.0';
+import {addStatus,attackInterval} from './battle.js?v=0.69.0';
+import {contribution} from './debrief.js?v=0.69.0';
 export function initializeExpansion(s,b){if(!s.expansion||b.guest||b.expansion)return;const x=s.expansion;b.expansion={version:1,smoke:false,personal:b.team.filter(u=>x.personal[u.id]).map(u=>u.id),combos:Object.fromEntries(Object.entries(COMBOS).filter(([id,m])=>(x.combos[id]||0)>=3&&m.team.every(id=>b.team.some(u=>u.id===id))).map(([id])=>[id,{count:0,readyAt:0}]))};
  b.expansion.styles=Object.fromEntries(b.expansion.personal.filter(id=>x.styles?.[id]).map(id=>[id,x.styles[id]]));for(const u of b.team)if(b.expansion.styles[u.id]==='guard')addStatus(u,{id:'guard',value:.08,turns:4},0);
  if(x.smoke&&b.context.type!=='replay'&&b.context.type!=='special'&&!(b.context.type==='rotation'&&b.context.kind==='daily'&&RESOURCE_ROUTES.some(r=>r.id===b.context.id))){s.inventory.smoke_pack--;x.smoke=false;b.expansion.smoke=true;b.log.push('【行军烟幕】已携带一包，本场主动撤退兵损减少 25%；无论是否使用，结束后不返还。');}

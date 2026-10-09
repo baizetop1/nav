@@ -1,5 +1,5 @@
-import {random} from './utils.js?v=0.68.0';
-import {SPECIAL_ROUTES,routeReward} from './special-routes.js?v=0.68.0';
+import {random} from './utils.js?v=0.69.0';
+import {SPECIAL_ROUTES,routeReward} from './special-routes.js?v=0.69.0';
 const option=(name,route,hero,help)=>({name,route,hero,help,effect:hero==='tanglong'?'unshield':['ruanxiaoqi','andaoquan'].includes(hero)?'cleanse':['shiqian','yuehe'].includes(hero)?'weaken':'heal'});
 export const DELVE_EVENTS={
  mine_collapse:{area:'mine',name:'断梁落石',text:'前面的木梁塌了，石缝里传来敲击声。',rest:'绕山腰走',rescue:option('救出矿工','oreguard','xiangchong','团牌挡住落石，全队恢复 8% 气血。'),cache:option('钻进运矿道','ambush','shiqian','时迁探出伏兵位置，敌军攻击降低 10%。')},

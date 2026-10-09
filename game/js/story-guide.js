@@ -1,7 +1,7 @@
-import {chapterStory,ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.68.0';
-import {chapterBattlePlan} from './volume-three.js?v=0.68.0';
-import {meets} from './map.js?v=0.68.0';
-import {routeTo,conditionText} from './world-map.js?v=0.68.0';
+import {chapterStory,ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.69.0';
+import {chapterBattlePlan} from './volume-three.js?v=0.69.0';
+import {meets} from './map.js?v=0.69.0';
+import {routeTo,conditionText} from './world-map.js?v=0.69.0';
 
 // Derived entirely from the current save: reloading or travelling cannot lose the objective.
 export function storyObjective(s,d){
@@ -77,11 +77,11 @@ export function storyObjective(s,d){
  }
  function story(id){
   const m=d.by.stories[id],p=s.progress.stories[id];if(!m||p?.status==='completed'||seen.has('story:'+id))return null;seen.add('story:'+id);
-  if(!p)return condition(m.condition)||(!m.steps[m.start].choices.some(c=>meets(s,c.condition))?condition(m.steps[m.start].choices[0]?.condition):null)||(m.steps[m.start].choices.some(c=>c.battle)?battleNeed(id):null)||point('开始 · '+m.title,m.map,chapterStory(id)?'前往'+d.by.maps[m.map].name+'，查看“'+m.title+'”。':'到达后选择“开始剧情 / 查看此地事务”。',{story:id});
+  if(!p)return condition(m.condition)||(!m.steps[m.start].choices.some(c=>meets(s,c.condition))?condition(m.steps[m.start].choices[0]?.condition):null)||(m.steps[m.start].choices.some(c=>c.battle)?battleNeed(id):null)||point('开始 · '+m.title,m.map,chapterStory(id)?'前往'+d.by.maps[m.map].name+'，查看“'+m.title+'”。':(id==='wusong_story'?'到达后点“与武松说话”，随他上冈。':'到达后查看眼前的剧情，与当地人物交谈。'),{story:id});
   const step=m.steps[p.step];
   if(id==='wusong_story'&&p.step==='trail'){
-   if(!s.progress.flags.tracks_found)return point('查看巨大的脚印','drywood','武松已在山道等候。先去枯树林查看脚印，才能找到虎踪。',{action:{type:'mapAction',id:'tracks'},story:id});
-   if(!s.progress.flags.trail_followed)return point('沿虎踪继续追踪','tracks','脚印已找到。到虎踪点击“继续追踪”，深林道路随后开放。',{action:{type:'mapAction',id:'follow'},story:id});
+   if(!s.progress.flags.tracks_found)return point('查看巨大的脚印','drywood','武松已在山道等候。先去枯树林点“查看爪印”，才能找到虎踪。',{action:{type:'mapAction',id:'tracks'},story:id});
+   if(!s.progress.flags.trail_followed)return point('沿虎踪继续追踪','tracks','脚印已找到。到虎踪点击“循迹探路”，深林道路随后开放。',{action:{type:'mapAction',id:'follow'},story:id});
   }
   const unmet=condition(step.condition);if(unmet)return {...unmet,reason:step.hint||'先办完眼前的事，再继续'+m.title+'。'};
   if(step.choices.some(c=>c.battle)){const need=battleNeed(id);if(need)return need;}

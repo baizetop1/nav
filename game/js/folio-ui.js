@@ -1,21 +1,34 @@
-import {specialPlan} from './special-dungeons.js?v=0.68.0';
-import {afterBattleNext} from './opening-ui.js?v=0.68.0';
-import {trackedGoalStrip} from './tactics-ui.js?v=0.68.0';
-import {isExternal,isWanderer} from './roster.js?v=0.68.0';
-import {HERO_ROLES} from './hero-roles.js?v=0.68.0';
-import {attributes} from './hero.js?v=0.68.0';
-import {experienceToNext,ATTRIBUTE_NAMES} from './progression.js?v=0.68.0';
-import {qualityOf,QUALITIES} from './quality.js?v=0.68.0';
-import {CORPS} from './corps-data.js?v=0.68.0';
-import {storyObjective} from './story-guide.js?v=0.68.0';
-import {journeyNextGoal} from './journey-goals-ui.js?v=0.68.0';
-import {campNotices} from './camp-overview.js?v=0.68.0';
-import {icon} from './icons.js?v=0.68.0';
+import {specialPlan} from './special-dungeons.js?v=0.69.0';
+import {afterBattleNext} from './opening-ui.js?v=0.69.0';
+import {trackedGoalStrip} from './tactics-ui.js?v=0.69.0';
+import {isExternal,isWanderer} from './roster.js?v=0.69.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.69.0';
+import {attributes} from './hero.js?v=0.69.0';
+import {experienceToNext,ATTRIBUTE_NAMES} from './progression.js?v=0.69.0';
+import {qualityOf,QUALITIES} from './quality.js?v=0.69.0';
+import {CORPS} from './corps-data.js?v=0.69.0';
+import {storyObjective} from './story-guide.js?v=0.69.0';
+import {journeyNextGoal} from './journey-goals-ui.js?v=0.69.0';
+import {campNotices} from './camp-overview.js?v=0.69.0';
+import {icon} from './icons.js?v=0.69.0';
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
-export function campDashboard(s,d,esc,btn,more){const g=s.lastBattle&&s.lastBattle.outcome!=='victory'?afterBattleNext(s,s.lastBattle,d,journeyNextGoal(s,d)):journeyNextGoal(s,d),story=storyObjective(s,d),notices=campNotices(s,d),links=[['营建','camp','buildings','forge'],['募兵医治','camp','troops','heroes'],['山寨出征','camp','raids','map'],['招贤','recruit','ordinary','recruit'],['打造','forge','craft','forge'],['资源副本','trials','resources','trials']];const lead=s.progress.flags.volume_six_complete?'<section class="folio-next" data-mainline aria-label="当前主线目标"><span class="folio-eyebrow">主线 · 第 '+story.chapter+' 卷 · '+story.done+'/'+story.total+'</span><h2>'+esc(story.title)+'</h2><p>'+esc(story.reason||story.detail)+'</p>'+btn(s.progress.flags.volume_twelve_complete?'查看结局与后记':'继续主线',{type:'ui_storyResume'},'primary')+'</section><section class="folio-story" aria-label="下一步游玩目标"><div><small>游历</small><strong>'+esc(g.title)+'</strong></div>'+btn(g.label||'前往',g.command,'secondary')+'</section>':'<section class="folio-next" aria-label="下一步游玩目标"><span class="folio-eyebrow">寨务</span><h2>'+esc(g.title)+'</h2><p>'+esc(g.text)+'</p>'+btn(g.label||'前往',g.command,'primary')+(g.title==='体力不足'&&!specialPlan(s,'mine',1).reason?btn('不耗体力寻宝',{type:'ui_specialView',id:'mine',tier:1},'secondary'):'')+'</section><section class="folio-story" aria-label="当前主线目标"><div><small>主线 · 第 '+story.chapter+' 卷 · '+story.done+'/'+story.total+'</small><strong>'+esc(story.title)+'</strong></div>'+btn('继续主线',{type:'ui_storyResume'},'secondary')+'</section>';return '<div class="camp-dashboard">'+trackedGoalStrip(s,d,btn)+lead+'<nav class="folio-shortcuts" aria-label="常用寨务">'+links.map(([name,view,id,symbol])=>'<button type="button" class="secondary" data-command="'+esc(JSON.stringify({type:'ui_section',view,id}))+'">'+icon(symbol)+'<span>'+name+'</span></button>').join('')+'</nav><details class="folio-more" data-fold="camp-all-functions"><summary>全部寨务'+(notices.length?' · '+notices.length+' 项待办':'')+'</summary>'+(notices.length?'<div class="actions">'+notices.slice(0,3).map(n=>n.view?'<button type="button" class="secondary" data-view="'+n.view+'">'+esc(n.label)+'</button>':btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')+'</div>':'')+more+'</details></div>';}
+// Shortcuts grow with story/camp progress; all existing pages remain accessible.
+export function campShortcuts(s){
+ const established=!!s.progress.flags.tiger_complete||s.camp.buildings.hall>=2||s.camp.sorties>0;
+ return [['采集物资','camp','duties','energy'],['好汉','heroes','roster','heroes'],['招贤','recruit','ordinary','recruit'],
+  ...(established?[['营建','camp','buildings','forge'],['募兵医治','camp','troops','medicine'],['打造','forge','craft','forge']]:[])];
+}
+export function campDashboard(s,d,esc,btn,more){
+ const g=s.lastBattle&&s.lastBattle.outcome!=='victory'?afterBattleNext(s,s.lastBattle,d,journeyNextGoal(s,d)):journeyNextGoal(s,d);
+ const story=storyObjective(s,d),notices=campNotices(s,d),destination=story.map?d.by.maps[story.map].name:({camp:'寨子',heroes:'好汉',bag:'行囊',trials:'历练',recruit:'招贤',chronicle:'梁山志'}[story.view]||'江湖');
+ const label=s.progress.flags.volume_twelve_complete?'查看结局与后记':story.map&&story.map!==s.location?'前往'+destination:story.map?'继续主线':'前往'+destination;
+ const lead='<section class="folio-next" data-mainline aria-label="当前主线目标"><span class="folio-eyebrow">主线 · 第 '+story.chapter+' 卷 · '+story.done+'/'+story.total+'</span><h2>'+esc(story.title)+'</h2><p><b>'+esc(destination)+'</b> · '+esc(story.reason||story.detail)+'</p>'+btn(label,{type:'ui_storyResume'},'primary')+'</section>';
+ const support='<section class="folio-story camp-support" aria-label="出行准备建议"><div><small>出行准备 · 可选</small><strong>'+esc(g.title)+'</strong></div>'+btn(g.label||'前往',g.command,'secondary')+(g.title==='体力不足'&&!specialPlan(s,'mine',1).reason?btn('不耗体力寻宝',{type:'ui_specialView',id:'mine',tier:1},'secondary'):'')+'</section>';
+ return '<div class="camp-dashboard">'+lead+'<nav class="folio-shortcuts" aria-label="常用功能">'+campShortcuts(s).map(([name,view,id,symbol])=>'<button type="button" class="secondary" data-command="'+esc(JSON.stringify({type:'ui_section',view,id}))+'">'+icon(symbol)+'<span>'+name+(id==='duties'?'<small>5 体力</small>':'')+'</span></button>').join('')+'</nav>'+support+'<section class="folio-story grain-road-entry"><div><small>山寨战役</small><strong>'+ (s.grainRoad?.won?'粮路已通 · 安排后续营建':'打通粮路 · 解决寨中用粮')+'</strong></div>'+btn('查看粮路',{type:'ui_section',view:'camp',id:'grainRoad'},'secondary')+'</section>'+trackedGoalStrip(s,d,btn)+'<details class="folio-more" data-fold="camp-all-functions"><summary>全部寨务'+(notices.length?' · '+notices.length+' 项待办':'')+'</summary>'+(notices.length?'<div class="actions">'+notices.slice(0,3).map(n=>n.view?'<button type="button" class="secondary" data-view="'+n.view+'">'+esc(n.label)+'</button>':btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')+'</div>':'')+more+'</details></div>';
+}
 export function heroDossier(s,d,h,esc,btn,portrait,invitation,requested='attributes'){
  const v=s.heroes[h.id],owned=v.status==='owned',a=owned?attributes(s,h.id,d):null,q=QUALITIES[qualityOf(v)],role=HERO_ROLES[h.id],full=v.level>=d.config.balance.heroLevelCap,tab=['attributes','ability','develop'].includes(requested)?requested:'attributes',identity=isWanderer(h)?'江湖散人 · 不占正册座次':isExternal(h)?'外传人物 · 不占正册座次':h.starSign+' · 第 '+h.seat+' 席';
- const away=s.affairs?.mission?.hero===h.id||s.realm?.squad?.team.includes(h.id);
+ const away=s.idleDispatch?.mission?.hero===h.id||s.affairs?.mission?.hero===h.id||s.realm?.squad?.team.includes(h.id);
  const attributesPanel=owned?'<section class="dossier-experience"><span>历练</span><b>'+(full?'已满级':v.exp+' / '+experienceToNext(v.level))+'</b>'+(!full?'<progress aria-label="人物升级经验" value="'+v.exp+'" max="'+experienceToNext(v.level)+'"></progress>':'')+'</section><dl class="dossier-stats">'+Object.entries(ATTRIBUTE_NAMES).map(([key,name])=>'<div><dt>'+name+'</dt><dd>'+a[key]+'</dd></div>').join('')+'</dl><p class="note dossier-stat-note">已含装备等加成；出征时另计兵力和军令。</p>':invitation(s,h,btn);
  const abilities='<section class="dossier-ability"><h3>'+esc(role.name)+'</h3><p>'+esc(role.text)+'</p><span class="note">专属兵种 · '+esc(CORPS[h.id]?.name||'待查')+'</span></section><div class="actions">'+btn('查看招式',{type:'ui_section',view:'heroes',id:'skills',hero:h.id},'secondary',!owned)+btn('兵种详情',{type:'ui_section',view:'heroes',id:'corps',hero:h.id},'secondary',!owned)+'</div>';
  const develop='<div class="dossier-actions">'+[['training','升级'],['skills','招式坐骑'],['corps','专属兵种'],['quality','品阶突破'],['talents','天赋装备'],['tasks','人物传记']].map(([id,name])=>btn(name,{type:'ui_section',view:'heroes',id,hero:h.id},id==='training'?'primary':'secondary',!owned)).join('')+'</div><details data-fold="dossier-history-'+h.id+'"><summary>人物往事</summary><p>'+esc(identity)+'</p><p>'+esc(h.story)+'</p></details>';
