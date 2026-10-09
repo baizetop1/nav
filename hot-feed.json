@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-08T22:04:49.961Z",
+  "generatedAt": "2026-10-09T02:10:55.913Z",
   "intelligence": {
-    "updatedAt": "2026-10-08T22:04:49.961Z",
+    "updatedAt": "2026-10-09T02:10:55.913Z",
     "items": [
       {
-        "id": "cn-item-448c135473b19f07",
+        "id": "cn-item-3e7241d4e8549430",
         "category": "cn",
-        "title": "中新网评：选手和教练不该成流量生意“素材”",
-        "url": "https://www.chinanews.com.cn/ty/2026/10-08/10709402.shtml",
+        "title": "10月9日人民币对美元中间价报6.7330 上调37个基点",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-09/10709469.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-08T14:44:06.000Z",
-        "summary": "中新网北京10月8日电(钟兴真)中国乒乓球协会7日发布关于抵制极端球迷越界行为的声明，表示坚决维护教练员、运动员合法权益，将推动建立赛场禁入名单制度，加强现场秩序维护。",
+        "publishedAt": "2026-10-09T01:42:51.000Z",
+        "summary": "中新网10月9日电 据中国外汇交易中心网站消息，中国人民银行授权中国外汇交易中心公布，2026年10月9日银行间外汇市场人民币汇率中间价为1美元对人民币6.7330元，上调37个基点。",
         "badge": "中新网要闻"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-08T16:59:39.000Z",
         "badge": "HN",
-        "signal": "386 分 · 95 评论"
+        "signal": "553 分 · 122 评论"
       },
       {
-        "id": "cn-it-494f893664f154b4",
+        "id": "cn-it-dbb53d01f64dbf3c",
         "category": "cn",
-        "title": "899 元起雷蛇巴塞利斯蛇 V4 专业版 / 极速版鼠标发布，还有第二代无线充电底座",
-        "url": "https://www.ithome.com/1/010/745.htm",
+        "title": "微软调整 M365：“定向发布”渠道明年退役，更新细分成抢先体验 / 标准 / 延迟上线",
+        "url": "https://www.ithome.com/1/010/821.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-08T16:58:03.000Z",
-        "summary": "IT之家 10 月 9 日消息，雷蛇 10 月 8 日晚正式发布了 Razer Basilisk V4 Pro 雷蛇巴塞利斯蛇 V4 专业版鼠标， 售价 1399 元 。 该鼠标搭载第二代 Razer Hyperscroll 纵横滚轮， 四种滚轮模式兼顾游戏操控与日常浏览 ；以及第三代 Razer Focus Pro 50K 光学传感器、第四代 Razer 光学鼠标微动，支持最高 50000 DPI。 该鼠标配备第二代 Razer HyperSpeed 无线技术， 原生 8…",
+        "publishedAt": "2026-10-09T02:09:47.000Z",
+        "summary": "IT之家 10 月 9 日消息，科技媒体 NeoWin 昨日（10 月 8 日）发布博文，报道称微软宣布将于 2027 年 1 月停用 Microsoft 365 的定向发布（Targeted Release）渠道 ，并以 Frontier、Standard 和 Deferred 三个统一发布偏好渠道替代。 IT之家注：定向发布是 Microsoft 365 原有的一种更新接收方式，让企业比公众更早获取 Office 应用新功能。企业可借此测试功能、安排支持团队，并通过反馈…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-8wpc-h4q6-8fxv",
+        "id": "github-advisory-ghsa-6v25-8wq6-xq4j",
         "category": "security",
-        "title": "fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set",
-        "url": "https://github.com/advisories/GHSA-8wpc-h4q6-8fxv",
+        "title": "Hazelcast allows arbitrary member memory access by low-privileged client",
+        "url": "https://github.com/advisories/GHSA-6v25-8wq6-xq4j",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:02:12.000Z",
-        "summary": "### Summary `createVerifier` in fast-jwt ≤ 6.3.0 skips signature verification entirely when the `key` option is a falsy synchronous value (`''` or `null`) **and** the `algorithms` option is set to a non-empty allowlist. An attacker who can…",
-        "badge": "CVE-2026-107720",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-10-08T22:10:29.000Z",
+        "summary": "### Impact A flaw has been found in Hazelcast Enterprise Edition and Community Edition, which would allow a low-privileged malicious client to read arbitrary data in memory from any cluster member (including Java heap memory, off-heap data…",
+        "badge": "CVE-2026-107726",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-c11a83f73b42d756",
@@ -76,25 +76,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247220",
+        "id": "v2ex-1247243",
         "category": "dev",
-        "title": "为了用 claude， 在美国公司没下来之前， 我先用了国外的朋友家里主机",
-        "url": "https://www.v2ex.com/t/1247220",
+        "title": "codex 更新之后，不能只管看到当前项目 git 分支信息了咋办。。。",
+        "url": "https://www.v2ex.com/t/1247243",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T19:37:21.000Z",
-        "summary": "几个月前分别托管了 3 台电脑跑在国外朋友家里，现在终于派上用场了，今天先用了其中一台电脑配置了利用 rustdesk 远程登录，并使用朋友注册/注册 claude 账号，完美临时可以用了。 半夜去越南的网络超快，和本地操作没区别，一直使用 windows/macos, 晚上转了操作下 debian 桌面， 感觉切换成本很低。 还有另外 2 台电脑，后面如果还是封号，那只能重新找其它朋友搞账号，我在想 kyc 和托管会不会是下一个大生意，或者说一直是个大生意？ 目前不敢使用…",
+        "publishedAt": "2026-10-09T01:18:37.000Z",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-f615370fe4dc160d",
+        "id": "cn-baidu-c9800dcb513d391d",
         "category": "cn",
-        "title": "“为了看短剧 我妈两年花22万”",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%BA%E4%BA%86%E7%9C%8B%E7%9F%AD%E5%89%A7+%E6%88%91%E5%A6%88%E4%B8%A4%E5%B9%B4%E8%8A%B122%E4%B8%87%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "国际油价深夜大涨",
+        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E9%99%85%E6%B2%B9%E4%BB%B7%E6%B7%B1%E5%A4%9C%E5%A4%A7%E6%B6%A8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，一位近70岁阿姨为看短剧充值22.58万元的事件引发关注。据悉，在两年多的时间里，该阿姨累计充值4887笔，巅峰时期一天充值29次，单日花费1400余元。据分析，该事件起因于短剧平台利用小额付费、换马甲及大数据精准推送等套路诱导老人消费。",
+        "summary": "美东时间周四，国际油价深夜大涨，WTI原油期货涨超3.6%；加密货币持续下跌，比特币跌破8.1万美元，最近24小时约19万人被爆仓，金额近12亿美元。",
         "badge": "热搜",
-        "signal": "7,809,184 热度"
+        "signal": "7,808,163 热度"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -108,44 +107,44 @@
         "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
-        "id": "ai-hugging-face-88e871d5a8d26738",
+        "id": "ai-hugging-face-ffd2818196374b7e",
         "category": "ai",
-        "title": "Multimodal open d1 decision models for the edge",
-        "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+        "title": "The model that didn't exist, so you made it yourself",
+        "url": "https://huggingface.co/blog/building-with-ml-intern",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-07T16:54:33.000Z",
+        "publishedAt": "2026-10-08T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50011928",
+        "id": "hn-50009295",
         "category": "dev",
-        "title": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy",
-        "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full",
+        "title": "Theranos.world",
+        "url": "https://www.theranos.world/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-08T20:42:16.000Z",
+        "publishedAt": "2026-10-08T17:51:49.000Z",
         "badge": "HN",
-        "signal": "40 分 · 21 评论"
+        "signal": "285 分 · 118 评论"
       },
       {
-        "id": "cn-item-aa19eac531bfe554",
+        "id": "cn-item-2887206117c60782",
         "category": "cn",
-        "title": "泰国洪灾救济开始拨付 首批8219户获6800万泰铢",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-08/10709397.shtml",
+        "title": "AI辅助面试火爆 算法打分靠谱吗？能否替代真人判断？",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-09/10709451.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-08T14:17:09.000Z",
-        "summary": "中新社曼谷10月8日电 (王茜 李映民)泰国总理府副发言人拉丽达8日在总理府举行的新闻发布会上说，泰国政府当天开始向洪灾受灾民众拨付首批救济款，首批8219户受灾家庭将获得总额6800.3万泰铢(约合1360万元人民币)的救济金。",
+        "publishedAt": "2026-10-09T00:56:44.000Z",
+        "summary": "眼下正值秋招旺季，不少企业在大批量岗位的初筛环节用上了AI面试官。统一出题、批量打分，企业希望靠新技术压缩面试时长。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-ww5h-9m49-7xx4",
+        "id": "github-advisory-ghsa-w294-6q5q-53p8",
         "category": "security",
-        "title": "fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion",
-        "url": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4",
+        "title": "Hazelcast has an authorization bypass in IMap Predicates API",
+        "url": "https://github.com/advisories/GHSA-w294-6q5q-53p8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:02:07.000Z",
-        "summary": "### Summary The fix for CVE-2026-34950 (CVSS 9.1, released in v6.2.0) is **incomplete**. It adds `key.trim()` to the PEM-detection path in `src/crypto.js`, but `String.prototype.trim()` only strips characters classified as whitespace by th…",
-        "badge": "CVE-2026-107722",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-10-08T22:09:34.000Z",
+        "summary": "### Impact Missing authorization checks in the Predicates API may allow a malicious client to execute arbitrary code on a Hazelcast member. ### Patches Enterprise customers should upgrade to a fixed version of Hazelcast Enterprise Edition:…",
+        "badge": "CVE-2026-107725",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-855092fba1df7e8a",
@@ -158,24 +157,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247214",
+        "id": "v2ex-1247242",
         "category": "dev",
-        "title": "XXL-AI v1.1.1 发布｜ Desk 桌面客户端正式上线，云本结合再进一步",
-        "url": "https://www.v2ex.com/t/1247214",
+        "title": "最近 vibe coding，天天改，每天地方都得自己改！",
+        "url": "https://www.v2ex.com/t/1247242",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T16:38:57.000Z",
-        "summary": "Release Notes [云版（ Web 服务端）] 1 、 [优化] 项目合并部署：研发环节前后端分离，部署期前端产物内嵌进后端 Jar ，单进程单端口对外； 2 、 [新增] I18N 模块重构：前后端国际化逻辑优化，统一后端控制；标准化国际化资源文件结构，支持多语言配置，并优化前端国际化加载逻辑； 3 、 [优化] 模型 API 请求通参调整，设置 User-Agent: XXL-AI 便于供应商识别； 4 、 [优化] 供应商模型请求参数属性优化，支持格式检测与…",
+        "publishedAt": "2026-10-09T01:16:35.000Z",
+        "summary": "还经常出 bug ，这做的没有改的多，大神们，该咋处理？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "8 回复"
       },
       {
-        "id": "cn-it-04d06fa34ecda534",
+        "id": "cn-it-0589c26db7fc8a2a",
         "category": "cn",
-        "title": "消息称华为阔直板机型有多产品线布局动作，nova 中端线也在评估中",
-        "url": "https://www.ithome.com/1/010/744.htm",
+        "title": "vivo OriginOS 7 正式开启首批升级，按尝鲜申请顺序分批推送",
+        "url": "https://www.ithome.com/1/010/819.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-08T16:50:47.000Z",
-        "summary": "IT之家 10 月 9 日消息，博主 @数码闲聊站 发文透露，菊菊（此处预计指华为）阔直板手机有多产品线布局的动作， n 中端线（预计指 nova 产品线）也在评估阔直板中 。 有网友询问 Mate 系列是否会推出阔直板形态手机，博主表示：“ Mate 暂时没有这个计划。 ”还有网友谈及了 Pura X View 的销量带火了阔直板这一形态，博主回复称：“ 所以都在跟，但进度最快的也还是晚华子大半年。 ” 据IT之家此前报道， 全球首款阔直板手机 —— 华为 Pura X …",
+        "publishedAt": "2026-10-09T02:09:34.000Z",
+        "summary": "IT之家 10 月 9 日消息，vivo OriginOS 原系统官方宣布， OriginOS 7 今日正式开启首批升级 。 IT之家附支持机型如下： vivo X Fold6 X Fold5 X300 Ultra 卫星通信版 X300 Ultra X300 Pro 卫星通信版 X300 Pro X300s X300 X300E vivo Pad6 Pro iQOO iQOO 15 Ultra iQOO 15 iQOO 15T iQOO Neo11 至尊版 iQOO Neo…",
         "badge": "IT之家"
       },
       {
@@ -206,57 +205,57 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-08T00:14:48.000Z",
         "badge": "HN",
-        "signal": "233 分 · 203 评论"
+        "signal": "432 分 · 363 评论"
       },
       {
-        "id": "cn-baidu-f65aa01e3b5324ef",
+        "id": "cn-baidu-ee17c56ea47be351",
         "category": "cn",
-        "title": "三甲医生回应“喝大水”",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%89%E7%94%B2%E5%8C%BB%E7%94%9F%E5%9B%9E%E5%BA%94%E2%80%9C%E5%96%9D%E5%A4%A7%E6%B0%B4%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "大英博物馆两件康熙时期青花瓷遭损坏",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%A7%E8%8B%B1%E5%8D%9A%E7%89%A9%E9%A6%86%E4%B8%A4%E4%BB%B6%E5%BA%B7%E7%86%99%E6%97%B6%E6%9C%9F%E9%9D%92%E8%8A%B1%E7%93%B7%E9%81%AD%E6%8D%9F%E5%9D%8F&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，“喝大水”上热搜引发关注。浙江省中山医院内分泌科徐英英主任回应称，喝大水不等于科学饮水。徐英英表示，用白水替代含糖饮料值得肯定，但短时间内大口猛灌可能超过肾脏排水能力，诱发低钠血症，严重时会出现头痛、恶心、乏力甚至意识障碍。",
+        "summary": "北京时间10月8日，大英博物馆回应称，清代康熙时期一只瓷碗和一个小盒遭损坏，已交专业团队全面修复。此前10月4日，该瓷碗从展柜掉落砸到底层架子，连累另一件青花瓷盒。馆方称固定装置和架子未现故障迹象，将调查事发原因。",
         "badge": "热搜",
-        "signal": "7,711,863 热度"
+        "signal": "7,712,723 热度"
       },
       {
-        "id": "github-advisory-ghsa-5hjw-83fp-phq9",
+        "id": "github-advisory-ghsa-8wpc-h4q6-8fxv",
         "category": "security",
-        "title": "fast-jwt : Silent claim-validator bypass when JWT payload is a JSON array",
-        "url": "https://github.com/advisories/GHSA-5hjw-83fp-phq9",
+        "title": "fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set",
+        "url": "https://github.com/advisories/GHSA-8wpc-h4q6-8fxv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:01:58.000Z",
-        "summary": "### Summary `fast-jwt`'s `createVerifier` silently skips **all** configured claim validators (`exp`, `nbf`, `iss`, `aud`, `sub`, `jti`, `nonce`) when a validly-signed JWT carries a JSON array as its payload instead of an object. The verifi…",
-        "badge": "CVE-2026-107723",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-10-08T22:02:12.000Z",
+        "summary": "### Summary `createVerifier` in fast-jwt ≤ 6.3.0 skips signature verification entirely when the `key` option is a falsy synchronous value (`''` or `null`) **and** the `algorithms` option is set to a non-empty allowlist. An attacker who can…",
+        "badge": "CVE-2026-107720",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
-        "id": "ai-hugging-face-16b7810afb00bdc0",
+        "id": "ai-hugging-face-88e871d5a8d26738",
         "category": "ai",
-        "title": "Introducing Falcon ASR",
-        "url": "https://huggingface.co/blog/tiiuae/falcon-asr",
+        "title": "Multimodal open d1 decision models for the edge",
+        "url": "https://huggingface.co/blog/LiquidAI/open-d1",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-07T13:21:03.000Z",
+        "publishedAt": "2026-10-07T16:54:33.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247211",
+        "id": "v2ex-1247235",
         "category": "dev",
-        "title": "你们用 AI 写代码，会每次都看它改了什么吗？",
-        "url": "https://www.v2ex.com/t/1247211",
+        "title": "我免费开源的 Archify 约 8 万 Star 了，别人先做出了 $19/月的在线版",
+        "url": "https://www.v2ex.com/t/1247235",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T16:12:07.000Z",
-        "summary": "想问问大家，让 AI 改完代码以后，你们会逐行看 diff ，还是功能试一下没问题就提交？ 只改几行还好，一次改了十几个文件，看起来也挺费劲。但完全不看，又怕它顺手改了不该改的地方。 你们一般怎么检查？有没有哪些部分是一定会自己看的？",
+        "publishedAt": "2026-10-09T01:02:19.000Z",
+        "summary": "我还在免费维护开源项目，别人已经把在线版和价目表安排上了，看到的时候确实有点懵 😂 我是 Archify 的作者。前阵子在这里分享过 3.0 ，今天聊一件有点意外的事。 最近发现一个叫 archifyi.com 的网站，名字只比 Archify 多一个 i 。它的页脚写着 Built with open-source Archify ，链接到我的仓库；页面提供 3 次免费生成，Pro 标价 $19/月。 先说明白： 这不是我做的，也不是我在收费。 它在 FAQ 和页脚写了独…",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-item-67b0a34147b0fb2f",
+        "id": "cn-item-d5085fe1f03c1f87",
         "category": "cn",
-        "title": "成都一小区楼顶发现7岁男童坟墓系谣言 警方通报",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-08/10709381.shtml",
+        "title": "中国代表在联大一委阐述战略安全和军控问题政策主张",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-09/10709431.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-08T13:43:35.000Z",
-        "summary": "近日，网传“金堂县某小区楼顶发现可疑骨头”引发市民关注，成都警方通报：",
+        "publishedAt": "2026-10-09T00:31:47.000Z",
+        "summary": "中新社联合国10月8日电 当地时间8日，出席第81届联合国大会裁军与国际安全委员会(联大一委)会议的中国代表团团长、外交部军控司司长孙晓波在一般性辩论发言，阐述中方在战略安全和军控问题上的政策主张。",
         "badge": "中新网要闻"
       },
       {
@@ -271,45 +270,45 @@
         "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
-        "id": "ai-openai-d9e485b409fe8517",
+        "id": "ai-openai-45d6a2b79938283a",
         "category": "ai",
-        "title": "Disrupting AI-enabled “false front” operations",
-        "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+        "title": "LegalOn halves Codex costs while maintaining development speed",
+        "url": "https://openai.com/index/legalon-halves-codex-costs",
         "source": "OpenAI",
-        "publishedAt": "2026-10-08T00:00:00.000Z",
-        "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
+        "publishedAt": "2026-10-08T12:00:00.000Z",
+        "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50009295",
+        "id": "hn-49995495",
         "category": "dev",
-        "title": "Theranos.world",
-        "url": "https://www.theranos.world/",
+        "title": "Man discovers his parents' coffee machine used 1TB of data in 10 days",
+        "url": "https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-08T17:51:49.000Z",
+        "publishedAt": "2026-10-07T16:56:30.000Z",
         "badge": "HN",
-        "signal": "150 分 · 78 评论"
+        "signal": "424 分 · 262 评论"
       },
       {
-        "id": "cn-it-33ce245a4f58dfbf",
+        "id": "cn-it-d406f9c4b53e65b3",
         "category": "cn",
-        "title": "苹果官宣“欢迎回家”发布会定档 10 月 13 日，暗示首款智能家居中枢产品",
-        "url": "https://www.ithome.com/1/010/743.htm",
+        "title": "亚马逊零售部门裁员数百人，发言人回应称做出了艰难决定",
+        "url": "https://www.ithome.com/1/010/811.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-08T16:26:13.000Z",
-        "summary": "IT之家 10 月 9 日消息，苹果营销高级副总裁 Greg Joswiak 发布预告，官宣“Welcome home（欢迎回家）”发布会定档美国东部时间 10 月 13 日上午 9 点（ 北京时间 10 月 13 日晚 9 点 ）。 从宣传语来看， 预计将发布苹果首款智能家居中枢产品 。该产品此前被曝配备 6 英寸屏幕，提供壁挂与桌面两款形态。 IT之家综合此前爆料，桌面版整体外形类似 iMac G4，配有圆形金属底座，屏幕则通过金属支臂连接，用户可以手动调整俯仰角度；机…",
+        "publishedAt": "2026-10-09T02:07:32.000Z",
+        "summary": "IT之家 10 月 9 日消息，亚马逊当地时间周三确认新一批裁员，主要是在其负责电子商务网站的 Stores 部门。 据 Business Insider 和路透社看到的内部 Slack 帖子，亚马逊客户服务、销售合作伙伴支持和零售工程团队也受到影响。两家媒体均援引知情人士的话， 受影响员工不到 1,000 人 。 此次裁员发生在周二和周三举行的“黄金大交易日”期间。秋季购物活动是亚马逊零售团队每年的重要里程碑之一。 “我们一直在关注团队结构，确保在为客户创新时能够快速前进…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-g3jj-5cmm-3hxx",
+        "id": "github-advisory-ghsa-ww5h-9m49-7xx4",
         "category": "security",
-        "title": "fast-jwt treats raw public JWK JSON as an HMAC secret, enabling HS256 token forgery",
-        "url": "https://github.com/advisories/GHSA-g3jj-5cmm-3hxx",
+        "title": "fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion",
+        "url": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:01:53.000Z",
-        "summary": "### Summary `fast-jwt` 6.2.4 silently classifies raw serialized public JWK JSON as an HMAC secret. If an application supplies public JWK JSON text as the verifier key and HS256 is explicitly allowed or automatically inferred, an attacker w…",
-        "badge": "CVE-2026-107724",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-10-08T22:02:07.000Z",
+        "summary": "### Summary The fix for CVE-2026-34950 (CVSS 9.1, released in v6.2.0) is **incomplete**. It adds `key.trim()` to the PEM-detection path in `src/crypto.js`, but `String.prototype.trim()` only strips characters classified as whitespace by th…",
+        "badge": "CVE-2026-107722",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
         "id": "ai-google-deepmind-c696e8b1f3422473",
@@ -322,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247205",
+        "id": "v2ex-1247220",
         "category": "dev",
-        "title": "开发类似 wallpaper engine 的 2d 壁纸编辑器，现在还有市场吗？",
-        "url": "https://www.v2ex.com/t/1247205",
+        "title": "为了用 claude， 在美国公司没下来之前， 我先用了国外的朋友家里主机",
+        "url": "https://www.v2ex.com/t/1247220",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T15:30:24.000Z",
-        "summary": "第一次在 V2EX 上发帖，没想到是上来分享+求助的。 今年发生了很多事情，小孩出生，公司倒闭，目前团队被一家小公司收购，继续苟着，做自己的 2d 壁纸编辑器。 陆陆续续准备跳槽+面试，主力开发是 cursor agent，到现在 3-5 个月实现了初步的成果。 目前跑通了： - AI 图生视频：能大量快速制造中等质量的内容，目前想的是每周至少上架 10 张 - 2d sence 编辑器：实现了 Image、Text、Sound、Waveform、Particle（粒子）等…",
+        "publishedAt": "2026-10-08T19:37:21.000Z",
+        "summary": "几个月前分别托管了 3 台电脑跑在国外朋友家里，现在终于派上用场了，今天先用了其中一台电脑配置了利用 rustdesk 远程登录，并使用朋友注册/注册 claude 账号，完美临时可以用了。 半夜去越南的网络超快，和本地操作没区别，一直使用 windows/macos, 晚上转了操作下 debian 桌面， 感觉切换成本很低。 还有另外 2 台电脑，后面如果还是封号，那只能重新找其它朋友搞账号，我在想 kyc 和托管会不会是下一个大生意，或者说一直是个大生意？ 目前不敢使用…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "6 回复"
       },
       {
         "id": "cn-baidu-581304e1f3d2b796",
@@ -340,7 +339,7 @@
         "source": "百度热搜",
         "summary": "国庆假期，神州大地喜庆祥和，重大工程建设一线热潮涌动。从高原戈壁到滨海之地，从能源基地到交通干线，多项“首个”“首次”成果接连上新。这些新进展新突破，持续刷新着重大工程的“进度条”。",
         "badge": "热搜",
-        "signal": "7,618,598 热度"
+        "signal": "7,617,737 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -354,74 +353,74 @@
         "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
-        "id": "ai-hugging-face-67f5f61696a2949d",
+        "id": "ai-hugging-face-16b7810afb00bdc0",
         "category": "ai",
-        "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
-        "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+        "title": "Introducing Falcon ASR",
+        "url": "https://huggingface.co/blog/tiiuae/falcon-asr",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-07T12:45:31.000Z",
+        "publishedAt": "2026-10-07T13:21:03.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50010470",
+        "id": "hn-49986882",
         "category": "dev",
-        "title": "The value of not getting to the point (2015)",
-        "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
+        "title": "I hired an illustrator to draw my house. Now it's my Home Assistant dashboard",
+        "url": "https://antonfrolov.substack.com/p/i-hired-an-illustrator-to-draw-my",
         "source": "Hacker News",
-        "publishedAt": "2026-10-08T19:04:56.000Z",
+        "publishedAt": "2026-10-07T01:41:03.000Z",
         "badge": "HN",
-        "signal": "74 分 · 25 评论"
+        "signal": "399 分 · 67 评论"
       },
       {
-        "id": "cn-item-d11613d93c19c449",
+        "id": "cn-item-6ff2c331efe1114c",
         "category": "cn",
-        "title": "集装箱铁水联运装载和安全检查国家标准发布",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-08/10709338.shtml",
+        "title": "海南岛有强降雨 青藏高原和华西地区多阴雨天气",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-09/10709446.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-08T12:38:21.000Z",
-        "summary": "中新网10月8日电 据国家市场监督管理总局网站消息，近日，市场监管总局批准发布《集装箱铁水联运装载和安全检查技术规范》国家标准(GB/T 48309—2026)，统筹铁路、水路两种运输方式的作业要求，对通用集装箱铁水联运的货物装载、安全检查作出统一规范，为实现集装箱铁水联运“全程不开箱”奠定基础。",
+        "publishedAt": "2026-10-09T00:18:00.000Z",
+        "summary": "中新网10月9日电 据中央气象台网站消息，9日海南岛仍有强降雨，需加强防范暴雨可能引发的山洪、地质灾害等。未来三天，新疆北部和青藏高原多雨雪，西北地区东部、四川盆地等地多阴雨，关注对旅游、交通等的影响，防范次生灾害；关注华北、黄淮等地低能见度天气对交通、人体健康的影响。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-6wjp-v33h-5cvq",
+        "id": "github-advisory-ghsa-5hjw-83fp-phq9",
         "category": "security",
-        "title": "PraisonAI: AgentOS defaults to network-exposed no-auth mode, allowing unauthenticated agent invocation and instruction disclosure",
-        "url": "https://github.com/advisories/GHSA-6wjp-v33h-5cvq",
+        "title": "fast-jwt : Silent claim-validator bypass when JWT payload is a JSON array",
+        "url": "https://github.com/advisories/GHSA-5hjw-83fp-phq9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:01:29.000Z",
-        "summary": "## Summary The AgentOS server in the `praisonai` TypeScript/npm package ships an insecure default: it binds `0.0.0.0`, sets no API key, and uses CORS `*` with credentials. The API-key middleware is only registered when an API key is config…",
-        "badge": "CVE-2026-61426",
-        "signal": "HIGH · CVSS 8.6"
+        "publishedAt": "2026-10-08T22:01:58.000Z",
+        "summary": "### Summary `fast-jwt`'s `createVerifier` silently skips **all** configured claim validators (`exp`, `nbf`, `iss`, `aud`, `sub`, `jti`, `nonce`) when a validly-signed JWT carries a JSON array as its payload instead of an object. The verifi…",
+        "badge": "CVE-2026-107723",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
-        "id": "ai-openai-661f64ddb5f472a2",
+        "id": "ai-openai-d9e485b409fe8517",
         "category": "ai",
-        "title": "Helping teens learn, plan, and shape the future of AI",
-        "url": "https://openai.com/index/teens-learn-and-plan",
+        "title": "Disrupting AI-enabled “false front” operations",
+        "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
         "source": "OpenAI",
-        "publishedAt": "2026-10-07T12:00:00.000Z",
-        "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247196",
+        "id": "v2ex-1247214",
         "category": "dev",
-        "title": "前 AI 时代挖的坑， AI 时代填上了：一个算法可视化网站",
-        "url": "https://www.v2ex.com/t/1247196",
+        "title": "XXL-AI v1.1.1 发布｜ Desk 桌面客户端正式上线，云本结合再进一步",
+        "url": "https://www.v2ex.com/t/1247214",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T14:54:28.000Z",
-        "summary": "这个项目其实是前 AI 时代就开始做的。起因是我自己学算法，总是学完就忘，就想着做一个算法可视化项目，既能顺便学习，又能刷一点开源项目。那一阵子新拟物风格比较火，正好拿来练练手。 结果做完第一个算法（冒泡）就搁置了，工作太忙，一放就是好几年。后来有了 AI 才重新捡起来，今年补到了 92 个条目，也算是圆梦了吧。 现在大概是这样： 9 大类：数据结构、排序、图、DP 、回溯、字符串、数论、计算几何、查找 每一步都能前进、后退、拖进度条，倍速可调 TS / Python / …",
+        "publishedAt": "2026-10-08T16:38:57.000Z",
+        "summary": "Release Notes [云版（ Web 服务端）] 1 、 [优化] 项目合并部署：研发环节前后端分离，部署期前端产物内嵌进后端 Jar ，单进程单端口对外； 2 、 [新增] I18N 模块重构：前后端国际化逻辑优化，统一后端控制；标准化国际化资源文件结构，支持多语言配置，并优化前端国际化加载逻辑； 3 、 [优化] 模型 API 请求通参调整，设置 User-Agent: XXL-AI 便于供应商识别； 4 、 [优化] 供应商模型请求参数属性优化，支持格式检测与…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-33f3d189bf0605b2",
+        "id": "cn-it-27c0f0cb762c92f1",
         "category": "cn",
-        "title": "鸿蒙新补丁包惊喜 +1：华为 Mate 80 等系列机型新增隔空手势翻转加密分享功能",
-        "url": "https://www.ithome.com/1/010/742.htm",
+        "title": "小米智能门锁 5C 猫眼版预售：支持关门自动上锁，国补后到手价 999.6 元起",
+        "url": "https://www.ithome.com/1/010/808.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-08T16:16:27.000Z",
-        "summary": "IT之家 10 月 9 日消息，华为今日面向 Mate 80 系列等机型，推送了鸿蒙 HarmonyOS 7.0.0.109 版本最新补丁包，包体大小约 206.99MB，优化了部分场景的使用体验。 IT之家实测发现，更新该补丁包除了带来多设备互助通信共享外， 还支持了隔空手势翻转加密分享功能 （使用隔空手势抓取需要分享的内容，设备弹出动画后再翻转手势）。具体效果如下： 根据华为官方说法，加密后的内容仅可查看一次，无法截屏录屏或分享；加密分享的图片和视频不支持缩略图预览。 …",
+        "publishedAt": "2026-10-09T02:01:48.000Z",
+        "summary": "IT之家 10 月 9 日消息，小米智能门锁 5C 猫眼版正式上架预售，国补后到手价 999.6 元起，京东日常售价 1176 元。 京东 小米智能门锁 5C 猫眼 999.6 元 直达链接 该产品升级自弹锁体，支持关门自动上锁；升级猫眼遮挡检测与逗留抓拍，新增远程开锁方式；提供多达 11 种便捷开锁方式，覆盖 AI 指纹、固定密码、访客密码、微信小程序、米家 APP 蓝牙 / 远程开锁、机械钥匙 ，还可选配小米手机、小米手表、小米手环、NFC 门卡开锁，适合全家不同年龄段…",
         "badge": "IT之家"
       },
       {
@@ -445,55 +444,55 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50011999",
+        "id": "hn-50010470",
         "category": "dev",
-        "title": "AI-ready biological data: $1.8B global commitment",
-        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
+        "title": "The value of not getting to the point (2015)",
+        "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-08T20:46:25.000Z",
+        "publishedAt": "2026-10-08T19:04:56.000Z",
         "badge": "HN",
-        "signal": "25 分 · 1 评论"
+        "signal": "122 分 · 40 评论"
       },
       {
-        "id": "cn-baidu-56f0a4774b3c538a",
+        "id": "cn-baidu-7478f6e71925dd4e",
         "category": "cn",
-        "title": "“考不上清北就去清北工作”",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E8%80%83%E4%B8%8D%E4%B8%8A%E6%B8%85%E5%8C%97%E5%B0%B1%E5%8E%BB%E6%B8%85%E5%8C%97%E5%B7%A5%E4%BD%9C%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "人民日报评“圣黛CP”走红",
+        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E8%AF%84%E2%80%9C%E5%9C%A3%E9%BB%9BCP%E2%80%9D%E8%B5%B0%E7%BA%A2&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，河南化工技师学院电子显微镜技术专业亮相世界技能大赛。现场老师介绍，该专业累计已有101余名毕业生入职北京大学。此前，该学院于2012年创办全国唯一的电子显微镜技术专业。截至2026年六月，已向北京大学、浙江大学、中国科学院等顶尖科研平台输送496余名毕业生。",
+        "summary": "近期，网友借助AI工具将孙悟空与林黛玉“撮合”在一起的“圣黛CP”二创视频走红。媒体锐评，此类改编体现了情绪需求，但需守住法律伦理边界，对恶意篡改必须划出红线，同时以好创作接住好创意。",
         "badge": "热搜",
-        "signal": "7,524,350 热度"
+        "signal": "7,520,152 热度"
       },
       {
-        "id": "github-advisory-ghsa-c78w-2q4r-68r7",
+        "id": "github-advisory-ghsa-g3jj-5cmm-3hxx",
         "category": "security",
-        "title": "PraisonAI: Platform member PATCH routes allow owner resource rewrites and project lead reassignment delete bypass",
-        "url": "https://github.com/advisories/GHSA-c78w-2q4r-68r7",
+        "title": "fast-jwt treats raw public JWK JSON as an HMAC secret, enabling HS256 token forgery",
+        "url": "https://github.com/advisories/GHSA-g3jj-5cmm-3hxx",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-08T22:01:11.000Z",
-        "summary": "# Platform member PATCH routes allow owner resource rewrites and project lead reassignment delete bypass ## Summary `praisonai-platform` lets an ordinary workspace member patch owner-created project, issue, and agent records even though th…",
-        "badge": "CVE-2026-61442",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-10-08T22:01:53.000Z",
+        "summary": "### Summary `fast-jwt` 6.2.4 silently classifies raw serialized public JWK JSON as an HMAC secret. If an application supplies public JWK JSON text as the verifier key and HS256 is explicitly allowed or automatically inferred, an attacker w…",
+        "badge": "CVE-2026-107724",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
-        "id": "ai-hugging-face-bd1136d0fcfd6f13",
+        "id": "ai-hugging-face-67f5f61696a2949d",
         "category": "ai",
-        "title": "The Agent Said It Was Done. The Database Disagreed.",
-        "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+        "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-03T22:56:48.000Z",
+        "publishedAt": "2026-10-07T12:45:31.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247186",
+        "id": "v2ex-1247211",
         "category": "dev",
-        "title": "新发的 Haiku5.5 什么水平，和 6Luna 谁更胜一筹",
-        "url": "https://www.v2ex.com/t/1247186",
+        "title": "你们用 AI 写代码，会每次都看它改了什么吗？",
+        "url": "https://www.v2ex.com/t/1247211",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-08T13:59:15.000Z",
-        "summary": "两家 Pro 用户能不能 Haiku/Luna 自由？ Haiku5.5 如果能吊着打 6Luna 的话是不是可以转投 Claude 去了？",
+        "publishedAt": "2026-10-08T16:12:07.000Z",
+        "summary": "想问问大家，让 AI 改完代码以后，你们会逐行看 diff ，还是功能试一下没问题就提交？ 只改几行还好，一次改了十几个文件，看起来也挺费劲。但完全不看，又怕它顺手改了不该改的地方。 你们一般怎么检查？有没有哪些部分是一定会自己看的？",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "25 回复"
       }
     ]
   },
@@ -510,8 +509,8 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 15192,
-        "starsToday": 4640
+        "stars": 16020,
+        "starsToday": 4669
       },
       {
         "id": "github-231c4b191ae0f4ae",
@@ -520,8 +519,8 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 46199,
-        "starsToday": 1163
+        "stars": 46469,
+        "starsToday": 1160
       },
       {
         "id": "github-a5b6cf30f0c2b39a",
@@ -530,8 +529,8 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 24750,
-        "starsToday": 7744
+        "stars": 27515,
+        "starsToday": 7738
       },
       {
         "id": "github-89e612f6ea973712",
@@ -540,8 +539,8 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 280966,
-        "starsToday": 1770
+        "stars": 281189,
+        "starsToday": 1774
       },
       {
         "id": "github-1ba5bb3a805d2f64",
@@ -550,8 +549,8 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 98380,
-        "starsToday": 662
+        "stars": 98531,
+        "starsToday": 670
       },
       {
         "id": "github-83b72e8fbb7d5bd3",
@@ -560,8 +559,8 @@
         "url": "https://github.com/EpicGames/raddebugger",
         "description": "A native, user-mode, multi-process, graphical debugger.",
         "language": "C",
-        "stars": 8088,
-        "starsToday": 283
+        "stars": 8131,
+        "starsToday": 279
       },
       {
         "id": "github-a3140cb175a451a9",
@@ -570,8 +569,8 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 27470,
-        "starsToday": 309
+        "stars": 27643,
+        "starsToday": 392
       },
       {
         "id": "github-0d97dfe3fc868c34",
@@ -580,8 +579,8 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 7622,
-        "starsToday": 2510
+        "stars": 8152,
+        "starsToday": 2103
       },
       {
         "id": "github-640e4e0271c4d4b0",
@@ -589,10 +588,10 @@
         "name": "liquidslr/system-design-notes",
         "url": "https://github.com/liquidslr/system-design-notes",
         "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-        "stars": 24545,
-        "starsToday": 398
+        "stars": 24681,
+        "starsToday": 393
       }
     ],
-    "updatedAt": "2026-10-08T22:04:49.961Z"
+    "updatedAt": "2026-10-09T02:10:55.913Z"
   }
 }
