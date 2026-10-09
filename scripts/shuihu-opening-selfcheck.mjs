@@ -10,7 +10,7 @@ const frame=(s=initial,view='map',extra={})=>render({state:s,data,view,...extra}
 const command=(type,id)=>`data-command="${esc(JSON.stringify(id?{type,id}:{type}))}"`;
 assert.deepEqual(data.config.opening,['宣和年间。','山东郓城。','江湖风云初起。','你没有武艺。','但你有识人之能。','今日起：','你便是白泽寨主。']);
 const before=JSON.stringify(initial),welcome=frame(initial,'welcome',{entered:false});
-for(const line of ['从一座寨子开始','农田','兵营','白胜','portrait-wusong'])assert.ok(welcome.includes(line));
+for(const line of ['从郓城上路','景阳冈','三碗不过冈','白胜','portrait-wusong'])assert.ok(welcome.includes(line));
 for(const absent of ['class="tabs"','class="resources"','招贤','战斗'])assert.ok(!welcome.includes(absent));
 assert.ok(welcome.includes('开始游戏'));assert.ok(welcome.includes('读取存档'));
 assert.ok(welcome.includes(command('ui_start')));assert.ok(welcome.includes('data-view="save"'));

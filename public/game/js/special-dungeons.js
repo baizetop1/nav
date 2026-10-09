@@ -1,9 +1,11 @@
-import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.68.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.68.0';
-import {startBattle,addStatus,attackInterval} from './battle.js?v=0.68.0';
-import {attachTroops} from './camp.js?v=0.68.0';
-import {newEquipment} from './item.js?v=0.68.0';
-import {hasOwn,requireRule,journal,random} from './utils.js?v=0.68.0';
+import {recordGatheringClear} from './gathering.js?v=0.69.0';
+import {gatheringRegion} from './gathering-data.js?v=0.69.0';
+import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.69.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.69.0';
+import {startBattle,addStatus,attackInterval} from './battle.js?v=0.69.0';
+import {attachTroops} from './camp.js?v=0.69.0';
+import {newEquipment} from './item.js?v=0.69.0';
+import {hasOwn,requireRule,journal,random} from './utils.js?v=0.69.0';
 export {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext};
 const LIMIT=10000000,EQUIPMENT_LIMIT=200;
 export function specialRecord(s){return s.specialDungeons??={version:1,clears:{},last:null};}
@@ -33,6 +35,7 @@ export function finishSpecial(s,d,b){
  requireRule(s.battle===b&&validSpecialContext(b?.context)&&['victory','defeat','retreat'].includes(b.outcome),'没有待结算的寻宝副本。');
  const {id,tier}=b.context,record=specialRecord(s),drops=[],cursor={rng:s.rng};
  if(b.outcome==='victory'){
+  recordGatheringClear(s,gatheringRegion(id),tier);
   requireRule((record.clears[id+'_'+tier]||0)<LIMIT,'本难度通关次数已达存储上限。');
   for(const row of specialDropTable(id,tier))if(random(cursor)<row.rate){
    const count=row.min+(row.max>row.min?Math.floor(random(cursor)*(row.max-row.min+1)):0);

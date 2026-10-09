@@ -1,6 +1,6 @@
-import {validateLateBattle} from './late-mainline-combat.js?v=0.68.0';
-import {CHAPTER_MISSIONS} from './volume-three-data.js?v=0.68.0';
-import {meets} from './map.js?v=0.68.0';
+import {validateLateBattle} from './late-mainline-combat.js?v=0.69.0';
+import {CHAPTER_MISSIONS} from './volume-three-data.js?v=0.69.0';
+import {meets} from './map.js?v=0.69.0';
 const volumes=['eight','nine','ten','eleven','twelve'];
 const late=id=>typeof id==='string'&&/^v(?:8|9|10|11|12)_/.test(id);
 const chapterFlags=volumes.map(name=>'volume_'+name+'_complete');

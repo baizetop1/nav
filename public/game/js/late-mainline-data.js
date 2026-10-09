@@ -1,5 +1,5 @@
-import {missions as first} from './volumes-eight-ten-content.js?v=0.68.0';
-import {missions as last,ENDING_DEFINITIONS} from './volumes-eleven-twelve-content.js?v=0.68.0';
+import {missions as first} from './volumes-eight-ten-content.js?v=0.69.0';
+import {missions as last,ENDING_DEFINITIONS} from './volumes-eleven-twelve-content.js?v=0.69.0';
 export {ENDING_DEFINITIONS};
 export const LATE_MISSIONS={...first,...last};
 export const lateStory=id=>/^v(?:8|9|10|11|12)_/.test(id||'');

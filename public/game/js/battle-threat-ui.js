@@ -1,4 +1,4 @@
-import {skillReason} from './battle.js?v=0.68.0';
+import {skillReason} from './battle.js?v=0.69.0';
 export function bossThreat(b){
  if(!b||b.outcome)return null;const u=b.enemy.filter(u=>u.hp>0&&u.boss).sort((a,c)=>(a.boss.pendingAt||a.boss.readyAt)-(c.boss.pendingAt||c.boss.readyAt))[0];if(!u)return null;
  const special=b.tactics&&b.context.type==='special'&&u===b.enemy[0]?{minechief:['重锤扫阵','护阵减轻直接伤害，或用打断截住。'],marshnest:['全队毒雾','优先打断；中毒后用解毒或净化。'],ruinsvault:['全队治疗','优先打断，或集火头目使其退阵。']}[b.context.route==='warbell'?'ruinsvault':b.context.id]:null;

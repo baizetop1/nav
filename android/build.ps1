@@ -5,6 +5,10 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $project = Split-Path $PSScriptRoot -Parent
+$release = (Get-Content -LiteralPath (Join-Path $project 'public\game\data\config.json') -Raw | ConvertFrom-Json).release
+[xml]$manifest = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'AndroidManifest.xml') -Raw
+$manifestVersion = $manifest.manifest.GetAttribute('versionName','http://schemas.android.com/apk/res/android')
+if ($release -ne $manifestVersion) { throw "游戏版本 $release 与 Android 版本 $manifestVersion 不一致，请先更新 AndroidManifest.xml。" }
 if (!$OutputDir) { $OutputDir = Join-Path $project 'artifacts\android' }
 function Find-Tool([string]$file) {
   $found = Get-ChildItem -LiteralPath $Toolchain -Recurse -File -Filter $file | Select-Object -First 1
@@ -67,7 +71,6 @@ try { Get-ChildItem -LiteralPath $dex -Filter '*.dex' | ForEach-Object { [IO.Com
   }
 } finally { $zip.Dispose() }
 Run $align @('-f','-p','4',$unsigned,$aligned)
-$release = (Get-Content -LiteralPath (Join-Path $project 'public\game\data\config.json') -Raw | ConvertFrom-Json).release
 $apk = Join-Path $OutputDir "baize-shuihu-$release.apk"
 Run $java @('-jar',$signer,'sign','--ks',$keystore,'--ks-key-alias','baize-shuihu','--ks-pass',"file:$password",'--out',$apk,$aligned)
 Run $java @('-jar',$signer,'verify','--verbose',$apk)

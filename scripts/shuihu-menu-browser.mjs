@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
 import {fixture,act,d} from './shuihu-campaign-fixtures.mjs';
+import {validateSave} from '../public/game/js/save.js';
 
 const require=createRequire(import.meta.url);
 const {chromium}=require(process.env.SHUIHU_PLAYWRIGHT_PATH||'playwright');
@@ -18,7 +19,7 @@ function initialState(){
   state.clock=Date.now();
   state.lastRegen=state.clock;
   state.player.stamina=100;
-  for(const item of d.items)state.inventory[item.id]=3;
+  validateSave(state,d);
   return state;
 }
 
@@ -188,8 +189,8 @@ async function checkMenus(width,height){
     assert.equal(await page.evaluate(()=>document.getElementById('main')===window.menuBaseMain),true,'opening menu preserves the underlying DOM');
     assert.deepEqual(await page.locator('#function-menu .function-menu-group').evaluateAll(es=>es.map(e=>e.dataset.menuGroup)),groups);
     const links=await menuLinks(test);
-    assert.equal(links.length,24,'all 24 menu destinations exist');
-    assert.equal(new Set(links.map(link=>[link.view,link.section,link.map].join(':'))).size,24,'menu destinations are distinct');
+    assert.equal(links.length,27,'all 27 menu destinations exist');
+    assert.equal(new Set(links.map(link=>[link.view,link.section,link.map].join(':'))).size,27,'menu destinations are distinct');
     await closeMenu(test);
 
     await checkAppearance(test);
@@ -218,7 +219,7 @@ async function checkMenus(width,height){
 
     for(const link of links)await navigate(test,link);
     assert.deepEqual(test.errors,[]);
-    console.log('Menu PASS '+width+'x'+height+': 24 destinations, four groups, bounded day/night layouts, native modal, Escape/close/backdrop preserve page and input.');
+    console.log('Menu PASS '+width+'x'+height+': 27 destinations, four groups, bounded day/night layouts, native modal, Escape/close/backdrop preserve page and input.');
   }catch(error){
     await screenshot(test,'failure-navigation').catch(()=>{});
     throw error;
@@ -250,7 +251,7 @@ async function checkBattle(width,height){
     const disabled=await page.locator('#function-menu button[data-view]').evaluateAll(buttons=>buttons.map(button=>({
       label:button.textContent.trim(),view:button.dataset.view,map:button.dataset.menuMap||'',disabled:button.disabled
     })));
-    assert.equal(disabled.length,24);
+    assert.equal(disabled.length,27);
     for(const entry of disabled){
       const allowed=entry.view==='save'||entry.view==='chronicle'||(entry.view==='map'&&entry.map==='story');
       assert.equal(entry.disabled,!allowed,entry.label+' battle availability');

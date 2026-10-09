@@ -1,7 +1,7 @@
-import {rollDelveEvents,delveOption,applyDelveHelper} from './delve-events.js?v=0.68.0';
-import {GEAR_TRAITS,PERSONAL_TRAITS} from './tactics-data.js?v=0.68.0';
-import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.68.0';
-import {requireRule,journal} from './utils.js?v=0.68.0';
+import {rollDelveEvents,delveOption,applyDelveHelper} from './delve-events.js?v=0.69.0';
+import {GEAR_TRAITS,PERSONAL_TRAITS} from './tactics-data.js?v=0.69.0';
+import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.69.0';
+import {requireRule,journal} from './utils.js?v=0.69.0';
 export const DELVE_CHOICES={rest:{name:'绕过守卫',text:'歇脚后走原路；在阵好汉恢复 15% 气血，无额外材料。'},rescue:{name:'救下采药人',text:'迎战带蛇的守卫；胜利额外获得药草，当前气血保留。',route:'supplies'},cache:{name:'追查藏货',text:'迎战增援骑兵；胜利额外获得碎铁，当前气血保留。',route:'ambush'}};
 export const adventureState=s=>s.adventure??={version:1,run:null,clears:{},badge:null,feats:{}};
 export function delveGuard(s,a){if(s.adventure?.run)requireRule(['delveChoose','delveLeave','battleTick','battleSkill','battleSkillMode','battleItem','battleOrder','battleRetreat','finishBattle','refresh'].includes(a.type),'这趟探索尚未结束，请先选路或收队。');}

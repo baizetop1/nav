@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {d,fixture,act} from './shuihu-campaign-fixtures.mjs';
 import {advanceBattle} from '../public/game/js/battle.js';
-import {battleOutcomeDialog} from '../public/game/js/battle-outcome-ui.js';
+import {battleOutcomeDialog,settledOutcomeDialog} from '../public/game/js/battle-outcome-ui.js';
 import {rewardDialog} from '../public/game/js/rewards-ui.js';
 export function terminal(outcome='victory'){
  let base=fixture(531,outcome==='defeat'?1:30);if(outcome==='defeat')base.team=['baisheng'];
@@ -25,3 +25,5 @@ assert.match(review,/data-dialog-tab="review"/);assert.match(review,/aria-select
 assert.match(review,/data-dialog-panel="rewards" hidden/);assert.match(review,/data-dialog-panel="review" >review-content/);
 assert.ok(rewardDialog([],esc,{initialTab:'review'}).includes('本次没有新增物品'));
 console.log('Battle outcome PASS: victory/defeat/retreat, read-only presentation, one settlement, review default/fallback.');
+
+const settled=settledOutcomeDialog(terminal().battle,esc);assert.match(settled,/无须领取/);assert.ok(!settled.includes('data-command='));assert.match(settledOutcomeDialog(terminal().battle,esc,false),/尚未写入本机/);

@@ -14,7 +14,7 @@ function paginate(host,key,reset=false){
  host.scrollTop=0;
  const style=getComputedStyle(host),available=host.clientHeight-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom);
  if(host.scrollHeight<=host.clientHeight+1)return;
- const fixed=[...host.children].filter(el=>el.matches('.section-picker,.page-sections,.journey-sections'));
+ const fixed=[...host.children].filter(el=>el.matches('.section-picker,.page-sections,.journey-sections,.onboarding-guide'));
  const first=document.createElement('div'),paper=document.createElement('div'),nav=document.createElement('nav');
  first.className='screen-window';paper.className='screen-paper';nav.className='screen-pager';nav.dataset.screenUi='true';nav.setAttribute('aria-label','内容翻页');nav.innerHTML='<button type="button" data-screen-prev aria-label="上一页">上一页</button><label class="screen-page-jump"><span class="sr-only">跳到第几页</span><input type="number" min="1" aria-label="跳到第几页"><output aria-live="polite"></output></label><button type="button" data-screen-next aria-label="下一页">下一页</button>';
  const nodes=[...host.childNodes].filter(el=>!fixed.includes(el));host.classList.add('screen-paged');first.append(paper);for(const el of nodes)paper.append(el);host.append(first,nav);

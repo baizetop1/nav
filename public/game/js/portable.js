@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.68.0';
-import { parseSave } from './save.js?v=0.68.0';
+import { hasOwn } from './utils.js?v=0.69.0';
+import { parseSave } from './save.js?v=0.69.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -9,6 +9,10 @@ const metrics={version:true,reason:true,heroes:{'*':fields('damage healing taken
 const chronicleJob=fields('kind region chapter choice rank');
 const chronicle={version:true,routes:{'*':fields('choices patrol forged')},active:{...chronicleJob,ready:true}};
 const shape = {
+  exploration:{...fields('version position visited flags buildings visiting activeRegion'),pending:fields('node'),contacts:{'*':fields('cycles earned')},marsh:{...fields('version position visited flags'),pending:fields('node')}},
+  gathering:{version:true,regions:{'*':fields('runs best')}},
+  idleDispatch:{...fields('version revision earned'),bank:{'*':true},mission:fields('region hero lastAt carry')},
+  grainRoad:{...fields('version route scout won attempts investment lastAt'),last:fields('route outcome cargo wounded fallen troops')},
   fieldwork:{version:true,hunts:{'*':fields('runs hits dry')}},
   adventure:{version:true,badge:true,feats:{'*':fields('count best team')},clears:{'*':true},run:{...fields('id tier stage team choices events'),hp:{'*':true}}},
   replays:{version:true,clears:{'*':true},best:{'*':true},challenges:{'*':fields('count best')}},

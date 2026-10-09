@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {fixture,act,win,d} from './shuihu-campaign-fixtures.mjs';
+import {dispatch} from '../public/game/js/core.js';
+import {gameSnapshot} from '../public/game/js/portable.js';
+import {regionTask,regionBuildQuote} from '../public/game/js/exploration.js';
+import {regionHas,REGION_BUILDINGS} from '../public/game/js/exploration-data.js';
+import {explorationPreserved} from '../public/game/js/exploration-save.js';
+import {idleRates,IDLE_CYCLE} from '../public/game/js/idle-data.js';
+import {regionalQuote} from '../public/game/js/gathering.js';
+import {prepareSortie} from '../public/game/js/sortie.js';
+export {d};
+export function base(){let s=fixture(151,40);s.battleSkillMode='auto';s.heroes.tanglong.status='unknown';return s;}
+export const advance=(s,n)=>gameSnapshot(dispatch(d,s,{type:'refresh'},s.clock+n),d);
+export let s=act(base(),'regionOpen');
+assert.throws(()=>act(s,'regionMove',{id:'vein'}),/道路/);assert.throws(()=>act(s,'regionMove',{id:'vault'}),/道路/);
+s=act(s,'regionMove',{id:'rail'});let untouched=JSON.stringify(s);const quote=prepareSortie(s,d,{type:'regionBattle',id:'rail'},undefined,s.clock);assert.equal(quote.reason,'');assert.deepEqual(quote.cost,{stamina:0,food:0});assert.equal(JSON.stringify(s),untouched);
+let pending=act(s,'regionBattle',{id:'rail'});assert.deepEqual(gameSnapshot(pending,d).exploration.pending,{node:'rail'});let withdrawn=act(act(pending,'battleRetreat'),'finishBattle');assert.equal(regionHas(withdrawn,'won_rail'),false);assert.equal(withdrawn.exploration.pending,null);
+s=win(pending);for(let i=0;i<3;i++)s=win(act(s,'regionBattle',{id:'rail'}));s=act(s,'regionMove',{id:'chamber'});assert.throws(()=>act(s,'regionDo',{id:'rescue'}),/守卫/);s=win(act(s,'regionBattle',{id:'chamber'}));s=act(s,'regionDo',{id:'rescue'});assert.throws(()=>act(s,'regionDo',{id:'rescue'}),/办妥/);
+const beforeRate=idleRates('mine','andaoquan',s).magnetite_sand;s=act(s,'regionMove',{id:'vein'});s=act(s,'regionDo',{id:'survey'});assert.equal(idleRates('mine','andaoquan',s).magnetite_sand,beforeRate+1);assert.throws(()=>act(s,'regionDo',{id:'survey'}));
+s=act(s,'regionMove',{id:'furnace'});s=act(s,'regionDo',{id:'meet'});assert.equal(s.heroes.tanglong.status,'known');assert.throws(()=>act(s,'regionDo',{id:'commission'}),/磁铁砂/);
+s=act(s,'idleSend',{region:'mine',hero:'andaoquan'});s=act(s,'regionVisits',{enabled:true});s=advance(s,8*3600000);assert.equal(s.idleDispatch.bank.tanglong_token,2);assert.equal(s.idleDispatch.bank.magnetite_sand,48);const capped=structuredClone(s.idleDispatch.bank);s=advance(s,24*3600000);assert.deepEqual(s.idleDispatch.bank,capped);s=act(s,'idleCollect');assert.equal(s.inventory.tanglong_token,2);assert.equal(s.heroes.tanglong.status,'known');assert.throws(()=>act(s,'idleCollect'));
+s=act(s,'regionDo',{id:'commission'});assert.ok(regionTask(s,'invite'));s=act(s,'regionMove',{id:'vault'});s=win(act(s,'regionBattle',{id:'vault'}));s=act(s,'regionDo',{id:'cache'});assert.equal(s.inventory.strength_charm,1);assert.throws(()=>act(s,'regionDo',{id:'cache'}));s=act(s,'regionMove',{id:'furnace'});const draws=structuredClone(s.recruit);s=act(s,'regionDo',{id:'invite'});assert.equal(s.heroes.tanglong.status,'owned');assert.deepEqual(s.recruit,draws);assert.throws(()=>act(s,'regionDo',{id:'invite'}));
+s=act(s,'regionMove',{id:'entrance'});const coins=s.player.silver,ore=s.inventory.iron||0;s=act(s,'regionTrade');assert.equal(s.player.silver,coins-60);assert.equal(s.inventory.iron,ore+3);assert.throws(()=>act(s,'regionTrade'),/今日/);s=act(s,'regionMove',{id:'furnace'});
+export const questComplete=structuredClone(s);
+for(const [id,b]of Object.entries(REGION_BUILDINGS)){assert.ok(regionBuildQuote(s,id).reason);for(const [k,n]of Object.entries(b.items))s.inventory[k]=n;const old=structuredClone(s);s=act(s,'regionBuild',{id});assert.equal(s.camp.wood,old.camp.wood-b.wood);assert.equal(s.player.silver,old.player.silver-b.silver);for(const k of Object.keys(b.items))assert.equal(s.inventory[k],0);assert.throws(()=>act(s,'regionBuild',{id}));}
+assert.equal(regionalQuote(s,d,'mine').recipe.silver,80);assert.equal(regionalQuote(s,d,'marsh').recipe.items.herb,1);assert.equal(idleRates('mine','andaoquan',s).scrap_iron,3);assert.deepEqual(gameSnapshot(s,d),s);assert.ok(explorationPreserved(questComplete,s));assert.equal(explorationPreserved(s,questComplete),false);
+const kept=structuredClone(s.idleDispatch.bank);s=act(s,'regionVisits',{enabled:false});s=advance(s,IDLE_CYCLE*8);assert.equal(s.idleDispatch.bank.tanglong_token,kept.tanglong_token);s=act(s,'idleRecall');assert.equal(s.idleDispatch.mission,null);
+for(const change of [x=>x.exploration.flags.push('fake'),x=>x.exploration.contacts.mine.cycles=8,x=>x.exploration.flags.splice(x.exploration.flags.indexOf('rescued'),1),x=>x.exploration.pending={node:'rail'},x=>x.exploration.buildings.push('forge')]){const bad=structuredClone(s);change(bad);assert.throws(()=>gameSnapshot(bad,d));}
+console.log('Region PASS: connected routes, persisted position, battle preview/cancel/retreat, rescue, surveyed yield, timed token cap, exact costs, deterministic invitation, single-use rewards, regional upgrades, save validation and preservation.');
+
+// Cadence is independent of refresh frequency; switching routes cannot change bank contents.
+let timed=act(act(act(base(),'regionOpen'),'regionMove',{id:'rail'}),'regionBattle',{id:'rail'});timed=win(timed);timed=act(timed,'idleSend',{region:'mine',hero:'andaoquan'});timed=act(timed,'regionVisits',{enabled:true});const together=advance(timed,8*3600000);let partitioned=timed;for(let n=0;n<16;n++)partitioned=advance(partitioned,IDLE_CYCLE);assert.deepEqual(partitioned.idleDispatch.bank,together.idleDispatch.bank);assert.deepEqual(partitioned.exploration.contacts,together.exploration.contacts);let stopped=act(advance(timed,3*3600000),'regionVisits',{enabled:false});const held=structuredClone(stopped.exploration.contacts);stopped=advance(stopped,8*3600000);assert.deepEqual(stopped.exploration.contacts,held);stopped=act(stopped,'regionVisits',{enabled:true});stopped=advance(stopped,3600000);assert.equal(stopped.idleDispatch.bank.tanglong_token,1);stopped.inventory.tanglong_token=10000000;stopped=act(stopped,'idleRecall');assert.equal(stopped.idleDispatch.bank.tanglong_token,1);assert.equal(stopped.idleDispatch.mission,null);assert.throws(()=>act(stopped,'idleSend',{region:'mine',hero:'andaoquan'}),/暂存/);

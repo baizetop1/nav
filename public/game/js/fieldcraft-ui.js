@@ -1,9 +1,9 @@
-import {recruitPrice} from './realm-buildings.js?v=0.68.0';
-import {economyPanel} from './sortie-economy.js?v=0.68.0';
-import { casualtyQuote, terrainRate, fieldRules, SIGNATURES } from './fieldcraft.js?v=0.68.0';
-import { battleTerrain, TERRAIN_NAMES } from './strategy-data.js?v=0.68.0';
-import { TACTICS } from './camp.js?v=0.68.0';
-import { raidBonus } from './camp-development.js?v=0.68.0';
+import {recruitPrice} from './realm-buildings.js?v=0.69.0';
+import {economyPanel} from './sortie-economy.js?v=0.69.0';
+import { casualtyQuote, terrainRate, fieldRules, SIGNATURES } from './fieldcraft.js?v=0.69.0';
+import { battleTerrain, TERRAIN_NAMES } from './strategy-data.js?v=0.69.0';
+import { TACTICS } from './camp.js?v=0.69.0';
+import { raidBonus } from './camp-development.js?v=0.69.0';
 export function losses(b,options){return casualtyQuote(b,TACTICS[b.expedition?.tactic||'balanced'].loss,raidBonus(b).loss,options);}
 export function retreatForecast(b,s=null){if(!b.expedition?.troops||b.outcome)return '';const q=losses({...b,metrics:{...b.metrics,reason:'manual'}},{outcome:'retreat'});if(s)q.replaceSilver=q.fallen*recruitPrice(s);return '<p class="note retreat-forecast">现在撤退预计：归营 '+q.returned+'、伤兵 '+q.wounded+'、阵亡 '+q.fallen+'。恢复本次兵额需粮草 '+q.recoverFood+'、碎银 '+q.replaceSilver+'；以点击时战况结算。撤退不返还入场消耗。</p>';}
 export function fieldPreview(b,s=null,cost={}){if(!b)return '';const terrain=b.depth?.terrain||battleTerrain(b),n=b.expedition?.troops||0;

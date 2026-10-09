@@ -1,16 +1,16 @@
-import {productionBonus} from './realm-buildings.js?v=0.68.0';
-import { FOCUSES, workFactor } from './operating.js?v=0.68.0';
-import { deployedTroops } from './logistics.js?v=0.68.0';
-import { workerGrowth } from './stewardship.js?v=0.68.0';
-import { productionAction } from './production.js?v=0.68.0';
-import { HERO_SPECIALTIES } from './strategy-data.js?v=0.68.0';
-import { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME } from './frontier-data.js?v=0.68.0';
-import { hasOwn, requireRule, journal } from './utils.js?v=0.68.0';
-import { hasHelper, HELPERS } from './helpers.js?v=0.68.0';
+import {productionBonus} from './realm-buildings.js?v=0.69.0';
+import { FOCUSES, workFactor } from './operating.js?v=0.69.0';
+import { deployedTroops } from './logistics.js?v=0.69.0';
+import { workerGrowth } from './stewardship.js?v=0.69.0';
+import { productionAction } from './production.js?v=0.69.0';
+import { HERO_SPECIALTIES } from './strategy-data.js?v=0.69.0';
+import { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME } from './frontier-data.js?v=0.69.0';
+import { hasOwn, requireRule, journal } from './utils.js?v=0.69.0';
+import { hasHelper, HELPERS } from './helpers.js?v=0.69.0';
 export { POSTS, STATIONS, CYCLE, OFFLINE_CAP, SAFE_TIME };
 export function beginFrontier(s){requireRule(s.camp,'先建立寨子。');requireRule(!s.frontier,'寨务生产已经开办。');s.frontier={version:1,lastAt:s.clock,stations:Object.fromEntries(Object.keys(STATIONS).map(id=>[id,{worker:null,carry:0,bank:0}])),posts:{}};journal(s,'【经营拓土】开办农田、伐木与冶铁生产。半小时为一批，最多累计八小时；据点图已标出各路敌情。');}
 export const personOwned=(s,token)=>typeof token==='string'&&(token.startsWith('hero:')?s.heroes[token.slice(5)]?.status==='owned':token.startsWith('helper:')&&HELPERS.some(h=>'helper:'+h.id===token)&&hasHelper(s,token.slice(7)));
-export const away=(s,id)=>s.realm?.squad?.team.includes(id)||!!s.battle&&!s.battle.guest&&s.battle.team.some(u=>u.id===id);
+export const away=(s,id)=>s.idleDispatch?.mission?.hero===id||s.realm?.squad?.team.includes(id)||!!s.battle&&!s.battle.guest&&s.battle.team.some(u=>u.id===id);
 export const workerActive=(s,token)=>personOwned(s,token)&&(!token.startsWith('hero:')||!away(s,token.slice(5)));
 export function stationedAt(s,token){if(!s.frontier)return null;for(const [id,v] of Object.entries(s.frontier.stations))if(v.worker===token)return STATIONS[id].name;for(const [id,v] of Object.entries(s.frontier.posts))if(v.guard&&'hero:'+v.guard===token)return POSTS[id].name;return null;}
 export function guardReady(s,id){const p=s.frontier?.posts[id],h=s.heroes[p?.guard];return !!p?.guard&&h?.status==='owned'&&!away(s,p.guard)&&h.level>=POSTS[id].level;}

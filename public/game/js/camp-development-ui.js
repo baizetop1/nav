@@ -1,7 +1,7 @@
-import { stewardshipBonus } from './stewardship.js?v=0.68.0';
-import { experienceToNext } from './progression.js?v=0.68.0';
-import { helperSummary } from './helpers-ui.js?v=0.68.0';
-import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.68.0';
+import { stewardshipBonus } from './stewardship.js?v=0.69.0';
+import { experienceToNext } from './progression.js?v=0.69.0';
+import { helperSummary } from './helpers-ui.js?v=0.69.0';
+import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.69.0';
 const resource={wood:'木材',food:'粮草',silver:'碎银'};
 const quality={1:'凡品',2:'良品',3:'珍品'};
 export function goalBoard(s,d,btn){
@@ -11,7 +11,7 @@ export function goalBoard(s,d,btn){
 }
 export function dutyBoard(s,d,btn,portrait){
   const id=steward(s),h=id&&d.by.heroes[id];
-  return `<section class="camp-duties"><h2>今日寨务</h2>${helperSummary(s)}<div class="steward-strip">${h?portrait(h,true):''}<div><b>${h?h.name+'主持寨务':'乡人各自操持'}</b><p class="note">${h?resource[stewardship(id)]+'产出 +'+stewardshipBonus(s,id)+'% · 每次经营本人获得 25 历练':'可在好汉页委派一位主事，增加其擅长物资的产出。'}</p></div><button class="text-action" data-view="heroes">${h?'更换主事':'委派好汉'}</button></div><div class="duty-grid">${Object.entries(DUTIES).map(([mode,m])=>{const q=dutyQuote(s,mode);return `<article class="duty-card"><h3>${m.name}</h3><p class="note">${m.description}</p><p class="duty-yield">${Object.entries(q).map(([key,n])=>`<span>${resource[key]} <b>+${n}</b></span>`).join('')}</p>${btn('安排寨务 · 5 体力',{type:'campWork',id:mode},'secondary',s.player.stamina<5)}</article>`;}).join('')}</div><p class="note">任选一项经营一日，以上为本次实际产出。经营日不加速体力恢复；主事仍可随队出征。</p></section>`;
+  return `<section class="camp-duties"><h2>采集物资</h2><p class="note">每次 5 体力，立即获得下列物资。</p><details data-fold="gather-steward"><summary>主事与增产</summary>${helperSummary(s)}<div class="steward-strip">${h?portrait(h,true):''}<div><b>${h?h.name+'主持寨务':'乡人各自操持'}</b><p class="note">${h?resource[stewardship(id)]+'产出 +'+stewardshipBonus(s,id)+'% · 每次经营本人获得 25 历练':'可在好汉页委派一位主事，增加其擅长物资的产出。'}</p></div><button class="text-action" data-view="heroes">${h?'更换主事':'委派好汉'}</button></div></details><div class="duty-grid">${Object.entries(DUTIES).map(([mode,m])=>{const q=dutyQuote(s,mode);return `<article class="duty-card"><h3>${m.name}</h3><p class="note">${m.description}</p><p class="duty-yield">${Object.entries(q).map(([key,n])=>`<span>${resource[key]} <b>+${n}</b></span>`).join('')}</p>${btn(m.name+' · 5 体力',{type:'campWork',id:mode},'secondary',s.player.stamina<5)}</article>`;}).join('')}</div><p class="note">任选一项经营一日，以上为本次实际产出。经营日不加速体力恢复；主事仍可随队出征。</p></section>`;
 }
 export function heroStewardCard(s,d,h,btn){
   if(!s.camp||s.heroes[h.id].status!=='owned')return '';

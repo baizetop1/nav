@@ -35,7 +35,7 @@ public final class MainActivity extends Activity {
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         web = new WebView(this);
-        web.setBackgroundColor(Color.rgb(19,28,27));
+        web.setBackgroundColor(Color.rgb(238,246,243));
         web.setSaveEnabled(false); // IndexedDB is the source of truth, never a restored network page.
         FrameLayout frame = new FrameLayout(this);
         frame.addView(web,new FrameLayout.LayoutParams(-1,-1));

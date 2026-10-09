@@ -1,11 +1,11 @@
-import {HERO_ROLES} from './hero-roles.js?v=0.68.0';
-import { promotionPreview } from './growth-preview.js?v=0.68.0';
-import { deployedTroops } from './logistics.js?v=0.68.0';
-import { isExternal, isWanderer, externalInvitation, canonicalHeroes } from './roster.js?v=0.68.0';
-import { qualityTechnique } from './development-ui.js?v=0.68.0';
-import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.68.0';
-import { portrait } from './camp-ui.js?v=0.68.0';
-import { dungeonEntry } from './map.js?v=0.68.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.69.0';
+import { promotionPreview } from './growth-preview.js?v=0.69.0';
+import { deployedTroops } from './logistics.js?v=0.69.0';
+import { isExternal, isWanderer, externalInvitation, canonicalHeroes } from './roster.js?v=0.69.0';
+import { qualityTechnique } from './development-ui.js?v=0.69.0';
+import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.69.0';
+import { portrait } from './camp-ui.js?v=0.69.0';
+import { dungeonEntry } from './map.js?v=0.69.0';
 
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 const statuses={unknown:'未闻',heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'};
@@ -20,11 +20,12 @@ export function qualityPanel(s,d,h,esc,btn){
   return `<section class="quality-panel quality-${current}"><div class="quality-steps">${QUALITIES.map((v,i)=>`<span class="${i<=current?'quality-reached':''}">${v.name}</span>`).join('<i>→</i>')}</div><p>当前${QUALITIES[current].name}品 · ${current?`气血、攻击、防御、谋略较凡品 +${Math.round((QUALITIES[current].power-1)*100)}%，速度 +${Math.round((QUALITIES[current].speed-1)*100)}%。`:'保留这位好汉原有的战斗本领。'}</p>${qualityTechnique(h)}${promotionPreview(s,d,h.id)}${next?`<p class="note">升至${next.name}品：人物 ${next.level}级 · 聚义厅 ${next.hall}级 · 碎银 ${q.cost.silver} · ${Object.entries(q.cost.items).map(([id,n])=>`${d.by.items[id].name} ${s.inventory[id]||0}/${n}`).join(' · ')}</p><p class="note">${esc(q.reason||'条件已满足，升品必成。')} 等级、经验、招式、装备与坐骑继承。</p>${btn('升至'+next.name+'品',{type:'heroPromote',id:h.id},'primary',!!q.reason)}${btn('追踪升品材料',{type:'goalSet',kind:'promotion',id:h.id},'secondary',!!(s.battle||s.scheme||s.event))}`:'<p class="note">已达仙品，可继续精进招式、装备与坐骑。</p>'}</section>`;
 }
 export function invitation(s,h,btn){
+ const region=h.id==='tanglong'?'<p class="note">也可在旧矿洞结识汤隆，修炉、取回工具后邀请入寨。</p>'+btn('前往旧矿洞',{type:'ui_regionOpen',region:'mine'},'secondary'):h.id==='andaoquan'?'<p class="note">也可在芦苇泽结识安道全，救治药农、整修药圃并取回药箱后邀请入寨。</p>'+btn('前往芦苇泽',{type:'ui_regionOpen',region:'marsh'},'secondary'):'';
   if(s.heroes[h.id].status==='owned')return '';
   if(isWanderer(h)){const q=externalInvitation(s,h);return `<section class="hero-invitation"><p class="note">江湖散人：普通招贤首次抽中即入寨，无须预先相识。也可直接迎贤：聚义厅 1 级，经营与胜利出征合计 ${h.star} 次，碎银 ${q.cost.silver}。</p>${btn('迎入寨中',{type:'campInvite',id:h.id},'primary',!!q.reason)}<p class="note">${q.reason||'可直接邀请入寨'}</p></section>`;}
   if(isExternal(h)){const q=externalInvitation(s,h);return `<section class="hero-invitation"><p class="note">外传邀请：完成委托，聚义厅 ${h.obtain.hall}级 · ${h.name}信物 ${s.inventory[h.obtain.token]||0}/${h.obtain.count} · 碎银 ${h.obtain.silver}。交付后必定入寨，不参与普通或专属招贤抽取。</p><p class="note">${q.reason||'条件已满足，可正式相邀。'}</p>${btn('交付信物，邀请'+h.name,{type:'campInvite',id:h.id},'primary',!!q.reason)}</section>`;}
   const c=s.camp,level=Math.max(1,h.star-2),silver=h.star*120;
-  return `<section class="hero-invitation"><p class="note">直接迎贤：聚义厅 ${level}级 · 经营与胜利出征合计 ${h.star} 次 · 碎银 ${silver}。入寨时为凡品。</p>${btn('迎入寨中',{type:'campInvite',id:h.id},'primary',!c||c.buildings.hall<level||c.work+c.sorties<h.star||s.player.silver<silver)}</section>`;
+  return region+`<section class="hero-invitation"><p class="note">直接迎贤：聚义厅 ${level}级 · 经营与胜利出征合计 ${h.star} 次 · 碎银 ${silver}。入寨时为凡品。</p>${btn('迎入寨中',{type:'campInvite',id:h.id},'primary',!c||c.buildings.hall<level||c.work+c.sorties<h.star||s.player.silver<silver)}</section>`;
 }
 export function qualityTrials(s,d,btn){
   return `<details class="fold-section" data-fold="quality-trials"><summary>升品试炼 · 灵蕴 ${s.inventory.spirit_essence||0} · 登仙印 ${s.inventory.immortal_seal||0}</summary><p class="note">可从这里直接出征；使用寨子中的带兵、独行与军令配置。凡升灵需灵蕴 6；灵升仙需灵蕴 18、登仙印 6。仅胜利结算获得材料，每处每日 3 次。</p><div class="grid-two">${['spirit_trial','immortal_trial'].map(id=>{const x=d.by.dungeons[id],r=d.by.rewards[x.reward],hall=1+Math.floor(x.level/10),c=s.camp,n=deployedTroops(s);return `<article class="card"><h3>${x.name}</h3><p>${x.description}</p><p class="note">聚义厅 ${hall}级 · 队中一人 ${x.level}级 · 体力 ${x.cost}${c?.mode==='army'?' · 粮草 '+Math.ceil(n/2):''} · 今日 ${s.daily.dungeons[id]||0}/3</p><p class="note">敌军：${x.enemy.map(e=>d.by.enemies[e].name).join('、')}。${c?.mode==='army'?n+' 名乡勇随行':'英雄独行'}。</p><p class="meta">胜利所得：${Object.entries(r.guaranteed).map(([k,v])=>d.by.items[k].name+' ×'+v).join(' · ')} · 碎银 ${r.silver} · 威望 ${r.prestige} · 功勋 ${r.merit} · 每位出阵英雄历练 ${r.exp}</p>${btn('挑战'+x.name,{type:'dungeon',id},'secondary',!dungeonEntry(s,x)||!s.team.length||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||s.player.stamina<x.cost||(s.daily.dungeons[id]||0)>=3||(c?.mode==='army'&&(!n||c.food<Math.ceil(n/2))))}</article>`;}).join('')}</div></details>`;
