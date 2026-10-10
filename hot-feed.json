@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-09T20:56:45.964Z",
+  "generatedAt": "2026-10-10T00:52:38.327Z",
   "intelligence": {
-    "updatedAt": "2026-10-09T20:56:45.964Z",
+    "updatedAt": "2026-10-10T00:52:38.327Z",
     "items": [
       {
-        "id": "cn-item-ad0b3d98144a0e52",
+        "id": "cn-item-ebf6990f8006e456",
         "category": "cn",
-        "title": "中国选手郑钦文重返中网女单四强",
-        "url": "https://www.chinanews.com.cn/ty/2026/10-09/10709918.shtml",
+        "title": "北方大部地区将有冷空气活动 四川陕西局地有大雨或暴雨",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-10/10709993.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-09T14:00:51.000Z",
-        "summary": "中新社北京10月9日电 (记者 国璇)9日在北京国家网球中心进行的2026中国网球公开赛女子单打四分之一决赛中，持外卡出战的中国选手郑钦文直落两盘淘汰赛会6号种子、乌克兰名将斯维托丽娜，时隔两年再次晋级中网女单半决赛。这也是郑钦文24岁生日后收获的首场胜利。",
+        "publishedAt": "2026-10-10T00:29:04.000Z",
+        "summary": "中新网10月10日电 据中央气象台网站消息，未来三天，新疆北部、青藏高原有雨雪天气，西北地区东部至华北西部等地有降雨，关注对旅游、交通等的影响，防范次生灾害。11日起，冷空气将影响北方地区，关注大风降温对交通出行、农业生产、人体健康等的影响。",
         "badge": "中新网要闻"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-09T13:03:48.000Z",
         "badge": "HN",
-        "signal": "905 分 · 488 评论"
+        "signal": "1050 分 · 546 评论"
       },
       {
-        "id": "cn-it-9d0ac54df13ca0cb",
+        "id": "cn-it-549f3a549921a517",
         "category": "cn",
-        "title": "东风猛士・猛 8 越野旅居车亮相：6.7L 电控增压柴油发动机，生活系统一应俱全",
-        "url": "https://www.ithome.com/1/011/156.htm",
+        "title": "比亚迪第 15 万辆新能源商用车下线，新能源客车连续三年获年度出口冠军",
+        "url": "https://www.ithome.com/1/011/186.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-09T15:47:12.000Z",
-        "summary": "IT之家 10 月 9 日消息，东风汽车今日宣布全新东风猛士・猛 8 越野旅居车在第 21 届阿拉善英雄会亮相并正式开启全球预订。 IT之家从官方介绍获悉，猛 8 采用东风猛士 MS600 单排军车平台技术， 把三代猛士军车积累的硬实力落地到民用旅居车上。该车搭载 6.7L 电控增压柴油发动机，峰值扭矩 1050N・m， 搭配全时四驱系统 和双横臂独立悬架， 可攀爬 31° 陡坡（约是普通小区地下车库坡道的 3 倍），能跨越 0.7 米宽的壕沟，从容应对 28° 内的车身侧…",
+        "publishedAt": "2026-10-10T00:46:21.000Z",
+        "summary": "IT之家 10 月 10 日消息，比亚迪商用车宣布，10 月 9 日， 比亚迪第 15 万辆新能源商用车 ——Q3 纯电动牵引车，在淮安比亚迪卡车智慧工厂正式下线。 官方表示，比亚迪 Q3 纯电动牵引车依托自研三电技术，搭载商用车专用刀片电池，电机峰值功率达 600kW，支持双枪快充，为重载运输提供强劲动力与快速补能支持。 IT之家获悉，比亚迪商用车已进入全球 70 多个国家和地区， 新能源客车连续三年斩获年度出口冠军 。 延伸阅读 Q3 是比亚迪于 2025 年 4 月 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-628f-v4f6-p37r",
+        "id": "github-advisory-ghsa-m687-p538-r5hp",
         "category": "security",
-        "title": "Contao: Cross-site scripting in the comments bundle",
-        "url": "https://github.com/advisories/GHSA-628f-v4f6-p37r",
+        "title": "Vikunja: Permissive Cross-domain Security Policy trusts every localhost origin which should not be trusted",
+        "url": "https://github.com/advisories/GHSA-m687-p538-r5hp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:53:50.000Z",
-        "summary": "An unauthenticated front end visitor can post a comment containing a XSS injection. The victim is any back end user who opens the Comments module, and moderation makes exposure certain rather than preventing it. No `Content-Security-Policy…",
-        "badge": "CVE-2026-107845",
-        "signal": "CRITICAL · CVSS 9.3"
+        "publishedAt": "2026-10-09T20:57:50.000Z",
+        "summary": "## Summary Vikunja ships with `cors.origins` defaulting to `http://127.0.0.1:*` and `http://localhost:*`, and sends `Access-Control-Allow-Credentials: true`, so a page served from any port on the user's own machine may make credentialed cr…",
+        "badge": "GHSA-M687-P538-R5HP",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-c11a83f73b42d756",
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247490",
+        "id": "v2ex-1247494",
         "category": "dev",
-        "title": "AI 现在强大到什么地步？",
-        "url": "https://www.v2ex.com/t/1247490",
+        "title": "刚刷到个黑客松，给开源 CLI 修 bug 就能拿钱",
+        "url": "https://www.v2ex.com/t/1247494",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T18:14:20.000Z",
-        "summary": "尝试重构了某大型 MMORPG 的客户端和服务端，目前 80-110 的服务端基本重构了,120 和 130 还没进去游戏 手上有 80/90 的脚本，缺少 95 以后的服务端脚本 客户端 KGUI 和引擎重写 https://github.com/user-attachments/assets/35e63d24-9d62-487d-821d-bc6e27252999",
+        "publishedAt": "2026-10-09T22:05:17.000Z",
+        "summary": "不知道站里有没有喜欢打黑客松的友友，刚刷到一个奖励还不错的线上黑客松，分享一下。 一个玩法是 7 天内把他们的测试接到自己的 GitHub 仓库，让每个 PR 都自动跑一遍。比较友好的一点是拿以前做过的项目参加也行，不用为了比赛硬憋一个新的出来。项目奖一共 3000 刀，前 5 名都有。 另一个玩法我觉得可能更香。他们的 CLI 部分是开源的，比赛期间给它修 bug 或者做点内容，如果 PR 被 merge 就能分钱，每个至少 50 刀，然后这个池子总共 1000 刀。不用…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-8adf3ddbaa02e63b",
+        "id": "cn-baidu-49196579c40a7f4d",
         "category": "cn",
-        "title": "宋佳集齐三大奖",
-        "url": "https://www.baidu.com/s?wd=%E5%AE%8B%E4%BD%B3%E9%9B%86%E9%BD%90%E4%B8%89%E5%A4%A7%E5%A5%96&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "巴拿马7.6级强震",
+        "url": "https://www.baidu.com/s?wd=%E5%B7%B4%E6%8B%BF%E9%A9%AC7.6%E7%BA%A7%E5%BC%BA%E9%9C%87&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月9日，第35届电视剧“飞天奖”颁奖典礼在山东烟台举行。宋佳凭借《山花烂漫时》获得优秀女演员奖。至此，宋佳成为内娱首位凭同一部剧集齐三大奖“一串三”的女演员。此前，宋佳已凭《山花烂漫时》中对张桂梅校长的出色演绎，拿下白玉兰与金鹰两座最佳女主角奖杯。",
+        "summary": "据中国地震台网正式测定，北京时间10月10日01时56分，巴拿马（北纬7.50度，西经80.65度）发生7.6级地震，震源深度10千米。首都巴拿马城震感强烈。地震后不久，该国又发生多次5级余震。官方尚未发布人员伤亡和财产损失报告。",
         "badge": "热搜",
-        "signal": "7,808,550 热度"
+        "signal": "7,808,281 热度"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -117,35 +117,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50025935",
+        "id": "hn-50022292",
         "category": "dev",
-        "title": "No Man Is an Island",
-        "url": "https://borretti.me/article/no-man-is-an-island",
+        "title": "Triple-A Minesweeper",
+        "url": "https://minesweeper.mikelacher.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T20:04:00.000Z",
+        "publishedAt": "2026-10-09T15:51:05.000Z",
         "badge": "HN",
-        "signal": "69 分 · 24 评论"
+        "signal": "603 分 · 111 评论"
       },
       {
-        "id": "cn-item-377d5aef5d32301d",
+        "id": "cn-item-ad0b3d98144a0e52",
         "category": "cn",
-        "title": "外交部驻港公署发言人：人口贩运的“锅”香港不背",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-09/10709923.shtml",
+        "title": "中国选手郑钦文重返中网女单四强",
+        "url": "https://www.chinanews.com.cn/ty/2026/10-09/10709918.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-09T13:55:30.000Z",
-        "summary": "中新网10月9日电 据“外交部驻香港特派员公署”微信公众号消息，针对美国国务院发布所谓《2026年人口贩运报告》，罔顾事实，恶意诋毁香港特区打击人口贩运的努力和成效，歪曲抹黑香港国安法和《维护国家安全条例》，外交部驻港公署发言人表示强烈不满和坚决反对。",
+        "publishedAt": "2026-10-09T14:00:51.000Z",
+        "summary": "中新社北京10月9日电 (记者 国璇)9日在北京国家网球中心进行的2026中国网球公开赛女子单打四分之一决赛中，持外卡出战的中国选手郑钦文直落两盘淘汰赛会6号种子、乌克兰名将斯维托丽娜，时隔两年再次晋级中网女单半决赛。这也是郑钦文24岁生日后收获的首场胜利。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-wq92-8x3r-fm38",
+        "id": "github-advisory-ghsa-j3hg-9rp3-5hw9",
         "category": "security",
-        "title": "Vikunja: Planka migration retains an unbounded aggregate of attacker-served attachments and can OOM the API",
-        "url": "https://github.com/advisories/GHSA-wq92-8x3r-fm38",
+        "title": "Nginx UI: Unauthenticated signed-request body staging can exhaust temporary storage",
+        "url": "https://github.com/advisories/GHSA-j3hg-9rp3-5hw9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:53:24.000Z",
-        "summary": "# Planka migration retains an unbounded aggregate of attacker-served attachments and can OOM the API ## Summary The always-registered Planka migration lets any ordinary user select a Planka server. Although Vikunja caps each JSON response,…",
-        "badge": "CVE-2026-91970",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-09T20:57:08.000Z",
+        "summary": "## Summary In Nginx UI versions 2.5.0 through 2.5.x, the node-signature authentication path staged an attacker-controlled request body in a temporary file and synchronized it to disk before validating the body digest and cryptographic sign…",
+        "badge": "CVE-2026-107805",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-9bf93d58cc35db99",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247476",
+        "id": "v2ex-1247490",
         "category": "dev",
-        "title": "XXL-JOB v3.5.0 发布｜ OpenAPI 增强、动态 AccessToken、性能及安全性升级",
-        "url": "https://www.v2ex.com/t/1247476",
+        "title": "AI 现在强大到什么地步？",
+        "url": "https://www.v2ex.com/t/1247490",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T15:32:15.000Z",
-        "summary": "Release Notes 1 、 [新增] OpenAPI 能力增强：提供任务管理能力，包括任务新建/更新/删除、启动/停止、任务触发等； （注意：任务管理 OpenAPI 及操作代码示例，详见官方文档） 2 、 [新增] GLUE 模式开关：新增 GLUE 模式开关（ xxl.job.executor.glueenabled ），支持执行器维度设置是否启用 GLUE 模式； 3 、 [新增] AccessToken 升级：支持执行期维度隔离设置，废弃旧的全局 Acces…",
+        "publishedAt": "2026-10-09T18:14:20.000Z",
+        "summary": "尝试重构了某大型 MMORPG 的客户端和服务端，目前 80-110 的服务端基本重构了,120 和 130 还没进去游戏 手上有 80/90 的脚本，缺少 95 以后的服务端脚本 客户端 KGUI 和引擎重写 https://github.com/user-attachments/assets/35e63d24-9d62-487d-821d-bc6e27252999",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-91ed28f47fbd0b01",
+        "id": "cn-it-c20c711ac6f7f1f4",
         "category": "cn",
-        "title": "华为鸿蒙星河互联 App 登陆 Apple Watch 端，可与 HarmonyOS 7.0.0.109 及以上版本手机配对连接",
-        "url": "https://www.ithome.com/1/011/155.htm",
+        "title": "索尼直播互动专利公示：观众可光标指导、搭桥、操纵游戏物体等",
+        "url": "https://www.ithome.com/1/011/185.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-09T15:45:55.000Z",
-        "summary": "IT之家 10 月 9 日消息，苹果 App Store Watch 专区显示，鸿蒙星河互联 App 已正式登陆 Apple Watch 端。 应用介绍页显示， 其支持 Apple Watch 与 HarmonyOS 7.0.0.109 及以上版本华为手机配对连接 ，用户可体验信息流转、查找设备等功能。 参考IT之家此前报道，在 9 月 7 日的 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会上，华为终端 BG CEO 何刚宣布，华为鸿蒙星…",
+        "publishedAt": "2026-10-10T00:40:24.000Z",
+        "summary": "IT之家 10 月 10 日消息，科技媒体 insider-gaming 昨日（10 月 9 日）发布博文，报道称索尼公司获批一项新专利， 描述了游戏互动系统，观众可以直接影响主播游戏环境，涵盖光标引导、临时搭桥及物体操纵等。 该专利名为《游戏过程中的自适应屏幕共享指针和反应》，编号为 US-12752199-B2，于 2023 年 10 月提交申请，并于 2026 年 10 月 6 日获批公示。 根据专利描述，观众可在主播游戏画面上移动光标，其外观可以随游戏变化。在专利示…",
         "badge": "IT之家"
       },
       {
@@ -199,34 +199,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50022292",
+        "id": "hn-50024499",
         "category": "dev",
-        "title": "Triple-A Minesweeper",
-        "url": "https://minesweeper.mikelacher.com/",
+        "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
+        "url": "https://carrierexplode.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T15:51:05.000Z",
+        "publishedAt": "2026-10-09T18:10:55.000Z",
         "badge": "HN",
-        "signal": "311 分 · 69 评论"
+        "signal": "207 分 · 18 评论"
       },
       {
-        "id": "cn-baidu-545ac8df448555f4",
+        "id": "cn-baidu-f8238d5ad62e391f",
         "category": "cn",
-        "title": "飞天奖获奖名单",
-        "url": "https://www.baidu.com/s?wd=%E9%A3%9E%E5%A4%A9%E5%A5%96%E8%8E%B7%E5%A5%96%E5%90%8D%E5%8D%95&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "爆发！中国资产大涨",
+        "url": "https://www.baidu.com/s?wd=%E7%88%86%E5%8F%91%EF%BC%81%E4%B8%AD%E5%9B%BD%E8%B5%84%E4%BA%A7%E5%A4%A7%E6%B6%A8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "10月9日，美股收盘三大指数集体收涨，大型科技股多数走高，亚马逊涨幅超3%；光通信板块表现亮眼，Lumentum涨超5%。中国资产大涨，理想汽车、阿里巴巴涨超5%，原油与贵金属同步上行，市场整体氛围向好。",
         "badge": "热搜",
-        "signal": "7,713,823 热度"
+        "signal": "7,714,227 热度"
       },
       {
-        "id": "github-advisory-ghsa-pqf9-h8g4-8gmh",
+        "id": "github-advisory-ghsa-pwhx-cvv3-qj5c",
         "category": "security",
-        "title": "Vikunja: Unbounded CSV row cardinality permits API process termination",
-        "url": "https://github.com/advisories/GHSA-pqf9-h8g4-8gmh",
+        "title": "Tina: Code injection via unescaped Git branch name in generated client source",
+        "url": "https://github.com/advisories/GHSA-pwhx-cvv3-qj5c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:53:14.000Z",
-        "summary": "# Unbounded CSV row cardinality permits API process termination ## Summary The authenticated v2 CSV migration route caps upload bytes but not parsed row cardinality. It reads every record into a [][]string and then materializes a full task…",
-        "badge": "CVE-2026-91969",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-09T20:56:52.000Z",
+        "summary": "### Summary `@tinacms/cli` inserts the raw Git branch value into the generated `client.ts` source without escaping or encoding. A Git-valid branch name can close the string literal and inject an arbitrary JavaScript expression that execute…",
+        "badge": "CVE-2026-108259",
+        "signal": "HIGH · CVSS 8.2"
       },
       {
         "id": "ai-hugging-face-ffd2818196374b7e",
@@ -238,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247475",
+        "id": "v2ex-1247476",
         "category": "dev",
-        "title": "Google Play 上架被封闭测试卡住？我们在坦桑尼亚已经走通了",
-        "url": "https://www.v2ex.com/t/1247475",
+        "title": "XXL-JOB v3.5.0 发布｜ OpenAPI 增强、动态 AccessToken、性能及安全性升级",
+        "url": "https://www.v2ex.com/t/1247476",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T15:14:46.000Z",
-        "summary": "看到有人说，App 开发完了，却被 Google Play 的 12 人 × 14 天封闭测试卡住，最后只能先发 APKPure 。 我们在坦桑尼亚做招聘 App Jobsoko ，已经成功上架 Google Play 。 Google Play： https://play.google.com/store/apps/details?id=com.jobsoko.app 官网： https://jobsoko.co.tz/ 如果你本身有真实的海外公司主体，申请企业开发者账号…",
+        "publishedAt": "2026-10-09T15:32:15.000Z",
+        "summary": "Release Notes 1 、 [新增] OpenAPI 能力增强：提供任务管理能力，包括任务新建/更新/删除、启动/停止、任务触发等； （注意：任务管理 OpenAPI 及操作代码示例，详见官方文档） 2 、 [新增] GLUE 模式开关：新增 GLUE 模式开关（ xxl.job.executor.glueenabled ），支持执行器维度设置是否启用 GLUE 模式； 3 、 [新增] AccessToken 升级：支持执行期维度隔离设置，废弃旧的全局 Acces…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-item-7005ba6e3d9773dd",
+        "id": "cn-item-377d5aef5d32301d",
         "category": "cn",
-        "title": "王毅会见太平洋岛国政治家联合考察团",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-09/10709769.shtml",
+        "title": "外交部驻港公署发言人：人口贩运的“锅”香港不背",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-09/10709923.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-09T09:57:42.000Z",
-        "summary": "中新社北京10月9日电 10月9日，中共中央政治局委员、中央外办主任王毅在北京会见以汤加副首相拉图为团长的太平洋岛国政治家联合考察团。",
+        "publishedAt": "2026-10-09T13:55:30.000Z",
+        "summary": "中新网10月9日电 据“外交部驻香港特派员公署”微信公众号消息，针对美国国务院发布所谓《2026年人口贩运报告》，罔顾事实，恶意诋毁香港特区打击人口贩运的努力和成效，歪曲抹黑香港国安法和《维护国家安全条例》，外交部驻港公署发言人表示强烈不满和坚决反对。",
         "badge": "中新网要闻"
       },
       {
@@ -280,35 +281,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50024499",
+        "id": "hn-50020014",
         "category": "dev",
-        "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
-        "url": "https://carrierexplode.com/",
+        "title": "Our $445M Series D",
+        "url": "https://oxide.computer/blog/our-445m-series-d",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T18:10:55.000Z",
+        "publishedAt": "2026-10-09T13:12:47.000Z",
         "badge": "HN",
-        "signal": "111 分 · 13 评论"
+        "signal": "581 分 · 256 评论"
       },
       {
-        "id": "cn-it-7813b9082766caad",
+        "id": "cn-it-5f55653d77a9804d",
         "category": "cn",
-        "title": "漫威新剧《幻视任务》首曝中字片段：奥创以人类形态回归，10 月 14 日 Disney+ 开播",
-        "url": "https://www.ithome.com/1/011/154.htm",
+        "title": "消息称 OpenAI、Anthropic 高管私下推演 AI 灾难情景，以应对公众反弹与政治抵制",
+        "url": "https://www.ithome.com/1/011/183.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-09T15:38:09.000Z",
-        "summary": "IT之家 10 月 9 日消息，漫威新剧《幻视任务》今日首曝两段中字片段。本剧也是《旺达幻视》三部曲的终章， 将于今年 10 月 14 日在 Disney+ 开播 。 据介绍，《幻视任务》是继《旺达幻视》《女巫阿加莎》后 MCU 衍生剧系列三部曲的最后一部，将讲述幻视试图恢复记忆和人性的故事。 IT之家查询获悉，保罗 · 贝坦尼 / 詹姆斯 · 斯派德 / 埃米丽 · 汉普希尔 / 托德 · 斯塔什维克 / 法兰 · 塔希尔将出任主演。 其中，保罗 · 贝坦尼继续出演幻视，…",
+        "publishedAt": "2026-10-10T00:32:24.000Z",
+        "summary": "IT之家 10 月 10 日消息，据 Axios 于当地时间 10 月 9 日报道，Anthropic、OpenAI 以及其他人工智能公司的高管们，目前正私下闭门推演，若发生重大灾难性 AI 事件，该如何应对公众与政界的强烈抗议及抵制浪潮。 这些业内高管预计，未来很可能发生一场大规模事件 —— 极有可能是某种网络攻击，导致金融服务、互联网通信甚至水电供应等基础设施大面积瘫痪。 一旦非安全可控的 AI 首次在现实世界中造成实质性重大危害，本就心存戒备的公众将更加坚决地反对这项…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-xxc3-xpmc-vmvr",
+        "id": "github-advisory-ghsa-x34j-47hf-4xg7",
         "category": "security",
-        "title": "Vikunja: Unbounded nested task-filter recursion permits API process termination",
-        "url": "https://github.com/advisories/GHSA-xxc3-xpmc-vmvr",
+        "title": "TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment",
+        "url": "https://github.com/advisories/GHSA-x34j-47hf-4xg7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:53:03.000Z",
-        "summary": "# Unbounded nested task-filter recursion permits API process termination ## Summary Authenticated task-list routes accept a filter expression without a length or nesting-depth bound, preprocess it, parse it recursively through fexpr, and r…",
-        "badge": "CVE-2026-91968",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-09T20:56:48.000Z",
+        "summary": "### Summary The TinaCMS admin builds its preview ` ` from the `/~/*` hash-router splat without checking that the value stays same-origin. A fragment with a doubled slash (`#/~//attacker.example/p`) becomes the protocol-relative URL `//atta…",
+        "badge": "CVE-2026-108261",
+        "signal": "CRITICAL · CVSS 9.3"
       },
       {
         "id": "ai-google-deepmind-c696e8b1f3422473",
@@ -321,13 +322,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247474",
+        "id": "v2ex-1247475",
         "category": "dev",
-        "title": "译文： pstack 作者 poteto 分享《上个月我送出了 1000 个 PR》",
-        "url": "https://www.v2ex.com/t/1247474",
+        "title": "Google Play 上架被封闭测试卡住？我们在坦桑尼亚已经走通了",
+        "url": "https://www.v2ex.com/t/1247475",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T14:53:11.000Z",
-        "summary": "poteto （@poteto ） 8 月的帖子《上个月我送出了 1000 个 PR 》，说这些 PR 全靠 cloud agent ，列了几条做法： 1 、用自己的 skill 集 pstack 做严谨工程和验证（内部叫 /lauren-mode ，pstack 里叫 /poteto-mode ） 用 Grok Bot 跑例行任务收集上下文：Slack 上的 bug 报告、X 上的用户抱怨、新功能点子 2 、、用 pstack 的 /goal 、/loop 、/swarm…",
+        "publishedAt": "2026-10-09T15:14:46.000Z",
+        "summary": "看到有人说，App 开发完了，却被 Google Play 的 12 人 × 14 天封闭测试卡住，最后只能先发 APKPure 。 我们在坦桑尼亚做招聘 App Jobsoko ，已经成功上架 Google Play 。 Google Play： https://play.google.com/store/apps/details?id=com.jobsoko.app 官网： https://jobsoko.co.tz/ 如果你本身有真实的海外公司主体，申请企业开发者账号…",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -339,7 +340,7 @@
         "source": "百度热搜",
         "summary": "我国城市地下管网普遍“年龄大、欠账多”，大量管道铺设于20世纪80、90年代，存在材质老化、腐蚀严重等问题，小区管网跑冒滴漏、淤堵破损等“带病运行”情况也比较常见。管网老旧会带来燃气泄漏、供水污染、城市内涝等风险。",
         "badge": "热搜",
-        "signal": "7,616,559 热度"
+        "signal": "7,616,615 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -362,35 +363,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50020014",
+        "id": "hn-50027167",
         "category": "dev",
-        "title": "Our $445M Series D",
-        "url": "https://oxide.computer/blog/our-445m-series-d",
+        "title": "Japan's Most Famous Tuna Buyer Says He Turned Somali Pirates into Fishermen",
+        "url": "https://www.japaninsides.com/the-sushi-king-who-went-to-somalia-how-japans-most-famous-tuna-buyer-says-he-turned-pirates-into-fishermen-55344",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T13:12:47.000Z",
+        "publishedAt": "2026-10-09T22:05:53.000Z",
         "badge": "HN",
-        "signal": "508 分 · 209 评论"
+        "signal": "53 分 · 28 评论"
       },
       {
-        "id": "cn-item-6d26f96ac71c9b6f",
+        "id": "cn-item-7005ba6e3d9773dd",
         "category": "cn",
-        "title": "超强厄尔尼诺已形成，对今冬气温有啥影响？",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-09/10709751.shtml",
+        "title": "王毅会见太平洋岛国政治家联合考察团",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-09/10709769.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-09T09:18:39.000Z",
-        "summary": "中新网北京10月9日电(记者 邵萌)记者9日从国家气候中心了解到，2026年9月已正式形成一次超强厄尔尼诺事件，类型为东部型，即海温暖中心位于赤道东太平洋。",
+        "publishedAt": "2026-10-09T09:57:42.000Z",
+        "summary": "中新社北京10月9日电 10月9日，中共中央政治局委员、中央外办主任王毅在北京会见以汤加副首相拉图为团长的太平洋岛国政治家联合考察团。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-w7jp-mf2v-8342",
+        "id": "github-advisory-ghsa-c42q-qvc3-j6vg",
         "category": "security",
-        "title": "Vikunja: Denial of service via decompression bomb in the data import",
-        "url": "https://github.com/advisories/GHSA-w7jp-mf2v-8342",
+        "title": "@tinacms/web-components: `tina-markdown` writes rich-text link URLs into `href` without scheme validation, allowing stored XSS",
+        "url": "https://github.com/advisories/GHSA-c42q-qvc3-j6vg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:52:52.000Z",
-        "summary": "### Summary Vikunja lets you export your data as a zip and import it back. The import doesn't limit how large the archive expands to, how many files it contains, or how much storage one user can consume, and it appears to hold the whole ar…",
-        "badge": "CVE-2026-91979",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-09T20:56:45.000Z",
+        "summary": "### Summary ` ` renders a rich-text AST into the DOM and, for `a` nodes, assigns the node's URL straight to the anchor's `href` with no scheme check. A link authored in the CMS as `javascript:…` renders as a live `javascript:` anchor, so a…",
+        "badge": "CVE-2026-108260",
+        "signal": "HIGH · CVSS 7.6"
       },
       {
         "id": "ai-openai-855092fba1df7e8a",
@@ -403,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247471",
+        "id": "v2ex-1247474",
         "category": "dev",
-        "title": "anthropic 已经疯了，更新了用户协议",
-        "url": "https://www.v2ex.com/t/1247471",
+        "title": "译文： pstack 作者 poteto 分享《上个月我送出了 1000 个 PR》",
+        "url": "https://www.v2ex.com/t/1247474",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T14:21:51.000Z",
-        "summary": "正式把中国列为敌对国家了。。。。",
+        "publishedAt": "2026-10-09T14:53:11.000Z",
+        "summary": "poteto （@poteto ） 8 月的帖子《上个月我送出了 1000 个 PR 》，说这些 PR 全靠 cloud agent ，列了几条做法： 1 、用自己的 skill 集 pstack 做严谨工程和验证（内部叫 /lauren-mode ，pstack 里叫 /poteto-mode ） 用 Grok Bot 跑例行任务收集上下文：Slack 上的 bug 报告、X 上的用户抱怨、新功能点子 2 、、用 pstack 的 /goal 、/loop 、/swarm…",
         "badge": "程序员",
-        "signal": "25 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-9eaff96c100c5a90",
+        "id": "cn-it-46ecab5ea8df9d93",
         "category": "cn",
-        "title": "第二艘国产大邮轮“爱达 · 花城号”明年将以香港作为母港营运",
-        "url": "https://www.ithome.com/1/011/153.htm",
+        "title": "特朗普政府实施新要求：AI 公司发生安全事件后，须立即上报",
+        "url": "https://www.ithome.com/1/011/182.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-09T15:26:48.000Z",
-        "summary": "IT之家 10 月 9 日消息，据央视新闻今日报道，爱达邮轮在港正式发布第二艘国产大型邮轮“爱达 · 花城号”的航线及产品布局，“爱达 · 花城号”将于明年正式以香港为母港，这艘邮轮将于今年 11 月启航并造访香港。 据介绍， “爱达 · 花城号”将于 2027 年全面展开香港母港航季 ，预计营运近 20 个邮轮航次。航线设计灵活多元，增设 3 个海上游航次，为本地旅客提供“邮轮即是目的地”的海上体验。 爱达邮轮表示，香港兼具国际化区位优势、成熟的邮轮母港条件和多元客源基础…",
+        "publishedAt": "2026-10-10T00:27:42.000Z",
+        "summary": "IT之家 10 月 10 日消息，据央视新闻报道，当地时间 9 日，在人工智能公司 Anthropic 发生多起未经授权使用美国政府系统的安全事件后，特朗普政府宣布实施新的强制性 AI 安全事件报告要求。 消息称，Anthropic 公司已于 9 月底向美国政府披露相关事件，并表示未经授权的活动已经停止。根据新要求，AI 公司今后发生安全事件后 必须 立即向政府报告 ，提高事件透明度，并对受到影响的机构采取补救和纠正措施。 据美国方面消息， 特朗普设立的“超级智能特别工作组…",
         "badge": "IT之家"
       },
       {
@@ -444,35 +445,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50024571",
+        "id": "hn-50026555",
         "category": "dev",
-        "title": "Ideas aren't getting harder to find, anyone who tells you otherwise is a coward",
-        "url": "https://www.experimental-history.com/p/ideas-arent-getting-harder-to-find",
+        "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
+        "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T18:16:03.000Z",
+        "publishedAt": "2026-10-09T21:06:59.000Z",
         "badge": "HN",
-        "signal": "52 分 · 17 评论"
+        "signal": "383 分 · 203 评论"
       },
       {
-        "id": "cn-baidu-58873469a0cba6b9",
+        "id": "cn-baidu-bec3899a4c92b137",
         "category": "cn",
-        "title": "王仁君获“飞天奖”优秀男演员奖",
-        "url": "https://www.baidu.com/s?wd=%E7%8E%8B%E4%BB%81%E5%90%9B%E8%8E%B7%E2%80%9C%E9%A3%9E%E5%A4%A9%E5%A5%96%E2%80%9D%E4%BC%98%E7%A7%80%E7%94%B7%E6%BC%94%E5%91%98%E5%A5%96&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "普京特朗普通话 俄将向全球供应石油",
+        "url": "https://www.baidu.com/s?wd=%E6%99%AE%E4%BA%AC%E7%89%B9%E6%9C%97%E6%99%AE%E9%80%9A%E8%AF%9D+%E4%BF%84%E5%B0%86%E5%90%91%E5%85%A8%E7%90%83%E4%BE%9B%E5%BA%94%E7%9F%B3%E6%B2%B9&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月9日晚，第35届“飞天奖”、第29届“星光奖”颁奖典礼在山东烟台举行。王仁君凭借《浴血荣光》获优秀男演员奖。",
+        "summary": "俄罗斯总统普京9日晚通过总统官网发布声明，称当天在同美国总统特朗普通话中，确认俄将向美国和全球市场提供石油和石油产品。",
         "badge": "热搜",
-        "signal": "7,522,065 热度"
+        "signal": "7,522,129 热度"
       },
       {
-        "id": "github-advisory-ghsa-4vh2-39rq-rq8j",
+        "id": "cisa-kev-cve-2026-102490",
         "category": "security",
-        "title": "Vikunja: Unbounded image decode on avatar and project-background uploads enables decode/resize amplification",
-        "url": "https://github.com/advisories/GHSA-4vh2-39rq-rq8j",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:52:15.000Z",
-        "summary": "### Summary The 50-megapixel decode guard exists only on the task-attachment preview path. Avatar and project-background uploads decode uploaded images with no pixel cap. Worse, the avatar resize fixes the output height at 1024 and derives…",
-        "badge": "CVE-2026-91971",
-        "signal": "HIGH · CVSS 0.0"
+        "title": "Zammad GmbH Zammad：Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102490",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-02T00:00:00.000Z",
+        "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
+        "badge": "CVE-2026-102490",
+        "signal": "已遭利用 · 整改期限 2026-10-05"
       },
       {
         "id": "ai-hugging-face-16b7810afb00bdc0",
@@ -509,8 +510,8 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 42748,
-        "starsToday": 15335
+        "stars": 46228,
+        "starsToday": 14927
       },
       {
         "id": "github-2987e657c453bf43",
@@ -519,8 +520,8 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 21558,
-        "starsToday": 5925
+        "stars": 22378,
+        "starsToday": 5868
       },
       {
         "id": "github-89e612f6ea973712",
@@ -529,8 +530,8 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 282468,
-        "starsToday": 1696
+        "stars": 282696,
+        "starsToday": 1687
       },
       {
         "id": "github-231c4b191ae0f4ae",
@@ -539,8 +540,8 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 47733,
-        "starsToday": 1744
+        "stars": 47868,
+        "starsToday": 1739
       },
       {
         "id": "github-c8f5678810f1cfbe",
@@ -549,8 +550,8 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 45100,
-        "starsToday": 323
+        "stars": 45214,
+        "starsToday": 326
       },
       {
         "id": "github-a3140cb175a451a9",
@@ -559,8 +560,8 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 28172,
-        "starsToday": 714
+        "stars": 28257,
+        "starsToday": 709
       },
       {
         "id": "github-eff325cf671acf35",
@@ -569,7 +570,7 @@
         "url": "https://github.com/BerriAI/litellm",
         "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
         "language": "Python",
-        "stars": 60594,
+        "stars": 60666,
         "starsToday": 95
       },
       {
@@ -579,8 +580,8 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 103893,
-        "starsToday": 523
+        "stars": 103993,
+        "starsToday": 436
       },
       {
         "id": "github-0d97dfe3fc868c34",
@@ -589,8 +590,8 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 11066,
-        "starsToday": 3723
+        "stars": 11508,
+        "starsToday": 3752
       },
       {
         "id": "github-bf226f867eb86bad",
@@ -599,10 +600,10 @@
         "url": "https://github.com/Robbyant/lingbot-map",
         "description": "[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction",
         "language": "Python",
-        "stars": 17651,
-        "starsToday": 109
+        "stars": 17698,
+        "starsToday": 110
       }
     ],
-    "updatedAt": "2026-10-09T20:56:45.964Z"
+    "updatedAt": "2026-10-10T00:52:38.327Z"
   }
 }
