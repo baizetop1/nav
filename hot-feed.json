@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-10T00:52:38.327Z",
+  "generatedAt": "2026-10-10T07:09:33.243Z",
   "intelligence": {
-    "updatedAt": "2026-10-10T00:52:38.327Z",
+    "updatedAt": "2026-10-10T07:09:33.243Z",
     "items": [
       {
-        "id": "cn-item-ebf6990f8006e456",
+        "id": "cn-item-9e488a22fe8591af",
         "category": "cn",
-        "title": "北方大部地区将有冷空气活动 四川陕西局地有大雨或暴雨",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-10/10709993.shtml",
+        "title": "日本执政党丑闻风波持续 高市内阁深陷信任危机",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-10/10710147.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-10T00:29:04.000Z",
-        "summary": "中新网10月10日电 据中央气象台网站消息，未来三天，新疆北部、青藏高原有雨雪天气，西北地区东部至华北西部等地有降雨，关注对旅游、交通等的影响，防范次生灾害。11日起，冷空气将影响北方地区，关注大风降温对交通出行、农业生产、人体健康等的影响。",
+        "publishedAt": "2026-10-10T05:37:04.000Z",
+        "summary": "中新网10月10日电 近期，日本政坛风波再起。日本农林水产大臣梁和生的不当言论持续引发争议，朝野批评声不断，也让高市早苗新内阁面临严峻的执政考验。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50019911",
+        "id": "hn-50028275",
         "category": "dev",
-        "title": "Cloudflare acquires Deno",
-        "url": "https://deno.com/blog/cloudflare",
+        "title": "REA Reverse – Engineer Anything",
+        "url": "https://rea.tools/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T13:03:48.000Z",
+        "publishedAt": "2026-10-10T00:37:07.000Z",
         "badge": "HN",
-        "signal": "1050 分 · 546 评论"
+        "signal": "311 分 · 102 评论"
       },
       {
-        "id": "cn-it-549f3a549921a517",
+        "id": "cn-it-53eb1c39c2b28bab",
         "category": "cn",
-        "title": "比亚迪第 15 万辆新能源商用车下线，新能源客车连续三年获年度出口冠军",
-        "url": "https://www.ithome.com/1/011/186.htm",
+        "title": "保时捷持续预热顶级超跑 Mission S：转速指针指向 8000rpm",
+        "url": "https://www.ithome.com/1/011/378.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-10T00:46:21.000Z",
-        "summary": "IT之家 10 月 10 日消息，比亚迪商用车宣布，10 月 9 日， 比亚迪第 15 万辆新能源商用车 ——Q3 纯电动牵引车，在淮安比亚迪卡车智慧工厂正式下线。 官方表示，比亚迪 Q3 纯电动牵引车依托自研三电技术，搭载商用车专用刀片电池，电机峰值功率达 600kW，支持双枪快充，为重载运输提供强劲动力与快速补能支持。 IT之家获悉，比亚迪商用车已进入全球 70 多个国家和地区， 新能源客车连续三年斩获年度出口冠军 。 延伸阅读 Q3 是比亚迪于 2025 年 4 月 …",
+        "publishedAt": "2026-10-10T07:09:30.000Z",
+        "summary": "IT之家 10 月 10 日消息，保时捷继续预热即将推出的顶级超跑 Mission S，最新预告视频又透露了一个令人兴奋的细节。 今天（10 日）上午，保时捷发布了新的 Mission S 的新预告片。短短几个镜头中，最引人注目的是 转速表指针攀升至 8000rpm 的画面。此外，新车的仪表还可以伸缩。 本周早些时候，保时捷证实研发中的全新中置发动机超跑平台 将定位于 911 之上 。该平台未来还有望发展成完整车系，带来一系列定位高于经典 911 的高性能车型。 Missi…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247494",
+        "id": "v2ex-1247624",
         "category": "dev",
-        "title": "刚刷到个黑客松，给开源 CLI 修 bug 就能拿钱",
-        "url": "https://www.v2ex.com/t/1247494",
+        "title": "国内的大模型 token 哪里买性价比高一些呢？有没有推荐的",
+        "url": "https://www.v2ex.com/t/1247624",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T22:05:17.000Z",
-        "summary": "不知道站里有没有喜欢打黑客松的友友，刚刷到一个奖励还不错的线上黑客松，分享一下。 一个玩法是 7 天内把他们的测试接到自己的 GitHub 仓库，让每个 PR 都自动跑一遍。比较友好的一点是拿以前做过的项目参加也行，不用为了比赛硬憋一个新的出来。项目奖一共 3000 刀，前 5 名都有。 另一个玩法我觉得可能更香。他们的 CLI 部分是开源的，比赛期间给它修 bug 或者做点内容，如果 PR 被 merge 就能分钱，每个至少 50 刀，然后这个池子总共 1000 刀。不用…",
+        "publishedAt": "2026-10-10T06:47:18.000Z",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-49196579c40a7f4d",
+        "id": "cn-baidu-bc641c75fc912cd7",
         "category": "cn",
-        "title": "巴拿马7.6级强震",
-        "url": "https://www.baidu.com/s?wd=%E5%B7%B4%E6%8B%BF%E9%A9%AC7.6%E7%BA%A7%E5%BC%BA%E9%9C%87&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "男子河里捞出春秋编钟卖30万获刑5年",
+        "url": "https://www.baidu.com/s?wd=%E7%94%B7%E5%AD%90%E6%B2%B3%E9%87%8C%E6%8D%9E%E5%87%BA%E6%98%A5%E7%A7%8B%E7%BC%96%E9%92%9F%E5%8D%9630%E4%B8%87%E8%8E%B7%E5%88%915%E5%B9%B4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "据中国地震台网正式测定，北京时间10月10日01时56分，巴拿马（北纬7.50度，西经80.65度）发生7.6级地震，震源深度10千米。首都巴拿马城震感强烈。地震后不久，该国又发生多次5级余震。官方尚未发布人员伤亡和财产损失报告。",
+        "summary": "10月10日，最高法与国家文物局联合发布文物犯罪典型案例。2011年唐某在广西柳城县河道捞沙时拾得春秋编钟，2013年以30万元出售。2023年3月20日，柳城县法院以倒卖文物罪判处其有期徒刑5年，并追缴违法所得30万元。",
         "badge": "热搜",
-        "signal": "7,808,281 热度"
+        "signal": "7,808,525 热度"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -117,23 +116,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50022292",
+        "id": "hn-50029123",
         "category": "dev",
-        "title": "Triple-A Minesweeper",
-        "url": "https://minesweeper.mikelacher.com/",
+        "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+        "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T15:51:05.000Z",
+        "publishedAt": "2026-10-10T03:02:47.000Z",
         "badge": "HN",
-        "signal": "603 分 · 111 评论"
+        "signal": "87 分 · 32 评论"
       },
       {
-        "id": "cn-item-ad0b3d98144a0e52",
+        "id": "cn-item-9c8df6b310588be3",
         "category": "cn",
-        "title": "中国选手郑钦文重返中网女单四强",
-        "url": "https://www.chinanews.com.cn/ty/2026/10-09/10709918.shtml",
+        "title": "商务部欧洲司负责人解读中欧贸易投资磋商机制第二次例会成果",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-10/10710144.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-09T14:00:51.000Z",
-        "summary": "中新社北京10月9日电 (记者 国璇)9日在北京国家网球中心进行的2026中国网球公开赛女子单打四分之一决赛中，持外卡出战的中国选手郑钦文直落两盘淘汰赛会6号种子、乌克兰名将斯维托丽娜，时隔两年再次晋级中网女单半决赛。这也是郑钦文24岁生日后收获的首场胜利。",
+        "publishedAt": "2026-10-10T05:33:48.000Z",
+        "summary": "中新网10月10日电 据商务部网站消息，10月8-9日，中国商务部部长王文涛与欧盟委员会贸易和经济安全委员马罗什·谢夫乔维奇在北京共同主持召开中欧贸易投资磋商机制(以下简称机制)第二次例会。双方围绕贸易和投资平衡、出口管制、知识产权、世贸组织改革等议题开展对等、专业、建设性的会谈，全面盘点了机制首次会议以来的磋商情况及各项进展，并形成了成果共识。商务部欧洲司负责人就相关成果进行解读。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +157,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247490",
+        "id": "v2ex-1247604",
         "category": "dev",
-        "title": "AI 现在强大到什么地步？",
-        "url": "https://www.v2ex.com/t/1247490",
+        "title": "我做了一个网站，终于接了广告，不信你来看看？",
+        "url": "https://www.v2ex.com/t/1247604",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T18:14:20.000Z",
-        "summary": "尝试重构了某大型 MMORPG 的客户端和服务端，目前 80-110 的服务端基本重构了,120 和 130 还没进去游戏 手上有 80/90 的脚本，缺少 95 以后的服务端脚本 客户端 KGUI 和引擎重写 https://github.com/user-attachments/assets/35e63d24-9d62-487d-821d-bc6e27252999",
+        "publishedAt": "2026-10-10T06:05:31.000Z",
+        "summary": "网站： https://www.wenjingxiezuo.com/",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-c20c711ac6f7f1f4",
+        "id": "cn-it-bbc27bbcd98f15ca",
         "category": "cn",
-        "title": "索尼直播互动专利公示：观众可光标指导、搭桥、操纵游戏物体等",
-        "url": "https://www.ithome.com/1/011/185.htm",
+        "title": "北京：增加人工智能手机和电脑、智能穿戴、智能机器人等新一代智能终端产品有效供给",
+        "url": "https://www.ithome.com/1/011/376.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-10T00:40:24.000Z",
-        "summary": "IT之家 10 月 10 日消息，科技媒体 insider-gaming 昨日（10 月 9 日）发布博文，报道称索尼公司获批一项新专利， 描述了游戏互动系统，观众可以直接影响主播游戏环境，涵盖光标引导、临时搭桥及物体操纵等。 该专利名为《游戏过程中的自适应屏幕共享指针和反应》，编号为 US-12752199-B2，于 2023 年 10 月提交申请，并于 2026 年 10 月 6 日获批公示。 根据专利描述，观众可在主播游戏画面上移动光标，其外观可以随游戏变化。在专利示…",
+        "publishedAt": "2026-10-10T07:08:10.000Z",
+        "summary": "IT之家 10 月 10 日消息，北京市人民政府现已印发《北京市“十五五”时期深化国际消费中心城市建设规划》。 IT之家注意到，文件中提到，有关部门将深入推进“人工智能 + 消费”。扩大数字产品消费， 增加人工智能手机和电脑、智能穿戴、智能机器人等新一代智能终端产品有效供给 。 同时，有关部门将鼓励很野创新数字内容消费，鼓励利用人工智能技术辅助开展戏剧、音乐、舞蹈、美术、沉浸式体验等创作，推出更多优质数字文博产品，加大广播电视和网络视听超高清内容供给。打造数字消费新场景，加…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +198,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50024499",
+        "id": "hn-50019911",
         "category": "dev",
-        "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
-        "url": "https://carrierexplode.com/",
+        "title": "Cloudflare acquires Deno",
+        "url": "https://deno.com/blog/cloudflare",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T18:10:55.000Z",
+        "publishedAt": "2026-10-09T13:03:48.000Z",
         "badge": "HN",
-        "signal": "207 分 · 18 评论"
+        "signal": "1166 分 · 602 评论"
       },
       {
-        "id": "cn-baidu-f8238d5ad62e391f",
+        "id": "cn-baidu-f8e3bcab77198569",
         "category": "cn",
-        "title": "爆发！中国资产大涨",
-        "url": "https://www.baidu.com/s?wd=%E7%88%86%E5%8F%91%EF%BC%81%E4%B8%AD%E5%9B%BD%E8%B5%84%E4%BA%A7%E5%A4%A7%E6%B6%A8&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "精神病院为何扎堆更名",
+        "url": "https://www.baidu.com/s?wd=%E7%B2%BE%E7%A5%9E%E7%97%85%E9%99%A2%E4%B8%BA%E4%BD%95%E6%89%8E%E5%A0%86%E6%9B%B4%E5%90%8D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月9日，美股收盘三大指数集体收涨，大型科技股多数走高，亚马逊涨幅超3%；光通信板块表现亮眼，Lumentum涨超5%。中国资产大涨，理想汽车、阿里巴巴涨超5%，原油与贵金属同步上行，市场整体氛围向好。",
+        "summary": "近年来，多地精神病医院扎堆更名，如湖南郴州市精神病院更名为市第六人民医院。更名初衷为去除病耻感及拓展业务。此前，2024年11月国家医保局规范精神治疗类收费，叠加人力成本攀升，导致精神病医院面临严峻运营压力。专家指出，仅靠更名无法解决精细化运营与生存难题。",
         "badge": "热搜",
-        "signal": "7,714,227 热度"
+        "signal": "7,713,293 热度"
       },
       {
         "id": "github-advisory-ghsa-pwhx-cvv3-qj5c",
@@ -239,24 +238,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247476",
+        "id": "v2ex-1247603",
         "category": "dev",
-        "title": "XXL-JOB v3.5.0 发布｜ OpenAPI 增强、动态 AccessToken、性能及安全性升级",
-        "url": "https://www.v2ex.com/t/1247476",
+        "title": "咱的项目登上 weekly 啦！",
+        "url": "https://www.v2ex.com/t/1247603",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T15:32:15.000Z",
-        "summary": "Release Notes 1 、 [新增] OpenAPI 能力增强：提供任务管理能力，包括任务新建/更新/删除、启动/停止、任务触发等； （注意：任务管理 OpenAPI 及操作代码示例，详见官方文档） 2 、 [新增] GLUE 模式开关：新增 GLUE 模式开关（ xxl.job.executor.glueenabled ），支持执行器维度设置是否启用 GLUE 模式； 3 、 [新增] AccessToken 升级：支持执行期维度隔离设置，废弃旧的全局 Acces…",
+        "publishedAt": "2026-10-10T06:04:26.000Z",
+        "summary": "具体周刊位置 感谢阮老师的推荐呀",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-item-377d5aef5d32301d",
+        "id": "cn-item-dc841f29386c9337",
         "category": "cn",
-        "title": "外交部驻港公署发言人：人口贩运的“锅”香港不背",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-09/10709923.shtml",
+        "title": "人社部：力争“十五五”时期工伤保险参保达3.45亿人",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-10/10710127.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-09T13:55:30.000Z",
-        "summary": "中新网10月9日电 据“外交部驻香港特派员公署”微信公众号消息，针对美国国务院发布所谓《2026年人口贩运报告》，罔顾事实，恶意诋毁香港特区打击人口贩运的努力和成效，歪曲抹黑香港国安法和《维护国家安全条例》，外交部驻港公署发言人表示强烈不满和坚决反对。",
+        "publishedAt": "2026-10-10T05:00:14.000Z",
+        "summary": "中新网10月10日电 10月10日上午，国新办举行“开局起步‘十五五’”系列主题新闻发布会，介绍“十五五”时期推进就业和社会保障高质量发展有关情况。人力资源社会保障部新闻发言人、副部长李忠表示，要进一步推动参保数量增长、结构优化、质量提升，力争“十五五”时期基本养老保险参保率稳定在95%以上，失业保险参保达到2.55亿人，工伤保险参保达到3.45亿人。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +280,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50020014",
+        "id": "hn-50022292",
         "category": "dev",
-        "title": "Our $445M Series D",
-        "url": "https://oxide.computer/blog/our-445m-series-d",
+        "title": "Triple-A Minesweeper",
+        "url": "https://minesweeper.mikelacher.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T13:12:47.000Z",
+        "publishedAt": "2026-10-09T15:51:05.000Z",
         "badge": "HN",
-        "signal": "581 分 · 256 评论"
+        "signal": "868 分 · 169 评论"
       },
       {
-        "id": "cn-it-5f55653d77a9804d",
+        "id": "cn-it-41693a2b47190700",
         "category": "cn",
-        "title": "消息称 OpenAI、Anthropic 高管私下推演 AI 灾难情景，以应对公众反弹与政治抵制",
-        "url": "https://www.ithome.com/1/011/183.htm",
+        "title": "Marvell 大胆预测： 2031 财年营收可达 2026 财年 10 倍左右",
+        "url": "https://www.ithome.com/1/011/364.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-10T00:32:24.000Z",
-        "summary": "IT之家 10 月 10 日消息，据 Axios 于当地时间 10 月 9 日报道，Anthropic、OpenAI 以及其他人工智能公司的高管们，目前正私下闭门推演，若发生重大灾难性 AI 事件，该如何应对公众与政界的强烈抗议及抵制浪潮。 这些业内高管预计，未来很可能发生一场大规模事件 —— 极有可能是某种网络攻击，导致金融服务、互联网通信甚至水电供应等基础设施大面积瘫痪。 一旦非安全可控的 AI 首次在现实世界中造成实质性重大危害，本就心存戒备的公众将更加坚决地反对这项…",
+        "publishedAt": "2026-10-10T07:03:51.000Z",
+        "summary": "IT之家 10 月 10 日消息，Marvell（美满）当地时间本月 6 日在其年度投资者日活动上发布强劲预测，认为其营收水平有望在 2031 财年 （2030 年 2 月 ~ 2031 年 1 月） 达到 70~90 亿美元 （IT之家注：现汇率约合 469.45 ~ 603.58 亿元人民币） ， 是 2026 财年的 81.95 亿美元的 10 倍左右 。 Marvell 认为，数据中心人工智能的蓬勃发展为其创造了广泛的商机， 整体潜在市场将在 2030 年达到 4,…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +321,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247475",
+        "id": "v2ex-1247599",
         "category": "dev",
-        "title": "Google Play 上架被封闭测试卡住？我们在坦桑尼亚已经走通了",
-        "url": "https://www.v2ex.com/t/1247475",
+        "title": "独立开发圈也开始搞竞价排名了？看完 outbid.lol，有点绷不住",
+        "url": "https://www.v2ex.com/t/1247599",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T15:14:46.000Z",
-        "summary": "看到有人说，App 开发完了，却被 Google Play 的 12 人 × 14 天封闭测试卡住，最后只能先发 APKPure 。 我们在坦桑尼亚做招聘 App Jobsoko ，已经成功上架 Google Play 。 Google Play： https://play.google.com/store/apps/details?id=com.jobsoko.app 官网： https://jobsoko.co.tz/ 如果你本身有真实的海外公司主体，申请企业开发者账号…",
+        "publishedAt": "2026-10-10T05:44:27.000Z",
+        "summary": "最近看到 outbid.lol ，又看到几个类似的产品：放一个作品链接，付钱上榜，别人出得更多，你就往下掉，想回去就继续加钱。 我去看了它的规则，确实写得很直白：排名只看付款金额。所以它没有隐瞒这一点。 但我还是觉得，这玩法挺没意思的。 作为开发者，我理解买广告、买曝光。问题是，作为浏览者，我为什么要看一个按付款金额排序的产品榜？ 第一名说明它花钱最多，然后呢？好不好用？有没有创意？用户喜不喜欢？这些都无法从名次里看出来。 让我想到的就是大家熟悉的竞价排名：谁掏钱多，谁站前…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-392da19d3c22ebbf",
+        "id": "cn-baidu-f369ceca20985c72",
         "category": "cn",
-        "title": "为什么要花数万亿改造地下管网",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%8A%B1%E6%95%B0%E4%B8%87%E4%BA%BF%E6%94%B9%E9%80%A0%E5%9C%B0%E4%B8%8B%E7%AE%A1%E7%BD%91&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "广交会即将开幕",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%BF%E4%BA%A4%E4%BC%9A%E5%8D%B3%E5%B0%86%E5%BC%80%E5%B9%95&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "我国城市地下管网普遍“年龄大、欠账多”，大量管道铺设于20世纪80、90年代，存在材质老化、腐蚀严重等问题，小区管网跑冒滴漏、淤堵破损等“带病运行”情况也比较常见。管网老旧会带来燃气泄漏、供水污染、城市内涝等风险。",
+        "summary": "广州海关9日发布12项便利措施，服务保障第140届广交会，提出进境展览品到馆查验、优化离境退税便捷验核模式、出口批次检验检疫改革等具体措施，确保广交会进出境人员、物资通关顺畅高效。第140届广交会将于10月15日到11月4日分三期在广州举办。",
         "badge": "热搜",
-        "signal": "7,616,615 热度"
+        "signal": "7,616,975 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -363,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50027167",
+        "id": "hn-49997481",
         "category": "dev",
-        "title": "Japan's Most Famous Tuna Buyer Says He Turned Somali Pirates into Fishermen",
-        "url": "https://www.japaninsides.com/the-sushi-king-who-went-to-somalia-how-japans-most-famous-tuna-buyer-says-he-turned-pirates-into-fishermen-55344",
+        "title": "Eye of Sauron: Long-Range Hidden Spy Camera Detection",
+        "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-qibo",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T22:05:53.000Z",
+        "publishedAt": "2026-10-07T19:15:57.000Z",
         "badge": "HN",
-        "signal": "53 分 · 28 评论"
+        "signal": "106 分 · 21 评论"
       },
       {
-        "id": "cn-item-7005ba6e3d9773dd",
+        "id": "cn-item-af138bf7e83e91dc",
         "category": "cn",
-        "title": "王毅会见太平洋岛国政治家联合考察团",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-09/10709769.shtml",
+        "title": "阿联酋检方称迪拜航空副驾驶企图驾机实施自杀式袭击",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-10/10710116.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-09T09:57:42.000Z",
-        "summary": "中新社北京10月9日电 10月9日，中共中央政治局委员、中央外办主任王毅在北京会见以汤加副首相拉图为团长的太平洋岛国政治家联合考察团。",
+        "publishedAt": "2026-10-10T04:21:24.000Z",
+        "summary": "中新社北京10月10日电 阿布扎比消息：阿联酋总检察长沙姆西当地时间9日表示，对迪拜航空公司FZ1073航班事件的调查显示，涉事阿曼籍副驾驶企图驾驶飞机撞击以色列特拉维夫本-古里安国际机场航站楼，实施自杀式袭击，以造成尽可能多的人员伤亡。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247474",
+        "id": "v2ex-1247574",
         "category": "dev",
-        "title": "译文： pstack 作者 poteto 分享《上个月我送出了 1000 个 PR》",
-        "url": "https://www.v2ex.com/t/1247474",
+        "title": "2026 年产品经理都在用哪些 AI 产品设计工具？求推荐专业的 UI/UX 设计与交互工作流",
+        "url": "https://www.v2ex.com/t/1247574",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T14:53:11.000Z",
-        "summary": "poteto （@poteto ） 8 月的帖子《上个月我送出了 1000 个 PR 》，说这些 PR 全靠 cloud agent ，列了几条做法： 1 、用自己的 skill 集 pstack 做严谨工程和验证（内部叫 /lauren-mode ，pstack 里叫 /poteto-mode ） 用 Grok Bot 跑例行任务收集上下文：Slack 上的 bug 报告、X 上的用户抱怨、新功能点子 2 、、用 pstack 的 /goal 、/loop 、/swarm…",
+        "publishedAt": "2026-10-10T04:02:14.000Z",
+        "summary": "正文 我是一个程序员，有一些自己的产品想法和明确的需求，希望能够独立完成从需求到产品落地的整个过程，所以需要自己承担产品经理和产品设计的工作。 目前，我对功能需求、业务逻辑、功能清单这些已经比较熟悉，也有能力自己实现前后端。但在 产品视觉设计、UI 布局、用户交互和整体体验 方面，还是希望借助更专业的工具和方法来提升效果。 我想了解一下，现在专业的产品经理、UI/UX 设计师，以及独立开发者，在实际工作中都在使用哪些 AI 产品和工具？ 我尤其关心以下几个方面： UI 视觉…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-46ecab5ea8df9d93",
+        "id": "cn-it-24edeb1477f282d0",
         "category": "cn",
-        "title": "特朗普政府实施新要求：AI 公司发生安全事件后，须立即上报",
-        "url": "https://www.ithome.com/1/011/182.htm",
+        "title": "iQOO Neo12 首发搭载 pTSF 技术的 2K 185Hz 超冠屏，本月见",
+        "url": "https://www.ithome.com/1/011/361.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-10T00:27:42.000Z",
-        "summary": "IT之家 10 月 10 日消息，据央视新闻报道，当地时间 9 日，在人工智能公司 Anthropic 发生多起未经授权使用美国政府系统的安全事件后，特朗普政府宣布实施新的强制性 AI 安全事件报告要求。 消息称，Anthropic 公司已于 9 月底向美国政府披露相关事件，并表示未经授权的活动已经停止。根据新要求，AI 公司今后发生安全事件后 必须 立即向政府报告 ，提高事件透明度，并对受到影响的机构采取补救和纠正措施。 据美国方面消息， 特朗普设立的“超级智能特别工作组…",
+        "publishedAt": "2026-10-10T07:03:04.000Z",
+        "summary": "IT之家 10 月 10 日消息，iQOO Neo12 手机今日官宣首发搭载 pTSF 技术的 2K 185Hz 超冠屏，超高清与超高刷并发，通透与省电兼得，本月见。 此外，该机还搭载第五代骁龙 8 至尊版处理器 + 冰穹风冷散热系统，配备自研电竞芯片 Q3，支持光追、超分、超帧、滤镜、游戏相机。新机内置 9000mAh 蓝海大电池 ，采用单电芯设计、第五代硅负极技术，能量密度高达 916Wh/L。 IT之家注意到，博主 @数码闲聊站 此前爆料，iQOO Neo12 的屏幕…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +444,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50026555",
+        "id": "hn-49981264",
         "category": "dev",
-        "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
-        "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
+        "title": "How to head into VR without wearing a headset",
+        "url": "https://www.kyushu-u.ac.jp/en/researches/view/414/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-09T21:06:59.000Z",
+        "publishedAt": "2026-10-06T17:07:12.000Z",
         "badge": "HN",
-        "signal": "383 分 · 203 评论"
+        "signal": "15 分 · 2 评论"
       },
       {
-        "id": "cn-baidu-bec3899a4c92b137",
+        "id": "cn-baidu-63321d56e096d7a0",
         "category": "cn",
-        "title": "普京特朗普通话 俄将向全球供应石油",
-        "url": "https://www.baidu.com/s?wd=%E6%99%AE%E4%BA%AC%E7%89%B9%E6%9C%97%E6%99%AE%E9%80%9A%E8%AF%9D+%E4%BF%84%E5%B0%86%E5%90%91%E5%85%A8%E7%90%83%E4%BE%9B%E5%BA%94%E7%9F%B3%E6%B2%B9&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "四五十元一个的面包没人买了",
+        "url": "https://www.baidu.com/s?wd=%E5%9B%9B%E4%BA%94%E5%8D%81%E5%85%83%E4%B8%80%E4%B8%AA%E7%9A%84%E9%9D%A2%E5%8C%85%E6%B2%A1%E4%BA%BA%E4%B9%B0%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "俄罗斯总统普京9日晚通过总统官网发布声明，称当天在同美国总统特朗普通话中，确认俄将向美国和全球市场提供石油和石油产品。",
+        "summary": "今年以来，烘焙面包门店减少10.1万家。此前，四五十元的高价手作面包曾是年轻人争相打卡的时尚单品。近期，祐禾等网红店及大量手作店纷纷闭店。原因在于面包价格过高被称“刺客”，消费者趋于理性转向平价商超。",
         "badge": "热搜",
-        "signal": "7,522,129 热度"
+        "signal": "7,523,611 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -485,13 +484,13 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247462",
+        "id": "v2ex-1247565",
         "category": "dev",
-        "title": "盲目的追 AI 简直是我最蠢的行为",
-        "url": "https://www.v2ex.com/t/1247462",
+        "title": "AI 编码项目时间一长，结构和文档越来越乱，有什么好用的 project clean / code clean skill 推荐？",
+        "url": "https://www.v2ex.com/t/1247565",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-09T13:58:28.000Z",
-        "summary": "本来也不上班，也不需要编程，看别人有，自己也想要。 冲了 DeepSeek 余额 开了 cursor 会员 开了 Gemini 会员（ 6 块） 天天学别人，自己有了工具，脑袋空空，还不如省下来💰吃个煎饼果子。",
+        "publishedAt": "2026-10-10T03:26:06.000Z",
+        "summary": "背景：这一年多个人和公司的项目基本全用 AI CLI agent （ Claude Code / Codex 这类）写，单次会话的质量还行，但项目时间一长，腐化问题非常明显： 结构腐化：agent 倾向\"就地新增\"，几乎每个会话都可能造一份新的 utils / helpers / adapters ，重复实现越攒越多，到后期没人敢删； 文档腐化：README 、DESIGN 、总结类 markdown 越写越多，大量内容互相矛盾或早已过期，而且 AI 还喜欢每次再生成一份新…",
         "badge": "程序员",
         "signal": "1 回复"
       }
@@ -510,7 +509,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 46228,
+        "stars": 54409,
         "starsToday": 14927
       },
       {
@@ -520,7 +519,7 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 22378,
+        "stars": 23390,
         "starsToday": 5868
       },
       {
@@ -530,7 +529,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 282696,
+        "stars": 283224,
         "starsToday": 1687
       },
       {
@@ -538,9 +537,9 @@
         "rank": 4,
         "name": "cathrynlavery/diagram-design",
         "url": "https://github.com/cathrynlavery/diagram-design",
-        "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 47868,
+        "stars": 48221,
         "starsToday": 1739
       },
       {
@@ -550,7 +549,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 45214,
+        "stars": 45526,
         "starsToday": 326
       },
       {
@@ -560,7 +559,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 28257,
+        "stars": 28437,
         "starsToday": 709
       },
       {
@@ -570,7 +569,7 @@
         "url": "https://github.com/BerriAI/litellm",
         "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
         "language": "Python",
-        "stars": 60666,
+        "stars": 60796,
         "starsToday": 95
       },
       {
@@ -580,7 +579,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 103993,
+        "stars": 104189,
         "starsToday": 436
       },
       {
@@ -590,7 +589,7 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 11508,
+        "stars": 12248,
         "starsToday": 3752
       },
       {
@@ -600,10 +599,10 @@
         "url": "https://github.com/Robbyant/lingbot-map",
         "description": "[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction",
         "language": "Python",
-        "stars": 17698,
+        "stars": 17816,
         "starsToday": 110
       }
     ],
-    "updatedAt": "2026-10-10T00:52:38.327Z"
+    "updatedAt": "2026-10-10T07:09:33.243Z"
   }
 }
