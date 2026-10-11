@@ -1,10 +1,10 @@
 # 白泽水浒 Android 安装包
 
-源码目标版本为 **0.69.0（versionCode 41）**，尚未生成这一版 APK。上次已验证的安装包为 0.68.0（versionCode 40），不含本轮两片固定探索地图与挂机营建内容。安装包采用自行签名，包名 `top.baizeone.shuihu`，支持 Android 8.0 及以上。游戏资源完整内置，云存档需要联网。首次安装请使用手机系统的文件管理器打开 APK；后续使用同一签名、同一包名、递增 versionCode 的 APK 覆盖安装。
+当前安装包为 **0.82.0（versionCode 54）**，已用原签名构建，包含六地探索与重访、跨地区人物共事、统一来源追踪和寨中生活。安装包采用自行签名，包名 `top.baizeone.shuihu`，支持 Android 8.0 及以上。游戏资源完整内置，云存档需要联网。首次安装请使用手机系统的文件管理器打开 APK；后续使用同一签名、同一包名、递增 versionCode 的 APK 覆盖安装。
 
 ## 安装与存档迁移
 
-1. 按下方命令构建 0.69.0 后，将 `artifacts/android/baize-shuihu-0.69.0.apk` 传到手机并安装；本轮仅发布网页与 Worker，未生成此安装包。
+1. 将已生成的 `artifacts/android/baize-shuihu-0.82.0.apk` 传到手机，直接覆盖安装。Worker 已更新到 0.82.0；网页由 GitHub Actions 随 main 分支提交部署。
 2. 原浏览器中进入“存档 → 导出当前进度”，把 JSON 文件保存到手机。
 3. 打开 APK 的“存档 → 导入文件 → 从其他设备导入存档”，选择 JSON，检查预览并确认导入。
 4. 或在 APK 中下载已有云档；更新原云档仍需该档的上传密钥。
@@ -30,15 +30,17 @@ cd 'F:\nav-main\nav-main'
 
 使用站点所有者已有的 HTTPS 域名作为本地资源来源，专用路径为 `https://baizeone.top/__android__/game/`。该路径由 WebViewClient 从 APK 读取，**不请求线上站点、不需要创建线上目录**。缺失资源返回 404，不回退到网络页面。只有既有云存档来源允许外部请求，外部网页交给系统浏览器。
 
-JavaScript 原生接口仅用于显式导出存档，保存位置通过系统文件选择器由用户确定。导入也通过系统文件选择器，不申请全盘存储权限。App 使用网站原有 Origin，因此当前仅允许 `https://baizeone.top` 的 Worker CORS 配置可直接兼容；0.69.0 的完整新进度要求 Worker 返回 release: 0.69.0，以及 grainRoad、idleDispatch、regionalGathering、regionExploration、marshExploration 均为 1；没有新增数据库表，不需要执行 SQL。仅推送 GitHub 不会部署 Worker，也不会更新手机内置的游戏文件。
+JavaScript 原生接口仅用于显式导出存档，保存位置通过系统文件选择器由用户确定。导入也通过系统文件选择器，不申请全盘存储权限。App 使用网站原有 Origin，因此当前仅允许 `https://baizeone.top` 的 Worker CORS 配置可直接兼容；0.82.0 的完整新进度要求 Worker 返回 release: 0.82.0，以及 grainRoad、idleDispatch、regionalGathering、regionExploration、marshExploration、ruinsExploration、forestExploration、waterExploration、mountainExploration、explorationGoals、mineRevisit、marshRevisit、regionRevisits、mineCompanion、crossRegionEvents、sourceTracking、campLife 均为 1；没有新增数据库表，不需要执行 SQL。仅推送 GitHub 不会部署 Worker，也不会更新手机内置的游戏文件。
 
 方案参考 Android 官方 [加载应用内网页](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content) 和 [APK 签名工具](https://developer.android.com/tools/apksigner)。
 
-## 上一版安装包的验证与限制
+## 0.82.0 安装包验证与限制
 
-已进行 Windows 本机编译、APK v2/v3 签名校验、包信息核对；浏览器隔离环境验证内置资源路径的离线启动、IndexedDB 重载、导出与导入流程，并验证手机/桌面/横屏布局。没有连接 Android 真机，系统文件选择器、系统返回键及不同厂商 WebView 的实际表现仍需安装后体验。
+Windows 本机编译和 APK v2/v3 签名校验通过；证书与 0.68.0 一致，包名相同，versionCode 从 40 升至 54。383 个内置文件逐一与游戏源码比对一致，图标资源沿用上一版白泽兽与水纹。直接使用 APK 提取资源，在隔离浏览器中验证 360 / 390 像素手机与 844 像素横屏离线启动、0.68.0 旧存档升级、原生导出桥接、文件导入及刷新读档。没有连接 Android 真机，系统文件选择器、系统返回键及不同厂商 WebView 的实际表现仍需安装后体验。
 
-## 0.68.0 图标与安装包核对
+安装包大小 66,882,317 字节（约 63.8 MiB）；SHA-256：`d984ab8302cef543a407dbce4579b6615a1629712ca8f24b1acaf89fb6535512`。验证记录位于 `artifacts/android/apk082-verification.json`，同目录保留编译、签名与浏览器日志。
+
+## 0.68.0 图标与安装包核对（历史）
 
 图标改为青玉底、白泽兽与水纹，提供各密度备用图、Android 8 起的自适应图标，以及 Android 13 起的单色主题图标。按 [Android 官方图标规范](https://developer.android.com/develop/ui/compose/system/icon_design_adaptive) 分离前景和背景，主要轮廓保留在中央安全范围。系统栏、启动背景及原生确认框采用游戏默认的浅青配色。
 

@@ -1,10 +1,14 @@
-import {marshHas} from './marsh-data.js?v=0.69.0';
-import {regionBuilt} from './exploration-data.js?v=0.69.0';
-import {GATHERING_REGIONS,REGIONAL_RECIPES,historicGathering,gatheringProgress} from './gathering-data.js?v=0.69.0';
-import {IDLE_ROUTES,idleUnlocked} from './idle-data.js?v=0.69.0';
-import {RECIPES} from './provisions.js?v=0.69.0';
-import {pay,grant,newEquipment} from './item.js?v=0.69.0';
-import {requireRule,count,journal} from './utils.js?v=0.69.0';
+import {mountainHas} from './mountain-data.js?v=0.82.0';
+import {waterHas} from './water-data.js?v=0.82.0';
+import {forestHas} from './forest-data.js?v=0.82.0';
+import {ruinsHas} from './ruins-data.js?v=0.82.0';
+import {marshHas} from './marsh-data.js?v=0.82.0';
+import {regionBuilt} from './exploration-data.js?v=0.82.0';
+import {GATHERING_REGIONS,REGIONAL_RECIPES,historicGathering,gatheringProgress} from './gathering-data.js?v=0.82.0';
+import {IDLE_ROUTES,idleUnlocked} from './idle-data.js?v=0.82.0';
+import {RECIPES} from './provisions.js?v=0.82.0';
+import {pay,grant,newEquipment} from './item.js?v=0.82.0';
+import {requireRule,count,journal} from './utils.js?v=0.82.0';
 export function ensureGathering(s){return s.gathering??={version:1,regions:Object.fromEntries(Object.keys(GATHERING_REGIONS).map(id=>[id,historicGathering(s,id)]))};}
 // Call before the original clear counter changes, so the first new clear is counted once.
 export function recordGatheringClear(s,id,tier){
@@ -19,6 +23,10 @@ export function regionalQuote(s,d,id){
  const r=original?{...original,items:{...original.items},silver:original.kind==='equipment'&&regionBuilt(s,'forge')?Math.floor(original.silver*.8):original.silver}:null;
  if(r?.kind==='item'&&regionBuilt(s,'clinic')&&r.items.herb)r.items.herb=Math.max(0,r.items.herb-1);
  if(id==='marsh'&&r&&regionBuilt(s,'clinic')&&marshHas(s,'invited'))r.items.marsh_orchid--;
+ if(id==='mountain'&&r&&regionBuilt(s,'forge')&&mountainHas(s,'invited'))r.items.copper_sand--;
+ if(id==='water'&&r&&regionBuilt(s,'clinic')&&waterHas(s,'invited'))r.items.reed_fiber--;
+ if(id==='forest'&&r&&regionBuilt(s,'lodge')&&forestHas(s,'invited'))r.items.mountain_vine--;
+ if(id==='ruins'&&r&&regionBuilt(s,'lodge')&&ruinsHas(s,'invited'))r.items.stone_rubbing--;
  if(!r)return {reason:'没有这张地区配方。'};
  const model=(r.kind==='equipment'?d.by.equipments:d.by.items)[r.output],counter=r.kind==='item'?'craft_'+r.output:'regional_craft_'+id,used=s.daily.counters[counter]||0,limit=r.kind==='item'?Math.min(r.limit,RECIPES[r.output].limit):r.limit;
  const missing=Object.entries(r.items).filter(([k,n])=>(s.inventory[k]||0)<n).map(([k,n])=>({id:k,count:n-(s.inventory[k]||0)}));

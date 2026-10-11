@@ -1,6 +1,6 @@
 @media(max-width:900px){
  .screen-paged{overflow:hidden!important;scrollbar-gutter:auto!important;position:relative}
- .screen-window{width:100%;min-width:0;overflow:hidden!important;overscroll-behavior:none;scrollbar-width:none}
+ .screen-window{position:relative;width:100%;min-width:0;overflow:hidden!important;overscroll-behavior:none;scrollbar-width:none}
  .screen-paper{width:100%;column-fill:auto;column-count:auto;overflow:visible;min-width:0}
  .screen-pager{display:flex;align-items:center;justify-content:space-between;gap:8px;height:44px;min-height:44px;margin:4px 0 0;background:var(--panel);border-top:1px solid var(--line);position:relative;z-index:5}
  .screen-pager button{min-height:40px!important;padding:4px 12px;font-size:12px!important;border:1px solid var(--line);background:transparent;color:var(--green)}.screen-pager output{font-size:12px;color:var(--muted)}

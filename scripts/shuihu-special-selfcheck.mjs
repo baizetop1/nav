@@ -12,7 +12,7 @@ function win(s,step=1000){for(let n=0;n<180000/step&&!s.battle.outcome;n++)advan
 function untouched(before,after){assert.deepEqual(after.player,before.player);assert.deepEqual(after.camp,before.camp);assert.deepEqual(after.heroes,before.heroes);assert.deepEqual(after.stats,before.stats);assert.deepEqual(after.daily,before.daily);assert.deepEqual(after.recruit,before.recruit);assert.deepEqual(after.progress,before.progress);}
 
 // Every displayed probability is the probability used by settlement. Each row is independent.
-assert.equal(ids.length,3);assert.deepEqual(Object.keys(SPECIAL_TIERS),['1','2','3']);
+assert.deepEqual(ids.sort(),['forest','marsh','mine','mountain','ruins','water']);assert.deepEqual(Object.keys(SPECIAL_TIERS),['1','2','3']);
 const pool=new Set();
 for(const id of ids)for(const tier of [1,2,3]){
  const rows=specialDropTable(id,tier);assert.ok(rows.length>=12);assert.equal(new Set(rows.map(r=>r.kind+':'+r.id)).size,rows.length);
@@ -34,7 +34,7 @@ const needed=specialPlan(fresh,'mine',1).requiredSlots;assert.equal(needed,5);
 const full=copy(fresh);while(full.equipment.length<201-needed)full.equipment.push({uid:'eq_'+full.nextEquipment++,item:'oak_staff',plus:0,hero:null});reject(full,'specialStart',{id:'mine',tier:1},/装备空位/);full.equipment.pop();assert.equal(specialPlan(full,'mine',1).reason,'');
 const packed=copy(fresh);packed.inventory.scrap_iron=MAX;reject(packed,'specialStart',{id:'mine',tier:1},/材料接近存储上限/);assert.deepEqual(reload(packed),packed);
 
-// All nine combinations are real battles. A zero-stamina, zero-food army save still sends zero troops.
+// All twelve combinations are real battles. A zero-stamina, zero-food army save still sends zero troops.
 let all=fresh;
 for(const id of ids)for(const tier of [1,2,3]){
  const before=copy(all);all=act(all,'specialStart',{id,tier});untouched(before,all);assert.equal(all.battle.expedition.troops,0);assert.ok(all.battle.team.every(u=>u.corps.troops===0));assert.equal(all.battle.depth.terrain,SPECIAL_DUNGEONS[id].terrain);
@@ -73,4 +73,4 @@ let overflow=fixture(13);enterSpecial(overflow,d,{id:'mine',tier:1});overflow.rn
 let fullEquipmentProof=false;
 for(let seed=1;seed<=100&&!fullEquipmentProof;seed++){const full=fixture(seed);enterSpecial(full,d,{id:'mine',tier:1});while(full.equipment.length<200)full.equipment.push({uid:'eq_'+full.nextEquipment++,item:'oak_staff',plus:0,hero:null});const original=copy(full.equipment);full.battle.outcome='victory';const result=finishSpecial(full,d,full.battle);assert.deepEqual(full.equipment,original);assert.equal(full.battle,null);fullEquipmentProof=result.drops.some(r=>r.kind==='equipment'&&r.stored===0);}
 assert.ok(fullEquipmentProof);
-console.log('Special dungeon checks passed: 3 dungeons / 9 real fights / '+pool.size+' unique drops / '+samples*ids.length+' deterministic loot trials.',statistics);
+console.log('Special dungeon checks passed: 6 dungeons / 18 real fights / '+pool.size+' unique drops / '+samples*ids.length+' deterministic loot trials.',statistics);

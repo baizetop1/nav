@@ -1,10 +1,11 @@
-import {roleKind} from './lineup-model.js?v=0.69.0';
-import {experienceToNext} from './progression.js?v=0.69.0';
-import {unlockReason} from './growth.js?v=0.69.0';
-import {GEAR_TRAITS} from './tactics-data.js?v=0.69.0';
+import {roleKind} from './lineup-model.js?v=0.82.0';
+import {experienceToNext} from './progression.js?v=0.82.0';
+import {unlockReason} from './growth.js?v=0.82.0';
+import {GEAR_TRAITS} from './tactics-data.js?v=0.82.0';
 const page=(view,id,hero)=>({type:'ui_section',view,id,...(hero?{hero}:{})});
 export const PHASES={company:'立寨成队',arms:'第一套战法兵甲',story:'走完前两卷'};
-export const away=(s,id)=>s.idleDispatch?.mission?.hero===id||s.affairs?.mission?.hero===id||!!s.realm?.squad?.team.includes(id)||!!s.realm?.trek?.team.includes(id)||!!s.expansion?.run?.team.includes(id);
+import {away} from './hero-availability.js?v=0.82.0';
+export {away};
 export function starterTeam(s,d){
  const pool=d.heroes.filter(h=>s.heroes[h.id].status==='owned'&&!away(s,h.id)).sort((a,b)=>s.heroes[b.id].level-s.heroes[a.id].level||a.id.localeCompare(b.id));
  const skills=h=>h.skills.map(id=>d.by.skills[id]).filter(k=>!unlockReason(s,k)&&k.type!=='passive');

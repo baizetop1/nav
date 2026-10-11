@@ -1,0 +1,14 @@
+import {MOUNTAIN_NODES,MOUNTAIN_FLAGS,mountainHas,mountainGate,mountainRoute} from './mountain-data.js?v=0.82.0';
+export const hasMountain=s=>s.exploration?.mountain!==undefined||Object.keys(s.specialDungeons?.clears||{}).some(k=>/^mountain(hold)?_[123]$/.test(k))||[s.battle?.context,s.lastBattle?.context,s.specialDungeons?.last].some(c=>['mountain','mountainhold'].includes(c?.id));
+export function validateMountain(s,check){const x=s.exploration,w=x?.mountain;if(w===undefined)return;
+ const obj=v=>v&&typeof v==='object'&&!Array.isArray(v),list=(v,allowed)=>Array.isArray(v)&&new Set(v).size===v.length&&v.every(k=>allowed.includes(k));
+ check(obj(w)&&w.version===1&&Object.keys(w).sort().join(',')==='flags,pending,position,version,visited','粮道探索记录');
+ check(list(w.flags,MOUNTAIN_FLAGS)&&list(w.visited,Object.keys(MOUNTAIN_NODES))&&w.visited.includes('shelter')&&w.visited.includes(w.position)&&w.visited.every(id=>!mountainGate(s,id)),'粮道地点与进度');
+ for(const [flag,needs]of Object.entries({scouted:['met'],ladder:['scouted'],won_hold:['scouted'],cargo:['won_hold'],invited:['cargo'],return_met:['invited'],road_checked:['return_met'],won_convoy:['road_checked'],return_paid:['won_convoy']}))if(mountainHas(s,flag))check(needs.every(k=>mountainHas(s,k)),'粮道事件先后');
+ for(const flag of ['scouted','surveyed'])if(mountainHas(s,flag))check(mountainHas(s,'won_slope')||mountainHas(s,'won_pass'),'粮道清路战绩');
+ if(mountainHas(s,'met'))check(['known','available','owned'].includes(s.heroes.xiangchong.status),'项充相识');if(mountainHas(s,'invited'))check(s.heroes.xiangchong.status==='owned','项充入寨');
+ for(const [flag,place]of Object.entries({scouted:'pass',surveyed:'vein',ladder:'cliff',cargo:'hold',road_checked:'pass',return_paid:'shelter'}))if(mountainHas(s,flag))check(w.visited.includes(place),'粮道事件地点');
+ for(const id of ['slope','pass','hold'])if(mountainHas(s,'won_'+id))check(w.visited.includes(id)&&(s.specialDungeons?.clears[MOUNTAIN_NODES[id].battle+'_1']||0)>0,'粮道战绩');
+ if(mountainHas(s,'won_convoy'))check((s.specialDungeons?.clears.mountainhold_1||0)>=2||[2,3].some(t=>(s.specialDungeons?.clears['mountainhold_'+t]||0)>0),'护粮回程战绩');
+ if(w.pending!==null){const p=w.pending,n=Object.hasOwn(MOUNTAIN_NODES,p?.node)?MOUNTAIN_NODES[p.node]:null,b=s.battle;check(obj(p)&&Object.keys(p).sort().join(',')==='approach,node'&&!!n?.battle&&['direct','highpath','convoy'].includes(p.approach)&&(p.approach!=='convoy'||p.node==='hold'&&mountainHas(s,'road_checked'))&&(p.approach!=='highpath'||p.node==='hold'&&mountainHas(s,'ladder'))&&w.position===p.node&&x.pending===null&&!x.marsh?.pending&&!x.ruins?.pending&&!x.forest?.pending&&!x.water?.pending&&x.activeRegion==='mountain'&&b?.context.type==='special'&&b.context.id===n.battle&&b.context.tier===1&&b.context.route===mountainRoute(p.node,p.approach)&&!s.adventure?.run,'粮道待结算战斗');}
+}

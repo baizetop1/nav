@@ -178,3 +178,66 @@ button[data-guide-target]{outline:2px solid var(--folio-brass,#8b7447)!important
 .region-tabs{display:flex;gap:6px;margin:5px 0}.region-tabs button{flex:1;min-height:34px;padding:4px 8px}.region-tabs [aria-pressed=true]{font-weight:700;box-shadow:inset 0 -3px var(--folio-accent,#397969)}.region-camp select{max-width:100%;min-width:0}.region-panel .notice{font-size:12px;line-height:1.5}
 
 @media(max-width:600px) and (max-height:650px){.viewport-shell .region-tabs{margin:3px 0;gap:4px}.viewport-shell .region-tabs button{min-height:30px!important;padding:3px 5px!important;font-size:11px!important}.viewport-shell .region-map{margin:4px 0;gap:4px}.viewport-shell .region-map button{min-height:34px!important}.viewport-shell .region-overview>.actions{margin-top:4px}.viewport-shell .region-overview>.actions button{min-height:32px!important;padding:4px 6px!important;font-size:11px!important}.viewport-shell .region-overview .region-goal{padding:4px 6px;margin:4px 0;font-size:11px}.viewport-shell .region-roads{margin:4px 0!important;font-size:10px!important}}
+
+/* Keep the map's current objective beside its places on short phone screens. */
+@media(max-width:600px) and (max-height:650px){
+ .viewport-shell .region-heading h2{font-size:15px!important;line-height:1.3!important;margin:2px 0!important}
+ .viewport-shell .region-heading span{font-size:10px}
+ .viewport-shell .region-map button{line-height:1.1!important;padding:3px 2px!important}
+ .viewport-shell .region-overview .region-goal{line-height:1.35!important}
+}
+@media(max-width:600px){
+ .viewport-shell .region-camp .idle-card{padding:8px;margin:6px 0;min-height:0}
+ .viewport-shell .region-camp .idle-card h3{font-size:14px;margin:0 0 4px}
+ .viewport-shell .region-camp .idle-card p{font-size:12px;line-height:1.45;margin:5px 0}
+ .viewport-shell .region-camp label{font-size:12px}
+ .viewport-shell .region-camp select{min-height:34px!important;padding:5px 7px;margin:3px 0}
+ .viewport-shell .region-camp button{min-height:36px!important;padding:5px 9px;font-size:12px}
+}
+
+@media(max-width:600px) and (max-height:650px){
+ .viewport-shell .region-roads{line-height:1.25!important}
+ .viewport-shell .region-overview>.actions{margin-bottom:0!important}
+ .viewport-shell .region-tabs{margin-top:0!important}
+}
+
+.exploration-goal-select{display:grid;grid-template-columns:1fr 2fr;gap:8px}.exploration-goal-select label{font-size:12px;color:var(--muted)}.exploration-goal-select select{display:block;width:100%;min-width:0;margin-top:4px}.exploration-target{border:1px solid var(--line);border-radius:10px;padding:10px;margin:8px 0}.exploration-target header{display:flex;align-items:center;justify-content:space-between;gap:8px}.exploration-target h3{margin:0}.exploration-target header span{font-size:11px;color:var(--green)}.exploration-target p{margin:6px 0}.exploration-target details{margin-top:8px}.exploration-goal-row{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding:4px 0;font-size:12px}.goal-home-tools{display:flex;gap:10px;grid-column:1/-1}.exploration-home+.folio-next[data-mainline]{background:transparent;padding:7px 9px}.exploration-home+.folio-next[data-mainline] h2{font-size:12px}.exploration-home+.folio-next[data-mainline] p{display:none}.exploration-home+.folio-next[data-mainline]>.primary{font-size:12px;min-height:32px}.exploration-home+.folio-next[data-mainline] .folio-eyebrow{font-size:10px}
+@media(max-width:599px){.exploration-goals>h2{font-size:16px;margin:4px 0}.exploration-target{padding:8px}.exploration-home{display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:3px 8px}.exploration-home .folio-eyebrow,.exploration-home h2,.exploration-home p{grid-column:1}.exploration-home>.primary{grid-column:2;grid-row:1/4;width:100%;align-self:center;min-height:44px!important}.exploration-home .goal-home-tools{grid-row:4}.goal-home-tools button{font-size:11px!important;min-height:30px!important}.exploration-home+.folio-next[data-mainline]{display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:3px 8px}.exploration-home+.folio-next[data-mainline]>.primary{grid-column:2;grid-row:1/3}.exploration-home+.folio-next[data-mainline] .folio-eyebrow{display:block}.exploration-home~.camp-support{display:none}}
+
+@media(max-width:900px){.viewport-shell .exploration-goals>h2{font-size:15px;margin:3px 0 6px}.viewport-shell .exploration-goal-select{gap:6px}.viewport-shell .exploration-goal-select select{height:36px;min-height:36px;padding:4px;font-size:12px}.viewport-shell .exploration-target{padding:7px;margin:6px 0}.viewport-shell .exploration-target h3{font-size:14px;line-height:1.4;margin:0}.viewport-shell .exploration-target p{font-size:12px;line-height:1.5;margin:4px 0}.viewport-shell .exploration-goals .actions{margin:4px 0;gap:5px}.viewport-shell .exploration-goals .actions button{min-height:36px!important;padding:5px 9px;font-size:12px}.viewport-shell .exploration-target summary{min-height:28px;font-size:12px;padding:3px 0}.viewport-shell .exploration-goals>.note{font-size:11px;margin:4px 0}.exploration-target details{margin-top:4px}}
+@media(max-width:599px) and (max-height:650px){.viewport-shell .main:has(.camp-dashboard) .scene-banner{height:28px;min-height:28px;margin:3px 0}.viewport-shell .main:has(.camp-dashboard) .scene-banner img{height:28px}.viewport-shell .main:has(.camp-dashboard) .scene-banner span{padding:2px 5px}.viewport-shell .main:has(.camp-dashboard) .scene-banner b{font-size:11px}.viewport-shell .main:has(.camp-dashboard) .scene-banner small{display:none}.viewport-shell .main:has(.camp-dashboard) .scene-banner em{font-size:10px;padding:3px 5px}.viewport-shell .camp-secondary summary,.viewport-shell .camp-dashboard>.folio-more summary{font-size:11px;min-height:24px;padding:3px 0}.viewport-shell .exploration-home+.folio-next[data-mainline]{padding:5px 7px}.viewport-shell .exploration-home+.folio-next[data-mainline]>.primary{min-height:32px!important}}
+
+@media(max-width:900px){.viewport-shell .exploration-goal-select label{margin:0;line-height:18px}.viewport-shell .exploration-target details{margin:4px 0 0}.viewport-shell .exploration-goals>h2{line-height:20px;margin:0 0 4px}}
+@media(max-width:599px) and (max-height:650px){.viewport-shell .exploration-goals>h2{display:none}.viewport-shell .exploration-goals{margin-top:0}}
+
+@media(max-width:599px) and (max-height:650px){.viewport-shell .exploration-home{padding:7px;margin:4px 0}.viewport-shell .exploration-home h2{grid-row:1;font-size:14px;line-height:20px}.viewport-shell .exploration-home p{grid-row:2/4;line-height:16px;margin:0}.viewport-shell .exploration-home>.primary{grid-row:2/4;min-height:38px!important}.viewport-shell .exploration-home .goal-home-tools{grid-column:2;grid-row:1;justify-content:flex-end;gap:2px}.viewport-shell .exploration-home .goal-home-tools button{min-height:22px!important;padding:0;font-size:10px!important}.viewport-shell .exploration-home .goal-home-tools button+button{display:none}.viewport-shell .exploration-home+.folio-next[data-mainline]{margin:4px 0}.viewport-shell .folio-shortcuts{margin:4px 0;gap:4px}.viewport-shell .folio-shortcuts button{min-height:36px!important;padding:4px}.viewport-shell .camp-dashboard>.folio-more{margin:4px 0}}
+
+@media(max-width:599px) and (max-height:650px){.viewport-shell [data-page-section="camp:home"]{margin:0;padding:0}.viewport-shell .folio-shortcuts small{display:none}.viewport-shell .folio-shortcuts button span{line-height:18px}.viewport-shell .exploration-home+.folio-next[data-mainline] h2{font-size:12px;line-height:17px;margin:0}.viewport-shell .exploration-home+.folio-next[data-mainline] .folio-eyebrow{line-height:16px}}
+
+@media(max-width:600px){.viewport-shell .region-tabs button{min-width:0;white-space:nowrap;padding-inline:2px!important}.viewport-shell .mine-smelt p{font-size:11px;line-height:1.4}.viewport-shell .mine-smelt summary{font-size:12px}}
+
+.region-camp-controls{display:grid;grid-template-columns:minmax(0,2fr) minmax(92px,1fr);gap:8px}.region-camp-controls label{min-width:0}.region-camp-controls select{display:block;width:100%}.mine-forge-page .mine-smelt{margin-bottom:0}.mine-forge-page .mine-smelt .actions{margin:4px 0}
+
+@media(max-width:600px){.viewport-shell .region-camp-controls label{margin:0;line-height:18px}.viewport-shell .region-camp-controls select{font-size:12px;margin:2px 0}.viewport-shell .mine-forge-page>.idle-card{margin:4px 0;padding:7px}.viewport-shell .mine-forge-page h3{line-height:20px}.viewport-shell .mine-forge-page details{margin:5px 0!important}.viewport-shell .mine-forge-page .note{margin:3px 0!important;line-height:1.4!important}}
+
+.region-camp-footer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:6px}
+.region-camp-footer button{min-width:0;padding-inline:4px!important}
+.region-camp-cost{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 10px;margin:6px 0;padding:6px 0;border-block:1px solid var(--line);font-size:12px}
+.region-camp-cost>div{display:flex;justify-content:space-between;gap:4px;align-items:center;min-width:0}
+.region-camp-cost dt{color:var(--muted)}.region-camp-cost dd{margin:0;white-space:nowrap;font-variant-numeric:tabular-nums}
+.region-camp .material-short,.region-camp-info .material-short{color:var(--red)}
+#region-camp-info{width:440px;height:fit-content;min-height:0}
+#region-camp-info .dialog-header h2{font-size:18px}
+#region-camp-info .dialog-body{flex:0 1 auto;padding:6px 12px 10px}
+#region-camp-info .dialog-header>button{min-width:36px;min-height:36px;padding:4px 8px}
+#region-camp-info .dialog-body h3{font-size:13px;margin:6px 0 3px}
+#region-camp-info .dialog-body p{font-size:12px;line-height:1.5;margin:5px 0}
+#region-camp-info .dialog-tabs button{min-height:36px}
+#region-camp-info .dialog-footer button{min-height:38px;flex:1}
+.region-material-sources{list-style:none;padding:0;margin:0}
+.region-material-sources li{padding:6px 0;border-bottom:1px solid var(--line)}
+.region-material-sources li:last-child{border-bottom:0}
+.region-material-sources li>div{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.region-material-sources li>div+div{margin-top:3px}
+#region-camp-info .region-material-sources button{min-height:32px;padding:4px 8px;font-size:12px}
+.region-material-sources strong,.region-material-sources span{font-size:12px}

@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.69.0';
-import { parseSave } from './save.js?v=0.69.0';
+import { hasOwn } from './utils.js?v=0.82.0';
+import { parseSave } from './save.js?v=0.82.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -9,7 +9,8 @@ const metrics={version:true,reason:true,heroes:{'*':fields('damage healing taken
 const chronicleJob=fields('kind region chapter choice rank');
 const chronicle={version:true,routes:{'*':fields('choices patrol forged')},active:{...chronicleJob,ready:true}};
 const shape = {
-  exploration:{...fields('version position visited flags buildings visiting activeRegion'),pending:fields('node'),contacts:{'*':fields('cycles earned')},marsh:{...fields('version position visited flags'),pending:fields('node')}},
+  campLife:{version:true,people:{'*':{talks:true,jobs:true,lastWork:true}},projects:[true]},
+  exploration:{...fields('version position visited flags buildings visiting activeRegion'),crossRegion:fields('version flags'),pending:fields('node approach'),contacts:{'*':fields('cycles earned')},marsh:{...fields('version position visited flags'),pending:fields('node approach')},ruins:{...fields('version position visited flags'),pending:fields('node approach')},forest:{...fields('version position visited flags'),pending:fields('node approach')},water:{...fields('version position visited flags'),pending:fields('node approach')},mountain:{...fields('version position visited flags'),pending:fields('node approach')}},
   gathering:{version:true,regions:{'*':fields('runs best')}},
   idleDispatch:{...fields('version revision earned'),bank:{'*':true},mission:fields('region hero lastAt carry')},
   grainRoad:{...fields('version route scout won attempts investment lastAt'),last:fields('route outcome cargo wounded fallen troops')},
@@ -28,7 +29,7 @@ const shape = {
   heroes: {'*': fields('status level exp quality')}, inventory: {'*': true},
   camp:{...fields('version day wood food troops wounded mode tactic deployment work sorties arm fallen casualtyCarry'),supply:fields('week month'),buildings:fields('hall farm lumber barracks clinic market')},
   frontier:{version:true,lastAt:true,focus:true,stations:{'*':fields('worker carry bank workRemainder')},posts:{'*':fields('guard safeAt threat carry bank')}},
-  development:{version:true,corps:{'*':true},presets:{'*':fields('team mode tactic deployment')},goal:fields('kind id'),ledger:[{...fields('date wins losses recruits'),gained:{'*':true},spent:{'*':true}}]},
+  development:{version:true,corps:{'*':true},presets:{'*':fields('team mode tactic deployment')},goal:fields('kind id amount'),ledger:[{...fields('date wins losses recruits'),gained:{'*':true},spent:{'*':true}}]},
   campaign:{version:true,mastery:{'*':true},daily:{date:true,uses:{'*':true}},weekly:{'*':fields('tier score elapsed hp')}},
   growth:{version:true,skills:{'*':true},mounts:{'*':fields('rank intimacy riding')}},
   equipment: [fields('uid item plus hero locked refine')],

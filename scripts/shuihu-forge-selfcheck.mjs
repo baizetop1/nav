@@ -7,6 +7,7 @@ import {attributes} from '../public/game/js/hero.js';
 import {applySets} from '../public/game/js/equipment-sets.js';
 import {FORGE_EQUIPMENT,FORGE_RECIPES,forgeCatalog} from '../public/game/js/forge-catalog.js';
 import {RECIPES} from '../public/game/js/provisions.js';
+import {acquisitionSources} from '../public/game/js/source-catalog.js';
 import {specialDropTable} from '../public/game/js/special-dungeons-data.js';
 import {exportSave,importSave} from '../public/game/js/portable.js';
 import {CloudClient} from '../public/game/js/cloud.js';
@@ -32,7 +33,7 @@ for(const [count,expected] of [[1,{hp:100,defense:100}],[2,{hp:100,defense:108}]
 for(const state of [guard,quick]){let b=act(state,'specialStart',{id:'mine',tier:1});const unit=b.battle.team.find(u=>u.id==='linchong');assert.ok(unit);b=win(b);assert.equal(b.specialDungeons.clears.mine_1,1);assert.deepEqual(importSave(exportSave(b,{id:1,name:'打造测试'},d),d).state,b);}
 const locked=act(guard,'equipLock',{id:guard.equipment.find(e=>e.item==='bastion_spear').uid,locked:true});reject(locked,'dismantle',{id:locked.equipment.find(e=>e.item==='bastion_spear').uid},/锁定/);
 for(const [where,id] of [['mine','dark_iron'],['mine','blueprint'],['ruins','blueprint'],['ruins','skill_page']])assert.ok(specialDropTable(where,1).some(e=>e.id===id&&e.rate>0&&e.rate<1));
-const html=forgeCatalog(base,d,(label,a)=>'<button data-command='+JSON.stringify(a)+'>'+label+'</button>',String);assert.match(html,/新式兵甲/);assert.match(html,/ui_recipeSource/);assert.match(html,/ui_specialView/);assert.ok(!html.includes('undefined'));assert.ok(!html.includes('购买 · 0'));
+const html=forgeCatalog(base,d,(label,a)=>'<button data-command='+JSON.stringify(a)+'>'+label+'</button>',String);assert.match(html,/新式兵甲/);assert.match(html,/ui_sources/);for(const id of ['blueprint','dark_iron']){assert.match(html,new RegExp('\"id\":\"'+id+'\"'));const sources=acquisitionSources(base,d,id);assert.ok(sources.some(r=>r.command.type==='ui_specialView'));if(id==='blueprint')assert.ok(sources.some(r=>r.command.type==='ui_recipeSource'));}assert.ok(!html.includes('undefined'));assert.ok(!html.includes('购买 · 0'));
 const bundle=await build({entryPoints:[new URL('../cloud/shuihu/worker.js',import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1')],bundle:true,format:'esm',platform:'browser',write:false});const worker=(await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'))).default;
 const db=new DatabaseSync(':memory:');try{
  db.exec(fs.readFileSync(new URL('../cloud/shuihu/schema.sql',import.meta.url),'utf8'));

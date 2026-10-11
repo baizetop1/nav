@@ -6,7 +6,7 @@ export const MARSH_NODES = {
  garden:{name:'泽兰药圃',links:['reeds','hut','poison','nest'],text:'水沟被枯苇堵住，几畦泽兰还活着。冯伯指出埋在泥里的排水口。',purpose:'修好排水沟，芦苇泽派遣每批泽兰额外 +1。'},
  nest:{name:'沉船蛇巢',links:['garden'],text:'船舱里有几只封蜡的药箱，蛇群却占满了船板。先盯住那条盘在箱顶的大蛇。',purpose:'首蛇会蓄势施放全队毒雾。取回药箱，再找安道全。',battle:'marshnest'}
 };
-export const MARSH_FLAGS=['met','won_reeds','won_poison','rescued','tended','won_nest','invited','cache'];
+export const MARSH_FLAGS=['met','won_reeds','won_poison','rescued','tended','won_nest','invited','cache','care_supplies','return_met','source_checked','won_reedvenom','return_paid'];
 export const marshHas=(s,flag)=>!!s?.exploration?.marsh?.flags.includes(flag);
 export function marshGate(s,id){
  if(!Object.hasOwn(MARSH_NODES,id))return '没有这个地点。';
@@ -18,9 +18,17 @@ export function marshGate(s,id){
 export function marshGoal(s){
  if(!marshHas(s,'met'))return {node:'hut',text:'先到采药草庐，与安道全交谈。'};
  if(!marshHas(s,'won_reeds')&&!marshHas(s,'won_poison'))return {node:'reeds',text:'走通一条水路。浅水苇道较稳妥；毒水湾胜利另得药草 3。'};
- if(!marshHas(s,'rescued'))return {node:'hut',text:'回草庐救治药农：解毒丹 1，或药草 6、粗布 2。'};
+ if(!marshHas(s,'rescued'))return {node:'hut',text:marshHas(s,'care_supplies')?'回草庐救治药农：解毒丹 1，或药草 6、粗布 2。':'水路已通。草庐门后有备用药料，可取来救治药农、修整药圃。'};
  if(!marshHas(s,'tended'))return {node:'garden',text:'到泽兰药圃清沟护苗，需要木料 3、粗布 1。'};
- if(!marshHas(s,'won_nest')){const n=s.specialDungeons?.clears.marsh_1||0;return n<5?{node:'reeds',text:'两条水路合计走通 '+n+'/5 趟，再去沉船取药箱。'}:{node:'nest',text:'沉船入口已找到。备好解毒和打断，去取回药箱。'};}
+ if(!marshHas(s,'won_nest'))return {node:'nest',text:'水沟已通，去沉船取回药箱。首蛇喷毒前可用打断。'};
  if(!marshHas(s,'invited'))return {node:'hut',text:'药箱已找回，回草庐邀请安道全入寨。'};
- return {node:'garden',text:'药圃已恢复。可派遣采药，或去蛇巢寻找药匣装备。'};
+ if(!marshHas(s,'return_met'))return {node:'hut',text:'冯伯捎来一把发黄的泽兰，安道全想请你去草庐看看。'};
+ if(!marshHas(s,'source_checked'))return {node:'garden',text:'到泽兰药圃查看进水沟，找出药苗发黄的缘由。'};
+ if(!marshHas(s,'won_reedvenom'))return {node:'nest',text:'蛇群盘住了进水口。去沉船清渠除蛇，带上解毒药或能打断的好汉。'};
+ if(!marshHas(s,'return_paid'))return {node:'hut',text:'进水口已疏通，回草庐把新采的泽兰交给安道全。'};
+ return {node:'garden',text:'冯伯留好了采药路。清渠除蛇可重复取泽兰；配药间每天可煎一份药引。',label:'回寨煎药',command:{type:'ui_section',view:'camp',id:'exploration',region:'marsh',building:'clinic'}};
 }
+export const MARSH_REWARDS={supplies:{herb:6,cloth:3,wood:3},thanks:{marsh_orchid:4,andaoquan_token:2,jiedudan:2}};
+export const MARSH_DECOCT={items:{marsh_orchid:4,herb:2},silver:20,output:'medicinal_extract'};
+export const marshRoute=(id,approach='direct')=>id==='nest'&&approach==='reedvenom'?'reedvenom':MARSH_NODES[id]?.route;
+export const hasMarshRevisit=s=>!!s.exploration?.marsh?.flags.some(k=>['care_supplies','return_met','source_checked','won_reedvenom','return_paid'].includes(k))||[s.battle?.context,s.lastBattle?.context,s.specialDungeons?.last].some(c=>c?.route==='reedvenom'||c?.id==='marshnest'&&(s.specialDungeons?.clears['marsh_'+c.tier]||0)<5)||[1,2,3].some(t=>(s.specialDungeons?.clears['marshnest_'+t]||0)>0&&(s.specialDungeons?.clears['marsh_'+t]||0)<5);

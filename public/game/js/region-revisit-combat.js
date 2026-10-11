@@ -1,0 +1,13 @@
+import {medicineBoatMove,medicineBoatThreat} from './cross-region-combat.js?v=0.82.0';
+const active=(b,u,id)=>u.statuses.some(s=>s.id===id&&s.expiresAt>b.elapsed);
+const standing=u=>u?.hp>0;
+export function revisitBossMove(state,u,api,strike){if(medicineBoatMove(state,u,api,strike))return true;const b=state.battle,r=b.context.route,boss=u.boss;if(!['bellbreak','crossfire','backwash'].includes(r))return false;
+ if(!boss.pendingAt&&boss.readyAt===b.elapsed){boss.pendingAt=b.elapsed+3000;api.log(b,'【首领蓄势 · 3秒】'+(r==='bellbreak'?'摇钟人要压住全队气势。击倒或眩晕最后一位摇钟人，也可打断头目。':r==='crossfire'?'两边弩手要追射伤重的同伴。先除去弩手，或打断头目、收势固守。':boss.phase===1?'回头浪来了。保持固守，或再次打断；未固守会损失怒气。':'前浪将至。切换固守可减伤；这波之后还有回头浪。'));return true;}
+ if(boss.pendingAt!==b.elapsed)return true;
+ boss.pendingAt=0;const second=boss.phase===1;if(r==='backwash'){boss.phase=second?0:1;boss.readyAt=b.elapsed+(second?12000:3000);}else boss.readyAt=b.elapsed+12000;
+ if(active(b,u,'stun')){api.log(b,'【蓄势中断】本次招式未出。'+(r==='backwash'&&!second?'后面还有回头浪，留意下一次蓄势。':''));return true;}
+ if(r==='bellbreak'){const bell=b.enemy.at(-1);if(standing(bell)&&!active(b,bell,'stun')){for(const t of b.team.filter(standing)){api.addStatus(t,{id:'weaken',value:.35,turns:3},b.elapsed);t.rage=Math.max(0,t.rage-15);}api.log(b,'【钟声压阵】全队攻击降低 35% 六秒，怒气各减 15。');}else{api.addStatus(u,{id:'armor_break',value:1,turns:3},b.elapsed);api.log(b,'【钟声断了】摇钟人失去接应，头目破甲六秒；全队未受钟声压制。');}return true;}
+ if(r==='crossfire'){const bows=[b.enemy[1],b.enemy.at(-1)].filter(t=>standing(t)&&!active(b,t,'stun'));for(const bow of bows){const t=b.team.filter(standing).sort((a,c)=>a.hp/a.maxHp-c.hp/c.maxHp)[0];if(t)strike(state,bow,t,{kind:'damage',rate:b.orders?.stance==='guard'?.525:1.05},'弩手追射',api);}if(!bows.length){api.addStatus(u,{id:'weaken',value:.3,turns:3},b.elapsed);api.log(b,'【弩阵失援】两名弩手都未接应，连射停止，头目攻击降低 30% 六秒。');}else api.log(b,'【弩手追射】'+bows.length+' 名弩手已射击。先除去一名就能少挨一轮。');return true;}
+ const guarded=b.orders?.stance==='guard';for(const t of b.team.filter(standing)){strike(state,u,t,{kind:'damage',rate:(second?1.5:.9)*(guarded?.4:1)},second?'回头浪':'前浪撞船',api);if(second&&!guarded)t.rage=Math.max(0,t.rage-20);}api.log(b,second?(guarded?'【扛住回头浪】固守减伤，怒气未失。':'【回头浪】全队受撞，怒气各减 20。'):'【前浪已过】三秒后又将蓄势，别急着松开船缆。');return true;
+}
+export function revisitThreat(b){const medicine=medicineBoatThreat(b);if(medicine)return medicine;if(b.context.route==='bellbreak')return ['钟声压阵','最后一位摇钟人使全队攻击 -35% 六秒、怒气 -15。击倒或眩晕摇钟人可使头目破甲，也可打断头目。'];if(b.context.route==='crossfire')return ['弩手追射','第二位和最末位弩手各追射伤重的同伴。除去一名少一轮；固守减伤 50%，也可眩晕弩手或打断头目。'];if(b.context.route==='backwash')return [b.enemy[0]?.boss?.phase===1?'回头浪':'前浪撞船','前浪之后三秒又会蓄势，接着撞回头浪。两波分别固守减伤 60% 或打断；回头浪未固守会损失怒气。'];return null;}

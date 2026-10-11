@@ -1,11 +1,12 @@
+import {prepareScreenLayout,beforeLayoutPaint,installScreenLayout,screenDetailOpen} from './screen-layout.js?v=0.82.0';
 // CSS column fragmentation keeps text lines and controls intact while paging by viewport.
 const mobile=matchMedia('(max-width:900px)'),books=new Map(),positions=new Map();let queued=0,observer,pressed=false;
-export const screenInteractionActive=()=>mobile.matches&&pressed;
+export const screenInteractionActive=()=>mobile.matches&&(pressed||screenDetailOpen());
 const gap=16;
 function focused(){const el=document.activeElement;return el?.id?{id:el.id,start:el.selectionStart,end:el.selectionEnd}:null;}
 function restoreFocus(saved){const el=saved&&document.getElementById(saved.id);if(el){el.focus({preventScroll:true});if(typeof saved.start==='number'&&el.setSelectionRange)try{el.setSelectionRange(saved.start,saved.end);}catch{}}}
 function unwrap(host){const book=books.get(host);if(!book)return;positions.set(book.key,book.page);book.nav.remove();const fragment=document.createDocumentFragment();while(book.paper.firstChild)fragment.append(book.paper.firstChild);book.window.replaceWith(fragment);host.classList.remove('screen-paged');host.querySelectorAll('.page-keep,.page-flow').forEach(el=>el.classList.remove('page-keep','page-flow'));books.delete(host);}
-export function beforeScreenPaint(){const focus=focused();observer?.disconnect();for(const host of [...books.keys()])if(!host.closest('dialog'))unwrap(host);return focus;}
+export function beforeScreenPaint(){const focus=focused();observer?.disconnect();beforeLayoutPaint(document.getElementById('main'));for(const host of [...books.keys()])if(!host.closest('dialog'))unwrap(host);return focus;}
 function follow(host,index,user=false){const b=books.get(host);if(!b)return;b.page=Math.max(0,Math.min(b.count-1,Math.trunc(index)||0));positions.set(b.key,b.page);b.window.scrollLeft=b.page*(b.width+gap);b.nav.querySelector('output').textContent='/ '+b.count;b.nav.querySelector('input').value=String(b.page+1);b.nav.querySelector('[data-screen-prev]').disabled=b.page===0;b.nav.querySelector('[data-screen-next]').disabled=b.page===b.count-1;if(user&&host.id==='activity-log')window.dispatchEvent(new CustomEvent('baize-log-page',{detail:{latest:b.page===b.count-1}}));}
 function paginate(host,key,reset=false){
  if(!host||!host.isConnected||!host.clientHeight)return;
@@ -14,7 +15,7 @@ function paginate(host,key,reset=false){
  host.scrollTop=0;
  const style=getComputedStyle(host),available=host.clientHeight-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom);
  if(host.scrollHeight<=host.clientHeight+1)return;
- const fixed=[...host.children].filter(el=>el.matches('.section-picker,.page-sections,.journey-sections,.onboarding-guide'));
+ const fixed=[...host.children].filter(el=>el.matches('.section-picker,.page-sections,.journey-sections,.onboarding-guide,.battle-transport'));
  const first=document.createElement('div'),paper=document.createElement('div'),nav=document.createElement('nav');
  first.className='screen-window';paper.className='screen-paper';nav.className='screen-pager';nav.dataset.screenUi='true';nav.setAttribute('aria-label','内容翻页');nav.innerHTML='<button type="button" data-screen-prev aria-label="上一页">上一页</button><label class="screen-page-jump"><span class="sr-only">跳到第几页</span><input type="number" min="1" aria-label="跳到第几页"><output aria-live="polite"></output></label><button type="button" data-screen-next aria-label="下一页">下一页</button>';
  const nodes=[...host.childNodes].filter(el=>!fixed.includes(el));host.classList.add('screen-paged');first.append(paper);for(const el of nodes)paper.append(el);host.append(first,nav);
@@ -46,7 +47,7 @@ function adaptDialog(dialog){
 }
 function observe(){observer?.observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['open','hidden']});}
 function refresh(){queued=0;observer?.disconnect();for(const host of books.keys())if(!host.isConnected)books.delete(host);const focus=focused();
- const main=document.getElementById('main');if(main?.closest('.viewport-shell'))paginate(main,'main:'+main.dataset.screen+':'+(main.querySelector('[data-page-section]')?.dataset.pageSection||main.querySelector('[data-journey-section]')?.dataset.journeySection||''));
+ const main=document.getElementById('main');if(!mobile.matches&&screenDetailOpen())beforeLayoutPaint(main);if(main?.closest('.viewport-shell')&&!screenDetailOpen()){unwrap(main);prepareScreenLayout(main);paginate(main,'main:'+main.dataset.screen+':'+(main.querySelector('[data-page-section]')?.dataset.pageSection||main.querySelector('[data-journey-section]')?.dataset.journeySection||''));}
  for(const dialog of document.querySelectorAll('dialog[open]')){if(dialog.dataset.dialogLayout==='grid')continue;if(mobile.matches)adaptDialog(dialog);else {const body=dialog.querySelector('.dialog-body');if(body)unwrap(body);}}
  const log=document.getElementById('activity-log');if(log?.clientHeight)paginate(log,'activity-log');
  restoreFocus(focus);observe();
@@ -57,6 +58,7 @@ export function afterScreenPaint(focus,reset=false){
  if(reset)positions.delete(key);refresh();if(!reset)restoreFocus(focus);
 }
 export function installScreenPages(){
+ installScreenLayout({release:unwrap});document.addEventListener('baize-screen-layout',schedule);
  document.addEventListener('pointerdown',e=>{pressed=!!e.target.closest('#main,dialog,.activity-panel');},true);document.addEventListener('pointerup',()=>{pressed=false;},true);document.addEventListener('pointercancel',()=>{pressed=false;},true);window.addEventListener('blur',()=>{pressed=false;});
  observer=new MutationObserver(records=>{if(records.some(r=>{const el=r.target.nodeType===1?r.target:r.target.parentElement;return el?.closest('dialog[open]')&&!el.closest('.screen-pager');}))schedule();});observe();
  document.addEventListener('toggle',e=>{if(e.target.tagName==='DETAILS')schedule();},true);

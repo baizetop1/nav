@@ -1,6 +1,8 @@
-import {battleSkillMode} from './battle.js?v=0.69.0';
-import {storyObjective} from './story-guide.js?v=0.69.0';
-import {LESSONS} from './lessons-data.js?v=0.69.0';
+import {firstSessionGoal,firstBattleHint} from './first-session.js?v=0.82.0';
+import {explorationGoalQuote,explorationResume} from './exploration-goals.js?v=0.82.0';
+import {battleSkillMode} from './battle.js?v=0.82.0';
+import {storyObjective} from './story-guide.js?v=0.82.0';
+import {LESSONS} from './lessons-data.js?v=0.82.0';
 
 // Guidance is derived from real progress. Only the display preference is local.
 export const guideKey=(s,slot)=>'baize_shuihu_guide:'+slot+':'+s.startedAt;
@@ -12,6 +14,8 @@ const target=(type,extra={})=>({type,...extra});
 export function guidance(s,d,screen,section='',paused=false){
  const step=(id,title,text,targets)=>({id,title,text,targets});
  if(['welcome','save','menu','chronicle'].includes(screen))return null;
+ // Regional maps already show a progress-derived objective beside their places.
+ if(screen==='map'&&section==='region')return null;
  if(screen==='camp'&&section==='grainRoad'){const x=s.grainRoad;return !x?.won?step('grain-road','先选一种办法','护送偏向长期供粮；侦察后剿匪收获居中；强攻缴获多，但敌军更强。点出征方案先看敌情，取消不扣资源。',[target('grainRoadBattle')]):!x.investment?step('grain-invest','用战果安排后续经营','粮仓增加供粮，救护站接回伤兵。二选一建成后保留，物资不足可先采集。',[target('grainRoadInvest')]):null;}
  if(screen==='battle'){
   const b=s.battle;if(!b||b.outcome)return null;
@@ -22,7 +26,8 @@ export function guidance(s,d,screen,section='',paused=false){
    const pending=b.enemy.some(e=>e.boss?.pendingAt>b.elapsed);
    return step('interrupt-'+pending,'截住敌人蓄势',pending?'敌人正在蓄势，点王进的招式打断。':paused?'先点继续交战，等敌人蓄势时再用打断招式。':'等敌人蓄势，打断按钮亮起后再点。',[pending?target('battleSkill',{hero:'wangjin',id:LESSONS.interrupt.skill}):target('ui_battlePause')]);
   }
-  if(battleSkillMode(s)==='manual')return step('skill-mode','普攻自动，招式要另选','想先熟悉流程，可点自动技能，由好汉自行施招；也可保留手动，自己点招式。',[target('battleSkillMode',{mode:'auto'})]);
+  const firstHint=firstBattleHint(s,d,paused);if(firstHint)return firstHint;
+  if(battleSkillMode(s)==='manual')return {...step('skill-mode','选择招式释放方式','可开启自动施招，或在招式页手动出招。药品始终由你使用。',[target('battleSkillMode',{mode:'auto'})]),action:{label:'开启自动施招',command:{type:'battleSkillMode',mode:'auto'}}};
   return step('battle','看清敌情再出手',paused?'战斗已暂停。点继续交战；需要调整时可再暂停。':'队伍正在交战。金边按钮可暂停观察，战斗结束会自动弹出结果。',[target('ui_battlePause')]);
  }
  if(screen==='scheme')return step('scheme','先看军汉的反应','每次安排都会改变局面。先让军汉疲累、放下戒心，再收网。',[]);
@@ -43,7 +48,9 @@ export function guidance(s,d,screen,section='',paused=false){
  };
  const tip=tips[screen+':'+section];if(tip)return step(...tip);
  if(screen!=='map'&&!(screen==='camp'&&(!section||section==='home')))return null;
+ const first=screen==='camp'&&!s.development?.goal&&firstSessionGoal(s,d);if(first)return step('first-'+first.id,first.title,first.text,[first.command]);
  const g=storyObjective(s,d),place=g.map?d.by.maps[g.map].name:null;
+ if(screen==='camp'&&(s.exploration||s.development?.goal)){const q=explorationGoalQuote(s,d),next=q?.next||explorationResume(s);return step('exploration-home',q?.name||'接着探索这片地区',next.text,[next.command]);}
  if(screen==='camp')return step('home','先沿主线走','金边按钮通向当前剧情。采集、招贤和营建可以随时回来做。',[target('ui_storyResume')]);
  if(g.view)return step('need-'+g.view+'-'+g.section,g.title,g.reason||g.detail,[target('ui_storyResume')]);
  if(g.map!==s.location)return step('travel-'+g.map,'下一站：'+place,'点金边按钮前往'+place+'，到达后会提示当地要办的事。',[target('ui_storyResume')]);
@@ -54,13 +61,13 @@ export function guidance(s,d,screen,section='',paused=false){
 export function guidePanel(g,enabled,esc){
  if(!g)return '';
  if(!enabled)return '<div class="onboarding-guide guide-closed"><button type="button" data-guide-toggle>开启操作指引</button></div>';
- return '<aside class="onboarding-guide" aria-label="操作指引" data-guide-step="'+esc(g.id)+'"><div><strong>'+esc(g.title)+'</strong><button type="button" data-guide-toggle aria-label="收起操作指引">收起</button></div><p id="operation-guide-text">'+esc(g.text)+'</p><nav>'+(g.targets.length?'<button type="button" data-guide-locate>定位按钮</button>':'')+'<button type="button" data-command="'+esc(JSON.stringify({type:'ui_storyResume'}))+'">'+(g.id==='home'?'查看主线':'接回主线')+'</button></nav></aside>';
+ return '<aside class="onboarding-guide'+(g.action?' guide-prompt':'')+'" aria-label="操作指引" data-guide-step="'+esc(g.id)+'"><div><strong>'+esc(g.title)+'</strong><button type="button" data-guide-toggle aria-label="收起操作指引">收起</button></div><p id="operation-guide-text">'+esc(g.text)+'</p><nav>'+(g.action?'<button type="button" data-command="'+esc(JSON.stringify(g.action.command))+'">'+esc(g.action.label)+'</button>':g.targets.length?'<button type="button" data-guide-locate>定位按钮</button>':'')+(g.action?'':'<button type="button" data-command="'+esc(JSON.stringify({type:'ui_storyResume'}))+'">'+(g.id==='home'?'查看主线':'接回主线')+'</button>')+'</nav></aside>';
 }
 export function highlightGuidance(root,g){
  for(const el of root.querySelectorAll('[data-guide-target]')){el.removeAttribute('data-guide-target');if(el.getAttribute('aria-describedby')==='operation-guide-text')el.removeAttribute('aria-describedby');}
  if(!g)return [];
  const buttons=[...root.querySelectorAll('#main button[data-command]')].filter(b=>!b.closest('.onboarding-guide')&&!b.disabled);
- for(const match of g.targets){const selected=buttons.filter(b=>{try{const a=JSON.parse(b.dataset.command);return Object.entries(match).every(([k,v])=>a[k]===v);}catch{return false;}}).filter(b=>!b.closest('[hidden]'));
+ for(const match of g.targets){const selected=buttons.filter(b=>{try{const a=JSON.parse(b.dataset.command);return Object.entries(match).every(([k,v])=>a[k]===v);}catch{return false;}}).filter(b=>{for(let el=b;el&&el.id!=='main';el=el.parentElement)if(el.hidden&&!el.parentElement?.classList.contains('screen-deck'))return false;return true;});
   if(selected.length){for(const b of selected){b.dataset.guideTarget='true';b.setAttribute('aria-describedby','operation-guide-text');}return selected;}
  }
  return [];

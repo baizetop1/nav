@@ -1,0 +1,222 @@
+/* Mobile work pages: one selection at a time, with the original controls intact. */
+@media(max-width:900px){
+ #main [hidden]{display:none!important}
+ .screen-choice{display:flex;align-items:center;gap:8px;margin:4px 0;font-size:12px;min-width:0}
+ .screen-choice select{flex:1;min-width:0;margin:0;max-width:100%}
+ .screen-deck{display:block!important;margin-block:4px!important}
+ .screen-deck>article,.screen-deck>section{margin-block:4px!important}
+ #main>[data-page-section]>.section-top,#main>.section-top,#main>[data-page-section]>div>.section-top{display:none}
+ #main .onboarding-guide.guide-off{margin:0}
+ #main .focused-hero{padding:6px 8px}
+ #main .focused-hero>.hero-portrait{float:left;width:30px!important;height:38px!important;margin:0 8px 3px 0;aspect-ratio:auto}
+ #main .focused-hero>h2{min-height:38px;margin:0!important;font-size:14px;display:flex;align-items:center}
+ #main .roster-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+ #main .roster-tile{min-height:78px!important;margin:0!important;padding:5px!important}
+ #main .roster-pager{margin:4px 0;gap:4px}
+ #main .roster-pager button{min-height:32px!important;padding:3px 6px!important}
+ #main .roster-grid+.roster-pager{display:none}
+ #main .team-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+ #main .team-fields label{min-width:0;font-size:11px}
+ #main .team-fields select{font-size:12px;padding-inline:3px;min-width:0;width:100%}
+ #main .hero-progression .budget-panel{margin-block:4px}
+ #main .inventory-row{padding:6px 8px!important;min-height:62px!important}
+ #main .inventory-pagination{margin:4px 0;gap:5px}
+ #main .inventory-pagination button{min-height:32px!important}
+ #main .section-hero-picker{display:flex;align-items:center;gap:6px;font-size:11px;margin:3px 0}
+ #main .section-hero-picker select{flex:1;min-width:0;margin:0}
+ #main details>summary{cursor:pointer}
+ #screen-detail .dialog-header h2{font-size:15px}
+ #screen-detail .dialog-header>button{min-height:32px;min-width:32px;padding:4px}
+ #screen-detail .dialog-body{font-size:12px}
+ #screen-detail .dialog-body p{font-size:12px;line-height:1.45;margin:5px 0}
+ #screen-detail .dialog-footer button{min-height:36px}
+}
+
+@media(max-width:900px){
+ #main [data-page-section]>.section-top{display:none}
+ #main .page-sections{padding:2px 0;margin-bottom:5px}
+ #main .mobile-section-select{font-size:0!important}
+ #main .mobile-section-select select{min-height:34px;font-size:13px!important}
+ #main .hero-card.focused-hero{padding:6px 8px!important}
+ #main #roster-detail{margin-top:4px}
+ #main .focused-hero>.hero-portrait{display:none}
+ #main .focused-hero>h2{min-height:20px;display:block}
+ #main .focused-hero .statline{gap:3px 8px;margin:5px 0;font-size:11.5px}
+ #main .focused-hero .statline span{padding:0}
+ #main .focused-hero .screen-choice{font-size:11px;margin:4px 0}
+ #main .focused-hero .screen-choice select{min-height:32px}
+ #main .battle-transport{position:static;display:flex;flex-wrap:wrap;gap:4px;margin:0;padding:4px 6px}
+ #main .battle-state{font-size:12px;margin:0;min-width:0}
+ #main .battle-time{font-size:12px;margin-left:auto}
+ #main .battle-transport .battle-running{display:flex;gap:4px}
+ #main .battle-transport button{min-height:30px;padding:3px 5px;font-size:11px}
+ #main .battle-field{padding:6px;margin:4px 0}
+ #main .battle-field-row{gap:4px}
+ #main .battle-field-unit{min-width:0}
+ #main .battle-field-unit button{padding:3px;min-height:32px;font-size:11px}
+ #main .battle-field-unit strong{font-size:11px}
+ #main .battle-field .note,#main .battle-field-unit small{font-size:10.5px;line-height:1.3;margin:2px 0}
+ #main .battle-threat{padding:5px 7px;margin:4px 0}
+ #main .battle-threat>strong{font-size:12px}
+ #main .battle-threat p{font-size:11px;margin:3px 0;line-height:1.35}
+ #main .battle-threat .actions button{font-size:11px;min-height:30px;padding:3px 5px}
+ #main .battle-grid .battle-unit{padding:6px;margin:4px 0}
+ #main .battle-unit .hero-portrait{display:none}
+ #main .battle-medicines .medicine-grid{margin:4px 0}
+ #main .battle-medicines>.note{font-size:11px}
+ #main .roster-heading .note{display:none}
+ #main .roster-heading{margin:0;min-height:22px}
+ #main .roster-heading h2{font-size:14px!important}
+ #main .roster-filter-fold{margin:3px 0;padding:0}
+ #main .roster-filter-fold summary{min-height:28px;padding:3px 0}
+ #main .roster-grid{grid-auto-rows:76px;align-items:stretch}
+ #main .roster-grid .roster-tile{height:76px!important;max-height:76px;min-height:0!important}
+}
+
+@media(max-width:900px){
+ .footer .footer-guide{display:block;margin:0;padding:0;border:0;background:none}
+ .footer .footer-guide button{font-size:10px;padding:0 3px;min-height:22px;white-space:nowrap;border:0;background:none}
+ #main .onboarding-guide.guide-compact{display:flex;align-items:center;gap:5px;padding:3px 6px;margin:3px 0}
+ #main .guide-compact>div>strong{display:none}
+ #main .guide-compact>div{margin-left:auto}
+ #main .guide-compact .guide-brief{margin:0;min-width:0}
+ #main .guide-brief>summary{min-height:28px;padding:4px 0;font-size:12px;line-height:1.4}
+ #main .focused-hero .actions{gap:4px;margin:5px 0;display:flex;flex-wrap:wrap}
+ #main .focused-hero .actions>button{min-height:32px;font-size:12px;padding:4px 7px}
+ #main .focused-hero .actions>.secondary:last-child{flex-basis:auto}
+ #main .production-panel>.section-top h2{font-size:14px}
+ #main .production-panel .section-top .kicker{display:none}
+ #main .production-panel>.section-top{align-items:center;margin:3px 0}
+ #main .production-panel>.section-top button{min-height:32px;padding:4px 6px;font-size:12px}
+ #main .production-count{font-size:18px;line-height:1.2;margin:4px 0}
+}
+
+@media(max-width:900px){
+ #main .world-atlas .atlas-region-picker{font-size:12px;margin:4px 0}
+ #main .world-atlas .atlas-region-picker select{min-height:32px}
+ #main .world-atlas .atlas-chart{display:block}
+ #main .world-atlas .atlas-nodes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+ #main .world-atlas .atlas-region>h2{font-size:13px;margin:4px 0}
+ #main .world-atlas .atlas-node{padding:0;border-radius:7px;margin:0;min-width:0}
+ #main .world-atlas .atlas-place{padding:4px 6px;min-height:43px;display:block;width:100%;font-size:12px}
+ #main .world-atlas .atlas-place span{display:block;font-size:10.5px}
+ #main .world-atlas .atlas-node>.atlas-exits,#main .world-atlas .atlas-node>.atlas-feature,#main .world-atlas .atlas-node>button:not(.atlas-place){display:none}
+ #main .atlas-target{padding:7px;margin:4px 0}
+ #main .atlas-target h2{font-size:14px}
+ #main .atlas-target p{margin:5px 0;font-size:12px;line-height:1.5}
+ #main .atlas-target .atlas-locks{font-size:11.5px;margin:4px 0;padding-left:15px}
+}
+
+@media(max-width:900px){
+ #main .screen-paper>.section-top{display:none}
+ #main .world-atlas .atlas-nodes{display:grid!important}
+ #main .world-atlas .atlas-region>h2{display:none}
+ #main .world-atlas .atlas-place{min-height:38px;padding:3px 6px;line-height:1.3}
+ #main .world-atlas .atlas-node{min-height:0!important}
+ #main .screen-info{margin:4px 0}
+ #main .growth-skill{padding:6px!important}
+ #main .growth-skill h3{font-size:13px;margin:3px 0}
+ #main .growth-skill p{font-size:11.5px;line-height:1.4;margin:4px 0}
+ #main .growth-skill>button{min-height:32px;font-size:12px;padding:4px 6px}
+ #main .corps-panel p,#main .quality-panel p{font-size:12px;line-height:1.45;margin:5px 0}
+ #main .corps-panel>.kicker{display:none}
+}
+
+@media(max-width:900px){
+ #main :is(.production-panel,.quality-panel,.corps-panel,.rotation-section,.frontier-map,.realm-section){padding:6px 8px;margin:4px 0}
+ #main :is(.production-panel,.quality-panel,.corps-panel,.growth-skill) h3{font-size:13px;line-height:1.4;margin:4px 0}
+ #main .production-grid .card{padding:6px 8px;margin:0}
+ #main .production-grid .card p{margin:4px 0}
+ #main .production-grid select{margin:3px 0;min-height:32px}
+ #main .production-grid button{min-height:32px;font-size:12px;padding:4px 6px}
+ #main .quality-steps{gap:10px}
+ #main .quality-steps span{width:26px;height:26px;font-size:16px}
+ #main .quality-panel>button{min-height:32px;font-size:12px;padding:4px 6px}
+ #main .world-atlas .atlas-place b{display:block;font-size:12px;line-height:16px}
+ #main .world-atlas .atlas-place span{margin:0;line-height:14px}
+ #main .world-atlas .atlas-region{margin:0;padding:0}
+ #main .world-atlas .atlas-region-picker{display:flex;align-items:center;gap:6px}
+ #main .world-atlas .atlas-region-picker select{margin:0;min-width:0;flex:1}
+}
+
+@media(max-width:900px){
+ .viewport-shell #main .world-atlas{margin:0}
+ .viewport-shell #main .mobile-section-select{margin:0}
+ .viewport-shell #main .production-grid label{display:flex;align-items:center;gap:6px;margin:4px 0}
+ .viewport-shell #main .production-grid select{flex:1;min-width:0}
+ .viewport-shell #main .production-panel{margin:2px 0}
+ .viewport-shell #main .quality-panel{padding:5px 7px}
+ .viewport-shell #main .quality-panel>button{min-height:32px;padding:4px 6px}
+}
+
+@media(max-width:900px){.screen-choice[hidden],.screen-deck>[hidden]{display:none!important}}
+
+@media(max-width:900px){
+ #main .onboarding-guide.guide-prompt{padding:5px 7px;margin:3px 0}
+ #main .guide-prompt p{font-size:11px;line-height:1.35;margin:3px 0}
+ #main .guide-prompt strong{font-size:12px}
+ #main .guide-prompt nav{margin:3px 0 0}
+ #main .guide-prompt nav button{min-height:32px;padding:3px 8px;font-size:12px}
+}
+
+@media(max-width:900px) and (max-height:700px){
+ #main .onboarding-guide.guide-prompt{display:grid;grid-template-columns:minmax(0,1fr) auto 24px;align-items:center;gap:4px}
+ #main .guide-prompt>div{display:contents}
+ #main .guide-prompt>div>strong{grid-column:1;grid-row:1}
+ #main .guide-prompt>div>button{grid-column:3;grid-row:1;min-height:28px;padding:0;font-size:10px}
+ #main .guide-prompt nav{grid-column:2;grid-row:1;margin:0}
+ #main .guide-prompt p{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ #main .battle-field-row.field-single>.battle-field-unit{grid-column:1/-1}
+
+ #main .battle-field-row{display:grid!important}
+ #main .battle-field-row[data-field-count="2"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #main .battle-field-row[data-field-count="4"]{grid-template-columns:repeat(4,minmax(0,1fr))}
+ #main .guide-prompt>div>button{white-space:nowrap}
+
+ #main .battle-field-unit{padding:1px}
+ #main .battle-field-unit button{padding:2px;font-size:10.5px;line-height:1.25}
+ #main .battle-field-unit strong{min-height:18px;padding:1px;line-height:1.25}
+ #main .battle-field-unit progress{margin:2px 0}
+ #main .battle-field-unit small{margin:1px 0;min-height:11px;font-size:10px}
+}
+
+.mine-people { display:flex; gap:6px; margin:6px 0; }
+.mine-people button { flex:1; min-width:0; padding:5px 7px; font-size:12px; }
+
+.region-detail-tools { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:6px; }
+.region-detail-tools details { margin:0; flex:1; }
+@media(max-width:900px){
+ #main .mine-detail-panel .region-heading { margin:4px 0; }
+ #main .mine-detail-panel .region-detail { padding:7px 8px; }
+ #main .mine-detail-panel p { font-size:12px; line-height:1.45; margin:5px 0; }
+ #main .mine-detail-panel button { min-height:32px; font-size:12px; padding:4px 7px; }
+ #main .mine-detail-panel .actions { gap:5px; margin:5px 0; }
+ #main .region-detail-tools { gap:5px; margin-top:5px; }
+ #main .region-detail-tools summary { font-size:11px; }
+}
+
+/* Cross-region errands keep the next action and recipe on one short screen. */
+.cross-route{display:flex;flex-wrap:wrap;gap:3px 10px;font-size:11px;color:var(--muted);margin:3px 0 6px}
+.cross-region-panel .region-heading{margin-bottom:4px}.cross-region-panel .region-detail{padding:8px;margin:5px 0}.cross-region-panel p{margin:6px 0;line-height:1.45}.cross-region-panel h3{margin:5px 0;font-size:13px}
+.cross-prerequisites{display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;padding:0;margin:6px 0;font-size:12px}.cross-tools{display:flex;flex-wrap:wrap;gap:3px 10px;align-items:center}.cross-tools button{padding:4px 2px;min-height:30px}.cross-cost{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px;margin:6px 0;font-size:12px}.cross-cost div{display:flex;justify-content:space-between;gap:5px}.cross-cost dd{margin:0}[data-cross-region-link]{font-size:11px;padding:2px 4px;margin-bottom:2px}.cross-region-panel .actions{margin:6px 0 0}
+@media(max-width:640px){.cross-region-panel{font-size:12px}.cross-region-panel .region-heading h2{font-size:15px}.cross-region-panel .note{font-size:11px}.cross-region-panel .actions button{min-height:32px;padding:5px 9px}}
+/* One selected item and one source at a time; long catalogues stay in native selectors. */
+.source-browser{max-width:680px;margin:0 auto;font-size:13px}.source-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 7px}.source-heading h2{font-size:17px;margin:0}.source-heading>div{display:flex;gap:6px}.source-search{display:grid;grid-template-columns:minmax(70px,1fr) auto 92px;gap:5px;align-items:center;margin:0 0 6px}.source-search input,.source-search select,.source-select select{width:100%;min-width:0}.source-search .source-select>span{display:none}.source-select{display:flex;align-items:center;gap:6px;margin:4px 0}.source-select>span{font-size:11px;white-space:nowrap;min-width:42px;color:var(--muted)}.source-tabs{display:flex;gap:4px;margin:7px 0}.source-tabs button{flex:1}.source-card{padding:9px;border:1px solid var(--line);border-radius:9px;background:var(--panel);margin:6px 0}.source-card>div{display:flex;justify-content:space-between;gap:10px}.source-card b{color:var(--green)}.source-card p{line-height:1.45;margin:6px 0}.source-card .source-status{color:var(--muted);font-size:12px}.source-tracking{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding-top:6px;margin-top:8px}.source-tracking label{display:flex;align-items:center;gap:4px}.source-tracking input{width:72px;min-width:0}.source-cost>div{display:flex;align-items:center;justify-content:space-between;gap:6px;margin:4px 0}.source-use p{line-height:1.5}.source-browser .actions{gap:5px}.source-browser input,.source-browser select{font:inherit}.source-browser button{font-size:12px;min-height:32px;padding:5px 8px}
+@media(max-width:900px){#main .source-browser{font-size:12px}#main .source-browser h2{font-size:15px}#main .source-browser p{font-size:12px;margin:5px 0;line-height:1.4}#main .source-browser button{font-size:11px;min-height:30px;padding:4px 7px}#main .source-browser select,#main .source-browser input{min-height:30px;padding:4px 6px;font-size:12px}#main .source-heading{margin-bottom:4px}#main .source-card{padding:7px;margin:4px 0}#main .source-tabs{margin:5px 0}#main .source-tracking{margin-top:5px;padding-top:5px}}
+@media(max-width:900px){
+ #main .source-browser button{min-height:30px!important;padding:4px 7px!important;line-height:1.25!important}
+ #main .source-browser .source-select select{margin:0}
+ #main .source-browser .source-search .source-select,#main .source-browser .source-tracking label{margin:0}
+ #main .source-browser .source-heading button{min-height:26px!important}
+ #main .source-browser .source-card>button{min-height:32px!important}
+ #main .source-browser .source-tracking{min-height:0;line-height:1.3}
+}
+#main .source-browser .source-cost-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin:5px 0}#main .source-browser .source-cost-grid button{min-width:0;white-space:normal;text-align:left;justify-content:flex-start;min-height:36px!important}#main .source-cost-grid button span{overflow-wrap:anywhere}
+
+.mast-links>a[hidden]{display:none!important}.mast-links>[data-source-reopen]{font-size:11px;min-height:32px;padding:3px 5px;white-space:nowrap}
+
+.camp-life{display:grid;gap:6px}.camp-life>label,.camp-life .life-card>label{display:flex;align-items:center;gap:8px;font-size:12px}.camp-life select{min-width:0;flex:1;padding:5px}.life-card{padding:9px;border:1px solid var(--line,#cedbd5);border-radius:8px;background:var(--paper,#fff)}.life-card h3{margin:0 0 5px;font-size:14px}.life-card p{font-size:12px;line-height:1.5;margin:5px 0}.life-card small{font-size:11px;line-height:1.4}.life-card .actions{gap:4px;margin:5px 0}.life-card button{padding:5px 7px;min-height:30px;font-size:12px}.life-budget{font-size:12px;margin:5px 0}.life-budget>div{display:flex;justify-content:space-between;margin:3px 0}.life-budget dd{margin:0}
+
+#main .camp-life{gap:6px}#main .camp-life label{margin:0;display:flex;align-items:center;gap:5px;font-size:12px}#main .camp-life select{height:30px;min-height:30px!important;font-size:12px;padding:3px 5px}#main .camp-life .life-card{margin:0;padding:8px}#main .camp-life .life-pickers{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:6px}#main .camp-life p{margin:5px 0;line-height:1.5}#main .camp-life .actions{margin:5px 0}#main .camp-life button{min-height:30px!important;font-size:12px;padding:4px 7px}
+
+#main .camp-life .actions>label{flex:1 1 100px;min-width:0;max-width:145px}#main .camp-life .actions>label select{width:70px;min-width:0}#main .life-budget>div{padding:0;margin:2px 0;min-height:0;line-height:1.4}#main .life-budget dt,#main .life-budget dd{padding:0;margin:0}#main .battle-threat details{margin:2px 0}#main .battle-threat summary{font-size:11px}#main .battle-threat .actions{margin:3px 0;gap:4px}

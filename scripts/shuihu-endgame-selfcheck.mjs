@@ -19,18 +19,22 @@ assert.ok(RECIPES.dark_iron.silver+RECIPES.tempered_steel.silver<d.by.items.dark
 assert.ok(RECIPES.blueprint.silver+Object.entries(RECIPES.blueprint.items).reduce((n,[id,q])=>n+d.by.items[id].price*q,0)<d.by.items.blueprint.price);
 
 const invalid=(s,f)=>{const bad=clone(s);f(bad);assert.throws(()=>gameSnapshot(bad,d));};
-let area=fixture(642,40);area.battleSkillMode='auto';area.player.stamina=0;area.camp.food=0;
+// Use a sustained-damage party for the hardest elites; unlock battle counts must not decide survival.
+let area=fixture(642,40);area.team=['linchong','andaoquan','wangjin'];area.battleSkillMode='auto';area.player.stamina=0;area.camp.food=0;
 for(const hero of area.team)for(const id of ['long_spear','iron_helmet','tiger_armor','leather_belt','swift_boots','river_charm']){const e=newEquipment(area,id);e.hero=hero;e.plus=3;}
 const hidden=Object.keys(SPECIAL_DUNGEONS).filter(id=>SPECIAL_DUNGEONS[id].parent);
-assert.equal(hidden.length,3);
-for(const id of hidden){const parent=SPECIAL_DUNGEONS[id].parent;assert.match(specialPlan(area,id,1).reason,/5 次/);for(const tier of [1,2,3]){
- for(let i=0;i<5;i++)area=win(act(area,'specialStart',{id:parent,tier}));
+assert.equal(hidden.length,6);
+for(const id of hidden){
+ // The shield captain is checked with the existing shield-breaking weapon, not just raw levels.
+ if(id==='mountainhold'){for(const e of area.equipment)if(e.hero==='linchong'&&d.by.equipments[e.item].type==='weapon')e.hero=null;const e=newEquipment(area,'furnace_hammer');e.hero='linchong';e.plus=3;}
+ const parent=SPECIAL_DUNGEONS[id].parent,required=SPECIAL_DUNGEONS[id].entryClears||5;assert.ok(specialPlan(area,id,1).reason.includes(required+' 次'));for(const tier of [1,2,3]){
+ for(let i=0;i<required;i++)area=win(act(area,'specialStart',{id:parent,tier}));
  const before=clone(area);area=act(area,'specialStart',{id,tier});assert.equal(area.battle.expedition.troops,0);assert.deepEqual(gameSnapshot(area,d),area);console.log('Hidden fight',id,tier);area=win(area);assert.equal(area.specialDungeons.clears[id+'_'+tier],1);assert.deepEqual(area.player,before.player);assert.deepEqual(area.camp,before.camp);
  }
- const model=specialDropTable(id,1).find(x=>x.kind==='equipment').id;assert.throws(()=>act(area,'craftEquip',{id:model}),/掉落/);assert.throws(()=>act(area,'buyEquip',{id:model}),/掉落/);
- invalid(area,s=>s.specialDungeons.clears[parent+'_1']=4);
+ const model=specialDropTable(id,1).find(x=>x.kind==='equipment').id;if(d.by.equipments[model].source==='special'){assert.throws(()=>act(area,'craftEquip',{id:model}),/掉落/);assert.throws(()=>act(area,'buyEquip',{id:model}),/掉落/);}
+ invalid(area,s=>{if(required===1)delete s.specialDungeons.clears[parent+'_1'];else s.specialDungeons.clears[parent+'_1']=required-1;});
 }
-console.log('Hidden chambers: 45 parent fights + 9 elite fights, unlocks, zero costs, exclusive equipment, portable save PASS');
+console.log('Hidden chambers: '+hidden.reduce((n,id)=>n+(SPECIAL_DUNGEONS[id].entryClears||5)*3,0)+' parent fights + '+hidden.length*3+' elite fights, unlocks, zero costs, exclusive equipment, portable save PASS');
 let hero=fixture(649,30);expansion(hero);hero.expansion.personal.linchong=true;const money=hero.player.silver;
 hero=act(hero,'personalStyle',{id:'linchong',style:'force'});assert.equal(hero.player.silver,money);
 let fight=act(hero,'specialStart',{id:'mine',tier:1});assert.equal(personalFactor(fight.battle,fight.battle.team[0],false),1.08);assert.equal(personalFactor(fight.battle,fight.battle.team[0],true),1);invalid(fight,s=>s.battle.expansion.styles.linchong='guard');assert.throws(()=>act(fight,'personalStyle',{id:'linchong',style:'guard'}));

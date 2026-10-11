@@ -52,11 +52,11 @@ try{
  const retreat=copy(failed);retreat.specialDungeons.last.outcome='retreat';retreat.lastBattle.outcome='retreat';await roundtrip(retreat);
  await roundtrip(settled);const again=act(settled,'specialStart',{id:'mine',tier:1});await roundtrip(again);
  for(const [i,s] of starts.slice(1).entries()){await openSlot(i+2);await roundtrip(s);}
- await openSlot(10);await roundtrip(settled);await roundtrip(ordinary);
+ await openSlot(starts.length+1);await roundtrip(settled);await roundtrip(ordinary);
  let writes=0;const older={...caps};delete older.specialDungeons;
  const client=new CloudClient('https://test.invalid',d,async(_,options)=>{if(options.method==='PUT')writes++;return Response.json(older);});
  const onlyBattle=copy(battle);delete onlyBattle.specialDungeons;const onlyReport=copy(settled);delete onlyReport.specialDungeons;
  for(const s of [battle,settled,onlyBattle,onlyReport])await assert.rejects(()=>client.upload(1,rev,s,'特殊副本'),/0.50.0/);
  await assert.doesNotReject(()=>client.cooperate(1,rev));assert.equal(writes,0);
- console.log('Special dungeon cloud PASS: 9 live battle/file/SQLite roundtrips, real victory settlement, strict contexts and drop-table validation, unchanged cloud data on rejected writes, monotonic clears, replaceable receipts, old-service preflight; no database migration.');
+ console.log('Special dungeon cloud PASS: 18 live battle/file/SQLite roundtrips, real victory settlement, strict contexts and drop-table validation, unchanged cloud data on rejected writes, monotonic clears, replaceable receipts, old-service preflight; no database migration.');
 }finally{db.close();}

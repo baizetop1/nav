@@ -6,15 +6,15 @@ export const FUNCTION_GROUPS = [
     {label:'资源副本',view:'trials',section:'resources'}, {label:'周本',view:'trials',section:'weekly'}, {label:'特殊副本',view:'trials',section:'special'}]},
   {id:'camp',label:'寨务',entries:[
     {label:'采集物资',view:'camp',section:'duties'},
-    {label:'营建',view:'camp',section:'buildings'}, {label:'募兵',view:'camp',section:'troops'},
+    {label:'寨中生活',view:'camp',section:'life'}, {label:'营建',view:'camp',section:'buildings'}, {label:'募兵',view:'camp',section:'troops'},
     {label:'寨事',view:'camp',section:'affairs'}, {label:'挂机',view:'camp',section:'idle'},
     {label:'打造',view:'forge',section:'craft'}, {label:'招贤',view:'recruit',section:'ordinary'}]},
   {id:'heroes',label:'好汉',entries:[
     {label:'名册',view:'heroes',section:'roster'}, {label:'阵容',view:'heroes',section:'formation'},
     {label:'升级',view:'heroes',section:'training'}, {label:'招式',view:'heroes',section:'skills'},
-    {label:'兵种',view:'heroes',section:'corps'}, {label:'品阶',view:'heroes',section:'quality'}]},
+    {label:'故人共事',view:'camp',section:'crossRegion'}, {label:'兵种',view:'heroes',section:'corps'}, {label:'品阶',view:'heroes',section:'quality'}]},
   {id:'other',label:'其他',entries:[
-    {label:'行囊',view:'bag',section:'supplies'}, {label:'差事',view:'quests'},
+    {label:'行囊',view:'bag',section:'supplies'}, {label:'物品来源',view:'bag',section:'sources'}, {label:'差事',view:'quests'},
     {label:'梁山志',view:'chronicle'}, {label:'存档',view:'save',section:'local'},
     {label:'套装图鉴',view:'forge',section:'sets'}, {label:'演武',view:'camp',section:'mentorship'}]}
 ];
