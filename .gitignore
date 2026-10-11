@@ -23,3 +23,6 @@ legacy_backup
 *.keystore
 *.p12
 signing-password.txt
+
+# Wrangler --outdir is resolved relative to its config directory.
+/cloud/shuihu/artifacts/
