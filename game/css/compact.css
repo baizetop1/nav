@@ -59,3 +59,35 @@ input,select,textarea{font-size:16px} /* Prevent iOS input focus zoom. */
 
 .camp-rulebook summary{min-height:44px;display:flex;align-items:center;cursor:pointer}.camp-rulebook summary::before{content:"▸";margin-right:6px}.camp-rulebook[open] summary::before{content:"▾"}.journey-sections,.page-sections{top:-12px;padding-block:5px}
 @media(max-width:900px){.journey-sections,.page-sections{top:-8px}}
+
+/* Main-panel phone density; header, navigation and dialogs keep their own scale. */
+@media(max-width:900px){
+ .viewport-shell #main{font-size:12px;line-height:1.45;padding:6px 7px 8px}
+ .viewport-shell #main :is(p,details,li){font-size:12px;line-height:1.45}
+ .viewport-shell #main p{margin-block:4px}
+ .viewport-shell #main [data-page-section]{padding-top:0}
+ .viewport-shell #main :is(.note,.meta,.statline){font-size:11.5px;line-height:1.4}
+ .viewport-shell #main h2{font-size:15px;line-height:1.35;margin-block:5px}
+ .viewport-shell #main h3{font-size:14px;line-height:1.35;margin-block:4px}
+ .viewport-shell #main .section-top h1{font-size:18px;line-height:1.35;margin-bottom:5px}
+ .viewport-shell #main .section-top{margin-bottom:6px}
+ .viewport-shell #main .prose{font-size:13px;line-height:1.55;margin-bottom:7px}
+ .viewport-shell #main :is(.idle-card,.realm-card,.building-card,.duty-card,.location){padding:7px 8px;margin-block:5px}
+ .viewport-shell #main :is(.camp-status,.camp-orders,.camp-goals,.camp-duties){padding:8px;margin-bottom:7px}
+ .viewport-shell #main :is(.building-grid,.raid-grid,.duty-grid){gap:6px;margin-bottom:7px}
+ .viewport-shell #main .actions{gap:5px;margin-block:5px}
+ .viewport-shell #main button:not(.roster-tile){min-height:36px;padding:4px 8px;font-size:12px;line-height:1.35}
+ .viewport-shell #main summary{font-size:12px;min-height:30px;line-height:1.45;padding-block:4px}
+ .viewport-shell #main details{margin-block:5px}
+ .viewport-shell #main select{min-height:36px;font-size:13px;line-height:1.35;padding:4px 7px}
+ .viewport-shell #main .section-picker{gap:6px;padding-block:2px;margin-bottom:5px}
+ .viewport-shell #main .section-picker label{margin:0}
+ .viewport-shell #main .region-camp-controls{gap:7px;margin-bottom:5px}
+ .viewport-shell #main .region-camp-controls label{margin:0;font-size:11.5px;line-height:1.4}
+ .viewport-shell #main .region-camp-controls select{min-height:34px!important;font-size:12px;margin:2px 0}
+ .viewport-shell #main .region-camp .idle-card{padding:7px;margin:4px 0}
+ .viewport-shell #main .region-camp :is(p,.note){font-size:11.5px;line-height:1.4;margin-block:4px}
+ .viewport-shell #main .region-camp h3{font-size:13px;margin:0 0 4px}
+ .viewport-shell #main .region-camp .actions{margin-block:4px}
+ .viewport-shell #main .region-camp-detail summary{min-height:28px}
+}

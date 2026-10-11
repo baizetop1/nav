@@ -3,9 +3,9 @@ export const GATHERING_REGIONS={
  mine:{item:'magnetite_sand',site:'深层矿脉',dungeons:['mine','minechief']},
  marsh:{item:'marsh_orchid',site:'泽兰药圃',dungeons:['marsh','marshnest']},
  ruins:{item:'stone_rubbing',site:'残碑石室',dungeons:['ruins','ruinsvault']},
- forest:{item:'mountain_vine',site:'老藤坡'},
- water:{item:'reed_fiber',site:'水韧苇滩'},
- mountain:{item:'copper_sand',site:'赤铜矿脉'}
+ forest:{item:'mountain_vine',site:'老藤坡',journey:true,dungeons:['forest','forestcamp']},
+ water:{item:'reed_fiber',site:'水韧苇滩',journey:true,dungeons:['water','waterfort']},
+ mountain:{item:'copper_sand',site:'赤铜矿脉',journey:true,dungeons:['mountain','mountainhold']}
 };
 export const REGIONAL_RECIPES={
  mine:{kind:'equipment',output:'guard_pike',count:1,building:'market',silver:100,items:{magnetite_sand:6,iron:2,wood:3},limit:2,use:'枪头掺入磁铁砂锻打，配木杆制成守路长枪。'},
@@ -18,7 +18,7 @@ export const REGIONAL_RECIPES={
 export function historicGathering(s,id){
  const m=GATHERING_REGIONS[id];if(!m)return {runs:0,best:0};
  if(!m.dungeons){const best=s.realm?.journey?.best[id]||0;return {runs:Math.min(3,best),best};}
- let runs=0,best=0;for(const dungeon of m.dungeons)for(let tier=1;tier<=3;tier++){const n=s.specialDungeons?.clears[dungeon+'_'+tier]||0;runs+=n;if(n)best=Math.max(best,tier);}
+ let best=m.journey?(s.realm?.journey?.best[id]||0):0,runs=best;for(const dungeon of m.dungeons)for(let tier=1;tier<=3;tier++){const n=s.specialDungeons?.clears[dungeon+'_'+tier]||0;runs+=n;if(n)best=Math.max(best,tier);}
  return {runs:Math.min(3,runs),best};
 }
 export const gatheringProgress=(s,id)=>s?.gathering?.regions[id]||historicGathering(s||{},id);

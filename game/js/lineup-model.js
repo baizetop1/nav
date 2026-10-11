@@ -1,8 +1,9 @@
-import {HERO_ROLES} from './hero-roles.js?v=0.69.0';
-import {unlockReason} from './growth.js?v=0.69.0';
-import {waterBattle} from './frontier-data.js?v=0.69.0';
-import {battleTerrain} from './strategy-data.js?v=0.69.0';
-import {CORPS} from './corps-data.js?v=0.69.0';
+import {away} from './hero-availability.js?v=0.82.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.82.0';
+import {unlockReason} from './growth.js?v=0.82.0';
+import {waterBattle} from './frontier-data.js?v=0.82.0';
+import {battleTerrain} from './strategy-data.js?v=0.82.0';
+import {CORPS} from './corps-data.js?v=0.82.0';
 const baseKinds={songjiang:'heal_rage',wuyong:'control',luzhishen:'taken_guard',huarong:'high',wusong:'last',ruanxiaoqi:'water_guard',linchong:'opening_front',tanglong:'taken_rage',baisheng:'heal_guard',andaoquan:'heal_cleanse',shiqian:'low',wangjin:'interrupt_weaken'};
 export const roleKind=id=>HERO_ROLES[id]?.kind||baseKinds[id];
 export function combatCapabilities(u,d,b){
@@ -11,7 +12,7 @@ export function combatCapabilities(u,d,b){
  const heal=skills.some(s=>s.effect.kind==='heal'&&s.training?.profile!=='protect')||!!b?.depth&&CORPS[u.id]?.profile==='medic',guard=['opening_front','opening_rear','taken_guard','after_guard'].includes(kind)||kind==='water_guard'&&!!b&&waterBattle(b)||kind==='heal_guard'&&heal||kind==='interrupt_guard'&&interrupt||!!b?.depth&&CORPS[u.id]?.profile==='naval'&&waterBattle(b)||skills.some(s=>['protect','shelter','discipline'].includes(s.training?.profile));
  const armor=!!b?.depth&&CORPS[u.id]?.profile==='archer'||kind==='after_sunder'||kind==='interrupt_sunder'&&interrupt||skills.some(s=>s.effect.status?.id==='armor_break');
  const control=kind==='after_weaken'||kind==='interrupt_weaken'&&interrupt||skills.some(s=>['weaken','control','wave'].includes(s.training?.profile)||['stun','weaken'].includes(s.effect.status?.id));
- return {heal,guard,interrupt,armor,control,armorUse:kind==='armor',controlUse:kind==='control',water:CORPS[u.id]?.profile==='naval'||['water','water_guard','opening_water_rage'].includes(kind),damage:h.type!=='support',front:h.type==='defender'&&kind!=='opening_rear'||kind==='opening_front'};
+ return {cleanse:skills.some(s=>s.effect.kind==='heal'&&s.training?.profile!=='protect')&&(kind==='heal_cleanse'||!!b?.tactics?.gear[u.id]?.some(e=>e.item==='reed_medicine_case')),heal,guard,interrupt,armor,control,armorUse:kind==='armor',controlUse:kind==='control',water:CORPS[u.id]?.profile==='naval'||['water','water_guard','opening_water_rage'].includes(kind),damage:h.type!=='support',front:h.type==='defender'&&kind!=='opening_rear'||kind==='opening_front'};
 }
 export function roleReadiness(b,u,d){
  const m=HERO_ROLES[u.id],k=roleKind(u.id),c=combatCapabilities(u,d,b);if(u.hp<=0)return '已退阵，本次不生效。';
@@ -46,8 +47,8 @@ const styles=[
 ];
 export function recommendLineups(s,d,b){
  if(!b||b.guest)return [];
- const candidates=d.heroes.filter(h=>s.heroes[h.id]?.status==='owned'&&s.affairs?.mission?.hero!==h.id&&!s.realm?.squad?.team.includes(h.id)).map(h=>{const u={id:h.id,skills:h.skills.filter(id=>!unlockReason(s,d.by.skills[id]))};return {id:h.id,cap:combatCapabilities(u,d,b),score:s.heroes[h.id].level*10+h.star};}).sort((a,c)=>c.score-a.score||a.id.localeCompare(c.id));
- const results=[];for(const style of styles){if(style.id==='water'&&!waterBattle(b)||style.id==='interrupt'&&!b.enemy.some(e=>e.boss))continue;const team=[];for(const slot of style.slots){const choice=candidates.find(c=>!team.includes(c.id)&&c.cap[slot]);if(!choice)break;team.push(choice.id);}const front=team.find(id=>roleKind(id)==='opening_front');if(front){team.splice(team.indexOf(front),1);team.unshift(front);}const rear=team.find(id=>roleKind(id)==='opening_rear');if(rear){team.splice(team.indexOf(rear),1);team.push(rear);}if(team.length!==3||results.some(r=>r.team.join(',')===team.join(',')))continue;results.push({...style,team});}
+ const candidates=d.heroes.filter(h=>s.heroes[h.id]?.status==='owned'&&!away(s,h.id)).map(h=>{const u={id:h.id,skills:h.skills.filter(id=>!unlockReason(s,d.by.skills[id]))};return {id:h.id,cap:combatCapabilities(u,d,b),score:s.heroes[h.id].level*10+h.star};}).sort((a,c)=>c.score-a.score||a.id.localeCompare(c.id));
+ const poison=b.context.id==='marshnest',route=b.context.route,local=poison?[{id:'cleanse',name:'解毒接应',slots:['front','cleanse','damage'],text:'安道全实际治疗时可净化；仍需留药应对治疗间隔。'}]:['backwash','medicineboat','convoy','crossfire'].includes(route)?[{id:'escort',name:'护阵接应',slots:['guard','heal','interrupt'],text:'护阵接伤、治疗续航，保留打断应对蓄势。'}]:[];const results=[];for(const style of [...local,...styles]){if(style.id==='water'&&!waterBattle(b)||style.id==='interrupt'&&!b.enemy.some(e=>e.boss))continue;const team=[];for(const slot of style.slots){const choice=candidates.find(c=>!team.includes(c.id)&&c.cap[slot]);if(!choice)break;team.push(choice.id);}const front=team.find(id=>roleKind(id)==='opening_front');if(front){team.splice(team.indexOf(front),1);team.unshift(front);}const rear=team.find(id=>roleKind(id)==='opening_rear');if(rear){team.splice(team.indexOf(rear),1);team.push(rear);}if(team.length!==3||results.some(r=>r.team.join(',')===team.join(',')))continue;results.push({...style,team});}
  return results;
 }
 

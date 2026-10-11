@@ -1,27 +1,30 @@
-import {explorationCamp} from './exploration-ui.js?v=0.69.0';
-import {idlePanel} from './idle-ui.js?v=0.69.0';
-import {grainRoadPanel} from './grain-road-ui.js?v=0.69.0';
-import {sceneBanner,scenePage} from './scenes-ui.js?v=0.69.0';
-import {campDashboard} from './folio-ui.js?v=0.69.0';
-import {lessonsPanel} from './opening-ui.js?v=0.69.0';
-import {journeyHome} from './journey-ui.js?v=0.69.0';
-import {pageSection,sectionPicker,sectionHome} from './page-sections.js?v=0.69.0';
-import {storyGuide} from './story-guide.js?v=0.69.0';
-import {recruitPrice} from './realm-buildings.js?v=0.69.0';
-import {reservedTroops} from './squads.js?v=0.69.0';
-import { supplyBoard } from './supplies.js?v=0.69.0';
-import { staminaCap, barracksCapacity, commandCapacity, deployedTroops } from './logistics.js?v=0.69.0';
-import { mentorshipPanel } from './mentorship-ui.js?v=0.69.0';
-import { campOverview } from './camp-overview.js?v=0.69.0';
-import { affairsPanel } from './management-ui.js?v=0.69.0';
-import { productionPanel, frontierMap } from './frontier-ui.js?v=0.69.0';
-import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.69.0';
-import { ARMS } from './martial.js?v=0.69.0';
-import { enemyIntel } from './martial-ui.js?v=0.69.0';
-import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.69.0';
-import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.69.0';
-import { dungeonMountLoot } from './growth-ui.js?v=0.69.0';
-import { icon } from './icons.js?v=0.69.0';
+import {lifePanel} from './camp-life-ui.js?v=0.82.0';
+import {crossRegionPanel} from './cross-region-ui.js?v=0.82.0';
+import {explorationGoalPanel} from './exploration-goals-ui.js?v=0.82.0';
+import {explorationCamp} from './exploration-ui.js?v=0.82.0';
+import {idlePanel} from './idle-ui.js?v=0.82.0';
+import {grainRoadPanel} from './grain-road-ui.js?v=0.82.0';
+import {sceneBanner,scenePage} from './scenes-ui.js?v=0.82.0';
+import {campDashboard} from './folio-ui.js?v=0.82.0';
+import {lessonsPanel} from './opening-ui.js?v=0.82.0';
+import {journeyHome} from './journey-ui.js?v=0.82.0';
+import {pageSection,sectionPicker,sectionHome} from './page-sections.js?v=0.82.0';
+import {storyGuide} from './story-guide.js?v=0.82.0';
+import {recruitPrice} from './realm-buildings.js?v=0.82.0';
+import {reservedTroops} from './squads.js?v=0.82.0';
+import { supplyBoard } from './supplies.js?v=0.82.0';
+import { staminaCap, barracksCapacity, commandCapacity, deployedTroops } from './logistics.js?v=0.82.0';
+import { mentorshipPanel } from './mentorship-ui.js?v=0.82.0';
+import { campOverview } from './camp-overview.js?v=0.82.0';
+import { affairsPanel } from './management-ui.js?v=0.82.0';
+import { productionPanel, frontierMap } from './frontier-ui.js?v=0.82.0';
+import { corpsLine, presetsPanel, targetPanel, ledgerPanel } from './development-ui.js?v=0.82.0';
+import { ARMS } from './martial.js?v=0.82.0';
+import { enemyIntel } from './martial-ui.js?v=0.82.0';
+import { dutyBoard, goalBoard, raidIntel, equipmentLoot } from './camp-development-ui.js?v=0.82.0';
+import { BUILDINGS, TACTICS, RAIDS, buildingQuote } from './camp.js?v=0.82.0';
+import { dungeonMountLoot } from './growth-ui.js?v=0.82.0';
+import { icon } from './icons.js?v=0.82.0';
 
 const portraitText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const portrait=(h,small=false)=>h.portrait?`<span class="hero-portrait portrait-${h.id}${small?' portrait-small':''}"><img src="${h.portrait}" alt="${portraitText(h.name)}人物像" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></span>`:`<span class="hero-portrait portrait-${h.id}${h.introducedIn===3?' portrait-new':''}${small?' portrait-small':''}" role="img" aria-label="${portraitText(h.name)}人物卡">${h.introducedIn===3?`<span class="portrait-monogram"><b>${portraitText(h.name.slice(0,1))}</b><small>立绘待补</small></span>`:''}</span>`;
@@ -32,6 +35,9 @@ export function campPage(s,d,esc,btn,requested,scene,grainSelection,idleOptions)
   const n=deployedTroops(s);
   const next=!c.buildings.lumber?'先修伐木场，后续扩建就有稳定木料。':!c.buildings.farm?'再修农田，为募兵和出征储粮。':!c.buildings.barracks?'建起兵营，让乡勇跟随好汉出征。':!c.troops?'募一队乡勇，或选择英雄独行去山林清剿。':'募兵消耗粮草和碎银；伤兵需在医馆治疗。';
   const section=pageSection('camp',requested),panels={preparation:()=>'<h1>寨中备战</h1><p>选一项准备，供本次游历使用。</p><article class="realm-card"><h2>伐木场 2 级 · 修制路标</h2><p>付木材 20、碎银 30，本趟战斗粮耗降低 20%。</p></article><article class="realm-card"><h2>医馆 2 级 · 随军医囊</h2><p>付草药 3、布匹 2，每场胜利后在阵英雄恢复 8% 气血。</p></article><article class="realm-card"><h2>兵营 2 级 · 出征合练</h2><p>付粮草 25、碎银 40，每场开战怒气 +10。</p></article><p class="note">每趟最多选择一项，也可免费轻装出行。仅启程扣费，途中不可更换。</p>'+btn('安排下一趟备战',{type:'ui_section',view:'realm',id:'planning'},'primary')+btn('营建设施',{type:'ui_section',view:'camp',id:'buildings'},'secondary'),
+ life:()=>lifePanel(s,d,esc,btn,idleOptions),
+ crossRegion:()=>crossRegionPanel(s,d,esc,btn),
+ exploreGoals:()=>explorationGoalPanel(s,d,esc,btn,idleOptions),
  exploration:()=>explorationCamp(s,d,esc,btn,idleOptions?.regionBuilding,idleOptions?.regionVisitor),
  idle:()=>idlePanel(s,d,esc,btn,idleOptions),
  grainRoad:()=>grainRoadPanel(s,d,esc,btn,grainSelection),
@@ -46,10 +52,10 @@ export function campPage(s,d,esc,btn,requested,scene,grainSelection,idleOptions)
     <details class="fold-section" data-fold="camp-dungeons"><summary>副本远征 · 坐骑契独立掉率 20%</summary><p class="note">聚义厅等级逐步开放远征。战斗副本沿用上方出征配置；计策副本靠安排取胜，不派兵。失败或撤退不掉契。</p>${d.dungeons.map(x=>{const level=Math.min(5,1+Math.floor(x.level/10)),open=c.buildings.hall>=level;return `<article class="card"><h3>${esc(x.name)}</h3>${dungeonMountLoot(s,d,x.id,esc)}<p class="meta">聚义厅 ${level}级 · 英雄 ${x.level}级 · 体力 ${x.cost} · 今日 ${s.daily.dungeons[x.id]||0}/${x.limit} 次</p>${btn('开始远征',{type:'dungeon',id:x.id},'secondary',!open||!s.team.length||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||s.player.stamina<x.cost||(s.daily.dungeons[x.id]||0)>=x.limit)}</article>`;}).join('')}</details>
 `,
  duties:()=>dutyBoard(s,d,btn,portrait),affairs:()=>affairsPanel(s,d,btn),
- production:()=>productionPanel(s,d,btn)+(s.frontier?frontierMap(s,d,esc,btn):''),
+ production:()=>productionPanel(s,d,btn,esc),
  goals:()=>goalBoard(s,d,btn),supply:()=>supplyBoard(s,d,btn),mentorship:()=>mentorshipPanel(s,d,esc,btn),
  ledger:()=>targetPanel(s,d,btn)+ledgerPanel(s,d)
  };
- return (section==='home'?'':sectionPicker('camp',section,btn))+(['grainRoad','idle','exploration'].includes(section)?'':section==='home'?sceneBanner(s,esc):`<div class="section-top"><div><p class="kicker">水泊梁山 · 寨务第 ${c.day} 日</p><h1 class="page-title">${icon('chronicle')}白泽寨</h1></div><span class="camp-rank">${c.buildings.hall} 级寨子</span></div>
+ return (section==='home'?'':sectionPicker('camp',section,btn))+(['life','crossRegion','grainRoad','idle','exploration','exploreGoals'].includes(section)?'':section==='home'?sceneBanner(s,esc):`<div class="section-top"><div><p class="kicker">水泊梁山 · 寨务第 ${c.day} 日</p><h1 class="page-title">${icon('chronicle')}白泽寨</h1></div><span class="camp-rank">${c.buildings.hall} 级寨子</span></div>
 `)+'<section data-page-section="camp:'+section+'">'+panels[section]()+'</section>';
 }

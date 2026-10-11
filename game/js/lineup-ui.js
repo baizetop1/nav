@@ -1,6 +1,7 @@
-import {fullLineupAdvice,roleReadiness,recommendLineups,combatCapabilities} from './lineup-model.js?v=0.69.0';
-import {HERO_ROLES} from './hero-roles.js?v=0.69.0';
-import {waterBattle} from './frontier-data.js?v=0.69.0';
+import {battlePlanPanel} from './battle-plan.js?v=0.82.0';
+import {fullLineupAdvice,roleReadiness,recommendLineups,combatCapabilities} from './lineup-model.js?v=0.82.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.82.0';
+import {waterBattle} from './frontier-data.js?v=0.82.0';
 // Read the quoted battle, not the saved team: unconfirmed formation changes must be reflected.
 export function lineupAdvice(b,d){
  if(!b||b.guest)return [];
@@ -23,4 +24,4 @@ export function lineupPanel(b,d,esc){
  return '<section class="lineup-panel"><h3>本次搭配</h3><p class="note">根据本次阵容、招式和敌情列出。</p>'+rows+(tips.length?'<h3>配合建议</h3>'+tips.map(t=>'<p class="note">'+esc(t)+'</p>').join(''):'<p class="note">先确认谁承伤、谁恢复、谁打断，再结合敌情选择集火目标。</p>')+'</section>';
 }
 
-export function recommendedPanel(s,d,b,esc,btn,quote){const rows=recommendLineups(s,d,b);return '<details class="lineup-recommendations"><summary>推荐阵容</summary><p class="note">从已入寨好汉中选配，换好阵容后仍需确认出征。</p>'+rows.map(r=>{const q=quote(r.team);return '<article class="lineup-role"><h3>'+r.name+'</h3><p>'+r.team.map(id=>esc(d.by.heroes[id].name)+' '+s.heroes[id].level+'级').join(' · ')+'</p><p class="note">'+r.text+'</p>'+(q.reason?'<p class="note">'+esc(q.reason)+'</p>':'<p class="note">体力 '+q.cost.stamina+' · 粮草 '+q.cost.food+' · 实际带兵 '+(q.battle?.expedition?.troops||0)+' 人</p>')+btn('试用'+r.name,{type:'ui_sortieRecommend',team:r.team},'secondary',!!q.reason)+'</article>';}).join('')+(rows.length?'':'<p class="note">暂无合适的三人搭配，可到“整备”自行点将。</p>')+'</details>';}
+export function recommendedPanel(s,d,b,esc,btn,quote){const rows=recommendLineups(s,d,b);return battlePlanPanel(s,d,b,esc)+'<details class="lineup-recommendations"><summary>推荐阵容</summary><p class="note">从已入寨好汉中选配，换好阵容后仍需确认出征。</p>'+rows.map(r=>{const q=quote(r.team);return '<article class="lineup-role"><h3>'+r.name+'</h3><p>'+r.team.map(id=>esc(d.by.heroes[id].name)+' '+s.heroes[id].level+'级').join(' · ')+'</p><p class="note">'+r.text+'</p>'+(q.reason?'<p class="note">'+esc(q.reason)+'</p>':'<p class="note">体力 '+q.cost.stamina+' · 粮草 '+q.cost.food+' · 实际带兵 '+(q.battle?.expedition?.troops||0)+' 人</p>')+btn('试用'+r.name,{type:'ui_sortieRecommend',team:r.team},'secondary',!!q.reason)+'</article>';}).join('')+(rows.length?'':'<p class="note">暂无合适的三人搭配，可到“整备”自行点将。</p>')+'</details>';}

@@ -1,0 +1,15 @@
+import {goalOverview} from './goal-overview.js?v=0.82.0';
+import {firstSessionGoal} from './first-session.js?v=0.82.0';
+import {EXPLORATION_GOAL_KINDS,explorerGoal,explorerChoices,explorationGoalQuote,explorationResume} from './exploration-goals.js?v=0.82.0';
+export function explorationHome(s,d,esc,btn){
+ const q=goalOverview(s,d),r=explorationResume(s),first=!s.development?.goal&&firstSessionGoal(s,d),next=q?.next||first||r;
+ return '<section class="folio-next exploration-home" data-exploration-home aria-label="当前探索目标"><span class="folio-eyebrow">'+esc(q?'我的目标':first?'初次出行':r.name+' · '+r.place)+'</span><h2>'+esc(q?q.name:first?first.title:r.name)+'</h2><p>'+esc(next.text)+'</p>'+btn(next.label,next.command,'primary')+'<div class="goal-home-tools">'+btn(q?'目标详情':'选择目标',q?{type:'ui_goalDetails'}:{type:'ui_section',view:'camp',id:'exploreGoals'},'text-action')+(q?btn('回到地区图',{type:'ui_regionOpen',region:r.region},'text-action'):'')+'</div></section>';
+}
+export function explorationTarget(q,esc,btn){
+ if(!q)return '';const next=q.next;
+ return '<article class="exploration-target" data-exploration-target><header><h3>'+esc(q.name)+'</h3><span>'+(q.done?'已完成':'进行中')+'</span></header><p>'+esc(next.text)+'</p><div class="actions">'+btn(next.label,next.command,'primary')+(next.alternative?btn(next.alternative.label,next.alternative.command,'secondary'):'')+'</div><details><summary>材料与进度</summary><p class="note">'+esc(q.note)+'</p>'+q.steps.map(r=>'<div class="exploration-goal-row"><span>'+(r.done?'✓ ':'○ ')+esc(r.text)+'</span>'+(!r.done?btn(r.label,r.command,'text-action'):'')+'</div>').join('')+'</details></article>';
+}
+export function explorationGoalPanel(s,d,esc,btn,options={}){
+ const tracked=goalOverview(s,d),kind=Object.hasOwn(EXPLORATION_GOAL_KINDS,options.exploreKind)?options.exploreKind:explorerGoal(s.development?.goal)?s.development.goal.kind:'invite',choices=explorerChoices(d,kind),id=choices.some(v=>v.id===options.exploreTarget)?options.exploreTarget:s.development?.goal?.kind===kind?s.development.goal.id:choices[0].id,q=explorationGoalQuote(s,d,{kind,id}),selected=s.development?.goal?.kind===kind&&s.development?.goal?.id===id;
+ return '<section class="exploration-goals">'+btn('查找物品与来源',{type:'ui_sources'},'text-action')+'<h2>这次想做什么</h2><div class="exploration-goal-select"><label>目标类别<select data-explore-kind>'+Object.entries(EXPLORATION_GOAL_KINDS).map(([k,name])=>'<option value="'+k+'" '+(k===kind?'selected':'')+'>'+name+'</option>').join('')+'</select></label><label>选择目标<select data-explore-target>'+choices.map(c=>'<option value="'+c.id+'" '+(c.id===id?'selected':'')+'>'+esc(c.name)+'</option>').join('')+'</select></label></div>'+explorationTarget(q,esc,btn)+'<div class="actions">'+(selected?btn('取消追踪',{type:'goalClear'},'secondary'):btn(s.development?.goal?'改为追踪此目标':'追踪到首页',{type:'goalSet',kind,id},'primary'))+'</div>'+(s.development?.goal&&!selected?'<p class="note">当前追踪：'+esc(tracked?.name||'原养成目标')+'。浏览其他目标不会替换它。</p>':'')+'</section>';
+}

@@ -1,5 +1,5 @@
-import {SPECIAL_ROUTES,routeAllowed} from './special-routes.js?v=0.69.0';
-import {hasOwn} from './utils.js?v=0.69.0';
+import {SPECIAL_ROUTES,routeAllowed} from './special-routes.js?v=0.82.0';
+import {hasOwn} from './utils.js?v=0.82.0';
 export const SPECIAL_TIERS={
  1:{name:'寻常',level:5,hall:1,scale:.72,rate:1},
  2:{name:'险境',level:15,hall:2,scale:1.65,rate:1.3},
@@ -17,9 +17,21 @@ export const SPECIAL_DUNGEONS={
  drops:[material('cloth',.30),material('wood',.22),material('iron',.12),rare('spirit_essence',.015),rare('martial_pages',.055),material('horse_feed',.13),rare('mount_feed',.04),rare('exp_pill',.065),rare('strength_shard',.04),rare('strength_charm',.012),rare('jinchuangyao',.08),rare('xing_shen_san',.045),gear('oak_staff',.08),gear('felt_cap',.055),gear('cloth_belt',.06),gear('jade',.04),gear('tactics_book',.022),gear('sturdy_belt',.018),rare('blueprint',.025),material('skill_page',.06)]}
 };
 Object.assign(SPECIAL_DUNGEONS,{
- minechief:{parent:'mine',name:'炉底密窟',hp:[4,5,4],terrain:'mountain',description:'守洞人藏起了通往炉底的梯子。连闯旧矿洞五次，才寻到入口。',enemies:['bandit_chief','soldier','guard'],rule:'守炉头目开场护阵 30%，持续 12 秒；蓄势 3 秒后重锤扫过全队，之后每隔 12 秒再蓄势。可用护阵反击或打断应对，守炉重锤能破去护阵。',drops:[material('iron',.3),rare('dark_iron',.08),rare('tempered_steel',.1),rare('blueprint',.04),gear('furnace_hammer',.025)]},
- marshnest:{parent:'marsh',name:'芦荡药船',hp:[7,9,11],terrain:'water',description:'芦苇深处有条沉船，舱内还留着药箱。船板已朽，踏上去便惊动了蛇群。',enemies:['snake','snake','wolf'],rule:'蛇群开场怒气 90，狼加速 30%；首蛇蓄势 3 秒后施放全队毒雾，持续 6 秒。可打断；有效治疗配药匣能清除一项毒伤。',drops:[material('herb',.35),rare('medicinal_extract',.08),rare('jinchuang_gao',.06),rare('jiedudan',.15),gear('reed_medicine_case',.025)]},
- ruinsvault:{parent:'ruins',name:'地宫内室',hp:[3.5,4,3.5],terrain:'forest',description:'石门后的盗匪守着几箱兵书。两翼伏兵出手很快，头目则伺机整队。',enemies:['bandit_chief','guard','bandit'],rule:'头目开场怒气 80，两翼加速 35%；蓄势 3 秒后为存活敌人各恢复 15% 气血。留住打断招式截住治疗，再集火收尾。',drops:[rare('skill_page',.2),rare('martial_pages',.08),rare('spirit_essence',.025),rare('blueprint',.04),gear('vault_strategy',.025)]}
+ minechief:{parent:'mine',entryClears:1,name:'炉底密窟',hp:[4,5,4],terrain:'mountain',description:'清出矿道后，通往炉底的梯子露了出来。同难度通关旧矿洞一次即可进入。',enemies:['bandit_chief','soldier','guard'],rule:'守炉头目开场护阵 30%，持续 12 秒；蓄势 3 秒后重锤扫过全队，之后每隔 12 秒再蓄势。可用护阵反击或打断应对，守炉重锤能破去护阵。',drops:[material('iron',.3),rare('dark_iron',.08),rare('tempered_steel',.1),rare('blueprint',.04),gear('furnace_hammer',.025)]},
+ marshnest:{parent:'marsh',entryClears:1,name:'芦荡药船',hp:[7,9,11],terrain:'water',description:'芦苇深处有条沉船，舱内还留着药箱。船板已朽，踏上去便惊动了蛇群。',enemies:['snake','snake','wolf'],rule:'蛇群开场怒气 90，狼加速 30%；首蛇蓄势 3 秒后施放全队毒雾，持续 6 秒。可打断；有效治疗配药匣能清除一项毒伤。',drops:[material('herb',.35),rare('medicinal_extract',.08),rare('jinchuang_gao',.06),rare('jiedudan',.15),gear('reed_medicine_case',.025)]},
+ ruinsvault:{parent:'ruins',entryClears:1,name:'地宫内室',hp:[3.5,4,3.5],terrain:'forest',description:'石门后的盗匪守着几箱兵书。两翼伏兵出手很快，头目则伺机整队。',enemies:['bandit_chief','guard','bandit'],rule:'头目开场怒气 80，两翼加速 35%；蓄势 3 秒后为存活敌人各恢复 15% 气血。留住打断招式截住治疗，再集火收尾。',drops:[rare('skill_page',.2),rare('martial_pages',.08),rare('spirit_essence',.025),rare('blueprint',.04),gear('vault_strategy',.025)]}
+});
+Object.assign(SPECIAL_DUNGEONS,{
+ forest:{name:'青石古道',hp:[2.5,3,3.5],terrain:'forest',description:'车辙消失在林边，劫道者把皮货和衣料藏进了草棚。',enemies:['road_raider','bandit','guard'],rule:'骑匪绕击后排，守卫开场护阵 20%，持续 8 秒。保护后排，或先集火骑匪。',drops:[material('leather',.32),material('cloth',.28),material('mountain_vine',.22),material('herb',.16),material('wood',.16),rare('cured_hide',.045),rare('woven_linen',.045),rare('ration',.055),rare('jinchuangyao',.08),rare('exp_pill',.045),gear('short_bow',.06),gear('scout_coat',.03),gear('cloth_belt',.04)]},
+ forestcamp:{parent:'forest',entryClears:1,name:'藏货营地',hp:[3.5,4,4.5],terrain:'forest',description:'货箱垒在棚下。头目听铃发令，传令哨将号令递给两侧弓手。',enemies:['bandit_chief','bandit','guard'],rule:'头目蓄势 3 秒后号令齐射；先击倒第二位的传令哨，齐射变为单体攻击。也可打断，或在古道地图拆铃后选后路潜入。',drops:[material('mountain_vine',.30),material('leather',.30),material('cloth',.25),rare('cured_hide',.08),rare('woven_linen',.07),rare('martial_pages',.055),rare('blueprint',.03),gear('scout_coat',.055),gear('short_bow',.075),gear('sturdy_belt',.025)]}
+});
+Object.assign(SPECIAL_DUNGEONS,{
+ water:{name:'芦荡渡口',hp:[2.5,3,3.5],terrain:'water',description:'水匪截住了渡船，包袱和药囊都堆在浅滩。先清出一段能靠岸的水路。',enemies:['soldier','bandit','guard'],rule:'两侧水匪开场怒气 40；栈桥守卫开场护阵 20%，持续 8 秒。先集火水匪，或破阵推进。',drops:[material('reed_fiber',.30),material('cloth',.28),material('herb',.22),material('wood',.18),material('leather',.16),rare('woven_linen',.05),rare('medicinal_extract',.035),rare('jinchuangyao',.09),rare('huiqisan',.07),rare('jiedudan',.06),rare('camp_pack',.025),gear('river_charm',.04),gear('river_boots',.025),gear('medic_pouch',.018)]},
+ waterfort:{parent:'water',entryClears:1,name:'芦荡水寨',hp:[3.5,4,4.5],terrain:'water',description:'水寨头目扣下了船户。他将船并在栈桥边，借回水掀浪撞船。',enemies:['bandit_chief','guard','bandit'],rule:'头目蓄势 3 秒后回流撞船，攻击全队并使怒气 -20。固守使本招伤害额外降低 60%，且不失怒气；渡口修桩后可选系缆，伤害降低 20% 且不失怒气。两者可叠加，也可打断。',drops:[material('reed_fiber',.35),material('cloth',.30),material('herb',.25),rare('woven_linen',.08),rare('medicinal_extract',.06),rare('camp_pack',.045),rare('xing_shen_san',.04),rare('blueprint',.03),gear('river_charm',.065),gear('river_boots',.04),gear('medic_pouch',.03)]}
+});
+Object.assign(SPECIAL_DUNGEONS,{
+ mountain:{name:'断崖粮道',hp:[2.5,3,3.5],terrain:'mountain',description:'劫粮人用断车堵住山口。清出粮道，找回被劫的粮车和铁料。',enemies:['guard','bandit','soldier'],rule:'前排盾匪开场护阵 25%，持续 8 秒。守炉重锤可破去护阵，也可先集火两侧匪徒。',drops:[material('copper_sand',.30),material('scrap_iron',.28),material('iron',.20),material('wood',.18),material('leather',.18),material('grain',.12),rare('tempered_steel',.05),rare('jinchuangyao',.08),rare('zhuanggu_tang',.035),rare('ration',.04),gear('iron_helmet',.05),gear('sturdy_belt',.03),gear('guard_pike',.018),rare('strength_shard',.04)]},
+ mountainhold:{parent:'mountain',entryClears:1,name:'截粮营',hp:[3.5,4,4.5],terrain:'mountain',description:'截粮头目靠盾阵守住营门。项充看出他举盾时的破绽，崖上的栈道也能绕到营后。',enemies:['bandit_chief','guard','bandit'],rule:'头目每次举盾获得 35% 护阵，蓄势 3 秒后重击前排。蓄势期间用破甲招式或守炉重锤破去护阵，可阻止本招并使其破甲 6 秒；也可打断。修通栈道后可选高处绕行。',drops:[material('copper_sand',.35),material('iron',.30),material('leather',.25),material('grain',.20),rare('tempered_steel',.08),rare('dark_iron',.05),rare('zhuanggu_tang',.05),rare('blueprint',.03),gear('sturdy_belt',.055),gear('iron_helmet',.07),gear('guard_pike',.03)]}
 });
 export function specialDropTable(id,tier){
  if(!hasOwn(SPECIAL_DUNGEONS,id)||!hasOwn(SPECIAL_TIERS,tier)||!Number.isInteger(tier))return [];

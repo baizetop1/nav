@@ -1,19 +1,19 @@
-import {tacticsAfterHit,tacticsInterrupt,specialBossMove} from './tactics-combat.js?v=0.69.0';
-import {LATE_BOSSES} from './late-mainline-data.js?v=0.69.0';
-import {roleDamageFactor,roleInterrupt,roleAfterHit} from './hero-roles.js?v=0.69.0';
-import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.69.0';
-import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.69.0';
-import {talentFactor} from './talents.js?v=0.69.0';
-import { healingSupply } from './fieldcraft.js?v=0.69.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.69.0';
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.69.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.69.0';
-import { orderDamageFactor } from './commands.js?v=0.69.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.69.0';
-import { unitArm } from './martial.js?v=0.69.0';
-import { martialFactor } from './martial.js?v=0.69.0';
-import { bounded, pick, random } from './utils.js?v=0.69.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.69.0';
+import {tacticsAfterHit,tacticsInterrupt,specialBossMove} from './tactics-combat.js?v=0.82.0';
+import {LATE_BOSSES} from './late-mainline-data.js?v=0.82.0';
+import {roleDamageFactor,roleInterrupt,roleAfterHit} from './hero-roles.js?v=0.82.0';
+import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.82.0';
+import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.82.0';
+import {talentFactor} from './talents.js?v=0.82.0';
+import { healingSupply } from './fieldcraft.js?v=0.82.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.82.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.82.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.82.0';
+import { orderDamageFactor } from './commands.js?v=0.82.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.82.0';
+import { unitArm } from './martial.js?v=0.82.0';
+import { martialFactor } from './martial.js?v=0.82.0';
+import { bounded, pick, random } from './utils.js?v=0.82.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.82.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -58,7 +58,10 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const loss=journeyAbsorb(b,target,Math.max(1,Math.round(raw*roleDamageFactor(b,u,target,!name)*journeyDamageFactor(b,u,target,!name)*personalFactor(b,u,!name)*talentFactor(b,u,target,{normal:!name,strategy:effect.kind==='strategy'})*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0)))));
   const guarded=!!has(target,'guard');reportDamage(b,u,target,loss);target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
   api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
-  if(effect.status&&alive(target))status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
+  if(effect.status&&alive(target)){
+    status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
+    if(effect.status.id==='armor_break'&&b.tactics&&b.context.type==='special'&&b.context.id==='mountainhold'&&b.context.route!=='highpath'&&target===b.enemy[0]&&target.boss?.pendingAt&&has(target,'guard')){target.statuses=target.statuses.filter(s=>s.id!=='guard');api.log(b,'【破开盾沿】'+u.name+'击开头目的护阵。');}
+  }
   if(!alive(target))api.log(b,`${target.name}已无力再战。`);
   tacticsAfterHit(b,u,target,!name,loss,{reportDamage,reportHealing,absorb:journeyAbsorb},guarded);
   roleAfterHit(b,u,target,!name,loss,{reportHealing});

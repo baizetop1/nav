@@ -1,4 +1,5 @@
-import {GEAR_TRAITS,PERSONAL_TRAITS,TRAIT_LABELS} from './tactics-data.js?v=0.69.0';
+import {revisitBossMove} from './region-revisit-combat.js?v=0.82.0';
+import {GEAR_TRAITS,PERSONAL_TRAITS,TRAIT_LABELS} from './tactics-data.js?v=0.82.0';
 const alive=u=>u.hp>0;
 const active=(b,u,id)=>u.statuses.some(s=>s.id===id&&s.expiresAt>b.elapsed);
 const log=(b,text)=>{b.log.push(text);if(b.log.length>120)b.log.shift();};
@@ -48,11 +49,33 @@ export function tacticsHealing(b,u,t,n,api){if(!t||!alive(t)||n<=0)return;for(co
 }}
 export function specialBossMove(state,u,api,strike){
  const b=state.battle,boss=u.boss;
- if(!b.tactics||b.context.type!=='special'||u!==b.enemy[0]||!['minechief','marshnest','ruinsvault'].includes(b.context.id)&&b.context.route!=='warbell')return false;
+ if(!b.tactics||b.context.type!=='special'||u!==b.enemy[0]||!['minechief','marshnest','ruinsvault','forestcamp','waterfort','mountainhold'].includes(b.context.id)&&b.context.route!=='warbell')return false;
+ if(revisitBossMove(state,u,api,strike))return true;
  const id=b.context.route==='warbell'?'ruinsvault':b.context.id;
- if(!boss.pendingAt&&boss.readyAt===b.elapsed){boss.pendingAt=b.elapsed+3000;api.log(b,'【首领蓄势 · 3秒】'+({minechief:'重锤将扫过全队，可护阵承受或打断。',marshnest:'蛇群将喷出毒雾，可打断；中毒后用解毒或净化。',ruinsvault:'头目将为全队恢复气血，可打断或先集火头目。'})[id]);}
+ if(!boss.pendingAt&&boss.readyAt===b.elapsed){boss.pendingAt=b.elapsed+3000;if(id==='marshnest'&&b.context.route==='reedvenom')for(const target of b.team.filter(alive))api.addStatus(target,{id:'poison',value:Math.max(1,Math.round(target.maxHp*.01)),turns:2},b.elapsed);if(id==='mountainhold'&&!['highpath','convoy'].includes(b.context.route))api.addStatus(u,{id:'guard',value:.35,turns:3},b.elapsed);api.log(b,'【首领蓄势 · 3秒】'+({mountainhold:b.context.route==='convoy'?'伏兵将绕到车尾，夹击最后一位同伴；击倒最末位伏兵或打断头目可阻止。':b.context.route==='highpath'?'头目将突刺前排一人；可打断或固守。':'头目举盾；三秒内破去护阵可阻止重击，并让他破甲。',waterfort:'水浪将撞过全队；切换固守可减伤并保住怒气，也可打断。',minechief:b.context.route==='orecart'?'运料匪要送来补给：头目回血、全敌护阵。先击倒最末位运料匪，或打断头目。':'重锤将扫过全队，可护阵承受或打断。',marshnest:b.context.route==='reedvenom'?'毒雾已沾身，三秒后向仍中毒的人追加重毒。先解毒可躲开；打断阻止追加，固守使重毒减半。':'蛇群将喷出毒雾，可打断；中毒后用解毒或净化。',ruinsvault:'头目将为全队恢复气血，可打断或先集火头目。',forestcamp:b.context.route==='cutbell'||!alive(b.enemy[1])?'警铃或传令已断，头目只会攻击前排一人。':'传令哨将号令齐射；击倒传令哨或打断头目可阻止。'})[id]);}
  else if(boss.pendingAt===b.elapsed){boss.pendingAt=0;boss.readyAt=b.elapsed+12000;if(active(b,u,'stun')){api.log(b,'【蓄势中断】首领被眩晕，本次招式未出。');return true;}
+  if(id==='mountainhold'){
+   if(b.context.route==='convoy'){const target=b.team.filter(alive).at(-1);if(!alive(b.enemy.at(-1)))api.log(b,'【截断夹击】绕后伏兵已倒下，头目没等到接应，本次夹击未出。');else if(target){strike(state,u,target,{kind:'damage',rate:b.orders?.stance==='guard'?.625:1.25},'截尾夹击',api);api.log(b,'【截尾夹击】头目与伏兵夹击'+target.name+'。固守可减轻伤害；先除去伏兵可截断接应。');}return true;}
+   const high=b.context.route==='highpath',target=b.team.find(alive);
+   if(!high&&!active(b,u,'guard')){api.addStatus(u,{id:'armor_break',value:1,turns:3},b.elapsed);api.log(b,'【盾阵崩散】头目失去护阵，重击未出；破甲 6 秒，防御降低 30%。');}
+   else if(target){strike(state,u,target,{kind:'damage',rate:high?1.2:1.6},high?'高处突刺':'盾阵重击',api);api.log(b,high?'【高处突刺】头目仓促出枪，只攻前排一人。':'【盾阵重击】头目借盾沿刺出重枪；下次举盾时可用破阵截住。');}
+  }
+  if(id==='waterfort'){
+   const guarded=b.orders?.stance==='guard',moored=b.context.route==='moored',rate=1.25*(guarded?.4:1)*(moored?.8:1);
+   for(const target of b.team.filter(alive)){strike(state,u,target,{kind:'damage',rate},'回流撞船',api);if(!guarded&&!moored)target.rage=Math.max(0,target.rage-20);}
+   api.log(b,guarded?'【稳住船身】全队固守，浪击减轻，怒气未失。':moored?'【缆绳吃力】船被系住，浪击减轻，怒气未失。':'【回流撞船】浪头撞过全队，怒气各减 20；下次掀浪前可切换固守。');
+  }
+  if(id==='forestcamp'){const volley=b.context.route!=='cutbell'&&alive(b.enemy[1]),targets=volley?b.team.filter(alive):b.team.filter(alive).slice(0,1);for(const target of targets)strike(state,u,target,{kind:'damage',rate:1.15},volley?'号令齐射':'独力挥斩',api);api.log(b,volley?'【号令齐射】传令哨仍在，弓手齐射全队。':'【传令已断】头目只能独自攻击前排。');}
+  if(id==='minechief'&&b.context.route==='orecart'){
+   if(alive(b.enemy.at(-1))){const restored=Math.min(u.maxHp-u.hp,Math.round(u.maxHp*.1));u.hp+=restored;for(const ally of b.enemy.filter(alive))api.addStatus(ally,{id:'guard',value:.2,turns:3},b.elapsed);api.log(b,'【矿料补给】头目恢复 '+restored+' 气血，全敌护阵 20% 六秒。运料匪还在车后送料。');}
+   else{api.addStatus(u,{id:'armor_break',value:1,turns:3},b.elapsed);api.log(b,'【截断补给】运料匪已倒下，本次回血与护阵未生效；头目破甲 6 秒，防御降低 30%。');}return true;
+  }
   if(id==='minechief')for(const target of b.team.filter(alive))strike(state,u,target,{kind:'damage',rate:1.25},'重锤扫阵',api);
+  if(id==='marshnest'&&b.context.route==='reedvenom'){
+   const targets=b.team.filter(t=>alive(t)&&active(b,t,'poison'));
+   for(const target of targets)api.addStatus(target,{id:'poison',value:Math.max(1,Math.round(target.maxHp*(b.orders?.stance==='guard'?.03:.06))),turns:2},b.elapsed);
+   api.log(b,targets.length?'【追毒】赤背首蛇向仍中毒的'+targets.map(t=>t.name).join('、')+'追加两跳重毒；已解毒的人没有再沾毒。':'【追毒落空】同伴身上的毒已解，没有追加重毒。');return true;
+  }
   if(id==='marshnest')for(const target of b.team.filter(alive))api.addStatus(target,{id:'poison',value:Math.max(1,Math.round(target.maxHp*.025)),turns:3},b.elapsed);
   if(id==='ruinsvault'){let healed=0;for(const ally of b.enemy.filter(alive)){const n=Math.min(ally.maxHp-ally.hp,Math.round(ally.maxHp*.15));ally.hp+=n;healed+=n;}api.log(b,'【整队疗伤】敌军共恢复 '+healed+' 气血。');}
  }

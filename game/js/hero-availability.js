@@ -1,0 +1,1 @@
+export const away=(s,id)=>s.idleDispatch?.mission?.hero===id||s.affairs?.mission?.hero===id||!!s.realm?.squad?.team.includes(id)||!!s.realm?.trek?.team.includes(id)||!!s.expansion?.run?.team.includes(id);

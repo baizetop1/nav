@@ -1,33 +1,52 @@
-import {recordGatheringClear} from './gathering.js?v=0.69.0';
-import {gatheringRegion} from './gathering-data.js?v=0.69.0';
-import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.69.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.69.0';
-import {startBattle,addStatus,attackInterval} from './battle.js?v=0.69.0';
-import {attachTroops} from './camp.js?v=0.69.0';
-import {newEquipment} from './item.js?v=0.69.0';
-import {hasOwn,requireRule,journal,random} from './utils.js?v=0.69.0';
+import {crossHas} from './cross-region-data.js?v=0.82.0';
+import {finishCrossRegion} from './cross-region.js?v=0.82.0';
+import {prepareMedicineBoat} from './cross-region-combat.js?v=0.82.0';
+import {revisitByRoute,revisitHas} from './region-revisit-data.js?v=0.82.0';
+import {recordGatheringClear} from './gathering.js?v=0.82.0';
+import {gatheringRegion} from './gathering-data.js?v=0.82.0';
+import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.82.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.82.0';
+import {startBattle,addStatus,attackInterval} from './battle.js?v=0.82.0';
+import {attachTroops} from './camp.js?v=0.82.0';
+import {newEquipment} from './item.js?v=0.82.0';
+import {hasOwn,requireRule,journal,random} from './utils.js?v=0.82.0';
 export {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext};
 const LIMIT=10000000,EQUIPMENT_LIMIT=200;
 export function specialRecord(s){return s.specialDungeons??={version:1,clears:{},last:null};}
 export function specialPlan(s,id,tier,route){
  const dungeon=hasOwn(SPECIAL_DUNGEONS,id)?SPECIAL_DUNGEONS[id]:null,difficulty=Number.isInteger(tier)&&hasOwn(SPECIAL_TIERS,tier)?SPECIAL_TIERS[tier]:null,drops=specialDropTable(id,tier),requiredSlots=drops.filter(r=>r.kind==='equipment').reduce((n,r)=>n+r.max,0);
- let reason=!routeAllowed(route,id)?'无效的副本路线。':!dungeon||!difficulty?'请选择副本和难度。':!s.camp?'先建立寨子。':s.battle||s.scheme||s.event?'先结束当前交战、计策或际遇。':s.realm?.trek||s.expansion?.run?'先走完当前远征。':!s.team.length?'先安排出阵好汉。':s.team.some(h=>s.heroes[h]?.status!=='owned')?'出阵队伍中有未入寨的好汉。':s.team.some(h=>s.affairs?.mission?.hero===h||s.realm?.squad?.team.includes(h))?'出阵好汉仍在外派，请先接回。':s.camp.buildings.hall<difficulty.hall?'聚义厅需要 '+difficulty.hall+' 级。':!s.team.some(h=>s.heroes[h].level>=difficulty.level)?'出阵队伍至少需要一位 '+difficulty.level+' 级好汉。':dungeon.parent&&(s.specialDungeons?.clears[dungeon.parent+'_'+tier]||0)<5?'先通关'+SPECIAL_DUNGEONS[dungeon.parent].name+'同难度 5 次，寻找入口。':tier>1&&!(s.specialDungeons?.clears[id+'_'+(tier-1)]>0)?'先通关本副本的上一难度。':(s.specialDungeons?.clears[id+'_'+tier]||0)>=LIMIT?'本难度通关次数已达存储上限。':s.equipment.length+requiredSlots>EQUIPMENT_LIMIT?'请先整理行囊，至少留出 '+requiredSlots+' 个装备空位。':s.nextEquipment+requiredSlots>LIMIT?'装备编号已达存储上限。':'';
+ const revisit=revisitByRoute(route);
+ let reason=route==='medicineboat'&&!crossHas(s,'prepared')?'先查明药船去向，再请阮小七接船。':revisit&&!revisitHas(s,revisit[0],'trace_checked')?'先完成'+revisit[1].name+'重访的口信与查探。':route==='timberguard'&&!s.exploration?.flags.includes('liyun_hoops')?'先和李云查过裂梁，再请汤隆备好铁箍。':route==='reedvenom'&&!s.exploration?.marsh?.flags.includes('source_checked')?'先回芦苇泽草庐接口信，再查看药圃进水沟。':route==='orecart'&&!s.exploration?.flags.includes('cart_checked')?'先到旧炉房接口信，再去运矿道查看车辙。':route==='convoy'&&!s.exploration?.mountain?.flags.includes('road_checked')?'先在断崖粮道接下车夫来信，并到乱石隘查探。':route==='highpath'&&!s.exploration?.mountain?.flags.includes('ladder')?'先到断崖粮道修通悬崖栈道。':route==='moored'&&!s.exploration?.water?.flags.includes('moored')?'先到芦荡渡口整修旧泊船桩。':route==='cutbell'&&!s.exploration?.forest?.flags.includes('sabotaged')?'先到青石古道的林后小径拆除警铃。':!routeAllowed(route,id)?'无效的副本路线。':!dungeon||!difficulty?'请选择副本和难度。':!s.camp?'先建立寨子。':s.battle||s.scheme||s.event?'先结束当前交战、计策或际遇。':s.realm?.trek||s.expansion?.run?'先走完当前远征。':!s.team.length?'先安排出阵好汉。':s.team.some(h=>s.heroes[h]?.status!=='owned')?'出阵队伍中有未入寨的好汉。':s.team.some(h=>s.affairs?.mission?.hero===h||s.realm?.squad?.team.includes(h))?'出阵好汉仍在外派，请先接回。':s.camp.buildings.hall<difficulty.hall?'聚义厅需要 '+difficulty.hall+' 级。':!s.team.some(h=>s.heroes[h].level>=difficulty.level)?'出阵队伍至少需要一位 '+difficulty.level+' 级好汉。':dungeon.parent&&(s.specialDungeons?.clears[dungeon.parent+'_'+tier]||0)<(dungeon.entryClears||5)?'先通关'+SPECIAL_DUNGEONS[dungeon.parent].name+'同难度 '+(dungeon.entryClears||5)+' 次，寻找入口。':tier>1&&!(s.specialDungeons?.clears[id+'_'+(tier-1)]>0)?'先通关本副本的上一难度。':(s.specialDungeons?.clears[id+'_'+tier]||0)>=LIMIT?'本难度通关次数已达存储上限。':s.equipment.length+requiredSlots>EQUIPMENT_LIMIT?'请先整理行囊，至少留出 '+requiredSlots+' 个装备空位。':s.nextEquipment+requiredSlots>LIMIT?'装备编号已达存储上限。':'';
  if(!reason&&drops.some(r=>r.kind==='item'&&(s.inventory[r.id]||0)+r.max>LIMIT))reason='部分掉落材料接近存储上限，请先使用或加工。';
  const bonus=routeReward(route,tier);if(!reason&&bonus&&(s.inventory[bonus.id]||0)+bonus.count+(drops.find(r=>r.id===bonus.id)?.max||0)>LIMIT)reason='路线奖励将超过材料上限，请先整理行囊。';
  return {reason,dungeon,difficulty,tier,route,bonus,stamina:0,food:0,drops,requiredSlots};
 }
 export function enterSpecial(s,d,a){
  const q=specialPlan(s,a.id,a.tier,a.route);requireRule(!q.reason,q.reason);specialRecord(s);
- startBattle(s,d,{enemies:q.route?[...q.dungeon.enemies,SPECIAL_ROUTES[q.route].enemy]:q.dungeon.enemies,scale:q.difficulty.scale,context:{type:'special',id:a.id,tier:a.tier,terrain:q.dungeon.terrain,...(q.route?{route:q.route}:{})}});attachTroops(s,0);
+ startBattle(s,d,{enemies:q.route&&SPECIAL_ROUTES[q.route].enemy?[...q.dungeon.enemies,SPECIAL_ROUTES[q.route].enemy]:q.dungeon.enemies,scale:q.difficulty.scale,context:{type:'special',id:a.id,tier:a.tier,terrain:q.dungeon.terrain,...(q.route?{route:q.route}:{})}});attachTroops(s,0);
  const b=s.battle;if(a.id==='marshnest')b.enemy[0].boss={kind:'chief',readyAt:6000,pendingAt:0,phase:0};for(const u of b.enemy)u.hp=u.maxHp=Math.round(u.maxHp*q.dungeon.hp[a.tier-1]);
+ if(a.id==='mountain'){b.enemy[0].name='执盾匪徒';b.enemy[1].name='持刀匪徒';b.enemy[2].name='长枪匪徒';addStatus(b.enemy[0],{id:'guard',value:.25,turns:4},0);}
+ if(a.id==='mountainhold'){b.enemy[0].name='截粮头目';b.enemy[1].name='执盾匪徒';b.enemy[2].name='持刀匪徒';b.enemy[0].boss={kind:'chief',readyAt:6000,pendingAt:0,phase:0};}
+ if(q.route==='reedvenom')b.enemy[0].name='赤背首蛇';
+ if(q.route==='timberguard')b.enemy.at(-1).name='夺木骑匪';
+ if(q.route==='orecart'){b.enemy[0].name='劫矿头目';b.enemy.at(-1).name='运料匪';}
+ if(q.route==='convoy'){b.enemy[0].name='截尾头目';b.enemy.at(-1).name='绕后伏兵';}
+ if(a.id==='water'){b.enemy[0].name='拦船水匪';b.enemy[1].name='短刀水匪';b.enemy[2].name='船上守卫';for(const u of b.enemy.slice(0,2))u.rage=40;addStatus(b.enemy[2],{id:'guard',value:.2,turns:4},0);}
+ if(a.id==='waterfort'){b.enemy[0].name='水寨头目';b.enemy[1].name='栈桥守卫';b.enemy[2].name='短刀水匪';b.enemy[0].boss={kind:'chief',readyAt:6000,pendingAt:0,phase:0};}
+ if(a.id==='forest')addStatus(b.enemy[2],{id:'guard',value:.2,turns:4},0);
+ if(a.id==='forestcamp'){b.enemy[0].name='劫道头目';b.enemy[1].name='传令哨';b.enemy[0].boss={kind:'chief',readyAt:6000,pendingAt:0,phase:0};}
  if(a.id==='mine')addStatus(b.enemy[0],{id:'guard',value:.2,turns:5},0);
  if(a.id==='marsh')for(const u of b.enemy)if(u.model==='snake')u.rage=70;
  if(a.id==='ruins'){b.enemy[0].rage=50;for(const u of b.enemy.slice(1)){u.speed=Math.round(u.speed*1.2);u.nextAttackAt=attackInterval(u);}}
- if(a.id==='minechief'){addStatus(b.enemy[0],{id:'guard',value:.3,turns:6},0);for(const u of b.enemy.slice(1))u.rage=60;}
+ if(a.id==='minechief'){if(q.route!=='orecart')addStatus(b.enemy[0],{id:'guard',value:.3,turns:6},0);for(const u of b.enemy.slice(1))u.rage=60;}
  if(a.id==='marshnest')for(const u of b.enemy){if(u.model==='snake')u.rage=90;else{u.speed=Math.round(u.speed*1.3);u.nextAttackAt=attackInterval(u);}}
  if(a.id==='ruinsvault'){b.enemy[0].rage=80;for(const u of b.enemy.slice(1)){u.speed=Math.round(u.speed*1.35);u.nextAttackAt=attackInterval(u);}}
- if(q.route){const r=SPECIAL_ROUTES[q.route];for(const u of b.enemy){u.hp=u.maxHp=Math.round(u.maxHp*r.hp);u.speed=Math.round(u.speed*r.speed);u.nextAttackAt=attackInterval(u);}if(q.route==='supplies')b.enemy.at(-1).rage=90;if(q.route==='oreguard')for(const u of b.enemy)addStatus(u,{id:'guard',value:.45,turns:6},0);if(q.route==='poisonbank')for(const u of b.team)addStatus(u,{id:'poison',value:Math.max(1,Math.round(u.maxHp*.03)),turns:4},0);b.log.push('【'+r.name+'】'+r.text);}
- b.log.push('【'+q.dungeon.name+' · '+q.difficulty.name+'】'+q.dungeon.rule);
+ if(q.route==='bellbreak'){b.enemy[0].name='盗经头目';b.enemy.at(-1).name='摇钟人';}
+ if(q.route==='crossfire'){b.enemy[0].name='截路头目';b.enemy[1].name='前哨弩手';b.enemy.at(-1).name='后队弩手';}
+ if(q.route==='backwash')b.enemy[0].name='拦潮头目';
+ if(q.route){const r=SPECIAL_ROUTES[q.route];for(const u of b.enemy){u.hp=u.maxHp=Math.round(u.maxHp*r.hp);u.speed=Math.round(u.speed*r.speed);u.nextAttackAt=attackInterval(u);}if(q.route==='supplies')b.enemy.at(-1).rage=90;if(q.route==='shieldpass')for(const u of b.enemy)addStatus(u,{id:'guard',value:.3,turns:4},0);if(q.route==='oreguard')for(const u of b.enemy)addStatus(u,{id:'guard',value:.45,turns:6},0);if(q.route==='poisonbank')for(const u of b.team)addStatus(u,{id:'poison',value:Math.max(1,Math.round(u.maxHp*.03)),turns:4},0);b.log.push('【'+r.name+'】'+r.text);}
+ prepareMedicineBoat(b,addStatus);
+ b.log.push('【'+q.dungeon.name+' · '+q.difficulty.name+'】'+(['medicineboat','orecart','reedvenom','bellbreak','crossfire','backwash'].includes(q.route)?SPECIAL_ROUTES[q.route].text:q.dungeon.rule));
  journal(s,'进入'+q.dungeon.name+'（'+q.difficulty.name+'）。只由好汉出战，不耗体力与粮草；战斗用药按实际使用扣除。');
  return q;
 }
@@ -35,6 +54,12 @@ export function finishSpecial(s,d,b){
  requireRule(s.battle===b&&validSpecialContext(b?.context)&&['victory','defeat','retreat'].includes(b.outcome),'没有待结算的寻宝副本。');
  const {id,tier}=b.context,record=specialRecord(s),drops=[],cursor={rng:s.rng};
  if(b.outcome==='victory'){
+  finishCrossRegion(s,b);
+  if(b.context.route==='timberguard'&&!s.exploration.flags.includes('liyun_won')){s.exploration.flags.push('liyun_won');journal(s,'车夫把木料推过矿道，李云接住车辕：回石室立支架吧。');}
+  const revisit=revisitByRoute(b.context.route);if(revisit&&!revisitHas(s,revisit[0],'won_return')){s.exploration[revisit[0]].flags.push('won_return');journal(s,revisit[1].winText);}
+  if(b.context.route==='reedvenom'&&!s.exploration.marsh.flags.includes('won_reedvenom')){s.exploration.marsh.flags.push('won_reedvenom');journal(s,'蛇群退入深水，堵在沟口的枯苇被拖开了。带新采的泽兰回草庐，冯伯还在等信。');}
+  if(b.context.route==='orecart'&&!s.exploration.flags.includes('won_orecart')){s.exploration.flags.push('won_orecart');journal(s,'矿车上的绳索解开了。带矿样回炉房，汤隆还在那里等你。');}
+  if(b.context.route==='convoy'&&!s.exploration.mountain.flags.includes('won_convoy')){s.exploration.mountain.flags.push('won_convoy');journal(s,'后车赶上了车队。回歇棚告诉车夫，护粮回程已经走通。');}
   recordGatheringClear(s,gatheringRegion(id),tier);
   requireRule((record.clears[id+'_'+tier]||0)<LIMIT,'本难度通关次数已达存储上限。');
   for(const row of specialDropTable(id,tier))if(random(cursor)<row.rate){
