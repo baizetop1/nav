@@ -1,8 +1,8 @@
-import {MOUNTAIN_NODES,mountainHas,mountainGate,mountainLinks,mountainRoute} from './mountain-data.js?v=0.82.0';
-import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.82.0';
-import {ensureGathering} from './gathering.js?v=0.82.0';
-import {knowHero,ownHero} from './hero.js?v=0.82.0';
-import {requireRule,journal} from './utils.js?v=0.82.0';
+import {MOUNTAIN_NODES,mountainHas,mountainGate,mountainLinks,mountainRoute} from './mountain-data.js?v=0.82.1';
+import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.82.1';
+import {ensureGathering} from './gathering.js?v=0.82.1';
+import {knowHero,ownHero} from './hero.js?v=0.82.1';
+import {requireRule,journal} from './utils.js?v=0.82.1';
 export function openMountain(s){return s.exploration.mountain??={version:1,position:'shelter',visited:['shelter'],flags:[],pending:null};}
 export function mountainPath(s,target){
  if(mountainGate(s,target))return null;const start=s.exploration?.mountain?.position||'shelter',queue=[[start]],seen=new Set([start]);

@@ -1,7 +1,7 @@
-import {MARSH_NODES,marshHas,marshGate,marshGoal,MARSH_DECOCT} from './marsh-data.js?v=0.82.0';
-import {marshPath,marshFightQuote,marshTask,marshDecoctQuote} from './marsh.js?v=0.82.0';
-import {specialDropTable} from './special-dungeons.js?v=0.82.0';
-import {SPECIAL_ROUTES} from './special-routes.js?v=0.82.0';
+import {MARSH_NODES,marshHas,marshGate,marshGoal,MARSH_DECOCT} from './marsh-data.js?v=0.82.1';
+import {marshPath,marshFightQuote,marshTask,marshDecoctQuote} from './marsh.js?v=0.82.1';
+import {specialDropTable} from './special-dungeons.js?v=0.82.1';
+import {SPECIAL_ROUTES} from './special-routes.js?v=0.82.1';
 export function marshPanel(s,d,esc,btn,selected){
  const x=s.exploration.marsh,here=x.position,id=Object.hasOwn(MARSH_NODES,selected)?selected:here,n=MARSH_NODES[id],has=k=>marshHas(s,k);
  const action=(label,type,key,style='secondary',disabled=false,extra={})=>btn(label,{type,region:'marsh',...(key?{id:key}:{}),...extra},style,disabled);

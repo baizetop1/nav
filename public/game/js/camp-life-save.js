@@ -1,5 +1,5 @@
-import {CAMP_PEOPLE,CAMP_PROJECTS,LIFE_THRESHOLDS} from './camp-life-data.js?v=0.82.0';
-import {regionBuilt} from './exploration-data.js?v=0.82.0';
+import {CAMP_PEOPLE,CAMP_PROJECTS,LIFE_THRESHOLDS} from './camp-life-data.js?v=0.82.1';
+import {regionBuilt} from './exploration-data.js?v=0.82.1';
 const obj=x=>x&&typeof x==='object'&&!Array.isArray(x),integer=(n,lo,hi)=>Number.isSafeInteger(n)&&n>=lo&&n<=hi;
 export const hasCampLife=s=>!!s.campLife||s.development?.ledger.some(r=>['gained','spent'].some(k=>['campWood','campFood'].some(id=>r[k]?.[id]>0)));
 export function validateCampLife(s,check){const x=s.campLife,cs=s.daily?.counters||{};

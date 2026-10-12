@@ -45,3 +45,9 @@
  #function-menu .function-menu-group[data-selected=false]{display:none}
  #function-menu .function-menu-group{padding-top:10px}
 }
+
+/* Actual content decides whether the full menu fits, including browser/system bars. */
+#function-menu[data-menu-layout=categories] .function-menu-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:0 0 8px}
+#function-menu[data-menu-layout=categories] .function-menu-tabs button{min-width:0;min-height:36px;padding:5px;border:1px solid transparent;background:var(--folio-control);color:var(--muted);font-size:13px;border-radius:8px}
+#function-menu[data-menu-layout=categories] .function-menu-tabs button[aria-pressed=true]{color:var(--green);border-color:var(--folio-edge);background:var(--folio-selected)}
+#function-menu[data-menu-layout=categories] .function-menu-group[data-selected=false]{display:none}

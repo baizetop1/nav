@@ -279,7 +279,8 @@
     "test:shuihu-camp-life": "node scripts/shuihu-camp-life-selfcheck.mjs",
     "test:shuihu-camp-life-cloud": "node scripts/shuihu-camp-life-cloud-selfcheck.mjs",
     "test:shuihu-camp-return": "node scripts/shuihu-camp-return-selfcheck.mjs",
-    "test:shuihu-camp-battle": "node scripts/shuihu-camp-battle-selfcheck.mjs"
+    "test:shuihu-camp-battle": "node scripts/shuihu-camp-battle-selfcheck.mjs",
+    "check:shuihu-mobile-hotfix": "node scripts/shuihu-mobile-hotfix-browser.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

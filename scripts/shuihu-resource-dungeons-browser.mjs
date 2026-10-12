@@ -90,7 +90,7 @@ async function browse(t){
  const before=wallet(await snapshot(t.page));
  for(const r of RESOURCE_ROUTES){await section(t,'bag','materials');await click(t,'ui_resourceSource',{id:r.id});assert.equal(await t.page.locator('#resource-route').inputValue(),r.id);assert.equal(await t.page.locator('select[data-section-view="trials"]').inputValue(),'resources');await firstPageChallenge(t,r.id,Number(await t.page.locator('#resource-tier').inputValue()));assert.deepEqual(wallet(await snapshot(t.page)),before,'source navigation does not spend');await fit(t);}
  await more(t,'trials');await section(t,'trials','daily');assert.deepEqual(new Set(await t.page.locator('#daily-route option').evaluateAll(es=>es.map(e=>e.value))),new Set(DAILY_ROUTES.map(r=>r.id)));
- for(const r of DAILY_ROUTES){const picker=t.page.locator('#daily-route');await reach(t,picker);await picker.selectOption(r.id);await idle(t.page);for(const tier of [1,2,3])await reach(t,await command(t,'rotationStart',{kind:'daily',id:r.id,tier}));await fit(t);}
+ for(const r of DAILY_ROUTES){const picker=t.page.locator('#daily-route');await reach(t,picker);await picker.selectOption(r.id);await idle(t.page);for(const tier of [1,2,3]){const summary=t.page.locator('[data-fold="rotation-daily-'+r.id+'-'+tier+'"]>summary');await reach(t,summary);await summary.click();await idle(t.page);const mobile=t.width<=900;await reach(t,await command(t,'rotationStart',{kind:'daily',id:r.id,tier},mobile?'#screen-detail':'#main'));if(mobile)await t.page.locator('#screen-detail .dialog-header button').click();else await summary.click();await idle(t.page);}await fit(t);}
  await shot(t,'legacy-materials');await more(t,'bag');await section(t,'bag','materials');await more(t,'trials');await section(t,'trials','resources');await fit(t);
  console.log('Resource browser navigation PASS '+t.width+'x'+t.height+': four source links, all resource/difficulty buttons, first-page challenge, one selected card, original materials, More navigation, no overflow.');
 }
@@ -99,7 +99,7 @@ function gains(before,after,id,tier=1){
  assert.equal(after.player.stamina,before.player.stamina-10);assert.equal(after.camp.mode,before.camp.mode);assert.equal(after.camp.deployment,before.camp.deployment);assert.equal(after.camp.troops,before.camp.troops);assert.equal(after.camp.wounded,before.camp.wounded);
  assert.equal(after.lastBattle.context.id,id);assert.equal(after.lastBattle.troops,0);assert.equal(after.lastBattle.wounded,0);assert.equal(after.lastBattle.fallen||0,0);
 }
-async function reward(t,r){await t.page.locator('#reward-result[open]').waitFor();const row=t.page.locator('#reward-result .reward-grid article').filter({has:t.page.locator('span',{hasText:new RegExp('^'+r.resourceName+'$')})});assert.equal(await row.count(),1,'resource receipt '+r.id);assert.equal(await row.locator('b').innerText(),'+'+r.amounts[0]);await reach(t,row);await fit(t);}
+async function reward(t,r){await t.page.locator('#reward-result[open]').waitFor();const details=t.page.locator('#reward-result [data-receipt-details]');if(await details.count()){await details.click();await idle(t.page);}const tab=t.page.locator('#reward-result [data-dialog-tab=rewards]');if(await tab.count()){await tab.click();await idle(t.page);}const row=t.page.locator('#reward-result .reward-grid article').filter({has:t.page.locator('span',{hasText:new RegExp('^'+r.resourceName+'$')})});assert.equal(await row.count(),1,'resource receipt '+r.id);assert.equal(await row.locator('b').innerText(),'+'+r.amounts[0]);await reach(t,row);await fit(t);}
 async function battle(t,id){
  const r=RESOURCE_ROUTES.find(r=>r.id===id);await openResource(t,id);const original=await snapshot(t.page);assert.equal(original.camp.food,0);assert.equal(original.camp.mode,'army');assert.equal(original.camp.troops,0);
  await click(t,'rotationStart',{kind:'daily',id,tier:1});await t.page.locator('#sortie-preview[open]').waitFor();assert.deepEqual(wallet(await snapshot(t.page)),wallet(original),'preview keeps zero-food army state');await fit(t);
@@ -109,7 +109,7 @@ async function battle(t,id){
  for(let attempt=1;attempt<=2;attempt++){
   if(attempt>1)await openResource(t,id);const before=await snapshot(t.page);await click(t,'rotationStart',{kind:'daily',id,tier:1});await t.page.locator('#sortie-preview[open]').waitFor();await click(t,'ui_sortieConfirm',{},'#sortie-preview');
   const started=await snapshot(t.page);assert.equal(started.battle.context.id,id);assert.equal(started.battle.expedition.troops,0);assert.equal(started.player.stamina,before.player.stamina-10);assert.deepEqual(stock(started),stock(before));
-  await t.page.waitForFunction(()=>{const button=document.querySelector('.battle-end button');return button&&!button.disabled;},{},{timeout:45000});await click(t,'finishBattle');await reward(t,r);
+  await t.page.locator('#battle-outcome[open][data-settled=true]').waitFor({timeout:45000});await t.page.locator('#battle-outcome [data-settled-choice=review]').click();await idle(t.page);await reward(t,r);
   const after=await snapshot(t.page);gains(before,after,id);assert.equal(after.campaign.mastery[id+'_1'],attempt);assert.equal(after.campaign.daily.uses[id],attempt);if(attempt===1)await shot(t,'battle-reward-'+id);await closeReward(t);
  }
  await openResource(t,id);const beforeSweep=await snapshot(t.page);assert.equal(beforeSweep.campaign.mastery[id+'_1'],2);
@@ -122,7 +122,7 @@ async function battle(t,id){
  console.log('Resource browser battle PASS '+t.width+'x'+t.height+' '+id+': zero-food army preview/cancel, two real stable wins, exact stock receipts, positive sweep preview/cancel/confirmation, shared daily cap, isolated slot reload.');
 }
 async function checked(width,height,kind,run){const t=await scene(width,height,kind);try{return await run(t);}catch(e){fs.writeFileSync(new URL('failure-'+kind+'-'+width+'.html',output),await t.page.content());await t.page.screenshot({path:fileURLToPath(new URL('failure-'+kind+'-'+width+'.png',output))}).catch(()=>{});throw e;}finally{await t.context.close();}}
-const browser=await chromium.launch({channel:'msedge',headless:true});
+const browser=await chromium.launch({...(process.env.SHUIHU_BROWSER_PATH?{executablePath:process.env.SHUIHU_BROWSER_PATH}:{channel:'msedge'}),headless:true});
 try{
  const widths=(process.env.SHUIHU_RESOURCE_WIDTHS||'').split(',').filter(Boolean).map(Number),cases=(process.env.SHUIHU_RESOURCE_CASES||'browse,battle').split(',');
  for(const [width,height] of [[320,740],[390,844],[1280,900]].filter(([w])=>!widths.length||widths.includes(w))){

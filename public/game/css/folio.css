@@ -142,7 +142,8 @@ html:not([data-theme=night]),html:not([data-theme=night]) body{background:var(--
 .onboarding-guide{flex:none;border-left:3px solid var(--green);background:var(--folio-soft);padding:6px 8px;margin:0 0 7px;font-size:12px;line-height:1.4}
 .onboarding-guide>div{display:flex;align-items:center;justify-content:space-between;gap:6px}.onboarding-guide strong{font-size:12px;color:var(--green)}
 .viewport-shell .onboarding-guide p{font-size:11px;line-height:1.4;margin:3px 0}.onboarding-guide nav{display:flex;gap:8px;flex-wrap:wrap}.viewport-shell .onboarding-guide button{font-size:11px;min-height:28px!important;padding:3px 7px;margin:0;background:var(--panel);color:var(--green);border:1px solid var(--line);border-radius:5px}.guide-closed{padding:0;border:0;background:none;text-align:right}
-button[data-guide-target]{outline:2px solid var(--folio-brass,#8b7447)!important;outline-offset:2px;box-shadow:0 0 0 4px var(--folio-gold,#f5f1e7)!important}
+button[data-guide-target]{border-color:var(--folio-brass,#8b7447)!important;box-shadow:inset 3px 0 0 var(--folio-brass,#8b7447)!important}
+button[data-guide-target]:focus-visible{outline:2px solid var(--green);outline-offset:2px}
 @media(max-width:900px){#main[data-guided=true] .scene-banner{display:none}#main>.onboarding-guide{order:-2}.onboarding-guide{margin-bottom:5px;padding:4px 7px}}
 
 /* Grain-road choices use compact cards; existing screen pagination stays available. */

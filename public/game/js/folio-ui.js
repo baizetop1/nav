@@ -1,16 +1,16 @@
-import {explorationHome} from './exploration-goals-ui.js?v=0.82.0';
-import {specialPlan} from './special-dungeons.js?v=0.82.0';
-import {afterBattleNext} from './opening-ui.js?v=0.82.0';
-import {isExternal,isWanderer} from './roster.js?v=0.82.0';
-import {HERO_ROLES} from './hero-roles.js?v=0.82.0';
-import {attributes} from './hero.js?v=0.82.0';
-import {experienceToNext,ATTRIBUTE_NAMES} from './progression.js?v=0.82.0';
-import {qualityOf,QUALITIES} from './quality.js?v=0.82.0';
-import {CORPS} from './corps-data.js?v=0.82.0';
-import {storyObjective} from './story-guide.js?v=0.82.0';
-import {journeyNextGoal} from './journey-goals-ui.js?v=0.82.0';
-import {campNotices} from './camp-overview.js?v=0.82.0';
-import {icon} from './icons.js?v=0.82.0';
+import {explorationHome} from './exploration-goals-ui.js?v=0.82.1';
+import {specialPlan} from './special-dungeons.js?v=0.82.1';
+import {afterBattleNext} from './opening-ui.js?v=0.82.1';
+import {isExternal,isWanderer} from './roster.js?v=0.82.1';
+import {HERO_ROLES} from './hero-roles.js?v=0.82.1';
+import {attributes} from './hero.js?v=0.82.1';
+import {experienceToNext,ATTRIBUTE_NAMES} from './progression.js?v=0.82.1';
+import {qualityOf,QUALITIES} from './quality.js?v=0.82.1';
+import {CORPS} from './corps-data.js?v=0.82.1';
+import {storyObjective} from './story-guide.js?v=0.82.1';
+import {journeyNextGoal} from './journey-goals-ui.js?v=0.82.1';
+import {campNotices} from './camp-overview.js?v=0.82.1';
+import {icon} from './icons.js?v=0.82.1';
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 // Shortcuts grow with story/camp progress; all existing pages remain accessible.
 export function campShortcuts(s){

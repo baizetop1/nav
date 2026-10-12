@@ -53,5 +53,16 @@ export function showFunctionMenu(root,options,invoker){
     if(dialog.returnValue!=='navigate'&&invoker?.isConnected)invoker.focus({preventScroll:true});
   },{once:true});
   dialog.showModal();
+  // Measure the complete menu: entry counts and the visible viewport both change.
+  const fit=()=>{
+    if(!dialog.isConnected)return;
+    delete dialog.dataset.menuLayout;
+    const bounds=dialog.getBoundingClientRect();
+    const clipped=[...dialog.querySelectorAll('button')].some(b=>{const r=b.getBoundingClientRect();return r.width&&r.height&&(r.bottom>bounds.bottom-8||r.right>bounds.right-4);});
+    if(dialog.scrollHeight>dialog.clientHeight+1||clipped)dialog.dataset.menuLayout='categories';
+  };
+  window.addEventListener('resize',fit);window.visualViewport?.addEventListener('resize',fit);
+  dialog.addEventListener('close',()=>{window.removeEventListener('resize',fit);window.visualViewport?.removeEventListener('resize',fit);},{once:true});
+  fit();document.fonts?.ready.then(fit);
   return dialog;
 }

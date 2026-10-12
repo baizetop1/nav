@@ -1,4 +1,4 @@
-import {REVISIT_FLAGS,revisitGoal} from './region-revisit-data.js?v=0.82.0';
+import {REVISIT_FLAGS,revisitGoal} from './region-revisit-data.js?v=0.82.1';
 export const FOREST_NODES={
  post:{name:'古道茶棚',links:['fork','ridge'],text:'茶棚的桌子翻在路边。一个瘦小汉子蹲在车辙旁，手里捏着半截断绳。',purpose:'结识时迁，查找商队失货；办妥后可邀他回寨。'},
  fork:{name:'运货岔路',links:['post','watch'],text:'两辆空车堵在岔口。劫道的人把货拆散，沿林间小路背走了。',purpose:'可重复挑战。皮革、布匹、山藤和轻装兵器分别判定掉落。',battle:'forest'},

@@ -1,4 +1,4 @@
-import {REVISIT_FLAGS,revisitGoal} from './region-revisit-data.js?v=0.82.0';
+import {REVISIT_FLAGS,revisitGoal} from './region-revisit-data.js?v=0.82.1';
 export const WATER_NODES={
  dock:{name:'渡口鱼棚',links:['shoal','reeds'],text:'鱼棚里只剩半篓小鱼。阮小七坐在船头补网，望着对岸几条没升篷的船。',purpose:'与阮小七相识，救回船户后可邀他入寨。'},
  shoal:{name:'芦岸浅滩',links:['dock','bend'],text:'几名水匪把小船拖上浅滩，拦着上岸的人收钱。水边散落着拆开的包袱。',purpose:'可重复挑战，搜寻苇丝、布匹、药草和水行装备。',battle:'water'},

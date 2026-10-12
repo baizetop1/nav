@@ -7,11 +7,11 @@ import {validateSave} from '../public/game/js/save.js';
 
 const require=createRequire(import.meta.url);
 const {chromium}=require(process.env.SHUIHU_PLAYWRIGHT_PATH||'playwright');
-const browser=await chromium.launch({channel:'msedge',headless:true});
+const browser=await chromium.launch({...(process.env.SHUIHU_BROWSER_PATH?{executablePath:process.env.SHUIHU_BROWSER_PATH}:{channel:'msedge'}),headless:true});
 const out=new URL('../artifacts/menu/',import.meta.url);
 const gameURL=process.env.SHUIHU_GAME_URL||'http://127.0.0.1:5187/nav/game/index.html';
 const groups=['journey','camp','heroes','other'];
-const sizes=[[320,568],[360,640],[390,700],[390,701],[390,844],[844,390],[1440,1000]];
+const sizes=[[320,568],[360,640],[390,700],[390,701],[360,740],[390,780],[390,844],[844,390],[1440,1000]];
 fs.mkdirSync(out,{recursive:true});
 
 function initialState(){
@@ -113,8 +113,8 @@ async function menuFits(test){
   assert.ok(info.scrollX<=1&&info.scrollY<=1,'menu must fit without scrolling: '+JSON.stringify(info));
   assert.deepEqual(info.clipped,[],'menu buttons must be fully visible');
   assert.equal(info.headingAligned,true,'menu title and close button share one header row');
-  const short=height<=700;
-  assert.equal(await page.locator('#function-menu .function-menu-tabs').isVisible(),short,'category tabs follow the short-screen breakpoint');
+  const short=await page.locator('#function-menu .function-menu-tabs').isVisible();
+  if(height<=700)assert.ok(short,'short screens use categories');
   assert.equal(info.visible.length,short?1:4,'short screens display one category');
   assert.deepEqual(errors,[]);
 }
@@ -138,7 +138,9 @@ async function navigate(test,link){
   await test.page.locator('#function-menu[open]').waitFor({state:'hidden'});
   await idle(test.page);
   await test.page.waitForFunction(view=>document.querySelector('#main')?.dataset.screen===view,link.view);
-  if(link.section){
+  if(link.section==='sources'){
+    assert.equal(await test.page.locator('.source-browser').count(),1,'source tracking opens its standalone page');
+  }else if(link.section){
     assert.equal(await test.page.locator('[data-page-section="'+link.view+':'+link.section+'"]').count(),1,link.label+' page section');
   }
   if(link.map){
@@ -189,8 +191,8 @@ async function checkMenus(width,height){
     assert.equal(await page.evaluate(()=>document.getElementById('main')===window.menuBaseMain),true,'opening menu preserves the underlying DOM');
     assert.deepEqual(await page.locator('#function-menu .function-menu-group').evaluateAll(es=>es.map(e=>e.dataset.menuGroup)),groups);
     const links=await menuLinks(test);
-    assert.equal(links.length,27,'all 27 menu destinations exist');
-    assert.equal(new Set(links.map(link=>[link.view,link.section,link.map].join(':'))).size,27,'menu destinations are distinct');
+    assert.equal(links.length,30,'all 30 menu destinations exist');
+    assert.equal(new Set(links.map(link=>[link.view,link.section,link.map].join(':'))).size,30,'menu destinations are distinct');
     await closeMenu(test);
 
     await checkAppearance(test);
@@ -219,7 +221,7 @@ async function checkMenus(width,height){
 
     for(const link of links)await navigate(test,link);
     assert.deepEqual(test.errors,[]);
-    console.log('Menu PASS '+width+'x'+height+': 27 destinations, four groups, bounded day/night layouts, native modal, Escape/close/backdrop preserve page and input.');
+    console.log('Menu PASS '+width+'x'+height+': 30 destinations, four groups, bounded day/night layouts, native modal, Escape/close/backdrop preserve page and input.');
   }catch(error){
     await screenshot(test,'failure-navigation').catch(()=>{});
     throw error;
@@ -251,7 +253,7 @@ async function checkBattle(width,height){
     const disabled=await page.locator('#function-menu button[data-view]').evaluateAll(buttons=>buttons.map(button=>({
       label:button.textContent.trim(),view:button.dataset.view,map:button.dataset.menuMap||'',disabled:button.disabled
     })));
-    assert.equal(disabled.length,27);
+    assert.equal(disabled.length,30);
     for(const entry of disabled){
       const allowed=entry.view==='save'||entry.view==='chronicle'||(entry.view==='map'&&entry.map==='story');
       assert.equal(entry.disabled,!allowed,entry.label+' battle availability');

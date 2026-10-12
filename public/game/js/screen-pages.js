@@ -1,4 +1,4 @@
-import {prepareScreenLayout,beforeLayoutPaint,installScreenLayout,screenDetailOpen} from './screen-layout.js?v=0.82.0';
+import {prepareScreenLayout,beforeLayoutPaint,installScreenLayout,screenDetailOpen} from './screen-layout.js?v=0.82.1';
 // CSS column fragmentation keeps text lines and controls intact while paging by viewport.
 const mobile=matchMedia('(max-width:900px)'),books=new Map(),positions=new Map();let queued=0,observer,pressed=false;
 export const screenInteractionActive=()=>mobile.matches&&(pressed||screenDetailOpen());

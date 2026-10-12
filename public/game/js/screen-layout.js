@@ -62,6 +62,19 @@ export function prepareScreenLayout(main){
   deck(container,panels,label,base+':'+selector+':'+i,undo);
  });
  for(const [i,container]of [...main.querySelectorAll('[data-screen-deck]')].entries())deck(container,[...container.children].filter(p=>p.matches('[data-screen-choice]')),container.dataset.screenDeck,base+':custom:'+i,undo);
+ const story=main.querySelector('#map-local:not(.journey-scene)');
+ if(story){
+  const remoteGuide=story.querySelector(':scope>.story-guide:not(.story-guide-arrived)');
+  const extras=[...story.querySelectorAll('.journey-story>.local-optional,:scope>details:not(.screen-info)')];
+  if(remoteGuide)extras.push(remoteGuide);
+  if(extras.length){
+   const wrap=document.createElement('div');wrap.className='story-local-options';extras[0].before(wrap);
+   const markers=extras.map(el=>{const mark=document.createComment('story-extra');el.before(mark);wrap.append(el);return mark;});
+   undo.push(()=>{extras.forEach((el,i)=>markers[i].replaceWith(el));wrap.remove();});
+   foldBlock(wrap,remoteGuide?'主线去向与此地事务':'此地事务与往事',undo);
+  }
+  const cards=[...story.querySelectorAll('.journey-story>article')];if(cards.length>1)combine(cards[0].parentElement,cards,'选择剧情',base+':story-cards',undo);
+ }
  const guide=main.querySelector('.onboarding-guide'),footer=document.querySelector('.viewport-shell>.footer');
  if(guide?.classList.contains('guide-closed')&&footer){const marker=document.createComment('guide');guide.before(marker);footer.insertBefore(guide,footer.lastElementChild);guide.classList.add('footer-guide');undo.push(()=>{marker.replaceWith(guide);guide.classList.remove('footer-guide');});}
  else if(guide&&!guide.classList.contains('guide-prompt')){const header=guide.firstElementChild,description=guide.querySelector('p'),nav=guide.querySelector('nav');if(header&&description&&nav){const fold=document.createElement('details'),summary=document.createElement('summary');fold.className='guide-brief';summary.id='screen-guide-summary';summary.textContent=text(header.querySelector('strong'))+' · 指引';fold.append(summary,description,nav);guide.prepend(fold);guide.classList.add('guide-compact');undo.push(()=>{guide.append(description,nav);fold.remove();guide.classList.remove('guide-compact');});}}
