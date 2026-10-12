@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-11T20:18:11.337Z",
+  "generatedAt": "2026-10-12T00:33:25.550Z",
   "intelligence": {
-    "updatedAt": "2026-10-11T20:18:11.337Z",
+    "updatedAt": "2026-10-12T00:33:25.550Z",
     "items": [
       {
         "id": "cn-item-a93cd8014f94afcb",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50045984",
+        "id": "hn-50049411",
         "category": "dev",
-        "title": "Total Annihilation, rebuilt for modern computers",
-        "url": "https://nanolathe.gg",
+        "title": "Whatever became of holography? (2011)",
+        "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T18:04:47.000Z",
+        "publishedAt": "2026-10-11T23:50:34.000Z",
         "badge": "HN",
-        "signal": "149 分 · 69 评论"
+        "signal": "25 分 · 5 评论"
       },
       {
-        "id": "cn-it-295a12d756734597",
+        "id": "cn-it-4e34be68d2936861",
         "category": "cn",
-        "title": "李杰回应一加 16 不支持全局 185Hz：产品追求体验优先，屏幕暂时做不到",
-        "url": "https://www.ithome.com/1/011/715.htm",
+        "title": "优派推出 VX27G58-2K-9 显示器：27 英寸 2K 240Hz，到手价 929 元",
+        "url": "https://www.ithome.com/1/011/737.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-11T15:28:59.000Z",
-        "summary": "IT之家 10 月 11 日消息，一加中国区总裁李杰今日在微博评论区回应关于一加 16 屏幕刷新率相关问题， 据其介绍，一加 16 追求体验优先，不是参数优先。要同时兼顾流畅，功耗，发热，屏幕显示效果，现在的屏幕技术 暂时做不到全局 185Hz 。全局高刷要做到常用常开，目前最佳体验就是全局 165Hz，欢迎大家上手一加 16 去对比其他手机。 IT之家注意到，在 10 月 9 日的第四代东方屏技术沟通会上，一加与京东方联合研发的第四代东方屏正式发布。第四代东方屏采用全新 …",
+        "publishedAt": "2026-10-12T00:28:17.000Z",
+        "summary": "IT之家 10 月 12 日消息，优派上周推出了一款 2K 高刷显示器，型号为 VX27G58-2K-9 显示器，现已开售，预售 899 元，正式开售后已经涨到 929 元，不过晒单返 50 元 E 卡。 京东 优派 27 英寸显示器 VX27G58-2K-9 2K 高清 240Hz FastIPS 面板 硬件低蓝光 1ms 响应 HDR 技术 929 元 直达链接 该显示器采用常规三边窄边框设计，配备操作便捷的五向摇杆，搭配五边形金属超薄底座，稳固且不占桌面空间。 核心配…",
         "badge": "IT之家"
       },
       {
@@ -76,23 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247908",
+        "id": "v2ex-1247932",
         "category": "dev",
-        "title": "gpt 相比其他模型废话多好多，你们是怎么优化的",
-        "url": "https://www.v2ex.com/t/1247908",
+        "title": "我开源项目给用户免费用 GPT6 Luna，还是招来了一堆素质极差的人盗刷。",
+        "url": "https://www.v2ex.com/t/1247932",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T15:48:57.000Z",
+        "publishedAt": "2026-10-12T00:19:42.000Z",
+        "summary": "最近和一个中转站合作，每月提供一些额度，我本身 OpenAI 就给我免费使用，所以我这些额度就开放了 GPT6 Luna 给用户免费用。 因为开源免费，所以也不会开发登录这种功能，所以提供模型的地址密钥在仓库里都可以看得到。结果就引来了存心不良的人来盗刷，我看了一下日志，几乎都是各种 AI 工具在调用，应该是某些用户看了源码之后刷了点小聪明去盗用。 说真的我这种模式也没办法阻止盗刷，因为都摆在明面上了，只能对 ip 进行控制。真的要对我这小服务器攻击我也没办法，最后最多就是…",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-a7fefad9300c9f00",
+        "id": "cn-baidu-6b06226fc98ea870",
         "category": "cn",
-        "title": "创造历史！郑钦文中网夺冠",
-        "url": "https://www.baidu.com/s?wd=%E5%88%9B%E9%80%A0%E5%8E%86%E5%8F%B2%EF%BC%81%E9%83%91%E9%92%A6%E6%96%87%E4%B8%AD%E7%BD%91%E5%A4%BA%E5%86%A0&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "沙特遭遇十年来最惨袭击",
+        "url": "https://www.baidu.com/s?wd=%E6%B2%99%E7%89%B9%E9%81%AD%E9%81%87%E5%8D%81%E5%B9%B4%E6%9D%A5%E6%9C%80%E6%83%A8%E8%A2%AD%E5%87%BB&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "10月11日，沙特首都利雅得哈立德国王国际机场遭袭击造成12死309伤，为沙特近十年来伤亡最惨重袭击。胡塞武装宣称对袭击负责，机场现已彻底停摆，多国联军正展开调查。",
         "badge": "热搜",
-        "signal": "7,808,004 热度"
+        "signal": "7,808,149 热度"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -115,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50046241",
+        "id": "hn-50045984",
         "category": "dev",
-        "title": "Chapter 1 of Ways of Seeing by John Berger",
-        "url": "https://www.ways-of-seeing.com/ch1",
+        "title": "Total Annihilation, rebuilt for modern computers",
+        "url": "https://nanolathe.gg",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T18:26:24.000Z",
+        "publishedAt": "2026-10-11T18:04:47.000Z",
         "badge": "HN",
-        "signal": "28 分 · 0 评论"
+        "signal": "332 分 · 144 评论"
       },
       {
         "id": "cn-item-af881a6a87158907",
@@ -167,13 +169,13 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-9011ef7a276745ea",
+        "id": "cn-it-ccc97f1cd80e4239",
         "category": "cn",
-        "title": "曝苹果新一代 Apple TV 4K 内置麦克风、Siri Remote 遥控器将配扬声器便于查找",
-        "url": "https://www.ithome.com/1/011/714.htm",
+        "title": "OpenAI 宣布 GPT-6.1 Sol 默认上下文长度从 272k 提升至 500k，增加约 80%",
+        "url": "https://www.ithome.com/1/011/736.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-11T15:20:30.000Z",
-        "summary": "IT之家 10 月 11 日消息，苹果将在本周二举行“欢迎回家”活动，主角预计是 HomeView 智能家庭中枢，除此之外还有新款 HomePod mini 和 Apple TV 4K。 据彭博社记者马克 · 古尔曼今日透露， 新款 Apple TV 4K 将在 10 月 30 日发售 ，苹果已在这款新品中测试内置麦克风，用户直接说出 Siri 就能进行语音交互。 IT之家了解到，现款 Apple TV 4K 仅在 Siri Remote 中带有麦克风，用户必须对着遥控器或…",
+        "publishedAt": "2026-10-12T00:23:08.000Z",
+        "summary": "IT之家 10 月 12 日消息，OpenAI 的 Thibault Sottiaux（Tibo）今日宣布，已将 Codex 和 Work 环境下 GPT-6.1 Sol 的 默认上下文长度提升至 500k ，相比此前的 272k 增加了约 80%。 Tibo 表示，尽管 OpenAI 未来还会继续提高上限，但这一调整已能显著降低上下文压缩的触发频率，并能更从容地处理那些需要长期保留大量上下文与复杂细节的任务。 该数值经过充分测试，对绝大多数用户而言都是体验与性能的最佳平衡…",
         "badge": "IT之家"
       },
       {
@@ -197,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50045946",
+        "id": "hn-50047091",
         "category": "dev",
-        "title": "NYC's \"Click to Cancel\" rule is now in effect",
-        "url": "https://www.nyc.gov/main/click-to-cancel",
+        "title": "Cartographers of North Korea",
+        "url": "https://cartographers-nk.wonyoung.so/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T18:01:16.000Z",
+        "publishedAt": "2026-10-11T19:46:40.000Z",
         "badge": "HN",
-        "signal": "170 分 · 62 评论"
+        "signal": "165 分 · 28 评论"
       },
       {
-        "id": "cn-baidu-a312434aacb18d16",
+        "id": "cn-baidu-1873e4bd6a0a1d63",
         "category": "cn",
-        "title": "郑钦文 排名",
-        "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87+%E6%8E%92%E5%90%8D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "郑钦文调皮摘掉爸爸帽子露出光头",
+        "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87%E8%B0%83%E7%9A%AE%E6%91%98%E6%8E%89%E7%88%B8%E7%88%B8%E5%B8%BD%E5%AD%90%E9%9C%B2%E5%87%BA%E5%85%89%E5%A4%B4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "在北京时间10月11日结束的中网女单决赛中，24岁的中国名将郑钦文战胜安德烈耶娃，生涯首次夺得中网女单冠军。凭借中网冠军进账的1000个积分，郑钦文最新积分增至2018分，世界排名回升至第23位。",
+        "summary": "北京时间10月11日，2026中网女单决赛，郑钦文2-0战胜安德列娃，夺得冠军。赛后，郑钦文与家人合影庆祝，她还调皮摘下爸爸的帽子。",
         "badge": "热搜",
-        "signal": "7,713,466 热度"
+        "signal": "7,711,864 热度"
       },
       {
         "id": "github-advisory-ghsa-pwhx-cvv3-qj5c",
@@ -279,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50043026",
+        "id": "hn-50049302",
         "category": "dev",
-        "title": "Terence Tao: Math 2.0 [pdf]",
-        "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
+        "title": "Governments are mishandling the affordability crisis",
+        "url": "https://www.economist.com/finance-and-economics/2026/10/08/governments-are-mishandling-the-affordability-crisis",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T13:16:45.000Z",
+        "publishedAt": "2026-10-11T23:40:06.000Z",
         "badge": "HN",
-        "signal": "220 分 · 262 评论"
+        "signal": "14 分 · 4 评论"
       },
       {
-        "id": "cn-it-c9fd537b1ba8e4e4",
+        "id": "cn-it-134d0b8175159d95",
         "category": "cn",
-        "title": "消息称 OLED 屏新款 iPad mini 售价将大幅上涨，或接近 799 美元",
-        "url": "https://www.ithome.com/1/011/713.htm",
+        "title": "尼康 Z 120-300mm F2.8 镜头谍照曝光：内置 1.4 倍增距镜，最快 10 月底发布",
+        "url": "https://www.ithome.com/1/011/735.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-11T15:12:21.000Z",
-        "summary": "IT之家 10 月 11 日消息，彭博社记者马克 · 古尔曼今天表示，苹果计划本月晚些时候推出新款 iPad mini。新机的起步存储空间可能会有所提升， 但有意换机的用户得提前做好涨价的准备 。 古尔曼透露，新款 iPad mini 售价相比现款机型将大幅上涨，预计将接近 799 美元 （IT之家注：现汇率约合 5,359 元人民币） 。作为对比，现款 iPad mini 7 价格为 599 美元 （现汇率约合 4,017 元人民币） /4,799 元人民币。 据悉，新款…",
+        "publishedAt": "2026-10-12T00:17:50.000Z",
+        "summary": "IT之家 10 月 12 日消息，尼康新款长焦镜头 Z 120-300mm f/2.8 TC VR S 现身 F1 新加坡赛事现场。 如图所示，有摄影爱好者在社交平台分享了现场照片，一名法新社泰籍女摄影记者在新加坡 F1 赛事期间使用了这支尚未发布的镜头。 IT之家注意到，这并非该镜头首次在顶级体育赛事中被拍到，此前它已在法网赛场和 2026 年北美世界杯期间投入实地测试。 尼康于 2026 年 5 月 7 日通过官方新闻稿正式宣布正在开发 NIKKOR Z 120-300…",
         "badge": "IT之家"
       },
       {
@@ -320,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247878",
+        "id": "v2ex-1247877",
         "category": "dev",
-        "title": "llm 时代，架构师和普通大头兵的在专业上的区别在哪",
-        "url": "https://www.v2ex.com/t/1247878",
+        "title": "和同事吹水吹出来的：用三国志的数值给大模型排了个座位",
+        "url": "https://www.v2ex.com/t/1247877",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T13:26:13.000Z",
-        "summary": "除了贵人、机遇、办公室政治嫡系之类的。 在专业工程领域上，区别在于经验吗，在于决策力吗。",
+        "publishedAt": "2026-10-11T13:22:04.000Z",
+        "summary": "那天和同事闲聊，说现在这几家 AI 厂商打来打去，越看越像三国，或者说是战国时代。聊着聊着就有人说，那 Opus 5.5 不就是当世吕布嘛，断层第一，谁都打不过。 然后就停不下来了，开始挨个对：这个模型像谁，那个模型该是谁，吵了半天谁也说服不了谁。我想既然都不服，那干脆用数据说话，于是就有了这个网站。 网站： https://illegalcreed.github.io/llm-sanguo/ 源码： https://github.com/IllegalCreed/llm-…",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-9a431789514a9128",
@@ -338,7 +340,7 @@
         "source": "百度热搜",
         "summary": "“伟大的远征——纪念中国工农红军长征胜利90周年主题展览”正在中国人民革命军事博物馆举行。主题展览共分7个部分，展出照片图表357张、文物文献1061件（套）。我们通过一件件文物回望这场伟大远征，从中读懂跨越万水千山的革命理想、传承伟大长征精神，奔赴新时代的长征之路。",
         "badge": "热搜",
-        "signal": "7,616,512 热度"
+        "signal": "7,616,108 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -361,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50047055",
+        "id": "hn-50048522",
         "category": "dev",
-        "title": "Be The Onion's Hero for Once",
-        "url": "https://mailchi.mp/email.theonion.com/archivehunt",
+        "title": "Recursive self-improvement through collective intelligence",
+        "url": "https://pub.sakana.ai/mass/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T19:43:32.000Z",
+        "publishedAt": "2026-10-11T22:22:10.000Z",
         "badge": "HN",
-        "signal": "49 分 · 0 评论"
+        "signal": "39 分 · 11 评论"
       },
       {
         "id": "cn-item-f3a03f5ce5e3e4a8",
@@ -402,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247877",
+        "id": "v2ex-1247858",
         "category": "dev",
-        "title": "和同事吹水吹出来的：用三国志的数值给大模型排了个座位",
-        "url": "https://www.v2ex.com/t/1247877",
+        "title": "Animation is all your need! 把系统架构做成动画",
+        "url": "https://www.v2ex.com/t/1247858",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T13:22:04.000Z",
-        "summary": "那天和同事闲聊，说现在这几家 AI 厂商打来打去，越看越像三国，或者说是战国时代。聊着聊着就有人说，那 Opus 5.5 不就是当世吕布嘛，断层第一，谁都打不过。 然后就停不下来了，开始挨个对：这个模型像谁，那个模型该是谁，吵了半天谁也说服不了谁。我想既然都不服，那干脆用数据说话，于是就有了这个网站。 网站： https://illegalcreed.github.io/llm-sanguo/ 源码： https://github.com/IllegalCreed/llm-…",
+        "publishedAt": "2026-10-11T11:46:03.000Z",
+        "summary": "被 twitter 上的一个技术动画吸引，做了这个 claude skill 可以自动生成 多巴胺动画+论文风格的技术动画。 效果如下: 打开中文交互动效演示 · 中文 MP4 （ 24 秒） 并且这个这张介绍它怎么工作的动画，也是用它自己生成的。 安装： npx skills add joeeeeey/arch-motion-page 然后可以直接跟 Agent 说： 用 arch-motion-page 把我们的 RAG 问答系统做成一页会动的 A4 架构图，要中文版。…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-63438e041b31821f",
+        "id": "cn-it-7e65d2eaf9f6f0eb",
         "category": "cn",
-        "title": "古尔曼：苹果计划在多个直营店举办 iPhone Duo 大型体验活动，最多摆出 150 台以上样机",
-        "url": "https://www.ithome.com/1/011/712.htm",
+        "title": "库克分享卸任苹果 CEO 后首次来华最新动态：与苏炳添喝早茶聊天、同 Xmind 思维导图开发者交流等",
+        "url": "https://www.ithome.com/1/011/734.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-11T15:01:19.000Z",
-        "summary": "IT之家 10 月 11 日消息，彭博社记者马克 · 古尔曼今天在新一期《Power On》通讯透露，苹果正在为其首款折叠屏手机 iPhone Duo 谋划声势浩大的展示活动， 让每一位潜在顾客都能充分体验这款新品 。 古尔曼表示，苹果将在美国各地的 Apple Store 直营店摆出大量样机，供到来的顾客上手体验。 预计纽约第五大道的旗舰店将布置超 150 台体验机 ，分布在上手区和展示设施中。苹果总部 Apple Park 游客中心预计将展出 100 台 iPhone …",
+        "publishedAt": "2026-10-12T00:13:08.000Z",
+        "summary": "IT之家 10 月 12 日消息，苹果前首席执行官、现苹果公司董事会执行主席 蒂姆 · 库克（Tim Cook）再度开启了中国之行 。根据他微博的分享内容来看，他首站落地广州。 IT之家注意到，库克昨晚又分享了他再次来到中国的最新动态：与奥运健儿苏炳添边喝早茶边聊天、探访了 Apple 天环广场和 Apple 珠江新城的团队、与 Xmind 思维导图开发者交流，还欣赏了艺术家 @陈粉丸 的创作。 据南方 + 报道，10 月 11 日，广东省委副书记、省长孟凡利在广州会见美国…",
         "badge": "IT之家"
       },
       {
@@ -443,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50047091",
+        "id": "hn-50048768",
         "category": "dev",
-        "title": "Cartographers of North Korea",
-        "url": "https://cartographers-nk.wonyoung.so/",
+        "title": "Google Data Centers around the world",
+        "url": "https://datacenters.google/locations/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T19:46:40.000Z",
+        "publishedAt": "2026-10-11T22:45:40.000Z",
         "badge": "HN",
-        "signal": "4 分 · 0 评论"
+        "signal": "39 分 · 32 评论"
       },
       {
-        "id": "cn-baidu-7bfba93fbee9754d",
+        "id": "cn-baidu-8f182e865d734551",
         "category": "cn",
-        "title": "郑钦文：自己太想赢 赛前不停呕吐",
-        "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87%EF%BC%9A%E8%87%AA%E5%B7%B1%E5%A4%AA%E6%83%B3%E8%B5%A2+%E8%B5%9B%E5%89%8D%E4%B8%8D%E5%81%9C%E5%91%95%E5%90%90&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "新娘父亲一句“吃好喝好”直接开席",
+        "url": "https://www.baidu.com/s?wd=%E6%96%B0%E5%A8%98%E7%88%B6%E4%BA%B2%E4%B8%80%E5%8F%A5%E2%80%9C%E5%90%83%E5%A5%BD%E5%96%9D%E5%A5%BD%E2%80%9D%E7%9B%B4%E6%8E%A5%E5%BC%80%E5%B8%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月11日，郑钦文中网夺冠，她表示夺下中网冠军太美好，这是她人生首个1000赛事冠军。决赛前，她因太想赢导致身体产生反应不停呕吐。",
+        "summary": "9月26日，宁波95后新娘小朱与丈夫在咸祥镇举办“四无婚礼”，无接亲婚车及司仪，父亲致辞41秒“吃好喝好”便开席。此前新人因怕父母操劳决定极简办婚礼，将买菜花销提至7万多元，并向宾客送出六七万元红包。此举省去繁琐流程，获亲友好评。",
         "badge": "热搜",
-        "signal": "7,521,802 热度"
+        "signal": "7,520,731 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -483,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247858",
+        "id": "v2ex-1247850",
         "category": "dev",
-        "title": "Animation is all your need! 把系统架构做成动画",
-        "url": "https://www.v2ex.com/t/1247858",
+        "title": "ghostproxifier 一款对标 proxifier 的免费软件",
+        "url": "https://www.v2ex.com/t/1247850",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T11:46:03.000Z",
-        "summary": "被 twitter 上的一个技术动画吸引，做了这个 claude skill 可以自动生成 多巴胺动画+论文风格的技术动画。 效果如下: 打开中文交互动效演示 · 中文 MP4 （ 24 秒） 并且这个这张介绍它怎么工作的动画，也是用它自己生成的。 安装： npx skills add joeeeeey/arch-motion-page 然后可以直接跟 Agent 说： 用 arch-motion-page 把我们的 RAG 问答系统做成一页会动的 A4 架构图，要中文版。…",
+        "publishedAt": "2026-10-11T10:48:59.000Z",
+        "summary": "写这个工具的起因很简单：平时用终端、AI 客户端或者某些软件，老是不听话不走系统代理。 用全局/TUN 模式吧，装虚拟网卡不说，还容易搞炸本地网络；用老牌 Proxifier 吧，配规则麻烦得要死，多进程软件（像 Chrome 这种）还要到处抓子进程。 为了解决“只让某一个软件老老实实走代理”这件小事，我做了 Ghost Proxifier 。主打就是一个：极简、不用动脑子。 做了哪些省心功能？ 把图标拖进去就行：不管是桌面快捷方式还是 .exe ，直接拖进软件窗口，立即接…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "19 回复"
       }
     ]
   },
@@ -508,8 +510,8 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 98610,
-        "starsToday": 25585
+        "stars": 104147,
+        "starsToday": 25599
       },
       {
         "id": "github-2987e657c453bf43",
@@ -518,8 +520,8 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 29544,
-        "starsToday": 3977
+        "stars": 30102,
+        "starsToday": 3952
       },
       {
         "id": "github-0d97dfe3fc868c34",
@@ -528,8 +530,8 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 17296,
-        "starsToday": 2956
+        "stars": 17880,
+        "starsToday": 2957
       },
       {
         "id": "github-231c4b191ae0f4ae",
@@ -538,7 +540,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 50102,
+        "stars": 50331,
         "starsToday": 1083
       },
       {
@@ -548,8 +550,8 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 51373,
-        "starsToday": 872
+        "stars": 51676,
+        "starsToday": 886
       },
       {
         "id": "github-0256cfe52fbc2c50",
@@ -558,8 +560,8 @@
         "url": "https://github.com/pytorch/pytorch",
         "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
         "language": "Python",
-        "stars": 104411,
-        "starsToday": 314
+        "stars": 104483,
+        "starsToday": 315
       },
       {
         "id": "github-1e73b5eaa3faad65",
@@ -568,8 +570,8 @@
         "url": "https://github.com/lyogavin/airllm",
         "description": "AirLLM 70B inference with single 4GB GPU",
         "language": "Jupyter Notebook",
-        "stars": 36341,
-        "starsToday": 541
+        "stars": 36477,
+        "starsToday": 548
       },
       {
         "id": "github-baaaab62e07d4ab6",
@@ -578,10 +580,10 @@
         "url": "https://github.com/chrislgarry/Apollo-11",
         "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
         "language": "Assembly",
-        "stars": 74141,
-        "starsToday": 496
+        "stars": 74249,
+        "starsToday": 466
       }
     ],
-    "updatedAt": "2026-10-11T20:18:11.337Z"
+    "updatedAt": "2026-10-12T00:33:25.550Z"
   }
 }
