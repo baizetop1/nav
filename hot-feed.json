@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-12T12:22:51.836Z",
+  "generatedAt": "2026-10-12T14:31:40.555Z",
   "intelligence": {
-    "updatedAt": "2026-10-12T12:22:51.836Z",
+    "updatedAt": "2026-10-12T14:31:40.555Z",
     "items": [
       {
         "id": "cn-item-6a68c11a2c610d02",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50054207",
+        "id": "hn-50055375",
         "category": "dev",
-        "title": "Deloitte falsified documents to evade tax on Abramovich's wealth",
-        "url": "https://www.bbc.com/news/articles/c64g1l5389kvo",
+        "title": "Incident with Actions, Pull Requests and Issues",
+        "url": "https://www.githubstatus.com/incidents/93njd414rpbx",
         "source": "Hacker News",
-        "publishedAt": "2026-10-12T10:21:27.000Z",
+        "publishedAt": "2026-10-12T12:23:51.000Z",
         "badge": "HN",
-        "signal": "250 分 · 62 评论"
+        "signal": "45 分 · 26 评论"
       },
       {
-        "id": "cn-it-a784c6d74c7a7394",
+        "id": "cn-it-2359330ed67432a7",
         "category": "cn",
-        "title": "中汽协会：9 月新能源汽车销量 182.3 万辆，同比增长 13.6%",
-        "url": "https://www.ithome.com/1/012/081.htm",
+        "title": "小米 YU7 车型 OTA 推送 1.18.0 版本：新增安全车距提醒、超级小爱专家模式等",
+        "url": "https://www.ithome.com/1/012/105.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T12:18:28.000Z",
-        "summary": "IT之家 10 月 12 日消息，据中国汽车工业协会今日公布数据，9 月，新能源汽车产销分别完成 181.4 万辆和 182.3 万辆， 同比分别增长 12.2% 和 13.6% 。新能源汽车新车销量达到汽车新车总销量的 61.6%。 1-9 月，新能源汽车产销分别完成 1248.3 万辆和 1247.2 万辆，同比分别增长 11% 和 11.1%，新能源汽车新车销量达到汽车新车总销量的 53.6%。 IT之家从数据获悉，9 月，新能源汽车国内销量 125.2 万辆，环比增…",
+        "publishedAt": "2026-10-12T14:30:45.000Z",
+        "summary": "IT之家 10 月 12 日消息，小米 YU7 车型今日 OTA 推送 1.18.0 版本，带来多项新增功能，并对领航辅助功能进行优化。 IT之家整理如下： 新增 QQ 音乐、网易云音乐歌词翻译，支持翻译的歌曲将在应用内的歌词页面展示翻译按钮，可开启、关闭歌词翻译并记忆状态 新增车外语音音量调节设置项 新增安全车距提醒功能 新增超级小爱专家模式 优化中控解锁逻辑，提升安全性 优化城市领航辅助功能的使用体验 优化高速领航辅助功能的使用体验 优化“端到端辅助驾驶”，升级更名为“…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1248199",
+        "id": "v2ex-1248228",
         "category": "dev",
-        "title": "未来的软件形式",
-        "url": "https://www.v2ex.com/t/1248199",
+        "title": "PStack 官方指南中文版",
+        "url": "https://www.v2ex.com/t/1248228",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T11:31:30.000Z",
-        "summary": "最近 x 上刷到一个很火的 ai 网关，叫 magpie ，短短几天就干到 10k stars ，而且我相信它未来会超过 CPA 和 sub2api 之类的 https://github.com/yetone/magpie 这个网关和 CPA 还有 sub2api 不同的是，它支持自定义插件，也就是说用户可以让自己的 agent 根据自己的需要，开发各种插件，一是减少了作者维护 repo 的压力，二是用户不需要等作者维护，就可以自己开发想要的功能，而 ai 网关比较难实现的…",
+        "publishedAt": "2026-10-12T14:17:37.000Z",
+        "summary": "pstack （ Cursor 官方插件）有一份官方指南，我翻译成了中文。英文原文是 cursor/plugins 仓库里的 pstack/docs/guide/ README.md 。 指南按真实工作流拆成 10 步： 安装 pstack 。装好插件，选好模型。 把工作交给 /poteto-mode 。给它一个目标，看它怎么挑 playbook 。 理解代码。先做一次只读调查，动手改之前再用 /how 、 /why 、 /teach 和 /recall 。 设计这次改动。…",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-175a883883262d9e",
+        "id": "cn-baidu-f6509814dd2511a5",
         "category": "cn",
-        "title": "霸王茶姬买一送一：自己接不住的营销",
-        "url": "https://www.baidu.com/s?wd=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC%E4%B9%B0%E4%B8%80%E9%80%81%E4%B8%80%EF%BC%9A%E8%87%AA%E5%B7%B1%E6%8E%A5%E4%B8%8D%E4%BD%8F%E7%9A%84%E8%90%A5%E9%94%80&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "蛋价跌回“4元时代”",
+        "url": "https://www.baidu.com/s?wd=%E8%9B%8B%E4%BB%B7%E8%B7%8C%E5%9B%9E%E2%80%9C4%E5%85%83%E6%97%B6%E4%BB%A3%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "12日，霸王茶姬宣布“买一送一”，不少门店爆单，甚至提前关闭。此前，海量订单压力传导至线下门店，店员累麻引发打工人反感。媒体评论营销本身没有问题，市场鼓励优秀的营销。但营销的热度，自己应“接”得住。",
+        "summary": "截至10月9日，全国主产区鸡蛋日均价跌至4.06元/斤，较上月同期跌20.7%，跌回“4元时代”。此前9月双节前蛋价曾创十年同期新高。分析指出，需求减少及3月补栏鸡苗进入产蛋高峰致供应增加是主因。产业链上下游分化，上游种禽企业利润创新高但股价承压，下游加工企业成本压力减轻。",
         "badge": "热搜",
-        "signal": "7,808,748 热度"
+        "signal": "7,808,910 热度"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -124,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-10T19:28:41.000Z",
         "badge": "HN",
-        "signal": "13 分 · 0 评论"
+        "signal": "70 分 · 25 评论"
       },
       {
         "id": "cn-item-383a1afae9291a54",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1248187",
+        "id": "v2ex-1248210",
         "category": "dev",
-        "title": "收录最新大模型 API，按模型横向对比官方/聚合/中转渠道的价格与口碑，帮你挑到好用的调用渠道",
-        "url": "https://www.v2ex.com/t/1248187",
+        "title": "现在用什么套餐计划合适呀(对程序员来说",
+        "url": "https://www.v2ex.com/t/1248210",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T10:33:16.000Z",
-        "summary": "收录最新大模型 API ，按模型横向对比官方/聚合/中转渠道的 价格与口碑 ，帮你挑到又便宜又好用的调用渠道： awesome-llm-api-pricing → https://github.com/peter123023/awesome-llm-api-pricing 17 个最新模型：GPT-6 、Claude 、DeepSeek 、GLM 、Qwen 、Kimi 、Gemini 、Grok 、嵌入模型 22 家渠道横比：8 官方 + 6 聚合（ OpenRouter…",
+        "publishedAt": "2026-10-12T12:26:11.000Z",
+        "summary": "claude(a/ gpt 会降智(o 社 中转站是会盗数据和路由低级模型 cursor 似乎被收购后",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-5ab61a154a3d7d97",
+        "id": "cn-it-17132635ed3a3401",
         "category": "cn",
-        "title": "HKC“27Q240”27 英寸显示器发售：2K 240Hz，899 元",
-        "url": "https://www.ithome.com/1/012/080.htm",
+        "title": "AMD 发布新一代锐龙 AI Halo 开发者平台，升级 Max+ PRO 495 与至高 192GB 内存",
+        "url": "https://www.ithome.com/1/012/104.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T12:15:37.000Z",
-        "summary": "IT之家 10 月 12 日消息，HKC 旗下“27Q240”27 英寸显示器现已在京东发售，该机主打 2K 240Hz， 定价为 899 元 。 京东 HKC“27Q240”显示器 899 元 直达链接 该机配备一块 2560x1440 分辨率 240Hz Fast IPS 面板，显示器 SDR 亮度 350 尼特，HDR 亮度 400 尼特，GtG 响应速度 1ms，静态对比度 1000:1，覆盖 125% sRGB 色域容积。 该机支架支持升降 / 倾斜 / 旋转，显…",
+        "publishedAt": "2026-10-12T14:27:12.000Z",
+        "summary": "IT之家 10 月 12 日消息，AMD 当地时间今日正式发布了基于锐龙 AI Max+ PRO 495 处理器的新一代锐龙 AI Halo 开发者平台。 相比初代设备，新产品 CPU、GPU、NPU 性能均有改进。而最为关键的是， 其支持至高 192GB 的 LPDDR5X-8533 内存 ，可将 160GB 分配为共享显存，让本地运行超 300B 大型人工智能模型成为可能。 AMD 新一代锐龙 AI Halo 开发者平台的 Linux 版本定价 7,299.99 美元 …",
         "badge": "IT之家"
       },
       {
@@ -206,17 +206,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-10T22:10:57.000Z",
         "badge": "HN",
-        "signal": "36 分 · 5 评论"
+        "signal": "81 分 · 56 评论"
       },
       {
-        "id": "cn-baidu-c056bdd5f99c62c6",
+        "id": "cn-baidu-e0c4d5155b48c0d0",
         "category": "cn",
-        "title": "“父母资助子女买房不是义务”",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E7%88%B6%E6%AF%8D%E8%B5%84%E5%8A%A9%E5%AD%90%E5%A5%B3%E4%B9%B0%E6%88%BF%E4%B8%8D%E6%98%AF%E4%B9%89%E5%8A%A1%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“共享儿女”你能接受吗",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%85%B1%E4%BA%AB%E5%84%BF%E5%A5%B3%E2%80%9D%E4%BD%A0%E8%83%BD%E6%8E%A5%E5%8F%97%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，四川成都网友呼吁在公共区域增设标语，宣传“父母资助子女买房买车非法定义务”等理念。对此，成都市成华区委宣传部回应称，该内容涉及具体家庭内部事务，情况差异较大且易产生多元解读，不宜作为公益标语在公共场景广泛宣传。下一步将常态化开展孝老敬亲等正面公益宣传。",
+        "summary": "“共享儿女”正填补老龄化社会的孤独缺口——年轻人用陪伴换取归属感，老人收获温暖与帮助。这既是供需错配下的创新方案，也暗藏边界模糊、信任缺失等风险。“共享儿女”能陪老人散步、聊天，却替代不了子女的那通电话和那个拥抱。",
         "badge": "热搜",
-        "signal": "7,711,907 热度"
+        "signal": "7,714,165 热度"
       },
       {
         "id": "github-advisory-ghsa-pwhx-cvv3-qj5c",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1248154",
+        "id": "v2ex-1248199",
         "category": "dev",
-        "title": "[大事件] 有人把链动小铺给黑了，开过店的信息或被泄露",
-        "url": "https://www.v2ex.com/t/1248154",
+        "title": "未来的软件形式",
+        "url": "https://www.v2ex.com/t/1248199",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T09:02:33.000Z",
-        "summary": "网站被破解了，商品信息和个人信息都被扒了；在国内搞这个胆子是真的大啊",
+        "publishedAt": "2026-10-12T11:31:30.000Z",
+        "summary": "最近 x 上刷到一个很火的 ai 网关，叫 magpie ，短短几天就干到 10k stars ，而且我相信它未来会超过 CPA 和 sub2api 之类的 https://github.com/yetone/magpie 这个网关和 CPA 还有 sub2api 不同的是，它支持自定义插件，也就是说用户可以让自己的 agent 根据自己的需要，开发各种插件，一是减少了作者维护 repo 的压力，二是用户不需要等作者维护，就可以自己开发想要的功能，而 ai 网关比较难实现的…",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "12 回复"
       },
       {
-        "id": "cn-item-8afd6699bbe2921e",
+        "id": "cn-item-be78a08f193b214c",
         "category": "cn",
-        "title": "超越联讯仪器 贵州茅台重回“股王”宝座",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-12/10712051.shtml",
+        "title": "84年后，他再次带着父亲的降落伞残布来到中国",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-12/10712126.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-12T09:05:55.000Z",
-        "summary": "中新网10月12日电(记者 张乃月)10月12日，白酒龙头贵州茅台涨近2%，股价超越联讯仪器，重回“股王”宝座。",
+        "publishedAt": "2026-10-12T09:06:45.000Z",
+        "summary": "中新网上饶10月12日电 题：84年后，他再次带着父亲的降落伞残布来到中国",
         "badge": "中新网要闻"
       },
       {
@@ -288,16 +288,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-12T11:22:24.000Z",
         "badge": "HN",
-        "signal": "79 分 · 75 评论"
+        "signal": "237 分 · 243 评论"
       },
       {
-        "id": "cn-it-6f56a0d24da40ca9",
+        "id": "cn-it-0e80b1e08d072339",
         "category": "cn",
-        "title": "5999 元起：一加 16 手机正式发布，第六代骁龙 8 超级至尊版芯片、全球首发 185Hz 极速高刷",
-        "url": "https://www.ithome.com/1/012/079.htm",
+        "title": "AMD 发布智能体 AI 计算机架 Helion，纯 CPU 版本可扩展至 32,768 核心",
+        "url": "https://www.ithome.com/1/012/103.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T12:09:08.000Z",
-        "summary": "IT之家 10 月 12 日现场消息，一加 16 手机今日正式发布。新品采用第六代骁龙 8 超级至尊版芯片，全球首发 185Hz 极速高刷，拥有全自研「电竞三芯」，带来全新电竞游戏体验， 定价 5999 元起 ，国补后 5199 元起， 10 月 13 日 10:00 正式开售 。 IT之家附该机各版本定价如下： 12GB+256GB：标价 5999 元，首销 5699 元，国补到手价 5199 元 12GB+512GB：标价 6799 元，首销 6499 元，区域补贴价 …",
+        "publishedAt": "2026-10-12T14:17:31.000Z",
+        "summary": "IT之家 10 月 12 日消息，AMD 当地时间今日宣布推出 面向代理式人工智能计算负载 的 Helion 机架解决方案。 这一机架基于 OCP 设计规范和 AMD Helios 机架式解决方案的开放平台理念， 合作伙伴和客户可根据自身需求灵活组合多样化的 CPU 和 GPU 计算资源 ，其中基于第六代 EPYC（霄龙）处理器的纯 CPU 版本可扩展至 32,768 核心。 AMD 计划将 AMD Helion 规范贡献给 OCP，使其可供社区进一步开发和采用。AMD 正…",
         "badge": "IT之家"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1248137",
+        "id": "v2ex-1248187",
         "category": "dev",
-        "title": "让 AI 改自己看不懂的东西，真的心好累",
-        "url": "https://www.v2ex.com/t/1248137",
+        "title": "收录最新大模型 API，按模型横向对比官方/聚合/中转渠道的价格与口碑，帮你挑到好用的调用渠道",
+        "url": "https://www.v2ex.com/t/1248187",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T08:27:25.000Z",
-        "summary": "ai 改完 -> ai Review -> 有问题 -> 继续改，说是改好了 -> 再 Review -> 又有问题，卡死在这个循环了，搞了一下午，感觉心里好疲惫。 用的是 GPT-6.1-Sol Medium ，又慢，问题又多，真是绝绝子。",
+        "publishedAt": "2026-10-12T10:33:16.000Z",
+        "summary": "收录最新大模型 API ，按模型横向对比官方/聚合/中转渠道的 价格与口碑 ，帮你挑到又便宜又好用的调用渠道： awesome-llm-api-pricing → https://github.com/peter123023/awesome-llm-api-pricing 17 个最新模型：GPT-6 、Claude 、DeepSeek 、GLM 、Qwen 、Kimi 、Gemini 、Grok 、嵌入模型 22 家渠道横比：8 官方 + 6 聚合（ OpenRouter…",
         "badge": "程序员",
-        "signal": "17 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-9c412045ff3eaae4",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "近年来，入境游持续升温，来我国旅游的外国游客出行需求也发生了显著变化。以上海为例，除了外滩、豫园这样的传统地标，机器人互动、新能源汽车体验、无人驾驶等科创场景，越来越受到外国游客的喜爱。",
         "badge": "热搜",
-        "signal": "7,616,438 热度"
+        "signal": "7,615,929 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50051573",
+        "id": "hn-50048642",
         "category": "dev",
-        "title": "Type-safe HTML templating in Zig",
-        "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
+        "title": "Fingerprints are the new cookies",
+        "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
         "source": "Hacker News",
-        "publishedAt": "2026-10-12T05:02:34.000Z",
+        "publishedAt": "2026-10-11T22:33:39.000Z",
         "badge": "HN",
-        "signal": "141 分 · 60 评论"
+        "signal": "527 分 · 260 评论"
       },
       {
-        "id": "cn-item-1224c576ab23c46b",
+        "id": "cn-item-8afd6699bbe2921e",
         "category": "cn",
-        "title": "江西省政协原副主席胡幼桃受贿案一审被判十三年",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-12/10712138.shtml",
+        "title": "超越联讯仪器 贵州茅台重回“股王”宝座",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-12/10712051.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-12T09:01:48.000Z",
-        "summary": "原标题：江西省政协原党组成员、副主席胡幼桃受贿案一审宣判",
+        "publishedAt": "2026-10-12T09:05:55.000Z",
+        "summary": "中新网10月12日电(记者 张乃月)10月12日，白酒龙头贵州茅台涨近2%，股价超越联讯仪器，重回“股王”宝座。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1248133",
+        "id": "v2ex-1248154",
         "category": "dev",
-        "title": "有个疑问，为啥大家都要这么大量的订阅，都是 max 起步，我感觉日常工作 20 刀就够了啊，大家都有私活或者产品吗",
-        "url": "https://www.v2ex.com/t/1248133",
+        "title": "[大事件] 有人把链动小铺给黑了，开过店的信息或被泄露",
+        "url": "https://www.v2ex.com/t/1248154",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T08:16:52.000Z",
-        "summary": "公司可以支持 AI 报销，不限制模型和厂商，只要有账单和支付证明就行，最近一直是 cursor 或者 codex 的 20 刀用，cursor 的话像遇到一些难处理的会用到 gpt 或者 claude 模型，一般 auto 一个月都够用了，codex 也差不多 很好奇大家起步就是 Claude MAX 这种，是除了工作之外还有其他要用到的地方吗，大家都有私活或者自己的产品吗",
+        "publishedAt": "2026-10-12T09:02:33.000Z",
+        "summary": "网站被破解了，商品信息和个人信息都被扒了；在国内搞这个胆子是真的大啊",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "15 回复"
       },
       {
-        "id": "cn-it-c72c6bc67bb92b70",
+        "id": "cn-it-404d2b2c79fd3f86",
         "category": "cn",
-        "title": "Polestar 极星汽车美国市场销售进入倒计时：官方加速清理新车库存，部分车型最高降价 2.5 万美元",
-        "url": "https://www.ithome.com/1/012/077.htm",
+        "title": "谷歌推出 Fitbit Edge 手环新品：支持心电图、GPS，179.99 欧元",
+        "url": "https://www.ithome.com/1/012/102.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T12:05:23.000Z",
-        "summary": "IT之家 10 月 12 日消息，据外媒 AutoEvolution 报道，Polestar 极星正在加速清理美国市场剩余的 2026 款新车库存，对旗下 Polestar 3 和 Polestar 4 车型推出大幅优惠，部分车型降价幅度最高达到 2.5 万美元 （IT之家注：现汇率约合 16.8 万元人民币） ，降幅接近 40%。 ▲ Polestar 3 车型 ▲ Polestar 4 车型 公开信息显示，Polestar 极星美国市场第三季度销量超过 2000 辆，达…",
+        "publishedAt": "2026-10-12T14:14:49.000Z",
+        "summary": "IT之家 10 月 12 日消息，谷歌今天宣布推出 Fitbit Edge 手环。新品采用 AMOLED 触控屏幕，内置 GPS 模块，续航可达一周，拥有银色、灰色、金色和黑色 4 种配色，定价 179.99 欧元 （IT之家注：现汇率约合 1,350 元人民币） 。 据介绍，这款手环主打健身用户，它配备一块 1.34 英寸的 AMOLED 触控屏幕，支持全天候显示，让用户随时查看时间。 规格方面， 这款手环内置 GPS 模块 ，用户跑步或骑行时不用带手机，也能追踪运动轨迹…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50048642",
+        "id": "hn-50051573",
         "category": "dev",
-        "title": "Fingerprints are the new cookies",
-        "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+        "title": "Type-safe HTML templating in Zig",
+        "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T22:33:39.000Z",
+        "publishedAt": "2026-10-12T05:02:34.000Z",
         "badge": "HN",
-        "signal": "450 分 · 231 评论"
+        "signal": "163 分 · 66 评论"
       },
       {
-        "id": "cn-baidu-b6fde8f48df96f9c",
+        "id": "cn-baidu-55e5485d85fc9451",
         "category": "cn",
-        "title": "上半年全球表现最好的股市要凉凉吗",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%8A%E5%8D%8A%E5%B9%B4%E5%85%A8%E7%90%83%E8%A1%A8%E7%8E%B0%E6%9C%80%E5%A5%BD%E7%9A%84%E8%82%A1%E5%B8%82%E8%A6%81%E5%87%89%E5%87%89%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "为什么全国各地都抢着办演出",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%BA%E4%BB%80%E4%B9%88%E5%85%A8%E5%9B%BD%E5%90%84%E5%9C%B0%E9%83%BD%E6%8A%A2%E7%9D%80%E5%8A%9E%E6%BC%94%E5%87%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月12日，韩国股市颓势延续，KOSPI跌幅扩大至3%。此前上半年韩国股市暴涨，三季度暴跌22%成全球表现最差股市之一。数据显示，外资今年已从韩国股市撤出1310亿美元，本地散户亦在退场。分析指出，下跌由AI存储芯片估值泡沫破裂引发，韩国股市过度依赖AI正成为负担，短期难现单边上涨。",
+        "summary": "今年国庆期间，四川泸州靠4天音乐节涌入20万乐迷，带动全市消费近45亿元。此前泸州是没有5A景区的四线城市。此次出圈得益于其豪华演出阵容，以及控制酒店价格、建厕所、免费接驳等兜底服务。其成功示范说明，下沉市场需用高质量服务将短期流量转化为城市名片。",
         "badge": "热搜",
-        "signal": "7,520,908 热度"
+        "signal": "7,523,695 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1248127",
+        "id": "v2ex-1248137",
         "category": "dev",
-        "title": "有大佬知道咸鱼租用剪映会员是怎么做的吗？",
-        "url": "https://www.v2ex.com/t/1248127",
+        "title": "让 AI 改自己看不懂的东西，真的心好累",
+        "url": "https://www.v2ex.com/t/1248137",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T08:07:03.000Z",
-        "summary": "我自己买了一天的，机器人给我发了一个链接，点开就可以扫码登陆了。 我好奇后台那边是有人再点击登陆的？？？？",
+        "publishedAt": "2026-10-12T08:27:25.000Z",
+        "summary": "ai 改完 -> ai Review -> 有问题 -> 继续改，说是改好了 -> 再 Review -> 又有问题，卡死在这个循环了，搞了一下午，感觉心里好疲惫。 用的是 GPT-6.1-Sol Medium ，又慢，问题又多，真是绝绝子。",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "17 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 132575,
+        "stars": 137501,
         "starsToday": 45495
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 52666,
+        "stars": 52877,
         "starsToday": 1903
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 26824,
+        "stars": 26919,
         "starsToday": 485
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 19975,
+        "stars": 20336,
         "starsToday": 4106
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/open-webui/open-webui",
         "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
         "language": "Python",
-        "stars": 154441,
+        "stars": 154547,
         "starsToday": 142
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 51692,
+        "stars": 51915,
         "starsToday": 2100
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/lyogavin/airllm",
         "description": "AirLLM 70B inference with single 4GB GPU",
         "language": "Jupyter Notebook",
-        "stars": 37015,
+        "stars": 37120,
         "starsToday": 886
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/microsoft/BitNet",
         "description": "Official inference framework for 1-bit LLMs",
         "language": "C++",
-        "stars": 40738,
+        "stars": 40773,
         "starsToday": 195
       },
       {
@@ -590,10 +590,10 @@
         "url": "https://github.com/Alishahryar1/free-claude-code",
         "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
         "language": "Python",
-        "stars": 58314,
-        "starsToday": 506
+        "stars": 58458,
+        "starsToday": 705
       }
     ],
-    "updatedAt": "2026-10-12T12:22:51.836Z"
+    "updatedAt": "2026-10-12T14:31:40.555Z"
   }
 }
