@@ -1,15 +1,15 @@
-import {crossHas} from './cross-region-data.js?v=0.82.0';
-import {finishCrossRegion} from './cross-region.js?v=0.82.0';
-import {prepareMedicineBoat} from './cross-region-combat.js?v=0.82.0';
-import {revisitByRoute,revisitHas} from './region-revisit-data.js?v=0.82.0';
-import {recordGatheringClear} from './gathering.js?v=0.82.0';
-import {gatheringRegion} from './gathering-data.js?v=0.82.0';
-import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.82.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.82.0';
-import {startBattle,addStatus,attackInterval} from './battle.js?v=0.82.0';
-import {attachTroops} from './camp.js?v=0.82.0';
-import {newEquipment} from './item.js?v=0.82.0';
-import {hasOwn,requireRule,journal,random} from './utils.js?v=0.82.0';
+import {crossHas} from './cross-region-data.js?v=0.82.1';
+import {finishCrossRegion} from './cross-region.js?v=0.82.1';
+import {prepareMedicineBoat} from './cross-region-combat.js?v=0.82.1';
+import {revisitByRoute,revisitHas} from './region-revisit-data.js?v=0.82.1';
+import {recordGatheringClear} from './gathering.js?v=0.82.1';
+import {gatheringRegion} from './gathering-data.js?v=0.82.1';
+import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.82.1';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.82.1';
+import {startBattle,addStatus,attackInterval} from './battle.js?v=0.82.1';
+import {attachTroops} from './camp.js?v=0.82.1';
+import {newEquipment} from './item.js?v=0.82.1';
+import {hasOwn,requireRule,journal,random} from './utils.js?v=0.82.1';
 export {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext};
 const LIMIT=10000000,EQUIPMENT_LIMIT=200;
 export function specialRecord(s){return s.specialDungeons??={version:1,clears:{},last:null};}

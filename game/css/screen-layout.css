@@ -220,3 +220,34 @@
 #main .camp-life{gap:6px}#main .camp-life label{margin:0;display:flex;align-items:center;gap:5px;font-size:12px}#main .camp-life select{height:30px;min-height:30px!important;font-size:12px;padding:3px 5px}#main .camp-life .life-card{margin:0;padding:8px}#main .camp-life .life-pickers{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:6px}#main .camp-life p{margin:5px 0;line-height:1.5}#main .camp-life .actions{margin:5px 0}#main .camp-life button{min-height:30px!important;font-size:12px;padding:4px 7px}
 
 #main .camp-life .actions>label{flex:1 1 100px;min-width:0;max-width:145px}#main .camp-life .actions>label select{width:70px;min-width:0}#main .life-budget>div{padding:0;margin:2px 0;min-height:0;line-height:1.4}#main .life-budget dt,#main .life-budget dd{padding:0;margin:0}#main .battle-threat details{margin:2px 0}#main .battle-threat summary{font-size:11px}#main .battle-threat .actions{margin:3px 0;gap:4px}
+
+/* Story text stays beside its next action; local errands open in their own detail view. */
+@media(max-width:900px){
+ #main #map-local:not(.journey-scene)>.story-guide{padding:6px 8px;margin:4px 0}
+ #main .story-guide-arrived>h2,#main .story-guide-arrived>.note{display:none}
+ #main .story-guide .guide-heading{font-size:11px;line-height:1.35}
+ #main #map-local:not(.journey-scene)>.section-top{margin:3px 0}
+ #main #map-local:not(.journey-scene)>.section-top .kicker,#main #map-local:not(.journey-scene)>.section-top .chapter-no{display:none}
+ #main #map-local:not(.journey-scene)>.section-top h1{font-size:14px;margin:3px 0;line-height:1.35}
+ #main #map-local>.journey-scene-preview{height:52px;min-height:0;margin:4px 0}
+ #main .journey-story>.card{padding:7px 8px;margin:4px 0}
+ #main .journey-story .kicker{font-size:11px;margin:2px 0 5px}
+ #main .journey-story .prose{font-size:13px;line-height:1.55;margin:4px 0 7px}
+ #main .journey-story .actions{margin:5px 0 0}
+ #main .journey-story .actions button{min-height:34px;font-size:12px;padding:5px 9px}
+ #main .journey-story>.screen-info{margin:3px 0}
+}
+
+@media(max-width:900px) and (max-height:650px){
+ #main #map-local>.journey-scene-preview{height:36px}
+ #main #map-local>.screen-info{margin:2px 0}
+ #main #map-local>.screen-info>summary{font-size:11px;min-height:26px;padding:3px 0}
+}
+
+@media(max-width:900px){
+ #main #map-local:not(.journey-scene)>.story-guide-arrived{padding:2px 6px;margin:2px 0;border:0;background:none}
+ #main .journey-story>.screen-info>summary{min-height:26px;padding:3px 0;font-size:11px}
+ #main .journey-story .actions button{min-height:34px!important}
+}
+
+@media(max-width:900px) and (max-height:650px){#main .journey-story .prose{font-size:12px;line-height:1.5}#main .journey-story>.card{padding:6px 7px}}

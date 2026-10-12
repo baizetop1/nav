@@ -1,4 +1,4 @@
-import {REGION_REVISITS,revisitHas,revisitCounter,revisitByRoute} from './region-revisit-data.js?v=0.82.0';
+import {REGION_REVISITS,revisitHas,revisitCounter,revisitByRoute} from './region-revisit-data.js?v=0.82.1';
 export function validateRegionRevisits(s,check){for(const [region,r]of Object.entries(REGION_REVISITS)){const x=s.exploration?.[region],has=k=>revisitHas(s,region,k);
  for(const [flag,need]of Object.entries({return_met:'invited',trace_checked:'return_met',won_return:'trace_checked',return_paid:'won_return'}))if(has(flag))check(has(need),'重访事件先后');
  for(const [flag,place]of Object.entries({return_met:r.home,trace_checked:r.trace,return_paid:r.home}))if(has(flag))check(x.visited.includes(place),'重访事件地点');

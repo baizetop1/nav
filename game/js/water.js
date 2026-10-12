@@ -1,9 +1,9 @@
-import {revisitAction,revisitTask} from './region-revisit.js?v=0.82.0';
-import {WATER_NODES,waterHas,waterGate,waterLinks,waterRoute} from './water-data.js?v=0.82.0';
-import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.82.0';
-import {ensureGathering} from './gathering.js?v=0.82.0';
-import {knowHero,ownHero} from './hero.js?v=0.82.0';
-import {requireRule,journal} from './utils.js?v=0.82.0';
+import {revisitAction,revisitTask} from './region-revisit.js?v=0.82.1';
+import {WATER_NODES,waterHas,waterGate,waterLinks,waterRoute} from './water-data.js?v=0.82.1';
+import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.82.1';
+import {ensureGathering} from './gathering.js?v=0.82.1';
+import {knowHero,ownHero} from './hero.js?v=0.82.1';
+import {requireRule,journal} from './utils.js?v=0.82.1';
 export function openWater(s){return s.exploration.water??={version:1,position:'dock',visited:['dock'],flags:[],pending:null};}
 export function waterPath(s,target){
  if(waterGate(s,target))return null;const start=s.exploration?.water?.position||'dock',queue=[[start]],seen=new Set([start]);

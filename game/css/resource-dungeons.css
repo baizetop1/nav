@@ -3,3 +3,30 @@
 
 .viewport-shell .main .resource-dungeon h2{font-size:16px}.viewport-shell .main .resource-dungeon h3{font-size:15px}.viewport-shell .main .resource-dungeon p{font-size:13px;line-height:1.5}.viewport-shell .main .resource-dungeon .note{font-size:12px;line-height:1.5}
 .screen-paper .resource-mission.page-keep{break-inside:auto!important}
+
+/* A resource run is one task: reward, cost, challenge and both sweep choices stay together. */
+@media(max-width:900px){
+ .viewport-shell #main .resource-dungeon{margin:3px 0}
+ #main .resource-dungeon>header{display:none}
+ #main .resource-selectors{gap:6px;margin:0 0 5px}
+ #main .resource-selectors label{gap:2px;font-size:11px;line-height:1.3}
+ #main .resource-selectors select{height:32px;min-height:32px;font-size:12px;padding:3px 5px}
+ #main .resource-mission{padding:7px 8px;margin:0}
+ #main .resource-heading h3{font-size:14px;margin:0}
+ #main .resource-heading>span{font-size:11px}
+ #main .resource-payout{padding:6px 8px;margin:5px 0;gap:4px 9px}
+ #main .resource-payout strong{font-size:14px}
+ #main .resource-mission p{font-size:12px;line-height:1.4;margin:4px 0}
+ #main .resource-mission .note{font-size:11px;line-height:1.35}
+ #main .resource-mission .actions{margin:4px 0}
+ #main .resource-mission button{font-size:12px;min-height:32px;padding:4px 7px;line-height:1.3}
+ #main .resource-mission .sweep-compact{padding:4px 0 0;margin:5px 0 0;border:0;border-top:1px solid var(--line);background:none}
+ #main .sweep-buttons{display:flex;gap:5px;flex-wrap:wrap}
+ #main .sweep-buttons button{flex:1;min-width:0;width:auto;margin:0;white-space:nowrap}
+ #main .resource-mission details{margin:3px 0 0}
+ #main .resource-mission summary{font-size:11px;min-height:28px;padding:3px 0}
+}
+
+@media(max-width:900px){.viewport-shell #main .resource-mission button{min-height:32px!important}.viewport-shell #main .resource-mission .notice{font-size:11px;line-height:1.35;margin:4px 0;padding:4px 6px}}
+
+.resource-unavailable{flex:1;min-width:120px;font-size:11px;line-height:1.35;color:var(--muted)}

@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-12T09:10:58.646Z",
+  "generatedAt": "2026-10-12T12:05:35.520Z",
   "intelligence": {
-    "updatedAt": "2026-10-12T09:10:58.646Z",
+    "updatedAt": "2026-10-12T12:05:35.520Z",
     "items": [
       {
-        "id": "cn-item-c5222e041e4296e5",
+        "id": "cn-item-6a68c11a2c610d02",
         "category": "cn",
-        "title": "市场监管总局批准发布88项国家标准样品",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-12/10712087.shtml",
+        "title": "税务部门曝光5起涉税中介违规帮助他人偷逃税案件",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-12/10712214.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-12T08:12:50.000Z",
-        "summary": "中新网10月12日电 据市场监管总局网站消息，近日，市场监管总局批准发布88项国家标准样品，覆盖制造业、农业等领域。这批标准样品作为实物形态的国家标准，是文字标准落地实施的重要支撑，将在制造业提质增效、农业高质量发展等方面提供全方位、强有力的关键技术支撑。",
+        "publishedAt": "2026-10-12T11:28:06.000Z",
+        "summary": "中新网10月12日电 据国家税务总局网站消息，10月12日，安徽、贵州、广西、浙江、山东等地税务部门依法查处并曝光5起涉税中介违规帮助他人偷逃税案件。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50052163",
+        "id": "hn-50054207",
         "category": "dev",
-        "title": "Postgres isn't slow, your storage is",
-        "url": "https://clickhouse.com/blog/posette-talk-recap-postgres-isnt-slow-your-storage-is",
+        "title": "Deloitte falsified documents to evade tax on Abramovich's wealth",
+        "url": "https://www.bbc.com/news/articles/c64g1l5389kvo",
         "source": "Hacker News",
-        "publishedAt": "2026-10-12T06:36:53.000Z",
+        "publishedAt": "2026-10-12T10:21:27.000Z",
         "badge": "HN",
-        "signal": "59 分 · 32 评论"
+        "signal": "205 分 · 47 评论"
       },
       {
-        "id": "cn-it-a31740a24960141f",
+        "id": "cn-it-c72c6bc67bb92b70",
         "category": "cn",
-        "title": "开发者 LifeCoder 花费 8 年打造《战地风云 2》开源重建项目，核心多人联机功能已能够正常运行",
-        "url": "https://www.ithome.com/1/011/992.htm",
+        "title": "Polestar 极星汽车美国市场销售进入倒计时：官方加速清理新车库存，部分车型最高降价 2.5 万美元",
+        "url": "https://www.ithome.com/1/012/077.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T09:09:39.000Z",
-        "summary": "IT之家 10 月 12 日消息，据外媒 TweakTown 报道，开发者 LifeCoder 历经约 8 年逆向工程打造《战地风云 2（Battlefield 2）》开源重建项目，目前相应项目已接近公开发布阶段，多人联机功能已能够运行，同时支持 Linux、macOS 等操作系统。不过目前客户端开发和地图支持仍未全部完成，还需要一定时间才能发布。 公开信息显示，《战地风云 2》2005 年发售，2014 年本作 GameSpy 服务器正式关闭，导致玩家后续只能使用 BF2…",
+        "publishedAt": "2026-10-12T12:05:23.000Z",
+        "summary": "IT之家 10 月 12 日消息，据外媒 AutoEvolution 报道，Polestar 极星正在加速清理美国市场剩余的 2026 款新车库存，对旗下 Polestar 3 和 Polestar 4 车型推出大幅优惠，部分车型降价幅度最高达到 2.5 万美元 （IT之家注：现汇率约合 16.8 万元人民币） ，降幅接近 40%。 ▲ Polestar 3 车型 ▲ Polestar 4 车型 公开信息显示，Polestar 极星美国市场第三季度销量超过 2000 辆，达…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1248137",
+        "id": "v2ex-1248199",
         "category": "dev",
-        "title": "让 AI 改自己看不懂的东西，真的心好累",
-        "url": "https://www.v2ex.com/t/1248137",
+        "title": "未来的软件形式",
+        "url": "https://www.v2ex.com/t/1248199",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T08:27:25.000Z",
-        "summary": "ai 改完 -> ai Review -> 有问题 -> 继续改，说是改好了 -> 再 Review -> 又有问题，卡死在这个循环了，搞了一下午，感觉心里好疲惫。 用的是 GPT-6.1-Sol Medium ，又慢，问题又多，真是绝绝子。",
+        "publishedAt": "2026-10-12T11:31:30.000Z",
+        "summary": "最近 x 上刷到一个很火的 ai 网关，叫 magpie ，短短几天就干到 10k stars ，而且我相信它未来会超过 CPA 和 sub2api 之类的 https://github.com/yetone/magpie 这个网关和 CPA 还有 sub2api 不同的是，它支持自定义插件，也就是说用户可以让自己的 agent 根据自己的需要，开发各种插件，一是减少了作者维护 repo 的压力，二是用户不需要等作者维护，就可以自己开发想要的功能，而 ai 网关比较难实现的…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-baidu-0d26a9eb81a196af",
+        "id": "cn-baidu-175a883883262d9e",
         "category": "cn",
-        "title": "霸王茶姬就崩了致歉：急急急",
-        "url": "https://www.baidu.com/s?wd=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC%E5%B0%B1%E5%B4%A9%E4%BA%86%E8%87%B4%E6%AD%89%EF%BC%9A%E6%80%A5%E6%80%A5%E6%80%A5&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "霸王茶姬买一送一：自己接不住的营销",
+        "url": "https://www.baidu.com/s?wd=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC%E4%B9%B0%E4%B8%80%E9%80%81%E4%B8%80%EF%BC%9A%E8%87%AA%E5%B7%B1%E6%8E%A5%E4%B8%8D%E4%BD%8F%E7%9A%84%E8%90%A5%E9%94%80&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月12日，霸王茶姬官方就小程序崩溃致歉，表示正努力修复。起因是代言人郑钦文夺冠，霸王茶姬当日限时推出“买一送一”活动，致小程序因流量过大崩溃。",
+        "summary": "12日，霸王茶姬宣布“买一送一”，不少门店爆单，甚至提前关闭。此前，海量订单压力传导至线下门店，店员累麻引发打工人反感。媒体评论营销本身没有问题，市场鼓励优秀的营销。但营销的热度，自己应“接”得住。",
         "badge": "热搜",
-        "signal": "7,808,536 热度"
+        "signal": "7,809,104 热度"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50051573",
+        "id": "hn-50054751",
         "category": "dev",
-        "title": "Type-safe HTML templating in Zig",
-        "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
+        "title": "QGIS bans AI assisted contributions",
+        "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
         "source": "Hacker News",
-        "publishedAt": "2026-10-12T05:02:34.000Z",
+        "publishedAt": "2026-10-12T11:22:24.000Z",
         "badge": "HN",
-        "signal": "108 分 · 46 评论"
+        "signal": "65 分 · 50 评论"
       },
       {
-        "id": "cn-item-14397f7e1335b295",
+        "id": "cn-item-383a1afae9291a54",
         "category": "cn",
-        "title": "美国制裁国际刑事法院 中国外交部回应",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-12/10712077.shtml",
+        "title": "国家铁路局发布《铁路科技创新“十五五”规划》",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-12/10712189.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-12T07:54:45.000Z",
-        "summary": "中新网北京10月12日电 (记者 黄钰钦)中国外交部发言人毛宁12日主持例行记者会。",
+        "publishedAt": "2026-10-12T10:28:09.000Z",
+        "summary": "中新网10月12日电 据国家铁路局网站消息，近日，国家铁路局发布《铁路科技创新“十五五”规划》(以下简称《规划》)，明确“十五五”时期我国铁路科技创新工作的指导思想、基本原则、发展目标、重点任务和保障措施。《规划》对促进铁路科技自立自强、推动铁路高质量发展，支撑科技强国、交通强国建设具有重要意义。同时，《规划》将报送中央科技办备案，这标志着铁路科技创新规划首次纳入国家科技管理体系。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1248133",
+        "id": "v2ex-1248187",
         "category": "dev",
-        "title": "有个疑问，为啥大家都要这么大量的订阅，都是 max 起步，我感觉日常工作 20 刀就够了啊，大家都有私活或者产品吗",
-        "url": "https://www.v2ex.com/t/1248133",
+        "title": "收录最新大模型 API，按模型横向对比官方/聚合/中转渠道的价格与口碑，帮你挑到好用的调用渠道",
+        "url": "https://www.v2ex.com/t/1248187",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T08:16:52.000Z",
-        "summary": "公司可以支持 AI 报销，不限制模型和厂商，只要有账单和支付证明就行，最近一直是 cursor 或者 codex 的 20 刀用，cursor 的话像遇到一些难处理的会用到 gpt 或者 claude 模型，一般 auto 一个月都够用了，codex 也差不多 很好奇大家起步就是 Claude MAX 这种，是除了工作之外还有其他要用到的地方吗，大家都有私活或者自己的产品吗",
+        "publishedAt": "2026-10-12T10:33:16.000Z",
+        "summary": "收录最新大模型 API ，按模型横向对比官方/聚合/中转渠道的 价格与口碑 ，帮你挑到又便宜又好用的调用渠道： awesome-llm-api-pricing → https://github.com/peter123023/awesome-llm-api-pricing 17 个最新模型：GPT-6 、Claude 、DeepSeek 、GLM 、Qwen 、Kimi 、Gemini 、Grok 、嵌入模型 22 家渠道横比：8 官方 + 6 聚合（ OpenRouter…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-454bb70a3a30a2b6",
+        "id": "cn-it-cf6c7e6c092245b9",
         "category": "cn",
-        "title": "安蒙：AI 企业已要求高通在 2028 年推出支持 100B 模型本地运行的移动平台",
-        "url": "https://www.ithome.com/1/011/991.htm",
+        "title": "2026 年诺贝尔经济学奖揭晓，罗伯特 · 霍尔和迈克尔 · 伍德福德两名经济学家获奖",
+        "url": "https://www.ithome.com/1/012/075.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T09:06:38.000Z",
-        "summary": "IT之家 10 月 12 日消息，Qualcomm（高通）总裁兼首席执行官 Cristiano Amon（克里斯蒂亚诺 · 安蒙）上月在年度骁龙峰会期间接受了 Sources 的采访。 安蒙表示， 已有人工智能企业要求高通在 2028 年推出支持 100B 参数模型本地运行的智能手机移动平台 。如果 100B 模型端侧模型成为现实，那本地模型体验、多智能体协同的效果都能得到显著提升。 安蒙认为 AI 智能体将推动下一轮智能手机“超级周期” ，吸收因价格飙升而迟滞的换机需求；…",
+        "publishedAt": "2026-10-12T12:00:41.000Z",
+        "summary": "IT之家 10 月 12 日消息，瑞典皇家科学院今日宣布，将 2026 年诺贝尔经济学奖授予美国经济学家罗伯特 · 霍尔和迈克尔 · 伍德福德，以表彰他们在奠定宏观经济稳定政策的微观经济学基础研究领域的突出贡献。 瑞典皇家科学院当天发布新闻公报说， 两名获奖者构建了全新的宏观经济模型 ，大幅提升了实施有效稳定政策的能力。依托这些模型，适时出台财政与货币政策，能够平抑经济的波峰与波谷。 公报说，霍尔和伍德福德通过重构宏观经济模型，为经济稳定政策提供了新的理论依据。与以往主要依…",
         "badge": "IT之家"
       },
       {
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50048642",
+        "id": "hn-50037711",
         "category": "dev",
-        "title": "Fingerprints are the new cookies",
-        "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+        "title": "Secret of Orange Cats Revealed After 60-Year Search",
+        "url": "https://www.sciencealert.com/secret-of-orange-cats-finally-revealed-after-60-year-search",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T22:33:39.000Z",
+        "publishedAt": "2026-10-10T22:10:57.000Z",
         "badge": "HN",
-        "signal": "353 分 · 169 评论"
+        "signal": "30 分 · 3 评论"
       },
       {
         "id": "cn-baidu-f9e2c9317e734d8c",
@@ -216,7 +216,7 @@
         "source": "百度热搜",
         "summary": "10月11日郑钦文夺得中网女单冠军，上汽奥迪当晚官宣 “AUDI全系买一赠一” 引发热议。消费者发现该宣传存在文字噱头，赠送的并非实车，而是车模，所谓 “全系” 仅限E7X、E5两款电动车。官方销售证实该活动持续至当月月底，下定提车即可获赠车模，还可参与盲盒抽奖。",
         "badge": "热搜",
-        "signal": "7,713,590 热度"
+        "signal": "7,713,841 热度"
       },
       {
         "id": "github-advisory-ghsa-pwhx-cvv3-qj5c",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1248127",
+        "id": "v2ex-1248154",
         "category": "dev",
-        "title": "有大佬知道咸鱼租用剪映会员是怎么做的吗？",
-        "url": "https://www.v2ex.com/t/1248127",
+        "title": "[大事件] 有人把链动小铺给黑了，开过店的信息或被泄露",
+        "url": "https://www.v2ex.com/t/1248154",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T08:07:03.000Z",
-        "summary": "我自己买了一天的，机器人给我发了一个链接，点开就可以扫码登陆了。 我好奇后台那边是有人再点击登陆的？？？？",
+        "publishedAt": "2026-10-12T09:02:33.000Z",
+        "summary": "网站被破解了，商品信息和个人信息都被扒了；在国内搞这个胆子是真的大啊",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "15 回复"
       },
       {
-        "id": "cn-item-f82cb5cce7a878ed",
+        "id": "cn-item-8afd6699bbe2921e",
         "category": "cn",
-        "title": "尼泊尔最新洪灾是否影响到中国公民？中方回应",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-12/10712074.shtml",
+        "title": "超越联讯仪器 贵州茅台重回“股王”宝座",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-12/10712051.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-12T07:49:43.000Z",
-        "summary": "中新网北京10月12日电 (记者 黄钰钦)中国外交部发言人毛宁12日主持例行记者会。",
+        "publishedAt": "2026-10-12T09:05:55.000Z",
+        "summary": "中新网10月12日电(记者 张乃月)10月12日，白酒龙头贵州茅台涨近2%，股价超越联讯仪器，重回“股王”宝座。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50045984",
+        "id": "hn-50051573",
         "category": "dev",
-        "title": "Total Annihilation, rebuilt for modern computers",
-        "url": "https://nanolathe.gg",
+        "title": "Type-safe HTML templating in Zig",
+        "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T18:04:47.000Z",
+        "publishedAt": "2026-10-12T05:02:34.000Z",
         "badge": "HN",
-        "signal": "497 分 · 198 评论"
+        "signal": "141 分 · 60 评论"
       },
       {
-        "id": "cn-it-cd57d6d12915dbcc",
+        "id": "cn-it-3f5d3aa0884ba05d",
         "category": "cn",
-        "title": "李想：最好的智能电动车体验出自中国，理想 i6 要把中国好车带回汽车发源地巴黎",
-        "url": "https://www.ithome.com/1/011/990.htm",
+        "title": "2026 年度 TGA 游戏大奖颁奖典礼将于北京时间 12 月 11 日举行，提名名单预计 11 月底公布",
+        "url": "https://www.ithome.com/1/012/074.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T09:05:31.000Z",
-        "summary": "IT之家 10 月 12 日消息，理想汽车 CEO 李想今天在微博表示，今晚 19:30，理想 i6 将在巴黎车展完成欧洲首秀。 李想表示，理想和巴黎的缘分，比很多人想得早。2015 年公司刚创立的时候还叫“车和家”，第一款产品 SEV，从设计第一天起就是按欧洲 L6e 标准做的，他们当时也宣布了在巴黎和旧金山做共享出行的计划。 针对很多人说“理想出海动作慢”的看法，李想表示，海外市场这块理想确实不算快，他们的方式是因地制宜，准备好了再上。不同的市场，要投放最适合的产品。 …",
+        "publishedAt": "2026-10-12T11:46:34.000Z",
+        "summary": "IT之家 10 月 12 日消息，TGA 官方账号宣布，2026 年度 TGA（The Game Awards）游戏大奖颁奖典礼将于当地时间 12 月 10 日在美国洛杉矶举行，按照时差计算， 相应直播将于北京时间 12 月 11 日凌晨 1:30 开始 ，预计持续约 3 小时。 目前，2026 年 TGA 的具体奖项类别及提名游戏名单尚未公布，完整提名名单预计要到今年 11 月底才会揭晓。作为参考，2025 年 TGA 共设有 29 个奖项类别。 按照现有规则，评选范围主…",
         "badge": "IT之家"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1248115",
+        "id": "v2ex-1248137",
         "category": "dev",
-        "title": "打通 TUI 最后一公里， claude code cli 看图",
-        "url": "https://www.v2ex.com/t/1248115",
+        "title": "让 AI 改自己看不懂的东西，真的心好累",
+        "url": "https://www.v2ex.com/t/1248137",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T07:36:24.000Z",
-        "summary": "基于 claude code 287 版本引入的 mod 功能实现，因此最低需要 287 版本，需要 kitty 终端协议支持。 开源链接 让 claude code 一键安装： 按这个文档帮我安装 image-view mod： https://raw.githubusercontent.com/yu1745/claude-code-image-view/main/INSTALL_FOR_AI.md",
+        "publishedAt": "2026-10-12T08:27:25.000Z",
+        "summary": "ai 改完 -> ai Review -> 有问题 -> 继续改，说是改好了 -> 再 Review -> 又有问题，卡死在这个循环了，搞了一下午，感觉心里好疲惫。 用的是 GPT-6.1-Sol Medium ，又慢，问题又多，真是绝绝子。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "17 回复"
       },
       {
         "id": "cn-baidu-5003e64cdf6fa5b2",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "报告显示，“进厂游”成为出行新选择，火箭工厂、造船厂、汽水厂、新能源汽车厂等工业研学类目的地受到游客青睐。人气旺盛的背后，是工业旅游供需两端的“双向奔赴”。工业旅游的兴起，不仅是文旅市场的一抹亮色，更是工业制造与现代服务深度融合的生动写照；不仅让大众的出游选择更加丰富，也为传统产业的转型升级打开了新空间。",
         "badge": "热搜",
-        "signal": "7,617,781 热度"
+        "signal": "7,616,252 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50034206",
+        "id": "hn-50048642",
         "category": "dev",
-        "title": "Calculus with Julia",
-        "url": "https://jverzani.github.io/CalculusWithJuliaNotes.jl/",
+        "title": "Fingerprints are the new cookies",
+        "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
         "source": "Hacker News",
-        "publishedAt": "2026-10-10T15:59:52.000Z",
+        "publishedAt": "2026-10-11T22:33:39.000Z",
         "badge": "HN",
-        "signal": "119 分 · 10 评论"
+        "signal": "441 分 · 228 评论"
       },
       {
-        "id": "cn-item-7f768cb1894f5f0c",
+        "id": "cn-item-1224c576ab23c46b",
         "category": "cn",
-        "title": "中国多地公开销毁走私卷烟1.88亿支 烟丝2.7吨",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-12/10712062.shtml",
+        "title": "江西省政协原副主席胡幼桃受贿案一审被判十三年",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-12/10712138.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-12T07:41:28.000Z",
-        "summary": "中新社北京10月12日电 (记者 郭超凯)记者从中国公安部获悉，广东湛江、广西防城港、云南昆明、新疆乌鲁木齐等多地12日同步开展罚没走私烟草集中销毁暨“强治理、护民安、促发展”普法宣传活动，共计销毁走私卷烟1.88亿支、电子烟5.5万余支、烟丝2.7吨。",
+        "publishedAt": "2026-10-12T09:01:48.000Z",
+        "summary": "原标题：江西省政协原党组成员、副主席胡幼桃受贿案一审宣判",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1248108",
+        "id": "v2ex-1248133",
         "category": "dev",
-        "title": "用 AI 智能体一小时跑起了搁置多年的主机面板，聊聊这段时间烧 token 的心得",
-        "url": "https://www.v2ex.com/t/1248108",
+        "title": "有个疑问，为啥大家都要这么大量的订阅，都是 max 起步，我感觉日常工作 20 刀就够了啊，大家都有私活或者产品吗",
+        "url": "https://www.v2ex.com/t/1248133",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T07:11:51.000Z",
-        "summary": "架构师交付了《 架构方案-v7-详细设计.md 》，我不得不承认：现在大厂出品的 AI 智能体，已经不是当年那些半成品了，真的可以拿来做交付了。 几个使用心得，随便聊聊： 先说烧钱的部分。我用阿里 Qoder 烧了 3 万多 token ，其中 2 万多是 quest 乱烧掉的——第一个月不知轻重，确实浪费不少。那些号称免费送 token 的平台，动不动就无法访问，体验很难评。 再说收获。当年我一直想开发一个简单的主机面板，但因为系统太复杂、工作量太大，一直没真正上手。这次…",
+        "publishedAt": "2026-10-12T08:16:52.000Z",
+        "summary": "公司可以支持 AI 报销，不限制模型和厂商，只要有账单和支付证明就行，最近一直是 cursor 或者 codex 的 20 刀用，cursor 的话像遇到一些难处理的会用到 gpt 或者 claude 模型，一般 auto 一个月都够用了，codex 也差不多 很好奇大家起步就是 Claude MAX 这种，是除了工作之外还有其他要用到的地方吗，大家都有私活或者自己的产品吗",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-it-971fae8a2abb4939",
+        "id": "cn-it-58193ef379caf4d6",
         "category": "cn",
-        "title": "2027 款长安启源 Q05 车型 10 月 13 日焕新上市，蝉联 6 个月紧凑型 SUV 销冠",
-        "url": "https://www.ithome.com/1/011/989.htm",
+        "title": "一汽-大众全新力作官宣：记住一台车，从一束光开始",
+        "url": "https://www.ithome.com/1/012/073.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T09:00:55.000Z",
-        "summary": "IT之家 10 月 12 日消息，2027 款长安启源 Q05 将于 10 月 13 日焕新上市，蝉联 6 个月紧凑型 SUV 销量冠军。 IT之家注意到，长安启源今年 8 月宣布， 全新 Q05 累计销量突破 10 万辆 。长安启源全新 Q05 长宽高分别为 4435*1855*1595mm，轴距 2735mm，定位紧凑型 SUV。 长安启源全新 Q05 车型于去年 11 月上市，售价 7.99 万元起。今年 4 月 10 日，全新 Q05 新增 506 Pro+ 和 5…",
+        "publishedAt": "2026-10-12T11:44:11.000Z",
+        "summary": "IT之家 10 月 12 日消息，一汽-大众官宣全新力作并公布首张海报，官方宣称“记住一台车，从一束光开始。” 目前暂未清楚这款新车的具体型号，IT之家也会持续关注并带来详细报道。",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50041573",
+        "id": "hn-50036287",
         "category": "dev",
-        "title": "Running the unmodified Linux amdgpu driver on an iPad",
-        "url": "https://github.com/Geramy/LemonSeed-Studio",
+        "title": "The Making Of Super Mario 64 – full Giles Goddard interview (2001)",
+        "url": "https://pixelatron.com/blog/the-making-of-super-mario-64-full-giles-goddard-interview-ngc/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T10:18:18.000Z",
+        "publishedAt": "2026-10-10T19:28:41.000Z",
         "badge": "HN",
-        "signal": "17 分 · 5 评论"
+        "signal": "4 分 · 0 评论"
       },
       {
-        "id": "cn-baidu-349ec1104203a857",
+        "id": "cn-baidu-b184b637e7ad2749",
         "category": "cn",
-        "title": "“拖鞋军”已成中东狠角色",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E6%8B%96%E9%9E%8B%E5%86%9B%E2%80%9D%E5%B7%B2%E6%88%90%E4%B8%AD%E4%B8%9C%E7%8B%A0%E8%A7%92%E8%89%B2&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "景区回应一家三口坐摩天轮舱门未关",
+        "url": "https://www.baidu.com/s?wd=%E6%99%AF%E5%8C%BA%E5%9B%9E%E5%BA%94%E4%B8%80%E5%AE%B6%E4%B8%89%E5%8F%A3%E5%9D%90%E6%91%A9%E5%A4%A9%E8%BD%AE%E8%88%B1%E9%97%A8%E6%9C%AA%E5%85%B3&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月11日，沙特、埃及等国发布联合声明强烈谴责也门胡塞武装。此前10日，胡塞武装袭击沙特首都利雅得哈立德国王国际机场致12死309伤，为该机场一周内第三次遭袭。分析指出，此举标志也门冲突面临外溢升级风险，军事手段难解政治问题。",
+        "summary": "10月12日，浙江台州九峰景区回应“一家三口坐摩天轮未关舱门”事件：涉事设备停运，开除操作员。黄岩区文旅局表示已介入处置。",
         "badge": "热搜",
-        "signal": "7,519,905 热度"
+        "signal": "7,521,814 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1248104",
+        "id": "v2ex-1248127",
         "category": "dev",
-        "title": "yoagent，极简的 rust agent loop library, 现在支持 DSH 插件和 Pi 扩展的无缝调用",
-        "url": "https://www.v2ex.com/t/1248104",
+        "title": "有大佬知道咸鱼租用剪映会员是怎么做的吗？",
+        "url": "https://www.v2ex.com/t/1248127",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T07:05:38.000Z",
-        "summary": "想象一下，如果可以无缝集成七千多个 DSH 插件 以及一万多个 Pi 扩展 到你的 agent 应用里面，全都是经过社区验证的代码，各个生态里面最好的插件都可以拿来组合使用，开发 agent 的形式会不会改变？ yoagent 本身是极简 rust agent runtime ，可以当作底座来构建 rust agent 应用。通过他扩展的能力，我试验性的把两大生态集成了进来，当然，我也没想好这种融合是不是有意义。 举个例子，我做了一个简单的 handoff agent ，来…",
+        "publishedAt": "2026-10-12T08:07:03.000Z",
+        "summary": "我自己买了一天的，机器人给我发了一个链接，点开就可以扫码登陆了。 我好奇后台那边是有人再点击登陆的？？？？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -510,58 +510,58 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 125811,
-        "starsToday": 25599
-      },
-      {
-        "id": "github-2987e657c453bf43",
-        "rank": 2,
-        "name": "boykopovar/AnyPS5",
-        "url": "https://github.com/boykopovar/AnyPS5",
-        "description": "Tool for automatic PS5 executables porting to Linux and Windows",
-        "language": "C++",
-        "stars": 31258,
-        "starsToday": 3952
-      },
-      {
-        "id": "github-0d97dfe3fc868c34",
-        "rank": 3,
-        "name": "storytold/artcraft",
-        "url": "https://github.com/storytold/artcraft",
-        "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
-        "language": "Rust",
-        "stars": 19458,
-        "starsToday": 2957
-      },
-      {
-        "id": "github-231c4b191ae0f4ae",
-        "rank": 4,
-        "name": "cathrynlavery/diagram-design",
-        "url": "https://github.com/cathrynlavery/diagram-design",
-        "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-        "language": "HTML",
-        "stars": 51325,
-        "starsToday": 1083
+        "stars": 132001,
+        "starsToday": 45495
       },
       {
         "id": "github-27ca93a049d8d826",
-        "rank": 5,
+        "rank": 2,
         "name": "bilawalsidhu/gods-eye-view",
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 52416,
-        "starsToday": 886
+        "stars": 52639,
+        "starsToday": 1903
       },
       {
-        "id": "github-0256cfe52fbc2c50",
-        "rank": 6,
-        "name": "pytorch/pytorch",
-        "url": "https://github.com/pytorch/pytorch",
-        "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+        "id": "github-c0524b8a4609ea7c",
+        "rank": 3,
+        "name": "mksglu/context-mode",
+        "url": "https://github.com/mksglu/context-mode",
+        "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "language": "TypeScript",
+        "stars": 26808,
+        "starsToday": 485
+      },
+      {
+        "id": "github-0d97dfe3fc868c34",
+        "rank": 4,
+        "name": "storytold/artcraft",
+        "url": "https://github.com/storytold/artcraft",
+        "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "language": "Rust",
+        "stars": 19931,
+        "starsToday": 4106
+      },
+      {
+        "id": "github-aa408c0f83f345a8",
+        "rank": 5,
+        "name": "open-webui/open-webui",
+        "url": "https://github.com/open-webui/open-webui",
+        "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
         "language": "Python",
-        "stars": 104680,
-        "starsToday": 315
+        "stars": 154424,
+        "starsToday": 142
+      },
+      {
+        "id": "github-231c4b191ae0f4ae",
+        "rank": 6,
+        "name": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "language": "HTML",
+        "stars": 51658,
+        "starsToday": 2100
       },
       {
         "id": "github-1e73b5eaa3faad65",
@@ -570,20 +570,30 @@
         "url": "https://github.com/lyogavin/airllm",
         "description": "AirLLM 70B inference with single 4GB GPU",
         "language": "Jupyter Notebook",
-        "stars": 36878,
-        "starsToday": 548
+        "stars": 37004,
+        "starsToday": 886
       },
       {
-        "id": "github-baaaab62e07d4ab6",
+        "id": "github-c3f55ec32ca8ad9a",
         "rank": 8,
-        "name": "chrislgarry/Apollo-11",
-        "url": "https://github.com/chrislgarry/Apollo-11",
-        "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
-        "language": "Assembly",
-        "stars": 74476,
-        "starsToday": 466
+        "name": "microsoft/BitNet",
+        "url": "https://github.com/microsoft/BitNet",
+        "description": "Official inference framework for 1-bit LLMs",
+        "language": "C++",
+        "stars": 40734,
+        "starsToday": 195
+      },
+      {
+        "id": "github-cc418404c0b64cdf",
+        "rank": 9,
+        "name": "Alishahryar1/free-claude-code",
+        "url": "https://github.com/Alishahryar1/free-claude-code",
+        "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+        "language": "Python",
+        "stars": 58293,
+        "starsToday": 506
       }
     ],
-    "updatedAt": "2026-10-12T09:10:58.646Z"
+    "updatedAt": "2026-10-12T12:05:35.520Z"
   }
 }
