@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-12T00:33:25.550Z",
+  "generatedAt": "2026-10-12T07:22:06.820Z",
   "intelligence": {
-    "updatedAt": "2026-10-12T00:33:25.550Z",
+    "updatedAt": "2026-10-12T07:22:06.820Z",
     "items": [
       {
-        "id": "cn-item-a93cd8014f94afcb",
+        "id": "cn-item-b2f7916c1cbbae45",
         "category": "cn",
-        "title": "一移民船在吉布提沿海倾覆致至少109人死亡，包括15名儿童",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-11/10711074.shtml",
+        "title": "第三轮第七批中央生态环境保护督察启动",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-12/10712031.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-11T11:05:12.000Z",
-        "summary": "中新网10月11日电 据法新社等媒体报道，当地时间10月11日，国际移民组织表示，10月8日至9日夜间，一艘移民船在吉布提海岸附近沉没，造成至少109人死亡，其中包括15名儿童，另有约116人失踪。",
+        "publishedAt": "2026-10-12T06:57:04.000Z",
+        "summary": "经党中央、国务院批准，第三轮第七批中央生态环境保护督察全面启动。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50049411",
+        "id": "hn-50052156",
         "category": "dev",
-        "title": "Whatever became of holography? (2011)",
-        "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
+        "title": "Attack of the Vibe Coded Photoshop Clones",
+        "url": "https://www.shokunin.studio/blog/2026/10/9/attack-of-the-vibe-coded-photoshop-clones",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T23:50:34.000Z",
+        "publishedAt": "2026-10-12T06:35:05.000Z",
         "badge": "HN",
-        "signal": "25 分 · 5 评论"
+        "signal": "47 分 · 23 评论"
       },
       {
-        "id": "cn-it-4e34be68d2936861",
+        "id": "cn-it-b37508ebf90a7bf9",
         "category": "cn",
-        "title": "优派推出 VX27G58-2K-9 显示器：27 英寸 2K 240Hz，到手价 929 元",
-        "url": "https://www.ithome.com/1/011/737.htm",
+        "title": "上汽大众 ID.ERA 8X 增程 SUV 上市，限时权益价 20.68 万元起",
+        "url": "https://www.ithome.com/1/011/923.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T00:28:17.000Z",
-        "summary": "IT之家 10 月 12 日消息，优派上周推出了一款 2K 高刷显示器，型号为 VX27G58-2K-9 显示器，现已开售，预售 899 元，正式开售后已经涨到 929 元，不过晒单返 50 元 E 卡。 京东 优派 27 英寸显示器 VX27G58-2K-9 2K 高清 240Hz FastIPS 面板 硬件低蓝光 1ms 响应 HDR 技术 929 元 直达链接 该显示器采用常规三边窄边框设计，配备操作便捷的五向摇杆，搭配五边形金属超薄底座，稳固且不占桌面空间。 核心配…",
+        "publishedAt": "2026-10-12T07:19:24.000Z",
+        "summary": "IT之家 10 月 12 日消息，上汽大众 ID.ERA 8X 增程 SUV 今日正式上市， 限时权益价 20.68 万元起 。 该车长 5020mm、宽 1997mm，高 1750mm，轴距为 2970mm，采用利落短悬设计、4 倍轮轴比、趋近 1:2 的窗身比，还配备机翼式长扰流板，大面积熏黑包围。 前脸配备纤薄环宇贯穿灯带、两侧 L 型日行灯，全新“六核高能格”光阶灯毯循序排列，启闭间，光阶逐步点亮。此外，该车还配备 EA211 黄金增程器、行云智能底盘，提供“毫秒级…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247932",
+        "id": "v2ex-1248104",
         "category": "dev",
-        "title": "我开源项目给用户免费用 GPT6 Luna，还是招来了一堆素质极差的人盗刷。",
-        "url": "https://www.v2ex.com/t/1247932",
+        "title": "yoagent，极简的 rust agent loop library, 现在支持 DSH 插件和 Pi 扩展的无缝调用",
+        "url": "https://www.v2ex.com/t/1248104",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-12T00:19:42.000Z",
-        "summary": "最近和一个中转站合作，每月提供一些额度，我本身 OpenAI 就给我免费使用，所以我这些额度就开放了 GPT6 Luna 给用户免费用。 因为开源免费，所以也不会开发登录这种功能，所以提供模型的地址密钥在仓库里都可以看得到。结果就引来了存心不良的人来盗刷，我看了一下日志，几乎都是各种 AI 工具在调用，应该是某些用户看了源码之后刷了点小聪明去盗用。 说真的我这种模式也没办法阻止盗刷，因为都摆在明面上了，只能对 ip 进行控制。真的要对我这小服务器攻击我也没办法，最后最多就是…",
+        "publishedAt": "2026-10-12T07:05:38.000Z",
+        "summary": "想象一下，如果可以无缝集成七千多个 DSH 插件 以及一万多个 Pi 扩展 到你的 agent 应用里面，全都是经过社区验证的代码，各个生态里面最好的插件都可以拿来组合使用，开发 agent 的形式会不会改变？ yoagent 本身是极简 rust agent runtime ，可以当作底座来构建 rust agent 应用。通过他扩展的能力，我试验性的把两大生态集成了进来，当然，我也没想好这种融合是不是有意义。 举个例子，我做了一个简单的 handoff agent ，来…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-6b06226fc98ea870",
+        "id": "cn-baidu-61825047a873bb23",
         "category": "cn",
-        "title": "沙特遭遇十年来最惨袭击",
-        "url": "https://www.baidu.com/s?wd=%E6%B2%99%E7%89%B9%E9%81%AD%E9%81%87%E5%8D%81%E5%B9%B4%E6%9D%A5%E6%9C%80%E6%83%A8%E8%A2%AD%E5%87%BB&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "年轻人为何不再为朋友圈“打工”",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%B4%E8%BD%BB%E4%BA%BA%E4%B8%BA%E4%BD%95%E4%B8%8D%E5%86%8D%E4%B8%BA%E6%9C%8B%E5%8F%8B%E5%9C%88%E2%80%9C%E6%89%93%E5%B7%A5%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月11日，沙特首都利雅得哈立德国王国际机场遭袭击造成12死309伤，为沙特近十年来伤亡最惨重袭击。胡塞武装宣称对袭击负责，机场现已彻底停摆，多国联军正展开调查。",
+        "summary": "如今，一些年轻人不再热衷在朋友圈晒定位、凑九宫格，取而代之的是逛菜市场、自己做饭、早睡早起，把耗费在形象经营上的精力收回来，重新投入日常小事本身。这种被称为“纯过日子”的生活状态，核心是不追求物质堆砌、不再硬卷人设，把注意力放回生活本身。",
         "badge": "热搜",
-        "signal": "7,808,149 热度"
+        "signal": "7,808,698 热度"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50045984",
+        "id": "hn-50051573",
         "category": "dev",
-        "title": "Total Annihilation, rebuilt for modern computers",
-        "url": "https://nanolathe.gg",
+        "title": "Type-safe HTML templating in Zig",
+        "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T18:04:47.000Z",
+        "publishedAt": "2026-10-12T05:02:34.000Z",
         "badge": "HN",
-        "signal": "332 分 · 144 评论"
+        "signal": "67 分 · 31 评论"
       },
       {
-        "id": "cn-item-af881a6a87158907",
+        "id": "cn-item-f53a16aea445ec82",
         "category": "cn",
-        "title": "日本民间团体举行集会 反对政府军事扩张",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-11/10711025.shtml",
+        "title": "东西问丨为什么国际政坛的“中国履历”越来越常见？",
+        "url": "https://www.chinanews.com.cn/dxw/2026/10-12/10711955.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-11T09:02:00.000Z",
-        "summary": "日本多个民间团体10日在东京举行全国联合交流集会，围绕长射程导弹部署、弹药库建设、军事基地扩建等问题展开交流，表达反对日本政府军事扩张、维护地区和平与民众安全的诉求。",
+        "publishedAt": "2026-10-12T05:47:50.000Z",
+        "summary": "中新网北京10月12日电 题：为什么国际政坛的“中国履历”越来越常见？",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247898",
+        "id": "v2ex-1248098",
         "category": "dev",
-        "title": "给 GPT Dot 和 Grok Bot 接了座桥，现在它俩背着我一起刷推了",
-        "url": "https://www.v2ex.com/t/1247898",
+        "title": "chatgpt 一直提示模型已满",
+        "url": "https://www.v2ex.com/t/1248098",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T14:57:04.000Z",
-        "summary": "Grok Bot 能看 X ，我的 Dot 也想凑热闹，于是给它俩接了座消息桥。 现在 Dot 想看什么，自己找 Grok 问。 我偷偷翻了下聊天记录，它俩已经开始互相吐槽。 非官方集成，代码已开源： https://github.com/UnCooe/grok-dot-bridge",
+        "publishedAt": "2026-10-12T06:58:37.000Z",
+        "summary": "现在是 200 刀的套餐 但是一直 Selected model is at capacity. Please try a different model. 这个是什么问题的啊？ 换了梯子 还是不行 一直一直可以 有大佬可以解决的吗？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-it-ccc97f1cd80e4239",
+        "id": "cn-it-1a8a4098a312c16d",
         "category": "cn",
-        "title": "OpenAI 宣布 GPT-6.1 Sol 默认上下文长度从 272k 提升至 500k，增加约 80%",
-        "url": "https://www.ithome.com/1/011/736.htm",
+        "title": "坚果 N1 Air 第五代变焦版激光投影上架：0.23\" DMD 芯片、1080P 1800CVIA，国补后 2599.2 元",
+        "url": "https://www.ithome.com/1/011/919.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T00:23:08.000Z",
-        "summary": "IT之家 10 月 12 日消息，OpenAI 的 Thibault Sottiaux（Tibo）今日宣布，已将 Codex 和 Work 环境下 GPT-6.1 Sol 的 默认上下文长度提升至 500k ，相比此前的 272k 增加了约 80%。 Tibo 表示，尽管 OpenAI 未来还会继续提高上限，但这一调整已能显著降低上下文压缩的触发频率，并能更从容地处理那些需要长期保留大量上下文与复杂细节的任务。 该数值经过充分测试，对绝大多数用户而言都是体验与性能的最佳平衡…",
+        "publishedAt": "2026-10-12T07:18:29.000Z",
+        "summary": "IT之家 10 月 12 日消息，坚果现已在京东上架 N1 Air 第五代变焦版激光投影，该产品配备 0.23\" DMD 显示芯片、主打 1080P 1800CVIA，官方称国补后到手价低至 2599.2 元。 京东 坚果投影 N1 Air 第五代变焦版 点此访问 直达链接 该产品采用了杏仁白配色，机身尺寸为 187x165x191mm，重量 1.9kg。配备“行业首创一体式云台设计”，支持 127° 俯仰调节，能够轻松实现直投天花板。 该产品搭载新一代 MALC 护眼纯三…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50047091",
+        "id": "hn-50048642",
         "category": "dev",
-        "title": "Cartographers of North Korea",
-        "url": "https://cartographers-nk.wonyoung.so/",
+        "title": "Fingerprints are the new cookies",
+        "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T19:46:40.000Z",
+        "publishedAt": "2026-10-11T22:33:39.000Z",
         "badge": "HN",
-        "signal": "165 分 · 28 评论"
+        "signal": "297 分 · 137 评论"
       },
       {
-        "id": "cn-baidu-1873e4bd6a0a1d63",
+        "id": "cn-baidu-7ee55ab730e65860",
         "category": "cn",
-        "title": "郑钦文调皮摘掉爸爸帽子露出光头",
-        "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87%E8%B0%83%E7%9A%AE%E6%91%98%E6%8E%89%E7%88%B8%E7%88%B8%E5%B8%BD%E5%AD%90%E9%9C%B2%E5%87%BA%E5%85%89%E5%A4%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "电脑卖不动了",
+        "url": "https://www.baidu.com/s?wd=%E7%94%B5%E8%84%91%E5%8D%96%E4%B8%8D%E5%8A%A8%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京时间10月11日，2026中网女单决赛，郑钦文2-0战胜安德列娃，夺得冠军。赛后，郑钦文与家人合影庆祝，她还调皮摘下爸爸的帽子。",
+        "summary": "2026年第三季度全球PC出货量暴跌20.1%，但联想、苹果等厂商利润不降反增。分析指出，AI正重洗行业座次：AI抢走存储产能致内存暴涨，苹果等靠高端用户转嫁成本；AI服务器订单则流向有基建业务的联想和戴尔。",
         "badge": "热搜",
-        "signal": "7,711,864 热度"
+        "signal": "7,712,058 热度"
       },
       {
         "id": "github-advisory-ghsa-pwhx-cvv3-qj5c",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247893",
+        "id": "v2ex-1248094",
         "category": "dev",
-        "title": "参加 mcd 的 1024 程序员节活动，想挣几个巨无霸改善生活，请求 star",
-        "url": "https://www.v2ex.com/t/1247893",
+        "title": "把 TypeScript GraphRAG 接到 MCP：本地索引 Markdown、做局部/全局检索，还能查看答案证据",
+        "url": "https://www.v2ex.com/t/1248094",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T14:29:02.000Z",
-        "summary": "项目名称：麦麦团餐助手 · Maimai MealCrew 项目地址： https://github.com/idevstory/maimai-mealcrew 项目简介：一起点麦麦，帮你算好账。优惠怎么算、餐费怎么 A 、公司补多少，有人改餐也能重新算。 方便的话，帮点个 star ，谢谢各位！",
+        "publishedAt": "2026-10-12T06:55:12.000Z",
+        "summary": "之前发过 graphrag-ts v0.1.8 的增量构建。这次单独开帖，是因为后来把 MCP 服务和本地 web-demo 补完整了，想展示一下从索引到检索的实际流程。 现在可以用 Docker Compose 启动 PostgreSQL/pgvector 和 MCP server ，在本地页面里： 提交 Markdown 目录索引任务并查看构建状态； 选择局部 hybrid retrieval 或全局 Map-Reduce 查询； 展开答案对应的 source exce…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-item-15d8d79d8af3eab3",
+        "id": "cn-item-15cb435b2d317c34",
         "category": "cn",
-        "title": "“最亮小行星”冲日 十月夜空添看点",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-11/10711009.shtml",
+        "title": "乘联分会：9月乘用车出口91.7万辆，同比增长73.7%",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-12/10711962.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-11T08:17:47.000Z",
-        "summary": "中新社南京10月11日电 (记者 徐珊珊)据中国科学院紫金山天文台10月11日消息，“最亮小行星”灶神星13日将冲日，亮度约6.3等，冲日前后几乎整夜可见，为天文爱好者提供了一次难得的观测机会。",
+        "publishedAt": "2026-10-12T05:45:52.000Z",
+        "summary": "中新网10月12日电 10月12日，据“乘联分会”微信公众号消息，根据乘联数据，9月乘用车出口(含整车与CKD)91.7万辆，同比增长73.7%，环比增长3.2%，占乘用车厂商销量36%(上月38%，2025年同期19%)。9月新能源车占出口总量的60.8%，较同期大幅增加21个百分点。9月自主品牌出口达到81.2万辆，同比增长75%；合资与豪华品牌出口10.5万辆，同比增长62%。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50049302",
+        "id": "hn-50045984",
         "category": "dev",
-        "title": "Governments are mishandling the affordability crisis",
-        "url": "https://www.economist.com/finance-and-economics/2026/10/08/governments-are-mishandling-the-affordability-crisis",
+        "title": "Total Annihilation, rebuilt for modern computers",
+        "url": "https://nanolathe.gg",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T23:40:06.000Z",
+        "publishedAt": "2026-10-11T18:04:47.000Z",
         "badge": "HN",
-        "signal": "14 分 · 4 评论"
+        "signal": "460 分 · 189 评论"
       },
       {
-        "id": "cn-it-134d0b8175159d95",
+        "id": "cn-it-f6073e5635a14a5e",
         "category": "cn",
-        "title": "尼康 Z 120-300mm F2.8 镜头谍照曝光：内置 1.4 倍增距镜，最快 10 月底发布",
-        "url": "https://www.ithome.com/1/011/735.htm",
+        "title": "索尼 LinkBuds Clip 耳夹式 TWS 耳机新增“鎏光金”中国限定色，10 月 23 日上市",
+        "url": "https://www.ithome.com/1/011/915.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T00:17:50.000Z",
-        "summary": "IT之家 10 月 12 日消息，尼康新款长焦镜头 Z 120-300mm f/2.8 TC VR S 现身 F1 新加坡赛事现场。 如图所示，有摄影爱好者在社交平台分享了现场照片，一名法新社泰籍女摄影记者在新加坡 F1 赛事期间使用了这支尚未发布的镜头。 IT之家注意到，这并非该镜头首次在顶级体育赛事中被拍到，此前它已在法网赛场和 2026 年北美世界杯期间投入实地测试。 尼康于 2026 年 5 月 7 日通过官方新闻稿正式宣布正在开发 NIKKOR Z 120-300…",
+        "publishedAt": "2026-10-12T07:17:34.000Z",
+        "summary": "IT之家 10 月 12 日消息，索尼中国本月 9 日宣布，索尼音扣 LinkBuds Clip 耳夹式真无线耳机新增中国限定色“鎏光金”， 这一新款式将于 2026 年 10 月 23 日开售 。 LinkBuds Clip 内置 10mm 驱动单元，搭载数字声音增强引擎；支持 SBC、AAC 编解码器；具备漏音抑制、人声增强、标准 3 种聆听模式；每侧内置 2 颗波束成形麦克风；支持骨声纹识别 VPU 技术。 其单体质量约 6.4g；拥有灵动枕与柔感宽弧桥结构；获得 I…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1247877",
+        "id": "v2ex-1248093",
         "category": "dev",
-        "title": "和同事吹水吹出来的：用三国志的数值给大模型排了个座位",
-        "url": "https://www.v2ex.com/t/1247877",
+        "title": "100% AI 写代码之后，我有点不知道自己该怎么进步了",
+        "url": "https://www.v2ex.com/t/1248093",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T13:22:04.000Z",
-        "summary": "那天和同事闲聊，说现在这几家 AI 厂商打来打去，越看越像三国，或者说是战国时代。聊着聊着就有人说，那 Opus 5.5 不就是当世吕布嘛，断层第一，谁都打不过。 然后就停不下来了，开始挨个对：这个模型像谁，那个模型该是谁，吵了半天谁也说服不了谁。我想既然都不服，那干脆用数据说话，于是就有了这个网站。 网站： https://illegalcreed.github.io/llm-sanguo/ 源码： https://github.com/IllegalCreed/llm-…",
+        "publishedAt": "2026-10-12T06:53:58.000Z",
+        "summary": "说下我的情况：我做了 5 年 Java ，今年年初离职后，阴差阳错地入职了一份 Python 开发的工作。面试时他们知道我之前做 Java ，也问过我愿不愿意转方向，我就来了。 那会儿 Vibe Coding 还没现在这么火。入职后我开始折腾 AI 工作流，比如用 OpenSpec 管理开发流程。到现在，我基本没手写过一行代码，日常开发几乎全靠 AI 。 有时候会觉得，自己除了跟 AI 来回沟通、改需求，好像没什么长进。之前看过一些文章，讲怎么把自己的工作习惯整理成 Ski…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-9a431789514a9128",
+        "id": "cn-baidu-5003e64cdf6fa5b2",
         "category": "cn",
-        "title": "这些文物见证伟大远征",
-        "url": "https://www.baidu.com/s?wd=%E8%BF%99%E4%BA%9B%E6%96%87%E7%89%A9%E8%A7%81%E8%AF%81%E4%BC%9F%E5%A4%A7%E8%BF%9C%E5%BE%81&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“进厂游”为何火了起来",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E8%BF%9B%E5%8E%82%E6%B8%B8%E2%80%9D%E4%B8%BA%E4%BD%95%E7%81%AB%E4%BA%86%E8%B5%B7%E6%9D%A5&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "“伟大的远征——纪念中国工农红军长征胜利90周年主题展览”正在中国人民革命军事博物馆举行。主题展览共分7个部分，展出照片图表357张、文物文献1061件（套）。我们通过一件件文物回望这场伟大远征，从中读懂跨越万水千山的革命理想、传承伟大长征精神，奔赴新时代的长征之路。",
+        "summary": "报告显示，“进厂游”成为出行新选择，火箭工厂、造船厂、汽水厂、新能源汽车厂等工业研学类目的地受到游客青睐。人气旺盛的背后，是工业旅游供需两端的“双向奔赴”。工业旅游的兴起，不仅是文旅市场的一抹亮色，更是工业制造与现代服务深度融合的生动写照；不仅让大众的出游选择更加丰富，也为传统产业的转型升级打开了新空间。",
         "badge": "热搜",
-        "signal": "7,616,108 热度"
+        "signal": "7,617,838 热度"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50048522",
+        "id": "hn-50034206",
         "category": "dev",
-        "title": "Recursive self-improvement through collective intelligence",
-        "url": "https://pub.sakana.ai/mass/",
+        "title": "Calculus with Julia",
+        "url": "https://jverzani.github.io/CalculusWithJuliaNotes.jl/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T22:22:10.000Z",
+        "publishedAt": "2026-10-10T15:59:52.000Z",
         "badge": "HN",
-        "signal": "39 分 · 11 评论"
+        "signal": "90 分 · 2 评论"
       },
       {
-        "id": "cn-item-f3a03f5ce5e3e4a8",
+        "id": "cn-item-c52be0ce58c0e4ad",
         "category": "cn",
-        "title": "尼泊尔北部突发洪水致4人失踪 多处房屋及水电设施受损",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-11/10710960.shtml",
+        "title": "“辛酸”跨过削球关 王曼昱中国大满贯赛“双冠”加身",
+        "url": "https://www.chinanews.com.cn/ty/2026/10-12/10711957.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-11T07:38:57.000Z",
-        "summary": "中新社加德满都10月11日电 尼泊尔北部廓尔喀县布迪甘达基河流域11日凌晨突发洪水，尼泊尔媒体报道称，目前造成4人失踪，至少40栋房屋、两座吊桥被冲走。",
+        "publishedAt": "2026-10-12T05:34:11.000Z",
+        "summary": "中新网北京10月12日电 题：“辛酸”跨过削球关 王曼昱中国大满贯赛“双冠”加身",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1247858",
+        "id": "v2ex-1248088",
         "category": "dev",
-        "title": "Animation is all your need! 把系统架构做成动画",
-        "url": "https://www.v2ex.com/t/1247858",
+        "title": "像一些必装的国产软件, 有啥可用的便携版吗, 比如 qq , 微信啥的",
+        "url": "https://www.v2ex.com/t/1248088",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T11:46:03.000Z",
-        "summary": "被 twitter 上的一个技术动画吸引，做了这个 claude skill 可以自动生成 多巴胺动画+论文风格的技术动画。 效果如下: 打开中文交互动效演示 · 中文 MP4 （ 24 秒） 并且这个这张介绍它怎么工作的动画，也是用它自己生成的。 安装： npx skills add joeeeeey/arch-motion-page 然后可以直接跟 Agent 说： 用 arch-motion-page 把我们的 RAG 问答系统做成一页会动的 A4 架构图，要中文版。…",
+        "publishedAt": "2026-10-12T06:37:16.000Z",
+        "summary": "我现在装软件尽量装便携版 其实大多软件都有 唯独少数几个国产软件不清楚有没有",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-7e65d2eaf9f6f0eb",
+        "id": "cn-it-e37a45bb81f75bc6",
         "category": "cn",
-        "title": "库克分享卸任苹果 CEO 后首次来华最新动态：与苏炳添喝早茶聊天、同 Xmind 思维导图开发者交流等",
-        "url": "https://www.ithome.com/1/011/734.htm",
+        "title": "倍思推出新款 10 合 1 扩展坞：自带屏幕、支持双 4K 60Hz 输出",
+        "url": "https://www.ithome.com/1/011/914.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-12T00:13:08.000Z",
-        "summary": "IT之家 10 月 12 日消息，苹果前首席执行官、现苹果公司董事会执行主席 蒂姆 · 库克（Tim Cook）再度开启了中国之行 。根据他微博的分享内容来看，他首站落地广州。 IT之家注意到，库克昨晚又分享了他再次来到中国的最新动态：与奥运健儿苏炳添边喝早茶边聊天、探访了 Apple 天环广场和 Apple 珠江新城的团队、与 Xmind 思维导图开发者交流，还欣赏了艺术家 @陈粉丸 的创作。 据南方 + 报道，10 月 11 日，广东省委副书记、省长孟凡利在广州会见美国…",
+        "publishedAt": "2026-10-12T07:17:26.000Z",
+        "summary": "IT之家 10 月 12 日消息，倍思现已在海外市场推出 Spacemate RD1 扩展坞新品。这款产品主打 10 合 1 设计，支持双 4K 60Hz 输出， 配备 6 个 USB 接口 ，拥有自带显示屏。 IT之家了解到， 该产品正面配备 2 个 10Gbps USB-C 接口 ，还有 1 个支持 30W 输出的 USB-C PD 充电接口。背面带有 3 个 5Gbps USB-A 接口、2 个最高可输出 4K 60Hz 的 HDMI 接口、1 个千兆以太网口，以及 …",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50048768",
+        "id": "hn-50049411",
         "category": "dev",
-        "title": "Google Data Centers around the world",
-        "url": "https://datacenters.google/locations/",
+        "title": "Whatever became of holography? (2011)",
+        "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
         "source": "Hacker News",
-        "publishedAt": "2026-10-11T22:45:40.000Z",
+        "publishedAt": "2026-10-11T23:50:34.000Z",
         "badge": "HN",
-        "signal": "39 分 · 32 评论"
+        "signal": "110 分 · 53 评论"
       },
       {
-        "id": "cn-baidu-8f182e865d734551",
+        "id": "cn-baidu-7af49a2e9c0867a4",
         "category": "cn",
-        "title": "新娘父亲一句“吃好喝好”直接开席",
-        "url": "https://www.baidu.com/s?wd=%E6%96%B0%E5%A8%98%E7%88%B6%E4%BA%B2%E4%B8%80%E5%8F%A5%E2%80%9C%E5%90%83%E5%A5%BD%E5%96%9D%E5%A5%BD%E2%80%9D%E7%9B%B4%E6%8E%A5%E5%BC%80%E5%B8%AD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "郑钦文退出武网",
+        "url": "https://www.baidu.com/s?wd=%E9%83%91%E9%92%A6%E6%96%87%E9%80%80%E5%87%BA%E6%AD%A6%E7%BD%91&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月26日，宁波95后新娘小朱与丈夫在咸祥镇举办“四无婚礼”，无接亲婚车及司仪，父亲致辞41秒“吃好喝好”便开席。此前新人因怕父母操劳决定极简办婚礼，将买菜花销提至7万多元，并向宾客送出六七万元红包。此举省去繁琐流程，获亲友好评。",
+        "summary": "10月12日，中网新科女单冠军郑钦文，因为右肩伤病，宣布退出武网。中网和武网前后脚举办，如果郑钦文要参加接下来的武网，那么她连休息恢复的时间都没有，运动员健康第一。",
         "badge": "热搜",
-        "signal": "7,520,731 热度"
+        "signal": "7,520,255 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102490",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1247850",
+        "id": "v2ex-1248085",
         "category": "dev",
-        "title": "ghostproxifier 一款对标 proxifier 的免费软件",
-        "url": "https://www.v2ex.com/t/1247850",
+        "title": "咸鱼账号被扬了",
+        "url": "https://www.v2ex.com/t/1248085",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-11T10:48:59.000Z",
-        "summary": "写这个工具的起因很简单：平时用终端、AI 客户端或者某些软件，老是不听话不走系统代理。 用全局/TUN 模式吧，装虚拟网卡不说，还容易搞炸本地网络；用老牌 Proxifier 吧，配规则麻烦得要死，多进程软件（像 Chrome 这种）还要到处抓子进程。 为了解决“只让某一个软件老老实实走代理”这件小事，我做了 Ghost Proxifier 。主打就是一个：极简、不用动脑子。 做了哪些省心功能？ 把图标拖进去就行：不管是桌面快捷方式还是 .exe ，直接拖进软件窗口，立即接…",
+        "publishedAt": "2026-10-12T06:34:57.000Z",
+        "summary": "因为发布 claude 产品，被禁言。闲气值被扣到 0 分，处罚升级触发进一步限权亲爱的用户，已删除您全部闲鱼商品，永久限制您已发布帖子及评论的展示，并永久限制您在闲鱼发布及购买商品、留言、私聊、编辑个人主页等权限，还有办法恢复吗，积累了不少客户呢",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 104147,
+        "stars": 120574,
         "starsToday": 25599
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/boykopovar/AnyPS5",
         "description": "Tool for automatic PS5 executables porting to Linux and Windows",
         "language": "C++",
-        "stars": 30102,
+        "stars": 30996,
         "starsToday": 3952
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 17880,
+        "stars": 19105,
         "starsToday": 2957
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 50331,
+        "stars": 51072,
         "starsToday": 1083
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 51676,
+        "stars": 52249,
         "starsToday": 886
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/pytorch/pytorch",
         "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
         "language": "Python",
-        "stars": 104483,
+        "stars": 104648,
         "starsToday": 315
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/lyogavin/airllm",
         "description": "AirLLM 70B inference with single 4GB GPU",
         "language": "Jupyter Notebook",
-        "stars": 36477,
+        "stars": 36789,
         "starsToday": 548
       },
       {
@@ -580,10 +580,10 @@
         "url": "https://github.com/chrislgarry/Apollo-11",
         "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
         "language": "Assembly",
-        "stars": 74249,
+        "stars": 74432,
         "starsToday": 466
       }
     ],
-    "updatedAt": "2026-10-12T00:33:25.550Z"
+    "updatedAt": "2026-10-12T07:22:06.820Z"
   }
 }
