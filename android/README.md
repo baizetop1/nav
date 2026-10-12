@@ -1,10 +1,10 @@
 # 白泽水浒 Android 安装包
 
-当前安装包为 **0.82.1（versionCode 55）**，使用原签名构建，修复“更多”菜单截断、剧情按钮外圈和资源副本被拆页；保留六地探索与重访、跨地区人物共事、统一来源追踪和寨中生活。安装包采用自行签名，包名 `top.baizeone.shuihu`，支持 Android 8.0 及以上。游戏资源完整内置，云存档需要联网。首次安装请使用手机系统的文件管理器打开 APK；后续使用同一签名、同一包名、递增 versionCode 的 APK 覆盖安装。
+当前安装包为 **0.82.2（versionCode 56）**，使用原签名构建，补上“更多”菜单在溢出时的触摸滚动，标题、关闭按钮和分类固定；保留菜单分类、剧情与资源副本布局修复；保留六地探索与重访、跨地区人物共事、统一来源追踪和寨中生活。安装包采用自行签名，包名 `top.baizeone.shuihu`，支持 Android 8.0 及以上。游戏资源完整内置，云存档需要联网。首次安装请使用手机系统的文件管理器打开 APK；后续使用同一签名、同一包名、递增 versionCode 的 APK 覆盖安装。
 
 ## 安装与存档迁移
 
-1. 将已生成的 `artifacts/android/baize-shuihu-0.82.1.apk` 传到手机，直接覆盖安装。兼容现有 0.82.0 Worker，无须更新数据库；网页由 GitHub Actions 随 main 分支提交部署。
+1. 将已生成的 `artifacts/android/baize-shuihu-0.82.2.apk` 传到手机，直接覆盖安装。兼容现有 0.82.0 Worker，无须更新数据库；网页由 GitHub Actions 随 main 分支提交部署。
 2. 原浏览器中进入“存档 → 导出当前进度”，把 JSON 文件保存到手机。
 3. 打开 APK 的“存档 → 导入文件 → 从其他设备导入存档”，选择 JSON，检查预览并确认导入。
 4. 或在 APK 中下载已有云档；更新原云档仍需该档的上传密钥。
@@ -33,6 +33,12 @@ cd 'F:\nav-main\nav-main'
 JavaScript 原生接口仅用于显式导出存档，保存位置通过系统文件选择器由用户确定。导入也通过系统文件选择器，不申请全盘存储权限。App 使用网站原有 Origin，因此当前仅允许 `https://baizeone.top` 的 Worker CORS 配置可直接兼容；0.82.0 的完整新进度要求 Worker 返回 release: 0.82.0，以及 grainRoad、idleDispatch、regionalGathering、regionExploration、marshExploration、ruinsExploration、forestExploration、waterExploration、mountainExploration、explorationGoals、mineRevisit、marshRevisit、regionRevisits、mineCompanion、crossRegionEvents、sourceTracking、campLife 均为 1；没有新增数据库表，不需要执行 SQL。仅推送 GitHub 不会部署 Worker，也不会更新手机内置的游戏文件。
 
 方案参考 Android 官方 [加载应用内网页](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content) 和 [APK 签名工具](https://developer.android.com/tools/apksigner)。
+
+## 0.82.2 安装包验证
+
+383 个内置文件与源码一致，桌面图标未变；v2/v3 签名及原证书核对通过，versionCode 从 55 升至 56。直接使用 APK 提取页面验证溢出时手指滑动、末行入口、固定关闭按钮和分类切换；另验证 0.82.1 旧存档离线升级、导入导出和重启。没有连接 Android 真机。
+
+大小 66,882,317 字节；SHA-256：`b80443a548ae2b2c04a091b308e7f5c512a4df117203f7e036486da05422a866`。文件：`artifacts/android/baize-shuihu-0.82.2.apk`，校验记录：`artifacts/android/apk0822-verification.json`。
 
 ## 0.82.0 安装包验证与限制
 

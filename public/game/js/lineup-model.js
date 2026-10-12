@@ -1,9 +1,9 @@
-import {away} from './hero-availability.js?v=0.82.1';
-import {HERO_ROLES} from './hero-roles.js?v=0.82.1';
-import {unlockReason} from './growth.js?v=0.82.1';
-import {waterBattle} from './frontier-data.js?v=0.82.1';
-import {battleTerrain} from './strategy-data.js?v=0.82.1';
-import {CORPS} from './corps-data.js?v=0.82.1';
+import {away} from './hero-availability.js?v=0.82.2';
+import {HERO_ROLES} from './hero-roles.js?v=0.82.2';
+import {unlockReason} from './growth.js?v=0.82.2';
+import {waterBattle} from './frontier-data.js?v=0.82.2';
+import {battleTerrain} from './strategy-data.js?v=0.82.2';
+import {CORPS} from './corps-data.js?v=0.82.2';
 const baseKinds={songjiang:'heal_rage',wuyong:'control',luzhishen:'taken_guard',huarong:'high',wusong:'last',ruanxiaoqi:'water_guard',linchong:'opening_front',tanglong:'taken_rage',baisheng:'heal_guard',andaoquan:'heal_cleanse',shiqian:'low',wangjin:'interrupt_weaken'};
 export const roleKind=id=>HERO_ROLES[id]?.kind||baseKinds[id];
 export function combatCapabilities(u,d,b){

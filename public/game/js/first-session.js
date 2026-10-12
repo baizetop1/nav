@@ -1,7 +1,7 @@
-import {buildingQuote} from './camp.js?v=0.82.1';
-import {battleItemQuote} from './battle.js?v=0.82.1';
-import {totalExperience} from './progression.js?v=0.82.1';
-import {away} from './progression-paths.js?v=0.82.1';
+import {buildingQuote} from './camp.js?v=0.82.2';
+import {battleItemQuote} from './battle.js?v=0.82.2';
+import {totalExperience} from './progression.js?v=0.82.2';
+import {away} from './progression-paths.js?v=0.82.2';
 // A suggested first outing, derived from existing progress; no extra rewards or gates.
 export const isTigerStory=b=>b?.context?.type==='story'&&b.context.id==='wusong_story';
 const page=(view,id,hero)=>({type:'ui_section',view,id,...(hero?{hero}:{})});

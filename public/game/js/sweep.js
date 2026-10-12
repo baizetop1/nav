@@ -1,9 +1,9 @@
-import { RESOURCE_ROUTES } from './resource-dungeons-data.js?v=0.82.1';
-import { totalExperience } from './progression.js?v=0.82.1';
-import { dispatch } from './core.js?v=0.82.1';
-import { advanceBattle } from './battle.js?v=0.82.1';
-import { dailyUses, rotationPlan, rotationCalendar } from './rotations.js?v=0.82.1';
-import { requireRule, journal } from './utils.js?v=0.82.1';
+import { RESOURCE_ROUTES } from './resource-dungeons-data.js?v=0.82.2';
+import { totalExperience } from './progression.js?v=0.82.2';
+import { dispatch } from './core.js?v=0.82.2';
+import { advanceBattle } from './battle.js?v=0.82.2';
+import { dailyUses, rotationPlan, rotationCalendar } from './rotations.js?v=0.82.2';
+import { requireRule, journal } from './utils.js?v=0.82.2';
 export const mastery=(s,id,tier)=>s.campaign?.mastery?.[id+'_'+tier]||0;
 export function sweepReason(s,id,tier,count=1){
  if(s.battle||s.scheme||s.event)return '先结束当前交战或际遇';

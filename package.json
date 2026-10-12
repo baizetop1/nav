@@ -170,6 +170,7 @@
     "test:shuihu-folio": "node scripts/shuihu-folio-selfcheck.mjs",
     "check:shuihu-folio": "node scripts/shuihu-folio-browser.mjs",
     "check:shuihu-menu": "node scripts/shuihu-menu-browser.mjs",
+    "check:shuihu-menu-touch": "node scripts/shuihu-menu-touch-browser.mjs",
     "test:shuihu-special": "node scripts/shuihu-special-selfcheck.mjs",
     "test:shuihu-special-cloud": "node scripts/shuihu-special-cloud-selfcheck.mjs",
     "check:shuihu-special": "node scripts/shuihu-special-browser.mjs",

@@ -1,4 +1,4 @@
-import { freshOrders, equipmentMatches } from './commands.js?v=0.82.1';
+import { freshOrders, equipmentMatches } from './commands.js?v=0.82.2';
 
 export function ordersPanel(s,d,btn,esc,locked){
  const b=s.battle;if(b.rules!==2)return '';

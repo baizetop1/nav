@@ -1,7 +1,7 @@
-import {battlePlanPanel} from './battle-plan.js?v=0.82.1';
-import {fullLineupAdvice,roleReadiness,recommendLineups,combatCapabilities} from './lineup-model.js?v=0.82.1';
-import {HERO_ROLES} from './hero-roles.js?v=0.82.1';
-import {waterBattle} from './frontier-data.js?v=0.82.1';
+import {battlePlanPanel} from './battle-plan.js?v=0.82.2';
+import {fullLineupAdvice,roleReadiness,recommendLineups,combatCapabilities} from './lineup-model.js?v=0.82.2';
+import {HERO_ROLES} from './hero-roles.js?v=0.82.2';
+import {waterBattle} from './frontier-data.js?v=0.82.2';
 // Read the quoted battle, not the saved team: unconfirmed formation changes must be reflected.
 export function lineupAdvice(b,d){
  if(!b||b.guest)return [];

@@ -1,14 +1,14 @@
-import {replayChallengePanel} from './replay-challenges.js?v=0.82.1';
-import {CHRONICLES} from './chronicle-data.js?v=0.82.1';
-import {ROUTE_PRIZES,routeBalance} from './journey-rewards.js?v=0.82.1';
-import {JOURNEYS,JOURNEY_TIERS,BOONS} from './journey-data.js?v=0.82.1';
-import {dialogTabs,dialogPanel} from './dialog-pages.js?v=0.82.1';
-import {COMBOS,PERSONAL} from './expansion-data.js?v=0.82.1';
-import {RELICS,CHALLENGES} from './realm-data.js?v=0.82.1';
-import { totalExperience } from './progression.js?v=0.82.1';
-import { CORPS, corpsRank } from './development.js?v=0.82.1';
-import { HELPERS, hasHelper } from './helpers.js?v=0.82.1';
-import { qualityOf, QUALITIES } from './quality.js?v=0.82.1';
+import {replayChallengePanel} from './replay-challenges.js?v=0.82.2';
+import {CHRONICLES} from './chronicle-data.js?v=0.82.2';
+import {ROUTE_PRIZES,routeBalance} from './journey-rewards.js?v=0.82.2';
+import {JOURNEYS,JOURNEY_TIERS,BOONS} from './journey-data.js?v=0.82.2';
+import {dialogTabs,dialogPanel} from './dialog-pages.js?v=0.82.2';
+import {COMBOS,PERSONAL} from './expansion-data.js?v=0.82.2';
+import {RELICS,CHALLENGES} from './realm-data.js?v=0.82.2';
+import { totalExperience } from './progression.js?v=0.82.2';
+import { CORPS, corpsRank } from './development.js?v=0.82.2';
+import { HELPERS, hasHelper } from './helpers.js?v=0.82.2';
+import { qualityOf, QUALITIES } from './quality.js?v=0.82.2';
 // Derive the visible receipt from a completed transaction, never from a second roll.
 export function gains(before,after,data){
   const rows=[];const add=(name,n)=>{if(n>0)rows.push({name,amount:n});};

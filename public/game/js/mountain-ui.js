@@ -1,6 +1,6 @@
-import {MOUNTAIN_NODES,mountainHas,mountainGate,mountainGoal} from './mountain-data.js?v=0.82.1';
-import {mountainPath,mountainFightQuote,mountainTask} from './mountain.js?v=0.82.1';
-import {specialDropTable} from './special-dungeons.js?v=0.82.1';
+import {MOUNTAIN_NODES,mountainHas,mountainGate,mountainGoal} from './mountain-data.js?v=0.82.2';
+import {mountainPath,mountainFightQuote,mountainTask} from './mountain.js?v=0.82.2';
+import {specialDropTable} from './special-dungeons.js?v=0.82.2';
 export function mountainPanel(s,d,esc,btn,selected){
  const x=s.exploration.mountain,here=x.position,id=Object.hasOwn(MOUNTAIN_NODES,selected)?selected:here,n=MOUNTAIN_NODES[id],has=k=>mountainHas(s,k);
  const action=(label,type,key,style='secondary',disabled=false,extra={})=>btn(label,{type,region:'mountain',...(key?{id:key}:{}),...extra},style,disabled);

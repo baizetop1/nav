@@ -1,4 +1,4 @@
-import {MOUNTAIN_NODES,MOUNTAIN_FLAGS,mountainHas,mountainGate,mountainRoute} from './mountain-data.js?v=0.82.1';
+import {MOUNTAIN_NODES,MOUNTAIN_FLAGS,mountainHas,mountainGate,mountainRoute} from './mountain-data.js?v=0.82.2';
 export const hasMountain=s=>s.exploration?.mountain!==undefined||Object.keys(s.specialDungeons?.clears||{}).some(k=>/^mountain(hold)?_[123]$/.test(k))||[s.battle?.context,s.lastBattle?.context,s.specialDungeons?.last].some(c=>['mountain','mountainhold'].includes(c?.id));
 export function validateMountain(s,check){const x=s.exploration,w=x?.mountain;if(w===undefined)return;
  const obj=v=>v&&typeof v==='object'&&!Array.isArray(v),list=(v,allowed)=>Array.isArray(v)&&new Set(v).size===v.length&&v.every(k=>allowed.includes(k));

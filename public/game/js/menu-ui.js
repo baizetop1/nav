@@ -40,6 +40,7 @@ export function showFunctionMenu(root,options,invoker){
     if(tab){
       dialog.querySelectorAll('[data-menu-group-tab]').forEach(b=>b.setAttribute('aria-pressed',String(b===tab)));
       dialog.querySelectorAll('[data-menu-group]').forEach(g=>g.dataset.selected=String(g.dataset.menuGroup===tab.dataset.menuGroupTab));
+      dialog.querySelector('.function-menu-groups').scrollTop=0;
     }
   });
   // Close only when both ends of the pointer gesture were outside the panel.
@@ -56,10 +57,11 @@ export function showFunctionMenu(root,options,invoker){
   // Measure the complete menu: entry counts and the visible viewport both change.
   const fit=()=>{
     if(!dialog.isConnected)return;
-    delete dialog.dataset.menuLayout;
+    const entries=dialog.querySelector('.function-menu-groups');
+    entries.scrollTop=0;delete dialog.dataset.menuLayout;
     const bounds=dialog.getBoundingClientRect();
     const clipped=[...dialog.querySelectorAll('button')].some(b=>{const r=b.getBoundingClientRect();return r.width&&r.height&&(r.bottom>bounds.bottom-8||r.right>bounds.right-4);});
-    if(dialog.scrollHeight>dialog.clientHeight+1||clipped)dialog.dataset.menuLayout='categories';
+    if(entries.scrollHeight>entries.clientHeight+1||dialog.scrollHeight>dialog.clientHeight+1||clipped)dialog.dataset.menuLayout='categories';
   };
   window.addEventListener('resize',fit);window.visualViewport?.addEventListener('resize',fit);
   dialog.addEventListener('close',()=>{window.removeEventListener('resize',fit);window.visualViewport?.removeEventListener('resize',fit);},{once:true});

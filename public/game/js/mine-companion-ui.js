@@ -1,5 +1,5 @@
-import {MINE_COMPANION_TASKS,mineCompanionHas,mineCompanionGoal,mineCompanionTask} from './mine-companion-data.js?v=0.82.1';
-import {specialPlan} from './special-dungeons.js?v=0.82.1';
+import {MINE_COMPANION_TASKS,mineCompanionHas,mineCompanionGoal,mineCompanionTask} from './mine-companion-data.js?v=0.82.2';
+import {specialPlan} from './special-dungeons.js?v=0.82.2';
 export function minePeople(s,btn){const has=k=>mineCompanionHas(s,k),next=mineCompanionGoal(s);
  return '<nav class="mine-people" aria-label="矿洞人物">'+btn('汤隆 · '+(has('invited')?'已入寨':has('met')?'委托中':'待相识'),{type:'ui_regionOpen',region:'mine',node:'furnace'},'secondary')+btn('李云 · '+(has('liyun_invited')?'已入寨':has('liyun_met')?'委托中':next?'可结识':'矿车后'),{type:'ui_regionOpen',region:'mine',node:has('liyun_invited')?'chamber':next?.node||'entrance'},'secondary',!next)+'</nav>';
 }

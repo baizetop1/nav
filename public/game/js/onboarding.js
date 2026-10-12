@@ -1,8 +1,8 @@
-import {firstSessionGoal,firstBattleHint} from './first-session.js?v=0.82.1';
-import {explorationGoalQuote,explorationResume} from './exploration-goals.js?v=0.82.1';
-import {battleSkillMode} from './battle.js?v=0.82.1';
-import {storyObjective} from './story-guide.js?v=0.82.1';
-import {LESSONS} from './lessons-data.js?v=0.82.1';
+import {firstSessionGoal,firstBattleHint} from './first-session.js?v=0.82.2';
+import {explorationGoalQuote,explorationResume} from './exploration-goals.js?v=0.82.2';
+import {battleSkillMode} from './battle.js?v=0.82.2';
+import {storyObjective} from './story-guide.js?v=0.82.2';
+import {LESSONS} from './lessons-data.js?v=0.82.2';
 
 // Guidance is derived from real progress. Only the display preference is local.
 export const guideKey=(s,slot)=>'baize_shuihu_guide:'+slot+':'+s.startedAt;

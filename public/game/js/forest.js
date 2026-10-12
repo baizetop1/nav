@@ -1,9 +1,9 @@
-import {revisitAction,revisitTask} from './region-revisit.js?v=0.82.1';
-import {FOREST_NODES,forestHas,forestGate,forestLinks,forestRoute} from './forest-data.js?v=0.82.1';
-import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.82.1';
-import {ensureGathering} from './gathering.js?v=0.82.1';
-import {knowHero,ownHero} from './hero.js?v=0.82.1';
-import {requireRule,journal} from './utils.js?v=0.82.1';
+import {revisitAction,revisitTask} from './region-revisit.js?v=0.82.2';
+import {FOREST_NODES,forestHas,forestGate,forestLinks,forestRoute} from './forest-data.js?v=0.82.2';
+import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.82.2';
+import {ensureGathering} from './gathering.js?v=0.82.2';
+import {knowHero,ownHero} from './hero.js?v=0.82.2';
+import {requireRule,journal} from './utils.js?v=0.82.2';
 export function openForest(s){return s.exploration.forest??={version:1,position:'post',visited:['post'],flags:[],pending:null};}
 export function forestPath(s,target){
  if(forestGate(s,target))return null;const start=s.exploration?.forest?.position||'post',queue=[[start]],seen=new Set([start]);

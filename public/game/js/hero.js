@@ -1,12 +1,12 @@
-import {chronicleGearMultiplier} from './chronicle-data.js?v=0.82.1';
-import { recordRecruitSupport } from './recruit-support.js?v=0.82.1';
-import { isExternal, isWanderer, ordinaryHeroes } from './roster.js?v=0.82.1';
-import { experienceResult } from './progression.js?v=0.82.1';
-import { applySets } from './equipment-sets.js?v=0.82.1';
-import { qualityOf, QUALITIES } from './quality.js?v=0.82.1';
-import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.82.1';
-import { heroRank } from './map.js?v=0.82.1';
-import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.82.1';
+import {chronicleGearMultiplier} from './chronicle-data.js?v=0.82.2';
+import { recordRecruitSupport } from './recruit-support.js?v=0.82.2';
+import { isExternal, isWanderer, ordinaryHeroes } from './roster.js?v=0.82.2';
+import { experienceResult } from './progression.js?v=0.82.2';
+import { applySets } from './equipment-sets.js?v=0.82.2';
+import { qualityOf, QUALITIES } from './quality.js?v=0.82.2';
+import { bounded, count, journal, pick, random, requireRule, weighted } from './utils.js?v=0.82.2';
+import { heroRank } from './map.js?v=0.82.2';
+import { unlockReason, skillLevel, trainedSkill } from './growth.js?v=0.82.2';
 export function knowHero(state, id, status, data) {
   const hero = state.heroes[id];
   if (heroRank[status] > heroRank[hero.status]) { hero.status = status; journal(state, `${data.by.heroes[id].name}：${({heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'})[status]}。`); }

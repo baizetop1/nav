@@ -1,7 +1,7 @@
-import { stewardshipBonus } from './stewardship.js?v=0.82.1';
-import { experienceToNext } from './progression.js?v=0.82.1';
-import { helperSummary } from './helpers-ui.js?v=0.82.1';
-import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.82.1';
+import { stewardshipBonus } from './stewardship.js?v=0.82.2';
+import { experienceToNext } from './progression.js?v=0.82.2';
+import { helperSummary } from './helpers-ui.js?v=0.82.2';
+import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.82.2';
 const resource={wood:'木材',food:'粮草',silver:'碎银'};
 const quality={1:'凡品',2:'良品',3:'珍品'};
 export function goalBoard(s,d,btn){
