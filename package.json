@@ -34,6 +34,8 @@
     "test:blog-enhancements": "node --experimental-strip-types scripts/blog-enhancements-selfcheck.mjs",
     "test:study-feedback": "node --experimental-strip-types scripts/study-feedback-selfcheck.mjs",
     "test:home-tools": "node --experimental-strip-types scripts/home-tools-selfcheck.mjs",
+    "test:aihot": "node --experimental-strip-types scripts/aihot-selfcheck.mjs",
+    "check:aihot": "node scripts/aihot-browser.mjs",
     "check:app-enhancements": "node scripts/app-enhancements-browser.mjs",
     "check:working-drafts": "node scripts/working-drafts-browser.mjs",
     "test:encrypted-backup": "node --experimental-strip-types scripts/encrypted-backup-selfcheck.mjs",

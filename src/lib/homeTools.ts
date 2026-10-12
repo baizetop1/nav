@@ -1,6 +1,6 @@
 export const HOME_TOOLS_KEY = 'baize_home_tools_v1';
 export const HOME_TOOLS_EVENT = 'baize:home-tools-updated';
-export const HOME_TOOL_IDS = ['tech-os', 'blog', 'rest', 'game', 'reading', 'graph', 'capture', 'rss', 'work-session', 'hot-feed', 'temporary-visits', 'translate'] as const;
+export const HOME_TOOL_IDS = ['tech-os', 'blog', 'rest', 'game', 'reading', 'graph', 'capture', 'rss', 'work-session', 'hot-feed', 'temporary-visits', 'translate', 'ai-news'] as const;
 export type HomeToolId = typeof HOME_TOOL_IDS[number];
 export interface HomeToolPreference { id: HomeToolId; visible: boolean; pinned: boolean }
 export interface HomeToolPreferences { version: 1; tools: HomeToolPreference[] }

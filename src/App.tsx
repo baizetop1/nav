@@ -55,6 +55,7 @@ const WorkSessionPanel = lazy(() => import('./components/WorkSessionPanel').then
 const PendingSyncPanel = lazy(() => import('./components/PendingSyncPanel').then(module => ({ default: module.PendingSyncPanel })));
 const BlogWorkbench = lazy(() => import('./components/blog/BlogWorkbench').then(module => ({ default: module.BlogWorkbench })));
 const QuickTranslationPanel = lazy(() => import('./components/QuickTranslationPanel').then(module => ({ default: module.QuickTranslationPanel })));
+const AiHotPanel = lazy(() => import('./components/AiHotPanel').then(module => ({ default: module.AiHotPanel })));
 
 const DRAFT_KEY = 'nav_cms_draft';
 const TEMP_TEXT_KEY = 'nav_temp_text';
@@ -160,6 +161,7 @@ function App() {
   const { setTranslationText, setTranslatedText, setSourceLanguage, setTargetLanguage, setTranslationState, translationHistory, setTranslationHistory } = translator;
   const [isTranslatorOpen, setIsTranslatorOpen] = useState(() => safeGetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, { label: '翻译面板偏好', important: false }) !== 'true');
   const [hotFeedOpen, setHotFeedOpen] = useState(() => safeGetLocalStorageItem('nav_hot_feed_collapsed') === 'false');
+  const [aiNewsOpen, setAiNewsOpen] = useState(false);
   const [temporaryVisitsOpen, setTemporaryVisitsOpen] = useState(() => safeGetLocalStorageItem('nav_temporary_visits_collapsed') === 'false');
   const [homeToolsEditing, setHomeToolsEditing] = useState(false);
   useEffect(() => { safeSetLocalStorageItem('nav_hot_feed_collapsed', String(!hotFeedOpen), { label: '情报面板折叠偏好', important: false }); }, [hotFeedOpen]);
@@ -769,6 +771,7 @@ function App() {
 
   const inboxCount = inboxItems.filter(item => !item.deletedAt && item.status === 'inbox').length;
   const showInboxLauncher = !isAdminOpen && !homeToolsEditing
+    && !aiNewsOpen
     && !isInboxOpen
     && !isTempTextOpen
     && !isTempTextQrOpen
@@ -780,6 +783,7 @@ function App() {
   const commandActions: CommandPaletteAction[] = [
     { id: 'blog', title: '打开博客工作台', description: '写文章、管理草稿、预览与发布更新', keywords: ['blog', '博客', '文章', '写作', '发布'], icon: 'note', run: openBlog },
     { id: 'rss', title: 'RSS 阅读中心', description: '订阅、OPML、未读、收藏与稍后阅读', keywords: ['rss', '订阅', '阅读', 'opml'], icon: 'study', run: () => setRssOpen(true) },
+    { id: 'ai-news', title: 'AI 资讯与日报', description: workActive ? '工作会话期间暂不展示，结束后可阅读' : '按需阅读 AIHOT 精选、热点和日报；本机收藏与已读', keywords: ['AIHOT', 'AI', '资讯', '新闻', '日报', '热点', '模型'], icon: 'study', run: () => { if (!workActive) { setAiNewsOpen(true); window.requestAnimationFrame(() => { const panel = document.getElementById('ai-news'); panel?.focus({ preventScroll: true }); panel?.scrollIntoView({ block: 'start', behavior: 'smooth' }); }); } } },
     { id: 'organize', title: '智能整理中心', description: '查重复、补全资料、批量调整分类与标签', keywords: ['整理', '去重', 'organize'], icon: 'settings', run: () => openAdmin('organize') },
     { id: 'web-capture', title: '收集网页', description: '保存网址、备注或安装一键收集书签', keywords: ['收集', '分享', 'capture'], icon: 'add', run: openWebCapture },
     { id: 'work-session', title: '工作会话', description: '专注计时、工作网站组合与小结', keywords: ['工作', '专注', '番茄', 'focus'], icon: 'work', run: () => setWorkOpen(true) },
@@ -908,6 +912,7 @@ function App() {
               { id: 'rss', label: 'RSS 订阅', icon: <FileText size={17} />, active: rssOpen, run: () => setRssOpen(value => !value) },
               { id: 'work-session', label: workActive ? workPhase === 'focus' ? '正在专注' : '正在休息' : '工作会话', icon: <Check size={17} />, active: workOpen, run: () => setWorkOpen(value => workActive || !value) },
               { id: 'hot-feed', label: '情报', active: hotFeedOpen && !workActive, disabled: workActive, run: () => setHotFeedOpen(value => !value) },
+              { id: 'ai-news', label: 'AI 资讯', icon: <BrainCircuit size={17} />, active: aiNewsOpen && !workActive, disabled: workActive, run: () => setAiNewsOpen(value => !value) },
               { id: 'temporary-visits', label: '临时访问', active: temporaryVisitsOpen, run: () => setTemporaryVisitsOpen(value => !value) },
               { id: 'translate', label: '翻译', icon: <Languages size={17} />, active: isTranslatorOpen, run: () => { safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, String(isTranslatorOpen), sharedStorageOptions('翻译面板偏好', false)); if (isTranslatorOpen) setIsTranslatorOpen(false); else openTranslator(); } },
             ]} />
@@ -917,6 +922,7 @@ function App() {
             {readingOpen && <FeatureBoundary name="阅读中心" onClose={() => setReadingOpen(false)}><Suspense fallback={null}><ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} /></Suspense></FeatureBoundary>}
             {graphOpen && <FeatureBoundary name="知识图谱" onClose={() => setGraphOpen(false)}><Suspense fallback={<p>正在加载图谱…</p>}><TextGraphPanel index={graphIndex} onClose={() => setGraphOpen(false)} /></Suspense></FeatureBoundary>}
             {!workActive && <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} open={hotFeedOpen} onOpenChange={setHotFeedOpen} compact={isWorkMode} />}
+            {!workActive && aiNewsOpen && <FeatureBoundary name="AI 资讯" onClose={() => setAiNewsOpen(false)}><Suspense fallback={<p role="status" className="basis-full text-sm appearance-muted">正在载入 AI 资讯…</p>}><AiHotPanel onClose={() => setAiNewsOpen(false)} /></Suspense></FeatureBoundary>}
             <TemporaryVisitsPanel
               open={temporaryVisitsOpen} onOpenChange={setTemporaryVisitsOpen}
               visits={temporaryVisitSummaries}

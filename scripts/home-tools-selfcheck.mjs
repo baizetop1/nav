@@ -16,4 +16,8 @@ raw = '{bad'; assert.ok(readHomeTools(storage).error); assert.equal(raw, '{bad')
 assert.throws(() => saveHomeTools(defaults, raw, { getItem: storage.getItem, setItem: () => { throw Error('quota'); } }), /quota/);
 assert.equal(raw, '{bad');
 assert.equal(parseHomeTools({ version: 1, tools: [] }).tools.length, HOME_TOOL_IDS.length);
+const oldTools = { version: 1, tools: defaults.tools.filter(item => item.id !== 'ai-news') };
+const migrated = parseHomeTools(oldTools);
+assert.deepEqual(migrated.tools.slice(0, oldTools.tools.length), oldTools.tools, 'existing homepage order and visibility stay intact');
+assert.deepEqual(migrated.tools.at(-1), { id: 'ai-news', visible: true, pinned: false }, 'AI news is appended without forcing a new pin');
 console.log('Homepage tool preference order, pin, hiding, compact mode and CAS: PASS');

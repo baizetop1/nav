@@ -555,10 +555,20 @@ name > tags > category > description
 
 博客图片由 `src/services/blogImages.ts` 独立创建资产提交，仅接受签名匹配的 PNG/JPEG/GIF/WebP（最多 5 MiB）。选择和粘贴只产生内存预览，显式公开确认后才上传；文章仍需另行发布。`src/lib/blogMerge.ts` 按原文、本机、远端三方比较，采用有界的无损行级改动块；不同位置自动合并，同位置需选择。合并更新本地文章及读取基线，不自动提交。
 
-首页入口设置使用 `baize_home_tools_v1`，按显示、固定和排序组织 12 个入口。普通模式展示固定项及最多 6 个直接入口，其余进入“更多”；工作模式只直接显示固定项。`HomeToolLauncher`、`QuickTranslationPanel`、`useQuickTranslation` 从 `App.tsx` 分离，翻译请求随输入/语言变化取消。`FeatureBoundary` 为主要路由和按需面板提供关闭、返回及显式刷新恢复，不自动清空数据或假装重试已拒绝的 lazy 导入。
+首页入口设置使用 `baize_home_tools_v1`，按显示、固定和排序组织 13 个入口。普通模式展示固定项及最多 6 个直接入口，其余进入“更多”；工作模式只直接显示固定项。`HomeToolLauncher`、`QuickTranslationPanel`、`useQuickTranslation` 从 `App.tsx` 分离，翻译请求随输入/语言变化取消。`FeatureBoundary` 为主要路由和按需面板提供关闭、返回及显式刷新恢复，不自动清空数据或假装重试已拒绝的 lazy 导入。
 
 学习反馈由 `src/services/studyFeedback.ts` 保存为 `baize_study_feedback_v1`（version 1）。每个 `QUEST-编号/S编号` 独立记录自己的回答、观察、卡点、自评及复习时间，保存时检查版本并使用可用的 Web Lock。首次复习间隔按自评为 1/3/7 天，后续最长 30 天；仅为页面内清单，非系统通知或自动评分。反馈、阅读、打卡与正式 Quest 完成相互独立。
 
 反馈作为私人工作区设置随 Inbox 加密同步，按步骤合并，同一步骤的并发不同文本保留可见冲突副本。学习打卡仍走独立 `studyProgress` 字段，不重复纳入共享设置。两类记录及首页设置均纳入完整/加密云备份；旧备份缺失新增字段时保留本机，非法新增存档在恢复前拒绝，不先修改其他数据。公开 Tech OS Markdown 不受这些操作影响。
 
 验证使用 `verify:app`、`test:blog-enhancements`、`test:home-tools`、`test:study-feedback` 和 `check:app-enhancements`；外部写入全部使用模拟接口，游戏目录保持独立。
+
+## 15. AIHOT 按需阅读边界
+
+AI 资讯是独立 lazy 面板，由用户主动展开后才通过 `src/services/aiHot.ts` 匿名直连 AIHOT `/api/v1/items`、`/api/v1/hot-topics` 或 `/api/v1/dailies/latest`。不部署其 PostgreSQL、worker 和服务端网页，不复制其 Logo，也不修改现有每小时技术情报工作流。请求不携带本站凭据或私有正文；关闭面板、切换栏目和进入工作会话会取消当前请求。
+
+客户端校验版本、内容尺寸、字段与链接，第三方文字按文本展示。读取遵循 HTTP 缓存有效期和限流，不后台轮询、不抓全量历史、不生成 AIHOT 静态 JSON 镜像。本站 Service Worker 不接管跨域请求；断网时可浏览本机收藏链接，但不会把过期内容当作新资讯。保留来源与原文入口，摘要与聚合并非本站独立核验的事实。
+
+`baize_aihot_reader_v1` 只保存收藏书签 metadata 和已读时间，不包含摘要/正文，不进入完整备份、公开仓库或私人云同步。现有首页入口配置自动补充 `ai-news`，保留旧的顺序、固定与隐藏设置。公开数据再分发须另行核对 [AIHOT 使用规则](https://aihot.news/terms)，不能因代码为 MIT 就默认获准转载线上数据。
+
+验证：`test:aihot` 检查协议、安全链接、限流、缓存、取消与本机记录；`check:aihot` 用隔离的模拟响应检查桌面/手机按需加载、收藏/已读、错误恢复和关闭请求，不向外部写入。

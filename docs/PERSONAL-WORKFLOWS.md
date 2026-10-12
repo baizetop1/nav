@@ -114,4 +114,20 @@ Ctrl/Cmd K 可搜索网站、文章、Topic、Inbox 正文、临时访问、翻�
 
 验证：`npm run test:home-tools`、`npm run test:study-feedback`、`npm run check:app-enhancements`。浏览器验证覆盖桌面和手机，并拦截模拟所有外部写入。
 
+## 8. AI 资讯轻量阅读器
+
+入口：首页“更多工具 → AI 资讯”，也可用全局命令面板搜索“AIHOT / AI 资讯与日报”。在“整理入口”中固定它，可直接显示在首页；新增入口不会改变已有工具的顺序或固定状态。
+
+- 默认收起，展开后才匿名读取精选；切换“热点”或“日报”时才读取该栏目。“收藏”只读本机，不请求远端。
+- 精选可按模型、产品、行业、论文、教程、观点筛选；热点保留来源数量和事件阅读入口；日报展示实际刊期、覆盖时段与导语，不假定最新一期就是今天。
+- 阅读链接打开 AIHOT 或原文，手动标记已读；收藏仅保存链接、标题、来源、类型和时间，不复制摘要/全文。关闭、切换栏目或开始工作会话会取消正在读取的请求。
+- “重新读取”遵守缓存有效期、最小间隔和服务端限流。没有后台定时抓取，网络错误不会清空收藏；可直接打开源站继续阅读。
+- 收藏与已读只在当前浏览器，暂不纳入完整备份、GitHub 或私人加密同步；更换设备/清理本站数据不会自动带过去。页面会明确提示存储失败，而不是声称已经保存。
+
+资讯由 AIHOT 及其第三方来源提供，摘要/热点可能使用 AI 处理，重要信息请核对原文。访问会向 AIHOT 发出普通网络请求，但不会发送导航草稿、私人文本、GitHub Token 或模型密钥。
+
+这是个人非商业阅读工具，不是 AIHOT 公开镜像。代码许可与服务数据许可不同；商业、白标、公开镜像或批量再分发等用途须先取得相应授权。参见 [AIHOT 公开使用规则](https://aihot.news/terms) 和 [公开 API 文档](https://aihot.news/openapi-v1.json)。
+
+验证：`npm run test:aihot`、`npm run check:aihot`。浏览器脚本使用模拟新闻，不批量保存上游资讯，需已启动预览和配置本机 Playwright。
+
 运行 `npm run verify:app` 检查类型、生产构建和非游戏自检。浏览器流程使用 `npm run check:personal-workflows`、`npm run check:rss-capture` 和 `npm run check:work-session`；需要本机 Playwright 和 Edge，以及已启动的生产预览服务。默认地址为 `http://127.0.0.1:5189/nav/`，可用 `BAIZE_APP_URL` 调整；Playwright 不在项目依赖时可用 `BAIZE_PLAYWRIGHT_PATH` 指向其安装目录。测试使用独立浏览器环境和模拟响应，不向真实 GitHub 写入数据。
