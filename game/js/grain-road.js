@@ -1,9 +1,9 @@
-import {GRAIN_ROUTES,GRAIN_SCOUTS,GRAIN_INVESTMENTS,grainRoute,grainDelivery} from './grain-road-data.js?v=0.82.1';
-import {requireRule,journal,count} from './utils.js?v=0.82.1';
-import {startBattle} from './battle.js?v=0.82.1';
-import {attachTroops} from './camp.js?v=0.82.1';
-import {deployedTroops} from './logistics.js?v=0.82.1';
-import {gainExp} from './hero.js?v=0.82.1';
+import {GRAIN_ROUTES,GRAIN_SCOUTS,GRAIN_INVESTMENTS,grainRoute,grainDelivery} from './grain-road-data.js?v=0.82.2';
+import {requireRule,journal,count} from './utils.js?v=0.82.2';
+import {startBattle} from './battle.js?v=0.82.2';
+import {attachTroops} from './camp.js?v=0.82.2';
+import {deployedTroops} from './logistics.js?v=0.82.2';
+import {gainExp} from './hero.js?v=0.82.2';
 const road=s=>s.grainRoad??={version:1,route:null,scout:null,won:false,attempts:0,investment:null,lastAt:0,last:null};
 export function grainQuote(s,id){const m=GRAIN_ROUTES[id],n=deployedTroops(s),food=m?m.food+Math.ceil(n/4):0;return {troops:n,food,stamina:m?.stamina||0,reason:!m?'没有这条路线。':!s.camp?'先建立山寨。':s.grainRoad?.won?'粮路已经打通。':id==='scout'&&!s.grainRoad?.scout?'先派一位好汉探路。':!s.team.length?'先安排出阵好汉。':s.camp.mode==='army'&&!n?'先募兵，或在出征准备中改为独行。':s.player.stamina<m.stamina?'体力不足，出征需 '+m.stamina+' 点。':s.camp.food<food?'粮草不足，可先采集物资或减少随军人数。':''};}
 function collect(s,partial=false){const q=grainDelivery(s),x=s.grainRoad;requireRule(partial||q.days>0,'粮队尚未到达，满一天后可收粮。');s.camp.food+=q.food;s.camp.wounded-=q.healed;s.camp.troops+=q.healed;if(q.days)x.lastAt=s.clock-(s.clock-x.lastAt)%86400000;return q;}

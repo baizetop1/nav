@@ -1,6 +1,6 @@
-import {REGION_REVISITS,revisitSpec,revisitHas,revisitCounter} from './region-revisit-data.js?v=0.82.1';
-import {WORKSHOP_RECIPES} from './supplies-data.js?v=0.82.1';
-import {requireRule,journal} from './utils.js?v=0.82.1';
+import {REGION_REVISITS,revisitSpec,revisitHas,revisitCounter} from './region-revisit-data.js?v=0.82.2';
+import {WORKSHOP_RECIPES} from './supplies-data.js?v=0.82.2';
+import {requireRule,journal} from './utils.js?v=0.82.2';
 const TASKS={return:'return_met',investigate:'trace_checked',thanks:'return_paid'};
 export function revisitTask(s,region,id){const r=revisitSpec(region);if(!r||!Object.hasOwn(TASKS,id))return null;const x=s.exploration?.[region],place=id==='investigate'?r.trace:r.home;
  if(x?.flags.includes(TASKS[id]))return '这件事已经办妥。';

@@ -1,4 +1,4 @@
-import {meets} from './map.js?v=0.82.1';
+import {meets} from './map.js?v=0.82.2';
 export const isHarbor=id=>['liangshan','ferry'].includes(id);
 export function harborMoment(s){
  if(!isHarbor(s.location))return null;

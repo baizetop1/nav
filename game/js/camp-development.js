@@ -1,8 +1,8 @@
-import { stewardshipBonus } from './stewardship.js?v=0.82.1';
-import { helperBonus } from './helpers.js?v=0.82.1';
-import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.82.1';
-import { gainExp } from './hero.js?v=0.82.1';
-import { grant, newEquipment } from './item.js?v=0.82.1';
+import { stewardshipBonus } from './stewardship.js?v=0.82.2';
+import { helperBonus } from './helpers.js?v=0.82.2';
+import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.82.2';
+import { gainExp } from './hero.js?v=0.82.2';
+import { grant, newEquipment } from './item.js?v=0.82.2';
 
 export const DUTIES={
   balanced:{name:'各司其职',description:'木粮银均衡生产。'},

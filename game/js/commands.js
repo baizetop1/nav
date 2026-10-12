@@ -1,4 +1,4 @@
-import { requireRule } from './utils.js?v=0.82.1';
+import { requireRule } from './utils.js?v=0.82.2';
 
 export const freshOrders=()=>({version:1,focus:null,stance:'balanced',reserve:false,readyAt:0});
 export function battleOrder(state,action){

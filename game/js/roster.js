@@ -1,5 +1,5 @@
-import { hasOwn, requireRule } from './utils.js?v=0.82.1';
-import { meets } from './map.js?v=0.82.1';
+import { hasOwn, requireRule } from './utils.js?v=0.82.2';
+import { meets } from './map.js?v=0.82.2';
 export const rosterVersion=d=>d.config.rosterVersion||3;
 export const isExternal=h=>h.group==='external';
 export const isWanderer=h=>h?.group==='external'&&h.obtain?.type==='wanderer';

@@ -1,10 +1,10 @@
-import {roleKind} from './lineup-model.js?v=0.82.1';
-import {experienceToNext} from './progression.js?v=0.82.1';
-import {unlockReason} from './growth.js?v=0.82.1';
-import {GEAR_TRAITS} from './tactics-data.js?v=0.82.1';
+import {roleKind} from './lineup-model.js?v=0.82.2';
+import {experienceToNext} from './progression.js?v=0.82.2';
+import {unlockReason} from './growth.js?v=0.82.2';
+import {GEAR_TRAITS} from './tactics-data.js?v=0.82.2';
 const page=(view,id,hero)=>({type:'ui_section',view,id,...(hero?{hero}:{})});
 export const PHASES={company:'立寨成队',arms:'第一套战法兵甲',story:'走完前两卷'};
-import {away} from './hero-availability.js?v=0.82.1';
+import {away} from './hero-availability.js?v=0.82.2';
 export {away};
 export function starterTeam(s,d){
  const pool=d.heroes.filter(h=>s.heroes[h.id].status==='owned'&&!away(s,h.id)).sort((a,b)=>s.heroes[b.id].level-s.heroes[a.id].level||a.id.localeCompare(b.id));

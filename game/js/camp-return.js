@@ -1,8 +1,8 @@
-import {lifePlace,lifePeople,talkQuote,jobQuote} from './camp-life.js?v=0.82.1';
-import {CAMP_PEOPLE} from './camp-life-data.js?v=0.82.1';
-import {targetQuote} from './development.js?v=0.82.1';
-import {collectionQuote} from './production.js?v=0.82.1';
-import {dayKey} from './utils.js?v=0.82.1';
+import {lifePlace,lifePeople,talkQuote,jobQuote} from './camp-life.js?v=0.82.2';
+import {CAMP_PEOPLE} from './camp-life-data.js?v=0.82.2';
+import {targetQuote} from './development.js?v=0.82.2';
+import {collectionQuote} from './production.js?v=0.82.2';
+import {dayKey} from './utils.js?v=0.82.2';
 const page=(id,extra={})=>({type:'ui_section',view:'camp',id,...extra});
 export function returnPlan(s,d){const day=Math.max(1,Math.floor((Date.parse(dayKey(s.clock))-Date.parse(dayKey(s.startedAt)))/86400000)+1),rows=[],add=(id,title,text,command)=>rows.push({id,title,text,command});
  const goal=s.development?.goal;if(goal){const q=targetQuote(s,d);if(q)add('goal',q.name||q.title||'继续上回的目标',q.next?.text||q.note||q.reason||'先把上回选的事办完。',q.done&&q.completeCommand?q.completeCommand:{type:'ui_goalDetails'});}

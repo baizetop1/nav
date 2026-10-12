@@ -1,15 +1,15 @@
-import {mountainHas} from './mountain-data.js?v=0.82.1';
-import {waterHas} from './water-data.js?v=0.82.1';
-import {forestHas} from './forest-data.js?v=0.82.1';
-import {ruinsHas} from './ruins-data.js?v=0.82.1';
-import {marshHas} from './marsh-data.js?v=0.82.1';
-import {regionHas,regionBuilt} from './exploration-data.js?v=0.82.1';
-import {GATHERING_REGIONS,REGIONAL_RECIPES,gatheringProgress} from './gathering-data.js?v=0.82.1';
-import {IDLE_ROUTES,idleUnlocked} from './idle-data.js?v=0.82.1';
-import {regionalQuote} from './gathering.js?v=0.82.1';
-import {corpsQuote} from './development.js?v=0.82.1';
-import {promotionQuote} from './quality.js?v=0.82.1';
-import {away} from './progression-paths.js?v=0.82.1';
+import {mountainHas} from './mountain-data.js?v=0.82.2';
+import {waterHas} from './water-data.js?v=0.82.2';
+import {forestHas} from './forest-data.js?v=0.82.2';
+import {ruinsHas} from './ruins-data.js?v=0.82.2';
+import {marshHas} from './marsh-data.js?v=0.82.2';
+import {regionHas,regionBuilt} from './exploration-data.js?v=0.82.2';
+import {GATHERING_REGIONS,REGIONAL_RECIPES,gatheringProgress} from './gathering-data.js?v=0.82.2';
+import {IDLE_ROUTES,idleUnlocked} from './idle-data.js?v=0.82.2';
+import {regionalQuote} from './gathering.js?v=0.82.2';
+import {corpsQuote} from './development.js?v=0.82.2';
+import {promotionQuote} from './quality.js?v=0.82.2';
+import {away} from './progression-paths.js?v=0.82.2';
 export function gatheringDiscovery(s,id,d){
  const m=GATHERING_REGIONS[id],p=gatheringProgress(s,id),main=Object.keys(IDLE_ROUTES[id].items)[0];
  return '<details class="gathering-discovery"><summary>采集点 · '+m.site+' · '+(p.runs>=3?'已发现':p.runs+'/3 趟')+'</summary><p class="note">'+(p.runs>=3?'已发现：':'累计走通本地区三次发现，')+d.by.items[m.item].name+'每批 +1。'+(p.best>=2?'险路已通：':'通关本地区第二难度后，')+d.by.items[main].name+'每批 +1。采集不会增加探索次数。</p>'+(id==='mine'?'<p class="note">亲自勘察矿脉：'+(regionHas(s,'surveyed')?'已完成，磁铁砂每批另加 1。':'可在区域地图中完成，磁铁砂每批另加 1。')+(regionBuilt(s,'lodge')&&regionHas(s,'rescued')?'老杜已安置，碎铁每批另加 1。':'')+(regionHas(s,'liyun_invited')?'李云已教会人手检修矿架，碎铁每批另加 1。':'')+'</p>':id==='marsh'?'<p class="note">药圃整修：'+(marshHas(s,'tended')?'已完成，泽兰每批另加 1。':'可在芦苇泽区域地图完成，泽兰每批另加 1。')+(marshHas(s,'invited')&&regionBuilt(s,'clinic')?'安道全已整理药方，药草每批另加 1。':'')+'</p>':id==='mountain'?'<p class="note">矿脉标记：'+(mountainHas(s,'surveyed')?'已完成，赤铜砂每批另加 1。':'可在粮道地图完成，赤铜砂每批另加 1。')+(mountainHas(s,'invited')&&regionBuilt(s,'forge')?'项充已教人拣铁料，碎铁每批另加 1。':'')+'</p>':id==='water'?'<p class="note">留芽割苇：'+(waterHas(s,'tended')?'已完成，苇丝每批另加 1。':'可在渡口地图完成，苇丝每批另加 1。')+(waterHas(s,'invited')&&regionBuilt(s,'clinic')?'阮小七已教会包布编法，粗布每批另加 1。':'')+'</p>':id==='forest'?'<p class="note">藤坡标记：'+(forestHas(s,'tended')?'已完成，山藤每批另加 1。':'可在古道地图完成，山藤每批另加 1。')+(forestHas(s,'invited')&&regionBuilt(s,'lodge')?'时迁已在客舍整理皮料，皮革每批另加 1。':'')+'</p>':id==='ruins'?'<p class="note">残碑拓写：'+(ruinsHas(s,'rubbed')?'已完成，拓片每批另加 1。':'可在荒祠地图完成，拓片每批另加 1。')+(ruinsHas(s,'invited')&&regionBuilt(s,'lodge')?'乐和已在客舍整理收料，粗布每批另加 1。':'')+'</p>':'')+'</details>';

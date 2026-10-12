@@ -1,5 +1,5 @@
-import {MINE_COMPANION_TASKS} from './mine-companion-data.js?v=0.82.1';
-import {EXPEDITIONS} from './realm-data.js?v=0.82.1';import {startBattle,advanceBattle} from './battle.js?v=0.82.1';import {attachTroops,TACTICS} from './camp.js?v=0.82.1';import {heroCommand} from './logistics.js?v=0.82.1';import {casualtyQuote} from './fieldcraft.js?v=0.82.1';import {affairReward} from './affairs.js?v=0.82.1';import {gainExp} from './hero.js?v=0.82.1';import {clone,requireRule,hasOwn,count,journal} from './utils.js?v=0.82.1';
+import {MINE_COMPANION_TASKS} from './mine-companion-data.js?v=0.82.2';
+import {EXPEDITIONS} from './realm-data.js?v=0.82.2';import {startBattle,advanceBattle} from './battle.js?v=0.82.2';import {attachTroops,TACTICS} from './camp.js?v=0.82.2';import {heroCommand} from './logistics.js?v=0.82.2';import {casualtyQuote} from './fieldcraft.js?v=0.82.2';import {affairReward} from './affairs.js?v=0.82.2';import {gainExp} from './hero.js?v=0.82.2';import {clone,requireRule,hasOwn,count,journal} from './utils.js?v=0.82.2';
 export const reservedTroops=s=>s.realm?.squad?.troops||0;
 export const squadAway=(s,id)=>!!s.realm?.squad?.team.includes(id);
 export function squadAvailable(s,id){return s.idleDispatch?.mission?.hero!==id&&s.heroes[id]?.status==='owned'&&!s.team.includes(id)&&s.affairs?.mission?.hero!==id&&!s.progress.flags['camp_steward_'+id]&&!Object.values(s.frontier?.stations||{}).some(p=>p.worker==='hero:'+id)&&!Object.values(s.frontier?.posts||{}).some(p=>p.guard===id)&&!squadAway(s,id);}

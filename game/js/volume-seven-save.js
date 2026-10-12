@@ -1,5 +1,5 @@
-import {SEVENTH_MISSIONS,hasSeventhVolume} from './volume-seven-data.js?v=0.82.1';
-import {meets} from './map.js?v=0.82.1';
+import {SEVENTH_MISSIONS,hasSeventhVolume} from './volume-seven-data.js?v=0.82.2';
+import {meets} from './map.js?v=0.82.2';
 const seventh=id=>typeof id==='string'&&id.startsWith('v7_');
 const isFlag=id=>seventh(id)||id==='volume_seven_complete';
 const historicalCondition=c=>!c?null:Object.fromEntries(Object.entries(c).filter(([key])=>key!=='notFlag').map(([key,value])=>[key,['all','any'].includes(key)?value.map(historicalCondition):value]));

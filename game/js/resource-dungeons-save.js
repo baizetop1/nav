@@ -1,4 +1,4 @@
-import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.82.1';
+import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.82.2';
 const ids=RESOURCE_ROUTES.map(route=>route.id);
 const resourceContext=context=>context?.type==='rotation'&&context.kind==='daily'&&ids.includes(context.id);
 // Existing materials and empty campaign records remain compatible with older workers.
