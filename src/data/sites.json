@@ -354,8 +354,8 @@
   {
     "id": "千问",
     "name": "千问",
-    "url": "https://www.qianwen.com/",
     "description": "国产AI",
+    "url": "https://www.qianwen.com/",
     "categoryId": "ai",
     "tags": [
       "AI"
@@ -365,8 +365,8 @@
   {
     "id": "chatgpt",
     "name": "chatgpt",
-    "url": "https://chatgpt.com/",
     "description": "国外ai",
+    "url": "https://chatgpt.com/",
     "categoryId": "ai",
     "tags": [
       "AI"
@@ -376,8 +376,8 @@
   {
     "id": "kimi",
     "name": "kimi",
-    "url": "https://www.kimi.com/",
     "description": "国内ai",
+    "url": "https://www.kimi.com/",
     "categoryId": "ai",
     "tags": [
       "AI"
@@ -387,8 +387,8 @@
   {
     "id": "deepseek",
     "name": "deepseek",
-    "url": "https://chat.deepseek.com/",
     "description": "国产ai",
+    "url": "https://chat.deepseek.com/",
     "categoryId": "ai",
     "tags": [
       "AI"
@@ -398,8 +398,8 @@
   {
     "id": "glm",
     "name": "Glm",
-    "url": "https://chat.z.ai/",
     "description": "国产ai",
+    "url": "https://chat.z.ai/",
     "categoryId": "ai",
     "tags": [
       "AI"
@@ -409,11 +409,33 @@
   {
     "id": "番茄小说网",
     "name": "番茄小说网",
-    "url": "https://fanqienovel.com/main/writer/home",
     "description": "番茄小说网作者专区是原创作家创作平台，包括言情小说，穿越小说，玄幻小说，武侠小说，都市小说，总裁豪门小说，网游小说等，快来写小说赚福利！",
+    "url": "https://fanqienovel.com/main/writer/home",
     "categoryId": "后台",
     "tags": [
       "书签"
     ]
+  },
+  {
+    "id": "priceai",
+    "name": "PriceAI",
+    "description": "AI 低价卡网订阅 与中转 API 比价雷达",
+    "url": "https://priceai.cc/",
+    "categoryId": "ai",
+    "tags": [
+      "AI收集"
+    ],
+    "favorite": false
+  },
+  {
+    "id": "priceai-2",
+    "name": "PriceAI",
+    "description": "AI 低价卡网订阅 与中转 API 比价雷达",
+    "url": "https://priceai.cc/",
+    "categoryId": "ai",
+    "tags": [
+      "AI收集"
+    ],
+    "favorite": false
   }
 ]
