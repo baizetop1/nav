@@ -1,4 +1,5 @@
-import {LATE_MISSIONS,LATE_BOSSES,lateMissionPlan} from './late-mainline-data.js?v=0.82.2';
+import {difficultyQuote} from './difficulty.js?v=0.83.0';
+import {LATE_MISSIONS,LATE_BOSSES,lateMissionPlan} from './late-mainline-data.js?v=0.83.0';
 const log=(b,text)=>{b.log.push('【'+(b.elapsed/1000).toFixed(1)+'秒】'+text);if(b.log.length>120)b.log.shift();};
 export function initializeLateBattle(s,b,d){
  const p=lateMissionPlan(s,b.context.id,d);if(!p)return;
@@ -25,7 +26,7 @@ export function advanceLateObjective(s,d){
 export function advanceLateWave(s,d,makeEnemies){
  const b=s.battle,x=b.mainline;if(!x||b.enemy.some(u=>u.hp>0))return false;
  const p=lateMissionPlan(s,b.context.id,d),next=p.waves[x.wave];if(!next)return false;
- x.wave++;b.enemy=makeEnemies(d,next,p.scale,b.elapsed);
+ x.wave++;b.enemy=makeEnemies(d,next,b.difficultyRules===1?difficultyQuote(s,d,b.context,p.scale):p.scale,b.elapsed);
  for(const u of b.enemy)if(LATE_BOSSES[u.model])u.boss={kind:LATE_BOSSES[u.model],readyAt:b.elapsed+6000,pendingAt:0,phase:0};
  if(b.orders)b.orders.focus=null;
  if(p.waveHeal)for(const u of b.team)if(u.hp>0)u.hp=Math.min(u.maxHp,u.hp+Math.round(u.maxHp*p.waveHeal));

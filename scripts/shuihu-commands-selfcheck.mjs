@@ -10,6 +10,7 @@ import {validateSave} from '../public/game/js/save.js';
 import {gameSnapshot} from '../public/game/js/portable.js';
 import {CloudClient} from '../public/game/js/cloud.js';
 import {render,recruitDialog} from '../public/game/js/ui.js';
+import {recruitStar} from '../public/game/js/recruitment-banner.js';
 const d=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL('../public/game/data/'+n+'.json',import.meta.url)))])));
 const at=Date.parse('2026-09-12T12:00:00+08:00');
 function fixture(seed=19282){const s=newGame(d,at,seed);for(const h of d.heroes){s.heroes[h.id]={status:'known',level:20,exp:0};}s.heroes.baisheng.status='owned';s.team=['baisheng'];s.inventory.recruit_order=100;s.inventory.iron=50;s.player.silver=10000;return s;}
@@ -23,10 +24,10 @@ for(const seed of [1,51,413,19282]){
  for(const key of ['rng','heroes','team','inventory','player','stats','daily'])assert.deepEqual(ten[key],singles[key],key);
  assert.deepEqual(ten.recruit.pity,singles.recruit.pity);assert.deepEqual(ten.recruit.lastBatch,receipts);
  assert.equal(ten.inventory.recruit_order,90);assert.equal(initial.recruit.total,0);assert.equal(ten.recruit.total,10);
- assert.equal(d.by.heroes[receipts[0].hero].star,5);assert.equal(act(ten,'recruit').recruit.lastBatch,undefined);
+ assert.equal(recruitStar(d.by.heroes[receipts[0].hero]),5);assert.equal(act(ten,'recruit').recruit.lastBatch,undefined);
  const html=recruitDialog(ten.recruit.lastBatch,d);assert.equal((html.match(/batch-draw/g)||[]).length,10);
 }
-const unknown=newGame(d,at,123);unknown.inventory.recruit_order=10;assert.ok(act(unknown,'recruitTen').recruit.lastBatch.every(r=>d.by.heroes[r.hero].obtain.type==='wanderer'?['joined','duplicate'].includes(r.kind):r.kind==='clue'));
+const unknown=newGame(d,at,123);unknown.inventory.recruit_order=10;assert.ok(act(unknown,'recruitTen').recruit.lastBatch.every(r=>['joined','duplicate'].includes(r.kind)));
 const poor=fixture();poor.inventory.recruit_order=9;const raw=JSON.stringify(poor);assert.throws(()=>act(poor,'recruitTen'),/10 张/);assert.equal(JSON.stringify(poor),raw);
 assert.throws(()=>act(fixture(),'recruitTen',{id:'baisheng'}),/普通/);
 let s=act(fixture(),'equipLock',{id:'eq_1',locked:true});const lockedRaw=JSON.stringify(s);
@@ -68,7 +69,7 @@ let slices=fight();slices=act(slices,'battleOrder',{kind:'stance',value:'guard'}
 for(let i=0;i<10;i++)advanceBattle(coarse,d,1000);for(let i=0;i<100;i++)advanceBattle(fine,d,100);assert.deepEqual(coarse,fine);assert.deepEqual(gameSnapshot(coarse,d),coarse);
 const invalid=[v=>v.commandVersion=2,v=>v.equipment[0].locked='true',v=>{v.recruit.lastBatch=[];},v=>{v.battle.orders.focus='fake';},v=>{v.battle.orders.readyAt=v.battle.elapsed+3001;}];
 for(const mutate of invalid){const v=structuredClone(slices);mutate(v);assert.throws(()=>validateSave(v,d));}
-const calls=[],client=new CloudClient('https://save.example.com',d,async(_url,o)=>{calls.push(o.method);return Response.json({frontier:1,development:1,rotations:1});});
+const calls=[],client=new CloudClient('https://save.example.com',d,async(_url,o)=>{calls.push(o.method);return Response.json({frontier:1,development:1,rotations:1,difficultyTiers:1});});
 await assert.rejects(()=>client.upload(1,1,slices,'军令'),/0.12.0/);assert.deepEqual(calls,['GET']);
 console.log('Commands: ten/single RNG+pity equivalence, atomic shortage, receipts, locks, filters, focus/taunt/fallback, guard tradeoff/cooldown, reserved/manual interrupts, timer slicing, portable round trips and cloud capability guard passed.');
 

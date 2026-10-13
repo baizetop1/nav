@@ -1,3 +1,4 @@
+import {prepareCombatParty} from './shuihu-campaign-fixtures.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
@@ -11,7 +12,7 @@ import {validateSave} from '../public/game/js/save.js';
 import {CloudClient} from '../public/game/js/cloud.js';
 const root=new URL('../public/game/data/',import.meta.url),d=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',root)))])));
 const at=day=>Date.parse(day+'T12:00:00+08:00'),act=(s,type,a={})=>dispatch(d,s,{type,...a},s.clock);
-function fixture(day){const s=newGame(d,at(day),456789);s.camp=freshCamp();s.camp.buildings={hall:4,farm:2,lumber:2,barracks:4,clinic:2,market:2};s.camp.mode='solo';s.battleSkillMode='auto';s.camp.food=10000;s.player.silver=10000;s.team=['wusong','linchong','wuyong'];for(const id of s.team){s.heroes[id]={status:'owned',level:30,exp:0,quality:2};for(const skill of d.by.heroes[id].skills){const flag=d.by.skills[skill].training?.flag;if(flag)s.progress.flags[flag]=true;}}return s;}
+function fixture(day){const s=newGame(d,at(day),456789);s.camp=freshCamp();s.camp.buildings={hall:4,farm:2,lumber:2,barracks:4,clinic:2,market:2};s.camp.mode='solo';s.battleSkillMode='auto';s.camp.food=10000;s.player.silver=10000;s.team=['wusong','linchong','wuyong'];for(const id of s.team){s.heroes[id]={status:'owned',level:30,exp:0,quality:2};for(const skill of d.by.heroes[id].skills){const flag=d.by.skills[skill].training?.flag;if(flag)s.progress.flags[flag]=true;}}prepareCombatParty(s,d,s.team,{level:40,quality:2,gear:true});return s;}
 function win(s){let n=0;while(!s.battle.outcome&&n++<181)advanceBattle(s,d,1000);assert.equal(s.battle.outcome,'victory',s.battle.context.id+' tier '+s.battle.context.tier+' attainable');return act(s,'finishBattle');}
 // Four monthly periods, including short/leap months and midnight at UTC+8.
 for(const [date,week] of [['2026-09-01',1],['2026-09-07',1],['2026-09-08',2],['2026-09-14',2],['2026-09-15',3],['2026-09-21',3],['2026-09-22',4],['2026-09-30',4],['2028-02-29',4]])assert.equal(rotationCalendar(at(date)).week,week);

@@ -9,7 +9,7 @@ import {idleRates,IDLE_CYCLE} from '../public/game/js/idle-data.js';
 import {regionalQuote} from '../public/game/js/gathering.js';
 import {prepareSortie} from '../public/game/js/sortie.js';
 export {d};
-export function base(){let s=fixture(151,40);s.battleSkillMode='auto';s.heroes.tanglong.status='unknown';return s;}
+export function base(){let s=fixture(151,40);s.battleSkillMode='auto';s.heroes.tanglong.status='unknown';s.heroes.tanglong.quality=0;return s;}
 export const advance=(s,n)=>gameSnapshot(dispatch(d,s,{type:'refresh'},s.clock+n),d);
 export let s=act(base(),'regionOpen');
 assert.throws(()=>act(s,'regionMove',{id:'vein'}),/道路/);assert.throws(()=>act(s,'regionMove',{id:'vault'}),/道路/);

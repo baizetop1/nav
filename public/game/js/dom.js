@@ -10,4 +10,6 @@ export function patchElement(current,next){
   let i=0;
   while(i<next.childNodes.length){if(current.childNodes[i])patchElement(current.childNodes[i],next.childNodes[i]);else current.append(next.childNodes[i].cloneNode(true));i++;}
   while(current.childNodes.length>next.childNodes.length)current.lastChild.remove();
+  // A reused select may retain a dirty selection even after option attributes change.
+  if(current.tagName==='SELECT'){const selected=next.querySelector('option[selected]');if(selected&&current.value!==selected.value)current.value=selected.value;}
 }

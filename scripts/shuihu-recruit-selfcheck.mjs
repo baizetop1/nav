@@ -8,14 +8,14 @@ import {recruitDialog} from '../public/game/js/ui.js';
 const root=new URL('../public/game/data/',import.meta.url);
 export const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',root),'utf8'))])));
 export function fixture(kind='joined',exclusive=true,full=false){
-  const s=newGame(data,Date.now(),12345);s.location='recruit';s.progress.visited.push('recruit');s.inventory.recruit_order=5;
+  const s=newGame(data,Date.parse('2026-02-13T04:00:00Z'),12345);s.location='recruit';s.progress.visited.push('recruit');s.inventory.recruit_order=5;
   for(const h of Object.values(s.heroes))h.status=kind==='clue'?'unknown':kind==='duplicate'?'owned':'known';
   if(exclusive){s.heroes.wusong.status=kind==='duplicate'?'owned':'known';s.inventory.wusong_order=5;s.recruit.fate.wusong=4;}
   if(full){s.team=['baisheng','shiqian','wuyong'];for(const id of s.team)s.heroes[id].status='owned';}
   validateSave(s,data);return s;
 }
 export const draw=(s,id)=>dispatch(data,s,id?{type:'recruit',id}:{type:'recruit'},s.clock);
-for(const exclusive of [true,false])for(const kind of ['joined','duplicate','clue']){
+for(const exclusive of [true,false])for(const kind of ['joined','duplicate']){
   if(exclusive&&kind==='clue')continue;
   const s=fixture(kind,exclusive),before=structuredClone(s),next=draw(s,exclusive?'wusong':undefined),r=next.recruit.lastResult;
   assert.deepEqual(s,before,'Reducer keeps original state intact');
@@ -39,8 +39,11 @@ for(let seed=1;seed<1000&&!miss;seed++){
   const s=fixture('clue');s.recruit.fate.wusong=0;s.rng=seed*123456;
   const next=draw(s,'wusong');if(next.recruit.lastResult.hero!=='wusong')miss=next;
 }
-assert.ok(miss);assert.equal(miss.recruit.lastResult.kind,'clue');assert.equal(miss.recruit.fate.wusong,1);
+assert.ok(miss);assert.equal(miss.recruit.lastResult.kind,'joined');assert.equal(miss.recruit.fate.wusong,1);
 assert.equal(miss.heroes.wusong.status,'available');assert.ok(recruitDialog(miss.recruit.lastResult,data).includes('招贤目标：武松'));
+// Unknown heroes join immediately; historical clue receipts remain valid.
+for(const exclusive of [true,false]){const unknown=fixture('clue',exclusive);if(exclusive)unknown.heroes.wusong.status='unknown';const fresh=draw(unknown,exclusive?'wusong':undefined);assert.equal(fresh.recruit.lastResult.kind,'joined');assert.equal(fresh.heroes[fresh.recruit.lastResult.hero].status,'owned');}
+const legacyClue=fixture('clue',false);legacyClue.recruit.total=1;legacyClue.heroes.songjiang.status='heard';legacyClue.inventory.songjiang_token=2;legacyClue.recruit.lastResult={hero:'songjiang',target:null,kind:'clue',tokens:2,merit:0,number:1,inTeam:false};assert.deepEqual(parseSave(JSON.stringify(legacyClue),data,legacyClue.clock),legacyClue);
 const legacy=fixture();delete legacy.recruit.lastResult;assert.deepEqual(parseSave(JSON.stringify(legacy),data,legacy.clock),legacy);
 // Chapter rewards occurring in the same action must not be labelled as recruitment loot.
 const ending=fixture('duplicate');ending.progress.flags={volume_complete:true,lin_departure:true,lu_complete:true,chai_refuge:true,yang_complete:true};
@@ -54,4 +57,4 @@ assert.throws(()=>draw(noOrders,'wusong'),/招贤令/);assert.deepEqual(noOrders
 const escaped=structuredClone(data);escaped.by.heroes.wusong.name='<img src=x onerror=alert(1)>';
 assert.ok(!recruitDialog(full.recruit.lastResult,escaped).includes('<img'));
 assert.ok(recruitDialog(full.recruit.lastResult,escaped).includes('&lt;img'));
-console.log('Shuihu recruitment: ordinary/exclusive receipts, joined/full party, duplicate rewards, unknown/off-target clues, old saves, validation, escaping and atomic costs passed.');
+console.log('Shuihu recruitment: ordinary/exclusive receipts, joined/full party, duplicate rewards, unknown immediate join/off-target featured heroes, old saves, validation, escaping and atomic costs passed.');

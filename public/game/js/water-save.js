@@ -1,5 +1,5 @@
-import {crossHas} from './cross-region-data.js?v=0.82.2';
-import {WATER_NODES,WATER_FLAGS,waterHas,waterGate,waterRoute} from './water-data.js?v=0.82.2';
+import {crossHas} from './cross-region-data.js?v=0.83.0';
+import {WATER_NODES,WATER_FLAGS,waterHas,waterGate,waterRoute} from './water-data.js?v=0.83.0';
 export const hasWater=s=>s.exploration?.water!==undefined||Object.keys(s.specialDungeons?.clears||{}).some(k=>/^water(fort)?_[123]$/.test(k))||[s.battle?.context,s.lastBattle?.context,s.specialDungeons?.last].some(c=>['water','waterfort'].includes(c?.id));
 export function validateWater(s,check){const x=s.exploration,w=x?.water;if(w===undefined)return;
  const obj=v=>v&&typeof v==='object'&&!Array.isArray(v),list=(v,allowed)=>Array.isArray(v)&&new Set(v).size===v.length&&v.every(k=>allowed.includes(k));

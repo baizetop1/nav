@@ -1,11 +1,11 @@
-import {CAMP_PEOPLE,CAMP_PROJECTS} from './camp-life-data.js?v=0.82.2';
-import {salvageable,lifePlace,lifePeople,lifePerson,talkQuote,jobQuote,projectQuote,serviceQuote} from './camp-life.js?v=0.82.2';
-import {sourceStock,sourceName} from './source-goals.js?v=0.82.2';
-import {REGIONAL_RECIPES} from './gathering-data.js?v=0.82.2';
-import {regionalQuote} from './gathering.js?v=0.82.2';
-import {recruitPrice} from './realm-buildings.js?v=0.82.2';
-import {away} from './hero-availability.js?v=0.82.2';
-import {returnPlan} from './camp-return.js?v=0.82.2';
+import {CAMP_PEOPLE,CAMP_PROJECTS} from './camp-life-data.js?v=0.83.0';
+import {salvageable,lifePlace,lifePeople,lifePerson,talkQuote,jobQuote,projectQuote,serviceQuote} from './camp-life.js?v=0.83.0';
+import {sourceStock,sourceName} from './source-goals.js?v=0.83.0';
+import {REGIONAL_RECIPES} from './gathering-data.js?v=0.83.0';
+import {regionalQuote} from './gathering.js?v=0.83.0';
+import {recruitPrice} from './realm-buildings.js?v=0.83.0';
+import {away} from './hero-availability.js?v=0.83.0';
+import {returnPlan} from './camp-return.js?v=0.83.0';
 const costName=(d,id)=>({wood:'行囊木料',grain:'行囊粮食'}[id]||sourceName(d,id));
 export function supplyPlans(s,d){return [...Object.entries(CAMP_PROJECTS).filter(([id])=>!s.campLife?.projects.includes(id)).map(([id,r])=>({id:'project_'+id,name:'添置'+r.name,cost:r.cost,command:{type:'ui_section',view:'camp',id:'life',lifeTab:'buildings',lifeBuilding:id}})),...Object.entries(REGIONAL_RECIPES).map(([id,r])=>{const q=regionalQuote(s,d,id);return {id:'recipe_'+id,name:'制作'+sourceName(d,r.output),cost:{silver:q.recipe.silver,...q.recipe.items},command:{type:'ui_regionalRecipe',id},reason:q.reason};}),{id:'troops',name:'招募 10 名乡勇',cost:{silver:10*recruitPrice(s),campFood:20},command:{type:'ui_section',view:'camp',id:'troops'}}];}
 export function lifePanel(s,d,esc,btn,options={}){const tab=['people','buildings','return','budget'].includes(options.lifeTab)?options.lifeTab:'people',select=(key,label,rows,value)=>'<label>'+label+'<select data-life-select="'+key+'">'+rows.map(([id,name])=>'<option value="'+esc(id)+'" '+(id===value?'selected':'')+'>'+esc(name)+'</option>').join('')+'</select></label>',stockLine=cost=>Object.entries(cost).filter(([,n])=>n>0).map(([id,n])=>costName(d,id)+' '+sourceStock(s,id)+'/'+n).join(' · '),sources=cost=>{const missing=Object.entries(cost).filter(([id,n])=>sourceStock(s,id)<n),pick=missing.find(([id])=>id===options.lifeMissing)||missing[0];if(!pick)return '';return (missing.length>1?select('lifeMissing','缺料',missing.map(([id])=>[id,costName(d,id)]),pick[0]):'')+btn('找'+sourceName(d,pick[0]),{type:'ui_sources',id:pick[0],amount:pick[1]},'secondary');};let body='';

@@ -1,0 +1,35 @@
+.story-revisit h2{font-size:18px}.story-revisit-mission{margin-top:8px}.story-revisit-guaranteed{padding:8px;background:var(--folio-soft);border-radius:8px;color:var(--green)}
+@media(max-width:900px){
+ #main .story-revisit>.section-top{margin:0 0 4px!important;padding:0!important;min-height:22px}
+ #main .story-revisit .section-top :is(h2,h3){margin:0!important;padding:0!important;font-size:14px!important;line-height:20px}
+ #main .story-revisit>label{display:flex;align-items:center;gap:6px;font-size:11px;margin:4px 0!important}
+ #main .story-revisit>label select{min-height:32px!important;height:32px;padding:3px 6px!important;flex:1;min-width:0;margin:0!important;font-size:12px}
+ #main .story-revisit-mission{margin:4px 0!important;padding:8px!important}
+ #main .story-revisit-mission>.section-top{margin:0!important;min-height:22px}
+ #main .story-revisit-mission>p{font-size:11px!important;line-height:1.4!important;margin:4px 0!important}
+ #main .story-revisit-guaranteed{padding:6px!important;font-size:12px!important}
+ #main .story-revisit-mission>.actions{margin:4px 0!important;gap:5px}
+ #main .story-revisit-mission>.actions button{min-height:32px!important;padding:3px 8px!important}
+ #main .story-revisit-mission>details{margin:4px 0 0!important;padding:0!important;border-top:1px solid var(--line)}
+ #main .story-revisit-mission>details>summary{min-height:26px;line-height:20px;padding:3px 0!important}
+}
+@media(min-width:600px) and (max-width:900px) and (max-height:500px){
+ #main .story-revisit-mission{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px}
+ #main .story-revisit-mission>.section-top{grid-column:1/-1}#main .story-revisit-guaranteed{grid-column:2;grid-row:2/4}
+ #main .story-revisit-mission>.actions{grid-column:2;grid-row:4}#main .story-revisit-mission>details{grid-column:1;grid-row:4}#main .story-revisit-reason{grid-column:1/-1}
+}
+
+@media(min-width:600px) and (max-width:900px) and (max-height:500px){
+ #main .story-revisit-mission{padding:6px!important;gap:2px 10px}
+ #main .story-revisit-mission>p{margin:1px 0!important;line-height:1.35!important}
+ #main .story-revisit-mission>.actions{margin:1px 0!important}#main .story-revisit-mission>details{margin:1px 0 0!important}
+}
+
+.quests-compact>.section-top>h2{font-size:18px}.quests-compact>label{display:flex;align-items:center;gap:8px}.quests-compact>label select{flex:1;min-width:0}.quests-compact .quest-destination{display:inline-flex;margin:0 5px 0 0}
+@media(max-width:900px){
+ #main .quests-compact>.section-top{margin:0 0 5px;padding:0;min-height:22px}#main .quests-compact>.section-top h2{font-size:14px!important;line-height:20px;margin:0!important}#main .quests-compact>.section-top>span{font-size:11px}
+ #main .quests-compact>label{font-size:11px;margin:4px 0!important}#main .quests-compact>label select{min-height:32px!important;height:32px;font-size:12px;padding:3px 6px;margin:0!important}
+ #main .quests-compact>.card{padding:8px!important;margin:5px 0!important}#main .quests-compact>.card>h3{font-size:14px!important;margin:0!important;line-height:20px}
+ #main .quests-compact>.card>p{font-size:11px!important;line-height:1.4!important;margin:5px 0!important}#main .quests-compact>.card button{min-height:32px!important;padding:3px 8px!important;font-size:11px!important}
+ #main .quest-bonus-note{font-size:10px!important;line-height:1.4;margin:5px 0!important}#main .quest-main-more{margin:6px 0 0!important;padding:0!important}#main .quest-main-more>summary{min-height:26px;padding:3px 0!important;line-height:20px}
+}

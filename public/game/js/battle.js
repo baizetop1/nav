@@ -1,19 +1,20 @@
-import {initializeTactics} from './tactics-combat.js?v=0.82.2';
-import {lateMissionPlan} from './late-mainline-data.js?v=0.82.2';
-import {lateTimes,advanceLateObjective,advanceLateWave} from './late-mainline-combat.js?v=0.82.2';
-import {EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.82.2';
-import {initializeRoles} from './hero-roles.js?v=0.82.2';
-import {lessonPassed} from './lessons-data.js?v=0.82.2';
-import {routeEquipmentOpening} from './journey-rewards.js?v=0.82.2';
-import {journeyAbsorb} from './journey-combat.js?v=0.82.2';
-import {advanceCombos} from './expansion-combat.js?v=0.82.2';
-import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.82.2';
-import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.82.2';
-import { autoOrderAllows } from './commands.js?v=0.82.2';
-import { initializeMartial, martialFactor } from './martial.js?v=0.82.2';
-import { attributes } from './hero.js?v=0.82.2';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.82.2';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.82.2';
+import {difficultyQuote,difficultyAttributes} from './difficulty.js?v=0.83.0';
+import {initializeTactics} from './tactics-combat.js?v=0.83.0';
+import {lateMissionPlan} from './late-mainline-data.js?v=0.83.0';
+import {lateTimes,advanceLateObjective,advanceLateWave} from './late-mainline-combat.js?v=0.83.0';
+import {EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.83.0';
+import {initializeRoles} from './hero-roles.js?v=0.83.0';
+import {lessonPassed} from './lessons-data.js?v=0.83.0';
+import {routeEquipmentOpening} from './journey-rewards.js?v=0.83.0';
+import {journeyAbsorb} from './journey-combat.js?v=0.83.0';
+import {advanceCombos} from './expansion-combat.js?v=0.83.0';
+import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.83.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.83.0';
+import { autoOrderAllows } from './commands.js?v=0.83.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.83.0';
+import { attributes } from './hero.js?v=0.83.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.83.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.83.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan',...EXTRA_BATTLE_ITEMS];
@@ -33,14 +34,15 @@ export function addStatus(u,status,elapsed=0){
   if(u.statuses.length<100)u.statuses.push(next);
 }
 function unit(id,name,attribute,skills,side){const u={id,name,...attribute,maxHp:attribute.hp,rage:0,skills:[...skills],side,statuses:[],attacks:0,skillReadyAt:0};u.nextAttackAt=attackInterval(u);return u;}
-export function makeEnemyUnits(data,enemies,scale=1,elapsed=0){return enemies.map((id,i)=>{const e=data.by.enemies[id],stats=Object.fromEntries(Object.entries(e.attribute).map(([k,v])=>[k,Math.round(v*(k==='speed'?1:scale))]));const u={...unit(id+'_'+i,e.name,stats,e.skills,'enemy'),model:id};u.nextAttackAt+=elapsed;return u;});}
+export function makeEnemyUnits(data,enemies,scale=1,elapsed=0){return enemies.map((id,i)=>{const e=data.by.enemies[id],stats=typeof scale==='object'?difficultyAttributes(e.attribute,scale):Object.fromEntries(Object.entries(e.attribute).map(([k,v])=>[k,Math.round(v*(k==='speed'?1:scale))]));const u={...unit(id+'_'+i,e.name,stats,e.skills,'enemy'),model:id};u.nextAttackAt+=elapsed;return u;});}
 export function startBattle(state,data,{enemies,guest,scale=1,context}){
   requireRule(!state.battle&&!state.scheme,'先结束当前战局。');
   const team=guest?[unit(guest.id,data.by.heroes[guest.id].name,attributes(state,guest.id,data,guest.level,false),data.by.heroes[guest.id].skills,'team')]:state.team.map(id=>unit(id,data.by.heroes[id].name,attributes(state,id,data),data.by.heroes[id].skills,'team'));
   requireRule(context.type==='lesson'||!state.affairs?.mission||!team.some(u=>u.id===state.affairs.mission.hero),'好汉仍在外派，请先接回。');
   requireRule(context.type==='lesson'||!state.realm?.squad||!team.some(u=>state.realm.squad.team.includes(u.id)),'好汉仍在分队外派，请先接回。');
   requireRule(team.length>0,'先与白胜相识、邀他作向导，或在招贤馆招募好汉并编队。');
-  state.battle={mode:'realtime',elapsed:0,itemReadyAt:0,team,enemy:makeEnemyUnits(data,enemies,scale),context,guest:!!guest,outcome:null,log:['【交战开始】双方自行迎敌。你可随时调度技能、用药或撤退。']};
+  const difficulty=difficultyQuote(state,data,context,scale,{guest:!!guest});
+  state.battle={...(difficulty.version?{difficultyRules:1}:{}),mode:'realtime',elapsed:0,itemReadyAt:0,team,enemy:makeEnemyUnits(data,enemies,difficulty),context,guest:!!guest,outcome:null,log:['【交战开始】双方自行迎敌。你可随时调度技能、用药或撤退。']};
   initializeTactics(state,state.battle);state.battle.metrics=newMetrics(team);initializeGrowthBattle(state,state.battle,data);initializeMartial(state,state.battle,data);routeEquipmentOpening(state,state.battle);initializeRoles(state.battle,state);
 }
 // Only convert validated legacy battles. Never replay time spent away from the page.

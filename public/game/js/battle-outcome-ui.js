@@ -1,4 +1,4 @@
-import {isTigerStory} from './first-session.js?v=0.82.2';
+import {isTigerStory} from './first-session.js?v=0.83.0';
 // Presentation only. Both choices settle through the existing finishBattle transaction.
 export function battleOutcomeDialog(battle,esc){
  if(!battle||!['victory','defeat','retreat'].includes(battle.outcome))return '';

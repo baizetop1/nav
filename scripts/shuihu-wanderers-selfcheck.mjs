@@ -4,6 +4,8 @@ import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
 import {newGame,dispatch} from '../public/game/js/core.js';
 import {isWanderer,canonicalHeroes,ordinaryHeroes} from '../public/game/js/roster.js';
+import {recruitmentBanner,recruitmentSchedule} from '../public/game/js/recruitment-banner.js';
+import {promotionCore} from '../public/game/js/promotion-data.js';
 import {recruit,rollOrdinary,attributes} from '../public/game/js/hero.js';
 import {freshCamp,attachTroops} from '../public/game/js/camp.js';
 import {startBattle,advanceBattle} from '../public/game/js/battle.js';
@@ -16,26 +18,29 @@ import {parseSave} from '../public/game/js/save.js';
 import {CloudClient} from '../public/game/js/cloud.js';
 const d=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL('../public/game/data/'+n+'.json',import.meta.url)))]))),now=Date.parse('2026-09-17T04:00:00Z'),wanderers=d.heroes.filter(isWanderer);
 const act=(s,type,a={})=>{const n=dispatch(d,s,{type,...a},s.clock);assert.deepEqual(gameSnapshot(n,d),n);return n;};
-const base=()=>{const s=newGame(d,now,81);s.inventory.recruit_order=500;s.camp=freshCamp();s.camp.work=3;s.camp.food=5000;s.camp.troops=120;s.camp.deployment=80;s.camp.buildings.hall=4;s.camp.buildings.barracks=3;s.player.silver=50000;return s;};
+const base=(time=now)=>{const s=newGame(d,time,81);s.inventory.recruit_order=500;s.camp=freshCamp();s.camp.work=3;s.camp.food=5000;s.camp.troops=120;s.camp.deployment=80;s.camp.buildings.hall=4;s.camp.buildings.barracks=3;s.player.silver=50000;return s;};
 assert.equal(wanderers.length,60);assert.deepEqual([1,2,3].map(star=>wanderers.filter(h=>h.star===star).length),[20,20,20]);assert.equal(canonicalHeroes(d).length,108);assert.equal(ordinaryHeroes(d).length,168);assert.equal(rosterSelection(base(),d,{group:'external'}).all.length,4);assert.equal(rosterSelection(base(),d,{group:'wanderer'}).all.length,60);assert.equal(HERO_SPECIALTIES.chengao.terrain,'water');
 assert.deepEqual(d.config.balance.ordinaryRates,[{star:5,weight:1},{star:4,weight:6},{star:3,weight:23},{star:2,weight:45},{star:1,weight:25}]);
 for(const [key,start,min] of [['three',19,3],['four',49,4],['five',99,5]]){const s=base();s.recruit.pity[key]=start;assert.ok(rollOrdinary(s,d)>=min);}
-// Each newcomer is reachable from the unchanged ordinary roll, joins without acquaintance,
-// and duplicates become useful materials. Unknown canonical draws still remain clues.
-const seeds={};for(let seed=1;seed<100000&&Object.keys(seeds).length<60;seed++){const s=base();s.rng=seed;recruit(s,d);if(isWanderer(d.by.heroes[s.recruit.lastResult.hero]))seeds[s.recruit.lastResult.hero]??=seed;}
+// Each newcomer appears in a dated event pool and joins from a real seeded roll.
+const seeds={};for(let month=0;month<12&&Object.keys(seeds).length<60;month++)for(const banner of recruitmentSchedule(d,Date.UTC(2026,month,5))){
+ const missing=banner.heroes.filter(isWanderer).filter(h=>!seeds[h.id]);
+ for(let attempt=1;attempt<=10000&&missing.some(h=>!seeds[h.id]);attempt++){const seed=(attempt*104729)>>>0,s=base(banner.startAt);s.rng=seed;recruit(s,d);const h=d.by.heroes[s.recruit.lastResult.hero];if(isWanderer(h))seeds[h.id]??={seed,time:banner.startAt};}
+}
 assert.equal(Object.keys(seeds).length,60);
 let complete=base();
 for(const h of wanderers){
- let s=base();s.rng=seeds[h.id];s.recruit.total=9;s.recruit.support={version:1,dry:9,tickets:0,points:9,claims:[],week:null};s=act(s,'recruit');assert.equal(s.recruit.lastResult.hero,h.id);assert.equal(s.recruit.lastResult.kind,'joined');assert.equal(s.heroes[h.id].status,'owned');assert.ok(s.team.includes(h.id));assert.equal(s.recruit.support.dry,0);assert.equal(s.recruit.support.points,9);assert.equal(s.recruit.support.tickets,0);assert.equal(s.heroes[h.id].quality,undefined);
+ let s=base(seeds[h.id].time);s.rng=seeds[h.id].seed;s.recruit.total=9;s.recruit.support={version:1,dry:9,tickets:0,points:9,claims:[],week:null};s=act(s,'recruit');assert.equal(s.recruit.lastResult.hero,h.id);assert.equal(s.recruit.lastResult.kind,'joined');assert.equal(s.heroes[h.id].status,'owned');assert.ok(s.team.includes(h.id));assert.equal(s.recruit.support.dry,0);assert.equal(s.recruit.support.points,9);assert.equal(s.recruit.support.tickets,0);assert.equal(s.heroes[h.id].quality,undefined);
  assert.match(recruitDialog(s.recruit.lastResult,d),new RegExp('portrait-'+h.id));assert.match(recruitDialog(s.recruit.lastResult,d),/已正式加入/);
- s.rng=seeds[h.id];s=act(s,'recruit');assert.equal(s.recruit.lastResult.kind,'duplicate');assert.equal(s.inventory[h.id+'_token'],3);assert.equal(s.recruit.lastResult.merit,15);assert.equal(s.recruit.support.points,10);
+ s.rng=seeds[h.id].seed;s=act(s,'recruit');assert.equal(s.recruit.lastResult.kind,'duplicate');assert.equal(s.inventory[h.id+'_token'],3);assert.equal(s.recruit.lastResult.merit,15);assert.equal(s.recruit.support.points,10);
  const rng=s.rng,pity=structuredClone(s.recruit.pity);s=act(s,'skillBook',{id:h.id,source:'tokens'});assert.equal(s.inventory[h.id+'_token'],0);assert.equal(s.inventory[h.id+'_manual'],1);assert.equal(s.rng,rng);assert.deepEqual(s.recruit.pity,pity);const before=JSON.stringify(s);assert.throws(()=>act(s,'skillBook',{id:h.id,source:'tokens'}),/材料不足/);assert.equal(JSON.stringify(s),before);
- assert.throws(()=>act(s,'craftOrder',{id:h.id}),/招式书/);assert.throws(()=>act(s,'recruit',{id:h.id}),/江湖散人/);
- const stats=attributes(s,h.id,d);s.heroes[h.id].level=30;s.inventory.exp_pill=20;s.inventory[h.id+'_manual']=20;for(const id of ['spirit_essence','immortal_seal','martial_pages','iron','cloth','scrap_iron'])s.inventory[id]=100;
+ assert.throws(()=>act(s,'craftOrder',{id:h.id}),/招式书/);assert.throws(()=>act(s,'recruit',{id:h.id}),/外传人物/);
+ const stats=attributes(s,h.id,d);s.heroes[h.id].level=30;s.inventory.exp_pill=20;s.inventory[h.id+'_manual']=20;for(const id of ['spirit_essence','immortal_seal','martial_pages','iron','cloth','scrap_iron',promotionCore(h.id).item])s.inventory[id]=100;
  assert.ok(attributes(s,h.id,d).attack>stats.attack);s=act(s,'skillUpgrade',{id:h.skills[0]});s=act(s,'corpsTrain',{id:h.id});s=act(s,'heroPromote',{id:h.id});s=act(s,'heroPromote',{id:h.id});assert.equal(s.heroes[h.id].quality,2);
  s.inventory[h.mount.contract]=1;s=act(s,'mountAdopt',{id:h.id});s.growth.mounts[h.id]={rank:3,intimacy:80,riding:true};s.battleSkillMode='manual';s.team=[h.id];startBattle(s,d,{enemies:['guard'],scale:5,context:{type:'camp',id:'woods'}});attachTroops(s,80);assert.equal(s.battle.team[0].corps.id,h.id);assert.equal(s.battle.team[0].corps.arm,CORPS[h.id].arm);s.battle.enemy[0].hp=s.battle.enemy[0].maxHp=50000;s.battle.enemy[0].attack=1;for(const skill of [h.skills[0],h.skills[2]]){s.battle.team[0].rage=100;s.battle.team[0].hp=Math.floor(s.battle.team[0].maxHp*.5);const roleBefore=s.battle.roles.counts[h.id]||0,enemyHp=s.battle.enemy[0].hp,heroHp=s.battle.team[0].hp;s=act(s,'battleSkill',{hero:h.id,id:skill});const refund=EXTRA_ROLES[h.id]?.kind==='heal_rage'&&(s.battle.roles.counts[h.id]||0)>roleBefore?6:0;assert.equal(s.battle.team[0].rage,100-d.by.skills[skill].cost+refund,'Skill cost is charged before any effective-healing rage refund');assert.ok(s.battle.enemy[0].hp<enemyHp||s.battle.team[0].hp>heroHp||s.battle.team[0].statuses.some(v=>v.id==='guard'),skill+' produces damage, healing or protection');for(let t=0;t<5;t++)advanceBattle(s,d,1000);}for(let i=0;i<20&&!s.battle.log.some(x=>x.includes('【人骑羁绊】'));i++)advanceBattle(s,d,1000);assert.ok(s.battle.log.some(x=>x.includes('【人骑羁绊】')),h.id+' live bond');assert.deepEqual(importSave(exportSave(s,{id:1,name:h.name},d),d).state,s);
- const direct=act(base(),'campInvite',{id:h.id});assert.equal(direct.heroes[h.id].status,'owned');assert.equal(direct.player.silver,50000-h.star*120);assert.equal(direct.recruit.total,0);
- complete=act(complete,'campInvite',{id:h.id});
+ const direct=base(),beforeInvite=JSON.stringify(direct);assert.throws(()=>act(direct,'campInvite',{id:h.id}),/碎银不能/);assert.equal(JSON.stringify(direct),beforeInvite);
+ // Aggregate an ownership-only cloud fixture; every actual acquisition was exercised above.
+ complete.heroes[h.id].status='owned';
 }
 const poor=base();poor.camp.work=0;const raw=JSON.stringify(poor);assert.throws(()=>act(poor,'campInvite',{id:wanderers[0].id}));assert.equal(JSON.stringify(poor),raw);assert.throws(()=>act(complete,'skillBook',{id:'zhanghuai',source:'invalid'}));assert.throws(()=>act(complete,'skillBook',{id:'baisheng',source:'tokens'}));
 let old=base();old.rosterVersion=5;for(const h of wanderers)delete old.heroes[h.id];old.heroes.wusong={status:'owned',level:17,exp:52};old.team=['wusong'];const up=parseSave(JSON.stringify(old),d);for(const [id,h]of Object.entries(old.heroes))assert.deepEqual(up.heroes[id],h);for(const h of wanderers)assert.deepEqual(up.heroes[h.id],{status:'unknown',level:1,exp:0});assert.deepEqual(up.inventory,old.inventory);assert.deepEqual(up.recruit,old.recruit);assert.equal(up.rosterVersion,d.config.rosterVersion);const corrupt=structuredClone(old);delete corrupt.heroes.wusong;assert.throws(()=>parseSave(JSON.stringify(corrupt),d),/字典不完整/);
@@ -51,5 +56,5 @@ try{db.exec(readFileSync(new URL('../cloud/shuihu/schema.sql',import.meta.url),'
  const caps=await (await req('/v1/game-version')).json();assert.equal(caps.rosterVersion,d.config.rosterVersion);assert.equal(caps.heroes,d.heroes.length);let slot=0;for(const state of [old,legacy031,complete]){slot++;const key=(await (await req('/v1/admin/slots/'+slot+'/key','POST',admin,{})).json()).key;const response=await req('/v1/slots/'+slot,'PUT',key,{name:'散人',state},1);assert.equal(response.status,200,await response.text());const saved=(await (await req('/v1/slots/'+slot,'GET',key)).json()).state;assert.deepEqual(saved,state===old?up:state===legacy031?migrated031:complete);assert.equal((await req('/v1/slots/'+slot,'PUT',key,{name:'旧页面',state:old},2)).status,409);assert.deepEqual((await (await req('/v1/slots/'+slot,'GET',key)).json()).state,saved);}
  const calls=[],client=new CloudClient('https://test.invalid',d,async(u,o)=>{calls.push(o.method);return Response.json({...caps,rosterVersion:6,heroes:124});});await assert.rejects(()=>client.upload(1,1,complete,'散人'),/0.32.0/);assert.deepEqual(calls,['GET']);
 }finally{db.close();}
-console.log('Wanderers PASS: 60 heroes / 20 per low tier, unchanged rates and pity, all directly drawn and duplicated, token books/cost rejection, direct invitations, XP/skills/quality/corps/mounts/live bonds, roster filtering, 112→172 strict migration, Worker roundtrip and stale-client protection.');
+console.log('Wanderers PASS: 60 heroes / 20 per low tier, unchanged rates and pity, all directly drawn and duplicated, token books/cost rejection, rejected silver-only invitations, XP/skills/quality/corps/mounts/live bonds, roster filtering, 112→172 strict migration, Worker roundtrip and stale-client protection.');
 console.log('First-draw seeds:',JSON.stringify(seeds));

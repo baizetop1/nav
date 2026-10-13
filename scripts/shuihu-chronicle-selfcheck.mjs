@@ -15,22 +15,23 @@ const record=(s,region='forest')=>chronicle(s).routes[region];
 const reload=s=>importSave(exportSave(s,{id:1,name:'商路行记回归'},d),d).state;
 function unchanged(s,type,a={},pattern){const before=copy(s);assert.throws(()=>act(s,type,a),pattern);assert.deepEqual(s,before);}
 function fixture(seed=81){
- const s=baseFixture(seed,40);
- s.camp.buildings.hall=5;s.camp.buildings.barracks=5;s.camp.mode='army';s.camp.deployment=1000;s.camp.troops=1000;
+ const s=baseFixture(seed,40);s.team=['linchong','guansheng','baisheng'];
+ s.camp.buildings.hall=5;s.camp.buildings.barracks=5;s.camp.mode='army';s.camp.tactic='assault';s.camp.deployment=1000;s.camp.troops=1000;
  s.camp.food=100000;s.camp.wood=100000;s.player.silver=100000;s.player.stamina=150;s.inventory.iron=10000;s.battleSkillMode='auto';
  s.growth={version:1,skills:{},mounts:{}};
  for(const id of s.team){
-  s.heroes[id].quality=2;s.growth.mounts[id]={rank:5,intimacy:100,riding:true};
+  Object.assign(s.heroes[id],{status:'owned',level:40,exp:0,quality:2});s.growth.mounts[id]={rank:5,intimacy:100,riding:true};
   for(const skill of d.by.heroes[id].skills)if(d.by.skills[skill].training)s.growth.skills[skill]=5;
   for(const item of ['monk_staff','chain_armor','tactics_book'])s.equipment.push({uid:'eq_'+s.nextEquipment++,item,plus:5,hero:id});
  }
  return gameSnapshot(s,d);
 }
+// Upper patrols use a trained assault party with two damage dealers and one healer.
 // Restock only the reusable test fixture's supplies between real expeditions.
 // Chapter state, marks, rewards, inventory prizes and all combat outcomes are earned by dispatch.
 function restock(s){s=copy(s);s.player.stamina=150;s.camp.troops=1000;s.camp.wounded=0;return s;}
 function pickBoon(s){const offers=s.realm.trek.journey.offers;if(!offers.length)return s;const id=['focus','heal_guard','battle_hymn','shield','vigor','riposte','rupture','forager'].find(id=>offers.includes(id))||offers[0];return act(s,'journeyChoice',{id});}
-function win(s){for(let i=0;i<180&&!s.battle.outcome;i++)advanceBattle(s,d,1000);assert.equal(s.battle.outcome,'victory',JSON.stringify({route:s.realm.trek.journey.region,job:s.realm.trek.journey.chronicle,kind:s.battle.journey.kind,team:s.battle.team.map(u=>[u.id,u.hp]),enemy:s.battle.enemy.map(u=>[u.id,u.hp])}));return act(s,'finishBattle');}
+function win(s){const healer=s.battle.enemy.find(u=>u.model==='guard'&&u.hp>0);if(healer)s=act(s,'battleOrder',{kind:'focus',target:healer.id});for(let i=0;i<180&&!s.battle.outcome;i++)advanceBattle(s,d,1000);assert.equal(s.battle.outcome,'victory',JSON.stringify({route:s.realm.trek.journey.region,job:s.realm.trek.journey.chronicle,kind:s.battle.journey.kind,team:s.battle.team.map(u=>[u.id,u.hp]),enemy:s.battle.enemy.map(u=>[u.id,u.hp])}));return act(s,'finishBattle');}
 function walk(s,{rescue=true,elite=true}={}){
  while(s.realm.trek.node<5){
   s=pickBoon(s);const choices=s.realm.trek.route[s.realm.trek.node];

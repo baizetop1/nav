@@ -1,8 +1,8 @@
-import {revisitPanel} from './region-revisit-ui.js?v=0.82.2';
-import {RUINS_NODES,ruinsHas,ruinsGate,ruinsGoal} from './ruins-data.js?v=0.82.2';
-import {ruinsPath,ruinsFightQuote,ruinsTask} from './ruins.js?v=0.82.2';
-import {specialDropTable} from './special-dungeons.js?v=0.82.2';
-import {SPECIAL_ROUTES} from './special-routes.js?v=0.82.2';
+import {revisitPanel} from './region-revisit-ui.js?v=0.83.0';
+import {RUINS_NODES,ruinsHas,ruinsGate,ruinsGoal} from './ruins-data.js?v=0.83.0';
+import {ruinsPath,ruinsFightQuote,ruinsTask} from './ruins.js?v=0.83.0';
+import {specialDropTable} from './special-dungeons.js?v=0.83.0';
+import {SPECIAL_ROUTES} from './special-routes.js?v=0.83.0';
 export function ruinsPanel(s,d,esc,btn,selected){
  const x=s.exploration.ruins,here=x.position,id=Object.hasOwn(RUINS_NODES,selected)?selected:here,n=RUINS_NODES[id],has=k=>ruinsHas(s,k);
  const action=(label,type,key,style='secondary',disabled=false)=>btn(label,{type,region:'ruins',...(key?{id:key}:{})},style,disabled);

@@ -1,16 +1,17 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
+import path from 'node:path';
 import {d,auditFirstSession} from './shuihu-first-session-selfcheck.mjs';
 import {firstSessionGoal} from '../public/game/js/first-session.js';
-const {chromium}=createRequire(import.meta.url)(process.env.SHUIHU_PLAYWRIGHT_PATH||'playwright');
-const browser=await chromium.launch({headless:true,...(process.env.SHUIHU_BROWSER_PATH?{executablePath:process.env.SHUIHU_BROWSER_PATH}:{channel:'msedge'})});
+const {chromium}=createRequire(import.meta.url)(process.env.SHUIHU_PLAYWRIGHT_PATH||path.resolve('artifacts/browser-tools/node_modules/playwright'));
+const browser=await chromium.launch({headless:true,executablePath:process.env.SHUIHU_BROWSER_PATH||path.join(process.env.LOCALAPPDATA,'ms-playwright/chromium-1067/chrome-win/chrome.exe')});
 let c=await browser.newContext({viewport:{width:390,height:844}}),p=await c.newPage(),errors=[];
 p.on('pageerror',e=>{errors.push(e.message);console.error('PAGEERROR',e.message);});await c.route('https://save.baizeone.top/**',r=>r.abort());await p.clock.setFixedTime(Date.parse('2026-10-11T04:00:00Z'));
 const idle=()=>p.waitForFunction(()=>!document.getElementById('app').hasAttribute('aria-busy'));
 const snap=()=>p.evaluate(async()=>{const {SlotDatabase}=await import('./js/slots.js');const db=await SlotDatabase.open(indexedDB);try{return JSON.parse((await db.read(1)).raw);}finally{db.db.close();}});
 async function cmd(type,extra={}){const encoded=await p.locator('button[data-command]').evaluateAll((els,{type,extra})=>{const a=els.find(e=>{const a=JSON.parse(e.dataset.command);return a.type===type&&Object.entries(extra).every(([k,v])=>a[k]===v)&&e.getBoundingClientRect().width>0;});return a?.dataset.command;},{type,extra});assert.ok(encoded,'missing '+type+' '+JSON.stringify(extra));const b=p.locator('button[data-command='+JSON.stringify(encoded)+']:visible').first();await b.evaluate(e=>e.focus({preventScroll:true}));await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));assert.ok(await b.evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&r.left>=0&&r.right<=innerWidth;}),'control outside viewport '+type);await b.click({timeout:5000});await idle();}
-async function close(){if(await p.locator('#reward-result[open]').count()){await p.locator('[data-reward-close]').last().click();await idle();}}
+async function close(){if(await p.locator('#recruit-result[open]').count()){const close=p.locator('#recruit-result .dialog-footer [data-result-action=close]');await (await close.count()?close.first():p.locator('#recruit-result [data-result-action=close]').first()).click();await idle();}if(await p.locator('#reward-result[open]').count()){await p.locator('[data-reward-close]').last().click();await idle();}}
 async function home(){await close();await p.locator('button[data-view=camp]').first().click();await idle();if(!await p.locator('.camp-dashboard').count())await cmd('ui_section',{view:'camp',id:'home'});}
 async function fit(label){await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));const l=await p.locator('#main').evaluate(e=>({h:e.clientHeight,sh:e.scrollHeight,w:e.clientWidth,sw:e.scrollWidth,pages:e.querySelector(':scope>.screen-pager')?.textContent}));assert.ok((p.viewportSize().width>900||l.sh<=l.h+2)&&l.sw<=l.w+2,label+JSON.stringify(l));return l;}
 async function dump(name){await p.screenshot({path:'artifacts/first-session/'+name+'.png'});fs.writeFileSync('artifacts/first-session/'+name+'.txt',await p.locator('body').innerText());}
@@ -73,11 +74,11 @@ try{
     if(await p.locator('#sortie-preview[open]').count()||(await snap()).battle)await fight();await close();continue;
    }
    await cmd(a.type,Object.fromEntries(Object.entries(a).filter(([k])=>k!=='type')));
-   if(a.type==='ui_gearModel'){const e=s.equipment.find(e=>e.item===a.id&&!e.hero);await p.locator('[id='+JSON.stringify('holder-'+e.uid)+']').selectOption(a.id==='guard_pike'?'duqian':s.team[0]);await cmd('ui_equip',{id:e.uid});await cmd('equip',{id:e.uid});}
+   if(a.type==='ui_gearModel'){const e=s.equipment.find(e=>e.item===a.id&&!e.hero);await p.locator('[id='+JSON.stringify('holder-'+e.uid)+']').selectOption(a.id==='guard_pike'?(s.team.find(id=>id!=='baisheng')||s.team[0]):s.team[0]);await cmd('ui_equip',{id:e.uid});await cmd('equip',{id:e.uid});}
    else if(a.type==='ui_batchPreview')await cmd('batchApply',{kind:a.kind,id:a.id,count:a.count});
    else if(a.type==='ui_materialBuy'){const count=(a.id==='wood'?3:2)-(s.inventory[a.id]||0);for(let n=0;n<count;n++){await cmd('buy',{id:a.id});await close();}}
    else if(a.type==='ui_regionalRecipe')await cmd('regionalCraft',{id:a.id});
-   else if(a.type==='ui_section')throw Error('unexpected blocked step '+g.id);
+   else if(a.type==='ui_section'){if(a.view==='camp'&&a.id==='raids'){await p.locator('[data-fold=raid-choice-woods] >summary').click();await idle();await cmd('campRaid',{id:'woods'});await fight();}else if(a.view==='heroes'&&a.id==='formation'){const members=d.heroes.filter(h=>s.heroes[h.id].status==='owned').slice(0,3).map(h=>h.id);for(const[i,id]of members.entries())await p.locator('#team-'+i).selectOption(id);await cmd('ui_team');}else throw Error('unexpected blocked step '+g.id);}
    else if(a.type==='ui_regionOpen'){
     const now=await snap();if(now.exploration.position!==a.node)await cmd('regionMove',{id:a.node});await cmd('regionBattle',{id:a.node,...(now.exploration.flags.includes('cart_checked')?{approach:'orecart'}:{})});await fight();
    }
@@ -98,6 +99,6 @@ try{
   else if(!has('return_paid')){await go('furnace');await cmd('regionDo',{id:'thanks'});}
   else throw Error('stalled');await close();
  }
- const s=await snap();assert.ok(s.equipment.some(e=>e.item==='guard_pike'&&e.hero==='duqian'));assert.equal(s.recruit.total,0);assert.deepEqual(errors,[]);fs.writeFileSync('artifacts/first-session/browser-result.json',JSON.stringify({iterations,fights,timeline,seconds:(Date.now()-started)/1000,stamina:s.player.stamina,silver:s.player.silver,state:s},null,2));await p.reload();await p.locator('[data-exploration-home]').waitFor();assert.ok((await snap()).equipment.some(e=>e.item==='guard_pike'&&e.hero==='duqian'));console.log('BROWSER FIRST SESSION PASS');}
+ const s=await snap();assert.ok(s.equipment.some(e=>e.item==='guard_pike'&&e.hero&&s.heroes[e.hero].status==='owned'));assert.ok(s.recruit.total>=2,'actual banner draws supply the companions');assert.deepEqual(errors,[]);fs.writeFileSync('artifacts/first-session/browser-result.json',JSON.stringify({iterations,fights,timeline,seconds:(Date.now()-started)/1000,stamina:s.player.stamina,silver:s.player.silver,state:s},null,2));await p.reload();await p.locator('[data-exploration-home]').waitFor();assert.ok((await snap()).equipment.some(e=>e.item==='guard_pike'&&e.hero));console.log('BROWSER FIRST SESSION PASS');}
  await layouts();
 }catch(e){await dump('browser-failure');console.error((await p.locator('body').innerText()).slice(-5500));throw e;}finally{await browser.close();}

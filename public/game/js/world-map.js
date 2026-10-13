@@ -1,6 +1,6 @@
-import { meets } from './map.js?v=0.82.2';
-import { hasOwn, requireRule, count, journal } from './utils.js?v=0.82.2';
-import { grant } from './item.js?v=0.82.2';
+import { meets } from './map.js?v=0.83.0';
+import { hasOwn, requireRule, count, journal } from './utils.js?v=0.83.0';
+import { grant } from './item.js?v=0.83.0';
 
 // Route search includes the half-hour spent on each road, so a night-only path
 // cannot be traversed in daylight by selecting a distant destination.

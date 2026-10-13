@@ -1,3 +1,6 @@
+import {prepareCombatParty} from './shuihu-campaign-fixtures.mjs';
+import {freshCamp} from '../public/game/js/camp.js';
+import {difficultyQuote} from '../public/game/js/difficulty.js';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
@@ -14,9 +17,10 @@ for(const d of data.dungeons.filter(d=>d.kind!=='scheme'))for(const [name,ids] o
  let victories=0,totalTime=0;
  for(let seed=1;seed<=8;seed++){
   const s=newGame(data,1789041600000,seed);s.team=ids;s.battleSkillMode='auto';s.growth={version:1,skills:{},mounts:{}};
-  const level=Math.max(15,d.level);
-  for(const id of ids){s.heroes[id].status='owned';s.heroes[id].level=level;s.growth.mounts[id]={rank:3,intimacy:80,riding:true};}
+  const level=Math.max(15,d.level),quality=difficultyQuote(s,data,{type:'dungeon',id:d.id},d.scale).quality;s.camp=freshCamp();s.camp.buildings.hall=5;
+  for(const id of ids){s.heroes[id].status='owned';s.heroes[id].level=level;s.heroes[id].quality=quality;s.growth.mounts[id]={rank:3,intimacy:80,riding:true};}
   for(const id of ids)for(const skillId of data.by.heroes[id].skills){const t=data.by.skills[skillId].training;if(t.flag)s.progress.flags[t.flag]=true;}
+  prepareCombatParty(s,data,ids,{skills:3,gear:true});
   startBattle(s,data,{enemies:d.enemy,scale:d.scale,context:{type:'dungeon',id:d.id}});
   const items=JSON.stringify(s.inventory);while(!s.battle.outcome)advanceBattle(s,data,1000);
   assert.equal(JSON.stringify(s.inventory),items,'Auto battle never consumes medicines');validateSave(s,data);
@@ -25,7 +29,7 @@ for(const d of data.dungeons.filter(d=>d.kind!=='scheme'))for(const [name,ids] o
  results.push({dungeon:d.id,team:name,wins:victories,total:8,seconds:Math.round(totalTime/8000)});
 }
 console.table(results);
-// At matching recommended levels and rank-3 bonds, multiple roles must be viable.
+// At matching recommended levels/quality, trained level-3 skills, strengthened gear and rank-3 bonds, multiple roles must be viable.
 for(const d of data.dungeons.filter(d=>d.kind!=='scheme'))assert.ok(results.filter(r=>r.dungeon===d.id&&r.wins>=5).length>=3,d.name+' must allow at least three viable formations');
 for(const name of ['护阵','枪弓','谋略','奇袭','护送'])assert.ok(results.some(r=>r.team===name&&r.wins>=5),name+' must have a useful matchup');
-console.log('Shuihu balance: Seeded battles, all 108 heroes across 37 formations and eight combat dungeons, no automatic items, bounded fight clocks and save validation passed.');
+console.log('Shuihu balance: Seeded battles, all '+data.heroes.length+' heroes across '+Object.keys(teams).length+' formations and '+data.dungeons.filter(d=>d.kind!=='scheme').length+' combat dungeons, no automatic items, bounded fight clocks and save validation passed.');

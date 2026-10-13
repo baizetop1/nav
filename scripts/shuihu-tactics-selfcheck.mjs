@@ -55,7 +55,7 @@ for(const kind of ['build','gear','personal']){const id=kind==='build'?'counter'
 assert.throws(()=>act(s,'goalSet',{kind:'craft',id:'reed_medicine_case'}));assert.throws(()=>act(s,'goalSet',{kind:'build',id:'constructor'}));
 // Six real victories must meet their specified objectives; no synthetic completion flags.
 for(const id of Object.keys(PERSONAL).filter(id=>PERSONAL[id].introduced===4)){
- let x=ready(723,20);Object.assign(x.heroes[id],{status:'owned',level:20});x.team=[id,'baisheng','linchong'];if(id==='songjiang')x.team=[id,'linchong','wangjin'];
+ let x=ready(723,20);Object.assign(x.heroes[id],{status:'owned',level:20});x.team=[id,'baisheng'];if(id==='songjiang')x.team=[id,'linchong'];
  x=act(x,'personalStart',{id});for(let i=0;i<180&&!x.battle.outcome;i++)advanceBattle(x,d,1000);
  console.log('Personal trial',id,x.battle.outcome,x.battle.metrics.heroes[id]);x=act(x,'finishBattle');assert.equal(x.expansion.personal[id],true,id);assert.ok(x.journal.some(r=>r.text===undefined||r.text.includes('专属任务完成')));assert.throws(()=>act(x,'personalStart',{id}),/已经完成/);
 }

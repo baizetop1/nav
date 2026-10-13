@@ -1,7 +1,9 @@
-import {buildingQuote} from './camp.js?v=0.82.2';
-import {battleItemQuote} from './battle.js?v=0.82.2';
-import {totalExperience} from './progression.js?v=0.82.2';
-import {away} from './progression-paths.js?v=0.82.2';
+import {buildingQuote} from './camp.js?v=0.83.0';
+import {battleItemQuote} from './battle.js?v=0.83.0';
+import {totalExperience} from './progression.js?v=0.83.0';
+import {away} from './progression-paths.js?v=0.83.0';
+import {recruitOffers} from './recruit-support.js?v=0.83.0';
+import {supplyOffers} from './supplies.js?v=0.83.0';
 // A suggested first outing, derived from existing progress; no extra rewards or gates.
 export const isTigerStory=b=>b?.context?.type==='story'&&b.context.id==='wusong_story';
 const page=(view,id,hero)=>({type:'ui_section',view,id,...(hero?{hero}:{})});
@@ -16,14 +18,17 @@ export function firstSessionGoal(s,d){
  const has=k=>s.exploration?.flags.includes(k);
  if(!has('won_chamber')){
   if(!s.progress.flags.tiger_complete&&!owned.some(h=>s.heroes[h.id].level>=5))return step('story','先随武松上冈','打虎后有3枚经验丹。武松临时助阵，交战时可用行囊里的金创药照应他。','继续主线',{type:'ui_storyResume'});
-  if(owned.length<2&&s.heroes.duqian.status!=='owned'){
-   const count=s.camp.work+s.camp.sorties;if(count<2)return work('wood','找一位同行好汉','白胜擅长照应，杜迁可持枪迎敌。寨务或出征办满2次可邀他入寨，现已办'+count+'次。');
-   if(s.player.silver<240)return work('silver','备下邀请杜迁的盘缠','邀请需240碎银，现有'+s.player.silver+'。也可在名册选择其他同伴。');
-   return step('invite','邀杜迁同行','寨务条件已满足。付240碎银即可邀请，不消耗招贤令。','邀请杜迁 · 240碎银',{type:'campInvite',id:'duqian'});
+  if(owned.length<3){
+   const absent=d.heroes.find(h=>s.heroes[h.id]?.status==='owned'&&away(s,h.id));
+   if(absent)return step('recall','先等同伴归队',absent.name+'正在外出。接回同伴，或招贤邀请另一位同行好汉。','查看外出安排',s.idleDispatch?.mission?.hero===absent.id?{type:'ui_idleOpen'}:s.realm?.squad?.team.includes(absent.id)?page('realm','expeditions'):page('camp','affairs'));
+   if(s.inventory.recruit_order>0)return step('invite','招贤邀一位同伴','用现有招贤令参与当期招募。首次抽中直接入寨，带上同伴再去矿洞。','招贤一次 · 1张令',{type:'recruit'});
+   const earned=recruitOffers(s,d).find(q=>!q.reason);if(earned)return step('orders','领取已完成的招贤酬劳',earned.name+'已完成，可以领取'+earned.amount+'张招贤令。','领取招贤令',{type:'recruitSupply',id:earned.id});
+   const daily=supplyOffers(s).find(q=>q.id==='daily'&&!q.reason);if(daily)return step('orders','领下今日招贤令','今日经营和胜利已达标，寨中悬赏有一张招贤令。','领取每日补给',{type:'campSupply',id:'daily'});
+   if((s.daily.counters.buyOrder||0)<3){if(s.player.silver<300)return work('silver','攒些碎银买招贤令','招贤令每张300碎银，现有'+s.player.silver+'。先采集银两，再邀一位同伴。');return step('orders','买一张招贤令','招贤令每张300碎银，每日最多买三张。','买招贤令 · 300碎银',{type:'buy',id:'recruit_order'});}
+   return step('orders','查看招贤令补给','今日集市招贤令已售罄。章节酬劳、首通和寨中悬赏仍可提供招贤令。','查看招贤补给',page('recruit','support'));
   }
-  if(owned.length<2&&s.heroes.duqian.status==='owned')return step('recall','先等同伴归队','杜迁正在外出。可以收回派遣，或在名册另选一位同行好汉。','查看外出安排',s.idleDispatch?.mission?.hero==='duqian'?{type:'ui_idleOpen'}:s.realm?.squad?.team.includes('duqian')?page('realm','expeditions'):page('camp','affairs'));
-  if(s.team.length<2&&owned.length>=2)return step('team','把同伴编入队伍','矿洞里有人替守卫治疗，建议至少两人同行。先把寨中同伴编入出阵队伍。','安排出阵',page('heroes','formation'));
-  const party=s.team.filter(id=>!away(s,id)).slice(0,2);if(party.length<2)return step('team','安排出阵好汉','先选好这次同行的人。','安排出阵',page('heroes','formation'));
+  if(s.team.length<3&&owned.length>=3)return step('team','把同伴编入队伍','矿洞里有守卫治疗，三位好汉一同出阵更稳妥。先把寨中同伴编入出阵队伍。','安排出阵',page('heroes','formation'));
+  const party=s.team.filter(id=>!away(s,id)).slice(0,3);if(party.length<3)return step('team','安排出阵好汉','先选好这次同行的人。','安排出阵',page('heroes','formation'));
   const leader=party[0],spare=s.equipment.find(e=>!e.hero&&['weapon','armor'].includes(d.by.equipments[e.item]?.type)&&!s.equipment.some(x=>x.hero===leader&&d.by.equipments[x.item]?.type===d.by.equipments[e.item].type));
   if(spare)return step('gear','出门前穿好装备','行囊里的'+d.by.equipments[spare.item].name+'还未穿戴，可交给'+d.by.heroes[leader].name+'。','查看'+d.by.equipments[spare.item].name,{type:'ui_gearModel',id:spare.item});
   const learner=party.find(id=>s.heroes[id].level<6);
@@ -59,6 +64,8 @@ export function firstBattleHint(s,d,paused=false){
  if(b.context.type==='special'&&['mine','minechief'].includes(b.context.id)&&b.context.tier===1&&Math.max(...b.team.map(u=>s.heroes[u.id].level))<15){
   const healer=(b.context.route==='orecart'&&b.enemy.at(-1).hp>0?b.enemy.at(-1):null)||b.enemy.find(u=>u.hp>0&&u.model==='guard');
   if(healer&&b.orders?.focus!==healer.id)return {id:'mine-focus',title:b.context.route==='orecart'&&healer===b.enemy.at(-1)?'先截住运料匪':'先集火治疗守卫',text:'集中攻击'+healer.name+'，断掉敌方回复。'+(paused?'确认集火后点继续交战。':'也可暂停后再下令。'),targets:[{type:'battleOrder',kind:'focus',target:healer.id}],action:{label:'集火'+healer.name,command:{type:'battleOrder',kind:'focus',target:healer.id}}};
+  const hurt=b.team.filter(u=>u.hp>0).sort((a,c)=>a.hp/a.maxHp-c.hp/c.maxHp)[0],medicine=battleItemQuote(s,d,'jinchuangyao');
+  if(hurt&&hurt.hp/hurt.maxHp<.45&&!medicine.reason)return {id:'mine-medicine',title:'照应受伤的同伴',text:paused?'先继续交战，再用金创药。自动施招不会用药。':'金创药能救急。先照应'+hurt.name+'，再继续集火守卫。',targets:[{type:paused?'ui_battlePause':'battleItem',...(!paused?{id:'jinchuangyao'}:{})}],action:{label:paused?'继续交战':'用金创药 · 余'+s.inventory.jinchuangyao,command:paused?{type:'ui_battlePause'}:{type:'battleItem',id:'jinchuangyao'}}};
  }
  return null;
 }

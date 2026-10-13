@@ -8,6 +8,9 @@ import { battleStep } from './shuihu-battle-test-helpers.mjs';
 import { meets, exits } from '../public/game/js/map.js';
 import { SaveStore, SaveConflict, SAVE_KEY, BACKUP_KEY, parseSave, validateSave } from '../public/game/js/save.js';
 import { random } from '../public/game/js/utils.js';
+import { recruitmentBanner } from '../public/game/js/recruitment-banner.js';
+import {difficultyQuote} from '../public/game/js/difficulty.js';
+import {freshCamp} from '../public/game/js/camp.js';
 import vm from 'node:vm';
 const root=new URL('../public/game/',import.meta.url);
 const raw=Object.fromEntries(['config',...collections].map(name=>[name,JSON.parse(readFileSync(new URL('data/'+name+'.json',root),'utf8'))]));
@@ -52,7 +55,7 @@ checkSchema({all:[{flag:'v7_prepared'},{any:[{notFlag:'v7_final_done'},{all:[{fl
 assert.deepEqual(raw.stories.find(s=>s.id==='v7_cut').steps.fight.condition,{notFlag:'v7_final_done'},'optional support remains unavailable after the seventh-volume final battle');
 console.log('Shuihu: JSON Schema structural contract passed.');
 const data=prepareData(raw), now=new Date(2026,8,9,10).getTime();
-for(const [kind,count] of Object.entries({heroes:172,maps:113,stories:78,enemies:56,chapters:12,items:675,equipments:41,skills:694,events:24,dungeons:9}))assert.equal(data[kind].length,count);
+for(const [kind,count] of Object.entries({heroes:172,maps:113,stories:78,enemies:56,chapters:12,items:847,equipments:41,skills:694,events:24,dungeons:9}))assert.equal(data[kind].length,count);
 assert.equal(data.quests.filter(q=>q.type==='daily').length,12);
 assert.equal(data.heroes.some(h=>h.id==='chaogai'&&h.group==='external'),true);
 const bad=structuredClone(raw);bad.maps[0].links[0].target='missing';assert.throws(()=>prepareData(bad),/引用不存在/);
@@ -87,11 +90,12 @@ const sample=newGame(data,now,987654321), stars={1:0,2:0,3:0,4:0,5:0};
 for(let i=0;i<100000;i++){sample.recruit.pity={three:0,four:0,five:0};stars[rollOrdinary(sample,data)]++;}
 for(const {star,weight} of data.config.balance.ordinaryRates)assert.ok(Math.abs(stars[star]/100000-weight/100)<.005,JSON.stringify(stars));
 for(const [key,threshold,min] of [['three',19,3],['four',49,4],['five',99,5]]){sample.recruit.pity={three:0,four:0,five:0,[key]:threshold};assert.ok(rollOrdinary(sample,data)>=min);}
-const invitation=newGame(data,now,777);invitation.heroes.wusong.status='known';invitation.inventory.wusong_order=1;invitation.recruit.fate.wusong=4;
-assert.equal(recruit(invitation,data,'wusong'),'wusong');assert.equal(invitation.heroes.wusong.status,'owned');assert.equal(invitation.inventory.wusong_order,0);assert.equal(invitation.recruit.fate.wusong,0);
-invitation.inventory.wusong_order=1;invitation.recruit.fate.wusong=4;recruit(invitation,data,'wusong');assert.equal(invitation.inventory.wusong_token,3);assert.equal(Object.values(invitation.heroes).filter(h=>h.status==='owned').length,1);
-const blocked=newGame(data,now,1);blocked.inventory.wusong_order=1;assert.throws(()=>recruit(blocked,data,'wusong'));assert.equal(blocked.inventory.wusong_order,1);
-console.log('Shuihu: 100000 ordinary invitations',stars,'and all pity/duplicate/unknown gates passed.');
+const featuredTarget=recruitmentBanner(data,now).headliners[0].id;
+const invitation=newGame(data,now,777);invitation.inventory[featuredTarget+'_order']=1;invitation.recruit.fate[featuredTarget]=4;
+assert.equal(recruit(invitation,data,featuredTarget),featuredTarget);assert.equal(invitation.heroes[featuredTarget].status,'owned');assert.equal(invitation.inventory[featuredTarget+'_order'],0);assert.equal(invitation.recruit.fate[featuredTarget],0);
+invitation.inventory[featuredTarget+'_order']=1;invitation.recruit.fate[featuredTarget]=4;recruit(invitation,data,featuredTarget);assert.equal(invitation.inventory[featuredTarget+'_token'],3);assert.equal(Object.values(invitation.heroes).filter(h=>h.status==='owned').length,1);
+const blocked=newGame(data,now,1),inactiveTarget=data.heroes.find(h=>h.group!=='external'&&!recruitmentBanner(data,now).headliners.some(v=>v.id===h.id)).id;blocked.inventory[inactiveTarget+'_order']=1;assert.throws(()=>recruit(blocked,data,inactiveTarget),/未在本期/);assert.equal(blocked.inventory[inactiveTarget+'_order'],1);
+console.log('Shuihu: 100000 ordinary invitations',stars,'and all pity/duplicates/current-banner gates passed.');
 
 assert.equal(damage(100,60,1,1,false),70);assert.equal(damage(100,60,1,1,true),105);assert.equal(damage(1,500,1),1);
 const combat=newGame(data,now,505);combat.heroes.wusong.status='owned';combat.heroes.wusong.level=20;combat.team=['wusong'];
@@ -127,7 +131,6 @@ for(let day=0;day<14&&!state.progress.flags.volume_complete;day++){
   state=dispatch(data,state,{type:'refresh'},now+86400000*(day+1));
   state.location='recruit';
   while(state.camp.work<3)act('campWork');
-  for(const id of ['shiqian','ruanxiaoqi'])if(state.heroes[id].status!=='owned'&&state.player.silver>=data.by.heroes[id].star*120)act('campInvite',{id});
   for(let i=0;i<3;i++){if(state.player.silver>=300)act('buy',{id:'recruit_order'});}
   while(state.inventory.recruit_order>0)act('recruit');
   const owned=data.heroes.filter(h=>state.heroes[h.id].status==='owned').sort((a,b)=>b.star-a.star);
@@ -150,13 +153,15 @@ console.log('Shuihu: seeded whole-volume progression passed:',{clears:state.stat
 for(const dungeon of data.dungeons){
   let run=structuredClone(storyline);run.location=dungeon.map;run.team=['wusong','linchong','wuyong'];
   run.progress.flags.quality_trials_unlocked=true;run.progress.flags.chai_refuge=true;run.progress.flags.yang_complete=true;
-  for(const id of run.team){run.heroes[id].status='owned';run.heroes[id].level=dungeon.level;}
+  const quality=difficultyQuote(run,data,{type:'dungeon',id:dungeon.id},dungeon.scale).quality;run.camp=freshCamp();run.camp.mode='solo';run.camp.buildings.hall=quality>=2?4:quality>=1?2:1;
+  for(const id of run.team){run.heroes[id].status='owned';run.heroes[id].level=dungeon.level;run.heroes[id].quality=quality;}
+  if(dungeon.id==='immortal_trial'){run.camp.buildings.hall=4;run.camp.buildings.barracks=2;run.camp.mode='army';run.camp.food=5000;run.camp.troops=300;run.camp.deployment=300;run.growth={version:1,skills:Object.fromEntries(run.team.flatMap(id=>data.by.heroes[id].skills.slice(0,3).map(skill=>[skill,3]))),mounts:{}};}
   run.inventory.jinchuangyao=20;run.player.stamina=100;
   run=dispatch(data,run,{type:'dungeon',id:dungeon.id},now);
   if(run.scheme){for(const id of ['wait','original','probe','original','wait','finish'])if(!run.scheme.outcome)run=dispatch(data,run,{type:'scheme',id},now);assert.equal(run.scheme.outcome,'success');run=dispatch(data,run,{type:'finishScheme'},now);}
   else {
     for(let tick=0;tick<400&&!run.battle.outcome;tick++)run=battleStep(data,run);
-    assert.equal(run.battle.outcome,'victory',dungeon.id+' recommended-level team: '+run.battle.log.slice(-10).join('\n'));
+    assert.equal(run.battle.outcome,'victory',dungeon.id+' recommended-level/quality team: '+run.battle.log.slice(-10).join('\n'));
     run=dispatch(data,run,{type:'finishBattle'},now);
   }
   assert.equal(run.progress.clears[dungeon.id],1);assert.equal(run.daily.dungeons[dungeon.id],1);validateSave(run,data);

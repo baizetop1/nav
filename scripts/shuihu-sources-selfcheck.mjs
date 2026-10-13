@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';
 import {d,fixture,act} from './shuihu-campaign-fixtures.mjs';
+import {recruitmentBanner} from '../public/game/js/recruitment-banner.js';
+import {PROMOTION_CORES} from '../public/game/js/promotion-data.js';
 import {newGame,dispatch} from '../public/game/js/core.js';
 import {acquisitionSources,sourceCatalog,sourceStock,canBuy,sourceUses} from '../public/game/js/source-catalog.js';
 import {specialDropTable,SPECIAL_DUNGEONS} from '../public/game/js/special-dungeons-data.js';
@@ -15,7 +17,11 @@ for(const t of catalog){const sources=acquisitionSources(base,d,t.id);assert.ok(
 assert.equal(JSON.stringify(base),before,'all source lookups are read-only, including RNG and goals');
 // Probability and quantity previews read the exact settlement table for every tier.
 for(const area of Object.keys(SPECIAL_DUNGEONS))for(const tier of [1,2,3])for(const drop of specialDropTable(area,tier)){const r=acquisitionSources(base,d,drop.id).find(r=>r.key==='drop:'+area+':'+tier);assert.equal(r.rate,drop.rate);assert.equal(r.min,drop.min);assert.equal(r.max,drop.max);}
-for(const h of d.heroes){const sources=acquisitionSources(base,d,h.id+'_token');assert.ok(sources.length);if(h.obtain.type==='external')assert.ok(!sources.some(r=>r.key==='recruit'),'external heroes excluded from ordinary pool');}
+const banner=recruitmentBanner(d,base.clock);
+for(const h of d.heroes){const sources=acquisitionSources(base,d,h.id+'_token'),recruit=sources.find(r=>r.key==='recruit'),active=banner.heroes.some(x=>x.id===h.id);assert.ok(sources.length);assert.ok(recruit,'all three families have banner source previews');assert.equal(recruit.command.id,'ordinary');assert.equal(recruit.reason.includes('不在本期名单'),!active,'only current heroes are recruitable now');if(active)assert.equal(recruit.reason,'');}
+for(const h of d.heroes.filter(h=>h.group!=='external')){const recipe=acquisitionSources(base,d,h.id+'_order').find(r=>r.key==='heroCraft'),featured=banner.headliners.some(x=>x.id===h.id);assert.ok(recipe);assert.equal(recipe.reason.includes('不在本期名单'),!featured,'exclusive order crafting source follows current banner');}
+for(const [hero,core]of Object.entries(PROMOTION_CORES)){const sources=acquisitionSources(base,d,core.item);assert.equal(sources.length,7);assert.ok(sources.every(r=>r.key.startsWith('promotion:')),'a real core source has no generic fallback');assert.equal(sourceUses(d,core.item)[0].command.hero,hero);}
+const blocked=structuredClone(base);blocked.realm.trek={};assert.ok(acquisitionSources(blocked,d,'core_songjiang').every(r=>r.reason),'promotion sources obey the active journey guard');
 assert.ok(!acquisitionSources(base,d,'spirit_essence').some(r=>r.key==='shop'));assert.ok(!acquisitionSources(base,d,'andaoquan_token').some(r=>r.key==='shop'));
 let s=structuredClone(base);s.camp.wood=2;s.inventory.wood=99;assert.equal(sourceStock(s,'campWood'),2);assert.equal(sourceStock(s,'wood'),99);assert.ok(acquisitionSources(s,d,'campWood').some(r=>r.key==='daily:timber'));assert.ok(!acquisitionSources(s,d,'wood').some(r=>r.key==='daily:timber'));
 assert.ok(!acquisitionSources(base,d,'silver').some(r=>r.key==='production'),'silver production belongs to captured posts, not farm/lumber stations');const silverDuty=acquisitionSources(base,d,'silver').find(r=>r.key==='duty');assert.equal(silverDuty.command.id,'duties');assert.ok(acquisitionSources(base,d,'silver').some(r=>r.key==='post:fort'));const wanderer=d.heroes.find(h=>h.obtain.type==='wanderer');assert.deepEqual(acquisitionSources(base,d,wanderer.id+'_manual').find(r=>r.key==='tokenBook').cost.items,{[wanderer.id+'_token']:3});

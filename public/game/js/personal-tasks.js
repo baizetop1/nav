@@ -1,4 +1,4 @@
-import {PERSONAL} from './expansion-data.js?v=0.82.2';
+import {PERSONAL} from './expansion-data.js?v=0.83.0';
 // Derive progress from the real battle and retained report; no duplicate counters.
 export function personalProgress(b){
  if(b?.context?.type!=='realm'||b.context.kind!=='personal')return null;

@@ -1,3 +1,4 @@
+import {prepareCombatParty} from './shuihu-campaign-fixtures.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
@@ -18,6 +19,7 @@ let now=Date.parse('2026-09-03T12:00:00+08:00'),ip=0;Date.now=()=>now;
 async function req(path,method='GET',key,body,revision){const headers={Origin:'https://baizeone.top','CF-Connecting-IP':'192.0.2.'+(++ip)};if(key)headers.Authorization='Bearer '+key;if(body)headers['Content-Type']='application/json';if(revision!==undefined)headers['If-Match']='"'+revision+'"';const r=await worker.fetch(new Request('https://save.example.com'+path,{method,headers,body:body?JSON.stringify(body):undefined}),env);return {status:r.status,body:await r.json()};}
 const key=(await req('/v1/admin/slots/7/key','POST',admin)).body.key;
 const s=newGame(d,now,333);s.camp=freshCamp();s.camp.buildings={hall:5,farm:5,lumber:5,barracks:5,clinic:5,market:5};s.camp.troops=100;s.camp.deployment=100;s.camp.food=10000;s.camp.tactic='guard';s.team=['guansheng','huarong','gongsunsheng'];for(const id of s.team)s.heroes[id]={status:'owned',level:30,exp:0,quality:2};
+prepareCombatParty(s,d,s.team,{level:40,quality:2,gear:true});
 const fakeRecord={tier:5,hp:1000,elapsed:0,score:5100180};s.campaign={version:1,daily:{date:'2026-09-03',uses:{}},weekly:{'2026-09-1':fakeRecord}};
 assert.equal((await req('/v1/slots/7','PUT',key,{name:'演武测试',state:s},1)).status,200);
 assert.deepEqual((await req('/v1/verified-leaderboard')).body.entries,[],'Uploaded fabricated scores cannot enter verified board');

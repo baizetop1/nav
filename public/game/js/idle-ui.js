@@ -1,11 +1,11 @@
-import {contactLine} from './exploration-ui.js?v=0.82.2';
-import {GATHERING_REGIONS} from './gathering-data.js?v=0.82.2';
-import {gatheringDiscovery,gatheringUsesPanel} from './gathering-ui.js?v=0.82.2';
-import {IDLE_ROUTES,IDLE_CYCLE,IDLE_CAP,idleUnlocked,idleRates,idleAvailable} from './idle-data.js?v=0.82.2';
-import {idleQuote} from './idle.js?v=0.82.2';
-import {STATIONS,stationYield} from './frontier.js?v=0.82.2';
-import {workFactor} from './operating.js?v=0.82.2';
-import {HERO_SPECIALTIES,JOB_NAMES} from './strategy-data.js?v=0.82.2';
+import {contactLine} from './exploration-ui.js?v=0.83.0';
+import {GATHERING_REGIONS} from './gathering-data.js?v=0.83.0';
+import {gatheringDiscovery,gatheringUsesPanel} from './gathering-ui.js?v=0.83.0';
+import {IDLE_ROUTES,IDLE_CYCLE,IDLE_CAP,idleUnlocked,idleRates,idleAvailable} from './idle-data.js?v=0.83.0';
+import {idleQuote} from './idle.js?v=0.83.0';
+import {STATIONS,stationYield} from './frontier.js?v=0.83.0';
+import {workFactor} from './operating.js?v=0.83.0';
+import {HERO_SPECIALTIES,JOB_NAMES} from './strategy-data.js?v=0.83.0';
 export function idlePanel(s,d,esc,btn,options={}){
  const tab=['dispatch','use'].includes(options.idleTab)?options.idleTab:'production',x=s.idleDispatch,m=x?.mission,items=values=>Object.entries(values).map(([id,n])=>esc(d.by.items[id].name)+' ×'+n).join('、');
  const jump=(label,view,id)=>btn(label,{type:'ui_section',view,id},'secondary');

@@ -19,7 +19,7 @@ for(const view of [...Object.keys(tabs),'forge']){
   const html=render({state,data,view,status:'已保存到本机'}),nav=html.match(/<nav class="tabs"[\s\S]*?<\/nav>/)[0];
   assert.equal((nav.match(/<svg /g)||[]).length,Object.keys(tabs).length);assert.ok(!nav.includes('tab-no'));
   for(const [id,label] of Object.entries(tabs))assert.ok(nav.includes('data-icon="'+id+'"')&&nav.includes('<span>'+label+'</span>'));
-  const heading=html.match(/<h1 class="page-title">[\s\S]*?<\/h1>/)[0];assert.ok(heading.includes('data-icon="'+view+'"'));
+  const heading=(html.match(/<h1 class="page-title">[\s\S]*?<\/h1>/)||html.match(/<h2>[\s\S]*?<\/h2>/)||[])[0];assert.ok(heading,'view heading '+view);assert.ok(heading.includes('data-icon="'+view+'"'),'heading icon '+view);
   for(const match of html.matchAll(/<button\b[^>]*data-command="([^"]*)"[^>]*>([\s\S]*?)<\/button>/g)){
     const cmd=JSON.parse(match[1].replaceAll('&quot;','"')),storyDoor=match[0].includes('class="story-door"');
     const expected=storyDoor?{tavern:'event',office:'quests',gate:'map'}[cmd.id]:actionIcon(cmd);

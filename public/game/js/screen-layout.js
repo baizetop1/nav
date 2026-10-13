@@ -53,7 +53,7 @@ export function prepareScreenLayout(main){
  main.querySelectorAll('.equipment-tools').forEach(el=>foldBlock(el,'筛选与整理装备',undo));
  main.querySelectorAll('.corps-panel>.hero-specialty').forEach(el=>foldBlock(el,'行军与任职',undo));
  main.querySelectorAll('.realm-section:not([data-recipe-category])').forEach((el,i)=>splitHeadings(el,'查看内容',base+':realm:'+i,undo));
- if(main.dataset.screen==='quests'){
+ if(main.dataset.screen==='quests'&&!main.querySelector('.quests-compact')){
   const sections=[...main.children].filter(e=>e.matches('section,details'));combine(main,sections,'待办事项',base+':quests',undo);
   sections.forEach((el,i)=>{const cards=[...el.children].filter(e=>e.matches('article'));combine(el,cards,'选择任务',base+':quest:'+i,undo);});
  }

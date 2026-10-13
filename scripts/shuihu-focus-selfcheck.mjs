@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
 import {newGame} from '../public/game/js/core.js';
 import {render} from '../public/game/js/ui.js';
+import {recruitmentBanner} from '../public/game/js/recruitment-banner.js';
 const root=new URL('../public/game/data/',import.meta.url);
 const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',root),'utf8'))])));
 const state=newGame(data,Date.now(),12345);state.message='旧页面操作消息';
@@ -14,20 +15,20 @@ for(const view of ['map','heroes','bag','recruit','quests','chronicle','save','f
   assert.ok(html.includes('data-view="save"'),'Save access is always available');
 }
 const chronicle=frame('chronicle');for(const label of ['山寨概况与眼下线索','历练得胜','威望达到一百五十','最近记事'])assert.ok(chronicle.includes(label));
-assert.ok(frame('heroes').includes('梁山点将录'));assert.ok(frame('heroes').includes('0<small> / 108 入寨'));
+assert.ok(frame('heroes').includes('梁山点将录'));assert.ok(frame('heroes').includes('0 / 172 已入寨'));
 for(const location of ['recruit','forge']){
   const s={...state,location};assert.ok(!frame('map',s).includes('type&quot;:&quot;recruit'));
   assert.ok(!frame('map',s).includes('type&quot;:&quot;strengthen'));assert.ok(frame('map',s).includes(location==='recruit'?'进入招贤':'进入打造与强化'));
 }
 assert.ok(!frame('forge').includes('需先在江湖进入'));assert.ok(frame('forge',state,{pageSections:{forge:'craft'}}).includes('type&quot;:&quot;craftEquip'));
-const known=structuredClone(state);known.location='recruit';for(const h of Object.values(known.heroes))h.status='known';known.inventory.wusong_order=2;
+const known=structuredClone(state);known.location='recruit';for(const h of Object.values(known.heroes))h.status='known';const current=recruitmentBanner(data,known.clock).headliners;known.inventory[current[0].id+'_order']=2;
 const selected=frame('recruit',known,{pageSections:{recruit:'exclusive'}});assert.ok(selected.includes('id="recruit-target"'));assert.equal((selected.match(/type&quot;:&quot;recruit&quot;/g)||[]).length,1,'Only the selected exclusive action appears on its own page');
-assert.ok(selected.includes('id&quot;:&quot;wusong'));assert.ok(frame('recruit',known,{recruitTarget:'linchong',pageSections:{recruit:'exclusive'}}).includes('id&quot;:&quot;linchong'));
-assert.ok(frame('recruit',known,{recruitTarget:'missing',pageSections:{recruit:'exclusive'}}).includes('id&quot;:&quot;wusong'),'Invalid UI target safely falls back');
+assert.ok(selected.includes('id&quot;:&quot;'+current[0].id));assert.ok(frame('recruit',known,{recruitTarget:current[1].id,pageSections:{recruit:'exclusive'}}).includes('id&quot;:&quot;'+current[1].id));
+assert.ok(frame('recruit',known,{recruitTarget:'missing',pageSections:{recruit:'exclusive'}}).includes('id&quot;:&quot;'+current[0].id),'Invalid UI target safely falls back within the active banner');
 assert.ok(frame('bag',state,{pageSections:{bag:'equipment'}}).includes('class="equipment-inventory"'));
 for(const [id,section]of [['materials','craft'],['shop','shop']])assert.ok(frame('bag',state,{pageSections:{bag:section}}).includes('data-fold="'+id+'"'));
 assert.ok(!frame('bag').includes('class="equipment-inventory"'));
-assert.ok(frame('save',state,{pageSections:{save:'reset'}}).includes('data-fold="reset"'));assert.ok(frame('quests').includes('data-fold="other-quests"'));
+assert.ok(frame('save',state,{pageSections:{save:'reset'}}).includes('data-fold="reset"'));assert.ok(frame('quests').includes('class="quest-main-more"'));
 const notice=frame('heroes',state,{notice:'保存阵容 <已完成>'});assert.ok(notice.includes('保存阵容 &lt;已完成&gt;'));
 for(const view of ['map','recruit','chronicle','save']){
   assert.ok(frame(view,state,{locked:true,status:'另一标签页更新了游戏存档'}).includes('另一标签页更新了游戏存档'));

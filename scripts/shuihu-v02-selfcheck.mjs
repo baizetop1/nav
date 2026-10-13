@@ -63,7 +63,7 @@ assert.equal(state.progress.flags.volume_two_complete,true);assert.equal(state.h
 const endingCount=state.journal.filter(e=>e.text.startsWith('【逼上梁山】')).length;assert.equal(endingCount,1);const rewards=structuredClone(state.inventory);act('wait');assert.deepEqual(state.inventory,rewards);
 assert.equal(state.journal.filter(e=>e.text.startsWith('【逼上梁山】')).length,1);
 const completed=structuredClone(state);
-for(const id of ['chaijin','yangzhi']){travel('recruit');const count=state.inventory[id+'_token'];state.inventory[id+'_token']=10;act('craftOrder',{id});assert.equal(state.inventory[id+'_token'],0);state.recruit.fate[id]=4;act('recruit',{id});assert.equal(state.heroes[id].status,'owned');assert.equal(state.recruit.fate[id],0);assert.ok(count>=1);}
+for(const id of ['chaijin','yangzhi']){state=dispatch(data,state,{type:'refresh'},Date.parse(id==='chaijin'?'2027-02-05T04:00:00Z':'2027-02-25T04:00:00Z'));travel('recruit');const count=state.inventory[id+'_token'];state.inventory[id+'_token']=10;act('craftOrder',{id});assert.equal(state.inventory[id+'_token'],0);state.recruit.fate[id]=4;act('recruit',{id});assert.equal(state.heroes[id].status,'owned');assert.equal(state.recruit.fate[id],0);assert.ok(count>=1);}
 // Both old and new entrances use the same counter. Old v1 access stays available.
 for(const [id,map] of [['yezhulin','boar_forest'],['shanshenmiao','mountain_temple']]){
   state=structuredClone(completed);state.team=['baisheng','wuyong'];state.heroes.baisheng.level=40;
