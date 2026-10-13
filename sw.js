@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'build-f30ccb8fb00a6470f04d'
+const CACHE_VERSION = 'build-3373da86e86eb2499a8c'
 const CACHE_PREFIX = 'baize-nav-'
 const SHELL_CACHE = `${CACHE_PREFIX}shell-${CACHE_VERSION}`
 const RUNTIME_CACHE = `${CACHE_PREFIX}runtime-${CACHE_VERSION}`
