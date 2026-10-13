@@ -1,7 +1,7 @@
-import {chapterStory,ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.82.2';
-import {chapterBattlePlan} from './volume-three.js?v=0.82.2';
-import {meets} from './map.js?v=0.82.2';
-import {routeTo,conditionText} from './world-map.js?v=0.82.2';
+import {chapterStory,ENDING_DEFINITIONS} from './late-mainline-data.js?v=0.83.0';
+import {chapterBattlePlan} from './volume-three.js?v=0.83.0';
+import {meets} from './map.js?v=0.83.0';
+import {routeTo,conditionText} from './world-map.js?v=0.83.0';
 
 // Derived entirely from the current save: reloading or travelling cannot lose the objective.
 export function storyObjective(s,d){

@@ -344,7 +344,7 @@
     "hero": "songjiang",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "wuyong_order",
@@ -353,7 +353,7 @@
     "hero": "wuyong",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "wusong_order",
@@ -362,7 +362,7 @@
     "hero": "wusong",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "linchong_order",
@@ -371,7 +371,7 @@
     "hero": "linchong",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "luzhishen_order",
@@ -380,7 +380,7 @@
     "hero": "luzhishen",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "gongsunsheng_order",
@@ -389,7 +389,7 @@
     "hero": "gongsunsheng",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "yanqing_order",
@@ -398,7 +398,7 @@
     "hero": "yanqing",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "huarong_order",
@@ -407,7 +407,7 @@
     "hero": "huarong",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "liutang_order",
@@ -416,7 +416,7 @@
     "hero": "liutang",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "shiqian_order",
@@ -425,7 +425,7 @@
     "hero": "shiqian",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "baisheng_order",
@@ -434,7 +434,7 @@
     "hero": "baisheng",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "ruanxiaoqi_order",
@@ -443,7 +443,7 @@
     "hero": "ruanxiaoqi",
     "price": 0,
     "effect": {},
-    "description": "相识后可专属招贤；四次缘悭后，下一次必邀得此人。"
+    "description": "本人的活动期间可用于专属招贤；连续四次未得本人，第五次必得。"
   },
   {
     "id": "chaijin_token",
@@ -462,7 +462,7 @@
     "price": 0,
     "hero": "chaijin",
     "effect": {},
-    "description": "已相识后在招贤馆使用，专属缘分与保底单独记录。"
+    "description": "本人的活动期间在招贤馆使用，专属缘分与保底单独记录。"
   },
   {
     "id": "yangzhi_token",
@@ -481,7 +481,7 @@
     "price": 0,
     "hero": "yangzhi",
     "effect": {},
-    "description": "已相识后在招贤馆使用，专属缘分与保底单独记录。"
+    "description": "本人的活动期间在招贤馆使用，专属缘分与保底单独记录。"
   },
   {
     "id": "refuge_letter",
@@ -752,7 +752,7 @@
     "id": "lujunyi_order",
     "name": "卢俊义专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "lujunyi"
@@ -788,7 +788,7 @@
     "id": "guansheng_order",
     "name": "关胜专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "guansheng"
@@ -824,7 +824,7 @@
     "id": "qinming_order",
     "name": "秦明专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "qinming"
@@ -860,7 +860,7 @@
     "id": "huyanzhuo_order",
     "name": "呼延灼专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "huyanzhuo"
@@ -896,7 +896,7 @@
     "id": "liying_order",
     "name": "李应专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "liying"
@@ -932,7 +932,7 @@
     "id": "zhutong_order",
     "name": "朱仝专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhutong"
@@ -968,7 +968,7 @@
     "id": "dongping_order",
     "name": "董平专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "dongping"
@@ -1004,7 +1004,7 @@
     "id": "zhangqing_order",
     "name": "张清专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhangqing"
@@ -1040,7 +1040,7 @@
     "id": "xuning_order",
     "name": "徐宁专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "xuning"
@@ -1076,7 +1076,7 @@
     "id": "suochao_order",
     "name": "索超专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "suochao"
@@ -1112,7 +1112,7 @@
     "id": "daizong_order",
     "name": "戴宗专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "daizong"
@@ -1148,7 +1148,7 @@
     "id": "likui_order",
     "name": "李逵专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "likui"
@@ -1184,7 +1184,7 @@
     "id": "shijin_order",
     "name": "史进专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "shijin"
@@ -1220,7 +1220,7 @@
     "id": "muhong_order",
     "name": "穆弘专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "muhong"
@@ -1256,7 +1256,7 @@
     "id": "leiheng_order",
     "name": "雷横专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "leiheng"
@@ -1292,7 +1292,7 @@
     "id": "lijun_order",
     "name": "李俊专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "lijun"
@@ -1328,7 +1328,7 @@
     "id": "ruanxiaoer_order",
     "name": "阮小二专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "ruanxiaoer"
@@ -1364,7 +1364,7 @@
     "id": "zhangheng_order",
     "name": "张横专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhangheng"
@@ -1400,7 +1400,7 @@
     "id": "ruanxiaowu_order",
     "name": "阮小五专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "ruanxiaowu"
@@ -1436,7 +1436,7 @@
     "id": "zhangshun_order",
     "name": "张顺专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhangshun"
@@ -1472,7 +1472,7 @@
     "id": "yangxiong_order",
     "name": "杨雄专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "yangxiong"
@@ -1508,7 +1508,7 @@
     "id": "shixiu_order",
     "name": "石秀专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "shixiu"
@@ -1544,7 +1544,7 @@
     "id": "jiezhen_order",
     "name": "解珍专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "jiezhen"
@@ -1580,7 +1580,7 @@
     "id": "jiebao_order",
     "name": "解宝专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "jiebao"
@@ -1616,7 +1616,7 @@
     "id": "zhuwu_order",
     "name": "朱武专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhuwu"
@@ -1652,7 +1652,7 @@
     "id": "huangxin_order",
     "name": "黄信专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "huangxin"
@@ -1688,7 +1688,7 @@
     "id": "sunli_order",
     "name": "孙立专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "sunli"
@@ -1724,7 +1724,7 @@
     "id": "xuanzan_order",
     "name": "宣赞专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "xuanzan"
@@ -1760,7 +1760,7 @@
     "id": "haosiwen_order",
     "name": "郝思文专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "haosiwen"
@@ -1796,7 +1796,7 @@
     "id": "hantao_order",
     "name": "韩滔专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "hantao"
@@ -1832,7 +1832,7 @@
     "id": "pengqi_order",
     "name": "彭玘专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "pengqi"
@@ -1868,7 +1868,7 @@
     "id": "shantinggui_order",
     "name": "单廷珪专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "shantinggui"
@@ -1904,7 +1904,7 @@
     "id": "weidingguo_order",
     "name": "魏定国专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "weidingguo"
@@ -1940,7 +1940,7 @@
     "id": "xiaorang_order",
     "name": "萧让专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "xiaorang"
@@ -1976,7 +1976,7 @@
     "id": "peixuan_order",
     "name": "裴宣专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "peixuan"
@@ -2012,7 +2012,7 @@
     "id": "oupeng_order",
     "name": "欧鹏专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "oupeng"
@@ -2048,7 +2048,7 @@
     "id": "dengfei_order",
     "name": "邓飞专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "dengfei"
@@ -2084,7 +2084,7 @@
     "id": "yanshun_order",
     "name": "燕顺专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "yanshun"
@@ -2120,7 +2120,7 @@
     "id": "yanglin_order",
     "name": "杨林专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "yanglin"
@@ -2156,7 +2156,7 @@
     "id": "lingzhen_order",
     "name": "凌振专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "lingzhen"
@@ -2192,7 +2192,7 @@
     "id": "jiangjing_order",
     "name": "蒋敬专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "jiangjing"
@@ -2228,7 +2228,7 @@
     "id": "lvfang_order",
     "name": "吕方专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "lvfang"
@@ -2264,7 +2264,7 @@
     "id": "guosheng_order",
     "name": "郭盛专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "guosheng"
@@ -2300,7 +2300,7 @@
     "id": "andaoquan_order",
     "name": "安道全专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "andaoquan"
@@ -2336,7 +2336,7 @@
     "id": "huangfuduan_order",
     "name": "皇甫端专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "huangfuduan"
@@ -2372,7 +2372,7 @@
     "id": "wangying_order",
     "name": "王英专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "wangying"
@@ -2408,7 +2408,7 @@
     "id": "husanniang_order",
     "name": "扈三娘专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "husanniang"
@@ -2444,7 +2444,7 @@
     "id": "baoxu_order",
     "name": "鲍旭专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "baoxu"
@@ -2480,7 +2480,7 @@
     "id": "fanrui_order",
     "name": "樊瑞专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "fanrui"
@@ -2516,7 +2516,7 @@
     "id": "kongming_order",
     "name": "孔明专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "kongming"
@@ -2552,7 +2552,7 @@
     "id": "kongliang_order",
     "name": "孔亮专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "kongliang"
@@ -2588,7 +2588,7 @@
     "id": "xiangchong_order",
     "name": "项充专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "xiangchong"
@@ -2624,7 +2624,7 @@
     "id": "ligun_order",
     "name": "李衮专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "ligun"
@@ -2660,7 +2660,7 @@
     "id": "jindajian_order",
     "name": "金大坚专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "jindajian"
@@ -2696,7 +2696,7 @@
     "id": "malin_order",
     "name": "马麟专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "malin"
@@ -2732,7 +2732,7 @@
     "id": "tongwei_order",
     "name": "童威专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "tongwei"
@@ -2768,7 +2768,7 @@
     "id": "tongmeng_order",
     "name": "童猛专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "tongmeng"
@@ -2804,7 +2804,7 @@
     "id": "mengkang_order",
     "name": "孟康专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "mengkang"
@@ -2840,7 +2840,7 @@
     "id": "houjian_order",
     "name": "侯健专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "houjian"
@@ -2876,7 +2876,7 @@
     "id": "chenda_order",
     "name": "陈达专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "chenda"
@@ -2912,7 +2912,7 @@
     "id": "yangchun_order",
     "name": "杨春专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "yangchun"
@@ -2948,7 +2948,7 @@
     "id": "zhengtianshou_order",
     "name": "郑天寿专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhengtianshou"
@@ -2984,7 +2984,7 @@
     "id": "taozongwang_order",
     "name": "陶宗旺专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "taozongwang"
@@ -3020,7 +3020,7 @@
     "id": "songqing_order",
     "name": "宋清专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "songqing"
@@ -3056,7 +3056,7 @@
     "id": "yuehe_order",
     "name": "乐和专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "yuehe"
@@ -3092,7 +3092,7 @@
     "id": "gongwang_order",
     "name": "龚旺专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "gongwang"
@@ -3128,7 +3128,7 @@
     "id": "dingdesun_order",
     "name": "丁得孙专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "dingdesun"
@@ -3164,7 +3164,7 @@
     "id": "muchun_order",
     "name": "穆春专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "muchun"
@@ -3200,7 +3200,7 @@
     "id": "caozheng_order",
     "name": "曹正专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "caozheng"
@@ -3236,7 +3236,7 @@
     "id": "songwan_order",
     "name": "宋万专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "songwan"
@@ -3272,7 +3272,7 @@
     "id": "duqian_order",
     "name": "杜迁专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "duqian"
@@ -3308,7 +3308,7 @@
     "id": "xueyong_order",
     "name": "薛永专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "xueyong"
@@ -3344,7 +3344,7 @@
     "id": "shien_order",
     "name": "施恩专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "shien"
@@ -3380,7 +3380,7 @@
     "id": "lizhong_order",
     "name": "李忠专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "lizhong"
@@ -3416,7 +3416,7 @@
     "id": "zhoutong_order",
     "name": "周通专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhoutong"
@@ -3452,7 +3452,7 @@
     "id": "tanglong_order",
     "name": "汤隆专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "tanglong"
@@ -3488,7 +3488,7 @@
     "id": "duxing_order",
     "name": "杜兴专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "duxing"
@@ -3524,7 +3524,7 @@
     "id": "zouyuan_order",
     "name": "邹渊专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zouyuan"
@@ -3560,7 +3560,7 @@
     "id": "zourun_order",
     "name": "邹润专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zourun"
@@ -3596,7 +3596,7 @@
     "id": "zhugui_order",
     "name": "朱贵专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhugui"
@@ -3632,7 +3632,7 @@
     "id": "zhufu_order",
     "name": "朱富专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhufu"
@@ -3668,7 +3668,7 @@
     "id": "caifu_order",
     "name": "蔡福专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "caifu"
@@ -3704,7 +3704,7 @@
     "id": "caiqing_order",
     "name": "蔡庆专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "caiqing"
@@ -3740,7 +3740,7 @@
     "id": "lili_order",
     "name": "李立专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "lili"
@@ -3776,7 +3776,7 @@
     "id": "liyun_order",
     "name": "李云专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "liyun"
@@ -3812,7 +3812,7 @@
     "id": "jiaoting_order",
     "name": "焦挺专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "jiaoting"
@@ -3848,7 +3848,7 @@
     "id": "shiyong_order",
     "name": "石勇专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "shiyong"
@@ -3884,7 +3884,7 @@
     "id": "sunxin_order",
     "name": "孙新专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "sunxin"
@@ -3920,7 +3920,7 @@
     "id": "gudasao_order",
     "name": "顾大嫂专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "gudasao"
@@ -3956,7 +3956,7 @@
     "id": "zhangqing_gardener_order",
     "name": "张青专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "zhangqing_gardener"
@@ -3992,7 +3992,7 @@
     "id": "sunerniang_order",
     "name": "孙二娘专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "sunerniang"
@@ -4028,7 +4028,7 @@
     "id": "wangdingliu_order",
     "name": "王定六专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "wangdingliu"
@@ -4064,7 +4064,7 @@
     "id": "yubaosi_order",
     "name": "郁保四专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "yubaosi"
@@ -4100,7 +4100,7 @@
     "id": "duanjingzhu_order",
     "name": "段景住专属招贤令",
     "type": "special",
-    "description": "相识后可用于专属招贤。",
+    "description": "本人的活动期间可用于专属招贤，无须先相识。",
     "price": 0,
     "effect": {},
     "hero": "duanjingzhu"
@@ -5962,5 +5962,1553 @@
     "price": 0,
     "effect": {},
     "description": "断崖粮道特产。走通后派遣采集，用于地区配方打造稳步束带。"
+  },
+  {
+    "id": "core_songjiang",
+    "name": "宋江·义盟书页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "songjiang",
+    "description": "用于宋江升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_lujunyi",
+    "name": "卢俊义·麒麟枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "lujunyi",
+    "description": "用于卢俊义升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_wuyong",
+    "name": "吴用·七星策页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "wuyong",
+    "description": "用于吴用升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_gongsunsheng",
+    "name": "公孙胜·松纹符箓",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "gongsunsheng",
+    "description": "用于公孙胜升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_guansheng",
+    "name": "关胜·青龙刀镡",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "guansheng",
+    "description": "用于关胜升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_linchong",
+    "name": "林冲·寒铁枪环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "linchong",
+    "description": "用于林冲升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_qinming",
+    "name": "秦明·霹雳火石",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "qinming",
+    "description": "用于秦明升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_huyanzhuo",
+    "name": "呼延灼·乌金鞭节",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "huyanzhuo",
+    "description": "用于呼延灼升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_huarong",
+    "name": "花荣·贯羽箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "huarong",
+    "description": "用于花荣升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_chaijin",
+    "name": "柴进·丹书残页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "chaijin",
+    "description": "用于柴进升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_liying",
+    "name": "李应·鹰爪枪钩",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "liying",
+    "description": "用于李应升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhutong",
+    "name": "朱仝·朱缨刀穗",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhutong",
+    "description": "用于朱仝升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_luzhishen",
+    "name": "鲁智深·禅杖铜环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "luzhishen",
+    "description": "用于鲁智深升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_wusong",
+    "name": "武松·伏虎铁箍",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "wusong",
+    "description": "用于武松升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_dongping",
+    "name": "董平·双枪锁扣",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "dongping",
+    "description": "用于董平升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhangqing",
+    "name": "张清·飞石玉片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing",
+    "description": "用于张清升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yangzhi",
+    "name": "杨志·青纹刀锷",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yangzhi",
+    "description": "用于杨志升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_xuning",
+    "name": "徐宁·金钩枪刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "xuning",
+    "description": "用于徐宁升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_suochao",
+    "name": "索超·金斧铁芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "suochao",
+    "description": "用于索超升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_daizong",
+    "name": "戴宗·神行符纸",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "daizong",
+    "description": "用于戴宗升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_liutang",
+    "name": "刘唐·赤发坠饰",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "liutang",
+    "description": "用于刘唐升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_likui",
+    "name": "李逵·玄铁斧刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "likui",
+    "description": "用于李逵升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shijin",
+    "name": "史进·九龙纹片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shijin",
+    "description": "用于史进升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_muhong",
+    "name": "穆弘·横江刀镡",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "muhong",
+    "description": "用于穆弘升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_leiheng",
+    "name": "雷横·翼虎刀穗",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "leiheng",
+    "description": "用于雷横升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_lijun",
+    "name": "李俊·混江鳞片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "lijun",
+    "description": "用于李俊升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_ruanxiaoer",
+    "name": "阮小二·太岁铜环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaoer",
+    "description": "用于阮小二升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhangheng",
+    "name": "张横·船火灯芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangheng",
+    "description": "用于张横升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_ruanxiaowu",
+    "name": "阮小五·蛟纹刀穗",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaowu",
+    "description": "用于阮小五升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhangshun",
+    "name": "张顺·浪花白玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangshun",
+    "description": "用于张顺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_ruanxiaoqi",
+    "name": "阮小七·阎罗水玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "ruanxiaoqi",
+    "description": "用于阮小七升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yangxiong",
+    "name": "杨雄·石纹剑锷",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yangxiong",
+    "description": "用于杨雄升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shixiu",
+    "name": "石秀·三郎刀环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shixiu",
+    "description": "用于石秀升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jiezhen",
+    "name": "解珍·两头蛇·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jiezhen",
+    "description": "用于解珍升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jiebao",
+    "name": "解宝·蝎纹叉尖",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jiebao",
+    "description": "用于解宝升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yanqing",
+    "name": "燕青·浪子燕羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yanqing",
+    "description": "用于燕青升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhuwu",
+    "name": "朱武·神机军师·策页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhuwu",
+    "description": "用于朱武升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_huangxin",
+    "name": "黄信·镇三山·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "huangxin",
+    "description": "用于黄信升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_sunli",
+    "name": "孙立·病尉迟·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "sunli",
+    "description": "用于孙立升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_xuanzan",
+    "name": "宣赞·丑郡马·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "xuanzan",
+    "description": "用于宣赞升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_haosiwen",
+    "name": "郝思文·井木犴·枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "haosiwen",
+    "description": "用于郝思文升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_hantao",
+    "name": "韩滔·百胜将·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "hantao",
+    "description": "用于韩滔升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_pengqi",
+    "name": "彭玘·天目将·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "pengqi",
+    "description": "用于彭玘升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shantinggui",
+    "name": "单廷珪·圣水将·符纸",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shantinggui",
+    "description": "用于单廷珪升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_weidingguo",
+    "name": "魏定国·神火将·星纹墨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "weidingguo",
+    "description": "用于魏定国升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_xiaorang",
+    "name": "萧让·圣手书生·药签",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "xiaorang",
+    "description": "用于萧让升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_peixuan",
+    "name": "裴宣·铁面孔目·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "peixuan",
+    "description": "用于裴宣升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_oupeng",
+    "name": "欧鹏·摩云金翅·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "oupeng",
+    "description": "用于欧鹏升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_dengfei",
+    "name": "邓飞·火眼狻猊·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "dengfei",
+    "description": "用于邓飞升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yanshun",
+    "name": "燕顺·锦毛虎·枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yanshun",
+    "description": "用于燕顺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yanglin",
+    "name": "杨林·锦豹子·游龙绳结",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yanglin",
+    "description": "用于杨林升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_lingzhen",
+    "name": "凌振·轰天雷·策页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "lingzhen",
+    "description": "用于凌振升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jiangjing",
+    "name": "蒋敬·神算子·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jiangjing",
+    "description": "用于蒋敬升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_lvfang",
+    "name": "吕方·小温侯·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "lvfang",
+    "description": "用于吕方升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_guosheng",
+    "name": "郭盛·赛仁贵·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "guosheng",
+    "description": "用于郭盛升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_andaoquan",
+    "name": "安道全·泽兰药签",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "andaoquan",
+    "description": "用于安道全升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_huangfuduan",
+    "name": "皇甫端·紫髯伯·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "huangfuduan",
+    "description": "用于皇甫端升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_wangying",
+    "name": "王英·矮脚虎·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "wangying",
+    "description": "用于王英升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_husanniang",
+    "name": "扈三娘·一丈青·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "husanniang",
+    "description": "用于扈三娘升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_baoxu",
+    "name": "鲍旭·丧门神·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "baoxu",
+    "description": "用于鲍旭升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_fanrui",
+    "name": "樊瑞·混世魔王·策页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "fanrui",
+    "description": "用于樊瑞升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_kongming",
+    "name": "孔明·毛头星·枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "kongming",
+    "description": "用于孔明升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_kongliang",
+    "name": "孔亮·独火星·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "kongliang",
+    "description": "用于孔亮升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_xiangchong",
+    "name": "项充·八臂哪吒·盾芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "xiangchong",
+    "description": "用于项充升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_ligun",
+    "name": "李衮·飞天大圣·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "ligun",
+    "description": "用于李衮升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jindajian",
+    "name": "金大坚·玉臂匠·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jindajian",
+    "description": "用于金大坚升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_malin",
+    "name": "马麟·铁笛仙·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "malin",
+    "description": "用于马麟升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_tongwei",
+    "name": "童威·出洞蛟·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "tongwei",
+    "description": "用于童威升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_tongmeng",
+    "name": "童猛·翻江蜃·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "tongmeng",
+    "description": "用于童猛升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_mengkang",
+    "name": "孟康·玉幡竿·药签",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "mengkang",
+    "description": "用于孟康升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_houjian",
+    "name": "侯健·通臂猿·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "houjian",
+    "description": "用于侯健升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_chenda",
+    "name": "陈达·跳涧虎·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "chenda",
+    "description": "用于陈达升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yangchun",
+    "name": "杨春·白花蛇·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yangchun",
+    "description": "用于杨春升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhengtianshou",
+    "name": "郑天寿·白面郎君·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhengtianshou",
+    "description": "用于郑天寿升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_taozongwang",
+    "name": "陶宗旺·九尾龟·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "taozongwang",
+    "description": "用于陶宗旺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_songqing",
+    "name": "宋清·铁扇子·药签",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "songqing",
+    "description": "用于宋清升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yuehe",
+    "name": "乐和·残钟谱页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yuehe",
+    "description": "用于乐和升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_gongwang",
+    "name": "龚旺·花项虎·游龙绳结",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "gongwang",
+    "description": "用于龚旺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_dingdesun",
+    "name": "丁得孙·中箭虎·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "dingdesun",
+    "description": "用于丁得孙升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_muchun",
+    "name": "穆春·小遮拦·枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "muchun",
+    "description": "用于穆春升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_caozheng",
+    "name": "曹正·操刀鬼·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "caozheng",
+    "description": "用于曹正升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_songwan",
+    "name": "宋万·云里金刚·盾芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "songwan",
+    "description": "用于宋万升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_duqian",
+    "name": "杜迁·摸着天·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "duqian",
+    "description": "用于杜迁升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_xueyong",
+    "name": "薛永·病大虫·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "xueyong",
+    "description": "用于薛永升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shien",
+    "name": "施恩·金眼彪·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shien",
+    "description": "用于施恩升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_lizhong",
+    "name": "李忠·打虎将·枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "lizhong",
+    "description": "用于李忠升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhoutong",
+    "name": "周通·小霸王·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhoutong",
+    "description": "用于周通升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_tanglong",
+    "name": "汤隆·百炼炉芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "tanglong",
+    "description": "用于汤隆升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_duxing",
+    "name": "杜兴·鬼脸儿·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "duxing",
+    "description": "用于杜兴升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zouyuan",
+    "name": "邹渊·出林龙·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zouyuan",
+    "description": "用于邹渊升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zourun",
+    "name": "邹润·独角龙·盾芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zourun",
+    "description": "用于邹润升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhugui",
+    "name": "朱贵·旱地忽律·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhugui",
+    "description": "用于朱贵升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhufu",
+    "name": "朱富·笑面虎·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhufu",
+    "description": "用于朱富升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_caifu",
+    "name": "蔡福·铁臂膊·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "caifu",
+    "description": "用于蔡福升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_caiqing",
+    "name": "蔡庆·一枝花·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "caiqing",
+    "description": "用于蔡庆升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_lili",
+    "name": "李立·催命判官·游龙绳结",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "lili",
+    "description": "用于李立升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_liyun",
+    "name": "李云·青眼铁箍",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "liyun",
+    "description": "用于李云升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jiaoting",
+    "name": "焦挺·没面目·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jiaoting",
+    "description": "用于焦挺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shiyong",
+    "name": "石勇·石将军·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shiyong",
+    "description": "用于石勇升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_sunxin",
+    "name": "孙新·小尉迟·盾芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "sunxin",
+    "description": "用于孙新升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_gudasao",
+    "name": "顾大嫂·母大虫·枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "gudasao",
+    "description": "用于顾大嫂升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhangqing_gardener",
+    "name": "张青·菜园子·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhangqing_gardener",
+    "description": "用于张青升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_sunerniang",
+    "name": "孙二娘·母夜叉·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "sunerniang",
+    "description": "用于孙二娘升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_wangdingliu",
+    "name": "王定六·活闪婆·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "wangdingliu",
+    "description": "用于王定六升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yubaosi",
+    "name": "郁保四·险道神·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yubaosi",
+    "description": "用于郁保四升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_baisheng",
+    "name": "白胜·白鼠绳结",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "baisheng",
+    "description": "用于白胜升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shiqian",
+    "name": "时迁·夜哨轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shiqian",
+    "description": "用于时迁升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_duanjingzhu",
+    "name": "段景住·金毛犬·游龙绳结",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "duanjingzhu",
+    "description": "用于段景住升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_chaogai",
+    "name": "晁盖·托塔天王·盾芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "chaogai",
+    "description": "用于晁盖升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_wangjin",
+    "name": "王进·禁军教头·枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "wangjin",
+    "description": "用于王进升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_hucheng",
+    "name": "扈成·飞天虎·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "hucheng",
+    "description": "用于扈成升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_luantingyu",
+    "name": "栾廷玉·铁棒·盾芯",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "luantingyu",
+    "description": "用于栾廷玉升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhanghuai",
+    "name": "张槐·守村乡勇·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhanghuai",
+    "description": "用于张槐升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_heqi",
+    "name": "何七·山中樵客·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "heqi",
+    "description": "用于何七升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_chengao",
+    "name": "陈篙·渡口船工·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "chengao",
+    "description": "用于陈篙升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhouaduo",
+    "name": "周阿朵·采药山女·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhouaduo",
+    "description": "用于周阿朵升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhaoqingmo",
+    "name": "赵青陌·押粮短盾·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhaoqingmo",
+    "description": "用于赵青陌升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_liuyan",
+    "name": "柳雁·林间猎户·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "liuyan",
+    "description": "用于柳雁升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_dingyan",
+    "name": "丁砚·落第书生·符纸",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "dingyan",
+    "description": "用于丁砚升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_majiu",
+    "name": "马九·驿路脚夫·游龙绳结",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "majiu",
+    "description": "用于马九升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shichanggeng",
+    "name": "石长庚·退伍老卒·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shichanggeng",
+    "description": "用于石长庚升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shenqiuniang",
+    "name": "沈秋娘·乡里郎中·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shenqiuniang",
+    "description": "用于沈秋娘升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_gupingchuan",
+    "name": "顾平川·护庄教习·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "gupingchuan",
+    "description": "用于顾平川升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_taozhiwei",
+    "name": "陶知微·游方策士·策页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "taozhiwei",
+    "description": "用于陶知微升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_tianmao",
+    "name": "田茂·田埂乡勇·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "tianmao",
+    "description": "用于田茂升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_qiaoli",
+    "name": "乔梨·村坊织娘·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "qiaoli",
+    "description": "用于乔梨升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_niushun",
+    "name": "牛顺·挑担脚夫·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "niushun",
+    "description": "用于牛顺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_duhe",
+    "name": "杜禾·麦田镰手·枪缨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "duhe",
+    "description": "用于杜禾升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_sunli_quarry",
+    "name": "孙砺·采石壮丁·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "sunli_quarry",
+    "description": "用于孙砺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_lupu",
+    "name": "卢蒲·湖岸渔户·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "lupu",
+    "description": "用于卢蒲升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_weiyu",
+    "name": "魏榆·木棚匠人·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "weiyu",
+    "description": "用于魏榆升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yangzhi_tea",
+    "name": "杨栀·茶山采女·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yangzhi_tea",
+    "description": "用于杨栀升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_qindou",
+    "name": "秦豆·铁铺学徒·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "qindou",
+    "description": "用于秦豆升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zhuli",
+    "name": "祝篱·山坡药农·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zhuli",
+    "description": "用于祝篱升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_fuchen",
+    "name": "傅尘·古寺扫客·星纹墨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "fuchen",
+    "description": "用于傅尘升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_luya",
+    "name": "陆芽·山岭牧女·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "luya",
+    "description": "用于陆芽升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_pandeng",
+    "name": "潘灯·村口更夫·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "pandeng",
+    "description": "用于潘灯升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_fengsui",
+    "name": "冯穗·粮担村妇·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "fengsui",
+    "description": "用于冯穗升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_baoquan",
+    "name": "鲍泉·打井乡人·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "baoquan",
+    "description": "用于鲍泉升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jiangsuo",
+    "name": "蒋蓑·芦荡篾匠·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jiangsuo",
+    "description": "用于蒋蓑升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_gunan",
+    "name": "顾楠·竹弩护客·游龙绳结",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "gunan",
+    "description": "用于顾楠升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yuechuan",
+    "name": "岳川·急渡艄公·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yuechuan",
+    "description": "用于岳川升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jibai",
+    "name": "纪白·行医学徒·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jibai",
+    "description": "用于纪白升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_liangxing",
+    "name": "梁杏·接骨村医·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "liangxing",
+    "description": "用于梁杏升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_chuan_grain",
+    "name": "褚安·粮行账房·策页",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "chuan_grain",
+    "description": "用于褚安升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_chengli",
+    "name": "程砺·桥头石匠·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "chengli",
+    "description": "用于程砺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_wenlan",
+    "name": "温澜·缝旗绣工·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "wenlan",
+    "description": "用于温澜升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_xuezhen",
+    "name": "薛砧·炉边铁匠·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "xuezhen",
+    "description": "用于薛砧升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_luowei",
+    "name": "罗苇·补船木匠·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "luowei",
+    "description": "用于罗苇升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_peidi",
+    "name": "裴笛·街巷笛客·星纹墨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "peidi",
+    "description": "用于裴笛升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_hanyue",
+    "name": "韩越·关道趟马·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "hanyue",
+    "description": "用于韩越升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jitang",
+    "name": "季棠·马厩看护·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jitang",
+    "description": "用于季棠升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_wuyanzhou",
+    "name": "吴砚舟·舆图抄手·星纹墨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "wuyanzhou",
+    "description": "用于吴砚舟升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_xucen",
+    "name": "许岑·深林猎户·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "xucen",
+    "description": "用于许岑升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_gaoqi",
+    "name": "高岐·板桥守卒·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "gaoqi",
+    "description": "用于高岐升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_lince",
+    "name": "林策·草料管事·星纹墨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "lince",
+    "description": "用于林策升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_mengshi",
+    "name": "孟石·长途镖客·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "mengshi",
+    "description": "用于孟石升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_suhe",
+    "name": "苏荷·草堂药师·义盟札",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "suhe",
+    "description": "用于苏荷升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yandu",
+    "name": "严渡·老河引航·游龙绳结",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yandu",
+    "description": "用于严渡升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_shaoqing",
+    "name": "邵青·山路探哨·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "shaoqing",
+    "description": "用于邵青升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_fangpu",
+    "name": "方朴·补甲匠师·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "fangpu",
+    "description": "用于方朴升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yinmiao",
+    "name": "殷苗·粮仓掌事·星纹墨",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yinmiao",
+    "description": "用于殷苗升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_leiyue",
+    "name": "雷岳·边地旧弓·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "leiyue",
+    "description": "用于雷岳升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_caoxi",
+    "name": "曹溪·乡约代书·符纸",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "caoxi",
+    "description": "用于曹溪升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yinsong",
+    "name": "尹松·木寨工头·甲片",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yinsong",
+    "description": "用于尹松升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yeshuang",
+    "name": "叶霜·行路剑客·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yeshuang",
+    "description": "用于叶霜升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_zouheng",
+    "name": "邹衡·旧营队正·护阵铁环",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "zouheng",
+    "description": "用于邹衡升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_xiongzhi",
+    "name": "熊芷·山村医婆·护心玉",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "xiongzhi",
+    "description": "用于熊芷升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_jiangshuo",
+    "name": "江朔·北路马客·箭簇",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "jiangshuo",
+    "description": "用于江朔升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_wanglu",
+    "name": "汪芦·护舷舟娘·轻羽",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "wanglu",
+    "description": "用于汪芦升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_yuanzhu",
+    "name": "袁竹·行脚僧人·战纹",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "yuanzhu",
+    "description": "用于袁竹升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
+  },
+  {
+    "id": "core_dongli",
+    "name": "董砺·长枪教习·锋刃",
+    "type": "material",
+    "price": 0,
+    "effect": {},
+    "hero": "dongli",
+    "description": "用于董砺升品的核心材料。可在指定副本搜得，追踪本人的升品或此材料后可定向寻取。"
   }
 ]

@@ -1,4 +1,4 @@
-import {FOREST_NODES,FOREST_FLAGS,forestHas,forestGate,forestRoute} from './forest-data.js?v=0.82.2';
+import {FOREST_NODES,FOREST_FLAGS,forestHas,forestGate,forestRoute} from './forest-data.js?v=0.83.0';
 export const hasForest=s=>s.exploration?.forest!==undefined||Object.keys(s.specialDungeons?.clears||{}).some(k=>/^forest(camp)?_[123]$/.test(k))||[s.battle?.context,s.lastBattle?.context,s.specialDungeons?.last].some(c=>['forest','forestcamp'].includes(c?.id));
 export function validateForest(s,check){const x=s.exploration,f=x?.forest;if(f===undefined)return;
  const obj=v=>v&&typeof v==='object'&&!Array.isArray(v),list=(v,allowed)=>Array.isArray(v)&&new Set(v).size===v.length&&v.every(k=>allowed.includes(k));

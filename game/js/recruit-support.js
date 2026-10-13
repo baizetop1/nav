@@ -1,7 +1,7 @@
-import { ownHero } from './hero.js?v=0.82.2';
-import { canonicalHeroes } from './roster.js?v=0.82.2';
-import { grant } from './item.js?v=0.82.2';
-import { requireRule, journal } from './utils.js?v=0.82.2';
+import { ownHero } from './hero.js?v=0.83.0';
+import { featuredRecruitHeroes, recruitStar, recruitmentBanner } from './recruitment-banner.js?v=0.83.0';
+import { grant } from './item.js?v=0.83.0';
+import { requireRule, journal } from './utils.js?v=0.83.0';
 export const SELECT_COST=[0,10,15,25,40,60];
 export function recruitWeek(now){const d=new Date(now+8*3600000);d.setUTCDate(d.getUTCDate()-(d.getUTCDay()+6)%7);return d.toISOString().slice(0,10);}
 export function supportState(s){return s.recruit.support||{version:1,dry:0,tickets:0,points:0,claims:[],week:null};}
@@ -9,13 +9,13 @@ function ensure(s){return s.recruit.support??=supportState(s);}
 export function supportWeek(s){const period=recruitWeek(s.clock),w=supportState(s).week;return w?.period===period?w:{period,work:0,wins:0,claimed:false};}
 export function recordRecruitSupport(s,result){
  const p=ensure(s);if(result.kind!=='joined')p.points++;
- if(!result.target){p.dry=result.kind==='joined'?0:p.dry+1;if(p.dry>=10){p.dry=0;p.tickets++;journal(s,'【迎贤荐书】连续十次普通招贤未迎来新人，额外获得荐书一封，可自选尚未入寨的一至三星正册好汉。');}}
+ if(!result.target){p.dry=result.kind==='joined'?0:p.dry+1;if(p.dry>=10){p.dry=0;p.tickets++;journal(s,'【迎贤荐书】连续十次普通招贤未迎来新人，额外获得荐书一封，可自选本期尚未入寨的一至三星散人。');}}
 }
 export function recordRecruitWeek(before,after){
  const work=Math.max(0,(after.stats.campWork||0)-(before.stats.campWork||0)),wins=Math.max(0,(after.stats.battleWin||0)-(before.stats.battleWin||0));
  if(!work&&!wins)return;const p=ensure(after),w={...supportWeek(after)};w.work=Math.min(3,w.work+work);w.wins=Math.min(5,w.wins+wins);p.week=w;
 }
-export function welcomeCandidates(s,d){return canonicalHeroes(d).filter(h=>h.star<=3&&s.heroes[h.id].status!=='owned');}
+export function welcomeCandidates(s,d){return featuredRecruitHeroes(s,d).filter(h=>recruitStar(h)<=3&&s.heroes[h.id].status!=='owned');}
 export function recruitOffers(s,d){const p=supportState(s),w=supportWeek(s);return [
  {id:'week',name:'每周访贤差事',amount:2,reason:w.claimed?'本周已领取':w.work<3||w.wins<5?'本周寨务经营 '+w.work+'/3 · 战斗胜利 '+w.wins+'/5':''},
  ...d.chapters.map(c=>({id:'chapter_'+c.id,name:'第 '+c.number+' 卷 · '+c.title,amount:2,reason:p.claims.includes('chapter_'+c.id)?'已领取':!s.progress.flags[c.completeFlag]?'完成本卷后领取':''})),
@@ -23,12 +23,13 @@ export function recruitOffers(s,d){const p=supportState(s),w=supportWeek(s);retu
  ];}
 export function recruitSupportAction(s,d,a){
  if(a.type==='recruitSupply'){const q=recruitOffers(s,d).find(v=>v.id===a.id);requireRule(q&&!q.reason,q?.reason||'没有这项招贤补给。');const p=ensure(s);if(a.id==='week'){p.week={...supportWeek(s),claimed:true};}else p.claims.push(a.id);grant(s,{items:{recruit_order:q.amount}},d);journal(s,'【招贤补给】'+q.name+'：招贤令 +'+q.amount+'。');return;}
+ requireRule(a.bannerId===undefined||a.bannerId===recruitmentBanner(d,s.clock).id,'招贤活动已换期，请刷新页面查看当期人物；荐书与积分已保留。');
  const p=ensure(s);
- if(a.type==='recruitWelcomeConvert'){requireRule(p.tickets>0,'尚无迎贤荐书。');requireRule(!welcomeCandidates(s,d).length,'仍有未入寨的一至三星好汉，请先用荐书迎贤。');p.tickets--;p.points+=10;journal(s,'【荐书折换】低星正册已齐，荐书一封换为荐贤积分 10。');return;}
- const h=canonicalHeroes(d).find(h=>h.id===a.id);requireRule(h&&s.heroes[a.id].status!=='owned','请选择尚未入寨的正册好汉。');
- if(a.type==='recruitWelcome'){requireRule(p.tickets>0,'尚无迎贤荐书。');requireRule(h.star<=3,'迎贤荐书用于一至三星正册好汉。');p.tickets--;}
- else{requireRule(a.type==='recruitSelect','未知迎贤方式。');requireRule(['known','available'].includes(s.heroes[a.id].status),'先与这位好汉相识，再用积分相邀。');requireRule(p.points>=SELECT_COST[h.star],'荐贤积分不足。');p.points-=SELECT_COST[h.star];}
- ownHero(s,a.id,d);journal(s,'【确定迎贤】'+h.name+'应邀入寨；未消耗招贤令，不计抽取，也不改变星级保底。');
+ if(a.type==='recruitWelcomeConvert'){requireRule(p.tickets>0,'尚无迎贤荐书。');requireRule(!welcomeCandidates(s,d).length,'本期仍有未入寨的散人，请先用荐书迎贤。');p.tickets--;p.points+=10;s.recruit.rules=2;journal(s,'【荐书折换】本期低星散人已齐，荐书一封换为荐贤积分 10。');return;}
+ const h=featuredRecruitHeroes(s,d).find(h=>h.id===a.id);requireRule(h&&s.heroes[a.id].status!=='owned','请选择本期尚未入寨的好汉。');
+ if(a.type==='recruitWelcome'){requireRule(p.tickets>0,'尚无迎贤荐书。');requireRule(recruitStar(h)<=3,'迎贤荐书用于本期一至三星散人。');p.tickets--;}
+ else{requireRule(a.type==='recruitSelect','未知迎贤方式。');requireRule(p.points>=SELECT_COST[recruitStar(h)],'荐贤积分不足。');p.points-=SELECT_COST[recruitStar(h)];}
+ ownHero(s,a.id,d);s.recruit.rules=2;journal(s,'【确定迎贤】'+h.name+'应邀入寨；未消耗招贤令，不计抽取，也不改变星级保底。');
 }
 export function validateRecruitSupport(s,d,check){
  const p=s.recruit.support;if(p===undefined)return;

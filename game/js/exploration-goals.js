@@ -1,14 +1,14 @@
-import {CROSS_STORY,crossStep,crossHas,crossPrerequisite,crossAvailable,crossCommand} from './cross-region-data.js?v=0.82.2';
-import {revisitSpec,revisitHas} from './region-revisit-data.js?v=0.82.2';
-import {EXPLORATION_REGIONS,REGION_NODES,REGION_CONTACTS,EXPLORATION_HERO_REGIONS,REGION_BUILDINGS,activeRegion,regionState,regionHas,regionBuilt,mineGoal} from './exploration-data.js?v=0.82.2';
-import {marshGoal,MARSH_NODES} from './marsh-data.js?v=0.82.2';
-import {ruinsGoal,RUINS_NODES} from './ruins-data.js?v=0.82.2';
-import {forestGoal,FOREST_NODES} from './forest-data.js?v=0.82.2';
-import {waterGoal,WATER_NODES} from './water-data.js?v=0.82.2';
-import {mountainGoal,MOUNTAIN_NODES} from './mountain-data.js?v=0.82.2';
-import {GATHERING_REGIONS,REGIONAL_RECIPES} from './gathering-data.js?v=0.82.2';
-import {regionalQuote} from './gathering.js?v=0.82.2';
-import {idleUnlocked} from './idle-data.js?v=0.82.2';
+import {CROSS_STORY,crossStep,crossHas,crossPrerequisite,crossAvailable,crossCommand} from './cross-region-data.js?v=0.83.0';
+import {revisitSpec,revisitHas} from './region-revisit-data.js?v=0.83.0';
+import {EXPLORATION_REGIONS,REGION_NODES,REGION_CONTACTS,EXPLORATION_HERO_REGIONS,REGION_BUILDINGS,activeRegion,regionState,regionHas,regionBuilt,mineGoal} from './exploration-data.js?v=0.83.0';
+import {marshGoal,MARSH_NODES} from './marsh-data.js?v=0.83.0';
+import {ruinsGoal,RUINS_NODES} from './ruins-data.js?v=0.83.0';
+import {forestGoal,FOREST_NODES} from './forest-data.js?v=0.83.0';
+import {waterGoal,WATER_NODES} from './water-data.js?v=0.83.0';
+import {mountainGoal,MOUNTAIN_NODES} from './mountain-data.js?v=0.83.0';
+import {GATHERING_REGIONS,REGIONAL_RECIPES} from './gathering-data.js?v=0.83.0';
+import {regionalQuote} from './gathering.js?v=0.83.0';
+import {idleUnlocked} from './idle-data.js?v=0.83.0';
 export const EXPLORATION_GOAL_KINDS={invite:'邀好汉',regional:'备装备药品',regionBuild:'扩建寨子',crossRegion:'故人共事'};
 export const explorerGoal=g=>!!g&&typeof g.kind==='string'&&Object.hasOwn(EXPLORATION_GOAL_KINDS,g.kind);
 export function validExplorerGoal(g){return explorerGoal(g)&&typeof g.id==='string'&&(g.kind==='crossRegion'?g.id===CROSS_STORY.id:g.kind==='invite'?Object.hasOwn(EXPLORATION_HERO_REGIONS,g.id):Object.hasOwn(g.kind==='regional'?REGIONAL_RECIPES:REGION_BUILDINGS,g.id));}

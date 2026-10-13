@@ -1,6 +1,6 @@
-import {revisitSpec,revisitHas,revisitGoal,REGION_REVISITS} from './region-revisit-data.js?v=0.82.2';
-import {revisitTask,revisitWorkQuote} from './region-revisit.js?v=0.82.2';
-import {specialPlan} from './special-dungeons.js?v=0.82.2';
+import {revisitSpec,revisitHas,revisitGoal,REGION_REVISITS} from './region-revisit-data.js?v=0.83.0';
+import {revisitTask,revisitWorkQuote} from './region-revisit.js?v=0.83.0';
+import {specialPlan} from './special-dungeons.js?v=0.83.0';
 export function revisitPanel(s,d,esc,btn,region,id,nodes,legacy){const r=revisitSpec(region),x=s.exploration?.[region];if(!r||!revisitHas(s,region,'invited')||![r.home,r.trace,r.boss].includes(id))return '';
  const has=k=>revisitHas(s,region,k),goal=revisitGoal(s,region),move=(to,label)=>btn(label||'去'+nodes[to].name,{type:'regionMove',region,id:to},'primary');
  const task=(key,label)=>{const reason=revisitTask(s,region,key);return btn(label,{type:'regionDo',region,id:key},'primary',!!reason)+(reason?'<p class="note">'+esc(reason)+'</p>':'');};

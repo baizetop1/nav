@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.82.2';
-import { parseSave } from './save.js?v=0.82.2';
+import { hasOwn } from './utils.js?v=0.83.0';
+import { parseSave } from './save.js?v=0.83.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -35,8 +35,8 @@ const shape = {
   equipment: [fields('uid item plus hero locked refine')],
   progress: {flags: {'*': true}, stories: {'*': fields('status step')}, visited: true, actions: {'*': true}, claims: true, clears: {'*': true}},
   stats: {'*': true}, daily: {...fields('date ids claimed bonus events'), counters: {'*': true}, dungeons: {'*': true}},
-  recruit: {support:{version:true,dry:true,tickets:true,points:true,claims:true,week:fields('period work wins claimed')},total: true, pity: fields('three four five'), fate: {'*': true}, lastResult: fields('hero target kind number inTeam tokens merit'), lastBatch:[fields('hero target kind number inTeam tokens merit')]},
-  battle: {tactics:{version:true,gear:{'*':[fields('item rank')]},cooldowns:{'*':true},counts:{'*':true}},mainline:{version:true,wave:true,shields:{'*':true},escort:fields('hp nextAt')},roles:{version:true,counts:{'*':true},cooldowns:{'*':true}},lesson:{version:true,guarded:true},journey:{chronicle:chronicleJob,campaign:fields('version itinerary preparation challenge'),...fields('version region tier kind rules consequence'),boons:true,combat:{version:true,shields:{'*':true},cooldowns:{'*':true},counts:{'*':true}}},expansion:{version:true,smoke:true,personal:true,styles:{'*':true},combos:{'*':fields('count readyAt')}},realm:{version:true,medical:true,relic:true,veteran:true,paths:{'*':true},qualities:{'*':true}},metrics,depth:{version:true,terrain:true,drills:{'*':true},objective:fields('kind nextAt integrity waves')},orders:fields('version focus stance reserve readyAt'),expedition:fields('troops tactic arm fallen fieldRules casualtyRules casualtyCarry'),...fields('mode elapsed itemReadyAt guest outcome log rules martial frontierRules'), team: [unit], enemy: [unit], context},
+  recruit: {rules:true,support:{version:true,dry:true,tickets:true,points:true,claims:true,week:fields('period work wins claimed')},total: true, pity: fields('three four five'), fate: {'*': true}, lastResult: fields('hero target kind number inTeam tokens merit'), lastBatch:[fields('hero target kind number inTeam tokens merit')]},
+  battle: {tactics:{version:true,gear:{'*':[fields('item rank')]},cooldowns:{'*':true},counts:{'*':true}},mainline:{version:true,wave:true,shields:{'*':true},escort:fields('hp nextAt')},roles:{version:true,counts:{'*':true},cooldowns:{'*':true}},lesson:{version:true,guarded:true},journey:{chronicle:chronicleJob,campaign:fields('version itinerary preparation challenge'),...fields('version region tier kind rules consequence'),boons:true,combat:{version:true,shields:{'*':true},cooldowns:{'*':true},counts:{'*':true}}},expansion:{version:true,smoke:true,personal:true,styles:{'*':true},combos:{'*':fields('count readyAt')}},realm:{version:true,medical:true,relic:true,veteran:true,paths:{'*':true},qualities:{'*':true}},metrics,depth:{version:true,terrain:true,drills:{'*':true},objective:fields('kind nextAt integrity waves')},orders:fields('version focus stance reserve readyAt'),expedition:fields('troops tactic arm fallen fieldRules casualtyRules casualtyCarry'),...fields('mode elapsed itemReadyAt guest outcome log rules martial frontierRules difficultyRules'), team: [unit], enemy: [unit], context},
   scheme: {...fields('id turn outcome log'), values: fields('alert fatigue heat trust exposure'), context},
   event: fields('id'), journal: [fields('at text')]
 };

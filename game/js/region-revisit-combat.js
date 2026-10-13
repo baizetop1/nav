@@ -1,4 +1,4 @@
-import {medicineBoatMove,medicineBoatThreat} from './cross-region-combat.js?v=0.82.2';
+import {medicineBoatMove,medicineBoatThreat} from './cross-region-combat.js?v=0.83.0';
 const active=(b,u,id)=>u.statuses.some(s=>s.id===id&&s.expiresAt>b.elapsed);
 const standing=u=>u?.hp>0;
 export function revisitBossMove(state,u,api,strike){if(medicineBoatMove(state,u,api,strike))return true;const b=state.battle,r=b.context.route,boss=u.boss;if(!['bellbreak','crossfire','backwash'].includes(r))return false;

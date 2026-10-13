@@ -1,7 +1,7 @@
-import {revisitPanel} from './region-revisit-ui.js?v=0.82.2';
-import {WATER_NODES,waterHas,waterGate,waterGoal} from './water-data.js?v=0.82.2';
-import {waterPath,waterFightQuote,waterTask} from './water.js?v=0.82.2';
-import {specialDropTable} from './special-dungeons.js?v=0.82.2';
+import {revisitPanel} from './region-revisit-ui.js?v=0.83.0';
+import {WATER_NODES,waterHas,waterGate,waterGoal} from './water-data.js?v=0.83.0';
+import {waterPath,waterFightQuote,waterTask} from './water.js?v=0.83.0';
+import {specialDropTable} from './special-dungeons.js?v=0.83.0';
 export function waterPanel(s,d,esc,btn,selected){
  const x=s.exploration.water,here=x.position,id=Object.hasOwn(WATER_NODES,selected)?selected:here,n=WATER_NODES[id],has=k=>waterHas(s,k);
  const action=(label,type,key,style='secondary',disabled=false,extra={})=>btn(label,{type,region:'water',...(key?{id:key}:{}),...extra},style,disabled);

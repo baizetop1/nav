@@ -1,54 +1,55 @@
-import {lifeAction} from './camp-life.js?v=0.82.2';
-import {explorationAction,finishExploration} from './exploration.js?v=0.82.2';
-import {regionalCraft} from './gathering.js?v=0.82.2';
-import {accrueIdle,idleAction} from './idle.js?v=0.82.2';
-import {grainAction,finishGrainRoad} from './grain-road.js?v=0.82.2';
-import {recordHunt,dismantleDuplicates} from './fieldwork.js?v=0.82.2';
-import {adventureAction,delveGuard,finishDelve,recordBuildFeats} from './adventure.js?v=0.82.2';
-import {replaceHero} from './hero-replacement.js?v=0.82.2';
-import {refineEquipment} from './equipment-refine.js?v=0.82.2';
-import {startReplay,finishReplay} from './replays.js?v=0.82.2';
-import {enterSpecial,finishSpecial} from './special-dungeons.js?v=0.82.2';
-import {chronicleAction} from './chronicle.js?v=0.82.2';
-import {lessonStart,finishLesson} from './lessons.js?v=0.82.2';
-import {journeyAction} from './journey.js?v=0.82.2';
-import { recruitSupportAction, recordRecruitWeek } from './recruit-support.js?v=0.82.2';
-import { battleExperience } from './growth-rewards.js?v=0.82.2';
-import {ventureAction,finishExpansion,diplomacyAction} from './ventures.js?v=0.82.2';
-import {provisionAction} from './provisions.js?v=0.82.2';
-import {expansionGuard,expansion} from './expansion-state.js?v=0.82.2';
-import {challengeStart} from './challenges.js?v=0.82.2';
-import {relicAction} from './relics.js?v=0.82.2';
-import {trekAction,trekGuard} from './trek.js?v=0.82.2';
-import {buildingBranch} from './realm-buildings.js?v=0.82.2';
-import {chooseHeroPath} from './talents.js?v=0.82.2';
-import { squadAction, assignmentGuard } from './squads.js?v=0.82.2';
-import { realmAction, realmOpen, finishRealmBattle } from './realm.js?v=0.82.2';
-import { applySweep } from './sweep.js?v=0.82.2';
-import { staminaCap, deployedTroops } from './logistics.js?v=0.82.2';
-import { enterElite, finishElite } from './elites.js?v=0.82.2';
-import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.82.2';
-import { mentorHero } from './mentorship.js?v=0.82.2';
-import { saveDebrief } from './debrief.js?v=0.82.2';
-import { batchApply } from './batch.js?v=0.82.2';
-import { affairAction, finishAffairBattle } from './affairs.js?v=0.82.2';
-import { trainDrill } from './strategy.js?v=0.82.2';
-import { battleOrder } from './commands.js?v=0.82.2';
-import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.82.2';
-import { developmentAction, recordLedger } from './development.js?v=0.82.2';
-import { enterRotation, finishRotation } from './rotations.js?v=0.82.2';
-import { promoteHero } from './quality.js?v=0.82.2';
-import { routeTo, claimLocalBenefit } from './world-map.js?v=0.82.2';
-import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.82.2';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.82.2';
-import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.82.2';
-import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.82.2';
-import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.82.2';
-import { effects, storyAction, visit } from './story.js?v=0.82.2';
-import { growthAction, awardMountContracts } from './growth.js?v=0.82.2';
+import {awardPromotionDrops} from './promotion-drops.js?v=0.83.0';
+import {lifeAction} from './camp-life.js?v=0.83.0';
+import {explorationAction,finishExploration} from './exploration.js?v=0.83.0';
+import {regionalCraft} from './gathering.js?v=0.83.0';
+import {accrueIdle,idleAction} from './idle.js?v=0.83.0';
+import {grainAction,finishGrainRoad} from './grain-road.js?v=0.83.0';
+import {recordHunt,dismantleDuplicates} from './fieldwork.js?v=0.83.0';
+import {adventureAction,delveGuard,finishDelve,recordBuildFeats} from './adventure.js?v=0.83.0';
+import {replaceHero} from './hero-replacement.js?v=0.83.0';
+import {refineEquipment} from './equipment-refine.js?v=0.83.0';
+import {startReplay,finishReplay} from './replays.js?v=0.83.0';
+import {enterSpecial,finishSpecial} from './special-dungeons.js?v=0.83.0';
+import {chronicleAction} from './chronicle.js?v=0.83.0';
+import {lessonStart,finishLesson} from './lessons.js?v=0.83.0';
+import {journeyAction} from './journey.js?v=0.83.0';
+import { recruitSupportAction, recordRecruitWeek } from './recruit-support.js?v=0.83.0';
+import { battleExperience } from './growth-rewards.js?v=0.83.0';
+import {ventureAction,finishExpansion,diplomacyAction} from './ventures.js?v=0.83.0';
+import {provisionAction} from './provisions.js?v=0.83.0';
+import {expansionGuard,expansion} from './expansion-state.js?v=0.83.0';
+import {challengeStart} from './challenges.js?v=0.83.0';
+import {relicAction} from './relics.js?v=0.83.0';
+import {trekAction,trekGuard} from './trek.js?v=0.83.0';
+import {buildingBranch} from './realm-buildings.js?v=0.83.0';
+import {chooseHeroPath} from './talents.js?v=0.83.0';
+import { squadAction, assignmentGuard } from './squads.js?v=0.83.0';
+import { realmAction, realmOpen, finishRealmBattle } from './realm.js?v=0.83.0';
+import { applySweep } from './sweep.js?v=0.83.0';
+import { staminaCap, deployedTroops } from './logistics.js?v=0.83.0';
+import { enterElite, finishElite } from './elites.js?v=0.83.0';
+import { claimChronicle, recordHeroWins } from './hero-chronicles.js?v=0.83.0';
+import { mentorHero } from './mentorship.js?v=0.83.0';
+import { saveDebrief } from './debrief.js?v=0.83.0';
+import { batchApply } from './batch.js?v=0.83.0';
+import { affairAction, finishAffairBattle } from './affairs.js?v=0.83.0';
+import { trainDrill } from './strategy.js?v=0.83.0';
+import { battleOrder } from './commands.js?v=0.83.0';
+import { accrueFrontier, frontierAction, enterPost, finishPost } from './frontier.js?v=0.83.0';
+import { developmentAction, recordLedger } from './development.js?v=0.83.0';
+import { enterRotation, finishRotation } from './rotations.js?v=0.83.0';
+import { promoteHero } from './quality.js?v=0.83.0';
+import { routeTo, claimLocalBenefit } from './world-map.js?v=0.83.0';
+import { clone, bounded, count, dayKey, journal, pick, random, requireRule } from './utils.js?v=0.83.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.83.0';
+import { gainExp, knowHero, ownHero, recruit, syncAvailability } from './hero.js?v=0.83.0';
+import { gainItem, grant, itemAction, newEquipment, pay } from './item.js?v=0.83.0';
+import { startBattle, advanceBattle, castSkill, useBattleItem, retreatBattle, setBattleSkillMode } from './battle.js?v=0.83.0';
+import { effects, storyAction, visit } from './story.js?v=0.83.0';
+import { growthAction, awardMountContracts } from './growth.js?v=0.83.0';
 
-import { searchEquipment } from './camp-development.js?v=0.82.2';
-import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.82.2';
+import { searchEquipment } from './camp-development.js?v=0.83.0';
+import { campAction, settleCampBattle, attachTroops } from './camp.js?v=0.83.0';
 
 export function newGame(data, now=Date.now(), seed=(now>>>0)||1) {
   const initial=data.config.initial;
@@ -99,11 +100,12 @@ function rewardDungeon(state,data,id) {
   journal(state,`【${data.by.dungeons[id].name}】历练完成。碎银 +${reward.silver}、威望 +${reward.prestige}、功勋 +${reward.merit}；带回${Object.keys(reward.guaranteed).map(i=>data.by.items[i].name).join('、')}${drops.length?'，另得'+drops.join('、'):''}。`);
   if(mounts.length)journal(state,`【副本寻骑】获得 ${mounts.join('、')}。对应人物入寨后，到郓城马厩凭契领骑；不另收碎银。`);
 }
+function promotionLoot(state,data,b){if(awardPromotionDrops(state,data,b).length)state.progress.flags.promotion_cores_v1=true;}
 function finishBattle(state,data) {
   const b=state.battle;requireRule(b&&b.outcome,'还未分出胜负。');recordBuildFeats(state,b);
   if(b.context.type==='replay'){saveDebrief(state,b,state.camp?.wounded||0);finishReplay(state,b);return;}
   if(b.context.type==='lesson'){finishLesson(state,b);return;}
-  if(b.context.type==='special'){saveDebrief(state,b,state.camp?.wounded||0);finishSpecial(state,data,b);finishExploration(state,b);recordHunt(state,b);finishDelve(state,b);return;}
+  if(b.context.type==='special'){saveDebrief(state,b,state.camp?.wounded||0);finishSpecial(state,data,b);promotionLoot(state,data,b);finishExploration(state,b);recordHunt(state,b);finishDelve(state,b);return;}
   const previousWounded=state.camp?.wounded||0;settleCampBattle(state,data,b);saveDebrief(state,b,previousWounded);finishGrainRoad(state,data,b);finishAffairBattle(state,b,data);finishRealmBattle(state,b,data);finishExpansion(state,b,data);
   if(b.outcome==='victory') {
     count(state,'battleWin');recordHeroWins(state,b);
@@ -115,6 +117,7 @@ function finishBattle(state,data) {
     else if(b.context.type==='frontier')finishPost(state,b);
     else if(b.context.type==='rotation'){const reward=finishRotation(state,b);if(reward)grant(state,reward,data);}
     else if(!['camp','realm'].includes(b.context.type)){grant(state,{silver:90,prestige:3,exp:100,items:{scrap_iron:1}},data);journal(state,'交战得胜，行旅得以安行。获得碎银与历练经验。');}
+    promotionLoot(state,data,b);
   } else {count(state,'battleLoss');journal(state,'此战收兵。好汉不会永久失去；再战前可调整队伍、药物与装备。');}
   state.battle=null;
 }
@@ -137,7 +140,7 @@ function schemeChoice(state,data,id) {
 function finishScheme(state,data) {
   const scene=state.scheme;requireRule(scene&&scene.outcome,'计策尚未收尾。');
   if(scene.outcome==='success') {
-    if(scene.context.type==='dungeon')rewardDungeon(state,data,scene.context.id);
+    if(scene.context.type==='dungeon'){rewardDungeon(state,data,scene.context.id);promotionLoot(state,data,{context:scene.context,outcome:'victory',guest:false});}
     else {requireRule(!state.progress.flags.huangni_complete,'这份首次奖励已领取。');state.progress.flags.huangni_complete=true;
       grant(state,{merit:50,prestige:40,items:{wuyong_token:1,gongsunsheng_token:1,recruit_order:2,exp_pill:4}},data);
       journal(state,'【智取生辰纲】计策已成。吴用与公孙胜各留下一枚信物，功勋 +50。通往梁山脚下的路已打开。');}
@@ -213,7 +216,7 @@ export function dispatch(data,current,action,now=Date.now()) {
     const h=data.by.heroes[id];requireRule(h&&h.meetMap===state.location&&meets(state,h.meetCondition),'尚未在此与这位人物相逢。');
     knowHero(state,id,'heard',data);knowHero(state,id,'known',data);journal(state,`${h.name}与你叙过姓名。${h.dialogue}`);
   }
-  else if(type==='guide'){requireRule(state.location==='tavern'&&state.heroes.baisheng.status==='known'&&!state.progress.flags.guide,'先在酒肆与白胜相识。');state.progress.flags.guide=true;ownHero(state,'baisheng',data);journal(state,'白胜应下为你引路，正式加入队伍。这是乡人相助；武松等核心好汉仍需相识与招贤。');}
+  else if(type==='guide'){requireRule(state.location==='tavern'&&state.heroes.baisheng.status==='known'&&!state.progress.flags.guide,'先在酒肆与白胜相识。');state.progress.flags.guide=true;ownHero(state,'baisheng',data);journal(state,'白胜应下为你引路，正式加入队伍。其他好汉可通过当期招募或人物事件入寨。');}
   else if(type==='chapterBattle'){requireRule(Object.prototype.hasOwnProperty.call(data.by.stories,id)&&/^v(?:[3-9]|1[012])_/.test(id)&&data.by.stories[id].steps[state.progress.stories[id]?.step||data.by.stories[id].start].choices.some(c=>c.id===action.choice&&c.battle),'请选择本卷可出征的战役。');storyAction(state,data,id,action.choice);}
   else if(type==='story')storyAction(state,data,id,action.choice);
   else if(type==='startScheme'){requireRule(state.location==='ridge'&&state.progress.flags.seven_stars&&!state.progress.flags.huangni_complete,'先完成七星聚义，再到冈上安排；首次剧情不会重复发奖。');beginScheme(state,data,{type:'story',id:'huangni'});}
@@ -229,12 +232,12 @@ export function dispatch(data,current,action,now=Date.now()) {
   else if(type==='lessonStart')lessonStart(state,data,id);
   else if(type==='finishBattle')finishBattle(state,data);
   else if(['recruitSupply','recruitWelcome','recruitWelcomeConvert','recruitSelect'].includes(type))recruitSupportAction(state,data,action);
-  else if(type==='recruit'){delete state.recruit.lastBatch;recruit(state,data,id);}
+  else if(type==='recruit'){delete state.recruit.lastBatch;recruit(state,data,id,action.bannerId);}
   else if(type==='recruitTen'){
     requireRule(!id,'十连仅限普通招贤。');
     requireRule((state.inventory.recruit_order||0)>=10,'十连需要 10 张普通招贤令。');
     const results=[];
-    for(let i=0;i<10;i++){recruit(state,data);results.push({...state.recruit.lastResult});syncAvailability(state,data);completeVolume(state,data);}
+    for(let i=0;i<10;i++){recruit(state,data,undefined,action.bannerId);results.push({...state.recruit.lastResult});syncAvailability(state,data);completeVolume(state,data);}
     state.commandVersion=1;state.recruit.lastBatch=results;
   }
   else if(type==='team'){

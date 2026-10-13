@@ -1,30 +1,32 @@
-import {CAMP_PEOPLE,CAMP_PROJECTS} from './camp-life-data.js?v=0.82.2';
-import {jobQuote,talkQuote,serviceQuote,salvageable} from './camp-life.js?v=0.82.2';
-import {chronicleQuote} from './hero-chronicles.js?v=0.82.2';
-import {equipmentPool,EQUIPMENT_DROP_RATE,DUTIES,dutyQuote} from './camp-development.js?v=0.82.2';
-import {POSTS,postPlan} from './frontier.js?v=0.82.2';
-import {questReady} from './core.js?v=0.82.2';
-import {STOCK_RESOURCES,sourceStock,sourceName} from './source-goals.js?v=0.82.2';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,specialPlan} from './special-dungeons.js?v=0.82.2';
-import {SPECIAL_ROUTES,routeAllowed,routeReward} from './special-routes.js?v=0.82.2';
-import {ALL_DAILY_ROUTES,rotationCalendar,rotationPlan,dailyUses} from './rotations.js?v=0.82.2';
-import {RECIPES,BOX_OPTIONS} from './provisions.js?v=0.82.2';
-import {REGIONAL_RECIPES,GATHERING_REGIONS} from './gathering-data.js?v=0.82.2';
-import {regionalQuote} from './gathering.js?v=0.82.2';
-import {IDLE_ROUTES,idleUnlocked,idleRates,idleAvailable} from './idle-data.js?v=0.82.2';
-import {REGION_CONTACTS,EXPLORATION_REGIONS,MINE_REWARDS,MINE_SMELT,REGION_BUILDINGS} from './exploration-data.js?v=0.82.2';
-import {MARSH_REWARDS,MARSH_DECOCT} from './marsh-data.js?v=0.82.2';
-import {REGION_REVISITS} from './region-revisit-data.js?v=0.82.2';
-import {revisitWorkQuote} from './region-revisit.js?v=0.82.2';
-import {CROSS_REWARDS,CROSS_WORK,crossHas,crossAvailable} from './cross-region-data.js?v=0.82.2';
-import {crossWorkQuote} from './cross-region.js?v=0.82.2';
-import {mineSmeltQuote} from './exploration.js?v=0.82.2';
-import {marshDecoctQuote} from './marsh.js?v=0.82.2';
-import {ROUTE_PRIZES,ROUTE_PRICE,routeBalance} from './journey-rewards.js?v=0.82.2';
-import {recruitOffers} from './recruit-support.js?v=0.82.2';
-import {isExternal,isWanderer} from './roster.js?v=0.82.2';
-import {dungeonEntry,meets} from './map.js?v=0.82.2';
-import {MOUNT_DROP_RATE} from './growth.js?v=0.82.2';
+import {promotionCoreSourceRows,promotionCoreUses} from './promotion-sources.js?v=0.83.0';
+import {recruitmentBanner} from './recruitment-banner.js?v=0.83.0';
+import {CAMP_PEOPLE,CAMP_PROJECTS} from './camp-life-data.js?v=0.83.0';
+import {jobQuote,talkQuote,serviceQuote,salvageable} from './camp-life.js?v=0.83.0';
+import {chronicleQuote} from './hero-chronicles.js?v=0.83.0';
+import {equipmentPool,EQUIPMENT_DROP_RATE,DUTIES,dutyQuote} from './camp-development.js?v=0.83.0';
+import {POSTS,postPlan} from './frontier.js?v=0.83.0';
+import {questReady} from './core.js?v=0.83.0';
+import {STOCK_RESOURCES,sourceStock,sourceName} from './source-goals.js?v=0.83.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,specialPlan} from './special-dungeons.js?v=0.83.0';
+import {SPECIAL_ROUTES,routeAllowed,routeReward} from './special-routes.js?v=0.83.0';
+import {ALL_DAILY_ROUTES,rotationCalendar,rotationPlan,dailyUses} from './rotations.js?v=0.83.0';
+import {RECIPES,BOX_OPTIONS} from './provisions.js?v=0.83.0';
+import {REGIONAL_RECIPES,GATHERING_REGIONS} from './gathering-data.js?v=0.83.0';
+import {regionalQuote} from './gathering.js?v=0.83.0';
+import {IDLE_ROUTES,idleUnlocked,idleRates,idleAvailable} from './idle-data.js?v=0.83.0';
+import {REGION_CONTACTS,EXPLORATION_REGIONS,MINE_REWARDS,MINE_SMELT,REGION_BUILDINGS} from './exploration-data.js?v=0.83.0';
+import {MARSH_REWARDS,MARSH_DECOCT} from './marsh-data.js?v=0.83.0';
+import {REGION_REVISITS} from './region-revisit-data.js?v=0.83.0';
+import {revisitWorkQuote} from './region-revisit.js?v=0.83.0';
+import {CROSS_REWARDS,CROSS_WORK,crossHas,crossAvailable} from './cross-region-data.js?v=0.83.0';
+import {crossWorkQuote} from './cross-region.js?v=0.83.0';
+import {mineSmeltQuote} from './exploration.js?v=0.83.0';
+import {marshDecoctQuote} from './marsh.js?v=0.83.0';
+import {ROUTE_PRIZES,ROUTE_PRICE,routeBalance} from './journey-rewards.js?v=0.83.0';
+import {recruitOffers} from './recruit-support.js?v=0.83.0';
+import {isExternal,isWanderer} from './roster.js?v=0.83.0';
+import {dungeonEntry,meets} from './map.js?v=0.83.0';
+import {MOUNT_DROP_RATE} from './growth.js?v=0.83.0';
 export {sourceName,sourceStock};
 export const sourcePage=(view,id,hero)=>id?{type:'ui_section',view,id,...(hero?{hero}:{})}:{type:'ui_sourcePage',view};
 const pct=n=>Number((n*100).toFixed(2))+'%';
@@ -40,7 +42,7 @@ export function sourceUses(d,id){
  for(const [key,r]of Object.entries(CAMP_PROJECTS))if(r.cost[id])rows.push({name:'添置'+r.name,command:{...sourcePage('camp','life'),lifeTab:'buildings',lifeBuilding:key}});
  for(const [hero,r]of Object.entries(CAMP_PEOPLE))if(r.cost[id])rows.push({name:r.job,command:{...sourcePage('camp','life'),lifeTab:'people',lifeHero:hero}});
  if(['herb','cloth','campFood','martial_pages'].includes(id))rows.push({name:id==='martial_pages'?'客舍讲习':'寨中诊疗与讲习',command:{...sourcePage('camp','life'),lifeTab:'buildings',lifeBuilding:id==='martial_pages'?'lodge':'clinic'}});
- return rows;
+ return [...rows,...promotionCoreUses(d,id)];
 }
 // All entries are navigation previews. Actual spending and rewards remain in the original actions.
 export function acquisitionSources(s,d,id){
@@ -77,9 +79,9 @@ export function acquisitionSources(s,d,id){
  const thanks={mine:{name:'夺回矿车',items:MINE_REWARDS.thanks,won:'won_orecart',flags:s.exploration?.flags||[]},marsh:{name:'清渠除蛇',items:MARSH_REWARDS.thanks,won:'won_reedvenom',flags:s.exploration?.marsh?.flags||[]},mountain:{name:'护粮回程',items:{copper_sand:4,xiangchong_token:2,strength_charm:1},won:'won_convoy',flags:s.exploration?.mountain?.flags||[]},...Object.fromEntries(Object.entries(REGION_REVISITS).map(([k,v])=>[k,{name:v.title,items:v.rewards,won:'won_return',flags:s.exploration?.[k]?.flags||[]}]))};
  for(const [region,r] of Object.entries(thanks))if(r.items[id]){const claimed=r.flags.includes('return_paid');add('thanks:'+region,r.name+'谢礼','一次',r.items[id]+' 份 · 只领一次',{type:'ui_regionOpen',region},claimed?'已领取':!r.flags.includes(r.won)?'先办妥该地重访':'',{claimed,priority:0});}
  if(CROSS_REWARDS[id]){const claimed=crossHas(s,'delivered');add('crossThanks','药船夜渡谢礼','一次',CROSS_REWARDS[id]+' 份 · 只领一次',sourcePage('camp','crossRegion'),claimed?'已领取':!crossAvailable(s)?'先完成三地重访':!crossHas(s,'won')?'先护送药船':'',{claimed,priority:0});}
- if(item?.type==='token'){const h=d.by.heroes[item.hero];if(!isExternal(h)||isWanderer(h))add('recruit','招贤遇见'+h.name,'随机',isWanderer(h)?'重复抽中得 3 枚；首次抽中直接入寨。':'未相识时抽中得 2 枚；重复抽中得 3 枚；已相识且未入寨则直接加入。',sourcePage('recruit','ordinary'),!(s.inventory.recruit_order>0)?'需要招贤令':'',{priority:7});}
+ if(item?.type==='token'){const h=d.by.heroes[item.hero],active=recruitmentBanner(d,s.clock).heroes.some(x=>x.id===h.id);add('recruit','当期招募 · '+h.name,'随机','首次抽中即入寨；重复抽中得 3 枚本人信物。',sourcePage('recruit','ordinary'),!active?'此人不在本期名单，请查看月度招募日历':!(s.inventory.recruit_order>0)?'需要招贤令':'',{priority:7});}
  const hero=d.heroes.find(h=>id===h.id+'_manual'||id===h.id+'_order');
- if(hero){const book=id.endsWith('_manual'),cost={items:{[book?'martial_pages':hero.id+'_token']:book?2:10}};if(book||!isExternal(hero))add('heroCraft',book?'抄录'+hero.name+'招式书':'合成专属招贤令','兑换','每份消耗 '+(book?'武学残页 2':'本人信物 10'),book?sourcePage('heroes','skills',hero.id):{type:'ui_sourceExclusive',id:hero.id},book&&s.heroes[hero.id].status!=='owned'?'先邀本人入寨':funds(cost),{cost,priority:1});}
+ if(hero){const book=id.endsWith('_manual'),cost={items:{[book?'martial_pages':hero.id+'_token']:book?2:10}};if(book||!isExternal(hero))add('heroCraft',book?'抄录'+hero.name+'招式书':'合成专属招贤令','兑换','每份消耗 '+(book?'武学残页 2':'本人信物 10'),book?sourcePage('heroes','skills',hero.id):{type:'ui_sourceExclusive',id:hero.id},book&&s.heroes[hero.id].status!=='owned'?'先邀本人入寨':!book&&!recruitmentBanner(d,s.clock).headliners.some(h=>h.id===hero.id)?'此人不在本期名单，请查看月度招募日历':funds(cost),{cost,priority:1});}
  if(hero&&id.endsWith('_manual')&&isWanderer(hero)){const cost={items:{[hero.id+'_token']:3}};add('tokenBook','散人信物换书','兑换','本人信物 3 枚换招式书 1 本',sourcePage('heroes','skills',hero.id),s.heroes[hero.id].status!=='owned'?'先邀本人入寨':funds(cost),{cost,priority:1});}
  for(const [region,r] of Object.entries(ROUTE_PRIZES))if(r.equipment===id)add('journey:'+region,r.title,'兑换',r.name+' '+routeBalance(s,region)+' / '+ROUTE_PRICE+'；需走通路线带回路契',sourcePage('realm','rewards'),routeBalance(s,region)<ROUTE_PRICE?'路契不足':'',{priority:0});
  if(BOX_OPTIONS[id])add('box','军需自选箱','自选','每箱可选 '+BOX_OPTIONS[id]+' 份',sourcePage('bag','supplies'),s.inventory.material_choice>0?'':'尚无军需自选箱',{priority:0});
@@ -97,6 +99,7 @@ export function acquisitionSources(s,d,id){
  for(const h of d.heroes){const q=chronicleQuote(s,h.id);if(!q)continue;const supplies=q.step===3?{[h.id+'_token']:3,spirit_essence:3}:q.model.materials,amounts=q.step?{...supplies,[h.id+'_manual']:q.step,exp_pill:Math.max(supplies.exp_pill||0,q.step)}:{};if(amounts[id])add('chronicle:'+h.id,h.name+' · '+q.model.title,'一次','本段可选择相关酬谢；两种酬谢只能领一种。',sourcePage('heroes','tasks',h.id),q.reason,{priority:2});}
  for(const story of d.stories){const found=Object.values(story.steps).some(step=>step.choices.some(c=>(c.effects||[]).some(e=>e.type==='item'&&e.id===id)));if(found){const claimed=s.progress.stories[story.id]?.status==='completed';add('story:'+story.id,story.title,'剧情','随剧情选择取得，查看剧情中的交付与奖励。',{type:'ui_mapInspect',id:story.map},claimed?'此段剧情已完成':'继续对应主线',{claimed,priority:8});}}
  if(equip&&!equip.source)for(const dungeon of d.dungeons){const pool=equipmentPool(d,Math.min(3,1+Math.floor(dungeon.level/15)));if(!pool.some(e=>e.id===id))continue;const rate=EQUIPMENT_DROP_RATE/pool.length,used=s.daily.dungeons[dungeon.id]||0;add('ordinaryGear:'+dungeon.id,dungeon.name+' · 战后搜获','概率','先判定 '+pct(EQUIPMENT_DROP_RATE)+' 出装备，再从 '+pool.length+' 件中等概率抽取；此件约 '+pct(rate)+'，体力 '+dungeon.cost+'。',{type:'ui_sourceDungeon',id:dungeon.id},!dungeonEntry(s,dungeon)?'需主线条件或对应聚义厅等级':used>=dungeon.limit?'今日次数用完':!s.team.some(h=>s.heroes[h].level>=dungeon.level)?'队中一人 '+dungeon.level+' 级':s.player.stamina<dungeon.cost?'体力不足':'',{rate,priority:5});}
+ rows.push(...promotionCoreSourceRows(s,d,id));
  if(!rows.length)add('none','暂无常规来源','线索',item?.description||'这件物品尚无可重复取得的入口。',sourcePage('map'), '暂无可重复来源',{priority:9});
  for(const row of rows){if(busy&&!row.reason)row.reason='先结束当前交战或行程';}
  return rows.sort((a,b)=>(a.claimed?3:a.reason?1:0)-(b.claimed?3:b.reason?1:0)||(a.priority??5)-(b.priority??5));

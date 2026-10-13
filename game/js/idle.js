@@ -1,9 +1,9 @@
-import {accrueContacts} from './exploration.js?v=0.82.2';
-import {REGION_CONTACTS} from './exploration-data.js?v=0.82.2';
-import {knowHero} from './hero.js?v=0.82.2';
-import {ensureGathering} from './gathering.js?v=0.82.2';
-import {IDLE_ROUTES,IDLE_CYCLE,IDLE_CAP,idleUnlocked,idleRates,idleAvailable} from './idle-data.js?v=0.82.2';
-import {requireRule,journal} from './utils.js?v=0.82.2';
+import {accrueContacts} from './exploration.js?v=0.83.0';
+import {REGION_CONTACTS} from './exploration-data.js?v=0.83.0';
+import {knowHero} from './hero.js?v=0.83.0';
+import {ensureGathering} from './gathering.js?v=0.83.0';
+import {IDLE_ROUTES,IDLE_CYCLE,IDLE_CAP,idleUnlocked,idleRates,idleAvailable} from './idle-data.js?v=0.83.0';
+import {requireRule,journal} from './utils.js?v=0.83.0';
 const make=s=>s.idleDispatch??={version:1,revision:0,earned:0,mission:null,bank:{}};
 export function accrueIdle(s){const x=s.idleDispatch,m=x?.mission;if(!m)return;ensureGathering(s);const elapsed=Math.max(0,s.clock-m.lastAt),time=m.carry+Math.min(IDLE_CAP,elapsed),cycles=Math.floor(time/IDLE_CYCLE);m.lastAt=s.clock;m.carry=time%IDLE_CYCLE;accrueContacts(s,m,cycles);for(const [id,rate]of Object.entries(idleRates(m.region,m.hero,s))){const old=x.bank[id]||0,n=Math.min(rate*16,old+cycles*rate);if(n>old){x.bank[id]=n;x.earned+=n-old;}}}
 export function idleQuote(s,region,hero){return {items:Object.hasOwn(IDLE_ROUTES,region)?idleRates(region,hero,s):{},reason:!s.camp?'先建立寨子。':!Object.hasOwn(IDLE_ROUTES,region)?'请选择派遣地区。':!idleUnlocked(s,region)?'先亲自通关这个地区，任一难度均可。':s.idleDispatch?.mission?'已有好汉在采集，请先接回。':Object.values(s.idleDispatch?.bank||{}).some(n=>n>0)?'先收好上趟暂存材料，再安排新派遣。':!idleAvailable(s,hero)?'请选择未出阵、未任职且不在外派中的好汉。':''};}

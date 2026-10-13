@@ -1,7 +1,7 @@
-import {away} from './hero-availability.js?v=0.82.2';
-import {SCENE_LIBRARY} from './scene-library.js?v=0.82.2';
+import {away} from './hero-availability.js?v=0.83.0';
+import {SCENE_LIBRARY} from './scene-library.js?v=0.83.0';
 // Scene presentation is derived from existing saves; looking and talking never grants rewards.
-import {deployedTroops} from './logistics.js?v=0.82.2';
+import {deployedTroops} from './logistics.js?v=0.83.0';
 export const SCENE_ART=Object.fromEntries(Object.entries(SCENE_LIBRARY).map(([id,art])=>[id,art.src]));
 const present=(s,id)=>s.heroes[id]?.status==='owned'&&!away(s,id);
 export const woodlandReport=s=>s.lastBattle?.context.type==='camp'&&s.lastBattle.context.id==='woods'?s.lastBattle:null;

@@ -1,4 +1,4 @@
-import {REVISIT_FLAGS,revisitGoal} from './region-revisit-data.js?v=0.82.2';
+import {REVISIT_FLAGS,revisitGoal} from './region-revisit-data.js?v=0.83.0';
 export const RUINS_NODES = {
  gate:{name:'荒祠山门',links:['court','bell'],text:'门匾歪在枯树上。破殿里有火光，钟楼下断断续续传来笛声。',purpose:'认路、整备；听清钟声后，可从东墙直达残碑石室。'},
  court:{name:'破殿前庭',links:['gate','stele'],text:'几名盗匪围着火堆分东西。领头的人一抬手，旁边两人便往石阶靠拢。',purpose:'三名盗匪；头目会蓄势护阵，可用眩晕或打断截住。',battle:'ruins'},
