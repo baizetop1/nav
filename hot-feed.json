@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-13T17:06:41.320Z",
+  "generatedAt": "2026-10-13T21:15:33.910Z",
   "intelligence": {
-    "updatedAt": "2026-10-13T17:06:41.320Z",
+    "updatedAt": "2026-10-13T21:15:33.910Z",
     "items": [
       {
         "id": "cn-item-c21526e6dab52106",
@@ -13,6 +13,88 @@
         "publishedAt": "2026-10-13T10:02:26.000Z",
         "summary": "中新网10月13日电 据中央纪委国家监委网站消息，重庆市委原副书记、市政府原市长黄奇帆涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
         "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-104935",
+        "category": "security",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104935",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-13T00:00:00.000Z",
+        "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
+        "badge": "CVE-2026-104935",
+        "signal": "已遭利用 · 整改期限 2026-10-16"
+      },
+      {
+        "id": "ai-openai-8d45898e533e591d",
+        "category": "ai",
+        "title": "Higgsfield takes AI video from 1 minute to over 10",
+        "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-13T12:00:00.000Z",
+        "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50073879",
+        "category": "dev",
+        "title": "Gemini 4 Argon",
+        "url": "https://deepmind.google/models/gemini/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-13T16:03:16.000Z",
+        "badge": "HN",
+        "signal": "766 分 · 605 评论"
+      },
+      {
+        "id": "cn-it-413c5263d8626f18",
+        "category": "cn",
+        "title": "苹果 Apple Watch 睡眠呼吸暂停功能正式上线，先一步读懂你的呼吸",
+        "url": "https://www.ithome.com/1/012/602.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-13T17:01:14.000Z",
+        "summary": "IT之家 10 月 13 日消息，10 月 14 日凌晨 1 点，苹果通过 OTA 向用户推送新系统。升级 iOS 与 watchOS 之后，Apple Watch 用户即可开通睡眠呼吸暂停功能。这项功能此前已通过国家药品监督管理局批准，以“睡眠呼吸暂停迹象提示”应用的二类医疗器械身份进入国内，成为 Apple Watch 上又一个受医疗监管的健康功能。 睡眠呼吸暂停功能目前支持 Apple Watch Series 9、Ultra 2 和 SE 3 及后续表款，面向年满 …",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-4j9v-h7pp-725h",
+        "category": "security",
+        "title": "Microsoft Security Advisory CVE-2026-70035 - .NET and Visual Studio Remote Code Execution Vulnerability",
+        "url": "https://github.com/advisories/GHSA-4j9v-h7pp-725h",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-13T20:53:46.000Z",
+        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.WindowsDesktop.App.Runtime (WPF). This advisory also provides guidance on what developers can do to update their a…",
+        "badge": "CVE-2026-70035",
+        "signal": "HIGH · CVSS 8.8"
+      },
+      {
+        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
+        "category": "ai",
+        "title": "Developing Gemini 4 Argon responsibly and safely",
+        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-13T19:43:07.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1248549",
+        "category": "dev",
+        "title": "战战兢兢，非程序员的第一个开源项目，以国标为基础的公文生成与机检工具",
+        "url": "https://www.v2ex.com/t/1248549",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-13T18:29:32.000Z",
+        "summary": "我不是程序员，但是从小就对计算机、信息技术、互联网十分感兴趣。初中时期，在只有 ADSL 网络的网吧熬几个通宵，用 Dreamweaver 和 FrontPage 做了人生第一个个人网站，那真是回忆满满。到现在四十多岁，还保持着对这些技术方面的兴趣和热爱。尤其最近几年 AI 大行其道，突然发现可玩儿的东西真的太多了，也就跟着折腾了很多玩意儿。 我在上市公司、国企干了 20 年。现在跟政府、央国企打交道多，天天要读写材料。然后从满足自己的实际需求出发，用 Claude 整了一…",
+        "badge": "程序员",
+        "signal": "0 回复"
+      },
+      {
+        "id": "cn-baidu-5180c5918c1a4bcc",
+        "category": "cn",
+        "title": "机器狗第1次进哀牢山就拍到冥界之花",
+        "url": "https://www.baidu.com/s?wd=%E6%9C%BA%E5%99%A8%E7%8B%97%E7%AC%AC1%E6%AC%A1%E8%BF%9B%E5%93%80%E7%89%A2%E5%B1%B1%E5%B0%B1%E6%8B%8D%E5%88%B0%E5%86%A5%E7%95%8C%E4%B9%8B%E8%8A%B1&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "近日，《科考中国》开展云南哀牢山生物多样性野外综合科考，具身智能机器狗首次参与本次科考。机器狗拍到每年仅约40天露出地表的“冥界之花”水晶兰，还深入西黑冠长臂猿栖息地，帮助科研人员将观测位置推进约20米。",
+        "badge": "热搜",
+        "signal": "7,808,109 热度"
       },
       {
         "id": "cisa-kev-cve-2015-5477",
@@ -26,6 +108,46 @@
         "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
+        "id": "ai-hugging-face-53911f98c21c784f",
+        "category": "ai",
+        "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-13T17:05:48.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50077020",
+        "category": "dev",
+        "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+        "url": "https://guitoro.com/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-13T19:11:48.000Z",
+        "badge": "HN",
+        "signal": "111 分 · 33 评论"
+      },
+      {
+        "id": "cn-item-1cbed454230c2888",
+        "category": "cn",
+        "title": "男子在悬空寺古建横梁做引体向上 景区通报：公安机关已立案",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-13/10713912.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-13T09:40:37.000Z",
+        "summary": "中新网10月13日电 10月13日，恒山风景名胜区管理中心在其官方微信公众号发布情况通报称，近日，网络流传“一男子在悬空寺古建横梁做引体向上”的视频，引发社会广泛关注。恒山风景名胜区管理中心高度重视，迅速启动应急响应机制，联合相关部门开展核查处置工作。现将有关情况通报如下：",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-mf4x-w4gh-4656",
+        "category": "security",
+        "title": "Microsoft Security Advisory CVE-2026-70186 - ASP.NET Core Denial of Service Vulnerability",
+        "url": "https://github.com/advisories/GHSA-mf4x-w4gh-4656",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-13T20:53:19.000Z",
+        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.AspNetCore.Server.Kestrel.Core. This advisory also provides guidance on what developers can do to update their app…",
+        "badge": "CVE-2026-70186",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
         "id": "ai-openai-570fe3204556675e",
         "category": "ai",
         "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
@@ -36,46 +158,6 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50073879",
-        "category": "dev",
-        "title": "Gemini 4 Argon",
-        "url": "https://deepmind.google/models/gemini/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-13T16:03:16.000Z",
-        "badge": "HN",
-        "signal": "266 分 · 226 评论"
-      },
-      {
-        "id": "cn-it-413c5263d8626f18",
-        "category": "cn",
-        "title": "苹果 Apple Watch 睡眠呼吸暂停功能正式上线，先一步读懂你的呼吸",
-        "url": "https://www.ithome.com/1/012/602.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-13T17:01:14.000Z",
-        "summary": "IT之家 10 月 13 日消息，10 月 14 日凌晨 1 点，苹果通过 OTA 向用户推送新系统。升级 iOS 与 watchOS 之后，Apple Watch 用户即可开通睡眠呼吸暂停功能。这项功能此前已通过国家药品监督管理局批准，以“睡眠呼吸暂停迹象提示”应用的二类医疗器械身份进入国内，成为 Apple Watch 上又一个受医疗监管的健康功能。 睡眠呼吸暂停功能目前支持 Apple Watch Series 9、Ultra 2 和 SE 3 及后续表款，面向年满 …",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-m687-p538-r5hp",
-        "category": "security",
-        "title": "Vikunja: Permissive Cross-domain Security Policy trusts every localhost origin which should not be trusted",
-        "url": "https://github.com/advisories/GHSA-m687-p538-r5hp",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:57:50.000Z",
-        "summary": "## Summary Vikunja ships with `cors.origins` defaulting to `http://127.0.0.1:*` and `http://localhost:*`, and sends `Access-Control-Allow-Credentials: true`, so a page served from any port on the user's own machine may make credentialed cr…",
-        "badge": "GHSA-M687-P538-R5HP",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-google-deepmind-94cc08977f17740f",
-        "category": "ai",
-        "title": "Gemini 4 Argon for Robotics",
-        "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-13T16:01:58.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
         "id": "v2ex-1248529",
         "category": "dev",
         "title": "8 月 1 号到现在，我完成了接近 2000 个开发任务，放到以前简直不敢想象",
@@ -84,17 +166,17 @@
         "publishedAt": "2026-10-13T14:09:14.000Z",
         "summary": "虽然我从 25 年就开始一直用 AI 辅助编程了，但真正完全让 AI 写代码，大概是从今年 3 月开始。 从 3 月到现在，我做了 QuickTUI 这个项目，提交了 2 万次，发了 350 多个 iOS TestFlight 版本，代码累计超过 120 万行。。。跨越 Go/Rust/Swift/Kotilin 等等。 期间还给公司搞了两个十几万行的 Go 项目，其中一个用户量都接近 9KW 了。 最初 AI 写的代码还是自己 Review ，后来干脆让 AI Revie…",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "15 回复"
       },
       {
-        "id": "cn-baidu-5180c5918c1a4bcc",
+        "id": "cn-it-7dd0d986f3174c1c",
         "category": "cn",
-        "title": "机器狗第1次进哀牢山就拍到冥界之花",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%BA%E5%99%A8%E7%8B%97%E7%AC%AC1%E6%AC%A1%E8%BF%9B%E5%93%80%E7%89%A2%E5%B1%B1%E5%B0%B1%E6%8B%8D%E5%88%B0%E5%86%A5%E7%95%8C%E4%B9%8B%E8%8A%B1&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "近日，《科考中国》开展云南哀牢山生物多样性野外综合科考，具身智能机器狗首次参与本次科考。机器狗拍到每年仅约40天露出地表的“冥界之花”水晶兰，还深入西黑冠长臂猿栖息地，帮助科研人员将观测位置推进约20米。",
-        "badge": "热搜",
-        "signal": "7,808,250 热度"
+        "title": "不能打电话、发短信：华为官网显示手机与手机间通信共享只支持共享网络能力（含 eSIM）",
+        "url": "https://www.ithome.com/1/012/600.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-13T15:58:59.000Z",
+        "summary": "IT之家 10 月 13 日消息， 华为在 Mate 90 系列手机上首发了多设备互助通信共享功能 。只需要碰一碰，就能把几台华为设备的网络资源整合起来，按需分配。 IT之家从华为官网了解到，手机与平板间通信共享支持共享手机双卡通话、短信、网络能力（含 eSIM），支持手机双卡网络切换时，平板网络跟随切换。 但手机与手机间通信共享只支持共享手机网络能力（含 eSIM） 。 另外， 共享端手机和接收端手机需同时为 HarmonyOS 7 及以上版本 ，且单台设备最多可同时为 …",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2016-3081",
@@ -108,54 +190,53 @@
         "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
-        "id": "ai-hugging-face-53911f98c21c784f",
+        "id": "ai-google-deepmind-94cc08977f17740f",
         "category": "ai",
-        "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
-        "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-13T17:05:48.000Z",
-        "badge": "Hugging Face"
+        "title": "Gemini 4 Argon for Robotics",
+        "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-13T16:01:58.000Z",
+        "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50071017",
+        "id": "hn-50054092",
         "category": "dev",
-        "title": "Apple HomeView",
-        "url": "https://www.apple.com/apple-homeview/",
+        "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+        "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-13T13:02:12.000Z",
+        "publishedAt": "2026-10-12T10:09:37.000Z",
         "badge": "HN",
-        "signal": "413 分 · 524 评论"
+        "signal": "233 分 · 232 评论"
       },
       {
-        "id": "cn-item-1cbed454230c2888",
+        "id": "cn-baidu-b1f00731bf3f712f",
         "category": "cn",
-        "title": "男子在悬空寺古建横梁做引体向上 景区通报：公安机关已立案",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-13/10713912.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-13T09:40:37.000Z",
-        "summary": "中新网10月13日电 10月13日，恒山风景名胜区管理中心在其官方微信公众号发布情况通报称，近日，网络流传“一男子在悬空寺古建横梁做引体向上”的视频，引发社会广泛关注。恒山风景名胜区管理中心高度重视，迅速启动应急响应机制，联合相关部门开展核查处置工作。现将有关情况通报如下：",
-        "badge": "中新网要闻"
+        "title": "33岁销冠确诊胃癌晚期后突然被辞退",
+        "url": "https://www.baidu.com/s?wd=33%E5%B2%81%E9%94%80%E5%86%A0%E7%A1%AE%E8%AF%8A%E8%83%83%E7%99%8C%E6%99%9A%E6%9C%9F%E5%90%8E%E7%AA%81%E7%84%B6%E8%A2%AB%E8%BE%9E%E9%80%80&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "33岁销冠李宇确诊胃癌晚期后遭辞退，劳动仲裁判赔11万，公司不服起诉称其产出不达标。李宇称11万是救命钱，盼好聚好散。据悉，该公司总公司已完成2.8亿C轮融资。",
+        "badge": "热搜",
+        "signal": "7,712,246 热度"
       },
       {
-        "id": "github-advisory-ghsa-j3hg-9rp3-5hw9",
+        "id": "github-advisory-ghsa-pfwj-2f93-rf42",
         "category": "security",
-        "title": "Nginx UI: Unauthenticated signed-request body staging can exhaust temporary storage",
-        "url": "https://github.com/advisories/GHSA-j3hg-9rp3-5hw9",
+        "title": "Microsoft Security Advisory CVE-2026-70007 - .NET and Visual Studio Remote Code Execution Vulnerability",
+        "url": "https://github.com/advisories/GHSA-pfwj-2f93-rf42",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:57:08.000Z",
-        "summary": "## Summary In Nginx UI versions 2.5.0 through 2.5.x, the node-signature authentication path staged an attacker-controlled request body in a temporary file and synchronized it to disk before validating the body digest and cryptographic sign…",
-        "badge": "CVE-2026-107805",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-13T20:52:52.000Z",
+        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.WindowsDesktop.App.Runtime (WPF). This advisory also provides guidance on what developers can do to update their a…",
+        "badge": "CVE-2026-70007",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-openai-9bf93d58cc35db99",
+        "id": "ai-hugging-face-e05551817b225bef",
         "category": "ai",
-        "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-        "url": "https://openai.com/index/asana-browser-agent",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-09T07:00:00.000Z",
-        "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-        "badge": "OpenAI"
+        "title": "Impactful scheduling for GPU clusters",
+        "url": "https://huggingface.co/blog/allenai/impactful-scheduling",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-09T15:20:29.000Z",
+        "badge": "Hugging Face"
       },
       {
         "id": "v2ex-1248524",
@@ -169,14 +250,14 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-7dd0d986f3174c1c",
+        "id": "cn-item-7fca4c63a699fae6",
         "category": "cn",
-        "title": "不能打电话、发短信：华为官网显示手机与手机间通信共享只支持共享网络能力（含 eSIM）",
-        "url": "https://www.ithome.com/1/012/600.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-13T15:58:59.000Z",
-        "summary": "IT之家 10 月 13 日消息， 华为在 Mate 90 系列手机上首发了多设备互助通信共享功能 。只需要碰一碰，就能把几台华为设备的网络资源整合起来，按需分配。 IT之家从华为官网了解到，手机与平板间通信共享支持共享手机双卡通话、短信、网络能力（含 eSIM），支持手机双卡网络切换时，平板网络跟随切换。 但手机与手机间通信共享只支持共享手机网络能力（含 eSIM） 。 另外， 共享端手机和接收端手机需同时为 HarmonyOS 7 及以上版本 ，且单台设备最多可同时为 …",
-        "badge": "IT之家"
+        "title": "三部门：到2028年，内河新能源船舶保有量较2025年翻倍",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-13/10713807.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-13T08:09:58.000Z",
+        "summary": "中新网10月13日电 据交通运输部网站消息，近日，交通运输部联合工业和信息化部、国家能源局印发《内河新能源船舶推广应用行动方案(2026—2030年)》(以下简称《行动方案》)。",
+        "badge": "中新网要闻"
       },
       {
         "id": "cisa-kev-cve-2023-22894",
@@ -190,6 +271,47 @@
         "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
+        "id": "ai-openai-9bf93d58cc35db99",
+        "category": "ai",
+        "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+        "url": "https://openai.com/index/asana-browser-agent",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-09T07:00:00.000Z",
+        "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50073633",
+        "category": "dev",
+        "title": "Redesigning source control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-13T15:49:56.000Z",
+        "badge": "HN",
+        "signal": "363 分 · 352 评论"
+      },
+      {
+        "id": "cn-it-bf2c3a773175ce3b",
+        "category": "cn",
+        "title": "苹果今日举办欢迎回家发布会，盘中股价再创历史新高",
+        "url": "https://www.ithome.com/1/012/599.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-13T15:55:55.000Z",
+        "summary": "IT之家 10 月 13 日消息，苹果于北京时间 10 月 13 日晚 9 点召开了一次主题为“欢迎回家”的新品发布会，正式推出旗下首款智能家庭中枢 HomeView，以及 HomePod mini 2 等新品。 当晚美股盘初， 苹果股价再度创下历史新高 ，总市值达 5.06 万亿美元 （IT之家注：现汇率约合 33.93 万亿元人民币） 。 据外媒 MacObserver 报道 ，苹果正计划在 2027 年（明年）推出一项全新的家庭安全监控服务，作为其进一步拓展智能家居业…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-c27m-942f-rcfh",
+        "category": "security",
+        "title": "Microsoft Security Advisory CVE-2026-87697 - .NET and Visual Studio Remote Code Execution Vulnerability",
+        "url": "https://github.com/advisories/GHSA-c27m-942f-rcfh",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-13T20:52:24.000Z",
+        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.WindowsDesktop.App.Runtime (WPF). This advisory also provides guidance on what developers can do to update their a…",
+        "badge": "CVE-2026-87697",
+        "signal": "HIGH · CVSS 8.8"
+      },
+      {
         "id": "ai-google-deepmind-851107eacfc8ba0f",
         "category": "ai",
         "title": "Gemini 4 Argon: Built to solve your hardest problems",
@@ -197,46 +319,6 @@
         "source": "Google DeepMind",
         "publishedAt": "2026-10-13T16:01:52.000Z",
         "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50072913",
-        "category": "dev",
-        "title": "Thunderbird for iOS",
-        "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-13T15:07:37.000Z",
-        "badge": "HN",
-        "signal": "105 分 · 31 评论"
-      },
-      {
-        "id": "cn-baidu-b1f00731bf3f712f",
-        "category": "cn",
-        "title": "33岁销冠确诊胃癌晚期后突然被辞退",
-        "url": "https://www.baidu.com/s?wd=33%E5%B2%81%E9%94%80%E5%86%A0%E7%A1%AE%E8%AF%8A%E8%83%83%E7%99%8C%E6%99%9A%E6%9C%9F%E5%90%8E%E7%AA%81%E7%84%B6%E8%A2%AB%E8%BE%9E%E9%80%80&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "33岁销冠李宇确诊胃癌晚期后遭辞退，劳动仲裁判赔11万，公司不服起诉称其产出不达标。李宇称11万是救命钱，盼好聚好散。据悉，该公司总公司已完成2.8亿C轮融资。",
-        "badge": "热搜",
-        "signal": "7,712,463 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-pwhx-cvv3-qj5c",
-        "category": "security",
-        "title": "Tina: Code injection via unescaped Git branch name in generated client source",
-        "url": "https://github.com/advisories/GHSA-pwhx-cvv3-qj5c",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:56:52.000Z",
-        "summary": "### Summary `@tinacms/cli` inserts the raw Git branch value into the generated `client.ts` source without escaping or encoding. A Git-valid branch name can close the string literal and inject an arbitrary JavaScript expression that execute…",
-        "badge": "CVE-2026-108259",
-        "signal": "HIGH · CVSS 8.2"
-      },
-      {
-        "id": "ai-hugging-face-e05551817b225bef",
-        "category": "ai",
-        "title": "Impactful scheduling for GPU clusters",
-        "url": "https://huggingface.co/blog/allenai/impactful-scheduling",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-09T15:20:29.000Z",
-        "badge": "Hugging Face"
       },
       {
         "id": "v2ex-1248522",
@@ -247,17 +329,17 @@
         "publishedAt": "2026-10-13T13:11:58.000Z",
         "summary": "可能是被 a/和 o/弄的疯魔了，一个不当人+一个低智人。订了一堆，就纯烧代码。 devin 200 ，grok heavy+claude plus ，某中转站 999 会员 1000*0.5 的额度，kiro-cli 1 年，反重力 18 个月，还有直开的 codex x5,单位的 codex x20 。 试用下来发现 devin 体验最好（而且支持银联），grok 勉勉强强，后面就定个 codex plus ，claude plus （再被封就不买了）。",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-item-7fca4c63a699fae6",
+        "id": "cn-baidu-14c0b47115a52a3c",
         "category": "cn",
-        "title": "三部门：到2028年，内河新能源船舶保有量较2025年翻倍",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-13/10713807.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-13T08:09:58.000Z",
-        "summary": "中新网10月13日电 据交通运输部网站消息，近日，交通运输部联合工业和信息化部、国家能源局印发《内河新能源船舶推广应用行动方案(2026—2030年)》(以下简称《行动方案》)。",
-        "badge": "中新网要闻"
+        "title": "未来五年看病就医会有哪些新变化",
+        "url": "https://www.baidu.com/s?wd=%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%B9%B4%E7%9C%8B%E7%97%85%E5%B0%B1%E5%8C%BB%E4%BC%9A%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B0%E5%8F%98%E5%8C%96&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "19项主要指标、5个方面部署24项重点任务……国务院日前印发《国民健康“十五五”规划》，为未来五年守护亿万人民健康亮出“任务书”、绘就“路线图”。一起来看，未来五年，看病就医会有哪些新变化？",
+        "badge": "热搜",
+        "signal": "7,615,861 热度"
       },
       {
         "id": "cisa-kev-cve-2021-3199",
@@ -271,6 +353,46 @@
         "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
+        "id": "ai-hugging-face-ffd2818196374b7e",
+        "category": "ai",
+        "title": "The model that didn't exist, so you made it yourself",
+        "url": "https://huggingface.co/blog/building-with-ml-intern",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-08T00:00:00.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50071017",
+        "category": "dev",
+        "title": "Apple HomeView",
+        "url": "https://www.apple.com/apple-homeview/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-13T13:02:12.000Z",
+        "badge": "HN",
+        "signal": "589 分 · 723 评论"
+      },
+      {
+        "id": "cn-item-a426dc5d32dc61d6",
+        "category": "cn",
+        "title": "市场监管总局公布7起涉导向违法广告典型案例",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-13/10713816.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-13T08:07:10.000Z",
+        "summary": "中新网10月13日电 据“市说新语”微信公众号消息，2026年，市场监管总局在全国范围内组织开展户外广告导向问题专项治理、低俗广告专项清理整治等工作，依法严肃查处使用国家机关名义或者形象、以低俗擦边内容博眼球、宣扬封建迷信以及其他违背社会良好风尚的违法广告，加强对主要互联网平台企业的合规指导，督促指导其拦截、清理涉导向违规素材17.5万条，有力维护商业营销宣传领域意识形态安全。2026年前三季度，全国市场监管部门共查办广告违法案件33754件，罚没金额1.65亿元。现选取7…",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-w6wh-p4g7-mpj2",
+        "category": "security",
+        "title": "Microsoft Security Advisory CVE-2026-96225 - .NET and Visual Studio Elevation of Privilege Vulnerability",
+        "url": "https://github.com/advisories/GHSA-w6wh-p4g7-mpj2",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-13T20:51:51.000Z",
+        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.NETCore.App.Runtime; System.Private.CoreLib. This advisory also provides guidance on what developers can do to upd…",
+        "badge": "CVE-2026-96225",
+        "signal": "HIGH · CVSS 7.8"
+      },
+      {
         "id": "ai-openai-db7b9e6fe248e314",
         "category": "ai",
         "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
@@ -279,46 +401,6 @@
         "publishedAt": "2026-10-08T16:00:00.000Z",
         "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
         "badge": "OpenAI"
-      },
-      {
-        "id": "hn-50069499",
-        "category": "dev",
-        "title": "11 year old unsoundness bugs found in Rust borrow checker",
-        "url": "https://github.com/rust-lang/rust/issues/164250",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-13T10:27:00.000Z",
-        "badge": "HN",
-        "signal": "514 分 · 300 评论"
-      },
-      {
-        "id": "cn-it-bf2c3a773175ce3b",
-        "category": "cn",
-        "title": "苹果今日举办欢迎回家发布会，盘中股价再创历史新高",
-        "url": "https://www.ithome.com/1/012/599.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-13T15:55:55.000Z",
-        "summary": "IT之家 10 月 13 日消息，苹果于北京时间 10 月 13 日晚 9 点召开了一次主题为“欢迎回家”的新品发布会，正式推出旗下首款智能家庭中枢 HomeView，以及 HomePod mini 2 等新品。 当晚美股盘初， 苹果股价再度创下历史新高 ，总市值达 5.06 万亿美元 （IT之家注：现汇率约合 33.93 万亿元人民币） 。 据外媒 MacObserver 报道 ，苹果正计划在 2027 年（明年）推出一项全新的家庭安全监控服务，作为其进一步拓展智能家居业…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-x34j-47hf-4xg7",
-        "category": "security",
-        "title": "TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment",
-        "url": "https://github.com/advisories/GHSA-x34j-47hf-4xg7",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:56:48.000Z",
-        "summary": "### Summary The TinaCMS admin builds its preview ` ` from the `/~/*` hash-router splat without checking that the value stays same-origin. A fragment with a doubled slash (`#/~//attacker.example/p`) becomes the protocol-relative URL `//atta…",
-        "badge": "CVE-2026-108261",
-        "signal": "CRITICAL · CVSS 9.3"
-      },
-      {
-        "id": "ai-google-deepmind-c11a83f73b42d756",
-        "category": "ai",
-        "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
-        "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-06T19:57:04.000Z",
-        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1248511",
@@ -332,14 +414,14 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-14c0b47115a52a3c",
+        "id": "cn-it-0b01e4c33dd94cf8",
         "category": "cn",
-        "title": "未来五年看病就医会有哪些新变化",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%AA%E6%9D%A5%E4%BA%94%E5%B9%B4%E7%9C%8B%E7%97%85%E5%B0%B1%E5%8C%BB%E4%BC%9A%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B0%E5%8F%98%E5%8C%96&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "19项主要指标、5个方面部署24项重点任务……国务院日前印发《国民健康“十五五”规划》，为未来五年守护亿万人民健康亮出“任务书”、绘就“路线图”。一起来看，未来五年，看病就医会有哪些新变化？",
-        "badge": "热搜",
-        "signal": "7,618,146 热度"
+        "title": "红魔 12 Pro+ 手机官宣搭载行业首款 185Hz 全面屏，行业首发 185Hz 高刷显示控制芯片",
+        "url": "https://www.ithome.com/1/012/598.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-13T15:27:21.000Z",
+        "summary": "IT之家 10 月 13 日消息，红魔游戏手机官方今日继续预热 12 系列新机。据介绍， 红魔 12 Pro+ 将采用红魔第九代屏下技术 ，打造无孔全面屏，宣称“通透度更高、刷新率更高、边框更窄”。 根据红魔游戏手机官方介绍，红魔 12 Pro+ 搭载了行业首款 185Hz 全面屏 —— 行业首发 185Hz 高刷显示控制芯片 + 采用行业首款屏下 X11 发光材料 。 另外，红魔 12 Pro+ 手机的 屏幕边框缩窄至 0.96mm 。 IT之家从红魔游戏手机官方了解到，…",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2015-3306",
@@ -353,105 +435,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-11"
       },
       {
-        "id": "ai-hugging-face-ffd2818196374b7e",
+        "id": "ai-google-deepmind-c11a83f73b42d756",
         "category": "ai",
-        "title": "The model that didn't exist, so you made it yourself",
-        "url": "https://huggingface.co/blog/building-with-ml-intern",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-08T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50073221",
-        "category": "dev",
-        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
-        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-13T15:25:50.000Z",
-        "badge": "HN",
-        "signal": "71 分 · 41 评论"
-      },
-      {
-        "id": "cn-item-a426dc5d32dc61d6",
-        "category": "cn",
-        "title": "市场监管总局公布7起涉导向违法广告典型案例",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-13/10713816.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-13T08:07:10.000Z",
-        "summary": "中新网10月13日电 据“市说新语”微信公众号消息，2026年，市场监管总局在全国范围内组织开展户外广告导向问题专项治理、低俗广告专项清理整治等工作，依法严肃查处使用国家机关名义或者形象、以低俗擦边内容博眼球、宣扬封建迷信以及其他违背社会良好风尚的违法广告，加强对主要互联网平台企业的合规指导，督促指导其拦截、清理涉导向违规素材17.5万条，有力维护商业营销宣传领域意识形态安全。2026年前三季度，全国市场监管部门共查办广告违法案件33754件，罚没金额1.65亿元。现选取7…",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-c42q-qvc3-j6vg",
-        "category": "security",
-        "title": "@tinacms/web-components: `tina-markdown` writes rich-text link URLs into `href` without scheme validation, allowing stored XSS",
-        "url": "https://github.com/advisories/GHSA-c42q-qvc3-j6vg",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-09T20:56:45.000Z",
-        "summary": "### Summary ` ` renders a rich-text AST into the DOM and, for `a` nodes, assigns the node's URL straight to the anchor's `href` with no scheme check. A link authored in the CMS as `javascript:…` renders as a live `javascript:` anchor, so a…",
-        "badge": "CVE-2026-108260",
-        "signal": "HIGH · CVSS 7.6"
-      },
-      {
-        "id": "ai-openai-855092fba1df7e8a",
-        "category": "ai",
-        "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-        "url": "https://openai.com/index/pollo-ai",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-08T12:00:00.000Z",
-        "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1248508",
-        "category": "dev",
-        "title": "请问你们是怎么找到 vibe coding 的需求的",
-        "url": "https://www.v2ex.com/t/1248508",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-13T12:34:40.000Z",
-        "summary": "为啥大家都能找到那么多的需求，额度都不够用了。我现在 codex plus 也每周只能用到一半量，有的时候知道要重置了，也不知道做什么，好迷茫。",
-        "badge": "程序员",
-        "signal": "10 回复"
-      },
-      {
-        "id": "cn-it-0b01e4c33dd94cf8",
-        "category": "cn",
-        "title": "红魔 12 Pro+ 手机官宣搭载行业首款 185Hz 全面屏，行业首发 185Hz 高刷显示控制芯片",
-        "url": "https://www.ithome.com/1/012/598.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-13T15:27:21.000Z",
-        "summary": "IT之家 10 月 13 日消息，红魔游戏手机官方今日继续预热 12 系列新机。据介绍， 红魔 12 Pro+ 将采用红魔第九代屏下技术 ，打造无孔全面屏，宣称“通透度更高、刷新率更高、边框更窄”。 根据红魔游戏手机官方介绍，红魔 12 Pro+ 搭载了行业首款 185Hz 全面屏 —— 行业首发 185Hz 高刷显示控制芯片 + 采用行业首款屏下 X11 发光材料 。 另外，红魔 12 Pro+ 手机的 屏幕边框缩窄至 0.96mm 。 IT之家从红魔游戏手机官方了解到，…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-88779",
-        "category": "security",
-        "title": "Citrix NetScaler：Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-88779",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-04T00:00:00.000Z",
-        "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
-        "badge": "CVE-2026-88779",
-        "signal": "已遭利用 · 整改期限 2026-10-07"
-      },
-      {
-        "id": "ai-google-deepmind-ce56aa83d0064ef1",
-        "category": "ai",
-        "title": "Gemini 4 Argon: our next era of frontier intelligence",
-        "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+        "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+        "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-09-30T20:01:45.000Z",
+        "publishedAt": "2026-10-06T19:57:04.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50074289",
+        "id": "hn-50072913",
         "category": "dev",
-        "title": "Cyberattack halts construction of tunnel between Denmark and Germany",
-        "url": "https://ua.news/en/world/kiberataka-zupinila-budivnitstvo-tuneliu-mizh-daniieiu-ta-nimechchinoiu-rmf24",
+        "title": "Thunderbird for iOS",
+        "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-13T16:24:15.000Z",
+        "publishedAt": "2026-10-13T15:07:37.000Z",
         "badge": "HN",
-        "signal": "15 分 · 4 评论"
+        "signal": "257 分 · 97 评论"
       },
       {
         "id": "cn-baidu-236d898555e08a18",
@@ -461,18 +461,18 @@
         "source": "百度热搜",
         "summary": "近日降温，多位母亲因初高中儿子拒穿厚衣盖厚被发愁。此前，岑女士儿子重感冒刚愈仍执意穿短裤出门，林女士欲送厚被也被顶回。班主任分析，此类穿衣之争实质是青春期孩子宣告独立与争夺生活“主权”，建议家长用信任替代焦虑，将“替孩子决定”转为“提醒不强求”。",
         "badge": "热搜",
-        "signal": "7,522,283 热度"
+        "signal": "7,521,036 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-102490",
+        "id": "github-advisory-ghsa-qjpx-jqm5-h2c4",
         "category": "security",
-        "title": "Zammad GmbH Zammad：Zammad GmbH Zammad Improper Privilege Management Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102490",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-02T00:00:00.000Z",
-        "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
-        "badge": "CVE-2026-102490",
-        "signal": "已遭利用 · 整改期限 2026-10-05"
+        "title": "Microsoft Security Advisory CVE-2026-96230 - ASP.NET Core Remote Code Execution Vulnerability",
+        "url": "https://github.com/advisories/GHSA-qjpx-jqm5-h2c4",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-13T20:51:12.000Z",
+        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.AspNetCore.Components.WebAssembly.Server. This advisory also provides guidance on what developers can do to update…",
+        "badge": "CVE-2026-96230",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-hugging-face-16b7810afb00bdc0",
@@ -484,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1248490",
+        "id": "v2ex-1248508",
         "category": "dev",
-        "title": "让我的 BA 做了两个网站",
-        "url": "https://www.v2ex.com/t/1248490",
+        "title": "请问你们是怎么找到 vibe coding 的需求的",
+        "url": "https://www.v2ex.com/t/1248508",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-13T10:49:46.000Z",
-        "summary": "让我的 BA 做了两个网站 agentshow.cc 可以观察真实用户到底在怎么用 muse 这些 AI 助理的，只收录真实分享贴 agentbee.cc 可了解头部 agent team 的前沿产研理念和产品动态更新 需要🪜",
+        "publishedAt": "2026-10-13T12:34:40.000Z",
+        "summary": "为啥大家都能找到那么多的需求，额度都不够用了。我现在 codex plus 也每周只能用到一半量，有的时候知道要重置了，也不知道做什么，好迷茫。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "10 回复"
       }
     ]
   },
@@ -509,7 +509,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 197912,
+        "stars": 203585,
         "starsToday": 54706
       },
       {
@@ -519,7 +519,7 @@
         "url": "https://github.com/bilawalsidhu/gods-eye-view",
         "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "language": "JavaScript",
-        "stars": 54928,
+        "stars": 55184,
         "starsToday": 1961
       },
       {
@@ -529,7 +529,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 62289,
+        "stars": 62869,
         "starsToday": 2277
       },
       {
@@ -539,7 +539,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 27982,
+        "stars": 28117,
         "starsToday": 978
       },
       {
@@ -549,7 +549,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 53756,
+        "stars": 53948,
         "starsToday": 1813
       },
       {
@@ -559,7 +559,7 @@
         "url": "https://github.com/vercel-labs/skills",
         "description": "The open agent skills tool - npx skills",
         "language": "TypeScript",
-        "stars": 34297,
+        "stars": 34400,
         "starsToday": 187
       },
       {
@@ -569,7 +569,7 @@
         "url": "https://github.com/lyogavin/airllm",
         "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
         "language": "Jupyter Notebook",
-        "stars": 38133,
+        "stars": 38243,
         "starsToday": 1004
       },
       {
@@ -579,7 +579,7 @@
         "url": "https://github.com/storytold/artcraft",
         "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "language": "Rust",
-        "stars": 24802,
+        "stars": 25330,
         "starsToday": 4078
       },
       {
@@ -589,10 +589,10 @@
         "url": "https://github.com/xtool-org/xtool",
         "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
         "language": "Swift",
-        "stars": 8927,
+        "stars": 9173,
         "starsToday": 1182
       }
     ],
-    "updatedAt": "2026-10-13T17:06:41.320Z"
+    "updatedAt": "2026-10-13T21:15:33.910Z"
   }
 }
