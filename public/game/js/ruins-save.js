@@ -1,4 +1,4 @@
-import {RUINS_NODES,RUINS_FLAGS,ruinsHas,ruinsGate,ruinsRoute} from './ruins-data.js?v=0.83.0';
+import {RUINS_NODES,RUINS_FLAGS,ruinsHas,ruinsGate,ruinsRoute} from './ruins-data.js?v=0.84.0';
 export function validateRuins(s,check){
  const x=s.exploration,r=x?.ruins;if(r===undefined)return;
  const obj=v=>v&&typeof v==='object'&&!Array.isArray(v);

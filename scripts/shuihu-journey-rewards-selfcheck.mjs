@@ -5,11 +5,12 @@ import {journeyNextGoal} from '../public/game/js/journey-goals-ui.js';
 import {equipmentPool} from '../public/game/js/camp-development.js';
 import {startBattle,advanceBattle} from '../public/game/js/battle.js';
 import {freshCamp} from '../public/game/js/camp.js';
+import {prepareCombatParty} from './shuihu-campaign-fixtures.mjs';
 import {attributes} from '../public/game/js/hero.js';
 import {gameSnapshot,exportSave,importSave} from '../public/game/js/portable.js';
 import {gains} from '../public/game/js/rewards-ui.js';
 import {CloudClient} from '../public/game/js/cloud.js';
-export let earned=act(fixture(81,40),'journeyTarget',{region:'forest'});earned.progress.flags.camp_goal_foundation=true;earned.progress.flags.camp_goal_first_win=true;
+export let earned=act(prepareCombatParty(fixture(81,40),d,undefined,{level:40,quality:2,skills:3,gear:true}),'journeyTarget',{region:'forest'});earned.progress.flags.camp_goal_foundation=true;earned.progress.flags.camp_goal_first_win=true;
 assert.equal(earned.realm.journey.rewards.target,'forest');assert.equal(routeBalance(earned,'forest'),0);
 assert.throws(()=>act(earned,'journeyExchange',{region:'forest',choice:'gear'}),/不足/);
 assert.throws(()=>act(earned,'journeyTarget',{region:'__proto__'}));
@@ -21,7 +22,8 @@ for(const [region,m] of Object.entries(ROUTE_PRIZES)){
  assert.throws(()=>act(equipped,'goalSet',{kind:'craft',id:m.equipment}));assert.ok(!equipmentPool(d,3).some(e=>e.id===m.equipment));
  const prior=structuredClone(equipped);equipped=act(equipped,'journeyExchange',{region,choice:'gear'});assert.equal(routeBalance(equipped,region),3);const e=equipped.equipment.at(-1);assert.equal(e.item,m.equipment);assert.equal(e.locked,true);assert.ok(gains(prior,equipped,d).some(x=>x.name.includes(m.title)));assert.throws(()=>act(equipped,'dismantle',{id:e.uid}),/锁定/);equipped=act(equipped,'equip',{id:e.uid,hero:'baisheng'});assert.throws(()=>act(equipped,'journeyExchange',{region,choice:'gear'}),/不足/);
 }
-assert.ok(attributes(equipped,'baisheng',d).attack>attributes(earned,'baisheng',d).attack);
+// Route gear improves the unequipped hero; prepared +5 gear may have higher raw stats.
+const naked=structuredClone(equipped);naked.equipment=naked.equipment.filter(e=>e.hero!=='baisheng');assert.ok(attributes(equipped,'baisheng',d).attack>attributes(naked,'baisheng',d).attack);
 const supplies=act(equipped,'journeyExchange',{region:'forest',choice:'supplies'});assert.equal(routeBalance(supplies,'forest'),1);assert.equal(supplies.inventory.herb-(equipped.inventory.herb||0),3);assert.equal(supplies.inventory.iron-equipped.inventory.iron,2);
 const full=structuredClone(earned);full.equipment=Array.from({length:200},(_,i)=>({uid:'eq_'+(i+1),item:'oak_staff',plus:0,hero:null}));full.nextEquipment=201;const unchanged=structuredClone(full);assert.throws(()=>act(full,'journeyExchange',{region:'forest',choice:'gear'}),/200/);assert.deepEqual(full,unchanged);
 const badChanges=[s=>s.realm.journey.rewards.spent.forest=10,s=>s.realm.journey.rewards.earned.water=-1,s=>s.realm.journey.rewards.earned.fake=2,s=>s.realm.journey.rewards.target='invalid',s=>s.realm.journey.rewards.version=2,s=>delete s.realm.journey.best.water];

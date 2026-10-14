@@ -1,10 +1,10 @@
 # 白泽水浒 Android 安装包
 
-当前安装包版本为 **0.83.0（versionCode 57）**，使用原包名与签名构建，加入活动招贤、八人名册、人物专属升品核心、剧情副本入口和固定难度。六地探索、重访、跨地区共事、来源追踪及寨中生活保留。包名 `top.baizeone.shuihu`，支持 Android 8.0 及以上。游戏资源完整内置，云存档需要联网；后续使用同一签名、同一包名、递增 versionCode 的 APK 覆盖安装。
+当前安装包版本为 **0.84.0（versionCode 58）**，使用原包名与签名构建，加入正册甲乙丙资质、均衡活动名单、实际兵损及直接显示伤亡的胜负弹窗。六地探索、重访、共事、来源追踪及寨中生活保留。包名 `top.baizeone.shuihu`，支持 Android 8.0 及以上。游戏资源完整内置，云存档需要联网；后续使用同一签名、同一包名、递增 versionCode 的 APK 覆盖安装。
 
 ## 安装与存档迁移
 
-1. 将已生成的 `artifacts/android/baize-shuihu-0.83.0.apk` 传到手机，直接覆盖安装。先更新 0.83.0 Worker 能力，无须更新数据库；网页由 GitHub Actions 随 main 分支提交部署。
+1. 将已生成的 `artifacts/android/baize-shuihu-0.84.0.apk` 传到手机，直接覆盖安装。先更新 0.84.0 Worker 能力，无须更新数据库；网页由 GitHub Actions 随 main 分支提交部署。
 2. 原浏览器中进入“存档 → 导出当前进度”，把 JSON 文件保存到手机。
 3. 打开 APK 的“存档 → 导入文件 → 从其他设备导入存档”，选择 JSON，检查预览并确认导入。
 4. 或在 APK 中下载已有云档；更新原云档仍需该档的上传密钥。
@@ -33,6 +33,16 @@ cd 'F:\nav-main\nav-main'
 JavaScript 原生接口仅用于显式导出存档，保存位置通过系统文件选择器由用户确定。导入也通过系统文件选择器，不申请全盘存储权限。App 使用网站原有 Origin，因此当前仅允许 `https://baizeone.top` 的 Worker CORS 配置可直接兼容；0.82.0 的完整新进度要求 Worker 返回 release: 0.82.0，以及 grainRoad、idleDispatch、regionalGathering、regionExploration、marshExploration、ruinsExploration、forestExploration、waterExploration、mountainExploration、explorationGoals、mineRevisit、marshRevisit、regionRevisits、mineCompanion、crossRegionEvents、sourceTracking、campLife 均为 1；没有新增数据库表，不需要执行 SQL。仅推送 GitHub 不会部署 Worker，也不会更新手机内置的游戏文件。
 
 方案参考 Android 官方 [加载应用内网页](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content) 和 [APK 签名工具](https://developer.android.com/tools/apksigner)。
+
+## 0.84.0 安装包验证
+
+401 个内置文件逐字节匹配源码；原包名和原签名保留，versionCode 从 57 升至 58。公开签名证书 SHA-256 与旧包一致。
+
+直接使用 APK 提取页面，四种手机尺寸验证固定资质、八人名册与获得状态、活动本领预览、日历、真实单抽和十连；手机与桌面验证首战实际阵亡、伤兵治疗、付费补缺和重载保留。原名册、升品、九处剧情副本与每日差事在五种尺寸共 90 个状态通过。360／390 竖屏与 844 横屏离线验证 0.83.0 旧档升级、原生导出桥接、文件导入与重启。
+
+没有连接 Android 真机；覆盖安装、系统字号、返回键、实际文件选择器及厂商 WebView 仍需手机验收。
+
+大小 66,924,689 字节；SHA-256：`110e0fa09fc57c3f736eb6255787d8efa70b54cfe4c4220c6e48a05b7340ab76`。文件：`artifacts/android/baize-shuihu-0.84.0.apk`，校验记录：`artifacts/android/apk084-verification.json`。
 
 ## 0.83.0 安装包验证
 

@@ -1,0 +1,44 @@
+.hero-aptitude{display:inline-flex;align-items:center;justify-content:center;padding:1px 4px;border:1px solid currentColor;border-radius:3px;font:11px/1.25 system-ui;white-space:nowrap;vertical-align:middle}
+.hero-aptitude-A{color:#8d6730;background:#f4e9d2}.hero-aptitude-B{color:#476f6a;background:#e3eeea}.hero-aptitude-C{color:#68757b;background:#edf0f1}
+:root[data-theme=night] .hero-aptitude-A{color:#d7bd80;background:#3b3424}:root[data-theme=night] .hero-aptitude-B{color:#a2c6ba;background:#2b3e35}:root[data-theme=night] .hero-aptitude-C{color:#bac5c8;background:#323b3e}
+.roster-tile>strong{display:flex;align-items:center;justify-content:space-between;gap:3px;min-width:0}.roster-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.roster-tile>strong .hero-aptitude{flex:none;font-size:10px}.roster-position{font-size:10px;color:var(--muted);white-space:nowrap}.dossier-identity .meta .hero-aptitude{margin-right:2px}.dossier-aptitude{margin:5px 0 0!important}.dossier-aptitude>summary{min-height:30px;padding:4px 0;line-height:20px}.dossier-aptitude p{font-size:12px;line-height:1.6;margin:5px 0}
+#main .recruit-banner-hero>.recruit-hero-inspect{position:relative;display:block;width:100%;height:100%;min-height:0;padding:0!important;margin:0;border:0;border-radius:0;background:transparent;overflow:hidden;box-shadow:none;color:#fff;text-align:left}
+#main .recruit-hero-inspect>.hero-portrait{display:block;width:100%!important;height:100%!important;border:0;border-radius:0;float:none;flex:none;margin:0}
+#main .recruit-hero-inspect>div{position:absolute;inset:auto 0 0;padding:23px 7px 5px;background:linear-gradient(transparent,rgba(27,43,36,.90));color:#fff;line-height:1.25;pointer-events:none}
+#main .recruit-hero-inspect strong{display:block;font-size:18px;font-weight:650;margin:1px 0!important;line-height:22px}
+#main .recruit-hero-identity{display:flex;align-items:center;gap:3px;font-size:10px;line-height:15px;white-space:nowrap}#main .recruit-hero-identity .hero-aptitude{font-size:9px;line-height:12px;padding:0 2px;flex:none}
+#main .recruit-hero-link{display:block;font-size:9px;line-height:13px;color:#d3e0d8;margin:1px 0 0}#main .recruit-hero-inspect:focus-visible{outline:2px solid #bda361;outline-offset:-3px}
+#main .recruit-target-identity{display:flex;align-items:center;gap:6px;flex-wrap:wrap}#main .recruit-target-identity button{font-size:11px!important;min-height:24px!important;padding:2px 4px!important;margin:0!important}
+.result-identity,.batch-identity{display:flex;align-items:center;justify-content:center;gap:5px;font-size:11px!important;line-height:16px!important;margin:3px 0!important}.batch-draw h3 .hero-aptitude{font-size:9px}.batch-identity .hero-tier{font-size:9px}
+@media(max-width:900px){#main .roster-tile>strong .hero-aptitude{font-size:8px;line-height:12px;padding:0 2px}#main .roster-position{font-size:8px;line-height:12px}#main .roster-tile>.roster-collection{gap:3px}.dossier-aptitude>summary{font-size:11px;min-height:26px;padding:2px 0}.dossier-aptitude p{font-size:11px}}
+@media(max-height:650px){#main .recruit-hero-inspect>div{padding:12px 5px 4px}#main .recruit-hero-inspect strong{font-size:16px;line-height:20px}#main .recruit-hero-identity{font-size:9px;gap:2px}#main .recruit-hero-identity .hero-aptitude{font-size:8px}}
+@media(min-width:600px) and (max-width:900px) and (max-height:500px){.hero-dossier{display:grid;grid-template-columns:220px minmax(0,1fr);column-gap:12px}.dossier-identity{grid-column:1;grid-row:1}.dossier-tabs{grid-column:1;grid-row:2;align-self:start}.dossier-panel{grid-column:2;grid-row:1/4}.dossier-ability{margin:0!important;padding:4px 0!important}.dossier-ability p{margin:3px 0!important}.dossier-panel>.actions{margin:3px 0!important}.dossier-panel>.actions button{min-height:28px!important;padding:3px 6px!important;font-size:11px!important}.dossier-aptitude{margin:1px 0!important}}
+
+@media(max-width:599px) and (max-height:650px){
+ #main [data-page-section="heroes:profile"] .dossier-navigation :is(select,button){min-height:32px!important;height:32px!important;font-size:11px!important;padding:3px 5px!important}
+ #main [data-page-section="heroes:profile"] #roster-detail{margin-top:4px!important}#main .hero-dossier{padding:6px!important}
+ #main .hero-dossier .dossier-tabs{padding:2px 0!important;margin:3px 0!important}#main .hero-dossier .dossier-tabs button{min-height:30px!important;padding:3px!important}
+ #main .dossier-ability{padding:4px 0!important;margin:4px 0!important}#main .dossier-ability p{font-size:11px!important;line-height:1.45!important;margin:3px 0!important}
+ #main .dossier-panel>.actions{margin:4px 0!important;gap:5px}#main .dossier-panel>.actions button{min-height:32px!important;padding:4px 7px!important;font-size:11px!important}
+}
+
+@media(max-width:900px){
+ #screen-detail .roster-filters{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px!important;padding:8px!important}
+ #screen-detail .roster-filters label{display:grid;gap:3px!important;margin:0;font-size:11px!important;line-height:14px}
+ #screen-detail .roster-filters :is(select,input){min-height:32px!important;height:32px!important;margin:0!important;padding:3px 5px!important;font-size:11px!important}
+ #screen-detail .roster-filters button{min-height:32px!important;height:32px!important;font-size:11px!important;padding:3px 5px!important;margin:0!important}
+}
+@media(min-width:600px) and (max-width:900px) and (max-height:500px){#screen-detail .roster-filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+@media(min-width:600px) and (max-width:900px) and (max-height:500px){
+ #main .recruit-target{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3px 9px;padding:6px 8px!important}
+ #main .recruit-target>h2{grid-column:1;grid-row:1;margin:0!important}
+ #main .recruit-target>p:first-of-type{grid-column:1;grid-row:2;margin:0!important;font-size:11px!important;line-height:15px!important}
+ #main .recruit-target>label{grid-column:1;grid-row:3;margin:0!important}
+ #main .recruit-target>.hero-portrait{grid-column:2;grid-row:1;margin:0!important;width:30px!important;height:32px!important}
+ #main .recruit-target>h3{grid-column:2;grid-row:1;padding-left:37px;margin:0!important;font-size:12px!important;line-height:17px!important}
+ #main .recruit-target>.recruit-target-identity{grid-column:2;grid-row:2;margin:0!important;font-size:10px!important;line-height:15px!important;gap:3px}
+ #main .recruit-target>p:last-of-type{grid-column:2;grid-row:3;margin:0!important;font-size:10px!important;line-height:15px!important;align-self:center}
+ #main .recruit-target>.actions{grid-column:1/-1;grid-row:4;margin:3px 0!important}#main .recruit-target>.actions button{min-height:32px!important;padding:4px 6px!important}
+ #main .recruit-target>details{grid-column:1/-1;grid-row:5}#main .recruit-target>details>summary{min-height:27px!important;padding:4px 0!important}
+}

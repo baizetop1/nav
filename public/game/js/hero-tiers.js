@@ -1,3 +1,4 @@
+import {heroAptitude} from './hero-aptitude.js?v=0.84.0';
 // Collection tier is separate from cultivation quality and historical aptitude.
 export const HERO_TIERS={
  canonical:{id:'canonical',name:'正册',rarity:5,power:1.2,description:'梁山一百零八将'},
@@ -8,11 +9,11 @@ const BASE={fighter:{hp:900,attack:110,defense:60,speed:70,strategy:40},defender
 const GROWTH={fighter:{hp:42,attack:7,defense:3,speed:3,strategy:2},defender:{hp:50,attack:5,defense:5,speed:2,strategy:2},ranger:{hp:38,attack:7,defense:3,speed:4,strategy:2},support:{hp:40,attack:4,defense:4,speed:3,strategy:7},strategist:{hp:30,attack:3,defense:3,speed:3,strategy:9}};
 export function heroTier(hero){const tier=hero?.group!=='external'?HERO_TIERS.canonical:hero.obtain?.type==='wanderer'?HERO_TIERS.wanderer:HERO_TIERS.external;return {...tier,rarity:tier.rarity||hero.star};}
 export function tierAttributes(hero,level){
- const tier=heroTier(hero),result={};
+ const tier=heroTier(hero),power=tier.power*(heroAptitude(hero)?.power||1),result={};
  for(const key of Object.keys(hero.attribute)){
   const base=tier.id==='canonical'?Math.max(hero.attribute[key],BASE[hero.type][key]):hero.attribute[key];
   const growth=tier.id==='canonical'?Math.max(hero.growth[key],GROWTH[hero.type][key]):hero.growth[key];
-  result[key]=Math.round((base+growth*(level-1))*(key==='speed'?1:tier.power));
+  result[key]=Math.round((base+growth*(level-1))*(key==='speed'?1:power));
  }
  return result;
 }

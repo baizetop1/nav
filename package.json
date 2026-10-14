@@ -290,7 +290,12 @@
     "test:shuihu-v083-cloud": "node scripts/shuihu-v083-cloud-selfcheck.mjs",
     "check:shuihu-banner": "node scripts/shuihu-banner-browser.mjs",
     "check:shuihu-v083": "node scripts/shuihu-v083-browser.mjs",
-    "check:shuihu-special-compact": "node scripts/shuihu-special-compact-browser.mjs"
+    "check:shuihu-special-compact": "node scripts/shuihu-special-compact-browser.mjs",
+    "test:shuihu-aptitude-data": "node scripts/shuihu-aptitude-data-selfcheck.mjs",
+    "test:shuihu-combat-casualties": "node scripts/shuihu-combat-casualties-selfcheck.mjs",
+    "test:shuihu-aptitude-gameplay": "node scripts/shuihu-aptitude-gameplay-selfcheck.mjs",
+    "check:shuihu-aptitude": "node scripts/shuihu-aptitude-browser.mjs",
+    "test:shuihu-v084-cloud": "node scripts/shuihu-v084-cloud-selfcheck.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

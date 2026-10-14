@@ -1,7 +1,7 @@
-import {CROSS_STORY,CROSS_WORK,crossStep,crossHas,crossAvailable,crossPrerequisite,crossTaskReason,crossCommand} from './cross-region-data.js?v=0.83.0';
-import {crossWorkQuote} from './cross-region.js?v=0.83.0';
-import {explorationResume,explorationMaterialSource} from './exploration-goals.js?v=0.83.0';
-import {waterFightQuote} from './water.js?v=0.83.0';
+import {CROSS_STORY,CROSS_WORK,crossStep,crossHas,crossAvailable,crossPrerequisite,crossTaskReason,crossCommand} from './cross-region-data.js?v=0.84.0';
+import {crossWorkQuote} from './cross-region.js?v=0.84.0';
+import {explorationResume,explorationMaterialSource} from './exploration-goals.js?v=0.84.0';
+import {waterFightQuote} from './water.js?v=0.84.0';
 const map=(region,node)=>({type:'ui_regionOpen',region,...(node?{node}:{})});
 export function crossRegionLink(s,btn){return s.camp?btn(crossHas(s,'delivered')?'药船 · 配药与护送':crossHas(s,'accepted')?'药船 · 继续共事':'三地故人 · 药船消息',crossCommand(),'text-action').replace('<button ','<button data-cross-region-link '):'';}
 export function crossRegionPanel(s,d,esc,btn,embedded=false){

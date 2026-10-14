@@ -48,15 +48,15 @@ for(const h of data.heroes){
   assert.equal(unlockReason(trained,data.by.skills[h.id+'_bond']),'');
   trained.inventory[h.id+'_manual']=100;
   for(const id of h.skills){
-    const beforeSilver=trained.player.silver,beforePills=trained.inventory.exp_pill;
+    const quote=skillUpgradeQuote(trained,data.by.skills[id]),beforeSilver=trained.player.silver,beforePills=trained.inventory.exp_pill,beforeBooks=trained.inventory[h.id+'_manual'];assert.equal(quote.reason,'');assert.equal(quote.cost.items.exp_pill,1);assert.equal(quote.cost.items[h.id+'_manual'],1);
     trained=act(trained,'skillUpgrade',{id});assert.equal(skillLevel(trained,id),2);
-    assert.equal(trained.player.silver,beforeSilver-150);assert.equal(trained.inventory.exp_pill,beforePills-1);
+    assert.equal(trained.player.silver,beforeSilver-quote.cost.silver);assert.equal(trained.inventory.exp_pill,beforePills-1);assert.equal(trained.inventory[h.id+'_manual'],beforeBooks-1);
   }
 }
 const skillId='wusong_advanced';for(let i=0;i<3;i++)trained=act(trained,'skillUpgrade',{id:skillId});
 assert.equal(skillLevel(trained,skillId),5);assert.match(skillUpgradeQuote(trained,data.by.skills[skillId]).reason,/上限/);
 const beforeCap=JSON.stringify(trained);assert.throws(()=>act(trained,'skillUpgrade',{id:skillId}),/上限/);assert.equal(JSON.stringify(trained),beforeCap);
-const poor=growthFixture();poor.player.silver=0;const beforePoor=JSON.stringify(poor);assert.throws(()=>act(poor,'skillUpgrade',{id:'wusong_active'}));assert.equal(JSON.stringify(poor),beforePoor);
+const poor=growthFixture();poor.player.silver=skillUpgradeQuote(poor,data.by.skills.wusong_active).cost.silver-1;const beforePoor=JSON.stringify(poor);assert.throws(()=>act(poor,'skillUpgrade',{id:'wusong_active'}));assert.equal(JSON.stringify(poor),beforePoor);
 const notOwned=growthFixture();notOwned.heroes.wusong.status='known';assert.throws(()=>act(notOwned,'skillBook',{id:'wusong'}));
 let book=growthFixture(),pages=book.inventory.martial_pages;book=act(book,'skillBook',{id:'baisheng'});assert.equal(book.inventory.martial_pages,pages-2);assert.equal(book.inventory.baisheng_manual,1);
 const beforeAttrs=attributes(trained,'wusong',data);let walking=act(trained,'mountRide',{id:'wusong'});assert.match(unlockReason(walking,data.by.skills.wusong_bond),/骑乘/);assert.ok(attributes(walking,'wusong',data).attack<beforeAttrs.attack);assert.equal(skillLevel(walking,'wusong_bond'),2);walking=act(walking,'mountRide',{id:'wusong'});assert.deepEqual(attributes(walking,'wusong',data),beforeAttrs);

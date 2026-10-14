@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import path from 'node:path';
 import {createRequire} from 'node:module';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 import {fixture as baseFixture,d} from './shuihu-campaign-fixtures.mjs';
 import {advanceBattle} from '../public/game/js/battle.js';
 import {freshCamp} from '../public/game/js/camp.js';
@@ -10,12 +11,21 @@ import {gameSnapshot,exportSave,importSave} from '../public/game/js/portable.js'
 import {RESOURCE_ROUTES,resourceReward} from '../public/game/js/resource-dungeons-data.js';
 import {DAILY_ROUTES} from '../public/game/js/rotations.js';
 const require=createRequire(import.meta.url),{chromium}=require(process.env.SHUIHU_PLAYWRIGHT_PATH||'playwright');
-const gameURL=process.env.SHUIHU_GAME_URL||'http://127.0.0.1:5187/nav/game/index.html',origin=new URL(gameURL).origin;
-const output=new URL('../artifacts/casualties-browser/',import.meta.url),moduleVersions=new Set(),copy=structuredClone;
+const bundled=process.env.SHUIHU_GAME_ASSETS?path.resolve(process.env.SHUIHU_GAME_ASSETS):null;
+const gameURL=process.env.SHUIHU_GAME_URL||(bundled?'https://baizeone.top/__android__/game/index.html':'http://127.0.0.1:5187/nav/game/index.html'),origin=new URL(gameURL).origin,assetPrefix=new URL('.',gameURL).pathname;
+const output=pathToFileURL(path.resolve(process.env.SHUIHU_UI_OUT||'artifacts/casualties-browser')+path.sep),moduleVersions=new Set(),copy=structuredClone;
+const mime={'.html':'text/html','.js':'application/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.jpg':'image/jpeg','.jpeg':'image/jpeg','.ico':'image/x-icon','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf','.mp3':'audio/mpeg','.ogg':'audio/ogg'};
+function bundledAsset(route){
+ const u=new URL(route.request().url());let file;
+ try{file=path.resolve(bundled,decodeURIComponent(u.pathname.slice(assetPrefix.length)));}catch{return route.fulfill({status:400,body:'Invalid bundled asset path'});}
+ if(file.startsWith(bundled+path.sep)&&fs.existsSync(file)&&fs.statSync(file).isFile())return route.fulfill({path:file,contentType:mime[path.extname(file).toLowerCase()]||'application/octet-stream'});
+ return route.fulfill({status:404,body:'Missing bundled asset'});
+}
+
 fs.mkdirSync(output,{recursive:true});
 function fixture(){
  let s=newGame(d,Date.now(),93054);s.camp=freshCamp();Object.assign(s.camp,{buildings:{hall:4,barracks:5,clinic:3,farm:3,lumber:3,market:3},food:50000,wood:10000,troops:1000,mode:'army',deployment:100,tactic:'balanced'});s.player.silver=50000;s.player.stamina=140;s.team=['linchong','luzhishen','songjiang'];s.battleSkillMode='auto';s.progress.flags.camp_goal_foundation=true;for(const id of s.team)s.heroes[id]={status:'owned',level:30,exp:0};
- for(let i=0;i<2;i++){s=dispatch(d,s,{type:'campRaid',id:'woods'},s.clock);for(let j=0;j<180&&!s.battle.outcome;j++)advanceBattle(s,d,1000);assert.equal(s.battle.outcome,'victory');s=dispatch(d,s,{type:'finishBattle'},s.clock);}assert.equal(s.camp.fallen,0);assert.ok(s.camp.casualtyCarry>0);return gameSnapshot(s,d);
+ return gameSnapshot(s,d);
 }
 const wallet=s=>({stamina:s.player.stamina,silver:s.player.silver,food:s.camp.food,wood:s.camp.wood,troops:s.camp.troops,wounded:s.camp.wounded,inventory:s.inventory,team:s.team,mode:s.camp.mode,deployment:s.camp.deployment});
 const stock=s=>({silver:s.player.silver,food:s.camp.food,wood:s.camp.wood,herb:s.inventory.herb||0});
@@ -23,7 +33,8 @@ async function idle(page){await page.waitForFunction(()=>document.getElementById
 async function scene(width,height,kind){
  const state=fixture(),context=await browser.newContext({viewport:{width,height}}),page=await context.newPage(),errors=[];page.setDefaultTimeout(15000);
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{const u=new URL(r.url());if(u.origin!==origin||!u.pathname.includes('/game/'))return;if(r.status()>=400)errors.push('HTTP '+r.status()+' '+u.pathname);if(u.pathname.includes('/js/')&&u.pathname.endsWith('.js'))moduleVersions.add(u.searchParams.get('v')||'(unversioned)');});
- await context.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort('blockedbyclient'));
+ await context.route('**/*',route=>{const u=new URL(route.request().url());if(bundled&&u.origin===origin&&u.pathname.startsWith(assetPrefix))return bundledAsset(route);return !bundled&&u.origin===origin?route.continue():route.abort('blockedbyclient');});
+ if(bundled)await context.addInitScript(()=>{window.BaizeAndroid={exportSave(){}}});
  await context.addInitScript(raw=>{if(!localStorage.getItem('casualties-browser')){localStorage.setItem('baize_shuihu_save',raw);localStorage.setItem('baize_shuihu_battle_speed','2');localStorage.setItem('casualties-browser','1');}},JSON.stringify(state));
  await page.clock.setFixedTime(state.clock);await page.goto(gameURL);await page.locator('.viewport-shell').waitFor();await page.locator('#main').waitFor();await idle(page);assert.deepEqual(errors,[],'initial loading');return {context,page,errors,width,height,kind,state};
 }
@@ -32,7 +43,7 @@ async function command(t,type,extra={},scope='#main'){
  const buttons=t.page.locator(scope+' button[data-command]'),jump=t.page.locator('#main > .screen-pager input'),pages=await jump.count()?Number(await jump.getAttribute('max')):1;
  for(let page=0;page<=pages;page++){
   if(page&&await jump.count()){await jump.fill(String(page));await jump.press('Enter');await idle(t.page);}
-  const index=await buttons.evaluateAll((els,{type,extra})=>els.findIndex(e=>{const c=JSON.parse(e.dataset.command);return c.type===type&&Object.entries(extra).every(([k,v])=>c[k]===v);}),{type,extra});if(index>=0)return buttons.nth(index);
+  const index=await buttons.evaluateAll((els,{type,extra})=>els.findIndex(e=>{const c=JSON.parse(e.dataset.command);return c.type===type&&Object.entries(extra).every(([k,v])=>c[k]===v);}),{type,extra});if(index>=0){const raw=await buttons.nth(index).getAttribute('data-command');return t.page.locator('button[data-command='+JSON.stringify(raw)+']').first();}
  }
  assert.fail('missing '+type+' '+JSON.stringify(extra));
 }
@@ -40,7 +51,7 @@ async function reach(t,el){
  await el.waitFor({state:'attached'});
  const folds=await el.evaluate(e=>{const list=[];for(let p=e.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS'&&!p.open&&!(e.tagName==='SUMMARY'&&p===e.parentElement))list.push(p.dataset.fold);return list.reverse();});
  for(const fold of folds){assert.ok(fold,'stable disclosure');const summary=t.page.locator('[data-fold="'+fold+'"] > summary');await reach(t,summary);await summary.click();await idle(t.page);}
- const host=await el.evaluate(e=>e.closest('dialog')?'#'+e.closest('dialog').id+' .dialog-body':'#main'),pager=t.page.locator(host+' > .screen-pager'),jump=pager.locator('input');if(await jump.count()){await jump.fill('1');await jump.press('Enter');}
+ const host=await el.evaluate(e=>e.closest('dialog')?'#'+e.closest('dialog').id+' .dialog-body':'#main'),pager=t.page.locator(host+' > .screen-pager'),jump=pager.locator('input');
  const positions=[];for(let n=0;n<100;n++){
   const box=await el.evaluate(e=>{const r=e.getBoundingClientRect(),w=e.closest('.screen-window')?.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,window:w?{x:w.x,y:w.y,width:w.width,height:w.height}:null,inside:r.width>0&&r.height>0&&(!w||r.left>=w.left-1&&r.right<=w.right+1&&r.top>=w.top-1&&r.bottom<=w.bottom+1)};});
   positions.push(box);if(box.inside){if(t.width>900)await el.scrollIntoViewIfNeeded();return;}
@@ -65,11 +76,11 @@ async function section(t,view,id){
  await closeReward(t);const direct=t.page.locator('button[data-view="'+view+'"]:visible').first();if(await direct.count()){await reach(t,direct);await direct.click();await idle(t.page);}else await more(t,view);
  const picker=t.page.locator('select[data-section-view="'+view+'"]:visible').first();if(await picker.count()){await reach(t,picker);await picker.selectOption(id);await idle(t.page);}else await click(t,'ui_section',{view,id});await fit(t);
 }
-const browser=await chromium.launch({channel:'msedge',headless:true});
+const browser=await chromium.launch({...(process.env.SHUIHU_BROWSER_PATH?{executablePath:process.env.SHUIHU_BROWSER_PATH}:{channel:'msedge'}),headless:true});
 try{for(const [width,height] of [[390,844],[1280,900]]){
  const t=await scene(width,height,'casualties');try{
- await section(t,'camp','raids');const initial=await snapshot(t.page);await click(t,'campRaid',{id:'woods'});await t.page.locator('#sortie-preview[open]').waitFor();assert.deepEqual((await snapshot(t.page)).camp,initial.camp);await click(t,'ui_sortieConfirm',{},'#sortie-preview');await t.page.waitForFunction(()=>{const b=document.querySelector('.battle-end button');return b&&!b.disabled;},{},{timeout:45000});await click(t,'finishBattle');await t.page.locator('#reward-result[open]').waitFor();const after=await snapshot(t.page);assert.equal(after.lastBattle.fallen,1);assert.equal(after.camp.fallen,1);assert.equal(after.camp.troops+after.camp.wounded+after.camp.fallen,1000);assert.match(await t.page.locator('#reward-result .receipt-counts').textContent(),/阵亡\s*1/);await shot(t,'fatality-receipt');await closeReward(t);
- await section(t,'camp','troops');assert.match(await t.page.locator('#main').textContent(),/累计阵亡 1 人/);await click(t,'campHeal');await closeReward(t);const healed=await snapshot(t.page);assert.equal(healed.camp.wounded,0);assert.equal(healed.camp.troops,999);assert.equal(healed.camp.fallen,1);await shot(t,'healing-does-not-revive');const coins=healed.player.silver,food=healed.camp.food;await click(t,'campRecruit',{amount:100});await closeReward(t);const recruited=await snapshot(t.page);assert.equal(recruited.camp.troops,1000);assert.equal(recruited.player.silver,coins-3);assert.equal(recruited.camp.food,food-2);assert.equal(recruited.camp.fallen,1);assert.equal(recruited.camp.casualtyCarry,after.camp.casualtyCarry);await t.page.reload();await t.page.locator('#main').waitFor();await idle(t.page);assert.deepEqual((await snapshot(t.page)).camp,recruited.camp);await fit(t);console.log('Casualty browser PASS '+width+': actual third victory has one fatality, receipt visible, healing leaves vacancy, paid replacement, carry survives reload.');
- }finally{await t.context.close();}}
+ await section(t,'camp','raids');const initial=await snapshot(t.page);await click(t,'campRaid',{id:'woods'});await t.page.locator('#sortie-preview[open]').waitFor();assert.deepEqual((await snapshot(t.page)).camp,initial.camp);await click(t,'ui_sortieConfirm',{},'#sortie-preview');await t.page.locator('#battle-outcome[open][data-settled=true]').waitFor({timeout:45000});assert.match(await t.page.locator('#battle-outcome .receipt-counts').textContent(),/阵亡\s*1/);await shot(t,'fatality-outcome');await t.page.locator('#battle-outcome [data-settled-choice=review]').click();await idle(t.page);await t.page.locator('#reward-result[open]').waitFor();const after=await snapshot(t.page);assert.equal(after.lastBattle.fallen,1);assert.equal(after.camp.fallen,1);assert.equal(after.camp.troops+after.camp.wounded+after.camp.fallen,1000);assert.match(await t.page.locator('#reward-result .receipt-counts').textContent(),/阵亡\s*1/);await shot(t,'fatality-receipt');await closeReward(t);
+ await section(t,'camp','troops');assert.match(await t.page.locator('#main').textContent(),/累计阵亡 1 人/);await click(t,'campHeal');await closeReward(t);const healed=await snapshot(t.page);assert.equal(healed.camp.wounded,0);assert.equal(healed.camp.troops,999);assert.equal(healed.camp.fallen,1);await shot(t,'healing-does-not-revive');const coins=healed.player.silver,food=healed.camp.food;await click(t,'campRecruit',{amount:100});await closeReward(t);const recruited=await snapshot(t.page);assert.equal(recruited.camp.troops,1000);assert.equal(recruited.player.silver,coins-3);assert.equal(recruited.camp.food,food-2);assert.equal(recruited.camp.fallen,1);assert.equal(recruited.camp.casualtyCarry,after.camp.casualtyCarry);await t.page.reload();await t.page.locator('#main').waitFor();await idle(t.page);assert.deepEqual((await snapshot(t.page)).camp,recruited.camp);await fit(t);console.log('Casualty browser PASS '+width+': actual first clean victory has one fatality, receipt visible, healing leaves vacancy, paid replacement, carry survives reload.');
+ }catch(e){await t.page.screenshot({path:fileURLToPath(new URL('failure.png',output))});const trace=await t.page.evaluate(()=>({text:document.querySelector('#main')?.innerText,dialogs:[...document.querySelectorAll('dialog[open]')].map(e=>({id:e.id,text:e.innerText})),commands:[...document.querySelectorAll('#main button[data-command]')].map(e=>({command:e.dataset.command,rect:e.getBoundingClientRect().toJSON()}))}));fs.writeFileSync(new URL('failure.json',output),JSON.stringify(trace,null,2));console.log(JSON.stringify(trace).slice(0,3000));throw e;}finally{await t.context.close();}}
  assert.deepEqual([...moduleVersions],[d.config.release]);
 }finally{await browser.close();}

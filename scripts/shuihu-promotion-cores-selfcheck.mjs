@@ -25,11 +25,11 @@ for(const h of d.heroes){
  for(const id of r.special){assert.ok(SPECIAL_DUNGEONS[id]);homes.add(id);assert.ok(promotionDropPool(fixture(h.id),d,{type:'special',id,tier:1}).some(c=>c.hero===h.id));}
  const s=fixture(h.id),q=promotionQuote(s,h.id);assert.equal(q.core.required,3);assert.equal(q.cost.items[r.item],3);assert.match(q.reason,new RegExp(r.name.replace(/[.*+?^$(){}|[\]\\]/g,'\\$&')));
  for(const [id,n] of Object.entries(q.cost.items))s.inventory[id]=n;
- assert.equal(promotionQuote(s,h.id).reason,'');const beforeLevel=s.heroes[h.id].level,beforeExp=s.heroes[h.id].exp,beforeSilver=s.player.silver;
- promoteHero(s,d,h.id);assert.equal(s.heroes[h.id].quality,1);assert.equal(s.heroes[h.id].level,beforeLevel);assert.equal(s.heroes[h.id].exp,beforeExp);assert.equal(s.player.silver,beforeSilver-1200);assert.equal(s.inventory[r.item],0);
+ assert.equal(promotionQuote(s,h.id).reason,'');const fundedSilver=s.player.silver;s.player.silver=q.cost.silver-1;const poorBefore=JSON.stringify(s);assert.throws(()=>promoteHero(s,d,h.id),/碎银不足/);assert.equal(JSON.stringify(s),poorBefore,'Unaffordable promotion leaves every field unchanged');s.player.silver=fundedSilver;const beforeLevel=s.heroes[h.id].level,beforeExp=s.heroes[h.id].exp,beforeSilver=s.player.silver;
+ promoteHero(s,d,h.id);assert.equal(s.heroes[h.id].quality,1);assert.equal(s.heroes[h.id].level,beforeLevel);assert.equal(s.heroes[h.id].exp,beforeExp);assert.equal(s.player.silver,beforeSilver-q.cost.silver);assert.equal(s.inventory[r.item],0);
  const immortal=promotionQuote(s,h.id);assert.equal(immortal.cost.items[r.item],8);assert.deepEqual(Object.fromEntries(Object.entries(immortal.cost.items).filter(([id])=>id!==r.item)),QUALITIES[2].cost.items);
  const other=d.heroes.find(x=>x.id!==h.id);s.inventory[PROMOTION_CORES[other.id].item]=999;assert.ok(promotionQuote(s,h.id).reason,'Another hero core cannot pay this recipe');
- for(const [id,n] of Object.entries(immortal.cost.items))s.inventory[id]=n;promoteHero(s,d,h.id);assert.equal(s.heroes[h.id].quality,2);assert.equal(promotionQuote(s,h.id).cost,undefined);
+ for(const [id,n] of Object.entries(immortal.cost.items))s.inventory[id]=n;const beforeImmortalSilver=s.player.silver;promoteHero(s,d,h.id);assert.equal(s.player.silver,beforeImmortalSilver-immortal.cost.silver);assert.equal(s.heroes[h.id].quality,2);assert.equal(promotionQuote(s,h.id).cost,undefined);
  const saved=gameSnapshot(s,d);assert.equal(saved.heroes[h.id].quality,2);assert.equal(importSave(exportSave(s,{id:1,name:'升品检查'},d),d).state.heroes[h.id].quality,2);
  const rows=promotionCoreSourceRows(fixture(h.id),d,r.item);assert.equal(rows.length,7);assert.ok(rows.every(row=>row.command&&row.detail.includes('不要求本人上阵')));assert.equal(promotionCoreUses(d,r.item)[0].command.hero,h.id);
 }

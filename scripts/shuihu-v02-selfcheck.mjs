@@ -6,6 +6,7 @@ import {parseSave,validateSave,SaveStore,SAVE_KEY,BACKUP_KEY} from '../public/ga
 import {exits,dungeonEntry,meets} from '../public/game/js/map.js';
 import {strengthenQuote} from '../public/game/js/item.js';
 import {battleStep} from './shuihu-battle-test-helpers.mjs';
+import {recruitmentSchedule} from '../public/game/js/recruitment-banner.js';
 const root=new URL('../public/game/data/',import.meta.url);
 const raw=Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',root),'utf8'))]));
 const data=prepareData(raw),v1=JSON.parse(readFileSync(new URL('./fixtures/shuihu-v1-save.json',import.meta.url),'utf8'));
@@ -62,8 +63,9 @@ travel('qingzhou_road');choose('yangzhi_story','introduce');choose('yangzhi_stor
 assert.equal(state.progress.flags.volume_two_complete,true);assert.equal(state.heroes.yangzhi.status,'known');
 const endingCount=state.journal.filter(e=>e.text.startsWith('【逼上梁山】')).length;assert.equal(endingCount,1);const rewards=structuredClone(state.inventory);act('wait');assert.deepEqual(state.inventory,rewards);
 assert.equal(state.journal.filter(e=>e.text.startsWith('【逼上梁山】')).length,1);
+function nextFeaturedTime(id,from){const year=new Date(from+8*3600000).getUTCFullYear();for(let y=year;y<=year+1;y++)for(let month=0;month<12;month++)for(const banner of recruitmentSchedule(data,Date.UTC(y,month,5)))if(banner.endAt>from&&banner.headliners.some(h=>h.id===id))return Math.max(from,banner.startAt);assert.fail('No forthcoming featured period for '+id);}
 const completed=structuredClone(state);
-for(const id of ['chaijin','yangzhi']){state=dispatch(data,state,{type:'refresh'},Date.parse(id==='chaijin'?'2027-02-05T04:00:00Z':'2027-02-25T04:00:00Z'));travel('recruit');const count=state.inventory[id+'_token'];state.inventory[id+'_token']=10;act('craftOrder',{id});assert.equal(state.inventory[id+'_token'],0);state.recruit.fate[id]=4;act('recruit',{id});assert.equal(state.heroes[id].status,'owned');assert.equal(state.recruit.fate[id],0);assert.ok(count>=1);}
+for(const id of ['chaijin','yangzhi']){state=dispatch(data,state,{type:'refresh'},nextFeaturedTime(id,state.clock));travel('recruit');const count=state.inventory[id+'_token'];state.inventory[id+'_token']=10;act('craftOrder',{id});assert.equal(state.inventory[id+'_token'],0);state.recruit.fate[id]=4;act('recruit',{id});assert.equal(state.heroes[id].status,'owned');assert.equal(state.recruit.fate[id],0);assert.ok(count>=1);}
 // Both old and new entrances use the same counter. Old v1 access stays available.
 for(const [id,map] of [['yezhulin','boar_forest'],['shanshenmiao','mountain_temple']]){
   state=structuredClone(completed);state.team=['baisheng','wuyong'];state.heroes.baisheng.level=40;

@@ -1,14 +1,14 @@
-import {mountainHas} from './mountain-data.js?v=0.83.0';
-import {waterHas} from './water-data.js?v=0.83.0';
-import {forestHas} from './forest-data.js?v=0.83.0';
-import {ruinsHas} from './ruins-data.js?v=0.83.0';
-import {marshHas} from './marsh-data.js?v=0.83.0';
-import {regionBuilt} from './exploration-data.js?v=0.83.0';
-import {GATHERING_REGIONS,REGIONAL_RECIPES,historicGathering,gatheringProgress} from './gathering-data.js?v=0.83.0';
-import {IDLE_ROUTES,idleUnlocked} from './idle-data.js?v=0.83.0';
-import {RECIPES} from './provisions.js?v=0.83.0';
-import {pay,grant,newEquipment} from './item.js?v=0.83.0';
-import {requireRule,count,journal} from './utils.js?v=0.83.0';
+import {mountainHas} from './mountain-data.js?v=0.84.0';
+import {waterHas} from './water-data.js?v=0.84.0';
+import {forestHas} from './forest-data.js?v=0.84.0';
+import {ruinsHas} from './ruins-data.js?v=0.84.0';
+import {marshHas} from './marsh-data.js?v=0.84.0';
+import {regionBuilt} from './exploration-data.js?v=0.84.0';
+import {GATHERING_REGIONS,REGIONAL_RECIPES,historicGathering,gatheringProgress} from './gathering-data.js?v=0.84.0';
+import {IDLE_ROUTES,idleUnlocked} from './idle-data.js?v=0.84.0';
+import {RECIPES} from './provisions.js?v=0.84.0';
+import {pay,grant,newEquipment} from './item.js?v=0.84.0';
+import {requireRule,count,journal} from './utils.js?v=0.84.0';
 export function ensureGathering(s){return s.gathering??={version:1,regions:Object.fromEntries(Object.keys(GATHERING_REGIONS).map(id=>[id,historicGathering(s,id)]))};}
 // Call before the original clear counter changes, so the first new clear is counted once.
 export function recordGatheringClear(s,id,tier){

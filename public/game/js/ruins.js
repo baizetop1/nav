@@ -1,8 +1,8 @@
-import {revisitAction,revisitTask} from './region-revisit.js?v=0.83.0';
-import {RUINS_NODES,ruinsHas,ruinsGate,ruinsLinks,ruinsRoute} from './ruins-data.js?v=0.83.0';
-import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.83.0';
-import {knowHero,ownHero} from './hero.js?v=0.83.0';
-import {requireRule,journal} from './utils.js?v=0.83.0';
+import {revisitAction,revisitTask} from './region-revisit.js?v=0.84.0';
+import {RUINS_NODES,ruinsHas,ruinsGate,ruinsLinks,ruinsRoute} from './ruins-data.js?v=0.84.0';
+import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.84.0';
+import {knowHero,ownHero} from './hero.js?v=0.84.0';
+import {requireRule,journal} from './utils.js?v=0.84.0';
 export function openRuins(s){return s.exploration.ruins??={version:1,position:'gate',visited:['gate'],flags:[],pending:null};}
 export function ruinsPath(s,target){
  if(ruinsGate(s,target))return null;

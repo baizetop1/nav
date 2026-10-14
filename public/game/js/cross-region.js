@@ -1,6 +1,6 @@
-import {CROSS_TASKS,CROSS_REWARDS,CROSS_WORK,crossHas,crossTaskReason} from './cross-region-data.js?v=0.83.0';
-import {WORKSHOP_RECIPES} from './supplies-data.js?v=0.83.0';
-import {requireRule,journal} from './utils.js?v=0.83.0';
+import {CROSS_TASKS,CROSS_REWARDS,CROSS_WORK,crossHas,crossTaskReason} from './cross-region-data.js?v=0.84.0';
+import {WORKSHOP_RECIPES} from './supplies-data.js?v=0.84.0';
+import {requireRule,journal} from './utils.js?v=0.84.0';
 export function crossAction(s,a){
  const reason=crossTaskReason(s,a.id);requireRule(!reason,reason);
  const x=s.exploration.crossRegion??={version:1,flags:[]};x.flags.push(CROSS_TASKS[a.id].flag);

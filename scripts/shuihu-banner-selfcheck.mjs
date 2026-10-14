@@ -3,9 +3,10 @@ import {readFileSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
 import {newGame,dispatch} from '../public/game/js/core.js';
 import {recruit} from '../public/game/js/hero.js';
-import {weighted,pick} from '../public/game/js/utils.js';
+import {weighted,pick,random} from '../public/game/js/utils.js';
 import {freshCamp} from '../public/game/js/camp.js';
 import {recruitmentBanner,recruitmentSchedule,recruitStar} from '../public/game/js/recruitment-banner.js';
+import {heroAptitude} from '../public/game/js/hero-aptitude.js';
 import {supportState,welcomeCandidates,SELECT_COST} from '../public/game/js/recruit-support.js';
 import {recruitBannerPanel} from '../public/game/js/recruit-banner-ui.js';
 import {recruitSupportPanel} from '../public/game/js/recruit-support-ui.js';
@@ -19,7 +20,20 @@ const rawStars=d.heroes.map(h=>h.star),b=recruitmentBanner(d,now),active=new Set
 assert.equal(b.slot,1);assert.equal(b.heroes.length,17);assert.equal(active.size,17);assert.equal(b.headliners.length,3);
 for(const star of [1,2,3,4,5])assert.ok(b.byStar[star].every(h=>recruitStar(h)===star));
 assert.ok(b.byStar[5].every(h=>h.group!=='external'));assert.ok(b.byStar[4].every(h=>h.obtain.type==='external'));assert.ok([1,2,3].every(star=>b.byStar[star].every(h=>h.obtain.type==='wanderer')));
-const year=new Set();for(let month=0;month<12;month++)for(const period of recruitmentSchedule(d,Date.UTC(2026,month,5)))for(const h of period.headliners){assert.ok(!year.has(h.id));year.add(h.id);}assert.equal(year.size,108);
+const year=new Set(),annualGrades={A:0,B:0,C:0};
+for(let month=0;month<12;month++){
+ const schedule=recruitmentSchedule(d,Date.UTC(2026,month,5)),monthlyGrades={A:0,B:0,C:0};
+ for(const period of schedule){
+  assert.match(period.id,/-v2$/,'changed pools have a different command identity from 0.83 pages');
+  assert.deepEqual(period.headliners.map(h=>heroAptitude(h).id),period.slot<2?['A','B','C']:['B','B','C']);
+  assert.equal(period.heroes.length,17);assert.equal(new Set(period.heroes.map(h=>h.id)).size,17);
+  for(const h of period.headliners){assert.ok(!year.has(h.id));year.add(h.id);monthlyGrades[heroAptitude(h).id]++;annualGrades[heroAptitude(h).id]++;}
+ }
+ assert.deepEqual(monthlyGrades,{A:2,B:4,C:3},'each month mixes all three aptitudes');
+}
+assert.equal(year.size,108);assert.deepEqual(annualGrades,{A:24,B:48,C:36});
+assert.deepEqual([...year].sort(),d.heroes.filter(h=>h.group!=='external').map(h=>h.id).sort());
+assert.deepEqual(b.headliners.map(h=>h.id),['sunli','xiangchong','liyun'],'October 11–20 has explicit A/B/C headliners');
 for(const month of [1,3,9,11]){const schedule=recruitmentSchedule(d,Date.UTC(2028,month,5));assert.equal(schedule[0].endAt,schedule[1].startAt);assert.equal(schedule[1].endAt,schedule[2].startAt);for(const p of schedule){assert.equal(recruitmentBanner(d,p.startAt).id,p.id);assert.equal(recruitmentBanner(d,p.endAt-1).id,p.id);assert.notEqual(recruitmentBanner(d,p.endAt).id,p.id);}}
 assert.equal(recruitmentBanner(d,Date.parse('2026-10-10T15:59:59Z')).slot,0);assert.equal(recruitmentBanner(d,Date.parse('2026-10-10T16:00:00Z')).slot,1);
 // Real reducer draws always join unknown heroes and cannot leave the current dated pool.
@@ -28,6 +42,17 @@ let s=base();s.recruit.pity.five=99;const guaranteed=act(s,'recruit');assert.equ
 let single=s;for(let i=0;i<10;i++)single=act(single,'recruit');const ten=act(s,'recruitTen');for(const key of ['heroes','inventory','rng'])assert.deepEqual(ten[key],single[key]);assert.deepEqual(ten.recruit.pity,single.recruit.pity);assert.ok(ten.recruit.lastBatch.every(r=>active.has(r.hero)&&r.kind!=='clue'));assert.deepEqual(importSave(exportSave(ten,{id:1,name:'活动十连'},d),d).state,ten);
 const target=b.byStar[5][0].id;let exclusive=base();exclusive.inventory[target+'_order']=5;exclusive.recruit.fate[target]=4;exclusive=act(exclusive,'recruit',{id:target});assert.equal(exclusive.heroes[target].status,'owned');assert.equal(exclusive.recruit.lastResult.hero,target);assert.equal(exclusive.recruit.fate[target],0);
 const inactive=d.heroes.find(h=>h.group!=='external'&&!active.has(h.id)).id;let rejected=base();rejected.inventory[inactive+'_order']=10;const raw=JSON.stringify(rejected);assert.throws(()=>act(rejected,'recruit',{id:inactive}),/未在本期/);assert.equal(JSON.stringify(rejected),raw);
+// Dedicated recruitment still uses 25% target, 5% other featured five-star,
+// otherwise a current lower rarity; the fifth miss guarantees the target.
+const dedicated=base();dedicated.rng=9813;dedicated.inventory[target+'_order']=500;
+const dedicatedReference={rng:dedicated.rng,misses:0},dedicatedKinds=new Set(),ordinaryPity=structuredClone(dedicated.recruit.pity);
+for(let i=0;i<400;i++){const n=random(dedicatedReference);let expected;if(dedicatedReference.misses>=4||n<.25){expected=d.by.heroes[target];dedicatedKinds.add('target');}else if(n<.30){expected=pick(dedicatedReference,b.byStar[5].filter(h=>h.id!==target));dedicatedKinds.add('other-five');}else{expected=pick(dedicatedReference,b.heroes.filter(h=>recruitStar(h)<5));dedicatedKinds.add('lower');}dedicatedReference.misses=expected.id===target?0:dedicatedReference.misses+1;recruit(dedicated,d,target,b.id);assert.equal(dedicated.recruit.lastResult.hero,expected.id);assert.equal(dedicated.rng,dedicatedReference.rng);assert.equal(dedicated.recruit.fate[target],dedicatedReference.misses);assert.deepEqual(dedicated.recruit.pity,ordinaryPity);}
+assert.equal(dedicatedKinds.size,3);assert.equal(dedicated.inventory[target+'_order'],100);
+// A 0.83 page for the same dates must be rejected before the new pool spends resources.
+const oldPage=base();oldPage.recruit.total=100;oldPage.recruit.support={version:1,dry:0,tickets:1,points:100,claims:[],week:null};oldPage.inventory[b.headliners[0].id+'_order']=5;oldPage.recruit.fate[b.headliners[0].id]=4;
+const oldBannerId=b.id.replace(/-v2$/,'');
+for(const action of [{type:'recruit'},{type:'recruitTen'},{type:'recruit',id:b.headliners[0].id},{type:'recruitWelcome',id:b.byStar[1][0].id},{type:'recruitSelect',id:b.byStar[4][0].id},{type:'recruitWelcomeConvert'}]){const input=JSON.stringify(oldPage);assert.throws(()=>act(oldPage,action.type,{...action,bannerId:oldBannerId}),/已换期.*刷新/);assert.equal(JSON.stringify(oldPage),input,'same-date old-page '+action.type+' preserves resources/RNG/pity/fate');}
+const directOld=structuredClone(oldPage),directBefore=JSON.stringify(directOld);assert.throws(()=>recruit(directOld,d,undefined,oldBannerId),/已换期/);assert.equal(JSON.stringify(directOld),directBefore);
 // Switching periods keeps counters, points, vouchers and old dedicated orders.
 const before=structuredClone(ten.recruit),next=act(ten,'refresh',{},b.endAt);assert.deepEqual(next.recruit,before);assert.notEqual(recruitmentBanner(d,next.clock).id,b.id);
 let support=base();for(const h of b.heroes)support.heroes[h.id].status='owned';for(let i=0;i<70;i++)recruit(support,d);assert.equal(supportState(support).points,70);assert.equal(supportState(support).tickets,7);
@@ -62,4 +87,4 @@ let oldWorkerPuts=0;const oldWorker=new CloudClient('https://test.invalid',d,asy
 const uiActions=[],uiButton=(label,a)=>{uiActions.push(a);return '<button>'+label+'</button>';};recruitBannerPanel(edge,d,String,uiButton,()=>'<span></span>');assert.equal(uiActions.filter(a=>['recruit','recruitTen'].includes(a.type)).length,2);assert.ok(uiActions.filter(a=>['recruit','recruitTen'].includes(a.type)).every(a=>a.bannerId===edgeBanner.id));
 uiActions.length=0;recruitSupportPanel(legacySupport,d,String,uiButton);assert.ok(uiActions.filter(a=>['ui_recruitWelcome','ui_recruitSelect'].includes(a.type)).every(a=>a.bannerId===b.id));assert.equal(uiActions.filter(a=>['ui_recruitWelcome','ui_recruitSelect'].includes(a.type)).length,2);uiActions.length=0;recruitSupportPanel(allLow,d,String,uiButton);assert.equal(uiActions.find(a=>a.type==='recruitWelcomeConvert').bannerId,b.id);
 const exclusiveHtml=render({state:edge,data:d,view:'recruit',pageSections:{recruit:'exclusive'},recruitTarget:edgeBanner.headliners[0].id}),commands=[...exclusiveHtml.matchAll(/data-command="([^"]+)"/g)].map(m=>JSON.parse(m[1].replaceAll('&quot;','"').replaceAll('&amp;','&')));assert.equal(commands.find(a=>a.type==='recruit'&&a.id===edgeBanner.headliners[0].id).bannerId,edgeBanner.id);
-console.log('Recruit banner PASS: China date edges/leap months, yearly108rotation, allfamilytiers,2500seededfeaturedonlydraws with originalodds/pity, unknownjoin, dedicatedpity/offperiodrejection,10drawatomicity, currentonlyvouchers/points, six stale-period actions atomic, legacy support success markers and old-Worker guards, UI period ids, oldreceipts/portable, rejected silverinvites and earnedexternalinvitation.');
+console.log('Recruit banner PASS: China date edges/leap months, yearly108rotation with monthly2A4B3C and versioned same-date stale-page rejection, allfamilytiers,2500seededfeaturedonlydraws with originalodds/pity, unknownjoin, 400 exact-RNG original dedicated-odds/pity draws and offperiodrejection,10drawatomicity, currentonlyvouchers/points, six stale-period actions atomic, legacy support success markers and old-Worker guards, UI period ids, oldreceipts/portable, rejected silverinvites and earnedexternalinvitation.');

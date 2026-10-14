@@ -19,7 +19,7 @@ import {reportDamage,reportHealing} from '../public/game/js/debrief.js';
 import {journeyAbsorb} from '../public/game/js/journey-combat.js';
 const copy=structuredClone,roundtrip=s=>assert.deepEqual(importSave(exportSave(s,{id:1,name:'深度测试'},d),d).state,s);
 export function personalFixtures(){const samples=[];for(const [id,m]of Object.entries(PERSONAL).filter(([,m])=>m.introduced===5)){
- let s=fixture(590,20);s.battleSkillMode='auto';Object.assign(s.heroes[id],{status:'owned',level:20});s.team=[id,'linchong','baisheng'];if(m.healing)s.team=[id,'linchong','wangjin'];
+ let s=fixture(590,20);s.battleSkillMode='auto';Object.assign(s.heroes[id],{status:'owned',level:20});s.team=[id,'baisheng'];if(m.healing){Object.assign(s.heroes.duqian,{status:'owned',level:20,exp:0});s.team=[id,'duqian'];}
  const base=copy(s),q=prepareSortie(s,d,{type:'personalStart',id});assert.equal(q.reason,'');assert.deepEqual(s,base);s=act(s,'personalStart',{id});assert.ok(hasCampaignDepth(s));const start=copy(s);roundtrip(s);
  for(let n=0;n<180&&!s.battle.outcome;n++)advanceBattle(s,d,1000);
  console.log('Trial',id,s.battle.outcome,s.battle.metrics.heroes[id]);s=act(s,'finishBattle');assert.equal(s.expansion.personal[id],true,id);roundtrip(s);assert.throws(()=>act(s,'personalStart',{id}),/已经完成/);samples.push([start,s]);

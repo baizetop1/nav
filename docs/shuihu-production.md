@@ -1,4 +1,4 @@
-> 当前代码版本为 **0.83.0**，本轮活动招贤、人物体系与固定难度见 [0.83.0 说明](shuihu-v083.md)。需先部署新 Worker 能力（recruitmentBanners、promotionCores、difficultyTiers），使用现有 D1 表，无新增 SQL 迁移。六地与寨中生活继续保留；后续事项见 [未完成清单](shuihu-roadmap.md)。下文保留历史实施记录。
+> 当前代码版本为 **0.84.0**，固定资质、均衡排期与战争兵损见 [0.84.0 说明](shuihu-v084.md)。新 Worker 能力为 heroAptitudes:1、combatCasualties:2，保留 casualtyRules:1 以兼容旧页；使用现有 D1 表，无新增 SQL 迁移。六地与寨中生活继续保留；真正待办见 [当前进度](shuihu-roadmap.md)。下文保留历史实施记录。
 
 ## 当前规则补充（0.82.0）
 

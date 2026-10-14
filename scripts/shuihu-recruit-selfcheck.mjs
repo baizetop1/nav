@@ -4,11 +4,14 @@ import {prepareData,collections} from '../public/game/js/data.js';
 import {newGame,dispatch} from '../public/game/js/core.js';
 import {parseSave,validateSave} from '../public/game/js/save.js';
 import {recruitDialog} from '../public/game/js/ui.js';
+import {recruitmentSchedule} from '../public/game/js/recruitment-banner.js';
 
 const root=new URL('../public/game/data/',import.meta.url);
 export const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',root),'utf8'))])));
+function featuredTime(id){for(let month=0;month<12;month++)for(const banner of recruitmentSchedule(data,Date.UTC(2026,month,5)))if(banner.headliners.some(h=>h.id===id))return banner.startAt+3600000;assert.fail('No yearly featured period for '+id);}
+const wusongTime=featuredTime('wusong');
 export function fixture(kind='joined',exclusive=true,full=false){
-  const s=newGame(data,Date.parse('2026-02-13T04:00:00Z'),12345);s.location='recruit';s.progress.visited.push('recruit');s.inventory.recruit_order=5;
+  const s=newGame(data,exclusive?wusongTime:Date.parse('2026-02-13T04:00:00Z'),12345);s.location='recruit';s.progress.visited.push('recruit');s.inventory.recruit_order=5;
   for(const h of Object.values(s.heroes))h.status=kind==='clue'?'unknown':kind==='duplicate'?'owned':'known';
   if(exclusive){s.heroes.wusong.status=kind==='duplicate'?'owned':'known';s.inventory.wusong_order=5;s.recruit.fate.wusong=4;}
   if(full){s.team=['baisheng','shiqian','wuyong'];for(const id of s.team)s.heroes[id].status='owned';}

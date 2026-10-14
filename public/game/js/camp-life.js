@@ -1,9 +1,9 @@
-import {CAMP_PEOPLE,CAMP_PROJECTS,LIFE_THRESHOLDS} from './camp-life-data.js?v=0.83.0';
-import {away} from './hero-availability.js?v=0.83.0';
-import {regionBuilt} from './exploration-data.js?v=0.83.0';
-import {sourceStock} from './source-goals.js?v=0.83.0';
-import {gainExp} from './hero.js?v=0.83.0';
-import {requireRule,journal} from './utils.js?v=0.83.0';
+import {CAMP_PEOPLE,CAMP_PROJECTS,LIFE_THRESHOLDS} from './camp-life-data.js?v=0.84.0';
+import {away} from './hero-availability.js?v=0.84.0';
+import {regionBuilt} from './exploration-data.js?v=0.84.0';
+import {sourceStock} from './source-goals.js?v=0.84.0';
+import {gainExp} from './hero.js?v=0.84.0';
+import {requireRule,journal} from './utils.js?v=0.84.0';
 export const lifeBusy=s=>!!(s.battle||s.scheme||s.event||s.realm?.trek||s.expansion?.run||s.adventure?.run);
 const has=(o,k)=>Object.hasOwn(o,k);
 export const lifePlace=(s,id)=>({tanglong:regionBuilt(s,'forge')?'矿砂炉':'临时炉台',andaoquan:regionBuilt(s,'clinic')?'配药间':'药棚',yuehe:regionBuilt(s,'lodge')?'客舍':'廊下'}[id]||CAMP_PEOPLE[id]?.place);
