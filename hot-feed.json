@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-14T20:41:59.148Z",
+  "generatedAt": "2026-10-14T23:55:15.360Z",
   "intelligence": {
-    "updatedAt": "2026-10-14T20:41:59.148Z",
+    "updatedAt": "2026-10-14T23:55:15.360Z",
     "items": [
       {
-        "id": "cn-item-6d91c6d306f42ac3",
+        "id": "cn-item-07379ad8b8eb425b",
         "category": "cn",
-        "title": "“长城”观察：人工智能时代如何推进国际反恐合作？",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-14/10714646.shtml",
+        "title": "日本农相因丑闻辞职 在野党批评：暴露高市政权深层问题",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-15/10714754.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-14T13:06:01.000Z",
-        "summary": "中新社北京10月14日电 (记者 李纯)“无论是国内还是国际上，大家都在谈论人工智能技术以及它对人们的影响。”正在北京参加“长城-2026”反恐国际论坛的科威特国民卫队安全事务负责人阿德尔对中新社记者说，具体到反恐领域，人工智能技术带来的影响可谓“有好有坏”。",
+        "publishedAt": "2026-10-14T23:30:21.000Z",
+        "summary": "中新网10月15日电 综合日媒报道，日本农林水产大臣梁和生14日向首相高市早苗提交辞呈，此前他曾因不当言论等问题引发争议。日本在野党表示，此事暴露了高市政权的深层问题。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-104935",
+        "id": "cisa-kev-cve-2026-105134",
         "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104935",
+        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105134",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-13T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
-        "badge": "CVE-2026-104935",
-        "signal": "已遭利用 · 整改期限 2026-10-16"
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceiver…",
+        "badge": "CVE-2026-105134",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
         "id": "ai-openai-57c3309db5bedcde",
@@ -38,21 +38,21 @@
       {
         "id": "hn-50093568",
         "category": "dev",
-        "title": "Things to know if you get cancer in 2026",
+        "title": "Things to know when you get cancer – 2026 Edition",
         "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
         "source": "Hacker News",
         "publishedAt": "2026-10-14T19:26:30.000Z",
         "badge": "HN",
-        "signal": "145 分 · 20 评论"
+        "signal": "633 分 · 170 评论"
       },
       {
-        "id": "cn-it-7276b338e92963e3",
+        "id": "cn-it-00c3012834db9473",
         "category": "cn",
-        "title": "赛力斯康波：面对欧洲豪华车市场严苛标准，要让当地消费者认可中国品牌需要时间",
-        "url": "https://www.ithome.com/1/013/134.htm",
+        "title": "英伟达黄仁勋：若客户开发不安全 AI 软件，极端措施可断供芯片",
+        "url": "https://www.ithome.com/1/013/164.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-14T15:28:34.000Z",
-        "summary": "IT之家 10 月 14 日消息，赛力斯集团董事、副总裁康波今日分享了一篇《华尔街日报》的报道，其中提到中国车如今主导了欧洲最大的车展。 康波透露自己也接受了《华尔街日报》的采访，而自己在采访中也提到，面对欧洲豪华车市场的严苛标准，要让当地消费者认可中国品牌的豪华车需要时间，但相信我们终将做到。 据IT之家此前报道，赛力斯集团旗下豪华电动汽车品牌问界 10 月 12 日在巴黎车展宣布， 计划 2027 年秋季进军欧洲市场 ，为欧洲用户带来全新智能出行体验。 相关阅读： 《 …",
+        "publishedAt": "2026-10-14T23:54:39.000Z",
+        "summary": "IT之家 10 月 15 日消息，在伦敦接受彭博社 Emily Chang 采访时，英伟达首席执行官黄仁勋表示，假若其客户被认定正在开发不安全或不负责任的人工智能（AI）软件， 英伟达将断然停止向其供应芯片。 他坦言， 切断供应目前仍是一个“假设性问题” ，且英伟达在采取断供等极端反制措施之前，必然会先与相关客户进行深入地沟通与对话。 黄仁勋补充道：“我们并不经营别人的公司，我们的技术属于通用技术，因此对于其他公司如何使用我们的技术，英伟达能作出的评判和额度其实非常有限。”…",
         "badge": "IT之家"
       },
       {
@@ -88,25 +88,25 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-fcc614d243ece2af",
+        "id": "cn-baidu-13e4b3a49805beec",
         "category": "cn",
-        "title": "今年双11告别算数题",
-        "url": "https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E5%8F%8C11%E5%91%8A%E5%88%AB%E7%AE%97%E6%95%B0%E9%A2%98&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国发现侏罗纪新鸟",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%8F%91%E7%8E%B0%E4%BE%8F%E7%BD%97%E7%BA%AA%E6%96%B0%E9%B8%9F&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月10日，商务部等七部门联合印发通知，纠治电商平台“自动跟价”等无序竞争行为。近期，各大电商平台开启双11大促，普遍取消跨店满减和凑单福利，改为官方立减等简单规则。此前，消费者苦于复杂凑单机制，且低价内卷导致商家利润受损。",
+        "summary": "北京时间10月14日晚，中国科学院等机构团队在《自然》发文，确认在福建政和发现侏罗纪新鸟类“杨源𬸚𬸦”。该鸟类前肢短小且足部有特化第二趾，适应陆地奔跑，不具备飞行能力。此前学界普遍认为早期鸟类演化以适应飞行为主导，此发现打破了该传统认知。",
         "badge": "热搜",
-        "signal": "7,808,867 热度"
+        "signal": "7,807,921 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-96951",
+        "id": "cisa-kev-cve-2026-76519",
         "category": "security",
-        "title": "Microsoft Windows：Microsoft Windows Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-96951",
+        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76519",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-13T00:00:00.000Z",
-        "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
-        "badge": "CVE-2026-96951",
-        "signal": "已遭利用 · 整改期限 2026-10-16"
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
+        "badge": "CVE-2026-76519",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
         "id": "ai-hugging-face-504a28fcb44d1a3d",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50090369",
+        "id": "hn-50094994",
         "category": "dev",
-        "title": "Better HTTP/1 connection reuse in Go 1.27",
-        "url": "https://go.dev/blog/http-connection-reuse",
+        "title": "OpenCode 2.0",
+        "url": "https://anoma.ly/notes/opencode-2-0/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-14T16:29:33.000Z",
+        "publishedAt": "2026-10-14T20:48:24.000Z",
         "badge": "HN",
-        "signal": "151 分 · 26 评论"
+        "signal": "220 分 · 83 评论"
       },
       {
-        "id": "cn-item-44b75559356baa95",
+        "id": "cn-item-52bc8a9c69ee9cb5",
         "category": "cn",
-        "title": "中国官方连打“虎” 伍浩被“双开”、包惠被开除党籍",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-14/10714577.shtml",
+        "title": "朝中社：朝鲜试射两种潜射战略巡航导弹（图）",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-15/10714752.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-14T10:56:02.000Z",
-        "summary": "中新社北京10月14日电 中央纪委国家监委14日通报连打“虎”，中国科学院科技创新发展中心原党委副书记、主任伍浩被开除党籍和公职，四川省成都市人大常委会原党组书记、主任包惠被开除党籍。",
+        "publishedAt": "2026-10-14T22:44:57.000Z",
+        "summary": "中新网10月15日电 据朝中社报道，当地时间14日，朝鲜导弹总局在朝鲜东部海域进行两种潜射战略巡航导弹试射。",
         "badge": "中新网要闻"
       },
       {
@@ -170,25 +170,25 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-4d363189e92e8a45",
+        "id": "cn-it-29a1aa6b93d98e64",
         "category": "cn",
-        "title": "消息称 Steam Frame OLED 头显正在开发：代号 Plano，单眼原生分辨率 3552*3840",
-        "url": "https://www.ithome.com/1/013/133.htm",
+        "title": "IT早报 1015：苹果收盘市值首超 5 万亿美元；赛力斯起诉男子 AI 造谣索赔百万；iPhone 15 Pro 及后续机型国行大模型备案；豆包助手放开三方应用操作权限...",
+        "url": "https://www.ithome.com/1/013/163.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-14T15:23:53.000Z",
-        "summary": "IT之家 10 月 14 日消息，据 Steam Frame Hub 今天报道，Valve 的 VR 头显 Steam Frame 近期发售。不过V社如今可能已在开发后续产品，带来分辨率等方面升级。 公开的 Linux 内核源码显示，新款 Steam Frame 代号为“Plano”，配备 Micro-OLED 显示屏， 单眼原生分辨率为 3552*3840 。作为对比，现款产品配备两块 LCD 屏幕，分辨率为 2160*2160。如果上述数据准确，新款 Steam Fra…",
+        "publishedAt": "2026-10-14T23:52:13.000Z",
+        "summary": "“IT早报”时间，大家好，现在是 2026 年 10 月 15 日星期四，今天的重要科技资讯有： 1. 苹果市值里程碑：收盘首次超 5 万亿美元 苹果公司 10 月 14 日收盘市值首次站上 5 万亿美元（IT之家注：现汇率约合 33.53 万亿元人民币），成为继英伟达后全球第二家达成该里程碑的公司。>> 查看详情 2. 男子发布 AI 视频造谣问界，赛力斯起诉索赔百万元 据深蓝财经报道，赛力斯汽车有限公司对外披露，已对一名抖音平台短视频用户提起民事诉讼。该用户借助 AI …",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2015-5477",
+        "id": "cisa-kev-cve-2026-105133",
         "category": "security",
-        "title": "ISC BIND：ISC BIND Data Processing Errors Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5477",
+        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105133",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-08T00:00:00.000Z",
-        "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
-        "badge": "CVE-2015-5477",
-        "signal": "已遭利用 · 整改期限 2026-10-11"
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be ch…",
+        "badge": "CVE-2026-105133",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
         "id": "ai-google-deepmind-8b1ab1df41ac00d8",
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50092730",
+        "id": "hn-50095353",
         "category": "dev",
-        "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
-        "url": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/",
+        "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+        "url": "https://typesafe.ai/blog/jev-1-14",
         "source": "Hacker News",
-        "publishedAt": "2026-10-14T18:37:21.000Z",
+        "publishedAt": "2026-10-14T21:11:03.000Z",
         "badge": "HN",
-        "signal": "188 分 · 114 评论"
+        "signal": "135 分 · 52 评论"
       },
       {
-        "id": "cn-baidu-2d236df6723ae45e",
+        "id": "cn-baidu-7880bd296c665849",
         "category": "cn",
-        "title": "多地组织筛查干部档案 有何深意",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%9C%B0%E7%BB%84%E7%BB%87%E7%AD%9B%E6%9F%A5%E5%B9%B2%E9%83%A8%E6%A1%A3%E6%A1%88+%E6%9C%89%E4%BD%95%E6%B7%B1%E6%84%8F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "今年最有腔调的老人都在山东",
+        "url": "https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E6%9C%80%E6%9C%89%E8%85%94%E8%B0%83%E7%9A%84%E8%80%81%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%B1%B1%E4%B8%9C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，多地组织部门相继发文介绍干部人事档案审核筛查工作，重点针对“三龄两历一身份”等造假重灾区开展疑点排查与整改，旨在严把干部选拔任用关，规范干部队伍管理，维护公信力。",
+        "summary": "近日，两位山东大爷凭借独特腔调走红网络。莒县三爷爷以低沉质朴的方言道出人生感悟，被称为“山东伦敦腔”；大明湖杨大爷身着西装演奏萨克斯，展现出岁月沉淀的从容与优雅。",
         "badge": "热搜",
-        "signal": "7,714,395 热度"
+        "signal": "7,712,618 热度"
       },
       {
         "id": "github-advisory-ghsa-mf4x-w4gh-4656",
@@ -251,25 +251,25 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-item-37e098893b2418b1",
+        "id": "cn-item-afcdd92964df0b6f",
         "category": "cn",
-        "title": "东西问丨师培轶：佛教神鸟为何现身西夏陵？",
-        "url": "https://www.chinanews.com.cn/dxw/2026/10-14/10714494.shtml",
+        "title": "美军称摧毁一艘与伊朗有关联的帆船 现场浓烟滚滚",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-15/10714750.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-14T09:07:16.000Z",
-        "summary": "中新社银川10月14日电 题：佛教神鸟为何现身西夏陵？",
+        "publishedAt": "2026-10-14T22:36:49.000Z",
+        "summary": "中新网10月15日电 当地时间14日，美军中央司令部在社交媒体发布消息说，美军6日在阿曼湾摧毁了一艘与伊朗有关联的帆船。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2016-3081",
+        "id": "cisa-kev-cve-2026-0322",
         "category": "security",
-        "title": "Apache Struts：Apache Struts Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2016-3081",
+        "title": "Palo Alto Networks PAN-OS：Palo Alto Networks PAN-OS Code Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-0322",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-08T00:00:00.000Z",
-        "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.",
-        "badge": "CVE-2016-3081",
-        "signal": "已遭利用 · 整改期限 2026-10-11"
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
+        "badge": "CVE-2026-0322",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
         "id": "ai-openai-a8b8c31de898145e",
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50091794",
+        "id": "hn-50096142",
         "category": "dev",
-        "title": "Neckbeard – a DevOps/platform/SRE plugin for your agent",
-        "url": "https://github.com/bealesh/neckbeard",
+        "title": "Tiny Little Office",
+        "url": "https://tinylittleoffice.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-14T17:45:34.000Z",
+        "publishedAt": "2026-10-14T22:10:08.000Z",
         "badge": "HN",
-        "signal": "44 分 · 23 评论"
+        "signal": "72 分 · 11 评论"
       },
       {
-        "id": "cn-it-b7ded61f4d6e91ad",
+        "id": "cn-it-7f70bb30b6d00e8d",
         "category": "cn",
-        "title": "男子发布 AI 视频造谣问界，赛力斯起诉索赔百万元",
-        "url": "https://www.ithome.com/1/013/132.htm",
+        "title": "彭博社：苹果有望 12 月随 iOS 27.3 在国内推出首波 Apple Intelligence 功能",
+        "url": "https://www.ithome.com/1/013/162.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-14T15:20:19.000Z",
-        "summary": "IT之家 10 月 14 日消息，据深蓝财经报道，赛力斯汽车有限公司对外披露，已对一名抖音平台短视频用户提起民事诉讼。 该用户借助 AI 工具合成问界车辆行驶中车身塌陷的虚假画面，发布到网络抹黑车辆安全性能 。 案件将于 10 月 23 日在重庆市两江新区人民法院开庭审理。 该用户使用 AI 生成虚假视频，伪造问界车辆行驶过程中车身塌陷的画面，视频标注问界品牌，暗示车辆存在严重安全缺陷，发布于抖音平台。 赛力斯要求对方删除侵权言论、公开书面赔礼道歉、支付 100 万元侵权损…",
+        "publishedAt": "2026-10-14T23:45:18.000Z",
+        "summary": "IT之家 10 月 15 日消息，彭博社的马克 · 古尔曼（Mark Gurman）今天（10 月 15 日）在 X 平台发布推文， 报道称苹果公司计划于 12 月通过 iOS 27.3 更新，在中国大陆首次推出 Apple Intelligence，这是该 AI 平台首度落地中国市场。 IT之家附上相关截图如下： 首波功能包括 Genmoji 自定义表情、通知摘要、写作工具，以及照片应用中的 Clean Up 功能（支持用户从照片中移除特定物体）。新版 Siri AI 助…",
         "badge": "IT之家"
       },
       {
@@ -340,18 +340,18 @@
         "source": "百度热搜",
         "summary": "这个国庆假期，全社会跨区域人员流动量再创新高，以旧换新、消费券等政策红利持续释放。假日消费不仅是观察消费趋势的重要窗口，其展现的旺盛活力也为破解供强需弱矛盾提供了新思路。",
         "badge": "热搜",
-        "signal": "7,616,414 热度"
+        "signal": "7,619,508 热度"
       },
       {
-        "id": "cisa-kev-cve-2023-22894",
+        "id": "cisa-kev-cve-2026-104935",
         "category": "security",
-        "title": "Strapi Strapi：Strapi Cleartext Storage of Sensitive Information Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-22894",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104935",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-08T00:00:00.000Z",
-        "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL…",
-        "badge": "CVE-2023-22894",
-        "signal": "已遭利用 · 整改期限 2026-10-11"
+        "publishedAt": "2026-10-13T00:00:00.000Z",
+        "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
+        "badge": "CVE-2026-104935",
+        "signal": "已遭利用 · 整改期限 2026-10-16"
       },
       {
         "id": "ai-hugging-face-ffd2818196374b7e",
@@ -363,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50054465",
+        "id": "hn-50088935",
         "category": "dev",
-        "title": "Phloem: Git history grown like a slime mold",
-        "url": "https://phloem.stemdeck.app/",
+        "title": "Passkeys are not a trap",
+        "url": "https://scotthelme.co.uk/passkeys-are-not-a-trap/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-12T10:52:25.000Z",
+        "publishedAt": "2026-10-14T15:15:45.000Z",
         "badge": "HN",
-        "signal": "45 分 · 17 评论"
+        "signal": "431 分 · 603 评论"
       },
       {
-        "id": "cn-item-6a80a93f8037b1d9",
+        "id": "cn-item-6d91c6d306f42ac3",
         "category": "cn",
-        "title": "东西问丨日本国会参议员拉沙尔石井：以行动守护日本“和平宪法”刻不容缓",
-        "url": "https://www.chinanews.com.cn/dxw/2026/10-14/10714493.shtml",
+        "title": "“长城”观察：人工智能时代如何推进国际反恐合作？",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-14/10714646.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-14T08:46:03.000Z",
-        "summary": "中新社东京10月14日电 题：以行动守护日本“和平宪法”刻不容缓",
+        "publishedAt": "2026-10-14T13:06:01.000Z",
+        "summary": "中新社北京10月14日电 (记者 李纯)“无论是国内还是国际上，大家都在谈论人工智能技术以及它对人们的影响。”正在北京参加“长城-2026”反恐国际论坛的科威特国民卫队安全事务负责人阿德尔对中新社记者说，具体到反恐领域，人工智能技术带来的影响可谓“有好有坏”。",
         "badge": "中新网要闻"
       },
       {
@@ -394,13 +394,13 @@
         "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-openai-200a5d3dd39c6bfb",
+        "id": "ai-openai-94ee28b93f9d2d83",
         "category": "ai",
-        "title": "The EU’s next chapter in AI is agentic",
-        "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+        "title": "How Block is building AI-powered security with OpenAI technology",
+        "url": "https://openai.com/index/block-ai-powered-security",
         "source": "OpenAI",
-        "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
+        "publishedAt": "2026-10-14T07:00:00.000Z",
+        "summary": "Block is building AI-powered security with OpenAI. Its security team investigates threats faster and proposes patches in minutes.",
         "badge": "OpenAI"
       },
       {
@@ -415,25 +415,25 @@
         "signal": "16 回复"
       },
       {
-        "id": "cn-it-fa0bfaea25d49b58",
+        "id": "cn-it-50386b583c73e526",
         "category": "cn",
-        "title": "任天堂展示《塞尔达传说：时之笛重制版》实体版包装：含特殊纹理烫箔，首发限量提供",
-        "url": "https://www.ithome.com/1/013/131.htm",
+        "title": "Colossal 推出 AI 平台 GenoMorph，助力加快复活灭绝物种研究",
+        "url": "https://www.ithome.com/1/013/161.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-14T15:14:06.000Z",
-        "summary": "IT之家 10 月 14 日消息，任天堂旗下新作《塞尔达传说：时之笛重制版》现已开启预购。官方今天在 X 平台发文，向玩家展示本作实体版的细节。 据任天堂介绍，《塞尔达传说：时之笛重制版》实体卡带包装采用特殊纹理烫箔。玩家从不同角度端详盒子时，能够看到封面图案呈现独特反光。 同时，本作的实体版售价 69.99 美元 （IT之家注：现汇率约合 469.3 元人民币） 。上文所述的特殊包装仅在首发时限量提供，售完即止。 此外， 《塞尔达传说：时之笛重制版》将在 11 月 5 日…",
+        "publishedAt": "2026-10-14T23:44:26.000Z",
+        "summary": "IT之家 10 月 15 日消息，据 TechCrunch 报道，Colossal Biosciences 于当地时间周三发布了一款全新人工智能平台，助力加快复活灭绝物种的相关研究。 据IT之家了解，这款名为 GenoMorph 的平台结合先进三维形态学、比较基因组学与发育生物学技术，在基因数据有限的复活项目中， 筛选出可用于基因编辑的目标基因 。该公司正借助这个平台推进渡渡鸟复活计划，而渡渡鸟可用的基因组资料十分匮乏。 举例来说，公司在猛犸象复活项目中获取了 100 份基…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2021-3199",
+        "id": "cisa-kev-cve-2026-96951",
         "category": "security",
-        "title": "ONLYOFFICE Docs：ONLYOFFICE Docs Server Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-3199",
+        "title": "Microsoft Windows：Microsoft Windows Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-96951",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-08T00:00:00.000Z",
-        "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
-        "badge": "CVE-2021-3199",
-        "signal": "已遭利用 · 整改期限 2026-10-11"
+        "publishedAt": "2026-10-13T00:00:00.000Z",
+        "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
+        "badge": "CVE-2026-96951",
+        "signal": "已遭利用 · 整改期限 2026-10-16"
       },
       {
         "id": "ai-google-deepmind-851107eacfc8ba0f",
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50084240",
+        "id": "hn-50050553",
         "category": "dev",
-        "title": "Iosevka is an open-source, sans-serif and slab-serif monospace font",
-        "url": "https://typeof.net/Iosevka/",
+        "title": "Do dentists know what they're doing?",
+        "url": "https://mapwriting.substack.com/p/dentists",
         "source": "Hacker News",
-        "publishedAt": "2026-10-14T08:27:59.000Z",
+        "publishedAt": "2026-10-12T02:21:54.000Z",
         "badge": "HN",
-        "signal": "652 分 · 273 评论"
+        "signal": "340 分 · 267 评论"
       },
       {
-        "id": "cn-baidu-b324d182f467422f",
+        "id": "cn-baidu-da0ffe0e1d81b9d8",
         "category": "cn",
-        "title": "今年冬天会更冷还是更暖",
-        "url": "https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E5%86%AC%E5%A4%A9%E4%BC%9A%E6%9B%B4%E5%86%B7%E8%BF%98%E6%98%AF%E6%9B%B4%E6%9A%96&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "回老家有种没被AI“污染”过的美",
+        "url": "https://www.baidu.com/s?wd=%E5%9B%9E%E8%80%81%E5%AE%B6%E6%9C%89%E7%A7%8D%E6%B2%A1%E8%A2%ABAI%E2%80%9C%E6%B1%A1%E6%9F%93%E2%80%9D%E8%BF%87%E7%9A%84%E7%BE%8E&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月9日，国家气候中心通报，2026年9月已正式形成一次超强厄尔尼诺事件，预计11月前后达峰值，成为有监测以来最强。专家解读指出，厄尔尼诺增加我国冬季总体偏暖可能性，但这并非“暖冬保证书”，若发生环流调整，仍可能出现剧烈降温的强寒潮，公众不可放松防寒准备。",
+        "summary": "近日，不少人感慨回老家有种没被AI“污染”过的美，父母聊着家长里短，街边老店充满烟火气。回到职场后，却要面对动辄要求AI赋能、降本增效的工作安排，一些人热衷吹嘘AI应用，却让员工疲于收拾残局。",
         "badge": "热搜",
-        "signal": "7,522,640 热度"
+        "signal": "7,523,713 热度"
       },
       {
         "id": "github-advisory-ghsa-w6wh-p4g7-mpj2",
@@ -510,7 +510,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 238398,
+        "stars": 241031,
         "starsToday": 41187
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 65928,
+        "stars": 66266,
         "starsToday": 3547
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 28994,
+        "stars": 29093,
         "starsToday": 946
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/nvm-sh/nvm",
         "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
         "language": "Shell",
-        "stars": 95426,
+        "stars": 95446,
         "starsToday": 70
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 49207,
+        "stars": 49305,
         "starsToday": 146
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 52390,
+        "stars": 52469,
         "starsToday": 94
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/ifixai-ai/iFixAi",
         "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
         "language": "Python",
-        "stars": 27220,
+        "stars": 27356,
         "starsToday": 2143
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/vxcontrol/pentagi",
         "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
         "language": "Go",
-        "stars": 29238,
+        "stars": 29410,
         "starsToday": 1070
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/rust-lang/rust",
         "description": "Empowering everyone to build reliable and efficient software.",
         "language": "Rust",
-        "stars": 119935,
+        "stars": 120011,
         "starsToday": 205
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/xtool-org/xtool",
         "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
         "language": "Swift",
-        "stars": 10593,
+        "stars": 10768,
         "starsToday": 1510
       }
     ],
-    "updatedAt": "2026-10-14T20:41:59.148Z"
+    "updatedAt": "2026-10-14T23:55:15.360Z"
   }
 }
