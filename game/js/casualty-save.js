@@ -1,2 +1,4 @@
-export const hasCasualtyProgress=s=>s.camp?.casualtyCarry!==undefined||s.battle?.expedition?.casualtyRules!==undefined;
-export const casualtyProgressPreserved=(before,after)=>(!hasCasualtyProgress(before)||hasCasualtyProgress(after))&&(before.camp?.casualtyCarry===undefined||after.camp?.casualtyCarry!==undefined);
+export const hasCasualtyProgress=s=>s.camp?.casualtyCarry!==undefined||s.camp?.casualtyRules!==undefined||s.battle?.expedition?.casualtyRules!==undefined;
+export const hasCombatCasualties=s=>s.camp?.casualtyRules===2||s.battle?.expedition?.casualtyRules===2;
+const settledBattles=s=>(s.stats?.battleWin||0)+(s.stats?.battleLoss||0);
+export const casualtyProgressPreserved=(before,after)=>(!hasCasualtyProgress(before)||hasCasualtyProgress(after))&&(before.camp?.casualtyCarry===undefined||after.camp?.casualtyCarry!==undefined)&&(!hasCombatCasualties(before)||hasCombatCasualties(after))&&(before.camp?.casualtyRules!==2||after.camp?.casualtyRules===2)&&(!(before.battle?.expedition?.casualtyRules===2&&after.battle&&settledBattles(before)===settledBattles(after))||after.battle.expedition?.casualtyRules===2)&&((before.camp?.fallen||0)<=(after.camp?.fallen||0));

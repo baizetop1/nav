@@ -1,5 +1,6 @@
-import {heroTier,tierBadge} from './hero-tiers.js?v=0.83.0';
-import { freshOrders, equipmentMatches } from './commands.js?v=0.83.0';
+import {aptitudeBadge,starPosition} from './hero-aptitude.js?v=0.84.0';
+import {heroTier,tierBadge} from './hero-tiers.js?v=0.84.0';
+import { freshOrders, equipmentMatches } from './commands.js?v=0.84.0';
 
 export function ordersPanel(s,d,btn,esc,locked){
  const b=s.battle;if(b.rules!==2)return '';
@@ -28,6 +29,6 @@ export function recruitBatchDialog(results,data,esc,portrait){
  const counts=kind=>results.filter(r=>r.kind===kind).length;
  return `<dialog id="recruit-result" class="recruit-result recruit-batch" aria-labelledby="recruit-result-title" aria-describedby="recruit-result-description"><button type="button" class="result-close" data-result-action="close" aria-label="关闭招贤结果">×</button>
  <p class="kicker">招贤馆 · 十封来信</p><h2 id="recruit-result-title" tabindex="-1">十连招贤结果</h2><p id="recruit-result-description">入寨 ${counts('joined')} 位 · 故友来访 ${counts('duplicate')} 次 · 英雄传闻 ${counts('clue')} 次。已消耗普通招贤令 ×10。</p>
- <div class="recruit-batch-grid">${results.map(r=>{const h=data.by.heroes[r.hero];return `<article class="card batch-draw">${portrait(h,true)}<p class="meta">第 ${r.number} 次 · ${'★'.repeat(heroTier(h).rarity)}</p><h3>${esc(h.name)}</h3><p>${({joined:'好汉入寨',duplicate:'故友来访',clue:'传闻，尚未入寨'})[r.kind]}</p><p class="meta">${r.tokens?'信物 ×'+r.tokens+(r.merit?' · 功勋 +'+r.merit:''):r.inTeam?'已补入出阵队伍':'可到好汉页编队'}</p></article>`;}).join('')}</div>
+ <div class="recruit-batch-grid">${results.map(r=>{const h=data.by.heroes[r.hero];return `<article class="card batch-draw">${portrait(h,true)}<p class="meta">第 ${r.number} 次 · ${'★'.repeat(heroTier(h).rarity)}</p><h3>${esc(h.name)} ${aptitudeBadge(h)}</h3><p class="batch-identity">${tierBadge(h)} ${starPosition(h)}</p><p>${({joined:'好汉入寨',duplicate:'故友来访',clue:'传闻，尚未入寨'})[r.kind]}</p><p class="meta">${r.tokens?'信物 ×'+r.tokens+(r.merit?' · 功勋 +'+r.merit:''):r.inTeam?'已补入出阵队伍':'可到好汉页编队'}</p></article>`;}).join('')}</div>
  <p class="note">十连逐次使用普通招贤规则，共享原有保底；当期抽中人物直接入寨，重复人物转为信物。结果按抽取顺序展示。</p><p id="recruit-result-save" class="note"></p><div class="actions"><button type="button" class="primary" data-result-action="close">收下十封来信</button><button type="button" class="secondary" data-result-action="heroes">查看好汉</button></div></dialog>`;
 }

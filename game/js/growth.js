@@ -1,5 +1,6 @@
-import { isWanderer } from './roster.js?v=0.83.0';
-import { count, journal, requireRule, random } from './utils.js?v=0.83.0';
+import {heroAptitude,aptitudeSilver} from './hero-aptitude.js?v=0.84.0';
+import { isWanderer } from './roster.js?v=0.84.0';
+import { count, journal, requireRule, random } from './utils.js?v=0.84.0';
 
 export const MOUNT_DROP_RATE=.2;
 export const SKILL_CAP=5, MOUNT_CAP=5;
@@ -29,7 +30,7 @@ export function trainedSkill(skill,level=1){
 export function battleSkill(unit,skill){return trainedSkill(skill,unit?.training?.levels?.[skill?.id]||1);}
 export function skillUpgradeQuote(state,skill){
   const level=skillLevel(state,skill?.id),t=skill?.training;
-  const cost={silver:150*level,items:{[t?.hero+'_manual']:level,exp_pill:level}};
+  const cost={silver:aptitudeSilver(t?.hero,150*level),items:{[t?.hero+'_manual']:level,exp_pill:level}};
   let reason=!t?'此招式不可养成':unlockReason(state,skill);
   if(!reason&&level>=SKILL_CAP)reason='已达 5 级上限';
   if(!reason&&state.heroes[t.hero].level<Math.max(t.level,level*5))reason=`升级须人物达到 ${Math.max(t.level,level*5)} 级`;
@@ -80,7 +81,7 @@ export function growthAction(state,data,action){
   state.growth??={version:1,skills:{},mounts:{}};
   if(type==='skillUpgrade'){
     const skill=data.by.skills[id],quote=skillUpgradeQuote(state,skill);requireRule(!quote.reason,quote.reason);
-    spend(state,quote.cost);state.growth.skills[id]=quote.level+1;
+    spend(state,quote.cost);state.growth.skills[id]=quote.level+1;if(heroAptitude(data.by.heroes[skill.training.hero]))state.progress.flags.hero_aptitude_v1=true;
     journal(state,`【招式精进】${data.by.heroes[skill.training.hero].name}的「${skill.name}」升至 ${quote.level+1} 级；消耗碎银 ${quote.cost.silver}、专属招式书 ${quote.level}、经验丹 ${quote.level}。`);
   }else if(type==='skillBook'){
     owned(state,id,data);requireRule(action.source===undefined||action.source==='tokens'&&isWanderer(data.by.heroes[id]),'只有江湖散人可用信物换招式书。');spend(state,{items:action.source==='tokens'?{[id+'_token']:3}:{martial_pages:2}});state.inventory[id+'_manual']=(state.inventory[id+'_manual']||0)+1;

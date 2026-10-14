@@ -1,6 +1,6 @@
-import {regionBonus} from './exploration-data.js?v=0.83.0';
-import {GATHERING_REGIONS,gatheringProgress} from './gathering-data.js?v=0.83.0';
-import {HERO_SPECIALTIES} from './strategy-data.js?v=0.83.0';
+import {regionBonus} from './exploration-data.js?v=0.84.0';
+import {GATHERING_REGIONS,gatheringProgress} from './gathering-data.js?v=0.84.0';
+import {HERO_SPECIALTIES} from './strategy-data.js?v=0.84.0';
 export const IDLE_CYCLE=30*60000,IDLE_CAP=8*3600000;
 export const IDLE_ROUTES={
  mine:{name:'旧矿洞',kind:'special',job:'workshop',items:{scrap_iron:2,iron:1},use:'碎铁配木材可加工精铁；精铁用于练兵、强化与打造。'},

@@ -1,6 +1,6 @@
-import {goalOverview} from './goal-overview.js?v=0.83.0';
-import {firstSessionGoal} from './first-session.js?v=0.83.0';
-import {EXPLORATION_GOAL_KINDS,explorerGoal,explorerChoices,explorationGoalQuote,explorationResume} from './exploration-goals.js?v=0.83.0';
+import {goalOverview} from './goal-overview.js?v=0.84.0';
+import {firstSessionGoal} from './first-session.js?v=0.84.0';
+import {EXPLORATION_GOAL_KINDS,explorerGoal,explorerChoices,explorationGoalQuote,explorationResume} from './exploration-goals.js?v=0.84.0';
 export function explorationHome(s,d,esc,btn){
  const q=goalOverview(s,d),r=explorationResume(s),first=!s.development?.goal&&firstSessionGoal(s,d),next=q?.next||first||r;
  return '<section class="folio-next exploration-home" data-exploration-home aria-label="当前探索目标"><span class="folio-eyebrow">'+esc(q?'我的目标':first?'初次出行':r.name+' · '+r.place)+'</span><h2>'+esc(q?q.name:first?first.title:r.name)+'</h2><p>'+esc(next.text)+'</p>'+btn(next.label,next.command,'primary')+'<div class="goal-home-tools">'+btn(q?'目标详情':'选择目标',q?{type:'ui_goalDetails'}:{type:'ui_section',view:'camp',id:'exploreGoals'},'text-action')+(q?btn('回到地区图',{type:'ui_regionOpen',region:r.region},'text-action'):'')+'</div></section>';

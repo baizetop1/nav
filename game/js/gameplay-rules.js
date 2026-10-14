@@ -1,7 +1,9 @@
+export const hasHeroAptitudes=s=>!!s.progress?.flags?.hero_aptitude_v1;
 export const hasRecruitmentBanners=s=>s.recruit?.rules===2;
 export const hasPromotionCores=s=>!!s.progress?.flags?.promotion_cores_v1||Object.entries(s.inventory||{}).some(([id,n])=>id.startsWith('core_')&&n>0);
 export const hasDifficultyTiers=s=>s.battle?.difficultyRules===1;
 export function gameplayRulesPreserved(before,after){
+ if(hasHeroAptitudes(before)&&!hasHeroAptitudes(after))return false;
  if(before.recruit?.rules===2&&after.recruit?.rules!==2)return false;
  if(before.progress?.flags?.promotion_cores_v1&&!after.progress?.flags?.promotion_cores_v1)return false;
  const b=before.battle,a=after.battle;

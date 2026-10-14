@@ -1,8 +1,9 @@
-import { battleTerrain } from './strategy-data.js?v=0.83.0';
-import { CORPS } from './corps-data.js?v=0.83.0';
+import { battleTerrain } from './strategy-data.js?v=0.84.0';
+import { CORPS } from './corps-data.js?v=0.84.0';
 // Explicit marker: ongoing old battles keep their original combat and casualty rules.
 export const FIELD_RULES=2;
-export const CASUALTY_RULES=1,CASUALTY_SCALE=10000;
+export const CASUALTY_RULES=2,CASUALTY_SCALE=10000;
+export const casualtyRules=b=>[1,2].includes(b.expedition?.casualtyRules)?b.expedition.casualtyRules:0;
 export const healingSupply=(b,u)=>fieldRules(b)&&u.side==='enemy'?(b.elapsed>=120000?.25:b.elapsed>=60000?.5:1):1;
 export const fieldRules=b=>b.expedition?.fieldRules===FIELD_RULES;
 export const FIELD_TERRAIN={land:{infantry:1,ranged:1,cavalry:1.08},forest:{infantry:1.08,ranged:1.05,cavalry:.9},mountain:{infantry:1.08,ranged:1.08,cavalry:.88},water:{infantry:.94,ranged:.94,cavalry:.85}};
@@ -36,12 +37,25 @@ export function signatureFactor(b,u,target,{normal=false,strategy=false}={}){if(
 }
 export function casualtyQuote(b,tacticLoss,raidLoss=1,{outcome=b.outcome||'retreat',health,elapsed=b.elapsed}={}){
  const n=b.expedition?.troops||0,ratio=health??(b.team.reduce((sum,u)=>sum+u.hp/u.maxHp,0)/Math.max(1,b.team.length));
- const cumulative=fieldRules(b)&&b.expedition?.casualtyRules===CASUALTY_RULES;
+ const rules=fieldRules(b)?casualtyRules(b):0,cumulative=rules>0;
  const taken=health===undefined&&cumulative&&b.metrics?Math.min(1,b.team.reduce((sum,u)=>sum+(b.metrics.heroes[u.id]?.taken||0)/u.maxHp,0)/Math.max(1,b.team.length)):0;
  const pressure=Math.max(1-ratio,taken);
  let rate=tacticLoss+(1-ratio)*.2+(outcome==='victory'?0:.2),deathRate=outcome==='victory'?.2:outcome==='retreat'?.35:.45;
  if(fieldRules(b)){const exposure=Math.min(1,.25+Math.max(0,elapsed||0)/60000);rate=tacticLoss*(outcome==='victory'?.35*exposure:1)+pressure*.2+(outcome==='victory'?0:.2);
  const has=id=>b.team.some(u=>u.id===id&&u.corps?.troops>0);if(outcome!=='victory'&&has('baisheng'))rate*=.9;
+ const cavalry=b.team.reduce((sum,u)=>sum+(u.corps?.arm==='cavalry'?u.corps.troops:0),0),medic=b.team.some(u=>u.corps?.troops&&CORPS[u.id]?.profile==='medic');
+ deathRate*=Math.min(medic?.9:1,has('andaoquan')?.75:1,has('huangfuduan')?1-.15*cavalry/Math.max(1,n):1);
+ }
+ if(rules===2){
+ // Troops clash alongside their commanders: a healthy hero does not imply an untouched army.
+ // Contacts and endured damage survive healing. Clean, short victories still cost fewer lives.
+ const contacts=health===undefined?Math.min(1,b.enemy.reduce((sum,u)=>sum+(u.attacks||0),0)/(Math.max(1,b.team.length)*6)):Math.min(1,Math.max(0,elapsed||0)/30000);
+ const exposure=Math.min(1,.5+Math.max(0,elapsed||0)/120000);
+ const engagement=Math.min(1,Math.max(0,elapsed||0)/15000+contacts+pressure);
+ rate=outcome==='victory'?tacticLoss*(.85*exposure+.25*contacts)+pressure*.24:(tacticLoss+pressure*.24+(outcome==='defeat'?.28:.18))*engagement;
+ deathRate=outcome==='victory'?.25:outcome==='retreat'?.35:.5;
+ const has=id=>b.team.some(u=>u.id===id&&u.corps?.troops>0);
+ if(outcome!=='victory'&&has('baisheng'))rate*=.9;
  const cavalry=b.team.reduce((sum,u)=>sum+(u.corps?.arm==='cavalry'?u.corps.troops:0),0),medic=b.team.some(u=>u.corps?.troops&&CORPS[u.id]?.profile==='medic');
  deathRate*=Math.min(medic?.9:1,has('andaoquan')?.75:1,has('huangfuduan')?1-.15*cavalry/Math.max(1,n):1);
  }

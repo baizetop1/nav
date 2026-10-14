@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.83.0';
-import { parseSave } from './save.js?v=0.83.0';
+import { hasOwn } from './utils.js?v=0.84.0';
+import { parseSave } from './save.js?v=0.84.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -27,7 +27,7 @@ const shape = {
   strategy:{version:true,drills:{'*':true}},
   player: fields('name title silver merit prestige stamina liangshanLevel'),
   heroes: {'*': fields('status level exp quality')}, inventory: {'*': true},
-  camp:{...fields('version day wood food troops wounded mode tactic deployment work sorties arm fallen casualtyCarry'),supply:fields('week month'),buildings:fields('hall farm lumber barracks clinic market')},
+  camp:{...fields('version day wood food troops wounded mode tactic deployment work sorties arm fallen casualtyCarry casualtyRules'),supply:fields('week month'),buildings:fields('hall farm lumber barracks clinic market')},
   frontier:{version:true,lastAt:true,focus:true,stations:{'*':fields('worker carry bank workRemainder')},posts:{'*':fields('guard safeAt threat carry bank')}},
   development:{version:true,corps:{'*':true},presets:{'*':fields('team mode tactic deployment')},goal:fields('kind id amount'),ledger:[{...fields('date wins losses recruits'),gained:{'*':true},spent:{'*':true}}]},
   campaign:{version:true,mastery:{'*':true},daily:{date:true,uses:{'*':true}},weekly:{'*':fields('tier score elapsed hp')}},

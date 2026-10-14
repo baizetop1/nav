@@ -1,6 +1,7 @@
-import { isExternal, isWanderer } from './roster.js?v=0.83.0';
-import { requireRule } from './utils.js?v=0.83.0';
-// Draw rarity is a family, separate from the historical aptitude field in hero data.
+import { heroAptitude } from './hero-aptitude.js?v=0.84.0';
+import { isExternal, isWanderer } from './roster.js?v=0.84.0';
+import { requireRule } from './utils.js?v=0.84.0';
+// Draw rarity is a family, separate from fixed aptitude and historical star position.
 export const recruitStar=h=>!isExternal(h)?5:isWanderer(h)?h.star:4;
 const CHINA_OFFSET=8*3600000;
 const rotate=(values,start,size)=>Array.from({length:Math.min(size,values.length)},(_,i)=>values[(start+i)%values.length]);
@@ -10,12 +11,18 @@ function periodBanner(d,year,month,slot){
  const first=slot*10+1,last=slot===2?monthDays:slot*10+10;
  const startAt=Date.UTC(year,month,first)-CHINA_OFFSET,endAt=Date.UTC(year,month,last+1)-CHINA_OFFSET;
  const canon=d.heroes.filter(h=>!isExternal(h)).sort((a,b)=>a.seat-b.seat);
+ const pools=Object.fromEntries(['A','B','C'].map(grade=>[grade,canon.filter(h=>heroAptitude(h)?.id===grade)]));
+ requireRule(pools.A.length===24&&pools.B.length===48&&pools.C.length===36,'正册资质排期配置不完整。');
+ // Each month visits two A, four B and three C heroes exactly once. Across
+ // twelve months this covers all 108; the third period has two B and one C.
+ const a=rotate(pools.A,month*2,2),b=rotate(pools.B,month*4,4),c=rotate(pools.C,month*3,3);
+ const headliners=slot<2?[a[slot],b[slot],c[slot]]:[b[2],b[3],c[slot]];
  const external=d.heroes.filter(h=>isExternal(h)&&!isWanderer(h));
- const byStar={5:rotate(canon,(month*9+slot*3)%canon.length,3),4:rotate(external,(monthNumber*3+slot*2)%external.length,2)};
+ const byStar={5:headliners,4:rotate(external,(monthNumber*3+slot*2)%external.length,2)};
  for(const star of [1,2,3]){const pool=d.heroes.filter(h=>isWanderer(h)&&recruitStar(h)===star);byStar[star]=rotate(pool,(monthNumber*12+slot*4)%pool.length,4);}
  requireRule([1,2,3,4,5].every(star=>byStar[star].length),'本期招贤人物配置不完整。');
  const period=year+'-'+String(month+1).padStart(2,'0'),heroes=[5,4,3,2,1].flatMap(star=>byStar[star]);
- return {id:period+'-'+(slot+1),period,slot,startAt,endAt,dateLabel:(month+1)+'月'+first+'日—'+last+'日',title:['江湖来客','聚义相逢','英雄赴约'][slot],heroes,headliners:byStar[5],byStar};
+ return {id:period+'-'+(slot+1)+'-v2',period,slot,startAt,endAt,dateLabel:(month+1)+'月'+first+'日—'+last+'日',title:['江湖来客','聚义相逢','英雄赴约'][slot],heroes,headliners:byStar[5],byStar};
 }
 // The reducer has already synchronized this saved clock. Never read Date.now here:
 // offline APK, browser and Worker replay must choose the same dated pool.

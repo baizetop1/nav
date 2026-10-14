@@ -1,7 +1,7 @@
-import {icon} from './icons.js?v=0.83.0';
-import {storyRevisitList,storyRevisitQuote} from './story-revisits.js?v=0.83.0';
-import {difficultyLabel} from './difficulty.js?v=0.83.0';
-import {enemyIntel} from './martial-ui.js?v=0.83.0';
+import {icon} from './icons.js?v=0.84.0';
+import {storyRevisitList,storyRevisitQuote} from './story-revisits.js?v=0.84.0';
+import {difficultyLabel} from './difficulty.js?v=0.84.0';
+import {enemyIntel} from './martial-ui.js?v=0.84.0';
 const numbers=(reward,data)=>Object.entries(reward?.guaranteed||{}).map(([id,n])=>(data.by.items[id]?.name||id)+' ×'+n);
 export function storyRevisitPanel(s,d,esc,btn,selected){
  const rows=storyRevisitList(s,d),current=rows.find(row=>row.id===selected)||rows.find(row=>row.unlocked)||rows[0];
