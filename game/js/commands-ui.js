@@ -1,6 +1,6 @@
-import {aptitudeBadge,starPosition} from './hero-aptitude.js?v=0.84.0';
-import {heroTier,tierBadge} from './hero-tiers.js?v=0.84.0';
-import { freshOrders, equipmentMatches } from './commands.js?v=0.84.0';
+import {aptitudeBadge,starPosition} from './hero-aptitude.js?v=0.88.0';
+import {heroTier,tierBadge} from './hero-tiers.js?v=0.88.0';
+import { freshOrders, equipmentMatches } from './commands.js?v=0.88.0';
 
 export function ordersPanel(s,d,btn,esc,locked){
  const b=s.battle;if(b.rules!==2)return '';

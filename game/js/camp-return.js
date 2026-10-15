@@ -1,11 +1,13 @@
-import {lifePlace,lifePeople,talkQuote,jobQuote} from './camp-life.js?v=0.84.0';
-import {CAMP_PEOPLE} from './camp-life-data.js?v=0.84.0';
-import {targetQuote} from './development.js?v=0.84.0';
-import {collectionQuote} from './production.js?v=0.84.0';
-import {dayKey} from './utils.js?v=0.84.0';
+import {REGION_COMPANIONS,companionHas,companionStep} from './region-companions-data.js?v=0.88.0';
+import {lifePlace,lifePeople,talkQuote,jobQuote} from './camp-life.js?v=0.88.0';
+import {CAMP_PEOPLE} from './camp-life-data.js?v=0.88.0';
+import {targetQuote} from './development.js?v=0.88.0';
+import {collectionQuote} from './production.js?v=0.88.0';
+import {dayKey} from './utils.js?v=0.88.0';
 const page=(id,extra={})=>({type:'ui_section',view:'camp',id,...extra});
 export function returnPlan(s,d){const day=Math.max(1,Math.floor((Date.parse(dayKey(s.clock))-Date.parse(dayKey(s.startedAt)))/86400000)+1),rows=[],add=(id,title,text,command)=>rows.push({id,title,text,command});
  const goal=s.development?.goal;if(goal){const q=targetQuote(s,d);if(q)add('goal',q.name||q.title||'继续上回的目标',q.next?.text||q.note||q.reason||'先把上回选的事办完。',q.done&&q.completeCommand?q.completeCommand:{type:'ui_goalDetails'});}
+ const companion=Object.values(REGION_COMPANIONS).find(r=>s.regionCompanions?.quests[r.id]&&!companionHas(s,r.id,'invited'));if(companion&&(goal?.kind!=='companion'||goal.id!==companion.id)){const g=companionStep(s,companion.id);add('companion',companion.name+'的委托还没办完',g.text,{type:'ui_companionOpen',id:companion.id});}
  const bank=Object.entries(s.idleDispatch?.bank||{}).filter(([,n])=>n>0);if(bank.length)add('idle','采集材料到了',bank.map(([id,n])=>d.by.items[id].name+' '+n).join('、'),page('idle'));
  if(!collectionQuote(s).reason)add('production','寨仓有新收成','先收进仓，再看这次营建还缺什么。',page('production'));
  const talk=lifePeople(s).find(id=>!talkQuote(s,id).reason);if(talk)add('person',d.by.heroes[talk].name+'在'+lifePlace(s,talk),'有件近来的小事想与你说。',page('life',{lifeTab:'people',lifeHero:talk,lifeMode:'talk'}));

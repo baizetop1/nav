@@ -1,16 +1,17 @@
-import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.84.0';
-import {SPECIAL_DUNGEONS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.84.0';
+import {companionHas,companionByDungeon} from './region-companions-data.js?v=0.88.0';
+import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.88.0';
+import {SPECIAL_DUNGEONS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.88.0';
 const object=o=>o!==null&&typeof o==='object'&&!Array.isArray(o);
 const exact=(o,keys)=>object(o)&&Object.keys(o).length===keys.length&&keys.every(k=>Object.hasOwn(o,k));
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
-const clearKeys=()=>Object.keys(SPECIAL_DUNGEONS).flatMap(id=>[1,2,3].map(tier=>id+'_'+tier));
+const clearKeys=()=>Object.keys(SPECIAL_DUNGEONS).flatMap(id=>Array.from({length:SPECIAL_DUNGEONS[id].maxTier||3},(_,i)=>id+'_'+(i+1)));
 export const hasSpecialDungeons=s=>s.specialDungeons!==undefined||s.battle?.context?.type==='special'||s.lastBattle?.context?.type==='special';
 export function validateSpecialDungeons(s,check){
  const x=s.specialDungeons,b=s.battle,r=s.lastBattle;
  if(x===undefined){check(b?.context?.type!=='special'&&r?.context?.type!=='special','特殊副本缺少记录');return;}
  check(exact(x,['version','clears','last'])&&x.version===1&&object(x.clears),'特殊副本记录');
  const keys=clearKeys();for(const [id,n] of Object.entries(x.clears))check(keys.includes(id)&&integer(n,1),'特殊副本通关次数');
- const unlocked=(id,tier)=>(s.camp?.buildings.hall||0)>=tier&&(!SPECIAL_DUNGEONS[id]?.parent||(x.clears[SPECIAL_DUNGEONS[id].parent+'_'+tier]||0)>=(SPECIAL_DUNGEONS[id].entryClears||5))&&(tier===1||(x.clears[id+'_'+(tier-1)]||0)>0);
+ const unlocked=(id,tier)=>tier<=(SPECIAL_DUNGEONS[id]?.maxTier||3)&&(!companionByDungeon(id)||companionHas(s,companionByDungeon(id).id,'prepared')&&s.regionCompanions?.quests[companionByDungeon(id).id]?.visited.includes(companionByDungeon(id).boss))&&(s.camp?.buildings.hall||0)>=tier&&(!SPECIAL_DUNGEONS[id]?.parent||(x.clears[SPECIAL_DUNGEONS[id].parent+'_'+tier]||0)>=(SPECIAL_DUNGEONS[id].entryClears||5))&&(tier===1||(x.clears[id+'_'+(tier-1)]||0)>0);
  for(const key of Object.keys(x.clears)){const [id,tier]=key.split('_');check(unlocked(id,Number(tier)),'特殊副本通关前置');}
  const last=x.last;
  check(last===null||exact(last,['id','tier','outcome','at','drops',...(last?.route===undefined?[]:['route','bonus'])]),'特殊副本最近战果');

@@ -1,10 +1,10 @@
-import {CHAPTER_MISSIONS} from './volume-three-data.js?v=0.84.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS} from './special-dungeons-data.js?v=0.84.0';
-import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.84.0';
-import {POSTS} from './frontier-data.js?v=0.84.0';
-import {ELITES} from './elites.js?v=0.84.0';
-import {JOURNEY_TIERS} from './journey-data.js?v=0.84.0';
-import {REGIONS} from './realm-data.js?v=0.84.0';
+import {CHAPTER_MISSIONS} from './volume-three-data.js?v=0.88.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS} from './special-dungeons-data.js?v=0.88.0';
+import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.88.0';
+import {POSTS} from './frontier-data.js?v=0.88.0';
+import {ELITES} from './elites.js?v=0.88.0';
+import {JOURNEY_TIERS} from './journey-data.js?v=0.88.0';
+import {REGIONS} from './realm-data.js?v=0.88.0';
 
 // Fixed encounter levels: a player's upgrades never raise a previously visited enemy.
 // Endurance, striking power and armor grow separately; speed stays readable.
@@ -35,7 +35,7 @@ function stage(state,data,c,scale){
   const weekly=kind==='weekly',resource=RESOURCE_ROUTES.some(r=>r.id===id);
   return {family:weekly?'weekly':resource?'resource':'daily',level:weekly?5+tier*5:(tier-1)*10+1,baseScale:weekly?.8+tier*.7:.55+(tier-1)*1.2,quality:weekly?(tier>=4?2:tier>=2?1:0):(tier===3?1:0)};
  }
- if(c?.type==='special'){const t=SPECIAL_TIERS[tier],m=SPECIAL_DUNGEONS[id];return t&&m?{family:'special',level:t.level,baseScale:t.scale,quality:tier>1?1:0,boss:!!m.parent}:null;}
+ if(c?.type==='special'){const t=SPECIAL_TIERS[tier],m=SPECIAL_DUNGEONS[id];return t&&m?{family:'special',level:m.level??t.level,baseScale:m.scale??t.scale,quality:tier>1?1:0,boss:!!m.parent||!!m.companion}:null;}
  if(c?.type==='elite'){const m=ELITES[id];return m?{family:kind==='hard'?'challenge':'weekly',level:m.level,baseScale:m.scale,quality:m.level>=30?2:1,boss:true}:null;}
  if(c?.type==='frontier'){const m=POSTS[id];return m?{family:'frontier',level:m.level,baseScale:m.scale,quality:m.level>=15?1:0}:null;}
  if(c?.type==='camp'){

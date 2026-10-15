@@ -1,5 +1,6 @@
-import {revisitBossMove} from './region-revisit-combat.js?v=0.84.0';
-import {GEAR_TRAITS,PERSONAL_TRAITS,TRAIT_LABELS} from './tactics-data.js?v=0.84.0';
+import {companionBossMove} from './region-companions-combat.js?v=0.88.0';
+import {revisitBossMove} from './region-revisit-combat.js?v=0.88.0';
+import {GEAR_TRAITS,PERSONAL_TRAITS,TRAIT_LABELS} from './tactics-data.js?v=0.88.0';
 const alive=u=>u.hp>0;
 const active=(b,u,id)=>u.statuses.some(s=>s.id===id&&s.expiresAt>b.elapsed);
 const log=(b,text)=>{b.log.push(text);if(b.log.length>120)b.log.shift();};
@@ -49,7 +50,9 @@ export function tacticsHealing(b,u,t,n,api){if(!t||!alive(t)||n<=0)return;for(co
 }}
 export function specialBossMove(state,u,api,strike){
  const b=state.battle,boss=u.boss;
- if(!b.tactics||b.context.type!=='special'||u!==b.enemy[0]||!['minechief','marshnest','ruinsvault','forestcamp','waterfort','mountainhold'].includes(b.context.id)&&b.context.route!=='warbell')return false;
+ if(!b.tactics||b.context.type!=='special'||u!==b.enemy[0])return false;
+ if(companionBossMove(state,u,api,strike))return true;
+ if(!['minechief','marshnest','ruinsvault','forestcamp','waterfort','mountainhold'].includes(b.context.id)&&b.context.route!=='warbell')return false;
  if(revisitBossMove(state,u,api,strike))return true;
  const id=b.context.route==='warbell'?'ruinsvault':b.context.id;
  if(!boss.pendingAt&&boss.readyAt===b.elapsed){boss.pendingAt=b.elapsed+3000;if(id==='marshnest'&&b.context.route==='reedvenom')for(const target of b.team.filter(alive))api.addStatus(target,{id:'poison',value:Math.max(1,Math.round(target.maxHp*.01)),turns:2},b.elapsed);if(id==='mountainhold'&&!['highpath','convoy'].includes(b.context.route))api.addStatus(u,{id:'guard',value:.35,turns:3},b.elapsed);api.log(b,'【首领蓄势 · 3秒】'+({mountainhold:b.context.route==='convoy'?'伏兵将绕到车尾，夹击最后一位同伴；击倒最末位伏兵或打断头目可阻止。':b.context.route==='highpath'?'头目将突刺前排一人；可打断或固守。':'头目举盾；三秒内破去护阵可阻止重击，并让他破甲。',waterfort:'水浪将撞过全队；切换固守可减伤并保住怒气，也可打断。',minechief:b.context.route==='orecart'?'运料匪要送来补给：头目回血、全敌护阵。先击倒最末位运料匪，或打断头目。':'重锤将扫过全队，可护阵承受或打断。',marshnest:b.context.route==='reedvenom'?'毒雾已沾身，三秒后向仍中毒的人追加重毒。先解毒可躲开；打断阻止追加，固守使重毒减半。':'蛇群将喷出毒雾，可打断；中毒后用解毒或净化。',ruinsvault:'头目将为全队恢复气血，可打断或先集火头目。',forestcamp:b.context.route==='cutbell'||!alive(b.enemy[1])?'警铃或传令已断，头目只会攻击前排一人。':'传令哨将号令齐射；击倒传令哨或打断头目可阻止。'})[id]);}

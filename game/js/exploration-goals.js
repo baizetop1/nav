@@ -1,21 +1,23 @@
-import {CROSS_STORY,crossStep,crossHas,crossPrerequisite,crossAvailable,crossCommand} from './cross-region-data.js?v=0.84.0';
-import {revisitSpec,revisitHas} from './region-revisit-data.js?v=0.84.0';
-import {EXPLORATION_REGIONS,REGION_NODES,REGION_CONTACTS,EXPLORATION_HERO_REGIONS,REGION_BUILDINGS,activeRegion,regionState,regionHas,regionBuilt,mineGoal} from './exploration-data.js?v=0.84.0';
-import {marshGoal,MARSH_NODES} from './marsh-data.js?v=0.84.0';
-import {ruinsGoal,RUINS_NODES} from './ruins-data.js?v=0.84.0';
-import {forestGoal,FOREST_NODES} from './forest-data.js?v=0.84.0';
-import {waterGoal,WATER_NODES} from './water-data.js?v=0.84.0';
-import {mountainGoal,MOUNTAIN_NODES} from './mountain-data.js?v=0.84.0';
-import {GATHERING_REGIONS,REGIONAL_RECIPES} from './gathering-data.js?v=0.84.0';
-import {regionalQuote} from './gathering.js?v=0.84.0';
-import {idleUnlocked} from './idle-data.js?v=0.84.0';
-export const EXPLORATION_GOAL_KINDS={invite:'邀好汉',regional:'备装备药品',regionBuild:'扩建寨子',crossRegion:'故人共事'};
+import {REGION_COMPANIONS,companionSpec,companionStep,companionHas,companionAvailable} from './region-companions-data.js?v=0.88.0';
+import {CROSS_STORY,crossStep,crossHas,crossPrerequisite,crossAvailable,crossCommand} from './cross-region-data.js?v=0.88.0';
+import {revisitSpec,revisitHas} from './region-revisit-data.js?v=0.88.0';
+import {EXPLORATION_REGIONS,REGION_NODES,REGION_CONTACTS,EXPLORATION_HERO_REGIONS,REGION_BUILDINGS,activeRegion,regionState,regionHas,regionBuilt,mineGoal} from './exploration-data.js?v=0.88.0';
+import {marshGoal,MARSH_NODES} from './marsh-data.js?v=0.88.0';
+import {ruinsGoal,RUINS_NODES} from './ruins-data.js?v=0.88.0';
+import {forestGoal,FOREST_NODES} from './forest-data.js?v=0.88.0';
+import {waterGoal,WATER_NODES} from './water-data.js?v=0.88.0';
+import {mountainGoal,MOUNTAIN_NODES} from './mountain-data.js?v=0.88.0';
+import {GATHERING_REGIONS,REGIONAL_RECIPES} from './gathering-data.js?v=0.88.0';
+import {regionalQuote} from './gathering.js?v=0.88.0';
+import {idleUnlocked} from './idle-data.js?v=0.88.0';
+export const EXPLORATION_GOAL_KINDS={invite:'邀好汉',regional:'备装备药品',regionBuild:'扩建寨子',crossRegion:'故人共事',companion:'当地共事'};
 export const explorerGoal=g=>!!g&&typeof g.kind==='string'&&Object.hasOwn(EXPLORATION_GOAL_KINDS,g.kind);
-export function validExplorerGoal(g){return explorerGoal(g)&&typeof g.id==='string'&&(g.kind==='crossRegion'?g.id===CROSS_STORY.id:g.kind==='invite'?Object.hasOwn(EXPLORATION_HERO_REGIONS,g.id):Object.hasOwn(g.kind==='regional'?REGIONAL_RECIPES:REGION_BUILDINGS,g.id));}
+export function validExplorerGoal(g){return explorerGoal(g)&&typeof g.id==='string'&&(g.kind==='companion'?!!companionSpec(g.id):g.kind==='crossRegion'?g.id===CROSS_STORY.id:g.kind==='invite'?Object.hasOwn(EXPLORATION_HERO_REGIONS,g.id)||!!companionSpec(g.id):Object.hasOwn(g.kind==='regional'?REGIONAL_RECIPES:REGION_BUILDINGS,g.id));}
 const NODES={mine:REGION_NODES,marsh:MARSH_NODES,ruins:RUINS_NODES,forest:FOREST_NODES,water:WATER_NODES,mountain:MOUNTAIN_NODES};
 export const regionGoalCommand=(region,node)=>({type:'ui_regionOpen',region,...(node?{node}:{})});
 export const validRegionNode=(region,node)=>Object.hasOwn(NODES[region]||{},node);
 export function explorationResume(s,region=activeRegion(s),local=false){
+ if(!local){const r=Object.values(REGION_COMPANIONS).find(r=>s.regionCompanions?.quests[r.id]&&!companionHas(s,r.id,'invited'));if(r){const g=companionStep(s,r.id);return {...g,region:r.region,name:r.name+' · '+r.title,place:r.nodes[g.node].name,text:g.text,label:'继续'+r.name+'的委托',command:{type:'ui_companionOpen',id:r.id}};}}
  if(!local&&crossAvailable(s)&&!crossHas(s,'delivered')){const g=crossStep(s);return {...g,region:g.region||'marsh',name:CROSS_STORY.name,place:g.place,text:g.text,label:crossHas(s,'accepted')?'继续护药':'查看药船消息',command:crossCommand()};}
  if(!Object.hasOwn(EXPLORATION_REGIONS,region))region='mine';
  if(s.camp&&!Object.values(s.heroes).some(h=>h.status==='owned'&&h.level>=5))return {region,name:EXPLORATION_REGIONS[region],place:'出行准备',text:'探索需要一位 5 级好汉。先走一段主线，或到好汉页用经验丹培养。',label:'继续主线',command:{type:'ui_storyResume'}};
@@ -23,8 +25,9 @@ export function explorationResume(s,region=activeRegion(s),local=false){
  return {...g,region,name:EXPLORATION_REGIONS[region],place:NODES[region][x?.position]?.name||'尚未进入',label:g.label||'继续探索',command:g.command||regionGoalCommand(region,g.node)};
 }
 export function explorerChoices(d,kind){
+ if(kind==='companion')return Object.values(REGION_COMPANIONS).map(r=>({id:r.id,name:r.name+' · '+r.title}));
  if(kind==='crossRegion')return [{id:CROSS_STORY.id,name:CROSS_STORY.name+' · 安道全、时迁、阮小七'}];
- if(kind==='invite')return Object.entries(EXPLORATION_HERO_REGIONS).map(([id,region])=>({id,name:d.by.heroes[id].name+' · '+EXPLORATION_REGIONS[region]}));
+ if(kind==='invite')return [...Object.entries(EXPLORATION_HERO_REGIONS).map(([id,region])=>({id,name:d.by.heroes[id].name+' · '+EXPLORATION_REGIONS[region]})),...Object.values(REGION_COMPANIONS).map(r=>({id:r.id,name:r.name+' · '+r.area}))];
  if(kind==='regional')return Object.entries(REGIONAL_RECIPES).map(([id,r])=>({id,name:(r.kind==='equipment'?d.by.equipments:d.by.items)[r.output].name}));
  return Object.entries(REGION_BUILDINGS).map(([id,b])=>({id,name:b.name}));
 }
@@ -38,7 +41,13 @@ export function explorationGoalQuote(s,d,g=s.development?.goal){
  step(s.camp,'先在山脚建起寨子。','前往寨子',{type:'ui_section',view:'camp',id:'home'});
  let name,note,completeLabel,completeCommand,done=false;
  const material=(id,needed)=>{if(!needed)return;const stock=id==='silver'?s.player.silver:id==='campWood'?s.camp?.wood||0:s.inventory[id]||0,label=id==='silver'?'碎银':id==='campWood'?'营建木材':d.by.items[id].name,source=explorationMaterialSource(s,id);step(stock>=needed,label+' '+stock+'/'+needed+(stock<needed?'，还差 '+(needed-stock):'，已备齐'),source.label,{...source.command,amount:needed},{material:id,stock,needed});};
- if(g.kind==='crossRegion'){
+ if(g.kind==='companion'||g.kind==='invite'&&companionSpec(g.id)){
+  const r=companionSpec(g.id),ready=companionAvailable(s,g.id),gstep=companionStep(s,g.id),owned=s.heroes[g.id].status==='owned';
+  name=g.kind==='companion'?r.name+' · '+r.title:'邀请'+r.name;note='前往'+r.area+'，与'+r.name+'相识、查探并接应。已通过招贤入寨也可接着做，保留培养；谢礼只领一次。';done=g.kind==='companion'?companionHas(s,g.id,'invited'):owned;
+  step(ready,'建立寨子，安排至少一位 '+r.level+' 级好汉。','安排阵容',{type:'ui_section',view:'heroes',id:'formation'});
+  step(companionHas(s,g.id,'invited'),gstep.text,'查看'+r.title,{type:'ui_companionOpen',id:g.id});
+  completeLabel=g.kind==='companion'?'回寨聊近况':'查看好汉';completeCommand=g.kind==='companion'?{type:'ui_section',view:'camp',id:'life',lifeTab:'people',lifeHero:g.id}:{type:'ui_section',view:'heroes',id:'profile',hero:g.id};
+ }else if(g.kind==='crossRegion'){
   name=CROSS_STORY.name;note='三地重访后可接下。首通谢礼只领一次；护药路线与每日行药会留下。';done=crossHas(s,'delivered');
   for(const [region,label]of Object.entries(CROSS_STORY.regions)){const next=explorationResume(s,region,true);step(s.exploration?.[region]?.flags.includes('return_paid'),'办妥'+label+'的故人重访',next.label,next.command);}
   const next=crossStep(s);step(done,next.text,done?'回寨配药':'查看共事',crossCommand());completeLabel='回寨配药';completeCommand=crossCommand();

@@ -1,8 +1,8 @@
-import {WORKSHOP_RECIPES} from './supplies-data.js?v=0.84.0';
-import {MARSH_NODES,marshHas,marshGate,marshRoute,MARSH_REWARDS,MARSH_DECOCT} from './marsh-data.js?v=0.84.0';
-import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.84.0';
-import {knowHero,ownHero} from './hero.js?v=0.84.0';
-import {requireRule,journal} from './utils.js?v=0.84.0';
+import {WORKSHOP_RECIPES} from './supplies-data.js?v=0.88.0';
+import {MARSH_NODES,marshHas,marshGate,marshRoute,MARSH_REWARDS,MARSH_DECOCT} from './marsh-data.js?v=0.88.0';
+import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.88.0';
+import {knowHero,ownHero} from './hero.js?v=0.88.0';
+import {requireRule,journal} from './utils.js?v=0.88.0';
 export function openMarsh(s){return s.exploration.marsh??={version:1,position:'landing',visited:['landing'],flags:[],pending:null};}
 const mark=(x,id)=>{if(!x.flags.includes(id))x.flags.push(id);};
 export function marshPath(s,target){

@@ -18,7 +18,7 @@ body{margin:0}
 .strip-note{font-size:11px;letter-spacing:1px;color:var(--muted)}
 .viewport-shell .resource-strip .resources{margin:0;padding:0;border:0;flex-wrap:nowrap;gap:20px;font-size:12px}
 .shell.viewport-shell .viewport-layout{
-  min-height:0;min-width:0;display:grid;grid-template-columns:110px minmax(0,1fr) minmax(260px,24%);
+  min-height:0;min-width:0;display:grid;grid-template-columns:110px minmax(0,1fr);
   grid-template-rows:minmax(0,1fr);gap:16px;margin:0;padding:0;align-items:stretch;
 }
 .viewport-shell .rail{grid-column:1;grid-row:1;position:static;min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
@@ -83,7 +83,7 @@ dialog{max-height:calc(var(--game-height,100dvh) - 24px);overscroll-behavior:con
   .viewport-shell .seal{width:28px;height:32px}
   .viewport-shell .edition{display:none}
   .viewport-shell .resource-strip .resources{font-size:11px;gap:14px}
-  .shell.viewport-shell .viewport-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:48px minmax(0,1fr) clamp(112px,22vh,180px);grid-template-rows:48px minmax(0,1fr) clamp(112px,22dvh,180px);gap:8px}
+  .shell.viewport-shell .viewport-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:48px minmax(0,1fr);gap:8px}
   .viewport-shell .rail{grid-column:1;grid-row:1;overflow:hidden}
   .viewport-shell .tabs{height:100%;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;overflow:hidden}
   .viewport-shell .tabs button{display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:44px;padding:3px 0;gap:3px;border-left:0;border-bottom:2px solid transparent;font-size:11px;line-height:1.2;white-space:nowrap}
@@ -123,7 +123,7 @@ dialog{max-height:calc(var(--game-height,100dvh) - 24px);overscroll-behavior:con
   .shell.viewport-shell{padding-top:4px;grid-template-rows:40px 24px minmax(0,1fr) 26px}
   .viewport-shell .brand strong{font-size:18px}
   .viewport-shell .seal{width:24px;height:28px}
-  .shell.viewport-shell .viewport-layout{grid-template-columns:84px minmax(0,1fr) 210px;grid-template-rows:minmax(0,1fr);gap:8px}
+  .shell.viewport-shell .viewport-layout{grid-template-columns:84px minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:8px}
   .viewport-shell .rail{grid-column:1;grid-row:1;overflow:auto}
   .viewport-shell .tabs{height:auto;display:flex;flex-direction:column;overflow:visible}
   .viewport-shell .tabs button{flex:0 0 auto;flex-direction:row;justify-content:flex-start;min-height:40px;font-size:11px;padding-inline:4px}
@@ -134,7 +134,7 @@ dialog{max-height:calc(var(--game-height,100dvh) - 24px);overscroll-behavior:con
 }
 /* An on-screen keyboard may reduce the usable height without changing CSS width. */
 @media(max-width:599px){
-  html[data-short-viewport] .shell.viewport-shell .viewport-layout{grid-template-rows:44px minmax(0,1fr) 84px;gap:4px}
+  html[data-short-viewport] .shell.viewport-shell .viewport-layout{grid-template-rows:44px minmax(0,1fr);gap:4px}
   html[data-short-viewport] .activity-panel{grid-template-rows:32px minmax(0,1fr)}
   html[data-short-viewport] .activity-caption{display:none}
   html[data-short-viewport] .log-latest{min-height:32px}

@@ -1,5 +1,5 @@
-import {acquisitionSources,sourceCatalog,sourceStock,sourceName,sourceUses} from './source-catalog.js?v=0.84.0';
-import {goalOverview} from './goal-overview.js?v=0.84.0';
+import {acquisitionSources,sourceCatalog,sourceStock,sourceName,sourceUses} from './source-catalog.js?v=0.88.0';
+import {goalOverview} from './goal-overview.js?v=0.88.0';
 export function sourceSelection(s,d,options={}){const query=String(options.query||'').trim().toLowerCase(),group=options.group||'全部',all=sourceCatalog(d),list=all.filter(r=>(group==='全部'||r.group===group)&&(!query||(r.name+' '+(d.by.items[r.id]?.description||'')).toLowerCase().includes(query))),target=list.find(r=>r.id===options.id)||list[0],sources=target?acquisitionSources(s,d,target.id):[],source=sources.find(r=>r.key===options.source)||sources[0];return {list,target,sources,source};}
 export function sourceBrowser(s,d,esc,btn,options={}){
  const {list,target,sources,source}=sourceSelection(s,d,options),g=s.development?.goal,stock=target?.kind==='equipment'?s.equipment.filter(e=>e.item===target.id).length:target?sourceStock(s,target.id):0,amount=options.amount||1,selected=target&&(g?.id===target.id&&(target.kind==='equipment'?g.kind==='gear':g.kind==='stock'&&g.amount===amount)),tab=options.tab||'where';

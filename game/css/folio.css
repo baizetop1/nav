@@ -45,9 +45,8 @@ html:not([data-theme=night]),html:not([data-theme=night]) body{background:var(--
 @media(max-width:900px) and (min-height:501px),(max-width:599px){
  .shell.viewport-shell{grid-template-rows:42px 28px minmax(0,1fr) 20px;padding-inline:max(8px,env(safe-area-inset-left))}
  .viewport-shell .masthead{padding-bottom:3px}.viewport-shell .brand strong{font-size:17px}.viewport-shell .mast-links{gap:7px}.viewport-shell .mast-links>a{font-size:10px;min-height:36px}.theme-switch{min-height:34px;font-size:11px;padding-inline:7px}
- .shell.viewport-shell .viewport-layout,html[data-short-viewport] .shell.viewport-shell .viewport-layout{grid-template-rows:minmax(0,1fr) 36px 50px;gap:4px}
- html[data-log-expanded=true] .shell.viewport-shell .viewport-layout{grid-template-rows:minmax(0,1fr) min(200px,30dvh) 50px}
- .viewport-shell .main{grid-row:1;border-radius:12px;padding:8px}.viewport-shell .rail{grid-row:3;background:var(--panel);border-top:1px solid var(--line);border-radius:10px;overflow:hidden}.viewport-shell .tabs{height:50px}.viewport-shell .tabs button{border:0!important;border-radius:8px;gap:3px;min-height:48px}.viewport-shell .tabs .game-icon{width:18px;height:18px;flex-basis:18px}
+ .shell.viewport-shell .viewport-layout,html[data-short-viewport] .shell.viewport-shell .viewport-layout{grid-template-rows:minmax(0,1fr) 50px;gap:4px}
+ .viewport-shell .main{grid-row:1;border-radius:12px;padding:8px}.viewport-shell .rail{grid-row:2;background:var(--panel);border-top:1px solid var(--line);border-radius:10px;overflow:hidden}.viewport-shell .tabs{height:50px}.viewport-shell .tabs button{border:0!important;border-radius:8px;gap:3px;min-height:48px}.viewport-shell .tabs .game-icon{width:18px;height:18px;flex-basis:18px}
  .activity-panel{grid-row:2;border-radius:8px;border-top-width:1px}.activity-heading{padding:0 8px}.activity-heading h2{font-size:12px}.log-toggle{min-height:34px;font-size:11px}.log-latest{min-height:34px}
  html:not([data-log-expanded=true]) .activity-panel{grid-template-rows:34px}
  .viewport-shell .footer,.viewport-shell .footer .text-action{font-size:9px;min-height:20px;padding:0}.viewport-shell .footer .game-icon{width:12px;height:12px;flex-basis:12px}
@@ -242,3 +241,6 @@ button[data-guide-target]:focus-visible{outline:2px solid var(--green);outline-o
 .region-material-sources li>div+div{margin-top:3px}
 #region-camp-info .region-material-sources button{min-height:32px;padding:4px 8px;font-size:12px}
 .region-material-sources strong,.region-material-sources span{font-size:12px}
+
+/* Keep the latest action feedback without a separate journal panel. */
+.viewport-shell .main .action-notice{padding:6px 9px;margin:0 0 7px;font-size:12px;line-height:1.5}

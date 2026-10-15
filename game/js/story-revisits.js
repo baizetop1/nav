@@ -1,6 +1,6 @@
-import {meets} from './map.js?v=0.84.0';
-import {deployedTroops} from './logistics.js?v=0.84.0';
-import {difficultyQuote} from './difficulty.js?v=0.84.0';
+import {meets} from './map.js?v=0.88.0';
+import {deployedTroops} from './logistics.js?v=0.88.0';
+import {difficultyQuote} from './difficulty.js?v=0.88.0';
 const UNLOCK_TEXT={jingyanggang:'完成景阳冈打虎',huangnigang:'完成黄泥冈主线',yezhulin:'完成黄泥冈主线或野猪林救援',shanshenmiao:'完成黄泥冈主线或风雪山神庙',zhujiazhuang:'完成黄泥冈主线',chai_escort:'完成柴庄避难',qingzhou_patrol:'完成杨志护道',spirit_trial:'聚义厅达到 2 级',immortal_trial:'聚义厅达到 4 级'};
 export function storyRevisitUnlocked(state,dungeon){
  if(!dungeon)return false;

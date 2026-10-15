@@ -1,16 +1,17 @@
-import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.84.0';
-import {heroTier,tierBadge} from './hero-tiers.js?v=0.84.0';
-import {qualityEmblem,qualitySteps,promotionCorePanel} from './promotion-ui.js?v=0.84.0';
-import {recruitmentBanner} from './recruitment-banner.js?v=0.84.0';
-import {EXPLORATION_HERO_REGIONS} from './exploration-data.js?v=0.84.0';
-import {HERO_ROLES} from './hero-roles.js?v=0.84.0';
-import { promotionPreview } from './growth-preview.js?v=0.84.0';
-import { deployedTroops } from './logistics.js?v=0.84.0';
-import { isExternal, isWanderer, externalInvitation, canonicalHeroes } from './roster.js?v=0.84.0';
-import { qualityTechnique } from './development-ui.js?v=0.84.0';
-import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.84.0';
-import { portrait } from './camp-ui.js?v=0.84.0';
-import { dungeonEntry } from './map.js?v=0.84.0';
+import {companionSpec} from './region-companions-data.js?v=0.88.0';
+import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.88.0';
+import {heroTier,tierBadge} from './hero-tiers.js?v=0.88.0';
+import {qualityEmblem,qualitySteps,promotionCorePanel} from './promotion-ui.js?v=0.88.0';
+import {recruitmentBanner} from './recruitment-banner.js?v=0.88.0';
+import {EXPLORATION_HERO_REGIONS} from './exploration-data.js?v=0.88.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.88.0';
+import { promotionPreview } from './growth-preview.js?v=0.88.0';
+import { deployedTroops } from './logistics.js?v=0.88.0';
+import { isExternal, isWanderer, externalInvitation, canonicalHeroes } from './roster.js?v=0.88.0';
+import { qualityTechnique } from './development-ui.js?v=0.88.0';
+import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.88.0';
+import { portrait } from './camp-ui.js?v=0.88.0';
+import { dungeonEntry } from './map.js?v=0.88.0';
 
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 const statuses={unknown:'未闻',heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'};
@@ -26,8 +27,8 @@ export function qualityPanel(s,d,h,esc,btn){
  return '<section class="quality-panel quality-'+current+'">'+qualitySteps(current)+(next?promotionCorePanel(s,d,h.id,esc,btn)+'<p class="note promotion-reason">'+esc(q.reason||'条件已满足，升品必成。')+'</p>'+btn('升至'+next.name+'品',{type:'heroPromote',id:h.id},'primary',!!q.reason):'<p class="note promotion-reason">已达仙品。</p>')+'<details class="promotion-more"><summary>辅料、条件与升品变化</summary>'+common+'<p>当前'+QUALITIES[current].name+'品 · 气血、攻击、防御、谋略较凡品 +'+Math.round((QUALITIES[current].power-1)*100)+'%，速度 +'+Math.round((QUALITIES[current].speed-1)*100)+'%。</p>'+(next?'<p>人物 '+next.level+' 级，聚义厅 '+next.hall+' 级。'+btn('查看通用材料试炼',{type:'ui_storyRevisit',id:current===0?'spirit_trial':'immortal_trial'},'secondary')+'</p>':'')+qualityTechnique(h)+promotionPreview(s,d,h.id)+'<p class="note">等级、经验、招式、装备与坐骑继续保留。</p></details></section>';
 }
 export function invitation(s,h,btn,d){
- const track=Object.hasOwn(EXPLORATION_HERO_REGIONS,h.id)?btn('追踪入寨目标',{type:'goalSet',kind:'invite',id:h.id},'secondary'):'';
- const region=track+(h.id==='liyun'?'<p class="note">矿车夺回后，可在旧矿洞结识李云。查验裂梁、护送木料、立好支架后邀请入寨。</p>'+btn('前往旧矿洞',{type:'ui_regionOpen',region:'mine'},'secondary'):h.id==='xiangchong'?'<p class="note">也可在断崖粮道结识项充，清出隘口、取回粮车后邀请入寨。</p>'+btn('前往断崖粮道',{type:'ui_regionOpen',region:'mountain'},'secondary'):h.id==='ruanxiaoqi'?'<p class="note">也可在芦荡渡口结识阮小七，测明水道、救出船户后邀请入寨。</p>'+btn('前往芦荡渡口',{type:'ui_regionOpen',region:'water'},'secondary'):h.id==='shiqian'?'<p class="note">也可在青石古道结识时迁，查探哨位、取回商队货物后邀请入寨。</p>'+btn('前往青石古道',{type:'ui_regionOpen',region:'forest'},'secondary'):h.id==='tanglong'?'<p class="note">也可在旧矿洞结识汤隆，修炉、取回工具后邀请入寨。</p>'+btn('前往旧矿洞',{type:'ui_regionOpen',region:'mine'},'secondary'):h.id==='andaoquan'?'<p class="note">也可在芦苇泽结识安道全，救治药农、整修药圃并取回药箱后邀请入寨。</p>'+btn('前往芦苇泽',{type:'ui_regionOpen',region:'marsh'},'secondary'):h.id==='yuehe'?'<p class="note">也可在荒祠结识乐和，听声找到暗门、拓写残碑并取回谱册后邀请入寨。</p>'+btn('前往荒祠地宫',{type:'ui_regionOpen',region:'ruins'},'secondary'):'');
+ const track=(Object.hasOwn(EXPLORATION_HERO_REGIONS,h.id)||!!companionSpec(h.id))?btn('追踪入寨目标',{type:'goalSet',kind:'invite',id:h.id},'secondary'):'';
+ const q=companionSpec(h.id);const region=track+(q?'<p class="note">也可在'+q.area+'结识'+h.name+'，办妥'+q.title+'后邀请入寨；不收碎银和招贤令。</p>'+btn('查看'+q.title,{type:'ui_companionOpen',id:h.id},'secondary'):h.id==='liyun'?'<p class="note">矿车夺回后，可在旧矿洞结识李云。查验裂梁、护送木料、立好支架后邀请入寨。</p>'+btn('前往旧矿洞',{type:'ui_regionOpen',region:'mine'},'secondary'):h.id==='xiangchong'?'<p class="note">也可在断崖粮道结识项充，清出隘口、取回粮车后邀请入寨。</p>'+btn('前往断崖粮道',{type:'ui_regionOpen',region:'mountain'},'secondary'):h.id==='ruanxiaoqi'?'<p class="note">也可在芦荡渡口结识阮小七，测明水道、救出船户后邀请入寨。</p>'+btn('前往芦荡渡口',{type:'ui_regionOpen',region:'water'},'secondary'):h.id==='shiqian'?'<p class="note">也可在青石古道结识时迁，查探哨位、取回商队货物后邀请入寨。</p>'+btn('前往青石古道',{type:'ui_regionOpen',region:'forest'},'secondary'):h.id==='tanglong'?'<p class="note">也可在旧矿洞结识汤隆，修炉、取回工具后邀请入寨。</p>'+btn('前往旧矿洞',{type:'ui_regionOpen',region:'mine'},'secondary'):h.id==='andaoquan'?'<p class="note">也可在芦苇泽结识安道全，救治药农、整修药圃并取回药箱后邀请入寨。</p>'+btn('前往芦苇泽',{type:'ui_regionOpen',region:'marsh'},'secondary'):h.id==='yuehe'?'<p class="note">也可在荒祠结识乐和，听声找到暗门、拓写残碑并取回谱册后邀请入寨。</p>'+btn('前往荒祠地宫',{type:'ui_regionOpen',region:'ruins'},'secondary'):'');
   if(s.heroes[h.id].status==='owned')return '';
   const banner=d?recruitmentBanner(d,s.clock):null,featured=!!banner?.heroes.some(x=>x.id===h.id);
   const recruitment='<section class="hero-invitation"><p class="note">'+(featured?'本期可招募，首次抽中即入寨。':'不在本期名单。可查看招募日历，等待下次到访。')+'</p>'+btn('查看当期招募',{type:'ui_section',view:'recruit',id:'ordinary'},'primary')+'</section>';

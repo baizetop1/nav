@@ -1,4 +1,4 @@
-import {CROSS_FLAGS,CROSS_TASKS,CROSS_WORK,crossHas,crossAvailable} from './cross-region-data.js?v=0.84.0';
+import {CROSS_FLAGS,CROSS_TASKS,CROSS_WORK,crossHas,crossAvailable} from './cross-region-data.js?v=0.88.0';
 export function validateCrossRegion(s,check){
  const x=s.exploration?.crossRegion,n=s.daily?.counters?.[CROSS_WORK.counter];
  if(x!==undefined){check(x&&typeof x==='object'&&!Array.isArray(x)&&Object.keys(x).sort().join(',')==='flags,version'&&x.version===1&&Array.isArray(x.flags)&&x.flags.length>0&&new Set(x.flags).size===x.flags.length&&x.flags.every(k=>CROSS_FLAGS.includes(k)),'跨地区共事记录');check(crossAvailable(s),'共事三地前置');

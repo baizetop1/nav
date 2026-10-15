@@ -1,6 +1,6 @@
-import { heroAptitude } from './hero-aptitude.js?v=0.84.0';
-import { isExternal, isWanderer } from './roster.js?v=0.84.0';
-import { requireRule } from './utils.js?v=0.84.0';
+import { heroAptitude } from './hero-aptitude.js?v=0.88.0';
+import { isExternal, isWanderer } from './roster.js?v=0.88.0';
+import { requireRule } from './utils.js?v=0.88.0';
 // Draw rarity is a family, separate from fixed aptitude and historical star position.
 export const recruitStar=h=>!isExternal(h)?5:isWanderer(h)?h.star:4;
 const CHINA_OFFSET=8*3600000;

@@ -29,3 +29,9 @@ Object.assign(SPECIAL_ROUTES,{
 Object.assign(SPECIAL_ROUTES,{timberguard:{introduced:10,areas:['mine'],name:'护送木料',enemy:'road_raider',hp:1,speed:1,bonus:'wood',amount:1,text:'先与李云查过裂梁，再请汤隆备好铁箍。多一名夺木骑匪，绕击后排；可先集火他，或照应后排。胜利必得木材 1/2/3，其他掉落沿用旧矿洞；不耗体力、粮草，也不带兵。'}});
 
 Object.assign(SPECIAL_ROUTES,{medicineboat:{introduced:11,areas:['waterfort'],name:'药船夜渡',enemy:'bandit',hp:1.15,speed:1,bonus:'herb',amount:2,text:'先办妥三地重访，随安道全、时迁和阮小七查明药船去向。开场弩手眩晕六秒，全队减伤 20% 八秒。头目蓄势三秒，最末位弩手连射伤重者两箭；除去或眩晕弩手可阻止并使头目破甲，固守减伤 50%，也可打断。胜利必得药草 2/4/6，其他掉落沿用水寨。'}});
+
+Object.assign(SPECIAL_ROUTES,{
+ reedrescue:{introduced:12,areas:['xunyangship'],name:'苇湾救人',enemy:'guard',hp:1,speed:1,bonus:'herb',amount:2,text:'先与张顺查过沉船绳索，到江岸药棚核对货单。持钩水匪开场眩晕四秒，头目蓄势三秒后令他钩拽后排、减怒气 15。先击倒或眩晕最末位持钩水匪，或打断头目可阻止；固守减伤 50% 并保住怒气。仅寻常难度，胜利另得药草 2，扣船货栈的独立掉落逐项判定。'},
+ rubbings:{introduced:12,areas:['jizhouyard'],name:'残碑取样',enemy:'guard',hp:1.1,speed:1,bonus:'stone_rubbing',amount:1,text:'先与金大坚查过搬碑痕迹，到碑样棚核对缺字抄件。头目蓄势三秒后令最末位护样人为他护阵 30% 八秒；先击倒或眩晕护样人，使头目破甲六秒，也可打断头目。仅寻常难度，胜利另得拓片 1，藏模院的独立掉落逐项判定。'},
+ teaconvoy:{introduced:12,areas:['nanshanstock'],name:'茶棚接商',enemy:'bandit',hp:1.15,speed:1,bonus:'cloth',amount:1,text:'先与朱贵查过岔路，与时迁约好接应。第二位哨手开场眩晕四秒；头目蓄势三秒后，哨手号令头目与伏兵夹击后排。击倒或眩晕哨手，或打断头目可阻止；固守减伤 50%。仅寻常难度，胜利另得粗布 1，劫货寨的独立掉落逐项判定。'}
+});

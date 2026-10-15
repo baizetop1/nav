@@ -1,32 +1,33 @@
-import {promotionCoreSourceRows,promotionCoreUses} from './promotion-sources.js?v=0.84.0';
-import {recruitmentBanner} from './recruitment-banner.js?v=0.84.0';
-import {CAMP_PEOPLE,CAMP_PROJECTS} from './camp-life-data.js?v=0.84.0';
-import {jobQuote,talkQuote,serviceQuote,salvageable} from './camp-life.js?v=0.84.0';
-import {chronicleQuote} from './hero-chronicles.js?v=0.84.0';
-import {equipmentPool,EQUIPMENT_DROP_RATE,DUTIES,dutyQuote} from './camp-development.js?v=0.84.0';
-import {POSTS,postPlan} from './frontier.js?v=0.84.0';
-import {questReady} from './core.js?v=0.84.0';
-import {STOCK_RESOURCES,sourceStock,sourceName} from './source-goals.js?v=0.84.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,specialPlan} from './special-dungeons.js?v=0.84.0';
-import {SPECIAL_ROUTES,routeAllowed,routeReward} from './special-routes.js?v=0.84.0';
-import {ALL_DAILY_ROUTES,rotationCalendar,rotationPlan,dailyUses} from './rotations.js?v=0.84.0';
-import {RECIPES,BOX_OPTIONS} from './provisions.js?v=0.84.0';
-import {REGIONAL_RECIPES,GATHERING_REGIONS} from './gathering-data.js?v=0.84.0';
-import {regionalQuote} from './gathering.js?v=0.84.0';
-import {IDLE_ROUTES,idleUnlocked,idleRates,idleAvailable} from './idle-data.js?v=0.84.0';
-import {REGION_CONTACTS,EXPLORATION_REGIONS,MINE_REWARDS,MINE_SMELT,REGION_BUILDINGS} from './exploration-data.js?v=0.84.0';
-import {MARSH_REWARDS,MARSH_DECOCT} from './marsh-data.js?v=0.84.0';
-import {REGION_REVISITS} from './region-revisit-data.js?v=0.84.0';
-import {revisitWorkQuote} from './region-revisit.js?v=0.84.0';
-import {CROSS_REWARDS,CROSS_WORK,crossHas,crossAvailable} from './cross-region-data.js?v=0.84.0';
-import {crossWorkQuote} from './cross-region.js?v=0.84.0';
-import {mineSmeltQuote} from './exploration.js?v=0.84.0';
-import {marshDecoctQuote} from './marsh.js?v=0.84.0';
-import {ROUTE_PRIZES,ROUTE_PRICE,routeBalance} from './journey-rewards.js?v=0.84.0';
-import {recruitOffers} from './recruit-support.js?v=0.84.0';
-import {isExternal,isWanderer} from './roster.js?v=0.84.0';
-import {dungeonEntry,meets} from './map.js?v=0.84.0';
-import {MOUNT_DROP_RATE} from './growth.js?v=0.84.0';
+import {REGION_COMPANIONS,companionHas,companionAvailable,companionSpec} from './region-companions-data.js?v=0.88.0';
+import {promotionCoreSourceRows,promotionCoreUses} from './promotion-sources.js?v=0.88.0';
+import {recruitmentBanner} from './recruitment-banner.js?v=0.88.0';
+import {CAMP_PEOPLE,CAMP_PROJECTS} from './camp-life-data.js?v=0.88.0';
+import {jobQuote,talkQuote,serviceQuote,salvageable} from './camp-life.js?v=0.88.0';
+import {chronicleQuote} from './hero-chronicles.js?v=0.88.0';
+import {equipmentPool,EQUIPMENT_DROP_RATE,DUTIES,dutyQuote} from './camp-development.js?v=0.88.0';
+import {POSTS,postPlan} from './frontier.js?v=0.88.0';
+import {questReady} from './core.js?v=0.88.0';
+import {STOCK_RESOURCES,sourceStock,sourceName} from './source-goals.js?v=0.88.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,specialPlan} from './special-dungeons.js?v=0.88.0';
+import {SPECIAL_ROUTES,routeAllowed,routeReward} from './special-routes.js?v=0.88.0';
+import {ALL_DAILY_ROUTES,rotationCalendar,rotationPlan,dailyUses} from './rotations.js?v=0.88.0';
+import {RECIPES,BOX_OPTIONS} from './provisions.js?v=0.88.0';
+import {REGIONAL_RECIPES,GATHERING_REGIONS} from './gathering-data.js?v=0.88.0';
+import {regionalQuote} from './gathering.js?v=0.88.0';
+import {IDLE_ROUTES,idleUnlocked,idleRates,idleAvailable} from './idle-data.js?v=0.88.0';
+import {REGION_CONTACTS,EXPLORATION_REGIONS,MINE_REWARDS,MINE_SMELT,REGION_BUILDINGS} from './exploration-data.js?v=0.88.0';
+import {MARSH_REWARDS,MARSH_DECOCT} from './marsh-data.js?v=0.88.0';
+import {REGION_REVISITS} from './region-revisit-data.js?v=0.88.0';
+import {revisitWorkQuote} from './region-revisit.js?v=0.88.0';
+import {CROSS_REWARDS,CROSS_WORK,crossHas,crossAvailable} from './cross-region-data.js?v=0.88.0';
+import {crossWorkQuote} from './cross-region.js?v=0.88.0';
+import {mineSmeltQuote} from './exploration.js?v=0.88.0';
+import {marshDecoctQuote} from './marsh.js?v=0.88.0';
+import {ROUTE_PRIZES,ROUTE_PRICE,routeBalance} from './journey-rewards.js?v=0.88.0';
+import {recruitOffers} from './recruit-support.js?v=0.88.0';
+import {isExternal,isWanderer} from './roster.js?v=0.88.0';
+import {dungeonEntry,meets} from './map.js?v=0.88.0';
+import {MOUNT_DROP_RATE} from './growth.js?v=0.88.0';
 export {sourceName,sourceStock};
 export const sourcePage=(view,id,hero)=>id?{type:'ui_section',view,id,...(hero?{hero}:{})}:{type:'ui_sourcePage',view};
 const pct=n=>Number((n*100).toFixed(2))+'%';
@@ -63,10 +64,10 @@ export function acquisitionSources(s,d,id){
  if(id==='medicinal_extract')add('marshDecoct','安道全煎药','加工','每份 1 · 每日一次，共用普通煎药额度',{...sourcePage('camp','exploration'),region:'marsh',building:'clinic'},marshDecoctQuote(s).reason,{cost:MARSH_DECOCT,priority:1});
  if(id===CROSS_WORK.output)add('crossWork','药船方子','加工','每份 1 · 每日一次，共用金疮膏额度',sourcePage('camp','crossRegion'),crossWorkQuote(s).reason,{cost:CROSS_WORK,priority:1});
  for(const [area,m] of Object.entries(SPECIAL_DUNGEONS))for(const tier of [1,2,3]){
-  const row=specialDropTable(area,tier).find(r=>r.id===id),command={type:'ui_specialView',id:area,tier,tab:'drops',category:equip?'equipment':item?.type==='consume'?'medicine':'material'};
-  if(row){const q=specialPlan(s,area,tier);add('drop:'+area+':'+tier,m.name+' · '+SPECIAL_TIERS[tier].name,'概率',pct(row.rate)+' · 命中得 '+(row.min===row.max?row.min:row.min+'—'+row.max)+' · 不耗体力、粮草',command,q.reason,{rate:row.rate,min:row.min,max:row.max,priority:3});}
+  const row=specialDropTable(area,tier).find(r=>r.id===id),route=m.companion?companionSpec(m.companion).route:undefined,command={type:'ui_specialView',id:area,tier,...(route?{route}:{}),tab:'drops',category:equip?'equipment':item?.type==='consume'?'medicine':'material'};
+  if(row){const q=specialPlan(s,area,tier,route);add('drop:'+area+':'+tier,m.name+' · '+SPECIAL_TIERS[tier].name,'概率',pct(row.rate)+' · 命中得 '+(row.min===row.max?row.min:row.min+'—'+row.max)+' · 不耗体力、粮草',command,q.reason,{rate:row.rate,min:row.min,max:row.max,priority:3});}
   // Alternate routes have their own guaranteed reward and unlock rules.
-  if(tier===1)for(const [route,r] of Object.entries(SPECIAL_ROUTES))if(r.bonus===id&&routeAllowed(route,area)){const q=specialPlan(s,area,tier,route),bonus=routeReward(route,tier);add('route:'+area+':'+route,m.name+' · '+r.name,'必得','寻常胜利 '+bonus.count+'；险境 '+r.amount*2+'、深处 '+r.amount*3+' · 不耗体力、粮草',{type:'ui_specialView',id:area,tier,route,tab:'overview'},q.reason,{priority:1});}
+  if(tier===1)for(const [route,r] of Object.entries(SPECIAL_ROUTES))if(r.bonus===id&&routeAllowed(route,area)){const q=specialPlan(s,area,tier,route),bonus=routeReward(route,tier);add('route:'+area+':'+route,m.name+' · '+r.name,'必得',(m.companion?'当前难度胜利 '+bonus.count+' · 不耗体力、粮草':'寻常胜利 '+bonus.count+'；险境 '+r.amount*2+'、深处 '+r.amount*3+' · 不耗体力、粮草'),{type:'ui_specialView',id:area,tier,route,tab:'overview'},q.reason,{priority:1});}
  }
  for(const r of ALL_DAILY_ROUTES){const amount=r.resource?(r.resourceKey==='silver'&&id==='silver'||r.resourceKey==='wood'&&id==='campWood'||r.resourceKey==='food'&&id==='campFood'||r.resourceKey==='herb'&&id==='herb'?r.amounts[0]:0):r.reward[id];if(!amount)continue;const q=rotationPlan(s,'daily',r.id,1),days=r.days.length===7?'每日开放':'周'+r.days.map(n=>['日','一','二','三','四','五','六'][n]).join('、');add('daily:'+r.id,r.name,'必得','一阶胜利 '+amount+' · '+days+' · 今日 '+dailyUses(s,r.id)+'/3 · 体力 '+q.stamina+(q.food?'、粮草 '+q.food:''),r.resource?{type:'ui_resourceSource',id:r.id}:{type:'ui_materialSource',kind:'daily',id:r.id},q.reason,{priority:0});}
  if(['spirit_essence','immortal_seal','martial_pages','mount_token'].includes(id)){const cal=rotationCalendar(s.clock),old=s.campaign?.weekly[cal.period]?.tier||0,tier=Math.min(5,old+1),q=rotationPlan(s,'weekly',cal.route.id,tier);add('weekly',cal.route.name+' · 本期周本','首通','每层首次 '+({spirit_essence:2,immortal_seal:1,martial_pages:5,mount_token:2}[id])+' · 已通 '+old+'/5 层 · 体力 '+q.stamina+'、粮草 '+q.food,{type:'ui_materialSource',kind:'weekly',id:cal.route.id},old>=5?'本期首通奖励已领完':q.reason,{priority:1,claimed:old>=5});}
@@ -75,6 +76,7 @@ export function acquisitionSources(s,d,id){
  if(resource){const mode={campWood:'wood',campFood:'food',silver:'silver'}[id],amount=s.camp?dutyQuote(s,mode)[mode]:0;add('duty',DUTIES[mode].name,'采集',(s.camp?'本次 '+amount+' 份':'建寨后查看产量')+' · 体力 5',sourcePage('camp','duties'),!s.camp?'先建立寨子':s.player.stamina<5?'体力不足':'',{priority:2});}
  if(['campWood','campFood'].includes(id)){const building=id==='campWood'?'lumber':'farm';add('production',id==='campWood'?'伐木场生产':'农田生产','生产','按设施、人手与仓储结算，领取前可预览', {type:'ui_idleTab',id:'production'},!s.camp?'先建立寨子':!s.frontier?'先开办寨中生产':!s.camp.buildings[building]?'先建好'+(building==='lumber'?'伐木场':'农田'):'',{priority:3});}
  for(const [key,m]of Object.entries(POSTS))if(({wood:'campWood',food:'campFood'}[m.resource]||m.resource)===id){const post=s.frontier?.posts[key],reason=!s.camp?'先建立寨子':!post?'先占领据点'+(postPlan(s,key).reason?'：'+postPlan(s,key).reason:''):post.threat?'据点告急，解围后可领取':'';add('post:'+key,m.name+'补给','生产','每半小时 '+m.yield+' 份，最多暂存八小时。生产领地 → 山外据点。',sourcePage('camp','production'),reason,{priority:3});}
+ for(const r of Object.values(REGION_COMPANIONS)){const token=id===r.hero+'_token',n=token?2:r.rewards[id];if(!n)continue;const claimed=companionHas(s,r.id,token?'invited':'delivered');add('companion:'+r.id,r.name+' · '+r.title,token?'入寨谢礼':'交还谢礼',n+' 份 · 只领一次；共事可继续，无需抽取本人',{type:'ui_companionOpen',id:r.id},claimed?'已领取':!companionAvailable(s,r.id)?'先建寨，安排至少一位 '+r.level+' 级好汉':!companionHas(s,r.id,'won')?'先完成查探与接应':'',{claimed,priority:0});}
  if(id==='liyun_token'){const claimed=!!s.exploration?.flags.includes('liyun_invited');add('liyun','李云 · 矿洞立架','一次','办妥立架并邀请入寨，信物 2 枚',{type:'ui_regionOpen',region:'mine',node:'chamber'},claimed?'已领取':s.exploration?.flags.includes('liyun_braced')?'':'先完成查梁、护木与立架',{claimed,priority:0});}
  const thanks={mine:{name:'夺回矿车',items:MINE_REWARDS.thanks,won:'won_orecart',flags:s.exploration?.flags||[]},marsh:{name:'清渠除蛇',items:MARSH_REWARDS.thanks,won:'won_reedvenom',flags:s.exploration?.marsh?.flags||[]},mountain:{name:'护粮回程',items:{copper_sand:4,xiangchong_token:2,strength_charm:1},won:'won_convoy',flags:s.exploration?.mountain?.flags||[]},...Object.fromEntries(Object.entries(REGION_REVISITS).map(([k,v])=>[k,{name:v.title,items:v.rewards,won:'won_return',flags:s.exploration?.[k]?.flags||[]}]))};
  for(const [region,r] of Object.entries(thanks))if(r.items[id]){const claimed=r.flags.includes('return_paid');add('thanks:'+region,r.name+'谢礼','一次',r.items[id]+' 份 · 只领一次',{type:'ui_regionOpen',region},claimed?'已领取':!r.flags.includes(r.won)?'先办妥该地重访':'',{claimed,priority:0});}

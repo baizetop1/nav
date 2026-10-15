@@ -1,19 +1,20 @@
-import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.84.0';
-import {heroTier,tierBadge} from './hero-tiers.js?v=0.84.0';
-import {qualityEmblem} from './promotion-ui.js?v=0.84.0';
-import {explorationHome} from './exploration-goals-ui.js?v=0.84.0';
-import {specialPlan} from './special-dungeons.js?v=0.84.0';
-import {afterBattleNext} from './opening-ui.js?v=0.84.0';
-import {isExternal,isWanderer} from './roster.js?v=0.84.0';
-import {HERO_ROLES} from './hero-roles.js?v=0.84.0';
-import {attributes} from './hero.js?v=0.84.0';
-import {experienceToNext,ATTRIBUTE_NAMES} from './progression.js?v=0.84.0';
-import {qualityOf,QUALITIES} from './quality.js?v=0.84.0';
-import {CORPS} from './corps-data.js?v=0.84.0';
-import {storyObjective} from './story-guide.js?v=0.84.0';
-import {journeyNextGoal} from './journey-goals-ui.js?v=0.84.0';
-import {campNotices} from './camp-overview.js?v=0.84.0';
-import {icon} from './icons.js?v=0.84.0';
+import {companionSpec} from './region-companions-data.js?v=0.88.0';
+import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.88.0';
+import {heroTier,tierBadge} from './hero-tiers.js?v=0.88.0';
+import {qualityEmblem} from './promotion-ui.js?v=0.88.0';
+import {explorationHome} from './exploration-goals-ui.js?v=0.88.0';
+import {specialPlan} from './special-dungeons.js?v=0.88.0';
+import {afterBattleNext} from './opening-ui.js?v=0.88.0';
+import {isExternal,isWanderer} from './roster.js?v=0.88.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.88.0';
+import {attributes} from './hero.js?v=0.88.0';
+import {experienceToNext,ATTRIBUTE_NAMES} from './progression.js?v=0.88.0';
+import {qualityOf,QUALITIES} from './quality.js?v=0.88.0';
+import {CORPS} from './corps-data.js?v=0.88.0';
+import {storyObjective} from './story-guide.js?v=0.88.0';
+import {journeyNextGoal} from './journey-goals-ui.js?v=0.88.0';
+import {campNotices} from './camp-overview.js?v=0.88.0';
+import {icon} from './icons.js?v=0.88.0';
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 // Shortcuts grow with story/camp progress; all existing pages remain accessible.
 export function campShortcuts(s){
@@ -35,6 +36,6 @@ export function heroDossier(s,d,h,esc,btn,portrait,invitation,requested='attribu
  const attributesPanel=owned?'<section class="dossier-experience"><span>历练</span><b>'+(full?'已满级':v.exp+' / '+experienceToNext(v.level))+'</b>'+(!full?'<progress aria-label="人物升级经验" value="'+v.exp+'" max="'+experienceToNext(v.level)+'"></progress>':'')+'</section><dl class="dossier-stats">'+Object.entries(ATTRIBUTE_NAMES).map(([key,name])=>'<div><dt>'+name+'</dt><dd>'+a[key]+'</dd></div>').join('')+'</dl><p class="note dossier-stat-note">已含装备等加成；出征时另计兵力和军令。</p>':invitation(s,h,btn,d);
  const aptitudeInfo=aptitude?'<details class="dossier-aptitude" data-fold="dossier-aptitude-'+h.id+'"><summary>'+aptitudeBadge(h)+' 资质说明</summary><p>资质固定，不随招募或升品变化。'+(aptitude.power===1?'基础属性沿用原值。':'基础气血、攻击、防御、谋略 +'+Math.round((aptitude.power-1)*100)+'%；速度不变。')+'</p><p>招式升级与升品所需碎银'+(aptitude.trainingRate===1?'沿用原价':aptitude.trainingRate===.9?'九折':'八折')+'；材料数量与等级条件不变。经验曲线相同，凡、灵、仙继续培养。</p><p class="note">正册五星是招募档位，天罡／地煞是星位，甲／乙／丙是固定资质。</p></details>':'';
  const abilities='<section class="dossier-ability"><h3>'+esc(role.name)+'</h3><p>'+esc(role.text)+'</p><span class="note">专属兵种 · '+esc(CORPS[h.id]?.name||'待查')+'</span></section><div class="actions">'+btn('查看招式',{type:'ui_section',view:'heroes',id:'skills',hero:h.id},'secondary',!owned)+btn('兵种详情',{type:'ui_section',view:'heroes',id:'corps',hero:h.id},'secondary',!owned)+'</div>'+aptitudeInfo;
- const develop='<div class="dossier-actions">'+[['training','升级'],['skills','招式坐骑'],['corps','专属兵种'],['quality','品阶突破'],['talents','天赋装备'],['tasks','人物传记']].map(([id,name])=>btn(name,{type:'ui_section',view:'heroes',id,hero:h.id},id==='training'?'primary':'secondary',!owned)).join('')+'</div><details data-fold="dossier-history-'+h.id+'"><summary>人物往事</summary><p>'+esc(identity)+'</p><p>'+esc(h.story)+'</p></details>';
+ const develop=(companionSpec(h.id)?'<div class="actions">'+btn('当地共事',{type:'ui_companionOpen',id:h.id},'secondary')+'</div>':'')+'<div class="dossier-actions">'+[['training','升级'],['skills','招式坐骑'],['corps','专属兵种'],['quality','品阶突破'],['talents','天赋装备'],['tasks','人物传记']].map(([id,name])=>btn(name,{type:'ui_section',view:'heroes',id,hero:h.id},id==='training'?'primary':'secondary',!owned)).join('')+'</div><details data-fold="dossier-history-'+h.id+'"><summary>人物往事</summary><p>'+esc(identity)+'</p><p>'+esc(h.story)+'</p></details>';
  return '<article class="hero-dossier"><header class="dossier-identity">'+portrait(h,true)+'<div><p class="meta">'+tierBadge(h)+' '+aptitudeBadge(h)+' '+esc(h.title)+' · '+roles[h.type]+'</p><h2>'+esc(h.name)+' '+qualityEmblem(qualityOf(v))+'</h2><span class="note">'+(owned?v.level+' 级 · '+(away?'外派中':s.team.includes(h.id)?'当前出阵':'寨中待命'):'尚未入寨')+' · '+heroTier(h).rarity+' 星'+(starPosition(h)?' · '+starPosition(h):'')+'</span></div></header><nav class="dossier-tabs" aria-label="人物档案分区">'+[['attributes','属性'],['ability','本领'],['develop','养成']].map(([id,name])=>btn(name,{type:'ui_dossierTab',id},'secondary').replace('<button ','<button aria-current="'+(id===tab?'page':'false')+'" ')).join('')+'</nav><div class="dossier-panel" '+(tab!=='attributes'?'hidden':'')+'>'+attributesPanel+'</div><div class="dossier-panel" '+(tab!=='ability'?'hidden':'')+'>'+abilities+'</div><div class="dossier-panel" '+(tab!=='develop'?'hidden':'')+'>'+develop+'</div></article>';
 }

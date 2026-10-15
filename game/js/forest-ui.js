@@ -1,8 +1,8 @@
-import {revisitPanel} from './region-revisit-ui.js?v=0.84.0';
-import {FOREST_NODES,forestHas,forestGate,forestGoal} from './forest-data.js?v=0.84.0';
-import {forestPath,forestFightQuote,forestTask} from './forest.js?v=0.84.0';
-import {specialDropTable} from './special-dungeons.js?v=0.84.0';
-import {SPECIAL_ROUTES} from './special-routes.js?v=0.84.0';
+import {revisitPanel} from './region-revisit-ui.js?v=0.88.0';
+import {FOREST_NODES,forestHas,forestGate,forestGoal} from './forest-data.js?v=0.88.0';
+import {forestPath,forestFightQuote,forestTask} from './forest.js?v=0.88.0';
+import {specialDropTable} from './special-dungeons.js?v=0.88.0';
+import {SPECIAL_ROUTES} from './special-routes.js?v=0.88.0';
 export function forestPanel(s,d,esc,btn,selected){
  const x=s.exploration.forest,here=x.position,id=Object.hasOwn(FOREST_NODES,selected)?selected:here,n=FOREST_NODES[id],has=k=>forestHas(s,k);
  const action=(label,type,key,style='secondary',disabled=false,extra={})=>btn(label,{type,region:'forest',...(key?{id:key}:{}),...extra},style,disabled);

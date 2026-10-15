@@ -1,21 +1,22 @@
-import {heroAptitude} from './hero-aptitude.js?v=0.84.0';
-import {difficultyQuote,difficultyAttributes} from './difficulty.js?v=0.84.0';
-import {initializeTactics} from './tactics-combat.js?v=0.84.0';
-import {lateMissionPlan} from './late-mainline-data.js?v=0.84.0';
-import {lateTimes,advanceLateObjective,advanceLateWave} from './late-mainline-combat.js?v=0.84.0';
-import {EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.84.0';
-import {initializeRoles} from './hero-roles.js?v=0.84.0';
-import {lessonPassed} from './lessons-data.js?v=0.84.0';
-import {routeEquipmentOpening} from './journey-rewards.js?v=0.84.0';
-import {journeyAbsorb} from './journey-combat.js?v=0.84.0';
-import {advanceCombos} from './expansion-combat.js?v=0.84.0';
-import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.84.0';
-import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.84.0';
-import { autoOrderAllows } from './commands.js?v=0.84.0';
-import { initializeMartial, martialFactor } from './martial.js?v=0.84.0';
-import { attributes } from './hero.js?v=0.84.0';
-import { bounded, pick, random, requireRule } from './utils.js?v=0.84.0';
-import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.84.0';
+import {skillEffectLog} from './battle-log-format.js?v=0.88.0';
+import {heroAptitude} from './hero-aptitude.js?v=0.88.0';
+import {difficultyQuote,difficultyAttributes} from './difficulty.js?v=0.88.0';
+import {initializeTactics} from './tactics-combat.js?v=0.88.0';
+import {lateMissionPlan} from './late-mainline-data.js?v=0.88.0';
+import {lateTimes,advanceLateObjective,advanceLateWave} from './late-mainline-combat.js?v=0.88.0';
+import {EXTRA_BATTLE_ITEMS} from './supplies-data.js?v=0.88.0';
+import {initializeRoles} from './hero-roles.js?v=0.88.0';
+import {lessonPassed} from './lessons-data.js?v=0.88.0';
+import {routeEquipmentOpening} from './journey-rewards.js?v=0.88.0';
+import {journeyAbsorb} from './journey-combat.js?v=0.88.0';
+import {advanceCombos} from './expansion-combat.js?v=0.88.0';
+import { newMetrics, contribution, reportDamage, reportHealing, reportOtherDamage } from './debrief.js?v=0.88.0';
+import { objectiveTimes, objectiveFailed, advanceObjective } from './strategy.js?v=0.88.0';
+import { autoOrderAllows } from './commands.js?v=0.88.0';
+import { initializeMartial, martialFactor } from './martial.js?v=0.88.0';
+import { attributes } from './hero.js?v=0.88.0';
+import { bounded, pick, random, requireRule } from './utils.js?v=0.88.0';
+import { initializeGrowthBattle, growthHit, growthSkillReason, growthTimes, advanceBosses, negativeStatus } from './growth-battle.js?v=0.88.0';
 
 export const BATTLE_LIMIT_MS=180000, STATUS_MS=2000, SKILL_COOLDOWN_MS=5000, ITEM_COOLDOWN_MS=3000;
 export const BATTLE_ITEMS=['jinchuangyao','huiqisan','jiedudan',...EXTRA_BATTLE_ITEMS];
@@ -85,8 +86,8 @@ function hit(state,u,skill,data){
   const defense=target.defense*(has(target,'armor_break')?.7:1),attack=(effect.kind==='strategy'?u.strategy:u.attack)*(has(u,'rage')?1.2:1);
   const loss=Math.max(1,Math.round(damage(attack,defense,effect.rate,.9+random(state)*.2,critical)*martialFactor(b,u,target,data,{normal:!skill,strategy:effect.kind==='strategy'})));
   reportDamage(b,u,target,loss);target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
-  log(b,`${u.name}${skill?'施展【'+skill.name+'】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血。`);
-  if(effect.status&&alive(target)){addStatus(target,effect.status,b.elapsed);log(b,`${target.name}受到【${statusName(effect.status.id)} · ${effect.status.turns*STATUS_MS/1000}秒】。`);}
+  log(b,`${u.name}${skill?'施展【'+skill.name+'】':'【普攻】进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血。`);
+  if(effect.status&&alive(target)){addStatus(target,effect.status,b.elapsed);log(b,skillEffectLog(`${target.name}受到【${statusName(effect.status.id)} · ${effect.status.turns*STATUS_MS/1000}秒】。`,u.name,skill?.name));}
   if(!alive(target))log(b,`${target.name}已无力再战。`);
 }
 export function enemySkill(b,u,data){

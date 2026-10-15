@@ -1,0 +1,12 @@
+import {companionByRoute} from './region-companions-data.js?v=0.88.0';
+const alive=u=>u?.hp>0;
+const active=(b,u,id)=>u.statuses.some(s=>s.id===id&&s.expiresAt>b.elapsed);
+export function prepareCompanionBattle(b,addStatus){const r=companionByRoute(b.context.route);if(!r)return;b.enemy[0].boss={kind:'chief',readyAt:6000,pendingAt:0,phase:0};if(r.id==='zhangshun'){['拦船头目','船头守卫','短刀水匪','持钩水匪'].forEach((name,i)=>b.enemy[i].name=name);addStatus(b.enemy.at(-1),{id:'stun',value:1,turns:2},0);b.log.push('【张顺接应】船缆已松，持钩水匪开场眩晕四秒。');}if(r.id==='jindajian'){b.enemy[0].name='藏碑头目';b.enemy.at(-1).name='护样人';}if(r.id==='zhugui'){b.enemy[0].name='拦路头目';b.enemy[1].name='假接应哨手';b.enemy.at(-1).name='车尾伏兵';addStatus(b.enemy[1],{id:'stun',value:1,turns:2},0);b.log.push('【时迁接应】哨手被换牌耽搁，开场眩晕四秒。');}}
+export function companionBossMove(state,u,api,strike){const b=state.battle,r=companionByRoute(b.context.route);if(!r||b.context.type!=='special'||u!==b.enemy[0])return false;const boss=u.boss;
+ if(!boss.pendingAt&&boss.readyAt===b.elapsed){boss.pendingAt=b.elapsed+3000;api.log(b,'【首领蓄势 · 3秒】'+(r.id==='zhangshun'?'持钩水匪将拖拽后排；先除去或眩晕他，或打断头目、固守。':r.id==='jindajian'?'护样人将替头目护阵；先除去或眩晕护样人，也可打断头目。':'哨手将号令两翼夹击后排；先除去或眩晕第二位哨手，也可打断头目、固守。'));return true;}
+ if(boss.pendingAt!==b.elapsed)return true;boss.pendingAt=0;boss.readyAt=b.elapsed+12000;if(active(b,u,'stun')){api.log(b,'【蓄势中断】头目没有发出号令。');return true;}
+ const helper=r.id==='zhugui'?b.enemy[1]:b.enemy.at(-1);if(!alive(helper)||active(b,helper,'stun')){api.addStatus(u,{id:'armor_break',value:1,turns:3},b.elapsed);api.log(b,'【接应已断】头目破甲六秒，本次招式未出。');return true;}
+ if(r.id==='jindajian'){api.addStatus(u,{id:'guard',value:.3,turns:4},b.elapsed);api.log(b,'【护样结阵】头目护阵 30% 八秒；打断号令或先除去护样人可阻止。');return true;}
+ const target=b.team.filter(alive).at(-1);if(!target)return true;const guarded=b.orders?.stance==='guard';if(r.id==='zhangshun'){strike(state,helper,target,{kind:'damage',rate:1.35*(guarded?.5:1)},'钩索拖拽',api);if(!guarded)target.rage=Math.max(0,target.rage-15);api.log(b,guarded?'【守住船沿】钩索伤害减半，怒气未失。':'【钩索拖拽】后排受击，怒气减 15。');}else{for(const attacker of [u,b.enemy.at(-1)].filter(alive))strike(state,attacker,target,{kind:'damage',rate:.85*(guarded?.5:1)},'车尾夹击',api);api.log(b,'【车尾夹击】头目与伏兵夹击后排，固守可使本招伤害减半。');}return true;
+}
+export function companionThreat(b){const r=companionByRoute(b.context.route);return !r?null:r.id==='zhangshun'?['钩索拖拽','最末位持钩水匪拖拽后排并减怒气 15；击倒或眩晕他，或打断头目可阻止。固守减伤 50% 并保住怒气。']:r.id==='jindajian'?['护样结阵','最末位护样人使头目护阵 30% 八秒；击倒或眩晕护样人使头目破甲六秒，也可打断头目。']:['车尾夹击','第二位哨手号令夹击后排；击倒或眩晕哨手，或打断头目可阻止。固守使本招减伤 50%。'];}

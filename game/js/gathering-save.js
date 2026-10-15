@@ -1,4 +1,4 @@
-import {GATHERING_REGIONS,historicGathering} from './gathering-data.js?v=0.84.0';
+import {GATHERING_REGIONS,historicGathering} from './gathering-data.js?v=0.88.0';
 const materialIds=Object.values(GATHERING_REGIONS).map(v=>v.item);
 export const hasGathering=s=>s.gathering!==undefined||materialIds.some(id=>s.inventory?.[id]>0||s.idleDispatch?.bank?.[id]>0);
 export function validateGathering(s,check){

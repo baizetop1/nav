@@ -1,5 +1,5 @@
-import {SPECIAL_ROUTES,routeAllowed} from './special-routes.js?v=0.84.0';
-import {hasOwn} from './utils.js?v=0.84.0';
+import {SPECIAL_ROUTES,routeAllowed} from './special-routes.js?v=0.88.0';
+import {hasOwn} from './utils.js?v=0.88.0';
 export const SPECIAL_TIERS={
  1:{name:'寻常',level:5,hall:1,scale:.72,rate:1},
  2:{name:'险境',level:15,hall:2,scale:1.65,rate:1.3},
@@ -33,8 +33,14 @@ Object.assign(SPECIAL_DUNGEONS,{
  mountain:{name:'断崖粮道',hp:[2.5,3,3.5],terrain:'mountain',description:'劫粮人用断车堵住山口。清出粮道，找回被劫的粮车和铁料。',enemies:['guard','bandit','soldier'],rule:'前排盾匪开场护阵 25%，持续 8 秒。守炉重锤可破去护阵，也可先集火两侧匪徒。',drops:[material('copper_sand',.30),material('scrap_iron',.28),material('iron',.20),material('wood',.18),material('leather',.18),material('grain',.12),rare('tempered_steel',.05),rare('jinchuangyao',.08),rare('zhuanggu_tang',.035),rare('ration',.04),gear('iron_helmet',.05),gear('sturdy_belt',.03),gear('guard_pike',.018),rare('strength_shard',.04)]},
  mountainhold:{parent:'mountain',entryClears:1,name:'截粮营',hp:[3.5,4,4.5],terrain:'mountain',description:'截粮头目靠盾阵守住营门。项充看出他举盾时的破绽，崖上的栈道也能绕到营后。',enemies:['bandit_chief','guard','bandit'],rule:'头目每次举盾获得 35% 护阵，蓄势 3 秒后重击前排。蓄势期间用破甲招式或守炉重锤破去护阵，可阻止本招并使其破甲 6 秒；也可打断。修通栈道后可选高处绕行。',drops:[material('copper_sand',.35),material('iron',.30),material('leather',.25),material('grain',.20),rare('tempered_steel',.08),rare('dark_iron',.05),rare('zhuanggu_tang',.05),rare('blueprint',.03),gear('sturdy_belt',.055),gear('iron_helmet',.07),gear('guard_pike',.03)]}
 });
+// Independent character chapters: their challenge pools are separate from the six gathering regions.
+Object.assign(SPECIAL_DUNGEONS,{
+ xunyangship:{companion:'zhangshun',level:5,scale:.72,maxTier:1,name:'扣船货栈',hp:[4,4,4],terrain:'water',description:'浔阳江岸的货栈扣住了渡船。张顺下水松缆，你从岸上救回船户。',enemies:['bandit_chief','soldier','bandit'],rule:'最末位持钩水匪会钩拽后排、削减怒气；击倒或眩晕他、打断头目可阻止，固守减伤。',drops:[material('herb',.32),material('reed_fiber',.24),material('cloth',.17),rare('jiedudan',.10),rare('jinchuangyao',.08),rare('woven_linen',.05),rare('medicinal_extract',.03),gear('river_boots',.022),gear('river_charm',.03),gear('short_bow',.045)]},
+ jizhouyard:{companion:'jindajian',level:8,scale:1,maxTier:1,name:'藏模院',hp:[4.5,4.5,4.5],terrain:'forest',description:'济州刻坊的刻样筒被人抢走，藏在院里。金大坚认得样筒上的刀痕。',enemies:['bandit_chief','soldier','bandit'],rule:'最末位护样人为头目护阵；击倒或眩晕他可让头目破甲，也可打断号令。',drops:[material('stone_rubbing',.30),material('wood',.22),material('cloth',.18),rare('blueprint',.08),rare('martial_pages',.05),rare('skill_page',.09),rare('strength_shard',.035),gear('oak_staff',.055),gear('tactics_book',.022),gear('felt_cap',.035)]},
+ nanshanstock:{companion:'zhugui',level:12,scale:1.2,maxTier:1,name:'劫货寨',hp:[4,4,4],terrain:'forest',description:'南山酒店等来的商队落进了圈套。朱贵接路口，时迁换下假木牌，你去寨里接出货车。',enemies:['bandit_chief','soldier','bandit'],rule:'第二位哨手发令，两翼夹击后排；击倒或眩晕哨手、打断头目可阻止，固守减伤。',drops:[material('leather',.30),material('cloth',.26),material('mountain_vine',.15),rare('ration',.075),rare('cured_hide',.06),rare('grain',.09),rare('huiqisan',.07),gear('scout_coat',.04),gear('short_bow',.05),gear('sturdy_belt',.025)]}
+});
 export function specialDropTable(id,tier){
- if(!hasOwn(SPECIAL_DUNGEONS,id)||!hasOwn(SPECIAL_TIERS,tier)||!Number.isInteger(tier))return [];
+ if(!hasOwn(SPECIAL_DUNGEONS,id)||!hasOwn(SPECIAL_TIERS,tier)||!Number.isInteger(tier)||tier>(SPECIAL_DUNGEONS[id].maxTier||3))return [];
  return SPECIAL_DUNGEONS[id].drops.map(row=>({kind:row.kind,id:row.id,min:row.amounts[tier-1][0],max:row.amounts[tier-1][1],rate:Math.round(row.rate*SPECIAL_TIERS[tier].rate*10000)/10000}));
 }
-export function validSpecialContext(c){return !!c&&typeof c==='object'&&!Array.isArray(c)&&Object.keys(c).length===(c.route===undefined?4:5)&&routeAllowed(c.route,c.id)&&Object.keys(c).every(k=>['type','id','tier','terrain','route'].includes(k))&&c.type==='special'&&hasOwn(SPECIAL_DUNGEONS,c.id)&&Number.isInteger(c.tier)&&hasOwn(SPECIAL_TIERS,c.tier)&&c.terrain===SPECIAL_DUNGEONS[c.id].terrain;}
+export function validSpecialContext(c){return !!c&&typeof c==='object'&&!Array.isArray(c)&&Object.keys(c).length===(c.route===undefined?4:5)&&routeAllowed(c.route,c.id)&&Object.keys(c).every(k=>['type','id','tier','terrain','route'].includes(k))&&c.type==='special'&&hasOwn(SPECIAL_DUNGEONS,c.id)&&Number.isInteger(c.tier)&&hasOwn(SPECIAL_TIERS,c.tier)&&c.terrain===SPECIAL_DUNGEONS[c.id].terrain&&c.tier<=(SPECIAL_DUNGEONS[c.id].maxTier||3)&&(!SPECIAL_DUNGEONS[c.id].companion||SPECIAL_ROUTES[c.route]?.areas?.includes(c.id));}

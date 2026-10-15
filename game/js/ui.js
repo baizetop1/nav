@@ -1,78 +1,80 @@
-import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.84.0';
-import {recruitBannerPanel} from './recruit-banner-ui.js?v=0.84.0';
-import {recruitmentBanner,recruitStar} from './recruitment-banner.js?v=0.84.0';
-import {heroTier,tierBadge} from './hero-tiers.js?v=0.84.0';
-import {sourceBrowser,currentGoalPage} from './source-ui.js?v=0.84.0';
-import {workPanels} from './work-panels.js?v=0.84.0';
-import {battleField} from './battle-field-ui.js?v=0.84.0';
-import {regionPanel} from './exploration-ui.js?v=0.84.0';
-import {guidance,guidePanel} from './onboarding.js?v=0.84.0';
-import {journeyScenePage,journeySceneEntry,journeyScenePicture,schemeScenePage} from './journey-scenes-ui.js?v=0.84.0';
-import {hasJourneyScene} from './journey-scenes.js?v=0.84.0';
-import {selectedHonor} from './adventure.js?v=0.84.0';
-import {returnToEncounter} from './progression-paths-ui.js?v=0.84.0';
-import {replayChallengePanel} from './replay-challenges.js?v=0.84.0';
-import {battleThreatPanel} from './battle-threat-ui.js?v=0.84.0';
-import {phasePanel,starterPanel,budgetPanel,replacementPanel} from './progression-paths-ui.js?v=0.84.0';
-import {buildGuidePanel,gearTraitLine} from './tactics-ui.js?v=0.84.0';
-import {refinePanel} from './equipment-refine.js?v=0.84.0';
-import {forgeCatalog} from './forge-catalog.js?v=0.84.0';
-import {resourceLinks} from './resource-dungeons-ui.js?v=0.84.0';
-import {lateMissionCard,lateBattleStatus} from './late-mainline-ui.js?v=0.84.0';
-import {lateStory,chapterStory} from './late-mainline-data.js?v=0.84.0';
-import {lateMainlineBoard,chapterIntroduction,lateEndingText} from './late-mainline-board.js?v=0.84.0';
-import {mainlinePlanPanel} from './mainline-ui.js?v=0.84.0';
-import {volumeSevenBoard,seventhMissionCard} from './volume-seven-ui.js?v=0.84.0';
-import {chronicleGearMultiplier} from './chronicle-data.js?v=0.84.0';
-import {inventoryBrowser} from './inventory-ui.js?v=0.84.0';
-import {heroDossier} from './folio-ui.js?v=0.84.0';
-import {campaignBattleStatus} from './journey-campaign-ui.js?v=0.84.0';
-import {roleCard,roleBattlePanel} from './hero-roles.js?v=0.84.0';
-import {lessonBattlePanel} from './opening-ui.js?v=0.84.0';
-import {journeyBattlePanel} from './journey-tactics-ui.js?v=0.84.0';
-import {BOONS,JOURNEYS} from './journey-data.js?v=0.84.0';
-import {personalProgressPanel} from './personal-tasks.js?v=0.84.0';
-import {storyGuide,storyObjective} from './story-guide.js?v=0.84.0';
-import { recruitSupportPanel } from './recruit-support-ui.js?v=0.84.0';
-import {CORPS} from './development.js?v=0.84.0';
-import {pageSection,sectionNavigation,sectionPicker} from './page-sections.js?v=0.84.0';
-import { frontierMap } from './frontier-ui.js?v=0.84.0';
-import {personalTaskPanel} from './expansion-ui.js?v=0.84.0';
-import { retreatForecast } from './fieldcraft-ui.js?v=0.84.0';
-import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.84.0';
-import {staminaPanel,inventoryPanel,recipePanel,provisionSources} from './provisions-ui.js?v=0.84.0';
-import { staminaCap } from './logistics.js?v=0.84.0';
-import { isExternal, isWanderer } from './roster.js?v=0.84.0';
-import { fifthMissionCard, fifthLocalHelp, volumeFiveBoard } from './volume-five-ui.js?v=0.84.0';
-import { fourthMissionCard, fourthLocalHelp, volumeFourBoard } from './volume-four-ui.js?v=0.84.0';
-import { chapterMissionCard, thirdLocalHelp, volumeThreeBoard } from './volume-three-ui.js?v=0.84.0';
-import { chroniclePanel } from './hero-chronicles.js?v=0.84.0';
-import { progressionPanel, experienceLabel } from './progression-ui.js?v=0.84.0';
-import { debriefPanel } from './sortie-ui.js?v=0.84.0';
-import { batchButtons } from './batch-ui.js?v=0.84.0';
-import { equipmentComparison } from './management-ui.js?v=0.84.0';
-import { objectivePanel } from './strategy-ui.js?v=0.84.0';
-import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.84.0';
-import { equipmentMatches } from './commands.js?v=0.84.0';
-import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.84.0';
-import {talentPanel} from './talents.js?v=0.84.0';
-import { realmPanel } from './realm-ui.js?v=0.84.0';
-import { rotationsPage } from './rotations-ui.js?v=0.84.0';
-import { traitCard } from './martial-ui.js?v=0.84.0';
-import { helpersBoard } from './helpers-ui.js?v=0.84.0';
-import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.84.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.84.0';
-import { worldMap, localBenefit } from './world-map-ui.js?v=0.84.0';
-import { saveBoxPage } from './savebox-ui.js?v=0.84.0';
-import { attributes } from './hero.js?v=0.84.0';
-import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.84.0';
-import { isBusy, questReady } from './core.js?v=0.84.0';
-import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.84.0';
-import { strengthenQuote } from './item.js?v=0.84.0';
-import { icon, actionIcon } from './icons.js?v=0.84.0';
-import { heroStewardCard } from './camp-development-ui.js?v=0.84.0';
-import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.84.0';
-import { campPage, portrait } from './camp-ui.js?v=0.84.0';
+import {renderBattleStage} from './battle-stage-ui.js?v=0.88.0';
+import {companionHub} from './region-companions-ui.js?v=0.88.0';
+import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.88.0';
+import {recruitBannerPanel} from './recruit-banner-ui.js?v=0.88.0';
+import {recruitmentBanner,recruitStar} from './recruitment-banner.js?v=0.88.0';
+import {heroTier,tierBadge} from './hero-tiers.js?v=0.88.0';
+import {sourceBrowser,currentGoalPage} from './source-ui.js?v=0.88.0';
+import {workPanels} from './work-panels.js?v=0.88.0';
+import {battleField} from './battle-field-ui.js?v=0.88.0';
+import {regionPanel} from './exploration-ui.js?v=0.88.0';
+import {guidance,guidePanel} from './onboarding.js?v=0.88.0';
+import {journeyScenePage,journeySceneEntry,journeyScenePicture,schemeScenePage} from './journey-scenes-ui.js?v=0.88.0';
+import {hasJourneyScene} from './journey-scenes.js?v=0.88.0';
+import {selectedHonor} from './adventure.js?v=0.88.0';
+import {returnToEncounter} from './progression-paths-ui.js?v=0.88.0';
+import {replayChallengePanel} from './replay-challenges.js?v=0.88.0';
+import {battleThreatPanel} from './battle-threat-ui.js?v=0.88.0';
+import {phasePanel,starterPanel,budgetPanel,replacementPanel} from './progression-paths-ui.js?v=0.88.0';
+import {buildGuidePanel,gearTraitLine} from './tactics-ui.js?v=0.88.0';
+import {refinePanel} from './equipment-refine.js?v=0.88.0';
+import {forgeCatalog} from './forge-catalog.js?v=0.88.0';
+import {resourceLinks} from './resource-dungeons-ui.js?v=0.88.0';
+import {lateMissionCard,lateBattleStatus} from './late-mainline-ui.js?v=0.88.0';
+import {lateStory,chapterStory} from './late-mainline-data.js?v=0.88.0';
+import {lateMainlineBoard,chapterIntroduction,lateEndingText} from './late-mainline-board.js?v=0.88.0';
+import {mainlinePlanPanel} from './mainline-ui.js?v=0.88.0';
+import {volumeSevenBoard,seventhMissionCard} from './volume-seven-ui.js?v=0.88.0';
+import {chronicleGearMultiplier} from './chronicle-data.js?v=0.88.0';
+import {inventoryBrowser} from './inventory-ui.js?v=0.88.0';
+import {heroDossier} from './folio-ui.js?v=0.88.0';
+import {campaignBattleStatus} from './journey-campaign-ui.js?v=0.88.0';
+import {roleCard,roleBattlePanel} from './hero-roles.js?v=0.88.0';
+import {lessonBattlePanel} from './opening-ui.js?v=0.88.0';
+import {journeyBattlePanel} from './journey-tactics-ui.js?v=0.88.0';
+import {BOONS,JOURNEYS} from './journey-data.js?v=0.88.0';
+import {personalProgressPanel} from './personal-tasks.js?v=0.88.0';
+import {storyGuide,storyObjective} from './story-guide.js?v=0.88.0';
+import { recruitSupportPanel } from './recruit-support-ui.js?v=0.88.0';
+import {CORPS} from './development.js?v=0.88.0';
+import {pageSection,sectionNavigation,sectionPicker} from './page-sections.js?v=0.88.0';
+import { frontierMap } from './frontier-ui.js?v=0.88.0';
+import {personalTaskPanel} from './expansion-ui.js?v=0.88.0';
+import { retreatForecast } from './fieldcraft-ui.js?v=0.88.0';
+import { volumeSixBoard, sixthMissionCard } from './volume-six-ui.js?v=0.88.0';
+import {staminaPanel,inventoryPanel,recipePanel,provisionSources} from './provisions-ui.js?v=0.88.0';
+import { staminaCap } from './logistics.js?v=0.88.0';
+import { isExternal, isWanderer } from './roster.js?v=0.88.0';
+import { fifthMissionCard, fifthLocalHelp, volumeFiveBoard } from './volume-five-ui.js?v=0.88.0';
+import { fourthMissionCard, fourthLocalHelp, volumeFourBoard } from './volume-four-ui.js?v=0.88.0';
+import { chapterMissionCard, thirdLocalHelp, volumeThreeBoard } from './volume-three-ui.js?v=0.88.0';
+import { chroniclePanel } from './hero-chronicles.js?v=0.88.0';
+import { progressionPanel, experienceLabel } from './progression-ui.js?v=0.88.0';
+import { debriefPanel } from './sortie-ui.js?v=0.88.0';
+import { batchButtons } from './batch-ui.js?v=0.88.0';
+import { equipmentComparison } from './management-ui.js?v=0.88.0';
+import { objectivePanel } from './strategy-ui.js?v=0.88.0';
+import { ordersPanel, equipmentFilters, recruitBatchDialog } from './commands-ui.js?v=0.88.0';
+import { equipmentMatches } from './commands.js?v=0.88.0';
+import { corpsPanel, presetsPanel, targetPanel, setPanel, setsCatalog } from './development-ui.js?v=0.88.0';
+import {talentPanel} from './talents.js?v=0.88.0';
+import { realmPanel } from './realm-ui.js?v=0.88.0';
+import { rotationsPage } from './rotations-ui.js?v=0.88.0';
+import { traitCard } from './martial-ui.js?v=0.88.0';
+import { helpersBoard } from './helpers-ui.js?v=0.88.0';
+import { rosterBoard, qualityPanel, qualityTrials, invitation } from './roster-ui.js?v=0.88.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.88.0';
+import { worldMap, localBenefit } from './world-map-ui.js?v=0.88.0';
+import { saveBoxPage } from './savebox-ui.js?v=0.88.0';
+import { attributes } from './hero.js?v=0.88.0';
+import { exits, meets, heroRank, dungeonEntry } from './map.js?v=0.88.0';
+import { isBusy, questReady } from './core.js?v=0.88.0';
+import { statusName, skillReason, battleItemQuote, enemySkill, BATTLE_ITEMS, battleSkillMode } from './battle.js?v=0.88.0';
+import { strengthenQuote } from './item.js?v=0.88.0';
+import { icon, actionIcon } from './icons.js?v=0.88.0';
+import { heroStewardCard } from './camp-development-ui.js?v=0.88.0';
+import { heroGrowth, growthSources, stableMounts, dungeonMountLoot } from './growth-ui.js?v=0.88.0';
+import { campPage, portrait } from './camp-ui.js?v=0.88.0';
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 // Story prose and rule paragraphs share escaping, but have distinct visual weight.
 const storyParagraphs=text=>String(text||'').split(/\n\s*\n/).filter(Boolean).map(part=>{const rule=part.startsWith('（')&&part.endsWith('）');return '<p class="'+(rule?'note story-rules':'prose')+'">'+esc(rule?part.slice(1,-1):part)+'</p>';}).join('');
@@ -205,23 +207,8 @@ function chroniclePage(s,d){
     <p class="note">保留最近三百条详细记事；人物、主线与通关累计不会截断。建寨记事始于 ${esc(new Date(s.startedAt).toLocaleString('zh-CN'))}。</p>`;
 }
 
-function battlePage(s,d,paused,pauseReason,locked,battleSpeed=.5){
-  if(s.battle.context.type==='lesson')return lessonBattlePanel(s,d,btn,paused,locked);
-  const b=s.battle,seconds=at=>(Math.max(0,at-b.elapsed)/1000).toFixed(1),time=Math.floor(b.elapsed/1000),stopped=paused||locked,auto=battleSkillMode(s)==='auto';
-  const skillButtons=u=>u.skills.map(id=>d.by.skills[id]).filter(k=>k.type!=='passive').map(k=>{
-    const reason=skillReason(b,u,k);return `<div class="battle-skill">${btn(k.name+(u.training?' · '+u.training.levels[k.id]+'级':''),{type:'battleSkill',hero:u.id,id:k.id},'secondary',stopped||!!reason)}<p class="meta">${esc(reason||'可施展 · 怒气 '+k.cost)}</p></div>`;
-  }).join('');
-  const overview=`${battleField(b,esc,btn,locked)}${battleThreatPanel(b,d,btn,esc,stopped,paused&&!locked,s)}`;
-  const units=`<div class="battle-grid">${[['我方',b.team],['敌方',b.enemy]].map(([label,units])=>`<section><h2 class="subhead">${label}</h2>${units.map(u=>`<div class="battle-unit${u.hp<=0?' unit-down':''}" data-unit="${esc(u.id)}"><div class="ledger-line">${u.side==='team'?portrait(d.by.heroes[u.id],true):''}<strong>${esc(u.name)}</strong><span>${u.hp}/${u.maxHp}${b.mainline?.shields[u.id]?' · 盾 '+b.mainline.shields[u.id]:''}${b.journey?.combat?.shields[u.id]?` · 盾 ${b.journey.combat.shields[u.id]}`:''}</span></div><progress value="${u.hp}" max="${u.maxHp}" aria-label="${esc(u.name)}气血"></progress><p class="meta">怒气 ${u.rage}/100 · ${u.hp<=0?'已退阵':b.outcome?'已收势':'出手 '+seconds(u.nextAttackAt)+'秒'}</p><p class="unit-status">${u.statuses.map(v=>`【${statusName(v.id)} ${seconds(v.expiresAt)}秒】`).join('')||'—'}</p>${u.side==='team'?skillButtons(u):`<p class="enemy-intent">${u.hp<=0||b.outcome?'':u.boss?.pendingAt?'首领蓄势 · '+seconds(u.boss.pendingAt)+'秒（可打断）':hasStun(u)?'眩晕中，暂不能出手':esc(enemySkill(b,u,d)?.name||'普通进击')}</p>`}</div>`).join('')}</section>`).join('')}</div>`,medicines=`<section class="battle-medicines battle-running" ${b.outcome?'hidden':''}><h2 class="subhead">阵中用药</h2><div class="medicine-grid">${BATTLE_ITEMS.map(id=>{const q=battleItemQuote(s,d,id);return `<div>${btn(d.by.items[id].name+' ×'+(s.inventory[id]||0),{type:'battleItem',id},'secondary',stopped||!!q.reason)}<p class="meta">${esc(q.reason||'交给'+q.target.name)}</p></div>`;}).join('')}</div><p class="note">药效立即生效，不占用普攻；药物共用 3 秒间隔，基础招调息 5 秒，进阶招调息 7 秒（共用人物调息）。暂停时冷却也停止。</p></section>`,commands=`${ordersPanel(s,d,btn,esc,locked)}`,rules=`${replayChallengePanel(b)}${title(b.context.type==='story'?d.by.stories[b.context.id].title+' · 剧情战':'阵前交战',b.guest?b.team.map(u=>u.name).join('、')+'临时助阵，战后不自动入寨':'普攻自动进行 · 技能与药物由你调度','','battle')}
-    ${lateBattleStatus(s,d,esc,btn,locked)}${roleBattlePanel(b)+campaignBattleStatus(s)+journeyBattlePanel(b,btn,locked,esc)}${b.journey&&b.journey.rules!==2?`<p class="note">${JOURNEYS[b.journey.region].name} · 第 ${b.context.tier}/5 段 · 本趟战法：${b.journey.boons.map(id=>BOONS[id].name).join('、')}</p>`:''}${retreatForecast(b,s)}
-    <div class="battle-speed" role="group" aria-label="战斗速度"><span>战斗速度</span>${[.5,1,2].map(speed=>`<button class="secondary" data-command="${esc(JSON.stringify({type:'ui_battleSpeed',speed}))}" aria-pressed="${battleSpeed===speed}">${speed}×${speed===.5?' 慢速':''}</button>`).join('')}</div>
-    ${b.expedition?`<p class="note">${b.expedition.troops?'随行乡勇 '+b.expedition.troops+' 人':'英雄独行'} · ${({balanced:'稳扎稳打',assault:'强攻破阵',guard:'结阵固守'})[b.expedition.tactic]} · 结算时统计伤兵。</p>`:''}
-    <div class="skill-mode" role="group" aria-label="技能释放方式"><span>技能释放</span>${[['manual','手动技能'],['auto','自动技能']].map(([mode,label])=>`<button type="button" class="secondary" data-command="${esc(JSON.stringify({type:'battleSkillMode',mode}))}" aria-pressed="${battleSkillMode(s)===mode}" ${locked||b.outcome?'disabled':''}><span>${label}</span></button>`).join('')}</div>
-    <p class="skill-mode-hint note">${auto?'自动技能：条件满足时优先已解锁进阶招，否则使用基础招；仍可手动抢先释放。':'手动技能：只自动普攻，招式由你点击释放。'}药品始终手动。本档记住选择。${b.rules!==2?'旧战局沿用原有招式规则，收兵后的新战斗启用养成。':''}</p>
-    <p class="battle-hint note">${stopped&&!b.outcome?esc(pauseReason||'点击继续交战后，双方才会继续出手。'):'双方按各自速度持续普攻；技能共用人物调息，不会自动消耗药物。'}</p>
-    ${personalProgressPanel(b,esc)}${objectivePanel(b)}`;
-  return `<section class="live-battle"><div class="battle-transport"><p class="battle-state" role="status">${b.outcome?({victory:'此战得胜',defeat:'暂且收兵',retreat:'已撤出战斗'})[b.outcome]:stopped?'交战已暂停':'正在自动交战'}</p><span class="battle-time" aria-label="交战时长">${String(Math.floor(time/60)).padStart(2,'0')}:${String(time%60).padStart(2,'0')}</span><div class="battle-running" ${b.outcome?'hidden':''}>${btn(paused?'继续交战':'暂停交战',{type:'ui_battlePause'},'secondary',locked)}${btn('撤退',{type:'battleRetreat'},'text-action',locked)}</div></div>${workPanels('战斗操作',[['战场',overview],['招式',units],['军令',commands],['用药',medicines],['战况与设置',rules]])}<div class="battle-end actions" ${b.outcome?'':'hidden'}>${btn(b.outcome==='victory'?'领取奖励':'结算',{type:'finishBattle'},'primary',!b.outcome||locked)}</div></section>`;
-}
+export function battleStage(options){return renderBattleStage(options,esc,btn,portrait);}
+function battlePage(s,d){const b=s.battle;return '<section class="live-battle battle-launcher"><h1>阵前交战</h1><p>'+esc(b?.outcome?'本场交战已结束，正在收拢队伍。':'此战尚未结束，打开战场后可继续交战。')+'</p>'+btn('打开战场',{type:'ui_battleOpen'},'primary')+'</section>';}
 function hasStun(u){return u.statuses.some(s=>s.id==='stun');}
 function schemePage(s,d){return schemeScenePage(s,d,esc,btn);}
 function eventPage(s,d){const e=d.by.events[s.event.id];return title(e.name,'路上际遇','','event')+`<section class="location">${storyParagraphs(e.text)}<div class="actions">${e.options.map(c=>btn(c.label,{type:'eventChoice',id:c.id},'secondary')).join('')}</div></section>`;}
@@ -233,19 +220,18 @@ function overview(s,d){
     ${!owned?'<p>先到郓城酒肆与白胜交谈，可邀他引路。临时助阵不等于正式入寨。</p>':''}${nav('查看差事','quests')}</section>`;
 }
 function pageResources(s,screen){
-  const rows={camp:[['碎银',s.player.silver],['体力',s.player.stamina+'/'+staminaCap(s)]],map:[['体力',s.player.stamina+'/'+staminaCap(s)],['出阵',s.team.length+'/3']],heroes:[['已入寨',Object.values(s.heroes).filter(h=>h.status==='owned').length+' 位'],['经验丹',s.inventory.exp_pill||0]],bag:[['碎银',s.player.silver],['体力',s.player.stamina+'/'+staminaCap(s)]],forge:[['碎银',s.player.silver],['精铁',s.inventory.iron||0],['强化符',s.inventory.strength_charm||0]],quests:[['威望',s.player.prestige],['功勋',s.player.merit]]}[screen]||[];
+  const rows={camp:[['碎银',s.player.silver],['体力',s.player.stamina+'/'+staminaCap(s)]],map:[['体力',s.player.stamina+'/'+staminaCap(s)],['出阵',s.team.length+'/3']],companions:[['出阵',s.team.length+'/3'],['经验丹',s.inventory.exp_pill||0]],heroes:[['已入寨',Object.values(s.heroes).filter(h=>h.status==='owned').length+' 位'],['经验丹',s.inventory.exp_pill||0]],bag:[['碎银',s.player.silver],['体力',s.player.stamina+'/'+staminaCap(s)]],forge:[['碎银',s.player.silver],['精铁',s.inventory.iron||0],['强化符',s.inventory.strength_charm||0]],quests:[['威望',s.player.prestige],['功勋',s.player.merit]]}[screen]||[];
   return rows.length?`<div class="resources" aria-label="当前功能相关资源">${rows.some(([name])=>name==='碎银')?btn('获取碎银',{type:'ui_resourceSource',id:'silver'}):''}${rows.some(([name])=>name==='体力')?btn('补充体力',{type:'ui_section',view:'bag',id:'supplies'}):''}${rows.map(([name,value])=>`<span>${icon(({体力:'energy',出阵:'heroes',已入寨:'heroes',经验丹:'medicine',碎银:'coins',精铁:'forge',强化符:'ticket',威望:'medal',功勋:'medal'})[name])}<span>${name}</span><b>${value}</b></span>`).join('')}</div>`:'';
 }
-export function render({state:s,data:d,guideActive=false,view,status='',error='',locked=false,notice='',recruitTarget='',entered=true,battlePaused=false,battlePauseReason='',saveBox={},activity=null,battleSpeed=.5,mapTarget=null,mapSection='story',pageSections={},roster={},leaderboard={},gear={}}){
-  const busy=isBusy(s),tabs=[['camp','寨子'],['map','江湖'],['realm','山河'],['heroes','好汉'],['trials','历练'],['bag','行囊'],['recruit','招贤'],['forge','打造'],['quests','差事'],['chronicle','梁山志'],['save','存档']];
+export function render({state:s,data:d,guideActive=false,view,status='',error='',locked=false,notice='',recruitTarget='',entered=true,battlePaused=false,battlePauseReason='',saveBox={},battleSpeed=.5,mapTarget=null,mapSection='story',pageSections={},roster={},leaderboard={},gear={}}){
+  const busy=isBusy(s),tabs=[['camp','寨子'],['map','江湖'],['companions','人物篇章'],['realm','山河'],['heroes','好汉'],['trials','历练'],['bag','行囊'],['recruit','招贤'],['forge','打造'],['quests','差事'],['chronicle','梁山志'],['save','存档']];
   const screen=['welcome','save','chronicle','menu'].includes(view)?view:s.battle?'battle':s.scheme?'scheme':s.event?'event':view;
-  let content=screen==='realm'?realmPanel(s,d,esc,btn,pageSections.realm,pageSections.chronicleRegion):screen==='trials'?rotationsPage(s,d,esc,btn,leaderboard,pageSections.trials):screen==='camp'?campPage(s,d,esc,btn,pageSections.camp,pageSections.scene,pageSections.grainRoute,pageSections):screen==='save'?saveBoxPage(s,status,locked,saveBox,pageSections.save):screen==='chronicle'?chroniclePage(s,d):screen==='battle'?battlePage(s,d,battlePaused,battlePauseReason,locked,battleSpeed):screen==='scheme'?schemePage(s,d):screen==='event'?eventPage(s,d):screen==='heroes'?heroesPage(s,d,roster,pageSections.heroes):screen==='bag'?bagPage(s,d,gear,pageSections.bag):screen==='forge'?forgePage(s,d,gear,pageSections.forge):screen==='recruit'?recruitPage(s,d,recruitTarget,roster,pageSections.recruit):screen==='quests'?questsPage(s,d,pageSections.questFocus):mapPage(s,d,mapTarget,mapSection,pageSections.journeyScene);
+  let content=screen==='companions'?companionHub(s,d,esc,btn,pageSections.companion):screen==='realm'?realmPanel(s,d,esc,btn,pageSections.realm,pageSections.chronicleRegion):screen==='trials'?rotationsPage(s,d,esc,btn,leaderboard,pageSections.trials):screen==='camp'?campPage(s,d,esc,btn,pageSections.camp,pageSections.scene,pageSections.grainRoute,pageSections):screen==='save'?saveBoxPage(s,status,locked,saveBox,pageSections.save):screen==='chronicle'?chroniclePage(s,d):screen==='battle'?battlePage(s,d,battlePaused,battlePauseReason,locked,battleSpeed):screen==='scheme'?schemePage(s,d):screen==='event'?eventPage(s,d):screen==='heroes'?heroesPage(s,d,roster,pageSections.heroes):screen==='bag'?bagPage(s,d,gear,pageSections.bag):screen==='forge'?forgePage(s,d,gear,pageSections.forge):screen==='recruit'?recruitPage(s,d,recruitTarget,roster,pageSections.recruit):screen==='quests'?questsPage(s,d,pageSections.questFocus):mapPage(s,d,mapTarget,mapSection,pageSections.journeyScene);
   if(screen==='menu')content=title('全部功能','选择后直接进入')+'<div class="function-grid main-function-grid">'+tabs.map(([id,label])=>'<button type="button" class="secondary" data-view="'+id+'" '+(busy&&!['map','save','chronicle'].includes(id)?'disabled':'')+'>'+icon(id)+'<span>'+label+'</span></button>').join('')+'</div>';
   if(screen==='welcome')content=`<section class="intro opening"><p class="kicker">水泊梁山 · 白手立寨</p><h1>从郓城上路。</h1><div class="intro-line" aria-hidden="true"></div><div class="opening-lines"><p>白胜领来几个乡人，在山脚支起棚子。</p><p>景阳冈有虎，却有个喝了酒的汉子执意上山。先去三碗不过冈看看。</p><div class="camp-faces">${['baisheng','wusong','linchong','wuyong'].map(id=>portrait(d.by.heroes[id])).join('')}</div></div><div class="opening-actions">${btn('开始游戏',{type:'ui_start'},'primary')}${nav('读取存档','save')}</div><p class="note">开始游戏后自动保存到本机。</p></section>`;
   const active=['battle','scheme','event'].includes(screen)?'map':screen;
   const prologue=screen==='welcome'||(!entered&&screen==='save'),arrival=screen==='map'&&isFirstArrival(s);
   const navigation=`<nav class="tabs" aria-label="游戏页面">${tabs.map(([id,label])=>`<button type="button" data-view="${id}" aria-current="${active===id?'page':'false'}" ${busy&&!['map','save','chronicle'].includes(id)?'disabled':''}>${icon(id)}<span>${label}</span></button>`).join('')}<button type="button" class="mobile-menu-nav" data-view="menu" aria-haspopup="dialog" aria-controls="function-menu" aria-expanded="false" aria-current="${!['camp','map','heroes','bag'].includes(active)?'page':'false'}"><span aria-hidden="true">☷</span><span>更多</span></button></nav>`;
-  const entries=activity||[...s.journal.slice(-200).map((e,id)=>({...e,id,kind:'journey'})),...(notice?[{id:'notice',text:notice,at:s.clock,kind:'journey'}]:[])];
   return `<div class="shell focus-layout viewport-shell${screen==='battle'?' in-battle':''}${prologue?' prologue-layout':arrival?' arrival-layout':''}">
     <header class="masthead"><div class="brand"><span class="seal" aria-hidden="true">白泽</span><strong>白泽水浒</strong></div><div class="mast-links"><span class="edition">v${esc(d.config.release)}</span><button type="button" class="theme-switch" data-theme-toggle aria-label="切换昼夜配色" aria-pressed="false"><span class="theme-day">夜间</span><span class="theme-night">日间</span></button><a href="../">返回导航</a>${prologue?'':'<button type="button" class="masthead-more" data-view="menu" aria-haspopup="dialog" aria-controls="function-menu" aria-expanded="false">更多 <span aria-hidden="true">▾</span></button>'}</div></header>
     <div class="resource-strip">${prologue?'<span class="strip-note">十二卷主线</span>':(selectedHonor(s)?'<span class="honor-label">'+esc(selectedHonor(s))+'</span>':'')+(pageResources(s,screen)||'<span class="strip-note">江湖</span>')}</div>
@@ -253,26 +239,15 @@ export function render({state:s,data:d,guideActive=false,view,status='',error=''
       <aside class="rail" id="game-navigation">${prologue?'<p class="prelude-navigation">可开始新游戏<br>或读取存档</p>':navigation}</aside>
       <main class="main" id="main" tabindex="-1" data-screen="${esc(screen)}" data-guided="${guideActive}">
         ${error?`<div class="notice error" role="alert">${esc(error)}</div>`:''}
+        ${notice?`<p class="notice action-notice" role="status">${esc(notice)}</p>`:''}
         ${screen!=='save'&&(locked||(status&&!status.startsWith('已保存')&&screen!=='welcome'))?`<p class="warning" role="status">${esc(status)}</p>`:''}
         ${prologue?'':guidePanel(guidance(s,d,screen,screen==='map'?mapSection:pageSection(screen,pageSections[screen])||'',battlePaused),guideActive,esc)}
         ${content}
         ${!entered&&screen==='save'&&!locked?nav('返回卷首','welcome'):''}
       </main>
-      ${activityPanel(entries,!prologue)}
     </div>
     <footer class="footer"><span>${locked?'存档冲突 · 请到存档页处理':status.startsWith('已保存')?'已保存到本机':prologue?'独立本机存档':'尚未保存 · 请先导出进度'}</span>${prologue?'<span>水泊经营 · 无付费</span>':nav('存档管理','save')}</footer>
   </div>`;
-}
-function activityPanel(entries,available){
-  const labels={journey:'江湖',battle:'交战',scheme:'计策'};
-  return `<aside class="activity-panel" id="activity-panel" aria-labelledby="activity-title">
-    <header class="activity-heading"><button type="button" class="log-toggle" data-log-toggle aria-controls="activity-log" aria-expanded="false">展开日志</button><h2 id="activity-title">${icon('chronicle')}<span>江湖日志</span></h2><button type="button" class="log-latest" data-log-latest aria-label="日志回到最新">${icon('download')}<span>回到最新</span></button></header>
-    <div class="log-controls"><button type="button" data-log-pause>冻结阅读</button><button type="button" data-log-filter>查看完整战报</button></div>
-    <div class="activity-list" id="activity-log" role="log" aria-live="off" aria-label="江湖与交战日志" tabindex="0">
-      ${available&&entries.length?entries.map(e=>`<article class="activity-entry" data-log-entry="${esc(e.id)}"><p class="activity-meta"><span>${labels[e.kind]||'江湖'}</span><time>${esc(new Date(e.at).toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'}))}</time></p><p class="activity-text">${esc(e.text)}</p></article>`).join(''):'<p class="activity-empty">还没有行程记录。<br>探路和交战的经过会记在这里。</p>'}
-    </div>
-    <p class="activity-caption" id="activity-caption">江湖日志 · 可回到最新</p>
-  </aside>`;
 }
 export function importDialog(state){return `<dialog id="import-confirm" aria-labelledby="import-title"><h2 id="import-title">导入这个存档？</h2><p>此存档记录到 ${esc(new Date(state.clock).toLocaleString('zh-CN'))}。</p><p>威望 ${state.player.prestige}，正式好汉 ${Object.values(state.heroes).filter(h=>h.status==='owned').length} 名。</p><p class="note">确认后替换当前游戏进度，并备份原来的有效存档。不影响学习系统。建议先导出当前进度。</p><div class="actions">${btn('确认导入并替换',{type:'ui_confirmImport'},'primary')}${btn('取消',{type:'ui_cancelImport'},'secondary')}</div></dialog>`;}
 export function recruitDialog(result,data){

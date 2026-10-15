@@ -1,6 +1,6 @@
-import {aptitudeSilver,HERO_APTITUDES} from './hero-aptitude.js?v=0.84.0';
-import { promotionCore, PROMOTION_CORE_COSTS } from './promotion-data.js?v=0.84.0';
-import { hasOwn, requireRule, journal, count } from './utils.js?v=0.84.0';
+import {aptitudeSilver,HERO_APTITUDES} from './hero-aptitude.js?v=0.88.0';
+import { promotionCore, PROMOTION_CORE_COSTS } from './promotion-data.js?v=0.88.0';
+import { hasOwn, requireRule, journal, count } from './utils.js?v=0.88.0';
 
 export const QUALITIES=[
   {name:'凡',power:1,speed:1,level:1,hall:1},

@@ -1,6 +1,6 @@
-import {heroAptitude,aptitudeSilver} from './hero-aptitude.js?v=0.84.0';
-import { isWanderer } from './roster.js?v=0.84.0';
-import { count, journal, requireRule, random } from './utils.js?v=0.84.0';
+import {heroAptitude,aptitudeSilver} from './hero-aptitude.js?v=0.88.0';
+import { isWanderer } from './roster.js?v=0.88.0';
+import { count, journal, requireRule, random } from './utils.js?v=0.88.0';
 
 export const MOUNT_DROP_RATE=.2;
 export const SKILL_CAP=5, MOUNT_CAP=5;

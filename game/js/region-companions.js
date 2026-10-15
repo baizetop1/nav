@@ -1,0 +1,19 @@
+import {REGION_COMPANIONS,companionSpec,companionHas,companionStep,companionTaskReason,companionByRoute,companionAwayReason} from './region-companions-data.js?v=0.88.0';
+import {knowHero,ownHero} from './hero.js?v=0.88.0';
+import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.88.0';
+import {requireRule,journal} from './utils.js?v=0.88.0';
+const busy=s=>s.battle||s.scheme||s.event||s.realm?.trek||s.expansion?.run||s.adventure?.run;
+export function companionOpenQuote(s,id){const r=companionSpec(id);return {reason:!r?'没有这段人物篇章。':companionAwayReason(s,id)||(!s.camp?'先建立寨子。':busy(s)?'先结束当前交战或行程。':!s.regionCompanions?.quests?.[id]&&!s.team.some(h=>s.heroes[h]?.status==='owned'&&s.heroes[h].level>=r.level)?'出阵队伍至少需要一位 '+r.level+' 级好汉。':'')};}
+export function openCompanion(s,id){const q=companionOpenQuote(s,id);requireRule(!q.reason,q.reason);const r=companionSpec(id),x=s.regionCompanions??={version:1,quests:{}};if(!x.quests[id]){x.quests[id]={position:r.start,visited:[r.start],flags:[]};journal(s,'抵达'+r.area+' · '+r.nodes[r.start].name+'。');}return x.quests[id];}
+export function companionPath(s,id,node){const r=companionSpec(id),x=s.regionCompanions?.quests?.[id];if(!r||!x||!Object.hasOwn(r.nodes,node)||node===r.boss&&!companionHas(s,id,'prepared'))return null;const queue=[[x.position]],seen=new Set([x.position]);while(queue.length){const path=queue.shift(),at=path.at(-1);if(at===node)return path;for(const next of r.nodes[at].links)if(!seen.has(next)&&(next!==r.boss||companionHas(s,id,'prepared'))){seen.add(next);queue.push([...path,next]);}}return null;}
+export function companionTravelQuote(s,id,node=companionStep(s,id)?.node){const r=companionSpec(id);return {node,path:companionPath(s,id,node),reason:!r?'没有这段人物篇章。':companionAwayReason(s,id)|| (busy(s)?'先结束当前交战或行程。':!s.regionCompanions?.quests?.[id]?'先进入'+r.area+'。':!Object.hasOwn(r.nodes,node)?'没有这个地点。':node===r.boss&&!companionHas(s,id,'prepared')?'先查明去向，约好接应再去。':!companionPath(s,id,node)?'这条路还没有走通。':'')};}
+export function companionTravel(s,id,node){const q=companionTravelQuote(s,id,node);requireRule(!q.reason,q.reason);const r=companionSpec(id),x=s.regionCompanions.quests[id];x.position=q.node;for(const at of q.path)if(!x.visited.includes(at))x.visited.push(at);journal(s,'抵达'+r.area+' · '+r.nodes[q.node].name+'。');}
+export function companionAction(s,d,a){requireRule(!busy(s),'先结束当前交战或行程。');const reason=companionTaskReason(s,a.id,a.task);requireRule(!reason,reason);const r=REGION_COMPANIONS[a.id],t=r.steps.find(t=>t.task===a.task);
+ if(a.task==='meet')knowHero(s,a.id,'known',d);
+ if(a.task==='deliver')for(const [id,n]of Object.entries(r.rewards))s.inventory[id]=(s.inventory[id]||0)+n;
+ if(a.task==='invite'){const owned=s.heroes[a.id].status==='owned';if(!owned)ownHero(s,a.id,d);s.inventory[a.id+'_token']=(s.inventory[a.id+'_token']||0)+2;journal(s,owned?r.name+'早已在寨中。这回共事已办妥，培养、装备和坐骑照旧；收下信物 2。':r.name+'入寨，信物 2 已收好；未收碎银，未消耗招贤令。');}
+ s.regionCompanions.quests[a.id].flags.push(t.flag);journal(s,t.text);
+}
+export function companionBattleQuote(s,id){const r=companionSpec(id);if(!r)return {reason:'没有这段人物篇章。'};const q=specialPlan(s,r.dungeon,1,r.route);return {...q,reason:companionAwayReason(s,id)||(!companionHas(s,id,'prepared')?'先与'+r.name+'查探，再约好接应。':s.regionCompanions?.quests?.[id]?.position!==r.boss?'先前往'+r.nodes[r.boss].name+'。':q.reason)};}
+export function enterCompanion(s,d,a){const r=companionSpec(a.id),q=companionBattleQuote(s,a.id);requireRule(!q.reason,q.reason);return enterSpecial(s,d,{id:r.dungeon,tier:1,route:r.route});}
+export function finishCompanion(s,b){const r=companionByRoute(b.context.route);if(!r||b.outcome!=='victory'||companionHas(s,r.id,'won'))return;requireRule(companionHas(s,r.id,'prepared'),'人物篇章尚未约好接应。');s.regionCompanions.quests[r.id].flags.push('won');journal(s,r.name+'的共事已胜，回'+r.nodes[r.start].name+'把事情办完，再邀请入寨。');}

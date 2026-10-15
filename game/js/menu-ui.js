@@ -1,7 +1,7 @@
 // Navigation only: these entries select existing pages without issuing game commands.
 export const FUNCTION_GROUPS = [
   {id:'journey',label:'历练',entries:[
-    {label:'探索',view:'map',map:'region'}, {label:'主线',view:'map',map:'story'}, {label:'地图',view:'map',map:'atlas'},
+    {label:'人物篇章',view:'companions'}, {label:'探索',view:'map',map:'region'}, {label:'主线',view:'map',map:'story'}, {label:'地图',view:'map',map:'atlas'},
     {label:'游历',view:'realm',section:'journey'}, {label:'剧情副本',view:'trials',section:'story'}, {label:'每日副本',view:'trials',section:'daily'},
     {label:'资源副本',view:'trials',section:'resources'}, {label:'周本',view:'trials',section:'weekly'}, {label:'特殊副本',view:'trials',section:'special'}]},
   {id:'camp',label:'寨务',entries:[
