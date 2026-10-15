@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-15T16:33:41.611Z",
+  "generatedAt": "2026-10-15T19:09:22.155Z",
   "intelligence": {
-    "updatedAt": "2026-10-15T16:33:41.611Z",
+    "updatedAt": "2026-10-15T19:09:22.155Z",
     "items": [
       {
         "id": "cn-item-5af7698b9b45dc54",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-105134",
+        "id": "cisa-kev-cve-2026-21589",
         "category": "security",
-        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105134",
+        "title": "Atlassian Multiple Products：Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-21589",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceiver…",
-        "badge": "CVE-2026-105134",
-        "signal": "已遭利用 · 整改期限 2026-10-17"
+        "publishedAt": "2026-10-15T00:00:00.000Z",
+        "summary": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessi…",
+        "badge": "CVE-2026-21589",
+        "signal": "已遭利用 · 整改期限 2026-10-18"
       },
       {
         "id": "ai-openai-a60f4a701f887ae8",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50105344",
+        "id": "hn-50107379",
         "category": "dev",
-        "title": "I designed a nose guard for my dog and gave it away. Now 500 dogs wear one",
-        "url": "https://snoutcover.com/one-year",
+        "title": "Muse Spark Open",
+        "url": "https://research.meta.ai/blog/muse-spark-open",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T15:44:36.000Z",
+        "publishedAt": "2026-10-15T17:47:39.000Z",
         "badge": "HN",
-        "signal": "91 分 · 43 评论"
+        "signal": "260 分 · 161 评论"
       },
       {
-        "id": "cn-it-3675bc81a9c80906",
+        "id": "cn-it-8f081ff2d0e4b082",
         "category": "cn",
-        "title": "动视看好《GTA 6》提振市场，让更多玩家回归游戏、带动《使命召唤：现代战争 4》销量表现",
-        "url": "https://www.ithome.com/1/013/685.htm",
+        "title": "消息称苹果已发出 10 月 28 日邀请函，首款触屏 MacBook、iPad mini 8、M6 Mac 即将到来",
+        "url": "https://www.ithome.com/1/013/687.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-15T16:28:34.000Z",
-        "summary": "IT之家 10 月 16 日消息，动视认为，《GTA 6》的推出有望带动《使命召唤》系列的表现，而非挤压其市场空间。 动视首席营销官泰勒 · 巴尔（Tyler Bahl）表示，《GTA 6》和《使命召唤》将是 2026 年规模最大的两款游戏之一，前者带来的玩家回流和游戏行业关注度提升，有望为《现代战争 4》创造更多机会。 巴尔当地时间 10 月 15 日在接受 The Game Business 采访时，被问及《GTA 6》与《塞尔达传说：时之笛》重制版于 11 月同期推出…",
+        "publishedAt": "2026-10-15T16:50:20.000Z",
+        "summary": "IT之家 10 月 16 日消息，苹果在 10 月的第二波新品有望 10 月 28 日到来，彭博社记者 Mark Gurman 于 10 月 15 日爆料称，苹果正邀请部分媒体参加 10 月 28 日在美国洛杉矶举办的产品发布会， 预计推出触摸屏 MacBook、iPad mini 新品、M6 Mac 。 在活动方式方面，Gurman 曾爆料称本次活动不会采用传统苹果发布会的现场直播形式， 主要面向内容创作者 ，会设置产品体验环节，形式类似苹果于 10 月 13 日在纽约举…",
         "badge": "IT之家"
       },
       {
@@ -95,17 +95,17 @@
         "source": "百度热搜",
         "summary": "广州地铁在站内打造“悠能量”运动空间：琶洲站设匹克球、乒乓球场地并规划拳击健身区，天河公园站新增匹克球、网球训练场，国庆假期两站累计接待超5500人次。",
         "badge": "热搜",
-        "signal": "7,809,158 热度"
+        "signal": "7,809,784 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-76519",
+        "id": "cisa-kev-cve-2026-105134",
         "category": "security",
-        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76519",
+        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105134",
         "source": "CISA KEV",
         "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
-        "badge": "CVE-2026-76519",
+        "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceiver…",
+        "badge": "CVE-2026-105134",
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50104654",
+        "id": "hn-50105647",
         "category": "dev",
-        "title": "Simons Foundation Launches $15M Effort to Help Mathematicians Navigate AI Era",
-        "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
+        "title": "Neural networks are clean",
+        "url": "https://already-clean.goodfire.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T14:58:48.000Z",
+        "publishedAt": "2026-10-15T16:04:01.000Z",
         "badge": "HN",
-        "signal": "97 分 · 65 评论"
+        "signal": "235 分 · 71 评论"
       },
       {
         "id": "cn-item-86466542189083dd",
@@ -170,24 +170,24 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-e326929bde69845e",
+        "id": "cn-it-60eee26131563cc5",
         "category": "cn",
-        "title": "苹果营销主管谈 OpenAI 硬件：我们没感到有威胁，相比追逐 AGI 更重视用户隐私与日常使用体验",
-        "url": "https://www.ithome.com/1/013/683.htm",
+        "title": "华为余承东就“三部门联合调查刹车踏板支架断裂问题”表态：正义可能会迟到，但永远不会缺席！",
+        "url": "https://www.ithome.com/1/013/686.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-15T16:02:39.000Z",
-        "summary": "IT之家 10 月 16 日消息，除了苹果 CEO 约翰・特努斯（John Ternus）之外，《时代》今日还采访到了苹果全球营销高级副总裁格雷格・乔斯维亚克（Greg Joswiak）。 当谈及 OpenAI 的硬件计划时，他表示，苹果并不担心 OpenAI 进军硬件领域带来的竞争。“我们并未感受到威胁。我们能够实现这样的软硬件整合，这意味着我们可以创造比其他任何人都更好的体验。” 乔斯维亚克还谈到了苹果对人工智能产品的定位。他表示，苹果并不是专门为那些执着于追求超级智能…",
+        "publishedAt": "2026-10-15T16:33:51.000Z",
+        "summary": "IT之家 10 月 16 日消息，据多位博主分享的截图，华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东转发了尊界汽车声明，表态称： 正义可能会迟到，但永远不会缺席！ 据IT之家昨晚报道，针对网络反映的“尊界 V800 汽车刹车踏板支架断裂问题”，工业和信息化部、中央网信办、市场监管总局高度重视，在前期调查工作基础上， 成立联合调查组开展核查 ，并依法依规处理。有关情况将及时公布。 随后，尊界汽车官方微博发布声明， 宣布将积极响应、完全服从并将全力配合联合调查…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-105133",
+        "id": "cisa-kev-cve-2026-76519",
         "category": "security",
-        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105133",
+        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76519",
         "source": "CISA KEV",
         "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be ch…",
-        "badge": "CVE-2026-105133",
+        "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
+        "badge": "CVE-2026-76519",
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
@@ -201,14 +201,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50103338",
+        "id": "hn-50105648",
         "category": "dev",
-        "title": "Wayland desktop for Linux with skeuomorphic design",
-        "url": "https://github.com/fyzugx/DEsk",
+        "title": "Krea 3 – An image model built for editing at scale",
+        "url": "https://www.krea.ai/krea-3",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T13:23:44.000Z",
+        "publishedAt": "2026-10-15T16:04:05.000Z",
         "badge": "HN",
-        "signal": "201 分 · 81 评论"
+        "signal": "149 分 · 63 评论"
       },
       {
         "id": "cn-baidu-32fe786dce793b33",
@@ -218,7 +218,7 @@
         "source": "百度热搜",
         "summary": "10月14日，启东一对新人在老宅婚礼后静默对视的视频刷爆全网，获赞86万。10月11日，这对坚持异地恋2年多的新人在家乡举办婚礼。摄影师全程跟拍，在宴席散去后，抓拍到两人放下疲惫、静默对视并红了眼眶的瞬间。这种不摆拍的情绪引发无数网友共鸣与动容。",
         "badge": "热搜",
-        "signal": "7,712,410 热度"
+        "signal": "7,712,975 热度"
       },
       {
         "id": "github-advisory-ghsa-mf4x-w4gh-4656",
@@ -232,10 +232,10 @@
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-eb67409897ed2136",
+        "id": "ai-hugging-face-ff0cf28c5d753057",
         "category": "ai",
-        "title": "Welcome FLUX.3 Image Klein in Diffusers",
-        "url": "https://huggingface.co/blog/flux-3",
+        "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+        "url": "https://huggingface.co/blog/meta-muse-spark-open",
         "source": "Hugging Face",
         "publishedAt": "2026-10-15T00:00:00.000Z",
         "badge": "Hugging Face"
@@ -249,7 +249,7 @@
         "publishedAt": "2026-10-15T14:52:29.000Z",
         "summary": "看着很火的样子，想拿来试试，但又怕封号，有试过的朋友吗",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-item-6ee6c554e9754c5a",
@@ -262,14 +262,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-0322",
+        "id": "cisa-kev-cve-2026-105133",
         "category": "security",
-        "title": "Palo Alto Networks PAN-OS：Palo Alto Networks PAN-OS Code Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-0322",
+        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105133",
         "source": "CISA KEV",
         "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
-        "badge": "CVE-2026-0322",
+        "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be ch…",
+        "badge": "CVE-2026-105133",
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
@@ -283,23 +283,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50103630",
+        "id": "hn-50103338",
         "category": "dev",
-        "title": "I know why Mathematicians weep",
-        "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
+        "title": "Wayland desktop for Linux with skeuomorphic design",
+        "url": "https://github.com/fyzugx/DEsk",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T13:44:32.000Z",
+        "publishedAt": "2026-10-15T13:23:44.000Z",
         "badge": "HN",
-        "signal": "154 分 · 223 评论"
+        "signal": "354 分 · 143 评论"
       },
       {
-        "id": "cn-it-c822a1576f452f13",
+        "id": "cn-it-3675bc81a9c80906",
         "category": "cn",
-        "title": "特努斯谈早期折叠屏手机：感觉“有点廉价、质量也不怎么样”，苹果早在 2011 年就开始探索相关技术",
-        "url": "https://www.ithome.com/1/013/682.htm",
+        "title": "动视看好《GTA 6》提振市场，让更多玩家回归游戏、带动《使命召唤：现代战争 4》销量表现",
+        "url": "https://www.ithome.com/1/013/685.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-15T15:55:08.000Z",
-        "summary": "IT之家 10 月 15 日消息，苹果 CEO 约翰・特努斯（John Ternus）今日在接受《时代》杂志专访时，谈到了他对于早期折叠屏手机的感受，称其中一些产品给人的感觉“有点廉价、质量也不怎么样”（“kind of cheap and crappy”）。 相关采访刊登于《时代》杂志 2026 年度最佳发明专题，苹果首款折叠屏手机 iPhone Duo 也入选该榜单。 众所周知，三星于 2019 年推出首款折叠屏手机，而全球首款量产的三折叠屏手机华为 Mate XT 非…",
+        "publishedAt": "2026-10-15T16:28:34.000Z",
+        "summary": "IT之家 10 月 16 日消息，动视认为，《GTA 6》的推出有望带动《使命召唤》系列的表现，而非挤压其市场空间。 动视首席营销官泰勒 · 巴尔（Tyler Bahl）表示，《GTA 6》和《使命召唤》将是 2026 年规模最大的两款游戏之一，前者带来的玩家回流和游戏行业关注度提升，有望为《现代战争 4》创造更多机会。 巴尔当地时间 10 月 15 日在接受 The Game Business 采访时，被问及《GTA 6》与《塞尔达传说：时之笛》重制版于 11 月同期推出…",
         "badge": "IT之家"
       },
       {
@@ -331,7 +331,7 @@
         "publishedAt": "2026-10-15T13:52:12.000Z",
         "summary": "三个月前做了一个小破站 https://www.compresspic.top/ 当时做完就丢在一边了，这周用 gpt-6 astra 一句提示词优化 优化前： https://i.imgur.com/nJ4vIvo.jpeg 优化后： https://i.imgur.com/MN5TzvX.jpeg UI 质感上，有很大的飞跃 不过 gpt-6 astra 非常耗额度，干活还得用 gpt-6.1 computer use 还没体验，用的 plus 账号，卡 5 小时，顶不…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-56cef41b4fb8baeb",
@@ -341,37 +341,37 @@
         "source": "百度热搜",
         "summary": "在国际环境不稳定，地缘政治冲突持续扰动全球经贸秩序的背景下，中国外贸何以实现“加速跑”？读懂这份成绩单的“含金量”，可以从动能、结构、质效三个维度进行观察。",
         "badge": "热搜",
-        "signal": "7,617,984 热度"
+        "signal": "7,617,654 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-104935",
+        "id": "cisa-kev-cve-2026-0322",
         "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104935",
+        "title": "Palo Alto Networks PAN-OS：Palo Alto Networks PAN-OS Code Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-0322",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-13T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
-        "badge": "CVE-2026-104935",
-        "signal": "已遭利用 · 整改期限 2026-10-16"
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
+        "badge": "CVE-2026-0322",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-hugging-face-504a28fcb44d1a3d",
+        "id": "ai-hugging-face-eb67409897ed2136",
         "category": "ai",
-        "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
-        "url": "https://huggingface.co/blog/allenai/hiro-acev2",
+        "title": "Welcome FLUX.3 Image Klein in Diffusers",
+        "url": "https://huggingface.co/blog/flux-3",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-14T16:12:42.000Z",
+        "publishedAt": "2026-10-15T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50102923",
+        "id": "hn-50103630",
         "category": "dev",
-        "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
-        "url": "https://libreboot.org/news/libreboot2610.html",
+        "title": "I Know Why the Mathematicians Weep",
+        "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T12:52:16.000Z",
+        "publishedAt": "2026-10-15T13:44:32.000Z",
         "badge": "HN",
-        "signal": "148 分 · 75 评论"
+        "signal": "271 分 · 426 评论"
       },
       {
         "id": "cn-item-b20f4cc2638e8d55",
@@ -416,24 +416,24 @@
         "signal": "5 回复"
       },
       {
-        "id": "cn-it-97d6fe696e60b461",
+        "id": "cn-it-e326929bde69845e",
         "category": "cn",
-        "title": "雷蛇梭鱼 V2 专业版耳机发布：285g 可折叠、70 小时续航，199.99 美元",
-        "url": "https://www.ithome.com/1/013/681.htm",
+        "title": "苹果营销主管谈 OpenAI 硬件：我们没感到有威胁，相比追逐 AGI 更重视用户隐私与日常使用体验",
+        "url": "https://www.ithome.com/1/013/683.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-15T15:45:15.000Z",
-        "summary": "IT之家 10 月 15 日消息，雷蛇今日发布梭鱼 V2 专业版（Barracuda V2 Pro）无线游戏耳机，新品在美国市场的定价为 199.99 美元 （IT之家注：现汇率约合 1,341 元人民币） ，国行版本预计将于近期公布。 音频方面，梭鱼 V2 专业版搭载雷蛇 TriForce 生物纤维素 40mm 驱动单元，强调高频清脆、中频清晰以及无失真低频。连接 PC 时可通过雷蛇 Synapse 4 启用 THX Spatial Audio+，提供 7.1.4 虚拟环…",
+        "publishedAt": "2026-10-15T16:02:39.000Z",
+        "summary": "IT之家 10 月 16 日消息，除了苹果 CEO 约翰・特努斯（John Ternus）之外，《时代》今日还采访到了苹果全球营销高级副总裁格雷格・乔斯维亚克（Greg Joswiak）。 当谈及 OpenAI 的硬件计划时，他表示，苹果并不担心 OpenAI 进军硬件领域带来的竞争。“我们并未感受到威胁。我们能够实现这样的软硬件整合，这意味着我们可以创造比其他任何人都更好的体验。” 乔斯维亚克还谈到了苹果对人工智能产品的定位。他表示，苹果并不是专门为那些执着于追求超级智能…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-96951",
+        "id": "cisa-kev-cve-2026-104935",
         "category": "security",
-        "title": "Microsoft Windows：Microsoft Windows Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-96951",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104935",
         "source": "CISA KEV",
         "publishedAt": "2026-10-13T00:00:00.000Z",
-        "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
-        "badge": "CVE-2026-96951",
+        "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
+        "badge": "CVE-2026-104935",
         "signal": "已遭利用 · 整改期限 2026-10-16"
       },
       {
@@ -453,7 +453,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-15T15:03:17.000Z",
         "badge": "HN",
-        "signal": "59 分 · 24 评论"
+        "signal": "133 分 · 57 评论"
       },
       {
         "id": "cn-baidu-9b1bbaf9ab9ba0be",
@@ -463,7 +463,7 @@
         "source": "百度热搜",
         "summary": "10月14日，2027国考报名启动。今年报名增加实名实人认证，国家公务员局明确强调打击防范“公考围岗”舞弊行为。此前，有人盗用身份信息集中报考制造虚假热度，借此吓退考生或操纵面试格局，甚至形成非法买卖信息的灰色产业链。此番亮剑将打击端口前移，旨在坚决维护招考秩序与公平正义。",
         "badge": "热搜",
-        "signal": "7,521,641 热度"
+        "signal": "7,524,392 热度"
       },
       {
         "id": "github-advisory-ghsa-w6wh-p4g7-mpj2",
@@ -477,12 +477,12 @@
         "signal": "HIGH · CVSS 7.8"
       },
       {
-        "id": "ai-hugging-face-53911f98c21c784f",
+        "id": "ai-hugging-face-504a28fcb44d1a3d",
         "category": "ai",
-        "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
-        "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+        "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+        "url": "https://huggingface.co/blog/allenai/hiro-acev2",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-13T17:05:48.000Z",
+        "publishedAt": "2026-10-14T16:12:42.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -494,7 +494,7 @@
         "publishedAt": "2026-10-15T12:44:15.000Z",
         "summary": "我用 ai 扫了一圈不少的苹果论坛，reddit 等等，ai 发现有 18 个方向，但是深入调查下来的结论，要么门槛太低，要么就是手机系统已有类似功能，再不就是市场太拥挤了。 该如何破局？",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "14 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 263805,
+        "stars": 266056,
         "starsToday": 32282
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official",
         "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "language": "Python",
-        "stars": 38636,
+        "stars": 38816,
         "starsToday": 525
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 50193,
+        "stars": 50273,
         "starsToday": 1091
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
         "language": "Go",
-        "stars": 112288,
+        "stars": 112375,
         "starsToday": 530
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 68367,
+        "stars": 68612,
         "starsToday": 3027
       },
       {
@@ -561,8 +561,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 299657,
-        "starsToday": 534
+        "stars": 299730,
+        "starsToday": 688
       },
       {
         "id": "github-757bb2aa982fbfd2",
@@ -571,7 +571,7 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 74900,
+        "stars": 74976,
         "starsToday": 224
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 29670,
+        "stars": 29714,
         "starsToday": 902
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 88382,
+        "stars": 88513,
         "starsToday": 1366
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 280053,
+        "stars": 280168,
         "starsToday": 1015
       }
     ],
-    "updatedAt": "2026-10-15T16:33:41.611Z"
+    "updatedAt": "2026-10-15T19:09:22.155Z"
   }
 }
