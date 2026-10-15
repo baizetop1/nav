@@ -8,7 +8,7 @@
 
 ## 安装包
 
-生成 artifacts/android/baize-shuihu-0.88.0.apk，versionCode 62，包名 top.baizeone.shuihu，沿用原签名，可在原版上覆盖安装。包含 0.85.0 人物篇章、0.86.0 战斗窗口和 0.87.0 可读日志的全部内容。本次 GitHub main 更新包含 0.85—0.88 的完整源码，网页由仓库的 GitHub Actions 自动发布；Worker 仍为 0.84.0，需单独部署。
+生成 artifacts/android/baize-shuihu-0.88.0.apk，versionCode 62，包名 top.baizeone.shuihu，沿用原签名，可在原版上覆盖安装。包含 0.85.0 人物篇章、0.86.0 战斗窗口和 0.87.0 可读日志的全部内容。本次 GitHub main 更新包含 0.85—0.88 的完整源码，网页由仓库的 GitHub Actions 自动发布；Worker 已部署至 0.88.0，regionCompanions=1，线上版本、CORS 与存档列表读取正常；未执行数据库迁移。
 
 414 个内置游戏文件与源码逐字节一致；APK v2/v3 签名、原证书、包名、版本与 SHA-256 校验通过。实际 APK 解包后的离线升级、导入导出与重启记录见 artifacts/android/apk088-verification.json。未连接 Android 真机，系统安装、返回键与厂商 WebView 仍待手机审查。
 
@@ -20,4 +20,4 @@ APK SHA-256：1d1668f9fb0639948b67d1c580451a1323153d905b2fdd6e5270c02e395078c0�
 
 普通界面专项检查原来的展开偏好、不留空白行列、固定导航、分页和战斗日志保留，记录见 artifacts/no-global-log-browser/report.json；最终 APK 内置资源的同项检查见 artifacts/android/apk088-no-global-log-browser/report.json。网页构建记录见 artifacts/v088-regression/build.log。
 
-后续待办：手机实际覆盖安装与系统返回键审查，以及 Worker 单独部署。本轮未改数据库结构或存档字段。
+后续待办：手机实际覆盖安装与系统返回键审查。本轮未改数据库结构或存档字段。
