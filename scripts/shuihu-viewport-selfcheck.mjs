@@ -27,11 +27,12 @@ assert.ok(!JSON.stringify(log.entries).includes('Token'));
 const malicious=[{id:1,at:state.clock,kind:'journey',text:'<img src=x onerror=alert(1)>'}];
 for(const view of ['welcome','map','heroes','bag','recruit','quests','chronicle','save']){
   const html=render({state,data,view,entered:view!=='welcome',activity:malicious});
-  for(const id of ['main','game-navigation','activity-panel','activity-log','activity-caption'])assert.equal(html.split(`id="${id}"`).length-1,1,`${view}: one stable ${id}`);
-  assert.ok(html.includes('viewport-shell'));assert.ok(html.includes('data-log-latest'));assert.ok(!html.includes('class="combat-log"'));assert.ok(!html.includes('<img src=x'));
-  if(view!=='welcome')assert.ok(html.includes('&lt;img src=x onerror=alert(1)&gt;'));
+  for(const id of ['main','game-navigation'])assert.equal(html.split(`id="${id}"`).length-1,1,`${view}: one stable ${id}`);
+  assert.ok(html.includes('viewport-shell'));for(const removed of ['activity-panel','activity-log','activity-caption','data-log-toggle','data-log-latest'])assert.ok(!html.includes(removed),view+': removed ordinary log '+removed);assert.ok(!html.includes('class="combat-log"'));assert.ok(!html.includes('<img src=x'));
+  assert.ok(!html.includes('&lt;img src=x onerror=alert(1)&gt;'),'removed activity parameter is not rendered');
 }
+const journalState=structuredClone(state);journalState.journal.push({at:state.clock,text:malicious[0].text});const journalHtml=render({state:journalState,data,view:'chronicle'});assert.ok(journalHtml.includes('&lt;img src=x onerror=alert(1)&gt;'),'chronicle still escapes retained journal entries');assert.ok(!journalHtml.includes('<img src=x'));
 assert.equal(JSON.stringify(state),before);
 log.reset();assert.deepEqual(log.entries,[]);assert.equal(log.observe(state).length,state.journal.length,'Explicit slot load/import starts a separate timeline');
 assert.equal(data.config.version,2,'No save migration for a layout change');
-console.log('Shuihu viewport: stable regions, escaped log, deduplication, rolling history, session battle retention, 200-entry bound, slot reset and no save mutation passed.');
+console.log('Shuihu viewport: stable regions without ordinary log, escaped retained journal, deduplication, rolling history, session battle retention, 200-entry bound, slot reset and no save mutation passed.');

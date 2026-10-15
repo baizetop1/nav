@@ -18,6 +18,7 @@ const types={'.html':'text/html','.js':'application/javascript','.css':'text/css
 const idle=p=>p.waitForFunction(()=>!document.getElementById('app')?.hasAttribute('aria-busy'));
 async function command(p,type){await p.locator('button[data-command]').evaluateAll((els,type)=>{const b=els.find(e=>JSON.parse(e.dataset.command).type===type&&!e.disabled);if(!b)throw Error('Missing enabled command '+type);b.click();},type);await idle(p);}
 async function view(p,name){await p.locator('button[data-view]').evaluateAll((els,name)=>{const b=els.find(e=>e.dataset.view===name&&!e.disabled);if(!b)throw Error('Missing view '+name);b.click();},name);await idle(p);}
+async function noActivityLog(p,label){assert.equal(await p.locator('#activity-panel,#activity-log,[data-log-toggle],[data-log-latest],[data-log-pause]').count(),0,label+' omits the ordinary activity journal and controls');}
 async function read(p){return p.evaluate(async()=>new Promise((resolve,reject)=>{const request=indexedDB.open('baize-shuihu-box',1);request.onerror=()=>reject(request.error);request.onsuccess=()=>{const db=request.result,tx=db.transaction('slots','readonly'),r=tx.objectStore('slots').get(1);r.onsuccess=()=>resolve(JSON.parse(r.result.raw));r.onerror=()=>reject(r.error);tx.oncomplete=()=>db.close();};}));}
 async function dismiss(p){for(const selector of ['[data-reward-close]','[data-loot-close]']){const el=p.locator(selector);if(await el.count())await el.first().click();}}
 try{
@@ -40,17 +41,17 @@ try{
   const before=await read(page);
   assets=current;await page.reload();await page.locator('.camp-dashboard').waitFor();await idle(page);
   assert.equal(await page.locator('html').getAttribute('data-android'),'true');
-  const config=await page.evaluate(async()=> (await fetch('./data/config.json')).json());assert.equal(config.release,release);
+  const config=await page.evaluate(async()=> (await fetch('./data/config.json')).json());assert.equal(config.release,release);await noActivityLog(page,'Upgraded camp');
   const upgraded=await read(page);assert.deepEqual(upgraded.team,before.team);
   for(const [id,n] of Object.entries(before.inventory))assert.equal(upgraded.inventory[id],n,'Preserve inventory '+id);
   for(const [id,h] of Object.entries(before.heroes).filter(([,h])=>h.status==='owned')){assert.equal(upgraded.heroes[id].level,h.level,id);assert.equal(upgraded.heroes[id].exp,h.exp,id);assert.equal(upgraded.heroes[id].status,h.status,id);}
-  await view(page,'save');await command(page,'ui_export');await page.waitForFunction(()=>window.exported);
+  await view(page,'save');await noActivityLog(page,'Save page');await command(page,'ui_export');await page.waitForFunction(()=>window.exported);
   const exported=await page.evaluate(()=>window.exported);assert.ok(exported.name.endsWith('.json'));assert.ok(exported.text.includes('baisheng'));
   await page.locator('select[data-section-view="save"]').selectOption('files');await idle(page);
   await page.locator('#import-file').setInputFiles({name:'apk-roundtrip.json',mimeType:'application/json',buffer:Buffer.from(exported.text)});
   await command(page,'ui_import');await page.locator('#import-confirm[open]').waitFor();await command(page,'ui_confirmImport');await page.locator('#import-confirm').waitFor({state:'detached'});
   await view(page,'camp');await page.reload();await page.locator('.camp-dashboard').waitFor();await idle(page);
-  const restored=await read(page);assert.deepEqual(restored.team,upgraded.team);assert.deepEqual(restored.inventory,upgraded.inventory);
+  await noActivityLog(page,'Imported and restarted camp');const restored=await read(page);assert.deepEqual(restored.team,upgraded.team);assert.deepEqual(restored.inventory,upgraded.inventory);
   assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);assert.ok(external.every(u=>u.startsWith('https://save.baizeone.top/')),'No website fallback or remote game assets');
   await page.locator('.scene-banner img').evaluate(img=>img.decode());assert.ok(await page.locator('.scene-banner img').evaluate(img=>img.naturalWidth>0),'Bundled scene image must decode');await page.screenshot({path:path.join(out,stamp+'-home-'+width+'.png')});
   console.log('APK browser PASS',width,`actual bundled assets, offline ${previousRelease}-to-${release} upgrade, same IndexedDB save, native export, file import, restart`);await context.close();

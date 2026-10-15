@@ -10,11 +10,11 @@ function additions(previous,next){
 export class ActivityLog {
   constructor(){this.reset();}
   reset(){this.entries=[];this.previous={journal:[],battle:[],scheme:[]};this.sequence=0;this.feedback='';}
-  observe(state,{available=true,feedback=''}={}){
+  observe(state,{available=true,feedback='',includeBattle=true}={}){
     if(!available)return this.entries;
     const sources={
       journal:state.journal.map(e=>({key:JSON.stringify([e.at,e.text]),text:e.text,at:e.at,kind:'journey'})),
-      battle:(state.battle?.log||[]).map(text=>({key:text,text,at:state.clock,kind:'battle'})),
+      battle:(includeBattle?(state.battle?.log||[]):[]).map(text=>({key:text,text,at:state.clock,kind:'battle'})),
       scheme:(state.scheme?.log||[]).map(text=>({key:text,text,at:state.clock,kind:'scheme'}))
     };
     for(const [source,next] of Object.entries(sources)){

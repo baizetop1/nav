@@ -1,5 +1,6 @@
 // Shared by game banners, full-size dialogs and the review gallery. No save state.
 export const SCENE_LIBRARY={
+  "jizhou_engraving": {"src":"./art/scenes/jizhou-engraving-v1.webp","title":"济州刻坊","alt":"刻坊桌上的石印、刻刀与碑样，院里匠人正在雕刻","width":2172,"height":724},
   "gate": {
     "src": "./art/scenes/camp-gate-v1.webp",
     "title": "白泽寨门",

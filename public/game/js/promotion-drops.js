@@ -1,10 +1,12 @@
-import {PROMOTION_CORES,PROMOTION_ITEMS,PROMOTION_CORE_RATES,PROMOTION_CORE_DOUBLE_RATE} from './promotion-data.js?v=0.84.0';
-import {random,journal} from './utils.js?v=0.84.0';
+import {companionByDungeon} from './region-companions-data.js?v=0.88.0';
+import {PROMOTION_CORES,PROMOTION_ITEMS,PROMOTION_CORE_RATES,PROMOTION_CORE_DOUBLE_RATE} from './promotion-data.js?v=0.88.0';
+import {random,journal} from './utils.js?v=0.88.0';
 const LIMIT=10000000;
 // A tracked recipe directs the ingredient roll; no hero is forced into the fighting team.
 export function promotionDropPool(s,d,context){
  if(!context||!['special','dungeon'].includes(context.type))return [];
  if(context.type==='special'&&!Object.hasOwn(PROMOTION_CORE_RATES,context.tier))return [];
+ const chapter=context.type==='special'&&companionByDungeon(context.id);if(chapter)return context.tier===1&&PROMOTION_CORES[chapter.hero]?[PROMOTION_CORES[chapter.hero]]:[];
  const pool=d.heroes.map(h=>PROMOTION_CORES[h.id]).filter(Boolean).filter(r=>context.type==='special'?r.special.includes(context.id):r.dungeon===context.id);
  const goal=s.development?.goal,focused=goal?.kind==='promotion'?PROMOTION_CORES[goal.id]:goal?.kind==='stock'?PROMOTION_ITEMS[goal.id]:null;
  const directed=focused&&pool.find(r=>r.hero===focused.hero);if(directed)return [directed];

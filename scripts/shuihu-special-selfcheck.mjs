@@ -1,10 +1,10 @@
 import {prepareSortie} from '../public/game/js/sortie.js';
 import assert from 'node:assert/strict';
-import {d,fixture as baseFixture,act} from './shuihu-campaign-fixtures.mjs';
+import {d,fixture as baseFixture,act,prepareCombatParty} from './shuihu-campaign-fixtures.mjs';
 import {advanceBattle,useBattleItem} from '../public/game/js/battle.js';
 import {gameSnapshot,exportSave,importSave} from '../public/game/js/portable.js';
 import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialDropTable,validSpecialContext,specialPlan,enterSpecial,finishSpecial} from '../public/game/js/special-dungeons.js';
-const ids=Object.keys(SPECIAL_DUNGEONS).filter(id=>!SPECIAL_DUNGEONS[id].parent),copy=structuredClone,MAX=10000000;
+const ids=Object.keys(SPECIAL_DUNGEONS).filter(id=>!SPECIAL_DUNGEONS[id].parent&&!SPECIAL_DUNGEONS[id].companion),battleIds=Object.keys(SPECIAL_DUNGEONS).filter(id=>!SPECIAL_DUNGEONS[id].companion),copy=structuredClone,MAX=10000000;
 const reload=s=>importSave(exportSave(s,{id:1,name:'寻宝副本回归'},d),d).state;
 function fixture(seed=301,level=40){const s=baseFixture(seed,level);s.player.stamina=0;s.camp.food=0;s.camp.troops=200;s.camp.mode='army';s.battleSkillMode='auto';return gameSnapshot(s,d);}
 function reject(s,type,a={},pattern){const before=copy(s);assert.throws(()=>act(s,type,a),pattern);assert.deepEqual(s,before);}
@@ -34,9 +34,10 @@ const needed=specialPlan(fresh,'mine',1).requiredSlots;assert.equal(needed,5);
 const full=copy(fresh);while(full.equipment.length<201-needed)full.equipment.push({uid:'eq_'+full.nextEquipment++,item:'oak_staff',plus:0,hero:null});reject(full,'specialStart',{id:'mine',tier:1},/装备空位/);full.equipment.pop();assert.equal(specialPlan(full,'mine',1).reason,'');
 const packed=copy(fresh);packed.inventory.scrap_iron=MAX;reject(packed,'specialStart',{id:'mine',tier:1},/材料接近存储上限/);assert.deepEqual(reload(packed),packed);
 
-// All twelve combinations are real battles. A zero-stamina, zero-food army save still sends zero troops.
+// All twelve original challenge sites are exercised at all three tiers; character chapters have their own suite. A zero-stamina, zero-food army save still sends zero troops.
 let all=fresh;
-for(const id of ids)for(const tier of [1,2,3]){
+for(const id of battleIds)for(const tier of [1,2,3]){
+ if(SPECIAL_DUNGEONS[id].parent)prepareCombatParty(all,d,all.team,{level:40,quality:2,skills:3,gear:true});
  const before=copy(all);all=act(all,'specialStart',{id,tier});untouched(before,all);assert.equal(all.battle.expedition.troops,0);assert.ok(all.battle.team.every(u=>u.corps.troops===0));assert.equal(all.battle.depth.terrain,SPECIAL_DUNGEONS[id].terrain);
  assert.deepEqual(reload(all),all);const ending=win(all),completed=act(ending,'finishBattle');assert.deepEqual(act(reload(ending),'finishBattle'),completed);untouched(before,completed);assert.equal(completed.specialDungeons.clears[id+'_'+tier],1);assert.equal(completed.battle,null);assert.equal(completed.lastBattle.troops,0);assert.equal(completed.specialDungeons.last.outcome,'victory');
  for(const r of completed.specialDungeons.last.drops){assert.equal(r.stored,r.count);if(r.kind==='item')assert.equal((completed.inventory[r.id]||0)-(before.inventory[r.id]||0),r.count);else assert.equal(completed.equipment.filter(e=>e.item===r.id).length-before.equipment.filter(e=>e.item===r.id).length,r.count);}
@@ -73,4 +74,4 @@ let overflow=fixture(13);enterSpecial(overflow,d,{id:'mine',tier:1});overflow.rn
 let fullEquipmentProof=false;
 for(let seed=1;seed<=100&&!fullEquipmentProof;seed++){const full=fixture(seed);enterSpecial(full,d,{id:'mine',tier:1});while(full.equipment.length<200)full.equipment.push({uid:'eq_'+full.nextEquipment++,item:'oak_staff',plus:0,hero:null});const original=copy(full.equipment);full.battle.outcome='victory';const result=finishSpecial(full,d,full.battle);assert.deepEqual(full.equipment,original);assert.equal(full.battle,null);fullEquipmentProof=result.drops.some(r=>r.kind==='equipment'&&r.stored===0);}
 assert.ok(fullEquipmentProof);
-console.log('Special dungeon checks passed: 6 dungeons / 18 real fights / '+pool.size+' unique drops / '+samples*ids.length+' deterministic loot trials.',statistics);
+console.log('Special dungeon checks passed: 12 original dungeons / 36 real fights / '+pool.size+' unique drops / '+samples*ids.length+' deterministic loot trials.',statistics);

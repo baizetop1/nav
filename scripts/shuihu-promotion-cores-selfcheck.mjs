@@ -1,3 +1,4 @@
+import {companionSpec} from '../public/game/js/region-companions-data.js';
 import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {prepareData,collections} from '../public/game/js/data.js';
@@ -31,7 +32,7 @@ for(const h of d.heroes){
  const other=d.heroes.find(x=>x.id!==h.id);s.inventory[PROMOTION_CORES[other.id].item]=999;assert.ok(promotionQuote(s,h.id).reason,'Another hero core cannot pay this recipe');
  for(const [id,n] of Object.entries(immortal.cost.items))s.inventory[id]=n;const beforeImmortalSilver=s.player.silver;promoteHero(s,d,h.id);assert.equal(s.player.silver,beforeImmortalSilver-immortal.cost.silver);assert.equal(s.heroes[h.id].quality,2);assert.equal(promotionQuote(s,h.id).cost,undefined);
  const saved=gameSnapshot(s,d);assert.equal(saved.heroes[h.id].quality,2);assert.equal(importSave(exportSave(s,{id:1,name:'升品检查'},d),d).state.heroes[h.id].quality,2);
- const rows=promotionCoreSourceRows(fixture(h.id),d,r.item);assert.equal(rows.length,7);assert.ok(rows.every(row=>row.command&&row.detail.includes('不要求本人上阵')));assert.equal(promotionCoreUses(d,r.item)[0].command.hero,h.id);
+ const rows=promotionCoreSourceRows(fixture(h.id),d,r.item);assert.equal(rows.length,7+(companionSpec(h.id)?1:0));assert.ok(rows.every(row=>row.command&&row.detail.includes('不要求本人上阵')));assert.equal(promotionCoreUses(d,r.item)[0].command.hero,h.id);
 }
 assert.equal(homes.size,12);assert.deepEqual(PROMOTION_CORE_COSTS,{1:3,2:8});
 const s=fixture(),core=PROMOTION_CORES.ruanxiaoqi,b={outcome:'victory',guest:false,context:{type:'special',id:core.special[0],tier:1}};

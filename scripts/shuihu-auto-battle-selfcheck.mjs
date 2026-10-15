@@ -4,7 +4,7 @@ import {prepareData,collections} from '../public/game/js/data.js';
 import {newGame,dispatch} from '../public/game/js/core.js';
 import {startBattle,advanceBattle,attackInterval,castSkill,skillReason,addStatus,useBattleItem,battleItemQuote,retreatBattle,BATTLE_LIMIT_MS} from '../public/game/js/battle.js';
 import {parseSave,validateSave,SaveStore,SAVE_KEY,BACKUP_KEY} from '../public/game/js/save.js';
-import {render} from '../public/game/js/ui.js';
+import {render,battleStage} from '../public/game/js/ui.js';
 const root=new URL('../public/game/data/',import.meta.url);
 export const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',root),'utf8'))])));
 export function battleFixture(){
@@ -53,7 +53,9 @@ assert.equal(upgraded.battle.team[0].statuses[0].expiresAt,4000);for(const key o
 const memory=new Map([[SAVE_KEY,legacyRaw]]),store=new SaveStore({getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v)},data);store.write(store.load().state);assert.equal(memory.get(BACKUP_KEY),legacyRaw);
 for(const mutate of [s=>s.battle.mode='fake',s=>s.battle.elapsed=-1,s=>s.battle.team[0].nextAttackAt=-1,s=>s.battle.itemReadyAt=Infinity,s=>s.battle.team[0].skillReadyAt=-1,s=>s.battle.team[0].statuses[0].expiresAt=-1,s=>s.battle.team[0].statuses[0].nextTickAt=-1,s=>s.battle.team[1].id=s.battle.team[0].id]){const bad=structuredClone(upgraded);mutate(bad);assert.throws(()=>parseSave(JSON.stringify(bad),data));}
 for(const saved of [manual,automatic,ailments,upgraded,victory,retreat]){validateSave(saved,data);assert.deepEqual(parseSave(JSON.stringify(saved),data),saved);}
-const ui=render({state:battleFixture(),data,view:'map'});for(const text of ['强攻','防守','回合','type&quot;:&quot;turn'])assert.ok(!ui.includes(text));for(const text of ['正在自动交战','阵中用药','乡路照应','景阳冈','battleSkill','battleItem','ui_battlePause'])assert.ok(ui.includes(text));
-assert.ok(render({state:battleFixture(),data,view:'map',battlePaused:true}).includes('交战已暂停'));
+const ui=render({state:battleFixture(),data,view:'map'});for(const text of ['强攻','防守','回合','type&quot;:&quot;turn'])assert.ok(!ui.includes(text));assert.ok(ui.includes('ui_battleOpen'),'main page reopens the dedicated battlefield');assert.ok(!ui.includes('class="battle-grid"'),'no duplicate embedded battle UI');
+const stage=battleStage({state:battleFixture(),data});for(const text of ['正在自动交战','乡路照应','battleSkill','ui_battlePause','交锋经过','敌方站位','我方站位','1×','2×','3×'])assert.ok(stage.includes(text),text);
+assert.ok(battleStage({state:battleFixture(),data,battleTab:'items'}).includes('battleItem'));
+assert.ok(battleStage({state:battleFixture(),data,battlePaused:true}).includes('交战已暂停'));
 console.log('Shuihu auto battle: independent clocks, deterministic slices, no automatic skills/items, immediate manual effects, cooldowns, timed statuses, pause-safe clock, atomic results, legacy battle migration and UI passed.');
 export {legacyRaw};

@@ -1,19 +1,20 @@
-import {tacticsAfterHit,tacticsInterrupt,specialBossMove} from './tactics-combat.js?v=0.84.0';
-import {LATE_BOSSES} from './late-mainline-data.js?v=0.84.0';
-import {roleDamageFactor,roleInterrupt,roleAfterHit} from './hero-roles.js?v=0.84.0';
-import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.84.0';
-import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.84.0';
-import {talentFactor} from './talents.js?v=0.84.0';
-import { healingSupply } from './fieldcraft.js?v=0.84.0';
-import { isChapterBattle } from './volume-three-data.js?v=0.84.0';
-import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.84.0';
-import { strategyFactor, strategyFollowup } from './strategy.js?v=0.84.0';
-import { orderDamageFactor } from './commands.js?v=0.84.0';
-import { NAVAL, waterBattle } from './doctrines.js?v=0.84.0';
-import { unitArm } from './martial.js?v=0.84.0';
-import { martialFactor } from './martial.js?v=0.84.0';
-import { bounded, pick, random } from './utils.js?v=0.84.0';
-import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.84.0';
+import {skillLogApi} from './battle-log-format.js?v=0.88.0';
+import {tacticsAfterHit,tacticsInterrupt,specialBossMove} from './tactics-combat.js?v=0.88.0';
+import {LATE_BOSSES} from './late-mainline-data.js?v=0.88.0';
+import {roleDamageFactor,roleInterrupt,roleAfterHit} from './hero-roles.js?v=0.88.0';
+import {journeyAbsorb,journeyAfterHit,journeyDamageFactor,journeyInterrupt,advanceJourneyBoss} from './journey-combat.js?v=0.88.0';
+import {personalFactor,personalHealingFactor} from './expansion-combat.js?v=0.88.0';
+import {talentFactor} from './talents.js?v=0.88.0';
+import { healingSupply } from './fieldcraft.js?v=0.88.0';
+import { isChapterBattle } from './volume-three-data.js?v=0.88.0';
+import { contribution, reportDamage, reportHealing } from './debrief.js?v=0.88.0';
+import { strategyFactor, strategyFollowup } from './strategy.js?v=0.88.0';
+import { orderDamageFactor } from './commands.js?v=0.88.0';
+import { NAVAL, waterBattle } from './doctrines.js?v=0.88.0';
+import { unitArm } from './martial.js?v=0.88.0';
+import { martialFactor } from './martial.js?v=0.88.0';
+import { bounded, pick, random } from './utils.js?v=0.88.0';
+import { unlockReason, skillLevel, battleSkill } from './growth.js?v=0.88.0';
 
 const alive=u=>u.hp>0;
 export const negativeStatus=id=>['bleeding','poison','armor_break','stun','weaken'].includes(id);
@@ -57,7 +58,7 @@ function strike(state,u,target,effect,name,api,{pierce=false}={}){
   const raw=api.damage(attack,defense,effect.rate,.9+random(state)*.2,critical);
   const loss=journeyAbsorb(b,target,Math.max(1,Math.round(raw*roleDamageFactor(b,u,target,!name)*journeyDamageFactor(b,u,target,!name)*personalFactor(b,u,!name)*talentFactor(b,u,target,{normal:!name,strategy:effect.kind==='strategy'})*strategyFactor(b,u,target,!name)*orderDamageFactor(b)*martialFactor(b,u,target,api.data,{normal:!name,strategy:effect.kind==='strategy'})*(1-(has(target,'guard')?.value||0)))));
   const guarded=!!has(target,'guard');reportDamage(b,u,target,loss);target.hp=Math.max(0,target.hp-loss);target.rage=bounded(target.rage+15,0,100);
-  api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【谋攻】':'进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
+  api.log(b,`${u.name}${name?'施展【'+name+'】':effect.kind==='strategy'?'【普攻】【谋攻】':'【普攻】进击'}，${critical?'【暴击】':''}${target.name}损失 ${loss} 点气血${has(target,'guard')?'（护阵减伤）':''}。`);
   if(effect.status&&alive(target)){
     status(b,target,effect.status.id,effect.status.value,effect.status.turns*2000,api);
     if(effect.status.id==='armor_break'&&b.tactics&&b.context.type==='special'&&b.context.id==='mountainhold'&&b.context.route!=='highpath'&&target===b.enemy[0]&&target.boss?.pendingAt&&has(target,'guard')){target.statuses=target.statuses.filter(s=>s.id!=='guard');api.log(b,'【破开盾沿】'+u.name+'击开头目的护阵。');}
@@ -78,6 +79,7 @@ function bondTrigger(state,u,target,data,api){
   const skill=data.by.skills[id],level=u.training.levels[id],boost=1+.08*(level-1),party=friends(b,u),enemies=foes(b,u);
   if(!enemies.length)return;target=alive(target)?target:enemies[0];
   api.log(b,`【人骑羁绊】${u.name} · ${skill.name}（${level}级），第三次进击触发。`);
+  api=skillLogApi(api,u.name,skill.name);
   const give=n=>rage(b,party,Math.round(n*boost),skill.name,api);
   switch(u.id){
     case 'songjiang':give(3);break;
@@ -109,6 +111,7 @@ export function growthSkillReason(b,u,skill){
 export function growthHit(state,u,rawSkill,data,api){
   const b=state.battle,skill=battleSkill(u,rawSkill),strategist=u.side==='team'&&data.by.heroes[u.id]?.type==='strategist',effect=skill?.effect||(strategist?{kind:'strategy',rate:.6}:{kind:'damage',rate:1}),profile=skill?.training?.profile;
   const party=friends(b,u),enemies=foes(b,u);if(!enemies.length||!party.length)return;
+  api=skillLogApi(api,u.name,skill?.name);
   if(skill)u.rage-=skill.cost;else u.rage=bounded(u.rage+10,0,100);
   const boost=1+.08*((u.training?.levels[skill?.id]||1)-1),target=targetOf(state,u,enemies);
   if(profile==='protect'){
@@ -173,7 +176,7 @@ export function advanceBosses(state,api){
       if(has(u,'stun')){api.log(b,`${u.name}【蓄势中断】眩晕令本次绝招落空。`);continue;}
       const party=friends(b,u),enemies=foes(b,u);if(!enemies.length)continue;
       if(boss.kind==='tiger')for(const target of enemies)strike(state,u,target,{kind:'damage',rate:1.25},'虎啸扑阵',api);
-      if(boss.kind==='chief')for(const ally of party)status(b,ally,'guard',.3,5000,api);
+      if(boss.kind==='chief')for(const ally of party)status(b,ally,'guard',.3,5000,skillLogApi(api,u.name,'结阵护众'));
       if(boss.kind==='raider'){const target=enemies[enemies.length-1];strike(state,u,target,{kind:'damage',rate:1.8},'绕后截粮',api);status(b,target,'weaken',.2,4000,api);}
     }else if(!boss.pendingAt&&boss.readyAt===b.elapsed){
       boss.pendingAt=b.elapsed+(b.context.type==='lesson'?6000:2000);

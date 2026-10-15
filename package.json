@@ -295,7 +295,17 @@
     "test:shuihu-combat-casualties": "node scripts/shuihu-combat-casualties-selfcheck.mjs",
     "test:shuihu-aptitude-gameplay": "node scripts/shuihu-aptitude-gameplay-selfcheck.mjs",
     "check:shuihu-aptitude": "node scripts/shuihu-aptitude-browser.mjs",
-    "test:shuihu-v084-cloud": "node scripts/shuihu-v084-cloud-selfcheck.mjs"
+    "test:shuihu-v084-cloud": "node scripts/shuihu-v084-cloud-selfcheck.mjs",
+    "test:shuihu-region-companions": "node scripts/shuihu-region-companions-selfcheck.mjs",
+    "test:shuihu-region-companions-cloud": "node scripts/shuihu-region-companions-cloud-selfcheck.mjs",
+    "test:shuihu-new-people-life": "node scripts/shuihu-new-people-life-selfcheck.mjs",
+    "test:shuihu-region-companions-integration": "node scripts/shuihu-region-companions-integration-selfcheck.mjs",
+    "check:shuihu-region-companions": "node scripts/shuihu-region-companions-browser.mjs",
+    "test:shuihu-skill-log": "node scripts/shuihu-skill-log-selfcheck.mjs",
+    "test:shuihu-battle-playback": "node scripts/shuihu-battle-playback-selfcheck.mjs",
+    "check:shuihu-battle-stage": "node scripts/shuihu-battle-stage-browser.mjs",
+    "check:shuihu-readable-log": "node scripts/shuihu-readable-log-browser.mjs",
+    "check:shuihu-no-global-log": "node scripts/shuihu-no-global-log-browser.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

@@ -1,4 +1,4 @@
-import { hasOwn } from './utils.js?v=0.84.0';
+import { hasOwn } from './utils.js?v=0.88.0';
 // Local, monochrome SVGs: no icon font, image request or runtime dependency.
 const shapes=Object.freeze({
   trials:'<path d="M7 3h10v5a5 5 0 0 1-10 0V3ZM7 5H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4M12 13v6m-4 2h8"/>',
@@ -7,6 +7,7 @@ const shapes=Object.freeze({
   bag:'<path d="M8 6V4h8v2M7 6h10a3 3 0 0 1 3 3v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a3 3 0 0 1 3-3Z"/><path d="M8 6v4h8V6M8 15h8v6"/>',
   recruit:'<circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M19 7v6M16 10h6"/>',
   quests:'<path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="m8 13 3 3 5-6"/>',
+  companions:'<path d="M12 5C9 3 6 3 3 4v16c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1v16Z"/>',
   chronicle:'<path d="M12 5C9 3 6 3 3 4v16c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1v16Z"/>',
   save:'<path d="M4 3h13l4 4v14H3V4a1 1 0 0 1 1-1Z"/><path d="M7 3v6h9V3M7 21v-8h10v8M13 5v2"/>',
   forge:'<path d="m14 3 7 7-3 3-3-3L6 20a2 2 0 0 1-3-3l10-9-3-3 4-2Z"/>',
@@ -36,7 +37,7 @@ export function icon(name){
   if(typeof name!=='string'||!hasOwn(shapes,name))return '';
   return `<svg class="game-icon" data-icon="${name}" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${shapes[name]}</svg>`;
 }
-const actions=Object.freeze({skillUpgrade:'scheme',skillBook:'chronicle',martialDrill:'battle',mountAdopt:'heroes',mountFeed:'gift',mountRank:'medal',mountRide:'move',ui_start:'map',ui_battlePause:'clock',battleSkill:'scheme',battleItem:'medicine',battleRetreat:'back',move:'move',search:'search',wait:'clock',meet:'event',guide:'heroes',recruit:'recruit',craftOrder:'ticket',quest:'quests',dailyBonus:'gift',exchange:'craft',buy:'coins',buyEquip:'coins',craftEquip:'forge',strengthen:'forge',ui_equip:'shield',equip:'shield',ui_dismantle:'trash',ui_team:'heroes',team:'heroes',ui_export:'download',ui_import:'upload',ui_backup:'restore',ui_reload:'restore',ui_confirmImport:'check',ui_cancelImport:'close',ui_reset:'restore',story:'chronicle',startScheme:'scheme',dungeon:'battle',finishBattle:'check',finishScheme:'check',eventChoice:'check',use:'medicine'});
+const actions=Object.freeze({skillUpgrade:'scheme',skillBook:'chronicle',martialDrill:'battle',mountAdopt:'heroes',mountFeed:'gift',mountRank:'medal',mountRide:'move',companionOpen:'map',companionTask:'event',companionTravel:'move',companionBattle:'battle',ui_start:'map',ui_battlePause:'clock',battleSkill:'scheme',battleItem:'medicine',battleRetreat:'back',move:'move',search:'search',wait:'clock',meet:'event',guide:'heroes',recruit:'recruit',craftOrder:'ticket',quest:'quests',dailyBonus:'gift',exchange:'craft',buy:'coins',buyEquip:'coins',craftEquip:'forge',strengthen:'forge',ui_equip:'shield',equip:'shield',ui_dismantle:'trash',ui_team:'heroes',team:'heroes',ui_export:'download',ui_import:'upload',ui_backup:'restore',ui_reload:'restore',ui_confirmImport:'check',ui_cancelImport:'close',ui_reset:'restore',story:'chronicle',startScheme:'scheme',dungeon:'battle',finishBattle:'check',finishScheme:'check',eventChoice:'check',use:'medicine'});
 export function actionIcon(command){
   if(command.type==='turn'){const turns={attack:'battle',guard:'shield',scheme:'scheme',retreat:'back',item:'medicine'};return hasOwn(turns,command.id)?turns[command.id]:'';}
   if(command.type==='scheme')return command.id==='retreat'?'back':'scheme';

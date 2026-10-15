@@ -5,7 +5,7 @@ import {newGame,dispatch} from '../public/game/js/core.js';
 import {startBattle,advanceBattle,addStatus,castSkill,setBattleSkillMode,battleSkillMode} from '../public/game/js/battle.js';
 import {parseSave} from '../public/game/js/save.js';
 import {gameSnapshot,exportSave,importSave} from '../public/game/js/portable.js';
-import {render} from '../public/game/js/ui.js';
+import {render,battleStage} from '../public/game/js/ui.js';
 const root=new URL('../public/game/data/',import.meta.url);
 const data=prepareData(Object.fromEntries(['config',...collections].map(n=>[n,JSON.parse(readFileSync(new URL(n+'.json',root),'utf8'))])));
 function fixture(){
@@ -49,6 +49,7 @@ for(const s of [automatic,stunned,poisoned,dead,poor,override,toggled,won,settle
   const copy=importSave(exportSave(s,{id:1,name:'技能模式测试'},data),data).state;assert.equal(copy.battleSkillMode,'auto');assert.deepEqual(copy,s);
 }
 const offline=dispatch(data,automatic,{type:'refresh'},automatic.clock+86400000);assert.deepEqual(offline.battle,automatic.battle,'Offline time never casts skills');
-const ui=render({state:automatic,data,view:'map',battlePaused:true});for(const t of ['手动技能','自动技能','aria-pressed="true"','药品始终手动','本档记住选择','交战已暂停'])assert.ok(ui.includes(t));
+const ui=render({state:automatic,data,view:'map',battlePaused:true});assert.ok(ui.includes('ui_battleOpen'));assert.ok(!ui.includes('class="skill-mode"'),'main page does not duplicate stage settings');
+const stage=battleStage({state:automatic,data,battlePaused:true});for(const t of ['自动施招','aria-pressed="true"','交战已暂停','battleSkillMode'])assert.ok(stage.includes(t),t);assert.ok(battleStage({state:manual,data,battlePaused:true}).includes('手动施招'));assert.ok(battleStage({state:automatic,data,battleTab:'items'}).includes('不会自动用药'));
 assert.equal(data.config.version,2);
 console.log('Shuihu skill modes: manual default/legacy, deterministic automation, cooldown/stun/rage/target gates, healing, manual override, mode switch, victory, no automatic medicines, save/export parity and paused UI passed.');

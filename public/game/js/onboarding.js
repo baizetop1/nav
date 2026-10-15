@@ -1,8 +1,8 @@
-import {firstSessionGoal,firstBattleHint} from './first-session.js?v=0.84.0';
-import {explorationGoalQuote,explorationResume} from './exploration-goals.js?v=0.84.0';
-import {battleSkillMode} from './battle.js?v=0.84.0';
-import {storyObjective} from './story-guide.js?v=0.84.0';
-import {LESSONS} from './lessons-data.js?v=0.84.0';
+import {firstSessionGoal,firstBattleHint} from './first-session.js?v=0.88.0';
+import {explorationGoalQuote,explorationResume} from './exploration-goals.js?v=0.88.0';
+import {battleSkillMode} from './battle.js?v=0.88.0';
+import {storyObjective} from './story-guide.js?v=0.88.0';
+import {LESSONS} from './lessons-data.js?v=0.88.0';
 
 // Guidance is derived from real progress. Only the display preference is local.
 export const guideKey=(s,slot)=>'baize_shuihu_guide:'+slot+':'+s.startedAt;
@@ -64,11 +64,11 @@ export function guidePanel(g,enabled,esc){
  return '<aside class="onboarding-guide'+(g.action?' guide-prompt':'')+'" aria-label="操作指引" data-guide-step="'+esc(g.id)+'"><div><strong>'+esc(g.title)+'</strong><button type="button" data-guide-toggle aria-label="收起操作指引">收起</button></div><p id="operation-guide-text">'+esc(g.text)+'</p><nav>'+(g.action?'<button type="button" data-command="'+esc(JSON.stringify(g.action.command))+'">'+esc(g.action.label)+'</button>':g.targets.length?'<button type="button" data-guide-locate>定位按钮</button>':'')+(g.action?'':'<button type="button" data-command="'+esc(JSON.stringify({type:'ui_storyResume'}))+'">'+(g.id==='home'?'查看主线':'接回主线')+'</button>')+'</nav></aside>';
 }
 export function highlightGuidance(root,g){
- for(const el of root.querySelectorAll('[data-guide-target]')){el.removeAttribute('data-guide-target');if(el.getAttribute('aria-describedby')==='operation-guide-text')el.removeAttribute('aria-describedby');}
+ for(const el of root.querySelectorAll('[data-guide-target]')){el.removeAttribute('data-guide-target');if(['operation-guide-text','battle-stage-guide-text','battle-stage-title'].includes(el.getAttribute('aria-describedby')))el.removeAttribute('aria-describedby');}
  if(!g)return [];
- const buttons=[...root.querySelectorAll('#main button[data-command]')].filter(b=>!b.closest('.onboarding-guide')&&!b.disabled);
+ const buttons=[...root.querySelectorAll('#main button[data-command],#battle-stage-dialog button[data-command]')].filter(b=>!b.closest('.onboarding-guide')&&!b.disabled);
  for(const match of g.targets){const selected=buttons.filter(b=>{try{const a=JSON.parse(b.dataset.command);return Object.entries(match).every(([k,v])=>a[k]===v);}catch{return false;}}).filter(b=>{for(let el=b;el&&el.id!=='main';el=el.parentElement)if(el.hidden&&!el.parentElement?.classList.contains('screen-deck'))return false;return true;});
-  if(selected.length){for(const b of selected){b.dataset.guideTarget='true';b.setAttribute('aria-describedby','operation-guide-text');}return selected;}
+  if(selected.length){for(const b of selected){b.dataset.guideTarget='true';b.setAttribute('aria-describedby',b.closest('#battle-stage-dialog')?(root.querySelector('#battle-stage-guide-text')?'battle-stage-guide-text':'battle-stage-title'):'operation-guide-text');}return selected;}
  }
  return [];
 }

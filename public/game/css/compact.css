@@ -35,8 +35,7 @@ input,select,textarea{font-size:16px} /* Prevent iOS input focus zoom. */
 @media(max-width:900px) and (min-height:501px),(max-width:599px){
   .shell.viewport-shell{padding-inline:max(6px,env(safe-area-inset-left));grid-template-rows:44px 24px minmax(0,1fr) 28px}
   .viewport-shell .brand strong{font-size:18px}.viewport-shell .seal{width:24px;height:28px}
-  .shell.viewport-shell .viewport-layout{grid-template-rows:48px minmax(0,1fr) 47px;gap:5px}
-  html[data-log-expanded=true] .shell.viewport-shell .viewport-layout{grid-template-rows:48px minmax(0,1fr) min(200px,30dvh)}
+  .shell.viewport-shell .viewport-layout{grid-template-rows:48px minmax(0,1fr);gap:5px}
   .viewport-shell .main{padding:8px 10px 14px}
   .viewport-shell .main p,.viewport-shell .main details{font-size:13px}
   .viewport-shell .main .note,.viewport-shell .main .meta,.viewport-shell .main .statline{font-size:12px}

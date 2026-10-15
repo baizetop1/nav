@@ -16,6 +16,7 @@ for(const outcome of ['victory','defeat','retreat']){
  const s=terminal(outcome),original=structuredClone(s),html=battleOutcomeDialog(s.battle,esc);
  assert.equal((html.match(/data-command=/g)||[]).length,2);
  assert.ok(html.includes(outcome==='victory'?'战斗胜利':outcome==='defeat'?'战斗失败':'已撤出战斗'));
+ assert.ok(!html.includes('用时'),'Outcome presentation has no elapsed clock');
  assert.deepEqual(s,original,'presentation must not settle or roll rewards');
  const next=act(s,'finishBattle');assert.equal(next.battle,null);assert.throws(()=>act(next,'finishBattle'));
 }
@@ -26,4 +27,4 @@ assert.match(review,/data-dialog-panel="rewards" hidden/);assert.match(review,/d
 assert.ok(rewardDialog([],esc,{initialTab:'review'}).includes('本次没有新增物品'));
 console.log('Battle outcome PASS: victory/defeat/retreat, read-only presentation, one settlement, review default/fallback.');
 
-const settled=settledOutcomeDialog(terminal().battle,esc);assert.match(settled,/无须领取/);assert.ok(!settled.includes('data-command='));assert.match(settledOutcomeDialog(terminal().battle,esc,false),/尚未写入本机/);
+const settled=settledOutcomeDialog(terminal().battle,esc);assert.match(settled,/无须领取/);assert.ok(!settled.includes('用时'));assert.ok(!settled.includes('data-command='));assert.match(settledOutcomeDialog(terminal().battle,esc,false),/尚未写入本机/);

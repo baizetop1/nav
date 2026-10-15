@@ -11,14 +11,22 @@ import {SPECIAL_DUNGEONS,specialDropTable} from '../public/game/js/special-dunge
 const copy=structuredClone;
 const base=()=>{const s=fixture(192,40);s.camp.buildings.hall=3;return s;};
 const empty=()=>({version:1,clears:{},last:null});
+// These twelve conventional sites keep their original three-tier entry contract.
+// Independent character chapters require their own routes and actual story preparation,
+// verified in shuihu-region-companions-cloud-selfcheck.mjs.
+const conventionalIds=Object.keys(SPECIAL_DUNGEONS).filter(id=>!SPECIAL_DUNGEONS[id].companion);
+assert.equal(conventionalIds.length,12);assert.equal(conventionalIds.filter(id=>!SPECIAL_DUNGEONS[id].parent).length,6);
+assert.ok(conventionalIds.every(id=>(SPECIAL_DUNGEONS[id].maxTier||3)===3));
 const makeStart=(id='mine',tier=1)=>{
  const s=base();s.specialDungeons=empty();
+ const model=SPECIAL_DUNGEONS[id];assert.ok(!model.companion,'this helper is only for conventional three-tier sites');
+ if(model.parent){for(let n=1;n<=tier;n++)s.specialDungeons.clears[model.parent+'_'+n]=model.entryClears||5;s.specialDungeons.last={id:model.parent,tier,outcome:'victory',at:s.clock,drops:[]};}
  if(tier>1){for(let n=1;n<tier;n++)s.specialDungeons.clears[id+'_'+n]=1;s.specialDungeons.last={id,tier:tier-1,outcome:'victory',at:s.clock,drops:[]};}
  return act(s,'specialStart',{id,tier});
 };
 const invalid=(source,change)=>{const s=copy(source);change(s);assert.throws(()=>validateSave(s,d),/存档校验失败/);return s;};
 const legacy=base();assert.equal(gameSnapshot(legacy,d).specialDungeons,undefined);
-const starts=[];for(const id of Object.keys(SPECIAL_DUNGEONS).filter(id=>!SPECIAL_DUNGEONS[id].parent))for(const tier of [1,2,3]){
+const starts=[];for(const id of conventionalIds)for(const tier of [1,2,3]){
  const s=makeStart(id,tier);assert.equal(s.battle.context.type,'special');assert.equal(s.battle.expedition.troops,0);assert.deepEqual(gameSnapshot(s,d),s);
  assert.deepEqual(importSave(exportSave(s,{id:1,name:'特殊副本',cloud:null},d),d).state,s);starts.push(s);
 }
@@ -51,12 +59,14 @@ try{
  const failed=copy(settled);failed.specialDungeons.last={id:'mine',tier:1,outcome:'defeat',at:failed.clock,drops:[]};failed.lastBattle.outcome='defeat';await roundtrip(failed);
  const retreat=copy(failed);retreat.specialDungeons.last.outcome='retreat';retreat.lastBattle.outcome='retreat';await roundtrip(retreat);
  await roundtrip(settled);const again=act(settled,'specialStart',{id:'mine',tier:1});await roundtrip(again);
- for(const [i,s] of starts.slice(1).entries()){await openSlot(i+2);await roundtrip(s);}
- await openSlot(starts.length+1);await roundtrip(settled);await roundtrip(ordinary);
+ // Group each site's three prepared tier snapshots in one slot; all twelve sites
+ // fit within the twenty-slot public contract while tier clears remain monotonic.
+ for(const [i,id]of conventionalIds.entries()){await openSlot(i+2);for(const state of starts.filter(s=>s.battle.context.id===id))await roundtrip(state);}
+ await openSlot(conventionalIds.length+2);await roundtrip(settled);await roundtrip(ordinary);
  let writes=0;const older={...caps};delete older.specialDungeons;
  const client=new CloudClient('https://test.invalid',d,async(_,options)=>{if(options.method==='PUT')writes++;return Response.json(older);});
  const onlyBattle=copy(battle);delete onlyBattle.specialDungeons;const onlyReport=copy(settled);delete onlyReport.specialDungeons;
  for(const s of [battle,settled,onlyBattle,onlyReport])await assert.rejects(()=>client.upload(1,rev,s,'特殊副本'),/0.50.0/);
  await assert.doesNotReject(()=>client.cooperate(1,rev));assert.equal(writes,0);
- console.log('Special dungeon cloud PASS: 18 live battle/file/SQLite roundtrips, real victory settlement, strict contexts and drop-table validation, unchanged cloud data on rejected writes, monotonic clears, replaceable receipts, old-service preflight; no database migration.');
+ console.log('Special dungeon cloud PASS: 36 conventional live battle/file/SQLite roundtrips (all 12 sites x 3 tiers), real victory settlement, strict contexts and drop-table validation, unchanged cloud data on rejected writes, monotonic clears, replaceable receipts, old-service preflight; no database migration.');
 }finally{db.close();}
