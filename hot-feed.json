@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-15T19:09:22.155Z",
+  "generatedAt": "2026-10-15T22:20:04.774Z",
   "intelligence": {
-    "updatedAt": "2026-10-15T19:09:22.155Z",
+    "updatedAt": "2026-10-15T22:20:04.774Z",
     "items": [
       {
         "id": "cn-item-5af7698b9b45dc54",
@@ -26,13 +26,13 @@
         "signal": "已遭利用 · 整改期限 2026-10-18"
       },
       {
-        "id": "ai-openai-a60f4a701f887ae8",
+        "id": "ai-openai-32165ee6af8945a5",
         "category": "ai",
-        "title": "Teaching students to think and learn through questions",
-        "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
         "source": "OpenAI",
-        "publishedAt": "2026-10-15T13:00:00.000Z",
-        "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+        "publishedAt": "2026-10-15T19:00:00.000Z",
+        "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
         "badge": "OpenAI"
       },
       {
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-15T17:47:39.000Z",
         "badge": "HN",
-        "signal": "260 分 · 161 评论"
+        "signal": "514 分 · 297 评论"
       },
       {
         "id": "cn-it-8f081ff2d0e4b082",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-7pxr-59rr-hqj2",
+        "id": "github-advisory-ghsa-qx66-fv34-fjm8",
         "category": "security",
-        "title": "Microsoft.OpenApi.YamlReader vulnerable to denial of service via YAML alias expansion",
-        "url": "https://github.com/advisories/GHSA-7pxr-59rr-hqj2",
+        "title": "TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+        "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-14T20:11:29.000Z",
-        "summary": "### Impact A small YAML OpenAPI document containing nested anchors and aliases can cause uncontrolled resource consumption in Microsoft.OpenApi.YamlReader and Microsoft.OpenApi.Readers. The issue affects OpenAPI document parsing through th…",
-        "badge": "CVE-2026-72923",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-15T20:22:20.000Z",
+        "summary": "## Impact An unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and run the attacker's JavaScript ther…",
+        "badge": "CVE-2026-102989",
+        "signal": "CRITICAL · CVSS 9.3"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "广州地铁在站内打造“悠能量”运动空间：琶洲站设匹克球、乒乓球场地并规划拳击健身区，天河公园站新增匹克球、网球训练场，国庆假期两站累计接待超5500人次。",
         "badge": "热搜",
-        "signal": "7,809,784 热度"
+        "signal": "7,809,123 热度"
       },
       {
         "id": "cisa-kev-cve-2026-105134",
@@ -109,23 +109,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-hugging-face-39052ad94a8a76cc",
+        "id": "ai-hugging-face-d330643595776f9f",
         "category": "ai",
-        "title": "Apertus 1.5 Release Notes",
-        "url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+        "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-15T09:08:45.000Z",
+        "publishedAt": "2026-10-15T20:34:01.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50105647",
+        "id": "hn-50109715",
         "category": "dev",
-        "title": "Neural networks are clean",
-        "url": "https://already-clean.goodfire.com/",
+        "title": "What I Self-Host",
+        "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T16:04:01.000Z",
+        "publishedAt": "2026-10-15T20:23:25.000Z",
         "badge": "HN",
-        "signal": "235 分 · 71 评论"
+        "signal": "95 分 · 45 评论"
       },
       {
         "id": "cn-item-86466542189083dd",
@@ -138,24 +138,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-4j9v-h7pp-725h",
+        "id": "github-advisory-ghsa-2cvf-wqm6-wr9g",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-70035 - .NET and Visual Studio Remote Code Execution Vulnerability",
-        "url": "https://github.com/advisories/GHSA-4j9v-h7pp-725h",
+        "title": "Podman: The `podman run` command can be instructed to disable almost all sandboxing by image annotation",
+        "url": "https://github.com/advisories/GHSA-2cvf-wqm6-wr9g",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-13T20:53:46.000Z",
-        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.WindowsDesktop.App.Runtime (WPF). This advisory also provides guidance on what developers can do to update their a…",
-        "badge": "CVE-2026-70035",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-10-15T20:22:16.000Z",
+        "summary": "### Impact Podman v4.4.0 added a feature where container checkpoints (from the `podman container checkpoint` command) could be distributed via OCI registry, and pulled from that registry and run via the `podman run` command. This allowed e…",
+        "badge": "CVE-2026-94603",
+        "signal": "CRITICAL · CVSS 10.0"
       },
       {
-        "id": "ai-openai-57c3309db5bedcde",
+        "id": "ai-openai-a60f4a701f887ae8",
         "category": "ai",
-        "title": "Amp puts AI agents to work beyond code with OpenAI models",
-        "url": "https://openai.com/index/amp-beyond-coding",
+        "title": "Teaching students to think and learn through questions",
+        "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
         "source": "OpenAI",
-        "publishedAt": "2026-10-14T12:00:00.000Z",
-        "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
+        "publishedAt": "2026-10-15T13:00:00.000Z",
+        "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
         "badge": "OpenAI"
       },
       {
@@ -201,14 +201,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50105648",
+        "id": "hn-50105647",
         "category": "dev",
-        "title": "Krea 3 – An image model built for editing at scale",
-        "url": "https://www.krea.ai/krea-3",
+        "title": "Neural networks are clean",
+        "url": "https://already-clean.goodfire.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T16:04:05.000Z",
+        "publishedAt": "2026-10-15T16:04:01.000Z",
         "badge": "HN",
-        "signal": "149 分 · 63 评论"
+        "signal": "411 分 · 146 评论"
       },
       {
         "id": "cn-baidu-32fe786dce793b33",
@@ -218,26 +218,26 @@
         "source": "百度热搜",
         "summary": "10月14日，启东一对新人在老宅婚礼后静默对视的视频刷爆全网，获赞86万。10月11日，这对坚持异地恋2年多的新人在家乡举办婚礼。摄影师全程跟拍，在宴席散去后，抓拍到两人放下疲惫、静默对视并红了眼眶的瞬间。这种不摆拍的情绪引发无数网友共鸣与动容。",
         "badge": "热搜",
-        "signal": "7,712,975 热度"
+        "signal": "7,713,060 热度"
       },
       {
-        "id": "github-advisory-ghsa-mf4x-w4gh-4656",
+        "id": "github-advisory-ghsa-pq7j-f95f-qfcv",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-70186 - ASP.NET Core Denial of Service Vulnerability",
-        "url": "https://github.com/advisories/GHSA-mf4x-w4gh-4656",
+        "title": "Claude Code: Plugin Hash Pin Bypass Allows Bypass of Hash Pinning",
+        "url": "https://github.com/advisories/GHSA-pq7j-f95f-qfcv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-13T20:53:19.000Z",
-        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.AspNetCore.Server.Kestrel.Core. This advisory also provides guidance on what developers can do to update their app…",
-        "badge": "CVE-2026-70186",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-15T20:22:07.000Z",
+        "summary": "The plugin install flow in Claude Code and Claude Desktop checked out a marketplace's pinned commit SHA using `git checkout` without verifying that the resulting HEAD matched the pinned SHA. An attacker controlling a plugin's upstream repo…",
+        "badge": "CVE-2026-86063",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-ff0cf28c5d753057",
+        "id": "ai-hugging-face-39052ad94a8a76cc",
         "category": "ai",
-        "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
-        "url": "https://huggingface.co/blog/meta-muse-spark-open",
+        "title": "Apertus 1.5 Release Notes",
+        "url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-15T00:00:00.000Z",
+        "publishedAt": "2026-10-15T09:08:45.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -273,24 +273,24 @@
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-openai-004cd593adabcd24",
+        "id": "ai-openai-57c3309db5bedcde",
         "category": "ai",
-        "title": "SentinelOne cuts malware analysis from weeks to hours",
-        "url": "https://openai.com/index/sentinelone",
+        "title": "Amp puts AI agents to work beyond code with OpenAI models",
+        "url": "https://openai.com/index/amp-beyond-coding",
         "source": "OpenAI",
         "publishedAt": "2026-10-14T12:00:00.000Z",
-        "summary": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.",
+        "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50103338",
+        "id": "hn-50111112",
         "category": "dev",
-        "title": "Wayland desktop for Linux with skeuomorphic design",
-        "url": "https://github.com/fyzugx/DEsk",
+        "title": "Call Center Jobs Are Declining, but 14,000 Calls Show Humans Still Outperform AI",
+        "url": "https://boldagents.co/blog/call-center-jobs-declining-14000-calls-humans-outperform-ai",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T13:23:44.000Z",
+        "publishedAt": "2026-10-15T22:11:24.000Z",
         "badge": "HN",
-        "signal": "354 分 · 143 评论"
+        "signal": "17 分 · 5 评论"
       },
       {
         "id": "cn-it-3675bc81a9c80906",
@@ -303,15 +303,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-pfwj-2f93-rf42",
+        "id": "github-advisory-ghsa-x586-xvc8-g7q6",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-70007 - .NET and Visual Studio Remote Code Execution Vulnerability",
-        "url": "https://github.com/advisories/GHSA-pfwj-2f93-rf42",
+        "title": "Qwik: Crashing any Qwik Server via Resource thenable",
+        "url": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-13T20:52:52.000Z",
-        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.WindowsDesktop.App.Runtime (WPF). This advisory also provides guidance on what developers can do to update their a…",
-        "badge": "CVE-2026-70007",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-10-15T20:22:00.000Z",
+        "summary": "### Summary A Qwik server in the default configuration can be crashed with one unauthenticated HTTP request. During qwik-json body parsing, `ResourceSerializer.$fill$` does `Promise.resolve(resource._resolved)`. If `_resolved` is a plain o…",
+        "badge": "CVE-2026-84994",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-8b1ab1df41ac00d8",
@@ -331,7 +331,7 @@
         "publishedAt": "2026-10-15T13:52:12.000Z",
         "summary": "三个月前做了一个小破站 https://www.compresspic.top/ 当时做完就丢在一边了，这周用 gpt-6 astra 一句提示词优化 优化前： https://i.imgur.com/nJ4vIvo.jpeg 优化后： https://i.imgur.com/MN5TzvX.jpeg UI 质感上，有很大的飞跃 不过 gpt-6 astra 非常耗额度，干活还得用 gpt-6.1 computer use 还没体验，用的 plus 账号，卡 5 小时，顶不…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       },
       {
         "id": "cn-baidu-56cef41b4fb8baeb",
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "在国际环境不稳定，地缘政治冲突持续扰动全球经贸秩序的背景下，中国外贸何以实现“加速跑”？读懂这份成绩单的“含金量”，可以从动能、结构、质效三个维度进行观察。",
         "badge": "热搜",
-        "signal": "7,617,654 热度"
+        "signal": "7,618,584 热度"
       },
       {
         "id": "cisa-kev-cve-2026-0322",
@@ -355,23 +355,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-hugging-face-eb67409897ed2136",
+        "id": "ai-hugging-face-ff0cf28c5d753057",
         "category": "ai",
-        "title": "Welcome FLUX.3 Image Klein in Diffusers",
-        "url": "https://huggingface.co/blog/flux-3",
+        "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+        "url": "https://huggingface.co/blog/meta-muse-spark-open",
         "source": "Hugging Face",
         "publishedAt": "2026-10-15T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50103630",
+        "id": "hn-50108872",
         "category": "dev",
-        "title": "I Know Why the Mathematicians Weep",
-        "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
+        "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+        "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T13:44:32.000Z",
+        "publishedAt": "2026-10-15T19:21:38.000Z",
         "badge": "HN",
-        "signal": "271 分 · 426 评论"
+        "signal": "116 分 · 55 评论"
       },
       {
         "id": "cn-item-b20f4cc2638e8d55",
@@ -384,24 +384,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-c27m-942f-rcfh",
+        "id": "github-advisory-ghsa-p7v4-vr35-mj6f",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-87697 - .NET and Visual Studio Remote Code Execution Vulnerability",
-        "url": "https://github.com/advisories/GHSA-c27m-942f-rcfh",
+        "title": "containerd CRI plugin: Checkpoint restore bypasses destination security context",
+        "url": "https://github.com/advisories/GHSA-p7v4-vr35-mj6f",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-13T20:52:24.000Z",
-        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.WindowsDesktop.App.Runtime (WPF). This advisory also provides guidance on what developers can do to update their a…",
-        "badge": "CVE-2026-87697",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-10-15T20:21:57.000Z",
+        "summary": "### Impact A vulnerability in containerd's CRI implementation allows a container restored from an untrusted checkpoint via the `CreateContainer` API to bypass the destination security context and execute with elevated privileges. When rest…",
+        "badge": "CVE-2026-95837",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
-        "id": "ai-openai-a8b8c31de898145e",
+        "id": "ai-openai-004cd593adabcd24",
         "category": "ai",
-        "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
-        "url": "https://openai.com/index/third-moment-research",
+        "title": "SentinelOne cuts malware analysis from weeks to hours",
+        "url": "https://openai.com/index/sentinelone",
         "source": "OpenAI",
-        "publishedAt": "2026-10-14T07:00:00.000Z",
-        "summary": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use.",
+        "publishedAt": "2026-10-14T12:00:00.000Z",
+        "summary": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.",
         "badge": "OpenAI"
       },
       {
@@ -446,14 +446,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50104726",
+        "id": "hn-50103338",
         "category": "dev",
-        "title": "Celebrating 70 Years of Fortran",
-        "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
+        "title": "Wayland desktop for Linux with skeuomorphic design",
+        "url": "https://github.com/fyzugx/DEsk",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T15:03:17.000Z",
+        "publishedAt": "2026-10-15T13:23:44.000Z",
         "badge": "HN",
-        "signal": "133 分 · 57 评论"
+        "signal": "449 分 · 176 评论"
       },
       {
         "id": "cn-baidu-9b1bbaf9ab9ba0be",
@@ -463,26 +463,26 @@
         "source": "百度热搜",
         "summary": "10月14日，2027国考报名启动。今年报名增加实名实人认证，国家公务员局明确强调打击防范“公考围岗”舞弊行为。此前，有人盗用身份信息集中报考制造虚假热度，借此吓退考生或操纵面试格局，甚至形成非法买卖信息的灰色产业链。此番亮剑将打击端口前移，旨在坚决维护招考秩序与公平正义。",
         "badge": "热搜",
-        "signal": "7,524,392 热度"
+        "signal": "7,523,061 热度"
       },
       {
-        "id": "github-advisory-ghsa-w6wh-p4g7-mpj2",
+        "id": "github-advisory-ghsa-vrcc-3ch7-hppw",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-96225 - .NET and Visual Studio Elevation of Privilege Vulnerability",
-        "url": "https://github.com/advisories/GHSA-w6wh-p4g7-mpj2",
+        "title": "kin-openapi: Incomplete Fix for GHSA-p6wj-qrr4-pgh5: Three Unpatched nil-Items Panic Paths in openapi3filter",
+        "url": "https://github.com/advisories/GHSA-vrcc-3ch7-hppw",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-13T20:51:51.000Z",
-        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Microsoft.NETCore.App.Runtime; System.Private.CoreLib. This advisory also provides guidance on what developers can do to upd…",
-        "badge": "CVE-2026-96225",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-10-15T20:20:47.000Z",
+        "summary": "## Summary The fix for GHSA-p6wj-qrr4-pgh5 addressed a nil-pointer dereference that occurs when an OpenAPI 3.1 array schema omits the `items` keyword (which is legal under JSON Schema 2020-12). That fix patched three decoder paths: the sta…",
+        "badge": "CVE-2026-100353",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-504a28fcb44d1a3d",
+        "id": "ai-hugging-face-eb67409897ed2136",
         "category": "ai",
-        "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
-        "url": "https://huggingface.co/blog/allenai/hiro-acev2",
+        "title": "Welcome FLUX.3 Image Klein in Diffusers",
+        "url": "https://huggingface.co/blog/flux-3",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-14T16:12:42.000Z",
+        "publishedAt": "2026-10-15T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -511,7 +511,7 @@
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 266056,
+        "stars": 268397,
         "starsToday": 32282
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official",
         "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "language": "Python",
-        "stars": 38816,
+        "stars": 38992,
         "starsToday": 525
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 50273,
+        "stars": 50392,
         "starsToday": 1091
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
         "language": "Go",
-        "stars": 112375,
+        "stars": 112475,
         "starsToday": 530
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 68612,
+        "stars": 68914,
         "starsToday": 3027
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 299730,
+        "stars": 299827,
         "starsToday": 688
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 74976,
+        "stars": 75070,
         "starsToday": 224
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 29714,
+        "stars": 29758,
         "starsToday": 902
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/NationalSecurityAgency/ghidra",
         "description": "Ghidra is a software reverse engineering (SRE) framework",
         "language": "Java",
-        "stars": 88513,
+        "stars": 88664,
         "starsToday": 1366
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 280168,
+        "stars": 280284,
         "starsToday": 1015
       }
     ],
-    "updatedAt": "2026-10-15T19:09:22.155Z"
+    "updatedAt": "2026-10-15T22:20:04.774Z"
   }
 }
