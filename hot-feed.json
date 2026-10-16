@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-16T17:25:05.252Z",
+  "generatedAt": "2026-10-16T21:09:57.768Z",
   "intelligence": {
-    "updatedAt": "2026-10-16T17:25:05.252Z",
+    "updatedAt": "2026-10-16T21:09:57.768Z",
     "items": [
       {
         "id": "cn-item-0d29d1ac3eaec0e5",
@@ -13,6 +13,171 @@
         "publishedAt": "2026-10-16T09:28:35.000Z",
         "summary": "中新社长沙10月16日电 题：从零关税到“人文交流年”，中非如何为全球南南合作提供范式？",
         "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-102764",
+        "category": "security",
+        "title": "BeyondTrust Remote Support：BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102764",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "summary": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.",
+        "badge": "CVE-2026-102764",
+        "signal": "已遭利用 · 整改期限 2026-10-19"
+      },
+      {
+        "id": "ai-openai-9e63539289a31c86",
+        "category": "ai",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50112657",
+        "category": "dev",
+        "title": "Tesla Roadster",
+        "url": "https://www.tesla.com/roadster",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-16T01:32:45.000Z",
+        "badge": "HN",
+        "signal": "870 分 · 1586 评论"
+      },
+      {
+        "id": "cn-it-9e2fa31f2a259202",
+        "category": "cn",
+        "title": "暴雪《暗黑破坏神 V》开启首轮动画拍摄，游戏计划于 2029 年春季发售",
+        "url": "https://www.ithome.com/1/014/188.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-16T15:44:36.000Z",
+        "summary": "IT之家 10 月 16 日消息，暴雪《暗黑破坏神》系列新作《暗黑破坏神 V》的过场动画拍摄工作已经启动。 游戏系列电影导演尼尔 · 大卫 · 卡特（Neil David Carter）昨日在 X 上发布了一张摄影棚照片，并配文“First shoot #Diablo5”，透露该项目已开始进行首轮拍摄。此次拍摄进展指向游戏中的动画向内容的制作，并不代表游戏整体开发已经进入后期阶段。 参考IT之家此前报道，暴雪已在 2026 年暴雪嘉年华（BlizzCon 2026）正式公布…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-w5f2-9q9c-ff4h",
+        "category": "security",
+        "title": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+        "url": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-16T20:08:44.000Z",
+        "summary": "### Summary LMCache is vulnerable to Unauthenticated Remote Code Execution via Pickle Deserialization on the Multiprocess ZMQ Transport ### Details LMCache multiprocess mode, also called distributed mode, opens an unauthenticated ZeroMQ RO…",
+        "badge": "CVE-2026-105192",
+        "signal": "CRITICAL · CVSS 9.8"
+      },
+      {
+        "id": "ai-google-deepmind-ad09b0946a60b7ff",
+        "category": "ai",
+        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-15T16:08:03.000Z",
+        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1249504",
+        "category": "dev",
+        "title": "许个愿，开个开源软件的 windows 商店",
+        "url": "https://www.v2ex.com/t/1249504",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-16T21:06:16.000Z",
+        "summary": "windows 电脑在 GitHub 上下载和安装了开源软件，希望有个统一的界面友好的商店管理起来，能更新和下载特定的软件。可以有推荐、排名什么的。 github 上找了一圈，没有轮子。",
+        "badge": "程序员",
+        "signal": "0 回复"
+      },
+      {
+        "id": "cn-baidu-8e1865f66a954bdc",
+        "category": "cn",
+        "title": "存款利率普遍上调了",
+        "url": "https://www.baidu.com/s?wd=%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87%E6%99%AE%E9%81%8D%E4%B8%8A%E8%B0%83%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "10月16日，融360数字科技研究院发布的2026年9月银行存款利率报告显示：除3年期存款利率环比小幅下行外，其余各期限定期存款利率均小幅增长或持平，尤其是5年期存款利率和5年期大额存单利率增速最明显。",
+        "badge": "热搜",
+        "signal": "7,809,646 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2025-61624",
+        "category": "security",
+        "title": "Fortinet Multiple Products：Fortinet Multiple Products Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-61624",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "summary": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CL…",
+        "badge": "CVE-2025-61624",
+        "signal": "已遭利用 · 整改期限 2026-10-19"
+      },
+      {
+        "id": "ai-hugging-face-138e9b7e7d974724",
+        "category": "ai",
+        "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
+        "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-16T01:44:47.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50122800",
+        "category": "dev",
+        "title": "Claude reveals ECDSA curve origins",
+        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-16T18:55:59.000Z",
+        "badge": "HN",
+        "signal": "383 分 · 153 评论"
+      },
+      {
+        "id": "cn-item-291f24b72a611e28",
+        "category": "cn",
+        "title": "汕头“12·9”重大火灾事故调查报告公布",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-16/10715790.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-16T09:08:17.000Z",
+        "summary": "中新网10月16日电 据广东省应急管理厅网站消息，近日，省政府批复同意了汕头“12·9”重大火灾事故调查报告。经省政府事故调查组认定，该起火灾是一起因使用蚊香不慎引发的重大生产安全责任事故。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-74vm-87hj-r66f",
+        "category": "security",
+        "title": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
+        "url": "https://github.com/advisories/GHSA-74vm-87hj-r66f",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-16T19:58:46.000Z",
+        "summary": "## Summary `ValidateResponse` panics on a nil pointer when a spec declares a response header with `content` instead of `schema`. `doc.Validate()` accepts that document, so the crash comes from a spec the library just called valid. Same cla…",
+        "badge": "CVE-2026-100349",
+        "signal": "HIGH · CVSS 0.0"
+      },
+      {
+        "id": "ai-openai-32165ee6af8945a5",
+        "category": "ai",
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-15T19:00:00.000Z",
+        "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1249479",
+        "category": "dev",
+        "title": "我给 Gemini 4 和 DeepSeek 搞了套「末位淘汰」， AI 干活会更猛吗？（Day 3）",
+        "url": "https://www.v2ex.com/t/1249479",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-16T14:02:18.000Z",
+        "summary": "昨天定下做 Beyond Compare 的免费开源版 OpenCompare 后，评论区又有朋友提了 FTP 远端对比等新需求，我已经让 AI 员工收进需求池交给 Gemini 4 评估。 今天本来该直接让 Gemini 4 和 DeepSeek 开工写核心代码。但动手前，我突然好奇一件事： 人类公司常挂在嘴边的「企业文化」「员工性格」，听着很虚。如果搬进一家全员 AI 的公司里，到底有没有用？ 我准备看三个指标： 交付耗时 ：同一个功能，是干脆利落跑通，还是在对齐方案、…",
+        "badge": "程序员",
+        "signal": "4 回复"
+      },
+      {
+        "id": "cn-it-de01eaf767deb2c4",
+        "category": "cn",
+        "title": "索尼拒将《GT 赛车》上架 Steam：第三方开发者将《GT Sport》移植到 PC，支持 FSR 3.1 与着色器预编译",
+        "url": "https://www.ithome.com/1/014/185.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-16T15:06:40.000Z",
+        "summary": "IT之家 10 月 16 日消息，在索尼 SIE 宣布于 2028 年 1 月起取消新游戏的实体光盘后，近期有越来越多的开发者将 PlayStation 独占游戏以“数字游戏”的形式搬上 PC 平台。 据 Wccftech 今日报道，虽然索尼至今未将《GT 赛车》系列移植到 PC 平台，但这一局面已被第三方开发者打破。 名为“mlgprorektm8”的开发者在 GitHub 上发布了《GT 赛车 Sport》PC 移植版。这意味着，继《血源诅咒》和《战神 3 重制版》之后…",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2026-21589",
@@ -26,137 +191,54 @@
         "signal": "已遭利用 · 整改期限 2026-10-18"
       },
       {
-        "id": "ai-openai-32165ee6af8945a5",
+        "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
         "category": "ai",
-        "title": "Bringing GPT-Rosalind to academic research labs",
-        "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-15T19:00:00.000Z",
-        "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-50121004",
-        "category": "dev",
-        "title": "/dev/null: social network for developers",
-        "url": "https://dev-null.sh",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-16T16:57:49.000Z",
-        "badge": "HN",
-        "signal": "36 分 · 26 评论"
-      },
-      {
-        "id": "cn-it-9e2fa31f2a259202",
-        "category": "cn",
-        "title": "暴雪《暗黑破坏神 V》开启首轮动画拍摄，游戏计划于 2029 年春季发售",
-        "url": "https://www.ithome.com/1/014/188.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-16T15:44:36.000Z",
-        "summary": "IT之家 10 月 16 日消息，暴雪《暗黑破坏神》系列新作《暗黑破坏神 V》的过场动画拍摄工作已经启动。 游戏系列电影导演尼尔 · 大卫 · 卡特（Neil David Carter）昨日在 X 上发布了一张摄影棚照片，并配文“First shoot #Diablo5”，透露该项目已开始进行首轮拍摄。此次拍摄进展指向游戏中的动画向内容的制作，并不代表游戏整体开发已经进入后期阶段。 参考IT之家此前报道，暴雪已在 2026 年暴雪嘉年华（BlizzCon 2026）正式公布…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-cv23-7vc5-jfh7",
-        "category": "security",
-        "title": "gomarkdown/markdown IsSafeURL panics on short URLs",
-        "url": "https://github.com/advisories/GHSA-cv23-7vc5-jfh7",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T15:41:39.000Z",
-        "summary": "## Summary IsSafeURL slices url[:nPath] before checking that len(url) >= nPath, so a URL shorter than a path prefix (0, 1 or 2 bytes) triggers a slice-bounds panic, and this is reached end to end when the html.Safelink hardening flag is en…",
-        "badge": "CVE-2026-102941",
-        "signal": "HIGH · CVSS 7.5"
-      },
-      {
-        "id": "ai-google-deepmind-ad09b0946a60b7ff",
-        "category": "ai",
-        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+        "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-15T16:08:03.000Z",
-        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+        "publishedAt": "2026-10-14T02:00:14.000Z",
+        "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1249479",
+        "id": "hn-50122431",
         "category": "dev",
-        "title": "我给 Gemini 4 和 DeepSeek 搞了套「末位淘汰」， AI 干活会更猛吗？（Day 3）",
-        "url": "https://www.v2ex.com/t/1249479",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-16T14:02:18.000Z",
-        "summary": "昨天定下做 Beyond Compare 的免费开源版 OpenCompare 后，评论区又有朋友提了 FTP 远端对比等新需求，我已经让 AI 员工收进需求池交给 Gemini 4 评估。 今天本来该直接让 Gemini 4 和 DeepSeek 开工写核心代码。但动手前，我突然好奇一件事： 人类公司常挂在嘴边的「企业文化」「员工性格」，听着很虚。如果搬进一家全员 AI 的公司里，到底有没有用？ 我准备看三个指标： 交付耗时 ：同一个功能，是干脆利落跑通，还是在对齐方案、…",
-        "badge": "程序员",
-        "signal": "3 回复"
-      },
-      {
-        "id": "cn-baidu-8e1865f66a954bdc",
-        "category": "cn",
-        "title": "存款利率普遍上调了",
-        "url": "https://www.baidu.com/s?wd=%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87%E6%99%AE%E9%81%8D%E4%B8%8A%E8%B0%83%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "10月16日，融360数字科技研究院发布的2026年9月银行存款利率报告显示：除3年期存款利率环比小幅下行外，其余各期限定期存款利率均小幅增长或持平，尤其是5年期存款利率和5年期大额存单利率增速最明显。",
-        "badge": "热搜",
-        "signal": "7,807,977 热度"
-      },
-      {
-        "id": "cisa-kev-cve-2026-105134",
-        "category": "security",
-        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105134",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceiver…",
-        "badge": "CVE-2026-105134",
-        "signal": "已遭利用 · 整改期限 2026-10-17"
-      },
-      {
-        "id": "ai-hugging-face-138e9b7e7d974724",
-        "category": "ai",
-        "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
-        "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-16T01:44:47.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50120224",
-        "category": "dev",
-        "title": "JPEG XL vs. AVIF for web use-cases",
-        "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
+        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+        "url": "https://github.com/cobanov/PS5LM",
         "source": "Hacker News",
-        "publishedAt": "2026-10-16T16:12:02.000Z",
+        "publishedAt": "2026-10-16T18:32:35.000Z",
         "badge": "HN",
-        "signal": "50 分 · 25 评论"
+        "signal": "102 分 · 28 评论"
       },
       {
-        "id": "cn-item-291f24b72a611e28",
+        "id": "cn-baidu-33ff80915235047f",
         "category": "cn",
-        "title": "汕头“12·9”重大火灾事故调查报告公布",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-16/10715790.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-16T09:08:17.000Z",
-        "summary": "中新网10月16日电 据广东省应急管理厅网站消息，近日，省政府批复同意了汕头“12·9”重大火灾事故调查报告。经省政府事故调查组认定，该起火灾是一起因使用蚊香不慎引发的重大生产安全责任事故。",
-        "badge": "中新网要闻"
+        "title": "“搭子社交” 灰色交易",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E6%90%AD%E5%AD%90%E7%A4%BE%E4%BA%A4%E2%80%9D+%E7%81%B0%E8%89%B2%E4%BA%A4%E6%98%93&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "“搭子社交”受到不少年轻人青睐，但其中暗藏风险。有网友遭遇“喝酒搭子”带去酒吧高额消费、“旅游搭子”推荐高价旅行团后失约等情况。记者调查发现，部分人借结伴之名诱导消费，还有账号使用暗语招揽有偿陪伴，背后存在消费诈骗、擦边交易等灰色产业链。",
+        "badge": "热搜",
+        "signal": "7,712,841 热度"
       },
       {
-        "id": "github-advisory-ghsa-qx66-fv34-fjm8",
+        "id": "github-advisory-ghsa-6fj4-rcr3-r7rr",
         "category": "security",
-        "title": "TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
-        "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+        "title": "lopdf has a stack overflow via deeply nested PDF objects",
+        "url": "https://github.com/advisories/GHSA-6fj4-rcr3-r7rr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-15T20:22:20.000Z",
-        "summary": "## Impact An unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and run the attacker's JavaScript ther…",
-        "badge": "CVE-2026-102989",
-        "signal": "CRITICAL · CVSS 9.3"
+        "publishedAt": "2026-10-16T19:55:39.000Z",
+        "summary": "`lopdf::Document::load_mem` (and the other `load*` entry points) parses nested PDF arrays and dictionaries with unbounded recursion. A small crafted PDF whose Catalog contains a deeply nested array (`/X [[[ … ]]]`, on the order of 10,000 l…",
+        "badge": "GHSA-6FJ4-RCR3-R7RR",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-a60f4a701f887ae8",
+        "id": "ai-hugging-face-c9a6184923cc1a58",
         "category": "ai",
-        "title": "Teaching students to think and learn through questions",
-        "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-15T13:00:00.000Z",
-        "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
-        "badge": "OpenAI"
+        "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
+        "url": "https://huggingface.co/blog/reflection-beam",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "badge": "Hugging Face"
       },
       {
         "id": "v2ex-1249469",
@@ -170,14 +252,96 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-it-de01eaf767deb2c4",
+        "id": "cn-item-fdb097a862fa48ae",
         "category": "cn",
-        "title": "索尼拒将《GT 赛车》上架 Steam：第三方开发者将《GT Sport》移植到 PC，支持 FSR 3.1 与着色器预编译",
-        "url": "https://www.ithome.com/1/014/185.htm",
+        "title": "六部门：启动城镇供热“温暖工程”三年行动",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-16/10715729.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-16T08:08:56.000Z",
+        "summary": "记者今天(16日)从住房城乡建设部获悉，为加快解决城镇供热工作中出现的热源保障能力不足、设施设备故障等问题，住房城乡建设部、国家发展改革委等六部门联合印发通知，启动城镇供热“温暖工程”三年行动，要求到2028年底前，存量供热老化管网更新改造要取得明显进展。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-105134",
+        "category": "security",
+        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105134",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceiver…",
+        "badge": "CVE-2026-105134",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
+      },
+      {
+        "id": "ai-openai-a60f4a701f887ae8",
+        "category": "ai",
+        "title": "Teaching students to think and learn through questions",
+        "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-15T13:00:00.000Z",
+        "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50123580",
+        "category": "dev",
+        "title": "Flux 3 Image Klein: open weights, 5.6B parameters",
+        "url": "https://bfl.ai/blog/flux-3-image-klein",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-16T19:47:13.000Z",
+        "badge": "HN",
+        "signal": "30 分 · 6 评论"
+      },
+      {
+        "id": "cn-it-8125f88b666ff796",
+        "category": "cn",
+        "title": "曝英特尔将推 8E + 4Xe 版 \"Panther Lake\" 锐炫 G 掌机处理器",
+        "url": "https://www.ithome.com/1/014/184.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-16T15:06:40.000Z",
-        "summary": "IT之家 10 月 16 日消息，在索尼 SIE 宣布于 2028 年 1 月起取消新游戏的实体光盘后，近期有越来越多的开发者将 PlayStation 独占游戏以“数字游戏”的形式搬上 PC 平台。 据 Wccftech 今日报道，虽然索尼至今未将《GT 赛车》系列移植到 PC 平台，但这一局面已被第三方开发者打破。 名为“mlgprorektm8”的开发者在 GitHub 上发布了《GT 赛车 Sport》PC 移植版。这意味着，继《血源诅咒》和《战神 3 重制版》之后…",
+        "publishedAt": "2026-10-16T15:05:02.000Z",
+        "summary": "IT之家 10 月 16 日消息，硬件诊断监控软件 HWiNFO 近日在其版本历史记录页面更新了即将到来的变化，包括“新增 Panter Lake-H 080”“增强对 Nova Lake-E 和 Razor Lake-S 的支持”。 IT之家注： \"Panter Lake\" 很明显是一个误输入，指的应该是 \"Panther Lake\"。 消息人士 @jaykihn0 今日对上述 \"Panther Lake-H 080\" 和 \"Nova Lake-E\" 进行了解释： \"Pa…",
         "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-rxjv-24xq-76wc",
+        "category": "security",
+        "title": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
+        "url": "https://github.com/advisories/GHSA-rxjv-24xq-76wc",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-16T19:53:06.000Z",
+        "summary": "### Summary `IPCameraFrameGrabber` parses the `Content-Length` value from the multipart MJPEG HTTP stream returned by the configured IP camera without any bounds checking. A malicious or compromised camera endpoint - or any network attacke…",
+        "badge": "CVE-2026-102834",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
+        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
+        "category": "ai",
+        "title": "Developing Gemini 4 Argon responsibly and safely",
+        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-13T19:43:07.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1249467",
+        "category": "dev",
+        "title": "uu 的快捷键冲突咋解决啊？ mac 控制 man 的时候 cmd+q/w 这种怎么办？",
+        "url": "https://www.v2ex.com/t/1249467",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-16T13:03:06.000Z",
+        "summary": "如题，好像没看到啥解决方法，没人用 mac 控制 mac 的吗？ cmd+w 没法用太难受了",
+        "badge": "程序员",
+        "signal": "2 回复"
+      },
+      {
+        "id": "cn-baidu-c0a4173eb27d820a",
+        "category": "cn",
+        "title": "端牢中国饭碗 底气从何而来",
+        "url": "https://www.baidu.com/s?wd=%E7%AB%AF%E7%89%A2%E4%B8%AD%E5%9B%BD%E9%A5%AD%E7%A2%97+%E5%BA%95%E6%B0%94%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "国家粮食和物资储备局局长刘焕鑫在今年9月国新办新闻发布会上介绍，我国人均粮食占有量超过500公斤，高于世界平均水平；全社会粮食库存消费比远高于联合国粮农组织提出的17%—18%国际粮食安全警戒线。中国粮稳得住，靠的不是运气，是技术、是制度、是每一个把地种好的人。",
+        "badge": "热搜",
+        "signal": "7,619,412 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76519",
@@ -191,86 +355,44 @@
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
+        "id": "ai-hugging-face-d330643595776f9f",
         "category": "ai",
-        "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
-        "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-14T02:00:14.000Z",
-        "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50118320",
-        "category": "dev",
-        "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
-        "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-16T13:43:48.000Z",
-        "badge": "HN",
-        "signal": "138 分 · 72 评论"
-      },
-      {
-        "id": "cn-baidu-33ff80915235047f",
-        "category": "cn",
-        "title": "“搭子社交” 灰色交易",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E6%90%AD%E5%AD%90%E7%A4%BE%E4%BA%A4%E2%80%9D+%E7%81%B0%E8%89%B2%E4%BA%A4%E6%98%93&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "“搭子社交”受到不少年轻人青睐，但其中暗藏风险。有网友遭遇“喝酒搭子”带去酒吧高额消费、“旅游搭子”推荐高价旅行团后失约等情况。记者调查发现，部分人借结伴之名诱导消费，还有账号使用暗语招揽有偿陪伴，背后存在消费诈骗、擦边交易等灰色产业链。",
-        "badge": "热搜",
-        "signal": "7,714,248 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-2cvf-wqm6-wr9g",
-        "category": "security",
-        "title": "Podman: The `podman run` command can be instructed to disable almost all sandboxing by image annotation",
-        "url": "https://github.com/advisories/GHSA-2cvf-wqm6-wr9g",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-15T20:22:16.000Z",
-        "summary": "### Impact Podman v4.4.0 added a feature where container checkpoints (from the `podman container checkpoint` command) could be distributed via OCI registry, and pulled from that registry and run via the `podman run` command. This allowed e…",
-        "badge": "CVE-2026-94603",
-        "signal": "CRITICAL · CVSS 10.0"
-      },
-      {
-        "id": "ai-hugging-face-c9a6184923cc1a58",
-        "category": "ai",
-        "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
-        "url": "https://huggingface.co/blog/reflection-beam",
+        "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "publishedAt": "2026-10-15T20:34:01.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1249467",
+        "id": "hn-50123356",
         "category": "dev",
-        "title": "uu 的快捷键冲突咋解决啊？ mac 控制 man 的时候 cmd+q/w 这种怎么办？",
-        "url": "https://www.v2ex.com/t/1249467",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-16T13:03:06.000Z",
-        "summary": "如题，好像没看到啥解决方法，没人用 mac 控制 mac 的吗？ cmd+w 没法用太难受了",
-        "badge": "程序员",
-        "signal": "0 回复"
+        "title": "The Fatal Flaw of 911",
+        "url": "https://www.themarshallproject.org/2026/10/16/911-book-policing-mental-health",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-16T19:33:00.000Z",
+        "badge": "HN",
+        "signal": "29 分 · 33 评论"
       },
       {
-        "id": "cn-item-fdb097a862fa48ae",
+        "id": "cn-item-1adce11d9f1a6f6d",
         "category": "cn",
-        "title": "六部门：启动城镇供热“温暖工程”三年行动",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-16/10715729.shtml",
+        "title": "中方回应日政客谬论：在历史和法理问题上都需要补课",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-16/10715701.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-16T08:08:56.000Z",
-        "summary": "记者今天(16日)从住房城乡建设部获悉，为加快解决城镇供热工作中出现的热源保障能力不足、设施设备故障等问题，住房城乡建设部、国家发展改革委等六部门联合印发通知，启动城镇供热“温暖工程”三年行动，要求到2028年底前，存量供热老化管网更新改造要取得明显进展。",
+        "publishedAt": "2026-10-16T07:39:11.000Z",
+        "summary": "中新网北京10月16日电 (记者 黄钰钦)中国外交部发言人毛宁16日主持例行记者会。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-105133",
+        "id": "github-advisory-ghsa-h4mw-j7qp-8mwm",
         "category": "security",
-        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105133",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be ch…",
-        "badge": "CVE-2026-105133",
-        "signal": "已遭利用 · 整改期限 2026-10-17"
+        "title": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+        "url": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-16T19:44:37.000Z",
+        "summary": "The Claude Agent SDK for Python passed the `resume` option to the Claude CLI without validation, allowing a value beginning with `-` to be interpreted as a separate CLI flag. An attacker who controlled the `resume` value could inject an `-…",
+        "badge": "CVE-2026-96620",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-openai-94eadcab22c41e35",
@@ -281,46 +403,6 @@
         "publishedAt": "2026-10-15T00:00:00.000Z",
         "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
         "badge": "OpenAI"
-      },
-      {
-        "id": "hn-50120664",
-        "category": "dev",
-        "title": "Desire to Move Permanently to U.S. at New Low",
-        "url": "https://news.gallup.com/poll/708614/desire-migrate-drops-new-low.aspx",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-16T16:38:02.000Z",
-        "badge": "HN",
-        "signal": "94 分 · 73 评论"
-      },
-      {
-        "id": "cn-it-8125f88b666ff796",
-        "category": "cn",
-        "title": "曝英特尔将推 8E + 4Xe 版 \"Panther Lake\" 锐炫 G 掌机处理器",
-        "url": "https://www.ithome.com/1/014/184.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-16T15:05:02.000Z",
-        "summary": "IT之家 10 月 16 日消息，硬件诊断监控软件 HWiNFO 近日在其版本历史记录页面更新了即将到来的变化，包括“新增 Panter Lake-H 080”“增强对 Nova Lake-E 和 Razor Lake-S 的支持”。 IT之家注： \"Panter Lake\" 很明显是一个误输入，指的应该是 \"Panther Lake\"。 消息人士 @jaykihn0 今日对上述 \"Panther Lake-H 080\" 和 \"Nova Lake-E\" 进行了解释： \"Pa…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-pq7j-f95f-qfcv",
-        "category": "security",
-        "title": "Claude Code: Plugin Hash Pin Bypass Allows Bypass of Hash Pinning",
-        "url": "https://github.com/advisories/GHSA-pq7j-f95f-qfcv",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-15T20:22:07.000Z",
-        "summary": "The plugin install flow in Claude Code and Claude Desktop checked out a marketplace's pinned commit SHA using `git checkout` without verifying that the resulting HEAD matched the pinned SHA. An attacker controlling a plugin's upstream repo…",
-        "badge": "CVE-2026-86063",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
-        "category": "ai",
-        "title": "Developing Gemini 4 Argon responsibly and safely",
-        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-13T19:43:07.000Z",
-        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1249465",
@@ -334,88 +416,6 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-c0a4173eb27d820a",
-        "category": "cn",
-        "title": "端牢中国饭碗 底气从何而来",
-        "url": "https://www.baidu.com/s?wd=%E7%AB%AF%E7%89%A2%E4%B8%AD%E5%9B%BD%E9%A5%AD%E7%A2%97+%E5%BA%95%E6%B0%94%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "国家粮食和物资储备局局长刘焕鑫在今年9月国新办新闻发布会上介绍，我国人均粮食占有量超过500公斤，高于世界平均水平；全社会粮食库存消费比远高于联合国粮农组织提出的17%—18%国际粮食安全警戒线。中国粮稳得住，靠的不是运气，是技术、是制度、是每一个把地种好的人。",
-        "badge": "热搜",
-        "signal": "7,616,890 热度"
-      },
-      {
-        "id": "cisa-kev-cve-2026-0322",
-        "category": "security",
-        "title": "Palo Alto Networks PAN-OS：Palo Alto Networks PAN-OS Code Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-0322",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
-        "badge": "CVE-2026-0322",
-        "signal": "已遭利用 · 整改期限 2026-10-17"
-      },
-      {
-        "id": "ai-hugging-face-d330643595776f9f",
-        "category": "ai",
-        "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-15T20:34:01.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50118977",
-        "category": "dev",
-        "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
-        "url": "https://calif.io/research/big-fish",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-16T14:44:02.000Z",
-        "badge": "HN",
-        "signal": "92 分 · 20 评论"
-      },
-      {
-        "id": "cn-item-1adce11d9f1a6f6d",
-        "category": "cn",
-        "title": "中方回应日政客谬论：在历史和法理问题上都需要补课",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-16/10715701.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-16T07:39:11.000Z",
-        "summary": "中新网北京10月16日电 (记者 黄钰钦)中国外交部发言人毛宁16日主持例行记者会。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-x586-xvc8-g7q6",
-        "category": "security",
-        "title": "Qwik: Crashing any Qwik Server via Resource thenable",
-        "url": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-15T20:22:00.000Z",
-        "summary": "### Summary A Qwik server in the default configuration can be crashed with one unauthenticated HTTP request. During qwik-json body parsing, `ResourceSerializer.$fill$` does `Promise.resolve(resource._resolved)`. If `_resolved` is a plain o…",
-        "badge": "CVE-2026-84994",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-openai-57c3309db5bedcde",
-        "category": "ai",
-        "title": "Amp puts AI agents to work beyond code with OpenAI models",
-        "url": "https://openai.com/index/amp-beyond-coding",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-14T12:00:00.000Z",
-        "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1249463",
-        "category": "dev",
-        "title": "印象中 aws ses 邮箱服务不是很难申请生产模式吗",
-        "url": "https://www.v2ex.com/t/1249463",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-16T12:36:18.000Z",
-        "summary": "之前申请过一次，没有通过，而且客服的回复也让人摸不着头脑！ 今天申请直接秒通过了，我准备了好多字的小作文（申请说明）都没用上，开心一整天了要😆",
-        "badge": "程序员",
-        "signal": "5 回复"
-      },
-      {
         "id": "cn-it-9a1586e1938901a5",
         "category": "cn",
         "title": "库克卸任苹果 CEO 后首次中国之行结束：期待下次再见",
@@ -426,15 +426,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-104935",
+        "id": "cisa-kev-cve-2026-105133",
         "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104935",
+        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105133",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-13T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
-        "badge": "CVE-2026-104935",
-        "signal": "已遭利用 · 整改期限 2026-10-16"
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be ch…",
+        "badge": "CVE-2026-105133",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
         "id": "ai-google-deepmind-94cc08977f17740f",
@@ -446,14 +446,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50118828",
+        "id": "hn-50118981",
         "category": "dev",
-        "title": "What on Earth Is Dekton?",
-        "url": "https://www.worksinprogress.news/p/porcelain",
+        "title": "Waymo in Toronto",
+        "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-16T14:31:43.000Z",
+        "publishedAt": "2026-10-16T14:44:17.000Z",
         "badge": "HN",
-        "signal": "70 分 · 21 评论"
+        "signal": "186 分 · 294 评论"
       },
       {
         "id": "cn-baidu-7accb29a8705f99b",
@@ -463,18 +463,18 @@
         "source": "百度热搜",
         "summary": "北京一位母亲因大一儿子未考出技能证书，将月生活费从4000元降至2000元，称想让他学会规划、靠自己找到人生道路。儿子嫌“不够花”，双方商定先试两月按周发放。",
         "badge": "热搜",
-        "signal": "7,522,824 热度"
+        "signal": "7,522,269 热度"
       },
       {
-        "id": "github-advisory-ghsa-p7v4-vr35-mj6f",
+        "id": "github-advisory-ghsa-cv23-7vc5-jfh7",
         "category": "security",
-        "title": "containerd CRI plugin: Checkpoint restore bypasses destination security context",
-        "url": "https://github.com/advisories/GHSA-p7v4-vr35-mj6f",
+        "title": "gomarkdown/markdown IsSafeURL panics on short URLs",
+        "url": "https://github.com/advisories/GHSA-cv23-7vc5-jfh7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-15T20:21:57.000Z",
-        "summary": "### Impact A vulnerability in containerd's CRI implementation allows a container restored from an untrusted checkpoint via the `CreateContainer` API to bypass the destination security context and execute with elevated privileges. When rest…",
-        "badge": "CVE-2026-95837",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-10-16T15:41:39.000Z",
+        "summary": "## Summary IsSafeURL slices url[:nPath] before checking that len(url) >= nPath, so a URL shorter than a path prefix (0, 1 or 2 bytes) triggers a slice-bounds panic, and this is reached end to end when the html.Safelink hardening flag is en…",
+        "badge": "CVE-2026-102941",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-ff0cf28c5d753057",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1249459",
+        "id": "v2ex-1249463",
         "category": "dev",
-        "title": "求助， mac 无法访问.local 结尾的域名",
-        "url": "https://www.v2ex.com/t/1249459",
+        "title": "印象中 aws ses 邮箱服务不是很难申请生产模式吗",
+        "url": "https://www.v2ex.com/t/1249463",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-16T12:28:06.000Z",
-        "summary": "公司测试环境数据库、网关全是 xxx.cloud.local 这种格式的域名，今天用 mac 连测试环境发现 dbgate 、stuio 3t 、postman 都访问不了测试环境了。 问了 AI 说是.local 结尾的域名和 mac 特殊的 dns 解析逻辑冲突了，尝试了配置了指定 dns 解析 IP 也不行 /etc/resolver/cloud.local nameserver 100.111.110.9 有没有大佬支支招，求求了",
+        "publishedAt": "2026-10-16T12:36:18.000Z",
+        "summary": "之前申请过一次，没有通过，而且客服的回复也让人摸不着头脑！ 今天申请直接秒通过了，我准备了好多字的小作文（申请说明）都没用上，开心一整天了要😆",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official",
         "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "language": "Python",
-        "stars": 40189,
+        "stars": 40395,
         "starsToday": 1552
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 51277,
+        "stars": 51395,
         "starsToday": 1158
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 281170,
+        "stars": 281359,
         "starsToday": 1057
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 53343,
+        "stars": 53412,
         "starsToday": 323
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 30111,
+        "stars": 30171,
         "starsToday": 449
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 75516,
+        "stars": 75569,
         "starsToday": 672
       },
       {
@@ -570,8 +570,8 @@
         "name": "android/skills",
         "url": "https://github.com/android/skills",
         "language": "Kotlin",
-        "stars": 7956,
-        "starsToday": 35
+        "stars": 8021,
+        "starsToday": 163
       },
       {
         "id": "github-4251a228ae407247",
@@ -580,7 +580,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 300524,
+        "stars": 300603,
         "starsToday": 973
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 11842,
+        "stars": 11893,
         "starsToday": 282
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 70556,
+        "stars": 70862,
         "starsToday": 2301
       }
     ],
-    "updatedAt": "2026-10-16T17:25:05.252Z"
+    "updatedAt": "2026-10-16T21:09:57.768Z"
   }
 }
