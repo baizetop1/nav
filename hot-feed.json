@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-16T21:09:57.768Z",
+  "generatedAt": "2026-10-16T23:36:34.059Z",
   "intelligence": {
-    "updatedAt": "2026-10-16T21:09:57.768Z",
+    "updatedAt": "2026-10-16T23:36:34.059Z",
     "items": [
       {
         "id": "cn-item-0d29d1ac3eaec0e5",
@@ -26,13 +26,13 @@
         "signal": "已遭利用 · 整改期限 2026-10-19"
       },
       {
-        "id": "ai-openai-9e63539289a31c86",
+        "id": "ai-openai-9732b2763df5a67a",
         "category": "ai",
-        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-        "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "title": "How Itaú is building generative AI for its entire customer base",
+        "url": "https://openai.com/index/itau-generative-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-10-16T00:00:00.000Z",
-        "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+        "publishedAt": "2026-10-16T19:00:00.000Z",
+        "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
         "badge": "OpenAI"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-16T01:32:45.000Z",
         "badge": "HN",
-        "signal": "870 分 · 1586 评论"
+        "signal": "1084 分 · 1980 评论"
       },
       {
-        "id": "cn-it-9e2fa31f2a259202",
+        "id": "cn-it-57fafd29aa30b6c4",
         "category": "cn",
-        "title": "暴雪《暗黑破坏神 V》开启首轮动画拍摄，游戏计划于 2029 年春季发售",
-        "url": "https://www.ithome.com/1/014/188.htm",
+        "title": "零跑改造 43 年欧宝工厂造电车，首台欧洲制造零跑 B10 正式下线",
+        "url": "https://www.ithome.com/1/014/201.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-16T15:44:36.000Z",
-        "summary": "IT之家 10 月 16 日消息，暴雪《暗黑破坏神》系列新作《暗黑破坏神 V》的过场动画拍摄工作已经启动。 游戏系列电影导演尼尔 · 大卫 · 卡特（Neil David Carter）昨日在 X 上发布了一张摄影棚照片，并配文“First shoot #Diablo5”，透露该项目已开始进行首轮拍摄。此次拍摄进展指向游戏中的动画向内容的制作，并不代表游戏整体开发已经进入后期阶段。 参考IT之家此前报道，暴雪已在 2026 年暴雪嘉年华（BlizzCon 2026）正式公布…",
+        "publishedAt": "2026-10-16T23:34:19.000Z",
+        "summary": "IT之家 10 月 17 日消息，零跑汽车宣布，10 月 16 日，零跑西班牙马连（Mallén）电池工厂正式投产，零跑西班牙萨拉戈萨工厂 首台欧洲制造零跑 B10 正式下线 ，官方称之为“零跑改造 43 年欧宝工厂造电车”。 IT之家获悉，萨拉戈萨工厂拥有 43 年的汽车制造历史，累计生产汽车超过 1000 万辆，具备深厚的工业积淀与成熟的制造基础。目前，零跑 B10 正式加入该工厂的生产体系，与欧宝 Corsa、标致 208 和蓝旗亚 Ypsilon 共同生产。 为适应…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-w5f2-9q9c-ff4h",
+        "id": "github-advisory-ghsa-pw5q-rjx4-7f7p",
         "category": "security",
-        "title": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
-        "url": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
+        "title": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
+        "url": "https://github.com/advisories/GHSA-pw5q-rjx4-7f7p",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T20:08:44.000Z",
-        "summary": "### Summary LMCache is vulnerable to Unauthenticated Remote Code Execution via Pickle Deserialization on the Multiprocess ZMQ Transport ### Details LMCache multiprocess mode, also called distributed mode, opens an unauthenticated ZeroMQ RO…",
-        "badge": "CVE-2026-105192",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-10-16T21:15:03.000Z",
+        "summary": "## Summary A user holding the delegated `users:update` permission can reset the global administrator's password and take over the admin account. `UpdateUser` sets the target user's `PasswordHash` from the request body for ANY target with n…",
+        "badge": "CVE-2026-96627",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -85,17 +85,17 @@
         "publishedAt": "2026-10-16T21:06:16.000Z",
         "summary": "windows 电脑在 GitHub 上下载和安装了开源软件，希望有个统一的界面友好的商店管理起来，能更新和下载特定的软件。可以有推荐、排名什么的。 github 上找了一圈，没有轮子。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-8e1865f66a954bdc",
+        "id": "cn-baidu-f5627da669546454",
         "category": "cn",
-        "title": "存款利率普遍上调了",
-        "url": "https://www.baidu.com/s?wd=%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87%E6%99%AE%E9%81%8D%E4%B8%8A%E8%B0%83%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“最强”厄尔尼诺意味着什么",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E6%9C%80%E5%BC%BA%E2%80%9D%E5%8E%84%E5%B0%94%E5%B0%BC%E8%AF%BA%E6%84%8F%E5%91%B3%E7%9D%80%E4%BB%80%E4%B9%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月16日，融360数字科技研究院发布的2026年9月银行存款利率报告显示：除3年期存款利率环比小幅下行外，其余各期限定期存款利率均小幅增长或持平，尤其是5年期存款利率和5年期大额存单利率增速最明显。",
+        "summary": "国家气候中心表示超强厄尔尼诺事件已正式形成，或为观测记录里最强的一次。世界气象组织预判其峰值在12月前后，几乎确定持续至2027年2月。该现象会增加极端天气发生概率，我国今冬要防范气温大幅波动、南方低温雨雪冰冻，次年夏季长江、江南区域洪涝风险上升。",
         "badge": "热搜",
-        "signal": "7,809,646 热度"
+        "signal": "7,808,698 热度"
       },
       {
         "id": "cisa-kev-cve-2025-61624",
@@ -125,7 +125,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-16T18:55:59.000Z",
         "badge": "HN",
-        "signal": "383 分 · 153 评论"
+        "signal": "572 分 · 244 评论"
       },
       {
         "id": "cn-item-291f24b72a611e28",
@@ -138,24 +138,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-74vm-87hj-r66f",
+        "id": "github-advisory-ghsa-w5f2-9q9c-ff4h",
         "category": "security",
-        "title": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
-        "url": "https://github.com/advisories/GHSA-74vm-87hj-r66f",
+        "title": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+        "url": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T19:58:46.000Z",
-        "summary": "## Summary `ValidateResponse` panics on a nil pointer when a spec declares a response header with `content` instead of `schema`. `doc.Validate()` accepts that document, so the crash comes from a spec the library just called valid. Same cla…",
-        "badge": "CVE-2026-100349",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-16T20:08:44.000Z",
+        "summary": "### Summary LMCache is vulnerable to Unauthenticated Remote Code Execution via Pickle Deserialization on the Multiprocess ZMQ Transport ### Details LMCache multiprocess mode, also called distributed mode, opens an unauthenticated ZeroMQ RO…",
+        "badge": "CVE-2026-105192",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
-        "id": "ai-openai-32165ee6af8945a5",
+        "id": "ai-openai-9e63539289a31c86",
         "category": "ai",
-        "title": "Bringing GPT-Rosalind to academic research labs",
-        "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
         "source": "OpenAI",
-        "publishedAt": "2026-10-15T19:00:00.000Z",
-        "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
         "badge": "OpenAI"
       },
       {
@@ -170,13 +170,13 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-it-de01eaf767deb2c4",
+        "id": "cn-it-30f3cef2eb34f51c",
         "category": "cn",
-        "title": "索尼拒将《GT 赛车》上架 Steam：第三方开发者将《GT Sport》移植到 PC，支持 FSR 3.1 与着色器预编译",
-        "url": "https://www.ithome.com/1/014/185.htm",
+        "title": "英监管机构拟认定微软商业软件“垄断地位”，或干预旗下产品捆绑销售",
+        "url": "https://www.ithome.com/1/014/200.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-16T15:06:40.000Z",
-        "summary": "IT之家 10 月 16 日消息，在索尼 SIE 宣布于 2028 年 1 月起取消新游戏的实体光盘后，近期有越来越多的开发者将 PlayStation 独占游戏以“数字游戏”的形式搬上 PC 平台。 据 Wccftech 今日报道，虽然索尼至今未将《GT 赛车》系列移植到 PC 平台，但这一局面已被第三方开发者打破。 名为“mlgprorektm8”的开发者在 GitHub 上发布了《GT 赛车 Sport》PC 移植版。这意味着，继《血源诅咒》和《战神 3 重制版》之后…",
+        "publishedAt": "2026-10-16T23:27:03.000Z",
+        "summary": "IT之家 10 月 17 日消息，据路透社 16 日报道，英国竞争与市场管理局拟认定微软在商业软件市场具有“战略市场地位”，此举可能使监管机构 有权干预微软将 Excel、Teams 及 AI 助手 Copilot 等产品捆绑销售的做法 。 今年 5 月，英国竞争与市场管理局开始调查微软在商业软件市场的地位是否妨碍竞争。 据悉，微软的商业软件在英国每月 约有 2000 万用户 。 监管机构当天指出，微软在 PC 操作系统以及办公、安全、服务器和数据库管理软件市场均占据强势地…",
         "badge": "IT之家"
       },
       {
@@ -201,35 +201,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50122431",
+        "id": "hn-50123580",
         "category": "dev",
-        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-        "url": "https://github.com/cobanov/PS5LM",
+        "title": "FLUX 3 Image Klein",
+        "url": "https://bfl.ai/blog/flux-3-image-klein",
         "source": "Hacker News",
-        "publishedAt": "2026-10-16T18:32:35.000Z",
+        "publishedAt": "2026-10-16T19:47:13.000Z",
         "badge": "HN",
-        "signal": "102 分 · 28 评论"
+        "signal": "84 分 · 17 评论"
       },
       {
-        "id": "cn-baidu-33ff80915235047f",
+        "id": "cn-baidu-7accb29a8705f99b",
         "category": "cn",
-        "title": "“搭子社交” 灰色交易",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E6%90%AD%E5%AD%90%E7%A4%BE%E4%BA%A4%E2%80%9D+%E7%81%B0%E8%89%B2%E4%BA%A4%E6%98%93&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "母亲将大一儿子生活费从4000降至2000",
+        "url": "https://www.baidu.com/s?wd=%E6%AF%8D%E4%BA%B2%E5%B0%86%E5%A4%A7%E4%B8%80%E5%84%BF%E5%AD%90%E7%94%9F%E6%B4%BB%E8%B4%B9%E4%BB%8E4000%E9%99%8D%E8%87%B32000&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "“搭子社交”受到不少年轻人青睐，但其中暗藏风险。有网友遭遇“喝酒搭子”带去酒吧高额消费、“旅游搭子”推荐高价旅行团后失约等情况。记者调查发现，部分人借结伴之名诱导消费，还有账号使用暗语招揽有偿陪伴，背后存在消费诈骗、擦边交易等灰色产业链。",
+        "summary": "北京一位母亲因大一儿子未考出技能证书，将月生活费从4000元降至2000元，称想让他学会规划、靠自己找到人生道路。儿子嫌“不够花”，双方商定先试两月按周发放。",
         "badge": "热搜",
-        "signal": "7,712,841 热度"
+        "signal": "7,713,200 热度"
       },
       {
-        "id": "github-advisory-ghsa-6fj4-rcr3-r7rr",
+        "id": "github-advisory-ghsa-74vm-87hj-r66f",
         "category": "security",
-        "title": "lopdf has a stack overflow via deeply nested PDF objects",
-        "url": "https://github.com/advisories/GHSA-6fj4-rcr3-r7rr",
+        "title": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
+        "url": "https://github.com/advisories/GHSA-74vm-87hj-r66f",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T19:55:39.000Z",
-        "summary": "`lopdf::Document::load_mem` (and the other `load*` entry points) parses nested PDF arrays and dictionaries with unbounded recursion. A small crafted PDF whose Catalog contains a deeply nested array (`/X [[[ … ]]]`, on the order of 10,000 l…",
-        "badge": "GHSA-6FJ4-RCR3-R7RR",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-16T19:58:46.000Z",
+        "summary": "## Summary `ValidateResponse` panics on a nil pointer when a spec declares a response header with `content` instead of `schema`. `doc.Validate()` accepts that document, so the crash comes from a spec the library just called valid. Same cla…",
+        "badge": "CVE-2026-100349",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-c9a6184923cc1a58",
@@ -273,44 +273,44 @@
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-openai-a60f4a701f887ae8",
+        "id": "ai-openai-32165ee6af8945a5",
         "category": "ai",
-        "title": "Teaching students to think and learn through questions",
-        "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
         "source": "OpenAI",
-        "publishedAt": "2026-10-15T13:00:00.000Z",
-        "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+        "publishedAt": "2026-10-15T19:00:00.000Z",
+        "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50123580",
+        "id": "hn-50122431",
         "category": "dev",
-        "title": "Flux 3 Image Klein: open weights, 5.6B parameters",
-        "url": "https://bfl.ai/blog/flux-3-image-klein",
+        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+        "url": "https://github.com/cobanov/PS5LM",
         "source": "Hacker News",
-        "publishedAt": "2026-10-16T19:47:13.000Z",
+        "publishedAt": "2026-10-16T18:32:35.000Z",
         "badge": "HN",
-        "signal": "30 分 · 6 评论"
+        "signal": "152 分 · 44 评论"
       },
       {
-        "id": "cn-it-8125f88b666ff796",
+        "id": "cn-it-73687d14be104a95",
         "category": "cn",
-        "title": "曝英特尔将推 8E + 4Xe 版 \"Panther Lake\" 锐炫 G 掌机处理器",
-        "url": "https://www.ithome.com/1/014/184.htm",
+        "title": "非磁吸 / 卡扣：苹果 79 美元 iPhone Duo 手机壳靠胶条固定",
+        "url": "https://www.ithome.com/1/014/199.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-16T15:05:02.000Z",
-        "summary": "IT之家 10 月 16 日消息，硬件诊断监控软件 HWiNFO 近日在其版本历史记录页面更新了即将到来的变化，包括“新增 Panter Lake-H 080”“增强对 Nova Lake-E 和 Razor Lake-S 的支持”。 IT之家注： \"Panter Lake\" 很明显是一个误输入，指的应该是 \"Panther Lake\"。 消息人士 @jaykihn0 今日对上述 \"Panther Lake-H 080\" 和 \"Nova Lake-E\" 进行了解释： \"Pa…",
+        "publishedAt": "2026-10-16T23:26:50.000Z",
+        "summary": "IT之家 10 月 17 日消息，科技媒体 MacRumors 昨日（10 月 16 日）发布博文，报道称适用于苹果首款折叠 iPhone Duo 的官方手机壳（售价为 79 美元 （IT之家注：现汇率约合 529.5 元人民币） ）并未采用常规的卡扣或磁吸方式固定， 从曝光的上手图片来看采用胶条方案 ，引发不少科技用户讨论。 这款保护壳由左右两部分组成，内侧边缘配有黏性胶条。用户需撕掉胶条保护膜，将两半分别贴合到 iPhone Duo 上，并按压确保牢固粘合。它采用聚碳酸…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-rxjv-24xq-76wc",
+        "id": "github-advisory-ghsa-6fj4-rcr3-r7rr",
         "category": "security",
-        "title": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
-        "url": "https://github.com/advisories/GHSA-rxjv-24xq-76wc",
+        "title": "lopdf has a stack overflow via deeply nested PDF objects",
+        "url": "https://github.com/advisories/GHSA-6fj4-rcr3-r7rr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T19:53:06.000Z",
-        "summary": "### Summary `IPCameraFrameGrabber` parses the `Content-Length` value from the multipart MJPEG HTTP stream returned by the configured IP camera without any bounds checking. A malicious or compromised camera endpoint - or any network attacke…",
-        "badge": "CVE-2026-102834",
+        "publishedAt": "2026-10-16T19:55:39.000Z",
+        "summary": "`lopdf::Document::load_mem` (and the other `load*` entry points) parses nested PDF arrays and dictionaries with unbounded recursion. A small crafted PDF whose Catalog contains a deeply nested array (`/X [[[ … ]]]`, on the order of 10,000 l…",
+        "badge": "GHSA-6FJ4-RCR3-R7RR",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "国家粮食和物资储备局局长刘焕鑫在今年9月国新办新闻发布会上介绍，我国人均粮食占有量超过500公斤，高于世界平均水平；全社会粮食库存消费比远高于联合国粮农组织提出的17%—18%国际粮食安全警戒线。中国粮稳得住，靠的不是运气，是技术、是制度、是每一个把地种好的人。",
         "badge": "热搜",
-        "signal": "7,619,412 热度"
+        "signal": "7,617,940 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76519",
@@ -364,14 +364,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50123356",
+        "id": "hn-50118981",
         "category": "dev",
-        "title": "The Fatal Flaw of 911",
-        "url": "https://www.themarshallproject.org/2026/10/16/911-book-policing-mental-health",
+        "title": "Waymo in Toronto",
+        "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-16T19:33:00.000Z",
+        "publishedAt": "2026-10-16T14:44:17.000Z",
         "badge": "HN",
-        "signal": "29 分 · 33 评论"
+        "signal": "240 分 · 339 评论"
       },
       {
         "id": "cn-item-1adce11d9f1a6f6d",
@@ -384,24 +384,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-h4mw-j7qp-8mwm",
+        "id": "github-advisory-ghsa-rxjv-24xq-76wc",
         "category": "security",
-        "title": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
-        "url": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm",
+        "title": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
+        "url": "https://github.com/advisories/GHSA-rxjv-24xq-76wc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T19:44:37.000Z",
-        "summary": "The Claude Agent SDK for Python passed the `resume` option to the Claude CLI without validation, allowing a value beginning with `-` to be interpreted as a separate CLI flag. An attacker who controlled the `resume` value could inject an `-…",
-        "badge": "CVE-2026-96620",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-10-16T19:53:06.000Z",
+        "summary": "### Summary `IPCameraFrameGrabber` parses the `Content-Length` value from the multipart MJPEG HTTP stream returned by the configured IP camera without any bounds checking. A malicious or compromised camera endpoint - or any network attacke…",
+        "badge": "CVE-2026-102834",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-94eadcab22c41e35",
+        "id": "ai-openai-a60f4a701f887ae8",
         "category": "ai",
-        "title": "Sullivan & Cromwell brings legal expertise into agreement review",
-        "url": "https://openai.com/index/sullivan-cromwell",
+        "title": "Teaching students to think and learn through questions",
+        "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
         "source": "OpenAI",
-        "publishedAt": "2026-10-15T00:00:00.000Z",
-        "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
+        "publishedAt": "2026-10-15T13:00:00.000Z",
+        "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
         "badge": "OpenAI"
       },
       {
@@ -416,13 +416,13 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-9a1586e1938901a5",
+        "id": "cn-it-12e7a7a6f8ba9a64",
         "category": "cn",
-        "title": "库克卸任苹果 CEO 后首次中国之行结束：期待下次再见",
-        "url": "https://www.ithome.com/1/014/183.htm",
+        "title": "曝英特尔 \"Nova Lake\" 处理器统一采用四位数字名称格式",
+        "url": "https://www.ithome.com/1/014/198.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-16T14:56:57.000Z",
-        "summary": "IT之家 10 月 16 日消息，苹果董事会执行主席、前 CEO 蒂姆 · 库克今日发文告别本次中国之行，并分享记录视频。值得一提的是，这也是库克卸任苹果 CEO 后首次中国之行。 IT之家附库克原文如下： 感谢中国的每一位朋友，让这次旅程再次充满难忘的回忆。期待下次再见！Many thanks to everyone in China for another unforgettable visit. Until next time! IT之家注意到，库克于 10 月 10…",
+        "publishedAt": "2026-10-16T23:22:57.000Z",
+        "summary": "IT之家 10 月 17 日消息，X 平台上的消息人士 @jaykihn0 北京时间今日调整爆料，表示 \"H\" 和无后缀的移动端 \"Nova Lake\" 也将使用桌面端和移动端 \"HX\" 变体的四位数字名称格式。 也就是说， 这些产品都可被称为“酷睿 Ultra 4000” 。 在同一世代产品线中使用相同的名称格式 可增强代际区分和识别度 ，提升 \"Nova Lake\" 产品命名的“家族感”。不过这也会加大与十余年前的“第四代酷睿 i”处理器的混淆。 相关阅读： 《 英特尔…",
         "badge": "IT之家"
       },
       {
@@ -446,35 +446,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50118981",
+        "id": "hn-50122034",
         "category": "dev",
-        "title": "Waymo in Toronto",
-        "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
+        "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
+        "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
         "source": "Hacker News",
-        "publishedAt": "2026-10-16T14:44:17.000Z",
+        "publishedAt": "2026-10-16T18:06:17.000Z",
         "badge": "HN",
-        "signal": "186 分 · 294 评论"
+        "signal": "140 分 · 124 评论"
       },
       {
-        "id": "cn-baidu-7accb29a8705f99b",
+        "id": "cn-baidu-a16e9962544e87a2",
         "category": "cn",
-        "title": "母亲将大一儿子生活费从4000降至2000",
-        "url": "https://www.baidu.com/s?wd=%E6%AF%8D%E4%BA%B2%E5%B0%86%E5%A4%A7%E4%B8%80%E5%84%BF%E5%AD%90%E7%94%9F%E6%B4%BB%E8%B4%B9%E4%BB%8E4000%E9%99%8D%E8%87%B32000&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "高市早苗向靖国神社献祭品",
+        "url": "https://www.baidu.com/s?wd=%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E5%90%91%E9%9D%96%E5%9B%BD%E7%A5%9E%E7%A4%BE%E7%8C%AE%E7%A5%AD%E5%93%81&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京一位母亲因大一儿子未考出技能证书，将月生活费从4000元降至2000元，称想让他学会规划、靠自己找到人生道路。儿子嫌“不够花”，双方商定先试两月按周发放。",
+        "summary": "当地时间10月17日，日本首相高市早苗以“内阁总理大臣”名义，向供奉二战甲级战犯的靖国神社供奉名为“真榊”的祭品。",
         "badge": "热搜",
-        "signal": "7,522,269 热度"
+        "signal": "7,523,613 热度"
       },
       {
-        "id": "github-advisory-ghsa-cv23-7vc5-jfh7",
+        "id": "github-advisory-ghsa-h4mw-j7qp-8mwm",
         "category": "security",
-        "title": "gomarkdown/markdown IsSafeURL panics on short URLs",
-        "url": "https://github.com/advisories/GHSA-cv23-7vc5-jfh7",
+        "title": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+        "url": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T15:41:39.000Z",
-        "summary": "## Summary IsSafeURL slices url[:nPath] before checking that len(url) >= nPath, so a URL shorter than a path prefix (0, 1 or 2 bytes) triggers a slice-bounds panic, and this is reached end to end when the html.Safelink hardening flag is en…",
-        "badge": "CVE-2026-102941",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-16T19:44:37.000Z",
+        "summary": "The Claude Agent SDK for Python passed the `resume` option to the Claude CLI without validation, allowing a value beginning with `-` to be interpreted as a separate CLI flag. An attacker who controlled the `resume` value could inject an `-…",
+        "badge": "CVE-2026-96620",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-ff0cf28c5d753057",
@@ -511,7 +511,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official",
         "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "language": "Python",
-        "stars": 40395,
+        "stars": 40507,
         "starsToday": 1552
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 51395,
+        "stars": 51475,
         "starsToday": 1158
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 281359,
+        "stars": 281469,
         "starsToday": 1057
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 53412,
+        "stars": 53475,
         "starsToday": 323
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/mksglu/context-mode",
         "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "language": "TypeScript",
-        "stars": 30171,
+        "stars": 30215,
         "starsToday": 449
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 75569,
+        "stars": 75615,
         "starsToday": 672
       },
       {
@@ -570,7 +570,7 @@
         "name": "android/skills",
         "url": "https://github.com/android/skills",
         "language": "Kotlin",
-        "stars": 8021,
+        "stars": 8052,
         "starsToday": 163
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 300603,
+        "stars": 300664,
         "starsToday": 973
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 11893,
+        "stars": 11930,
         "starsToday": 282
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 70862,
+        "stars": 71094,
         "starsToday": 2301
       }
     ],
-    "updatedAt": "2026-10-16T21:09:57.768Z"
+    "updatedAt": "2026-10-16T23:36:34.059Z"
   }
 }
