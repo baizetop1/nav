@@ -1,6 +1,6 @@
-import {regionBonus} from './exploration-data.js?v=0.88.0';
-import {GATHERING_REGIONS,gatheringProgress} from './gathering-data.js?v=0.88.0';
-import {HERO_SPECIALTIES} from './strategy-data.js?v=0.88.0';
+import {regionBonus} from './exploration-data.js?v=0.91.0';
+import {GATHERING_REGIONS,gatheringProgress} from './gathering-data.js?v=0.91.0';
+import {HERO_SPECIALTIES} from './strategy-data.js?v=0.91.0';
 export const IDLE_CYCLE=30*60000,IDLE_CAP=8*3600000;
 export const IDLE_ROUTES={
  mine:{name:'旧矿洞',kind:'special',job:'workshop',items:{scrap_iron:2,iron:1},use:'碎铁配木材可加工精铁；精铁用于练兵、强化与打造。'},
@@ -13,4 +13,4 @@ export const IDLE_ROUTES={
 export const idleUnlocked=(s,id)=>Object.hasOwn(IDLE_ROUTES,id)&&((['forest','water','mountain'].includes(id)||IDLE_ROUTES[id].kind==='special')&&[1,2,3].some(t=>(s.specialDungeons?.clears[id+'_'+t]||0)>0)||IDLE_ROUTES[id].kind==='journey'&&(s.realm?.journey?.best[id]||0)>0);
 export function idleRates(region,hero,s){const r=IDLE_ROUTES[region],p=gatheringProgress(s,region),items={...r.items};if(HERO_SPECIALTIES[hero]?.job===r.job)items[Object.keys(items)[0]]++;if(p.best>=2)items[Object.keys(items)[0]]++;const bonus=regionBonus(s,region);items[Object.keys(items)[0]]+=bonus.base;items[GATHERING_REGIONS[region].item]=(p.runs>=3?2:1)+bonus.special;return items;}
 export const idleHero=s=>s.idleDispatch?.mission?.hero;
-export const idleAvailable=(s,id)=>s.heroes[id]?.status==='owned'&&!s.team.includes(id)&&s.affairs?.mission?.hero!==id&&!s.realm?.squad?.team.includes(id)&&!s.realm?.trek?.team.includes(id)&&!s.expansion?.run?.team.includes(id)&&!s.progress.flags['camp_steward_'+id]&&!Object.values(s.frontier?.stations||{}).some(v=>v.worker==='hero:'+id)&&!Object.values(s.frontier?.posts||{}).some(v=>v.guard===id)&&idleHero(s)!==id;
+export const idleAvailable=(s,id,{ignoreClinic=false}={})=>(ignoreClinic||s.campWork?.clinic?.hero!==id)&&s.heroes[id]?.status==='owned'&&!s.team.includes(id)&&s.affairs?.mission?.hero!==id&&!s.realm?.squad?.team.includes(id)&&!s.realm?.trek?.team.includes(id)&&!s.expansion?.run?.team.includes(id)&&!s.progress.flags['camp_steward_'+id]&&!Object.values(s.frontier?.stations||{}).some(v=>v.worker==='hero:'+id)&&!Object.values(s.frontier?.posts||{}).some(v=>v.guard===id)&&idleHero(s)!==id;

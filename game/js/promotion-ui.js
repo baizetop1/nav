@@ -1,5 +1,5 @@
-import {QUALITIES,promotionQuote} from './quality.js?v=0.88.0';
-import {SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.88.0';
+import {QUALITIES,promotionQuote} from './quality.js?v=0.91.0';
+import {SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.91.0';
 const paths=[
  '<rect x="8" y="8" width="40" height="40" rx="9"/><path d="M13 20v-7h7M36 13h7v7M43 36v7h-7M20 43h-7v-7"/>',
  '<path d="M28 4L48 16v24L28 52 8 40V16z"/><path d="M14 28c0-8 6-15 14-18M42 28c0 8-6 15-14 18"/>',

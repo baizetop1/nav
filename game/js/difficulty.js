@@ -1,10 +1,10 @@
-import {CHAPTER_MISSIONS} from './volume-three-data.js?v=0.88.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS} from './special-dungeons-data.js?v=0.88.0';
-import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.88.0';
-import {POSTS} from './frontier-data.js?v=0.88.0';
-import {ELITES} from './elites.js?v=0.88.0';
-import {JOURNEY_TIERS} from './journey-data.js?v=0.88.0';
-import {REGIONS} from './realm-data.js?v=0.88.0';
+import {CHAPTER_MISSIONS} from './volume-three-data.js?v=0.91.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS} from './special-dungeons-data.js?v=0.91.0';
+import {RESOURCE_ROUTES} from './resource-dungeons-data.js?v=0.91.0';
+import {POSTS} from './frontier-data.js?v=0.91.0';
+import {ELITES} from './elites.js?v=0.91.0';
+import {JOURNEY_TIERS} from './journey-data.js?v=0.91.0';
+import {REGIONS} from './realm-data.js?v=0.91.0';
 
 // Fixed encounter levels: a player's upgrades never raise a previously visited enemy.
 // Endurance, striking power and armor grow separately; speed stays readable.

@@ -1,3 +1,4 @@
+import {handleCampAffairs} from './camp-affairs-ui.js?v=0.91.0';
 // Mobile presentation only: keep selected work visible and open long explanations separately.
 const projections=new WeakMap(),decks=new WeakMap(),choices=new Map();let activeDetail=null,releaseDetail=()=>{};
 const mobile=()=>matchMedia('(max-width:900px)').matches;
@@ -82,12 +83,15 @@ export function prepareScreenLayout(main){
 }
 export function installScreenLayout({release=()=>{}}={}){
  releaseDetail=release;
+ document.addEventListener('keydown',event=>handleCampAffairs(event));
  document.addEventListener('click',event=>{
+  if(handleCampAffairs(event))return;
   if(activeDetail&&event.target.closest('#screen-detail button[data-command],#screen-detail button[data-view],#screen-detail [data-guide-locate],#screen-detail [data-guide-toggle]')){closeDetail(false);return;}
   const summary=event.target.closest('summary'),source=summary?.parentElement;
   if(!mobile()||!source||source.tagName!=='DETAILS'||!source.closest('#main')||source.hasAttribute('data-inline-details'))return;
   event.preventDefault();if(activeDetail)return;
   const dialog=document.createElement('dialog');dialog.id='screen-detail';dialog.className='compact-dialog screen-detail';dialog.setAttribute('aria-labelledby','screen-detail-title');
+  if(source.dataset.fold==='camp-all-functions'){dialog.classList.add('camp-affairs-dialog');dialog.dataset.dialogLayout='grid';}
   const header=document.createElement('header');header.className='dialog-header';const heading=document.createElement('h2');heading.id='screen-detail-title';heading.tabIndex=-1;heading.textContent=text(summary);header.append(heading);
   const close=document.createElement('button');close.type='button';close.className='secondary';close.textContent='×';close.setAttribute('aria-label','关闭详情');header.append(close);
   const body=document.createElement('div');body.className='dialog-body';

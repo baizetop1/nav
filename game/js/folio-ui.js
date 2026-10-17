@@ -1,20 +1,21 @@
-import {companionSpec} from './region-companions-data.js?v=0.88.0';
-import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.88.0';
-import {heroTier,tierBadge} from './hero-tiers.js?v=0.88.0';
-import {qualityEmblem} from './promotion-ui.js?v=0.88.0';
-import {explorationHome} from './exploration-goals-ui.js?v=0.88.0';
-import {specialPlan} from './special-dungeons.js?v=0.88.0';
-import {afterBattleNext} from './opening-ui.js?v=0.88.0';
-import {isExternal,isWanderer} from './roster.js?v=0.88.0';
-import {HERO_ROLES} from './hero-roles.js?v=0.88.0';
-import {attributes} from './hero.js?v=0.88.0';
-import {experienceToNext,ATTRIBUTE_NAMES} from './progression.js?v=0.88.0';
-import {qualityOf,QUALITIES} from './quality.js?v=0.88.0';
-import {CORPS} from './corps-data.js?v=0.88.0';
-import {storyObjective} from './story-guide.js?v=0.88.0';
-import {journeyNextGoal} from './journey-goals-ui.js?v=0.88.0';
-import {campNotices} from './camp-overview.js?v=0.88.0';
-import {icon} from './icons.js?v=0.88.0';
+import {campAffairs} from './camp-affairs-ui.js?v=0.91.0';
+import {companionSpec} from './region-companions-data.js?v=0.91.0';
+import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.91.0';
+import {heroTier,tierBadge} from './hero-tiers.js?v=0.91.0';
+import {qualityEmblem} from './promotion-ui.js?v=0.91.0';
+import {explorationHome} from './exploration-goals-ui.js?v=0.91.0';
+import {specialPlan} from './special-dungeons.js?v=0.91.0';
+import {afterBattleNext} from './opening-ui.js?v=0.91.0';
+import {isExternal,isWanderer} from './roster.js?v=0.91.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.91.0';
+import {attributes} from './hero.js?v=0.91.0';
+import {experienceToNext,ATTRIBUTE_NAMES} from './progression.js?v=0.91.0';
+import {qualityOf,QUALITIES} from './quality.js?v=0.91.0';
+import {CORPS} from './corps-data.js?v=0.91.0';
+import {storyObjective} from './story-guide.js?v=0.91.0';
+import {journeyNextGoal} from './journey-goals-ui.js?v=0.91.0';
+import {campNotices} from './camp-overview.js?v=0.91.0';
+import {icon} from './icons.js?v=0.91.0';
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 // Shortcuts grow with story/camp progress; all existing pages remain accessible.
 export function campShortcuts(s){
@@ -28,7 +29,7 @@ export function campDashboard(s,d,esc,btn,more){
  const label=s.progress.flags.volume_twelve_complete?'查看结局与后记':story.map&&story.map!==s.location?'前往'+destination:story.map?'继续主线':'前往'+destination;
  const lead='<section class="folio-next" data-mainline aria-label="当前主线目标"><span class="folio-eyebrow">主线 · 第 '+story.chapter+' 卷 · '+story.done+'/'+story.total+'</span><h2>'+esc(story.title)+'</h2><p><b>'+esc(destination)+'</b> · '+esc(story.reason||story.detail)+'</p>'+btn(label,{type:'ui_storyResume'},'primary')+'</section>';
  const support='<section class="folio-story camp-support" aria-label="出行准备建议"><div><small>出行准备 · 可选</small><strong>'+esc(g.title)+'</strong></div>'+btn(g.label||'前往',g.command,'secondary')+(g.title==='体力不足'&&!specialPlan(s,'mine',1).reason?btn('不耗体力寻宝',{type:'ui_specialView',id:'mine',tier:1},'secondary'):'')+'</section>';
- return '<div class="camp-dashboard">'+explorationHome(s,d,esc,btn)+lead+'<nav class="folio-shortcuts" aria-label="常用功能">'+campShortcuts(s).map(([name,view,id,symbol])=>'<button type="button" class="secondary" data-command="'+esc(JSON.stringify({type:'ui_section',view,id,...(id==='life'?{lifeTab:'return'}:{})}))+'">'+icon(symbol)+'<span>'+name+(id==='duties'?'<small>5 体力</small>':'')+'</span></button>').join('')+'</nav>'+'<details class="folio-more" data-fold="camp-all-functions"><summary>全部寨务'+(notices.length?' · '+notices.length+' 项待办':'')+'</summary>'+support+'<section class="folio-story grain-road-entry"><div><small>山寨战役</small><strong>'+ (s.grainRoad?.won?'粮路已通 · 安排后续营建':'打通粮路 · 解决寨中用粮')+'</strong></div>'+btn('查看粮路',{type:'ui_section',view:'camp',id:'grainRoad'},'secondary')+'</section>'+(notices.length?'<div class="actions">'+notices.slice(0,3).map(n=>n.view?'<button type="button" class="secondary" data-view="'+n.view+'">'+esc(n.label)+'</button>':btn(n.label,{type:'ui_campJump',id:n.target},'secondary')).join('')+'</div>':'')+more+'</details></div>';
+ return '<div class="camp-dashboard">'+explorationHome(s,d,esc,btn)+lead+'<nav class="folio-shortcuts" aria-label="常用功能">'+campShortcuts(s).map(([name,view,id,symbol])=>'<button type="button" class="secondary" data-command="'+esc(JSON.stringify({type:'ui_section',view,id,...(id==='life'?{lifeTab:'return'}:{})}))+'">'+icon(symbol)+'<span>'+name+(id==='duties'?'<small>5 体力</small>':'')+'</span></button>').join('')+'</nav>'+'<details class="folio-more" data-fold="camp-all-functions"><summary id="camp-all-functions-summary">全部寨务'+(notices.length?' · '+notices.length+' 项待办':'')+'</summary>'+campAffairs(notices,esc,btn,support)+'</details></div>';
 }
 export function heroDossier(s,d,h,esc,btn,portrait,invitation,requested='attributes'){
  const v=s.heroes[h.id],owned=v.status==='owned',a=owned?attributes(s,h.id,d):null,q=QUALITIES[qualityOf(v)],role=HERO_ROLES[h.id],aptitude=heroAptitude(h),full=v.level>=d.config.balance.heroLevelCap,tab=['attributes','ability','develop'].includes(requested)?requested:'attributes',identity=isWanderer(h)?'江湖散人 · 不占正册座次':isExternal(h)?'外传人物 · 不占正册座次':h.starSign+' · 第 '+h.seat+' 席';

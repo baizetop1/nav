@@ -1,6 +1,6 @@
-import {MINE_COMPANION_TASKS,mineCompanionTask} from './mine-companion-data.js?v=0.88.0';
-import {knowHero,ownHero} from './hero.js?v=0.88.0';
-import {requireRule,journal} from './utils.js?v=0.88.0';
+import {MINE_COMPANION_TASKS,mineCompanionTask} from './mine-companion-data.js?v=0.91.0';
+import {knowHero,ownHero} from './hero.js?v=0.91.0';
+import {requireRule,journal} from './utils.js?v=0.91.0';
 export function mineCompanionAction(s,d,id){
  const reason=mineCompanionTask(s,id);requireRule(!reason,reason);
  s.exploration.flags.push(MINE_COMPANION_TASKS[id].flag);

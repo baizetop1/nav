@@ -1,4 +1,4 @@
-import {heroAptitude} from './hero-aptitude.js?v=0.88.0';
+import {heroAptitude} from './hero-aptitude.js?v=0.91.0';
 // Collection tier is separate from cultivation quality and historical aptitude.
 export const HERO_TIERS={
  canonical:{id:'canonical',name:'正册',rarity:5,power:1.2,description:'梁山一百零八将'},

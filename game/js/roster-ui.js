@@ -1,17 +1,18 @@
-import {companionSpec} from './region-companions-data.js?v=0.88.0';
-import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.88.0';
-import {heroTier,tierBadge} from './hero-tiers.js?v=0.88.0';
-import {qualityEmblem,qualitySteps,promotionCorePanel} from './promotion-ui.js?v=0.88.0';
-import {recruitmentBanner} from './recruitment-banner.js?v=0.88.0';
-import {EXPLORATION_HERO_REGIONS} from './exploration-data.js?v=0.88.0';
-import {HERO_ROLES} from './hero-roles.js?v=0.88.0';
-import { promotionPreview } from './growth-preview.js?v=0.88.0';
-import { deployedTroops } from './logistics.js?v=0.88.0';
-import { isExternal, isWanderer, externalInvitation, canonicalHeroes } from './roster.js?v=0.88.0';
-import { qualityTechnique } from './development-ui.js?v=0.88.0';
-import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.88.0';
-import { portrait } from './camp-ui.js?v=0.88.0';
-import { dungeonEntry } from './map.js?v=0.88.0';
+import {dungeonArt} from './dungeon-art-ui.js?v=0.91.0';
+import {companionSpec} from './region-companions-data.js?v=0.91.0';
+import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.91.0';
+import {heroTier,tierBadge} from './hero-tiers.js?v=0.91.0';
+import {qualityEmblem,qualitySteps,promotionCorePanel} from './promotion-ui.js?v=0.91.0';
+import {recruitmentBanner} from './recruitment-banner.js?v=0.91.0';
+import {EXPLORATION_HERO_REGIONS} from './exploration-data.js?v=0.91.0';
+import {HERO_ROLES} from './hero-roles.js?v=0.91.0';
+import { promotionPreview } from './growth-preview.js?v=0.91.0';
+import { deployedTroops } from './logistics.js?v=0.91.0';
+import { isExternal, isWanderer, externalInvitation, canonicalHeroes } from './roster.js?v=0.91.0';
+import { qualityTechnique } from './development-ui.js?v=0.91.0';
+import { qualityOf, QUALITIES, promotionQuote } from './quality.js?v=0.91.0';
+import { portrait } from './camp-ui.js?v=0.91.0';
+import { dungeonEntry } from './map.js?v=0.91.0';
 
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 const statuses={unknown:'未闻',heard:'听闻',known:'相识',available:'可招贤',owned:'已入寨'};
@@ -36,7 +37,7 @@ export function invitation(s,h,btn,d){
   return region+recruitment;
 }
 export function qualityTrials(s,d,btn){
-  return `<details class="fold-section" data-fold="quality-trials"><summary>升品试炼 · 灵蕴 ${s.inventory.spirit_essence||0} · 登仙印 ${s.inventory.immortal_seal||0}</summary><p class="note">可从这里直接出征；使用寨子中的带兵、独行与军令配置。通用辅料与个人核心数量见对应人物的品阶突破页，资质仅影响升品所需碎银。仅胜利结算获得材料，每处每日 3 次。</p><div class="grid-two">${['spirit_trial','immortal_trial'].map(id=>{const x=d.by.dungeons[id],r=d.by.rewards[x.reward],hall=1+Math.floor(x.level/10),c=s.camp,n=deployedTroops(s);return `<article class="card"><h3>${x.name}</h3><p>${x.description}</p><p class="note">聚义厅 ${hall}级 · 队中一人 ${x.level}级 · 体力 ${x.cost}${c?.mode==='army'?' · 粮草 '+Math.ceil(n/2):''} · 今日 ${s.daily.dungeons[id]||0}/3</p><p class="note">敌军：${x.enemy.map(e=>d.by.enemies[e].name).join('、')}。${c?.mode==='army'?n+' 名乡勇随行':'英雄独行'}。</p><p class="meta">胜利所得：${Object.entries(r.guaranteed).map(([k,v])=>d.by.items[k].name+' ×'+v).join(' · ')} · 碎银 ${r.silver} · 威望 ${r.prestige} · 功勋 ${r.merit} · 每位出阵英雄历练 ${r.exp}</p>${btn('挑战'+x.name,{type:'dungeon',id},'secondary',!dungeonEntry(s,x)||!s.team.length||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||s.player.stamina<x.cost||(s.daily.dungeons[id]||0)>=3||(c?.mode==='army'&&(!n||c.food<Math.ceil(n/2))))}</article>`;}).join('')}</div></details>`;
+  return `<details class="fold-section" data-fold="quality-trials"><summary>升品试炼 · 灵蕴 ${s.inventory.spirit_essence||0} · 登仙印 ${s.inventory.immortal_seal||0}</summary><p class="note">可从这里直接出征；使用寨子中的带兵、独行与军令配置。通用辅料与个人核心数量见对应人物的品阶突破页，资质仅影响升品所需碎银。仅胜利结算获得材料，每处每日 3 次。</p><div class="grid-two">${['spirit_trial','immortal_trial'].map(id=>{const x=d.by.dungeons[id],r=d.by.rewards[x.reward],hall=1+Math.floor(x.level/10),c=s.camp,n=deployedTroops(s);return `<article class="card"><h3 class="dungeon-title">${dungeonArt('story',x.id,{map:x.map})}<span>${x.name}</span></h3><p>${x.description}</p><p class="note">聚义厅 ${hall}级 · 队中一人 ${x.level}级 · 体力 ${x.cost}${c?.mode==='army'?' · 粮草 '+Math.ceil(n/2):''} · 今日 ${s.daily.dungeons[id]||0}/3</p><p class="note">敌军：${x.enemy.map(e=>d.by.enemies[e].name).join('、')}。${c?.mode==='army'?n+' 名乡勇随行':'英雄独行'}。</p><p class="meta">胜利所得：${Object.entries(r.guaranteed).map(([k,v])=>d.by.items[k].name+' ×'+v).join(' · ')} · 碎银 ${r.silver} · 威望 ${r.prestige} · 功勋 ${r.merit} · 每位出阵英雄历练 ${r.exp}</p>${btn('挑战'+x.name,{type:'dungeon',id},'secondary',!dungeonEntry(s,x)||!s.team.length||Math.max(...s.team.map(id=>s.heroes[id].level))<x.level||s.player.stamina<x.cost||(s.daily.dungeons[id]||0)>=3||(c?.mode==='army'&&(!n||c.food<Math.ceil(n/2))))}</article>`;}).join('')}</div></details>`;
 }
 export function rosterBoard(s,d,filter={},esc,btn){
  const r=rosterSelection(s,d,filter),owned=d.heroes.filter(h=>s.heroes[h.id].status==='owned');

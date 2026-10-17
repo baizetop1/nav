@@ -1,5 +1,6 @@
-import { hasOwn, requireRule, journal } from './utils.js?v=0.88.0';
-import { grant } from './item.js?v=0.88.0';
+import {heroAbsence,heroPosting} from './hero-availability.js?v=0.91.0';
+import { hasOwn, requireRule, journal } from './utils.js?v=0.91.0';
+import { grant } from './item.js?v=0.91.0';
 export const AFFAIRS={
  caravan:{name:'商队来访',text:'行商带来一批铁料布匹，可以采购，也可派人护送换取酬谢。',cost:{silver:150},reward:{items:{iron:4,cloth:4}},dispatch:{items:{iron:3,cloth:3}}},
  refugees:{name:'流民投奔',text:'山下乡人请求安顿。开仓接济，或请一位好汉护送他们进寨。',cost:{food:30},reward:{prestige:15,items:{exp_pill:2}},dispatch:{prestige:10,items:{exp_pill:2}}},
@@ -18,7 +19,7 @@ export function affairAction(s,d,a){const f=s.affairs;requireRule(f,'暂无待�
   affairReward(s,m.reward,d);f.resolved++;f.pending=null;journal(s,'【寨事办妥】'+m.name+'，物资与酬谢已结清。');return;
  }
  requireRule(a.choice==='dispatch','无效的寨事选择。');requireRule(s.heroes[a.hero]?.status==='owned'&&s.heroes[a.hero].level>=10,'外派需要一位已入寨且达到 10 级的好汉。');
- requireRule(!s.progress.flags['camp_steward_'+a.hero]&&!Object.values(s.frontier?.stations||{}).some(p=>p.worker==='hero:'+a.hero)&&!Object.values(s.frontier?.posts||{}).some(p=>p.guard===a.hero),'此人正在任职或驻守，请先撤下原职。');requireRule(s.camp.food>=10,'外派需要粮草 10。');
+ requireRule(!heroAbsence(s,a.hero),'此人正在外出，请先接回。');requireRule(!heroPosting(s,a.hero),'此人已有寨内任职，请先撤下原职。');requireRule(s.camp.food>=10,'外派需要粮草 10。');
  s.camp.food-=10;s.team=s.team.filter(id=>id!==a.hero);f.mission={kind:p.kind,hero:a.hero,readyAt:s.clock+600000};f.pending=null;journal(s,'【外派】'+d.by.heroes[a.hero].name+'暂离阵容，10 分钟后回寨领取酬谢。');
 }
 export function finishAffairBattle(s,b,d){if(!b.context.affair||b.outcome!=='victory')return;const f=s.affairs;if(f?.pending?.kind==='raiders'&&f.pending.day===b.context.affair){affairReward(s,AFFAIRS.raiders.battle,d);f.pending=null;f.resolved++;journal(s,'【寨事亲征】匪患平息，乡人额外酬谢已入库。');}}

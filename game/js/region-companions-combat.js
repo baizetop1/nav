@@ -1,4 +1,4 @@
-import {companionByRoute} from './region-companions-data.js?v=0.88.0';
+import {companionByRoute} from './region-companions-data.js?v=0.91.0';
 const alive=u=>u?.hp>0;
 const active=(b,u,id)=>u.statuses.some(s=>s.id===id&&s.expiresAt>b.elapsed);
 export function prepareCompanionBattle(b,addStatus){const r=companionByRoute(b.context.route);if(!r)return;b.enemy[0].boss={kind:'chief',readyAt:6000,pendingAt:0,phase:0};if(r.id==='zhangshun'){['拦船头目','船头守卫','短刀水匪','持钩水匪'].forEach((name,i)=>b.enemy[i].name=name);addStatus(b.enemy.at(-1),{id:'stun',value:1,turns:2},0);b.log.push('【张顺接应】船缆已松，持钩水匪开场眩晕四秒。');}if(r.id==='jindajian'){b.enemy[0].name='藏碑头目';b.enemy.at(-1).name='护样人';}if(r.id==='zhugui'){b.enemy[0].name='拦路头目';b.enemy[1].name='假接应哨手';b.enemy.at(-1).name='车尾伏兵';addStatus(b.enemy[1],{id:'stun',value:1,turns:2},0);b.log.push('【时迁接应】哨手被换牌耽搁，开场眩晕四秒。');}}

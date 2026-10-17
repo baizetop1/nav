@@ -1,8 +1,8 @@
-import {companionSpec} from './region-companions-data.js?v=0.88.0';
-import {PROMOTION_ITEMS,PROMOTION_CORE_RATES} from './promotion-data.js?v=0.88.0';
-import {promotionDropPool,promotionDropRate} from './promotion-drops.js?v=0.88.0';
-import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialPlan} from './special-dungeons.js?v=0.88.0';
-import {dungeonEntry} from './map.js?v=0.88.0';
+import {companionSpec} from './region-companions-data.js?v=0.91.0';
+import {PROMOTION_ITEMS,PROMOTION_CORE_RATES} from './promotion-data.js?v=0.91.0';
+import {promotionDropPool,promotionDropRate} from './promotion-drops.js?v=0.91.0';
+import {SPECIAL_DUNGEONS,SPECIAL_TIERS,specialPlan} from './special-dungeons.js?v=0.91.0';
+import {dungeonEntry} from './map.js?v=0.91.0';
 const percent=n=>Number((n*100).toFixed(2))+'%';
 export function promotionCoreSourceRows(s,d,itemId){
  const core=PROMOTION_ITEMS[itemId];if(!core)return [];

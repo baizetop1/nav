@@ -1,25 +1,26 @@
-import {replayChallengePanel} from './replay-challenges.js?v=0.88.0';
-import {CHRONICLES} from './chronicle-data.js?v=0.88.0';
-import {ROUTE_PRIZES,routeBalance} from './journey-rewards.js?v=0.88.0';
-import {JOURNEYS,JOURNEY_TIERS,BOONS} from './journey-data.js?v=0.88.0';
-import {dialogTabs,dialogPanel} from './dialog-pages.js?v=0.88.0';
-import {COMBOS,PERSONAL} from './expansion-data.js?v=0.88.0';
-import {RELICS,CHALLENGES} from './realm-data.js?v=0.88.0';
-import { totalExperience } from './progression.js?v=0.88.0';
-import { CORPS, corpsRank } from './development.js?v=0.88.0';
-import { HELPERS, hasHelper } from './helpers.js?v=0.88.0';
-import { qualityOf, QUALITIES } from './quality.js?v=0.88.0';
+import {itemArt} from './item-art-ui.js?v=0.91.0';
+import {replayChallengePanel} from './replay-challenges.js?v=0.91.0';
+import {CHRONICLES} from './chronicle-data.js?v=0.91.0';
+import {ROUTE_PRIZES,routeBalance} from './journey-rewards.js?v=0.91.0';
+import {JOURNEYS,JOURNEY_TIERS,BOONS} from './journey-data.js?v=0.91.0';
+import {dialogTabs,dialogPanel} from './dialog-pages.js?v=0.91.0';
+import {COMBOS,PERSONAL} from './expansion-data.js?v=0.91.0';
+import {RELICS,CHALLENGES} from './realm-data.js?v=0.91.0';
+import { totalExperience } from './progression.js?v=0.91.0';
+import { CORPS, corpsRank } from './development.js?v=0.91.0';
+import { HELPERS, hasHelper } from './helpers.js?v=0.91.0';
+import { qualityOf, QUALITIES } from './quality.js?v=0.91.0';
 // Derive the visible receipt from a completed transaction, never from a second roll.
 export function gains(before,after,data){
-  const rows=[];const add=(name,n)=>{if(n>0)rows.push({name,amount:n});};
+  const rows=[];const add=(name,n,art='')=>{if(n>0)rows.push({name,amount:n,...(art?{art}:{})});};
   for(const [id,r]of Object.entries(after.realm?.journey?.chronicle?.routes||{})){const old=before.realm?.journey?.chronicle?.routes[id];add(CHRONICLES[id].project+' · 工程',r.choices.length-(old?.choices.length||0));add(data.by.equipments[CHRONICLES[id].equipment].name+' · 图谱淬炼',r.forged-(old?.forged||0));if(r.patrol>(old?.patrol||0))add(JOURNEYS[id].name+' · 巡守第 '+r.patrol+' 阶',1);}
   for(const [key,name] of [['points','荐贤积分'],['tickets','迎贤荐书']])add(name,(after.recruit.support?.[key]||0)-(before.recruit.support?.[key]||0));
-  for(const [id,name] of Object.entries({silver:'碎银',merit:'功勋',prestige:'威望',stamina:'体力'}))add(name,after.player[id]-before.player[id]);
-  for(const [id,n] of Object.entries(after.inventory))add(data.by.items[id]?.name||id,n-(before.inventory[id]||0));
-  for(const [id,name] of Object.entries({wood:'木材',food:'粮草',troops:'乡勇归队'}))add(name,(after.camp?.[id]||0)-(before.camp?.[id]||0));
+  for(const [id,name] of Object.entries({silver:'碎银',merit:'功勋',prestige:'威望',stamina:'体力'}))add(name,after.player[id]-before.player[id],id==='silver'?itemArt(id):'');
+  for(const [id,n] of Object.entries(after.inventory))add(data.by.items[id]?.name||id,n-(before.inventory[id]||0),itemArt(data.by.items[id]||id));
+  for(const [id,name] of Object.entries({wood:'木材',food:'粮草',troops:'乡勇归队'}))add(name,(after.camp?.[id]||0)-(before.camp?.[id]||0),['wood','food'].includes(id)?itemArt(id):'');
   for(const h of data.heroes){const a=after.heroes[h.id],b=before.heroes[h.id];if(a.status==='owned'&&b.status!=='owned')rows.push({name:h.name+' · 正式入寨',amount:1});else if(a.level>b.level)rows.push({name:h.name+' · 升至 '+a.level+'级',amount:a.level-b.level});}
   for(const h of data.heroes){const a=after.heroes[h.id],b=before.heroes[h.id];if(a.status==='owned'&&b.status==='owned'){add(h.name+' · 历练',totalExperience(a)-totalExperience(b));}}
-  for(const e of after.equipment)if(!before.equipment.some(old=>old.uid===e.uid))rows.push({name:data.by.equipments[e.item].quality+' · '+data.by.equipments[e.item].name,amount:1});
+  for(const e of after.equipment)if(!before.equipment.some(old=>old.uid===e.uid))rows.push({name:data.by.equipments[e.item].quality+' · '+data.by.equipments[e.item].name,amount:1,art:itemArt(data.by.equipments[e.item],{kind:'equipment'})});
   for(const [id,m] of Object.entries(after.growth?.mounts||{}))if(!before.growth?.mounts[id])rows.push({name:data.by.heroes[id].mount.name+' · 坐骑入厩',amount:1});
   for(const [id,m] of Object.entries(after.growth?.mounts||{})){const old=before.growth?.mounts[id];if(old){add(data.by.heroes[id].mount.name+' · 亲密',m.intimacy-old.intimacy);if(m.rank>old.rank)rows.push({name:data.by.heroes[id].mount.name+' · 升至 '+m.rank+' 阶',amount:m.rank-old.rank});}}
   for(const [id,level] of Object.entries(after.growth?.skills||{}))add(data.by.skills[id].name+' · 招式等级',level-(before.growth?.skills[id]||1));
@@ -35,7 +36,7 @@ export function gains(before,after,data){
 export function rewardDialog(rows,esc,{saved=true,emptyVictory=false,dungeonVictory=false,battleSummary=null,review='',growth='',loot='',next=null,lesson=false,replay=false,initialTab='rewards',heading=''}={}){
  const pages=[];for(let i=0;i<Math.max(1,rows.length);i+=8)pages.push(rows.slice(i,i+8));
  const receipt=replay?'<section class="battle-receipt"><b>战役回顾结束</b><p>成绩已记录，正式剧情与奖励保持不变。</p></section>':lesson?'<section class="battle-receipt"><b>'+(battleSummary?.outcome==='victory'?'演武目标完成':'本次演武已结束')+'</b><p class="note">演武不耗物资、不计战绩，也不发战利品。</p></section>':battleSummary?'<section class="battle-receipt"><b>'+esc(battleSummary.outcome==='victory'?(battleSummary.context?.id?.startsWith('journey_')?'此战获胜':'得胜回寨'):'已收兵')+'</b>'+(battleSummary.troops?'<div class="receipt-counts">'+[['随行',battleSummary.troops],['归营',battleSummary.troops-battleSummary.wounded-(battleSummary.fallen||0)],['伤兵',battleSummary.wounded],['阵亡',battleSummary.fallen||0]].map(([k,v])=>'<span>'+k+' <b>'+v+'</b></span>').join('')+'</div><p class="note">伤兵可治疗；阵亡须重新募兵，不能复活。</p>':'<p class="note">英雄作战，无随行乡勇。</p>')+'</section>':'';
- const items=pages.map((page,i)=>'<div class="reward-grid" data-reward-sheet="'+i+'" '+(i?'hidden':'')+'>'+ (page.map(r=>'<article><span>'+esc(r.name)+'</span><b>+'+r.amount+'</b></article>').join('')||'<p>本次没有新增物品。</p>')+'</div>').join('')+(pages.length>1?'<nav class="reward-pager" aria-label="收获翻页"><button type="button" data-reward-page="-1" disabled>上一页</button><span data-reward-counter aria-live="polite">1 / '+pages.length+'</span><button type="button" data-reward-page="1">下一页</button></nav>':'');
+ const items=pages.map((page,i)=>'<div class="reward-grid" data-reward-sheet="'+i+'" '+(i?'hidden':'')+'>'+ (page.map(r=>'<article><span>'+(r.art||'')+esc(r.name)+'</span><b>+'+r.amount+'</b></article>').join('')||'<p>本次没有新增物品。</p>')+'</div>').join('')+(pages.length>1?'<nav class="reward-pager" aria-label="收获翻页"><button type="button" data-reward-page="-1" disabled>上一页</button><span data-reward-counter aria-live="polite">1 / '+pages.length+'</span><button type="button" data-reward-page="1">下一页</button></nav>':'');
  const body=receipt+replayChallengePanel(battleSummary)+(lesson||replay?'':items)+(dungeonVictory?'<p class="note">坐骑契各有 20% 掉率，无保底。</p>':'');
  const tabs={rewards:lesson?'演武结果':'本次收获',...(growth?{growth:'成长变化'}:{}),...(loot?{loot:'掉落明细'}:{}),...(review?{review:'战斗复盘'}:{})},tabbed=Object.keys(tabs).length>1;
  const selected=Object.hasOwn(tabs,initialTab)?initialTab:'rewards';

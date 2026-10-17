@@ -1,8 +1,9 @@
-import { stewardshipBonus } from './stewardship.js?v=0.88.0';
-import { helperBonus } from './helpers.js?v=0.88.0';
-import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.88.0';
-import { gainExp } from './hero.js?v=0.88.0';
-import { grant, newEquipment } from './item.js?v=0.88.0';
+import {heroAbsence,heroPosting} from './hero-availability.js?v=0.91.0';
+import { stewardshipBonus } from './stewardship.js?v=0.91.0';
+import { helperBonus } from './helpers.js?v=0.91.0';
+import { hasOwn, requireRule, journal, random, pick } from './utils.js?v=0.91.0';
+import { gainExp } from './hero.js?v=0.91.0';
+import { grant, newEquipment } from './item.js?v=0.91.0';
 
 export const DUTIES={
   balanced:{name:'各司其职',description:'木粮银均衡生产。'},
@@ -37,6 +38,8 @@ export const goalReady=(s,g)=>g.requirements.every(([,test])=>test(s));
 export function developmentAction(s,d,a){
   if(a.type==='campSteward'){
     requireRule(a.id===null||s.heroes[a.id]?.status==='owned','只能委派已入寨的好汉。');
+    requireRule(a.id===null||!heroAbsence(s,a.id),'这位好汉仍在外派或交战，归寨后才能任职。');
+    requireRule(a.id===null||!heroPosting(s,a.id,'steward'),'这位好汉已有岗位，请先卸下原职。');
     for(const id of Object.keys(s.heroes))delete s.progress.flags['camp_steward_'+id];
     if(a.id)s.progress.flags['camp_steward_'+a.id]=true;
     journal(s,a.id?`【寨务主事】${d.by.heroes[a.id].name}领命。经营时擅长物资增产 ${stewardshipBonus(s,a.id)}%，本人获得 25 历练；仍可随队出征。`:'寨务改由乡人主持。');

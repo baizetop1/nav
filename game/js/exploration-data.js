@@ -1,9 +1,9 @@
-import {MINE_COMPANION_FLAGS,mineCompanionGoal} from './mine-companion-data.js?v=0.88.0';
-import {mountainHas} from './mountain-data.js?v=0.88.0';
-import {waterHas} from './water-data.js?v=0.88.0';
-import {forestHas} from './forest-data.js?v=0.88.0';
-import {ruinsHas} from './ruins-data.js?v=0.88.0';
-import {marshHas} from './marsh-data.js?v=0.88.0';
+import {MINE_COMPANION_FLAGS,mineCompanionGoal} from './mine-companion-data.js?v=0.91.0';
+import {mountainHas} from './mountain-data.js?v=0.91.0';
+import {waterHas} from './water-data.js?v=0.91.0';
+import {forestHas} from './forest-data.js?v=0.91.0';
+import {ruinsHas} from './ruins-data.js?v=0.91.0';
+import {marshHas} from './marsh-data.js?v=0.91.0';
 export const REGION_NODES={
  entrance:{name:'矿口',links:['rail','chamber'],text:'旧矿道分成两路。左边铁轨通往炉房，右边石缝里传来敲击声。',purpose:'整备、回寨；清走矿头后商人回来。'},
  rail:{name:'运矿道',links:['entrance','furnace'],text:'矿车横在轨道上，几个守卫正把矿袋往里搬。',purpose:'可反复挑战，掉落矿料与兵器。',battle:'mine'},

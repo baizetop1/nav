@@ -1,5 +1,5 @@
-import { hasOwn } from './utils.js?v=0.88.0';
-import { parseSave } from './save.js?v=0.88.0';
+import { hasOwn } from './utils.js?v=0.91.0';
+import { parseSave } from './save.js?v=0.91.0';
 
 // Explicit game-only projection. Unknown fields and application credentials never travel.
 const fields = names => Object.fromEntries(names.split(' ').map(k => [k, true]));
@@ -10,6 +10,7 @@ const chronicleJob=fields('kind region chapter choice rank');
 const chronicle={version:true,routes:{'*':fields('choices patrol forged')},active:{...chronicleJob,ready:true}};
 const shape = {
   regionCompanions:{version:true,quests:{'*':{position:true,visited:[true],flags:[true]}}},
+  campWork:{version:true,clinic:{...fields('hero enabled auto lastAt carry treated revision'),budget:fields('herb cloth food'),spent:fields('herb cloth food')}},
   campLife:{version:true,people:{'*':{talks:true,jobs:true,lastWork:true}},projects:[true]},
   exploration:{...fields('version position visited flags buildings visiting activeRegion'),crossRegion:fields('version flags'),pending:fields('node approach'),contacts:{'*':fields('cycles earned')},marsh:{...fields('version position visited flags'),pending:fields('node approach')},ruins:{...fields('version position visited flags'),pending:fields('node approach')},forest:{...fields('version position visited flags'),pending:fields('node approach')},water:{...fields('version position visited flags'),pending:fields('node approach')},mountain:{...fields('version position visited flags'),pending:fields('node approach')}},
   gathering:{version:true,regions:{'*':fields('runs best')}},

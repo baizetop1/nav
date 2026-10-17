@@ -1,6 +1,6 @@
-import {companionByDungeon} from './region-companions-data.js?v=0.88.0';
-import {PROMOTION_CORES,PROMOTION_ITEMS,PROMOTION_CORE_RATES,PROMOTION_CORE_DOUBLE_RATE} from './promotion-data.js?v=0.88.0';
-import {random,journal} from './utils.js?v=0.88.0';
+import {companionByDungeon} from './region-companions-data.js?v=0.91.0';
+import {PROMOTION_CORES,PROMOTION_ITEMS,PROMOTION_CORE_RATES,PROMOTION_CORE_DOUBLE_RATE} from './promotion-data.js?v=0.91.0';
+import {random,journal} from './utils.js?v=0.91.0';
 const LIMIT=10000000;
 // A tracked recipe directs the ingredient roll; no hero is forced into the fighting team.
 export function promotionDropPool(s,d,context){

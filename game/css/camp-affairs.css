@@ -1,0 +1,30 @@
+/* Camp affairs keep one task or one category visible, including after moving into a dialog. */
+.camp-affairs{min-width:0;line-height:1.5}
+.camp-affairs [hidden]{display:none!important}
+.camp-affairs-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;padding:0 0 10px;margin:0 0 12px;border-bottom:1px solid var(--line)}
+.camp-affairs-tabs>button{display:flex;align-items:center;justify-content:center;gap:3px;min-width:0;min-height:40px;padding:6px 2px;border:0;border-radius:6px;background:transparent;color:var(--muted);font:inherit;font-size:13px;white-space:nowrap}
+.camp-affairs-tabs>button[aria-selected=true]{background:var(--folio-selected,#e6efea);color:var(--green);box-shadow:inset 0 -2px var(--green)}
+.camp-affairs-tabs small{font-size:10px;line-height:1;background:var(--panel);color:var(--green);padding:3px 4px;border-radius:8px}
+.camp-affairs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.camp-affairs-grid>button{min-height:48px;padding:8px 10px;margin:0;border:1px solid var(--line);border-radius:8px;background:var(--folio-control,var(--panel));color:var(--ink);font:inherit;font-size:14px;line-height:1.4}
+.camp-affairs-notices{display:grid;gap:8px}
+.camp-affairs-notices>.camp-affairs-notice{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;padding:9px 12px;margin:0;text-align:left;border:1px solid var(--line);border-radius:8px;background:var(--folio-control,var(--panel));color:var(--ink);font:inherit;font-size:13px;line-height:1.5}
+.camp-affairs-notice::after{content:"";flex:0 0 6px;width:6px;height:6px;border-top:1px solid var(--muted);border-right:1px solid var(--muted);transform:rotate(45deg);margin-right:3px}
+.camp-affairs-support{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.camp-affairs-support>.folio-story{display:flex;align-items:center;gap:12px;margin:0;padding:0;border:0}
+.camp-affairs-support .folio-story>div{min-width:0;flex:1}
+.camp-affairs-support small{display:block;font-size:11px;color:var(--muted);line-height:1.4}
+.camp-affairs-support strong{display:block;font-size:13px;line-height:1.5}
+.camp-affairs-support button{flex:0 0 auto;max-width:44%;min-height:40px;white-space:normal;padding:7px 10px;border-radius:7px;font-size:12px;line-height:1.4}
+.camp-affairs-empty{padding:12px 0;margin:0;color:var(--muted);font-size:13px}
+#screen-detail.camp-affairs-dialog[open]{width:440px;height:fit-content;min-height:0;max-width:calc(100vw - 20px);max-height:calc(100dvh - 24px);border-radius:14px}
+#screen-detail.camp-affairs-dialog .dialog-header{padding:14px 16px 10px}
+#screen-detail.camp-affairs-dialog .dialog-header h2{font-size:18px;line-height:1.4}
+#screen-detail.camp-affairs-dialog .dialog-header>button{width:34px;min-height:34px;height:34px;padding:0;border-radius:7px;font-size:20px;flex:none}
+#screen-detail.camp-affairs-dialog .dialog-body{flex:0 1 auto;overflow:auto;overscroll-behavior:contain;touch-action:pan-y;padding:12px 16px 16px;min-height:0}
+#screen-detail.camp-affairs-dialog .dialog-footer{padding:10px 16px 12px;background:var(--panel)}
+#screen-detail.camp-affairs-dialog .dialog-footer>button{min-height:40px;border-radius:8px;font-size:13px}
+#screen-detail.camp-affairs-dialog .camp-affairs-grid>button{min-height:48px;font-size:14px}
+#screen-detail.camp-affairs-dialog .camp-affairs-tabs>button{min-height:40px;font-size:13px}
+@media(max-width:350px){.camp-affairs-grid{gap:8px}.camp-affairs-grid>button{font-size:13px}.camp-affairs-tabs{gap:2px}.camp-affairs-tabs>button{font-size:12px}.camp-affairs-tabs small{font-size:9px;padding:3px}#screen-detail.camp-affairs-dialog .dialog-header{padding:12px 12px 8px}#screen-detail.camp-affairs-dialog .dialog-body{padding:10px 12px 12px}#screen-detail.camp-affairs-dialog .camp-affairs-tabs>button{font-size:12px}}
+@media(max-height:450px) and (min-width:600px){#screen-detail.camp-affairs-dialog[open]{width:580px}.camp-affairs-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.camp-affairs-notices{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.camp-affairs-notices>.camp-affairs-notice{min-height:38px;padding:6px 9px;font-size:12px}.camp-affairs-tabs{padding-bottom:6px;margin-bottom:8px}#screen-detail.camp-affairs-dialog .camp-affairs-tabs>button{min-height:32px}#screen-detail.camp-affairs-dialog .camp-affairs-grid>button{min-height:40px}#screen-detail.camp-affairs-dialog .dialog-header{padding:8px 12px}#screen-detail.camp-affairs-dialog .dialog-body{padding:8px 12px 10px}#screen-detail.camp-affairs-dialog .dialog-footer{padding:6px 12px 8px}.camp-affairs-support{margin-top:8px;padding-top:8px}.camp-affairs-support button{min-height:34px}}

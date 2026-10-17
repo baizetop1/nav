@@ -1,0 +1,54 @@
+/* Decoration occupies the existing title line; the object itself is painted above it. */
+.item-art{position:relative;display:inline-block;vertical-align:-.12em;flex:0 0 26px;width:26px;height:1em;margin-right:5px;overflow:visible;pointer-events:none}
+.item-art::before{content:"";position:absolute;left:0;top:50%;width:26px;height:26px;transform:translateY(-50%);background-image:url('../assets/art/items-sheet.png');background-size:600% 600%;background-repeat:no-repeat;filter:drop-shadow(0 1px 1px #243a2926)}
+.item-art-silver::before{background-position:0% 0%}
+.item-art-grain::before{background-position:20% 0%}
+.item-art-wood::before{background-position:40% 0%}
+.item-art-iron::before{background-position:60% 0%}
+.item-art-scrap::before{background-position:80% 0%}
+.item-art-dark-iron::before{background-position:100% 0%}
+.item-art-cloth::before{background-position:0% 20%}
+.item-art-hide::before{background-position:20% 20%}
+.item-art-herb::before{background-position:40% 20%}
+.item-art-bone::before{background-position:60% 20%}
+.item-art-ore::before{background-position:80% 20%}
+.item-art-fiber::before{background-position:100% 20%}
+.item-art-healing::before{background-position:0% 40%}
+.item-art-rage::before{background-position:20% 40%}
+.item-art-antidote::before{background-position:40% 40%}
+.item-art-wine::before{background-position:60% 40%}
+.item-art-ration::before{background-position:80% 40%}
+.item-art-exp::before{background-position:100% 40%}
+.item-art-manual::before{background-position:0% 60%}
+.item-art-charm::before{background-position:20% 60%}
+.item-art-order::before{background-position:40% 60%}
+.item-art-mount::before{background-position:60% 60%}
+.item-art-spirit::before{background-position:80% 60%}
+.item-art-seal::before{background-position:100% 60%}
+.item-art-chest::before{background-position:0% 80%}
+.item-art-blueprint::before{background-position:20% 80%}
+.item-art-letter::before{background-position:40% 80%}
+.item-art-saber::before{background-position:60% 80%}
+.item-art-spear::before{background-position:80% 80%}
+.item-art-bow::before{background-position:100% 80%}
+.item-art-staff::before{background-position:0% 100%}
+.item-art-armor::before{background-position:20% 100%}
+.item-art-helmet::before{background-position:40% 100%}
+.item-art-belt::before{background-position:60% 100%}
+.item-art-boots::before{background-position:80% 100%}
+.item-art-accessory::before{background-position:100% 100%}
+.item-art-personal{width:26px}
+.item-art-personal::before{display:none}
+.item-art-personal>.hero-portrait{position:absolute;left:2px;top:50%;transform:translateY(-50%);display:block!important;width:23px!important;height:26px!important;float:none!important;margin:0!important;aspect-ratio:auto;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.item-art-personal>.hero-portrait>img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.item-art-personal>i{position:absolute;right:-2px;bottom:-7px;display:grid;place-items:center;width:11px;height:11px;border:1px solid var(--panel);border-radius:3px;background:var(--green);color:var(--panel);font:8px/1 system-ui;font-style:normal}
+.item-art-core>i{background:var(--gold,#94773e)}
+.inventory-row-title h3{min-width:0}
+.quick-loot .item-art{width:20px;margin-right:3px;flex-basis:20px}.quick-loot .item-art::before{width:20px;height:20px}.quick-loot .item-art-personal>.hero-portrait{width:18px!important;height:21px!important}
+@media(max-width:350px){.item-art{width:23px;margin-right:4px;flex-basis:23px}.item-art::before{width:23px;height:23px}.item-art-personal>.hero-portrait{width:21px!important;height:24px!important}}
+
+/* Long-handled tools share a family, but keep the correct object silhouette. */
+.item-art-tool::before{display:none}
+.item-art-tool>.game-icon{position:absolute;left:0;top:50%;transform:translateY(-50%);width:25px;height:25px;margin:0;vertical-align:initial;color:var(--green);stroke-width:1.7}
+.quick-loot .item-art-tool>.game-icon{width:20px;height:20px}
+@media(max-width:350px){.item-art-tool>.game-icon{width:23px;height:23px}}
