@@ -305,7 +305,17 @@
     "test:shuihu-battle-playback": "node scripts/shuihu-battle-playback-selfcheck.mjs",
     "check:shuihu-battle-stage": "node scripts/shuihu-battle-stage-browser.mjs",
     "check:shuihu-readable-log": "node scripts/shuihu-readable-log-browser.mjs",
-    "check:shuihu-no-global-log": "node scripts/shuihu-no-global-log-browser.mjs"
+    "check:shuihu-no-global-log": "node scripts/shuihu-no-global-log-browser.mjs",
+    "check:shuihu-source-navigation": "node scripts/shuihu-source-navigation-browser.mjs",
+    "check:shuihu-camp-scene": "node scripts/shuihu-camp-painted-browser.mjs",
+    "check:shuihu-camp-painted": "node scripts/shuihu-camp-painted-browser.mjs",
+    "check:shuihu-camp-roads": "node scripts/shuihu-camp-road-browser.mjs",
+    "check:shuihu-item-dungeon-art": "node scripts/shuihu-item-dungeon-art-browser.mjs",
+    "check:shuihu-camp-affairs": "node scripts/shuihu-camp-affairs-browser.mjs",
+    "test:shuihu-camp-work": "node scripts/shuihu-camp-work-selfcheck.mjs",
+    "test:shuihu-camp-work-cloud": "node scripts/shuihu-camp-work-cloud-selfcheck.mjs",
+    "check:shuihu-camp-work": "node scripts/shuihu-camp-work-browser.mjs",
+    "check:shuihu-camp-work-animation": "node scripts/shuihu-camp-work-animation-browser.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

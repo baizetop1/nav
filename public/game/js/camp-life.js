@@ -1,9 +1,9 @@
-import {CAMP_PEOPLE,CAMP_PROJECTS,LIFE_THRESHOLDS} from './camp-life-data.js?v=0.88.0';
-import {away} from './hero-availability.js?v=0.88.0';
-import {regionBuilt} from './exploration-data.js?v=0.88.0';
-import {sourceStock} from './source-goals.js?v=0.88.0';
-import {gainExp} from './hero.js?v=0.88.0';
-import {requireRule,journal} from './utils.js?v=0.88.0';
+import {CAMP_PEOPLE,CAMP_PROJECTS,LIFE_THRESHOLDS} from './camp-life-data.js?v=0.91.0';
+import {away} from './hero-availability.js?v=0.91.0';
+import {regionBuilt} from './exploration-data.js?v=0.91.0';
+import {sourceStock} from './source-goals.js?v=0.91.0';
+import {gainExp} from './hero.js?v=0.91.0';
+import {requireRule,journal} from './utils.js?v=0.91.0';
 export const lifeBusy=s=>!!(s.battle||s.scheme||s.event||s.realm?.trek||s.expansion?.run||s.adventure?.run);
 const has=(o,k)=>Object.hasOwn(o,k);
 export const lifePlace=(s,id)=>({tanglong:regionBuilt(s,'forge')?'矿砂炉':'临时炉台',andaoquan:regionBuilt(s,'clinic')?'配药间':'药棚',yuehe:regionBuilt(s,'lodge')?'客舍':'廊下',zhangshun:regionBuilt(s,'clinic')?'水埠':'临时船棚',jindajian:regionBuilt(s,'lodge')?'客舍':'碑样棚',zhugui:regionBuilt(s,'lodge')?'客舍茶间':'寨门茶棚'}[id]||CAMP_PEOPLE[id]?.place);

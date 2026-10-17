@@ -1,7 +1,7 @@
-import {REGION_COMPANIONS,companionSpec,companionHas,companionStep,companionTaskReason,companionByRoute,companionAwayReason} from './region-companions-data.js?v=0.88.0';
-import {knowHero,ownHero} from './hero.js?v=0.88.0';
-import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.88.0';
-import {requireRule,journal} from './utils.js?v=0.88.0';
+import {REGION_COMPANIONS,companionSpec,companionHas,companionStep,companionTaskReason,companionByRoute,companionAwayReason} from './region-companions-data.js?v=0.91.0';
+import {knowHero,ownHero} from './hero.js?v=0.91.0';
+import {enterSpecial,specialPlan} from './special-dungeons.js?v=0.91.0';
+import {requireRule,journal} from './utils.js?v=0.91.0';
 const busy=s=>s.battle||s.scheme||s.event||s.realm?.trek||s.expansion?.run||s.adventure?.run;
 export function companionOpenQuote(s,id){const r=companionSpec(id);return {reason:!r?'没有这段人物篇章。':companionAwayReason(s,id)||(!s.camp?'先建立寨子。':busy(s)?'先结束当前交战或行程。':!s.regionCompanions?.quests?.[id]&&!s.team.some(h=>s.heroes[h]?.status==='owned'&&s.heroes[h].level>=r.level)?'出阵队伍至少需要一位 '+r.level+' 级好汉。':'')};}
 export function openCompanion(s,id){const q=companionOpenQuote(s,id);requireRule(!q.reason,q.reason);const r=companionSpec(id),x=s.regionCompanions??={version:1,quests:{}};if(!x.quests[id]){x.quests[id]={position:r.start,visited:[r.start],flags:[]};journal(s,'抵达'+r.area+' · '+r.nodes[r.start].name+'。');}return x.quests[id];}

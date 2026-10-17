@@ -1,8 +1,8 @@
-import {phaseGoal} from './progression-paths.js?v=0.88.0';
-import {unlockReason} from './growth.js?v=0.88.0';
-import {BUILD_GUIDES,GEAR_TRAITS} from './tactics-data.js?v=0.88.0';
-import {SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.88.0';
-import {PERSONAL} from './expansion-data.js?v=0.88.0';
+import {phaseGoal} from './progression-paths.js?v=0.91.0';
+import {unlockReason} from './growth.js?v=0.91.0';
+import {BUILD_GUIDES,GEAR_TRAITS} from './tactics-data.js?v=0.91.0';
+import {SPECIAL_DUNGEONS} from './special-dungeons-data.js?v=0.91.0';
+import {PERSONAL} from './expansion-data.js?v=0.91.0';
 const page=(view,id,hero)=>({type:'ui_section',view,id,...(hero?{hero}:{})});
 export function gearGoal(s,d,id){const m=d.by.equipments[id],owned=s.equipment.some(e=>e.item===id);return {text:m.name+(owned?'：已有':'：未得'),done:owned,label:owned?'查看装备':'查看来源',command:owned?{type:'ui_gearModel',id}:{type:'ui_sources',id}};}
 export function tacticsGoal(s,d,g){

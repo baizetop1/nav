@@ -1,5 +1,5 @@
-import {patchElement} from './dom.js?v=0.88.0';
-import {BattleLogPlayback,battleLogView} from './battle-playback.js?v=0.88.0';
+import {patchElement} from './dom.js?v=0.91.0';
+import {BattleLogPlayback,battleLogView} from './battle-playback.js?v=0.91.0';
 export function createBattleStage({render,onCommand,onHide}){
  let dialog=null,key=null,elapsed=0,lastWall=0,wasRunning=false,follow=true,reading=null,openingLogs=[];
  const playback=new BattleLogPlayback();

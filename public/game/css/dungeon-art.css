@@ -1,0 +1,16 @@
+/* Compact scene crops share the title row rather than adding a banner. */
+.dungeon-title{display:flex;align-items:center;gap:8px;min-width:0;line-height:1.25}
+.dungeon-title>span{min-width:0}
+.dungeon-thumb{display:inline-block;flex:0 0 76px;width:76px;height:38px;max-width:none;object-fit:cover;object-position:center;border:1px solid var(--line,#d8e2dd);border-radius:6px;background:var(--surface,#edf4ef);vertical-align:middle}
+.resource-heading>.dungeon-title,.story-revisit-mission>.section-top>.dungeon-title,.special-overview>header>.dungeon-title{flex:1}
+.resource-heading,.story-revisit-mission>.section-top,.special-overview>header{align-items:center}
+.elite-scene-summary{display:flex;align-items:center;gap:8px}
+.elite-scene-summary>span{min-width:0;flex:1}
+.dungeon-replay-start{display:flex;align-items:center;gap:8px}
+.dungeon-replay-start>button{flex:1}
+.dungeon-loot-name{display:inline-flex;align-items:center;gap:6px;min-width:0}
+.dungeon-loot-name>.item-art{flex-grow:0;flex-shrink:0;margin-right:0}
+.elite-scene-summary::before{content:"▸";color:var(--green)}
+details[open]>.elite-scene-summary::before{content:"▾"}
+@media(max-width:600px){.dungeon-thumb{flex-basis:64px;width:64px;height:36px}.dungeon-title,.elite-scene-summary{gap:6px}}
+@media(max-width:360px),(max-height:600px){.dungeon-thumb{flex-basis:56px;width:56px;height:32px}.dungeon-title,.elite-scene-summary{gap:5px}}

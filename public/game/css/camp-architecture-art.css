@@ -1,0 +1,59 @@
+/* Shared native SVG palette. Separate roofs, wall planes and working objects stay legible at map scale. */
+.camp-architecture{fill:none;stroke:#6d7e71;stroke-width:.75;stroke-linecap:round;stroke-linejoin:round}
+.camp-architecture *,.camp-architecture-detail>path{vector-effect:non-scaling-stroke}
+.camp-architecture .art-shadow{fill:#667c66;fill-opacity:.12;stroke:none}
+.camp-architecture .art-earth{fill:#ddd9be;stroke:#bec3aa;stroke-width:.6}
+.camp-architecture .art-wall{fill:#ece5d2;stroke:#9e9c81}
+.camp-architecture .art-wall-side{fill:#d5d4bc;stroke:#999e85}
+.camp-architecture .art-stone{fill:#aeb7a8;stroke:#929e8f}
+.camp-architecture .art-stone-top{fill:#d4d7c7;stroke:#9ea993}
+.camp-architecture .art-wood,.camp-architecture .art-plank{fill:#b59b73;stroke:#857353}
+.camp-architecture .art-wood-side{fill:#998363;stroke:#7c7157}
+.camp-architecture .art-beam{fill:none;stroke:#8e7757;stroke-width:1.2}
+.camp-architecture .art-door{fill:#817c61;stroke:#6d7059}
+.camp-architecture .art-window{fill:#a6af96;stroke:#76846d}
+.camp-architecture .art-lattice{stroke:#e1dcc0;stroke-width:.65;fill:none}
+.camp-architecture .art-roof{fill:#8ca69a;stroke:#5e7d70}
+.camp-architecture .art-roof-side{fill:#6f8c7e;stroke:#5e7d70}
+.camp-architecture .art-eave{fill:none;stroke:#516e60;stroke-width:.95}
+.camp-architecture .art-roof-lines{fill:none;stroke:#c0cdb7;stroke-width:.55}
+.camp-architecture .art-sign{fill:#a98c5a;stroke:#81734f}
+.camp-architecture .art-sign-mark{fill:none;stroke:#eee3bc;stroke-width:1}
+.camp-architecture .art-line{fill:none;stroke:#7f8973;stroke-width:.6}
+.camp-architecture .art-log{fill:#ac9068;stroke:#857454}
+.camp-architecture .art-log-end{fill:#dfcea4;stroke:#927d56}
+.camp-architecture .art-grain{fill:none;stroke:#927d56;stroke-width:.5}
+.camp-architecture .art-saw,.camp-architecture .art-iron{fill:#9da99d;stroke:#6e7f71}
+.camp-architecture .art-spear{fill:#bac5b4;stroke:#6d8070}
+.camp-architecture .art-shield{fill:#a29368;stroke:#726d50}
+.camp-architecture .art-banner{fill:#a6775c;stroke:#87694f}
+.camp-architecture .art-straw{fill:#cbbb88;stroke:#9b8a5f}
+.camp-architecture .art-straw-side{fill:#b09f71;stroke:#92805d}
+.camp-architecture .art-thatch-lines{fill:none;stroke:#e5d9ac;stroke-width:.6}
+.camp-architecture .art-bale{fill:#d6c28b;stroke:#a28c5d}
+.camp-architecture .art-drying{fill:#d9c9a3;stroke:#96886b}
+.camp-architecture .art-herbs{fill:none;stroke:#6b8d64;stroke-width:1.8}
+.camp-architecture .art-pot{fill:#b79672;stroke:#8b765e}
+.camp-architecture .art-herb-stem{fill:none;stroke:#6d8d63;stroke-width:.9}
+.camp-architecture .art-brick{fill:#b79479;stroke:#8a7761}
+.camp-architecture .art-brick-side{fill:#997e67;stroke:#7b705c}
+.camp-architecture .art-furnace{fill:#a59f86;stroke:#7e816c}
+.camp-architecture .art-furnace-mouth{fill:#6c735d;stroke:#72725c}
+.camp-architecture .art-canopy{fill:#ddd4b0;stroke:#a0926e}
+.camp-architecture .art-canopy-side{fill:#bfb790;stroke:#9c916c}
+.camp-architecture .art-canopy-stripe{fill:#a1b4a0;stroke:none}
+.camp-architecture .art-basket{fill:#bca778;stroke:#907f59}
+.camp-architecture.architecture-unbuilt{opacity:.54}
+.camp-architecture.architecture-unbuilt .art-shadow{fill-opacity:.05}
+.camp-architecture-detail{display:block;width:100%;height:100%;overflow:visible}
+.camp-architecture-detail .art-detail-ground{fill:none;stroke:#b8c5b0;stroke-width:.7}
+.camp-architecture-detail .art-detail-grass{fill:none;stroke:#8da486;stroke-width:.65;stroke-linecap:round}
+
+/* Sparse material seams: shallow tile courses, timber grain and individual foundation blocks. */
+.camp-architecture .art-material-tile{fill:none;stroke:#526f60;stroke-width:.4;stroke-opacity:.48}
+.camp-architecture .art-material-wood{fill:none;stroke:#755f43;stroke-width:.4;stroke-opacity:.58}
+.camp-architecture .art-material-stone{fill:none;stroke:#7c8a74;stroke-width:.45;stroke-opacity:.6}
+.camp-architecture .art-material-ring{fill:none;stroke:#927b54;stroke-width:.4;stroke-opacity:.7}
+.camp-architecture .art-material-thatch{fill:none;stroke:#a38e59;stroke-width:.45;stroke-opacity:.6}
+.camp-architecture .art-material-herb{fill:none;stroke:#799865;stroke-width:.55}
+.camp-architecture .art-material-cloth{fill:none;stroke:#8e8a63;stroke-width:.45;stroke-opacity:.5}

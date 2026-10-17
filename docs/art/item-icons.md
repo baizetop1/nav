@@ -1,0 +1,16 @@
+# 物品图标素材记录
+
+日期：2026-10-17。使用内置 image_gen 工具，transparent_background=true，生成新图；既有 camp-painted.png 仅用于画风参考，原图未更改。
+
+- 项目资产：public/game/assets/art/items-sheet.png（1254×1254，RGBA PNG）
+- 生成原件：E:/CodexData/generated_images/01a08e7f-f245-7211-8a30-19f0ac6928ea/exec-54abced2-dac1-4352-a8b4-1a5b10ebd3fb.png
+- 参考图：public/game/assets/art/camp-painted.png
+- 六列六行，共36类物件；专属信物与核心另用已有好汉人像。
+- 页面用CSS背景定位显示图集，不进行切图或二次栅格处理。
+- 副本小图复用 scene-library.js 中的现有场景，映射见 dungeon-art-ui.js。
+
+## 最终生成提示词
+
+```text
+Use case: stylized-concept. Asset: a production RPG inventory icon atlas, NEW image, the supplied camp painting is STYLE REFERENCE ONLY and must remain untouched. Draw exactly 36 separate object icons in an EXACT 6 column by 6 row uniform grid. The entire PNG background and all space between objects must be truly transparent. No cell backgrounds, no borders, no captions, no labels, no writing, no letters or numbers. Every object centered at the same scale inside its own cell with generous clear padding, no object touches a cell edge. Icons should be clear and recognizable at 24 to 32 pixels, simple strong silhouettes with a little natural brush texture and restrained isometric depth. Match the reference's historical Chinese ink-and-watercolor illustration style, muted jade greens, warm timber, old parchment, iron-grey and restrained cinnabar accents. Song dynasty Chinese materials and equipment, no modern items, no cartoon emoji, no modern medical crosses, no glowing plastic UI. Target high resolution square sprite sheet. EXACT CONTENT AND ORDER, left-to-right each row: ROW 1: a small traditional silver ingot; a tied sack of grain with a few rice grains; a tied bundle of cut timber; two neat grey iron ingots; a small pile of jagged scrap iron; a dark blue-black rough iron ore chunk. ROW 2: a roll of coarse cream cloth; folded tanned brown leather; a small fresh medicinal herb bundle; two pale tiger bones; a pouch of reddish mineral sand; a tied bundle of slender reeds and plant fibers. ROW 3: a small white ceramic healing medicine bottle with red cloth cap; a blue cloth medicine pouch; three green herbal antidote pills on a tiny leaf; a brown wine jar with red cloth lid; a wrapped travel food parcel with a small steamed bun; three golden experience pills in a shallow wooden dish. ROW 4: an old stitched martial arts book with blank cover; a rolled blank yellow paper talisman tied with red string; a bamboo recruitment command tablet; a leather horse contract scroll with a tiny horseshoe motif but no writing; a small cloudy jade spirit bead; a square carved jade seal. ROW 5: a small wooden supply chest; a partially unrolled blank parchment blueprint; a folded sealed letter; a Chinese short saber in diagonal view; a Chinese long spear in diagonal view; a compact traditional curved bow with string. ROW 6: a wooden fighting staff; a folded dark lamellar armor vest; an iron Chinese helmet; a brown leather belt with bronze buckle; a pair of cloth boots; a small pale green jade pendant on cord. Maintain consistent light from upper left. Small soft contact shading can exist only directly attached beneath each item, all surrounding area alpha transparent. This atlas is used with CSS background-position: each row must contain exactly SIX icons, total SIX rows.
+```

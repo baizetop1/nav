@@ -1,7 +1,8 @@
-import { stewardshipBonus } from './stewardship.js?v=0.88.0';
-import { experienceToNext } from './progression.js?v=0.88.0';
-import { helperSummary } from './helpers-ui.js?v=0.88.0';
-import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.88.0';
+import {heroAbsence,heroPosting} from './hero-availability.js?v=0.91.0';
+import { stewardshipBonus } from './stewardship.js?v=0.91.0';
+import { experienceToNext } from './progression.js?v=0.91.0';
+import { helperSummary } from './helpers-ui.js?v=0.91.0';
+import { DUTIES, dutyQuote, steward, stewardship, CAMP_GOALS, goalClaimed, goalReady, RAID_INTEL, equipmentPool } from './camp-development.js?v=0.91.0';
 const resource={wood:'木材',food:'粮草',silver:'碎银'};
 const quality={1:'凡品',2:'良品',3:'珍品'};
 export function goalBoard(s,d,btn){
@@ -16,7 +17,7 @@ export function dutyBoard(s,d,btn,portrait){
 export function heroStewardCard(s,d,h,btn){
   if(!s.camp||s.heroes[h.id].status!=='owned')return '';
   const assigned=steward(s)===h.id,v=s.heroes[h.id],cap=v.level>=d.config.balance.heroLevelCap,need=experienceToNext(v.level);
-  return `<section class="hero-duty"><p><b>${assigned?'寨务主事':'内务所长'}</b> · ${resource[stewardship(h.id)]}增产 ${stewardshipBonus(s,h.id)}%</p><div class="hero-exp"><label for="hero-exp-${h.id}">${cap?'已达本卷等级上限':'距下一级还需 '+Math.max(0,need-v.exp)+' 历练'}</label><progress id="hero-exp-${h.id}" max="${need}" value="${cap?need:v.exp}"></progress></div>${btn(assigned?'卸任寨务主事':'委派为寨务主事',{type:'campSteward',id:assigned?null:h.id},'secondary',s.affairs?.mission?.hero===h.id)}<p class="note">主持经营每次获得 25 历练。基础增产 20%；每升 5 级增加 2 个百分点，灵 / 仙再加 5 / 10 个百分点，最高 44%。委派新主事会替换现任。</p></section>`;
+  return `<section class="hero-duty"><p><b>${assigned?'寨务主事':'内务所长'}</b> · ${resource[stewardship(h.id)]}增产 ${stewardshipBonus(s,h.id)}%</p><div class="hero-exp"><label for="hero-exp-${h.id}">${cap?'已达本卷等级上限':'距下一级还需 '+Math.max(0,need-v.exp)+' 历练'}</label><progress id="hero-exp-${h.id}" max="${need}" value="${cap?need:v.exp}"></progress></div>${btn(assigned?'卸任寨务主事':'委派为寨务主事',{type:'campSteward',id:assigned?null:h.id},'secondary',!assigned&&!!(heroAbsence(s,h.id)||heroPosting(s,h.id,'steward')))}<p class="note">主持经营每次获得 25 历练。基础增产 20%；每升 5 级增加 2 个百分点，灵 / 仙再加 5 / 10 个百分点，最高 44%。委派新主事会替换现任。</p></section>`;
 }
 export function raidIntel(s,d,id){
   const i=RAID_INTEL[id],active=s.camp.tactic===i.tactic;

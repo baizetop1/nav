@@ -1,4 +1,4 @@
-import {away} from './hero-availability.js?v=0.88.0';
+import {away} from './hero-availability.js?v=0.91.0';
 // Character chapters have their own locations, footsteps and challenges. Hero identities and draw pools stay unchanged.
 export const COMPANION_FLAGS=['met','checked','prepared','won','delivered','invited'];
 export const REGION_COMPANIONS={

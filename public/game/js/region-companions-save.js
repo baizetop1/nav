@@ -1,4 +1,4 @@
-import {COMPANION_FLAGS,REGION_COMPANIONS,companionHas,companionByRoute,companionByDungeon} from './region-companions-data.js?v=0.88.0';
+import {COMPANION_FLAGS,REGION_COMPANIONS,companionHas,companionByRoute,companionByDungeon} from './region-companions-data.js?v=0.91.0';
 const obj=v=>v&&typeof v==='object'&&!Array.isArray(v);
 export function validateRegionCompanions(s,check){const x=s.regionCompanions;
  if(x!==undefined){check(obj(x)&&Object.keys(x).sort().join(',')==='quests,version'&&x.version===1&&obj(x.quests)&&Object.keys(x.quests).length>0&&Object.keys(x.quests).every(id=>Object.hasOwn(REGION_COMPANIONS,id))&&!!s.camp,'人物篇章记录');

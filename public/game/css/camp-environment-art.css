@@ -1,0 +1,82 @@
+/* Muted pigment and visible construction lines keep the environment on the paper plan. */
+.camp-scene-plan .camp-env-ground-wash{fill:#f1f2e7;stroke:none}
+.camp-scene-plan .camp-env-high-ground{fill:#e6ebdc;stroke:none}
+.camp-scene-plan .camp-env-ground-contour{fill:none;stroke:#bdc9b3;stroke-width:.8;opacity:.75}
+.camp-scene-plan .camp-env-water{fill:#d9e8e2;stroke:none}
+.camp-scene-plan .camp-env-bank{fill:#c9d5bc;stroke:none}
+.camp-scene-plan .camp-env-water-line{fill:none;stroke:#a2beb5;stroke-width:.85}
+.camp-scene-plan .camp-env-bank-line{fill:none;stroke:#a2b69d;stroke-width:.85}
+.camp-scene-plan .camp-env-yard{fill:#e6e5d4;stroke:#c9cbb7;stroke-width:.75}
+.camp-scene-plan .camp-env-yard-edge{fill:none;stroke:#bec1a9;stroke-width:1.1}
+.camp-scene-plan .camp-env-road-edge{fill:none;stroke:#c7c7af;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
+.camp-scene-plan .camp-env-road{fill:none;stroke:#ede8d6;stroke-width:12;stroke-linecap:round;stroke-linejoin:round}
+.camp-scene-plan .camp-env-plaza{fill:#e2e1d0;stroke:#b8beaa;stroke-width:.85}
+.camp-scene-plan .camp-env-plaza-joints{fill:none;stroke:#bcc0ab;stroke-width:.65}
+.camp-scene-plan .camp-env-steps{fill:none;stroke:#aeb49f;stroke-width:1.5}
+.camp-scene-plan .camp-env-field{fill:#e3d9b9;stroke:#b5ad89;stroke-width:.8}
+.camp-scene-plan .camp-env-field-row{fill:none;stroke:#c1b088;stroke-width:2.4}
+.camp-scene-plan .camp-env-crop{fill:none;stroke:#8e9f71;stroke-width:1;stroke-linecap:round}
+.camp-scene-plan .camp-env-ditch{fill:none;stroke:#b3c7b7;stroke-width:3}
+.camp-scene-plan .camp-env-herb-bed{fill:#dbe2cc;stroke:#a8b69b;stroke-width:.8}
+.camp-scene-plan .camp-env-herb-row{fill:none;stroke:#bdc6a8;stroke-width:2}
+.camp-scene-plan .camp-env-herbs{fill:none;stroke:#839c78;stroke-width:1}
+.camp-scene-plan .camp-env-training-ground{fill:#ded8be;stroke:#b9b18f;stroke-width:.75}
+.camp-scene-plan .camp-env-training-lines{fill:none;stroke:#a19470;stroke-width:1.5}
+.camp-scene-plan .camp-env-stones path{fill:#d7d9ca;stroke:#a8b3a1;stroke-width:.75}
+.camp-scene-plan .camp-env-fence-posts{fill:#d5caad;stroke:#a59774;stroke-width:.65}
+.camp-scene-plan .camp-env-fence-rails{fill:none;stroke:#a89b7c;stroke-width:1.15}
+.camp-scene-plan .camp-env-tree-shadow{fill:#889978;stroke:none;opacity:.14}
+.camp-scene-plan .camp-env-tree-trunk{fill:#afa786;stroke:#8f9276;stroke-width:.8}
+.camp-scene-plan .camp-env-tree-crown{fill:#c8d7b8;stroke:#91aa86;stroke-width:.8}
+.camp-scene-plan .camp-env-tree-leaf{fill:none;stroke:#a1b590;stroke-width:.7}
+.camp-scene-plan .camp-env-rock path{fill:#d3d7c7;stroke:#9fae9b;stroke-width:.8}
+.camp-scene-plan .camp-env-rock .camp-env-rock-ridge{fill:none;stroke:#b1bba8;stroke-width:.7}
+.camp-scene-plan .camp-env-reeds path{fill:none;stroke:#8da580;stroke-width:.85}
+.camp-scene-plan .camp-env-reeds .camp-env-reed-head{fill:none;stroke:#b0a17b;stroke-width:2}
+.camp-scene-plan .camp-env-bridge-shadow{fill:#9eaf9a;stroke:none;opacity:.2}
+.camp-scene-plan .camp-env-bridge-deck{fill:#d9cbae;stroke:#a89b7c;stroke-width:.9}
+.camp-scene-plan .camp-env-bridge-planks{fill:none;stroke:#b5a686;stroke-width:.7}
+.camp-scene-plan .camp-env-bridge-rail{fill:none;stroke:#a08f6b;stroke-width:1.5}
+.camp-scene-plan .camp-env-gate-shadow{fill:#8e9c82;stroke:none;opacity:.16}
+.camp-scene-plan .camp-env-gate-wood{fill:#bdad85;stroke:#8c805f;stroke-width:.9}
+.camp-scene-plan .camp-env-gate-grain{fill:none;stroke:#998b68;stroke-width:.7}
+.camp-scene-plan .camp-env-gate-brace{fill:none;stroke:#8c805f;stroke-width:2}
+:root[data-theme=night] .camp-scene-plan .camp-env-ground-wash{fill:#26342c}
+:root[data-theme=night] .camp-scene-plan .camp-env-high-ground{fill:#2a3b2f}
+:root[data-theme=night] .camp-scene-plan .camp-env-ground-contour{stroke:#4e6351}
+:root[data-theme=night] .camp-scene-plan .camp-env-water{fill:#29463e}
+:root[data-theme=night] .camp-scene-plan .camp-env-bank{fill:#3e513b}
+:root[data-theme=night] .camp-scene-plan .camp-env-water-line{stroke:#4a7166}
+:root[data-theme=night] .camp-scene-plan .camp-env-bank-line{stroke:#58744f}
+:root[data-theme=night] .camp-scene-plan .camp-env-yard{fill:#394134;stroke:#535c45}
+:root[data-theme=night] .camp-scene-plan .camp-env-yard-edge{stroke:#667054}
+:root[data-theme=night] .camp-scene-plan .camp-env-road-edge{stroke:#4a513d}
+:root[data-theme=night] .camp-scene-plan .camp-env-road{stroke:#545740}
+:root[data-theme=night] .camp-scene-plan .camp-env-plaza{fill:#4c5442;stroke:#6c765e}
+:root[data-theme=night] .camp-scene-plan .camp-env-plaza-joints{stroke:#69725a}
+:root[data-theme=night] .camp-scene-plan .camp-env-steps{stroke:#788168}
+:root[data-theme=night] .camp-scene-plan .camp-env-field{fill:#4a4932;stroke:#77764e}
+:root[data-theme=night] .camp-scene-plan .camp-env-field-row{stroke:#6b6440}
+:root[data-theme=night] .camp-scene-plan .camp-env-crop{stroke:#8b9a66}
+:root[data-theme=night] .camp-scene-plan .camp-env-ditch{stroke:#537264}
+:root[data-theme=night] .camp-scene-plan .camp-env-herb-bed{fill:#3f5137;stroke:#637b54}
+:root[data-theme=night] .camp-scene-plan .camp-env-herb-row{stroke:#5a704a}
+:root[data-theme=night] .camp-scene-plan .camp-env-herbs{stroke:#90a879}
+:root[data-theme=night] .camp-scene-plan .camp-env-training-ground{fill:#494631;stroke:#756d4a}
+:root[data-theme=night] .camp-scene-plan .camp-env-training-lines{stroke:#8d825a}
+:root[data-theme=night] .camp-scene-plan .camp-env-stones path{fill:#4f5a48;stroke:#78856c}
+:root[data-theme=night] .camp-scene-plan .camp-env-fence-posts{fill:#635e40;stroke:#8b8056}
+:root[data-theme=night] .camp-scene-plan .camp-env-fence-rails{stroke:#877b55}
+:root[data-theme=night] .camp-scene-plan .camp-env-tree-trunk{fill:#656347;stroke:#7d8360}
+:root[data-theme=night] .camp-scene-plan .camp-env-tree-crown{fill:#3e593e;stroke:#648360}
+:root[data-theme=night] .camp-scene-plan .camp-env-tree-leaf{stroke:#59764e}
+:root[data-theme=night] .camp-scene-plan .camp-env-rock path{fill:#455340;stroke:#788570}
+:root[data-theme=night] .camp-scene-plan .camp-env-rock .camp-env-rock-ridge{stroke:#65745c}
+:root[data-theme=night] .camp-scene-plan .camp-env-reeds path{stroke:#779869}
+:root[data-theme=night] .camp-scene-plan .camp-env-reeds .camp-env-reed-head{stroke:#9b9063}
+:root[data-theme=night] .camp-scene-plan .camp-env-bridge-deck{fill:#6d6546;stroke:#948a61}
+:root[data-theme=night] .camp-scene-plan .camp-env-bridge-planks{stroke:#8a7f55}
+:root[data-theme=night] .camp-scene-plan .camp-env-bridge-rail{stroke:#a39462}
+:root[data-theme=night] .camp-scene-plan .camp-env-gate-wood{fill:#776b45;stroke:#b09d69}
+:root[data-theme=night] .camp-scene-plan .camp-env-gate-grain{stroke:#99895c}
+:root[data-theme=night] .camp-scene-plan .camp-env-gate-brace{stroke:#ac9962}

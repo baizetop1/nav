@@ -1,5 +1,5 @@
-import {losses} from './fieldcraft-ui.js?v=0.88.0';
-import {isTigerStory} from './first-session.js?v=0.88.0';
+import {losses} from './fieldcraft-ui.js?v=0.91.0';
+import {isTigerStory} from './first-session.js?v=0.91.0';
 // The forecast is pure and uses the same battle snapshot as the settlement.
 const troopOutcome=b=>{if(!b.expedition?.troops)return '';const q=losses(b);return '<div class="receipt-counts">'+[['归营',q.returned],['伤兵',q.wounded],['阵亡',q.fallen]].map(([name,n])=>'<span>'+name+' <b>'+n+'</b></span>').join('')+'</div><p class="note">伤兵可治，阵亡须重新募兵。</p>';};
 // Presentation only. Both choices settle through the existing finishBattle transaction.

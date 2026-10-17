@@ -1,6 +1,6 @@
-import {icon} from './icons.js?v=0.88.0';
-import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.88.0';
-import { recruitmentBanner, recruitmentSchedule } from './recruitment-banner.js?v=0.88.0';
+import {icon} from './icons.js?v=0.91.0';
+import {heroAptitude,starPosition,aptitudeBadge} from './hero-aptitude.js?v=0.91.0';
+import { recruitmentBanner, recruitmentSchedule } from './recruitment-banner.js?v=0.91.0';
 const monthNames=['一','二','三','四','五','六','七','八','九','十','十一','十二'];
 const roles={fighter:'先锋',defender:'护阵',ranger:'游击',strategist:'谋士',support:'辅佐'};
 export function recruitBannerPanel(s,d,esc,btn,portrait){

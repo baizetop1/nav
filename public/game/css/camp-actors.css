@@ -1,0 +1,38 @@
+/* Transparent four-step residents share the painting's own scale and paths. */
+.camp-scene-people{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+button.camp-actor{position:absolute;display:block;left:50%;top:45%;width:34px!important;height:37px!important;min-width:0!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;transform:translate(-50%,-100%);line-height:1;pointer-events:auto;cursor:pointer;overflow:visible;touch-action:manipulation;will-change:left,top}
+.camp-painted-map{container-type:inline-size}
+.camp-actor-body{position:absolute;inset:auto;left:50%;bottom:0;width:20px;width:clamp(10px,5.6cqw,21px);aspect-ratio:1230/1278;transform:translateX(-50%);display:block;background-image:url('../assets/art/camp-residents-sheet.png');background-size:400% 400%;background-repeat:no-repeat;pointer-events:none;transform-origin:center bottom;filter:drop-shadow(0 1px 1px #233b2922)}
+.camp-actor-shadow{position:absolute;left:50%;bottom:0;width:10px;width:clamp(6px,3cqw,11px);height:2px;transform:translateX(-50%);border-radius:50%;background:#283b2930;filter:blur(1px);pointer-events:none}
+[data-camp-role='0']>.camp-actor-body{background-position-y:0%}[data-camp-role='1']>.camp-actor-body{background-position-y:33.333333%}[data-camp-role='2']>.camp-actor-body{background-position-y:66.666667%}[data-camp-role='3']>.camp-actor-body{background-position-y:100%}
+[data-camp-step='0']>.camp-actor-body{background-position-x:0%}[data-camp-step='1']>.camp-actor-body{background-position-x:33.333333%}[data-camp-step='2']>.camp-actor-body{background-position-x:66.666667%}[data-camp-step='3']>.camp-actor-body{background-position-x:100%}
+[data-camp-facing='left']>.camp-actor-body{transform:translateX(-50%) scaleX(-1)}
+.camp-actor-name{display:none;position:absolute;left:50%;bottom:100%;transform:translateX(-50%);padding:2px 4px;border-radius:3px;background:#f7f4e8f2;color:#355546;font-size:10px;line-height:1.2;white-space:nowrap;pointer-events:none}
+.camp-actor:focus-visible{outline:1px solid #506f58!important;outline-offset:1px!important;border-radius:5px!important}.camp-actor:focus-visible>.camp-actor-name,.camp-actor:hover>.camp-actor-name{display:block}
+@media(max-width:360px){button.camp-actor{width:29px!important;height:32px!important}}
+@media(max-height:500px) and (orientation:landscape){button.camp-actor{width:26px!important;height:28px!important}}
+
+.camp-actor-name[hidden]{display:none!important}.camp-actor[data-camp-selected='true']>.camp-actor-name{display:block}
+
+/* Working has independent painted action frames. The existing walking sprite
+   and its 10–21 px body scale stay unchanged. */
+.camp-actor[data-camp-work-sprite]:not([data-camp-work-sprite=''])>.camp-actor-body{background-image:url('../assets/art/camp-work-sheet.png');background-size:600% 600%;aspect-ratio:1}
+.camp-actor[data-camp-work-sprite='0']>.camp-actor-body{background-position-y:0%}
+.camp-actor[data-camp-work-sprite='1']>.camp-actor-body{background-position-y:20%}
+.camp-actor[data-camp-work-sprite='2']>.camp-actor-body{background-position-y:40%}
+.camp-actor[data-camp-work-sprite='3']>.camp-actor-body{background-position-y:60%}
+.camp-actor[data-camp-work-sprite='4']>.camp-actor-body{background-position-y:80%}
+.camp-actor[data-camp-work-sprite='5']>.camp-actor-body{background-position-y:100%}
+.camp-actor[data-camp-work-sprite]:not([data-camp-work-sprite=''])[data-camp-work-step='0']>.camp-actor-body{background-position-x:0%}
+.camp-actor[data-camp-work-sprite]:not([data-camp-work-sprite=''])[data-camp-work-step='1']>.camp-actor-body{background-position-x:20%}
+.camp-actor[data-camp-work-sprite]:not([data-camp-work-sprite=''])[data-camp-work-step='2']>.camp-actor-body{background-position-x:40%}
+.camp-actor[data-camp-work-sprite]:not([data-camp-work-sprite=''])[data-camp-work-step='3']>.camp-actor-body{background-position-x:60%}
+.camp-actor[data-camp-work-sprite]:not([data-camp-work-sprite=''])[data-camp-work-step='4']>.camp-actor-body{background-position-x:80%}
+.camp-actor[data-camp-work-sprite]:not([data-camp-work-sprite=''])[data-camp-work-step='5']>.camp-actor-body{background-position-x:100%}
+.camp-actor-card{position:absolute;z-index:6;left:8px;right:8px;bottom:8px;margin:0!important;padding:9px 10px;background:#f9fbf5f5;border:1px solid #7e9986;border-radius:8px;box-shadow:0 2px 9px #223e3533;color:var(--ink);font-size:11px;line-height:1.4;pointer-events:auto;box-sizing:border-box}
+.camp-actor-card[hidden]{display:none!important}.camp-actor-card>div{padding-right:22px;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}.camp-actor-card strong{font-size:13px;color:var(--green)}.camp-actor-card [data-camp-actor-current]{font-size:10px;color:var(--muted)}.camp-actor-card p{margin:3px 0!important;font-size:11px!important;line-height:1.4!important}.camp-actor-card small{display:block;color:var(--muted);font-size:10px;line-height:1.4}.camp-actor-card>button:not(.camp-actor-card-close){margin-top:5px!important;padding:4px 8px!important;min-height:29px!important;font-size:11px!important}.camp-actor-card>.camp-actor-card-close{position:absolute;right:4px;top:4px;min-width:24px!important;min-height:24px!important;width:24px;height:24px;padding:0!important;margin:0!important;border:0!important;background:transparent!important;font-size:17px!important;line-height:1!important}
+@media(max-height:500px) and (orientation:landscape){.camp-actor-card{left:3px;right:3px;bottom:3px;padding:5px;font-size:9px}.camp-actor-card strong{font-size:11px}.camp-actor-card p{font-size:9px!important}.camp-actor-card small,.camp-actor-card [data-camp-actor-current]{font-size:9px}.camp-actor-card>button:not(.camp-actor-card-close){min-height:24px!important;font-size:9px!important;padding:2px 4px!important}}
+
+/* Transparent padding around a resident must not intercept the neighbour.
+   The painted body keeps its original width and foot anchor. */
+button.camp-actor{clip-path:inset(35% 18% 0)}

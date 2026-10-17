@@ -1,7 +1,7 @@
-import {REGION_COMPANIONS,companionSpec,companionHas,companionStep,companionTaskReason} from './region-companions-data.js?v=0.88.0';
-import {companionOpenQuote,companionTravelQuote,companionBattleQuote,companionPath} from './region-companions.js?v=0.88.0';
-import {SPECIAL_ROUTES} from './special-routes.js?v=0.88.0';
-import {SCENE_LIBRARY} from './scene-library.js?v=0.88.0';
+import {REGION_COMPANIONS,companionSpec,companionHas,companionStep,companionTaskReason} from './region-companions-data.js?v=0.91.0';
+import {companionOpenQuote,companionTravelQuote,companionBattleQuote,companionPath} from './region-companions.js?v=0.91.0';
+import {SPECIAL_ROUTES} from './special-routes.js?v=0.91.0';
+import {SCENE_LIBRARY} from './scene-library.js?v=0.91.0';
 const ART={zhangshun:['harbor'],jindajian:['jizhou_engraving'],zhugui:['tavern']};
 const stateOf=(s,id)=>s.regionCompanions?.quests?.[id];
 const status=(s,id)=>companionHas(s,id,'invited')?'共事完成':companionHas(s,id,'met')?'委托中':'待相识';

@@ -1,6 +1,6 @@
-import {companionHas,companionByDungeon} from './region-companions-data.js?v=0.88.0';
-import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.88.0';
-import {SPECIAL_DUNGEONS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.88.0';
+import {companionHas,companionByDungeon} from './region-companions-data.js?v=0.91.0';
+import {SPECIAL_ROUTES,routeReward,routeAllowed} from './special-routes.js?v=0.91.0';
+import {SPECIAL_DUNGEONS,specialDropTable,validSpecialContext} from './special-dungeons-data.js?v=0.91.0';
 const object=o=>o!==null&&typeof o==='object'&&!Array.isArray(o);
 const exact=(o,keys)=>object(o)&&Object.keys(o).length===keys.length&&keys.every(k=>Object.hasOwn(o,k));
 const integer=(n,min=0,max=10000000)=>Number.isSafeInteger(n)&&n>=min&&n<=max;

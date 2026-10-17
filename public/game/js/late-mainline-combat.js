@@ -1,5 +1,5 @@
-import {difficultyQuote} from './difficulty.js?v=0.88.0';
-import {LATE_MISSIONS,LATE_BOSSES,lateMissionPlan} from './late-mainline-data.js?v=0.88.0';
+import {difficultyQuote} from './difficulty.js?v=0.91.0';
+import {LATE_MISSIONS,LATE_BOSSES,lateMissionPlan} from './late-mainline-data.js?v=0.91.0';
 const log=(b,text)=>{b.log.push('【'+(b.elapsed/1000).toFixed(1)+'秒】'+text);if(b.log.length>120)b.log.shift();};
 export function initializeLateBattle(s,b,d){
  const p=lateMissionPlan(s,b.context.id,d);if(!p)return;

@@ -1,3 +1,4 @@
+import {campWorkPreserved} from '../../public/game/js/camp-work-save.js';
 import {regionCompanionsPreserved} from '../../public/game/js/region-companions-save.js';
 import {gameplayRulesPreserved} from '../../public/game/js/gameplay-rules.js';
 import {campLifePreserved} from '../../public/game/js/camp-life-save.js';
@@ -93,7 +94,7 @@ async function route(request,env){
   const url=new URL(request.url);
   if(url.protocol!=='https:'&&!(env.LOCAL_DEV==='true'&&['localhost','127.0.0.1'].includes(url.hostname)))fail(400,'存档服务只接受 HTTPS。');
   const ip=request.headers.get('CF-Connecting-IP')||'local';await limit(env,`request:${ip}`,120);
-  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({regionCompanions:1,heroAptitudes:1,recruitmentBanners:1,promotionCores:1,difficultyTiers:1,release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,forgeExpansion:1,endgameExpansion:1,tacticsExpansion:1,progressionPaths:1,campaignDepth:1,adventureLoop:1,fieldwork:1,grainRoad:1,idleDispatch:1,regionalGathering:1,regionExploration:1,marshExploration:1,ruinsExploration:1,forestExploration:1,waterExploration:1,mountainExploration:1,explorationGoals:1,mineRevisit:1,marshRevisit:1,regionRevisits:1,crossRegionEvents:1,sourceTracking:1,campLife:1,mineCompanion:1,casualtyRules:1,combatCasualties:2,resourceDungeons:1,realm:1,challengeGroups:1,expansion:1,personalTrials:2,journeys:1,journeyTactics:1,journeyRewards:1,openingLessons:1,campaignPlans:1,chronicleRoutes:1,specialDungeons:1,workshopSupplies:1,heroRoles:3,cooperative:1,supplies:1,recruitSupport:1,elite:1,chapters:data.chapters.length});
+  if(url.pathname==='/v1/game-version'&&request.method==='GET')return json({campWork:1,regionCompanions:1,heroAptitudes:1,recruitmentBanners:1,promotionCores:1,difficultyTiers:1,release:data.config.release,heroes:data.heroes.length,rosterVersion:data.config.rosterVersion||3,rotations:1,development:1,frontier:1,commands:1,strategy:1,management:1,verifiedRanking:1,reports:1,logistics:1,fieldRules:2,productionFocus:1,materialSweeps:1,forgeExpansion:1,endgameExpansion:1,tacticsExpansion:1,progressionPaths:1,campaignDepth:1,adventureLoop:1,fieldwork:1,grainRoad:1,idleDispatch:1,regionalGathering:1,regionExploration:1,marshExploration:1,ruinsExploration:1,forestExploration:1,waterExploration:1,mountainExploration:1,explorationGoals:1,mineRevisit:1,marshRevisit:1,regionRevisits:1,crossRegionEvents:1,sourceTracking:1,campLife:1,mineCompanion:1,casualtyRules:1,combatCasualties:2,resourceDungeons:1,realm:1,challengeGroups:1,expansion:1,personalTrials:2,journeys:1,journeyTactics:1,journeyRewards:1,openingLessons:1,campaignPlans:1,chronicleRoutes:1,specialDungeons:1,workshopSupplies:1,heroRoles:3,cooperative:1,supplies:1,recruitSupport:1,elite:1,chapters:data.chapters.length});
   if(url.pathname==='/v1/cooperative'&&request.method==='GET'){await cooperativeReady(env,fail);return json(await cooperativeBoard(env,Date.now()));}
   if(url.pathname==='/v1/leaderboard'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,raw FROM slots WHERE raw IS NOT NULL ORDER BY id').all();return json(rankSnapshots(rows.results,Date.now()));}
   if(url.pathname==='/v1/verified-leaderboard'&&request.method==='GET'){
@@ -149,6 +150,7 @@ async function route(request,env){
     if(row.raw&&!seventhVolumePreserved(JSON.parse(row.raw),input.state,data))fail(409,'云档已有第七卷剧情或破阵选择，请先下载接续；如需退回旧进度，请使用历史回滚。');
     if(row.raw&&!gameplayRulesPreserved(JSON.parse(row.raw),input.state))fail(409,'云端已有资质培养、活动招贤、核心材料或新版难度记录，请先下载接续；退回旧进度请使用历史回滚。');
     if(row.raw&&!regionCompanionsPreserved(JSON.parse(row.raw),input.state))fail(409,'云端已有当地好汉共事进度，请先下载接续。');
+    if(row.raw&&!campWorkPreserved(JSON.parse(row.raw),input.state))fail(409,'云端已有驻寨任职、医馆预算或治疗进度，请先下载接续。');
     if(row.raw&&!campLifePreserved(JSON.parse(row.raw),input.state))fail(409,'云端已有寨中小叙、添置或当日办事记录，请先下载接续。');
     if(row.raw&&!explorationPreserved(JSON.parse(row.raw),input.state))fail(409,'云端已有区域探索与人物进度，请先下载接续。');
     if(row.raw&&!gatheringPreserved(JSON.parse(row.raw),input.state))fail(409,'云端已有地区采集点进度，请先下载接续。');

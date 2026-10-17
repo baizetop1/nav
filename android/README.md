@@ -1,12 +1,12 @@
 # 白泽水浒 Android 安装包
 
-源码与最新安装包为 **0.88.0（versionCode 62）**。普通界面“江湖日志”及占位已移除，单条操作提示和梁山志保留；独立战场继续慢速逐条显示日志，最后一条读完才显示胜负。包含张顺、金大坚、朱贵的人物篇章，完整记录见 [0.88.0](../docs/shuihu-v088.md) 和 [逐条战斗日志](../docs/shuihu-v087.md)。
+源码与最新安装包为 **0.91.0（versionCode 70）**。本轮加入医馆坐诊、专供物资、离线治疗，以及好汉星级、生活专长对现有生产岗位的影响；寨内人物增加真实工作、交谈、搬运与休息动作，原画和人物比例保留。记录见 [0.91.0](../docs/shuihu-v091.md)。
 
-安装包沿用原包名 `top.baizeone.shuihu` 和签名，支持 Android 8.0 及以上，可直接覆盖旧包并保留 App 数据。游戏资源完整内置，云存档需要联网；网页随 GitHub main 提交自动部署；Worker 已单独部署至 0.88.0，人物篇章云端能力与生产域名跨域读取已核对，无数据库迁移。
+安装包沿用原包名 `top.baizeone.shuihu` 和签名，支持 Android 8.0 及以上，可直接覆盖旧包并保留 App 数据。游戏资源完整内置，云存档需要联网。新医馆进度上传要求 Worker 返回 `campWork: 1`；Worker 0.91.0 已部署，线上 `campWork: 1` 与生产域名跨域读取通过；网页随 main 提交自动部署。客户端会阻止把新进度上传给旧 Worker，避免医馆记录丢失。本地游玩及文件导入导出不受影响，无数据库迁移。
 
 ## 安装与存档迁移
 
-1. 将 `artifacts/android/baize-shuihu-0.88.0.apk` 传到手机，直接覆盖安装，无须卸载原 App。
+1. 将 `artifacts/android/baize-shuihu-0.91.0.apk` 传到手机，直接覆盖安装，无须卸载原 App。
 2. 原浏览器中进入“存档 → 导出当前进度”，把 JSON 文件保存到手机。
 3. 打开 APK 的“存档 → 导入文件 → 从其他设备导入存档”，选择 JSON，检查预览并确认导入。
 4. 或在 APK 中下载已有云档；更新原云档仍需该档的上传密钥。
@@ -35,6 +35,56 @@ cd 'F:\nav-main\nav-main'
 JavaScript 原生接口仅用于显式导出存档，保存位置通过系统文件选择器由用户确定。导入也通过系统文件选择器，不申请全盘存储权限。App 使用网站原有 Origin，因此当前仅允许 `https://baizeone.top` 的 Worker CORS 配置可直接兼容；0.82.0 的完整新进度要求 Worker 返回 release: 0.82.0，以及 grainRoad、idleDispatch、regionalGathering、regionExploration、marshExploration、ruinsExploration、forestExploration、waterExploration、mountainExploration、explorationGoals、mineRevisit、marshRevisit、regionRevisits、mineCompanion、crossRegionEvents、sourceTracking、campLife 均为 1；没有新增数据库表，不需要执行 SQL。仅推送 GitHub 不会部署 Worker，也不会更新手机内置的游戏文件。
 
 方案参考 Android 官方 [加载应用内网页](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content) 和 [APK 签名工具](https://developer.android.com/tools/apksigner)。
+
+## 0.91.0 安装包验证
+
+包名 `top.baizeone.shuihu`、versionCode 70、versionName 0.91.0 与原签名核对通过，v2/v3 签名有效；全部 438 项游戏文件与真实 APK 内置资源逐字节一致。医馆模块、存档模块、界面与 CSS、工作动作图集均包含，桌面图标资源沿用原版。报告：`artifacts/android/apk0910-verification.json`。未连接 Android 真机，实际覆盖安装、系统返回键及厂商 WebView 仍需手机验收。
+
+大小 76,688,452 字节；SHA-256：`10553f596f984b7c835ac77d571c4d6b2e2b7265103709da961b45bccb75aac8`。
+
+医馆是本轮完成的自动工作流程；自动冶铁订单、养马、训练、药圃与制甲仍待后续实现。新医馆云档需要部署包含 `campWork: 1` 的 Worker；本轮没有执行 GitHub 推送或 Worker 部署。
+
+## 0.90.5 安装包验证
+
+原签名一致、v2/v3有效；全部432项游戏文件与真实APK内置资源逐字节一致。寨务五分类、完整待办、专用弹窗和横屏返回焦点修复均包含。报告：artifacts/android/apk0905-verification.json。未连接Android真机。
+
+大小74,824,304字节；SHA-256：`9d70e6565ea5646287464ff7613296cdebfeab59ce5c49bf12bb6ffeac045204`。
+
+## 0.90.4 安装包验证
+
+原签名证书保持一致，v2/v3签名有效；430个游戏文件与APK内资源逐字节一致，物品图集、两组helper/CSS和副本图片均已包含。报告：artifacts/android/apk0904-verification.json。未连接Android真机。
+
+大小74,824,147字节；SHA-256：`e28200957868e88d56df5866148464a0e484247e6767de8aff294ec55225a836`。
+
+## 0.90.3 安装包验证
+
+原签名v2/v3、versionCode67、425资产逐字节一致；人物CSS、原图与透明图集保持0.90.2原样。实际包内390加载新道路模块并验证两秒位移，提取与浏览器路线一致，农田停点540800、集市仅内院。未重复与本轮无关的旧档升级和建筑点击检查。未连接Android真机。报告：artifacts/android/apk0903-verification.json。
+
+大小72,620,111字节；SHA-256：`908a26bfb79a2043e7b3387f8cbfa3ca8969e7629ed554a8735ea269a50327e8`。
+
+## 0.90.2 安装包验证
+
+原签名、v2/v3、versionCode 66通过；424个游戏文件与源码逐字节一致。实际包内390×844原图等比显示、两秒角色位移与步帧变化、28处热点真实点击与返回通过，无缺失资源、脚本或CSP错误。纯视觉与动画改动，不改存档规则，未重复旧档三尺寸升级。未连接Android真机。报告：artifacts/android/apk0902-verification.json。
+
+大小72,620,034字节；SHA-256：`282ac23742d035a042ae8462b5f042d04af42641ea0911e482394a4eba4bf637`。
+
+## 0.90.1 安装包验证
+
+原签名、v2/v3、versionCode 65 通过；420 个内置文件与源码逐字节一致。实际包内 390×844 六设施全部点击与返回，无分页、溢出、缺失资源或脚本错误。本轮仅改地图视觉，旧档升级沿用 0.90.0 已完成的三尺寸结果，未重复该检查。未连接 Android 真机。报告：artifacts/android/apk0901-verification.json。
+
+大小 67,401,400 字节；SHA-256：`9f1252829d3a0c86d7753f92b1d373938bebeec348521d5883669895fd5673c9`。
+
+## 0.90.0 安装包验证
+
+原签名、v2/v3、versionCode 64 通过；416 个游戏文件与源码逐字节一致。360／390 竖屏与 844 横屏验证 0.89→0.90 离线升级、导出、文件导入与重启，原队伍、人物和库存保留。文字地图与六设施详情四尺寸均单页，真实收取和冶铁不改变页面，预览取消不扣料。未连接 Android 真机。报告：artifacts/android/apk090-verification.json。
+
+SHA-256：`3ca65f2f7c07202304db85a8b23f52223d70a8cc088c956a304362522eaa9f5d`。
+
+## 0.89.0 安装包验证
+
+原签名／v2／v3、versionCode 63 与 414 个内置文件核对通过。实际包内 390×844／428×926 日志可读高度为 274／346 像素，重复黄色提示消失；0.88→0.89 离线升级、导入导出与重启通过，尚未连接真机。报告：artifacts/android/apk089-verification.json。
+
+SHA-256：`2b39e1b80d5d165ff556af80285336ccc0d766e6b5a663e5154383f29d36dddb`。
 
 ## 0.88.0 安装包验证
 

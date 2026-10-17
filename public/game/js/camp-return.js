@@ -1,9 +1,9 @@
-import {REGION_COMPANIONS,companionHas,companionStep} from './region-companions-data.js?v=0.88.0';
-import {lifePlace,lifePeople,talkQuote,jobQuote} from './camp-life.js?v=0.88.0';
-import {CAMP_PEOPLE} from './camp-life-data.js?v=0.88.0';
-import {targetQuote} from './development.js?v=0.88.0';
-import {collectionQuote} from './production.js?v=0.88.0';
-import {dayKey} from './utils.js?v=0.88.0';
+import {REGION_COMPANIONS,companionHas,companionStep} from './region-companions-data.js?v=0.91.0';
+import {lifePlace,lifePeople,talkQuote,jobQuote} from './camp-life.js?v=0.91.0';
+import {CAMP_PEOPLE} from './camp-life-data.js?v=0.91.0';
+import {targetQuote} from './development.js?v=0.91.0';
+import {collectionQuote} from './production.js?v=0.91.0';
+import {dayKey} from './utils.js?v=0.91.0';
 const page=(id,extra={})=>({type:'ui_section',view:'camp',id,...extra});
 export function returnPlan(s,d){const day=Math.max(1,Math.floor((Date.parse(dayKey(s.clock))-Date.parse(dayKey(s.startedAt)))/86400000)+1),rows=[],add=(id,title,text,command)=>rows.push({id,title,text,command});
  const goal=s.development?.goal;if(goal){const q=targetQuote(s,d);if(q)add('goal',q.name||q.title||'继续上回的目标',q.next?.text||q.note||q.reason||'先把上回选的事办完。',q.done&&q.completeCommand?q.completeCommand:{type:'ui_goalDetails'});}
