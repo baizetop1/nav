@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-17T22:20:14.431Z",
+  "generatedAt": "2026-10-18T01:03:44.513Z",
   "intelligence": {
-    "updatedAt": "2026-10-17T22:20:14.431Z",
+    "updatedAt": "2026-10-18T01:03:44.513Z",
     "items": [
       {
         "id": "cn-item-58928af8d2383840",
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-16T23:38:27.000Z",
         "badge": "HN",
-        "signal": "212 分 · 36 评论"
+        "signal": "303 分 · 67 评论"
       },
       {
-        "id": "cn-it-f212f5ff89ad94d2",
+        "id": "cn-it-83620aff42a72d03",
         "category": "cn",
-        "title": "12.88 万元起，广汽埃安 Ray7 预售 2 小时订单达 6817 单",
-        "url": "https://www.ithome.com/1/014/410.htm",
+        "title": "极夜带来 7.3L 迷你工作站 DeskOne W2，支持第 12~14 代英特尔桌面处理器",
+        "url": "https://www.ithome.com/1/014/445.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-17T15:01:05.000Z",
-        "summary": "IT之家 10 月 17 日消息，广汽埃安刚刚宣布 Ray7 预售开启仅 2 小时，订单达 6817 单。该车于今晚开启预售，共 5 款车型，价格为 12.88 万元起。 车身尺寸方面，长宽高为 4960×1900×1455mm，轴距达 2920mm，提供仲夏紫、闪电黄、月辉银、风暴红、熔岩灰、云舒白、热带蓝车色。座舱配备高通骁龙 8295P 座舱芯片 +24GB LPDDR4 运存 +128GB UFS 闪存，15.6 英寸 2.5K 高清中控屏 + 车手互联全覆盖。 此…",
+        "publishedAt": "2026-10-18T00:59:43.000Z",
+        "summary": "IT之家 10 月 18 日消息，极夜 (TOPFEEL) 在发布 DeskOne A1 的同时也带来了一款体积更小的产品 —— DeskOne W2。这一型号同样拥有全铝机身，但三维仅 245×249×120 (mm)， 体积仅约 7.3L 。 DeskOne W2 配备 FCLGA1700 插槽， 支持第 12~14 代英特尔桌面处理器 ，提供 2 个 DDR4-3200 SO-DIMM 内存插槽，拥有 1 条 PCIe Gen4 ×16 插槽（扩展卡限长 245mm、…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1249685",
+        "id": "v2ex-1249694",
         "category": "dev",
-        "title": "以解决 \"Hello World\" 问题为视角, 并把 C++ Modules 原生开发的项目结合起来, 制作了一个创意动画视频",
-        "url": "https://www.v2ex.com/t/1249685",
+        "title": "之前让 AI 智能体去服务器在线改 BUG，我动不动就 CPU 内存占满",
+        "url": "https://www.v2ex.com/t/1249694",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-17T18:53:39.000Z",
-        "summary": "C++ Modules 目前处于过渡期, 之前存在一系列问题。而 MC++ 就是通过开发一系列基础设施工具, 实现 C++ Modules 开发体验大幅度上升: 解决了工具链、包管理、构建系统、智能代码提示等诸多问题. 然后, 由于做的几个开源项目都偏向基础设施, 不太容易一下说清楚。然后就想到 以 让 Hello World 优雅的运行为切入点, 把几个开源项目各自解决了哪些问题相融合 制作了一个“创意”动画视频, 算是从整体视角来简单的介绍几个开源项目的作用 欢迎对 现…",
+        "publishedAt": "2026-10-18T00:18:29.000Z",
+        "summary": "我最早都是使用 vscode+SSH 登录到远程机； 后面是 qoderIDE 登录到远程机， 还有 Claude code 在远程机直接改或者嵌入 vscode ， 但是坏处就是稍微大一点的工作，就到导致远程小鸡 CPU 内存占满， 不重启的话，根本无法再用， 后来不是御三家 Work 大战？ 我就下载了一个，抱着试一试的态度，把 ssh 登录方式发在 work 对话中，让 work 直接改，这时候发现不会占满 CPU 内存了，因为大部分工作都在我本机处理了，但是坏处就是…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-c958b1d9e9c87d56",
+        "id": "cn-baidu-bca26d64aa735364",
         "category": "cn",
-        "title": "多地试点直升高中",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%9C%B0%E8%AF%95%E7%82%B9%E7%9B%B4%E5%8D%87%E9%AB%98%E4%B8%AD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "公交转型：大车退场",
+        "url": "https://www.baidu.com/s?wd=%E5%85%AC%E4%BA%A4%E8%BD%AC%E5%9E%8B%EF%BC%9A%E5%A4%A7%E8%BD%A6%E9%80%80%E5%9C%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "多地出台教育改革举措应对学龄人口梯次达峰，高中阶段学龄人口预计2029年迎来峰值。嵊泗中考改革实现普高愿读尽读，多地试点十二年一贯制贯通培养；各地新建改扩建高中、新增大量普高学位，还探索“潮汐学校”动态调配学位，盘活教育资源，缓解普职分流压力。",
+        "summary": "当前，国内公交行业正经历结构性转型，车辆采购趋向小型化与场景定制。此前，受客流总量回落及多元出行方式分流影响，传统公交“定线、定站、定时”模式面临适配短板。如今，广州、南京等地加速布局微循环小巴与响应式公交。",
         "badge": "热搜",
-        "signal": "7,808,449 热度"
+        "signal": "7,808,730 热度"
       },
       {
         "id": "cisa-kev-cve-2025-61624",
@@ -125,7 +125,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-16T23:47:31.000Z",
         "badge": "HN",
-        "signal": "110 分 · 27 评论"
+        "signal": "181 分 · 50 评论"
       },
       {
         "id": "cn-item-e08463dc656c56f8",
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1249677",
+        "id": "v2ex-1249693",
         "category": "dev",
-        "title": "美国 mac 托管有需要的吗？",
-        "url": "https://www.v2ex.com/t/1249677",
+        "title": "一觉醒来， Tibo 已经在凌晨 5 点完成了 18 号的重置，没办法说快蹬了 😭",
+        "url": "https://www.v2ex.com/t/1249693",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-17T16:50:24.000Z",
-        "summary": "位置 MA ，boston ，02120 真实家庭宽带，可以视频验证 可以选择自备 Mac 或者我给你提供 此台 mac 仅限你一人使用，帮你装好 uu 远程 只限合法用途 这个有人有需要吗？",
+        "publishedAt": "2026-10-18T00:11:56.000Z",
+        "summary": "这次无法快蹬了 😭 一醒来亏了亏了 重置监测： https://didcodexreset.com",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-2bd64442c52e409c",
+        "id": "cn-it-cea0ba7da84c1d8c",
         "category": "cn",
-        "title": "网易《逆水寒：新世界》首个大型资料片【苗疆蛊事】官宣，首次采用双线更新框架",
-        "url": "https://www.ithome.com/1/014/409.htm",
+        "title": "特斯拉延长奥斯汀 Robotaxi 运营时间至午夜，FSD v15 将支持全天候运营",
+        "url": "https://www.ithome.com/1/014/444.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-17T14:43:51.000Z",
-        "summary": "IT之家 10 月 17 日消息，网易逆水寒官宣，10 月 30 日，《逆水寒：新世界》首个大型资料片【 苗疆蛊事 】正式开启，将首次采用双线更新的框架。 根据官方介绍，苗寨会在月色渐显时展示出另一幅面孔。而当血月升起，刚刚流连的山水，也有了让人忍不住追问的秘密。 循着蛊影深入，在 【祈梦月见岭】与阿初一同直面姬玄霜 ； 月相轮转，下一次又会遇见怎样的挑战？ 无更暗市里，异闻百相真假难辨 ，就连熟悉的菠萝农场，也被一群夜晚的不速之客找上了门…… 《逆水寒：新世界》首个大型资…",
+        "publishedAt": "2026-10-18T00:56:40.000Z",
+        "summary": "IT之家 10 月 18 日消息，特斯拉再次延长奥斯汀地区自动驾驶出租车（Robotaxi）的运营时间。X 平台用户伊桑 · 麦肯纳（ethanmckanna）发文称，目前运营时段延长至午夜，服务时间调整为早 6 点至午夜 12 点。 自动驾驶出租车应用也向乘客推送了变更通知，告知用户乘车服务可预约至午夜，该消息由亚伦 · 卡什（aaronjcash）在 X 平台分享。 这是一系列小幅延长运营时间举措中的最新一步。今年 8 月，特斯拉将奥斯汀 Robotaxi 运营时间扩展…",
         "badge": "IT之家"
       },
       {
@@ -208,17 +208,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-15T08:48:30.000Z",
         "badge": "HN",
-        "signal": "207 分 · 44 评论"
+        "signal": "250 分 · 52 评论"
       },
       {
-        "id": "cn-baidu-bfc6343913263238",
+        "id": "cn-baidu-60c81c2b4f3c2006",
         "category": "cn",
-        "title": "“全民喝大水”火了 医生提醒",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%85%A8%E6%B0%91%E5%96%9D%E5%A4%A7%E6%B0%B4%E2%80%9D%E7%81%AB%E4%BA%86+%E5%8C%BB%E7%94%9F%E6%8F%90%E9%86%92&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“2700元搞死一家店铺”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C2700%E5%85%83%E6%90%9E%E6%AD%BB%E4%B8%80%E5%AE%B6%E5%BA%97%E9%93%BA%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "最近，“全民喝大水”这个梗火了。医生提醒，短时间过量饮水会引发稀释性低钠血症，即“水中毒”，严重可致脑水肿甚至死亡。医生建议，每天饮水1500至2000毫升即可，应少量多次慢喝，单次超800毫升有风险，运动需补电解质。",
+        "summary": "“450元让销量下滑，1890元让排名垫底，2700元终极重启套餐，让店铺数据直接作废。”提供“职业差评”服务的“商家”推出了所谓“套餐服务”，叫嚣“花钱就可以搞死一家店铺”，这是公然践踏公平竞争的不法行为，是可忍，孰不可忍？",
         "badge": "热搜",
-        "signal": "7,713,558 热度"
+        "signal": "7,714,562 热度"
       },
       {
         "id": "github-advisory-ghsa-74vm-87hj-r66f",
@@ -241,15 +241,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1249671",
+        "id": "v2ex-1249685",
         "category": "dev",
-        "title": "DeepSeek-V4.1-Flash-1017 发布了，今晚我让它通宵写代码（Day 4）",
-        "url": "https://www.v2ex.com/t/1249671",
+        "title": "以解决 \"Hello World\" 问题为视角, 并把 C++ Modules 原生开发的项目结合起来, 制作了一个创意动画视频",
+        "url": "https://www.v2ex.com/t/1249685",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-17T16:25:08.000Z",
-        "summary": "今天是挑战第 4 天，正好赶上 DeepSeek-V4.1-Flash-1017 发布。 看官方刚放出的评测跑分，代码与 Agent 几项指标都很猛，已经逼近 GPT 和 Claude 第一梯队了。 原本在我的 AI 公司里，Gemini 4 当高管和主力研发，DeepSeek 只负责打下手。既然新模型这么强，今晚我决定给它升职，让它承担核心研发任务，自己挂机通宵跑一夜。 开源仓库已经建好，目前是空仓，后续各位可以去实时盯进度： https://github.com/cha…",
+        "publishedAt": "2026-10-17T18:53:39.000Z",
+        "summary": "C++ Modules 目前处于过渡期, 之前存在一系列问题。而 MC++ 就是通过开发一系列基础设施工具, 实现 C++ Modules 开发体验大幅度上升: 解决了工具链、包管理、构建系统、智能代码提示等诸多问题. 然后, 由于做的几个开源项目都偏向基础设施, 不太容易一下说清楚。然后就想到 以 让 Hello World 优雅的运行为切入点, 把几个开源项目各自解决了哪些问题相融合 制作了一个“创意”动画视频, 算是从整体视角来简单的介绍几个开源项目的作用 欢迎对 现…",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-item-cbab97c4cd288608",
@@ -283,23 +283,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50100366",
+        "id": "hn-50129045",
         "category": "dev",
-        "title": "The Commodore 64 hardware simulator: break chips and pins, see the results",
-        "url": "https://github.com/antirez/c64-hw-simulator",
+        "title": "DeepSeek-v4.1-Flash-1017",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "source": "Hacker News",
-        "publishedAt": "2026-10-15T07:18:14.000Z",
+        "publishedAt": "2026-10-17T08:21:25.000Z",
         "badge": "HN",
-        "signal": "111 分 · 20 评论"
+        "signal": "691 分 · 579 评论"
       },
       {
-        "id": "cn-it-4a5efd38eedab4c0",
+        "id": "cn-it-1d6ce92b6a0b8e2f",
         "category": "cn",
-        "title": "英伟达否认 RTX 5090 停产传闻，承认供应链产能受限",
-        "url": "https://www.ithome.com/1/014/407.htm",
+        "title": "蓝色起源目标公布：2030 年前实现每周多次发射新格伦火箭",
+        "url": "https://www.ithome.com/1/014/443.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-17T14:33:46.000Z",
-        "summary": "IT之家 10 月 17 日消息，英伟达个人计算业务高级副总裁 Jeff Fisher 昨日在台北出席 RTX Spark 相关活动时回应了 RTX 5090 停产相关传闻，明确表示相关消息不属实。 他强调，这款显卡仍是英伟达非常重要的核心产品，后续将继续供货。但他也同时承认，当前供应链产能确实受到限制，英伟达正努力推动产品进入市场。 此前，消息人士 MEGAsizeGPU (@Zed__Wang) 10 月 10 日爆料称，英伟达将不再向 GeForce RTX 50 系…",
+        "publishedAt": "2026-10-18T00:55:17.000Z",
+        "summary": "IT之家 10 月 18 日消息，蓝色起源于当地时间 10 月 16 日宣布，计划对其位于佛罗里达州的地面发射基础设施进行全面升级， 旨在 2030 年前实现每周多次发射新格伦 （New Glenn） 火箭 。 蓝色起源将为其“新格伦”重型运载火箭追加增设两个发射和着陆台。此外，其位于卡纳维拉尔角“火箭园区”的一项耗资 3.3 亿美元 （IT之家注：现汇率约合 22.12 亿元人民币） 的扩建工程预计将于 2027 年夏季竣工。 蓝色起源运营高级副总裁伊恩 · 理查森（Ia…",
         "badge": "IT之家"
       },
       {
@@ -323,15 +323,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1249670",
+        "id": "v2ex-1249671",
         "category": "dev",
-        "title": "已入选 XERJ Corpus Hub, 这是软广吧...",
-        "url": "https://www.v2ex.com/t/1249670",
+        "title": "DeepSeek-V4.1-Flash-1017 发布了，今晚我让它通宵写代码（Day 4）",
+        "url": "https://www.v2ex.com/t/1249671",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-17T16:19:23.000Z",
-        "summary": "这个仓库居然有 7.5k 星, https://github.com/xerj-org/xerj",
+        "publishedAt": "2026-10-17T16:25:08.000Z",
+        "summary": "今天是挑战第 4 天，正好赶上 DeepSeek-V4.1-Flash-1017 发布。 看官方刚放出的评测跑分，代码与 Agent 几项指标都很猛，已经逼近 GPT 和 Claude 第一梯队了。 原本在我的 AI 公司里，Gemini 4 当高管和主力研发，DeepSeek 只负责打下手。既然新模型这么强，今晚我决定给它升职，让它承担核心研发任务，自己挂机通宵跑一夜。 开源仓库已经建好，目前是空仓，后续各位可以去实时盯进度： https://github.com/cha…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "12 回复"
       },
       {
         "id": "cn-baidu-8d8378b88eafd559",
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "近日，国家电影局、市场监管总局联合印发《关于促进电影院多样化经营 繁荣发展电影院文化的通知》，鼓励多元业态融合，提出“将电影院打造成为集观影、社交、娱乐、消费于一体的综合性文化体验空间”。电影院玩法不断“上新”，成为一座城市不可或缺的“公共文化客厅”。",
         "badge": "热搜",
-        "signal": "7,617,181 热度"
+        "signal": "7,619,551 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76519",
@@ -364,14 +364,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50129045",
+        "id": "hn-50132193",
         "category": "dev",
-        "title": "DeepSeek-v4.1-Flash-1017",
-        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "title": "Pele – Mermaid diagrams as themeable SVG",
+        "url": "https://pele.run/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-17T08:21:25.000Z",
+        "publishedAt": "2026-10-17T15:55:09.000Z",
         "badge": "HN",
-        "signal": "620 分 · 539 评论"
+        "signal": "222 分 · 26 评论"
       },
       {
         "id": "cn-item-2eebfedcce048d96",
@@ -405,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1249664",
+        "id": "v2ex-1249670",
         "category": "dev",
-        "title": "体验了下 DeepSeek-V4.1-Flash-1017，做了一个视频，感觉没发挥好",
-        "url": "https://www.v2ex.com/t/1249664",
+        "title": "已入选 XERJ Corpus Hub, 这是软广吧...",
+        "url": "https://www.v2ex.com/t/1249670",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-17T15:26:22.000Z",
-        "summary": "使用 DeepSeek-V4.1-Flash:1017 制作了一个视频，耗费我 4.7¥，额外得到了一个 skills ，希望下一条视频能更快、更便宜。 https://www.bilibili.com/video/BV1oUJB6QEtk/",
+        "publishedAt": "2026-10-17T16:19:23.000Z",
+        "summary": "这个仓库居然有 7.5k 星, https://github.com/xerj-org/xerj",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-fec54fa656030173",
+        "id": "cn-it-1cebf2a154d2b539",
         "category": "cn",
-        "title": "上汽荣威家越 07 纯电版完成申报：大五座布局，轴距达 2908 mm",
-        "url": "https://www.ithome.com/1/014/406.htm",
+        "title": "今起实施：60 岁及以上老人购买 10 月 18 日至 12 月 30 日标注“敬”字火车票享“折上折”",
+        "url": "https://www.ithome.com/1/014/442.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-17T14:29:23.000Z",
-        "summary": "IT之家 10 月 17 日消息，工信部昨晚发布第 412 批《道路机动车辆生产企业及产品公告》新产品公示， 上汽 荣威家越 07 纯电动版完成申报。 申报信息显示，荣威家越 07 定位纯电动运动型乘用车，外观尺寸为长 4900 mm、宽 1910 mm、高 1745 / 1753 mm， 轴距达到 2908 mm ，前轮距 1643 mm，后轮距 1657 mm，接近角 19 度，离去角 22 度，前悬 917 mm，后悬 1075 mm，额定载客为 5 座。 IT之家注…",
+        "publishedAt": "2026-10-18T00:52:49.000Z",
+        "summary": "IT之家 10 月 18 日消息，据中国铁路官方消息，继今年 5 至 6 月实行老年人淡季周中购票优惠措施后，国铁集团进一步优化这一惠民举措， 年满 60 周岁及以上老年人购买 2026 年 10 月 18 日（含）至 12 月 30 日（含）标注“敬”字车次的火车票将享受“折上折”票价优惠 ，进一步扩大优惠时间范围，不再限定周中时段，相关优惠车票将于 10 月 4 日起陆续发售。 据介绍，年满 60 周岁及以上且使用中华人民共和国居民身份证、港澳居民居住证、台湾居民居住证…",
         "badge": "IT之家"
       },
       {
@@ -446,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50131213",
+        "id": "hn-50100366",
         "category": "dev",
-        "title": "Making chicken transparent using Dorito dust",
-        "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
+        "title": "The Commodore 64 hardware simulator: break chips and pins, see the results",
+        "url": "https://github.com/antirez/c64-hw-simulator",
         "source": "Hacker News",
-        "publishedAt": "2026-10-17T13:55:28.000Z",
+        "publishedAt": "2026-10-15T07:18:14.000Z",
         "badge": "HN",
-        "signal": "229 分 · 62 评论"
+        "signal": "138 分 · 23 评论"
       },
       {
-        "id": "cn-baidu-25ba0240cdd13e63",
+        "id": "cn-baidu-0a209d75c6e7b543",
         "category": "cn",
-        "title": "101岁奶奶每天找100岁闺蜜唠家常",
-        "url": "https://www.baidu.com/s?wd=101%E5%B2%81%E5%A5%B6%E5%A5%B6%E6%AF%8F%E5%A4%A9%E6%89%BE100%E5%B2%81%E9%97%BA%E8%9C%9C%E5%94%A0%E5%AE%B6%E5%B8%B8&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "爸爸AB型血妈妈A型血 女儿O型血",
+        "url": "https://www.baidu.com/s?wd=%E7%88%B8%E7%88%B8AB%E5%9E%8B%E8%A1%80%E5%A6%88%E5%A6%88A%E5%9E%8B%E8%A1%80+%E5%A5%B3%E5%84%BFO%E5%9E%8B%E8%A1%80&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，101岁奶奶每天徒步2公里找100岁闺蜜唠家常引发关注。奶奶表示闺蜜活泼且视力好能帮忙穿针引线，两人常一起玩耍到凌晨五点并相约吃宵夜，相处十分欢乐。",
+        "summary": "来自深圳的王先生是AB型血、太太A型血，刚出生的女儿却是O型血，王先生一度怀疑孩子非亲生。经南方医科大学深圳医院检查发现，王先生为罕见CisAB血型，可遗传O基因。医生提醒，CisAB非病，但若按AB型输血可能引发溶血反应，未来需提前告知。",
         "badge": "热搜",
-        "signal": "7,520,485 热度"
+        "signal": "7,520,052 热度"
       },
       {
         "id": "github-advisory-ghsa-h4mw-j7qp-8mwm",
@@ -486,13 +486,13 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1249647",
+        "id": "v2ex-1249664",
         "category": "dev",
-        "title": "今天， PStack 官方支持 Claude Code 了，但是没支持 Codex，你品，你细品",
-        "url": "https://www.v2ex.com/t/1249647",
+        "title": "体验了下 DeepSeek-V4.1-Flash-1017，做了一个视频，感觉没发挥好",
+        "url": "https://www.v2ex.com/t/1249664",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-17T13:11:29.000Z",
-        "summary": "10 月 17 日，poteto 的 PR #637 合进了 cursor/plugins 主分支，pstack 从此有了官方的 Claude Code 支持，安装方式： /plugin marketplace add cursor/plugins /plugin install pstack@cursor-plugins 装好之后，原来的 /poteto-mode 在 Claude Code 里要写成 /pstack:poteto-mode 。 彩蛋：这个 PR 中途其实…",
+        "publishedAt": "2026-10-17T15:26:22.000Z",
+        "summary": "使用 DeepSeek-V4.1-Flash:1017 制作了一个视频，耗费我 4.7¥，额外得到了一个 skills ，希望下一条视频能更快、更便宜。 https://www.bilibili.com/video/BV1oUJB6QEtk/",
         "badge": "程序员",
         "signal": "0 回复"
       }
@@ -511,8 +511,8 @@
         "url": "https://github.com/anthropics/claude-plugins-official",
         "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "language": "Python",
-        "stars": 41656,
-        "starsToday": 1383
+        "stars": 41766,
+        "starsToday": 1397
       },
       {
         "id": "github-692c624bcf5d89a2",
@@ -521,8 +521,8 @@
         "url": "https://github.com/MadsLorentzen/ai-job-search",
         "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "language": "Python",
-        "stars": 50256,
-        "starsToday": 1397
+        "stars": 50413,
+        "starsToday": 1365
       },
       {
         "id": "github-0658d7fa2f877963",
@@ -531,7 +531,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 282414,
+        "stars": 282515,
         "starsToday": 1145
       },
       {
@@ -541,8 +541,8 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 54013,
-        "starsToday": 580
+        "stars": 54062,
+        "starsToday": 574
       },
       {
         "id": "github-fb3d306384482b46",
@@ -551,8 +551,8 @@
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stars": 52197,
-        "starsToday": 879
+        "stars": 52256,
+        "starsToday": 878
       },
       {
         "id": "github-099a05080dd8db13",
@@ -561,8 +561,8 @@
         "url": "https://github.com/akitaonrails/ai-memory",
         "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "language": "Rust",
-        "stars": 9877,
-        "starsToday": 208
+        "stars": 9924,
+        "starsToday": 178
       },
       {
         "id": "github-d163e50742586a9d",
@@ -570,8 +570,8 @@
         "name": "android/skills",
         "url": "https://github.com/android/skills",
         "language": "Kotlin",
-        "stars": 8394,
-        "starsToday": 368
+        "stars": 8428,
+        "starsToday": 355
       },
       {
         "id": "github-89dc44e4b1b40fac",
@@ -580,8 +580,8 @@
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 95322,
-        "starsToday": 829
+        "stars": 95421,
+        "starsToday": 830
       },
       {
         "id": "github-48179362e46afbbc",
@@ -590,8 +590,8 @@
         "url": "https://github.com/anthropics/claude-code",
         "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "language": "TypeScript",
-        "stars": 151667,
-        "starsToday": 168
+        "stars": 151757,
+        "starsToday": 179
       },
       {
         "id": "github-90d09492a98e7644",
@@ -600,10 +600,10 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 73172,
-        "starsToday": 2135
+        "stars": 73392,
+        "starsToday": 2125
       }
     ],
-    "updatedAt": "2026-10-17T22:20:14.431Z"
+    "updatedAt": "2026-10-18T01:03:44.513Z"
   }
 }
