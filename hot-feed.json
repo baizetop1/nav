@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-19T15:37:09.414Z",
+  "generatedAt": "2026-10-19T21:03:58.272Z",
   "intelligence": {
-    "updatedAt": "2026-10-19T15:37:09.414Z",
+    "updatedAt": "2026-10-19T21:03:58.272Z",
     "items": [
       {
         "id": "cn-item-47c4e20a841beaa6",
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50152307",
+        "id": "hn-50154540",
         "category": "dev",
-        "title": "Wine Ported to OpenBSD",
-        "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
+        "title": "MiniMax M3.1 Flash",
+        "url": "https://www.minimax.io/blog/minimax-m31f",
         "source": "Hacker News",
-        "publishedAt": "2026-10-19T13:35:34.000Z",
+        "publishedAt": "2026-10-19T16:39:09.000Z",
         "badge": "HN",
-        "signal": "145 分 · 23 评论"
+        "signal": "275 分 · 107 评论"
       },
       {
-        "id": "cn-it-456802bedda2e9bd",
+        "id": "cn-it-65f608fc9999df0a",
         "category": "cn",
-        "title": "影石预热全新麦克风，10 月 22 日登场",
-        "url": "https://www.ithome.com/1/015/053.htm",
+        "title": "苹果 watchOS 27.2 RC 发布",
+        "url": "https://www.ithome.com/1/015/065.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-19T15:21:46.000Z",
-        "summary": "IT之家 10 月 19 日消息，影石官方今天预热一款麦克风新品，10 月 22 日即将登场，宣传词为“创作，大有空间”，目前已在京东开启预约。 京东 影石 麦克风新品 待公布 立即预约 从官方发布的预热图片来看，这款麦克风延续了 Mic Pro 的正面墨水屏设计， 很有可能支持 microSD 存储卡 ，但官方并没有给出更明确的信息。 截至目前，影石还没有公布这款产品的具体配置，感兴趣的小伙伴们可以关注IT之家后续报道。 京东 11.11 无门槛红包 面额至高 26888…",
+        "publishedAt": "2026-10-19T18:35:06.000Z",
+        "summary": "【 点此直达升级教程 】 IT之家 10 月 20 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.2 RC 更新（内部版本号：24S116），本次更新距离上次发布 Beta/RC 间隔 6 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-pw5q-rjx4-7f7p",
+        "id": "github-advisory-ghsa-5wr8-gcqf-gqf3",
         "category": "security",
-        "title": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
-        "url": "https://github.com/advisories/GHSA-pw5q-rjx4-7f7p",
+        "title": "aiohttp server lacks an initial request/header timeout",
+        "url": "https://github.com/advisories/GHSA-5wr8-gcqf-gqf3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T21:15:03.000Z",
-        "summary": "## Summary A user holding the delegated `users:update` permission can reset the global administrator's password and take over the admin account. `UpdateUser` sets the target user's `PasswordHash` from the request body for ANY target with n…",
-        "badge": "CVE-2026-96627",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-10-19T17:08:04.000Z",
+        "summary": "### Summary The keepalive timeout was not used during the initial portion of a request. ### Impact An attacker could keep an idle connection open indefinitely before sending any data. ### Workaround Use a reverse proxy (as recommended for …",
+        "badge": "CVE-2026-111064",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250144",
+        "id": "v2ex-1250159",
         "category": "dev",
-        "title": "垃圾进垃圾出， AI 在垃圾代码仓库里是写不出好代码的",
-        "url": "https://www.v2ex.com/t/1250144",
+        "title": "做了一个产品宣传站",
+        "url": "https://www.v2ex.com/t/1250159",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-19T15:21:10.000Z",
-        "summary": "垃圾进垃圾出，AI 在垃圾代码仓库里是写不出好代码的。 天天 vibe coding 的你需要一个 skills 来防止你的代码库腐化： /improve-codebase-architecture by Matt Pocock https://www.bilibili.com/video/BV1ScHb6DEW7/?vd_source=bd4d76372d9d89ce2f5c328ed6df99ab",
+        "publishedAt": "2026-10-19T20:13:35.000Z",
+        "summary": "6 月 29 上线到现在，一直没搞网站宣传，花了点时间打磨了一版出来，大家品鉴下 🥳 中国大陆 海外访问",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-046d79a93358daea",
+        "id": "cn-baidu-08bc2161d1b7e5ae",
         "category": "cn",
-        "title": "留学生披旭日旗细节：被同学当场控制",
-        "url": "https://www.baidu.com/s?wd=%E7%95%99%E5%AD%A6%E7%94%9F%E6%8A%AB%E6%97%AD%E6%97%A5%E6%97%97%E7%BB%86%E8%8A%82%EF%BC%9A%E8%A2%AB%E5%90%8C%E5%AD%A6%E5%BD%93%E5%9C%BA%E6%8E%A7%E5%88%B6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "披旭日旗的中国留学生已被遣返开除",
+        "url": "https://www.baidu.com/s?wd=%E6%8A%AB%E6%97%AD%E6%97%A5%E6%97%97%E7%9A%84%E4%B8%AD%E5%9B%BD%E7%95%99%E5%AD%A6%E7%94%9F%E5%B7%B2%E8%A2%AB%E9%81%A3%E8%BF%94%E5%BC%80%E9%99%A4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，俄罗斯莫斯科大学历史系一名中国留学生在课堂中身披旭日旗的相关画面在网络传播，引发广泛关注。事发时，有其他中国留学生要求其停止不当行为，但对方不仅不收敛，还动手推搡，用日语骂人。消息传开后，不少其他院系的中国留学生自发赶到教室，将其控制。",
+        "summary": "近日，一名陈姓中国留学生在莫斯科大学历史系课堂身披日本军国主义旭日旗引发关注。16日，该系中国留学生集体提交请愿书，校方随即启动调查及遣返程序。19日，校方召开座谈会表示将尽快公布开除决定。目前该生已被遣返。",
         "badge": "热搜",
-        "signal": "7,809,589 热度"
+        "signal": "7,809,112 热度"
       },
       {
         "id": "cisa-kev-cve-2025-61624",
@@ -109,23 +109,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-19"
       },
       {
-        "id": "ai-hugging-face-138e9b7e7d974724",
+        "id": "ai-hugging-face-5c52b7d34becd1cc",
         "category": "ai",
-        "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
-        "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+        "title": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
+        "url": "https://huggingface.co/blog/hf-torchneuron",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-16T01:44:47.000Z",
+        "publishedAt": "2026-10-19T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50150434",
+        "id": "hn-50150089",
         "category": "dev",
-        "title": "Timestral: Mistral release time-series foundation models",
-        "url": "https://mistral.ai/news/timestral/",
+        "title": "I built a drone with only one motor [video]",
+        "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
         "source": "Hacker News",
-        "publishedAt": "2026-10-19T09:59:32.000Z",
+        "publishedAt": "2026-10-19T09:05:07.000Z",
         "badge": "HN",
-        "signal": "294 分 · 45 评论"
+        "signal": "189 分 · 32 评论"
       },
       {
         "id": "cn-item-84977b1ee151cf8a",
@@ -138,15 +138,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-w5f2-9q9c-ff4h",
+        "id": "github-advisory-ghsa-2g87-pp6c-29x5",
         "category": "security",
-        "title": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
-        "url": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
+        "title": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+        "url": "https://github.com/advisories/GHSA-2g87-pp6c-29x5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T20:08:44.000Z",
-        "summary": "### Summary LMCache is vulnerable to Unauthenticated Remote Code Execution via Pickle Deserialization on the Multiprocess ZMQ Transport ### Details LMCache multiprocess mode, also called distributed mode, opens an unauthenticated ZeroMQ RO…",
-        "badge": "CVE-2026-105192",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-10-19T17:07:23.000Z",
+        "summary": "### Summary Multiple cases were found where aiohttp could use excessive or unbounded memory, or excessive CPU consumption on attacker controlled requests. ### Impact An attacker could cause resource exhaustion through specially crafted req…",
+        "badge": "GHSA-2G87-PP6C-29X5",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-b6756c0a180ee554",
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250111",
+        "id": "v2ex-1250144",
         "category": "dev",
-        "title": "zcode 非官方手机端，有兴趣的捧个场",
-        "url": "https://www.v2ex.com/t/1250111",
+        "title": "垃圾进垃圾出， AI 在垃圾代码仓库里是写不出好代码的",
+        "url": "https://www.v2ex.com/t/1250144",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-19T11:39:48.000Z",
-        "summary": "四台机器，一个页面，零次切窗。 我有四台机器在跑 ZCode：公司台式、家里笔记本、云主机、Mac mini。 以前最烦的不是看不到进度，而是看不过来。每台机器一个窗口，切来切去，上下文全断。想看眼 e2e、批个权限、补一句 prompt，得先把窗口找出来。 所以我写了个 Android 客户端。做完才发现，手机扫码只是入口，真正解决问题的是多机聚合： 手机扫码，一次绑定多台桌面； 手机本地起一个群控台 Web 服务； 同一 Wi-Fi 下，PC 浏览器打开这个地址； 每台…",
+        "publishedAt": "2026-10-19T15:21:10.000Z",
+        "summary": "垃圾进垃圾出，AI 在垃圾代码仓库里是写不出好代码的。 天天 vibe coding 的你需要一个 skills 来防止你的代码库腐化： /improve-codebase-architecture by Matt Pocock https://www.bilibili.com/video/BV1ScHb6DEW7/?vd_source=bd4d76372d9d89ce2f5c328ed6df99ab",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-7f15e4805a0b5daa",
+        "id": "cn-it-c06c729573d0c1e5",
         "category": "cn",
-        "title": "微软用 Mac 制作 Windows Insider 12 周年纪念壁纸，引发网友讨论",
-        "url": "https://www.ithome.com/1/015/052.htm",
+        "title": "苹果 visionOS 27.2 RC 发布",
+        "url": "https://www.ithome.com/1/015/064.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-19T15:15:43.000Z",
-        "summary": "IT之家 10 月 19 日消息，微软官方最近发布了一组全新壁纸，庆祝 Windows Insider 预览体验计划成立 12 周年。然而眼尖的网友很快发现， 这些壁纸并不是使用 Windows 设备完成的 ， 而是出自一台 Mac 。 从图片属性我们能看出，这组图片使用了 Mac 版 Adobe Photoshop 创作。工程师 Rafael Rivera 指出，这些图片是由微软内部团队制作。就算这些图片确实出自外包公司之手，微软也难免有些尴尬。毕竟这意味着，即使是吃微软…",
+        "publishedAt": "2026-10-19T18:35:05.000Z",
+        "summary": "IT之家 10 月 20 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.2 RC 更新（内部版本号：24N118），本次更新距离上次发布 Beta/RC 间隔 6 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-10-14：visionOS 27.2 Beta …",
         "badge": "IT之家"
       },
       {
@@ -201,14 +201,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50149392",
+        "id": "hn-50156206",
         "category": "dev",
-        "title": "Linux 7.3 Released",
-        "url": "https://lwn.net/Articles/1101143/",
+        "title": "The reverts will continue until morale improves",
+        "url": "http://peter.eisentraut.org/blog/2026/10/09/the-reverts-will-continue-until-morale-improves",
         "source": "Hacker News",
-        "publishedAt": "2026-10-19T07:23:57.000Z",
+        "publishedAt": "2026-10-19T18:42:32.000Z",
         "badge": "HN",
-        "signal": "467 分 · 202 评论"
+        "signal": "89 分 · 11 评论"
       },
       {
         "id": "cn-baidu-231ebb86ca6fcf00",
@@ -218,38 +218,38 @@
         "source": "百度热搜",
         "summary": "10月19日，河南辉县救援队人员表示，在南太行徒步失联的33岁女子方某已找到。多位目击者称，该女子遗体被从水潭打捞上来，已遭遇不幸。",
         "badge": "热搜",
-        "signal": "7,713,843 热度"
+        "signal": "7,713,433 热度"
       },
       {
-        "id": "github-advisory-ghsa-74vm-87hj-r66f",
+        "id": "github-advisory-ghsa-f8c7-rwf9-fmgm",
         "category": "security",
-        "title": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
-        "url": "https://github.com/advisories/GHSA-74vm-87hj-r66f",
+        "title": "Mercury: Unauthenticated Remote Code Execution in /api/terminals - access control bypass",
+        "url": "https://github.com/advisories/GHSA-f8c7-rwf9-fmgm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T19:58:46.000Z",
-        "summary": "## Summary `ValidateResponse` panics on a nil pointer when a spec declares a response header with `content` instead of `schema`. `doc.Validate()` accepts that document, so the crash comes from a spec the library just called valid. Same cla…",
-        "badge": "CVE-2026-100349",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-19T17:00:54.000Z",
+        "summary": "### Summary A missing comma in `mercury_app/block_handler.py`'s `BLOCKED_PATTERNS` list causes the blocklist to fail to cover the `/api/terminals` endpoint. As a result, any unauthenticated attacker can spawn a full, interactive OS-level s…",
+        "badge": "CVE-2026-111057",
+        "signal": "CRITICAL · CVSS 10.0"
       },
       {
-        "id": "ai-hugging-face-c9a6184923cc1a58",
+        "id": "ai-hugging-face-138e9b7e7d974724",
         "category": "ai",
-        "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
-        "url": "https://huggingface.co/blog/reflection-beam",
+        "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
+        "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "publishedAt": "2026-10-16T01:44:47.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250098",
+        "id": "v2ex-1250111",
         "category": "dev",
-        "title": "非 IDE 形态的 coding agent，是不是都不支持多仓库工作区？",
-        "url": "https://www.v2ex.com/t/1250098",
+        "title": "zcode 非官方手机端，有兴趣的捧个场",
+        "url": "https://www.v2ex.com/t/1250111",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-19T10:35:36.000Z",
-        "summary": "你们是怎么解决“同时改多个仓库”的场景的？",
+        "publishedAt": "2026-10-19T11:39:48.000Z",
+        "summary": "四台机器，一个页面，零次切窗。 我有四台机器在跑 ZCode：公司台式、家里笔记本、云主机、Mac mini。 以前最烦的不是看不到进度，而是看不过来。每台机器一个窗口，切来切去，上下文全断。想看眼 e2e、批个权限、补一句 prompt，得先把窗口找出来。 所以我写了个 Android 客户端。做完才发现，手机扫码只是入口，真正解决问题的是多机聚合： 手机扫码，一次绑定多台桌面； 手机本地起一个群控台 Web 服务； 同一 Wi-Fi 下，PC 浏览器打开这个地址； 每台…",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-item-8ad293dde8f52634",
@@ -283,35 +283,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50150927",
+        "id": "hn-50152307",
         "category": "dev",
-        "title": "Alternatives to Animal Testing Are Finally Taking Off",
-        "url": "https://spectrum.ieee.org/alternatives-to-animal-testing",
+        "title": "Wine ported to OpenBSD",
+        "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
         "source": "Hacker News",
-        "publishedAt": "2026-10-19T11:10:54.000Z",
+        "publishedAt": "2026-10-19T13:35:34.000Z",
         "badge": "HN",
-        "signal": "130 分 · 31 评论"
+        "signal": "435 分 · 143 评论"
       },
       {
-        "id": "cn-it-99d48ab274894943",
+        "id": "cn-it-e667a498c54f4b5c",
         "category": "cn",
-        "title": "圆通回应“客户取消快递订单被记为投诉”事件：向客户道歉，不存在“咨询即处罚”“进线算投诉”情况",
-        "url": "https://www.ithome.com/1/015/051.htm",
+        "title": "苹果 macOS 27.2 RC 发布",
+        "url": "https://www.ithome.com/1/015/063.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-19T15:14:26.000Z",
-        "summary": "IT之家 10 月 19 日消息，今晚，圆通速递就“客户取消快递订单被记为投诉”事件致歉。 公告称，18 日晚，有媒体报道圆通一加盟网点“客户致电取消订单被登记为投诉？快递员上门称被罚款，孕妇受惊吓进医院”，并引发网络关注。圆通总部高度重视，第一时间进行调查核实。公司因此事对客户带来的身心不利影响真诚致歉。 据悉，涉事加盟网点为浙江杭州市余杭区仁和网点，其在接到客户撤销寄件需求后，向当事快递员传导了错误信息， 导致快递员误认为自己面临罚款 ，并在随后与客户沟通时情绪过激、言…",
+        "publishedAt": "2026-10-19T18:35:05.000Z",
+        "summary": "IT之家 10 月 20 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.2 RC 更新（内部版本号：26B118），本次更新距离上次发布 Beta/RC 间隔 6 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 ，之后通过【设置】【通用】【…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-6fj4-rcr3-r7rr",
+        "id": "github-advisory-ghsa-rv4m-xm3f-3ccq",
         "category": "security",
-        "title": "lopdf has a stack overflow via deeply nested PDF objects",
-        "url": "https://github.com/advisories/GHSA-6fj4-rcr3-r7rr",
+        "title": "Mercury: Unauthenticated Remote Code Execution via /api/kernels",
+        "url": "https://github.com/advisories/GHSA-rv4m-xm3f-3ccq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T19:55:39.000Z",
-        "summary": "`lopdf::Document::load_mem` (and the other `load*` entry points) parses nested PDF arrays and dictionaries with unbounded recursion. A small crafted PDF whose Catalog contains a deeply nested array (`/X [[[ … ]]]`, on the order of 10,000 l…",
-        "badge": "GHSA-6FJ4-RCR3-R7RR",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-19T16:49:08.000Z",
+        "summary": "Mercury runs a JupyterLab server with **anonymous access by default** (`mercury_app/__main__.py` sets `--IdentityProvider.token=''` when no `--token`/`MERCURY_TOKEN` is given; when tokenless it also sets `--ServerApp.disable_check_xsrf=Tru…",
+        "badge": "CVE-2026-111058",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
         "id": "ai-google-deepmind-8b1ab1df41ac00d8",
@@ -323,13 +323,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250094",
+        "id": "v2ex-1250098",
         "category": "dev",
-        "title": "复刻 Jetbrains IDE 的 Git 客户端做成 VS Code 插件",
-        "url": "https://www.v2ex.com/t/1250094",
+        "title": "非 IDE 形态的 coding agent，是不是都不支持多仓库工作区？",
+        "url": "https://www.v2ex.com/t/1250098",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-19T10:14:54.000Z",
-        "summary": "一直用习惯了 Jetbrains IDE 的 git 管理，现在因为 AI 编程逐渐转向了 VS Code ，但是感觉自带的 git 功能不好用，这两天用 opus 基于开源的 Rebased 客户端，复刻做成插件。 实现了一下能力 带提交图的 Git 日志； Commit 工具窗口（ changelist 、Shelf 、Stash 、Branches ）； 三栏合并窗口和交互式 Rebase ； Local History ； Push 、Update 、Merge 、…",
+        "publishedAt": "2026-10-19T10:35:36.000Z",
+        "summary": "你们是怎么解决“同时改多个仓库”的场景的？",
         "badge": "程序员",
         "signal": "10 回复"
       },
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "2026年是“十五五”开局之年，前三季度，中国经济运行总体平稳，高质量发展取得新成效。让我们透过9组数据，读懂中国经济顶压前行、向新向优发展的强大韧性和活力。",
         "badge": "热搜",
-        "signal": "7,616,381 热度"
+        "signal": "7,616,675 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76519",
@@ -355,23 +355,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-hugging-face-d330643595776f9f",
+        "id": "ai-hugging-face-c9a6184923cc1a58",
         "category": "ai",
-        "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+        "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
+        "url": "https://huggingface.co/blog/reflection-beam",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-15T20:34:01.000Z",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50150809",
+        "id": "hn-50154624",
         "category": "dev",
-        "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
-        "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+        "title": "Android apps running native on macOS",
+        "url": "https://github.com/kksimp/Mac.apk",
         "source": "Hacker News",
-        "publishedAt": "2026-10-19T10:53:39.000Z",
+        "publishedAt": "2026-10-19T16:45:30.000Z",
         "badge": "HN",
-        "signal": "128 分 · 36 评论"
+        "signal": "183 分 · 66 评论"
       },
       {
         "id": "cn-item-ac785458c59711d4",
@@ -384,15 +384,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-rxjv-24xq-76wc",
+        "id": "github-advisory-ghsa-vx2m-gpq4-8j5q",
         "category": "security",
-        "title": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
-        "url": "https://github.com/advisories/GHSA-rxjv-24xq-76wc",
+        "title": "LoopX serve-status permissive CORS policy exposes control-plane state and private Markdown files",
+        "url": "https://github.com/advisories/GHSA-vx2m-gpq4-8j5q",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T19:53:06.000Z",
-        "summary": "### Summary `IPCameraFrameGrabber` parses the `Content-Length` value from the multipart MJPEG HTTP stream returned by the configured IP camera without any bounds checking. A malicious or compromised camera endpoint - or any network attacke…",
-        "badge": "CVE-2026-102834",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-19T16:11:57.000Z",
+        "summary": "## Summary `loopx serve-status` sends `Access-Control-Allow-Origin: *` on **every** response, including its unauthenticated `GET` routes. Because the endpoint is unauthenticated and bound to a fixed, well-known loopback port, **any website…",
+        "badge": "CVE-2026-108372",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-32165ee6af8945a5",
@@ -405,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250089",
+        "id": "v2ex-1250094",
         "category": "dev",
-        "title": "2026 我做了一个在线的西瓜游戏",
-        "url": "https://www.v2ex.com/t/1250089",
+        "title": "复刻 Jetbrains IDE 的 Git 客户端做成 VS Code 插件",
+        "url": "https://www.v2ex.com/t/1250094",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-19T09:56:10.000Z",
-        "summary": "家里小朋友老是缠着玩我手机上的西瓜游戏，搞得我没手机玩，干脆做了一个在线西瓜游戏，小朋友在电脑玩，不再抢我的手机了,迟早要接触电子产品的，先接触电脑把，哈哈。 watermelonmerge.com",
+        "publishedAt": "2026-10-19T10:14:54.000Z",
+        "summary": "一直用习惯了 Jetbrains IDE 的 git 管理，现在因为 AI 编程逐渐转向了 VS Code ，但是感觉自带的 git 功能不好用，这两天用 opus 基于开源的 Rebased 客户端，复刻做成插件。 实现了一下能力 带提交图的 Git 日志； Commit 工具窗口（ changelist 、Shelf 、Stash 、Branches ）； 三栏合并窗口和交互式 Rebase ； Local History ； Push 、Update 、Merge 、…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "11 回复"
       },
       {
-        "id": "cn-it-62dc80a07907003e",
+        "id": "cn-it-1e283a85b4ca5afd",
         "category": "cn",
-        "title": "四个谷歌 Gemini 4 Argon 智能体成功击败末影龙通关《我的世界》，耗时 27 小时",
-        "url": "https://www.ithome.com/1/015/048.htm",
+        "title": "苹果 iOS/iPadOS 27.2 RC 发布",
+        "url": "https://www.ithome.com/1/015/062.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-19T15:03:29.000Z",
-        "summary": "IT之家 10 月 19 日消息，谷歌研究人员近日发布论文称，他们使用四个 Gemini 4 Argon 智能体成功通关《我的世界》，仅用 27 小时就成功击败末影龙。 谷歌将 4 个 Gemini 4 放入随机生成的世界中，他们可以通过游戏内的聊天框互相协调。但研究人员没有为他们制定任何策略，只是说了最终目标，所有行为都由智能体自行规划。研究人员可通过仪表板观察他们，下达暂停 / 终止测试指令，但没有权利介入。 游戏开始后，这些智能体很快分担了不同任务：有的建造末影人农场…",
+        "publishedAt": "2026-10-19T18:35:04.000Z",
+        "summary": "【 点此直达升级教程 】 IT之家 10 月 20 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.2 RC 更新（内部版本号：24B115），本次更新距离上次发布 Beta/RC 间隔 6 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登…",
         "badge": "IT之家"
       },
       {
@@ -446,14 +446,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50152541",
+        "id": "hn-50134472",
         "category": "dev",
-        "title": "Show HN: KiviDB, a faster Redis-compatible memory database and vector cache",
-        "url": "https://github.com/kividbio/kividb",
+        "title": "It's still ok to enjoy programming",
+        "url": "https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming",
         "source": "Hacker News",
-        "publishedAt": "2026-10-19T13:53:52.000Z",
+        "publishedAt": "2026-10-17T19:53:20.000Z",
         "badge": "HN",
-        "signal": "27 分 · 2 评论"
+        "signal": "322 分 · 307 评论"
       },
       {
         "id": "cn-baidu-84ac89601fde0356",
@@ -463,38 +463,38 @@
         "source": "百度热搜",
         "summary": "近日，沐瞳科技发布内部通知，兑现2026年1月年会上的承诺：向符合条件的员工每人发放一条5克24K纯金纪念手链，总计约10公斤，物料价值接近千万元。手链为周大福定制款，发放范围覆盖超2000名员工，“不看段位，不设排位”，不看绩效与职级，校招实习生同样在列。",
         "badge": "热搜",
-        "signal": "7,521,707 热度"
+        "signal": "7,520,477 热度"
       },
       {
-        "id": "github-advisory-ghsa-h4mw-j7qp-8mwm",
+        "id": "github-advisory-ghsa-pw5q-rjx4-7f7p",
         "category": "security",
-        "title": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
-        "url": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm",
+        "title": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
+        "url": "https://github.com/advisories/GHSA-pw5q-rjx4-7f7p",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-16T19:44:37.000Z",
-        "summary": "The Claude Agent SDK for Python passed the `resume` option to the Claude CLI without validation, allowing a value beginning with `-` to be interpreted as a separate CLI flag. An attacker who controlled the `resume` value could inject an `-…",
-        "badge": "CVE-2026-96620",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-10-16T21:15:03.000Z",
+        "summary": "## Summary A user holding the delegated `users:update` permission can reset the global administrator's password and take over the admin account. `UpdateUser` sets the target user's `PasswordHash` from the request body for ANY target with n…",
+        "badge": "CVE-2026-96627",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-hugging-face-39052ad94a8a76cc",
+        "id": "ai-hugging-face-d330643595776f9f",
         "category": "ai",
-        "title": "Apertus 1.5 Release Notes",
-        "url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+        "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-15T09:08:45.000Z",
+        "publishedAt": "2026-10-15T20:34:01.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250087",
+        "id": "v2ex-1250089",
         "category": "dev",
-        "title": "请教 iOS 开发 App，低成本机器推荐，想做点应用上架玩玩",
-        "url": "https://www.v2ex.com/t/1250087",
+        "title": "2026 我做了一个在线的西瓜游戏",
+        "url": "https://www.v2ex.com/t/1250089",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-19T09:53:25.000Z",
-        "summary": "之前注册过谷歌开发者，但太久没登录过，给我封号了。。。 只能玩玩苹果的开发者了（从没用过苹果设备) 请教各位彦祖: iPhone SE2 或者 iPhone SE3 行不行？ 或者咸鱼有啥关键词吗？ 我看很多什么带锁不带锁，给我绕晕了",
+        "publishedAt": "2026-10-19T09:56:10.000Z",
+        "summary": "家里小朋友老是缠着玩我手机上的西瓜游戏，搞得我没手机玩，干脆做了一个在线西瓜游戏，小朋友在电脑玩，不再抢我的手机了,迟早要接触电子产品的，先接触电脑把，哈哈。 watermelonmerge.com",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/MadsLorentzen/ai-job-search",
         "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "language": "Python",
-        "stars": 56002,
+        "stars": 56842,
         "starsToday": 3860
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/anomalyco/opencode",
         "description": "The open source coding agent.",
         "language": "TypeScript",
-        "stars": 217406,
+        "stars": 217669,
         "starsToday": 1310
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/akitaonrails/ai-memory",
         "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "language": "Rust",
-        "stars": 11017,
+        "stars": 11244,
         "starsToday": 666
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/Comfy-Org/ComfyUI",
         "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "language": "Python",
-        "stars": 139355,
+        "stars": 139584,
         "starsToday": 1011
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 76957,
+        "stars": 77104,
         "starsToday": 564
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 97823,
+        "stars": 98100,
         "starsToday": 1591
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/headroomlabs-ai/headroom",
         "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "language": "Python",
-        "stars": 76076,
+        "stars": 76175,
         "starsToday": 317
       },
       {
@@ -580,8 +580,8 @@
         "name": "withmarbleapp/os-taxonomy",
         "url": "https://github.com/withmarbleapp/os-taxonomy",
         "language": "JavaScript",
-        "stars": 5949,
-        "starsToday": 427
+        "stars": 6063,
+        "starsToday": 301
       },
       {
         "id": "github-1b3902e23087aedb",
@@ -590,7 +590,7 @@
         "url": "https://github.com/Kruk2/jasna",
         "description": "Video restoration tool",
         "language": "Python",
-        "stars": 2779,
+        "stars": 2851,
         "starsToday": 502
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 55024,
+        "stars": 55162,
         "starsToday": 607
       }
     ],
-    "updatedAt": "2026-10-19T15:37:09.414Z"
+    "updatedAt": "2026-10-19T21:03:58.272Z"
   }
 }
