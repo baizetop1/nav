@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-18T23:13:35.018Z",
+  "generatedAt": "2026-10-19T01:18:47.977Z",
   "intelligence": {
-    "updatedAt": "2026-10-18T23:13:35.018Z",
+    "updatedAt": "2026-10-19T01:18:47.977Z",
     "items": [
       {
-        "id": "cn-item-25e9435f57348fd8",
+        "id": "cn-item-841f9d43ebf88358",
         "category": "cn",
-        "title": "以色列大选将至 特朗普发文支持内塔尼亚胡竞选连任以总理",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-19/10716920.shtml",
+        "title": "新一股冷空气将影响我国中东部大部地区",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-19/10716932.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-18T23:03:19.000Z",
-        "summary": "中新网10月19日电 综合外媒报道，当地时间18日，美国总统特朗普在“真实社交”平台发文，公开表示对以色列总理内塔尼亚胡的支持，力挺他在以色列即将举行的大选中竞选连任。",
+        "publishedAt": "2026-10-19T00:15:49.000Z",
+        "summary": "中新网10月19日电 据中央气象台网站消息，19日至21日新一轮冷空气影响中东部地区，关注大风降温、雨雪天气对人体健康、交通出行等的影响，做好森林草原和城乡防火工作。20日开始，新疆北部将出现明显雨雪天气，防范对交通运输、城市运行等的影响。",
         "badge": "中新网要闻"
       },
       {
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-18T20:48:14.000Z",
         "badge": "HN",
-        "signal": "127 分 · 69 评论"
+        "signal": "197 分 · 115 评论"
       },
       {
-        "id": "cn-it-b75b44573431c104",
+        "id": "cn-it-359c560ec395e226",
         "category": "cn",
-        "title": "掌阅推出 Ocean 6 Pro 电纸书阅读器：7 英寸 Carta 1300 云曦柔光屏，1799 元",
-        "url": "https://www.ithome.com/1/014/624.htm",
+        "title": "应对 AI 风险，Anthropic 向外部 AI 监督机构开放类员工访问权限",
+        "url": "https://www.ithome.com/1/014/651.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-18T23:09:50.000Z",
-        "summary": "IT之家 10 月 19 日消息，掌阅推出 Ocean 6 Pro 电纸书阅读器，有孤山（黑）、浅草（绿）两种配色，现已开始预约， 售价 1799 元 。 这款新品采用 7 英寸云曦柔光屏，支持亮度 30 级、色温 30 级精细调节，配备全新定制柔光灯珠，采用微米级贴合技术与纳米蚀刻钢化玻璃；Carta 1300 屏幕技术，300PPI，采用凹屏设计，显示层次感更强。 整机重 196g、厚约 7mm；机身设计经过优化，倒角圆润处理，更贴合掌心，搭配实体翻页按键，单手操作更方…",
+        "publishedAt": "2026-10-19T01:14:28.000Z",
+        "summary": "IT之家 10 月 19 日消息，Anthropic 为外部评估人员开放了“类似员工级别的访问权限”，用于评估其模型存在的风险，以此兑现承诺，强化安全防护，应对外界对于这项技术可能出现灾难性失控的担忧。 非营利机构 METR 曾与 OpenAI、Anthropic、谷歌以及 Meta 等头部实验室开展合作，如今该机构已有团队入驻这家 Claude 研发企业的办公场所，可以访问其硬件设备与内部系统。 随着能力更强的人工智能系统可能给经济、网络安全乃至全人类带来的风险引发越来越…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1249831",
+        "id": "v2ex-1249858",
         "category": "dev",
-        "title": "想知道注册 Apple 组织开发者账户，美国公司和英国公司，哪个更合适",
-        "url": "https://www.v2ex.com/t/1249831",
+        "title": "开源一个领克 03 21 款车机高德地图仪表盘桥接 apk",
+        "url": "https://www.v2ex.com/t/1249858",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-18T16:12:46.000Z",
-        "summary": "App 需要使用 ne 框架，个人开发者账户上架有点不大现实，注册美国公司首年差不多 1000 ，英国贵一点点，后续持有费用，美国便宜很多，因为美国公司，人不在美国，可以申报免税",
+        "publishedAt": "2026-10-19T00:26:52.000Z",
+        "summary": "我开的是领克 03 2021 年买的，车机型号 CS11，车机是亿咖通（ECARX）那套方案，Android 4.4.3。原厂只给百度地图，导航的时候仪表盘上会亮出转向箭头、下一条路的名字、还剩多少公里——这块体验我一直挺满意。 但百度地图的路线规划我实在受不了，也没有高德地图的红黄绿灯读秒。所以我想把车机的地图换了。于是 vibecoding 了一个桥接方案。 我花了两天把它接上了，代码开源在 monkey-wenjun/amap-dim-bridge。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-dd9c7244a6dc1d5c",
+        "id": "cn-baidu-5e8276112bde7df3",
         "category": "cn",
-        "title": "建议售价1980的眼镜片批发价30",
-        "url": "https://www.baidu.com/s?wd=%E5%BB%BA%E8%AE%AE%E5%94%AE%E4%BB%B71980%E7%9A%84%E7%9C%BC%E9%95%9C%E7%89%87%E6%89%B9%E5%8F%91%E4%BB%B730&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "被曝光后 江苏丹阳连夜通报",
+        "url": "https://www.baidu.com/s?wd=%E8%A2%AB%E6%9B%9D%E5%85%89%E5%90%8E+%E6%B1%9F%E8%8B%8F%E4%B8%B9%E9%98%B3%E8%BF%9E%E5%A4%9C%E9%80%9A%E6%8A%A5&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，记者在丹阳调查发现，部分宣称具高科技含量的近视“防控”镜片批发价极低。一副适配300度以内的多点离焦镜片批发价仅30元，与普通镜片无异，而其产品手册上的零售参考价高达1980元。商家称采购商可自行决定贴牌与售价，市场上数百上千元的防控镜片多源于此。",
+        "summary": "10月18日晚间，江苏省丹阳市市场监督管理局通报：针对央视曝光的防控镜相关问题，我局立即组织执法人员开展现场核查。经查，4家涉事主体违规基本属实，已立案调查。此前，央视报道称，丹阳有商户将批发价30元的镜片标称高科技，手册零售参考价达1980元，任采购商贴牌定价。",
         "badge": "热搜",
-        "signal": "7,808,808 热度"
+        "signal": "7,808,823 热度"
       },
       {
         "id": "cisa-kev-cve-2025-61624",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50142573",
+        "id": "hn-50146625",
         "category": "dev",
-        "title": "Someone behind the software",
-        "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
+        "title": "William Gibson and the trademarking of cyberspace",
+        "url": "https://colo.to/cyberspace.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-18T16:32:00.000Z",
+        "publishedAt": "2026-10-18T23:37:57.000Z",
         "badge": "HN",
-        "signal": "264 分 · 112 评论"
+        "signal": "46 分 · 1 评论"
       },
       {
-        "id": "cn-item-9e863dadef67d77f",
+        "id": "cn-item-ba02183a7644c9a7",
         "category": "cn",
-        "title": "加拿大军事基地火灾致4人死数十人伤 总理卡尼发声",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-19/10716919.shtml",
+        "title": "泽连斯基：若乌克兰被要求举行战时选举，他将竞选连任",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-19/10716921.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-18T22:43:28.000Z",
-        "summary": "中新网10月19日电 综合外媒报道，当地时间18日，加拿大总理卡尼证实，该国西部艾伯塔省韦恩赖特军事基地17日发生的火灾已造成4名军人死亡、数十人受伤。",
+        "publishedAt": "2026-10-18T23:20:18.000Z",
+        "summary": "中新网10月19日电 据外媒报道，乌克兰总统泽连斯基当地时间18日接受媒体采访时称，若美国和俄罗斯方面要求乌方在冲突期间举行选举，他将竞选连任总统。",
         "badge": "中新网要闻"
       },
       {
@@ -170,13 +170,13 @@
         "signal": "8 回复"
       },
       {
-        "id": "cn-it-2d481748b58fbd46",
+        "id": "cn-it-1aa9d7548940e6b2",
         "category": "cn",
-        "title": "消息称 AI 云厂商 Nscale IPO 估值目标遭投资者反对：砍半才有人买单",
-        "url": "https://www.ithome.com/1/014/623.htm",
+        "title": "王腾官宣 ISHO 首场发布会：今日宜休 AI 睡眠科技生态产品发布会定档 10 月 29 日",
+        "url": "https://www.ithome.com/1/014/650.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-18T23:09:03.000Z",
-        "summary": "IT之家 10 月 19 日消息，据彭博社报道，知情人士透露，在人工智能公司遭遇一系列市场挫折后，Nscale 公司的首次公开募股所追求的估值目标正面临阻力。 知情人士称，这家获得英伟达投资的数据中心开发商原本寻求约 300 亿美元 （IT之家注：现汇率约合 2,010.87 亿元人民币） 的 IPO 估值。部分知情人士表示，考虑到澳大利亚人工智能数据中心企业 Firmus IPO 计划宣告失败等因素，一批投资者近期提出，估值定在 160 亿至 190 亿美元 （现汇率约合…",
+        "publishedAt": "2026-10-19T01:12:44.000Z",
+        "summary": "IT之家 10 月 19 日消息，今日宜休科技公司创始人王腾今日正式官宣了今日宜休首场发布会 —— ISHO 今日宜休 AI 睡眠科技生态产品发布会定档 10 月 29 日 19:00 举行 。 参考IT之家此前报道，王腾此前担任小米中国区市场部总经理、REDMI 品牌总经理。在离开小米后，王腾成立新公司“今日宜休”，将研发睡眠健康相关产品，核心成员主要来自小米、华为等大厂。 据王腾本月早些时候在微博透露，截止到目前，ISHO 今日宜休在健康科学研究、临床医学验证上，已经累…",
         "badge": "IT之家"
       },
       {
@@ -201,24 +201,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50144066",
+        "id": "hn-50142573",
         "category": "dev",
-        "title": "Free Pascal compiler now supports dynamic packages",
-        "url": "https://www.getlazarus.org/dynamic/",
+        "title": "Someone behind the software",
+        "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-18T18:48:04.000Z",
+        "publishedAt": "2026-10-18T16:32:00.000Z",
         "badge": "HN",
-        "signal": "93 分 · 12 评论"
+        "signal": "310 分 · 127 评论"
       },
       {
-        "id": "cn-baidu-133349a008de020d",
+        "id": "cn-baidu-4f28450d7d5a70ba",
         "category": "cn",
-        "title": "白酒放低身段",
-        "url": "https://www.baidu.com/s?wd=%E7%99%BD%E9%85%92%E6%94%BE%E4%BD%8E%E8%BA%AB%E6%AE%B5&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国留学生披旭日旗引众怒 细节曝光",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E7%95%99%E5%AD%A6%E7%94%9F%E6%8A%AB%E6%97%AD%E6%97%A5%E6%97%97%E5%BC%95%E4%BC%97%E6%80%92+%E7%BB%86%E8%8A%82%E6%9B%9D%E5%85%89&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月17日，第二十五届中国国际酒业博览会在武汉开幕，展会全面面向普通消费者。为挖掘第二增长曲线，白酒企业全力奔赴年轻化，推出降度小酒及特调鸡尾酒；黄酒企业则集体押注气泡与果味，推无糖低度新品以拓宽消费底盘。行业正从“渠道驱动”转向“消费者驱动”。",
+        "summary": "10月14日，莫斯科大学中国留学生陈某在课堂上披旭日旗引众怒，他还传播日本军国主义物品，有“精日”倾向。在道歉视频中，他表示自己的行为是出于喜欢日本文化。知情人：他是南京人，曾多次表达支持“台独”。",
         "badge": "热搜",
-        "signal": "7,713,662 热度"
+        "signal": "7,714,096 热度"
       },
       {
         "id": "github-advisory-ghsa-74vm-87hj-r66f",
@@ -249,16 +249,16 @@
         "publishedAt": "2026-10-18T11:31:05.000Z",
         "summary": "在 token 的成本不容忽视的情况下，高效使用 token 将会是另一种新能力。",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "14 回复"
       },
       {
-        "id": "cn-item-f0797deedac95c05",
+        "id": "cn-item-25e9435f57348fd8",
         "category": "cn",
-        "title": "亚洲文化遗产保护联盟新增1观察员国1伙伴国",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-18/10716841.shtml",
+        "title": "以色列大选将至 特朗普发文支持内塔尼亚胡竞选连任以总理",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-19/10716920.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-18T12:49:57.000Z",
-        "summary": "中新社杭州10月18日电 (林波)亚洲文化遗产保护联盟理事会第四次会议18日在浙江杭州举行。会上，批准埃及成为联盟伙伴国、哈萨克斯坦成为联盟观察员国。至此，联盟成员国、观察员国、伙伴国总数达到26个。",
+        "publishedAt": "2026-10-18T23:03:19.000Z",
+        "summary": "中新网10月19日电 综合外媒报道，当地时间18日，美国总统特朗普在“真实社交”平台发文，公开表示对以色列总理内塔尼亚胡的支持，力挺他在以色列即将举行的大选中竞选连任。",
         "badge": "中新网要闻"
       },
       {
@@ -283,23 +283,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50136150",
+        "id": "hn-50144066",
         "category": "dev",
-        "title": "There's never been a better time to go into math (by: 3blue1brown) [video]",
-        "url": "https://www.youtube.com/watch?v=LKrwhjOI8Nc",
+        "title": "Free Pascal compiler now supports dynamic packages",
+        "url": "https://www.getlazarus.org/dynamic/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-17T23:26:35.000Z",
+        "publishedAt": "2026-10-18T18:48:04.000Z",
         "badge": "HN",
-        "signal": "93 分 · 31 评论"
+        "signal": "112 分 · 19 评论"
       },
       {
-        "id": "cn-it-f397c40f1416f05a",
+        "id": "cn-it-c3e64b839a50f5b3",
         "category": "cn",
-        "title": "Anthropic 拟设立“公共利益”基金，初始注入 5% 股份",
-        "url": "https://www.ithome.com/1/014/622.htm",
+        "title": "日产 9 月中国区汽车销量 23658 辆，同比下降 61.6%",
+        "url": "https://www.ithome.com/1/014/648.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-18T22:52:35.000Z",
-        "summary": "IT之家 10 月 19 日消息，当地时间 10 月 18 日，Anthropic 宣布，在获得股东批准的前提下， 公司计划将 5% 的股份划入新设立的公共利益基金 （Public Benefit Fund）；且随着这家人工智能巨头的估值增长，该基金持有的股份比例未来还可能进一步提升。 该拟议的基金将作为一家全资拥有的有限责任公司设立，经董事会裁量，公司估值每较尚未披露的基准上涨 50%，基金就会获得 Anthropic 额外 2% 的股份。 Anthropic 公共利益基…",
+        "publishedAt": "2026-10-19T01:11:49.000Z",
+        "summary": "IT之家 10 月 19 日消息，日产（中国）投资有限公司宣布，日产汽车中国区含乘用车和轻型商用车两大事业板块在内的 9 月销量为 23,658 台， 较上年同期减少 61.6% 。 IT之家注意到，日产汽车在华销量已经连续 6 个月同比下滑。 2026 年 9 月，东风日产（含日产、启辰、英菲尼迪品牌）终端销量达 18,932 台，轻型商用车事业板块（郑州日产）销量为 4,726 台。 9 月 22 日，东风日产新 N7 发布，实现 33 项升级， 限时权益价 10.99…",
         "badge": "IT之家"
       },
       {
@@ -331,7 +331,7 @@
         "publishedAt": "2026-10-18T10:38:04.000Z",
         "summary": "用的 aster high 让跑任务，直接把刚刷新的额度跑完了 分析了下，这个逼每次写一个小功能就跑一次全量测试 是我设置问题吗 好像默认就是这样的",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "6 回复"
       },
       {
         "id": "cn-baidu-5ee534eae028ab4f",
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "电子消费品的智慧升级，正是我国制造业转型升级的一个缩影。广交会是观察中国外贸与制造业的重要窗口。在本届广交会上，一批国产高端装备集中亮相。从微米级精密加工件，到重载工业机器人，再到无人机装备个性化定制，中国制造业正在突破关键核心技术，依托自主可控产业链，加速向全球价值链高端迈进。",
         "badge": "热搜",
-        "signal": "7,616,811 热度"
+        "signal": "7,616,564 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76519",
@@ -364,23 +364,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50141076",
+        "id": "hn-50145507",
         "category": "dev",
-        "title": "RepRapMicron",
-        "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
+        "title": "If you don't run your own LLM proxy, how do you know whats going on?",
+        "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-18T13:48:48.000Z",
+        "publishedAt": "2026-10-18T21:09:12.000Z",
         "badge": "HN",
-        "signal": "316 分 · 49 评论"
+        "signal": "17 分 · 9 评论"
       },
       {
-        "id": "cn-item-c51fd2fb9187e457",
+        "id": "cn-item-9e863dadef67d77f",
         "category": "cn",
-        "title": "（经济观察）中国民企AI大模型在全球“圈粉”",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-18/10716821.shtml",
+        "title": "加拿大军事基地火灾致4人死数十人伤 总理卡尼发声",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-19/10716919.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-18T12:24:11.000Z",
-        "summary": "中新社北京10月18日电 (记者 刘亮)从深度求索(DeepSeek)到阿里巴巴通义千问；从月之暗面的Kimi K3到MiniMax的M3；从智谱的GLM到阶跃星辰的Step5 Preview，再到字节跳动的豆包、百度文心一言……一段时间以来，中国民营企业人工智能(AI)大模型集群式崛起，在全球“圈粉”。",
+        "publishedAt": "2026-10-18T22:43:28.000Z",
+        "summary": "中新网10月19日电 综合外媒报道，当地时间18日，加拿大总理卡尼证实，该国西部艾伯塔省韦恩赖特军事基地17日发生的火灾已造成4名军人死亡、数十人受伤。",
         "badge": "中新网要闻"
       },
       {
@@ -416,13 +416,13 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-it-e5ed4505142e78f1",
+        "id": "cn-it-da004d5d152ee306",
         "category": "cn",
-        "title": "古尔曼：苹果本月底发布 OLED MacBook Pro、M6 设备及 iPad mini 8，11 月 6 日上市",
-        "url": "https://www.ithome.com/1/014/621.htm",
+        "title": "双飞燕野蛮部落 SG5 PRO 鼠标在售：PAW3950，磁吸充电，309 元",
+        "url": "https://www.ithome.com/1/014/647.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-18T22:52:20.000Z",
-        "summary": "IT之家 10 月 19 日消息，彭博社的马克 · 古尔曼（Mark Gurman）称，苹果大概率会在 11 月 6 日周五发售多款新品，包括搭载 OLED 屏幕的 MacBook Pro、配备 M6 芯片的 14 英寸 MacBook Pro 与 iMac，以及 / 或一款搭载 OLED 屏幕的 iPad mini 8。 这批产品预计在 10 月 27 日周二或是 10 月 28 日周三正式发布。 IT之家注意到，如果这一时间安排属实，苹果将连续四个周五发售新品，其余产品…",
+        "publishedAt": "2026-10-19T01:11:28.000Z",
+        "summary": "IT之家 10 月 19 日消息，双飞燕 (A4tech) 近日推出了野蛮部落 (SAVAGE IMPACT) SG5 PRO 鼠标。这一型号基于 PAR2863 主控 + PAW3950 传感器 的双原相方案，售价 309 元。 SG5 PRO 采用 125×64×40 (mm) 的 中大手准对称模具 ，配备 TTC 100M 光学按键微动、环诺 0.8M 机械滚轮，在 USB-C 和 2.4GHz 模式下均支持 8kHz 回报率，质量 66g，续航 80hr。 其采用 …",
         "badge": "IT之家"
       },
       {
@@ -446,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50136979",
+        "id": "hn-50141076",
         "category": "dev",
-        "title": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
-        "url": "https://www.sciencealert.com/dogs-seem-to-agree-with-humans-that-bouba-is-round-and-kiki-is-spiky",
+        "title": "RepRapMicron",
+        "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
         "source": "Hacker News",
-        "publishedAt": "2026-10-18T01:38:08.000Z",
+        "publishedAt": "2026-10-18T13:48:48.000Z",
         "badge": "HN",
-        "signal": "83 分 · 60 评论"
+        "signal": "329 分 · 54 评论"
       },
       {
-        "id": "cn-baidu-a928bc32ea034618",
+        "id": "cn-baidu-c0114e0ff61aa399",
         "category": "cn",
-        "title": "为什么4.8分网红餐厅更容易踩雷",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%BA%E4%BB%80%E4%B9%884.8%E5%88%86%E7%BD%91%E7%BA%A2%E9%A4%90%E5%8E%85%E6%9B%B4%E5%AE%B9%E6%98%93%E8%B8%A9%E9%9B%B7&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "欧洲多国爆发示威 法国2000多人被捕",
+        "url": "https://www.baidu.com/s?wd=%E6%AC%A7%E6%B4%B2%E5%A4%9A%E5%9B%BD%E7%88%86%E5%8F%91%E7%A4%BA%E5%A8%81+%E6%B3%95%E5%9B%BD2000%E5%A4%9A%E4%BA%BA%E8%A2%AB%E6%8D%95&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "当前，4.8分网红餐厅频现踩雷现象。2025年，成都一面馆因外卖冲击致营业额暴跌，花2.8万找代运营推9.9元团购及好评返利，陷入“不投流等死，投流找死”困境。中介更用AI批量炮制“云探店”视频层层抽成。消费者随之反向避雷，专挑3.5至4.0分老店。",
+        "summary": "法国内政部长努内兹18日称，在17日抗议活动期间全法有2000多人被捕。17日，法国及意大利、葡萄牙、比利时等欧洲多国爆发示威，抗议生活成本高企等问题。分析称，能源价格上涨加重民众负担，折射欧洲治理困境。",
         "badge": "热搜",
-        "signal": "7,523,430 热度"
+        "signal": "7,520,143 热度"
       },
       {
         "id": "github-advisory-ghsa-h4mw-j7qp-8mwm",
@@ -511,8 +511,8 @@
         "url": "https://github.com/MadsLorentzen/ai-job-search",
         "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "language": "Python",
-        "stars": 52991,
-        "starsToday": 2213
+        "stars": 53263,
+        "starsToday": 2232
       },
       {
         "id": "github-3e90fac1501aeb3d",
@@ -521,8 +521,8 @@
         "url": "https://github.com/anthropics/claude-plugins-official",
         "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "language": "Python",
-        "stars": 42643,
-        "starsToday": 1187
+        "stars": 42708,
+        "starsToday": 1175
       },
       {
         "id": "github-064fc4e4cb74eb4b",
@@ -531,8 +531,8 @@
         "url": "https://github.com/anomalyco/opencode",
         "description": "The open source coding agent.",
         "language": "TypeScript",
-        "stars": 216524,
-        "starsToday": 1417
+        "stars": 216619,
+        "starsToday": 1414
       },
       {
         "id": "github-e0c5b60fcbe6479b",
@@ -541,8 +541,8 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 12717,
-        "starsToday": 351
+        "stars": 12751,
+        "starsToday": 350
       },
       {
         "id": "github-757bb2aa982fbfd2",
@@ -551,8 +551,8 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 76485,
-        "starsToday": 502
+        "stars": 76527,
+        "starsToday": 513
       },
       {
         "id": "github-099a05080dd8db13",
@@ -561,8 +561,8 @@
         "url": "https://github.com/akitaonrails/ai-memory",
         "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "language": "Rust",
-        "stars": 10450,
-        "starsToday": 513
+        "stars": 10500,
+        "starsToday": 512
       },
       {
         "id": "github-89dc44e4b1b40fac",
@@ -571,7 +571,7 @@
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 96570,
+        "stars": 96682,
         "starsToday": 1146
       },
       {
@@ -581,8 +581,8 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 54561,
-        "starsToday": 582
+        "stars": 54601,
+        "starsToday": 589
       },
       {
         "id": "github-90d09492a98e7644",
@@ -591,8 +591,8 @@
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "language": "Python",
-        "stars": 75232,
-        "starsToday": 2098
+        "stars": 75422,
+        "starsToday": 2082
       },
       {
         "id": "github-d163e50742586a9d",
@@ -600,10 +600,10 @@
         "name": "android/skills",
         "url": "https://github.com/android/skills",
         "language": "Kotlin",
-        "stars": 8743,
-        "starsToday": 381
+        "stars": 8779,
+        "starsToday": 375
       }
     ],
-    "updatedAt": "2026-10-18T23:13:35.018Z"
+    "updatedAt": "2026-10-19T01:18:47.977Z"
   }
 }
