@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-20T17:08:31.941Z",
+  "generatedAt": "2026-10-20T20:36:06.217Z",
   "intelligence": {
-    "updatedAt": "2026-10-20T17:08:31.941Z",
+    "updatedAt": "2026-10-20T20:36:06.217Z",
     "items": [
       {
         "id": "cn-item-8839138b69c2b58d",
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-10-19"
       },
       {
-        "id": "ai-openai-1dbe22633003a2af",
+        "id": "ai-openai-1725d137aa3debc0",
         "category": "ai",
-        "title": "Advancing coding in low‑resource programming languages",
-        "url": "https://openai.com/index/low-resource-programming-languages",
+        "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+        "url": "https://openai.com/index/ted-taylor-restaurant",
         "source": "OpenAI",
-        "publishedAt": "2026-10-19T12:00:00.000Z",
-        "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
+        "publishedAt": "2026-10-20T10:00:00.000Z",
+        "summary": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50167536",
+        "id": "hn-50170593",
         "category": "dev",
-        "title": "Facebook now charging to post more than 2 links a month",
-        "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+        "title": "SimCity, but with Permits",
+        "url": "https://permit.petercai.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-20T15:06:08.000Z",
+        "publishedAt": "2026-10-20T18:29:09.000Z",
         "badge": "HN",
-        "signal": "293 分 · 215 评论"
+        "signal": "237 分 · 107 评论"
       },
       {
-        "id": "cn-it-6dbfb2e088187694",
+        "id": "cn-it-8ad382658cf4825c",
         "category": "cn",
-        "title": "1 亿目标近在咫尺：曝华为鸿蒙 HarmonyOS 系统装机量突破 9500 万台",
-        "url": "https://www.ithome.com/1/015/614.htm",
+        "title": "Netflix 2026 财年第三财季归母净利润 36.64 亿美元，同比增长 43.86%",
+        "url": "https://www.ithome.com/1/015/618.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-20T15:57:50.000Z",
-        "summary": "IT之家 10 月 20 日消息，奇妙工具箱今日数据显示， 华为 鸿蒙 HarmonyOS 操作系统装机量突破 9,500 万台 ，目前约 95,288,247 台。 据IT之家此前报道，在今年 3 月的直播中，华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东透露，鸿蒙系统用户规模正经历急剧增长， 预计将在今年冬季前突破 1 亿大关 。 另外，在 10 月 1 日的华为 Mate 90 系列及全场景新品发布会上，华为常务董事、产品投资评审委员会主任、终端 BG…",
+        "publishedAt": "2026-10-20T20:06:20.000Z",
+        "summary": "IT之家 10 月 21 日消息，Netflix今日发布 2026 财年（2026 年 1 月～2026 年 12 月）第三财季（2026 年 7 月～2026 年 9 月）报告： 营业总收入 ：128.74 亿美元 （IT之家注：现汇率约合 861.75 亿元人民币） ，同比增长 11.8%，环比增长 2.5% 毛利润 ：67.95 亿美元 （现汇率约合 454.84 亿元人民币） ，同比增长 27.11% 毛利率 ：52.78%，同比增长 6.33 个百分点 归母净利润…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-62vg-58rm-qff7",
+        "id": "github-advisory-ghsa-gfr2-rv44-r23c",
         "category": "security",
-        "title": "@angular/router: Denial of Service via Unmatched Empty-Path Outlet Route Matching in Server-Side Rendering (SSR)",
-        "url": "https://github.com/advisories/GHSA-62vg-58rm-qff7",
+        "title": "markdown-it: Quadratic-time rendering of a single multi-line link reference definition with default options (regression since 14.0)",
+        "url": "https://github.com/advisories/GHSA-gfr2-rv44-r23c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T14:36:39.000Z",
-        "summary": "A denial of service (DoS) vulnerability was identified in `@angular/router` when Server-Side Rendering (SSR) is enabled on Node.js (V8). During route recognition, `@angular/router` fails to validate whether an auxiliary outlet segment in t…",
-        "badge": "CVE-2026-111752",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-20T20:28:44.000Z",
+        "summary": "### Summary A link reference definition whose label or title is never closed is O(n²) in markdown-it 15.0.2 with default options. Continuation lines are pulled lazily with str += lineContent in src/rules_block/reference.ts, and the subsequ…",
+        "badge": "CVE-2026-111758",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -85,7 +85,7 @@
         "publishedAt": "2026-10-20T16:44:51.000Z",
         "summary": "⚒️ 前阵子发现的，就捣鼓了一个，大家拿出 iPhone ，打开相机，对着下图试试看，能不能弹窗出来。⚒️",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "12 回复"
       },
       {
         "id": "cn-baidu-8b33ad8dd529b61f",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "19日，菲律宾《马尼拉时报》刊发前总统发言人评论文章警告，若驱逐中国驻菲大使，中方几乎必然对等回应，两国可能降级外交接触。文章指出，2025年中国向菲供应384亿美元商品，若停止贸易将重创菲律宾经济。",
         "badge": "热搜",
-        "signal": "7,808,542 热度"
+        "signal": "7,807,881 热度"
       },
       {
         "id": "cisa-kev-cve-2025-61624",
@@ -109,23 +109,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-19"
       },
       {
-        "id": "ai-hugging-face-ef73bf2ace8ac671",
+        "id": "ai-hugging-face-e8a8161ff83426ef",
         "category": "ai",
-        "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
-        "url": "https://huggingface.co/blog/allenai/fairstress",
+        "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
+        "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-20T16:09:19.000Z",
+        "publishedAt": "2026-10-20T18:17:47.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50163277",
+        "id": "hn-50168396",
         "category": "dev",
-        "title": "DeepSeek just open-sourced its inference engine",
-        "url": "https://github.com/deepseek-ai/DeepInfer",
+        "title": "Voxtral 3",
+        "url": "https://mistral.ai/news/voxtral-3/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-20T09:08:54.000Z",
+        "publishedAt": "2026-10-20T16:02:07.000Z",
         "badge": "HN",
-        "signal": "1776 分 · 650 评论"
+        "signal": "389 分 · 109 评论"
       },
       {
         "id": "cn-item-b60d3f303ce81881",
@@ -138,24 +138,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-r7fv-28h4-cvq7",
+        "id": "github-advisory-ghsa-jm63-cq47-j5jp",
         "category": "security",
-        "title": "markdown-it: Quadratic complexity in smartquotes with unmatched closing quotes",
-        "url": "https://github.com/advisories/GHSA-r7fv-28h4-cvq7",
+        "title": "MCP TypeScript server SDK: Shared transport or server instances delivered one HTTP client's messages to another",
+        "url": "https://github.com/advisories/GHSA-jm63-cq47-j5jp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T14:34:50.000Z",
-        "summary": "### Impact When `typographer: true` is enabled, specially crafted Markdown can cause quadratic processing time in the smartquotes rule, potentially leading to denial of service in applications processing untrusted input. Many opening doubl…",
-        "badge": "CVE-2026-111759",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-20T20:07:29.000Z",
+        "summary": "### Summary In affected versions, an MCP server reached over HTTP could deliver one client's responses and notifications to another client. This happened when clients shared one stateless transport, or one `McpServer` or `Server` instance.…",
+        "badge": "CVE-2026-111770",
+        "signal": "HIGH · CVSS 7.7"
       },
       {
-        "id": "ai-openai-9732b2763df5a67a",
+        "id": "ai-openai-1cfb6291fa158d05",
         "category": "ai",
-        "title": "How Itaú is building generative AI for its entire customer base",
-        "url": "https://openai.com/index/itau-generative-ai",
+        "title": "OpenAI acquires Orchestra Bio",
+        "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
         "source": "OpenAI",
-        "publishedAt": "2026-10-16T19:00:00.000Z",
-        "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
+        "publishedAt": "2026-10-20T00:00:00.000Z",
+        "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
         "badge": "OpenAI"
       },
       {
@@ -170,13 +170,13 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-3c0cb9486f2dea97",
+        "id": "cn-it-6dbfb2e088187694",
         "category": "cn",
-        "title": "华为详解 Wi-Fi 7+ 端到端芯片解决方案，支持动态窄频宽、真双频并发、无缝漫游等技术",
-        "url": "https://www.ithome.com/1/015/613.htm",
+        "title": "1 亿目标近在咫尺：曝华为鸿蒙 HarmonyOS 系统装机量突破 9500 万台",
+        "url": "https://www.ithome.com/1/015/614.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-20T15:52:46.000Z",
-        "summary": "IT之家 10 月 20 日消息，华为官网迎来更新，详细介绍了 Wi-Fi 7+ 端到端芯片解决方案。 华为官网显示，基于标准 Wi-Fi 7 协议，华为 Wi-Fi 7+ 依⁠托凌霄 760 系列路由与终端芯片，构筑端到端同源架构。通过芯片级底层协⁠议的深度协同与联合调试， 消除异构芯⁠片间的兼容损耗 ，实现“1+1＞2”的性⁠能提升。 其中， 凌霄 760 芯片应用于华为路由 （属于 Wi-Fi 芯片）、 凌霄 760M 芯片应用于华为手机、平板终端设备 （属于短距通信…",
+        "publishedAt": "2026-10-20T15:57:50.000Z",
+        "summary": "IT之家 10 月 20 日消息，奇妙工具箱今日数据显示， 华为 鸿蒙 HarmonyOS 操作系统装机量突破 9,500 万台 ，目前约 95,288,247 台。 据IT之家此前报道，在今年 3 月的直播中，华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东透露，鸿蒙系统用户规模正经历急剧增长， 预计将在今年冬季前突破 1 亿大关 。 另外，在 10 月 1 日的华为 Mate 90 系列及全场景新品发布会上，华为常务董事、产品投资评审委员会主任、终端 BG…",
         "badge": "IT之家"
       },
       {
@@ -201,14 +201,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50168396",
+        "id": "hn-50163277",
         "category": "dev",
-        "title": "Voxtral 3",
-        "url": "https://mistral.ai/news/voxtral-3/",
+        "title": "DeepInfer: High-performance inference framework for DeepSeek models",
+        "url": "https://github.com/deepseek-ai/DeepInfer",
         "source": "Hacker News",
-        "publishedAt": "2026-10-20T16:02:07.000Z",
+        "publishedAt": "2026-10-20T09:08:54.000Z",
         "badge": "HN",
-        "signal": "96 分 · 21 评论"
+        "signal": "1991 分 · 778 评论"
       },
       {
         "id": "cn-baidu-4ee9a72f312aada0",
@@ -218,26 +218,26 @@
         "source": "百度热搜",
         "summary": "国家癌症中心最新发布的分析显示，2024年全国恶性肿瘤新发约515.06万例，死亡约258.22万例。此前2000年代中期发病前五由消化道肿瘤主导，现发病前五已变为肺癌、乳腺癌、甲状腺癌、结直肠癌和肝癌。",
         "badge": "热搜",
-        "signal": "7,714,369 热度"
+        "signal": "7,714,393 热度"
       },
       {
-        "id": "github-advisory-ghsa-259r-337f-4rfw",
+        "id": "github-advisory-ghsa-46jr-4wx8-v453",
         "category": "security",
-        "title": "Compress/s2: Integer Overflow or Wraparound and Out-of-bounds Write in compress",
-        "url": "https://github.com/advisories/GHSA-259r-337f-4rfw",
+        "title": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation",
+        "url": "https://github.com/advisories/GHSA-46jr-4wx8-v453",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T14:33:33.000Z",
-        "summary": "# Signed Integer Overflow in s2.NewDict ## Summary A signed integer overflow vulnerability in `s2.NewDict()` allows an attacker to bypass repeat index validation by supplying a dictionary with a uvarint-encoded repeat value exceeding `MaxI…",
-        "badge": "CVE-2026-63209",
+        "publishedAt": "2026-10-20T20:06:35.000Z",
+        "summary": "### Summary In affected versions, servers put no limit on how many array elements and object keys they validated in one request. One HTTP request within the default 4 MiB size limit could exhaust the server's memory, and the process aborte…",
+        "badge": "CVE-2026-111768",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-536f23cd94f13984",
+        "id": "ai-hugging-face-ef73bf2ace8ac671",
         "category": "ai",
-        "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
-        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+        "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+        "url": "https://huggingface.co/blog/allenai/fairstress",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-20T15:19:48.000Z",
+        "publishedAt": "2026-10-20T16:09:19.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -273,44 +273,44 @@
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-openai-b6756c0a180ee554",
+        "id": "ai-openai-1dbe22633003a2af",
         "category": "ai",
-        "title": "Benefit Street Partners answers questions faster with Codex",
-        "url": "https://openai.com/index/benefit-street-partners",
+        "title": "Advancing coding in low‑resource programming languages",
+        "url": "https://openai.com/index/low-resource-programming-languages",
         "source": "OpenAI",
-        "publishedAt": "2026-10-16T00:00:00.000Z",
-        "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+        "publishedAt": "2026-10-19T12:00:00.000Z",
+        "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50166579",
+        "id": "hn-50169053",
         "category": "dev",
-        "title": "EMudhra Intermediate CA Compromise",
-        "url": "https://emudhra.we-have-a-problem.com/",
+        "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+        "url": "https://github.com/google-pytorch/torch_tpu",
         "source": "Hacker News",
-        "publishedAt": "2026-10-20T13:58:33.000Z",
+        "publishedAt": "2026-10-20T16:40:24.000Z",
         "badge": "HN",
-        "signal": "185 分 · 81 评论"
+        "signal": "178 分 · 47 评论"
       },
       {
-        "id": "cn-it-ae04b76e526c4e17",
+        "id": "cn-it-3c0cb9486f2dea97",
         "category": "cn",
-        "title": "消息称引望、宁德时代首批换电车型暂定五款，计划 2027 年上市",
-        "url": "https://www.ithome.com/1/015/610.htm",
+        "title": "华为详解 Wi-Fi 7+ 端到端芯片解决方案，支持动态窄频宽、真双频并发、无缝漫游等技术",
+        "url": "https://www.ithome.com/1/015/613.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-20T15:34:31.000Z",
-        "summary": "IT之家 10 月 20 日消息，华为乾崑智能汽车解决方案昨日宣布， 引望与宁德时代、时代电服开展智能换电合作，打造乾崑智驾完整智能充换电生态 ，引望智能技术有限公司与宁德时代新能源科技股份有限公司、时代电服科技有限公司将就新能源汽车智能换电生态开展全面合作。 据晚点 Auto 报道，引望与宁德时代、时代电服合作正推进首批车型的开发， 涉及五款新车，计划 2027 年上市 。报道还提到，在向引望方面求证时，对方转述了三方战略合作协议的核心内容，即合作的动机和目标，但并未对上…",
+        "publishedAt": "2026-10-20T15:52:46.000Z",
+        "summary": "IT之家 10 月 20 日消息，华为官网迎来更新，详细介绍了 Wi-Fi 7+ 端到端芯片解决方案。 华为官网显示，基于标准 Wi-Fi 7 协议，华为 Wi-Fi 7+ 依⁠托凌霄 760 系列路由与终端芯片，构筑端到端同源架构。通过芯片级底层协⁠议的深度协同与联合调试， 消除异构芯⁠片间的兼容损耗 ，实现“1+1＞2”的性⁠能提升。 其中， 凌霄 760 芯片应用于华为路由 （属于 Wi-Fi 芯片）、 凌霄 760M 芯片应用于华为手机、平板终端设备 （属于短距通信…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-6wmf-3r64-vcwv",
+        "id": "github-advisory-ghsa-9xw5-w5jj-pvcg",
         "category": "security",
-        "title": "Crass : Large numeric exponents cause CPU and memory denial of service",
-        "url": "https://github.com/advisories/GHSA-6wmf-3r64-vcwv",
+        "title": "AIOHTTP: File descriptor exhaustion in multipart requests",
+        "url": "https://github.com/advisories/GHSA-9xw5-w5jj-pvcg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T14:32:39.000Z",
-        "summary": "### Impact Crass converts CSS scientific notation number values with unbounded exponentiation before it clamps the result to `Float::MAX`. Applications that use Crass to parse attacker-controlled CSS strings can be forced to spend dispropo…",
-        "badge": "CVE-2026-61845",
+        "publishedAt": "2026-10-20T19:52:09.000Z",
+        "summary": "### Summary An attacker can exhaust file descriptors with specially crafted multipart requests. ### Impact If a handler uses `Request.post()`, it may be possible for an attacker to use an unlimited number of file descriptors, potentially r…",
+        "badge": "CVE-2026-111066",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "国家统计局公布今年前三季度经济数据。初步核算，前三季度国内生产总值1071071亿元，按不变价格计算，同比增长4.6%。分季度看，一季度国内生产总值同比增长5.0%，二季度增长4.3%，三季度增长4.5%。",
         "badge": "热搜",
-        "signal": "7,618,079 热度"
+        "signal": "7,617,625 热度"
       },
       {
         "id": "cisa-kev-cve-2026-76519",
@@ -355,23 +355,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-hugging-face-39e60f901a735303",
+        "id": "ai-hugging-face-536f23cd94f13984",
         "category": "ai",
-        "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
-        "url": "https://huggingface.co/blog/hf-torchtpu",
+        "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-20T00:00:00.000Z",
+        "publishedAt": "2026-10-20T15:19:48.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50165208",
+        "id": "hn-50108717",
         "category": "dev",
-        "title": "Apple broke an essential presentation feature of iPads",
-        "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
+        "title": "SlopCodeBench 10/2026 – Opus 5.5, Astra wins overall, xhigh considered harmful",
+        "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
         "source": "Hacker News",
-        "publishedAt": "2026-10-20T12:17:28.000Z",
+        "publishedAt": "2026-10-15T19:09:34.000Z",
         "badge": "HN",
-        "signal": "282 分 · 157 评论"
+        "signal": "71 分 · 19 评论"
       },
       {
         "id": "cn-item-37bad605b9080fc2",
@@ -384,24 +384,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-5wr8-gcqf-gqf3",
+        "id": "github-advisory-ghsa-587h-7wmj-h5pm",
         "category": "security",
-        "title": "aiohttp server lacks an initial request/header timeout",
-        "url": "https://github.com/advisories/GHSA-5wr8-gcqf-gqf3",
+        "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+        "url": "https://github.com/advisories/GHSA-587h-7wmj-h5pm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-19T17:08:04.000Z",
-        "summary": "### Summary The keepalive timeout was not used during the initial portion of a request. ### Impact An attacker could keep an idle connection open indefinitely before sending any data. ### Workaround Use a reverse proxy (as recommended for …",
-        "badge": "CVE-2026-111064",
+        "publishedAt": "2026-10-20T19:48:25.000Z",
+        "summary": "### Summary `launch-editor` checked `fs.existsSync(fileName)` before passing a supplied path to an editor command. On Windows, an attacker can bypass this check with a crafted path ending in `\\\\..:line:column`. This removes the requirement…",
+        "badge": "CVE-2026-112942",
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-9e63539289a31c86",
+        "id": "ai-openai-9732b2763df5a67a",
         "category": "ai",
-        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-        "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "title": "How Itaú is building generative AI for its entire customer base",
+        "url": "https://openai.com/index/itau-generative-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-10-16T00:00:00.000Z",
-        "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+        "publishedAt": "2026-10-16T19:00:00.000Z",
+        "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
         "badge": "OpenAI"
       },
       {
@@ -416,13 +416,13 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-df15c00114a48801",
+        "id": "cn-it-ae04b76e526c4e17",
         "category": "cn",
-        "title": "Mac 版 Perplexity Computer 新增端侧模式，要求 36GB 统一内存",
-        "url": "https://www.ithome.com/1/015/609.htm",
+        "title": "消息称引望、宁德时代首批换电车型暂定五款，计划 2027 年上市",
+        "url": "https://www.ithome.com/1/015/610.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-20T15:27:50.000Z",
-        "summary": "IT之家 10 月 20 日消息，据科技媒体 9To5Mac 今天报道，Mac 版 Perplexity Computer 最近新增端侧模式，让 Computer 能够完全在设备端运行，无需互联网即可执行任务。 据报道， 该功能可以让 AI 模型和智能体直接运行在电脑 ，完成任务规划、推理和文件处理等任务。只有用户批准后，文件才会上传到云端。 同时，Computer 可在用户授权后访问本地文件，并与备忘录、信息、邮件和 Numbers 表格等应用协同工作。 IT之家注意到，…",
+        "publishedAt": "2026-10-20T15:34:31.000Z",
+        "summary": "IT之家 10 月 20 日消息，华为乾崑智能汽车解决方案昨日宣布， 引望与宁德时代、时代电服开展智能换电合作，打造乾崑智驾完整智能充换电生态 ，引望智能技术有限公司与宁德时代新能源科技股份有限公司、时代电服科技有限公司将就新能源汽车智能换电生态开展全面合作。 据晚点 Auto 报道，引望与宁德时代、时代电服合作正推进首批车型的开发， 涉及五款新车，计划 2027 年上市 。报道还提到，在向引望方面求证时，对方转述了三方战略合作协议的核心内容，即合作的动机和目标，但并未对上…",
         "badge": "IT之家"
       },
       {
@@ -446,14 +446,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50166257",
+        "id": "hn-50169707",
         "category": "dev",
-        "title": "How I got over 300 Tor exit nodes removed",
-        "url": "https://kaba.cx/posts/20261020_Tor/",
+        "title": "What shall I teach my son?",
+        "url": "https://stevekrouse.com/ends",
         "source": "Hacker News",
-        "publishedAt": "2026-10-20T13:39:24.000Z",
+        "publishedAt": "2026-10-20T17:25:07.000Z",
         "badge": "HN",
-        "signal": "141 分 · 35 评论"
+        "signal": "89 分 · 160 评论"
       },
       {
         "id": "cn-baidu-087313c5fa748524",
@@ -463,24 +463,24 @@
         "source": "百度热搜",
         "summary": "10月19日媒体报道，中国海洋环境预报中心预计本次厄尔尼诺2026年底达峰值，或成观测史最强。NASA卫星观测发现，因信风减弱致浮游植物断粮，赤道太平洋海水由绿变蓝，叶绿素骤降近八成，渔场承压。",
         "badge": "热搜",
-        "signal": "7,522,602 热度"
+        "signal": "7,521,295 热度"
       },
       {
-        "id": "github-advisory-ghsa-2g87-pp6c-29x5",
+        "id": "github-advisory-ghsa-hq85-5cpj-mr62",
         "category": "security",
-        "title": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
-        "url": "https://github.com/advisories/GHSA-2g87-pp6c-29x5",
+        "title": "uv's bundled CA store trusts an emSign root whose intermediate CA keys are compromised",
+        "url": "https://github.com/advisories/GHSA-hq85-5cpj-mr62",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-19T17:07:23.000Z",
-        "summary": "### Summary Multiple cases were found where aiohttp could use excessive or unbounded memory, or excessive CPU consumption on attacker controlled requests. ### Impact An attacker could cause resource exhaustion through specially crafted req…",
-        "badge": "GHSA-2G87-PP6C-29X5",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-20T19:37:52.000Z",
+        "summary": "By default, uv verifies TLS connections against a vendored copy of the `webpki-root-certs` bundle. Versions before 0.13.4 include the `emSign ECC Root CA - G3` root. Eight eMudhra intermediate CA certificates that chain to that root have c…",
+        "badge": "GHSA-HQ85-5CPJ-MR62",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-41fb25a47d12d204",
+        "id": "ai-hugging-face-39e60f901a735303",
         "category": "ai",
-        "title": "AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms",
-        "url": "https://huggingface.co/blog/anylanguagemodel-1-0",
+        "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
+        "url": "https://huggingface.co/blog/hf-torchtpu",
         "source": "Hugging Face",
         "publishedAt": "2026-10-20T00:00:00.000Z",
         "badge": "Hugging Face"
@@ -511,7 +511,7 @@
         "url": "https://github.com/MadsLorentzen/ai-job-search",
         "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "language": "Python",
-        "stars": 59826,
+        "stars": 60205,
         "starsToday": 3890
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 33579,
+        "stars": 33856,
         "starsToday": 1680
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 99397,
+        "stars": 99577,
         "starsToday": 1559
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 169173,
+        "stars": 169399,
         "starsToday": 1396
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/Comfy-Org/ComfyUI",
         "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "language": "Python",
-        "stars": 140551,
+        "stars": 140658,
         "starsToday": 1201
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/ruvnet/ruflo",
         "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "language": "TypeScript",
-        "stars": 77649,
+        "stars": 77736,
         "starsToday": 683
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/Graphify-Labs/graphify",
         "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
         "language": "Python",
-        "stars": 129872,
+        "stars": 130049,
         "starsToday": 906
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/anomalyco/opencode",
         "description": "The open source coding agent.",
         "language": "TypeScript",
-        "stars": 218627,
+        "stars": 218763,
         "starsToday": 1256
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/msitarzewski/agency-agents",
         "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
         "language": "Shell",
-        "stars": 162133,
+        "stars": 162229,
         "starsToday": 590
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/headroomlabs-ai/headroom",
         "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "language": "Python",
-        "stars": 76622,
+        "stars": 76681,
         "starsToday": 555
       }
     ],
-    "updatedAt": "2026-10-20T17:08:31.941Z"
+    "updatedAt": "2026-10-20T20:36:06.217Z"
   }
 }
