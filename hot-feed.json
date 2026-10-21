@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-21T19:20:43.989Z",
+  "generatedAt": "2026-10-21T23:20:45.193Z",
   "intelligence": {
-    "updatedAt": "2026-10-21T19:20:43.989Z",
+    "updatedAt": "2026-10-21T23:20:45.193Z",
     "items": [
       {
         "id": "cn-item-8b8a139ef7517525",
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-openai-39cad894cdd240fb",
+        "id": "ai-openai-3f1a11956436b167",
         "category": "ai",
-        "title": "How AT&T is rethinking in-house legal work with OpenAI",
-        "url": "https://openai.com/index/att-legal",
+        "title": "Broad access through consistent standards",
+        "url": "https://openai.com/index/broad-access-through-consistent-standards",
         "source": "OpenAI",
-        "publishedAt": "2026-10-21T17:00:00.000Z",
-        "summary": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
+        "publishedAt": "2026-10-21T21:00:00.000Z",
+        "summary": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50182987",
+        "id": "hn-50188228",
         "category": "dev",
-        "title": "Today's PHP security release, and how we're strengthening security",
-        "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+        "title": "Railway Security Disclosure",
+        "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T15:48:56.000Z",
+        "publishedAt": "2026-10-21T21:58:03.000Z",
         "badge": "HN",
-        "signal": "350 分 · 165 评论"
+        "signal": "179 分 · 62 评论"
       },
       {
-        "id": "cn-it-d10701be39d70b2c",
+        "id": "cn-it-5f8aaa9297750ead",
         "category": "cn",
-        "title": "安卓阵营首款阔直板手机酷派 COOL X Wide 售价公布：999~1399 元，搭载联发科曦力 G99 芯片 + 720p 屏幕",
-        "url": "https://www.ithome.com/1/016/160.htm",
+        "title": "通用汽车安吉星服务将全面升级：引入 AI 助手，还能帮你控车、排障",
+        "url": "https://www.ithome.com/1/016/175.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T16:14:46.000Z",
-        "summary": "IT之家 10 月 22 日消息，安卓阵营首款阔直板手机，也是酷派首款阔直板手机 Cool X Wide 在京东开启预约，将于 11 月 8 日正式发售。 价格方面，8GB+128GB 版本 999 元，8GB+256GB 版本 1199 元，12GB+256GB 版本 1399 元。 这款新机搭载 6.38 英寸 16:10 屏幕，仅 720x1158 分辨率，还支持 90Hz 刷新率；有鎏白、岩黑、嫣红三种配色可选，机身尺寸为 150.3×94.5×8.95mm，后置 …",
+        "publishedAt": "2026-10-21T23:17:09.000Z",
+        "summary": "IT之家 10 月 22 日消息，据外媒 motor1 今天（22 日）凌晨报道，通用汽车将对旗下安吉星车联网服务进行全面升级，引入 AI 助手，让车主能够直接询问车辆信息、通过语音控制部分功能，还能借助 AI 排查车辆故障。 全新的安吉星 AI 助手将在未来几个月通过 OTA 升级率先登陆 2027 款凯迪拉克锐歌（IT之家注：预计为海外市场），随后逐步覆盖凯迪拉克、雪佛兰、别克和 GMC 旗下的更多车型。 通用汽车称，与通常用于导航、播放音乐和回答一般问题的传统语音助手…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-f2ph-cmg5-wxc8",
+        "id": "github-advisory-ghsa-c978-59m8-c77v",
         "category": "security",
-        "title": "Storybook: Missing origin validation in Storybook preview allows code injection from malicious websites",
-        "url": "https://github.com/advisories/GHSA-f2ph-cmg5-wxc8",
+        "title": "virtualenv: Generated POSIX console launchers interpret destination paths as shell syntax",
+        "url": "https://github.com/advisories/GHSA-c978-59m8-c77v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-21T17:23:29.000Z",
-        "summary": "**Summary:** A malicious website may be able to cause unauthorized file changes in a developer’s project while an affected Storybook development server is running. Under additional conditions, a changed file could be executed by a local ru…",
-        "badge": "CVE-2026-114125",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-10-21T21:30:12.000Z",
+        "summary": "## Summary A destination path supplied to virtualenv can be interpreted as shell syntax by a generated POSIX console launcher. The app-data seeder and pip delegate launcher generation to distlib but supply the interpreter path in a form th…",
+        "badge": "CVE-2026-113722",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -77,15 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250775",
+        "id": "v2ex-1250783",
         "category": "dev",
-        "title": "宝塔面板还是挺负责的 凌晨 2 点发布 PHP 更新",
-        "url": "https://www.v2ex.com/t/1250775",
+        "title": "今日份的新闻",
+        "url": "https://www.v2ex.com/t/1250783",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T17:51:39.000Z",
-        "summary": "PHP 8.5.12 、8.4.27 、8.3.36 8.2.35 均为官方最新版本 由于 PHP 官方只发了 github 没有发包， 所以 PHP 7.4 8.1 8.0 由宝塔打包。 7.4.34 是宝塔的修复版本。 8.1.35 是宝塔的修复版本。 8.0.27 是宝塔的修复版本。 刷新软件列表 就可以更新了 建议最低升级到 php7.4 吧 其他版本都没有补丁",
+        "publishedAt": "2026-10-21T22:41:01.000Z",
+        "summary": "印度人 ca 私钥被人轻松算出来。用了 17 年了，大概是 AI 一下子发现了。 php 2 个 9.2 分 CVE 。Google Gemini 发现的。 Plex 开掉了整个 player 团队。说跟 AI 没关系是不可能的。",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-5c877f21257115b6",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "近日，随着养老行业新职业不断出现，越来越多年轻人盯上养老服务师岗位。与养老护理员不同，养老服务师更侧重需求评估、照护方案制定和机构管理。今年6月，养老服务师职业资格制度发布，为年轻人打开了职业上升空间。",
         "badge": "热搜",
-        "signal": "7,808,279 热度"
+        "signal": "7,808,763 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96656",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50181114",
+        "id": "hn-50182987",
         "category": "dev",
-        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+        "title": "Today's PHP security release, and how we're strengthening security",
+        "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T14:00:26.000Z",
+        "publishedAt": "2026-10-21T15:48:56.000Z",
         "badge": "HN",
-        "signal": "270 分 · 102 评论"
+        "signal": "620 分 · 309 评论"
       },
       {
         "id": "cn-item-7215f34077b490c6",
@@ -138,45 +138,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-vxj4-q4g9-crj7",
+        "id": "github-advisory-ghsa-xvh5-g6gv-559v",
         "category": "security",
-        "title": "virtualenv bash activate runs commands from an environment name with a backslash before $",
-        "url": "https://github.com/advisories/GHSA-vxj4-q4g9-crj7",
+        "title": "Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags",
+        "url": "https://github.com/advisories/GHSA-xvh5-g6gv-559v",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-21T16:49:01.000Z",
-        "summary": "### Summary The bash `activate` script escapes the environment name for only one of the two passes bash makes over `PS1`, so a backslash in the name undoes the escaping and a name containing `\\$(...)` runs as commands in the user's shell e…",
-        "badge": "CVE-2026-113725",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-10-21T21:29:16.000Z",
+        "summary": "``` ============================================================================ Memory disclosure and segfault in libtiff encoder via crafted TIFF tags Location: src/encode.c:1014 in PyImaging_LibTiffEncoderNew() Commit: a707c6b21c313880d…",
+        "badge": "CVE-2026-112902",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-b1215e1aefc04c61",
+        "id": "ai-openai-39cad894cdd240fb",
         "category": "ai",
-        "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
-        "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+        "title": "How AT&T is rethinking in-house legal work with OpenAI",
+        "url": "https://openai.com/index/att-legal",
         "source": "OpenAI",
-        "publishedAt": "2026-10-21T13:00:00.000Z",
-        "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
+        "publishedAt": "2026-10-21T17:00:00.000Z",
+        "summary": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250767",
+        "id": "v2ex-1250779",
         "category": "dev",
-        "title": "Vibe coding 的迷茫",
-        "url": "https://www.v2ex.com/t/1250767",
+        "title": "半夜的 deepseek 官方 api 为什么只有 60tps",
+        "url": "https://www.v2ex.com/t/1250779",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T15:34:03.000Z",
-        "summary": "每天打开电脑的第一件事就是打开 opencode 然后看推特上在流行什么 再打开窗口，也做一个玩玩。 然后发现自己做出来的是狗屎 丢掉 第二天继续如此 第三天继续如此 第四天想起来，这样太无聊 又开始去看 B 站玩什么 于是又打开 opencode 开始大干一场 烧了一大堆的 token 之后 发现做出来的又是狗屎 妈的，都是狗屎，每天做出来的都是狗屎 第五天，又继续打开了狗屎的一天",
+        "publishedAt": "2026-10-21T19:43:48.000Z",
+        "summary": "现在是凌晨 3 点 40 ，已经这么慢两个小时了。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-be4e97d83b4bea7c",
+        "id": "cn-it-e6bc59d75838bf22",
         "category": "cn",
-        "title": "799 元雷蛇北海巨妖萌猫版 V3 有线耳机发布：猫耳 RGB 灯效可随直播互动，支持 7.1 环绕声",
-        "url": "https://www.ithome.com/1/016/158.htm",
+        "title": "微软员工总数十年来首次下降，截至 6 月底雇员约 22.3 万人",
+        "url": "https://www.ithome.com/1/016/174.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T16:03:25.000Z",
-        "summary": "IT之家 10 月 22 日消息，雷蛇（Razer）今晚正式发布了全新的北海巨妖萌猫版 V3 有线 RGB 游戏耳机，官方售价 799 元，10 月 26 日发货。 该产品面向游戏直播与内容创作者，搭载可交互的猫耳 RGB 灯效、雷蛇 TriForce 40 毫米驱动单元以及 HyperClear 灵晰技术心形指向麦克风，支持即插即用 USB Type-C 连接，兼容 PC 及移动设备。 IT之家从官方获悉，这款耳机配备 1680 万色 Razer Chroma RGB 灯…",
+        "publishedAt": "2026-10-21T23:13:16.000Z",
+        "summary": "IT之家 10 月 22 日消息，微软已经在多个业务部门持续裁员一段时间，如今，一份年度报告披露了确切数据。 该公司最新年度申报文件显示，截至 2026 年 6 月 30 日，微软员工规模约为 22.3 万人，相比上一年的 22.8 万人有所减少，这是十年来微软员工总数首次出现下降。数据来自微软 2026 财年的 10-K 报表，文件写明公司拥有“约 22.3 万名全职员工”，其中美国本土 12.1 万人，海外 10.2 万人。 报告显示，产品研发部门受影响最大，员工人数从…",
         "badge": "IT之家"
       },
       {
@@ -201,14 +201,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50185045",
+        "id": "hn-50185869",
         "category": "dev",
-        "title": "The compiler was supposed to end programming too",
-        "url": "https://hrih.si/articles/the-compiler-was-supposed-to-end-programming/",
+        "title": "GitLab Critical Patch Release",
+        "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T18:00:51.000Z",
+        "publishedAt": "2026-10-21T19:01:12.000Z",
         "badge": "HN",
-        "signal": "60 分 · 54 评论"
+        "signal": "200 分 · 44 评论"
       },
       {
         "id": "cn-baidu-bdae8de14ceb4511",
@@ -218,7 +218,48 @@
         "source": "百度热搜",
         "summary": "日前，求是科技基金会发布2026年度“求是杰出科学家奖”名单，新晋菲尔兹奖得主王虹获奖。邓稼先、施一公、颜宁等曾获该奖。",
         "badge": "热搜",
-        "signal": "7,714,393 热度"
+        "signal": "7,713,120 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-332p-7hrc-92wf",
+        "category": "security",
+        "title": "Pillow: Heap buffer overflow in _tiffWriteProc when saving TIFF to BytesIO",
+        "url": "https://github.com/advisories/GHSA-332p-7hrc-92wf",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-21T21:28:09.000Z",
+        "summary": "``` ============================================================================ Heap buffer overflow in _tiffWriteProc when saving TIFF to BytesIO Location: src/libImaging/TiffDecode.c:94 in _tiffWriteProc() Commit: a707c6b21c313880d0771e…",
+        "badge": "CVE-2026-112393",
+        "signal": "CRITICAL · CVSS 0.0"
+      },
+      {
+        "id": "ai-hugging-face-40a01666d562060b",
+        "category": "ai",
+        "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+        "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-21T17:35:36.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1250775",
+        "category": "dev",
+        "title": "宝塔面板还是挺负责的 凌晨 2 点发布 PHP 更新",
+        "url": "https://www.v2ex.com/t/1250775",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-21T17:51:39.000Z",
+        "summary": "PHP 8.5.12 、8.4.27 、8.3.36 8.2.35 均为官方最新版本 由于 PHP 官方只发了 github 没有发包， 所以 PHP 7.4 8.1 8.0 由宝塔打包。 7.4.34 是宝塔的修复版本。 8.1.35 是宝塔的修复版本。 8.0.27 是宝塔的修复版本。 刷新软件列表 就可以更新了 建议最低升级到 php7.4 吧 其他版本都没有补丁",
+        "badge": "程序员",
+        "signal": "6 回复"
+      },
+      {
+        "id": "cn-item-e58bed616add1c53",
+        "category": "cn",
+        "title": "金与正：朝鲜对韩心理战扩音器将在边境全线投入运行",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718675.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-21T11:48:56.000Z",
+        "summary": "中新网10月21日电 据朝中社报道，当地时间10月21日，朝鲜劳动党中央委员会部长金与正发表谈话说，对韩国心理战扩音器本月将在边境全线投入运行。",
+        "badge": "中新网要闻"
       },
       {
         "id": "cisa-kev-cve-2026-96654",
@@ -232,34 +273,75 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-hugging-face-40a01666d562060b",
+        "id": "ai-openai-b1215e1aefc04c61",
         "category": "ai",
-        "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
-        "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-21T17:35:36.000Z",
-        "badge": "Hugging Face"
+        "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+        "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-21T13:00:00.000Z",
+        "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
+        "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250756",
+        "id": "hn-50161346",
         "category": "dev",
-        "title": "日本首相高市早苗就 PHP 漏洞发表推文 敦促更新🤣",
-        "url": "https://www.v2ex.com/t/1250756",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T14:49:40.000Z",
-        "summary": "真没想 PHP 还有这待遇？！ 原推文: https://x.com/takaichi_sanae/status/2112890642590564386",
-        "badge": "程序员",
-        "signal": "4 回复"
+        "title": "No More Icons in Every Menu by Default",
+        "url": "https://blog.jim-nielsen.com/2026/icons-in-every-menu/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-20T04:27:08.000Z",
+        "badge": "HN",
+        "signal": "106 分 · 73 评论"
       },
       {
-        "id": "cn-item-e58bed616add1c53",
+        "id": "cn-it-b700f86c9d7ce25e",
         "category": "cn",
-        "title": "金与正：朝鲜对韩心理战扩音器将在边境全线投入运行",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718675.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-21T11:48:56.000Z",
-        "summary": "中新网10月21日电 据朝中社报道，当地时间10月21日，朝鲜劳动党中央委员会部长金与正发表谈话说，对韩国心理战扩音器本月将在边境全线投入运行。",
-        "badge": "中新网要闻"
+        "title": "影响约 70% 网站：PHP 高危漏洞被修复，OpenAI 牵头协调全球发现 / 修复",
+        "url": "https://www.ithome.com/1/016/173.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-21T23:11:56.000Z",
+        "summary": "IT之家 10 月 22 日消息，OpenAI 公司昨日（10 月 21 日）发布博文，宣布通过其“修补地球”（Patch the Planet）计划，协助安全研究人员发现了 PHP 编程语言中的两项严重漏洞， 并联合 PHP 维护团队、安全公司、云服务商及多国网络安全机构，在漏洞公开前完成了为期约两个月的协调修复。 安全公司 Calif 借助 OpenAI 的 GPT-5.6 Sol 模型发现其中一项关键缺陷；谷歌旗下的 Wiz 则独立发现并报告了相关漏洞。PHP 官方维…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-f2g6-542v-9j58",
+        "category": "security",
+        "title": "Pillow: Infinite loop in PdfParser.rewrite_pages on page tree Parent cycle",
+        "url": "https://github.com/advisories/GHSA-f2g6-542v-9j58",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-21T21:21:07.000Z",
+        "summary": "``` ============================================================================ Infinite loop in PdfParser.rewrite_pages on page tree Parent cycle Location: src/PIL/PdfParser.py:505 in PdfParser.rewrite_pages() Commit: a707c6b21c313880d07…",
+        "badge": "CVE-2026-112406",
+        "signal": "HIGH · CVSS 0.0"
+      },
+      {
+        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
+        "category": "ai",
+        "title": "Developing Gemini 4 Argon responsibly and safely",
+        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-13T19:43:07.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1250767",
+        "category": "dev",
+        "title": "Vibe coding 的迷茫",
+        "url": "https://www.v2ex.com/t/1250767",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-21T15:34:03.000Z",
+        "summary": "每天打开电脑的第一件事就是打开 opencode 然后看推特上在流行什么 再打开窗口，也做一个玩玩。 然后发现自己做出来的是狗屎 丢掉 第二天继续如此 第三天继续如此 第四天想起来，这样太无聊 又开始去看 B 站玩什么 于是又打开 opencode 开始大干一场 烧了一大堆的 token 之后 发现做出来的又是狗屎 妈的，都是狗屎，每天做出来的都是狗屎 第五天，又继续打开了狗屎的一天",
+        "badge": "程序员",
+        "signal": "0 回复"
+      },
+      {
+        "id": "cn-baidu-7d7fce886acc530c",
+        "category": "cn",
+        "title": "它们为什么都叫“长征”",
+        "url": "https://www.baidu.com/s?wd=%E5%AE%83%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%83%BD%E5%8F%AB%E2%80%9C%E9%95%BF%E5%BE%81%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "从托举“东方红一号”卫星的“长征一号”运载火箭，到我国第一艘攻击型核潜艇“长征一号”，再到战略核潜艇长征18号艇，它们有个共同的名字——“长征”。",
+        "badge": "热搜",
+        "signal": "7,617,433 热度"
       },
       {
         "id": "cisa-kev-cve-2026-110936",
@@ -273,6 +355,46 @@
         "signal": "已遭利用 · 整改期限 2026-11-03"
       },
       {
+        "id": "ai-hugging-face-5b4e08461387ba3b",
+        "category": "ai",
+        "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+        "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-21T16:04:43.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50181114",
+        "category": "dev",
+        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-21T14:00:26.000Z",
+        "badge": "HN",
+        "signal": "400 分 · 125 评论"
+      },
+      {
+        "id": "cn-item-0d4a3540f735c7e4",
+        "category": "cn",
+        "title": "东西问丨曾珺：跨越90年，外籍友人与长征的故事何以不断书写？",
+        "url": "https://www.chinanews.com.cn/dxw/2026/10-21/10718650.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-21T11:12:32.000Z",
+        "summary": "中新社北京10月21日电 题：跨越90年，外籍友人与长征的故事何以不断书写？",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-5xm2-6676-qcp9",
+        "category": "security",
+        "title": "Pillow: APNG background disposal allocates full canvas before decompression bomb check",
+        "url": "https://github.com/advisories/GHSA-5xm2-6676-qcp9",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-21T21:17:56.000Z",
+        "summary": "``` ============================================================================ APNG background disposal allocates full canvas before decompression bomb check Location: src/PIL/PngImagePlugin.py:1000 in PngImageFile._seek() Commit: a707c6…",
+        "badge": "CVE-2026-112399",
+        "signal": "HIGH · CVSS 0.0"
+      },
+      {
         "id": "ai-openai-95dedf578de78f3e",
         "category": "ai",
         "title": "OpenAI models are coming to Google Cloud",
@@ -283,23 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50177916",
+        "id": "v2ex-1250756",
         "category": "dev",
-        "title": "Eight Bits of Trust: eMudhra's CA keys cracked in milliseconds",
-        "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-21T09:08:08.000Z",
-        "badge": "HN",
-        "signal": "704 分 · 346 评论"
+        "title": "日本首相高市早苗就 PHP 漏洞发表推文 敦促更新🤣",
+        "url": "https://www.v2ex.com/t/1250756",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-21T14:49:40.000Z",
+        "summary": "真没想 PHP 还有这待遇？！ 原推文: https://x.com/takaichi_sanae/status/2112890642590564386",
+        "badge": "程序员",
+        "signal": "7 回复"
       },
       {
-        "id": "cn-it-8e5f528bc7ab233a",
+        "id": "cn-it-b6ccb8a9b7d720eb",
         "category": "cn",
-        "title": "苹果公布 Apple Music 全新品牌标识，创作灵感来自声音振动、声波实拍",
-        "url": "https://www.ithome.com/1/016/157.htm",
+        "title": "沃尔玛推出自有智能体网关，AI 可代用户下单购物",
+        "url": "https://www.ithome.com/1/016/172.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T15:53:23.000Z",
-        "summary": "IT之家 10 月 21 日消息，苹果音乐（Apple Music）官方今日宣布推出全新身份标识。 此次设计以“Made by Sound”（由声音塑造）为核心概念，邀请英国音乐制作人 Fred again.. 与 NEST Acoustics 共同参与，将声音振动转化为可视化的图形效果。 据 Wallpaper* 报道，Apple Music 制作团队先创作了一段音乐，再通过换能器将声音转化为物理振动，使浅层矿物油表面产生波纹。团队全程通过摄像机记录液体的运动与折射效果，…",
+        "publishedAt": "2026-10-21T23:04:54.000Z",
+        "summary": "IT之家 10 月 22 日消息，沃尔玛于当地时间周三宣布，正式推出自有智能体网关，用于处理交易，并上线多项面向使用 AI 智能体的消费者的新功能，以此布局智能体电商。就在不久前，沃尔玛的头号竞争对手亚马逊开始拦截 AI 智能体替网购用户下单采购。 IT之家注意到，沃尔玛对 AI 技术的接纳态度，使其和其他线上商家形成区别。除亚马逊之外，不少旅游和预订网站面对越来越多消费者使用 AI 智能体的趋势，选择直接禁止智能体访问网站。而沃尔玛此前已经宣布和该领域头部智能体 Meta…",
         "badge": "IT之家"
       },
       {
@@ -314,129 +437,6 @@
         "signal": "已遭利用 · 整改期限 2026-10-19"
       },
       {
-        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
-        "category": "ai",
-        "title": "Developing Gemini 4 Argon responsibly and safely",
-        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-13T19:43:07.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "v2ex-1250753",
-        "category": "dev",
-        "title": "看到今天爆出的 PHP 漏洞，聊聊老项目转 Go 这事",
-        "url": "https://www.v2ex.com/t/1250753",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T14:28:39.000Z",
-        "summary": "今天看到 PHP 爆了两个严重漏洞，官方马上发修复版本，手头有线上服务的还得先准备更新。不过看到这消息，又有点纠结老项目要不要转 Go 。 开新坑选语言很容易，Go 可以，ts 也行。但一个稳定跑了好几年的 PHP 老项目，推倒重写，实在下不去手，或者说很难下定决心去重构。 想问问实际做过 PHP 迁 Go 的 V 友：当初真正促使你们动手的原因是什么？跑了一段时间后，体感提升最明显的是性能、部署，还是日常维护？",
-        "badge": "程序员",
-        "signal": "15 回复"
-      },
-      {
-        "id": "cn-baidu-7d7fce886acc530c",
-        "category": "cn",
-        "title": "它们为什么都叫“长征”",
-        "url": "https://www.baidu.com/s?wd=%E5%AE%83%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%83%BD%E5%8F%AB%E2%80%9C%E9%95%BF%E5%BE%81%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "从托举“东方红一号”卫星的“长征一号”运载火箭，到我国第一艘攻击型核潜艇“长征一号”，再到战略核潜艇长征18号艇，它们有个共同的名字——“长征”。",
-        "badge": "热搜",
-        "signal": "7,616,704 热度"
-      },
-      {
-        "id": "cisa-kev-cve-2025-61624",
-        "category": "security",
-        "title": "Fortinet Multiple Products：Fortinet Multiple Products Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-61624",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-16T00:00:00.000Z",
-        "summary": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CL…",
-        "badge": "CVE-2025-61624",
-        "signal": "已遭利用 · 整改期限 2026-10-19"
-      },
-      {
-        "id": "ai-hugging-face-5b4e08461387ba3b",
-        "category": "ai",
-        "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
-        "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-21T16:04:43.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50181136",
-        "category": "dev",
-        "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-        "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-21T14:01:22.000Z",
-        "badge": "HN",
-        "signal": "279 分 · 29 评论"
-      },
-      {
-        "id": "cn-item-0d4a3540f735c7e4",
-        "category": "cn",
-        "title": "东西问丨曾珺：跨越90年，外籍友人与长征的故事何以不断书写？",
-        "url": "https://www.chinanews.com.cn/dxw/2026/10-21/10718650.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-21T11:12:32.000Z",
-        "summary": "中新社北京10月21日电 题：跨越90年，外籍友人与长征的故事何以不断书写？",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "cisa-kev-cve-2026-21589",
-        "category": "security",
-        "title": "Atlassian Multiple Products：Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-21589",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-15T00:00:00.000Z",
-        "summary": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessi…",
-        "badge": "CVE-2026-21589",
-        "signal": "已遭利用 · 整改期限 2026-10-18"
-      },
-      {
-        "id": "ai-openai-de9db6f384cbc788",
-        "category": "ai",
-        "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
-        "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-21T07:00:00.000Z",
-        "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1250745",
-        "category": "dev",
-        "title": "不仅是 PHP 漏洞， nodejs 今天也发了",
-        "url": "https://www.v2ex.com/t/1250745",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T13:46:29.000Z",
-        "summary": "这周大家有的忙了 :) https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
-        "badge": "程序员",
-        "signal": "11 回复"
-      },
-      {
-        "id": "cn-it-b3a37cb133a54229",
-        "category": "cn",
-        "title": "NASA 公布月球探测车最新进展：VIPER 计划 2027 年探测月球南极水冰资源",
-        "url": "https://www.ithome.com/1/016/149.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-21T15:30:05.000Z",
-        "summary": "IT之家 10 月 21 日消息，美国国家航空航天局（NASA）当地时间 10 月 20 日公布了月球探测车最新研发进展及任务规划。 NASA 表示，用于探测月球水冰等资源的“挥发物调查极地探索车”（VIPER）计划于 2027 年前往月球南极地区，载人月球地形车（LTV）则计划于 2028 年运抵月球南极地区，为未来载人探月任务和月球基地建设提供支持。 据 NASA 官方公告，VIPER 目前已在美国约翰逊航天中心完成组装，正在进行最后阶段的测试，之后将转运至肯尼迪航天中…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-105134",
-        "category": "security",
-        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105134",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceiver…",
-        "badge": "CVE-2026-105134",
-        "signal": "已遭利用 · 整改期限 2026-10-17"
-      },
-      {
         "id": "ai-google-deepmind-94cc08977f17740f",
         "category": "ai",
         "title": "Gemini 4 Argon for Robotics",
@@ -446,14 +446,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50184586",
+        "id": "hn-50177916",
         "category": "dev",
-        "title": "EA is shutting down BioWare",
-        "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
+        "title": "Eight Bits of Trust: eMudhra's CA keys cracked in milliseconds",
+        "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T17:29:33.000Z",
+        "publishedAt": "2026-10-21T09:08:08.000Z",
         "badge": "HN",
-        "signal": "212 分 · 127 评论"
+        "signal": "808 分 · 392 评论"
       },
       {
         "id": "cn-baidu-334e8449454f1cad",
@@ -463,18 +463,18 @@
         "source": "百度热搜",
         "summary": "近日，PHP被曝存在严重安全漏洞，且已有黑客开始利用漏洞发起攻击。由于PHP支撑全球约75%的可识别编程语言网站，荷兰、芬兰、法国等多国政府机构紧急下线网站规避风险，PHP开发团队随后发布修复版本。",
         "badge": "热搜",
-        "signal": "7,523,898 热度"
+        "signal": "7,521,325 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-76519",
+        "id": "github-advisory-ghsa-gg2r-wvfm-q9rx",
         "category": "security",
-        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76519",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-14T00:00:00.000Z",
-        "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
-        "badge": "CVE-2026-76519",
-        "signal": "已遭利用 · 整改期限 2026-10-17"
+        "title": "Pillow: MSP RLE decoder expands a tiny file into unbounded memory",
+        "url": "https://github.com/advisories/GHSA-gg2r-wvfm-q9rx",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-21T21:12:56.000Z",
+        "summary": "### Summary The MSP RLE decoder expands run-length data into an in-memory buffer with no cap tied to the declared image size. A small file that passes the pixel-count check can force hundreds of megabytes or more of allocation when the app…",
+        "badge": "CVE-2026-112892",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-c2ed162a157709f5",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250731",
+        "id": "v2ex-1250753",
         "category": "dev",
-        "title": "我用 deepseek 逆向了小米运动的卡路里算法，绷不住了",
-        "url": "https://www.v2ex.com/t/1250731",
+        "title": "看到今天爆出的 PHP 漏洞，聊聊老项目转 Go 这事",
+        "url": "https://www.v2ex.com/t/1250753",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T12:03:12.000Z",
-        "summary": "起因是主播最近在减肥，每天运动量不变，卡路里却忽高忽低，觉得其中必有蹊跷。让 deepseek 帮忙逆向看了一眼，看完是真绷不住。 先说明前提：我没戴小米手环，手机放裤兜或边走边刷。手环走的是另一套算法，由手环自己算完传给手机，跟下面这些无关。 我本以为这算法至少符合运动生理学。结果核心就三条： 按分钟分档，只看步频 每分钟步数 ≤138 → 0.04 卡/步 139–277 → 0.06 卡/步 ≥278 → 0.10 卡/步 注意最后那档：278 步/分相当于 4.6 …",
+        "publishedAt": "2026-10-21T14:28:39.000Z",
+        "summary": "今天看到 PHP 爆了两个严重漏洞，官方马上发修复版本，手头有线上服务的还得先准备更新。不过看到这消息，又有点纠结老项目要不要转 Go 。 开新坑选语言很容易，Go 可以，ts 也行。但一个稳定跑了好几年的 PHP 老项目，推倒重写，实在下不去手，或者说很难下定决心去重构。 想问问实际做过 PHP 迁 Go 的 V 友：当初真正促使你们动手的原因是什么？跑了一段时间后，体感提升最明显的是性能、部署，还是日常维护？",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "16 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 35618,
+        "stars": 36327,
         "starsToday": 1997
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/vllm-project/vllm",
         "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
         "language": "Python",
-        "stars": 94792,
+        "stars": 94845,
         "starsToday": 439
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 101004,
+        "stars": 101186,
         "starsToday": 1543
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/headroomlabs-ai/headroom",
         "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "language": "Python",
-        "stars": 77157,
+        "stars": 77231,
         "starsToday": 477
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 171272,
+        "stars": 171536,
         "starsToday": 2051
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/Comfy-Org/ComfyUI",
         "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "language": "Python",
-        "stars": 141387,
+        "stars": 141481,
         "starsToday": 914
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/supabase/supabase",
         "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
         "language": "TypeScript",
-        "stars": 112848,
+        "stars": 112971,
         "starsToday": 509
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/twentyhq/twenty",
         "description": "The open alternative to Salesforce, designed for AI.",
         "language": "TypeScript",
-        "stars": 59018,
+        "stars": 59129,
         "starsToday": 105
       },
       {
@@ -591,20 +591,20 @@
         "url": "https://github.com/shiyu-coder/Kronos",
         "description": "Kronos: A Foundation Model for the Language of Financial Markets",
         "language": "Python",
-        "stars": 42735,
+        "stars": 42805,
         "starsToday": 570
       },
       {
-        "id": "github-01830fc5a6bd9087",
+        "id": "github-099a05080dd8db13",
         "rank": 10,
-        "name": "strelov1/freehire",
-        "url": "https://github.com/strelov1/freehire",
-        "description": "freehire — the open-source search engine for job seekers",
-        "language": "Go",
-        "stars": 2263,
-        "starsToday": 396
+        "name": "akitaonrails/ai-memory",
+        "url": "https://github.com/akitaonrails/ai-memory",
+        "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "language": "Rust",
+        "stars": 12300,
+        "starsToday": 303
       }
     ],
-    "updatedAt": "2026-10-21T19:20:43.989Z"
+    "updatedAt": "2026-10-21T23:20:45.193Z"
   }
 }
