@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-21T15:16:12.461Z",
+  "generatedAt": "2026-10-21T19:20:43.989Z",
   "intelligence": {
-    "updatedAt": "2026-10-21T15:16:12.461Z",
+    "updatedAt": "2026-10-21T19:20:43.989Z",
     "items": [
       {
         "id": "cn-item-8b8a139ef7517525",
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-openai-b1215e1aefc04c61",
+        "id": "ai-openai-39cad894cdd240fb",
         "category": "ai",
-        "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
-        "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+        "title": "How AT&T is rethinking in-house legal work with OpenAI",
+        "url": "https://openai.com/index/att-legal",
         "source": "OpenAI",
-        "publishedAt": "2026-10-21T13:00:00.000Z",
-        "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
+        "publishedAt": "2026-10-21T17:00:00.000Z",
+        "summary": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50177916",
+        "id": "hn-50182987",
         "category": "dev",
-        "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
-        "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+        "title": "Today's PHP security release, and how we're strengthening security",
+        "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T09:08:08.000Z",
+        "publishedAt": "2026-10-21T15:48:56.000Z",
         "badge": "HN",
-        "signal": "49 分 · 14 评论"
+        "signal": "350 分 · 165 评论"
       },
       {
-        "id": "cn-it-8adf888d4925e06d",
+        "id": "cn-it-d10701be39d70b2c",
         "category": "cn",
-        "title": "苹果 iPhone Duo 将于今年晚些时候支持“便捷访问”单手模式",
-        "url": "https://www.ithome.com/1/016/146.htm",
+        "title": "安卓阵营首款阔直板手机酷派 COOL X Wide 售价公布：999~1399 元，搭载联发科曦力 G99 芯片 + 720p 屏幕",
+        "url": "https://www.ithome.com/1/016/160.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T15:14:23.000Z",
-        "summary": "IT之家 10 月 21 日消息，苹果首款折叠屏手机 iPhone Duo 将在 10 月 23 日发售。《连线》杂志今日报道称，苹果计划于今年晚些时候，为这款手机推出“便捷访问”单手模式。 据报道，苹果计划为 iPhone Duo 加入新版“便捷访问”功能， 让手比较小的用户只需要轻点屏幕 ， 就能更轻松地触及屏幕左侧 / 右侧边缘 。 IT之家了解到，“便捷访问”是苹果 iOS 系统的一项功能，最早于 2014 年随 iPhone 6、iPhone 6 Plus 一同推…",
+        "publishedAt": "2026-10-21T16:14:46.000Z",
+        "summary": "IT之家 10 月 22 日消息，安卓阵营首款阔直板手机，也是酷派首款阔直板手机 Cool X Wide 在京东开启预约，将于 11 月 8 日正式发售。 价格方面，8GB+128GB 版本 999 元，8GB+256GB 版本 1199 元，12GB+256GB 版本 1399 元。 这款新机搭载 6.38 英寸 16:10 屏幕，仅 720x1158 分辨率，还支持 90Hz 刷新率；有鎏白、岩黑、嫣红三种配色可选，机身尺寸为 150.3×94.5×8.95mm，后置 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-86wm-68pq-5jwq",
+        "id": "github-advisory-ghsa-f2ph-cmg5-wxc8",
         "category": "security",
-        "title": "ApostropheCMS: Unauthenticated resource exhaustion via pre-auth aposBigUpload processing in @apostrophecms/import-export",
-        "url": "https://github.com/advisories/GHSA-86wm-68pq-5jwq",
+        "title": "Storybook: Missing origin validation in Storybook preview allows code injection from malicious websites",
+        "url": "https://github.com/advisories/GHSA-f2ph-cmg5-wxc8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-21T13:51:21.000Z",
-        "summary": "## Summary A potential unauthenticated denial-of-service vulnerability exists in the chunked import upload path used by `@apostrophecms/import-export`. The affected import API routes invoke: `self.apos.http.bigUploadMiddleware()` before th…",
-        "badge": "CVE-2026-113711",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-21T17:23:29.000Z",
+        "summary": "**Summary:** A malicious website may be able to cause unauthorized file changes in a developer’s project while an affected Storybook development server is running. Under additional conditions, a changed file could be executed by a local ru…",
+        "badge": "CVE-2026-114125",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250756",
+        "id": "v2ex-1250775",
         "category": "dev",
-        "title": "日本首相高市早苗就 PHP 漏洞发表推文 敦促更新🤣",
-        "url": "https://www.v2ex.com/t/1250756",
+        "title": "宝塔面板还是挺负责的 凌晨 2 点发布 PHP 更新",
+        "url": "https://www.v2ex.com/t/1250775",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T14:49:40.000Z",
-        "summary": "真没想 PHP 还有这待遇？！ 原推文: https://x.com/takaichi_sanae/status/2112890642590564386",
+        "publishedAt": "2026-10-21T17:51:39.000Z",
+        "summary": "PHP 8.5.12 、8.4.27 、8.3.36 8.2.35 均为官方最新版本 由于 PHP 官方只发了 github 没有发包， 所以 PHP 7.4 8.1 8.0 由宝塔打包。 7.4.34 是宝塔的修复版本。 8.1.35 是宝塔的修复版本。 8.0.27 是宝塔的修复版本。 刷新软件列表 就可以更新了 建议最低升级到 php7.4 吧 其他版本都没有补丁",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-baidu-ba5d7da8a8114db0",
+        "id": "cn-baidu-5c877f21257115b6",
         "category": "cn",
-        "title": "南京警方回应留学生披旭日旗事件",
-        "url": "https://www.baidu.com/s?wd=%E5%8D%97%E4%BA%AC%E8%AD%A6%E6%96%B9%E5%9B%9E%E5%BA%94%E7%95%99%E5%AD%A6%E7%94%9F%E6%8A%AB%E6%97%AD%E6%97%A5%E6%97%97%E4%BA%8B%E4%BB%B6&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "年轻人盯上养老院里的新职业",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9B%AF%E4%B8%8A%E5%85%BB%E8%80%81%E9%99%A2%E9%87%8C%E7%9A%84%E6%96%B0%E8%81%8C%E4%B8%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月21日，南京警方回应称，接到数百起关于“留学生在国外身披旭日旗”的举报，已有专门部门处理。此前，一名陈姓中国留学生在莫斯科大学课堂身披日本军国主义旭日旗引发轩然大波，经留学生集体请愿，校方表态将作开除决定，涉事学生已被遣返。",
+        "summary": "近日，随着养老行业新职业不断出现，越来越多年轻人盯上养老服务师岗位。与养老护理员不同，养老服务师更侧重需求评估、照护方案制定和机构管理。今年6月，养老服务师职业资格制度发布，为年轻人打开了职业上升空间。",
         "badge": "热搜",
-        "signal": "7,808,268 热度"
+        "signal": "7,808,279 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96656",
@@ -109,23 +109,23 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-hugging-face-c2ed162a157709f5",
+        "id": "ai-hugging-face-94a5f6526eada9bc",
         "category": "ai",
-        "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+        "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+        "url": "https://huggingface.co/blog/nvidia/kumo-relational",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-21T14:58:18.000Z",
+        "publishedAt": "2026-10-21T18:26:30.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50177911",
+        "id": "hn-50181114",
         "category": "dev",
-        "title": "The 1.5°C goal of the Paris Agreement is no longer viable",
-        "url": "https://unric.org/en/unep-emissions-gap-report-2026-1-5-degree-overshoot/",
+        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T09:07:49.000Z",
+        "publishedAt": "2026-10-21T14:00:26.000Z",
         "badge": "HN",
-        "signal": "129 分 · 117 评论"
+        "signal": "270 分 · 102 评论"
       },
       {
         "id": "cn-item-7215f34077b490c6",
@@ -138,45 +138,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-4fpj-g9jf-9rgg",
+        "id": "github-advisory-ghsa-vxj4-q4g9-crj7",
         "category": "security",
-        "title": "A2A Java SDK: Android synchronous POST forwards credentials across authorities after incomplete redirect fix",
-        "url": "https://github.com/advisories/GHSA-4fpj-g9jf-9rgg",
+        "title": "virtualenv bash activate runs commands from an environment name with a backslash before $",
+        "url": "https://github.com/advisories/GHSA-vxj4-q4g9-crj7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T21:08:06.000Z",
-        "summary": "The GHSA-9rhm fix added this safe setting in AndroidA2AHttpClient.createConnection(): connection.setInstanceFollowRedirects(false); The synchronous POST builder later overwrites it: private boolean followRedirects = true; public A2AHttpRes…",
-        "badge": "CVE-2026-111765",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-21T16:49:01.000Z",
+        "summary": "### Summary The bash `activate` script escapes the environment name for only one of the two passes bash makes over `PS1`, so a backslash in the name undoes the escaping and a name containing `\\$(...)` runs as commands in the user's shell e…",
+        "badge": "CVE-2026-113725",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
-        "id": "ai-openai-95dedf578de78f3e",
+        "id": "ai-openai-b1215e1aefc04c61",
         "category": "ai",
-        "title": "OpenAI models are coming to Google Cloud",
-        "url": "https://openai.com/index/openai-models-google-cloud",
+        "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+        "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
         "source": "OpenAI",
-        "publishedAt": "2026-10-21T12:00:00.000Z",
-        "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
+        "publishedAt": "2026-10-21T13:00:00.000Z",
+        "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250753",
+        "id": "v2ex-1250767",
         "category": "dev",
-        "title": "看到今天爆出的 PHP 漏洞，聊聊老项目转 Go 这事",
-        "url": "https://www.v2ex.com/t/1250753",
+        "title": "Vibe coding 的迷茫",
+        "url": "https://www.v2ex.com/t/1250767",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T14:28:39.000Z",
-        "summary": "今天看到 PHP 爆了两个严重漏洞，官方马上发修复版本，手头有线上服务的还得先准备更新。不过看到这消息，又有点纠结老项目要不要转 Go 。 开新坑选语言很容易，Go 可以，ts 也行。但一个稳定跑了好几年的 PHP 老项目，推倒重写，实在下不去手，或者说很难下定决心去重构。 想问问实际做过 PHP 迁 Go 的 V 友：当初真正促使你们动手的原因是什么？跑了一段时间后，体感提升最明显的是性能、部署，还是日常维护？",
+        "publishedAt": "2026-10-21T15:34:03.000Z",
+        "summary": "每天打开电脑的第一件事就是打开 opencode 然后看推特上在流行什么 再打开窗口，也做一个玩玩。 然后发现自己做出来的是狗屎 丢掉 第二天继续如此 第三天继续如此 第四天想起来，这样太无聊 又开始去看 B 站玩什么 于是又打开 opencode 开始大干一场 烧了一大堆的 token 之后 发现做出来的又是狗屎 妈的，都是狗屎，每天做出来的都是狗屎 第五天，又继续打开了狗屎的一天",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-91dc9c280dd2b8df",
+        "id": "cn-it-be4e97d83b4bea7c",
         "category": "cn",
-        "title": "腾讯内测 AI 互动社区“懂了鸭”：一句话生成可玩的动态课件与 3D 演示",
-        "url": "https://www.ithome.com/1/016/145.htm",
+        "title": "799 元雷蛇北海巨妖萌猫版 V3 有线耳机发布：猫耳 RGB 灯效可随直播互动，支持 7.1 环绕声",
+        "url": "https://www.ithome.com/1/016/158.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T15:10:22.000Z",
-        "summary": "IT之家 10 月 21 日消息，今日有用户反馈，腾讯正在内测一款面向少儿与青少年的 AI 互动内容社区“懂了鸭”，官方网站（ dongleya.qq.com ）与微信小程序均已上线，目前向亲子用户和一线教师开放小范围测试。 该产品的核心载体是“奇妙卡”，一种可拖拽、可模拟、可操作的交互式内容单元，家长、教师或知识创作者输入自然语言描述，即可借助内置 AI 智能体生成 3D 演示、动态课件、互动绘本、轻量游戏或记忆卡等作品，无需编程基础。用户既可以浏览社区中已有的奇妙卡作品…",
+        "publishedAt": "2026-10-21T16:03:25.000Z",
+        "summary": "IT之家 10 月 22 日消息，雷蛇（Razer）今晚正式发布了全新的北海巨妖萌猫版 V3 有线 RGB 游戏耳机，官方售价 799 元，10 月 26 日发货。 该产品面向游戏直播与内容创作者，搭载可交互的猫耳 RGB 灯效、雷蛇 TriForce 40 毫米驱动单元以及 HyperClear 灵晰技术心形指向麦克风，支持即插即用 USB Type-C 连接，兼容 PC 及移动设备。 IT之家从官方获悉，这款耳机配备 1680 万色 Razer Chroma RGB 灯…",
         "badge": "IT之家"
       },
       {
@@ -201,14 +201,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50175070",
+        "id": "hn-50185045",
         "category": "dev",
-        "title": "The Future of CSS",
-        "url": "https://www.joshwcomeau.com/css/interop-2027/",
+        "title": "The compiler was supposed to end programming too",
+        "url": "https://hrih.si/articles/the-compiler-was-supposed-to-end-programming/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T01:47:28.000Z",
+        "publishedAt": "2026-10-21T18:00:51.000Z",
         "badge": "HN",
-        "signal": "379 分 · 158 评论"
+        "signal": "60 分 · 54 评论"
       },
       {
         "id": "cn-baidu-bdae8de14ceb4511",
@@ -218,48 +218,7 @@
         "source": "百度热搜",
         "summary": "日前，求是科技基金会发布2026年度“求是杰出科学家奖”名单，新晋菲尔兹奖得主王虹获奖。邓稼先、施一公、颜宁等曾获该奖。",
         "badge": "热搜",
-        "signal": "7,713,045 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-qw47-mcm5-934w",
-        "category": "security",
-        "title": "A2A Java SDK has a fail-open default task authorization",
-        "url": "https://github.com/advisories/GHSA-qw47-mcm5-934w",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T21:05:09.000Z",
-        "summary": "Draft text for GHSA-qw47-mcm5-934w. The body below drops into the GitHub advisory description field; the metadata block maps to the form fields. Set the patched version at release; publish when the fix ships._ --- - **Ecosystem:** Maven - …",
-        "badge": "CVE-2026-111764",
-        "signal": "HIGH · CVSS 7.5"
-      },
-      {
-        "id": "ai-hugging-face-5c32755a71da49ed",
-        "category": "ai",
-        "title": "NVIDIA Kumo Forecast Combines Pretrained Time-Series Representations with Historical Pattern Retrieval and Interpretability",
-        "url": "https://huggingface.co/blog/nvidia/kumo-forecast",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-21T12:51:24.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1250745",
-        "category": "dev",
-        "title": "不仅是 PHP 漏洞， nodejs 今天也发了",
-        "url": "https://www.v2ex.com/t/1250745",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T13:46:29.000Z",
-        "summary": "这周大家有的忙了 :) https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
-        "badge": "程序员",
-        "signal": "10 回复"
-      },
-      {
-        "id": "cn-item-e58bed616add1c53",
-        "category": "cn",
-        "title": "金与正：朝鲜对韩心理战扩音器将在边境全线投入运行",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718675.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-21T11:48:56.000Z",
-        "summary": "中新网10月21日电 据朝中社报道，当地时间10月21日，朝鲜劳动党中央委员会部长金与正发表谈话说，对韩国心理战扩音器本月将在边境全线投入运行。",
-        "badge": "中新网要闻"
+        "signal": "7,714,393 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96654",
@@ -273,75 +232,34 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-openai-de9db6f384cbc788",
+        "id": "ai-hugging-face-40a01666d562060b",
         "category": "ai",
-        "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
-        "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-21T07:00:00.000Z",
-        "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
-        "badge": "OpenAI"
+        "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+        "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-21T17:35:36.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-50172041",
+        "id": "v2ex-1250756",
         "category": "dev",
-        "title": "Upcoming critical PHP security release (CVE-2026-109618 / -109619)",
-        "url": "https://news-web.php.net/php.announce/509",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-20T20:15:50.000Z",
-        "badge": "HN",
-        "signal": "871 分 · 352 评论"
-      },
-      {
-        "id": "cn-it-e2c61e9fa8409b92",
-        "category": "cn",
-        "title": "确认延期：华为鸿蒙 HarmonyOS 7 小艺 AI 快捷栏功能预计 11 月初分批推送",
-        "url": "https://www.ithome.com/1/016/144.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-21T15:10:07.000Z",
-        "summary": "IT之家 10 月 21 日消息，在今年 9 月 7 日的 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会上，鸿蒙 7 操作系统正式发布。在发布会现场，华为还剧透了全新功能 —— 小艺 AI 快捷栏。官方 PPT 页面显示，该功能开启后，小艺将在手机桌面底部的 Dock 栏常驻。 本月早些时候，华为客户服务透露该功能预计在 10 月底逐步和大家见面。IT之家今日再次就该功能的上线时间进行了询问，对方表示： 该功能预计将在 11 月初逐步和大…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-58r4-6rv3-gfh8",
-        "category": "security",
-        "title": "Pillow: Out-of-bounds access in _imagingmorph on a zero-width image",
-        "url": "https://github.com/advisories/GHSA-58r4-6rv3-gfh8",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T20:56:22.000Z",
-        "summary": "### Summary A PPM or PGM file can declare a width of 0, which Pillow accepts, producing an image of size `(0, N)`. Passing that image to `ImageMorph.MorphOp.apply()` makes the native morphology code index a row buffer at `outrow[width - 1]…",
-        "badge": "CVE-2026-112397",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
-        "category": "ai",
-        "title": "Developing Gemini 4 Argon responsibly and safely",
-        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-13T19:43:07.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "v2ex-1250731",
-        "category": "dev",
-        "title": "我用 deepseek 逆向了小米运动的卡路里算法，绷不住了",
-        "url": "https://www.v2ex.com/t/1250731",
+        "title": "日本首相高市早苗就 PHP 漏洞发表推文 敦促更新🤣",
+        "url": "https://www.v2ex.com/t/1250756",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T12:03:12.000Z",
-        "summary": "起因是主播最近在减肥，每天运动量不变，卡路里却忽高忽低，觉得其中必有蹊跷。让 deepseek 帮忙逆向看了一眼，看完是真绷不住。 先说明前提：我没戴小米手环，手机放裤兜或边走边刷。手环走的是另一套算法，由手环自己算完传给手机，跟下面这些无关。 我本以为这算法至少符合运动生理学。结果核心就三条： 按分钟分档，只看步频 每分钟步数 ≤138 → 0.04 卡/步 139–277 → 0.06 卡/步 ≥278 → 0.10 卡/步 注意最后那档：278 步/分相当于 4.6 …",
+        "publishedAt": "2026-10-21T14:49:40.000Z",
+        "summary": "真没想 PHP 还有这待遇？！ 原推文: https://x.com/takaichi_sanae/status/2112890642590564386",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-7d7fce886acc530c",
+        "id": "cn-item-e58bed616add1c53",
         "category": "cn",
-        "title": "它们为什么都叫“长征”",
-        "url": "https://www.baidu.com/s?wd=%E5%AE%83%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%83%BD%E5%8F%AB%E2%80%9C%E9%95%BF%E5%BE%81%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "从托举“东方红一号”卫星的“长征一号”运载火箭，到我国第一艘攻击型核潜艇“长征一号”，再到战略核潜艇长征18号艇，它们有个共同的名字——“长征”。",
-        "badge": "热搜",
-        "signal": "7,616,833 热度"
+        "title": "金与正：朝鲜对韩心理战扩音器将在边境全线投入运行",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718675.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-21T11:48:56.000Z",
+        "summary": "中新网10月21日电 据朝中社报道，当地时间10月21日，朝鲜劳动党中央委员会部长金与正发表谈话说，对韩国心理战扩音器本月将在边境全线投入运行。",
+        "badge": "中新网要闻"
       },
       {
         "id": "cisa-kev-cve-2026-110936",
@@ -355,74 +273,33 @@
         "signal": "已遭利用 · 整改期限 2026-11-03"
       },
       {
-        "id": "ai-hugging-face-ef73bf2ace8ac671",
+        "id": "ai-openai-95dedf578de78f3e",
         "category": "ai",
-        "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
-        "url": "https://huggingface.co/blog/allenai/fairstress",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-20T16:09:19.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50170593",
-        "category": "dev",
-        "title": "Show HN: SimCity, but with Permits",
-        "url": "https://permit.petercai.com/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-20T18:29:09.000Z",
-        "badge": "HN",
-        "signal": "799 分 · 376 评论"
-      },
-      {
-        "id": "cn-item-0d4a3540f735c7e4",
-        "category": "cn",
-        "title": "东西问丨曾珺：跨越90年，外籍友人与长征的故事何以不断书写？",
-        "url": "https://www.chinanews.com.cn/dxw/2026/10-21/10718650.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-21T11:12:32.000Z",
-        "summary": "中新社北京10月21日电 题：跨越90年，外籍友人与长征的故事何以不断书写？",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-65qm-jvmh-6pqg",
-        "category": "security",
-        "title": "Pillow: GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
-        "url": "https://github.com/advisories/GHSA-65qm-jvmh-6pqg",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T20:53:36.000Z",
-        "summary": "``` ============================================================================ GIF seek keeps rejected size after DecompressionBombError, allowing DoS Location: src/PIL/GifImagePlugin.py:293 in GifImageFile._seek() Commit: a707c6b21c3138…",
-        "badge": "CVE-2026-112400",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-openai-ea92da5c121ecb45",
-        "category": "ai",
-        "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
-        "url": "https://openai.com/index/building-chatgpt-ad-stack",
+        "title": "OpenAI models are coming to Google Cloud",
+        "url": "https://openai.com/index/openai-models-google-cloud",
         "source": "OpenAI",
-        "publishedAt": "2026-10-21T07:00:00.000Z",
-        "summary": "Learn how OpenAI built ChatGPT’s LLM-powered ad stack to understand conversational intent, keep ads separate from answers, and deliver relevant ads at scale.",
+        "publishedAt": "2026-10-21T12:00:00.000Z",
+        "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250725",
+        "id": "hn-50177916",
         "category": "dev",
-        "title": "我写了个 git 工具 BlackGit，拥有 Perforce 一样的文件锁和权限控制，还有按需下载功能",
-        "url": "https://www.v2ex.com/t/1250725",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T11:19:05.000Z",
-        "summary": "blackgit-cli 客户端部分可以单独使用，改哪个文件下载哪个文件 blackgit-server 配合客户端使用，支持文件锁和权限控制 https://github.com/zhuzhonghua/blackgit",
-        "badge": "程序员",
-        "signal": "0 回复"
+        "title": "Eight Bits of Trust: eMudhra's CA keys cracked in milliseconds",
+        "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-21T09:08:08.000Z",
+        "badge": "HN",
+        "signal": "704 分 · 346 评论"
       },
       {
-        "id": "cn-it-f78d4b421c318f70",
+        "id": "cn-it-8e5f528bc7ab233a",
         "category": "cn",
-        "title": "请立即更新：Node.js 发布最高严重级别高危安全更新",
-        "url": "https://www.ithome.com/1/016/143.htm",
+        "title": "苹果公布 Apple Music 全新品牌标识，创作灵感来自声音振动、声波实拍",
+        "url": "https://www.ithome.com/1/016/157.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T15:03:53.000Z",
-        "summary": "IT之家 10 月 21 日消息，开源 JavaScript 运行时环境 Node.js 今日针对 26.x 、 24.x 和 22.x 系列版本发布安全更新，修复 10 余个安全漏洞， 包含 4 个高危漏洞 。 IT之家附本次更新修复漏洞如下： dns.resolve 会截断包含 NUL 字符的域名（CVE-2026-105482）—— 高危 该漏洞影响 Node.js 26.x 、 24.x 和 22.x 。 感谢 hasanfleyah 的报告，并感谢 jasnell…",
+        "publishedAt": "2026-10-21T15:53:23.000Z",
+        "summary": "IT之家 10 月 21 日消息，苹果音乐（Apple Music）官方今日宣布推出全新身份标识。 此次设计以“Made by Sound”（由声音塑造）为核心概念，邀请英国音乐制作人 Fred again.. 与 NEST Acoustics 共同参与，将声音振动转化为可视化的图形效果。 据 Wallpaper* 报道，Apple Music 制作团队先创作了一段音乐，再通过换能器将声音转化为物理振动，使浅层矿物油表面产生波纹。团队全程通过摄像机记录液体的运动与折射效果，…",
         "badge": "IT之家"
       },
       {
@@ -437,6 +314,129 @@
         "signal": "已遭利用 · 整改期限 2026-10-19"
       },
       {
+        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
+        "category": "ai",
+        "title": "Developing Gemini 4 Argon responsibly and safely",
+        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-13T19:43:07.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1250753",
+        "category": "dev",
+        "title": "看到今天爆出的 PHP 漏洞，聊聊老项目转 Go 这事",
+        "url": "https://www.v2ex.com/t/1250753",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-21T14:28:39.000Z",
+        "summary": "今天看到 PHP 爆了两个严重漏洞，官方马上发修复版本，手头有线上服务的还得先准备更新。不过看到这消息，又有点纠结老项目要不要转 Go 。 开新坑选语言很容易，Go 可以，ts 也行。但一个稳定跑了好几年的 PHP 老项目，推倒重写，实在下不去手，或者说很难下定决心去重构。 想问问实际做过 PHP 迁 Go 的 V 友：当初真正促使你们动手的原因是什么？跑了一段时间后，体感提升最明显的是性能、部署，还是日常维护？",
+        "badge": "程序员",
+        "signal": "15 回复"
+      },
+      {
+        "id": "cn-baidu-7d7fce886acc530c",
+        "category": "cn",
+        "title": "它们为什么都叫“长征”",
+        "url": "https://www.baidu.com/s?wd=%E5%AE%83%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%83%BD%E5%8F%AB%E2%80%9C%E9%95%BF%E5%BE%81%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "从托举“东方红一号”卫星的“长征一号”运载火箭，到我国第一艘攻击型核潜艇“长征一号”，再到战略核潜艇长征18号艇，它们有个共同的名字——“长征”。",
+        "badge": "热搜",
+        "signal": "7,616,704 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2025-61624",
+        "category": "security",
+        "title": "Fortinet Multiple Products：Fortinet Multiple Products Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-61624",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-16T00:00:00.000Z",
+        "summary": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CL…",
+        "badge": "CVE-2025-61624",
+        "signal": "已遭利用 · 整改期限 2026-10-19"
+      },
+      {
+        "id": "ai-hugging-face-5b4e08461387ba3b",
+        "category": "ai",
+        "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+        "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-21T16:04:43.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50181136",
+        "category": "dev",
+        "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+        "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-21T14:01:22.000Z",
+        "badge": "HN",
+        "signal": "279 分 · 29 评论"
+      },
+      {
+        "id": "cn-item-0d4a3540f735c7e4",
+        "category": "cn",
+        "title": "东西问丨曾珺：跨越90年，外籍友人与长征的故事何以不断书写？",
+        "url": "https://www.chinanews.com.cn/dxw/2026/10-21/10718650.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-21T11:12:32.000Z",
+        "summary": "中新社北京10月21日电 题：跨越90年，外籍友人与长征的故事何以不断书写？",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-21589",
+        "category": "security",
+        "title": "Atlassian Multiple Products：Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-21589",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-15T00:00:00.000Z",
+        "summary": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessi…",
+        "badge": "CVE-2026-21589",
+        "signal": "已遭利用 · 整改期限 2026-10-18"
+      },
+      {
+        "id": "ai-openai-de9db6f384cbc788",
+        "category": "ai",
+        "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+        "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-21T07:00:00.000Z",
+        "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1250745",
+        "category": "dev",
+        "title": "不仅是 PHP 漏洞， nodejs 今天也发了",
+        "url": "https://www.v2ex.com/t/1250745",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-21T13:46:29.000Z",
+        "summary": "这周大家有的忙了 :) https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+        "badge": "程序员",
+        "signal": "11 回复"
+      },
+      {
+        "id": "cn-it-b3a37cb133a54229",
+        "category": "cn",
+        "title": "NASA 公布月球探测车最新进展：VIPER 计划 2027 年探测月球南极水冰资源",
+        "url": "https://www.ithome.com/1/016/149.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-21T15:30:05.000Z",
+        "summary": "IT之家 10 月 21 日消息，美国国家航空航天局（NASA）当地时间 10 月 20 日公布了月球探测车最新研发进展及任务规划。 NASA 表示，用于探测月球水冰等资源的“挥发物调查极地探索车”（VIPER）计划于 2027 年前往月球南极地区，载人月球地形车（LTV）则计划于 2028 年运抵月球南极地区，为未来载人探月任务和月球基地建设提供支持。 据 NASA 官方公告，VIPER 目前已在美国约翰逊航天中心完成组装，正在进行最后阶段的测试，之后将转运至肯尼迪航天中…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2026-105134",
+        "category": "security",
+        "title": "Ahsay AhsayCBS：Ahsay AhsayCBS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-105134",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceiver…",
+        "badge": "CVE-2026-105134",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
+      },
+      {
         "id": "ai-google-deepmind-94cc08977f17740f",
         "category": "ai",
         "title": "Gemini 4 Argon for Robotics",
@@ -446,55 +446,55 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50174687",
+        "id": "hn-50184586",
         "category": "dev",
-        "title": "Muse exposes users' personal and business secrets when they share conversations",
-        "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+        "title": "EA is shutting down BioWare",
+        "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T00:45:59.000Z",
+        "publishedAt": "2026-10-21T17:29:33.000Z",
         "badge": "HN",
-        "signal": "179 分 · 76 评论"
+        "signal": "212 分 · 127 评论"
       },
       {
-        "id": "cn-baidu-6eb4e50d276023e2",
+        "id": "cn-baidu-334e8449454f1cad",
         "category": "cn",
-        "title": "全国流行“拼大学”",
-        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E5%9B%BD%E6%B5%81%E8%A1%8C%E2%80%9C%E6%8B%BC%E5%A4%A7%E5%AD%A6%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "PHP出现严重漏洞 多国紧急下线",
+        "url": "https://www.baidu.com/s?wd=PHP%E5%87%BA%E7%8E%B0%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E+%E5%A4%9A%E5%9B%BD%E7%B4%A7%E6%80%A5%E4%B8%8B%E7%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "全国掀起高校资源整合的“拼大学”浪潮，湖南走在前列，多地推进院校合并升级职业本科。此举意在减少专业同质化、适配产业需求，也提前应对生源缩减，当前职业本科招生达标率偏低是重要动因。",
+        "summary": "近日，PHP被曝存在严重安全漏洞，且已有黑客开始利用漏洞发起攻击。由于PHP支撑全球约75%的可识别编程语言网站，荷兰、芬兰、法国等多国政府机构紧急下线网站规避风险，PHP开发团队随后发布修复版本。",
         "badge": "热搜",
-        "signal": "7,522,749 热度"
+        "signal": "7,523,898 热度"
       },
       {
-        "id": "github-advisory-ghsa-q45j-58j2-45rg",
+        "id": "cisa-kev-cve-2026-76519",
         "category": "security",
-        "title": "Pillow: TiffDecode returns uninitialized memory as pixels for short JPEG strips",
-        "url": "https://github.com/advisories/GHSA-q45j-58j2-45rg",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T20:52:43.000Z",
-        "summary": "``` ============================================================================ TiffDecode returns uninitialized memory as pixels for short JPEG strips Location: src/libImaging/TiffDecode.c:554 in _decodeStrip() Commit: a707c6b21c313880d0…",
-        "badge": "CVE-2026-112897",
-        "signal": "HIGH · CVSS 0.0"
+        "title": "Cisco Secure Email Gateway：Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76519",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-14T00:00:00.000Z",
+        "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
+        "badge": "CVE-2026-76519",
+        "signal": "已遭利用 · 整改期限 2026-10-17"
       },
       {
-        "id": "ai-hugging-face-536f23cd94f13984",
+        "id": "ai-hugging-face-c2ed162a157709f5",
         "category": "ai",
-        "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
-        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+        "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-20T15:19:48.000Z",
+        "publishedAt": "2026-10-21T14:58:18.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250715",
+        "id": "v2ex-1250731",
         "category": "dev",
-        "title": "因为 PHP 的漏洞， namesilo 无法进去管理域名等业务",
-        "url": "https://www.v2ex.com/t/1250715",
+        "title": "我用 deepseek 逆向了小米运动的卡路里算法，绷不住了",
+        "url": "https://www.v2ex.com/t/1250731",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T10:35:43.000Z",
-        "summary": "因为 PHP 的被爆出漏洞，namesilo 无法进去管理域名等业务，恰巧今天玉米涉及到续费，真 TM 操蛋，修复时间遥遥无期,这种情况怎么搞?",
+        "publishedAt": "2026-10-21T12:03:12.000Z",
+        "summary": "起因是主播最近在减肥，每天运动量不变，卡路里却忽高忽低，觉得其中必有蹊跷。让 deepseek 帮忙逆向看了一眼，看完是真绷不住。 先说明前提：我没戴小米手环，手机放裤兜或边走边刷。手环走的是另一套算法，由手环自己算完传给手机，跟下面这些无关。 我本以为这算法至少符合运动生理学。结果核心就三条： 按分钟分档，只看步频 每分钟步数 ≤138 → 0.04 卡/步 139–277 → 0.06 卡/步 ≥278 → 0.10 卡/步 注意最后那档：278 步/分相当于 4.6 …",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "5 回复"
       }
     ]
   },
@@ -505,106 +505,106 @@
     },
     "items": [
       {
-        "id": "github-692c624bcf5d89a2",
-        "rank": 1,
-        "name": "MadsLorentzen/ai-job-search",
-        "url": "https://github.com/MadsLorentzen/ai-job-search",
-        "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
-        "language": "Python",
-        "stars": 62511,
-        "starsToday": 3131
-      },
-      {
         "id": "github-adc2afef89175c61",
-        "rank": 2,
+        "rank": 1,
         "name": "cloudflare/security-audit-skill",
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 35320,
+        "stars": 35618,
         "starsToday": 1997
       },
       {
         "id": "github-8d5490de58c11c78",
-        "rank": 3,
+        "rank": 2,
         "name": "vllm-project/vllm",
         "url": "https://github.com/vllm-project/vllm",
         "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
         "language": "Python",
-        "stars": 94736,
+        "stars": 94792,
         "starsToday": 439
       },
       {
         "id": "github-89dc44e4b1b40fac",
-        "rank": 4,
+        "rank": 3,
         "name": "stablyai/orca",
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 100750,
+        "stars": 101004,
         "starsToday": 1543
       },
       {
         "id": "github-822d9b39dd5e06da",
-        "rank": 5,
+        "rank": 4,
         "name": "headroomlabs-ai/headroom",
         "url": "https://github.com/headroomlabs-ai/headroom",
         "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "language": "Python",
-        "stars": 77069,
+        "stars": 77157,
         "starsToday": 477
       },
       {
         "id": "github-61b98383e7d93589",
-        "rank": 6,
+        "rank": 5,
         "name": "DietrichGebert/ponytail",
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 170957,
+        "stars": 171272,
         "starsToday": 2051
       },
       {
         "id": "github-53c16fc7c5624952",
-        "rank": 7,
+        "rank": 6,
         "name": "Comfy-Org/ComfyUI",
         "url": "https://github.com/Comfy-Org/ComfyUI",
         "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "language": "Python",
-        "stars": 141290,
+        "stars": 141387,
         "starsToday": 914
       },
       {
         "id": "github-956f36faa41dc156",
-        "rank": 8,
+        "rank": 7,
         "name": "supabase/supabase",
         "url": "https://github.com/supabase/supabase",
         "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
         "language": "TypeScript",
-        "stars": 112722,
+        "stars": 112848,
         "starsToday": 509
       },
       {
         "id": "github-0bd741b39a4e8fbf",
-        "rank": 9,
+        "rank": 8,
         "name": "twentyhq/twenty",
         "url": "https://github.com/twentyhq/twenty",
         "description": "The open alternative to Salesforce, designed for AI.",
         "language": "TypeScript",
-        "stars": 58894,
+        "stars": 59018,
         "starsToday": 105
       },
       {
         "id": "github-7724900c5d82712c",
-        "rank": 10,
+        "rank": 9,
         "name": "shiyu-coder/Kronos",
         "url": "https://github.com/shiyu-coder/Kronos",
         "description": "Kronos: A Foundation Model for the Language of Financial Markets",
         "language": "Python",
-        "stars": 42659,
+        "stars": 42735,
         "starsToday": 570
+      },
+      {
+        "id": "github-01830fc5a6bd9087",
+        "rank": 10,
+        "name": "strelov1/freehire",
+        "url": "https://github.com/strelov1/freehire",
+        "description": "freehire — the open-source search engine for job seekers",
+        "language": "Go",
+        "stars": 2263,
+        "starsToday": 396
       }
     ],
-    "updatedAt": "2026-10-21T15:16:12.461Z"
+    "updatedAt": "2026-10-21T19:20:43.989Z"
   }
 }
