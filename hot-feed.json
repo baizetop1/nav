@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-21T10:10:17.284Z",
+  "generatedAt": "2026-10-21T15:16:12.461Z",
   "intelligence": {
-    "updatedAt": "2026-10-21T10:10:17.284Z",
+    "updatedAt": "2026-10-21T15:16:12.461Z",
     "items": [
       {
-        "id": "cn-item-9b1ef7bdff2cd22f",
+        "id": "cn-item-8b8a139ef7517525",
         "category": "cn",
-        "title": "中国工农红军长征胜利90周年金银纪念币10月22日发行",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-21/10718610.shtml",
+        "title": "日本新农相连曝多起丑闻 民众对高市政府不信任感加剧",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718434.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-21T09:40:55.000Z",
-        "summary": "中新网10月21日电 据中国人民银行微信公众号消息，中国人民银行定于2026年10月22日发行中国工农红军长征胜利90周年金银纪念币一套。该套金银纪念币共2枚，其中金质纪念币1枚，银质纪念币1枚，均为中华人民共和国法定货币。",
+        "publishedAt": "2026-10-21T13:57:21.000Z",
+        "summary": "中新网10月21日电 据日本共同社21日报道，日本农林水产大臣武部新上任仅数日，便连续被曝出多起丑闻。武部新上任数日就出现“政治与金钱”相关问题，使高市早苗政府的危机管理能力备受质疑，高市的任命责任或将面临严厉审视。",
         "badge": "中新网要闻"
       },
       {
@@ -26,13 +26,13 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-openai-1725d137aa3debc0",
+        "id": "ai-openai-b1215e1aefc04c61",
         "category": "ai",
-        "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
-        "url": "https://openai.com/index/ted-taylor-restaurant",
+        "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+        "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
         "source": "OpenAI",
-        "publishedAt": "2026-10-20T10:00:00.000Z",
-        "summary": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
+        "publishedAt": "2026-10-21T13:00:00.000Z",
+        "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
         "badge": "OpenAI"
       },
       {
@@ -46,24 +46,24 @@
         "signal": "49 分 · 14 评论"
       },
       {
-        "id": "cn-it-3a24be975a7f02f1",
+        "id": "cn-it-8adf888d4925e06d",
         "category": "cn",
-        "title": "12306 回应女子错过检票下跪哀求：停检后无例外放行通道",
-        "url": "https://www.ithome.com/1/016/051.htm",
+        "title": "苹果 iPhone Duo 将于今年晚些时候支持“便捷访问”单手模式",
+        "url": "https://www.ithome.com/1/016/146.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T10:07:27.000Z",
-        "summary": "IT之家 10 月 21 日消息，昨日，一段女子在火车站检票口情绪失控、下跪哀求工作人员放行的视频引发关注并登上微博热搜。 据大风新闻、河南法治报等媒体报道，事发时该女子在发车前几分钟才赶到检票口，但已经超过了车站规定的发车前 5 分钟停止检票时限，检票员依规未予放行，并建议她尽快办理改签。现场画面中，女子反复哭求“还有 2 分钟，我都到这里了”，随后当众下跪。 围绕“为什么不能再通融两分钟”，12306 客服的回应是：停止检票后，无论列车是否已经驶离，都不存在例外放行的通…",
+        "publishedAt": "2026-10-21T15:14:23.000Z",
+        "summary": "IT之家 10 月 21 日消息，苹果首款折叠屏手机 iPhone Duo 将在 10 月 23 日发售。《连线》杂志今日报道称，苹果计划于今年晚些时候，为这款手机推出“便捷访问”单手模式。 据报道，苹果计划为 iPhone Duo 加入新版“便捷访问”功能， 让手比较小的用户只需要轻点屏幕 ， 就能更轻松地触及屏幕左侧 / 右侧边缘 。 IT之家了解到，“便捷访问”是苹果 iOS 系统的一项功能，最早于 2014 年随 iPhone 6、iPhone 6 Plus 一同推…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-4fpj-g9jf-9rgg",
+        "id": "github-advisory-ghsa-86wm-68pq-5jwq",
         "category": "security",
-        "title": "A2A Java SDK: Android synchronous POST forwards credentials across authorities after incomplete redirect fix",
-        "url": "https://github.com/advisories/GHSA-4fpj-g9jf-9rgg",
+        "title": "ApostropheCMS: Unauthenticated resource exhaustion via pre-auth aposBigUpload processing in @apostrophecms/import-export",
+        "url": "https://github.com/advisories/GHSA-86wm-68pq-5jwq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T21:08:06.000Z",
-        "summary": "The GHSA-9rhm fix added this safe setting in AndroidA2AHttpClient.createConnection(): connection.setInstanceFollowRedirects(false); The synchronous POST builder later overwrites it: private boolean followRedirects = true; public A2AHttpRes…",
-        "badge": "CVE-2026-111765",
+        "publishedAt": "2026-10-21T13:51:21.000Z",
+        "summary": "## Summary A potential unauthenticated denial-of-service vulnerability exists in the chunked import upload path used by `@apostrophecms/import-export`. The affected import API routes invoke: `self.apos.http.bigUploadMiddleware()` before th…",
+        "badge": "CVE-2026-113711",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250697",
+        "id": "v2ex-1250756",
         "category": "dev",
-        "title": "想买个折叠电动自行车",
-        "url": "https://www.v2ex.com/t/1250697",
+        "title": "日本首相高市早苗就 PHP 漏洞发表推文 敦促更新🤣",
+        "url": "https://www.v2ex.com/t/1250756",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T09:26:34.000Z",
-        "summary": "有些时候开车很麻烦，想有辆电动车，即能够折叠，可以放到车里，也希望是电动的。 有没有推荐的啊",
+        "publishedAt": "2026-10-21T14:49:40.000Z",
+        "summary": "真没想 PHP 还有这待遇？！ 原推文: https://x.com/takaichi_sanae/status/2112890642590564386",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-4ef16bba849fa302",
+        "id": "cn-baidu-ba5d7da8a8114db0",
         "category": "cn",
-        "title": "以后不用躲井盖了？国家出手",
-        "url": "https://www.baidu.com/s?wd=%E4%BB%A5%E5%90%8E%E4%B8%8D%E7%94%A8%E8%BA%B2%E4%BA%95%E7%9B%96%E4%BA%86%EF%BC%9F%E5%9B%BD%E5%AE%B6%E5%87%BA%E6%89%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "南京警方回应留学生披旭日旗事件",
+        "url": "https://www.baidu.com/s?wd=%E5%8D%97%E4%BA%AC%E8%AD%A6%E6%96%B9%E5%9B%9E%E5%BA%94%E7%95%99%E5%AD%A6%E7%94%9F%E6%8A%AB%E6%97%AD%E6%97%A5%E6%97%97%E4%BA%8B%E4%BB%B6&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，国家市场监督管理总局发布《城市公共设施 检查井盖运维服务规范》国家标准。针对井盖沉陷、异响等隐患，标准明确常规区域井盖每周至少巡查1次，接报后2小时内抵达现场，重大险情6小时内修补，推行“一盖一档案”。",
+        "summary": "10月21日，南京警方回应称，接到数百起关于“留学生在国外身披旭日旗”的举报，已有专门部门处理。此前，一名陈姓中国留学生在莫斯科大学课堂身披日本军国主义旭日旗引发轩然大波，经留学生集体请愿，校方表态将作开除决定，涉事学生已被遣返。",
         "badge": "热搜",
-        "signal": "7,809,711 热度"
+        "signal": "7,808,268 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96656",
@@ -109,12 +109,12 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-hugging-face-e8a8161ff83426ef",
+        "id": "ai-hugging-face-c2ed162a157709f5",
         "category": "ai",
-        "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
-        "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+        "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-20T18:17:47.000Z",
+        "publishedAt": "2026-10-21T14:58:18.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -128,55 +128,55 @@
         "signal": "129 分 · 117 评论"
       },
       {
-        "id": "cn-item-f4bbabc56fb7da8b",
+        "id": "cn-item-7215f34077b490c6",
         "category": "cn",
-        "title": "聚焦网络食品销售虚假宣传等问题 市场监管总局公布6起典型案例",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-21/10718595.shtml",
+        "title": "蓝佛安：第33届APEC财长会达成一系列务实成果",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-21/10718743.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-21T09:24:08.000Z",
-        "summary": "中新网10月21日电 据市场监管总局网站消息，2026年，市场监管总局聚焦网络食品销售虚假宣传、误导消费等突出问题，部署各地市场监管部门依法查处了一批违法案件，治理了一批乱象，清理了一批违规主体。现选取6起典型案例予以公布：",
+        "publishedAt": "2026-10-21T13:18:20.000Z",
+        "summary": "中新社香港10月21日电 (记者 戴小橦)第33届亚太经济合作组织(APEC)财长会21日在香港顺利闭幕，会议主席、中国财政部部长蓝佛安在会后举行的新闻发布会上表示，本次会议达成一系列务实成果，取得圆满成功。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-qw47-mcm5-934w",
+        "id": "github-advisory-ghsa-4fpj-g9jf-9rgg",
         "category": "security",
-        "title": "A2A Java SDK has a fail-open default task authorization",
-        "url": "https://github.com/advisories/GHSA-qw47-mcm5-934w",
+        "title": "A2A Java SDK: Android synchronous POST forwards credentials across authorities after incomplete redirect fix",
+        "url": "https://github.com/advisories/GHSA-4fpj-g9jf-9rgg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T21:05:09.000Z",
-        "summary": "Draft text for GHSA-qw47-mcm5-934w. The body below drops into the GitHub advisory description field; the metadata block maps to the form fields. Set the patched version at release; publish when the fix ships._ --- - **Ecosystem:** Maven - …",
-        "badge": "CVE-2026-111764",
+        "publishedAt": "2026-10-20T21:08:06.000Z",
+        "summary": "The GHSA-9rhm fix added this safe setting in AndroidA2AHttpClient.createConnection(): connection.setInstanceFollowRedirects(false); The synchronous POST builder later overwrites it: private boolean followRedirects = true; public A2AHttpRes…",
+        "badge": "CVE-2026-111765",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-aa8847d44cbae332",
+        "id": "ai-openai-95dedf578de78f3e",
         "category": "ai",
-        "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
-        "url": "https://openai.com/index/terminal-x",
+        "title": "OpenAI models are coming to Google Cloud",
+        "url": "https://openai.com/index/openai-models-google-cloud",
         "source": "OpenAI",
-        "publishedAt": "2026-10-20T07:00:00.000Z",
-        "summary": "Terminal X’s Eval Agent grades outputs against a 54-criterion rubric, catching 25% more deviances from a fund’s mandate with GPT-6.1 Sol.",
+        "publishedAt": "2026-10-21T12:00:00.000Z",
+        "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250695",
+        "id": "v2ex-1250753",
         "category": "dev",
-        "title": "做了一个小工具，开源了，开发，运维测试都可以用，个人感觉很方便，很适用，希望也能帮助到你们",
-        "url": "https://www.v2ex.com/t/1250695",
+        "title": "看到今天爆出的 PHP 漏洞，聊聊老项目转 Go 这事",
+        "url": "https://www.v2ex.com/t/1250753",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T09:18:21.000Z",
-        "summary": "开源地址： https://github.com/CNlanny/quik",
+        "publishedAt": "2026-10-21T14:28:39.000Z",
+        "summary": "今天看到 PHP 爆了两个严重漏洞，官方马上发修复版本，手头有线上服务的还得先准备更新。不过看到这消息，又有点纠结老项目要不要转 Go 。 开新坑选语言很容易，Go 可以，ts 也行。但一个稳定跑了好几年的 PHP 老项目，推倒重写，实在下不去手，或者说很难下定决心去重构。 想问问实际做过 PHP 迁 Go 的 V 友：当初真正促使你们动手的原因是什么？跑了一段时间后，体感提升最明显的是性能、部署，还是日常维护？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-it-6339397831f7559c",
+        "id": "cn-it-91dc9c280dd2b8df",
         "category": "cn",
-        "title": "斯巴鲁 2027 年底前在欧洲停售燃油车，全面转向纯电",
-        "url": "https://www.ithome.com/1/016/043.htm",
+        "title": "腾讯内测 AI 互动社区“懂了鸭”：一句话生成可玩的动态课件与 3D 演示",
+        "url": "https://www.ithome.com/1/016/145.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T09:59:10.000Z",
-        "summary": "IT之家 10 月 21 日消息，斯巴鲁近日向外媒《Auto Motor und Sport》确认，公司最迟将于 2027 年在欧洲停售燃油车，全面转向电动汽车。 据报道，斯巴鲁在欧洲的市场份额并不算高，去年仅售出 2.3 万辆，市场份额为 0.2%。该公司将于今年年底在欧洲停售 Outback，并于 2027 年陆续让 Impreza、Crosstrek 和 Forester 等车型退出欧洲。 从 2028 年开始， 斯巴鲁在欧洲只提供三款车型 ， 全部都是纯电动汽车 ：…",
+        "publishedAt": "2026-10-21T15:10:22.000Z",
+        "summary": "IT之家 10 月 21 日消息，今日有用户反馈，腾讯正在内测一款面向少儿与青少年的 AI 互动内容社区“懂了鸭”，官方网站（ dongleya.qq.com ）与微信小程序均已上线，目前向亲子用户和一线教师开放小范围测试。 该产品的核心载体是“奇妙卡”，一种可拖拽、可模拟、可操作的交互式内容单元，家长、教师或知识创作者输入自然语言描述，即可借助内置 AI 智能体生成 3D 演示、动态课件、互动绘本、轻量游戏或记忆卡等作品，无需编程基础。用户既可以浏览社区中已有的奇妙卡作品…",
         "badge": "IT之家"
       },
       {
@@ -211,54 +211,54 @@
         "signal": "379 分 · 158 评论"
       },
       {
-        "id": "cn-baidu-20a65b70d2687ae2",
+        "id": "cn-baidu-bdae8de14ceb4511",
         "category": "cn",
-        "title": "张凌赫赴台被拒 他们到底在怕什么",
-        "url": "https://www.baidu.com/s?wd=%E5%BC%A0%E5%87%8C%E8%B5%AB%E8%B5%B4%E5%8F%B0%E8%A2%AB%E6%8B%92+%E4%BB%96%E4%BB%AC%E5%88%B0%E5%BA%95%E5%9C%A8%E6%80%95%E4%BB%80%E4%B9%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "王虹再获大奖",
+        "url": "https://www.baidu.com/s?wd=%E7%8E%8B%E8%99%B9%E5%86%8D%E8%8E%B7%E5%A4%A7%E5%A5%96&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "演员张凌赫申请赴台举办观众见面会等交流活动，竟然遭到民进党当局拒绝。大陆演艺人员赴台开展文化交流，是两岸民众乐见的民间往来，为什么偏偏有人要出于政治目的，人为设置文化壁垒，违背岛内主流民意？他们到底在怕什么？",
+        "summary": "日前，求是科技基金会发布2026年度“求是杰出科学家奖”名单，新晋菲尔兹奖得主王虹获奖。邓稼先、施一公、颜宁等曾获该奖。",
         "badge": "热搜",
-        "signal": "7,713,496 热度"
+        "signal": "7,713,045 热度"
       },
       {
-        "id": "github-advisory-ghsa-58r4-6rv3-gfh8",
+        "id": "github-advisory-ghsa-qw47-mcm5-934w",
         "category": "security",
-        "title": "Pillow: Out-of-bounds access in _imagingmorph on a zero-width image",
-        "url": "https://github.com/advisories/GHSA-58r4-6rv3-gfh8",
+        "title": "A2A Java SDK has a fail-open default task authorization",
+        "url": "https://github.com/advisories/GHSA-qw47-mcm5-934w",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T20:56:22.000Z",
-        "summary": "### Summary A PPM or PGM file can declare a width of 0, which Pillow accepts, producing an image of size `(0, N)`. Passing that image to `ImageMorph.MorphOp.apply()` makes the native morphology code index a row buffer at `outrow[width - 1]…",
-        "badge": "CVE-2026-112397",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-20T21:05:09.000Z",
+        "summary": "Draft text for GHSA-qw47-mcm5-934w. The body below drops into the GitHub advisory description field; the metadata block maps to the form fields. Set the patched version at release; publish when the fix ships._ --- - **Ecosystem:** Maven - …",
+        "badge": "CVE-2026-111764",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-ef73bf2ace8ac671",
+        "id": "ai-hugging-face-5c32755a71da49ed",
         "category": "ai",
-        "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
-        "url": "https://huggingface.co/blog/allenai/fairstress",
+        "title": "NVIDIA Kumo Forecast Combines Pretrained Time-Series Representations with Historical Pattern Retrieval and Interpretability",
+        "url": "https://huggingface.co/blog/nvidia/kumo-forecast",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-20T16:09:19.000Z",
+        "publishedAt": "2026-10-21T12:51:24.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250689",
+        "id": "v2ex-1250745",
         "category": "dev",
-        "title": "为啥你们 Vibe 的网页 AI 味儿那么轻?",
-        "url": "https://www.v2ex.com/t/1250689",
+        "title": "不仅是 PHP 漏洞， nodejs 今天也发了",
+        "url": "https://www.v2ex.com/t/1250745",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T09:02:32.000Z",
-        "summary": "好像每天看到的大家贴的自己的页面/网站 AI 味儿都特别轻.. 包括不限于： 没有 AI 最爱的紫色 没有奇怪的渐变效果 没有各种卡片泛滥 没有卡片里面经常用大段文字配满…… 没有大量统一的线性图标，放在圆角方块 不过坦白说 chatgpt 和 claude 做的界面再漂亮，也基本一眼 AI ，大家有没有没有 AI 味儿的页面？",
+        "publishedAt": "2026-10-21T13:46:29.000Z",
+        "summary": "这周大家有的忙了 :) https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-item-97e57234aeb1fb4c",
+        "id": "cn-item-e58bed616add1c53",
         "category": "cn",
-        "title": "上任仅一周 日本新农相被曝违法接受政治捐款",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718578.shtml",
+        "title": "金与正：朝鲜对韩心理战扩音器将在边境全线投入运行",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-21/10718675.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-21T08:44:04.000Z",
-        "summary": "中新网10月21日电 据日本时事通讯社报道，当地时间21日，日本农林水产大臣武部新就“涉嫌违法收受政治献金”一事致歉，称将尽快核实相关情况。",
+        "publishedAt": "2026-10-21T11:48:56.000Z",
+        "summary": "中新网10月21日电 据朝中社报道，当地时间10月21日，朝鲜劳动党中央委员会部长金与正发表谈话说，对韩国心理战扩音器本月将在边境全线投入运行。",
         "badge": "中新网要闻"
       },
       {
@@ -273,13 +273,13 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-openai-1cfb6291fa158d05",
+        "id": "ai-openai-de9db6f384cbc788",
         "category": "ai",
-        "title": "OpenAI acquires Orchestra Bio",
-        "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+        "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+        "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
         "source": "OpenAI",
-        "publishedAt": "2026-10-20T00:00:00.000Z",
-        "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
+        "publishedAt": "2026-10-21T07:00:00.000Z",
+        "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
         "badge": "OpenAI"
       },
       {
@@ -293,24 +293,24 @@
         "signal": "871 分 · 352 评论"
       },
       {
-        "id": "cn-it-4740318d7705926c",
+        "id": "cn-it-e2c61e9fa8409b92",
         "category": "cn",
-        "title": "法国两家苹果零售店遭洗劫：里尔门店一度暂停营业，波尔多门店曾在 2018 年遇袭",
-        "url": "https://www.ithome.com/1/016/041.htm",
+        "title": "确认延期：华为鸿蒙 HarmonyOS 7 小艺 AI 快捷栏功能预计 11 月初分批推送",
+        "url": "https://www.ithome.com/1/016/144.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T09:58:55.000Z",
-        "summary": "IT之家 10 月 21 日消息，据 MacRumors 今日报道，法国多地近日发生示威活动，期间波尔多和里尔的两家苹果零售店遭到洗劫。 据法新社（AFP）报道，2026 年 10 月 17 日，法国多个城市发生商铺遭破坏和洗劫事件，波尔多、里尔等地的零售商店受到波及。 其中，波尔多的 Apple Sainte-Catherine 门店此前也曾在 2018 年 12 月法国“黄背心运动”（不满油价持续上涨）示威期间遭到洗劫。此次事件中，两座城市的多家商铺同样成为袭击目标。 …",
+        "publishedAt": "2026-10-21T15:10:07.000Z",
+        "summary": "IT之家 10 月 21 日消息，在今年 9 月 7 日的 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会上，鸿蒙 7 操作系统正式发布。在发布会现场，华为还剧透了全新功能 —— 小艺 AI 快捷栏。官方 PPT 页面显示，该功能开启后，小艺将在手机桌面底部的 Dock 栏常驻。 本月早些时候，华为客户服务透露该功能预计在 10 月底逐步和大家见面。IT之家今日再次就该功能的上线时间进行了询问，对方表示： 该功能预计将在 11 月初逐步和大…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-65qm-jvmh-6pqg",
+        "id": "github-advisory-ghsa-58r4-6rv3-gfh8",
         "category": "security",
-        "title": "Pillow: GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
-        "url": "https://github.com/advisories/GHSA-65qm-jvmh-6pqg",
+        "title": "Pillow: Out-of-bounds access in _imagingmorph on a zero-width image",
+        "url": "https://github.com/advisories/GHSA-58r4-6rv3-gfh8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T20:53:36.000Z",
-        "summary": "``` ============================================================================ GIF seek keeps rejected size after DecompressionBombError, allowing DoS Location: src/PIL/GifImagePlugin.py:293 in GifImageFile._seek() Commit: a707c6b21c3138…",
-        "badge": "CVE-2026-112400",
+        "publishedAt": "2026-10-20T20:56:22.000Z",
+        "summary": "### Summary A PPM or PGM file can declare a width of 0, which Pillow accepts, producing an image of size `(0, N)`. Passing that image to `ImageMorph.MorphOp.apply()` makes the native morphology code index a row buffer at `outrow[width - 1]…",
+        "badge": "CVE-2026-112397",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -323,25 +323,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250677",
+        "id": "v2ex-1250731",
         "category": "dev",
-        "title": "组建 AI team 搞项目大家是怎么设置角色的哈",
-        "url": "https://www.v2ex.com/t/1250677",
+        "title": "我用 deepseek 逆向了小米运动的卡路里算法，绷不住了",
+        "url": "https://www.v2ex.com/t/1250731",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T08:30:57.000Z",
-        "summary": "是直接 claude 规划➕review,gpt 萌萌干。还是 PM ，前端，后段，测试都给配上哈 哪种效果比较好哈",
+        "publishedAt": "2026-10-21T12:03:12.000Z",
+        "summary": "起因是主播最近在减肥，每天运动量不变，卡路里却忽高忽低，觉得其中必有蹊跷。让 deepseek 帮忙逆向看了一眼，看完是真绷不住。 先说明前提：我没戴小米手环，手机放裤兜或边走边刷。手环走的是另一套算法，由手环自己算完传给手机，跟下面这些无关。 我本以为这算法至少符合运动生理学。结果核心就三条： 按分钟分档，只看步频 每分钟步数 ≤138 → 0.04 卡/步 139–277 → 0.06 卡/步 ≥278 → 0.10 卡/步 注意最后那档：278 步/分相当于 4.6 …",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-e6d1027eca710866",
+        "id": "cn-baidu-7d7fce886acc530c",
         "category": "cn",
-        "title": "长征精神的世界回响",
-        "url": "https://www.baidu.com/s?wd=%E9%95%BF%E5%BE%81%E7%B2%BE%E7%A5%9E%E7%9A%84%E4%B8%96%E7%95%8C%E5%9B%9E%E5%93%8D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "它们为什么都叫“长征”",
+        "url": "https://www.baidu.com/s?wd=%E5%AE%83%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%83%BD%E5%8F%AB%E2%80%9C%E9%95%BF%E5%BE%81%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "1937年美国记者海伦·福斯特·斯诺赴陕北延安采访，创作《续西行漫记》见证长征精神。受海伦影响，她的侄孙亚当·福斯特成立了海伦·福斯特·斯诺基金会。在亚当眼中，斯诺夫妇留下的精神遗产跨越时代，海伦笔下提到的那种奋斗不息的长征精神仍在世代相传，激励着中国和全世界。",
+        "summary": "从托举“东方红一号”卫星的“长征一号”运载火箭，到我国第一艘攻击型核潜艇“长征一号”，再到战略核潜艇长征18号艇，它们有个共同的名字——“长征”。",
         "badge": "热搜",
-        "signal": "7,616,082 热度"
+        "signal": "7,616,833 热度"
       },
       {
         "id": "cisa-kev-cve-2026-110936",
@@ -355,12 +355,12 @@
         "signal": "已遭利用 · 整改期限 2026-11-03"
       },
       {
-        "id": "ai-hugging-face-536f23cd94f13984",
+        "id": "ai-hugging-face-ef73bf2ace8ac671",
         "category": "ai",
-        "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
-        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+        "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+        "url": "https://huggingface.co/blog/allenai/fairstress",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-20T15:19:48.000Z",
+        "publishedAt": "2026-10-20T16:09:19.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -374,55 +374,55 @@
         "signal": "799 分 · 376 评论"
       },
       {
-        "id": "cn-item-c14f77c6553e5a6f",
+        "id": "cn-item-0d4a3540f735c7e4",
         "category": "cn",
-        "title": "《交通管理电子证照 机动车行驶证》国家标准发布",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-21/10718573.shtml",
+        "title": "东西问丨曾珺：跨越90年，外籍友人与长征的故事何以不断书写？",
+        "url": "https://www.chinanews.com.cn/dxw/2026/10-21/10718650.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-21T08:34:23.000Z",
-        "summary": "中新网10月21日电 据“市说新语”微信公众号消息，近日，市场监管总局(国家标准委)批准发布《交通管理电子证照 机动车行驶证》(GB/T 48269—2026)国家标准，标准将自2027年4月1日起实施。此前，《交通管理电子证照 机动车驾驶证》已自2026年7月1日起实施。",
+        "publishedAt": "2026-10-21T11:12:32.000Z",
+        "summary": "中新社北京10月21日电 题：跨越90年，外籍友人与长征的故事何以不断书写？",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-q45j-58j2-45rg",
+        "id": "github-advisory-ghsa-65qm-jvmh-6pqg",
         "category": "security",
-        "title": "Pillow: TiffDecode returns uninitialized memory as pixels for short JPEG strips",
-        "url": "https://github.com/advisories/GHSA-q45j-58j2-45rg",
+        "title": "Pillow: GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
+        "url": "https://github.com/advisories/GHSA-65qm-jvmh-6pqg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T20:52:43.000Z",
-        "summary": "``` ============================================================================ TiffDecode returns uninitialized memory as pixels for short JPEG strips Location: src/libImaging/TiffDecode.c:554 in _decodeStrip() Commit: a707c6b21c313880d0…",
-        "badge": "CVE-2026-112897",
+        "publishedAt": "2026-10-20T20:53:36.000Z",
+        "summary": "``` ============================================================================ GIF seek keeps rejected size after DecompressionBombError, allowing DoS Location: src/PIL/GifImagePlugin.py:293 in GifImageFile._seek() Commit: a707c6b21c3138…",
+        "badge": "CVE-2026-112400",
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-1dbe22633003a2af",
+        "id": "ai-openai-ea92da5c121ecb45",
         "category": "ai",
-        "title": "Advancing coding in low‑resource programming languages",
-        "url": "https://openai.com/index/low-resource-programming-languages",
+        "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
+        "url": "https://openai.com/index/building-chatgpt-ad-stack",
         "source": "OpenAI",
-        "publishedAt": "2026-10-19T12:00:00.000Z",
-        "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
+        "publishedAt": "2026-10-21T07:00:00.000Z",
+        "summary": "Learn how OpenAI built ChatGPT’s LLM-powered ad stack to understand conversational intent, keep ads separate from answers, and deliver relevant ads at scale.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250676",
+        "id": "v2ex-1250725",
         "category": "dev",
-        "title": "为啥你们 Vibe 的网页 AI 味儿那么重?",
-        "url": "https://www.v2ex.com/t/1250676",
+        "title": "我写了个 git 工具 BlackGit，拥有 Perforce 一样的文件锁和权限控制，还有按需下载功能",
+        "url": "https://www.v2ex.com/t/1250725",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T08:27:44.000Z",
-        "summary": "好像每天看到的大家贴的自己的页面/网站 AI 味儿都特别重.. 包括不限于： AI 最爱的紫色 奇怪的渐变效果 各种卡片泛滥 卡片里面经常用大段文字配满…… 大量统一的线性图标，放在圆角方块 看看我的： https://vpaste.app/zh/ B 站视频： https://www.bilibili.com/video/BV1onpk6MEsn/ 不过坦白说视频方面感觉 GPT 确实没有 Claude 效果好，看到很多站内大佬用 Claude 做的效果非常耀眼..",
+        "publishedAt": "2026-10-21T11:19:05.000Z",
+        "summary": "blackgit-cli 客户端部分可以单独使用，改哪个文件下载哪个文件 blackgit-server 配合客户端使用，支持文件锁和权限控制 https://github.com/zhuzhonghua/blackgit",
         "badge": "程序员",
-        "signal": "72 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-915e6f810e81c535",
+        "id": "cn-it-f78d4b421c318f70",
         "category": "cn",
-        "title": "奇瑞旗下墨甲机器人首款消费级家庭陪伴人形机器人“墨宝”发布：身高 0.9 米，22 个自由度支持行走与身体表达",
-        "url": "https://www.ithome.com/1/016/037.htm",
+        "title": "请立即更新：Node.js 发布最高严重级别高危安全更新",
+        "url": "https://www.ithome.com/1/016/143.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-21T09:48:37.000Z",
-        "summary": "IT之家 10 月 21 日消息，2026 墨甲机器人全球发布会今日在安徽芜湖举行。墨甲机器人总经理张贵兵表示，墨甲机器人全球销量已超过 3000 台，覆盖 100 多个应用场景；产品与服务已进入 60 多个国家和地区。 奇瑞集团旗下墨甲机器人正式发布其 首款消费级家庭陪伴人形机器人 墨宝，同步开启全球预订。墨宝身高 0.9 米，圆润曲线和柔性材料增强亲和感，22 个自由度支持行走与身体表达。 IT之家获悉，墨宝可为孩子提供识物问答、故事和英语互动，为长辈提供日常陪聊及按用…",
+        "publishedAt": "2026-10-21T15:03:53.000Z",
+        "summary": "IT之家 10 月 21 日消息，开源 JavaScript 运行时环境 Node.js 今日针对 26.x 、 24.x 和 22.x 系列版本发布安全更新，修复 10 余个安全漏洞， 包含 4 个高危漏洞 。 IT之家附本次更新修复漏洞如下： dns.resolve 会截断包含 NUL 字符的域名（CVE-2026-105482）—— 高危 该漏洞影响 Node.js 26.x 、 24.x 和 22.x 。 感谢 hasanfleyah 的报告，并感谢 jasnell…",
         "badge": "IT之家"
       },
       {
@@ -456,45 +456,45 @@
         "signal": "179 分 · 76 评论"
       },
       {
-        "id": "cn-baidu-1b07dde80450bb88",
+        "id": "cn-baidu-6eb4e50d276023e2",
         "category": "cn",
-        "title": "警方回应问界汽车碰撞起火：司机遇难",
-        "url": "https://www.baidu.com/s?wd=%E8%AD%A6%E6%96%B9%E5%9B%9E%E5%BA%94%E9%97%AE%E7%95%8C%E6%B1%BD%E8%BD%A6%E7%A2%B0%E6%92%9E%E8%B5%B7%E7%81%AB%EF%BC%9A%E5%8F%B8%E6%9C%BA%E9%81%87%E9%9A%BE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "全国流行“拼大学”",
+        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E5%9B%BD%E6%B5%81%E8%A1%8C%E2%80%9C%E6%8B%BC%E5%A4%A7%E5%AD%A6%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，一辆问界汽车在陕西榆林神木市一路口处发生碰撞起火。10月21日，神木警方称，该事故系一起单方事故，事发车上仅司机一人，已遇难。",
+        "summary": "全国掀起高校资源整合的“拼大学”浪潮，湖南走在前列，多地推进院校合并升级职业本科。此举意在减少专业同质化、适配产业需求，也提前应对生源缩减，当前职业本科招生达标率偏低是重要动因。",
         "badge": "热搜",
-        "signal": "7,522,459 热度"
+        "signal": "7,522,749 热度"
       },
       {
-        "id": "github-advisory-ghsa-pchr-8j38-3x4p",
+        "id": "github-advisory-ghsa-q45j-58j2-45rg",
         "category": "security",
-        "title": "Pillow: TIFF encoder ColorMap plane-size mismatch causes a heap out-of-bounds read",
-        "url": "https://github.com/advisories/GHSA-pchr-8j38-3x4p",
+        "title": "Pillow: TiffDecode returns uninitialized memory as pixels for short JPEG strips",
+        "url": "https://github.com/advisories/GHSA-q45j-58j2-45rg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-20T20:51:40.000Z",
-        "summary": "## Summary A small attacker-supplied TIFF can be opened and loaded normally, then reach an out-of-bounds read when an application saves it back to TIFF with retained metadata. The fixed reproducer is a 1×1, 16-bit grayscale, PackBits-compr…",
-        "badge": "CVE-2026-112896",
+        "publishedAt": "2026-10-20T20:52:43.000Z",
+        "summary": "``` ============================================================================ TiffDecode returns uninitialized memory as pixels for short JPEG strips Location: src/libImaging/TiffDecode.c:554 in _decodeStrip() Commit: a707c6b21c313880d0…",
+        "badge": "CVE-2026-112897",
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-39e60f901a735303",
+        "id": "ai-hugging-face-536f23cd94f13984",
         "category": "ai",
-        "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
-        "url": "https://huggingface.co/blog/hf-torchtpu",
+        "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-20T00:00:00.000Z",
+        "publishedAt": "2026-10-20T15:19:48.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250667",
+        "id": "v2ex-1250715",
         "category": "dev",
-        "title": "workbuddy 我体验,让它生成一个待办清单的网站,居然直接给我把直达的链接都弄好了,数据库啥的都不用操心",
-        "url": "https://www.v2ex.com/t/1250667",
+        "title": "因为 PHP 的漏洞， namesilo 无法进去管理域名等业务",
+        "url": "https://www.v2ex.com/t/1250715",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-21T08:07:16.000Z",
-        "summary": "如题,包含了 验证码登录,微信登录,添加删除待办事项等功能 ,并且有可以外网访问的链接... 感觉这个前途很广啊",
+        "publishedAt": "2026-10-21T10:35:43.000Z",
+        "summary": "因为 PHP 的被爆出漏洞，namesilo 无法进去管理域名等业务，恰巧今天玉米涉及到续费，真 TM 操蛋，修复时间遥遥无期,这种情况怎么搞?",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "7 回复"
       }
     ]
   },
@@ -511,8 +511,8 @@
         "url": "https://github.com/MadsLorentzen/ai-job-search",
         "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "language": "Python",
-        "stars": 61910,
-        "starsToday": 3861
+        "stars": 62511,
+        "starsToday": 3131
       },
       {
         "id": "github-adc2afef89175c61",
@@ -521,90 +521,90 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 34944,
-        "starsToday": 1712
+        "stars": 35320,
+        "starsToday": 1997
+      },
+      {
+        "id": "github-8d5490de58c11c78",
+        "rank": 3,
+        "name": "vllm-project/vllm",
+        "url": "https://github.com/vllm-project/vllm",
+        "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+        "language": "Python",
+        "stars": 94736,
+        "starsToday": 439
       },
       {
         "id": "github-89dc44e4b1b40fac",
-        "rank": 3,
+        "rank": 4,
         "name": "stablyai/orca",
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 100405,
-        "starsToday": 1565
-      },
-      {
-        "id": "github-61b98383e7d93589",
-        "rank": 4,
-        "name": "DietrichGebert/ponytail",
-        "url": "https://github.com/DietrichGebert/ponytail",
-        "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-        "language": "JavaScript",
-        "stars": 170549,
-        "starsToday": 1208
-      },
-      {
-        "id": "github-53c16fc7c5624952",
-        "rank": 5,
-        "name": "Comfy-Org/ComfyUI",
-        "url": "https://github.com/Comfy-Org/ComfyUI",
-        "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
-        "language": "Python",
-        "stars": 141142,
-        "starsToday": 1206
-      },
-      {
-        "id": "github-757bb2aa982fbfd2",
-        "rank": 6,
-        "name": "ruvnet/ruflo",
-        "url": "https://github.com/ruvnet/ruflo",
-        "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-        "language": "TypeScript",
-        "stars": 78049,
-        "starsToday": 684
-      },
-      {
-        "id": "github-6d32f94b62b2e7d2",
-        "rank": 7,
-        "name": "Graphify-Labs/graphify",
-        "url": "https://github.com/Graphify-Labs/graphify",
-        "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-        "language": "Python",
-        "stars": 130803,
-        "starsToday": 802
-      },
-      {
-        "id": "github-064fc4e4cb74eb4b",
-        "rank": 8,
-        "name": "anomalyco/opencode",
-        "url": "https://github.com/anomalyco/opencode",
-        "description": "The open source coding agent.",
-        "language": "TypeScript",
-        "stars": 219409,
-        "starsToday": 1240
-      },
-      {
-        "id": "github-65e281143ae0892e",
-        "rank": 9,
-        "name": "msitarzewski/agency-agents",
-        "url": "https://github.com/msitarzewski/agency-agents",
-        "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
-        "language": "Shell",
-        "stars": 162691,
-        "starsToday": 562
+        "stars": 100750,
+        "starsToday": 1543
       },
       {
         "id": "github-822d9b39dd5e06da",
-        "rank": 10,
+        "rank": 5,
         "name": "headroomlabs-ai/headroom",
         "url": "https://github.com/headroomlabs-ai/headroom",
         "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "language": "Python",
-        "stars": 76941,
-        "starsToday": 549
+        "stars": 77069,
+        "starsToday": 477
+      },
+      {
+        "id": "github-61b98383e7d93589",
+        "rank": 6,
+        "name": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "language": "JavaScript",
+        "stars": 170957,
+        "starsToday": 2051
+      },
+      {
+        "id": "github-53c16fc7c5624952",
+        "rank": 7,
+        "name": "Comfy-Org/ComfyUI",
+        "url": "https://github.com/Comfy-Org/ComfyUI",
+        "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+        "language": "Python",
+        "stars": 141290,
+        "starsToday": 914
+      },
+      {
+        "id": "github-956f36faa41dc156",
+        "rank": 8,
+        "name": "supabase/supabase",
+        "url": "https://github.com/supabase/supabase",
+        "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+        "language": "TypeScript",
+        "stars": 112722,
+        "starsToday": 509
+      },
+      {
+        "id": "github-0bd741b39a4e8fbf",
+        "rank": 9,
+        "name": "twentyhq/twenty",
+        "url": "https://github.com/twentyhq/twenty",
+        "description": "The open alternative to Salesforce, designed for AI.",
+        "language": "TypeScript",
+        "stars": 58894,
+        "starsToday": 105
+      },
+      {
+        "id": "github-7724900c5d82712c",
+        "rank": 10,
+        "name": "shiyu-coder/Kronos",
+        "url": "https://github.com/shiyu-coder/Kronos",
+        "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "language": "Python",
+        "stars": 42659,
+        "starsToday": 570
       }
     ],
-    "updatedAt": "2026-10-21T10:10:17.284Z"
+    "updatedAt": "2026-10-21T15:16:12.461Z"
   }
 }
