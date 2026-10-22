@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-22T07:38:57.770Z",
+  "generatedAt": "2026-10-22T10:12:26.838Z",
   "intelligence": {
-    "updatedAt": "2026-10-22T07:38:57.770Z",
+    "updatedAt": "2026-10-22T10:12:26.838Z",
     "items": [
       {
-        "id": "cn-item-4f794ae404f1e95a",
+        "id": "cn-item-bf5f6bc317fe296e",
         "category": "cn",
-        "title": "海关总署企业管理和稽查司原司长王胜被开除党籍",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-22/10719056.shtml",
+        "title": "商务部：1-9月全国吸收外资5488.1亿元人民币",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-22/10719182.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-22T07:19:28.000Z",
-        "summary": "中新网10月22日电 据中央纪委国家监委驻海关总署纪检监察组、北京市纪委监委消息：日前，中央纪委国家监委驻海关总署纪检监察组、北京市东城区监委对海关总署企业管理和稽查司原司长王胜严重违纪违法问题进行了立案审查调查。",
+        "publishedAt": "2026-10-22T09:15:46.000Z",
+        "summary": "中新网10月22日电 据商务部网站消息，2026年1-9月，全国新设立外商投资企业47800家，同比下降2.3%；实际使用外资金额5488.1亿元人民币，同比下降4.3%。9月当月实际使用外资同比增长2.5%。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50191507",
+        "id": "hn-50192900",
         "category": "dev",
-        "title": "OpenAI CLI",
-        "url": "https://github.com/openai/openai-cli",
+        "title": "CVE-2026-111943: Compromised Intermediate Certificate Authority",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-111943",
         "source": "Hacker News",
-        "publishedAt": "2026-10-22T05:23:11.000Z",
+        "publishedAt": "2026-10-22T08:51:31.000Z",
         "badge": "HN",
-        "signal": "55 分 · 29 评论"
+        "signal": "82 分 · 21 评论"
       },
       {
-        "id": "cn-it-c78a33af62fad77a",
+        "id": "cn-it-115652ef19fee6f9",
         "category": "cn",
-        "title": "欧几里得望远镜发现新彗星：距地球约 13 亿公里，绕太阳一圈约 34.5 万年",
-        "url": "https://www.ithome.com/1/016/483.htm",
+        "title": "蚂蚁数科发布决策模型 LingDT-Decision-1.0，将 Token 消耗降低超 90%",
+        "url": "https://www.ithome.com/1/016/633.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-22T07:37:26.000Z",
-        "summary": "IT之家 10 月 22 日消息，欧洲航天局（ESA）于 10 月 19 日发布博文，称欧几里得（Euclid）太空望远镜在 9 月 16~24 日期间拍摄的深空图像中，发现了一颗此前未知的彗星。 该天体后被国际天文学联合会小行星中心正式确认，命名为 C/2026 S1（Euclid）。 这颗彗星由赫尔辛基大学博士生米科 · 庞蒂宁（Mikko Pöntinen）及其团队发现。他开发了一款用于在望远镜图像中识别移动天体的软件，随后该软件在多幅图像中标出一道“条纹”，提示存在…",
+        "publishedAt": "2026-10-22T10:12:04.000Z",
+        "summary": "IT之家 10 月 22 日消息，蚂蚁数科今日发布决策模型 LingDT-Decision-1.0。该模型专为快速产业决策打造，在处理结构化决策任务时，具备准确率更高、响应更快、Token 成本更低等优势。 据介绍，相比于其他决策模型，LingDT-Decision-1.0 首创 支持原生多选与按序决策能力 ，更适配企业真实应用场景。在 23 项开源评测基准中，LingDT-Decision-1.0 的性能超过了 Microsoft-Decision-1、Jev 1.13.…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250949",
+        "id": "v2ex-1251022",
         "category": "dev",
-        "title": "公司接不起官方 deepseek 转头跟腾讯合作， tps 直接腰斩简直谋财害命",
-        "url": "https://www.v2ex.com/t/1250949",
+        "title": "可以运行任何操作系统，任何软件的网页版虚拟机",
+        "url": "https://www.v2ex.com/t/1251022",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T07:10:07.000Z",
-        "summary": "原来一两百 tps 直接变成四五十，一个 handoff 跑了半个小时，用着烧心，浪费时间=谋财害命。",
+        "publishedAt": "2026-10-22T10:06:50.000Z",
+        "summary": "在线虚拟机网址: https://v64-2ys.pages.dev/ 从 dos 到 windows98 ，从 xp 到 windows10 ，从 alpine aarch64 到 android 16 aarch64 ，你能想到的任何操作系统，任何应用程序都能跑在网页上 repo: https://github.com/speedyHKjournalist/v64 技术展示: https://retrogaming.dpdns.org/",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-a08472b725e2b4b2",
+        "id": "cn-baidu-c229b2962c9a24f8",
         "category": "cn",
-        "title": "新华社在美国找到红军长征时珍贵照片",
-        "url": "https://www.baidu.com/s?wd=%E6%96%B0%E5%8D%8E%E7%A4%BE%E5%9C%A8%E7%BE%8E%E5%9B%BD%E6%89%BE%E5%88%B0%E7%BA%A2%E5%86%9B%E9%95%BF%E5%BE%81%E6%97%B6%E7%8F%8D%E8%B4%B5%E7%85%A7%E7%89%87&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“DeepSeek才是真正的OpenAI”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9CDeepSeek%E6%89%8D%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84OpenAI%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "红军长征胜利90周年之际，新华社记者在美国杨百翰大学特藏部找到一批长征珍贵照片，包括红二十五军渡渭河及康克清赠送海伦·斯诺的藏族妇女照片，十分罕见。",
+        "summary": "DeepSeek开源自研生产级推理框架DeepInfer，该框架可大幅降低大模型运行成本，同时兼容英伟达与国产算力硬件，海外开发者评价其为“真正的OpenAI”，这与美国主流AI厂商坚持闭源、构建技术护城河的路线形成鲜明对比。",
         "badge": "热搜",
-        "signal": "7,809,357 热度"
+        "signal": "7,807,934 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96656",
@@ -109,32 +109,32 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-hugging-face-94a5f6526eada9bc",
+        "id": "ai-hugging-face-0e5fad3ca5f8a881",
         "category": "ai",
-        "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
-        "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+        "title": "Ensemble forecasting with IBM Granite time-series models",
+        "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-21T18:26:30.000Z",
+        "publishedAt": "2026-10-22T07:51:31.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50190455",
+        "id": "hn-50190363",
         "category": "dev",
-        "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
-        "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+        "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+        "url": "https://simedw.com/2026/10/21/world-model-terminal/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-22T02:30:52.000Z",
+        "publishedAt": "2026-10-22T02:18:41.000Z",
         "badge": "HN",
-        "signal": "170 分 · 95 评论"
+        "signal": "212 分 · 67 评论"
       },
       {
-        "id": "cn-item-4cccfdbf9555f147",
+        "id": "cn-item-6a0718c59d471281",
         "category": "cn",
-        "title": "2026年国家地理标志保护示范区创建名单确定",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-22/10718988.shtml",
+        "title": "《中国工农红军长征胜利90周年》纪念邮票发行",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-22/10719170.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-22T07:17:58.000Z",
-        "summary": "中新网10月22日电 据“国家知识产权局”微信公众号消息，国家知识产权局办公室发布关于确定2026年国家地理标志保护示范区创建名单的通知，具体内容如下：",
+        "publishedAt": "2026-10-22T09:08:26.000Z",
+        "summary": "中新社北京10月22日电 (记者 王梦瑶)中国邮政22日发行《中国工农红军长征胜利90周年》纪念邮票1套6枚，邮票图案名称为：踏上征程、血战湘江、遵义会议、激战腊子口、胜利会师、弘扬伟大长征精神。",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250943",
+        "id": "v2ex-1251020",
         "category": "dev",
-        "title": "tibo 又要重置了吗?",
-        "url": "https://www.v2ex.com/t/1250943",
+        "title": "真心请教，现在用的是 dsp next flash q3 量化 + 350K 上下文， 请问对标 claude/codex 哪个模型和档位？",
+        "url": "https://www.v2ex.com/t/1251020",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T07:00:54.000Z",
-        "summary": "ℹ️ Tibo Radar [reset context] Day 17/ Bet you thought we forgot, but no, it’s reset day today. Also good time to remind you to get Daybreak Blue access, it only takes 15 mins and you don’t want to have to do it in the middle of an incident…",
+        "publishedAt": "2026-10-22T09:56:22.000Z",
+        "summary": "朋友工厂 erp 基本完工， 目前开始投入使用， 超级满意。 他根据我的建议买了台主机做工厂算力中心， 打算以后一些 erp 的修修补补直接用这个算力中心来做，但是不知道 目前这台主机是用 strata 推理引擎跑的 dsp next flash q3 量化 + 350K 上下文， 请问对标 claude/codex 哪个模型和档位？ 不知道有没有尝试过的告诉下体验？",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-80521bc032384c8a",
+        "id": "cn-it-74918539a468691e",
         "category": "cn",
-        "title": "Spotify 推出首款原生车载应用，率先登陆奥迪 A6 e-tron 与 Q6 e-tron 电动汽车",
-        "url": "https://www.ithome.com/1/016/482.htm",
+        "title": "iPhone Duo 京东 + 1999 元轻享套装蹲点抢，京东淘宝 1.1 元大红包 20:00 不限量发放",
+        "url": "https://www.ithome.com/1/016/631.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-22T07:36:29.000Z",
-        "summary": "IT之家 10 月 22 日消息，据汽车媒体 InsideEVs 今天报道，Spotify 现已推出其首款真正意义上的原生车载音乐应用。该 App 由 Spotify 自主研发， 没有遵循谷歌的设计限制 。 IT之家从原报道获悉，Spotify 此前推出的 Android Automotive 应用采用无界面架构，后端流媒体服务负责提供数据、播放列表和音乐曲库，UI 设计必须严格遵循谷歌设计规范。而原生版采用有界面架构， Spotify 可以完全自主地设计 UI 。 Spo…",
+        "publishedAt": "2026-10-22T10:10:10.000Z",
+        "summary": "全网 11.11 狂促今晚 20:00 重磅加码，数码家电、日用百货、服装鞋帽皆为年内好价。 京东 无门槛红包至高 26888 元，每天抽 3 次： 点此抽取 。 京东 20 日 20:00~20:15 额外加抽 1 次，1.18 元红包大量释放，至高 26888 元。 淘宝 无门槛红包至高 26888 元，每天抽 1 次： 点此抽取 。 淘宝 20 日 20:00~20:15 额外加抽 1 次，95% 抽中 1.1 元无门槛红包 + 随机 6.6 元大红包。 京东目前已上…",
         "badge": "IT之家"
       },
       {
@@ -201,24 +201,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50190363",
+        "id": "hn-50192868",
         "category": "dev",
-        "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
-        "url": "https://simedw.com/2026/10/21/world-model-terminal/",
+        "title": "Achieving AI-style reasoning without an LLM",
+        "url": "https://fleetingswallow.com/minotaur-ai-deep-dive-achieving-reasoning-without-a-language-model/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-22T02:18:41.000Z",
+        "publishedAt": "2026-10-22T08:46:58.000Z",
         "badge": "HN",
-        "signal": "104 分 · 42 评论"
+        "signal": "22 分 · 1 评论"
       },
       {
-        "id": "cn-baidu-6ac0a1c8e789cd85",
+        "id": "cn-baidu-33145e282a8e845a",
         "category": "cn",
-        "title": "“一斤开心果赶上买两只鸡了”",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%80%E6%96%A4%E5%BC%80%E5%BF%83%E6%9E%9C%E8%B5%B6%E4%B8%8A%E4%B9%B0%E4%B8%A4%E5%8F%AA%E9%B8%A1%E4%BA%86%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "甲状腺癌越来越多",
+        "url": "https://www.baidu.com/s?wd=%E7%94%B2%E7%8A%B6%E8%85%BA%E7%99%8C%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月21日，山姆App盐焗开心果显示“补货中”，售价高达99.9元/袋。去年12月同款仅89元/袋。有消费者直呼一斤开心果价格能买两只鸡，部分乡厨已用其他坚果将其替代。",
+        "summary": "10月21日，国家癌症中心最新数据显示甲状腺癌升至发病第三位，专家表示发病率快速上升主要源于影像检查普及、早期微小癌检出增多，目前我国甲状腺癌5年相对生存率已达92.9%，多数结节为良性，无需过度焦虑。",
         "badge": "热搜",
-        "signal": "7,714,219 热度"
+        "signal": "7,712,011 热度"
       },
       {
         "id": "github-advisory-ghsa-332p-7hrc-92wf",
@@ -232,33 +232,33 @@
         "signal": "CRITICAL · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-40a01666d562060b",
+        "id": "ai-hugging-face-94a5f6526eada9bc",
         "category": "ai",
-        "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
-        "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+        "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+        "url": "https://huggingface.co/blog/nvidia/kumo-relational",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-21T17:35:36.000Z",
+        "publishedAt": "2026-10-21T18:26:30.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250934",
+        "id": "v2ex-1251017",
         "category": "dev",
-        "title": "cc switch 核心功能没了？",
-        "url": "https://www.v2ex.com/t/1250934",
+        "title": "请问执着于 Claude Opus 的重度用户，你们拿到什么结果了吗？",
+        "url": "https://www.v2ex.com/t/1251017",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T06:39:17.000Z",
-        "summary": "今天试了下，替换 auth 会校验是否登录此账号，没登录 auth 会删掉，试了下手动复制 auth.json 还是可行的，单使用 auth.json 设置到 cc switch 切换已经走不通了",
+        "publishedAt": "2026-10-22T09:45:06.000Z",
+        "summary": "赚到钱了吗？或者获得了其他现实价值？",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-item-84fa0eb8dc0bcd07",
+        "id": "cn-item-bfce4f743b06a485",
         "category": "cn",
-        "title": "警惕！这些APP涉诈情况突出 名单公布",
-        "url": "https://www.chinanews.com.cn/fz/2026/10-22/10718991.shtml",
+        "title": "北京市委常委、副市长夏林茂接受审查调查",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-22/10719122.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-22T07:12:31.000Z",
-        "summary": "中新网10月22日电 据“工信微报”微信公众号消息，近期，公安机关通报显示，大量小众APP被不法分子利用实施电信网络诈骗活动(详见附件)，请相关互联网服务提供者严格按照《中华人民共和国反电信网络诈骗法》相关要求，承担风险防控责任，履行合理注意义务，及时采取有效措施进行整改，对于整改不到位、涉诈情况仍然突出的，主管部门将依法依规予以处理。",
+        "publishedAt": "2026-10-22T08:16:23.000Z",
+        "summary": "中新网10月22日电 据中央纪委国家监委网站消息，北京市委常委、副市长夏林茂涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
         "badge": "中新网要闻"
       },
       {
@@ -283,23 +283,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50188948",
+        "id": "hn-50190455",
         "category": "dev",
-        "title": "There isn't an easy exploit for this PHP vulnerability",
-        "url": "https://eliastaylor.com/noexploit/",
+        "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
+        "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T23:13:27.000Z",
+        "publishedAt": "2026-10-22T02:30:52.000Z",
         "badge": "HN",
-        "signal": "468 分 · 248 评论"
+        "signal": "207 分 · 138 评论"
       },
       {
-        "id": "cn-it-8ade2745ebde69ab",
+        "id": "cn-it-53108cc32338ced3",
         "category": "cn",
-        "title": "郭锐官宣智界 RX 下个赛道为上海国际赛车场，曾刷新国产品牌量产 SUV 浙赛最快圈速纪录",
-        "url": "https://www.ithome.com/1/016/481.htm",
+        "title": "消息称特斯拉与三星电机签署 FC-BGA 基板供应协议，投资 1.1 万亿韩元",
+        "url": "https://www.ithome.com/1/016/630.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-22T07:36:10.000Z",
-        "summary": "IT之家 10 月 22 日消息，智界汽车董事长兼首席执行官郭锐今日宣布， 智界 RX 的下一个赛道会是上海国际赛车场 。 郭锐认为，一台车的操控上限有多高，不止于机械层面，还需要深厚的调校功底，在整车层面达成更好的系统合力。根据规划， 智界 RX 也定档 10 月 25 日在上海国际赛车场开启首批车主交付 。 据IT之家此前报道，在今年 9 月 28 日的智界 RX 及鸿蒙智行新品发布会正在进行中，华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东宣布，智界 …",
+        "publishedAt": "2026-10-22T10:09:18.000Z",
+        "summary": "IT之家 10 月 22 日消息，据 TrendForce 今日报道，三星电机已经与特斯拉签署长期倒装芯片球栅阵列（FC-BGA）基板供应协议，并扩大其世宗工厂的专用生产线。 据报道，该协议为期五年， 生产的基板预计将用于特斯拉电动汽车和 Optimus 人形机器人的 AI 芯片 。作为交换，特斯拉将为三星电机产能扩建提供约 1.1 万亿韩元 （IT之家注：现汇率约合 55.49 亿元人民币） 资金。 三星世宗工厂的 FC-BGA 基板生产设施预计将于 2027 年底建成，…",
         "badge": "IT之家"
       },
       {
@@ -323,15 +323,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250921",
+        "id": "v2ex-1251011",
         "category": "dev",
-        "title": "如果在让 ai 做网页的时候指定设计系统，然后手写文案，能否比较有效的降低 ai 味？",
-        "url": "https://www.v2ex.com/t/1250921",
+        "title": "运营了 3 个月的产品，播放量终于破 100w 了。",
+        "url": "https://www.v2ex.com/t/1251011",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T06:18:37.000Z",
-        "summary": "比如 https://www.designsystemhunt.com/ 这里收录的众多设计系统之一 我的想法是，用设计系统的话各种视觉样式都有了一个统一的规范，不会让 ai 自己随意发挥，那么可能效果好一些（？",
+        "publishedAt": "2026-10-22T09:34:28.000Z",
+        "summary": "从 6 月 29 上线到现在，运营了 3 个多月的时间， VirPulse 话题 在抖音的播放量终于破 100w 了。",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-baidu-1f64a5a604737638",
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "九十年前，长征，是踏遍万水千山的英雄壮歌。九十年后，穿越机一镜贯山河，带我们重读这壮阔史诗。漫漫长征路，不灭长征魂。薪火相传，接力奔赴。长征，永远在路上！",
         "badge": "热搜",
-        "signal": "7,619,114 热度"
+        "signal": "7,618,861 热度"
       },
       {
         "id": "cisa-kev-cve-2026-110936",
@@ -355,32 +355,32 @@
         "signal": "已遭利用 · 整改期限 2026-11-03"
       },
       {
-        "id": "ai-hugging-face-5b4e08461387ba3b",
+        "id": "ai-hugging-face-40a01666d562060b",
         "category": "ai",
-        "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
-        "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
+        "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+        "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-21T16:04:43.000Z",
+        "publishedAt": "2026-10-21T17:35:36.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50185869",
+        "id": "hn-50193170",
         "category": "dev",
-        "title": "GitLab critical patch release",
-        "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+        "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
+        "url": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T19:01:12.000Z",
+        "publishedAt": "2026-10-22T09:31:18.000Z",
         "badge": "HN",
-        "signal": "326 分 · 75 评论"
+        "signal": "9 分 · 0 评论"
       },
       {
-        "id": "cn-item-fd504af5bc8c148c",
+        "id": "cn-item-174f3b0f03fbd948",
         "category": "cn",
-        "title": "中国驻沙特大使馆建议中国公民暂勿乘飞机在沙特旅行",
-        "url": "https://www.chinanews.com.cn/hr/2026/10-22/10718971.shtml",
+        "title": "开通八周年 经港珠澳大桥往来的粤港澳旅客逾1.25亿人次",
+        "url": "https://www.chinanews.com.cn/dwq/2026/10-22/10719114.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-22T05:36:48.000Z",
-        "summary": "中新网10月22日电 据中国驻沙特大使馆微信公众号消息，10月22日凌晨，沙特民航总局发布公告称：达曼法赫德国王国际机场于10月21日(星期三)晚间遭袭，目前已造成1死8伤，物质损失尚在评估中。另有官方消息称，一架亚丁航空客机在本次袭击中受损，机上1人受伤。",
+        "publishedAt": "2026-10-22T08:11:17.000Z",
+        "summary": "中新社广东珠海10月22日电 (邓媛雯 黎钊德)珠海边检总站港珠澳大桥边检站22日公布，港珠澳大桥自开通以来，截至今年10月22日零时，经港珠澳大桥珠海公路口岸往来粤港澳三地的旅客数量已超过1.25亿人次，车辆已超过2645万辆次。",
         "badge": "中新网要闻"
       },
       {
@@ -405,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250900",
+        "id": "v2ex-1251008",
         "category": "dev",
-        "title": "这种小程序葵花码直跳链接是怎么做到的？",
-        "url": "https://www.v2ex.com/t/1250900",
+        "title": "昨晚笑 PHP 的, 今天可以笑 Java 了 🤪",
+        "url": "https://www.v2ex.com/t/1251008",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T05:00:58.000Z",
-        "summary": "众所周知，小程序码只有官方 Api 可以生成，但是最近看到一个葵花码，扫码是直跳网页的。 （上面是跳百度，可放心扫码） 通过常见解码方式是无法解码的，要微信扫码才可以。 现在不知道这个东西是如何做出来的。 或者是不是 ai 训练出来的~",
+        "publishedAt": "2026-10-22T09:28:24.000Z",
+        "summary": "今天 Oracle 也发布了一个 CVE 漏洞: https://www.oracle.com/security-alerts/alert-cve-2026-91403.html",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-83d9da11eb51bdba",
+        "id": "cn-it-46a0cf3f5a158dd3",
         "category": "cn",
-        "title": "富士通客户端计算公布 FMV Mouse X 鼠标：双电磁滚轮 + 电磁左右键",
-        "url": "https://www.ithome.com/1/016/480.htm",
+        "title": "苹果限制调整或影响支付、拉起小程序等，微信发布关于 Xcode 27 与 iOS 27 的 OpenSDK 适配提醒",
+        "url": "https://www.ithome.com/1/016/629.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-22T07:32:58.000Z",
-        "summary": "IT之家 10 月 22 日消息，富士通客户端计算 (FCCL) 今日在发布一系列笔电的同时也切入外设市场，在正式带来此前众筹的 FMV Keyboard X 矮磁轴键盘的同时，还公布了 FMV Mouse X01MB 鼠标。 FMV Mouse X 的最大特色莫过于 其左右按键、主副滚轮均采用电磁感应式触发原理 ，无需物理接触即能实现清脆点击或高速滚动。 其采用人体工学设计，针对日本人的平均手型进行优化，分辨率可达 8000 cpi，质量约 70g，续航 30~70 天，…",
+        "publishedAt": "2026-10-22T10:08:57.000Z",
+        "summary": "IT之家 10 月 22 日消息，微信开发者官方今日发布了关于 Xcode 27 与 iOS 27 的微信 OpenSDK 适配提醒。 据微信开发者官方介绍， 苹果调整了 scheme 查询白名单限制 ：使用 Xcode 27 编包且运行在 iOS 27 上时，LSApplicationQueriesSchemes 的有效查询项数从 50 项减少到 25 项， 仅前 25 项生效 。 如果微信 OpenSDK 所需的 scheme 排在第 25 项之后，对应查询会失败，可能…",
         "badge": "IT之家"
       },
       {
@@ -446,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50181114",
+        "id": "hn-50188228",
         "category": "dev",
-        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+        "title": "Security Disclosure",
+        "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T14:00:26.000Z",
+        "publishedAt": "2026-10-21T21:58:03.000Z",
         "badge": "HN",
-        "signal": "488 分 · 167 评论"
+        "signal": "467 分 · 272 评论"
       },
       {
-        "id": "cn-baidu-461c724c59d4cf01",
+        "id": "cn-baidu-5c37d66e3e163341",
         "category": "cn",
-        "title": "演员白鹿名下公司均已注销",
-        "url": "https://www.baidu.com/s?wd=%E6%BC%94%E5%91%98%E7%99%BD%E9%B9%BF%E5%90%8D%E4%B8%8B%E5%85%AC%E5%8F%B8%E5%9D%87%E5%B7%B2%E6%B3%A8%E9%94%80&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "北京市副市长夏林茂被查",
+        "url": "https://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC%E5%B8%82%E5%89%AF%E5%B8%82%E9%95%BF%E5%A4%8F%E6%9E%97%E8%8C%82%E8%A2%AB%E6%9F%A5&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，演员白鹿名下3家关联公司均已注销，无存续公司。此前10月19日，白鹿工作室宣布取消曼谷见面会，并承担官方渠道购票粉丝的退改实际损失。近日网传白鹿与前公司合约到期后或将重组新团队。第三方数据显示，白鹿近30天掉粉超144万。",
+        "summary": "北京市委常委、副市长夏林茂涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。",
         "badge": "热搜",
-        "signal": "7,522,200 热度"
+        "signal": "7,522,726 热度"
       },
       {
         "id": "github-advisory-ghsa-gg2r-wvfm-q9rx",
@@ -477,24 +477,24 @@
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-c2ed162a157709f5",
+        "id": "ai-hugging-face-5b4e08461387ba3b",
         "category": "ai",
-        "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+        "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+        "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-21T14:58:18.000Z",
+        "publishedAt": "2026-10-21T16:04:43.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250885",
+        "id": "v2ex-1251002",
         "category": "dev",
-        "title": "PingCap TiDB 生产环境 10.6 TB 数据泄露",
-        "url": "https://www.v2ex.com/t/1250885",
+        "title": "Java 重大漏洞 CVE-2026-91403",
+        "url": "https://www.v2ex.com/t/1251002",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T03:59:31.000Z",
-        "summary": "原文: https://fulcrumsec.vg/pingcap/ 摘要: 累计外泄数据：10.6 TB 文件数量：4,901,203 个 生产控制平面导出：连续 88 次（每 6 小时导出一次），全程未被检测/察觉 GCP 存储桶：约 50 个 BigQuery 数据仓库：单仓数据量达 5.338 亿行 租户组织：180,046 个 独立电子邮箱：403,262 个 客户明文 API 密钥：115,308 个（其中 42,612 个处于有效/活跃状态） 客户 SQL 语…",
+        "publishedAt": "2026-10-22T09:15:05.000Z",
+        "summary": "https://www.cve.org/CVERecord?id=CVE-2026-91403 https://www.oracle.com/security-alerts/alert-cve-2026-91403.html 研究了一下, 并不是只有文中提到的几个特定版本才有影响, 而是只测了这些版本发现有问题 换句话说基本所有的 JDK 都有漏洞风险 目前修复漏洞的新版本似乎都还没发布, 只能按公告的方法临时缓解 # 1. 从 OpenJDK 公告页下载对应平台的 blo…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "11 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 37503,
+        "stars": 37848,
         "starsToday": 2012
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/vllm-project/vllm",
         "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
         "language": "Python",
-        "stars": 95028,
+        "stars": 95091,
         "starsToday": 441
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 101823,
+        "stars": 102037,
         "starsToday": 1541
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/headroomlabs-ai/headroom",
         "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "language": "Python",
-        "stars": 77416,
+        "stars": 77479,
         "starsToday": 474
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 172208,
+        "stars": 172452,
         "starsToday": 2079
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/Comfy-Org/ComfyUI",
         "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "language": "Python",
-        "stars": 141748,
+        "stars": 141834,
         "starsToday": 939
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/supabase/supabase",
         "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
         "language": "TypeScript",
-        "stars": 113181,
+        "stars": 113241,
         "starsToday": 504
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/twentyhq/twenty",
         "description": "The open alternative to Salesforce, designed for AI.",
         "language": "TypeScript",
-        "stars": 59403,
+        "stars": 59466,
         "starsToday": 112
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/shiyu-coder/Kronos",
         "description": "Kronos: A Foundation Model for the Language of Financial Markets",
         "language": "Python",
-        "stars": 42997,
+        "stars": 43050,
         "starsToday": 575
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/strelov1/freehire",
         "description": "freehire — the open-source search engine for job seekers",
         "language": "Go",
-        "stars": 2574,
+        "stars": 2673,
         "starsToday": 360
       }
     ],
-    "updatedAt": "2026-10-22T07:38:57.770Z"
+    "updatedAt": "2026-10-22T10:12:26.838Z"
   }
 }
