@@ -1,7 +1,9 @@
-const CACHE_VERSION = 'build-414f15439ea7251d4bd6'
+const CACHE_VERSION = 'build-a73dda043d68d95b99b9'
+const APP_VERSION = 'app-b73541403c1be1e29b1a'
 const CACHE_PREFIX = 'baize-nav-'
-const SHELL_CACHE = `${CACHE_PREFIX}shell-${CACHE_VERSION}`
-const RUNTIME_CACHE = `${CACHE_PREFIX}runtime-${CACHE_VERSION}`
+// Data-only builds share the same UI shell, avoiding hourly waiting-cache copies.
+const SHELL_CACHE = `${CACHE_PREFIX}shell-${APP_VERSION}`
+const RUNTIME_CACHE = `${CACHE_PREFIX}runtime-${APP_VERSION}`
 
 const APP_SCOPE = '/nav/'
 const INDEX_URL = `${APP_SCOPE}index.html`
@@ -36,7 +38,6 @@ async function cacheFile(cache, url) {
 }
 
 async function installShell() {
-  const cache = await caches.open(SHELL_CACHE)
   const indexResponse = await fetch(INDEX_URL, { cache: 'reload' })
 
   if (!canCache(indexResponse)) {
@@ -44,11 +45,6 @@ async function installShell() {
   }
 
   const indexMarkup = await indexResponse.clone().text()
-  await Promise.all([
-    cache.put(INDEX_URL, indexResponse.clone()),
-    cache.put(APP_SCOPE, indexResponse.clone()),
-  ])
-
   const discoveredAssets = Array.from(
     indexMarkup.matchAll(/(?:src|href)=["']([^"']+)["']/g),
     (match) => match[1],
@@ -61,9 +57,24 @@ async function installShell() {
   const manifestResponse = await fetch(`${APP_SCOPE}offline-assets.json`, { cache: 'reload' })
   if (!manifestResponse.ok) throw new Error('Offline asset manifest is unavailable')
   const manifest = await manifestResponse.json()
-  if (manifest.version !== 1 || !Array.isArray(manifest.assets) || manifest.assets.length > 500) throw new Error('Invalid offline asset manifest')
+  if (manifest.version !== 1 || manifest.appVersion !== APP_VERSION || !Array.isArray(manifest.assets) || manifest.assets.length > 500) throw new Error('Invalid or mismatched offline application manifest')
   for (const asset of manifest.assets) {
-    if (typeof asset !== 'string' || !asset.startsWith(`${APP_SCOPE}assets/`) || asset.includes('..') || !/\.(js|css|woff2?)$/.test(asset)) throw new Error('Invalid offline asset path')
+    if (typeof asset !== 'string' || !asset.startsWith(`${APP_SCOPE}assets/`) || asset.includes('..') || /[%?#\\\s]/.test(asset) || !/\.(js|css|woff2?)$/.test(asset)) throw new Error('Invalid offline asset path')
+  }
+  const assetSet = new Set(manifest.assets)
+  for (const asset of discoveredAssets) {
+    const url = new URL(asset, self.location.origin)
+    if (url.pathname.startsWith(`${APP_SCOPE}assets/`) && /\.(?:js|css)$/.test(url.pathname) && !assetSet.has(url.pathname)) throw new Error('Application HTML and offline assets are from different versions')
+  }
+
+  // A data-only install shares the active UI cache: validate before any writes.
+  // If a deployment changes halfway through these reads, retain the active shell.
+  const cache = await caches.open(SHELL_CACHE)
+  await Promise.all([
+    cache.put(INDEX_URL, indexResponse.clone()),
+    cache.put(APP_SCOPE, indexResponse.clone()),
+  ])
+  for (const asset of manifest.assets) {
     const response = await fetch(asset, { cache: 'reload' })
     if (!canCache(response)) throw new Error('Unable to cache application module')
     await cache.put(asset, response)
@@ -82,6 +93,7 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('message', (event) => {
   if (event.data?.type === 'ACTIVATE_UPDATE') event.waitUntil(self.skipWaiting())
+  if (event.data?.type === 'GET_BUILD_ID') event.ports?.[0]?.postMessage({ type: 'BUILD_ID', buildId: CACHE_VERSION, appVersion: typeof APP_VERSION === 'string' ? APP_VERSION : null })
 })
 
 self.addEventListener('activate', (event) => {
