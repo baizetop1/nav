@@ -4,9 +4,13 @@ import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 const versionPattern = /^const CACHE_VERSION = ['"][^'"\r\n]+['"];?\s*$/m;
+const appVersionPattern = /^const APP_VERSION = ['"][^'"\r\n]+['"];?\s*$/m;
+const DATA_REPORT_FILES = new Set(['hot-feed.json', 'rss-feed.json', 'link-health.json']);
 function workerTemplate(source) {
   if (!versionPattern.test(source)) throw new Error('Service worker CACHE_VERSION marker is missing.');
-  return source.replace(versionPattern, "const CACHE_VERSION = '__BUILD_ID__'");
+  if (!appVersionPattern.test(source)) throw new Error('Service worker APP_VERSION marker is missing.');
+  return source.replace(versionPattern, "const CACHE_VERSION = '__BUILD_ID__'")
+    .replace(appVersionPattern, "const APP_VERSION = '__APP_ID__'");
 }
 function buildVersion(files, workerSource) {
   const hash = createHash('sha256');
@@ -16,23 +20,40 @@ function buildVersion(files, workerSource) {
   }
   return `build-${hash.digest('hex').slice(0, 20)}`;
 }
-function stampWorker(source, version) {
-  return workerTemplate(source).replace("'__BUILD_ID__'", `'${version}'`);
+function applicationVersion(files, workerSource) {
+  // Reports still invalidate offline data caches, but do not require a UI refresh.
+  return buildVersion(files.filter(([name]) => !DATA_REPORT_FILES.has(name)), workerSource).replace(/^build-/, 'app-');
+}
+function stampWorker(source, version, appVersion) {
+  return workerTemplate(source).replace("'__BUILD_ID__'", `'${version}'`)
+    .replace("'__APP_ID__'", `'${appVersion}'`);
 }
 function selfTest() {
-  const worker = "const CACHE_VERSION = 'v11-personal-workflows'\nconst enabled = true\n";
+  const worker = "const CACHE_VERSION = 'v11-personal-workflows'\nconst APP_VERSION = 'app-development'\nconst enabled = true\n";
   const files = [['index.html', 'index'], ['assets/app.js', 'code'], ['assets/app.css', 'css'], ['rss-feed.json', 'rss'], ['link-health.json', 'health'], ['hot-feed.json', 'hot'], ['manifest.webmanifest', 'manifest']];
   const version = buildVersion(files, worker);
+  const appVersion = applicationVersion(files, worker);
   assert.equal(buildVersion([...files].reverse(), worker), version, 'file traversal order must not affect version');
   for (const [name] of files) assert.notEqual(buildVersion(files.map(([key, value]) => [key, key === name ? value + 'changed' : value]), worker), version, `${name} changes must create a new worker`);
   assert.notEqual(buildVersion([...files, ['assets/lazy.js', 'new lazy chunk']], worker), version);
   assert.notEqual(buildVersion(files, worker.replace('true', 'false')), version, 'worker behavior changes must update the cache version');
-  const stamped = stampWorker(worker, version);
+  for (const [name] of files) {
+    const nextFiles = files.map(([key, value]) => [key, key === name ? value + 'changed' : value]);
+    if (DATA_REPORT_FILES.has(name)) assert.equal(applicationVersion(nextFiles, worker), appVersion, `${name} alone must not prompt for a UI refresh`);
+    else assert.notEqual(applicationVersion(nextFiles, worker), appVersion, `${name} UI changes must remain visible`);
+  }
+  assert.notEqual(applicationVersion([...files, ['assets/lazy.js', 'new code']], worker), appVersion);
+  assert.notEqual(applicationVersion(files, worker.replace('true', 'false')), appVersion);
+  const stamped = stampWorker(worker, version, appVersion);
   assert.ok(stamped.includes(`const CACHE_VERSION = '${version}'`));
+  assert.ok(stamped.includes(`const APP_VERSION = '${appVersion}'`));
   assert.equal(buildVersion(files, stamped), version, 'rebuilding the manifest is idempotent');
-  assert.equal(stampWorker(stamped, version), stamped);
-  assert.throws(() => stampWorker('no version marker', version), /marker/);
-  console.log('Offline manifest: build content, data-only updates and repeat-build versions passed.');
+  assert.equal(applicationVersion(files, stamped), appVersion);
+  assert.equal(applicationVersion([...files].reverse(), worker), appVersion);
+  assert.equal(stampWorker(stamped, version, appVersion), stamped);
+  assert.throws(() => stampWorker('no version marker', version, appVersion), /marker/);
+  assert.throws(() => stampWorker("const CACHE_VERSION = 'v1'\n", version, appVersion), /APP_VERSION/);
+  console.log('Offline manifest: full cache version, separate UI version, data-only updates and repeat builds passed.');
 }
 
 if (process.argv.includes('--self-test')) selfTest();
@@ -48,7 +69,8 @@ else {
   const files = await Promise.all([...rootFiles, ...assetFiles].map(async name => [name, await readFile(resolve(root, name))]));
   const workerSource = await readFile(resolve(root, 'sw.js'), 'utf8');
   const version = buildVersion(files, workerSource);
-  await writeFile(resolve(root, 'offline-assets.json'), JSON.stringify({ version: 1, buildId: version, assets: assets.map(name => `/nav/${name}`) }, null, 2) + '\n');
-  await writeFile(resolve(root, 'sw.js'), stampWorker(workerSource, version));
-  console.log(`Offline manifest: ${assets.length} application assets, ${version}.`);
+  const appVersion = applicationVersion(files, workerSource);
+  await writeFile(resolve(root, 'offline-assets.json'), JSON.stringify({ version: 1, buildId: version, appVersion, assets: assets.map(name => `/nav/${name}`) }, null, 2) + '\n');
+  await writeFile(resolve(root, 'sw.js'), stampWorker(workerSource, version, appVersion));
+  console.log(`Offline manifest: ${assets.length} application assets, ${version}, UI ${appVersion}.`);
 }

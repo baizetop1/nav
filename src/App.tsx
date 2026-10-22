@@ -24,7 +24,9 @@ const TextTransferReceiveModal = lazy(() => import('./components/TempTextTransfe
 import { TemporaryVisitsPanel } from './components/TemporaryVisitsPanel';
 import { useQuickTranslation } from './hooks/useQuickTranslation';
 import { defaultNavigationData, searchEngines, siteConfig } from './data';
-import { CLICK_STATS_KEY, getTodayClicks, loadClickStats, localDateKey, recordSiteVisit, type ClickStatsStore } from './lib/activityStats';
+import { CLICK_STATS_KEY, loadClickStats, localDateKey, recordSiteVisit, type ClickStatsStore } from './lib/activityStats';
+import { VisitRankingPanel } from './components/VisitRankingPanel';
+import { initialWorkPanelOpen, WORK_PANEL_EXPANDED_KEY } from './lib/panelPreferences';
 import { checkLinksFromBrowser, loadLinkHealthReport, type LinkHealthEntry } from './lib/linkHealth';
 import { parseNavigationData } from './lib/navigationData.ts';
 import { getTemporaryVisitSummaries, loadTemporaryVisits, normalizeTemporaryUrl, pruneTemporaryVisits, recordTemporaryVisit, removeTemporaryVisit, TEMPORARY_VISITS_KEY, temporaryUrlKey, type TemporaryVisitsStore } from './lib/temporaryVisits';
@@ -48,6 +50,7 @@ import { parseIncomingShare } from './lib/shareCapture';
 import { loadWorkSession, type WorkPhase } from './lib/workSession';
 import { markNavigationPublished } from './lib/pendingSync';
 import { activateAppUpdate } from './services/pwaUpdate';
+import { APP_UPDATE_EVENT, dismissAppUpdate, getAppUpdateSnapshot } from './services/pwaUpdateNotice';
 import { publishRssConfiguration } from './services/rssPublish';
 const RssPanel = lazy(() => import('./components/RssPanel').then(module => ({ default: module.RssPanel })));
 const ShareCapturePanel = lazy(() => import('./components/ShareCapturePanel').then(module => ({ default: module.ShareCapturePanel })));
@@ -104,7 +107,9 @@ function App() {
   const [captureOpen, setCaptureOpen] = useState(() => Boolean(incomingShare));
   const [captureMounted, setCaptureMounted] = useState(() => Boolean(incomingShare));
   const [initialWork] = useState(loadWorkSession);
-  const [workOpen, setWorkOpen] = useState(() => Boolean(initialWork.current || initialWork.notice || initialWork.nextPhase !== 'focus'));
+  const [workOpen, setWorkOpen] = useState(() => initialWorkPanelOpen(Boolean(initialWork.current), safeGetLocalStorageItem(WORK_PANEL_EXPANDED_KEY, { label: '工作会话展开偏好', important: false })));
+  const openWorkPanel = () => { safeSetLocalStorageItem(WORK_PANEL_EXPANDED_KEY, 'true', { label: '工作会话展开偏好', important: false }); setWorkOpen(true); };
+  const closeWorkPanel = () => { safeSetLocalStorageItem(WORK_PANEL_EXPANDED_KEY, 'false', { label: '工作会话展开偏好', important: false }); setWorkOpen(false); };
   const [workActive, setWorkActive] = useState(() => Boolean(initialWork.current));
   const [workPhase, setWorkPhase] = useState<WorkPhase>(() => initialWork.current?.phase || initialWork.nextPhase);
   const [workSiteIds, setWorkSiteIds] = useState<string[]>(() => initialWork.current?.siteIds || []);
@@ -173,9 +178,10 @@ function App() {
   const [currentDate, setCurrentDate] = useState(localDateKey);
   const [qrSite, setQrSite] = useState<Site | null>(null);
   const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
-  const [appUpdateReady, setAppUpdateReady] = useState(() => {
-    try { return sessionStorage.getItem('baize_app_update_ready') === 'true'; } catch { return false; }
-  });
+  const [appUpdateReady, setAppUpdateReady] = useState(() => getAppUpdateSnapshot().ready);
+  const [appUpdateBusy, setAppUpdateBusy] = useState(false);
+  const [appUpdateError, setAppUpdateError] = useState('');
+  const appUpdateVisible = appUpdateReady || Boolean(appUpdateError);
   const isWorkMode = sceneMode === 'work' || workActive;
   const [storagePersistence, setStoragePersistence] = useState(getStoragePersistenceSnapshot);
   const [draftRecoveryNotice, setDraftRecoveryNotice] = useState(() => navigationDraftRecoveryAvailable);
@@ -315,9 +321,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const handleAppUpdate = () => setAppUpdateReady(true);
-    window.addEventListener('baize:app-update-ready', handleAppUpdate);
-    return () => window.removeEventListener('baize:app-update-ready', handleAppUpdate);
+    const handleAppUpdate = () => { const next = getAppUpdateSnapshot(); setAppUpdateReady(next.ready); if (next.ready) setAppUpdateError(''); };
+    handleAppUpdate();
+    window.addEventListener(APP_UPDATE_EVENT, handleAppUpdate);
+    return () => window.removeEventListener(APP_UPDATE_EVENT, handleAppUpdate);
   }, []);
 
   useEffect(() => {
@@ -376,22 +383,7 @@ function App() {
 
   const categories = useMemo(() => [...data.categories].sort((a, b) => a.order - b.order), [data.categories]);
   const linkHealth = useMemo(() => Object.fromEntries(linkHealthEntries.map(entry => [entry.siteId, entry])), [linkHealthEntries]);
-  const todayClicks = useMemo(() => clickStats.days[currentDate]?.clicks || getTodayClicks(clickStats), [clickStats, currentDate]);
   const layoutOrder = useMemo(() => new Map(data.layout.map(item => [item.siteId, item.order])), [data.layout]);
-  const commonCategoryId = useMemo(() => categories.find(category => category.id === 'common' || category.name === '常用网站')?.id, [categories]);
-  const popularSites = useMemo(() => {
-    const ranked = [...data.sites].sort((a, b) => {
-      const aStats = todayClicks[a.id];
-      const bStats = todayClicks[b.id];
-      return (bStats?.count || 0) - (aStats?.count || 0) || (bStats?.lastClicked || 0) - (aStats?.lastClicked || 0);
-    }).filter(site => (todayClicks[site.id]?.count || 0) > 0);
-    const fallback = data.sites
-      .filter(site => site.favorite || site.categoryId === commonCategoryId)
-      .sort((a, b) => Number(Boolean(b.favorite)) - Number(Boolean(a.favorite)) || (layoutOrder.get(a.id) ?? 9999) - (layoutOrder.get(b.id) ?? 9999));
-    const result = new Map<string, (typeof data.sites)[number]>();
-    [...ranked, ...fallback, ...data.sites].forEach(site => { if (result.size < 8) result.set(site.id, site); });
-    return [...result.values()];
-  }, [commonCategoryId, data.sites, layoutOrder, todayClicks]);
   const temporaryVisitSummaries = useMemo(
     () => getTemporaryVisitSummaries(temporaryVisits, data.sites.map(site => site.url), new Date()),
     [currentDate, data.sites, temporaryVisits],
@@ -786,7 +778,7 @@ function App() {
     { id: 'ai-news', title: 'AI 资讯与日报', description: workActive ? '工作会话期间暂不展示，结束后可阅读' : '按需阅读 AIHOT 精选、热点和日报；本机收藏与已读', keywords: ['AIHOT', 'AI', '资讯', '新闻', '日报', '热点', '模型'], icon: 'study', run: () => { if (!workActive) { setAiNewsOpen(true); window.requestAnimationFrame(() => { const panel = document.getElementById('ai-news'); panel?.focus({ preventScroll: true }); panel?.scrollIntoView({ block: 'start', behavior: 'smooth' }); }); } } },
     { id: 'organize', title: '智能整理中心', description: '查重复、补全资料、批量调整分类与标签', keywords: ['整理', '去重', 'organize'], icon: 'settings', run: () => openAdmin('organize') },
     { id: 'web-capture', title: '收集网页', description: '保存网址、备注或安装一键收集书签', keywords: ['收集', '分享', 'capture'], icon: 'add', run: openWebCapture },
-    { id: 'work-session', title: '工作会话', description: '专注计时、工作网站组合与小结', keywords: ['工作', '专注', '番茄', 'focus'], icon: 'work', run: () => setWorkOpen(true) },
+    { id: 'work-session', title: '工作会话', description: '专注计时、工作网站组合与小结', keywords: ['工作', '专注', '番茄', 'focus'], icon: 'work', run: openWorkPanel },
     { id: 'shuihu', title: '打开白泽水浒', description: '两卷江湖 · 梁山存档匣 0.3 · 20个本机位置', keywords: ['game', '游戏', '水浒', '梁山', '寨主', '林冲', '鲁智深'], icon: 'study', run: () => { window.open(`${import.meta.env.BASE_URL}game/`, '_blank', 'noopener,noreferrer'); } },
     { id: 'rest', title: '休息一下', description: '在多幅动态风景间轮播，回来继续学习', keywords: ['rest', 'break', '休息', '放松', '动画', '泛舟', '轮播', '鹈鹕', '骑行'], icon: 'relax', run: openRest },
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
@@ -910,7 +902,7 @@ function App() {
               { id: 'graph', label: '知识图谱', icon: <Network size={17} />, active: graphOpen, run: () => setGraphOpen(value => !value) },
               { id: 'capture', label: '收集网页', icon: <Plus size={17} />, run: openWebCapture },
               { id: 'rss', label: 'RSS 订阅', icon: <FileText size={17} />, active: rssOpen, run: () => setRssOpen(value => !value) },
-              { id: 'work-session', label: workActive ? workPhase === 'focus' ? '正在专注' : '正在休息' : '工作会话', icon: <Check size={17} />, active: workOpen, run: () => setWorkOpen(value => workActive || !value) },
+              { id: 'work-session', label: workActive ? workPhase === 'focus' ? '正在专注' : '正在休息' : '工作会话', icon: <Check size={17} />, active: workOpen, run: () => { if (workActive || !workOpen) openWorkPanel(); else closeWorkPanel(); } },
               { id: 'hot-feed', label: '情报', active: hotFeedOpen && !workActive, disabled: workActive, run: () => setHotFeedOpen(value => !value) },
               { id: 'ai-news', label: 'AI 资讯', icon: <BrainCircuit size={17} />, active: aiNewsOpen && !workActive, disabled: workActive, run: () => setAiNewsOpen(value => !value) },
               { id: 'temporary-visits', label: '临时访问', active: temporaryVisitsOpen, run: () => setTemporaryVisitsOpen(value => !value) },
@@ -918,7 +910,7 @@ function App() {
             ]} />
             {rssOpen && <FeatureBoundary name="RSS 订阅" onClose={() => setRssOpen(false)}><Suspense fallback={<p>正在载入 RSS…</p>}><RssPanel onClose={() => setRssOpen(false)} onCapture={createLocalInboxItem} repositoryLabel={siteConfig.repository.owner + '/' + siteConfig.repository.repo} onPublishSources={(sources, token, baseline) => publishRssConfiguration(siteConfig.repository, token, sources, baseline)} /></Suspense></FeatureBoundary>}
             <Suspense fallback={null}><PendingSyncPanel data={data} bundled={defaultNavigationData} items={inboxItems} syncMeta={inboxSyncMeta} onPublish={() => openAdmin('content')} onPrivateSync={openInbox} onOpenBlog={openBlog} onOpenTechOs={openTechOs} /></Suspense>
-            {workOpen && <div className="basis-full"><FeatureBoundary name="工作会话" onClose={() => setWorkOpen(false)}><Suspense fallback={<p>正在加载工作会话…</p>}><WorkSessionPanel sites={data.sites} onActiveChange={setWorkActive} onPhaseChange={setWorkPhase} onSelectionChange={setWorkSiteIds} onSiteVisit={recordVisit} onClose={() => setWorkOpen(false)} /></Suspense></FeatureBoundary></div>}
+            {workOpen && <div className="basis-full"><FeatureBoundary name="工作会话" onClose={closeWorkPanel}><Suspense fallback={<p>正在加载工作会话…</p>}><WorkSessionPanel sites={data.sites} onActiveChange={setWorkActive} onPhaseChange={setWorkPhase} onSelectionChange={setWorkSiteIds} onSiteVisit={recordVisit} onClose={closeWorkPanel} /></Suspense></FeatureBoundary></div>}
             {readingOpen && <FeatureBoundary name="阅读中心" onClose={() => setReadingOpen(false)}><Suspense fallback={null}><ReadingPanel nodes={textNodes} onClose={() => setReadingOpen(false)} onSync={() => setIsInboxOpen(true)} /></Suspense></FeatureBoundary>}
             {graphOpen && <FeatureBoundary name="知识图谱" onClose={() => setGraphOpen(false)}><Suspense fallback={<p>正在加载图谱…</p>}><TextGraphPanel index={graphIndex} onClose={() => setGraphOpen(false)} /></Suspense></FeatureBoundary>}
             {!workActive && <HotFeedPanel reportUrl={`${import.meta.env.BASE_URL}hot-feed.json`} open={hotFeedOpen} onOpenChange={setHotFeedOpen} compact={isWorkMode} />}
@@ -932,13 +924,12 @@ function App() {
             />
             {isTranslatorOpen && <FeatureBoundary name="快捷翻译" onClose={() => setIsTranslatorOpen(false)}><Suspense fallback={<p>正在加载翻译…</p>}><QuickTranslationPanel focusRequest={translatorFocusRequest} {...translator} onClose={() => { safeSetLocalStorageItem(TRANSLATOR_COLLAPSED_KEY, "true", sharedStorageOptions("翻译面板偏好", false)); setIsTranslatorOpen(false); }} /></Suspense></FeatureBoundary>}
           </div>
+          {!search.trim() && !workActive && <VisitRankingPanel sites={data.sites} stats={clickStats} now={new Date(`${currentDate}T12:00:00`)} onVisit={recordVisit} />}
           {categories.map(category => {
             const categorySites = data.sites
               .filter(site => site.categoryId === category.id && visibleSiteIds.has(site.id))
               .sort((a, b) => (layoutOrder.get(a.id) ?? 9999) - (layoutOrder.get(b.id) ?? 9999));
-            const sites = category.id === commonCategoryId && !search.trim()
-              ? popularSites.filter(site => visibleSiteIds.has(site.id))
-              : categorySites;
+            const sites = categorySites;
             const occupiedCells = new Set<string>();
             const safePositionedSites = new Set<string>();
             for (const site of sites) {
@@ -972,7 +963,7 @@ function App() {
                     '--grid-h': layout?.height || 1,
                   } as CSSProperties;
                   const health = linkHealth[site.id]?.url === site.url ? linkHealth[site.id] : undefined;
-                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} onVisit={recordVisit} onShowQr={setQrSite} dailyVisits={category.id === commonCategoryId ? todayClicks[site.id]?.count || 0 : 0} health={health} /></div>;
+                  return <div key={site.id} className="grid-site min-w-0" data-positioned={positioned} style={style}><Card site={site} onVisit={recordVisit} onShowQr={setQrSite} health={health} /></div>;
                 })}</div>
               </section>
             );
@@ -1029,7 +1020,7 @@ function App() {
       {isCommandPaletteOpen && <FeatureBoundary name="命令面板" onClose={() => setIsCommandPaletteOpen(false)}><Suspense fallback={null}><CommandPalette open sites={data.sites} categories={categories} textNodes={textNodes} actions={commandActions} inboxItems={inboxItems} temporaryVisits={temporaryVisitSummaries} translationHistory={translationHistory} onOpenInboxItem={id => { setFocusedInboxId(id); openInbox(); }} onUseTranslation={item => { setTranslationText(item.sourceText); setTranslatedText(item.translatedText); setSourceLanguage(item.sourceLanguage); setTargetLanguage(item.targetLanguage); setTranslationState({ loading: false, error: '' }); openTranslator(); }} onTemporaryVisit={visitTemporaryUrl} onOpenTechOs={id => { setFocusedTechOsId(id); openTechOs(); }} onVisit={recordVisit} onClose={() => setIsCommandPaletteOpen(false)} /></Suspense></FeatureBoundary>}
       {storagePersistence.issues.length > 0 && <aside
         className="fixed inset-x-4 z-[110] mx-auto flex max-w-2xl flex-wrap items-center gap-2 rounded-2xl border border-[#a85d50]/30 bg-[#fff7ee]/96 p-3 shadow-2xl backdrop-blur-xl dark:border-[#d58a78]/25 dark:bg-[#2a1c1a]/96"
-        style={{ bottom: appUpdateReady ? '10.5rem' : '5rem' }}
+        style={{ bottom: appUpdateVisible ? '10.5rem' : '5rem' }}
         role="alert"
         aria-live="assertive"
       >
@@ -1040,7 +1031,7 @@ function App() {
       </aside>}
       {draftRecoveryNotice && <aside
         className="fixed inset-x-4 z-[109] mx-auto flex max-w-2xl flex-wrap items-center gap-2 rounded-2xl border border-[#c9a96b]/35 bg-[#f8f2df]/96 p-3 shadow-2xl backdrop-blur-xl dark:border-[#c9a96b]/25 dark:bg-[#292719]/96"
-        style={{ bottom: storagePersistence.issues.length > 0 ? (appUpdateReady ? '17rem' : '11.5rem') : (appUpdateReady ? '10.5rem' : '5rem') }}
+        style={{ bottom: storagePersistence.issues.length > 0 ? (appUpdateVisible ? '17rem' : '11.5rem') : (appUpdateVisible ? '10.5rem' : '5rem') }}
         role="status" aria-live="polite"
       >
         <FileText size={18} className="shrink-0 text-[#886d32] dark:text-[#dfc68e]" />
@@ -1048,7 +1039,7 @@ function App() {
         <button type="button" className="baize-button-primary shrink-0 px-3 py-1.5 text-xs" onClick={downloadRecoveredNavigationDraft}><Download size={14} />下载原草稿</button>
         <button type="button" className="baize-icon-button shrink-0 p-1.5" aria-label="关闭草稿恢复提示" onClick={() => setDraftRecoveryNotice(false)}><X size={15} /></button>
       </aside>}
-      {appUpdateReady && <aside className="fixed inset-x-4 bottom-20 z-[100] mx-auto flex max-w-md items-center gap-3 rounded-2xl border border-[#5f8f84]/25 bg-[#f4f1e8]/96 p-3 shadow-2xl backdrop-blur-xl dark:border-[#c9a96b]/20 dark:bg-[#102c33]/96" role="status" aria-live="polite"><RefreshCw size={18} className="shrink-0 text-[#356b66] dark:text-[#d2b775]" /><p className="min-w-0 flex-1 text-xs leading-5 text-[#456b68] dark:text-[#d9ddd6]">新版本已准备好。请先保存正在编辑的表单，再更新页面。</p><button type="button" className="baize-button-primary shrink-0 px-3 py-1.5 text-xs" disabled={Boolean(importantStorageIssue)} onClick={() => { try { sessionStorage.removeItem('baize_app_update_ready'); } catch { /* Update can proceed without session storage. */ } void activateAppUpdate(); }}>保存后更新</button><button type="button" className="baize-icon-button shrink-0 p-1.5" aria-label="稍后刷新" onClick={() => { try { sessionStorage.removeItem('baize_app_update_ready'); } catch { /* Dismiss in memory. */ } setAppUpdateReady(false); }}><X size={16} /></button></aside>}
+      {appUpdateVisible && <aside className="fixed inset-x-4 bottom-20 z-[100] mx-auto flex max-w-md items-center gap-3 rounded-2xl border border-[#5f8f84]/25 bg-[#f4f1e8]/96 p-3 shadow-2xl backdrop-blur-xl dark:border-[#c9a96b]/20 dark:bg-[#102c33]/96" role="status" aria-live="polite"><RefreshCw size={18} className="shrink-0 text-[#356b66] dark:text-[#d2b775]" /><p role={appUpdateError ? 'alert' : undefined} className="min-w-0 flex-1 text-xs leading-5 text-[#456b68] dark:text-[#d9ddd6]">{appUpdateError || '新版本已准备好。请先保存正在编辑的表单，再更新页面。'}</p><button type="button" className="baize-button-primary shrink-0 px-3 py-1.5 text-xs" disabled={Boolean(importantStorageIssue) || appUpdateBusy} onClick={async () => { setAppUpdateBusy(true); setAppUpdateError(''); try { await activateAppUpdate(); } catch (error) { setAppUpdateError(error instanceof Error ? error.message : '页面更新失败，请稍后重试。'); setAppUpdateBusy(false); } }}>{appUpdateBusy ? '正在更新…' : '保存后更新'}</button><button type="button" disabled={appUpdateBusy} className="baize-icon-button shrink-0 p-1.5" aria-label="稍后刷新" onClick={() => { dismissAppUpdate(); setAppUpdateReady(false); setAppUpdateError(''); }}><X size={16} /></button></aside>}
       <RestOverlay open={restOpen} onClose={closeRest} />
     </div>
   );

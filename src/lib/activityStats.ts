@@ -1,3 +1,5 @@
+import type { Site } from '../types/navigation';
+
 export const CLICK_STATS_KEY = 'nav_click_stats_v2';
 export const LEGACY_CLICK_STATS_KEY = 'nav_daily_click_stats';
 export const CLICK_STATS_VERSION = 2 as const;
@@ -116,4 +118,44 @@ export function recentDateKeys(days: number, now = new Date()): string[] {
     date.setDate(date.getDate() - (days - index - 1));
     return localDateKey(date);
   });
+}
+
+export type VisitRankingPeriod = 'day' | 'month';
+
+export interface VisitRankingRow {
+  site: Site;
+  count: number;
+  todayCount: number;
+  monthCount: number;
+  lastClicked: number;
+}
+
+/** A read-only view over this device's retained clicks, never a replacement for navigation. */
+export function getVisitRanking(store: ClickStatsStore, sites: readonly Site[], period: VisitRankingPeriod, now = new Date()): VisitRankingRow[] {
+  if (!Number.isFinite(now.getTime()) || (period !== 'day' && period !== 'month')) return [];
+  const today = localDateKey(now), month = today.slice(0, 7);
+  const totals = new Map<string, { todayCount: number; monthCount: number; todayLast: number; monthLast: number }>();
+  const sum = (left: number, right: number) => Math.min(Number.MAX_SAFE_INTEGER, left + right);
+  for (const [date, day] of Object.entries(pruneClickStats(store, now).days)) {
+    // Monthly means the current local calendar month through today, not rolling 30 days.
+    // Imported future days must not leak into today's/month's leaderboard.
+    if (date > today || date.slice(0, 7) !== month) continue;
+    for (const [siteId, stat] of Object.entries(sanitizeClicks(day.clicks))) {
+      const previous = totals.get(siteId) ?? { todayCount: 0, monthCount: 0, todayLast: 0, monthLast: 0 };
+      previous.monthCount = sum(previous.monthCount, stat.count);
+      previous.monthLast = Math.max(previous.monthLast, stat.lastClicked);
+      if (date === today) {
+        previous.todayCount = sum(previous.todayCount, stat.count);
+        previous.todayLast = Math.max(previous.todayLast, stat.lastClicked);
+      }
+      totals.set(siteId, previous);
+    }
+  }
+  return sites.flatMap(site => {
+    const total = totals.get(site.id);
+    if (!total) return [];
+    const count = period === 'day' ? total.todayCount : total.monthCount;
+    if (count <= 0) return [];
+    return [{ site, count, todayCount: total.todayCount, monthCount: total.monthCount, lastClicked: period === 'day' ? total.todayLast : total.monthLast }];
+  }).sort((left, right) => right.count - left.count || right.lastClicked - left.lastClicked || (left.site.id < right.site.id ? -1 : left.site.id > right.site.id ? 1 : 0));
 }

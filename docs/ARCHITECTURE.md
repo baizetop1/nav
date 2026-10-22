@@ -474,6 +474,8 @@ name > tags > category > description
 
 当前 `.github/workflows/deploy.yml`：
 
+离线发布区分完整内容 `CACHE_VERSION` 和程序 `APP_VERSION`：热榜、RSS、链接健康报告参与内容版本，但不单独触发程序更新提示。同程序版复用离线壳/运行时缓存；安装前核对首页资源、清单与 worker 的程序版本，拒绝跨部署混写。更新提示由真实 waiting worker 的版本决定，“稍后”按程序版保存在本机；激活完成不误标新提示，不自动刷新页面或清除草稿。
+
 - 监听 `main`、`master` 和手动触发。
 - 使用 Node.js 24。
 - 执行 `npm ci`、情报与 RSS 刷新、`npm run verify:app`（构建及非游戏自测）。

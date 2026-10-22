@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import { initialWorkPanelOpen, WORK_PANEL_EXPANDED_KEY } from '../src/lib/panelPreferences.ts';
+import { BACKUP_STORAGE_KEYS } from '../src/lib/backup.ts';
+assert.equal(initialWorkPanelOpen(false, null), false);
+assert.equal(initialWorkPanelOpen(false, 'false'), false);
+assert.equal(initialWorkPanelOpen(false, 'true'), true);
+assert.equal(initialWorkPanelOpen(false, 'broken'), false);
+assert.equal(initialWorkPanelOpen(true, null), true);
+assert.equal(initialWorkPanelOpen(true, 'false'), true, 'active/paused sessions must keep their controls');
+assert.equal(BACKUP_STORAGE_KEYS.includes(WORK_PANEL_EXPANDED_KEY), false, 'visibility remains device-local');
+console.log('Work panel: local visibility, completed-phase independence and active-session restoration passed.');

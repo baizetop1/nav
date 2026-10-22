@@ -18,11 +18,13 @@ assert.equal(new Set(searchEngines.map(engine => engine.url)).size, searchEngine
 const appSource = await readFile(new URL('../src/App.tsx', import.meta.url), 'utf8');
 const iconSource = await readFile(new URL('../src/components/SearchEngineIcon.tsx', import.meta.url), 'utf8');
 const mainSource = await readFile(new URL('../src/main.tsx', import.meta.url), 'utf8');
+const updateSource = await readFile(new URL('../src/services/pwaUpdateNotice.ts', import.meta.url), 'utf8');
 for (const [id] of expected) {
   assert.match(iconSource, new RegExp(`data-engine-icon=["']${id}["']`));
 }
 assert.match(appSource, /type="button" data-search-engine=\{engine\.id\}/);
 assert.match(appSource, /<SearchEngineIcon engineId=\{activeEngine\.id\}/);
-assert.match(mainSource, /controllerchange/);
-assert.match(mainSource, /baize:app-update-ready/);
+assert.match(mainSource, /watchAppUpdates\(registration\)/);
+assert.match(updateSource, /controllerchange/);
+assert.match(updateSource, /baize:app-update-ready/);
 console.log('Search engines: unique ids, prefixes, URLs, SVG icons and mobile PWA update signal passed.');
