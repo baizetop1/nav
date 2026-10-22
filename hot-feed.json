@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-22T04:48:36.605Z",
+  "generatedAt": "2026-10-22T07:38:57.770Z",
   "intelligence": {
-    "updatedAt": "2026-10-22T04:48:36.605Z",
+    "updatedAt": "2026-10-22T07:38:57.770Z",
     "items": [
       {
-        "id": "cn-item-6595641c02f89acb",
+        "id": "cn-item-4f794ae404f1e95a",
         "category": "cn",
-        "title": "美媒：美以制定计划 拟美国中期选举后再次打击伊朗",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-22/10718956.shtml",
+        "title": "海关总署企业管理和稽查司原司长王胜被开除党籍",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-22/10719056.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-22T03:53:17.000Z",
-        "summary": "中新网10月22日电 据美国《纽约时报》21日报道，美国官员及知情人士透露，美国和以色列军方已制定具体计划，准备在美国中期选举结束后恢复对伊朗实施打击。",
+        "publishedAt": "2026-10-22T07:19:28.000Z",
+        "summary": "中新网10月22日电 据中央纪委国家监委驻海关总署纪检监察组、北京市纪委监委消息：日前，中央纪委国家监委驻海关总署纪检监察组、北京市东城区监委对海关总署企业管理和稽查司原司长王胜严重违纪违法问题进行了立案审查调查。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50190455",
+        "id": "hn-50191507",
         "category": "dev",
-        "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
-        "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+        "title": "OpenAI CLI",
+        "url": "https://github.com/openai/openai-cli",
         "source": "Hacker News",
-        "publishedAt": "2026-10-22T02:30:52.000Z",
+        "publishedAt": "2026-10-22T05:23:11.000Z",
         "badge": "HN",
-        "signal": "60 分 · 28 评论"
+        "signal": "55 分 · 29 评论"
       },
       {
-        "id": "cn-it-7078240b978dd590",
+        "id": "cn-it-c78a33af62fad77a",
         "category": "cn",
-        "title": "小米米家智能腰背按摩仪开售：450mm 加长柔性导轨，首销价 599 元",
-        "url": "https://www.ithome.com/1/016/344.htm",
+        "title": "欧几里得望远镜发现新彗星：距地球约 13 亿公里，绕太阳一圈约 34.5 万年",
+        "url": "https://www.ithome.com/1/016/483.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-22T04:38:21.000Z",
-        "summary": "IT之家 10 月 22 日消息，小米米家智能腰背按摩仪已开售，新品主打 450mm 加长柔性导轨、石墨烯热敷及米家 App 智能控制，首销价 599 元，建议零售价 699 元。 这款产品采用 450mm 加长柔性双导轨，按摩头可沿脊柱两侧自动上下移动，覆盖肩胛至腰骶区域；导轨弧度为 R550mm，参考国标设计，可贴合腰背曲线；内置两大两小高韧性按摩头，按摩头高低起伏排布，模拟指压效果。设备预设 7 种模式，并可通过米家 App 自编 3 种按摩模式。 连接米家 App …",
+        "publishedAt": "2026-10-22T07:37:26.000Z",
+        "summary": "IT之家 10 月 22 日消息，欧洲航天局（ESA）于 10 月 19 日发布博文，称欧几里得（Euclid）太空望远镜在 9 月 16~24 日期间拍摄的深空图像中，发现了一颗此前未知的彗星。 该天体后被国际天文学联合会小行星中心正式确认，命名为 C/2026 S1（Euclid）。 这颗彗星由赫尔辛基大学博士生米科 · 庞蒂宁（Mikko Pöntinen）及其团队发现。他开发了一款用于在望远镜图像中识别移动天体的软件，随后该软件在多幅图像中标出一道“条纹”，提示存在…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250885",
+        "id": "v2ex-1250949",
         "category": "dev",
-        "title": "PingCap TiDB 生产环境 10.6 TB 数据泄露",
-        "url": "https://www.v2ex.com/t/1250885",
+        "title": "公司接不起官方 deepseek 转头跟腾讯合作， tps 直接腰斩简直谋财害命",
+        "url": "https://www.v2ex.com/t/1250949",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T03:59:31.000Z",
-        "summary": "原文: https://fulcrumsec.vg/pingcap/ 摘要: 累计外泄数据：10.6 TB 文件数量：4,901,203 个 生产控制平面导出：连续 88 次（每 6 小时导出一次），全程未被检测/察觉 GCP 存储桶：约 50 个 BigQuery 数据仓库：单仓数据量达 5.338 亿行 租户组织：180,046 个 独立电子邮箱：403,262 个 客户明文 API 密钥：115,308 个（其中 42,612 个处于有效/活跃状态） 客户 SQL 语…",
+        "publishedAt": "2026-10-22T07:10:07.000Z",
+        "summary": "原来一两百 tps 直接变成四五十，一个 handoff 跑了半个小时，用着烧心，浪费时间=谋财害命。",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-0db6fc273522bff3",
+        "id": "cn-baidu-a08472b725e2b4b2",
         "category": "cn",
-        "title": "体检查出这6种病基本不用治",
-        "url": "https://www.baidu.com/s?wd=%E4%BD%93%E6%A3%80%E6%9F%A5%E5%87%BA%E8%BF%996%E7%A7%8D%E7%97%85%E5%9F%BA%E6%9C%AC%E4%B8%8D%E7%94%A8%E6%B2%BB&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "新华社在美国找到红军长征时珍贵照片",
+        "url": "https://www.baidu.com/s?wd=%E6%96%B0%E5%8D%8E%E7%A4%BE%E5%9C%A8%E7%BE%8E%E5%9B%BD%E6%89%BE%E5%88%B0%E7%BA%A2%E5%86%9B%E9%95%BF%E5%BE%81%E6%97%B6%E7%8F%8D%E8%B4%B5%E7%85%A7%E7%89%87&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，科普指南解读体检报告指出，查出颈动脉粥样斑块、偶发心脏早搏、偶发转氨酶增高、3类尿常规指标异常、肺部钙化结节及多数囊肿这6种情况，若无明显症状或压迫，基本无需特殊治疗。",
+        "summary": "红军长征胜利90周年之际，新华社记者在美国杨百翰大学特藏部找到一批长征珍贵照片，包括红二十五军渡渭河及康克清赠送海伦·斯诺的藏族妇女照片，十分罕见。",
         "badge": "热搜",
-        "signal": "7,809,488 热度"
+        "signal": "7,809,357 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96656",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50188948",
+        "id": "hn-50190455",
         "category": "dev",
-        "title": "There isn't an easy exploit for this PHP vulnerability",
-        "url": "https://eliastaylor.com/noexploit/",
+        "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
+        "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T23:13:27.000Z",
+        "publishedAt": "2026-10-22T02:30:52.000Z",
         "badge": "HN",
-        "signal": "295 分 · 143 评论"
+        "signal": "170 分 · 95 评论"
       },
       {
-        "id": "cn-item-c498351d2a159cc1",
+        "id": "cn-item-4cccfdbf9555f147",
         "category": "cn",
-        "title": "中欧班列累计开行突破14万列 发送货值超5600亿美元",
-        "url": "https://www.chinanews.com.cn/ydyl/2026/10-22/10718948.shtml",
+        "title": "2026年国家地理标志保护示范区创建名单确定",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-22/10718988.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-22T03:31:47.000Z",
-        "summary": "今天上午，随着开往俄罗斯莫斯科的X8059次中欧班列从沈阳蒲河站发车，中欧班列累计开行突破14万列，发送货值超5600亿美元。",
+        "publishedAt": "2026-10-22T07:17:58.000Z",
+        "summary": "中新网10月22日电 据“国家知识产权局”微信公众号消息，国家知识产权局办公室发布关于确定2026年国家地理标志保护示范区创建名单的通知，具体内容如下：",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250867",
+        "id": "v2ex-1250943",
         "category": "dev",
-        "title": "NPM 挂了",
-        "url": "https://www.v2ex.com/t/1250867",
+        "title": "tibo 又要重置了吗?",
+        "url": "https://www.v2ex.com/t/1250943",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T03:18:40.000Z",
-        "summary": "Degraded Package Install and Publishing https://status.npmjs.org/#",
+        "publishedAt": "2026-10-22T07:00:54.000Z",
+        "summary": "ℹ️ Tibo Radar [reset context] Day 17/ Bet you thought we forgot, but no, it’s reset day today. Also good time to remind you to get Daybreak Blue access, it only takes 15 mins and you don’t want to have to do it in the middle of an incident…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-it-39dd68d6a3150919",
+        "id": "cn-it-80521bc032384c8a",
         "category": "cn",
-        "title": "人类首次！一碰就消失的反物质粒子，被科学家“关”了好几个月",
-        "url": "https://www.ithome.com/1/016/340.htm",
+        "title": "Spotify 推出首款原生车载应用，率先登陆奥迪 A6 e-tron 与 Q6 e-tron 电动汽车",
+        "url": "https://www.ithome.com/1/016/482.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-22T04:35:04.000Z",
-        "summary": "IT之家 10 月 22 日消息，美国西北大学官网今日发文，该校的物理学家首次将单个正电子 —— 电子的反物质对应物 —— 引导进入一个极其精确控制的量子态，并将其“囚禁”了数个月。 科学家们捕捉到放射性衰变中高速移动的粒子后， 将其冷却至接近绝对零度 。然后，他们将粒子悬浮在近乎完美的真空中，防止它接触普通物质 —— 一旦接触，它就会消失。 科学家们通过这种方式捕获并冷却了正电子，创造了一个名为“单正电子量子回旋加速器”的装置。在这种状态下，正电子本质上表现得很像一个具有…",
+        "publishedAt": "2026-10-22T07:36:29.000Z",
+        "summary": "IT之家 10 月 22 日消息，据汽车媒体 InsideEVs 今天报道，Spotify 现已推出其首款真正意义上的原生车载音乐应用。该 App 由 Spotify 自主研发， 没有遵循谷歌的设计限制 。 IT之家从原报道获悉，Spotify 此前推出的 Android Automotive 应用采用无界面架构，后端流媒体服务负责提供数据、播放列表和音乐曲库，UI 设计必须严格遵循谷歌设计规范。而原生版采用有界面架构， Spotify 可以完全自主地设计 UI 。 Spo…",
         "badge": "IT之家"
       },
       {
@@ -201,24 +201,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50188228",
+        "id": "hn-50190363",
         "category": "dev",
-        "title": "Security Disclosure",
-        "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+        "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+        "url": "https://simedw.com/2026/10/21/world-model-terminal/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T21:58:03.000Z",
+        "publishedAt": "2026-10-22T02:18:41.000Z",
         "badge": "HN",
-        "signal": "376 分 · 214 评论"
+        "signal": "104 分 · 42 评论"
       },
       {
-        "id": "cn-baidu-1afafb5b6a14f9a0",
+        "id": "cn-baidu-6ac0a1c8e789cd85",
         "category": "cn",
-        "title": "人民日报评老师被家长无理举报",
-        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E8%AF%84%E8%80%81%E5%B8%88%E8%A2%AB%E5%AE%B6%E9%95%BF%E6%97%A0%E7%90%86%E4%B8%BE%E6%8A%A5&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“一斤开心果赶上买两只鸡了”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%80%E6%96%A4%E5%BC%80%E5%BF%83%E6%9E%9C%E8%B5%B6%E4%B8%8A%E4%B9%B0%E4%B8%A4%E5%8F%AA%E9%B8%A1%E4%BA%86%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "人民日报评论“老师被家长无理举报”：有学校开学两周收近40封举报信，多数不属实。呼吁遇分歧先沟通，让教师手中“有矩”、身后“有盾”。",
+        "summary": "10月21日，山姆App盐焗开心果显示“补货中”，售价高达99.9元/袋。去年12月同款仅89元/袋。有消费者直呼一斤开心果价格能买两只鸡，部分乡厨已用其他坚果将其替代。",
         "badge": "热搜",
-        "signal": "7,713,439 热度"
+        "signal": "7,714,219 热度"
       },
       {
         "id": "github-advisory-ghsa-332p-7hrc-92wf",
@@ -241,24 +241,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250844",
+        "id": "v2ex-1250934",
         "category": "dev",
-        "title": "用宝塔装了 PHP 7.x / 8.0 / 8.1 的朋友注意了！我和 AI 一起做了一套修复包，覆盖 PHP 7.0 – 8.1",
-        "url": "https://www.v2ex.com/t/1250844",
+        "title": "cc switch 核心功能没了？",
+        "url": "https://www.v2ex.com/t/1250934",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T02:31:22.000Z",
-        "summary": "10 月 21 日 PHP 官方披露了 PHP2Shell 漏洞（ CVE-2026-109618 / CVE-2026-109619 ），CVSS 评分 9.2 ，无需登录即可远程执行代码，PHP-FPM 、Apache mod_php 都受影响。 我和 AI 一起做了一套修复包，覆盖 PHP 7.0 – 8.1： 7.4 / 8.0 / 8.1：使用 PHP 官方补丁原件 7.0 / 7.1 / 7.2 / 7.3：基于官方 7.4 补丁逐版本移植 每个版本都升级到该分…",
+        "publishedAt": "2026-10-22T06:39:17.000Z",
+        "summary": "今天试了下，替换 auth 会校验是否登录此账号，没登录 auth 会删掉，试了下手动复制 auth.json 还是可行的，单使用 auth.json 设置到 cc switch 切换已经走不通了",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-item-cda0a89cd8046076",
+        "id": "cn-item-84fa0eb8dc0bcd07",
         "category": "cn",
-        "title": "港珠澳大桥开通8周年 出入境旅客达1.25亿人次",
-        "url": "https://www.chinanews.com.cn/dwq/2026/10-22/10718944.shtml",
+        "title": "警惕！这些APP涉诈情况突出 名单公布",
+        "url": "https://www.chinanews.com.cn/fz/2026/10-22/10718991.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-22T03:27:19.000Z",
-        "summary": "伶仃洋上，港珠澳大桥车流不息，人车两旺。港珠澳大桥正式开通8年来，各项通行政策与时俱进、不断放宽，这座“一桥连三地”的“超级工程”不仅成为内地与港澳居民跨境出行的“黄金通道”，更成为见证粤港澳大湾区融合发展的“活力窗口”。据珠海边检总站港珠澳大桥边检站数据，自开通以来，截至今年10月22日零时，经港珠澳大桥珠海公路口岸往来粤港澳三地的旅客数量已超过1.25亿人次，车辆已超过2645万辆次。",
+        "publishedAt": "2026-10-22T07:12:31.000Z",
+        "summary": "中新网10月22日电 据“工信微报”微信公众号消息，近期，公安机关通报显示，大量小众APP被不法分子利用实施电信网络诈骗活动(详见附件)，请相关互联网服务提供者严格按照《中华人民共和国反电信网络诈骗法》相关要求，承担风险防控责任，履行合理注意义务，及时采取有效措施进行整改，对于整改不到位、涉诈情况仍然突出的，主管部门将依法依规予以处理。",
         "badge": "中新网要闻"
       },
       {
@@ -283,23 +283,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50186010",
+        "id": "hn-50188948",
         "category": "dev",
-        "title": "Rust Style Guide",
-        "url": "https://google.github.io/styleguide/rustguide.html",
+        "title": "There isn't an easy exploit for this PHP vulnerability",
+        "url": "https://eliastaylor.com/noexploit/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-21T19:11:57.000Z",
+        "publishedAt": "2026-10-21T23:13:27.000Z",
         "badge": "HN",
-        "signal": "254 分 · 137 评论"
+        "signal": "468 分 · 248 评论"
       },
       {
-        "id": "cn-it-a2c7c33d899fe343",
+        "id": "cn-it-8ade2745ebde69ab",
         "category": "cn",
-        "title": "LG Display 今年 Q3 归母净利润 7467.47 亿韩元，单季同比扭亏为盈",
-        "url": "https://www.ithome.com/1/016/339.htm",
+        "title": "郭锐官宣智界 RX 下个赛道为上海国际赛车场，曾刷新国产品牌量产 SUV 浙赛最快圈速纪录",
+        "url": "https://www.ithome.com/1/016/481.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-22T04:24:19.000Z",
-        "summary": "IT之家 10 月 22 日消息，LG Display 今日发布 2026 财年（2026 年 1 月～2026 年 12 月）第三财季（2026 年 7 月～2026 年 9 月）业绩快报报告： 营业总收入 ：6.28 万亿韩元，同比下降 10%，环比增长 12% 归母净利润： 7467.47 亿韩元，同比扭亏为盈 合并净利润： 7556.35 亿韩元，同比增长 60496% 营业利润： 2505.68 亿韩元，同比下降 42%，环比扭亏为盈 AI 解读 本次财报业绩符合…",
+        "publishedAt": "2026-10-22T07:36:10.000Z",
+        "summary": "IT之家 10 月 22 日消息，智界汽车董事长兼首席执行官郭锐今日宣布， 智界 RX 的下一个赛道会是上海国际赛车场 。 郭锐认为，一台车的操控上限有多高，不止于机械层面，还需要深厚的调校功底，在整车层面达成更好的系统合力。根据规划， 智界 RX 也定档 10 月 25 日在上海国际赛车场开启首批车主交付 。 据IT之家此前报道，在今年 9 月 28 日的智界 RX 及鸿蒙智行新品发布会正在进行中，华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东宣布，智界 …",
         "badge": "IT之家"
       },
       {
@@ -323,25 +323,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1250842",
+        "id": "v2ex-1250921",
         "category": "dev",
-        "title": "向大家介绍一个 eve agent 中文教程",
-        "url": "https://www.v2ex.com/t/1250842",
+        "title": "如果在让 ai 做网页的时候指定设计系统，然后手写文案，能否比较有效的降低 ai 味？",
+        "url": "https://www.v2ex.com/t/1250921",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T02:24:57.000Z",
-        "summary": "https://github.com/tangxusc/eve-tutorial-zh 仓库通过 18 个章节详细介绍 eve,并给出了大量示例 跪求 star",
+        "publishedAt": "2026-10-22T06:18:37.000Z",
+        "summary": "比如 https://www.designsystemhunt.com/ 这里收录的众多设计系统之一 我的想法是，用设计系统的话各种视觉样式都有了一个统一的规范，不会让 ai 自己随意发挥，那么可能效果好一些（？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-b76285e1a08ed005",
+        "id": "cn-baidu-1f64a5a604737638",
         "category": "cn",
-        "title": "回望长征岁月 奋进复兴征程",
-        "url": "https://www.baidu.com/s?wd=%E5%9B%9E%E6%9C%9B%E9%95%BF%E5%BE%81%E5%B2%81%E6%9C%88+%E5%A5%8B%E8%BF%9B%E5%A4%8D%E5%85%B4%E5%BE%81%E7%A8%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "长征 永远在路上",
+        "url": "https://www.baidu.com/s?wd=%E9%95%BF%E5%BE%81+%E6%B0%B8%E8%BF%9C%E5%9C%A8%E8%B7%AF%E4%B8%8A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "2026年10月22日是红军长征胜利90周年纪念日。回望长征岁月，奋进复兴征程。纪念中国工农红军长征胜利90周年。",
+        "summary": "九十年前，长征，是踏遍万水千山的英雄壮歌。九十年后，穿越机一镜贯山河，带我们重读这壮阔史诗。漫漫长征路，不灭长征魂。薪火相传，接力奔赴。长征，永远在路上！",
         "badge": "热搜",
-        "signal": "7,616,919 热度"
+        "signal": "7,619,114 热度"
       },
       {
         "id": "cisa-kev-cve-2026-110936",
@@ -371,16 +371,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-21T19:01:12.000Z",
         "badge": "HN",
-        "signal": "282 分 · 69 评论"
+        "signal": "326 分 · 75 评论"
       },
       {
-        "id": "cn-item-c7272fb80a84d18b",
+        "id": "cn-item-fd504af5bc8c148c",
         "category": "cn",
-        "title": "国际金融协会总裁安德慕：AI将以积极方式改变世界",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-22/10718923.shtml",
+        "title": "中国驻沙特大使馆建议中国公民暂勿乘飞机在沙特旅行",
+        "url": "https://www.chinanews.com.cn/hr/2026/10-22/10718971.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-22T03:11:14.000Z",
-        "summary": "中新社北京10月22日电 (记者 吕少威 迟瀚宇)“未来数十年，人工智能(AI)将以非常积极的方式改变世界，便利人们的生活。中国在高端制造等领域具有领先优势，与AI技术的代际变革形成共振，将为全球资本创造长期、多元的合作空间。”国际金融协会总裁兼首席执行官安德慕在北京参加2026金融街论坛年会期间向中新社记者如是表示。",
+        "publishedAt": "2026-10-22T05:36:48.000Z",
+        "summary": "中新网10月22日电 据中国驻沙特大使馆微信公众号消息，10月22日凌晨，沙特民航总局发布公告称：达曼法赫德国王国际机场于10月21日(星期三)晚间遭袭，目前已造成1死8伤，物质损失尚在评估中。另有官方消息称，一架亚丁航空客机在本次袭击中受损，机上1人受伤。",
         "badge": "中新网要闻"
       },
       {
@@ -405,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1250832",
+        "id": "v2ex-1250900",
         "category": "dev",
-        "title": "和大家同步一下宝塔面板关于 PHP 漏洞的发布进展",
-        "url": "https://www.v2ex.com/t/1250832",
+        "title": "这种小程序葵花码直跳链接是怎么做到的？",
+        "url": "https://www.v2ex.com/t/1250900",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T02:09:08.000Z",
-        "summary": "看到社区有很多小伙伴在说，先说一下抱歉，昨天主要忙着在群和公众号发布更新，没来得及打开社区 先说一下进展： 昨天 14:47 分左右，在社群和公众号同步了临时缓解方案和公告 昨晚 21:40 左右，监控到 PHP 官方已经发布修复，随后开始进行编译测试，因为宝塔需要兼容大量且多版本的系统，所以测试的比较久了一点 昨晚 23:05 分左右，推送了 8.2 版本的修复 昨晚 23:20 左右，推送全部还在维护的 4 个版本的更新，8.2 ，8.3 ，8.4 ，8.5 23:45…",
+        "publishedAt": "2026-10-22T05:00:58.000Z",
+        "summary": "众所周知，小程序码只有官方 Api 可以生成，但是最近看到一个葵花码，扫码是直跳网页的。 （上面是跳百度，可放心扫码） 通过常见解码方式是无法解码的，要微信扫码才可以。 现在不知道这个东西是如何做出来的。 或者是不是 ai 训练出来的~",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-b95b09e4d0de784e",
+        "id": "cn-it-83d9da11eb51bdba",
         "category": "cn",
-        "title": "谷歌 CEO 皮查伊：AI 智能体的优势，是每周 7 天、每天 24 小时不间断工作",
-        "url": "https://www.ithome.com/1/016/338.htm",
+        "title": "富士通客户端计算公布 FMV Mouse X 鼠标：双电磁滚轮 + 电磁左右键",
+        "url": "https://www.ithome.com/1/016/480.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-22T04:24:05.000Z",
-        "summary": "IT之家 10 月 22 日消息，据《商业内幕》今天（22 日）午间报道，即使是谷歌 CEO 桑达尔 · 皮查伊，也很难独自掌握谷歌每天发生的所有事情。为此，他把部分信息收集工作 交给了 AI 智能体 。 皮查伊在播客节目中介绍了自己的工作方式：“如果每天都要了解过去 24 小时发生了什么，很容易就得花上一个小时。现在有 AI 智能体 替我整理信息、汇总后交给我 。当然，我仍然可以深入查看，而且经常这么做。” 借助 AI 智能体，皮查伊可以掌握谷歌 AI 模型的研发进展、计…",
+        "publishedAt": "2026-10-22T07:32:58.000Z",
+        "summary": "IT之家 10 月 22 日消息，富士通客户端计算 (FCCL) 今日在发布一系列笔电的同时也切入外设市场，在正式带来此前众筹的 FMV Keyboard X 矮磁轴键盘的同时，还公布了 FMV Mouse X01MB 鼠标。 FMV Mouse X 的最大特色莫过于 其左右按键、主副滚轮均采用电磁感应式触发原理 ，无需物理接触即能实现清脆点击或高速滚动。 其采用人体工学设计，针对日本人的平均手型进行优化，分辨率可达 8000 cpi，质量约 70g，续航 30~70 天，…",
         "badge": "IT之家"
       },
       {
@@ -453,17 +453,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-21T14:00:26.000Z",
         "badge": "HN",
-        "signal": "465 分 · 158 评论"
+        "signal": "488 分 · 167 评论"
       },
       {
-        "id": "cn-baidu-c9bf19bf2570c0ba",
+        "id": "cn-baidu-461c724c59d4cf01",
         "category": "cn",
-        "title": "医生被“豆包们”逼得坐不住了",
-        "url": "https://www.baidu.com/s?wd=%E5%8C%BB%E7%94%9F%E8%A2%AB%E2%80%9C%E8%B1%86%E5%8C%85%E4%BB%AC%E2%80%9D%E9%80%BC%E5%BE%97%E5%9D%90%E4%B8%8D%E4%BD%8F%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "演员白鹿名下公司均已注销",
+        "url": "https://www.baidu.com/s?wd=%E6%BC%94%E5%91%98%E7%99%BD%E9%B9%BF%E5%90%8D%E4%B8%8B%E5%85%AC%E5%8F%B8%E5%9D%87%E5%B7%B2%E6%B3%A8%E9%94%80&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，网上流传一张“门诊告示”，上面写着“已在豆包获得诊断的患者，请勿再向我们寻求意见，请改向千问或者元宝咨询”。虽经媒体多方核实，图为网友恶搞，但一张假告示能引发大量讨论，说明它戳中了一个真问题：患者带着AI问诊的健康信息走进诊室，已不再是个别现象。",
+        "summary": "近日，演员白鹿名下3家关联公司均已注销，无存续公司。此前10月19日，白鹿工作室宣布取消曼谷见面会，并承担官方渠道购票粉丝的退改实际损失。近日网传白鹿与前公司合约到期后或将重组新团队。第三方数据显示，白鹿近30天掉粉超144万。",
         "badge": "热搜",
-        "signal": "7,521,646 热度"
+        "signal": "7,522,200 热度"
       },
       {
         "id": "github-advisory-ghsa-gg2r-wvfm-q9rx",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1250826",
+        "id": "v2ex-1250885",
         "category": "dev",
-        "title": "我原本计划昨天就上线部署 ai 帮我开发的 Debian 主机管理面板",
-        "url": "https://www.v2ex.com/t/1250826",
+        "title": "PingCap TiDB 生产环境 10.6 TB 数据泄露",
+        "url": "https://www.v2ex.com/t/1250885",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-22T01:57:31.000Z",
-        "summary": "结果 PHP 漏洞来了个大的； 还是部署上了； 无非就是远程再让 ai 帮我改改； 最终更新了一个简陋的安全中心模块； 如图： 好在是只花了不到 2M tokens",
+        "publishedAt": "2026-10-22T03:59:31.000Z",
+        "summary": "原文: https://fulcrumsec.vg/pingcap/ 摘要: 累计外泄数据：10.6 TB 文件数量：4,901,203 个 生产控制平面导出：连续 88 次（每 6 小时导出一次），全程未被检测/察觉 GCP 存储桶：约 50 个 BigQuery 数据仓库：单仓数据量达 5.338 亿行 租户组织：180,046 个 独立电子邮箱：403,262 个 客户明文 API 密钥：115,308 个（其中 42,612 个处于有效/活跃状态） 客户 SQL 语…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -511,7 +511,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 37048,
+        "stars": 37503,
         "starsToday": 2012
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/vllm-project/vllm",
         "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
         "language": "Python",
-        "stars": 94963,
+        "stars": 95028,
         "starsToday": 441
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "language": "TypeScript",
-        "stars": 101619,
+        "stars": 101823,
         "starsToday": 1541
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/headroomlabs-ai/headroom",
         "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "language": "Python",
-        "stars": 77353,
+        "stars": 77416,
         "starsToday": 474
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/DietrichGebert/ponytail",
         "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "language": "JavaScript",
-        "stars": 171976,
+        "stars": 172208,
         "starsToday": 2079
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/Comfy-Org/ComfyUI",
         "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "language": "Python",
-        "stars": 141652,
+        "stars": 141748,
         "starsToday": 939
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/supabase/supabase",
         "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
         "language": "TypeScript",
-        "stars": 113117,
+        "stars": 113181,
         "starsToday": 504
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/twentyhq/twenty",
         "description": "The open alternative to Salesforce, designed for AI.",
         "language": "TypeScript",
-        "stars": 59308,
+        "stars": 59403,
         "starsToday": 112
       },
       {
@@ -591,20 +591,20 @@
         "url": "https://github.com/shiyu-coder/Kronos",
         "description": "Kronos: A Foundation Model for the Language of Financial Markets",
         "language": "Python",
-        "stars": 42923,
+        "stars": 42997,
         "starsToday": 575
       },
       {
-        "id": "github-099a05080dd8db13",
+        "id": "github-01830fc5a6bd9087",
         "rank": 10,
-        "name": "akitaonrails/ai-memory",
-        "url": "https://github.com/akitaonrails/ai-memory",
-        "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
-        "language": "Rust",
-        "stars": 12460,
-        "starsToday": 286
+        "name": "strelov1/freehire",
+        "url": "https://github.com/strelov1/freehire",
+        "description": "freehire — the open-source search engine for job seekers",
+        "language": "Go",
+        "stars": 2574,
+        "starsToday": 360
       }
     ],
-    "updatedAt": "2026-10-22T04:48:36.605Z"
+    "updatedAt": "2026-10-22T07:38:57.770Z"
   }
 }
