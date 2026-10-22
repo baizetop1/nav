@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { advanceRestTime, restPose, REST_SPEEDS } from '../src/services/restAnimation.ts';
 import { advanceRestRotation, DEFAULT_REST_INTERVAL, REST_ROTATION_INTERVALS, REST_SCENES } from '../src/services/restPlaylist.ts';
 import { pelicanLegPose } from '../src/services/pelicanMotion.ts';
+import { dinosaurLegPose } from '../src/services/dinosaurMotion.ts';
 
 const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
 assert.deepEqual(REST_SPEEDS, [0.65, 1, 1.3]);
@@ -39,7 +40,7 @@ assert.match(scene, /cancelAnimationFrame\(frame\)/);
 assert.doesNotMatch(scene + overlay, /https?:\/\/|localStorage\.setItem|setInterval|<audio|<iframe/);
 assert.equal(DEFAULT_REST_INTERVAL, 60);
 assert.deepEqual(REST_ROTATION_INTERVALS, [30, 60, 120, 300]);
-assert.deepEqual(REST_SCENES.map(scene => scene.id), ['moonlight', 'balloon', 'rain', 'camp', 'pelican']);
+assert.deepEqual(REST_SCENES.map(scene => scene.id), ['moonlight', 'balloon', 'rain', 'camp', 'pelican', 'dinosaur']);
 for (const seconds of REST_ROTATION_INTERVALS) {
   let playhead = { index: 0, elapsedMs: 0 };
   for (let turn = 0; turn < REST_SCENES.length * 2; turn++) {
@@ -59,7 +60,7 @@ assert.match(playlist, /if \(document.hidden\) return/);
 assert.match(playlist, /window.clearInterval\(timer\)/);
 assert.match(overlay, /useRestPlaylist\(playing && autoRotate\)/);
 assert.match(overlay, /useState\(!reduced\)/);
-for (const name of ['BalloonScene', 'RainScene', 'CampScene', 'PelicanScene']) {
+for (const name of ['BalloonScene', 'RainScene', 'CampScene', 'PelicanScene', 'DinosaurScene']) {
   const source = read('src/components/rest/' + name + '.tsx');
   assert.match(source, /useRestMotion\(playing, speed, draw\)/);
   assert.doesNotMatch(source, /https?:\/\/|localStorage|setInterval|setTimeout|<audio|<iframe/);
@@ -95,4 +96,33 @@ assert.doesNotMatch(pelican, /dangerouslySetInnerHTML|<script|document\.getEleme
 for (const part of ['rear-spokes', 'front-spokes', 'road', 'waves', 'near-foot', 'far-foot', 'near-leg', 'far-leg']) {
   assert.equal(pelican.split(`data-part="${part}"`).length - 1, 1, `Exactly one ${part} motion part`);
 }
-console.log('Rest animation: five scenes, pelican pedal geometry, timing/rotation/wraparound, lazy loading, pause and reduced-motion wiring passed.');
+// Dino keeps the original page's two-segment geometry and opposite pedals.
+for (let time = 0; time < 34; time += 0.017) {
+  const near = dinosaurLegPose(time, 'near'), far = dinosaurLegPose(time, 'far');
+  close(near.pedal.x + far.pedal.x, 1356);
+  close(near.pedal.y + far.pedal.y, 1160);
+  for (const side of ['near', 'far']) {
+    const { hip, knee, ankle, pedal, path } = dinosaurLegPose(time, side);
+    assert.deepEqual(hip, side === 'near' ? { x: 642, y: 409 } : { x: 622, y: 400 });
+    close(Math.hypot(knee.x - hip.x, knee.y - hip.y), 118);
+    close(Math.hypot(ankle.x - knee.x, ankle.y - knee.y), 117);
+    close(Math.hypot(pedal.x - 678, pedal.y - 580), 34);
+    close(pedal.x - ankle.x, 3); close(pedal.y - ankle.y, 7);
+    assert.doesNotMatch(path, /NaN|Infinity/);
+    assert.match(path, /^M[\d.]+ [\d.]+L[\d.]+ [\d.]+L[\d.]+ [\d.]+$/);
+    const next = dinosaurLegPose(time + 1.7, side);
+    close(next.pedal.x, pedal.x); close(next.pedal.y, pedal.y);
+  }
+}
+for (const invalid of [NaN, Infinity, -Infinity, -1]) {
+  for (const side of ['near', 'far']) assert.deepEqual(dinosaurLegPose(invalid, side), dinosaurLegPose(0, side));
+}
+const dinosaur = read('src/components/rest/DinosaurScene.tsx');
+assert.match(dinosaur, /dinosaurLegPose\(time, side\)/);
+assert.match(dinosaur, /useSceneryId\(\)/);
+assert.match(dinosaur, /rest-dinosaur-art/);
+assert.doesNotMatch(dinosaur, /dangerouslySetInnerHTML|<script|document\.getElementById|id="[^"]+"|href="#[^"]+"|url\(#[\w-]+\)/);
+for (const part of ['shadow', 'rider', 'rear-wheel', 'front-wheel', 'tail', 'scarf', 'eye', 'clouds', 'pterosaur', 'mountains', 'volcano', 'verges', 'road', 'foreground', 'wind', ...['near', 'far'].flatMap(side => ['leg-outline', 'leg', 'crank', 'pedal', 'foot'].map(name => side + '-' + name))]) {
+  assert.equal(dinosaur.split(`data-part="${part}"`).length - 1, 1, `Exactly one dinosaur ${part} motion part`);
+}
+console.log('Rest animation: six scenes, pelican/dinosaur pedal geometry, timing/rotation/wraparound, lazy loading, pause and reduced-motion wiring passed.');

@@ -37,6 +37,8 @@
 .rest-camp-anchor { transform: translate(900px, 557px); }
 .rest-dialog[data-rest-scene="pelican"] .rest-scene { background: #efeede; }
 .rest-dialog[data-rest-scene="pelican"] .rest-scene-footer { color: #887e62; }
+.rest-dialog[data-rest-scene="dinosaur"] .rest-scene { background: #eaf0dd; }
+.rest-dialog[data-rest-scene="dinosaur"] .rest-scene-footer { color: #8e8269; }
 .rest-dialog[data-rest-scene="balloon"] .rest-scene { background: #ecd4bc; }
 .rest-dialog[data-rest-scene="balloon"] .rest-copy h1 { color: #76634e; }
 .rest-dialog[data-rest-scene="balloon"] :is(.rest-copy > p, .rest-stamp, .rest-scene-footer) { color: #796e52; }
@@ -55,7 +57,7 @@
 .rest-stamp { position: absolute; right: 5%; top: 7%; display: flex; align-items: center; gap: 8px; padding: 9px 15px; border: 1px solid #8faf9a; border-radius: 100%; font-size: 10px; letter-spacing: 2px; color: #60836f; transform: rotate(7deg); }
 .rest-scene-footer { position: absolute; right: 30px; bottom: 24px; left: 30px; display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 2px; color: #e1e7c9; pointer-events: none; }
 .rest-playlist-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 16px; min-height: 66px; padding-top: 12px; }
-.rest-scene-choices { display: flex; gap: 6px; }
+.rest-scene-choices { display: flex; flex-wrap: wrap; gap: 6px; }
 .rest-scene-choices button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 8px 12px; border: 1px solid transparent; border-radius: 10px; background: transparent; font-size: 11px !important; color: #657c6e; white-space: nowrap; }
 .rest-scene-choices button > span { font-size: 9px; opacity: .6; font-variant-numeric: tabular-nums; }
 .rest-scene-choices button[aria-pressed="true"] { color: #315e50; border-color: #c7d3be; background: #e6ebdc; }
@@ -90,6 +92,7 @@
 /* Keep the supplied bicycle whole on short laptops and portrait tablets. */
 @media (min-width: 701px) {
   .rest-dialog[data-rest-scene="pelican"] .rest-scene { flex: none; height: auto; aspect-ratio: 1440 / 760; }
+  .rest-dialog[data-rest-scene="dinosaur"] .rest-scene { flex: none; height: auto; aspect-ratio: 1300 / 760; }
 }
 @media (min-width: 1600px) { .rest-page { padding-inline: 36px; } }
 @media (max-width: 1000px) {
@@ -119,12 +122,13 @@
   .rest-copy { top: 28px; left: 25px; }
   .rest-eyebrow { font-size: 9px; letter-spacing: 2px; margin-bottom: 12px; }
   .rest-copy h1 { font-size: 34px; line-height: 1.43; letter-spacing: 4px; }
+  .rest-dialog[data-rest-scene="dinosaur"] .rest-copy h1 { font-size: clamp(26px, 8vw, 34px); letter-spacing: 2px; }
   .rest-copy > p:last-child { margin-top: 13px; font-size: 10px; letter-spacing: 1px; }
   .rest-stamp { display: none; }
   .rest-scene-footer { display: none; }
   .rest-playlist-row { gap: 3px; padding-top: 10px; min-height: 103px; }
-  .rest-scene-choices { width: 100%; gap: 3px; }
-  .rest-scene-choices button { flex: 1; min-width: 0; padding: 8px 2px; min-height: 42px; font-size: 11px !important; }
+  .rest-scene-choices { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; }
+  .rest-scene-choices button { min-width: 0; padding: 8px 2px; min-height: 42px; font-size: 11px !important; }
   .rest-scene-choices button > span { display: none; }
   .rest-rotation-controls { width: 100%; justify-content: space-between; gap: 5px; }
   .rest-rotation-toggle, .rest-interval select { min-height: 44px; }

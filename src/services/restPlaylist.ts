@@ -4,6 +4,7 @@ export const REST_SCENES = [
   { id: 'rain', name: '雨窗小憩', title: '小猫的雨窗小憩', heading: ['下雨了，', '先歇一歇。'], intro: '窗外是细雨，窗里有一杯温热。', stamp: '留一刻安静', ending: '雨会慢慢停，事情慢慢来。' },
   { id: 'camp', name: '星河露营', title: '小熊的星河露营', heading: ['把今天，', '交给星光。'], intro: '灯还亮着，今晚只管好好休息。', stamp: '晚安，小小世界', ending: '星星会守夜，你可以放松。' },
   { id: 'pelican', name: '海岸骑行', title: '鹈鹕的海岸骑行', heading: ['风正好，', '去兜一圈。'], intro: '不赶时间，只追海风。', stamp: '今天适合兜风', ending: '阳光、两个轮子，和一点点自由。' },
+  { id: 'dinosaur', name: '恐龙骑行', title: '小恐龙的慢骑日记', heading: ['骑上车，', '去吹远古的风。'], intro: '今天的冒险，可以慢一点。', stamp: '两轮小冒险', ending: '世界很大，慢慢骑也会到。' },
 ] as const;
 export type RestSceneId = typeof REST_SCENES[number]['id'];
 export const REST_ROTATION_INTERVALS = [30, 60, 120, 300] as const;

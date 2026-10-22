@@ -11,7 +11,8 @@ const BalloonScene = lazy(() => import('./BalloonScene'));
 const RainScene = lazy(() => import('./RainScene'));
 const CampScene = lazy(() => import('./CampScene'));
 const PelicanScene = lazy(() => import('./PelicanScene'));
-const ARTWORKS = { moonlight: RestScene, balloon: BalloonScene, rain: RainScene, camp: CampScene, pelican: PelicanScene };
+const DinosaurScene = lazy(() => import('./DinosaurScene'));
+const ARTWORKS = { moonlight: RestScene, balloon: BalloonScene, rain: RainScene, camp: CampScene, pelican: PelicanScene, dinosaur: DinosaurScene };
 
 function ReadyScene({ onReady, children }: { onReady: () => void; children: ReactNode }) {
   useEffect(onReady, [onReady]);
