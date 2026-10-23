@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-23T19:14:26.693Z",
+  "generatedAt": "2026-10-23T22:14:59.258Z",
   "intelligence": {
-    "updatedAt": "2026-10-23T19:14:26.693Z",
+    "updatedAt": "2026-10-23T22:14:59.258Z",
     "items": [
       {
         "id": "cn-item-fcb983658213f481",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-23T16:59:08.000Z",
         "badge": "HN",
-        "signal": "369 分 · 203 评论"
+        "signal": "587 分 · 356 评论"
       },
       {
         "id": "cn-it-ca9c8524420defa2",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-r3g7-r4hr-m258",
+        "id": "github-advisory-ghsa-xjj6-f33q-929c",
         "category": "security",
-        "title": "obsidian-tc: Memory-lifecycle tools overwrite unowned notes or partially commit lifecycle changes",
-        "url": "https://github.com/advisories/GHSA-r3g7-r4hr-m258",
+        "title": "undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
+        "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T18:47:25.000Z",
-        "summary": "### Summary `create_entity`, `link_entities`, `rename_entity`, `unlink_entities` and `delete_entity` regenerate a memory note's body from SQLite at the computed `memory/ / .md` path. When a note already existed at that path and was not own…",
-        "badge": "CVE-2026-115478",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-23T22:14:31.000Z",
+        "summary": "### Impact undici's `fetch()` crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such responses (a content-encoding l…",
+        "badge": "CVE-2026-109869",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-301925b8adfcebab",
@@ -75,6 +75,88 @@
         "publishedAt": "2026-10-22T14:30:24.000Z",
         "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
         "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1251402",
+        "category": "dev",
+        "title": "为什么很多人都把 DeepSeek 神化了，看不起国内豆包和其它 LLM？",
+        "url": "https://www.v2ex.com/t/1251402",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-23T18:57:03.000Z",
+        "summary": "我认为 DeepSeek 、MiniMax 、Kimi 、GLM 这些 LLM 公司被严重高估了： 月活（ MAU ） ： 豆包 4.2 亿，千问 1.7 亿，DeepSeek 1.2 亿，智谱 2000 万，Kimi 1000 万； 商业化（ ARR ） ： 豆包 272 亿，智谱 68 亿、阿里 80 亿、DeepSeek 27-34 亿、Kimi 20 亿； 开源贡献 ： Qwen：开源了超过 460 个模型，衍生模型超 30 万个，全球下载量破 20 亿次； GLM…",
+        "badge": "程序员",
+        "signal": "11 回复"
+      },
+      {
+        "id": "cn-baidu-5fca30b823fd8e1b",
+        "category": "cn",
+        "title": "网红拼豆店 倒闭潮",
+        "url": "https://www.baidu.com/s?wd=%E7%BD%91%E7%BA%A2%E6%8B%BC%E8%B1%86%E5%BA%97+%E5%80%92%E9%97%AD%E6%BD%AE&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "今年10月起不少拼豆店面临倒闭潮。近日，记者走访成都春熙路一家拼豆店发现，店内从日日爆满转为“上二休五”。店主张先生无奈表示，单价从巅峰大幅下跌，自己3个月亏了10万。此前高峰期该片区曾扎堆70至80家店，因误以为门槛低、投入少，结果陷入价格战。",
+        "badge": "热搜",
+        "signal": "7,809,003 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-110447",
+        "category": "security",
+        "title": "Collabora Collabora Online – Built-in CODE Server：Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-110447",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-23T00:00:00.000Z",
+        "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+        "badge": "CVE-2026-110447",
+        "signal": "已遭利用 · 整改期限 2026-10-26"
+      },
+      {
+        "id": "ai-hugging-face-5d794c3788a3a4be",
+        "category": "ai",
+        "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+        "url": "https://huggingface.co/blog/allenai/litpivot",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-23T16:15:50.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50207910",
+        "category": "dev",
+        "title": "Apple Music 404 Not Found",
+        "url": "https://music.apple.com/this-url-doesnt-exist",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-23T12:28:47.000Z",
+        "badge": "HN",
+        "signal": "414 分 · 146 评论"
+      },
+      {
+        "id": "cn-item-5c9e9b58147cbab5",
+        "category": "cn",
+        "title": "民生调查局｜涂了就能摘掉眼镜？记者卧底调查护眼膏虚假宣传乱象",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-23/10719988.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-23T11:57:34.000Z",
+        "summary": "编者按： 这里是民生调查局，见人所未见，调查民生之变。关注你想关注的、你没关注的，调查你想看的、未看到的。 中新网北京10月23日电(钟余)“不管是近视，还是老花眼、青光眼，用了这个护眼膏就会好。”去年年底，在外工作的苏欣(化名)一回家，母亲就迫不及待地拿出新购入的护眼膏让她试用，并转述了营销人员的话。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-q7qp-rjg7-q26m",
+        "category": "security",
+        "title": "multer vulnerable to Denial of Service via a pending asynchronous fileFilter after request teardown",
+        "url": "https://github.com/advisories/GHSA-q7qp-rjg7-q26m",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-23T22:08:22.000Z",
+        "summary": "### Impact When `multer` is configured with an asynchronous `fileFilter`, a single request can crash the Node.js process. If a request is aborted (for example when one file is rejected) while another file's async `fileFilter` is still pend…",
+        "badge": "CVE-2026-113872",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
+        "id": "ai-openai-f8c156dba7886826",
+        "category": "ai",
+        "title": "Securing our frontier model training environment",
+        "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-23T10:00:00.000Z",
+        "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
+        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1251386",
@@ -88,14 +170,14 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-5fca30b823fd8e1b",
+        "id": "cn-it-a34e7227e4565063",
         "category": "cn",
-        "title": "网红拼豆店 倒闭潮",
-        "url": "https://www.baidu.com/s?wd=%E7%BD%91%E7%BA%A2%E6%8B%BC%E8%B1%86%E5%BA%97+%E5%80%92%E9%97%AD%E6%BD%AE&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "今年10月起不少拼豆店面临倒闭潮。近日，记者走访成都春熙路一家拼豆店发现，店内从日日爆满转为“上二休五”。店主张先生无奈表示，单价从巅峰大幅下跌，自己3个月亏了10万。此前高峰期该片区曾扎堆70至80家店，因误以为门槛低、投入少，结果陷入价格战。",
-        "badge": "热搜",
-        "signal": "7,808,749 热度"
+        "title": "长城魏牌二代蓝山全球首秀定档 10 月 27 日，搭载 Hi-4 插电混动系统",
+        "url": "https://www.ithome.com/1/017/277.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-23T15:20:50.000Z",
+        "summary": "IT之家 10 月 23 日消息，长城汽车今日宣布魏牌二代蓝山全球首秀定档 10 月 27 日。新车采用方盒子设计，搭载由 2.0T 发动机组成的 Hi-4 插电混动系统。 据介绍，魏牌二代蓝山主打“东方豪华”，尺寸为 5300×2050×1960mm、 轴距 3010mm ，轮胎规格 275/50 R21。 新车搭载 2.0T 混动专用发动机，匹配 4 挡混动专用变速箱，电机功率为前 110kW、后 220kW，内置 66.6kWh（1/3C）电池。 IT之家注意到，官方…",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2026-106931",
@@ -109,54 +191,54 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-hugging-face-5d794c3788a3a4be",
+        "id": "ai-google-deepmind-ad09b0946a60b7ff",
         "category": "ai",
-        "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
-        "url": "https://huggingface.co/blog/allenai/litpivot",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-23T16:15:50.000Z",
-        "badge": "Hugging Face"
+        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-15T16:08:03.000Z",
+        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+        "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50211474",
+        "id": "hn-50213925",
         "category": "dev",
-        "title": "Today, we hacked what we'd set out to hack: the iPhone",
-        "url": "https://blog.calif.io/p/iphone",
+        "title": "Dessa: the most authentic full-duplex speech model ever built",
+        "url": "https://block.xyz/dessa",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T16:21:50.000Z",
+        "publishedAt": "2026-10-23T19:09:54.000Z",
         "badge": "HN",
-        "signal": "474 分 · 304 评论"
+        "signal": "123 分 · 37 评论"
       },
       {
-        "id": "cn-item-5c9e9b58147cbab5",
+        "id": "cn-baidu-195e5be1d042fc6e",
         "category": "cn",
-        "title": "民生调查局｜涂了就能摘掉眼镜？记者卧底调查护眼膏虚假宣传乱象",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-23/10719988.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-23T11:57:34.000Z",
-        "summary": "编者按： 这里是民生调查局，见人所未见，调查民生之变。关注你想关注的、你没关注的，调查你想看的、未看到的。 中新网北京10月23日电(钟余)“不管是近视，还是老花眼、青光眼，用了这个护眼膏就会好。”去年年底，在外工作的苏欣(化名)一回家，母亲就迫不及待地拿出新购入的护眼膏让她试用，并转述了营销人员的话。",
-        "badge": "中新网要闻"
+        "title": "哈啰顺风车 涉黄",
+        "url": "https://www.baidu.com/s?wd=%E5%93%88%E5%95%B0%E9%A1%BA%E9%A3%8E%E8%BD%A6+%E6%B6%89%E9%BB%84&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "近日，哈啰顺风车车主接单时发现疑似招嫖信息，对方将违规暗语藏在送货订单留言区。哈啰回应称，这是新型灰产行为，将封禁相关账号、排查风险点并升级风控模型。",
+        "badge": "热搜",
+        "signal": "7,712,370 热度"
       },
       {
-        "id": "github-advisory-ghsa-c8w8-3pqp-wr83",
+        "id": "github-advisory-ghsa-834v-8h66-3h79",
         "category": "security",
-        "title": "SiYuan: A parser differential between the WebSocket keepalive exemption and the session quarantine allows unauthenticated access to the broadcast event stream",
-        "url": "https://github.com/advisories/GHSA-c8w8-3pqp-wr83",
+        "title": "Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution",
+        "url": "https://github.com/advisories/GHSA-834v-8h66-3h79",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T18:34:09.000Z",
-        "summary": "### Summary Two checks on the same WebSocket request URI parse it differently. The authentication exemption for keepalive sessions matches raw substrings, while the quarantine introduced to contain those sessions reads a parsed query param…",
-        "badge": "CVE-2026-73054",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-23T22:06:13.000Z",
+        "summary": "## Summary The ESM compiler in `happy-dom@20.14.5` does not validate imported local binding aliases before interpolating them into generated JavaScript. As a result, an invalid ESM import alias can be transformed into a valid JavaScript de…",
+        "badge": "CVE-2026-115895",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-openai-1a543055a02f9816",
+        "id": "ai-hugging-face-2b3f616d26d343fe",
         "category": "ai",
-        "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-        "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-        "source": "OpenAI",
+        "title": "Does Your Model Run on AWS Trainium? Look It Up",
+        "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+        "source": "Hugging Face",
         "publishedAt": "2026-10-23T00:00:00.000Z",
-        "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
-        "badge": "OpenAI"
+        "badge": "Hugging Face"
       },
       {
         "id": "v2ex-1251385",
@@ -170,14 +252,14 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-a34e7227e4565063",
+        "id": "cn-item-d1c7175cf9e6ab76",
         "category": "cn",
-        "title": "长城魏牌二代蓝山全球首秀定档 10 月 27 日，搭载 Hi-4 插电混动系统",
-        "url": "https://www.ithome.com/1/017/277.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-23T15:20:50.000Z",
-        "summary": "IT之家 10 月 23 日消息，长城汽车今日宣布魏牌二代蓝山全球首秀定档 10 月 27 日。新车采用方盒子设计，搭载由 2.0T 发动机组成的 Hi-4 插电混动系统。 据介绍，魏牌二代蓝山主打“东方豪华”，尺寸为 5300×2050×1960mm、 轴距 3010mm ，轮胎规格 275/50 R21。 新车搭载 2.0T 混动专用发动机，匹配 4 挡混动专用变速箱，电机功率为前 110kW、后 220kW，内置 66.6kWh（1/3C）电池。 IT之家注意到，官方…",
-        "badge": "IT之家"
+        "title": "2026全球治理论坛（雄安）开幕",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-23/10719904.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-23T10:18:54.000Z",
+        "summary": "2026全球治理论坛(雄安)23日晚在河北雄安新区开幕。本次论坛以“重建信心与合作：百年变局与改革完善全球治理”为主题，邀请90多个国家的政界、战略界、学界、工商界及青年领袖等近400人参会，共商改革完善全球治理大计。",
+        "badge": "中新网要闻"
       },
       {
         "id": "cisa-kev-cve-2026-96656",
@@ -191,54 +273,55 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-google-deepmind-ad09b0946a60b7ff",
+        "id": "ai-openai-1a543055a02f9816",
         "category": "ai",
-        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-15T16:08:03.000Z",
-        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50207910",
-        "category": "dev",
-        "title": "Apple Music 404 Not Found",
-        "url": "https://music.apple.com/this-url-doesnt-exist",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-23T12:28:47.000Z",
-        "badge": "HN",
-        "signal": "136 分 · 34 评论"
-      },
-      {
-        "id": "cn-baidu-195e5be1d042fc6e",
-        "category": "cn",
-        "title": "哈啰顺风车 涉黄",
-        "url": "https://www.baidu.com/s?wd=%E5%93%88%E5%95%B0%E9%A1%BA%E9%A3%8E%E8%BD%A6+%E6%B6%89%E9%BB%84&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "近日，哈啰顺风车车主接单时发现疑似招嫖信息，对方将违规暗语藏在送货订单留言区。哈啰回应称，这是新型灰产行为，将封禁相关账号、排查风险点并升级风控模型。",
-        "badge": "热搜",
-        "signal": "7,712,169 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-pqh8-4pj7-32xx",
-        "category": "security",
-        "title": "obsidian-tc HTTP transport lacks Origin/DNS-rebinding protection, enabling drive-by vault access on loopback",
-        "url": "https://github.com/advisories/GHSA-pqh8-4pj7-32xx",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T18:29:02.000Z",
-        "summary": "### Impact The Streamable HTTP transport was constructed without `enableDnsRebindingProtection`/`allowedHosts`/`allowedOrigins` and performed no `Origin`-header validation. With the documented `auth.mode: \"none\"` loopback default, a **driv…",
-        "badge": "CVE-2026-77363",
-        "signal": "CRITICAL · CVSS 9.6"
-      },
-      {
-        "id": "ai-hugging-face-2b3f616d26d343fe",
-        "category": "ai",
-        "title": "Does Your Model Run on AWS Trainium? Look It Up",
-        "url": "https://huggingface.co/blog/torch-neuronx-model-support",
-        "source": "Hugging Face",
+        "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+        "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+        "source": "OpenAI",
         "publishedAt": "2026-10-23T00:00:00.000Z",
-        "badge": "Hugging Face"
+        "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50211474",
+        "category": "dev",
+        "title": "Today, we hacked what we'd set out to hack: the iPhone",
+        "url": "https://blog.calif.io/p/iphone",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-23T16:21:50.000Z",
+        "badge": "HN",
+        "signal": "647 分 · 424 评论"
+      },
+      {
+        "id": "cn-it-e5299df546c6491e",
+        "category": "cn",
+        "title": "消息称苹果在全国 Apple Store 安排移动 / 联通 / 电信工作人员坐镇，现场为 iPhone Duo 取货顾客办理 eSIM",
+        "url": "https://www.ithome.com/1/017/276.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-23T15:05:42.000Z",
+        "summary": "IT之家 10 月 23 日消息，据新浪科技报道，随着苹果首款折叠屏手机 iPhone Duo 发售，目前苹果在全国所有 Apple Store 零售店均安排了中国移动、中国联通和中国电信的工作人员，为顾客现场办理 eSIM 激活业务。 据报道， 只要顾客是在苹果 Apple Store 门店现场取货，就可以在店内由运营商工作人员协助办理相关业务 ，免去以往购机后再单独前往运营商营业厅开通的环节。 IT之家注意到，今天移动还发布公告，透露官方将持续推动 eSIM 线上自助办…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-897f-g5gm-fmxm",
+        "category": "security",
+        "title": "Wasmtime: Bit-packing in Cranelift compiler causes silent overflow and miscompilation",
+        "url": "https://github.com/advisories/GHSA-897f-g5gm-fmxm",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-23T22:02:20.000Z",
+        "summary": "## Summary In Wasmtime prior to v43, the Cranelift compiler backend bit-packs its SSA value indices in a way that can result in silent overflow in release builds, and result in incorrect value references in the IR resulting in arbitrary mi…",
+        "badge": "CVE-2026-115889",
+        "signal": "CRITICAL · CVSS 9.9"
+      },
+      {
+        "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
+        "category": "ai",
+        "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+        "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-14T02:00:14.000Z",
+        "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1251384",
@@ -252,14 +335,14 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-item-d1c7175cf9e6ab76",
+        "id": "cn-baidu-9679ac4a5fadb48f",
         "category": "cn",
-        "title": "2026全球治理论坛（雄安）开幕",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-23/10719904.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-23T10:18:54.000Z",
-        "summary": "2026全球治理论坛(雄安)23日晚在河北雄安新区开幕。本次论坛以“重建信心与合作：百年变局与改革完善全球治理”为主题，邀请90多个国家的政界、战略界、学界、工商界及青年领袖等近400人参会，共商改革完善全球治理大计。",
-        "badge": "中新网要闻"
+        "title": "人民子弟兵投入西藏巴青抗震救灾",
+        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E5%AD%90%E5%BC%9F%E5%85%B5%E6%8A%95%E5%85%A5%E8%A5%BF%E8%97%8F%E5%B7%B4%E9%9D%92%E6%8A%97%E9%9C%87%E6%95%91%E7%81%BE&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "10月22日22时33分许，西藏那曲市巴青县发生7.0级地震，造成重大人员伤亡，人民子弟兵第一时间投入抗震救灾。目前，抗震救灾各项工作正在紧张有序进行。",
+        "badge": "热搜",
+        "signal": "7,616,989 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96655",
@@ -273,6 +356,46 @@
         "signal": "已遭利用 · 整改期限 2026-11-03"
       },
       {
+        "id": "ai-hugging-face-51888f116f5b0837",
+        "category": "ai",
+        "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+        "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-22T22:24:34.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50214323",
+        "category": "dev",
+        "title": "We are all living inside of an obscure sci-fi film from 1970",
+        "url": "https://thanksforthatjim.bearblog.dev/we-are-all-living-inside-of-an-obscure-sci-fi-film-from-1970/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-23T19:41:59.000Z",
+        "badge": "HN",
+        "signal": "63 分 · 39 评论"
+      },
+      {
+        "id": "cn-item-75b206c08f3858c9",
+        "category": "cn",
+        "title": "证监会就私募投资母基金管理新规征求意见",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-23/10719877.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-23T09:36:44.000Z",
+        "summary": "中新网10月23日电 据“证监会发布”微信公众号消息，为进一步规范私募投资母基金业务活动，促进私募投资母基金规范健康发展，中国证监会根据《中华人民共和国证券投资基金法》《私募投资基金监督管理条例》(以下简称《私募条例》)等法律法规，起草了《私募投资母基金管理规定》(以下简称《母基金规定》)征求意见稿，现向社会公开征求意见。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-v4x8-3wr5-3wq8",
+        "category": "security",
+        "title": "filelock ReadWriteLock: SQLite reopens the lock database by name, so a planted symlink or journal file makes the lock user's process overwrite or unlink its own files",
+        "url": "https://github.com/advisories/GHSA-v4x8-3wr5-3wq8",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-23T21:59:08.000Z",
+        "summary": "`ReadWriteLock` and `AsyncReadWriteLock` (the SQLite-backed reader/writer lock) hand SQLite a name they do not control. On Linux the lock validates its database through a descriptor (the number the kernel gives a process for an open file).…",
+        "badge": "CVE-2026-112940",
+        "signal": "HIGH · CVSS 7.1"
+      },
+      {
         "id": "ai-openai-891b7e0bbf66f86d",
         "category": "ai",
         "title": "Build more responsive apps with the Decisions API",
@@ -281,47 +404,6 @@
         "publishedAt": "2026-10-22T19:00:00.000Z",
         "summary": "Fast, focused, low-cost decisions for any application.",
         "badge": "OpenAI"
-      },
-      {
-        "id": "hn-50211746",
-        "category": "dev",
-        "title": "UUIDv7 doesn't have the properties you think it does",
-        "url": "https://alexsci.com/blog/uuidv7-is-weird/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-23T16:39:45.000Z",
-        "badge": "HN",
-        "signal": "56 分 · 38 评论"
-      },
-      {
-        "id": "cn-it-e5299df546c6491e",
-        "category": "cn",
-        "title": "消息称苹果在全国 Apple Store 安排移动 / 联通 / 电信工作人员坐镇，现场为 iPhone Duo 取货顾客办理 eSIM",
-        "url": "https://www.ithome.com/1/017/276.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-23T15:05:42.000Z",
-        "summary": "IT之家 10 月 23 日消息，据新浪科技报道，随着苹果首款折叠屏手机 iPhone Duo 发售，目前苹果在全国所有 Apple Store 零售店均安排了中国移动、中国联通和中国电信的工作人员，为顾客现场办理 eSIM 激活业务。 据报道， 只要顾客是在苹果 Apple Store 门店现场取货，就可以在店内由运营商工作人员协助办理相关业务 ，免去以往购机后再单独前往运营商营业厅开通的环节。 IT之家注意到，今天移动还发布公告，透露官方将持续推动 eSIM 线上自助办…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-737x-cwfr-5vvc",
-        "category": "security",
-        "title": "obsidian-tc: Declined human-in-the-loop confirmations can permit destructive calls over HTTP",
-        "url": "https://github.com/advisories/GHSA-737x-cwfr-5vvc",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T17:30:10.000Z",
-        "summary": "### Summary On a Streamable HTTP deployment with `auth.jwtSecret` configured, serving a 2026-07-28-era client that declared `elicitation.form` support, a call to a dispatch-gated tool (`destructive: true`, or a scope with an HITL floor) th…",
-        "badge": "CVE-2026-115477",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
-        "category": "ai",
-        "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
-        "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-14T02:00:14.000Z",
-        "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
-        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1251378",
@@ -335,14 +417,14 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-9679ac4a5fadb48f",
+        "id": "cn-it-ccfea7b1e1160a0a",
         "category": "cn",
-        "title": "人民子弟兵投入西藏巴青抗震救灾",
-        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E5%AD%90%E5%BC%9F%E5%85%B5%E6%8A%95%E5%85%A5%E8%A5%BF%E8%97%8F%E5%B7%B4%E9%9D%92%E6%8A%97%E9%9C%87%E6%95%91%E7%81%BE&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "10月22日22时33分许，西藏那曲市巴青县发生7.0级地震，造成重大人员伤亡，人民子弟兵第一时间投入抗震救灾。目前，抗震救灾各项工作正在紧张有序进行。",
-        "badge": "热搜",
-        "signal": "7,616,379 热度"
+        "title": "国家邮政局召开邮政快递业安全治理规范化座谈会：要持续深入推进“反内卷”工作",
+        "url": "https://www.ithome.com/1/017/275.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-23T14:46:42.000Z",
+        "summary": "IT之家 10 月 23 日消息，据国家邮政局，10 月 22 日至 23 日，国家邮政局在河南洛阳召开邮政快递业安全治理规范化座谈会。 会议要求，各级邮政管理部门要强化行业监管核心职能，大力加强行业安全监管，维护快递市场秩序。各企业要把安全责任牢牢扛在肩上，统筹发展和安全，进一步抓实抓细行业安全各项工作。 会议强调，要聚焦突出问题和关键环节，以更大力度更实举措做好行业安全工作： 一是大力整治生产安全突出隐患 。要强化重大事故隐患排查整治，深入整治消防隐患，严格规范外包管理…",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2026-96654",
@@ -356,54 +438,13 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-hugging-face-51888f116f5b0837",
+        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
         "category": "ai",
-        "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
-        "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-22T22:24:34.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50202285",
-        "category": "dev",
-        "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-        "url": "https://edjefferson.com/localwiki/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-22T23:01:18.000Z",
-        "badge": "HN",
-        "signal": "1035 分 · 205 评论"
-      },
-      {
-        "id": "cn-item-75b206c08f3858c9",
-        "category": "cn",
-        "title": "证监会就私募投资母基金管理新规征求意见",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-23/10719877.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-23T09:36:44.000Z",
-        "summary": "中新网10月23日电 据“证监会发布”微信公众号消息，为进一步规范私募投资母基金业务活动，促进私募投资母基金规范健康发展，中国证监会根据《中华人民共和国证券投资基金法》《私募投资基金监督管理条例》(以下简称《私募条例》)等法律法规，起草了《私募投资母基金管理规定》(以下简称《母基金规定》)征求意见稿，现向社会公开征求意见。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-84c9-qqpq-2pq5",
-        "category": "security",
-        "title": "obsidian-tc tokens can access arbitrary configured vaults",
-        "url": "https://github.com/advisories/GHSA-84c9-qqpq-2pq5",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T17:29:17.000Z",
-        "summary": "### Impact Tool dispatch did not check the caller-supplied `input.vault` against the caller's bound vault (`ctx.vaultId`); the folder ACL was a single global instance and the JWT carried no vault claim. As a result, **any valid token could…",
-        "badge": "CVE-2026-77366",
-        "signal": "CRITICAL · CVSS 9.9"
-      },
-      {
-        "id": "ai-openai-6400feb681472530",
-        "category": "ai",
-        "title": "What FDE means at OpenAI",
-        "url": "https://openai.com/index/forward-deployed-engineering-means",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-22T06:00:00.000Z",
-        "summary": "What forward deployed engineering means at OpenAI",
-        "badge": "OpenAI"
+        "title": "Developing Gemini 4 Argon responsibly and safely",
+        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-13T19:43:07.000Z",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1251376",
@@ -417,46 +458,6 @@
         "signal": "5 回复"
       },
       {
-        "id": "cn-it-ccfea7b1e1160a0a",
-        "category": "cn",
-        "title": "国家邮政局召开邮政快递业安全治理规范化座谈会：要持续深入推进“反内卷”工作",
-        "url": "https://www.ithome.com/1/017/275.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-23T14:46:42.000Z",
-        "summary": "IT之家 10 月 23 日消息，据国家邮政局，10 月 22 日至 23 日，国家邮政局在河南洛阳召开邮政快递业安全治理规范化座谈会。 会议要求，各级邮政管理部门要强化行业监管核心职能，大力加强行业安全监管，维护快递市场秩序。各企业要把安全责任牢牢扛在肩上，统筹发展和安全，进一步抓实抓细行业安全各项工作。 会议强调，要聚焦突出问题和关键环节，以更大力度更实举措做好行业安全工作： 一是大力整治生产安全突出隐患 。要强化重大事故隐患排查整治，深入整治消防隐患，严格规范外包管理…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-110936",
-        "category": "security",
-        "title": "Siemens Software Center：Siemens Software Center Uncontrolled Search Path Element Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-110936",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-20T00:00:00.000Z",
-        "summary": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code ex…",
-        "badge": "CVE-2026-110936",
-        "signal": "已遭利用 · 整改期限 2026-11-03"
-      },
-      {
-        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
-        "category": "ai",
-        "title": "Developing Gemini 4 Argon responsibly and safely",
-        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-13T19:43:07.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50169499",
-        "category": "dev",
-        "title": "The Real Kevin Bacon",
-        "url": "https://pudding.cool/2026/10/kevin-bacon/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-20T17:10:05.000Z",
-        "badge": "HN",
-        "signal": "111 分 · 35 评论"
-      },
-      {
         "id": "cn-baidu-c18c2c0af13d5c07",
         "category": "cn",
         "title": "未成年人向火锅小便 家长被判赔220万",
@@ -464,18 +465,18 @@
         "source": "百度热搜",
         "summary": "10月23日，最高人民法院发布典型案例通报未成年人向火锅小便侵权案。此前于2025年2月，两未成年人为求刺激在某火锅门店向锅内小便并发布视频，致企业商誉受损。上海市黄浦区人民法院判决两人父母赔偿共计220万元并道歉，判决现已生效。",
         "badge": "热搜",
-        "signal": "7,520,339 热度"
+        "signal": "7,524,380 热度"
       },
       {
-        "id": "github-advisory-ghsa-78g4-xqwv-q3g8",
+        "id": "github-advisory-ghsa-5x8w-8jj5-q52h",
         "category": "security",
-        "title": "Pillow: Bundled libopenjp2 2.5.4 in all wheels since 11.1.0 carries OSV-2025-219 heap-buffer-overflow write reachable from Image.open().load()",
-        "url": "https://github.com/advisories/GHSA-78g4-xqwv-q3g8",
+        "title": "Pillow: Heap buffer overflow in FlashPix (FPX) JPEG decoding leads to code execution",
+        "url": "https://github.com/advisories/GHSA-5x8w-8jj5-q52h",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-22T17:01:08.000Z",
-        "summary": "### Summary Every Pillow wheel from 11.1.0 onward bundles a libopenjp2 containing a heap-buffer-overflow **write** that is fixed upstream on master but has never appeared in an OpenJPEG release. See https://osv.dev/vulnerability/OSV-2025-2…",
-        "badge": "GHSA-78G4-XQWV-Q3G8",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-10-23T21:55:21.000Z",
+        "summary": "### Credits **Researcher**: Alex Bouffard (mixbo@pebwalker.com) ### Summary A heap buffer overflow in Pillow's FlashPix (FPX) JPEG-tile decoder lets an attacker achieve arbitrary code execution by getting an application to open a single cr…",
+        "badge": "CVE-2026-112398",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-0e5fad3ca5f8a881",
@@ -485,17 +486,6 @@
         "source": "Hugging Face",
         "publishedAt": "2026-10-22T07:51:31.000Z",
         "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1251358",
-        "category": "dev",
-        "title": "我感觉有点死了， artex 也太可怕了",
-        "url": "https://www.v2ex.com/t/1251358",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-23T13:09:16.000Z",
-        "summary": "今天闲的没事，部署了一套 artex ，然后接入 ds 让它探测我在自己的 home lab 上部署的公网服务有没有漏洞。 本来是只想让它测测主域名入口的，结果它直接就发现了同 IP 存在复数个二级域名，然后就开始了无情的大调查。 目前已经探测了 37%的链路，1 个 critical ，6 个 high 的漏洞。高危的我都实时快速修复的修复，下线的下线。几个危险入口已经处理了，后面估计没啥大问题了。 总结起来几个严重的问题，从低到高： 我几年前部署的 cAdvisor 服…",
-        "badge": "程序员",
-        "signal": "5 回复"
       }
     ]
   },
@@ -512,7 +502,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 41682,
+        "stars": 41998,
         "starsToday": 2706
       },
       {
@@ -522,7 +512,7 @@
         "url": "https://github.com/php/php-src",
         "description": "The PHP Interpreter",
         "language": "C",
-        "stars": 41523,
+        "stars": 41541,
         "starsToday": 722
       },
       {
@@ -532,7 +522,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 32107,
+        "stars": 32172,
         "starsToday": 643
       },
       {
@@ -542,7 +532,7 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 18625,
+        "stars": 18727,
         "starsToday": 1240
       },
       {
@@ -552,7 +542,7 @@
         "url": "https://github.com/Renhuai123/ziwei-doushu",
         "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "language": "TypeScript",
-        "stars": 6809,
+        "stars": 6829,
         "starsToday": 547
       },
       {
@@ -562,7 +552,7 @@
         "url": "https://github.com/SnailSploit/Claude-Red",
         "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
         "language": "Python",
-        "stars": 8305,
+        "stars": 8414,
         "starsToday": 209
       },
       {
@@ -572,7 +562,7 @@
         "url": "https://github.com/OpenBMB/VoxCPM",
         "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
         "language": "Python",
-        "stars": 40159,
+        "stars": 40221,
         "starsToday": 144
       },
       {
@@ -582,10 +572,10 @@
         "url": "https://github.com/nodejs/node",
         "description": "Node.js JavaScript runtime ✨🐢🚀✨",
         "language": "JavaScript",
-        "stars": 122753,
+        "stars": 122822,
         "starsToday": 93
       }
     ],
-    "updatedAt": "2026-10-23T19:14:26.693Z"
+    "updatedAt": "2026-10-23T22:14:59.258Z"
   }
 }
