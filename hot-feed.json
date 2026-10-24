@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-24T05:55:04.792Z",
+  "generatedAt": "2026-10-24T07:17:18.940Z",
   "intelligence": {
-    "updatedAt": "2026-10-24T05:55:04.792Z",
+    "updatedAt": "2026-10-24T07:17:18.940Z",
     "items": [
       {
-        "id": "cn-item-7fcd310e85f5ee59",
+        "id": "cn-item-55151e9a7c2250de",
         "category": "cn",
-        "title": "四价流感疫苗消失了？真相来了→",
-        "url": "https://www.chinanews.com.cn/jk/2026/10-24/10720251.shtml",
+        "title": "菲律宾空军两架教练机相撞 4名空军飞行员死亡",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-24/10720335.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-24T03:32:19.000Z",
-        "summary": "天气转凉",
+        "publishedAt": "2026-10-24T07:06:12.000Z",
+        "summary": "中新网10月24日电 据菲律宾《马尼拉公报》报道，当地时间24日，菲律宾空军证实，两架SF-260型教练机23日下午在八打雁省费尔南多空军基地进行训练飞行任务时相撞，事故导致4名空军飞行员死亡。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50212065",
+        "id": "hn-50218430",
         "category": "dev",
-        "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-        "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+        "title": "OBS Studio 33",
+        "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T16:59:08.000Z",
+        "publishedAt": "2026-10-24T04:49:58.000Z",
         "badge": "HN",
-        "signal": "828 分 · 493 评论"
+        "signal": "48 分 · 0 评论"
       },
       {
-        "id": "cn-it-a9169f55a8cafd33",
+        "id": "cn-it-a15da93b279c5bde",
         "category": "cn",
-        "title": "微软 Win11 25H2 26220.9757 预览版发布：重新设计文件管理器右键菜单",
-        "url": "https://www.ithome.com/1/017/369.htm",
+        "title": "中国联通：已在苹果直营店 / 授权店安排千余名驻店员，协助 iPhone Duo 购机用户现场开通 eSIM",
+        "url": "https://www.ithome.com/1/017/397.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-24T05:47:03.000Z",
-        "summary": "IT之家 10 月 24 日消息，微软昨日（10 月 23 日）发布博文，邀请 Beta 频道的 Windows Insider 项目成员， 测试适用于 Windows 11 系统的预览版更新，25H2 版本升至 Build 26220.9757；而 26H1 版本升至 28020.3292。 Windows 11 Build 26220.9757 预览版更新内容： 一、文件管理器重新设计右键菜单 微软正在文件资源管理器中逐步推出重新设计的右键菜单，目标是让菜单更快、更清爽…",
+        "publishedAt": "2026-10-24T07:14:58.000Z",
+        "summary": "IT之家 10 月 24 日消息，中国联通发文，称目前联通已在苹果 Apple Store 直营店、APR 苹果授权店等多家门店安排千余名驻店员，协助用户现场开通 eSIM，全程仅需约 3 分钟。 除了联通以外，参考IT之家昨日报道，有消息称移动、电信工作人员也在苹果 Apple Store 直营店内驻守，为现场取货的顾客现场办理 eSIM 激活业务，免去以往购机后再单独前往运营商营业厅开通的环节。 而对于新上市的 Apple Watch Series 12、Apple W…",
         "badge": "IT之家"
       },
       {
@@ -77,15 +77,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1251450",
+        "id": "v2ex-1251473",
         "category": "dev",
-        "title": "Gemini 4 Argon 进一步降智",
-        "url": "https://www.v2ex.com/t/1251450",
+        "title": "[dsh-gitea-search 发布] DSH+Gitea 引入 SQLite FTS 索引+向量记忆副库",
+        "url": "https://www.v2ex.com/t/1251473",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T04:11:00.000Z",
-        "summary": "前情提要： https://v2ex.com/t/1251363 Antigravity 官方客户端，今天上午进一步降智，已经到了这种程度： 会编造一些非常简单的内容，例如弄错项目的快捷键，明明已经有一个单独的简短清晰的快捷键文档，正常智力不太可能弄错。 会编造一些无关操作，缺乏逻辑。例如给一个已经非常明确且稳定重现的 Bug 的解决方案，非要在方案里添油加醋一些无关重现操作干扰阅读。 第一次出现完全不遵守规定的情况。提交文档，但提交信息不规范，被提交信息检查脚本拦截。之前…",
+        "publishedAt": "2026-10-24T06:18:10.000Z",
+        "summary": "终于搓完发布了 #dsh #dsh-gitea-search 欢迎试用、提建议 项目地址 ： https://github.com/offzen/dsh-gitea-search 开发的动机 ：token 不够烧的，还经常因为重复的任务延长等待，无数的 429 限流...原理上很多任务可以在本地加速。 DSH 的插件机制很适合自己改造，只有一个搜索框显然是太弱了；手动去输脚本使用上不现实。 跨会话检索和长期记忆 ：用 SQLite 全文索引加快关键词查找，再用向量副库做语义…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-22607686dd01e380",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "当下，年轻人正在抛弃帆布鞋。数据显示，匡威2026财年营收约11.7亿美元，较2023财年峰值缩水超五成。专家分析称，帆布鞋失宠系款式缺乏新意、资源扶持有限及年轻人需求改变所致。",
         "badge": "热搜",
-        "signal": "7,808,540 热度"
+        "signal": "7,808,214 热度"
       },
       {
         "id": "cisa-kev-cve-2026-110447",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50217500",
+        "id": "hn-50212065",
         "category": "dev",
-        "title": "Twelve years of distributed SQLite",
-        "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
+        "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+        "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
         "source": "Hacker News",
-        "publishedAt": "2026-10-24T01:16:58.000Z",
+        "publishedAt": "2026-10-23T16:59:08.000Z",
         "badge": "HN",
-        "signal": "109 分 · 12 评论"
+        "signal": "861 分 · 503 评论"
       },
       {
-        "id": "cn-item-27d2c86a9afc9ef2",
+        "id": "cn-item-b19947867b7ceb8f",
         "category": "cn",
-        "title": "700余件（套）文物串联两千余年历史，中国长城博物馆开馆",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-24/10720236.shtml",
+        "title": "中小学秋假日期公布！多地上新旅游“福利大礼包”",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-24/10720330.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-24T03:05:31.000Z",
-        "summary": "10月24日，中国长城博物馆在北京八达岭长城景区试运行开放。经三年多改造提升，总建筑面积约16000平方米，基本陈列上展文物700余件(套)……这座长城脚下的博物馆，怎样以文物串联起长城沿线15个省(自治区、直辖市)的文明故事，展示两千年间厚重多彩的长城文化？",
+        "publishedAt": "2026-10-24T06:57:04.000Z",
+        "summary": "秋意渐浓，风光正好",
         "badge": "中新网要闻"
       },
       {
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1251447",
+        "id": "v2ex-1251450",
         "category": "dev",
-        "title": "DeepSeek 智谱 KIMI ，哪个有可能成为中国的巨无霸科技公司？",
-        "url": "https://www.v2ex.com/t/1251447",
+        "title": "Gemini 4 Argon 进一步降智",
+        "url": "https://www.v2ex.com/t/1251450",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T04:00:25.000Z",
-        "summary": "豆包和千问就不讨论了，背后的公司已经是超级巨无霸。 现在标题里面的三个公司，哪个最有潜力最有可能成功突破为令人瞩目的巨无霸科技公司，为什么？ 我个人觉得 deepseek 可能性较大，另外两家虽然也有极强的技术能力，但是似乎节奏没有 ds 看起来那么有规划和目标，当然平常我用 ds4.1f 也更多。更深入的分析暂时没思考，就是 1024 来了，忽然想起的一个问题",
+        "publishedAt": "2026-10-24T04:11:00.000Z",
+        "summary": "前情提要： https://v2ex.com/t/1251363 Antigravity 官方客户端，今天上午进一步降智，已经到了这种程度： 会编造一些非常简单的内容，例如弄错项目的快捷键，明明已经有一个单独的简短清晰的快捷键文档，正常智力不太可能弄错。 会编造一些无关操作，缺乏逻辑。例如给一个已经非常明确且稳定重现的 Bug 的解决方案，非要在方案里添油加醋一些无关重现操作干扰阅读。 第一次出现完全不遵守规定的情况。提交文档，但提交信息不规范，被提交信息检查脚本拦截。之前…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-d88c76297bd52e9e",
+        "id": "cn-it-432aa1114ed56d3d",
         "category": "cn",
-        "title": "微软 Win11 26H1 推送 28120.3302 预览版：开始菜单可调大小等",
-        "url": "https://www.ithome.com/1/017/368.htm",
+        "title": "比亚迪公布第三代秦 PLUS DM-i 更多信息：综合续航 2290 公里，百公里亏电油耗 2.58 升",
+        "url": "https://www.ithome.com/1/017/396.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-24T05:37:32.000Z",
-        "summary": "IT之家 10 月 24 日消息，微软昨日（10 月 23 日）发布公告， 邀请 Experimental 频道的 Windows Insider 项目成员，测试适用于 Windows 11 的预览版更新。 IT之家援引博文介绍，本次更新适用于 Experimental 频道 3 个版本： 26H2 版本更新后版本号升至 Build 26340.9767 26H1 版本更新后版本号升至 Build 28120.3302 未来平台版本更新后版本号升至 Build 29695.…",
+        "publishedAt": "2026-10-24T07:12:15.000Z",
+        "summary": "IT之家 10 月 24 日消息，今天（24 日）下午，比亚迪王朝网销售事业部总经理路天在微博发文宣布，第三代秦 PLUS 将于 10 月 27 日正式上市 。根据网友的提问，官方开设了“快问快答”栏目，并于今天公布第一期。 IT之家汇总如下： 第三代秦 PLUS DM-i 大了很多，具体尺寸是多少？ 第三代秦 PLUS DM-i 的 长宽高分别是：4840×1900×1498mm，轴距更是达到 2800mm ，达到中级车的水准，为用户日常通勤、多人出游提供了更宽适的驾乘空…",
         "badge": "IT之家"
       },
       {
@@ -201,24 +201,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50207910",
+        "id": "hn-50217500",
         "category": "dev",
-        "title": "Apple Music 404 Not Found",
-        "url": "https://music.apple.com/this-url-doesnt-exist",
+        "title": "Twelve years of distributed SQLite",
+        "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T12:28:47.000Z",
+        "publishedAt": "2026-10-24T01:16:58.000Z",
         "badge": "HN",
-        "signal": "693 分 · 214 评论"
+        "signal": "141 分 · 16 评论"
       },
       {
-        "id": "cn-baidu-5fadd03db7b1efa4",
+        "id": "cn-baidu-fc9c6e2397a310c9",
         "category": "cn",
-        "title": "数十万辆新能源“孤儿车”谁负责修",
-        "url": "https://www.baidu.com/s?wd=%E6%95%B0%E5%8D%81%E4%B8%87%E8%BE%86%E6%96%B0%E8%83%BD%E6%BA%90%E2%80%9C%E5%AD%A4%E5%84%BF%E8%BD%A6%E2%80%9D%E8%B0%81%E8%B4%9F%E8%B4%A3%E4%BF%AE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "老年人摔倒后身体断崖式衰退真相",
+        "url": "https://www.baidu.com/s?wd=%E8%80%81%E5%B9%B4%E4%BA%BA%E6%91%94%E5%80%92%E5%90%8E%E8%BA%AB%E4%BD%93%E6%96%AD%E5%B4%96%E5%BC%8F%E8%A1%B0%E9%80%80%E7%9C%9F%E7%9B%B8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，工信部等部门发布《征求意见稿》，首次将汽车维修经济性纳入新车准入管理。此前，威马等车企破产致数十万辆新能源车沦为“孤儿车”，面临配件断供维修难。因三电系统加密，第三方维修厂拿不到配件读不了数据，陷入“盲修”困境。",
+        "summary": "跌倒是我国65岁以上老年人因伤致死、致残的首位原因，很多老年人摔倒后，身体断崖式衰退。其实，绝大多数老人，不是死于摔倒本身，而是死于摔倒之后长期卧床引发的肺部感染、血栓及多器官衰竭等致命连锁反应。",
         "badge": "热搜",
-        "signal": "7,712,207 热度"
+        "signal": "7,712,632 热度"
       },
       {
         "id": "github-advisory-ghsa-xcx6-jx8p-x3h5",
@@ -241,24 +241,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1251436",
+        "id": "v2ex-1251447",
         "category": "dev",
-        "title": "Pro 已掉，羊毛没了🤣",
-        "url": "https://www.v2ex.com/t/1251436",
+        "title": "DeepSeek 智谱 KIMI ，哪个有可能成为中国的巨无霸科技公司？",
+        "url": "https://www.v2ex.com/t/1251447",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T03:23:25.000Z",
-        "summary": "我查了一下邮箱，原因找到了：今天太平洋时间下午 5:04 ，Google Play 发了一封「退款已获批准」，退的是 US$9.79 ，对应的商品是「 Google AI Pro (5 TB) with YouTube Premium 」，订单号 SOP.3392-6561-1462-83481 ，也就是 10/19 升级的那个订阅。订阅退款之后一般会直接取消，所以 Gemini 就变回免费版了。 Roger ，这个退款是你自己申请的吗？如果不是，建议去 Google Pl…",
+        "publishedAt": "2026-10-24T04:00:25.000Z",
+        "summary": "豆包和千问就不讨论了，背后的公司已经是超级巨无霸。 现在标题里面的三个公司，哪个最有潜力最有可能成功突破为令人瞩目的巨无霸科技公司，为什么？ 我个人觉得 deepseek 可能性较大，另外两家虽然也有极强的技术能力，但是似乎节奏没有 ds 看起来那么有规划和目标，当然平常我用 ds4.1f 也更多。更深入的分析暂时没思考，就是 1024 来了，忽然想起的一个问题",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-item-14866948c418f112",
+        "id": "cn-item-529ac3796f74b421",
         "category": "cn",
-        "title": "外媒：瓦努阿图附近海域发生7.2级地震 已触发海啸预警",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-24/10720235.shtml",
+        "title": "“被看见”的“阿达西”：烟火漫处守本心",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-24/10720324.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-24T02:57:53.000Z",
-        "summary": "中新网10月24日电 据美国地质调查局地震信息网消息，瓦努阿图附近海域24日发生7.2级地震，震源深度10公里。",
+        "publishedAt": "2026-10-24T06:48:47.000Z",
+        "summary": "中新网西安10月24日电 题：“被看见”的“阿达西”：烟火漫处守本心",
         "badge": "中新网要闻"
       },
       {
@@ -290,16 +290,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-24T03:43:54.000Z",
         "badge": "HN",
-        "signal": "35 分 · 2 评论"
+        "signal": "66 分 · 7 评论"
       },
       {
-        "id": "cn-it-70f5757bc457e458",
+        "id": "cn-it-a1dab1abe02e7c72",
         "category": "cn",
-        "title": "微软 Win11 26H2 发布 26340.9767 预览版：增强实验性功能体验、升级网络测速",
-        "url": "https://www.ithome.com/1/017/367.htm",
+        "title": "少量账号发送疑似色情引流信息，企业微信安全团队公告确认为某第三方外挂软件服务被攻破所致",
+        "url": "https://www.ithome.com/1/017/395.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-24T05:26:41.000Z",
-        "summary": "IT之家 10 月 24 日消息，微软昨日（10 月 23 日）发布公告，邀请 Experimental 频道的 Windows Insider 项目成员，测试适用于 Windows 11 的预览版更新。 IT之家援引博文介绍，本次更新适用于 Experimental 频道 3 个版本： 26H2 版本更新后版本号升至 Build 26340.9767 26H1 版本更新后版本号升至 Build 28120.3302 未来平台版本更新后版本号升至 Build 29695.1…",
+        "publishedAt": "2026-10-24T07:08:41.000Z",
+        "summary": "IT之家 10 月 24 日消息，针对少量企业微信账号向客户发送疑似色情引流信息一事，企业微信安全团队今日发布公告，称经安全团队排查， 确认为某第三方外挂软件服务被攻破，导致使用该外挂服务的账号受到影响 。我们已将受影响的账号强制下线，并封禁相关引流链接。 企业微信安全团队表示，以“账号多开”、“群控”等为噱头的外挂软件， 存在巨大的安全隐患和隐私风险 。使用此类服务，可能导致账号被他人操控、企业数据和客户信息泄露，危及企业正常经营，损害客户权益。企业微信还将进一步加大对外…",
         "badge": "IT之家"
       },
       {
@@ -324,15 +324,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1251430",
+        "id": "v2ex-1251436",
         "category": "dev",
-        "title": "当前 Claude 能替代程序员么？",
-        "url": "https://www.v2ex.com/t/1251430",
+        "title": "Pro 已掉，羊毛没了🤣",
+        "url": "https://www.v2ex.com/t/1251436",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T02:58:36.000Z",
-        "summary": "Claude 的能力还是需要满足一定条件后才能实现",
+        "publishedAt": "2026-10-24T03:23:25.000Z",
+        "summary": "我查了一下邮箱，原因找到了：今天太平洋时间下午 5:04 ，Google Play 发了一封「退款已获批准」，退的是 US$9.79 ，对应的商品是「 Google AI Pro (5 TB) with YouTube Premium 」，订单号 SOP.3392-6561-1462-83481 ，也就是 10/19 升级的那个订阅。订阅退款之后一般会直接取消，所以 Gemini 就变回免费版了。 Roger ，这个退款是你自己申请的吗？如果不是，建议去 Google Pl…",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "13 回复"
       },
       {
         "id": "cn-baidu-8b51f2b4a8fd3294",
@@ -342,7 +342,7 @@
         "source": "百度热搜",
         "summary": "10月24日3时25分，我国在酒泉卫星发射中心使用长征四号乙运载火箭，成功将遥感五十三号07-09星、遥感五十六号19-21星发射升空，卫星顺利进入预定轨道，发射任务取得圆满成功。",
         "badge": "热搜",
-        "signal": "7,618,761 热度"
+        "signal": "7,618,407 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96655",
@@ -365,23 +365,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50202285",
+        "id": "hn-50207910",
         "category": "dev",
-        "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-        "url": "https://edjefferson.com/localwiki/",
+        "title": "Apple Music 404 Not Found",
+        "url": "https://music.apple.com/this-url-doesnt-exist",
         "source": "Hacker News",
-        "publishedAt": "2026-10-22T23:01:18.000Z",
+        "publishedAt": "2026-10-23T12:28:47.000Z",
         "badge": "HN",
-        "signal": "1332 分 · 229 评论"
+        "signal": "722 分 · 228 评论"
       },
       {
-        "id": "cn-item-2ea1d8017ef6840e",
+        "id": "cn-item-1e89c65199b57990",
         "category": "cn",
-        "title": "一箭六星 长四乙火箭成功发射",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-24/10720228.shtml",
+        "title": "3万亿级参数规模 全球最大开源AI大模型上新",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-24/10720310.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-24T02:53:30.000Z",
-        "summary": "中新社北京10月24日电 (记者 马帅莎)据中国航天科技集团消息，北京时间10月24日3时25分，中国在酒泉卫星发射中心使用长征四号乙运载火箭，成功将遥感五十三号07-09星、遥感五十六号19-21星发射升空，卫星顺利进入预定轨道，发射任务取得圆满成功。",
+        "publishedAt": "2026-10-24T06:37:07.000Z",
+        "summary": "中新社北京10月24日电 (记者 刘亮)10月24日凌晨，中国人工智能(AI)大模型企业月之暗面(Moonshot AI)发布新一代开源大模型Kimi K3.1 Pro。该模型为3万亿级参数规模，支持100万词元(Token)上下文窗口，蝉联全球参数规模最大的开源模型。",
         "badge": "中新网要闻"
       },
       {
@@ -417,13 +417,13 @@
         "signal": "6 回复"
       },
       {
-        "id": "cn-it-e29d6a0544ed0735",
+        "id": "cn-it-731ff69585338111",
         "category": "cn",
-        "title": "微软“邮件革命”仅一年就退场：Outlook 收件箱 AI 整理 Prioritize My Inbox 功能下周起停用",
-        "url": "https://www.ithome.com/1/017/362.htm",
+        "title": "父亲突发脑梗后儿子用豆包 AI 抢出救命时间，话题登顶微博热搜",
+        "url": "https://www.ithome.com/1/017/394.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-24T05:07:40.000Z",
-        "summary": "IT之家 10 月 24 日消息，科技媒体 Windows Central 昨日（10 月 23 日）发布博文，报道称微软已宣布将于 2026 年 10 月 26 日开始， 退役 Outlook 中的“优先处理我的收件箱”（Prioritize My Inbox）功能。 IT之家援引博文介绍，该功能于 2025 年上线，主要通过调用 Copilot AI 帮助 Outlook 用户整理邮件，从而在大量邮件中，帮助用户更快找到真正需要优先处理的内容。该功能在上线初期，被微软称…",
+        "publishedAt": "2026-10-24T07:08:33.000Z",
+        "summary": "IT之家 10 月 24 日消息，今日一则“耳机用 AI 为父亲抢出救命时间”的话题在社交平台引发关注，并且一度登上微博热搜榜第一。 据青岛广播电视台《先锋新闻》等多个媒体报道，山东聊城 90 后小伙于建进的父亲在遛弯回家后突然出现双腿无力、吞咽不畅的症状。于建进没有选择“再观察看看”，而是把症状和父亲的“三高”病史一起发给了豆包。 豆包的回复没有停留在分诊建议层面。据于先生描述，AI 给出的第一句话就是“脑梗征兆，建议立即就医”。在他补充老人既往病史后，豆包再次发出警示：…",
         "badge": "IT之家"
       },
       {
@@ -447,24 +447,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50213925",
+        "id": "hn-50202285",
         "category": "dev",
-        "title": "Dessa: Conversation Model trained only on speech",
-        "url": "https://block.xyz/dessa",
+        "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+        "url": "https://edjefferson.com/localwiki/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T19:09:54.000Z",
+        "publishedAt": "2026-10-22T23:01:18.000Z",
         "badge": "HN",
-        "signal": "325 分 · 127 评论"
+        "signal": "1348 分 · 230 评论"
       },
       {
-        "id": "cn-baidu-da644e55136edbc9",
+        "id": "cn-baidu-5fadd03db7b1efa4",
         "category": "cn",
-        "title": "有些癌症真是“胖出来的”",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%89%E4%BA%9B%E7%99%8C%E7%97%87%E7%9C%9F%E6%98%AF%E2%80%9C%E8%83%96%E5%87%BA%E6%9D%A5%E7%9A%84%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "数十万辆新能源“孤儿车”谁负责修",
+        "url": "https://www.baidu.com/s?wd=%E6%95%B0%E5%8D%81%E4%B8%87%E8%BE%86%E6%96%B0%E8%83%BD%E6%BA%90%E2%80%9C%E5%AD%A4%E5%84%BF%E8%BD%A6%E2%80%9D%E8%B0%81%E8%B4%9F%E8%B4%A3%E4%BF%AE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "专家解读指出，国内覆盖约1414万人口的肿瘤登记数据显示，近一半为肥胖相关癌症，肥胖为肿瘤发展提供“温床”。专家提醒，体重正常不等于健康，需警惕体脂偏高的肌少性肥胖。",
+        "summary": "近日，工信部等部门发布《征求意见稿》，首次将汽车维修经济性纳入新车准入管理。此前，威马等车企破产致数十万辆新能源车沦为“孤儿车”，面临配件断供维修难。因三电系统加密，第三方维修厂拿不到配件读不了数据，陷入“盲修”困境。",
         "badge": "热搜",
-        "signal": "7,522,826 热度"
+        "signal": "7,521,327 热度"
       },
       {
         "id": "github-advisory-ghsa-834v-8h66-3h79",
@@ -495,7 +495,7 @@
         "publishedAt": "2026-10-24T02:32:55.000Z",
         "summary": "官方公众号: https://mp.weixin.qq.com/s/Q6Z-skAUH_na9g37VWbHew 我对 kimi 已经没啥感情了, 额度太不透明了.速度还慢...",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "16 回复"
       }
     ]
   },
@@ -512,7 +512,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 42532,
+        "stars": 42635,
         "starsToday": 2716
       },
       {
@@ -522,7 +522,7 @@
         "url": "https://github.com/php/php-src",
         "description": "The PHP Interpreter",
         "language": "C",
-        "stars": 41600,
+        "stars": 41608,
         "starsToday": 716
       },
       {
@@ -532,7 +532,7 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 32343,
+        "stars": 32383,
         "starsToday": 635
       },
       {
@@ -542,7 +542,7 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 18932,
+        "stars": 18975,
         "starsToday": 1119
       },
       {
@@ -552,7 +552,7 @@
         "url": "https://github.com/Renhuai123/ziwei-doushu",
         "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "language": "TypeScript",
-        "stars": 7014,
+        "stars": 7064,
         "starsToday": 546
       },
       {
@@ -562,7 +562,7 @@
         "url": "https://github.com/SnailSploit/Claude-Red",
         "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
         "language": "Python",
-        "stars": 8620,
+        "stars": 8663,
         "starsToday": 226
       },
       {
@@ -572,7 +572,7 @@
         "url": "https://github.com/OpenBMB/VoxCPM",
         "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
         "language": "Python",
-        "stars": 40361,
+        "stars": 40390,
         "starsToday": 150
       },
       {
@@ -582,10 +582,10 @@
         "url": "https://github.com/nodejs/node",
         "description": "Node.js JavaScript runtime ✨🐢🚀✨",
         "language": "JavaScript",
-        "stars": 122950,
+        "stars": 122977,
         "starsToday": 66
       }
     ],
-    "updatedAt": "2026-10-24T05:55:04.792Z"
+    "updatedAt": "2026-10-24T07:17:18.940Z"
   }
 }
