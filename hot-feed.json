@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-23T22:14:59.258Z",
+  "generatedAt": "2026-10-24T00:45:46.976Z",
   "intelligence": {
-    "updatedAt": "2026-10-23T22:14:59.258Z",
+    "updatedAt": "2026-10-24T00:45:46.976Z",
     "items": [
       {
         "id": "cn-item-fcb983658213f481",
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-23T16:59:08.000Z",
         "badge": "HN",
-        "signal": "587 分 · 356 评论"
+        "signal": "690 分 · 439 评论"
       },
       {
-        "id": "cn-it-ca9c8524420defa2",
+        "id": "cn-it-434aa7c22674b0bf",
         "category": "cn",
-        "title": "男子醉酒后车机自动报警被判不构成自首：系统可以替你报警但不能替你自首",
-        "url": "https://www.ithome.com/1/017/278.htm",
+        "title": "光刻机巨头 ASML 拟将员工满意度纳入高管薪酬考核，缓解组织重组后的内部不满",
+        "url": "https://www.ithome.com/1/017/300.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-23T15:41:12.000Z",
-        "summary": "IT之家 10 月 23 日消息，由于把“110”设成紧急联系人，浙江一男子醉驾后，车辆发现异常上报给车企紧急救援中心并自动报警，后续被民警当场查获。该男子显然不服，并辩称这属于自首。 那么，这类车机触发的报警，法律上到底能不能认定为自首？据央视《法治在线》今日报道，这类新型醉驾案在法律上不能被认定为自首。车辆紧急救援系统自动拨出的报警电话，不能替驾驶人完成“自动投案”。 此次事件发生于 2026 年 3 月 19 日晚，周某酒后驾驶一辆小型普通客车返回家中，途中开启车辆驾…",
+        "publishedAt": "2026-10-24T00:34:10.000Z",
+        "summary": "IT之家 10 月 24 日消息，光刻机巨头、欧洲市值最高企业 ASML 的 CEO 克里斯托夫 · 富凯准备 将自己的薪酬与提振员工士气的目标 挂钩。 据《商业内幕》获得的内部备忘录，富凯上周向员工透露，ASML 计划把员工满意度纳入高管薪酬考核，以缓解大规模组织重组引发的不满情绪。 ASML 此前开展了一年一度的员工调查，约 4.4 万名员工中有超过 3.8 万人参与。IT之家获悉，调查结果显示，ASML 用于衡量员工满意度的敬业度指数 从去年的 78% 下降至今年的 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-xjj6-f33q-929c",
+        "id": "github-advisory-ghsa-394h-qwmc-48pf",
         "category": "security",
-        "title": "undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
-        "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+        "title": "virtualenv: Xonsh activation literals depend on the script decoding codec",
+        "url": "https://github.com/advisories/GHSA-394h-qwmc-48pf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:14:31.000Z",
-        "summary": "### Impact undici's `fetch()` crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such responses (a content-encoding l…",
-        "badge": "CVE-2026-109869",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-23T22:24:43.000Z",
+        "summary": "## Summary Caller-supplied prompt text can become executable syntax in the xonsh activation script. An attacker must influence the value passed to virtualenv, and a user must subsequently activate the environment. ## Affected area Xonsh re…",
+        "badge": "CVE-2026-113718",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-301925b8adfcebab",
@@ -85,17 +85,17 @@
         "publishedAt": "2026-10-23T18:57:03.000Z",
         "summary": "我认为 DeepSeek 、MiniMax 、Kimi 、GLM 这些 LLM 公司被严重高估了： 月活（ MAU ） ： 豆包 4.2 亿，千问 1.7 亿，DeepSeek 1.2 亿，智谱 2000 万，Kimi 1000 万； 商业化（ ARR ） ： 豆包 272 亿，智谱 68 亿、阿里 80 亿、DeepSeek 27-34 亿、Kimi 20 亿； 开源贡献 ： Qwen：开源了超过 460 个模型，衍生模型超 30 万个，全球下载量破 20 亿次； GLM…",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "19 回复"
       },
       {
-        "id": "cn-baidu-5fca30b823fd8e1b",
+        "id": "cn-baidu-e0362326745c3165",
         "category": "cn",
-        "title": "网红拼豆店 倒闭潮",
-        "url": "https://www.baidu.com/s?wd=%E7%BD%91%E7%BA%A2%E6%8B%BC%E8%B1%86%E5%BA%97+%E5%80%92%E9%97%AD%E6%BD%AE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "西藏7.0级地震救援最新进展",
+        "url": "https://www.baidu.com/s?wd=%E8%A5%BF%E8%97%8F7.0%E7%BA%A7%E5%9C%B0%E9%9C%87%E6%95%91%E6%8F%B4%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "今年10月起不少拼豆店面临倒闭潮。近日，记者走访成都春熙路一家拼豆店发现，店内从日日爆满转为“上二休五”。店主张先生无奈表示，单价从巅峰大幅下跌，自己3个月亏了10万。此前高峰期该片区曾扎堆70至80家店，因误以为门槛低、投入少，结果陷入价格战。",
+        "summary": "10月23日18时，西藏那曲市巴青县7.0级地震救援最新进展：经3轮全覆盖排查未发现失联人员。目前，5000余救援力量已开展安置，玛如乡51顶帐篷全部入住且部分通电，震区通信恢复至震前水平。此前，10月22日22时33分许，西藏那曲市巴青县发生7.0级地震。",
         "badge": "热搜",
-        "signal": "7,809,003 热度"
+        "signal": "7,808,451 热度"
       },
       {
         "id": "cisa-kev-cve-2026-110447",
@@ -125,7 +125,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-23T12:28:47.000Z",
         "badge": "HN",
-        "signal": "414 分 · 146 评论"
+        "signal": "545 分 · 184 评论"
       },
       {
         "id": "cn-item-5c9e9b58147cbab5",
@@ -138,15 +138,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-q7qp-rjg7-q26m",
+        "id": "github-advisory-ghsa-6w3r-xr62-4xcp",
         "category": "security",
-        "title": "multer vulnerable to Denial of Service via a pending asynchronous fileFilter after request teardown",
-        "url": "https://github.com/advisories/GHSA-q7qp-rjg7-q26m",
+        "title": "virtualenv: Bash prompt values can change meaning under older compatibility modes",
+        "url": "https://github.com/advisories/GHSA-6w3r-xr62-4xcp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:08:22.000Z",
-        "summary": "### Impact When `multer` is configured with an asynchronous `fileFilter`, a single request can crash the Node.js process. If a request is aborted (for example when one file is rejected) while another file's async `fileFilter` is still pend…",
-        "badge": "CVE-2026-113872",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-23T22:21:57.000Z",
+        "summary": "## Summary Caller-supplied prompt text can become executable syntax in the bash activation prompt. An attacker must influence the value passed to virtualenv, and a user must subsequently activate the environment and draw the prompt. ## Aff…",
+        "badge": "CVE-2026-113723",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-openai-f8c156dba7886826",
@@ -170,13 +170,13 @@
         "signal": "4 回复"
       },
       {
-        "id": "cn-it-a34e7227e4565063",
+        "id": "cn-it-6b136ecb816717c4",
         "category": "cn",
-        "title": "长城魏牌二代蓝山全球首秀定档 10 月 27 日，搭载 Hi-4 插电混动系统",
-        "url": "https://www.ithome.com/1/017/277.htm",
+        "title": "苹果首款折叠 iPhone Duo 开售首日，部分用户反馈屏幕问题",
+        "url": "https://www.ithome.com/1/017/299.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-23T15:20:50.000Z",
-        "summary": "IT之家 10 月 23 日消息，长城汽车今日宣布魏牌二代蓝山全球首秀定档 10 月 27 日。新车采用方盒子设计，搭载由 2.0T 发动机组成的 Hi-4 插电混动系统。 据介绍，魏牌二代蓝山主打“东方豪华”，尺寸为 5300×2050×1960mm、 轴距 3010mm ，轮胎规格 275/50 R21。 新车搭载 2.0T 混动专用发动机，匹配 4 挡混动专用变速箱，电机功率为前 110kW、后 220kW，内置 66.6kWh（1/3C）电池。 IT之家注意到，官方…",
+        "publishedAt": "2026-10-24T00:32:35.000Z",
+        "summary": "IT之家 10 月 24 日消息，科技媒体 Cult of Mac 今天（10 月 24 日）发布博文，报道称苹果首款折叠 iPhone Duo 开售首日（昨日 10 月 23 日） ，在社交媒体上就开始流传多张内屏出现裂纹的照片。 据报道，裂纹多沿折叠线向屏幕中心延伸，并向右侧边缘出现一排疑似坏点，损坏形态较为相似。 一名澳大利亚用户称，手机在折叠不到 20 次后，内屏沿铰链处发出“咔嚓”声并出现裂纹；其表示屏幕表面和外部铰链均未见明显撞击或异物损伤痕迹。另有用户称，部分…",
         "badge": "IT之家"
       },
       {
@@ -201,35 +201,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50213925",
+        "id": "hn-50216791",
         "category": "dev",
-        "title": "Dessa: the most authentic full-duplex speech model ever built",
-        "url": "https://block.xyz/dessa",
+        "title": "Evolving Threat: http2shell is an RCE in node, Python, and more",
+        "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T19:09:54.000Z",
+        "publishedAt": "2026-10-23T23:30:17.000Z",
         "badge": "HN",
-        "signal": "123 分 · 37 评论"
+        "signal": "33 分 · 8 评论"
       },
       {
-        "id": "cn-baidu-195e5be1d042fc6e",
+        "id": "cn-baidu-3dc4ade25e280621",
         "category": "cn",
-        "title": "哈啰顺风车 涉黄",
-        "url": "https://www.baidu.com/s?wd=%E5%93%88%E5%95%B0%E9%A1%BA%E9%A3%8E%E8%BD%A6+%E6%B6%89%E9%BB%84&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“订单排到2031年” 重量级国货爆单",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E8%AE%A2%E5%8D%95%E6%8E%92%E5%88%B02031%E5%B9%B4%E2%80%9D+%E9%87%8D%E9%87%8F%E7%BA%A7%E5%9B%BD%E8%B4%A7%E7%88%86%E5%8D%95&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，哈啰顺风车车主接单时发现疑似招嫖信息，对方将违规暗语藏在送货订单留言区。哈啰回应称，这是新型灰产行为，将封禁相关账号、排查风险点并升级风控模型。",
+        "summary": "10月23日工信部发布数据，今年1至9月我国造船业三大指标持续全球领跑，新接订单量同比增长163.2%，占全球81.8%份额。有企业称基本每月交付一条LNG船，订单已排至2031年。",
         "badge": "热搜",
-        "signal": "7,712,370 热度"
+        "signal": "7,713,780 热度"
       },
       {
-        "id": "github-advisory-ghsa-834v-8h66-3h79",
+        "id": "github-advisory-ghsa-xcx6-jx8p-x3h5",
         "category": "security",
-        "title": "Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution",
-        "url": "https://github.com/advisories/GHSA-834v-8h66-3h79",
+        "title": "MSAL Node authorization code flow may disclose parameters to an attacker-controlled endpoint",
+        "url": "https://github.com/advisories/GHSA-xcx6-jx8p-x3h5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:06:13.000Z",
-        "summary": "## Summary The ESM compiler in `happy-dom@20.14.5` does not validate imported local binding aliases before interpolating them into generated JavaScript. As a result, an invalid ESM import alias can be transformed into a valid JavaScript de…",
-        "badge": "CVE-2026-115895",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-10-23T22:16:44.000Z",
+        "summary": "### Impact Origin validation error in Microsoft Authentication Library (MSAL) for Node.js allows an unauthorized attacker to disclose information over a network. This affects the auth_code flow. ### Patches Version 7.1.0 and higher are pat…",
+        "badge": "CVE-2026-109461",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-2b3f616d26d343fe",
@@ -283,35 +283,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50211474",
+        "id": "hn-50215530",
         "category": "dev",
-        "title": "Today, we hacked what we'd set out to hack: the iPhone",
-        "url": "https://blog.calif.io/p/iphone",
+        "title": "CVE Tracker",
+        "url": "https://cve.0xosprey.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T16:21:50.000Z",
+        "publishedAt": "2026-10-23T21:21:47.000Z",
         "badge": "HN",
-        "signal": "647 分 · 424 评论"
+        "signal": "86 分 · 30 评论"
       },
       {
-        "id": "cn-it-e5299df546c6491e",
+        "id": "cn-it-dc8765d29441aa5a",
         "category": "cn",
-        "title": "消息称苹果在全国 Apple Store 安排移动 / 联通 / 电信工作人员坐镇，现场为 iPhone Duo 取货顾客办理 eSIM",
-        "url": "https://www.ithome.com/1/017/276.htm",
+        "title": "央视新闻谈 AI 魔改视频和二创区别：问题关键在“魔”，消解经典的同时也伤害文化根本",
+        "url": "https://www.ithome.com/1/017/298.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-23T15:05:42.000Z",
-        "summary": "IT之家 10 月 23 日消息，据新浪科技报道，随着苹果首款折叠屏手机 iPhone Duo 发售，目前苹果在全国所有 Apple Store 零售店均安排了中国移动、中国联通和中国电信的工作人员，为顾客现场办理 eSIM 激活业务。 据报道， 只要顾客是在苹果 Apple Store 门店现场取货，就可以在店内由运营商工作人员协助办理相关业务 ，免去以往购机后再单独前往运营商营业厅开通的环节。 IT之家注意到，今天移动还发布公告，透露官方将持续推动 eSIM 线上自助办…",
+        "publishedAt": "2026-10-24T00:24:31.000Z",
+        "summary": "IT之家 10 月 24 日消息，据央视新闻今早报道，日前，部分重点网络视听平台公布了“AI 魔改”视频专项治理工作 9 月的处置情况， 共清理违规视频近 13000 条、处置违规账号 30 余个 。 央视新闻在报道中谈及了 AI 魔改视频和二创区别，称“AI 魔改”问题不在 AI 也不在二创，关键在“魔”： 优秀的“二创”作品基于对原著的了解与喜爱。经过观众和时间检验，融入大众文化，拥有忠实拥趸，既映射特定时代的精神面貌，也承载读者和观众的集体记忆。 “AI 魔改”视频则…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-897f-g5gm-fmxm",
+        "id": "github-advisory-ghsa-xjj6-f33q-929c",
         "category": "security",
-        "title": "Wasmtime: Bit-packing in Cranelift compiler causes silent overflow and miscompilation",
-        "url": "https://github.com/advisories/GHSA-897f-g5gm-fmxm",
+        "title": "undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
+        "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:02:20.000Z",
-        "summary": "## Summary In Wasmtime prior to v43, the Cranelift compiler backend bit-packs its SSA value indices in a way that can result in silent overflow in release builds, and result in incorrect value references in the IR resulting in arbitrary mi…",
-        "badge": "CVE-2026-115889",
-        "signal": "CRITICAL · CVSS 9.9"
+        "publishedAt": "2026-10-23T22:14:31.000Z",
+        "summary": "### Impact undici's `fetch()` crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such responses (a content-encoding l…",
+        "badge": "CVE-2026-109869",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
@@ -342,7 +342,7 @@
         "source": "百度热搜",
         "summary": "10月22日22时33分许，西藏那曲市巴青县发生7.0级地震，造成重大人员伤亡，人民子弟兵第一时间投入抗震救灾。目前，抗震救灾各项工作正在紧张有序进行。",
         "badge": "热搜",
-        "signal": "7,616,989 热度"
+        "signal": "7,618,260 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96655",
@@ -365,14 +365,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50214323",
+        "id": "hn-50211474",
         "category": "dev",
-        "title": "We are all living inside of an obscure sci-fi film from 1970",
-        "url": "https://thanksforthatjim.bearblog.dev/we-are-all-living-inside-of-an-obscure-sci-fi-film-from-1970/",
+        "title": "Today, we hacked what we'd set out to hack: the iPhone",
+        "url": "https://blog.calif.io/p/iphone",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T19:41:59.000Z",
+        "publishedAt": "2026-10-23T16:21:50.000Z",
         "badge": "HN",
-        "signal": "63 分 · 39 评论"
+        "signal": "734 分 · 481 评论"
       },
       {
         "id": "cn-item-75b206c08f3858c9",
@@ -385,15 +385,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-v4x8-3wr5-3wq8",
+        "id": "github-advisory-ghsa-q7qp-rjg7-q26m",
         "category": "security",
-        "title": "filelock ReadWriteLock: SQLite reopens the lock database by name, so a planted symlink or journal file makes the lock user's process overwrite or unlink its own files",
-        "url": "https://github.com/advisories/GHSA-v4x8-3wr5-3wq8",
+        "title": "multer vulnerable to Denial of Service via a pending asynchronous fileFilter after request teardown",
+        "url": "https://github.com/advisories/GHSA-q7qp-rjg7-q26m",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T21:59:08.000Z",
-        "summary": "`ReadWriteLock` and `AsyncReadWriteLock` (the SQLite-backed reader/writer lock) hand SQLite a name they do not control. On Linux the lock validates its database through a descriptor (the number the kernel gives a process for an open file).…",
-        "badge": "CVE-2026-112940",
-        "signal": "HIGH · CVSS 7.1"
+        "publishedAt": "2026-10-23T22:08:22.000Z",
+        "summary": "### Impact When `multer` is configured with an asynchronous `fileFilter`, a single request can crash the Node.js process. If a request is aborted (for example when one file is rejected) while another file's async `fileFilter` is still pend…",
+        "badge": "CVE-2026-113872",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-891b7e0bbf66f86d",
@@ -417,13 +417,13 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-ccfea7b1e1160a0a",
+        "id": "cn-it-08185374e1c9aefe",
         "category": "cn",
-        "title": "国家邮政局召开邮政快递业安全治理规范化座谈会：要持续深入推进“反内卷”工作",
-        "url": "https://www.ithome.com/1/017/275.htm",
+        "title": "苹果回应 iPhone Duo 外屏“ Safari 控件抢地盘”问题：正研究修复方案",
+        "url": "https://www.ithome.com/1/017/297.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-23T14:46:42.000Z",
-        "summary": "IT之家 10 月 23 日消息，据国家邮政局，10 月 22 日至 23 日，国家邮政局在河南洛阳召开邮政快递业安全治理规范化座谈会。 会议要求，各级邮政管理部门要强化行业监管核心职能，大力加强行业安全监管，维护快递市场秩序。各企业要把安全责任牢牢扛在肩上，统筹发展和安全，进一步抓实抓细行业安全各项工作。 会议强调，要聚焦突出问题和关键环节，以更大力度更实举措做好行业安全工作： 一是大力整治生产安全突出隐患 。要强化重大事故隐患排查整治，深入整治消防隐患，严格规范外包管理…",
+        "publishedAt": "2026-10-24T00:19:42.000Z",
+        "summary": "IT之家 10 月 24 日消息，科技媒体 9to5Mac 今天（10 月 24 日）发布博文，报道称在最新 WebKit 博文中，苹果公司已着手针对其首款折叠 iPhone Duo 机型， 解决外屏 Safari 控件太占地方，导致网页内容“太挤”的问题。 在 iPhone Duo 发售之后，部分用户发现在外屏上，Safari 浏览器的网页可用空间明显偏小。原因在于 Safari 将刷新、地址栏等控件右对齐放置，占用了外屏的较大区域，导致网页正文和图片被压缩，浏览体验不如…",
         "badge": "IT之家"
       },
       {
@@ -447,36 +447,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1251376",
+        "id": "hn-50213925",
         "category": "dev",
-        "title": "用 muse 一个很难受的地方",
-        "url": "https://www.v2ex.com/t/1251376",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-23T14:28:46.000Z",
-        "summary": "就是给他传文件，每个文件限制 25M ，每次只能传一个文件，经常断，有时候一个 50 ＋ M 的文件，分拆成好几个，每个都要传很多次，传着传着就断了，但网络一切正常。 传到在线文档，给他链接让它下载，结果下载完毕他说在浏览器的机器上，它拿不到。 给他授予完全磁盘权限，让它自己读取，又读不到。 另外，经常性打开一直显示正在链接，这和一开始发布的时候体验差太多了。 dots 好歹还能一次贴多个文件，一起上传，等上传完毕，才可以点击发送按钮。",
-        "badge": "程序员",
-        "signal": "5 回复"
+        "title": "Dessa: the most authentic full-duplex speech model ever built",
+        "url": "https://block.xyz/dessa",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-23T19:09:54.000Z",
+        "badge": "HN",
+        "signal": "199 分 · 86 评论"
       },
       {
-        "id": "cn-baidu-c18c2c0af13d5c07",
+        "id": "cn-baidu-e89d3dcafa3711cf",
         "category": "cn",
-        "title": "未成年人向火锅小便 家长被判赔220万",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%AA%E6%88%90%E5%B9%B4%E4%BA%BA%E5%90%91%E7%81%AB%E9%94%85%E5%B0%8F%E4%BE%BF+%E5%AE%B6%E9%95%BF%E8%A2%AB%E5%88%A4%E8%B5%94220%E4%B8%87&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "猕猴桃“最团结的水果”",
+        "url": "https://www.baidu.com/s?wd=%E7%8C%95%E7%8C%B4%E6%A1%83%E2%80%9C%E6%9C%80%E5%9B%A2%E7%BB%93%E7%9A%84%E6%B0%B4%E6%9E%9C%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月23日，最高人民法院发布典型案例通报未成年人向火锅小便侵权案。此前于2025年2月，两未成年人为求刺激在某火锅门店向锅内小便并发布视频，致企业商誉受损。上海市黄浦区人民法院判决两人父母赔偿共计220万元并道歉，判决现已生效。",
+        "summary": "猕猴桃被称为“最团结的水果”，要熟一起熟。近日，四川农科院专家在都江堰观摩会上解释，猕猴桃属于后熟型水果，成熟时释放乙烯，会带动整箱果实一起变软，建议消费者按软硬分类分装存放。",
         "badge": "热搜",
-        "signal": "7,524,380 热度"
+        "signal": "7,521,412 热度"
       },
       {
-        "id": "github-advisory-ghsa-5x8w-8jj5-q52h",
+        "id": "github-advisory-ghsa-834v-8h66-3h79",
         "category": "security",
-        "title": "Pillow: Heap buffer overflow in FlashPix (FPX) JPEG decoding leads to code execution",
-        "url": "https://github.com/advisories/GHSA-5x8w-8jj5-q52h",
+        "title": "Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution",
+        "url": "https://github.com/advisories/GHSA-834v-8h66-3h79",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T21:55:21.000Z",
-        "summary": "### Credits **Researcher**: Alex Bouffard (mixbo@pebwalker.com) ### Summary A heap buffer overflow in Pillow's FlashPix (FPX) JPEG-tile decoder lets an attacker achieve arbitrary code execution by getting an application to open a single cr…",
-        "badge": "CVE-2026-112398",
-        "signal": "CRITICAL · CVSS 0.0"
+        "publishedAt": "2026-10-23T22:06:13.000Z",
+        "summary": "## Summary The ESM compiler in `happy-dom@20.14.5` does not validate imported local binding aliases before interpolating them into generated JavaScript. As a result, an invalid ESM import alias can be transformed into a valid JavaScript de…",
+        "badge": "CVE-2026-115895",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-hugging-face-0e5fad3ca5f8a881",
@@ -486,6 +485,17 @@
         "source": "Hugging Face",
         "publishedAt": "2026-10-22T07:51:31.000Z",
         "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1251376",
+        "category": "dev",
+        "title": "用 muse 一个很难受的地方",
+        "url": "https://www.v2ex.com/t/1251376",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-23T14:28:46.000Z",
+        "summary": "就是给他传文件，每个文件限制 25M ，每次只能传一个文件，经常断，有时候一个 50 ＋ M 的文件，分拆成好几个，每个都要传很多次，传着传着就断了，但网络一切正常。 传到在线文档，给他链接让它下载，结果下载完毕他说在浏览器的机器上，它拿不到。 给他授予完全磁盘权限，让它自己读取，又读不到。 另外，经常性打开一直显示正在链接，这和一开始发布的时候体验差太多了。 dots 好歹还能一次贴多个文件，一起上传，等上传完毕，才可以点击发送按钮。",
+        "badge": "程序员",
+        "signal": "5 回复"
       }
     ]
   },
@@ -502,8 +512,8 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 41998,
-        "starsToday": 2706
+        "stars": 42146,
+        "starsToday": 2716
       },
       {
         "id": "github-b31a8560fdea9b7a",
@@ -512,8 +522,8 @@
         "url": "https://github.com/php/php-src",
         "description": "The PHP Interpreter",
         "language": "C",
-        "stars": 41541,
-        "starsToday": 722
+        "stars": 41563,
+        "starsToday": 716
       },
       {
         "id": "github-a3140cb175a451a9",
@@ -522,8 +532,8 @@
         "url": "https://github.com/anthropics/knowledge-work-plugins",
         "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "language": "Python",
-        "stars": 32172,
-        "starsToday": 643
+        "stars": 32215,
+        "starsToday": 635
       },
       {
         "id": "github-4a822c098ee8277f",
@@ -532,8 +542,8 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 18727,
-        "starsToday": 1240
+        "stars": 18797,
+        "starsToday": 1119
       },
       {
         "id": "github-8d6aee14a1a192e6",
@@ -542,8 +552,8 @@
         "url": "https://github.com/Renhuai123/ziwei-doushu",
         "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "language": "TypeScript",
-        "stars": 6829,
-        "starsToday": 547
+        "stars": 6858,
+        "starsToday": 546
       },
       {
         "id": "github-bd58bfbe541eeb64",
@@ -552,8 +562,8 @@
         "url": "https://github.com/SnailSploit/Claude-Red",
         "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
         "language": "Python",
-        "stars": 8414,
-        "starsToday": 209
+        "stars": 8489,
+        "starsToday": 226
       },
       {
         "id": "github-aa49aacdf5ebec1b",
@@ -562,8 +572,8 @@
         "url": "https://github.com/OpenBMB/VoxCPM",
         "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
         "language": "Python",
-        "stars": 40221,
-        "starsToday": 144
+        "stars": 40256,
+        "starsToday": 150
       },
       {
         "id": "github-107c59ea99edb84c",
@@ -572,10 +582,10 @@
         "url": "https://github.com/nodejs/node",
         "description": "Node.js JavaScript runtime ✨🐢🚀✨",
         "language": "JavaScript",
-        "stars": 122822,
-        "starsToday": 93
+        "stars": 122864,
+        "starsToday": 66
       }
     ],
-    "updatedAt": "2026-10-23T22:14:59.258Z"
+    "updatedAt": "2026-10-24T00:45:46.976Z"
   }
 }
