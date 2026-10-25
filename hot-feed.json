@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-25T06:14:40.173Z",
+  "generatedAt": "2026-10-25T07:34:51.407Z",
   "intelligence": {
-    "updatedAt": "2026-10-25T06:14:40.173Z",
+    "updatedAt": "2026-10-25T07:34:51.407Z",
     "items": [
       {
         "id": "cn-item-6c2171bde6ad8eb6",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50228167",
+        "id": "hn-50225695",
         "category": "dev",
-        "title": "Five Qwen3.8-27B models match Fable 5 Using GVS5H Harness",
-        "url": "https://github.com/slee-persis/GVS5H",
+        "title": "We should be more ambitious with the software we build",
+        "url": "https://danluu.com/ambitious/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-25T03:56:01.000Z",
+        "publishedAt": "2026-10-24T21:47:31.000Z",
         "badge": "HN",
-        "signal": "111 分 · 33 评论"
+        "signal": "336 分 · 292 评论"
       },
       {
-        "id": "cn-it-eff20bbbdc57c0c0",
+        "id": "cn-it-2c67dd132a192a62",
         "category": "cn",
-        "title": "网络安全专家：AI 发现的漏洞，很快或将引发新的安全隐患",
-        "url": "https://www.ithome.com/1/017/592.htm",
+        "title": "英伟达黄仁勋：市场对新型云服务商的需求高到离谱，但问题是缺钱",
+        "url": "https://www.ithome.com/1/017/614.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-25T06:06:05.000Z",
-        "summary": "IT之家 10 月 25 日消息，路透社采访的七名网络安全专家认为，随着 AI 技术不断揭示软件中隐藏的安全漏洞，类似本周 全球多地政府网站接连中断服务 的事件，几乎肯定会再次发生。 美国马萨诸塞州网络威胁情报公司 VulnCheck 即将发布的研究显示，AI 推动了软件漏洞发现数量的增长，过去一年发现的漏洞数量同比翻了一番。 数字基础设施公司 Cloudflare 的 CEO 马修 · 普林斯指出：“我知道，其他一些关键软件中还存在不少严重漏洞。…… 我认为，接下来两年，…",
+        "publishedAt": "2026-10-25T07:27:22.000Z",
+        "summary": "IT之家 10 月 25 日消息，当地时间 22 日，英伟达 CEO 黄仁勋接受 CNBC 采访时说，市场对新型云服务商的需求极其旺盛，“高到离谱（off the charts）”，但资金短缺正成为制约行业发展的主要障碍。“从基本面看，新型云服务商的市场需求非常旺盛。” 他还称，这些企业的能力“非同寻常”。“眼下最缺的是 支撑企业增长的营运资金 …… AI 各个领域都有大量需求，导致资金供不应求。市场需要的资金远超实际供应量，但问题 终会得到解决 。” 电力供应同样制约着 …",
         "badge": "IT之家"
       },
       {
@@ -77,13 +77,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1251614",
+        "id": "v2ex-1251637",
         "category": "dev",
-        "title": "做了一个 Topview T1 视频创作站，想听听大家对图生视频流程的意见",
-        "url": "https://www.v2ex.com/t/1251614",
+        "title": "有啥性价比高的 vibe 编程工具吗?",
+        "url": "https://www.v2ex.com/t/1251637",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-25T03:14:50.000Z",
-        "summary": "最近在做一个围绕 Topview T1 的独立视频创作站，主要想解决一个具体需求：手里已经有产品图或插画，想先用短视频试试不同的动态呈现方式。 网站： https://topview-t1.com/ 目前页面提供文字生成视频、图片生成视频的创作入口。我自己比较关注图生视频：上传一张图后，描述主体怎么动、镜头怎么走，比单纯写一大段画面描述更容易调整。 比如拿一张咖啡杯的产品图，可以从一个简单镜头开始：「杯子保持在桌面上，热气缓缓升起，镜头轻微推近，背景保持柔和。」看完结果，再…",
+        "publishedAt": "2026-10-25T07:15:11.000Z",
+        "summary": "请推荐吧大哥",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "10月25日，央视网披露，美军屡屡选在国庆、中秋、春节等特殊时期挑衅中国，2018年以来已劣迹斑斑，从“迪凯特”号到“查尔斯顿”号，均遭解放军依法处置、全程跟监。",
         "badge": "热搜",
-        "signal": "7,808,931 热度"
+        "signal": "7,809,384 热度"
       },
       {
         "id": "cisa-kev-cve-2026-110447",
@@ -118,14 +118,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50225695",
+        "id": "hn-50227356",
         "category": "dev",
-        "title": "We should be more ambitious with the software we build",
-        "url": "https://danluu.com/ambitious/",
+        "title": "Cerebras Deploys Trillion-Parameter AI Models",
+        "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
         "source": "Hacker News",
-        "publishedAt": "2026-10-24T21:47:31.000Z",
+        "publishedAt": "2026-10-25T01:33:49.000Z",
         "badge": "HN",
-        "signal": "305 分 · 261 评论"
+        "signal": "112 分 · 40 评论"
       },
       {
         "id": "cn-item-968ce1ae0000e293",
@@ -159,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1251583",
+        "id": "v2ex-1251634",
         "category": "dev",
-        "title": "分享 Vibe Coding 作品： AI Vault，多 Agent 技能管理工具+llama.cpp 本地部署工具",
-        "url": "https://www.v2ex.com/t/1251583",
+        "title": "发现人到了一定的年岁之后，你驱动自己的身体和大脑已经不能单纯靠意志力了，而是要“妥协”+“顺从”",
+        "url": "https://www.v2ex.com/t/1251634",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T16:51:17.000Z",
-        "summary": "技能、提示词、MCP 、模型与密钥，统一管理，一键分发到 49+ Agent 。数据始终留在本机。Llama.cpp 、KVMEM 、NInfer 部署、模型下载，功能有点多。 长这样，不知图能否正常显示： https://ibb.co/fzssKRK7 官网及文档地址： https://ergeaia.github.io/aivault-site/ 网盘： https://pan.quark.cn/s/a23f244661b4 ，提取码：s9mG B 站视频介绍：BV1p…",
+        "publishedAt": "2026-10-25T06:47:45.000Z",
+        "summary": "这副肌肉组织+各种激素,本质上人家是有一套自己的生存法则的,人家不是很依赖你的意志指令。 而你的意愿和意志力，年与时驰，意与日去，逐渐没有精力掌控。 譬如我今天想学点东西，但是在家怎么也学不进去了，脑子和身体不想在家干这个，于是就只能浪费在路上的时间，驱动身体和大脑去图书馆，状态果然好了不少。 所以，我的大脑本质上到底是“今天想学点东西”还是“抵触学点东西”，我不知道。好像是，“我”想学点东西，但是我的“大脑”和“身体”不乐意，所以我得哄着它俩出去溜达一下，它俩才愿意安安生…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-32d7b0fdf49b9cdb",
+        "id": "cn-it-965db34f2ca472f7",
         "category": "cn",
-        "title": "雷神 ZERO Air 15 双十一大促：12499 元起，轻至 1.54kg 兼顾便携与性能释放",
-        "url": "https://www.ithome.com/1/017/591.htm",
+        "title": "蓝思科技：第三季度归母净利润 8.43 亿元，同比下降 50.42%",
+        "url": "https://www.ithome.com/1/017/613.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-25T06:04:09.000Z",
-        "summary": "IT之家 10 月 25 日消息，双十一大促已经开启，笔记本产品也迎来新一轮优惠。此前在 CES 2026 上，雷神推出了面向未来的“轻型”游戏本新品 —— 雷神 ZERO Air。官方表示，该系列产品希望在兼顾便携性的同时，保留游戏本的性能表现，其中雷神 ZERO Air 15 在 1.54kg 的机身内实现了 160W 性能释放，并搭载第三代英特尔酷睿 Ultra 处理器以及 RTX 50 系列独立显卡。 目前，雷神 ZERO Air 15 在双十一期间价格调整，国补后…",
+        "publishedAt": "2026-10-25T07:26:59.000Z",
+        "summary": "IT之家 10 月 25 日消息，蓝思科技今日公告，2026 年第三季度实现营业收入 190.35 亿元，同比下降 8.05%；归母净利润 8.43 亿元，同比下降 50.42%；基本每股收益 0.16 元。 IT之家从报告获悉，该公司前三季度实现营业收入 479.02 亿元，同比下降 10.74%；归母净利润 14.2 亿元，同比下降 50.06%；基本每股收益 0.27 元。 延伸阅读 蓝思科技股份有限公司成立于 2006 年 12 月 21 日，主营消费电子与高端智能…",
         "badge": "IT之家"
       },
       {
@@ -201,14 +201,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50227356",
+        "id": "hn-50193612",
         "category": "dev",
-        "title": "Cerebras Deploys Trillion-Parameter AI Models",
-        "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "title": "Picasa Photo Viewer Rebuilt for Linux, Project Named Licasa",
+        "url": "https://github.com/sanxchep/licasa",
         "source": "Hacker News",
-        "publishedAt": "2026-10-25T01:33:49.000Z",
+        "publishedAt": "2026-10-22T10:44:52.000Z",
         "badge": "HN",
-        "signal": "82 分 · 28 评论"
+        "signal": "43 分 · 15 评论"
       },
       {
         "id": "cn-baidu-1acc820b1965573e",
@@ -218,7 +218,7 @@
         "source": "百度热搜",
         "summary": "近日，江苏姑娘小陈花3.8万元在鹤岗“云购房”，买下60平方米住房、又花4万多元装修。入住后，小陈发现屋顶多处漏水，中介看房视频刻意避开漏水点，她已起诉要求解约。",
         "badge": "热搜",
-        "signal": "7,712,481 热度"
+        "signal": "7,714,696 热度"
       },
       {
         "id": "github-advisory-ghsa-xcx6-jx8p-x3h5",
@@ -241,13 +241,13 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1251538",
+        "id": "v2ex-1251614",
         "category": "dev",
-        "title": "1024 程序员节 - EVEngine 引擎实战，做个进击的大肥鱼",
-        "url": "https://www.v2ex.com/t/1251538",
+        "title": "做了一个 Topview T1 视频创作站，想听听大家对图生视频流程的意见",
+        "url": "https://www.v2ex.com/t/1251614",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T11:39:17.000Z",
-        "summary": "今天是程序员节，用最近开发的 AI 游戏引擎整个活，进击的大肥鱼横版游戏制作实战（上）。 没有写代码，全程由几个 agent 完成绝大部分工作。我就负责监督+试玩。 详细视频请看： [ [自研引擎] 1024 程序员节游戏 Demo 实战-大肥鱼和她的朋友们] https://www.bilibili.com/video/BV1FfHK6CEbb/?share_source=copy_web&vd_source=dc379818946312063729495537a1e41…",
+        "publishedAt": "2026-10-25T03:14:50.000Z",
+        "summary": "最近在做一个围绕 Topview T1 的独立视频创作站，主要想解决一个具体需求：手里已经有产品图或插画，想先用短视频试试不同的动态呈现方式。 网站： https://topview-t1.com/ 目前页面提供文字生成视频、图片生成视频的创作入口。我自己比较关注图生视频：上传一张图后，描述主体怎么动、镜头怎么走，比单纯写一大段画面描述更容易调整。 比如拿一张咖啡杯的产品图，可以从一个简单镜头开始：「杯子保持在桌面上，热气缓缓升起，镜头轻微推近，背景保持柔和。」看完结果，再…",
         "badge": "程序员",
         "signal": "0 回复"
       },
@@ -290,16 +290,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-24T19:06:55.000Z",
         "badge": "HN",
-        "signal": "323 分 · 220 评论"
+        "signal": "345 分 · 235 评论"
       },
       {
-        "id": "cn-it-19940335948b9a63",
+        "id": "cn-it-88f5a4a762912bcd",
         "category": "cn",
-        "title": "一加 Ace 7 系列设计细节公布：星际光效呼吸灯、隐藏式进风口等，新机 10 月 29 日发布",
-        "url": "https://www.ithome.com/1/017/589.htm",
+        "title": "超频三推出 C3 T400 海景房机箱：兼容 360mm 水冷，黑白双色均售 326 元",
+        "url": "https://www.ithome.com/1/017/612.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-25T05:56:21.000Z",
-        "summary": "IT之家 10 月 25 日消息，一加中国区总裁李杰今日发布视频，展示了一加 Ace 7 系列手机全新配色 ——「破风」和「淬火」的外观。 视频画面显示，一加 Ace 7 系列手机的这两款配色采用特殊纹理设计。「破风」为一加 Ace 7 Pro 的配色，整体呈冰蓝色，背部印有冲击感较强的“Ace”图标。根据官方介绍，该机采用质感金属中框 + 旗舰大 R 角设计， 后置星际光效自定义呼吸灯和暴风岛隐藏式进风口 。 「淬火」是一加 Ace 7 标准版的配色， 后盖采用全新双渐变…",
+        "publishedAt": "2026-10-25T07:25:08.000Z",
+        "summary": "IT之家 10 月 25 日消息，超频三现已在京东上架 C3 T400 电脑机箱，该风扇提供 10 个 120mm 风扇安装位，兼容 360mm 水冷， 黑白双色定价均为 326 元 。 该机箱尺寸 425x285x423mm，支持安装 Micro ATX 与 ITX 规格的主板，机箱采用无立柱玻璃结构的 270° 全景视窗，顶部配备了支持拆卸的一体化防尘网。I/O 接口位于机箱底部，提供 1 个 USB-A 3.0、1 个 3.5mm 音频接口。 该机箱设有 5 个 PC…",
         "badge": "IT之家"
       },
       {
@@ -324,15 +324,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1251536",
+        "id": "v2ex-1251583",
         "category": "dev",
-        "title": "感谢大家推荐的 paseo。旅游 vibe 神器。顺带 vibe 了一个安卓平板客户端",
-        "url": "https://www.v2ex.com/t/1251536",
+        "title": "分享 Vibe Coding 作品： AI Vault，多 Agent 技能管理工具+llama.cpp 本地部署工具",
+        "url": "https://www.v2ex.com/t/1251583",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T11:35:14.000Z",
-        "summary": "前序： https://v2ex.com/t/1239448 双 11 买了个平板。结合大家给我的建议，先后装了 orca 和 paseo 。最后还是觉得 paseo 比较好，更接近本地的 chatgpt 客户端体验，贴大段文本和贴图方便一些。 给服务器上装一个 paseo 和 codex cli （或者别的）. 拿 nginx 反代一下。。IP 白名单一加。然后浏览器就能随时随地 vibe 了。 跟本地工作没差别。甚至因为本地是 win ，paseo 部署在 Linux …",
+        "publishedAt": "2026-10-24T16:51:17.000Z",
+        "summary": "技能、提示词、MCP 、模型与密钥，统一管理，一键分发到 49+ Agent 。数据始终留在本机。Llama.cpp 、KVMEM 、NInfer 部署、模型下载，功能有点多。 长这样，不知图能否正常显示： https://ibb.co/fzssKRK7 官网及文档地址： https://ergeaia.github.io/aivault-site/ 网盘： https://pan.quark.cn/s/a23f244661b4 ，提取码：s9mG B 站视频介绍：BV1p…",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-9f274149a216975c",
@@ -342,7 +342,7 @@
         "source": "百度热搜",
         "summary": "“中国智造”已成为中国式现代化的又一亮丽名片。人工智能“电子鼻”、火锅底料智能生产线、“水下幽灵”透明仿生水母机器人……智能技术正加速解锁更多应用场景，让生产更高效、作业更精准。网友：科技感满满，中国智造已经是Nextlevel了。",
         "badge": "热搜",
-        "signal": "7,618,110 热度"
+        "signal": "7,616,963 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96655",
@@ -365,14 +365,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50225674",
+        "id": "hn-50224210",
         "category": "dev",
-        "title": "Small Programs and Languages",
-        "url": "https://ratfactor.com/cards/pl-small",
+        "title": "SpeedCrunch 1.1",
+        "url": "https://www.speedcrunch.org/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-24T21:44:23.000Z",
+        "publishedAt": "2026-10-24T19:19:43.000Z",
         "badge": "HN",
-        "signal": "78 分 · 5 评论"
+        "signal": "126 分 · 23 评论"
       },
       {
         "id": "cn-item-2731edb232f3f46f",
@@ -406,24 +406,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1251519",
+        "id": "v2ex-1251538",
         "category": "dev",
-        "title": "为什么突然出现那么多类 ARC 浏览器",
-        "url": "https://www.v2ex.com/t/1251519",
+        "title": "1024 程序员节 - EVEngine 引擎实战，做个进击的大肥鱼",
+        "url": "https://www.v2ex.com/t/1251538",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T09:57:42.000Z",
-        "summary": "功能差不多，我知道的就五六个 是 ai 逆向一切在起作用吗？",
+        "publishedAt": "2026-10-24T11:39:17.000Z",
+        "summary": "今天是程序员节，用最近开发的 AI 游戏引擎整个活，进击的大肥鱼横版游戏制作实战（上）。 没有写代码，全程由几个 agent 完成绝大部分工作。我就负责监督+试玩。 详细视频请看： [ [自研引擎] 1024 程序员节游戏 Demo 实战-大肥鱼和她的朋友们] https://www.bilibili.com/video/BV1FfHK6CEbb/?share_source=copy_web&vd_source=dc379818946312063729495537a1e41…",
         "badge": "程序员",
-        "signal": "21 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-49cd5aa35462f3b9",
+        "id": "cn-it-44d38288108c12c6",
         "category": "cn",
-        "title": "鸿蒙智行智界 RX 轿跑 SUV 整装发运：今日同步开启全国大规模交付，赛车手谢欣哲成首批车主",
-        "url": "https://www.ithome.com/1/017/587.htm",
+        "title": "飞傲 JD1 GAMING 游戏耳机开售，109 元",
+        "url": "https://www.ithome.com/1/017/610.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-25T05:34:04.000Z",
-        "summary": "IT之家 10 月 25 日消息， 鸿蒙智行智界 RX 轿跑 SUV 今日宣布整装发运 ，加速驶向首批车主。 参考IT之家此前报道， 智界 RX 今日会在上海国际赛车场举办首批车主交付仪式 ，全国大规模交付也将同步开启。官方透露，后续车辆将按照锁单顺序陆续推进排产和交付， 预计交付周期为 4-6 周 。 据博主 @爱叨叨的Steven 分享的现场情况， 赛车手谢欣哲成为智界 RX 首批车主 。公开资料显示，谢欣哲 1991 年 8 月 23 日出生于湖北十堰，曾获 2007…",
+        "publishedAt": "2026-10-25T07:20:44.000Z",
+        "summary": "IT之家 10 月 25 日消息，飞傲 JD1 GAMING 游戏耳机现已在京东开售，新品采用入耳式设计，配备独立 DSP 音频解码芯片，支持换线， 售价 109 元 。 据介绍，这款耳机配备 10mmLCP 液晶振膜，可输出浑厚充盈的低频量感，采用非对称性内外双磁路设计，提升音圈处磁场密度。内置 DSP 音频解码芯片，支持 384kHz/24bit 高清音频解码。 同时，该耳机带有高灵敏度宽频麦克风，采用支持自由弯曲定位的软杆设计，可精准拉近与嘴部的拾音距离，还能够拆卸，…",
         "badge": "IT之家"
       },
       {
@@ -447,24 +447,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50224210",
+        "id": "hn-50193936",
         "category": "dev",
-        "title": "SpeedCrunch 1.1",
-        "url": "https://www.speedcrunch.org/",
+        "title": "How Japanese Dried Bonito Is Made",
+        "url": "https://kottke.org/26/10/how-japanese-dried-bonito-is-made",
         "source": "Hacker News",
-        "publishedAt": "2026-10-24T19:19:43.000Z",
+        "publishedAt": "2026-10-22T11:31:03.000Z",
         "badge": "HN",
-        "signal": "116 分 · 16 评论"
+        "signal": "7 分 · 2 评论"
       },
       {
-        "id": "cn-baidu-56537e7f789eeb80",
+        "id": "cn-baidu-432c0d2452660c31",
         "category": "cn",
-        "title": "A股指数重要调整明起实施",
-        "url": "https://www.baidu.com/s?wd=A%E8%82%A1%E6%8C%87%E6%95%B0%E9%87%8D%E8%A6%81%E8%B0%83%E6%95%B4%E6%98%8E%E8%B5%B7%E5%AE%9E%E6%96%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "张雪把县委书记丢河里了",
+        "url": "https://www.baidu.com/s?wd=%E5%BC%A0%E9%9B%AA%E6%8A%8A%E5%8E%BF%E5%A7%94%E4%B9%A6%E8%AE%B0%E4%B8%A2%E6%B2%B3%E9%87%8C%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "9月24日，上交所发布《关于修订上证系列综合指数编制方案的公告》。上交所与中证指数公司决定修订上证指数等指数编制方案，内容包括增加单个样本权重不超过15%的规则，并调整风险警示证券剔除时间。上述修订将于2026年10月26日实施。",
+        "summary": "10月25日，张雪在家乡湖南麻阳成功挑战吉尼斯纪录后玩嗨了！他划龙舟后跳进水里游泳，县委书记也被抬起来“丢进”了河里。",
         "badge": "热搜",
-        "signal": "7,523,296 热度"
+        "signal": "7,524,398 热度"
       },
       {
         "id": "github-advisory-ghsa-834v-8h66-3h79",
@@ -487,15 +487,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1251495",
+        "id": "v2ex-1251536",
         "category": "dev",
-        "title": "今天没人去考软考吗？架构师的论文题是啥？",
-        "url": "https://www.v2ex.com/t/1251495",
+        "title": "感谢大家推荐的 paseo。旅游 vibe 神器。顺带 vibe 了一个安卓平板客户端",
+        "url": "https://www.v2ex.com/t/1251536",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-24T08:40:11.000Z",
-        "summary": "听说今天的架构师论文题目有点偏？都不太好写？",
+        "publishedAt": "2026-10-24T11:35:14.000Z",
+        "summary": "前序： https://v2ex.com/t/1239448 双 11 买了个平板。结合大家给我的建议，先后装了 orca 和 paseo 。最后还是觉得 paseo 比较好，更接近本地的 chatgpt 客户端体验，贴大段文本和贴图方便一些。 给服务器上装一个 paseo 和 codex cli （或者别的）. 拿 nginx 反代一下。。IP 白名单一加。然后浏览器就能随时随地 vibe 了。 跟本地工作没差别。甚至因为本地是 win ，paseo 部署在 Linux …",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "5 回复"
       }
     ]
   },
@@ -512,7 +512,7 @@
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 45122,
+        "stars": 45277,
         "starsToday": 2264
       },
       {
@@ -522,7 +522,7 @@
         "url": "https://github.com/NVIDIA/OpenShell",
         "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
         "language": "Rust",
-        "stars": 19610,
+        "stars": 19644,
         "starsToday": 896
       },
       {
@@ -532,7 +532,7 @@
         "url": "https://github.com/aws/agent-toolkit-for-aws",
         "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
         "language": "Python",
-        "stars": 3202,
+        "stars": 3217,
         "starsToday": 13
       },
       {
@@ -542,7 +542,7 @@
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "language": "CSS",
-        "stars": 32455,
+        "stars": 32533,
         "starsToday": 455
       },
       {
@@ -552,7 +552,7 @@
         "url": "https://github.com/luongnv89/claude-howto",
         "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
         "language": "Python",
-        "stars": 44712,
+        "stars": 44752,
         "starsToday": 392
       },
       {
@@ -562,7 +562,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design language that makes your AI harness better at design.",
         "language": "Rust",
-        "stars": 86627,
+        "stars": 86683,
         "starsToday": 619
       },
       {
@@ -572,7 +572,7 @@
         "url": "https://github.com/pollen-robotics/microduck",
         "description": "A Tiny biped duck robot 🦆",
         "language": "Rust",
-        "stars": 11131,
+        "stars": 11162,
         "starsToday": 319
       },
       {
@@ -582,7 +582,7 @@
         "url": "https://github.com/google-gemini/gemini-cli",
         "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
         "language": "TypeScript",
-        "stars": 108217,
+        "stars": 108250,
         "starsToday": 44
       },
       {
@@ -592,7 +592,7 @@
         "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
         "description": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
         "language": "Python",
-        "stars": 22828,
+        "stars": 22885,
         "starsToday": 227
       },
       {
@@ -602,10 +602,10 @@
         "url": "https://github.com/makecindy/cindy",
         "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "language": "TypeScript",
-        "stars": 4244,
+        "stars": 4284,
         "starsToday": 477
       }
     ],
-    "updatedAt": "2026-10-25T06:14:40.173Z"
+    "updatedAt": "2026-10-25T07:34:51.407Z"
   }
 }
