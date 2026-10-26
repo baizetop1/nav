@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-26T13:14:42.609Z",
+  "generatedAt": "2026-10-26T19:22:07.842Z",
   "intelligence": {
-    "updatedAt": "2026-10-26T13:14:42.609Z",
+    "updatedAt": "2026-10-26T19:22:07.842Z",
     "items": [
       {
         "id": "cn-item-8b4aa9e1bb4c9998",
@@ -26,33 +26,33 @@
         "signal": "已遭利用 · 整改期限 2026-10-26"
       },
       {
-        "id": "ai-openai-ee4c22366ef7e7ab",
+        "id": "ai-openai-27334100e818b985",
         "category": "ai",
-        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
-        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "title": "ChatGPT’s expanding world of work",
+        "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
         "source": "OpenAI",
-        "publishedAt": "2026-10-23T17:00:00.000Z",
-        "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+        "publishedAt": "2026-10-26T10:00:00.000Z",
+        "summary": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50240922",
+        "id": "hn-50245138",
         "category": "dev",
-        "title": "Switzerland. Block by block. At 1:1 scale",
-        "url": "https://blocks.manifold3d.ch/",
+        "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+        "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
         "source": "Hacker News",
-        "publishedAt": "2026-10-26T08:46:09.000Z",
+        "publishedAt": "2026-10-26T15:11:59.000Z",
         "badge": "HN",
-        "signal": "263 分 · 112 评论"
+        "signal": "363 分 · 52 评论"
       },
       {
-        "id": "cn-it-b17715fb81f389c1",
+        "id": "cn-it-68e5094084ccf2d3",
         "category": "cn",
-        "title": "苹果新款 OLED iPad mini 仍配备 60Hz 刷新率面板",
-        "url": "https://www.ithome.com/1/018/159.htm",
+        "title": "苹果 iOS/iPadOS 18.7.11 正式版发布",
+        "url": "https://www.ithome.com/1/018/192.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-26T13:10:08.000Z",
-        "summary": "IT之家 10 月 26 日消息，苹果今天发布了新款 iPad mini（iPad mini 8），采用 A20 Pro 芯片，10 月 29 日凌晨 1 点 10 分接受预购，11 月 6 日发售， 定价 5499 元起 。 IT之家参考设备详情获悉，这款产品搭载 8.5 英寸 2316 x 1512 分辨率 OLED 屏幕，但屏幕刷新率仍为 60Hz。其中 256GB 和 512GB 机型可选配纳米纹理显示屏玻璃。",
+        "publishedAt": "2026-10-26T18:44:04.000Z",
+        "summary": "IT之家 10 月 27 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 18.7.11 更新（内部版本号：22H384），本次更新距离上次发布正式版间隔 77 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 iOS/iPadOS 18 发布历史： 2026-08-11：iOS 18.7.10 (22H3…",
         "badge": "IT之家"
       },
       {
@@ -77,24 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1251990",
+        "id": "v2ex-1252073",
         "category": "dev",
-        "title": "用 cursor 的 super 订阅户么？ 分享一下 grok bot 及 grok4.7 如何高性价比使用的心得",
-        "url": "https://www.v2ex.com/t/1251990",
+        "title": "Claude 是傻逼吗，我写的强制性规范，它能直接不看的吗",
+        "url": "https://www.v2ex.com/t/1252073",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-26T09:46:09.000Z",
+        "publishedAt": "2026-10-26T18:18:20.000Z",
+        "summary": "蠢逼 Claude 比 ChatGPT 差多了，也就和豆包坐一桌的货，让你用 Apple 自带的 UI 组件，它非要自己绘制，sketch 原型图都画好了，让它直接做实现，做个四不像，指令遵循、工程一致性、自主验证能力，Claude 好像一项都没有，浪费订阅费 https://imgur.com/a/drHCF4U",
         "badge": "程序员",
         "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-4fd497a23d427e77",
+        "id": "cn-baidu-f1641112a5948627",
         "category": "cn",
-        "title": "台湾艺人阿雅公开表态“一个中国”",
-        "url": "https://www.baidu.com/s?wd=%E5%8F%B0%E6%B9%BE%E8%89%BA%E4%BA%BA%E9%98%BF%E9%9B%85%E5%85%AC%E5%BC%80%E8%A1%A8%E6%80%81%E2%80%9C%E4%B8%80%E4%B8%AA%E4%B8%AD%E5%9B%BD%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "被张雪扔下水县委书记拿到大结果",
+        "url": "https://www.baidu.com/s?wd=%E8%A2%AB%E5%BC%A0%E9%9B%AA%E6%89%94%E4%B8%8B%E6%B0%B4%E5%8E%BF%E5%A7%94%E4%B9%A6%E8%AE%B0%E6%8B%BF%E5%88%B0%E5%A4%A7%E7%BB%93%E6%9E%9C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月25日台湾光复纪念日，中国台湾艺人阿雅在社交平台转发新华社贴文，配文“一个中国”。这是她首次就两岸议题作出明确公开表态。",
+        "summary": "10月24日，张雪机车创始人张雪回到湖南麻阳挑战吉尼斯纪录。挑战成功后，众人划龙舟戏水庆祝时，廖园熙被张雪“扔下水”获网友大量好评。无心插柳，反倒有大结果。",
         "badge": "热搜",
-        "signal": "7,809,332 热度"
+        "signal": "7,809,683 热度"
       },
       {
         "id": "cisa-kev-cve-2026-110447",
@@ -117,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50215997",
+        "id": "hn-50248371",
         "category": "dev",
-        "title": "Birdwatching rewires the brain and slows cognitive decline",
-        "url": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
+        "title": "Microsoft Announces Type Server Protocol, Extension of Language Server Protocol",
+        "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T22:04:55.000Z",
+        "publishedAt": "2026-10-26T18:14:49.000Z",
         "badge": "HN",
-        "signal": "168 分 · 57 评论"
+        "signal": "49 分 · 11 评论"
       },
       {
-        "id": "cn-item-ca6c8e297b25dde2",
+        "id": "cn-item-2a37ade001911298",
         "category": "cn",
-        "title": "德国一邮轮发生撞船事故，船上载有3000多人",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-26/10721175.shtml",
+        "title": "今年前三季度国内居民出游人次53.07亿 同比增长6.2%",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-26/10721341.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-26T08:52:46.000Z",
-        "summary": "中新网10月26日电 综合德国媒体报道，当地时间25日，德国北海沿岸不来梅港发生邮轮与集装箱船碰撞事故。事故未造成人员伤亡，警方正在调查事故原因。",
+        "publishedAt": "2026-10-26T13:00:25.000Z",
+        "summary": "中新网10月26日电 据文化和旅游部网站消息，根据国内居民出游抽样调查结果，2026年前三季度，国内居民出游人次53.07亿，比上年同期增加3.09亿，同比增长6.2%。其中，城镇居民国内出游人次40.37亿，同比增长6.6%；农村居民国内出游人次12.70亿，同比增长5.1%。",
         "badge": "中新网要闻"
       },
       {
@@ -148,34 +149,34 @@
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-f8c156dba7886826",
+        "id": "ai-openai-7e73eebe3e909303",
         "category": "ai",
-        "title": "Securing our frontier model training environment",
-        "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "title": "How Fanatics and OpenAI streamline the fan experience",
+        "url": "https://openai.com/index/fanatics-streamline-fan-experience",
         "source": "OpenAI",
-        "publishedAt": "2026-10-23T10:00:00.000Z",
-        "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
+        "publishedAt": "2026-10-26T07:00:00.000Z",
+        "summary": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1251989",
+        "id": "v2ex-1252063",
         "category": "dev",
-        "title": "Macbook 维修导致硬盘数据丢失的可能性有多大？",
-        "url": "https://www.v2ex.com/t/1251989",
+        "title": "AI、机遇、挑战与新生活（23 岁生日总结）",
+        "url": "https://www.v2ex.com/t/1252063",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-26T09:43:47.000Z",
-        "summary": "3 月入月的 macbook air m5 一次深度放电后，突然无论如何充电都无法启动的问题。 [表现] 接上 typec 或 MagSafe 充多久都不行。----充电默认 magsafe 灯不亮 但是：关盖，偶尔 magesafe 会变成橙色（线没有接触问题），开盖自动灭。 仍然无法开机，机身无温度，无任何亮灯的地方。 要命的是。 上月刚将几百 G 的重要视频从手机转移到电脑。 有家人极极极重要的视频。孩子 1 到 3 岁的视频。 [问] ： 如果去售后维修，你们碰到过…",
+        "publishedAt": "2026-10-26T16:00:11.000Z",
+        "summary": "原文发表于我的博客： AI 、机遇、挑战与新生活（ 23 岁生日总结） 老实说，往年写生日总结的时候虽然也出现过坐在电脑前半天一句话都憋不出来的情况，但是今年感觉比往年更严重一些，严重到标题我都得想半天。原因其一是今年我整个人基本被 AI 占满了，几乎所有事情都是围绕着 AI 发生的（经常看我博客的朋友也可能会发现我今年发表博文数量断崖式下降，而且仅剩的几篇文章也基本全跟 AI 有关），导致真的不知道有什么好写的；其二是 AI 写文章和写代码太爽了，导致我的文笔和思考能力也…",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-1cc0fd1e8d01d02a",
+        "id": "cn-it-8290b1b2f10091d2",
         "category": "cn",
-        "title": "任天堂 Switch 2 首个越狱方案公开不久，已现非官方 YouTube 运行演示",
-        "url": "https://www.ithome.com/1/018/158.htm",
+        "title": "苹果 iPadOS 26.7.2 正式版发布",
+        "url": "https://www.ithome.com/1/018/191.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-26T13:09:04.000Z",
-        "summary": "IT之家 10 月 26 日消息，科技媒体 Wccftech 今天（10 月 26 日）发布博文，报道称任天堂 Switch 2 游戏掌机首个越狱方案上周公开后， 已有用户展示利用该方案运行非官方 YouTube 视频应用。 IT之家附上相关视频如下： X 用户 @byizmysh 发布的视频显示，Switch 2 已能运行基于开源项目 VacuumTube 打造的 YouTube 客户端，提供轻量化的电视端观看体验。而该项目借助开发者 Sammy Hajhamid（网名 …",
+        "publishedAt": "2026-10-26T18:44:04.000Z",
+        "summary": "IT之家 10 月 27 日消息，苹果今日向 iPad 用户推送了 iPadOS 26.7.2 更新，本次更新距离上次发布正式版间隔 28 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 iOS/iPadOS 26 发布历史： 2026-09-29：iPadOS 26.7.1 (23H30) 2026-09-10：iPadOS 26.7 …",
         "badge": "IT之家"
       },
       {
@@ -200,24 +201,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50242939",
+        "id": "hn-50245831",
         "category": "dev",
-        "title": "Anthropic S-1",
-        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+        "title": "CSS-Tricks has a new owner",
+        "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-26T13:04:50.000Z",
+        "publishedAt": "2026-10-26T15:51:23.000Z",
         "badge": "HN",
-        "signal": "59 分 · 17 评论"
+        "signal": "236 分 · 56 评论"
       },
       {
-        "id": "cn-baidu-f5da2807edad24c3",
+        "id": "cn-baidu-f17fe7dc0622152c",
         "category": "cn",
-        "title": "县委书记被扔下水 舆论为何一片叫好",
-        "url": "https://www.baidu.com/s?wd=%E5%8E%BF%E5%A7%94%E4%B9%A6%E8%AE%B0%E8%A2%AB%E6%89%94%E4%B8%8B%E6%B0%B4+%E8%88%86%E8%AE%BA%E4%B8%BA%E4%BD%95%E4%B8%80%E7%89%87%E5%8F%AB%E5%A5%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "人造古镇为啥集体哑火了",
+        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E9%80%A0%E5%8F%A4%E9%95%87%E4%B8%BA%E5%95%A5%E9%9B%86%E4%BD%93%E5%93%91%E7%81%AB%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月25日，张雪在湖南麻阳刷新摩托水上行驶吉尼斯纪录，庆祝时县委书记被临时扔进水里，网友一片叫好，认为这种未经彩排的松弛与真诚远胜脚本造势。",
+        "summary": "过去八年，全国人造古镇累计投入超500亿元，如今多陷客流冷清、商铺关停困境。人造古镇为啥集体哑火了？分析指出，其哑火根源在于“重地产、轻运营”模式。",
         "badge": "热搜",
-        "signal": "7,714,190 热度"
+        "signal": "7,713,293 热度"
       },
       {
         "id": "github-advisory-ghsa-xcx6-jx8p-x3h5",
@@ -240,24 +241,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1251985",
+        "id": "v2ex-1252060",
         "category": "dev",
-        "title": "不是说拼车不安全吗？为啥还那么多拼车的！",
-        "url": "https://www.v2ex.com/t/1251985",
+        "title": "分享个机场让大家避雷吧",
+        "url": "https://www.v2ex.com/t/1252060",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-26T09:32:39.000Z",
-        "summary": "之前 codex team 9.9 一月，29.9 一月的时候去卖号网站上买就罢了！ 现在卖号网站都 139 元了； 就算拼车 48team 也要 80 元了； 为啥不买官方的呢！！",
+        "publishedAt": "2026-10-26T15:37:33.000Z",
+        "summary": "这个 VPN 我从 20 年开始用，今年开始这个机场开始加大了设备限制规则，套餐中写可以同时在线 10 个设备，但是又限制 2 个网络（比如家里设备登录一个，手机用流量登录一个，就算 2 个网络了），我平时一般是家里有个常驻设备会挂一个 VPN ，公司的电脑挂一个 VPN ，平时手机偶尔用一用，这个限制就导致无法满足我的正常使用场景了，于是我找客服退款（我仅申请剩余天数的退款，未要求全额退），结果他立马给我把账号禁用了，还让我找支付宝退款。 机场名：AMNA 客服对话截图：",
         "badge": "程序员",
         "signal": "2 回复"
       },
       {
-        "id": "cn-item-bd990d0d99529dec",
+        "id": "cn-item-ca6c8e297b25dde2",
         "category": "cn",
-        "title": "国家能源局：我国风光累计装机容量突破20亿千瓦",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-26/10721128.shtml",
+        "title": "德国一邮轮发生撞船事故，船上载有3000多人",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-26/10721175.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-26T07:06:54.000Z",
-        "summary": "中新网10月26日电 据国家能源局微信公众号消息，我国新能源发展迈出坚实步伐，今年1—9月，风电和太阳能发电新增装机容量约1.7亿千瓦，截至2026年9月底，风电和太阳能发电累计装机容量达到20.1亿千瓦，其中，太阳能发电装机容量13.1亿千瓦，同比增长16.5%；风电装机容量7.0亿千瓦，同比增长20.4%。",
+        "publishedAt": "2026-10-26T08:52:46.000Z",
+        "summary": "中新网10月26日电 综合德国媒体报道，当地时间25日，德国北海沿岸不来梅港发生邮轮与集装箱船碰撞事故。事故未造成人员伤亡，警方正在调查事故原因。",
         "badge": "中新网要闻"
       },
       {
@@ -272,33 +273,33 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-openai-1a543055a02f9816",
+        "id": "ai-openai-742d30efdc4090c1",
         "category": "ai",
-        "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-        "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+        "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+        "url": "https://openai.com/index/openai-cut-incident-investigation",
         "source": "OpenAI",
-        "publishedAt": "2026-10-23T00:00:00.000Z",
-        "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
+        "publishedAt": "2026-10-26T07:00:00.000Z",
+        "summary": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50238708",
+        "id": "hn-50248055",
         "category": "dev",
-        "title": "Show HN: TitleArt – Make text like it's 1997",
-        "url": "https://titleart.dvy.io/",
+        "title": "Oldest GUI application that still runs on Windows 11",
+        "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-26T03:23:57.000Z",
+        "publishedAt": "2026-10-26T17:56:55.000Z",
         "badge": "HN",
-        "signal": "293 分 · 51 评论"
+        "signal": "42 分 · 14 评论"
       },
       {
-        "id": "cn-it-1c7474a9a613c1c6",
+        "id": "cn-it-ce3651fb78673c07",
         "category": "cn",
-        "title": "5499 元起：苹果发布 iPad mini 8，8.5 英寸 OLED 屏、A20 Pro 芯片",
-        "url": "https://www.ithome.com/1/018/156.htm",
+        "title": "苹果 watchOS 27.2 正式版发布",
+        "url": "https://www.ithome.com/1/018/190.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-26T13:04:13.000Z",
-        "summary": "IT之家 10 月 26 日闪讯速报，苹果发布 iPad mini 8 平板电脑。这款产品搭载 8.5 英寸 OLED 屏幕，比上一代薄了 14%，采用 A20 Pro 芯片，10 月 29 日凌晨 1 点 10 分接受预购，11 月 6 日发售， 定价 5499 元起 。 IT之家从苹果官网获悉，iPad mini 8 提供午夜色、星光色两种配色。其机身相比 iPad mini 7 薄了 14%，轻了 13%。该机配备超视网膜 XDR 显示屏，采用 OLED 技术，峰值亮…",
+        "publishedAt": "2026-10-26T18:44:03.000Z",
+        "summary": "IT之家 10 月 27 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.2 更新（内部版本号：24S118），本次更新距离上次发布正式版间隔 27 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 watchOS 27 发布历史： 2026-10-20：watchOS 27.2 RC (24S116) 202…",
         "badge": "IT之家"
       },
       {
@@ -323,15 +324,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1251976",
+        "id": "v2ex-1252055",
         "category": "dev",
-        "title": "AI vibe coding 的进展，不知道程序员还能存活多久？",
-        "url": "https://www.v2ex.com/t/1251976",
+        "title": "不到 24 小时， GitHub 冲到了 1,400 Star🔥🔥🔥🔥🔥🔥",
+        "url": "https://www.v2ex.com/t/1252055",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-26T09:08:29.000Z",
-        "summary": "我那开劳斯莱斯的朋友，7 月份时候还是 coding 白痴， 但经过几个月的 vibe coding, 现在已经成功上线了工厂的 erp ，并且是那种可以当生产力工具用的，且按照他的说法，简直完美的和他工厂所有流程吻合。他正在慢慢的把周边模块一点一点的加上，不断的接入周边硬件，基本上都是许愿式的提交需求，大部分一次可以搞定。 而最关键的是，他已经知道利用 github actions 通过 Claude 做自动化部署实施，前 2 个月他还孤军奋战，现在他在 erp 中做了 …",
+        "publishedAt": "2026-10-26T14:52:30.000Z",
+        "summary": "不到 24 小时，GitHub 冲到了 1,400 Star🔥🔥🔥🔥🔥🔥 我也已经整整 24 小时没睡了。 看评论、改问题、加功能，一直忙到现在。 📖 这次，我把整本《小王子》搬进来了。 27 章，从法文重新翻译，中英对照，每段都有双语配音，听的时候文字逐词点亮。配上 119 张插画和开场动画，像一本会说话的绘本。 ⚡ ⚡⚡练习也加了一大批： 同义替换、易混词对比、每日短文与判断题、听写升级，以及考试倒计时、每日计划、话题星座、每日一词海报。 评论区反馈的问题也逐个处理了!…",
         "badge": "程序员",
-        "signal": "31 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-baidu-fbb0e9f231134522",
@@ -341,7 +342,7 @@
         "source": "百度热搜",
         "summary": "词元出海，是指中国AI大模型企业将电力、算力等优势转化为高性价比词元，并通过API接口向全球提供推理服务，按处理量计费，从而实现算力与电力的“数字化出口”，被称为“看不见的外贸”。一起来看依托算力、词元等落地、发展起来的新应用、新场景，感受人工智能和相关产业的脉动。",
         "badge": "热搜",
-        "signal": "7,619,173 热度"
+        "signal": "7,616,118 热度"
       },
       {
         "id": "cisa-kev-cve-2026-96655",
@@ -364,23 +365,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50242870",
+        "id": "hn-50248124",
         "category": "dev",
-        "title": "Fixing Tool-Call Accuracy in vLLM",
-        "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+        "title": "GPT-6.1 Terra",
+        "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-26T12:59:48.000Z",
+        "publishedAt": "2026-10-26T18:01:17.000Z",
         "badge": "HN",
-        "signal": "3 分 · 0 评论"
+        "signal": "201 分 · 100 评论"
       },
       {
-        "id": "cn-item-76a5cb3f7809060a",
+        "id": "cn-item-bd990d0d99529dec",
         "category": "cn",
-        "title": "西班牙巴塞罗那省发生公交坠坡事故致83人受伤",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-26/10721070.shtml",
+        "title": "国家能源局：我国风光累计装机容量突破20亿千瓦",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-26/10721128.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-26T06:53:17.000Z",
-        "summary": "中新网北京10月26日电 马德里消息：据西班牙埃菲社报道，西班牙加泰罗尼亚自治区巴塞罗那省当地时间25日下午发生一起公交车交通事故，造成83人受伤，其中7人重伤。",
+        "publishedAt": "2026-10-26T07:06:54.000Z",
+        "summary": "中新网10月26日电 据国家能源局微信公众号消息，我国新能源发展迈出坚实步伐，今年1—9月，风电和太阳能发电新增装机容量约1.7亿千瓦，截至2026年9月底，风电和太阳能发电累计装机容量达到20.1亿千瓦，其中，太阳能发电装机容量13.1亿千瓦，同比增长16.5%；风电装机容量7.0亿千瓦，同比增长20.4%。",
         "badge": "中新网要闻"
       },
       {
@@ -395,34 +396,33 @@
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-891b7e0bbf66f86d",
+        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
         "category": "ai",
-        "title": "Build more responsive apps with the Decisions API",
-        "url": "https://openai.com/index/decisions-api",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-22T19:00:00.000Z",
-        "summary": "Fast, focused, low-cost decisions for any application.",
-        "badge": "OpenAI"
+        "title": "Developing Gemini 4 Argon responsibly and safely",
+        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-13T19:43:07.000Z",
+        "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1251961",
+        "id": "v2ex-1252043",
         "category": "dev",
-        "title": "神经的显卡价格",
-        "url": "https://www.v2ex.com/t/1251961",
+        "title": "应该做「有产品思维的工程师」，还是「能写项目的产品经理」？",
+        "url": "https://www.v2ex.com/t/1252043",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-26T08:37:07.000Z",
-        "summary": "我那开劳斯莱斯的朋友在我的鼓动下，买了台主机，然后内存和显卡觉得不够，也就差 2 天，64G 内存涨了 300 ，5060ti 16G 显卡涨了 1000 ， 毫不犹豫赶紧买了。 而几个月前他对硬件没有个认识， 现在彻底认识到了。有人说这款显卡年底会到 9000-10000 ， 这是疯了吗？ 有人说是 pearl 挖矿导致， 也有人说 strata 推理工具横空出世导致。",
+        "publishedAt": "2026-10-26T14:05:11.000Z",
+        "summary": "对于这两条路径感到不确定，希望了解大家的看法。",
         "badge": "程序员",
-        "signal": "21 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-fa4804a092273da9",
+        "id": "cn-it-247528c981a199a0",
         "category": "cn",
-        "title": "英特尔 CEO 陈立武：已经和 AMD CEO 苏姿丰就潜在合作展开对话",
-        "url": "https://www.ithome.com/1/018/155.htm",
+        "title": "苹果 visionOS 27.2 正式版发布",
+        "url": "https://www.ithome.com/1/018/189.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-26T13:02:11.000Z",
-        "summary": "IT之家 10 月 26 日消息，据科技媒体 Wccftech 今天报道，英特尔首席执行官陈立武近期在华美半导体协会（CASPA）炉边谈话中透露，他已经和 AMD 首席执行官苏姿丰对话，探讨潜在合作方向。 陈立武在谈话中表示，英特尔过去过于骄傲，从不愿意根据客户需求做出调整。公司如今正在加倍投入定制芯片业务，尤其是在至强产品线方面。 谈到先进制程时陈立武表示：“18A 已经进入量产阶段，14A 正在取得非常强劲的进展。我们已经推出了 0.5 版 PDK，请继续关注，未来很快…",
+        "publishedAt": "2026-10-26T18:44:03.000Z",
+        "summary": "IT之家 10 月 27 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.2 更新（内部版本号：24N120），本次更新距离上次发布正式版间隔 28 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-10-20：visionOS 27.2 RC (24N118) 2…",
         "badge": "IT之家"
       },
       {
@@ -437,33 +437,33 @@
         "signal": "已遭利用 · 整改期限 2026-10-23"
       },
       {
-        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
+        "id": "ai-hugging-face-0e5fad3ca5f8a881",
         "category": "ai",
-        "title": "Developing Gemini 4 Argon responsibly and safely",
-        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-13T19:43:07.000Z",
-        "badge": "Google DeepMind"
+        "title": "Ensemble forecasting with IBM Granite time-series models",
+        "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-22T07:51:31.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-50241924",
+        "id": "hn-50247493",
         "category": "dev",
-        "title": "Tasks as Code: Move Your Tickets into the Repository",
-        "url": "https://typemill.net/knowledge-hub/tasks-as-code",
+        "title": "Nietzschian Debugger",
+        "url": "https://github.com/DilawarShafiq/nietzschian-debugger",
         "source": "Hacker News",
-        "publishedAt": "2026-10-26T11:15:43.000Z",
+        "publishedAt": "2026-10-26T17:25:30.000Z",
         "badge": "HN",
-        "signal": "15 分 · 16 评论"
+        "signal": "41 分 · 22 评论"
       },
       {
-        "id": "cn-baidu-3fd486fbf4f52ebf",
+        "id": "cn-baidu-03f5c266fdafd3c7",
         "category": "cn",
-        "title": "王兴兴两次认错 宇树暴涨1100亿",
-        "url": "https://www.baidu.com/s?wd=%E7%8E%8B%E5%85%B4%E5%85%B4%E4%B8%A4%E6%AC%A1%E8%AE%A4%E9%94%99+%E5%AE%87%E6%A0%91%E6%9A%B4%E6%B6%A81100%E4%BA%BF&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "15个中央巡视组组长公布",
+        "url": "https://www.baidu.com/s?wd=15%E4%B8%AA%E4%B8%AD%E5%A4%AE%E5%B7%A1%E8%A7%86%E7%BB%84%E7%BB%84%E9%95%BF%E5%85%AC%E5%B8%83&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月26日，宇树科技总市值达2718亿元，相比10月15日低点，7个交易日猛增1080亿元。日前，创始人王兴兴两次公开“认错”，反思自己低估了AI潜力，其积极表态提振了市场预期，增长了宇树科技市值。",
+        "summary": "近日，二十届中央第八轮巡视完成进驻工作。15个中央巡视组将对教育部和31所中管高校党组织开展常规巡视，工作2个月左右。",
         "badge": "热搜",
-        "signal": "7,520,113 热度"
+        "signal": "7,522,157 热度"
       },
       {
         "id": "github-advisory-ghsa-834v-8h66-3h79",
@@ -477,24 +477,14 @@
         "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-hugging-face-0e5fad3ca5f8a881",
-        "category": "ai",
-        "title": "Ensemble forecasting with IBM Granite time-series models",
-        "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-22T07:51:31.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1251944",
+        "id": "v2ex-1251990",
         "category": "dev",
-        "title": "Make the session continue again!",
-        "url": "https://www.v2ex.com/t/1251944",
+        "title": "用 cursor 的 super 订阅户么？ 分享一下 grok bot 及 grok4.7 如何高性价比使用的心得",
+        "url": "https://www.v2ex.com/t/1251990",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-26T07:54:28.000Z",
-        "summary": "想成为 kimi 用户最重要的一步, 那就是要会发 continue. 当别人问我为什么这么有耐心时, 我会告诉他我是 kimi 用户 Make the session continue again! continue, continue, continue.",
+        "publishedAt": "2026-10-26T09:46:09.000Z",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "5 回复"
       }
     ]
   },
@@ -511,7 +501,7 @@
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "language": "CSS",
-        "stars": 35212,
+        "stars": 35842,
         "starsToday": 2235
       },
       {
@@ -521,7 +511,7 @@
         "url": "https://github.com/TauricResearch/TradingAgents",
         "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "language": "Python",
-        "stars": 115351,
+        "stars": 115801,
         "starsToday": 1376
       },
       {
@@ -531,7 +521,7 @@
         "url": "https://github.com/JetBrains/thinkrail",
         "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "language": "TypeScript",
-        "stars": 2345,
+        "stars": 2670,
         "starsToday": 1156
       },
       {
@@ -541,7 +531,7 @@
         "url": "https://github.com/makecindy/cindy",
         "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "language": "TypeScript",
-        "stars": 5773,
+        "stars": 6234,
         "starsToday": 1268
       },
       {
@@ -551,8 +541,8 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 289297,
-        "starsToday": 853
+        "stars": 289645,
+        "starsToday": 987
       },
       {
         "id": "github-21fcbee2e5fa5e51",
@@ -561,7 +551,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design language that makes your AI harness better at design.",
         "language": "Rust",
-        "stars": 88507,
+        "stars": 88935,
         "starsToday": 1551
       },
       {
@@ -571,7 +561,7 @@
         "url": "https://github.com/NVIDIA/SkillSpector",
         "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
         "language": "Python",
-        "stars": 21765,
+        "stars": 22001,
         "starsToday": 203
       },
       {
@@ -581,7 +571,7 @@
         "url": "https://github.com/pollen-robotics/microduck",
         "description": "A Tiny biped duck robot 🦆",
         "language": "Rust",
-        "stars": 12154,
+        "stars": 12307,
         "starsToday": 844
       },
       {
@@ -591,8 +581,8 @@
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 1128,
-        "starsToday": 86
+        "stars": 1342,
+        "starsToday": 312
       },
       {
         "id": "github-7694a26ca72c822a",
@@ -601,10 +591,10 @@
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "language": "Python",
-        "stars": 102974,
+        "stars": 103314,
         "starsToday": 723
       }
     ],
-    "updatedAt": "2026-10-26T13:14:42.609Z"
+    "updatedAt": "2026-10-26T19:22:07.842Z"
   }
 }
