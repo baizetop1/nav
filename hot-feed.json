@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-27T10:35:46.609Z",
+  "generatedAt": "2026-10-27T16:40:26.865Z",
   "intelligence": {
-    "updatedAt": "2026-10-27T10:35:46.609Z",
+    "updatedAt": "2026-10-27T16:40:26.865Z",
     "items": [
       {
         "id": "cn-item-8e6c95e0ae5a1cf6",
@@ -36,65 +36,65 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50251344",
+        "id": "hn-50261319",
         "category": "dev",
-        "title": "Three new discoveries in mathematics, computer science, and physics",
-        "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+        "title": "Genie 4",
+        "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-26T21:35:28.000Z",
+        "publishedAt": "2026-10-27T16:06:01.000Z",
         "badge": "HN",
-        "signal": "928 分 · 449 评论"
+        "signal": "100 分 · 39 评论"
       },
       {
-        "id": "cn-it-da0507ccbb0d32f4",
+        "id": "cn-it-f2ff5d6d9ad0aca6",
         "category": "cn",
-        "title": "广西柳州一男子开启汽车智驾后拍摄“玩手机、吃东西”视频炫耀，被警方依法处置",
-        "url": "https://www.ithome.com/1/018/596.htm",
+        "title": "京东 1 号会员店 10 月 28 日起调整会员权益：尊享卡返 2% 赠金，每月权益需消费解锁",
+        "url": "https://www.ithome.com/1/018/698.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-27T10:28:48.000Z",
-        "summary": "IT之家 10 月 27 日消息，据柳州交警通报，广西柳州交管支队近期查获一名车主在社交平台频繁发布“开启智驾后在车里吃东西、自拍”视频，甚至宣称“一家人在车内睡觉”。 ▲ 图源柳州交警（下同） 对此，广西柳州交管支队展开调查，找到了涉事车辆车主黄某，依法对其进行处置，并责令黄某限期内下架所有涉嫌违法的社交媒体视频。 交管部门此前已多次强调，L2 级辅助驾驶开启后，双手长时间脱离方向盘，行车中进食、手持手机拍摄视频、刷短视频、睡觉等行为，都属于“驾车时有其他妨碍安全驾驶的行…",
+        "publishedAt": "2026-10-27T15:39:03.000Z",
+        "summary": "IT之家 10 月 27 日消息，京东旗下 1 号会员店宣布将于 10 月 28 日起调整会员权益体系。 根据 官方公告 ，此次调整的核心变化是购物返利从“满 200 元返券”改为按订单金额比例返还“赠金”，尊享卡会员返 2%、普通卡会员返 1%，每月赠金上限分别为 500 元和 200 元。1 元赠金可抵扣 1 元人民币，特殊商品不参与返金也不支持赠金抵扣。 新老用户按续费渠道和时效分流。10 月 28 日前已开通、且未在 1 号会员店 App 内续费的老用户，会籍期内继…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-394h-qwmc-48pf",
+        "id": "github-advisory-ghsa-qq8j-7v2v-3rwp",
         "category": "security",
-        "title": "virtualenv: Xonsh activation literals depend on the script decoding codec",
-        "url": "https://github.com/advisories/GHSA-394h-qwmc-48pf",
+        "title": "undici WebSocket client vulnerable to Denial of Service via failed HTTP/2 handshake",
+        "url": "https://github.com/advisories/GHSA-qq8j-7v2v-3rwp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:24:43.000Z",
-        "summary": "## Summary Caller-supplied prompt text can become executable syntax in the xonsh activation script. An attacker must influence the value passed to virtualenv, and a user must subsequently activate the environment. ## Affected area Xonsh re…",
-        "badge": "CVE-2026-113718",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-27T16:09:45.000Z",
+        "summary": "### Impact undici's experimental WebSocket client (enabled by default via `allowH2: true`) crashes the Node.js process when it connects to a malicious server over HTTP/2. If the server answers the WebSocket upgrade with a response that fai…",
+        "badge": "CVE-2026-109855",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-google-deepmind-301925b8adfcebab",
+        "id": "ai-hugging-face-1d6c5c59e46e52b9",
         "category": "ai",
-        "title": "Beyond tree cover: mapping the world’s forest types",
-        "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-22T14:30:24.000Z",
-        "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
-        "badge": "Google DeepMind"
+        "title": "Can we trust LLMs to judge whether a research idea is novel?",
+        "url": "https://huggingface.co/blog/allenai/novelty-bench",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-27T16:12:42.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252321",
+        "id": "v2ex-1252377",
         "category": "dev",
-        "title": "X Subscription 联合体系出来，原来的做 X 低价代充的是不是都没了？",
-        "url": "https://www.v2ex.com/t/1252321",
+        "title": "Codex 是蠢逼吗，代码都不读清楚直接一通瞎改",
+        "url": "https://www.v2ex.com/t/1252377",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-27T10:13:54.000Z",
+        "publishedAt": "2026-10-27T15:18:55.000Z",
+        "summary": "codex 没啥新东西出来，天天重置，然后一堆人天天猛蹬，估计算力又不足了，现在降智蠢的一笔，而且还慢！ 跑半天还把我代码改废了，我还要回退重来 claude 甩 codex 半条街了。 还是 claude 用起来丝滑，给个需求转几下就出结果了，还写的好。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-baidu-36d52b1877a6a9b0",
+        "id": "cn-baidu-c02d66ed049f089f",
         "category": "cn",
-        "title": "人民日报刊文谈《万疆》永久免费授权",
-        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E5%88%8A%E6%96%87%E8%B0%88%E3%80%8A%E4%B8%87%E7%96%86%E3%80%8B%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E6%8E%88%E6%9D%83&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "外交部回应“姆巴佩遭中国公司解约”",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%96%E4%BA%A4%E9%83%A8%E5%9B%9E%E5%BA%94%E2%80%9C%E5%A7%86%E5%B7%B4%E4%BD%A9%E9%81%AD%E4%B8%AD%E5%9B%BD%E5%85%AC%E5%8F%B8%E8%A7%A3%E7%BA%A6%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "国庆长假期间，歌手李玉刚宣布演唱会翻唱《万疆》永久免费授权，引发热议。人民日报刊文称其在版权收益和情感传递间选择了后者。",
+        "summary": "10月27日，外交部发言人郭嘉昆主持例行记者会回应姆巴佩遭解约一事。郭嘉昆表示，伤害中国人民感情的言行自然会遭到中国社会各界的共同抵制。",
         "badge": "热搜",
-        "signal": "7,808,497 热度"
+        "signal": "7,808,938 热度"
       },
       {
         "id": "cisa-kev-cve-2026-109619",
@@ -108,23 +108,24 @@
         "signal": "已遭利用 · 整改期限 2026-10-29"
       },
       {
-        "id": "ai-hugging-face-5d794c3788a3a4be",
+        "id": "ai-openai-8eb6001a836a6e50",
         "category": "ai",
-        "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
-        "url": "https://huggingface.co/blog/allenai/litpivot",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-23T16:15:50.000Z",
-        "badge": "Hugging Face"
+        "title": "Working with academic communities to build scientific understanding",
+        "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-26T14:30:00.000Z",
+        "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
+        "badge": "OpenAI"
       },
       {
-        "id": "hn-50255298",
+        "id": "hn-50258538",
         "category": "dev",
-        "title": "The Mythical Man-Month in the Age of AI",
-        "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
+        "title": "New iMac with M6",
+        "url": "https://www.apple.com/imac/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T06:25:37.000Z",
+        "publishedAt": "2026-10-27T13:02:02.000Z",
         "badge": "HN",
-        "signal": "154 分 · 112 评论"
+        "signal": "140 分 · 120 评论"
       },
       {
         "id": "cn-item-839ad25f7a9eeedd",
@@ -137,45 +138,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-6w3r-xr62-4xcp",
+        "id": "github-advisory-ghsa-8m4g-j4wp-wgcg",
         "category": "security",
-        "title": "virtualenv: Bash prompt values can change meaning under older compatibility modes",
-        "url": "https://github.com/advisories/GHSA-6w3r-xr62-4xcp",
+        "title": "Authlib accepts an empty HMAC key, allowing JWS/JWT signature forgery (HS256/HS384/HS512)",
+        "url": "https://github.com/advisories/GHSA-8m4g-j4wp-wgcg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:21:57.000Z",
-        "summary": "## Summary Caller-supplied prompt text can become executable syntax in the bash activation prompt. An attacker must influence the value passed to virtualenv, and a user must subsequently activate the environment and draw the prompt. ## Aff…",
-        "badge": "CVE-2026-113723",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-27T16:09:22.000Z",
+        "summary": "Reporter: Cavan Loughran, Celvex Group Inc. Summary Authlib's symmetric (oct) key handling accepts an empty key (empty bytes b'' / empty string '') as a valid HMAC signing and verification key. An empty HMAC key produces a deterministic di…",
+        "badge": "CVE-2026-114616",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
-        "id": "ai-google-deepmind-ad09b0946a60b7ff",
+        "id": "ai-google-deepmind-301925b8adfcebab",
         "category": "ai",
-        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "title": "Beyond tree cover: mapping the world’s forest types",
+        "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-15T16:08:03.000Z",
-        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+        "publishedAt": "2026-10-22T14:30:24.000Z",
+        "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252319",
+        "id": "v2ex-1252370",
         "category": "dev",
-        "title": "代码是不是没什么价值了",
-        "url": "https://www.v2ex.com/t/1252319",
+        "title": "两个月烧了 500 亿 token，从零开始学写基金投资 agent",
+        "url": "https://www.v2ex.com/t/1252370",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-27T10:09:27.000Z",
-        "summary": "23 年开始用 Rust 写 PDF 的库，手写了 1w 多行代码，最近花了几天时间终于用 AI 写完了，但是好像没什么价值，只能是了却一桩心事 https://github.com/rockyzhengwu/rzpdf",
+        "publishedAt": "2026-10-27T14:55:24.000Z",
+        "summary": "买了四十多个基金，为了方便管理，最开始想做个定投计算器，一步步下来做成了 agent ，饼画的太大，不过总算做的差不多了，上来分享一下和交流 agent 的开源版（原本的很乱不好意思开源，从零开始重新搭建一个开源的版本）： https://github.com/hpoenixf/open-etf-agent 用踩坑经历作为素材搭建的站点，希望能帮到一样是从零开始转过来的朋友 https://hpoenixf.com/eff-agent-article/ 还整了个 agent…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-cb909f948ca08bb4",
+        "id": "cn-it-ad2621c9aab31600",
         "category": "cn",
-        "title": "景嘉微 2026 年前三季度归母净亏损 1.85 亿元，同比由盈转亏",
-        "url": "https://www.ithome.com/1/018/591.htm",
+        "title": "ATK RS8 Air / Neo 电竞键盘发布：87 配列，到手价 299 元起",
+        "url": "https://www.ithome.com/1/018/697.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-27T10:24:44.000Z",
-        "summary": "IT之家 10 月 27 日消息，景嘉微今日发布 2026 年前三季度（2026 年 1 月～2026 年 9 月）报告： 营业总收入 ：5.53 亿元，同比增长 11.71% 归母净利润 ：-1.85 亿元，同比下降 154.49% 扣非净利润 ：-1.99 亿元，同比下降 130.91% 经营现金流 ：-5.42 亿元，同比下降 273.04% 加权平均净资产收益率 ：-2.72% 基本每股收益 ：-0.35 元，同比下降 150% 稀释每股收益 ：-0.35 元，同比…",
+        "publishedAt": "2026-10-27T15:33:42.000Z",
+        "summary": "IT之家 10 月 27 日消息，ATK RS8 Air、RS8 Neo 系列 87 配列高性能电竞键盘今日发布，已开启定金预定，RS8 Air 到手价 349 元起，RS8 Neo 到手价 299 元起，11 月 3 日 21 点尾款支付。 IT之家从官方介绍获悉，该系列产品以 87 大配列 带来完整 F 区与全功能按键，兼顾办公码字的便捷需求与电竞对局的操作自由度，拓展更多使用场景。外观搭载正面顶雾 PC 键帽，搭配侧边机甲翼镜结构。两款机型均采用五层满配填充 +GAS…",
         "badge": "IT之家"
       },
       {
@@ -199,34 +200,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50251661",
+        "id": "hn-50257419",
         "category": "dev",
-        "title": "The Exponential Time Hypothesis Is False [pdf]",
-        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "title": "Python's experimental JIT to be removed",
+        "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-26T21:59:15.000Z",
+        "publishedAt": "2026-10-27T11:17:57.000Z",
         "badge": "HN",
-        "signal": "636 分 · 233 评论"
+        "signal": "275 分 · 147 评论"
       },
       {
-        "id": "cn-baidu-c02d66ed049f089f",
+        "id": "cn-baidu-900e548d4f6ca6b8",
         "category": "cn",
-        "title": "外交部回应“姆巴佩遭中国公司解约”",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%96%E4%BA%A4%E9%83%A8%E5%9B%9E%E5%BA%94%E2%80%9C%E5%A7%86%E5%B7%B4%E4%BD%A9%E9%81%AD%E4%B8%AD%E5%9B%BD%E5%85%AC%E5%8F%B8%E8%A7%A3%E7%BA%A6%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国足协第一时间与皇马严正交涉",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E8%B6%B3%E5%8D%8F%E7%AC%AC%E4%B8%80%E6%97%B6%E9%97%B4%E4%B8%8E%E7%9A%87%E9%A9%AC%E4%B8%A5%E6%AD%A3%E4%BA%A4%E6%B6%89&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "10月27日，中国足协发文称，针对姆巴佩发表涉华错误言论事件，中国足协第一时间与皇马严正交涉，要求涉事球员和俱乐部作出公开正式道歉，坚决反对任何伤害中国人民感情的言论。",
         "badge": "热搜",
-        "signal": "7,713,907 热度"
+        "signal": "7,714,535 热度"
       },
       {
-        "id": "github-advisory-ghsa-xcx6-jx8p-x3h5",
+        "id": "github-advisory-ghsa-7vr2-2fgp-9w7p",
         "category": "security",
-        "title": "MSAL Node authorization code flow may disclose parameters to an attacker-controlled endpoint",
-        "url": "https://github.com/advisories/GHSA-xcx6-jx8p-x3h5",
+        "title": "Authlib incomplete algorithm-confusion fix permits HMAC forgery with prefixed public keys",
+        "url": "https://github.com/advisories/GHSA-7vr2-2fgp-9w7p",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:16:44.000Z",
-        "summary": "### Impact Origin validation error in Microsoft Authentication Library (MSAL) for Node.js allows an unauthorized attacker to disclose information over a network. This affects the auth_code flow. ### Patches Version 7.1.0 and higher are pat…",
-        "badge": "CVE-2026-109461",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-27T15:38:48.000Z",
+        "summary": "## Summary `OctKey.import_key()` carries the only guard that stops an asymmetric public key from being used as an HMAC secret in `authlib.jose`. That guard is `raw_key.startswith(POSSIBLE_UNSAFE_KEYS)` — anchored at byte 0 — while the load…",
+        "badge": "CVE-2026-114615",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
         "id": "ai-openai-7d972df501d01ba1",
@@ -239,14 +241,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1252307",
+        "id": "v2ex-1252364",
         "category": "dev",
-        "title": "显卡私有化部署了 deepseek v4 flash 模型，想接入一些共享平台，赚点电费钱，求渠道",
-        "url": "https://www.v2ex.com/t/1252307",
+        "title": "AI 编程的「老板思维」真的有用吗？",
+        "url": "https://www.v2ex.com/t/1252364",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-27T09:30:46.000Z",
+        "publishedAt": "2026-10-27T14:17:14.000Z",
+        "summary": "老板思维指：把自己作为老板，向 agent 提需求、验收，而不过多关注具体实现。 上一个主题 也有许多坛友提到这种方法，这里延申讨论。 我接触到的反面例子： 面试时一个面试官提到自己的团队在用多了 AI 代码后，最后会变成 bug 越来越多、人和 AI 都没法修的状态，亦即项目「废掉」 在游民社区遇到的独立开发者，提到自己用 gpt 写出来几万行代码，代码量过多人工不可能审核（全看完都要几天），只能从最初开始让 AI 重新精简写 正面例子： 在 AI 共学营，一位 agen…",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "5 回复"
       },
       {
         "id": "cn-item-64ebc0dec6be51ef",
@@ -270,45 +273,45 @@
         "signal": "已遭利用 · 整改期限 2026-10-26"
       },
       {
-        "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
+        "id": "ai-google-deepmind-ad09b0946a60b7ff",
         "category": "ai",
-        "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
-        "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-14T02:00:14.000Z",
-        "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
+        "publishedAt": "2026-10-15T16:08:03.000Z",
+        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50256230",
+        "id": "hn-50257326",
         "category": "dev",
-        "title": "AI is ruining haunted houses",
-        "url": "https://www.plagiarismtoday.com/2026/10/26/ai-is-ruining-haunted-attractions/",
+        "title": "Wikipedia's Cleanup of AI-Generated Content",
+        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T08:50:33.000Z",
+        "publishedAt": "2026-10-27T11:08:15.000Z",
         "badge": "HN",
-        "signal": "21 分 · 14 评论"
+        "signal": "258 分 · 114 评论"
       },
       {
-        "id": "cn-it-d0645468e0775f7d",
+        "id": "cn-it-0d7081a93a55dfb7",
         "category": "cn",
-        "title": "比亚迪：智驾等创新业务稳步推进，将踏实做好经营",
-        "url": "https://www.ithome.com/1/018/594.htm",
+        "title": "Meta AI 负责人罗希特 · 帕特尔离职创业，打造微软 Office 替代方案 Ndoc",
+        "url": "https://www.ithome.com/1/018/696.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-27T10:23:20.000Z",
-        "summary": "IT之家 10 月 27 日消息，比亚迪今日在深交所互动易平台回应投资者疑问时表示，公司在新能源汽车、储能领域的发展，根植于长期持续的技术研发与产业链积累。 IT之家注意到，比亚迪表示其智驾等创新业务也将稳步推进，相关业务尚处在发展阶段，挑战与机遇并存。公司将踏实做好经营，努力以良好的经营回报回馈广大投资者。",
+        "publishedAt": "2026-10-27T15:27:53.000Z",
+        "summary": "IT之家 10 月 27 日消息，据科技媒体 TechCrunch 今天报道，Meta 人工智能负责人罗希特 · 帕特尔（Rohit Patel）已经离开公司，他曾在 Meta 从事 AI 研发工作八年，并担任 Meta 超级智能实验室负责人。 据报道，帕特尔已创立 Ndoc 公司，他将开发一款原生 AI 办公软件， 旨在取代微软 Office 和谷歌 Workspace 。 这名前 Meta 研究员希望，Ndoc 不能只是叠加在现有工作流的 AI 工具，而是要改变人们使用…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-xjj6-f33q-929c",
+        "id": "github-advisory-ghsa-j2w7-387v-m2rq",
         "category": "security",
-        "title": "undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
-        "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+        "title": "PhpSpreadsheet ODS Reader: Unbounded number-rows-repeated → CPU & Memory Exhaustion (DoS)",
+        "url": "https://github.com/advisories/GHSA-j2w7-387v-m2rq",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:14:31.000Z",
-        "summary": "### Impact undici's `fetch()` crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such responses (a content-encoding l…",
-        "badge": "CVE-2026-109869",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-27T15:38:33.000Z",
+        "summary": "## Summary When PhpSpreadsheet loads an OpenDocument Spreadsheet (`.ods`), `Ods::processTableRow()` reads the `table:number-rows-repeated` attribute of a ` ` with an unchecked `(int)` cast, then materialises one cell per repeated row. This…",
+        "badge": "CVE-2026-108359",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-51888f116f5b0837",
@@ -320,25 +323,25 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252252",
+        "id": "v2ex-1252352",
         "category": "dev",
-        "title": "记录程序员兼职电商创业的过程",
-        "url": "https://www.v2ex.com/t/1252252",
+        "title": "大佬们，我开发了个 ai 上论坛代你吵架的 dsh 插件，大佬们能不能帮忙看看",
+        "url": "https://www.v2ex.com/t/1252352",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-27T07:34:31.000Z",
-        "summary": "昨天在 V 站看到了这个帖子： https://www.v2ex.com/t/1251768 感慨万千这几年自己的遭遇，加了里面老哥的绿泡泡，聊了几句。想着自己这几年的折腾，虾皮开店关店，炒 BTC 由盈转亏，失业重新就业。 今年 26 年由于事情比较少，整个人也有时间放松下来想一想后续的事情了。就 5 月重新注册了公司，9 月开始做拉美地区美客多自发货，但是现在由于没什么流量，单子很少，深思熟虑，考虑做亚马逊 FBA 了，目前在准备申请店铺。本来我打算这个事情做起来之后再…",
+        "publishedAt": "2026-10-27T12:53:11.000Z",
+        "summary": "https://github.com/alicia1030su/dsh-ai-debate 是通过许愿式开发出来的 通过智能体团队开发的，迭代了 11 轮了 主要是通过 gpt-6 a 来开发的 主要是想实现，你在论坛，类似百度贴吧里，和别人吵架吵不过了，可以通过艾特机器人小号，机器人小号先看下帖子主题，然后看下所有回复，然后再看楼中楼，然后把自己带入主人的回答中，来和攻击者争论 目前只实现了百度贴吧，下一个微博 大佬能不能帮看看有没有前途？",
         "badge": "程序员",
-        "signal": "23 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-e2db43e752ff0e10",
+        "id": "cn-baidu-a8417b6eeb779216",
         "category": "cn",
-        "title": "把严的基调长期坚持下去",
-        "url": "https://www.baidu.com/s?wd=%E6%8A%8A%E4%B8%A5%E7%9A%84%E5%9F%BA%E8%B0%83%E9%95%BF%E6%9C%9F%E5%9D%9A%E6%8C%81%E4%B8%8B%E5%8E%BB&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "不断开创新时代管党治党新局面",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%8D%E6%96%AD%E5%BC%80%E5%88%9B%E6%96%B0%E6%97%B6%E4%BB%A3%E7%AE%A1%E5%85%9A%E6%B2%BB%E5%85%9A%E6%96%B0%E5%B1%80%E9%9D%A2&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "党的二十届五中全会在京召开，研究持之以恒推进全面从严治党若干重大问题。民心是最大的政治，人民是强党兴国的根基所在，把严的基调长期坚持下去，党心民心定会贴得更近，事业发展就有不竭的力量。",
+        "summary": "办好中国的事情，关键在党，关键在党要管党、全面从严治党。在以习近平同志为核心的党中央坚强领导下，持之以恒推进全面从严治党，深入推进新时代党的建设新的伟大工程，新时代中国共产党人必将在新的赶考之路上交出更加优异的答卷。",
         "badge": "热搜",
-        "signal": "7,619,561 热度"
+        "signal": "7,619,207 热度"
       },
       {
         "id": "cisa-kev-cve-2026-106931",
@@ -362,14 +365,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50196212",
+        "id": "hn-50259604",
         "category": "dev",
-        "title": "New 'Circadian' Subtype of Depression Affecting 1 in 4 Patients",
-        "url": "https://www.sciencealert.com/researchers-identify-new-circadian-subtype-of-depression-affecting-1-in-4-patients",
+        "title": "The US government is hiding secret court ruling about how it spies on Americans",
+        "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-22T14:50:22.000Z",
+        "publishedAt": "2026-10-27T14:06:42.000Z",
         "badge": "HN",
-        "signal": "59 分 · 29 评论"
+        "signal": "298 分 · 75 评论"
       },
       {
         "id": "cn-item-8672f6755c107d8d",
@@ -382,44 +385,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-q7qp-rjg7-q26m",
+        "id": "github-advisory-ghsa-3x94-m842-937c",
         "category": "security",
-        "title": "multer vulnerable to Denial of Service via a pending asynchronous fileFilter after request teardown",
-        "url": "https://github.com/advisories/GHSA-q7qp-rjg7-q26m",
+        "title": "PhpSpreadsheet: XmlScanner Bypass via ISO-2022 Escape Sequences Allows XXE and Denial of Service",
+        "url": "https://github.com/advisories/GHSA-3x94-m842-937c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:08:22.000Z",
-        "summary": "### Impact When `multer` is configured with an asynchronous `fileFilter`, a single request can crash the Node.js process. If a request is aborted (for example when one file is rejected) while another file's async `fileFilter` is still pend…",
-        "badge": "CVE-2026-113872",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-27T15:38:28.000Z",
+        "summary": "### Summary PhpSpreadsheet's `XmlScanner::scan()` uses a regex pattern that only accounts for NULL byte (0x00) interleaving when detecting ` ' . \"\\n\" . $doctype . ' sst [' . \"\\n\" . ' ' . \"\\n\" . ']>' . \"\\n\" . ' ' . ' ' . $refs . ' '; // Bui…",
+        "badge": "CVE-2026-108358",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-google-deepmind-8b1ab1df41ac00d8",
+        "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
         "category": "ai",
-        "title": "Developing Gemini 4 Argon responsibly and safely",
-        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+        "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-13T19:43:07.000Z",
+        "publishedAt": "2026-10-14T02:00:14.000Z",
+        "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252225",
+        "id": "v2ex-1252347",
         "category": "dev",
-        "title": "求推荐 iOS 端语音转文字 App",
-        "url": "https://www.v2ex.com/t/1252225",
+        "title": "20 刀出售谷歌美区面值 25 刀的礼品卡",
+        "url": "https://www.v2ex.com/t/1252347",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-27T06:17:55.000Z",
-        "summary": "系统自带的我感觉不是很准。 兄弟们有 iOS 端推荐的语音转文字 App 吗？",
+        "publishedAt": "2026-10-27T12:16:16.000Z",
+        "summary": "妈的，亚马逊上买的礼品卡 因为自己谷歌账号的原因无法兑换。 现抓让，有意者联系我。",
         "badge": "程序员",
-        "signal": "15 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-96fb22d162ae9168",
+        "id": "cn-it-642ffe54814a464f",
         "category": "cn",
-        "title": "影石创新 2026 前三季度营收 94.36 亿元同比增长 42.73%，归母净利润 4783.56 万元同比大降 93.96%",
-        "url": "https://www.ithome.com/1/018/593.htm",
+        "title": "1099 元雷蛇隐蛛迷你版 65% 磁轴键盘发布，三色键帽混搭设计",
+        "url": "https://www.ithome.com/1/018/695.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-27T10:18:02.000Z",
-        "summary": "IT之家 10 月 27 日消息，影石创新今日发布 2026 年三季度（2026 年 1 月～2026 年 9 月）报告： 三季度营业收入 39.19 亿元，同比增长 33.30%，年初至报告期末为 94.36 亿元，同比增长 42.73%； 三季度净利润 -1.19 亿元，同比下降 144.63%，年初至报告期末为-2.10 亿元，同比下降 125.93%； 三季度归母净利润 1742.82 万元，同比下降 93.59%，年初至报告期末为 4783.56 万元，同比下降 …",
+        "publishedAt": "2026-10-27T15:25:47.000Z",
+        "summary": "IT之家 10 月 27 日消息，雷蛇今日宣布推出 Razer Reclusa Mini 65% 雷蛇隐蛛迷你版 65% 电竞磁轴键盘，售价 1099 元。 京东 雷蛇（Razer）隐蛛迷你版 65%【雷蛇磁轴】 有线无线蓝牙三模 RT0.1 热插拔客制化 68 键小键盘 打瓦 CS 1099 元 直达链接 该键盘采用 68 键 65% 紧凑布局，在保留常用按键的同时大幅节省桌面空间，兼顾桌面整洁度与移动使用需求。 核心配置上，该键盘搭载雷蛇霍尔效应磁轴，触发点位精准稳定可…",
         "badge": "IT之家"
       },
       {
@@ -443,46 +447,46 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50218975",
+        "id": "hn-50258868",
         "category": "dev",
-        "title": "Show HN: Encarta 95 Web",
-        "url": "https://benwinding.github.io/encarta_95_web/#/article/Art",
+        "title": "Here be monsters: What do you still need to know when agents do the work?",
+        "url": "https://blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work",
         "source": "Hacker News",
-        "publishedAt": "2026-10-24T07:18:37.000Z",
+        "publishedAt": "2026-10-27T13:23:22.000Z",
         "badge": "HN",
-        "signal": "31 分 · 13 评论"
+        "signal": "83 分 · 21 评论"
       },
       {
-        "id": "cn-baidu-31ffc5684ab06b0c",
+        "id": "cn-baidu-cbf27609ec07f375",
         "category": "cn",
-        "title": "杀疯的“旋转小火锅”",
-        "url": "https://www.baidu.com/s?wd=%E6%9D%80%E7%96%AF%E7%9A%84%E2%80%9C%E6%97%8B%E8%BD%AC%E5%B0%8F%E7%81%AB%E9%94%85%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "台风烟花：是的 我又重生回来了",
+        "url": "https://www.baidu.com/s?wd=%E5%8F%B0%E9%A3%8E%E7%83%9F%E8%8A%B1%EF%BC%9A%E6%98%AF%E7%9A%84+%E6%88%91%E5%8F%88%E9%87%8D%E7%94%9F%E5%9B%9E%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "过去五年，国内旋转小火锅新增门店超2万家，海底捞等巨头争相入局。截至2025年，全国门店总数突破5万家，市场规模增至400亿元。",
+        "summary": "前世的“烟花”作为台风的强度并不算强，巅峰强度也止步于强台风，但其影响范围广、降水影响大，给人留下深刻印象！而今，“烟花”又来了。今年第31号台风“烟花”作为台风的实力比前世更强。26日“烟花”在12小时内强度连跳三级，加强为超强台风。",
         "badge": "热搜",
-        "signal": "7,523,170 热度"
+        "signal": "7,521,903 热度"
       },
       {
-        "id": "github-advisory-ghsa-834v-8h66-3h79",
+        "id": "github-advisory-ghsa-rxj4-h86g-25gc",
         "category": "security",
-        "title": "Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution",
-        "url": "https://github.com/advisories/GHSA-834v-8h66-3h79",
+        "title": "PhpSpreadsheet: XmlScanner Bypass via Double-Encoded unentity() TOCTOU Allows XXE and Denial of Service",
+        "url": "https://github.com/advisories/GHSA-rxj4-h86g-25gc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-23T22:06:13.000Z",
-        "summary": "## Summary The ESM compiler in `happy-dom@20.14.5` does not validate imported local binding aliases before interpolating them into generated JavaScript. As a result, an invalid ESM import alias can be transformed into a valid JavaScript de…",
-        "badge": "CVE-2026-115895",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-10-27T15:38:22.000Z",
+        "summary": "### Summary The SpreadsheetML XML reader (`Reader\\Xml`) scans file content **twice** through `XmlScanner::scan()`, and each scan runs an `unentity()` callback that calls `html_entity_decode()` **after** the pattern check. By double-encodin…",
+        "badge": "CVE-2026-108357",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "v2ex-1252201",
+        "id": "v2ex-1252346",
         "category": "dev",
-        "title": "写了个 iPhone 远程用 Mac 上 Claude Code / Codex 的 App，不用内网穿透，送 月卡",
-        "url": "https://www.v2ex.com/t/1252201",
+        "title": "你们会刻意避免让 AI 接触到自己的任何敏感信息吗？",
+        "url": "https://www.v2ex.com/t/1252346",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-27T04:53:25.000Z",
-        "summary": "大家是否有跟我一样的感受，AI 极大的提高了生产率，我现在写代码大部分交给 Claude Code 和 Codex 。现状是卷的时间更长了，而且就像被绑在电脑跟前，随时等着它完成给下个指令或者应付 agent 的提问。有时候一个指令下去，满以为回来就有结果了，结果出门吃饭、坐地铁、排队 CC 就停在那里者确认。路上想到一个改法，也只能先记下来，回到电脑前再说，结果忘记一大半。 我想要的是：Mac 在家开着干活，我拿着手机随时能接着用，和坐在电脑前一样。 我试过手机 SSH …",
+        "publishedAt": "2026-10-27T12:10:05.000Z",
+        "summary": "似乎很难。随着 AI 深入到方方面面，各种账号 id ，vps 信息，各种 key ，个人真实姓名 公司 身份证 银行卡 地址 甚至各种密码，似乎都难以避免的被模型一点点得知了。 这些数据可能都一直存在某一个地方，随时可能被读取，而不像密码一样库里存的是不可复原 hash 。 也许大厂训练下一代模型会先过滤下敏感数据。不太会有，比如，GPT7 看到你名字和地址直接就想起了你的身份证号这种事。 但是中转站这种真得小心，用的时候如果不注意一点，那分分钟泄露大量隐私。且完全不能信…",
         "badge": "程序员",
-        "signal": "23 回复"
+        "signal": "7 回复"
       }
     ]
   },
@@ -499,100 +503,99 @@
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "language": "CSS",
-        "stars": 37714,
-        "starsToday": 2244
-      },
-      {
-        "id": "github-317caa29ffa8b401",
-        "rank": 2,
-        "name": "TauricResearch/TradingAgents",
-        "url": "https://github.com/TauricResearch/TradingAgents",
-        "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-        "language": "Python",
-        "stars": 116866,
-        "starsToday": 1395
-      },
-      {
-        "id": "github-ef019c07dc2234a1",
-        "rank": 3,
-        "name": "JetBrains/thinkrail",
-        "url": "https://github.com/JetBrains/thinkrail",
-        "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
-        "language": "TypeScript",
-        "stars": 3425,
-        "starsToday": 1173
-      },
-      {
-        "id": "github-e8cc467aa7be05e0",
-        "rank": 4,
-        "name": "makecindy/cindy",
-        "url": "https://github.com/makecindy/cindy",
-        "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
-        "language": "TypeScript",
-        "stars": 7058,
-        "starsToday": 1296
-      },
-      {
-        "id": "github-0658d7fa2f877963",
-        "rank": 5,
-        "name": "affaan-m/ECC",
-        "url": "https://github.com/affaan-m/ECC",
-        "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-        "language": "JavaScript",
-        "stars": 290273,
-        "starsToday": 896
-      },
-      {
-        "id": "github-21fcbee2e5fa5e51",
-        "rank": 6,
-        "name": "pbakaus/impeccable",
-        "url": "https://github.com/pbakaus/impeccable",
-        "description": "The design language that makes your AI harness better at design.",
-        "language": "Rust",
-        "stars": 89773,
-        "starsToday": 1506
-      },
-      {
-        "id": "github-ec6930e47c9d38ff",
-        "rank": 7,
-        "name": "NVIDIA/SkillSpector",
-        "url": "https://github.com/NVIDIA/SkillSpector",
-        "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
-        "language": "Python",
-        "stars": 22606,
-        "starsToday": 214
-      },
-      {
-        "id": "github-25626da923e171bb",
-        "rank": 8,
-        "name": "pollen-robotics/microduck",
-        "url": "https://github.com/pollen-robotics/microduck",
-        "description": "A Tiny biped duck robot 🦆",
-        "language": "Rust",
-        "stars": 12664,
-        "starsToday": 843
+        "stars": 38417,
+        "starsToday": 2859
       },
       {
         "id": "github-8abebdcda099d843",
-        "rank": 9,
+        "rank": 2,
         "name": "nightly-labs/openbot",
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 1810,
-        "starsToday": 176
+        "stars": 2129,
+        "starsToday": 794
       },
       {
-        "id": "github-7694a26ca72c822a",
-        "rank": 10,
-        "name": "Panniantong/Agent-Reach",
-        "url": "https://github.com/Panniantong/Agent-Reach",
-        "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "id": "github-4251a228ae407247",
+        "rank": 3,
+        "name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework & software development methodology that works.",
+        "language": "Shell",
+        "stars": 306153,
+        "starsToday": 608
+      },
+      {
+        "id": "github-21fcbee2e5fa5e51",
+        "rank": 4,
+        "name": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "description": "The design language that makes your AI harness better at design.",
+        "language": "Rust",
+        "stars": 90176,
+        "starsToday": 1458
+      },
+      {
+        "id": "github-e8cc467aa7be05e0",
+        "rank": 5,
+        "name": "makecindy/cindy",
+        "url": "https://github.com/makecindy/cindy",
+        "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+        "language": "TypeScript",
+        "stars": 7286,
+        "starsToday": 1446
+      },
+      {
+        "id": "github-0a29140c9f8845e9",
+        "rank": 6,
+        "name": "gitroomhq/postiz-app",
+        "url": "https://github.com/gitroomhq/postiz-app",
+        "description": "📨 The ultimate agentic social media scheduling tool 🤖",
+        "language": "TypeScript",
+        "stars": 39076,
+        "starsToday": 953
+      },
+      {
+        "id": "github-0658d7fa2f877963",
+        "rank": 7,
+        "name": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "language": "JavaScript",
+        "stars": 290557,
+        "starsToday": 1183
+      },
+      {
+        "id": "github-678f85c4492c1e55",
+        "rank": 8,
+        "name": "HKUDS/DeepTutor",
+        "url": "https://github.com/HKUDS/DeepTutor",
+        "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 104401,
-        "starsToday": 746
+        "stars": 45424,
+        "starsToday": 1587
+      },
+      {
+        "id": "github-ef019c07dc2234a1",
+        "rank": 9,
+        "name": "JetBrains/thinkrail",
+        "url": "https://github.com/JetBrains/thinkrail",
+        "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+        "language": "TypeScript",
+        "stars": 3736,
+        "starsToday": 1211
+      },
+      {
+        "id": "github-23340045c34d003f",
+        "rank": 10,
+        "name": "togg53192-cmd/jailbreaks",
+        "url": "https://github.com/togg53192-cmd/jailbreaks",
+        "description": "LIST OF ALL MY JAILBREAKS",
+        "stars": 5152,
+        "starsToday": 890
       }
     ],
-    "updatedAt": "2026-10-27T10:35:46.609Z"
+    "updatedAt": "2026-10-27T16:40:26.865Z"
   }
 }
