@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-27T16:40:26.865Z",
+  "generatedAt": "2026-10-27T21:20:17.989Z",
   "intelligence": {
-    "updatedAt": "2026-10-27T16:40:26.865Z",
+    "updatedAt": "2026-10-27T21:20:17.989Z",
     "items": [
       {
         "id": "cn-item-8e6c95e0ae5a1cf6",
@@ -15,24 +15,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-109618",
+        "id": "cisa-kev-cve-2026-48356",
         "category": "security",
-        "title": "PHP Group PHP：PHP Memory Corruption Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109618",
+        "title": "Adobe Commerce and Magento：Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-48356",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-26T00:00:00.000Z",
-        "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
-        "badge": "CVE-2026-109618",
-        "signal": "已遭利用 · 整改期限 2026-10-29"
+        "publishedAt": "2026-10-27T00:00:00.000Z",
+        "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the v…",
+        "badge": "CVE-2026-48356",
+        "signal": "已遭利用 · 整改期限 2026-11-10"
       },
       {
-        "id": "ai-openai-a9c488820a62ac4a",
+        "id": "ai-openai-c417f8e3d39d0b89",
         "category": "ai",
-        "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
-        "url": "https://openai.com/index/greptile-code-review-codex-astra",
+        "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+        "url": "https://openai.com/index/oracle-apps-in-chatgpt",
         "source": "OpenAI",
-        "publishedAt": "2026-10-26T22:00:00.000Z",
-        "summary": "How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework.",
+        "publishedAt": "2026-10-27T07:00:00.000Z",
+        "summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
         "badge": "OpenAI"
       },
       {
@@ -43,36 +43,36 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-27T16:06:01.000Z",
         "badge": "HN",
-        "signal": "100 分 · 39 评论"
+        "signal": "556 分 · 325 评论"
       },
       {
-        "id": "cn-it-f2ff5d6d9ad0aca6",
+        "id": "cn-it-e58d97cecf990905",
         "category": "cn",
-        "title": "京东 1 号会员店 10 月 28 日起调整会员权益：尊享卡返 2% 赠金，每月权益需消费解锁",
-        "url": "https://www.ithome.com/1/018/698.htm",
+        "title": "恩智浦 2026 财年第三财季归母净利润 8.84 亿美元，同比增长 40%",
+        "url": "https://www.ithome.com/1/018/707.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-27T15:39:03.000Z",
-        "summary": "IT之家 10 月 27 日消息，京东旗下 1 号会员店宣布将于 10 月 28 日起调整会员权益体系。 根据 官方公告 ，此次调整的核心变化是购物返利从“满 200 元返券”改为按订单金额比例返还“赠金”，尊享卡会员返 2%、普通卡会员返 1%，每月赠金上限分别为 500 元和 200 元。1 元赠金可抵扣 1 元人民币，特殊商品不参与返金也不支持赠金抵扣。 新老用户按续费渠道和时效分流。10 月 28 日前已开通、且未在 1 号会员店 App 内续费的老用户，会籍期内继…",
+        "publishedAt": "2026-10-27T20:26:54.000Z",
+        "summary": "IT之家 10 月 28 日消息，恩智浦今日发布 2026 财年（2025 年 9 月 29 日～2026 年 9 月 26 日）第三财季（2026 年 6 月 29 日～2026 年 9 月 27 日）报告： 营业总收入 ：37.86 亿美元 （IT之家注：现汇率约合 253.05 亿元人民币） ，同比增长 19%，环比增长 8% 毛利润 ：21.89 亿美元 （现汇率约合 146.31 亿元人民币） ，同比增长 22%，环比增长 9% 毛利率 ：57.8%，同比增长 1…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-qq8j-7v2v-3rwp",
+        "id": "github-advisory-ghsa-x94g-w73q-hpcw",
         "category": "security",
-        "title": "undici WebSocket client vulnerable to Denial of Service via failed HTTP/2 handshake",
-        "url": "https://github.com/advisories/GHSA-qq8j-7v2v-3rwp",
+        "title": "dd-trace: ReDOS in URL query string obfuscation",
+        "url": "https://github.com/advisories/GHSA-x94g-w73q-hpcw",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T16:09:45.000Z",
-        "summary": "### Impact undici's experimental WebSocket client (enabled by default via `allowH2: true`) crashes the Node.js process when it connects to a malicious server over HTTP/2. If the server answers the WebSocket upgrade with a response that fai…",
-        "badge": "CVE-2026-109855",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-27T21:07:25.000Z",
+        "summary": "### Summary A regular expression used to obfuscate URL query strings can consume excessive CPU when processing certain attacker-controlled input. This can stall request processing and cause denial of service in applications using affected …",
+        "badge": "CVE-2026-116693",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-1d6c5c59e46e52b9",
+        "id": "ai-hugging-face-1c5b51464767c2ad",
         "category": "ai",
-        "title": "Can we trust LLMs to judge whether a research idea is novel?",
-        "url": "https://huggingface.co/blog/allenai/novelty-bench",
+        "title": "Build specialized multimodal models with LFM3",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm3",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-27T16:12:42.000Z",
+        "publishedAt": "2026-10-27T17:16:52.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -94,38 +94,38 @@
         "source": "百度热搜",
         "summary": "10月27日，外交部发言人郭嘉昆主持例行记者会回应姆巴佩遭解约一事。郭嘉昆表示，伤害中国人民感情的言行自然会遭到中国社会各界的共同抵制。",
         "badge": "热搜",
-        "signal": "7,808,938 热度"
+        "signal": "7,808,178 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-109619",
+        "id": "cisa-kev-cve-2026-111497",
         "category": "security",
-        "title": "PHP Group PHP：PHP Stale Internal Request-State Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109619",
+        "title": "Google Brotli：Google Brotli Unchecked Return Value Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111497",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-26T00:00:00.000Z",
-        "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
-        "badge": "CVE-2026-109619",
-        "signal": "已遭利用 · 整改期限 2026-10-29"
+        "publishedAt": "2026-10-27T00:00:00.000Z",
+        "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute ar…",
+        "badge": "CVE-2026-111497",
+        "signal": "已遭利用 · 整改期限 2026-11-10"
       },
       {
-        "id": "ai-openai-8eb6001a836a6e50",
+        "id": "ai-openai-c44dc9ed271ff418",
         "category": "ai",
-        "title": "Working with academic communities to build scientific understanding",
-        "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+        "title": "How Check Point accelerates vulnerability research with Daybreak",
+        "url": "https://openai.com/index/check-point-daybreak",
         "source": "OpenAI",
-        "publishedAt": "2026-10-26T14:30:00.000Z",
-        "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
+        "publishedAt": "2026-10-27T00:00:00.000Z",
+        "summary": "With OpenAI Daybreak, Check Point speeds up the research behind new security protections, enabling its analysts to turn vulnerability intelligence into customer defenses faster.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50258538",
+        "id": "hn-50261998",
         "category": "dev",
-        "title": "New iMac with M6",
-        "url": "https://www.apple.com/imac/",
+        "title": "Ghostty 1.4.0",
+        "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T13:02:02.000Z",
+        "publishedAt": "2026-10-27T16:51:22.000Z",
         "badge": "HN",
-        "signal": "140 分 · 120 评论"
+        "signal": "487 分 · 145 评论"
       },
       {
         "id": "cn-item-839ad25f7a9eeedd",
@@ -138,15 +138,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-8m4g-j4wp-wgcg",
+        "id": "github-advisory-ghsa-mf2p-h6hf-fcwm",
         "category": "security",
-        "title": "Authlib accepts an empty HMAC key, allowing JWS/JWT signature forgery (HS256/HS384/HS512)",
-        "url": "https://github.com/advisories/GHSA-8m4g-j4wp-wgcg",
+        "title": "TinyMCE Cross-Site Scripting (XSS) vulnerability using media plugin `data-mce-object` serialization",
+        "url": "https://github.com/advisories/GHSA-mf2p-h6hf-fcwm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T16:09:22.000Z",
-        "summary": "Reporter: Cavan Loughran, Celvex Group Inc. Summary Authlib's symmetric (oct) key handling accepts an empty key (empty bytes b'' / empty string '') as a valid HMAC signing and verification key. An empty HMAC key produces a deterministic di…",
-        "badge": "CVE-2026-114616",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-10-27T21:07:12.000Z",
+        "summary": "### Impact Stored XSS vulnerability in the media plugin. Attackers can inject malicious scripts via elements crafted through the data-mce-object attribute, which are created and executed before sanitization. Impacts users of TinyMCE with t…",
+        "badge": "CVE-2026-116675",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-301925b8adfcebab",
@@ -170,44 +170,44 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-ad2621c9aab31600",
+        "id": "cn-it-d4aef2dadf8758b4",
         "category": "cn",
-        "title": "ATK RS8 Air / Neo 电竞键盘发布：87 配列，到手价 299 元起",
-        "url": "https://www.ithome.com/1/018/697.htm",
+        "title": "希捷 2027 财年第一财季归母净利润 17.61 亿美元，同比增长 220.77%",
+        "url": "https://www.ithome.com/1/018/706.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-27T15:33:42.000Z",
-        "summary": "IT之家 10 月 27 日消息，ATK RS8 Air、RS8 Neo 系列 87 配列高性能电竞键盘今日发布，已开启定金预定，RS8 Air 到手价 349 元起，RS8 Neo 到手价 299 元起，11 月 3 日 21 点尾款支付。 IT之家从官方介绍获悉，该系列产品以 87 大配列 带来完整 F 区与全功能按键，兼顾办公码字的便捷需求与电竞对局的操作自由度，拓展更多使用场景。外观搭载正面顶雾 PC 键帽，搭配侧边机甲翼镜结构。两款机型均采用五层满配填充 +GAS…",
+        "publishedAt": "2026-10-27T20:16:17.000Z",
+        "summary": "IT之家 10 月 28 日消息，希捷今日发布 2027 财年（2026年7月4日～2027年7月2日）第一财季（2026年7月3日～2026年10月2日）报告： 营业总收入 ：42.33 亿美元 （IT之家注：现汇率约合 282.92 亿元人民币） ，同比增长 61.01% 毛利润 ：24.27 亿美元 （现汇率约合 162.21 亿元人民币） ，同比增长 134.04% 毛利率 ：57.3%，同比增长 17.9 个百分点 归母净利润 ：17.61 亿美元 （现汇率约合 …",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-114625",
+        "id": "cisa-kev-cve-2026-109618",
         "category": "security",
-        "title": "Arista VeloCloud Orchestrator：Arista VeloCloud Orchestrator SQL Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114625",
+        "title": "PHP Group PHP：PHP Memory Corruption Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109618",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-23T00:00:00.000Z",
-        "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, …",
-        "badge": "CVE-2026-114625",
-        "signal": "已遭利用 · 整改期限 2026-10-26"
+        "publishedAt": "2026-10-26T00:00:00.000Z",
+        "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
+        "badge": "CVE-2026-109618",
+        "signal": "已遭利用 · 整改期限 2026-10-29"
       },
       {
-        "id": "ai-hugging-face-2b3f616d26d343fe",
+        "id": "ai-hugging-face-1d6c5c59e46e52b9",
         "category": "ai",
-        "title": "Does Your Model Run on AWS Trainium? Look It Up",
-        "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+        "title": "Can we trust LLMs to judge whether a research idea is novel?",
+        "url": "https://huggingface.co/blog/allenai/novelty-bench",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-23T00:00:00.000Z",
+        "publishedAt": "2026-10-27T16:12:42.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50257419",
+        "id": "hn-50264857",
         "category": "dev",
-        "title": "Python's experimental JIT to be removed",
-        "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+        "title": "Tailscale SSH: Investigation and remediation update",
+        "url": "https://tailscale.com/ssh-investigation-update",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T11:17:57.000Z",
+        "publishedAt": "2026-10-27T19:55:21.000Z",
         "badge": "HN",
-        "signal": "275 分 · 147 评论"
+        "signal": "86 分 · 34 评论"
       },
       {
         "id": "cn-baidu-900e548d4f6ca6b8",
@@ -217,27 +217,27 @@
         "source": "百度热搜",
         "summary": "10月27日，中国足协发文称，针对姆巴佩发表涉华错误言论事件，中国足协第一时间与皇马严正交涉，要求涉事球员和俱乐部作出公开正式道歉，坚决反对任何伤害中国人民感情的言论。",
         "badge": "热搜",
-        "signal": "7,714,535 热度"
+        "signal": "7,713,769 热度"
       },
       {
-        "id": "github-advisory-ghsa-7vr2-2fgp-9w7p",
+        "id": "github-advisory-ghsa-rh54-vffm-5fvp",
         "category": "security",
-        "title": "Authlib incomplete algorithm-confusion fix permits HMAC forgery with prefixed public keys",
-        "url": "https://github.com/advisories/GHSA-7vr2-2fgp-9w7p",
+        "title": "CKEditor: Cross-site scripting (XSS) in the engine package",
+        "url": "https://github.com/advisories/GHSA-rh54-vffm-5fvp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T15:38:48.000Z",
-        "summary": "## Summary `OctKey.import_key()` carries the only guard that stops an asymmetric public key from being used as an HMAC secret in `authlib.jose`. That guard is `raw_key.startswith(POSSIBLE_UNSAFE_KEYS)` — anchored at byte 0 — while the load…",
-        "badge": "CVE-2026-114615",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-10-27T21:05:06.000Z",
+        "summary": "### Impact A Cross-Site Scripting (XSS) vulnerability has been discovered in the CKEditor 5 engine. This vulnerability is caused by a prototype pollution issue in the `es-toolkit` library used in the CKEditor 5 codebase. This vulnerability…",
+        "badge": "CVE-2026-116688",
+        "signal": "HIGH · CVSS 8.1"
       },
       {
-        "id": "ai-openai-7d972df501d01ba1",
+        "id": "ai-openai-a9c488820a62ac4a",
         "category": "ai",
-        "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
-        "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+        "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+        "url": "https://openai.com/index/greptile-code-review-codex-astra",
         "source": "OpenAI",
-        "publishedAt": "2026-10-26T13:45:00.000Z",
-        "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
+        "publishedAt": "2026-10-26T22:00:00.000Z",
+        "summary": "How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework.",
         "badge": "OpenAI"
       },
       {
@@ -262,15 +262,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-110447",
+        "id": "cisa-kev-cve-2026-109619",
         "category": "security",
-        "title": "Collabora Collabora Online – Built-in CODE Server：Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-110447",
+        "title": "PHP Group PHP：PHP Stale Internal Request-State Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109619",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-23T00:00:00.000Z",
-        "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
-        "badge": "CVE-2026-110447",
-        "signal": "已遭利用 · 整改期限 2026-10-26"
+        "publishedAt": "2026-10-26T00:00:00.000Z",
+        "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
+        "badge": "CVE-2026-109619",
+        "signal": "已遭利用 · 整改期限 2026-10-29"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -283,43 +283,43 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50257326",
+        "id": "hn-50264853",
         "category": "dev",
-        "title": "Wikipedia's Cleanup of AI-Generated Content",
-        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+        "url": "https://www.brangus.io/survival-llm",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T11:08:15.000Z",
+        "publishedAt": "2026-10-27T19:55:06.000Z",
         "badge": "HN",
-        "signal": "258 分 · 114 评论"
+        "signal": "57 分 · 39 评论"
       },
       {
-        "id": "cn-it-0d7081a93a55dfb7",
+        "id": "cn-it-8a362bc3f03d1911",
         "category": "cn",
-        "title": "Meta AI 负责人罗希特 · 帕特尔离职创业，打造微软 Office 替代方案 Ndoc",
-        "url": "https://www.ithome.com/1/018/696.htm",
+        "title": "罗技 2027 财年半年报归母净利润 4.16 亿美元，同比增长 31.28%",
+        "url": "https://www.ithome.com/1/018/705.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-27T15:27:53.000Z",
-        "summary": "IT之家 10 月 27 日消息，据科技媒体 TechCrunch 今天报道，Meta 人工智能负责人罗希特 · 帕特尔（Rohit Patel）已经离开公司，他曾在 Meta 从事 AI 研发工作八年，并担任 Meta 超级智能实验室负责人。 据报道，帕特尔已创立 Ndoc 公司，他将开发一款原生 AI 办公软件， 旨在取代微软 Office 和谷歌 Workspace 。 这名前 Meta 研究员希望，Ndoc 不能只是叠加在现有工作流的 AI 工具，而是要改变人们使用…",
+        "publishedAt": "2026-10-27T20:12:21.000Z",
+        "summary": "IT之家 10 月 28 日消息，罗技今日发布 2027 财年（2026 年 4 月 1 日～2027 年 3 月 31 日）半年报（2026 年 4 月 1 日～2026 年 9 月 30 日）及第二财季（2026 年 7 月 1 日～2026 年 9 月 30 日）报告： 2027 财年半年报 营业总收入 ：24.46 亿美元 （IT之家注：现汇率约合 163.49 亿元人民币） ，同比增长 5% 毛利润 ：11.55 亿美元 （现汇率约合 77.2 亿元人民币） ，同…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-j2w7-387v-m2rq",
+        "id": "github-advisory-ghsa-rjh2-4xgw-p2hj",
         "category": "security",
-        "title": "PhpSpreadsheet ODS Reader: Unbounded number-rows-repeated → CPU & Memory Exhaustion (DoS)",
-        "url": "https://github.com/advisories/GHSA-j2w7-387v-m2rq",
+        "title": "Atlantis: OS command injection through PR-controlled Terraform workspace enables RCE during plan",
+        "url": "https://github.com/advisories/GHSA-rjh2-4xgw-p2hj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T15:38:33.000Z",
-        "summary": "## Summary When PhpSpreadsheet loads an OpenDocument Spreadsheet (`.ods`), `Ods::processTableRow()` reads the `table:number-rows-repeated` attribute of a ` ` with an unchecked `(int)` cast, then materialises one cell per repeated row. This…",
-        "badge": "CVE-2026-108359",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-27T21:04:50.000Z",
+        "summary": "### Summary Atlantis passes the Terraform `workspace` value from a pull request's `atlantis.yaml` into a shell command without quoting or escaping it. A contributor whose pull request is eligible for an Atlantis plan can include shell meta…",
+        "badge": "CVE-2026-116676",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-hugging-face-51888f116f5b0837",
+        "id": "ai-hugging-face-2b3f616d26d343fe",
         "category": "ai",
-        "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
-        "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+        "title": "Does Your Model Run on AWS Trainium? Look It Up",
+        "url": "https://huggingface.co/blog/torch-neuronx-model-support",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-22T22:24:34.000Z",
+        "publishedAt": "2026-10-23T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -341,38 +341,38 @@
         "source": "百度热搜",
         "summary": "办好中国的事情，关键在党，关键在党要管党、全面从严治党。在以习近平同志为核心的党中央坚强领导下，持之以恒推进全面从严治党，深入推进新时代党的建设新的伟大工程，新时代中国共产党人必将在新的赶考之路上交出更加优异的答卷。",
         "badge": "热搜",
-        "signal": "7,619,207 热度"
+        "signal": "7,616,432 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-106931",
+        "id": "cisa-kev-cve-2026-114625",
         "category": "security",
-        "title": "EG Secure Solutions SiteGuard Server Edition：EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-106931",
+        "title": "Arista VeloCloud Orchestrator：Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114625",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-20T00:00:00.000Z",
-        "summary": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
-        "badge": "CVE-2026-106931",
-        "signal": "已遭利用 · 整改期限 2026-10-23"
+        "publishedAt": "2026-10-23T00:00:00.000Z",
+        "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, …",
+        "badge": "CVE-2026-114625",
+        "signal": "已遭利用 · 整改期限 2026-10-26"
       },
       {
-        "id": "ai-openai-27334100e818b985",
+        "id": "ai-openai-8eb6001a836a6e50",
         "category": "ai",
-        "title": "ChatGPT’s expanding world of work",
-        "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+        "title": "Working with academic communities to build scientific understanding",
+        "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
         "source": "OpenAI",
-        "publishedAt": "2026-10-26T10:00:00.000Z",
-        "summary": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
+        "publishedAt": "2026-10-26T14:30:00.000Z",
+        "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50259604",
+        "id": "hn-50265609",
         "category": "dev",
-        "title": "The US government is hiding secret court ruling about how it spies on Americans",
-        "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
+        "title": "Early progress on accelerating drug development with Claude",
+        "url": "https://www.anthropic.com/research/early-progress-drug-development",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T14:06:42.000Z",
+        "publishedAt": "2026-10-27T20:50:42.000Z",
         "badge": "HN",
-        "signal": "298 分 · 75 评论"
+        "signal": "17 分 · 1 评论"
       },
       {
         "id": "cn-item-8672f6755c107d8d",
@@ -385,15 +385,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-3x94-m842-937c",
+        "id": "github-advisory-ghsa-mgqf-5mf5-prfj",
         "category": "security",
-        "title": "PhpSpreadsheet: XmlScanner Bypass via ISO-2022 Escape Sequences Allows XXE and Denial of Service",
-        "url": "https://github.com/advisories/GHSA-3x94-m842-937c",
+        "title": "FileBrowser: Symlink following escapes user scope allowing arbitrary file read outside the served directory",
+        "url": "https://github.com/advisories/GHSA-mgqf-5mf5-prfj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T15:38:28.000Z",
-        "summary": "### Summary PhpSpreadsheet's `XmlScanner::scan()` uses a regex pattern that only accounts for NULL byte (0x00) interleaving when detecting ` ' . \"\\n\" . $doctype . ' sst [' . \"\\n\" . ' ' . \"\\n\" . ']>' . \"\\n\" . ' ' . ' ' . $refs . ' '; // Bui…",
-        "badge": "CVE-2026-108358",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-27T21:04:40.000Z",
+        "summary": "## Summary File read paths resolve symbolic links with `filepath.EvalSymlinks` and then operate on the resolved target without re-checking that the target still lies inside the user's source/scope. A symlink located inside a user's accessi…",
+        "badge": "CVE-2026-116682",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
         "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
@@ -417,44 +417,44 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-642ffe54814a464f",
+        "id": "cn-it-4c34e9f97313de02",
         "category": "cn",
-        "title": "1099 元雷蛇隐蛛迷你版 65% 磁轴键盘发布，三色键帽混搭设计",
-        "url": "https://www.ithome.com/1/018/695.htm",
+        "title": "Visa 2026 财年年报归母净利润 235.04 亿美元，同比增长 17%",
+        "url": "https://www.ithome.com/1/018/704.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-27T15:25:47.000Z",
-        "summary": "IT之家 10 月 27 日消息，雷蛇今日宣布推出 Razer Reclusa Mini 65% 雷蛇隐蛛迷你版 65% 电竞磁轴键盘，售价 1099 元。 京东 雷蛇（Razer）隐蛛迷你版 65%【雷蛇磁轴】 有线无线蓝牙三模 RT0.1 热插拔客制化 68 键小键盘 打瓦 CS 1099 元 直达链接 该键盘采用 68 键 65% 紧凑布局，在保留常用按键的同时大幅节省桌面空间，兼顾桌面整洁度与移动使用需求。 核心配置上，该键盘搭载雷蛇霍尔效应磁轴，触发点位精准稳定可…",
+        "publishedAt": "2026-10-27T20:09:15.000Z",
+        "summary": "IT之家 10 月 28 日消息，Visa今日发布 2026 财年（2025 年 10 月 1 日～2026 年 9 月 30 日）年报及第四财季（2026 年 7 月 1 日～2026 年 9 月 30 日）报告： 2026 财年年报 营业总收入 ：459.03 亿美元 （IT之家注：现汇率约合 3068.04 亿元人民币） ，同比增长 15% 毛利润 ：281.1 亿美元 （现汇率约合 1878.8 亿元人民币） ，同比增长 17.15% 毛利率 ：61.24%，同比增…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-96656",
+        "id": "cisa-kev-cve-2026-110447",
         "category": "security",
-        "title": "Plex Media Server：Plex Media Server External Control of File Name or Path Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-96656",
+        "title": "Collabora Collabora Online – Built-in CODE Server：Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-110447",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-20T00:00:00.000Z",
-        "summary": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, a…",
-        "badge": "CVE-2026-96656",
-        "signal": "已遭利用 · 整改期限 2026-10-23"
+        "publishedAt": "2026-10-23T00:00:00.000Z",
+        "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+        "badge": "CVE-2026-110447",
+        "signal": "已遭利用 · 整改期限 2026-10-26"
       },
       {
-        "id": "ai-hugging-face-0e5fad3ca5f8a881",
+        "id": "ai-hugging-face-51888f116f5b0837",
         "category": "ai",
-        "title": "Ensemble forecasting with IBM Granite time-series models",
-        "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+        "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+        "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-22T07:51:31.000Z",
+        "publishedAt": "2026-10-22T22:24:34.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50258868",
+        "id": "hn-50261352",
         "category": "dev",
-        "title": "Here be monsters: What do you still need to know when agents do the work?",
-        "url": "https://blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work",
+        "title": "New 14‑inch MacBook Pro with M6",
+        "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T13:23:22.000Z",
+        "publishedAt": "2026-10-27T16:08:32.000Z",
         "badge": "HN",
-        "signal": "83 分 · 21 评论"
+        "signal": "195 分 · 219 评论"
       },
       {
         "id": "cn-baidu-cbf27609ec07f375",
@@ -464,18 +464,18 @@
         "source": "百度热搜",
         "summary": "前世的“烟花”作为台风的强度并不算强，巅峰强度也止步于强台风，但其影响范围广、降水影响大，给人留下深刻印象！而今，“烟花”又来了。今年第31号台风“烟花”作为台风的实力比前世更强。26日“烟花”在12小时内强度连跳三级，加强为超强台风。",
         "badge": "热搜",
-        "signal": "7,521,903 热度"
+        "signal": "7,521,352 热度"
       },
       {
-        "id": "github-advisory-ghsa-rxj4-h86g-25gc",
+        "id": "github-advisory-ghsa-4w7w-5xrc-9h26",
         "category": "security",
-        "title": "PhpSpreadsheet: XmlScanner Bypass via Double-Encoded unentity() TOCTOU Allows XXE and Denial of Service",
-        "url": "https://github.com/advisories/GHSA-rxj4-h86g-25gc",
+        "title": "undici vulnerable to cache poisoning and cross-user disclosure via cross-origin redirects",
+        "url": "https://github.com/advisories/GHSA-4w7w-5xrc-9h26",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T15:38:22.000Z",
-        "summary": "### Summary The SpreadsheetML XML reader (`Reader\\Xml`) scans file content **twice** through `XmlScanner::scan()`, and each scan runs an `unentity()` callback that calls `html_entity_decode()` **after** the pattern check. By double-encodin…",
-        "badge": "CVE-2026-108357",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-27T19:02:31.000Z",
+        "summary": "### Impact When an originless `Agent` composes the redirect and cache interceptors as `compose(redirect(), cache())` with a shared cache (`type: 'shared'`), the cache builds its key from the original request URL before the redirect handler…",
+        "badge": "CVE-2026-109829",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
         "id": "v2ex-1252346",
@@ -497,105 +497,104 @@
     },
     "items": [
       {
-        "id": "github-2eddf6c05698cca8",
+        "id": "github-eb77769182438648",
         "rank": 1,
+        "name": "elayadesign/ai-design-skills",
+        "url": "https://github.com/elayadesign/ai-design-skills",
+        "stars": 9108,
+        "starsToday": 1395
+      },
+      {
+        "id": "github-2eddf6c05698cca8",
+        "rank": 2,
         "name": "Nutlope/hallmark",
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "language": "CSS",
-        "stars": 38417,
+        "stars": 38810,
         "starsToday": 2859
       },
       {
         "id": "github-8abebdcda099d843",
-        "rank": 2,
+        "rank": 3,
         "name": "nightly-labs/openbot",
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 2129,
+        "stars": 2329,
         "starsToday": 794
       },
       {
         "id": "github-4251a228ae407247",
-        "rank": 3,
+        "rank": 4,
         "name": "obra/superpowers",
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 306153,
+        "stars": 306340,
         "starsToday": 608
       },
       {
         "id": "github-21fcbee2e5fa5e51",
-        "rank": 4,
+        "rank": 5,
         "name": "pbakaus/impeccable",
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design language that makes your AI harness better at design.",
         "language": "Rust",
-        "stars": 90176,
+        "stars": 90379,
         "starsToday": 1458
       },
       {
         "id": "github-e8cc467aa7be05e0",
-        "rank": 5,
+        "rank": 6,
         "name": "makecindy/cindy",
         "url": "https://github.com/makecindy/cindy",
         "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "language": "TypeScript",
-        "stars": 7286,
+        "stars": 7401,
         "starsToday": 1446
       },
       {
         "id": "github-0a29140c9f8845e9",
-        "rank": 6,
+        "rank": 7,
         "name": "gitroomhq/postiz-app",
         "url": "https://github.com/gitroomhq/postiz-app",
         "description": "📨 The ultimate agentic social media scheduling tool 🤖",
         "language": "TypeScript",
-        "stars": 39076,
+        "stars": 39244,
         "starsToday": 953
       },
       {
         "id": "github-0658d7fa2f877963",
-        "rank": 7,
+        "rank": 8,
         "name": "affaan-m/ECC",
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 290557,
+        "stars": 290772,
         "starsToday": 1183
       },
       {
         "id": "github-678f85c4492c1e55",
-        "rank": 8,
+        "rank": 9,
         "name": "HKUDS/DeepTutor",
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 45424,
+        "stars": 45691,
         "starsToday": 1587
       },
       {
         "id": "github-ef019c07dc2234a1",
-        "rank": 9,
+        "rank": 10,
         "name": "JetBrains/thinkrail",
         "url": "https://github.com/JetBrains/thinkrail",
         "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "language": "TypeScript",
-        "stars": 3736,
+        "stars": 3871,
         "starsToday": 1211
-      },
-      {
-        "id": "github-23340045c34d003f",
-        "rank": 10,
-        "name": "togg53192-cmd/jailbreaks",
-        "url": "https://github.com/togg53192-cmd/jailbreaks",
-        "description": "LIST OF ALL MY JAILBREAKS",
-        "stars": 5152,
-        "starsToday": 890
       }
     ],
-    "updatedAt": "2026-10-27T16:40:26.865Z"
+    "updatedAt": "2026-10-27T21:20:17.989Z"
   }
 }
