@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-28T16:04:44.750Z",
+  "generatedAt": "2026-10-28T21:06:48.092Z",
   "intelligence": {
-    "updatedAt": "2026-10-28T16:04:44.750Z",
+    "updatedAt": "2026-10-28T21:06:48.092Z",
     "items": [
       {
         "id": "cn-item-750dd261375435ac",
@@ -26,66 +26,65 @@
         "signal": "已遭利用 · 整改期限 2026-11-10"
       },
       {
-        "id": "ai-openai-67c6b18b0a76451d",
+        "id": "ai-openai-a395c7da350b5086",
         "category": "ai",
-        "title": "Legora is building the agentic operating system for legal work",
-        "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
+        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
         "source": "OpenAI",
-        "publishedAt": "2026-10-28T09:30:00.000Z",
-        "summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
+        "publishedAt": "2026-10-28T13:15:00.000Z",
+        "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50271640",
+        "id": "hn-50276998",
         "category": "dev",
-        "title": "Ten days later, Git on macOS still trusts the compromised eMudhra certificates",
-        "url": "https://emudhra.we-have-a-problem.com/apple.html",
+        "title": "Why Is This Fingerprinting Script Creating Bioweapons?",
+        "url": "https://nullpt.rs/fingerprinting-bioweapons",
         "source": "Hacker News",
-        "publishedAt": "2026-10-28T11:03:40.000Z",
+        "publishedAt": "2026-10-28T17:13:29.000Z",
         "badge": "HN",
-        "signal": "645 分 · 237 评论"
+        "signal": "387 分 · 86 评论"
       },
       {
-        "id": "cn-it-b9d52fe201435f55",
+        "id": "cn-it-9ad466090752de9d",
         "category": "cn",
-        "title": "华为 Mate 90 系列手机十大黑科技汇总，影像、屏幕、性能与通信多重突破",
-        "url": "https://www.ithome.com/1/019/234.htm",
+        "title": "打破乔布斯时代的硬件禁忌：特努斯谈苹果首款触控 MacBook Pro，键盘 / 触控板仍是核心",
+        "url": "https://www.ithome.com/1/019/262.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-28T15:59:07.000Z",
-        "summary": "IT之家 10 月 28 日消息，在今天的华为双十一焕新季 · 全场景新品发布会上，华为董事、终端 BG CEO 何刚登台主讲，揭秘了 Mate 90 系列手机十大黑科技，主打影像、屏幕、性能与通信多重突破。 据介绍，华为 Mate 90 Pro Max 典藏版采用钇晶宝石匠心工艺：稀土配方（45% 钇元素含量）、超高硬度（1800°C 高温 + 180MPa 高压烧结）、高折射率（折射率 1.8 高于蓝宝石）。 Mate 90 系列全新搭载旗舰 τ 芯片。其中，标准版手机…",
+        "publishedAt": "2026-10-28T21:04:22.000Z",
+        "summary": "IT之家 10 月 29 日消息，《连线》（Wired）昨日（10 月 28 日）发布博文，报道称针对苹果打破“Mac 不做触屏”立场，现任首席执行官约翰 · 特努斯（John Ternus）表示， 键盘和触控板仍是 Mac 的核心交互方式，触控只是“在合适场景下更舒适、更方便”的补充。 图源：苹果 IT之家注： “Mac 永远不该做触屏”曾是史蒂夫 · 乔布斯（Steve Jobs）最坚决的标志性原则之一。 乔布斯早在 2010 年就曾公开明确抨击触屏笔记本， 称其在人体…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-m65p-9j7q-6w33",
+        "id": "github-advisory-ghsa-c8p4-j97h-3vg8",
         "category": "security",
-        "title": "MLflow vulnerable to arbitrary file read on unauthenticated servers via prompt model version source",
-        "url": "https://github.com/advisories/GHSA-m65p-9j7q-6w33",
+        "title": "Happy DOM: SSRF via iframe and link stylesheet when parsing untrusted HTML",
+        "url": "https://github.com/advisories/GHSA-c8p4-j97h-3vg8",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T21:26:56.000Z",
-        "summary": "### Summary On MLflow tracking servers running without authentication, which is the default for mlflow server, a remote attacker can read arbitrary files from the server’s filesystem by creating a model version tagged as a prompt whose sou…",
-        "badge": "CVE-2026-116690",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-28T21:06:42.000Z",
+        "summary": "## Summary happy-dom v20.8.9 makes real server-side HTTP requests to arbitrary URLs when parsing HTML containing ` ` or ` ` elements. This behavior is enabled by default (`disableIframePageLoading: false`, `disableCSSFileLoading: false`). …",
+        "badge": "CVE-2026-118660",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
-        "id": "ai-google-deepmind-393575ee7d83ff0a",
+        "id": "ai-google-deepmind-e8e0cb1d0e685ced",
         "category": "ai",
-        "title": "Genie 4: A new generation of world simulation",
-        "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+        "title": "Gemini 4 Carbon: Our next frontier model",
+        "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-27T16:01:38.000Z",
-        "summary": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
+        "publishedAt": "2026-10-28T17:00:58.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252657",
+        "id": "v2ex-1252691",
         "category": "dev",
-        "title": "拖了几年的博客迁移， AI 用 20 分钟帮我做完了",
-        "url": "https://www.v2ex.com/t/1252657",
+        "title": "开源一个 Claude 桌面端，防止被 Claude 封号",
+        "url": "https://www.v2ex.com/t/1252691",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T13:13:16.000Z",
-        "summary": "原文发表于 2026-10-26： X 原帖 。 每个程序员的待办里，大概都躺着几个「不难、但就是懒得动手」的陈年老坑。 以前我的博客是自己手写的程序，后来一直想彻底迁到 Markdown + Hugo ，改成纯静态博客。这事在我的待办里挂了好几年，一直没动手——主要是老数据全存在 sqlite 里，要想迁出来，还得自己写个 Python 脚本去读库表、把文章和各种数据导出来，想想就觉得折腾，就一直拖着。 今天突发奇想，干脆让 AI 帮我修一下这个博客吧。 结果它自己去我本…",
+        "publishedAt": "2026-10-28T17:08:27.000Z",
+        "summary": "由于自己已经连续使用 Claude 一个月了，主要是怕 Claude 桌面端有钓鱼行为，因此，一直也是使用 Claude 终端。 但是，由于不太喜欢黑乎乎的终端，就自己 vibe 了一个 Claude 桌面端，本质上就是开发一个客户端，里面其实就是直接运行 Claude 的终端，因此，安全性与 Claude 终端一致。 https://github.com/elioinvest/Crew 目前支持的特性： 1 、支持 Claude 以及 ChatGPT ，同时，可以自由切换…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-baidu-dde14a818066255e",
@@ -94,7 +93,7 @@
         "url": "https://www.baidu.com/s?wd=%E5%88%98%E5%BB%B6%E4%B8%9C%E9%80%9D%E4%B8%96&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,808,793 热度"
+        "signal": "7,808,796 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111497",
@@ -117,14 +116,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50274409",
+        "id": "hn-50276792",
         "category": "dev",
-        "title": "CNC Stone Carving",
-        "url": "https://carmelitegothic.com/cnc-stone-carving/",
+        "title": "Gemini 4 Carbon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-28T14:38:22.000Z",
+        "publishedAt": "2026-10-28T17:01:23.000Z",
         "badge": "HN",
-        "signal": "106 分 · 22 评论"
+        "signal": "611 分 · 508 评论"
       },
       {
         "id": "cn-item-85f55196ca725c57",
@@ -137,45 +136,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-26p8-2jq9-3vq9",
+        "id": "github-advisory-ghsa-83rm-6c8r-g728",
         "category": "security",
-        "title": "MLflow vulnerable to remote code execution on unauthenticated servers via third-party scorer deserialization importing caller-placed artifact modules",
-        "url": "https://github.com/advisories/GHSA-26p8-2jq9-3vq9",
+        "title": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+        "url": "https://github.com/advisories/GHSA-83rm-6c8r-g728",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T21:26:32.000Z",
-        "summary": "## Summary MLflow 3.12.0 introduced registration and deserialization support for third-party scorers in OSS MLflow. During scorer deserialization, the server accepts a request-controlled Python module path beneath one of four allowed packa…",
-        "badge": "CVE-2026-116692",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-10-28T21:06:24.000Z",
+        "summary": "### Summary When `escapeParameter` is enabled (`escapeParameterHtml` in the Legacy API), Vue I18n passes the translated string through `sanitizeTranslatedHtml()`. The sanitizer escapes ` ` in attribute values and neutralizes event handler …",
+        "badge": "CVE-2026-118257",
+        "signal": "HIGH · CVSS 7.2"
       },
       {
-        "id": "ai-openai-1e3ebf94e41ebe19",
+        "id": "ai-openai-e2ed7680c50ae3f0",
         "category": "ai",
-        "title": "Retell uses OpenAI models to help power 100M monthly calls",
-        "url": "https://openai.com/index/retell-ai",
+        "title": "The future of the firm",
+        "url": "https://openai.com/index/the-future-of-the-firm",
         "source": "OpenAI",
-        "publishedAt": "2026-10-27T15:00:00.000Z",
-        "summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+        "publishedAt": "2026-10-28T10:00:00.000Z",
+        "summary": "How AI might enter the org chart—beneath, beside, and between us.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1252639",
+        "id": "v2ex-1252688",
         "category": "dev",
-        "title": "今天才发现 todesk 吃我 188g 硬盘",
-        "url": "https://www.v2ex.com/t/1252639",
+        "title": "全程家宽+软路由+全局，还是被 Claude 发现来自大陆",
+        "url": "https://www.v2ex.com/t/1252688",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T11:54:15.000Z",
-        "summary": "谁写的软件，我说 1tb 硬盘怎么这么快满了😠",
+        "publishedAt": "2026-10-28T16:30:34.000Z",
+        "summary": "23 年 11 月注册了第一个号，但是当时 Claude 没 GPT 好用，所以一直轻度使用 直到出了 Claude Design 和 opus5.5 之后开始高强度使用 opus5.5 出的第二天开始上了 20×，不过由于我自己粗心大意，直连了一次，跳了 region unavailable ，第二天就被封了，享年 2 周岁 上上个月新号（不是新注册，只是开始用，一年前注册的），先养了半个月 Pro ，再上的 5×，全程软路由+家庭 ip+全局规则，在 ROG 上用到今天…",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-dcce38aafc184fcb",
+        "id": "cn-it-2eac6cd2deca6e56",
         "category": "cn",
-        "title": "索尼推出“Prism Collection”版 DualSense 手柄，半透明设计",
-        "url": "https://www.ithome.com/1/019/233.htm",
+        "title": "谷歌最强 AI 模型：Gemini 4 Carbon 登顶全球智能指数榜首，“专职”做网络安全",
+        "url": "https://www.ithome.com/1/019/240.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-28T15:52:12.000Z",
-        "summary": "IT之家 10 月 28 日消息，索尼 PlayStation 今天宣布推出“Prism Collection”系列 DualSense 手柄。新产品提供三种配色， 均采用半透明设计 。 Prism Collection 系列 DualSense 无线控制器提供石墨灰、翡翠绿和烈焰橙三种配色。官方表示，许多玩家一直期待透明外壳的 PS 手柄能够回归，如今它们来了。 外观方面，这款 DualSense 手柄采用半透明材质，加入亮面透明涂层，让玩家窥见手柄内部的结构。 同时，索…",
+        "publishedAt": "2026-10-28T20:51:40.000Z",
+        "summary": "IT之家 10 月 29 日消息，谷歌正式发布新一代前沿大模型 Gemini 4 Carbon ，主打业界顶尖的网络安全能力与长程任务处理能力。 谷歌称其为目前最强的模型，重点强化了网络安全能力和处理复杂、长周期任务的能力。 该模型在最新版 Artificial Analysis Intelligence Index v5.0 中排名第一，综合得分 59。 Gemini 4 Carbon 首发入门定价与两周前发布的 Gemini 4 Argon 保持一致，缓存输入 Toke…",
         "badge": "IT之家"
       },
       {
@@ -190,24 +189,24 @@
         "signal": "已遭利用 · 整改期限 2026-10-29"
       },
       {
-        "id": "ai-google-deepmind-301925b8adfcebab",
+        "id": "ai-google-deepmind-393575ee7d83ff0a",
         "category": "ai",
-        "title": "Beyond tree cover: mapping the world’s forest types",
-        "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+        "title": "Genie 4: A new generation of world simulation",
+        "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-22T14:30:24.000Z",
-        "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
+        "publishedAt": "2026-10-27T16:01:38.000Z",
+        "summary": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50208960",
+        "id": "hn-50274409",
         "category": "dev",
-        "title": "Start Doing Graph Theory",
-        "url": "https://vertex.degree/",
+        "title": "CNC Stone Carving",
+        "url": "https://carmelitegothic.com/cnc-stone-carving/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-23T13:49:50.000Z",
+        "publishedAt": "2026-10-28T14:38:22.000Z",
         "badge": "HN",
-        "signal": "341 分 · 77 评论"
+        "signal": "331 分 · 105 评论"
       },
       {
         "id": "cn-baidu-1ddb1505b7941163",
@@ -217,17 +216,17 @@
         "source": "百度热搜",
         "summary": "10月27日，微信派发文称，又有新功能上线了。文章题为《一个只用动嘴的新能力》，实则为微信输入法的“AI录音笔”功能。",
         "badge": "热搜",
-        "signal": "7,714,540 热度"
+        "signal": "7,712,011 热度"
       },
       {
-        "id": "github-advisory-ghsa-x94g-w73q-hpcw",
+        "id": "github-advisory-ghsa-434m-5hcj-pxf3",
         "category": "security",
-        "title": "dd-trace: ReDOS in URL query string obfuscation",
-        "url": "https://github.com/advisories/GHSA-x94g-w73q-hpcw",
+        "title": "GraphQL Tools: Per-request connection parameters persist into later users' WebSocket authentications",
+        "url": "https://github.com/advisories/GHSA-434m-5hcj-pxf3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T21:07:25.000Z",
-        "summary": "### Summary A regular expression used to obfuscate URL query strings can consume excessive CPU when processing certain attacker-controlled input. This can stall request processing and cause denial of service in applications using affected …",
-        "badge": "CVE-2026-116693",
+        "publishedAt": "2026-10-28T21:05:17.000Z",
+        "summary": "# Stale authentication state in `@graphql-tools/executor-legacy-ws`: per-request `extensions.connectionParams` persist in executor closure state and are replayed in a later caller's `connection_init` ## Report metadata | Field | Value | | …",
+        "badge": "CVE-2026-118665",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -240,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252622",
+        "id": "v2ex-1252657",
         "category": "dev",
-        "title": "复刻 JetBrains 的 Git 客户端做成 VS Code 插件发布到插件市场了",
-        "url": "https://www.v2ex.com/t/1252622",
+        "title": "拖了几年的博客迁移， AI 用 20 分钟帮我做完了",
+        "url": "https://www.v2ex.com/t/1252657",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T10:25:06.000Z",
-        "summary": "上周让 AI 复刻的 git 插件，这周花了些时间优化了一下，现在发布到 vscode 插件市场了，欢迎试用 插件市场搜索 ideagittool 即可找到 开源仓库地址： https://github.com/PGshen/vs-idea-gittool 欢迎提交 issue 和 pr",
+        "publishedAt": "2026-10-28T13:13:16.000Z",
+        "summary": "原文发表于 2026-10-26： X 原帖 。 每个程序员的待办里，大概都躺着几个「不难、但就是懒得动手」的陈年老坑。 以前我的博客是自己手写的程序，后来一直想彻底迁到 Markdown + Hugo ，改成纯静态博客。这事在我的待办里挂了好几年，一直没动手——主要是老数据全存在 sqlite 里，要想迁出来，还得自己写个 Python 脚本去读库表、把文章和各种数据导出来，想想就觉得折腾，就一直拖着。 今天突发奇想，干脆让 AI 帮我修一下这个博客吧。 结果它自己去我本…",
         "badge": "程序员",
-        "signal": "18 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-item-4c1ede077f35223e",
@@ -272,66 +271,66 @@
         "signal": "已遭利用 · 整改期限 2026-10-29"
       },
       {
-        "id": "ai-openai-c417f8e3d39d0b89",
+        "id": "ai-openai-709cc8e2bd467b79",
         "category": "ai",
-        "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
-        "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+        "title": "Legora is building the agentic operating system for legal work",
+        "url": "https://openai.com/index/legora",
         "source": "OpenAI",
-        "publishedAt": "2026-10-27T07:00:00.000Z",
-        "summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
+        "publishedAt": "2026-10-28T09:30:00.000Z",
+        "summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50273396",
+        "id": "hn-50275626",
         "category": "dev",
-        "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
-        "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
+        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+        "url": "https://surgehq.ai/blog/dayjob-tax",
         "source": "Hacker News",
-        "publishedAt": "2026-10-28T13:41:30.000Z",
+        "publishedAt": "2026-10-28T15:46:30.000Z",
         "badge": "HN",
-        "signal": "188 分 · 203 评论"
+        "signal": "148 分 · 79 评论"
       },
       {
-        "id": "cn-it-a77f70f034c73f58",
+        "id": "cn-it-c4154e2028d873d8",
         "category": "cn",
-        "title": "亚马逊 AWS 与国际汽联达成新合作，让 AI 和云计算参与下一代 F1 赛车技术规则制定",
-        "url": "https://www.ithome.com/1/019/232.htm",
+        "title": "谷歌 2026Q3 财报暴露 AI 变现焦虑，股价盘后暴跌逾 7%",
+        "url": "https://www.ithome.com/1/019/261.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-28T15:45:06.000Z",
-        "summary": "IT之家 10 月 28 日消息，亚马逊云科技（AWS）今天宣布与国际汽车联合会（FIA）达成新合作，双方将利用云计算和 AI 技术，推动各级别赛车运动创新，包含基层赛车赛事至一级方程式赛车（F1）。 IT之家从官方新闻稿获悉， AWS 将在下一代 F1 赛车规则制定过程中发挥重要作用 。FIA 已在利用 AWS 的高性能计算技术开展空气动力学模拟，在虚拟环境中测试赛车性能。推动赛车在安全性、性能和可持续发展取得进步。 此外，AWS 将成为 FIA 官方 AI 和云计算伙伴…",
+        "publishedAt": "2026-10-28T20:38:55.000Z",
+        "summary": "IT之家 10 月 29 日消息，谷歌母公司 Alphabet 今日发布 2026 财年（2026 年 1 月～2026 年 12 月）前三季度报（2026 年 1 月～2026 年 9 月）及第三财季（2026 年 7 月～2026 年 9 月）报告后， 股价盘后大跌逾 7%。 尽管第三财季营收达到 1,276 亿美元 （IT之家注：现汇率约合 8,525.01 亿元人民币） ，同比增长 25%，且 Google Cloud 收入翻倍，但每股收益 2.12 美元 （现汇率…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-mf2p-h6hf-fcwm",
+        "id": "github-advisory-ghsa-6hgp-fmhr-mrg4",
         "category": "security",
-        "title": "TinyMCE Cross-Site Scripting (XSS) vulnerability using media plugin `data-mce-object` serialization",
-        "url": "https://github.com/advisories/GHSA-mf2p-h6hf-fcwm",
+        "title": "Highcharts Grid: `javascript:` URL in credits.href runs script on click",
+        "url": "https://github.com/advisories/GHSA-6hgp-fmhr-mrg4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T21:07:12.000Z",
-        "summary": "### Impact Stored XSS vulnerability in the media plugin. Attackers can inject malicious scripts via elements crafted through the data-mce-object attribute, which are created and executed before sanitization. Impacts users of TinyMCE with t…",
-        "badge": "CVE-2026-116675",
+        "publishedAt": "2026-10-28T19:57:48.000Z",
+        "summary": "### Impact An attacker who controls the Grid configuration can set `credits.href` to a `javascript:` URL. The value is not validated against an allowed-scheme list before it is applied to the credits link, so activating that link runs atta…",
+        "badge": "CVE-2026-118255",
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-google-deepmind-ad09b0946a60b7ff",
+        "id": "ai-google-deepmind-301925b8adfcebab",
         "category": "ai",
-        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "title": "Beyond tree cover: mapping the world’s forest types",
+        "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-15T16:08:03.000Z",
-        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+        "publishedAt": "2026-10-22T14:30:24.000Z",
+        "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252610",
+        "id": "v2ex-1252639",
         "category": "dev",
-        "title": "rdp 自动化输入密码，总是被网银控件拦截",
-        "url": "https://www.v2ex.com/t/1252610",
+        "title": "今天才发现 todesk 吃我 188g 硬盘",
+        "url": "https://www.v2ex.com/t/1252639",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T09:53:22.000Z",
-        "summary": "如题，有没有好的办法解决，实现自动网银操作？",
+        "publishedAt": "2026-10-28T11:54:15.000Z",
+        "summary": "谁写的软件，我说 1tb 硬盘怎么这么快满了😠",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "10 回复"
       },
       {
         "id": "cn-baidu-34232b09d6389bcf",
@@ -341,7 +340,7 @@
         "source": "百度热搜",
         "summary": "国际人士持续关注中国共产党二十届五中全会，认为持之以恒推进全面从严治党，展现了中国共产党强大的组织力、执行力和生命力，不仅是中国取得巨大发展成就的关键保障，也为世界政党治理提供了重要借鉴。",
         "badge": "热搜",
-        "signal": "7,617,420 热度"
+        "signal": "7,618,190 热度"
       },
       {
         "id": "cisa-kev-cve-2026-114625",
@@ -364,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50272749",
+        "id": "hn-50276940",
         "category": "dev",
-        "title": "ICE Is Running One of the Largest Anti-Left Surveillance Ops in US History",
-        "url": "https://www.wired.com/story/ice-is-running-one-of-the-largest-anti-left-surveillance-operations-in-us-history/",
+        "title": "MacBook Pro with PROLED XDR Display and Touch",
+        "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-28T12:49:45.000Z",
+        "publishedAt": "2026-10-28T17:10:37.000Z",
         "badge": "HN",
-        "signal": "765 分 · 530 评论"
+        "signal": "399 分 · 682 评论"
       },
       {
         "id": "cn-item-0adba173e6bbae4a",
@@ -384,45 +383,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-rh54-vffm-5fvp",
+        "id": "github-advisory-ghsa-r5wg-q8fc-p6w2",
         "category": "security",
-        "title": "CKEditor: Cross-site scripting (XSS) in the engine package",
-        "url": "https://github.com/advisories/GHSA-rh54-vffm-5fvp",
+        "title": "Highcharts Grid parses pagination language options as HTML",
+        "url": "https://github.com/advisories/GHSA-r5wg-q8fc-p6w2",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T21:05:06.000Z",
-        "summary": "### Impact A Cross-Site Scripting (XSS) vulnerability has been discovered in the CKEditor 5 engine. This vulnerability is caused by a prototype pollution issue in the `es-toolkit` library used in the CKEditor 5 codebase. This vulnerability…",
-        "badge": "CVE-2026-116688",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-10-28T19:57:34.000Z",
+        "summary": "### Impact The pagination language strings are written into the DOM as markup rather than as text. An attacker who controls those language options can supply elements carrying event handlers, and those handlers execute in the origin of the…",
+        "badge": "CVE-2026-118254",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-c44dc9ed271ff418",
+        "id": "ai-openai-1e3ebf94e41ebe19",
         "category": "ai",
-        "title": "How Check Point accelerates vulnerability research with Daybreak",
-        "url": "https://openai.com/index/check-point-daybreak",
+        "title": "Retell uses OpenAI models to help power 100M monthly calls",
+        "url": "https://openai.com/index/retell-ai",
         "source": "OpenAI",
-        "publishedAt": "2026-10-27T00:00:00.000Z",
-        "summary": "With OpenAI Daybreak, Check Point speeds up the research behind new security protections, enabling its analysts to turn vulnerability intelligence into customer defenses faster.",
+        "publishedAt": "2026-10-27T15:00:00.000Z",
+        "summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1252607",
+        "id": "v2ex-1252622",
         "category": "dev",
-        "title": "项目开发多设备同步的问题",
-        "url": "https://www.v2ex.com/t/1252607",
+        "title": "复刻 JetBrains 的 Git 客户端做成 VS Code 插件发布到插件市场了",
+        "url": "https://www.v2ex.com/t/1252622",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T09:39:47.000Z",
-        "summary": "目前在项目开发时，遇到的一个问题。每日频繁的要在家里电脑，单位电脑、笔记本之间切换。 使用 github ，我的问题是，很多时候项目某个任务并没有开发完，并不想提交或者忘记提交代码。经常出现的情况是换了设备，新的代码没有更新过来。 后来使用自主搭建 nextcloud+github 的方式，通过 nextcloud 同步代码，但是我想保留所有的 git 提交记录方便查询和回退，在 nextcloud 同步时，选择了同步.git 目录,但是.git 时经常会报错，且有太多不必…",
+        "publishedAt": "2026-10-28T10:25:06.000Z",
+        "summary": "上周让 AI 复刻的 git 插件，这周花了些时间优化了一下，现在发布到 vscode 插件市场了，欢迎试用 插件市场搜索 ideagittool 即可找到 开源仓库地址： https://github.com/PGshen/vs-idea-gittool 欢迎提交 issue 和 pr",
         "badge": "程序员",
-        "signal": "20 回复"
+        "signal": "18 回复"
       },
       {
-        "id": "cn-it-7e59c713db44c105",
+        "id": "cn-it-1599c452821ca0b6",
         "category": "cn",
-        "title": "内存涨价致旧手机价格坚挺：99 新二手机成华强北抢手货，苹果 iPhone 15 Pro Max 从去年 3000 多元回涨至 4300 元以上",
-        "url": "https://www.ithome.com/1/019/231.htm",
+        "title": "福特汽车 2026 财年前三季度报归母净利润 32.7 亿美元，同比增长 13.5%",
+        "url": "https://www.ithome.com/1/019/260.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-28T15:40:36.000Z",
-        "summary": "IT之家 10 月 28 日消息，据央视财经今日报道，深圳华强北二手手机市场均价 4000 元以上产品的占比已超过 68%。 一位业内人士对央视记者表示，热销机型一年内降价 20% 本是常态，但受内存涨价影响，今年二手手机价格普遍坚挺，部分热门机型甚至出现加价。他以 iPhone 15 Pro Max 举例：这款机型去年在二手市场的价格一度跌至 3000 多元，目前回涨至 4300 至 4400 元区间，回升幅度约 500 元。 这一价格走势与存储芯片的供需结构直接相关。从…",
+        "publishedAt": "2026-10-28T20:12:08.000Z",
+        "summary": "IT之家 10 月 29 日消息，福特汽车今日发布 2026 财年（2026 年 1 月～2026 年 12 月）前三季度报（2026 年 1 月～2026 年 9 月）及第三财季（2026 年 7 月～2026 年 9 月）报告： 2026 财年前三季度报 营业总收入 ：1,410.75 亿美元 （IT之家注：现汇率约合 9,425.28 亿元人民币） ，下降约 0.2% 毛利润 ：214 亿美元 （现汇率约合 1,429.74 亿元人民币） ，同比增长 15.47% 毛…",
         "badge": "IT之家"
       },
       {
@@ -437,24 +436,24 @@
         "signal": "已遭利用 · 整改期限 2026-10-26"
       },
       {
-        "id": "ai-google-deepmind-36a7e1c23fbbe3b1",
+        "id": "ai-google-deepmind-ad09b0946a60b7ff",
         "category": "ai",
-        "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
-        "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-14T02:00:14.000Z",
-        "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
+        "publishedAt": "2026-10-15T16:08:03.000Z",
+        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
         "badge": "Google DeepMind"
       },
       {
         "id": "hn-50243060",
         "category": "dev",
-        "title": "Unveiling The Grid: PCBs made in America, twice as fast as Shenzhen",
+        "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
         "url": "https://www.circuithub.com/post/unveiling-the-grid",
         "source": "Hacker News",
         "publishedAt": "2026-10-26T13:13:31.000Z",
         "badge": "HN",
-        "signal": "179 分 · 81 评论"
+        "signal": "346 分 · 174 评论"
       },
       {
         "id": "cn-baidu-0e347c00787a7fc8",
@@ -464,18 +463,18 @@
         "source": "百度热搜",
         "summary": "巴基斯坦防长阿西夫28日表示，巴基斯坦已对来自台湾地区的航空公司关闭领空，以坚持一个中国政策。彭博社称，这是全球第一个采取此类措施的国家。",
         "badge": "热搜",
-        "signal": "7,519,810 热度"
+        "signal": "7,520,566 热度"
       },
       {
-        "id": "github-advisory-ghsa-rjh2-4xgw-p2hj",
+        "id": "github-advisory-ghsa-58g7-7f52-h92c",
         "category": "security",
-        "title": "Atlantis: OS command injection through PR-controlled Terraform workspace enables RCE during plan",
-        "url": "https://github.com/advisories/GHSA-rjh2-4xgw-p2hj",
+        "title": "Highcharts Dashboards parses fullscreen labels as HTML",
+        "url": "https://github.com/advisories/GHSA-58g7-7f52-h92c",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-27T21:04:50.000Z",
-        "summary": "### Summary Atlantis passes the Terraform `workspace` value from a pull request's `atlantis.yaml` into a shell command without quoting or escaping it. A contributor whose pull request is eligible for an Atlantis plan can include shell meta…",
-        "badge": "CVE-2026-116676",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-10-28T19:57:19.000Z",
+        "summary": "### Impact The edit mode fullscreen labels are parsed as HTML when the corresponding control is rendered. An attacker who controls the Dashboards language options can supply markup carrying event handlers, which then execute in the origin …",
+        "badge": "CVE-2026-118253",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-2b3f616d26d343fe",
@@ -487,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252597",
+        "id": "v2ex-1252610",
         "category": "dev",
-        "title": "PHP 漏洞那么多天了，有没有攻击流出呀，感觉有点被高估了",
-        "url": "https://www.v2ex.com/t/1252597",
+        "title": "rdp 自动化输入密码，总是被网银控件拦截",
+        "url": "https://www.v2ex.com/t/1252610",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T09:20:44.000Z",
-        "summary": "专门留了个靶机，这两天毛动静都没有 现在大多数都用的 phpfpm ，这个利用难度还是比较高的吧",
+        "publishedAt": "2026-10-28T09:53:22.000Z",
+        "summary": "如题，有没有好的办法解决，实现自动网银操作？",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -512,7 +511,7 @@
         "url": "https://github.com/JetBrains/thinkrail",
         "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "language": "TypeScript",
-        "stars": 4738,
+        "stars": 4944,
         "starsToday": 1075
       },
       {
@@ -520,8 +519,8 @@
         "rank": 2,
         "name": "elayadesign/ai-design-skills",
         "url": "https://github.com/elayadesign/ai-design-skills",
-        "stars": 10800,
-        "starsToday": 1395
+        "stars": 10988,
+        "starsToday": 1938
       },
       {
         "id": "github-4251a228ae407247",
@@ -530,7 +529,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 307147,
+        "stars": 307342,
         "starsToday": 1096
       },
       {
@@ -540,7 +539,7 @@
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 47571,
+        "stars": 47813,
         "starsToday": 2376
       },
       {
@@ -550,7 +549,7 @@
         "url": "https://github.com/macro-inc/macro",
         "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
         "language": "Rust",
-        "stars": 5273,
+        "stars": 5359,
         "starsToday": 106
       },
       {
@@ -560,7 +559,7 @@
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "language": "CSS",
-        "stars": 40274,
+        "stars": 40554,
         "starsToday": 2109
       },
       {
@@ -570,7 +569,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "language": "Rust",
-        "stars": 91963,
+        "stars": 92407,
         "starsToday": 1471
       },
       {
@@ -580,7 +579,7 @@
         "url": "https://github.com/makecindy/cindy",
         "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "language": "TypeScript",
-        "stars": 7905,
+        "stars": 8008,
         "starsToday": 740
       },
       {
@@ -590,7 +589,7 @@
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 3028,
+        "stars": 3156,
         "starsToday": 1053
       },
       {
@@ -599,10 +598,10 @@
         "name": "togg53192-cmd/jailbreaks",
         "url": "https://github.com/togg53192-cmd/jailbreaks",
         "description": "LIST OF ALL MY JAILBREAKS",
-        "stars": 6664,
+        "stars": 6952,
         "starsToday": 1478
       }
     ],
-    "updatedAt": "2026-10-28T16:04:44.750Z"
+    "updatedAt": "2026-10-28T21:06:48.092Z"
   }
 }
