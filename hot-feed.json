@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-28T08:29:21.413Z",
+  "generatedAt": "2026-10-28T08:34:23.846Z",
   "intelligence": {
-    "updatedAt": "2026-10-28T08:29:21.413Z",
+    "updatedAt": "2026-10-28T08:34:23.846Z",
     "items": [
       {
         "id": "cn-item-003663ce42faa804",
@@ -43,7 +43,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-28T01:47:50.000Z",
         "badge": "HN",
-        "signal": "227 分 · 116 评论"
+        "signal": "231 分 · 115 评论"
       },
       {
         "id": "cn-it-ab8bb753cdc654a8",
@@ -95,7 +95,7 @@
         "source": "百度热搜",
         "summary": "10月28日，外交部发言人郭嘉昆主持例行记者会。对于法国足球运动员姆巴佩就其此前不当涉华言论道歉，郭嘉昆表示，我们重视当事人作出的道歉。",
         "badge": "热搜",
-        "signal": "7,808,278 热度"
+        "signal": "7,809,079 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111497",
@@ -167,7 +167,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-27T16:51:22.000Z",
         "badge": "HN",
-        "signal": "981 分 · 307 评论"
+        "signal": "984 分 · 308 评论"
       },
       {
         "id": "cn-it-6af0acc42a7256c1",
@@ -219,7 +219,7 @@
         "source": "百度热搜",
         "summary": "近日，上海发布规划，南通新机场预计于2035年全面建成，届时上海将形成浦东、虹桥、南通新机场“两地三场”格局，成为我国首个“三机场”城市。",
         "badge": "热搜",
-        "signal": "7,712,960 热度"
+        "signal": "7,711,996 热度"
       },
       {
         "id": "github-advisory-ghsa-x94g-w73q-hpcw",
@@ -249,7 +249,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-25T18:49:48.000Z",
         "badge": "HN",
-        "signal": "203 分 · 33 评论"
+        "signal": "206 分 · 34 评论"
       },
       {
         "id": "cn-item-87853b2ae9d97c0d",
@@ -290,7 +290,7 @@
         "source": "V2EX 技术",
         "publishedAt": "2026-10-28T07:10:15.000Z",
         "badge": "程序员",
-        "signal": "21 回复"
+        "signal": "22 回复"
       },
       {
         "id": "cn-it-1123dba60ae1c426",
@@ -331,7 +331,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-27T19:55:06.000Z",
         "badge": "HN",
-        "signal": "324 分 · 135 评论"
+        "signal": "325 分 · 136 评论"
       },
       {
         "id": "cn-baidu-1e17206e665f96d0",
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "党的二十届五中全会召开之际，人民日报推出习近平党建思想系列访谈。中央党校副教授王琦受邀解读“坚持用严明的纪律管全党治全党”的科学内涵。",
         "badge": "热搜",
-        "signal": "7,616,255 热度"
+        "signal": "7,616,227 热度"
       },
       {
         "id": "cisa-kev-cve-2026-114625",
@@ -406,14 +406,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50227400",
+        "id": "hn-50264857",
         "category": "dev",
-        "title": "MacOS Extensions Pack for the Apple Network Server v1.0",
-        "url": "http://oldvcr.blogspot.com/2026/10/macos-extensions-pack-for-apple-network.html",
+        "title": "Tailscale SSH: Investigation and remediation update",
+        "url": "https://tailscale.com/ssh-investigation-update",
         "source": "Hacker News",
-        "publishedAt": "2026-10-25T01:39:51.000Z",
+        "publishedAt": "2026-10-27T19:55:21.000Z",
         "badge": "HN",
-        "signal": "23 分 · 0 评论"
+        "signal": "270 分 · 144 评论"
       },
       {
         "id": "cn-it-6d07b06277c15b84",
@@ -465,7 +465,7 @@
         "source": "百度热搜",
         "summary": "手机恢复出厂设置并非彻底清除数据，只是逻辑删除，数据仍可被专业工具恢复。想要彻底清空，可用大容量视频反复填满存储空间，覆盖原有数据后再恢复出厂设置。",
         "badge": "热搜",
-        "signal": "7,523,854 热度"
+        "signal": "7,524,369 热度"
       },
       {
         "id": "github-advisory-ghsa-rjh2-4xgw-p2hj",
@@ -500,7 +500,7 @@
         "rank": 1,
         "name": "elayadesign/ai-design-skills",
         "url": "https://github.com/elayadesign/ai-design-skills",
-        "stars": 10204,
+        "stars": 10217,
         "starsToday": 1395
       },
       {
@@ -510,7 +510,7 @@
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "language": "CSS",
-        "stars": 39593,
+        "stars": 39605,
         "starsToday": 2830
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 2750,
+        "stars": 2755,
         "starsToday": 777
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 306767,
+        "stars": 306775,
         "starsToday": 617
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "language": "Rust",
-        "stars": 91087,
+        "stars": 91093,
         "starsToday": 1449
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/makecindy/cindy",
         "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "language": "TypeScript",
-        "stars": 7730,
+        "stars": 7731,
         "starsToday": 1465
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/gitroomhq/postiz-app",
         "description": "📨 The ultimate agentic social media scheduling tool 🤖",
         "language": "TypeScript",
-        "stars": 39709,
+        "stars": 39715,
         "starsToday": 951
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 291189,
+        "stars": 291192,
         "starsToday": 1165
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 46792,
+        "stars": 46804,
         "starsToday": 1598
       },
       {
@@ -590,10 +590,10 @@
         "url": "https://github.com/JetBrains/thinkrail",
         "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "language": "TypeScript",
-        "stars": 4402,
+        "stars": 4407,
         "starsToday": 1204
       }
     ],
-    "updatedAt": "2026-10-28T08:29:21.413Z"
+    "updatedAt": "2026-10-28T08:34:23.846Z"
   }
 }
