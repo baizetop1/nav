@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-29T14:21:30.861Z",
+  "generatedAt": "2026-10-29T20:18:50.320Z",
   "intelligence": {
-    "updatedAt": "2026-10-29T14:21:30.861Z",
+    "updatedAt": "2026-10-29T20:18:50.320Z",
     "items": [
       {
-        "id": "cn-item-ea4fddacf79f9de9",
+        "id": "cn-item-6cfbfac9353ac129",
         "category": "cn",
-        "title": "伊朗伊斯兰革命卫队称捕获一架美军间谍无人机",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-29/10722963.shtml",
+        "title": "中宣部组织召开学习宣传贯彻党的二十届五中全会精神电视电话会议",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-29/10723073.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T12:13:18.000Z",
-        "summary": "中新网10月29日电 据伊朗媒体报道，伊朗伊斯兰革命卫队当地时间29日发布声明称，在霍尔木兹海峡以西地区开展了一次进攻性电子战行动，成功控制一架美军间谍无人机，并使其安全降落。",
+        "publishedAt": "2026-10-29T15:34:03.000Z",
+        "summary": "新华社北京10月29日电 中宣部29日晚在京召开学习宣传贯彻党的二十届五中全会精神电视电话会议。中共中央政治局委员、中宣部部长李书磊出席会议并讲话。",
         "badge": "中新网要闻"
       },
       {
@@ -26,45 +26,45 @@
         "signal": "已遭利用 · 整改期限 2026-11-11"
       },
       {
-        "id": "ai-openai-a395c7da350b5086",
+        "id": "ai-openai-9349f418e7bc7ab4",
         "category": "ai",
-        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
-        "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "url": "https://openai.com/index/updated-model-spec",
         "source": "OpenAI",
-        "publishedAt": "2026-10-28T13:15:00.000Z",
-        "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
+        "publishedAt": "2026-10-29T17:00:00.000Z",
+        "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50288019",
+        "id": "hn-50294702",
         "category": "dev",
-        "title": "Gemini 4 Carbon is the new #1 on the Artificial Analysis Intelligence Index v5",
-        "url": "https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1",
+        "title": "Patrick Stewart has died",
+        "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T12:41:56.000Z",
+        "publishedAt": "2026-10-29T19:41:39.000Z",
         "badge": "HN",
-        "signal": "151 分 · 105 评论"
+        "signal": "488 分 · 90 评论"
       },
       {
-        "id": "cn-it-0285514724712856",
+        "id": "cn-it-de13730a3e802927",
         "category": "cn",
-        "title": "庆祝《ARC Raiders》发售一周年，海盗船携旗下品牌推出联名外设",
-        "url": "https://www.ithome.com/1/019/779.htm",
+        "title": "59.9 万元梅赛德斯 AMG GLC 53 4MATIC+ 车型上市，3.0T 六缸回归",
+        "url": "https://www.ithome.com/1/019/798.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-29T14:15:08.000Z",
-        "summary": "IT之家 10 月 29 日消息，CORSAIR（海盗船）当地时间今日宣布与 Embark Studios 合作，携主品牌与旗下 SCUF、Elgato 推出多款《ARC Raiders》（弧光猎人）联名硬件， 庆祝这款多人在线射击游戏发售一周年 。 此次联名产品阵容涵盖 SCUF 的三款手柄控制器，海盗船 CLIPPER PRO MINI 60 磁轴键盘、SABRE v2 PRO Wireless MG 镁合金鼠标、HS80 RGB WIRELESS 耳机、MM Anti…",
+        "publishedAt": "2026-10-29T16:10:45.000Z",
+        "summary": "IT之家 10 月 30 日消息，10 月 29 日，梅赛德斯 AMG GLC 53 4MATIC+ 在浙江国际赛车场正式上市，官方指导价 59.90 万元，仅此一款配置。 其核心变化是用 3.0T 直列六缸 +48V 轻混系统接替了 GLC 43 上的 2.0T 四缸动力，六缸重回 GLC 性能序列。 新车搭载了 M256 Evo 3.0T 直列六缸涡轮增压发动机，AMG 对其进行了专属升级，包括重新设计缸盖、优化进排气道、换用升级进气凸轮轴，并将涡轮增压压力提升至 1.…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-3f7j-7jwc-fxfj",
+        "id": "github-advisory-ghsa-qr28-fpjm-wq7f",
         "category": "security",
-        "title": "systeminformation vulnerable to Windows command injection in services() through Unicode quotation marks",
-        "url": "https://github.com/advisories/GHSA-3f7j-7jwc-fxfj",
+        "title": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
+        "url": "https://github.com/advisories/GHSA-qr28-fpjm-wq7f",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T22:42:49.000Z",
-        "summary": "### Summary On Windows, `systeminformation@5.33.15` builds a PowerShell command using the value passed to `services()`. The default sanitizer removes ASCII quotes but keeps Unicode curly quotes, spaces, and parentheses. A crafted service n…",
-        "badge": "CVE-2026-116576",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-10-29T16:41:28.000Z",
+        "summary": "### Summary `decodeUriComponent()` takes quadratic time on malformed input that has many distinct percent-encoded runs. A single unauthenticated request of about 224 KB can block the Node.js event loop for about 20 seconds. Version 0.5.0, …",
+        "badge": "CVE-2026-118664",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-google-deepmind-e8e0cb1d0e685ced",
@@ -76,13 +76,13 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252985",
+        "id": "v2ex-1253009",
         "category": "dev",
-        "title": "古典程序员，来感受穿越时空的声音",
-        "url": "https://www.v2ex.com/t/1252985",
+        "title": "搞 js 混淆的思路又变广了一些",
+        "url": "https://www.v2ex.com/t/1253009",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T13:41:22.000Z",
-        "summary": "没什么实际用，就当玩具吧。 https://winxp.si/#lang=zh 千千静听 4.6 https://winxp.si/#open=ttplayer&lang=zh QQ2006 https://winxp.si/#open=qq&lang=zh 其实早就做好了，但之前没合并，虽然还有细节在处理。但先这样吧。慢慢再优化，有什么问题。 其实蓝屏有时真的是系统错误自动抛出的，毕竟坑多。（虽然也有特意彩蛋） ★示例乐音计预在数小时内除移。",
+        "publishedAt": "2026-10-29T16:17:34.000Z",
+        "summary": "不多说了免得剧透，看原文吧 https://nullpt.rs/fingerprinting-bioweapons 反混淆对抗能想到这一层的真的是神人了🤣",
         "badge": "程序员",
         "signal": "3 回复"
       },
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "近期，部分自媒体渲染“养老金要崩盘”等论调制造焦虑。人民日报发文批驳，指出养老金是制度化的跨期保障。通过算“结构、公平、长远”三本账，澄清资金来源和计发原则，强调有国家制度托底与经济增长支撑，呼吁个人主动做好财富规划。",
         "badge": "热搜",
-        "signal": "7,808,181 热度"
+        "signal": "7,808,129 热度"
       },
       {
         "id": "cisa-kev-cve-2026-46300",
@@ -117,65 +117,65 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50288867",
+        "id": "hn-50289418",
         "category": "dev",
-        "title": "Read the letter the FBI sent MLK to try to convince him to kill himself (2014)",
-        "url": "https://www.vox.com/xpress/2014/11/12/7204453/martin-luther-king-fbi-letter",
+        "title": "We're releasing the weights of Mistral Large 4",
+        "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T13:40:04.000Z",
+        "publishedAt": "2026-10-29T14:13:21.000Z",
         "badge": "HN",
-        "signal": "110 分 · 36 评论"
+        "signal": "906 分 · 256 评论"
       },
       {
-        "id": "cn-item-54e20e7adc691a77",
+        "id": "cn-item-674d817e6a89de30",
         "category": "cn",
-        "title": "外媒聚焦：德国总统访华释放积极信号，中德务实合作前景广阔",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-29/10722882.shtml",
+        "title": "王毅同冰岛外长贡纳尔斯多蒂尔会谈",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-29/10723067.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T10:55:04.000Z",
-        "summary": "中新网10月29日电 德国总统施泰因迈尔于10月27日至31日对中国进行国事访问。多家外媒对此进行了报道，称这表明德国高度重视对华关系。此次访问对于推进中德双方务实合作、挖掘更多发展机遇具有重要意义。",
+        "publishedAt": "2026-10-29T15:33:35.000Z",
+        "summary": "中新社北京10月29日电 10月29日，中共中央政治局委员、外交部长王毅在北京同冰岛外长贡纳尔斯多蒂尔举行会谈。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-6jp4-8v48-cc5v",
+        "id": "github-advisory-ghsa-vpp8-g58w-m8mp",
         "category": "security",
-        "title": "Electrum: Malicious server can replace a just-broadcast tx and try to trick user into RBF-ing it",
-        "url": "https://github.com/advisories/GHSA-6jp4-8v48-cc5v",
+        "title": "Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset",
+        "url": "https://github.com/advisories/GHSA-vpp8-g58w-m8mp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T21:23:44.000Z",
-        "summary": "### Summary The main Electrum server the client connects to is trusted with mempool (\"unconfirmed\") transactions. This is documented design. [0] However now someone figured out a way to practically exploit it: - when the client broadcasts …",
-        "badge": "CVE-2026-117601",
-        "signal": "CRITICAL · CVSS 7.5"
+        "publishedAt": "2026-10-29T16:41:06.000Z",
+        "summary": "## Summary An uncontrolled-resource-consumption vulnerability (CWE-400) in the Twisted HTTP/2 server lets any unauthenticated remote client exhaust server CPU over a single connection. A client that sends a request header block with `END_S…",
+        "badge": "GHSA-VPP8-G58W-M8MP",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-e2ed7680c50ae3f0",
+        "id": "ai-openai-0f01adb2acab0a67",
         "category": "ai",
-        "title": "The future of the firm",
-        "url": "https://openai.com/index/the-future-of-the-firm",
+        "title": "How we detect frontier model misalignment",
+        "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
         "source": "OpenAI",
-        "publishedAt": "2026-10-28T10:00:00.000Z",
-        "summary": "How AI might enter the org chart—beneath, beside, and between us.",
+        "publishedAt": "2026-10-29T09:00:00.000Z",
+        "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1252964",
+        "id": "v2ex-1253002",
         "category": "dev",
-        "title": "gpt 网页版是否在 chrome 上有 bug？",
-        "url": "https://www.v2ex.com/t/1252964",
+        "title": "静听 2.4.0 已更新：新增 Emby，完善多选与歌词管理",
+        "url": "https://www.v2ex.com/t/1253002",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T11:53:20.000Z",
-        "summary": "在 chrome 中使用 gpt 对话经常出现输出截断，或者根本不输出的情况。 当前相同设备和网络使用 claude 网页版和 gpt app 都正常。 更换 edge 情况似乎有缓解，但是对比 gpt app 还是有些输出异常卡住的情况。 想问这是什么原因导致的？",
+        "publishedAt": "2026-10-29T15:19:30.000Z",
+        "summary": "静听 2.4.0 已发布，现在可以前往 App Store 更新或下载。 这次新增了 Emby 音乐服务，也补齐了一批日常整理操作：先搜索、筛选，再把选中的歌曲加入歌单或待播；收藏、最近播放和队列有各自的批量动作，歌词也可以单独导入、关联多首歌曲。 Emby 曲库，可以在静听里听了 已经把音乐整理进 Emby 的用户，可以连接自己的服务器，按歌曲、专辑、歌手和歌单浏览，搜索后直接播放。 Emby 服务页演示。音乐服务在线播放需静听 Pro 。 原有 Navidrome 接入…",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-c6014a64c57eebba",
+        "id": "cn-it-940a15277a08f165",
         "category": "cn",
-        "title": "《GTA6》游戏公共交通系统详解：火车、巴士有固定路线和时刻表",
-        "url": "https://www.ithome.com/1/019/777.htm",
+        "title": "为 XR 设备无线音频铺路：星闪 SLE 3.0 计划链路峰值速率提至 16Mbps+，真正做到 Hi-Res 无损音质",
+        "url": "https://www.ithome.com/1/019/797.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-29T14:06:56.000Z",
-        "summary": "IT之家 10 月 29 日消息，据游戏媒体 GamesRadar 今天报道，在《GTA6》的雷奥奈达州，玩家即使不开车也能相当方便地出行。游戏中拥有一套完整的公共交通系统， 巴士 、 火车将按照固定路线和时刻表运行 。 据报道，玩家在雷奥奈达州探索时不只可以选择汽车、电动滑板车或船只。Rockstar 为游戏打造了一整套公共交通网络，覆盖整个雷奥奈达州。 例如，游戏中的公交车将按照固定路线图行驶，运行时刻表也是有的。据 Rockstar 开发人员 Phil Hooker …",
+        "publishedAt": "2026-10-29T15:59:53.000Z",
+        "summary": "IT之家 10 月 29 日消息，《星闪 SLE3.0 技术标准演进蓝皮书》已在国际星闪联盟官网正式上线。蓝皮书中详细介绍了星闪 SLE 3.0 的核心技术演进背景与目标。 据介绍，星闪 SLE 当前支持 12Mbps 物理层，能基本满足通用数传、高清音频等应用场景。星闪 SLE 3.0 将在当前物理层基础上， 链路峰值速率提升至 16Mbps+ 。 根据规划，星闪 SLE 3.0 通过进一步优化 Polar 编码提升接收灵敏度， 引入应用波束成形、更窄信道划分等技术 ，将…",
         "badge": "IT之家"
       },
       {
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50289418",
+        "id": "hn-50293047",
         "category": "dev",
-        "title": "Mistral Large 4 (Le Chonk) is now Open Weight",
-        "url": "https://mistral.ai/news/mistral-large-4-oss/",
+        "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
+        "url": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T14:13:21.000Z",
+        "publishedAt": "2026-10-29T17:43:48.000Z",
         "badge": "HN",
-        "signal": "16 分 · 0 评论"
+        "signal": "66 分 · 19 评论"
       },
       {
         "id": "cn-baidu-1794d69d4acb991a",
@@ -217,47 +217,47 @@
         "source": "百度热搜",
         "summary": "近期，全国多地出现10元快剪排队潮，没有收银员，没有洗头台，没有推销办卡。反观传统理发店则因推销办卡等问题大量关停。此前，理发店因“头衔通胀”、预付卡纠纷频发被消费者视为“理发刺客”。",
         "badge": "热搜",
-        "signal": "7,714,253 热度"
+        "signal": "7,713,674 热度"
       },
       {
-        "id": "github-advisory-ghsa-97r2-qh9m-474h",
+        "id": "github-advisory-ghsa-9hj8-73fh-9963",
         "category": "security",
-        "title": "Seroval: fromJSON deserializer trusts node-supplied array length and sequence doneAt (unauthenticated event-loop DoS)",
-        "url": "https://github.com/advisories/GHSA-97r2-qh9m-474h",
+        "title": "zip: legacy Shrink/Reduce/Implode decoder: denial of service from attacker-controlled ZIP64 uncompressed size",
+        "url": "https://github.com/advisories/GHSA-9hj8-73fh-9963",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T21:17:27.000Z",
-        "summary": "### Summary `fromJSON` and `fromCrossJSON` used two node fields without checking them. - An array node's element list was not checked to be an array. A small payload could set the length the decoder looped over. This part is also tracked i…",
-        "badge": "CVE-2026-116581",
+        "publishedAt": "2026-10-29T16:40:19.000Z",
+        "summary": "### Summary A malicious 149-byte ZIP archive can cause a denial of service in applications that enable `legacy-zip` and use `ZipArchive::extract()`. An attacker-controlled ZIP64 uncompressed size triggers a `capacity overflow` panic in the…",
+        "badge": "CVE-2026-115907",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-b6b30743068c2627",
+        "id": "ai-hugging-face-718617961cab3abc",
         "category": "ai",
-        "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
-        "url": "https://huggingface.co/blog/mistral-large4",
+        "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+        "url": "https://huggingface.co/blog/announcing-project-protostar",
         "source": "Hugging Face",
         "publishedAt": "2026-10-29T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252958",
+        "id": "v2ex-1252992",
         "category": "dev",
-        "title": "Github Action 每日定时任务的小坑",
-        "url": "https://www.v2ex.com/t/1252958",
+        "title": "Grok Bot + Cursor Cloud Agent，算不算一个人的软件工厂？",
+        "url": "https://www.v2ex.com/t/1252992",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T11:30:19.000Z",
-        "summary": "我把其中一个项目的 Github Action 每日任务设定成每天 03:17 UTC+0 执行更新数据和自动部署 name: Update data and deploy on: schedule: - cron: '17 3 * * *' 但发现每天都没有按计划执行，都要推迟 6 个多小时启动定时任务，而且有每天再往后顺延 20 分钟以上执行的趋势。 AI 研究了一番，发现这是个共性问题，应该是在薅 Github Action 服务器羊毛的人比较多，计划任务多所带来的延…",
+        "publishedAt": "2026-10-29T14:27:45.000Z",
+        "summary": "最近在折腾一件事：用 Grok Bot 当外层调度，把改仓库、开 PR 的活丢给 Cursor Cloud Agent ，自己只盯验收和方向。 感觉像在搭一条很小的「软件工厂」流水线： Bot 负责听需求、拆任务、盯进度（人在手机上也能催） Cloud Agent 负责真正动代码、开 PR 最容易翻车的是第 3 步：没有可复现的验收，所谓「百倍效率」会被返工吃光 所以我不追「哪个模型更猛」，更追： 需求有没有问清（不然 Agent 跑飞） 验收能不能复现（单测全绿也可能背离…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-item-f68797fa788e8d0b",
+        "id": "cn-item-ea4fddacf79f9de9",
         "category": "cn",
-        "title": "受权发布丨张升民同志简历",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-29/10722857.shtml",
+        "title": "伊朗伊斯兰革命卫队称捕获一架美军间谍无人机",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-29/10722963.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T10:03:25.000Z",
-        "summary": "新华社北京10月29日电",
+        "publishedAt": "2026-10-29T12:13:18.000Z",
+        "summary": "中新网10月29日电 据伊朗媒体报道，伊朗伊斯兰革命卫队当地时间29日发布声明称，在霍尔木兹海峡以西地区开展了一次进攻性电子战行动，成功控制一架美军间谍无人机，并使其安全降落。",
         "badge": "中新网要闻"
       },
       {
@@ -272,45 +272,45 @@
         "signal": "已遭利用 · 整改期限 2026-11-10"
       },
       {
-        "id": "ai-openai-709cc8e2bd467b79",
+        "id": "ai-openai-d948735545c20cf3",
         "category": "ai",
-        "title": "Legora is building the agentic operating system for legal work",
-        "url": "https://openai.com/index/legora",
+        "title": "How Ropes & Gray is developing AI for transactional diligence",
+        "url": "https://openai.com/index/ropes-gray-ai-diligence",
         "source": "OpenAI",
-        "publishedAt": "2026-10-28T09:30:00.000Z",
-        "summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
+        "publishedAt": "2026-10-29T07:00:00.000Z",
+        "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50286987",
+        "id": "hn-50294507",
         "category": "dev",
-        "title": "Chained PHP2Shell Exploit Roots 25 Servers, Including US Government Servers",
-        "url": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
+        "title": "The importance of communities around software",
+        "url": "https://lumi.codeberg.page/blog/software-community.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T10:42:41.000Z",
+        "publishedAt": "2026-10-29T19:27:47.000Z",
         "badge": "HN",
-        "signal": "61 分 · 26 评论"
+        "signal": "26 分 · 14 评论"
       },
       {
-        "id": "cn-it-711d8ef94cdbc89a",
+        "id": "cn-it-92ccd66cd05d544d",
         "category": "cn",
-        "title": "TrendForce 预测：全球 OLED 笔电出货量有望在中期维持超 30% 年增幅",
-        "url": "https://www.ithome.com/1/019/776.htm",
+        "title": "星闪 SLE 2.0 核心升级高清音频、高精测距功能，恒玄、华为海思等厂商发布 20+ 款芯片",
+        "url": "https://www.ithome.com/1/019/796.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-29T14:05:09.000Z",
-        "summary": "IT之家 10 月 29 日消息，苹果北京时间今日发布了 MacBook Pro (PROLED XDR 显示屏)。在首款 OLED MacBook 产品面世后，研调机构 TrendForce（集邦）发布了对整体 OLED 笔电市场的最新预测。 机构认为，配备 OLED 屏幕的笔记本电脑整机 出货量在 2026~2030 年期间维持超 30% 的同比增幅 ，其中 2027~2029 年增长都将超过 40%；出货总量将从今年的 1260 万台增长至期末的 4660 万台。 ▲…",
+        "publishedAt": "2026-10-29T15:45:29.000Z",
+        "summary": "IT之家 10 月 29 日消息，《星闪 SLE3.0 技术标准演进蓝皮书》已在国际星闪联盟官网正式上线。蓝皮书中详细介绍了星闪 SLE 标准演进三阶段。 IT之家从蓝皮书了解到，2025 年以来星闪 SLE 2.0 技术迈入技术成熟与商业落地双爆发阶段。芯片领域， 卓胜微、恒玄、泰凌微、创耀、华为海思等厂商已发布 20+ 款芯片 ，支持高清音频、高精测距等星闪 SLE 2.0 核心功能。 数字车钥匙领域，2025 年 3 月问界新 M9 上市，首批星闪数字钥匙实现量产上车…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-wp97-x4hv-qvhp",
+        "id": "github-advisory-ghsa-hjqx-j4rw-g7xv",
         "category": "security",
-        "title": "Seroval `fromJSON`/`fromCrossJSON` denial of service via unvalidated array node length",
-        "url": "https://github.com/advisories/GHSA-wp97-x4hv-qvhp",
+        "title": "zip: Arbitrary file write outside the extraction directory, because ZipArchive::extract validates symlink targets lexically.",
+        "url": "https://github.com/advisories/GHSA-hjqx-j4rw-g7xv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T21:17:20.000Z",
-        "summary": "### Summary `fromJSON` and `fromCrossJSON` did not check that an array node's element list is an array. A small crafted payload could set the length the decoder used. That length controlled how much memory was allocated and how many times …",
-        "badge": "CVE-2026-116584",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-29T16:40:12.000Z",
+        "summary": "### Summary - **Verified version:** zip `9.0.0-pre3` - **Affected versions:** `7.2.0` and later - **Precondition:** The attacker knows (or can guess) the absolute path of the extraction destination The validation applied to symlinks is pur…",
+        "badge": "CVE-2026-115908",
+        "signal": "HIGH · CVSS 7.4"
       },
       {
         "id": "ai-google-deepmind-301925b8adfcebab",
@@ -323,15 +323,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252956",
+        "id": "v2ex-1252985",
         "category": "dev",
-        "title": "求 gpt-img 2.5 第三方 api 推荐",
-        "url": "https://www.v2ex.com/t/1252956",
+        "title": "古典程序员，来感受穿越时空的声音",
+        "url": "https://www.v2ex.com/t/1252985",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T11:26:50.000Z",
-        "summary": "求 gpt-img 2.5 第三方 api 推荐. 有没有支持带入两张 reference img, 输出 png 透明背景的 api? 大概都是多少钱一张.",
+        "publishedAt": "2026-10-29T13:41:22.000Z",
+        "summary": "没什么实际用，就当玩具吧。 https://winxp.si/#lang=zh 千千静听 4.6 https://winxp.si/#open=ttplayer&lang=zh QQ2006 https://winxp.si/#open=qq&lang=zh 其实早就做好了，但之前没合并，虽然还有细节在处理。但先这样吧。慢慢再优化，有什么问题。 其实蓝屏有时真的是系统错误自动抛出的，毕竟坑多。（虽然也有特意彩蛋） ★示例乐音计预在数小时内除移。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-715c4ef9c1e5aba4",
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "读懂中国，首先要读懂中国共产党。10月26日至29日党的二十届五中全会在北京召开，研究持之以恒推进全面从严治党若干重大问题。今日之中国是世界之中国，中国共产党将同一切进步力量一道推动构建人类命运共同体，共同开创人类更加美好的明天。",
         "badge": "热搜",
-        "signal": "7,617,466 热度"
+        "signal": "7,616,186 热度"
       },
       {
         "id": "cisa-kev-cve-2026-109618",
@@ -355,74 +355,74 @@
         "signal": "已遭利用 · 整改期限 2026-10-29"
       },
       {
-        "id": "ai-hugging-face-6394645bd5105adc",
+        "id": "ai-hugging-face-b6b30743068c2627",
         "category": "ai",
-        "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
-        "url": "https://huggingface.co/blog/anydecisionmodel",
+        "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+        "url": "https://huggingface.co/blog/mistral-large4",
         "source": "Hugging Face",
         "publishedAt": "2026-10-29T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50282838",
+        "id": "hn-50291054",
         "category": "dev",
-        "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
-        "url": "https://divagr.com/blog/qwenputer",
+        "title": "H.264 Is Magic (2016)",
+        "url": "https://sidbala.com/h-264-is-magic/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T00:25:45.000Z",
+        "publishedAt": "2026-10-29T15:53:03.000Z",
         "badge": "HN",
-        "signal": "601 分 · 122 评论"
+        "signal": "210 分 · 100 评论"
       },
       {
-        "id": "cn-item-8888ef9bc2710180",
+        "id": "cn-item-f68797fa788e8d0b",
         "category": "cn",
-        "title": "今年台风为什么这么多？厄尔尼诺是“头号推手”",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-29/10722799.shtml",
+        "title": "受权发布丨张升民同志简历",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-29/10722857.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T08:24:26.000Z",
-        "summary": "台风“蔷琵”刚给华东带来两天风雨，第31号台风“烟花”又在西北太平洋生成，截至29日上午5时仍是超强台风级别。",
+        "publishedAt": "2026-10-29T10:03:25.000Z",
+        "summary": "新华社北京10月29日电",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-7rv5-mrxv-xcr9",
+        "id": "github-advisory-ghsa-q7v9-x93c-xqv3",
         "category": "security",
-        "title": "Seroval: Deserialization invokes attacker-chosen callables: AsyncIteratorFactoryInstance calls source.on(listener) without type check",
-        "url": "https://github.com/advisories/GHSA-7rv5-mrxv-xcr9",
+        "title": "zip: Unbounded Symlink-Target Handling Can Abort Or Exhaust Memory During Extraction",
+        "url": "https://github.com/advisories/GHSA-q7v9-x93c-xqv3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T21:17:15.000Z",
-        "summary": "### Summary When `fromJSON` rebuilt an async iterator, it called `on()` on the iterator's source without checking that the source was a seroval stream. A crafted payload could pick another value as the source, such as a function returned b…",
-        "badge": "CVE-2026-116580",
-        "signal": "HIGH · CVSS 7.3"
+        "publishedAt": "2026-10-29T16:40:01.000Z",
+        "summary": "### Summary The symbolic-link branch of `ZipArchive::extract_internal()` allocates a buffer using an attacker-declared size before reading any entry data. A 112-byte archive terminates the extracting process with `SIGABRT` through this inf…",
+        "badge": "CVE-2026-115909",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-1e3ebf94e41ebe19",
+        "id": "ai-openai-a395c7da350b5086",
         "category": "ai",
-        "title": "Retell uses OpenAI models to help power 100M monthly calls",
-        "url": "https://openai.com/index/retell-ai",
+        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
         "source": "OpenAI",
-        "publishedAt": "2026-10-27T15:00:00.000Z",
-        "summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+        "publishedAt": "2026-10-28T13:15:00.000Z",
+        "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1252946",
+        "id": "v2ex-1252964",
         "category": "dev",
-        "title": "Codex 里面 6.1 Sol 今天变得回复特别快，降智了吗？",
-        "url": "https://www.v2ex.com/t/1252946",
+        "title": "gpt 网页版是否在 chrome 上有 bug？",
+        "url": "https://www.v2ex.com/t/1252964",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T10:41:43.000Z",
-        "summary": "感觉回答的也不是特别好",
+        "publishedAt": "2026-10-29T11:53:20.000Z",
+        "summary": "在 chrome 中使用 gpt 对话经常出现输出截断，或者根本不输出的情况。 当前相同设备和网络使用 claude 网页版和 gpt app 都正常。 更换 edge 情况似乎有缓解，但是对比 gpt app 还是有些输出异常卡住的情况。 想问这是什么原因导致的？",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "11 回复"
       },
       {
-        "id": "cn-it-a99b423974f2b19b",
+        "id": "cn-it-72effa814129771a",
         "category": "cn",
-        "title": "SpaceX 星舰完成上面级静态点火测试，准备进行第 15 次试飞",
-        "url": "https://www.ithome.com/1/019/775.htm",
+        "title": "NearLink E2.0：华为 Pura 90 Plus 手机上市即支持星闪音频功能",
+        "url": "https://www.ithome.com/1/019/795.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-29T13:50:21.000Z",
-        "summary": "IT之家 10 月 29 日消息，SpaceX 在筹备星舰第 15 次试飞的路上又完成了一项重要里程碑，这次试飞有望极具看点。 该公司于当地时间 10 月 26 日（周一）、27 日（周二）开展了星舰上面级的静态点火测试，被称为 Ship 42 的箭体固定在地面，点燃多台猛禽发动机。 SpaceX 在 10 月 28 日（周三）于 X 平台发布测试视频并写道：“Ship 42 静态点火全部完成。备战第 15 飞的星舰完成了全时长六台发动机的静态点火，还单独点燃了一台猛禽发动…",
+        "publishedAt": "2026-10-29T15:28:31.000Z",
+        "summary": "IT之家 10 月 29 日消息，在昨日的华为双十一焕新季全场景新品发布会上，华为 Pura 90 Plus 手机正式发布，首发搭载麒麟 9025 芯片，焕新优惠价 5199 元起。 IT之家从华为官方了解到，Pura 90 Plus 手机采用 NearLink E2.0 技术方案， 上市即支持星闪音频功能 。 根据华为官方描述，星闪音频物理层传输速率可达 16Mbps，带宽能力超传统技术，充足的通道容量能够承载 48kHz/24bit Hi-Fi 音频无损传输。目前支持星…",
         "badge": "IT之家"
       },
       {
@@ -447,55 +447,55 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50285452",
+        "id": "hn-50294506",
         "category": "dev",
-        "title": "Zero click, silent, remote Android DoS",
-        "url": "https://smsofdeath.com/",
+        "title": "Show HN: Auto Dismiss Mac OS \"Allow to find devices on local networks?\"",
+        "url": "https://github.com/johncassil/dontallow",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T07:08:50.000Z",
+        "publishedAt": "2026-10-29T19:27:44.000Z",
         "badge": "HN",
-        "signal": "209 分 · 117 评论"
+        "signal": "30 分 · 20 评论"
       },
       {
-        "id": "cn-baidu-8634ee511fe196bb",
+        "id": "cn-baidu-7a2d36695647f2b3",
         "category": "cn",
-        "title": "30万年轻人 排队求陌生人管住钱包",
-        "url": "https://www.baidu.com/s?wd=30%E4%B8%87%E5%B9%B4%E8%BD%BB%E4%BA%BA+%E6%8E%92%E9%98%9F%E6%B1%82%E9%99%8C%E7%94%9F%E4%BA%BA%E7%AE%A1%E4%BD%8F%E9%92%B1%E5%8C%85&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "一条牛仔裤20万 克罗心还能撑多久",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E6%9D%A1%E7%89%9B%E4%BB%94%E8%A3%A420%E4%B8%87+%E5%85%8B%E7%BD%97%E5%BF%83%E8%BF%98%E8%83%BD%E6%92%91%E5%A4%9A%E4%B9%85&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，一款名为“钱包请等等”的小程序走红，超30万年轻人排队让陌生人审批消费需求以克制冲动消费。起因是冲动购物易后悔，且熟人劝阻常带关系滤镜，陌生人能就事论事。",
+        "summary": "此前，克罗心靠明星穿搭出圈，一条牛仔裤标价20万元。因无统一品控标尺、专柜无身份证书且票据易褪色，高利润催生庞大仿造产业链，真假掺卖成二奢市场顽疾。从业者称，若不改善长期热度存疑。",
         "badge": "热搜",
-        "signal": "7,519,964 热度"
+        "signal": "7,521,695 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-114625",
+        "id": "github-advisory-ghsa-6j52-38f8-qhxr",
         "category": "security",
-        "title": "Arista VeloCloud Orchestrator：Arista VeloCloud Orchestrator SQL Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114625",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-23T00:00:00.000Z",
-        "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, …",
-        "badge": "CVE-2026-114625",
-        "signal": "已遭利用 · 整改期限 2026-10-26"
+        "title": "Shopify App: Token exchange shop context confusion may allow cross-shop authorization bypass in affected apps",
+        "url": "https://github.com/advisories/GHSA-6j52-38f8-qhxr",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-29T16:39:49.000Z",
+        "summary": "In token-exchange authenticated controllers, `shopify_app` exposes shop context through helpers such as `current_shopify_domain`. Prior to the fix, `current_shopify_domain` could resolve to the sanitized `shop` query parameter instead of t…",
+        "badge": "CVE-2026-63414",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-ec733f799e1aaee3",
+        "id": "ai-hugging-face-6394645bd5105adc",
         "category": "ai",
-        "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
-        "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+        "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+        "url": "https://huggingface.co/blog/anydecisionmodel",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-28T14:58:17.000Z",
+        "publishedAt": "2026-10-29T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252922",
+        "id": "v2ex-1252958",
         "category": "dev",
-        "title": "Codex 今天特别慢，比平时都慢很多",
-        "url": "https://www.v2ex.com/t/1252922",
+        "title": "Github Action 每日定时任务的小坑",
+        "url": "https://www.v2ex.com/t/1252958",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T09:19:47.000Z",
-        "summary": "没人感觉到吗？",
+        "publishedAt": "2026-10-29T11:30:19.000Z",
+        "summary": "我把其中一个项目的 Github Action 每日任务设定成每天 03:17 UTC+0 执行更新数据和自动部署 name: Update data and deploy on: schedule: - cron: '17 3 * * *' 但发现每天都没有按计划执行，都要推迟 6 个多小时启动定时任务，而且有每天再往后顺延 20 分钟以上执行的趋势。 AI 研究了一番，发现这是个共性问题，应该是在薅 Github Action 服务器羊毛的人比较多，计划任务多所带来的延…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -512,7 +512,7 @@
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 49273,
+        "stars": 49740,
         "starsToday": 1926
       },
       {
@@ -522,7 +522,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 308050,
+        "stars": 308382,
         "starsToday": 1037
       },
       {
@@ -532,7 +532,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "language": "Rust",
-        "stars": 94485,
+        "stars": 95062,
         "starsToday": 2881
       },
       {
@@ -542,7 +542,7 @@
         "url": "https://github.com/JetBrains/thinkrail",
         "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "language": "TypeScript",
-        "stars": 5735,
+        "stars": 5919,
         "starsToday": 1116
       },
       {
@@ -552,7 +552,7 @@
         "url": "https://github.com/milind-soni/OpenMausBot",
         "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "language": "TypeScript",
-        "stars": 7130,
+        "stars": 7354,
         "starsToday": 1190
       },
       {
@@ -562,7 +562,7 @@
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 3641,
+        "stars": 3795,
         "starsToday": 705
       },
       {
@@ -570,7 +570,7 @@
         "rank": 7,
         "name": "elayadesign/ai-design-skills",
         "url": "https://github.com/elayadesign/ai-design-skills",
-        "stars": 11798,
+        "stars": 12011,
         "starsToday": 1178
       },
       {
@@ -580,8 +580,8 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 104309,
-        "starsToday": 324
+        "stars": 104604,
+        "starsToday": 459
       },
       {
         "id": "github-f3775fe6eb8efc94",
@@ -590,7 +590,7 @@
         "url": "https://github.com/CopilotKit/OpenBot",
         "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
         "language": "TypeScript",
-        "stars": 7835,
+        "stars": 8023,
         "starsToday": 240
       },
       {
@@ -599,10 +599,10 @@
         "name": "togg53192-cmd/jailbreaks",
         "url": "https://github.com/togg53192-cmd/jailbreaks",
         "description": "LIST OF ALL MY JAILBREAKS",
-        "stars": 8156,
+        "stars": 8711,
         "starsToday": 1610
       }
     ],
-    "updatedAt": "2026-10-29T14:21:30.861Z"
+    "updatedAt": "2026-10-29T20:18:50.320Z"
   }
 }
