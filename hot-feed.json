@@ -1,18 +1,181 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-28T21:06:48.092Z",
+  "generatedAt": "2026-10-29T00:58:07.483Z",
   "intelligence": {
-    "updatedAt": "2026-10-28T21:06:48.092Z",
+    "updatedAt": "2026-10-29T00:58:07.483Z",
     "items": [
       {
-        "id": "cn-item-750dd261375435ac",
+        "id": "cn-item-88f2f837f7e1482d",
         "category": "cn",
-        "title": "中新网评：皇马道歉完还须补课",
-        "url": "https://www.chinanews.com.cn/ty/2026/10-28/10722420.shtml",
+        "title": "A股公司三季报展现经济成色 科技创新动能加速释放",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-29/10722515.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-28T13:14:51.000Z",
-        "summary": "中新网北京10月28日电 近日，效力于西甲皇家马德里俱乐部的法国球员姆巴佩发表涉华不当言论。事件持续发酵后，不少网友自发抵制，多个品牌官宣终止与其合作，相关平台也暂停了西甲赛事转播。",
+        "publishedAt": "2026-10-28T23:47:20.000Z",
+        "summary": "本报记者 毛艺融",
         "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-41709",
+        "category": "security",
+        "title": "Broadcom VMware ESX：Broadcom VMWare ESX Insufficient Logging Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-41709",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-28T00:00:00.000Z",
+        "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+        "badge": "CVE-2026-41709",
+        "signal": "已遭利用 · 整改期限 2026-11-11"
+      },
+      {
+        "id": "ai-openai-a395c7da350b5086",
+        "category": "ai",
+        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-28T13:15:00.000Z",
+        "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50282544",
+        "category": "dev",
+        "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
+        "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-28T23:45:46.000Z",
+        "badge": "HN",
+        "signal": "56 分 · 5 评论"
+      },
+      {
+        "id": "cn-it-b29ea5bd95f1aaba",
+        "category": "cn",
+        "title": "盛美上海：首台量产型 310×310mm 面板级水平电镀设备出机至中国大陆以外的亚洲市场",
+        "url": "https://www.ithome.com/1/019/295.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-29T00:56:42.000Z",
+        "summary": "IT之家 10 月 29 日消息，盛美半导体设备（上海）股份有限公司（以下简称“盛美上海”）今日宣布，盛美上海首台量产型 310mm×310mm 面板级水平电镀设备 UltraECP ap-p 顺利出机至 中国大陆以外的亚洲市场 。 据介绍，随着先进封装技术持续发展，面板级工艺因其适用于大尺寸基板加工而受到产业关注。 电镀是相关制造流程中的最重要的环节之一 ，设备的稳定性、电镀金属膜厚的均匀性与稳定性，关系到工艺导入的产品良率和生产效率。 ▲ Ultra ECP ap-p …",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-3f7j-7jwc-fxfj",
+        "category": "security",
+        "title": "systeminformation vulnerable to Windows command injection in services() through Unicode quotation marks",
+        "url": "https://github.com/advisories/GHSA-3f7j-7jwc-fxfj",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-28T22:42:49.000Z",
+        "summary": "### Summary On Windows, `systeminformation@5.33.15` builds a PowerShell command using the value passed to `services()`. The default sanitizer removes ASCII quotes but keeps Unicode curly quotes, spaces, and parentheses. A crafted service n…",
+        "badge": "CVE-2026-116576",
+        "signal": "HIGH · CVSS 7.8"
+      },
+      {
+        "id": "ai-google-deepmind-e8e0cb1d0e685ced",
+        "category": "ai",
+        "title": "Gemini 4 Carbon: Our next frontier model",
+        "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-28T17:00:58.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1252714",
+        "category": "dev",
+        "title": "ChatGPT 订阅也能领 API 额度了：最高每月 500 美元，手把手教你领取",
+        "url": "https://www.v2ex.com/t/1252714",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-29T00:05:21.000Z",
+        "summary": "官网帮助页： https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions 额度 Pro100 = $100 Pro200 = $200 Pro500 = $500 Business Standard = 每个付费席位每月 20 美元 Business Premium = 每个付费席位每月 100 美元 领取条件 你有有效的 ChatGP…",
+        "badge": "程序员",
+        "signal": "0 回复"
+      },
+      {
+        "id": "cn-baidu-dde14a818066255e",
+        "category": "cn",
+        "title": "刘延东逝世",
+        "url": "https://www.baidu.com/s?wd=%E5%88%98%E5%BB%B6%E4%B8%9C%E9%80%9D%E4%B8%96&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "badge": "热搜",
+        "signal": "7,809,715 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-46300",
+        "category": "security",
+        "title": "Linux Kernel：Linux Kernel Missing Initialization of a Variable Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-46300",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-28T00:00:00.000Z",
+        "summary": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing E…",
+        "badge": "CVE-2026-46300",
+        "signal": "已遭利用 · 整改期限 2026-10-31"
+      },
+      {
+        "id": "ai-hugging-face-ec733f799e1aaee3",
+        "category": "ai",
+        "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-28T14:58:17.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50276998",
+        "category": "dev",
+        "title": "Why is this fingerprinting script creating bioweapons?",
+        "url": "https://nullpt.rs/fingerprinting-bioweapons",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-28T17:13:29.000Z",
+        "badge": "HN",
+        "signal": "809 分 · 177 评论"
+      },
+      {
+        "id": "cn-item-8217a4e973be917f",
+        "category": "cn",
+        "title": "进一步深化国资国企改革 国有经济布局优化“加速跑”",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-29/10722512.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-28T23:45:20.000Z",
+        "summary": "本报记者 杜雨萌",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-6jp4-8v48-cc5v",
+        "category": "security",
+        "title": "Electrum: Malicious server can replace a just-broadcast tx and try to trick user into RBF-ing it",
+        "url": "https://github.com/advisories/GHSA-6jp4-8v48-cc5v",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-28T21:23:44.000Z",
+        "summary": "### Summary The main Electrum server the client connects to is trusted with mempool (\"unconfirmed\") transactions. This is documented design. [0] However now someone figured out a way to practically exploit it: - when the client broadcasts …",
+        "badge": "CVE-2026-117601",
+        "signal": "CRITICAL · CVSS 7.5"
+      },
+      {
+        "id": "ai-openai-e2ed7680c50ae3f0",
+        "category": "ai",
+        "title": "The future of the firm",
+        "url": "https://openai.com/index/the-future-of-the-firm",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-28T10:00:00.000Z",
+        "summary": "How AI might enter the org chart—beneath, beside, and between us.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1252691",
+        "category": "dev",
+        "title": "开源一个 Claude 桌面端，防止被 Claude 封号",
+        "url": "https://www.v2ex.com/t/1252691",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-28T17:08:27.000Z",
+        "summary": "由于自己已经连续使用 Claude 一个月了，主要是怕 Claude 桌面端有钓鱼行为，因此，一直也是使用 Claude 终端。 但是，由于不太喜欢黑乎乎的终端，就自己 vibe 了一个 Claude 桌面端，本质上就是开发一个客户端，里面其实就是直接运行 Claude 的终端，因此，安全性与 Claude 终端一致。 https://github.com/elioinvest/Crew 目前支持的特性： 1 、支持 Claude 以及 ChatGPT ，同时，可以自由切换…",
+        "badge": "程序员",
+        "signal": "5 回复"
+      },
+      {
+        "id": "cn-it-5ecf6d8f3512f94a",
+        "category": "cn",
+        "title": "三星电子 2026 财年第三财季业绩爆发：归母净利润 75.21 万亿韩元同比增长 526.39%",
+        "url": "https://www.ithome.com/1/019/294.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-29T00:52:25.000Z",
+        "summary": "IT之家 10 月 29 日消息，三星电子今日发布 2026 财年（2026 年 1 月～2026 年 12 月）前三季度（2026 年 1 月～2026 年 9 月）业绩快报及第三财季（2026 年 7 月～2026 年 9 月）业绩快报报告： 2026 财年前三季度 营业总收入 ：500.63 万亿韩元 （IT之家注：现汇率约合 2.52 万亿元人民币） ，同比增长 108.8% 归母净利润 ：193.58 万亿韩元 （现汇率约合 9735.08 亿元人民币） ，同比增…",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2026-48356",
@@ -26,74 +189,75 @@
         "signal": "已遭利用 · 整改期限 2026-11-10"
       },
       {
-        "id": "ai-openai-a395c7da350b5086",
+        "id": "ai-google-deepmind-393575ee7d83ff0a",
         "category": "ai",
-        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
-        "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-28T13:15:00.000Z",
-        "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-50276998",
-        "category": "dev",
-        "title": "Why Is This Fingerprinting Script Creating Bioweapons?",
-        "url": "https://nullpt.rs/fingerprinting-bioweapons",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-28T17:13:29.000Z",
-        "badge": "HN",
-        "signal": "387 分 · 86 评论"
-      },
-      {
-        "id": "cn-it-9ad466090752de9d",
-        "category": "cn",
-        "title": "打破乔布斯时代的硬件禁忌：特努斯谈苹果首款触控 MacBook Pro，键盘 / 触控板仍是核心",
-        "url": "https://www.ithome.com/1/019/262.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-28T21:04:22.000Z",
-        "summary": "IT之家 10 月 29 日消息，《连线》（Wired）昨日（10 月 28 日）发布博文，报道称针对苹果打破“Mac 不做触屏”立场，现任首席执行官约翰 · 特努斯（John Ternus）表示， 键盘和触控板仍是 Mac 的核心交互方式，触控只是“在合适场景下更舒适、更方便”的补充。 图源：苹果 IT之家注： “Mac 永远不该做触屏”曾是史蒂夫 · 乔布斯（Steve Jobs）最坚决的标志性原则之一。 乔布斯早在 2010 年就曾公开明确抨击触屏笔记本， 称其在人体…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-c8p4-j97h-3vg8",
-        "category": "security",
-        "title": "Happy DOM: SSRF via iframe and link stylesheet when parsing untrusted HTML",
-        "url": "https://github.com/advisories/GHSA-c8p4-j97h-3vg8",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T21:06:42.000Z",
-        "summary": "## Summary happy-dom v20.8.9 makes real server-side HTTP requests to arbitrary URLs when parsing HTML containing ` ` or ` ` elements. This behavior is enabled by default (`disableIframePageLoading: false`, `disableCSSFileLoading: false`). …",
-        "badge": "CVE-2026-118660",
-        "signal": "HIGH · CVSS 8.6"
-      },
-      {
-        "id": "ai-google-deepmind-e8e0cb1d0e685ced",
-        "category": "ai",
-        "title": "Gemini 4 Carbon: Our next frontier model",
-        "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+        "title": "Genie 4: A new generation of world simulation",
+        "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-28T17:00:58.000Z",
+        "publishedAt": "2026-10-27T16:01:38.000Z",
+        "summary": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252691",
+        "id": "hn-50282650",
         "category": "dev",
-        "title": "开源一个 Claude 桌面端，防止被 Claude 封号",
-        "url": "https://www.v2ex.com/t/1252691",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T17:08:27.000Z",
-        "summary": "由于自己已经连续使用 Claude 一个月了，主要是怕 Claude 桌面端有钓鱼行为，因此，一直也是使用 Claude 终端。 但是，由于不太喜欢黑乎乎的终端，就自己 vibe 了一个 Claude 桌面端，本质上就是开发一个客户端，里面其实就是直接运行 Claude 的终端，因此，安全性与 Claude 终端一致。 https://github.com/elioinvest/Crew 目前支持的特性： 1 、支持 Claude 以及 ChatGPT ，同时，可以自由切换…",
-        "badge": "程序员",
-        "signal": "3 回复"
+        "title": "Get Ready for Touch on Mac",
+        "url": "https://developer.apple.com/touch-on-mac/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-28T23:58:20.000Z",
+        "badge": "HN",
+        "signal": "18 分 · 26 评论"
       },
       {
-        "id": "cn-baidu-dde14a818066255e",
+        "id": "cn-baidu-b0d3a583d888f125",
         "category": "cn",
-        "title": "刘延东逝世",
-        "url": "https://www.baidu.com/s?wd=%E5%88%98%E5%BB%B6%E4%B8%9C%E9%80%9D%E4%B8%96&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "特大暴雪暴雨！新一轮冷空气将来袭",
+        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E5%A4%A7%E6%9A%B4%E9%9B%AA%E6%9A%B4%E9%9B%A8%EF%BC%81%E6%96%B0%E4%B8%80%E8%BD%AE%E5%86%B7%E7%A9%BA%E6%B0%94%E5%B0%86%E6%9D%A5%E8%A2%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "10月底新一轮冷空气来袭，10月31日至11月2日中东部大部降温4℃至8℃，南方局地超10℃。受孟加拉湾风暴影响，西藏南部将出现强降雪，局地特大暴雪，易引发次生灾害。",
         "badge": "热搜",
-        "signal": "7,808,796 热度"
+        "signal": "7,711,927 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-97r2-qh9m-474h",
+        "category": "security",
+        "title": "Seroval: fromJSON deserializer trusts node-supplied array length and sequence doneAt (unauthenticated event-loop DoS)",
+        "url": "https://github.com/advisories/GHSA-97r2-qh9m-474h",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-10-28T21:17:27.000Z",
+        "summary": "### Summary `fromJSON` and `fromCrossJSON` used two node fields without checking them. - An array node's element list was not checked to be an array. A small payload could set the length the decoder looped over. This part is also tracked i…",
+        "badge": "CVE-2026-116581",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
+        "id": "ai-hugging-face-1c5b51464767c2ad",
+        "category": "ai",
+        "title": "Build specialized multimodal models with LFM3",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-27T17:16:52.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1252688",
+        "category": "dev",
+        "title": "全程家宽+软路由+全局，还是被 Claude 发现来自大陆",
+        "url": "https://www.v2ex.com/t/1252688",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-10-28T16:30:34.000Z",
+        "summary": "23 年 11 月注册了第一个号，但是当时 Claude 没 GPT 好用，所以一直轻度使用 直到出了 Claude Design 和 opus5.5 之后开始高强度使用 opus5.5 出的第二天开始上了 20×，不过由于我自己粗心大意，直连了一次，跳了 region unavailable ，第二天就被封了，享年 2 周岁 上上个月新号（不是新注册，只是开始用，一年前注册的），先养了半个月 Pro ，再上的 5×，全程软路由+家庭 ip+全局规则，在 ROG 上用到今天…",
+        "badge": "程序员",
+        "signal": "18 回复"
+      },
+      {
+        "id": "cn-item-1edfed544fc38e79",
+        "category": "cn",
+        "title": "超八成受访者今年想去红色纪念地 未成年人家长有此意愿的比例更高",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-29/10722513.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-28T23:43:24.000Z",
+        "summary": "超八成受访者今年想去红色纪念地，其中62.6%已成行",
+        "badge": "中新网要闻"
       },
       {
         "id": "cisa-kev-cve-2026-111497",
@@ -107,96 +271,14 @@
         "signal": "已遭利用 · 整改期限 2026-11-10"
       },
       {
-        "id": "ai-hugging-face-ec733f799e1aaee3",
+        "id": "ai-openai-709cc8e2bd467b79",
         "category": "ai",
-        "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
-        "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-28T14:58:17.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50276792",
-        "category": "dev",
-        "title": "Gemini 4 Carbon",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-28T17:01:23.000Z",
-        "badge": "HN",
-        "signal": "611 分 · 508 评论"
-      },
-      {
-        "id": "cn-item-85f55196ca725c57",
-        "category": "cn",
-        "title": "中国造船业保持快速发展势头 订单排至未来四年",
-        "url": "https://www.chinanews.com.cn/cj/2026/10-28/10722324.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-28T10:17:30.000Z",
-        "summary": "中新社大连10月28日电 (记者 杨毅)中国船舶工业行业协会副会长李彦庆28日在辽宁大连表示，中国船舶工业继续保持快速发展的势头。目前，中国船厂手持订单达到3.99亿DWT(载重吨)，手握未来四年多工作量，为船海产业可持续发展打下了坚实基础。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-83rm-6c8r-g728",
-        "category": "security",
-        "title": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
-        "url": "https://github.com/advisories/GHSA-83rm-6c8r-g728",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T21:06:24.000Z",
-        "summary": "### Summary When `escapeParameter` is enabled (`escapeParameterHtml` in the Legacy API), Vue I18n passes the translated string through `sanitizeTranslatedHtml()`. The sanitizer escapes ` ` in attribute values and neutralizes event handler …",
-        "badge": "CVE-2026-118257",
-        "signal": "HIGH · CVSS 7.2"
-      },
-      {
-        "id": "ai-openai-e2ed7680c50ae3f0",
-        "category": "ai",
-        "title": "The future of the firm",
-        "url": "https://openai.com/index/the-future-of-the-firm",
+        "title": "Legora is building the agentic operating system for legal work",
+        "url": "https://openai.com/index/legora",
         "source": "OpenAI",
-        "publishedAt": "2026-10-28T10:00:00.000Z",
-        "summary": "How AI might enter the org chart—beneath, beside, and between us.",
+        "publishedAt": "2026-10-28T09:30:00.000Z",
+        "summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
         "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1252688",
-        "category": "dev",
-        "title": "全程家宽+软路由+全局，还是被 Claude 发现来自大陆",
-        "url": "https://www.v2ex.com/t/1252688",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T16:30:34.000Z",
-        "summary": "23 年 11 月注册了第一个号，但是当时 Claude 没 GPT 好用，所以一直轻度使用 直到出了 Claude Design 和 opus5.5 之后开始高强度使用 opus5.5 出的第二天开始上了 20×，不过由于我自己粗心大意，直连了一次，跳了 region unavailable ，第二天就被封了，享年 2 周岁 上上个月新号（不是新注册，只是开始用，一年前注册的），先养了半个月 Pro ，再上的 5×，全程软路由+家庭 ip+全局规则，在 ROG 上用到今天…",
-        "badge": "程序员",
-        "signal": "5 回复"
-      },
-      {
-        "id": "cn-it-2eac6cd2deca6e56",
-        "category": "cn",
-        "title": "谷歌最强 AI 模型：Gemini 4 Carbon 登顶全球智能指数榜首，“专职”做网络安全",
-        "url": "https://www.ithome.com/1/019/240.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-28T20:51:40.000Z",
-        "summary": "IT之家 10 月 29 日消息，谷歌正式发布新一代前沿大模型 Gemini 4 Carbon ，主打业界顶尖的网络安全能力与长程任务处理能力。 谷歌称其为目前最强的模型，重点强化了网络安全能力和处理复杂、长周期任务的能力。 该模型在最新版 Artificial Analysis Intelligence Index v5.0 中排名第一，综合得分 59。 Gemini 4 Carbon 首发入门定价与两周前发布的 Gemini 4 Argon 保持一致，缓存输入 Toke…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-109618",
-        "category": "security",
-        "title": "PHP Group PHP：PHP Memory Corruption Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109618",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-26T00:00:00.000Z",
-        "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
-        "badge": "CVE-2026-109618",
-        "signal": "已遭利用 · 整改期限 2026-10-29"
-      },
-      {
-        "id": "ai-google-deepmind-393575ee7d83ff0a",
-        "category": "ai",
-        "title": "Genie 4: A new generation of world simulation",
-        "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-27T16:01:38.000Z",
-        "summary": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
-        "badge": "Google DeepMind"
       },
       {
         "id": "hn-50274409",
@@ -206,37 +288,38 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-28T14:38:22.000Z",
         "badge": "HN",
-        "signal": "331 分 · 105 评论"
+        "signal": "398 分 · 116 评论"
       },
       {
-        "id": "cn-baidu-1ddb1505b7941163",
+        "id": "cn-it-5e7bd29d90e95e32",
         "category": "cn",
-        "title": "微信新功能来了：只用动嘴",
-        "url": "https://www.baidu.com/s?wd=%E5%BE%AE%E4%BF%A1%E6%96%B0%E5%8A%9F%E8%83%BD%E6%9D%A5%E4%BA%86%EF%BC%9A%E5%8F%AA%E7%94%A8%E5%8A%A8%E5%98%B4&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "10月27日，微信派发文称，又有新功能上线了。文章题为《一个只用动嘴的新能力》，实则为微信输入法的“AI录音笔”功能。",
-        "badge": "热搜",
-        "signal": "7,712,011 热度"
+        "title": "消息称华为阔直板手机 Pura X View 上市 50 天出货量超 100 万台",
+        "url": "https://www.ithome.com/1/019/293.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-29T00:48:36.000Z",
+        "summary": "IT之家 10 月 29 日消息，据长期关注国内手机市场份额的数码博主 @RD观测 爆料，华为全新阔直板 Pura X View 销量表现惊艳，截至目前， 华为 Pura X View 上市 50 天 Sell in （出货量） 已破 100 万台 。 此外，根据腾讯手机市场洞察数据，华为 Pura X View 在过去三周（10.5-10.24）周增 SO（Sell out、销量）最高近 10 万， 拿下单型号国产旗舰手机销量 TOP1 （5K+）。 IT之家注意到，这款…",
+        "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-434m-5hcj-pxf3",
+        "id": "github-advisory-ghsa-wp97-x4hv-qvhp",
         "category": "security",
-        "title": "GraphQL Tools: Per-request connection parameters persist into later users' WebSocket authentications",
-        "url": "https://github.com/advisories/GHSA-434m-5hcj-pxf3",
+        "title": "Seroval `fromJSON`/`fromCrossJSON` denial of service via unvalidated array node length",
+        "url": "https://github.com/advisories/GHSA-wp97-x4hv-qvhp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T21:05:17.000Z",
-        "summary": "# Stale authentication state in `@graphql-tools/executor-legacy-ws`: per-request `extensions.connectionParams` persist in executor closure state and are replayed in a later caller's `connection_init` ## Report metadata | Field | Value | | …",
-        "badge": "CVE-2026-118665",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-28T21:17:20.000Z",
+        "summary": "### Summary `fromJSON` and `fromCrossJSON` did not check that an array node's element list is an array. A small crafted payload could set the length the decoder used. That length controlled how much memory was allocated and how many times …",
+        "badge": "CVE-2026-116584",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-1c5b51464767c2ad",
+        "id": "ai-google-deepmind-301925b8adfcebab",
         "category": "ai",
-        "title": "Build specialized multimodal models with LFM3",
-        "url": "https://huggingface.co/blog/LiquidAI/lfm3",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-27T17:16:52.000Z",
-        "badge": "Hugging Face"
+        "title": "Beyond tree cover: mapping the world’s forest types",
+        "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-22T14:30:24.000Z",
+        "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
+        "badge": "Google DeepMind"
       },
       {
         "id": "v2ex-1252657",
@@ -250,76 +333,75 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-item-4c1ede077f35223e",
+        "id": "cn-baidu-34232b09d6389bcf",
         "category": "cn",
-        "title": "刘延东同志逝世",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-28/10722312.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-28T10:03:45.000Z",
-        "summary": "刘延东同志遗像 新华社发 新华社北京10月28日电 中国共产党的优秀党员，久经考验的忠诚的共产主义战士，我党统一战线工作和我国教育科技、医疗卫生、妇女儿童工作的杰出领导人，中国共产党第十七届、十八届中央政治局委员，中国人民政治协商会议第十届全国委员会副主席，原国务委员，国务院原副总理刘延东同志，因病于2026年10月28日14时53分在北京逝世，享年81岁。",
-        "badge": "中新网要闻"
+        "title": "全面从严治党为世界提供重要借鉴",
+        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E9%9D%A2%E4%BB%8E%E4%B8%A5%E6%B2%BB%E5%85%9A%E4%B8%BA%E4%B8%96%E7%95%8C%E6%8F%90%E4%BE%9B%E9%87%8D%E8%A6%81%E5%80%9F%E9%89%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "国际人士持续关注中国共产党二十届五中全会，认为持之以恒推进全面从严治党，展现了中国共产党强大的组织力、执行力和生命力，不仅是中国取得巨大发展成就的关键保障，也为世界政党治理提供了重要借鉴。",
+        "badge": "热搜",
+        "signal": "7,618,007 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-109619",
+        "id": "cisa-kev-cve-2026-109618",
         "category": "security",
-        "title": "PHP Group PHP：PHP Stale Internal Request-State Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109619",
+        "title": "PHP Group PHP：PHP Memory Corruption Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109618",
         "source": "CISA KEV",
         "publishedAt": "2026-10-26T00:00:00.000Z",
-        "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
-        "badge": "CVE-2026-109619",
+        "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
+        "badge": "CVE-2026-109618",
         "signal": "已遭利用 · 整改期限 2026-10-29"
       },
       {
-        "id": "ai-openai-709cc8e2bd467b79",
+        "id": "ai-hugging-face-1d6c5c59e46e52b9",
         "category": "ai",
-        "title": "Legora is building the agentic operating system for legal work",
-        "url": "https://openai.com/index/legora",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-28T09:30:00.000Z",
-        "summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
-        "badge": "OpenAI"
+        "title": "Can we trust LLMs to judge whether a research idea is novel?",
+        "url": "https://huggingface.co/blog/allenai/novelty-bench",
+        "source": "Hugging Face",
+        "publishedAt": "2026-10-27T16:12:42.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-50275626",
+        "id": "hn-50280974",
         "category": "dev",
-        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-        "url": "https://surgehq.ai/blog/dayjob-tax",
+        "title": "A Health Update",
+        "url": "https://furbo.org/2026/10/28/a-health-update/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-28T15:46:30.000Z",
+        "publishedAt": "2026-10-28T21:13:21.000Z",
         "badge": "HN",
-        "signal": "148 分 · 79 评论"
+        "signal": "76 分 · 6 评论"
       },
       {
-        "id": "cn-it-c4154e2028d873d8",
+        "id": "cn-item-0633d194dab69292",
         "category": "cn",
-        "title": "谷歌 2026Q3 财报暴露 AI 变现焦虑，股价盘后暴跌逾 7%",
-        "url": "https://www.ithome.com/1/019/261.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-28T20:38:55.000Z",
-        "summary": "IT之家 10 月 29 日消息，谷歌母公司 Alphabet 今日发布 2026 财年（2026 年 1 月～2026 年 12 月）前三季度报（2026 年 1 月～2026 年 9 月）及第三财季（2026 年 7 月～2026 年 9 月）报告后， 股价盘后大跌逾 7%。 尽管第三财季营收达到 1,276 亿美元 （IT之家注：现汇率约合 8,525.01 亿元人民币） ，同比增长 25%，且 Google Cloud 收入翻倍，但每股收益 2.12 美元 （现汇率…",
-        "badge": "IT之家"
+        "title": "今年“双十一”，AI成了年轻人的购物“搭子”？",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-29/10722511.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-10-28T23:41:32.000Z",
+        "summary": "算满减、挑商品、组合优惠券……今年“双十一”，不少年轻人开始用AI充当购物助手，搞定导购、比价、凑单。日前，中国青年报社社会调查中心联合问卷网(wenjuan.com)发布的一项1000名受访者参与的调查显示，今年“双十一”，66.7%的受访者会用AI辅助购物，比价、算满减、凑单、找最优用券组合是受访者用AI最常做的事，85.7%的受访者认为AI会让购物更省力、省钱、省心。",
+        "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-6hgp-fmhr-mrg4",
+        "id": "github-advisory-ghsa-7rv5-mrxv-xcr9",
         "category": "security",
-        "title": "Highcharts Grid: `javascript:` URL in credits.href runs script on click",
-        "url": "https://github.com/advisories/GHSA-6hgp-fmhr-mrg4",
+        "title": "Seroval: Deserialization invokes attacker-chosen callables: AsyncIteratorFactoryInstance calls source.on(listener) without type check",
+        "url": "https://github.com/advisories/GHSA-7rv5-mrxv-xcr9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T19:57:48.000Z",
-        "summary": "### Impact An attacker who controls the Grid configuration can set `credits.href` to a `javascript:` URL. The value is not validated against an allowed-scheme list before it is applied to the credits link, so activating that link runs atta…",
-        "badge": "CVE-2026-118255",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-10-28T21:17:15.000Z",
+        "summary": "### Summary When `fromJSON` rebuilt an async iterator, it called `on()` on the iterator's source without checking that the source was a seroval stream. A crafted payload could pick another value as the source, such as a function returned b…",
+        "badge": "CVE-2026-116580",
+        "signal": "HIGH · CVSS 7.3"
       },
       {
-        "id": "ai-google-deepmind-301925b8adfcebab",
+        "id": "ai-openai-1e3ebf94e41ebe19",
         "category": "ai",
-        "title": "Beyond tree cover: mapping the world’s forest types",
-        "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-22T14:30:24.000Z",
-        "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
-        "badge": "Google DeepMind"
+        "title": "Retell uses OpenAI models to help power 100M monthly calls",
+        "url": "https://openai.com/index/retell-ai",
+        "source": "OpenAI",
+        "publishedAt": "2026-10-27T15:00:00.000Z",
+        "summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1252639",
@@ -333,14 +415,55 @@
         "signal": "10 回复"
       },
       {
-        "id": "cn-baidu-34232b09d6389bcf",
+        "id": "cn-it-cb72ea08f26874ee",
         "category": "cn",
-        "title": "全面从严治党为世界提供重要借鉴",
-        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E9%9D%A2%E4%BB%8E%E4%B8%A5%E6%B2%BB%E5%85%9A%E4%B8%BA%E4%B8%96%E7%95%8C%E6%8F%90%E4%BE%9B%E9%87%8D%E8%A6%81%E5%80%9F%E9%89%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "奇瑞：预计到年底出口汽车海外生产比例超 50%，到 2030 年达 70%",
+        "url": "https://www.ithome.com/1/019/291.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-10-29T00:37:24.000Z",
+        "summary": "IT之家 10 月 29 日消息，据路透社报道，奇瑞汽车常务副总裁张贵兵上周透露，预计到今年年底，奇瑞出口汽车中 海外生产的比例将超过 50% ，2027 年提高至 60%，到 2030 年进一步达到 70%。 据IT之家了解，今年，奇瑞出口汽车的海外生产比例约为 48%。 奇瑞推动生产本地化，不只是为了在海外卖车，还希望创造当地就业岗位，并开展技术合作。张贵兵表示，公司逐步推进生产本地化，努力“以当地制造为主”。 奇瑞旗下拥有欧萌达、杰酷等面向海外的品牌。报道提到，凭借“…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2026-109619",
+        "category": "security",
+        "title": "PHP Group PHP：PHP Stale Internal Request-State Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109619",
+        "source": "CISA KEV",
+        "publishedAt": "2026-10-26T00:00:00.000Z",
+        "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
+        "badge": "CVE-2026-109619",
+        "signal": "已遭利用 · 整改期限 2026-10-29"
+      },
+      {
+        "id": "ai-google-deepmind-ad09b0946a60b7ff",
+        "category": "ai",
+        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-10-15T16:08:03.000Z",
+        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-50276792",
+        "category": "dev",
+        "title": "Gemini 4 Carbon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "source": "Hacker News",
+        "publishedAt": "2026-10-28T17:01:23.000Z",
+        "badge": "HN",
+        "signal": "791 分 · 651 评论"
+      },
+      {
+        "id": "cn-baidu-cf101ab07342de62",
+        "category": "cn",
+        "title": "西媒就姆巴佩闯下大祸算了笔账",
+        "url": "https://www.baidu.com/s?wd=%E8%A5%BF%E5%AA%92%E5%B0%B1%E5%A7%86%E5%B7%B4%E4%BD%A9%E9%97%AF%E4%B8%8B%E5%A4%A7%E7%A5%B8%E7%AE%97%E4%BA%86%E7%AC%94%E8%B4%A6&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "国际人士持续关注中国共产党二十届五中全会，认为持之以恒推进全面从严治党，展现了中国共产党强大的组织力、执行力和生命力，不仅是中国取得巨大发展成就的关键保障，也为世界政党治理提供了重要借鉴。",
+        "summary": "近日，西班牙《世界报》就姆巴佩涉华错误言论算了笔账，称其动摇了西甲根基。西甲急忙致歉，因中国是其重要海外市场，本赛季刚签下4季1520场转播协议。皇马持姆巴佩20%肖像权，其国际商品收入15%来自中国，权益亦受损。",
         "badge": "热搜",
-        "signal": "7,618,190 热度"
+        "signal": "7,523,258 热度"
       },
       {
         "id": "cisa-kev-cve-2026-114625",
@@ -354,54 +477,13 @@
         "signal": "已遭利用 · 整改期限 2026-10-26"
       },
       {
-        "id": "ai-hugging-face-1d6c5c59e46e52b9",
+        "id": "ai-hugging-face-2b3f616d26d343fe",
         "category": "ai",
-        "title": "Can we trust LLMs to judge whether a research idea is novel?",
-        "url": "https://huggingface.co/blog/allenai/novelty-bench",
+        "title": "Does Your Model Run on AWS Trainium? Look It Up",
+        "url": "https://huggingface.co/blog/torch-neuronx-model-support",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-27T16:12:42.000Z",
+        "publishedAt": "2026-10-23T00:00:00.000Z",
         "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50276940",
-        "category": "dev",
-        "title": "MacBook Pro with PROLED XDR Display and Touch",
-        "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-28T17:10:37.000Z",
-        "badge": "HN",
-        "signal": "399 分 · 682 评论"
-      },
-      {
-        "id": "cn-item-0adba173e6bbae4a",
-        "category": "cn",
-        "title": "两部门部署西藏强降雪天气防范应对工作",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-28/10722278.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-10-28T09:01:07.000Z",
-        "summary": "中新网10月28日电 据应急管理部官方微博消息，10月28日上午，国家防灾减灾救灾委员会办公室、应急管理部组织自然资源部、中国气象局及西藏自治区联合会商，研判29日至31日西藏强降雪过程发展趋势，部署防范应对工作。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-r5wg-q8fc-p6w2",
-        "category": "security",
-        "title": "Highcharts Grid parses pagination language options as HTML",
-        "url": "https://github.com/advisories/GHSA-r5wg-q8fc-p6w2",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T19:57:34.000Z",
-        "summary": "### Impact The pagination language strings are written into the DOM as markup rather than as text. An attacker who controls those language options can supply elements carrying event handlers, and those handlers execute in the origin of the…",
-        "badge": "CVE-2026-118254",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-openai-1e3ebf94e41ebe19",
-        "category": "ai",
-        "title": "Retell uses OpenAI models to help power 100M monthly calls",
-        "url": "https://openai.com/index/retell-ai",
-        "source": "OpenAI",
-        "publishedAt": "2026-10-27T15:00:00.000Z",
-        "summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
-        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1252622",
@@ -413,88 +495,6 @@
         "summary": "上周让 AI 复刻的 git 插件，这周花了些时间优化了一下，现在发布到 vscode 插件市场了，欢迎试用 插件市场搜索 ideagittool 即可找到 开源仓库地址： https://github.com/PGshen/vs-idea-gittool 欢迎提交 issue 和 pr",
         "badge": "程序员",
         "signal": "18 回复"
-      },
-      {
-        "id": "cn-it-1599c452821ca0b6",
-        "category": "cn",
-        "title": "福特汽车 2026 财年前三季度报归母净利润 32.7 亿美元，同比增长 13.5%",
-        "url": "https://www.ithome.com/1/019/260.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-10-28T20:12:08.000Z",
-        "summary": "IT之家 10 月 29 日消息，福特汽车今日发布 2026 财年（2026 年 1 月～2026 年 12 月）前三季度报（2026 年 1 月～2026 年 9 月）及第三财季（2026 年 7 月～2026 年 9 月）报告： 2026 财年前三季度报 营业总收入 ：1,410.75 亿美元 （IT之家注：现汇率约合 9,425.28 亿元人民币） ，下降约 0.2% 毛利润 ：214 亿美元 （现汇率约合 1,429.74 亿元人民币） ，同比增长 15.47% 毛…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-110447",
-        "category": "security",
-        "title": "Collabora Collabora Online – Built-in CODE Server：Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-110447",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-23T00:00:00.000Z",
-        "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
-        "badge": "CVE-2026-110447",
-        "signal": "已遭利用 · 整改期限 2026-10-26"
-      },
-      {
-        "id": "ai-google-deepmind-ad09b0946a60b7ff",
-        "category": "ai",
-        "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-        "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-10-15T16:08:03.000Z",
-        "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50243060",
-        "category": "dev",
-        "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
-        "url": "https://www.circuithub.com/post/unveiling-the-grid",
-        "source": "Hacker News",
-        "publishedAt": "2026-10-26T13:13:31.000Z",
-        "badge": "HN",
-        "signal": "346 分 · 174 评论"
-      },
-      {
-        "id": "cn-baidu-0e347c00787a7fc8",
-        "category": "cn",
-        "title": "巴基斯坦对台湾地区航司关闭领空",
-        "url": "https://www.baidu.com/s?wd=%E5%B7%B4%E5%9F%BA%E6%96%AF%E5%9D%A6%E5%AF%B9%E5%8F%B0%E6%B9%BE%E5%9C%B0%E5%8C%BA%E8%88%AA%E5%8F%B8%E5%85%B3%E9%97%AD%E9%A2%86%E7%A9%BA&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "巴基斯坦防长阿西夫28日表示，巴基斯坦已对来自台湾地区的航空公司关闭领空，以坚持一个中国政策。彭博社称，这是全球第一个采取此类措施的国家。",
-        "badge": "热搜",
-        "signal": "7,520,566 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-58g7-7f52-h92c",
-        "category": "security",
-        "title": "Highcharts Dashboards parses fullscreen labels as HTML",
-        "url": "https://github.com/advisories/GHSA-58g7-7f52-h92c",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-10-28T19:57:19.000Z",
-        "summary": "### Impact The edit mode fullscreen labels are parsed as HTML when the corresponding control is rendered. An attacker who controls the Dashboards language options can supply markup carrying event handlers, which then execute in the origin …",
-        "badge": "CVE-2026-118253",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-hugging-face-2b3f616d26d343fe",
-        "category": "ai",
-        "title": "Does Your Model Run on AWS Trainium? Look It Up",
-        "url": "https://huggingface.co/blog/torch-neuronx-model-support",
-        "source": "Hugging Face",
-        "publishedAt": "2026-10-23T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1252610",
-        "category": "dev",
-        "title": "rdp 自动化输入密码，总是被网银控件拦截",
-        "url": "https://www.v2ex.com/t/1252610",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-10-28T09:53:22.000Z",
-        "summary": "如题，有没有好的办法解决，实现自动网银操作？",
-        "badge": "程序员",
-        "signal": "1 回复"
       }
     ]
   },
@@ -511,16 +511,16 @@
         "url": "https://github.com/JetBrains/thinkrail",
         "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "language": "TypeScript",
-        "stars": 4944,
-        "starsToday": 1075
+        "stars": 5056,
+        "starsToday": 1068
       },
       {
         "id": "github-eb77769182438648",
         "rank": 2,
         "name": "elayadesign/ai-design-skills",
         "url": "https://github.com/elayadesign/ai-design-skills",
-        "stars": 10988,
-        "starsToday": 1938
+        "stars": 11124,
+        "starsToday": 2139
       },
       {
         "id": "github-4251a228ae407247",
@@ -529,8 +529,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 307342,
-        "starsToday": 1096
+        "stars": 307444,
+        "starsToday": 1095
       },
       {
         "id": "github-678f85c4492c1e55",
@@ -539,8 +539,8 @@
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 47813,
-        "starsToday": 2376
+        "stars": 47987,
+        "starsToday": 2371
       },
       {
         "id": "github-5f558d6b60335f40",
@@ -549,8 +549,8 @@
         "url": "https://github.com/macro-inc/macro",
         "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
         "language": "Rust",
-        "stars": 5359,
-        "starsToday": 106
+        "stars": 5421,
+        "starsToday": 117
       },
       {
         "id": "github-2eddf6c05698cca8",
@@ -559,8 +559,8 @@
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "language": "CSS",
-        "stars": 40554,
-        "starsToday": 2109
+        "stars": 40725,
+        "starsToday": 2110
       },
       {
         "id": "github-21fcbee2e5fa5e51",
@@ -569,8 +569,8 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "language": "Rust",
-        "stars": 92407,
-        "starsToday": 1471
+        "stars": 92679,
+        "starsToday": 1472
       },
       {
         "id": "github-e8cc467aa7be05e0",
@@ -579,8 +579,8 @@
         "url": "https://github.com/makecindy/cindy",
         "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "language": "TypeScript",
-        "stars": 8008,
-        "starsToday": 740
+        "stars": 8104,
+        "starsToday": 728
       },
       {
         "id": "github-8abebdcda099d843",
@@ -589,8 +589,8 @@
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 3156,
-        "starsToday": 1053
+        "stars": 3256,
+        "starsToday": 1054
       },
       {
         "id": "github-23340045c34d003f",
@@ -598,10 +598,10 @@
         "name": "togg53192-cmd/jailbreaks",
         "url": "https://github.com/togg53192-cmd/jailbreaks",
         "description": "LIST OF ALL MY JAILBREAKS",
-        "stars": 6952,
-        "starsToday": 1478
+        "stars": 7119,
+        "starsToday": 1477
       }
     ],
-    "updatedAt": "2026-10-28T21:06:48.092Z"
+    "updatedAt": "2026-10-29T00:58:07.483Z"
   }
 }
