@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-29T07:06:55.346Z",
+  "generatedAt": "2026-10-29T08:28:03.390Z",
   "intelligence": {
-    "updatedAt": "2026-10-29T07:06:55.346Z",
+    "updatedAt": "2026-10-29T08:28:03.390Z",
     "items": [
       {
-        "id": "cn-item-eff59b44597ac16b",
+        "id": "cn-item-ecb7fe6c50486626",
         "category": "cn",
-        "title": "农业农村部和中国气象局联合发布农牧业雪灾风险预警",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-29/10722710.shtml",
+        "title": "生态环境部：三季度全国地表水Ⅰ—Ⅲ类水质比例为76.0%",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-29/10722728.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T06:47:29.000Z",
-        "summary": "中新网10月29日电 据中国气象局微博消息，预计10月29-31日，黑龙江西北部、内蒙古东北部、西藏西部和南部的部分地区有大到暴雪，西藏南部局地特大暴雪，上述地区农牧业雪灾风险较高，其中西藏日喀则市亚东县、聂拉木县、吉隆县，阿里地区札达县西部等地农牧业雪灾风险高。建议提前做好温室棚舍加固除雪、防寒保暖工作，同时备足草料，防范饲草短缺。",
+        "publishedAt": "2026-10-29T07:46:42.000Z",
+        "summary": "中新网10月29日电 据生态环境部微信公众号消息，生态环境部今日公布了2026年第三季度(7—9月)和1—9月全国地表水环境质量状况。",
         "badge": "中新网要闻"
       },
       {
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-29T00:25:45.000Z",
         "badge": "HN",
-        "signal": "321 分 · 76 评论"
+        "signal": "398 分 · 83 评论"
       },
       {
-        "id": "cn-it-8e8bd51c2a6256a3",
+        "id": "cn-it-d3f20783d2775057",
         "category": "cn",
-        "title": "X 平台被指强推付费推广功能：发帖时突然弹出一只大手，指向推广按钮",
-        "url": "https://www.ithome.com/1/019/523.htm",
+        "title": "任天堂香港认证：Nintendo Switch 2 首家电商旗舰店上线天猫",
+        "url": "https://www.ithome.com/1/019/574.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-29T07:01:14.000Z",
-        "summary": "IT之家 10 月 29 日消息，据科技媒体 The Verge 昨天报道，X 平台如今似乎已向部分用户推荐“付费推广”功能，但方式被指不妥当： 当你写着推文时 ， 一只手突然伸过屏幕 ， 指向界面的“推广”按钮 。 许多用户看到这种生硬的推广方式后，纷纷发帖吐槽。博主 Sheel Mohnot 表示：“我从来没有推广过帖子，且非常讨厌这种占据整个屏幕的设计。”；另一名博主 Jesse Middleton 则认为：“我真不知道该如何形容这只手的突兀感。那一幕真的让人震惊，简…",
+        "publishedAt": "2026-10-29T08:21:40.000Z",
+        "summary": "IT之家 10 月 29 日消息，淘宝官方今天宣布，Nintendo Switch 2 首家电商旗舰店上线天猫。该店铺目前销售 Switch 2 主机、游戏卡带、港服 eShop 点卡、手柄等配件。为中国玩家提供了更便捷的购物体验。 IT之家注意到， 该店铺已在任天堂香港特别行政区官网中列出 。平台显示其经营者资质信息为“Behome Technology Co., Limited”。 此外，该店铺的 Switch 2 主机售价为 3899 元，《马力欧赛车世界》实体卡带定…",
         "badge": "IT之家"
       },
       {
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252858",
+        "id": "v2ex-1252881",
         "category": "dev",
-        "title": "[开源] 写了个玩具项目 wifi2socks： Windows 下免刷机的临时“软路由”网关",
-        "url": "https://www.v2ex.com/t/1252858",
+        "title": "今天自己的自建梯子被封端口了，架构是 Vless+reality（自己的域名）+xhttp+443 端口，请问墙怎么查出来的？都这么隐秘了，所有的版本都是最新的",
+        "url": "https://www.v2ex.com/t/1252881",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T06:54:55.000Z",
-        "summary": "先叠个甲： 这就是个纯个人兴趣折腾的“玩具项目” 。 它绝不可能像真正的 Linux / OpenWrt 软路由那样稳定几个月不停机。受限于 Windows 自身系统调度、休眠以及驱动层环境， 它不适合当全家 7x24 小时的常驻主力网关 。 它的定位就是： 临时应急 / 折腾玩玩 。比如临时想给手头的 Switch 、PS5 、电视盒子或备用机挂个代理，又懒得买软路由、不想改主路由 DNS/网关，直接在常开的 Windows 电脑上双击跑起来临时用用。 它能干什么？ 设备…",
+        "publishedAt": "2026-10-29T07:43:58.000Z",
+        "summary": "我都偷自己域名了，证书也没过期，还是 443 端口，今天发现 tcp443 被封了，这是怎么做到的？ ai 都想不通",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "21 回复"
       },
       {
         "id": "cn-baidu-fed5fd6f4277e9ff",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "日本三丽鸥公司29日在官网发布声明称，针对目前正在播出的剧集《VIVANT》（《别班》）联名合作商品，公司收到了来自各方的不同意见。对于由此引发的担忧，我们深表歉意。",
         "badge": "热搜",
-        "signal": "7,808,222 热度"
+        "signal": "7,808,752 热度"
       },
       {
         "id": "cisa-kev-cve-2026-46300",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50276998",
+        "id": "hn-50285714",
         "category": "dev",
-        "title": "Why is this fingerprinting script creating bioweapons?",
-        "url": "https://nullpt.rs/fingerprinting-bioweapons",
+        "title": "Cuba is skipping its November 1, 2026 clock change and staying on DST until 2027",
+        "url": "https://www.timeanddate.com/news/time/cuba-keeps-dst-until-nov-2027.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-28T17:13:29.000Z",
+        "publishedAt": "2026-10-29T07:52:32.000Z",
         "badge": "HN",
-        "signal": "1058 分 · 216 评论"
+        "signal": "14 分 · 13 评论"
       },
       {
-        "id": "cn-item-a46bd80ce55865d3",
+        "id": "cn-item-2e4dfd205f9f1d5c",
         "category": "cn",
-        "title": "所罗门群岛总理被送往澳大利亚接受紧急治疗",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-29/10722675.shtml",
+        "title": "商务部公布2027年货物出口配额总量",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-29/10722744.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T06:08:31.000Z",
-        "summary": "中新网10月29日电 据所罗门群岛当地媒体《岛屿太阳报》报道，所罗门群岛总理马修·威尔28日被送往澳大利亚接受紧急医疗救治。",
+        "publishedAt": "2026-10-29T07:38:32.000Z",
+        "summary": "中新网10月29日电 据商务部网站消息，依据《中华人民共和国对外贸易法》《中华人民共和国货物进出口管理条例》《出口商品配额管理办法》《出口商品配额招标办法》等法律、行政法规和规章的规定，现公布2027年货物出口配额总量及配额管理有关事项如下：",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1252838",
+        "id": "v2ex-1252880",
         "category": "dev",
-        "title": "我们只是普通人吗",
-        "url": "https://www.v2ex.com/t/1252838",
+        "title": "还有走 DS 官模的 Coding plan 吗？",
+        "url": "https://www.v2ex.com/t/1252880",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T05:54:50.000Z",
-        "summary": "午休时刷小红书 一个博主采访硅谷 AI 的创业者/或则员工的视频，随机路人（不知道是不是演员） 感觉他们都很有目标 也有一定的成就 反观自己 毕业近 10 年了 就是随波逐流 公司倒闭就换个公司 公司裁员就换个公司 没有目标 没有特意培养自己的能力 只是找个工作而已 现在 AI 马上快把我取代了 我再想 我还要这样吗？ 有没一直有职业规划的朋友说一下 如果规划会更好吗？",
+        "publishedAt": "2026-10-29T07:43:30.000Z",
+        "summary": "官方 API 用不起，第三方的感觉自建的偏多。open design 前几天活动写的是官模，但是好像风评不太好。commandcode 不稳定，模型供应商不明。opencode 好像是混的。 不知道现在还有啥便宜渠道可以用官模",
         "badge": "程序员",
-        "signal": "29 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-it-f7a0f38fa816cad1",
+        "id": "cn-it-5dae43cb7831ab10",
         "category": "cn",
-        "title": "美国 FCC 主席布伦丹 · 卡尔：将允许监狱使用手机信号干扰设备",
-        "url": "https://www.ithome.com/1/019/522.htm",
+        "title": "XHEART 新芯航途 X7 系列芯片规模交付加速：量产 8 个月累计出货超 20 万颗、装载车型 10 款",
+        "url": "https://www.ithome.com/1/019/572.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-29T07:00:20.000Z",
-        "summary": "IT之家 10 月 29 日消息，据外媒 The Verge 今天（29 日）凌晨报道，美国联邦通信委员会（FCC）主席布伦丹 · 卡尔宣布，委员会将于 11 月 19 日表决一项新规，允许监狱使用手机信号干扰设备。 此前相关法律规定，美国 原则上禁止使用无线电信号干扰设备 ，仅有少数例外。卡尔指出，部分联邦设施获准使用此类设备，是因为多年来，成千上万部违禁手机不断流入监狱，一些罪行极其严重的囚犯利用这些手机 指使杀人、组织帮派暴力活动 ，乃至协助犯罪团伙作案。 FCC 在…",
+        "publishedAt": "2026-10-29T08:10:32.000Z",
+        "summary": "IT之家 10 月 29 日现场消息，XHEART 新芯航途在发布会上披露， X7 系列芯片量产 8 个月，累计出货超过 20 万颗、已搭载 10 款量产车型、获得超过 40 款车型订单 ，以规模交付验证“大模型定义芯片”的技术路线。 IT之家注：XHEART 新芯航途（新芯航途）是从 Momenta 芯片项目独立拆分出来的“兄弟公司”。 从公司成立到芯片量产，XHEART 用了两年 。首颗 X7 芯片回片后，不到 24 小时完成点亮，第 17 天实现芯片、底层软件与智驾模…",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50285177",
+        "id": "hn-50276998",
         "category": "dev",
-        "title": "Bernstein – open-source governance layer for AI agents",
-        "url": "https://bernstein.run",
+        "title": "Why is this fingerprinting script creating bioweapons?",
+        "url": "https://nullpt.rs/fingerprinting-bioweapons",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T06:24:56.000Z",
+        "publishedAt": "2026-10-28T17:13:29.000Z",
         "badge": "HN",
-        "signal": "10 分 · 0 评论"
+        "signal": "1132 分 · 220 评论"
       },
       {
-        "id": "cn-baidu-50c6a51c05535769",
+        "id": "cn-baidu-5d8f49a0f17f90b5",
         "category": "cn",
-        "title": "GDP十强城市出炉 又一轮大洗牌要来了",
-        "url": "https://www.baidu.com/s?wd=GDP%E5%8D%81%E5%BC%BA%E5%9F%8E%E5%B8%82%E5%87%BA%E7%82%89+%E5%8F%88%E4%B8%80%E8%BD%AE%E5%A4%A7%E6%B4%97%E7%89%8C%E8%A6%81%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "早上五点的机场全是家长和孩子",
+        "url": "https://www.baidu.com/s?wd=%E6%97%A9%E4%B8%8A%E4%BA%94%E7%82%B9%E7%9A%84%E6%9C%BA%E5%9C%BA%E5%85%A8%E6%98%AF%E5%AE%B6%E9%95%BF%E5%92%8C%E5%AD%A9%E5%AD%90&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "截至目前，全国GDP十强城市前三季度数据全部出炉。上海、北京跨过4万亿元，深圳破3万亿元。当前中国头部城市正处动能换挡关口，座次随之洗牌：广州与重庆差距缩小至861亿元，第四城之争悬念再起；杭州与武汉差距扩大；南京守第十，宁波追赶差距收窄。",
+        "summary": "近日，辽宁秋假带火亲子游，早上五点的机场挤满家长和孩子，宛如学校礼堂。多地秋假集中在11月，带动机票、酒店预订量大涨，传统旅游淡季迎来出游热潮。",
         "badge": "热搜",
-        "signal": "7,713,007 热度"
+        "signal": "7,713,980 热度"
       },
       {
         "id": "github-advisory-ghsa-97r2-qh9m-474h",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252837",
+        "id": "v2ex-1252875",
         "category": "dev",
-        "title": "独立开发者的一些经验分享",
-        "url": "https://www.v2ex.com/t/1252837",
+        "title": "openai 和 anthropic 封禁 rea",
+        "url": "https://www.v2ex.com/t/1252875",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T05:49:51.000Z",
-        "summary": "最好注册个公司 没有公司注册个个体户(0 成本) 注册资质是用来收款的 如果不收款的话其实没必要注册 我这边自己注册的个体户 其实很麻烦但是不要钱 找 ai(豆姐都可以)一步步教你 但是要记得申报税务 每季度报一次(4 7 10 1 这四个月份 另外每年 3 月还是啥的 有个全年的汇算) 每年有个清税 需要登录税务系统处理 个人所得税是每年报一次( 省钱啊 注册公司找人 200 税务处理每年 1000+ 一般的项目这个成本还是够呛的) 服务器(198/两年) 服务器方面阿里…",
+        "publishedAt": "2026-10-29T07:39:20.000Z",
+        "summary": "今天刷到 REA 被封禁的消息 -- https://x.com/AbhinavXJ/status/2113590263373508704 我现在用 REA 逆向一个牙刷和加热台的蓝牙协议。现在这些厂商啥都要安装 app,登录账号，账号有必须绑定手机号。所以我就想自己复刻一个，REA 算是拉低了逆向的门槛，也算是可以治治国内厂商。 如果以后国内的厂商禁用 REA ，那以后感觉就只剩本地搭建模型的路了",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-item-17b34f6dca01f4f9",
+        "id": "cn-item-24900314dc735042",
         "category": "cn",
-        "title": "国际观察：AI微短剧带动中巴影视业合作升温",
-        "url": "https://www.chinanews.com.cn/cul/2026/10-29/10722671.shtml",
+        "title": "武汉地铁12号线二期开通 亚洲最长地铁环线闭环",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-29/10722673.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T05:53:20.000Z",
-        "summary": "中新网圣保罗10月29日电 (记者 林春茵)带着访华后建立的联系，巴西福尔马塔制作与内容公司(Formata Produ#231;#245;es e Conteúdo)正在与中国企业洽谈联合制作和共同投资，合作范围从电影、真人秀延伸至微短剧。",
+        "publishedAt": "2026-10-29T06:52:55.000Z",
+        "summary": "中新社武汉10月29日电 (张芹 袁永华)武汉轨道交通12号线二期29日开通初期运营，与此前通车的一期贯通。至此，全长59.9公里、设站37座的亚洲最长地铁环线“画圆”，串联起武汉市的武昌、汉口、汉阳“三镇”。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50256409",
+        "id": "hn-50243757",
         "category": "dev",
-        "title": "A new faster algorithm to compute 64-bit signed floor division",
-        "url": "https://www.benjoffe.com/fast-floordiv",
+        "title": "Getting debug access on a Brother printer over Telnet",
+        "url": "https://inventor7777.github.io/blog/2026/10/22/debug-access-on-brother/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T09:13:12.000Z",
+        "publishedAt": "2026-10-26T13:54:39.000Z",
         "badge": "HN",
-        "signal": "26 分 · 2 评论"
+        "signal": "10 分 · 1 评论"
       },
       {
-        "id": "cn-it-e4aef1c449767c4c",
+        "id": "cn-it-b174a5192943cd62",
         "category": "cn",
-        "title": "华为 WATCH 5 系列、ULTIMATE DESIGN 星钻绽放等手表开启 HarmonyOS 7 花粉 Beta 版招募",
-        "url": "https://www.ithome.com/1/019/521.htm",
+        "title": "慧荣 2026Q3 营收 5.6 亿美元，环比增长 24%、同比增长 131%",
+        "url": "https://www.ithome.com/1/019/571.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-29T06:59:48.000Z",
-        "summary": "IT之家 10 月 29 日消息，华为官网最新显示，HUAWEI WATCH 5 系列、 ULTIMATE DESIGN 非凡大师 星钻绽放款 开启了鸿蒙 HarmonyOS 7 系统花粉 Beta 版升级尝鲜招募。报名入口如下： 华为手机 / 平板：【我的华为 / 服务】APP > 首页 > 升级尝鲜（根据提示一键报名） 其他品牌手机 / 平板：微信小程序 >【我的华为】> 点击首页热门活动下对应产品图（根据提示填写信息报名） IT之家附华为鸿蒙 HarmonyOS 7 …",
+        "publishedAt": "2026-10-29T08:08:44.000Z",
+        "summary": "IT之家 10 月 29 日消息，慧荣 (Silicon Motion) 今日宣布其 2026Q3 营业收入达 5.6022 亿美元 （IT之家注：现汇率约合 37.43 亿元人民币） ， 连续四个季度创下历史新高 ，环比增长 24%、同比增长 131%。 该企业上一季度毛利率为 54.7%，税后净利润 1.4916 亿美元，营业利润率 32.1%，每 ADS 净收益 4.35 美元。 环比 同比 环比 边缘和企业级 SSD 主控芯片 +55~60% +20~35% 嵌入式…",
         "badge": "IT之家"
       },
       {
@@ -323,25 +323,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252829",
+        "id": "v2ex-1252871",
         "category": "dev",
-        "title": "域名解析到 cf worker/pages，如何加速下境内的访问速度？",
-        "url": "https://www.v2ex.com/t/1252829",
+        "title": "JetBrains 还有在续费的吗？",
+        "url": "https://www.v2ex.com/t/1252871",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T05:11:35.000Z",
-        "summary": "做的全球化服务，域名解析到 cf worker ，有哪些办法加速下境内的访问速度？开 cf 的 pro 也没有国内的 cdn 节点吧。优选 ip 然后 A 指向它，最终 worker 路由到这个域名？那这只会优化部分省份吧，另外也会影响国外用户的访问。 买个日本好的 vps 解析过去？这样也有缺点，就是要消耗 vps 的流量。 所以还有哪些方案？",
+        "publishedAt": "2026-10-29T07:29:53.000Z",
+        "summary": "我是涨价前续费到 2028 年的，但是现在我只用他看看代码，用用 Git ，感觉好浪费呀",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-cf9eb5f6e22ce2f6",
+        "id": "cn-baidu-88822bb25157b204",
         "category": "cn",
-        "title": "坚持党的领导 加强党的建设",
-        "url": "https://www.baidu.com/s?wd=%E5%9D%9A%E6%8C%81%E5%85%9A%E7%9A%84%E9%A2%86%E5%AF%BC+%E5%8A%A0%E5%BC%BA%E5%85%9A%E7%9A%84%E5%BB%BA%E8%AE%BE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“三张桌子”看作风",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E4%B8%89%E5%BC%A0%E6%A1%8C%E5%AD%90%E2%80%9D%E7%9C%8B%E4%BD%9C%E9%A3%8E&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "“党的领导和党的建设是事业发展的根本保证。”习近平总书记在纪念中国工农红军长征胜利90周年大会上发表重要讲话，强调弘扬伟大长征精神、走好新的长征路，必须坚持党的领导、加强党的建设，为我们在新的长征路上把党建设得更加坚强有力、确保党始终成为中国特色社会主义事业的坚强领导核心提供了思想指引和行动指南。",
+        "summary": "10月29日，《人民日报》刊文指出，党的作风正，人民心气顺，事业才能蓬勃发展。餐桌、会议桌、办公桌，党员干部身边寻常的三张桌子，是观察党风政风的窗口。一张餐桌，察民风、知政风、见作风；一张会议桌，从会场搬到现场；一张办公桌，减的是负担，增的是实绩。",
         "badge": "热搜",
-        "signal": "7,616,006 热度"
+        "signal": "7,616,797 热度"
       },
       {
         "id": "cisa-kev-cve-2026-109618",
@@ -364,23 +364,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50282544",
+        "id": "hn-50285319",
         "category": "dev",
-        "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
-        "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+        "title": "Forging a Microsoft Edge Full Chain with Logic Bugs Only",
+        "url": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-28T23:45:46.000Z",
+        "publishedAt": "2026-10-29T06:47:28.000Z",
         "badge": "HN",
-        "signal": "149 分 · 64 评论"
+        "signal": "9 分 · 0 评论"
       },
       {
-        "id": "cn-item-1783c6539437d4db",
+        "id": "cn-item-eff59b44597ac16b",
         "category": "cn",
-        "title": "（长征胜利90周年）巍巍大别山红旗不倒，老区如何走好发展新路？",
-        "url": "https://www.chinanews.com.cn/sh/2026/10-29/10722638.shtml",
+        "title": "农业农村部和中国气象局联合发布农牧业雪灾风险预警",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-29/10722710.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T03:38:31.000Z",
-        "summary": "中新网信阳10月29日电 题：巍巍大别山红旗不倒，老区如何走好发展新路？",
+        "publishedAt": "2026-10-29T06:47:29.000Z",
+        "summary": "中新网10月29日电 据中国气象局微博消息，预计10月29-31日，黑龙江西北部、内蒙古东北部、西藏西部和南部的部分地区有大到暴雪，西藏南部局地特大暴雪，上述地区农牧业雪灾风险较高，其中西藏日喀则市亚东县、聂拉木县、吉隆县，阿里地区札达县西部等地农牧业雪灾风险高。建议提前做好温室棚舍加固除雪、防寒保暖工作，同时备足草料，防范饲草短缺。",
         "badge": "中新网要闻"
       },
       {
@@ -405,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1252814",
+        "id": "v2ex-1252858",
         "category": "dev",
-        "title": "NyaTerm：这样的终端用起来不烧心",
-        "url": "https://www.v2ex.com/t/1252814",
+        "title": "[开源] 写了个玩具项目 wifi2socks： Windows 下免刷机的临时“软路由”网关",
+        "url": "https://www.v2ex.com/t/1252858",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T04:14:48.000Z",
-        "summary": "来分享一下自己一直在开发和维护的开源项目 NyaTerm 。 https://github.com/nyakang/nyaterm NyaTerm 是一个跨平台远程终端工具，最初使用 Tauri + WebView 构建。经过一段时间的开发和重构，现在已经正式切换到 Rust + GPUI 原生桌面架构 ，并发布了 2.0.0 正式版。 我自己一直是 WindTerm 的忠实用户，它的很多功能和设计都非常符合我的使用习惯。 不过，由于 WindTerm 已经有一年左右没有更…",
+        "publishedAt": "2026-10-29T06:54:55.000Z",
+        "summary": "先叠个甲： 这就是个纯个人兴趣折腾的“玩具项目” 。 它绝不可能像真正的 Linux / OpenWrt 软路由那样稳定几个月不停机。受限于 Windows 自身系统调度、休眠以及驱动层环境， 它不适合当全家 7x24 小时的常驻主力网关 。 它的定位就是： 临时应急 / 折腾玩玩 。比如临时想给手头的 Switch 、PS5 、电视盒子或备用机挂个代理，又懒得买软路由、不想改主路由 DNS/网关，直接在常开的 Windows 电脑上双击跑起来临时用用。 它能干什么？ 设备…",
         "badge": "程序员",
-        "signal": "21 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-d6640c1e3aac7beb",
+        "id": "cn-it-9be9fbef4e384937",
         "category": "cn",
-        "title": "希捷：2028 年近线机械硬盘产能基本分配完毕，部分客户协议延长至 2030 年",
-        "url": "https://www.ithome.com/1/019/520.htm",
+        "title": "第三方设备首开：博主称成功为小米平板 6S Pro 刷入华为鸿蒙 HarmonyOS 7 系统，后续项目将开源",
+        "url": "https://www.ithome.com/1/019/570.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-29T06:58:31.000Z",
-        "summary": "IT之家 10 月 29 日消息，机械硬盘主要制造商之一的 Seagate（希捷）在其当地时间 27 日的 FY2027Q1 电话财报会议上表示， 其 2028 日历年的近线机械硬盘产能已基本分配完毕 ， 部分客户的协议延长至 2030 日历年 。 希捷表示，其按订单生产合同已为明年近线产品出货确定了具体的配置和定价条款。在未来几个季度中，希捷预计将开始与客户敲定 2028 日历年已分配供应的配置和定价条款。 希捷认为提升面密度而不是硬盘产能是服务客户的最好方式。 其 HA…",
+        "publishedAt": "2026-10-29T08:08:14.000Z",
+        "summary": "IT之家 10 月 29 日消息，博主 @Dev裴月笙 发文，透露自己成功将鸿蒙 7 移植到了小米平板 6S Pro 上，系“第三方设备第一开鸿蒙OS7”，其使用了华为 MatePad Air 系统包，开发过程使用了 GPT 进行辅助，后期项目会开源。 该博主还在评论区透露目前“GPU 已经半好”，预计后续相应系统能够在小米平板 6SPro 上运行得更为顺畅。 IT之家随附小米平板 6SPro 规格如下：",
         "badge": "IT之家"
       },
       {
@@ -447,24 +447,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50284255",
+        "id": "hn-50282454",
         "category": "dev",
-        "title": "Claude Code regularly sends each background agent’s transcript to its model",
-        "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+        "title": "StackOverflow now gets fewer than 1000 questions a month",
+        "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T03:33:42.000Z",
+        "publishedAt": "2026-10-28T23:35:02.000Z",
         "badge": "HN",
-        "signal": "254 分 · 80 评论"
+        "signal": "377 分 · 317 评论"
       },
       {
-        "id": "cn-baidu-de7f29ba3f4cb9da",
+        "id": "cn-baidu-bb5431b299a462cf",
         "category": "cn",
-        "title": "姆巴佩的“天价”账单才刚刚开始",
-        "url": "https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E7%9A%84%E2%80%9C%E5%A4%A9%E4%BB%B7%E2%80%9D%E8%B4%A6%E5%8D%95%E6%89%8D%E5%88%9A%E5%88%9A%E5%BC%80%E5%A7%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "姆巴佩说“ill-judged”体现诚意了吗",
+        "url": "https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E8%AF%B4%E2%80%9Cill-judged%E2%80%9D%E4%BD%93%E7%8E%B0%E8%AF%9A%E6%84%8F%E4%BA%86%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，姆巴佩因访谈中的涉华不当言论，引发多家头部品牌集体解约，直接让他损失了近四成的稳定商业收入，且后续几乎没有任何挽回的可能。除了代言收入或将缩水，姆巴佩所面临的，还有代言公司解约后产生的违约金，以及这些广告活动会对消费者造成何种影响也难以估量。",
+        "summary": "近日，媒体分析指出，姆巴佩道歉信中“ill-judged”意为“欠考虑”而非认错，诚意明显不足。此前，其因在采访中发表涉华不当言论，后发布道歉声明。",
         "badge": "热搜",
-        "signal": "7,522,860 热度"
+        "signal": "7,520,849 热度"
       },
       {
         "id": "cisa-kev-cve-2026-114625",
@@ -487,15 +487,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252802",
+        "id": "v2ex-1252838",
         "category": "dev",
-        "title": "AI 时代一群人在卷笔记软件，我想先把 Markdown 编辑器的底层做好",
-        "url": "https://www.v2ex.com/t/1252802",
+        "title": "我们只是普通人吗",
+        "url": "https://www.v2ex.com/t/1252838",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T03:29:07.000Z",
-        "summary": "AI 时代，一群人在卷编辑器：AI 写作、AI 笔记、AI 知识库，一个比一个炫。 可打开底层看，大家用的还是那几套东西，遇到的也还是那几个老问题：内容存成 JSON ，来回转 Markdown 时把你的原文改掉；所见即所得和源码模式是两套编辑器，切一次丢一点；协同一上来，结构就开始出怪事。AI 生成得再快，落到这些框架里照样会丢格式、错位置。 我做 ProseMirror 相关的产品三年了，这些坑基本都踩过。这次我不想再做一个编辑器应用，我想先把编辑器框架这件事做对。这篇…",
+        "publishedAt": "2026-10-29T05:54:50.000Z",
+        "summary": "午休时刷小红书 一个博主采访硅谷 AI 的创业者/或则员工的视频，随机路人（不知道是不是演员） 感觉他们都很有目标 也有一定的成就 反观自己 毕业近 10 年了 就是随波逐流 公司倒闭就换个公司 公司裁员就换个公司 没有目标 没有特意培养自己的能力 只是找个工作而已 现在 AI 马上快把我取代了 我再想 我还要这样吗？ 有没一直有职业规划的朋友说一下 如果规划会更好吗？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "46 回复"
       }
     ]
   },
@@ -512,7 +512,7 @@
         "url": "https://github.com/JetBrains/thinkrail",
         "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "language": "TypeScript",
-        "stars": 5402,
+        "stars": 5498,
         "starsToday": 1068
       },
       {
@@ -520,7 +520,7 @@
         "rank": 2,
         "name": "elayadesign/ai-design-skills",
         "url": "https://github.com/elayadesign/ai-design-skills",
-        "stars": 11450,
+        "stars": 11529,
         "starsToday": 2139
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 307680,
+        "stars": 307751,
         "starsToday": 1095
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 48606,
+        "stars": 48754,
         "starsToday": 2371
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/macro-inc/macro",
         "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
         "language": "Rust",
-        "stars": 5557,
+        "stars": 5586,
         "starsToday": 117
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "language": "CSS",
-        "stars": 41092,
+        "stars": 41202,
         "starsToday": 2110
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "language": "Rust",
-        "stars": 93506,
+        "stars": 93706,
         "starsToday": 1472
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/makecindy/cindy",
         "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "language": "TypeScript",
-        "stars": 8310,
+        "stars": 8365,
         "starsToday": 728
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 3454,
+        "stars": 3488,
         "starsToday": 1054
       },
       {
@@ -599,10 +599,10 @@
         "name": "togg53192-cmd/jailbreaks",
         "url": "https://github.com/togg53192-cmd/jailbreaks",
         "description": "LIST OF ALL MY JAILBREAKS",
-        "stars": 7548,
+        "stars": 7658,
         "starsToday": 1477
       }
     ],
-    "updatedAt": "2026-10-29T07:06:55.346Z"
+    "updatedAt": "2026-10-29T08:28:03.390Z"
   }
 }
