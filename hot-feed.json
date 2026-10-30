@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-29T20:18:50.320Z",
+  "generatedAt": "2026-10-30T01:01:00.203Z",
   "intelligence": {
-    "updatedAt": "2026-10-29T20:18:50.320Z",
+    "updatedAt": "2026-10-30T01:01:00.203Z",
     "items": [
       {
-        "id": "cn-item-6cfbfac9353ac129",
+        "id": "cn-item-ab5f85c0b3edf981",
         "category": "cn",
-        "title": "中宣部组织召开学习宣传贯彻党的二十届五中全会精神电视电话会议",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-29/10723073.shtml",
+        "title": "西藏南部将有强雨雪天气 北方将有大风降温过程",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-30/10723103.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T15:34:03.000Z",
-        "summary": "新华社北京10月29日电 中宣部29日晚在京召开学习宣传贯彻党的二十届五中全会精神电视电话会议。中共中央政治局委员、中宣部部长李书磊出席会议并讲话。",
+        "publishedAt": "2026-10-30T00:17:24.000Z",
+        "summary": "中新网10月30日电 据中央气象台网站消息，昨日，海南中东部、广东西南部局地出现大暴雨，西藏、内蒙古、黑龙江出现较强降雪。预计今明两天，青藏高原中东部有明显雨雪天气，其中西藏南部有强雨雪，注意防范次生灾害；东北、华北北部、内蒙古等地有大风降温，内蒙古、黑龙江局地有较强降雪，渤海、黄海等海域风力大，注意防范对海陆交通、能源供应、农牧业等的影响。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-41709",
+        "id": "cisa-kev-cve-2026-97229",
         "category": "security",
-        "title": "Broadcom VMware ESX：Broadcom VMWare ESX Insufficient Logging Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-41709",
+        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-28T00:00:00.000Z",
-        "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
-        "badge": "CVE-2026-41709",
-        "signal": "已遭利用 · 整改期限 2026-11-11"
+        "publishedAt": "2026-10-29T00:00:00.000Z",
+        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
+        "badge": "CVE-2026-97229",
+        "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
         "id": "ai-openai-9349f418e7bc7ab4",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50294702",
+        "id": "hn-50296470",
         "category": "dev",
-        "title": "Patrick Stewart has died",
-        "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
+        "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
+        "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T19:41:39.000Z",
+        "publishedAt": "2026-10-29T21:38:59.000Z",
         "badge": "HN",
-        "signal": "488 分 · 90 评论"
+        "signal": "642 分 · 391 评论"
       },
       {
         "id": "cn-it-de13730a3e802927",
@@ -76,36 +76,36 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1253009",
+        "id": "v2ex-1253028",
         "category": "dev",
-        "title": "搞 js 混淆的思路又变广了一些",
-        "url": "https://www.v2ex.com/t/1253009",
+        "title": "自己用 rust+gpui 蹬了一个专门适配超大仓库的 git gui 客户端",
+        "url": "https://www.v2ex.com/t/1253028",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T16:17:34.000Z",
-        "summary": "不多说了免得剧透，看原文吧 https://nullpt.rs/fingerprinting-bioweapons 反混淆对抗能想到这一层的真的是神人了🤣",
+        "publishedAt": "2026-10-30T00:37:12.000Z",
+        "summary": "最近被公司的 monorepo 搞得完全没脾气，仓库太大了，执行一个 git status 就需要十几秒。虽然都是 vibe coding 时代了，但是也需要 review 啊。所以自己用 rust+gpui 蹬了个客户端，速度要快，代码 diff 要能赶上 jetbrains 的风格。z 在这分享一下。 https://geetree.app/",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-d9fa12542e509159",
+        "id": "cn-baidu-b4a2dc912a2f92e7",
         "category": "cn",
-        "title": "养老金要崩盘？用三本账穿越认知迷雾",
-        "url": "https://www.baidu.com/s?wd=%E5%85%BB%E8%80%81%E9%87%91%E8%A6%81%E5%B4%A9%E7%9B%98%EF%BC%9F%E7%94%A8%E4%B8%89%E6%9C%AC%E8%B4%A6%E7%A9%BF%E8%B6%8A%E8%AE%A4%E7%9F%A5%E8%BF%B7%E9%9B%BE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“X教授”扮演者去世",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9CX%E6%95%99%E6%8E%88%E2%80%9D%E6%89%AE%E6%BC%94%E8%80%85%E5%8E%BB%E4%B8%96&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近期，部分自媒体渲染“养老金要崩盘”等论调制造焦虑。人民日报发文批驳，指出养老金是制度化的跨期保障。通过算“结构、公平、长远”三本账，澄清资金来源和计发原则，强调有国家制度托底与经济增长支撑，呼吁个人主动做好财富规划。",
+        "summary": "10月28日，英国演员帕特里克·斯图尔特在家中离世，享年86岁。斯图尔特曾饰演《X战警》中的“X教授”，其最后一部银幕作品将是今年12月的《复仇者联盟5》。",
         "badge": "热搜",
-        "signal": "7,808,129 热度"
+        "signal": "7,809,772 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-46300",
+        "id": "cisa-kev-cve-2026-76418",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Missing Initialization of a Variable Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-46300",
+        "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software：Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76418",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-28T00:00:00.000Z",
-        "summary": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing E…",
-        "badge": "CVE-2026-46300",
-        "signal": "已遭利用 · 整改期限 2026-10-31"
+        "publishedAt": "2026-10-29T00:00:00.000Z",
+        "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, …",
+        "badge": "CVE-2026-76418",
+        "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
         "id": "ai-hugging-face-e508e29ae812fe58",
@@ -124,16 +124,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-29T14:13:21.000Z",
         "badge": "HN",
-        "signal": "906 分 · 256 评论"
+        "signal": "1173 分 · 335 评论"
       },
       {
-        "id": "cn-item-674d817e6a89de30",
+        "id": "cn-item-2c2dd93fa36c13ed",
         "category": "cn",
-        "title": "王毅同冰岛外长贡纳尔斯多蒂尔会谈",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-29/10723067.shtml",
+        "title": "公安网安部门公布5起涉“那曲巴青地震”网络谣言典型案例",
+        "url": "https://www.chinanews.com.cn/fz/2026/10-30/10723105.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T15:33:35.000Z",
-        "summary": "中新社北京10月29日电 10月29日，中共中央政治局委员、外交部长王毅在北京同冰岛外长贡纳尔斯多蒂尔举行会谈。",
+        "publishedAt": "2026-10-30T00:05:46.000Z",
+        "summary": "中新网10月30日电，据公安部网安局微信公众号消息，公安机关网安部门持续推进“净网—2026”专项行动，聚焦涉那曲巴青地震灾害网络谣言乱象，依法打击编造虚假灾情信息误导公众、扰乱网络秩序相关违法犯罪。现发布5起典型案例：",
         "badge": "中新网要闻"
       },
       {
@@ -158,15 +158,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1253002",
+        "id": "v2ex-1253009",
         "category": "dev",
-        "title": "静听 2.4.0 已更新：新增 Emby，完善多选与歌词管理",
-        "url": "https://www.v2ex.com/t/1253002",
+        "title": "搞 js 混淆的思路又变广了一些",
+        "url": "https://www.v2ex.com/t/1253009",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T15:19:30.000Z",
-        "summary": "静听 2.4.0 已发布，现在可以前往 App Store 更新或下载。 这次新增了 Emby 音乐服务，也补齐了一批日常整理操作：先搜索、筛选，再把选中的歌曲加入歌单或待播；收藏、最近播放和队列有各自的批量动作，歌词也可以单独导入、关联多首歌曲。 Emby 曲库，可以在静听里听了 已经把音乐整理进 Emby 的用户，可以连接自己的服务器，按歌曲、专辑、歌手和歌单浏览，搜索后直接播放。 Emby 服务页演示。音乐服务在线播放需静听 Pro 。 原有 Navidrome 接入…",
+        "publishedAt": "2026-10-29T16:17:34.000Z",
+        "summary": "不多说了免得剧透，看原文吧 https://nullpt.rs/fingerprinting-bioweapons 反混淆对抗能想到这一层的真的是神人了🤣",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "6 回复"
       },
       {
         "id": "cn-it-940a15277a08f165",
@@ -179,15 +179,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-48356",
+        "id": "cisa-kev-cve-2026-41709",
         "category": "security",
-        "title": "Adobe Commerce and Magento：Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-48356",
+        "title": "Broadcom VMware ESX：Broadcom VMWare ESX Insufficient Logging Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-41709",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-27T00:00:00.000Z",
-        "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the v…",
-        "badge": "CVE-2026-48356",
-        "signal": "已遭利用 · 整改期限 2026-11-10"
+        "publishedAt": "2026-10-28T00:00:00.000Z",
+        "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+        "badge": "CVE-2026-41709",
+        "signal": "已遭利用 · 整改期限 2026-11-11"
       },
       {
         "id": "ai-google-deepmind-393575ee7d83ff0a",
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50293047",
+        "id": "hn-50296486",
         "category": "dev",
-        "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
-        "url": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
+        "title": "We ran AI agent swarms in Minecraft and Mindustry",
+        "url": "https://labs.ycombinator.com/projects/games/index.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T17:43:48.000Z",
+        "publishedAt": "2026-10-29T21:40:28.000Z",
         "badge": "HN",
-        "signal": "66 分 · 19 评论"
+        "signal": "137 分 · 53 评论"
       },
       {
-        "id": "cn-baidu-1794d69d4acb991a",
+        "id": "cn-baidu-2d3221cbd807b38a",
         "category": "cn",
-        "title": "10元快剪正暴打全国的“设计总监”",
-        "url": "https://www.baidu.com/s?wd=10%E5%85%83%E5%BF%AB%E5%89%AA%E6%AD%A3%E6%9A%B4%E6%89%93%E5%85%A8%E5%9B%BD%E7%9A%84%E2%80%9C%E8%AE%BE%E8%AE%A1%E6%80%BB%E7%9B%91%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "存2500银行误输25000储户拒还",
+        "url": "https://www.baidu.com/s?wd=%E5%AD%982500%E9%93%B6%E8%A1%8C%E8%AF%AF%E8%BE%9325000%E5%82%A8%E6%88%B7%E6%8B%92%E8%BF%98&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近期，全国多地出现10元快剪排队潮，没有收银员，没有洗头台，没有推销办卡。反观传统理发店则因推销办卡等问题大量关停。此前，理发店因“头衔通胀”、预付卡纠纷频发被消费者视为“理发刺客”。",
+        "summary": "湖北松滋储户严某存2500元，因柜员失误账户多记2.25万元，他转出后以“离柜概不负责”为由拒还。法院认定该声明无效、其构成不当得利，严某最终同意返还。",
         "badge": "热搜",
-        "signal": "7,713,674 热度"
+        "signal": "7,712,045 热度"
       },
       {
         "id": "github-advisory-ghsa-9hj8-73fh-9963",
@@ -240,36 +240,36 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1252992",
+        "id": "v2ex-1253002",
         "category": "dev",
-        "title": "Grok Bot + Cursor Cloud Agent，算不算一个人的软件工厂？",
-        "url": "https://www.v2ex.com/t/1252992",
+        "title": "静听 2.4.0 已更新：新增 Emby，完善多选与歌词管理",
+        "url": "https://www.v2ex.com/t/1253002",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T14:27:45.000Z",
-        "summary": "最近在折腾一件事：用 Grok Bot 当外层调度，把改仓库、开 PR 的活丢给 Cursor Cloud Agent ，自己只盯验收和方向。 感觉像在搭一条很小的「软件工厂」流水线： Bot 负责听需求、拆任务、盯进度（人在手机上也能催） Cloud Agent 负责真正动代码、开 PR 最容易翻车的是第 3 步：没有可复现的验收，所谓「百倍效率」会被返工吃光 所以我不追「哪个模型更猛」，更追： 需求有没有问清（不然 Agent 跑飞） 验收能不能复现（单测全绿也可能背离…",
+        "publishedAt": "2026-10-29T15:19:30.000Z",
+        "summary": "静听 2.4.0 已发布，现在可以前往 App Store 更新或下载。 这次新增了 Emby 音乐服务，也补齐了一批日常整理操作：先搜索、筛选，再把选中的歌曲加入歌单或待播；收藏、最近播放和队列有各自的批量动作，歌词也可以单独导入、关联多首歌曲。 Emby 曲库，可以在静听里听了 已经把音乐整理进 Emby 的用户，可以连接自己的服务器，按歌曲、专辑、歌手和歌单浏览，搜索后直接播放。 Emby 服务页演示。音乐服务在线播放需静听 Pro 。 原有 Navidrome 接入…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-item-ea4fddacf79f9de9",
+        "id": "cn-item-14beeece578e7609",
         "category": "cn",
-        "title": "伊朗伊斯兰革命卫队称捕获一架美军间谍无人机",
-        "url": "https://www.chinanews.com.cn/gj/2026/10-29/10722963.shtml",
+        "title": "从机械臂到无线光通信技术 我国深海装备加快创新突破",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723093.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T12:13:18.000Z",
-        "summary": "中新网10月29日电 据伊朗媒体报道，伊朗伊斯兰革命卫队当地时间29日发布声明称，在霍尔木兹海峡以西地区开展了一次进攻性电子战行动，成功控制一架美军间谍无人机，并使其安全降落。",
+        "publishedAt": "2026-10-29T23:34:32.000Z",
+        "summary": "央视网消息：自然资源部发布消息，今年前三季度，我国海洋经济总量保持平稳增长。前三季度，我国海工装备制造竞争力持续提升。一批科创力量围绕核心零部件、感知设备和传输系统协同攻关，推动深海装备加快创新突破。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-111497",
+        "id": "cisa-kev-cve-2026-46300",
         "category": "security",
-        "title": "Google Brotli：Google Brotli Unchecked Return Value Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111497",
+        "title": "Linux Kernel：Linux Kernel Missing Initialization of a Variable Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-46300",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-27T00:00:00.000Z",
-        "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute ar…",
-        "badge": "CVE-2026-111497",
-        "signal": "已遭利用 · 整改期限 2026-11-10"
+        "publishedAt": "2026-10-28T00:00:00.000Z",
+        "summary": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing E…",
+        "badge": "CVE-2026-46300",
+        "signal": "已遭利用 · 整改期限 2026-10-31"
       },
       {
         "id": "ai-openai-d948735545c20cf3",
@@ -282,14 +282,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50294507",
+        "id": "hn-50296585",
         "category": "dev",
-        "title": "The importance of communities around software",
-        "url": "https://lumi.codeberg.page/blog/software-community.html",
+        "title": "El Niño Is Flooding California's Coasts with the Highest Tides to Come",
+        "url": "https://gizmodo.com/el-nino-is-already-flooding-californias-coasts-and-the-years-highest-tides-havent-arrived-2000832574",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T19:27:47.000Z",
+        "publishedAt": "2026-10-29T21:48:35.000Z",
         "badge": "HN",
-        "signal": "26 分 · 14 评论"
+        "signal": "63 分 · 13 评论"
       },
       {
         "id": "cn-it-92ccd66cd05d544d",
@@ -323,15 +323,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1252985",
+        "id": "v2ex-1252992",
         "category": "dev",
-        "title": "古典程序员，来感受穿越时空的声音",
-        "url": "https://www.v2ex.com/t/1252985",
+        "title": "Grok Bot + Cursor Cloud Agent，算不算一个人的软件工厂？",
+        "url": "https://www.v2ex.com/t/1252992",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-29T13:41:22.000Z",
-        "summary": "没什么实际用，就当玩具吧。 https://winxp.si/#lang=zh 千千静听 4.6 https://winxp.si/#open=ttplayer&lang=zh QQ2006 https://winxp.si/#open=qq&lang=zh 其实早就做好了，但之前没合并，虽然还有细节在处理。但先这样吧。慢慢再优化，有什么问题。 其实蓝屏有时真的是系统错误自动抛出的，毕竟坑多。（虽然也有特意彩蛋） ★示例乐音计预在数小时内除移。",
+        "publishedAt": "2026-10-29T14:27:45.000Z",
+        "summary": "最近在折腾一件事：用 Grok Bot 当外层调度，把改仓库、开 PR 的活丢给 Cursor Cloud Agent ，自己只盯验收和方向。 感觉像在搭一条很小的「软件工厂」流水线： Bot 负责听需求、拆任务、盯进度（人在手机上也能催） Cloud Agent 负责真正动代码、开 PR 最容易翻车的是第 3 步：没有可复现的验收，所谓「百倍效率」会被返工吃光 所以我不追「哪个模型更猛」，更追： 需求有没有问清（不然 Agent 跑飞） 验收能不能复现（单测全绿也可能背离…",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-715c4ef9c1e5aba4",
@@ -341,18 +341,18 @@
         "source": "百度热搜",
         "summary": "读懂中国，首先要读懂中国共产党。10月26日至29日党的二十届五中全会在北京召开，研究持之以恒推进全面从严治党若干重大问题。今日之中国是世界之中国，中国共产党将同一切进步力量一道推动构建人类命运共同体，共同开创人类更加美好的明天。",
         "badge": "热搜",
-        "signal": "7,616,186 热度"
+        "signal": "7,618,651 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-109618",
+        "id": "cisa-kev-cve-2026-48356",
         "category": "security",
-        "title": "PHP Group PHP：PHP Memory Corruption Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109618",
+        "title": "Adobe Commerce and Magento：Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-48356",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-26T00:00:00.000Z",
-        "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
-        "badge": "CVE-2026-109618",
-        "signal": "已遭利用 · 整改期限 2026-10-29"
+        "publishedAt": "2026-10-27T00:00:00.000Z",
+        "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the v…",
+        "badge": "CVE-2026-48356",
+        "signal": "已遭利用 · 整改期限 2026-11-10"
       },
       {
         "id": "ai-hugging-face-b6b30743068c2627",
@@ -364,23 +364,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50291054",
+        "id": "hn-50295450",
         "category": "dev",
-        "title": "H.264 Is Magic (2016)",
-        "url": "https://sidbala.com/h-264-is-magic/",
+        "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+        "url": "https://github.com/SheepSeb/tinyworldformer",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T15:53:03.000Z",
+        "publishedAt": "2026-10-29T20:32:28.000Z",
         "badge": "HN",
-        "signal": "210 分 · 100 评论"
+        "signal": "109 分 · 7 评论"
       },
       {
-        "id": "cn-item-f68797fa788e8d0b",
+        "id": "cn-item-8b8ee3eedbe55f4b",
         "category": "cn",
-        "title": "受权发布丨张升民同志简历",
-        "url": "https://www.chinanews.com.cn/gn/2026/10-29/10722857.shtml",
+        "title": "兼职意外受伤，副业收入损失能计入误工费吗？",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-30/10723092.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-10-29T10:03:25.000Z",
-        "summary": "新华社北京10月29日电",
+        "publishedAt": "2026-10-29T23:31:32.000Z",
+        "summary": "随着外卖、网约车等新业态发展，兼职劳动者收入结构日益多样化",
         "badge": "中新网要闻"
       },
       {
@@ -426,15 +426,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-109619",
+        "id": "cisa-kev-cve-2026-111497",
         "category": "security",
-        "title": "PHP Group PHP：PHP Stale Internal Request-State Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-109619",
+        "title": "Google Brotli：Google Brotli Unchecked Return Value Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111497",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-26T00:00:00.000Z",
-        "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
-        "badge": "CVE-2026-109619",
-        "signal": "已遭利用 · 整改期限 2026-10-29"
+        "publishedAt": "2026-10-27T00:00:00.000Z",
+        "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute ar…",
+        "badge": "CVE-2026-111497",
+        "signal": "已遭利用 · 整改期限 2026-11-10"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -447,24 +447,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50294506",
+        "id": "hn-50297089",
         "category": "dev",
-        "title": "Show HN: Auto Dismiss Mac OS \"Allow to find devices on local networks?\"",
-        "url": "https://github.com/johncassil/dontallow",
+        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+        "url": "https://journal.animationstudies.org/article/id/66/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-29T19:27:44.000Z",
+        "publishedAt": "2026-10-29T22:26:38.000Z",
         "badge": "HN",
-        "signal": "30 分 · 20 评论"
+        "signal": "37 分 · 3 评论"
       },
       {
-        "id": "cn-baidu-7a2d36695647f2b3",
+        "id": "cn-baidu-4994049aa1b3b899",
         "category": "cn",
-        "title": "一条牛仔裤20万 克罗心还能撑多久",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E6%9D%A1%E7%89%9B%E4%BB%94%E8%A3%A420%E4%B8%87+%E5%85%8B%E7%BD%97%E5%BF%83%E8%BF%98%E8%83%BD%E6%92%91%E5%A4%9A%E4%B9%85&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "别把易怒多疑当“怪脾气”",
+        "url": "https://www.baidu.com/s?wd=%E5%88%AB%E6%8A%8A%E6%98%93%E6%80%92%E5%A4%9A%E7%96%91%E5%BD%93%E2%80%9C%E6%80%AA%E8%84%BE%E6%B0%94%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "此前，克罗心靠明星穿搭出圈，一条牛仔裤标价20万元。因无统一品控标尺、专柜无身份证书且票据易褪色，高利润催生庞大仿造产业链，真假掺卖成二奢市场顽疾。从业者称，若不改善长期热度存疑。",
+        "summary": "进入秋季以来，不少老年人易怒多疑。医生解读称，此现象并非仅为“怪脾气”，而是光照变化、气温波动等季节因素，以及帕金森病、阿尔茨海默病等脑部疾病或躯体疾病所致。",
         "badge": "热搜",
-        "signal": "7,521,695 热度"
+        "signal": "7,524,023 热度"
       },
       {
         "id": "github-advisory-ghsa-6j52-38f8-qhxr",
@@ -512,8 +512,8 @@
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 49740,
-        "starsToday": 1926
+        "stars": 50068,
+        "starsToday": 1930
       },
       {
         "id": "github-4251a228ae407247",
@@ -522,8 +522,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 308382,
-        "starsToday": 1037
+        "stars": 308551,
+        "starsToday": 1034
       },
       {
         "id": "github-21fcbee2e5fa5e51",
@@ -532,8 +532,8 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "language": "Rust",
-        "stars": 95062,
-        "starsToday": 2881
+        "stars": 95336,
+        "starsToday": 2870
       },
       {
         "id": "github-ef019c07dc2234a1",
@@ -542,8 +542,8 @@
         "url": "https://github.com/JetBrains/thinkrail",
         "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "language": "TypeScript",
-        "stars": 5919,
-        "starsToday": 1116
+        "stars": 6014,
+        "starsToday": 1117
       },
       {
         "id": "github-26fea043179ffd14",
@@ -552,8 +552,8 @@
         "url": "https://github.com/milind-soni/OpenMausBot",
         "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "language": "TypeScript",
-        "stars": 7354,
-        "starsToday": 1190
+        "stars": 7479,
+        "starsToday": 1199
       },
       {
         "id": "github-8abebdcda099d843",
@@ -562,16 +562,16 @@
         "url": "https://github.com/nightly-labs/openbot",
         "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "language": "TypeScript",
-        "stars": 3795,
-        "starsToday": 705
+        "stars": 3883,
+        "starsToday": 709
       },
       {
         "id": "github-eb77769182438648",
         "rank": 7,
         "name": "elayadesign/ai-design-skills",
         "url": "https://github.com/elayadesign/ai-design-skills",
-        "stars": 12011,
-        "starsToday": 1178
+        "stars": 12157,
+        "starsToday": 1187
       },
       {
         "id": "github-1ba5bb3a805d2f64",
@@ -580,8 +580,8 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 104604,
-        "starsToday": 459
+        "stars": 104804,
+        "starsToday": 336
       },
       {
         "id": "github-f3775fe6eb8efc94",
@@ -590,8 +590,8 @@
         "url": "https://github.com/CopilotKit/OpenBot",
         "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
         "language": "TypeScript",
-        "stars": 8023,
-        "starsToday": 240
+        "stars": 8150,
+        "starsToday": 247
       },
       {
         "id": "github-23340045c34d003f",
@@ -599,10 +599,10 @@
         "name": "togg53192-cmd/jailbreaks",
         "url": "https://github.com/togg53192-cmd/jailbreaks",
         "description": "LIST OF ALL MY JAILBREAKS",
-        "stars": 8711,
-        "starsToday": 1610
+        "stars": 9050,
+        "starsToday": 1594
       }
     ],
-    "updatedAt": "2026-10-29T20:18:50.320Z"
+    "updatedAt": "2026-10-30T01:01:00.203Z"
   }
 }
