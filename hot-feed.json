@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-30T19:23:38.572Z",
+  "generatedAt": "2026-10-30T23:48:01.041Z",
   "intelligence": {
-    "updatedAt": "2026-10-30T19:23:38.572Z",
+    "updatedAt": "2026-10-30T23:48:01.041Z",
     "items": [
       {
         "id": "cn-item-d51a7a433fc38012",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-97229",
+        "id": "cisa-kev-cve-2026-118527",
         "category": "security",
-        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-118527",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-29T00:00:00.000Z",
-        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
-        "badge": "CVE-2026-97229",
-        "signal": "已遭利用 · 整改期限 2026-11-01"
+        "publishedAt": "2026-10-30T00:00:00.000Z",
+        "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability ca…",
+        "badge": "CVE-2026-118527",
+        "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
         "id": "ai-openai-84abd1857de5dfd9",
@@ -43,27 +43,27 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-30T17:25:15.000Z",
         "badge": "HN",
-        "signal": "95 分 · 15 评论"
+        "signal": "213 分 · 55 评论"
       },
       {
-        "id": "cn-it-2187bdaf05477827",
+        "id": "cn-it-6127d56e04a82672",
         "category": "cn",
-        "title": "华为官网公开鸿蒙智行享界 V8 选配：标配 ±12° 后轮转向、Ultra 采用 L3 自动驾驶架构，32.98 万元起",
-        "url": "https://www.ithome.com/1/020/386.htm",
+        "title": "不是字节跳动：联发科拿下第二家 AI 芯片大客户，2028 年量产",
+        "url": "https://www.ithome.com/1/020/400.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-30T15:51:23.000Z",
-        "summary": "IT之家 10 月 30 日消息，除了问界新 M8 的选配信息公开外，华为官网还公开了鸿蒙智行享界 V8 的配置信息，该车标配华为乾崑智驾 ADS 5，预计 11 月上旬发布， 官方预售价 32.98 万元起 。 华为官网显示，享界 V8 采用七座布局设计，分 Ultra+、Ultra、Max+ 和 Max 四个版本。除 Max+ 外，享界 V8 其余版本均可选 800V 增程或 800V 纯电动力。 享界 V8 Ultra+ 预售价： 增程版 40.98 万元起 | 纯电…",
+        "publishedAt": "2026-10-30T23:35:47.000Z",
+        "summary": "IT之家 10 月 31 日消息，昨日（10 月 30 日）召开的 2026 年第三季度（7~9 月）财报电话会上，联发科（MediaTek）确认已获得第二家人工智能专用集成电路（AI ASIC）客户（官方暂未公布），预计该项目将于 2028 年进入量产并开始贡献营收。 IT之家查询公开资料，联发科的第一家 AI 专用集成电路（AI ASIC）客户是谷歌。其合作主要围绕 Google 的 TPU（Tensor Processing Unit）AI 加速器；联发科首款数据中心…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-jm85-8cpp-9cjc",
+        "id": "github-advisory-ghsa-8fmv-6rg5-5924",
         "category": "security",
-        "title": "AdminNeo: version-cache array injection causes persistent denial of service",
-        "url": "https://github.com/advisories/GHSA-jm85-8cpp-9cjc",
+        "title": "Kubeflow Pipelines: Pipeline archive upload allows decompression bomb to exhaust server memory",
+        "url": "https://github.com/advisories/GHSA-8fmv-6rg5-5924",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-30T18:53:08.000Z",
-        "summary": "### Summary AdminNeo v5.4.1 gets the latest version from GitHub API in a browser JavaScript function. Version number is then sent by POST request to `?script=version`. This endpoint lacks origin validation and accepts POST data from any so…",
-        "badge": "CVE-2026-59978",
+        "publishedAt": "2026-10-30T23:13:38.000Z",
+        "summary": "## Summary The Kubeflow Pipelines API server decompresses uploaded pipeline archives without adequately bounding expanded data in affected versions. A small ZIP or gzip-compressed tar archive can consume disproportionately large amounts of…",
+        "badge": "CVE-2026-118761",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -84,28 +84,28 @@
         "publishedAt": "2026-10-30T19:05:33.000Z",
         "summary": "Local-AI-Route Local-AI-Route 是一款专为桌面 AI 应用打造的轻量级、免全局 TUN 、免改系统代理的 进程级本地代理启动与管理工具 。开箱 原生深度适配 ： 🤖 ChatGPT （兼容 Windows 商店/独立安装包、macOS App Bundle 、Linux 桌面客户端） 🧠 Claude （兼容 Windows MSIX/Squirrel 、macOS App Bundle 、Linux 桌面端） 🌌 Antigravity 桌面版…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-4405a66614c6a63f",
+        "id": "cn-baidu-82de7ff38648f1a3",
         "category": "cn",
-        "title": "街道试点“共享儿女”：最低199元每月",
-        "url": "https://www.baidu.com/s?wd=%E8%A1%97%E9%81%93%E8%AF%95%E7%82%B9%E2%80%9C%E5%85%B1%E4%BA%AB%E5%84%BF%E5%A5%B3%E2%80%9D%EF%BC%9A%E6%9C%80%E4%BD%8E199%E5%85%83%E6%AF%8F%E6%9C%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "工资发到数币钱包和打银行卡有何不同",
+        "url": "https://www.baidu.com/s?wd=%E5%B7%A5%E8%B5%84%E5%8F%91%E5%88%B0%E6%95%B0%E5%B8%81%E9%92%B1%E5%8C%85%E5%92%8C%E6%89%93%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%89%E4%BD%95%E4%B8%8D%E5%90%8C&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "长沙芙蓉区推出最低199元/月“共享儿女”养老服务，目前已有145名老人报名。该服务通过政府补贴100至300元、老人自缴及企业让利运作。",
+        "summary": "近日，江苏多所高校相继发布通知，教职工工资将逐步通过数字人民币钱包发放。记者解读此举和打银行卡的区别时称：二者都是存在银行里的钱，从数币钱包兑回绑定银行卡，免手续费、实时到账，跨行同样适用。",
         "badge": "热搜",
-        "signal": "7,807,888 热度"
+        "signal": "7,809,368 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-76418",
+        "id": "cisa-kev-cve-2026-111357",
         "category": "security",
-        "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software：Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76418",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111357",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-29T00:00:00.000Z",
-        "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, …",
-        "badge": "CVE-2026-76418",
-        "signal": "已遭利用 · 整改期限 2026-11-01"
+        "publishedAt": "2026-10-30T00:00:00.000Z",
+        "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-1…",
+        "badge": "CVE-2026-111357",
+        "signal": "已遭利用 · 整改期限 2026-11-02"
       },
       {
         "id": "ai-hugging-face-037154e824aaff25",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50307723",
+        "id": "hn-50300683",
         "category": "dev",
-        "title": "GitHub Incident with Actions, Pages, and Webhooks",
-        "url": "https://www.githubstatus.com/incidents/pwxsjgnvrk6b",
+        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-30T17:57:35.000Z",
+        "publishedAt": "2026-10-30T07:09:12.000Z",
         "badge": "HN",
-        "signal": "87 分 · 31 评论"
+        "signal": "727 分 · 453 评论"
       },
       {
         "id": "cn-item-4986b0071821e458",
@@ -137,14 +137,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-jpxq-7h8p-2q76",
+        "id": "github-advisory-ghsa-wg5q-x4j9-qm54",
         "category": "security",
-        "title": "joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Decryption",
-        "url": "https://github.com/advisories/GHSA-jpxq-7h8p-2q76",
+        "title": "Kubeflow Pipelines: Run-log endpoint permits unauthorized access to pod logs",
+        "url": "https://github.com/advisories/GHSA-wg5q-x4j9-qm54",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-30T14:54:20.000Z",
-        "summary": "### Summary `joserfc.jwe.decrypt_json()`, the library's public parser for JWE General JSON Serialization, accepts an attacker-controlled `recipients` array of unbounded length and performs one full private-key decryption operation (`decryp…",
-        "badge": "CVE-2026-119283",
+        "publishedAt": "2026-10-30T23:13:29.000Z",
+        "summary": "## Summary The Kubeflow Pipelines API server's `GET /apis/v1alpha1/runs/{run_id}/nodes/{node_id}/log` handler retrieves logs without authorizing the caller against the selected run. A caller who can reach the backend and knows a victim run…",
+        "badge": "CVE-2026-118759",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -169,25 +169,25 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-8d19d09047678386",
+        "id": "cn-it-bbe7a9702bfdc564",
         "category": "cn",
-        "title": "英特尔：以色列 Fab 28 爆炸事故已致工厂停产约两周，预计 Q3 和 Q4 两个季度损失 6 亿美元营收",
-        "url": "https://www.ithome.com/1/020/385.htm",
+        "title": "把空气“冷冻”起来存电能：我国液态空气储能重大突破，全球最大规模、百分百国产",
+        "url": "https://www.ithome.com/1/020/399.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-30T15:49:47.000Z",
-        "summary": "IT之家 10 月 30 日消息，英特尔首席财务官戴夫 · 津斯纳（Dave Zinsner）在今日的财报电话会议上表示，10 月中旬发生在以色列的爆炸事故导致位于基里亚特加特的 Fab 28 晶圆厂停产约两周，预计将在第四季度和 2027 年第一季度分别减少约 3 亿美元 （IT之家注：现汇率约合 20.03 亿元人民币） 收入。 公开报道显示，这起爆炸发生于 10 月 14 日，造成 2 人死亡、1 人重伤。英特尔 CEO 陈立武表示，“我们在以色列的工厂已经关闭了大约…",
+        "publishedAt": "2026-10-30T23:33:03.000Z",
+        "summary": "IT之家 10 月 31 日消息，据央视新闻今日报道， 全球最大规模 60 兆瓦液态空气储能国家示范项目 成功并网发电，实现液态空气储能技术工程化、商业化落地的重大突破。 该液态空气储能项目位于青海省格尔木市，总规模 6 万千瓦，每天可助力 60 万度清洁能源消纳， 全年输电量约达 1.8 亿度，满足 3 万户家庭一年的用电需求 。 项目采用-194℃ 超低温深冷液化核心工艺，以空气作为工质， 在常压超低温条件下实现电能与冷能的存储与释放 ，兼具大规模、长时效、长寿命等优势…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-41709",
+        "id": "cisa-kev-cve-2026-97229",
         "category": "security",
-        "title": "Broadcom VMware ESX：Broadcom VMWare ESX Insufficient Logging Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-41709",
+        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-28T00:00:00.000Z",
-        "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
-        "badge": "CVE-2026-41709",
-        "signal": "已遭利用 · 整改期限 2026-11-11"
+        "publishedAt": "2026-10-29T00:00:00.000Z",
+        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
+        "badge": "CVE-2026-97229",
+        "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
         "id": "ai-google-deepmind-393575ee7d83ff0a",
@@ -207,27 +207,27 @@
         "source": "Hacker News",
         "publishedAt": "2026-10-30T15:10:31.000Z",
         "badge": "HN",
-        "signal": "223 分 · 137 评论"
+        "signal": "335 分 · 255 评论"
       },
       {
-        "id": "cn-baidu-53c3367c9393245a",
+        "id": "cn-baidu-536c853ee0142c39",
         "category": "cn",
-        "title": "股票群再度“鸦雀无声”",
-        "url": "https://www.baidu.com/s?wd=%E8%82%A1%E7%A5%A8%E7%BE%A4%E5%86%8D%E5%BA%A6%E2%80%9C%E9%B8%A6%E9%9B%80%E6%97%A0%E5%A3%B0%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "金价降了卖爆了 银价已腰斩",
+        "url": "https://www.baidu.com/s?wd=%E9%87%91%E4%BB%B7%E9%99%8D%E4%BA%86%E5%8D%96%E7%88%86%E4%BA%86+%E9%93%B6%E4%BB%B7%E5%B7%B2%E8%85%B0%E6%96%A9&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月30日，A股低开后震荡回升、午后再度走低，创业板指跌超4%、科创50跌超5%，超4500只个股下跌；受美股科技股及龙头三季报拖累，各大股票群情绪再转冷。",
+        "summary": "10月30日，国际金价一度跌破每盎司4000美元，金饰价格回落至每克1200元，北京等地购金热情升温，小克重饰品热销。同时现货白银自1月底以来已腰斩，带动购银潮。",
         "badge": "热搜",
-        "signal": "7,711,899 热度"
+        "signal": "7,712,080 热度"
       },
       {
-        "id": "github-advisory-ghsa-qm8w-vx34-5j9j",
+        "id": "github-advisory-ghsa-5849-834g-hvw5",
         "category": "security",
-        "title": "@nx/maven and @nx/gradle have OS command injection via nx.json plugin options",
-        "url": "https://github.com/advisories/GHSA-qm8w-vx34-5j9j",
+        "title": "pypdf has possible infinite loop when hitting EOF in standard xref table during trailer search",
+        "url": "https://github.com/advisories/GHSA-5849-834g-hvw5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-30T14:42:14.000Z",
-        "summary": "## Summary `@nx/maven` and `@nx/gradle` spawn their project-graph analyzers through a shell and interpolate plugin options read from `nx.json` straight into the command line. Because a shell parses the whole line, an option value containin…",
-        "badge": "CVE-2026-119282",
+        "publishedAt": "2026-10-30T23:13:16.000Z",
+        "summary": "### Impact An attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires opening an incomplete file without a `trailer`. ### Patches This has been fixed in pypdf==6.21.4. ### Workarounds If you cann…",
+        "badge": "CVE-2026-119203",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -261,55 +261,55 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-46300",
+        "id": "cisa-kev-cve-2026-76418",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Missing Initialization of a Variable Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-46300",
+        "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software：Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76418",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-28T00:00:00.000Z",
-        "summary": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing E…",
-        "badge": "CVE-2026-46300",
-        "signal": "已遭利用 · 整改期限 2026-10-31"
+        "publishedAt": "2026-10-29T00:00:00.000Z",
+        "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, …",
+        "badge": "CVE-2026-76418",
+        "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
-        "id": "ai-openai-9349f418e7bc7ab4",
+        "id": "ai-openai-574dbaf7fc8731e4",
         "category": "ai",
-        "title": "An updated Model Spec for more capable and beneficial AI",
-        "url": "https://openai.com/index/updated-model-spec",
+        "title": "Fair use benefits everyone",
+        "url": "https://openai.com/index/fair-use-benefits-everyone",
         "source": "OpenAI",
-        "publishedAt": "2026-10-29T17:00:00.000Z",
-        "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+        "publishedAt": "2026-10-30T00:00:00.000Z",
+        "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50306442",
+        "id": "hn-50310398",
         "category": "dev",
-        "title": "A Working Nintendo in ~1GB of Qwen Weights",
-        "url": "https://github.com/dbreunig/nesformer",
+        "title": "sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+        "url": "https://www.firezone.dev/blog/introducing-sanstun",
         "source": "Hacker News",
-        "publishedAt": "2026-10-30T16:40:22.000Z",
+        "publishedAt": "2026-10-30T21:30:00.000Z",
         "badge": "HN",
-        "signal": "102 分 · 83 评论"
+        "signal": "44 分 · 3 评论"
       },
       {
-        "id": "cn-it-2287697779a50472",
+        "id": "cn-it-7d7a635897825a64",
         "category": "cn",
-        "title": "《影之刃零》开发成本 3~4 亿元，媒体评分超《黑神话：悟空》",
-        "url": "https://www.ithome.com/1/020/384.htm",
+        "title": "Anthropic Claude Max 20x 订阅更名 Ultra，已验证账户无五小时限制",
+        "url": "https://www.ithome.com/1/020/398.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-30T15:43:10.000Z",
-        "summary": "IT之家 10 月 30 日消息，《影之刃零》已于 10 月 29 日正式登陆 PC 与 PS5 平台，国区标准版定价 268 元，豪华版 328 元，限量典藏版 1199 元、限量 2 万套。 灵游坊创始人梁其伟向蓝鲸新闻透露，《影之刃零》早在 2017 年就已启动世界观与战斗体系的早期构思、2022 年初项目正式立项，总研发成本在 3 亿至 4 亿元之间。 作为对比，《黑神话：悟空》研发周期约 7 年，总开发成本同样在 4 亿元左右。而《影之刃零》从立项到上市的节奏，与…",
+        "publishedAt": "2026-10-30T23:26:41.000Z",
+        "summary": "IT之家 10 月 31 日消息，Anthropic 调整了 Claude 针对个人消费者的付费套餐命名： 原 Max 20x 计划更名为 Ultra 计划（价格仍为 200 美元 （IT之家注：现汇率约合 1,335 元人民币） / 月）， 并对通过验证的账户取消了 5 小时会话用量限制 （仍受每周限额约束）； 原 Max 5x 计划则直接简化为 Claude Max（100 美元 （现汇率约合 667.7 元人民币） / 月）。 据介绍，Ultra 计划每周拥有 Pro…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-qr28-fpjm-wq7f",
+        "id": "github-advisory-ghsa-cggf-277g-3q54",
         "category": "security",
-        "title": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
-        "url": "https://github.com/advisories/GHSA-qr28-fpjm-wq7f",
+        "title": "pypdf has possible large memory usage when parsing page tree",
+        "url": "https://github.com/advisories/GHSA-cggf-277g-3q54",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-29T16:41:28.000Z",
-        "summary": "### Summary `decodeUriComponent()` takes quadratic time on malformed input that has many distinct percent-encoded runs. A single unauthenticated request of about 224 KB can block the Node.js event loop for about 20 seconds. Version 0.5.0, …",
-        "badge": "CVE-2026-118664",
+        "publishedAt": "2026-10-30T23:13:01.000Z",
+        "summary": "### Impact An attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires parsing the page tree with many shared resources. ### Patches This has been fixed in pypdf==6.21.4. ### Workarounds If you …",
+        "badge": "CVE-2026-119204",
         "signal": "HIGH · CVSS 0.0"
       },
       {
@@ -331,7 +331,7 @@
         "publishedAt": "2026-10-30T11:03:26.000Z",
         "summary": "https://easyoo.xyz/ 发现一个好用的 codex claude 代充，成品号网站",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-af9b241c4e6295a5",
@@ -341,18 +341,18 @@
         "source": "百度热搜",
         "summary": "时序更替，寒意渐增。眼下，北方地区已陆续启动冬季保暖保供。“供电供热事关经济发展全局和社会稳定大局，是关系民生的大事。”习近平总书记高度重视保障能源安全稳定供应，多次强调“确保群众温暖过冬”。",
         "badge": "热搜",
-        "signal": "7,615,905 热度"
+        "signal": "7,618,334 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-48356",
+        "id": "cisa-kev-cve-2026-41709",
         "category": "security",
-        "title": "Adobe Commerce and Magento：Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-48356",
+        "title": "Broadcom VMware ESX：Broadcom VMWare ESX Insufficient Logging Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-41709",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-27T00:00:00.000Z",
-        "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the v…",
-        "badge": "CVE-2026-48356",
-        "signal": "已遭利用 · 整改期限 2026-11-10"
+        "publishedAt": "2026-10-28T00:00:00.000Z",
+        "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+        "badge": "CVE-2026-41709",
+        "signal": "已遭利用 · 整改期限 2026-11-11"
       },
       {
         "id": "ai-hugging-face-718617961cab3abc",
@@ -364,14 +364,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50300683",
+        "id": "hn-50277379",
         "category": "dev",
-        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+        "title": "Cloudflare Turnstile solver library (no headless browser required)",
+        "url": "https://github.com/chris124567/cfsolve",
         "source": "Hacker News",
-        "publishedAt": "2026-10-30T07:09:12.000Z",
+        "publishedAt": "2026-10-28T17:29:23.000Z",
         "badge": "HN",
-        "signal": "539 分 · 394 评论"
+        "signal": "21 分 · 3 评论"
       },
       {
         "id": "cn-item-12a9c2d7dc004721",
@@ -384,24 +384,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-vpp8-g58w-m8mp",
+        "id": "github-advisory-ghsa-mfr5-77xh-9j7h",
         "category": "security",
-        "title": "Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset",
-        "url": "https://github.com/advisories/GHSA-vpp8-g58w-m8mp",
+        "title": "pypdf has possible infinite loop when cloning dictionaries",
+        "url": "https://github.com/advisories/GHSA-mfr5-77xh-9j7h",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-29T16:41:06.000Z",
-        "summary": "## Summary An uncontrolled-resource-consumption vulnerability (CWE-400) in the Twisted HTTP/2 server lets any unauthenticated remote client exhaust server CPU over a single connection. A client that sends a request header block with `END_S…",
-        "badge": "GHSA-VPP8-G58W-M8MP",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-10-30T23:12:20.000Z",
+        "summary": "### Impact An attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires cloning/duplicating a `DictionaryObject`. ### Patches This has been fixed in pypdf==6.21.4. ### Workarounds If you cannot upg…",
+        "badge": "CVE-2026-119205",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-openai-0f01adb2acab0a67",
+        "id": "ai-openai-9349f418e7bc7ab4",
         "category": "ai",
-        "title": "How we detect frontier model misalignment",
-        "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "url": "https://openai.com/index/updated-model-spec",
         "source": "OpenAI",
-        "publishedAt": "2026-10-29T09:00:00.000Z",
-        "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+        "publishedAt": "2026-10-29T17:00:00.000Z",
+        "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
         "badge": "OpenAI"
       },
       {
@@ -416,25 +416,25 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-164a5fe0c90e575b",
+        "id": "cn-it-bcd37cf8757e77fe",
         "category": "cn",
-        "title": "索尼 PS5 联名女星 Lisa 限量款 DualSense 手柄控制器国行开售，639 元",
-        "url": "https://www.ithome.com/1/020/383.htm",
+        "title": "消息称苹果下发指引，要求门店按标准流程维修 / 更换 iPhone Duo 内屏开裂",
+        "url": "https://www.ithome.com/1/020/397.htm",
         "source": "IT之家",
-        "publishedAt": "2026-10-30T15:37:07.000Z",
-        "summary": "IT之家 10 月 30 日消息，索尼 SIE 与韩国女团 BLACKPINK 成员、歌手兼演员 Lisa 合作打造的索尼 PS5 DualSense 手柄控制器国行现已开售，定价为 639 元。 京东 索尼 PlayStation × LISA 联名 DualSense 无线手柄 639 元 直达链接 这款限定版手柄以柔和的灰色为主色调。正面的主要图案是对 Lisa 眼部妆容的艺术化呈现，她画着睫毛膏的双眼以蓝色表现，而 PlayStation 标志性的四个按键符号则融入…",
+        "publishedAt": "2026-10-30T23:22:13.000Z",
+        "summary": "IT之家 10 月 31 日消息，科技媒体 MacRumors 今天（10 月 31 日）发布博文，报道称苹果公司本周已向 Apple Store 零售店及授权服务提供商下发指引， 在收到用户报告的 iPhone Duo 内屏开裂后，要求技术人员规范检查，并按标准流程维修或更换设备。 在这份指引中，苹果公司再次强调此前声明内容，指出只有少量 iPhone Duo 出现内屏开裂情况。苹果此前回应如下： 首批用户对 iPhone Duo 的反馈整体非常好，开发者也在快速更新应用…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-111497",
+        "id": "cisa-kev-cve-2026-46300",
         "category": "security",
-        "title": "Google Brotli：Google Brotli Unchecked Return Value Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111497",
+        "title": "Linux Kernel：Linux Kernel Missing Initialization of a Variable Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-46300",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-27T00:00:00.000Z",
-        "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute ar…",
-        "badge": "CVE-2026-111497",
-        "signal": "已遭利用 · 整改期限 2026-11-10"
+        "publishedAt": "2026-10-28T00:00:00.000Z",
+        "summary": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing E…",
+        "badge": "CVE-2026-46300",
+        "signal": "已遭利用 · 整改期限 2026-10-31"
       },
       {
         "id": "ai-google-deepmind-ad09b0946a60b7ff",
@@ -447,34 +447,34 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50305637",
+        "id": "hn-50309314",
         "category": "dev",
-        "title": "Florilegium: Procedural Flowers in LaTeX",
-        "url": "https://github.com/kevinraymond/florilegium",
+        "title": "Jules Verne's Lost Novel",
+        "url": "https://blue-continuum.com/verne-paris",
         "source": "Hacker News",
-        "publishedAt": "2026-10-30T15:48:12.000Z",
+        "publishedAt": "2026-10-30T19:55:10.000Z",
         "badge": "HN",
-        "signal": "98 分 · 18 评论"
+        "signal": "63 分 · 13 评论"
       },
       {
-        "id": "cn-baidu-fa1b018c8dda1e3f",
+        "id": "cn-baidu-2653531c502c9abd",
         "category": "cn",
-        "title": "今年全国实现生娃基本不花钱",
-        "url": "https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E5%85%A8%E5%9B%BD%E5%AE%9E%E7%8E%B0%E7%94%9F%E5%A8%83%E5%9F%BA%E6%9C%AC%E4%B8%8D%E8%8A%B1%E9%92%B1&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "阿维塔撤掉发布会 救不了卖不动的车",
+        "url": "https://www.baidu.com/s?wd=%E9%98%BF%E7%BB%B4%E5%A1%94%E6%92%A4%E6%8E%89%E5%8F%91%E5%B8%83%E4%BC%9A+%E6%95%91%E4%B8%8D%E4%BA%86%E5%8D%96%E4%B8%8D%E5%8A%A8%E7%9A%84%E8%BD%A6&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "10月23日国务院常务会议提出加快建设生育友好型社会。今年10月起上海、沈阳等多地分娩医疗费个人“无自付”，医保局力争2026年全国基本实现分娩“无自付”。",
+        "summary": "10月28日深夜，阿维塔取消新车发布会，改发内部会议视频，遭网友质疑是刻意营销，且其9月国内零售仅3046辆。媒体点评：博眼球的表演式视频能换来流量，却难以获得市场对高端品牌长期实力的认可。",
         "badge": "热搜",
-        "signal": "7,523,590 热度"
+        "signal": "7,522,994 热度"
       },
       {
-        "id": "github-advisory-ghsa-9hj8-73fh-9963",
+        "id": "github-advisory-ghsa-4528-x5fx-h6hg",
         "category": "security",
-        "title": "zip: legacy Shrink/Reduce/Implode decoder: denial of service from attacker-controlled ZIP64 uncompressed size",
-        "url": "https://github.com/advisories/GHSA-9hj8-73fh-9963",
+        "title": "joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service",
+        "url": "https://github.com/advisories/GHSA-4528-x5fx-h6hg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-10-29T16:40:19.000Z",
-        "summary": "### Summary A malicious 149-byte ZIP archive can cause a denial of service in applications that enable `legacy-zip` and use `ZipArchive::extract()`. An attacker-controlled ZIP64 uncompressed size triggers a `capacity overflow` panic in the…",
-        "badge": "CVE-2026-115907",
+        "publishedAt": "2026-10-30T23:10:23.000Z",
+        "summary": "### Summary `Joi.string().email({ multiple: true })` takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several seconds, which causes a denial o…",
+        "badge": "CVE-2026-118772",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -512,7 +512,7 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 105944,
+        "stars": 106192,
         "starsToday": 1145
       },
       {
@@ -522,7 +522,7 @@
         "url": "https://github.com/milind-soni/OpenMausBot",
         "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "language": "TypeScript",
-        "stars": 8383,
+        "stars": 8600,
         "starsToday": 899
       },
       {
@@ -532,7 +532,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "language": "Rust",
-        "stars": 96826,
+        "stars": 97011,
         "starsToday": 2299
       },
       {
@@ -542,7 +542,7 @@
         "url": "https://github.com/CopilotKit/OpenBot",
         "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
         "language": "TypeScript",
-        "stars": 8654,
+        "stars": 8765,
         "starsToday": 707
       },
       {
@@ -552,7 +552,7 @@
         "url": "https://github.com/Renhuai123/ziwei-doushu",
         "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "language": "TypeScript",
-        "stars": 11124,
+        "stars": 11186,
         "starsToday": 1146
       },
       {
@@ -562,8 +562,8 @@
         "url": "https://github.com/expo/skills",
         "description": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
         "language": "Shell",
-        "stars": 3846,
-        "starsToday": 233
+        "stars": 3887,
+        "starsToday": 108
       },
       {
         "id": "github-5f558d6b60335f40",
@@ -572,7 +572,7 @@
         "url": "https://github.com/macro-inc/macro",
         "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
         "language": "Rust",
-        "stars": 5806,
+        "stars": 5859,
         "starsToday": 117
       },
       {
@@ -582,8 +582,8 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 307333,
-        "starsToday": 882
+        "stars": 307450,
+        "starsToday": 889
       },
       {
         "id": "github-ca3faa494e15ccd9",
@@ -591,7 +591,7 @@
         "name": "pingdotgg/t3code",
         "url": "https://github.com/pingdotgg/t3code",
         "language": "TypeScript",
-        "stars": 32574,
+        "stars": 32715,
         "starsToday": 920
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 51624,
+        "stars": 51745,
         "starsToday": 2282
       }
     ],
-    "updatedAt": "2026-10-30T19:23:38.572Z"
+    "updatedAt": "2026-10-30T23:48:01.041Z"
   }
 }
