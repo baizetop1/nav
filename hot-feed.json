@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-31T17:44:43.001Z",
+  "generatedAt": "2026-10-31T21:35:57.380Z",
   "intelligence": {
-    "updatedAt": "2026-10-31T17:44:43.001Z",
+    "updatedAt": "2026-10-31T21:35:57.380Z",
     "items": [
       {
         "id": "cn-item-eef8cf75f7a8ccc7",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50316531",
+        "id": "hn-50319510",
         "category": "dev",
-        "title": "Malware uses LLMs to rank victims by how much they're worth",
-        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+        "title": "HackerTube: YouTube built from videos recommended by HN",
+        "url": "https://karpathy.bearblog.dev/hacker-tube/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-31T14:29:03.000Z",
+        "publishedAt": "2026-10-31T19:56:53.000Z",
         "badge": "HN",
-        "signal": "144 分 · 63 评论"
+        "signal": "207 分 · 95 评论"
       },
       {
         "id": "cn-it-9101cfd53c4d1893",
@@ -84,7 +84,7 @@
         "publishedAt": "2026-10-31T16:52:23.000Z",
         "summary": "最近把自己的 AI Coding Agent 记忆底座迁移到了自建的 OpenViking 上（ OpenViking 真的满足我所有的要求：即是各种 Agent 的统一大脑自进化、又是知识库，检索的时候是两方面综合起来的）。RAG 相关的东西看着挺吓人，动辄推荐高配服务器和本地显存，实际上用下来，只要选型想清楚，一台几十块钱的入门级云服务器完全能跑得飞起。 这篇不是教你怎么敲命令的安装教程，只是聊聊折腾这一圈下来，在云主机、模型组合、算力开销上的一些真实心得和踩坑取舍。 …",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-baidu-438f0de4be5165a3",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "一款号称专治腰腿疼痛的白芷蝮蛇丸，标注为方便食品，售价高达2388元一罐。央视曝光，该产品违规添加元胡，其天然含镇痛药罗通定；它成本仅约41元，五年销售额超1100万元，商家还伪造资质证书，涉案负责人已被采取刑事强制措施。",
         "badge": "热搜",
-        "signal": "7,809,495 热度"
+        "signal": "7,808,721 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111357",
@@ -117,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50314666",
+        "id": "hn-50319143",
         "category": "dev",
-        "title": "Molly (Signal fork) has not been updated since 3 months and is vulnerable",
-        "url": "https://piefed.world/post/1503394",
+        "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+        "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
         "source": "Hacker News",
-        "publishedAt": "2026-10-31T10:23:41.000Z",
+        "publishedAt": "2026-10-31T19:16:30.000Z",
         "badge": "HN",
-        "signal": "208 分 · 137 评论"
+        "signal": "151 分 · 73 评论"
       },
       {
         "id": "cn-item-51cc47f467bc88f0",
@@ -166,7 +166,7 @@
         "publishedAt": "2026-10-31T16:32:02.000Z",
         "summary": "最近把之前关于压缩的各种折腾整理成了一篇长文，发在博客上，想搬来论坛和大家聊聊。 一开始只是想给博客离线包找更强的压缩算法：7-Zip 的 LZMA2 已经很能打，但我不信邪，又试了 ZPAQ 、PAQ8PX 、NNCP 、cmix 。结果挺有意思： ZPAQ ：一分钟左右把 16MiB 压到约 3.5MiB ，老算法但速度和压缩比还挺平衡； PAQ8PX ：压到约 3.1MiB ，本次冠军，但花了一个半小时、吃了 30GiB 内存，解压同样痛苦； NNCP ：FFmpeg…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "4 回复"
       },
       {
         "id": "cn-it-717ad9873064ba2e",
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50314699",
+        "id": "hn-50318720",
         "category": "dev",
-        "title": "We Took over ChatGPT Accounts",
-        "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+        "title": "It's the Memory Latency, Stupid",
+        "url": "https://pivotlake.io/blog/its-the-memory-latency-stupid/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-31T10:30:11.000Z",
+        "publishedAt": "2026-10-31T18:38:16.000Z",
         "badge": "HN",
-        "signal": "226 分 · 108 评论"
+        "signal": "54 分 · 10 评论"
       },
       {
         "id": "cn-baidu-743deaea8a190eba",
@@ -217,7 +217,7 @@
         "source": "百度热搜",
         "summary": "10月30日，六家宠物食品上市公司三季报出炉。第三季度其营收合计约52.28亿元，归母净利润合计约1.47亿元，同比下降约62.34%，均增收不增利。收入放缓后，原材料涨价、汇率波动及销售投入增加挤压利润。目前行业进入洗牌期，企业正寻找高端功能主粮等细分机会并重新安排投入。",
         "badge": "热搜",
-        "signal": "7,714,597 热度"
+        "signal": "7,714,652 热度"
       },
       {
         "id": "github-advisory-ghsa-5849-834g-hvw5",
@@ -282,14 +282,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50317363",
+        "id": "hn-50320028",
         "category": "dev",
-        "title": "Casio Watches of the 1980s",
-        "url": "https://www.casio.com/us/watches/50th/Heritage/1980s/",
+        "title": "With 86% of the words, you might understand only 38% of an anime's lines",
+        "url": "https://learnfromx.com/research/anime-word-coverage-vs-lines-understood",
         "source": "Hacker News",
-        "publishedAt": "2026-10-31T16:00:48.000Z",
+        "publishedAt": "2026-10-31T20:46:39.000Z",
         "badge": "HN",
-        "signal": "82 分 · 29 评论"
+        "signal": "11 分 · 8 评论"
       },
       {
         "id": "cn-it-8e44246bd74a41fc",
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "本周，一组经济数据新鲜出炉，海洋经济彰显发展韧性，绿色电力保障更加充足，消费品以旧换新激活内需潜力，多点协同发力，尽显中国经济发展活力。",
         "badge": "热搜",
-        "signal": "7,617,102 热度"
+        "signal": "7,615,830 热度"
       },
       {
         "id": "cisa-kev-cve-2026-41709",
@@ -364,14 +364,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50317484",
+        "id": "hn-50319061",
         "category": "dev",
-        "title": "A/SIDE – Private photo sharing and encrypted messages",
-        "url": "https://a-side.social/",
+        "title": "The Duty of a Scholar",
+        "url": "https://www.daemonology.net/blog/2026-10-31-The-Duty-of-a-Scholar.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-31T16:16:20.000Z",
+        "publishedAt": "2026-10-31T19:07:36.000Z",
         "badge": "HN",
-        "signal": "14 分 · 13 评论"
+        "signal": "59 分 · 12 评论"
       },
       {
         "id": "cn-item-4b63e0aada489e7d",
@@ -447,14 +447,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50261253",
+        "id": "hn-50318871",
         "category": "dev",
-        "title": "Simple circuits can create complex behaviors",
-        "url": "https://aatishb.com/myriad/lets-build-a-brain/",
+        "title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
+        "url": "https://ryanmadden.net/gpt-56-beats-factorio/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-27T16:01:06.000Z",
+        "publishedAt": "2026-10-31T18:50:34.000Z",
         "badge": "HN",
-        "signal": "126 分 · 29 评论"
+        "signal": "124 分 · 126 评论"
       },
       {
         "id": "cn-baidu-27aa4654984eabc2",
@@ -464,7 +464,7 @@
         "source": "百度热搜",
         "summary": "近日，人民日报刊文评“大衣哥”朱之文遭黑粉举报致十余场演出取消一事，称是否劣迹须权威认定，恶意举报不能成伤人“暗器”，也应保护被举报者权益。",
         "badge": "热搜",
-        "signal": "7,520,436 热度"
+        "signal": "7,521,467 热度"
       },
       {
         "id": "github-advisory-ghsa-4528-x5fx-h6hg",
@@ -512,7 +512,7 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 107440,
+        "stars": 107709,
         "starsToday": 1723
       },
       {
@@ -522,7 +522,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 308133,
+        "stars": 308268,
         "starsToday": 882
       },
       {
@@ -532,8 +532,8 @@
         "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
         "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
         "language": "Shell",
-        "stars": 30952,
-        "starsToday": 1347
+        "stars": 31088,
+        "starsToday": 724
       },
       {
         "id": "github-ca3faa494e15ccd9",
@@ -541,7 +541,7 @@
         "name": "pingdotgg/t3code",
         "url": "https://github.com/pingdotgg/t3code",
         "language": "TypeScript",
-        "stars": 34604,
+        "stars": 35191,
         "starsToday": 1148
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/Renhuai123/ziwei-doushu",
         "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "language": "TypeScript",
-        "stars": 12195,
+        "stars": 12233,
         "starsToday": 1093
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/milind-soni/OpenMausBot",
         "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "language": "TypeScript",
-        "stars": 9390,
+        "stars": 9500,
         "starsToday": 1304
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "language": "Rust",
-        "stars": 98006,
+        "stars": 98163,
         "starsToday": 1339
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 309896,
+        "stars": 309988,
         "starsToday": 663
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/lightpanda-io/browser",
         "description": "Lightpanda: the headless browser designed for AI and automation",
         "language": "Zig",
-        "stars": 39011,
+        "stars": 39149,
         "starsToday": 929
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
         "language": "Python",
-        "stars": 52561,
+        "stars": 52706,
         "starsToday": 1035
       }
     ],
-    "updatedAt": "2026-10-31T17:44:43.001Z"
+    "updatedAt": "2026-10-31T21:35:57.380Z"
   }
 }
