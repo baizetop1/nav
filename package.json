@@ -320,7 +320,8 @@
     "test:shuihu-camp-work": "node scripts/shuihu-camp-work-selfcheck.mjs",
     "test:shuihu-camp-work-cloud": "node scripts/shuihu-camp-work-cloud-selfcheck.mjs",
     "check:shuihu-camp-work": "node scripts/shuihu-camp-work-browser.mjs",
-    "check:shuihu-camp-work-animation": "node scripts/shuihu-camp-work-animation-browser.mjs"
+    "check:shuihu-camp-work-animation": "node scripts/shuihu-camp-work-animation-browser.mjs",
+    "test:external-game-link": "node scripts/external-game-link-selfcheck.mjs --dist"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

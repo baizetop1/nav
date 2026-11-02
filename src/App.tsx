@@ -1,3 +1,4 @@
+import { SHUIHU_GAME_URL } from './lib/externalApplications';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Fuse from 'fuse.js';
 import { AlertTriangle, BrainCircuit, Check, Coffee, Command, Copy, Download, ExternalLink, FileText, Inbox as InboxIcon, Languages, Lock, Menu, Network, Plus, QrCode, RefreshCw, Search, Trash2, Upload, X } from 'lucide-react';
@@ -779,7 +780,7 @@ function App() {
     { id: 'organize', title: '智能整理中心', description: '查重复、补全资料、批量调整分类与标签', keywords: ['整理', '去重', 'organize'], icon: 'settings', run: () => openAdmin('organize') },
     { id: 'web-capture', title: '收集网页', description: '保存网址、备注或安装一键收集书签', keywords: ['收集', '分享', 'capture'], icon: 'add', run: openWebCapture },
     { id: 'work-session', title: '工作会话', description: '专注计时、工作网站组合与小结', keywords: ['工作', '专注', '番茄', 'focus'], icon: 'work', run: openWorkPanel },
-    { id: 'shuihu', title: '打开白泽水浒', description: '两卷江湖 · 梁山存档匣 0.3 · 20个本机位置', keywords: ['game', '游戏', '水浒', '梁山', '寨主', '林冲', '鲁智深'], icon: 'study', run: () => { window.open(`${import.meta.env.BASE_URL}game/`, '_blank', 'noopener,noreferrer'); } },
+    { id: 'shuihu', title: '打开白泽水浒', description: '经营山寨、结识好汉、出征历练；进入独立游戏站', keywords: ['game', '游戏', '水浒', '梁山', '寨主', '林冲', '鲁智深'], icon: 'study', run: () => { window.open(SHUIHU_GAME_URL, '_blank', 'noopener,noreferrer'); } },
     { id: 'rest', title: '休息一下', description: '在多幅动态风景间轮播，回来继续学习', keywords: ['rest', 'break', '休息', '放松', '动画', '泛舟', '轮播', '鹈鹕', '骑行'], icon: 'relax', run: openRest },
     { id: 'focus-search', title: '聚焦站内搜索', description: '搜索网站或使用外部搜索前缀', keywords: ['search', '搜索', '/'], icon: 'search', run: () => focusAfterRender('search-input') },
     { id: 'quick-capture', title: '快速记录', description: '立即写入本机 Inbox', keywords: ['capture', '记录', '收件箱', '+'], icon: 'add', run: openQuickCapture },
@@ -897,7 +898,7 @@ function App() {
               { id: 'tech-os', label: 'Tech OS', icon: <BrainCircuit size={17} />, run: openTechOs },
               { id: 'blog', label: '博客工作台', icon: <FileText size={17} />, run: openBlog },
               { id: 'rest', label: '休息一下', icon: <Coffee size={17} />, run: openRest },
-              { id: 'game', label: '白泽水浒', href: import.meta.env.BASE_URL + 'game/' },
+              { id: 'game', label: '白泽水浒', href: SHUIHU_GAME_URL },
               { id: 'reading', label: '阅读中心', icon: <FileText size={17} />, active: readingOpen, run: () => setReadingOpen(value => !value) },
               { id: 'graph', label: '知识图谱', icon: <Network size={17} />, active: graphOpen, run: () => setGraphOpen(value => !value) },
               { id: 'capture', label: '收集网页', icon: <Plus size={17} />, run: openWebCapture },
