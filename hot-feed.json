@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-01T23:36:38.839Z",
+  "generatedAt": "2026-11-02T06:05:53.519Z",
   "intelligence": {
-    "updatedAt": "2026-11-01T23:36:38.839Z",
+    "updatedAt": "2026-11-02T06:05:53.519Z",
     "items": [
       {
-        "id": "cn-item-2c3a24cb7d658e6c",
+        "id": "cn-item-985e981ea2c1d0b3",
         "category": "cn",
-        "title": "伊朗革命卫队情报机构宣布逮捕一名间谍",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-02/10724531.shtml",
+        "title": "威逼利诱本国大学研究军事技术，日方意欲何为？",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-02/10724686.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-01T23:22:37.000Z",
-        "summary": "中新网11月2日电 据伊朗媒体报道，当地时间11月1日，伊朗革命卫队情报机构宣布逮捕一名间谍。",
+        "publishedAt": "2026-11-02T05:02:30.000Z",
+        "summary": "中新网11月2日电(记者 刁炜)日本防卫省近日宣布，已选定47个研究课题，纳入2026年度“安保技术研究促进计划”。",
         "badge": "中新网要闻"
       },
       {
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-01T15:58:28.000Z",
         "badge": "HN",
-        "signal": "782 分 · 162 评论"
+        "signal": "1170 分 · 209 评论"
       },
       {
-        "id": "cn-it-0e5059336bc9d5e2",
+        "id": "cn-it-537341821bb66b5f",
         "category": "cn",
-        "title": "微软 AI 负责人苏莱曼：AI 模型没有意识，我们应确保它永远如此",
-        "url": "https://www.ithome.com/1/020/848.htm",
+        "title": "苹果 iOS 27.2 更新无法阻止百度网盘摇一摇广告，知情人士回应称并非特意绕开",
+        "url": "https://www.ithome.com/1/020/979.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-01T23:36:08.000Z",
-        "summary": "IT之家 11 月 2 日消息，微软 AI 负责人（Mustafa Suleyman）昨天在 X 平台发布长文，称目前的 AI 模型并不具备意识，人们应该让这种情况一直保持下去。 IT之家了解到，苏莱曼表示：“据我了解，如果开发具有意识的 AI 是可能的，那么这么做将是鲁莽的，我们不应该开发这类 AI。如果训练过程中开始出现意识，我会呼吁所有人暂停 AI 开发，直到可以从设计层面消除这些特性。” 他认为，如果有任何证据能表明 AI 模型具备意识，就应该立即向公众披露，以便整…",
+        "publishedAt": "2026-11-02T06:04:47.000Z",
+        "summary": "IT之家 11 月 2 日消息，据澎湃新闻今日报道，有网友表示， 苹果 iOS 27.2 原本可有效阻止摇一摇广告 ，但却阻止不了百度网盘 App 的摇一摇广告跳转。 报道称，有开发者用 AI 对百度网盘 iOS 版进行了逆向分析，认为百度网盘的广告框架存在一种名为“No Shake”的实现方式， 可以在苹果系统禁止读取运动数据的情况下，换一套传感器来判断用户是否转动手机 。 有知情人士向该媒体表示， 并非百度网盘业务特意绕开该功能 ，而是苹果应用商城审核较严，百度网盘的新…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1253591",
+        "id": "v2ex-1253768",
         "category": "dev",
-        "title": "为 Rebase 狗尾续貂一个 Python 函数跳转功能",
-        "url": "https://www.v2ex.com/t/1253591",
+        "title": "飞书桌面端相当令人不快的设计",
+        "url": "https://www.v2ex.com/t/1253768",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-01T13:35:36.000Z",
-        "summary": "起因 最近代码写的少，但是要 review 的东西多，还要频繁的切分支。所以想找一个好的 git + diff 的工具。 最后发现基于 JetBrains 的 Rebased 这个工具最舒服。又符合当初用 IDEA 的习惯，看 diff 也清晰。 但是就有一点小遗憾，没办法点击函数跳转到对应代码。 许愿 向 codex 许愿，让他读一下 github 的项目，还有当初这个项目 fork 的原始的 jetbrains 的项目的源码，看看有没有可能加一个 python 的函数跳…",
+        "publishedAt": "2026-11-02T05:30:18.000Z",
+        "summary": "核心功能不精： 启动缓慢，相同设备环境启动时间为微信的 2-3 倍 打开文档缓慢，任何文档均需要 3-10 秒加载 文档编辑同样卡顿严重 无法离线编辑文档 大量文档入口无法在客户端中原生打开，会跳出浏览器打开 大量非必要/越权行为： 附带豆包 agent ，非可选功能，亦不可手动关闭 在聊天消息栏植入不定时 agent 功能广告，无永久关闭渠道 探测全部用户窗口，在选中任意文本时跳出其悬浮窗 全局拦截 ctrl+shift+A 作为其截图快捷键（在部分图片编辑软件是取消选中…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-d8b27af5d9e9db0a",
+        "id": "cn-baidu-0aac664965d8d1b3",
         "category": "cn",
-        "title": "多个地方行业协会宣布自行解散",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E4%B8%AA%E5%9C%B0%E6%96%B9%E8%A1%8C%E4%B8%9A%E5%8D%8F%E4%BC%9A%E5%AE%A3%E5%B8%83%E8%87%AA%E8%A1%8C%E8%A7%A3%E6%95%A3&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "美飞机1分钟急坠万米 究竟发生了什么",
+        "url": "https://www.baidu.com/s?wd=%E7%BE%8E%E9%A3%9E%E6%9C%BA1%E5%88%86%E9%92%9F%E6%80%A5%E5%9D%A0%E4%B8%87%E7%B1%B3+%E7%A9%B6%E7%AB%9F%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，民政部办公厅印发《社会组织注销指引》，规范社会组织注销程序。近期，因部分会员失联、达不到开会人数要求，安徽固镇县、浙江金华市等多地行业协会相继宣布自行解散。",
+        "summary": "近日，美国一飞机在距特朗普海湖庄园约12公里处急坠。专家认为，飞机或因连续遭遇气流及机身结冰，导致升力不足而失速坠毁；特朗普政府此前在庄园周边部署的系统主要针对无人机，难防大型公务机。他还指出，不排除该事件在美国中期选举背景下被政客炒作。",
         "badge": "热搜",
-        "signal": "7,809,575 热度"
+        "signal": "7,809,691 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111357",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50319510",
+        "id": "hn-50312408",
         "category": "dev",
-        "title": "HackerTube: YouTube built from videos recommended by HN",
-        "url": "https://karpathy.bearblog.dev/hacker-tube/",
+        "title": "Postgres 19 is late because so many more bugs are being found now",
+        "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
         "source": "Hacker News",
-        "publishedAt": "2026-10-31T19:56:53.000Z",
+        "publishedAt": "2026-10-31T01:38:56.000Z",
         "badge": "HN",
-        "signal": "2189 分 · 530 评论"
+        "signal": "232 分 · 149 评论"
       },
       {
-        "id": "cn-item-a5c014206da6599b",
+        "id": "cn-item-ff07d1a3554cdd7d",
         "category": "cn",
-        "title": "外媒：特朗普与内塔尼亚胡就美伊谈判进行通话",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-02/10724530.shtml",
+        "title": "擒拿“亡命徒”，伊朗完整捕获美军无人机",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-02/10724685.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-01T23:04:41.000Z",
-        "summary": "中新网11月2日电 据美国Axios新闻网报道，以色列和美国消息人士透露，美国总统特朗普与以色列总理内塔尼亚胡就美国与伊朗的谈判进行了通话。",
+        "publishedAt": "2026-11-02T05:00:50.000Z",
+        "summary": "中新网11月2日电(记者 刁炜)伊朗革命卫队近日宣布，其在霍尔木兹海峡的一次“进攻性电子战行动”中，完整无损地缴获一架美制MQM-170C“亡命徒”无人机。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1253569",
+        "id": "v2ex-1253745",
         "category": "dev",
-        "title": "百度网盘容量从 2T 降到 100G",
-        "url": "https://www.v2ex.com/t/1253569",
+        "title": "pi agent 太费 token 了！",
+        "url": "https://www.v2ex.com/t/1253745",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-01T11:30:17.000Z",
-        "summary": "RT ，这个问题咨询谁可以帮忙恢复之前的 quota ？还是只有开会员一条路啊？",
+        "publishedAt": "2026-11-02T03:48:46.000Z",
+        "summary": "没错， 和大家以为的刚好相反，pi agent 根本不省 token ，同样的任务相对于 codex ， 消耗量至少是 2 倍以上！（不要用那些 简单的短任务来说事， 我说的是正常工作中的长任务，很轮的对话， 大量的工具调用等等） 我接触了 pi agent ，被它的所谓的一切都是插件化给吸引了。 然后接入了我常用的插件，甚至还自定义了个别自己用的顺手的插件， 最后的感觉是非常非常的顺手，然后满心欢喜的打算替换我原来的 codex 的工作流。用了 1 天， 我惊呆了。 同样…",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "16 回复"
       },
       {
-        "id": "cn-it-76c0920f34cecd51",
+        "id": "cn-it-450d5787015c8734",
         "category": "cn",
-        "title": "补齐湖南境内“最后一块拼图”，全长约 2803 公里的呼北高速实现全线贯通",
-        "url": "https://www.ithome.com/1/020/847.htm",
+        "title": "三星预计 2027 年 8nm 及以下制程产线利用率有望突破 100%，HPC 芯片成为主导力量",
+        "url": "https://www.ithome.com/1/020/970.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-01T23:24:13.000Z",
-        "summary": "IT之家 11 月 2 日消息，据新华网报道，呼和浩特至北海高速公路张家界至高坪段 11 月 1 日通车试运营。补齐湖南境内“最后一块拼图”后， 全长约 2803 公里的呼北高速实现全线贯通 。 据介绍，本次通车路段穿行武陵山区，起于张家界市永定区，止于怀化市沅陵县清浪乡高坪村， 全长 57.437 公里，按双向四车道标准建设，设计时速 100 公里 。洞庭溪沅水特大桥、沅古坪特长隧道为该段控制性工程。 IT之家注：呼北高速是国家高速公路网“11 纵”中的第 7 纵，北起内…",
+        "publishedAt": "2026-11-02T06:01:15.000Z",
+        "summary": "IT之家 11 月 2 日消息，据 TrendForce 上周（10 月 30 日）报道，由于 AI 热潮持续，三星存储业务在 2026 年第三季度创下营收记录，晶圆代工业务也开始显现复苏迹象。 三星预计，8nm 及以下制程需求将超越现有产能， 2027 年相关产能利用率有望突破 100% 。而韩联社报道称，三星今年获得的 2nm 制程项目预计将同比增长 1 倍以上。其中三季度在大型云服务提供商及 AI / HPC 客户获得的 2nm 制程项目更多，延续上一季度增长势头。 …",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50299811",
+        "id": "hn-50332163",
         "category": "dev",
-        "title": "Nibnib: Image compression with extreme decompression speed",
-        "url": "https://github.com/raphlinus/nibnib",
+        "title": "F/OSS Comics #13: BSD Unix, Part 3 – The Beginning of BSD Unix",
+        "url": "https://fosscomics.com/posts/13.%20BSD%20Unix%20Part%203%20-%20The%20Beginning%20of%20BSD%20Unix/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-30T04:17:06.000Z",
+        "publishedAt": "2026-11-02T01:59:38.000Z",
         "badge": "HN",
-        "signal": "70 分 · 7 评论"
+        "signal": "66 分 · 5 评论"
       },
       {
-        "id": "cn-baidu-67b6fbff9defce4a",
+        "id": "cn-baidu-efd3e6e1ae4e36d2",
         "category": "cn",
-        "title": "A股迎利好！金融监管部门将开座谈会",
-        "url": "https://www.baidu.com/s?wd=A%E8%82%A1%E8%BF%8E%E5%88%A9%E5%A5%BD%EF%BC%81%E9%87%91%E8%9E%8D%E7%9B%91%E7%AE%A1%E9%83%A8%E9%97%A8%E5%B0%86%E5%BC%80%E5%BA%A7%E8%B0%88%E4%BC%9A&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "喜欢吃烤红薯的人天塌了 真的吗",
+        "url": "https://www.baidu.com/s?wd=%E5%96%9C%E6%AC%A2%E5%90%83%E7%83%A4%E7%BA%A2%E8%96%AF%E7%9A%84%E4%BA%BA%E5%A4%A9%E5%A1%8C%E4%BA%86+%E7%9C%9F%E7%9A%84%E5%90%97&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月2日上午9时左右，中国人民银行、中国证监会将召开会议，研究推动支持资本市场工具使用。在业内看来，近期A股市场持续下跌之下，上述会议的召开将给市场带来积极信号。",
+        "summary": "近日，一百万粉丝博主未提供真凭实据，却称街边烤红薯疑用烤红薯香精浸泡过。此前，专家解释，红薯的天然香气主要来自高温下的美拉德反应和焦糖化反应，合规使用香精“无需担心”。",
         "badge": "热搜",
-        "signal": "7,713,048 热度"
+        "signal": "7,711,824 热度"
       },
       {
         "id": "github-advisory-ghsa-5849-834g-hvw5",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1253562",
+        "id": "v2ex-1253736",
         "category": "dev",
-        "title": "如何爬取美团外卖和淘宝闪购的个人订单记录",
-        "url": "https://www.v2ex.com/t/1253562",
+        "title": "有用 anapay 的吗",
+        "url": "https://www.v2ex.com/t/1253736",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-01T10:30:26.000Z",
-        "summary": "好像不是用的 http 协议，怎么抓包抓不到。 请问大佬们有比较好的办法吗",
+        "publishedAt": "2026-11-02T03:28:31.000Z",
+        "summary": "入金的时候，ios 好像有 bug ，我用的中行 jcb ，每次充值要手机号验证吗，点击之后就跳白屏了，验证码会收到的。 现在每次都要换 android 手机冲，有点麻烦，有说用 apple pay 套一下，但是 jcb 帮不了，招行的 visa 我绑了，applepay 付不了，目前没 master 。 有佬遇到同样问题的吗",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-item-6490fbf8bfcdc43c",
+        "id": "cn-item-564933aaf5d812d0",
         "category": "cn",
-        "title": "美国佛州一飞机坠毁并爆炸 机上9人全部遇难",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-02/10724528.shtml",
+        "title": "市场监管总局发布3项钢铁领域先进制造国家标准",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-02/10724651.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-01T22:42:23.000Z",
-        "summary": "中新网11月2日电 据美媒报道，当地时间1日，一架载有9人的公务机在美国佛罗里达州棕榈滩县一处居民区坠毁，机上人员全部遇难。",
+        "publishedAt": "2026-11-02T03:36:07.000Z",
+        "summary": "中新网11月2日电 据国家市场监督管理总局网站消息，为持续提升钢铁行业先进制造水平，市场监管总局日前发布《智能制造 废钢智能工厂设计要求》《智能制造 钢铁智能工厂数字孪生系统技术要求》《智能制造 钢铁工业多基地制造资源协同管控系统技术要求》系列国家标准。该3项标准分别锚定废钢工厂、数字孪生、多基地协同等关键环节，支撑构建钢铁先进制造技术要求体系。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50271106",
+        "id": "hn-50319510",
         "category": "dev",
-        "title": "Tips for more effective fuzz testing with AFL++",
-        "url": "https://nullprogram.com/blog/2025/02/05/",
+        "title": "HackerTube: YouTube built from videos recommended by HN",
+        "url": "https://karpathy.bearblog.dev/hacker-tube/",
         "source": "Hacker News",
-        "publishedAt": "2026-10-28T09:46:12.000Z",
+        "publishedAt": "2026-10-31T19:56:53.000Z",
         "badge": "HN",
-        "signal": "59 分 · 7 评论"
+        "signal": "2423 分 · 554 评论"
       },
       {
-        "id": "cn-it-1738af34539afc52",
+        "id": "cn-it-876b5286674e7c38",
         "category": "cn",
-        "title": "微软确认：受支持的 Win10 设备现可直接升级至 Win11 26H2",
-        "url": "https://www.ithome.com/1/020/846.htm",
+        "title": "比亚迪仰望 U9X 重启极速挑战，小米胡峥楠称致敬所有还在坚持实干的先行者和同行者",
+        "url": "https://www.ithome.com/1/020/954.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-01T23:17:49.000Z",
-        "summary": "IT之家 11 月 2 日消息，据科技媒体 neowin 昨天报道，微软于今年 9 月底推送 Win11 26H2。此次更新采取分阶段推送形式，逐步推送至符合条件的设备，并未立即向所有用户开放。这种策略是为了避免更新出现重大问题时，导致大量设备无法工作。 微软几天前确认，Windows 11 26H2 分阶段推送已经取得重要进展，目前已向 25H2 和 24H2 设备全面开放。在此之后，微软已经将 26H2 推送范围扩大至所有符合升级条件的设备， 包括处于扩展支持阶段的 W…",
+        "publishedAt": "2026-11-02T05:51:13.000Z",
+        "summary": "IT之家 11 月 2 日消息，去年，仰望 U9X（仰望 U9 Xtreme）以 496.22 km/h 的成绩，站上全球汽车极速的巅峰。 比亚迪仰望汽车今日正式宣布， 重启极速挑战 ，将在阿联酋首都阿布扎比开启一场全新的开放公路极速挑战。 IT之家注意到，小米集团副总裁、汽车部 CTO 胡峥楠转发了该微博，并表示致敬所有还在坚持实干的先行者和同行者。 十分感人，感同身受。高性能这条赛道从来都是充满了未知和风险，但只有实实在在地做了，且持续地做，才能知道下一秒的提升点在哪里…",
         "badge": "IT之家"
       },
       {
@@ -323,24 +323,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1253543",
+        "id": "v2ex-1253730",
         "category": "dev",
-        "title": "当没 token 额度了 你会手改 AI 生成的代码吗 😂",
-        "url": "https://www.v2ex.com/t/1253543",
+        "title": "新版本飞书自带豆包会在 User 文件夹创建 Doubao 文件夹",
+        "url": "https://www.v2ex.com/t/1253730",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-01T08:41:51.000Z",
+        "publishedAt": "2026-11-02T03:21:49.000Z",
+        "summary": "今天上班打开 Mac 发现～文件夹下多了个 Doubao 文件夹，删掉之后会瞬间被再次创建。 再去工位的 Windows 电脑上看，发现 user （用户名）文件夹里也多了个 Doubao 文件夹。可能是飞书更新版本之后豆包被整合入飞书，通过后台程序全自动创建的。 目前现象： 从未使用过飞书中豆包及 agent 相关功能 Mac 上 Doubao 文件夹删除后会被立刻再次创建 Mac 上关闭飞书后不会创建 Doubao 文件夹，启动后会立刻再次创建 Win 上 Doubao…",
         "badge": "程序员",
-        "signal": "34 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-eb88048c7235aa91",
+        "id": "cn-baidu-66b625f1cc84ef3f",
         "category": "cn",
-        "title": "从“看热闹”到“看门道”",
-        "url": "https://www.baidu.com/s?wd=%E4%BB%8E%E2%80%9C%E7%9C%8B%E7%83%AD%E9%97%B9%E2%80%9D%E5%88%B0%E2%80%9C%E7%9C%8B%E9%97%A8%E9%81%93%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“行李箱”装下世界眼中的中国",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E8%A1%8C%E6%9D%8E%E7%AE%B1%E2%80%9D%E8%A3%85%E4%B8%8B%E4%B8%96%E7%95%8C%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%9B%BD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "带着AI（人工智能）助手逛博物馆，遇到不懂的内容随时提问；提前数日预约专业讲解，为一场文博研学甘愿彻夜排队……当下，文博热潮正在悄然迭代：人们不再步履匆匆、“到此一游”打卡留念，也不再满足于“走马观花”匆匆一瞥。",
+        "summary": "“China Haul”指的是外国游客来中国旅游后，在社交平台上集中展示自己买到的中国商品的开箱视频。近期，这一热词在海外社交媒体刷屏。有人说“China Haul”听起来像“中国好”，外国游客空箱而来，满载而归，用行动证明中国确实好。",
         "badge": "热搜",
-        "signal": "7,616,729 热度"
+        "signal": "7,616,135 热度"
       },
       {
         "id": "cisa-kev-cve-2026-41709",
@@ -363,23 +364,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50328896",
+        "id": "hn-50315217",
         "category": "dev",
-        "title": "Ask HN: Which TV do you recommend for privacy?",
-        "url": "https://news.ycombinator.com/item?id=50328896",
+        "title": "Mystery of 60-Second Fluctuations in Power Grids Solved",
+        "url": "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved",
         "source": "Hacker News",
-        "publishedAt": "2026-11-01T19:35:27.000Z",
+        "publishedAt": "2026-10-31T11:53:47.000Z",
         "badge": "HN",
-        "signal": "73 分 · 136 评论"
+        "signal": "69 分 · 23 评论"
       },
       {
-        "id": "cn-item-a4aae16703d2c039",
+        "id": "cn-item-c85b39ad2dca7a65",
         "category": "cn",
-        "title": "东西问丨许通元：走过百年，马华文学为何仍有生命力？",
-        "url": "https://www.chinanews.com.cn/dxw/2026/11-01/10724418.shtml",
+        "title": "测评泛滥，找工作怎么成了无尽的“刷题闯关”？",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-02/10724654.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-01T11:07:15.000Z",
-        "summary": "中新社吉隆坡11月1日电 题：走过百年，马华文学为何仍有生命力？",
+        "publishedAt": "2026-11-02T03:13:30.000Z",
+        "summary": "行测、性格测试、智力测评、AI面试……",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1253540",
+        "id": "v2ex-1253699",
         "category": "dev",
-        "title": "用 AI 逆向了搜狗输入法， 让搜狗输入法(v16.10)完全断网 / 禁止更新 / 禁止广告 的一键脚本",
-        "url": "https://www.v2ex.com/t/1253540",
+        "title": "agent 的代码到底审不审核",
+        "url": "https://www.v2ex.com/t/1253699",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-01T08:24:20.000Z",
-        "summary": "让搜狗输入法(v16.10)完全断网 / 禁止更新 / 禁止广告 的一键脚本 放 github 了： https://github.com/SillyShalong/input-method-no-network",
+        "publishedAt": "2026-11-02T02:33:29.000Z",
+        "summary": "用 claude code 写的代码 # 子集聚合全部改成掩码列，取代循环里的 kills/killed/npc/rev/paid 五次切片 d[\"_paid\"] = ((d[\"is_revive\"] == 1) & (d[\"irevivemoney\"] > 0)).astype(int) d[\"_kill_tgt\"] = d[\"votherroleid\"].where(d[\"is_kill\"] == 1) d[\"_killed_src\"] = d[\"votherrolei…",
         "badge": "程序员",
-        "signal": "27 回复"
+        "signal": "58 回复"
       },
       {
-        "id": "cn-it-48d41120b0c7214a",
+        "id": "cn-it-6412a2c8fa7973f3",
         "category": "cn",
-        "title": "比亚迪前三季度研发比净利润高 140 亿元：何志奇称不是不会算账，是在算一本更长的账",
-        "url": "https://www.ithome.com/1/020/845.htm",
+        "title": "2026 款奔驰 E 300 L 改款轿车上市：首次搭载中国团队开发的 AI 座舱，起售价下调 1.6 万元",
+        "url": "https://www.ithome.com/1/020/944.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-01T23:01:11.000Z",
-        "summary": "IT之家 11 月 2 日消息，比亚迪股份有限公司执行副总裁何志奇昨晚发文表示，比亚迪（今年）前三季度研发费用 363 亿元，归母净利润 223 亿元 —— 研发比净利润高了整整 140 亿元 。累计研发投入已经超过 2800 亿元。 何志奇表示，研发大于利润， 不是不会算账，是在算一本更长的账 。 新能源行业还在高速奔跑，真正的护城河从来不是短期利润，是握在自己手里的核心技术。 今天投进去的每一分钱，未来都会变成更靠谱的产品、更好的用户体验、更硬的行业底气 。刀片电池、易…",
+        "publishedAt": "2026-11-02T05:40:10.000Z",
+        "summary": "IT之家 11 月 2 日消息，2026 款奔驰 E 300 L 改款轿车今日正式上市，建议零售价格 42.38 万元至 50.98 万元， 相比之前的版本起售价下调 1.6 万元 。 E 300 L 晖银版建议零售价 42.38 万元 E 300 L 鎏金版建议零售价 46.68 万元 E 300 L 星铂版建议零售价 50.98 万元 该车搭载由 奔驰中国研发团队主导、独立开发的全新 AI 智能座舱 ，车载虚拟助手融合豆包 AI 大模型，新增声纹识别等功能。此外，系统支…",
         "badge": "IT之家"
       },
       {
@@ -446,24 +447,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50330456",
+        "id": "hn-50331784",
         "category": "dev",
-        "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
-        "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+        "title": "Trigger.dev customer environment variables exposed",
+        "url": "https://trigger.dev/blog/security-incident-nov-2026",
         "source": "Hacker News",
-        "publishedAt": "2026-11-01T22:10:45.000Z",
+        "publishedAt": "2026-11-02T01:09:16.000Z",
         "badge": "HN",
-        "signal": "38 分 · 16 评论"
+        "signal": "53 分 · 18 评论"
       },
       {
-        "id": "cn-baidu-07186e8d5e0f6541",
+        "id": "cn-baidu-8c2f57cf5954b7eb",
         "category": "cn",
-        "title": "孙颖莎4比1蒯曼 获得女单冠军",
-        "url": "https://www.baidu.com/s?wd=%E5%AD%99%E9%A2%96%E8%8E%8E4%E6%AF%941%E8%92%AF%E6%9B%BC+%E8%8E%B7%E5%BE%97%E5%A5%B3%E5%8D%95%E5%86%A0%E5%86%9B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "KTV靠AI“发癫”续命",
+        "url": "https://www.baidu.com/s?wd=KTV%E9%9D%A0AI%E2%80%9C%E5%8F%91%E7%99%AB%E2%80%9D%E7%BB%AD%E5%91%BD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京时间11月2日凌晨，2026WTT蒙彼利埃冠军赛女单决赛，孙颖莎4比1战胜蒯曼，获得女单冠军，五局比分为8-11、11-7、11-3、11-9、11-6。",
+        "summary": "近日，KTV靠AI“发癫”续命，魔性MV、AI修音和线上评分PK吸引年轻人打卡。相比传统KTV，新模式还能降低版权、营销和人力成本，凭借抽象画面制造话题，带动门店客流增长。",
         "badge": "热搜",
-        "signal": "7,524,314 热度"
+        "signal": "7,521,873 热度"
       },
       {
         "id": "github-advisory-ghsa-4528-x5fx-h6hg",
@@ -486,15 +487,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1253468",
+        "id": "v2ex-1253663",
         "category": "dev",
-        "title": "我在 2 核 2G 云主机上跑 OpenViking：一次关于云主机、模型选型与长期成本的真实复盘",
-        "url": "https://www.v2ex.com/t/1253468",
+        "title": "大佬们帮忙选选几个域名",
+        "url": "https://www.v2ex.com/t/1253663",
         "source": "V2EX 技术",
-        "publishedAt": "2026-10-31T16:52:23.000Z",
-        "summary": "最近把自己的 AI Coding Agent 记忆底座迁移到了自建的 OpenViking 上（ OpenViking 真的满足我所有的要求：即是各种 Agent 的统一大脑自进化、又是知识库，检索的时候是两方面综合起来的）。RAG 相关的东西看着挺吓人，动辄推荐高配服务器和本地显存，实际上用下来，只要选型想清楚，一台几十块钱的入门级云服务器完全能跑得飞起。 这篇不是教你怎么敲命令的安装教程，只是聊聊折腾这一圈下来，在云主机、模型组合、算力开销上的一些真实心得和踩坑取舍。 …",
+        "publishedAt": "2026-11-02T01:41:31.000Z",
+        "summary": "给自己的网站主站选域名 micois.com micoit.com micoio.com micotv.com micocc.com micospot.com micoplace.com upmico.com topmico.com micozone.com miconeo.com miconow.com micohi.com micojoy.com micoon.com micoim.com 比较倾向于 micohi.com 个人品牌名是 MICO 如果有别的好记的，也可以",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "12 回复"
       }
     ]
   },
@@ -511,8 +512,8 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 109182,
-        "starsToday": 1527
+        "stars": 109723,
+        "starsToday": 1526
       },
       {
         "id": "github-d78ef17203023489",
@@ -521,8 +522,8 @@
         "url": "https://github.com/lightpanda-io/browser",
         "description": "Lightpanda: the headless browser designed for AI and automation",
         "language": "Zig",
-        "stars": 40076,
-        "starsToday": 827
+        "stars": 40446,
+        "starsToday": 825
       },
       {
         "id": "github-7724900c5d82712c",
@@ -531,8 +532,8 @@
         "url": "https://github.com/shiyu-coder/Kronos",
         "description": "Kronos: A Foundation Model for the Language of Financial Markets",
         "language": "Python",
-        "stars": 45347,
-        "starsToday": 611
+        "stars": 45554,
+        "starsToday": 630
       },
       {
         "id": "github-ca3faa494e15ccd9",
@@ -540,8 +541,8 @@
         "name": "pingdotgg/t3code",
         "url": "https://github.com/pingdotgg/t3code",
         "language": "TypeScript",
-        "stars": 37863,
-        "starsToday": 3100
+        "stars": 38660,
+        "starsToday": 3094
       },
       {
         "id": "github-26fea043179ffd14",
@@ -550,8 +551,8 @@
         "url": "https://github.com/milind-soni/OpenMausBot",
         "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "language": "TypeScript",
-        "stars": 10485,
-        "starsToday": 919
+        "stars": 10791,
+        "starsToday": 922
       },
       {
         "id": "github-fa7dc4680dc18bbd",
@@ -560,8 +561,8 @@
         "url": "https://github.com/public-apis/public-apis",
         "description": "A collective list of free APIs",
         "language": "Python",
-        "stars": 494550,
-        "starsToday": 298
+        "stars": 494931,
+        "starsToday": 324
       },
       {
         "id": "github-a0c8b147eaccf3af",
@@ -570,8 +571,8 @@
         "url": "https://github.com/cjpais/Handy",
         "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
         "language": "Rust",
-        "stars": 36507,
-        "starsToday": 383
+        "stars": 36785,
+        "starsToday": 339
       },
       {
         "id": "github-e1a32c8f2e86e69c",
@@ -580,8 +581,8 @@
         "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
         "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
         "language": "Shell",
-        "stars": 32215,
-        "starsToday": 970
+        "stars": 32608,
+        "starsToday": 967
       },
       {
         "id": "github-0578de4fca6408a1",
@@ -590,8 +591,8 @@
         "url": "https://github.com/kornia/kornia",
         "description": "🐍 Geometric Computer Vision Library for Spatial AI",
         "language": "Python",
-        "stars": 11767,
-        "starsToday": 88
+        "stars": 11893,
+        "starsToday": 101
       },
       {
         "id": "github-fdf6312e73981d7b",
@@ -600,10 +601,10 @@
         "url": "https://github.com/beenuar/AiSOC",
         "description": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
         "language": "Python",
-        "stars": 6194,
-        "starsToday": 436
+        "stars": 6384,
+        "starsToday": 446
       }
     ],
-    "updatedAt": "2026-11-01T23:36:38.839Z"
+    "updatedAt": "2026-11-02T06:05:53.519Z"
   }
 }
