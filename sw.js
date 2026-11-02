@@ -1,5 +1,5 @@
-const CACHE_VERSION = 'build-3e5d342b32fc7f773e10'
-const APP_VERSION = 'app-640b96e9d9a246e76e76'
+const CACHE_VERSION = 'build-399f95d28bd5dee37272'
+const APP_VERSION = 'app-b981681903465a9c360b'
 const CACHE_PREFIX = 'baize-nav-'
 // Data-only builds share the same UI shell, avoiding hourly waiting-cache copies.
 const SHELL_CACHE = `${CACHE_PREFIX}shell-${APP_VERSION}`
@@ -200,6 +200,7 @@ self.addEventListener('fetch', (event) => {
     NEVER_CACHE_HOSTS.has(url.hostname) ||
     url.origin !== self.location.origin ||
     // The standalone game must never replace the navigation's cached index.html.
+    url.pathname === `${APP_SCOPE}game` ||
     url.pathname.startsWith(`${APP_SCOPE}game/`) ||
     // Learning experiments must not replace the app shell or be served as it.
     url.pathname.startsWith(`${APP_SCOPE}learning-lab/`) ||
