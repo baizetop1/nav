@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-03T06:49:24.573Z",
+  "generatedAt": "2026-11-03T09:31:23.511Z",
   "intelligence": {
-    "updatedAt": "2026-11-03T06:49:24.573Z",
+    "updatedAt": "2026-11-03T09:31:23.511Z",
     "items": [
       {
-        "id": "cn-item-cc1418a2db2133c3",
+        "id": "cn-item-6161d2944b152871",
         "category": "cn",
-        "title": "何立峰同越共中央政治局委员、中央书记处书记、中央政策战略部部长阮青毅会谈",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-03/10725304.shtml",
+        "title": "警方通报九寨沟景区游客冲突事件",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-03/10725330.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-03T06:20:25.000Z",
-        "summary": "新华社北京11月3日电 中共中央政治局委员、中央财办主任何立峰2日在京同越共中央政治局委员、中央书记处书记、中央政策战略部部长阮青毅举行会谈，双方就中越两国经济关系及双边经贸交流合作等议题交换了意见。",
+        "publishedAt": "2026-11-03T08:06:05.000Z",
+        "summary": "中新网11月3日电 据“平安九寨”微信公众号消息，九寨沟县公安局发布警情通报，具体内容如下：",
         "badge": "中新网要闻"
       },
       {
@@ -26,13 +26,13 @@
         "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
-        "id": "ai-openai-bca108e4c77bd86b",
+        "id": "ai-openai-0d297090385ad5a7",
         "category": "ai",
-        "title": "Rewarding defenders with bigger bug bounties",
-        "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+        "title": "Preparing our next security sprint to harden OpenAI",
+        "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
         "source": "OpenAI",
         "publishedAt": "2026-11-02T18:00:00.000Z",
-        "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
+        "summary": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
         "badge": "OpenAI"
       },
       {
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-02T18:21:28.000Z",
         "badge": "HN",
-        "signal": "2373 分 · 742 评论"
+        "signal": "2583 分 · 786 评论"
       },
       {
-        "id": "cn-it-f98bd04997050ddd",
+        "id": "cn-it-72eb527da178d2e9",
         "category": "cn",
-        "title": "《超级马力欧：奥德赛》非官方 PC 原生移植版问世，可 4K/60 帧流畅游玩",
-        "url": "https://www.ithome.com/1/021/556.htm",
+        "title": "怒喵发布 AM Infinity .100 R2 鼠标：中大手模具，升级 PAW3955",
+        "url": "https://www.ithome.com/1/021/656.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-03T06:47:47.000Z",
-        "summary": "IT之家 11 月 3 日消息，针对任天堂 Switch 的静态重编译技术，可以把游戏原本的 Arm64 代码转换为 x86 代码，这项技术彻底改变了模拟器领域，为这款主机上不少经典游戏推出原生移植版本创造了条件。而说到 Switch 的知名作品，任天堂 2017 年推出的《超级马力欧：奥德赛》，就是口碑与媒体评价都极高的代表作之一。 IT之家注意到，《超级马力欧：奥德赛》非官方 PC 原生移植版现在已经可以下载、安装，并在 Windows、Linux 和 macOS 系统…",
+        "publishedAt": "2026-11-03T09:29:30.000Z",
+        "summary": "IT之家 11 月 3 日消息，怒喵 (AngryMiao) 今日发布了 AM Infinity .100 R2 鼠标。这一型号整体上 延续了上代 AM Infinity .100 的中大手模具和模块化换电设计 ，同时在光学传感器等方面进行了改进。 AM Infinity .100 R2 外壳为镁铝合金材质镂空外骨骼，质量约 49g；采用 AM Real8K Engine V2 主控芯片、原相 PAW3955 光学传感器， 平均延迟 0.184ms ，单个 340mAh 电…",
         "badge": "IT之家"
       },
       {
@@ -77,25 +77,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1254129",
+        "id": "v2ex-1254204",
         "category": "dev",
-        "title": "有稳定跑 claude、codex 的方案吗？准备买个 mac 放到美国朋友家里了",
-        "url": "https://www.v2ex.com/t/1254129",
+        "title": "AI 时代下程序员的出路在哪里？",
+        "url": "https://www.v2ex.com/t/1254204",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-03T06:30:32.000Z",
-        "summary": "大家有其他稳定的方案吗？ 美国加宽也用过了，机器语言环境、时区都完全搞成国外环境也不行。可能项目对话是中文？搞不懂 现在，被折腾的实在没办法的，准备买个 mac ，邮寄到朋友家里放着，用 uu + rustdesk 远控。",
+        "publishedAt": "2026-11-03T09:29:43.000Z",
+        "summary": "因为 AI 编程现在已经快速成为编程的主流了，以后程序员的工作机会肯定会越来越少。 尤其对于初级程序员，清华大学发布的《 AI 时代技能趋势报告》显示,初级程序员岗位 AI 替代率达到 87%。 有些观点认为：程序员行业正经历结构性重塑,程序员的核心价值从“手写代码”加速转向“架构设计与 AI 协同”。其实我也这么认为，以前程序员的主要工作是写代码，但是很明显，现在不用写了，让 AI 写就行了。 那么问题来了，AI 时代老的程序员的出路在哪里？难道都去做产品或者 FDE 去…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-707e4698ef5b3c50",
+        "id": "cn-baidu-8039f1f2b7fe39b5",
         "category": "cn",
-        "title": "低保户女生赴港看演唱会：低保已取消",
-        "url": "https://www.baidu.com/s?wd=%E4%BD%8E%E4%BF%9D%E6%88%B7%E5%A5%B3%E7%94%9F%E8%B5%B4%E6%B8%AF%E7%9C%8B%E6%BC%94%E5%94%B1%E4%BC%9A%EF%BC%9A%E4%BD%8E%E4%BF%9D%E5%B7%B2%E5%8F%96%E6%B6%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "刘延东遗体在京火化",
+        "url": "https://www.baidu.com/s?wd=%E5%88%98%E5%BB%B6%E4%B8%9C%E9%81%97%E4%BD%93%E5%9C%A8%E4%BA%AC%E7%81%AB%E5%8C%96&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月3日，记者获悉赣州低保户女生赴港看演唱会一事有新进展，该家庭低保已被取消，此前其表姐发帖称其花费三千至五千元看演唱会，当地民政部门已开展核查，律师称低保不符合条件可依规取消。",
+        "summary": "刘延东同志因病于2026年10月28日14时53分在北京逝世，享年81岁。11月3日，刘延东同志遗体在北京八宝山革命公墓火化。习近平赵乐际王沪宁蔡奇丁薛祥李希韩正等到八宝山革命公墓送别。",
         "badge": "热搜",
-        "signal": "7,808,830 热度"
+        "signal": "7,808,068 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111357",
@@ -109,32 +109,32 @@
         "signal": "已遭利用 · 整改期限 2026-11-02"
       },
       {
-        "id": "ai-hugging-face-037154e824aaff25",
+        "id": "ai-hugging-face-a6f54d325d31634f",
         "category": "ai",
-        "title": "nemotron-halloween",
-        "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+        "title": "Transformers Model Integration Contracts",
+        "url": "https://huggingface.co/blog/transformers-mic",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-30T17:57:24.000Z",
+        "publishedAt": "2026-11-03T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50346849",
+        "id": "hn-50348962",
         "category": "dev",
-        "title": "DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs",
-        "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+        "title": "Nvidia – open-source auto-ontology",
+        "url": "https://github.com/NVIDIA/auto-ontology",
         "source": "Hacker News",
-        "publishedAt": "2026-11-03T01:33:43.000Z",
+        "publishedAt": "2026-11-03T07:04:50.000Z",
         "badge": "HN",
-        "signal": "125 分 · 26 评论"
+        "signal": "48 分 · 4 评论"
       },
       {
-        "id": "cn-item-cec4f459483535ef",
+        "id": "cn-item-000411aff2d56554",
         "category": "cn",
-        "title": "特朗普发表讲话 为中期选举造势“收官”",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-03/10725259.shtml",
+        "title": "广交会观察：70年，一扇“窗”，世界看见一个怎样的中国？",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-03/10725340.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-03T05:07:35.000Z",
-        "summary": "中新社华盛顿11月2日电 (记者 陈孟统)在美国2026年中期选举日前一天，美国总统特朗普在华盛顿发表讲话，为其过去一个月密集的助选造势活动“收官”。",
+        "publishedAt": "2026-11-03T07:24:14.000Z",
+        "summary": "中新网广州11月3日电 题：广交会观察：70年，一扇“窗”，世界看见一个怎样的中国？",
         "badge": "中新网要闻"
       },
       {
@@ -149,34 +149,34 @@
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-0d297090385ad5a7",
+        "id": "ai-openai-bca108e4c77bd86b",
         "category": "ai",
-        "title": "Preparing our next security sprint to harden OpenAI",
-        "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+        "title": "Rewarding defenders with bigger bug bounties",
+        "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
         "source": "OpenAI",
         "publishedAt": "2026-11-02T18:00:00.000Z",
-        "summary": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+        "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1254117",
+        "id": "v2ex-1254196",
         "category": "dev",
-        "title": "一个用于前端 wasm 的自创密码学算法，欢迎破解~",
-        "url": "https://www.v2ex.com/t/1254117",
+        "title": "让 Claude 帮我做了一个自动赚钱挖矿的程序，跑了 8 天的真实数据进行测试，最后被 Claude 验证无法赚钱，劝我放弃项目。",
+        "url": "https://www.v2ex.com/t/1254196",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-03T06:03:20.000Z",
-        "summary": "具体功能：在线网页测量用户的 CPU 主频，并挑战排行榜。 （查看演示） 要实现这个功能，最简单的办法就是用 js/wasm 跑一段消耗 CPU 周期比较稳定的程序，测量起始和结束的时间差，然后上报到服务端。 但这有个严重的问题：时间是在前端测量的，用户可以伪造。即便对程序加密混淆，现在也不难破解。所以必须用一些密码学机制，从原理上堵住这个漏洞。例如使用 VDF 函数进行计算，这样客户端必须老老实实执行每一步才能得出正确的结果。 但这还有另一个问题：这个算法是跑在网页里的，…",
+        "publishedAt": "2026-11-03T09:19:17.000Z",
+        "summary": "项目是做什么的 实时采集 Solana 链上 ORE 挖矿的当前轮次、25 格部署量、Split/Solo 类型、奖励池、官方矿工账户、SOL/ORE 可执行兑换报价。 最终实现建立“决策前盘口 → 模拟订单 → 实际成交 → 开奖结算 → Claim → 变现”的完整审计链。 过程 让 Claude 分析 ORE 挖矿的规则，并使用 Solana 链上的真实数据进行分析，因为是在国内很多链上接口无法连接，专门买了台香港的服务器进行跑数据。 一开始 claude 让跑一段连…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-it-2cb5dea3634400ee",
+        "id": "cn-it-30b40d6e650fe563",
         "category": "cn",
-        "title": "安森美确认拟以至少 6 亿美元现金收购集成电压调节器企业 Ferric",
-        "url": "https://www.ithome.com/1/021/554.htm",
+        "title": "消息称 iPhone 18e / 18 / Air 2 明年上半年齐发，标准版搭 2nm 制程 A20 芯片预估价格会涨",
+        "url": "https://www.ithome.com/1/021/655.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-03T06:47:39.000Z",
-        "summary": "IT之家 11 月 3 日消息，半导体企业 onsemi（安森美）当地时间本月 2 日宣布拟以 6 亿美元 （现汇率约合 39.99 亿元人民币） 现金外加至多 1.75 亿美元 （现汇率约合 11.66 亿元人民币） 现金的或有对价收购集成电压调节器 (IVR) 企业 Ferric。 该交易预计将于 2026 年底完成，但需满足惯例成交条件。约 50 名 Ferric 员工将通过这笔交易加入安森美。 IT之家注意到，此前市场上就有安森美将收购 Ferric 的风声， 此次…",
+        "publishedAt": "2026-11-03T09:24:47.000Z",
+        "summary": "IT之家 11 月 3 日消息，博主 @数码闲聊站 今日发文透露，iPhone 18e、iPhone 18 和 iPhone Air 2 三款机型会在明年上半年发布， 预估还是 18 标准版的销量最高 。 博主称，iPhone 18 将配备 6.3 英寸 1.5K 120Hz OLED 常规灵动岛屏幕， 搭载 2nm 制程工艺的 A20 芯片 ，拥有 Face ID、48MP 双摄，同时电池也有加大， 不过价格估计也要涨 。 有网友认为 iPhone 18e 的销量会更高，…",
         "badge": "IT之家"
       },
       {
@@ -207,17 +207,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-03T01:53:34.000Z",
         "badge": "HN",
-        "signal": "170 分 · 53 评论"
+        "signal": "254 分 · 77 评论"
       },
       {
-        "id": "cn-baidu-040a723ca085fb3e",
+        "id": "cn-baidu-fab6742d5a45a246",
         "category": "cn",
-        "title": "最强厄尔尼诺要来了",
-        "url": "https://www.baidu.com/s?wd=%E6%9C%80%E5%BC%BA%E5%8E%84%E5%B0%94%E5%B0%BC%E8%AF%BA%E8%A6%81%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "中国不申办2036年奥运会",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E4%B8%8D%E7%94%B3%E5%8A%9E2036%E5%B9%B4%E5%A5%A5%E8%BF%90%E4%BC%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "此前，国家气候中心宣布2026年9月已正式形成一次超强厄尔尼诺事件，预计将于秋末冬初达峰值，或成1951年以来最强一次。",
+        "summary": "当地时间11月2日，国际奥委会确认，2036年夏季奥运会申办意向名单最终确定，德国、匈牙利、印度、卡塔尔、韩国、南非和土耳其七国入围，中国未在其中。",
         "badge": "热搜",
-        "signal": "7,714,503 热度"
+        "signal": "7,713,750 热度"
       },
       {
         "id": "github-advisory-ghsa-wg5q-x4j9-qm54",
@@ -231,33 +231,32 @@
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-e508e29ae812fe58",
+        "id": "ai-hugging-face-037154e824aaff25",
         "category": "ai",
-        "title": "Granite Switch 4.1.1 — Update models like you update software",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+        "title": "nemotron-halloween",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-29T13:37:07.000Z",
+        "publishedAt": "2026-10-30T17:57:24.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1254112",
+        "id": "v2ex-1254166",
         "category": "dev",
-        "title": "uu 远程未来要付费了",
-        "url": "https://www.v2ex.com/t/1254112",
+        "title": "这两天还有 claude 被封的吗,我看站内没人发被封号了,是不是又能开小号冲了",
+        "url": "https://www.v2ex.com/t/1254166",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-03T05:49:15.000Z",
-        "summary": "https://x.com/uu_remote/status/2116387819019247951?s=19 说实话体验真的很好，希望付费模式友好点别太离谱",
+        "publishedAt": "2026-11-03T08:01:47.000Z",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-item-62bd6a5077d4f125",
+        "id": "cn-item-6ade6bec4c976e5c",
         "category": "cn",
-        "title": "朝鲜驳斥美国加密货币盗窃指控",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-03/10725236.shtml",
+        "title": "东西问丨伊扎特·萨阿德：全球南方现代化如何抓住AI机遇？",
+        "url": "https://www.chinanews.com.cn/dxw/2026/11-03/10725312.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-03T04:08:00.000Z",
-        "summary": "中新社北京11月3日电 平壤消息：当地时间11月3日，据朝鲜中央通讯社(朝中社)报道，朝鲜劳动党中央委员会部长金与正2日发表谈话称，美国联邦调查局声称所谓朝鲜“支援”的黑客组织参与加密货币交易平台“币安”数十亿美元加密货币盗窃事件，企图诋毁朝鲜为“网络犯罪国家”。",
+        "publishedAt": "2026-11-03T07:05:01.000Z",
+        "summary": "中新社约翰内斯堡11月3日电 题：全球南方现代化如何抓住AI机遇？",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50334523",
+        "id": "hn-50346849",
         "category": "dev",
-        "title": "European RISC-V Industrial Computing Initiative",
-        "url": "https://erici.eu",
+        "title": "DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs",
+        "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
         "source": "Hacker News",
-        "publishedAt": "2026-11-02T08:58:33.000Z",
+        "publishedAt": "2026-11-03T01:33:43.000Z",
         "badge": "HN",
-        "signal": "39 分 · 12 评论"
+        "signal": "188 分 · 45 评论"
       },
       {
-        "id": "cn-it-43c989b0567a6468",
+        "id": "cn-it-9eb37968c6fa988e",
         "category": "cn",
-        "title": "福特上线“隐私承诺”，号称能让车辆“断网”、阻止传输驾驶数据",
-        "url": "https://www.ithome.com/1/021/545.htm",
+        "title": "谷歌 Pixel Watch 手表耗电过快，官方推送修复方案",
+        "url": "https://www.ithome.com/1/021/654.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-03T06:46:19.000Z",
-        "summary": "IT之家 11 月 3 日消息，当代的汽车能够收集海量驾驶数据，从驾驶员踩刹车的力度、经常导航前往的目的地，到最常使用的车载功能，无所不包。随着汽车越来越智能化，车企的汽车制造业务与科技业务之间的界限也愈发模糊。 当地时间 2 日，据外媒 insideevs 报道，福特希望让车主知道：只要开的是福特汽车，想阻止车辆向外传输驾驶数据并不难。 福特本周上线了“隐私承诺”（Privacy Promise）网站，详细介绍公司收集哪些车联网数据。不同车型收集的信息有所区别，或涉及 车…",
+        "publishedAt": "2026-11-03T09:14:50.000Z",
+        "summary": "IT之家 11 月 3 日消息，据科技媒体 Android Authority 今天报道，部分谷歌 Pixel Watch 用户过去一周常常抱怨，他们的手表耗电过快。 如今谷歌已经推送更新修复此问题 。 谷歌对此表示：“影响少数 Pixel Watch 用户的电池耗电异常问题，修复方案已经开始推送，未来几天内覆盖全部用户。您可以按下 Pixel Watch 的表冠，打开 Play 商店应用，然后点击‘管理应用’‘全部更新’。” IT之家从原报道获悉，一部分 Pixel Wa…",
         "badge": "IT之家"
       },
       {
@@ -323,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1254089",
+        "id": "v2ex-1254157",
         "category": "dev",
-        "title": "求助 V 友，苹果开发者账号从个人转为公司，提示公司已有会员资格。",
-        "url": "https://www.v2ex.com/t/1254089",
+        "title": "[不懂就问] Claude 弹 KYC，我想让它直接封账户怎么做？",
+        "url": "https://www.v2ex.com/t/1254157",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-03T04:28:20.000Z",
-        "summary": "事情的经过： 开发者账号是 2016 年左右注册的，一直是个人身份。 公司是 2019 年注册的。2026 年转为 opc。 2026 年申请的 duns，找到了我的公司，直接返回的编码，ai 分析是公司已被邓白氏提前收录。 用上面的 duns 申请个人转公司，被驳回，提示公司已经是 Apple Developer Program 的会员。 Apple Developer Program 只允许公司拥有一个会员资格。 我用 duns 返回的公司英文名全网搜了下，返回的是我的…",
+        "publishedAt": "2026-11-03T07:32:49.000Z",
+        "summary": "没有护照，KYC 流程走不下去，想失败都没办法。 退款也退不了。 31 号早上弹 KYC ，第四天了，难道就这么一直卡着吗？ 22 号付的钱，也没用几天。。 这种情况怎么办，还能不能退款了。",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "11 回复"
       },
       {
-        "id": "cn-baidu-f082a4fbc60e81ec",
+        "id": "cn-baidu-6fef5ca27d587469",
         "category": "cn",
-        "title": "一组数据看黄河治理80年",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E7%BB%84%E6%95%B0%E6%8D%AE%E7%9C%8B%E9%BB%84%E6%B2%B3%E6%B2%BB%E7%90%8680%E5%B9%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "9组数字 速览第九届进博会",
+        "url": "https://www.baidu.com/s?wd=9%E7%BB%84%E6%95%B0%E5%AD%97+%E9%80%9F%E8%A7%88%E7%AC%AC%E4%B9%9D%E5%B1%8A%E8%BF%9B%E5%8D%9A%E4%BC%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "曾经三年两决口、百年一改道的黄河，如今安澜奔涌。黄河已保持27年不断流，流入泥沙量下降到如今每年不到3亿吨，黄河流域水土保持率达69.75%……人民治理黄河80年了，从昔日忧患河到今朝幸福河，中国人民书写了黄河岁岁安澜的东方奇迹。",
+        "summary": "11月5日至10日，第九届进博会将在上海举行。届时将有162个国家、地区和国际组织参与，4142家境外企业参展，整体面积将首次突破44万平方米。九届进博会“全勤”企业和机构近200家，超2000家新面孔企业将亮相进博会。戳图了解，一起期待！",
         "badge": "热搜",
-        "signal": "7,619,493 热度"
+        "signal": "7,618,134 热度"
       },
       {
         "id": "cisa-kev-cve-2026-41709",
@@ -355,33 +354,32 @@
         "signal": "已遭利用 · 整改期限 2026-11-11"
       },
       {
-        "id": "ai-hugging-face-718617961cab3abc",
+        "id": "ai-hugging-face-e508e29ae812fe58",
         "category": "ai",
-        "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
-        "url": "https://huggingface.co/blog/announcing-project-protostar",
+        "title": "Granite Switch 4.1.1 — Update models like you update software",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
         "source": "Hugging Face",
-        "publishedAt": "2026-10-29T00:00:00.000Z",
+        "publishedAt": "2026-10-29T13:37:07.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1254043",
+        "id": "hn-50334523",
         "category": "dev",
-        "title": "大半年已经不打开 IDE 了，把 Jetbrains 的 Git 搬到了 Coding Agent 中",
-        "url": "https://www.v2ex.com/t/1254043",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-03T02:43:40.000Z",
-        "summary": "首先我认为将来 Git 也不需要我来管理了，但是目前还处在过渡期，自己也会操作下。 所以目前把 Git 复刻到我的多 Agent 协作平台里了，大家有需要也可以看看。 地址： https://github.com/flyhero/antumi",
-        "badge": "程序员",
-        "signal": "0 回复"
+        "title": "European RISC-V Industrial Computing Initiative",
+        "url": "https://erici.eu",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-02T08:58:33.000Z",
+        "badge": "HN",
+        "signal": "98 分 · 53 评论"
       },
       {
-        "id": "cn-item-029f8e7d2483376c",
+        "id": "cn-item-01ad843fe5c0ab53",
         "category": "cn",
-        "title": "中国气象局：预计11月有4次冷空气过程影响我国",
-        "url": "https://www.chinanews.com.cn/sh/2026/11-03/10725229.shtml",
+        "title": "攻击-21成功起降四川舰，“无人机航母时代”正在到来？",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-03/10725319.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-03T03:35:52.000Z",
-        "summary": "中新网11月3日电 11月3日，国家气候中心副主任高荣在中国气象局今日召开的新闻发布会上表示，预计11月有4次冷空气过程影响我国，发生频次接近常年同期(4.47次)；冷空气强度呈“前强后弱”特点。其中，未来2周有两次冷空气过程：5日至7日，冷空气过程强度较强，内蒙古、东北地区、华北至江南北部等地自北向南有4℃至8℃降温，局地降幅超过10℃；12日至16日，冷空气过程主要影响新疆、西北地区、华北、东北及黄淮等地。",
+        "publishedAt": "2026-11-03T06:56:55.000Z",
+        "summary": "中新网11月3日电(记者 刁炜)据中国海军有关部门近日披露，我军首型舰载察打一体隐身无人机攻击-21，首次在076型两栖攻击舰四川舰成功起降，标志着中国海军已具备固定翼隐身无人机在大型海上作战平台起降能力。",
         "badge": "中新网要闻"
       },
       {
@@ -406,23 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50340088",
+        "id": "v2ex-1254154",
         "category": "dev",
-        "title": "Show HN: Subvocal – Talk to your computer without making noise",
-        "url": "https://news.ycombinator.com/item?id=50340088",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-02T17:16:17.000Z",
-        "badge": "HN",
-        "signal": "641 分 · 326 评论"
+        "title": "Ubuntu 也太草台班子了， CVE-2026-98432 内核补丁还没推送吗，有装了 proposed 源的大佬吗，有问题吗",
+        "url": "https://www.v2ex.com/t/1254154",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-03T07:29:43.000Z",
+        "summary": "https://ubuntu.com/security/CVE-2026-98432",
+        "badge": "程序员",
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-a0123908b370d08c",
+        "id": "cn-it-b474c0a39fd7da06",
         "category": "cn",
-        "title": "月之暗面 Kimi 发布游戏开发与创意工作解决方案：AI 可直接操作 Unity、虚幻引擎等",
-        "url": "https://www.ithome.com/1/021/539.htm",
+        "title": "游改真人电影《生化危机：爆发夜》密钥延期至 2026 年 12 月 4 日，累计票房已破 4.81 亿",
+        "url": "https://www.ithome.com/1/021/653.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-03T06:42:23.000Z",
-        "summary": "IT之家 11 月 3 日消息，月之暗面 Kimi 昨日发布「游戏开发与创意工作解决方案」。该产品基于 Kimi K3.1 系列模型、Kimi Code 与 Kimi Work 系列 Agent 产品， 以及 Unity、虚幻引擎、Blender 等专业工具插件 ，可帮助团队更快验证玩法创意、推进工程和美术制作。 据介绍，游戏开发的第一道门槛。是创意验证的成本。一个玩法是否有趣，需要真正玩起来才能判断。但制作原型需要投入时间和人力，团队往往只能优先验证少数想法。Kimi 游…",
+        "publishedAt": "2026-11-03T09:11:10.000Z",
+        "summary": "IT之家 11 月 3 日消息，游改真人电影《生化危机：爆发夜》官方微博今日宣布， 本片密钥将延期至 2026 年 12 月 4 日 23:59 。 据电影官方昨晚披露， 本片上映第 29 天累计票房已突破 4.81 亿 ，已收获 1205.7 万名观众。 IT之家附该电影官方简介如下： 嘘，别出声。 黑暗中的生化怪物正在凝视，楼顶上的嗜血异种们虎视眈眈。 城市变为血色废墟，危险即将全面爆发！检查好手中的武器，抱紧需要运送的快递。前方高能，浣熊市的求生副本即将开启，请做好逃…",
         "badge": "IT之家"
       },
       {
@@ -447,25 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1254040",
+        "id": "hn-50321605",
         "category": "dev",
-        "title": "Claude 确保 IP 纯净+网络隔离的一个方法",
-        "url": "https://www.v2ex.com/t/1254040",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-03T02:39:40.000Z",
-        "summary": "Claude 封号的原因很多，但是 IP 应该主要问题，大多数人都是购买三方代理，所以很难保证 IP 纯净。 说一下我目前的方法，在腾讯云硅谷机房租一个服务器，拥有独立公网 IP ，然后在上面自建🪜，本地用 Clash Verge 开 TUN 模式连接。 要保证网络彻底隔离，那就不要本地直连 Claude ，可以在服务器上运行 Claude code ，然后本地再通过 SSH 方式连接上去使用，如果需要浏览器页面用，则可以部署一个 WebUI 这种方式的缺点是需要额外做本地…",
-        "badge": "程序员",
-        "signal": "29 回复"
+        "title": "Toit v2.0.0",
+        "url": "https://toit.io/blog/toit-v2-0-0/",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-01T00:25:04.000Z",
+        "badge": "HN",
+        "signal": "54 分 · 19 评论"
       },
       {
-        "id": "cn-baidu-f76486abe020c265",
+        "id": "cn-baidu-716d5d9d4e7eb7cc",
         "category": "cn",
-        "title": "警方回应九寨沟冲突：年轻一方先动手",
-        "url": "https://www.baidu.com/s?wd=%E8%AD%A6%E6%96%B9%E5%9B%9E%E5%BA%94%E4%B9%9D%E5%AF%A8%E6%B2%9F%E5%86%B2%E7%AA%81%EF%BC%9A%E5%B9%B4%E8%BD%BB%E4%B8%80%E6%96%B9%E5%85%88%E5%8A%A8%E6%89%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "退休时间按哪天算",
+        "url": "https://www.baidu.com/s?wd=%E9%80%80%E4%BC%91%E6%97%B6%E9%97%B4%E6%8C%89%E5%93%AA%E5%A4%A9%E7%AE%97&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，有网友反映称在四川九寨沟景区发生一起冲突事件，相关视频显示有一名老年人挥拳打向一名年轻人。11月3日上午，九寨沟县公安局回复记者称，系争夺拍照点位起冲突，年轻一方先动手，双方都有责任。",
+        "summary": "“退休时间到底按生日当月算，还是生日当天算？”根据人社部门发布的退休办理指引，明确退休时间以当月而非生日当天为准；身份证与档案出生日期不一致时，以档案最先记载的为准。",
         "badge": "热搜",
-        "signal": "7,522,442 热度"
+        "signal": "7,524,382 热度"
       },
       {
         "id": "github-advisory-ghsa-mfr5-77xh-9j7h",
@@ -479,13 +477,24 @@
         "signal": "HIGH · CVSS 0.0"
       },
       {
-        "id": "ai-hugging-face-b6b30743068c2627",
+        "id": "ai-hugging-face-718617961cab3abc",
         "category": "ai",
-        "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
-        "url": "https://huggingface.co/blog/mistral-large4",
+        "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+        "url": "https://huggingface.co/blog/announcing-project-protostar",
         "source": "Hugging Face",
         "publishedAt": "2026-10-29T00:00:00.000Z",
         "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1254153",
+        "category": "dev",
+        "title": "有可自己编程 DIY 的 mp3/MP4 吗？最好的现成的方案，我只要自己改固件源码就行",
+        "url": "https://www.v2ex.com/t/1254153",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-03T07:26:24.000Z",
+        "summary": "最好是带有简单的屏幕的。 不带屏幕的 也行。 或者开源软件、硬件的芯片的方案也行。 ESP32 那种方案也行。 要求：代码可控，能随意自己编程，高度自定义。",
+        "badge": "程序员",
+        "signal": "12 回复"
       }
     ]
   },
@@ -502,7 +511,7 @@
         "url": "https://github.com/vercel-labs/agent-desktop",
         "description": "Computer use CLI for AI agents",
         "language": "Rust",
-        "stars": 10784,
+        "stars": 11237,
         "starsToday": 2275
       },
       {
@@ -512,7 +521,7 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 111049,
+        "stars": 111184,
         "starsToday": 1803
       },
       {
@@ -522,7 +531,7 @@
         "url": "https://github.com/D4Vinci/Scrapling",
         "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
         "language": "Python",
-        "stars": 93345,
+        "stars": 93584,
         "starsToday": 706
       },
       {
@@ -532,7 +541,7 @@
         "url": "https://github.com/hyprwm/Hyprland",
         "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
         "language": "C++",
-        "stars": 40078,
+        "stars": 40137,
         "starsToday": 509
       },
       {
@@ -542,7 +551,7 @@
         "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
         "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
         "language": "Shell",
-        "stars": 33884,
+        "stars": 34043,
         "starsToday": 1379
       },
       {
@@ -552,7 +561,7 @@
         "url": "https://github.com/FlashML-org/FreeToken",
         "description": "FreeToken brings datacenter-scale model serving to your desktop. Run massive models locally, fast and efficiently.",
         "language": "Python",
-        "stars": 16274,
+        "stars": 16362,
         "starsToday": 653
       },
       {
@@ -561,7 +570,7 @@
         "name": "pingdotgg/t3code",
         "url": "https://github.com/pingdotgg/t3code",
         "language": "TypeScript",
-        "stars": 42509,
+        "stars": 42824,
         "starsToday": 3229
       },
       {
@@ -571,7 +580,7 @@
         "url": "https://github.com/shiyu-coder/Kronos",
         "description": "Kronos: A Foundation Model for the Language of Financial Markets",
         "language": "Python",
-        "stars": 46113,
+        "stars": 46170,
         "starsToday": 857
       },
       {
@@ -581,7 +590,7 @@
         "url": "https://github.com/kornia/kornia",
         "description": "🐍 Geometric Computer Vision Library for Spatial AI",
         "language": "Python",
-        "stars": 12227,
+        "stars": 12263,
         "starsToday": 412
       },
       {
@@ -591,10 +600,10 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "language": "C",
-        "stars": 46762,
+        "stars": 46843,
         "starsToday": 675
       }
     ],
-    "updatedAt": "2026-11-03T06:49:24.573Z"
+    "updatedAt": "2026-11-03T09:31:23.511Z"
   }
 }
