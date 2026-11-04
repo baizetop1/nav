@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-03T21:00:07.112Z",
+  "generatedAt": "2026-11-04T01:22:41.019Z",
   "intelligence": {
-    "updatedAt": "2026-11-03T21:00:07.112Z",
+    "updatedAt": "2026-11-04T01:22:41.019Z",
     "items": [
       {
-        "id": "cn-item-6161d2944b152871",
+        "id": "cn-item-ac9537a0c4f5167f",
         "category": "cn",
-        "title": "警方通报九寨沟景区游客冲突事件",
-        "url": "https://www.chinanews.com.cn/sh/2026/11-03/10725330.shtml",
+        "title": "贵州湖南江西等地有中到大雨 冷空气将影响内蒙古和东北地区等地",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-04/10725723.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-03T08:06:05.000Z",
-        "summary": "中新网11月3日电 据“平安九寨”微信公众号消息，九寨沟县公安局发布警情通报，具体内容如下：",
+        "publishedAt": "2026-11-04T00:05:43.000Z",
+        "summary": "中新网11月4日电 据中央气象台网站消息，昨日，湖北、江西、浙江、海南等地部分地区出现大到暴雨，局地大暴雨；内蒙古、黑龙江等地部分地区出现降雪天气。预计未来三天，冷空气影响内蒙古、东北、华北等地，内蒙古、黑龙江等地有较强降雪，关注对交通、人体健康、能源供应等的影响；贵州、湖南、江西等地有中到大雨，关注对城市运行、农业生产等的影响。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-118527",
+        "id": "cisa-kev-cve-2026-119977",
         "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-118527",
+        "title": "WordPress WordPress Core：WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-119977",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-30T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability ca…",
-        "badge": "CVE-2026-118527",
-        "signal": "已遭利用 · 整改期限 2026-11-13"
+        "publishedAt": "2026-11-03T00:00:00.000Z",
+        "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessi…",
+        "badge": "CVE-2026-119977",
+        "signal": "已遭利用 · 整改期限 2026-11-06"
       },
       {
         "id": "ai-openai-25493a43cba550c7",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50356994",
+        "id": "hn-50358582",
         "category": "dev",
-        "title": "Preparing for the Flipper One Kickstarter and opening pre-orders",
-        "url": "https://flipper.net/pages/flipper-one",
+        "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+        "url": "https://arxiv.org/abs/2605.29713",
         "source": "Hacker News",
-        "publishedAt": "2026-11-03T19:32:13.000Z",
+        "publishedAt": "2026-11-03T21:40:53.000Z",
         "badge": "HN",
-        "signal": "92 分 · 38 评论"
+        "signal": "218 分 · 34 评论"
       },
       {
-        "id": "cn-it-ab42c1e89af24a42",
+        "id": "cn-it-b643ea2f411a931b",
         "category": "cn",
-        "title": "Siri AI 将实现跨 App 办事：苹果开放“应用技能”，一句话串联多个应用任务",
-        "url": "https://www.ithome.com/1/021/869.htm",
+        "title": "曝字节将大面积限制员工在内部自费使用 Claude、Codex 等",
+        "url": "https://www.ithome.com/1/021/917.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-03T20:59:17.000Z",
-        "summary": "IT之家 11 月 4 日消息，科技媒体 9to5Mac 今天（11 月 4 日）发布博文， 报道称苹果宣布向第三方开发者开放 Siri AI 的全新“应用技能”（App Skills），让应用能够指导 Siri 执行更复杂的多步骤任务。 相关功能将随 iOS 27.3、macOS 27.3 及同期系统更新推出，目前新版系统仍处于开发者测试阶段。 该媒体指出本次 Siri 升级主要扩展应用协调能力，Siri 不仅要理解用户想做什么，还能根据应用提供的技能，调用相应的应用操作…",
+        "publishedAt": "2026-11-04T01:12:30.000Z",
+        "summary": "IT之家 11 月 4 日消息，据大厂日爆 11 月 3 日爆料，字节迎来新规， 将大面积限制 Claude、Codex 等个人账号的内部使用 。 爆料称，本月起，字节跳动将会对所有 L4 级别的代码仓库和飞书文档进行 外部 AI 访问封禁 ，覆盖范围全公司，员工个人采买的 AI 账号不能再用。 爆料还称，通知自上周发出后，引起了内部一些讨论，字节跳动技术副总裁洪定坤还在内网进行了详细回应，比如“L3 及以上内容一旦有泄露，后果是非常严重的”、“推广产品不需要用这种禁掉其他…",
         "badge": "IT之家"
       },
       {
@@ -85,28 +85,28 @@
         "publishedAt": "2026-11-03T14:00:32.000Z",
         "summary": "放了个链接，检查过正常用没什么问题，但是被 b 站律师钓鱼取证，也不联系，直接起诉。 网上搜索说这个律所主要代理 b 站，专门针对小商户大批量起诉。 了解发现现在很多行业很多这种专门批量碰瓷起诉的律师，叫版权蟑螂，不是为保护版权，就是为了通过这种方式赚钱，大家要注意！",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "16 回复"
       },
       {
-        "id": "cn-baidu-74e780bd88bc78e4",
+        "id": "cn-baidu-461ded3863c56004",
         "category": "cn",
-        "title": "10月新能源汽车销量榜：特斯拉跌至第8",
-        "url": "https://www.baidu.com/s?wd=10%E6%9C%88%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6%E9%94%80%E9%87%8F%E6%A6%9C%EF%BC%9A%E7%89%B9%E6%96%AF%E6%8B%89%E8%B7%8C%E8%87%B3%E7%AC%AC8&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "上汽奥迪“买一赠一”宣传已被立案",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%8A%E6%B1%BD%E5%A5%A5%E8%BF%AA%E2%80%9C%E4%B9%B0%E4%B8%80%E8%B5%A0%E4%B8%80%E2%80%9D%E5%AE%A3%E4%BC%A0%E5%B7%B2%E8%A2%AB%E7%AB%8B%E6%A1%88&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月3日消息，2026年10月新能源乘用车批发销量数据公布，整体预估总量180万辆。比亚迪以483125辆稳居第一，吉利位列第二。特斯拉中国批发量67829辆，排名下滑至第8位，其后的小鹏、小米汽车销量均超5万辆。",
+        "summary": "近日，上海嘉定区市场监管局就上汽奥迪“全系买一赠一”营销争议正式立案。起因是10月11日上汽奥迪发文祝贺郑钦文夺冠，标题称“全系买一赠一”，实际赠送的是车模而非车辆本身，且仅限两款车型。",
         "badge": "热搜",
-        "signal": "7,808,359 热度"
+        "signal": "7,808,946 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-111357",
+        "id": "cisa-kev-cve-2026-118527",
         "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111357",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-118527",
         "source": "CISA KEV",
         "publishedAt": "2026-10-30T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-1…",
-        "badge": "CVE-2026-111357",
-        "signal": "已遭利用 · 整改期限 2026-11-02"
+        "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability ca…",
+        "badge": "CVE-2026-118527",
+        "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
         "id": "ai-hugging-face-8d86676710497099",
@@ -118,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50357782",
+        "id": "hn-50339288",
         "category": "dev",
-        "title": "I Dumped Apple's Fucking Word List",
-        "url": "https://helgesver.re/articles/macos-vulgar-word-flags",
+        "title": "Jailbreaking my car's navigation system just so I can change the time",
+        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-03T20:33:23.000Z",
+        "publishedAt": "2026-11-02T16:29:19.000Z",
         "badge": "HN",
-        "signal": "30 分 · 2 评论"
+        "signal": "603 分 · 239 评论"
       },
       {
-        "id": "cn-item-000411aff2d56554",
+        "id": "cn-item-2315088b0f6b3134",
         "category": "cn",
-        "title": "广交会观察：70年，一扇“窗”，世界看见一个怎样的中国？",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-03/10725340.shtml",
+        "title": "挡风被还能用吗？冬季电动车骑行如何兼顾保暖与安全",
+        "url": "https://www.chinanews.com.cn/life/2026/11-04/10725725.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-03T07:24:14.000Z",
-        "summary": "中新网广州11月3日电 题：广交会观察：70年，一扇“窗”，世界看见一个怎样的中国？",
+        "publishedAt": "2026-11-04T00:00:01.000Z",
+        "summary": "天气越来越冷，挡风被成了不少骑电动自行车出行朋友的“过冬必备”，骑行路上保暖又抗风。然而装上挡风被后，电动车的灵活性也难免会受到影响：部分宽大、包裹性强的挡风被，可能限制手脚活动，影响转向和制动操作，存在安全隐患。",
         "badge": "中新网要闻"
       },
       {
@@ -167,28 +167,28 @@
         "publishedAt": "2026-11-03T11:12:06.000Z",
         "summary": "AI 来临之后，大干快上。很多需求不走正规的发布流程到生产环境服务器，直接把内部系统 web 接口包装成 cli ，然后让 ai agent 调用各个 cli ，在非开发人员或者开发人员电脑上或者办公网环境机器的实现业务流程 我总感觉这样是不正规的，但是在目前环境下，你们认为呢",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-it-0af38f39da046c88",
+        "id": "cn-it-31d62b217c91e841",
         "category": "cn",
-        "title": "外屏太宽够不着？苹果 iOS 27.3 测试版改善 iPhone Duo 单手操作体验",
-        "url": "https://www.ithome.com/1/021/868.htm",
+        "title": "Linux 发行版 Fedora 45 正式发布： Anaconda 安装程序集成 Stratis 支持",
+        "url": "https://www.ithome.com/1/021/916.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-03T20:46:13.000Z",
-        "summary": "IT之家 11 月 4 日消息，科技媒体 MacRumors 今天（11 月 4 日）发布博文，报道称在 iOS 27.3 首个 Beta 开发者预览版中，苹果为其首款折叠 iPhone Duo，引入了“便捷访问”（Reachability）功能。 用户可通过横向滑动，将屏幕内容向左或向右移动，让原本难以触及的界面区域靠近拇指，改善单手操作体验。 该媒体指出 iPhone Duo 于 10 月 23 日发售后，部分评测者反映，超宽外屏增加了单手使用的难度。苹果随后表示，将通…",
+        "publishedAt": "2026-11-04T01:11:14.000Z",
+        "summary": "IT之家 11 月 4 日消息，Fedora 官方当地时间本月 3 日 正式发布了这一 Linux 发行版的 45 版本 。此次发布覆盖该发行版的 Workstation、KDE Plasma Desktop、Server、Cloud、CoreOS、IoT 全部 6 种主要变体。 Fedora Linux 45 基于最新的 Linux 内核版本，拥有最新的桌面环境、开发工具和运行时库，为用户带来出色的“开箱即用”体验。 Fedora 官方特别强调， 最新版本在 Anacon…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-97229",
+        "id": "cisa-kev-cve-2026-111357",
         "category": "security",
-        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111357",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-29T00:00:00.000Z",
-        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
-        "badge": "CVE-2026-97229",
-        "signal": "已遭利用 · 整改期限 2026-11-01"
+        "publishedAt": "2026-10-30T00:00:00.000Z",
+        "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-1…",
+        "badge": "CVE-2026-111357",
+        "signal": "已遭利用 · 整改期限 2026-11-02"
       },
       {
         "id": "ai-google-deepmind-1b296d8bb115085d",
@@ -201,24 +201,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50339288",
+        "id": "hn-50354358",
         "category": "dev",
-        "title": "Jailbreaking my car's navigation system just so I can change the time",
-        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+        "title": "Stringman, an $800 open-source room scale gripper robot",
+        "url": "https://neufangled.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-02T16:29:19.000Z",
+        "publishedAt": "2026-11-03T16:47:29.000Z",
         "badge": "HN",
-        "signal": "432 分 · 172 评论"
+        "signal": "365 分 · 141 评论"
       },
       {
-        "id": "cn-baidu-8eca1589cde66200",
+        "id": "cn-baidu-f9a73c4a105cb979",
         "category": "cn",
-        "title": "南京多所高中推迟上学时间",
-        "url": "https://www.baidu.com/s?wd=%E5%8D%97%E4%BA%AC%E5%A4%9A%E6%89%80%E9%AB%98%E4%B8%AD%E6%8E%A8%E8%BF%9F%E4%B8%8A%E5%AD%A6%E6%97%B6%E9%97%B4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "iPhone系统天气 下周五-32℃",
+        "url": "https://www.baidu.com/s?wd=iPhone%E7%B3%BB%E7%BB%9F%E5%A4%A9%E6%B0%94+%E4%B8%8B%E5%91%A8%E4%BA%94-32%E2%84%83&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，记者探访确认南京多所高中已推迟上学时间，多校调整至7:10至7:20间到校，学生早上可多睡半小时。此前，有家长反映高中生在校时长超15小时，担忧影响健康。江苏省教育厅厅长回应称重视学生身心健康，今年已就作息时间等五项工作提出明确要求，下一步将加强管理。",
+        "summary": "11月4日凌晨，大量iPhone用户发现自带天气App显示11月13日北京、上海、青岛、河南等地气温骤降至-28℃至-32℃，一天温差近50度，引发热议。",
         "badge": "热搜",
-        "signal": "7,712,924 热度"
+        "signal": "7,714,330 热度"
       },
       {
         "id": "github-advisory-ghsa-7w38-ggh5-v542",
@@ -252,24 +252,24 @@
         "signal": "6 回复"
       },
       {
-        "id": "cn-item-6ade6bec4c976e5c",
+        "id": "cn-item-01f1790d1e9fcb7f",
         "category": "cn",
-        "title": "东西问丨伊扎特·萨阿德：全球南方现代化如何抓住AI机遇？",
-        "url": "https://www.chinanews.com.cn/dxw/2026/11-03/10725312.shtml",
+        "title": "钻石“长”出新本领 金刚石闪耀芯片散热新赛道",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-04/10725718.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-03T07:05:01.000Z",
-        "summary": "中新社约翰内斯堡11月3日电 题：全球南方现代化如何抓住AI机遇？",
+        "publishedAt": "2026-11-03T23:46:58.000Z",
+        "summary": "金刚石闪耀芯片散热新赛道",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-76418",
+        "id": "cisa-kev-cve-2026-97229",
         "category": "security",
-        "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software：Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76418",
+        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
         "source": "CISA KEV",
         "publishedAt": "2026-10-29T00:00:00.000Z",
-        "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, …",
-        "badge": "CVE-2026-76418",
+        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
+        "badge": "CVE-2026-97229",
         "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
@@ -283,23 +283,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50355251",
+        "id": "hn-50358562",
         "category": "dev",
-        "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-        "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+        "title": "Safari introduces Adaptive Dark Mode in 27.3",
+        "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-03T17:40:00.000Z",
+        "publishedAt": "2026-11-03T21:39:05.000Z",
         "badge": "HN",
-        "signal": "339 分 · 108 评论"
+        "signal": "275 分 · 179 评论"
       },
       {
-        "id": "cn-it-31540de03cd515d3",
+        "id": "cn-it-11138396ad3bcfb5",
         "category": "cn",
-        "title": "国行 Apple 智能首批上线核心功能汇总：AirPods 实时翻译登场，iPhone 可联手千问实现更多功能",
-        "url": "https://www.ithome.com/1/021/867.htm",
+        "title": "佳能发布新品定时遥控器 TC-N3、TC-E3 与麦克风 DM-E10D，1199 元起",
+        "url": "https://www.ithome.com/1/021/915.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-03T20:31:34.000Z",
-        "summary": "IT之家 11 月 4 日消息，苹果今日凌晨面向 iPhone 推送了首个 iOS 27.3 开发者预览版， 如约为国行用户带来了「Apple 智能与 Siri」 。 IT之家在第一时间上手体验了国行 Apple 智能首批上线的核心功能，现为大家汇总亮点如下： 新增 Siri 呼出灯效 感知最为明显的变化就是长按电源键呼出 Siri，屏幕会出现一圈跑马灯特效。 实时翻译 实时翻译功能已整合到信息、FaceTime 通话和电话 App 中，支持用户在通话及消息场景中获得翻译体…",
+        "publishedAt": "2026-11-04T01:11:11.000Z",
+        "summary": "IT之家 11 月 4 日消息，佳能中国今日宣布推出三款新品，包括定时遥控器 TC-N3、TC-E3 以及麦克风 DM-E10D。TC-N3 建议零售价 1299 元，TC-E3 为 1199 元，DM-E10D 同为 1199 元。 其中，TC-N3 和 TC-E3 是经典型号 TC-80N3 的升级产品，主要面向天文摄影与延时视频拍摄用户。两款新品在保留自拍定时、间隔定时、长曝光定时及可选拍摄张数等功能的基础上，新增时钟功能，支持在指定时间自动触发快门。 该时钟功能可组…",
         "badge": "IT之家"
       },
       {
@@ -341,18 +341,18 @@
         "source": "百度热搜",
         "summary": "11月3日，2026年世界互联网大会乌镇峰会开幕。展馆里包括6G在内的一大批前沿科技成果集中亮相。这些新技术到底能给我们的生活带来什么改变？一起来看！",
         "badge": "热搜",
-        "signal": "7,619,013 热度"
+        "signal": "7,617,851 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-41709",
+        "id": "cisa-kev-cve-2026-76418",
         "category": "security",
-        "title": "Broadcom VMware ESX：Broadcom VMWare ESX Insufficient Logging Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-41709",
+        "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software：Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76418",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-28T00:00:00.000Z",
-        "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
-        "badge": "CVE-2026-41709",
-        "signal": "已遭利用 · 整改期限 2026-11-11"
+        "publishedAt": "2026-10-29T00:00:00.000Z",
+        "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, …",
+        "badge": "CVE-2026-76418",
+        "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
         "id": "ai-hugging-face-63945bc794809749",
@@ -364,23 +364,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50354358",
+        "id": "hn-50358702",
         "category": "dev",
-        "title": "Stringman, an $800 open-source room scale gripper robot",
-        "url": "https://neufangled.com/",
+        "title": "The Internals of PostgreSQL",
+        "url": "https://www.interdb.jp/pg/index.html",
         "source": "Hacker News",
-        "publishedAt": "2026-11-03T16:47:29.000Z",
+        "publishedAt": "2026-11-03T21:51:06.000Z",
         "badge": "HN",
-        "signal": "158 分 · 80 评论"
+        "signal": "91 分 · 2 评论"
       },
       {
-        "id": "cn-item-01ad843fe5c0ab53",
+        "id": "cn-item-17274127302bcd4a",
         "category": "cn",
-        "title": "攻击-21成功起降四川舰，“无人机航母时代”正在到来？",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-03/10725319.shtml",
+        "title": "车市增速换挡之后 谁才有资格跑得更远",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-04/10725717.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-03T06:56:55.000Z",
-        "summary": "中新网11月3日电(记者 刁炜)据中国海军有关部门近日披露，我军首型舰载察打一体隐身无人机攻击-21，首次在076型两栖攻击舰四川舰成功起降，标志着中国海军已具备固定翼隐身无人机在大型海上作战平台起降能力。",
+        "publishedAt": "2026-11-03T23:43:34.000Z",
+        "summary": "中青报·中青网记者 张真齐",
         "badge": "中新网要闻"
       },
       {
@@ -416,25 +416,25 @@
         "signal": "5 回复"
       },
       {
-        "id": "cn-it-8b619ce1c0e1d726",
+        "id": "cn-it-dc18afcd3ccfc60e",
         "category": "cn",
-        "title": "苹果 iOS 27.3 扩展 Siri AI：支持繁体中文、覆盖 15 款 App 操作，能管理文件 / 定时发送信息等",
-        "url": "https://www.ithome.com/1/021/866.htm",
+        "title": "MOFT 为苹果 iPhone Duo 推出新款手机壳：折纸式设计，能保护屏幕也能当握把",
+        "url": "https://www.ithome.com/1/021/914.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-03T20:27:56.000Z",
-        "summary": "IT之家 11 月 4 日消息，科技媒体 MacRumors 今天（11 月 4 日）发布博文， 报道称在今天推送的 iOS 27.3 首个 Beta 开发者预览版中，苹果公司进一步扩展 Siri AI 在应用内及跨应用执行任务的能力。 IT之家注：伴随着 iOS 27.3 发布， 国行“Apple 智能与 Siri”如期上线 ，但下文介绍的相关功能 / 特性国内暂未上线。 在语言支持方面，Siri AI 上线初期仅支持英语，在 iOS 27.2 更新中上线法语、日语、韩语…",
+        "publishedAt": "2026-11-04T01:07:21.000Z",
+        "summary": "IT之家 11 月 4 日消息，据外媒 The Verge 报道，MOFT 为苹果折叠屏手机 iPhone Duo 推出了一款多功能保护壳。其不仅能保护手机，还能折叠成不同角度的支架，方便用户免手持操作。其屏幕翻盖采用折纸式设计，改变折叠方式后，还能充当握把，方便握持手机。 新款 Dynamic Folio Case 保护壳已在 MOFT 官网开放预订，售价 89.99 美元 （IT之家注：现汇率约合 601.5 元人民币） ，提供海军蓝和雾湾色配蓝宝石双拼色共 2 款外观…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-46300",
+        "id": "cisa-kev-cve-2026-41709",
         "category": "security",
-        "title": "Linux Kernel：Linux Kernel Missing Initialization of a Variable Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-46300",
+        "title": "Broadcom VMware ESX：Broadcom VMWare ESX Insufficient Logging Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-41709",
         "source": "CISA KEV",
         "publishedAt": "2026-10-28T00:00:00.000Z",
-        "summary": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing E…",
-        "badge": "CVE-2026-46300",
-        "signal": "已遭利用 · 整改期限 2026-10-31"
+        "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+        "badge": "CVE-2026-41709",
+        "signal": "已遭利用 · 整改期限 2026-11-11"
       },
       {
         "id": "ai-google-deepmind-393575ee7d83ff0a",
@@ -447,24 +447,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50354960",
+        "id": "hn-50346755",
         "category": "dev",
-        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
-        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+        "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels",
+        "url": "https://hackertv.org",
         "source": "Hacker News",
-        "publishedAt": "2026-11-03T17:22:37.000Z",
+        "publishedAt": "2026-11-03T01:18:09.000Z",
         "badge": "HN",
-        "signal": "749 分 · 252 评论"
+        "signal": "161 分 · 35 评论"
       },
       {
-        "id": "cn-baidu-b523d6b756050bc0",
+        "id": "cn-baidu-d9e0c5bfd65df216",
         "category": "cn",
-        "title": "女子每天玩手机10小时患手机痴呆症",
-        "url": "https://www.baidu.com/s?wd=%E5%A5%B3%E5%AD%90%E6%AF%8F%E5%A4%A9%E7%8E%A9%E6%89%8B%E6%9C%BA10%E5%B0%8F%E6%97%B6%E6%82%A3%E6%89%8B%E6%9C%BA%E7%97%B4%E5%91%86%E7%97%87&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "珠峰南坡海拔4410米酒店雪中被烧毁",
+        "url": "https://www.baidu.com/s?wd=%E7%8F%A0%E5%B3%B0%E5%8D%97%E5%9D%A1%E6%B5%B7%E6%8B%944410%E7%B1%B3%E9%85%92%E5%BA%97%E9%9B%AA%E4%B8%AD%E8%A2%AB%E7%83%A7%E6%AF%81&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "福州一位25岁的王小姐从事网销，每日使用手机超10小时，渐渐健忘、注意力涣散。她就医检查，记忆力明显减退，被医生确诊患上数码痴呆症，也就是俗称的手机痴呆症。",
+        "summary": "10月30日，珠峰南坡海拔4410米大本营的好运酒店毁于大火，所幸无人员伤亡。当地向导称厨房有很多燃气罐，几乎不可能扑灭。",
         "badge": "热搜",
-        "signal": "7,520,461 热度"
+        "signal": "7,522,925 热度"
       },
       {
         "id": "github-advisory-ghsa-48v2-6jcm-fc99",
@@ -487,15 +487,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1254204",
+        "id": "v2ex-1254196",
         "category": "dev",
-        "title": "AI 时代下程序员的出路在哪里？",
-        "url": "https://www.v2ex.com/t/1254204",
+        "title": "让 Claude 帮我做了一个自动赚钱挖矿的程序，跑了 8 天的真实数据进行测试，最后被 Claude 验证无法赚钱，劝我放弃项目。",
+        "url": "https://www.v2ex.com/t/1254196",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-03T09:29:43.000Z",
-        "summary": "因为 AI 编程现在已经快速成为编程的主流了，以后程序员的工作机会肯定会越来越少。 尤其对于初级程序员，清华大学发布的《 AI 时代技能趋势报告》显示,初级程序员岗位 AI 替代率达到 87%。 有些观点认为：程序员行业正经历结构性重塑,程序员的核心价值从“手写代码”加速转向“架构设计与 AI 协同”。其实我也这么认为，以前程序员的主要工作是写代码，但是很明显，现在不用写了，让 AI 写就行了。 那么问题来了，AI 时代老的程序员的出路在哪里？难道都去做产品或者 FDE 去…",
+        "publishedAt": "2026-11-03T09:19:17.000Z",
+        "summary": "项目是做什么的 实时采集 Solana 链上 ORE 挖矿的当前轮次、25 格部署量、Split/Solo 类型、奖励池、官方矿工账户、SOL/ORE 可执行兑换报价。 最终实现建立“决策前盘口 → 模拟订单 → 实际成交 → 开奖结算 → Claim → 变现”的完整审计链。 过程 让 Claude 分析 ORE 挖矿的规则，并使用 Solana 链上的真实数据进行分析，因为是在国内很多链上接口无法连接，专门买了台香港的服务器进行跑数据。 一开始 claude 让跑一段连…",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "7 回复"
       }
     ]
   },
@@ -512,8 +512,8 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 111744,
-        "starsToday": 1138
+        "stars": 111935,
+        "starsToday": 1139
       },
       {
         "id": "github-c3259fd0e0344e98",
@@ -522,8 +522,8 @@
         "url": "https://github.com/vercel-labs/agent-desktop",
         "description": "Computer use CLI for AI agents",
         "language": "Rust",
-        "stars": 12431,
-        "starsToday": 3792
+        "stars": 12819,
+        "starsToday": 3791
       },
       {
         "id": "github-f20e325dfdaa77b4",
@@ -532,8 +532,8 @@
         "url": "https://github.com/max-sixty/worktrunk",
         "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
         "language": "Rust",
-        "stars": 10418,
-        "starsToday": 437
+        "stars": 10507,
+        "starsToday": 438
       },
       {
         "id": "github-c4394ed11770f8b3",
@@ -542,8 +542,8 @@
         "url": "https://github.com/JustVugg/colibri",
         "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
         "language": "C",
-        "stars": 47180,
-        "starsToday": 803
+        "stars": 47253,
+        "starsToday": 802
       },
       {
         "id": "github-89e612f6ea973712",
@@ -552,7 +552,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 311294,
+        "stars": 311487,
         "starsToday": 1164
       },
       {
@@ -562,8 +562,8 @@
         "url": "https://github.com/p-e-w/heretic",
         "description": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
         "language": "Python",
-        "stars": 38697,
-        "starsToday": 699
+        "stars": 38808,
+        "starsToday": 701
       },
       {
         "id": "github-9e2e3753bd9fd936",
@@ -571,8 +571,8 @@
         "name": "spotify/portal-ai-plugins",
         "url": "https://github.com/spotify/portal-ai-plugins",
         "language": "TypeScript",
-        "stars": 3007,
-        "starsToday": 94
+        "stars": 3045,
+        "starsToday": 91
       },
       {
         "id": "github-b80d171be530b134",
@@ -581,8 +581,8 @@
         "url": "https://github.com/floci-io/floci",
         "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
         "language": "Java",
-        "stars": 28625,
-        "starsToday": 679
+        "stars": 28802,
+        "starsToday": 482
       },
       {
         "id": "github-4fe0e60d2a8e42b2",
@@ -591,8 +591,8 @@
         "url": "https://github.com/Usagi-org/ai-goofish-monitor",
         "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
         "language": "Python",
-        "stars": 16317,
-        "starsToday": 204
+        "stars": 16409,
+        "starsToday": 228
       },
       {
         "id": "github-4cc347b05336b6bc",
@@ -601,10 +601,10 @@
         "url": "https://github.com/anomalyco/hex",
         "description": "Local voice dictation for mac, windows and linux",
         "language": "Rust",
-        "stars": 4478,
+        "stars": 4600,
         "starsToday": 410
       }
     ],
-    "updatedAt": "2026-11-03T21:00:07.112Z"
+    "updatedAt": "2026-11-04T01:22:41.019Z"
   }
 }
