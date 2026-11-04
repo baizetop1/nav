@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-04T17:18:02.273Z",
+  "generatedAt": "2026-11-04T23:40:25.624Z",
   "intelligence": {
-    "updatedAt": "2026-11-04T17:18:02.273Z",
+    "updatedAt": "2026-11-04T23:40:25.624Z",
     "items": [
       {
         "id": "cn-item-572c2c89ee846f51",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-119977",
+        "id": "cisa-kev-cve-2024-27834",
         "category": "security",
-        "title": "WordPress WordPress Core：WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-119977",
+        "title": "Apple Multiple Products：Apple Multiple Products Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-27834",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-03T00:00:00.000Z",
-        "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessi…",
-        "badge": "CVE-2026-119977",
-        "signal": "已遭利用 · 整改期限 2026-11-06"
+        "publishedAt": "2026-11-04T00:00:00.000Z",
+        "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+        "badge": "CVE-2024-27834",
+        "signal": "已遭利用 · 整改期限 2026-11-18"
       },
       {
         "id": "ai-openai-1be4fdd8e6ca80f0",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50364336",
+        "id": "hn-50371246",
         "category": "dev",
-        "title": "AI is forcing us to pay off 40 years of technical debt",
-        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+        "title": "Residential proxies detected on White House network",
+        "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
         "source": "Hacker News",
-        "publishedAt": "2026-11-04T11:52:17.000Z",
+        "publishedAt": "2026-11-04T20:45:18.000Z",
         "badge": "HN",
-        "signal": "635 分 · 409 评论"
+        "signal": "485 分 · 142 评论"
       },
       {
-        "id": "cn-it-d9aebafa21bc5147",
+        "id": "cn-it-f451e7d367af71c0",
         "category": "cn",
-        "title": "华为小艺 Work 率先上线 openPangu-2.1-Pro 模型，主打“鸿蒙任务增强”",
-        "url": "https://www.ithome.com/1/022/472.htm",
+        "title": "由 SK 海力士提供：苹果 HomePod mini 2 智能音箱确认配 2GB 内存",
+        "url": "https://www.ithome.com/1/022/485.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-04T16:39:40.000Z",
-        "summary": "IT之家 11 月 5 日消息，华为云 11 月 1 日发布公告，MaaS 模型即服务平台将于 2026 年 11 月 6 日停止销售 openPangu-2.0-Flash 和 openPangu-2.0-Pro 两款模型服务，并于 11 月 30 日 00:00 正式下线。不过华为官方表示， openPangu 系列新版本模型已在规划中，后续将逐步推出上线 。 IT之家实测发现， 小艺 Work 率先上线了 openPangu-2.1-Pro 模型 ，主打“鸿蒙任务增强…",
+        "publishedAt": "2026-11-04T23:34:07.000Z",
+        "summary": "IT之家 11 月 5 日消息，科技媒体 MacRumors 昨日（11 月 4 日）发布博文， 已确认苹果新款 HomePod mini 2 配备 2GB 内存，内存由 SK 海力士供应。 HomePod mini 2 搭载的 S10 芯片，同样用于 Apple Watch Series 10，而该芯片本身即配备 2GB 内存。相比初代 HomePod mini 的 1GB 内存，新款的内存容量实现翻倍。 IT之家此前报道，用户可以仅使用 HomePod mini 2 单…",
         "badge": "IT之家"
       },
       {
@@ -85,47 +85,47 @@
         "publishedAt": "2026-11-04T12:06:07.000Z",
         "summary": "最近逛论坛、看国外的一些文章，发现好多人（包括我常看的一些专栏作者）都对 ai 有不少负面情绪，或者对那种“vibe coding”挺反感的。他们的理由听起来也五花八门的，比如觉得 ai 剥夺了自己亲手敲代码的乐趣啦、担心 ai 巨头变成了垄断生产资料的地主啦、或者觉得人类的价值被贬值等等。 虽说我也能理解这些焦虑，但说实话，要是现在问我“愿不愿意回到没有 ai 的日子”，我绝对会说：打死都不回去，完全回不去了！因为跟现在一比，以前那日子简直就是地狱好吗？ 大家想想过去咱们…",
         "badge": "程序员",
-        "signal": "28 回复"
+        "signal": "36 回复"
       },
       {
-        "id": "cn-baidu-eb166692167e4572",
+        "id": "cn-baidu-d3773e41e50ff3f7",
         "category": "cn",
-        "title": "“如果这钱能提出来 我警察不当了”",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%A6%82%E6%9E%9C%E8%BF%99%E9%92%B1%E8%83%BD%E6%8F%90%E5%87%BA%E6%9D%A5+%E6%88%91%E8%AD%A6%E5%AF%9F%E4%B8%8D%E5%BD%93%E4%BA%86%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "美股收盘 中国资产爆发",
+        "url": "https://www.baidu.com/s?wd=%E7%BE%8E%E8%82%A1%E6%94%B6%E7%9B%98+%E4%B8%AD%E5%9B%BD%E8%B5%84%E4%BA%A7%E7%88%86%E5%8F%91&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "“如果这钱能提出来，我警察不当了！”近日，福建派出所副所长林森阳、民警郑志伟劝导市民张女士，成功拦下她准备寄出的价值34.5万元的名表。张女士因快递里的扫码领礼卡片入群，不慎落入诈骗圈套。",
+        "summary": "美东时间11月4日，美股三大指数集体收涨，道指涨3.03%，纳指涨1.44%。大型科技股多数上涨，苹果、微软涨超5%；中概股普遍上涨，纳斯达克中国金龙指数涨3.49%，腾讯音乐、百度集团、爱奇艺、网易涨超4%。",
         "badge": "热搜",
-        "signal": "7,808,168 热度"
+        "signal": "7,809,111 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-118527",
+        "id": "cisa-kev-cve-2026-119977",
         "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-118527",
+        "title": "WordPress WordPress Core：WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-119977",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-30T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability ca…",
-        "badge": "CVE-2026-118527",
-        "signal": "已遭利用 · 整改期限 2026-11-13"
+        "publishedAt": "2026-11-03T00:00:00.000Z",
+        "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessi…",
+        "badge": "CVE-2026-119977",
+        "signal": "已遭利用 · 整改期限 2026-11-06"
       },
       {
-        "id": "ai-hugging-face-8d86676710497099",
+        "id": "ai-hugging-face-32d4e91d243ef07f",
         "category": "ai",
-        "title": "StateBench: Testing how language models track state changes over long documents",
-        "url": "https://huggingface.co/blog/allenai/statebench",
+        "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+        "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-03T17:15:21.000Z",
+        "publishedAt": "2026-11-04T17:50:10.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50366522",
+        "id": "hn-50369925",
         "category": "dev",
-        "title": "Guerrilla Bike Lanes: San Francisco Makes Illicit Infrastructure Permanent (2016)",
-        "url": "https://99percentinvisible.org/article/guerrilla-bike-lanes-san-francisco-makes-illicit-infrastructure-permanent/",
+        "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+        "url": "https://www.ricursive.com/ripple",
         "source": "Hacker News",
-        "publishedAt": "2026-11-04T15:01:44.000Z",
+        "publishedAt": "2026-11-04T18:53:29.000Z",
         "badge": "HN",
-        "signal": "101 分 · 26 评论"
+        "signal": "191 分 · 67 评论"
       },
       {
         "id": "cn-item-637b13ecd4681bff",
@@ -149,13 +149,13 @@
         "signal": "CRITICAL · CVSS 9.8"
       },
       {
-        "id": "ai-openai-a3433e936d2c04bf",
+        "id": "ai-openai-fbaa86a829ad59fd",
         "category": "ai",
-        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
-        "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+        "title": "A thousand fewer paths to root",
+        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
         "source": "OpenAI",
-        "publishedAt": "2026-11-04T07:00:00.000Z",
-        "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.",
+        "publishedAt": "2026-11-04T08:00:00.000Z",
+        "summary": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.",
         "badge": "OpenAI"
       },
       {
@@ -167,28 +167,28 @@
         "publishedAt": "2026-11-04T11:26:08.000Z",
         "summary": "https://github.com/postmanlabs/postman-app-support/issues/14370 以前古法编程的时候还用用，现在用 AI 了，也少用了",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-8fe17c234f08c34d",
+        "id": "cn-it-fff79eefeab4bee7",
         "category": "cn",
-        "title": "微信鸿蒙版 App 推 8.0.23.34 正式版更新，更多用户灰度合并发图功能",
-        "url": "https://www.ithome.com/1/022/470.htm",
+        "title": "Sensor Tower 估算《GTA 6》数字预购收入超 7.5 亿美元，索尼 PS5 占比 74%",
+        "url": "https://www.ithome.com/1/022/484.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-04T15:56:19.000Z",
-        "summary": "IT之家 11 月 4 日消息，微信鸿蒙版 App 今晚在华为应用市场（App Gallery）发布了 8.0.23.34 正式版更新。 和往常一样，本次更新的说明依旧为“修复了一些已知问题”。据用户反馈，8.0.23 版本的微信新增了如下特性： 部分 Flutter 跨端页面（如朋友圈、听一听、表情管理等页面）响应系统字体粗细； 更换铃声选择界面右上角新增铃声设置入口，支持启用或停用个性化内容推荐； 发表视频号内容时新增添加标注，视频号已发布的内容点击分享同步新增添加标注…",
+        "publishedAt": "2026-11-04T23:34:00.000Z",
+        "summary": "IT之家 11 月 5 日消息，据游戏数据分析机构 Sensor Tower 最新统计数据，Rockstar《侠盗猎车手 6》（GTA 6）在正式发售前的数字预购收入已达到约 7.51 亿美元 （IT之家注：现汇率约合 50.2 亿元人民币） ，预购量约为 771 万份。 从平台分布来看，PlayStation 5 占据了明显优势，预购份额达到 74%，约售出 574 万份，对应收入约 5.59 亿美元；Xbox Series X|S 占比为 26%，约售出 197 万份，…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-111357",
+        "id": "cisa-kev-cve-2026-118527",
         "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111357",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-118527",
         "source": "CISA KEV",
         "publishedAt": "2026-10-30T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-1…",
-        "badge": "CVE-2026-111357",
-        "signal": "已遭利用 · 整改期限 2026-11-02"
+        "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability ca…",
+        "badge": "CVE-2026-118527",
+        "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
         "id": "ai-google-deepmind-1b296d8bb115085d",
@@ -201,24 +201,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50368439",
+        "id": "hn-50370610",
         "category": "dev",
-        "title": "An end to buggy web apps",
-        "url": "https://replay.io/blog/an-end-to-buggy-web-apps",
+        "title": "Insects don't swarm at LED lights",
+        "url": "https://www.birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-04T17:01:44.000Z",
+        "publishedAt": "2026-11-04T19:50:23.000Z",
         "badge": "HN",
-        "signal": "11 分 · 1 评论"
+        "signal": "140 分 · 81 评论"
       },
       {
-        "id": "cn-baidu-7b1f8c2c46e92348",
+        "id": "cn-baidu-64a20d7bb9f16dd8",
         "category": "cn",
-        "title": "央视曝光新型兼职骗局",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%AE%E8%A7%86%E6%9B%9D%E5%85%89%E6%96%B0%E5%9E%8B%E5%85%BC%E8%81%8C%E9%AA%97%E5%B1%80&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "大额存单密集重启！多家银行已售罄",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%A7%E9%A2%9D%E5%AD%98%E5%8D%95%E5%AF%86%E9%9B%86%E9%87%8D%E5%90%AF%EF%BC%81%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E5%B7%B2%E5%94%AE%E7%BD%84&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "央视曝光新型兼职骗局，不法分子以零门槛日结兼职为诱饵，诱骗求职者出示证件、刷脸核验，盗取身份信息倒卖，用于注册公司、诈骗等。该团伙已获刑，法官提醒警惕刷脸兼职，可通过小程序自查信息，遭遇冒用及时报警。",
+        "summary": "近期，多家银行密集重启大额存单发行，国有行利率最高1.6%，外资行相对偏高。本轮发行额度紧张，多家银行中长期产品已售罄需抢购。",
         "badge": "热搜",
-        "signal": "7,713,726 热度"
+        "signal": "7,712,153 热度"
       },
       {
         "id": "github-advisory-ghsa-7w38-ggh5-v542",
@@ -232,12 +232,12 @@
         "signal": "CRITICAL · CVSS 9.8"
       },
       {
-        "id": "ai-hugging-face-4d3938441f216409",
+        "id": "ai-hugging-face-8d86676710497099",
         "category": "ai",
-        "title": "Palette: teaching a small model to build decks in your design language",
-        "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+        "title": "StateBench: Testing how language models track state changes over long documents",
+        "url": "https://huggingface.co/blog/allenai/statebench",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-03T16:35:36.000Z",
+        "publishedAt": "2026-11-03T17:15:21.000Z",
         "badge": "Hugging Face"
       },
       {
@@ -262,44 +262,44 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-97229",
+        "id": "cisa-kev-cve-2026-111357",
         "category": "security",
-        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111357",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-29T00:00:00.000Z",
-        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
-        "badge": "CVE-2026-97229",
-        "signal": "已遭利用 · 整改期限 2026-11-01"
+        "publishedAt": "2026-10-30T00:00:00.000Z",
+        "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-1…",
+        "badge": "CVE-2026-111357",
+        "signal": "已遭利用 · 整改期限 2026-11-02"
       },
       {
-        "id": "ai-openai-25493a43cba550c7",
+        "id": "ai-openai-a3433e936d2c04bf",
         "category": "ai",
-        "title": "Accelerating engineering for the physical world",
-        "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+        "url": "https://openai.com/index/daybreak-red-aws-govcloud",
         "source": "OpenAI",
-        "publishedAt": "2026-11-03T12:00:00.000Z",
-        "summary": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
+        "publishedAt": "2026-11-04T07:00:00.000Z",
+        "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50362905",
+        "id": "hn-50364336",
         "category": "dev",
-        "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
-        "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+        "title": "AI is forcing us to pay off 40 years of technical debt",
+        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
         "source": "Hacker News",
-        "publishedAt": "2026-11-04T08:46:29.000Z",
+        "publishedAt": "2026-11-04T11:52:17.000Z",
         "badge": "HN",
-        "signal": "428 分 · 193 评论"
+        "signal": "1008 分 · 607 评论"
       },
       {
-        "id": "cn-it-3514a4be758727d4",
+        "id": "cn-it-9ca9a2d4353f7b7c",
         "category": "cn",
-        "title": "华硕正式带来 ROG XG Station 3 显卡坞：提供 GC-HPWR 接口，支持雷电 5",
-        "url": "https://www.ithome.com/1/022/469.htm",
+        "title": "机械革命旷世 16 游戏本开售：英特尔酷睿 5 205H + RTX 3050 4GB，国补后 5099.15 元",
+        "url": "https://www.ithome.com/1/022/483.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-04T15:20:39.000Z",
-        "summary": "IT之家 11 月 4 日消息，华硕 (ASUS) 今日正式带来了 ROG XG Station 3。当前距这款雷电 5 显卡坞 首次面世 已过去了 1.5 年。 ROG XG Station 3 采用开放式结构 ，兼容最大 361 × 139.3 × 93.9 (mm) 的显卡，支持 SFX 或 SFX-L 外形规格、750W 或以上功率、80 PLUS 金牌或以上转换效率的电源。 其 提供 GC-HPWR 供电金手指 ，兼容 BTF 显卡； 集成 Aura Sync R…",
+        "publishedAt": "2026-11-04T23:26:26.000Z",
+        "summary": "IT之家 11 月 5 日消息，机械革命新款旷世 16 游戏本今日正式上市，首发价 5999 元，叠加国补后 5099.15 元，与另一款热门新机 —— 联想来酷 GT 16 持平。 该机搭载最新的英特尔酷睿 5 处理器 205H，搭配 NVIDIA GeForce RTX 3050（4GB GDDR6）移动显卡，配备 16GB DDR4 SO-DIMM 内存、500GB PCIe Gen4 SSD 存储，预留一条内存插槽 +M.2 2280 硬盘位。 该型号机身 A 面为…",
         "badge": "IT之家"
       },
       {
@@ -341,37 +341,37 @@
         "source": "百度热搜",
         "summary": "11月4日，《世界互联网发展报告2026》和《中国互联网发展报告2026》蓝皮书在2026年世界互联网大会乌镇峰会上发布。《中国互联网发展报告2026》显示，中国智能体市场规模快速攀升，人工智能产业保持较快增长，企业与市场体量明显扩张。",
         "badge": "热搜",
-        "signal": "7,618,300 热度"
+        "signal": "7,617,527 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-76418",
+        "id": "cisa-kev-cve-2026-97229",
         "category": "security",
-        "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software：Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76418",
+        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
         "source": "CISA KEV",
         "publishedAt": "2026-10-29T00:00:00.000Z",
-        "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, …",
-        "badge": "CVE-2026-76418",
+        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
+        "badge": "CVE-2026-97229",
         "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
-        "id": "ai-hugging-face-63945bc794809749",
+        "id": "ai-hugging-face-4d3938441f216409",
         "category": "ai",
-        "title": "CWE-bench v2: More coverage, quality, and transparency",
-        "url": "https://huggingface.co/blog/cwe-bench",
+        "title": "Palette: teaching a small model to build decks in your design language",
+        "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-03T00:00:00.000Z",
+        "publishedAt": "2026-11-03T16:35:36.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50366919",
+        "id": "hn-50369106",
         "category": "dev",
-        "title": "Evergreen: A Provably Safe Systems Language",
-        "url": "https://evergreenlang.net",
+        "title": "A new Go API for JSON",
+        "url": "https://go.dev/blog/jsonv2",
         "source": "Hacker News",
-        "publishedAt": "2026-11-04T15:25:04.000Z",
+        "publishedAt": "2026-11-04T17:52:11.000Z",
         "badge": "HN",
-        "signal": "46 分 · 27 评论"
+        "signal": "196 分 · 82 评论"
       },
       {
         "id": "cn-item-01049c68a4bc8959",
@@ -395,13 +395,13 @@
         "signal": "HIGH · CVSS 8.1"
       },
       {
-        "id": "ai-openai-34e7d62615202d0d",
+        "id": "ai-openai-981785a01550309d",
         "category": "ai",
-        "title": "How Cisco defends at machine speed with OpenAI",
-        "url": "https://openai.com/index/cisco-cyber",
+        "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+        "url": "https://openai.com/index/devrev-enterprise-self-service",
         "source": "OpenAI",
-        "publishedAt": "2026-11-03T08:00:00.000Z",
-        "summary": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses.",
+        "publishedAt": "2026-11-04T00:00:00.000Z",
+        "summary": "DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service.",
         "badge": "OpenAI"
       },
       {
@@ -416,25 +416,25 @@
         "signal": "12 回复"
       },
       {
-        "id": "cn-it-e9bbd72633d42364",
+        "id": "cn-it-af41d7473d9d2af7",
         "category": "cn",
-        "title": "连续 2 小时 40 分钟纯代码生成 66 秒动画，Anthropic 新旗舰 Fable 5.5 实测曝光",
-        "url": "https://www.ithome.com/1/022/468.htm",
+        "title": "《生化危机：爆发夜》电影导演克雷格称苹果 iPhone 是其“分镜神器”",
+        "url": "https://www.ithome.com/1/022/482.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-04T15:14:03.000Z",
-        "summary": "北京时间 11 月 4 日消息，Anthropic 尚未正式发布的下一代旗舰模型 Claude Fable 5.5 近日在海外开发者社区引发关注。多名开发者在社交平台 X 上分享了据称来自该模型的早期测试结果。其中，一段完全通过编程生成的 66 秒动画短片尤为引人注目。测试者称，模型在没有调用图像或视频生成工具的情况下，连续自主编写和运行代码约 2 小时 40 分钟，完成了动画画面、配乐及音效制作。 11 月 2 日，X 平台 AI 开发者 Chetaslua 发布了一段动…",
+        "publishedAt": "2026-11-04T23:24:52.000Z",
+        "summary": "IT之家 11 月 5 日消息，苹果 @AppleTV 官方账号今天（11 月 5 日）在 X 平台发布推文， 分享了一段视频，邀请《生化危机：爆发夜》（Resident Evil）电影导演扎克 · 克雷格（Zach Cregger）参与访谈。 IT之家附上访谈视频如下： 在视频中，克雷格表示 iPhone（原文并未列出具体型号）已成为他电影创作流程中的关键工具，他会借助手机和 Cadrage 应用提前完成分镜、构图与镜头规划，让复杂的恐怖片拍摄更高效、更可控。 图源：视频…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-41709",
+        "id": "cisa-kev-cve-2026-76418",
         "category": "security",
-        "title": "Broadcom VMware ESX：Broadcom VMWare ESX Insufficient Logging Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-41709",
+        "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software：Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76418",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-28T00:00:00.000Z",
-        "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
-        "badge": "CVE-2026-41709",
-        "signal": "已遭利用 · 整改期限 2026-11-11"
+        "publishedAt": "2026-10-29T00:00:00.000Z",
+        "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, …",
+        "badge": "CVE-2026-76418",
+        "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
         "id": "ai-google-deepmind-393575ee7d83ff0a",
@@ -447,24 +447,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50365755",
+        "id": "hn-50372164",
         "category": "dev",
-        "title": "North Korean fake job interview led to $6.3B Binance heist",
-        "url": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
+        "title": "Hacking the Xbox 360 Hypervisor Part 3: Bad Update Improvements",
+        "url": "https://icode4.coffee/?p=1746",
         "source": "Hacker News",
-        "publishedAt": "2026-11-04T14:09:55.000Z",
+        "publishedAt": "2026-11-04T22:01:49.000Z",
         "badge": "HN",
-        "signal": "299 分 · 179 评论"
+        "signal": "31 分 · 2 评论"
       },
       {
-        "id": "cn-baidu-668bdf1314b5fe4e",
+        "id": "cn-baidu-eb166692167e4572",
         "category": "cn",
-        "title": "“社恐”到这种程度 可能是生病了",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E7%A4%BE%E6%81%90%E2%80%9D%E5%88%B0%E8%BF%99%E7%A7%8D%E7%A8%8B%E5%BA%A6+%E5%8F%AF%E8%83%BD%E6%98%AF%E7%94%9F%E7%97%85%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“如果这钱能提出来 我警察不当了”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%A6%82%E6%9E%9C%E8%BF%99%E9%92%B1%E8%83%BD%E6%8F%90%E5%87%BA%E6%9D%A5+%E6%88%91%E8%AD%A6%E5%AF%9F%E4%B8%8D%E5%BD%93%E4%BA%86%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，北京安定医院发文指出，年轻人持续出现变冷、变懒、变沉默等状态，可能并非性格内向或主动躺平，而是精神分裂症阴性症状。由于该症状起病隐匿，常被误认为性格内向、社恐、躺平等，其实它们有着本质的区别。一文解读！",
+        "summary": "“如果这钱能提出来，我警察不当了！”近日，福建派出所副所长林森阳、民警郑志伟劝导市民张女士，成功拦下她准备寄出的价值34.5万元的名表。张女士因快递里的扫码领礼卡片入群，不慎落入诈骗圈套。",
         "badge": "热搜",
-        "signal": "7,520,688 热度"
+        "signal": "7,523,209 热度"
       },
       {
         "id": "github-advisory-ghsa-48v2-6jcm-fc99",
@@ -478,10 +478,10 @@
         "signal": "HIGH · CVSS 8.2"
       },
       {
-        "id": "ai-hugging-face-a6f54d325d31634f",
+        "id": "ai-hugging-face-63945bc794809749",
         "category": "ai",
-        "title": "Transformers Model Integration Contracts",
-        "url": "https://huggingface.co/blog/transformers-mic",
+        "title": "CWE-bench v2: More coverage, quality, and transparency",
+        "url": "https://huggingface.co/blog/cwe-bench",
         "source": "Hugging Face",
         "publishedAt": "2026-11-03T00:00:00.000Z",
         "badge": "Hugging Face"
@@ -512,7 +512,7 @@
         "url": "https://github.com/NVIDIA/auto-ontology",
         "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
         "language": "Python",
-        "stars": 4365,
+        "stars": 4874,
         "starsToday": 2053
       },
       {
@@ -522,7 +522,7 @@
         "url": "https://github.com/max-sixty/worktrunk",
         "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
         "language": "Rust",
-        "stars": 10892,
+        "stars": 11006,
         "starsToday": 524
       },
       {
@@ -532,7 +532,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 312790,
+        "stars": 313268,
         "starsToday": 1376
       },
       {
@@ -542,7 +542,7 @@
         "url": "https://github.com/floci-io/floci",
         "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
         "language": "Java",
-        "stars": 29422,
+        "stars": 29573,
         "starsToday": 1082
       },
       {
@@ -552,7 +552,7 @@
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "language": "TypeScript",
-        "stars": 112605,
+        "stars": 112815,
         "starsToday": 1165
       },
       {
@@ -562,7 +562,7 @@
         "url": "https://github.com/vercel-labs/agent-desktop",
         "description": "Computer use CLI for AI agents",
         "language": "Rust",
-        "stars": 14523,
+        "stars": 14992,
         "starsToday": 2463
       },
       {
@@ -572,7 +572,7 @@
         "url": "https://github.com/github/spec-kit",
         "description": "💫 Toolkit to help you get started with SDD or any other process!",
         "language": "Python",
-        "stars": 147129,
+        "stars": 147275,
         "starsToday": 810
       },
       {
@@ -582,7 +582,7 @@
         "url": "https://github.com/The-PR-Agent/pr-agent",
         "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
         "language": "Python",
-        "stars": 14620,
+        "stars": 14732,
         "starsToday": 279
       },
       {
@@ -592,7 +592,7 @@
         "url": "https://github.com/harry0703/MoneyPrinterTurbo",
         "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
         "language": "Python",
-        "stars": 138759,
+        "stars": 138917,
         "starsToday": 615
       },
       {
@@ -602,10 +602,10 @@
         "url": "https://github.com/garrytan/gstack",
         "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
         "language": "TypeScript",
-        "stars": 139166,
+        "stars": 139308,
         "starsToday": 285
       }
     ],
-    "updatedAt": "2026-11-04T17:18:02.273Z"
+    "updatedAt": "2026-11-04T23:40:25.624Z"
   }
 }
