@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-05T15:28:16.558Z",
+  "generatedAt": "2026-11-05T21:59:26.210Z",
   "intelligence": {
-    "updatedAt": "2026-11-05T15:28:16.558Z",
+    "updatedAt": "2026-11-05T21:59:26.210Z",
     "items": [
       {
         "id": "cn-item-c9f5853a2f89cefd",
@@ -26,66 +26,65 @@
         "signal": "已遭利用 · 整改期限 2026-11-18"
       },
       {
-        "id": "ai-openai-25fa4dd18ec78a48",
+        "id": "ai-openai-14e90e72d3401ddf",
         "category": "ai",
-        "title": "Setting a new standard for responsible AI infrastructure",
-        "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+        "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+        "url": "https://openai.com/index/introducing-gpt-6-cyber",
         "source": "OpenAI",
-        "publishedAt": "2026-11-05T02:00:00.000Z",
-        "summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
+        "publishedAt": "2026-11-05T09:00:00.000Z",
+        "summary": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50378228",
+        "id": "hn-50383740",
         "category": "dev",
-        "title": "Sshole",
-        "url": "https://sshhole.com",
+        "title": "Kagi Search for Everyone",
+        "url": "https://kagi.com/changelog",
         "source": "Hacker News",
-        "publishedAt": "2026-11-05T12:19:02.000Z",
+        "publishedAt": "2026-11-05T20:03:34.000Z",
         "badge": "HN",
-        "signal": "888 分 · 242 评论"
+        "signal": "164 分 · 87 评论"
       },
       {
-        "id": "cn-it-e22dbd46f83ccc4b",
+        "id": "cn-it-03be7df00120f9f8",
         "category": "cn",
-        "title": "英伟达庆祝首款支持 CUDA 显卡 GeForce 8800 GTX 诞生 20 周年，同步推出纪念游戏带 PC 玩家重返 2006 年",
-        "url": "https://www.ithome.com/1/023/017.htm",
+        "title": "我国成功发射遥感五十一号 07-09 星，主要用于科学试验、电磁环境探测等领域",
+        "url": "https://www.ithome.com/1/023/028.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-05T15:23:41.000Z",
-        "summary": "IT之家 11 月 5 日消息，英伟达官方今日庆祝 GeForce 8800 GTX 显卡诞生 20 周年， 同步推出一款 Steam 演示游戏 ，带领 PC 玩家回到 2006 年，一睹这款经典显卡的外貌。 据IT之家了解，GeForce 8800 GTX 诞生于 2006 年 11 月 8 日，是首款支持 CUDA 的 NVIDIA 显卡，为图形渲染以外的 GPU 计算奠定了基础，并推动形成了加速计算平台。 GeForce 8800 GTX 是 06 年的 NVIDIA…",
+        "publishedAt": "2026-11-05T18:39:04.000Z",
+        "summary": "IT之家 11 月 6 日消息，据央视新闻报道，11 月 5 日 23 时 58 分，长征二号丙运载火箭在西昌卫星发射中心点火升空，随后成功将遥感五十一号 07-09 星送入预定轨道， 发射任务取得圆满成功 。 长二丙火箭由中国航天科技集团有限公司一院抓总研制，为两级常温液体运载火箭， 具备一箭一星、一箭多星发射及星座部署能力 。 IT之家查询获悉， 该卫星主要用于科学试验、电磁环境探测等领域 。另外，本次发射是长征系列运载火箭的第 675 次发射。",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-gh9r-c94j-cmp5",
+        "id": "github-advisory-ghsa-64vx-6h2c-rjh7",
         "category": "security",
-        "title": "Stanza: RCE via pickle deserialization in the lemmatizer",
-        "url": "https://github.com/advisories/GHSA-gh9r-c94j-cmp5",
+        "title": "Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE",
+        "url": "https://github.com/advisories/GHSA-64vx-6h2c-rjh7",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T20:29:16.000Z",
-        "summary": "## TL;DR Loading an attacker-supplied lemma `.pt` runs arbitrary code as the loading user. Since 1.14.0 the lemmatizer stores `pos_dict` as a gzip-compressed pickle in the checkpoint's `dicts` field (a `bytes` value). `torch.load(weights_o…",
-        "badge": "CVE-2026-115878",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-11-05T17:51:02.000Z",
+        "summary": "## Summary `banks` parses `Tool` JSON objects from the rendered body of `{% completion %}` blocks and later resolves their `import_path` field through `importlib.import_module(...)` + `getattr(...)` to obtain the callable that handles a to…",
+        "badge": "CVE-2026-61536",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-google-deepmind-da38bc697163569b",
+        "id": "ai-google-deepmind-f09d7876c1e95fca",
         "category": "ai",
-        "title": "Agentic cheminformatics with Google Antigravity",
-        "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+        "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+        "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-11-03T17:01:49.000Z",
-        "summary": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles.",
+        "publishedAt": "2026-11-05T17:05:16.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1254832",
+        "id": "v2ex-1254848",
         "category": "dev",
-        "title": "等 agent 跑的期间能做什么？",
-        "url": "https://www.v2ex.com/t/1254832",
+        "title": "作为前端开发，在工作中接触过最难的算法是什么？",
+        "url": "https://www.v2ex.com/t/1254848",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-05T14:52:20.000Z",
-        "summary": "或者说，做什么最有效？",
+        "publishedAt": "2026-11-05T16:11:18.000Z",
+        "summary": "本人：树的深度优先搜索和广度优先搜索。",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "3 回复"
       },
       {
         "id": "cn-baidu-370352d238e7992d",
@@ -95,7 +94,7 @@
         "source": "百度热搜",
         "summary": "11月5日，国家医保局回应“居民医保参保人数连续7年下降减少8300万”说法。国家医保局规财法规司副司长张晨光表示，下降原因包括清理重复参保无效数据约2500万、部分居民转职工医保以及常住人口减少。其称，这属于合理、正常的下降。",
         "badge": "热搜",
-        "signal": "7,808,835 热度"
+        "signal": "7,809,650 热度"
       },
       {
         "id": "cisa-kev-cve-2026-119977",
@@ -109,23 +108,23 @@
         "signal": "已遭利用 · 整改期限 2026-11-06"
       },
       {
-        "id": "ai-hugging-face-c65c7708e93995ca",
+        "id": "ai-hugging-face-f25b9201ad6bdcc6",
         "category": "ai",
-        "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
-        "url": "https://huggingface.co/blog/phonon-tts",
+        "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-05T00:00:00.000Z",
+        "publishedAt": "2026-11-05T19:35:16.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50379704",
+        "id": "hn-50378228",
         "category": "dev",
-        "title": "Alpine Linux Security advisory: OpenSSH-server password authentication bypass",
-        "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+        "title": "sshole",
+        "url": "https://sshhole.com",
         "source": "Hacker News",
-        "publishedAt": "2026-11-05T14:44:20.000Z",
+        "publishedAt": "2026-11-05T12:19:02.000Z",
         "badge": "HN",
-        "signal": "49 分 · 1 评论"
+        "signal": "2112 分 · 529 评论"
       },
       {
         "id": "cn-item-074bab0358457023",
@@ -138,45 +137,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-33r5-xmm8-v6x5",
+        "id": "github-advisory-ghsa-5q7h-w9jf-cx97",
         "category": "security",
-        "title": "Elo JavaScript emitter has sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor` member access",
-        "url": "https://github.com/advisories/GHSA-33r5-xmm8-v6x5",
+        "title": "kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
+        "url": "https://github.com/advisories/GHSA-5q7h-w9jf-cx97",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T17:53:42.000Z",
-        "summary": "### Summary An unauthenticated attacker who controls a string passed to any Elo JavaScript-emission path — `defaultFormats.elo.parse()`, the `bin/elo` CLI, or the live browser playground at `elo-lang.org/try` — can execute arbitrary code i…",
-        "badge": "CVE-2026-44267",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-11-05T17:48:54.000Z",
+        "summary": "### Summary kaniko before v1.25.20 can send a Microsoft Entra ID (Azure AD) access token for Azure Resource Manager to a registry host an attacker controls. A Dockerfile that references an image on a lookalike host, such as `FROM x.azurecr…",
+        "badge": "CVE-2026-105769",
+        "signal": "CRITICAL · CVSS 9.3"
       },
       {
-        "id": "ai-openai-1be4fdd8e6ca80f0",
+        "id": "ai-openai-25fa4dd18ec78a48",
         "category": "ai",
-        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
-        "url": "https://openai.com/index/openai-to-acquire-pierre",
+        "title": "Setting a new standard for responsible AI infrastructure",
+        "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
         "source": "OpenAI",
-        "publishedAt": "2026-11-04T14:30:00.000Z",
-        "summary": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
+        "publishedAt": "2026-11-05T02:00:00.000Z",
+        "summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1254823",
+        "id": "v2ex-1254844",
         "category": "dev",
-        "title": "发布了一门新的课程 AI Agent 工程实践，感谢大家的支持",
-        "url": "https://www.v2ex.com/t/1254823",
+        "title": "GPT 的设计品味令人遗憾。",
+        "url": "https://www.v2ex.com/t/1254844",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-05T13:58:36.000Z",
-        "summary": "《 AI Agent 工程实践：从心智跃迁到生产部署》 28 讲系统课程发布 大模型时代的工程师分水岭： 别人还在写提示词问答，你已经能驾驭由 LLM 自主决策控制流的工业级 Agent 系统。 💡 为什么你需要这门课程？ 2024~2026 年，大模型应用开发发生了一次关键心智跃迁： 从单一对话的 Chatbot ，走向拥有双手、记忆、规划与协作能力的 AI Agent （智能体）。 但是，许多开发者在尝试把 Agent 搬上生产环境时，都会撞上同一堵墙： ❌ 难以控制 …",
+        "publishedAt": "2026-11-05T15:32:49.000Z",
+        "summary": "在写 Myosotis 的过程中发现的问题。写出来新功能后，花了几倍的时间去删除和清理它加入的多余内容。 现在的 GPT 把用户当作没有思考能力的婴儿，往界面里塞各种提示、警告、浮窗信息，毫无交互友好度，这样做出来的软件会让人根本不想用。",
         "badge": "程序员",
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-3c38b034f2155825",
+        "id": "cn-it-63b23f9d10e6f76e",
         "category": "cn",
-        "title": "被网站“断粮”，Anthropic 首次掏钱买新闻内容授权",
-        "url": "https://www.ithome.com/1/023/015.htm",
+        "title": "Epic 喜加一：《浮游世界》游戏免费领取",
+        "url": "https://www.ithome.com/1/023/023.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-05T15:11:49.000Z",
-        "summary": "IT之家 11 月 5 日消息，Anthropic 在美国中期选举前夕，与一家新闻出版机构达成了首份内容授权协议。 据《Adweek》援引两名知情人士的消息，Anthropic 此次的合作伙伴是美联社（Associated Press，AP）。根据协议，Claude 聊天机器人可以在美国中期选举之夜实时展示美联社的选举结果数据，并注明信息来源。双方没有披露协议的财务条款及有效期限。 IT之家注意到，此前 Anthropic 一直拒绝与新闻出版商达成此类内容授权合作，认为通过…",
+        "publishedAt": "2026-11-05T16:00:08.000Z",
+        "summary": "IT之家 11 月 6 日消息，Epic 本周送出的游戏是《浮游世界》，下周送出的游戏是《斗阵骑士 Knightica》。 领取链接： 《浮游世界》 IT之家附《浮游世界》游戏简介： 这是一款漂浮垃圾城生存游戏！从海洋表面尽可能搜集珍贵的垃圾，发展你的城市，同时努力在这个色彩斑斓的后末日世界中生存下去。 本作最初发售于 2025 年 12 月 5 日， Steam 售价 80 元 。游戏兼容 XBOX / PlayStation 控制器，最低配置要求为酷睿 i5 处理器、8…",
         "badge": "IT之家"
       },
       {
@@ -191,24 +190,24 @@
         "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
-        "id": "ai-google-deepmind-1b296d8bb115085d",
+        "id": "ai-google-deepmind-da38bc697163569b",
         "category": "ai",
-        "title": "Speeding up planning decisions with AI",
-        "url": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
+        "title": "Agentic cheminformatics with Google Antigravity",
+        "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-30T14:18:30.000Z",
-        "summary": "Google DeepMind and UK government work together to reduce planning assessment times",
+        "publishedAt": "2026-11-03T17:01:49.000Z",
+        "summary": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50379773",
+        "id": "hn-50384233",
         "category": "dev",
-        "title": "Image of Our Satellite-Choked Night Skies",
-        "url": "https://kottke.org/26/11/stunning-image-of-our-satellite-choked-night-skies",
+        "title": "MS Paint Remote Code Execution Vulnerability",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
         "source": "Hacker News",
-        "publishedAt": "2026-11-05T14:49:07.000Z",
+        "publishedAt": "2026-11-05T20:43:42.000Z",
         "badge": "HN",
-        "signal": "31 分 · 20 评论"
+        "signal": "81 分 · 23 评论"
       },
       {
         "id": "cn-baidu-10239fd064876fd3",
@@ -218,38 +217,38 @@
         "source": "百度热搜",
         "summary": "近日，德国籍中医“无名”表示，因被老中医袁淑芳的医德与大爱感动，想将其墓碑上的药方抄录带回并加以学习。据悉，老中医袁淑芳去世后，墓碑刻百首经验方走红。",
         "badge": "热搜",
-        "signal": "7,712,844 热度"
+        "signal": "7,712,269 热度"
       },
       {
-        "id": "github-advisory-ghsa-7w38-ggh5-v542",
+        "id": "github-advisory-ghsa-hhf9-qw4v-72xp",
         "category": "security",
-        "title": "Elo Ruby backend has Remote Code Execution via unescaped `#{...}` interpolation in emitted string literals and subtype-constraint labels",
-        "url": "https://github.com/advisories/GHSA-7w38-ggh5-v542",
+        "title": "lxd allows Cross-guest volume hijack via DevLXD device patch",
+        "url": "https://github.com/advisories/GHSA-hhf9-qw4v-72xp",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T17:51:30.000Z",
-        "summary": "### Summary Elo's Ruby backend emits attacker-controlled text into Ruby double-quoted strings without escaping the `#` character. Because `#` begins Ruby's interpolation sequences — `#{expr}`, `#@ivar`, `#@@cvar`, `#$gvar` — and any expres…",
-        "badge": "CVE-2026-44266",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-11-05T17:40:59.000Z",
+        "summary": "### Summary A guest can mount another guest's custom storage volume over `/dev/lxd` and read or write its contents without owning it. The DevLXD storage API blocks access to volumes you don't own, but the instance device-update path that a…",
+        "badge": "CVE-2026-12411",
+        "signal": "HIGH · CVSS 8.4"
       },
       {
-        "id": "ai-hugging-face-32d4e91d243ef07f",
+        "id": "ai-hugging-face-c65c7708e93995ca",
         "category": "ai",
-        "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
-        "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+        "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+        "url": "https://huggingface.co/blog/phonon-tts",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-04T17:50:10.000Z",
+        "publishedAt": "2026-11-05T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1254821",
+        "id": "v2ex-1254832",
         "category": "dev",
-        "title": "搞了个挂机修仙小游戏",
-        "url": "https://www.v2ex.com/t/1254821",
+        "title": "等 agent 跑的期间能做什么？",
+        "url": "https://www.v2ex.com/t/1254832",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-05T13:37:10.000Z",
-        "summary": "这两天拉满 Codex 和 Grok 疯狂赶工，基础的核心玩法与系统已经搭得差不多了。 体验地址： https://game.shiyu.dev 刚出炉难免有数值不平衡、操作别扭或者小 Bug ，大家在试玩过程中有任何吐槽、建议或好玩的新点子，欢迎在楼里随时开火，我会持续修 Bug 和迭代！ v2ex 专属 CDK: V2EX",
+        "publishedAt": "2026-11-05T14:52:20.000Z",
+        "summary": "或者说，做什么最有效？",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "6 回复"
       },
       {
         "id": "cn-item-0ea2331a6d103953",
@@ -273,65 +272,66 @@
         "signal": "已遭利用 · 整改期限 2026-11-02"
       },
       {
-        "id": "ai-openai-fbaa86a829ad59fd",
+        "id": "ai-openai-1be4fdd8e6ca80f0",
         "category": "ai",
-        "title": "A thousand fewer paths to root",
-        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+        "url": "https://openai.com/index/openai-to-acquire-pierre",
         "source": "OpenAI",
-        "publishedAt": "2026-11-04T08:00:00.000Z",
-        "summary": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.",
+        "publishedAt": "2026-11-04T14:30:00.000Z",
+        "summary": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50379249",
+        "id": "hn-50379704",
         "category": "dev",
-        "title": "MCP Explained",
-        "url": "https://mcp-explained.com/",
+        "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
+        "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-05T14:08:35.000Z",
+        "publishedAt": "2026-11-05T14:44:20.000Z",
         "badge": "HN",
-        "signal": "76 分 · 28 评论"
+        "signal": "508 分 · 103 评论"
       },
       {
-        "id": "cn-it-919c4dd47e13ef59",
+        "id": "cn-it-adc8bcbc36dd20b5",
         "category": "cn",
-        "title": "欧盟航空安全局称将评估炸弹威胁对飞行安全的影响",
-        "url": "https://www.ithome.com/1/023/014.htm",
+        "title": "12499 元 / 15999 元起：苹果 M6 芯片款 iMac、MacBook Pro 开售",
+        "url": "https://www.ithome.com/1/023/022.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-05T15:06:30.000Z",
-        "summary": "IT之家 11 月 5 日消息，欧洲方面 5 日消息，当天欧洲多架客机遭炸弹威胁，涉及一架从爱尔兰都柏林飞往意大利罗马的航班、一架从芬兰赫尔辛基飞往罗马的航班、三架飞往保加利亚索非亚的航班、两架从意大利米兰飞往罗马的航班，其中部分客机已安全降落。 据央视新闻今日报道，针对欧洲客机遭炸弹威胁事件，欧盟航空安全局称，将持续关注相关事态发展， 识别并评估此类安全威胁可能对飞行安全造成的影响 。 欧洲警察署副发言人克莱尔 · 乔治当天表示，如相关威胁涉及严重有组织犯罪或恐怖主义，该…",
+        "publishedAt": "2026-11-05T16:00:02.000Z",
+        "summary": "IT之家 11 月 6 日消息，苹果 M6 芯片款 iMac、MacBook Pro 今日正式开售， 起售价分别为 12499 元 / 15999 元 ， 国补后起售价约 10999 元 / 14499 元 。如果您能使用教育优惠，叠加国补后起售价会进一步下探至 10599 元 / 13699 元。 京东 Apple iMac M6 12499 元 直达链接 京东 Apple MacBook Pro M6 14 英寸 15999 元 直达链接 IT之家附两款新品详情如下： …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-x9rp-7wh3-2rj5",
+        "id": "github-advisory-ghsa-gh9r-c94j-cmp5",
         "category": "security",
-        "title": "Elo backends have code injection via unvalidated emission of programmatic AST fields",
-        "url": "https://github.com/advisories/GHSA-x9rp-7wh3-2rj5",
+        "title": "Stanza: RCE via pickle deserialization in the lemmatizer",
+        "url": "https://github.com/advisories/GHSA-gh9r-c94j-cmp5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T17:48:09.000Z",
-        "summary": "### Summary Elo's programmatic AST API accepts arbitrary values in many node fields without runtime type or syntax validation. Each backend's emit stage interpolates those values straight into the generated source with no escape pass. An i…",
-        "badge": "CVE-2026-44265",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-11-03T20:29:16.000Z",
+        "summary": "## TL;DR Loading an attacker-supplied lemma `.pt` runs arbitrary code as the loading user. Since 1.14.0 the lemmatizer stores `pos_dict` as a gzip-compressed pickle in the checkpoint's `dicts` field (a `bytes` value). `torch.load(weights_o…",
+        "badge": "CVE-2026-115878",
+        "signal": "HIGH · CVSS 7.8"
       },
       {
-        "id": "ai-google-deepmind-e8e0cb1d0e685ced",
+        "id": "ai-google-deepmind-1b296d8bb115085d",
         "category": "ai",
-        "title": "Gemini 4 Carbon: Our next frontier model",
-        "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+        "title": "Speeding up planning decisions with AI",
+        "url": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-28T17:00:58.000Z",
+        "publishedAt": "2026-10-30T14:18:30.000Z",
+        "summary": "Google DeepMind and UK government work together to reduce planning assessment times",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1254811",
+        "id": "v2ex-1254823",
         "category": "dev",
-        "title": "40+还能遇到爱情吗",
-        "url": "https://www.v2ex.com/t/1254811",
+        "title": "发布了一门新的课程 AI Agent 工程实践，感谢大家的支持",
+        "url": "https://www.v2ex.com/t/1254823",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-05T12:54:07.000Z",
-        "summary": "是不是没戏了 内分泌组织表示荷尔蒙产能不足",
+        "publishedAt": "2026-11-05T13:58:36.000Z",
+        "summary": "《 AI Agent 工程实践：从心智跃迁到生产部署》 28 讲系统课程发布 大模型时代的工程师分水岭： 别人还在写提示词问答，你已经能驾驭由 LLM 自主决策控制流的工业级 Agent 系统。 💡 为什么你需要这门课程？ 2024~2026 年，大模型应用开发发生了一次关键心智跃迁： 从单一对话的 Chatbot ，走向拥有双手、记忆、规划与协作能力的 AI Agent （智能体）。 但是，许多开发者在尝试把 Agent 搬上生产环境时，都会撞上同一堵墙： ❌ 难以控制 …",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-baidu-feab0cdf9ff8a158",
@@ -341,7 +341,7 @@
         "source": "百度热搜",
         "summary": "5G已经够快了，为什么还要发展6G？6G究竟比5G强在哪？又将如何改变普通人的生活？2026年世界互联网大会乌镇峰会期间，记者借助AI梳理网友最关心的6G问题，走进“互联网之光”博览会，邀请国内外通信领域专家现场快问快答。",
         "badge": "热搜",
-        "signal": "7,616,153 热度"
+        "signal": "7,615,686 热度"
       },
       {
         "id": "cisa-kev-cve-2026-97229",
@@ -355,23 +355,23 @@
         "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
-        "id": "ai-hugging-face-8d86676710497099",
+        "id": "ai-hugging-face-32d4e91d243ef07f",
         "category": "ai",
-        "title": "StateBench: Testing how language models track state changes over long documents",
-        "url": "https://huggingface.co/blog/allenai/statebench",
+        "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+        "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-03T17:15:21.000Z",
+        "publishedAt": "2026-11-04T17:50:10.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50377976",
+        "id": "hn-50383057",
         "category": "dev",
-        "title": "OpenSSH 10.6p2 Critical workaround for alpine without PAM",
-        "url": "https://www.openssh.org/releasenotes.html#10.6p2",
+        "title": "The Hackintosh Reborn",
+        "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-05T11:40:30.000Z",
+        "publishedAt": "2026-11-05T19:08:22.000Z",
         "badge": "HN",
-        "signal": "108 分 · 4 评论"
+        "signal": "117 分 · 38 评论"
       },
       {
         "id": "cn-item-a08d8c5ebed9987d",
@@ -384,45 +384,45 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-p3jp-9v83-76w9",
+        "id": "github-advisory-ghsa-33r5-xmm8-v6x5",
         "category": "security",
-        "title": "Microsoft Security Advisory CVE-2026-111497 - .NET Brotli Decoder Out-of-bounds Write Vulnerability",
-        "url": "https://github.com/advisories/GHSA-p3jp-9v83-76w9",
+        "title": "Elo JavaScript emitter has sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor` member access",
+        "url": "https://github.com/advisories/GHSA-33r5-xmm8-v6x5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T17:33:48.000Z",
-        "summary": "## Executive summary A buffer overflow vulnerability exists in the Brotli decompression library used by .NET. This vulnerability may allow an unauthenticated attacker to read or corrupt process memory. This could lead to information disclo…",
-        "badge": "GHSA-P3JP-9V83-76W9",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-11-03T17:53:42.000Z",
+        "summary": "### Summary An unauthenticated attacker who controls a string passed to any Elo JavaScript-emission path — `defaultFormats.elo.parse()`, the `bin/elo` CLI, or the live browser playground at `elo-lang.org/try` — can execute arbitrary code i…",
+        "badge": "CVE-2026-44267",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
-        "id": "ai-openai-a3433e936d2c04bf",
+        "id": "ai-openai-fbaa86a829ad59fd",
         "category": "ai",
-        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
-        "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+        "title": "A thousand fewer paths to root",
+        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
         "source": "OpenAI",
-        "publishedAt": "2026-11-04T07:00:00.000Z",
-        "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.",
+        "publishedAt": "2026-11-04T08:00:00.000Z",
+        "summary": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1254806",
+        "id": "v2ex-1254821",
         "category": "dev",
-        "title": "你们公司都允许用外部模型写代码开发和运维吗，不会担心数据泄露么🤔",
-        "url": "https://www.v2ex.com/t/1254806",
+        "title": "搞了个挂机修仙小游戏",
+        "url": "https://www.v2ex.com/t/1254821",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-05T12:19:22.000Z",
-        "summary": "不论是自己买订阅还是公司给订阅，公司应该都会担心自己的敏感数据或者说核心资产泄露给大模型厂商/中转站吧，企业又不可能完全不考虑数据安全。 大家公司是怎么解决这个矛盾的？实际执行和明面上的规定一致吗？ 就感觉这是一个很无解的矛盾，除非公司有海量的钱本地部署。听我 P* d* d 的朋友说他们就是用内部部署的开源模型 我们现在就是上边要求大部分敏感数据不能发给 AI ，但是实际上员工大量用 AI ，阳奉阴违，不知道这样的日子什么时候会被公司发现从而到头😂",
+        "publishedAt": "2026-11-05T13:37:10.000Z",
+        "summary": "这两天拉满 Codex 和 Grok 疯狂赶工，基础的核心玩法与系统已经搭得差不多了。 体验地址： https://game.shiyu.dev 刚出炉难免有数值不平衡、操作别扭或者小 Bug ，大家在试玩过程中有任何吐槽、建议或好玩的新点子，欢迎在楼里随时开火，我会持续修 Bug 和迭代！ v2ex 专属 CDK: V2EX",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-6a27f2a80fde7f15",
+        "id": "cn-it-37d314904352f459",
         "category": "cn",
-        "title": "从“争气弹”到“争气路”中国速度独一无二，新型陆基洲际导弹东风-61 确认列装火箭军",
-        "url": "https://www.ithome.com/1/023/013.htm",
+        "title": "5499 元起：苹果 iPad mini 8 开售，A20 Pro 芯片（国补后到手价约 4999 元起）",
+        "url": "https://www.ithome.com/1/023/021.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-05T15:01:59.000Z",
-        "summary": "IT之家 11 月 5 日消息，今天是我国第一枚近程地地导弹“东风一号”成功发射 66 周年，而“东风”家族升级从未止步。2025 年 9 月 3 日，纪念中国人民抗日战争暨世界反法西斯战争胜利 80 周年阅兵，战略打击群核导弹方队中， 新型陆基洲际导弹东风-61 首次公开亮相 。 据央视新闻今日报道， 如今，东风-61 已列装火箭军 。军事评论员邵永灵表示，东风-61 从阅兵公开亮相到常态参训，节奏远快于传统洲际导弹的战斗力生成周期。 首先，这说明它亮相前已经完成研制、定…",
+        "publishedAt": "2026-11-05T16:00:02.000Z",
+        "summary": "IT之家 11 月 6 日消息，苹果 iPad mini（A20 Pro）今日正式开售，也就是大家俗称的“iPad mini 8”。新品起售价为 5499 元， 国补后到手价约 4999 元 。如果您可以使用教育优惠，国补后的到手价会进一步下探至 4599 元左右。 京东 Apple iPad mini (A20 Pro) 128GB 5499 元 直达链接 IT之家了解到，iPad mini（A20 Pro）提供午夜色、星光色两种配色。其机身相比上一代薄了 14%，轻了 …",
         "badge": "IT之家"
       },
       {
@@ -437,24 +437,23 @@
         "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
-        "id": "ai-google-deepmind-393575ee7d83ff0a",
+        "id": "ai-google-deepmind-e8e0cb1d0e685ced",
         "category": "ai",
-        "title": "Genie 4: A new generation of world simulation",
-        "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+        "title": "Gemini 4 Carbon: Our next frontier model",
+        "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-10-27T16:01:38.000Z",
-        "summary": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
+        "publishedAt": "2026-10-28T17:00:58.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50379576",
+        "id": "hn-50383963",
         "category": "dev",
-        "title": "September in Servo: , rounded rectangles, and more",
-        "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
+        "title": "Tencent Launches Hy4, One of the Leading Open-Source AI Models",
+        "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-05T14:34:18.000Z",
+        "publishedAt": "2026-11-05T20:21:43.000Z",
         "badge": "HN",
-        "signal": "16 分 · 1 评论"
+        "signal": "38 分 · 1 评论"
       },
       {
         "id": "cn-baidu-6db2a39c8216c4d1",
@@ -464,38 +463,38 @@
         "source": "百度热搜",
         "summary": "2027年全年放假安排11月5日下午正式出炉。史上最长春节假期将再次回归，春节连休9天！2027年也将成为近年来调休天数最少的年份。",
         "badge": "热搜",
-        "signal": "7,523,844 热度"
+        "signal": "7,523,881 热度"
       },
       {
-        "id": "github-advisory-ghsa-48v2-6jcm-fc99",
+        "id": "github-advisory-ghsa-7w38-ggh5-v542",
         "category": "security",
-        "title": "praktor: Path traversal in Telegram file uploads allows writing outside the agent workspace uploads/ directory (stored instruction injection)",
-        "url": "https://github.com/advisories/GHSA-48v2-6jcm-fc99",
+        "title": "Elo Ruby backend has Remote Code Execution via unescaped `#{...}` interpolation in emitted string literals and subtype-constraint labels",
+        "url": "https://github.com/advisories/GHSA-7w38-ggh5-v542",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T17:27:25.000Z",
-        "summary": "### Impact A remote Telegram user can write files to arbitrary paths inside an agent's persistent workspace volume (`praktor-wk- `, mounted at `/workspace/agent`), escaping the documented `uploads/` directory. The attacker controls the Tel…",
-        "badge": "CVE-2026-62331",
-        "signal": "HIGH · CVSS 8.2"
+        "publishedAt": "2026-11-03T17:51:30.000Z",
+        "summary": "### Summary Elo's Ruby backend emits attacker-controlled text into Ruby double-quoted strings without escaping the `#` character. Because `#` begins Ruby's interpolation sequences — `#{expr}`, `#@ivar`, `#@@cvar`, `#$gvar` — and any expres…",
+        "badge": "CVE-2026-44266",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
-        "id": "ai-hugging-face-4d3938441f216409",
+        "id": "ai-hugging-face-8d86676710497099",
         "category": "ai",
-        "title": "Palette: teaching a small model to build decks in your design language",
-        "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+        "title": "StateBench: Testing how language models track state changes over long documents",
+        "url": "https://huggingface.co/blog/allenai/statebench",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-03T16:35:36.000Z",
+        "publishedAt": "2026-11-03T17:15:21.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1254798",
+        "id": "v2ex-1254811",
         "category": "dev",
-        "title": "网站＋数字交互。求大神",
-        "url": "https://www.v2ex.com/t/1254798",
+        "title": "40+还能遇到爱情吗",
+        "url": "https://www.v2ex.com/t/1254811",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-05T11:37:34.000Z",
-        "summary": "医学网站，里面加数字交互显示，请高手制作，价格商议！",
+        "publishedAt": "2026-11-05T12:54:07.000Z",
+        "summary": "是不是没戏了 内分泌组织表示荷尔蒙产能不足",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "19 回复"
       }
     ]
   },
@@ -512,7 +511,7 @@
         "url": "https://github.com/NVIDIA/auto-ontology",
         "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
         "language": "Python",
-        "stars": 6677,
+        "stars": 7178,
         "starsToday": 2707
       },
       {
@@ -522,7 +521,7 @@
         "url": "https://github.com/mattpocock/skills",
         "description": "Skills for Real Engineers. Straight from my .agents directory.",
         "language": "Shell",
-        "stars": 314531,
+        "stars": 315073,
         "starsToday": 2053
       },
       {
@@ -532,7 +531,7 @@
         "url": "https://github.com/garrytan/gstack",
         "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
         "language": "TypeScript",
-        "stars": 139730,
+        "stars": 139899,
         "starsToday": 608
       },
       {
@@ -542,7 +541,7 @@
         "url": "https://github.com/Usagi-org/ai-goofish-monitor",
         "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
         "language": "Python",
-        "stars": 17409,
+        "stars": 17486,
         "starsToday": 242
       },
       {
@@ -552,7 +551,7 @@
         "url": "https://github.com/D4Vinci/Scrapling",
         "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
         "language": "Python",
-        "stars": 97562,
+        "stars": 97861,
         "starsToday": 1661
       },
       {
@@ -562,7 +561,7 @@
         "url": "https://github.com/vercel-labs/agent-desktop",
         "description": "Computer use CLI for AI agents",
         "language": "Rust",
-        "stars": 16357,
+        "stars": 16725,
         "starsToday": 2173
       },
       {
@@ -572,7 +571,7 @@
         "url": "https://github.com/max-sixty/worktrunk",
         "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
         "language": "Rust",
-        "stars": 11364,
+        "stars": 11463,
         "starsToday": 546
       },
       {
@@ -582,7 +581,7 @@
         "url": "https://github.com/lz4/lz4",
         "description": "Extremely Fast Compression algorithm",
         "language": "C",
-        "stars": 12269,
+        "stars": 12345,
         "starsToday": 16
       },
       {
@@ -592,7 +591,7 @@
         "url": "https://github.com/google/skills",
         "description": "Agent Skills for Google products and technologies",
         "language": "Python",
-        "stars": 22179,
+        "stars": 22319,
         "starsToday": 199
       },
       {
@@ -602,10 +601,10 @@
         "url": "https://github.com/vercel-labs/agent-browser",
         "description": "Browser automation CLI for AI agents",
         "language": "Rust",
-        "stars": 45688,
+        "stars": 45823,
         "starsToday": 181
       }
     ],
-    "updatedAt": "2026-11-05T15:28:16.558Z"
+    "updatedAt": "2026-11-05T21:59:26.210Z"
   }
 }
