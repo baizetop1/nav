@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-06T17:58:35.860Z",
+  "generatedAt": "2026-11-06T23:09:45.746Z",
   "intelligence": {
-    "updatedAt": "2026-11-06T17:58:35.860Z",
+    "updatedAt": "2026-11-06T23:09:45.746Z",
     "items": [
       {
         "id": "cn-item-e4d5528f35436aab",
@@ -15,56 +15,56 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2024-27834",
+        "id": "cisa-kev-cve-2026-19868",
         "category": "security",
-        "title": "Apple Multiple Products：Apple Multiple Products Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-27834",
+        "title": "SonicWall SonicOS SSLVPN：SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-04T00:00:00.000Z",
-        "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
-        "badge": "CVE-2024-27834",
-        "signal": "已遭利用 · 整改期限 2026-11-18"
+        "publishedAt": "2026-11-06T00:00:00.000Z",
+        "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may a…",
+        "badge": "CVE-2026-19868",
+        "signal": "已遭利用 · 整改期限 2026-11-20"
       },
       {
-        "id": "ai-openai-bbd492caba72ca54",
+        "id": "ai-openai-a0a44ed09dc9a108",
         "category": "ai",
-        "title": "Cult.fit builds operational muscle with Codex",
-        "url": "https://openai.com/index/cultfit-builds-with-codex",
+        "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+        "url": "https://openai.com/index/partnering-with-hacktron",
         "source": "OpenAI",
-        "publishedAt": "2026-11-05T20:00:00.000Z",
-        "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+        "publishedAt": "2026-11-06T08:00:00.000Z",
+        "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50388001",
+        "id": "hn-50397429",
         "category": "dev",
-        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
-        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+        "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+        "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T04:00:28.000Z",
+        "publishedAt": "2026-11-06T19:48:51.000Z",
         "badge": "HN",
-        "signal": "48 分 · 67 评论"
+        "signal": "235 分 · 53 评论"
       },
       {
-        "id": "cn-it-a9687e16028d77b2",
+        "id": "cn-it-ec55da907a4fc98b",
         "category": "cn",
-        "title": "今日立冬：倏忽秋又尽，今朝恰立冬",
-        "url": "https://www.ithome.com/1/023/601.htm",
+        "title": "AI 编程工具 Amp 推出 Spaces：你的 AI 项目经理上线，自主编排 / 协调 Agent 干活",
+        "url": "https://www.ithome.com/1/023/609.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-06T16:00:01.000Z",
-        "summary": "IT之家 11 月 7 日消息，立冬是农历二十四节气之一，也是中国传统节日之一；时间点在公历每年 11 月 7-8 日之间。 ①今日立冬，冬天来了。水始冰，地渐冻，日照短，寒风劲；②我国民间习惯上把这一天当作冬季的开始；③“立冬补冬，补嘴空”，北方人吃饺子，南方人吃鸡鸭鱼肉；④起居应注意保暖，早睡晚起，勤晒太阳，并辅以运动和精神调养。 《月令七十二候集解》是这样记载立冬的：“立冬，十月节。立，建始也，五行之气，往者过，来者续。冬，终也，万物收藏也。水始冰。水面初凝，未至于坚…",
+        "publishedAt": "2026-11-06T23:02:32.000Z",
+        "summary": "IT之家 11 月 7 日消息，AI 编程协作工具 Amp 昨日（11 月 6 日）宣布推出 Spaces， 希望构建面向 AI 智能体（Agent）和团队协作的全新工作方式。 对于用户而言，不再需要手动创建、命名和管理多个 Agent 线程，只需对话一个主 Agent，由它理解需求、拆解任务，并让其自动生成和协调其他 Agent 线程。IT之家附上相关截图如下： Amp 指出在传统多 Agent 工作流中，用户往往要自己决定拆分、分派以及追踪任务，Spaces 将这一层组…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-64vx-6h2c-rjh7",
+        "id": "github-advisory-ghsa-47w9-6r3f-938g",
         "category": "security",
-        "title": "Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE",
-        "url": "https://github.com/advisories/GHSA-64vx-6h2c-rjh7",
+        "title": "LXD has restricted project bypass leading to arbitrary command execution",
+        "url": "https://github.com/advisories/GHSA-47w9-6r3f-938g",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-05T17:51:02.000Z",
-        "summary": "## Summary `banks` parses `Tool` JSON objects from the rendered body of `{% completion %}` blocks and later resolves their `import_path` field through `importlib.import_module(...)` + `getattr(...)` to obtain the callable that handles a to…",
-        "badge": "CVE-2026-61536",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-11-06T19:51:26.000Z",
+        "summary": "Reported from https://github.com/lxc/incus/security/advisories/GHSA-48q5-w887-33wv ### Summary Instance snapshots ignore the `restricted.containers.lowlevel=block` setting; allowing for arbitrary command execution on the Incus server by ab…",
+        "badge": "GHSA-47W9-6R3F-938G",
+        "signal": "CRITICAL · CVSS 9.9"
       },
       {
         "id": "ai-google-deepmind-f09d7876c1e95fca",
@@ -93,7 +93,89 @@
         "source": "百度热搜",
         "summary": "11月6日，瞬动科技项目经理回应记者对“电动鞋”售价7999元比电动车还贵的质疑。其表示，电动车虽仅三四千但不能带上地铁和飞机，而该鞋可带着上地铁、直接穿着上飞机，对通勤比较方便。",
         "badge": "热搜",
-        "signal": "7,809,077 热度"
+        "signal": "7,808,693 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2024-27834",
+        "category": "security",
+        "title": "Apple Multiple Products：Apple Multiple Products Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-27834",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-04T00:00:00.000Z",
+        "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+        "badge": "CVE-2024-27834",
+        "signal": "已遭利用 · 整改期限 2026-11-18"
+      },
+      {
+        "id": "ai-hugging-face-5a90caffb2c87d2e",
+        "category": "ai",
+        "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+        "url": "https://huggingface.co/blog/allenai/toyblocks",
+        "source": "Hugging Face",
+        "publishedAt": "2026-11-06T14:00:48.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50397994",
+        "category": "dev",
+        "title": "AI is dramatically accelerating AI research",
+        "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-06T20:27:23.000Z",
+        "badge": "HN",
+        "signal": "126 分 · 79 评论"
+      },
+      {
+        "id": "cn-item-26ddce95d897ebf6",
+        "category": "cn",
+        "title": "国家广播电视总局部署开展新一轮微短剧专项治理工作",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-06/10727509.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-11-06T11:53:51.000Z",
+        "summary": "中新网11月6日电 据“国家广播电视总局”微信公众号消息，近日，国家广播电视总局在巩固前期微短剧低俗有害和侵权盗版专项治理成效的基础上，针对AI微短剧质量良莠不齐、AI技术助长低俗不良内容反弹等问题，部署开展新一轮微短剧低俗化同质化专项治理工作，治理为期两个月，自11月1日起至12月底。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-7mr3-28h5-m5vx",
+        "category": "security",
+        "title": "LXD has project restriction bypass for custom volume copy across projects",
+        "url": "https://github.com/advisories/GHSA-7mr3-28h5-m5vx",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-06T19:51:16.000Z",
+        "summary": "Reported from https://github.com/lxc/incus/security/advisories/GHSA-64f3-v33m-w89f ### Summary Missing authorization checks exist for custom volume copying where an attacker knowing the name of a project that they don't have access to and …",
+        "badge": "GHSA-7MR3-28H5-M5VX",
+        "signal": "HIGH · CVSS 7.7"
+      },
+      {
+        "id": "ai-openai-5f721228af3682c2",
+        "category": "ai",
+        "title": "Measuring how AI agents handle everyday wet-lab science",
+        "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+        "source": "OpenAI",
+        "publishedAt": "2026-11-06T00:00:00.000Z",
+        "summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1255109",
+        "category": "dev",
+        "title": "很久没开 JetBrains 家产品了",
+        "url": "https://www.v2ex.com/t/1255109",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-06T15:14:58.000Z",
+        "summary": "16 年发 wb 说等有钱了就买 IDEA ，结果现在有钱了也不用买了，变成了买 token 了。打败 IDEA(JetBrains)的不是比它更优秀的编译器，而是 AI",
+        "badge": "程序员",
+        "signal": "4 回复"
+      },
+      {
+        "id": "cn-it-f240faecf0cc621c",
+        "category": "cn",
+        "title": "谷歌母公司 Alphabet 斥资约 5.48 亿美元建仓高通，押注 AI 芯片新赛道",
+        "url": "https://www.ithome.com/1/023/607.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-11-06T22:48:04.000Z",
+        "summary": "IT之家 11 月 7 日消息，路透社今天（11 月 7 日）发布博文，报道称谷歌母公司 Alphabet 在第三季度首次买入芯片巨头高通约 297.7 万股股票， 持仓市值约 5.48 亿美元 （IT之家注：现汇率约合 36.62 亿元人民币） ，约占高通总股本 0.5%。 根据美国证券监管文件披露，Alphabet 第三季度持仓总市值约为 883 亿美元 （现汇率约合 5,900.67 亿元人民币） ，上一季度约为 991 亿美元 （现汇率约合 6,622.38 亿元人…",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2026-119977",
@@ -107,88 +189,6 @@
         "signal": "已遭利用 · 整改期限 2026-11-06"
       },
       {
-        "id": "ai-hugging-face-5a90caffb2c87d2e",
-        "category": "ai",
-        "title": "ToyBlocks: A controlled world for robot learning and evaluation",
-        "url": "https://huggingface.co/blog/allenai/toyblocks",
-        "source": "Hugging Face",
-        "publishedAt": "2026-11-06T14:00:48.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50391456",
-        "category": "dev",
-        "title": "Tesla to wind down Cybertruck production",
-        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-06T12:13:51.000Z",
-        "badge": "HN",
-        "signal": "311 分 · 909 评论"
-      },
-      {
-        "id": "cn-item-26ddce95d897ebf6",
-        "category": "cn",
-        "title": "国家广播电视总局部署开展新一轮微短剧专项治理工作",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-06/10727509.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-11-06T11:53:51.000Z",
-        "summary": "中新网11月6日电 据“国家广播电视总局”微信公众号消息，近日，国家广播电视总局在巩固前期微短剧低俗有害和侵权盗版专项治理成效的基础上，针对AI微短剧质量良莠不齐、AI技术助长低俗不良内容反弹等问题，部署开展新一轮微短剧低俗化同质化专项治理工作，治理为期两个月，自11月1日起至12月底。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-5q7h-w9jf-cx97",
-        "category": "security",
-        "title": "kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
-        "url": "https://github.com/advisories/GHSA-5q7h-w9jf-cx97",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-05T17:48:54.000Z",
-        "summary": "### Summary kaniko before v1.25.20 can send a Microsoft Entra ID (Azure AD) access token for Azure Resource Manager to a registry host an attacker controls. A Dockerfile that references an image on a lookalike host, such as `FROM x.azurecr…",
-        "badge": "CVE-2026-105769",
-        "signal": "CRITICAL · CVSS 9.3"
-      },
-      {
-        "id": "ai-openai-616c68177b707eae",
-        "category": "ai",
-        "title": "Australian universities are creating AI-native graduates",
-        "url": "https://openai.com/index/australian-universities-ai-native-graduates",
-        "source": "OpenAI",
-        "publishedAt": "2026-11-05T17:00:00.000Z",
-        "summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1255109",
-        "category": "dev",
-        "title": "很久没开 JetBrains 家产品了",
-        "url": "https://www.v2ex.com/t/1255109",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-06T15:14:58.000Z",
-        "summary": "16 年发 wb 说等有钱了就买 IDEA ，结果现在有钱了也不用买了，变成了买 token 了。打败 IDEA(JetBrains)的不是比它更优秀的编译器，而是 AI",
-        "badge": "程序员",
-        "signal": "3 回复"
-      },
-      {
-        "id": "cn-it-b6a16bcfcd21ced3",
-        "category": "cn",
-        "title": "华为 MatePad Edge 获鸿蒙 7.0.0.111SP16 升级：预置融合开发引擎，支持电脑模式运行 Linux 环境",
-        "url": "https://www.ithome.com/1/023/600.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-11-06T15:41:17.000Z",
-        "summary": "IT之家 11 月 6 日消息，华为官方账号“智慧办公产品经理”今日宣布，MatePad Edge 二合一平板电脑已开启鸿蒙 HarmonyOS 7.0.0.111SP16 版本升级，带来了 3D 空间壁纸等功能。 IT之家注意到，华为 MatePad Edge 此次更新后， 还将预置“融合开发引擎”应用 ，支持电脑模式下直接运行 Linux 环境。完整更新内容如下： IT之家注：由华为终端开发的融合开发引擎已于今年 4 月登陆华为鸿蒙 PC 电脑端应用市场（App Gal…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-118527",
-        "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-118527",
-        "source": "CISA KEV",
-        "publishedAt": "2026-10-30T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability ca…",
-        "badge": "CVE-2026-118527",
-        "signal": "已遭利用 · 整改期限 2026-11-13"
-      },
-      {
         "id": "ai-google-deepmind-da38bc697163569b",
         "category": "ai",
         "title": "Agentic cheminformatics with Google Antigravity",
@@ -199,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50394855",
+        "id": "hn-50397219",
         "category": "dev",
-        "title": "First steps in bare-metal programming using UEFI",
-        "url": "https://kevinboone.me/efitest_index.html",
+        "title": "Firecracker VM Escape: PwnEscape Part 2",
+        "url": "https://pwn.ai/blog/firecracker-escape",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T16:50:29.000Z",
+        "publishedAt": "2026-11-06T19:33:38.000Z",
         "badge": "HN",
-        "signal": "37 分 · 1 评论"
+        "signal": "126 分 · 65 评论"
       },
       {
         "id": "cn-baidu-8a3ebf629bfffd72",
@@ -216,18 +216,18 @@
         "source": "百度热搜",
         "summary": "襄阳市公交集团125台公交车退役电池经22轮竞价成交，溢价率119.49%，总价近300万元。此前，湖北黄石公交集团一批退役电池也实现超100%溢价成交。预计到2030年行业市场规模有望达千亿元。",
         "badge": "热搜",
-        "signal": "7,712,909 热度"
+        "signal": "7,714,610 热度"
       },
       {
-        "id": "github-advisory-ghsa-hhf9-qw4v-72xp",
+        "id": "github-advisory-ghsa-qx75-2p3r-pwm5",
         "category": "security",
-        "title": "lxd allows Cross-guest volume hijack via DevLXD device patch",
-        "url": "https://github.com/advisories/GHSA-hhf9-qw4v-72xp",
+        "title": "LXD has project restriction bypass in instance copy across projects",
+        "url": "https://github.com/advisories/GHSA-qx75-2p3r-pwm5",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-05T17:40:59.000Z",
-        "summary": "### Summary A guest can mount another guest's custom storage volume over `/dev/lxd` and read or write its contents without owning it. The DevLXD storage API blocks access to volumes you don't own, but the instance device-update path that a…",
-        "badge": "CVE-2026-12411",
-        "signal": "HIGH · CVSS 8.4"
+        "publishedAt": "2026-11-06T19:51:00.000Z",
+        "summary": "Reported from https://github.com/lxc/incus/security/advisories/GHSA-c9f5-j9c3-mhrg ### Summary Missing authorization checks exist for instance copying where an attacker knowing the name of a project that they don't have access to and the n…",
+        "badge": "GHSA-QX75-2P3R-PWM5",
+        "signal": "HIGH · CVSS 7.7"
       },
       {
         "id": "ai-hugging-face-13e4c95dcbaa6d34",
@@ -260,56 +260,56 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-111357",
+        "id": "cisa-kev-cve-2026-118527",
         "category": "security",
-        "title": "Ivanti Connect Secure：Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111357",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-118527",
         "source": "CISA KEV",
         "publishedAt": "2026-10-30T00:00:00.000Z",
-        "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-1…",
-        "badge": "CVE-2026-111357",
-        "signal": "已遭利用 · 整改期限 2026-11-02"
+        "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability ca…",
+        "badge": "CVE-2026-118527",
+        "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
-        "id": "ai-openai-14e90e72d3401ddf",
+        "id": "ai-openai-bbd492caba72ca54",
         "category": "ai",
-        "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
-        "url": "https://openai.com/index/introducing-gpt-6-cyber",
+        "title": "Cult.fit builds operational muscle with Codex",
+        "url": "https://openai.com/index/cultfit-builds-with-codex",
         "source": "OpenAI",
-        "publishedAt": "2026-11-05T09:00:00.000Z",
-        "summary": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+        "publishedAt": "2026-11-05T20:00:00.000Z",
+        "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50392118",
+        "id": "hn-50399569",
         "category": "dev",
-        "title": "Gemini Omni 1.2 Flash",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+        "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T13:35:27.000Z",
+        "publishedAt": "2026-11-06T22:50:43.000Z",
         "badge": "HN",
-        "signal": "213 分 · 164 评论"
+        "signal": "11 分 · 0 评论"
       },
       {
-        "id": "cn-it-7f7c58b821a24c8a",
+        "id": "cn-it-bc7f00debef3268f",
         "category": "cn",
-        "title": "不法分子冒名发送虚假短信谎称车辆涉气囊召回，上汽通用官方发布声明提醒车主提高警惕",
-        "url": "https://www.ithome.com/1/023/599.htm",
+        "title": "消息称微软不再续签甲骨文 AI 算力租赁协议，重新评估超 800 亿美元云合作",
+        "url": "https://www.ithome.com/1/023/606.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-06T15:35:29.000Z",
-        "summary": "IT之家 11 月 6 日消息，上汽通用汽车官方今晚发布声明，称近日有不法分子冒用“上汽通用”名义，向凯迪拉克、别克、雪佛兰品牌车主发送虚假短信， 谎称车辆涉及气囊召回 ，“以逾期召回将取消质保服务”相要挟，将不明链接谎称为上汽通用官网地址，诱导车主提供个人信息、办理所谓召回手续。 上汽通用汽车郑重声明： 1. 上汽通用汽车官方从未发布过上述短信和链接 ，亦未委托任何第三方通过短信、彩信或社交平台向车主发送上述召回信息； 2. 上述虚假短信中提及的产品召回纯属虚构 ； 3.…",
+        "publishedAt": "2026-11-06T22:44:15.000Z",
+        "summary": "IT之家 11 月 7 日消息，据彭博社今日报道，微软正在逐步结束与甲骨文（Oracle）的 AI 算力租赁合作。 据介绍，微软此前已决定不再续签相关合同，然后近期开始关闭从甲骨文租用的部分计算资源。这也是微软重新评估数十亿美元云计算合作关系的一部分。 知情人士透露，由于微软自身的技术规格不断变化，原先租用的计算资源逐渐无法满足其需求。甲骨文提供的服务器使用了较早一代的英伟达 GPU 芯片，因此对微软而言，这些算力的实用价值有所下降。 甲骨文发言人表示，其 AI 基础设施需…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-gh9r-c94j-cmp5",
+        "id": "github-advisory-ghsa-9fpx-fr6j-2vh6",
         "category": "security",
-        "title": "Stanza: RCE via pickle deserialization in the lemmatizer",
-        "url": "https://github.com/advisories/GHSA-gh9r-c94j-cmp5",
+        "title": "GeoNode has OS command injection via uploaded file layer name",
+        "url": "https://github.com/advisories/GHSA-9fpx-fr6j-2vh6",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T20:29:16.000Z",
-        "summary": "## TL;DR Loading an attacker-supplied lemma `.pt` runs arbitrary code as the loading user. Since 1.14.0 the lemmatizer stores `pos_dict` as a gzip-compressed pickle in the checkpoint's `dicts` field (a `bytes` value). `torch.load(weights_o…",
-        "badge": "CVE-2026-115878",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-11-06T19:39:38.000Z",
+        "summary": "Arbitrary OS commands can be executed on the GeoNode by uploading a vector file with a crafted layer name.",
+        "badge": "CVE-2026-33050",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-1b296d8bb115085d",
@@ -330,7 +330,7 @@
         "publishedAt": "2026-11-06T10:22:49.000Z",
         "summary": "平时反代接 hermes 里用，虽然有时候感觉挺谄媚的，但是今天突然被风控后，尝试换了好几个其他的模型，都感觉没有那种说人话的味道，开始有戒断反应了.. 想请教下各位，有没有能力上和 gemini 3.8 flash 差不多，量大管饱的且说人话的模型方案，ds 4.1f 试了下感觉也不怎么说人话的样子",
         "badge": "程序员",
-        "signal": "12 回复"
+        "signal": "14 回复"
       },
       {
         "id": "cn-baidu-9f6199a18cad3aba",
@@ -340,18 +340,18 @@
         "source": "百度热搜",
         "summary": "中国国际进口博览会的重要组成部分——第九届虹桥国际经济论坛11月5日在上海拉开帷幕。多国人士围绕“稳定合作 共建开放型世界经济”这一主题展开交流与对话，并感谢中国向发展中国家开放市场。",
         "badge": "热搜",
-        "signal": "7,615,797 热度"
+        "signal": "7,617,081 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-97229",
+        "id": "cisa-kev-cve-2026-111357",
         "category": "security",
-        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
+        "title": "Ivanti Connect Secure：Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111357",
         "source": "CISA KEV",
-        "publishedAt": "2026-10-29T00:00:00.000Z",
-        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
-        "badge": "CVE-2026-97229",
-        "signal": "已遭利用 · 整改期限 2026-11-01"
+        "publishedAt": "2026-10-30T00:00:00.000Z",
+        "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-1…",
+        "badge": "CVE-2026-111357",
+        "signal": "已遭利用 · 整改期限 2026-11-02"
       },
       {
         "id": "ai-hugging-face-f25b9201ad6bdcc6",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50389333",
+        "id": "hn-50388001",
         "category": "dev",
-        "title": "Blender's UI and Runtime: Much Faster Than GPUI",
-        "url": "https://github.com/ppmpreetham/BUI",
+        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T07:40:35.000Z",
+        "publishedAt": "2026-11-06T04:00:28.000Z",
         "badge": "HN",
-        "signal": "547 分 · 216 评论"
+        "signal": "247 分 · 200 评论"
       },
       {
         "id": "cn-item-967ac552f8566ee7",
@@ -383,24 +383,24 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-33r5-xmm8-v6x5",
+        "id": "github-advisory-ghsa-pjff-c2wc-f6jm",
         "category": "security",
-        "title": "Elo JavaScript emitter has sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor` member access",
-        "url": "https://github.com/advisories/GHSA-33r5-xmm8-v6x5",
+        "title": "LXD has arbitrary file write on client due to trusted image hash",
+        "url": "https://github.com/advisories/GHSA-pjff-c2wc-f6jm",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T17:53:42.000Z",
-        "summary": "### Summary An unauthenticated attacker who controls a string passed to any Elo JavaScript-emission path — `defaultFormats.elo.parse()`, the `bin/elo` CLI, or the live browser playground at `elo-lang.org/try` — can execute arbitrary code i…",
-        "badge": "CVE-2026-44267",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-11-06T19:36:55.000Z",
+        "summary": "Reported from https://github.com/lxc/incus/security/advisories/GHSA-f6m5-xw2g-xc4x ### Summary An arbitrary file write exists in the Incus client when a malicious image server returns a crafted `Incus-Image-Hash` header. This can lead to a…",
+        "badge": "GHSA-PJFF-C2WC-F6JM",
+        "signal": "CRITICAL · CVSS 9.9"
       },
       {
-        "id": "ai-openai-db9792e954d44701",
+        "id": "ai-openai-616c68177b707eae",
         "category": "ai",
-        "title": "Merge builds product and business tools with OpenAI technology",
-        "url": "https://openai.com/index/merge-builds-with-openai",
+        "title": "Australian universities are creating AI-native graduates",
+        "url": "https://openai.com/index/australian-universities-ai-native-graduates",
         "source": "OpenAI",
-        "publishedAt": "2026-11-05T08:00:00.000Z",
-        "summary": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.",
+        "publishedAt": "2026-11-05T17:00:00.000Z",
+        "summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
         "badge": "OpenAI"
       },
       {
@@ -415,24 +415,24 @@
         "signal": "15 回复"
       },
       {
-        "id": "cn-it-4e8096d0f7096596",
+        "id": "cn-it-9c372d2778979bba",
         "category": "cn",
-        "title": "R 星谈《GTA6》开放世界设计：弱化地图图标引导，鼓励玩家自然发现事件",
-        "url": "https://www.ithome.com/1/023/598.htm",
+        "title": "微软发布 Win11 多预览版：改进 Windows Hello 登录体验",
+        "url": "https://www.ithome.com/1/023/605.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-06T15:21:12.000Z",
-        "summary": "IT之家 11 月 6 日消息，据游戏媒体 GameRant 今天报道，《GTA6》里最有趣的事件，可能永远不会以地图图标形式出现。玩家驾车穿过街道时，可能突然遇上街头赛车；沿着人行道散步时，警察可能恰好在抓捕犯人。 Rockstar North 工作室联合负责人兼开发主管 Rob Nelson 谈到这部分设计时表示， 他们特别参考了《荒野大镖客：救赎 2》 ， 将部分探索内容留给玩家自行发现 。 他对此解释称：“游戏中有大量内容需要玩家在游玩过程中自行发现，我们并不一定会…",
+        "publishedAt": "2026-11-06T18:11:37.000Z",
+        "summary": "IT之家 11 月 7 日消息，微软当地时间 11 月 6 日发布博文，邀请 Beta 和 Experimental 频道的 Windows Insider 项目成员，测试适用于 Windows 11 的预览版更新。 Beta 频道（26H2）：Build 26320.9876； Experimental 频道：Build 26340.9882； Beta 频道（26H1）：Build 28020.3445； Experimental 频道（26H1）：Build 2812…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-76418",
+        "id": "cisa-kev-cve-2026-97229",
         "category": "security",
-        "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software：Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76418",
+        "title": "GitLab Community Edition and Enterprise Edition：GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-97229",
         "source": "CISA KEV",
         "publishedAt": "2026-10-29T00:00:00.000Z",
-        "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, …",
-        "badge": "CVE-2026-76418",
+        "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a …",
+        "badge": "CVE-2026-97229",
         "signal": "已遭利用 · 整改期限 2026-11-01"
       },
       {
@@ -445,14 +445,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50393758",
+        "id": "hn-50391456",
         "category": "dev",
-        "title": "Deus Ex",
-        "url": "https://www.filfre.net/2026/11/deus-ex/",
+        "title": "Tesla to wind down Cybertruck production",
+        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T15:44:36.000Z",
+        "publishedAt": "2026-11-06T12:13:51.000Z",
         "badge": "HN",
-        "signal": "207 分 · 94 评论"
+        "signal": "761 分 · 1589 评论"
       },
       {
         "id": "cn-baidu-06b7ef17c59dba21",
@@ -462,18 +462,18 @@
         "source": "百度热搜",
         "summary": "近期出版的《中国统计年鉴2026》公布全国36城2025年住户存款余额。数据显示，北京、上海、广州、重庆、深圳和成都6城住户存款超3万亿元。",
         "badge": "热搜",
-        "signal": "7,523,047 热度"
+        "signal": "7,519,618 热度"
       },
       {
-        "id": "github-advisory-ghsa-7w38-ggh5-v542",
+        "id": "github-advisory-ghsa-fmc8-p6q7-75cc",
         "category": "security",
-        "title": "Elo Ruby backend has Remote Code Execution via unescaped `#{...}` interpolation in emitted string literals and subtype-constraint labels",
-        "url": "https://github.com/advisories/GHSA-7w38-ggh5-v542",
+        "title": "LXD has argument injection in backup compression algorithm leading to AFW and ACE",
+        "url": "https://github.com/advisories/GHSA-fmc8-p6q7-75cc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-03T17:51:30.000Z",
-        "summary": "### Summary Elo's Ruby backend emits attacker-controlled text into Ruby double-quoted strings without escaping the `#` character. Because `#` begins Ruby's interpolation sequences — `#{expr}`, `#@ivar`, `#@@cvar`, `#$gvar` — and any expres…",
-        "badge": "CVE-2026-44266",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-11-06T19:36:37.000Z",
+        "summary": "Reported from https://github.com/lxc/incus/security/advisories/GHSA-v6mj-8pf4-hhw4 ### Summary Improper validation of user-provided backup compression algorithm leads to argument injection in the constructed command line. This leads to an …",
+        "badge": "GHSA-FMC8-P6Q7-75CC",
+        "signal": "CRITICAL · CVSS 9.9"
       },
       {
         "id": "ai-hugging-face-c65c7708e93995ca",
@@ -510,7 +510,7 @@
         "url": "https://github.com/zed-industries/zed",
         "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "language": "Rust",
-        "stars": 93322,
+        "stars": 93581,
         "starsToday": 292
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/NVIDIA/auto-ontology",
         "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
         "language": "Python",
-        "stars": 8693,
+        "stars": 8949,
         "starsToday": 2005
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/rails/rails",
         "description": "Ruby on Rails",
         "language": "Ruby",
-        "stars": 58938,
+        "stars": 59017,
         "starsToday": 152
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/mpv-player/mpv",
         "description": "🎥 Command line media player",
         "language": "C",
-        "stars": 37817,
+        "stars": 37866,
         "starsToday": 36
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/rust-lang/rust",
         "description": "Empowering everyone to build reliable and efficient software.",
         "language": "Rust",
-        "stars": 121294,
+        "stars": 121425,
         "starsToday": 186
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/react/react",
         "description": "The library for web and native user interfaces.",
         "language": "JavaScript",
-        "stars": 252137,
+        "stars": 252243,
         "starsToday": 244
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/angular/angular",
         "description": "Deliver web apps with confidence 🚀",
         "language": "TypeScript",
-        "stars": 101222,
+        "stars": 101347,
         "starsToday": 128
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/symfony/symfony",
         "description": "The Symfony PHP framework",
         "language": "PHP",
-        "stars": 31312,
+        "stars": 31420,
         "starsToday": 89
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/prometheus/prometheus",
         "description": "The Prometheus monitoring system and time series database.",
         "language": "Go",
-        "stars": 67059,
+        "stars": 67165,
         "starsToday": 140
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/google/skills",
         "description": "Agent Skills for Google products and technologies",
         "language": "Python",
-        "stars": 22738,
+        "stars": 22809,
         "starsToday": 532
       }
     ],
-    "updatedAt": "2026-11-06T17:58:35.860Z"
+    "updatedAt": "2026-11-06T23:09:45.746Z"
   }
 }
