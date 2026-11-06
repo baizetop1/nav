@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'build-8fc2868f38d6d1f25a34'
+const CACHE_VERSION = 'build-1764c4e916f1b6a3a301'
 const APP_VERSION = 'app-b981681903465a9c360b'
 const CACHE_PREFIX = 'baize-nav-'
 // Data-only builds share the same UI shell, avoiding hourly waiting-cache copies.
