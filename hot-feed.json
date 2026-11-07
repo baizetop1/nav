@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-07T08:47:00.849Z",
+  "generatedAt": "2026-11-07T10:11:53.624Z",
   "intelligence": {
-    "updatedAt": "2026-11-07T08:47:00.849Z",
+    "updatedAt": "2026-11-07T10:11:53.624Z",
     "items": [
       {
         "id": "cn-item-f64aadd6c1c552de",
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-06T23:30:52.000Z",
         "badge": "HN",
-        "signal": "567 分 · 96 评论"
+        "signal": "642 分 · 100 评论"
       },
       {
-        "id": "cn-it-dea11af7d70a3818",
+        "id": "cn-it-c9f6e220d7896129",
         "category": "cn",
-        "title": "韩国初创公司 Lutra 推出 HOA A1 相机：独特形态，可令摄影师与模特保持眼神交流",
-        "url": "https://www.ithome.com/1/023/757.htm",
+        "title": "张艺谋谈 AI 冲击电影行业：AI 短视频产值已到几百亿，是很大的挑战",
+        "url": "https://www.ithome.com/1/023/786.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-07T08:37:51.000Z",
-        "summary": "IT之家 11 月 7 日消息，据外媒 PetaPixel 报道，韩国初创公司 Lutra 推出了新品牌 Humans of Authenticity（HOA），旗下的新品是一款采用大型开放式取景框的数码相机，无需通过屏幕取景。 其镜头和传感器位于取景窗中央附近，摄影师构图时 既能与被摄者保持眼神交流，也能摆脱屏幕的干扰 ，专注于眼前的画面。 HOA A1 首发版计划于 12 月 1 日上市，首批仅生产 100 台。目前尚未开放预订， 售价 36 万韩元 （IT之家注：现汇…",
+        "publishedAt": "2026-11-07T10:05:27.000Z",
+        "summary": "IT之家 11 月 7 日消息，据电影频道融媒体中心报道，第 39 届中国电影金鸡奖金鸡・国际电影节展对话在厦门开讲，张艺谋以主嘉宾身份分享了自己对 AI 冲击电影行业的看法。 张艺谋称，AI 短视频产值已到几百亿，大量的人看，那还进电影院吗？他坦言， 这其实是一个很大的挑战 ，自己也不知道未来（比如五年、十年之后），当 AI 技术到了全面超越我们（人类）的时候该怎么办。 他寄语年轻导演做好自己，学习、积累、进步，用积极的生活态度，讲自己心中的故事，将自己心中最有感情、体会…",
         "badge": "IT之家"
       },
       {
@@ -76,24 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1255207",
+        "id": "v2ex-1255226",
         "category": "dev",
-        "title": "好了， deepseek 有开始维护了，是不是又要有升级了？",
-        "url": "https://www.v2ex.com/t/1255207",
+        "title": "Rust 重写 Pi 编码助手 rpi ，对比 Pi 和 Pi-Bolt 三款启动耗时和内存对比",
+        "url": "https://www.v2ex.com/t/1255226",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T07:32:01.000Z",
+        "publishedAt": "2026-11-07T09:20:04.000Z",
+        "summary": "最近用 Rust 重写了 原生测 Pi ,无聊测试了一下性能, 多少感觉还是有点值得 项目： pi-rust 启动时间 历史消息数 rpi 启动至就绪 Pi 启动至就绪 rpi 耗时减少 100 16.93 ms 194.93 ms 91.3% 1,000 28.85 ms 196.98 ms 85.4% 5,000 81.60 ms 212.47 ms 61.6% 内存占用 历史消息数 rpi 就绪 RSS Pi 就绪 RSS rpi RSS 减少 100 21.41 M…",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-891bbaf194d24d32",
+        "id": "cn-baidu-f3f044432c9d54bd",
         "category": "cn",
-        "title": "张艺谋：AI短视频倒贴钱谁还进电影院",
-        "url": "https://www.baidu.com/s?wd=%E5%BC%A0%E8%89%BA%E8%B0%8B%EF%BC%9AAI%E7%9F%AD%E8%A7%86%E9%A2%91%E5%80%92%E8%B4%B4%E9%92%B1%E8%B0%81%E8%BF%98%E8%BF%9B%E7%94%B5%E5%BD%B1%E9%99%A2&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "一打开红果短剧 一晚上就没了",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E6%89%93%E5%BC%80%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7+%E4%B8%80%E6%99%9A%E4%B8%8A%E5%B0%B1%E6%B2%A1%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月7日上午，著名导演张艺谋现身厦门，参加金鸡奖论坛。在台上被问到对AI技术的理解时，张艺谋表示，AI制作的短视频不仅免费，甚至给观众发钱，吸引了大量人群观看。他担忧，若5至10年后AI技术完全超越电影，观众是否还会进电影院，行业该怎么办。",
+        "summary": "11月3日报告显示，红果短剧9月去重用户量达4.3亿，成字节跳动旗下仅次于抖音的应用。一位红果用户表示：“一集只有几分钟，连着看下去，一个晚上就没了。”媒体揭示，红果通过“三秒钩子”和“情绪逻辑”制造上瘾机制，并依托番茄小说IP、字节系制作工具及免费广告分账模式运转生态。",
         "badge": "热搜",
-        "signal": "7,808,343 热度"
+        "signal": "7,808,830 热度"
       },
       {
         "id": "cisa-kev-cve-2024-27834",
@@ -123,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-07T04:54:36.000Z",
         "badge": "HN",
-        "signal": "76 分 · 34 评论"
+        "signal": "98 分 · 61 评论"
       },
       {
         "id": "cn-item-d8f577d1592f3980",
@@ -157,24 +158,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1255187",
+        "id": "v2ex-1255207",
         "category": "dev",
-        "title": "刚去上了一堆国内好久没上的技术类网站，你还记得起上次什么时候访问的吗",
-        "url": "https://www.v2ex.com/t/1255187",
+        "title": "好了， deepseek 有开始维护了，是不是又要有升级了？",
+        "url": "https://www.v2ex.com/t/1255207",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T06:04:59.000Z",
-        "summary": "刚去上了一堆国内好久没上的技术类网站，简直是恍如隔世了。感觉都没什么热度了，即使过去那些曾经天天登录的大型站点，对于那些小一些的站点更糟糕了，就大半年都没什么更新了，一些站点连登录都是有问题了，当然还有一些直接 404 了。 你还记得起来你上次你访问国内那些技术类网站么，看这架势大多数都想不起来了吧",
+        "publishedAt": "2026-11-07T07:32:01.000Z",
         "badge": "程序员",
         "signal": "8 回复"
       },
       {
-        "id": "cn-it-c912b2966c8485f9",
+        "id": "cn-it-522c9326ddcdd1a0",
         "category": "cn",
-        "title": "TrendForce：预计 2027 年翻新内存在智能手机市场渗透率达 7-9%",
-        "url": "https://www.ithome.com/1/023/756.htm",
+        "title": "华为畅享 100 系列手机首销情况曝光：总量约 21.5 万台，Pro Max 机型约占 60%",
+        "url": "https://www.ithome.com/1/023/780.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-07T08:36:13.000Z",
-        "summary": "IT之家 11 月 7 日消息，集邦咨询（TrendForce）最新存储行业研究显示，移动 DRAM 合约价格的持续走高，正促使智能手机厂商更多采用成本更低的翻新内存（Reballed Memory，重新植球内存），这一趋势在入门级与平价机型中尤为明显。 IT之家注意到，TrendForce 预计，翻新内存在智能手机市场的渗透率将在 2026 年达到约 3%~4%， 并有望在 2027 年进一步攀升至 7%~9% 。 目前市场上流通的翻新内存以 LPDDR4X 4GB 为主…",
+        "publishedAt": "2026-11-07T09:59:54.000Z",
+        "summary": "IT之家 11 月 7 日消息， 华为畅享 100 系列手机于 10 月 28 日发布，10 月 31 日 10:08 首销， 售价 1399 元起 。 ▲ 华为畅享 100 Pro Max 博主 @RD观测 今日曝光了系列新机的首销情况，以首销当日（10:08 开售）+ 后三天为标准， 华为畅享 100 系列的总量约 215K （21.5 万）。 其中： 华为畅享 100 Pro Max 约占 60% 华为畅享 100 Pro 约占 10% 华为畅享 100 约占 30%…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50401867",
+        "id": "hn-50397429",
         "category": "dev",
-        "title": "Asahi Linux Progress Linux 7.3",
-        "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+        "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+        "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
         "source": "Hacker News",
-        "publishedAt": "2026-11-07T05:20:18.000Z",
+        "publishedAt": "2026-11-06T19:48:51.000Z",
         "badge": "HN",
-        "signal": "141 分 · 91 评论"
+        "signal": "478 分 · 109 评论"
       },
       {
-        "id": "cn-baidu-b7d38b9da5eb30cc",
+        "id": "cn-baidu-712a64790ecea1ec",
         "category": "cn",
-        "title": "抢烤鸡的那批人开始在山姆抢始祖鸟",
-        "url": "https://www.baidu.com/s?wd=%E6%8A%A2%E7%83%A4%E9%B8%A1%E7%9A%84%E9%82%A3%E6%89%B9%E4%BA%BA%E5%BC%80%E5%A7%8B%E5%9C%A8%E5%B1%B1%E5%A7%86%E6%8A%A2%E5%A7%8B%E7%A5%96%E9%B8%9F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "华北北部降雪多到“发黑”",
+        "url": "https://www.baidu.com/s?wd=%E5%8D%8E%E5%8C%97%E5%8C%97%E9%83%A8%E9%99%8D%E9%9B%AA%E5%A4%9A%E5%88%B0%E2%80%9C%E5%8F%91%E9%BB%91%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "抢烤鸡的那批人开始在山姆抢始祖鸟！近日记者发现山姆会员店全球购上架始祖鸟、加拿大鹅等商品，售价比官方旗舰店便宜数百至数千元，部分热门款已售罄。分析认为，此类商品对山姆是“引流与续费钩子”，也为品牌方提供了清理库存通道。",
+        "summary": "11月7日下午，北方雨雪进入最强时段，华北北部等地强降雪集中，预报图显示降雪多到“发黑”。此前，冷空气已致北方多地大风降温。中央气象台发布暴雪黄色预警，预计河北东北部到辽宁西南部局地新增积雪超20厘米。北京西部北部山区将迎大雪到暴雪。",
         "badge": "热搜",
-        "signal": "7,714,253 热度"
+        "signal": "7,714,176 热度"
       },
       {
         "id": "github-advisory-ghsa-qx75-2p3r-pwm5",
@@ -239,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1255141",
+        "id": "v2ex-1255187",
         "category": "dev",
-        "title": "目前最强的 AI 能否实现这种排查问题的能力？",
-        "url": "https://www.v2ex.com/t/1255141",
+        "title": "刚去上了一堆国内好久没上的技术类网站，你还记得起上次什么时候访问的吗",
+        "url": "https://www.v2ex.com/t/1255187",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T02:47:37.000Z",
-        "summary": "我在面对开发负责人时，打开系统界面，指着一个输入框说：“在这里输入这个，点提交，哎，它报错了，而且后台日志报的是栈溢出的错误，你来解决一下”，然后开发组就去解决问题了，我可以对 AI 这样吗？",
+        "publishedAt": "2026-11-07T06:04:59.000Z",
+        "summary": "刚去上了一堆国内好久没上的技术类网站，简直是恍如隔世了。感觉都没什么热度了，即使过去那些曾经天天登录的大型站点，对于那些小一些的站点更糟糕了，就大半年都没什么更新了，一些站点连登录都是有问题了，当然还有一些直接 404 了。 你还记得起来你上次你访问国内那些技术类网站么，看这架势大多数都想不起来了吧",
         "badge": "程序员",
-        "signal": "23 回复"
+        "signal": "9 回复"
       },
       {
         "id": "cn-item-cdbeec378a592013",
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50397429",
+        "id": "hn-50402212",
         "category": "dev",
-        "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-        "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+        "title": "The Components of Agent Memory",
+        "url": "https://www.anthropic.com/research/components-of-agent-memory",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T19:48:51.000Z",
+        "publishedAt": "2026-11-07T06:39:04.000Z",
         "badge": "HN",
-        "signal": "453 分 · 102 评论"
+        "signal": "41 分 · 23 评论"
       },
       {
-        "id": "cn-it-67e821aa3baec58e",
+        "id": "cn-it-fa19b497fe7cd33b",
         "category": "cn",
-        "title": "华为更多机型鸿蒙 HarmonyOS 7 系统转公测，含 nova 12 / 13 系列、畅享 70X 等",
-        "url": "https://www.ithome.com/1/023/755.htm",
+        "title": "华为海外推出 FreeBuds SE 5 MAX 无线耳机：52dB 多模降噪，支持 iOS / 安卓 / 鸿蒙三系统",
+        "url": "https://www.ithome.com/1/023/768.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-07T08:34:52.000Z",
-        "summary": "IT之家 11 月 7 日消息，华为官网最新信息显示，鸿蒙 HarmonyOS 7 系统更多机型从花粉 Beta 转为公测， 覆盖 nova 12 / 13 系列、畅享 70X、MatePad Pro 13.2 英寸 2023 系列等 。 IT之家附华为鸿蒙 HarmonyOS 7 最新适配机型清单如下： 正式版 HUAWEI Mate 80 系列 HUAWEI Mate 70 系列 HUAWEI Mate 60 系列 HUAWEI Mate X7 系列 HUAWEI Ma…",
+        "publishedAt": "2026-11-07T09:46:15.000Z",
+        "summary": "IT之家 11 月 7 日消息，华为在海外推出了 FreeBuds SE 5 MAX 无线耳机，主打 80 小时综合续航、52dB 多模降噪和高解析度音频。 据介绍，华为 FreeBuds SE 5 MAX 无线耳机采用全新赛道椭圆形设计，耳机舱将磨砂哑光质感与通透外壳进行了结合。 耳机本体单耳仅重 4.3g ，提供 S / M / L 三种尺寸硅胶耳塞可选，方便不同用户佩戴。耳机拥有蓝、黑、白三色可选。 这款无线耳机单耳拥有 41mAh 电池，充电舱还有 920mAh 电…",
         "badge": "IT之家"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1255140",
+        "id": "v2ex-1255141",
         "category": "dev",
-        "title": "agent 领域最近讨论的 Ontology 本体论 是非技术人员的自嗨吗",
-        "url": "https://www.v2ex.com/t/1255140",
+        "title": "目前最强的 AI 能否实现这种排查问题的能力？",
+        "url": "https://www.v2ex.com/t/1255141",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T02:46:09.000Z",
-        "summary": "我个人感觉是夹在面向对象和领域驱动的中间演进层， 感觉这个方向演进，程序员还要诈尸还魂。",
+        "publishedAt": "2026-11-07T02:47:37.000Z",
+        "summary": "我在面对开发负责人时，打开系统界面，指着一个输入框说：“在这里输入这个，点提交，哎，它报错了，而且后台日志报的是栈溢出的错误，你来解决一下”，然后开发组就去解决问题了，我可以对 AI 这样吗？",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "25 回复"
       },
       {
         "id": "cn-baidu-eb0a1bc9bab40965",
@@ -340,7 +340,7 @@
         "source": "百度热搜",
         "summary": "第九届中国国际进口博览会恰逢APEC“中国年”，来自APEC经济体的展品跨越山海，展示、洽谈、对接，让展台成为合作起点、展品成为市场纽带。作为全球经济增长的重要引擎之一，亚太区域经济深度交融、产业高度互嵌。进博会通过供需对接、产业联动，为亚太经济体共享机遇、共促发展搭建广阔平台，助力亚太共同体建设走深走实。",
         "badge": "热搜",
-        "signal": "7,617,671 热度"
+        "signal": "7,618,847 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111357",
@@ -363,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50402212",
+        "id": "hn-50391456",
         "category": "dev",
-        "title": "The Components of Agent Memory",
-        "url": "https://www.anthropic.com/research/components-of-agent-memory",
+        "title": "Tesla to wind down Cybertruck production",
+        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
         "source": "Hacker News",
-        "publishedAt": "2026-11-07T06:39:04.000Z",
+        "publishedAt": "2026-11-06T12:13:51.000Z",
         "badge": "HN",
-        "signal": "21 分 · 5 评论"
+        "signal": "1009 分 · 1864 评论"
       },
       {
         "id": "cn-item-81afe13e8537f715",
@@ -404,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1255109",
+        "id": "v2ex-1255140",
         "category": "dev",
-        "title": "很久没开 JetBrains 家产品了",
-        "url": "https://www.v2ex.com/t/1255109",
+        "title": "agent 领域最近讨论的 Ontology 本体论 是非技术人员的自嗨吗",
+        "url": "https://www.v2ex.com/t/1255140",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-06T15:14:58.000Z",
-        "summary": "16 年发 wb 说等有钱了就买 IDEA ，结果现在有钱了也不用买了，变成了买 token 了。打败 IDEA(JetBrains)的不是比它更优秀的编译器，而是 AI",
+        "publishedAt": "2026-11-07T02:46:09.000Z",
+        "summary": "我个人感觉是夹在面向对象和领域驱动的中间演进层， 感觉这个方向演进，程序员还要诈尸还魂。",
         "badge": "程序员",
-        "signal": "17 回复"
+        "signal": "11 回复"
       },
       {
-        "id": "cn-it-a227f20ab36870f7",
+        "id": "cn-it-a4b661765f58ce36",
         "category": "cn",
-        "title": "荣耀 700 系列手机上线官网：Pro / 标准 / S 三杯、全系背屏设计",
-        "url": "https://www.ithome.com/1/023/754.htm",
+        "title": "苹果披露人形机器人 HALO 系统：6 个未建图环境测试 360 次单项任务，平均成功率 91%",
+        "url": "https://www.ithome.com/1/023/767.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-07T08:23:41.000Z",
-        "summary": "IT之家 11 月 7 日消息，荣耀手机官方今日宣布， 荣耀 700 系列上新，已在官网开启预约 。 荣耀官网显示，荣耀 700 系列手机此次有“三杯”， 分别是荣耀 700 Pro、荣耀 700、荣耀 700S ，全系采用背屏设计。 据IT之家此前报道，博主 @数码闲聊站 爆料， 荣耀 700 系列手机采用同档唯一双 8 芯片 ，拥有更强性能 + 更大电池 + 潜望镜 + 旗舰影像 + 自拍背屏。另外，博主 @WHYLAB 透露， 背屏为 1.72 英寸 。 荣耀全球首席…",
+        "publishedAt": "2026-11-07T09:40:17.000Z",
+        "summary": "IT之家 11 月 7 日消息，当地时间 11 月 4 日，苹果研究团队在预印本平台 arXiv 提交论文《Perceptive Humanoid Motion from Simulation》，披露了人形机器人自主控制系统 HALO。 研究团队还公开了数据生成、模型训练和部署代码，涵盖动作生成、动作跟踪、任务编排以及仿真和真实机器人运行等环节。 在落地阶段， 研究团队采用宇树科技 G1 人形机器人 ，背部加装了专用 3D 打印保护外壳， 内置一台 Mac mini （M4…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50391456",
+        "id": "hn-50361765",
         "category": "dev",
-        "title": "Tesla to wind down Cybertruck production",
-        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+        "title": "PostgreSQL Internals [pdf]",
+        "url": "https://edu.postgrespro.com/postgresql_internals-14_en.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T12:13:51.000Z",
+        "publishedAt": "2026-11-04T05:22:43.000Z",
         "badge": "HN",
-        "signal": "987 分 · 1845 评论"
+        "signal": "23 分 · 1 评论"
       },
       {
-        "id": "cn-baidu-237c23ae9f3cc9cc",
+        "id": "cn-baidu-d5388e651bfab1d5",
         "category": "cn",
-        "title": "马斯克再次表白中国",
-        "url": "https://www.baidu.com/s?wd=%E9%A9%AC%E6%96%AF%E5%85%8B%E5%86%8D%E6%AC%A1%E8%A1%A8%E7%99%BD%E4%B8%AD%E5%9B%BD&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "芒果涨疯了",
+        "url": "https://www.baidu.com/s?wd=%E8%8A%92%E6%9E%9C%E6%B6%A8%E7%96%AF%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "当地时间11月6日，特斯拉首席执行官马斯克接受采访时表示“我爱中国”，并高度评价中国汽车工业竞争力，称中国车企非常厉害。此前，他曾在社交平台向网友强烈推荐去中国旅游，自称是中国超级粉丝。",
+        "summary": "截至11月5日收盘，受综艺《后会友期》爆火带动，芒果超媒股价4日涨近50%。",
         "badge": "热搜",
-        "signal": "7,523,409 热度"
+        "signal": "7,523,839 热度"
       },
       {
         "id": "github-advisory-ghsa-fmc8-p6q7-75cc",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1255071",
+        "id": "v2ex-1255109",
         "category": "dev",
-        "title": "Windows terminal 终端的地位也岌岌可危",
-        "url": "https://www.v2ex.com/t/1255071",
+        "title": "很久没开 JetBrains 家产品了",
+        "url": "https://www.v2ex.com/t/1255109",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-06T10:28:59.000Z",
-        "summary": "每个人都想写个 SSH 终端，有 rust 的,go 的和 nodejs 的，而且功能全，界面美观，迭代快，还有 AI 功能。 微软去年发布的带 AI 的 Windows terminal ，没激起一点水花。 想当年 Windows terminal 发布的时候是何等惊艳，现在变成牛夫人。",
+        "publishedAt": "2026-11-06T15:14:58.000Z",
+        "summary": "16 年发 wb 说等有钱了就买 IDEA ，结果现在有钱了也不用买了，变成了买 token 了。打败 IDEA(JetBrains)的不是比它更优秀的编译器，而是 AI",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "17 回复"
       }
     ]
   },
@@ -510,7 +510,7 @@
         "url": "https://github.com/zed-industries/zed",
         "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "language": "Rust",
-        "stars": 93918,
+        "stars": 93986,
         "starsToday": 306
       },
       {
@@ -520,7 +520,7 @@
         "url": "https://github.com/NVIDIA/auto-ontology",
         "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
         "language": "Python",
-        "stars": 9458,
+        "stars": 9519,
         "starsToday": 2015
       },
       {
@@ -530,7 +530,7 @@
         "url": "https://github.com/rails/rails",
         "description": "Ruby on Rails",
         "language": "Ruby",
-        "stars": 59065,
+        "stars": 59071,
         "starsToday": 142
       },
       {
@@ -540,7 +540,7 @@
         "url": "https://github.com/mpv-player/mpv",
         "description": "🎥 Command line media player",
         "language": "C",
-        "stars": 37949,
+        "stars": 37963,
         "starsToday": 37
       },
       {
@@ -550,7 +550,7 @@
         "url": "https://github.com/rust-lang/rust",
         "description": "Empowering everyone to build reliable and efficient software.",
         "language": "Rust",
-        "stars": 121549,
+        "stars": 121571,
         "starsToday": 192
       },
       {
@@ -560,7 +560,7 @@
         "url": "https://github.com/react/react",
         "description": "The library for web and native user interfaces.",
         "language": "JavaScript",
-        "stars": 252323,
+        "stars": 252338,
         "starsToday": 248
       },
       {
@@ -570,7 +570,7 @@
         "url": "https://github.com/angular/angular",
         "description": "Deliver web apps with confidence 🚀",
         "language": "TypeScript",
-        "stars": 101444,
+        "stars": 101459,
         "starsToday": 135
       },
       {
@@ -580,7 +580,7 @@
         "url": "https://github.com/symfony/symfony",
         "description": "The Symfony PHP framework",
         "language": "PHP",
-        "stars": 31497,
+        "stars": 31510,
         "starsToday": 128
       },
       {
@@ -590,7 +590,7 @@
         "url": "https://github.com/prometheus/prometheus",
         "description": "The Prometheus monitoring system and time series database.",
         "language": "Go",
-        "stars": 67262,
+        "stars": 67266,
         "starsToday": 148
       },
       {
@@ -600,10 +600,10 @@
         "url": "https://github.com/google/skills",
         "description": "Agent Skills for Google products and technologies",
         "language": "Python",
-        "stars": 22989,
+        "stars": 23023,
         "starsToday": 534
       }
     ],
-    "updatedAt": "2026-11-07T08:47:00.849Z"
+    "updatedAt": "2026-11-07T10:11:53.624Z"
   }
 }
