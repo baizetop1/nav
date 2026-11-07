@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-07T10:11:53.624Z",
+  "generatedAt": "2026-11-07T16:27:20.082Z",
   "intelligence": {
-    "updatedAt": "2026-11-07T10:11:53.624Z",
+    "updatedAt": "2026-11-07T16:27:20.082Z",
     "items": [
       {
-        "id": "cn-item-f64aadd6c1c552de",
+        "id": "cn-item-942f5856bb9a24f0",
         "category": "cn",
-        "title": "两部门会商调度雨雪天气防范应对工作",
-        "url": "https://www.chinanews.com.cn/sh/2026/11-07/10727918.shtml",
+        "title": "海军首批舰载机女飞行学员结业赴一线部队",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-07/10728127.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-07T08:02:09.000Z",
-        "summary": "中新网11月7日电 据应急管理部官方微博消息，11月7日，国家防减救灾委办公室、应急管理部会同中国气象局组织专题会商，分析研判本轮雨雪发展趋势，调度安徽、江西、北京、河北、辽宁等重点省份，部署当前暴雪和强降雨防范应对工作。",
+        "publishedAt": "2026-11-07T12:42:52.000Z",
+        "summary": "新华社快讯：记者11月7日从海军航空大学获悉，海军首批舰载机女飞行学员全部通过结业考核赴一线部队。这标志着海军航空兵人才梯队建设再添新生力量，海军舰载机飞行人才培养取得突破性进展。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50399933",
+        "id": "hn-50404599",
         "category": "dev",
-        "title": "Libghostty 1.0",
-        "url": "https://mitchellh.com/writing/libghostty-1-0",
+        "title": "The $8 Linux Computer (2022)",
+        "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T23:30:52.000Z",
+        "publishedAt": "2026-11-07T14:00:20.000Z",
         "badge": "HN",
-        "signal": "642 分 · 100 评论"
+        "signal": "72 分 · 31 评论"
       },
       {
-        "id": "cn-it-c9f6e220d7896129",
+        "id": "cn-it-2c4916c4be67d5e8",
         "category": "cn",
-        "title": "张艺谋谈 AI 冲击电影行业：AI 短视频产值已到几百亿，是很大的挑战",
-        "url": "https://www.ithome.com/1/023/786.htm",
+        "title": "安卓阵营首款阔直板手机酷派 COOL X Wide 今日开售：999~1399 元，搭载联发科曦力 G99 芯片 + 720p 屏幕",
+        "url": "https://www.ithome.com/1/023/829.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-07T10:05:27.000Z",
-        "summary": "IT之家 11 月 7 日消息，据电影频道融媒体中心报道，第 39 届中国电影金鸡奖金鸡・国际电影节展对话在厦门开讲，张艺谋以主嘉宾身份分享了自己对 AI 冲击电影行业的看法。 张艺谋称，AI 短视频产值已到几百亿，大量的人看，那还进电影院吗？他坦言， 这其实是一个很大的挑战 ，自己也不知道未来（比如五年、十年之后），当 AI 技术到了全面超越我们（人类）的时候该怎么办。 他寄语年轻导演做好自己，学习、积累、进步，用积极的生活态度，讲自己心中的故事，将自己心中最有感情、体会…",
+        "publishedAt": "2026-11-07T16:00:12.000Z",
+        "summary": "IT之家 11 月 8 日消息，安卓阵营首款阔直板手机，也是酷派首款阔直板手机 Cool X Wide 今日正式开售。其中，8GB+128GB 版本 999 元，8GB+256GB 版本 1199 元，12GB+256GB 版本 1399 元。 这款新机搭载 6.38 英寸 16:10 屏幕，仅 720x1158 分辨率，还支持 90Hz 刷新率；有鎏白、岩黑、嫣红三种配色可选，机身尺寸为 150.3×94.5×8.95mm，后置 5000 万像素摄像头。 这款手机采用联发…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1255226",
+        "id": "v2ex-1255260",
         "category": "dev",
-        "title": "Rust 重写 Pi 编码助手 rpi ，对比 Pi 和 Pi-Bolt 三款启动耗时和内存对比",
-        "url": "https://www.v2ex.com/t/1255226",
+        "title": "死磕一个网页感知系统的来时路（二）",
+        "url": "https://www.v2ex.com/t/1255260",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T09:20:04.000Z",
-        "summary": "最近用 Rust 重写了 原生测 Pi ,无聊测试了一下性能, 多少感觉还是有点值得 项目： pi-rust 启动时间 历史消息数 rpi 启动至就绪 Pi 启动至就绪 rpi 耗时减少 100 16.93 ms 194.93 ms 91.3% 1,000 28.85 ms 196.98 ms 85.4% 5,000 81.60 ms 212.47 ms 61.6% 内存占用 历史消息数 rpi 就绪 RSS Pi 就绪 RSS rpi RSS 减少 100 21.41 M…",
+        "publishedAt": "2026-11-07T13:30:37.000Z",
+        "summary": "为了偷懒，我先替电脑干了不少活 做 EH 最早的动力，其实就是想偷懒。 浏览器里有太多重复操作：看页面、找内容、点控件、切页面。我想让电脑替我做这些事。最开始也没想那么远，只盯着一个站点，希望先把它跑通。 结果，光是决定“让模型看，还是让代码看”，我就走了不少弯路。 最早选的是模型。 我先给自己做了一整套 YOLO 标注工具，设计标注规则，再一条条手工标注。最上头的三天，一共只睡了 12 个小时，攒出了大约 2300 条基础训练语料。 现在回头看，投入很认真，经验确实没有。…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-f3f044432c9d54bd",
+        "id": "cn-baidu-dc843ad6600122c0",
         "category": "cn",
-        "title": "一打开红果短剧 一晚上就没了",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E6%89%93%E5%BC%80%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7+%E4%B8%80%E6%99%9A%E4%B8%8A%E5%B0%B1%E6%B2%A1%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "8省份有大到暴雪 局地特大暴雪",
+        "url": "https://www.baidu.com/s?wd=8%E7%9C%81%E4%BB%BD%E6%9C%89%E5%A4%A7%E5%88%B0%E6%9A%B4%E9%9B%AA+%E5%B1%80%E5%9C%B0%E7%89%B9%E5%A4%A7%E6%9A%B4%E9%9B%AA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月3日报告显示，红果短剧9月去重用户量达4.3亿，成字节跳动旗下仅次于抖音的应用。一位红果用户表示：“一集只有几分钟，连着看下去，一个晚上就没了。”媒体揭示，红果通过“三秒钩子”和“情绪逻辑”制造上瘾机制，并依托番茄小说IP、字节系制作工具及免费广告分账模式运转生态。",
+        "summary": "11月7日18时，中央气象台继续发布暴雪、暴雨、寒潮及大风四项蓝色/黄色预警。预计11月7日20时至8日20时，北京、河北、辽宁等8省份部分地区有大到暴雪，辽宁西部、河北东北部局地特大暴雪。",
         "badge": "热搜",
-        "signal": "7,808,830 热度"
+        "signal": "7,809,458 热度"
       },
       {
         "id": "cisa-kev-cve-2024-27834",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50401740",
+        "id": "hn-50403052",
         "category": "dev",
-        "title": "A barbarian tribe's mythic origin story is true, ancient DNA reveals",
-        "url": "https://www.science.org/content/article/barbarian-tribe-s-mythic-origin-story-true-ancient-dna-reveals",
+        "title": "Need for Speed Underground 2 online in the browser",
+        "url": "https://nfsu2.xyz/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-07T04:54:36.000Z",
+        "publishedAt": "2026-11-07T09:36:36.000Z",
         "badge": "HN",
-        "signal": "98 分 · 61 评论"
+        "signal": "427 分 · 136 评论"
       },
       {
-        "id": "cn-item-d8f577d1592f3980",
+        "id": "cn-item-361db8c878cba609",
         "category": "cn",
-        "title": "交通运输部启动低温雨雪冰冻三级防御响应",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-07/10727864.shtml",
+        "title": "中原农谷这场会议，为全国粮食增产开出“良方”",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-07/10728068.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-07T06:02:39.000Z",
-        "summary": "中新网11月7日电 据交通运输部微信公众号消息，中央气象台11月7日10时继续发布暴雪黄色预警，交通运输部已启动低温雨雪冰冻三级防御响应。",
+        "publishedAt": "2026-11-07T11:54:19.000Z",
+        "summary": "中新网新乡11月7日电 (记者 韩章云)试验田里创造高产纪录，面上推广产量却打折扣。如何推动粮食产量从“刷新纪录”转向“大面积均衡增产”？11月7日，首届国家新千亿斤粮食产能提升专场研讨会在河南新乡举行，与会农业专家为全国粮食大面积均衡增产开出“良方”。",
         "badge": "中新网要闻"
       },
       {
@@ -158,23 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1255207",
+        "id": "v2ex-1255255",
         "category": "dev",
-        "title": "好了， deepseek 有开始维护了，是不是又要有升级了？",
-        "url": "https://www.v2ex.com/t/1255207",
+        "title": "AI 时代，并行开发多项目，感觉电脑配置不够了",
+        "url": "https://www.v2ex.com/t/1255255",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T07:32:01.000Z",
+        "publishedAt": "2026-11-07T12:53:50.000Z",
+        "summary": "自动用上了 AI ，每天的想法很多，虽然很多都是没什么用的东西，但是架不住开发效率太高了 ，常常并行开发好几个项目，明显电脑卡了很多（台式机），但是最近换电脑又不划算，有什么办法么 有时候甚至想 vibe 一个应用，自动去云服务商开抢占式实例，关闭的时候自动保存快照，开启的时候自动加载对应的快照，后面都在云上开发了。",
         "badge": "程序员",
-        "signal": "8 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-522c9326ddcdd1a0",
+        "id": "cn-it-42b6bb8b1a4a6581",
         "category": "cn",
-        "title": "华为畅享 100 系列手机首销情况曝光：总量约 21.5 万台，Pro Max 机型约占 60%",
-        "url": "https://www.ithome.com/1/023/780.htm",
+        "title": "又一梦幻组合实现：网友成功将苹果 MacBook Pro 刷入华为鸿蒙 HarmonyOS 6 系统",
+        "url": "https://www.ithome.com/1/023/828.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-07T09:59:54.000Z",
-        "summary": "IT之家 11 月 7 日消息， 华为畅享 100 系列手机于 10 月 28 日发布，10 月 31 日 10:08 首销， 售价 1399 元起 。 ▲ 华为畅享 100 Pro Max 博主 @RD观测 今日曝光了系列新机的首销情况，以首销当日（10:08 开售）+ 后三天为标准， 华为畅享 100 系列的总量约 215K （21.5 万）。 其中： 华为畅享 100 Pro Max 约占 60% 华为畅享 100 Pro 约占 10% 华为畅享 100 约占 30%…",
+        "publishedAt": "2026-11-07T15:40:44.000Z",
+        "summary": "IT之家 11 月 7 日消息，B站网友 @0x535A 发布视频，分享了自己的最新刷机成果 —— 为一台苹果 MacBook Pro 成功刷入了鸿蒙 HarmonyOS 6 系统， 实现在 Mac 物理机上把鸿蒙系统跑了起来 。 视频画面显示，这台苹果 MacBook Pro 刷入的是鸿蒙 HarmonyOS 6 系统，机型显示为华为擎云 L410，应用小窗、全屏等功能正常。网友表示， 还有很多问题没有解决，但嫁接 Linux 内核是非常好做法 。 据IT之家此前报道，今…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50397429",
+        "id": "hn-50399933",
         "category": "dev",
-        "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-        "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+        "title": "Libghostty 1.0",
+        "url": "https://mitchellh.com/writing/libghostty-1-0",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T19:48:51.000Z",
+        "publishedAt": "2026-11-06T23:30:52.000Z",
         "badge": "HN",
-        "signal": "478 分 · 109 评论"
+        "signal": "875 分 · 143 评论"
       },
       {
-        "id": "cn-baidu-712a64790ecea1ec",
+        "id": "cn-baidu-af461a4cf189bbcc",
         "category": "cn",
-        "title": "华北北部降雪多到“发黑”",
-        "url": "https://www.baidu.com/s?wd=%E5%8D%8E%E5%8C%97%E5%8C%97%E9%83%A8%E9%99%8D%E9%9B%AA%E5%A4%9A%E5%88%B0%E2%80%9C%E5%8F%91%E9%BB%91%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "多地官宣调整中小学上学时间",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%9A%E5%9C%B0%E5%AE%98%E5%AE%A3%E8%B0%83%E6%95%B4%E4%B8%AD%E5%B0%8F%E5%AD%A6%E4%B8%8A%E5%AD%A6%E6%97%B6%E9%97%B4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月7日下午，北方雨雪进入最强时段，华北北部等地强降雪集中，预报图显示降雪多到“发黑”。此前，冷空气已致北方多地大风降温。中央气象台发布暴雪黄色预警，预计河北东北部到辽宁西南部局地新增积雪超20厘米。北京西部北部山区将迎大雪到暴雪。",
+        "summary": "11月5日起，江苏江阴市中小学调整上学时间，计划本周落实到位，小学延至8:00到校。此前，全国多地已陆续探索延迟中小学到校时间，旨在保障学生充足睡眠。",
         "badge": "热搜",
-        "signal": "7,714,176 热度"
+        "signal": "7,713,892 热度"
       },
       {
         "id": "github-advisory-ghsa-qx75-2p3r-pwm5",
@@ -239,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1255187",
+        "id": "v2ex-1255253",
         "category": "dev",
-        "title": "刚去上了一堆国内好久没上的技术类网站，你还记得起上次什么时候访问的吗",
-        "url": "https://www.v2ex.com/t/1255187",
+        "title": "在 agent 时代，深度还是广度更重要？",
+        "url": "https://www.v2ex.com/t/1255253",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T06:04:59.000Z",
-        "summary": "刚去上了一堆国内好久没上的技术类网站，简直是恍如隔世了。感觉都没什么热度了，即使过去那些曾经天天登录的大型站点，对于那些小一些的站点更糟糕了，就大半年都没什么更新了，一些站点连登录都是有问题了，当然还有一些直接 404 了。 你还记得起来你上次你访问国内那些技术类网站么，看这架势大多数都想不起来了吧",
+        "publishedAt": "2026-11-07T12:30:15.000Z",
+        "summary": "指知识、经验与技能的深度与广度。以及，如果只能选一个的话，什么是最重要的领域？",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-item-cdbeec378a592013",
+        "id": "cn-item-b35fc9bd52864fc5",
         "category": "cn",
-        "title": "国家外汇管理局：截至10月末，我国外汇储备规模为34052亿美元",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-07/10727832.shtml",
+        "title": "AI驱动存储进入“超级周期” 业界呼吁“以存强算”",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-07/10728056.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-07T05:09:34.000Z",
-        "summary": "中新网11月7日电 据国家外汇管理局微信公众号消息，国家外汇管理局统计数据显示，截至2026年10月末，我国外汇储备规模为34052亿美元，较9月末上升49亿美元，升幅为0.14%。",
+        "publishedAt": "2026-11-07T11:46:25.000Z",
+        "summary": "中新网北京11月7日电 (记者 刘亮)由中国电子工业标准化技术协会主办的2026数据存储产业大会近日在郑州举办。与会人士共同探讨人工智能(AI)时代下存储角色的变化与演进方向。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50402212",
+        "id": "hn-50403066",
         "category": "dev",
-        "title": "The Components of Agent Memory",
-        "url": "https://www.anthropic.com/research/components-of-agent-memory",
+        "title": "Running a law firm on Free software",
+        "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-07T06:39:04.000Z",
+        "publishedAt": "2026-11-07T09:39:06.000Z",
         "badge": "HN",
-        "signal": "41 分 · 23 评论"
+        "signal": "108 分 · 51 评论"
       },
       {
-        "id": "cn-it-fa19b497fe7cd33b",
+        "id": "cn-it-522c099018eb39a9",
         "category": "cn",
-        "title": "华为海外推出 FreeBuds SE 5 MAX 无线耳机：52dB 多模降噪，支持 iOS / 安卓 / 鸿蒙三系统",
-        "url": "https://www.ithome.com/1/023/768.htm",
+        "title": "比亚迪超豪华行政旗舰轿车登场！仰望鼎曜行政版车长 5.6 米、续航破千公里",
+        "url": "https://www.ithome.com/1/023/827.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-07T09:46:15.000Z",
-        "summary": "IT之家 11 月 7 日消息，华为在海外推出了 FreeBuds SE 5 MAX 无线耳机，主打 80 小时综合续航、52dB 多模降噪和高解析度音频。 据介绍，华为 FreeBuds SE 5 MAX 无线耳机采用全新赛道椭圆形设计，耳机舱将磨砂哑光质感与通透外壳进行了结合。 耳机本体单耳仅重 4.3g ，提供 S / M / L 三种尺寸硅胶耳塞可选，方便不同用户佩戴。耳机拥有蓝、黑、白三色可选。 这款无线耳机单耳拥有 41mAh 电池，充电舱还有 920mAh 电…",
+        "publishedAt": "2026-11-07T15:19:41.000Z",
+        "summary": "IT之家 11 月 7 日现场消息，今晚，在阿布扎比，比亚迪旗下超豪华行政旗舰轿车 —— 仰望鼎曜迎来全球首秀。随后，官方公布了鼎曜行政版的具体配置信息。 IT之家从活动现场获悉，新车长宽高分别为 5600/2030/1590mm ，轴距更是达到了 3500mm。新车拥有鼎形前脸和鼎形钻切大灯，点阵式格栅内部 137 颗宝石随光影流转，甲骨文车标更是由 24K 真金打造，号称“鼎立东方，气韵自成”。 新车拥有首尾延展的 4.8 米贯穿式双腰线，并配备“中轴对开门”，前门开合…",
         "badge": "IT之家"
       },
       {
@@ -322,25 +323,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1255141",
+        "id": "v2ex-1255238",
         "category": "dev",
-        "title": "目前最强的 AI 能否实现这种排查问题的能力？",
-        "url": "https://www.v2ex.com/t/1255141",
+        "title": "DeepSeek Harness 里能让它生成一个类似 VVebo 的刷微博插件吗？",
+        "url": "https://www.v2ex.com/t/1255238",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T02:47:37.000Z",
-        "summary": "我在面对开发负责人时，打开系统界面，指着一个输入框说：“在这里输入这个，点提交，哎，它报错了，而且后台日志报的是栈溢出的错误，你来解决一下”，然后开发组就去解决问题了，我可以对 AI 这样吗？",
+        "publishedAt": "2026-11-07T11:00:42.000Z",
+        "summary": "这几天 DSH 的生成插件能力广受人民群众好评，我想到了在 DSH 里刷微博这个需求。之前有个 app 叫 VVebo ，刷微博很好用，但现在已经下架了很久了，在电脑上打开这个 app 有时也有一些 bug ，总之体验肯定是一直下降的。 能让 DSH 用类似 Rea 的功能参考已经在电脑上安装的 VVebo 造一个刷微博的插件吗？这难度是不是很大？",
         "badge": "程序员",
-        "signal": "25 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-eb0a1bc9bab40965",
+        "id": "cn-baidu-62673c6b28c13e31",
         "category": "cn",
-        "title": "当进博会遇上APEC“中国年”",
-        "url": "https://www.baidu.com/s?wd=%E5%BD%93%E8%BF%9B%E5%8D%9A%E4%BC%9A%E9%81%87%E4%B8%8AAPEC%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%B9%B4%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "进博会物流生态专区上新",
+        "url": "https://www.baidu.com/s?wd=%E8%BF%9B%E5%8D%9A%E4%BC%9A%E7%89%A9%E6%B5%81%E7%94%9F%E6%80%81%E4%B8%93%E5%8C%BA%E4%B8%8A%E6%96%B0&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "第九届中国国际进口博览会恰逢APEC“中国年”，来自APEC经济体的展品跨越山海，展示、洽谈、对接，让展台成为合作起点、展品成为市场纽带。作为全球经济增长的重要引擎之一，亚太区域经济深度交融、产业高度互嵌。进博会通过供需对接、产业联动，为亚太经济体共享机遇、共促发展搭建广阔平台，助力亚太共同体建设走深走实。",
+        "summary": "第九届中国国际进口博览会正在举办，展会进入第三天。物流生态专区是本届进博会服务贸易展区升级后设立的四大专区之一，聚焦解答“货怎么走”这一核心问题。和以往不同，今年专区不再单独展示运输能力，而是将物流融入完整的生态服务链。",
         "badge": "热搜",
-        "signal": "7,618,847 热度"
+        "signal": "7,618,117 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111357",
@@ -363,23 +364,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50391456",
+        "id": "hn-50352791",
         "category": "dev",
-        "title": "Tesla to wind down Cybertruck production",
-        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+        "title": "British Library Legal deposit and web archiving",
+        "url": "https://www.bl.uk/services/legal-deposit/web-archiving",
         "source": "Hacker News",
-        "publishedAt": "2026-11-06T12:13:51.000Z",
+        "publishedAt": "2026-11-03T14:56:30.000Z",
         "badge": "HN",
-        "signal": "1009 分 · 1864 评论"
+        "signal": "27 分 · 7 评论"
       },
       {
-        "id": "cn-item-81afe13e8537f715",
+        "id": "cn-item-6be68ae46a46d47d",
         "category": "cn",
-        "title": "中国驻墨尔本总领馆通报一名中国公民遇害",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-07/10727774.shtml",
+        "title": "多国学者：中国式现代化拓展现代化道路选择",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-07/10727998.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-07T03:53:22.000Z",
-        "summary": "中新网11月7日电 据中国驻墨尔本总领事馆微信公众号7日消息，中国驻墨尔本总领馆发布关于领区一名中国公民不幸遇害案件的情况通报。",
+        "publishedAt": "2026-11-07T10:29:57.000Z",
+        "summary": "中新社南昌11月7日电 (朱莹)“中国打破了‘现代化只有唯一一条道路’这一固有观念，中国式现代化的实践让欧洲民众看到，世界发展可以有不同路径。”西班牙左翼智库“变革！欧洲”主席玛尔嘉·费雷(Marga Ferré)7日接受中新社采访时说。",
         "badge": "中新网要闻"
       },
       {
@@ -404,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1255140",
+        "id": "v2ex-1255226",
         "category": "dev",
-        "title": "agent 领域最近讨论的 Ontology 本体论 是非技术人员的自嗨吗",
-        "url": "https://www.v2ex.com/t/1255140",
+        "title": "Rust 重写 Pi 编码助手 rpi ，对比 Pi 和 Pi-Bolt 三款启动耗时和内存对比",
+        "url": "https://www.v2ex.com/t/1255226",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T02:46:09.000Z",
-        "summary": "我个人感觉是夹在面向对象和领域驱动的中间演进层， 感觉这个方向演进，程序员还要诈尸还魂。",
+        "publishedAt": "2026-11-07T09:20:04.000Z",
+        "summary": "最近用 Rust 重写了 原生测 Pi ,无聊测试了一下性能, 多少感觉还是有点值得 项目： pi-rust 启动时间 历史消息数 rpi 启动至就绪 Pi 启动至就绪 rpi 耗时减少 100 16.93 ms 194.93 ms 91.3% 1,000 28.85 ms 196.98 ms 85.4% 5,000 81.60 ms 212.47 ms 61.6% 内存占用 历史消息数 rpi 就绪 RSS Pi 就绪 RSS rpi RSS 减少 100 21.41 M…",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-a4b661765f58ce36",
+        "id": "cn-it-6c927356145df908",
         "category": "cn",
-        "title": "苹果披露人形机器人 HALO 系统：6 个未建图环境测试 360 次单项任务，平均成功率 91%",
-        "url": "https://www.ithome.com/1/023/767.htm",
+        "title": "比亚迪仰望鼎曜「山河鼎韵」限量版全球限量发售，定金 30 万元",
+        "url": "https://www.ithome.com/1/023/826.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-07T09:40:17.000Z",
-        "summary": "IT之家 11 月 7 日消息，当地时间 11 月 4 日，苹果研究团队在预印本平台 arXiv 提交论文《Perceptive Humanoid Motion from Simulation》，披露了人形机器人自主控制系统 HALO。 研究团队还公开了数据生成、模型训练和部署代码，涵盖动作生成、动作跟踪、任务编排以及仿真和真实机器人运行等环节。 在落地阶段， 研究团队采用宇树科技 G1 人形机器人 ，背部加装了专用 3D 打印保护外壳， 内置一台 Mac mini （M4…",
+        "publishedAt": "2026-11-07T15:11:45.000Z",
+        "summary": "IT之家 11 月 7 日现场消息，今晚，在阿布扎比，比亚迪旗下超豪华行政旗舰轿车 —— 仰望鼎曜迎来全球首秀。 比亚迪仰望汽车宣布，仰望鼎曜「山河鼎韵」限量版全球限量发售已开启， 定金 30 万元 。 每处细节，皆为版本独有 唯有极少数人，得以珍藏 官方还介绍了限时臻享购车权益，包含优先品鉴（优先受邀参与私享品鉴等活动）与尊享服务（尊享专属顾问服务及优先试驾服务）。 仰望鼎曜车身尺寸为 5600×2030×1590mm，轴距 3500mm；采用礼宾级中轴对开门设计，前门最…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50361765",
+        "id": "hn-50403097",
         "category": "dev",
-        "title": "PostgreSQL Internals [pdf]",
-        "url": "https://edu.postgrespro.com/postgresql_internals-14_en.pdf",
+        "title": "Every Mac comes with an (undocumented) family member classifier",
+        "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
         "source": "Hacker News",
-        "publishedAt": "2026-11-04T05:22:43.000Z",
+        "publishedAt": "2026-11-07T09:46:03.000Z",
         "badge": "HN",
-        "signal": "23 分 · 1 评论"
+        "signal": "369 分 · 211 评论"
       },
       {
-        "id": "cn-baidu-d5388e651bfab1d5",
+        "id": "cn-baidu-8bbde49b00191cd1",
         "category": "cn",
-        "title": "芒果涨疯了",
-        "url": "https://www.baidu.com/s?wd=%E8%8A%92%E6%9E%9C%E6%B6%A8%E7%96%AF%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "为什么今年双11的快递包装变烂了",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%8A%E5%B9%B4%E5%8F%8C11%E7%9A%84%E5%BF%AB%E9%80%92%E5%8C%85%E8%A3%85%E5%8F%98%E7%83%82%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "截至11月5日收盘，受综艺《后会友期》爆火带动，芒果超媒股价4日涨近50%。",
+        "summary": "今年双11期间，众多消费者反映收到的快递包装质量变差，纸箱软塌、破损，涉及纸巾等贴身用品引发卫生担忧。分析指出，此现象并非单一环节问题，品牌端降本与物流端高压分拣叠加，使包装破损沦为“被默认的损耗”。",
         "badge": "热搜",
-        "signal": "7,523,839 热度"
+        "signal": "7,522,178 热度"
       },
       {
         "id": "github-advisory-ghsa-fmc8-p6q7-75cc",
@@ -485,15 +486,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1255109",
+        "id": "v2ex-1255207",
         "category": "dev",
-        "title": "很久没开 JetBrains 家产品了",
-        "url": "https://www.v2ex.com/t/1255109",
+        "title": "好了， deepseek 有开始维护了，是不是又要有升级了？",
+        "url": "https://www.v2ex.com/t/1255207",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-06T15:14:58.000Z",
-        "summary": "16 年发 wb 说等有钱了就买 IDEA ，结果现在有钱了也不用买了，变成了买 token 了。打败 IDEA(JetBrains)的不是比它更优秀的编译器，而是 AI",
+        "publishedAt": "2026-11-07T07:32:01.000Z",
         "badge": "程序员",
-        "signal": "17 回复"
+        "signal": "8 回复"
       }
     ]
   },
@@ -504,106 +504,106 @@
     },
     "items": [
       {
-        "id": "github-8716078a4ef73713",
+        "id": "github-7806f76343b67d4b",
         "rank": 1,
-        "name": "zed-industries/zed",
-        "url": "https://github.com/zed-industries/zed",
-        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "name": "vercel-labs/agent-browser",
+        "url": "https://github.com/vercel-labs/agent-browser",
+        "description": "Browser automation CLI for AI agents",
         "language": "Rust",
-        "stars": 93986,
-        "starsToday": 306
+        "stars": 46580,
+        "starsToday": 180
       },
       {
-        "id": "github-5f5f84e436dba00e",
+        "id": "github-adc2afef89175c61",
         "rank": 2,
-        "name": "NVIDIA/auto-ontology",
-        "url": "https://github.com/NVIDIA/auto-ontology",
-        "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
-        "language": "Python",
-        "stars": 9519,
-        "starsToday": 2015
-      },
-      {
-        "id": "github-caf32f0d298e2e5c",
-        "rank": 3,
-        "name": "rails/rails",
-        "url": "https://github.com/rails/rails",
-        "description": "Ruby on Rails",
-        "language": "Ruby",
-        "stars": 59071,
-        "starsToday": 142
-      },
-      {
-        "id": "github-9d238bdf0f0bcb55",
-        "rank": 4,
-        "name": "mpv-player/mpv",
-        "url": "https://github.com/mpv-player/mpv",
-        "description": "🎥 Command line media player",
-        "language": "C",
-        "stars": 37963,
-        "starsToday": 37
-      },
-      {
-        "id": "github-9a8454678913f77e",
-        "rank": 5,
-        "name": "rust-lang/rust",
-        "url": "https://github.com/rust-lang/rust",
-        "description": "Empowering everyone to build reliable and efficient software.",
-        "language": "Rust",
-        "stars": 121571,
-        "starsToday": 192
-      },
-      {
-        "id": "github-b9a0988e7e70427e",
-        "rank": 6,
-        "name": "react/react",
-        "url": "https://github.com/react/react",
-        "description": "The library for web and native user interfaces.",
+        "name": "cloudflare/security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "language": "JavaScript",
-        "stars": 252338,
-        "starsToday": 248
-      },
-      {
-        "id": "github-7d3112633152ce7f",
-        "rank": 7,
-        "name": "angular/angular",
-        "url": "https://github.com/angular/angular",
-        "description": "Deliver web apps with confidence 🚀",
-        "language": "TypeScript",
-        "stars": 101459,
-        "starsToday": 135
-      },
-      {
-        "id": "github-1794a7960fdb853b",
-        "rank": 8,
-        "name": "symfony/symfony",
-        "url": "https://github.com/symfony/symfony",
-        "description": "The Symfony PHP framework",
-        "language": "PHP",
-        "stars": 31510,
-        "starsToday": 128
-      },
-      {
-        "id": "github-1025f972a9e83dc0",
-        "rank": 9,
-        "name": "prometheus/prometheus",
-        "url": "https://github.com/prometheus/prometheus",
-        "description": "The Prometheus monitoring system and time series database.",
-        "language": "Go",
-        "stars": 67266,
-        "starsToday": 148
+        "stars": 65173,
+        "starsToday": 2088
       },
       {
         "id": "github-143225cd371a40a0",
-        "rank": 10,
+        "rank": 3,
         "name": "google/skills",
         "url": "https://github.com/google/skills",
         "description": "Agent Skills for Google products and technologies",
         "language": "Python",
-        "stars": 23023,
-        "starsToday": 534
+        "stars": 23182,
+        "starsToday": 449
+      },
+      {
+        "id": "github-89e612f6ea973712",
+        "rank": 4,
+        "name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "language": "Shell",
+        "stars": 317386,
+        "starsToday": 1111
+      },
+      {
+        "id": "github-f2db8404c222e36c",
+        "rank": 5,
+        "name": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "description": "Public repository for Agent Skills",
+        "language": "Python",
+        "stars": 188504,
+        "starsToday": 386
+      },
+      {
+        "id": "github-5ba0bee715812bde",
+        "rank": 6,
+        "name": "meta/astryx",
+        "url": "https://github.com/meta/astryx",
+        "description": "An open source design system that's fully customizable and agent ready",
+        "language": "TypeScript",
+        "stars": 14243,
+        "starsToday": 185
+      },
+      {
+        "id": "github-1025f972a9e83dc0",
+        "rank": 7,
+        "name": "prometheus/prometheus",
+        "url": "https://github.com/prometheus/prometheus",
+        "description": "The Prometheus monitoring system and time series database.",
+        "language": "Go",
+        "stars": 67349,
+        "starsToday": 325
+      },
+      {
+        "id": "github-b8026c2a12555d5d",
+        "rank": 8,
+        "name": "sherlock-project/sherlock",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "description": "Hunt down social media accounts by username across social networks",
+        "language": "Python",
+        "stars": 99889,
+        "starsToday": 1819
+      },
+      {
+        "id": "github-26fea043179ffd14",
+        "rank": 9,
+        "name": "milind-soni/OpenMausBot",
+        "url": "https://github.com/milind-soni/OpenMausBot",
+        "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "language": "TypeScript",
+        "stars": 16579,
+        "starsToday": 1986
+      },
+      {
+        "id": "github-2950c6e1d3ab7db0",
+        "rank": 10,
+        "name": "astral-sh/ruff",
+        "url": "https://github.com/astral-sh/ruff",
+        "description": "An extremely fast Python linter and code formatter, written in Rust.",
+        "language": "Rust",
+        "stars": 50878,
+        "starsToday": 350
       }
     ],
-    "updatedAt": "2026-11-07T10:11:53.624Z"
+    "updatedAt": "2026-11-07T16:27:20.082Z"
   }
 }
