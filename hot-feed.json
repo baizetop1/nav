@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-08T07:22:34.558Z",
+  "generatedAt": "2026-11-08T08:58:39.214Z",
   "intelligence": {
-    "updatedAt": "2026-11-08T07:22:34.558Z",
+    "updatedAt": "2026-11-08T08:58:39.214Z",
     "items": [
       {
         "id": "cn-item-6b269686466da779",
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-08T03:11:48.000Z",
         "badge": "HN",
-        "signal": "159 分 · 92 评论"
+        "signal": "253 分 · 144 评论"
       },
       {
-        "id": "cn-it-01f755b83002b99c",
+        "id": "cn-it-38ded5f795f611ff",
         "category": "cn",
-        "title": "微软：正持续优化 Win11 内存占用，26H2 版本下 8GB RAM 机型特定场景表现可“对标”2021 年 16GB RAM 机器",
-        "url": "https://www.ithome.com/1/023/906.htm",
+        "title": "同比几乎翻倍：消息称三星电子现金资产超 200 万亿韩元，为韩国企业首家",
+        "url": "https://www.ithome.com/1/023/926.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-08T07:17:23.000Z",
-        "summary": "IT之家 11 月 8 日消息，微软发布博客文章，称 Windows 开发团队正在持续优化系统占用，如今安装了最新 Windows 11 26H2 版本、配备 8GB RAM 笔记本在多项日常及高负载任务中的表现已接近 2021 年 Windows 11 刚发布时的 16GB RAM 笔记本。 微软 Windows 业务负责人帕万・达武卢里（Pavan Davuluri）介绍称，Windows 多年来一直采用内存压缩技术，但微软如今针对 8GB RAM 电脑调整了压缩策略，…",
+        "publishedAt": "2026-11-08T08:55:53.000Z",
+        "summary": "IT之家 11 月 8 日消息，韩联社今日报道，据业界消息，截至第三季度末，包含现金及现金等价物、短期金融工具等在内， 三星电子的现金资产总额达 214.8 万亿韩元 （IT之家注：现汇率约合 1.06 万亿元人民币） 。 这一数字较上一季度的 190 万亿韩元激增 24.8 万亿韩元，使三星电子成为首家现金资产突破 200 万亿韩元的韩国企业；与去年同期的 108.5 万亿韩元相比，增幅接近一倍。 三星电子资产总额则由上一季度的 759.48 万亿韩元增长 32.36 万…",
         "badge": "IT之家"
       },
       {
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1255327",
+        "id": "v2ex-1255352",
         "category": "dev",
-        "title": "卖软件这个事情在未来可能是伪命题了",
-        "url": "https://www.v2ex.com/t/1255327",
+        "title": "写了个剪贴板管理器，抄的 Paste for Mac， Windows 和 macOS 都能用",
+        "url": "https://www.v2ex.com/t/1255352",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T05:19:45.000Z",
-        "summary": "刷到孟岩关于 AI 做软件开发的一个观点，随着 AI 能力的增强，未来人人都能通过嘴炮来做个 app 覆盖自己日常的需求，而不用等到大公司为了符合大多数人群而做的一个通用版本。这意味着，想通过做 app 来获得收益变得更难。 大家认可这个观点吗，产品经理，程序员，设计师这种软件开发领域上传统的角色，是否会慢慢消失？ 未来该是怎样的一个变化？ 帖子来源",
+        "publishedAt": "2026-11-08T08:10:03.000Z",
+        "summary": "功能就是抄 Paste 的： 复制过的所有东西都留着，文字、图片、文件、链接都行 快捷键呼出一个卡片条，回车就粘贴 常用的内容可以置顶，不会被冲掉 能搜索，支持多显示器 Windows 版和 macOS （ Apple Silicon ）版都有，代码在 GitHub： https://github.com/SillyShalong/paste 写完自己用了段时间，还行。",
         "badge": "程序员",
-        "signal": "19 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-6fb09be1e68decaa",
@@ -94,7 +94,7 @@
         "source": "百度热搜",
         "summary": "企业长期按当地最低基数给月薪过万员工缴社保，武汉张帅被裁后凭工资流水等材料追缴，社保共补约17万元；杭州王颜补缴约20万元。11月起社保欠缴纳入全国统一处罚裁量。",
         "badge": "热搜",
-        "signal": "7,809,482 热度"
+        "signal": "7,808,462 热度"
       },
       {
         "id": "cisa-kev-cve-2024-27834",
@@ -124,7 +124,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-07T18:12:12.000Z",
         "badge": "HN",
-        "signal": "514 分 · 99 评论"
+        "signal": "554 分 · 104 评论"
       },
       {
         "id": "cn-item-7e977f4bbda8e471",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1255320",
+        "id": "v2ex-1255350",
         "category": "dev",
-        "title": "expo 开发 APP ，地理定位 google play 无法使用的问题",
-        "url": "https://www.v2ex.com/t/1255320",
+        "title": "突然想起来, 微软居然没拿出一个能用得模型?",
+        "url": "https://www.v2ex.com/t/1255350",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T04:25:44.000Z",
-        "summary": "开发跨平台旅行 APP ，技术选型使用的是 expo ，主要原因是调试比较便利，不需要进行 Android 和 ios 编译。 项目已经开发完成，目前遇到的问题是 expo 带的地理定位，搜索 lbs 等功能一直不正常，好像依赖的是 google 的服务，国内无法正常使用。 目前针对该问题的最佳解决方案是什么？大家如何处理该问题，最佳的解决方案是什么。",
+        "publishedAt": "2026-11-08T07:45:39.000Z",
+        "summary": "不正常啊 按理微软也投入大量资源, 本来收购 github 也有优势 copilot 早期也发展可以, 但感觉自从 A/, Openai 占主流彻底没啥声音了啊",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-605ebee10a4a0e74",
+        "id": "cn-it-37a4fc008d8522ee",
         "category": "cn",
-        "title": "伯恩斯坦：OpenAI 至 2030 年算力基础设施支出或达 6140 亿美元，低于此前 7500 亿美元传闻",
-        "url": "https://www.ithome.com/1/023/905.htm",
+        "title": "三名男子涉嫌利用 AI 冒充企业高管和律师行骗，涉案金额超 1 亿美元",
+        "url": "https://www.ithome.com/1/023/925.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-08T07:14:15.000Z",
-        "summary": "IT之家 11 月 8 日消息，据智通财经报道，伯恩斯坦分析师 MarkMoerdler 估算，OpenAI 已披露的算力合作协议对应的基础设施支出， 到 2030 年累计可能达到 6,140 亿美元 （IT之家注：现汇率约合 4.11 万亿元人民币） ， 明显低于《华尔街日报》此前传出的 7,500 亿美元 （现汇率约合 5.02 万亿元人民币） 。 据报道，该测算假设所有已识别合同均按计划执行，但实际支出可能因数据中心建设延期、项目取消及硬件采购安排调整而减少或推迟。由…",
+        "publishedAt": "2026-11-08T08:48:55.000Z",
+        "summary": "IT之家 11 月 8 日消息，当地时间 6 日，据英国《卫报》报道，美国司法部近日公布的一份起诉书显示，三名外国男子涉嫌 利用 AI 冒充企业 CEO 和律师 ，诈骗金额超过 1 亿美元 （IT之家注：现汇率约合 6.69 亿元人民币） ，目前均被逮捕并受到起诉。 美国纽约南区联邦检察官办公室发布的新闻稿称，三名嫌疑人分别为雅各布 · 索尔、沙龙 · 哈赞和盖伊 · 谢特里特。他们涉嫌利用 AI 伪造多家企业高管和律师的声音、影像 ，诱骗企业员工汇出大额资金。 索尔和哈赞…",
         "badge": "IT之家"
       },
       {
@@ -207,7 +207,7 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-07T20:45:32.000Z",
         "badge": "HN",
-        "signal": "331 分 · 226 评论"
+        "signal": "373 分 · 258 评论"
       },
       {
         "id": "cn-baidu-8c03637e481486bf",
@@ -217,7 +217,7 @@
         "source": "百度热搜",
         "summary": "目前，全国已有多地官宣调整中小学上学时间，实行延迟到校并取消早读。部分小学将到校时间延至9点，有家长表示孩子早上多了二十分钟休憩时间。",
         "badge": "热搜",
-        "signal": "7,714,121 热度"
+        "signal": "7,712,758 热度"
       },
       {
         "id": "github-advisory-ghsa-qx75-2p3r-pwm5",
@@ -240,15 +240,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1255312",
+        "id": "v2ex-1255327",
         "category": "dev",
-        "title": "你们发现 VSCode Copilot 的编程模型老是变来变去吗?",
-        "url": "https://www.v2ex.com/t/1255312",
+        "title": "卖软件这个事情在未来可能是伪命题了",
+        "url": "https://www.v2ex.com/t/1255327",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T03:38:48.000Z",
-        "summary": "最近一直用 Claude Haiku 5.5 ，但一不留神，它自动就切换成别的了，你们遇到过这种情况吗",
+        "publishedAt": "2026-11-08T05:19:45.000Z",
+        "summary": "刷到孟岩关于 AI 做软件开发的一个观点，随着 AI 能力的增强，未来人人都能通过嘴炮来做个 app 覆盖自己日常的需求，而不用等到大公司为了符合大多数人群而做的一个通用版本。这意味着，想通过做 app 来获得收益变得更难。 大家认可这个观点吗，产品经理，程序员，设计师这种软件开发领域上传统的角色，是否会慢慢消失？ 未来该是怎样的一个变化？ 帖子来源",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "29 回复"
       },
       {
         "id": "cn-item-8da436cd7907b4c8",
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50410359",
+        "id": "hn-50366902",
         "category": "dev",
-        "title": "Kirlian Photography: Building Your Own Equipment",
-        "url": "https://imagesco.com/articles/kirlian/kirlian-photography.html",
+        "title": "Clj.rs – a Clojure dialect implemented in Rust",
+        "url": "https://clj.rs/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-08T04:14:12.000Z",
+        "publishedAt": "2026-11-04T15:23:16.000Z",
         "badge": "HN",
-        "signal": "22 分 · 2 评论"
+        "signal": "25 分 · 0 评论"
       },
       {
-        "id": "cn-it-a49cb32609013921",
+        "id": "cn-it-1a2dc5338119a14b",
         "category": "cn",
-        "title": "本田首款高端电助力山地车 RN0 亮相：碳纤维车架、100Nm 扭矩、720Wh 电池",
-        "url": "https://www.ithome.com/1/023/903.htm",
+        "title": "我国前道光刻装备自主化阶段性成果，上海微电子新一代光刻机模型亮相",
+        "url": "https://www.ithome.com/1/023/924.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-08T07:12:30.000Z",
-        "summary": "IT之家 11 月 8 日消息，在 2026 年米兰国际摩托车展上，本田首款高端电助力山地车 RN0 正式亮相。RN0 由本田与德国高端电助力山地车制造商 ROTWILD 联合开发，采用 专门设计的碳纤维单体壳车架和独特的鸥翼式后摇臂 ，后者设计灵感来自本田多年来积累的摩托车车架研发经验。 IT之家获悉，RN0 整车重约 24kg，是一款兼顾多种骑行场景的 电助力山地车 。前部配备 160mm 行程的 FOX 36 FLOAT Factory Kashima 前叉，后部则采…",
+        "publishedAt": "2026-11-08T08:36:34.000Z",
+        "summary": "IT之家 11 月 8 日消息，第九届中国国际进口博览会于 11 月 5 日在国家会展中心（上海）开幕。 本次展会上，上海微电子装备（集团）股份有限公司（简称 SMEE）携自主研发的新一代前道干式光刻机通用技术平台模型正式亮相， 展示我国前道光刻装备自主化的阶段性成果 。 据介绍，SMEE 成立于 2002 年， 是国内唯一具备前道干式光刻机稳定量产交付能力的制造商 ，也是我国前道光刻装备自主供给体系的核心支撑主体。 本次展出的模型采用透明剖视设计，直观呈现整机光学光路与内…",
         "badge": "IT之家"
       },
       {
@@ -323,25 +323,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1255310",
+        "id": "v2ex-1255320",
         "category": "dev",
-        "title": "commandcode 今天怎么了，缓存命中率低的吓人。。。",
-        "url": "https://www.v2ex.com/t/1255310",
+        "title": "expo 开发 APP ，地理定位 google play 无法使用的问题",
+        "url": "https://www.v2ex.com/t/1255320",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T03:28:15.000Z",
-        "summary": "用的是 dsh+deepseek v4.1 flash ，套餐是 goat ，今天的缓存命中率 10%左右，没法干活啊都，一直在兜圈子，有和我一样的吗？ opencode go 和 ollma code 怎么样，有兄弟们分享下经验吗？",
+        "publishedAt": "2026-11-08T04:25:44.000Z",
+        "summary": "开发跨平台旅行 APP ，技术选型使用的是 expo ，主要原因是调试比较便利，不需要进行 Android 和 ios 编译。 项目已经开发完成，目前遇到的问题是 expo 带的地理定位，搜索 lbs 等功能一直不正常，好像依赖的是 google 的服务，国内无法正常使用。 目前针对该问题的最佳解决方案是什么？大家如何处理该问题，最佳的解决方案是什么。",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-baidu-5165eebd2983a322",
+        "id": "cn-baidu-a11b17cc6e96f348",
         "category": "cn",
-        "title": "消费“新故事”背后有一共同底色",
-        "url": "https://www.baidu.com/s?wd=%E6%B6%88%E8%B4%B9%E2%80%9C%E6%96%B0%E6%95%85%E4%BA%8B%E2%80%9D%E8%83%8C%E5%90%8E%E6%9C%89%E4%B8%80%E5%85%B1%E5%90%8C%E5%BA%95%E8%89%B2&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "新老朋友集中亮相进博会",
+        "url": "https://www.baidu.com/s?wd=%E6%96%B0%E8%80%81%E6%9C%8B%E5%8F%8B%E9%9B%86%E4%B8%AD%E4%BA%AE%E7%9B%B8%E8%BF%9B%E5%8D%9A%E4%BC%9A&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "商务部发布报告显示2025年中华老字号营收突破2万亿元。从老字号守正创新、上海第九届进博会首发首秀创新高，到“双11”平台促销规则做“减法”，这些消费“新故事”背后有一共同底色：以更适合自己的消费来过更好的日子。以此为牵引，经济持续向新向优向好的基础也将更扎实。",
+        "summary": "第九届中国国际进口博览会正在上海举行。在本届进博会医疗器械及医药保健展区，海内外企业集中亮相，既有连续多年赴约的回头客，也有首次参展的新朋友。企业借力进博会平台，共享中国开放机遇，坚定深耕中国市场的信心。",
         "badge": "热搜",
-        "signal": "7,616,832 热度"
+        "signal": "7,617,628 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111357",
@@ -364,14 +364,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50409855",
+        "id": "hn-50410359",
         "category": "dev",
-        "title": "ZapFast: A fast, native WhatsApp client in Rust and egui",
-        "url": "https://github.com/crmne/zapfast",
+        "title": "Kirlian Photography: Building Your Own Equipment",
+        "url": "https://imagesco.com/articles/kirlian/kirlian-photography.html",
         "source": "Hacker News",
-        "publishedAt": "2026-11-08T02:02:27.000Z",
+        "publishedAt": "2026-11-08T04:14:12.000Z",
         "badge": "HN",
-        "signal": "53 分 · 34 评论"
+        "signal": "36 分 · 5 评论"
       },
       {
         "id": "cn-item-48da7a610f99bbbc",
@@ -405,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1255302",
+        "id": "v2ex-1255312",
         "category": "dev",
-        "title": "现在 ai agent 开发都用什么框架",
-        "url": "https://www.v2ex.com/t/1255302",
+        "title": "你们发现 VSCode Copilot 的编程模型老是变来变去吗?",
+        "url": "https://www.v2ex.com/t/1255312",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T02:23:05.000Z",
-        "summary": "现在背景下，agent 开发好像挺热，都用什么框架啊，不要跟我说自己手搓，不要说用 langgraph，那么重你确定企业都用？",
+        "publishedAt": "2026-11-08T03:38:48.000Z",
+        "summary": "最近一直用 Claude Haiku 5.5 ，但一不留神，它自动就切换成别的了，你们遇到过这种情况吗",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-it-7612c6f8038443aa",
+        "id": "cn-it-37200840a3f34f29",
         "category": "cn",
-        "title": "消息称广汽人形机器人预计 2029 年形成万台产能",
-        "url": "https://www.ithome.com/1/023/902.htm",
+        "title": "苹果首款折叠屏手机 iPhone Duo“裂屏门”追踪：消息称系供应商原材料问题",
+        "url": "https://www.ithome.com/1/023/923.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-08T07:11:48.000Z",
-        "summary": "IT之家 11 月 8 日消息，11 月 5 日，广东慧仑科技有限公司与广汽集团动力业务单元（“广汽动力 BU”）正式签署具身智能机器人生产合作协议。 据第一财经报道，慧仑科技与广汽动力 BU 双方正按协议推进产线建设， 预计将于 2029 年形成万台级产能 。目前广汽人形机器人仍处于小批量应用阶段，累计运行数据超过 12 个月、6.3 万公里、18.9 万次。 据IT之家此前报道，2 月 26 日， 广汽集团宣布孵化成立广东慧仑科技有限公司 。慧仑科技以独立主体身份开展市…",
+        "publishedAt": "2026-11-08T08:35:42.000Z",
+        "summary": "IT之家 11 月 8 日消息，博主 @Kang 在微博发布爆料，称 iPhone Duo 的铰链问题已经基本查清，根源“在于两家供应商中的其中一家提供的原材料存在问题”。他表示，苹果可以通过设备序列号识别可能受到影响的产品批次，但目前尚不清楚苹果是否会开放序列号查询工具，以及是否会主动为用户更换设备。 IT之家获悉，iPhone Duo 的铰链总成主要供应商为美厂安费诺（Amphenol）和台厂新日兴，液态金属铰链轴则由宜安科技（Yian Technology）供应，铰链…",
         "badge": "IT之家"
       },
       {
@@ -453,17 +453,17 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-07T22:38:58.000Z",
         "badge": "HN",
-        "signal": "110 分 · 27 评论"
+        "signal": "133 分 · 32 评论"
       },
       {
-        "id": "cn-baidu-9a53888161dca24c",
+        "id": "cn-baidu-d378c2f4ab6016fe",
         "category": "cn",
-        "title": "山姆卖加拿大鹅 有同款便宜5000元",
-        "url": "https://www.baidu.com/s?wd=%E5%B1%B1%E5%A7%86%E5%8D%96%E5%8A%A0%E6%8B%BF%E5%A4%A7%E9%B9%85+%E6%9C%89%E5%90%8C%E6%AC%BE%E4%BE%BF%E5%AE%9C5000%E5%85%83&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "大麦哥涨粉超700万 一条视频报价12万",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%A7%E9%BA%A6%E5%93%A5%E6%B6%A8%E7%B2%89%E8%B6%85700%E4%B8%87+%E4%B8%80%E6%9D%A1%E8%A7%86%E9%A2%91%E6%8A%A5%E4%BB%B712%E4%B8%87&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，网友发现山姆小程序全球购上架始祖鸟、加拿大鹅多款进口商品，售价999至10999元不等。相比品牌官方旗舰店，同款普遍便宜数百至数千元，最高差价约5000元。",
+        "summary": "11月7日，40岁博主“Michael大麦哥”凭借一条36分钟的爱情探讨视频爆火，两周多全网涨粉近700万，点赞超1300万，单条广告报价达12万。此前，他经历离婚、裁员与癌症，做自媒体近5年一直不温不火。",
         "badge": "热搜",
-        "signal": "7,520,823 热度"
+        "signal": "7,524,489 热度"
       },
       {
         "id": "github-advisory-ghsa-fmc8-p6q7-75cc",
@@ -486,14 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1255290",
+        "id": "v2ex-1255310",
         "category": "dev",
-        "title": "用 codex 把 飞书 消息模块用 solidjs 重写了一遍，体验瞬间变得丝滑了",
-        "url": "https://www.v2ex.com/t/1255290",
+        "title": "commandcode 今天怎么了，缓存命中率低的吓人。。。",
+        "url": "https://www.v2ex.com/t/1255310",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-07T23:58:06.000Z",
+        "publishedAt": "2026-11-08T03:28:15.000Z",
+        "summary": "用的是 dsh+deepseek v4.1 flash ，套餐是 goat ，今天的缓存命中率 10%左右，没法干活啊都，一直在兜圈子，有和我一样的吗？ opencode go 和 ollma code 怎么样，有兄弟们分享下经验吗？",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "5 回复"
       }
     ]
   },
