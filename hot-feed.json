@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-08T23:43:37.173Z",
+  "generatedAt": "2026-11-09T06:31:55.541Z",
   "intelligence": {
-    "updatedAt": "2026-11-08T23:43:37.173Z",
+    "updatedAt": "2026-11-09T06:31:55.541Z",
     "items": [
       {
-        "id": "cn-item-9fe12595b36cf739",
+        "id": "cn-item-4c503b4a6b6274d0",
         "category": "cn",
-        "title": "日本宫城县近海发生4.5级地震 多地有震感",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-09/10728585.shtml",
+        "title": "山西太原一公寓火灾已致14人遇难",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-09/10728761.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-08T22:59:18.000Z",
-        "summary": "中新网11月9日电 据日本广播协会(NHK)报道，当地时间9日5时16分左右，日本宫城县近海发生4.5级地震，震源深度50千米。",
+        "publishedAt": "2026-11-09T05:49:29.000Z",
+        "summary": "中新社太原11月9日电 记者从山西省相关部门获悉，山西太原市迎泽区柳巷街道豪生国际公寓火灾已致14人遇难。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50418176",
+        "id": "hn-50420035",
         "category": "dev",
-        "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
-        "url": "https://ketchup3d.github.io/app/",
+        "title": "RIP, Harvest",
+        "url": "https://aphyr.com/posts/427-rip-harvest",
         "source": "Hacker News",
-        "publishedAt": "2026-11-08T22:35:35.000Z",
+        "publishedAt": "2026-11-09T01:58:21.000Z",
         "badge": "HN",
-        "signal": "33 分 · 3 评论"
+        "signal": "268 分 · 81 评论"
       },
       {
-        "id": "cn-it-b5e367fd79be8272",
+        "id": "cn-it-78ed882c305bdeaa",
         "category": "cn",
-        "title": "靳玉志：全新红旗 H9 全系搭载华为乾崑智驾、鸿蒙座舱、智能车控、HUAWEI SOUND、鲸鳍通信等",
-        "url": "https://www.ithome.com/1/024/028.htm",
+        "title": "消息称赛力斯跟华为合作依旧紧密，工厂总装下线到路测全部依赖 HUAWEI ADS 跑无人测试",
+        "url": "https://www.ithome.com/1/024/251.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-08T23:41:39.000Z",
-        "summary": "IT之家 11 月 9 日消息， 全新红旗 H9 已于 11 月 7 日起正式开启预售 ，新车共推出 4 款配置，预售先享价 32.98 万-41.98 万元。新车标配 896 线双光路图像级激光雷达等配置，配有 62L 油箱、2.0T 混动发动机、800V 高压碳化硅平台及 40.4 度三元锂电池。 华为智能汽车解决方案 BU CEO 靳玉志昨日发文介绍了全新红旗 H9 的更多信息。据称，该车是华为和一汽红旗双方合作的首款车型， 全系搭载华为乾崑智驾、鸿蒙座舱、智能车控、…",
+        "publishedAt": "2026-11-09T06:31:26.000Z",
+        "summary": "IT之家 11 月 9 日消息，鸿蒙智行今年 9 月发布声明， 宣布问界将在鸿蒙智行合作框架下探索新合作模式 ；今年 10 月， 鸿蒙智行官方又宣布华为与赛力斯达成新的五年合作 。 目前，关于华为与赛力斯之间合作也依旧是大家讨论的热点。IT之家注意到，博主 @旌旗超智能 今日发文，分享了双方合作的最新模式的具体情况。 博主表示，目前赛力斯跟华为的合作非常紧密，尤其是工厂总装下线到路测，全部依赖华为 ADS 跑无人测试 —— 几十台问界 M9 在工厂内部封闭道路， 全无人的状…",
         "badge": "IT之家"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1255394",
+        "id": "v2ex-1255559",
         "category": "dev",
-        "title": "人月神话依旧存在",
-        "url": "https://www.v2ex.com/t/1255394",
+        "title": "GPT 被封号",
+        "url": "https://www.v2ex.com/t/1255559",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T14:39:45.000Z",
-        "summary": "为什么 AI 即便达到无限速度也无法终结人月神话？ A: 个人的注意力容量有限，因此最大速度有限 B: 人在社会中，社会有权责体系 B1: 因此，个人需要对实际的成品负责，在某一环节必须通过人来审批 C: AI 本身带有意图的耗散性（简单而言，没法做到完全符合使用者的意图与期待） B1 + C -> D: 人最终需要审查 AI 生成的结果，审查需要花费其时间与精力 A + D -> 单人同时承载的并行 AI 工作有限；多个人的情况，则适用人月神话原规律。 怎么在这一限制下达…",
+        "publishedAt": "2026-11-09T06:22:11.000Z",
+        "summary": "一个订阅过菲区的账号，pro 订阅已经过期后面只用来聊聊天。 今天发现被 t 出登录，再次登录发现账号被封了。",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-a40f661fb6560ac0",
+        "id": "cn-baidu-c581484254f9e062",
         "category": "cn",
-        "title": "黄仁勋承认婚外情",
-        "url": "https://www.baidu.com/s?wd=%E9%BB%84%E4%BB%81%E5%8B%8B%E6%89%BF%E8%AE%A4%E5%A9%9A%E5%A4%96%E6%83%85&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "微信8大新功能来了",
+        "url": "https://www.baidu.com/s?wd=%E5%BE%AE%E4%BF%A18%E5%A4%A7%E6%96%B0%E5%8A%9F%E8%83%BD%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月8日，据Axios等多家媒体获取的一份英伟达内部发给员工的邮件草案显示，黄仁勋在信中承认自己存在婚外情，并表示：“我对我的家人和你们所有人深表歉意。”随后，英伟达董事会已宣布将对此事展开调查。",
+        "summary": "日前，微信更新8大新功能。企微与WorkBuddy深度联合；微信输入法推出AI录音笔；QQ邮箱记事本更新支持快捷记事；朋友圈支持一键私密发表；公众号小说改短剧激励上线；视频号则上线直播助手、公布创作扶持计划并上新原创保护能力。",
         "badge": "热搜",
-        "signal": "7,809,512 热度"
+        "signal": "7,809,697 热度"
       },
       {
         "id": "cisa-kev-cve-2024-27834",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50416053",
+        "id": "hn-50421426",
         "category": "dev",
-        "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
-        "url": "https://duxlabs.dev/",
+        "title": "Apple capped engineers at a $200 daily AI budget",
+        "url": "https://www.stork.ai/newsletter/2026-11-08-apple-capped-engineers-at-a-200-daily-ai-budget#story-1",
         "source": "Hacker News",
-        "publishedAt": "2026-11-08T19:08:51.000Z",
+        "publishedAt": "2026-11-09T05:30:11.000Z",
         "badge": "HN",
-        "signal": "157 分 · 50 评论"
+        "signal": "23 分 · 22 评论"
       },
       {
-        "id": "cn-item-841aa704fc9facd3",
+        "id": "cn-item-c78da052df79ea39",
         "category": "cn",
-        "title": "美国一大学接连发生两起枪击事件 致1死3伤",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-09/10728584.shtml",
+        "title": "中国海警舰艇编队11月9日在我钓鱼岛及其附属岛屿领海内维权巡航",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-09/10728742.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-08T22:49:56.000Z",
-        "summary": "中新网11月9日电 综合美媒报道，当地时间8日，美国警方表示，北卡罗来纳州温斯顿-塞勒姆州立大学校园内7日晚间发生两起枪击事件，造成1人死亡、3人受伤。",
+        "publishedAt": "2026-11-09T05:13:37.000Z",
+        "summary": "中新网11月9日电 据“中国海警”微信公众号消息，11月9日，中国海警登步舰编队在我钓鱼岛及其附属岛屿领海内维权巡航。这是中国海警依法开展的维权巡航活动。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1255391",
+        "id": "v2ex-1255552",
         "category": "dev",
-        "title": "分析一个 macos 的文件管理器",
-        "url": "https://www.v2ex.com/t/1255391",
+        "title": "做了个 Mac 清理工具：把磁盘画成一堆果冻",
+        "url": "https://www.v2ex.com/t/1255552",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T13:42:54.000Z",
-        "summary": "开源免费，自己做的 之前用 qspace 感觉太重了，而且收费，参考的做了一个，性能和大小感觉都不错 希望大家提出建议 https://liceal.github.io/maple/ https://github.com/liceal/maple",
+        "publishedAt": "2026-11-09T05:55:18.000Z",
+        "summary": "做了个 Mac 清理工具 https://usepudding.app/?ref=v2ex 带个很 Q 的宠物 欢迎免费体验 https://usepudding.app/?ref=v2ex",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-82d4728343f1b905",
+        "id": "cn-it-ac0c3bd270ba9ead",
         "category": "cn",
-        "title": "微软拟为 Win11 推出第三方应用更新统一入口，有望解决更新弹窗“各自为政”",
-        "url": "https://www.ithome.com/1/024/027.htm",
+        "title": "阿里云 Token Plan 额度上调 70% 以上，Lite / Essential / Standard 三档套餐月费不变",
+        "url": "https://www.ithome.com/1/024/250.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-08T23:36:24.000Z",
-        "summary": "IT之家 11 月 9 日消息，据科技媒体 Windows Latest 今天报道，经历一系列批评后，微软已经承诺让 Win11 变成一款更“安静”的操作系统。这里指的不仅是广告和推广内容，还包括 IDM 等第三方软件在发现更新时，频繁弹出的烦人通知。 与 iOS 和 Android 不同，Windows 并没有统一的应用更新入口。大多数未通过 Microsoft Store 分发的第三方应用都使用自己的安装程序，这就是更新弹窗、通知存在的原因。 据报道，微软已经于去年末在…",
+        "publishedAt": "2026-11-09T06:31:04.000Z",
+        "summary": "IT之家 11 月 9 日消息，阿里云今天宣布上调 Token Plan 个人版订阅额度，Lite、Essential、Standard 三档套餐月费不变， 月度额度提升约 74% 至 78% 。 其中，Lite 套餐额度由 1.15 万 Credits 提升至 2 万 Credits，月费 39 元；Essential 套餐额度由 2.55 万提升至 4.5 万 Credits，月费 79 元；Standard 套餐额度由 4.5 万提升至 8 万 Credits，月费 …",
         "badge": "IT之家"
       },
       {
@@ -200,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50417407",
+        "id": "hn-50418176",
         "category": "dev",
-        "title": "Ask HN: What are you working on? (November 2026)",
-        "url": "https://news.ycombinator.com/item?id=50417407",
+        "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+        "url": "https://ketchup3d.github.io/app/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-08T21:20:20.000Z",
+        "publishedAt": "2026-11-08T22:35:35.000Z",
         "badge": "HN",
-        "signal": "71 分 · 326 评论"
+        "signal": "365 分 · 96 评论"
       },
       {
-        "id": "cn-baidu-af369575c320f85c",
+        "id": "cn-baidu-b16011b78cf466bc",
         "category": "cn",
-        "title": "老人数量第一次比孩子多",
-        "url": "https://www.baidu.com/s?wd=%E8%80%81%E4%BA%BA%E6%95%B0%E9%87%8F%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%AF%94%E5%AD%A9%E5%AD%90%E5%A4%9A&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "太原一建筑火灾已致14死",
+        "url": "https://www.baidu.com/s?wd=%E5%A4%AA%E5%8E%9F%E4%B8%80%E5%BB%BA%E7%AD%91%E7%81%AB%E7%81%BE%E5%B7%B2%E8%87%B414%E6%AD%BB&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "2025年，中国每100个劳动年龄人口，对应23个65岁及以上老人、22个0岁-14岁孩子。这是1982年有可比数据以来，“养老”的担子第一次重于“养小”。很多人看到这里，第一反应是“负担来了”。但如果把这本账摊开看完，负担远不是全部。",
+        "summary": "11月8日，山西省太原市迎泽区豪生国际公寓发生火灾。目前，火灾已造成14人死亡，25人在医院接受治疗，其中16人伤情总体平稳、9人伤势较重，医院正在全力救治。",
         "badge": "热搜",
-        "signal": "7,713,786 热度"
+        "signal": "7,712,280 热度"
       },
       {
         "id": "github-advisory-ghsa-qx75-2p3r-pwm5",
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1255352",
+        "id": "v2ex-1255533",
         "category": "dev",
-        "title": "写了个剪贴板管理器，抄的 Paste for Mac， Windows 和 macOS 都能用",
-        "url": "https://www.v2ex.com/t/1255352",
+        "title": "用 deepseek 写代码有秘诀吗",
+        "url": "https://www.v2ex.com/t/1255533",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T08:10:03.000Z",
-        "summary": "功能就是抄 Paste 的： 复制过的所有东西都留着，文字、图片、文件、链接都行 快捷键呼出一个卡片条，回车就粘贴 常用的内容可以置顶，不会被冲掉 能搜索，支持多显示器 Windows 版和 macOS （ Apple Silicon ）版都有，代码在 GitHub： https://github.com/SillyShalong/paste 写完自己用了段时间，还行。",
+        "publishedAt": "2026-11-09T04:31:05.000Z",
+        "summary": "最近一个月用 codex ，chatgpt plus 号跑一个任务没跑完就额度用完了，后来买了 pro 100 号，幸好上个月有重置叠加邀请新用户重置，才勉强满足使用。现在没得用了，充值使用了 deepseek ，不用不知道，用了才知道这 token 消耗，让它翻译下项目里的语言文件（翻译 9 种语言），居然消耗了 4000 多万 token 。模型能干什么，我目前也不太清楚，但我是真没有看出来有多便宜。 但是这又是国内名气最大以性价比最高的一个模型，你们都用它干什么啊，难…",
         "badge": "程序员",
         "signal": "8 回复"
       },
       {
-        "id": "cn-item-7f64433a2d5d1f25",
+        "id": "cn-item-f86ca86f98256235",
         "category": "cn",
-        "title": "特朗普：美伊谈判若取得进展 “极不可能”再对伊动武",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-09/10728581.shtml",
+        "title": "日本茨城县近海发生5.9级地震 东京有震感",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-09/10728739.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-08T22:22:42.000Z",
-        "summary": "中新网11月9日电 据美国有线电视新闻网(CNN)报道，当地时间8日，美国总统特朗普表示，只要围绕伊朗核计划及重新开放霍尔木兹海峡的谈判取得进展，美国“极不可能”恢复对伊朗的大规模军事行动。",
+        "publishedAt": "2026-11-09T05:10:06.000Z",
+        "summary": "中新网11月9日电 据日本气象厅消息，当地时间9日13时52分左右，日本茨城县近海发生5.9级地震，震源深度10千米。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50418182",
+        "id": "hn-50419215",
         "category": "dev",
-        "title": "Chimera Vocal Synth",
-        "url": "https://chimera-vocal-synth.vercel.app/",
+        "title": "Unlocking any car from X brand in most of the world",
+        "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-08T22:36:03.000Z",
+        "publishedAt": "2026-11-09T00:10:50.000Z",
         "badge": "HN",
-        "signal": "23 分 · 6 评论"
+        "signal": "209 分 · 73 评论"
       },
       {
-        "id": "cn-it-b5bb53825cb09cb4",
+        "id": "cn-it-cd452ea5c3098b35",
         "category": "cn",
-        "title": "鸿蒙智行问界新 M8 官宣配备全新一代智能底盘，升级双阀连续可变阻尼减振器等",
-        "url": "https://www.ithome.com/1/024/026.htm",
+        "title": "方飞：荣耀 700 全系搭载 AI 灵动背屏",
+        "url": "https://www.ithome.com/1/024/249.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-08T23:27:54.000Z",
-        "summary": "IT之家 11 月 9 日消息，鸿蒙智行问界汽车官方昨日宣布，问界新 M8 将配备全新一代智能底盘， 升级双阀连续可变阻尼减振器 ，采用双腔闭式空悬与增强型前双叉臂及后五连杆独立悬架， 新增 ±8° 主动式后轮转向 。 据IT之家此前报道，鸿蒙智行问界新 M8 将于 11 月 13 日上市，搭载华为乾崑智驾 ADS 5 系统，预售价 38.98 万元起。目前华为官网已公开问界新 M8 选配信息，分 Max / Max+ 和 Ultra 三个版本、增程 / 纯电两种动力形式、…",
+        "publishedAt": "2026-11-09T06:30:54.000Z",
+        "summary": "IT之家 11 月 9 日消息，荣耀终端股份有限公司产品线总裁方飞今日发文，正式公布荣耀 700 系列的全新设计，并宣布该系列将全系搭载 AI 灵动背屏，称“设计大换代”。方飞表示，此次荣耀 700 系列迎来数字系列迄今最大的外观突破，希望通过设计和交互创新，让用户拥有更多表达自我的方式。 方飞称，荣耀 700 系列的设计进化，源于对用户生活需求的观察。上一代产品的磁吸副屏收获了不少用户喜爱，也让一些用户联想到曾经电子宠物带来的乐趣。在她看来，这类体验之所以能够跨越时代，核…",
         "badge": "IT之家"
       },
       {
@@ -323,25 +323,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1255350",
+        "id": "v2ex-1255511",
         "category": "dev",
-        "title": "突然想起来, 微软居然没拿出一个能用得模型?",
-        "url": "https://www.v2ex.com/t/1255350",
+        "title": "登录 maven central 页面报错无法发布包怎么办，有遇到这个问题的人么，求救",
+        "url": "https://www.v2ex.com/t/1255511",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T07:45:39.000Z",
-        "summary": "不正常啊 按理微软也投入大量资源, 本来收购 github 也有优势 copilot 早期也发展可以, 但感觉自从 A/, Openai 占主流彻底没啥声音了啊",
+        "publishedAt": "2026-11-09T03:22:34.000Z",
+        "summary": "我人麻了，网上各种搜索也找不到原因，发邮件给官方也没有回复😭 There was an error loading your Deployments. Please try refreshing the page to try again. If this issue persists contact support at central-support@sonatype.com.",
         "badge": "程序员",
-        "signal": "30 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-0bff9d470a83c790",
+        "id": "cn-baidu-9b2083c024c85331",
         "category": "cn",
-        "title": "红色新闻人的浴血征程",
-        "url": "https://www.baidu.com/s?wd=%E7%BA%A2%E8%89%B2%E6%96%B0%E9%97%BB%E4%BA%BA%E7%9A%84%E6%B5%B4%E8%A1%80%E5%BE%81%E7%A8%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "“把想法带到中国就能实现”",
+        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E6%8A%8A%E6%83%B3%E6%B3%95%E5%B8%A6%E5%88%B0%E4%B8%AD%E5%9B%BD%E5%B0%B1%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "历史的际遇，让人动容。当历经千难万险的红军抵达陕北后，《红色中华》报在瓦窑堡的窑洞里继续出版，于是出现了第241至264期两套期号重复的报纸。今年是中国工农红军长征胜利90周年。在第27个记者节到来之际，让我们一起走近这群为了新中国浴血战斗的新闻前辈们。",
+        "summary": "第九届中国国际进口博览会正在上海举行，超4000家境外企业携新技术、新产品亮相“四叶草”。有美国企业创始人感慨：在美国和加拿大产生的想法可以带到中国，发展成一种全新的事物，这样的事情除了中国，在任何其他地方都很难实现。",
         "badge": "热搜",
-        "signal": "7,615,998 热度"
+        "signal": "7,616,215 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111357",
@@ -364,23 +364,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50368481",
+        "id": "hn-50420857",
         "category": "dev",
-        "title": "Declarative Dragging",
-        "url": "https://declarative-dragging.github.io/",
+        "title": "A Critique of GPUI",
+        "url": "https://blog.zortax.de/posts/a-critique-of-gpui",
         "source": "Hacker News",
-        "publishedAt": "2026-11-04T17:05:07.000Z",
+        "publishedAt": "2026-11-09T03:51:10.000Z",
         "badge": "HN",
-        "signal": "263 分 · 31 评论"
+        "signal": "60 分 · 24 评论"
       },
       {
-        "id": "cn-item-e2c6fa627e165fb2",
+        "id": "cn-item-5f4750fd1f985918",
         "category": "cn",
-        "title": "埃及发生火车脱轨事故 已致约50人受伤",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-08/10728530.shtml",
+        "title": "反对高市政府打造“战争国家” 日本各界持续发声",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-09/10728730.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-08T12:46:53.000Z",
-        "summary": "中新网11月8日电 综合外媒8日报道，埃及吉萨省发生火车脱轨事故，已致约50人受伤。",
+        "publishedAt": "2026-11-09T04:18:00.000Z",
+        "summary": "中新网11月9日电 据日本《赤旗报》报道，近日，日本地方政府现任及卸任首长组建的“全国首长九条之会”召开会议，反对高市早苗政府推进修订“安保三文件”、强军扩武等打造“战争国家”的动向，反对修改“和平宪法”第九条。",
         "badge": "中新网要闻"
       },
       {
@@ -405,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1255327",
+        "id": "v2ex-1255508",
         "category": "dev",
-        "title": "卖软件这个事情在未来可能是伪命题了",
-        "url": "https://www.v2ex.com/t/1255327",
+        "title": "codex or claude code?",
+        "url": "https://www.v2ex.com/t/1255508",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T05:19:45.000Z",
-        "summary": "刷到孟岩关于 AI 做软件开发的一个观点，随着 AI 能力的增强，未来人人都能通过嘴炮来做个 app 覆盖自己日常的需求，而不用等到大公司为了符合大多数人群而做的一个通用版本。这意味着，想通过做 app 来获得收益变得更难。 大家认可这个观点吗，产品经理，程序员，设计师这种软件开发领域上传统的角色，是否会慢慢消失？ 未来该是怎样的一个变化？ 帖子来源",
+        "publishedAt": "2026-11-09T03:18:18.000Z",
+        "summary": "你们用那个工具？ 订阅的是 chatgpt pro 目前用的是 codex ，在考虑要不要本地反代然后用 claude code 那个有界面的（以前叫 claude desktop ） 有用过的老哥讲下怎么样",
         "badge": "程序员",
-        "signal": "57 回复"
+        "signal": "13 回复"
       },
       {
-        "id": "cn-it-d76ee7eceec0a174",
+        "id": "cn-it-3f42ddd49f6304bd",
         "category": "cn",
-        "title": "腾讯 Workbuddy 致歉：未及时公告优惠活动调整，DeepSeek-V4.1 Flash 积分消耗 5 折结算返还",
-        "url": "https://www.ithome.com/1/024/025.htm",
+        "title": "Epic 确认将为V社 Steam Deck 掌机 SteamOS 推出专属游戏启动器",
+        "url": "https://www.ithome.com/1/024/248.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-08T23:26:34.000Z",
-        "summary": "IT之家 11 月 9 日消息，腾讯 Workbuddy 昨晚发布公告，对 DeepSeek-V4.1 Flash 折扣活动进行了说明。 IT之家从公告获悉，9 月 10 日，WorkBuddy 上线 DeepSeek-V4.1 Flash，同步开启了为期两周的 5 折积分体验活动，活动原定于 9 月 24 日结束。此后，团队决定将此优惠活动延长至 11 月 5 日，并于 11 月 5 日 14:00 起已恢复原价。 因这一调整未及时向用户公告，给用户带来了一定困扰。 对此…",
+        "publishedAt": "2026-11-09T06:29:43.000Z",
+        "summary": "IT之家 11 月 9 日消息，Epic Games 传播总监 Jake Jones 在接受外媒 GamingOnLinux 采访时，透露 Epic Games 计划为 Valve 的 Steam Deck 掌机推出官方 Epic Games Store 启动器，并进一步扩大新版 Linux 客户端的发行版支持范围。届时 Steam Deck 用户有望直接通过官方启动器下载安装游戏，无须再依赖 Heroic 等第三方工具。不过，Epic 目前尚未公布相应版本的具体上线时间。…",
         "badge": "IT之家"
       },
       {
@@ -446,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50418016",
+        "id": "hn-50418182",
         "category": "dev",
-        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
-        "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+        "title": "Chimera Vocal Synth",
+        "url": "https://chimera-vocal-synth.vercel.app/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-08T22:20:09.000Z",
+        "publishedAt": "2026-11-08T22:36:03.000Z",
         "badge": "HN",
-        "signal": "216 分 · 194 评论"
+        "signal": "165 分 · 23 评论"
       },
       {
-        "id": "cn-baidu-ea89d36a31d01202",
+        "id": "cn-baidu-8a355872235da41f",
         "category": "cn",
-        "title": "大连文体旅：对山东老铁免费100天",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%A7%E8%BF%9E%E6%96%87%E4%BD%93%E6%97%85%EF%BC%9A%E5%AF%B9%E5%B1%B1%E4%B8%9C%E8%80%81%E9%93%81%E5%85%8D%E8%B4%B9100%E5%A4%A9&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "消费三姐妹 为什么不香了",
+        "url": "https://www.baidu.com/s?wd=%E6%B6%88%E8%B4%B9%E4%B8%89%E5%A7%90%E5%A6%B9+%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E9%A6%99%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月8日，大连文体旅集团发文称，旗下景区对山东游客免费100天。此前，在2026赛季中超联赛第30轮比赛中，大连英博队主场战胜天津津门虎队夺得冠军。同日，山东泰山队3比2战胜成都蓉城队，助力大连英博拿下冠军，大连发文感谢“山东老铁”。",
+        "summary": "10月27日，泡泡玛特披露三季度收益同比降超45%。此前自2025年6月高点以来，泡泡玛特、老铺黄金、蜜雪集团“消费三姐妹”股价均腰斩。分析认为，业绩增速放缓难撑高估值是主因。",
         "badge": "热搜",
-        "signal": "7,519,661 热度"
+        "signal": "7,523,890 热度"
       },
       {
         "id": "github-advisory-ghsa-fmc8-p6q7-75cc",
@@ -486,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1255320",
+        "id": "v2ex-1255506",
         "category": "dev",
-        "title": "expo 开发 APP ，地理定位 google play 无法使用的问题",
-        "url": "https://www.v2ex.com/t/1255320",
+        "title": "大肥鱼的工牌做好了，快来领取！",
+        "url": "https://www.v2ex.com/t/1255506",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-08T04:25:44.000Z",
-        "summary": "开发跨平台旅行 APP ，技术选型使用的是 expo ，主要原因是调试比较便利，不需要进行 Android 和 ios 编译。 项目已经开发完成，目前遇到的问题是 expo 带的地理定位，搜索 lbs 等功能一直不正常，好像依赖的是 google 的服务，国内无法正常使用。 目前针对该问题的最佳解决方案是什么？大家如何处理该问题，最佳的解决方案是什么。",
+        "publishedAt": "2026-11-09T03:15:41.000Z",
+        "summary": "https://badge.fhysy.com/ 如果 DeepSeek 、ChatGPT 、豆包这些 AI 都来上班，它们的工牌会长什么样？ 最近做了一个「非人类员工」工牌网站，给 9 位 AI 员工设计了专属工牌。工牌可以拖动、晃动、翻面，背面还有各自的口头禅，也支持下载正反面图片。",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "31 回复"
       }
     ]
   },
@@ -511,8 +511,8 @@
         "url": "https://github.com/sherlock-project/sherlock",
         "description": "Hunt down social media accounts by username across social networks",
         "language": "Python",
-        "stars": 103379,
-        "starsToday": 2372
+        "stars": 104726,
+        "starsToday": 2373
       },
       {
         "id": "github-0d39c5d4ca32465c",
@@ -521,7 +521,7 @@
         "url": "https://github.com/dsx-ai-factory/nvke",
         "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
         "language": "Go",
-        "stars": 829,
+        "stars": 936,
         "starsToday": 345
       },
       {
@@ -531,8 +531,8 @@
         "url": "https://github.com/milind-soni/OpenMausBot",
         "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "language": "TypeScript",
-        "stars": 18206,
-        "starsToday": 1437
+        "stars": 18738,
+        "starsToday": 1439
       },
       {
         "id": "github-8ec12275679fc1ca",
@@ -541,8 +541,8 @@
         "url": "https://github.com/anthropics/claude-quickstarts",
         "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
         "language": "Python",
-        "stars": 19396,
-        "starsToday": 28
+        "stars": 19593,
+        "starsToday": 32
       },
       {
         "id": "github-7806f76343b67d4b",
@@ -551,8 +551,8 @@
         "url": "https://github.com/vercel-labs/agent-browser",
         "description": "Browser automation CLI for AI agents",
         "language": "Rust",
-        "stars": 47555,
-        "starsToday": 812
+        "stars": 47883,
+        "starsToday": 815
       },
       {
         "id": "github-5ba0bee715812bde",
@@ -561,8 +561,8 @@
         "url": "https://github.com/meta/astryx",
         "description": "An open source design system that's fully customizable and agent ready",
         "language": "TypeScript",
-        "stars": 16628,
-        "starsToday": 863
+        "stars": 17616,
+        "starsToday": 875
       },
       {
         "id": "github-f2db8404c222e36c",
@@ -571,8 +571,8 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 189593,
-        "starsToday": 793
+        "stars": 189917,
+        "starsToday": 792
       },
       {
         "id": "github-6bfefb3ce187dc60",
@@ -581,8 +581,8 @@
         "url": "https://github.com/google-deepmind/mujoco",
         "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
         "language": "C++",
-        "stars": 16384,
-        "starsToday": 26
+        "stars": 16567,
+        "starsToday": 41
       },
       {
         "id": "github-808471f7a53938d5",
@@ -591,10 +591,10 @@
         "url": "https://github.com/ranxianglei/billion-context",
         "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
         "language": "TypeScript",
-        "stars": 5113,
+        "stars": 5384,
         "starsToday": 460
       }
     ],
-    "updatedAt": "2026-11-08T23:43:37.173Z"
+    "updatedAt": "2026-11-09T06:31:55.541Z"
   }
 }
