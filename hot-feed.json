@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-10T17:51:17.528Z",
+  "generatedAt": "2026-11-10T23:23:37.935Z",
   "intelligence": {
-    "updatedAt": "2026-11-10T17:51:17.528Z",
+    "updatedAt": "2026-11-10T23:23:37.935Z",
     "items": [
       {
-        "id": "cn-item-d6895508deb7c677",
+        "id": "cn-item-d628acedfdf04a22",
         "category": "cn",
-        "title": "事关守信激励措施 两部门作出部署",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-10/10729704.shtml",
+        "title": "保加利亚连环车祸已致12死 政府宣布全国哀悼",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-11/10729883.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-10T11:42:46.000Z",
-        "summary": "中新网11月10日电 据国家发改委网站消息，为进一步明确信用激励的认定主体、激励对象和实施方式，提升激励措施的系统性、协同性和可感性，促进形成诚信者受益的良好氛围，国家发展改革委、中国人民银行近日联合印发《全国守信激励措施基础清单(2026年版)》。",
+        "publishedAt": "2026-11-10T23:19:42.000Z",
+        "summary": "中新网11月11日电 据英国广播公司(BBC)等外媒报道，当地时间10日，保加利亚东部城市扬博尔附近一条高速公路发生两起严重连环车祸事故，涉及数十辆轿车和重型货车。保加利亚总理拉德夫表示，事故已造成12人死亡。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-102895",
+        "id": "cisa-kev-cve-2026-124194",
         "category": "security",
-        "title": "GPUStack GPUStack：GPUStack Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102895",
+        "title": "Microsoft Office：Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-09T00:00:00.000Z",
-        "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secret…",
-        "badge": "CVE-2026-102895",
-        "signal": "已遭利用 · 整改期限 2026-11-12"
+        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+        "badge": "CVE-2026-124194",
+        "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
         "id": "ai-openai-0f0020abcf733229",
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50442736",
+        "id": "hn-50445401",
         "category": "dev",
-        "title": ".name Grandfathered",
-        "url": "https://neil.fraser.name/news/2026/11/10/",
+        "title": "Toyota brand Scion is back and it's going to sell a kei truck in America",
+        "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-10T16:37:44.000Z",
+        "publishedAt": "2026-11-10T19:50:46.000Z",
         "badge": "HN",
-        "signal": "186 分 · 24 评论"
+        "signal": "222 分 · 145 评论"
       },
       {
-        "id": "cn-it-95f9a4b0906386ad",
+        "id": "cn-it-aa41bc9b8a60d805",
         "category": "cn",
-        "title": "嵌入式 x86 算力天花板：AMD 霄龙嵌入式 9006 系列 SP7 处理器发布，吞吐量飙升 1.8 倍",
-        "url": "https://www.ithome.com/1/025/195.htm",
+        "title": "再迎“iPhone X 时刻”：20 周年款苹果手机前瞻，整机如一块玻璃、按键将全固态",
+        "url": "https://www.ithome.com/1/025/211.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-10T17:05:05.000Z",
-        "summary": "IT之家 11 月 11 日消息， AMD 今天（11 月 11 日）发布霄龙（EPYC）嵌入式 9006 系列 SP7 处理器 ，基于 Zen 6 架构，最高可达 256 核 512 线程，率先在嵌入式平台落地 PCIe Gen6、CXL3.1，搭配 16 通道 DDR5/MRDIMM 内存、7 年产品生命周期。 不同于 9 月发布的 AMD 霄龙 9006 系列服务器 CPU（面向智能体 AI、云计算、企业应用等），本次发布的嵌入式 9006 系列 SP7 处理器主要面…",
+        "publishedAt": "2026-11-10T23:22:12.000Z",
+        "summary": "IT之家 11 月 11 日消息，科技媒体 MacRumors 昨日（11 月 10 日）发布博文，梳理、验证和汇总多条供应链消息和可靠信源爆料，认为苹果为庆祝 iPhone 问世 20 周年，会在 2027 年 9 月推出 20 周年版 iPhone（上市后可能名为 iPhone 20 Pro），有望迎来外观、屏幕、交互、影像与芯片等全方位升级。 苹果 20 周年 iPhone 的 10 项主要变化： 四曲面全玻璃外观 ：屏幕玻璃向四边弯曲，视觉上弱化甚至隐藏金属边框。 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-xwgp-w3pj-q5h3",
+        "id": "github-advisory-ghsa-x33c-w48q-qrgc",
         "category": "security",
-        "title": "OHIF Viewers: DOM-Based Cross Site Scripting (XSS) through MIME type of document",
-        "url": "https://github.com/advisories/GHSA-xwgp-w3pj-q5h3",
+        "title": "Microsoft Security Advisory CVE-2026-114149 - ASP.NET Core Denial of Service Vulnerability",
+        "url": "https://github.com/advisories/GHSA-x33c-w48q-qrgc",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-10T15:57:51.000Z",
-        "summary": "### Summary An XSS (Cross-Site Scripting) vulnerability occurs when an attacker is able to inject their own JavaScript code into a web page's source, which is subsequently processed by the victim's browser. A common cause of this vulnerabi…",
-        "badge": "CVE-2026-118670",
-        "signal": "HIGH · CVSS 8.8"
+        "publishedAt": "2026-11-10T23:06:32.000Z",
+        "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in ASP.NET Core. This advisory provides guidance on updating affected applications and components. Multipart form processing ca…",
+        "badge": "CVE-2026-114149",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-6d8eb3bcd497222d",
@@ -87,24 +87,25 @@
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-5293e6246ee7ad16",
+        "id": "cn-baidu-6ff8930def9d455e",
         "category": "cn",
-        "title": "梁家辉获金鸡奖最佳男主角",
-        "url": "https://www.baidu.com/s?wd=%E6%A2%81%E5%AE%B6%E8%BE%89%E8%8E%B7%E9%87%91%E9%B8%A1%E5%A5%96%E6%9C%80%E4%BD%B3%E7%94%B7%E4%B8%BB%E8%A7%92&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "梁家辉 三金大满贯",
+        "url": "https://www.baidu.com/s?wd=%E6%A2%81%E5%AE%B6%E8%BE%89+%E4%B8%89%E9%87%91%E5%A4%A7%E6%BB%A1%E8%B4%AF&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "11月10日，2026年金鸡奖最佳男主角：梁家辉 《捕风追影》。至此，梁家辉完成了三金影帝大满贯！！实至名归！！",
         "badge": "热搜",
-        "signal": "7,808,018 热度"
+        "signal": "7,809,631 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-123158",
+        "id": "cisa-kev-cve-2026-111793",
         "category": "security",
-        "title": "OpenBSD OpenSSH：OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123158",
+        "title": "Openwave Messaging Limited Webtop Media Transcoder：Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111793",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-09T00:00:00.000Z",
-        "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
-        "badge": "CVE-2026-123158",
-        "signal": "已遭利用 · 整改期限 2026-11-12"
+        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experie…",
+        "badge": "CVE-2026-111793",
+        "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
         "id": "ai-hugging-face-cb93d68b445c05b0",
@@ -116,44 +117,44 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50439193",
+        "id": "hn-50442736",
         "category": "dev",
-        "title": "AlphaProof Code",
-        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "title": ".name Grandfathered",
+        "url": "https://neil.fraser.name/news/2026/11/10/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-10T12:11:12.000Z",
+        "publishedAt": "2026-11-10T16:37:44.000Z",
         "badge": "HN",
-        "signal": "444 分 · 147 评论"
+        "signal": "621 分 · 138 评论"
       },
       {
-        "id": "cn-item-71a1af83ceb7fbd9",
+        "id": "cn-item-a4d9de135577fae5",
         "category": "cn",
-        "title": "国家发改委：多渠道增加普通高中和高等教育学位供给",
-        "url": "https://www.chinanews.com.cn/edu/2026/11-10/10729572.shtml",
+        "title": "阿布扎比首日会谈持续近4小时 俄美乌三方表态",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-11/10729881.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-10T09:22:49.000Z",
-        "summary": "中新网11月10日电 10日，国家发改委举行奋进“十五五”系列新闻发布会，介绍增进民生福祉有关情况。针对当前我国学龄人口总量和结构发生深刻变化、高中学位比较紧张等问题，国家发展改革委社会发展司副司长黄玮茹表示，国家发改委将会同教育部等有关部门，围绕“三个适应”积极开展工作，前瞻应对学龄人口总量和结构变化。",
+        "publishedAt": "2026-11-10T22:56:43.000Z",
+        "summary": "中新网11月11日电 综合报道，当地时间10日，新一轮俄罗斯、美国和乌克兰三方会谈在阿联酋首都阿布扎比举行，首日会谈持续近4小时。这是2026年2月谈判陷入停滞以来，俄美乌三方时隔9个月重启面对面磋商。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-rhr8-3pm8-cq29",
+        "id": "github-advisory-ghsa-xqc2-xf4c-x3h3",
         "category": "security",
-        "title": "Forge: ASN.1 resource exhaustion via BIT STRING decoding in asn1.fromDer",
-        "url": "https://github.com/advisories/GHSA-rhr8-3pm8-cq29",
+        "title": "React: Unauthenticated Remote Code Execution in React Server Components",
+        "url": "https://github.com/advisories/GHSA-xqc2-xf4c-x3h3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-10T15:57:41.000Z",
-        "summary": "### Summary `asn1.fromDer()` decodes the contents of BIT STRINGs as ASN.1 by default. That decode ignored the `maxDepth` recursion limit (an incomplete fix of CVE-2025-66031) and also decoded nested BIT STRINGs, keeping a full copy of the …",
-        "badge": "CVE-2026-119191",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-11-10T22:44:12.000Z",
+        "summary": "### Impact Crafted payloads targeting frameworks supporting React Server Components can lead to remote code execution. This only affects extremely rare cases where responses transport multiple typed arrays and an attacker-controlled value.…",
+        "badge": "CVE-2026-126187",
+        "signal": "CRITICAL · CVSS 0.0"
       },
       {
-        "id": "ai-openai-69d4d9d74efa0162",
+        "id": "ai-openai-991ad48e8559b2fe",
         "category": "ai",
-        "title": "Closing the AI guidance gap in education",
-        "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+        "title": "Introducing Businesses in ChatGPT",
+        "url": "https://openai.com/index/introducing-businesses-chatgpt",
         "source": "OpenAI",
-        "publishedAt": "2026-11-10T09:00:00.000Z",
-        "summary": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
+        "publishedAt": "2026-11-10T10:00:00.000Z",
+        "summary": "Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT.",
         "badge": "OpenAI"
       },
       {
@@ -165,28 +166,69 @@
         "publishedAt": "2026-11-10T16:07:48.000Z",
         "summary": "由于是刚发布，使用感受上比 Gemini 4 Argon 快多了。但目前好像仅适用于 Ultra 计划。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-594ecdd3bf733d1b",
+        "id": "cn-it-30ada58a34aada4f",
         "category": "cn",
-        "title": "《足球经理 27》今日发售：国区售价 268 元，首发加入 PC Game Pass",
-        "url": "https://www.ithome.com/1/025/194.htm",
+        "title": "苹果为 AirPods 5/AirPods Pro 3 等耳机推送 9B47 固件更新",
+        "url": "https://www.ithome.com/1/025/210.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-10T16:14:15.000Z",
-        "summary": "IT之家 11 月 11 日消息，由 Sports Interactive 开发、SEGA 发行的足球策略模拟游戏《足球经理 27》（Football Manager 27，简称《FM27》）已正式在 Steam 平台正式发售，国区定价 268 元，不锁国区。IT之家附游戏商品页（ https://store.steampowered.com/app/4530370/ 足球经理 27/?l=schinese&cc=cn ）。 据介绍，本作国区标准版定价 268 元，预购期间…",
+        "publishedAt": "2026-11-10T23:11:25.000Z",
+        "summary": "IT之家 11 月 11 日消息，据科技媒体 MacRumors 今天报道，苹果现已为 AirPods Pro 2/Pro 3、AirPods 4/AirPods 5 以及 AirPods Max 2 耳机发布新固件， 版本号为 9B47 。 据报道，苹果过去几周一直在测试这款新固件的 Beta 版， 但官方目前没有公布新固件的具体更新内容 。苹果表示，后续将通过 AirPods 支持文档公布相关信息。 IT之家注：如果您需要更新 AirPods 的固件，请将您的 AirP…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-116779",
+        "id": "cisa-kev-cve-2026-20320",
         "category": "security",
-        "title": "SignalWire FreeSwitch：SignalWire FreeSwitch Code Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116779",
+        "title": "Cisco BroadWorks：Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20320",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-09T00:00:00.000Z",
-        "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
-        "badge": "CVE-2026-116779",
-        "signal": "已遭利用 · 整改期限 2026-11-12"
+        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+        "badge": "CVE-2026-20320",
+        "signal": "已遭利用 · 整改期限 2026-11-24"
+      },
+      {
+        "id": "ai-google-deepmind-f321c904268bcef2",
+        "category": "ai",
+        "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-11-10T12:02:28.000Z",
+        "summary": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-50447074",
+        "category": "dev",
+        "title": "After 7 Months, Glasswing Overwelms Maintainers with Underwhelming Findings",
+        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-10T22:17:56.000Z",
+        "badge": "HN",
+        "signal": "56 分 · 10 评论"
+      },
+      {
+        "id": "cn-baidu-15057c64cb10aa2c",
+        "category": "cn",
+        "title": "扬州地震",
+        "url": "https://www.baidu.com/s?wd=%E6%89%AC%E5%B7%9E%E5%9C%B0%E9%9C%87&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "据中国地震台网正式测定，11月11日6时15分在江苏扬州市江都区发生3.9级地震，震源深度20公里，震中位于北纬32.62度，东经119.60度。",
+        "badge": "热搜",
+        "signal": "7,714,232 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-v924-7rp8-4mxh",
+        "category": "security",
+        "title": "Active Storage: Possible arbitrary file read and remote code execution in video previews, analysis and image processing",
+        "url": "https://github.com/advisories/GHSA-v924-7rp8-4mxh",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-10T21:38:55.000Z",
+        "summary": "### Impact `ActiveStorage::Blob#open` writes a blob to a tempfile whose name carries the extension of the uploaded filename, and hands that path to `ffprobe` (`VideoAnalyzer`, `AudioAnalyzer`), `ffmpeg` (`VideoPreviewer`) and ImageMagick (…",
+        "badge": "CVE-2026-126186",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-hugging-face-5f3963726dbe36e6",
@@ -196,47 +238,6 @@
         "source": "Hugging Face",
         "publishedAt": "2026-11-10T00:00:00.000Z",
         "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50441707",
-        "category": "dev",
-        "title": "Smart home devices should work without the internet",
-        "url": "https://docodethatmatters.com/home-automation-overnight-success/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-10T15:25:20.000Z",
-        "badge": "HN",
-        "signal": "105 分 · 48 评论"
-      },
-      {
-        "id": "cn-baidu-bcfcd2a158bc4143",
-        "category": "cn",
-        "title": "高叶获金鸡奖最佳女主角",
-        "url": "https://www.baidu.com/s?wd=%E9%AB%98%E5%8F%B6%E8%8E%B7%E9%87%91%E9%B8%A1%E5%A5%96%E6%9C%80%E4%BD%B3%E5%A5%B3%E4%B8%BB%E8%A7%92&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "11月10日晚，第39届中国电影金鸡奖颁奖典礼在福建厦门举行。高叶凭借电影《南京照相馆》中的精彩表现，获得最佳女主角奖。据悉，评委会提名的还有李思潼、宋佳、张子枫、陈丽君。",
-        "badge": "热搜",
-        "signal": "7,713,765 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-6qrw-m8cv-hcxf",
-        "category": "security",
-        "title": "Forge: RSA PKCS#1 v1.5 signature forgery via non-canonical DigestInfo encoding",
-        "url": "https://github.com/advisories/GHSA-6qrw-m8cv-hcxf",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-10T15:57:34.000Z",
-        "summary": "### Summary RSASSA-PKCS1-v1_5 signature verification (`publicKey.verify()` with the default scheme, also used by X.509 certificate and PKCS#7 verification) accepted non-canonical BER encodings of the DigestInfo, such as NULL parameters wit…",
-        "badge": "CVE-2026-119192",
-        "signal": "HIGH · CVSS 7.5"
-      },
-      {
-        "id": "ai-openai-f3fc54cd1d78c100",
-        "category": "ai",
-        "title": "Work at the Frontier: AI’s effect on freelance work",
-        "url": "https://openai.com/index/ai-effect-on-freelance-work",
-        "source": "OpenAI",
-        "publishedAt": "2026-11-10T07:00:00.000Z",
-        "summary": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
-        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1255985",
@@ -250,25 +251,66 @@
         "signal": "1 回复"
       },
       {
-        "id": "cn-item-1dd9f8240ad3b585",
+        "id": "cn-item-d6895508deb7c677",
         "category": "cn",
-        "title": "新一轮俄美乌三方会谈在阿联酋开始举行",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-10/10729497.shtml",
+        "title": "事关守信激励措施 两部门作出部署",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-10/10729704.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-10T08:22:49.000Z",
-        "summary": "中新网11月10日电 据俄罗斯媒体报道，新一轮俄美乌三方会谈10日在阿联酋首都阿布扎比开始举行。",
+        "publishedAt": "2026-11-10T11:42:46.000Z",
+        "summary": "中新网11月10日电 据国家发改委网站消息，为进一步明确信用激励的认定主体、激励对象和实施方式，提升激励措施的系统性、协同性和可感性，促进形成诚信者受益的良好氛围，国家发展改革委、中国人民银行近日联合印发《全国守信激励措施基础清单(2026年版)》。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-123218",
+        "id": "cisa-kev-cve-2026-111560",
         "category": "security",
-        "title": "IBM Aspera Faspex：IBM Aspera Faspex Incorrect Authorization Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123218",
+        "title": "Barracuda Networks Multiple Products：Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111560",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-09T00:00:00.000Z",
-        "summary": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
-        "badge": "CVE-2026-123218",
-        "signal": "已遭利用 · 整改期限 2026-11-12"
+        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command i…",
+        "badge": "CVE-2026-111560",
+        "signal": "已遭利用 · 整改期限 2026-11-13"
+      },
+      {
+        "id": "ai-openai-69d4d9d74efa0162",
+        "category": "ai",
+        "title": "Closing the AI guidance gap in education",
+        "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+        "source": "OpenAI",
+        "publishedAt": "2026-11-10T09:00:00.000Z",
+        "summary": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50441707",
+        "category": "dev",
+        "title": "Smart home devices should work without the internet",
+        "url": "https://docodethatmatters.com/home-automation-overnight-success/",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-10T15:25:20.000Z",
+        "badge": "HN",
+        "signal": "627 分 · 223 评论"
+      },
+      {
+        "id": "cn-it-a59fb3975ce5353f",
+        "category": "cn",
+        "title": "Anthropic 发布 IPO 路演视频正式启动最高 643.5 亿美元募资计划，估值约在 1~1.4 万亿美元",
+        "url": "https://www.ithome.com/1/025/209.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-11-10T23:08:45.000Z",
+        "summary": "IT之家 11 月 11 日消息，当地时间 11 月 10 日，Anthropic 正式宣布启动首次公开募股（IPO）路演，并公布股票发行计划。 根据公告，Anthropic 此次拟发行 8.25 亿股 A 类普通股，发行价格区间为每股 70 至 78 美元。按照发行价上限计算，本次基础发行规模最高约为 643.5 亿美元 （IT之家注：现汇率约合 4,302.82 亿元人民币） 。 根据 Anthropic 官方披露的发行安排，此次发行的 8.25 亿股股票中，有 8.0…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-8474-xrp6-wh69",
+        "category": "security",
+        "title": "Active Support: Possible DoS vulnerability in Active Support safe_constantize",
+        "url": "https://github.com/advisories/GHSA-8474-xrp6-wh69",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-10T21:34:11.000Z",
+        "summary": "### Impact When constant lookup raises `LoadError`, `ActiveSupport::Inflector#safe_constantize` (and `String#safe_constantize`) builds a regular expression from the requested constant name without escaping it, so a caller that passes untru…",
+        "badge": "CVE-2026-126080",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-8827aad4505e69ef",
@@ -279,46 +321,6 @@
         "publishedAt": "2026-11-09T19:51:47.000Z",
         "summary": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety",
         "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50442426",
-        "category": "dev",
-        "title": "Blender 5.3 released with Gaussian Splat support",
-        "url": "https://www.blender.org/download/releases/5-3/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-10T16:15:43.000Z",
-        "badge": "HN",
-        "signal": "203 分 · 29 评论"
-      },
-      {
-        "id": "cn-it-9f3bacf9018094f5",
-        "category": "cn",
-        "title": "奥迪上汽战略合作 CEO 舒睿泽：未来三年将推出三款新车",
-        "url": "https://www.ithome.com/1/025/192.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-11-10T15:34:55.000Z",
-        "summary": "IT之家 11 月 10 日消息，据第一财经今天（10 日）晚间报道，奥迪 · 上汽战略合作 CEO 舒睿泽（Fred Schulze）透露， 未来三年将推出三款新车，规划已进入执行阶段 。 此外，奥迪在 L3 级自动驾驶领域也有明确的发展目标。对于是否出口到欧洲市场，舒睿泽称，AUDI 品牌车型专为中国消费者打造， 全力聚焦中国市场 是未来几年的核心任务。 据IT之家此前报道，今年 10 月，奥迪中国宣布分别与合作伙伴签署战略协议，旨在强化奥迪四环品牌与 AUDI (奥迪…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-8vv3-6qpc-gpw6",
-        "category": "security",
-        "title": "bitcoinjs-lib: Undetected merkle node duplication in block root computation validates a forged transaction list",
-        "url": "https://github.com/advisories/GHSA-8vv3-6qpc-gpw6",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-10T15:57:25.000Z",
-        "summary": "### Summary `fastMerkleRoot` pads an odd level by hashing the last node with itself. It does not report that it did so, and `checkTxRoots` never looks for repeated transactions. A peer can therefore duplicate transactions to fill the pad a…",
-        "badge": "CVE-2026-107846",
-        "signal": "CRITICAL · CVSS 0.0"
-      },
-      {
-        "id": "ai-hugging-face-ac8f18750241a65f",
-        "category": "ai",
-        "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
-        "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
-        "source": "Hugging Face",
-        "publishedAt": "2026-11-09T15:05:57.000Z",
-        "badge": "Hugging Face"
       },
       {
         "id": "v2ex-1255952",
@@ -339,68 +341,68 @@
         "source": "百度热搜",
         "summary": "11月5日至10日，第九届中国国际进口博览会在上海举行。11月6日，49家企业及机构签约参展第十届进博会企业商业展。今年，境外参展企业数量创新高，参展国家、地区和国际组织数量创新高，全球首发、亚洲首展、中国首秀数量创新高。进博会的含金量，还在上升。",
         "badge": "热搜",
-        "signal": "7,616,652 热度"
+        "signal": "7,618,987 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-19868",
+        "id": "cisa-kev-cve-2026-116606",
         "category": "security",
-        "title": "SonicWall SonicOS SSLVPN：SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868",
+        "title": "Barracuda Networks Barracuda Email Security Gateway (ESG)：Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116606",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-06T00:00:00.000Z",
-        "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may a…",
-        "badge": "CVE-2026-19868",
-        "signal": "已遭利用 · 整改期限 2026-11-20"
+        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compa…",
+        "badge": "CVE-2026-116606",
+        "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
-        "id": "ai-openai-caa9073cefb43725",
+        "id": "ai-hugging-face-ac8f18750241a65f",
         "category": "ai",
-        "title": "ChatGPT Enterprise now available in AWS Marketplace",
-        "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
-        "source": "OpenAI",
-        "publishedAt": "2026-11-09T19:00:00.000Z",
-        "summary": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
-        "badge": "OpenAI"
+        "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+        "source": "Hugging Face",
+        "publishedAt": "2026-11-09T15:05:57.000Z",
+        "badge": "Hugging Face"
       },
       {
-        "id": "hn-50441338",
+        "id": "hn-50446246",
         "category": "dev",
-        "title": "The Hardest Tarball?",
-        "url": "https://stoppels.ch/2026/11/07/the-hardest-tarball.html",
+        "title": "Six Math Essentials by Terence Tao",
+        "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
         "source": "Hacker News",
-        "publishedAt": "2026-11-10T15:00:39.000Z",
+        "publishedAt": "2026-11-10T20:58:44.000Z",
         "badge": "HN",
-        "signal": "106 分 · 10 评论"
+        "signal": "81 分 · 11 评论"
       },
       {
-        "id": "cn-item-85f4add1f9d57418",
+        "id": "cn-item-71a1af83ceb7fbd9",
         "category": "cn",
-        "title": "工信部批复10家企业开展号码保护服务业务试点",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-10/10729485.shtml",
+        "title": "国家发改委：多渠道增加普通高中和高等教育学位供给",
+        "url": "https://www.chinanews.com.cn/edu/2026/11-10/10729572.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-10T08:12:11.000Z",
-        "summary": "中新网11月10日电 据工信部网站消息，近日，工业和信息化部批复同意10家企业开展号码保护服务业务试点，并为试点企业核配号码保护服务业务专用700号段码号资源，稳步推进中间号治理工作取得阶段性成效。",
+        "publishedAt": "2026-11-10T09:22:49.000Z",
+        "summary": "中新网11月10日电 10日，国家发改委举行奋进“十五五”系列新闻发布会，介绍增进民生福祉有关情况。针对当前我国学龄人口总量和结构发生深刻变化、高中学位比较紧张等问题，国家发展改革委社会发展司副司长黄玮茹表示，国家发改委将会同教育部等有关部门，围绕“三个适应”积极开展工作，前瞻应对学龄人口总量和结构变化。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-3hch-x692-6qj3",
+        "id": "cisa-kev-cve-2026-125350",
         "category": "security",
-        "title": "GPUStack: Missing authorization on several cluster and resource endpoints allows cross-user access and cluster takeover",
-        "url": "https://github.com/advisories/GHSA-3hch-x692-6qj3",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-10T15:57:20.000Z",
-        "summary": "### Impact An authenticated non-administrative user could access a Kubernetes cluster they are not authorized to access through GPUStack's Kubernetes API proxy. The `cluster_apiserver_proxy` handler did not perform a resource-level authori…",
-        "badge": "CVE-2026-103002",
-        "signal": "HIGH · CVSS 8.8"
+        "title": "Google Chromium：Google Chromium Use-After-Free Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-125350",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "summary": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web brow…",
+        "badge": "CVE-2026-125350",
+        "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-google-deepmind-f09d7876c1e95fca",
+        "id": "ai-openai-f3fc54cd1d78c100",
         "category": "ai",
-        "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-        "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-11-05T17:05:16.000Z",
-        "badge": "Google DeepMind"
+        "title": "Work at the Frontier: AI’s effect on freelance work",
+        "url": "https://openai.com/index/ai-effect-on-freelance-work",
+        "source": "OpenAI",
+        "publishedAt": "2026-11-10T07:00:00.000Z",
+        "summary": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
+        "badge": "OpenAI"
       },
       {
         "id": "v2ex-1255946",
@@ -413,25 +415,65 @@
         "signal": "2 回复"
       },
       {
-        "id": "cn-it-74d5b308c6ba07ac",
+        "id": "cn-it-c396bbf7dc9fb689",
         "category": "cn",
-        "title": "MiniMax 开源 H3-Image 生图模型，10 秒就能生成一张 4K 图像",
-        "url": "https://www.ithome.com/1/025/191.htm",
+        "title": "谷歌宣布免费升级 Google Fi 超级网络：Pixel 9 系列支持双 5G 网络自动切换和数百万 Wi-Fi 热点",
+        "url": "https://www.ithome.com/1/025/208.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-10T15:25:52.000Z",
-        "summary": "IT之家 11 月 10 日消息，今天（10 日）深夜，MiniMax 宣布，MiniMax H3-Image 正式发布并 开放权重 。这是一款衍生自 H3 的图像生成模型，其具备 文本生成图像、图像参考和图像编辑能力 。 IT之家从官方介绍获悉，其能够在 10 秒内生成 一张 4096 x 4096 像素、约 16 MP（4K） 的高分辨率图像，同时呈现丰富、真实的细节，并具备优秀的指令遵循和多参考图理解能力。 MiniMax 称，在 H3 预训练赋予的广泛图像能力基础上…",
+        "publishedAt": "2026-11-10T23:01:30.000Z",
+        "summary": "IT之家 11 月 11 日消息，当地时间 11 月 10 日，谷歌宣布为旗下 Google Fi Wireless 推出全新的「超级网络」（Super Network），通过双 5G 蜂窝网络和数百万个 Wi-Fi 热点之间的自动切换，改善用户在室内、拥挤区域及偏远地区的网络连接体验。 谷歌 Google Store 与 Google Fi 副总裁 Mauria Finley 在官方博客中介绍称，该功能将面向符合条件的 Google Fi 用户免费提供。 即日起，该功能陆…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2024-27834",
+        "id": "cisa-kev-cve-2026-102895",
         "category": "security",
-        "title": "Apple Multiple Products：Apple Multiple Products Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-27834",
+        "title": "GPUStack GPUStack：GPUStack Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102895",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-04T00:00:00.000Z",
-        "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
-        "badge": "CVE-2024-27834",
-        "signal": "已遭利用 · 整改期限 2026-11-18"
+        "publishedAt": "2026-11-09T00:00:00.000Z",
+        "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secret…",
+        "badge": "CVE-2026-102895",
+        "signal": "已遭利用 · 整改期限 2026-11-12"
+      },
+      {
+        "id": "ai-google-deepmind-f09d7876c1e95fca",
+        "category": "ai",
+        "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+        "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-11-05T17:05:16.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-50443824",
+        "category": "dev",
+        "title": "Synaptics patent claims stop work on DisplayLink drivers",
+        "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-10T18:02:02.000Z",
+        "badge": "HN",
+        "signal": "255 分 · 112 评论"
+      },
+      {
+        "id": "cn-baidu-c2a2e6368950d2ca",
+        "category": "cn",
+        "title": "想赚医院的钱 没那么容易了",
+        "url": "https://www.baidu.com/s?wd=%E6%83%B3%E8%B5%9A%E5%8C%BB%E9%99%A2%E7%9A%84%E9%92%B1+%E6%B2%A1%E9%82%A3%E4%B9%88%E5%AE%B9%E6%98%93%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "近日，卫宁健康、创业慧康等多家医疗信息化企业公布三季报，归母净利润普遍亏损。起因是医院财政支付能力减弱、信息化预算收紧，项目招标及验收周期延长。此前行业曾经历多轮政策红利期，如今市场已从“不得不建”转为“没什么可建”，进入调整阶段。",
+        "badge": "热搜",
+        "signal": "7,522,210 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-123158",
+        "category": "security",
+        "title": "OpenBSD OpenSSH：OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123158",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-09T00:00:00.000Z",
+        "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+        "badge": "CVE-2026-123158",
+        "signal": "已遭利用 · 整改期限 2026-11-12"
       },
       {
         "id": "ai-hugging-face-55d059b88c6c576a",
@@ -441,37 +483,6 @@
         "source": "Hugging Face",
         "publishedAt": "2026-11-09T12:34:29.000Z",
         "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50439695",
-        "category": "dev",
-        "title": "Ableton Live 13",
-        "url": "https://www.ableton.com/en/live/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-10T12:58:04.000Z",
-        "badge": "HN",
-        "signal": "148 分 · 188 评论"
-      },
-      {
-        "id": "cn-baidu-9fbddd72f6f23936",
-        "category": "cn",
-        "title": "中国最长地铁环线来了",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%9C%80%E9%95%BF%E5%9C%B0%E9%93%81%E7%8E%AF%E7%BA%BF%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "近日，武汉地铁12号线全线开通运营。经中国城市轨道交通协会确认，这是目前国内最长地铁环线。这一线路全长59.9公里，设37座地下车站，可与18条既有及规划线路实现换乘。",
-        "badge": "热搜",
-        "signal": "7,522,201 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-2h4w-29cv-2cmv",
-        "category": "security",
-        "title": "AG2: Newline injection in SandboxShellTool bypasses allowed=[...] and readonly=True, enabling arbitrary command execution",
-        "url": "https://github.com/advisories/GHSA-2h4w-29cv-2cmv",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-10T15:57:17.000Z",
-        "summary": "### Summary SandboxShellTool's restricted modes — allowed=[...] (explicit command allowlist) and readonly=True (implicit READONLY_COMMANDS allowlist) — can both be bypassed by embedding a newline character inside the command string. The fi…",
-        "badge": "CVE-2026-113663",
-        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "v2ex-1255940",
@@ -499,7 +510,7 @@
         "url": "https://github.com/meta/astryx",
         "description": "An open source design system that's fully customizable and agent ready",
         "language": "TypeScript",
-        "stars": 22222,
+        "stars": 22675,
         "starsToday": 3111
       },
       {
@@ -509,7 +520,7 @@
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
         "language": "Python",
-        "stars": 192045,
+        "stars": 192269,
         "starsToday": 1676
       },
       {
@@ -519,7 +530,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 114969,
+        "stars": 115120,
         "starsToday": 465
       },
       {
@@ -529,7 +540,7 @@
         "url": "https://github.com/anthropics/claude-quickstarts",
         "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
         "language": "Python",
-        "stars": 20369,
+        "stars": 20470,
         "starsToday": 530
       },
       {
@@ -539,7 +550,7 @@
         "url": "https://github.com/google-deepmind/mujoco",
         "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
         "language": "C++",
-        "stars": 17254,
+        "stars": 17331,
         "starsToday": 453
       },
       {
@@ -549,7 +560,7 @@
         "url": "https://github.com/we-promise/sure",
         "description": "The personal finance app for everyone (by everyone)",
         "language": "Ruby",
-        "stars": 11688,
+        "stars": 11888,
         "starsToday": 184
       },
       {
@@ -559,7 +570,7 @@
         "url": "https://github.com/homeassistant-ai/ha-mcp",
         "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
         "language": "Python",
-        "stars": 6471,
+        "stars": 6608,
         "starsToday": 792
       },
       {
@@ -569,7 +580,7 @@
         "url": "https://github.com/vercel-labs/agent-browser",
         "description": "Browser automation CLI for AI agents",
         "language": "Rust",
-        "stars": 49046,
+        "stars": 49165,
         "starsToday": 775
       },
       {
@@ -579,7 +590,7 @@
         "url": "https://github.com/sherlock-project/sherlock",
         "description": "Hunt down social media accounts by username across social networks",
         "language": "Python",
-        "stars": 108657,
+        "stars": 108892,
         "starsToday": 2387
       },
       {
@@ -589,10 +600,10 @@
         "url": "https://github.com/tokio-rs/topcoat",
         "description": "A batteries-included framework for building web apps",
         "language": "Rust",
-        "stars": 6689,
+        "stars": 6777,
         "starsToday": 192
       }
     ],
-    "updatedAt": "2026-11-10T17:51:17.528Z"
+    "updatedAt": "2026-11-10T23:23:37.935Z"
   }
 }
