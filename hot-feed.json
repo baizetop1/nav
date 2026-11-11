@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-11T09:23:59.501Z",
+  "generatedAt": "2026-11-11T15:13:40.368Z",
   "intelligence": {
-    "updatedAt": "2026-11-11T09:23:59.501Z",
+    "updatedAt": "2026-11-11T15:13:40.368Z",
     "items": [
       {
-        "id": "cn-item-6a53698b00353014",
+        "id": "cn-item-b4cb347b104bab3c",
         "category": "cn",
-        "title": "印度航空客机上发现劫机威胁纸条 乘客已全部撤离",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-11/10730275.shtml",
+        "title": "我国成功发射探源计划探路者卫星",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-11/10730404.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-11T08:51:53.000Z",
-        "summary": "中新网11月11日电 据印度报业托拉斯报道，印度航空公司一架飞往孟买的客机11日上午起飞前，在机上洗手间发现一张劫机威胁纸条。机场随即启动安保预案，机上乘客全部撤离，飞机被转移至机场隔离区。",
+        "publishedAt": "2026-11-11T12:04:08.000Z",
+        "summary": "中新网北京11月11日电 (马帅莎 张艳)北京时间11月11日19时41分，我国在酒泉卫星发射中心使用长征二号丁运载火箭，成功将探源计划探路者卫星发射升空，卫星顺利进入预定轨道，发射任务取得圆满成功。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50449748",
+        "id": "hn-50452455",
         "category": "dev",
-        "title": "Protecting SSH Keys with macOS Secure Enclave",
-        "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
+        "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+        "url": "https://pietromiotti.com/latest/maya-site/?maya",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T04:28:57.000Z",
+        "publishedAt": "2026-11-11T12:05:22.000Z",
         "badge": "HN",
-        "signal": "178 分 · 64 评论"
+        "signal": "446 分 · 165 评论"
       },
       {
-        "id": "cn-it-12ea05613195448d",
+        "id": "cn-it-8ec2a4121e7cfcf8",
         "category": "cn",
-        "title": "微软 Project Zenith 正式上线，为 AMD 锐龙 AI Halo 带来开箱即用编程体验",
-        "url": "https://www.ithome.com/1/025/613.htm",
+        "title": "Xbox 版《GTA 6》预载文件出现 AMD FSR 4.1 线索，首发未必支持",
+        "url": "https://www.ithome.com/1/025/821.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-11T09:17:46.000Z",
-        "summary": "IT之家 11 月 11 日消息，AMD 当地时间 9 日宣布，Microsoft（微软）Project Zenith 率先登陆基于锐龙 AI Max+ PRO 495 处理器的新一代锐龙 AI Halo 开发者平台，其它锐龙 AI Max 设备也即将支持。 Project Zenith 将强大的开发者级硬件与预配置的 Windows 环境相结合， 旨在帮助开发者更快地进入实际工作 。其预装了涵盖各种语言和运行时环境的常用开发工具、源代码控制工具以及生产力工具，还配置了旨在…",
+        "publishedAt": "2026-11-11T15:02:56.000Z",
+        "summary": "IT之家 11 月 11 日消息，数据挖掘者最近一直在研究 Xbox 版《GTA 6》的预载文件，而近期发现的两项线索，让这款游戏的运行表现有了更多值得期待的地方。 IT之家注意到，在数据挖掘者 Tex2 分享的文件包中，出现了两个库文件，分别名为 amd_fidelityfx_loader_xbox.dll 和 amd_fidelityfx_upscaler_xbox.dll 。 这两个文件的名称与微软上周发布的 FSR 4.1 Xbox GDK 示例项目中的相关术语一致…",
         "badge": "IT之家"
       },
       {
@@ -67,34 +67,35 @@
         "signal": "HIGH · CVSS 7.7"
       },
       {
-        "id": "ai-google-deepmind-6d8eb3bcd497222d",
+        "id": "ai-google-deepmind-833534b672b8daa3",
         "category": "ai",
-        "title": "Gemini 4 Carbon is now available",
-        "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+        "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-11-10T16:03:47.000Z",
+        "publishedAt": "2026-11-11T15:00:15.000Z",
+        "summary": "Predicting how DNA sequences and their variations impact specific human cell types and disease.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256233",
+        "id": "v2ex-1256280",
         "category": "dev",
-        "title": "地球离开谁也照样转，你们就非得用 Claude？",
-        "url": "https://www.v2ex.com/t/1256233",
+        "title": "再聊 Claude 终极防封方案，持续更新被封情况",
+        "url": "https://www.v2ex.com/t/1256280",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T09:17:13.000Z",
-        "summary": "用上了能拿到什么结果？不用又有什么后果？",
+        "publishedAt": "2026-11-11T12:42:21.000Z",
+        "summary": "之前发过一个帖子介绍过我的方案： 这可能是除了肉身之外的终极 Claude 防封方法，应该没有之一 可以更新下情况，目前仍然没有任何一个号被封，都是 max 20x ，且新号上来就充，且每周额度用满，超过一个月。 关于注册和充值，有的号是找在非洲的朋友帮忙充值，有的是用的公司在美国的 team 账号。这个也可以同步下。 然后这个方案的核心除了注册支付干净外就是，不用 APP ，网页登录+静态住宅 IP+远程调用。 不一定符合大家的使用习惯，但是如果你想要用，起码用上，这肯定…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-3469d644bee7a1e4",
+        "id": "cn-baidu-a8d0aced6e691b3c",
         "category": "cn",
-        "title": "“取消外卖”？是何居心",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%8F%96%E6%B6%88%E5%A4%96%E5%8D%96%E2%80%9D%EF%BC%9F%E6%98%AF%E4%BD%95%E5%B1%85%E5%BF%83&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "秦始皇儿子的脸被复原了？专家发声",
+        "url": "https://www.baidu.com/s?wd=%E7%A7%A6%E5%A7%8B%E7%9A%87%E5%84%BF%E5%AD%90%E7%9A%84%E8%84%B8%E8%A2%AB%E5%A4%8D%E5%8E%9F%E4%BA%86%EF%BC%9F%E4%B8%93%E5%AE%B6%E5%8F%91%E5%A3%B0&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近期，短视频平台出现不少呼吁“取消外卖”的视频。经查实，这些内容是MCN机构为快速起号刻意炮制的噱头。视频刻意制造对立、煽动情绪，而外卖兼具便民、吸纳就业的价值，这类撕裂共识博流量的不良内容应当下架。",
+        "summary": "近日，西北大学公布秦陵陪葬墓一男性遗骸颅面复原成果。因遗骸死状惨烈且墓葬等级高，网友猜测其系秦始皇之子。专家解读称，“秦始皇之子”身份目前仍是考古学假说，复原图无法证明亲子关系。",
         "badge": "热搜",
-        "signal": "7,808,681 热度"
+        "signal": "7,809,444 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111793",
@@ -117,23 +118,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50441707",
+        "id": "hn-50452655",
         "category": "dev",
-        "title": "Smart home devices should work without the internet",
-        "url": "https://docodethatmatters.com/home-automation-overnight-success/",
+        "title": "Can a Linear Program Do Weight-Space Programming?",
+        "url": "https://nathan.rs/posts/weight-space-lp/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-10T15:25:20.000Z",
+        "publishedAt": "2026-11-11T12:30:17.000Z",
         "badge": "HN",
-        "signal": "921 分 · 332 评论"
+        "signal": "98 分 · 15 评论"
       },
       {
-        "id": "cn-item-5b3f060eda42ad92",
+        "id": "cn-item-6a53698b00353014",
         "category": "cn",
-        "title": "实体书店首次纳入图书馆总分馆体系 如何更好服务全民阅读？",
-        "url": "https://www.chinanews.com.cn/sh/2026/11-11/10730196.shtml",
+        "title": "印度航空客机上发现劫机威胁纸条 乘客已全部撤离",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-11/10730275.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-11T07:43:06.000Z",
-        "summary": "近日，中宣部等八部门联合印发《关于支持实体书店服务全民阅读的通知》，落实《全民阅读促进条例》和2026年政府工作报告相关部署。这份跨部门顶层文件，首次将实体书店纳入图书馆总分馆体系和一刻钟便民生活圈，为经营承压的实体书店打开从商业门店转向基层公共阅读阵地的转型空间。",
+        "publishedAt": "2026-11-11T08:51:53.000Z",
+        "summary": "中新网11月11日电 据印度报业托拉斯报道，印度航空公司一架飞往孟买的客机11日上午起飞前，在机上洗手间发现一张劫机威胁纸条。机场随即启动安保预案，机上乘客全部撤离，飞机被转移至机场隔离区。",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +159,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1256230",
+        "id": "v2ex-1256274",
         "category": "dev",
-        "title": "用 Claude 会上瘾吗？",
-        "url": "https://www.v2ex.com/t/1256230",
+        "title": "在 cursor 里选择 Opus5.5 和在 Claude code 里使用，效果一样吗？",
+        "url": "https://www.v2ex.com/t/1256274",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T09:08:55.000Z",
-        "summary": "我之前也用过 Claude ，后来被封了就一直在用 codex 。 Claude 确实好用，如臂指使，指哪打哪，但是也并不会让我被封两次还得上赶着去用，可能我的时间并没有那么值钱吧。 最后吐槽下最近 gpt 降智太严重了，感觉甚至不如 glm 了。",
+        "publishedAt": "2026-11-11T11:41:54.000Z",
+        "summary": "是不是除了速度慢一点，智力是一样的吗？",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-it-92691ab261c5c12a",
+        "id": "cn-it-864d729abe50d956",
         "category": "cn",
-        "title": "国内首个具身智能压力表全自动检定装置研发成功：效率提升 3.5 倍以上，中国石化牵头",
-        "url": "https://www.ithome.com/1/025/612.htm",
+        "title": "保时捷 CEO 骆明楷批评特斯拉 Roadster 发布会：我们不想搞任何特效或表演",
+        "url": "https://www.ithome.com/1/025/820.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-11T09:15:18.000Z",
-        "summary": "IT之家 11 月 11 日消息，中国石化今日宣布，近日，中国石化牵头成功研发国内首个具身智能压力表全自动检定装置。 据介绍，压力表是工业生产中感知压力的关键终端，在石油石化装置区几乎每条管线、每台机泵都装有指针压力表，示值准确直接关系生产本质安全。 据统计，天津石化全厂在用压力表约 2 万台，遍布全部装置区， 人工检定 4 块表一般需要 20 分钟左右 ， 且易产生误差 ，如何快速、准确地完成检定对装置安全平稳运行意义重大。 该装置可同时完成 4 块指针压力表全流程检定并…",
+        "publishedAt": "2026-11-11T15:01:31.000Z",
+        "summary": "IT之家 11 月 11 日消息，据彭博社今天（11 日）晚间报道，保时捷 CEO 骆明楷（Michael Leiters）批评特斯拉 Roadster 发布会过于追求噱头，并指出特斯拉展示的飞行汽车与保时捷 Mission S 概念车 面向不同的消费群体 。 骆明楷在柏林出席一场会议时直言：“我们不想搞任何特效或表演。”同时，他强调，保时捷希望通过新车 展示真正的技术创新 。 特斯拉与保时捷都在当地时间 10 月 15 日（IT之家注：北京时间均为 16 日上午）发布新车…",
         "badge": "IT之家"
       },
       {
@@ -190,34 +191,33 @@
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-google-deepmind-f321c904268bcef2",
+        "id": "ai-google-deepmind-6d8eb3bcd497222d",
         "category": "ai",
-        "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
-        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "title": "Gemini 4 Carbon is now available",
+        "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-11-10T12:02:28.000Z",
-        "summary": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+        "publishedAt": "2026-11-10T16:03:47.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50442736",
+        "id": "hn-50453763",
         "category": "dev",
-        "title": ".name Grandfathered",
-        "url": "https://neil.fraser.name/news/2026/11/10/",
+        "title": "Pharo in the Browser with WebAssembly",
+        "url": "https://massimo-nocentini.github.io/pharo-vm/world.html",
         "source": "Hacker News",
-        "publishedAt": "2026-11-10T16:37:44.000Z",
+        "publishedAt": "2026-11-11T14:21:27.000Z",
         "badge": "HN",
-        "signal": "821 分 · 178 评论"
+        "signal": "27 分 · 6 评论"
       },
       {
-        "id": "cn-baidu-8532286585ef1e84",
+        "id": "cn-baidu-f50217f1a866b09c",
         "category": "cn",
-        "title": "净水器骗局精准收割“养老钱”",
-        "url": "https://www.baidu.com/s?wd=%E5%87%80%E6%B0%B4%E5%99%A8%E9%AA%97%E5%B1%80%E7%B2%BE%E5%87%86%E6%94%B6%E5%89%B2%E2%80%9C%E5%85%BB%E8%80%81%E9%92%B1%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "山姆399元羽绒服被抢购",
+        "url": "https://www.baidu.com/s?wd=%E5%B1%B1%E5%A7%86399%E5%85%83%E7%BE%BD%E7%BB%92%E6%9C%8D%E8%A2%AB%E6%8A%A2%E8%B4%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，浙江警方通报净水器骗局：团伙非法获取200万余条个人信息，2023年10月至2025年3月以会销将不足千元净水器以近4000元卖给老年人，涉案金额900余万元。",
+        "summary": "近日，山姆会员商店上架的399元羽绒服因充绒量大、定价实惠引发抢购，线下门店女款售罄、男款断码。供货商回应称，目前只供货不零售，同款仅在山姆售卖。",
         "badge": "热搜",
-        "signal": "7,711,894 热度"
+        "signal": "7,714,264 热度"
       },
       {
         "id": "github-advisory-ghsa-fpxj-5c99-g7vj",
@@ -231,33 +231,33 @@
         "signal": "HIGH · CVSS 7.7"
       },
       {
-        "id": "ai-hugging-face-cb93d68b445c05b0",
+        "id": "ai-hugging-face-11568aa8dfcf9a3c",
         "category": "ai",
-        "title": "Pay for Hugging Face Hub with your Google Cloud Account",
-        "url": "https://huggingface.co/blog/hub-gcp-marketplace",
+        "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+        "url": "https://huggingface.co/blog/token-pooling",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "publishedAt": "2026-11-11T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256229",
+        "id": "v2ex-1256260",
         "category": "dev",
-        "title": "[推广/福利] 自建的高可用大模型 API 路由聚合，实测稳定低延迟，回帖送体验额度",
-        "url": "https://www.v2ex.com/t/1256229",
+        "title": "我想知道你们用 claude 被封以后钱会退回来吗",
+        "url": "https://www.v2ex.com/t/1256260",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T09:08:55.000Z",
-        "summary": "各位 V 友大家好， 在做独立开发和应用落地的过程中，经常遇到上游接口响应慢、并发受限、稳定性欠佳等问题。为了保证自己业务的调用质量，我们搭建了一套高可用的企业级 API 路由聚合平台，底层配置了多通道健康检查与热备切流，全部按实际 Token 计费。目前生产环境自跑验证了数月，现开放给有类似需求的开发者与团队体验。 ### 核心特性： - **真实稳定直出**：通道直连，不降智、不掺假模型，支持全流式低延迟响应。 - **全生态工具兼容**：标准兼容主流格式，开箱即用支持…",
+        "publishedAt": "2026-11-11T10:31:10.000Z",
+        "summary": "如果钱能退回来，那这是好事啊，用一段时间就退，岂不是可以白嫖了？ 如果钱不能退，那这么多账号一个月得多少钱啊，工资够吗",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-item-f393df9deea558d6",
+        "id": "cn-item-5b3f060eda42ad92",
         "category": "cn",
-        "title": "中国已与25个“一带一路”共建国家签署19个自贸协定",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-11/10730181.shtml",
+        "title": "实体书店首次纳入图书馆总分馆体系 如何更好服务全民阅读？",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-11/10730196.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-11T07:23:23.000Z",
-        "summary": "中新社北京11月11日电 (记者 王恩博)中国商务部综合司一级巡视员宋立洪11日在北京表示，截至目前，中国已与25个“一带一路”共建国家签署19个自贸协定。",
+        "publishedAt": "2026-11-11T07:43:06.000Z",
+        "summary": "近日，中宣部等八部门联合印发《关于支持实体书店服务全民阅读的通知》，落实《全民阅读促进条例》和2026年政府工作报告相关部署。这份跨部门顶层文件，首次将实体书店纳入图书馆总分馆体系和一刻钟便民生活圈，为经营承压的实体书店打开从商业门店转向基层公共阅读阵地的转型空间。",
         "badge": "中新网要闻"
       },
       {
@@ -282,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50445401",
+        "id": "hn-50453637",
         "category": "dev",
-        "title": "Scion is back and is going to sell a kei truck in America",
-        "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+        "title": "Atuin Threads: All your agent sessions on every machine",
+        "url": "https://blog.atuin.sh/threads-agent-sessions/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-10T19:50:46.000Z",
+        "publishedAt": "2026-11-11T14:10:46.000Z",
         "badge": "HN",
-        "signal": "466 分 · 311 评论"
+        "signal": "18 分 · 10 评论"
       },
       {
-        "id": "cn-it-b1f968fc15705202",
+        "id": "cn-it-6f9ae18246dfdabd",
         "category": "cn",
-        "title": "华为鸿蒙 HarmonyOS 7 (API 26.0.1)Developer Beta 开启定向招募，Mate 80 Pro 等机型可报名",
-        "url": "https://www.ithome.com/1/025/611.htm",
+        "title": "553mm 超薄机身：卡萨帝热泵洗烘一体机 10498 → 5500 元破冰新低",
+        "url": "https://www.ithome.com/1/025/819.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-11T09:10:12.000Z",
-        "summary": "IT之家 11 月 11 日消息， 华为鸿蒙 HarmonyOS 开发套件 26.0.1 Beta1 今日正式发布 ，该版本为 26.0.0 的增量版本，仅供对新增特性有需求的开发者尝鲜使用。 IT之家注意到， 华为开发者联盟已开启 HarmonyOS 7 (API 26.0.1)Developer Beta 定向招募 。开发者可通过活动提前获取版本体验新能力，开展应用开发、适配与调测，并反馈使用过程中的问题。 需要注意的是，本次活动仅面向开发者开放，优先面向已上架鸿蒙应用…",
+        "publishedAt": "2026-11-11T14:55:17.000Z",
+        "summary": "卡萨帝 · 揽光 GLD 热泵洗烘一体机 10kg，型号 CE AB10LWUGLDU1。 日常售价 10498 元，今日叠加 PLUS 立减 + 15% 国补后仅需 6104.2 元： 领 8.5 折洗衣机券： 点此查看 售价下方可选“ 家电组合购 ”任选 1 件家电一起加购下单 下单时选择“以旧换新 → 个护健康 → 普通牙刷 （无需回收）” 洗衣机实付 5900 元，今日下单官方返 300 元红包。 参与家电家居多买多返（售价下方可见活动标签），再返 100 元 E …",
         "badge": "IT之家"
       },
       {
@@ -313,35 +313,35 @@
         "signal": "HIGH · CVSS 7.7"
       },
       {
-        "id": "ai-google-deepmind-8827aad4505e69ef",
+        "id": "ai-google-deepmind-f321c904268bcef2",
         "category": "ai",
-        "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
-        "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+        "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-11-09T19:51:47.000Z",
-        "summary": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety",
+        "publishedAt": "2026-11-10T12:02:28.000Z",
+        "summary": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256221",
+        "id": "v2ex-1256233",
         "category": "dev",
-        "title": "ai 只是提效了，并没有让程序员更轻松 反而更加累了",
-        "url": "https://www.v2ex.com/t/1256221",
+        "title": "地球离开谁也照样转，你们就非得用 Claude？",
+        "url": "https://www.v2ex.com/t/1256233",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T08:54:01.000Z",
-        "summary": "自从公司裁员后 工作量大大增加，活没变，人少了。现在分过来一个任务 领导动不动就说你用 ai 怎么怎么一下 但就是不给 token 大家有这样的经历吗？",
+        "publishedAt": "2026-11-11T09:17:13.000Z",
+        "summary": "用上了能拿到什么结果？不用又有什么后果？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-baidu-6985cf8a0a3760e8",
+        "id": "cn-baidu-6130d64be319e73d",
         "category": "cn",
-        "title": "“十五五”增进民生福祉这么干",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%8D%81%E4%BA%94%E4%BA%94%E2%80%9D%E5%A2%9E%E8%BF%9B%E6%B0%91%E7%94%9F%E7%A6%8F%E7%A5%89%E8%BF%99%E4%B9%88%E5%B9%B2&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "三张“图”看开放中国新机遇",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%89%E5%BC%A0%E2%80%9C%E5%9B%BE%E2%80%9D%E7%9C%8B%E5%BC%80%E6%94%BE%E4%B8%AD%E5%9B%BD%E6%96%B0%E6%9C%BA%E9%81%87&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月10日，国家发展改革委举行奋进“十五五”系列新闻发布会，介绍保障和改善民生有关部署和落实举措。今年以来，国家发展改革委坚持尽力而为、量力而行，加强普惠性、基础性、兜底性民生建设，实施更加公平普惠、精准有力的社会政策，着力解决人民群众急难愁盼问题。",
+        "summary": "从进博会的这三张“图”，看开放中国新机遇。一张展位图，承载文化交流的巧思，展现中外双向对话；一份产品图，藏着贴近本土需求的心意，见证新品持续迭代；一张投资路线图，勾勒进阶轨迹，书写从“在中国卖”“在中国造”走向“在中国研”的创新故事。",
         "badge": "热搜",
-        "signal": "7,619,544 热度"
+        "signal": "7,618,300 热度"
       },
       {
         "id": "cisa-kev-cve-2026-116606",
@@ -355,32 +355,32 @@
         "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
-        "id": "ai-hugging-face-5f3963726dbe36e6",
+        "id": "ai-hugging-face-cb93d68b445c05b0",
         "category": "ai",
-        "title": "Decision Models in Hugging Face",
-        "url": "https://huggingface.co/blog/decision",
+        "title": "Pay for Hugging Face Hub with your Google Cloud Account",
+        "url": "https://huggingface.co/blog/hub-gcp-marketplace",
         "source": "Hugging Face",
         "publishedAt": "2026-11-10T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50451102",
+        "id": "hn-50451903",
         "category": "dev",
-        "title": "OSS projects banning AI-generated contributions",
-        "url": "https://osssaysno.com",
+        "title": "Using voltage glitching to unleash the A100 in my mining card",
+        "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T08:51:45.000Z",
+        "publishedAt": "2026-11-11T10:48:40.000Z",
         "badge": "HN",
-        "signal": "7 分 · 4 评论"
+        "signal": "106 分 · 43 评论"
       },
       {
-        "id": "cn-item-e6a61f62fa190fb0",
+        "id": "cn-item-f393df9deea558d6",
         "category": "cn",
-        "title": "东西问丨黄子坚：海外华人研究如何助力破解华人融入难题？",
-        "url": "https://www.chinanews.com.cn/dxw/2026/11-11/10730171.shtml",
+        "title": "中国已与25个“一带一路”共建国家签署19个自贸协定",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-11/10730181.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-11T07:22:44.000Z",
-        "summary": "中新社北京11月11日电 题：海外华人研究如何助力破解华人融入难题？",
+        "publishedAt": "2026-11-11T07:23:23.000Z",
+        "summary": "中新社北京11月11日电 (记者 王恩博)中国商务部综合司一级巡视员宋立洪11日在北京表示，截至目前，中国已与25个“一带一路”共建国家签署19个自贸协定。",
         "badge": "中新网要闻"
       },
       {
@@ -405,24 +405,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1256189",
+        "id": "v2ex-1256230",
         "category": "dev",
-        "title": "最近秋招陆陆续续面了一堆应届生，说点感受",
-        "url": "https://www.v2ex.com/t/1256189",
+        "title": "用 Claude 会上瘾吗？",
+        "url": "https://www.v2ex.com/t/1256230",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T07:28:26.000Z",
-        "summary": "整体水平是真的高。CCF A 一作的不少，两段大厂实习基本是标配，而且实习都是实打实做过东西的，能讲出细节。聊业务、聊领域、聊 Agent 怎么搭、评测怎么做，回答得全面也有自己的思考，简历和表达都比我们当年强很多。 但稍微往底层问一点，问题就出来了： LLM 接口的 token 分几类、计费为什么不一样，说不清楚 prefill 和 decode 分别在做什么，说不清楚 QKV 的八股答得很漂亮，但往下追问 KV cache 存的是什么、长上下文为什么慢，基本就答不上了 …",
+        "publishedAt": "2026-11-11T09:08:55.000Z",
+        "summary": "我之前也用过 Claude ，后来被封了就一直在用 codex 。 Claude 确实好用，如臂指使，指哪打哪，但是也并不会让我被封两次还得上赶着去用，可能我的时间并没有那么值钱吧。 最后吐槽下最近 gpt 降智太严重了，感觉甚至不如 glm 了。",
         "badge": "程序员",
-        "signal": "24 回复"
+        "signal": "16 回复"
       },
       {
-        "id": "cn-it-a5b40dd16f8d9359",
+        "id": "cn-it-d5a9fc0c39ebfac6",
         "category": "cn",
-        "title": "IDC：上半年中国液冷服务器收入同比增长 153.1%，开始按“柜”交付",
-        "url": "https://www.ithome.com/1/025/599.htm",
+        "title": "以旧换新 3999 → 2291 元：小米米家智能净烟机 3 Pro 国补直降，7 级大风力",
+        "url": "https://www.ithome.com/1/025/818.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-11T09:09:19.000Z",
-        "summary": "IT之家 11 月 11 日消息，IDC 今日发布报告称，过去两年，中国液冷服务器市场快速增长。IDC 中国液冷服务器追踪显示， 2026 年上半年中国液冷服务器市场厂商收入同比增长 153.1%，未来五年出货量年均复合增长率预计接近 49% 。 但比增速更值得注意的，是采购端正在发生的变化：越来越多高密度算力项目不再以“台”为单位选型，而是把计算节点、节点间互联、供电和柜内液冷配套作为一整套系统配置和交付。 机柜，正在从机房里的物理容器，变成算力采购的交付单元。 当整柜成…",
+        "publishedAt": "2026-11-11T14:49:11.000Z",
+        "summary": "【京东活动可能随时变更，需以实付款为准】 小米 · 米家智能净烟机 3 Pro 开售于 2026 年 8 月，官方定价 3999 元。 京东 11.11 大促期间，按下方步骤下单，叠加 PLUS 立减 + 15% 国补后仅需 2291 元： 领 8.7 折券： 点此查看 。 下单时选择“以旧换新 → 个护健康 → 普通牙刷 （无需回收）”补贴 200 元。 参与“多买多返”活动返 30 元 E 卡，晒单返 50 元京豆，社交平台种草返 50 元京豆（详询客服） 京东 小米 …",
         "badge": "IT之家"
       },
       {
@@ -437,33 +437,34 @@
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-google-deepmind-f09d7876c1e95fca",
+        "id": "ai-google-deepmind-8827aad4505e69ef",
         "category": "ai",
-        "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-        "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+        "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+        "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-11-05T17:05:16.000Z",
+        "publishedAt": "2026-11-09T19:51:47.000Z",
+        "summary": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50450007",
+        "id": "hn-50453474",
         "category": "dev",
-        "title": "Greg Kurtzer's Ginux is now a userspace kernel",
-        "url": "https://github.com/gmkurtzer/ginux",
+        "title": "I asked every TV manufacturer 17 questions about how they spy on you",
+        "url": "https://www.theverge.com/tech/1012372/tv-privacy-acr-questions",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T05:25:54.000Z",
+        "publishedAt": "2026-11-11T13:56:05.000Z",
         "badge": "HN",
-        "signal": "58 分 · 26 评论"
+        "signal": "73 分 · 31 评论"
       },
       {
-        "id": "cn-baidu-2b68ad9fa7e6e19a",
+        "id": "cn-baidu-5aee8e0ef65eb3d1",
         "category": "cn",
-        "title": "18岁“双11”不再疯狂",
-        "url": "https://www.baidu.com/s?wd=18%E5%B2%81%E2%80%9C%E5%8F%8C11%E2%80%9D%E4%B8%8D%E5%86%8D%E7%96%AF%E7%8B%82&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "钱去哪了？央行最新报告揭秘",
+        "url": "https://www.baidu.com/s?wd=%E9%92%B1%E5%8E%BB%E5%93%AA%E4%BA%86%EF%BC%9F%E5%A4%AE%E8%A1%8C%E6%9C%80%E6%96%B0%E6%8A%A5%E5%91%8A%E6%8F%AD%E7%A7%98&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "今年，走过18载的“双11”褪去狂热氛围，消费回归理性，促销周期持续拉长，消费者更倾向按需下单。AI赋能催生算力、智能硬件等全新消费品类，家政类服务订单走高，叠加秋假激活文旅消费，行业逐步告别流量竞赛，转向价值竞争。",
+        "summary": "11月11日，央行发布2026年第三季度中国货币政策执行报告。报告指出当前存款呈现定期化等特征，揭秘了“钱去哪了”。据悉，企业和居民存款更多分流用于配置股票、债券、理财、资管等金融产品，再回流银行形成大量非银行金融机构存款。",
         "badge": "热搜",
-        "signal": "7,524,228 热度"
+        "signal": "7,522,111 热度"
       },
       {
         "id": "github-advisory-ghsa-q6jf-24jf-m3cg",
@@ -477,24 +478,24 @@
         "signal": "HIGH · CVSS 7.3"
       },
       {
-        "id": "ai-hugging-face-ac8f18750241a65f",
+        "id": "ai-hugging-face-5f3963726dbe36e6",
         "category": "ai",
-        "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
-        "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+        "title": "Decision Models in Hugging Face",
+        "url": "https://huggingface.co/blog/decision",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-09T15:05:57.000Z",
+        "publishedAt": "2026-11-10T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256180",
+        "id": "v2ex-1256229",
         "category": "dev",
-        "title": "Vibe coding 时代大家还用多个屏幕干活吗",
-        "url": "https://www.v2ex.com/t/1256180",
+        "title": "[推广/福利] 自建的高可用大模型 API 路由聚合，实测稳定低延迟，回帖送体验额度",
+        "url": "https://www.v2ex.com/t/1256229",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T07:05:42.000Z",
-        "summary": "RT 之前一直用两个屏幕, 主屏写代码调试, 副屏看文档/预览. 现在用 ai 自己不写代码之后, 本以为一个屏幕就够了, 但是 ai 做的任务越来越大, 等待的时间越来越长, 现在经常开多个项目并行干活, 反而更需要分屏了. 所以我直接向 claude 许愿 rust + GPUI + libghostty, vibe 了一个工具, 加上了分屏支持. https://github.com/condrdev/condr ai 许愿机还是太好用了!",
+        "publishedAt": "2026-11-11T09:08:55.000Z",
+        "summary": "各位 V 友大家好， 在做独立开发和应用落地的过程中，经常遇到上游接口响应慢、并发受限、稳定性欠佳等问题。为了保证自己业务的调用质量，我们搭建了一套高可用的企业级 API 路由聚合平台，底层配置了多通道健康检查与热备切流，全部按实际 Token 计费。目前生产环境自跑验证了数月，现开放给有类似需求的开发者与团队体验。 ### 核心特性： - **真实稳定直出**：通道直连，不降智、不掺假模型，支持全流式低延迟响应。 - **全生态工具兼容**：标准兼容主流格式，开箱即用支持…",
         "badge": "程序员",
-        "signal": "10 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -511,100 +512,98 @@
         "url": "https://github.com/meta/astryx",
         "description": "An open source design system that's fully customizable and agent ready",
         "language": "TypeScript",
-        "stars": 23901,
-        "starsToday": 3108
+        "stars": 24408,
+        "starsToday": 2842
       },
       {
-        "id": "github-f2db8404c222e36c",
+        "id": "github-9bbdee6458b94e56",
         "rank": 2,
-        "name": "anthropics/skills",
-        "url": "https://github.com/anthropics/skills",
-        "description": "Public repository for Agent Skills",
+        "name": "ZhuLinsen/daily_stock_analysis",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
         "language": "Python",
-        "stars": 192721,
-        "starsToday": 1679
+        "stars": 69922,
+        "starsToday": 960
+      },
+      {
+        "id": "github-3caf0281d82b0d14",
+        "rank": 3,
+        "name": "GoogleChrome/modern-web-guidance-src",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "language": "TypeScript",
+        "stars": 1511,
+        "starsToday": 133
+      },
+      {
+        "id": "github-1e71eaa4e6a3d3a0",
+        "rank": 4,
+        "name": "shadcn/improve",
+        "url": "https://github.com/shadcn/improve",
+        "description": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+        "stars": 10542,
+        "starsToday": 333
       },
       {
         "id": "github-1b1a194f4fbb088b",
-        "rank": 3,
+        "rank": 5,
         "name": "addyosmani/agent-skills",
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 115459,
-        "starsToday": 465
-      },
-      {
-        "id": "github-8ec12275679fc1ca",
-        "rank": 4,
-        "name": "anthropics/claude-quickstarts",
-        "url": "https://github.com/anthropics/claude-quickstarts",
-        "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
-        "language": "Python",
-        "stars": 20677,
-        "starsToday": 531
-      },
-      {
-        "id": "github-6bfefb3ce187dc60",
-        "rank": 5,
-        "name": "google-deepmind/mujoco",
-        "url": "https://github.com/google-deepmind/mujoco",
-        "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
-        "language": "C++",
-        "stars": 17539,
-        "starsToday": 456
-      },
-      {
-        "id": "github-20af17082264796d",
-        "rank": 6,
-        "name": "we-promise/sure",
-        "url": "https://github.com/we-promise/sure",
-        "description": "The personal finance app for everyone (by everyone)",
-        "language": "Ruby",
-        "stars": 12366,
-        "starsToday": 159
-      },
-      {
-        "id": "github-bb5a86943e3d8f4f",
-        "rank": 7,
-        "name": "homeassistant-ai/ha-mcp",
-        "url": "https://github.com/homeassistant-ai/ha-mcp",
-        "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
-        "language": "Python",
-        "stars": 6896,
-        "starsToday": 790
+        "stars": 115655,
+        "starsToday": 788
       },
       {
         "id": "github-7806f76343b67d4b",
-        "rank": 8,
+        "rank": 6,
         "name": "vercel-labs/agent-browser",
         "url": "https://github.com/vercel-labs/agent-browser",
         "description": "Browser automation CLI for AI agents",
         "language": "Rust",
-        "stars": 49505,
-        "starsToday": 780
+        "stars": 49664,
+        "starsToday": 712
       },
       {
-        "id": "github-b8026c2a12555d5d",
-        "rank": 9,
-        "name": "sherlock-project/sherlock",
-        "url": "https://github.com/sherlock-project/sherlock",
-        "description": "Hunt down social media accounts by username across social networks",
+        "id": "github-20af17082264796d",
+        "rank": 7,
+        "name": "we-promise/sure",
+        "url": "https://github.com/we-promise/sure",
+        "description": "The personal finance app for everyone (by everyone)",
+        "language": "Ruby",
+        "stars": 12627,
+        "starsToday": 1079
+      },
+      {
+        "id": "github-bb5a86943e3d8f4f",
+        "rank": 8,
+        "name": "homeassistant-ai/ha-mcp",
+        "url": "https://github.com/homeassistant-ai/ha-mcp",
+        "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
         "language": "Python",
-        "stars": 109616,
-        "starsToday": 2393
+        "stars": 7062,
+        "starsToday": 640
       },
       {
-        "id": "github-49f70efca78ce916",
+        "id": "github-d038df16c3cff44f",
+        "rank": 9,
+        "name": "openai/codex-security",
+        "url": "https://github.com/openai/codex-security",
+        "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+        "language": "TypeScript",
+        "stars": 11485,
+        "starsToday": 20
+      },
+      {
+        "id": "github-0aed47ffa29c703d",
         "rank": 10,
-        "name": "tokio-rs/topcoat",
-        "url": "https://github.com/tokio-rs/topcoat",
-        "description": "A batteries-included framework for building web apps",
-        "language": "Rust",
-        "stars": 7013,
-        "starsToday": 192
+        "name": "TheAlgorithms/Java",
+        "url": "https://github.com/TheAlgorithms/Java",
+        "description": "All Algorithms implemented in Java",
+        "language": "Java",
+        "stars": 66905,
+        "starsToday": 39
       }
     ],
-    "updatedAt": "2026-11-11T09:23:59.501Z"
+    "updatedAt": "2026-11-11T15:13:40.368Z"
   }
 }
