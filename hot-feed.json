@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-11T15:13:40.368Z",
+  "generatedAt": "2026-11-11T21:58:56.994Z",
   "intelligence": {
-    "updatedAt": "2026-11-11T15:13:40.368Z",
+    "updatedAt": "2026-11-11T21:58:56.994Z",
     "items": [
       {
         "id": "cn-item-b4cb347b104bab3c",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50452455",
+        "id": "hn-50456631",
         "category": "dev",
-        "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
-        "url": "https://pietromiotti.com/latest/maya-site/?maya",
+        "title": "AWS emulator",
+        "url": "https://github.com/aws/aws-emulator",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T12:05:22.000Z",
+        "publishedAt": "2026-11-11T18:21:38.000Z",
         "badge": "HN",
-        "signal": "446 分 · 165 评论"
+        "signal": "480 分 · 163 评论"
       },
       {
-        "id": "cn-it-8ec2a4121e7cfcf8",
+        "id": "cn-it-9522baff3bea9108",
         "category": "cn",
-        "title": "Xbox 版《GTA 6》预载文件出现 AMD FSR 4.1 线索，首发未必支持",
-        "url": "https://www.ithome.com/1/025/821.htm",
+        "title": "沈阳背景叙事解谜《Hope in the City》Steam 发售：首发特惠 ¥68.4，首日加入 XGP",
+        "url": "https://www.ithome.com/1/025/824.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-11T15:02:56.000Z",
-        "summary": "IT之家 11 月 11 日消息，数据挖掘者最近一直在研究 Xbox 版《GTA 6》的预载文件，而近期发现的两项线索，让这款游戏的运行表现有了更多值得期待的地方。 IT之家注意到，在数据挖掘者 Tex2 分享的文件包中，出现了两个库文件，分别名为 amd_fidelityfx_loader_xbox.dll 和 amd_fidelityfx_upscaler_xbox.dll 。 这两个文件的名称与微软上周发布的 FSR 4.1 Xbox GDK 示例项目中的相关术语一致…",
+        "publishedAt": "2026-11-11T18:13:16.000Z",
+        "summary": "IT之家 11 月 12 日消息，Lofty Sky Entertainment Inc. 开发、Lofty Sky Entertainment Inc. 与 NAGA Games 联合发行的叙事解谜游戏《Hope in the City》已于 11 月 11 日正式登陆 Steam 平台，国区现已开放购买，商品页（ https://store.steampowered.com/app/3610790/Hope_in_the_City/ ）已可访问，未锁国区。 游戏同步登陆…",
         "badge": "IT之家"
       },
       {
@@ -77,15 +77,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256280",
+        "id": "v2ex-1256302",
         "category": "dev",
-        "title": "再聊 Claude 终极防封方案，持续更新被封情况",
-        "url": "https://www.v2ex.com/t/1256280",
+        "title": "如何判断一个 skill 是真正有用还是 slop？",
+        "url": "https://www.v2ex.com/t/1256302",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T12:42:21.000Z",
-        "summary": "之前发过一个帖子介绍过我的方案： 这可能是除了肉身之外的终极 Claude 防封方法，应该没有之一 可以更新下情况，目前仍然没有任何一个号被封，都是 max 20x ，且新号上来就充，且每周额度用满，超过一个月。 关于注册和充值，有的号是找在非洲的朋友帮忙充值，有的是用的公司在美国的 team 账号。这个也可以同步下。 然后这个方案的核心除了注册支付干净外就是，不用 APP ，网页登录+静态住宅 IP+远程调用。 不一定符合大家的使用习惯，但是如果你想要用，起码用上，这肯定…",
+        "publishedAt": "2026-11-11T15:58:04.000Z",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-a8d0aced6e691b3c",
@@ -95,7 +94,7 @@
         "source": "百度热搜",
         "summary": "近日，西北大学公布秦陵陪葬墓一男性遗骸颅面复原成果。因遗骸死状惨烈且墓葬等级高，网友猜测其系秦始皇之子。专家解读称，“秦始皇之子”身份目前仍是考古学假说，复原图无法证明亲子关系。",
         "badge": "热搜",
-        "signal": "7,809,444 热度"
+        "signal": "7,809,764 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111793",
@@ -118,14 +117,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50452655",
+        "id": "hn-50450488",
         "category": "dev",
-        "title": "Can a Linear Program Do Weight-Space Programming?",
-        "url": "https://nathan.rs/posts/weight-space-lp/",
+        "title": "Tim Peters has died",
+        "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T12:30:17.000Z",
+        "publishedAt": "2026-11-11T07:03:17.000Z",
         "badge": "HN",
-        "signal": "98 分 · 15 评论"
+        "signal": "655 分 · 65 评论"
       },
       {
         "id": "cn-item-6a53698b00353014",
@@ -159,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1256274",
+        "id": "v2ex-1256300",
         "category": "dev",
-        "title": "在 cursor 里选择 Opus5.5 和在 Claude code 里使用，效果一样吗？",
-        "url": "https://www.v2ex.com/t/1256274",
+        "title": "大家看看我写的 rust 版本的 agent,名字 rpi，我实测 30 个进程实际使用内存占用极低",
+        "url": "https://www.v2ex.com/t/1256300",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T11:41:54.000Z",
-        "summary": "是不是除了速度慢一点，智力是一样的吗？",
+        "publishedAt": "2026-11-11T15:16:14.000Z",
+        "summary": "无聊测试了一下内存占用，感觉可以考虑发展下 nas 和 边缘设备上使用，现在已经支持 musl 编译运行，欢迎体验 项目： pi-rust",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-864d729abe50d956",
+        "id": "cn-it-ad4fba0416bbe331",
         "category": "cn",
-        "title": "保时捷 CEO 骆明楷批评特斯拉 Roadster 发布会：我们不想搞任何特效或表演",
-        "url": "https://www.ithome.com/1/025/820.htm",
+        "title": "谷歌 DeepMind 发布 AlphaGenome 2 基因序列模型：识别致病变异能力提升近一倍",
+        "url": "https://www.ithome.com/1/025/822.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-11T15:01:31.000Z",
-        "summary": "IT之家 11 月 11 日消息，据彭博社今天（11 日）晚间报道，保时捷 CEO 骆明楷（Michael Leiters）批评特斯拉 Roadster 发布会过于追求噱头，并指出特斯拉展示的飞行汽车与保时捷 Mission S 概念车 面向不同的消费群体 。 骆明楷在柏林出席一场会议时直言：“我们不想搞任何特效或表演。”同时，他强调，保时捷希望通过新车 展示真正的技术创新 。 特斯拉与保时捷都在当地时间 10 月 15 日（IT之家注：北京时间均为 16 日上午）发布新车…",
+        "publishedAt": "2026-11-11T15:19:51.000Z",
+        "summary": "IT之家 11 月 11 日消息，谷歌 DeepMind 发布新一代 DNA 序列模型 AlphaGenome 2 ，可预测 DNA 序列及其变异对特定人体细胞类型的影响，为科研人员挖掘疾病的细胞驱动因素提供全新工具。 人体每个细胞携带相同的 DNA 蓝图，但不同细胞类型会通过开关不同基因完成特定功能。全球的人类细胞图谱项目已对数百万细胞的基因表达进行绘制，但预测细微 DNA 变异如何影响细胞基因表达，仍是尚未解决的难题。 此前谷歌已推出初代 AlphaGenome ，可预…",
         "badge": "IT之家"
       },
       {
@@ -200,14 +199,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50453763",
+        "id": "hn-50458900",
         "category": "dev",
-        "title": "Pharo in the Browser with WebAssembly",
-        "url": "https://massimo-nocentini.github.io/pharo-vm/world.html",
+        "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+        "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T14:21:27.000Z",
+        "publishedAt": "2026-11-11T21:24:35.000Z",
         "badge": "HN",
-        "signal": "27 分 · 6 评论"
+        "signal": "25 分 · 13 评论"
       },
       {
         "id": "cn-baidu-f50217f1a866b09c",
@@ -217,7 +216,7 @@
         "source": "百度热搜",
         "summary": "近日，山姆会员商店上架的399元羽绒服因充绒量大、定价实惠引发抢购，线下门店女款售罄、男款断码。供货商回应称，目前只供货不零售，同款仅在山姆售卖。",
         "badge": "热搜",
-        "signal": "7,714,264 热度"
+        "signal": "7,714,102 热度"
       },
       {
         "id": "github-advisory-ghsa-fpxj-5c99-g7vj",
@@ -240,15 +239,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256260",
+        "id": "v2ex-1256280",
         "category": "dev",
-        "title": "我想知道你们用 claude 被封以后钱会退回来吗",
-        "url": "https://www.v2ex.com/t/1256260",
+        "title": "再聊 Claude 终极防封方案，持续更新被封情况",
+        "url": "https://www.v2ex.com/t/1256280",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T10:31:10.000Z",
-        "summary": "如果钱能退回来，那这是好事啊，用一段时间就退，岂不是可以白嫖了？ 如果钱不能退，那这么多账号一个月得多少钱啊，工资够吗",
+        "publishedAt": "2026-11-11T12:42:21.000Z",
+        "summary": "之前发过一个帖子介绍过我的方案： 这可能是除了肉身之外的终极 Claude 防封方法，应该没有之一 可以更新下情况，目前仍然没有任何一个号被封，都是 max 20x ，且新号上来就充，且每周额度用满，超过一个月。 关于注册和充值，有的号是找在非洲的朋友帮忙充值，有的是用的公司在美国的 team 账号。这个也可以同步下。 然后这个方案的核心除了注册支付干净外就是，不用 APP ，网页登录+静态住宅 IP+远程调用。 不一定符合大家的使用习惯，但是如果你想要用，起码用上，这肯定…",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-item-5b3f060eda42ad92",
@@ -272,33 +271,33 @@
         "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
-        "id": "ai-openai-0f0020abcf733229",
+        "id": "ai-openai-55ff14dc4213127d",
         "category": "ai",
-        "title": "Helping caregivers use AI in everyday life",
-        "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+        "title": "JioStar’s chief architect on AI discovery at 500M-user scale",
+        "url": "https://openai.com/index/jiostar-vijay-seshadri",
         "source": "OpenAI",
-        "publishedAt": "2026-11-10T12:00:00.000Z",
-        "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
+        "publishedAt": "2026-11-11T00:00:00.000Z",
+        "summary": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50453637",
+        "id": "hn-50455394",
         "category": "dev",
-        "title": "Atuin Threads: All your agent sessions on every machine",
-        "url": "https://blog.atuin.sh/threads-agent-sessions/",
+        "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+        "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T14:10:46.000Z",
+        "publishedAt": "2026-11-11T16:38:44.000Z",
         "badge": "HN",
-        "signal": "18 分 · 10 评论"
+        "signal": "335 分 · 166 评论"
       },
       {
-        "id": "cn-it-6f9ae18246dfdabd",
+        "id": "cn-it-8ec2a4121e7cfcf8",
         "category": "cn",
-        "title": "553mm 超薄机身：卡萨帝热泵洗烘一体机 10498 → 5500 元破冰新低",
-        "url": "https://www.ithome.com/1/025/819.htm",
+        "title": "Xbox 版《GTA 6》预载文件出现 AMD FSR 4.1 线索，首发未必支持",
+        "url": "https://www.ithome.com/1/025/821.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-11T14:55:17.000Z",
-        "summary": "卡萨帝 · 揽光 GLD 热泵洗烘一体机 10kg，型号 CE AB10LWUGLDU1。 日常售价 10498 元，今日叠加 PLUS 立减 + 15% 国补后仅需 6104.2 元： 领 8.5 折洗衣机券： 点此查看 售价下方可选“ 家电组合购 ”任选 1 件家电一起加购下单 下单时选择“以旧换新 → 个护健康 → 普通牙刷 （无需回收）” 洗衣机实付 5900 元，今日下单官方返 300 元红包。 参与家电家居多买多返（售价下方可见活动标签），再返 100 元 E …",
+        "publishedAt": "2026-11-11T15:02:56.000Z",
+        "summary": "IT之家 11 月 11 日消息，数据挖掘者最近一直在研究 Xbox 版《GTA 6》的预载文件，而近期发现的两项线索，让这款游戏的运行表现有了更多值得期待的地方。 IT之家注意到，在数据挖掘者 Tex2 分享的文件包中，出现了两个库文件，分别名为 amd_fidelityfx_loader_xbox.dll 和 amd_fidelityfx_upscaler_xbox.dll 。 这两个文件的名称与微软上周发布的 FSR 4.1 Xbox GDK 示例项目中的相关术语一致…",
         "badge": "IT之家"
       },
       {
@@ -323,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256233",
+        "id": "v2ex-1256274",
         "category": "dev",
-        "title": "地球离开谁也照样转，你们就非得用 Claude？",
-        "url": "https://www.v2ex.com/t/1256233",
+        "title": "在 cursor 里选择 Opus5.5 和在 Claude code 里使用，效果一样吗？",
+        "url": "https://www.v2ex.com/t/1256274",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T09:17:13.000Z",
-        "summary": "用上了能拿到什么结果？不用又有什么后果？",
+        "publishedAt": "2026-11-11T11:41:54.000Z",
+        "summary": "是不是除了速度慢一点，智力是一样的吗？",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "7 回复"
       },
       {
         "id": "cn-baidu-6130d64be319e73d",
@@ -341,7 +340,7 @@
         "source": "百度热搜",
         "summary": "从进博会的这三张“图”，看开放中国新机遇。一张展位图，承载文化交流的巧思，展现中外双向对话；一份产品图，藏着贴近本土需求的心意，见证新品持续迭代；一张投资路线图，勾勒进阶轨迹，书写从“在中国卖”“在中国造”走向“在中国研”的创新故事。",
         "badge": "热搜",
-        "signal": "7,618,300 热度"
+        "signal": "7,617,684 热度"
       },
       {
         "id": "cisa-kev-cve-2026-116606",
@@ -364,14 +363,14 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50451903",
+        "id": "hn-50457230",
         "category": "dev",
-        "title": "Using voltage glitching to unleash the A100 in my mining card",
-        "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+        "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
+        "url": "https://termsheetplease.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T10:48:40.000Z",
+        "publishedAt": "2026-11-11T19:12:16.000Z",
         "badge": "HN",
-        "signal": "106 分 · 43 评论"
+        "signal": "119 分 · 55 评论"
       },
       {
         "id": "cn-item-f393df9deea558d6",
@@ -395,34 +394,34 @@
         "signal": "HIGH · CVSS 7.7"
       },
       {
-        "id": "ai-openai-991ad48e8559b2fe",
+        "id": "ai-openai-0f0020abcf733229",
         "category": "ai",
-        "title": "Introducing Businesses in ChatGPT",
-        "url": "https://openai.com/index/introducing-businesses-chatgpt",
+        "title": "Helping caregivers use AI in everyday life",
+        "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
         "source": "OpenAI",
-        "publishedAt": "2026-11-10T10:00:00.000Z",
-        "summary": "Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT.",
+        "publishedAt": "2026-11-10T12:00:00.000Z",
+        "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1256230",
+        "id": "v2ex-1256260",
         "category": "dev",
-        "title": "用 Claude 会上瘾吗？",
-        "url": "https://www.v2ex.com/t/1256230",
+        "title": "我想知道你们用 claude 被封以后钱会退回来吗",
+        "url": "https://www.v2ex.com/t/1256260",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T09:08:55.000Z",
-        "summary": "我之前也用过 Claude ，后来被封了就一直在用 codex 。 Claude 确实好用，如臂指使，指哪打哪，但是也并不会让我被封两次还得上赶着去用，可能我的时间并没有那么值钱吧。 最后吐槽下最近 gpt 降智太严重了，感觉甚至不如 glm 了。",
+        "publishedAt": "2026-11-11T10:31:10.000Z",
+        "summary": "如果钱能退回来，那这是好事啊，用一段时间就退，岂不是可以白嫖了？ 如果钱不能退，那这么多账号一个月得多少钱啊，工资够吗",
         "badge": "程序员",
-        "signal": "16 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-d5a9fc0c39ebfac6",
+        "id": "cn-it-864d729abe50d956",
         "category": "cn",
-        "title": "以旧换新 3999 → 2291 元：小米米家智能净烟机 3 Pro 国补直降，7 级大风力",
-        "url": "https://www.ithome.com/1/025/818.htm",
+        "title": "保时捷 CEO 骆明楷批评特斯拉 Roadster 发布会：我们不想搞任何特效或表演",
+        "url": "https://www.ithome.com/1/025/820.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-11T14:49:11.000Z",
-        "summary": "【京东活动可能随时变更，需以实付款为准】 小米 · 米家智能净烟机 3 Pro 开售于 2026 年 8 月，官方定价 3999 元。 京东 11.11 大促期间，按下方步骤下单，叠加 PLUS 立减 + 15% 国补后仅需 2291 元： 领 8.7 折券： 点此查看 。 下单时选择“以旧换新 → 个护健康 → 普通牙刷 （无需回收）”补贴 200 元。 参与“多买多返”活动返 30 元 E 卡，晒单返 50 元京豆，社交平台种草返 50 元京豆（详询客服） 京东 小米 …",
+        "publishedAt": "2026-11-11T15:01:31.000Z",
+        "summary": "IT之家 11 月 11 日消息，据彭博社今天（11 日）晚间报道，保时捷 CEO 骆明楷（Michael Leiters）批评特斯拉 Roadster 发布会过于追求噱头，并指出特斯拉展示的飞行汽车与保时捷 Mission S 概念车 面向不同的消费群体 。 骆明楷在柏林出席一场会议时直言：“我们不想搞任何特效或表演。”同时，他强调，保时捷希望通过新车 展示真正的技术创新 。 特斯拉与保时捷都在当地时间 10 月 15 日（IT之家注：北京时间均为 16 日上午）发布新车…",
         "badge": "IT之家"
       },
       {
@@ -447,14 +446,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50453474",
+        "id": "hn-50456791",
         "category": "dev",
-        "title": "I asked every TV manufacturer 17 questions about how they spy on you",
-        "url": "https://www.theverge.com/tech/1012372/tv-privacy-acr-questions",
+        "title": "Gemini Decisions API",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-11T13:56:05.000Z",
+        "publishedAt": "2026-11-11T18:32:42.000Z",
         "badge": "HN",
-        "signal": "73 分 · 31 评论"
+        "signal": "142 分 · 45 评论"
       },
       {
         "id": "cn-baidu-5aee8e0ef65eb3d1",
@@ -464,7 +463,7 @@
         "source": "百度热搜",
         "summary": "11月11日，央行发布2026年第三季度中国货币政策执行报告。报告指出当前存款呈现定期化等特征，揭秘了“钱去哪了”。据悉，企业和居民存款更多分流用于配置股票、债券、理财、资管等金融产品，再回流银行形成大量非银行金融机构存款。",
         "badge": "热搜",
-        "signal": "7,522,111 热度"
+        "signal": "7,520,907 热度"
       },
       {
         "id": "github-advisory-ghsa-q6jf-24jf-m3cg",
@@ -487,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256229",
+        "id": "v2ex-1256233",
         "category": "dev",
-        "title": "[推广/福利] 自建的高可用大模型 API 路由聚合，实测稳定低延迟，回帖送体验额度",
-        "url": "https://www.v2ex.com/t/1256229",
+        "title": "地球离开谁也照样转，你们就非得用 Claude？",
+        "url": "https://www.v2ex.com/t/1256233",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-11T09:08:55.000Z",
-        "summary": "各位 V 友大家好， 在做独立开发和应用落地的过程中，经常遇到上游接口响应慢、并发受限、稳定性欠佳等问题。为了保证自己业务的调用质量，我们搭建了一套高可用的企业级 API 路由聚合平台，底层配置了多通道健康检查与热备切流，全部按实际 Token 计费。目前生产环境自跑验证了数月，现开放给有类似需求的开发者与团队体验。 ### 核心特性： - **真实稳定直出**：通道直连，不降智、不掺假模型，支持全流式低延迟响应。 - **全生态工具兼容**：标准兼容主流格式，开箱即用支持…",
+        "publishedAt": "2026-11-11T09:17:13.000Z",
+        "summary": "用上了能拿到什么结果？不用又有什么后果？",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -512,7 +511,7 @@
         "url": "https://github.com/meta/astryx",
         "description": "An open source design system that's fully customizable and agent ready",
         "language": "TypeScript",
-        "stars": 24408,
+        "stars": 24801,
         "starsToday": 2842
       },
       {
@@ -522,8 +521,8 @@
         "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
         "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
         "language": "Python",
-        "stars": 69922,
-        "starsToday": 960
+        "stars": 70122,
+        "starsToday": 429
       },
       {
         "id": "github-3caf0281d82b0d14",
@@ -531,7 +530,7 @@
         "name": "GoogleChrome/modern-web-guidance-src",
         "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
         "language": "TypeScript",
-        "stars": 1511,
+        "stars": 1679,
         "starsToday": 133
       },
       {
@@ -540,7 +539,7 @@
         "name": "shadcn/improve",
         "url": "https://github.com/shadcn/improve",
         "description": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
-        "stars": 10542,
+        "stars": 10781,
         "starsToday": 333
       },
       {
@@ -550,7 +549,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 115655,
+        "stars": 115865,
         "starsToday": 788
       },
       {
@@ -560,7 +559,7 @@
         "url": "https://github.com/vercel-labs/agent-browser",
         "description": "Browser automation CLI for AI agents",
         "language": "Rust",
-        "stars": 49664,
+        "stars": 49805,
         "starsToday": 712
       },
       {
@@ -570,7 +569,7 @@
         "url": "https://github.com/we-promise/sure",
         "description": "The personal finance app for everyone (by everyone)",
         "language": "Ruby",
-        "stars": 12627,
+        "stars": 12859,
         "starsToday": 1079
       },
       {
@@ -580,7 +579,7 @@
         "url": "https://github.com/homeassistant-ai/ha-mcp",
         "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
         "language": "Python",
-        "stars": 7062,
+        "stars": 7279,
         "starsToday": 640
       },
       {
@@ -590,7 +589,7 @@
         "url": "https://github.com/openai/codex-security",
         "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
         "language": "TypeScript",
-        "stars": 11485,
+        "stars": 11651,
         "starsToday": 20
       },
       {
@@ -600,10 +599,10 @@
         "url": "https://github.com/TheAlgorithms/Java",
         "description": "All Algorithms implemented in Java",
         "language": "Java",
-        "stars": 66905,
-        "starsToday": 39
+        "stars": 66978,
+        "starsToday": 108
       }
     ],
-    "updatedAt": "2026-11-11T15:13:40.368Z"
+    "updatedAt": "2026-11-11T21:58:56.994Z"
   }
 }
