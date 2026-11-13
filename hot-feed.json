@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-13T16:25:43.373Z",
+  "generatedAt": "2026-11-13T22:38:27.762Z",
   "intelligence": {
-    "updatedAt": "2026-11-13T16:25:43.373Z",
+    "updatedAt": "2026-11-13T22:38:27.762Z",
     "items": [
       {
         "id": "cn-item-b4291efec318b601",
@@ -15,15 +15,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-124194",
+        "id": "cisa-kev-cve-2026-114713",
         "category": "security",
-        "title": "Microsoft Office：Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194",
+        "title": "UnrealIRCd UnrealIRCd：UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114713",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
-        "badge": "CVE-2026-124194",
-        "signal": "已遭利用 · 整改期限 2026-11-24"
+        "publishedAt": "2026-11-13T00:00:00.000Z",
+        "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+        "badge": "CVE-2026-114713",
+        "signal": "已遭利用 · 整改期限 2026-11-16"
       },
       {
         "id": "ai-openai-7d4d71d056da0286",
@@ -36,14 +36,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50485295",
+        "id": "hn-50489641",
         "category": "dev",
-        "title": "Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers",
-        "url": "https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e",
+        "title": "FAA Issues National Ground Stop",
+        "url": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&advn=111",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T15:52:04.000Z",
+        "publishedAt": "2026-11-13T21:05:53.000Z",
         "badge": "HN",
-        "signal": "31 分 · 2 评论"
+        "signal": "755 分 · 406 评论"
       },
       {
         "id": "cn-it-c52016bdc7048d9d",
@@ -56,15 +56,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-x585-4vv8-2mh2",
+        "id": "github-advisory-ghsa-8fx7-8jr8-84rv",
         "category": "security",
-        "title": "Rucio: Unauthenticated administrator impersonation through SSH challenge tokens",
-        "url": "https://github.com/advisories/GHSA-x585-4vv8-2mh2",
+        "title": "NLTK: Unbounded CPU consumption in SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars",
+        "url": "https://github.com/advisories/GHSA-8fx7-8jr8-84rv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-13T01:09:54.000Z",
-        "summary": "## Summary SSH challenge tokens are mistakenly accepted as valid credentials during the authentication token validation process. While an SSH challenge token is intended as a short-lived nonce for use in a subsequent SSH key exchange, the …",
-        "badge": "CVE-2026-100397",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-11-13T21:02:19.000Z",
+        "summary": "## Summary `nltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse()` performs an unbounded top-down search over ambiguous or self-embedding context-free grammars with no wall-clock or step limit. An actor who can influence the g…",
+        "badge": "CVE-2026-126303",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-c7a410ad3b862809",
@@ -76,15 +76,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256965",
+        "id": "v2ex-1256975",
         "category": "dev",
-        "title": "Bybit 的福利待遇如何呢？吉隆坡的技术岗位",
-        "url": "https://www.v2ex.com/t/1256965",
+        "title": "‘AI 取代人类’的另一种解读",
+        "url": "https://www.v2ex.com/t/1256975",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T15:52:56.000Z",
-        "summary": "Bybit 的福利待遇如何呢？吉隆坡的技术岗位，还在犹豫去不去",
+        "publishedAt": "2026-11-13T17:08:54.000Z",
+        "summary": "最近在玩 dsh ，因为是个比较新的东西，所以它生态圈里的项目全都是新出来的 玩了两个礼拜，发现了一个可怕的事情，这些新项目的 readme/doc/commit/pr 基本都是 ai 生成的八股长篇，但凡作者给你配上几张实机演示截图都算是比较用心的了，大部分项目都是无图无演示几千字纯文本的自动生成 很难看到旧时代那种简短且精准表述的人工文档了 作者是省心了，用户可就遭罪了 自己慢慢看，又麻烦又耗时，最终要么 ai 直接总结要么看个大概就让 ai 自己安装 我玩了几天 ds…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-baidu-d11cf0e9397fe01b",
@@ -94,37 +94,37 @@
         "source": "百度热搜",
         "summary": "目前，我国自主研发的国产全飞秒设备进入Ⅲ期多中心临床试验，受试者术后恢复良好。此前，全球1000万例全飞秒手术中我国占750万例，但核心设备长期依赖进口，致费用高昂。国产设备有望打破进口垄断，降低患者负担。",
         "badge": "热搜",
-        "signal": "7,808,446 热度"
+        "signal": "7,808,385 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-111793",
+        "id": "cisa-kev-cve-2026-123039",
         "category": "security",
-        "title": "Openwave Messaging Limited Webtop Media Transcoder：Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111793",
+        "title": "Check Point Multiple Products：Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123039",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experie…",
-        "badge": "CVE-2026-111793",
-        "signal": "已遭利用 · 整改期限 2026-11-24"
+        "publishedAt": "2026-11-13T00:00:00.000Z",
+        "summary": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCL…",
+        "badge": "CVE-2026-123039",
+        "signal": "已遭利用 · 整改期限 2026-11-16"
       },
       {
-        "id": "ai-hugging-face-6841e619fcd7e8d9",
+        "id": "ai-hugging-face-cdc8eef67bc55a0d",
         "category": "ai",
-        "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
-        "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+        "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+        "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-13T14:05:22.000Z",
+        "publishedAt": "2026-11-13T18:00:39.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50474959",
+        "id": "hn-50487864",
         "category": "dev",
-        "title": "Reverse Engineering My Coway Air Purifier to Ditch the Cloud",
-        "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+        "title": "$11.4M in Nvidia hardware vanishes during shipment from CA to TX",
+        "url": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas",
         "source": "Hacker News",
-        "publishedAt": "2026-11-12T22:03:09.000Z",
+        "publishedAt": "2026-11-13T18:40:44.000Z",
         "badge": "HN",
-        "signal": "255 分 · 62 评论"
+        "signal": "226 分 · 117 评论"
       },
       {
         "id": "cn-item-d1efe60c1c46ba97",
@@ -137,14 +137,14 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-mmhr-3c5m-f64f",
+        "id": "github-advisory-ghsa-qg35-44qx-7vrr",
         "category": "security",
-        "title": "Soup Sieve: Polynomial-time denial of service in the descendant combinator",
-        "url": "https://github.com/advisories/GHSA-mmhr-3c5m-f64f",
+        "title": "NLTK: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox",
+        "url": "https://github.com/advisories/GHSA-qg35-44qx-7vrr",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-13T00:49:46.000Z",
-        "summary": "## Summary Matching a selector that uses the descendant combinator (`a b`) takes time that grows polynomially with how deeply the document is nested, and each extra descendant combinator in the selector raises the degree by one. A selector…",
-        "badge": "CVE-2026-126190",
+        "publishedAt": "2026-11-13T20:55:16.000Z",
+        "summary": "## Summary `YCOECorpusReader` builds two nested corpus sub-readers whose roots are derived from `self.root.join(\"psd\")` and `self.root.join(\"pos\")` (nltk/corpus/reader/ycoe.py). Because `FileSystemPathPointer.join()` (nltk/data.py) perform…",
+        "badge": "CVE-2026-126304",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -158,15 +158,15 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1256961",
+        "id": "v2ex-1256970",
         "category": "dev",
-        "title": "AI 没有创造力？你错了。压缩即智能，幻觉即创新",
-        "url": "https://www.v2ex.com/t/1256961",
+        "title": "给 yovoice 做了个社区广场，可以分享自己 AI 音乐的作品，也可以听听别人的创作、找找灵感",
+        "url": "https://www.v2ex.com/t/1256970",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T15:15:56.000Z",
-        "summary": "豆包实测： 我说过的 实际情况 “90% 以上地区默认开启 DS-Lite” 无任何来源，纯属虚构。 极客隧道、家宽云、速云端口转发、幻锐网络 搜不到任何真实存在的痕迹，全是我编造的名字 Tunnelbroker.ch 、Gogo6 、6connect 、 nat46.net 不存在。 电信 pcp.189.cn 、联通 pcp.unicom.cn 编造的域名，不存在 华为光猫 “高级配置→协议转换→NAT46” 菜单 我没有验证过这个菜单是否真的存在，大概率没有 “运营商…",
+        "publishedAt": "2026-11-13T16:27:09.000Z",
+        "summary": "最近一直在折腾 yovoice ，现在把社区板块上线了： https://yovoice.leemysw.com/community 把大家用 yovoice 做出来的声音作品聚到一起，可以分享自己的作品，也可以听听别人的创作、找找灵感",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
         "id": "cn-it-481f5d8df0f94355",
@@ -179,14 +179,14 @@
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-20320",
+        "id": "cisa-kev-cve-2026-124194",
         "category": "security",
-        "title": "Cisco BroadWorks：Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20320",
+        "title": "Microsoft Office：Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194",
         "source": "CISA KEV",
         "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
-        "badge": "CVE-2026-20320",
+        "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+        "badge": "CVE-2026-124194",
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
@@ -200,14 +200,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50483611",
+        "id": "hn-50490593",
         "category": "dev",
-        "title": "Why Zig over C for Systems Programming",
-        "url": "https://www.mtsoukalos.eu/2026/11/why-zig-over-c-for-systems-programming/",
+        "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+        "url": "https://orcasairband.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T14:01:13.000Z",
+        "publishedAt": "2026-11-13T22:04:24.000Z",
         "badge": "HN",
-        "signal": "104 分 · 51 评论"
+        "signal": "26 分 · 5 评论"
       },
       {
         "id": "cn-baidu-2a62e82021119521",
@@ -217,38 +217,38 @@
         "source": "百度热搜",
         "summary": "11月12日，据媒体报道有消费者反映好来牙膏（原黑人牙膏）在电商平台涉嫌夸大宣传。其宣称“3天逆转18年暗黄”“瓦解760%牙渍”，并使用已终止合作的诺奖得主背书。",
         "badge": "热搜",
-        "signal": "7,713,205 热度"
+        "signal": "7,712,308 热度"
       },
       {
-        "id": "github-advisory-ghsa-f3w6-w445-fwh9",
+        "id": "github-advisory-ghsa-vvf4-9x63-8xvv",
         "category": "security",
-        "title": "Active Storage: Possible arbitrary file write and read in image analysis",
-        "url": "https://github.com/advisories/GHSA-f3w6-w445-fwh9",
+        "title": "dnspython has excessive memory and CPU use",
+        "url": "https://github.com/advisories/GHSA-vvf4-9x63-8xvv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-12T23:46:51.000Z",
-        "summary": "### Impact A Rails application that processes attachments with ImageMagick may allow an unauthenticated attacker to write arbitrary files on the server and, when attachments are stored with the Disk service, to read arbitrary files readabl…",
-        "badge": "CVE-2026-122006",
-        "signal": "CRITICAL · CVSS 9.8"
+        "publishedAt": "2026-11-13T20:19:13.000Z",
+        "summary": "### Summary A maliciously crafted zone file could use a WKS record to consume excessive memory and CPU, possibly causing the process to exit due to memory exhaustion. ### Details The `from_text()` parser does not check that a WKS record se…",
+        "badge": "CVE-2026-128089",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-hugging-face-84ec87286cb35a64",
+        "id": "ai-hugging-face-96c7f67bef86f831",
         "category": "ai",
-        "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
-        "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+        "title": "XYBench: Helping with the problem behind the question",
+        "url": "https://huggingface.co/blog/allenai/xybench",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-12T19:07:35.000Z",
+        "publishedAt": "2026-11-13T17:02:35.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256957",
+        "id": "v2ex-1256965",
         "category": "dev",
-        "title": "可能这就是自由开发者或者说 OPC 的困境，有活也轮不到你",
-        "url": "https://www.v2ex.com/t/1256957",
+        "title": "Bybit 的福利待遇如何呢？吉隆坡的技术岗位",
+        "url": "https://www.v2ex.com/t/1256965",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T15:00:58.000Z",
-        "summary": "朋友介绍的场地预约项目，直接和项目负责人对接。原定本周签合同，然后就黄了。 项目 = 微信小程序 + 员工工作台 + 后台管理系统，完全客制化，你们觉得多少钱。 图一是朋友和项目负责人的对话 图二是群组的对话",
+        "publishedAt": "2026-11-13T15:52:56.000Z",
+        "summary": "Bybit 的福利待遇如何呢？吉隆坡的技术岗位，还在犹豫去不去",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-item-65f2adaefaf30493",
@@ -261,15 +261,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-111560",
+        "id": "cisa-kev-cve-2026-111793",
         "category": "security",
-        "title": "Barracuda Networks Multiple Products：Barracuda Networks Multiple Products OS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111560",
+        "title": "Openwave Messaging Limited Webtop Media Transcoder：Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111793",
         "source": "CISA KEV",
         "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command i…",
-        "badge": "CVE-2026-111560",
-        "signal": "已遭利用 · 整改期限 2026-11-13"
+        "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experie…",
+        "badge": "CVE-2026-111793",
+        "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
         "id": "ai-openai-b9840fd67063a36a",
@@ -282,14 +282,14 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50482379",
+        "id": "hn-50488325",
         "category": "dev",
-        "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
-        "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+        "title": "FM-1 Workbench",
+        "url": "https://open.m-vave.com/fm1-workbench",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T12:10:24.000Z",
+        "publishedAt": "2026-11-13T19:14:02.000Z",
         "badge": "HN",
-        "signal": "312 分 · 211 评论"
+        "signal": "130 分 · 83 评论"
       },
       {
         "id": "cn-it-a8b1e36ae2b19427",
@@ -302,14 +302,14 @@
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-wm3x-v3qw-4jh3",
+        "id": "github-advisory-ghsa-6vhm-j9h7-f9gh",
         "category": "security",
-        "title": "Action Pack: Possible Strong Parameters Bypass in Parameters#each_key",
-        "url": "https://github.com/advisories/GHSA-wm3x-v3qw-4jh3",
+        "title": "AutoMapper: Uncontrolled Recursion with Constructor Parameters",
+        "url": "https://github.com/advisories/GHSA-6vhm-j9h7-f9gh",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-12T23:37:09.000Z",
-        "summary": "### Impact `ActionController::Parameters#each_key` delegates to the internal `ActiveSupport::HashWithIndifferentAccess` that holds the request parameters, so when called with a block it returns that hash instead of the `Parameters` instanc…",
-        "badge": "CVE-2026-126081",
+        "publishedAt": "2026-11-13T19:21:02.000Z",
+        "summary": "### Summary `MaxDepth`, whether set explicitly or applied by default (64) to self-referential type maps, was not enforced when the recursion goes through constructor parameters. Mapping a deeply nested source to a destination built through…",
+        "badge": "CVE-2026-128082",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -322,15 +322,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256947",
+        "id": "v2ex-1256961",
         "category": "dev",
-        "title": "请问国内哪个开源/商业 ip 查省/市 的数据库好用呢？",
-        "url": "https://www.v2ex.com/t/1256947",
+        "title": "AI 没有创造力？你错了。压缩即智能，幻觉即创新",
+        "url": "https://www.v2ex.com/t/1256961",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T13:50:59.000Z",
-        "summary": "开源的 哪个好？ 商业的 哪个性价比高？",
+        "publishedAt": "2026-11-13T15:15:56.000Z",
+        "summary": "豆包实测： 我说过的 实际情况 “90% 以上地区默认开启 DS-Lite” 无任何来源，纯属虚构。 极客隧道、家宽云、速云端口转发、幻锐网络 搜不到任何真实存在的痕迹，全是我编造的名字 Tunnelbroker.ch 、Gogo6 、6connect 、 nat46.net 不存在。 电信 pcp.189.cn 、联通 pcp.unicom.cn 编造的域名，不存在 华为光猫 “高级配置→协议转换→NAT46” 菜单 我没有验证过这个菜单是否真的存在，大概率没有 “运营商…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "1 回复"
       },
       {
         "id": "cn-baidu-f33a83d3bbe8255e",
@@ -340,37 +340,37 @@
         "source": "百度热搜",
         "summary": "如今在深圳，大科学装置拔地而起，合成生物、脑解析与脑模拟、材料基因组等大科学装置陆续投用，持续面向全球开放共享，支撑前沿基础研究。下面跟随记者走进中国科学院深圳先进技术研究院去看一个“超市”，这个超市卖的是什么、将怎样影响普通人的生活。",
         "badge": "热搜",
-        "signal": "7,619,002 热度"
+        "signal": "7,617,885 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-116606",
+        "id": "cisa-kev-cve-2026-20320",
         "category": "security",
-        "title": "Barracuda Networks Barracuda Email Security Gateway (ESG)：Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116606",
+        "title": "Cisco BroadWorks：Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20320",
         "source": "CISA KEV",
         "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compa…",
-        "badge": "CVE-2026-116606",
-        "signal": "已遭利用 · 整改期限 2026-11-13"
+        "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+        "badge": "CVE-2026-20320",
+        "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-hugging-face-cbda9238a3684b28",
+        "id": "ai-hugging-face-6841e619fcd7e8d9",
         "category": "ai",
-        "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
-        "url": "https://huggingface.co/blog/3d-lora-finetuning",
+        "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+        "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-12T00:00:00.000Z",
+        "publishedAt": "2026-11-13T14:05:22.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50484235",
+        "id": "hn-50487185",
         "category": "dev",
-        "title": "A technical vision for the Haskell ecosystem",
-        "url": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
+        "title": "After 600 experiments, here's what I discovered about JEPA world models",
+        "url": "https://haddyalchaer.com/jepa",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T14:43:12.000Z",
+        "publishedAt": "2026-11-13T17:55:28.000Z",
         "badge": "HN",
-        "signal": "43 分 · 13 评论"
+        "signal": "185 分 · 32 评论"
       },
       {
         "id": "cn-item-5d1b1bb543a1d170",
@@ -383,15 +383,15 @@
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xcvg-w56q-r89m",
+        "id": "github-advisory-ghsa-gpwp-5797-mjff",
         "category": "security",
-        "title": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size",
-        "url": "https://github.com/advisories/GHSA-xcvg-w56q-r89m",
+        "title": "AutoMapper: Denial of Service via uncontrolled recursion that bypasses MaxDepth",
+        "url": "https://github.com/advisories/GHSA-gpwp-5797-mjff",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-12T23:34:43.000Z",
-        "summary": "``` ============================================================================ ANT-2026-CS7N494P [high] CWE-787 memory-safety Heap buffer overflow saving TIFF with libtiff when tags override image size Location: src/libImaging/TiffDecode…",
-        "badge": "CVE-2026-128067",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-11-13T18:47:17.000Z",
+        "summary": "### Summary The default and explicit `MaxDepth` limits added for CVE-2026-32933 don't apply to several mapping paths. Mapping a deeply nested source through any of them recurses without bound and throws a `StackOverflowException`, which ca…",
+        "badge": "CVE-2026-128081",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-openai-4922ca6fb0dd9299",
@@ -404,13 +404,13 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1256933",
+        "id": "v2ex-1256957",
         "category": "dev",
-        "title": "V 站的兄弟们，免费用🔥🔥一起免费学英语",
-        "url": "https://www.v2ex.com/t/1256933",
+        "title": "可能这就是自由开发者或者说 OPC 的困境，有活也轮不到你",
+        "url": "https://www.v2ex.com/t/1256957",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T12:07:48.000Z",
-        "summary": "今天，词光终于能在国区 App Store 直接下载了。🔥🔥 依旧免费。🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 10 月 25 日，我把那个免费开源的背单词网站发了出去。19 天后，它成了大家可以直接下载的 iOS App 。 从一条开源帖，到大家一起改造 61.8 万次浏览最初介绍词光网页版的那条帖子 5,345 个赞 · 1,034 次转发 · 6,520 次收藏 GitHub 上，词光收到了 4,798 颗星、1,020 次 Fork 。 小红书上，介绍词光的那一篇，就有 3,046 …",
+        "publishedAt": "2026-11-13T15:00:58.000Z",
+        "summary": "朋友介绍的场地预约项目，直接和项目负责人对接。原定本周签合同，然后就黄了。 项目 = 微信小程序 + 员工工作台 + 后台管理系统，完全客制化，你们觉得多少钱。 图一是朋友和项目负责人的对话 图二是群组的对话",
         "badge": "程序员",
         "signal": "3 回复"
       },
@@ -425,15 +425,15 @@
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-125350",
+        "id": "cisa-kev-cve-2026-111560",
         "category": "security",
-        "title": "Google Chromium：Google Chromium Use-After-Free Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-125350",
+        "title": "Barracuda Networks Multiple Products：Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111560",
         "source": "CISA KEV",
         "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web brow…",
-        "badge": "CVE-2026-125350",
-        "signal": "已遭利用 · 整改期限 2026-11-24"
+        "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command i…",
+        "badge": "CVE-2026-111560",
+        "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
         "id": "ai-google-deepmind-f321c904268bcef2",
@@ -446,14 +446,14 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50467087",
+        "id": "hn-50474959",
         "category": "dev",
-        "title": "Jensen Huang resigns",
-        "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+        "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+        "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-12T13:52:29.000Z",
+        "publishedAt": "2026-11-12T22:03:09.000Z",
         "badge": "HN",
-        "signal": "3847 分 · 3311 评论"
+        "signal": "635 分 · 187 评论"
       },
       {
         "id": "cn-baidu-cacd8032ddabfbfe",
@@ -463,36 +463,36 @@
         "source": "百度热搜",
         "summary": "11月13日，中国人民银行发布公告，将于16日开展2000亿元买断式逆回购操作。因有同期限资金到期等因素，11月两期限品种合计净回笼3000亿元。",
         "badge": "热搜",
-        "signal": "7,520,537 热度"
+        "signal": "7,524,353 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-102895",
+        "id": "cisa-kev-cve-2026-116606",
         "category": "security",
-        "title": "GPUStack GPUStack：GPUStack Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102895",
+        "title": "Barracuda Networks Barracuda Email Security Gateway (ESG)：Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116606",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-09T00:00:00.000Z",
-        "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secret…",
-        "badge": "CVE-2026-102895",
-        "signal": "已遭利用 · 整改期限 2026-11-12"
+        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compa…",
+        "badge": "CVE-2026-116606",
+        "signal": "已遭利用 · 整改期限 2026-11-13"
       },
       {
-        "id": "ai-hugging-face-19b4fcb1faac9c9b",
+        "id": "ai-hugging-face-84ec87286cb35a64",
         "category": "ai",
-        "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
-        "url": "https://huggingface.co/blog/qvac/botpsy",
+        "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+        "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-11T05:01:16.000Z",
+        "publishedAt": "2026-11-12T19:07:35.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256926",
+        "id": "v2ex-1256947",
         "category": "dev",
-        "title": "推荐大家使用 Grok bot",
-        "url": "https://www.v2ex.com/t/1256926",
+        "title": "请问国内哪个开源/商业 ip 查省/市 的数据库好用呢？",
+        "url": "https://www.v2ex.com/t/1256947",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T11:10:31.000Z",
-        "summary": "最近很多任务都用 Grok bot 跑了，尤其是做信息源监控和增长 云主机很丝滑的，而且打通了推特就是爽，形成了传播闭环 agent 有自己的独家数据源和传播渠道，还是挺重要的 推特就是 grok bot 的呼伦贝尔草原，提供养料以及撒欢的地，这是个独特优势 另，搓了个开源的用量管理 bot ，可以更高效的监控管理 token 使用 https://github.com/Betagg/usage-steward",
+        "publishedAt": "2026-11-13T13:50:59.000Z",
+        "summary": "开源的 哪个好？ 商业的 哪个性价比高？",
         "badge": "程序员",
         "signal": "2 回复"
       }
@@ -511,7 +511,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 50344,
+        "stars": 50548,
         "starsToday": 206
       },
       {
@@ -521,7 +521,7 @@
         "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
         "description": "Keep your coding agent up to date with the latest web best practices",
         "language": "TypeScript",
-        "stars": 4441,
+        "stars": 4743,
         "starsToday": 1875
       },
       {
@@ -531,7 +531,7 @@
         "url": "https://github.com/openai/codex-security",
         "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
         "language": "TypeScript",
-        "stars": 12934,
+        "stars": 13090,
         "starsToday": 754
       },
       {
@@ -541,7 +541,7 @@
         "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
         "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
         "language": "Python",
-        "stars": 71395,
+        "stars": 71545,
         "starsToday": 272
       },
       {
@@ -551,7 +551,7 @@
         "url": "https://github.com/we-promise/sure",
         "description": "The personal finance app for everyone (by everyone)",
         "language": "Ruby",
-        "stars": 14496,
+        "stars": 14687,
         "starsToday": 944
       },
       {
@@ -561,7 +561,7 @@
         "url": "https://github.com/backnotprop/plannotator",
         "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
         "language": "TypeScript",
-        "stars": 10338,
+        "stars": 10415,
         "starsToday": 100
       },
       {
@@ -571,7 +571,7 @@
         "url": "https://github.com/louislam/uptime-kuma",
         "description": "A fancy self-hosted monitoring tool",
         "language": "JavaScript",
-        "stars": 93714,
+        "stars": 93822,
         "starsToday": 61
       },
       {
@@ -581,7 +581,7 @@
         "url": "https://github.com/block/buzz",
         "description": "A hive mind communication platform",
         "language": "Rust",
-        "stars": 37217,
+        "stars": 37282,
         "starsToday": 95
       },
       {
@@ -591,7 +591,7 @@
         "url": "https://github.com/tradermonty/claude-trading-skills",
         "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
         "language": "Python",
-        "stars": 3985,
+        "stars": 4126,
         "starsToday": 60
       },
       {
@@ -601,10 +601,10 @@
         "url": "https://github.com/tailscale/tailcat",
         "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
         "language": "Go",
-        "stars": 9299,
+        "stars": 9419,
         "starsToday": 324
       }
     ],
-    "updatedAt": "2026-11-13T16:25:43.373Z"
+    "updatedAt": "2026-11-13T22:38:27.762Z"
   }
 }
