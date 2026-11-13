@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-13T00:25:55.193Z",
+  "generatedAt": "2026-11-13T07:59:21.949Z",
   "intelligence": {
-    "updatedAt": "2026-11-13T00:25:55.193Z",
+    "updatedAt": "2026-11-13T07:59:21.949Z",
     "items": [
       {
-        "id": "cn-item-a1826e526bbb4247",
+        "id": "cn-item-932298f24e568562",
         "category": "cn",
-        "title": "东西问丨胡箫白：为什么中山路不仅遍布中国还“延伸”至海外？",
-        "url": "https://www.chinanews.com.cn/dxw/2026/11-12/10730849.shtml",
+        "title": "日媒呼吁坚持“无核三原则” 反对高市政府鲁莽行径",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-13/10731499.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-12T09:31:52.000Z",
-        "summary": "中新社南京11月12日电 题：为什么中山路不仅遍布中国还“延伸”至海外？",
+        "publishedAt": "2026-11-13T07:21:58.000Z",
+        "summary": "中新网11月13日电 近日，日本执政党自民党及其执政伙伴日本维新会就修订“安保三文件”启动了实务层面磋商。日本《赤旗报》13日批评称，谋求修改“无核三原则”是增加核战争风险的鲁莽行径。",
         "badge": "中新网要闻"
       },
       {
@@ -43,27 +43,27 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-12T13:52:29.000Z",
         "badge": "HN",
-        "signal": "2823 分 · 2674 评论"
+        "signal": "3416 分 · 3069 评论"
       },
       {
-        "id": "cn-it-c31499e882972d1e",
+        "id": "cn-it-9947afcb169cdbcd",
         "category": "cn",
-        "title": "IT早报 1113：英伟达宣布 CEO 黄仁勋即刻辞职；腾讯公关总监辟谣公司裁员 50%；长安汽车拟挂牌转让阿维塔 10% 股权；演员赵丽颖起诉红果短剧侵犯肖像权...",
-        "url": "https://www.ithome.com/1/026/470.htm",
+        "title": "玩家开箱《GTA6》盒装实体版游戏：盒内仅含下载码与封面海报，并未提供实体地图",
+        "url": "https://www.ithome.com/1/026/792.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-12T23:59:53.000Z",
-        "summary": "“IT早报”时间，大家好，现在是 2026 年 11 月 13 日星期五，今天的重要科技资讯有： 1. 英伟达：黄仁勋辞去总裁、首席执行官和董事会成员职务，即刻生效 英伟达现任执行副总裁兼首席财务官 Colette Kress 同意出任临时首席执行官。在正式继任者确定之前，Kress 将在继续担任执行副总裁兼首席财务官的同时，履行临时 CEO 职责。>> 查看详情 2. 腾讯公关总监张军回应公司裁员 50% 传闻：纯纯的误会和谣言 腾讯公关总监张军回应“腾讯裁员 50%”传…",
+        "publishedAt": "2026-11-13T07:37:33.000Z",
+        "summary": "IT之家 11 月 13 日消息，随着《GTA6》实体版开售，目前玩家们已陆续发布各种游戏盒开箱视频，相应包装盒仅包含数字下载码和一张特殊海报。 IT之家注意到，《GTA6》盒装实体版并未提供地图，仅带有游戏封面图的放大光面印刷品海报。作为参考，《GTA》先前历代作品实体版均随附游戏地图，而对于《GTA6》玩家来说，其只能购买价值 400 美元的 Goodtime State – Vice City Collection，才能获得实体地图。 其他方面，《GTA6》游戏盒右侧…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-f3w6-w445-fwh9",
+        "id": "github-advisory-ghsa-x585-4vv8-2mh2",
         "category": "security",
-        "title": "Active Storage: Possible arbitrary file write and read in image analysis",
-        "url": "https://github.com/advisories/GHSA-f3w6-w445-fwh9",
+        "title": "Rucio: Unauthenticated administrator impersonation through SSH challenge tokens",
+        "url": "https://github.com/advisories/GHSA-x585-4vv8-2mh2",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-12T23:46:51.000Z",
-        "summary": "### Impact A Rails application that processes attachments with ImageMagick may allow an unauthenticated attacker to write arbitrary files on the server and, when attachments are stored with the Disk service, to read arbitrary files readabl…",
-        "badge": "CVE-2026-122006",
+        "publishedAt": "2026-11-13T01:09:54.000Z",
+        "summary": "## Summary SSH challenge tokens are mistakenly accepted as valid credentials during the authentication token validation process. While an SSH challenge token is intended as a short-lived nonce for use in a subsequent SSH key exchange, the …",
+        "badge": "CVE-2026-100397",
         "signal": "CRITICAL · CVSS 9.8"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256662",
+        "id": "v2ex-1256856",
         "category": "dev",
-        "title": "cursor 月限额用完了，怎么办？",
-        "url": "https://www.v2ex.com/t/1256662",
+        "title": "做了一个免费的 AI 书签管理器，想听听大家还想要什么 AI 功能 #30",
+        "url": "https://www.v2ex.com/t/1256856",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T00:22:22.000Z",
-        "summary": "这月还没过半就用完了，后面可咋整。 You've reached your monthly limit. Set a new on-demand limit to continue.",
+        "publishedAt": "2026-11-13T07:55:44.000Z",
+        "summary": "先简单介绍下我做的这个工具： Linkit 是一款跨平台桌面书签管理器，本地优先存储，永久免费。目前已经有这些功能： AI 自动摘要：保存链接后自动提炼核心内容和关键结论 语义搜索：不记得标题也没关系，按意思就能搜到 知识图谱：可视化你收藏的链接之间的关联 主题空间：一个书签可以同时归入多个主题，支持自然语言一键策展 死链检测 + 重复书签合并 免费云端多设备同步（ Supabase RLS 行级安全隔离） Spotlight 全局呼出快速入库 一键导入 Chrome / …",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-baidu-5b96633abdad602e",
+        "id": "cn-baidu-db0d74898aa507d0",
         "category": "cn",
-        "title": "买来的副主任帽子 戴谁头上都是耻辱",
-        "url": "https://www.baidu.com/s?wd=%E4%B9%B0%E6%9D%A5%E7%9A%84%E5%89%AF%E4%B8%BB%E4%BB%BB%E5%B8%BD%E5%AD%90+%E6%88%B4%E8%B0%81%E5%A4%B4%E4%B8%8A%E9%83%BD%E6%98%AF%E8%80%BB%E8%BE%B1&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "新一轮大范围雨雪明夜起来袭",
+        "url": "https://www.baidu.com/s?wd=%E6%96%B0%E4%B8%80%E8%BD%AE%E5%A4%A7%E8%8C%83%E5%9B%B4%E9%9B%A8%E9%9B%AA%E6%98%8E%E5%A4%9C%E8%B5%B7%E6%9D%A5%E8%A2%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月10日，中华儿童文化艺术促进会两弹一星科普教育工作委员会声明称，网售该会“副主任”名额系个人编造的虚假信息，已报警。评论指出，买来的“副主任”帽子是耻辱，买卖头衔衍生灰色产业链暴露监管缺位，呼吁从严查处并健全制度源头堵漏。",
+        "summary": "11月13日，华南大到暴雨来袭，部分地区甚至有大暴雨，明天强降雨区域向东转移。14日夜间至17日，中东部新一轮大范围降水来袭，16日降水范围最大，兰州、银川、太原可能迎来今冬初雪。东北地区降雪更为猛烈，局地或有大暴雪、特大暴雪。",
         "badge": "热搜",
-        "signal": "7,809,033 热度"
+        "signal": "7,808,992 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111793",
@@ -117,34 +117,34 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50472038",
+        "id": "hn-50478515",
         "category": "dev",
-        "title": "Rust 1.100",
-        "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+        "title": "IceWM",
+        "url": "https://ice-wm.org/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-12T18:39:05.000Z",
+        "publishedAt": "2026-11-13T04:54:53.000Z",
         "badge": "HN",
-        "signal": "354 分 · 148 评论"
+        "signal": "110 分 · 56 评论"
       },
       {
-        "id": "cn-item-a9db5dd7b085ef4b",
+        "id": "cn-item-d0ec56fe8b56a286",
         "category": "cn",
-        "title": "《纪念孙中山先生诞辰160周年》纪念邮票首发",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-12/10730844.shtml",
+        "title": "同一张照片索赔三次 揭秘食品碰瓷新型敲诈",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-13/10731463.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-12T08:26:45.000Z",
-        "summary": "中新社广州11月12日电 (记者 程景伟)《纪念孙中山先生诞辰160周年》纪念邮票首发仪式12日在广州中山纪念堂园区举行。",
+        "publishedAt": "2026-11-13T06:10:56.000Z",
+        "summary": "一张假照片，一场恶意索赔。借食品安全名义索要高额赔偿的食品碰瓷，是本次深化扫黑除恶专项斗争重点打击的目标之一。浙江嵊州警方就破获一起食品碰瓷案，犯罪嫌疑人以“食品中吃出异物”为由，盯上了当地特产小笼包，用网络舆情施压，敲诈商家。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-wm3x-v3qw-4jh3",
+        "id": "github-advisory-ghsa-mmhr-3c5m-f64f",
         "category": "security",
-        "title": "Action Pack: Possible Strong Parameters Bypass in Parameters#each_key",
-        "url": "https://github.com/advisories/GHSA-wm3x-v3qw-4jh3",
+        "title": "Soup Sieve: Polynomial-time denial of service in the descendant combinator",
+        "url": "https://github.com/advisories/GHSA-mmhr-3c5m-f64f",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-12T23:37:09.000Z",
-        "summary": "### Impact `ActionController::Parameters#each_key` delegates to the internal `ActiveSupport::HashWithIndifferentAccess` that holds the request parameters, so when called with a block it returns that hash instead of the `Parameters` instanc…",
-        "badge": "CVE-2026-126081",
+        "publishedAt": "2026-11-13T00:49:46.000Z",
+        "summary": "## Summary Matching a selector that uses the descendant combinator (`a b`) takes time that grows polynomially with how deeply the document is nested, and each extra descendant combinator in the selector raises the degree by one. A selector…",
+        "badge": "CVE-2026-126190",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1256654",
+        "id": "v2ex-1256831",
         "category": "dev",
-        "title": "请问你们平时如果合理分配的 GPT 的额度？怎么样能省额度？谢谢。",
-        "url": "https://www.v2ex.com/t/1256654",
+        "title": "嫖 4.99 的 Gemini，暂停 GPT 一个月试试",
+        "url": "https://www.v2ex.com/t/1256831",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-12T23:19:36.000Z",
-        "summary": "怎么合理规划额度，PLUS 额度太少了。哪怕我只是轻量需求。",
+        "publishedAt": "2026-11-13T07:13:14.000Z",
+        "summary": "如题，之前双持 Gpt+Claude 20 刀档位用的很丝滑，现在 gpt 降智+速度慢，claude 被封个不停。Gemini 最近又一直上线，据说还不错，正在测试体验中，目前还有一个 15 刀首月的 X premium ，主要是看中 grok bot 很方便，甚至国内不用开 vpn 也能对话。不知道各位 v 友感觉这个方案如何",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "21 回复"
       },
       {
-        "id": "cn-it-b4018e8a89c602a4",
+        "id": "cn-it-6c68f9c039a23cca",
         "category": "cn",
-        "title": "Hugging Face CEO 哀叹黄仁勋从英伟达离职：“令人无比难过的一天”，承诺继续力挺开源 AI",
-        "url": "https://www.ithome.com/1/026/469.htm",
+        "title": "演示时连续 2 次撞墙：亚马逊 Ring 安防无人机取消手动控制，让 AI 全权接管",
+        "url": "https://www.ithome.com/1/026/791.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-12T23:56:58.000Z",
-        "summary": "IT之家 11 月 13 日消息，黄仁勋昨日（11 月 12 日）辞去英伟达总裁、首席执行官及董事职务，即刻生效。 Hugging Face 首席执行官克莱芒 · 德朗格（Clement Delangue）随即在领英发文，称这是“令人无比难过的一天”，并表示将继续更坚定地推动开源人工智能。 IT之家昨日报道，联合创始人黄仁勋已辞去英伟达公司总裁、首席执行官及董事职务，即日起生效；首席财务官科莱特 · 克雷斯将出任临时首席执行官，公司同时启动新任 CEO 遴选程序。 消息公布…",
+        "publishedAt": "2026-11-13T07:37:18.000Z",
+        "summary": "IT之家 11 月 13 日消息，科技媒体 Android Headline 昨日（11 月 12 日）发布博文， 报道称由于在演示过程中连续出现 2 次撞墙故障，亚马逊旗下智能家居品牌 Ring 确认其首款安防无人机摄像头 Drone Cam 不再开放手动操控功能。 IT之家曾于 11 月 10 日报道，亚马逊 Ring 推出 Drone Cam 家用安防无人机，配备 2K 摄像头，支持 148 度视角和 360 度旋转，弱光下可自动开启 LED 灯。用户可通过应用设置飞…",
         "badge": "IT之家"
       },
       {
@@ -200,35 +200,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50472260",
+        "id": "hn-50472038",
         "category": "dev",
-        "title": "Gemini 4 Hydrogen and Orchestrator",
-        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "title": "Rust 1.100",
+        "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-12T18:52:01.000Z",
+        "publishedAt": "2026-11-12T18:39:05.000Z",
         "badge": "HN",
-        "signal": "269 分 · 61 评论"
+        "signal": "627 分 · 239 评论"
       },
       {
-        "id": "cn-baidu-6698b89a6639aedc",
+        "id": "cn-baidu-331a4633832254a3",
         "category": "cn",
-        "title": "发悼念文配朴树图网友已设私密账号",
-        "url": "https://www.baidu.com/s?wd=%E5%8F%91%E6%82%BC%E5%BF%B5%E6%96%87%E9%85%8D%E6%9C%B4%E6%A0%91%E5%9B%BE%E7%BD%91%E5%8F%8B%E5%B7%B2%E8%AE%BE%E7%A7%81%E5%AF%86%E8%B4%A6%E5%8F%B7&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "40岁男子花4千元做96集AI短剧爆火",
+        "url": "https://www.baidu.com/s?wd=40%E5%B2%81%E7%94%B7%E5%AD%90%E8%8A%B14%E5%8D%83%E5%85%83%E5%81%9A96%E9%9B%86AI%E7%9F%AD%E5%89%A7%E7%88%86%E7%81%AB&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "此前，有网友发文称朴树去世引发关注。11月12日，记者致电朴树哥哥濮石求证，对方回应：“这不开玩笑吗，不可能。”随后原发网友澄清，配图是纪念别人并未说朴树去世，目前已下架视频并将账号设为私密。",
+        "summary": "四川成都40岁的白非空，原本是家居3D设计师，辞职后投入4000多元，花一个半月做出96集AI短剧《重生螳螂，觉醒无限吞噬进化》，上线后播放量破6亿。",
         "badge": "热搜",
-        "signal": "7,714,610 热度"
+        "signal": "7,712,324 热度"
       },
       {
-        "id": "github-advisory-ghsa-xcvg-w56q-r89m",
+        "id": "github-advisory-ghsa-f3w6-w445-fwh9",
         "category": "security",
-        "title": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size",
-        "url": "https://github.com/advisories/GHSA-xcvg-w56q-r89m",
+        "title": "Active Storage: Possible arbitrary file write and read in image analysis",
+        "url": "https://github.com/advisories/GHSA-f3w6-w445-fwh9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-12T23:34:43.000Z",
-        "summary": "``` ============================================================================ ANT-2026-CS7N494P [high] CWE-787 memory-safety Heap buffer overflow saving TIFF with libtiff when tags override image size Location: src/libImaging/TiffDecode…",
-        "badge": "CVE-2026-128067",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-11-12T23:46:51.000Z",
+        "summary": "### Impact A Rails application that processes attachments with ImageMagick may allow an unauthenticated attacker to write arbitrary files on the server and, when attachments are stored with the Disk service, to read arbitrary files readabl…",
+        "badge": "CVE-2026-122006",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
         "id": "ai-hugging-face-cbda9238a3684b28",
@@ -240,23 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256652",
+        "id": "v2ex-1256817",
         "category": "dev",
-        "title": "codex tibo 说重置，我还没收到，你们呢？",
-        "url": "https://www.v2ex.com/t/1256652",
+        "title": "Opus 5.5 也做不到一步到位啊",
+        "url": "https://www.v2ex.com/t/1256817",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-12T22:36:29.000Z",
+        "publishedAt": "2026-11-13T06:48:49.000Z",
+        "summary": "现在公司给开 claude 、codex 和 grokbot 。 主力开发使用 claude opus 5.5 ，然后 harness 本身有 review ， 但是 opus review 通过了之后，让同事用 sol-6.1 max 再 review ，还是会有一些边界问题。 头疼，来回拉扯耗时间。 佬们怎么解决这个问题的？",
         "badge": "程序员",
         "signal": "5 回复"
       },
       {
-        "id": "cn-item-c1db945d8841d159",
+        "id": "cn-item-3a733732fe14aceb",
         "category": "cn",
-        "title": "国务院任免国家工作人员",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-12/10730867.shtml",
+        "title": "警方通报上海一饭店“天价酒水账单”：系虚假视频，15人涉案被抓",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-13/10731459.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-12T08:17:56.000Z",
-        "summary": "中新网11月12日电 据人社部网站消息，国务院任免国家工作人员。",
+        "publishedAt": "2026-11-13T06:08:56.000Z",
+        "summary": "中新网11月13日电 据上海市公安局黄浦分局官方微博消息，近日，黄浦区某知名饭店所谓“天价酒水账单”引发网上热议。经查，外省市一互联网酒类销售公司负责人赵某某为博取关注、提升销量，组织王某某、董某、董某某等人利用AI软件篡改上述饭店账单金额，将饭店用酒改为自己公司的销售酒类，并制作虚假视频，通过控制账号、雇佣代发等方式在网络大量传播。",
         "badge": "中新网要闻"
       },
       {
@@ -281,34 +282,34 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50474361",
+        "id": "hn-50477649",
         "category": "dev",
-        "title": "Foundation Models framework",
-        "url": "https://developer.apple.com/foundation-models-framework/",
+        "title": "Brave Search API now accepts agentic payments via the x402 protocol",
+        "url": "https://brave.com/blog/search-api-agentic-payments/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-12T21:13:26.000Z",
+        "publishedAt": "2026-11-13T03:08:08.000Z",
         "badge": "HN",
-        "signal": "98 分 · 13 评论"
+        "signal": "76 分 · 38 评论"
       },
       {
-        "id": "cn-it-bf4cdfae1c41d026",
+        "id": "cn-it-24a590cade7fde15",
         "category": "cn",
-        "title": "华为智能门锁 2 系列全新升级鸿蒙 7.0：新增回家抓拍、通话变声等",
-        "url": "https://www.ithome.com/1/026/468.htm",
+        "title": "手指哪里控制哪里，问界新 M8 汽车搭载全维手势交互系统",
+        "url": "https://www.ithome.com/1/026/785.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-12T23:52:42.000Z",
-        "summary": "IT之家 11 月 13 日消息，华为 11 月 12 日宣布，华为智能门锁 2 系列全新升级鸿蒙 7.0，带来回家抓拍、通话变声、门铃呼叫车机三大功能。 IT之家附主要内容如下： 新增回家抓拍：家人 (小孩、老人等) 回家使用人脸或者掌静脉解锁时，自动抓拍家人回家画面，远程关注家人动态。 新增通话变声：支持变声与陌生人的对讲，守护独居女性安全。 新增门铃呼叫车机：行驶途中家中无人应门时，门锁自动呼叫车机，车主可通过车机与访客可视对讲。 升级机型如下： 华为智能门锁 2 华…",
+        "publishedAt": "2026-11-13T07:34:47.000Z",
+        "summary": "IT之家 11 月 13 日现场消息，鸿蒙智行问界新 M8 上市发布会于今日举行，华为董事、终端 BG CEO 何刚介绍， 问界新 M8 搭载全维手势交互系统 。 何刚介绍，问界新 M8 搭载全息空间感知网络， 舱内外多传感器融合感知 ，带来更加智能的交互体验。全维手势交互系统，车内车外都能控。 比如，用户用手指着车窗玻璃，告诉小艺“把窗户开到这里”，问界新 M8 就能把窗户打开到用户手指的位置。 或者，用户可以指着二排娱乐屏，让问界新 M8 展开屏幕，播放内容；前排屏幕内…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-73v3-wf97-vpgj",
+        "id": "github-advisory-ghsa-wm3x-v3qw-4jh3",
         "category": "security",
-        "title": "msgpack-ruby JRuby decoder makes uncapped header-count allocations; a 5-byte message forces multi-GiB OOM",
-        "url": "https://github.com/advisories/GHSA-73v3-wf97-vpgj",
+        "title": "Action Pack: Possible Strong Parameters Bypass in Parameters#each_key",
+        "url": "https://github.com/advisories/GHSA-wm3x-v3qw-4jh3",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-12T22:54:59.000Z",
-        "summary": "### Summary The **JRuby** implementation of msgpack (`msgpack` gem, `java` platform — pure Java decoder under `ext/java/`) sizes containers directly from the element count written in the message header, with **no cap at all**: no equivalen…",
-        "badge": "CVE-2026-126366",
+        "publishedAt": "2026-11-12T23:37:09.000Z",
+        "summary": "### Impact `ActionController::Parameters#each_key` delegates to the internal `ActiveSupport::HashWithIndifferentAccess` that holds the request parameters, so when called with a block it returns that hash instead of the `Parameters` instanc…",
+        "badge": "CVE-2026-126081",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -321,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256628",
+        "id": "v2ex-1256797",
         "category": "dev",
-        "title": "Gemini 你终于王者归来啦 (*^^)/",
-        "url": "https://www.v2ex.com/t/1256628",
+        "title": "Your account has been suspended 这次 A 社是杀疯了",
+        "url": "https://www.v2ex.com/t/1256797",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-12T15:57:31.000Z",
-        "summary": "Gemini 4 Carbon 开放，重回 T1 级别 coding 能力的 Gemini 太香了。反正我是被那个不说人话的 GPT/CODEX 恶心了好几个月了，终于可以换回 Gemini 咯。文本能力太优秀了。 就是价格有点高，但还是第一时间退订了 GPT ，开上了 Gemini Ultra 。",
+        "publishedAt": "2026-11-13T06:10:52.000Z",
+        "summary": "刚 2 个月的 pro 今天还是没能逃过，甚至于我昨天都没使用都封了，我也懒得折腾了，直接 codex+google 了",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-79a549fea9773131",
+        "id": "cn-baidu-8217477327775743",
         "category": "cn",
-        "title": "在深圳科技触手可及",
-        "url": "https://www.baidu.com/s?wd=%E5%9C%A8%E6%B7%B1%E5%9C%B3%E7%A7%91%E6%8A%80%E8%A7%A6%E6%89%8B%E5%8F%AF%E5%8F%8A&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "秋假带火研学游、亲子游",
+        "url": "https://www.baidu.com/s?wd=%E7%A7%8B%E5%81%87%E5%B8%A6%E7%81%AB%E7%A0%94%E5%AD%A6%E6%B8%B8%E3%80%81%E4%BA%B2%E5%AD%90%E6%B8%B8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "2026年APEC领导人会议周新闻中心启用，新闻中心发布的媒体参访线路以“科技、文化、生态、城市”为主题，全方位、多角度展示深圳城市风貌与发展活力。",
+        "summary": "在四川，多地中小学迎来秋假，联动周末形成4至5天的连休。文博研学、亲子出游、校内托管活动多样开展。国铁成都局累计加开246列列车保障出行。江苏常州也推出免票等文旅惠民举措，带动秋假亲子游热度攀升，轻松沉浸式短途游成热门选择。",
         "badge": "热搜",
-        "signal": "7,618,531 热度"
+        "signal": "7,617,183 热度"
       },
       {
         "id": "cisa-kev-cve-2026-116606",
@@ -362,24 +363,66 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50472490",
+        "id": "hn-50477231",
         "category": "dev",
-        "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
-        "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+        "title": "Nvidia employees petition to bring back Jensen Huang",
+        "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-12T19:05:33.000Z",
+        "publishedAt": "2026-11-13T02:16:24.000Z",
         "badge": "HN",
-        "signal": "181 分 · 89 评论"
+        "signal": "492 分 · 350 评论"
       },
       {
-        "id": "cn-item-75c428d6c87668e7",
+        "id": "cn-item-6a0637ddc8e9268a",
         "category": "cn",
-        "title": "事关技能人才评价 人社部向社会公开征求意见",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-12/10730834.shtml",
+        "title": "我国牵头的虚拟电厂一次调频国际标准正式立项",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-13/10731461.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-12T07:43:54.000Z",
-        "summary": "中新网11月12日电 据人力资源和社会保障部网站消息，为进一步改革完善技能人才评价制度，推动技能人才评价法治化建设，人力资源社会保障部研究起草了《技能人才评价条例(征求意见稿)》，现向社会公开征求意见。公众可以通过以下途径和方式提出意见：",
+        "publishedAt": "2026-11-13T06:06:46.000Z",
+        "summary": "记者今天了解到，我国牵头提出的虚拟电厂国际标准提案，近日在国际电工委员会(IEC)成功立项。这项名为《虚拟电厂 第4部分：一次调频功能要求与规范》的国际标准，聚焦虚拟电厂快速稳定电网的核心能力，联合多国专家制定全球统一技术准则，标志着我国在虚拟电厂国际标准化领域迈出关键一步。",
         "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-xcvg-w56q-r89m",
+        "category": "security",
+        "title": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size",
+        "url": "https://github.com/advisories/GHSA-xcvg-w56q-r89m",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-12T23:34:43.000Z",
+        "summary": "``` ============================================================================ ANT-2026-CS7N494P [high] CWE-787 memory-safety Heap buffer overflow saving TIFF with libtiff when tags override image size Location: src/libImaging/TiffDecode…",
+        "badge": "CVE-2026-128067",
+        "signal": "HIGH · CVSS 0.0"
+      },
+      {
+        "id": "ai-openai-d7c1da8cb7dc41da",
+        "category": "ai",
+        "title": "Supporting research on AI and children’s safety",
+        "url": "https://openai.com/index/children-first-declaration",
+        "source": "OpenAI",
+        "publishedAt": "2026-11-12T00:00:00.000Z",
+        "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1256796",
+        "category": "dev",
+        "title": "3 年部署在美国主机上 Claude、全远程使用 CLI 也挂了",
+        "url": "https://www.v2ex.com/t/1256796",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-13T06:06:28.000Z",
+        "summary": "3 年 Claude ，部署在美国主机上，全远程使用 CLI ，今天也挂了~ 同样使用方法，今天就弹出来认证了，认证完了果然停了",
+        "badge": "程序员",
+        "signal": "4 回复"
+      },
+      {
+        "id": "cn-it-d5b054eeb31d3e34",
+        "category": "cn",
+        "title": "三星 Galaxy XCover 8/FR 两款三防手机曝光，主打耐用与扫描能力",
+        "url": "https://www.ithome.com/1/026/784.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-11-13T07:25:12.000Z",
+        "summary": "IT之家 11 月 13 日消息，科技媒体 Android Headline 昨日（11 月 12 日）发布博文，报道称三星面向工业、物流及户外作业场景，正在推进 Galaxy XCover 8 与 Galaxy XCover FR / Scan 两款三防手机。 根据目前披露的海关记录数据，Galaxy XCover 8 仍以耐用性、可维护性和基础通信能力为核心，预计将配备一颗 500 万像素前置摄像头，规格与上一代 XCover 7 接近，面向需要防摔、防尘、防水及长时间…",
+        "badge": "IT之家"
       },
       {
         "id": "cisa-kev-cve-2026-125350",
@@ -393,35 +436,34 @@
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-openai-d7c1da8cb7dc41da",
+        "id": "ai-google-deepmind-f321c904268bcef2",
         "category": "ai",
-        "title": "Supporting research on AI and children’s safety",
-        "url": "https://openai.com/index/children-first-declaration",
-        "source": "OpenAI",
-        "publishedAt": "2026-11-12T00:00:00.000Z",
-        "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
-        "badge": "OpenAI"
+        "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-11-10T12:02:28.000Z",
+        "summary": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+        "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256619",
+        "id": "hn-50472260",
         "category": "dev",
-        "title": "Claude 和其他 AI 的区别好像是通一点点人性。",
-        "url": "https://www.v2ex.com/t/1256619",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-12T15:36:32.000Z",
-        "summary": "突发奇想问 Claude 一个问题，大意是先感慨现在 AI 写的代码简直完美，一次输出就能考虑到各种边界、性能以及优雅地实现，然后问我能不能做到像 Claude 一样编写出完美代码，如何才能做到？ Claude 回答的感觉有人味，就像和一个真实的人类对话，也 get 到了问题的重心。 以下是 Claude 的回答： 能做到一部分，但\"像我一样一次写出完美代码\"这个目标本身值得拆开看。 先说一个真相：你看到的是结果，不是过程。 我的输出看起来一气呵成，是因为你没看到那些不会出…",
-        "badge": "程序员",
-        "signal": "2 回复"
+        "title": "Gemini 4 Hydrogen and Orchestrator",
+        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-12T18:52:01.000Z",
+        "badge": "HN",
+        "signal": "400 分 · 107 评论"
       },
       {
-        "id": "cn-it-1af4206f1270cf94",
+        "id": "cn-baidu-0d90e29b1d196592",
         "category": "cn",
-        "title": "有望改写人类火箭复用史：SpaceX 星舰明日第 15 次试飞，“筷子”首次挑战双级捕获",
-        "url": "https://www.ithome.com/1/026/467.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-11-12T23:50:13.000Z",
-        "summary": "IT之家 11 月 13 日消息，SpaceX 星舰第 15 次试飞将于美国中部时间 11 月 13 日 16:45（北京时间 11 月 14 日 06:45）开启 75 分钟发射窗口，首次尝试把“超级重型”助推器和星舰飞船两级都送回发射场， 并由发射塔机械臂“筷子”捕获。若成功，它将成为人类首枚实现完整回收的轨道级运载系统。 SpaceX 正准备在得克萨斯州星基地执行星舰（Starship）第 15 次试飞。本次任务计划于美国中部时间 11 月 13 日 16:45 开启…",
-        "badge": "IT之家"
+        "title": "KFC列车诞生了",
+        "url": "https://www.baidu.com/s?wd=KFC%E5%88%97%E8%BD%A6%E8%AF%9E%E7%94%9F%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "11月25日起，齐齐哈尔至大连的原K550次列车将正式变更为V550次。此前，该车次因谐音撞上“V我50”热梗，肯德基社交账号火速认领。",
+        "badge": "热搜",
+        "signal": "7,524,391 热度"
       },
       {
         "id": "cisa-kev-cve-2026-102895",
@@ -435,47 +477,6 @@
         "signal": "已遭利用 · 整改期限 2026-11-12"
       },
       {
-        "id": "ai-google-deepmind-f321c904268bcef2",
-        "category": "ai",
-        "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
-        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-11-10T12:02:28.000Z",
-        "summary": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50470488",
-        "category": "dev",
-        "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
-        "url": "https://github.com/simpsoka/zigzag",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-12T17:02:42.000Z",
-        "badge": "HN",
-        "signal": "288 分 · 123 评论"
-      },
-      {
-        "id": "cn-baidu-7ec7f7a1e75ce044",
-        "category": "cn",
-        "title": "双11为何“无感”了",
-        "url": "https://www.baidu.com/s?wd=%E5%8F%8C11%E4%B8%BA%E4%BD%95%E2%80%9C%E6%97%A0%E6%84%9F%E2%80%9D%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "进入收官之际的2026年“双11”，让不少消费者感到“无感”。其核心在于消费增长引擎已从单一低价转向创新、服务与体验的多维比拼。居民消费更趋理性，更看重品质与长期价值，供给创新与模式升级正持续激发新动能。",
-        "badge": "热搜",
-        "signal": "7,523,847 热度"
-      },
-      {
-        "id": "cisa-kev-cve-2026-123158",
-        "category": "security",
-        "title": "OpenBSD OpenSSH：OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123158",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-09T00:00:00.000Z",
-        "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
-        "badge": "CVE-2026-123158",
-        "signal": "已遭利用 · 整改期限 2026-11-12"
-      },
-      {
         "id": "ai-hugging-face-11568aa8dfcf9a3c",
         "category": "ai",
         "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
@@ -485,15 +486,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256596",
+        "id": "v2ex-1256772",
         "category": "dev",
-        "title": "FlowPlay -mac ios 视频播放器",
-        "url": "https://www.v2ex.com/t/1256596",
+        "title": "整了个 Markdown 写简历的前端项目，模版漂亮，开源免费",
+        "url": "https://www.v2ex.com/t/1256772",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-12T13:42:22.000Z",
-        "summary": "FlowPlay 是一款免费的私人媒体播放器。可以导入本地视频、连接自己的 Emby 服务器，支持苹果 cms json xml 链接。以及按类型、年份和形态浏览媒体库。 mac ios 还在审核 下载： https://github.com/heiyuan0801/FlowPlay/releases/tag/v0.1.0",
+        "publishedAt": "2026-11-13T04:45:59.000Z",
+        "summary": "之前用的是 python 的，但是感觉部署太麻烦了。 最近刚好要整理简历，所以换成 javascript 的，调试花了不少时间。现在可以直接部署 cloudflare 上，简单明了，不用一直担心服务器不稳定啥的。最重要的是不需要服务器的费用。 现在使用起来还是比较顺滑的，界面简单漂亮。 大家给提点意见，在 github 上了。",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       }
     ]
   },
@@ -510,7 +511,7 @@
         "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
         "description": "Keep your coding agent up to date with the latest web best practices",
         "language": "TypeScript",
-        "stars": 2899,
+        "stars": 3718,
         "starsToday": 739
       },
       {
@@ -520,7 +521,7 @@
         "url": "https://github.com/openai/codex-security",
         "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
         "language": "TypeScript",
-        "stars": 12408,
+        "stars": 12688,
         "starsToday": 643
       },
       {
@@ -530,7 +531,7 @@
         "url": "https://github.com/nvm-sh/nvm",
         "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
         "language": "Shell",
-        "stars": 96010,
+        "stars": 96069,
         "starsToday": 63
       },
       {
@@ -540,7 +541,7 @@
         "url": "https://github.com/pookjw/HermesEnabler",
         "description": "Enable Hermès Watch Faces on any Apple Watch devices",
         "language": "Objective-C",
-        "stars": 1533,
+        "stars": 1658,
         "starsToday": 218
       },
       {
@@ -550,7 +551,7 @@
         "url": "https://github.com/we-promise/sure",
         "description": "The personal finance app for everyone (by everyone)",
         "language": "Ruby",
-        "stars": 13901,
+        "stars": 14209,
         "starsToday": 967
       },
       {
@@ -560,7 +561,7 @@
         "url": "https://github.com/QwenLM/qwen-code",
         "description": "An open-source AI coding agent that lives in your terminal.",
         "language": "TypeScript",
-        "stars": 29800,
+        "stars": 30006,
         "starsToday": 151
       },
       {
@@ -570,7 +571,7 @@
         "url": "https://github.com/ashhart/TensorFold",
         "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
         "language": "Zig",
-        "stars": 1934,
+        "stars": 2028,
         "starsToday": 54
       },
       {
@@ -580,7 +581,7 @@
         "url": "https://github.com/nodejs/node",
         "description": "Node.js JavaScript runtime ✨🐢🚀✨",
         "language": "JavaScript",
-        "stars": 123597,
+        "stars": 123659,
         "starsToday": 62
       },
       {
@@ -590,7 +591,7 @@
         "url": "https://github.com/addyosmani/agent-skills",
         "description": "Production-grade engineering skills for AI coding agents.",
         "language": "JavaScript",
-        "stars": 116661,
+        "stars": 116884,
         "starsToday": 816
       },
       {
@@ -600,10 +601,10 @@
         "url": "https://github.com/meta/astryx",
         "description": "An open source design system that's fully customizable and agent ready",
         "language": "TypeScript",
-        "stars": 26510,
+        "stars": 26932,
         "starsToday": 1830
       }
     ],
-    "updatedAt": "2026-11-13T00:25:55.193Z"
+    "updatedAt": "2026-11-13T07:59:21.949Z"
   }
 }
