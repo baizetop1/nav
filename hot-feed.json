@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-13T22:38:27.762Z",
+  "generatedAt": "2026-11-14T03:16:58.889Z",
   "intelligence": {
-    "updatedAt": "2026-11-13T22:38:27.762Z",
+    "updatedAt": "2026-11-14T03:16:58.889Z",
     "items": [
       {
-        "id": "cn-item-b4291efec318b601",
+        "id": "cn-item-e830787c4df4d019",
         "category": "cn",
-        "title": "常卫魏出任中国国家女子足球队主教练",
-        "url": "https://www.chinanews.com.cn/ty/2026/11-13/10731806.shtml",
+        "title": "美航空局解除航班停飞令 交通部长呼吁国会拨款500亿美元",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-14/10731919.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-13T13:36:00.000Z",
-        "summary": "中新社北京11月13日电 中国足球协会13日宣布，常卫魏出任中国国家女子足球队主教练，王军出任中国国家女子足球队第一助理教练。",
+        "publishedAt": "2026-11-14T03:01:22.000Z",
+        "summary": "中新网11月14日电 据美国有线电视新闻网(CNN)报道，当地时间13日，美国联邦航空局表示，美国全国航班停飞令已解除。此次航班停飞令持续超过4个小时。",
         "badge": "中新网要闻"
       },
       {
@@ -36,34 +36,34 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50489641",
+        "id": "hn-50492860",
         "category": "dev",
-        "title": "FAA Issues National Ground Stop",
-        "url": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&advn=111",
+        "title": "Elephants Found to Be Increasingly Isolated Leading to Fractured Social Networks",
+        "url": "https://today.ucsd.edu/story/elephants-found-to-be-increasingly-isolated-leading-to-fractured-social-networks",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T21:05:53.000Z",
+        "publishedAt": "2026-11-14T02:02:42.000Z",
         "badge": "HN",
-        "signal": "755 分 · 406 评论"
+        "signal": "29 分 · 2 评论"
       },
       {
-        "id": "cn-it-c52016bdc7048d9d",
+        "id": "cn-it-82477c0c4584d816",
         "category": "cn",
-        "title": "NearLink E1.0 也有新特性！华为 MatePad Pro 13.2 2023 等平板获推支持星闪电竞专链功能",
-        "url": "https://www.ithome.com/1/026/995.htm",
+        "title": "全家共用一块屏幕，私人消息怎么办？苹果解释 HomeView 如何守护隐私",
+        "url": "https://www.ithome.com/1/027/064.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-13T15:57:27.000Z",
-        "summary": "IT之家 11 月 13 日消息，在 6 月初的华为 nova 16 系列及全场景新品发布会上，华为终端 BG CEO 何刚带来了一款路由新品 —— 华为凌霄子母路由 Q7 电线版 。其搭载星闪技术，提供星闪电竞专链功能，支持华为手机 / 平板直连， 对比传统 WiFi，可降低游戏网络卡顿率 。 IT之家注意到，华为 MatePad Pro 13.2 2023 等机型推送了鸿蒙 HarmonyOS 7.0.0.111 SP16 版本升级，带来了星闪电竞专链功能 —— 支持与…",
+        "publishedAt": "2026-11-14T02:44:02.000Z",
+        "summary": "IT之家 11 月 14 日消息，昨日（11 月 13 日）接受科技媒体 TechRader 采访时，苹果硬件工程副总裁 Matthew Costello 与家居产品营销负责人 Cecilia Dantas 介绍了苹果首款智能家居中枢 HomeView 如何守住聊天隐私的。 IT之家援引博文介绍，在采访中，Costello 表示苹果 HomeView 无需手动登录、退出或切换个人资料，可以识别最多 6 名家庭成员。而且用户离开后，设备会撤下其个人信息。显示私人内容前，系统还…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-8fx7-8jr8-84rv",
+        "id": "github-advisory-ghsa-89p3-fcch-88ph",
         "category": "security",
-        "title": "NLTK: Unbounded CPU consumption in SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars",
-        "url": "https://github.com/advisories/GHSA-8fx7-8jr8-84rv",
+        "title": "NLTK: Quadratic-time CPU denial of service in CCG lexicon parser (fromstring) on wide bracket bodies and operator chains",
+        "url": "https://github.com/advisories/GHSA-89p3-fcch-88ph",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-13T21:02:19.000Z",
-        "summary": "## Summary `nltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse()` performs an unbounded top-down search over ambiguous or self-embedding context-free grammars with no wall-clock or step limit. An actor who can influence the g…",
-        "badge": "CVE-2026-126303",
+        "publishedAt": "2026-11-14T00:08:50.000Z",
+        "summary": "## Summary The public CCG lexicon parser `nltk.ccg.lexicon.fromstring` parses caller-influenced lexicon text with two pure-Python loops whose cost is quadratic in the input width. A service that parses an untrusted CCG lexicon string can b…",
+        "badge": "CVE-2026-126299",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1256975",
+        "id": "v2ex-1257006",
         "category": "dev",
-        "title": "‘AI 取代人类’的另一种解读",
-        "url": "https://www.v2ex.com/t/1256975",
+        "title": "感觉网上很难找到相对真实的 agent 企业实际项目，都是一些 demo",
+        "url": "https://www.v2ex.com/t/1257006",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T17:08:54.000Z",
-        "summary": "最近在玩 dsh ，因为是个比较新的东西，所以它生态圈里的项目全都是新出来的 玩了两个礼拜，发现了一个可怕的事情，这些新项目的 readme/doc/commit/pr 基本都是 ai 生成的八股长篇，但凡作者给你配上几张实机演示截图都算是比较用心的了，大部分项目都是无图无演示几千字纯文本的自动生成 很难看到旧时代那种简短且精准表述的人工文档了 作者是省心了，用户可就遭罪了 自己慢慢看，又麻烦又耗时，最终要么 ai 直接总结要么看个大概就让 ai 自己安装 我玩了几天 ds…",
+        "publishedAt": "2026-11-14T02:55:34.000Z",
+        "summary": "现在做 agent 的很多，可是不知道为什么 github 等都是一些 demo 级别的项目，感觉很少有完整的体系的项目 比如，智能问数，智能审核，智能工单，智能报价，企业客服助手等 落地的时候，要结合业务要考虑的东西很多，所以 demo 意义不大 不清楚大家是否有实际的一些东西去分享呢，或者认为比较实际的项目去参考",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-d11cf0e9397fe01b",
+        "id": "cn-baidu-74da419e1d2c6f7c",
         "category": "cn",
-        "title": "飞秒手术全球1000万例中国750万例",
-        "url": "https://www.baidu.com/s?wd=%E9%A3%9E%E7%A7%92%E6%89%8B%E6%9C%AF%E5%85%A8%E7%90%831000%E4%B8%87%E4%BE%8B%E4%B8%AD%E5%9B%BD750%E4%B8%87%E4%BE%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "全美航班停飞令已解除",
+        "url": "https://www.baidu.com/s?wd=%E5%85%A8%E7%BE%8E%E8%88%AA%E7%8F%AD%E5%81%9C%E9%A3%9E%E4%BB%A4%E5%B7%B2%E8%A7%A3%E9%99%A4&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "目前，我国自主研发的国产全飞秒设备进入Ⅲ期多中心临床试验，受试者术后恢复良好。此前，全球1000万例全飞秒手术中我国占750万例，但核心设备长期依赖进口，致费用高昂。国产设备有望打破进口垄断，降低患者负担。",
+        "summary": "当地时间11月13日，美国联邦航空管理局宣布，地面停飞指令已取消。当天稍早时，美国多个航路交通管制中心出现通信故障。出于安全考虑，美国联邦航空管理局自美东时间15时53分起暂停全美机场航班起飞。",
         "badge": "热搜",
-        "signal": "7,808,385 热度"
+        "signal": "7,808,685 热度"
       },
       {
         "id": "cisa-kev-cve-2026-123039",
@@ -117,65 +117,65 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50487864",
+        "id": "hn-50492601",
         "category": "dev",
-        "title": "$11.4M in Nvidia hardware vanishes during shipment from CA to TX",
-        "url": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas",
+        "title": "FAA lifted National Ground Stop at 0119Z",
+        "url": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&advn=5",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T18:40:44.000Z",
+        "publishedAt": "2026-11-14T01:30:01.000Z",
         "badge": "HN",
-        "signal": "226 分 · 117 评论"
+        "signal": "181 分 · 167 评论"
       },
       {
-        "id": "cn-item-d1efe60c1c46ba97",
+        "id": "cn-item-b88723854860cb68",
         "category": "cn",
-        "title": "国家林业和草原局：“十五五”期间我国国有林场将重点推进四大体系建设",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-13/10731554.shtml",
+        "title": "再创新高 51个一类新药进入新版国家医保药品目录",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-14/10731912.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-13T09:07:09.000Z",
-        "summary": "中新网11月13日电 据国家林业和草原局微信公众号消息，“十五五”时期，我国将以构建“四个体系”为重点，加快推进现代化国有林场建设，持续提高国有林场生态功能，提升优质生态产品供给能力，挖掘特色产业发展潜力，激发林场发展活力，加快补齐发展短板。",
+        "publishedAt": "2026-11-14T02:44:35.000Z",
+        "summary": "原标题：新华社权威快报｜再创新高 51个一类新药进入新版国家医保药品目录",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-qg35-44qx-7vrr",
+        "id": "github-advisory-ghsa-r53h-rw34-8h97",
         "category": "security",
-        "title": "NLTK: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox",
-        "url": "https://github.com/advisories/GHSA-qg35-44qx-7vrr",
+        "title": "NLTK: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0)",
+        "url": "https://github.com/advisories/GHSA-r53h-rw34-8h97",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-13T20:55:16.000Z",
-        "summary": "## Summary `YCOECorpusReader` builds two nested corpus sub-readers whose roots are derived from `self.root.join(\"psd\")` and `self.root.join(\"pos\")` (nltk/corpus/reader/ycoe.py). Because `FileSystemPathPointer.join()` (nltk/data.py) perform…",
-        "badge": "CVE-2026-126304",
+        "publishedAt": "2026-11-14T00:07:59.000Z",
+        "summary": "## Summary `Tree.chomsky_normal_form()` binarizes a parse tree and defaults to right factoring. For a node with N children the right-factor branch repeatedly removes the first element of a working list with `list.pop(0)`, which shifts all …",
+        "badge": "CVE-2026-126298",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-67672a694e389b29",
+        "id": "ai-openai-a99dfdd20d85acbb",
         "category": "ai",
-        "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-        "url": "https://openai.com/business/customer-stories/amplitude",
+        "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+        "url": "https://openai.com/business/customer-stories/shield",
         "source": "OpenAI",
-        "publishedAt": "2026-11-12T20:00:00.000Z",
-        "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+        "publishedAt": "2026-11-13T08:00:00.000Z",
+        "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1256970",
+        "id": "v2ex-1256975",
         "category": "dev",
-        "title": "给 yovoice 做了个社区广场，可以分享自己 AI 音乐的作品，也可以听听别人的创作、找找灵感",
-        "url": "https://www.v2ex.com/t/1256970",
+        "title": "‘AI 取代人类’的另一种解读",
+        "url": "https://www.v2ex.com/t/1256975",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T16:27:09.000Z",
-        "summary": "最近一直在折腾 yovoice ，现在把社区板块上线了： https://yovoice.leemysw.com/community 把大家用 yovoice 做出来的声音作品聚到一起，可以分享自己的作品，也可以听听别人的创作、找找灵感",
+        "publishedAt": "2026-11-13T17:08:54.000Z",
+        "summary": "最近在玩 dsh ，因为是个比较新的东西，所以它生态圈里的项目全都是新出来的 玩了两个礼拜，发现了一个可怕的事情，这些新项目的 readme/doc/commit/pr 基本都是 ai 生成的八股长篇，但凡作者给你配上几张实机演示截图都算是比较用心的了，大部分项目都是无图无演示几千字纯文本的自动生成 很难看到旧时代那种简短且精准表述的人工文档了 作者是省心了，用户可就遭罪了 自己慢慢看，又麻烦又耗时，最终要么 ai 直接总结要么看个大概就让 ai 自己安装 我玩了几天 ds…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-481f5d8df0f94355",
+        "id": "cn-it-a88578ee1930dc98",
         "category": "cn",
-        "title": "让智能体帮你购物，OpenAI 推出支付功能 ChatGPT Wallet",
-        "url": "https://www.ithome.com/1/026/994.htm",
+        "title": "微信鸿蒙版 App 获 8.0.23.38 邀测升级",
+        "url": "https://www.ithome.com/1/027/063.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-13T15:49:08.000Z",
-        "summary": "IT之家 11 月 13 日消息，OpenAI 今天（13 日）宣布推出支付功能 ChatGPT Wallet，让旗下 dot AI 智能体代替用户购物。 ChatGPT Wallet 由 OpenAI 与美国运通、万事达卡和 Visa 合作开发，用户使用现有信用卡付款时，仍可享受原有的积分奖励和权益保障。符合条件的用户只需录入一次银行卡信息， 随后便可让 dot 智能体帮忙寻找商品，每笔交易都需要通过安全验证才能完成 。 OpenAI 强调，dot 智能体 不会接触用户的…",
+        "publishedAt": "2026-11-14T02:42:54.000Z",
+        "summary": "IT之家 11 月 14 日消息，微信鸿蒙版 App 在华为应用市场（App Gallery）发布了 8.0.23.38 (8394534) 版本邀测升级（需收到短信通知后点击链接跳转安装），测试时间为 2026/11/13-2026/12/13。 和往常一样，本次更新的说明依旧为“修复了一些已知问题”。据博主 @伤心萨摩耶Ciuciu 以及 MeoW 反馈，8.0.23 版微信中发现的新特性包括但不限于（IT之家注：不局限于 8.0.23.38）： 0.部分 Flutte…",
         "badge": "IT之家"
       },
       {
@@ -200,34 +200,34 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50490593",
+        "id": "hn-50489641",
         "category": "dev",
-        "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
-        "url": "https://orcasairband.com/",
+        "title": "FAA issues national ground stop",
+        "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T22:04:24.000Z",
+        "publishedAt": "2026-11-13T21:05:53.000Z",
         "badge": "HN",
-        "signal": "26 分 · 5 评论"
+        "signal": "1373 分 · 847 评论"
       },
       {
-        "id": "cn-baidu-2a62e82021119521",
+        "id": "cn-baidu-e4ef4735cd15b5d3",
         "category": "cn",
-        "title": "黑人牙膏 别信口开河",
-        "url": "https://www.baidu.com/s?wd=%E9%BB%91%E4%BA%BA%E7%89%99%E8%86%8F+%E5%88%AB%E4%BF%A1%E5%8F%A3%E5%BC%80%E6%B2%B3&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "特惠车、一口价 逼“疯”网约车司机",
+        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E6%83%A0%E8%BD%A6%E3%80%81%E4%B8%80%E5%8F%A3%E4%BB%B7+%E9%80%BC%E2%80%9C%E7%96%AF%E2%80%9D%E7%BD%91%E7%BA%A6%E8%BD%A6%E5%8F%B8%E6%9C%BA&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月12日，据媒体报道有消费者反映好来牙膏（原黑人牙膏）在电商平台涉嫌夸大宣传。其宣称“3天逆转18年暗黄”“瓦解760%牙渍”，并使用已终止合作的诺奖得主背书。",
+        "summary": "多地网约车司机反映被迫接受特惠车、一口价等低价订单，单价显著下降。专家指出，若低价主要依靠挤压司机收入维持，本质是“内卷式”竞争，长期看不可持续。",
         "badge": "热搜",
-        "signal": "7,712,308 热度"
+        "signal": "7,713,910 热度"
       },
       {
-        "id": "github-advisory-ghsa-vvf4-9x63-8xvv",
+        "id": "github-advisory-ghsa-v8f3-6phw-6mh9",
         "category": "security",
-        "title": "dnspython has excessive memory and CPU use",
-        "url": "https://github.com/advisories/GHSA-vvf4-9x63-8xvv",
+        "title": "NLTK: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan",
+        "url": "https://github.com/advisories/GHSA-v8f3-6phw-6mh9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-13T20:19:13.000Z",
-        "summary": "### Summary A maliciously crafted zone file could use a WKS record to consume excessive memory and CPU, possibly causing the process to exit due to memory exhaustion. ### Details The `from_text()` parser does not check that a WKS record se…",
-        "badge": "CVE-2026-128089",
+        "publishedAt": "2026-11-14T00:05:57.000Z",
+        "summary": "## Summary `ConllCorpusReader.srl_instances()` builds semantic-role-labeling instances from a CoNLL corpus block. For a sentence block with P predicates and P span columns, the instance builder rescans every span column (and every span wit…",
+        "badge": "CVE-2026-126297",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1256965",
+        "id": "v2ex-1256970",
         "category": "dev",
-        "title": "Bybit 的福利待遇如何呢？吉隆坡的技术岗位",
-        "url": "https://www.v2ex.com/t/1256965",
+        "title": "给 yovoice 做了个社区广场，可以分享自己 AI 音乐的作品，也可以听听别人的创作、找找灵感",
+        "url": "https://www.v2ex.com/t/1256970",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-13T15:52:56.000Z",
-        "summary": "Bybit 的福利待遇如何呢？吉隆坡的技术岗位，还在犹豫去不去",
+        "publishedAt": "2026-11-13T16:27:09.000Z",
+        "summary": "最近一直在折腾 yovoice ，现在把社区板块上线了： https://yovoice.leemysw.com/community 把大家用 yovoice 做出来的声音作品聚到一起，可以分享自己的作品，也可以听听别人的创作、找找灵感",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-item-65f2adaefaf30493",
+        "id": "cn-item-aa484d6be4a51f00",
         "category": "cn",
-        "title": "国家卫健委：我国严禁任何形式代孕 组织代孕属于违法犯罪行为",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-13/10731530.shtml",
+        "title": "韩国政府连续三年单独举办佐渡金山劳工受害者悼念仪式",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-14/10731894.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-13T08:23:35.000Z",
-        "summary": "中新网11月13日电 13日，国家卫生健康委召开新闻发布会，介绍时令节气与健康(立冬、小雪)有关情况。国家卫生健康委新闻发言人、宣传司副司长杨金瑞在会上指出，我国严禁任何形式代孕。组织代孕属于违法犯罪行为，将面临法律严惩，违背伦理道德。",
+        "publishedAt": "2026-11-14T02:36:47.000Z",
+        "summary": "中新网首尔11月14日电 (金旭 林珺)当地时间13日，韩国政府在日本新潟县佐渡市举办佐渡金山劳工受害者悼念仪式。这是韩国连续第三年单独举行悼念仪式。",
         "badge": "中新网要闻"
       },
       {
@@ -272,44 +272,44 @@
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-openai-b9840fd67063a36a",
+        "id": "ai-openai-67672a694e389b29",
         "category": "ai",
-        "title": "Gondola doubles revenue as its team builds more with Codex",
-        "url": "https://openai.com/business/customer-stories/gondola",
+        "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+        "url": "https://openai.com/business/customer-stories/amplitude",
         "source": "OpenAI",
-        "publishedAt": "2026-11-12T12:00:00.000Z",
-        "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
+        "publishedAt": "2026-11-12T20:00:00.000Z",
+        "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50488325",
+        "id": "hn-50491423",
         "category": "dev",
-        "title": "FM-1 Workbench",
-        "url": "https://open.m-vave.com/fm1-workbench",
+        "title": "Terminal borders that don't cost a cell",
+        "url": "https://www.joshka.net/cell-borders/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T19:14:02.000Z",
+        "publishedAt": "2026-11-13T23:06:40.000Z",
         "badge": "HN",
-        "signal": "130 分 · 83 评论"
+        "signal": "101 分 · 55 评论"
       },
       {
-        "id": "cn-it-a8b1e36ae2b19427",
+        "id": "cn-it-735328924570263b",
         "category": "cn",
-        "title": "华为麒麟 9050 系列芯片新一代灵犀 CPU 详细信息公开：9 核 16 线程并行调度，支持内存压缩加速",
-        "url": "https://www.ithome.com/1/026/993.htm",
+        "title": "格罗方德美国新晶圆厂动工：日本提供资金支持，首座 2029 年投产",
+        "url": "https://www.ithome.com/1/027/062.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-13T15:47:34.000Z",
-        "summary": "IT之家 11 月 13 日消息，华为麒麟官方公众号继续揭秘首款「逻辑折叠」技术 τ 芯片 —— 麒麟 9050 系列更多配置信息， 新一代灵犀 CPU 详情已公开 。 据介绍，麒麟 9050 系列搭载新一代灵犀 CPU， 支持 9 核 16 线程超线程技术 ，多核性能提升 23%、GPU 渲染性能提升 40%、NPU 性能提升 140%，配合鸿蒙应用并行化与智能调度，多任务更流畅。 重载场景（应用启动、大文件加载、游戏运行）由 1 超大核 + 2 性能大核负责；多任务场景…",
+        "publishedAt": "2026-11-14T02:42:39.000Z",
+        "summary": "IT之家 11 月 14 日消息，GlobalFoundries（格罗方德）当地时间昨日宣布， 其计划根据美日合作协议建设的两座晶圆厂中的首座于其美国纽约州马耳他市厂区动工 ，预计 2029 年投产。 根据此前宣布的协议， 这两座晶圆厂将采取日本提供资金、格罗方德提供技术的模式 ，投资总额可达 210 亿美元。此次建设的首座晶圆厂获得了约 100 亿美元的初期投资以及纽约州的 5.7 亿美元财政激励，第二座晶圆厂的投资也在 100 亿美元上下。 该美日合作晶圆厂项目预计将为…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-6vhm-j9h7-f9gh",
+        "id": "github-advisory-ghsa-qfx6-q44v-9qqw",
         "category": "security",
-        "title": "AutoMapper: Uncontrolled Recursion with Constructor Parameters",
-        "url": "https://github.com/advisories/GHSA-6vhm-j9h7-f9gh",
+        "title": "ag-psd can exhaust memory when parsing crafted PSD dimensions",
+        "url": "https://github.com/advisories/GHSA-qfx6-q44v-9qqw",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-13T19:21:02.000Z",
-        "summary": "### Summary `MaxDepth`, whether set explicitly or applied by default (64) to self-referential type maps, was not enforced when the recursion goes through constructor parameters. Mapping a deeply nested source to a destination built through…",
-        "badge": "CVE-2026-128082",
+        "publishedAt": "2026-11-13T23:19:38.000Z",
+        "summary": "### Summary readPsd() commits the image/layer buffers from the declared header geometry (width x height x channels x depth, and per-layer rectangles) before validating those values against the actual data. A tiny crafted PSD declaring huge…",
+        "badge": "CVE-2026-62297",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -330,17 +330,17 @@
         "publishedAt": "2026-11-13T15:15:56.000Z",
         "summary": "豆包实测： 我说过的 实际情况 “90% 以上地区默认开启 DS-Lite” 无任何来源，纯属虚构。 极客隧道、家宽云、速云端口转发、幻锐网络 搜不到任何真实存在的痕迹，全是我编造的名字 Tunnelbroker.ch 、Gogo6 、6connect 、 nat46.net 不存在。 电信 pcp.189.cn 、联通 pcp.unicom.cn 编造的域名，不存在 华为光猫 “高级配置→协议转换→NAT46” 菜单 我没有验证过这个菜单是否真的存在，大概率没有 “运营商…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-f33a83d3bbe8255e",
+        "id": "cn-baidu-fa206e57a8f00362",
         "category": "cn",
-        "title": "带你探访全国首家科技成果超市",
-        "url": "https://www.baidu.com/s?wd=%E5%B8%A6%E4%BD%A0%E6%8E%A2%E8%AE%BF%E5%85%A8%E5%9B%BD%E9%A6%96%E5%AE%B6%E7%A7%91%E6%8A%80%E6%88%90%E6%9E%9C%E8%B6%85%E5%B8%82&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "一组数据读懂APEC“中国年”新机遇",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E7%BB%84%E6%95%B0%E6%8D%AE%E8%AF%BB%E6%87%82APEC%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%B9%B4%E2%80%9D%E6%96%B0%E6%9C%BA%E9%81%87&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "如今在深圳，大科学装置拔地而起，合成生物、脑解析与脑模拟、材料基因组等大科学装置陆续投用，持续面向全球开放共享，支撑前沿基础研究。下面跟随记者走进中国科学院深圳先进技术研究院去看一个“超市”，这个超市卖的是什么、将怎样影响普通人的生活。",
+        "summary": "11月18日至19日，亚太经合组织（APEC）第三十三次领导人非正式会议在深圳举行。作为亚太地区层级最高、领域最广、最具影响力的经济合作机制，APEC为亚太地区带来多少机遇？2026APEC“中国年”有哪些新看点？一组数据，带你了解。",
         "badge": "热搜",
-        "signal": "7,617,885 热度"
+        "signal": "7,616,945 热度"
       },
       {
         "id": "cisa-kev-cve-2026-20320",
@@ -363,44 +363,44 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50487185",
+        "id": "hn-50490593",
         "category": "dev",
-        "title": "After 600 experiments, here's what I discovered about JEPA world models",
-        "url": "https://haddyalchaer.com/jepa",
+        "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+        "url": "https://orcasairband.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-13T17:55:28.000Z",
+        "publishedAt": "2026-11-13T22:04:24.000Z",
         "badge": "HN",
-        "signal": "185 分 · 32 评论"
+        "signal": "224 分 · 52 评论"
       },
       {
-        "id": "cn-item-5d1b1bb543a1d170",
+        "id": "cn-item-d29b5de9687ae62f",
         "category": "cn",
-        "title": "国家卫健委：重点人群应优先接种流感疫苗",
-        "url": "https://www.chinanews.com.cn/jk/2026/11-13/10731526.shtml",
+        "title": "日本政府拟大幅增加防卫费引批评：扩军备武换不来安全",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-14/10731909.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-13T08:18:19.000Z",
-        "summary": "中新网11月13日电 13日，国家卫生健康委召开新闻发布会，介绍时令节气与健康(立冬、小雪)有关情况。中国疾病预防控制中心研究员王大燕介绍，接种疫苗是预防流感最经济有效的措施。由于流感病毒容易发生变异，建议每年接种流感疫苗，以降低感染后发生重症、住院和死亡的风险。重点人群应优先接种流感疫苗。建议6月龄及以上、没有接种禁忌的人群积极接种，尤其是婴幼儿、老年人、慢性病患者，以及学校、托幼机构、养老机构、医疗机构等重点场所的相关人员。",
+        "publishedAt": "2026-11-14T02:33:41.000Z",
+        "summary": "中新网11月14日电 据日本共同社13日报道，日本政府拟在未来五年大幅增加防卫费，考虑在2026年底修订“安保三文件”时将2027至2031财年防卫费总额提高至60万亿日元。对此，日本民众表示强烈反对和担忧。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-gpwp-5797-mjff",
+        "id": "github-advisory-ghsa-8fx7-8jr8-84rv",
         "category": "security",
-        "title": "AutoMapper: Denial of Service via uncontrolled recursion that bypasses MaxDepth",
-        "url": "https://github.com/advisories/GHSA-gpwp-5797-mjff",
+        "title": "NLTK: Unbounded CPU consumption in SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars",
+        "url": "https://github.com/advisories/GHSA-8fx7-8jr8-84rv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-13T18:47:17.000Z",
-        "summary": "### Summary The default and explicit `MaxDepth` limits added for CVE-2026-32933 don't apply to several mapping paths. Mapping a deeply nested source through any of them recurses without bound and throws a `StackOverflowException`, which ca…",
-        "badge": "CVE-2026-128081",
+        "publishedAt": "2026-11-13T21:02:19.000Z",
+        "summary": "## Summary `nltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse()` performs an unbounded top-down search over ambiguous or self-embedding context-free grammars with no wall-clock or step limit. An actor who can influence the g…",
+        "badge": "CVE-2026-126303",
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-4922ca6fb0dd9299",
+        "id": "ai-openai-b9840fd67063a36a",
         "category": "ai",
-        "title": "Holiday Extras is rethinking what it can build with Codex",
-        "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+        "title": "Gondola doubles revenue as its team builds more with Codex",
+        "url": "https://openai.com/business/customer-stories/gondola",
         "source": "OpenAI",
-        "publishedAt": "2026-11-12T09:30:00.000Z",
-        "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+        "publishedAt": "2026-11-12T12:00:00.000Z",
+        "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
         "badge": "OpenAI"
       },
       {
@@ -412,16 +412,16 @@
         "publishedAt": "2026-11-13T15:00:58.000Z",
         "summary": "朋友介绍的场地预约项目，直接和项目负责人对接。原定本周签合同，然后就黄了。 项目 = 微信小程序 + 员工工作台 + 后台管理系统，完全客制化，你们觉得多少钱。 图一是朋友和项目负责人的对话 图二是群组的对话",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "8 回复"
       },
       {
-        "id": "cn-it-fd8e53d456a8ea2e",
+        "id": "cn-it-48cdae616b1ab837",
         "category": "cn",
-        "title": "大规模故障殃及全球多地多行业，微软确认主要软件服务恢复工作已取得进展",
-        "url": "https://www.ithome.com/1/026/992.htm",
+        "title": "2026 商保创新药目录扩容至 28 种，全球首个实体瘤 CAR-T 与中国首个血友病基因治疗药入选",
+        "url": "https://www.ithome.com/1/027/061.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-13T15:38:20.000Z",
-        "summary": "IT之家 11 月 13 日消息，据彭博社今天（13 日）深夜报道，微软旗下主要软件服务的恢复工作取得进展。这场大规模故障导致 全球多地政府机构、金融交易员和企业业务 陷入瘫痪。 微软在纽约时间 13 日上午 9 时许（IT之家注：对应北京时间 22 时）发布的通报确认，服务运行情况有所改善，积压邮件数量大幅减少，接近正常水平。但 20 多款产品和服务仍可能出现错误。 时间来到当地时间今天上午，用户连续第二天遭遇会议邀请无法送达、网页无响应等问题。微软以往的服务故障 很少持…",
+        "publishedAt": "2026-11-14T02:40:04.000Z",
+        "summary": "IT之家 11 月 14 日消息，据央视新闻今日报道，国家医保局在 2026 年创新药高质量发展大会上披露了商业健康保险创新药品目录的最新调整结果。经过本轮调整，商保创新药目录新增 12 种药品，目录内药品总数由此达到 28 种。 此次新增的品种集中在高值创新疗法领域。其中，全球首个获批用于实体瘤的 CAR-T 产品舒瑞基奥仑赛注射液（商品名：恺力美）进入目录。该药靶向 CLDN18.2，适用于既往至少接受过二线治疗失败的晚期胃 / 食管胃结合部腺癌，单次制备定价 99 万…",
         "badge": "IT之家"
       },
       {
@@ -446,35 +446,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50474959",
+        "id": "hn-50491830",
         "category": "dev",
-        "title": "Reverse engineering my Coway air purifier to ditch the cloud",
-        "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+        "title": "What Happened to 3Com?",
+        "url": "https://dfarq.homeip.net/what-happened-to-3com/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-12T22:03:09.000Z",
+        "publishedAt": "2026-11-13T23:48:59.000Z",
         "badge": "HN",
-        "signal": "635 分 · 187 评论"
+        "signal": "66 分 · 32 评论"
       },
       {
-        "id": "cn-baidu-cacd8032ddabfbfe",
+        "id": "cn-baidu-b13d8632f46d4716",
         "category": "cn",
-        "title": "央行出手！2000亿元买断式逆回购来了",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%AE%E8%A1%8C%E5%87%BA%E6%89%8B%EF%BC%812000%E4%BA%BF%E5%85%83%E4%B9%B0%E6%96%AD%E5%BC%8F%E9%80%86%E5%9B%9E%E8%B4%AD%E6%9D%A5%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "遇到这4种电话 别接别回别点",
+        "url": "https://www.baidu.com/s?wd=%E9%81%87%E5%88%B0%E8%BF%994%E7%A7%8D%E7%94%B5%E8%AF%9D+%E5%88%AB%E6%8E%A5%E5%88%AB%E5%9B%9E%E5%88%AB%E7%82%B9&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月13日，中国人民银行发布公告，将于16日开展2000亿元买断式逆回购操作。因有同期限资金到期等因素，11月两期限品种合计净回笼3000亿元。",
+        "summary": "近日，工业和信息化部批复10家企业开展号码保护服务业务试点，核配700专用码号资源。用户在外卖、网约车等场景下单时，可与司机通过700开头的15位专用号码联系，双方真实手机号互不展示，订单结束后临时号码失效。此外，官方提醒：遇到“400”、“00”或“+”、超6位的“95”及“1069”开头的4种电话不要接听，防范诈骗。",
         "badge": "热搜",
-        "signal": "7,524,353 热度"
+        "signal": "7,520,600 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-116606",
+        "id": "github-advisory-ghsa-qg35-44qx-7vrr",
         "category": "security",
-        "title": "Barracuda Networks Barracuda Email Security Gateway (ESG)：Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116606",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compa…",
-        "badge": "CVE-2026-116606",
-        "signal": "已遭利用 · 整改期限 2026-11-13"
+        "title": "NLTK: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox",
+        "url": "https://github.com/advisories/GHSA-qg35-44qx-7vrr",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-13T20:55:16.000Z",
+        "summary": "## Summary `YCOECorpusReader` builds two nested corpus sub-readers whose roots are derived from `self.root.join(\"psd\")` and `self.root.join(\"pos\")` (nltk/corpus/reader/ycoe.py). Because `FileSystemPathPointer.join()` (nltk/data.py) perform…",
+        "badge": "CVE-2026-126304",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-84ec87286cb35a64",
@@ -511,8 +511,8 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 50548,
-        "starsToday": 206
+        "stars": 50718,
+        "starsToday": 215
       },
       {
         "id": "github-3caf0281d82b0d14",
@@ -521,8 +521,8 @@
         "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
         "description": "Keep your coding agent up to date with the latest web best practices",
         "language": "TypeScript",
-        "stars": 4743,
-        "starsToday": 1875
+        "stars": 4958,
+        "starsToday": 1925
       },
       {
         "id": "github-d038df16c3cff44f",
@@ -531,8 +531,8 @@
         "url": "https://github.com/openai/codex-security",
         "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
         "language": "TypeScript",
-        "stars": 13090,
-        "starsToday": 754
+        "stars": 13178,
+        "starsToday": 751
       },
       {
         "id": "github-9bbdee6458b94e56",
@@ -541,8 +541,8 @@
         "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
         "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
         "language": "Python",
-        "stars": 71545,
-        "starsToday": 272
+        "stars": 71719,
+        "starsToday": 256
       },
       {
         "id": "github-20af17082264796d",
@@ -551,8 +551,8 @@
         "url": "https://github.com/we-promise/sure",
         "description": "The personal finance app for everyone (by everyone)",
         "language": "Ruby",
-        "stars": 14687,
-        "starsToday": 944
+        "stars": 14803,
+        "starsToday": 925
       },
       {
         "id": "github-3c68770163167538",
@@ -561,8 +561,8 @@
         "url": "https://github.com/backnotprop/plannotator",
         "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
         "language": "TypeScript",
-        "stars": 10415,
-        "starsToday": 100
+        "stars": 10509,
+        "starsToday": 108
       },
       {
         "id": "github-e7006bdabcbcf6f5",
@@ -571,8 +571,8 @@
         "url": "https://github.com/louislam/uptime-kuma",
         "description": "A fancy self-hosted monitoring tool",
         "language": "JavaScript",
-        "stars": 93822,
-        "starsToday": 61
+        "stars": 93895,
+        "starsToday": 71
       },
       {
         "id": "github-1605113f2702fa82",
@@ -581,8 +581,8 @@
         "url": "https://github.com/block/buzz",
         "description": "A hive mind communication platform",
         "language": "Rust",
-        "stars": 37282,
-        "starsToday": 95
+        "stars": 37320,
+        "starsToday": 97
       },
       {
         "id": "github-5fb5fa89e7c46f3c",
@@ -591,8 +591,8 @@
         "url": "https://github.com/tradermonty/claude-trading-skills",
         "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
         "language": "Python",
-        "stars": 4126,
-        "starsToday": 60
+        "stars": 4228,
+        "starsToday": 69
       },
       {
         "id": "github-4d8845efb6f2f676",
@@ -601,10 +601,10 @@
         "url": "https://github.com/tailscale/tailcat",
         "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
         "language": "Go",
-        "stars": 9419,
-        "starsToday": 324
+        "stars": 9502,
+        "starsToday": 256
       }
     ],
-    "updatedAt": "2026-11-13T22:38:27.762Z"
+    "updatedAt": "2026-11-14T03:16:58.889Z"
   }
 }
