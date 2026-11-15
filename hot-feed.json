@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-15T01:56:30.335Z",
+  "generatedAt": "2026-11-15T09:23:47.308Z",
   "intelligence": {
-    "updatedAt": "2026-11-15T01:56:30.335Z",
+    "updatedAt": "2026-11-15T09:23:47.308Z",
     "items": [
       {
-        "id": "cn-item-9a3837ff56c17932",
+        "id": "cn-item-05943be94ad31707",
         "category": "cn",
-        "title": "中东部将有大范围大风降温和雨雪天气 华北黄淮等地雾霾将减弱消散",
-        "url": "https://www.chinanews.com.cn/sh/2026/11-15/10732220.shtml",
+        "title": "从登山到“读山”：秦岭“轻户外”渐成风尚",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-15/10732361.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-15T01:07:22.000Z",
-        "summary": "中新网11月15日电 据中央气象台网站消息，昨日，西北地区等地出现小到中雪或雨夹雪，局地大雪；今晨，华北、黄淮等地出现大雾。预计15日至18日，受冷空气影响，中东部将有大范围大风降温和雨雪天气，西北、内蒙古、华北、东北等地部分地区有较强降雪，关注对交通、城市运行、能源保供等的影响。华北、黄淮等地雾霾15日起逐渐减弱或消散。",
+        "publishedAt": "2026-11-15T08:03:33.000Z",
+        "summary": "中新社西安11月15日电 题：从登山到“读山”：秦岭“轻户外”渐成风尚",
         "badge": "中新网要闻"
       },
       {
@@ -43,16 +43,16 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-14T21:22:24.000Z",
         "badge": "HN",
-        "signal": "715 分 · 476 评论"
+        "signal": "1187 分 · 783 评论"
       },
       {
-        "id": "cn-it-a1bc38cdaa887c51",
+        "id": "cn-it-b8a44691393bd99d",
         "category": "cn",
-        "title": "华为 Mate X8 折叠屏手机外观公布，余承东宣布屏幕、拍照、性能又有新突破",
-        "url": "https://www.ithome.com/1/027/274.htm",
+        "title": "遭受网络攻击后，世嘉日服 11 款街机游戏陆续恢复线上功能",
+        "url": "https://www.ithome.com/1/027/410.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-15T01:43:06.000Z",
-        "summary": "IT之家 11 月 15 日消息，华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东刚刚发布视频，回顾了华为 Mate X 系列折叠屏手机走过的岁月， 并宣布 Mate X8 新机“就要来了” 。 IT之家注意到，余承东还在视频的结尾公开了 Mate X8 折叠屏手机外观，他表示， 新机在屏幕、拍照、性能等方面又有新的突破 。 据IT之家此前报道，11 月 13 日，余承东手持紫色新机的画面在网上流传开来， 被认为是华为 Mate X8 真机 ，圆形镜头模组回归…",
+        "publishedAt": "2026-11-15T09:03:14.000Z",
+        "summary": "IT之家 11 月 15 日消息，世嘉于 11 月 2 日通报公司部分服务器遭到黑客非法访问， 临时关闭部分日服街机游戏的在线服务 。目前公司宣布相应服务陆续恢复运行，玩家可以重新使用在线游玩及 IC 卡功能。 具体来看，最初暂停服务的 13 款游戏中《SEGA NET 麻雀 MJ Arcade》和《HOUSE OF THE DEAD ～SCARLET DAWN～》经确认暂时无法恢复服务。实际恢复运行的世嘉街机游戏共 11 款，IT之家随附列表： 《ONGEKI》（音击） …",
         "badge": "IT之家"
       },
       {
@@ -76,24 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1257131",
+        "id": "v2ex-1257214",
         "category": "dev",
-        "title": "Runner iPhone 版开启 TestFlight 内测：在手机上看终端、回消息、带 crew 干活",
-        "url": "https://www.v2ex.com/t/1257131",
+        "title": "deepseek harness 的实际能力远超大多数人的认知，最近深度体验总结",
+        "url": "https://www.v2ex.com/t/1257214",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-14T16:24:00.000Z",
-        "summary": "Runner 是我做的一个管理 CLI agent 的开源桌面工具，之前在 V 站 介绍过 ，可以在同一个 app 里用 Claude Code 、Codex 等，也可以把不同的 agent 放进一个 crew 里一起做任务。上次发 0.18 桌面端远程控制 的时候提过移动端会优先做 iOS ，最近把 Runner iPhone 版的 UI 和主要交互定下来了，已经上传 TestFlight ，开放给想试试的朋友一起内测。 手机端通过和桌面端一样的端到端加密 relay 连…",
+        "publishedAt": "2026-11-15T08:22:58.000Z",
+        "summary": "先说下本人的 AI Coding 经验，chatgpt 横空出世时，一款名为免费的 Cursor 在 2023 年悄然上线，我当时也算是最先一批把 cursor 用于公司项目的程序员，所以 AI Coding 经验有 2 年半的时间了吧。 当时惊叹 chatgpt 的能力，我意识到了 AI 真的会思考，AI 不再是算法和程序堆叠的产物。 从 Cursor 到 Codex 到 Calude Code，再到 deepseek-harness。 他们都在特定的环境完成了我的任务，…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-baidu-83424dfa47927d40",
+        "id": "cn-baidu-7ecf0fc734206642",
         "category": "cn",
-        "title": "S16总决赛：中国战队BLG逆转夺冠",
-        "url": "https://www.baidu.com/s?wd=S16%E6%80%BB%E5%86%B3%E8%B5%9B%EF%BC%9A%E4%B8%AD%E5%9B%BD%E6%88%98%E9%98%9FBLG%E9%80%86%E8%BD%AC%E5%A4%BA%E5%86%A0&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "上海开始出现一批“个人学校”",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%8A%E6%B5%B7%E5%BC%80%E5%A7%8B%E5%87%BA%E7%8E%B0%E4%B8%80%E6%89%B9%E2%80%9C%E4%B8%AA%E4%BA%BA%E5%AD%A6%E6%A0%A1%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "上海国际教育圈涌现大批“个人学校”，以小班授课、定制课表、一对一导师为核心，把统一教学转为因材施教。该模式近年集中爆发，既是为破解留学申请同质化困境，也是合规化替代乱象频发的脱产班，AI技术进一步降低了个性化办学成本。",
         "badge": "热搜",
-        "signal": "7,809,092 热度"
+        "signal": "7,808,577 热度"
       },
       {
         "id": "cisa-kev-cve-2026-123039",
@@ -116,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50499017",
+        "id": "hn-50478701",
         "category": "dev",
-        "title": "Lovable apps expose passport details and more than 200K private messages",
-        "url": "https://www.crissyfield.de/research/lovable-en/",
+        "title": "Memory Safety Bugs in Rust Standard Library",
+        "url": "https://forge-blog.github.io/posts/rust-std-memory-safety/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-14T17:43:10.000Z",
+        "publishedAt": "2026-11-13T05:22:08.000Z",
         "badge": "HN",
-        "signal": "649 分 · 279 评论"
+        "signal": "124 分 · 64 评论"
       },
       {
-        "id": "cn-item-c0327d7199f5b57e",
+        "id": "cn-item-a970f0ec22744252",
         "category": "cn",
-        "title": "中新健康｜男子视力一周内掉到几乎看不见，医生紧急提醒",
-        "url": "https://www.chinanews.com.cn/jk/2026/11-14/10732115.shtml",
+        "title": "博物馆的“焕新”图景：文创出圈 科技造境",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-15/10732360.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-14T11:07:26.000Z",
-        "summary": "中新网北京11月14日电(罗春昊)男子视力一周内掉到只能“数指”，到底是什么病？",
+        "publishedAt": "2026-11-15T08:02:21.000Z",
+        "summary": "中新社海口11月15日电 (记者 张茜翼)正在海口举办的第十一届中国博物馆及相关产品与技术博览会(简称“博博会”)，见证博物馆从“收藏过去”加速迈向“连接未来”。",
         "badge": "中新网要闻"
       },
       {
@@ -157,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1257091",
+        "id": "v2ex-1257201",
         "category": "dev",
-        "title": "xxl-job 是放弃维护了吗？ PG 版本的兼容 PR 提了那么长时间都没人合并，还没有更好的组件选择？",
-        "url": "https://www.v2ex.com/t/1257091",
+        "title": "Olea：真正跑在手机上、能控制手机的 Agent 应用",
+        "url": "https://www.v2ex.com/t/1257201",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-14T12:21:55.000Z",
-        "summary": "xxl-job 不知道有没有人搞过迁移 PG 的？我看 GITHUB 上的 PG 版本的 PR 都是去年 9 月份就有的，但是一直没人维护合并，是不是不维护了？还有没有其它更好的组件选择？",
+        "publishedAt": "2026-11-15T06:57:59.000Z",
+        "summary": "这个项目最初只是出于好玩：我的 Pi 究竟能不能在手机上跑？结果它发展成为了一个通用的 Android Agent 脚手架，一键安装，Codex, Claude Code, Pi 都可以在上面运行。 它受到了 DSH Go 与 Orca 的启发，前者带来实际的原生本地 agent 和 phone use 可能性的思路，后者提供 Pi 要怎么跑的方向。最后决定采用了 PRoot + Agent Orchestrator 的架构。 最简单来说，它做的就是两件事： 让 agent…",
         "badge": "程序员",
-        "signal": "9 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-1cd583b755fa4f53",
+        "id": "cn-it-833e40bc7885a81a",
         "category": "cn",
-        "title": "系列游戏首次：R 星称《GTA6》鼓励玩家共情",
-        "url": "https://www.ithome.com/1/027/273.htm",
+        "title": "首款获得 HSK 官方授权的中文学习机，荣耀中文学习机 HSK 专业版首秀",
+        "url": "https://www.ithome.com/1/027/408.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-15T01:42:49.000Z",
-        "summary": "IT之家 11 月 15 日消息，据《卫报》近日报道，Rockstar North 工作室联合负责人罗布 · 尼尔森表示，《GTA6》将成为《GTA》系列游戏中，首款主动鼓励玩家产生共情的作品。 尼尔森透露，Rockstar 在《GTA6》中首次加入能够鼓励玩家产生共情的机制， 使玩家的心境与杰森 、 露西亚联系起来 。这名员工将两名主角描述成一对走投无路的情侣，他们在剧情初期接触的都是低风险犯罪行动，例如偷窃低价的汽车、撬开容易打开的门锁，之后才会逐渐接触规模更大的犯罪行…",
+        "publishedAt": "2026-11-15T09:02:44.000Z",
+        "summary": "IT之家 11 月 15 日消息，荣耀智慧生活今日发文，在 2026 世界中文大会，荣耀中文学习机 HSK 专业版（HONOR Pad HSK Official Edition）全球首秀。 这款产品由荣耀与“爱中文”社区、九学王联合打造， 这也是首款获得 HSK 官方授权的中文学习机 。 据介绍，产品内置官方独家正版资源，全级别覆盖 HSK2.0&3.0 备考，搭载全新 AI 能力，支持屏上书写练习、双系统自由切换。 IT之家注：11 月 13 日至 15 日，2026 世…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +200,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50501594",
+        "id": "hn-50499017",
         "category": "dev",
-        "title": "How did Woz write the Apple 1 BASIC before building the computer?",
-        "url": "https://retrocomputing.stackexchange.com/questions/17957",
+        "title": "Lovable apps expose passport details and more than 200K private messages",
+        "url": "https://www.crissyfield.de/research/lovable-en/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-14T22:22:49.000Z",
+        "publishedAt": "2026-11-14T17:43:10.000Z",
         "badge": "HN",
-        "signal": "91 分 · 28 评论"
+        "signal": "800 分 · 314 评论"
       },
       {
-        "id": "cn-baidu-0c6446ab21847064",
+        "id": "cn-baidu-f7f31ef3f99bde65",
         "category": "cn",
-        "title": "中国战队时隔5年再捧冠军奖杯",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%88%98%E9%98%9F%E6%97%B6%E9%9A%945%E5%B9%B4%E5%86%8D%E6%8D%A7%E5%86%A0%E5%86%9B%E5%A5%96%E6%9D%AF&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "见识到秋假的威力了",
+        "url": "https://www.baidu.com/s?wd=%E8%A7%81%E8%AF%86%E5%88%B0%E7%A7%8B%E5%81%87%E7%9A%84%E5%A8%81%E5%8A%9B%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月15日，英雄联盟全球总决赛，BLG电子竞技俱乐部战胜韩国Gen战队，加冕S16总冠军。这是中国战队时隔五年再度捧起S赛冠军奖杯。",
+        "summary": "11月起，多地中小学集中放秋假，假期多为3天并与周末衔接形成5天小长假。受此影响，各地景区人流增加，北京颐和园、故宫、八达岭长城等知名景点，人头攒动。目前，春秋假已在浙江、四川、江苏等多省份中小学实施。",
         "badge": "热搜",
-        "signal": "7,712,325 热度"
+        "signal": "7,712,890 热度"
       },
       {
         "id": "github-advisory-ghsa-v8f3-6phw-6mh9",
@@ -239,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1257087",
+        "id": "v2ex-1257172",
         "category": "dev",
-        "title": "做了一份 AI 顶会论文数据集&一份具身智能数据集，有需要的自取~",
-        "url": "https://www.v2ex.com/t/1257087",
+        "title": "怎么你们被 claude 封又是申诉成功，又是苹果退款的？",
+        "url": "https://www.v2ex.com/t/1257172",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-14T11:47:33.000Z",
-        "summary": "之前我发过 2023 年和 2024 年的 AI 论文数据集，还挺多人收藏的： https://www.v2ex.com/t/1237157#reply3 现在我又来更新了。 这次我整理了 2025 年 AI 顶会论文数据集，总共 11945 篇，主要内容如下： 在等更新的各位可以自取啦👉：🤗 huggingface.co/datasets/JensCS/top-ml-conference-papers-2025 还有 2023—2025 年的具身智能论文数据集，一并奉上。…",
+        "publishedAt": "2026-11-15T03:53:02.000Z",
+        "summary": "我是哪个都办不到。 第一个号 google play 充完 5X 版本的，半天被封，申诉失败，google 也不退款。 第二个号 苹果账号登录，pro 版本用了半个月左右被封，申诉没消息，苹果第一次申诉也不退款。 第三个号 没充钱前一切正常，刚苹果礼品卡付完，就要 kyc，验证了，聊了一句话，又弹 portal，portal 护照验证完，秒封。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-item-d9111377d53923d8",
+        "id": "cn-item-11004892951d00e9",
         "category": "cn",
-        "title": "东西问｜博科娃：竞争不应演变为对抗，交流不会自动带来理解",
-        "url": "https://www.chinanews.com.cn/dxw/2026/11-14/10732096.shtml",
+        "title": "北交所迎开市五周年 总市值约8000亿元",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-15/10732327.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-14T10:40:49.000Z",
-        "summary": "中新社北京11月14日电 题：博科娃：竞争不应演变为对抗，交流不会自动带来理解",
+        "publishedAt": "2026-11-15T06:50:23.000Z",
+        "summary": "中新社北京11月15日电 (记者 吕少威)北京证券交易所(下称北交所)15日迎来开市五周年，记者当天从北交所获悉，截至目前，北交所有上市公司355家，总市值约8000亿元(人民币，下同)，较开市之初的81家、不足3000亿元实现明显增长。",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +282,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50499038",
+        "id": "hn-50443331",
         "category": "dev",
-        "title": "A family tree of software job titles",
-        "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/",
+        "title": "A rare glimpse inside the high-risk, high-reward Hormuz trade",
+        "url": "https://www.lloydslist.com/LL1158922/A-rare-glimpse-inside-the-highrisk-highreward-Hormuz-trade",
         "source": "Hacker News",
-        "publishedAt": "2026-11-14T17:45:19.000Z",
+        "publishedAt": "2026-11-10T17:21:48.000Z",
         "badge": "HN",
-        "signal": "210 分 · 101 评论"
+        "signal": "53 分 · 4 评论"
       },
       {
-        "id": "cn-it-0f9273aa320f5f11",
+        "id": "cn-it-bc8b8db046cedefc",
         "category": "cn",
-        "title": "华为 Mate X 系列折叠屏走过第八年，余承东官宣 Mate X8 新机“就要来了”",
-        "url": "https://www.ithome.com/1/027/272.htm",
+        "title": "索尼新专利：PlayStation 手柄或支持手机一碰传输，付款、登录更方便",
+        "url": "https://www.ithome.com/1/027/407.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-15T01:34:49.000Z",
-        "summary": "IT之家 11 月 15 日消息，华为常务董事、产品投资评审委员会主任、终端 BG 董事长余承东今日发布视频，回顾了华为 Mate X 系列折叠屏手机走过的岁月， 并宣布 Mate X8 新机“就要来了” 。 今年是华为 Mate X 系列走过的第八年。从最初少数用户尝鲜，到如今成为越来越多用户的主力机，折叠屏一步步走进日常，也陪伴大家记录了许多重要时刻。感谢大家一路以来的选择和支持！每一份信任，都是我们继续创新、不断进步的动力 [抱拳] 新一代的故事，我们共同见证。华为 …",
+        "publishedAt": "2026-11-15T09:00:52.000Z",
+        "summary": "IT之家 11 月 15 日消息，如今，消费者越来越追求便捷，购买数字版游戏本身就省去了前往实体店的麻烦。而索尼在 2025 年提交的一项临时专利，似乎还想进一步简化购买流程。 这项名为“由电子游戏控制器驱动的信息传输”（Video game controller-driven information transfer）的专利，描述了一种可能应用于 PlayStation 手柄的新功能：通过类似智能手机和超市收银台常见的近场交互技术，让手柄与附近的手机通信，一键向游戏主机传…",
         "badge": "IT之家"
       },
       {
@@ -321,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1257054",
+        "id": "v2ex-1257131",
         "category": "dev",
-        "title": "AI 时代，程序员正在慢慢转向产品经理",
-        "url": "https://www.v2ex.com/t/1257054",
+        "title": "Runner iPhone 版开启 TestFlight 内测：在手机上看终端、回消息、带 crew 干活",
+        "url": "https://www.v2ex.com/t/1257131",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-14T08:05:30.000Z",
-        "summary": "以前我也是个古法编程的坚定维护者，但随着 DeepSeek Flash 1017 模型的发布，尝试了一下，现在已经离不开 AI 编程了。 AI 可以自动完成：编码、验证、修复、重构一条龙，再也不需要自己去思考具体逻辑、代码漏洞等问题，最多只需要自己设计程序架构。（甚至也可以让 AI 设计架构） 不知道从何时开始，我慢慢地也习惯了向 AI 不断提需求、提改动，键盘也开始从从来敲代码变成敲 prompt 了... 而这一切的代价，就是付费 token ，仅此而已。",
+        "publishedAt": "2026-11-14T16:24:00.000Z",
+        "summary": "Runner 是我做的一个管理 CLI agent 的开源桌面工具，之前在 V 站 介绍过 ，可以在同一个 app 里用 Claude Code 、Codex 等，也可以把不同的 agent 放进一个 crew 里一起做任务。上次发 0.18 桌面端远程控制 的时候提过移动端会优先做 iOS ，最近把 Runner iPhone 版的 UI 和主要交互定下来了，已经上传 TestFlight ，开放给想试试的朋友一起内测。 手机端通过和桌面端一样的端到端加密 relay 连…",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-e4cfc8a6bc9ab315",
+        "id": "cn-baidu-65afe67fb0dc8a2c",
         "category": "cn",
-        "title": "一束光 改写中国电力版图",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%80%E6%9D%9F%E5%85%89+%E6%94%B9%E5%86%99%E4%B8%AD%E5%9B%BD%E7%94%B5%E5%8A%9B%E7%89%88%E5%9B%BE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "2分钟带你看APEC热词",
+        "url": "https://www.baidu.com/s?wd=2%E5%88%86%E9%92%9F%E5%B8%A6%E4%BD%A0%E7%9C%8BAPEC%E7%83%AD%E8%AF%8D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "截至今年7月底，中国光伏装机达到12.86亿千瓦，历史性超过煤电，成为装机第一大电源。一块小小的硅片，改写了中国电力版图。",
+        "summary": "11月18日至19日，亚太经合组织（APEC）第三十三次领导人非正式会议将在深圳举行。这是继2001年上海、2014年北京之后，中国第三次担任APEC东道主。APEC到底是什么？为什么会吸引全球目光？快跟我们来看看。",
         "badge": "热搜",
-        "signal": "7,619,521 热度"
+        "signal": "7,618,513 热度"
       },
       {
         "id": "cisa-kev-cve-2026-20320",
@@ -362,23 +363,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50501631",
+        "id": "hn-50502988",
         "category": "dev",
-        "title": "Nvidia deliberately kept GPU prices high through circular financing deals",
-        "url": "https://www.techspot.com/news/114558-nvidia-deliberately-kept-gpu-prices-high-through-circular.html",
+        "title": "Court denies motion to dismiss DRAM price fixing case",
+        "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
         "source": "Hacker News",
-        "publishedAt": "2026-11-14T22:26:30.000Z",
+        "publishedAt": "2026-11-15T01:18:36.000Z",
         "badge": "HN",
-        "signal": "187 分 · 104 评论"
+        "signal": "124 分 · 30 评论"
       },
       {
-        "id": "cn-item-6de8d28f9bdf0a13",
+        "id": "cn-item-4f269b5bbdb4ce45",
         "category": "cn",
-        "title": "因涉嫌酒驾 驻日美军上尉被日本警方逮捕",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-14/10732065.shtml",
+        "title": "（深圳APEC）AI走上APEC：中外记者体验数智技术“福利”",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-15/10732329.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-14T09:28:51.000Z",
-        "summary": "中新网11月14日电 据日本《读卖新闻》报道，当地时间14日，日本冲绳县警方以涉嫌酒后驾驶逮捕了一名驻冲绳美军上尉。",
+        "publishedAt": "2026-11-15T06:36:24.000Z",
+        "summary": "中新社深圳11月15日电 题：AI走上APEC：中外记者体验数智技术“福利”",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +404,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1257052",
+        "id": "v2ex-1257091",
         "category": "dev",
-        "title": "2 年的老号弹 kyc 了 真难绷啊",
-        "url": "https://www.v2ex.com/t/1257052",
+        "title": "xxl-job 是放弃维护了吗？ PG 版本的兼容 PR 提了那么长时间都没人合并，还没有更好的组件选择？",
+        "url": "https://www.v2ex.com/t/1257091",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-14T07:56:33.000Z",
-        "summary": "24 年年初注册的，将近两年了，刚开始就订阅了俩月 pro 后续一直是 200🔪的，两个落地都是家宽，后期等到了 qqpw 就一直用 qqpw 了，应该不是 IP 的问题。 说实话作为程序员其实本就知道 claude 有一万种办法精确过滤出中国用户，但是心里不愿意承认，直到今天才面对现实... 有能力过 kyc 的带价来。",
+        "publishedAt": "2026-11-14T12:21:55.000Z",
+        "summary": "xxl-job 不知道有没有人搞过迁移 PG 的？我看 GITHUB 上的 PG 版本的 PR 都是去年 9 月份就有的，但是一直没人维护合并，是不是不维护了？还有没有其它更好的组件选择？",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "9 回复"
       },
       {
-        "id": "cn-it-2fe6cfe4cbbe93f2",
+        "id": "cn-it-844f893948c30ed4",
         "category": "cn",
-        "title": "老外今年考“中文四六级”人数首破百万人次，169 国设 1500 余个考点",
-        "url": "https://www.ithome.com/1/027/270.htm",
+        "title": "开发者借助 Claude 开发出体积仅 97KB 水下探索模拟项目 Abyssal Garden",
+        "url": "https://www.ithome.com/1/027/406.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-15T01:21:43.000Z",
-        "summary": "IT之家 11 月 15 日消息，11 月 13 日至 15 日，2026 世界中文大会在北京举行，来自 160 多个国家和地区的约 5000 名代表参会。 据央视新闻报道， 今年中文水平考试（HSK）考生人数首次突破 100 万人次 。随着中文学习需求不断增长，中文的应用场景也在不断拓展。 IT之家注：中文水平考试（HSK），被不少网友称为“外国人的四六级”， 目前已在 169 个国家设立了 1500 余个考点 ，考点覆盖国家数量居全球语言考试首位，累计服务考生超过 90…",
+        "publishedAt": "2026-11-15T08:58:39.000Z",
+        "summary": "IT之家 11 月 15 日消息，据 XDA 报道，一位开发者 Any-Reputation8118 利用 Anthropic Claude 编写代码，开发出一款名为“Abyssal Garden”的浏览器水下探索模拟项目，相应项目体积仅 97 KB，场景中的所有视觉元素均由代码在页面加载时实时生成。 从演示视频来看，Abyssal Garden 的项目完成度相当高，包含海带森林、沉船、石制鲸鱼尾雕塑、蝠鲼、鱼群，以及从水面照射下来的光束等元素，整体视觉效果相当出色，IT之…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +446,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50496976",
+        "id": "hn-50504277",
         "category": "dev",
-        "title": "KDE: The documentary [video]",
-        "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+        "title": "Disk encryption on NetBSD – achieving secrecy",
+        "url": "https://netbsd.org/~nia/disk-encrypt/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-14T13:43:28.000Z",
+        "publishedAt": "2026-11-15T05:29:54.000Z",
         "badge": "HN",
-        "signal": "385 分 · 84 评论"
+        "signal": "20 分 · 0 评论"
       },
       {
-        "id": "cn-baidu-488c68668a4d9875",
+        "id": "cn-baidu-c65a757b53ac48e3",
         "category": "cn",
-        "title": "央视曝光假牛肉案",
-        "url": "https://www.baidu.com/s?wd=%E5%A4%AE%E8%A7%86%E6%9B%9D%E5%85%89%E5%81%87%E7%89%9B%E8%82%89%E6%A1%88&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "我们是冠军vs你又打游戏",
+        "url": "https://www.baidu.com/s?wd=%E6%88%91%E4%BB%AC%E6%98%AF%E5%86%A0%E5%86%9Bvs%E4%BD%A0%E5%8F%88%E6%89%93%E6%B8%B8%E6%88%8F&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，四川绵阳一摊贩用猪腱子肉冒充牛肉售卖被查处：猪肉经柠檬黄染色、喷牛肉香精、抹牛油“三重伪装”，让不少市民长期上当，获利超百万元。今年以来，四川省开展肉制品专项整治，已查办案件3769起，涉案1.8亿余元。",
+        "summary": "北京时间15日凌晨，中国BLG战队在纽约击败韩国Gen.G战队，夺得英雄联盟S16全球总决赛冠军。此事引发“电竞荣耀”与“游戏害人”的舆论争议。评论指出，游戏是人的本能，所谓玩物丧志，丧的是人自身的主心骨，普通人须做游戏的主人，莫成奴隶。",
         "badge": "热搜",
-        "signal": "7,521,773 热度"
+        "signal": "7,522,903 热度"
       },
       {
         "id": "github-advisory-ghsa-qg35-44qx-7vrr",
@@ -485,13 +486,13 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1257046",
+        "id": "v2ex-1257087",
         "category": "dev",
-        "title": "我做了个垃圾，重复造了个轮子，浪费了点 token，还在 V2EX 发了个帖子，还没人理我",
-        "url": "https://www.v2ex.com/t/1257046",
+        "title": "做了一份 AI 顶会论文数据集&一份具身智能数据集，有需要的自取~",
+        "url": "https://www.v2ex.com/t/1257087",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-14T07:28:15.000Z",
-        "summary": "https://www.v2ex.com/?tab=creative 这就是我每天打开创意板块的感受。",
+        "publishedAt": "2026-11-14T11:47:33.000Z",
+        "summary": "之前我发过 2023 年和 2024 年的 AI 论文数据集，还挺多人收藏的： https://www.v2ex.com/t/1237157#reply3 现在我又来更新了。 这次我整理了 2025 年 AI 顶会论文数据集，总共 11945 篇，主要内容如下： 在等更新的各位可以自取啦👉：🤗 huggingface.co/datasets/JensCS/top-ml-conference-papers-2025 还有 2023—2025 年的具身智能论文数据集，一并奉上。…",
         "badge": "程序员",
         "signal": "0 回复"
       }
@@ -510,7 +511,7 @@
         "url": "https://github.com/backnotprop/plannotator",
         "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
         "language": "TypeScript",
-        "stars": 11160,
+        "stars": 11442,
         "starsToday": 408
       },
       {
@@ -520,7 +521,7 @@
         "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
         "description": "Keep your coding agent up to date with the latest web best practices",
         "language": "TypeScript",
-        "stars": 6090,
+        "stars": 6402,
         "starsToday": 1231
       },
       {
@@ -530,7 +531,7 @@
         "url": "https://github.com/tradermonty/claude-trading-skills",
         "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
         "language": "Python",
-        "stars": 4851,
+        "stars": 5066,
         "starsToday": 553
       },
       {
@@ -540,7 +541,7 @@
         "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
         "description": "Chrome DevTools for coding agents",
         "language": "TypeScript",
-        "stars": 56330,
+        "stars": 56525,
         "starsToday": 664
       },
       {
@@ -550,7 +551,7 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 51461,
+        "stars": 51630,
         "starsToday": 893
       },
       {
@@ -560,7 +561,7 @@
         "url": "https://github.com/QwenLM/qwen-code",
         "description": "An open-source AI coding agent that lives in your terminal.",
         "language": "TypeScript",
-        "stars": 30362,
+        "stars": 30453,
         "starsToday": 64
       },
       {
@@ -570,7 +571,7 @@
         "url": "https://github.com/dream-num/univer",
         "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
         "language": "TypeScript",
-        "stars": 24521,
+        "stars": 25146,
         "starsToday": 495
       },
       {
@@ -580,7 +581,7 @@
         "url": "https://github.com/ag-ui-protocol/ag-ui",
         "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
         "language": "TypeScript",
-        "stars": 17387,
+        "stars": 17493,
         "starsToday": 9
       },
       {
@@ -590,7 +591,7 @@
         "url": "https://github.com/ashhart/TensorFold",
         "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
         "language": "Zig",
-        "stars": 2168,
+        "stars": 2215,
         "starsToday": 37
       },
       {
@@ -600,10 +601,10 @@
         "url": "https://github.com/JuliusBrussee/caveman",
         "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
         "language": "Go",
-        "stars": 120094,
+        "stars": 120239,
         "starsToday": 227
       }
     ],
-    "updatedAt": "2026-11-15T01:56:30.335Z"
+    "updatedAt": "2026-11-15T09:23:47.308Z"
   }
 }
