@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-16T20:29:47.253Z",
+  "generatedAt": "2026-11-17T03:55:08.181Z",
   "intelligence": {
-    "updatedAt": "2026-11-16T20:29:47.253Z",
+    "updatedAt": "2026-11-17T03:55:08.181Z",
     "items": [
       {
-        "id": "cn-item-0e9e6c4e1fed0739",
+        "id": "cn-item-9fa7dba1a9b61755",
         "category": "cn",
-        "title": "三枚金牌，刻进KPL十年的高光里程碑",
-        "url": "https://www.chinanews.com.cn/ty/2026/11-16/10733153.shtml",
+        "title": "AI漫剧看多了觉得真人“变丑”？心理学解释来了",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-17/10733274.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-16T15:19:09.000Z",
-        "summary": "中新网北京11月16日电(记者 王昊)2026KPL年度总决赛14日在成都收官。北京WB战队以4:3的比分击败北京JDG战队，加冕2026年王者荣耀KPL年度总决赛总冠军，这也是KPL十周年节点上本年度收官之战的冠军。在15日进行的十周年特别庆典上，王者荣耀三届亚运会参赛代表选手共同亮相。",
+        "publishedAt": "2026-11-17T02:42:47.000Z",
+        "summary": "随着AI漫剧热度持续走高，社交平台上相关讨论越来越多。有网友反映，沉迷AI漫剧一段时间后，再回头看现实中的真人，会觉得“变丑了”。这种感受听起来有点夸张，但背后其实牵扯到审美参照和心理比较。",
         "badge": "中新网要闻"
       },
       {
@@ -36,35 +36,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50521045",
+        "id": "hn-50522980",
         "category": "dev",
-        "title": "Outages reported at Bank of America, Chase, U.S. Bank, Wells Fargo and Zelle",
-        "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
+        "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+        "url": "https://www.cs.cmu.edu/learn/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-16T18:31:30.000Z",
+        "publishedAt": "2026-11-16T20:43:36.000Z",
         "badge": "HN",
-        "signal": "383 分 · 269 评论"
+        "signal": "905 分 · 144 评论"
       },
       {
-        "id": "cn-it-ceda10da318f9569",
+        "id": "cn-it-ffd5a7e56b47f6fc",
         "category": "cn",
-        "title": "苹果 watchOS 27.3 开发者预览版 Beta 2 发布",
-        "url": "https://www.ithome.com/1/028/016.htm",
+        "title": "消息称 Meta 内测预测市场应用 Takes，员工可以虚拟“信用点”投注",
+        "url": "https://www.ithome.com/1/028/154.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-16T19:19:22.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 11 月 17 日消息，苹果今日向 Apple Watch 用户推送了 watchOS 27.3 开发者预览版 Beta 2 更新（内部版本号：24S5296d），本次更新距离上次发布 Beta/RC 间隔 13 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • …",
+        "publishedAt": "2026-11-17T03:41:01.000Z",
+        "summary": "IT之家 11 月 17 日消息，据《华尔街日报》当地时间 13 日报道， Meta 正在员工团队内部对预测市场应用程序 Takes 进行测试 。 在这一平台上， 员工以虚拟“信用点”而非真实金钱投注 ，预测问题包括苹果前 CEO 蒂姆 · 库克是否会成为英伟达的下一任 CEO、谁会赢得知识问答节目 \"Jeopardy\" 冠军。 Meta 正试图凭借自身在社交媒体领域的积累加入越来越受到美国年轻人欢迎的预测市场，与 Kalshi 和 Polymarket 等早期参与者展开竞…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-7mxv-7h3q-9324",
+        "id": "github-advisory-ghsa-c94f-87xg-65wf",
         "category": "security",
-        "title": "NLTK dot2img runs Graphviz 'dot' without the trusted-exec chokepoint, enabling local code execution via a writable PATH element",
-        "url": "https://github.com/advisories/GHSA-7mxv-7h3q-9324",
+        "title": "Silverstripe Framework: RCE via i18nTextCollectorTask writer parameter",
+        "url": "https://github.com/advisories/GHSA-c94f-87xg-65wf",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-16T18:45:51.000Z",
-        "summary": "## Summary `nltk.parse.dependencygraph.dot2img` invokes the Graphviz `dot` executable without the trusted-execution guarantees that NLTK applies to its other native-tool wrappers. The function resolves `dot` by bare name and then runs the …",
-        "badge": "CVE-2026-128134",
-        "signal": "HIGH · CVSS 7.8"
+        "publishedAt": "2026-11-16T22:35:12.000Z",
+        "summary": "### Impact The writer option of the i18nTextCollectorTask dev task was passed to the injector without validation. A crafted dev task URL could create arbitrary objects with attacker-controlled constructor arguments and run code on the serv…",
+        "badge": "CVE-2026-91115",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
         "id": "ai-google-deepmind-c7a410ad3b862809",
@@ -76,25 +76,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1257565",
+        "id": "v2ex-1257632",
         "category": "dev",
-        "title": "[开源分享] 发现一个挺有意思的 TTS 项目 VoxMel，直接在 Mel 频谱上做自回归生成",
-        "url": "https://www.v2ex.com/t/1257565",
+        "title": "建了一个 ai 小游戏，小程序的交流群，有兴趣的可以进来",
+        "url": "https://www.v2ex.com/t/1257632",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-16T18:34:34.000Z",
-        "summary": "最近关注到一个挺有意思的开源 TTS 项目： VoxMel 。 GitHub： https://github.com/VoxDance-Lab/VoxMel Twitter: https://x.com/_akhaliq/status/2120749548851368358 现在不少自回归语音生成模型会依赖学习式声学 Tokenizer，先把音频离散化再进行建模。 VoxMel 的思路有点不一样，它尝试直接在连续 Mel 频谱上做自回归生成，不依赖学习式声学 Tokeniz…",
+        "publishedAt": "2026-11-17T03:10:21.000Z",
+        "summary": "最近大家都在疯狂 Vibe Coding 各种小程序或者小游戏，我就想搞个交流群，群里可以发自己的小程序，让大家帮忙评测（凑个人头开流量主），有兴趣的可以来哦",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-baidu-2db77d42879486e5",
+        "id": "cn-baidu-1f4865dae34e811f",
         "category": "cn",
-        "title": "中俄美三国元首历史首次面对面会晤",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E4%B8%89%E5%9B%BD%E5%85%83%E9%A6%96%E5%8E%86%E5%8F%B2%E9%A6%96%E6%AC%A1%E9%9D%A2%E5%AF%B9%E9%9D%A2%E4%BC%9A%E6%99%A4&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "俄美运输机已率先抵达深圳",
+        "url": "https://www.baidu.com/s?wd=%E4%BF%84%E7%BE%8E%E8%BF%90%E8%BE%93%E6%9C%BA%E5%B7%B2%E7%8E%87%E5%85%88%E6%8A%B5%E8%BE%BE%E6%B7%B1%E5%9C%B3&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月16日，外交部发言人毛宁在例行记者会上介绍，中俄美三国元首将在深圳举行历史上首次面对面会晤。毛宁表示，此次会晤将围绕维护世界和平、促进大国关系战略稳定深入交换意见，具有开创性意义，有利于稳定世界局势。",
+        "summary": "11月16日，俄罗斯和美国运输机先后出现在深圳宝安国际机场停机坪。按照外事活动惯例，运输机通常提前抵达，为领导人出访及相关活动提供后勤保障。",
         "badge": "热搜",
-        "signal": "7,808,280 热度"
+        "signal": "7,808,792 热度"
       },
       {
         "id": "cisa-kev-cve-2026-123039",
@@ -117,35 +117,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50520866",
+        "id": "hn-50524736",
         "category": "dev",
-        "title": "Software is breaking down at a systemic level",
-        "url": "https://www.breck-mckye.com/blog/2026/11/software-is-breaking-down-at-a-systemic-level/",
+        "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+        "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-16T18:17:17.000Z",
+        "publishedAt": "2026-11-16T22:58:20.000Z",
         "badge": "HN",
-        "signal": "211 分 · 115 评论"
+        "signal": "330 分 · 199 评论"
       },
       {
-        "id": "cn-item-a3fe9ae34876ea74",
+        "id": "cn-item-3cbb1bcdcdb12a52",
         "category": "cn",
-        "title": "药膳“圈粉”中国年轻人 养生渐成“新食尚”",
-        "url": "https://www.chinanews.com.cn/sh/2026/11-16/10733128.shtml",
+        "title": "8人凌晨3点潜入军工厂纵火，这个国家却要关闭对俄口岸！俄罗斯：这是“恐俄症”发作",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-17/10733273.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-16T14:12:30.000Z",
-        "summary": "中新网南宁11月16日电 题：药膳“圈粉”中国年轻人 养生渐成“新食尚”",
+        "publishedAt": "2026-11-17T02:41:25.000Z",
+        "summary": "8人凌晨3点潜入军工厂纵火，这个国家却要关闭对俄口岸！俄罗斯：这是“恐俄症”发作 | 国际早察",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-m9j8-jcmv-hp69",
+        "id": "github-advisory-ghsa-8vf2-hxg5-crqh",
         "category": "security",
-        "title": "SvelteKit: Build-time server-only module import guard could fail, resulting in server secrets being statically replaced in client bundle",
-        "url": "https://github.com/advisories/GHSA-m9j8-jcmv-hp69",
+        "title": "Kubeshark: MCP `start_kubeshark` argument injection via `pod_regex` → image redirect → cluster takeover",
+        "url": "https://github.com/advisories/GHSA-8vf2-hxg5-crqh",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-16T14:59:00.000Z",
-        "summary": "Under certain circumstances, server-only imports, which typically cannot be included in the client bundle, could make their way into it, potentially exposing secrets. This could only occur when those server-only imports were made through `…",
-        "badge": "CVE-2026-128118",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-11-16T22:17:32.000Z",
+        "summary": "**Ecosystem / package:** Go — `github.com/kubeshark/kubeshark` (the `kubeshark` CLI, `kubeshark mcp` subcommand) **Affected component:** `cmd/mcpRunner.go`, MCP tool `start_kubeshark` **Affected versions:** `>= v53.1.0`, ` , \"-n\", …, \"--se…",
+        "badge": "CVE-2026-129236",
+        "signal": "HIGH · CVSS 7.2"
       },
       {
         "id": "ai-openai-dd659f011024f04f",
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1257540",
+        "id": "v2ex-1257631",
         "category": "dev",
-        "title": "codex 手贱退出登录了一下，再次登已经要手机验证码了，怎么办",
-        "url": "https://www.v2ex.com/t/1257540",
+        "title": "AI 切碎了我的注意力",
+        "url": "https://www.v2ex.com/t/1257631",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-16T14:30:14.000Z",
-        "summary": "号是不是废了，手机端还能登，还能用",
+        "publishedAt": "2026-11-17T03:08:58.000Z",
+        "summary": "分享一个我现在的工作感受 我经常在做任务 A 的时候，接受到 B 的信息，然后脑子会迅速切到 B，然后执行一会 B 再被 C 吸引，执行一会 C。然后再回到 A。我自己比喻自己像个 cpu，多线程在不同的任务上分配注意力。 我自己感觉是大脑经常保持高敏感状态，怕错过信息，所以很容易捕捉周围的信息，一发现有可能有价值的，就忍不住马上投入。这样的好处是，信息收集比较强，容易捕捉新的东西。缺点就是长任务难执行，容易半途而废。",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-0a8927286259b7a1",
+        "id": "cn-it-688b846a6c1ef896",
         "category": "cn",
-        "title": "苹果 visionOS 27.3 开发者预览版 Beta 2 发布",
-        "url": "https://www.ithome.com/1/028/015.htm",
+        "title": "告别“小修小补”：微软 Win11 27H2 首个内部踪迹曝光，3 年来最大升级蓄势待发",
+        "url": "https://www.ithome.com/1/028/153.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-16T19:19:21.000Z",
-        "summary": "IT之家 11 月 17 日消息，苹果今日向 Vision Pro 用户推送了 visionOS 27.3 开发者预览版 Beta 2 更新（内部版本号：24N5298d），本次更新距离上次发布 Beta/RC 间隔 13 天。 需要注意的是，因苹果各区域节点服务器配置缓存问题，可能有些地方探测到升级更新的时间略有延迟，一般半小时内，不会太久。 本文由机器人发布，IT之家稍后将为大家带来具体更新内容。 附 visionOS 27 发布历史： 2026-11-10：visio…",
+        "publishedAt": "2026-11-17T03:38:43.000Z",
+        "summary": "IT之家 11 月 17 日消息，开发者 @XenoPanther 于 11 月 14 日在 X 平台发布推文，爆料称本月 面向 Experimental（Future Platforms）通道发布的 Windows 11 Build 29708.1003 预览版中 ，已经出现了 Windows 11 27H2 版本标识。 XenoPanther 通过挖掘该 Windows 11 预览版的 Windows.adml 文件（位于 PolicyDefinitions\\en-US…",
         "badge": "IT之家"
       },
       {
@@ -200,34 +200,34 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50520182",
+        "id": "hn-50523601",
         "category": "dev",
-        "title": "Grazing sheep in fields with solar arrays",
-        "url": "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains",
+        "title": "BugMeNot has closed",
+        "url": "https://www.bugmenot.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-16T17:27:46.000Z",
+        "publishedAt": "2026-11-16T21:32:17.000Z",
         "badge": "HN",
-        "signal": "131 分 · 107 评论"
+        "signal": "381 分 · 192 评论"
       },
       {
-        "id": "cn-baidu-7292d1f17131a5da",
+        "id": "cn-baidu-3839336ad8f33489",
         "category": "cn",
-        "title": "墨总统3次交叉双臂抱于胸前有何深意",
-        "url": "https://www.baidu.com/s?wd=%E5%A2%A8%E6%80%BB%E7%BB%9F3%E6%AC%A1%E4%BA%A4%E5%8F%89%E5%8F%8C%E8%87%82%E6%8A%B1%E4%BA%8E%E8%83%B8%E5%89%8D%E6%9C%89%E4%BD%95%E6%B7%B1%E6%84%8F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "华强北档口老板娘集齐APEC经济体签名",
+        "url": "https://www.baidu.com/s?wd=%E5%8D%8E%E5%BC%BA%E5%8C%97%E6%A1%A3%E5%8F%A3%E8%80%81%E6%9D%BF%E5%A8%98%E9%9B%86%E9%BD%90APEC%E7%BB%8F%E6%B5%8E%E4%BD%93%E7%AD%BE%E5%90%8D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月16日，墨西哥总统辛鲍姆抵达深圳出席APEC领导人非正式会议，机场欢迎仪式上她三次自然地交叉双臂抱于胸前、面带微笑与欢迎人群打招呼。墨西哥记者解读，该动作象征爱与支持。",
+        "summary": "11月16日，深圳华强北档口老板娘邓姐终于集齐APEC21个经济体的签名。来自巴布亚新几内亚的客商专程赴档口留言，补上国际手账缺失的最后一页。",
         "badge": "热搜",
-        "signal": "7,712,760 热度"
+        "signal": "7,713,050 热度"
       },
       {
-        "id": "github-advisory-ghsa-3r8g-jcqq-3p5j",
+        "id": "github-advisory-ghsa-72px-j8gh-p79x",
         "category": "security",
-        "title": "SvelteKit: DoS while parsing form data from a remote functions `form`",
-        "url": "https://github.com/advisories/GHSA-3r8g-jcqq-3p5j",
+        "title": "mail-parser: Sender IP address spoofing in get_server_ipaddress()",
+        "url": "https://github.com/advisories/GHSA-72px-j8gh-p79x",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-16T14:57:35.000Z",
-        "summary": "This only affects applications using the experimental remote functions flag and utilizing the `form`, `query`, or `command` remote functions. A specially-crafted request could block the event loop for extended periods of time during parsin…",
-        "badge": "CVE-2026-128120",
+        "publishedAt": "2026-11-16T22:11:54.000Z",
+        "summary": "### Patches Fixed in **4.6.2**. Upgrade with `pip install --upgrade mail-parser`. Candidate addresses are now selected by position, not by appearance — a bracketed address the sender wrote is byte-identical to one the MTA wrote, so no amou…",
+        "badge": "CVE-2026-129297",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -240,24 +240,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1257538",
+        "id": "v2ex-1257627",
         "category": "dev",
-        "title": "开源了一个纯 Rust + NSH 编写的原生 HTTP(S) 抓包调试工具：zniff 🦀🔍",
-        "url": "https://www.v2ex.com/t/1257538",
+        "title": "FreeCompare 文本比较工具，求试用反馈",
+        "url": "https://www.v2ex.com/t/1257627",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-16T14:20:13.000Z",
-        "summary": "单二进制开箱即用，同一套界面还能编译成 WebAssembly，支持 zniff --web / Docker 部署为远程网页控制台。 ✨ 核心能力： • 全协议透视：HTTP/1.1、HTTP/2（ALPN 协商不降级）、WebSocket 与 SSE • 深度解码：JSON 树形视图、GraphQL、无模式 Protobuf/gRPC、MessagePack、行内 JWT/时间戳/Base64、行级 Diff 与瀑布图/时序图 • 15 项改写规则与断点：map-loc…",
+        "publishedAt": "2026-11-17T02:58:15.000Z",
+        "summary": "受前段时间的 OpenCompoase 的启发，主要还是自身需求，idea、vscode 等 ide 里 git，比较不习惯，beyondcompare 一直能和原生 git 的 difftool 结合，不过太老了，文本比较不够智能，因此用 ai，实现了满足自己需求的功能，自用、完善了一段时间，感觉基本可以替代 beyondcompare 满足各种代码、文字、目录比较需求 高替 beyondcompare 的文本、目录比较（风格也比较接近，原始） 基于 Rust+Tauri…",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-item-8241b8bab9a52a34",
+        "id": "cn-item-74b4bf6728121398",
         "category": "cn",
-        "title": "中新网评：企业宣传莫拿争议换流量",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-16/10733114.shtml",
+        "title": "TOP500、HPCG双榜第一！“灵晟”蝉联全球超算榜首",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-17/10733254.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-16T14:00:41.000Z",
-        "summary": "中新网北京11月16日电(记者 查志远)一句“趁男朋友不在”，代价80万。今年七夕期间，快手“德芙官方旗舰店”发布了一条带货视频，女主角跟男朋友要了很久的七彩礼盒没要到，于是“趁男朋友不在”，收下了暧昧对象驾车两小时送来的同款巧克力，配文“很甜”。",
+        "publishedAt": "2026-11-17T02:09:25.000Z",
+        "summary": "当地时间11月17日，在美国芝加哥举行的SC26国际超级计算大会期间，新一期全球超算TOP500榜单正式发布：国家超级计算深圳中心“灵晟”E级超算以2.198EFlops(每秒219.8亿亿次)的Linpack双精度实测性能蝉联世界第一，领先第二名美国“El Capitan”(1.809EFlops)约21%，并以22PFlops继续保持HPCG榜单榜首。",
         "badge": "中新网要闻"
       },
       {
@@ -282,35 +282,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50519744",
+        "id": "hn-50526152",
         "category": "dev",
-        "title": "Jiff 1.0: A datetime library for Rust",
-        "url": "https://burntsushi.net/jiff/",
+        "title": "Running coding agents without handing them my credentials",
+        "url": "https://blog.antonio.cx/running-agents-with-lend",
         "source": "Hacker News",
-        "publishedAt": "2026-11-16T16:53:39.000Z",
+        "publishedAt": "2026-11-17T01:18:56.000Z",
         "badge": "HN",
-        "signal": "205 分 · 46 评论"
+        "signal": "50 分 · 20 评论"
       },
       {
-        "id": "cn-it-dcb2efe43b45e2f3",
+        "id": "cn-it-b17d5e98f444d465",
         "category": "cn",
-        "title": "苹果 macOS 27.3 开发者预览版 Beta 2 发布",
-        "url": "https://www.ithome.com/1/028/014.htm",
+        "title": "摩根大通发生重大系统故障，回应称并非网络攻击所致",
+        "url": "https://www.ithome.com/1/028/146.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-16T19:19:21.000Z",
-        "summary": "IT之家 11 月 17 日消息，苹果今日向 Mac 电脑用户推送了 macOS 27.3 开发者预览版 Beta 2 更新（内部版本号：26C5047e），本次更新距离上次发布 Beta/RC 间隔 13 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升级； • 开发预览版 ：需登录注册 苹果开发者计划 …",
+        "publishedAt": "2026-11-17T03:33:56.000Z",
+        "summary": "IT之家 11 月 17 日消息，据南华早报报道，美国当地时间周一， 数千名客户报告称摩根大通发生技术故障 ，多家美国主要银行和 Zelle 汇款服务公司难以访问在线账户，这起问题在整个金融体系引发了连锁反应。 摩根大通官方表示， 这些技术问题并非网络攻击造成的 ，公司正努力在周一结束前恢复银行服务。 摩根大通发言人 Joe Evangelisti 表示：“摩根大通在本地硬件系统中出现了与软件漏洞相关的临时问题 —— 这与网络安全无关。”“这不是一个系统性问题 —— 其他银…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-jm3w-gw2p-xjfj",
+        "id": "github-advisory-ghsa-r7w7-vpq8-c5vv",
         "category": "security",
-        "title": "AIOHTTP: Event loop stall in add_domain() wildcard matching",
-        "url": "https://github.com/advisories/GHSA-jm3w-gw2p-xjfj",
+        "title": "mail-parser is vulnerable to polynomial ReDoS in email header parsing",
+        "url": "https://github.com/advisories/GHSA-r7w7-vpq8-c5vv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-16T14:56:35.000Z",
-        "summary": "### Summary `Application.add_domain()` compiled each `*` in a host mask to `[^:]*`. With two or more wildcards in a mask, matching a long `Host` header that does not match the mask took polynomial time on the event loop. ### Impact An atta…",
-        "badge": "CVE-2026-128124",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-11-16T22:11:08.000Z",
+        "summary": "### Summary Two regular expressions used while parsing email headers backtrack polynomially on attacker-controlled input. Parsing a single small, well-formed email can consume minutes to hours of CPU, denying service to any process that pa…",
+        "badge": "CVE-2026-129295",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-google-deepmind-6d8eb3bcd497222d",
@@ -322,25 +322,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1257530",
+        "id": "v2ex-1257617",
         "category": "dev",
-        "title": "每当不知道该干什么的时候，就会打开告警系统，找几个顺眼的 error 日志扔给 ai 修掉",
-        "url": "https://www.v2ex.com/t/1257530",
+        "title": "试了下豆包写代码，emmm，有优点有缺点",
+        "url": "https://www.v2ex.com/t/1257617",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-16T13:09:27.000Z",
-        "summary": "把所有 error 日志都设置成了告警，这样闲下来不知道该干什么的时候，刚结束完一个大活的时候，咖啡因崩得头疼的时候，就可以修修小 bug 休息一下=w=",
+        "publishedAt": "2026-11-17T02:36:42.000Z",
+        "summary": "claude 又阵亡了一个，目前用的 cursor 套餐，但是赠送的 claude 那点小量一会儿就用光了。 试了下 grok 生成的 html，真是一言难尽，就算带上 skill 也不行。 用 chat 试了下豆包，意外的 one-shot 挺符合审美的。 但深入使用，这玩意真不听话啊🙉，遵循指令这块只管我行我素，想到啥改啥。 比辅导孩子写作业还要奔溃 后续还是定好基调后回 grok 再深入优化了。 我都想去试试美国豆包了",
         "badge": "程序员",
-        "signal": "3 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-baidu-0c1f4becf459ea1b",
+        "id": "cn-baidu-337db6b29cdc5d38",
         "category": "cn",
-        "title": "APEC离我们的生活有多远",
-        "url": "https://www.baidu.com/s?wd=APEC%E7%A6%BB%E6%88%91%E4%BB%AC%E7%9A%84%E7%94%9F%E6%B4%BB%E6%9C%89%E5%A4%9A%E8%BF%9C&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "APEC“中国年”",
+        "url": "https://www.baidu.com/s?wd=APEC%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%B9%B4%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "APEC离我们的生活有多远？是货架上的进口水果，是手机里的跨境支付，还是一次不用倒时差的合作？今年是APEC“中国年”，亚太经合组织第三十三次领导人非正式会议即将在深圳举行。我们把话筒交给来自不同APEC经济体的年轻人，一起听听他们心目中的APEC合作。",
+        "summary": "11月18日至19日，亚太经合组织第三十三次领导人非正式会议将在深圳举行，这是中国第三次，也是时隔12年再次担任APEC东道主。作为亚太地区层级最高、领域最广、最具影响力的经济合作机制，今年在深圳举办的APEC会议承载着各方对开放、创新、合作的共同期待。",
         "badge": "热搜",
-        "signal": "7,619,531 热度"
+        "signal": "7,619,115 热度"
       },
       {
         "id": "cisa-kev-cve-2026-20320",
@@ -363,35 +363,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50519354",
+        "id": "hn-50524767",
         "category": "dev",
-        "title": "Frame – 31.5\" color ePaper display",
-        "url": "https://trmnl.com/blog/introducing-frame",
+        "title": "Optimizely Compromised, Served Malware on Zoom, GitLab",
+        "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-16T16:23:22.000Z",
+        "publishedAt": "2026-11-16T23:00:34.000Z",
         "badge": "HN",
-        "signal": "150 分 · 80 评论"
+        "signal": "159 分 · 83 评论"
       },
       {
-        "id": "cn-item-359e390e6f7f1aac",
+        "id": "cn-item-7335fdfc286069a7",
         "category": "cn",
-        "title": "日本东京突发持刀伤人事件 1人被刺身亡",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-16/10733096.shtml",
+        "title": "大型运投无人机“长鹰-8”完成运输投送试验",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-17/10733250.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-16T13:34:21.000Z",
-        "summary": "中新网11月16日电 据日本广播协会(NHK)报道，当地时间16日晚，日本东京都中野区发生持刀伤人事件，一名女子被刺身亡，一名男性嫌疑人被捕。",
+        "publishedAt": "2026-11-17T02:04:49.000Z",
+        "summary": "记者今天(17日)从中国兵器工业集团获悉，近日，我国自主研制的7吨级大型运投无人机“长鹰-8”圆满完成运输投送试验。无人机按预定航线平稳起飞，抵达投放区域后于300米高度实施空投，货盘按指令自动出舱、伞花精准绽开，随后安全返航、平稳降落。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xgw8-8ccx-rmqh",
+        "id": "github-advisory-ghsa-259w-wmqg-fp76",
         "category": "security",
-        "title": "AIOHTTP: Too many URL-encoded form fields block the event loop",
-        "url": "https://github.com/advisories/GHSA-xgw8-8ccx-rmqh",
+        "title": "termux-sync: Arbitrary file write during restore via attacker-controlled manifest source path",
+        "url": "https://github.com/advisories/GHSA-259w-wmqg-fp76",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-16T14:54:10.000Z",
-        "summary": "### Summary `Request.post()` had no limit on the number of fields in a URL-encoded form body. Inserting a large number of repeated keys into a `MultiDict` took quadratic time on the event loop. ### Impact An attacker could block the event …",
-        "badge": "CVE-2026-128126",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-11-16T22:09:24.000Z",
+        "summary": "termux-sync restore trusts fields inside an untrusted backup manifest and uses them as the extraction destination without validation. During restore, each archive entry is handled as: src_dir = Path(info.get(\"source\", ...)).parent extract_…",
+        "badge": "CVE-2026-86046",
+        "signal": "HIGH · CVSS 7.1"
       },
       {
         "id": "ai-openai-ff7833693fa2a067",
@@ -404,24 +404,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1257527",
+        "id": "v2ex-1257610",
         "category": "dev",
-        "title": "deepseek harness 装了 dsh-compute-use 后启动不了，重装也不行。",
-        "url": "https://www.v2ex.com/t/1257527",
+        "title": "claude 被封了，codex 写代码能力还有些欠缺，有没有其他在写代码这块的平替品",
+        "url": "https://www.v2ex.com/t/1257610",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-16T13:04:20.000Z",
-        "summary": "怎么彻底卸载呢？ harness 跟 dsh-compute-use 有版本配套问题吗？ dsh-compute-use 到底该怎么安装呢？",
+        "publishedAt": "2026-11-17T02:21:53.000Z",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-it-7c4baa5ef3432c20",
+        "id": "cn-it-1f00c6fd02ea4442",
         "category": "cn",
-        "title": "苹果 iOS/iPadOS 27.3 开发者预览版 Beta 2 发布",
-        "url": "https://www.ithome.com/1/028/013.htm",
+        "title": "小米汽车官方打假：网传“11 月 15 日开始召回”系诈骗短信，已取证并保留追责权利",
+        "url": "https://www.ithome.com/1/028/144.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-16T19:19:20.000Z",
-        "summary": "【 点此直达升级教程 】 IT之家 11 月 17 日消息，苹果今日向 iPhone 和 iPad 用户推送了 iOS/iPadOS 27.3 开发者预览版 Beta 2 更新（内部版本号：24C5049d），本次更新距离上次发布 Beta/RC 间隔 13 天。 如何升级 iOS / iPadOS / watchOS / macOS 开发版和公测版？ • 公开测试版 ：需注册 Apple Beta 版软件计划 ，之后通过【设置】【通用】【软件更新】【Beta 版更新】来升…",
+        "publishedAt": "2026-11-17T03:33:39.000Z",
+        "summary": "IT之家 11 月 17 日消息，针对网络上流传的“小米汽车 11 月 15 日起开始召回”的诈骗短信，小米公司官方辟谣账号发布声明，明确该消息纯属虚构，并非官方通知。 小米声明称，有不法分子冒充“小米汽车”发送诈骗短信，称“小米汽车 11 月 15 日起开始召回”，并要求车主尽快登录所附网址、提供相关个人信息。 小米提醒广大车主，官方不会通过短信链接索要个人信息、银行卡密码，也不会要求用户进行转账汇款。请提高警惕，谨防诈骗，不点击可疑链接。 同时，小米提醒用户不要向不明渠…",
         "badge": "IT之家"
       },
       {
@@ -446,35 +445,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50515151",
+        "id": "hn-50526560",
         "category": "dev",
-        "title": "Squircles",
-        "url": "https://linebender.org/wiki/curves/squircle/",
+        "title": "If an App Asks for Full Disk Access or System and App Protection Override",
+        "url": "https://support.apple.com/en-us/149699",
         "source": "Hacker News",
-        "publishedAt": "2026-11-16T07:55:10.000Z",
+        "publishedAt": "2026-11-17T02:17:04.000Z",
         "badge": "HN",
-        "signal": "22 分 · 9 评论"
+        "signal": "27 分 · 13 评论"
       },
       {
-        "id": "cn-baidu-c145af8411c657b9",
+        "id": "cn-baidu-8bf6de14b0fa0a53",
         "category": "cn",
-        "title": "俄女记者：深圳见机器人概率比老乡高",
-        "url": "https://www.baidu.com/s?wd=%E4%BF%84%E5%A5%B3%E8%AE%B0%E8%80%85%EF%BC%9A%E6%B7%B1%E5%9C%B3%E8%A7%81%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%A6%82%E7%8E%87%E6%AF%94%E8%80%81%E4%B9%A1%E9%AB%98&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "特朗普将成首位到访深圳的在任美总统",
+        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E5%B0%86%E6%88%90%E9%A6%96%E4%BD%8D%E5%88%B0%E8%AE%BF%E6%B7%B1%E5%9C%B3%E7%9A%84%E5%9C%A8%E4%BB%BB%E7%BE%8E%E6%80%BB%E7%BB%9F&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "俄罗斯总统普京即将来深圳出席APEC峰会。11月16日，《今日俄罗斯》驻华记者阿丽娜直言，她非常关注普京总统这次来深圳。但比起宏大的外交议题，她对深圳的科技氛围印象更深：“在深圳街头上，你碰到机器人的概率，可能比你碰到老乡还要高。”",
+        "summary": "近日，特朗普将成为首位到访深圳的在任美国总统，出席APEC峰会。CNN发文介绍深圳从小渔村发展为科技之都的历程，称这里已成为汇聚华为、比亚迪、腾讯等科技巨头的“中国硅谷”。",
         "badge": "热搜",
-        "signal": "7,521,529 热度"
+        "signal": "7,521,308 热度"
       },
       {
-        "id": "github-advisory-ghsa-24c4-3p7v-29cm",
+        "id": "github-advisory-ghsa-jq3q-62jc-fqq9",
         "category": "security",
-        "title": "AIOHTTP: Base64 multipart parts bypass client_max_size",
-        "url": "https://github.com/advisories/GHSA-24c4-3p7v-29cm",
+        "title": "code-review-mcp-server: Command injection via unsanitized folderPath/baseBranch parameters",
+        "url": "https://github.com/advisories/GHSA-jq3q-62jc-fqq9",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-16T14:53:12.000Z",
-        "summary": "### Summary When reading a multipart part with `Content-Transfer-Encoding: base64`, `BodyPartReader.read_chunk()` kept reading until the chunk length was a multiple of 4, with no byte limit. A part with a short `Content-Length`, or a long …",
-        "badge": "CVE-2026-128127",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-11-16T22:09:06.000Z",
+        "summary": "### Impact `code-review-mcp-server` exposes MCP tools (`getLocalGitDiff`, `codeReview`, `createPR`, `getPRTemplate`) that accept `folderPath` and `baseBranch` string parameters. These caller-controlled values were interpolated directly int…",
+        "badge": "CVE-2026-68934",
+        "signal": "HIGH · CVSS 0.0"
       },
       {
         "id": "ai-hugging-face-6841e619fcd7e8d9",
@@ -486,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1257526",
+        "id": "v2ex-1257592",
         "category": "dev",
-        "title": "总结了一些 AI Agent 开发工程师岗位的面试题",
-        "url": "https://www.v2ex.com/t/1257526",
+        "title": "有人说 AI 是技术平权，有人说 AI 是能力放大器，还有一些老登觉得 AI 把自己替代了",
+        "url": "https://www.v2ex.com/t/1257592",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-16T12:55:37.000Z",
-        "summary": "总结了一些 AI Agent 开发工程师岗位的面试题，希望对大家有所帮助： https://github.com/oujingzhou/agent-interview-questions",
+        "publishedAt": "2026-11-17T01:38:29.000Z",
+        "summary": "有人说 AI 是技术平权，有人说 AI 是能力放大器，还有一些老登觉得 AI 把自己替代了。 那么，你觉得呢？",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "28 回复"
       }
     ]
   },
@@ -511,8 +510,8 @@
         "url": "https://github.com/ag-ui-protocol/ag-ui",
         "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
         "language": "TypeScript",
-        "stars": 18809,
-        "starsToday": 790
+        "stars": 19247,
+        "starsToday": 791
       },
       {
         "id": "github-3c68770163167538",
@@ -521,8 +520,8 @@
         "url": "https://github.com/backnotprop/plannotator",
         "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
         "language": "TypeScript",
-        "stars": 12456,
-        "starsToday": 689
+        "stars": 12679,
+        "starsToday": 696
       },
       {
         "id": "github-5b2653ab79f36aef",
@@ -531,8 +530,8 @@
         "url": "https://github.com/dream-num/univer",
         "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
         "language": "TypeScript",
-        "stars": 27697,
-        "starsToday": 1878
+        "stars": 27915,
+        "starsToday": 1828
       },
       {
         "id": "github-5fb5fa89e7c46f3c",
@@ -541,8 +540,8 @@
         "url": "https://github.com/tradermonty/claude-trading-skills",
         "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
         "language": "Python",
-        "stars": 6208,
-        "starsToday": 841
+        "stars": 6438,
+        "starsToday": 837
       },
       {
         "id": "github-19b291903bbeeec0",
@@ -551,8 +550,8 @@
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "language": "Python",
-        "stars": 7284,
-        "starsToday": 1057
+        "stars": 7562,
+        "starsToday": 1094
       },
       {
         "id": "github-0ae6d60ce7b60c73",
@@ -561,8 +560,8 @@
         "url": "https://github.com/getarcaneapp/arcane",
         "description": "Modern Docker Management, Designed for Everyone",
         "language": "Go",
-        "stars": 8625,
-        "starsToday": 31
+        "stars": 8842,
+        "starsToday": 46
       },
       {
         "id": "github-b248db7018a93b52",
@@ -571,8 +570,8 @@
         "url": "https://github.com/DeanChensj/jiangshan-map",
         "description": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
         "language": "JavaScript",
-        "stars": 6649,
-        "starsToday": 285
+        "stars": 7078,
+        "starsToday": 288
       },
       {
         "id": "github-fac24b8ded7176d0",
@@ -581,8 +580,8 @@
         "url": "https://github.com/google-labs-code/stitch-skills",
         "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "language": "TypeScript",
-        "stars": 9686,
-        "starsToday": 540
+        "stars": 9786,
+        "starsToday": 529
       },
       {
         "id": "github-5524ff15f43adf61",
@@ -591,8 +590,8 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 68036,
-        "starsToday": 122
+        "stars": 68255,
+        "starsToday": 135
       },
       {
         "id": "github-15da1258d9c70a23",
@@ -601,10 +600,10 @@
         "url": "https://github.com/NVIDIA/SkillEvaluator",
         "description": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
         "language": "Python",
-        "stars": 2539,
-        "starsToday": 953
+        "stars": 2855,
+        "starsToday": 873
       }
     ],
-    "updatedAt": "2026-11-16T20:29:47.253Z"
+    "updatedAt": "2026-11-17T03:55:08.181Z"
   }
 }
