@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-18T10:08:03.933Z",
+  "generatedAt": "2026-11-18T13:59:32.751Z",
   "intelligence": {
-    "updatedAt": "2026-11-18T10:08:03.933Z",
+    "updatedAt": "2026-11-18T13:59:32.751Z",
     "items": [
       {
-        "id": "cn-item-4ce422e14c54af4e",
+        "id": "cn-item-67570c24874f2e55",
         "category": "cn",
-        "title": "清明上河园指路牌火了！看河南文旅如何把服务做进细节里",
-        "url": "https://www.chinanews.com.cn/cul/2026/11-18/10734145.shtml",
+        "title": "日本新潟县佐渡附近发生5.0级地震",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-18/10734352.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-18T08:46:53.000Z",
-        "summary": "中新网北京11月18日电(王诗尧)逛清明上河园不迷路，想去哪里“点”哪里！",
+        "publishedAt": "2026-11-18T13:45:50.000Z",
+        "summary": "中新网东京11月18日电 (记者 朱晨曦)据日本气象厅消息，当地时间18日18时37分(北京时间17时37分)，日本新潟县佐渡附近发生5.0级地震。日本气象厅说该地震不会引发海啸。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50538240",
+        "id": "hn-50545958",
         "category": "dev",
-        "title": "Java4Shell: RCE in OpenJDK when processing Base64",
-        "url": "https://calif.io/java4shell/",
+        "title": "Quad9 Is Leaving France: Why DNS Resolvers Are the Wrong Place to Fight Piracy",
+        "url": "https://techstackups.com/articles/quad9-leaves-france-dns-blocking/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-17T21:11:28.000Z",
+        "publishedAt": "2026-11-18T13:18:02.000Z",
         "badge": "HN",
-        "signal": "943 分 · 240 评论"
+        "signal": "68 分 · 6 评论"
       },
       {
-        "id": "cn-it-c33ee2fc8236d172",
+        "id": "cn-it-df802d53f0e634cf",
         "category": "cn",
-        "title": "微软商业业务 CEO：黄仁勋辞任英伟达 CEO，或促使客户寻求 AI 芯片替代方案",
-        "url": "https://www.ithome.com/1/028/968.htm",
+        "title": "英伟达澄清新云厂商融资担保规则：担保有生效条件，后续筛选对象将更加审慎",
+        "url": "https://www.ithome.com/1/029/079.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-18T09:57:57.000Z",
-        "summary": "IT之家 11 月 18 日消息，据彭博社今天（18 日）早间报道，微软商业业务 CEO 贾德森 · 阿尔托夫认为，黄仁勋辞职引发的英伟达人事风波，可能促使客户寻找英伟达 AI 芯片之外的选择。 阿尔托夫透露，早在黄仁勋辞职之前，客户就已经表达了希望拥有更多选择的意愿，而最近的消息确实让人们更加确信，多一些选择是件好事。 微软、亚马逊和谷歌都在开发自研 AI 芯片，希望借此 降低对英伟达的依赖 。微软上个月还透露，计划让旗下 AI 软件主要依靠自研硬件运行。至于 Anthr…",
+        "publishedAt": "2026-11-18T13:26:58.000Z",
+        "summary": "IT之家 11 月 18 日消息，周末，约 19.7 万人签署了一份请愿书，呼吁英伟达重新任命离职的 CEO 黄仁勋（Jensen Huang），其中甚至包括埃隆 · 马斯克（Elon Musk）。支持者力挺黄仁勋的原因之一，不仅在于他一直积极推动 AI 产业发展，还因为他曾利用英伟达巨额利润，为这场 AI 热潮提供资金支持。 而英伟达确实拥有雄厚的资金实力。公司周二公布的财报显示，2027 财年第三季度净利润达到 649 亿美元 （IT之家注：现汇率约合 4,335.23…",
         "badge": "IT之家"
       },
       {
@@ -76,24 +76,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1258075",
+        "id": "v2ex-1258103",
         "category": "dev",
-        "title": "Obsidian 愈发卡顿了",
-        "url": "https://www.v2ex.com/t/1258075",
+        "title": "为什么我感觉 TPS 比所谓的基模能力还要强",
+        "url": "https://www.v2ex.com/t/1258103",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T09:54:42.000Z",
-        "summary": "一个最开始以极简著称的 MD 编辑器，装了 20 多个插件后，在自己 64g RAM + AI Max 395 的设备上现在打开都会有明显的如同 bug 一样的表现（只加载一半界面，note 内容不显示），重启首次启动约 10-20s 后才能打开正常编辑；而在以前的办公本上几乎打不开，或者打开后就占用了几乎所有性能，实在不尽人意。 不知这种表现能否怪罪于 Electron 的臃肿。按这个势头下去，大概会有人忍不住用 rust 或 go 重写一个 Obsidian。",
+        "publishedAt": "2026-11-18T12:55:05.000Z",
+        "summary": "因为某个问题在知名蓝色论坛跟人评论聊天 我说我越来越受不了 gpt 的雷霆大思考了，所以我宁愿回退 sonet+deepseek 也无法认识 Astra 了。 但是下面评论都指责我说模型能力才重要，速度无所谓？？？ 我搭配了 n 个 agent，多个账号，同时并行了 7 个任务，频繁的等待让我额外付出大量的焦虑切换不同的 seesion（慢也是多账号的原因），我觉得 super agent 解决不了以前，我必须要求够快.... 是只有我这么想么...",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-baidu-dc36463632e41083",
+        "id": "cn-baidu-e4da5468bc084be6",
         "category": "cn",
-        "title": "习近平迎接特朗普",
-        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E8%BF%8E%E6%8E%A5%E7%89%B9%E6%9C%97%E6%99%AE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平彭丽媛欢迎与会嘉宾并集体合影",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%BD%AD%E4%B8%BD%E5%AA%9B%E6%AC%A2%E8%BF%8E%E4%B8%8E%E4%BC%9A%E5%98%89%E5%AE%BE%E5%B9%B6%E9%9B%86%E4%BD%93%E5%90%88%E5%BD%B1&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
         "badge": "热搜",
-        "signal": "7,809,427 热度"
+        "signal": "7,809,716 热度"
       },
       {
         "id": "cisa-kev-cve-2026-114713",
@@ -116,23 +116,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50540437",
+        "id": "hn-50543989",
         "category": "dev",
-        "title": "ID.me terms required for IRS sign-in",
-        "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
+        "title": "Energy-Based Reasoners: 385x more efficient inference",
+        "url": "https://energy-based-reasoners.github.io/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-18T00:51:45.000Z",
+        "publishedAt": "2026-11-18T09:29:32.000Z",
         "badge": "HN",
-        "signal": "361 分 · 161 评论"
+        "signal": "168 分 · 25 评论"
       },
       {
-        "id": "cn-item-6fbe983504b9fab6",
+        "id": "cn-item-f3510c14502766b9",
         "category": "cn",
-        "title": "（深圳APEC）一颗车厘子的跨洋“鲜”行：APEC织密亚太供应链",
-        "url": "https://www.chinanews.com.cn/dwq/2026/11-18/10734141.shtml",
+        "title": "日本连续第6个月出现贸易逆差",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-18/10734252.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-18T08:40:29.000Z",
-        "summary": "中新社深圳11月18日电 (记者 蔡敏婕 周昕)11月，南半球正值初夏。智利安第斯山脉西麓的车厘子刚成熟，一场跨越约2万公里的速度接力随即开启。新产季“车厘子快线”首批海运柜预计12月初抵达广州南沙。",
+        "publishedAt": "2026-11-18T10:28:39.000Z",
+        "summary": "中新社东京11月18日电 (记者 朱晨曦)日本财务省18日公布的贸易统计结果显示，受原油等商品进口成本上涨影响，日本10月贸易逆差达4765亿日元(1美元约合157.84日元)，为连续第6个月出现贸易逆差。",
         "badge": "中新网要闻"
       },
       {
@@ -157,24 +157,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1258069",
+        "id": "v2ex-1258085",
         "category": "dev",
-        "title": "claude 搞了多少算力, 怎么感觉比 openai 强很多",
-        "url": "https://www.v2ex.com/t/1258069",
+        "title": "似乎没见什么大厂开始结合 AI 重写自家的 APP 或桌面软件",
+        "url": "https://www.v2ex.com/t/1258085",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T09:38:24.000Z",
-        "summary": "以前我记得都说 20 刀套餐量很少 最近我看人都说 claude 20 刀套餐量很大, 能赶上 OpenAI 100 刀的, 我没试懒得折腾, 但确实不少人这么说, 或者说就是因为量大这么多人才愿意折腾 claude 怎么有这么多算力了, 是最近加的吗, 当然了确实融资很多钱我知道 我没想到他现在领先 openai 很多了",
+        "publishedAt": "2026-11-18T10:42:51.000Z",
+        "summary": "内存硬件涨价，现在正是 APP 和桌软团队对软件性能极致优化的好时候。优化的好，有机会从存量市场多抢点用户。我觉得如果厂商们要这么做的话，应该从抛弃 electron 开始，真心觉得",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "14 回复"
       },
       {
-        "id": "cn-it-3ed13af2d123b1c7",
+        "id": "cn-it-6909c427bec4eb1b",
         "category": "cn",
-        "title": "暴力熊推出 PC DIY 小工具 TG PadMate，用于量测导热垫厚度",
-        "url": "https://www.ithome.com/1/028/964.htm",
+        "title": "始终将水瓶、文件夹误认为枪支，美国一高中停用 AI 武器探测系统",
+        "url": "https://www.ithome.com/1/029/078.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-18T09:56:34.000Z",
-        "summary": "IT之家 11 月 18 日消息，电脑 PCB 上的各种电路元件通常拥有不同的高度，而散热器底部通常是一个平面，这意味着 介于两者之间的导热材料厚度必须合适 。过薄可能会留下空气间隙，严重影响散热效果；过厚则可能形成应力，导致物理损坏。 面对这一问题，Thermal Grizzly（暴力熊）当地时间本月 15 日推出了 TG PadMate。该工具可用于测量硬件原厂导热垫的厚度，方便用户选择最为合适的替换耗材。 IT之家了解到，TG PadMate 由柔性塑料制成，测量时几…",
+        "publishedAt": "2026-11-18T13:25:39.000Z",
+        "summary": "IT之家 11 月 18 日消息，据外媒 TechSpot 今天（18 日）晚间报道，因屡次将普通物品误判为潜在威胁，美国宾夕法尼亚州亨普菲尔德地区高中最终决定 停用 AI 武器探测系统 。 该校高中是当地参与 Wi-AI 系统训练的多所学校之一。该系统由卡内基梅隆大学衍生企业 CurvePoint 开发，通过分析 Wi-Fi 信号探测人员是否藏有武器。 Wi-AI 在学校入口附近安装了 名为 SensePods 的小型传感器 ，通过监测人员及随身物品对无线电波反射的影响，…",
         "badge": "IT之家"
       },
       {
@@ -199,24 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50540178",
+        "id": "hn-50504373",
         "category": "dev",
-        "title": "Google's AI answers reducing search traffic by 40%",
-        "url": "https://revscope.co/blog/search-seo-geo-2026/",
+        "title": "A Perfect SimCity",
+        "url": "https://www.jeffquast.com/post/a-perfect-simcity/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-18T00:17:58.000Z",
+        "publishedAt": "2026-11-15T05:54:22.000Z",
         "badge": "HN",
-        "signal": "388 分 · 294 评论"
+        "signal": "96 分 · 21 评论"
       },
       {
-        "id": "cn-baidu-490479df633052c2",
+        "id": "cn-baidu-81ef9fc47796d37b",
         "category": "cn",
-        "title": "特朗普抵达深圳",
-        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E6%8A%B5%E8%BE%BE%E6%B7%B1%E5%9C%B3&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平在欢迎晚宴上的祝酒辞",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%9C%A8%E6%AC%A2%E8%BF%8E%E6%99%9A%E5%AE%B4%E4%B8%8A%E7%9A%84%E7%A5%9D%E9%85%92%E8%BE%9E&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月18日下午，美国总统特朗普乘专机抵达深圳，出席亚太经合组织第三十三次领导人非正式会议。",
+        "summary": "11月18日，习近平在深圳举行的亚太经合组织第三十三次领导人非正式会议欢迎晚宴上致辞。他表示，看五十年的中国就来深圳。深圳从渔村发展为国际化大都市，是中国改革开放的缩影，也是亚太合作的成功范例，期待同大家共商亚太合作大计、共襄亚太发展大业。",
         "badge": "热搜",
-        "signal": "7,714,128 热度"
+        "signal": "7,712,538 热度"
       },
       {
         "id": "github-advisory-ghsa-r7hw-jx6r-756g",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1258044",
+        "id": "v2ex-1258078",
         "category": "dev",
-        "title": "astra6.2 真的是拉完了， 用的我血压飙升",
-        "url": "https://www.v2ex.com/t/1258044",
+        "title": "Google AI Ultra 的额度怎么样",
+        "url": "https://www.v2ex.com/t/1258078",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T08:46:01.000Z",
-        "summary": "首先， 我之前的助理模型是 astra6 ， 一直感觉都挺好的。 今天切换到 astra6.2 ，发现几个让人血压飙升的地方 。 1、astra6.2 特别懒， 之前 astra6， 基本上交代完意见事情， 它会从头干到结束，然后测试完成后把结果给我。 现在的 6.2 ，一个验证流程自己中断好几次。 每次完成了一点就停下， 不知道干啥， 非要我说继续才继续。感觉干好极其的敷衍 。 2、关于智商， 我真的觉的 astra 6.2 退化的不止一点半点。 一个 任务， 我一开始就…",
+        "publishedAt": "2026-11-18T10:08:54.000Z",
+        "summary": "看大家都说哈基米翻身了，鉴于当前 gpt 现在太慢了，目前 gpt pro200，一周刚刚够用，想换 Google AI Ultra 试下，另外 claude 模型额度大概有多少，可以在一些场景下作补充",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "8 回复"
       },
       {
-        "id": "cn-item-d8e254fb2617f158",
+        "id": "cn-item-4ce422e14c54af4e",
         "category": "cn",
-        "title": "监管要求基金公司上报全部产品AI敞口？证监会：不属实",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-18/10733990.shtml",
+        "title": "清明上河园指路牌火了！看河南文旅如何把服务做进细节里",
+        "url": "https://www.chinanews.com.cn/cul/2026/11-18/10734145.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-18T04:32:50.000Z",
-        "summary": "中新网11月18日电 据“证监会发布”微信公众号消息，中国证监会新闻发言人答记者问。",
+        "publishedAt": "2026-11-18T08:46:53.000Z",
+        "summary": "中新网北京11月18日电(王诗尧)逛清明上河园不迷路，想去哪里“点”哪里！",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50538994",
+        "id": "hn-50538240",
         "category": "dev",
-        "title": "Quad9's withdrawal from France: A canary in the coal mine",
-        "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
+        "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+        "url": "https://calif.io/java4shell/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-17T22:13:34.000Z",
+        "publishedAt": "2026-11-17T21:11:28.000Z",
         "badge": "HN",
-        "signal": "603 分 · 198 评论"
+        "signal": "1042 分 · 276 评论"
       },
       {
-        "id": "cn-it-8defbabedc2220ca",
+        "id": "cn-it-0ff4d5984d21ad2b",
         "category": "cn",
-        "title": "2026 小米精英驾驶 · 赛照培训正式收官，162 位小米车主成为国家 B 级赛车手",
-        "url": "https://www.ithome.com/1/028/950.htm",
+        "title": "AOC 推出 CU36U4Z 显示器：36\" 1500R Fast VA，WQHD 260Hz",
+        "url": "https://www.ithome.com/1/029/076.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-18T09:43:02.000Z",
-        "summary": "IT之家 11 月 18 日消息，小米汽车官方今日宣布，2026 小米精英驾驶 · 赛照培训正式收官。据介绍， 今年有 162 位小米车主成为国家 B 级赛车手 。 据IT之家此前报道， 2026 小米精英驾驶包含高阶驾驶培训、赛照培训、赛道体验三项活动 ： 高阶驾驶培训： 面向所有用户开放。小米精英教练团队教学，针对日常场景进行安全驾驶培训。课程含理论课和 4 项（加速 / 制动 / 紧急变线练习、绕桩练习、低附着路面驾驶练习、金卡纳练习）实车操作。 赛照培训： 仅面向已…",
+        "publishedAt": "2026-11-18T13:23:49.000Z",
+        "summary": "IT之家 11 月 18 日消息，AOC 今日在官网上线了 CU36U4Z 显示器。该型号与其姊妹品牌飞利浦的 Evnia 36M4C5500P/69 采用同一块 Fast VA 面板，因此也是 全球首批 36\" 游戏显示器 。 CU36U4Z 分辨率为 WQHD (3440×1440)；原生刷新率 240Hz、超频刷新率 260Hz； 获得 VESA DisplayHDR 400 认证 ，SDR 亮度 350nits、HDR 亮度 450nits，静态对比度 4000:1…",
         "badge": "IT之家"
       },
       {
@@ -321,25 +321,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1258040",
+        "id": "v2ex-1258075",
         "category": "dev",
-        "title": "按照国外 personal agent 都有一个自己的邮箱推理",
-        "url": "https://www.v2ex.com/t/1258040",
+        "title": "Obsidian 愈发卡顿了",
+        "url": "https://www.v2ex.com/t/1258075",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T08:41:53.000Z",
-        "summary": "国内想真的用上个人助理并且好用,起码得一部手机+一个手机号.这么看来好不乐观啊,不像国外通过邮箱和网页就可以办到 90%的事情,国内 app 都是孤岛",
+        "publishedAt": "2026-11-18T09:54:42.000Z",
+        "summary": "一个最开始以极简著称的 MD 编辑器，装了 20 多个插件后，在自己 64g RAM + AI Max 395 的设备上现在打开都会有明显的如同 bug 一样的表现（只加载一半界面，note 内容不显示），重启首次启动约 10-20s 后才能打开正常编辑；而在以前的办公本上几乎打不开，或者打开后就占用了几乎所有性能，实在不尽人意。 不知这种表现能否怪罪于 Electron 的臃肿。按这个势头下去，大概会有人忍不住用 rust 或 go 重写一个 Obsidian。",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "3 回复"
       },
       {
-        "id": "cn-baidu-7ed63e67e8a44291",
+        "id": "cn-baidu-787d656160729280",
         "category": "cn",
-        "title": "共绘新图景 共话新机遇",
-        "url": "https://www.baidu.com/s?wd=%E5%85%B1%E7%BB%98%E6%96%B0%E5%9B%BE%E6%99%AF+%E5%85%B1%E8%AF%9D%E6%96%B0%E6%9C%BA%E9%81%87&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "APEC工商领导人峰会什么话题最热",
+        "url": "https://www.baidu.com/s?wd=APEC%E5%B7%A5%E5%95%86%E9%A2%86%E5%AF%BC%E4%BA%BA%E5%B3%B0%E4%BC%9A%E4%BB%80%E4%B9%88%E8%AF%9D%E9%A2%98%E6%9C%80%E7%83%AD&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月17日，来自亚太经合组织21个经济体和英国、法国等13个域外经济体的2000余位政商界代表齐聚深圳，参加2026年APEC工商领导人峰会。与会嘉宾聚焦“亚太经济新图景与合作新机遇”开展工商对话，围绕7个议题开展专题研讨，携手集众智、促合作、求共赢。",
+        "summary": "2026年APEC工商领导人峰会期间，来自亚太经合组织（APEC）21个经济体和英国、法国、德国、瑞士等13个域外经济体的2000余位政商界代表齐聚深圳，围绕开放、创新、合作三大热点话题展开热烈讨论。",
         "badge": "热搜",
-        "signal": "7,618,837 热度"
+        "signal": "7,617,152 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111793",
@@ -362,23 +362,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50544261",
+        "id": "hn-50546312",
         "category": "dev",
-        "title": "Codeberg.org Not Reachable",
-        "url": "https://social.anoxinon.de/@codebergstatus/117636437840688845",
+        "title": "Can Peer Review Survive AI-Generated Text? [pdf]",
+        "url": "https://www.sas.upenn.edu/~jesusfv/Peer_Review.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-11-18T10:02:17.000Z",
+        "publishedAt": "2026-11-18T13:51:03.000Z",
         "badge": "HN",
-        "signal": "11 分 · 1 评论"
+        "signal": "5 分 · 0 评论"
       },
       {
-        "id": "cn-item-56a845ab25a2b08a",
+        "id": "cn-item-6fbe983504b9fab6",
         "category": "cn",
-        "title": "苹果、万豪等美国公司突发网络技术故障",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-18/10733908.shtml",
+        "title": "（深圳APEC）一颗车厘子的跨洋“鲜”行：APEC织密亚太供应链",
+        "url": "https://www.chinanews.com.cn/dwq/2026/11-18/10734141.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-18T02:53:42.000Z",
-        "summary": "中新网11月18日电 综合外媒报道，苹果公司17日表示，一次内部系统更新引发服务故障，影响了包括云服务和支付在内的服务。",
+        "publishedAt": "2026-11-18T08:40:29.000Z",
+        "summary": "中新社深圳11月18日电 (记者 蔡敏婕 周昕)11月，南半球正值初夏。智利安第斯山脉西麓的车厘子刚成熟，一场跨越约2万公里的速度接力随即开启。新产季“车厘子快线”首批海运柜预计12月初抵达广州南沙。",
         "badge": "中新网要闻"
       },
       {
@@ -403,24 +403,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1258035",
+        "id": "v2ex-1258069",
         "category": "dev",
-        "title": "astra 6.2 fast 输出速度感觉还可以啊",
-        "url": "https://www.v2ex.com/t/1258035",
+        "title": "claude 搞了多少算力, 怎么感觉比 openai 强很多",
+        "url": "https://www.v2ex.com/t/1258069",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T08:32:08.000Z",
-        "summary": "astra 6.2 fast 三个 subagent 输出能到 83tok/s 感觉还可以啊",
+        "publishedAt": "2026-11-18T09:38:24.000Z",
+        "summary": "以前我记得都说 20 刀套餐量很少 最近我看人都说 claude 20 刀套餐量很大, 能赶上 OpenAI 100 刀的, 我没试懒得折腾, 但确实不少人这么说, 或者说就是因为量大这么多人才愿意折腾 claude 怎么有这么多算力了, 是最近加的吗, 当然了确实融资很多钱我知道 我没想到他现在领先 openai 很多了",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "1 回复"
       },
       {
-        "id": "cn-it-b3f4a3d6a91ca96e",
+        "id": "cn-it-1487fe5d6a4b3f3d",
         "category": "cn",
-        "title": "苹果前董事长莱文森拟出售 9 万股苹果股票，价值约 3180 万美元",
-        "url": "https://www.ithome.com/1/028/949.htm",
+        "title": "防止考生利用 AI 作弊，韩国临时屏蔽高考考场及周边 100 米内公共 WiFi",
+        "url": "https://www.ithome.com/1/029/075.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-18T09:35:46.000Z",
-        "summary": "IT之家 11 月 18 日消息，苹果前董事长亚瑟 · 莱文森（Arthur Levinson）已提交出售 9 万股苹果股票的申请，按当前市值计算，这批股票价值约 3,180 万美元 （IT之家注：现汇率约合 2.12 亿元人民币） 。此次拟出售计划恰逢苹果股价创下历史新高之后，不过从交易规模来看，其对公司股价的直接影响可能相当有限。 据莱文森于 2026 年 11 月 16 日向美国证券交易委员会（SEC）提交了 144 号表格文件，他计划出售 9 万股苹果普通股，交易总…",
+        "publishedAt": "2026-11-18T13:23:33.000Z",
+        "summary": "IT之家 11 月 18 日消息，据韩联社报道，韩国 2027 学年度大学修学能力考试（高考）开考在即，为防范考生利用人工智能技术作弊，自当地时间 18 日下午 6 时起，全国高考考点及周边地区临时屏蔽公共 WiFi 信号。 据韩国政府和通信业界消息，应政府要求，韩国三大移动运营商（SK 电信、KT、LG U+）从 18 日下午 6 时至高考当日的 19 日下午 6 时， 暂停全国各考场和周边 100 米内的公共 WiFi 和移动运营商提供的 WiFi 服务 。此举旨在最大…",
         "badge": "IT之家"
       },
       {
@@ -445,24 +445,23 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50534631",
+        "id": "hn-50507918",
         "category": "dev",
-        "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
-        "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+        "title": "When AI Knows More Than It Can Offer",
+        "url": "https://medium.com/@smoking2man/when-ai-knows-more-than-it-can-offer-how-training-turns-an-intelligent-assistant-into-a-generator-7e700f05163e",
         "source": "Hacker News",
-        "publishedAt": "2026-11-17T17:12:06.000Z",
+        "publishedAt": "2026-11-15T15:59:23.000Z",
         "badge": "HN",
-        "signal": "545 分 · 243 评论"
+        "signal": "10 分 · 1 评论"
       },
       {
-        "id": "cn-baidu-5e320cc91d013720",
+        "id": "cn-baidu-dc36463632e41083",
         "category": "cn",
-        "title": "特朗普抵达深圳中方战机拉起彩烟",
-        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E6%8A%B5%E8%BE%BE%E6%B7%B1%E5%9C%B3%E4%B8%AD%E6%96%B9%E6%88%98%E6%9C%BA%E6%8B%89%E8%B5%B7%E5%BD%A9%E7%83%9F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平迎接特朗普",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E8%BF%8E%E6%8E%A5%E7%89%B9%E6%9C%97%E6%99%AE&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月18日下午，美国总统特朗普抵达深圳，中方战机在机场拉起彩烟。",
         "badge": "热搜",
-        "signal": "7,521,574 热度"
+        "signal": "7,522,200 热度"
       },
       {
         "id": "github-advisory-ghsa-gfv3-m769-5xm3",
@@ -485,15 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1258032",
+        "id": "v2ex-1258044",
         "category": "dev",
-        "title": "有在做 AI 落地的朋友嘛，进来交流交流。AI 达到一定水平之后，怎么能进一步。",
-        "url": "https://www.v2ex.com/t/1258032",
+        "title": "astra6.2 真的是拉完了， 用的我血压飙升",
+        "url": "https://www.v2ex.com/t/1258044",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T08:23:44.000Z",
-        "summary": "之前做 AI 改造一些传统业务，流程相对简单。且好拆分，感觉 AI 大有可为。跳槽去做 AI CAD 的项目，越来越力不从心了。不知道怎么能做得更好。AI 在参与一些复杂业务的时候。随着模型的发散，最终的质量总会有差一点的感觉，这是目前 AI 落地的通病吧，各位是怎么不断优化这个问题的？",
+        "publishedAt": "2026-11-18T08:46:01.000Z",
+        "summary": "首先， 我之前的助理模型是 astra6 ， 一直感觉都挺好的。 今天切换到 astra6.2 ，发现几个让人血压飙升的地方 。 1、astra6.2 特别懒， 之前 astra6， 基本上交代完意见事情， 它会从头干到结束，然后测试完成后把结果给我。 现在的 6.2 ，一个验证流程自己中断好几次。 每次完成了一点就停下， 不知道干啥， 非要我说继续才继续。感觉干好极其的敷衍 。 2、关于智商， 我真的觉的 astra 6.2 退化的不止一点半点。 一个 任务， 我一开始就…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "6 回复"
       }
     ]
   },
@@ -510,100 +509,100 @@
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "language": "Python",
-        "stars": 10212,
-        "starsToday": 1005
-      },
-      {
-        "id": "github-5524ff15f43adf61",
-        "rank": 2,
-        "name": "mvanhorn/last30days-skill",
-        "url": "https://github.com/mvanhorn/last30days-skill",
-        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-        "language": "Python",
-        "stars": 69499,
-        "starsToday": 696
-      },
-      {
-        "id": "github-c8f5678810f1cfbe",
-        "rank": 3,
-        "name": "alibaba/open-code-review",
-        "url": "https://github.com/alibaba/open-code-review",
-        "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-        "language": "Go",
-        "stars": 54056,
-        "starsToday": 763
-      },
-      {
-        "id": "github-f317739e91c4b7f7",
-        "rank": 4,
-        "name": "Tencent/LoopForge",
-        "url": "https://github.com/Tencent/LoopForge",
-        "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
-        "language": "Go",
-        "stars": 3679,
-        "starsToday": 591
-      },
-      {
-        "id": "github-5b2653ab79f36aef",
-        "rank": 5,
-        "name": "dream-num/univer",
-        "url": "https://github.com/dream-num/univer",
-        "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
-        "language": "TypeScript",
-        "stars": 29744,
-        "starsToday": 1774
-      },
-      {
-        "id": "github-0ae6d60ce7b60c73",
-        "rank": 6,
-        "name": "getarcaneapp/arcane",
-        "url": "https://github.com/getarcaneapp/arcane",
-        "description": "Modern Docker Management, Designed for Everyone",
-        "language": "Go",
-        "stars": 9540,
-        "starsToday": 618
-      },
-      {
-        "id": "github-fac24b8ded7176d0",
-        "rank": 7,
-        "name": "google-labs-code/stitch-skills",
-        "url": "https://github.com/google-labs-code/stitch-skills",
-        "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-        "language": "TypeScript",
-        "stars": 10254,
-        "starsToday": 350
+        "stars": 10582,
+        "starsToday": 2322
       },
       {
         "id": "github-e0c5b60fcbe6479b",
-        "rank": 8,
+        "rank": 2,
         "name": "cursor/plugins",
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 17031,
-        "starsToday": 201
+        "stars": 17072,
+        "starsToday": 315
       },
       {
-        "id": "github-4251a228ae407247",
-        "rank": 9,
-        "name": "obra/superpowers",
-        "url": "https://github.com/obra/superpowers",
-        "description": "An agentic skills framework & software development methodology that works.",
+        "id": "github-6cad99e48ae79e8b",
+        "rank": 3,
+        "name": "HKUDS/CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+        "language": "Python",
+        "stars": 59392,
+        "starsToday": 384
+      },
+      {
+        "id": "github-5524ff15f43adf61",
+        "rank": 4,
+        "name": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "language": "Python",
+        "stars": 69648,
+        "starsToday": 1062
+      },
+      {
+        "id": "github-0ae6d60ce7b60c73",
+        "rank": 5,
+        "name": "getarcaneapp/arcane",
+        "url": "https://github.com/getarcaneapp/arcane",
+        "description": "Modern Docker Management, Designed for Everyone",
+        "language": "Go",
+        "stars": 9616,
+        "starsToday": 547
+      },
+      {
+        "id": "github-15da1258d9c70a23",
+        "rank": 6,
+        "name": "NVIDIA/SkillEvaluator",
+        "url": "https://github.com/NVIDIA/SkillEvaluator",
+        "description": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+        "language": "Python",
+        "stars": 3500,
+        "starsToday": 869
+      },
+      {
+        "id": "github-d66c0d6fa08a466b",
+        "rank": 7,
+        "name": "nvm-sh/nvm",
+        "url": "https://github.com/nvm-sh/nvm",
+        "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
         "language": "Shell",
-        "stars": 319648,
-        "starsToday": 1917
+        "stars": 96122,
+        "starsToday": 199
       },
       {
-        "id": "github-2cea992e444a06df",
+        "id": "github-c021a8e84981419f",
+        "rank": 8,
+        "name": "astral-sh/uv",
+        "url": "https://github.com/astral-sh/uv",
+        "description": "An extremely fast Python package and project manager, written in Rust.",
+        "language": "Rust",
+        "stars": 92141,
+        "starsToday": 260
+      },
+      {
+        "id": "github-0c4f2f3de1115866",
+        "rank": 9,
+        "name": "google-research/paper-orchestra",
+        "url": "https://github.com/google-research/paper-orchestra",
+        "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+        "language": "Python",
+        "stars": 3790,
+        "starsToday": 1529
+      },
+      {
+        "id": "github-fac24b8ded7176d0",
         "rank": 10,
-        "name": "ag-ui-protocol/ag-ui",
-        "url": "https://github.com/ag-ui-protocol/ag-ui",
-        "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+        "name": "google-labs-code/stitch-skills",
+        "url": "https://github.com/google-labs-code/stitch-skills",
+        "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "language": "TypeScript",
-        "stars": 20236,
-        "starsToday": 1445
+        "stars": 10293,
+        "starsToday": 369
       }
     ],
-    "updatedAt": "2026-11-18T10:08:03.933Z"
+    "updatedAt": "2026-11-18T13:59:32.751Z"
   }
 }
