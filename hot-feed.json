@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-18T13:59:32.751Z",
+  "generatedAt": "2026-11-18T21:57:39.941Z",
   "intelligence": {
-    "updatedAt": "2026-11-18T13:59:32.751Z",
+    "updatedAt": "2026-11-18T21:57:39.941Z",
     "items": [
       {
-        "id": "cn-item-67570c24874f2e55",
+        "id": "cn-item-ff6183d8ca2ec1bf",
         "category": "cn",
-        "title": "日本新潟县佐渡附近发生5.0级地震",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-18/10734352.shtml",
+        "title": "英国10月通胀率升至一年来新高",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-18/10734425.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-18T13:45:50.000Z",
-        "summary": "中新网东京11月18日电 (记者 朱晨曦)据日本气象厅消息，当地时间18日18时37分(北京时间17时37分)，日本新潟县佐渡附近发生5.0级地震。日本气象厅说该地震不会引发海啸。",
+        "publishedAt": "2026-11-18T15:32:15.000Z",
+        "summary": "中新社伦敦11月18日电 (记者 欧阳开宇)英国官方18日公布的数据显示，英国10月消费者价格指数(CPI)同比上涨3.6%，较9月3.5%的涨幅小幅抬升，创下一年以来通胀率最高水平。",
         "badge": "中新网要闻"
       },
       {
@@ -26,44 +26,286 @@
         "signal": "已遭利用 · 整改期限 2026-12-01"
       },
       {
-        "id": "ai-openai-a1de396d3910fa2e",
+        "id": "ai-openai-184d931227f2504d",
         "category": "ai",
-        "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
-        "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+        "title": "The Silent Consensus",
+        "url": "https://openai.com/index/the-silent-consensus",
         "source": "OpenAI",
-        "publishedAt": "2026-11-18T00:00:00.000Z",
-        "summary": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
+        "publishedAt": "2026-11-18T10:00:00.000Z",
+        "summary": "Dean Ball, Head of Strategic Futures at OpenAI, examines how more capable AI could reshape society and how people can retain control of their institutions.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50545958",
+        "id": "hn-50552424",
         "category": "dev",
-        "title": "Quad9 Is Leaving France: Why DNS Resolvers Are the Wrong Place to Fight Piracy",
-        "url": "https://techstackups.com/articles/quad9-leaves-france-dns-blocking/",
+        "title": "Gemini 4 Neon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-18T13:18:02.000Z",
+        "publishedAt": "2026-11-18T21:34:07.000Z",
         "badge": "HN",
-        "signal": "68 分 · 6 评论"
+        "signal": "125 分 · 85 评论"
       },
       {
-        "id": "cn-it-df802d53f0e634cf",
+        "id": "cn-it-d380bd9cbe5e924a",
         "category": "cn",
-        "title": "英伟达澄清新云厂商融资担保规则：担保有生效条件，后续筛选对象将更加审慎",
-        "url": "https://www.ithome.com/1/029/079.htm",
+        "title": "华为 WATCH 5 智能手表重启鸿蒙 HarmonyOS 7 花粉 Beta 版升级，新增地震预警消息等功能",
+        "url": "https://www.ithome.com/1/029/128.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-18T13:26:58.000Z",
-        "summary": "IT之家 11 月 18 日消息，周末，约 19.7 万人签署了一份请愿书，呼吁英伟达重新任命离职的 CEO 黄仁勋（Jensen Huang），其中甚至包括埃隆 · 马斯克（Elon Musk）。支持者力挺黄仁勋的原因之一，不仅在于他一直积极推动 AI 产业发展，还因为他曾利用英伟达巨额利润，为这场 AI 热潮提供资金支持。 而英伟达确实拥有雄厚的资金实力。公司周二公布的财报显示，2027 财年第三季度净利润达到 649 亿美元 （IT之家注：现汇率约合 4,335.23…",
+        "publishedAt": "2026-11-18T17:28:32.000Z",
+        "summary": "IT之家 11 月 19 日消息，今年 10 月底，华为 WATCH 5 系列、ULTIMATE DESIGN 星钻绽放等手表开启 HarmonyOS 7 花粉 Beta 版招募。随后 7.0.0.107 SP18 版本开启推送。但据用户反馈，部分设备更新后出现 BUG，因此升级活动暂缓。 IT之家注意到，华为官方最新宣布， HarmonyOS 7.0.0.107SP41 版本开始分批推送给花粉 Beta 版升级尝鲜报名入选成功的 WATCH 5 系列用户。 适配机型 HU…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-x2vm-cf3p-m2w8",
+        "id": "github-advisory-ghsa-jw3m-8q7m-f35r",
         "category": "security",
-        "title": "libp2p: gossipsub creates a permanent topics-map entry per distinct subscription with no cap in the default config",
-        "url": "https://github.com/advisories/GHSA-x2vm-cf3p-m2w8",
+        "title": "LLMKube: Arbitrary Host File Read via Model.spec.source hostPath Injection",
+        "url": "https://github.com/advisories/GHSA-jw3m-8q7m-f35r",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-17T21:06:20.000Z",
-        "summary": "### Summary A single gossipsub peer can grow a node's `topics` map without bound by flooding subscription RPCs, because the default configuration has no global, per-peer, or topic-length cap and peer scoring does not penalise subscription …",
-        "badge": "CVE-2026-119793",
+        "publishedAt": "2026-11-18T21:18:02.000Z",
+        "summary": "### Summary LLMKube's `ModelReconciler` accepts arbitrary absolute paths and `file://` URIs in the `Model.spec.source` field and propagates them to two distinct sinks without path allowlisting: (1) `os.Open()` inside the controller pod its…",
+        "badge": "CVE-2026-68903",
+        "signal": "HIGH · CVSS 7.7"
+      },
+      {
+        "id": "ai-google-deepmind-95da0fde7d56c751",
+        "category": "ai",
+        "title": "Introducing Gemini 4 Neon",
+        "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-11-18T21:35:43.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1258136",
+        "category": "dev",
+        "title": "咨询：你换模型供应商的原因是什么",
+        "url": "https://www.v2ex.com/t/1258136",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-18T17:16:01.000Z",
+        "summary": "我发现一个现象是：其实我们不会因为价格而更换所用的模型。 我切换供应商，是因为某家服务商在关键时刻返回了 429 限流，这是比较让我恶心的... 所以，你选择从 Claude 切到 Gemini、从 GPT 切到 Claude、甚至某些开源模型，是因为什么？ 另一个更稳定 另一个更便宜 为了尝鲜 另一个更\"聪明\"、效果更好 正在收集上面的建议，以解决问题为实际出发，源码在 https://github.com/SeasX/SeasAGI",
+        "badge": "程序员",
+        "signal": "0 回复"
+      },
+      {
+        "id": "cn-baidu-11d9187d0f28253f",
+        "category": "cn",
+        "title": "中俄美元首同框",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E5%90%8C%E6%A1%86&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "badge": "热搜",
+        "signal": "7,809,086 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-114713",
+        "category": "security",
+        "title": "UnrealIRCd UnrealIRCd：UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114713",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-13T00:00:00.000Z",
+        "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+        "badge": "CVE-2026-114713",
+        "signal": "已遭利用 · 整改期限 2026-11-16"
+      },
+      {
+        "id": "ai-hugging-face-f0b81ce3c1461288",
+        "category": "ai",
+        "title": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+        "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+        "source": "Hugging Face",
+        "publishedAt": "2026-11-18T19:54:56.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50547374",
+        "category": "dev",
+        "title": "Unauthenticated remote code execution in Nginx",
+        "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-18T15:19:55.000Z",
+        "badge": "HN",
+        "signal": "897 分 · 388 评论"
+      },
+      {
+        "id": "cn-item-8cc404cd034125dd",
+        "category": "cn",
+        "title": "到大学演讲、给车厘子“带货”、打卡家乡菜……各国领导人在深圳忙不停",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-18/10734423.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-11-18T14:55:01.000Z",
+        "summary": "去餐馆吃家乡菜、进小店给本国车厘子、龙虾“带货”、到大学演讲、和学生互动……",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-88q3-gch3-5396",
+        "category": "security",
+        "title": "install-artifact-from-github loads downloaded native artifacts without integrity verification",
+        "url": "https://github.com/advisories/GHSA-88q3-gch3-5396",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-18T21:17:37.000Z",
+        "summary": "## Description `bin/install-from-cache.js` downloads a prebuilt native addon (`*.node`) over the network and writes it directly to the artifact path **with no cryptographic integrity verification of any kind** — no checksum manifest, no si…",
+        "badge": "CVE-2026-73864",
+        "signal": "HIGH · CVSS 7.5"
+      },
+      {
+        "id": "ai-openai-67952d9a918d2536",
+        "category": "ai",
+        "title": "Inside the Codex sandbox",
+        "url": "https://openai.com/index/inside-the-codex-sandbox",
+        "source": "OpenAI",
+        "publishedAt": "2026-11-18T08:00:00.000Z",
+        "summary": "See how Codex runs commands on your machine while enforcing the filesystem and network limits you control across macOS, Linux, and Windows.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1258134",
+        "category": "dev",
+        "title": "Nginx http2 漏洞结合内核漏洞可实现 root 远程代码执行",
+        "url": "https://www.v2ex.com/t/1258134",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-18T17:07:20.000Z",
+        "summary": "nginx2root 公网可识别 nginx 版本的主机中 98.9%在影响范围内（nginx 版本 1.9.5 – 1.31.8） 将此漏洞与 Linux 内核 SCTP 子系统中的另一个漏洞结合使用，从而获得了主机上的 root 权限。在测试中，该漏洞链还成功绕过了运行 nginx 的 Docker 容器，并获得了底层主机的 root 权限。 由 AI 耗费 90 分钟发现 详细情况和缓解方案： https://nginx2root.com/ https://xint.…",
+        "badge": "程序员",
+        "signal": "2 回复"
+      },
+      {
+        "id": "cn-it-2974e24229f5f6bd",
+        "category": "cn",
+        "title": "华为 WATCH Air 真机曝光：方形设计、钛金属表体，消息称续航可达 5 天",
+        "url": "https://www.ithome.com/1/029/127.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-11-18T17:20:46.000Z",
+        "summary": "IT之家 11 月 19 日消息，华为 WATCH Air 真机谍照已在各大平台曝光。画面显示，新表至少提供两种表带款式可选，包括运动硅胶表带和金属米兰尼斯表带。 据博主 @搞机王腾霄 透露，华为 WATCH Air 主打轻薄，采用方形设计，配备有钛金属表体。 新表还有望内置高硅叠片异形电池，续航可达 5 天 。 已曝光的海报显示，华为 WATCH Air 采用超轻薄设计，拥有圆润的弧面机身，侧边配有一枚旋转表冠按钮和一枚多功能按键。此外，这款手表还预装了鸿蒙 Harmon…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2026-123039",
+        "category": "security",
+        "title": "Check Point Multiple Products：Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123039",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-13T00:00:00.000Z",
+        "summary": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCL…",
+        "badge": "CVE-2026-123039",
+        "signal": "已遭利用 · 整改期限 2026-11-16"
+      },
+      {
+        "id": "ai-google-deepmind-cac57b5217ba2caa",
+        "category": "ai",
+        "title": "Genie 4 is now available",
+        "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-11-18T18:13:42.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-50548021",
+        "category": "dev",
+        "title": "Seven new models at scalable price-performance",
+        "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-18T16:08:24.000Z",
+        "badge": "HN",
+        "signal": "364 分 · 246 评论"
+      },
+      {
+        "id": "cn-baidu-e4da5468bc084be6",
+        "category": "cn",
+        "title": "习近平彭丽媛欢迎与会嘉宾并集体合影",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%BD%AD%E4%B8%BD%E5%AA%9B%E6%AC%A2%E8%BF%8E%E4%B8%8E%E4%BC%9A%E5%98%89%E5%AE%BE%E5%B9%B6%E9%9B%86%E4%BD%93%E5%90%88%E5%BD%B1&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "badge": "热搜",
+        "signal": "7,712,666 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-wq26-3j2m-4hvv",
+        "category": "security",
+        "title": "Chainguard SDK: AWS SigV4 token replay in auth/aws.VerifyToken — Chainguard-Audience/Chainguard-Identity binding headers not required in SignedHeaders",
+        "url": "https://github.com/advisories/GHSA-wq26-3j2m-4hvv",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-18T21:16:44.000Z",
+        "summary": "### Summary The `auth/aws` package of the `chainguard.dev/sdk` Go library provides Chainguard's AWS-backed identity federation (an AWS workload proves its identity to Chainguard by signing an AWS STS `GetCallerIdentity` request). Its verif…",
+        "badge": "CVE-2026-71861",
+        "signal": "HIGH · CVSS 7.4"
+      },
+      {
+        "id": "ai-hugging-face-e55c8f2df06c07ff",
+        "category": "ai",
+        "title": "Why your fine-tuning job takes longer than the FLOPs say",
+        "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+        "source": "Hugging Face",
+        "publishedAt": "2026-11-18T18:53:43.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1258129",
+        "category": "dev",
+        "title": "能通过命令行调用 dsh-next ，再由 dsh-next 用它内置的 computer-use 来完成任务，然后返回结果给命令行吗？",
+        "url": "https://www.v2ex.com/t/1258129",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-18T15:52:01.000Z",
+        "badge": "程序员",
+        "signal": "0 回复"
+      },
+      {
+        "id": "cn-item-a0491c3882b45db8",
+        "category": "cn",
+        "title": "“国常会上有人表态不会再频繁救市了”系谣言",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-18/10734213.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-11-18T14:54:03.000Z",
+        "summary": "中新社北京11月18日电 (记者 陈康亮)中国资本市场辟谣平台18日发布消息称，近日，互联网上传播关于“国常会(国务院常务会议)上有人表态不会再频繁救市了”相关信息。经核查，该信息为谣言。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-124194",
+        "category": "security",
+        "title": "Microsoft Office：Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-10T00:00:00.000Z",
+        "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+        "badge": "CVE-2026-124194",
+        "signal": "已遭利用 · 整改期限 2026-11-24"
+      },
+      {
+        "id": "ai-openai-99be0c0a7e074380",
+        "category": "ai",
+        "title": "Managing frontier AI risk: From training to deployment",
+        "url": "https://openai.com/index/managing-frontier-ai-risk",
+        "source": "OpenAI",
+        "publishedAt": "2026-11-18T06:00:00.000Z",
+        "summary": "OpenAI explains how it manages frontier AI risk from training through deployment with model alignment, sandboxing, blocking safeguards, and monitoring.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50551046",
+        "category": "dev",
+        "title": "DaisyRose-27B: 1,200-task RL took Qwen3.8 from 5.6% to 12% on Terminal-Bench 4.1",
+        "url": "https://www.radixark.com/blog/daisyrose-27b",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-18T19:39:16.000Z",
+        "badge": "HN",
+        "signal": "71 分 · 14 评论"
+      },
+      {
+        "id": "cn-it-0ad1dd70c8e99f71",
+        "category": "cn",
+        "title": "Touch ID 成功复活：“安卓版”iOS 系统实现指纹解锁功能",
+        "url": "https://www.ithome.com/1/029/126.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-11-18T17:10:42.000Z",
+        "summary": "IT之家 11 月 19 日消息，近期 AI 逆向实现了很多有趣的项目，让很多不少设备有了新玩法。其中，让各式各样的设备刷入苹果 iOS 系统，是当下最受欢迎的探索方向之一。 参考IT之家此前报道，已有 小米 8 刷入 iOS 16.5 系统并伪装成 iPhone X 、 REDMI K20 Pro 刷入苹果 iOS 16 测试固件包 变身真“全面屏 iPhone”等先例。不过刷入 iOS 后的设备常常伴随着功能缺失和运行不稳定，最典型的就是 Wi-Fi 下线、Face I…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-82w8-65qw-gch6",
+        "category": "security",
+        "title": "ALTCHA PHP: verifySolution bypasses HMAC signature check when challenge signature is absent",
+        "url": "https://github.com/advisories/GHSA-82w8-65qw-gch6",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-18T20:48:18.000Z",
+        "summary": "In altcha-org/altcha v2, the verifySolution method skips HMAC signature verification when the signature field is absent from the challenge payload, even when hmacSignatureSecret is configured. An attacker who strips the signature key from …",
+        "badge": "CVE-2026-71481",
         "signal": "HIGH · CVSS 7.5"
       },
       {
@@ -87,251 +329,6 @@
         "signal": "6 回复"
       },
       {
-        "id": "cn-baidu-e4da5468bc084be6",
-        "category": "cn",
-        "title": "习近平彭丽媛欢迎与会嘉宾并集体合影",
-        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%BD%AD%E4%B8%BD%E5%AA%9B%E6%AC%A2%E8%BF%8E%E4%B8%8E%E4%BC%9A%E5%98%89%E5%AE%BE%E5%B9%B6%E9%9B%86%E4%BD%93%E5%90%88%E5%BD%B1&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "badge": "热搜",
-        "signal": "7,809,716 热度"
-      },
-      {
-        "id": "cisa-kev-cve-2026-114713",
-        "category": "security",
-        "title": "UnrealIRCd UnrealIRCd：UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114713",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-13T00:00:00.000Z",
-        "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
-        "badge": "CVE-2026-114713",
-        "signal": "已遭利用 · 整改期限 2026-11-16"
-      },
-      {
-        "id": "ai-hugging-face-8ec21efa2c622734",
-        "category": "ai",
-        "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
-        "url": "https://huggingface.co/blog/openrouter",
-        "source": "Hugging Face",
-        "publishedAt": "2026-11-16T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50543989",
-        "category": "dev",
-        "title": "Energy-Based Reasoners: 385x more efficient inference",
-        "url": "https://energy-based-reasoners.github.io/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-18T09:29:32.000Z",
-        "badge": "HN",
-        "signal": "168 分 · 25 评论"
-      },
-      {
-        "id": "cn-item-f3510c14502766b9",
-        "category": "cn",
-        "title": "日本连续第6个月出现贸易逆差",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-18/10734252.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-11-18T10:28:39.000Z",
-        "summary": "中新社东京11月18日电 (记者 朱晨曦)日本财务省18日公布的贸易统计结果显示，受原油等商品进口成本上涨影响，日本10月贸易逆差达4765亿日元(1美元约合157.84日元)，为连续第6个月出现贸易逆差。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-rvfr-cqwq-rc4j",
-        "category": "security",
-        "title": "libp2p: ASN.1 DER decoder drives an unbounded synchronous loop on attacker-controlled length fields, stalling the Node event loop pre-auth",
-        "url": "https://github.com/advisories/GHSA-rvfr-cqwq-rc4j",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-17T21:05:08.000Z",
-        "summary": "### Summary A remote peer can stall a js-libp2p node's entire event loop for ~4–5 seconds per connection (and transiently allocate ~2 GB) by sending a ~15-byte crafted `publicKey` inside an Identify message. The malformed key reaches the D…",
-        "badge": "CVE-2026-110789",
-        "signal": "HIGH · CVSS 7.5"
-      },
-      {
-        "id": "ai-openai-8f6af8c44a4a1bfb",
-        "category": "ai",
-        "title": "Introducing GPT-6.2 Astra and Sol",
-        "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-        "source": "OpenAI",
-        "publishedAt": "2026-11-17T17:45:00.000Z",
-        "summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1258085",
-        "category": "dev",
-        "title": "似乎没见什么大厂开始结合 AI 重写自家的 APP 或桌面软件",
-        "url": "https://www.v2ex.com/t/1258085",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T10:42:51.000Z",
-        "summary": "内存硬件涨价，现在正是 APP 和桌软团队对软件性能极致优化的好时候。优化的好，有机会从存量市场多抢点用户。我觉得如果厂商们要这么做的话，应该从抛弃 electron 开始，真心觉得",
-        "badge": "程序员",
-        "signal": "14 回复"
-      },
-      {
-        "id": "cn-it-6909c427bec4eb1b",
-        "category": "cn",
-        "title": "始终将水瓶、文件夹误认为枪支，美国一高中停用 AI 武器探测系统",
-        "url": "https://www.ithome.com/1/029/078.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-11-18T13:25:39.000Z",
-        "summary": "IT之家 11 月 18 日消息，据外媒 TechSpot 今天（18 日）晚间报道，因屡次将普通物品误判为潜在威胁，美国宾夕法尼亚州亨普菲尔德地区高中最终决定 停用 AI 武器探测系统 。 该校高中是当地参与 Wi-AI 系统训练的多所学校之一。该系统由卡内基梅隆大学衍生企业 CurvePoint 开发，通过分析 Wi-Fi 信号探测人员是否藏有武器。 Wi-AI 在学校入口附近安装了 名为 SensePods 的小型传感器 ，通过监测人员及随身物品对无线电波反射的影响，…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-123039",
-        "category": "security",
-        "title": "Check Point Multiple Products：Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123039",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-13T00:00:00.000Z",
-        "summary": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCL…",
-        "badge": "CVE-2026-123039",
-        "signal": "已遭利用 · 整改期限 2026-11-16"
-      },
-      {
-        "id": "ai-google-deepmind-833534b672b8daa3",
-        "category": "ai",
-        "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
-        "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-11-11T15:00:15.000Z",
-        "summary": "Predicting how DNA sequences and their variations impact specific human cell types and disease.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50504373",
-        "category": "dev",
-        "title": "A Perfect SimCity",
-        "url": "https://www.jeffquast.com/post/a-perfect-simcity/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-15T05:54:22.000Z",
-        "badge": "HN",
-        "signal": "96 分 · 21 评论"
-      },
-      {
-        "id": "cn-baidu-81ef9fc47796d37b",
-        "category": "cn",
-        "title": "习近平在欢迎晚宴上的祝酒辞",
-        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%9C%A8%E6%AC%A2%E8%BF%8E%E6%99%9A%E5%AE%B4%E4%B8%8A%E7%9A%84%E7%A5%9D%E9%85%92%E8%BE%9E&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "11月18日，习近平在深圳举行的亚太经合组织第三十三次领导人非正式会议欢迎晚宴上致辞。他表示，看五十年的中国就来深圳。深圳从渔村发展为国际化大都市，是中国改革开放的缩影，也是亚太合作的成功范例，期待同大家共商亚太合作大计、共襄亚太发展大业。",
-        "badge": "热搜",
-        "signal": "7,712,538 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-r7hw-jx6r-756g",
-        "category": "security",
-        "title": "SAML2: Incomplete fix of CVE-2026-49283: unsigned embedded Response bypasses HTTP-Artifact signature verification (no embedded-Issuer binding)",
-        "url": "https://github.com/advisories/GHSA-r7hw-jx6r-756g",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-17T21:00:58.000Z",
-        "summary": "## Summary CVE-2026-49283 / GHSA-6929-8p9f-26jx (\"HTTP-Artifact TLS validator confusion allows cross-IdP authentication bypass\") was fixed so that `HTTPArtifact::receive()` verifies the embedded SAML `Response` using the IdP metadata signi…",
-        "badge": "CVE-2026-110782",
-        "signal": "HIGH · CVSS 8.7"
-      },
-      {
-        "id": "ai-hugging-face-cdc8eef67bc55a0d",
-        "category": "ai",
-        "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
-        "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
-        "source": "Hugging Face",
-        "publishedAt": "2026-11-13T18:00:39.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1258078",
-        "category": "dev",
-        "title": "Google AI Ultra 的额度怎么样",
-        "url": "https://www.v2ex.com/t/1258078",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T10:08:54.000Z",
-        "summary": "看大家都说哈基米翻身了，鉴于当前 gpt 现在太慢了，目前 gpt pro200，一周刚刚够用，想换 Google AI Ultra 试下，另外 claude 模型额度大概有多少，可以在一些场景下作补充",
-        "badge": "程序员",
-        "signal": "8 回复"
-      },
-      {
-        "id": "cn-item-4ce422e14c54af4e",
-        "category": "cn",
-        "title": "清明上河园指路牌火了！看河南文旅如何把服务做进细节里",
-        "url": "https://www.chinanews.com.cn/cul/2026/11-18/10734145.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-11-18T08:46:53.000Z",
-        "summary": "中新网北京11月18日电(王诗尧)逛清明上河园不迷路，想去哪里“点”哪里！",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "cisa-kev-cve-2026-124194",
-        "category": "security",
-        "title": "Microsoft Office：Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
-        "badge": "CVE-2026-124194",
-        "signal": "已遭利用 · 整改期限 2026-11-24"
-      },
-      {
-        "id": "ai-openai-3047d7657748ea76",
-        "category": "ai",
-        "title": "Introducing ChatGPT for Sales",
-        "url": "https://openai.com/index/introducing-chatgpt-for-sales",
-        "source": "OpenAI",
-        "publishedAt": "2026-11-17T08:00:00.000Z",
-        "summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-50538240",
-        "category": "dev",
-        "title": "Java4Shell: RCE in OpenJDK when processing Base64",
-        "url": "https://calif.io/java4shell/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-17T21:11:28.000Z",
-        "badge": "HN",
-        "signal": "1042 分 · 276 评论"
-      },
-      {
-        "id": "cn-it-0ff4d5984d21ad2b",
-        "category": "cn",
-        "title": "AOC 推出 CU36U4Z 显示器：36\" 1500R Fast VA，WQHD 260Hz",
-        "url": "https://www.ithome.com/1/029/076.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-11-18T13:23:49.000Z",
-        "summary": "IT之家 11 月 18 日消息，AOC 今日在官网上线了 CU36U4Z 显示器。该型号与其姊妹品牌飞利浦的 Evnia 36M4C5500P/69 采用同一块 Fast VA 面板，因此也是 全球首批 36\" 游戏显示器 。 CU36U4Z 分辨率为 WQHD (3440×1440)；原生刷新率 240Hz、超频刷新率 260Hz； 获得 VESA DisplayHDR 400 认证 ，SDR 亮度 350nits、HDR 亮度 450nits，静态对比度 4000:1…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-xhv5-8fpq-g7hf",
-        "category": "security",
-        "title": "qbee-agent: Local Privilege Escalation and Arbitrary File Tampering via Symlink Following in createFile helper",
-        "url": "https://github.com/advisories/GHSA-xhv5-8fpq-g7hf",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-17T20:48:02.000Z",
-        "summary": "This is a Local Privilege Escalation (LPE) vulnerability stemming from improper symlink handling (CWE-59: Link Following) and improper ownership management (CWE-282) inside the qbee-agent file manager logic. ### Impact Any managed device r…",
-        "badge": "CVE-2026-62336",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-google-deepmind-6d8eb3bcd497222d",
-        "category": "ai",
-        "title": "Gemini 4 Carbon is now available",
-        "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-11-10T16:03:47.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "v2ex-1258075",
-        "category": "dev",
-        "title": "Obsidian 愈发卡顿了",
-        "url": "https://www.v2ex.com/t/1258075",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T09:54:42.000Z",
-        "summary": "一个最开始以极简著称的 MD 编辑器，装了 20 多个插件后，在自己 64g RAM + AI Max 395 的设备上现在打开都会有明显的如同 bug 一样的表现（只加载一半界面，note 内容不显示），重启首次启动约 10-20s 后才能打开正常编辑；而在以前的办公本上几乎打不开，或者打开后就占用了几乎所有性能，实在不尽人意。 不知这种表现能否怪罪于 Electron 的臃肿。按这个势头下去，大概会有人忍不住用 rust 或 go 重写一个 Obsidian。",
-        "badge": "程序员",
-        "signal": "3 回复"
-      },
-      {
         "id": "cn-baidu-787d656160729280",
         "category": "cn",
         "title": "APEC工商领导人峰会什么话题最热",
@@ -339,7 +336,7 @@
         "source": "百度热搜",
         "summary": "2026年APEC工商领导人峰会期间，来自亚太经合组织（APEC）21个经济体和英国、法国、德国、瑞士等13个域外经济体的2000余位政商界代表齐聚深圳，围绕开放、创新、合作三大热点话题展开热烈讨论。",
         "badge": "热搜",
-        "signal": "7,617,152 热度"
+        "signal": "7,619,192 热度"
       },
       {
         "id": "cisa-kev-cve-2026-111793",
@@ -353,74 +350,74 @@
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-hugging-face-96c7f67bef86f831",
+        "id": "ai-hugging-face-aef632472a5e3af7",
         "category": "ai",
-        "title": "XYBench: Helping with the problem behind the question",
-        "url": "https://huggingface.co/blog/allenai/xybench",
+        "title": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
+        "url": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-13T17:02:35.000Z",
+        "publishedAt": "2026-11-18T15:00:23.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50546312",
+        "id": "hn-50547620",
         "category": "dev",
-        "title": "Can Peer Review Survive AI-Generated Text? [pdf]",
-        "url": "https://www.sas.upenn.edu/~jesusfv/Peer_Review.pdf",
+        "title": "Inside Deutsche Bank",
+        "url": "https://www.inside-db.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-18T13:51:03.000Z",
+        "publishedAt": "2026-11-18T15:38:33.000Z",
         "badge": "HN",
-        "signal": "5 分 · 0 评论"
+        "signal": "451 分 · 154 评论"
       },
       {
-        "id": "cn-item-6fbe983504b9fab6",
+        "id": "cn-item-ef665d2cf006422d",
         "category": "cn",
-        "title": "（深圳APEC）一颗车厘子的跨洋“鲜”行：APEC织密亚太供应链",
-        "url": "https://www.chinanews.com.cn/dwq/2026/11-18/10734141.shtml",
+        "title": "从墨累河畔到苍山洱海：一封越洋贺信里的大理开放故事",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-18/10734419.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-18T08:40:29.000Z",
-        "summary": "中新社深圳11月18日电 (记者 蔡敏婕 周昕)11月，南半球正值初夏。智利安第斯山脉西麓的车厘子刚成熟，一场跨越约2万公里的速度接力随即开启。新产季“车厘子快线”首批海运柜预计12月初抵达广州南沙。",
+        "publishedAt": "2026-11-18T14:38:39.000Z",
+        "summary": "中新网云南大理11月18日电 (记者 韩帅南)记者18日从大理州委宣传部获悉，近日，在云南省大理白族自治州成立70周年之际，一封跨越重洋的贺信从南半球传来。澳大利亚米尔迪拉市市长海伦·希利议员致信，向大理州送上祝贺。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-c5q4-97jw-jggh",
+        "id": "github-advisory-ghsa-ff87-73jp-f3v4",
         "category": "security",
-        "title": "AWS-advanced-jdbc-wrapper: Java Deserialization RCE via Cache Poisoning",
-        "url": "https://github.com/advisories/GHSA-c5q4-97jw-jggh",
+        "title": "Atomic Server: Unauthenticated full-response SSRF in Atomic-Server /bookmark endpoint",
+        "url": "https://github.com/advisories/GHSA-ff87-73jp-f3v4",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-17T20:39:21.000Z",
-        "summary": "### Impact The AWS Advanced JDBC Wrapper is an open-source JDBC driver wrapper that extends a JDBC driver to enable Amazon Aurora and AWS Cloud features such as failover handling and caching. We identified CVE-2026-14265, an issue in the R…",
-        "badge": "CVE-2026-14265",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-11-18T20:42:50.000Z",
+        "summary": "## Summary Atomic-Server exposes a `GET /bookmark` endpoint that fetches an attacker-supplied URL server-side, parses the response, and reflects the fetched content back to the caller. The endpoint requires no authentication and performs n…",
+        "badge": "CVE-2026-69158",
+        "signal": "HIGH · CVSS 8.6"
       },
       {
-        "id": "ai-openai-0e7f690aa4ff229b",
+        "id": "ai-openai-a1de396d3910fa2e",
         "category": "ai",
-        "title": "Strengthening NATO and allied cyber defenses with AI",
-        "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+        "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+        "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
         "source": "OpenAI",
-        "publishedAt": "2026-11-17T00:00:00.000Z",
-        "summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+        "publishedAt": "2026-11-18T00:00:00.000Z",
+        "summary": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1258069",
+        "id": "v2ex-1258085",
         "category": "dev",
-        "title": "claude 搞了多少算力, 怎么感觉比 openai 强很多",
-        "url": "https://www.v2ex.com/t/1258069",
+        "title": "似乎没见什么大厂开始结合 AI 重写自家的 APP 或桌面软件",
+        "url": "https://www.v2ex.com/t/1258085",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T09:38:24.000Z",
-        "summary": "以前我记得都说 20 刀套餐量很少 最近我看人都说 claude 20 刀套餐量很大, 能赶上 OpenAI 100 刀的, 我没试懒得折腾, 但确实不少人这么说, 或者说就是因为量大这么多人才愿意折腾 claude 怎么有这么多算力了, 是最近加的吗, 当然了确实融资很多钱我知道 我没想到他现在领先 openai 很多了",
+        "publishedAt": "2026-11-18T10:42:51.000Z",
+        "summary": "内存硬件涨价，现在正是 APP 和桌软团队对软件性能极致优化的好时候。优化的好，有机会从存量市场多抢点用户。我觉得如果厂商们要这么做的话，应该从抛弃 electron 开始，真心觉得",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "16 回复"
       },
       {
-        "id": "cn-it-1487fe5d6a4b3f3d",
+        "id": "cn-it-938354003f592cea",
         "category": "cn",
-        "title": "防止考生利用 AI 作弊，韩国临时屏蔽高考考场及周边 100 米内公共 WiFi",
-        "url": "https://www.ithome.com/1/029/075.htm",
+        "title": "华为 Mate 90 系列手机推 HarmonyOS 7.0.0.115 升级，“悄悄”上线完全体 3D 空间壁纸功能",
+        "url": "https://www.ithome.com/1/029/125.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-18T13:23:33.000Z",
-        "summary": "IT之家 11 月 18 日消息，据韩联社报道，韩国 2027 学年度大学修学能力考试（高考）开考在即，为防范考生利用人工智能技术作弊，自当地时间 18 日下午 6 时起，全国高考考点及周边地区临时屏蔽公共 WiFi 信号。 据韩国政府和通信业界消息，应政府要求，韩国三大移动运营商（SK 电信、KT、LG U+）从 18 日下午 6 时至高考当日的 19 日下午 6 时， 暂停全国各考场和周边 100 米内的公共 WiFi 和移动运营商提供的 WiFi 服务 。此举旨在最大…",
+        "publishedAt": "2026-11-18T16:55:39.000Z",
+        "summary": "IT之家 11 月 19 日消息，华为 Mate 90 系列手机已率先开启鸿蒙 HarmonyOS 7.0.0.115 SP11 版本升级，系统包大小约 10.31GB，带来了 AI 快捷栏等功能。 据博主 @怪咖学徒_ 反馈，在升级 HarmonyOS 7.0.0.115 版本后，华为 Mate 90 系列手机“悄悄”上线了完全体 3D 空间壁纸功能， 支持重力感应特性 。从视频演示效果来看，该功能可将壁纸 3D 空间化，手机晃动，壁纸内容也会跟随晃动。 参考IT之家此前…",
         "badge": "IT之家"
       },
       {
@@ -435,64 +432,65 @@
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-google-deepmind-f321c904268bcef2",
+        "id": "ai-google-deepmind-833534b672b8daa3",
         "category": "ai",
-        "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
-        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+        "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-11-10T12:02:28.000Z",
-        "summary": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+        "publishedAt": "2026-11-11T15:00:15.000Z",
+        "summary": "Predicting how DNA sequences and their variations impact specific human cell types and disease.",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50507918",
+        "id": "hn-50547777",
         "category": "dev",
-        "title": "When AI Knows More Than It Can Offer",
-        "url": "https://medium.com/@smoking2man/when-ai-knows-more-than-it-can-offer-how-training-turns-an-intelligent-assistant-into-a-generator-7e700f05163e",
+        "title": "AI agents ask better questions than KPMG accountants in audit trial",
+        "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-15T15:59:23.000Z",
+        "publishedAt": "2026-11-18T15:49:34.000Z",
         "badge": "HN",
-        "signal": "10 分 · 1 评论"
+        "signal": "246 分 · 119 评论"
       },
       {
-        "id": "cn-baidu-dc36463632e41083",
+        "id": "cn-baidu-8ad499e4b7deec36",
         "category": "cn",
-        "title": "习近平迎接特朗普",
-        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E8%BF%8E%E6%8E%A5%E7%89%B9%E6%9C%97%E6%99%AE&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "普京和特朗普互动握手",
+        "url": "https://www.baidu.com/s?wd=%E6%99%AE%E4%BA%AC%E5%92%8C%E7%89%B9%E6%9C%97%E6%99%AE%E4%BA%92%E5%8A%A8%E6%8F%A1%E6%89%8B&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
+        "summary": "11月18日晚，在亚太经合组织第三十三次领导人非正式会议欢迎晚宴上，集体合影期间普京和特朗普互动握手。",
         "badge": "热搜",
-        "signal": "7,522,200 热度"
+        "signal": "7,523,502 热度"
       },
       {
-        "id": "github-advisory-ghsa-gfv3-m769-5xm3",
+        "id": "github-advisory-ghsa-pfwx-xjp4-qxcj",
         "category": "security",
-        "title": "Phoenix: Format String Injection in applyChatTemplate",
-        "url": "https://github.com/advisories/GHSA-gfv3-m769-5xm3",
+        "title": "Atomic Server: Unauthenticated `/setup` invite grants write access to the entire Drive",
+        "url": "https://github.com/advisories/GHSA-pfwx-xjp4-qxcj",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-17T20:02:29.000Z",
-        "summary": "- Summary A format string injection vulnerability in the applyChatTemplate GraphQL endpoint allows an attacker to read server-side environment variables, cryptographic secrets, and internal module attributes directly from the API response.…",
-        "badge": "CVE-2026-53998",
-        "signal": "CRITICAL · CVSS 10.0"
+        "publishedAt": "2026-11-18T20:42:33.000Z",
+        "summary": "## Summary atomic-server provisions a well-known invite at `{server}/setup` with `write = true`, `target` = the Drive root, and `usagesLeft = 1`. Invite redemption **ignores the redeemer's identity** (`for_agent: _` in `server/src/plugins/…",
+        "badge": "CVE-2026-69157",
+        "signal": "CRITICAL · CVSS 9.8"
       },
       {
-        "id": "ai-hugging-face-6841e619fcd7e8d9",
+        "id": "ai-hugging-face-ec56b5eff9affb1c",
         "category": "ai",
-        "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
-        "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+        "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
+        "url": "https://huggingface.co/blog/moe-expert-streaming",
         "source": "Hugging Face",
-        "publishedAt": "2026-11-13T14:05:22.000Z",
+        "publishedAt": "2026-11-18T00:00:00.000Z",
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1258044",
+        "id": "v2ex-1258078",
         "category": "dev",
-        "title": "astra6.2 真的是拉完了， 用的我血压飙升",
-        "url": "https://www.v2ex.com/t/1258044",
+        "title": "Google AI Ultra 的额度怎么样",
+        "url": "https://www.v2ex.com/t/1258078",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-18T08:46:01.000Z",
-        "summary": "首先， 我之前的助理模型是 astra6 ， 一直感觉都挺好的。 今天切换到 astra6.2 ，发现几个让人血压飙升的地方 。 1、astra6.2 特别懒， 之前 astra6， 基本上交代完意见事情， 它会从头干到结束，然后测试完成后把结果给我。 现在的 6.2 ，一个验证流程自己中断好几次。 每次完成了一点就停下， 不知道干啥， 非要我说继续才继续。感觉干好极其的敷衍 。 2、关于智商， 我真的觉的 astra 6.2 退化的不止一点半点。 一个 任务， 我一开始就…",
+        "publishedAt": "2026-11-18T10:08:54.000Z",
+        "summary": "看大家都说哈基米翻身了，鉴于当前 gpt 现在太慢了，目前 gpt pro200，一周刚刚够用，想换 Google AI Ultra 试下，另外 claude 模型额度大概有多少，可以在一些场景下作补充",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "11 回复"
       }
     ]
   },
@@ -509,7 +507,7 @@
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "language": "Python",
-        "stars": 10582,
+        "stars": 11241,
         "starsToday": 2322
       },
       {
@@ -519,7 +517,7 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 17072,
+        "stars": 17167,
         "starsToday": 315
       },
       {
@@ -529,7 +527,7 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 59392,
+        "stars": 59653,
         "starsToday": 384
       },
       {
@@ -539,7 +537,7 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 69648,
+        "stars": 69926,
         "starsToday": 1062
       },
       {
@@ -549,7 +547,7 @@
         "url": "https://github.com/getarcaneapp/arcane",
         "description": "Modern Docker Management, Designed for Everyone",
         "language": "Go",
-        "stars": 9616,
+        "stars": 9768,
         "starsToday": 547
       },
       {
@@ -559,8 +557,8 @@
         "url": "https://github.com/NVIDIA/SkillEvaluator",
         "description": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
         "language": "Python",
-        "stars": 3500,
-        "starsToday": 869
+        "stars": 3669,
+        "starsToday": 323
       },
       {
         "id": "github-d66c0d6fa08a466b",
@@ -569,8 +567,8 @@
         "url": "https://github.com/nvm-sh/nvm",
         "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
         "language": "Shell",
-        "stars": 96122,
-        "starsToday": 199
+        "stars": 96146,
+        "starsToday": 111
       },
       {
         "id": "github-c021a8e84981419f",
@@ -579,7 +577,7 @@
         "url": "https://github.com/astral-sh/uv",
         "description": "An extremely fast Python package and project manager, written in Rust.",
         "language": "Rust",
-        "stars": 92141,
+        "stars": 92203,
         "starsToday": 260
       },
       {
@@ -589,7 +587,7 @@
         "url": "https://github.com/google-research/paper-orchestra",
         "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
         "language": "Python",
-        "stars": 3790,
+        "stars": 4201,
         "starsToday": 1529
       },
       {
@@ -599,10 +597,10 @@
         "url": "https://github.com/google-labs-code/stitch-skills",
         "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "language": "TypeScript",
-        "stars": 10293,
+        "stars": 10376,
         "starsToday": 369
       }
     ],
-    "updatedAt": "2026-11-18T13:59:32.751Z"
+    "updatedAt": "2026-11-18T21:57:39.941Z"
   }
 }
