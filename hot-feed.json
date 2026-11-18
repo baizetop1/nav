@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-17T22:25:10.450Z",
+  "generatedAt": "2026-11-18T04:22:49.907Z",
   "intelligence": {
-    "updatedAt": "2026-11-17T22:25:10.450Z",
+    "updatedAt": "2026-11-18T04:22:49.907Z",
     "items": [
       {
-        "id": "cn-item-1da5fc50a22ee92b",
+        "id": "cn-item-f3f246af05c71e5a",
         "category": "cn",
-        "title": "美官员称对伊朗格什姆岛实施“自卫”打击",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-18/10733822.shtml",
+        "title": "检察机关依法对徐一丁涉嫌受贿案提起公诉",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-18/10733898.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-17T22:13:45.000Z",
-        "summary": "新华社华盛顿11月17日电(记者黄强 徐剑梅)美国军方官员17日说，美军当天对伊朗格什姆岛一处导弹发射场实施精确打击，以回应伊朗伊斯兰革命卫队针对美国人员和资产的“侵略行径”。",
+        "publishedAt": "2026-11-18T02:05:48.000Z",
+        "summary": "中新网11月18日电 据最高人民检察院微博消息，中国农业发展银行原党委委员、副行长徐一丁涉嫌受贿一案，由国家监察委员会调查终结，移送检察机关审查起诉。经最高人民检察院指定管辖，上海市人民检察院依法以涉嫌受贿罪对徐一丁作出逮捕决定。近日，上海市人民检察院第三分院已向上海市第三中级人民法院提起公诉。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-114713",
+        "id": "cisa-kev-cve-2026-115731",
         "category": "security",
-        "title": "UnrealIRCd UnrealIRCd：UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114713",
+        "title": "Perforce Puppet Enterprise：Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-115731",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-13T00:00:00.000Z",
-        "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
-        "badge": "CVE-2026-114713",
-        "signal": "已遭利用 · 整改期限 2026-11-16"
+        "publishedAt": "2026-11-17T00:00:00.000Z",
+        "summary": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the servic…",
+        "badge": "CVE-2026-115731",
+        "signal": "已遭利用 · 整改期限 2026-12-01"
       },
       {
         "id": "ai-openai-8f6af8c44a4a1bfb",
@@ -36,24 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1257828",
+        "id": "hn-50538240",
         "category": "dev",
-        "title": "Gemini Carbon 很强，但是 Antigravity CLI 就是登录不上怎么办",
-        "url": "https://www.v2ex.com/t/1257828",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-17T15:09:08.000Z",
-        "summary": "买了 20 块会员，兴冲冲装上，没想到说我地区不支持。claude code 都没问题。",
-        "badge": "程序员",
-        "signal": "13 回复"
+        "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+        "url": "https://calif.io/java4shell/",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-17T21:11:28.000Z",
+        "badge": "HN",
+        "signal": "642 分 · 166 评论"
       },
       {
-        "id": "cn-it-2918edd020262fe7",
+        "id": "cn-it-cbed5d3b210a0ec5",
         "category": "cn",
-        "title": "英伟达 2027 财年前三季度归母净利润 1832.97 亿美元，同比增长 137.72%",
-        "url": "https://www.ithome.com/1/028/575.htm",
+        "title": "《古墓丽影》开发商晶体动力再度裁员 8 人",
+        "url": "https://www.ithome.com/1/028/694.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-17T21:25:38.000Z",
-        "summary": "IT之家 11 月 18 日消息，英伟达今日发布 2027 财年（2026 年 1 月 26 日～2027 年 1 月 31 日）前三季度（2026 年 1 月 26 日～2026 年 10 月 25 日）及第三财季（2026 年 7 月 27 日～2026 年 10 月 25 日）报告： 2027 财年前三季度 营业总收入 ：2936.81 亿美元 （IT之家注：现汇率约合 1.96 万亿元人民币） ，同比增长 98.69% 毛利润 ：2199.76 亿美元 （现汇率约合…",
+        "publishedAt": "2026-11-18T04:00:10.000Z",
+        "summary": "IT之家 11 月 18 日消息，继今年 3 月裁员 20 人后，晶体动力（Crystal Dynamics）最近宣布再度启动裁员。 IT之家注意到，外媒 Vertical Slice 最先披露了这则消息，并援引多名前晶体动力员工表述。随后晶体动力表示，他们工作室将裁员 8 人。 晶体动力同时表示，工作室将为受影响员工提供完整离职补偿方案，以及就业安置协助，帮助他们顺利度过这段裁员时期。 此外， 晶体动力目前正在开发《古墓丽影：亚特兰蒂斯遗产》和《古墓丽影：催化剂》游戏 。…",
         "badge": "IT之家"
       },
       {
@@ -77,34 +76,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50538240",
+        "id": "v2ex-1257948",
         "category": "dev",
-        "title": "Java4Shell: RCE in OpenJDK when processing Base64",
-        "url": "https://calif.io/java4shell/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-17T21:11:28.000Z",
-        "badge": "HN",
-        "signal": "166 分 · 24 评论"
+        "title": "各位的 Google 这几天有被重定向到 HK 吗",
+        "url": "https://www.v2ex.com/t/1257948",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-18T04:02:32.000Z",
+        "summary": "给 Google 分流的一直是美国的原生 IP 落地节点，但是从前天开始访问 www.google.com 都被重定向了 www.google.com.hk 了，不知道是我个例还是普遍 PS：我账号地区一直是美国",
+        "badge": "程序员",
+        "signal": "4 回复"
       },
       {
-        "id": "cn-baidu-400006c94110fc41",
+        "id": "cn-baidu-22612290584fc503",
         "category": "cn",
-        "title": "普京抵达深圳",
-        "url": "https://www.baidu.com/s?wd=%E6%99%AE%E4%BA%AC%E6%8A%B5%E8%BE%BE%E6%B7%B1%E5%9C%B3&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平会见俄罗斯总统普京",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E4%BC%9A%E8%A7%81%E4%BF%84%E7%BD%97%E6%96%AF%E6%80%BB%E7%BB%9F%E6%99%AE%E4%BA%AC&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月18日凌晨，俄罗斯总统普京乘专机抵达深圳。这是继今年5月国事访问后，普京总统再次来到中国。",
+        "summary": "11月18日中午，国家主席习近平在深圳会见来华出席亚太经合组织领导人非正式会议的俄罗斯总统普京。",
         "badge": "热搜",
-        "signal": "7,808,372 热度"
+        "signal": "7,809,596 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-123039",
+        "id": "cisa-kev-cve-2026-114713",
         "category": "security",
-        "title": "Check Point Multiple Products：Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123039",
+        "title": "UnrealIRCd UnrealIRCd：UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114713",
         "source": "CISA KEV",
         "publishedAt": "2026-11-13T00:00:00.000Z",
-        "summary": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCL…",
-        "badge": "CVE-2026-123039",
+        "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+        "badge": "CVE-2026-114713",
         "signal": "已遭利用 · 整改期限 2026-11-16"
       },
       {
@@ -117,24 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1257814",
+        "id": "hn-50540437",
         "category": "dev",
-        "title": "About Personal Agent",
-        "url": "https://www.v2ex.com/t/1257814",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-17T13:46:41.000Z",
-        "summary": "今年国庆前后，Personal Agent 这个概念爆火，Muse 上线数据很好，Instinct 也拿到了很好的融资。 作为 AI / Agent 领域的创业者，焦虑感扑面而来：之前做的 Agent 陪伴方向是不是没跟上这个风口？这个风口要怎么追，才能拿到融资、做出东西来？ 在这个背景之下，我集中补了很多关于 Personal Agent 的内容，再结合手上的实际业务，梳理出以下几点零星的感受与思考。 01｜信息输入与我的第一判断 个人习惯使然，这次关于 Personal…",
-        "badge": "程序员",
-        "signal": "0 回复"
+        "title": "ID.me terms required for IRS sign-in",
+        "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-18T00:51:45.000Z",
+        "badge": "HN",
+        "signal": "197 分 · 72 评论"
       },
       {
-        "id": "cn-item-125e758f04de0d53",
+        "id": "cn-item-2a75c7cdea262305",
         "category": "cn",
-        "title": "王毅会见加拿大外长阿南德",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-17/10733794.shtml",
+        "title": "人这一辈子，一定要去一趟中国“APEC第三城”！",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-18/10733859.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-17T15:47:26.000Z",
-        "summary": "2026年11月17日，中共中央政治局委员、外交部长王毅在深圳会见加拿大外长阿南德。",
+        "publishedAt": "2026-11-18T00:59:38.000Z",
+        "summary": "11月18日至19日，",
         "badge": "中新网要闻"
       },
       {
@@ -149,45 +148,45 @@
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-0e7f690aa4ff229b",
+        "id": "ai-openai-3047d7657748ea76",
         "category": "ai",
-        "title": "Strengthening NATO and allied cyber defenses with AI",
-        "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+        "title": "Introducing ChatGPT for Sales",
+        "url": "https://openai.com/index/introducing-chatgpt-for-sales",
         "source": "OpenAI",
-        "publishedAt": "2026-11-17T00:00:00.000Z",
-        "summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+        "publishedAt": "2026-11-17T08:00:00.000Z",
+        "summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50537156",
+        "id": "v2ex-1257944",
         "category": "dev",
-        "title": "jQuery 4.1.0",
-        "url": "https://github.com/jquery/jquery/releases/tag/4.1.0",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-17T19:50:40.000Z",
-        "badge": "HN",
-        "signal": "178 分 · 88 评论"
+        "title": "grok bot 100 刀/月的套餐，额度用得飞快，想放弃了",
+        "url": "https://www.v2ex.com/t/1257944",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-18T03:48:36.000Z",
+        "badge": "程序员",
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-a05b0c81817949a6",
+        "id": "cn-it-4aed58e57598459d",
         "category": "cn",
-        "title": "iPhone Duo 开售三周后，苹果 Apple Store 完成适配",
-        "url": "https://www.ithome.com/1/028/573.htm",
+        "title": "Radxa 分享瑞芯微文档：RK3668 通用处理器预计 2027Q1 提供工程样品",
+        "url": "https://www.ithome.com/1/028/693.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-17T18:00:30.000Z",
-        "summary": "IT之家 11 月 18 日消息，苹果 Apple Store 在线商店昨晚发布了 6.10 版本升级，更新日志显示为“多种改进和性能增强”。 据用户反馈， 该版本的 Apple Store 终于完成了对 iPhone Duo 的适配 。值得一提的是，如今距离 iPhone Duo 开售已过去约三周时间。 据IT之家昨日报道，苹果全球营销高级副总裁格雷格 · 乔斯维亚克（Greg Joswiak）宣布， 目前已有超过 20 万款应用针对 iPhone Duo 完成优化 ，较…",
+        "publishedAt": "2026-11-18T03:55:53.000Z",
+        "summary": "IT之家 11 月 18 日消息，根据开源硬件制造商 Radxa（瑞莎）分享的文档，瑞芯微计划于 2027 年第 1 季度交付下代通用处理器 RK3668 的样品。 RK3668 将采用 6nm 制程工艺，CPU 集成 6 个 Arm Cortex-A725 、 2 个 Arm Cortex-A520 ，搭配 Arm Mali G2 Pro MC4 GPU (1.23TFLOPS)，自研 NPU 具备 44 TOPS (INT8) 稀疏算力，配备 2×24M + 1×16M…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-124194",
+        "id": "cisa-kev-cve-2026-123039",
         "category": "security",
-        "title": "Microsoft Office：Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194",
+        "title": "Check Point Multiple Products：Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123039",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
-        "badge": "CVE-2026-124194",
-        "signal": "已遭利用 · 整改期限 2026-11-24"
+        "publishedAt": "2026-11-13T00:00:00.000Z",
+        "summary": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCL…",
+        "badge": "CVE-2026-123039",
+        "signal": "已遭利用 · 整改期限 2026-11-16"
       },
       {
         "id": "ai-google-deepmind-833534b672b8daa3",
@@ -200,25 +199,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1257813",
+        "id": "hn-50540178",
         "category": "dev",
-        "title": "基于 v86 的 iOS 6.1.3 模拟器，在浏览器中完全模拟 iPhone4 硬件和 iOS",
-        "url": "https://www.v2ex.com/t/1257813",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-17T13:30:18.000Z",
-        "summary": "最近没事做了点好玩的东西，魔改 v86 模拟了 iPhone4 硬件和 armv7 指令集，加上 GLES 后端，让浏览器能够直接动态的运行 iOS6 系统，可以运行旧的 32 位 iOS app，已经测试了部分游戏：愤怒的小鸟，植物大战僵尸，无尽之剑都能运行，虽然还不太流畅。 演示： https://www.bilibili.com/video/BV1xBsr6REg6 网站地址： https://v64-2ys.pages.dev/ Firmware 下载: https…",
-        "badge": "程序员",
-        "signal": "2 回复"
+        "title": "Google's AI answers reducing search traffic by 40%",
+        "url": "https://revscope.co/blog/search-seo-geo-2026/",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-18T00:17:58.000Z",
+        "badge": "HN",
+        "signal": "178 分 · 125 评论"
       },
       {
-        "id": "cn-baidu-84175eadbbccbb5e",
+        "id": "cn-baidu-e05bf8d460bc5ffe",
         "category": "cn",
-        "title": "小米回应雷军APEC发言紧张",
-        "url": "https://www.baidu.com/s?wd=%E5%B0%8F%E7%B1%B3%E5%9B%9E%E5%BA%94%E9%9B%B7%E5%86%9BAPEC%E5%8F%91%E8%A8%80%E7%B4%A7%E5%BC%A0&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "习近平会见韩国总统李在明",
+        "url": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E4%BC%9A%E8%A7%81%E9%9F%A9%E5%9B%BD%E6%80%BB%E7%BB%9F%E6%9D%8E%E5%9C%A8%E6%98%8E&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月17日，雷军晒APEC发言图，粉丝留言称其发言略显社恐。小米在评论区回应称“这么大的国际场合，紧张太正常啦”。",
+        "summary": "11月18日上午，国家主席习近平在深圳会见来华出席亚太经合组织领导人非正式会议的韩国总统李在明。",
         "badge": "热搜",
-        "signal": "7,714,198 热度"
+        "signal": "7,713,441 热度"
       },
       {
         "id": "github-advisory-ghsa-r7hw-jx6r-756g",
@@ -241,65 +239,66 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50534631",
+        "id": "v2ex-1257932",
         "category": "dev",
-        "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
-        "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-17T17:12:06.000Z",
-        "badge": "HN",
-        "signal": "255 分 · 138 评论"
+        "title": "Claude 是重置过了吗？",
+        "url": "https://www.v2ex.com/t/1257932",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-18T03:11:18.000Z",
+        "summary": "我周六时候订阅的昨天晚上看是只有 30%了 刚才打开电脑看变成 100%了",
+        "badge": "程序员",
+        "signal": "0 回复"
       },
       {
-        "id": "cn-item-86393b0146a28d3f",
+        "id": "cn-item-ecd545a3150c645a",
         "category": "cn",
-        "title": "特朗普最新表态：我期待访问中国",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-17/10733780.shtml",
+        "title": "第49届东盟峰会闭幕 新加坡接任2027年轮值主席国",
+        "url": "https://www.chinanews.com.cn/aseaninfo/2026/11-18/10733851.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-17T14:10:48.000Z",
-        "summary": "中新网11月17日电 据美国有线电视新闻网(CNN)报道，当地时间17日，美国总统特朗普在菲律宾马尼拉表示，“我期待访问中国，我们有一些十分重要的议题需要磋商。”",
+        "publishedAt": "2026-11-18T00:37:41.000Z",
+        "summary": "中新社马尼拉11月18日电 (记者 周璟)第49届东盟峰会及系列会议17日晚在菲律宾首都马尼拉闭幕。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-111793",
+        "id": "cisa-kev-cve-2026-124194",
         "category": "security",
-        "title": "Openwave Messaging Limited Webtop Media Transcoder：Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111793",
+        "title": "Microsoft Office：Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194",
         "source": "CISA KEV",
         "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experie…",
-        "badge": "CVE-2026-111793",
+        "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+        "badge": "CVE-2026-124194",
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
-        "id": "ai-openai-3b3be741a87f5e21",
+        "id": "ai-openai-0e7f690aa4ff229b",
         "category": "ai",
-        "title": "Introducing OpenAI for Chile",
-        "url": "https://openai.com/index/introducing-openai-for-chile",
+        "title": "Strengthening NATO and allied cyber defenses with AI",
+        "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
         "source": "OpenAI",
         "publishedAt": "2026-11-17T00:00:00.000Z",
-        "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+        "summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1257797",
+        "id": "v2ex-1257910",
         "category": "dev",
-        "title": "PHP web 编程语言需要看哪些书籍",
-        "url": "https://www.v2ex.com/t/1257797",
+        "title": "就在刚刚，agy 偷摸重置了，真没必要冒着封号风险去薅 ultra",
+        "url": "https://www.v2ex.com/t/1257910",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-17T11:45:39.000Z",
-        "summary": "8 年 java 找了个 php 的工作，希望我先写 php 后面再做 java 重构，让我先顶住，php 得学学，各位大佬需要看哪些书",
+        "publishedAt": "2026-11-18T02:22:06.000Z",
+        "summary": "今天",
         "badge": "程序员",
-        "signal": "14 回复"
+        "signal": "7 回复"
       },
       {
-        "id": "cn-it-4e5cba6255598034",
+        "id": "cn-it-f82cdc5741f23e3a",
         "category": "cn",
-        "title": "华为智选车产品总监详解尚界 Z7T 星野套装：“不动骨相”，只在风格层面做外放",
-        "url": "https://www.ithome.com/1/028/572.htm",
+        "title": "苹果首款折叠 iPhone Duo 铰链风波升级，韩媒称供应商受压撤回声明",
+        "url": "https://www.ithome.com/1/028/692.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-17T17:38:52.000Z",
-        "summary": "IT之家 11 月 18 日消息，鸿蒙智行尚界汽车官方在 11 月 11 日宣布，尚界 Z7T 星野套装即将上市，将在 11 月 20 日 14:30 鸿蒙智行享界 V8 及星芒品牌发布会上亮相。 从画面可以看到，尚界 Z7T 星野套装新增了银色行李架、银色后视镜外壳、全车跨界套件以及黑色尾翼。IT之家注意到，华为智选车产品总监（尚界系列）@尚界Jeff 昨日发文介绍了尚界 Z7T 星野套装。 他表示，尚界 Z7T 本身原生猎装的比例与姿态是绝不可动摇的底子。 星野套装在这…",
+        "publishedAt": "2026-11-18T03:39:06.000Z",
+        "summary": "IT之家 11 月 18 日消息，韩国媒体 The Elec 昨日（11 月 17 日）发布博文，报道称苹果向零部件供应商 Fine M-Tec 施压，要求其撤回 10 月 26 日发表在官网的相关声明， 让苹果首款折叠 iPhone Duo 铰链故障风波再起波澜。 IT之家曾于 10 月 24 日报道，苹果首款折叠 iPhone Duo 开售首日（10 月 23 日）， 在社交媒体上就开始流传多张内屏出现裂纹的照片 。 ▲ Fine M-Tec 铰链产品示例 零部件供应商…",
         "badge": "IT之家"
       },
       {
@@ -323,34 +322,34 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50535885",
+        "id": "hn-50538994",
         "category": "dev",
-        "title": "MAI Code 2 and Code 2 Flash",
-        "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+        "title": "Quad9's withdrawal from France: A canary in the coal mine",
+        "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-17T18:25:13.000Z",
+        "publishedAt": "2026-11-17T22:13:34.000Z",
         "badge": "HN",
-        "signal": "220 分 · 105 评论"
+        "signal": "361 分 · 115 评论"
       },
       {
-        "id": "cn-baidu-a130674d605b2aa7",
+        "id": "cn-baidu-8d91ecc9c75bb315",
         "category": "cn",
-        "title": "APEC工商领导人峰会聚焦哪些议题",
-        "url": "https://www.baidu.com/s?wd=APEC%E5%B7%A5%E5%95%86%E9%A2%86%E5%AF%BC%E4%BA%BA%E5%B3%B0%E4%BC%9A%E8%81%9A%E7%84%A6%E5%93%AA%E4%BA%9B%E8%AE%AE%E9%A2%98&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "什么是亚太共同体 如何促进共同繁荣",
+        "url": "https://www.baidu.com/s?wd=%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%9A%E5%A4%AA%E5%85%B1%E5%90%8C%E4%BD%93+%E5%A6%82%E4%BD%95%E4%BF%83%E8%BF%9B%E5%85%B1%E5%90%8C%E7%B9%81%E8%8D%A3&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月17日，2026年APEC工商领导人峰会在深圳举行，2000多名嘉宾参会，聚焦经济新图景、互联互通及人工智能等议题。探讨的工商共识将汇总写入《2026年APEC工商领导人峰会深圳倡议》，为高层经贸磋商提供参考依据。",
+        "summary": "2026年APEC工商领导人峰会在深圳举办。本次会议主题是“建设亚太共同体，促进共同繁荣”，这是APEC历史上首次明确以建设亚太共同体作为会议主题。什么是亚太共同体？中国如何促进亚太合作的共同繁荣？各方怎样书写亚太合作的新未来？南开大学APEC研究中心副主任涂红对此进行了解读。",
         "badge": "热搜",
-        "signal": "7,616,393 热度"
+        "signal": "7,617,246 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-20320",
+        "id": "cisa-kev-cve-2026-111793",
         "category": "security",
-        "title": "Cisco BroadWorks：Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20320",
+        "title": "Openwave Messaging Limited Webtop Media Transcoder：Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111793",
         "source": "CISA KEV",
         "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
-        "badge": "CVE-2026-20320",
+        "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experie…",
+        "badge": "CVE-2026-111793",
         "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
@@ -363,24 +362,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1257776",
+        "id": "v2ex-1257894",
         "category": "dev",
-        "title": "感觉 AI 就像一种病毒",
-        "url": "https://www.v2ex.com/t/1257776",
+        "title": "这个开源版 office 大部分代码实现竟然用的 typescript，它的性能是否可能存在严重问题？",
+        "url": "https://www.v2ex.com/t/1257894",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-17T09:52:13.000Z",
-        "summary": "有时感觉 AI 就像一种病毒，有着漂亮性感的外衣，进入每个人的体内，每个组织，美其名曰赋能升级，其实是在逐步灭杀汰换原有的细胞，原有的岗位，加剧同质化内卷。而被汰换之后的人却有些无处可取。然后期盼着科技财阀，能给我们整个 UBI 渡过余生，但建立在几乎施舍一样上的人生，真的能得到自由么？",
+        "publishedAt": "2026-11-18T01:49:50.000Z",
+        "summary": "https://github.com/genspark-ai/genoffice/ 某大佬最近手搓出来的编辑器 TypeScript 94% CSS 2.5% Rust 2.4%",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "10 回复"
       },
       {
-        "id": "cn-item-0fc9bc204e302f58",
+        "id": "cn-item-66b56a63314cb6d9",
         "category": "cn",
-        "title": "欧盟称今年前三季度经济增长好于预期",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-17/10733772.shtml",
+        "title": "英国宣布向乌克兰提供千余枚防空导弹",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-18/10733841.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-17T13:46:03.000Z",
-        "summary": "中新网布鲁塞尔11月17日电 (记者 德永健)欧盟17日发布欧洲经济秋季展望报告，表示受商品出口强劲反弹等因素驱动，今年前三季度欧盟经济增长好于预期。",
+        "publishedAt": "2026-11-18T00:23:06.000Z",
+        "summary": "中新社伦敦11月17日电 (记者 欧阳开宇)英国国防部17日对外公布称，英国将推出一项总额达2.4亿英镑的冬季防空援助计划，向乌克兰输送大批防空装备，强化乌克兰的防御能力。",
         "badge": "中新网要闻"
       },
       {
@@ -405,35 +404,35 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50536813",
+        "id": "hn-50539610",
         "category": "dev",
-        "title": "350 years ago, Ole Rømer discovered that light has a finite speed",
-        "url": "https://www.sciencenorway.no/culture-history-history-of-science/350-years-ago-this-man-discovered-that-light-has-a-finite-speed/2737969",
+        "title": "Microsoft's ONNX Runtime has disappeared from GitHub",
+        "url": "https://github.com/microsoft/onnxruntime",
         "source": "Hacker News",
-        "publishedAt": "2026-11-17T19:25:27.000Z",
+        "publishedAt": "2026-11-17T23:18:49.000Z",
         "badge": "HN",
-        "signal": "166 分 · 53 评论"
+        "signal": "185 分 · 43 评论"
       },
       {
-        "id": "cn-it-3708feb3c212c816",
+        "id": "cn-it-263c775254641a8c",
         "category": "cn",
-        "title": "华为 Mate 90 系列手机 AI 快捷栏全新交互体验曝光，与星芒 OSTA O1 Pro 风格完全不同",
-        "url": "https://www.ithome.com/1/028/571.htm",
+        "title": "分形工艺预热神秘新品，传闻为 Torrent 2 机箱",
+        "url": "https://www.ithome.com/1/028/691.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-17T17:22:08.000Z",
-        "summary": "IT之家 11 月 18 日消息，华为 Mate 90 系列手机昨晚率先开启鸿蒙 HarmonyOS 7.0.0.115 SP11 版本升级，系统包大小约 10.31GB，带来了 AI 快捷栏等功能。 据IT之家用户 @秋叶寒 反馈，Mate 90 系列手机的 AI 快捷栏拥有全新交互体验 —— 它会维持 5 个应用图标的宽度，不会缩小。另外， 长按 AI 圆环可进入 AI 屏 ，获取更多服务，例如行业趋势解读、AI 分析、智能记忆助手等。 值得一提的是，这一页面与华为全新…",
+        "publishedAt": "2026-11-18T03:29:58.000Z",
+        "summary": "IT之家 11 月 18 日消息，PC 硬件制造商 Fractal Design（分形工艺）现已在其京东、淘宝旗舰店首页放出同一张图片， 对一款神秘新品进行预热 。从该品牌经营范围来看，这似乎是一款机箱。 参考 Chiphell 站长 @nApoleon 在该平台的发帖， 该新品应为 Torrent 2 机箱 ，有望配备 20040 大尺寸加厚 FDB 轴承风扇，预计 2026 年 12 月正式面世。 IT之家了解到， 原版 Torrent 机箱发布于 2021 年 ，主打…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-111560",
+        "id": "cisa-kev-cve-2026-20320",
         "category": "security",
-        "title": "Barracuda Networks Multiple Products：Barracuda Networks Multiple Products OS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111560",
+        "title": "Cisco BroadWorks：Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20320",
         "source": "CISA KEV",
         "publishedAt": "2026-11-10T00:00:00.000Z",
-        "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command i…",
-        "badge": "CVE-2026-111560",
-        "signal": "已遭利用 · 整改期限 2026-11-13"
+        "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+        "badge": "CVE-2026-20320",
+        "signal": "已遭利用 · 整改期限 2026-11-24"
       },
       {
         "id": "ai-google-deepmind-f321c904268bcef2",
@@ -446,25 +445,25 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1257769",
+        "id": "v2ex-1257890",
         "category": "dev",
-        "title": "ghostproxifier 一款对标 proxifier、proxyBridge 的免费软件",
-        "url": "https://www.v2ex.com/t/1257769",
+        "title": "感叹一下 ai 时代几乎没有啥技术难题了，无论是软硬件",
+        "url": "https://www.v2ex.com/t/1257890",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-17T09:39:19.000Z",
-        "summary": "为什么做 Ghost Proxifier？ 平时用终端、AI 客户端或某些“不听话”的软件时，经常遇到它们无视系统代理的情况。开全局 / TUN 模式不仅要装虚拟网卡，还容易把本地网络环境搞乱；用老牌 Proxifier 又得手动配规则、盯进程，遇到 Chrome 这类多进程软件更是折腾。 为了解决 “只让指定软件老老实实走代理” 这件小事，我做了 Ghost Proxifier ——纯用户态实现，主打极简、不用动脑子。 做了哪些省心功能？ 拖拽即用，零规则配置 ：不管是桌…",
+        "publishedAt": "2026-11-18T01:41:47.000Z",
+        "summary": "翻到了 22 年发的一个硬件问题 https://www.v2ex.com/t/881374 ，当时找遍全网也没有解决方案，最后还是用了继电器串联 现在真是随便一个 ai 都能解决，比如豆包",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "36 回复"
       },
       {
-        "id": "cn-baidu-402ee4cc207b7058",
+        "id": "cn-baidu-4a374e6954da1176",
         "category": "cn",
-        "title": "何超琼讲话董明珠注视满眼欣赏",
-        "url": "https://www.baidu.com/s?wd=%E4%BD%95%E8%B6%85%E7%90%BC%E8%AE%B2%E8%AF%9D%E8%91%A3%E6%98%8E%E7%8F%A0%E6%B3%A8%E8%A7%86%E6%BB%A1%E7%9C%BC%E6%AC%A3%E8%B5%8F&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "深圳人全妆出街迎APEC",
+        "url": "https://www.baidu.com/s?wd=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E5%85%A8%E5%A6%86%E5%87%BA%E8%A1%97%E8%BF%8EAPEC&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "11月17日，2026年亚太经合组织（APEC）工商领导人峰会上。何超琼在台上讲话时，坐在旁边的董明珠全程注视着她，凝神倾听，眼神里满是欣赏。",
+        "summary": "17日，记者在深圳街头采访发现，为迎接APEC会议，不少市民暂别拖鞋、换上新装甚至化全妆出门。市民表示想用微小方式当好东道主，为城市尽力。此举获网友夸赞“好可爱的深圳人”。",
         "badge": "热搜",
-        "signal": "7,523,977 热度"
+        "signal": "7,523,407 热度"
       },
       {
         "id": "github-advisory-ghsa-gfv3-m769-5xm3",
@@ -501,8 +500,8 @@
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "language": "Python",
-        "stars": 9120,
-        "starsToday": 1007
+        "stars": 9621,
+        "starsToday": 1005
       },
       {
         "id": "github-5524ff15f43adf61",
@@ -511,8 +510,8 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 68964,
-        "starsToday": 772
+        "stars": 69243,
+        "starsToday": 696
       },
       {
         "id": "github-c8f5678810f1cfbe",
@@ -521,8 +520,8 @@
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "language": "Go",
-        "stars": 53682,
-        "starsToday": 764
+        "stars": 53857,
+        "starsToday": 763
       },
       {
         "id": "github-f317739e91c4b7f7",
@@ -531,8 +530,8 @@
         "url": "https://github.com/Tencent/LoopForge",
         "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
         "language": "Go",
-        "stars": 3071,
-        "starsToday": 590
+        "stars": 3396,
+        "starsToday": 591
       },
       {
         "id": "github-5b2653ab79f36aef",
@@ -541,8 +540,8 @@
         "url": "https://github.com/dream-num/univer",
         "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
         "language": "TypeScript",
-        "stars": 28866,
-        "starsToday": 1776
+        "stars": 29029,
+        "starsToday": 1774
       },
       {
         "id": "github-0ae6d60ce7b60c73",
@@ -551,8 +550,8 @@
         "url": "https://github.com/getarcaneapp/arcane",
         "description": "Modern Docker Management, Designed for Everyone",
         "language": "Go",
-        "stars": 9281,
-        "starsToday": 654
+        "stars": 9408,
+        "starsToday": 618
       },
       {
         "id": "github-fac24b8ded7176d0",
@@ -561,7 +560,7 @@
         "url": "https://github.com/google-labs-code/stitch-skills",
         "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "language": "TypeScript",
-        "stars": 10069,
+        "stars": 10161,
         "starsToday": 350
       },
       {
@@ -571,8 +570,8 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 16867,
-        "starsToday": 196
+        "stars": 16950,
+        "starsToday": 201
       },
       {
         "id": "github-4251a228ae407247",
@@ -581,8 +580,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 319267,
-        "starsToday": 598
+        "stars": 319451,
+        "starsToday": 1917
       },
       {
         "id": "github-2cea992e444a06df",
@@ -591,10 +590,10 @@
         "url": "https://github.com/ag-ui-protocol/ag-ui",
         "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
         "language": "TypeScript",
-        "stars": 19954,
-        "starsToday": 1444
+        "stars": 20089,
+        "starsToday": 1445
       }
     ],
-    "updatedAt": "2026-11-17T22:25:10.450Z"
+    "updatedAt": "2026-11-18T04:22:49.907Z"
   }
 }
