@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-20T20:22:42.361Z",
+  "generatedAt": "2026-11-21T02:16:45.442Z",
   "intelligence": {
-    "updatedAt": "2026-11-20T20:22:42.361Z",
+    "updatedAt": "2026-11-21T02:16:45.442Z",
     "items": [
       {
-        "id": "cn-item-1ca8440be6a138e3",
+        "id": "cn-item-65ef84a3c3dc619e",
         "category": "cn",
-        "title": "财政部：今年1—10月全国一般公共预算收入195671亿元",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-20/10735377.shtml",
+        "title": "从“跑多科”到“一号通”，就医流程改革让患者不再“绕晕”",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-21/10735623.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-20T09:54:22.000Z",
-        "summary": "中新网11月20日电 据财政部网站消息，财政部公布2026年1-10月财政收支情况。",
+        "publishedAt": "2026-11-21T01:13:47.000Z",
+        "summary": "一次挂号、多科接诊、院内免费转诊，多地医院推出“一号管到底”服务",
         "badge": "中新网要闻"
       },
       {
@@ -43,28 +43,28 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-20T18:33:14.000Z",
         "badge": "HN",
-        "signal": "671 分 · 305 评论"
+        "signal": "1596 分 · 725 评论"
       },
       {
-        "id": "cn-it-cb534c55f4fe6010",
+        "id": "cn-it-55963e57fb9d3762",
         "category": "cn",
-        "title": "独占特性确认：华为 Mate 系列旗舰机“无缘”OSTA 小星芒、AI 屏等功能",
-        "url": "https://www.ithome.com/1/030/284.htm",
+        "title": "英伟达董事会为何对黄仁勋态度转变？婚外情无关紧要，核心问题在于诚信",
+        "url": "https://www.ithome.com/1/030/325.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-20T19:20:43.000Z",
-        "summary": "IT之家 11 月 21 日消息，首款为 AI 而生的鸿蒙手机 —— 华为星芒 OSTA O1 Pro 已于昨日下午正式发布 ，叠加国补后 4999 元起。华为星芒品牌总经理刘赫开通微博， 透露最受欢迎的 16G 版本已经在全平台售罄 。 ▲ IT之家开箱：华为全新子品牌星芒 OSTA O1 Pro 手机实拍 IT之家注意到，刘赫还在自己微博的评论区与网友展开了互动，并解答了不少消费者的疑惑。针对大家最关心的星芒 OSTA O1 Pro 首发新功能华为 Mate 系列能否 …",
+        "publishedAt": "2026-11-21T02:10:48.000Z",
+        "summary": "IT之家 11 月 21 日消息，据《连线》（WIRED）当地时间 11 月 20 日报道，英伟达董事会最终决定接受黄仁勋（Jensen Huang）的辞职，主要原因并不在于婚外情，而是董事会认为他在相关事件中多次缺乏坦诚、存在撒谎行为，导致董事会对其诚信和信任产生严重质疑。 两名知情人士向《连线》透露，黄仁勋于 11 月 8 日承认存在婚外情，但当时董事会仍无法确定相关事件涉及的其他问题。同一天，英伟达董事会宣布启动独立调查。然而，接下来几天，随着更多婚外情指控浮出水面，…",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-x72p-hmqp-46hw",
+        "id": "github-advisory-ghsa-25qc-m4pw-2w8r",
         "category": "security",
-        "title": "Git LFS may execute arbitrary commands via crafted Git LFS configurations",
-        "url": "https://github.com/advisories/GHSA-x72p-hmqp-46hw",
+        "title": "Budibase: Unauthenticated global-admin & database creation via tenant-confusion bypass of the one-time init guard (`POST /api/global/users/init`)",
+        "url": "https://github.com/advisories/GHSA-25qc-m4pw-2w8r",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-20T14:59:40.000Z",
-        "summary": "### Impact When fetching objects from a malicious repository, Git LFS may execute an arbitrary command or binary after failing to sufficiently restrict the set of configuration options defined in an `.lfsconfig` file in the repository. Git…",
-        "badge": "CVE-2026-105803",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-11-20T23:50:01.000Z",
+        "summary": "## Description ### Summary On a self-hosted, single-tenant Budibase instance (`multiTenancy:false`), the public bootstrap endpoint `POST /api/global/users/init` remains fully exploitable **after** the instance has been provisioned. Its \"al…",
+        "badge": "CVE-2026-122247",
+        "signal": "HIGH · CVSS 8.2"
       },
       {
         "id": "ai-google-deepmind-95da0fde7d56c751",
@@ -84,17 +84,17 @@
         "publishedAt": "2026-11-20T14:48:30.000Z",
         "summary": "httpS/HTTPS 都哭晕在厕所，「：」成为最大赢家。 这个 bug 充分证明了，世界就是个草台班子。 完全像我以前手下实习生能干出来的事，只要完成功能，就上交，压根不考虑边界情况。一个问题要反复好几轮，说一个改一个，最后还是他劝转行了。",
         "badge": "程序员",
-        "signal": "4 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-baidu-0ada4f7248d88eee",
+        "id": "cn-baidu-defe57d55ebf51ed",
         "category": "cn",
-        "title": "“工业母鸡”也被干成白菜价",
-        "url": "https://www.baidu.com/s?wd=%E2%80%9C%E5%B7%A5%E4%B8%9A%E6%AF%8D%E9%B8%A1%E2%80%9D%E4%B9%9F%E8%A2%AB%E5%B9%B2%E6%88%90%E7%99%BD%E8%8F%9C%E4%BB%B7&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "人民日报评“老人拆墙让路遭质疑”",
+        "url": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E8%AF%84%E2%80%9C%E8%80%81%E4%BA%BA%E6%8B%86%E5%A2%99%E8%AE%A9%E8%B7%AF%E9%81%AD%E8%B4%A8%E7%96%91%E2%80%9D&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，中国消费级五轴机床在海外遭疯抢。9月，多款国产桌面机床上线众筹，将数十万美元的“工业母机”价格打至5000美元区间，引发海外极客求购。",
+        "summary": "最近，安徽霍邱一老人主动拆墙让路被赞现代版“六尺巷”。没想到的是，一家人随后遭占道纠正、为买车让路等流言攻击。经相关部门核查，网传说法均不实，老人确已退让一米。文章呼吁，不应让行善者疲于自辩，需完善防网暴机制，别让善意被流言拆掉。",
         "badge": "热搜",
-        "signal": "7,809,441 热度"
+        "signal": "7,809,367 热度"
       },
       {
         "id": "cisa-kev-cve-2026-123890",
@@ -117,65 +117,65 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50574968",
+        "id": "hn-50581260",
         "category": "dev",
-        "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
-        "url": "https://alpo.ge/remark.pdf",
+        "title": "Inkling 2 Mini",
+        "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-20T14:16:21.000Z",
+        "publishedAt": "2026-11-20T20:12:19.000Z",
         "badge": "HN",
-        "signal": "2003 分 · 1341 评论"
+        "signal": "697 分 · 115 评论"
       },
       {
-        "id": "cn-item-3036c488bb65b8e1",
+        "id": "cn-item-ba8285559f5de047",
         "category": "cn",
-        "title": "民生调查局｜网约车平台层层抽佣调查：乘客付40.02元，司机只收到27.22元",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-20/10735356.shtml",
+        "title": "金价走低带火线下购金：豫园某柜台一上午卖出60余只金手镯",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-21/10735622.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-20T09:54:06.000Z",
-        "summary": "编者按： 这里是民生调查局，见人所未见，调查民生之变。关注你想关注的、你没关注的，调查你想看的、未看到的。 中新网11月20日电(钟兴真) 乘客在高德打车付了40.02元，司机在曹操出行端到手27.22元。一笔订单，两个平台各扣一笔，合计抽成超30%。",
+        "publishedAt": "2026-11-21T01:12:27.000Z",
+        "summary": "金价正在持续走低。11月20日亚洲交易时段，伦敦现货黄金价格跌破3600美元/盎司，创2025年9月以来新低。截至北京时间11月20日19时45分，伦敦现货黄金报价3583.88美元/盎司，跌幅1.20%。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-xrgv-7vx6-5vx6",
+        "id": "github-advisory-ghsa-r2q3-7m4h-63qg",
         "category": "security",
-        "title": "Git LFS may execute arbitrary commands via crafted Git configurations",
-        "url": "https://github.com/advisories/GHSA-xrgv-7vx6-5vx6",
+        "title": "Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` rendered through `{@html}` in the CSP-less Builder origin",
+        "url": "https://github.com/advisories/GHSA-r2q3-7m4h-63qg",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-20T14:58:53.000Z",
-        "summary": "### Impact When fetching objects from a malicious repository, Git LFS may execute an arbitrary command or binary after incorrectly parsing the Git configuration options defined for a submodule. Git LFS reads Git configuration options witho…",
-        "badge": "CVE-2026-105802",
-        "signal": "HIGH · CVSS 0.0"
+        "publishedAt": "2026-11-20T23:49:47.000Z",
+        "summary": "## Description ### Summary A **low-privileged application end-user** (role `BASIC` - **not** a builder or admin, and on a public data-collection form, an unauthenticated visitor) can store an HTML/JavaScript payload in ordinary row data. W…",
+        "badge": "CVE-2026-122244",
+        "signal": "HIGH · CVSS 7.7"
       },
       {
-        "id": "ai-openai-c1a2af93db54bfcf",
+        "id": "ai-openai-8145fefb47ff1ca9",
         "category": "ai",
-        "title": "Can AI help scientists identify promising drug candidates?",
-        "url": "https://openai.com/index/introducing-medchembench",
+        "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+        "url": "https://openai.com/business/customer-stories/hebbia",
         "source": "OpenAI",
         "publishedAt": "2026-11-20T00:00:00.000Z",
-        "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
+        "summary": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1258629",
+        "id": "v2ex-1258607",
         "category": "dev",
-        "title": "许愿式编程会取代程序员吗？",
-        "url": "https://www.v2ex.com/t/1258629",
+        "title": "死磕一个网页感知系统的来时路（三）：长文分享一下干货，扔掉站点配置后，怎么给网页建几何模型",
+        "url": "https://www.v2ex.com/t/1258607",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-20T10:39:11.000Z",
-        "summary": "在这周 Tab 星期四 认识一个团队，他们在做一个用 app 许愿编程做 app 的 agent app，开发了几个月，已经拿到天使轮。 团队自己的开发也在用许愿式编程，跟我 chat 那位开发者认为绝大部分编码能力很快会被模型吃掉、且前沿模型（specifically, Fable 5.2）已经超越大多数程序员。 按这个预测观点的势头下去，不久之后不仅编码不需要，架构都不用人去学了。开发者还是早点转行为妙。 不知使用前沿模型的各位，日常用模型编码的感觉更多是相似、还是相反…",
+        "publishedAt": "2026-11-20T08:59:21.000Z",
+        "summary": "上篇结尾停在“每适配一个站，要维护一份 200KB 的 JSON 配置”。做到第六个站时我彻底想明白了：就算跑得再稳，只要还在逐站写规则，本质上还是换皮爬虫。 真正的转折，始于我打算做一个能读网页的桌面助手。当时最大的困难就是：怎么才能不写配置、快速接入任意新站点，让感知自己跑起来？VLM 直接看？小元素看不明白还贵的要死。 为了回答这个问题，我逼着自己退回原点：网页的本质到底是什么？想来想去，我个人觉得它更像一本碎片化的杂志，终极目标是服务人类获取和使用信息。不管前端用了…",
         "badge": "程序员",
-        "signal": "22 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-it-8236a023fa3b2886",
+        "id": "cn-it-3775efd34e3b44d6",
         "category": "cn",
-        "title": "网传零跑 A10 后备箱被几箱啤酒压穿？官方回应系下层独立储物盒受损，非底板或整车承载结构损坏",
-        "url": "https://www.ithome.com/1/030/283.htm",
+        "title": "华为 Mate X8 大折叠手机黑白双色亮相，11 月 24 日发布",
+        "url": "https://www.ithome.com/1/030/324.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-20T18:57:05.000Z",
-        "summary": "IT之家 11 月 21 日消息，有零跑 A10 车主用户近日发布视频，反馈自己车辆的后备箱在装了几箱啤酒后被压穿底。随后，该事件引发网友热议。 IT之家注意到，针对网传情况，零跑汽车官方在昨晚 23:05 发布情况说明： 关于零跑 A10 后备厢储物盒的情况说明 近日，我们关注到网络上流传的零跑 A10 后备厢下层储物盒受损的相关视频。公司高度重视，第一时间联系用户并对车辆进行了检测。 经核实， 本次受损部件为后备厢盖板下方的独立储物盒 ，系装载物品超过其设计承重上限所致…",
+        "publishedAt": "2026-11-21T02:09:38.000Z",
+        "summary": "IT之家 11 月 21 日消息，华为今日公布 Mate X8 大折叠手机黑白双色官图，新机将于 11 月 24 日 14:30 发布。 IT之家注意到，华为 Mate X8 及全场景新品发布会将于 11 月 24 日 14:30 举行，目前这款折叠屏新机已现身华为官网，并公开了部分配置信息及所有配色的外观图。 颜色 紫金锦 苍穹黑 雪域白 青云锦 丹霞锦 配置 12GB+256GB 12GB+512GB 16GB+512GB 典藏版 16GB+1TB 典藏版 除了常规功能…",
         "badge": "IT之家"
       },
       {
@@ -199,35 +199,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50577265",
+        "id": "hn-50574968",
         "category": "dev",
-        "title": "Language Models Can Rewrite Their Own Weights",
-        "url": "https://arxiv.org/abs/2611.21885",
+        "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
+        "url": "https://alpo.ge/remark.pdf",
         "source": "Hacker News",
-        "publishedAt": "2026-11-20T16:29:06.000Z",
+        "publishedAt": "2026-11-20T14:16:21.000Z",
         "badge": "HN",
-        "signal": "246 分 · 90 评论"
+        "signal": "2383 分 · 1610 评论"
       },
       {
-        "id": "cn-baidu-6a341c597027d151",
+        "id": "cn-baidu-23f2c168ae92ce82",
         "category": "cn",
-        "title": "年轻人还逛商场 只是先去了B1层",
-        "url": "https://www.baidu.com/s?wd=%E5%B9%B4%E8%BD%BB%E4%BA%BA%E8%BF%98%E9%80%9B%E5%95%86%E5%9C%BA+%E5%8F%AA%E6%98%AF%E5%85%88%E5%8E%BB%E4%BA%86B1%E5%B1%82&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "特朗普称不支持“台独”引岛内震动",
+        "url": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E4%B8%8D%E6%94%AF%E6%8C%81%E2%80%9C%E5%8F%B0%E7%8B%AC%E2%80%9D%E5%BC%95%E5%B2%9B%E5%86%85%E9%9C%87%E5%8A%A8&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，北京等地商场B1层人流如织，楼上却少人问津。因大型超市引流乏力，商场转向押注餐饮、新鲜零食等体验业态。此前大卖场销售额持续下滑，消费者更看重性价比与体验价值。为此，商场通过引进首店、打造特色IP自救，竞争重心正从区位面积向运营调改偏移。",
+        "summary": "美国总统特朗普在深圳明确表态不支持“台独”，在台湾引发持续震动。有岛内舆论认为，这对民进党当局长期奉行的“倚美谋独”路线是一大警讯。一些台湾网民更是直接在网上留言，呼吁“两岸统一！”",
         "badge": "热搜",
-        "signal": "7,712,812 热度"
+        "signal": "7,714,380 热度"
       },
       {
-        "id": "github-advisory-ghsa-prhx-9q2h-ph2x",
+        "id": "github-advisory-ghsa-555j-qj3j-c8jv",
         "category": "security",
-        "title": "Paymenter: Unauthenticated arbitrary method invocation in Livewire components",
-        "url": "https://github.com/advisories/GHSA-prhx-9q2h-ph2x",
+        "title": "svglib: Exponential resource consumption via nested references in svg2rlg",
+        "url": "https://github.com/advisories/GHSA-555j-qj3j-c8jv",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-20T14:56:03.000Z",
-        "summary": "### Summary A Livewire function allowed attackers to call any public function, allowing attackers to call any public method on the component. Because an attacker can call any function, they can also overwrite locked data. ### Technical Det…",
-        "badge": "CVE-2026-103026",
-        "signal": "HIGH · CVSS 8.1"
+        "publishedAt": "2026-11-20T23:47:58.000Z",
+        "summary": "# Summary `svg2rlg()` expands ` ` references without any limit on the total number of expansions. Only direct cycles are rejected (`CircularRefError`). A group containing N ` ` elements that point to another such group multiplies the work …",
+        "badge": "CVE-2026-132275",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-701a571706ec6c00",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1258607",
+        "id": "v2ex-1258575",
         "category": "dev",
-        "title": "死磕一个网页感知系统的来时路（三）：长文分享一下干货，扔掉站点配置后，怎么给网页建几何模型",
-        "url": "https://www.v2ex.com/t/1258607",
+        "title": "分享 构建速度可视化工具 - What The Fork",
+        "url": "https://www.v2ex.com/t/1258575",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-20T08:59:21.000Z",
-        "summary": "上篇结尾停在“每适配一个站，要维护一份 200KB 的 JSON 配置”。做到第六个站时我彻底想明白了：就算跑得再稳，只要还在逐站写规则，本质上还是换皮爬虫。 真正的转折，始于我打算做一个能读网页的桌面助手。当时最大的困难就是：怎么才能不写配置、快速接入任意新站点，让感知自己跑起来？VLM 直接看？小元素看不明白还贵的要死。 为了回答这个问题，我逼着自己退回原点：网页的本质到底是什么？想来想去，我个人觉得它更像一本碎片化的杂志，终极目标是服务人类获取和使用信息。不管前端用了…",
+        "publishedAt": "2026-11-20T07:44:16.000Z",
+        "summary": "https://danielchasehooper.com/wtf/ 该工具针对 C++, Rust, CMake 等静态编译项目 在构建阶段进行可视化展示 每个环节编译速度 和 涉及到到的读写文件; 我个人主要使用 C++ CMake ,在头文件 模块和依赖库编译上提供了帮助, 该软件今日正式发布, 有需求的 v 友可以体验下. 免费用户是显示 10%流程的详细信息 (v0.14 及之后) 早期用户 https://danielchasehooper.github.io/…",
         "badge": "程序员",
         "signal": "0 回复"
       },
       {
-        "id": "cn-item-baa1db5eca9bfefd",
+        "id": "cn-item-4d491126e737313d",
         "category": "cn",
-        "title": "中美两军举行海上军事安全磋商机制工作小组会议和年度会晤",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735375.shtml",
+        "title": "安理会举行联合国秘书长遴选第九轮意向性投票",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-21/10735607.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-20T09:51:52.000Z",
-        "summary": "中新网11月20日电 据“人民海军”微信公众号消息，北京时间11月18日至20日，中美两军位中国上海举行了2026年度中美海上军事安全磋商机制第二次工作小组会议和年度会晤。会议旨在落实两国元首重要共识，推动两军关系健康、稳定、可持续发展。双方就当前中美海空安全形势进行了坦诚、务实、建设性的交流，评估了《中美海空相遇安全行为准则》年度执行情况，讨论了改进中美海上军事安全问题的措施，商定了2027年工作小组会议议题。",
+        "publishedAt": "2026-11-20T22:07:58.000Z",
+        "summary": "新华社联合国11月20日电(记者尚绪谦)联合国安理会20日就下一任联合国秘书长遴选举行第九轮意向性投票。",
         "badge": "中新网要闻"
       },
       {
@@ -271,45 +271,45 @@
         "signal": "已遭利用 · 整改期限 2026-11-23"
       },
       {
-        "id": "ai-openai-9342dbf934e428aa",
+        "id": "ai-openai-c1a2af93db54bfcf",
         "category": "ai",
-        "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-        "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+        "title": "Can AI help scientists identify promising drug candidates?",
+        "url": "https://openai.com/index/introducing-medchembench",
         "source": "OpenAI",
-        "publishedAt": "2026-11-19T08:00:00.000Z",
-        "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+        "publishedAt": "2026-11-20T00:00:00.000Z",
+        "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50578358",
+        "id": "hn-50583274",
         "category": "dev",
-        "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
-        "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
+        "title": "NINLIVE: The Nine Inch Nails live archive",
+        "url": "https://ninlive.com/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-20T17:21:36.000Z",
+        "publishedAt": "2026-11-20T22:30:47.000Z",
         "badge": "HN",
-        "signal": "161 分 · 34 评论"
+        "signal": "135 分 · 27 评论"
       },
       {
-        "id": "cn-it-aa9c3b1cb1dd879b",
+        "id": "cn-it-bb5787732a2cba12",
         "category": "cn",
-        "title": "华为星芒刘赫：OSTA O1 Pro 最受欢迎的 16G 版本已在全平台售罄，远超预期",
-        "url": "https://www.ithome.com/1/030/282.htm",
+        "title": "比亚迪闪充枪突破 3.1 万个：盖 345 城，用户超 357 万",
+        "url": "https://www.ithome.com/1/030/323.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-20T18:43:53.000Z",
-        "summary": "IT之家 11 月 21 日消息，首款为 AI 而生的鸿蒙手机 —— 华为星芒 OSTA O1 Pro 已于昨日下午正式发布 ， 首发价 5499 元起、叠加国补后 4999 元起 。 ▲ IT之家开箱：华为全新子品牌星芒 OSTA O1 Pro 手机实拍 IT之家注意到，华为星芒品牌总经理刘赫已开通微博，并在 00:10 发文汇报了品牌开山之作 —— OSTA O1 Pro 新机的首销进展： 截止目前为止， 最受欢迎的 16G 版本已经在全平台售罄 ，远超我们预期！12G…",
+        "publishedAt": "2026-11-21T02:03:39.000Z",
+        "summary": "IT之家 11 月 21 日消息，比亚迪今日公布闪充网络最新运营数据：截至 11 月 20 日，全国累计上线闪充枪 31014 个，覆盖 345 座城市，闪充总用户数超过 357 万人。 截至 9 月 30 日，比亚迪闪充网络累计上线 9009 座闪充站、21214 把枪，覆盖 342 座城市，用户数约 183 万。不到两个月，枪数增加近万把，用户规模接近翻倍。截至 10 月 7 日，闪充站数量为 12165 座，其中高速站 2111 座。 比亚迪闪充技术于 2026 年 …",
         "badge": "IT之家"
       },
       {
-        "id": "github-advisory-ghsa-wcqj-wx85-c75p",
+        "id": "github-advisory-ghsa-r9qp-pqx5-8369",
         "category": "security",
-        "title": "aMQTT: Denial of Service (DoS) via Memory Leak in Unmanaged QoS 2 Session Handshakes",
-        "url": "https://github.com/advisories/GHSA-wcqj-wx85-c75p",
+        "title": "contao/core-bundle: Non-admin users can self-grant permissions that implicitly make them administrators",
+        "url": "https://github.com/advisories/GHSA-r9qp-pqx5-8369",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-20T14:54:50.000Z",
-        "summary": "### Impact `amqtt` is vulnerable to a remote denial of service caused by incomplete MQTT QoS 2 transactions remaining allocated after the associated client disconnects. MQTT QoS 2 uses a four-step handshake to provide exactly-once delivery…",
-        "badge": "CVE-2026-130176",
-        "signal": "HIGH · CVSS 7.5"
+        "publishedAt": "2026-11-20T23:45:41.000Z",
+        "summary": "Commit `2b83a60f7763` (5.7.3) hardened the template editor: it added `TemplateEditorModuleVoter` + `CheckTemplateEditorSaveListener` so a non-admin cannot self-grant the `tpl_editor` backend module (editable PHP-capable templates permit se…",
+        "badge": "CVE-2026-104883",
+        "signal": "HIGH · CVSS 7.2"
       },
       {
         "id": "ai-google-deepmind-c7a410ad3b862809",
@@ -321,15 +321,15 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1258575",
+        "id": "v2ex-1258574",
         "category": "dev",
-        "title": "分享 构建速度可视化工具 - What The Fork",
-        "url": "https://www.v2ex.com/t/1258575",
+        "title": "现在你们还 review ai 写的代码吗",
+        "url": "https://www.v2ex.com/t/1258574",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-20T07:44:16.000Z",
-        "summary": "https://danielchasehooper.com/wtf/ 该工具针对 C++, Rust, CMake 等静态编译项目 在构建阶段进行可视化展示 每个环节编译速度 和 涉及到到的读写文件; 我个人主要使用 C++ CMake ,在头文件 模块和依赖库编译上提供了帮助, 该软件今日正式发布, 有需求的 v 友可以体验下. 免费用户是显示 10%流程的详细信息 (v0.14 及之后) 早期用户 https://danielchasehooper.github.io/…",
+        "publishedAt": "2026-11-20T07:42:56.000Z",
+        "summary": "感觉完全 review 不了啊, 动不动写几千行 simd,模板,内联汇编, 完全 review 不了了, 好沮丧",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "2 回复"
       },
       {
         "id": "cn-baidu-6845b3290dc19fc4",
@@ -339,7 +339,7 @@
         "source": "百度热搜",
         "summary": "深圳各大商圈、专业市场里的AI眼镜、智能穿戴等科技感十足的中国产品，已成为外国游客行李箱中深圳的“新特产”。离境退税政策持续释放消费红利，中国“新特产”正从深圳走向世界。",
         "badge": "热搜",
-        "signal": "7,615,714 热度"
+        "signal": "7,616,641 热度"
       },
       {
         "id": "cisa-kev-cve-2024-10441",
@@ -369,58 +369,58 @@
         "source": "Hacker News",
         "publishedAt": "2026-11-20T18:17:51.000Z",
         "badge": "HN",
-        "signal": "98 分 · 51 评论"
+        "signal": "310 分 · 188 评论"
       },
       {
-        "id": "cn-item-a6b9ed5501529af2",
+        "id": "cn-item-a1d92a674730a120",
         "category": "cn",
-        "title": "央行定于11月27日发行2027中国丁未（羊）年贵金属纪念币一套",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-20/10735364.shtml",
+        "title": "特朗普：中俄美元首会晤“史无前例”“意义重大”",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-21/10735606.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-20T09:50:14.000Z",
-        "summary": "中新网11月20日电 据中国人民银行微信公众号消息，中国人民银行定于2026年11月27日发行2027中国丁未(羊)年贵金属纪念币一套。该套贵金属纪念币共11枚，其中金质纪念币6枚，银质纪念币4枚，铂质纪念币1枚，均为中华人民共和国法定货币。",
+        "publishedAt": "2026-11-20T22:06:28.000Z",
+        "summary": "新华社华盛顿11月20日电(记者黄强 徐剑梅)美国总统特朗普20日在白宫举行的新闻发布会上表示，日前在中国深圳举行的亚太经合组织领导人非正式会议是一场非常成功的经济会议，美国、中国和俄罗斯三国领导人还举行了首次三方会晤，这是“多年来最具重大意义的国际峰会之一”。",
         "badge": "中新网要闻"
       },
       {
-        "id": "github-advisory-ghsa-9657-8vc2-7g2p",
+        "id": "github-advisory-ghsa-jrjx-9jjw-747m",
         "category": "security",
-        "title": "Poweradmin: The email second factor is an mt_rand() six-digit code verified with no attempt limit or lockout, so an attacker holding the password can brute-force it within the validity window",
-        "url": "https://github.com/advisories/GHSA-9657-8vc2-7g2p",
+        "title": "AIT-GUI route chain allows unauthenticated Python execution in server process",
+        "url": "https://github.com/advisories/GHSA-jrjx-9jjw-747m",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-20T14:52:33.000Z",
-        "summary": "### Summary The email second factor is an mt_rand() six-digit code verified with no attempt limit or lockout The email second factor is a six-digit code drawn from `mt_rand()` and verified with no attempt limit, so an attacker who already …",
-        "badge": "CVE-2026-115463",
-        "signal": "HIGH · CVSS 7.4"
+        "publishedAt": "2026-11-20T23:36:41.000Z",
+        "summary": "## Summary A security issue exists where unauthenticated callers can instruct the AIT-GUI server to execute arbitrary Python scripts. The attack vector involves obtaining a session cookie through GET /, followed by a malicious POST /script…",
+        "badge": "CVE-2026-77309",
+        "signal": "HIGH · CVSS 8.8"
       },
       {
-        "id": "ai-openai-82fe289fe466dcc1",
+        "id": "ai-openai-9342dbf934e428aa",
         "category": "ai",
-        "title": "Explore the Codex Security Plugin",
-        "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+        "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+        "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
         "source": "OpenAI",
-        "publishedAt": "2026-11-19T00:00:00.000Z",
-        "summary": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
+        "publishedAt": "2026-11-19T08:00:00.000Z",
+        "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1258574",
+        "id": "v2ex-1258540",
         "category": "dev",
-        "title": "现在你们还 review ai 写的代码吗",
-        "url": "https://www.v2ex.com/t/1258574",
+        "title": "V 站兄弟们，有无免费无广的微信电子请柬 H5 托管平台，用于几十个人小范围微信分享请柬，有效期几天就好，请柬丢给 Fable 和 Neon 套模板做好了，现在就差个地方放 🥲，有效给点赞铜币",
+        "url": "https://www.v2ex.com/t/1258540",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-20T07:42:56.000Z",
-        "summary": "感觉完全 review 不了啊, 动不动写几千行 simd,模板,内联汇编, 完全 review 不了了, 好沮丧",
+        "publishedAt": "2026-11-20T06:30:08.000Z",
+        "summary": "V 站兄弟们好，请柬 H5 已经丢给 Fable / Neon 套模板做好了，效果很满意，现在就差个地方放 🥲 我 没有备案域名 ， 没有微信开发者 / 小程序账号 想要 微信里直接点开，不弹\"复制链接到浏览器打开\" 国内加载图片、音乐别卡 无广告、无水印、无尾页推广 已排除婚礼纪、婚贝之类：免费版尾页带水印广告，劝退 想问 有没有实测过 微信里不被拦 的免费 H5 网页托管？或者不走小程序的思路也欢迎 先谢各位老哥 🙏",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-a50c40565a2565cc",
+        "id": "cn-it-85360005f474697d",
         "category": "cn",
-        "title": "QQ 鸿蒙版 App 获 9.2.90 邀测升级：新增支持互动标识、表情搜索等功能",
-        "url": "https://www.ithome.com/1/030/279.htm",
+        "title": "近 200 万条请求揭开 AI 隐私漏洞：“零数据保留”也会泄密",
+        "url": "https://www.ithome.com/1/030/322.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-20T16:00:13.000Z",
-        "summary": "IT之家 11 月 21 日消息，QQ 鸿蒙版 App 昨日在华为应用市场（App Gallery）开启 9.2.90 (3680) 版本邀测升级（需收到短信通知后点击链接跳转安装），测试时间为 2026/11/20-2026/12/11。 IT之家附 QQ 鸿蒙版 App 本次升级内容如下： 新增支持查看历史头像 好友设置页新增“他的线索” 新增支持互动标识 新增支持表情搜索 修复一些已知体验问题 目前 QQ 鸿蒙版已获 5.2 万个评分（评分 2.5），已支持单聊、群聊…",
+        "publishedAt": "2026-11-21T02:03:24.000Z",
+        "summary": "IT之家 11 月 21 日消息，科技媒体 Ars Technica 今天（11 月 21 日）发布博文，报道称安全公司 Dragos 首席研究官 HD Moore 向多家 AI 服务商发送近 200 万条带有可追踪“诱饵”的请求， 发现 AI 服务链存在黑客窃取提示词、转售商泄露数据及未遵守隐私设置等问题。 研究人员故意把一批可追踪的“测试秘密”（并非从真实用户渠道收集）发给 AI，观察之后有没有其他程序或人拿它们去访问系统，从而判断数据是否流出、可能从哪条服务链流出。 …",
         "badge": "IT之家"
       },
       {
@@ -445,35 +445,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50579297",
+        "id": "hn-50578358",
         "category": "dev",
-        "title": "Vibecoding an inference chip",
-        "url": "https://ankitg.me/blog/vibecoding-inference-chip/",
+        "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
+        "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-20T18:15:16.000Z",
+        "publishedAt": "2026-11-20T17:21:36.000Z",
         "badge": "HN",
-        "signal": "46 分 · 11 评论"
+        "signal": "350 分 · 142 评论"
       },
       {
-        "id": "cn-baidu-b2c46786cad63583",
+        "id": "cn-baidu-b61061fe647df5d8",
         "category": "cn",
-        "title": "U17世界杯：国足0比5惨败西班牙",
-        "url": "https://www.baidu.com/s?wd=U17%E4%B8%96%E7%95%8C%E6%9D%AF%EF%BC%9A%E5%9B%BD%E8%B6%B30%E6%AF%945%E6%83%A8%E8%B4%A5%E8%A5%BF%E7%8F%AD%E7%89%99&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "深圳人又开始原装出街了",
+        "url": "https://www.baidu.com/s?wd=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E5%8F%88%E5%BC%80%E5%A7%8B%E5%8E%9F%E8%A3%85%E5%87%BA%E8%A1%97%E4%BA%86&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "北京时间11月20日晚，U17世界杯小组赛H组第1轮，U17国足vs西班牙U17。经过激战，中国队0:5惨败对手遭遇开门黑。",
+        "summary": "近日，随着APEC会议周渐入尾声，深圳人脱下正装皮鞋等“限定皮肤”，从“全妆模式”切回原装模式：又换回了拖鞋出街。",
         "badge": "热搜",
-        "signal": "7,522,673 热度"
+        "signal": "7,524,200 热度"
       },
       {
-        "id": "github-advisory-ghsa-4hrh-34w3-5ww8",
+        "id": "github-advisory-ghsa-xxqp-5qx8-gj5q",
         "category": "security",
-        "title": "Fabio: Access-control bypass through unnormalized request paths",
-        "url": "https://github.com/advisories/GHSA-4hrh-34w3-5ww8",
+        "title": "Aedes has Uncaught Exception and Uncontrolled Resource Consumption",
+        "url": "https://github.com/advisories/GHSA-xxqp-5qx8-gj5q",
         "source": "GitHub Advisory",
-        "publishedAt": "2026-11-20T14:51:25.000Z",
-        "summary": "## Summary Route selection uses the raw un-normalized request path, and the per-route ACL and basic-auth gates hang off that selection, so a dot-segment, encoded-dot, or double-slash variant of a protected path selects a different route, s…",
-        "badge": "CVE-2026-104099",
-        "signal": "CRITICAL · CVSS 9.1"
+        "publishedAt": "2026-11-20T23:32:35.000Z",
+        "summary": "### Summary A remote Denial of Service (DoS) vulnerability, allows any remote client to cause a complete crash of the Aedes MQTT broker process. This is achieved by sending a specially crafted MQTT message (via PUBLISH or SUBSCRIBE), or by…",
+        "badge": "CVE-2026-63341",
+        "signal": "HIGH · CVSS 7.5"
       },
       {
         "id": "ai-hugging-face-e55c8f2df06c07ff",
@@ -485,15 +485,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1258540",
+        "id": "v2ex-1258530",
         "category": "dev",
-        "title": "V 站兄弟们，有无免费无广的微信电子请柬 H5 托管平台，用于几十个人小范围微信分享请柬，有效期几天就好，请柬丢给 Fable 和 Neon 套模板做好了，现在就差个地方放 🥲，有效给点赞铜币",
-        "url": "https://www.v2ex.com/t/1258540",
+        "title": "AI 邪修--算命大师，最近 gemini Neon 很厉害，有人用来八字排布等算命吗",
+        "url": "https://www.v2ex.com/t/1258530",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-20T06:30:08.000Z",
-        "summary": "V 站兄弟们好，请柬 H5 已经丢给 Fable / Neon 套模板做好了，效果很满意，现在就差个地方放 🥲 我 没有备案域名 ， 没有微信开发者 / 小程序账号 想要 微信里直接点开，不弹\"复制链接到浏览器打开\" 国内加载图片、音乐别卡 无广告、无水印、无尾页推广 已排除婚礼纪、婚贝之类：免费版尾页带水印广告，劝退 想问 有没有实测过 微信里不被拦 的免费 H5 网页托管？或者不走小程序的思路也欢迎 先谢各位老哥 🙏",
+        "publishedAt": "2026-11-20T06:02:42.000Z",
+        "summary": "八字算命等都会遵循一定的规律来排布和推演，之前发现在这方面能力最强的是 Claude 的 fable。 最近 gemini Neon 出来后，除了写代码，也试了下“算命大师”的能力，相当精准，不输 fable。 比大部分所谓的真人大师应该都厉害，大家有没有试过。",
         "badge": "程序员",
-        "signal": "6 回复"
+        "signal": "5 回复"
       }
     ]
   },
@@ -510,8 +510,8 @@
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "language": "Python",
-        "stars": 13961,
-        "starsToday": 1660
+        "stars": 14369,
+        "starsToday": 1622
       },
       {
         "id": "github-4251a228ae407247",
@@ -520,8 +520,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 322751,
-        "starsToday": 888
+        "stars": 322876,
+        "starsToday": 890
       },
       {
         "id": "github-6cad99e48ae79e8b",
@@ -530,8 +530,8 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 61269,
-        "starsToday": 774
+        "stars": 61430,
+        "starsToday": 773
       },
       {
         "id": "github-9bce4ceaabd5b747",
@@ -540,8 +540,8 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
         "language": "Python",
-        "stars": 67634,
-        "starsToday": 841
+        "stars": 67711,
+        "starsToday": 847
       },
       {
         "id": "github-e0c5b60fcbe6479b",
@@ -550,8 +550,8 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 17796,
-        "starsToday": 292
+        "stars": 17864,
+        "starsToday": 299
       },
       {
         "id": "github-7491830dc8888f7f",
@@ -560,8 +560,8 @@
         "url": "https://github.com/firecrawl/firecrawl",
         "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
         "language": "TypeScript",
-        "stars": 205115,
-        "starsToday": 1226
+        "stars": 205330,
+        "starsToday": 1241
       },
       {
         "id": "github-8eba49d1985708e4",
@@ -570,7 +570,7 @@
         "url": "https://github.com/nginx/nginx",
         "description": "The official NGINX Open Source repository.",
         "language": "C",
-        "stars": 32530,
+        "stars": 32584,
         "starsToday": 246
       },
       {
@@ -580,8 +580,8 @@
         "url": "https://github.com/openvinotoolkit/openvino",
         "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
         "language": "C++",
-        "stars": 11749,
-        "starsToday": 219
+        "stars": 11798,
+        "starsToday": 217
       },
       {
         "id": "github-231c4b191ae0f4ae",
@@ -590,8 +590,8 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 69206,
-        "starsToday": 634
+        "stars": 69315,
+        "starsToday": 636
       },
       {
         "id": "github-5524ff15f43adf61",
@@ -600,10 +600,10 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 71367,
-        "starsToday": 685
+        "stars": 71471,
+        "starsToday": 681
       }
     ],
-    "updatedAt": "2026-11-20T20:22:42.361Z"
+    "updatedAt": "2026-11-21T02:16:45.442Z"
   }
 }
