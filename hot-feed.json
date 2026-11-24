@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-24T12:27:50.087Z",
+  "generatedAt": "2026-11-24T21:11:58.113Z",
   "intelligence": {
-    "updatedAt": "2026-11-24T12:27:50.087Z",
+    "updatedAt": "2026-11-24T21:11:58.113Z",
     "items": [
       {
         "id": "cn-item-1a39f3ddb3a8e06c",
@@ -12,6 +12,252 @@
         "source": "中新网要闻",
         "publishedAt": "2026-11-24T11:05:46.000Z",
         "summary": "11月24日，中央纪委国家监委公布了2026年10月全国查处违反中央八项规定精神问题汇总情况。当月，全国共查处违反中央八项规定精神问题28934起，批评教育和处理35193人，其中党纪政务处分23996人，这是连续第158个月公布月报数据。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "cisa-kev-cve-2026-132224",
+        "category": "security",
+        "title": "Optimizely Web Experimentation：Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-132224",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-24T00:00:00.000Z",
+        "summary": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful explo…",
+        "badge": "CVE-2026-132224",
+        "signal": "已遭利用 · 整改期限 2026-11-27"
+      },
+      {
+        "id": "ai-openai-7758c04a629331bf",
+        "category": "ai",
+        "title": "Searching for distant planets with Astra",
+        "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+        "source": "OpenAI",
+        "publishedAt": "2026-11-24T11:00:00.000Z",
+        "summary": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "hn-50633922",
+        "category": "dev",
+        "title": "Ternary Bonsai 2.5 27B",
+        "url": "https://prismml.com/news/bonsai-2-5-27b",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-24T20:08:03.000Z",
+        "badge": "HN",
+        "signal": "73 分 · 16 评论"
+      },
+      {
+        "id": "cn-it-0d822e41fbb4afb0",
+        "category": "cn",
+        "title": "华为：截至目前，对外专利许可协议累计金额超 69 亿美元",
+        "url": "https://www.ithome.com/1/031/896.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-11-24T17:06:26.000Z",
+        "summary": "IT之家 11 月 25 日消息，以“卓越创新、开放共赢”为主题的第七届华为创新和知识产权论坛昨日在北京举办。 ▲ 华为在北京召开第七届创新和知识产权论坛 据介绍， 2025 年华为增加了 20 个被许可人 ，覆盖网络与通信设备、消费电子与计算、物联网、汽车、流媒体和半导体等领域。 截至目前，华为对外专利许可协议累计金额超 69 亿美元 （IT之家注：现汇率约合 460.87 亿元人民币） ，其中 2025 年的专利许可收入约为 8 亿美元 （现汇率约合 53.43 亿元人…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "github-advisory-ghsa-c4hm-4h84-2cf3",
+        "category": "security",
+        "title": "ruflo MCP bridge allows unauthenticated remote code execution in default Docker Compose deployments",
+        "url": "https://github.com/advisories/GHSA-c4hm-4h84-2cf3",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-24T21:01:10.000Z",
+        "summary": "The MCP bridge shipping in ruflo/docker-compose.yml exposed POST /mcp with no authentication. The docker-compose defaults bound the bridge and MongoDB to all interfaces. Combined, an unauthenticated network attacker could invoke tools/call…",
+        "badge": "CVE-2026-59726",
+        "signal": "CRITICAL · CVSS 10.0"
+      },
+      {
+        "id": "ai-google-deepmind-3ffa5c39e01e3431",
+        "category": "ai",
+        "title": "Finding faster quantum algorithms with agents and formal verification",
+        "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-11-23T16:59:40.000Z",
+        "summary": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1259575",
+        "category": "dev",
+        "title": "GLM-5.4 发布后 GLM-5.3-Flash 限时 2 倍用量 大伙怎么看",
+        "url": "https://www.v2ex.com/t/1259575",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-24T15:53:10.000Z",
+        "summary": "“11 月 24 日至 12 月 24 日，GLM-5.3-Flash 的套餐额度消耗减半。 用 GLM-5.4 做规划和审查，用 GLM-5.3-Flash 写代码、补测试。” 大伙有按官方推荐这样配过吗？体验怎么样？之前 GLM5.3 降智让我对 5.3 有点抵触",
+        "badge": "程序员",
+        "signal": "1 回复"
+      },
+      {
+        "id": "cn-baidu-bf8d811d8a3cb667",
+        "category": "cn",
+        "title": "上海市委书记陈吉宁被查",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A7%94%E4%B9%A6%E8%AE%B0%E9%99%88%E5%90%89%E5%AE%81%E8%A2%AB%E6%9F%A5&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "11月24日消息，中央政治局委员、上海市委书记陈吉宁涉嫌严重违纪违法，目前正接受中央纪委国家监委审查调查。",
+        "badge": "热搜",
+        "signal": "7,807,896 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-131914",
+        "category": "security",
+        "title": "Idunno AntiCsrf：Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-131914",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-24T00:00:00.000Z",
+        "summary": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-serv…",
+        "badge": "CVE-2026-131914",
+        "signal": "已遭利用 · 整改期限 2026-11-27"
+      },
+      {
+        "id": "ai-hugging-face-6a28e842b3bf4bfd",
+        "category": "ai",
+        "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+        "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+        "source": "Hugging Face",
+        "publishedAt": "2026-11-24T16:34:13.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50630594",
+        "category": "dev",
+        "title": "Active intrusion campaign against Check Point security management servers",
+        "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-24T16:32:17.000Z",
+        "badge": "HN",
+        "signal": "220 分 · 87 评论"
+      },
+      {
+        "id": "cn-item-c6cbe5b6822b1b32",
+        "category": "cn",
+        "title": "L-15E即将“回娘家”，这款中国造教练机何以享誉世界",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-24/10737028.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-11-24T10:51:47.000Z",
+        "summary": "中新网11月24日电(记者 刁炜)第十六届珠海航展开幕在即，据有关方面介绍，阿联酋空军“骑士”飞行表演队将来华参展。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-g9x9-q7qj-6mv5",
+        "category": "security",
+        "title": "AVideo API FFmpeg process permits OS command injection via notifyCode/callback",
+        "url": "https://github.com/advisories/GHSA-g9x9-q7qj-6mv5",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-24T20:53:28.000Z",
+        "summary": "### Summary The standalone FFmpeg execution endpoint `plugin/API/standAlone/ffmpeg.json.php` builds a shell command string that is passed to `execAsync()` and run via `nohup sh -c \" \"`. When the decrypted `codeToExec` payload produces a no…",
+        "badge": "CVE-2026-63305",
+        "signal": "HIGH · CVSS 8.1"
+      },
+      {
+        "id": "ai-openai-7e14b56be6744308",
+        "category": "ai",
+        "title": "How Intentful uses dots to make more time for growth",
+        "url": "https://openai.com/business/customer-stories/intentful-dots",
+        "source": "OpenAI",
+        "publishedAt": "2026-11-24T00:00:00.000Z",
+        "summary": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
+        "badge": "OpenAI"
+      },
+      {
+        "id": "v2ex-1259560",
+        "category": "dev",
+        "title": "兄弟们，从技术到管理大家怎么克服当众讲话的",
+        "url": "https://www.v2ex.com/t/1259560",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-24T13:45:13.000Z",
+        "summary": "现在到了管理，经理不得不当众讲话和汇报工作，但还是控制不住的紧张和断片词 越接近开始越紧张，很难调整。前一晚还好好的，到了点就开始紧张 但还是不得不上去讲，为了能顺利的讲完需要讲的内容，只是提前写好稿，和提词了 使 AI 搞了个 AI 提词器，用设备端语音识别对照讲稿，逐字高亮你讲到的位置：你讲，它跟；你停，它等 不知有没有也适用的 https://oralo.fun/",
+        "badge": "程序员",
+        "signal": "1 回复"
+      },
+      {
+        "id": "cn-it-1b77bba41adf6da2",
+        "category": "cn",
+        "title": "削峰填谷！余承东揭秘华为 Mate X8“超平整”内屏原理，首创磁控展平技术定向修复",
+        "url": "https://www.ithome.com/1/031/895.htm",
+        "source": "IT之家",
+        "publishedAt": "2026-11-24T16:47:59.000Z",
+        "summary": "IT之家 11 月 25 日消息，在昨天下午的 HUAWEI Mate X8 及全场景新品发布会上， 华为 Mate X8 大折旗舰机正式发布 ，全系搭载麒麟 9050 Pro 处理器，售价 12,999 元起。 此次华为 Mate X8 在屏幕上又有新技术突破。其中，大家最关心的就是折痕水平。根据此前曝光的视频来看，Mate X8 内屏在采用“亮面”设计的情况下，折痕多角度查看处于几乎不可见的状态。 而据华为官方数据， Mate X8 内屏平整度对比前代 X7 提升了 9…",
+        "badge": "IT之家"
+      },
+      {
+        "id": "cisa-kev-cve-2026-132165",
+        "category": "security",
+        "title": "Drupal Core：Drupal Core Remote Code Execution Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-132165",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-24T00:00:00.000Z",
+        "summary": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use instal…",
+        "badge": "CVE-2026-132165",
+        "signal": "已遭利用 · 整改期限 2026-11-27"
+      },
+      {
+        "id": "ai-google-deepmind-95da0fde7d56c751",
+        "category": "ai",
+        "title": "Introducing Gemini 4 Neon",
+        "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-11-18T21:35:43.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "hn-50634426",
+        "category": "dev",
+        "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
+        "url": "https://news.ycombinator.com/item?id=50634426",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-24T20:44:15.000Z",
+        "badge": "HN",
+        "signal": "12 分 · 4 评论"
+      },
+      {
+        "id": "cn-baidu-7a0238719762eeae",
+        "category": "cn",
+        "title": "陈吉宁被查 上海表态",
+        "url": "https://www.baidu.com/s?wd=%E9%99%88%E5%90%89%E5%AE%81%E8%A2%AB%E6%9F%A5+%E4%B8%8A%E6%B5%B7%E8%A1%A8%E6%80%81&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "11月24日晚，上海市委常委会举行扩大会议，通报陈吉宁涉嫌严重违纪违法，目前正接受中央纪委国家监委审查调查。与会同志一致表示，坚决拥护党中央决定，坚决把思想和行动统一到党中央决定精神上来。",
+        "badge": "热搜",
+        "signal": "7,714,696 热度"
+      },
+      {
+        "id": "github-advisory-ghsa-j44m-77cc-p3cc",
+        "category": "security",
+        "title": "AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword",
+        "url": "https://github.com/advisories/GHSA-j44m-77cc-p3cc",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-23T22:06:28.000Z",
+        "summary": "### Summary The helper `listFFmpegProcesses($keyword)` in `plugin/API/standAlone/functions.php` builds a shell pipeline by interpolating `$keyword` inside single quotes and running it with `exec()`: ```php $command .= \" | grep '$keyword'\";…",
+        "badge": "CVE-2026-63304",
+        "signal": "HIGH · CVSS 8.1"
+      },
+      {
+        "id": "ai-hugging-face-eb2701ff66febea2",
+        "category": "ai",
+        "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+        "url": "https://huggingface.co/blog/allenai/robotrack",
+        "source": "Hugging Face",
+        "publishedAt": "2026-11-23T17:20:37.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "v2ex-1259555",
+        "category": "dev",
+        "title": "多个 AGENT 项目怎么跟踪管理",
+        "url": "https://www.v2ex.com/t/1259555",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-24T13:27:06.000Z",
+        "summary": "比如同时在处理 10 个 AGENT 项目（或者是简单的处理一些分析任务），10 个对话是不同的方向，输出了不同的项目资料、研究内容等等。这个时候怎么管理呢…… 有时候可能都忘了自己这些任务在哪里处理过了… 是需要一个 obisidian 表单之类的来维护这些项目/对话的状态和结果吗？还是需要怎么维护呢，有什么建议吗。",
+        "badge": "程序员",
+        "signal": "12 回复"
+      },
+      {
+        "id": "cn-item-caabb4032d21fa43",
+        "category": "cn",
+        "title": "非法收受财物1.13亿余元 吴胜华一审被判无期徒刑",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-24/10737058.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-11-24T09:01:21.000Z",
+        "summary": "2026年11月24日，山东省淄博市中级人民法院一审公开宣判贵州省委原常委、毕节市委原书记吴胜华受贿案，对被告人吴胜华以受贿罪判处无期徒刑，剥夺政治权利终身，并处没收个人全部财产；对追缴在案的吴胜华受贿所得财物及孳息依法上缴国库，不足部分继续追缴。",
         "badge": "中新网要闻"
       },
       {
@@ -26,116 +272,33 @@
         "signal": "已遭利用 · 整改期限 2026-11-26"
       },
       {
-        "id": "ai-openai-b0689cf87ab570a4",
+        "id": "ai-openai-89a905d5eae9fa3e",
         "category": "ai",
-        "title": "OpenAI and Cisco introduce Shirudo",
-        "url": "https://openai.com/index/introducing-shirudo",
+        "title": "How iFood scales coding agents across 15,000 repositories",
+        "url": "https://openai.com/business/customer-stories/ifood",
         "source": "OpenAI",
-        "publishedAt": "2026-11-23T21:20:00.000Z",
-        "summary": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
+        "publishedAt": "2026-11-24T00:00:00.000Z",
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50626578",
+        "id": "hn-50598555",
         "category": "dev",
-        "title": "Investigation of Polymarket Insider Trading on the Reinstatement of Jensen Huang",
-        "url": "https://deucalionn.vercel.app/polymarket-delit-initie-jensen-huang-nvidia/",
+        "title": "The Spray Bottle",
+        "url": "https://mechanical-pencil.com/products/spray-bottle",
         "source": "Hacker News",
-        "publishedAt": "2026-11-24T11:13:55.000Z",
+        "publishedAt": "2026-11-22T11:16:30.000Z",
         "badge": "HN",
-        "signal": "182 分 · 85 评论"
+        "signal": "252 分 · 73 评论"
       },
       {
-        "id": "cn-it-7f086efa18fb0ef8",
+        "id": "cn-it-6031565e3546171a",
         "category": "cn",
-        "title": "暴涨之后迅速反转，Anthropic 盘前跌破 83 美元 IPO 发行价",
-        "url": "https://www.ithome.com/1/031/823.htm",
+        "title": "黑得深邃：宾利首款纯电 SUV 托卡尔新增纯黑特别版，全球只有 20 台",
+        "url": "https://www.ithome.com/1/031/894.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-24T12:00:57.000Z",
-        "summary": "IT之家 11 月 24 日消息，当地时间周二盘前交易时段，Anthropic 股价跌破 83 美元 （IT之家注：现汇率约合 554.4 元人民币） 的首次公开发行发行价。这家 Claude 模型开发商几天前才在纳斯达克完成创纪录的上市，行情反转十分刺眼。 该股最新下跌 6.5%，报 82 美元 （现汇率约合 547.7 元人民币） ，延续 11 月 19 日火爆上市以来的跌势。上市首日开盘价为 111.50 美元 （现汇率约合 744.7 元人民币） ，完全稀释后的估值…",
+        "publishedAt": "2026-11-24T15:17:45.000Z",
+        "summary": "IT之家 11 月 24 日消息，宾利首批纯电 SUV Torcal（IT之家注：官方中文名为“托卡尔”）的交付尚未启动，第二款限量特别版就紧随其后完成亮相。近日，继托卡尔 First Edition 首发版之后，宾利 又公布了一款全新定制车型 。 这款特别版由日本潮流设计师藤原浩亲自操刀， 全球仅生产 20 辆，整车采用全黑设计 。车身采用名为“Beluga”的黑色涂装，黑色徽标、熏黑格栅和 22 英寸 Vortex 黑色轮毂也与之呼应。 新车搭载的全锻造轮毂 采用碳纤维…",
         "badge": "IT之家"
-      },
-      {
-        "id": "github-advisory-ghsa-j44m-77cc-p3cc",
-        "category": "security",
-        "title": "AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword",
-        "url": "https://github.com/advisories/GHSA-j44m-77cc-p3cc",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-23T22:06:28.000Z",
-        "summary": "### Summary The helper `listFFmpegProcesses($keyword)` in `plugin/API/standAlone/functions.php` builds a shell pipeline by interpolating `$keyword` inside single quotes and running it with `exec()`: ```php $command .= \" | grep '$keyword'\";…",
-        "badge": "CVE-2026-63492",
-        "signal": "HIGH · CVSS 8.1"
-      },
-      {
-        "id": "ai-google-deepmind-3ffa5c39e01e3431",
-        "category": "ai",
-        "title": "Finding faster quantum algorithms with agents and formal verification",
-        "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-11-23T16:59:40.000Z",
-        "summary": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "v2ex-1259545",
-        "category": "dev",
-        "title": "朋友自研的推理引擎 EMBER，针对 Windows 平台单 5090 跑 DS4.1F 解码最快能达 107tps",
-        "url": "https://www.v2ex.com/t/1259545",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-24T12:26:42.000Z",
-        "summary": "群友 花费了半年，自研火种（EMBER）推理引擎 🔥 Windows 系统上，单卡 5090 跑 Deepseek v4.1 flash 1017 单对话最快解码速度能上 107t/s ，读取速度 PP 3087t/s ，最大支持 1M 上下文，首字延迟控制在 0.5 秒以内 这应该是目前已知的，单张消费级显卡上跑 Deepseek 模型 最快的 推理引擎。目前仅支持 Deepseek v4.1 flash 1017 同类对比（单张显卡＋内存跑 V4.1 Flash，各家公…",
-        "badge": "程序员",
-        "signal": "0 回复"
-      },
-      {
-        "id": "cn-baidu-bf8d811d8a3cb667",
-        "category": "cn",
-        "title": "上海市委书记陈吉宁被查",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A7%94%E4%B9%A6%E8%AE%B0%E9%99%88%E5%90%89%E5%AE%81%E8%A2%AB%E6%9F%A5&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "11月24日消息，中央政治局委员、上海市委书记陈吉宁涉嫌严重违纪违法，目前正接受中央纪委国家监委审查调查。",
-        "badge": "热搜",
-        "signal": "7,809,360 热度"
-      },
-      {
-        "id": "cisa-kev-cve-2026-134624",
-        "category": "security",
-        "title": "N-able MailAssure：N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-134624",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-23T00:00:00.000Z",
-        "summary": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are r…",
-        "badge": "CVE-2026-134624",
-        "signal": "已遭利用 · 整改期限 2026-11-26"
-      },
-      {
-        "id": "ai-hugging-face-eb2701ff66febea2",
-        "category": "ai",
-        "title": "RoboTrack: Point tracking for real-world robotic manipulation",
-        "url": "https://huggingface.co/blog/allenai/robotrack",
-        "source": "Hugging Face",
-        "publishedAt": "2026-11-23T17:20:37.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "hn-50624497",
-        "category": "dev",
-        "title": "2035 Came Early",
-        "url": "https://fzakaria.com/2026/11/23/2035-came-early",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-24T06:30:33.000Z",
-        "badge": "HN",
-        "signal": "373 分 · 128 评论"
-      },
-      {
-        "id": "cn-item-caabb4032d21fa43",
-        "category": "cn",
-        "title": "非法收受财物1.13亿余元 吴胜华一审被判无期徒刑",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-24/10737058.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-11-24T09:01:21.000Z",
-        "summary": "2026年11月24日，山东省淄博市中级人民法院一审公开宣判贵州省委原常委、毕节市委原书记吴胜华受贿案，对被告人吴胜华以受贿罪判处无期徒刑，剥夺政治权利终身，并处没收个人全部财产；对追缴在案的吴胜华受贿所得财物及孳息依法上缴国库，不足部分继续追缴。",
-        "badge": "中新网要闻"
       },
       {
         "id": "github-advisory-ghsa-2v9w-34q6-wpqx",
@@ -149,34 +312,115 @@
         "signal": "HIGH · CVSS 7.5"
       },
       {
-        "id": "ai-openai-10878202550bbbf9",
+        "id": "ai-google-deepmind-cac57b5217ba2caa",
         "category": "ai",
-        "title": "Connected intelligence for in-house legal",
-        "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
+        "title": "Genie 4 is now available",
+        "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-11-18T18:13:42.000Z",
+        "badge": "Google DeepMind"
+      },
+      {
+        "id": "v2ex-1259552",
+        "category": "dev",
+        "title": "我开源了自己的博客主题 Hugo Icy",
+        "url": "https://www.v2ex.com/t/1259552",
+        "source": "V2EX 技术",
+        "publishedAt": "2026-11-24T13:10:29.000Z",
+        "summary": "Hugo 静态博客 源码 https://github.com/DejavuMoe/hugo-theme-icy 演示 https://blog.dejavu.moe 文档 https://icy.zsh.moe/",
+        "badge": "程序员",
+        "signal": "2 回复"
+      },
+      {
+        "id": "cn-baidu-cb7fe3bbdaa6994b",
+        "category": "cn",
+        "title": "中国人登月又近一步",
+        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E7%99%BB%E6%9C%88%E5%8F%88%E8%BF%91%E4%B8%80%E6%AD%A5&sa=fyb_news&rsv_dl=fyb_news",
+        "source": "百度热搜",
+        "summary": "11月24日上午，神舟二十四号载人飞行任务新闻发布会在酒泉卫星发射中心召开。发言人介绍，经过工程全线的努力奋斗，月球探测工程目前已取得了一批阶段性重要成果。月球探测工程正朝既定目标稳步推进，中国人探索月球的步伐行稳致远。",
+        "badge": "热搜",
+        "signal": "7,615,717 热度"
+      },
+      {
+        "id": "cisa-kev-cve-2026-134624",
+        "category": "security",
+        "title": "N-able MailAssure：N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-134624",
+        "source": "CISA KEV",
+        "publishedAt": "2026-11-23T00:00:00.000Z",
+        "summary": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are r…",
+        "badge": "CVE-2026-134624",
+        "signal": "已遭利用 · 整改期限 2026-11-26"
+      },
+      {
+        "id": "ai-hugging-face-00d52199bef25f9e",
+        "category": "ai",
+        "title": "How to build and maintain an agentic evaluation",
+        "url": "https://huggingface.co/blog/agentic-evals",
+        "source": "Hugging Face",
+        "publishedAt": "2026-11-23T00:00:00.000Z",
+        "badge": "Hugging Face"
+      },
+      {
+        "id": "hn-50630462",
+        "category": "dev",
+        "title": "Jetty Pro",
+        "url": "http://hypercritical.co/2026/11/23/jetty-pro",
+        "source": "Hacker News",
+        "publishedAt": "2026-11-24T16:23:02.000Z",
+        "badge": "HN",
+        "signal": "216 分 · 85 评论"
+      },
+      {
+        "id": "cn-item-598621e67eca4ddb",
+        "category": "cn",
+        "title": "为社区残障儿童康复教育服务提供指引 国家标准发布",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-24/10736982.shtml",
+        "source": "中新网要闻",
+        "publishedAt": "2026-11-24T07:48:19.000Z",
+        "summary": "中新网11月24日电 据国家市场监督管理总局网站消息，近日，市场监管总局(国家标准委)批准发布《社区残障儿童康教融合服务规范》国家标准(GB/T 48555—2026)，为社区残障儿童康复教育服务提供科学规范指引。",
+        "badge": "中新网要闻"
+      },
+      {
+        "id": "github-advisory-ghsa-f9h7-4mmq-vgcq",
+        "category": "security",
+        "title": "Klever Go counts bitmap padding bits toward BLS quorum, allowing blocks with insufficient signatures",
+        "url": "https://github.com/advisories/GHSA-f9h7-4mmq-vgcq",
+        "source": "GitHub Advisory",
+        "publishedAt": "2026-11-23T20:55:35.000Z",
+        "summary": "## Summary When validating an incoming block header, `HeaderSigVerifier.verifyConsensusSize` counts *every* set bit in `PubKeysBitmap` — including bits that correspond to no validator (the padding bits of the final byte, which exist whenev…",
+        "badge": "CVE-2026-58262",
+        "signal": "HIGH · CVSS 0.0"
+      },
+      {
+        "id": "ai-openai-b0689cf87ab570a4",
+        "category": "ai",
+        "title": "OpenAI and Cisco introduce Shirudo",
+        "url": "https://openai.com/index/introducing-shirudo",
         "source": "OpenAI",
-        "publishedAt": "2026-11-23T08:00:00.000Z",
-        "summary": "Watch OpenAI’s Stacey Wang and Craig Bruney, Mary O’Carroll of LECG, and Cooley’s Richard Segal explore how AI can help in-house legal teams connect business context, build reusable workflows and get more from outside counsel.",
+        "publishedAt": "2026-11-23T21:20:00.000Z",
+        "summary": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1259539",
+        "id": "v2ex-1259545",
         "category": "dev",
-        "title": "rex(ghostty 作者新产品)重度体验",
-        "url": "https://www.v2ex.com/t/1259539",
+        "title": "朋友自研的推理引擎 EMBER，针对 Windows 平台单 5090 跑 DS4.1F 解码最快能达 107tps",
+        "url": "https://www.v2ex.com/t/1259545",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-24T12:01:07.000Z",
-        "summary": "ghostty 作者的新产品, 上个月看到其他 V 友发了下载方式( /t/1251516 )后开始用, 现在已经成为我的默认 vibe 环境. 用三点来描述 rex: 一个 terminal 软件, 替代了 iterm2/ghostty 内置 tailscale, 作为 server 暴露成服务. 作为 client 连接远程 rex 注: 在 client 端, 需要 tailscale VPN, 不过 LAN 里也支持 ssh 连接 rex server 提供 cli…",
+        "publishedAt": "2026-11-24T12:26:42.000Z",
+        "summary": "群友 花费了半年，自研火种（EMBER）推理引擎 🔥 Windows 系统上，单卡 5090 跑 Deepseek v4.1 flash 1017 单对话最快解码速度能上 107t/s ，读取速度 PP 3087t/s ，最大支持 1M 上下文，首字延迟控制在 0.5 秒以内 这应该是目前已知的，单张消费级显卡上跑 Deepseek 模型 最快的 推理引擎。目前仅支持 Deepseek v4.1 flash 1017 使用量化「UD-IQ1_S」 同类对比（单张显卡＋内存跑…",
         "badge": "程序员",
-        "signal": "0 回复"
+        "signal": "4 回复"
       },
       {
-        "id": "cn-it-de4bba4de27f68b2",
+        "id": "cn-it-3d556c8032361162",
         "category": "cn",
-        "title": "保时捷提醒警惕虚假“车辆召回”信息，称可能会造成车主个人信息泄露或财产损失",
-        "url": "https://www.ithome.com/1/031/822.htm",
+        "title": "HKC 神盾 27Q420B 显示器上市：QD Mini LED + Ultrafast IPS，2399 元",
+        "url": "https://www.ithome.com/1/031/893.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-24T12:00:12.000Z",
-        "summary": "IT之家 11 月 24 日消息，保时捷官方今日发文提醒，警惕虚假“车辆召回”信息。 保时捷提醒：警惕虚假“车辆召回”信息 近日，我们发现有不法分子冒用“保时捷（中国）汽车销售有限公司”名义， 以“车辆召回”为由，通过短信等方式向车主发送虚假“召回通知” ，从而诱导车主点击进入附带链接进一步提供个人信息或进行相关操作，这可能会造成车主个人信息泄露或财产损失。 保时捷中国特此提醒：请勿轻信上述虚假“召回通知”， 此类短信、文件和链接均非保时捷官方发布 。 保时捷官方发布的召回…",
+        "publishedAt": "2026-11-24T15:06:53.000Z",
+        "summary": "IT之家 11 月 24 日消息，HKC（惠科）现已开始在电商平台销售神盾 (Shield) 27Q420B 显示器。这一型号结合了 Ultrafast IPS 薄层液晶、1152 分区 Mini LED 背光、QD 色彩增强，售价 2399 元。 神盾 27Q420B 基于 27\" 面板，拥有 QHD (2560×1440) 分辨率、420Hz 超频刷新率（IT之家注：原生刷新率 360Hz）， 获得 VESA DisplayHDR1000 认证 。 其 HDR 峰值亮度…",
         "badge": "IT之家"
       },
       {
@@ -191,115 +435,33 @@
         "signal": "已遭利用 · 整改期限 2026-11-23"
       },
       {
-        "id": "ai-google-deepmind-95da0fde7d56c751",
+        "id": "ai-google-deepmind-c7a410ad3b862809",
         "category": "ai",
-        "title": "Introducing Gemini 4 Neon",
-        "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+        "title": "Introducing Gemini 4 Hydrogen",
+        "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
         "source": "Google DeepMind",
-        "publishedAt": "2026-11-18T21:35:43.000Z",
+        "publishedAt": "2026-11-12T18:00:50.000Z",
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50626413",
+        "id": "hn-50610820",
         "category": "dev",
-        "title": "Worshipping at the Altar of Brendan Gregg",
-        "url": "https://fzakaria.com/2026/11/12/worshipping-at-the-altar-of-brendan-gregg",
+        "title": "An Italian folding bicycle design that fits into a suitcase",
+        "url": "https://www.core77.com/posts/145766/An-Italian-Folding-Bicycle-Design-that-Fits-Into-a-Suitcase",
         "source": "Hacker News",
-        "publishedAt": "2026-11-24T10:50:14.000Z",
+        "publishedAt": "2026-11-23T12:40:08.000Z",
         "badge": "HN",
-        "signal": "36 分 · 0 评论"
+        "signal": "50 分 · 39 评论"
       },
       {
-        "id": "cn-baidu-7b386a6815797b50",
+        "id": "cn-baidu-4cb238339962e4e8",
         "category": "cn",
-        "title": "课堂上的“嘉豪、嘉欣” 已不敢举手",
-        "url": "https://www.baidu.com/s?wd=%E8%AF%BE%E5%A0%82%E4%B8%8A%E7%9A%84%E2%80%9C%E5%98%89%E8%B1%AA%E3%80%81%E5%98%89%E6%AC%A3%E2%80%9D+%E5%B7%B2%E4%B8%8D%E6%95%A2%E4%B8%BE%E6%89%8B&sa=fyb_news&rsv_dl=fyb_news",
+        "title": "年产1500万根的“棍子” 卖出10亿元",
+        "url": "https://www.baidu.com/s?wd=%E5%B9%B4%E4%BA%A71500%E4%B8%87%E6%A0%B9%E7%9A%84%E2%80%9C%E6%A3%8D%E5%AD%90%E2%80%9D+%E5%8D%96%E5%87%BA10%E4%BA%BF%E5%85%83&sa=fyb_news&rsv_dl=fyb_news",
         "source": "百度热搜",
-        "summary": "近日，多名叫“嘉豪”“嘉欣”的学生因名字沦为网络烂梗，遭受语言霸凌，不敢在课堂举手。此前，2024年一短视频走红使“嘉豪”成“装腔作势”代指，2026年夏天爆火波及“嘉欣”。专家表示改名非一劳永逸，应区分玩梗与语言霸凌界限。",
+        "summary": "近日，浙江宁海运动杖产业年产1500万根，年产值近10亿元，全球每10根运动杖就有6根产自宁海。当地企业从铝合金转向碳纤维制造，产品不断升级。",
         "badge": "热搜",
-        "signal": "7,713,421 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-f9h7-4mmq-vgcq",
-        "category": "security",
-        "title": "Klever Go counts bitmap padding bits toward BLS quorum, allowing blocks with insufficient signatures",
-        "url": "https://github.com/advisories/GHSA-f9h7-4mmq-vgcq",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-23T20:55:35.000Z",
-        "summary": "## Summary When validating an incoming block header, `HeaderSigVerifier.verifyConsensusSize` counts *every* set bit in `PubKeysBitmap` — including bits that correspond to no validator (the padding bits of the final byte, which exist whenev…",
-        "badge": "CVE-2026-58262",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-hugging-face-00d52199bef25f9e",
-        "category": "ai",
-        "title": "How to build and maintain an agentic evaluation",
-        "url": "https://huggingface.co/blog/agentic-evals",
-        "source": "Hugging Face",
-        "publishedAt": "2026-11-23T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1259519",
-        "category": "dev",
-        "title": "Ai 时代，还想掌握代码是痴心妄想吗？",
-        "url": "https://www.v2ex.com/t/1259519",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-24T09:54:46.000Z",
-        "summary": "同志们，AI 时代带来了效率的巨大提升！ 这个时候，还妄想掌握代码细节，是痴心妄想吗？",
-        "badge": "程序员",
-        "signal": "6 回复"
-      },
-      {
-        "id": "cn-item-598621e67eca4ddb",
-        "category": "cn",
-        "title": "为社区残障儿童康复教育服务提供指引 国家标准发布",
-        "url": "https://www.chinanews.com.cn/sh/2026/11-24/10736982.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-11-24T07:48:19.000Z",
-        "summary": "中新网11月24日电 据国家市场监督管理总局网站消息，近日，市场监管总局(国家标准委)批准发布《社区残障儿童康教融合服务规范》国家标准(GB/T 48555—2026)，为社区残障儿童康复教育服务提供科学规范指引。",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "cisa-kev-cve-2026-123890",
-        "category": "security",
-        "title": "Broadcom VMware vCenter：VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123890",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-20T00:00:00.000Z",
-        "summary": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and …",
-        "badge": "CVE-2026-123890",
-        "signal": "已遭利用 · 整改期限 2026-11-23"
-      },
-      {
-        "id": "ai-openai-1259b534687dd8b3",
-        "category": "ai",
-        "title": "Richpanel helps companies automate 50% of support in 30 days",
-        "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
-        "source": "OpenAI",
-        "publishedAt": "2026-11-23T08:00:00.000Z",
-        "summary": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "hn-50614249",
-        "category": "dev",
-        "title": "Ladybird is now in alpha",
-        "url": "https://ladybird.org/posts/alpha/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-23T16:13:12.000Z",
-        "badge": "HN",
-        "signal": "2100 分 · 499 评论"
-      },
-      {
-        "id": "cn-it-dfae58366375273b",
-        "category": "cn",
-        "title": "《GTA 6》发售冲击在线服务型游戏，消息称《使命召唤》玩家日活下滑超四成",
-        "url": "https://www.ithome.com/1/031/821.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-11-24T11:53:30.000Z",
-        "summary": "IT之家 11 月 24 日消息，市场分析机构 Alinea Analytics 估算，随着《GTA 6》正式发售，《使命召唤》（Call of Duty）玩家数量明显下滑。《使命召唤》游戏启动器 Call of Duty HQ 在 PlayStation、Xbox 和 Steam 平台的日活跃玩家数量在《GTA 6》发售周末下降了 42%，从此前平均每天 750 万人降至 440 万人。 作为《使命召唤》最重要的平台，PlayStation 受到的冲击最大，玩家数量下降 …",
-        "badge": "IT之家"
+        "signal": "7,522,253 热度"
       },
       {
         "id": "github-advisory-ghsa-2r3w-c2vx-fv5g",
@@ -313,47 +475,6 @@
         "signal": "CRITICAL · CVSS 9.8"
       },
       {
-        "id": "ai-google-deepmind-cac57b5217ba2caa",
-        "category": "ai",
-        "title": "Genie 4 is now available",
-        "url": "https://deepmind.google/blog/genie-4-is-now-available/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-11-18T18:13:42.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "v2ex-1259503",
-        "category": "dev",
-        "title": "北美大豆包， 必须吹爆！",
-        "url": "https://www.v2ex.com/t/1259503",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-24T09:13:52.000Z",
-        "summary": "前两天刚刚写了一篇对北美大豆包失望的帖子，起因是我尝试用 carbon 替代我原来的 gpt astra 来完成工作，发现明显有很大的差距，所以比较失望，发帖吐槽了一下。 但是仅仅几天， 我就被彻底打脸了，原因就是神一般的 Neon ， 我高强度的用了几天，发现已经完全可以取代我原来用的 astra ，导致我已经好几天没碰 codex 了。 下面总结一下它的使用感受。 我用它主要是做游戏项目的开发， 一些项目基本上是从 0 开始，不光代码能力，还包括图片，美术，设计等等。用…",
-        "badge": "程序员",
-        "signal": "10 回复"
-      },
-      {
-        "id": "cn-baidu-cb7fe3bbdaa6994b",
-        "category": "cn",
-        "title": "中国人登月又近一步",
-        "url": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E7%99%BB%E6%9C%88%E5%8F%88%E8%BF%91%E4%B8%80%E6%AD%A5&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "11月24日上午，神舟二十四号载人飞行任务新闻发布会在酒泉卫星发射中心召开。发言人介绍，经过工程全线的努力奋斗，月球探测工程目前已取得了一批阶段性重要成果。月球探测工程正朝既定目标稳步推进，中国人探索月球的步伐行稳致远。",
-        "badge": "热搜",
-        "signal": "7,616,262 热度"
-      },
-      {
-        "id": "cisa-kev-cve-2025-42884",
-        "category": "security",
-        "title": "SAP NetWeaver：SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-42884",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-20T00:00:00.000Z",
-        "summary": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment proper…",
-        "badge": "CVE-2025-42884",
-        "signal": "已遭利用 · 整改期限 2026-11-23"
-      },
-      {
         "id": "ai-hugging-face-824c03b970f1dc58",
         "category": "ai",
         "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
@@ -363,137 +484,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50620349",
+        "id": "v2ex-1259539",
         "category": "dev",
-        "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
-        "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-23T22:32:29.000Z",
-        "badge": "HN",
-        "signal": "523 分 · 283 评论"
-      },
-      {
-        "id": "cn-item-78abad95e3cd1077",
-        "category": "cn",
-        "title": "羽绒降价，羽绒服为何越卖越贵？",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-24/10736973.shtml",
-        "source": "中新网要闻",
-        "publishedAt": "2026-11-24T07:25:20.000Z",
-        "summary": "原料行情走低 国货扎堆高端",
-        "badge": "中新网要闻"
-      },
-      {
-        "id": "github-advisory-ghsa-mqwm-5m85-gmcv",
-        "category": "security",
-        "title": "Gradle causes failure to disable repositories exposing builds to malicious artifacts",
-        "url": "https://github.com/advisories/GHSA-mqwm-5m85-gmcv",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-23T15:41:57.000Z",
-        "summary": "### Impact When resolving dependencies, Gradle searches repositories in declaration order. If it encounters connection errors, Gradle will disable the repository and fail dependency resolution. This is necessary for both reproducibility an…",
-        "badge": "CVE-2026-22865",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-openai-1a10f1676d46fc01",
-        "category": "ai",
-        "title": "Perplexity and Intelligence",
-        "url": "https://openai.com/index/perplexity-and-intelligence",
-        "source": "OpenAI",
-        "publishedAt": "2026-11-22T00:00:00.000Z",
-        "summary": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
-        "badge": "OpenAI"
-      },
-      {
-        "id": "v2ex-1259502",
-        "category": "dev",
-        "title": "「求助，到底什么才是 Agent，如何入门、掌握、精通 Agent 开发？」",
-        "url": "https://www.v2ex.com/t/1259502",
+        "title": "rex(ghostty 作者新产品)重度体验",
+        "url": "https://www.v2ex.com/t/1259539",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-24T09:13:19.000Z",
-        "summary": "近两年都在要求 AI 全栈开发 + Agent 开发相关的工作，怎么样才能入门、掌握、精通呢？我能想到的看 B 站的一些教学视频，学习 py + 一些 openai sdk 之类的，然后看一些相对完整的项目开发，怎么去真正跟企业级的 Agent 开发贴近呢，有哪些论坛或者网站是可以实际进去学习的？大家都是怎么转 Agent 开发的呢？ 算了，我直接问吧，如何应对面试提问",
+        "publishedAt": "2026-11-24T12:01:07.000Z",
+        "summary": "ghostty 作者的新产品, 上个月看到其他 V 友发了下载方式( /t/1251516 )后开始用, 现在已经成为我的默认 vibe 环境. 用三点来描述 rex: 一个 terminal 软件, 替代了 iterm2/ghostty 内置 tailscale, 作为 server 暴露成服务. 作为 client 连接远程 rex 注: 在 client 端, 需要 tailscale VPN, 不过 LAN 里也支持 ssh 连接 rex server 提供 cli…",
         "badge": "程序员",
-        "signal": "14 回复"
-      },
-      {
-        "id": "cn-it-b5a1f5510a67a814",
-        "category": "cn",
-        "title": "黄仁勋重掌英伟达，亚洲供应链、AI 创企信心大振",
-        "url": "https://www.ithome.com/1/031/820.htm",
-        "source": "IT之家",
-        "publishedAt": "2026-11-24T11:50:55.000Z",
-        "summary": "IT之家 11 月 24 日消息，据路透社报道，黄仁勋重新出任英伟达 CEO，受到亚洲客户及供应商的广泛欢迎。业内人士认为，他的回归 消除了英伟达产品规划上的不确定性 ，也打消了外界对公司可能缩减 AI 初创企业投资的担忧。 英伟达在亚洲拥有庞大的供应链， 台积电、富士康、三星电子和 SK 海力士 都是其中的关键企业。此外，还有不少获得英伟达支持的初创公司。 韩国半导体产业协会高管安基贤坦诚道：“如果没有黄仁勋， 下一代产品的开发周期会更长 。围绕英伟达下一代产品的不确定性…",
-        "badge": "IT之家"
-      },
-      {
-        "id": "cisa-kev-cve-2026-76466",
-        "category": "security",
-        "title": "Cisco Expressway Series：Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76466",
-        "source": "CISA KEV",
-        "publishedAt": "2026-11-20T00:00:00.000Z",
-        "summary": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database se…",
-        "badge": "CVE-2026-76466",
-        "signal": "已遭利用 · 整改期限 2026-11-23"
-      },
-      {
-        "id": "ai-google-deepmind-c7a410ad3b862809",
-        "category": "ai",
-        "title": "Introducing Gemini 4 Hydrogen",
-        "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
-        "source": "Google DeepMind",
-        "publishedAt": "2026-11-12T18:00:50.000Z",
-        "badge": "Google DeepMind"
-      },
-      {
-        "id": "hn-50624061",
-        "category": "dev",
-        "title": "AMD EPYC Zen 6 vs. Zen 1 Performance: 12.1x Geo Mean in Less Than 10 Years",
-        "url": "https://www.phoronix.com/review/amd-epyc-9006-7601",
-        "source": "Hacker News",
-        "publishedAt": "2026-11-24T05:15:22.000Z",
-        "badge": "HN",
-        "signal": "126 分 · 64 评论"
-      },
-      {
-        "id": "cn-baidu-337f963f8eaa8b92",
-        "category": "cn",
-        "title": "国产可口可乐不再标生产日期",
-        "url": "https://www.baidu.com/s?wd=%E5%9B%BD%E4%BA%A7%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E4%B8%8D%E5%86%8D%E6%A0%87%E7%94%9F%E4%BA%A7%E6%97%A5%E6%9C%9F&sa=fyb_news&rsv_dl=fyb_news",
-        "source": "百度热搜",
-        "summary": "近日，吉林长春有网友发现新买的可口可乐瓶身不再标注生产日期，仅印有保质期和到期日，中粮可口可乐客服证实，根据新版食品安全国家标准，新出厂产品已统一改标到期日，老款仍正常流通。",
-        "badge": "热搜",
-        "signal": "7,521,696 热度"
-      },
-      {
-        "id": "github-advisory-ghsa-w78c-w6vf-rw82",
-        "category": "security",
-        "title": "Gradle causes Failure to disable repositories can expose builds to malicious artifacts",
-        "url": "https://github.com/advisories/GHSA-w78c-w6vf-rw82",
-        "source": "GitHub Advisory",
-        "publishedAt": "2026-11-23T15:33:34.000Z",
-        "summary": "### Impact When resolving dependencies, Gradle searches repositories in declaration order. If it encounters connection errors, Gradle will disable the repository and fail dependency resolution. This is necessary for both reproducibility an…",
-        "badge": "CVE-2026-22816",
-        "signal": "HIGH · CVSS 0.0"
-      },
-      {
-        "id": "ai-hugging-face-701a571706ec6c00",
-        "category": "ai",
-        "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
-        "url": "https://huggingface.co/blog/harness-adapters-at-scale",
-        "source": "Hugging Face",
-        "publishedAt": "2026-11-20T00:00:00.000Z",
-        "badge": "Hugging Face"
-      },
-      {
-        "id": "v2ex-1259496",
-        "category": "dev",
-        "title": "想问一下各位关于裁判文书网采集的问题",
-        "url": "https://www.v2ex.com/t/1259496",
-        "source": "V2EX 技术",
-        "publishedAt": "2026-11-24T08:57:03.000Z",
-        "summary": "我现在想采集一些裁判文书网的案例 但是现在没有爬虫方案 我也不考虑违规的方案 但是我想着 是不是可以让我电脑自动化 去一篇一篇读 然后下载下来这样 是不是完全合规呢？ 这个不会有什么不合规的风险吧 我比较担心这个",
-        "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "0 回复"
       }
     ]
   },
@@ -510,7 +509,7 @@
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "language": "Python",
-        "stars": 20640,
+        "stars": 21279,
         "starsToday": 1833
       },
       {
@@ -520,7 +519,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 325551,
+        "stars": 325707,
         "starsToday": 1006
       },
       {
@@ -530,7 +529,7 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 64252,
+        "stars": 64641,
         "starsToday": 1075
       },
       {
@@ -540,7 +539,7 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
         "language": "Python",
-        "stars": 69908,
+        "stars": 70117,
         "starsToday": 727
       },
       {
@@ -550,7 +549,7 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 19013,
+        "stars": 19151,
         "starsToday": 359
       },
       {
@@ -560,7 +559,7 @@
         "url": "https://github.com/firecrawl/firecrawl",
         "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
         "language": "TypeScript",
-        "stars": 208411,
+        "stars": 208811,
         "starsToday": 990
       },
       {
@@ -570,7 +569,7 @@
         "url": "https://github.com/nginx/nginx",
         "description": "The official NGINX Open Source repository.",
         "language": "C",
-        "stars": 33126,
+        "stars": 33190,
         "starsToday": 158
       },
       {
@@ -580,7 +579,7 @@
         "url": "https://github.com/openvinotoolkit/openvino",
         "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
         "language": "C++",
-        "stars": 12378,
+        "stars": 12433,
         "starsToday": 187
       },
       {
@@ -590,7 +589,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 71468,
+        "stars": 71898,
         "starsToday": 794
       },
       {
@@ -600,10 +599,10 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 73810,
+        "stars": 74108,
         "starsToday": 695
       }
     ],
-    "updatedAt": "2026-11-24T12:27:50.087Z"
+    "updatedAt": "2026-11-24T21:11:58.113Z"
   }
 }
