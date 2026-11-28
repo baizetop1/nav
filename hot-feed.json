@@ -1,17 +1,17 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-28T02:41:27.695Z",
+  "generatedAt": "2026-11-28T10:25:24.122Z",
   "intelligence": {
-    "updatedAt": "2026-11-28T02:41:27.695Z",
+    "updatedAt": "2026-11-28T10:25:24.122Z",
     "items": [
       {
-        "id": "cn-item-ccff7e05c81a0ec2",
+        "id": "cn-item-00ccb40100a92f33",
         "category": "cn",
-        "title": "曾在“爱优腾”中排第一的爱奇艺，被1美元绊住了",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739138.shtml",
+        "title": "中国AES100发动机完成国产可持续航空燃料首次飞行试验",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739289.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-28T02:30:06.000Z",
-        "summary": "中新网北京11月28日电(记者 谢艺观)近日，爱奇艺的一纸公告，让人看到了长视频行业的落寞一面。",
+        "publishedAt": "2026-11-28T09:03:17.000Z",
+        "summary": "中新社北京11月28日电 (记者 孙自法)记者28日从中国航空发动机集团(中国航发)获悉，作为中国第一型自主创新研制的1000千瓦级先进民用涡轴发动机，AES100发动机双发配装镧影R6000倾转旋翼机，近日在四川什邡圆满完成采用国产可持续航空燃料(SAF)的首次飞行试验。",
         "badge": "中新网要闻"
       },
       {
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50672565",
+        "id": "hn-50674218",
         "category": "dev",
-        "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
-        "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+        "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
+        "url": "https://unkernel.dev",
         "source": "Hacker News",
-        "publishedAt": "2026-11-27T23:06:29.000Z",
+        "publishedAt": "2026-11-28T03:19:20.000Z",
         "badge": "HN",
-        "signal": "133 分 · 46 评论"
+        "signal": "316 分 · 77 评论"
       },
       {
-        "id": "cn-it-931d41114caccaf1",
+        "id": "cn-it-9772051ce2aba148",
         "category": "cn",
-        "title": "212 首款三门车型 T10 上市：三片式快拆硬顶，17.99 万-18.99 万元",
-        "url": "https://www.ithome.com/1/033/814.htm",
+        "title": "我国发布全球首个高效灵活燃煤发电技术，最低可降至额定负荷 15% 稳定运行",
+        "url": "https://www.ithome.com/1/033/947.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-28T02:35:49.000Z",
-        "summary": "IT之家 11 月 28 日消息，2026 广州车展期间，212 品牌旗下首款三门车型 T10 正式上市，推出 2.0T 汽油版和 2.0T 柴油版，官方售价分别为 17.99 万元和 18.99 万元。T10 基于经典硬派越野底盘架构打造，采用三门短轴和三片式快拆硬顶设计，并预留 30 余处原厂拓展接口，主打专业越野与个性化体验。 据IT之家了解，该车提供前后整体硬桥 + 大梁结构，长宽高分别为 4416/1955/1925mm，轴距为 2570mm。其设计主打复古风，轮…",
+        "publishedAt": "2026-11-28T09:59:26.000Z",
+        "summary": "IT之家 11 月 28 日消息，据央视新闻报道，11 月 26 日，我国自主研发的全球首个新型高效灵活燃煤发电技术成功发布，多项核心指标达到国际领先水平。 该项目是我国重大技术装备示范项目。应用这一新技术后，相较传统机组， 新机组最低可降至额定负荷 15% 稳定运行，全程无需烧油助燃 ；可精准跟随电网峰谷波动，适配大规模新能源并网消纳需求。 IT之家获悉，经机组性能测试，实现了 15% 超低负荷无助燃干态运行，突破了燃煤机组超低负荷工况干湿态转换的技术瓶颈；在 50% 负…",
         "badge": "IT之家"
       },
       {
@@ -77,24 +77,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1260513",
+        "id": "v2ex-1260593",
         "category": "dev",
-        "title": "有了 AI 之后，开发越来越容易，推广却越来越难？",
-        "url": "https://www.v2ex.com/t/1260513",
+        "title": "开源大模型为什么不发起对话记录共享活动?",
+        "url": "https://www.v2ex.com/t/1260593",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-28T02:16:02.000Z",
-        "summary": "最近用 AI 辅助开发了几个项目，感觉开发效率确实提高了不少，但产品上线后，怎么找到用户依然是个难题。 尤其是微信小程序，个人开发者似乎没有太多低成本的推广渠道。 于是最近又折腾了一个微信小程序版的 Product Hunt： https://minihunt.top 目前收录了 2000 多个小程序，支持开发者免费提交自己的作品，算是对产品推广方向的一次尝试。 想和大家讨论一下，当 AI 逐渐降低软件开发门槛之后，获取用户会不会成为独立开发者最大的挑战？ 大家平时除了写代…",
+        "publishedAt": "2026-11-28T09:47:46.000Z",
+        "summary": "现在完全是为爱发电.我们部署了一套本地大模型,心怀感激,希望开源大模型有更好的发展...唯一能贡献的就是官网充点 api..如果能够发起一个自愿上传记录的活动,估计不需要蒸馏也能对语料有很大的帮助",
         "badge": "程序员",
-        "signal": "5 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-toutiao-7712872779263296027",
+        "id": "cn-toutiao-7712644569263079478",
         "category": "cn",
-        "title": "央行新规取消贷款罚息利率上下限",
-        "url": "https://www.toutiao.com/trending/7712872779263296027/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%228%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712872779263296027%22%2C%22hot_board_impr_id%22%3A%2220261128104127E54274D3F4D2939E08B4%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A4%AE%E8%A1%8C%E6%96%B0%E8%A7%84%E5%8F%96%E6%B6%88%E8%B4%B7%E6%AC%BE%E7%BD%9A%E6%81%AF%E5%88%A9%E7%8E%87%E4%B8%8A%E4%B8%8B%E9%99%90%22%7D&rank=&style_id=40132&topic_id=7712872779263296027",
+        "title": "警方提级调查50人采摘蜜桔仅留10元",
+        "url": "https://www.toutiao.com/trending/7712644569263079478/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712644569263079478%22%2C%22hot_board_impr_id%22%3A%222026112818252372B518888E444D30912B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E8%AD%A6%E6%96%B9%E6%8F%90%E7%BA%A7%E8%B0%83%E6%9F%A550%E4%BA%BA%E9%87%87%E6%91%98%E8%9C%9C%E6%A1%94%E4%BB%85%E7%95%9910%E5%85%83%22%7D&rank=&style_id=40132&topic_id=7712644569263079478",
         "source": "今日头条",
         "badge": "热榜",
-        "signal": "10,233,153 热度"
+        "signal": "9,417,694 热度"
       },
       {
         "id": "cisa-kev-cve-2026-129243",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50643158",
+        "id": "hn-50632052",
         "category": "dev",
-        "title": "GPT 6.2 Astra Solves a Historical Mystery",
-        "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+        "title": "Loom seamlessly combines weaving, knitting and braiding",
+        "url": "https://news.cornell.edu/stories/2026/11/loom-seamlessly-combines-weaving-knitting-and-braiding",
         "source": "Hacker News",
-        "publishedAt": "2026-11-25T15:16:53.000Z",
+        "publishedAt": "2026-11-24T18:10:45.000Z",
         "badge": "HN",
-        "signal": "338 分 · 211 评论"
+        "signal": "122 分 · 12 评论"
       },
       {
-        "id": "cn-item-c9279bf778ca232a",
+        "id": "cn-item-b4fdfce1d641cb94",
         "category": "cn",
-        "title": "中新网评：三只松鼠不应拿“临时”当挡箭牌",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739140.shtml",
+        "title": "高交会观察：人工智能扎根实体产业一线",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-28/10739243.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-28T02:29:00.000Z",
-        "summary": "中新网北京11月28日电 (钟余)近日，三只松鼠因员工周转宿舍简陋一事引发热议，“三只松鼠员工住12人间”等话题上了热搜。11月26日晚，三只松鼠股份有限公司发布致歉声明，称网传视频所涉宿舍系旺季用工人员周转宿舍，为年货节期间临时启用，确实存在设施配置简陋等问题，并称已对相关人员进行妥善转移安置。",
+        "publishedAt": "2026-11-28T07:41:21.000Z",
+        "summary": "中新网深圳11月28日电 题：高交会观察：人工智能扎根实体产业一线",
         "badge": "中新网要闻"
       },
       {
@@ -158,24 +158,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1260501",
+        "id": "v2ex-1260591",
         "category": "dev",
-        "title": "转到 Antigravity 受不了他的“直接开干”，给它喂了份 Claude 的规矩",
-        "url": "https://www.v2ex.com/t/1260501",
+        "title": "Codex 还有 3 次重置，明天订阅到期不再续订，三次重置用不完怎么办？",
+        "url": "https://www.v2ex.com/t/1260591",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-28T01:40:50.000Z",
-        "summary": "用惯了 Claude 的“先对齐再写代码”，切到 Antigravity 真的有点不适应。这货太爱“直接开干”了,等 review 的时候发现方向不对，返工成本极高。 于是有了这份参考 claude 核心提示词出的提示词，核心就是限制它：非局部的小改动，必须先只读调研，给出方案和取舍，等我批准了再写代码；如果是明确修个小 bug，那还是直接干。 可以直接拿去用，放项目根目录的 AGENTS.md 或 Rules 里就行。也可以全局设定，不用每个项目都加。 Windows 全…",
+        "publishedAt": "2026-11-28T09:39:26.000Z",
+        "summary": "这个月玩魔兽，没有折腾代码，100 刀的订阅明天到期，不再准备续订 GPT，换了 Gemini 。还有 3 次重置怎么办？ 完全重置 将于 12 月 2 日 GMT+8 06:53 到期 完全重置 将于 12 月 13 日 GMT+8 06:50 到期 完全重置 将于 12 月 26 日 GMT+8 14:21 到期",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-92a0c1435c4b980a",
+        "id": "cn-it-e41fc883bc8474a7",
         "category": "cn",
-        "title": "魏建军回应“长城汽车销量从第一掉到第九”：内卷、资本裹挟、财务造假是主因",
-        "url": "https://www.ithome.com/1/033/813.htm",
+        "title": "《黑神话：悟空》制作人冯骥：从四年前开始，AI 可能已经逐渐控制了世界",
+        "url": "https://www.ithome.com/1/033/945.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-28T02:29:57.000Z",
-        "summary": "IT之家 11 月 28 日消息，此前，长城汽车董事长魏建军在与胖东来创始人于东来交流时，透露长城汽车销量排名从中国自主品牌第一下滑至第九，引发广泛关注。 在 2026 广州车展现场，魏建军就此事作出公开回应。他将排名变化的主要原因归结为三点：“内卷”“资本裹挟”和“财务造假”。 魏建军表示，如果不能排除恶意竞争，汽车产业就无法得到健康发展。“我排到第九，但是我心里边很坦然，他们都睡不着觉。” 在之前跟于东来进行交流的时候，于东来也回应称“你管他压力呢，你做自己嘛”，并建议…",
+        "publishedAt": "2026-11-28T09:58:24.000Z",
+        "summary": "IT之家 11 月 28 日消息，11 月 27 日，游戏科学创始人、《黑神话：悟空》制作人冯骥在其个人公众号“冯骥 Yocar”发表了一篇名为《 后 AI 时代最重要的问题 》的长文，全文约 8000 字。文章发出后，引发全网热议。 冯骥在展开推演之前，先分享了自己的“暴论”—— 与很多人想象的 AI 失控时间点不同， 从四年前开始，AI 可能已经逐渐控制了世界 。 他说，这是在一次吃饭聊天中与同事偶然扯出来的假说，一度让自己很上头。后面又独自与 AI 探讨了很久，还与它…",
         "badge": "IT之家"
       },
       {
@@ -200,23 +200,23 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50657346",
+        "id": "hn-50672565",
         "category": "dev",
-        "title": "The Balatro Timeline",
-        "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
+        "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+        "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-26T17:20:27.000Z",
+        "publishedAt": "2026-11-27T23:06:29.000Z",
         "badge": "HN",
-        "signal": "90 分 · 16 评论"
+        "signal": "403 分 · 153 评论"
       },
       {
-        "id": "cn-toutiao-7713020164392485426",
+        "id": "cn-toutiao-7713052131783180838",
         "category": "cn",
-        "title": "陈吉宁等被查 中纪委发声",
-        "url": "https://www.toutiao.com/trending/7713020164392485426/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%220%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227713020164392485426%22%2C%22hot_board_impr_id%22%3A%2220261128104127E54274D3F4D2939E08B4%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%99%88%E5%90%89%E5%AE%81%E7%AD%89%E8%A2%AB%E6%9F%A5+%E4%B8%AD%E7%BA%AA%E5%A7%94%E5%8F%91%E5%A3%B0%22%7D&rank=&style_id=40132&topic_id=7713020164392485426",
+        "title": "丁肇中第九次回乡日照",
+        "url": "https://www.toutiao.com/trending/7713052131783180838/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2215%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227713052131783180838%22%2C%22hot_board_impr_id%22%3A%222026112818252372B518888E444D30912B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%B8%81%E8%82%87%E4%B8%AD%E7%AC%AC%E4%B9%9D%E6%AC%A1%E5%9B%9E%E4%B9%A1%E6%97%A5%E7%85%A7%22%7D&rank=&style_id=40132&topic_id=7713052131783180838",
         "source": "今日头条",
         "badge": "热榜",
-        "signal": "9,259,340 热度"
+        "signal": "8,521,482 热度"
       },
       {
         "id": "github-advisory-ghsa-743w-g9pf-8p94",
@@ -239,24 +239,24 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1260498",
+        "id": "v2ex-1260590",
         "category": "dev",
-        "title": "用美区 appleID 开了个 gemini pro, 花了 1.99 刀",
-        "url": "https://www.v2ex.com/t/1260498",
+        "title": "对于设计型开发，决定好技术栈的标准只有一个",
+        "url": "https://www.v2ex.com/t/1260590",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-28T01:31:17.000Z",
-        "summary": "这两天折腾的 claude 和 gemini，记录一下： gemini pro: 一开始用的一个 gmail, 从中国区转到美国区的，发现买不了，登录了另外一个 gmail 账号，我看是 TW 地区的，可以继续往下走,到支付环节需要填收货地址，填写了美国的免税地址，居然通过了（前两天买 claude pro 也是类似的流程， 但是填写美区地址后还让绑定美区银行卡，放弃了） claude pro: gemini 买成功了，又试了一下 claude pro,居然不要绑美区银行卡…",
+        "publishedAt": "2026-11-28T09:28:00.000Z",
+        "summary": "就是单次迭代->反馈 loop 的时间。",
         "badge": "程序员",
-        "signal": "2 回复"
+        "signal": "0 回复"
       },
       {
-        "id": "cn-item-35dbbd1bbe2aeb7c",
+        "id": "cn-item-e1aeb613fb1aae15",
         "category": "cn",
-        "title": "中新网评：直播间摆茅台卖杂牌，谁在装睡？",
-        "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739139.shtml",
+        "title": "兰州大学：“交费包过”“不用上课”等为虚假宣传 保留追责权利",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-28/10739208.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-28T02:25:14.000Z",
-        "summary": "中新网北京11月28日电(钟兴真)在视频号、抖音、快手等平台上，部分卖酒直播间仍存在“挂羊头卖狗肉”现象。",
+        "publishedAt": "2026-11-28T05:13:07.000Z",
+        "summary": "中新网11月28日电 据兰州大学微信公众号消息，11月27日晚，兰州大学发布“关于我校同等学力申请硕士学位招生的严正声明”，具体内容如下：",
         "badge": "中新网要闻"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50673688",
+        "id": "hn-50657346",
         "category": "dev",
-        "title": "Atari Homebrew Awards Cancelled",
-        "url": "https://forums.atariage.com/topic/394894-atari-homebrew-awards-cancelled/",
+        "title": "The Balatro Timeline",
+        "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
         "source": "Hacker News",
-        "publishedAt": "2026-11-28T02:03:25.000Z",
+        "publishedAt": "2026-11-26T17:20:27.000Z",
         "badge": "HN",
-        "signal": "11 分 · 0 评论"
+        "signal": "373 分 · 89 评论"
       },
       {
-        "id": "cn-it-26ef0b8cbd8d51c0",
+        "id": "cn-it-580a58931a0a6c3c",
         "category": "cn",
-        "title": "微软高管：暂无 Win12 发布时间表，当前首要任务是打磨 Win11",
-        "url": "https://www.ithome.com/1/033/812.htm",
+        "title": "289 → 188 元：安克 140W 带屏充电套装直降，3C+1A 功率温控实时监测",
+        "url": "https://www.ithome.com/1/033/944.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-28T02:27:31.000Z",
-        "summary": "IT之家 11 月 28 日消息，在 Ignite 2026 活动后接受 Axios 采访时，微软 Windows 事业部执行副总裁帕万 · 达武卢里（Pavan Davuluri）表示， 微软目前专注于打磨 Windows 11 的品质、体验、基础能力、性能和可靠性。 IT之家援引博文介绍，被问及 Windows 12 时，达武卢里既未否认，也未给出任何时间表。他强调，微软必须先构建未来 AI 应用所需的技术，并证明用户确实认可这些能力的价值，才能“赢得许可”，进而推进下…",
+        "publishedAt": "2026-11-28T09:57:40.000Z",
+        "summary": "安克 140W 带屏充电头 采用 3C+1A 设计 ，功率温控 实时监测 ，日常售价 289 元。 今日京东国补后仅需 188 元即可入手，内含 1.5 米 240W C-C 快充线。 京东 ANKER 安克智显充 140W 充电器套装 国补后 188 元 直达链接 价格如果不对，可以尝试多点几次上方卡片，跳转京东后留意 App 顶部是否弹出 9 折券。 也可以加入购物车，在购物车右下方点击「砸京蛋」浮窗领券。 这款充电头配备一块 TFT 屏（具体规格未公布），可以显示充电…",
         "badge": "IT之家"
       },
       {
@@ -321,24 +321,24 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1260494",
+        "id": "v2ex-1260584",
         "category": "dev",
-        "title": "谷歌订阅 AI PRO 黑五提前买歪打正着",
-        "url": "https://www.v2ex.com/t/1260494",
+        "title": "指纹浏览器这个词是什么时候开始出现的? 好奇怪的叫法",
+        "url": "https://www.v2ex.com/t/1260584",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-28T00:58:41.000Z",
-        "summary": "前情提要： https://www.v2ex.com/t/1258863 没想到谷谷歌歌对老用户还挺好，老用户订阅五折，新用户六折 本来只是想早点用，没想到歪打正着，终于不是老用户是狗时间了",
+        "publishedAt": "2026-11-28T08:41:57.000Z",
+        "summary": "正常不应该是叫反指纹或者反追踪, 或者什么隔离之类的吗? 怎么搞下来指纹浏览器是避免被指纹追踪的.. 好奇怪的叫法",
         "badge": "程序员",
-        "signal": "13 回复"
+        "signal": "11 回复"
       },
       {
-        "id": "cn-toutiao-7712036769054920246",
+        "id": "cn-toutiao-7712844263637942810",
         "category": "cn",
-        "title": "“数”读前10月规上工业企业利润",
-        "url": "https://www.toutiao.com/article/7712699051036197417",
+        "title": "我国河湖面貌发生历史性改善",
+        "url": "https://www.toutiao.com/trending/7712844263637942810/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%228%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712844263637942810%22%2C%22hot_board_impr_id%22%3A%222026112818252372B518888E444D30912B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%88%91%E5%9B%BD%E6%B2%B3%E6%B9%96%E9%9D%A2%E8%B2%8C%E5%8F%91%E7%94%9F%E5%8E%86%E5%8F%B2%E6%80%A7%E6%94%B9%E5%96%84%22%7D&rank=&style_id=40132&topic_id=7712844263637942810",
         "source": "今日头条",
         "badge": "热榜",
-        "signal": "8,378,197 热度"
+        "signal": "7,710,555 热度"
       },
       {
         "id": "cisa-kev-cve-2026-133469",
@@ -361,23 +361,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50668145",
+        "id": "hn-50674452",
         "category": "dev",
-        "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
-        "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+        "title": "Knuth: Moratorium on Error Reports",
+        "url": "https://www-cs-faculty.stanford.edu/~knuth/moratorium.html",
         "source": "Hacker News",
-        "publishedAt": "2026-11-27T15:40:31.000Z",
+        "publishedAt": "2026-11-28T03:49:21.000Z",
         "badge": "HN",
-        "signal": "441 分 · 232 评论"
+        "signal": "98 分 · 52 评论"
       },
       {
-        "id": "cn-item-c770623630dba2dd",
+        "id": "cn-item-44f8b7f66db7967e",
         "category": "cn",
-        "title": "墨西哥抗议美国在墨开通举报热线",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-28/10739125.shtml",
+        "title": "地上收订单，天上等2028，特斯拉“飞车”秀给谁看？",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739201.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-28T01:59:00.000Z",
-        "summary": "中新社北京11月28日电 墨西哥城消息：墨西哥总统辛鲍姆27日在新闻发布会上表示，墨方已就美国毒品管制局在墨西哥开通举报热线一事向美方提出正式抗议。该热线旨在收集有关涉嫌参与毒品贩运人员及墨西哥官员涉嫌腐败的信息。",
+        "publishedAt": "2026-11-28T04:55:32.000Z",
+        "summary": "中新网北京11月28日电(记者 查志远 实习生 黄依璇)11月14号，特斯拉Cybercab正式向德州奥斯汀受邀个人用户开放订购，售价29990美元，订阅费299美元/月，首批交付预计12月启动。巴克莱随后维持“增持”评级、目标价450美元，认为Robotaxi业务正迎来扩张拐点。资本对地面智能汽车商业化落地的追捧，恰好为一个月前那场“飞车”展示提供了参照系。",
         "badge": "中新网要闻"
       },
       {
@@ -401,24 +401,24 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1260459",
+        "id": "v2ex-1260579",
         "category": "dev",
-        "title": "觉得 vibe coding 半天还不如直接花钱订阅成熟的软件",
-        "url": "https://www.v2ex.com/t/1260459",
+        "title": "花一天梳理了开源 Coding Agent 的三层分类和 7 日涨星榜，想听听大家对收录边界和 t3code 遥测事件的看法",
+        "url": "https://www.v2ex.com/t/1260579",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-27T14:56:22.000Z",
-        "summary": "就算开发者也在用 ai，不就相当于用户花一份钱买了未来一年作者的 token 用量么，比个人看 agent 吭哧吭哧跑既省钱又省时间",
+        "publishedAt": "2026-11-28T08:18:41.000Z",
+        "summary": "昨天花了一整个工作日整理开源 Coding Agent 生态，在自己的站点 AgentLensHQ 上写了一篇分类拆解，并按过去 7 天的 GitHub 涨星速度拉了个 Top 10 榜单： 分类对比文章： https://agentlenshq.com/zh-CN/harness/choose-coding-agent 7 日涨星榜： https://agentlenshq.com/zh-CN/projects/topics/coding_agent_tool 先把我这期…",
         "badge": "程序员",
-        "signal": "18 回复"
+        "signal": "6 回复"
       },
       {
-        "id": "cn-it-7daf976beec7b8fa",
+        "id": "cn-it-e689b615f014769e",
         "category": "cn",
-        "title": "Edge 浏览器右键菜单不加新 AI 了，微软对搁置可能造成的不便深表歉意",
-        "url": "https://www.ithome.com/1/033/810.htm",
+        "title": "保时捷首款纯电动双门公路跑车明年 Q1 全球首发，全新 718 Boxster 冲刺量产",
+        "url": "https://www.ithome.com/1/033/943.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-28T02:16:13.000Z",
-        "summary": "IT之家 11 月 28 日消息，科技媒体 NeoWin 昨日（11 月 27 日）发布博文，报道称微软已搁置为 Edge 浏览器扩展 AI 功能计划， 不再为该浏览器右键菜单加入摘要、引用和翻译功能。 IT之家援引博文介绍，微软于 2025 年 6 月更新 AI at Work 路线图条目 RM497135，规划在 Microsoft Edge 浏览器中，为右键菜单添加 3 项 AI 选项，用户选中文本后右键，可以调用 Copilot 完成摘要、引用和翻译功能。 不过微软…",
+        "publishedAt": "2026-11-28T09:54:12.000Z",
+        "summary": "IT之家 11 月 28 日消息，11 月 24 日，保时捷在官方微博宣布，保时捷首款纯电动双门公路跑车 —— 全新纯电动 718 Boxster 量产车型研发已进入最后冲刺阶段，将于 2027 年第一季度全球首发。 据官方公布信息， 原型车已累计完成约 400 万公里测试 ，测试范围从瑞典 -30℃ 的严寒到美国死亡谷 51℃ 的极高温，并在 20 多个国家以五种不同充电标准验证性能。官方称，原型车在上海街头也常被路人偶遇。 IT之家从官方介绍获悉，该车采用创新 E-Co…",
         "badge": "IT之家"
       },
       {
@@ -442,23 +442,23 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50644213",
+        "id": "hn-50643158",
         "category": "dev",
-        "title": "Cyberpunk Television Shows",
-        "url": "https://shellzine.net/cyberpunk-television/",
+        "title": "GPT 6.2 Astra Solves a Historical Mystery",
+        "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
         "source": "Hacker News",
-        "publishedAt": "2026-11-25T16:32:28.000Z",
+        "publishedAt": "2026-11-25T15:16:53.000Z",
         "badge": "HN",
-        "signal": "24 分 · 12 评论"
+        "signal": "449 分 · 282 评论"
       },
       {
-        "id": "cn-toutiao-7712826303400902698",
+        "id": "cn-toutiao-7713077666341995034",
         "category": "cn",
-        "title": "孔子其实根本不姓孔",
-        "url": "https://www.toutiao.com/trending/7712826303400902698/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712826303400902698%22%2C%22hot_board_impr_id%22%3A%2220261128104127E54274D3F4D2939E08B4%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%AD%94%E5%AD%90%E5%85%B6%E5%AE%9E%E6%A0%B9%E6%9C%AC%E4%B8%8D%E5%A7%93%E5%AD%94%22%7D&rank=&style_id=40132&topic_id=7712826303400902698",
+        "title": "司机捡手机要100元辛苦费 乘客报警",
+        "url": "https://www.toutiao.com/trending/7713077666341995034/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2215%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227713077666341995034%22%2C%22hot_board_impr_id%22%3A%222026112818252372B518888E444D30912B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%8F%B8%E6%9C%BA%E6%8D%A1%E6%89%8B%E6%9C%BA%E8%A6%81100%E5%85%83%E8%BE%9B%E8%8B%A6%E8%B4%B9+%E4%B9%98%E5%AE%A2%E6%8A%A5%E8%AD%A6%22%7D&rank=&style_id=40132&topic_id=7713077666341995034",
         "source": "今日头条",
         "badge": "热榜",
-        "signal": "7,580,906 热度"
+        "signal": "6,976,799 热度"
       },
       {
         "id": "github-advisory-ghsa-crj3-q72p-ggqm",
@@ -481,15 +481,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1260422",
+        "id": "v2ex-1260571",
         "category": "dev",
-        "title": "[开源自荐]买谷歌黑五半价 pro 的看过来-在 dsh 中不违反 tos 的情况下使用 agy-gemini",
-        "url": "https://www.v2ex.com/t/1260422",
+        "title": "Antigravity 被封号了",
+        "url": "https://www.v2ex.com/t/1260571",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-27T11:02:10.000Z",
-        "summary": "dsh-antigravity-native 优势: 0. 不是反代不是反代, 是 ACP 和 agy cli 调用实现的 直观来讲, 可以理解为使用的一直是 agy 的 cli, 连 session 也是 agy 的 session, 只是给 agy 的 cli 套了个壳子, 把使用入口和渲染处尽量融合到 dsh 原生界面, dsh 的模型选择处可见所有 agy 已登录账户的可用模型 不注入任何上下文和 skill, tool_ues 也是 agy 自己的不会使用 dsh…",
+        "publishedAt": "2026-11-28T07:32:04.000Z",
+        "summary": "今天使用 Antigravity 的时候突然报 This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product. 顿时心里一紧，联想到有使用 magpie 接入其他 agent，赶紧关停并谷歌解决方案。提交了申诉表也在开发社区提交了申请，目前还没结果。有老哥遇到过这种…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "24 回复"
       }
     ]
   },
@@ -506,7 +506,7 @@
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "language": "Python",
-        "stars": 26189,
+        "stars": 26595,
         "starsToday": 1608
       },
       {
@@ -516,7 +516,7 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 328368,
+        "stars": 328633,
         "starsToday": 922
       },
       {
@@ -526,7 +526,7 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 67049,
+        "stars": 67196,
         "starsToday": 666
       },
       {
@@ -536,7 +536,7 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
         "language": "Python",
-        "stars": 72239,
+        "stars": 72381,
         "starsToday": 660
       },
       {
@@ -546,7 +546,7 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 20028,
+        "stars": 20087,
         "starsToday": 243
       },
       {
@@ -556,7 +556,7 @@
         "url": "https://github.com/firecrawl/firecrawl",
         "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
         "language": "TypeScript",
-        "stars": 211727,
+        "stars": 211935,
         "starsToday": 822
       },
       {
@@ -566,7 +566,7 @@
         "url": "https://github.com/nginx/nginx",
         "description": "The official NGINX Open Source repository.",
         "language": "C",
-        "stars": 33675,
+        "stars": 33711,
         "starsToday": 146
       },
       {
@@ -576,7 +576,7 @@
         "url": "https://github.com/openvinotoolkit/openvino",
         "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
         "language": "C++",
-        "stars": 12963,
+        "stars": 12988,
         "starsToday": 151
       },
       {
@@ -586,7 +586,7 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 74492,
+        "stars": 74642,
         "starsToday": 725
       },
       {
@@ -596,10 +596,10 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 76399,
+        "stars": 76548,
         "starsToday": 675
       }
     ],
-    "updatedAt": "2026-11-28T02:41:27.695Z"
+    "updatedAt": "2026-11-28T10:25:24.122Z"
   }
 }
