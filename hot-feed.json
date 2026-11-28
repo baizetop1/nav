@@ -1,29 +1,29 @@
 {
   "version": 3,
-  "generatedAt": "2026-11-27T19:57:49.765Z",
+  "generatedAt": "2026-11-28T02:41:27.695Z",
   "intelligence": {
-    "updatedAt": "2026-11-27T19:57:49.765Z",
+    "updatedAt": "2026-11-28T02:41:27.695Z",
     "items": [
       {
-        "id": "cn-item-1b4d967aa0f67af3",
+        "id": "cn-item-ccff7e05c81a0ec2",
         "category": "cn",
-        "title": "我国成功发射遥感五十号04星",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-27/10739061.shtml",
+        "title": "曾在“爱优腾”中排第一的爱奇艺，被1美元绊住了",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739138.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-27T13:29:11.000Z",
-        "summary": "中新网北京11月27日电 (马帅莎 李宸)北京时间11月27日21时05分，我国在太原卫星发射中心使用长征六号改运载火箭，成功将遥感五十号04星发射升空，卫星顺利进入预定轨道，发射任务取得圆满成功。该卫星主要用于国土普查、农作物估产和防灾减灾等领域。",
+        "publishedAt": "2026-11-28T02:30:06.000Z",
+        "summary": "中新网北京11月28日电(记者 谢艺观)近日，爱奇艺的一纸公告，让人看到了长视频行业的落寞一面。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2026-103406",
+        "id": "cisa-kev-cve-2026-120705",
         "category": "security",
-        "title": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router：Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-103406",
+        "title": "OSGeo GeoServer：OSGeo GeoServer XML Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-120705",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-25T00:00:00.000Z",
-        "summary": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt m…",
-        "badge": "CVE-2026-103406",
-        "signal": "已遭利用 · 整改期限 2026-11-28"
+        "publishedAt": "2026-11-27T00:00:00.000Z",
+        "summary": "OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a cr…",
+        "badge": "CVE-2026-120705",
+        "signal": "已遭利用 · 整改期限 2026-11-30"
       },
       {
         "id": "ai-openai-ac2f786b30f6d457",
@@ -36,23 +36,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50668145",
+        "id": "hn-50672565",
         "category": "dev",
-        "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
-        "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+        "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+        "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-27T15:40:31.000Z",
+        "publishedAt": "2026-11-27T23:06:29.000Z",
         "badge": "HN",
-        "signal": "235 分 · 130 评论"
+        "signal": "133 分 · 46 评论"
       },
       {
-        "id": "cn-it-e3ba518b554585d0",
+        "id": "cn-it-931d41114caccaf1",
         "category": "cn",
-        "title": "魏牌高山右舵版车型在香港市场上市，今年第四季度还将登陆澳洲",
-        "url": "https://www.ithome.com/1/033/771.htm",
+        "title": "212 首款三门车型 T10 上市：三片式快拆硬顶，17.99 万-18.99 万元",
+        "url": "https://www.ithome.com/1/033/814.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-27T15:04:07.000Z",
-        "summary": "IT之家 11 月 27 日消息，在今天进行的 2026 广州车展中，魏牌宣布旗下魏牌高山右舵版（WEY G9）今日于香港市场正式上市。 据介绍，魏牌高山车型依托原生平台实现左舵与右舵版本同步开发，并根据不同地区的通行法规与用车习惯进行属地化适配。 此外魏牌还预热该车将于今年四季度登陆澳洲市场 。 规格方面，IT之家获悉该车尺寸为 5050mmx1985mmx1900mm，轴距 3085mm。车辆采用 1.5T 发动机 + 前后双电机插电混动，系统综合最大功率 442 马力…",
+        "publishedAt": "2026-11-28T02:35:49.000Z",
+        "summary": "IT之家 11 月 28 日消息，2026 广州车展期间，212 品牌旗下首款三门车型 T10 正式上市，推出 2.0T 汽油版和 2.0T 柴油版，官方售价分别为 17.99 万元和 18.99 万元。T10 基于经典硬派越野底盘架构打造，采用三门短轴和三片式快拆硬顶设计，并预留 30 余处原厂拓展接口，主打专业越野与个性化体验。 据IT之家了解，该车提供前后整体硬桥 + 大梁结构，长宽高分别为 4416/1955/1925mm，轴距为 2570mm。其设计主打复古风，轮…",
         "badge": "IT之家"
       },
       {
@@ -77,35 +77,35 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1260468",
+        "id": "v2ex-1260513",
         "category": "dev",
-        "title": "咕咕嘎嘎 这么牛的公司，不至于玩不起吧",
-        "url": "https://www.v2ex.com/t/1260468",
+        "title": "有了 AI 之后，开发越来越容易，推广却越来越难？",
+        "url": "https://www.v2ex.com/t/1260513",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-27T15:44:41.000Z",
-        "summary": "咋还删帖呢？ （我还没上车呢）",
+        "publishedAt": "2026-11-28T02:16:02.000Z",
+        "summary": "最近用 AI 辅助开发了几个项目，感觉开发效率确实提高了不少，但产品上线后，怎么找到用户依然是个难题。 尤其是微信小程序，个人开发者似乎没有太多低成本的推广渠道。 于是最近又折腾了一个微信小程序版的 Product Hunt： https://minihunt.top 目前收录了 2000 多个小程序，支持开发者免费提交自己的作品，算是对产品推广方向的一次尝试。 想和大家讨论一下，当 AI 逐渐降低软件开发门槛之后，获取用户会不会成为独立开发者最大的挑战？ 大家平时除了写代…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "5 回复"
       },
       {
-        "id": "cn-toutiao-7712761193228321307",
+        "id": "cn-toutiao-7712872779263296027",
         "category": "cn",
-        "title": "国家队抄底力度已超“924”",
-        "url": "https://www.toutiao.com/trending/7712761193228321307/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2215%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712761193228321307%22%2C%22hot_board_impr_id%22%3A%2220261128035749B5FD3CE9DF245EA3F388%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%9B%BD%E5%AE%B6%E9%98%9F%E6%8A%84%E5%BA%95%E5%8A%9B%E5%BA%A6%E5%B7%B2%E8%B6%85%E2%80%9C924%E2%80%9D%22%7D&rank=&style_id=40132&topic_id=7712761193228321307",
+        "title": "央行新规取消贷款罚息利率上下限",
+        "url": "https://www.toutiao.com/trending/7712872779263296027/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%228%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712872779263296027%22%2C%22hot_board_impr_id%22%3A%2220261128104127E54274D3F4D2939E08B4%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A4%AE%E8%A1%8C%E6%96%B0%E8%A7%84%E5%8F%96%E6%B6%88%E8%B4%B7%E6%AC%BE%E7%BD%9A%E6%81%AF%E5%88%A9%E7%8E%87%E4%B8%8A%E4%B8%8B%E9%99%90%22%7D&rank=&style_id=40132&topic_id=7712872779263296027",
         "source": "今日头条",
         "badge": "热榜",
-        "signal": "9,260,596 热度"
+        "signal": "10,233,153 热度"
       },
       {
-        "id": "cisa-kev-cve-2026-133469",
+        "id": "cisa-kev-cve-2026-129243",
         "category": "security",
-        "title": "Vates Xen Orchestra：Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133469",
+        "title": "OSGeo GeoServer：OSGeo GeoServer Incorrect Authorization Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-129243",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-25T00:00:00.000Z",
-        "summary": "Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted a…",
-        "badge": "CVE-2026-133469",
-        "signal": "已遭利用 · 整改期限 2026-11-28"
+        "publishedAt": "2026-11-27T00:00:00.000Z",
+        "summary": "GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service par…",
+        "badge": "CVE-2026-129243",
+        "signal": "已遭利用 · 整改期限 2026-11-30"
       },
       {
         "id": "ai-hugging-face-c2bd7953104652e4",
@@ -117,23 +117,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50669765",
+        "id": "hn-50643158",
         "category": "dev",
-        "title": "Convex skills send the user's app idea to a remote server without telling them",
-        "url": "https://github.com/convex/convex-backend-skill/issues/64",
+        "title": "GPT 6.2 Astra Solves a Historical Mystery",
+        "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
         "source": "Hacker News",
-        "publishedAt": "2026-11-27T18:02:45.000Z",
+        "publishedAt": "2026-11-25T15:16:53.000Z",
         "badge": "HN",
-        "signal": "76 分 · 21 评论"
+        "signal": "338 分 · 211 评论"
       },
       {
-        "id": "cn-item-2d473eca585d5a55",
+        "id": "cn-item-c9279bf778ca232a",
         "category": "cn",
-        "title": "日媒：涉嫌非法侵入住宅，一名驻日美军人员被捕",
-        "url": "https://www.chinanews.com.cn/gj/2026/11-27/10738996.shtml",
+        "title": "中新网评：三只松鼠不应拿“临时”当挡箭牌",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739140.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-27T12:13:39.000Z",
-        "summary": "中新网11月27日电 据日本广播协会(NHK)27日报道，日本冲绳县警方以涉嫌非法侵入住宅为由，逮捕了一名驻日美军人员。",
+        "publishedAt": "2026-11-28T02:29:00.000Z",
+        "summary": "中新网北京11月28日电 (钟余)近日，三只松鼠因员工周转宿舍简陋一事引发热议，“三只松鼠员工住12人间”等话题上了热搜。11月26日晚，三只松鼠股份有限公司发布致歉声明，称网传视频所涉宿舍系旺季用工人员周转宿舍，为年货节期间临时启用，确实存在设施配置简陋等问题，并称已对相关人员进行妥善转移安置。",
         "badge": "中新网要闻"
       },
       {
@@ -158,36 +158,36 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1260459",
+        "id": "v2ex-1260501",
         "category": "dev",
-        "title": "觉得 vibe coding 半天还不如直接花钱订阅成熟的软件",
-        "url": "https://www.v2ex.com/t/1260459",
+        "title": "转到 Antigravity 受不了他的“直接开干”，给它喂了份 Claude 的规矩",
+        "url": "https://www.v2ex.com/t/1260501",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-27T14:56:22.000Z",
-        "summary": "就算开发者也在用 ai，不就相当于用户花一份钱买了未来一年作者的 token 用量么，比个人看 agent 吭哧吭哧跑既省钱又省时间",
+        "publishedAt": "2026-11-28T01:40:50.000Z",
+        "summary": "用惯了 Claude 的“先对齐再写代码”，切到 Antigravity 真的有点不适应。这货太爱“直接开干”了,等 review 的时候发现方向不对，返工成本极高。 于是有了这份参考 claude 核心提示词出的提示词，核心就是限制它：非局部的小改动，必须先只读调研，给出方案和取舍，等我批准了再写代码；如果是明确修个小 bug，那还是直接干。 可以直接拿去用，放项目根目录的 AGENTS.md 或 Rules 里就行。也可以全局设定，不用每个项目都加。 Windows 全…",
         "badge": "程序员",
-        "signal": "11 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-it-1e1aca596be18dc2",
+        "id": "cn-it-92a0c1435c4b980a",
         "category": "cn",
-        "title": "我国自主聚变能源解决方案发布工程初步规划，拟分两个阶段实施",
-        "url": "https://www.ithome.com/1/033/770.htm",
+        "title": "魏建军回应“长城汽车销量从第一掉到第九”：内卷、资本裹挟、财务造假是主因",
+        "url": "https://www.ithome.com/1/033/813.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-27T14:58:15.000Z",
-        "summary": "IT之家 11 月 27 日消息，据央视财经报道，11 月 27 日，中国工程院彭先觉院士团队在成都介绍 我国原创“Z 箍缩聚变裂变混合堆”供热示范堆工程初步规划 。 据介绍，Z 箍缩聚变裂变混合堆是我国科学家自主提出的一种将核聚变与核裂变相结合的技术方案。 根据规划， 工程拟分两个阶段实施 ，先开展聚变点火和核心工艺验证，再建设面向城市供热、工农业用热等需求的示范堆。 IT之家获悉，按照初步规划， 2026 年至 2030 年为核心技术攻关验证阶段 ，相关验证工作将依托由…",
+        "publishedAt": "2026-11-28T02:29:57.000Z",
+        "summary": "IT之家 11 月 28 日消息，此前，长城汽车董事长魏建军在与胖东来创始人于东来交流时，透露长城汽车销量排名从中国自主品牌第一下滑至第九，引发广泛关注。 在 2026 广州车展现场，魏建军就此事作出公开回应。他将排名变化的主要原因归结为三点：“内卷”“资本裹挟”和“财务造假”。 魏建军表示，如果不能排除恶意竞争，汽车产业就无法得到健康发展。“我排到第九，但是我心里边很坦然，他们都睡不着觉。” 在之前跟于东来进行交流的时候，于东来也回应称“你管他压力呢，你做自己嘛”，并建议…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2025-41450",
+        "id": "cisa-kev-cve-2026-136716",
         "category": "security",
-        "title": "Danfoss AK-SM 800A Series：Danfoss AK-SM 800A Series Improper Authentication Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-41450",
+        "title": "Drupal Core：Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-136716",
         "source": "CISA KEV",
-        "publishedAt": "2026-11-25T00:00:00.000Z",
-        "summary": "Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names.",
-        "badge": "CVE-2025-41450",
-        "signal": "已遭利用 · 整改期限 2026-12-09"
+        "publishedAt": "2026-11-27T00:00:00.000Z",
+        "summary": "Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual …",
+        "badge": "CVE-2026-136716",
+        "signal": "已遭利用 · 整改期限 2026-11-30"
       },
       {
         "id": "ai-google-deepmind-3ffa5c39e01e3431",
@@ -200,23 +200,23 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50667726",
+        "id": "hn-50657346",
         "category": "dev",
-        "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
-        "url": "https://bouncemarket.minhanhday.com/",
+        "title": "The Balatro Timeline",
+        "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
         "source": "Hacker News",
-        "publishedAt": "2026-11-27T15:01:50.000Z",
+        "publishedAt": "2026-11-26T17:20:27.000Z",
         "badge": "HN",
-        "signal": "266 分 · 82 评论"
+        "signal": "90 分 · 16 评论"
       },
       {
-        "id": "cn-toutiao-7712429326217920555",
+        "id": "cn-toutiao-7713020164392485426",
         "category": "cn",
-        "title": "武契奇称一旦绝食将不接受救治",
-        "url": "https://www.toutiao.com/trending/7712429326217920555/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712429326217920555%22%2C%22hot_board_impr_id%22%3A%2220261128035749B5FD3CE9DF245EA3F388%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%AD%A6%E5%A5%91%E5%A5%87%E7%A7%B0%E4%B8%80%E6%97%A6%E7%BB%9D%E9%A3%9F%E5%B0%86%E4%B8%8D%E6%8E%A5%E5%8F%97%E6%95%91%E6%B2%BB%22%7D&rank=&style_id=40132&topic_id=7712429326217920555",
+        "title": "陈吉宁等被查 中纪委发声",
+        "url": "https://www.toutiao.com/trending/7713020164392485426/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%220%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227713020164392485426%22%2C%22hot_board_impr_id%22%3A%2220261128104127E54274D3F4D2939E08B4%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%99%88%E5%90%89%E5%AE%81%E7%AD%89%E8%A2%AB%E6%9F%A5+%E4%B8%AD%E7%BA%AA%E5%A7%94%E5%8F%91%E5%A3%B0%22%7D&rank=&style_id=40132&topic_id=7713020164392485426",
         "source": "今日头条",
         "badge": "热榜",
-        "signal": "8,379,334 热度"
+        "signal": "9,259,340 热度"
       },
       {
         "id": "github-advisory-ghsa-743w-g9pf-8p94",
@@ -239,35 +239,35 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1260422",
+        "id": "v2ex-1260498",
         "category": "dev",
-        "title": "[开源自荐]买谷歌黑五半价 pro 的看过来-在 dsh 中不违反 tos 的情况下使用 agy-gemini",
-        "url": "https://www.v2ex.com/t/1260422",
+        "title": "用美区 appleID 开了个 gemini pro, 花了 1.99 刀",
+        "url": "https://www.v2ex.com/t/1260498",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-27T11:02:10.000Z",
-        "summary": "dsh-antigravity-native 优势: 0. 不是反代不是反代, 是 ACP 和 agy cli 调用实现的 直观来讲, 可以理解为使用的一直是 agy 的 cli, 连 session 也是 agy 的 session, 只是给 agy 的 cli 套了个壳子, 把使用入口和渲染处尽量融合到 dsh 原生界面, dsh 的模型选择处可见所有 agy 已登录账户的可用模型 不注入任何上下文和 skill, tool_ues 也是 agy 自己的不会使用 dsh…",
+        "publishedAt": "2026-11-28T01:31:17.000Z",
+        "summary": "这两天折腾的 claude 和 gemini，记录一下： gemini pro: 一开始用的一个 gmail, 从中国区转到美国区的，发现买不了，登录了另外一个 gmail 账号，我看是 TW 地区的，可以继续往下走,到支付环节需要填收货地址，填写了美国的免税地址，居然通过了（前两天买 claude pro 也是类似的流程， 但是填写美区地址后还让绑定美区银行卡，放弃了） claude pro: gemini 买成功了，又试了一下 claude pro,居然不要绑美区银行卡…",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "2 回复"
       },
       {
-        "id": "cn-item-c23c71109bcb1539",
+        "id": "cn-item-35dbbd1bbe2aeb7c",
         "category": "cn",
-        "title": "十一部门联合公布《分布式数字身份互通互认应用规定》",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-27/10738956.shtml",
+        "title": "中新网评：直播间摆茅台卖杂牌，谁在装睡？",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739139.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-27T11:09:56.000Z",
-        "summary": "中新网11月27日电 据“网信中国”微信公众号消息，近日，国家网信办、中央编办、工业和信息化部、公安部、交通运输部、中国人民银行、海关总署、税务总局、市场监管总局、国家外汇局、国家密码管理局联合公布《分布式数字身份互通互认应用规定》(以下简称《规定》)，自2027年3月1日起施行。",
+        "publishedAt": "2026-11-28T02:25:14.000Z",
+        "summary": "中新网北京11月28日电(钟兴真)在视频号、抖音、快手等平台上，部分卖酒直播间仍存在“挂羊头卖狗肉”现象。",
         "badge": "中新网要闻"
       },
       {
-        "id": "cisa-kev-cve-2023-25914",
+        "id": "cisa-kev-cve-2026-103406",
         "category": "security",
-        "title": "Danfoss AK-SM 800A Series：Danfoss AK-SM 800A Series Path Traversal Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-25914",
+        "title": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router：Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-103406",
         "source": "CISA KEV",
         "publishedAt": "2026-11-25T00:00:00.000Z",
-        "summary": "Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface.",
-        "badge": "CVE-2023-25914",
+        "summary": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt m…",
+        "badge": "CVE-2026-103406",
         "signal": "已遭利用 · 整改期限 2026-11-28"
       },
       {
@@ -281,23 +281,23 @@
         "badge": "OpenAI"
       },
       {
-        "id": "hn-50670757",
+        "id": "hn-50673688",
         "category": "dev",
-        "title": "Michael Nielsen took down his book on neural nets",
-        "url": "https://twitter.com/michael_nielsen/status/2126359767362748777",
+        "title": "Atari Homebrew Awards Cancelled",
+        "url": "https://forums.atariage.com/topic/394894-atari-homebrew-awards-cancelled/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-27T19:31:01.000Z",
+        "publishedAt": "2026-11-28T02:03:25.000Z",
         "badge": "HN",
-        "signal": "43 分 · 21 评论"
+        "signal": "11 分 · 0 评论"
       },
       {
-        "id": "cn-it-945d7dd444d25a8c",
+        "id": "cn-it-26ef0b8cbd8d51c0",
         "category": "cn",
-        "title": "华擎推出旗舰一体式液冷 Taichi AQUA 360 LCD：引入分体式设计",
-        "url": "https://www.ithome.com/1/033/769.htm",
+        "title": "微软高管：暂无 Win12 发布时间表，当前首要任务是打磨 Win11",
+        "url": "https://www.ithome.com/1/033/812.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-27T14:48:46.000Z",
-        "summary": "IT之家 11 月 27 日消息，华擎 (ASRock) 今日宣布推出旗舰级处理器液冷散热器 Taichi AQUA 360 LCD。该型号总体上来看属于一体式 (AIO) 类型，但又具备一些分体式的特质。 Taichi AQUA 360 LCD 采用双水泵结构 ，提供双倍流量和备份冗余；拥有 CIIR + EPDM 多层水冷管； 搭配 38mm 加厚高密度冷排 ；预装的吹排风扇采用 LCP 商业、双滚珠轴承。 其冷头既可 展现 ARGB 灯光映照下的透明水道 ，也可磁吸固…",
+        "publishedAt": "2026-11-28T02:27:31.000Z",
+        "summary": "IT之家 11 月 28 日消息，在 Ignite 2026 活动后接受 Axios 采访时，微软 Windows 事业部执行副总裁帕万 · 达武卢里（Pavan Davuluri）表示， 微软目前专注于打磨 Windows 11 的品质、体验、基础能力、性能和可靠性。 IT之家援引博文介绍，被问及 Windows 12 时，达武卢里既未否认，也未给出任何时间表。他强调，微软必须先构建未来 AI 应用所需的技术，并证明用户确实认可这些能力的价值，才能“赢得许可”，进而推进下…",
         "badge": "IT之家"
       },
       {
@@ -321,34 +321,34 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "v2ex-1260418",
+        "id": "v2ex-1260494",
         "category": "dev",
-        "title": "作为从传统编码到现在 AI Coding 的 码农",
-        "url": "https://www.v2ex.com/t/1260418",
+        "title": "谷歌订阅 AI PRO 黑五提前买歪打正着",
+        "url": "https://www.v2ex.com/t/1260494",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-27T10:47:41.000Z",
-        "summary": "作为从传统编码到现在 AI Coding 的 码农，现在都是怎么样写代码，分享一下，当过个几年当新人看到这个会是什么样的感觉",
+        "publishedAt": "2026-11-28T00:58:41.000Z",
+        "summary": "前情提要： https://www.v2ex.com/t/1258863 没想到谷谷歌歌对老用户还挺好，老用户订阅五折，新用户六折 本来只是想早点用，没想到歪打正着，终于不是老用户是狗时间了",
         "badge": "程序员",
-        "signal": "7 回复"
+        "signal": "13 回复"
       },
       {
-        "id": "cn-toutiao-7711994617415270443",
+        "id": "cn-toutiao-7712036769054920246",
         "category": "cn",
-        "title": "我国知识产权创造量质齐升",
-        "url": "https://www.toutiao.com/trending/7711994617415270443/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227711994617415270443%22%2C%22hot_board_impr_id%22%3A%2220261128035749B5FD3CE9DF245EA3F388%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%88%91%E5%9B%BD%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E5%88%9B%E9%80%A0%E9%87%8F%E8%B4%A8%E9%BD%90%E5%8D%87%22%7D&rank=&style_id=40132&topic_id=7711994617415270443",
+        "title": "“数”读前10月规上工业企业利润",
+        "url": "https://www.toutiao.com/article/7712699051036197417",
         "source": "今日头条",
         "badge": "热榜",
-        "signal": "7,581,935 热度"
+        "signal": "8,378,197 热度"
       },
       {
-        "id": "cisa-kev-cve-2023-25915",
+        "id": "cisa-kev-cve-2026-133469",
         "category": "security",
-        "title": "Danfoss AK-SM 800A Series：Danfoss AK-SM 800A Series Improper Input Validation Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-25915",
+        "title": "Vates Xen Orchestra：Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133469",
         "source": "CISA KEV",
         "publishedAt": "2026-11-25T00:00:00.000Z",
-        "summary": "Danfoss AK-SM 800A Series contains an improper input validation vulnerability that could allow a remote attacker to run arbitrary commands on the affected system.",
-        "badge": "CVE-2023-25915",
+        "summary": "Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted a…",
+        "badge": "CVE-2026-133469",
         "signal": "已遭利用 · 整改期限 2026-11-28"
       },
       {
@@ -361,23 +361,23 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "hn-50657392",
+        "id": "hn-50668145",
         "category": "dev",
-        "title": "First images of the impact of DART asteroid deflection experiment",
-        "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
+        "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+        "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
         "source": "Hacker News",
-        "publishedAt": "2026-11-26T17:24:37.000Z",
+        "publishedAt": "2026-11-27T15:40:31.000Z",
         "badge": "HN",
-        "signal": "141 分 · 51 评论"
+        "signal": "441 分 · 232 评论"
       },
       {
-        "id": "cn-item-a5a332cb684debf8",
+        "id": "cn-item-c770623630dba2dd",
         "category": "cn",
-        "title": "广西壮族自治区政府原主席蓝天立一审被判死缓",
-        "url": "https://www.chinanews.com.cn/gn/2026/11-27/10738930.shtml",
+        "title": "墨西哥抗议美国在墨开通举报热线",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-28/10739125.shtml",
         "source": "中新网要闻",
-        "publishedAt": "2026-11-27T10:55:43.000Z",
-        "summary": "中新社北京11月27日电 (记者 张素)记者从中国最高人民法院获悉，11月27日，湖南省常德市中级人民法院一审公开宣判广西壮族自治区党委原副书记、自治区政府原主席蓝天立受贿一案。",
+        "publishedAt": "2026-11-28T01:59:00.000Z",
+        "summary": "中新社北京11月28日电 墨西哥城消息：墨西哥总统辛鲍姆27日在新闻发布会上表示，墨方已就美国毒品管制局在墨西哥开通举报热线一事向美方提出正式抗议。该热线旨在收集有关涉嫌参与毒品贩运人员及墨西哥官员涉嫌腐败的信息。",
         "badge": "中新网要闻"
       },
       {
@@ -401,36 +401,36 @@
         "badge": "OpenAI"
       },
       {
-        "id": "v2ex-1260376",
+        "id": "v2ex-1260459",
         "category": "dev",
-        "title": "如何评价 DeepSeek 网页和 App 端开始展示消耗额度？",
-        "url": "https://www.v2ex.com/t/1260376",
+        "title": "觉得 vibe coding 半天还不如直接花钱订阅成熟的软件",
+        "url": "https://www.v2ex.com/t/1260459",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-27T08:47:35.000Z",
-        "summary": "前段时间，deepseek 因为算力紧张问题，开始对用户进行免费限制，包括压缩单次输入字数、限制闲置长对话续聊，并频繁提示“使用额度已达上限”。 另外，包括 openai 和 Anthropic 都或多或少的减少用户套餐的 token 使用量，或者对模型进行降智。 这是什么原因？",
+        "publishedAt": "2026-11-27T14:56:22.000Z",
+        "summary": "就算开发者也在用 ai，不就相当于用户花一份钱买了未来一年作者的 token 用量么，比个人看 agent 吭哧吭哧跑既省钱又省时间",
         "badge": "程序员",
-        "signal": "1 回复"
+        "signal": "18 回复"
       },
       {
-        "id": "cn-it-9fbfc97802d9a3e9",
+        "id": "cn-it-7daf976beec7b8fa",
         "category": "cn",
-        "title": "广汽能源：目前自营充电站达 2563 座，目标明年底旗下补能网络覆盖 300 个城市",
-        "url": "https://www.ithome.com/1/033/768.htm",
+        "title": "Edge 浏览器右键菜单不加新 AI 了，微软对搁置可能造成的不便深表歉意",
+        "url": "https://www.ithome.com/1/033/810.htm",
         "source": "IT之家",
-        "publishedAt": "2026-11-27T14:40:45.000Z",
-        "summary": "IT之家 11 月 27 日消息，广汽集团旗下广汽能源在今日举行的 2026 广州车展上介绍了补能体系建设进展。 广汽能源表示，截至 2026 年 11 月， 在补能网络建设上，广汽自营充电网络已覆盖 31 个省级行政区、240 个城市，自营充电站达 2563 座、自营充电桩突破 3.3 万根 。 广汽能源同时透露，公司目标到 2027 年底补能网络覆盖 300 个城市、2030 年构建十万充电终端的生态网。加速在县域、高速沿线及北方高寒地区布局，并推进兆瓦级 10C 超充…",
+        "publishedAt": "2026-11-28T02:16:13.000Z",
+        "summary": "IT之家 11 月 28 日消息，科技媒体 NeoWin 昨日（11 月 27 日）发布博文，报道称微软已搁置为 Edge 浏览器扩展 AI 功能计划， 不再为该浏览器右键菜单加入摘要、引用和翻译功能。 IT之家援引博文介绍，微软于 2025 年 6 月更新 AI at Work 路线图条目 RM497135，规划在 Microsoft Edge 浏览器中，为右键菜单添加 3 项 AI 选项，用户选中文本后右键，可以调用 Copilot 完成摘要、引用和翻译功能。 不过微软…",
         "badge": "IT之家"
       },
       {
-        "id": "cisa-kev-cve-2026-133324",
+        "id": "cisa-kev-cve-2025-41450",
         "category": "security",
-        "title": "Mitel MiCollab：Mitel MiCollab Not Failing Securely Vulnerability",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133324",
+        "title": "Danfoss AK-SM 800A Series：Danfoss AK-SM 800A Series Improper Authentication Vulnerability",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-41450",
         "source": "CISA KEV",
         "publishedAt": "2026-11-25T00:00:00.000Z",
-        "summary": "Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions.",
-        "badge": "CVE-2026-133324",
-        "signal": "已遭利用 · 整改期限 2026-11-28"
+        "summary": "Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names.",
+        "badge": "CVE-2025-41450",
+        "signal": "已遭利用 · 整改期限 2026-12-09"
       },
       {
         "id": "ai-google-deepmind-cac57b5217ba2caa",
@@ -442,23 +442,23 @@
         "badge": "Google DeepMind"
       },
       {
-        "id": "hn-50667989",
+        "id": "hn-50644213",
         "category": "dev",
-        "title": "False computer-checked proofs",
-        "url": "https://cr.yp.to/proofs/falseccp.html",
+        "title": "Cyberpunk Television Shows",
+        "url": "https://shellzine.net/cyberpunk-television/",
         "source": "Hacker News",
-        "publishedAt": "2026-11-27T15:26:09.000Z",
+        "publishedAt": "2026-11-25T16:32:28.000Z",
         "badge": "HN",
-        "signal": "117 分 · 51 评论"
+        "signal": "24 分 · 12 评论"
       },
       {
-        "id": "cn-toutiao-7712849101653544499",
+        "id": "cn-toutiao-7712826303400902698",
         "category": "cn",
-        "title": "博主：现金为王时代到来",
-        "url": "https://www.toutiao.com/trending/7712849101653544499/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2213%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712849101653544499%22%2C%22hot_board_impr_id%22%3A%2220261128035749B5FD3CE9DF245EA3F388%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%8D%9A%E4%B8%BB%EF%BC%9A%E7%8E%B0%E9%87%91%E4%B8%BA%E7%8E%8B%E6%97%B6%E4%BB%A3%E5%88%B0%E6%9D%A5%22%7D&rank=&style_id=40132&topic_id=7712849101653544499",
+        "title": "孔子其实根本不姓孔",
+        "url": "https://www.toutiao.com/trending/7712826303400902698/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227712826303400902698%22%2C%22hot_board_impr_id%22%3A%2220261128104127E54274D3F4D2939E08B4%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%AD%94%E5%AD%90%E5%85%B6%E5%AE%9E%E6%A0%B9%E6%9C%AC%E4%B8%8D%E5%A7%93%E5%AD%94%22%7D&rank=&style_id=40132&topic_id=7712826303400902698",
         "source": "今日头条",
         "badge": "热榜",
-        "signal": "6,860,418 热度"
+        "signal": "7,580,906 热度"
       },
       {
         "id": "github-advisory-ghsa-crj3-q72p-ggqm",
@@ -481,15 +481,15 @@
         "badge": "Hugging Face"
       },
       {
-        "id": "v2ex-1260372",
+        "id": "v2ex-1260422",
         "category": "dev",
-        "title": "建议大家理性上车年付的 AI 订阅",
-        "url": "https://www.v2ex.com/t/1260372",
+        "title": "[开源自荐]买谷歌黑五半价 pro 的看过来-在 dsh 中不违反 tos 的情况下使用 agy-gemini",
+        "url": "https://www.v2ex.com/t/1260422",
         "source": "V2EX 技术",
-        "publishedAt": "2026-11-27T08:38:13.000Z",
-        "summary": "年付前可以想想一年前自己在用什么模型，现在模型迭代速度非常快，上个月 GPT 还是香饽饽，现在就快 out 了，还不说还会存在那种过两个月就降智的情况",
+        "publishedAt": "2026-11-27T11:02:10.000Z",
+        "summary": "dsh-antigravity-native 优势: 0. 不是反代不是反代, 是 ACP 和 agy cli 调用实现的 直观来讲, 可以理解为使用的一直是 agy 的 cli, 连 session 也是 agy 的 session, 只是给 agy 的 cli 套了个壳子, 把使用入口和渲染处尽量融合到 dsh 原生界面, dsh 的模型选择处可见所有 agy 已登录账户的可用模型 不注入任何上下文和 skill, tool_ues 也是 agy 自己的不会使用 dsh…",
         "badge": "程序员",
-        "signal": "38 回复"
+        "signal": "1 回复"
       }
     ]
   },
@@ -506,8 +506,8 @@
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "language": "Python",
-        "stars": 25840,
-        "starsToday": 1615
+        "stars": 26189,
+        "starsToday": 1608
       },
       {
         "id": "github-4251a228ae407247",
@@ -516,8 +516,8 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 328198,
-        "starsToday": 916
+        "stars": 328368,
+        "starsToday": 922
       },
       {
         "id": "github-6cad99e48ae79e8b",
@@ -526,8 +526,8 @@
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
         "language": "Python",
-        "stars": 66904,
-        "starsToday": 668
+        "stars": 67049,
+        "starsToday": 666
       },
       {
         "id": "github-9bce4ceaabd5b747",
@@ -536,8 +536,8 @@
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
         "language": "Python",
-        "stars": 72162,
-        "starsToday": 667
+        "stars": 72239,
+        "starsToday": 660
       },
       {
         "id": "github-e0c5b60fcbe6479b",
@@ -546,8 +546,8 @@
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
         "language": "TypeScript",
-        "stars": 19974,
-        "starsToday": 242
+        "stars": 20028,
+        "starsToday": 243
       },
       {
         "id": "github-7491830dc8888f7f",
@@ -556,8 +556,8 @@
         "url": "https://github.com/firecrawl/firecrawl",
         "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
         "language": "TypeScript",
-        "stars": 211562,
-        "starsToday": 833
+        "stars": 211727,
+        "starsToday": 822
       },
       {
         "id": "github-8eba49d1985708e4",
@@ -566,8 +566,8 @@
         "url": "https://github.com/nginx/nginx",
         "description": "The official NGINX Open Source repository.",
         "language": "C",
-        "stars": 33647,
-        "starsToday": 148
+        "stars": 33675,
+        "starsToday": 146
       },
       {
         "id": "github-be5080db5ea179e4",
@@ -576,8 +576,8 @@
         "url": "https://github.com/openvinotoolkit/openvino",
         "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
         "language": "C++",
-        "stars": 12926,
-        "starsToday": 152
+        "stars": 12963,
+        "starsToday": 151
       },
       {
         "id": "github-231c4b191ae0f4ae",
@@ -586,8 +586,8 @@
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "language": "HTML",
-        "stars": 74374,
-        "starsToday": 731
+        "stars": 74492,
+        "starsToday": 725
       },
       {
         "id": "github-5524ff15f43adf61",
@@ -596,10 +596,10 @@
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "language": "Python",
-        "stars": 76286,
-        "starsToday": 664
+        "stars": 76399,
+        "starsToday": 675
       }
     ],
-    "updatedAt": "2026-11-27T19:57:49.765Z"
+    "updatedAt": "2026-11-28T02:41:27.695Z"
   }
 }
